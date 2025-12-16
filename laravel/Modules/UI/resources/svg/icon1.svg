@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img"
+     aria-label="UI Icon">
+    <style>
+        .ui-window { 
+            animation: window-glow 3s ease-in-out infinite;
+            transform-origin: 12px 12px;
+        }
+        .ui-cursor { 
+            animation: cursor-move 4s ease-in-out infinite;
+            transform-origin: 8px 16px;
+        }
+        .ui-elements { 
+            animation: ui-pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes window-glow {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes cursor-move {
+            0%, 100% { transform: translate(0px, 0px); }
+            25% { transform: translate(2px, -2px); }
+            50% { transform: translate(4px, -1px); }
+            75% { transform: translate(1px, 1px); }
+        }
+        
+        @keyframes ui-pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        svg:hover .ui-window { 
+            animation-duration: 1.5s; 
+        }
+        svg:hover .ui-cursor { 
+            animation-duration: 2s; 
+        }
+        svg:hover .ui-elements { 
+            animation-duration: 1s; 
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .ui-elements { opacity: 0.8; }
+            .ui-cursor { opacity: 0.9; }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .ui-window, .ui-cursor, .ui-elements { animation: none; }
+        }
+    </style>
+    
+    <!-- Main window -->
+    <g class="ui-window">
+        <rect x="4" y="4" width="16" height="12" rx="2" ry="2" />
+        <rect x="4" y="4" width="16" height="3" rx="2" ry="2" fill="currentColor" opacity="0.3" />
+        <rect x="6" y="9" width="12" height="6" rx="1" opacity="0.1" fill="currentColor" />
+    </g>
+    
+    <!-- Window controls -->
+    <g class="ui-elements">
+        <circle cx="6.5" cy="5.5" r="0.5" fill="currentColor" opacity="0.7" />
+        <circle cx="8" cy="5.5" r="0.5" fill="currentColor" opacity="0.5" />
+        <circle cx="9.5" cy="5.5" r="0.5" fill="currentColor" opacity="0.6" />
+    </g>
+    
+    <!-- UI elements -->
+    <g class="ui-elements">
+        <rect x="7" y="10" width="10" height="1" rx="0.5" opacity="0.6" />
+        <rect x="7" y="12" width="6" height="1" rx="0.5" opacity="0.4" />
+        <rect x="7" y="14" width="8" height="1" rx="0.5" opacity="0.5" />
+        <rect x="15" y="11" width="2" height="2" rx="0.5" opacity="0.7" />
+    </g>
+    
+    <!-- Cursor -->
+    <g class="ui-cursor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 16l2-2 2 2-2 2-2-2z" fill="currentColor" opacity="0.8" />
+        <path stroke-linecap="round" d="M8 16l3-3" opacity="0.6" />
+    </g>
+    
+    <!-- Interface indicators -->
+    <circle cx="20" cy="6" r="1" fill="currentColor" opacity="0.6" />
+    <circle cx="20" cy="10" r="0.5" fill="currentColor" opacity="0.4" />
+    <circle cx="20" cy="14" r="0.5" fill="currentColor" opacity="0.5" />
+    
+    <!-- Design grid -->
+    <g opacity="0.2">
+        <path stroke-linecap="round" d="M2 18h20M2 20h20" stroke-width="0.5" />
+        <path stroke-linecap="round" d="M2 18v4M6 18v4M12 18v4M18 18v4M22 18v4" stroke-width="0.5" />
+    </g>
+</svg>

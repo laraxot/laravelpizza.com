@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-gray-400 group-hover:text-blue-500 transition-colors duration-200 dark:text-gray-500 dark:group-hover:text-blue-400">
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .arrow-right {
+      transform-origin: center;
+      animation: spin 2s linear infinite;
+    }
+    .arrow-left {
+      transform-origin: center;
+      animation: spin 2s linear infinite reverse;
+    }
+  </style>
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16l-4-4m0 0l4-4m-4 4h18m-3 4l4 4m0 0l-4 4m4-4H3" class="group-hover:stroke-blue-500 dark:group-hover:stroke-blue-400">
+    <animateTransform 
+      attributeName="transform"
+      type="rotate"
+      from="0 12 12"
+      to="360 12 12"
+      dur="4s"
+      repeatCount="indefinite"
+      additive="sum"
+    />
+  </path>
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4-4m0 0l-4-4m4 4H3m3 4l-4 4m0 0l4 4m-4-4h18" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:stroke-blue-500 dark:group-hover:stroke-blue-400">
+    <animateTransform 
+      attributeName="transform"
+      type="rotate"
+      from="360 12 12"
+      to="0 12 12"
+      dur="4s"
+      repeatCount="indefinite"
+      additive="sum"
+    />
+  </path>
+</svg>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="User profile icon">
+    <style>
+        .profile-circle, .profile-card {
+            fill: currentColor;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        .profile-circle {
+            transform: translateY(-1px);
+        }
+        .profile-card {
+            transform: translateY(1px);
+        }
+        svg:hover .profile-circle {
+            transform: translateY(-3px) scale(1.1);
+        }
+        svg:hover .profile-card {
+            transform: translateY(2px) scale(1.05);
+        }
+        .shine {
+            fill: currentColor;
+            opacity: 0;
+        }
+        svg:hover .shine {
+            animation: shine 1.5s ease-in-out infinite;
+        }
+        @keyframes shine {
+            0%, 100% { opacity: 0; transform: translate(0, 0) scale(0.8); }
+            50% { opacity: 0.3; transform: translate(1px, -1px) scale(1); }
+        }
+    </style>
+    <title>User Profile</title>
+    <circle class="shine" cx="12" cy="6" r="0.5"/>
+    <circle class="shine" cx="14" cy="12" r="0.5"/>
+    <circle class="shine" cx="10" cy="12" r="0.5"/>
+    <g class="profile-circle">
+        <circle cx="12" cy="6" r="4"/>
+    </g>
+    <g class="profile-card">
+        <rect x="2" y="14" width="20" height="8" rx="2"/>
+        <rect x="5" y="16" width="8" height="1.5" rx="0.75" opacity="0.5"/>
+        <rect x="5" y="18.5" width="14" height="1.5" rx="0.75" opacity="0.3"/>
+    </g>
+</svg>

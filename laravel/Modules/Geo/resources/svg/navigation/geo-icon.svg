@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        .pin, .circle { transition: all 0.3s ease-in-out; }
+        svg:hover .pin { transform: translateY(-2px); }
+        svg:hover .circle { transform: scale(1.1); opacity: 0.8; }
+    </style>
+    
+    <!-- Pin di localizzazione -->
+    <g class="pin">
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+        <circle class="circle" cx="12" cy="9" r="2" />
+    </g>
+
+    <!-- Linee coordinate -->
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M2 12h4 M18 12h4 M12 2v4 M12 18v4" 
+          opacity="0.5" />
+</svg> 

@@ -1,0 +1,132 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'fields' => [
+        'query' => [
+            'label' => 'Ricerca',
+            'placeholder' => 'Inserisci il termine di ricerca',
+            'help' => 'Termine o frase da cercare',
+        ],
+        'type' => [
+            'label' => 'Tipo',
+            'placeholder' => 'Seleziona il tipo di ricerca',
+            'help' => 'Tipo di entità da cercare',
+        ],
+        'location' => [
+            'label' => 'Posizione',
+            'placeholder' => 'Inserisci la posizione',
+            'help' => 'Posizione per la ricerca geografica',
+        ],
+        'radius' => [
+            'label' => 'Raggio',
+            'placeholder' => 'Inserisci il raggio di ricerca',
+            'help' => 'Raggio di ricerca in chilometri',
+        ],
+        'latitude' => [
+            'label' => 'Latitudine',
+            'placeholder' => 'Inserisci la latitudine',
+            'help' => 'Latitudine per la ricerca geografica',
+        ],
+        'longitude' => [
+            'label' => 'Longitudine',
+            'placeholder' => 'Inserisci la longitudine',
+            'help' => 'Longitudine per la ricerca geografica',
+        ],
+        'filters' => [
+            'label' => 'Filtri',
+            'placeholder' => 'Configura i filtri di ricerca',
+            'help' => 'Filtri da applicare alla ricerca',
+        ],
+        'sort_by' => [
+            'label' => 'Ordina per',
+            'placeholder' => 'Seleziona il campo di ordinamento',
+            'help' => 'Campo per ordinare i risultati',
+        ],
+        'sort_direction' => [
+            'label' => 'Direzione ordinamento',
+            'placeholder' => 'Seleziona la direzione',
+            'help' => 'Direzione dell\'ordinamento',
+        ],
+        'limit' => [
+            'label' => 'Limite',
+            'placeholder' => 'Inserisci il numero massimo di risultati',
+            'help' => 'Numero massimo di risultati da restituire',
+        ],
+        'page' => [
+            'label' => 'Pagina',
+            'placeholder' => 'Inserisci il numero di pagina',
+            'help' => 'Numero di pagina per la paginazione',
+        ],
+    ],
+    'validation' => [
+        'query_required' => 'Il termine di ricerca è obbligatorio',
+        'query_min_length' => 'Il termine di ricerca deve essere di almeno 2 caratteri',
+        'radius_numeric' => 'Il raggio deve essere numerico',
+        'radius_min' => 'Il raggio deve essere almeno 0.1',
+        'radius_max' => 'Il raggio non può superare 1000 km',
+        'latitude_range' => 'La latitudine deve essere tra -90 e 90',
+        'longitude_range' => 'La longitudine deve essere tra -180 e 180',
+        'limit_numeric' => 'Il limite deve essere numerico',
+        'limit_min' => 'Il limite deve essere almeno 1',
+        'limit_max' => 'Il limite non può superare 1000',
+        'page_numeric' => 'La pagina deve essere numerica',
+        'page_min' => 'La pagina deve essere almeno 1',
+    ],
+    'messages' => [
+        'search_started' => 'Ricerca avviata con successo',
+        'search_completed' => 'Ricerca completata con successo',
+        'search_failed' => 'Ricerca fallita',
+        'results_found' => ':count risultati trovati',
+        'no_results' => 'Nessun risultato trovato',
+        'search_suggestions' => 'Suggerimenti di ricerca disponibili',
+        'filters_applied' => 'Filtri applicati con successo',
+        'sorting_applied' => 'Ordinamento applicato con successo',
+        'pagination_applied' => 'Paginazione applicata con successo',
+    ],
+    'errors' => [
+        'query_too_short' => 'Il termine di ricerca è troppo corto',
+        'query_too_long' => 'Il termine di ricerca è troppo lungo',
+        'location_invalid' => 'Posizione non valida',
+        'coordinates_invalid' => 'Coordinate geografiche non valide',
+        'radius_invalid' => 'Raggio di ricerca non valido',
+        'filters_invalid' => 'Filtri non validi',
+        'sorting_invalid' => 'Ordinamento non valido',
+        'pagination_invalid' => 'Paginazione non valida',
+        'service_unavailable' => 'Servizio di ricerca non disponibile',
+        'timeout' => 'Timeout della ricerca',
+    ],
+    'search_types' => [
+        'all' => 'Tutto',
+        'addresses' => 'Indirizzi',
+        'cities' => 'Città',
+        'provinces' => 'Province',
+        'regions' => 'Regioni',
+        'countries' => 'Paesi',
+        'postal_codes' => 'CAP',
+        'boundaries' => 'Confini',
+        'areas' => 'Aree',
+        'markers' => 'Marcatori',
+        'routes' => 'Percorsi',
+    ],
+    'sort_fields' => [
+        'relevance' => 'Rilevanza',
+        'name' => 'Nome',
+        'distance' => 'Distanza',
+        'created_at' => 'Data creazione',
+        'updated_at' => 'Data aggiornamento',
+        'population' => 'Popolazione',
+        'area' => 'Superficie',
+    ],
+    'sort_directions' => [
+        'asc' => 'Crescente',
+        'desc' => 'Decrescente',
+    ],
+    'search_suggestions' => [
+        'did_you_mean' => 'Intendevi: :suggestion',
+        'popular_searches' => 'Ricerche popolari',
+        'recent_searches' => 'Ricerche recenti',
+        'related_searches' => 'Ricerche correlate',
+    ],
+];

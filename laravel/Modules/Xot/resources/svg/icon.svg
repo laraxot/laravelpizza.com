@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <!-- Cubo base -->
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M12 3l7 4v10l-7 4-7-4V7l7-4z" />
+    
+    <!-- Linee interne -->
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M12 3v8M5 7l7 4M19 7l-7 4" />
+    
+    <!-- Punto centrale -->
+    <circle cx="12" cy="11" r="1" fill="currentColor" />
+    
+    <!-- Connessioni modulari -->
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M12 15v4M9 17l3-2M15 17l-3-2" />
+</svg> 

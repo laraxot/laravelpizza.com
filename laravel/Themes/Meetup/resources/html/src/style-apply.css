@@ -1,0 +1,1740 @@
+/* Bootstrap Italia styles converted to Tailwind CSS with @apply */
+/* Based on: https://italia.github.io/design-comuni-pagine-statiche/ */
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import 'tailwindcss';
+
+/* Set DaisyUI theme */
+html {
+  data-theme: bootstrap_italia;
+}
+@import '../vendor/filament/support/resources/css/index.css';
+@import '../vendor/filament/actions/resources/css/index.css';
+@import '../vendor/filament/forms/resources/css/index.css';
+@import '../vendor/filament/infolists/resources/css/index.css';
+@import '../vendor/filament/notifications/resources/css/index.css';
+@import '../vendor/filament/schemas/resources/css/index.css';
+@import '../vendor/filament/tables/resources/css/index.css';
+@import '../vendor/filament/widgets/resources/css/index.css';
+@variant dark (&:where(.dark, .dark *));
+
+/* Import Titillium Web font - Bootstrap Italia official font */
+
+/* Clean visibility overrides for Filament compatibility */
+main {
+  @apply relative z-10;
+}
+
+main *:not(.d-none) {
+  @apply opacity-100;
+}
+
+/* Ensure grid system works */
+.row {
+  @apply flex flex-wrap;
+}
+
+.d-flex {
+  @apply flex;
+}
+
+/* Reset base styles to ensure visibility */
+* {
+  @apply box-border;
+}
+
+html, body {
+  @apply m-0 p-0 w-full h-auto font-sans leading-normal;
+  font-family: "Titillium Web", Geneva, Tahoma, sans-serif;
+}
+
+/* Bootstrap Italia design converted to Tailwind CSS with @apply */
+/* Colors based on Bootstrap Italia: Primary Green #007a52, Blue #006cc6, Gray #5d7083 */
+
+/* CSS Custom Properties for Bootstrap Italia colors */
+:root {
+  --bs-primary: #007a52;
+  --bs-primary-dark: #00614a;
+  --bs-secondary: #5d7083;
+  --bs-success: #008055;
+  --bs-blue: #006cc6;
+  --bs-dark: #17334f;
+  --bs-light: #f8f9fa;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-600: #6c757d;
+  --bs-gray-900: #212529;
+}
+
+/* Header styling - Bootstrap Italia style with @apply */
+.it-header-wrapper {
+  background-color: var(--bs-primary);
+  @apply text-white relative;
+}
+
+.it-header-slim-wrapper {
+  background-color: var(--bs-primary-dark);
+  @apply py-2 text-sm;
+}
+
+.it-header-slim-wrapper-content {
+  @apply flex justify-between items-center;
+}
+
+.it-header-slim-wrapper a {
+  @apply text-white no-underline text-sm;
+}
+
+.it-header-slim-right-zone {
+  @apply flex items-center gap-4;
+}
+
+/* Dropdown language selector */
+.nav-item.dropdown {
+  @apply relative;
+}
+
+.nav-link.dropdown-toggle {
+  @apply bg-transparent border-0 text-white flex items-center gap-1 px-2 py-1 text-sm cursor-pointer;
+}
+
+.nav-link.dropdown-toggle:hover {
+  @apply text-white/80;
+}
+
+.dropdown-menu {
+  @apply absolute top-full right-0 bg-white border border-gray-200 rounded shadow-lg min-w-30 z-50 hidden;
+}
+
+.dropdown-menu.show {
+  @apply block;
+}
+
+.dropdown-item {
+  @apply block px-4 py-2 text-gray-900 no-underline text-sm;
+}
+
+.dropdown-item:hover {
+  @apply bg-gray-100;
+}
+
+/* DaisyUI Dropdown fixes for Bootstrap Italia header */
+.it-header-wrapper .dropdown .dropdown-content {
+  background-color: white !important;
+  color: #17334f !important;
+  border: 1px solid #dee2e6 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.it-header-wrapper .dropdown .dropdown-content a {
+  color: #17334f !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.25rem !important;
+}
+
+.it-header-wrapper .dropdown .dropdown-content a:hover {
+  background-color: #f8f9fa !important;
+  color: #007a52 !important;
+}
+
+/* Language dropdown styling fix - override header white text */
+#language-menu {
+  background-color: white !important;
+  border: 1px solid #dee2e6 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  z-index: 1050 !important;
+}
+
+.it-header-slim-wrapper .dropdown-menu .dropdown-item {
+  color: #17334f !important;
+  background-color: transparent !important;
+}
+
+.it-header-slim-wrapper .dropdown-menu .dropdown-item:hover {
+  background-color: #f8f9fa !important;
+  color: #007a52 !important;
+}
+
+.it-header-slim-wrapper .dropdown-menu .dropdown-item span {
+  color: #17334f !important;
+}
+
+.it-header-slim-wrapper .dropdown-menu .dropdown-item:hover span {
+  color: #007a52 !important;
+}
+
+/* Force text visibility in dropdowns */
+.dropdown-menu,
+.dropdown-content,
+.menu {
+  color: #17334f !important;
+}
+
+.dropdown-menu *,
+.dropdown-content *,
+.menu * {
+  color: #17334f !important;
+}
+
+.dropdown-menu a,
+.dropdown-content a,
+.menu a {
+  color: #17334f !important;
+  text-decoration: none !important;
+}
+
+.dropdown-menu a:hover,
+.dropdown-content a:hover,
+.menu a:hover {
+  color: #007a52 !important;
+  background-color: #f8f9fa !important;
+}
+
+/* DaisyUI specific overrides for Bootstrap Italia */
+.it-header-wrapper .dropdown .menu {
+  background-color: white !important;
+  color: #17334f !important;
+  border: 1px solid #dee2e6 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.it-header-wrapper .dropdown .menu li a {
+  color: #17334f !important;
+  background-color: transparent !important;
+  padding: 0.5rem 1rem !important;
+}
+
+.it-header-wrapper .dropdown .menu li a:hover {
+  color: #007a52 !important;
+  background-color: #f8f9fa !important;
+}
+
+/* Override DaisyUI text color inheritance */
+.it-header-wrapper .dropdown .menu li a span {
+  color: #17334f !important;
+}
+
+.it-header-wrapper .dropdown .menu li a:hover span {
+  color: #007a52 !important;
+}
+
+/* Force visibility for all dropdown text elements */
+.it-header-wrapper .dropdown * {
+  color: #17334f !important;
+}
+
+.it-header-wrapper .dropdown .menu * {
+  color: #17334f !important;
+}
+
+.it-header-wrapper .dropdown .menu li * {
+  color: #17334f !important;
+}
+
+.it-header-wrapper .dropdown .menu li a * {
+  color: #17334f !important;
+}
+
+.it-header-wrapper .dropdown .menu li a:hover * {
+  color: #007a52 !important;
+}
+
+/* User access button */
+.btn-icon.btn-full {
+  @apply flex items-center gap-2 px-4 py-2 rounded text-sm whitespace-nowrap;
+}
+
+.rounded-icon {
+  @apply inline-flex items-center justify-center w-6 h-6 bg-white/20 rounded-full;
+}
+
+/* SVG Icons styling */
+.icon {
+  @apply w-4 h-4 fill-current;
+}
+
+.icon-sm {
+  @apply w-3.5 h-3.5;
+}
+
+.icon-primary {
+  color: var(--bs-primary);
+}
+
+.icon-white {
+  @apply text-white;
+}
+
+/* Brand section */
+.it-brand-wrapper {
+  @apply flex items-center gap-3;
+}
+
+.it-brand-wrapper a {
+  @apply flex items-center gap-3 no-underline text-white;
+}
+
+.it-brand-text {
+  @apply flex flex-col;
+}
+
+.it-brand-logo {
+  @apply w-20 h-20 flex-shrink-0;
+}
+
+.it-brand-title {
+  @apply text-2xl font-semibold text-white mb-0;
+}
+
+.it-brand-tagline {
+  @apply text-sm text-white/90 mb-0;
+}
+
+.it-right-zone {
+  @apply flex items-center gap-4;
+}
+
+.it-socials {
+  @apply flex items-center gap-2;
+}
+
+.it-socials span {
+  @apply text-sm text-white mr-3 font-normal;
+}
+
+.it-socials ul {
+  @apply flex gap-0.5 list-none m-0 p-0;
+}
+
+.it-socials li a {
+  @apply text-white p-1 inline-flex transition-opacity duration-200;
+}
+
+.it-socials li a .icon {
+  @apply w-7 h-7;
+}
+
+.it-socials li a:hover {
+  @apply opacity-80;
+}
+
+/* Right zone layout */
+.it-right-zone {
+  @apply flex items-center gap-6;
+}
+
+.d-none.d-lg-flex {
+  @apply flex;
+}
+
+@media (min-width: 992px) {
+  .d-none.d-lg-flex {
+    @apply flex;
+  }
+}
+
+.it-search-wrapper {
+  @apply flex items-center gap-2;
+}
+
+.it-search-wrapper span {
+  @apply text-sm text-white;
+}
+
+.search-link {
+  background: white;
+  color: var(--bs-primary);
+  @apply p-3 rounded-full border-0 inline-flex items-center justify-center transition-colors duration-200 w-12 h-12;
+}
+
+.search-link .icon {
+  @apply w-6 h-6;
+}
+
+.search-link:hover {
+  @apply bg-gray-100;
+}
+
+/* Navigation - Bootstrap Italia style with @apply */
+.it-nav-wrapper {
+  @apply bg-white shadow-sm;
+}
+
+.it-header-navbar-wrapper {
+  background: var(--bs-primary) !important;
+  @apply py-3 border-t-0;
+}
+
+.it-header-center-wrapper {
+  background: var(--bs-primary);
+  @apply py-4 text-white;
+}
+
+.it-header-center-content-wrapper {
+  @apply flex justify-between items-center;
+}
+
+/* Navbar */
+.navbar {
+  @apply p-0;
+  background: var(--bs-primary) !important;
+}
+
+.navbar-expand-lg {
+  background: var(--bs-primary) !important;
+}
+
+.navbar-nav {
+  @apply flex gap-0 list-none m-0 p-0;
+}
+
+.navbar-nav .nav-item {
+  @apply relative;
+}
+
+.navbar-nav .nav-link {
+  @apply text-white font-semibold text-base px-6 py-3 no-underline block transition-colors duration-200;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--bs-primary);
+}
+
+.navbar-secondary {
+  @apply mt-2;
+}
+
+.navbar-secondary .nav-link {
+  @apply text-sm text-white font-normal px-6 py-2 opacity-90;
+}
+
+.navbar-secondary .nav-link:hover {
+  color: var(--bs-primary);
+}
+
+/* Navigation styling per desktop e mobile */
+.navbar-collapsable .navbar-nav .nav-link {
+  @apply text-white bg-transparent;
+}
+
+.navbar-collapsable .navbar-secondary .nav-link {
+  @apply text-white bg-transparent opacity-90;
+}
+
+/* Mobile hamburger menu */
+.custom-navbar-toggler {
+  @apply border-0 bg-transparent p-2 text-white block;
+}
+
+@media (min-width: 992px) {
+  .custom-navbar-toggler {
+    @apply hidden;
+  }
+}
+
+/* Mostra menu su desktop con layout orizzontale */
+@media (min-width: 992px) {
+  .navbar-collapsable {
+    @apply flex static w-full;
+    background: var(--bs-primary) !important;
+  }
+
+  .navbar-collapsable .overlay,
+  .navbar-collapsable .close-div,
+  .navbar-collapsable .logo-hamburger {
+    @apply hidden;
+  }
+
+  .navbar-collapsable .menu-wrapper {
+    @apply flex justify-between items-center w-full p-0;
+  }
+
+  .navbar-collapsable nav {
+    @apply flex;
+  }
+
+  .navbar-collapsable nav[aria-label="Principale"] {
+    @apply flex-1;
+  }
+
+  .navbar-collapsable nav[aria-label="Secondaria"] {
+    @apply ml-auto;
+  }
+
+  .navbar-collapsable .navbar-nav {
+    @apply flex flex-row m-0 p-0;
+  }
+
+  .navbar-collapsable .navbar-secondary {
+    @apply flex flex-row m-0 p-0;
+  }
+
+  .navbar-collapsable .it-socials {
+    @apply hidden;
+  }
+}
+
+/* Mobile menu styling */
+.navbar-collapsable .it-socials {
+  @apply mt-8 pt-4 border-t border-white/20;
+}
+
+.navbar-collapsable {
+  @apply relative bg-transparent block;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapsable {
+    @apply fixed top-0 left-0 right-0 bottom-0 bg-white z-50 overflow-y-auto hidden;
+  }
+
+  .navbar-collapsable.show {
+    @apply block;
+  }
+}
+
+.close-div {
+  @apply flex justify-end p-4;
+}
+
+@media (min-width: 992px) {
+  .close-div {
+    @apply hidden;
+  }
+}
+
+.close-menu {
+  @apply bg-transparent border-0 p-2;
+  color: var(--bs-dark);
+}
+
+.menu-wrapper {
+  @apply p-4;
+}
+
+@media (min-width: 992px) {
+  .menu-wrapper {
+    @apply p-0;
+  }
+}
+
+/* Bootstrap grid system - Bootstrap Italia style with @apply */
+.container {
+  @apply w-full px-3 mx-auto;
+  max-width: 1200px;
+}
+
+.row {
+  @apply flex flex-wrap -mx-3;
+}
+
+.col-12 {
+  @apply flex-none w-full max-w-full px-3;
+}
+
+.col-lg-3 {
+  @apply flex-none w-full max-w-full px-3;
+}
+
+.col-lg-8 {
+  @apply flex-none w-full max-w-full px-3;
+}
+
+.col-lg-10 {
+  @apply flex-none w-full max-w-full px-3;
+}
+
+.col-md-3 {
+  @apply flex-none w-full max-w-full px-3;
+}
+
+.col-md-4 {
+  @apply flex-none w-full max-w-full px-3;
+}
+
+.col-md-6 {
+  @apply flex-none w-full max-w-full px-3;
+}
+
+.col-md-9 {
+  @apply flex-none w-full max-w-full px-3;
+}
+
+.col-lg-5 {
+  @apply flex-none w-full max-w-full px-3;
+}
+
+.col-lg-6 {
+  @apply flex-none w-full max-w-full px-3;
+}
+
+/* Large devices (992px and up) */
+@media (min-width: 992px) {
+  .col-lg-3 {
+    @apply flex-none w-1/4;
+    max-width: 25%;
+  }
+
+  .col-lg-5 {
+    @apply flex-none;
+    width: 41.666667%;
+    max-width: 41.666667%;
+  }
+
+  .col-lg-6 {
+    @apply flex-none w-1/2;
+    max-width: 50%;
+  }
+
+  .col-lg-8 {
+    @apply flex-none w-2/3;
+    max-width: 66.666667%;
+  }
+
+  .col-lg-10 {
+    @apply flex-none w-5/6;
+    max-width: 83.333333%;
+  }
+}
+
+/* Medium devices (768px and up) */
+@media (min-width: 768px) {
+  .col-md-3 {
+    @apply flex-none w-1/4;
+    max-width: 25%;
+  }
+
+  .col-md-4 {
+    @apply flex-none w-1/3;
+    max-width: 33.333333%;
+  }
+
+  .col-md-6 {
+    @apply flex-none w-1/2;
+    max-width: 50%;
+  }
+
+  .col-md-9 {
+    @apply flex-none w-3/4;
+    max-width: 75%;
+  }
+}
+
+/* Offset classes */
+.offset-lg-1 {
+  @apply ml-0;
+}
+
+@media (min-width: 992px) {
+  .offset-lg-1 {
+    margin-left: 8.333333%;
+  }
+}
+
+/* Main content layout */
+main {
+  background: white;
+  @apply min-h-screen block w-full;
+  min-height: calc(100vh - 200px);
+}
+
+#main-container {
+  @apply py-8 block w-full;
+}
+
+/* Ensure main content is visible */
+body {
+  @apply m-0 p-0 w-full h-auto font-sans text-base leading-normal block;
+  font-family: "Titillium Web", Geneva, Tahoma, sans-serif;
+  color: var(--bs-dark);
+  background: white;
+}
+
+/* Force visibility of main content */
+main,
+#main-container,
+.container,
+.row,
+[class*="col-"] {
+  @apply block visible opacity-100;
+}
+
+/* Fix flex layouts */
+.row {
+  @apply flex;
+}
+
+/* Override any hidden classes that might be interfering */
+.d-none {
+  @apply hidden;
+}
+
+.d-lg-block {
+  @apply hidden;
+}
+
+@media (min-width: 992px) {
+  .d-lg-block {
+    @apply block;
+  }
+}
+
+@media (max-width: 991px) {
+  .d-lg-none {
+    @apply hidden;
+  }
+}
+
+/* Fix header positioning */
+.it-header-wrapper {
+  @apply relative z-50;
+}
+
+/* Fix navigation positioning */
+.it-nav-wrapper {
+  @apply relative z-40;
+}
+
+/* Typography and text styling - Bootstrap Italia with @apply */
+.title-xxxlarge {
+  @apply text-5xl font-bold text-gray-900 leading-tight mb-0;
+  color: var(--bs-dark);
+}
+
+.title-xxlarge {
+  @apply text-4xl font-bold text-gray-900 mb-0;
+  color: var(--bs-dark);
+}
+
+.medium-title {
+  @apply text-xl font-semibold text-gray-900 mb-2;
+  color: var(--bs-dark);
+}
+
+.subtitle-small {
+  @apply text-sm text-gray-500 mt-2 mb-0;
+  color: var(--bs-secondary);
+}
+
+.subtitle-small_semi-bold {
+  @apply text-sm font-semibold text-gray-900 mb-0;
+  color: var(--bs-dark);
+}
+
+/* Breadcrumbs - Bootstrap Italia style with @apply */
+.cmp-breadcrumbs {
+  @apply mt-4;
+}
+
+.breadcrumb {
+  @apply flex items-center p-0 m-0 list-none text-sm;
+}
+
+.breadcrumb-item {
+  @apply flex items-center;
+}
+
+.breadcrumb-item a {
+  color: var(--bs-primary);
+  @apply no-underline;
+}
+
+.breadcrumb-item a:hover {
+  @apply underline;
+}
+
+.breadcrumb-item.active {
+  color: var(--bs-secondary);
+}
+
+.separator {
+  @apply mx-2;
+  color: var(--bs-gray-600);
+}
+
+/* Headings and content sections */
+.cmp-heading {
+  @apply mt-2 mb-8;
+}
+
+.title-xxxlarge {
+  @apply text-5xl font-bold text-gray-900 leading-tight mb-0;
+  color: var(--bs-dark);
+}
+
+.subtitle-small {
+  @apply text-sm text-gray-500 mt-2 mb-0;
+  color: var(--bs-secondary);
+}
+
+/* Category sidebar - Bootstrap Italia style with @apply */
+.category-list__title {
+  @apply text-xs font-semibold uppercase tracking-wider text-gray-900 mb-4;
+  color: var(--bs-dark);
+}
+
+.category-list__list {
+  @apply inline-block text-sm font-medium;
+}
+
+.categoy-list {
+  @apply pb-4;
+}
+
+.categoy-list ul {
+  @apply list-none p-0 m-0;
+}
+
+.categoy-list li {
+  @apply mb-2;
+}
+
+/* Form elements - Bootstrap Italia style with @apply */
+.form-check {
+  @apply flex items-start mb-2;
+}
+
+.checkbox-body {
+  @apply flex items-center py-2 border-b border-gray-200;
+}
+
+.checkbox-body input[type="checkbox"] {
+  @apply w-4 h-4 mr-2 accent-green-600 border border-gray-300 rounded;
+}
+
+.checkbox-body label {
+  @apply text-sm font-medium text-gray-900 cursor-pointer flex-1;
+  color: var(--bs-dark);
+}
+
+/* Results and filters - Bootstrap Italia style with @apply */
+.search-results {
+  @apply text-gray-900 font-medium text-base;
+  color: var(--bs-dark);
+}
+
+.d-flex.justify-content-between {
+  @apply flex justify-between items-center;
+}
+
+.border-bottom.border-light {
+  @apply border-b border-gray-200;
+}
+
+.pb-3 {
+  @apply pb-3;
+}
+
+.mt-5 {
+  @apply mt-5;
+}
+
+/* Display utilities */
+.d-lg-none {
+  @apply block;
+}
+
+@media (min-width: 992px) {
+  .d-lg-none {
+    @apply hidden;
+  }
+}
+
+.d-none {
+  @apply hidden;
+}
+
+.d-none.d-lg-block {
+  @apply hidden;
+}
+
+@media (min-width: 992px) {
+  .d-none.d-lg-block {
+    @apply block;
+  }
+}
+
+.title-xsmall-semi-bold {
+  @apply text-xs font-semibold;
+}
+
+.ms-1 {
+  @apply ml-1;
+}
+
+/* Filter buttons */
+.btn.p-0.pe-2 {
+  @apply p-0 pr-2;
+}
+
+.title-medium-semi-bold {
+  @apply text-base font-semibold;
+}
+
+.pt-0 {
+  @apply pt-0;
+}
+
+/* Tabs - Bootstrap Italia style with @apply */
+.nav-tabs {
+  @apply flex w-full border-b border-gray-200 mb-10 mt-3 p-0 list-none;
+}
+
+.nav-tabs .nav-item {
+  @apply flex-1 relative;
+}
+
+.nav-tabs .nav-link {
+  @apply block py-2 text-center font-semibold text-gray-500 no-underline border-b-2 border-transparent transition-all duration-200;
+  color: var(--bs-secondary);
+}
+
+.nav-tabs .nav-link:hover {
+  @apply text-gray-900;
+  color: var(--bs-dark);
+}
+
+.nav-tabs .nav-link.active {
+  @apply text-green-600 border-green-600;
+  color: var(--bs-primary);
+}
+
+/* Tab content */
+.tab-content {
+  @apply w-full;
+}
+
+.tab-pane {
+  @apply w-full hidden;
+}
+
+.tab-pane.fade {
+  @apply opacity-0 transition-opacity duration-300;
+}
+
+.tab-pane.fade.show.active,
+.tab-pane.active {
+  @apply block opacity-100;
+}
+
+.w-100 {
+  @apply w-full;
+}
+
+.flex-nowrap {
+  @apply flex-nowrap;
+}
+
+.shadow-none {
+  @apply shadow-none;
+}
+
+/* Map - Bootstrap Italia style with @apply */
+.map-box {
+  @apply relative border border-gray-200 rounded-lg overflow-hidden bg-white;
+}
+
+.map-box .pin {
+  @apply absolute bg-transparent border-0 p-0 cursor-pointer;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.map-box .pin img {
+  @apply w-10 h-10;
+}
+
+/* Cards - Bootstrap Italia style with @apply */
+.cmp-info-button-card {
+  @apply mb-4;
+}
+
+@media (min-width: 992px) {
+  .cmp-info-button-card {
+    @apply mb-8;
+  }
+}
+
+.card {
+  @apply bg-white border border-gray-200 rounded-lg shadow-sm;
+}
+
+.card.has-bkg-grey,
+.bg-bootstrap-bg-grey {
+  @apply bg-gray-100 border-0;
+}
+
+.card-body {
+  @apply p-0;
+}
+
+.cmp-info-button-card .card {
+  @apply bg-gray-100 p-3;
+}
+
+@media (min-width: 992px) {
+  .cmp-info-button-card .card {
+    @apply p-4;
+  }
+}
+
+.medium-title {
+  @apply text-lg font-semibold text-gray-900 mb-2;
+  color: var(--bs-dark);
+}
+
+.card-info {
+  @apply text-sm text-gray-500 mb-4;
+  color: var(--bs-secondary);
+}
+
+.card-info span {
+  @apply font-semibold text-gray-900 block;
+  color: var(--bs-dark);
+}
+
+/* Buttons - Bootstrap Italia style with @apply */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold leading-normal no-underline border-2 border-transparent rounded cursor-pointer transition-all duration-200 min-h-12;
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  @apply text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-blue-700 border-blue-700 text-white;
+}
+
+.btn-outline-primary {
+  @apply bg-transparent border-green-600 text-green-600;
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  @apply text-white;
+}
+
+.btn-icon {
+  @apply p-2 min-w-12 min-h-12;
+}
+
+.btn-full {
+  @apply w-full;
+}
+
+.mobile-full {
+  @apply w-full;
+}
+
+@media (min-width: 992px) {
+  .mobile-full {
+    @apply w-auto;
+  }
+}
+
+/* Text button section - Bootstrap Italia style with @apply */
+.cmp-text-button {
+  @apply mt-0;
+}
+
+.title-xxlarge {
+  @apply text-4xl font-bold mb-0 text-gray-900;
+  color: var(--bs-dark);
+}
+
+.text-wrapper {
+  @apply mt-3;
+}
+
+.button-wrapper {
+  @apply mt-2;
+}
+
+/* Footer - Bootstrap Italia style with @apply */
+.it-footer {
+  background-color: #212529 !important;
+  color: white !important;
+}
+
+/* Ensure footer has black background */
+footer.it-footer {
+  background-color: #212529 !important;
+  color: white !important;
+}
+
+.it-footer-main {
+  @apply py-12;
+}
+
+.ue-logo {
+  @apply h-20 mb-0 mr-0 flex-shrink-0;
+}
+
+/* Footer logo wrapper - align EU logo and comune brand */
+.footer-items-wrapper.logo-wrapper {
+  @apply flex items-center justify-start flex-nowrap gap-12 mb-8;
+}
+
+.footer-items-wrapper {
+  @apply mb-8;
+}
+
+/* Footer brand styling */
+.it-footer .it-brand-text h2 {
+  @apply text-3xl font-bold text-white m-0;
+}
+
+.it-footer .it-brand-wrapper {
+  @apply flex items-center gap-4 flex-shrink-0;
+}
+
+.it-footer .it-brand-wrapper a {
+  @apply flex items-center gap-4 no-underline;
+}
+
+.it-footer .it-brand-wrapper .icon {
+  @apply w-16 h-16 flex-shrink-0;
+}
+
+/* Footer social links styling */
+.it-footer .list-inline.social {
+  @apply flex gap-2 mt-4 list-none p-0;
+}
+
+.it-footer .list-inline.social .list-inline-item {
+  @apply m-0;
+}
+
+.it-footer .list-inline.social .list-inline-item a {
+  @apply inline-flex items-center justify-center p-1.5 rounded-lg transition-colors duration-200;
+}
+
+.it-footer .list-inline.social .list-inline-item a:hover {
+  @apply bg-white/10;
+}
+
+.it-footer .list-inline.social .icon {
+  @apply w-6 h-6;
+}
+
+.footer-heading-title {
+  @apply text-lg font-semibold mb-4 text-white;
+}
+
+.footer-list {
+  @apply list-none p-0 m-0;
+}
+
+.footer-list li {
+  @apply mb-2;
+}
+
+.footer-list li a {
+  @apply text-gray-300 hover:text-white text-sm underline transition-colors duration-200;
+}
+
+.footer-info {
+  @apply text-gray-300 text-sm leading-relaxed;
+}
+
+.footer-bottom {
+  @apply flex gap-6 pt-4 border-t border-gray-700 mt-8;
+}
+
+.footer-bottom a {
+  @apply text-gray-300 hover:text-white text-sm no-underline;
+}
+
+/* Rating - Bootstrap Italia style with @apply */
+.cmp-rating {
+  @apply py-12;
+}
+
+.cmp-rating .card-wrapper {
+  @apply rounded-2xl shadow-2xl max-w-2xl mx-auto;
+}
+
+.cmp-rating .card-header {
+  @apply p-8 pb-4 border-0 bg-white rounded-t-2xl;
+}
+
+.cmp-rating .card-body {
+  @apply p-4 pb-8;
+}
+
+.cmp-rating .title-medium-2-semi-bold {
+  @apply text-2xl font-semibold text-gray-900 text-center leading-snug mb-0;
+  color: var(--bs-dark);
+}
+
+.rating {
+  @apply flex flex-row-reverse justify-center gap-1 mt-6;
+}
+
+.rating input {
+  @apply hidden;
+}
+
+.rating .rating-star {
+  @apply cursor-pointer w-10 h-10 flex items-center justify-center rounded transition-all duration-200;
+}
+
+.rating .rating-star:hover {
+  @apply scale-110;
+}
+
+.rating .rating-star svg {
+  @apply fill-slate-300 w-8 h-8 transition-colors duration-200;
+}
+
+.rating input:checked ~ label.rating-star svg,
+.rating label.rating-star.active svg {
+  @apply fill-yellow-400;
+}
+
+/* Ensure all stars are visible and active by default */
+.rating .rating-star.active svg {
+  @apply fill-yellow-400;
+}
+
+.pt-lg-80 {
+  @apply pt-8;
+}
+
+@media (min-width: 992px) {
+  .pt-lg-80 {
+    @apply pt-20;
+  }
+}
+
+.pb-lg-80 {
+  @apply pb-8;
+}
+
+@media (min-width: 992px) {
+  .pb-lg-80 {
+    @apply pb-20;
+  }
+}
+
+/* Utility classes - Bootstrap Italia style with @apply */
+.d-flex {
+  @apply flex;
+}
+
+.justify-content-between {
+  @apply justify-between;
+}
+
+.justify-content-center {
+  @apply justify-center;
+}
+
+/* Fix visibility issues */
+.d-block {
+  @apply block;
+}
+
+.visible {
+  @apply visible;
+}
+
+/* Ensure hr elements are visible */
+hr {
+  @apply border-0 border-t border-gray-200 my-4;
+}
+
+.hr {
+  @apply border-t border-gray-200 my-4;
+}
+
+.align-items-center {
+  @apply items-center;
+}
+
+.text-center {
+  @apply text-center;
+}
+
+.mb-0 {
+  @apply mb-0;
+}
+
+.mt-0 {
+  @apply mt-0;
+}
+
+.p-0 {
+  @apply p-0;
+}
+
+.px-3 {
+  @apply px-3;
+}
+
+.p-lg-0 {
+  @apply p-0;
+}
+
+@media (min-width: 992px) {
+  .p-lg-0 {
+    @apply p-0;
+  }
+}
+
+.p-3 {
+  @apply p-3;
+}
+
+.p-lg-4 {
+  @apply p-3;
+}
+
+@media (min-width: 992px) {
+  .p-lg-4 {
+    @apply p-4;
+  }
+}
+
+/* Responsive spacing - Bootstrap Italia style with @apply */
+.mb-md-40 {
+  @apply mb-10;
+}
+
+.mb-lg-80 {
+  @apply mb-20;
+}
+
+.mt-30 {
+  @apply mt-8;
+}
+
+.mb-2 {
+  @apply mb-2;
+}
+
+.mt-5 {
+  @apply mt-5;
+}
+
+.mb-40 {
+  @apply mb-10;
+}
+
+.mt-3 {
+  @apply mt-3;
+}
+
+.mb-3 {
+  @apply mb-3;
+}
+
+.mt-2 {
+  @apply mt-2;
+}
+
+.mb-4 {
+  @apply mb-4;
+}
+
+.mb-lg-0 {
+  @apply mb-0;
+}
+
+.mt-50 {
+  @apply mt-12;
+}
+
+.mb-lg-30 {
+  @apply mb-8;
+}
+
+.mt-10 {
+  @apply mt-10;
+}
+
+/* Colors - Bootstrap Italia style with @apply */
+.text-primary,
+.t-primary {
+  color: var(--bs-primary);
+}
+
+.border-light {
+  border-color: var(--bs-gray-200);
+}
+
+.shadow-sm {
+  @apply shadow-sm;
+}
+
+.shadow-contacts {
+  @apply shadow-lg;
+}
+
+/* Contacts component styling */
+.cmp-contacts .card {
+  @apply bg-white rounded-xl shadow-2xl border-0;
+}
+
+.cmp-contacts .card-body {
+  @apply p-8;
+}
+
+.contact-list {
+  @apply list-none m-0 p-0;
+}
+
+.contact-list .list-item {
+  @apply flex items-center py-4 text-green-600 no-underline font-medium border-b border-gray-200 last:border-b-0 transition-colors duration-200;
+  color: var(--bs-primary);
+}
+
+.contact-list .list-item:hover {
+  color: var(--bs-primary-dark);
+}
+
+.contact-list .list-item .icon {
+  @apply mr-4 w-5 h-5;
+}
+
+.bg-primary {
+  background-color: var(--bs-primary);
+}
+
+.bg-grey-card {
+  background-color: var(--bs-gray-100);
+}
+
+/* Typography - Bootstrap Italia style with @apply */
+.title-medium-2-semi-bold {
+  @apply text-xl font-semibold text-gray-900;
+  color: var(--bs-dark);
+}
+
+.title-medium-2-bold {
+  @apply text-xl font-bold text-gray-900;
+  color: var(--bs-dark);
+}
+
+.title-xsmall {
+  @apply text-sm font-medium text-gray-900;
+  color: var(--bs-dark);
+}
+
+.title-small-semi-bold {
+  @apply text-sm font-semibold text-gray-900;
+  color: var(--bs-dark);
+}
+
+.text-paragraph-small {
+  @apply text-xs text-gray-500;
+  color: var(--bs-secondary);
+}
+
+.data-text {
+  @apply text-sm text-gray-900 font-normal;
+  color: var(--bs-dark);
+}
+
+.text-button-sm-semi {
+  @apply text-sm font-semibold;
+}
+
+/* Form elements - Bootstrap Italia style with @apply */
+.form-control {
+  @apply w-full px-3 py-2 border-2 border-gray-300 rounded text-base leading-normal transition-all duration-200;
+}
+
+.form-control:focus {
+  @apply outline-none border-green-600;
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 2px rgba(0, 108, 198, 0.25);
+}
+
+.form-group {
+  @apply mb-4;
+}
+
+.form-text {
+  @apply text-xs text-gray-500 mt-1;
+  color: var(--bs-secondary);
+}
+
+/* Accordion - Bootstrap Italia style with @apply */
+.accordion-item {
+  @apply border border-gray-200 rounded-lg mb-2;
+}
+
+.accordion-header {
+  @apply w-full;
+}
+
+.accordion-button {
+  @apply w-full p-3 text-left flex items-center justify-between bg-white border-0 cursor-pointer transition-colors duration-200;
+}
+
+.accordion-button:hover {
+  @apply bg-gray-100;
+}
+
+.accordion-button.collapsed {
+  @apply bg-white;
+}
+
+.accordion-collapse {
+  @apply hidden;
+}
+
+.accordion-collapse.show {
+  @apply block;
+}
+
+.accordion-body {
+  @apply p-0;
+}
+
+/* Info summary - Bootstrap Italia style with @apply */
+.cmp-info-summary {
+  @apply bg-white border-0;
+}
+
+.single-line-info {
+  @apply border-b border-gray-200 py-3;
+}
+
+.single-line-info:last-child {
+  @apply border-b-0;
+}
+
+/* Image gallery - Bootstrap Italia style with @apply */
+.d-lg-flex {
+  @apply flex flex-col;
+}
+
+@media (min-width: 992px) {
+  .d-lg-flex {
+    @apply flex-row;
+  }
+}
+
+.gap-2 {
+  @apply gap-2;
+}
+
+.img-fluid {
+  @apply max-w-full h-auto;
+}
+
+/* Modal - Bootstrap Italia style with @apply */
+.modal {
+  @apply fixed inset-0 z-50 hidden bg-black/50 items-center justify-center;
+}
+
+.modal.show {
+  @apply flex;
+}
+
+.modal-dialog {
+  @apply bg-white rounded-lg shadow-2xl max-w-md w-full mx-4;
+}
+
+.modal-content {
+  @apply relative;
+}
+
+.modal-header {
+  @apply flex items-center justify-between p-4 border-b border-gray-200;
+}
+
+.modal-title {
+  @apply text-lg font-semibold text-gray-900;
+  color: var(--bs-dark);
+}
+
+.btn-close {
+  @apply bg-transparent border-0 text-gray-500 cursor-pointer text-xl p-2;
+}
+
+.btn-close:hover {
+  @apply text-gray-900;
+  color: var(--bs-dark);
+}
+
+.modal-body {
+  @apply p-4;
+}
+
+.modal-footer {
+  @apply flex justify-end gap-2 p-4 border-t border-gray-200;
+}
+
+/* Search modal - Bootstrap Italia style with @apply */
+.search-modal .modal-dialog {
+  @apply max-w-2xl;
+}
+
+.autocomplete-wrapper {
+  @apply relative;
+}
+
+.autocomplete {
+  @apply w-full pl-10 pr-4 py-2 border-2 border-gray-300 rounded-lg text-base;
+}
+
+.autocomplete:focus {
+  @apply outline-none border-green-600;
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 2px rgba(0, 108, 198, 0.25);
+}
+
+.autocomplete-icon {
+  @apply absolute left-3 text-gray-500;
+  color: var(--bs-secondary);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.searches-list-wrapper {
+  @apply mt-6;
+}
+
+.other-link-title {
+  @apply text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3;
+  color: var(--bs-secondary);
+}
+
+.searches-list {
+  @apply list-none p-0 m-0;
+}
+
+.searches-list li {
+  @apply mb-2;
+}
+
+.searches-list li a {
+  @apply text-green-600 hover:underline text-sm no-underline;
+  color: var(--bs-primary);
+}
+
+/* Additional utility classes for Bootstrap Italia compatibility */
+.list-none {
+  @apply list-none;
+}
+
+.m-0 {
+  @apply m-0;
+}
+
+.mx-auto {
+  @apply mx-auto;
+}
+
+.px-4 {
+  @apply px-4;
+}
+
+.py-1 {
+  @apply py-1;
+}
+
+.py-2 {
+  @apply py-2;
+}
+
+.border-0 {
+  @apply border-0;
+}
+
+.border-bottom {
+  @apply border-b;
+}
+
+.border-top {
+  @apply border-t;
+}
+
+.text-black {
+  @apply text-black;
+}
+
+.visually-hidden {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  clip: rect(0, 0, 0, 0);
+}
+
+.visually-hidden-focusable:focus {
+  @apply static w-auto h-auto overflow-visible whitespace-normal;
+  padding: inherit;
+  margin: inherit;
+  clip: auto;
+}
+
+.list-inline {
+  @apply list-none p-0 flex;
+}
+
+.list-inline-item {
+  @apply inline-block;
+}
+
+/* Skip links */
+.skiplink {
+  @apply absolute -top-24 left-0 z-50;
+}
+
+.skiplink a {
+  background: var(--bs-primary);
+  @apply text-white px-4 py-2 no-underline;
+}
+
+.skiplink a:focus {
+  @apply top-0 absolute;
+}
+
+/* Dropdown styling fix - override header white text for all dropdowns */
+.it-header-slim-wrapper .dropdown-menu {
+  @apply bg-white border border-gray-300 shadow-lg z-50;
+}
+
+/* Keep dropdown button white when closed - force override */
+.it-header-slim-wrapper .dropdown .nav-link.dropdown-toggle {
+  color: white !important;
+  font-weight: normal !important;
+}
+
+.it-header-slim-wrapper .dropdown .nav-link.dropdown-toggle span {
+  color: white !important;
+  font-weight: normal !important;
+}
+
+/* Fix SVG icon color in dropdown button */
+.it-header-slim-wrapper .dropdown .nav-link.dropdown-toggle .icon {
+  color: white !important;
+  fill: white !important;
+}
+
+/* Only style dropdown menu items, not the button */
+.it-header-slim-wrapper .dropdown-menu .dropdown-item {
+  @apply text-gray-800 bg-transparent;
+}
+
+.it-header-slim-wrapper .dropdown-menu .dropdown-item:hover {
+  @apply bg-gray-100;
+  color: #007a52 !important;
+}
+
+.it-header-slim-wrapper .dropdown-menu .dropdown-item span {
+  @apply text-gray-800;
+}
+
+.it-header-slim-wrapper .dropdown-menu .dropdown-item:hover span {
+  color: #007a52 !important;
+}

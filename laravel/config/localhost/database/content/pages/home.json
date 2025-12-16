@@ -1,0 +1,14 @@
+{
+    "id": "1",
+    "title": null,
+    "slug": "home",
+    "middleware": null,
+    "content": null,
+    "content_blocks": null,
+    "sidebar_blocks": null,
+    "footer_blocks": null,
+    "created_at": "2025-07-30T10:47:35.000000Z",
+    "updated_at": "2025-07-30T10:47:35.000000Z",
+    "created_by": "01985ae8-8039-71ea-88c7-54ebce6295b0",
+    "updated_by": "01985ae8-8039-71ea-88c7-54ebce6295b0"
+}

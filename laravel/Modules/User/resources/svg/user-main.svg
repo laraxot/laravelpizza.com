@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="User icon">
+    <style>
+        .head, .body {
+            fill: currentColor;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        svg:hover .head {
+            transform: scale(1.1) translateY(-1px);
+        }
+        svg:hover .body {
+            transform: scale(1.05);
+        }
+        .ripple {
+            fill: currentColor;
+            opacity: 0;
+            transform-origin: center;
+        }
+        svg:hover .ripple {
+            animation: ripple 1s ease-out;
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+    </style>
+    <title>User Profile</title>
+    <circle class="ripple" cx="12" cy="12" r="11"/>
+    <circle class="head" cx="12" cy="8" r="4"/>
+    <path class="body" d="M20 19v-2a6 6 0 00-6-6H10a6 6 0 00-6 6v2h16z"/>
+</svg>

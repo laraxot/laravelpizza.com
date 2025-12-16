@@ -1,0 +1,16 @@
+{
+    "Activity": true,
+    "Cms": true,
+    "Gdpr": true,
+    "Geo": true,
+    "Job": true,
+    "Lang": true,
+    "Media": true,
+    "Meetup": true,
+    "Notify": true,
+    "Seo": true,
+    "Tenant": true,
+    "UI": true,
+    "User": true,
+    "Xot": true
+}

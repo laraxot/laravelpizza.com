@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <style>
+        .log {
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+        svg:hover .log {
+            transform: scale(1.1);
+        }
+        .text {
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        svg:hover .text {
+            opacity: 1;
+            animation: type 1s steps(4) infinite;
+        }
+        @keyframes type {
+            0% { clip-path: inset(0 75% 0 0); }
+            100% { clip-path: inset(0 0 0 0); }
+        }
+    </style>
+    <rect class="log" x="3" y="3" width="18" height="18" rx="2"/>
+    <line class="log" x1="3" y1="9" x2="21" y2="9"/>
+    <line class="text" x1="7" y1="14" x2="17" y2="14"/>
+    <line class="text" x1="7" y1="17" x2="13" y2="17"/>
+</svg>

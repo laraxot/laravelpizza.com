@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true" role="img" aria-label="Job Queue Management Logo">
+  <!-- Queue container -->
+  <rect x="4" y="6" width="16" height="12" rx="1" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Queue items -->
+  <rect x="6" y="8" width="3" height="2" rx="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="10" y="8" width="3" height="2" rx="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="14" y="8" width="3" height="2" rx="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Progress bar -->
+  <rect x="6" y="12" width="12" height="1" rx="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="6" y="12" width="6" height="1" rx="0.5" fill="currentColor" opacity="0.7"/>
+
+  <!-- Processor/worker -->
+  <circle cx="12" cy="4" r="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10 4h4M12 2v4"/>
+
+  <!-- Status indicators -->
+  <circle cx="7" cy="18" r="0.8" fill="currentColor" opacity="0.6"/>
+  <circle cx="12" cy="18" r="0.8" fill="currentColor" opacity="0.8"/>
+  <circle cx="17" cy="18" r="0.8" fill="currentColor" opacity="0.4"/>
+</svg>

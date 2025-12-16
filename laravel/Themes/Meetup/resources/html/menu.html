@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laravel Developer Events and Meetups. Join the community for learning, networking, and knowledge sharing.">
+    <meta name="keywords" content="laravel, meetup, events, community, developers, conferences, workshops">
+    <title>Events - Laravel Developers Community</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "Event",
+          "name": "Laravel Best Practices Meetup",
+          "startDate": "2024-02-15T18:00",
+          "location": {
+            "@type": "Place",
+            "name": "TechHub Rome",
+            "address": "Via del Corso 123, Rome, Italy"
+          },
+          "description": "Join us for a deep dive into Laravel best practices over pizza"
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="container-custom">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2" aria-label="Go to homepage">
+                        <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" opacity="0.3"/>
+                            <circle cx="8" cy="8" r="1.5"/>
+                            <circle cx="16" cy="8" r="1.5"/>
+                            <circle cx="12" cy="12" r="1.5"/>
+                            <circle cx="8" cy="16" r="1.5"/>
+                            <circle cx="16" cy="16" r="1.5"/>
+                        </svg>
+                        <span class="text-2xl font-bold text-gray-900">Laravel Pizza Meetups</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary-600 font-medium">Home</a>
+                    <a href="events.html" class="text-primary-600 font-medium border-b-2 border-primary-600" aria-current="page">Events</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-primary-600 font-medium">Community</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary-600 font-medium">Contact</a>
+                    <a href="/login" class="btn-outline">Login</a>
+                    <a href="/register" class="btn-primary">Sign Up</a>
+                    <!-- Language Selector -->
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="text-gray-700 hover:text-primary-600 transition-colors flex items-center font-medium">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                            </svg>
+                            English
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open" @click.away="open = false" x-transition class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                            <div class="py-1">
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">
+                                    <svg class="w-4 h-4 mr-2 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    English
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Deutsch</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Español</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open mobile menu">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t" aria-labelledby="mobile-menu-button">
+            <div class="container-custom py-4 space-y-4" role="menu" aria-label="Mobile menu">
+                <a href="index.html" class="block text-gray-700 hover:text-primary-600" role="menuitem">Home</a>
+                <a href="events.html" class="block text-primary-600 font-medium" role="menuitem" aria-current="page">Events</a>
+                <a href="index.html#about" class="block text-gray-700 hover:text-primary-600" role="menuitem">Community</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-primary-600" role="menuitem">Contact</a>
+                <a href="/login" class="btn-outline block text-center" role="menuitem">Login</a>
+                <a href="/register" class="btn-primary block text-center" role="menuitem">Sign Up</a>
+                <!-- Language Selector Mobile -->
+                <div class="pt-2 border-t border-gray-200">
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full text-left text-gray-700 hover:text-primary-600 font-medium flex items-center justify-between">
+                            <span>Language: English</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open" @click.away="open = false" x-transition class="mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                            <div class="py-1">
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">
+                                    <svg class="w-4 h-4 mr-2 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    English
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Deutsch</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Español</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Events Header -->
+    <section class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16" aria-label="Events header">
+        <div class="container-custom text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Upcoming Events</h1>
+            <p class="text-xl text-primary-100 max-w-3xl mx-auto">Join Laravel developers for pizza, knowledge sharing, and networking</p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="bg-white border-b sticky top-16 z-40" aria-label="Event filters">
+        <div class="container-custom py-4">
+            <div class="flex flex-wrap justify-center gap-4" role="tablist" aria-label="Event categories">
+                <button class="category-filter active bg-primary-600 text-white px-6 py-2 rounded-lg font-medium" data-category="all" role="tab" aria-selected="true" aria-controls="all-events">
+                    All Events
+                </button>
+                <button class="category-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-300" data-category="laravel" role="tab" aria-selected="false" aria-controls="laravel-events">
+                    Laravel
+                </button>
+                <button class="category-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-300" data-category="filament" role="tab" aria-selected="false" aria-controls="filament-events">
+                    Filament
+                </button>
+                <button class="category-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-300" data-category="livewire" role="tab" aria-selected="false" aria-controls="livewire-events">
+                    Livewire
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Grid -->
+    <section class="section bg-gray-50" aria-label="Event listings">
+        <div class="container-custom">
+            <!-- Laravel Events -->
+            <div id="laravel" class="category-section mb-12" role="tabpanel" aria-labelledby="laravel-tab">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center" id="laravel-heading">
+                    <i class="fas fa-code text-primary-600 mr-3" aria-hidden="true"></i>
+                    Laravel Events
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Event items will be generated here -->
+                    <div class="pizza-card event-item" data-category="laravel" role="article" aria-labelledby="event-best-practices" itemscope itemtype="https://schema.org/Event">
+                        <div class="w-full h-48 bg-gradient-to-br from-primary-600 to-secondary-500 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2" id="event-best-practices" itemprop="name">Laravel Best Practices Meetup</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">Join us for a deep dive into Laravel best practices over pizza and drinks</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span><i class="fas fa-calendar mr-1"></i> Feb 15, 2024</span>
+                                <span><i class="fas fa-clock mr-1"></i> 6:00 PM</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-bold text-primary-600" itemprop="offers" itemscope itemtype="https://schema.org/Offer">Free</span>
+                                <a href="/events/123" class="btn-primary" aria-label="View event details">
+                                    <i class="fas fa-info-circle mr-2"></i>Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pizza-card event-item" data-category="laravel" role="article" aria-labelledby="event-advanced" itemscope itemtype="https://schema.org/Event">
+                        <div class="w-full h-48 bg-gradient-to-br from-primary-600 to-secondary-500 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2" id="event-advanced" itemprop="name">Advanced Laravel Architecture</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">Learn advanced architectural patterns and design principles</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span><i class="fas fa-calendar mr-1"></i> Mar 3, 2024</span>
+                                <span><i class="fas fa-clock mr-1"></i> 7:00 PM</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-bold text-primary-600" itemprop="offers" itemscope itemtype="https://schema.org/Offer">Free</span>
+                                <a href="/events/124" class="btn-primary" aria-label="View event details">
+                                    <i class="fas fa-info-circle mr-2"></i>Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pizza-card event-item" data-category="laravel" role="article" aria-labelledby="event-testing" itemscope itemtype="https://schema.org/Event">
+                        <div class="w-full h-48 bg-gradient-to-br from-primary-600 to-secondary-500 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2" id="event-testing" itemprop="name">Laravel Testing Workshop</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">Hands-on workshop to improve your Laravel testing skills</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span><i class="fas fa-calendar mr-1"></i> Mar 20, 2024</span>
+                                <span><i class="fas fa-clock mr-1"></i> 6:30 PM</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-bold text-primary-600" itemprop="offers" itemscope itemtype="https://schema.org/Offer">Free</span>
+                                <a href="/events/125" class="btn-primary" aria-label="View event details">
+                                    <i class="fas fa-info-circle mr-2"></i>Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filament Events -->
+            <div id="filament" class="category-section mb-12" role="tabpanel" aria-labelledby="filament-tab">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center" id="filament-heading">
+                    <i class="fas fa-table text-secondary-500 mr-3" aria-hidden="true"></i>
+                    Filament Events
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="pizza-card event-item" data-category="filament" role="article" aria-labelledby="event-filament-admin" itemscope itemtype="https://schema.org/Event">
+                        <div class="w-full h-48 bg-gradient-to-br from-secondary-500 to-accent-500 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2" id="event-filament-admin" itemprop="name">Filament Admin Panel Workshop</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">Build powerful admin panels with Filament framework</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span><i class="fas fa-calendar mr-1"></i> Feb 28, 2024</span>
+                                <span><i class="fas fa-clock mr-1"></i> 6:00 PM</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-bold text-primary-600" itemprop="offers" itemscope itemtype="https://schema.org/Offer">Free</span>
+                                <a href="/events/126" class="btn-primary" aria-label="View event details">
+                                    <i class="fas fa-info-circle mr-2"></i>Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pizza-card event-item" data-category="filament" role="article" aria-labelledby="event-filament-advanced" itemscope itemtype="https://schema.org/Event">
+                        <div class="w-full h-48 bg-gradient-to-br from-secondary-500 to-accent-500 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2" id="event-filament-advanced" itemprop="name">Advanced Filament Techniques</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">Learn advanced techniques for customizing Filament panels</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span><i class="fas fa-calendar mr-1"></i> Mar 12, 2024</span>
+                                <span><i class="fas fa-clock mr-1"></i> 7:00 PM</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-bold text-primary-600" itemprop="offers" itemscope itemtype="https://schema.org/Offer">Free</span>
+                                <a href="/events/127" class="btn-primary" aria-label="View event details">
+                                    <i class="fas fa-info-circle mr-2"></i>Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livewire Events -->
+            <div id="livewire" class="category-section" role="tabpanel" aria-labelledby="livewire-tab">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 flex items-center" id="livewire-heading">
+                    <i class="fas fa-bolt text-accent-600 mr-3" aria-hidden="true"></i>
+                    Livewire Events
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="pizza-card event-item" data-category="livewire" role="article" aria-labelledby="event-livewire-forms" itemscope itemtype="https://schema.org/Event">
+                        <div class="w-full h-48 bg-gradient-to-br from-accent-500 to-primary-500 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2" id="event-livewire-forms" itemprop="name">Livewire Forms & Validation</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">Master Livewire for building reactive forms</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span><i class="fas fa-calendar mr-1"></i> Mar 8, 2024</span>
+                                <span><i class="fas fa-clock mr-1"></i> 6:00 PM</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-bold text-primary-600" itemprop="offers" itemscope itemtype="https://schema.org/Offer">Free</span>
+                                <a href="/events/128" class="btn-primary" aria-label="View event details">
+                                    <i class="fas fa-info-circle mr-2"></i>Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pizza-card event-item" data-category="livewire" role="article" aria-labelledby="event-livewire-realtime" itemscope itemtype="https://schema.org/Event">
+                        <div class="w-full h-48 bg-gradient-to-br from-accent-500 to-primary-500 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M15 12c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/>
+                                <path d="M12 4c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.62-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8z"/>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2" id="event-livewire-realtime" itemprop="name">Real-time Features with Livewire</h3>
+                            <p class="text-gray-600 mb-4" itemprop="description">Build real-time applications using Livewire and WebSockets</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span><i class="fas fa-calendar mr-1"></i> Mar 22, 2024</span>
+                                <span><i class="fas fa-clock mr-1"></i> 6:30 PM</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-bold text-primary-600" itemprop="offers" itemscope itemtype="https://schema.org/Offer">Free</span>
+                                <a href="/events/129" class="btn-primary" aria-label="View event details">
+                                    <i class="fas fa-info-circle mr-2"></i>Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white" role="contentinfo">
+        <div class="container-custom py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                             width="24" 
+                             height="24" 
+                             viewBox="0 0 24 24" 
+                             fill="none" 
+                             stroke="currentColor" 
+                             stroke-width="2" 
+                             stroke-linecap="round" 
+                             stroke-linejoin="round" 
+                             class="w-8 h-8 text-red-500">
+                            <path d="M15 11h.01"></path>
+                            <path d="M11 15h.01"></path>
+                            <path d="M16 16h.01"></path>
+                            <path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"></path>
+                            <path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"></path>
+                        </svg>
+                        <span class="text-xl font-bold">Laravel Pizza Meetups</span>
+                    </div>
+                    <p class="text-gray-400">Bringing together Laravel, Filament, and Livewire enthusiasts over delicious pizza. Join our community and connect with fellow developers.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="menu.html" class="hover:text-white">All Events</a></li>
+                        <li><a href="#laravel" class="hover:text-white">Laravel Events</a></li>
+                        <li><a href="#filament" class="hover:text-white">Filament Events</a></li>
+                        <li><a href="#livewire" class="hover:text-white">Livewire Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Community</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#about" class="hover:text-white">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/chat" class="hover:text-white">Community Chat</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Get Started</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/register" class="hover:text-white">Sign Up</a></li>
+                        <li><a href="/login" class="hover:text-white">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>
+                    Made with <span class="text-red-500">❤</span> for the Laravel community
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+    <script>
+        // Category filter functionality
+        document.querySelectorAll('.category-filter').forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.dataset.category;
+                
+                // Update active state
+                document.querySelectorAll('.category-filter').forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                this.classList.add('active', 'bg-primary-600', 'text-white');
+                this.classList.remove('bg-gray-200', 'text-gray-700');
+                
+                // Update ARIA attributes
+                document.querySelectorAll('.category-filter').forEach(btn => {
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                this.setAttribute('aria-selected', 'true');
+                
+                // Filter events
+                document.querySelectorAll('.event-item').forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                        item.setAttribute('aria-hidden', 'false');
+                    } else {
+                        item.style.display = 'none';
+                        item.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            });
+        });
+        
+        // Initialize ARIA attributes for event items
+        document.querySelectorAll('.event-item').forEach(item => {
+            item.setAttribute('aria-hidden', 'false');
+        });
+    </script>
+</body>
+</html>
+

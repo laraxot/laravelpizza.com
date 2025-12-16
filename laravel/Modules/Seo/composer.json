@@ -1,0 +1,67 @@
+{
+    "name": "laraxot/module_seo_fila3",
+    "description": "Modulo SEO per l'ottimizzazione dei contenuti",
+    "homepage": "https://github.com/laraxot/module_seo_fila3",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "marco sottana",
+            "email": "marco.sottana@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Seo\\Providers\\SeoServiceProvider",
+                "Modules\\Seo\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Seo\\": "app/",
+            "Modules\\Seo\\Database\\Factories\\": "database/factories/",
+            "Modules\\Seo\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "require_comment": {
+        "openai-php/laravel": "*",
+        "thecodingmachine/safe": "^2.5"
+    },
+    "require-dev_comment": {
+        "laravel/pint": "^1.13",
+        "nunomaduro/phpinsights": "^2.11",
+        "larastan/larastan": "*",
+        "vimeo/psalm": "^5.17",
+        "psalm/plugin-laravel": "^2.8",
+        "enlightn/enlightn": "^2.7",
+        "driftingly/rector-laravel": "^0.26.2",
+        "symplify/phpstan-rules": "*",
+        "rector/rector": "^0.18.12",
+        "thecodingmachine/phpstan-safe-rule": "^1.2"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Xot"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../UI"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

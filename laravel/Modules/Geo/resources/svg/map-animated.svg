@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <style>
+        .map {
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+        svg:hover .map {
+            transform: scale(1.1);
+            stroke-width: 2.5;
+        }
+        .zoom {
+            opacity: 0;
+            transform-origin: center;
+            transition: opacity 0.3s ease;
+        }
+        svg:hover .zoom {
+            opacity: 0.2;
+            animation: zoom 1.5s infinite;
+        }
+        @keyframes zoom {
+            0% { transform: scale(1); opacity: 0.2; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+    </style>
+    <rect class="zoom" x="2" y="2" width="20" height="20" fill="currentColor" stroke="none"/>
+    <path class="map" d="M2 6L9 3L15 6L22 3V18L15 21L9 18L2 21V6Z"/>
+    <path class="map" d="M9 3V18"/>
+    <path class="map" d="M15 6V21"/>
+</svg>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <!-- Campana -->
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M12 3c-1.5 0-2.5.5-3.5 1.5-1 1-1.5 2-1.5 3.5v4l-2 3h14l-2-3v-4c0-1.5-.5-2.5-1.5-3.5S13.5 3 12 3z" />
+    
+    <!-- Base della campana -->
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M9 17v1a3 3 0 006 0v-1" />
+    
+    <!-- Onde di notifica -->
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M17 7.5c.5-.5 1-1 1-1" />
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M18.5 5.5c.5-.5 1-1 1-1" />
+</svg> 

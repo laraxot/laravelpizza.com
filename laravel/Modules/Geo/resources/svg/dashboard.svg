@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .chart { animation: grow 2s infinite; transform-origin: bottom; }
+        .pin { animation: pulse 2s infinite; }
+        @keyframes grow {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.1); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+    </style>
+    <rect class="chart" x="3" y="12" width="4" height="8" rx="1" fill="currentColor"/>
+    <rect class="chart" x="10" y="8" width="4" height="12" rx="1" fill="currentColor"/>
+    <rect class="chart" x="17" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+    <circle class="pin" cx="19" cy="4" r="2" fill="currentColor"/>
+</svg>

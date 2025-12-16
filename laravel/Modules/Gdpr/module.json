@@ -1,0 +1,12 @@
+{
+    "name": "Gdpr",
+    "alias": "gdpr",
+    "description": "Conformità GDPR completa con gestione consensi, privacy policy e diritti utente",
+    "keywords": ["gdpr", "privacy", "compliance", "consent", "data-protection"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Gdpr\\Providers\\GdprServiceProvider",
+        "Modules\\Gdpr\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "files": []
+}

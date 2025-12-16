@@ -1,0 +1,12 @@
+{
+    "name": "UI",
+    "alias": "ui",
+    "description": "Sistema di componenti UI riutilizzabili e design system per interfacce utente coerenti",
+    "keywords": ["ui", "components", "design-system", "frontend", "tailwind"],
+    "priority": 0,
+    "providers": [
+        "Modules\\UI\\Providers\\UIServiceProvider",
+        "Modules\\UI\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "files": []
+}

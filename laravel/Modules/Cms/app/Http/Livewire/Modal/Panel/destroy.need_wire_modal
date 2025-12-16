@@ -1,0 +1,85 @@
+<?php
+/**
+ * necessita per funzionare  di wire modal.. 
+ */
+
+declare(strict_types=1);
+
+namespace Modules\Cms\Http\Livewire\Modal\Panel;
+
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Auth;
+use Modules\Xot\Actions\GetViewAction;
+use Modules\Tenant\Services\TenantService;
+use Modules\Wire\View\Components\Modal\Modal;
+
+class Destroy extends Modal
+{
+    public string $model_type;
+
+    public string $model_id;
+
+    public string $user_id;
+
+    public function mount(string $model_type, string $model_id): void
+    {
+        $this->model_type = $model_type;
+        $this->model_id = $model_id;
+        $this->user_id = (string) Auth::id();
+    }
+
+    public function render(): Renderable
+    {
+        /**
+         * @phpstan-var view-string
+         */
+        $view = app(GetViewAction::class)->execute();
+
+        $view_params = [
+            'view' => $view,
+        ];
+
+        return view($view, $view_params);
+    }
+
+    /**
+     * Undocumented function.
+     *
+     * @return RedirectResponse|Redirector
+     */
+    public function delete()
+    {
+        TenantService::model($this->model_type)->find($this->model_id)?->delete();
+
+        $this->close();
+
+        session()->flash('status', 'eliminato');
+
+        return redirect(request()->header('Referer'));
+    }
+
+    public static function behavior(): array
+    {
+        return [
+            // Close the modal if the escape key is pressed
+            'close-on-escape' => true,
+            // Close the modal if someone clicks outside the modal
+            'close-on-backdrop-click' => false,
+            // Trap the users focus inside the modal (e.g. input autofocus and going back and forth between input fields)
+            'trap-focus' => true,
+            // Remove all unsaved changes once someone closes the modal
+            'remove-state-on-close' => false,
+        ];
+    }
+
+    public static function attributes(): array
+    {
+        return [
+            // Set the modal size to 2xl, you can choose between:
+            // xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl
+            'size' => 'xl',
+        ];
+    }
+}

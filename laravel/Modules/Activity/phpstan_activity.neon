@@ -1,0 +1,46 @@
+includes:
+    - ../../phpstan-baseline.neon
+    - ../../vendor/larastan/larastan/extension.neon
+    - ../../vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
+    - ../../vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+    level: 1
+    
+    paths:
+        - ./app
+        
+    ignoreErrors:
+        - '#PHPDoc tag @mixin contains unknown class #'
+        - '#Static call to instance method Nwidart#'
+        - '#is used zero times and is not analysed#'
+        - "#^Unsafe usage of new static#"
+        - identifier: missingType.generics
+        - identifier: missingType.iterableValue
+
+    excludePaths:
+        - ./vendor/* (?)
+        - ./build/* (?)
+        - ./docs/* (?)
+        - ./Tests/* (?)
+        - ./tests/* (?)
+        - ./phpinsights.php (?)
+        - ./rector.php (?)
+        - ./packages/* (?)
+
+    bootstrapFiles:
+        - ../../phpstan_constants.php
+        - ../../vendor/amenadiel/jpgraph/src/config.inc.php
+
+    scanFiles:
+        - ../../Modules/Xot/Helpers/Helper.php
+
+    editorUrl: 'vscode://file/%%file%%:%%line%%'
+
+    tmpDir: ../../../cache/build/phpstan
+
+    checkUnusedViews: false
+    checkModelProperties: false
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: false
+    checkOctaneCompatibility: false 

@@ -1,0 +1,148 @@
+# ==============================================
+# LARAXOT MODULE XOT - .GITIGNORE
+# ==============================================
+# Modulo base Laraxot - Template standardizzato
+# Ultimo aggiornamento: 2025-01-06
+# ==============================================
+
+# ==============================================
+# DEPENDENCIES & PACKAGES
+# ==============================================
+vendor/
+node_modules/
+package-lock.json
+yarn.lock
+composer.lock
+docs/vendor/
+
+# ==============================================
+# BUILD & COMPILED FILES
+# ==============================================
+build/
+dist/
+cache/
+
+# ==============================================
+# LARAVEL SPECIFIC
+# ==============================================
+bootstrap/compiled.php
+app/storage/
+public/storage
+public/hot
+public_html/storage
+public_html/hot
+storage/*.key
+.env
+.env.*
+!.env.example
+
+# ==============================================
+# CACHE & TEMPORARY FILES
+# ==============================================
+*.cache
+*.lock
+*.phar
+*.jar
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*:Zone.Identifier
+v8-compile-cache-*
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+# ==============================================
+# LOG FILES
+# ==============================================
+*.log
+error_log
+npm-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ==============================================
+# ENVIRONMENT & CONFIGURATION
+# ==============================================
+Homestead.yaml
+Homestead.json
+/.vagrant
+/.idea
+.phpintel
+.phpstorm.meta.php
+
+# ==============================================
+# GIT SPECIFIC
+# ==============================================
+.git-rewrite/
+.git-blame-ignore-revs
+
+# ==============================================
+# SYSTEM FILES
+# ==============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.exe
+
+# ==============================================
+# BACKUP FILES
+# ==============================================
+*.old
+*.old1
+*.old2
+*.backup
+*.backup.*
+*.bak
+*.bakcup
+*.new
+
+# ==============================================
+# DEVELOPMENT TOOLS
+# ==============================================
+.windsurf/
+.cursor/
+
+# ==============================================
+# DOCUMENTATION CACHE
+# ==============================================
+docs/phpstan/
+docs/cache/
+
+# ==============================================
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+database/Migrations_old/
+database/Seeders_old/
+database/Factories_old/
+database_old/
+database/Factories_
+
+# ==============================================
+# MODULE SPECIFIC - XOT
+# ==============================================
+# File di test temporanei
+test.txt
+testbench.yaml
+
+# File di configurazione locale
+config/local.php
+config/development.php
+
+# Cache specifiche del modulo
+packages/cache/
+packages/temp/
+
+# ==============================================
+# PROJECT SPECIFIC
+# ==============================================
+*.fila2
+
+# ==============================================
+# END OF XOT .GITIGNORE
+# ==============================================

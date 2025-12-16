@@ -1,0 +1,11 @@
+*:Zone.Identifier
+.php-cs-fixer.cache
+**/*.Zone.Identifier
+
+
+
+# Backup files
+*.bak
+-e 
+# PHPStan documentation
+docs/phpstan/

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <path d="M4 5h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V7a2 2 0 012-2z" stroke="currentColor" stroke-width="2">
+            <animate attributeName="stroke-dasharray" from="0 100" to="100 100" dur="1s" fill="freeze"/>
+        </path>
+        <path d="M7 15l3-3 3 3 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <animate attributeName="stroke-dasharray" from="0 20" to="20 20" dur="0.8s" begin="1s" fill="freeze"/>
+            <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="1.8s" repeatCount="indefinite"/>
+        </path>
+    </g>
+</svg>

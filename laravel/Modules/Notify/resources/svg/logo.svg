@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+<<<<<<< HEAD
+    viewBox="0 0 160 40"
+    role="img"
+    aria-labelledby="notifyTitle notifyDesc"
+>
+  <title id="notifyTitle">Notify - Notification System</title>
+  <desc id="notifyDesc">
+    Minimal logo for the Notify module: envelope icon and wordmark.
+  </desc>
+
+  <!-- Background (optional, transparent by default) -->
+  <rect x="0" y="0" width="160" height="40" fill="none" rx="4" ry="4" />
+
+  <!-- Envelope Icon -->
+  <g transform="translate(8,8)">
+    <!-- Envelope body -->
+    <rect x="0" y="4" width="24" height="16" rx="2" ry="2" fill="#0f766e" />
+    <!-- Envelope flap -->
+    <path
+      d="M0 6 L12 14 L24 6"
+      fill="none"
+      stroke="#e0f2f1"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <!-- Envelope inner highlight -->
+    <path
+      d="M0 18 L9 12 M24 18 L15 12"
+      fill="none"
+      stroke="#14b8a6"
+      stroke-width="1.6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <!-- Notification dot -->
+    <circle cx="21" cy="5" r="4" fill="#f97316" />
+    <circle cx="21" cy="5" r="2.4" fill="#fef3c7" />
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(44,12)">
+    <!-- N -->
+    <path
+      d="M0 18 L0 0 L4.5 0 L9 11 L9 0 L12 0 L12 18 L7.5 18 L3 7 L3 18 Z"
+      fill="#0f172a"
+    />
+    <!-- o -->
+    <path
+      d="M18 7 C18 3.5 20.4 1 23.8 1 C27.2 1 29.6 3.5 29.6 7 C29.6 10.5 27.2 13 23.8 13 C20.4 13 18 10.5 18 7 Z
+         M21.2 7 C21.2 8.8 22.2 9.9 23.8 9.9 C25.4 9.9 26.4 8.8 26.4 7 C26.4 5.2 25.4 4.1 23.8 4.1 C22.2 4.1 21.2 5.2 21.2 7 Z"
+      fill="#0f172a"
+    />
+    <!-- t -->
+    <path
+      d="M33 3.2 C33 1.5 34.4 0.4 36.6 0.4 C37.4 0.4 38.1 0.5 38.8 0.7 L38.4 3.4
+         C38 3.3 37.6 3.2 37.2 3.2 C36.3 3.2 35.8 3.7 35.8 4.5 L35.8 10.4 L39.2 10.4 L39.2 13.2
+         L35.8 13.2 L35.8 18 L32.6 18 L32.6 3.2 Z"
+      fill="#0f172a"
+    />
+    <!-- i -->
+    <rect x="42" y="6" width="3.2" height="7.2" fill="#0f172a" />
+    <circle cx="43.6" cy="3" r="1.6" fill="#0f172a" />
+    <!-- f -->
+    <path
+      d="M50 3.2 C50 1.5 51.3 0.4 53.5 0.4 C54.3 0.4 55 0.5 55.7 0.7 L55.3 3.4
+         C54.9 3.3 54.5 3.2 54.1 3.2 C53.2 3.2 52.7 3.7 52.7 4.5 L52.7 18 L49.5 18 L49.5 3.2 Z"
+      fill="#0f172a"
+    />
+    <!-- y -->
+    <path
+      d="M58.8 6 L61.7 13 L64.6 6 L68 6 L62.9 18.5 C61.9 20.9 60.5 22 58.3 22
+         C57.4 22 56.6 21.9 55.8 21.6 L56.3 18.7 C56.7 18.9 57.2 19 57.7 19
+         C58.6 19 59.1 18.6 59.5 17.8 L59.8 17.1 L55.2 6 Z"
+      fill="#0f172a"
+    />
+  </g>
+</svg>
+
+
+=======
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.5"
+>
+    <style>
+        .notify-root {
+            transform-box: fill-box;
+            transform-origin: center;
+        }
+
+        .notify-envelope {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: notify-float 3s ease-in-out infinite;
+        }
+
+        .notify-pulse-ring {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: notify-pulse 1.9s ease-out infinite;
+            opacity: 0;
+        }
+
+        @keyframes notify-float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-0.9px);
+            }
+        }
+
+        @keyframes notify-pulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            30% {
+                transform: scale(1.05);
+                opacity: 0.55;
+            }
+            100% {
+                transform: scale(1.35);
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <g class="notify-root" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Anello di pulse dietro al badge -->
+        <g class="notify-pulse-ring">
+            <circle cx="18" cy="6" r="3.3" />
+        </g>
+
+        <!-- Busta stile heroicon outline -->
+        <g class="notify-envelope">
+            <!-- bordo superiore + lati -->
+            <path d="M3.75 8.25A2.25 2.25 0 0 1 6 6h8.25" />
+            <path d="M3.75 8.25v8.25A2.25 2.25 0 0 0 6 18.75h12A2.25 2.25 0 0 0 20.25 16.5v-5.25" />
+
+            <!-- triangolo della busta -->
+            <path d="M4.5 8.5 10.8 12.28c.72.48 1.68.48 2.4 0L19.5 8.5" />
+        </g>
+
+        <!-- Badge di notifica -->
+        <circle cx="18" cy="6" r="2.25" fill="currentColor" stroke="none" />
+        <circle cx="18" cy="6" r="1.25" fill="none" />
+    </g>
+</svg>
+>>>>>>> c8903a55c (.)

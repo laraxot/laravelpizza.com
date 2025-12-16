@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <style>
+        .profile {
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+        svg:hover .profile {
+            transform: scale(1.1);
+        }
+        .details {
+            stroke-dasharray: 10;
+            stroke-dashoffset: 10;
+            transition: all 0.3s ease;
+        }
+        svg:hover .details {
+            animation: write 1s ease-out forwards;
+        }
+        @keyframes write {
+            to { stroke-dashoffset: 0; }
+        }
+    </style>
+    <path class="profile" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+    <circle class="profile" cx="12" cy="7" r="4"/>
+    <line class="details" x1="8" y1="21" x2="16" y2="21"/>
+    <line class="details" x1="12" y1="11" x2="12" y2="13"/>
+</svg>

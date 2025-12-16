@@ -1,0 +1,9 @@
+/*.lock
+package-lock.json
+/vendor
+
+# Backup files
+*.bak
+-e 
+# PHPStan documentation
+docs/phpstan/

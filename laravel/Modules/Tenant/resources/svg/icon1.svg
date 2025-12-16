@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img"
+     aria-label="Tenant Icon">
+    <style>
+        .tenant-building { 
+            animation: elevate 4s ease-in-out infinite;
+            transform-origin: 12px 20px;
+        }
+        .tenant-users { 
+            animation: group 3s ease-in-out infinite;
+            transform-origin: 12px 8px;
+        }
+        .tenant-network { 
+            animation: connect 2s ease-in-out infinite;
+        }
+        
+        @keyframes elevate {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.02); }
+        }
+        
+        @keyframes group {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes connect {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+        }
+        
+        svg:hover .tenant-building { 
+            animation-duration: 2s; 
+        }
+        svg:hover .tenant-users { 
+            animation-duration: 1.5s; 
+        }
+        svg:hover .tenant-network { 
+            animation-duration: 1s; 
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .tenant-network { opacity: 0.6; }
+            .tenant-users { opacity: 0.9; }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .tenant-building, .tenant-users, .tenant-network { animation: none; }
+        }
+    </style>
+    
+    <!-- Building structure -->
+    <g class="tenant-building">
+        <rect x="6" y="10" width="12" height="12" rx="1" />
+        <rect x="8" y="12" width="2" height="2" opacity="0.6" />
+        <rect x="11" y="12" width="2" height="2" opacity="0.6" />
+        <rect x="14" y="12" width="2" height="2" opacity="0.6" />
+        <rect x="8" y="15" width="2" height="2" opacity="0.6" />
+        <rect x="11" y="15" width="2" height="2" opacity="0.6" />
+        <rect x="14" y="15" width="2" height="2" opacity="0.6" />
+        <rect x="8" y="18" width="2" height="2" opacity="0.6" />
+        <rect x="14" y="18" width="2" height="2" opacity="0.6" />
+        <rect x="11" y="18" width="2" height="4" />
+    </g>
+    
+    <!-- Tenant users -->
+    <g class="tenant-users">
+        <circle cx="8" cy="6" r="1.5" />
+        <circle cx="12" cy="6" r="1.5" />
+        <circle cx="16" cy="6" r="1.5" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 9c0-1 1-2 2-2s2 1 2 2M10 9c0-1 1-2 2-2s2 1 2 2M14 9c0-1 1-2 2-2s2 1 2 2" opacity="0.7" />
+    </g>
+    
+    <!-- Network connections -->
+    <g class="tenant-network">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 8l4 2M12 8l4-2" opacity="0.5" stroke-width="1" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h2M18 12h2" opacity="0.4" stroke-width="1" />
+        <circle cx="3" cy="12" r="1" opacity="0.6" />
+        <circle cx="21" cy="12" r="1" opacity="0.6" />
+    </g>
+    
+    <!-- Tenant indicators -->
+    <circle cx="12" cy="2" r="1" fill="currentColor" opacity="0.7" />
+    <circle cx="6" cy="4" r="0.5" fill="currentColor" opacity="0.5" />
+    <circle cx="18" cy="4" r="0.5" fill="currentColor" opacity="0.5" />
+    
+    <!-- Multi-tenant separation -->
+    <path stroke-linecap="round" d="M6 10v12M18 10v12" opacity="0.3" stroke-width="0.5" />
+</svg>

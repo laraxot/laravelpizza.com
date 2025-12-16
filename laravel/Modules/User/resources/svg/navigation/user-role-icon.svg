@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        @keyframes badge-shine {
+            0%, 100% { filter: drop-shadow(0 0 2px currentColor); }
+            50% { filter: drop-shadow(0 0 4px currentColor); }
+        }
+        @keyframes shield-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .badge {
+            transition: all 0.3s ease-in-out;
+        }
+        .shield-ring {
+            transform-origin: center;
+            transition: all 0.3s ease-in-out;
+        }
+        svg:hover .badge {
+            animation: badge-shine 2s ease-in-out infinite;
+        }
+        svg:hover .shield-ring {
+            animation: shield-rotate 4s linear infinite;
+        }
+    </style>
+    
+    <!-- Scudo Base -->
+    <path class="badge"
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M12 3c-1.5 0-8 1.5-8 1.5v7c0 4.5 3 8.5 8 10.5 5-2 8-6 8-10.5v-7S13.5 3 12 3z" />
+    
+    <!-- Anello Rotante -->
+    <g class="shield-ring">
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M12 3c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8"
+              opacity="0.3" />
+    </g>
+
+    <!-- Stella Centrale -->
+    <path class="badge"
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M12 8l1 2.5h2.5l-2 1.5 1 2.5-2.5-1.5-2.5 1.5 1-2.5-2-1.5H11z" />
+</svg> 

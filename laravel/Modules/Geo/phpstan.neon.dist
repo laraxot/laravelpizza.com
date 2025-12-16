@@ -1,0 +1,13 @@
+includes:
+    - ../../vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: max
+    paths:
+        - .
+    checkOctaneCompatibility: true
+    checkModelProperties: true
+    checkMissingIterableValueType: false
+    excludePaths:
+        - ./vendor/*
+        - ./docs/*

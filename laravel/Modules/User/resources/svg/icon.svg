@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <!-- Utente principale -->
+    <circle cx="12" cy="8" r="3" />
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M12 11c-3.5 0-6 2-6 5v2h12v-2c0-3-2.5-5-6-5z" />
+    
+    <!-- Utente a sinistra -->
+    <circle cx="6" cy="6" r="2" />
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M4 14c-.5-1.5-1-2-2-2" />
+    
+    <!-- Utente a destra -->
+    <circle cx="18" cy="6" r="2" />
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M20 14c.5-1.5 1-2 2-2" />
+</svg> 

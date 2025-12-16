@@ -1,0 +1,165 @@
+# ==============================================
+# LARAXOT MODULE CMS - .GITIGNORE
+# ==============================================
+# Modulo CMS Laraxot - Template standardizzato
+# Ultimo aggiornamento: 2025-01-31
+# ==============================================
+
+# ==============================================
+# DEPENDENCIES & PACKAGES
+# ==============================================
+/vendor/
+/vendor
+/node_modules/
+/node_modules
+/docs/vendor/
+package-lock.json
+yarn.lock
+composer.lock
+yarn-error.log
+npm-debug.log
+
+# ==============================================
+# BUILD & COMPILED FILES
+# ==============================================
+/build
+/build/
+build/
+dist/
+docs/cache/
+cache/
+
+# ==============================================
+# CACHE & TEMPORARY FILES
+# ==============================================
+*.cache
+*.lock
+*.phar
+*.jar
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*:Zone.Identifier
+v8-compile-cache-*
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+# ==============================================
+# LOG FILES
+# ==============================================
+*.log
+error_log
+npm-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ==============================================
+# LARAVEL SPECIFIC
+# ==============================================
+bootstrap/compiled.php
+app/storage/
+public/storage
+public/hot
+public_html/storage
+public_html/hot
+storage/*.key
+.env
+.env.*
+!.env.example
+
+# ==============================================
+# ENVIRONMENT & CONFIGURATION
+# ==============================================
+Homestead.yaml
+Homestead.json
+/.vagrant
+/.idea
+.phpintel
+
+# ==============================================
+# GIT SPECIFIC
+# ==============================================
+.git-rewrite/
+.git-rewrite
+.git-blame-ignore-revs
+
+# ==============================================
+# SYSTEM FILES
+# ==============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==============================================
+# BACKUP FILES
+# ==============================================
+*.old
+*.old1
+*.old2
+*.backup
+*.backup.*
+*.bak
+*.bakcup
+*.new
+
+# ==============================================
+# DEVELOPMENT TOOLS
+# ==============================================
+.windsurf/
+.cursor/
+.phpstorm.meta.php
+
+# ==============================================
+# DOCUMENTATION CACHE
+# ==============================================
+docs/phpstan/
+docs/cache/
+
+# ==============================================
+# LANGUAGE FILES
+# ==============================================
+lang/lang/
+resources/lang/
+
+# ==============================================
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+database/Migrations_old/
+database/Seeders_old/
+database/Factories_old/
+database_old/
+
+# ==============================================
+# MODULE SPECIFIC - CMS
+# ==============================================
+# File di configurazione locale
+config/local.php
+config/development.php
+
+# Contenuti temporanei
+content/temp/
+content/drafts/
+content/uploads/temp/
+
+# Cache contenuti
+storage/cms/
+storage/content/
+
+# File di test
+test_content.json
+cms_test_data.sql
+
+# ==============================================
+# END OF CMS .GITIGNORE
+# ==============================================
+
+# 🚫 File specifici del progetto
+*.fila2
+laravel
+public_html

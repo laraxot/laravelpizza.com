@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Community Chat - Laravel Pizza Meetups. Connect with fellow developers, share knowledge, and discuss Laravel, Filament, and Livewire.">
+    <meta name="keywords" content="laravel, chat, community, developers, discussion, filament, livewire">
+    <title>Community Chat - Laravel Pizza Meetups</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="font-sans antialiased bg-slate-900 text-white">
+
+    <!-- Navigation Component -->
+    <div id="navigation-container"></div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">
+                Community Chat
+            </h1>
+            <p class="text-xl text-gray-400">
+                Connect with fellow Laravel developers, share knowledge, and discuss everything about Laravel, Filament, and Livewire.
+            </p>
+        </div>
+
+        <!-- Chat Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- Channels Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+                    <h2 class="text-lg font-bold text-white mb-4">Channels</h2>
+                    <div class="space-y-2">
+                        <a href="#" class="block px-4 py-2 bg-red-600 text-white rounded-lg font-medium">
+                            # general
+                        </a>
+                        <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-slate-700 rounded-lg transition-colors">
+                            # laravel
+                        </a>
+                        <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-slate-700 rounded-lg transition-colors">
+                            # filament
+                        </a>
+                        <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-slate-700 rounded-lg transition-colors">
+                            # livewire
+                        </a>
+                        <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-slate-700 rounded-lg transition-colors">
+                            # meetups
+                        </a>
+                        <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-slate-700 rounded-lg transition-colors">
+                            # help
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="lg:col-span-3">
+                <div class="bg-slate-800 border border-slate-700 rounded-lg flex flex-col" style="height: 600px;">
+                    <!-- Messages Area -->
+                    <div class="flex-1 overflow-y-auto p-6 space-y-4">
+                        <!-- Message 1 -->
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="font-bold text-white">marco xot</span>
+                                    <span class="text-gray-500 text-sm">2 hours ago</span>
+                                </div>
+                                <p class="text-gray-300">Welcome to the Laravel Pizza Meetups community chat! Feel free to introduce yourself and share what you're working on.</p>
+                            </div>
+                        </div>
+
+                        <!-- Message 2 -->
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="font-bold text-white">sarah_dev</span>
+                                    <span class="text-gray-500 text-sm">1 hour ago</span>
+                                </div>
+                                <p class="text-gray-300">Hi everyone! I'm working on a Filament admin panel for my project. Anyone else using Filament 3?</p>
+                            </div>
+                        </div>
+
+                        <!-- Message 3 -->
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="font-bold text-white">alex_laravel</span>
+                                    <span class="text-gray-500 text-sm">45 minutes ago</span>
+                                </div>
+                                <p class="text-gray-300">Yes! I'm using Filament 3 with Livewire 3. The new features are amazing. Happy to help if you have questions!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message Input -->
+                    <div class="border-t border-slate-700 p-4">
+                        <form class="flex gap-2">
+                            <input 
+                                type="text" 
+                                placeholder="Type your message..." 
+                                class="flex-1 bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                            >
+                            <button 
+                                type="submit"
+                                class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-medium transition-colors flex items-center gap-2"
+                            >
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                </svg>
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script src="/js/navigation.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

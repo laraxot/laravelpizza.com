@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <path d="M17 3H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V5C19 3.89543 18.1046 3 17 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <animate attributeName="stroke-dasharray" from="0 100" to="100 100" dur="1s" fill="freeze"/>
+        </path>
+        <g transform="translate(12, 12)">
+            <path d="M-3-3L3 3M-3 3L3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <animate attributeName="stroke-dasharray" from="0 20" to="20 20" dur="0.6s" begin="1s" fill="freeze"/>
+            </path>
+            <path d="M0-4v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.6s" fill="freeze"/>
+                <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2s" begin="1.9s" repeatCount="indefinite"/>
+            </path>
+        </g>
+    </g>
+</svg>

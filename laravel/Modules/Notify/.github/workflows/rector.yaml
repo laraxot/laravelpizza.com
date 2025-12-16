@@ -1,0 +1,20 @@
+name: rector
+on: [push]
+
+jobs:
+    phpinsights:
+        runs-on: ubuntu-latest
+        name: Rector
+        steps:
+            - uses: actions/checkout@v4
+            - uses: shivammathur/setup-php@latest
+              with:
+                  php-version: 8.1
+            - run: composer install --prefer-dist --no-progress
+            - run: composer require driftingly/rector-laravel --dev -W
+            - run: composer require symplify/phpstan-rules --dev -W
+            - run: composer require rector/rector --dev -W
+            - run: ./vendor/bin/rector process
+            - uses: stefanzweifel/git-auto-commit-action@latest
+              with:
+                commit_message: rector

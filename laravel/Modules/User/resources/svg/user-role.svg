@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="User role icon">
+    <style>
+        .user, .badge {
+            fill: currentColor;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        .badge {
+            transform: translate(8px, -4px);
+        }
+        svg:hover .user {
+            transform: scale(1.1) translateX(-2px);
+        }
+        svg:hover .badge {
+            transform: translate(10px, -6px) rotate(15deg) scale(1.2);
+        }
+        .sparkle {
+            fill: currentColor;
+            opacity: 0;
+        }
+        svg:hover .sparkle {
+            animation: sparkle 1s ease-out infinite;
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+    </style>
+    <title>User Role</title>
+    <g class="user">
+        <circle cx="8" cy="8" r="4"/>
+        <path d="M14 19v-2a6 6 0 00-6-6H6a6 6 0 00-6 6v2h14z"/>
+    </g>
+    <g class="badge">
+        <path d="M19 8l-2.5-2.5L16 3l2.5 2.5L21 3l.5 2.5L24 8l-2.5.5L21 11l-2.5-2.5L16 11l.5-2.5z"/>
+    </g>
+    <circle class="sparkle" cx="19" cy="8" r="1"/>
+    <circle class="sparkle" cx="17" cy="6" r="0.5"/>
+    <circle class="sparkle" cx="21" cy="6" r="0.5"/>
+</svg>

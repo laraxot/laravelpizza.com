@@ -1,0 +1,25 @@
+{
+    "singleQuote": true,
+    "endOfLine": "auto",
+    "proseWrap": "preserve",
+    "semi": true,
+    "printWidth": 120,
+    "useTabs": false,
+    "tabWidth": 2,
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "avoid",
+    "trailingComma": "none",
+    "overrides": [
+      {
+        "files": "*.js",
+        "options": {
+          "semi": true,
+          "proseWrap": "preserve",
+          "printWidth": 160
+        }
+      }
+    ],
+    "htmlWhitespaceSensitivity": "ignore"
+  }
+  

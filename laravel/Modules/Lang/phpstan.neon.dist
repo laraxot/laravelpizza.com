@@ -1,0 +1,34 @@
+includes:
+    - phpstan-baseline.neon
+    - ./vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: max
+    paths:
+        - .
+    excludePaths:
+        - ./build/*
+        - ./vendor/*
+        - ./*/vendor/*
+        - ./docs/*
+        - ./Tests/*
+        - ./_ide_helper.php
+        - ./Services/Trend.php
+
+    bootstrapFiles:
+        # - ./Services/vendor/autoload.php
+        # - ./phpstan_constants.php
+
+
+    scanFiles:
+        # - ./Helpers/Helper.php
+        # - ./vendor/laraxot/module_xot/Helpers/Helper.php
+
+    tmpDir: build/phpstan
+    reportUnmatchedIgnoredErrors: false
+    checkOctaneCompatibility: false
+    checkModelProperties: false
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    checkImplicitMixed: false
+

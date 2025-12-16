@@ -1,0 +1,131 @@
+{
+    "id": "1",
+    "title": {
+        "it": "Laravel Pizza Meetups - Home"
+    },
+    "slug": "home",
+    "middleware": null,
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "hero",
+                "slug": "hero-section",
+                "data": {
+                    "view": "pub_theme::components.blocks.hero.main",
+                    "title": "Laravel Developers. Pizza. Community.",
+                    "subtitle": "Join fellow Laravel, Filament, and Livewire enthusiasts for pizza meetups.",
+                    "description": "Share knowledge, build connections, and enjoy great food together.",
+                    "background_image": "/images/hero-bg.jpg",
+                    "cta_primary": {
+                        "label": "Join the Community",
+                        "url": "/auth/register",
+                        "style": "primary"
+                    },
+                    "cta_secondary": {
+                        "label": "View Events",
+                        "url": "/events",
+                        "style": "secondary"
+                    }
+                }
+            },
+            {
+                "type": "features",
+                "slug": "features-grid",
+                "data": {
+                    "view": "pub_theme::components.blocks.features.grid",
+                    "title": "Why Join Our Community?",
+                    "description": "More than just pizza - it's about building lasting connections with developers who share your passion",
+                    "features": [
+                        {
+                            "icon": "heroicon-o-calendar",
+                            "title": "Regular Meetups",
+                            "description": "Join weekly pizza meetups with Laravel developers in your area",
+                            "color": "red"
+                        },
+                        {
+                            "icon": "heroicon-o-users",
+                            "title": "Growing Community",
+                            "description": "Connect with passionate developers who love Laravel and pizza",
+                            "color": "red"
+                        },
+                        {
+                            "icon": "heroicon-o-map-pin",
+                            "title": "Multiple Locations",
+                            "description": "Find meetups in cities around the world",
+                            "color": "red"
+                        },
+                        {
+                            "icon": "heroicon-o-chat-bubble-left-right",
+                            "title": "Real-time Chat",
+                            "description": "Stay connected with the community between meetups",
+                            "color": "red"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "stats",
+                "slug": "stats-section",
+                "data": {
+                    "view": "pub_theme::components.blocks.stats.overview",
+                    "title": "Laravel Pizza in Numbers",
+                    "background_color": "bg-slate-900",
+                    "stats": [
+                        {
+                            "number": "150+",
+                            "label": "Active Members",
+                            "description": "Developers in our community"
+                        },
+                        {
+                            "number": "25+",
+                            "label": "Cities",
+                            "description": "Meetups around the world"
+                        },
+                        {
+                            "number": "500+",
+                            "label": "Pizzas Shared",
+                            "description": "And counting!"
+                        },
+                        {
+                            "number": "100%",
+                            "label": "Laravel Love",
+                            "description": "Pure passion for code"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "cta",
+                "slug": "final-cta",
+                "data": {
+                    "view": "pub_theme::components.blocks.cta.banner",
+                    "title": "Ready to Join?",
+                    "description": "Be part of a growing community of Laravel developers who love pizza and code.",
+                    "background_color": "bg-red-600",
+                    "text_color": "text-white",
+                    "cta_primary": {
+                        "label": "Sign Up Now",
+                        "url": "/auth/register",
+                        "style": "white"
+                    },
+                    "cta_secondary": {
+                        "label": "Browse Events",
+                        "url": "/events",
+                        "style": "outline-white"
+                    }
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": []
+    },
+    "footer_blocks": {
+        "it": []
+    },
+    "created_at": "2025-01-06T15:30:00.000000Z",
+    "updated_at": "2025-01-06T15:30:00.000000Z",
+    "created_by": null,
+    "updated_by": "01985ae8-8039-71ea-88c7-54ebce6295b0"
+}

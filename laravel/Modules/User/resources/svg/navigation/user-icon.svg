@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        @keyframes profile-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+        @keyframes circle-rotate {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -30; }
+        }
+        .profile {
+            transition: all 0.3s ease-in-out;
+        }
+        .status-circle {
+            stroke-dasharray: 30;
+            transition: all 0.3s ease-in-out;
+        }
+        svg:hover .profile {
+            animation: profile-pulse 2s ease-in-out infinite;
+        }
+        svg:hover .status-circle {
+            animation: circle-rotate 2s linear infinite;
+        }
+    </style>
+    
+    <!-- Profilo Utente -->
+    <g class="profile">
+        <!-- Avatar -->
+        <circle cx="12" cy="8" r="4" />
+        
+        <!-- Corpo -->
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M5.4 20a7 7 0 0113.2 0" />
+    </g>
+
+    <!-- Cerchio di Stato -->
+    <circle class="status-circle"
+            cx="12" cy="12" r="10"
+            stroke-linecap="round"
+            opacity="0.2" />
+            
+    <!-- Badge Online -->
+    <circle cx="18" cy="6" r="2"
+            fill="none"
+            class="profile" />
+</svg> 

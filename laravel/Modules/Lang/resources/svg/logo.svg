@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img"
+     aria-label="Language Localization Logo">
+    <style>
+        .lang-globe { 
+            animation: globe-rotate 8s linear infinite;
+            transform-origin: 12px 12px;
+        }
+        .lang-text { 
+            animation: text-flow 3s ease-in-out infinite alternate;
+        }
+        .lang-translate { 
+            animation: translate-pulse 2s ease-in-out infinite;
+        }
+        .lang-flags { 
+            animation: flag-wave 4s ease-in-out infinite;
+        }
+        
+        @keyframes globe-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes text-flow {
+            0% { opacity: 0.6; transform: translateX(-0.5px); }
+            100% { opacity: 1; transform: translateX(0.5px); }
+        }
+        
+        @keyframes translate-pulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0.9; transform: scale(1.1); }
+        }
+        
+        @keyframes flag-wave {
+            0%, 100% { transform: scaleX(1); }
+            25% { transform: scaleX(1.1); }
+            75% { transform: scaleX(0.9); }
+        }
+        
+        svg:hover .lang-globe { 
+            animation-duration: 3s; 
+        }
+        svg:hover .lang-text { 
+            animation-duration: 1s; 
+        }
+        svg:hover .lang-translate { 
+            animation-duration: 1s; 
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .lang-globe { opacity: 0.95; }
+            .lang-text { opacity: 0.9; }
+            .lang-translate { opacity: 0.85; }
+            .lang-flags { opacity: 0.8; }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .lang-globe, .lang-text, .lang-translate, .lang-flags { animation: none; }
+        }
+    </style>
+    
+    <!-- Globe/Earth -->
+    <circle class="lang-globe" cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Meridians and parallels -->
+    <g class="lang-globe">
+        <path stroke-linecap="round" stroke-linejoin="round" 
+              d="M3 12h18M12 3v18" opacity="0.6" />
+        <path stroke-linecap="round" stroke-linejoin="round" 
+              d="M6 5.5c0 3.5 2.5 6.5 6 6.5s6-3 6-6.5M6 18.5c0-3.5 2.5-6.5 6-6.5s6 3 6 6.5" opacity="0.4" />
+    </g>
+    
+    <!-- Language text bubbles -->
+    <g class="lang-text">
+        <ellipse cx="8" cy="8" rx="2" ry="1.5" stroke-width="1" opacity="0.7" />
+        <ellipse cx="16" cy="16" rx="2" ry="1.5" stroke-width="1" opacity="0.7" />
+    </g>
+    
+    <!-- Translation arrows -->
+    <g class="lang-translate">
+        <path stroke-linecap="round" stroke-linejoin="round" 
+              d="M7 9l2 2-2 2" stroke-width="1" opacity="0.8" />
+        <path stroke-linecap="round" stroke-linejoin="round" 
+              d="M17 13l-2 2 2 2" stroke-width="1" opacity="0.8" />
+    </g>
+    
+    <!-- Language flags/regions -->
+    <g class="lang-flags">
+        <rect x="4" y="4" width="2" height="1.5" rx="0.2" stroke-width="0.5" opacity="0.6" />
+        <rect x="18" y="4" width="2" height="1.5" rx="0.2" stroke-width="0.5" opacity="0.6" />
+        <rect x="4" y="18.5" width="2" height="1.5" rx="0.2" stroke-width="0.5" opacity="0.6" />
+        <rect x="18" y="18.5" width="2" height="1.5" rx="0.2" stroke-width="0.5" opacity="0.6" />
+    </g>
+    
+    <!-- Communication indicators -->
+    <circle cx="12" cy="6" r="0.5" fill="currentColor" opacity="0.7" />
+    <circle cx="18" cy="12" r="0.5" fill="currentColor" opacity="0.7" />
+    <circle cx="12" cy="18" r="0.5" fill="currentColor" opacity="0.7" />
+    <circle cx="6" cy="12" r="0.5" fill="currentColor" opacity="0.7" />
+</svg>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        .activity-clock { 
+            animation: tick 2s ease-in-out infinite;
+            transform-origin: 12px 12px;
+        }
+        .activity-hand { 
+            animation: clockHand 4s ease-in-out infinite;
+            transform-origin: 12px 12px;
+        }
+        .activity-arrow { 
+            animation: rotate 3s linear infinite;
+            transform-origin: 17px 12px;
+        }
+        
+        @keyframes tick {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        @keyframes clockHand {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(30deg); }
+            50% { transform: rotate(60deg); }
+            75% { transform: rotate(30deg); }
+            100% { transform: rotate(0deg); }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .activity-clock, .activity-hand, .activity-arrow { animation: none; }
+        }
+    </style>
+    
+    <!-- Cerchio esterno dell'orologio -->
+    <circle class="activity-clock" cx="12" cy="12" r="9" />
+    
+    <!-- Lancetta delle ore -->
+    <path class="activity-hand"
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M12 7v5l3 3" />
+    
+    <!-- Freccia circolare -->
+    <g class="activity-arrow">
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M17 12a5 5 0 1 0-5 5" opacity="0.8" />
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M17 12l2-2m-2 2l-2-2" />
+    </g>
+    
+    <!-- Indicatori di attività -->
+    <circle cx="12" cy="5" r="0.5" fill="currentColor" opacity="0.6" />
+    <circle cx="19" cy="12" r="0.5" fill="currentColor" opacity="0.4" />
+    <circle cx="12" cy="19" r="0.5" fill="currentColor" opacity="0.6" />
+    <circle cx="5" cy="12" r="0.5" fill="currentColor" opacity="0.4" />
+</svg> 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="User group icon">
+    <style>
+        .user {
+            fill: currentColor;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        .user-1 { transform: translateX(-2px); }
+        .user-2 { transform: translateX(2px); }
+        svg:hover .user-1 {
+            transform: translateX(-4px) scale(1.1);
+        }
+        svg:hover .user-2 {
+            transform: translateX(4px) scale(1.1);
+        }
+        .connection {
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-dasharray: 8;
+            stroke-dashoffset: 8;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        svg:hover .connection {
+            opacity: 1;
+            animation: dash 1s linear infinite;
+        }
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+    <title>User Group</title>
+    <line class="connection" x1="8" y1="12" x2="16" y2="12"/>
+    <g class="user user-1">
+        <circle cx="6" cy="8" r="3"/>
+        <path d="M12 17v-1.5a4.5 4.5 0 00-4.5-4.5h-3A4.5 4.5 0 000 15.5V17h12z"/>
+    </g>
+    <g class="user user-2">
+        <circle cx="18" cy="8" r="3"/>
+        <path d="M24 17v-1.5a4.5 4.5 0 00-4.5-4.5h-3a4.5 4.5 0 00-4.5 4.5V17h12z"/>
+    </g>
+</svg>

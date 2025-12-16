@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        @keyframes shield-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes user-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        @keyframes badge-shine {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        .shield-ring {
+            transform-origin: center;
+            animation: shield-rotate 8s linear infinite;
+        }
+        .user {
+            transform-origin: center;
+            animation: user-pulse 2s ease-in-out infinite;
+        }
+        .badge {
+            animation: badge-shine 1.5s ease-in-out infinite;
+        }
+    </style>
+
+    <!-- Utente -->
+    <g class="user">
+        <circle cx="12" cy="8" r="3" />
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M7 19c0-2.8 2.2-5 5-5s5 2.2 5 5" />
+    </g>
+    
+    <!-- Anello di protezione -->
+    <g class="shield-ring">
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M12 3c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8" />
+    </g>
+
+    <!-- Badge DPO -->
+    <g class="badge" transform="translate(18, 4)">
+        <circle cx="0" cy="0" r="2.5" />
+        <text x="0" y="1" 
+              text-anchor="middle" 
+              font-size="3"
+              fill="currentColor"
+              stroke="none">
+            DPO
+        </text>
+    </g>
+</svg> 

@@ -1,0 +1,79 @@
+{
+    "name": "laraxot/module_geo_fila3",
+    "description": "",
+    "homepage": "https://github.com/laraxot/module_geo_fila3.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Livewire\\LivewireServiceProvider",
+                "Modules\\Geo\\Providers\\GeoServiceProvider",
+                "Modules\\Geo\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Geo\\": "app/",
+            "Modules\\Geo\\Database\\Factories\\": "database/factories/",
+            "Modules\\Geo\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Geo\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        
+    },
+    "require_comment": {
+        "cheesegrits/filament-google-maps": "*",
+        "dotswan/filament-map-picker": "*",
+        "webbingbrasil/filament-maps": "*"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Xot"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../UI"
+        }
+    ],
+    "scripts": {
+        "post-autoload-dump_comment": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ],
+        "post-update-cmd_comment": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

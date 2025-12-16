@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img"
+     aria-label="User Icon">
+    <style>
+        .user-avatar { 
+            animation: breathe 4s ease-in-out infinite;
+            transform-origin: 12px 8px;
+        }
+        .user-group { 
+            animation: connect 3s ease-in-out infinite;
+            transform-origin: 12px 16px;
+        }
+        .user-status { 
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        
+        @keyframes connect {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        svg:hover .user-avatar { 
+            animation-duration: 2s; 
+        }
+        svg:hover .user-group { 
+            animation-duration: 1.5s; 
+        }
+        svg:hover .user-status { 
+            animation-duration: 1s; 
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .user-status { opacity: 0.8; }
+            .user-group { opacity: 0.8; }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .user-avatar, .user-group, .user-status { animation: none; }
+        }
+    </style>
+    
+    <!-- Main user avatar -->
+    <g class="user-avatar">
+        <circle cx="12" cy="8" r="4" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 12c-4 0-7 2-7 6v2h14v-2c0-4-3-6-7-6z" />
+    </g>
+    
+    <!-- User group -->
+    <g class="user-group">
+        <!-- Left user -->
+        <circle cx="6" cy="6" r="2" opacity="0.7" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 14c0-2 1.5-3 3-3" opacity="0.6" />
+        
+        <!-- Right user -->
+        <circle cx="18" cy="6" r="2" opacity="0.7" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20 14c0-2-1.5-3-3-3" opacity="0.6" />
+    </g>
+    
+    <!-- Status indicators -->
+    <g class="user-status">
+        <circle cx="16" cy="4" r="1" fill="currentColor" opacity="0.8" />
+        <circle cx="8" cy="4" r="0.5" fill="currentColor" opacity="0.6" />
+        <circle cx="20" cy="8" r="0.5" fill="currentColor" opacity="0.5" />
+        <circle cx="4" cy="8" r="0.5" fill="currentColor" opacity="0.5" />
+    </g>
+    
+    <!-- Connection lines -->
+    <g opacity="0.4">
+        <path stroke-linecap="round" d="M8 8l4 0M16 8l-4 0" stroke-width="0.5" />
+        <path stroke-linecap="round" d="M6 10l6 2M18 10l-6 2" stroke-width="0.5" />
+    </g>
+    
+    <!-- User management indicators -->
+    <circle cx="12" cy="21" r="1" fill="currentColor" opacity="0.6" />
+    <circle cx="8" cy="21" r="0.5" fill="currentColor" opacity="0.4" />
+    <circle cx="16" cy="21" r="0.5" fill="currentColor" opacity="0.4" />
+</svg>

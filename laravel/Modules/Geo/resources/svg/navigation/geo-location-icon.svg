@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        .target-ring, .crosshair { transition: all 0.3s ease-in-out; }
+        svg:hover .target-ring { transform: scale(1.1); }
+        svg:hover .crosshair { transform: rotate(90deg); }
+        .crosshair { transform-origin: center; }
+    </style>
+    
+    <!-- Cerchi concentrici -->
+    <g class="target-ring">
+        <circle cx="12" cy="12" r="8" />
+        <circle cx="12" cy="12" r="4" opacity="0.7" />
+    </g>
+
+    <!-- Mirino -->
+    <g class="crosshair">
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M12 4v3 M12 17v3 M4 12h3 M17 12h3" />
+        <circle cx="12" cy="12" r="1" fill="currentColor" />
+    </g>
+
+    <!-- Coordinate -->
+    <text x="16" y="6" 
+          font-size="3"
+          fill="currentColor"
+          stroke="none"
+          opacity="0.7">
+        N
+    </text>
+</svg> 

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upcoming Events - Join us for pizza and Laravel discussions">
+    <title>Upcoming Events - Laravel Pizza Meetups</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./dist/css/main.css">
+
+    <!-- Alpine.js for dropdown -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="font-sans antialiased bg-slate-900 text-white">
+
+    <!-- Navigation Component -->
+    <div id="navigation-container"></div>
+
+    <!-- Main Content -->
+    <main class="min-h-screen">
+        <!-- Header Section -->
+        <section class="py-12 md:py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Upcoming Events</h1>
+                <p class="text-xl text-gray-400">Join us for pizza and Laravel discussions</p>
+            </div>
+        </section>
+
+        <!-- Filter Buttons -->
+        <section class="pb-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap gap-4">
+                    <button id="filter-all"
+                        class="px-6 py-2 rounded-lg font-medium transition-colors bg-red-600 text-white hover:bg-red-700">
+                        All Events
+                    </button>
+                    <button id="filter-upcoming"
+                        class="px-6 py-2 rounded-lg font-medium transition-colors border border-red-500 text-red-500 hover:bg-red-950/20">
+                        Upcoming
+                    </button>
+                    <button id="filter-past"
+                        class="px-6 py-2 rounded-lg font-medium transition-colors border border-red-500 text-red-500 hover:bg-red-950/20">
+                        Past Events
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Grid -->
+        <section class="pb-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-3 gap-8" id="events-grid">
+                    <!-- Event Card 1 - Upcoming -->
+                    <a href="events/1.html"
+                        class="bg-gray-900 border border-red-900/20 rounded-lg overflow-hidden hover:border-red-500/50 transition-all group h-full">
+                        <div class="relative">
+                            <div class="aspect-video bg-gray-800 flex items-center justify-center">
+                                <div class="text-center text-gray-500">
+                                    <svg class="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <p class="text-sm">Event Image</p>
+                                </div>
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Upcoming</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Laravel 11 Release Pizza Party</h3>
+                            <p class="text-gray-400 mb-4">Celebrate the release of Laravel 11 with fellow developers!
+                                We'll discuss new features, share experiences, and enjoy delicious pizza together.
+                                Perfect for both beginners and experienced Laravel developers.</p>
+                            <div class="space-y-2 text-sm text-gray-400">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    December 15, 2025
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    6:00 PM - 9:00 PM
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    Tech Hub Downtown, 123 Main St
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    5 / 30 attendees
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Event Card 2 - Upcoming -->
+                    <a href="events/2.html"
+                        class="bg-gray-900 border border-red-900/20 rounded-lg overflow-hidden hover:border-red-500/50 transition-all group h-full">
+                        <div class="relative">
+                            <div class="aspect-video bg-gray-800 flex items-center justify-center">
+                                <div class="text-center text-gray-500">
+                                    <svg class="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                    <p class="text-sm">Event Image</p>
+                                </div>
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Upcoming</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Filament Admin Panel Workshop</h3>
+                            <p class="text-gray-400 mb-4">Deep dive into Filament admin panels while enjoying pizza!
+                                Learn best practices, tips and tricks, and build a complete admin panel from scratch.
+                                Bring your laptop and questions!</p>
+                            <div class="space-y-2 text-sm text-gray-400">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    December 22, 2025
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    5:30 PM - 8:30 PM
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    Innovation Center, 456 Tech Ave
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    3 / 25 attendees
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Event Card 3 - Upcoming -->
+                    <a href="events/3.html"
+                        class="bg-gray-900 border border-red-900/20 rounded-lg overflow-hidden hover:border-red-500/50 transition-all group h-full">
+                        <div class="relative">
+                            <div class="aspect-video bg-gray-800 flex items-center justify-center">
+                                <div class="text-center text-gray-500">
+                                    <svg class="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                    <p class="text-sm">Event Image</p>
+                                </div>
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Upcoming</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Livewire 3 Pizza Meetup</h3>
+                            <p class="text-gray-400 mb-4">Explore the power of Livewire 3 with the community! Share your
+                                projects, learn new techniques, and network with other developers. Pizza and drinks
+                                provided!</p>
+                            <div class="space-y-2 text-sm text-gray-400">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    January 5, 2026
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    6:30 PM - 9:00 PM
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    Startup Lounge, 789 Innovation Blvd
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    2 / 35 attendees
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Event Card 4 - Past -->
+                    <a href="events/4.html"
+                        class="bg-gray-900 border border-red-900/20 rounded-lg overflow-hidden hover:border-red-500/50 transition-all group h-full">
+                        <div class="relative">
+                            <div class="aspect-video bg-gray-800 flex items-center justify-center">
+                                <div class="text-center text-gray-500">
+                                    <svg class="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                    <p class="text-sm">Event Image</p>
+                                </div>
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-gray-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Past</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Laravel Beginner's Pizza Night</h3>
+                            <p class="text-gray-400 mb-4">New to Laravel? Join us for a beginner-friendly evening! We'll
+                                cover the basics, answer questions, and help you get started with your first Laravel
+                                project.</p>
+                            <div class="space-y-2 text-sm text-gray-400">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    November 20, 2025
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    6:00 PM - 8:30 PM
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    Community Center, 321 Learning Lane
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    2 / 20 attendees
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Event Card 5 - Upcoming -->
+                    <a href="events/5.html"
+                        class="bg-gray-900 border border-red-900/20 rounded-lg overflow-hidden hover:border-red-500/50 transition-all group h-full">
+                        <div class="relative">
+                            <div class="aspect-video bg-gray-800 flex items-center justify-center">
+                                <div class="text-center text-gray-500">
+                                    <svg class="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <p class="text-sm">Event Image</p>
+                                </div>
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Upcoming</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Laravel Testing Best Practices</h3>
+                            <p class="text-gray-400 mb-4">Master Laravel testing while enjoying pizza! Learn about
+                                PHPUnit, Pest, and testing strategies. Share your testing experiences and learn from
+                                others.</p>
+                            <div class="space-y-2 text-sm text-gray-400">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    January 12, 2026
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    7:00 PM - 9:30 PM
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    Developer Hub, 555 Code Street
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    2 / 28 attendees
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Event Card 6 - Upcoming -->
+                    <a href="events/6.html"
+                        class="bg-gray-900 border border-red-900/20 rounded-lg overflow-hidden hover:border-red-500/50 transition-all group h-full">
+                        <div class="relative">
+                            <div class="aspect-video bg-gray-800 flex items-center justify-center">
+                                <div class="text-center text-gray-500">
+                                    <svg class="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <p class="text-sm">Event Image</p>
+                                </div>
+                            </div>
+                            <span
+                                class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Upcoming</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Laravel API Development Pizza Session</h3>
+                            <p class="text-gray-400 mb-4">Build robust APIs with Laravel! Discuss REST, GraphQL,
+                                authentication, and best practices. Perfect for developers working on API projects.</p>
+                            <div class="space-y-2 text-sm text-gray-400">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    January 19, 2026
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    6:00 PM - 9:00 PM
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    API Workspace, 888 Backend Road
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    2 / 30 attendees
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script src="/js/navigation.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+        // Event filtering (mobile menu è gestito da navigation.js)
+        const filterButtons = {
+            all: document.getElementById('filter-all'),
+            upcoming: document.getElementById('filter-upcoming'),
+            past: document.getElementById('filter-past')
+        };
+
+        const eventCards = document.querySelectorAll('#events-grid > a');
+
+        function filterEvents(type) {
+            // Update button states
+            Object.values(filterButtons).forEach(btn => {
+                if (btn) {
+                    btn.classList.remove('bg-red-600', 'text-white');
+                    btn.classList.add('border', 'border-red-500', 'text-red-500', 'hover:bg-red-950/20');
+                }
+            });
+
+            if (filterButtons[type]) {
+                filterButtons[type].classList.remove('border', 'border-red-500', 'text-red-500', 'hover:bg-red-950/20');
+                filterButtons[type].classList.add('bg-red-600', 'text-white');
+            }
+
+            // Filter cards
+            eventCards.forEach(card => {
+                const badge = card.querySelector('span');
+                const isUpcoming = badge?.textContent === 'Upcoming';
+                const isPast = badge?.textContent === 'Past';
+
+                if (type === 'all') {
+                    card.style.display = 'block';
+                } else if (type === 'upcoming' && isUpcoming) {
+                    card.style.display = 'block';
+                } else if (type === 'past' && isPast) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        filterButtons.all?.addEventListener('click', () => filterEvents('all'));
+        filterButtons.upcoming?.addEventListener('click', () => filterEvents('upcoming'));
+        filterButtons.past?.addEventListener('click', () => filterEvents('past'));
+    </script>
+</body>
+
+</html>

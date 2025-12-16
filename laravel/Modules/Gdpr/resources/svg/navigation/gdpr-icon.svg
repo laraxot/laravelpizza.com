@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        @keyframes shield-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+        @keyframes text-fade {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        .shield { animation: shield-pulse 2s ease-in-out infinite; }
+        .text { animation: text-fade 3s ease-in-out infinite; }
+    </style>
+    
+    <!-- Scudo -->
+    <path class="shield"
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M12 3c-1.5 0-8 1.5-8 1.5v7c0 4.5 3 8.5 8 10.5 5-2 8-6 8-10.5v-7S13.5 3 12 3z" />
+    
+    <!-- Testo GDPR -->
+    <g class="text" transform="translate(7.5, 10)">
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M0 0h9M0 3h9M0 6h9" />
+    </g>
+
+    <!-- Simbolo di spunta -->
+    <path class="shield"
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M9 12l2 2 4-4" />
+</svg> 

@@ -1,0 +1,19 @@
+name: phpinsights
+on: [push]
+
+jobs:
+    phpinsights:
+        runs-on: ubuntu-latest
+        name: PHP Insights checks
+        steps:
+            - uses: actions/checkout@v2
+            - uses: shivammathur/setup-php@v2
+              with:
+                  php-version: 8.1
+            - run: composer install --prefer-dist --no-progress
+            - run: composer require nunomaduro/phpinsights --dev
+            - run: cp vendor/nunomaduro/phpinsights/stubs/laravel.php phpinsights.php
+            - run: vendor/bin/phpinsights -n --ansi --format=github-action --fix
+            - uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                commit_message: phpinsights

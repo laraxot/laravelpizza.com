@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for Laravel Pizza Meetups - Join the community of Laravel developers">
+    <meta name="keywords" content="laravel, register, signup, community, developers">
+    <title>Register - Laravel Pizza Meetups</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/app.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-slate-900 text-white">
+
+    <!-- Navigation Component -->
+    <div id="navigation-container"></div>
+
+    <!-- Register Section -->
+    <section class="py-20 min-h-screen flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="max-w-md mx-auto">
+                <!-- Register Card -->
+                <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+                    <!-- Logo -->
+                    <div class="text-center mb-8">
+                        <div class="flex justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-16 w-16 text-red-500" aria-hidden="true">
+                                <path d="M12 2L22 20H2L12 2z" fill="currentColor"/>
+                                <circle cx="8" cy="14" r="1.2" fill="#fef2f2"/>
+                                <circle cx="12" cy="12" r="1.2" fill="#fef2f2"/>
+                                <circle cx="14" cy="16" r="1.2" fill="#fef2f2"/>
+                                <circle cx="10" cy="17" r="1.2" fill="#fef2f2"/>
+                                <circle cx="15" cy="13" r="1.2" fill="#fef2f2"/>
+                            </svg>
+                        </div>
+                        <h1 class="text-3xl font-bold text-white mb-2">Join the Community</h1>
+                        <p class="text-gray-400">Create your Laravel Pizza Meetups account</p>
+                    </div>
+
+                    <!-- Register Form -->
+                    <form action="#" method="POST" class="space-y-4">
+                        <!-- Name Field -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
+                                Full Name
+                            </label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                autocomplete="name"
+                                class="w-full bg-slate-700 border border-slate-600 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                                placeholder="John Doe"
+                            >
+                        </div>
+
+                        <!-- Email Field -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+                                Email Address
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                autocomplete="email"
+                                class="w-full bg-slate-700 border border-slate-600 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                                placeholder="your.email@example.com"
+                            >
+                        </div>
+
+                        <!-- Location Field -->
+                        <div>
+                            <label for="location" class="block text-sm font-medium text-gray-300 mb-2">
+                                Location
+                            </label>
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                autocomplete="address-level2"
+                                class="w-full bg-slate-700 border border-slate-600 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                                placeholder="City, Country"
+                            >
+                        </div>
+
+                        <!-- Password Field -->
+                        <div>
+                            <label for="password" class="block text-sm font-medium text-gray-300 mb-2">
+                                Password
+                            </label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                required
+                                autocomplete="new-password"
+                                class="w-full bg-slate-700 border border-slate-600 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                                placeholder="Enter a strong password"
+                            >
+                        </div>
+
+                        <!-- Password Confirmation Field -->
+                        <div>
+                            <label for="password_confirmation" class="block text-sm font-medium text-gray-300 mb-2">
+                                Confirm Password
+                            </label>
+                            <input
+                                type="password"
+                                id="password_confirmation"
+                                name="password_confirmation"
+                                required
+                                autocomplete="new-password"
+                                class="w-full bg-slate-700 border border-slate-600 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                                placeholder="Confirm your password"
+                            >
+                        </div>
+
+                        <!-- Interests Selection -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-3">
+                                Interests (Select all that apply)
+                            </label>
+                            <div class="space-y-2">
+                                <label class="flex items-center cursor-pointer p-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors">
+                                    <input
+                                        type="checkbox"
+                                        name="interests[]"
+                                        value="laravel"
+                                        class="w-4 h-4 bg-slate-700 border-slate-600 rounded text-red-500 focus:ring-2 focus:ring-red-500 focus:ring-offset-0"
+                                    >
+                                    <span class="ml-3 text-white">Laravel</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer p-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors">
+                                    <input
+                                        type="checkbox"
+                                        name="interests[]"
+                                        value="filament"
+                                        class="w-4 h-4 bg-slate-700 border-slate-600 rounded text-red-500 focus:ring-2 focus:ring-red-500 focus:ring-offset-0"
+                                    >
+                                    <span class="ml-3 text-white">Filament</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer p-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors">
+                                    <input
+                                        type="checkbox"
+                                        name="interests[]"
+                                        value="livewire"
+                                        class="w-4 h-4 bg-slate-700 border-slate-600 rounded text-red-500 focus:ring-2 focus:ring-red-500 focus:ring-offset-0"
+                                    >
+                                    <span class="ml-3 text-white">Livewire</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer p-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors">
+                                    <input
+                                        type="checkbox"
+                                        name="interests[]"
+                                        value="vue"
+                                        class="w-4 h-4 bg-slate-700 border-slate-600 rounded text-red-500 focus:ring-2 focus:ring-red-500 focus:ring-offset-0"
+                                    >
+                                    <span class="ml-3 text-white">Vue.js</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Terms and Conditions -->
+                        <div>
+                            <label class="flex items-start cursor-pointer">
+                                <input
+                                    type="checkbox"
+                                    name="terms"
+                                    required
+                                    class="w-4 h-4 mt-1 bg-slate-700 border-slate-600 rounded text-red-500 focus:ring-2 focus:ring-red-500 focus:ring-offset-0"
+                                >
+                                <span class="ml-3 text-sm text-gray-300">
+                                    I agree to the
+                                    <a href="#" class="text-red-500 hover:text-red-400 transition-colors">Terms of Service</a>
+                                    and
+                                    <a href="#" class="text-red-500 hover:text-red-400 transition-colors">Privacy Policy</a>
+                                </span>
+                            </label>
+                        </div>
+
+                        <!-- Register Button -->
+                        <button
+                            type="submit"
+                            class="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-800"
+                        >
+                            Create Account
+                        </button>
+                    </form>
+
+                    <!-- Login Link -->
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-400 text-sm">
+                            Already have an account?
+                            <a href="login.html" class="text-red-500 hover:text-red-400 font-medium transition-colors">
+                                Sign in
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Back to Home Link -->
+                <div class="mt-6 text-center">
+                    <a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors inline-flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                        </svg>
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-container"></div>
+
+    <script src="/js/navigation.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

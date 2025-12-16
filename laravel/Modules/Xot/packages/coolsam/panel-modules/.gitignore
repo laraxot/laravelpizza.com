@@ -1,0 +1,27 @@
+.idea
+.phpunit.cache
+.phpunit.result.cache
+build
+composer.lock
+coverage
+docs
+phpunit.xml
+phpstan.neon
+testbench.yaml
+vendor
+node_modules
+.git-blame-ignore-revsnode_modules
+vendor
+.git-blame-ignore-revs
+build/
+vendor/
+build/
+node_modules
+docs/cache/
+cache/
+
+# Backup files
+*.bak
+-e 
+# PHPStan documentation
+docs/phpstan/

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <style>
+        .pin {
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+        svg:hover .pin {
+            transform: scale(1.2) translateY(-2px);
+        }
+        .pulse {
+            opacity: 0;
+            transform-origin: center;
+            transition: opacity 0.3s ease;
+        }
+        svg:hover .pulse {
+            opacity: 0.3;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.3; }
+            70% { transform: scale(2); opacity: 0; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+    </style>
+    <circle class="pulse" cx="12" cy="12" r="8" fill="currentColor" stroke="none"/>
+    <path class="pin" d="M12 22s-8-6-8-12a8 8 0 1 1 16 0c0 6-8 12-8 12z M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>

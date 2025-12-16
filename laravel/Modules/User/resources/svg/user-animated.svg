@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <style>
+        .user {
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+        svg:hover .user {
+            transform: scale(1.1);
+        }
+        .status {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+        svg:hover .status {
+            opacity: 1;
+            transform: scale(1);
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+    </style>
+    <path class="user" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+    <circle class="user" cx="12" cy="7" r="4"/>
+    <circle class="status" cx="18" cy="4" r="2" fill="currentColor" stroke="none"/>
+</svg>

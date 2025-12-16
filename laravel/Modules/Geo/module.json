@@ -1,0 +1,14 @@
+{
+    "name": "Geo",
+    "alias": "geo",
+    "description": "Servizi geografici per geocoding, mappe e gestione posizioni con integrazione provider esterni",
+    "keywords": ["geo", "geocoding", "maps", "locations", "coordinates"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Geo\\Providers\\GeoServiceProvider",
+        "Modules\\Geo\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": [],
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,17 @@
+{
+    "name": "User",
+    "alias": "user",
+    "description": "Gestione utenti, autenticazione, autorizzazioni e ruoli del sistema",
+    "keywords": ["auth", "users", "roles", "permissions", "authentication"],
+    "priority": 0,
+    "providers": [
+        "Modules\\User\\Providers\\UserServiceProvider",
+        "Modules\\User\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "migration": {
+        "seeds": [
+            "Modules\\User\\Database\\Seeders\\RolesSeeder"
+        ]
+    },
+    "files": []
+}

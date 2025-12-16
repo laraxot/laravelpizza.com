@@ -1,0 +1,14 @@
+{
+    "name": "Notify",
+    "alias": "notify",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Notify\\Providers\\NotifyServiceProvider",
+        "Modules\\Notify\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": [],
+    "files": [],
+    "requires": []
+}

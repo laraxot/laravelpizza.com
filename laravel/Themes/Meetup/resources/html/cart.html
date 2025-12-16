@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Laravel Developer Event registrations. Manage your event attendance and connections.">
+    <meta name="keywords" content="laravel, events, registration, community, developers, conferences">
+    <title>My Events - Laravel Developers Community</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="container-custom">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2" aria-label="Go to homepage">
+                        <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" opacity="0.3"/>
+                            <circle cx="8" cy="8" r="1.5"/>
+                            <circle cx="16" cy="8" r="1.5"/>
+                            <circle cx="12" cy="12" r="1.5"/>
+                            <circle cx="8" cy="16" r="1.5"/>
+                            <circle cx="16" cy="16" r="1.5"/>
+                        </svg>
+                        <span class="text-2xl font-bold text-gray-900">Laravel Pizza Meetups</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary-600 font-medium">Home</a>
+                    <a href="events.html" class="text-gray-700 hover:text-primary-600 font-medium">Events</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-primary-600 font-medium">Community</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary-600 font-medium">Contact</a>
+                    <a href="/dashboard" class="relative bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700" aria-label="Go to dashboard" aria-current="page">
+                        <i class="fas fa-user"></i>
+                        <span class="absolute -top-2 -right-2 bg-secondary-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center" aria-live="polite">2</span>
+                    </a>
+                    <!-- Language Selector -->
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="text-gray-700 hover:text-primary-600 transition-colors flex items-center font-medium">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                            </svg>
+                            English
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open" @click.away="open = false" x-transition class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                            <div class="py-1">
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">
+                                    <svg class="w-4 h-4 mr-2 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    English
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Deutsch</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Español</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open mobile menu">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t" aria-labelledby="mobile-menu-button">
+            <div class="container-custom py-4 space-y-4" role="menu" aria-label="Mobile menu">
+                <a href="index.html" class="block text-gray-700 hover:text-primary-600" role="menuitem">Home</a>
+                <a href="events.html" class="block text-gray-700 hover:text-primary-600" role="menuitem">Events</a>
+                <a href="index.html#about" class="block text-gray-700 hover:text-primary-600" role="menuitem">Community</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-primary-600" role="menuitem">Contact</a>
+                <!-- Language Selector Mobile -->
+                <div class="pt-2 border-t border-gray-200">
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full text-left text-gray-700 hover:text-primary-600 font-medium flex items-center justify-between">
+                            <span>Language: English</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open" @click.away="open = false" x-transition class="mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                            <div class="py-1">
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">
+                                    <svg class="w-4 h-4 mr-2 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    English
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Deutsch</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Español</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <section class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-12">
+        <div class="container-custom text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">My Events</h1>
+            <p class="text-lg text-primary-100">Manage your event registrations and community connections</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <section class="section bg-gray-50" aria-label="Dashboard content">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">My Registrations</h2>
+                        
+                        <!-- Registrations will be dynamically populated here -->
+                        <div id="registrations">
+                            <!-- Registrations will be inserted here by JavaScript -->
+                            <div class="text-center py-12 text-gray-500" id="empty-registrations-message">
+                                <i class="fas fa-calendar-check text-5xl mb-4 text-gray-300"></i>
+                                <p class="text-xl">No upcoming events registered</p>
+                                <p class="mt-2">Browse our events and register for upcoming meetups!</p>
+                                <a href="menu.html" class="btn-primary mt-4 inline-block">Browse Events</a>
+                            </div>
+                            
+                            <!-- Sample registration item -->
+                            <div class="border-b border-gray-200 py-4" id="registration-item">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-600 to-secondary-500 rounded-md flex items-center justify-center">
+                                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                        </svg>
+                                    </div>
+                                    
+                                    <div class="ml-4 flex-grow">
+                                        <h3 class="font-bold text-gray-900">Laravel Best Practices Meetup</h3>
+                                        <p class="text-gray-600 text-sm">February 15, 2024 | 6:00 PM - 8:00 PM</p>
+                                        <p class="text-gray-600 text-sm">TechHub Rome, Via del Corso 123</p>
+                                    </div>
+                                    
+                                    <div class="ml-4">
+                                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                                            Confirmed
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4 flex space-x-3">
+                                    <button class="text-sm bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700">
+                                        View Details
+                                    </button>
+                                    <button class="text-sm bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300">
+                                        Cancel Registration
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="border-b border-gray-200 py-4" id="registration-item">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-secondary-500 to-accent-500 rounded-md flex items-center justify-center">
+                                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    
+                                    <div class="ml-4 flex-grow">
+                                        <h3 class="font-bold text-gray-900">Laravel Testing Workshop</h3>
+                                        <p class="text-gray-600 text-sm">March 20, 2024 | 6:30 PM - 9:00 PM</p>
+                                        <p class="text-gray-600 text-sm">TechHub Milan, Corso Europa 45</p>
+                                    </div>
+                                    
+                                    <div class="ml-4">
+                                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
+                                            Pending
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4 flex space-x-3">
+                                    <button class="text-sm bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700">
+                                        View Details
+                                    </button>
+                                    <button class="text-sm bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300">
+                                        Cancel Registration
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h2>
+                        
+                        <div class="space-y-4 mb-6">
+                            <a href="/dashboard/profile" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                                <i class="fas fa-user-circle text-2xl text-primary-600 mr-4"></i>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">My Profile</h3>
+                                    <p class="text-gray-600 text-sm">Update your information</p>
+                                </div>
+                            </a>
+                            
+                            <a href="/dashboard/network" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                                <i class="fas fa-users text-2xl text-secondary-600 mr-4"></i>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">My Network</h3>
+                                    <p class="text-gray-600 text-sm">Connect with other developers</p>
+                                </div>
+                            </a>
+                            
+                            <a href="/dashboard/preferences" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                                <i class="fas fa-cog text-2xl text-accent-600 mr-4"></i>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">Preferences</h3>
+                                    <p class="text-gray-600 text-sm">Manage notifications</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="border-t border-gray-200 pt-6">
+                            <h3 class="font-bold text-gray-900 mb-3">Upcoming Events</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <div class="bg-primary-100 text-primary-600 p-2 rounded-lg mr-3">
+                                        <i class="fas fa-calendar-day"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Filament Workshop</h4>
+                                        <p class="text-gray-600 text-sm">Feb 28, 6:00 PM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-secondary-100 text-secondary-600 p-2 rounded-lg mr-3">
+                                        <i class="fas fa-calendar-day"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900">Livewire Meetup</h4>
+                                        <p class="text-gray-600 text-sm">Mar 8, 6:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white" role="contentinfo">
+        <div class="container-custom py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                             width="24" 
+                             height="24" 
+                             viewBox="0 0 24 24" 
+                             fill="none" 
+                             stroke="currentColor" 
+                             stroke-width="2" 
+                             stroke-linecap="round" 
+                             stroke-linejoin="round" 
+                             class="w-8 h-8 text-red-500">
+                            <path d="M15 11h.01"></path>
+                            <path d="M11 15h.01"></path>
+                            <path d="M16 16h.01"></path>
+                            <path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"></path>
+                            <path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"></path>
+                        </svg>
+                        <span class="text-xl font-bold">Laravel Pizza Meetups</span>
+                    </div>
+                    <p class="text-gray-400">Bringing together Laravel, Filament, and Livewire enthusiasts over delicious pizza. Join our community and connect with fellow developers.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="menu.html" class="hover:text-white">All Events</a></li>
+                        <li><a href="menu.html#laravel" class="hover:text-white">Laravel Events</a></li>
+                        <li><a href="menu.html#filament" class="hover:text-white">Filament Events</a></li>
+                        <li><a href="menu.html#livewire" class="hover:text-white">Livewire Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Community</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#about" class="hover:text-white">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/chat" class="hover:text-white">Community Chat</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Get Started</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/register" class="hover:text-white">Sign Up</a></li>
+                        <li><a href="/login" class="hover:text-white">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>
+                    Made with <span class="text-red-500">❤</span> for the Laravel community
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+    <script>
+        // Initialize cart and update count
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isExpanded = mobileMenu.classList.contains('hidden');
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+            
+            // Sample functionality to remove registration items
+            document.querySelectorAll('.text-red-600').forEach(button => {
+                button.addEventListener('click', function() {
+                    const item = this.closest('.border-b');
+                    if (confirm('Are you sure you want to cancel this registration?')) {
+                        item.style.opacity = '0.5';
+                        item.style.pointerEvents = 'none';
+                        showNotification('Registration canceled');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

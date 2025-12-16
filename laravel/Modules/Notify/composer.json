@@ -1,0 +1,91 @@
+{
+    "name": "laraxot/module_notify_fila3",
+    "description": "notify module dedicated to managing notifications",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_notify",
+        "Laravel",
+        "Notify module",
+        "Notify",
+        "Emails",
+        "Smss",
+        "Whatsapp"
+    ],
+    "homepage": "https://github.com/laraxot/module_notify_fila3.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Notify\\Providers\\NotifyServiceProvider",
+                "Modules\\Notify\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Notify\\": "app/",
+            "Modules\\Notify\\Database\\Factories\\": "database/factories/",
+            "Modules\\Notify\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "require": {
+        "aws/aws-sdk-php": "*",
+        "filament/filament": "*",
+        "illuminate/contracts": "*",
+        "illuminate/support": "*",
+        "irazasyed/telegram-bot-sdk": "*",
+        "kreait/laravel-firebase": "*",
+        "laravel-notification-channels/fcm": "*",
+        "laravel-notification-channels/telegram": "*",
+        "phpdocumentor/type-resolver": "*",
+        "spatie/laravel-database-mail-templates": "^3.7",
+        "symfony/http-client": "*",
+        "symfony/postmark-mailer": "*"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Xot"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../UI"
+        }
+    ],
+    "scripts": {
+        "post-autoload-dump1": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wikimedia/composer-merge-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

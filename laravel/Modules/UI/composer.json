@@ -1,0 +1,77 @@
+{
+    "name": "laraxot/module_ui_fila3",
+    "description": "UI Module for Laraxot applications with Filament integration",
+    "homepage": "https://github.com/laraxot/module_ui_fila3.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\UI\\Providers\\UIServiceProvider",
+                "Modules\\UI\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\UI\\": "app/",
+            "Modules\\UI\\Database\\Factories\\": "database/factories/",
+            "Modules\\UI\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\UI\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "owenvoke/blade-fontawesome": "*"
+        
+    },
+    "require_comment": {
+        "coolsam/flatpickr": "*",
+        "saade/filament-fullcalendar": "^3.2"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../User"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../Xot"
+        }
+    ],
+    "scripts": {
+        "post-autoload-dump1": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wikimedia/composer-merge-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

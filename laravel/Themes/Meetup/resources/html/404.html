@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - Laravel Pizza Meetups">
+    <title>404 - Page Not Found | Laravel Pizza Meetups</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/app.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-slate-900 text-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <div id="navigation-container"></div>
+    
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <div class="flex justify-center mb-6">
+                <svg class="w-24 h-24 text-red-500" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" opacity="0.5"/>
+                    <circle cx="12" cy="12" r="1.5"/>
+                    <circle cx="9" cy="10" r="1"/>
+                    <circle cx="15" cy="10" r="1"/>
+                    <circle cx="9" cy="14" r="1"/>
+                    <circle cx="15" cy="14" r="1"/>
+                </svg>
+            </div>
+            <h1 class="text-5xl font-bold text-white mb-4">404</h1>
+            <h2 class="text-2xl font-bold text-white mb-4">Page Not Found</h2>
+            <p class="text-gray-400 mb-8 max-w-md mx-auto">
+                Oops! The page you're looking for doesn't exist or has been moved. Don't worry, you're still in the right place for Laravel Pizza community.
+            </p>
+            <a href="index.html" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium inline-flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                Back to Home
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script src="/js/navigation.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

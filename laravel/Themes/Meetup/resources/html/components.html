@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componenti Laravel Pizza - MCP Integration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pizza-red': '#DC2626',
+                        'pizza-gold': '#F59E0B',
+                        'pizza-brown': '#92400E',
+                        'pizza-dark': '#1F2937',
+                    },
+                    fontFamily: {
+                        'display': ['Poppins', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-body bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-pizza-dark mb-4">Componenti Laravel Pizza</h1>
+            <p class="text-xl text-gray-600">Componenti Tailwind CSS con integrazione MCP per sviluppo efficiente</p>
+        </div>
+
+        <!-- Pizza Card Component -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-pizza-dark mb-6">Pizza Card Component</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pizza Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-r from-pizza-gold to-yellow-400 flex items-center justify-center relative">
+                        <img src="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 300 200%22><circle cx=%22150%22 cy=%22100%22 r=%2280%22 fill=%22%23fbbf24%22/><circle cx=%22120%22 cy=%2280%22 r=%228%22 fill=%22%23dc2626%22/><circle cx=%22180%22 cy=%2270%22 r=%228%22 fill=%22%23dc2626%22/><circle cx=%22150%22 cy=%22120%22 r=%228%22 fill=%22%23dc2626%22/><text x=%22150%22 y=%22180%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23fff%22 text-anchor=%22middle%22>Pizza Margherita</text></svg>" alt="Pizza Margherita" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-4 right-4 bg-white text-pizza-red px-3 py-1 rounded-full text-sm font-bold">
+                            €8.50
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-pizza-dark group-hover:text-pizza-red transition-colors">Margherita</h3>
+                            <span class="text-lg font-bold text-pizza-red">€8.50</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Pomodoro, mozzarella e basilico fresco</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500 flex items-center">
+                                <i class="fas fa-clock mr-1"></i>12 min
+                            </span>
+                            <button class="add-to-cart bg-pizza-red hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center" data-pizza-name="Margherita" data-pizza-price="8.50">
+                                <i class="fas fa-plus mr-1"></i>Aggiungi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-r from-pizza-gold to-yellow-400 flex items-center justify-center relative">
+                        <img src="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 300 200%22><circle cx=%22150%22 cy=%22100%22 r=%2280%22 fill=%22%23fbbf24%22/><rect x=%22100%22 y=%2270%22 width=%22100%22 height=%2260%22 fill=%22%23065f46%22/><circle cx=%22120%22 cy=%2280%22 r=%226%22 fill=%22%23dc2626%22/><circle cx=%22180%22 cy=%2290%22 r=%226%22 fill=%22%23dc2626%22/><text x=%22150%22 y=%22180%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23fff%22 text-anchor=%22middle%22>Pizza Vegetariana</text></svg>" alt="Pizza Vegetariana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-4 right-4 bg-white text-pizza-red px-3 py-1 rounded-full text-sm font-bold">
+                            €10.00
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-pizza-dark group-hover:text-pizza-red transition-colors">Vegetariana</h3>
+                            <span class="text-lg font-bold text-pizza-red">€10.00</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Pomodoro, mozzarella, melanzane, zucchine e peperoni</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500 flex items-center">
+                                <i class="fas fa-clock mr-1"></i>15 min
+                            </span>
+                            <button class="add-to-cart bg-pizza-red hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center" data-pizza-name="Vegetariana" data-pizza-price="10.00">
+                                <i class="fas fa-plus mr-1"></i>Aggiungi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-r from-pizza-gold to-yellow-400 flex items-center justify-center relative">
+                        <img src="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 300 200%22><circle cx=%22150%22 cy=%22100%22 r=%2280%22 fill=%22%23fbbf24%22/><circle cx=%22120%22 cy=%2280%22 r=%2210%22 fill=%22%23f59e0b%22/><circle cx=%22180%22 cy=%2290%22 r=%2210%22 fill=%22%23f59e0b%22/><circle cx=%22150%22 cy=%22120%22 r=%2210%22 fill=%22%23f59e0b%22/><text x=%22150%22 y=%22180%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23fff%22 text-anchor=%22middle%22>Pizza Diavola</text></svg>" alt="Pizza Diavola" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-4 right-4 bg-white text-pizza-red px-3 py-1 rounded-full text-sm font-bold">
+                            €11.00
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-pizza-dark group-hover:text-pizza-red transition-colors">Diavola</h3>
+                            <span class="text-lg font-bold text-pizza-red">€11.00</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Pomodoro, mozzarella, salame piccante e origano</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500 flex items-center">
+                                <i class="fas fa-clock mr-1"></i>14 min
+                            </span>
+                            <button class="add-to-cart bg-pizza-red hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center" data-pizza-name="Diavola" data-pizza-price="11.00">
+                                <i class="fas fa-plus mr-1"></i>Aggiungi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Form Component -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-pizza-dark mb-6">Order Form Component</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+                <h3 class="text-xl font-bold text-pizza-dark mb-6">Nuovo Ordine</h3>
+                <form id="order-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nome Completo</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pizza-red focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pizza-red focus:border-transparent transition-colors">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Indirizzo di Consegna</label>
+                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pizza-red focus:border-transparent transition-colors">
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Città</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pizza-red focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">CAP</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pizza-red focus:border-transparent transition-colors">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Ora Consegna</label>
+                        <input type="datetime-local" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pizza-red focus:border-transparent transition-colors">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Metodo di Pagamento</label>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+                            <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-pizza-red transition-colors">
+                                <input type="radio" name="payment" value="card" class="text-pizza-red focus:ring-pizza-red mr-2">
+                                <i class="fas fa-credit-card mr-2 text-pizza-red"></i>
+                                <span>Carta</span>
+                            </label>
+                            <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-pizza-red transition-colors">
+                                <input type="radio" name="payment" value="paypal" class="text-pizza-red focus:ring-pizza-red mr-2">
+                                <i class="fab fa-paypal mr-2 text-pizza-red"></i>
+                                <span>PayPal</span>
+                            </label>
+                            <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-pizza-red transition-colors">
+                                <input type="radio" name="payment" value="cash" class="text-pizza-red focus:ring-pizza-red mr-2">
+                                <i class="fas fa-money-bill-wave mr-2 text-pizza-red"></i>
+                                <span>Contanti</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-pizza-red hover:bg-red-700 text-white px-6 py-4 rounded-lg font-bold text-lg transition-colors flex items-center justify-center">
+                            <i class="fas fa-shopping-cart mr-2"></i>Completa Ordine - €0.00
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Navigation Component -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-pizza-dark mb-6">Navigation Component</h2>
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <nav class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="nav-link text-pizza-dark hover:text-pizza-red px-4 py-2 rounded-lg font-medium transition-colors bg-pizza-red bg-opacity-10">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-pizza-red px-4 py-2 rounded-lg font-medium transition-colors hover:bg-pizza-red hover:bg-opacity-10">
+                        <i class="fas fa-pizza-slice mr-2"></i>Menu
+                    </a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-pizza-red px-4 py-2 rounded-lg font-medium transition-colors hover:bg-pizza-red hover:bg-opacity-10">
+                        <i class="fas fa-info-circle mr-2"></i>Chi Siamo
+                    </a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-pizza-red px-4 py-2 rounded-lg font-medium transition-colors hover:bg-pizza-red hover:bg-opacity-10">
+                        <i class="fas fa-phone mr-2"></i>Contatti
+                    </a>
+                    <a href="#" class="nav-link text-gray-600 hover:text-pizza-red px-4 py-2 rounded-lg font-medium transition-colors hover:bg-pizza-red hover:bg-opacity-10">
+                        <i class="fas fa-shopping-cart mr-2"></i>Ordini
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Footer Component -->
+        <div class="mt-12">
+            <footer class="bg-pizza-dark text-white rounded-xl p-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 flex items-center">
+                            <i class="fas fa-pizza-slice mr-2 text-pizza-gold"></i>LaravelPizza
+                        </h4>
+                        <p class="text-gray-300 text-sm">
+                            La migliore pizza artigianale direttamente a casa tua, con ingredienti freschi e consegna rapida.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold mb-4">Link Veloci</h5>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Menu</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Chi Siamo</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contatti</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Lavora con Noi</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold mb-4">Servizi</h5>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Consegna a Domicilio</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Asporto</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Catering</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Eventi</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold mb-4">Contatti</h5>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Via Roma, 123
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-phone mr-2"></i> +39 02 123 4567
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i class="fas fa-envelope mr-2"></i> info@laravelpizza.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                    <p class="text-gray-400 text-sm">&copy; 2025 LaravelPizza. Tutti i diritti riservati.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cart functionality
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const pizzaName = this.getAttribute('data-pizza-name');
+                    const pizzaPrice = this.getAttribute('data-pizza-price');
+                    
+                    // Add to cart animation
+                    const originalHTML = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check mr-1"></i>Aggiunto!';
+                    this.classList.remove('bg-pizza-red', 'hover:bg-red-700');
+                    this.classList.add('bg-green-500', 'hover:bg-green-600');
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalHTML;
+                        this.classList.add('bg-pizza-red', 'hover:bg-red-700');
+                        this.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    }, 2000);
+                    
+                    console.log(`Pizza ${pizzaName} aggiunta al carrello per €${pizzaPrice}`);
+                });
+            });
+            
+            // Form validation
+            const orderForm = document.getElementById('order-form');
+            if (orderForm) {
+                orderForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Simulate form submission
+                    const submitButton = orderForm.querySelector('button[type="submit"]');
+                    const originalText = submitButton.innerHTML;
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Elaborazione...';
+                    submitButton.disabled = true;
+                    
+                    setTimeout(() => {
+                        submitButton.innerHTML = '<i class="fas fa-check mr-2"></i>Ordine Inviato!';
+                        submitButton.classList.remove('bg-pizza-red', 'hover:bg-red-700');
+                        submitButton.classList.add('bg-green-500', 'hover:bg-green-600');
+                        
+                        setTimeout(() => {
+                            orderForm.reset();
+                            submitButton.innerHTML = originalText;
+                            submitButton.classList.add('bg-pizza-red', 'hover:bg-red-700');
+                            submitButton.classList.remove('bg-green-500', 'hover:bg-green-600');
+                            submitButton.disabled = false;
+                        }, 2000);
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

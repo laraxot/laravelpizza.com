@@ -1,0 +1,27 @@
+parameters:
+    level: 1
+    
+    paths:
+        - ./app
+        
+    ignoreErrors:
+        - '#.*#'  # Ignore all errors for now, just check basic syntax
+        
+    excludePaths:
+        - ./vendor/* (?)
+        - ./build/* (?)
+        - ./docs/* (?)
+        - ./Tests/* (?)
+        - ./tests/* (?)
+        - ./phpinsights.php (?)
+        - ./rector.php (?)
+        - ./packages/* (?)
+
+    editorUrl: 'vscode://file/%%file%%:%%line%%'
+
+    tmpDir: ../../../cache/build/phpstan_activity
+
+    checkUnusedViews: false
+    checkModelProperties: false
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: false 

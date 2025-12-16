@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img"
+     aria-label="Language Icon">
+    <style>
+        .lang-globe { 
+            animation: rotate 12s linear infinite;
+            transform-origin: 12px 12px;
+        }
+        .lang-text { 
+            animation: translate 3s ease-in-out infinite;
+        }
+        .lang-cursor { 
+            animation: blink 2s ease-in-out infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes translate {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        svg:hover .lang-globe { 
+            animation-duration: 6s; 
+        }
+        svg:hover .lang-text { 
+            animation-duration: 1.5s; 
+        }
+        svg:hover .lang-cursor { 
+            animation-duration: 1s; 
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .lang-text { opacity: 0.8; }
+            .lang-cursor { opacity: 0.9; }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .lang-globe, .lang-text, .lang-cursor { animation: none; }
+        }
+    </style>
+    
+    <!-- Globe -->
+    <g class="lang-globe">
+        <circle cx="12" cy="12" r="9" />
+        <path stroke-linecap="round" d="M3 12h18M12 3a15.3 15.3 0 014 9 15.3 15.3 0 01-4 9 15.3 15.3 0 01-4-9 15.3 15.3 0 014-9z" />
+        <path stroke-linecap="round" d="M12 3c-2.5 3-2.5 9 0 18M12 3c2.5 3 2.5 9 0 18" opacity="0.6" />
+    </g>
+    
+    <!-- Language text indicators -->
+    <g class="lang-text">
+        <text x="8" y="8" font-size="2" fill="currentColor" opacity="0.7">A</text>
+        <text x="16" y="8" font-size="2" fill="currentColor" opacity="0.5">中</text>
+        <text x="8" y="16" font-size="2" fill="currentColor" opacity="0.6">Ñ</text>
+        <text x="16" y="16" font-size="2" fill="currentColor" opacity="0.8">العربية</text>
+    </g>
+    
+    <!-- Translation arrows -->
+    <path stroke-linecap="round" stroke-linejoin="round" d="M7 10l5 0m0 0l-2-2m2 2l-2 2" opacity="0.6" />
+    <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l-5 0m0 0l2-2m-2 2l2 2" opacity="0.6" />
+    
+    <!-- Language indicators -->
+    <circle cx="6" cy="6" r="1" fill="currentColor" opacity="0.5" />
+    <circle cx="18" cy="6" r="1" fill="currentColor" opacity="0.5" />
+    <circle cx="6" cy="18" r="1" fill="currentColor" opacity="0.5" />
+    <circle cx="18" cy="18" r="1" fill="currentColor" opacity="0.5" />
+    
+    <!-- Typing cursor -->
+    <rect class="lang-cursor" x="12" y="11" width="0.5" height="2" fill="currentColor" />
+</svg>

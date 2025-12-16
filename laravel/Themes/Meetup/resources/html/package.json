@@ -1,0 +1,26 @@
+{
+  "name": "meetup-theme",
+  "version": "1.0.0",
+  "description": "Laravel Pizza theme with Tailwind CSS and Vite",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "copy": "mkdir -p ../../../public_html/themes/Meetup && cp -r ./dist/* ../../../public_html/themes/Meetup"
+  },
+  "devDependencies": {
+    "axios": "^1.11.0",
+    "concurrently": "^9.0.1",
+    "@tailwindcss/vite": "^4.1.13",
+    "@tailwindplus/elements": "^1.0.14",
+    "laravel-vite-plugin": "^2.0.0",
+    "daisyui": "^5.1.22",
+    "tailwindcss": "^4.1.13",
+    "typescript": "~5.8.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "vite": "^7.1",
+    "alpinejs": "^3.15.0"
+  }
+}

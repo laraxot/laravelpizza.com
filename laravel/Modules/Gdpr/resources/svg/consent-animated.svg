@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <style>
+        .consent {
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+        svg:hover .consent {
+            transform: scale(1.1);
+        }
+        .check {
+            stroke-dasharray: 20;
+            stroke-dashoffset: 20;
+            transition: all 0.3s ease;
+        }
+        svg:hover .check {
+            stroke-dashoffset: 0;
+            animation: draw 1s ease forwards;
+        }
+        .shield {
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+        svg:hover .shield {
+            opacity: 1;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes draw {
+            to { stroke-dashoffset: 0; }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+    <path class="consent shield" d="M12 2L3 7v6a12 12 0 0 0 9 11.66A12 12 0 0 0 21 13V7l-9-5z"/>
+    <path class="consent check" d="M9 12l2 2 4-4"/>
+</svg>

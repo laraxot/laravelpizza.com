@@ -1,0 +1,20 @@
+name: psalm
+on: [push]
+
+jobs:
+    phpinsights:
+        runs-on: ubuntu-latest
+        name: PHP Insights checks
+        steps:
+            - uses: actions/checkout@v2
+            - uses: shivammathur/setup-php@v2
+              with:
+                  php-version: 8.1
+            - run: composer install --prefer-dist --no-progress
+            - run: composer require --dev psalm/plugin-laravel -W
+            - run: ./vendor/bin/psalm --init
+            - run: ./vendor/bin/psalm-plugin enable psalm/plugin-laravel
+            - run: ./vendor/bin/psalm --alter --issues=all  --dry-run
+            - uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                commit_message: psalm

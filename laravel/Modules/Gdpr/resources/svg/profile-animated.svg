@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <style>
+        .profile {
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+        svg:hover .profile {
+            transform: scale(1.1);
+        }
+        .lock {
+            opacity: 0;
+            transform: translateY(2px);
+            transition: all 0.3s ease;
+        }
+        svg:hover .lock {
+            opacity: 1;
+            transform: translateY(0);
+            animation: secure 1s ease infinite;
+        }
+        @keyframes secure {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-2px); }
+        }
+    </style>
+    <path class="profile" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+    <circle class="profile" cx="12" cy="7" r="4"/>
+    <path class="lock" d="M12 17v-2"/>
+    <rect class="lock" x="10" y="15" width="4" height="4" rx="1"/>
+</svg>

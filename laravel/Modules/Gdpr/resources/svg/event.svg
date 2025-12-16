@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        @keyframes bell-ring {
+            0%, 100% { transform: rotate(0); }
+            20%, 60% { transform: rotate(10deg); }
+            40%, 80% { transform: rotate(-10deg); }
+        }
+        @keyframes dot-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.6; }
+        }
+        .bell {
+            transform-origin: top center;
+            animation: bell-ring 2s ease-in-out infinite;
+        }
+        .notification-dot {
+            transform-origin: center;
+            animation: dot-pulse 1.5s ease-in-out infinite;
+        }
+    </style>
+
+    <!-- Campana -->
+    <g class="bell">
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M12 3v1M12 4c3.3 0 6 2.7 6 6v4l2 2H4l2-2v-4c0-3.3 2.7-6 6-6" />
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M9 17v1a3 3 0 006 0v-1" />
+    </g>
+    
+    <!-- Punto di notifica -->
+    <circle class="notification-dot"
+            cx="17" 
+            cy="7" 
+            r="3" 
+            fill="none" />
+    
+    <!-- Log entry -->
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M4 20h16" />
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M7 16h10" />
+</svg> 

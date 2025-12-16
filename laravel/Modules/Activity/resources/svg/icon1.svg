@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img"
+     aria-label="Activity Icon">
+    <style>
+        .activity-chart { 
+            animation: grow 3s ease-in-out infinite;
+            transform-origin: 12px 18px;
+        }
+        .activity-dots { 
+            animation: pulse 2s ease-in-out infinite;
+        }
+        .activity-line { 
+            animation: draw 4s ease-in-out infinite;
+            stroke-dasharray: 20;
+            stroke-dashoffset: 20;
+        }
+        
+        @keyframes grow {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.1); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes draw {
+            0% { stroke-dashoffset: 20; }
+            50% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -20; }
+        }
+        
+        svg:hover .activity-chart { 
+            animation-duration: 1.5s; 
+        }
+        svg:hover .activity-dots { 
+            animation-duration: 1s; 
+        }
+        svg:hover .activity-line { 
+            animation-duration: 2s; 
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .activity-dots { opacity: 0.8; }
+            .activity-line { opacity: 0.9; }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .activity-chart, .activity-dots, .activity-line { animation: none; }
+        }
+    </style>
+    
+    <!-- Chart bars -->
+    <g class="activity-chart">
+        <rect x="4" y="14" width="2" height="6" rx="1" />
+        <rect x="8" y="10" width="2" height="10" rx="1" />
+        <rect x="12" y="12" width="2" height="8" rx="1" />
+        <rect x="16" y="8" width="2" height="12" rx="1" />
+        <rect x="20" y="16" width="2" height="4" rx="1" />
+    </g>
+    
+    <!-- Activity line -->
+    <path class="activity-line" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M5 17l3-3 4 2 4-4 3 2" 
+          stroke-width="2" 
+          opacity="0.7" />
+    
+    <!-- Data points -->
+    <g class="activity-dots">
+        <circle cx="5" cy="17" r="1.5" fill="currentColor" />
+        <circle cx="8" cy="14" r="1.5" fill="currentColor" />
+        <circle cx="12" cy="16" r="1.5" fill="currentColor" />
+        <circle cx="16" cy="12" r="1.5" fill="currentColor" />
+        <circle cx="19" cy="14" r="1.5" fill="currentColor" />
+    </g>
+    
+    <!-- Grid lines -->
+    <g opacity="0.3">
+        <path stroke-linecap="round" d="M3 8h18M3 12h18M3 16h18M3 20h18" stroke-width="0.5" />
+    </g>
+    
+    <!-- Activity indicators -->
+    <circle cx="21" cy="5" r="1" fill="currentColor" opacity="0.6" />
+    <circle cx="19" cy="3" r="0.5" fill="currentColor" opacity="0.4" />
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <style>
+        .permission {
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+        svg:hover .permission {
+            transform: scale(1.1);
+        }
+        .check {
+            stroke-dasharray: 20;
+            stroke-dashoffset: 20;
+            transition: all 0.3s ease;
+        }
+        svg:hover .check {
+            stroke-dashoffset: 0;
+            animation: draw 1s ease forwards;
+        }
+        @keyframes draw {
+            to { stroke-dashoffset: 0; }
+        }
+    </style>
+    <rect class="permission" x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+    <path class="permission" d="M7 11V7a5 5 0 0 1 10 0v4"/>
+    <path class="check" d="M9 16l2 2 4-4"/>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10">
+    <animate
+      attributeName="stroke-dasharray"
+      from="0,63"
+      to="63,63"
+      dur="1s"
+      begin="0s"
+      fill="freeze"
+    />
+  </circle>
+  <path d="M12 2v4">
+    <animate
+      attributeName="stroke-dasharray"
+      from="0,4"
+      to="4,4"
+      dur="0.3s"
+      begin="1s"
+      fill="freeze"
+    />
+  </path>
+  <path d="M12 18v4">
+    <animate
+      attributeName="stroke-dasharray"
+      from="0,4"
+      to="4,4"
+      dur="0.3s"
+      begin="1.1s"
+      fill="freeze"
+    />
+  </path>
+  <path d="M2 12h4">
+    <animate
+      attributeName="stroke-dasharray"
+      from="0,4"
+      to="4,4"
+      dur="0.3s"
+      begin="1.2s"
+      fill="freeze"
+    />
+  </path>
+  <path d="M18 12h4">
+    <animate
+      attributeName="stroke-dasharray"
+      from="0,4"
+      to="4,4"
+      dur="0.3s"
+      begin="1.3s"
+      fill="freeze"
+    />
+  </path>
+  <circle cx="12" cy="12" r="3">
+    <animate
+      attributeName="r"
+      values="3;4;3"
+      dur="1.5s"
+      begin="1.5s"
+      repeatCount="indefinite"
+    />
+    <animate
+      attributeName="fill-opacity"
+      values="0;0.2;0"
+      dur="1.5s"
+      begin="1.5s"
+      repeatCount="indefinite"
+    />
+  </circle>
+</svg>

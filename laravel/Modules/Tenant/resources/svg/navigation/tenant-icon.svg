@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        @keyframes window-light {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+        @keyframes building-lift {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-2px); }
+            100% { transform: translateY(0); }
+        }
+        .building { 
+            transition: all 0.3s ease-in-out;
+        }
+        .window {
+            animation: window-light 2s ease-in-out infinite;
+            animation-delay: calc(var(--delay) * 0.5s);
+        }
+        svg:hover .building {
+            animation: building-lift 1s ease-in-out infinite;
+        }
+    </style>
+    
+    <!-- Edificio principale -->
+    <g class="building">
+        <!-- Struttura base -->
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M4 6v14h16V6L12 3z" />
+        
+        <!-- Finestre -->
+        <rect class="window" style="--delay: 0"
+              x="7" y="8" width="2" height="2" />
+        <rect class="window" style="--delay: 1"
+              x="11" y="8" width="2" height="2" />
+        <rect class="window" style="--delay: 2"
+              x="15" y="8" width="2" height="2" />
+        
+        <rect class="window" style="--delay: 2"
+              x="7" y="12" width="2" height="2" />
+        <rect class="window" style="--delay: 1"
+              x="11" y="12" width="2" height="2" />
+        <rect class="window" style="--delay: 0"
+              x="15" y="12" width="2" height="2" />
+        
+        <!-- Porta -->
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M10 20h4v-4h-4z" />
+    </g>
+
+    <!-- Tetto -->
+    <path class="building"
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M4 6l8-3 8 3" />
+</svg> 

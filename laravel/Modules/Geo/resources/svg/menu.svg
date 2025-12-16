@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2L2 7l10 5 10-5-10-5z">
+    <animate
+      attributeName="stroke-dasharray"
+      from="0,50"
+      to="50,50"
+      dur="1s"
+      begin="0s"
+      fill="freeze"
+    />
+  </path>
+  <path d="M2 17l10 5 10-5">
+    <animate
+      attributeName="stroke-dasharray"
+      from="0,30"
+      to="30,30"
+      dur="1s"
+      begin="0.5s"
+      fill="freeze"
+    />
+  </path>
+  <path d="M2 12l10 5 10-5">
+    <animate
+      attributeName="stroke-dasharray"
+      from="0,30"
+      to="30,30"
+      dur="1s"
+      begin="0.25s"
+      fill="freeze"
+    />
+  </path>
+  <circle cx="12" cy="12" r="0" fill="currentColor">
+    <animate
+      attributeName="r"
+      from="0"
+      to="1.5"
+      dur="0.5s"
+      begin="1s"
+      fill="freeze"
+    />
+    <animate
+      attributeName="opacity"
+      from="1"
+      to="0"
+      dur="1s"
+      begin="1.5s"
+      repeatCount="indefinite"
+    />
+  </circle>
+</svg>

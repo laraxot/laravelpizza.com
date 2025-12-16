@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        @keyframes room-highlight {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+        @keyframes door-open {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(-20deg); }
+            100% { transform: rotate(0deg); }
+        }
+        .room {
+            animation: room-highlight 2s ease-in-out infinite;
+            animation-delay: calc(var(--delay) * 0.5s);
+        }
+        .door {
+            transform-origin: 12px 16px;
+            transition: all 0.3s ease-in-out;
+        }
+        svg:hover .door {
+            animation: door-open 1s ease-in-out;
+        }
+    </style>
+    
+    <!-- Planimetria appartamento -->
+    <g class="floorplan">
+        <!-- Muri esterni -->
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M4 4h16v16H4z" />
+        
+        <!-- Stanze -->
+        <rect class="room" style="--delay: 0"
+              x="5" y="5" width="6" height="6" 
+              stroke-dasharray="2" />
+        <rect class="room" style="--delay: 1"
+              x="13" y="5" width="6" height="6" 
+              stroke-dasharray="2" />
+        <rect class="room" style="--delay: 2"
+              x="5" y="13" width="14" height="6" 
+              stroke-dasharray="2" />
+        
+        <!-- Porta -->
+        <path class="door"
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M10 16h4" />
+    </g>
+
+    <!-- Numero unità -->
+    <text x="12" y="11" 
+          text-anchor="middle"
+          font-size="6"
+          fill="currentColor"
+          stroke="none">
+        U
+    </text>
+</svg> 

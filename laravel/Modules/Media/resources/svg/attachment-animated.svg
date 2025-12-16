@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <!-- Graffetta -->
+        <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l8.57-8.57A4 4 0 1118.92 9.8l-8.57 8.57a2 2 0 11-2.83-2.83l8.57-8.57" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <animate attributeName="stroke-dasharray" from="0 100" to="100 100" dur="1.2s" fill="freeze"/>
+        </path>
+        <!-- Punto pulsante -->
+        <g transform="translate(12, 12)">
+            <circle r="1.5" fill="currentColor" opacity="0">
+                <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.2s" fill="freeze"/>
+                <animate attributeName="r" values="1;1.5;1" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+    </g>
+</svg>

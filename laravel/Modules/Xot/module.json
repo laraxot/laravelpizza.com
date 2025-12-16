@@ -1,0 +1,16 @@
+{
+    "name": "Xot",
+    "alias": "xot",
+    "description": "Modulo base che fornisce funzionalità core e strutture fondamentali per gli altri moduli",
+    "keywords": ["core", "base", "foundation", "structure"],
+    "priority": 2,
+    "active": 1,
+    "order": 2,
+    "providers": [
+        "Modules\\Xot\\Providers\\XotServiceProvider",
+        "Modules\\Xot\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": [],
+    "files": [],
+    "requires": []
+}

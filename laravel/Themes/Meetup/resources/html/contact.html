@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Laravel Developers Community. Reach out for event information, partnerships, or community support.">
+    <meta name="keywords" content="laravel, community, contact, developers, events, conferences">
+    <title>Contact - Laravel Developers Community</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Laravel Developers Community",
+      "description": "Connecting Laravel developers worldwide through events, workshops, and knowledge sharing",
+      "url": "https://laravelpizza.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@laravelpizza.com",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="container-custom">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2" aria-label="Go to homepage">
+                        <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" opacity="0.3"/>
+                            <circle cx="8" cy="8" r="1.5"/>
+                            <circle cx="16" cy="8" r="1.5"/>
+                            <circle cx="12" cy="12" r="1.5"/>
+                            <circle cx="8" cy="16" r="1.5"/>
+                            <circle cx="16" cy="16" r="1.5"/>
+                        </svg>
+                        <span class="text-2xl font-bold text-gray-900">Laravel Developers Community</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary-600 font-medium">Home</a>
+                    <a href="events.html" class="text-gray-700 hover:text-primary-600 font-medium">Events</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-primary-600 font-medium">Community</a>
+                    <a href="contact.html" class="text-primary-600 font-medium border-b-2 border-primary-600" aria-current="page">Contact</a>
+                    <a href="/dashboard" class="relative bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700" aria-label="Go to dashboard">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <!-- Language Selector -->
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="text-gray-700 hover:text-primary-600 transition-colors flex items-center font-medium">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                            </svg>
+                            English
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open" @click.away="open = false" x-transition class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                            <div class="py-1">
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">
+                                    <svg class="w-4 h-4 mr-2 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    English
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Deutsch</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Español</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open mobile menu">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t" aria-labelledby="mobile-menu-button">
+            <div class="container-custom py-4 space-y-4" role="menu" aria-label="Mobile menu">
+                <a href="index.html" class="block text-gray-700 hover:text-primary-600" role="menuitem">Home</a>
+                <a href="events.html" class="block text-gray-700 hover:text-primary-600" role="menuitem">Events</a>
+                <a href="index.html#about" class="block text-gray-700 hover:text-primary-600" role="menuitem">Community</a>
+                <a href="contact.html" class="block text-primary-600 font-medium" role="menuitem" aria-current="page">Contact</a>
+                <!-- Language Selector Mobile -->
+                <div class="pt-2 border-t border-gray-200">
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full text-left text-gray-700 hover:text-primary-600 font-medium flex items-center justify-between">
+                            <span>Language: English</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div x-show="open" @click.away="open = false" x-transition class="mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                            <div class="py-1">
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">
+                                    <svg class="w-4 h-4 mr-2 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    English
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italiano</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Deutsch</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Español</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16" aria-label="Contact introduction">
+        <div class="container-custom text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
+            <p class="text-xl text-primary-100 max-w-3xl mx-auto">Have questions about Laravel Developers Community? Reach out to our community team.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section bg-white" aria-label="Main contact content">
+        <div class="container-custom">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 text-primary-600 p-3 rounded-lg">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Email</h3>
+                                <p class="text-gray-600"><a href="mailto:hello@laravelpizza.com" class="hover:text-primary-600">hello@laravelpizza.com</a></p>
+                                <p class="text-gray-600 text-sm text-gray-500">We respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 text-primary-600 p-3 rounded-lg">
+                                <i class="fas fa-comments text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Community Chat</h3>
+                                <p class="text-gray-600"><a href="/chat" class="hover:text-primary-600">Join our Discord</a></p>
+                                <p class="text-gray-600 text-sm text-gray-500">Chat with other developers 24/7</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 text-primary-600 p-3 rounded-lg">
+                                <i class="fas fa-calendar-alt text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Event Inquiries</h3>
+                                <p class="text-gray-600"><a href="/events" class="hover:text-primary-600">View upcoming events</a></p>
+                                <p class="text-gray-600 text-sm text-gray-500">Find local meetups in your area</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 text-primary-600 p-3 rounded-lg">
+                                <i class="fas fa-handshake text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Partnerships</h3>
+                                <p class="text-gray-600"><a href="mailto:partners@laravelpizza.com" class="hover:text-primary-600">partners@laravelpizza.com</a></p>
+                                <p class="text-gray-600 text-sm text-gray-500">Sponsor or host an event</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-primary-600 text-white p-3 rounded-lg hover:bg-primary-700 transition-colors" aria-label="Follow us on Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors" aria-label="Join our Discord">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 text-white p-3 rounded-lg hover:bg-blue-500 transition-colors" aria-label="Follow us on LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-900 transition-colors" aria-label="Follow us on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+                    <p class="text-gray-600 mb-6">Have questions about our community or events? Get in touch with us.</p>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input type="text" id="first-name" name="first-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" aria-required="true">
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" id="last-name" name="last-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" aria-required="true">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" aria-required="true">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
+                            <select id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" aria-required="true">
+                                <option value="">Select a topic</option>
+                                <option value="event-inquiry">Event Inquiry</option>
+                                <option value="community-support">Community Support</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="volunteer">Volunteer to Help</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" aria-required="true"></textarea>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input id="privacy" name="privacy" type="checkbox" required class="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded" aria-required="true">
+                            <label for="privacy" class="ml-2 block text-sm text-gray-900">
+                                I agree to the <a href="#" class="text-primary-600 hover:text-primary-500">Privacy Policy</a> *
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full py-3">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="container-custom">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Join Our Community</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-lg text-gray-600 mb-8">
+                    Connect with fellow Laravel developers. Share knowledge, build connections, and grow your skills together.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/chat" class="btn-primary inline-block">
+                        <i class="fas fa-comments mr-2"></i>Join Chat
+                    </a>
+                    <a href="/register" class="btn-outline inline-block">
+                        <i class="fas fa-user-plus mr-2"></i>Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white" role="contentinfo">
+        <div class="container-custom py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                             width="24" 
+                             height="24" 
+                             viewBox="0 0 24 24" 
+                             fill="none" 
+                             stroke="currentColor" 
+                             stroke-width="2" 
+                             stroke-linecap="round" 
+                             stroke-linejoin="round" 
+                             class="w-8 h-8 text-red-500">
+                            <path d="M15 11h.01"></path>
+                            <path d="M11 15h.01"></path>
+                            <path d="M16 16h.01"></path>
+                            <path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"></path>
+                            <path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"></path>
+                        </svg>
+                        <span class="text-xl font-bold">Laravel Developers Community</span>
+                    </div>
+                    <p class="text-gray-400">Connecting Laravel developers worldwide through events, workshops, and knowledge sharing. Join our community and connect with fellow developers.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="events.html" class="hover:text-white">All Events</a></li>
+                        <li><a href="events.html#meetup" class="hover:text-white">Meetups</a></li>
+                        <li><a href="events.html#workshop" class="hover:text-white">Workshops</a></li>
+                        <li><a href="events.html#conference" class="hover:text-white">Conferences</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Community</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#about" class="hover:text-white">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                        <li><a href="/chat" class="hover:text-white">Community Chat</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Get Started</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/register" class="hover:text-white">Sign Up</a></li>
+                        <li><a href="/login" class="hover:text-white">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>
+                    Made with <span class="text-red-500">❤</span> for the Laravel community
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+    <script>
+        // Initialize cart and update count
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isExpanded = mobileMenu.classList.contains('hidden');
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+            
+            // Form submission handling
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    if (validateForm(contactForm)) {
+                        // Simulate form submission
+                        showNotification('Thank you for contacting us! We\'ll respond within 24 hours.', 'success');
+                        contactForm.reset();
+                        
+                        // In a real application, you would send the data to a server here
+                        console.log('Form submitted:', {
+                            firstName: document.getElementById('first-name').value,
+                            lastName: document.getElementById('last-name').value,
+                            email: document.getElementById('email').value,
+                            subject: document.getElementById('subject').value,
+                            message: document.getElementById('message').value
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        .geo-pin { 
+            animation: bounce 2s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+        .geo-circle { 
+            animation: ripple 3s ease-out infinite;
+            transform-origin: center;
+        }
+        .geo-globe { 
+            animation: rotate 8s linear infinite;
+            transform-origin: center;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-2px); }
+        }
+        
+        @keyframes ripple {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .geo-pin, .geo-circle, .geo-globe { animation: none; }
+        }
+    </style>
+    
+    <!-- Globo terrestre -->
+    <circle class="geo-globe" cx="12" cy="12" r="9" stroke-width="1" opacity="0.3" />
+    <path class="geo-globe" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          stroke-width="1"
+          d="M3 12h18M12 3c-2.5 3-2.5 9 0 18M12 3c2.5 3 2.5 9 0 18" 
+          opacity="0.4" />
+    
+    <!-- Area di focus -->
+    <circle class="geo-circle" cx="12" cy="10" r="4" stroke-width="1.5" opacity="0.6" />
+    
+    <!-- Pin di localizzazione -->
+    <g class="geo-pin">
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M12 2C8.5 2 6 4.5 6 8c0 5.5 6 12 6 12s6-6.5 6-12c0-3.5-2.5-6-6-6z" />
+        <circle cx="12" cy="8" r="2" fill="currentColor" />
+    </g>
+    
+    <!-- Punti di interesse -->
+    <circle cx="8" cy="14" r="1" fill="currentColor" opacity="0.6" />
+    <circle cx="16" cy="8" r="1" fill="currentColor" opacity="0.5" />
+    <circle cx="15" cy="15" r="0.8" fill="currentColor" opacity="0.7" />
+</svg>

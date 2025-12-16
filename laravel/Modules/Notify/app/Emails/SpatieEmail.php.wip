@@ -1,0 +1,48 @@
+<?php 
+
+declare(strict_types=1);
+
+namespace Modules\Notify\Emails;
+
+use Illuminate\Database\Eloquent\Model;
+use Spatie\MailTemplates\TemplateMailable;
+
+/**
+ * @see https://github.com/spatie/laravel-database-mail-templates
+ */
+class SpatieEmail extends TemplateMailable
+{
+    
+    public function __construct(Model $record)
+    {
+        $data=$record->toArray();
+        $this->setAdditionalData($data);
+    }
+    
+    public function getHtmlLayout(): string
+    {
+        $pathToLayout = storage_path('mail-layouts/main.html');
+    
+        return file_get_contents($pathToLayout);
+        /**
+         * In your application you might want to fetch the layout from an external file or Blade view.
+         * 
+         * External file: `return file_get_contents(storage_path('mail-layouts/main.html'));`
+         * 
+         * Blade view: `return view('mailLayouts.main', $data)->render();`
+         */
+        
+        //return '<header>Site name!</header>{{{ body }}}<footer>Copyright 2018</footer>';
+    }
+}
+
+/*
+MailTemplate::create([
+    'mailable' => \App\Mail\WelcomeMail::class,
+    'subject' => 'Welcome, {{ name }}',
+    'html_template' => '<p>Hello, {{ name }}.</p>',
+    'text_template' => 'Hello, {{ name }}.'
+]);
+
+Mail::to($user->email)->send(new WelcomeMail($user));
+*/

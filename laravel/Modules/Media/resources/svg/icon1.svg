@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img"
+     aria-label="Media Icon">
+    <style>
+        .media-play { 
+            animation: pulse 3s ease-in-out infinite;
+            transform-origin: 12px 12px;
+        }
+        .media-waves { 
+            animation: wave 2s ease-in-out infinite;
+        }
+        .media-frame { 
+            animation: float 4s ease-in-out infinite;
+            transform-origin: 12px 12px;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        @keyframes wave {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-1px); }
+        }
+        
+        svg:hover .media-play { 
+            animation-duration: 1.5s; 
+        }
+        svg:hover .media-waves { 
+            animation-duration: 1s; 
+        }
+        svg:hover .media-frame { 
+            animation-duration: 2s; 
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .media-waves { opacity: 0.6; }
+            .media-frame { opacity: 0.9; }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .media-play, .media-waves, .media-frame { animation: none; }
+        }
+    </style>
+    
+    <!-- Media frame -->
+    <g class="media-frame">
+        <rect x="3" y="5" width="18" height="12" rx="2" ry="2" />
+        <rect x="5" y="7" width="14" height="8" rx="1" opacity="0.3" fill="currentColor" />
+    </g>
+    
+    <!-- Play button -->
+    <g class="media-play">
+        <circle cx="12" cy="11" r="3" fill="currentColor" opacity="0.8" />
+        <path stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M10.5 9.5l3 1.5-3 1.5v-3z" fill="white" />
+    </g>
+    
+    <!-- Sound waves -->
+    <g class="media-waves">
+        <path stroke-linecap="round" d="M18 8c1 1 1 5 0 6" opacity="0.6" />
+        <path stroke-linecap="round" d="M20 6c2 2 2 8 0 10" opacity="0.4" />
+        <path stroke-linecap="round" d="M6 8c-1 1-1 5 0 6" opacity="0.6" />
+        <path stroke-linecap="round" d="M4 6c-2 2-2 8 0 10" opacity="0.4" />
+    </g>
+    
+    <!-- Media indicators -->
+    <circle cx="7" cy="19" r="0.5" fill="currentColor" opacity="0.6" />
+    <circle cx="12" cy="19" r="0.5" fill="currentColor" opacity="0.8" />
+    <circle cx="17" cy="19" r="0.5" fill="currentColor" opacity="0.6" />
+    
+    <!-- Progress bar -->
+    <rect x="6" y="20" width="12" height="0.5" rx="0.25" fill="currentColor" opacity="0.3" />
+    <rect x="6" y="20" width="4" height="0.5" rx="0.25" fill="currentColor" opacity="0.8" />
+</svg>

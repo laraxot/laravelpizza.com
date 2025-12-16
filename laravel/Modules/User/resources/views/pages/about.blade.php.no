@@ -1,0 +1,26 @@
+<?php
+
+use function Safe\file_get_contents;
+use function Safe\json_decode;
+
+$locale = app()->getLocale();
+$content = json_decode(file_get_contents(base_path('laravel/config/local/<nome progetto>/database/content/pages/about.json')), true);
+$blocks = $content['content_blocks'][$locale] ?? [];
+
+?>
+
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ $content['title'][$locale] }}
+        </h2>
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            @foreach($blocks as $block)
+                <x-render-block :block="$block" />
+            @endforeach
+        </div>
+    </div>
+</x-app-layout>

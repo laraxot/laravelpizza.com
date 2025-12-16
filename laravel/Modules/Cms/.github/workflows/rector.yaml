@@ -1,0 +1,31 @@
+# Inspiration https://github.com/symplify/symplify/blob/main/.github/workflows/rector.yaml
+name: Rector
+
+on:
+  pull_request: null
+
+jobs:
+  rector:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: "${{ secrets.ACCESS_TOKEN || secrets.GITHUB_TOKEN }}"
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+
+      - uses: "ramsey/composer-install@v2"
+
+      - run: vendor/bin/rector --ansi
+
+      - uses: EndBug/add-and-commit@v5.1.0
+        with:
+          add: .
+          message: "[ci-review] Rector Rectify"
+          author_name: "GitHub Action"
+          author_email: "action@github.com"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

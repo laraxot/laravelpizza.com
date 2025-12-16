@@ -1,0 +1,35 @@
+# LaravelPizza - Project Identity Rules
+
+## CRITICAL: Project Mission
+This is a CONVERSION and ENHANCEMENT of https://laravelpizza.com/
+NOT a replica - an IMPROVED, premium version.
+
+Goals: More Cool | More Clickbait | More Engaging | More Viral
+
+## Architecture
+- Folio + Volt (NO controllers for front-office)
+- CMS-driven pages (JSON content blocks)
+- XotBase pattern (NEVER extend Filament directly)
+- One table, one migration rule
+
+## ServiceProvider Pattern (CRITICAL!)
+ALWAYS use minimal structure:
+- Extend XotBase* classes (XotBaseServiceProvider, XotBaseEventServiceProvider, etc.)
+- Include ALL required properties: $name, $module_dir, $module_ns
+- NO boot()/register() if only calling parent
+- ALWAYS call parent::boot() FIRST if overriding
+- Use #[Override] attribute
+
+See: laravel/Modules/Xot/docs/serviceprovider-minimal-structure.md
+
+## Quality Standards
+- PHPStan level 10
+- Laravel Pint (PSR-12)
+- declare(strict_types=1);
+- Documentation lowercase-with-hyphens.md
+
+## Enhancement Mindset
+Always ask: "Is this cooler than the original?"
+Every feature should be share-worthy.
+
+See: CLAUDE.md, laravel/CLAUDE.md, .ai-context/REMEMBER.md, .ai-context/provider-rules.md

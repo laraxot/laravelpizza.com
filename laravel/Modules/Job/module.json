@@ -1,0 +1,16 @@
+{
+    "name": "Job",
+    "alias": "job",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "priority": 20,
+    "order": 20,
+    "providers": [
+        "Modules\\Job\\Providers\\JobServiceProvider",
+        "Modules\\Job\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": [],
+    "files": [],
+    "requires": []
+}

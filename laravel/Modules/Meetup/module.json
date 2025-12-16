@@ -1,0 +1,12 @@
+{
+    "name": "Meetup",
+    "alias": "meetup",
+    "description": "Event and Meetup Management Module",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Meetup\\Providers\\MeetupServiceProvider",
+        "Modules\\Meetup\\Providers\\EventServiceProvider"
+    ],
+    "files": []
+}

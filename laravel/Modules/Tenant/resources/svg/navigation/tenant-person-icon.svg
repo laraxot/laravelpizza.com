@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <style>
+        @keyframes key-jingle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(15deg); }
+            75% { transform: rotate(-15deg); }
+        }
+        @keyframes person-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-1px); }
+        }
+        .person {
+            transition: all 0.3s ease-in-out;
+        }
+        .keys {
+            transform-origin: 18px 12px;
+            transition: all 0.3s ease-in-out;
+        }
+        svg:hover .person {
+            animation: person-bounce 1s ease-in-out infinite;
+        }
+        svg:hover .keys {
+            animation: key-jingle 0.5s ease-in-out infinite;
+        }
+    </style>
+    
+    <!-- Persona -->
+    <g class="person">
+        <!-- Testa -->
+        <circle cx="12" cy="8" r="3" />
+        
+        <!-- Corpo -->
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M7 20v-5a5 5 0 0110 0v5" />
+    </g>
+
+    <!-- Chiavi -->
+    <g class="keys" transform="translate(18, 12)">
+        <!-- Chiave 1 -->
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M-2 0h4l1 2" />
+        <!-- Chiave 2 -->
+        <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M-1 2h4l1 2" 
+              opacity="0.7" />
+    </g>
+</svg> 

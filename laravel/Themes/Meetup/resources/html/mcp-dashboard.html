@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel Pizza - Dashboard MCP</title>
+    <meta name="description" content="Dashboard per lo sviluppo con MCP (Model Context Protocol)">
+    
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pizza-red': '#DC2626',
+                        'pizza-gold': '#F59E0B',
+                        'pizza-brown': '#92400E',
+                        'pizza-dark': '#1F2937',
+                    },
+                    fontFamily: {
+                        'display': ['Poppins', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-body bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-pizza-red">
+                        <i class="fas fa-pizza-slice mr-2"></i>LaravelPizza MCP
+                    </span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm text-gray-600">
+                        <i class="fas fa-plug mr-1"></i> MCP Connesso
+                    </span>
+                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-pizza-dark mb-2">Dashboard Sviluppo MCP</h1>
+            <p class="text-gray-600">Monitoraggio e gestione degli strumenti MCP per lo sviluppo del tema Laravel Pizza</p>
+        </div>
+
+        <!-- MCP Status Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-pizza-red">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-gray-600">File System</p>
+                        <p class="text-2xl font-bold text-pizza-dark">Connesso</p>
+                    </div>
+                    <div class="w-12 h-12 bg-pizza-red bg-opacity-10 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-folder text-pizza-red text-xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-pizza-gold">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-gray-600">Database</p>
+                        <p class="text-2xl font-bold text-pizza-dark">Connesso</p>
+                    </div>
+                    <div class="w-12 h-12 bg-pizza-gold bg-opacity-10 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-database text-pizza-gold text-xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-gray-600">Tailwind</p>
+                        <p class="text-2xl font-bold text-pizza-dark">Attivo</p>
+                    </div>
+                    <div class="w-12 h-12 bg-green-500 bg-opacity-10 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-wind text-green-500 text-xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-medium text-gray-600">Vite</p>
+                        <p class="text-2xl font-bold text-pizza-dark">Building</p>
+                    </div>
+                    <div class="w-12 h-12 bg-blue-500 bg-opacity-10 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-bolt text-blue-500 text-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MCP Tools Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- MCP Commands -->
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-xl font-bold text-pizza-dark mb-4 flex items-center">
+                    <i class="fas fa-terminal mr-2 text-pizza-red"></i> Comandi MCP
+                </h2>
+                <div class="space-y-3">
+                    <div class="p-3 bg-gray-50 rounded-lg">
+                        <code class="text-sm text-pizza-dark font-mono">mcp filesystem list ./resources/html</code>
+                        <p class="text-xs text-gray-600 mt-1">Elenca i file HTML del tema</p>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg">
+                        <code class="text-sm text-pizza-dark font-mono">mcp tailwind analyze ./resources/css/app.css</code>
+                        <p class="text-xs text-gray-600 mt-1">Analizza l'uso di Tailwind CSS</p>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg">
+                        <code class="text-sm text-pizza-dark font-mono">mcp vite build --watch</code>
+                        <p class="text-xs text-gray-600 mt-1">Avvia Vite in modalità watch</p>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded-lg">
+                        <code class="text-sm text-pizza-dark font-mono">mcp component create pizza-card</code>
+                        <p class="text-xs text-gray-600 mt-1">Crea un nuovo componente pizza-card</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MCP Configuration -->
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-xl font-bold text-pizza-dark mb-4 flex items-center">
+                    <i class="fas fa-cog mr-2 text-pizza-red"></i> Configurazione MCP
+                </h2>
+                <div class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                    <div class="mb-2">MCP_SERVER_FILESYSTEM_ENABLED=true</div>
+                    <div class="mb-2">MCP_SERVER_TAILWIND_ENABLED=true</div>
+                    <div class="mb-2">MCP_SERVER_VITE_ENABLED=true</div>
+                    <div class="mb-2">MCP_TAILWIND_CONFIG_PATH=./tailwind.config.js</div>
+                    <div class="mb-2">MCP_VITE_CONFIG_PATH=./vite.config.js</div>
+                    <div class="mb-2">MCP_COMPONENT_SCAN_PATH=./resources/views/components</div>
+                    <div class="mb-2">MCP_CSS_ANALYSIS_ENABLED=true</div>
+                    <div class="mb-2">MCP_ASSET_OPTIMIZATION=true</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MCP Integration Examples -->
+        <div class="mt-8 bg-white rounded-xl shadow-lg p-6">
+            <h2 class="text-xl font-bold text-pizza-dark mb-4 flex items-center">
+                <i class="fas fa-code mr-2 text-pizza-red"></i> Esempi di Integrazione MCP
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-semibold text-pizza-dark mb-2">CSS Utility Generation</h3>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <pre class="text-sm"><code>// MCP può generare classi Tailwind personalizzate
+bg-pizza-red → bg-[#DC2626]
+text-pizza-gold → text-[#F59E0B]
+
+// Esempio di utility responsive
+@media (min-width: 768px) {
+  .md\:bg-pizza-red { background-color: #DC2626; }
+}</code></pre>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-pizza-dark mb-2">Component Discovery</h3>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <pre class="text-sm"><code>&lt;!-- MCP può scansionare e suggerire componenti --&gt;
+&lt;x-pizza.card :pizza="$pizza" /&gt;
+&lt;x-pizza.menu-grid :pizzas="$pizzas" /&gt;
+&lt;x-pizza.order-form /&gt;
+
+// MCP analizza e documenta automaticamente
+// i componenti disponibili nel progetto</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MCP Performance Metrics -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h3 class="font-bold text-pizza-dark mb-2">CSS Bundle Size</h3>
+                <div class="flex items-center">
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-pizza-red h-2 rounded-full" style="width: 65%"></div>
+                    </div>
+                    <span class="ml-2 text-sm font-medium">142KB</span>
+                </div>
+                <p class="text-xs text-gray-600 mt-1">Target: &lt; 150KB</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h3 class="font-bold text-pizza-dark mb-2">Page Load Time</h3>
+                <div class="flex items-center">
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-pizza-gold h-2 rounded-full" style="width: 30%"></div>
+                    </div>
+                    <span class="ml-2 text-sm font-medium">1.2s</span>
+                </div>
+                <p class="text-xs text-gray-600 mt-1">Target: &lt; 2s</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h3 class="font-bold text-pizza-dark mb-2">Unused Classes</h3>
+                <div class="flex items-center">
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-green-500 h-2 rounded-full" style="width: 5%"></div>
+                    </div>
+                    <span class="ml-2 text-sm font-medium">12</span>
+                </div>
+                <p class="text-xs text-gray-600 mt-1">Target: 0 unused</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-pizza-dark text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <div>
+                    <span class="text-pizza-gold font-bold">LaravelPizza MCP Dashboard</span>
+                    <p class="text-sm text-gray-300 mt-1">Strumenti di sviluppo per il tema Tailwind + Vite</p>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-plug mr-2"></i>
+                    <span class="text-sm">MCP v0.3.4</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

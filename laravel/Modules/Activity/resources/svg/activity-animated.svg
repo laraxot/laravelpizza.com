@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <style>
+        .activity {
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+        svg:hover .activity {
+            transform: scale(1.1);
+        }
+        .pulse {
+            stroke-dasharray: 20;
+            stroke-dashoffset: 20;
+            transition: all 0.3s ease;
+        }
+        svg:hover .pulse {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0% { stroke-dashoffset: 20; }
+            50% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -20; }
+        }
+    </style>
+    <polyline class="activity pulse" points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+    <circle class="activity" cx="12" cy="12" r="10"/>
+</svg>

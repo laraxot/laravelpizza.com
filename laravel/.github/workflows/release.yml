@@ -1,0 +1,20 @@
+name: Auto SemVer Tag
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bump version and push tag
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          release_branches: develop
+          default_bump: patch   # patch / minor / major

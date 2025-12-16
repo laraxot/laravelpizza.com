@@ -1,0 +1,41 @@
+{
+    "id": "1",
+    "name": {
+        "it": "headeryyy"
+    },
+    "slug": "header",
+    "blocks": {
+        "it": [
+            {
+                "type": "navigation",
+                "slug": "nav1",
+                "data": {
+                    "view": "pub_theme::components.blocks.navigation.simple",
+                    "items": [
+                        {
+                            "label": "Amministrazione",
+                            "url": "\/",
+                            "type": "link"
+                        },
+                        {
+                            "label": "{{ __('pub_theme::header.links.Project.label') }}",
+                            "url": "{{ route('pages.view',['slug'=>'progetto']) }}",
+                            "type": "link"
+                        },
+                        {
+                            "label": "Partecipanti",
+                            "url": "{{ route('pages.view',['slug'=>'partners']) }}",
+                            "type": "link"
+                        }
+                    ],
+                    "alignment": null,
+                    "orientation": null
+                }
+            }
+        ]
+    },
+    "created_at": "2025-07-08T09:02:57.000000Z",
+    "updated_at": "2025-08-29T11:03:49.000000Z",
+    "created_by": null,
+    "updated_by": "01985ae8-8039-71ea-88c7-54ebce6295b0"
+}

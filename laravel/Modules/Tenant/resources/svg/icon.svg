@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true" 
+     role="img">
+    <!-- Edificio principale -->
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M6 3v18h8V3H6z" />
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M8 7h4M8 11h4M8 15h4" />
+    
+    <!-- Edificio secondario -->
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M14 6v15h4V6h-4z" />
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M15 9h2M15 12h2M15 15h2" />
+    
+    <!-- Connessione tra edifici -->
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M6 10h-2M20 10h2M3 10h22" />
+</svg> 

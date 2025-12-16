@@ -1,0 +1,25 @@
+includes:
+    - ../../vendor/larastan/larastan/extension.neon
+    - ../../vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
+    - ../../vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+    level: 9
+    paths:
+        - app
+        - database
+        - routes
+        - tests
+
+    excludePaths:
+        - tests/coverage/*
+        - vendor/*
+
+    ignoreErrors:
+        - '#Static call to instance method Nwidart\\Modules\\Facades\\Module#'
+        - '#PHPDoc tag @mixin contains unknown class #'
+
+    tmpDir: build/phpstan
+
+    bootstrapFiles:
+        - ../../vendor/autoload.php

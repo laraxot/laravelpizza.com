@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <style>
+        .place {
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+        svg:hover .place {
+            transform: scale(1.1);
+            stroke-width: 2.5;
+        }
+        .ripple {
+            opacity: 0;
+            transform-origin: center;
+            transition: opacity 0.3s ease;
+        }
+        svg:hover .ripple {
+            opacity: 0.2;
+            animation: ripple 1.5s infinite;
+        }
+        @keyframes ripple {
+            0% { transform: scale(1); opacity: 0.2; }
+            50% { transform: scale(1.5); opacity: 0.1; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+    </style>
+    <circle class="ripple" cx="12" cy="12" r="10" fill="currentColor" stroke="none"/>
+    <path class="place" d="M12 2 L14 6 L18 7 L15 10 L16 14 L12 12 L8 14 L9 10 L6 7 L10 6 Z"/>
+    <circle class="place" cx="12" cy="12" r="3"/>
+</svg>

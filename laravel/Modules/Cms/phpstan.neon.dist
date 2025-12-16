@@ -1,0 +1,46 @@
+includes:
+    - phpstan-baseline.neon
+
+parameters:
+    level: max
+    paths:
+        - app
+
+    excludePaths:
+        - app/Filament/Pages (?)
+        - app/Filament/Resources/*/Pages/List*.php
+        - Filament/Resources/*/Pages/List*.php
+        - Filament/Resources/PageContentResource.php
+        - Filament/Resources/PageResource.php
+        - build (?)
+        - vendor (?)
+        - Tests (?)
+        - rector.php
+        - Providers/CmsServiceProvider.php
+
+    ignoreErrors:
+        - '#Access to an undefined property#'
+        - '#Call to an undefined method#'
+        - '#Call to an undefined static method#'
+        - '#PHPDoc tag @mixin contains unknown class#'
+        - '#PHPDoc tag @property for property .* with no value type specified in iterable type array#'
+        - '#PHPDoc tag @method for method .* with no value type specified in iterable type array#'
+        - '#PHPDoc tag @method for method .* return type contains generic class .* but does not specify its types#'
+        - '#Property .* type has no value type specified in iterable type array#'
+        - '#Method .* return type has no value type specified in iterable type array#'
+        - '#PHPDoc tag @var with type class-string.* is not subtype of native type#'
+        - '#PHPDoc tag @var contains generic class .* but does not specify its types#'
+        - '#PHPDoc tag @property for property .* contains generic class .* but does not specify its types#'
+        - '#Method .* has parameter .* with no value type specified in iterable type array#'
+        - '#Method .* return type with generic class .* does not specify its types#'
+
+    treatPhpDocTypesAsCertain: false
+
+    scanFiles:
+        - ../Xot/app/Filament/Resources/Pages/XotBaseListRecords.php
+        - ../Xot/app/Filament/Resources/XotBaseResource.php
+
+    scanDirectories:
+        - ../Xot/app
+        - ../UI/app/Filament
+        - ../../vendor/laravel/framework

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <style>
+        .treatment {
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+        svg:hover .treatment {
+            transform: scale(1.1);
+        }
+        .data {
+            stroke-dasharray: 10;
+            stroke-dashoffset: 10;
+            transition: all 0.3s ease;
+        }
+        svg:hover .data {
+            animation: flow 1.5s ease-out infinite;
+        }
+        @keyframes flow {
+            0% { stroke-dashoffset: 10; }
+            50% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -10; }
+        }
+    </style>
+    <rect class="treatment" x="3" y="3" width="18" height="18" rx="2"/>
+    <line class="treatment" x1="3" y1="9" x2="21" y2="9"/>
+    <path class="data" d="M8 14h8"/>
+    <path class="data" d="M8 17h5"/>
+    <circle class="treatment" cx="18" cy="17" r="1"/>
+</svg>
