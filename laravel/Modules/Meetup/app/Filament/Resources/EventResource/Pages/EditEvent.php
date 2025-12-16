@@ -12,10 +12,15 @@ class EditEvent extends XotBaseEditRecord
 {
     protected static string $resource = EventResourceClass::class;
 
+    /**
+     * Get the header actions.
+     *
+     * @return array<string, \Filament\Actions\Action>
+     */
     protected function getHeaderActions(): array
     {
         return [
-            Actions\DeleteAction::make(),
+            'delete' => Actions\DeleteAction::make(),
         ];
     }
 }

@@ -25,11 +25,10 @@ class GetAddressDataFromFullAddressAction
     /**
      * Ottiene i dati dell'indirizzo da un indirizzo completo.
      *
-     * @param string $fullAddress L'indirizzo da cercare
+     * @param  string  $fullAddress  L'indirizzo da cercare
+     * @return AddressData I dati dell'indirizzo trovato
      *
      * @throws \RuntimeException Se la richiesta fallisce o l'indirizzo non viene trovato
-     *
-     * @return AddressData I dati dell'indirizzo trovato
      */
     public function execute(string $fullAddress): ?AddressData
     {

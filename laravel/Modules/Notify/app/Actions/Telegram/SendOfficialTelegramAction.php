@@ -20,11 +20,16 @@ final class SendOfficialTelegramAction
     use QueueableAction;
 
     private string $token;
+
     private string $apiUrl;
+
     /** @var array<string, mixed> */
     private array $vars = [];
+
     protected bool $debug;
+
     protected int $timeout;
+
     protected ?string $parseMode;
 
     /**
@@ -53,8 +58,9 @@ final class SendOfficialTelegramAction
     /**
      * Execute the action.
      *
-     * @param TelegramData $telegramData I dati del messaggio Telegram
+     * @param  TelegramData  $telegramData  I dati del messaggio Telegram
      * @return array<string, mixed> Risultato dell'operazione
+     *
      * @throws Exception In caso di errore durante l'invio
      */
     public function execute(TelegramData $telegramData): array

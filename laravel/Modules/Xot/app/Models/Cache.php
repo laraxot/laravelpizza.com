@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
-use Modules\Xot\Database\Factories\CacheFactory;
 use Illuminate\Database\Eloquent\Builder;
+use Modules\Xot\Database\Factories\CacheFactory;
 
 /**
  * Modules\Xot\Models\Cache.
@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Builder;
  * @property string $key
  * @property string $value
  * @property int $expiration
+ *
  * @method static CacheFactory factory($count = null, $state = [])
  * @method static Builder<static>|Cache newModelQuery()
  * @method static Builder<static>|Cache newQuery()
@@ -20,9 +21,11 @@ use Illuminate\Database\Eloquent\Builder;
  * @method static Builder<static>|Cache whereExpiration($value)
  * @method static Builder<static>|Cache whereKey($value)
  * @method static Builder<static>|Cache whereValue($value)
+ *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
  * @mixin \Eloquent
  */
 class Cache extends BaseModel

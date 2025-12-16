@@ -21,7 +21,7 @@ class MorphMapConfigResolver implements ConfigResolverInterface
     {
         return RouteService::inAdmin()
             && Str::startsWith($key, 'morph_map')
-            && null !== Request::segment(2);
+            && Request::segment(2) !== null;
     }
 
     public function resolve(string $key, string|int|array|null $default = null): float|int|string|array|null

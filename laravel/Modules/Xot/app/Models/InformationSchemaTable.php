@@ -21,6 +21,7 @@ use Modules\Tenant\Models\Traits\SushiToJson;
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
  * @method static \Modules\Xot\Database\Factories\InformationSchemaTableFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable newQuery()
@@ -34,6 +35,7 @@ use Modules\Tenant\Models\Traits\SushiToJson;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereTableSchema($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|InformationSchemaTable whereUpdatedBy($value)
+ *
  * @mixin \Eloquent
  */
 class InformationSchemaTable extends BaseModel
@@ -94,7 +96,7 @@ class InformationSchemaTable extends BaseModel
     /**
      * Aggiorna il numero di record memorizzato per un modello.
      *
-     * @param class-string<Model> $modelClass
+     * @param  class-string<Model>  $modelClass
      */
     public static function updateModelCount(string $modelClass, int $total): void
     {
@@ -124,7 +126,7 @@ class InformationSchemaTable extends BaseModel
     /**
      * Restituisce il numero di record per un modello.
      *
-     * @param class-string<Model> $modelClass
+     * @param  class-string<Model>  $modelClass
      */
     public static function getModelCount(string $modelClass): int
     {

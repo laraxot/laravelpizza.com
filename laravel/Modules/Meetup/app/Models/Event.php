@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
-use Modules\User\Models\User;
-use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Activity\Traits\HasEvents;
 use Modules\Activity\Traits\HasSnapshots;
+use Modules\User\Models\User;
+use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
  * Modules\Meetup\Models\Event.
@@ -58,9 +57,9 @@ use Modules\Activity\Traits\HasSnapshots;
  */
 class Event extends Model
 {
-    use HasXotFactory;
     use HasEvents;
     use HasSnapshots;
+    use HasXotFactory;
 
     protected $fillable = [
         'title',

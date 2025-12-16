@@ -26,7 +26,7 @@ describe('Province Business Logic', function () {
     });
 
     test('province has schema definition for geographic hierarchy', function () {
-        $province = new Province();
+        $province = new Province;
 
         expect($province)->toHaveProperty('schema');
         expect($province->schema['region_id'])->toBe('integer');
@@ -35,14 +35,14 @@ describe('Province Business Logic', function () {
     });
 
     test('province can get rows from comune data', function () {
-        $province = new Province();
+        $province = new Province;
 
         expect(method_exists($province, 'getRows'))->toBeTrue();
         expect($province->getRows())->toBeArray();
     });
 
     test('province model can be instantiated without errors', function () {
-        $province = new Province();
+        $province = new Province;
 
         expect($province)->toBeInstanceOf(Province::class);
         expect($province)->toBeInstanceOf(BaseModel::class);

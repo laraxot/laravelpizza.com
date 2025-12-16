@@ -19,7 +19,9 @@ use Modules\Notify\Enums\ContactTypeEnum;
  * - Accessibilità WCAG 2.1 AA compliant
  *
  * @author Laraxot Team
+ *
  * @version 2.0 - REFACTOR COMPLETO
+ *
  * @since 2025-01-06
  */
 class ContactColumn extends ViewColumn
@@ -38,7 +40,7 @@ class ContactColumn extends ViewColumn
 
         /** @var array<string> $searchableArray */
         $searchableArray = ContactTypeEnum::getSearchable();
-        
+
         $this->view(static::getView(), [
             'contact_types' => $contact_types,
         ])

@@ -68,8 +68,7 @@ trait HasXotTable
         if ($this->shouldShowAssociateAction()) {
             $actions['associate'] = AssociateAction::make()
                 ->label('')
-                ->icon('heroicon-o-paper-clip')
-                ;
+                ->icon('heroicon-o-paper-clip');
         }
 
         if ($this->shouldShowAttachAction()) {
@@ -240,8 +239,7 @@ trait HasXotTable
 
         if ($this->shouldShowReplicateAction()) {
             $actions['replicate'] = ReplicateAction::make()
-                ->iconButton()
-                ;
+                ->iconButton();
         }
 
         // Check if class has the getRelationship method

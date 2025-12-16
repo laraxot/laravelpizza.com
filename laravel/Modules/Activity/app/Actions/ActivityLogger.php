@@ -8,14 +8,8 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Request;
 use Modules\Activity\Models\Activity;
 use Modules\User\Models\User;
-use Modules\Activity\Actions\LogModelCreatedAction;
-use Modules\Activity\Actions\LogModelUpdatedAction;
-use Modules\Activity\Actions\LogModelDeletedAction;
-use Modules\Activity\Actions\LogUserLoginAction;
-use Modules\Activity\Actions\LogUserLogoutAction;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -240,7 +234,7 @@ class ActivityLogger
 
         if ($user) {
             $query->where('causer_id', $user->getKey())
-                  ->where('causer_type', $user::class);
+                ->where('causer_type', $user::class);
         }
 
         return [

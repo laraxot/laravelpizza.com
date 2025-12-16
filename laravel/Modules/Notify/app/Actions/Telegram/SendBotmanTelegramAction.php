@@ -20,11 +20,16 @@ final class SendBotmanTelegramAction
     use QueueableAction;
 
     private string $token;
+
     private string $apiUrl;
+
     /** @var array<string, mixed> */
     private array $vars = [];
+
     protected bool $debug;
+
     protected int $timeout;
+
     protected ?string $parseMode;
 
     /**
@@ -33,7 +38,7 @@ final class SendBotmanTelegramAction
     public function __construct()
     {
         $token = config('services.telegram.token');
-        if (!is_string($token)) {
+        if (! is_string($token)) {
             throw new Exception('put [TELEGRAM_BOT_TOKEN] variable to your .env and config [services.telegram.token]');
         }
         $this->token = $token;
@@ -53,8 +58,9 @@ final class SendBotmanTelegramAction
     /**
      * Execute the action.
      *
-     * @param TelegramData $telegramData I dati del messaggio Telegram
+     * @param  TelegramData  $telegramData  I dati del messaggio Telegram
      * @return array<string, mixed> Risultato dell'operazione
+     *
      * @throws Exception In caso di errore durante l'invio
      */
     public function execute(TelegramData $telegramData): array
@@ -104,7 +110,7 @@ final class SendBotmanTelegramAction
             $payload['disable_web_page_preview'] = $telegramData->disableWebPagePreview;
         } elseif (
             in_array($telegramData->type, ['photo', 'video', 'document', 'audio', 'animation'], strict: true) &&
-            !empty($telegramData->media)
+            ! empty($telegramData->media)
         ) {
             $mediaType = $telegramData->type;
             $payload[$mediaType] = $telegramData->media[0];

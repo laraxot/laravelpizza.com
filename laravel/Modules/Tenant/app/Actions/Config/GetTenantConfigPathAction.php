@@ -18,5 +18,3 @@ class GetTenantConfigPathAction
         return str_replace('/', '.', $name).'.'.$key;
     }
 }
-
-

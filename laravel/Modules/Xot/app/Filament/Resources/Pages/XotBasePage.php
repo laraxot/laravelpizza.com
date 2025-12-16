@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\Pages;
 
-use LogicException;
-use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Resources\Pages\Page as FilamentPage;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use LogicException;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 
 /**
@@ -23,8 +23,8 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
  * following the architectural pattern of never extending Filament classes directly.
  *
  * @property ?string $model
- * @property ?array  $data
- * @property Schema  $form
+ * @property ?array $data
+ * @property Schema $form
  */
 abstract class XotBasePage extends FilamentPage implements HasForms
 {
@@ -111,7 +111,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      */
     public function getModel(): string
     {
-        if (null === static::$model) {
+        if (static::$model === null) {
             throw new LogicException('Model class not set for page: '.static::class);
         }
 

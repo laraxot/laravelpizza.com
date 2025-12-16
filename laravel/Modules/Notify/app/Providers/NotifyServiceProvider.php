@@ -23,7 +23,7 @@ class NotifyServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-        //if (! app()->environment('production')) {
+        // if (! app()->environment('production')) {
         $mail = TenantService::config('mail');
         Assert::isArray($mail);
         $fallback_to = Arr::get($mail, 'fallback_to', null);

@@ -37,6 +37,7 @@ use function Safe\json_encode;
  * @property-read Consent|null $consent
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
+ *
  * @method static EventFactory factory($count = null, $state = [])
  * @method static Builder<static>|Event newModelQuery()
  * @method static Builder<static>|Event newQuery()
@@ -54,7 +55,9 @@ use function Safe\json_encode;
  * @method static Builder<static>|Event whereTreatmentId($value)
  * @method static Builder<static>|Event whereUpdatedAt($value)
  * @method static Builder<static>|Event whereUpdatedBy($value)
+ *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
 class Event extends BaseModel

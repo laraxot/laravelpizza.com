@@ -30,6 +30,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read ProfileContract|null $creator
  * @property-read Treatment|null $treatment
  * @property-read ProfileContract|null $updater
+ *
  * @method static ConsentFactory factory($count = null, $state = [])
  * @method static Builder<static>|Consent newModelQuery()
  * @method static Builder<static>|Consent newQuery()
@@ -47,7 +48,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Consent whereUpdatedBy($value)
  * @method static Builder<static>|Consent whereUserId($value)
  * @method static Builder<static>|Consent whereUserType($value)
+ *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
 class Consent extends BaseModel

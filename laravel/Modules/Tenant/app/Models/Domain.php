@@ -11,7 +11,7 @@ use Modules\Xot\Contracts\ProfileContract;
 use Sushi\Sushi;
 
 /**
- * @property int|null    $id
+ * @property int|null $id
  * @property string|null $name
  *
  * @method static Builder|Domain newModelQuery()

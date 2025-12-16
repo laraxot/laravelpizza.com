@@ -4,32 +4,28 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\SMS;
 
-use Override;
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SMS\NexmoData;
 use Modules\Notify\Datas\SmsData;
+use Override;
 use Spatie\QueueableAction\QueueableAction;
 
 final class SendNexmoSMSAction implements SmsActionContract
 {
     use QueueableAction;
 
-    /** @var NexmoData */
     private NexmoData $nexmoData;
 
     /** @var array<string, mixed> */
     private array $vars = [];
 
-    /** @var bool */
     protected bool $debug;
 
-    /** @var string|null */
-    protected null|string $defaultSender = null;
+    protected ?string $defaultSender = null;
 
     /**
      * Create a new action instance.
@@ -38,11 +34,11 @@ final class SendNexmoSMSAction implements SmsActionContract
     {
         $this->nexmoData = NexmoData::make();
 
-        if (!$this->nexmoData->key) {
+        if (! $this->nexmoData->key) {
             throw new Exception('Key Nexmo non configurata in sms.php');
         }
 
-        if (!$this->nexmoData->secret) {
+        if (! $this->nexmoData->secret) {
             throw new Exception('Secret Nexmo non configurato in sms.php');
         }
 
@@ -55,8 +51,9 @@ final class SendNexmoSMSAction implements SmsActionContract
     /**
      * Execute the action.
      *
-     * @param SmsData $smsData I dati del messaggio SMS
+     * @param  SmsData  $smsData  I dati del messaggio SMS
      * @return array Risultato dell'operazione
+     *
      * @throws Exception In caso di errore durante l'invio
      */
     #[Override]
@@ -69,11 +66,11 @@ final class SendNexmoSMSAction implements SmsActionContract
         // Normalizza il numero di telefono
         $to = (string) $smsData->to;
         if (Str::startsWith($to, '00')) {
-            $to = $to !== '' ? ('+' . substr($to, 2)) : $to;
+            $to = $to !== '' ? ('+'.substr($to, 2)) : $to;
         }
 
-        if (!Str::startsWith($to, '+')) {
-            $to = '+39' . $to;
+        if (! Str::startsWith($to, '+')) {
+            $to = '+39'.$to;
         }
 
         $from = $smsData->from ?? $this->defaultSender;
@@ -84,7 +81,7 @@ final class SendNexmoSMSAction implements SmsActionContract
         ]);
 
         try {
-            $response = $client->post($this->nexmoData->getBaseUrl() . '/sms/json', [
+            $response = $client->post($this->nexmoData->getBaseUrl().'/sms/json', [
                 'form_params' => [
                     'api_key' => $this->nexmoData->key,
                     'api_secret' => $this->nexmoData->secret,
@@ -101,7 +98,7 @@ final class SendNexmoSMSAction implements SmsActionContract
             return $this->vars;
         } catch (ClientException $clientException) {
             throw new Exception(
-                $clientException->getMessage() . '[' . __LINE__ . '][' . class_basename($this) . ']',
+                $clientException->getMessage().'['.__LINE__.']['.class_basename($this).']',
                 $clientException->getCode(),
                 $clientException,
             );

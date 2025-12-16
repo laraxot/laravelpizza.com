@@ -50,14 +50,15 @@ class AnalyzeTranslationFiles extends Command
                 $filePath = $file->getPathname();
 
                 // Skip non-PHP files
-                if (!str_ends_with($filename, '.php')) {
+                if (! str_ends_with($filename, '.php')) {
                     continue;
                 }
 
                 $translations = require $filePath;
 
-                if (!is_array($translations)) {
+                if (! is_array($translations)) {
                     $this->warn("File {$lang}/{$filename} does not return an array.");
+
                     continue;
                 }
 
@@ -116,7 +117,7 @@ class AnalyzeTranslationFiles extends Command
         $patterns = [];
 
         foreach ($allFiles as $file => $keys) {
-            if (!is_array($keys)) {
+            if (! is_array($keys)) {
                 continue;
             }
             $topLevelKeys = [];
@@ -130,7 +131,7 @@ class AnalyzeTranslationFiles extends Command
             $patterns[$pattern][] = $file;
         }
 
-        $this->info('Found ' . count($patterns) . ' different structure patterns:');
+        $this->info('Found '.count($patterns).' different structure patterns:');
 
         $table = new Table($this->output);
         $table->setHeaders(['Pattern', 'Files']);
@@ -196,12 +197,12 @@ class AnalyzeTranslationFiles extends Command
             }
         }
 
-        $this->info('Files with send_ prefix (' . count($sendFiles) . '):');
+        $this->info('Files with send_ prefix ('.count($sendFiles).'):');
         foreach ($sendFiles as $file) {
             $this->line(" - {$file}");
         }
 
-        $this->info('Resource files (' . count($resourceFiles) . '):');
+        $this->info('Resource files ('.count($resourceFiles).'):');
         foreach ($resourceFiles as $file) {
             $this->line(" - {$file}");
         }
@@ -228,7 +229,7 @@ class AnalyzeTranslationFiles extends Command
         $navigationStructures = [];
 
         foreach ($allFiles as $file => $keys) {
-            if (!is_array($keys)) {
+            if (! is_array($keys)) {
                 continue;
             }
             $navigationKeys = [];
@@ -239,14 +240,14 @@ class AnalyzeTranslationFiles extends Command
                 }
             }
 
-            if (!empty($navigationKeys)) {
+            if (! empty($navigationKeys)) {
                 sort($navigationKeys);
                 $structure = implode(',', $navigationKeys);
                 $navigationStructures[$structure][] = $file;
             }
         }
 
-        $this->info('Found ' . count($navigationStructures) . ' different navigation structures:');
+        $this->info('Found '.count($navigationStructures).' different navigation structures:');
 
         $table = new Table($this->output);
         $table->setHeaders(['Structure', 'Files']);

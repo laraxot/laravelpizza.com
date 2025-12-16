@@ -9,7 +9,9 @@ declare(strict_types=1);
  * that uses ContactTypeEnum for centralized rendering.
  *
  * @author Laraxot Team
+ *
  * @version 1.0
+ *
  * @since 2025-08-01
  */
 return [

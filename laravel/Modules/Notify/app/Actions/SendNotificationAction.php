@@ -23,13 +23,12 @@ class SendNotificationAction
     /**
      * Invia una notifica utilizzando un template.
      *
-     * @param Model $recipient Il destinatario della notifica
-     * @param string $templateCode Il codice del template da utilizzare
-     * @param array<string, mixed> $data I dati per compilare il template
-     * @param array<int, string> $channels I canali da utilizzare (opzionale, usa quelli del template se non specificati)
-     * @param array<string, mixed> $options Opzioni aggiuntive per l'invio
+     * @param  Model  $recipient  Il destinatario della notifica
+     * @param  string  $templateCode  Il codice del template da utilizzare
+     * @param  array<string, mixed>  $data  I dati per compilare il template
+     * @param  array<int, string>  $channels  I canali da utilizzare (opzionale, usa quelli del template se non specificati)
+     * @param  array<string, mixed>  $options  Opzioni aggiuntive per l'invio
      *
-     * @return bool
      * @throws Exception Se il template non esiste o non è attivo
      */
     public function execute(
@@ -63,14 +62,15 @@ class SendNotificationAction
 
         // Invia tramite ogni canale
         foreach ($channelsToUse as $channel) {
-            if (!is_string($channel)) {
+            if (! is_string($channel)) {
                 continue;
             }
             try {
                 $this->sendViaChannel($recipient, $channel, $compiled, $options);
             } catch (Exception $e) {
                 // Log dell'errore ma continua con altri canali
-                Log::error("Errore invio notifica via {$channel}: " . $e->getMessage());
+                Log::error("Errore invio notifica via {$channel}: ".$e->getMessage());
+
                 continue;
             }
         }
@@ -81,11 +81,8 @@ class SendNotificationAction
     /**
      * Invia la notifica attraverso un canale specifico.
      *
-     * @param Model $recipient
-     * @param string $channel
-     * @param array{subject: string, body_html: string|null, body_text: string|null} $compiled
-     * @param array<string, mixed> $options
-     * @return void
+     * @param  array{subject: string, body_html: string|null, body_text: string|null}  $compiled
+     * @param  array<string, mixed>  $options
      */
     protected function sendViaChannel(Model $recipient, string $channel, array $compiled, array $options): void
     {
@@ -154,10 +151,8 @@ class SendNotificationAction
     /**
      * Invia una notifica nel database.
      *
-     * @param Model $recipient
-     * @param array{subject: string, body_html: string|null, body_text: string|null} $compiled
-     * @param array<string, mixed> $options
-     * @return void
+     * @param  array{subject: string, body_html: string|null, body_text: string|null}  $compiled
+     * @param  array<string, mixed>  $options
      */
     protected function sendDatabase(Model $recipient, array $compiled, array $options): void
     {
@@ -200,7 +195,7 @@ class SendNotificationAction
 
         // Limita la lunghezza del messaggio SMS
         if (mb_strlen($message) > 320) {
-            $message = mb_substr($message, 0, 317) . '...';
+            $message = mb_substr($message, 0, 317).'...';
         }
 
         /** @var string $subject */

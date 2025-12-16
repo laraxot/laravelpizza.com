@@ -69,7 +69,7 @@ final class GetDaysMappingAction
     {
         $carbon = Carbon::create();
 
-        if (null === $carbon) {
+        if ($carbon === null) {
             throw new \RuntimeException('Failed to create Carbon instance');
         }
 

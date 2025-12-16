@@ -5,7 +5,8 @@ declare(strict_types=1);
 use Illuminate\Contracts\Cache\Factory as CacheFactory;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     /**
      * Run the migrations.
      */
@@ -46,7 +47,7 @@ return new class extends XotBaseMigration {
             // Verifica se l'applicazione è completamente inizializzata
             if (app()->bound(CacheFactory::class)) {
                 $cache = app(CacheFactory::class);
-                $store = 'default' !== $cache_store ? $cache_store : null;
+                $store = $cache_store !== 'default' ? $cache_store : null;
 
                 $cache->store($store)->forget($cache_key);
             }

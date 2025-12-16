@@ -12,7 +12,7 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->createUserPage = new CreateUser();
+    $this->createUserPage = new CreateUser;
 });
 
 test('create user page has correct resource', function (): void {

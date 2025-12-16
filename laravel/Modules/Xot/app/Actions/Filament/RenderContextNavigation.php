@@ -15,8 +15,8 @@ class RenderContextNavigation
     /**
      * Render context navigation hooks for Filament sidebar.
      *
-     * @param string $module Module name
-     * @param string $_context Context (unused but kept for compatibility)
+     * @param  string  $module  Module name
+     * @param  string  $_context  Context (unused but kept for compatibility)
      */
     public function execute(string $module, string $_context): void
     {

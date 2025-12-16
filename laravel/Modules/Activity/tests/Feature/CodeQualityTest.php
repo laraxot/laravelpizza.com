@@ -19,8 +19,6 @@ class CodeQualityTest extends TestCase
 {
     /**
      * Test che tutti i file PHP del modulo abbiano sintassi corretta.
-     *
-     * @return void
      */
     public function test_all_php_files_have_valid_syntax(): void
     {
@@ -34,8 +32,6 @@ class CodeQualityTest extends TestCase
 
     /**
      * Test che le classi principali esistano e siano istanziabili.
-     *
-     * @return void
      */
     public function test_main_classes_exist_and_are_instantiable(): void
     {
@@ -47,8 +43,6 @@ class CodeQualityTest extends TestCase
 
     /**
      * Test che i file di configurazione esistano e siano validi.
-     *
-     * @return void
      */
     public function test_configuration_files_exist(): void
     {
@@ -62,8 +56,6 @@ class CodeQualityTest extends TestCase
 
     /**
      * Test che le traduzioni esistano e siano strutturate correttamente.
-     *
-     * @return void
      */
     public function test_translations_exist_and_are_structured(): void
     {
@@ -87,8 +79,6 @@ class CodeQualityTest extends TestCase
 
     /**
      * Test che le view esistano e siano valide.
-     *
-     * @return void
      */
     public function test_views_exist_and_are_valid(): void
     {
@@ -103,8 +93,6 @@ class CodeQualityTest extends TestCase
 
     /**
      * Test che il ServiceProvider sia configurato correttamente.
-     *
-     * @return void
      */
     public function test_service_provider_configuration(): void
     {
@@ -117,8 +105,6 @@ class CodeQualityTest extends TestCase
 
     /**
      * Test che non ci siano errori di dipendenze circolari.
-     *
-     * @return void
      */
     public function test_no_circular_dependencies(): void
     {
@@ -130,8 +116,6 @@ class CodeQualityTest extends TestCase
 
     /**
      * Test che la documentazione sia aggiornata.
-     *
-     * @return void
      */
     public function test_documentation_is_up_to_date(): void
     {
@@ -148,7 +132,7 @@ class CodeQualityTest extends TestCase
     /**
      * Trova tutti i file PHP in una directory ricorsivamente.
      *
-     * @param string $directory La directory da scansionare
+     * @param  string  $directory  La directory da scansionare
      * @return array<int, string> Array di path dei file PHP
      */
     private function findPhpFiles(string $directory): array
@@ -171,16 +155,15 @@ class CodeQualityTest extends TestCase
     /**
      * Verifica che un file PHP abbia sintassi valida.
      *
-     * @param string $filePath Il path del file da verificare
-     * @return void
+     * @param  string  $filePath  Il path del file da verificare
      */
     private function assertPhpFileHasValidSyntax(string $filePath): void
     {
         // PHPStan Level 10: Use php -l for syntax check
         $output = [];
         $resultCode = 0;
-        exec("php -l " . escapeshellarg($filePath) . " 2>&1", $output, $resultCode);
-        
-        $this->assertEquals(0, $resultCode, "File {$filePath} ha errori di sintassi: " . implode("\n", $output));
+        exec('php -l '.escapeshellarg($filePath).' 2>&1', $output, $resultCode);
+
+        $this->assertEquals(0, $resultCode, "File {$filePath} ha errori di sintassi: ".implode("\n", $output));
     }
 }

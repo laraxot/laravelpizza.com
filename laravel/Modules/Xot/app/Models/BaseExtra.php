@@ -11,7 +11,6 @@ use Modules\Xot\Database\Factories\ExtraFactory;
 use Override;
 use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
 use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
-use Webmozart\Assert\Assert;
 
 /**
  * Model Extra.

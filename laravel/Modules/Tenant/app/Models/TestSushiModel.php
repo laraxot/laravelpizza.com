@@ -18,15 +18,15 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  *
  * Utilizzato esclusivamente per i test del trait.
  *
- * @property int                          $id
- * @property string|null                  $name
- * @property string|null                  $description
- * @property string|null                  $status
+ * @property int $id
+ * @property string|null $name
+ * @property string|null $description
+ * @property string|null $status
  * @property array<array-key, mixed>|null $metadata
- * @property Carbon|null                  $created_at
- * @property Carbon|null                  $updated_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
  *
- * @method static TestSushiModelFactory          factory($count = null, $state = [])
+ * @method static TestSushiModelFactory factory($count = null, $state = [])
  * @method static Builder<static>|TestSushiModel newModelQuery()
  * @method static Builder<static>|TestSushiModel newQuery()
  * @method static Builder<static>|TestSushiModel query()

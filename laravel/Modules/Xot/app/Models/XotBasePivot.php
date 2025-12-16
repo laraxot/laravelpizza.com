@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
-use Modules\Xot\Models\Traits\HasXotFactory;
-use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Relations\Pivot as EloquentPivot;
+use Illuminate\Support\Carbon;
+use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
 
 use function Safe\preg_match;

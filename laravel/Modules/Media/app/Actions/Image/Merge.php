@@ -59,11 +59,12 @@ class Merge
         if (count($filenames) === 1) {
             $sourcePath = public_path($filenames[0]);
             $outputPath = public_path($outputFilename);
-            if (!File::exists($sourcePath)) {
+            if (! File::exists($sourcePath)) {
                 return false;
             }
             File::ensureDirectoryExists(dirname($outputPath));
             File::copy($sourcePath, $outputPath);
+
             return File::exists($outputPath);
         }
 
@@ -74,7 +75,7 @@ class Merge
 
         // Verifica che tutte le immagini esistano
         foreach ($absolutePaths as $path) {
-            if (!File::exists($path)) {
+            if (! File::exists($path)) {
                 logger()->error('Immagine non trovata per merge', ['path' => $path]);
 
                 return false;

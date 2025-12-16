@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services;
 
-use Exception;
 use DateTime;
-use Modules\Notify\Jobs\SendScheduledPushNotification;
+use Exception;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Modules\Notify\Jobs\SendScheduledPushNotification;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Webmozart\Assert\Assert;
 
@@ -260,7 +260,6 @@ class PushNotificationService
         }
 
         /** @var \Illuminate\Http\Client\Response $response */
-
         if ($response->successful()) {
             $responseData = $response->json();
 
@@ -409,7 +408,6 @@ class PushNotificationService
         }
 
         /** @var \Illuminate\Http\Client\Response $response */
-
         if ($response->successful()) {
             $responseData = $response->json();
 

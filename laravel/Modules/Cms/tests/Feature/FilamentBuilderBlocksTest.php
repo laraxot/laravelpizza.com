@@ -8,10 +8,9 @@ use Filament\Forms\Components\Builder\Block;
 use Modules\Cms\Tests\TestCase;
 use Modules\UI\Actions\Block\GetAllBlocksAction;
 use Modules\UI\View\Components\Render\Blocks;
+use Spatie\LaravelData\DataCollection;
 
 use function Pest\Laravel\get;
-
-use Spatie\LaravelData\DataCollection;
 
 uses(TestCase::class);
 
@@ -32,7 +31,7 @@ describe('Filament Builder Blocks System', function () {
     test('xot base block pattern is followed by cms blocks', function () {
         $allBlocks = app(GetAllBlocksAction::class)->execute();
 
-        $cmsBlocks = $allBlocks->filter(fn ($block) => 'Cms' === $block->module);
+        $cmsBlocks = $allBlocks->filter(fn ($block) => $block->module === 'Cms');
 
         expect($cmsBlocks->count())->toBeGreaterThan(0, 'CMS module should have blocks');
 
@@ -206,7 +205,7 @@ describe('Filament Builder Blocks System', function () {
 
     test('cms module blocks extend xot base block correctly', function () {
         $allBlocks = app(GetAllBlocksAction::class)->execute();
-        $cmsBlocks = $allBlocks->filter(fn ($block) => 'Cms' === $block->module);
+        $cmsBlocks = $allBlocks->filter(fn ($block) => $block->module === 'Cms');
 
         $cmsBlocks->each(function ($block) {
             $reflection = new \ReflectionClass($block->class);

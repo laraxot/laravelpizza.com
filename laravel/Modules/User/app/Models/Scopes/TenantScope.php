@@ -20,7 +20,7 @@ class TenantScope implements Scope
     public function apply(Builder $builder, Model $_model): void
     {
         $tenant_id = Filament::getTenant()?->getKey();
-        if (null !== $tenant_id) {
+        if ($tenant_id !== null) {
             $builder->where('tenant_id', '=', $tenant_id);
         }
     }

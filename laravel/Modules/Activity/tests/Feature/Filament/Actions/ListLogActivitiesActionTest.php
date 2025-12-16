@@ -97,5 +97,3 @@ test('action uses gray color for non-invasive UI', function () {
     expect($action->getColor())
         ->toBe('gray');
 });
-
-

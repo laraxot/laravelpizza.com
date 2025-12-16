@@ -38,7 +38,7 @@ class RetrieveSocialiteUserAction
             ->where('provider_id', $providerId)
             ->first();
 
-        if (null === $res) {
+        if ($res === null) {
             return null;
         }
 

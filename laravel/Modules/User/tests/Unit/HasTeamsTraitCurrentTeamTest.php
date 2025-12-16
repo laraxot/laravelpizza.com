@@ -22,7 +22,7 @@ class HasTeamsTraitCurrentTeamTest extends TestCase
     /**
      * Test che currentTeam() non crashi quando l'utente non ha team.
      */
-    public function testCurrentTeamDoesNotCrashWithoutTeams(): void
+    public function test_current_team_does_not_crash_without_teams(): void
     {
         // Arrange: Crea un utente senza team
         $user = User::factory()->create([
@@ -40,7 +40,7 @@ class HasTeamsTraitCurrentTeamTest extends TestCase
     /**
      * Test che currentTeam() non modifichi il database durante l'accesso.
      */
-    public function testCurrentTeamIsSideEffectFree(): void
+    public function test_current_team_is_side_effect_free(): void
     {
         // Arrange: Crea un utente senza current_team_id
         $user = User::factory()->create([
@@ -63,7 +63,7 @@ class HasTeamsTraitCurrentTeamTest extends TestCase
     /**
      * Test che initializeCurrentTeam() imposti correttamente il personal team.
      */
-    public function testInitializeCurrentTeamSetsPersonalTeam(): void
+    public function test_initialize_current_team_sets_personal_team(): void
     {
         // Arrange: Crea un utente con un personal team
         $user = User::factory()->create([
@@ -88,7 +88,7 @@ class HasTeamsTraitCurrentTeamTest extends TestCase
     /**
      * Test che initializeCurrentTeam() non modifichi un current_team_id già impostato.
      */
-    public function testInitializeCurrentTeamDoesNotOverrideExisting(): void
+    public function test_initialize_current_team_does_not_override_existing(): void
     {
         // Arrange: Crea un utente con un team già impostato
         $user = User::factory()->create([
@@ -122,7 +122,7 @@ class HasTeamsTraitCurrentTeamTest extends TestCase
     /**
      * Test che initializeCurrentTeam() imposti il primo team disponibile se non c'è personal team.
      */
-    public function testInitializeCurrentTeamSetsFirstAvailableTeam(): void
+    public function test_initialize_current_team_sets_first_available_team(): void
     {
         // Arrange: Crea un utente con un team non-personal
         $user = User::factory()->create([
@@ -147,7 +147,7 @@ class HasTeamsTraitCurrentTeamTest extends TestCase
     /**
      * Test che initializeCurrentTeam() non crashi se l'utente non ha team.
      */
-    public function testInitializeCurrentTeamHandlesNoTeams(): void
+    public function test_initialize_current_team_handles_no_teams(): void
     {
         // Arrange: Crea un utente senza team
         $user = User::factory()->create([
@@ -166,7 +166,7 @@ class HasTeamsTraitCurrentTeamTest extends TestCase
     /**
      * Test che l'accesso a currentTeam non causi query N+1.
      */
-    public function testCurrentTeamDoesNotCauseNPlusOneQueries(): void
+    public function test_current_team_does_not_cause_n_plus_one_queries(): void
     {
         // Arrange: Crea un utente con un team
         $user = User::factory()->create([

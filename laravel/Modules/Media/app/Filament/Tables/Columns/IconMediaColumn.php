@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Tables\Columns;
 
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Filament\Tables\Columns\IconColumn;
 use Illuminate\Http\Request;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class IconMediaColumn extends IconColumn
 {

@@ -67,6 +67,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property-read ProfileContract|null $updater
  * @property-read User|null $user
  * @property-read string|null $user_name
+ *
  * @method static ProfileFactory factory($count = null, $state = [])
  * @method static Builder<static>|Profile newModelQuery()
  * @method static Builder<static>|Profile newQuery()
@@ -94,7 +95,9 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder<static>|Profile withExtraAttributes()
  * @method static Builder<static>|Profile withoutPermission($permissions)
  * @method static Builder<static>|Profile withoutRole($roles, $guard = null)
+ *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile

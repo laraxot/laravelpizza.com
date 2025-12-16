@@ -83,7 +83,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant1));
         $this->setCurrentTenant($this->tenant1);
 
-        $model1 = new TestSushiModel();
+        $model1 = new TestSushiModel;
         $data1 = [
             '1' => [
                 'id' => 1,
@@ -103,7 +103,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant2));
         $this->setCurrentTenant($this->tenant2);
 
-        $model2 = new TestSushiModel();
+        $model2 = new TestSushiModel;
         $data2 = [
             '1' => [
                 'id' => 1,
@@ -137,7 +137,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant1));
         $this->setCurrentTenant($this->tenant1);
 
-        $model1 = new TestSushiModel();
+        $model1 = new TestSushiModel;
         $rows1 = $model1->getSushiRows();
 
         $this->assertCount(2, $rows1);
@@ -148,7 +148,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant2));
         $this->setCurrentTenant($this->tenant2);
 
-        $model2 = new TestSushiModel();
+        $model2 = new TestSushiModel;
         $rows2 = $model2->getSushiRows();
 
         $this->assertCount(2, $rows2);
@@ -166,7 +166,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant1));
         $this->setCurrentTenant($this->tenant1);
 
-        $model = new TestSushiModel();
+        $model = new TestSushiModel;
         $complexData = [
             '1' => [
                 'id' => 1,
@@ -215,7 +215,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant1));
         $this->setCurrentTenant($this->tenant1);
 
-        $model = new TestSushiModel();
+        $model = new TestSushiModel;
         $testData = [
             '1' => [
                 'id' => 1,
@@ -245,7 +245,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant1));
         $this->setCurrentTenant($this->tenant1);
 
-        $model = new TestSushiModel();
+        $model = new TestSushiModel;
         $initialData = [
             '1' => [
                 'id' => 1,
@@ -287,7 +287,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant1));
         $this->setCurrentTenant($this->tenant1);
 
-        $model = new TestSushiModel();
+        $model = new TestSushiModel;
 
         // Crea dataset grande (500 record)
         $largeData = [];
@@ -330,7 +330,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant1));
         $this->setCurrentTenant($this->tenant1);
 
-        $model = new TestSushiModel();
+        $model = new TestSushiModel;
         $unicodeData = [
             '1' => [
                 'id' => 1,
@@ -374,7 +374,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant1));
         $this->setCurrentTenant($this->tenant1);
 
-        $model = new TestSushiModel();
+        $model = new TestSushiModel;
         $edgeCaseData = [
             '1' => [
                 'id' => 1,
@@ -441,7 +441,7 @@ class SushiToJsonIntegrationTest extends TestCase
             File::makeDirectory($customPath, 0o755, true, true);
         }
 
-        $model = new TestSushiModel();
+        $model = new TestSushiModel;
         $testData = [
             '1' => [
                 'id' => 1,
@@ -471,7 +471,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant1));
         $this->setCurrentTenant($this->tenant1);
 
-        $model1 = new TestSushiModel();
+        $model1 = new TestSushiModel;
         $data1 = [
             '1' => [
                 'id' => 1,
@@ -492,7 +492,7 @@ class SushiToJsonIntegrationTest extends TestCase
         $this->actingAs($this->createUserForTenant($this->tenant2));
         $this->setCurrentTenant($this->tenant2);
 
-        $model2 = new TestSushiModel();
+        $model2 = new TestSushiModel;
         $data2 = [
             '1' => [
                 'id' => 1,

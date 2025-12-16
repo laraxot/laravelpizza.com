@@ -26,7 +26,7 @@ class GetTenantConfigNamesAction
         $files = File::files($dir);
 
         return collect($files)
-            ->filter(static fn ($item): bool => 'php' === $item->getExtension())
+            ->filter(static fn ($item): bool => $item->getExtension() === 'php')
             ->map(static fn ($item, $k): array => [
                 'id' => $k + 1,
                 'name' => $item->getFilenameWithoutExtension(),
@@ -35,5 +35,3 @@ class GetTenantConfigNamesAction
             ->all();
     }
 }
-
-

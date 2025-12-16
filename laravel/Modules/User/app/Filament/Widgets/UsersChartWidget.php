@@ -74,10 +74,10 @@ class UsersChartWidget extends ChartWidget implements HasActions, HasForms
 
             Assert::nullOrString($startDate = $startDateValue);
             Assert::nullOrString($endDate = $endDateValue);
-            if (null === $endDate) {
+            if ($endDate === null) {
                 $endDate = Carbon::now()->format('Y-m-d H:i:s');
             }
-            if (null === $startDate) {
+            if ($startDate === null) {
                 $startDate = Carbon::now()->subMonth()->format('Y-m-d H:i:s');
             }
             Assert::notNull($startDate = Carbon::createFromFormat('Y-m-d H:i:s', $startDate));

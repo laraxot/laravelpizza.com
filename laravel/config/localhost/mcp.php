@@ -258,7 +258,7 @@ return [
         'user_email_unique' => true,
         'ingredient_allergen_check' => true,
     ],
-    
+
     /*
      * |--------------------------------------------------------------------------
      * | MCP Development Tools

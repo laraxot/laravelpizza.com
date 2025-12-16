@@ -6,11 +6,9 @@ namespace Modules\Tenant\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Tenant\Models\BaseModel;
-use Tests\TestCase;
-
 
 beforeEach(function () {
-    $this->baseModel = new class() extends BaseModel
+    $this->baseModel = new class extends BaseModel
     {
         protected $table = 'test_tenant_table';
     };

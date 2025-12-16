@@ -12,8 +12,8 @@ use Illuminate\Support\Arr;
 use League\Csv\Reader;
 use League\Csv\Writer;
 use Modules\Tenant\Services\TenantService;
-use Sushi\Sushi;
 use Stringable;
+use Sushi\Sushi;
 use Webmozart\Assert\Assert;
 
 trait SushiToCsv
@@ -65,7 +65,7 @@ trait SushiToCsv
          */
         static::creating(
             /**
-             * @param self $model
+             * @param  self  $model
              */
             function ($model): void {
                 Assert::isInstanceOf($model, self::class);
@@ -103,7 +103,7 @@ trait SushiToCsv
          */
         static::updating(
             /**
-             * @param self $model
+             * @param  self  $model
              */
             function ($model): void {
                 Assert::isInstanceOf($model, self::class);
@@ -156,7 +156,7 @@ trait SushiToCsv
 
         static::deleting(
             /**
-             * @param self $model
+             * @param  self  $model
              */
             function ($model): void {
                 Assert::isInstanceOf($model, self::class);

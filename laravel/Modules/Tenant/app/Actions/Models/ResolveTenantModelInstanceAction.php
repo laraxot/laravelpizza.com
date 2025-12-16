@@ -22,5 +22,3 @@ class ResolveTenantModelInstanceAction
         return $model;
     }
 }
-
-

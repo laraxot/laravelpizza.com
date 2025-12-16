@@ -47,8 +47,6 @@ abstract class XotBaseComponent extends IlluminateComponent
 
     /**
      * Get the view name for this component.
-     *
-     * @return string
      */
     public function getView(): string
     {

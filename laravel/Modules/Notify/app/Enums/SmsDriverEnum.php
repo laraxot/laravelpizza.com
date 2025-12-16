@@ -15,7 +15,7 @@ use Modules\Xot\Filament\Traits\TransTrait;
  * Questo enum centralizza la gestione dei driver SMS disponibili
  * e fornisce metodi helper per ottenere le opzioni e le etichette.
  */
-enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
+enum SmsDriverEnum: string implements HasColor, HasIcon, HasLabel
 {
     use TransTrait;
 
@@ -29,28 +29,26 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 
     public function getLabel(): string
     {
-        return $this->transClass(self::class, $this->value . '.label');
+        return $this->transClass(self::class, $this->value.'.label');
     }
 
     public function getColor(): string
     {
-        return $this->transClass(self::class, $this->value . '.color');
+        return $this->transClass(self::class, $this->value.'.color');
     }
 
     public function getIcon(): string
     {
-        return $this->transClass(self::class, $this->value . '.icon');
+        return $this->transClass(self::class, $this->value.'.icon');
     }
 
     public function getDescription(): string
     {
-        return $this->transClass(self::class, $this->value . '.description');
+        return $this->transClass(self::class, $this->value.'.description');
     }
 
     /**
      * Restituisce il driver predefinito dal file di configurazione
-     *
-     * @return self
      */
     public static function getDefault(): self
     {

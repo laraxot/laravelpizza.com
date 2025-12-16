@@ -4,20 +4,19 @@ declare(strict_types=1);
 use Illuminate\Database\QueryException;
 use Modules\Cms\Models\PageContent;
 use Modules\Tenant\Models\Traits\SushiToJsons;
+use Spatie\Translatable\HasTranslations;
 
 use function Safe\class_uses;
 
-use Spatie\Translatable\HasTranslations;
-
 test('page content model uses required traits', function (): void {
-    $pageContent = new PageContent();
+    $pageContent = new PageContent;
 
     expect($pageContent)->toBeInstanceOf(SushiToJsons::class);
     expect(in_array(HasTranslations::class, class_uses($pageContent), strict: true))->toBeTrue();
 });
 
 test('page content has correct translatable attributes', function (): void {
-    $pageContent = new PageContent();
+    $pageContent = new PageContent;
 
     $expectedTranslatable = [
         'name',
@@ -28,7 +27,7 @@ test('page content has correct translatable attributes', function (): void {
 });
 
 test('page content has correct fillable attributes', function (): void {
-    $pageContent = new PageContent();
+    $pageContent = new PageContent;
 
     $expectedFillable = [
         'name',
@@ -40,7 +39,7 @@ test('page content has correct fillable attributes', function (): void {
 });
 
 test('page content has correct schema definition', function (): void {
-    $pageContent = new PageContent();
+    $pageContent = new PageContent;
 
     $expectedSchema = [
         'id' => 'integer',
@@ -57,7 +56,7 @@ test('page content has correct schema definition', function (): void {
 });
 
 test('page content has correct casts', function (): void {
-    $pageContent = new PageContent();
+    $pageContent = new PageContent;
 
     $expectedCasts = [
         'id' => 'string',
@@ -222,7 +221,7 @@ test('page content name validation for multilingual support', function (): void 
 });
 
 test('page content getRows method returns sushi rows', function (): void {
-    $pageContent = new PageContent();
+    $pageContent = new PageContent;
 
     /** @phpstan-ignore-next-line method.nonObject */
     $rows = $pageContent->getRows();
@@ -231,7 +230,7 @@ test('page content getRows method returns sushi rows', function (): void {
 });
 
 test('page content sluggable configuration', function (): void {
-    $pageContent = new PageContent();
+    $pageContent = new PageContent;
 
     /** @phpstan-ignore-next-line method.nonObject */
     $sluggable = $pageContent->sluggable();
@@ -248,7 +247,7 @@ test('page content with complex nested block structures', function (): void {
                 fn ($i) => [
                     'question' => "Question {$i}",
                     'answer' => "Answer to question {$i} with detailed explanation.",
-                    'expanded' => 0 === $i,
+                    'expanded' => $i === 0,
                 ],
                 range(1, 20),
             ),

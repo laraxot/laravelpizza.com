@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Console\Commands;
 
-use Webmozart\Assert\Assert;
-use SplFileInfo;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\File\AddStrictTypesDeclarationAction;
+use SplFileInfo;
+use Webmozart\Assert\Assert;
 
 class AddStrictTypesDeclarationCommand extends Command
 {

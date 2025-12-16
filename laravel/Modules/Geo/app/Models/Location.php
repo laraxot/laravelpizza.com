@@ -11,27 +11,27 @@ use Illuminate\Support\Carbon;
 /**
  * Class Location.
  *
- * @property int                                         $id
- * @property string|null                                 $model_type
- * @property string|null                                 $model_id
- * @property string|null                                 $name
- * @property float|null                                  $lat
- * @property float|null                                  $lng
- * @property string|null                                 $street
- * @property string|null                                 $city
- * @property string|null                                 $state
- * @property string|null                                 $zip
- * @property string|null                                 $formatted_address
- * @property string|null                                 $description
- * @property bool|null                                   $processed
- * @property Carbon|null                                 $created_at
- * @property Carbon|null                                 $updated_at
- * @property string|null                                 $updated_by
- * @property string|null                                 $created_by
- * @property string|null                                 $deleted_at
- * @property string|null                                 $deleted_by
+ * @property int $id
+ * @property string|null $model_type
+ * @property string|null $model_id
+ * @property string|null $name
+ * @property float|null $lat
+ * @property float|null $lng
+ * @property string|null $street
+ * @property string|null $city
+ * @property string|null $state
+ * @property string|null $zip
+ * @property string|null $formatted_address
+ * @property string|null $description
+ * @property bool|null $processed
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property string|null $deleted_at
+ * @property string|null $deleted_by
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property array                                       $location
+ * @property array $location
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
  * @method static Builder<static>|Location newModelQuery()

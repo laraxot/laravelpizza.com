@@ -77,7 +77,8 @@
         "pestphp/pest-plugin-laravel": "*",
         "pestphp/pest-plugin-livewire": "*",
         "pestphp/pest-plugin-type-coverage": "^3.6",
-        "thecodingmachine/phpstan-safe-rule": "*"
+        "thecodingmachine/phpstan-safe-rule": "*",
+        "nunomaduro/phpinsights": "*"
     },
     "require-dev_comment": {
         "spatie/laravel-error-solutions": "*"

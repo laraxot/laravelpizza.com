@@ -26,14 +26,16 @@ use Webmozart\Assert\Assert;
 class IconStateSplitColumn extends Column
 {
     protected string $view = 'ui::filament.tables.columns.icon-state-split';
+
     protected string $stateClass = '';
+
     protected string $modelClass = '';
 
     /**
      * Configure the state class and model class for this column.
      *
-     * @param string $stateClass The state machine class (e.g., AppointmentState::class)
-     * @param string $modelClass The model class (e.g., Appointment::class)
+     * @param  string  $stateClass  The state machine class (e.g., AppointmentState::class)
+     * @param  string  $modelClass  The model class (e.g., Appointment::class)
      */
     public function stateClass(string $stateClass, string $modelClass): static
     {
@@ -183,7 +185,7 @@ class IconStateSplitColumn extends Column
             }
 
             $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
-            if (null === $recordIdRaw || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
+            if ($recordIdRaw === null || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
                 continue;
             }
 
@@ -219,7 +221,7 @@ class IconStateSplitColumn extends Column
     #[On('table-action')]
     public function handleTableAction(string $action, int|string $recordId): void
     {
-        if ('prova' === $action) {
+        if ($action === 'prova') {
             $this->prova($recordId);
         }
     }

@@ -20,8 +20,8 @@ class DiffAssocRecursiveAction
     public static function fixType(array $data): array
     {
         $collection = collect($data)->map(static function ($item) {
-            if (!is_array($item)) {
-                throw new Exception('[' . __LINE__ . '][' . __CLASS__ . ']');
+            if (! is_array($item)) {
+                throw new Exception('['.__LINE__.']['.__CLASS__.']');
             }
 
             return collect($item)->map(static function ($item0) {
@@ -46,7 +46,7 @@ class DiffAssocRecursiveAction
 
         $ris = $coll_1->filter(static function ($value, $key) use ($arr_2) {
             try {
-                return !\in_array($value, $arr_2, false);
+                return ! \in_array($value, $arr_2, false);
             } catch (Exception $exception) {
                 dddx(['err' => $exception->getMessage(), 'value' => $value, 'key' => $key, 'arr_2' => $arr_2]);
             }

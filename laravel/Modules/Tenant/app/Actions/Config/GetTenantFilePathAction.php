@@ -17,6 +17,7 @@ class GetTenantFilePathAction
     {
         if (isRunningTestBench()) {
             $basePath = realpath(__DIR__.'/../../Config');
+
             return $basePath.\DIRECTORY_SEPARATOR.$filename;
         }
 
@@ -26,5 +27,3 @@ class GetTenantFilePathAction
         return str_replace(['/', '\\'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $path);
     }
 }
-
-

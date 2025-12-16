@@ -13,102 +13,102 @@ use Modules\Geo\Contracts\HasGeolocation;
 use function Safe\json_encode;
 
 /**
- * @property Address|null                                $address
+ * @property Address|null $address
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property string                                      $formatted_address
- * @property float|null                                  $latitude
- * @property float|null                                  $longitude
- * @property Model|\Eloquent                             $linked
- * @property PlaceType|null                              $placeType
+ * @property string $formatted_address
+ * @property float|null $latitude
+ * @property float|null $longitude
+ * @property Model|\Eloquent $linked
+ * @property PlaceType|null $placeType
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
  * @method static Builder<static>|Place newModelQuery()
  * @method static Builder<static>|Place newQuery()
  * @method static Builder<static>|Place query()
  *
- * @property int                                         $id
- * @property string|null                                 $model_type
- * @property int|null                                    $model_id
- * @property string|null                                 $premise
- * @property string|null                                 $premise_short
- * @property string|null                                 $locality
- * @property string|null                                 $locality_short
- * @property string|null                                 $postal_town
- * @property string|null                                 $postal_town_short
- * @property string|null                                 $administrative_area_level_3
- * @property string|null                                 $administrative_area_level_3_short
- * @property string|null                                 $administrative_area_level_2
- * @property string|null                                 $administrative_area_level_2_short
- * @property string|null                                 $administrative_area_level_1
- * @property string|null                                 $administrative_area_level_1_short
- * @property string|null                                 $country
- * @property string|null                                 $country_short
- * @property string|null                                 $street_number
- * @property string|null                                 $street_number_short
- * @property string|null                                 $route
- * @property string|null                                 $route_short
- * @property string|null                                 $postal_code
- * @property string|null                                 $postal_code_short
- * @property string|null                                 $googleplace_url
- * @property string|null                                 $googleplace_url_short
- * @property string|null                                 $point_of_interest
- * @property string|null                                 $point_of_interest_short
- * @property string|null                                 $political
- * @property string|null                                 $political_short
- * @property string|null                                 $campground
- * @property string|null                                 $campground_short
- * @property string|null                                 $nearest_street
- * @property string|null                                 $created_by
- * @property string|null                                 $updated_by
- * @property string|null                                 $deleted_by
- * @property \Illuminate\Support\Carbon|null             $created_at
- * @property \Illuminate\Support\Carbon|null             $updated_at
- * @property string|null                                 $post_type
+ * @property int $id
+ * @property string|null $model_type
+ * @property int|null $model_id
+ * @property string|null $premise
+ * @property string|null $premise_short
+ * @property string|null $locality
+ * @property string|null $locality_short
+ * @property string|null $postal_town
+ * @property string|null $postal_town_short
+ * @property string|null $administrative_area_level_3
+ * @property string|null $administrative_area_level_3_short
+ * @property string|null $administrative_area_level_2
+ * @property string|null $administrative_area_level_2_short
+ * @property string|null $administrative_area_level_1
+ * @property string|null $administrative_area_level_1_short
+ * @property string|null $country
+ * @property string|null $country_short
+ * @property string|null $street_number
+ * @property string|null $street_number_short
+ * @property string|null $route
+ * @property string|null $route_short
+ * @property string|null $postal_code
+ * @property string|null $postal_code_short
+ * @property string|null $googleplace_url
+ * @property string|null $googleplace_url_short
+ * @property string|null $point_of_interest
+ * @property string|null $point_of_interest_short
+ * @property string|null $political
+ * @property string|null $political_short
+ * @property string|null $campground
+ * @property string|null $campground_short
+ * @property string|null $nearest_street
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property string|null $deleted_by
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $post_type
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
  *
  * @method static \Modules\Geo\Database\Factories\PlaceFactory factory($count = null, $state = [])
- * @method static Builder<static>|Place                        whereAddress($value)
- * @method static Builder<static>|Place                        whereAdministrativeAreaLevel1($value)
- * @method static Builder<static>|Place                        whereAdministrativeAreaLevel1Short($value)
- * @method static Builder<static>|Place                        whereAdministrativeAreaLevel2($value)
- * @method static Builder<static>|Place                        whereAdministrativeAreaLevel2Short($value)
- * @method static Builder<static>|Place                        whereAdministrativeAreaLevel3($value)
- * @method static Builder<static>|Place                        whereAdministrativeAreaLevel3Short($value)
- * @method static Builder<static>|Place                        whereCampground($value)
- * @method static Builder<static>|Place                        whereCampgroundShort($value)
- * @method static Builder<static>|Place                        whereCountry($value)
- * @method static Builder<static>|Place                        whereCountryShort($value)
- * @method static Builder<static>|Place                        whereCreatedAt($value)
- * @method static Builder<static>|Place                        whereCreatedBy($value)
- * @method static Builder<static>|Place                        whereDeletedBy($value)
- * @method static Builder<static>|Place                        whereFormattedAddress($value)
- * @method static Builder<static>|Place                        whereGoogleplaceUrl($value)
- * @method static Builder<static>|Place                        whereGoogleplaceUrlShort($value)
- * @method static Builder<static>|Place                        whereId($value)
- * @method static Builder<static>|Place                        whereLatitude($value)
- * @method static Builder<static>|Place                        whereLocality($value)
- * @method static Builder<static>|Place                        whereLocalityShort($value)
- * @method static Builder<static>|Place                        whereLongitude($value)
- * @method static Builder<static>|Place                        whereModelId($value)
- * @method static Builder<static>|Place                        whereModelType($value)
- * @method static Builder<static>|Place                        whereNearestStreet($value)
- * @method static Builder<static>|Place                        wherePointOfInterest($value)
- * @method static Builder<static>|Place                        wherePointOfInterestShort($value)
- * @method static Builder<static>|Place                        wherePolitical($value)
- * @method static Builder<static>|Place                        wherePoliticalShort($value)
- * @method static Builder<static>|Place                        wherePostType($value)
- * @method static Builder<static>|Place                        wherePostalCode($value)
- * @method static Builder<static>|Place                        wherePostalCodeShort($value)
- * @method static Builder<static>|Place                        wherePostalTown($value)
- * @method static Builder<static>|Place                        wherePostalTownShort($value)
- * @method static Builder<static>|Place                        wherePremise($value)
- * @method static Builder<static>|Place                        wherePremiseShort($value)
- * @method static Builder<static>|Place                        whereRoute($value)
- * @method static Builder<static>|Place                        whereRouteShort($value)
- * @method static Builder<static>|Place                        whereStreetNumber($value)
- * @method static Builder<static>|Place                        whereStreetNumberShort($value)
- * @method static Builder<static>|Place                        whereUpdatedAt($value)
- * @method static Builder<static>|Place                        whereUpdatedBy($value)
+ * @method static Builder<static>|Place whereAddress($value)
+ * @method static Builder<static>|Place whereAdministrativeAreaLevel1($value)
+ * @method static Builder<static>|Place whereAdministrativeAreaLevel1Short($value)
+ * @method static Builder<static>|Place whereAdministrativeAreaLevel2($value)
+ * @method static Builder<static>|Place whereAdministrativeAreaLevel2Short($value)
+ * @method static Builder<static>|Place whereAdministrativeAreaLevel3($value)
+ * @method static Builder<static>|Place whereAdministrativeAreaLevel3Short($value)
+ * @method static Builder<static>|Place whereCampground($value)
+ * @method static Builder<static>|Place whereCampgroundShort($value)
+ * @method static Builder<static>|Place whereCountry($value)
+ * @method static Builder<static>|Place whereCountryShort($value)
+ * @method static Builder<static>|Place whereCreatedAt($value)
+ * @method static Builder<static>|Place whereCreatedBy($value)
+ * @method static Builder<static>|Place whereDeletedBy($value)
+ * @method static Builder<static>|Place whereFormattedAddress($value)
+ * @method static Builder<static>|Place whereGoogleplaceUrl($value)
+ * @method static Builder<static>|Place whereGoogleplaceUrlShort($value)
+ * @method static Builder<static>|Place whereId($value)
+ * @method static Builder<static>|Place whereLatitude($value)
+ * @method static Builder<static>|Place whereLocality($value)
+ * @method static Builder<static>|Place whereLocalityShort($value)
+ * @method static Builder<static>|Place whereLongitude($value)
+ * @method static Builder<static>|Place whereModelId($value)
+ * @method static Builder<static>|Place whereModelType($value)
+ * @method static Builder<static>|Place whereNearestStreet($value)
+ * @method static Builder<static>|Place wherePointOfInterest($value)
+ * @method static Builder<static>|Place wherePointOfInterestShort($value)
+ * @method static Builder<static>|Place wherePolitical($value)
+ * @method static Builder<static>|Place wherePoliticalShort($value)
+ * @method static Builder<static>|Place wherePostType($value)
+ * @method static Builder<static>|Place wherePostalCode($value)
+ * @method static Builder<static>|Place wherePostalCodeShort($value)
+ * @method static Builder<static>|Place wherePostalTown($value)
+ * @method static Builder<static>|Place wherePostalTownShort($value)
+ * @method static Builder<static>|Place wherePremise($value)
+ * @method static Builder<static>|Place wherePremiseShort($value)
+ * @method static Builder<static>|Place whereRoute($value)
+ * @method static Builder<static>|Place whereRouteShort($value)
+ * @method static Builder<static>|Place whereStreetNumber($value)
+ * @method static Builder<static>|Place whereStreetNumberShort($value)
+ * @method static Builder<static>|Place whereUpdatedAt($value)
+ * @method static Builder<static>|Place whereUpdatedBy($value)
  *
  * @mixin \Eloquent
  */
@@ -250,8 +250,8 @@ class Place extends BaseModel implements HasGeolocation
     #[\Override]
     public function hasValidCoordinates(): bool
     {
-        return null !== $this->latitude
-            && null !== $this->longitude
+        return $this->latitude !== null
+            && $this->longitude !== null
             && $this->latitude >= -90
             && $this->latitude <= 90
             && $this->longitude >= -180

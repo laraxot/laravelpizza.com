@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Modules\Xot\Models\BaseModel;
 use Modules\Notify\Models\Notification;
+use Modules\Xot\Models\BaseModel;
 use ReflectionClass;
 
 describe('Notification Business Logic', function () {

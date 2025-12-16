@@ -41,10 +41,10 @@ class ListProfiles extends XotBaseListRecords
                     $userValue = $record->user ?? null;
                     $user_class = XotData::make()->getUserClass();
 
-                    if (null === $userValue) {
+                    if ($userValue === null) {
                         $emailValue = $record->email ?? null;
 
-                        if (null === $emailValue) {
+                        if ($emailValue === null) {
                             if (method_exists($record, 'update')) {
                                 $record->update(['email' => fake()->email()]);
                             }
@@ -69,7 +69,7 @@ class ListProfiles extends XotBaseListRecords
                     // PHPStan Level 10: isset() per magic properties di User model
                     $userId = $userValue->id ?? null;
 
-                    if (null !== $userId && method_exists($record, 'update')) {
+                    if ($userId !== null && method_exists($record, 'update')) {
                         $record->update(['user_id' => $userId]);
                     }
 

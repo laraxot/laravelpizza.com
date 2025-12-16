@@ -13,7 +13,7 @@ class PasswordDataLabelsTest extends TestCase
     /**
      * Test that PasswordData generates components with correct labels.
      */
-    public function testPasswordDataLabelsAreTranslated(): void
+    public function test_password_data_labels_are_translated(): void
     {
         // Arrange
         // We ensure we are in a known locale
@@ -39,11 +39,11 @@ class PasswordDataLabelsTest extends TestCase
     /**
      * Test that Login form components have correct labels.
      */
-    public function testLoginFormLabelsAreTranslated(): void
+    public function test_login_form_labels_are_translated(): void
     {
         // Assemble
         app()->setLocale('it');
-        $component = new \Modules\User\Http\Livewire\Auth\Login();
+        $component = new \Modules\User\Http\Livewire\Auth\Login;
 
         // Act
         // We simulate the form creation.
@@ -68,9 +68,9 @@ class PasswordDataLabelsTest extends TestCase
         $components = $form->getComponents();
 
         // Find components
-        $email = collect($components)->first(fn ($c) => 'email' === $c->getName());
-        $password = collect($components)->first(fn ($c) => 'password' === $c->getName());
-        $remember = collect($components)->first(fn ($c) => 'remember' === $c->getName());
+        $email = collect($components)->first(fn ($c) => $c->getName() === 'email');
+        $password = collect($components)->first(fn ($c) => $c->getName() === 'password');
+        $remember = collect($components)->first(fn ($c) => $c->getName() === 'remember');
 
         // Assert
         $this->assertNotNull($email);

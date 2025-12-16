@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Actions\SMS;
 
-use Illuminate\Support\Facades\Http;
-use Modules\Notify\Contracts\SMS\SmsActionContract;
-use Modules\Notify\Datas\SmsData;
-
 use function Safe\preg_match;
 use function Safe\preg_replace;
 
@@ -31,8 +27,8 @@ class NormalizePhoneNumberAction
         $prefix = '39';
 
         // Verifica se il numero non inizia già con il prefisso corretto
-        if (!preg_match('/^' . $prefix . '/', $phoneNumber)) {
-            $phoneNumber = $prefix . $phoneNumber;
+        if (! preg_match('/^'.$prefix.'/', $phoneNumber)) {
+            $phoneNumber = $prefix.$phoneNumber;
         }
 
         return "+{$phoneNumber}";

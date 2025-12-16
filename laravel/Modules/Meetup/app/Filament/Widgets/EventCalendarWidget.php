@@ -96,9 +96,18 @@ class EventCalendarWidget extends Widget
         ];
     }
 
-    public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void
+    /**
+     * Handle date selection for creating new events.
+     *
+     * @param  string  $_start  Start date (required by interface, not yet used)
+     * @param  string|null  $_end  End date (required by interface, not yet used)
+     * @param  bool  $_allDay  Whether the event is all day (required by interface, not yet used)
+     * @param  array<string, mixed>|null  $_view  View context (required by interface, not yet used)
+     * @param  array<string, mixed>|null  $_resource  Resource context (required by interface, not yet used)
+     */
+    public function onDateSelect(string $_start, ?string $_end, bool $_allDay, ?array $_view, ?array $_resource): void
     {
-        // Handle date selection for creating new events
-        // This would open a form modal to create a new event
+        // Placeholder for future date selection implementation
+        // Parameters prefixed with _ to indicate intentionally unused (required by interface)
     }
 }

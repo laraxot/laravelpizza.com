@@ -111,8 +111,7 @@ class LocationResource extends XotBaseResource
     /**
      * Converte le coordinate in formato float.
      *
-     * @param array{lat?: string|float|null, lng?: string|float|null} $coordinates Le coordinate da convertire
-     *
+     * @param  array{lat?: string|float|null, lng?: string|float|null}  $coordinates  Le coordinate da convertire
      * @return array{lat: float, lng: float} Le coordinate convertite in float
      */
     private static function formatCoordinates(array $coordinates): array

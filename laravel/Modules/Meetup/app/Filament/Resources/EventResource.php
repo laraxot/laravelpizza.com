@@ -17,9 +17,6 @@ use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Modules\Meetup\Filament\Resources\EventResource\Pages\CreateEvent;
-use Modules\Meetup\Filament\Resources\EventResource\Pages\EditEvent;
-use Modules\Meetup\Filament\Resources\EventResource\Pages\ListEvents;
 use Modules\Meetup\Models\Event;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Override;
@@ -124,16 +121,5 @@ class EventResource extends XotBaseResource
             ]);
     }
 
-    /**
-     * @return array<string, \Filament\Resources\Pages\PageRegistration>
-     */
-    #[Override]
-    public static function getPages(): array
-    {
-        return [
-            'index' => ListEvents::route('/'),
-            'create' => CreateEvent::route('/create'),
-            'edit' => EditEvent::route('/{record}/edit'),
-        ];
-    }
+    // getPages() gestito automaticamente da XotBaseResource
 }

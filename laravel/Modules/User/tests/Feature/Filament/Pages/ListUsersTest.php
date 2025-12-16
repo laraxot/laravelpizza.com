@@ -19,7 +19,7 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->listUsersPage = new ListUsers();
+    $this->listUsersPage = new ListUsers;
 
     // Create some test users
     $this->users = User::factory()

@@ -20,5 +20,3 @@ return [
 
     'httpMethodsIgnored' => ['POST', 'PUT', 'PATCH', 'DELETE'],
 ];
-
-

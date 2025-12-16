@@ -3,15 +3,14 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Schema;
 // ----- bases ----
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /*
  * Class CreateMailTemplatesTable.
  */
-return new class() extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     /**
      * Run the migrations.
      */
@@ -31,13 +30,13 @@ return new class() extends XotBaseMigration {
 
         // -- UPDATE -- Aggiornamento della tabella esistente
         $this->tableUpdate(function (Blueprint $table): void {
-            if (!$this->hasColumn('name')) {
+            if (! $this->hasColumn('name')) {
                 $table->string('name');
             }
-            if (!$this->hasColumn('slug')) {
+            if (! $this->hasColumn('slug')) {
                 $table->string('slug')->unique();
             }
-            if (!$this->hasColumn('params')) {
+            if (! $this->hasColumn('params')) {
                 $table->text('params')->nullable();
             }
 

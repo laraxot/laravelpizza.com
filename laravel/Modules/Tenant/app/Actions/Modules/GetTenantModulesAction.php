@@ -48,5 +48,3 @@ class GetTenantModulesAction
         return $modules;
     }
 }
-
-

@@ -55,8 +55,10 @@ class ListLogActivitiesActionTest extends TestCase
         $action = ListLogActivitiesAction::make();
 
         // Simula un Livewire component per testare l'URL generation
-        $mockLivewire = new class {
-            public function getResource() {
+        $mockLivewire = new class
+        {
+            public function getResource()
+            {
                 return \Modules\IndennitaResponsabilita\Filament\Resources\IndennitaResponsabilitaResource::class;
             }
         };
@@ -65,7 +67,7 @@ class ListLogActivitiesActionTest extends TestCase
         $url = $action->getUrl($mockLivewire, $record);
 
         $this->assertStringContains('log-activity', $url);
-        $this->assertStringContains((string)$record->getKey(), $url);
+        $this->assertStringContains((string) $record->getKey(), $url);
     }
 
     /**
@@ -191,4 +193,3 @@ class ListLogActivitiesActionTest extends TestCase
         $this->assertStringContains('IndennitaResponsabilitaResource', $extractedClass);
     }
 }
-

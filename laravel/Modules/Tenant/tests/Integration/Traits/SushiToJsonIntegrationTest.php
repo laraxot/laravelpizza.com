@@ -38,7 +38,7 @@ class SushiToJsonIntegrationTest extends TestCase
         // Imposta il tenant corrente
         app('tenant')->setCurrent($this->tenant);
 
-        $this->model = new TestSushiModel();
+        $this->model = new TestSushiModel;
         $this->testJsonPath = TenantService::filePath('database/content/test_sushi.json');
 
         // Pulisce eventuali file di test esistenti

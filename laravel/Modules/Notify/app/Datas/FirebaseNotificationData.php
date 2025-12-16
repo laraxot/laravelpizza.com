@@ -23,8 +23,8 @@ class FirebaseNotificationData extends Data
         $main_module = Str::of(XotData::make()->main_module)->lower()->toString();
         $data = [
             'type' => $type,
-            'title' => trans($main_module . '::notifications.' . mb_strtoupper($type) . '.title'),
-            'body' => trans($main_module . '::notifications.' . mb_strtoupper($type) . '.body'),
+            'title' => trans($main_module.'::notifications.'.mb_strtoupper($type).'.title'),
+            'body' => trans($main_module.'::notifications.'.mb_strtoupper($type).'.body'),
             'data' => [],
         ];
 

@@ -40,7 +40,7 @@ class AddressField extends Field
             $relationship = $this->getRelationship();
             if ($relationship && $record->relationLoaded($relationship)) {
                 $address = $record->getRelationValue($relationship);
-                if (null !== $address && is_object($address) && method_exists($address, 'toArray')) {
+                if ($address !== null && is_object($address) && method_exists($address, 'toArray')) {
                     $data = $address->toArray();
                 }
             }

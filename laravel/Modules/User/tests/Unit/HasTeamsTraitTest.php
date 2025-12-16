@@ -218,7 +218,7 @@ test('it provides utility methods', function (): void {
 
 test('it handles edge cases correctly', function (): void {
     // Test: User senza ID
-    $newUser = new User();
+    $newUser = new User;
     expect($newUser->belongsToTeams())->toBeFalse();
 
     // Test: Team senza user_id

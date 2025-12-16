@@ -25,7 +25,6 @@ use Webmozart\Assert\Assert;
 use function Safe\define;
 use function Safe\glob;
 use function Safe\json_decode;
-use function Safe\json_encode;
 use function Safe\preg_match;
 
 // ------------------------------------------------
@@ -930,7 +929,7 @@ if (! function_exists('is_active')) {
         if (! is_object($router) || ! method_exists($router, 'is')) {
             return false;
         }
-        
+
         return (bool) call_user_func_array([$router, 'is'], $routes);
     }
 }
@@ -1201,9 +1200,9 @@ if (! function_exists('trans_string')) {
      * - Returning the key itself if translation is array (missing translation case)
      * - Returning null if the result is null
      *
-     * @param string $key Translation key
-     * @param array<string, bool|float|int|string|null> $replace Replacement values
-     * @param string|null $locale Specific locale to use
+     * @param  string  $key  Translation key
+     * @param  array<string, bool|float|int|string|null>  $replace  Replacement values
+     * @param  string|null  $locale  Specific locale to use
      * @return string|null The translated string or null
      *
      * @example trans_string('notify::contact.label') -> "Contact" (string)

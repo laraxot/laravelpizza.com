@@ -15,37 +15,37 @@ use Modules\Geo\Enums\AddressTypeEnum;
  *
  * Implementazione di Schema.org PostalAddress
  *
- * @property int                                         $id
- * @property string|null                                 $model_type
- * @property string|null                                 $model_id
- * @property string|null                                 $name                        Nome identificativo dell'indirizzo
- * @property string|null                                 $description                 Descrizione opzionale
- * @property string|null                                 $route                       Via/Piazza
- * @property string|null                                 $street_number               Numero civico
- * @property string|null                                 $locality                    Comune/Città
- * @property string|null                                 $administrative_area_level_3 Provincia
- * @property string|null                                 $administrative_area_level_2 Regione
- * @property string|null                                 $administrative_area_level_1 Stato/Paese
- * @property string|null                                 $country                     Codice paese ISO
- * @property string|null                                 $postal_code                 CAP
- * @property string|null                                 $formatted_address
- * @property string|null                                 $place_id                    ID Google Places
- * @property float|null                                  $latitude
- * @property float|null                                  $longitude
- * @property AddressTypeEnum|null                        $type                        Tipo indirizzo (home, work, etc.)
- * @property bool                                        $is_primary
- * @property array<array-key, mixed>|null                $extra_data
- * @property Carbon|null                                 $created_at
- * @property Carbon|null                                 $updated_at
- * @property string|null                                 $updated_by
- * @property string|null                                 $created_by
- * @property string|null                                 $deleted_at
- * @property string|null                                 $deleted_by
- * @property Model|\Eloquent|null                        $addressable
+ * @property int $id
+ * @property string|null $model_type
+ * @property string|null $model_id
+ * @property string|null $name Nome identificativo dell'indirizzo
+ * @property string|null $description Descrizione opzionale
+ * @property string|null $route Via/Piazza
+ * @property string|null $street_number Numero civico
+ * @property string|null $locality Comune/Città
+ * @property string|null $administrative_area_level_3 Provincia
+ * @property string|null $administrative_area_level_2 Regione
+ * @property string|null $administrative_area_level_1 Stato/Paese
+ * @property string|null $country Codice paese ISO
+ * @property string|null $postal_code CAP
+ * @property string|null $formatted_address
+ * @property string|null $place_id ID Google Places
+ * @property float|null $latitude
+ * @property float|null $longitude
+ * @property AddressTypeEnum|null $type Tipo indirizzo (home, work, etc.)
+ * @property bool $is_primary
+ * @property array<array-key, mixed>|null $extra_data
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property string|null $deleted_at
+ * @property string|null $deleted_by
+ * @property Model|\Eloquent|null $addressable
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property string                                      $full_address
- * @property string                                      $street_address
- * @property Model|\Eloquent|null                        $model
+ * @property string $full_address
+ * @property string $street_address
+ * @property Model|\Eloquent|null $model
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
  * @method static Builder<static>|Address nearby(float $latitude, float $longitude, float $radiusKm = 10)
@@ -273,7 +273,7 @@ class Address extends BaseModel
             $localityParts[] = $this->locality;
 
             // Per indirizzi italiani, aggiungiamo la sigla provincia
-            if ('IT' === $this->country && $this->administrative_area_level_3) {
+            if ($this->country === 'IT' && $this->administrative_area_level_3) {
                 // Se è un'implementazione reale, potremmo derivare la sigla dalla provincia
                 $provinciaSigla = $this->extra_data['provincia_sigla'] ?? null;
                 if ($provinciaSigla && is_string($provinciaSigla)) {

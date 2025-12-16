@@ -19,12 +19,18 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
     use QueueableAction;
 
     private string $accountSid;
+
     private string $authToken;
+
     private string $baseUrl = 'https://api.twilio.com/2010-04-01';
+
     /** @var array<string, mixed> */
     private array $vars = [];
+
     protected bool $debug;
+
     protected int $timeout;
+
     protected ?string $defaultSender = null;
 
     /**
@@ -33,7 +39,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
     public function __construct()
     {
         $accountSid = config('services.twilio.account_sid');
-        if (!is_string($accountSid)) {
+        if (! is_string($accountSid)) {
             throw new Exception(
                 'put [TWILIO_ACCOUNT_SID] variable to your .env and config [services.twilio.account_sid]',
             );
@@ -41,7 +47,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
         $this->accountSid = $accountSid;
 
         $authToken = config('services.twilio.auth_token');
-        if (!is_string($authToken)) {
+        if (! is_string($authToken)) {
             throw new Exception(
                 'put [TWILIO_AUTH_TOKEN] variable to your .env and config [services.twilio.auth_token]',
             );
@@ -58,14 +64,15 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
     /**
      * Execute the action.
      *
-     * @param WhatsAppData $whatsAppData I dati del messaggio WhatsApp
+     * @param  WhatsAppData  $whatsAppData  I dati del messaggio WhatsApp
      * @return array Risultato dell'operazione
+     *
      * @throws Exception In caso di errore durante l'invio
      */
     public function execute(WhatsAppData $whatsAppData): array
     {
-        $from = 'whatsapp:' . ($whatsAppData->from ?? $this->defaultSender);
-        $to = 'whatsapp:' . $whatsAppData->to;
+        $from = 'whatsapp:'.($whatsAppData->from ?? $this->defaultSender);
+        $to = 'whatsapp:'.$whatsAppData->to;
 
         // Log di debug se abilitato
         if ($this->debug) {
@@ -81,7 +88,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
             'auth' => [$this->accountSid, $this->authToken],
         ]);
 
-        $endpoint = $this->baseUrl . '/Accounts/' . $this->accountSid . '/Messages.json';
+        $endpoint = $this->baseUrl.'/Accounts/'.$this->accountSid.'/Messages.json';
 
         $payload = [
             'To' => $to,
@@ -90,7 +97,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
         ];
 
         // Aggiungi media se presente
-        if (!empty($whatsAppData->media)) {
+        if (! empty($whatsAppData->media)) {
             $payload['MediaUrl'] = $whatsAppData->media[0];
         }
 

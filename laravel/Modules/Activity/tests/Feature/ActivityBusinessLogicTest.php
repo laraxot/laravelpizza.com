@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use function Safe\json_decode;
-use function Safe\json_encode;
-
 use Illuminate\Support\Str;
 use Modules\Activity\Models\Activity;
+
+use function Safe\json_decode;
+use function Safe\json_encode;
 
 describe('Activity Business Logic', function () {
     it('can create activity with basic information', function () {

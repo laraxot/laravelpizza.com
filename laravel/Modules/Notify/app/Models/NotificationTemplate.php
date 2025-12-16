@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Blade;
 use Modules\Media\Models\Media;
 use Modules\Notify\Database\Factories\NotificationTemplateFactory;
 use Modules\Notify\Enums\NotificationTypeEnum;
-use Modules\User\Models\Profile;
+use Modules\Xot\Contracts\ProfileContract;
 use Override;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -43,12 +43,12 @@ use Spatie\Translatable\HasTranslations;
  * @property Carbon|null $deleted_at
  * @property-read string $channels_label
  * @property NotificationTypeEnum $type
- * @property-read Profile|null $creator
+ * @property-read ProfileContract|null $creator
  * @property-read int|null $logs_count
  * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
  * @property-read mixed $translations
- * @property-read Profile|null $updater
+ * @property-read ProfileContract|null $updater
  * @property-read int|null $versions_count
  *
  * @method static Builder<static>|NotificationTemplate active()

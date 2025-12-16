@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Builders;
 
 use Filament\Forms\Components\DatePicker;
-use Modules\User\Models\User;
-use Filament\Forms;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Modules\User\Models\User;
 
 use function Safe\strtotime;
 

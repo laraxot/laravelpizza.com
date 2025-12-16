@@ -56,6 +56,7 @@ class GetAllIconsAction
             $paths = $set['paths'] ?? [];
             if (! is_iterable($paths)) {
                 $mappedIcons[$name] = $set;
+
                 continue;
             }
 
@@ -76,7 +77,7 @@ class GetAllIconsAction
                     }
 
                     // Simply ignore files that aren't SVGs
-                    if ('svg' !== $file->getExtension()) {
+                    if ($file->getExtension() !== 'svg') {
                         continue;
                     }
 
@@ -94,7 +95,7 @@ class GetAllIconsAction
 
                     $prefix = $set['prefix'] ?? '';
                     $prefixString = is_string($prefix) ? $prefix : '';
-                    $iconFullName = '' !== $prefixString ? $prefixString.'-'.$iconName : $iconName;
+                    $iconFullName = $prefixString !== '' ? $prefixString.'-'.$iconName : $iconName;
                     $iconsList[] = $iconFullName;
                 }
             }

@@ -16,22 +16,22 @@ use Filament\Schemas\Components\Section;
  *
  * @method static static make(string|array|null $name = null) Create a new instance of the component
  */
-    abstract class XotBaseSection extends Section
+abstract class XotBaseSection extends Section
+{
+    protected function setUp(): void
     {
-        protected function setUp(): void
-        {
-            parent::setUp();
-            // Common setup for all XotBaseSection components can be added here.
-            // NOTE: do not call non-existent macros like disableLiveUpdates() to
-            // avoid BadMethodCallException at runtime.
-        }
-
-        /**
-         * Provide a dummy implementation for disableLiveUpdates() to prevent BadMethodCallException.
-         * This method existed in older Filament versions but is no longer present in v4 Section.
-         */
-        public function disableLiveUpdates(): static
-        {
-            return $this;
-        }
+        parent::setUp();
+        // Common setup for all XotBaseSection components can be added here.
+        // NOTE: do not call non-existent macros like disableLiveUpdates() to
+        // avoid BadMethodCallException at runtime.
     }
+
+    /**
+     * Provide a dummy implementation for disableLiveUpdates() to prevent BadMethodCallException.
+     * This method existed in older Filament versions but is no longer present in v4 Section.
+     */
+    public function disableLiveUpdates(): static
+    {
+        return $this;
+    }
+}

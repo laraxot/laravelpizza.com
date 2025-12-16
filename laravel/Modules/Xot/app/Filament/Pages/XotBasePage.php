@@ -14,8 +14,6 @@ use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use LogicException;
 use Modules\Xot\Actions\View\GetViewByClassAction;
@@ -88,8 +86,6 @@ abstract class XotBasePage extends FilamentPage implements HasForms
         return $moduleName;
     }
 
-   
-
     /**
      * Ottiene l'etichetta plurale del modello.
      *
@@ -123,6 +119,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
             /** @phpstan-ignore property.staticAccess */
             /** @var class-string<Model> $modelValue */
             $modelValue = static::$model;
+
             return $modelValue;
         }
 

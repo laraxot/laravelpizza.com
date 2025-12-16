@@ -5,26 +5,23 @@ declare(strict_types=1);
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
 use BackedEnum;
-use Filament\Schemas\Schema;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Repeater;
-use Kreait\Firebase\Messaging\MessageData;
 use Exception;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
-use Filament\Forms;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
+use Filament\Schemas\Schema;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Stringable;
 use Kreait\Firebase\Contract\Messaging;
 use Kreait\Firebase\Messaging\CloudMessage;
-use Kreait\Firebase\Messaging\Notification as FirebaseNotification;
+use Kreait\Firebase\Messaging\MessageData;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\User\Models\DeviceUser;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
@@ -41,14 +38,14 @@ class SendPushNotification extends Page implements HasForms
 
     // use NavigationLabelTrait;
 
-    public null|array $notificationData = [];
+    public ?array $notificationData = [];
 
     // protected static ?string $navigationIcon = 'heroicon-o-envelope';
-    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-paper-airplane';
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-paper-airplane';
 
     protected string $view = 'notify::filament.pages.send-push-notification';
 
-    protected static null|string $cluster = Test::class;
+    protected static ?string $cluster = Test::class;
 
     public function mount(): void
     {
@@ -70,13 +67,13 @@ class SendPushNotification extends Page implements HasForms
          */
         $callback = function ($item) {
             /** @var mixed $item */
-            if (!is_object($item)) {
+            if (! is_object($item)) {
                 return [];
             }
 
             // Relations & attributes in a Laravel-safe way
             $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
-            if (!is_object($profile)) {
+            if (! is_object($profile)) {
                 return [];
             }
             $fullName = (string) (data_get($profile, 'full_name') ?? 'Utente');
@@ -93,7 +90,7 @@ class SendPushNotification extends Page implements HasForms
 
             // Creiamo la label con gli ultimi 5 caratteri del token
             $tokenSuffix = mb_substr($token, -5);
-            $label = $fullName . ' (' . ($robot ?? '') . ') ' . $tokenSuffix;
+            $label = $fullName.' ('.($robot ?? '').') '.$tokenSuffix;
 
             return [$token => $label];
         };
@@ -102,10 +99,11 @@ class SendPushNotification extends Page implements HasForms
          * Callback per filtrare i dispositivi.
          */
         $filterCallback = function ($item): bool {
-            if (!is_object($item)) {
+            if (! is_object($item)) {
                 return false;
             }
             $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
+
             return is_object($profile);
         };
 
@@ -115,7 +113,7 @@ class SendPushNotification extends Page implements HasForms
 
         return $schema
             ->components([
-                Select::make('deviceToken')->options(fn() => $to),
+                Select::make('deviceToken')->options(fn () => $to),
                 TextInput::make('type')->required(),
                 TextInput::make('title')->required(),
                 TextInput::make('body')->required(),
@@ -140,6 +138,7 @@ class SendPushNotification extends Page implements HasForms
                 ->title('Errore')
                 ->body('Token del dispositivo non valido')
                 ->send();
+
             return;
         }
 
@@ -221,7 +220,6 @@ class SendPushNotification extends Page implements HasForms
     {
         return [
             Action::make('notificationFormActions')
-                
 
                 ->submit('notificationFormActions'),
         ];
@@ -231,7 +229,7 @@ class SendPushNotification extends Page implements HasForms
     {
         $user = Filament::auth()->user();
 
-        if (!($user instanceof Model)) {
+        if (! ($user instanceof Model)) {
             throw new Exception(
                 'The authenticated user object must be an Eloquent model to allow the profile page to update it.',
             );

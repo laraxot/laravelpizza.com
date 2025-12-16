@@ -12,10 +12,10 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
 use Modules\Tenant\Database\Factories\TenantFactory;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
-use Illuminate\Support\Str;
 
 /**
  * Modello Tenant per la gestione multi-tenant dell'applicazione.
@@ -30,6 +30,7 @@ use Illuminate\Support\Str;
  * @property-read string $url
  * @property-read Collection<int, User> $users
  * @property-read int|null $users_count
+ *
  * @method static TenantFactory factory($count = null, $state = [])
  * @method static Builder<static>|Tenant newModelQuery()
  * @method static Builder<static>|Tenant newQuery()
@@ -41,6 +42,7 @@ use Illuminate\Support\Str;
  * @method static Builder<static>|Tenant where((string|Closure) $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
  * @method static Builder<static>|Tenant whereNotNull((string|Expression) $columns)
  * @method static int count(string $columns = '*')
+ *
  * @property string $id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
@@ -48,6 +50,7 @@ use Illuminate\Support\Str;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  * @property ProfileContract|null $deleter
+ *
  * @method static Builder<static>|Tenant whereCreatedAt($value)
  * @method static Builder<static>|Tenant whereDatabase($value)
  * @method static Builder<static>|Tenant whereDeletedAt($value)
@@ -57,6 +60,7 @@ use Illuminate\Support\Str;
  * @method static Builder<static>|Tenant whereName($value)
  * @method static Builder<static>|Tenant whereSlug($value)
  * @method static Builder<static>|Tenant whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Tenant extends BaseModel

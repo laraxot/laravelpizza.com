@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
-use Modules\Xot\Contracts\ProfileContract;
-use Modules\Xot\Database\Factories\SessionFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
+use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Database\Factories\SessionFactory;
 
 /**
  * Modules\Xot\Models\Session.
@@ -26,6 +26,7 @@ use Illuminate\Support\Carbon;
  * @property string|null $deleted_by
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
+ *
  * @method static SessionFactory factory($count = null, $state = [])
  * @method static Builder<static>|Session newModelQuery()
  * @method static Builder<static>|Session newQuery()
@@ -42,7 +43,9 @@ use Illuminate\Support\Carbon;
  * @method static Builder<static>|Session whereUpdatedBy($value)
  * @method static Builder<static>|Session whereUserAgent($value)
  * @method static Builder<static>|Session whereUserId($value)
+ *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
 class Session extends BaseModel

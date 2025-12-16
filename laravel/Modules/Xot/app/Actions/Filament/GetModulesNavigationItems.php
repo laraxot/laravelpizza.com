@@ -5,21 +5,19 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\Filament;
 
 use Exception;
-use Throwable;
+use Filament\Navigation\NavigationItem;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\Auth;
-use Filament\Facades\Filament;
-use Filament\Navigation\NavigationItem;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+use Spatie\QueueableAction\QueueableAction;
+use Throwable;
+use Webmozart\Assert\Assert;
 
 use function Safe\json_encode;
-
-use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 /**
  * Classe per gestire gli elementi di navigazione per i moduli.
@@ -116,7 +114,7 @@ class GetModulesNavigationItems
                      * @var Authenticatable|null $user
                      */
                     $user = Auth::user();
-                    if (null === $user) {
+                    if ($user === null) {
                         return false;
                     }
 

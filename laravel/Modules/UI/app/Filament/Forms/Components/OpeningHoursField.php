@@ -94,7 +94,7 @@ final class OpeningHoursField extends Field
              * $this->addError(null, 'test');
              * return false;
              * }*/
-            new OpeningHoursRule(),
+            new OpeningHoursRule,
         ]);
     }
 }

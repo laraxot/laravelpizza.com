@@ -35,5 +35,3 @@ class GetTenantConfigArrayAction
         return $dataArray;
     }
 }
-
-

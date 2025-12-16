@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 namespace Modules\Notify\Datas;
 
 use Spatie\LaravelData\Data;
@@ -10,8 +9,7 @@ use Spatie\LaravelData\Data;
 class NetfunSmsRequestData extends Data
 {
     /**
-     * @param string $token
-     * @param array<int, array<string, mixed>> $messages
+     * @param  array<int, array<string, mixed>>  $messages
      */
     public function __construct(
         public string $token,
@@ -19,8 +17,7 @@ class NetfunSmsRequestData extends Data
     ) {}
 
     /**
-     * @param array{token: string, messages: array<int, array<string, mixed>>} $data
-     * @return self
+     * @param  array{token: string, messages: array<int, array<string, mixed>>}  $data
      */
     public static function fromArray(array $data): self
     {
@@ -28,6 +25,7 @@ class NetfunSmsRequestData extends Data
         $token = $data['token'];
         /** @var array<int, array<string, mixed>> $messages */
         $messages = $data['messages'];
+
         return new self(
             token: $token,
             messages: $messages,

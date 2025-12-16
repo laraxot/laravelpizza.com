@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 namespace Modules\Notify\Notifications;
 
 use Illuminate\Database\Eloquent\Model;
@@ -11,14 +10,16 @@ use Illuminate\Support\Str;
 use Modules\Notify\Channels\SmsChannel;
 use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Emails\SpatieEmail;
-use Modules\Notify\Models\MailTemplate;
 
 class RecordNotification extends Notification
 {
     protected Model $record;
+
     protected string $slug;
+
     /** @var array<string, mixed> */
     public array $data = [];
+
     /** @var array<int, array<string, string>> */
     public array $attachments = [];
 
@@ -29,13 +30,13 @@ class RecordNotification extends Notification
     }
 
     /**
-     * @param object $notifiable
+     * @param  object  $notifiable
      * @return array<string|class-string>
      */
     public function via($notifiable): array
     {
         $channels = [];
-        if (!method_exists($notifiable, 'routeNotificationFor')) {
+        if (! method_exists($notifiable, 'routeNotificationFor')) {
             return $channels;
         }
         if ($notifiable->routeNotificationFor('mail')) {
@@ -49,8 +50,7 @@ class RecordNotification extends Notification
     }
 
     /**
-     * @param object $notifiable
-     * @return SpatieEmail
+     * @param  object  $notifiable
      */
     public function toMail($notifiable): SpatieEmail
     {
@@ -74,11 +74,8 @@ class RecordNotification extends Notification
 
     /**
      * Get the SMS representation of the notification.
-     *
-     * @param object $notifiable
-     * @return SmsData
      */
-    public function toSms(object $notifiable): null|SmsData
+    public function toSms(object $notifiable): ?SmsData
     {
         $email = new SpatieEmail($this->record, $this->slug);
 
@@ -86,7 +83,7 @@ class RecordNotification extends Notification
 
         // If the notifiable entity has a routeNotificationForSms method,
         // we'll use that to get the destination phone number
-        //dddx($notifiable);//Illuminate\Notifications\AnonymousNotifiable
+        // dddx($notifiable);//Illuminate\Notifications\AnonymousNotifiable
         $to = null;
         if (method_exists($notifiable, 'routeNotificationFor')) {
             $to = $notifiable->routeNotificationFor('sms');
@@ -109,22 +106,22 @@ class RecordNotification extends Notification
     }
 
     /**
-     * @param array<string, mixed> $data
-     * @return self
+     * @param  array<string, mixed>  $data
      */
     public function mergeData(array $data): self
     {
         $this->data = array_merge($this->data, $data);
+
         return $this;
     }
 
     /**
-     * @param array<int, array<string, string>> $attachments
-     * @return self
+     * @param  array<int, array<string, string>>  $attachments
      */
     public function addAttachments(array $attachments): self
     {
         $this->attachments = array_merge($this->attachments, $attachments);
+
         return $this;
     }
 }

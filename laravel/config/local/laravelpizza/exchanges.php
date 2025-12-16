@@ -6,7 +6,7 @@ return [
     'coinbase' => [
         'key' => '',
         'secret' => '',
-        'passphrase' => '',  //sarebbe extra ?
+        'passphrase' => '',  // sarebbe extra ?
         'host' => 'https://api.coinbase.com',
     ],
 ];

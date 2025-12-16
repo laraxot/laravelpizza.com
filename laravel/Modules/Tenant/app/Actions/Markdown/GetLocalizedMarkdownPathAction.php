@@ -30,5 +30,3 @@ class GetLocalizedMarkdownPathAction
         return $path;
     }
 }
-
-

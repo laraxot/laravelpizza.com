@@ -76,7 +76,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
 
         Schema::defaultStringLength(191);
 
-        if (Request::has('act') && 'migrate' === Request::input('act')) {
+        if (Request::has('act') && Request::input('act') === 'migrate') {
             DB::purge('mysql'); // Call to a member function prepare() on null
             DB::reconnect('mysql');
         }
@@ -123,12 +123,11 @@ class TenantServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
-        //$this->app->register(AdminPanelProvider::class);
+        // $this->app->register(AdminPanelProvider::class);
     }
 
     public function mergeConfigs(): void
     {
-        
 
         $configs = app(GetTenantConfigNamesAction::class)->execute();
 

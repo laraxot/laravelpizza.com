@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Activity\Filament\Pages;
 
 use Filament\Forms\Components\Field;
-use Filament\Forms\Components\MorphToSelect;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
@@ -58,12 +57,12 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
     public function getBreadcrumb(): string
     {
         $breadcrumb = static::$breadcrumb ?? __('activity::activities.breadcrumb');
-        
+
         // Convert to string (__() returns string|array|null)
         if (is_array($breadcrumb)) {
             return implode(' ', $breadcrumb);
         }
-        
+
         return (string) $breadcrumb;
     }
 
@@ -71,7 +70,7 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
     {
         // PHPStan Level 10: getRecordTitle returns string|Htmlable
         $recordTitle = $this->getRecordTitle();
-        
+
         // Convert to string (handle Htmlable)
         if ($recordTitle instanceof \Illuminate\Contracts\Support\Htmlable) {
             $titleString = $recordTitle->toHtml();
@@ -80,12 +79,12 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
         }
 
         $title = __('activity::activities.title', ['record' => $titleString]);
-        
+
         // __() returns string|array|null
         if (is_array($title)) {
             return implode(' ', $title);
         }
-        
+
         return (string) $title;
     }
 
@@ -164,7 +163,7 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
 
         $result = $this->prepareRestore($key);
         $error = $result['error'] ?? null;
-        if (null !== $error && '' !== $error) {
+        if ($error !== null && $error !== '') {
             $this->sendRestoreFailureNotification((string) $error);
 
             return;
@@ -180,7 +179,7 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
         }
 
         $oldProperties = data_get($activity, 'properties.old');
-        if (null === $oldProperties) {
+        if ($oldProperties === null) {
             $this->sendRestoreFailureNotification();
 
             return;
@@ -309,7 +308,7 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
     {
         $title = __('activity::activities.events.restore_successful');
         $titleString = is_array($title) ? implode(' ', $title) : (string) $title;
-        
+
         return Notification::make()
             ->title($titleString)
             ->success()
@@ -320,15 +319,15 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
     {
         $title = __('activity::activities.events.restore_failed');
         $titleString = is_array($title) ? implode(' ', $title) : (string) $title;
-        
+
         $notification = Notification::make()
             ->title($titleString)
             ->danger();
-            
+
         if ($message !== null) {
             $notification->body($message);
         }
-        
+
         return $notification->send();
     }
 }

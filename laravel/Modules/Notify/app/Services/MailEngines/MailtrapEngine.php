@@ -8,11 +8,11 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\MailEngines;
 
-use InvalidArgumentException;
 use ErrorException;
 use Exception;
 use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Mail;
+use InvalidArgumentException;
 use Webmozart\Assert\Assert;
 
 // ---------CSS------------
@@ -22,20 +22,20 @@ use Webmozart\Assert\Assert;
  */
 class MailtrapEngine
 {
-    public null|string $from = null;
+    public ?string $from = null;
 
     public string $to;
 
     public string $driver;
 
-    public null|string $body = null;
+    public ?string $body = null;
 
-    private static null|self $instance = null;
+    private static ?self $instance = null;
 
     public static function getInstance(): self
     {
-        if (!(self::$instance instanceof self)) {
-            self::$instance = new self();
+        if (! (self::$instance instanceof self)) {
+            self::$instance = new self;
         }
 
         return self::$instance;
@@ -69,13 +69,13 @@ class MailtrapEngine
         // Mail::raw('Hello World!', function($msg) {$msg->to('vair81@gmail.com')->subject('Test Email'); });
 
         // try {
-        Assert::string($this->body, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
+        Assert::string($this->body, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
         Mail::raw($this->body, function (Message $msg): void {
             // Verifichiamo che $this->to sia valido
             $to = $this->to;
 
             // Utilizziamo una condizione più appropriata
-            if (!$to) {
+            if (! $to) {
                 throw new InvalidArgumentException('Il destinatario email non è valido');
             }
 

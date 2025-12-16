@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Jobs;
 
-use Throwable;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Database\Eloquent\Model;
@@ -12,6 +11,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Modules\Notify\Actions\SendNotificationAction;
+use Throwable;
 
 class SendNotificationJob implements ShouldQueue
 {
@@ -37,11 +37,11 @@ class SendNotificationJob implements ShouldQueue
     /**
      * Crea una nuova istanza del job.
      *
-     * @param Model $recipient Il destinatario della notifica
-     * @param string $templateCode Il codice del template da utilizzare
-     * @param array<string, mixed> $data I dati per compilare il template
-     * @param array<int, string> $channels I canali da utilizzare
-     * @param array<string, mixed> $options Opzioni aggiuntive per l'invio
+     * @param  Model  $recipient  Il destinatario della notifica
+     * @param  string  $templateCode  Il codice del template da utilizzare
+     * @param  array<string, mixed>  $data  I dati per compilare il template
+     * @param  array<int, string>  $channels  I canali da utilizzare
+     * @param  array<string, mixed>  $options  Opzioni aggiuntive per l'invio
      */
     public function __construct(
         protected Model $recipient,
@@ -70,9 +70,6 @@ class SendNotificationJob implements ShouldQueue
 
     /**
      * Gestisce un fallimento del job.
-     *
-     * @param Throwable $exception
-     * @return void
      */
     public function failed(Throwable $exception): void
     {

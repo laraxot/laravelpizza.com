@@ -7,7 +7,7 @@ return [
         (object) [
             'name' => 'facebook',
             'url' => '#',
-            //'icon'=>'<i fa fa-face'>
+            // 'icon'=>'<i fa fa-face'>
         ],
         (object) [
             'name' => 'instagram',

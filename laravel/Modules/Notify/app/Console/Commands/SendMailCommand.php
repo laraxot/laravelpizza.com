@@ -54,7 +54,7 @@ class SendMailCommand extends Command
          */
         // Mail::to($emailData->to)->send(new EmailDataEmail($emailData));
 
-        $this->info('Email sent successfully to ' . $emailData->to);
+        $this->info('Email sent successfully to '.$emailData->to);
 
         return Command::SUCCESS;
     }

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Providers;
 
-use Illuminate\Foundation\Support\Providers\EventServiceProvider as BaseEventServiceProvider;
 use Modules\Xot\Providers\XotBaseEventServiceProvider;
 
 class EventServiceProvider extends XotBaseEventServiceProvider

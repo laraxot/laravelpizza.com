@@ -57,7 +57,7 @@ interface HasRecursiveRelationshipsContract
      */
     public function getParentKeyName();
 
-     /**
+    /**
      * Get the qualified parent key column.
      *
      * @return string
@@ -66,31 +66,36 @@ interface HasRecursiveRelationshipsContract
 
     /**
      * Get the name of the local key column.
+     *
      * @return string
      */
     public function getLocalKeyName();
 
     /**
      * Get the qualified local key column.
-      * @return string
+     *
+     * @return string
      */
     public function getQualifiedLocalKeyName();
 
     /**
      * Get the name of the depth column.
-      * @return string
+     *
+     * @return string
      */
     public function getDepthName();
 
     /**
      * Get the name of the path column.
-      * @return string
+     *
+     * @return string
      */
     public function getPathName();
 
     /**
      * Get the path separator.
-      * @return string
+     *
+     * @return string
      */
     public function getPathSeparator();
 
@@ -103,6 +108,7 @@ interface HasRecursiveRelationshipsContract
 
     /**
      * Get the name of the common table expression.
+     *
      * @return string
      */
     public function getExpressionName();
@@ -200,11 +206,12 @@ interface HasRecursiveRelationshipsContract
 
     /**
      * Get the first segment of the model's path.
+     *
      * @return string
      */
     public function getFirstPathSegment();
 
-     /**
+    /**
      * Determine whether the model's path is nested.
      *
      * @return bool
@@ -213,6 +220,7 @@ interface HasRecursiveRelationshipsContract
 
     /**
      * Determine if an attribute is an integer.
+     *
      * @return bool
      */
     public function isIntegerAttribute(string $attribute);
@@ -220,8 +228,7 @@ interface HasRecursiveRelationshipsContract
     /**
      * Create a new Eloquent query builder for the model.
      *
-     * @param \Illuminate\Database\Query\Builder $query
-     *
+     * @param  \Illuminate\Database\Query\Builder  $query
      * @return AdjacencyBuilder
      */
     public function newEloquentBuilder($query);
@@ -229,8 +236,7 @@ interface HasRecursiveRelationshipsContract
     /**
      * Create a new Eloquent Collection instance.
      *
-     * @param list<static> $models
-     *
+     * @param  list<static>  $models
      * @return Collection
      */
     public function newCollection(array $models = []);

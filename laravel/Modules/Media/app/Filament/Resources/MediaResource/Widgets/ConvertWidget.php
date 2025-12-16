@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Widgets;
 
-use RuntimeException;
 use FFMpeg\Format\Video\WebM;
 use Filament\Notifications\Notification;
 use Filament\Widgets\Widget;
@@ -13,6 +12,7 @@ use Illuminate\Support\Str;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
+use RuntimeException;
 
 class ConvertWidget extends Widget
 {

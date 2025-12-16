@@ -43,7 +43,6 @@ trait HasDynamicFillable
             // Get enum cases' values and merge
             $enumCases = $enumClass::cases();
             $enumFields = array_map(
-                /** @return string */
                 static function (UnitEnum $item): string {
                     if ($item instanceof BackedEnum) {
                         return (string) $item->value;

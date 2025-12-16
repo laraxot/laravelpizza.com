@@ -20,8 +20,7 @@ final class Svg extends Component
      */
     public function __construct(
         public string $tpl = '',
-    ) {
-    }
+    ) {}
 
     public function render(): View
     {

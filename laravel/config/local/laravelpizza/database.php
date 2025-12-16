@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-use Modules\Tenant\Services\TenantService;
-
 return [
     'connections' => [
         'mysql' => [
@@ -41,7 +39,6 @@ return [
             ]) : [],
         ],
 
-
         /*
         'user' => [
             'driver' => 'mysql',
@@ -59,7 +56,6 @@ return [
         ],
         */
 
-
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
@@ -67,7 +63,6 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
-
 
     ], // end connections
 ];

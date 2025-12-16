@@ -11,7 +11,6 @@ use Modules\Tenant\Services\TenantService;
 use Sushi\Sushi;
 use Throwable;
 
-
 use function Safe\file_get_contents;
 use function Safe\json_decode;
 use function Safe\json_encode;
@@ -38,7 +37,7 @@ trait SushiToJson
     public function getJsonFile(): string
     {
         $tbl = $this->getTable();
-        if (!is_string($tbl)) {
+        if (! is_string($tbl)) {
             throw new \InvalidArgumentException(__FILE__.':'.__LINE__.' - '.class_basename(self::class).': Table name must be string');
         }
 

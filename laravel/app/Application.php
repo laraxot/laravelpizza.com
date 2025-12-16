@@ -1,4 +1,5 @@
 <?php
+
 /**
 * ---.
 */
@@ -8,7 +9,6 @@ namespace App;
 
 class Application extends \Illuminate\Foundation\Application
 {
-
     public function publicPath($path = ''): string
     {
         $tmp = $this->basePath.'/../public_html/'.$path;

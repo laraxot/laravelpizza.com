@@ -5,14 +5,9 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Pages;
 
 use Filament\Pages\Dashboard as FilamentDashboard;
-use Filament\Schemas\Components\Component;
-use Filament\Schemas\Components\Section;
-use Filament\Schemas\Schema;
 
 abstract class XotBaseDashboard extends FilamentDashboard
 {
-
-
     public function getWidgets(): array
     {
         return [

@@ -22,7 +22,6 @@ use Modules\Xot\Actions\Filament\GetModulesNavigationItems;
 use Modules\Xot\Actions\Panel\ApplyMetatagToPanelAction;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Filament\Pages\MainDashboard;
-use Nwidart\Modules\Facades\Module;
 
 abstract class XotBaseMainPanelProvider extends PanelProvider
 {

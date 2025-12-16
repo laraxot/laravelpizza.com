@@ -18,7 +18,7 @@ use Modules\Xot\Filament\Traits\TransTrait;
  * Questo enum centralizza la gestione dei driver SMS disponibili
  * e fornisce metodi helper per ottenere le opzioni e le etichette.
  */
-enum AddressItemEnum: string implements HasLabel, HasIcon, HasColor
+enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
 {
     use TransTrait;
 
@@ -120,16 +120,16 @@ enum AddressItemEnum: string implements HasLabel, HasIcon, HasColor
      * });
      * ```
      *
-     * @param Blueprint             $table      The table blueprint
-     * @param XotBaseMigration|null $migration  XotBaseMigration instance for UPDATE context (provides hasColumn())
-     * @param bool                  $withLegacy Whether to include legacy compatibility fields
+     * @param  Blueprint  $table  The table blueprint
+     * @param  XotBaseMigration|null  $migration  XotBaseMigration instance for UPDATE context (provides hasColumn())
+     * @param  bool  $withLegacy  Whether to include legacy compatibility fields
      */
     public static function columns(Blueprint $table, ?XotBaseMigration $migration = null, bool $withLegacy = false): void
     {
         // Colonne indirizzo - aggiungi con check solo se in UPDATE context
         // Following the Laraxot pattern from workers_table migration
         foreach (self::getColumnDefinitions() as $name => $definition) {
-            if (null === $migration || ! $migration->hasColumn($name)) {
+            if ($migration === null || ! $migration->hasColumn($name)) {
                 $definition($table);
             }
         }
@@ -167,7 +167,7 @@ enum AddressItemEnum: string implements HasLabel, HasIcon, HasColor
      * AddressItemEnum::dropColumns($table);
      * ```
      *
-     * @param Blueprint $table The table blueprint
+     * @param  Blueprint  $table  The table blueprint
      */
     public static function dropColumns(Blueprint $table): void
     {
@@ -307,8 +307,8 @@ enum AddressItemEnum: string implements HasLabel, HasIcon, HasColor
      * These fields maintain compatibility with older code that expects
      * generic field names like 'address', 'city', 'province', etc.
      *
-     * @param Blueprint             $table     The table blueprint
-     * @param XotBaseMigration|null $migration XotBaseMigration instance for UPDATE context
+     * @param  Blueprint  $table  The table blueprint
+     * @param  XotBaseMigration|null  $migration  XotBaseMigration instance for UPDATE context
      */
     private static function addLegacyColumns(Blueprint $table, ?XotBaseMigration $migration = null): void
     {
@@ -341,7 +341,7 @@ enum AddressItemEnum: string implements HasLabel, HasIcon, HasColor
         ];
 
         foreach ($legacyColumns as $name => $definition) {
-            if (null === $migration || ! $migration->hasColumn($name)) {
+            if ($migration === null || ! $migration->hasColumn($name)) {
                 $definition($table);
             }
         }

@@ -26,7 +26,7 @@ class AdminPanelProvider extends XotBasePanelProvider
         //     SpatieTranslatablePlugin::make(),
         // ]);
 
-        if (!XotData::make()->disable_database_notifications) {
+        if (! XotData::make()->disable_database_notifications) {
             DatabaseNotifications::trigger('notify::livewire.database-notifications-trigger');
             // DatabaseNotifications::databaseNotificationsPollingInterval('30s');
             DatabaseNotifications::pollingInterval('60s');

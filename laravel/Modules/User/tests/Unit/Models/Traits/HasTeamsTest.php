@@ -46,7 +46,7 @@ describe('HasTeams Trait', function () {
     });
 
     it('can check if user belongs to a team by Team model', function () {
-        $team = new Team();
+        $team = new Team;
         $team->id = 10;
 
         // Mock della relazione teams per simulare l'appartenenza
@@ -76,7 +76,7 @@ describe('HasTeams Trait', function () {
 
     it('handles both integer and Team model parameters', function () {
         $teamId = 15;
-        $team = new Team();
+        $team = new Team;
         $team->id = 15;
 
         // Mock per entrambi i casi
@@ -188,7 +188,7 @@ describe('HasTeams Trait', function () {
     });
 
     it('can work with team pivot table', function () {
-        $team = new Team();
+        $team = new Team;
         $team->id = 30;
 
         // Mock della relazione teams con pivot
@@ -238,15 +238,15 @@ describe('HasTeams Trait', function () {
 
 describe('HasTeams Trait Integration', function () {
     it('can be used with User model', static function () {
-        $user = new User();
+        $user = new User;
 
         expect($user)->toHaveMethod('teams');
         expect($user)->toHaveMethod('belongsToTeam');
     });
 
     it('maintains trait functionality across different models', static function () {
-        $user1 = new MockUserWithTeams();
-        $user2 = new MockUserWithTeams();
+        $user1 = new MockUserWithTeams;
+        $user2 = new MockUserWithTeams;
 
         expect($user1)->toHaveMethod('teams');
         expect($user1)->toHaveMethod('belongsToTeam');

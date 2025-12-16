@@ -2,11 +2,10 @@
 
 declare(strict_types=1);
 
-
 namespace Modules\Notify\Database\Factories;
 
-use Modules\Notify\Models\Notification;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Notify\Models\Notification;
 
 class NotificationFactory extends Factory
 {

@@ -29,6 +29,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $deleted_by
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
+ *
  * @method static TreatmentFactory factory($count = null, $state = [])
  * @method static Builder<static>|Treatment newModelQuery()
  * @method static Builder<static>|Treatment newQuery()
@@ -47,7 +48,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Treatment whereUpdatedAt($value)
  * @method static Builder<static>|Treatment whereUpdatedBy($value)
  * @method static Builder<static>|Treatment whereWeight($value)
+ *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
 class Treatment extends BaseModel

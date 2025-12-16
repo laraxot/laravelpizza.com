@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-use RuntimeException;
-use Illuminate\Database\Eloquent\Model;
 use Exception;
+use Illuminate\Database\Eloquent\Model;
 use Override;
+use RuntimeException;
 
 class StatesChartWidget extends XotBaseChartWidget
 {

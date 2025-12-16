@@ -6,8 +6,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Notify\Models\Contact;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class() extends XotBaseMigration {
-    protected null|string $model_class = Contact::class;
+return new class extends XotBaseMigration
+{
+    protected ?string $model_class = Contact::class;
 
     /**
      * Run the migrations.
@@ -24,7 +25,7 @@ return new class() extends XotBaseMigration {
             $table->timestamp('verified_at')->nullable();
         });
         $this->tableUpdate(function (Blueprint $table): void {
-            if (!$this->hasColumn('token')) {
+            if (! $this->hasColumn('token')) {
                 $table->string('token')->nullable();
             }
             $this->updateTimestamps(

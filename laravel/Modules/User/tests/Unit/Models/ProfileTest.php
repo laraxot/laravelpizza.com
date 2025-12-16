@@ -12,7 +12,7 @@ class ProfileTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function testCanCreateProfileWithMinimalData(): void
+    public function test_can_create_profile_with_minimal_data(): void
     {
         $profile = Profile::factory()->create([
             'first_name' => 'John',
@@ -30,7 +30,7 @@ class ProfileTest extends TestCase
         ]);
     }
 
-    public function testCanCreateProfileWithAllFields(): void
+    public function test_can_create_profile_with_all_fields(): void
     {
         $profileData = [
             'first_name' => 'Jane',
@@ -68,22 +68,22 @@ class ProfileTest extends TestCase
         static::assertSame(['skills' => ['PHP', 'Laravel'], 'experience' => 5], $profile->extra);
     }
 
-    public function testProfileHasSchemalessAttributes(): void
+    public function test_profile_has_schemaless_attributes(): void
     {
-        $profile = new Profile();
+        $profile = new Profile;
 
         $expectedAttributes = ['extra'];
         static::assertSame($expectedAttributes, $profile->getSchemalessAttributes());
     }
 
-    public function testProfileHasTableName(): void
+    public function test_profile_has_table_name(): void
     {
-        $profile = new Profile();
+        $profile = new Profile;
 
         static::assertSame('profiles', $profile->getTable());
     }
 
-    public function testCanFindProfileByEmail(): void
+    public function test_can_find_profile_by_email(): void
     {
         $profile = Profile::factory()->create(['email' => 'unique@example.com']);
 
@@ -93,7 +93,7 @@ class ProfileTest extends TestCase
         static::assertSame($profile->id, $foundProfile->id);
     }
 
-    public function testCanFindProfileByUserName(): void
+    public function test_can_find_profile_by_user_name(): void
     {
         $profile = Profile::factory()->create(['user_name' => 'uniqueuser']);
 
@@ -103,7 +103,7 @@ class ProfileTest extends TestCase
         static::assertSame($profile->id, $foundProfile->id);
     }
 
-    public function testCanFindProfileByFirstName(): void
+    public function test_can_find_profile_by_first_name(): void
     {
         $profile = Profile::factory()->create(['first_name' => 'Unique']);
 
@@ -113,7 +113,7 @@ class ProfileTest extends TestCase
         static::assertSame($profile->id, $foundProfile->id);
     }
 
-    public function testCanFindProfileByLastName(): void
+    public function test_can_find_profile_by_last_name(): void
     {
         $profile = Profile::factory()->create(['last_name' => 'Unique']);
 
@@ -123,7 +123,7 @@ class ProfileTest extends TestCase
         static::assertSame($profile->id, $foundProfile->id);
     }
 
-    public function testCanFindProfileByPhone(): void
+    public function test_can_find_profile_by_phone(): void
     {
         $profile = Profile::factory()->create(['phone' => '+1234567890']);
 
@@ -133,7 +133,7 @@ class ProfileTest extends TestCase
         static::assertSame($profile->id, $foundProfile->id);
     }
 
-    public function testCanFindProfileByStatus(): void
+    public function test_can_find_profile_by_status(): void
     {
         Profile::factory()->create(['status' => 'active']);
         Profile::factory()->create(['status' => 'inactive']);
@@ -145,7 +145,7 @@ class ProfileTest extends TestCase
         static::assertSame('active', $activeProfiles->first()->status);
     }
 
-    public function testCanFindProfileByTimezone(): void
+    public function test_can_find_profile_by_timezone(): void
     {
         Profile::factory()->create(['timezone' => 'UTC']);
         Profile::factory()->create(['timezone' => 'Europe/Rome']);
@@ -157,7 +157,7 @@ class ProfileTest extends TestCase
         static::assertSame('UTC', $utcProfiles->first()->timezone);
     }
 
-    public function testCanFindProfileByLocale(): void
+    public function test_can_find_profile_by_locale(): void
     {
         Profile::factory()->create(['locale' => 'en']);
         Profile::factory()->create(['locale' => 'it']);
@@ -169,7 +169,7 @@ class ProfileTest extends TestCase
         static::assertSame('en', $englishProfiles->first()->locale);
     }
 
-    public function testCanFindProfilesByNamePattern(): void
+    public function test_can_find_profiles_by_name_pattern(): void
     {
         Profile::factory()->create(['first_name' => 'John', 'last_name' => 'Doe']);
         Profile::factory()->create(['first_name' => 'Jane', 'last_name' => 'Doe']);
@@ -181,7 +181,7 @@ class ProfileTest extends TestCase
         static::assertTrue($doeProfiles->every(fn ($profile) => str_contains($profile->last_name, 'Doe')));
     }
 
-    public function testCanFindProfilesByBioPattern(): void
+    public function test_can_find_profiles_by_bio_pattern(): void
     {
         Profile::factory()->create(['bio' => 'Software Developer']);
         Profile::factory()->create(['bio' => 'Designer']);
@@ -193,7 +193,7 @@ class ProfileTest extends TestCase
         static::assertTrue($devProfiles->every(fn ($profile) => str_contains($profile->bio, 'Developer')));
     }
 
-    public function testCanUpdateProfile(): void
+    public function test_can_update_profile(): void
     {
         $profile = Profile::factory()->create(['first_name' => 'Old Name']);
 
@@ -205,7 +205,7 @@ class ProfileTest extends TestCase
         ]);
     }
 
-    public function testCanHandleNullValues(): void
+    public function test_can_handle_null_values(): void
     {
         $profile = Profile::factory()->create([
             'first_name' => 'Test',
@@ -229,7 +229,7 @@ class ProfileTest extends TestCase
         ]);
     }
 
-    public function testCanFindProfilesByMultipleCriteria(): void
+    public function test_can_find_profiles_by_multiple_criteria(): void
     {
         Profile::factory()->create([
             'status' => 'active',
@@ -256,42 +256,42 @@ class ProfileTest extends TestCase
         static::assertSame('UTC', $profiles->first()->timezone);
     }
 
-    public function testProfileHasRolesRelationship(): void
+    public function test_profile_has_roles_relationship(): void
     {
         $profile = Profile::factory()->create();
 
         static::assertTrue(method_exists($profile, 'roles'));
     }
 
-    public function testProfileHasPermissionsRelationship(): void
+    public function test_profile_has_permissions_relationship(): void
     {
         $profile = Profile::factory()->create();
 
         static::assertTrue(method_exists($profile, 'permissions'));
     }
 
-    public function testProfileHasTeamsRelationship(): void
+    public function test_profile_has_teams_relationship(): void
     {
         $profile = Profile::factory()->create();
 
         static::assertTrue(method_exists($profile, 'teams'));
     }
 
-    public function testProfileHasDevicesRelationship(): void
+    public function test_profile_has_devices_relationship(): void
     {
         $profile = Profile::factory()->create();
 
         static::assertTrue(method_exists($profile, 'devices'));
     }
 
-    public function testProfileHasMediaRelationship(): void
+    public function test_profile_has_media_relationship(): void
     {
         $profile = Profile::factory()->create();
 
         static::assertTrue(method_exists($profile, 'media'));
     }
 
-    public function testProfileCanUsePermissionScopes(): void
+    public function test_profile_can_use_permission_scopes(): void
     {
         $profile = Profile::factory()->create();
 
@@ -299,7 +299,7 @@ class ProfileTest extends TestCase
         static::assertTrue(method_exists($profile, 'withoutPermission'));
     }
 
-    public function testProfileCanUseRoleScopes(): void
+    public function test_profile_can_use_role_scopes(): void
     {
         $profile = Profile::factory()->create();
 
@@ -307,14 +307,14 @@ class ProfileTest extends TestCase
         static::assertTrue(method_exists($profile, 'withoutRole'));
     }
 
-    public function testProfileCanUseExtraAttributesScopes(): void
+    public function test_profile_can_use_extra_attributes_scopes(): void
     {
         $profile = Profile::factory()->create();
 
         static::assertTrue(method_exists($profile, 'withExtraAttributes'));
     }
 
-    public function testProfileHasFactory(): void
+    public function test_profile_has_factory(): void
     {
         $profile = Profile::factory()->create();
 

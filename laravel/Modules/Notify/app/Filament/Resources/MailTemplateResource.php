@@ -60,7 +60,7 @@ class MailTemplateResource extends LangBaseResource
                     'params' => is_object($record) && isset($record->params) ? $record->params : [],
                 ])
                 ->columnSpanFull()
-                ->visible(fn ($record): bool => is_object($record) && isset($record->params) && !empty($record->params)),
+                ->visible(fn ($record): bool => is_object($record) && isset($record->params) && ! empty($record->params)),
             'text_template' => Textarea::make('text_template')
                 ->maxLength(65535)
                 ->columnSpanFull(),

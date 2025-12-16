@@ -12,13 +12,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Sushi\Sushi;
 
 /**
- * @property int|null                                    $region_id
- * @property int                                         $id
- * @property string|null                                 $name
+ * @property int|null $region_id
+ * @property int $id
+ * @property string|null $name
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property Collection<int, Locality>                   $localities
- * @property int|null                                    $localities_count
- * @property Region|null                                 $region
+ * @property Collection<int, Locality> $localities
+ * @property int|null $localities_count
+ * @property Region|null $region
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
  * @method static Builder<static>|Province newModelQuery()

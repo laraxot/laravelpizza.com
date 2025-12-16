@@ -5,39 +5,37 @@ declare(strict_types=1);
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
 use BackedEnum;
-use Filament\Panel;
-use Filament\Schemas\Schema;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\KeyValue;
 use Exception;
-use Override;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
-use Filament\Forms;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Forms\Contracts\HasForms;
+use Filament\Forms\Components\KeyValue;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification as FilamentNotification;
+use Filament\Panel;
+use Filament\Schemas\Schema;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification;
-use Modules\Notify\Datas\WhatsAppData;
 use Modules\Notify\Enums\WhatsAppDriverEnum;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\Notify\Notifications\WhatsAppNotification;
 use Modules\Xot\Filament\Pages\XotBasePage;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Override;
 
 /**
  * @property \Filament\Schemas\Schema $whatsappForm
  */
 class SendWhatsAppPage extends XotBasePage
 {
-    public null|array $whatsappData = [];
-    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-chat-bubble-left-right';
+    public ?array $whatsappData = [];
+
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-chat-bubble-left-right';
+
     protected string $view = 'notify::filament.pages.send-whatsapp';
-    protected static null|string $cluster = Test::class;
+
+    protected static ?string $cluster = Test::class;
 
     /**
      * Get the slug of the page
@@ -127,7 +125,7 @@ class SendWhatsAppPage extends XotBasePage
                 ->title('Messaggio WhatsApp inviato con successo')
                 ->send();
         } catch (Exception $e) {
-            Log::error('Errore nell\'invio WhatsApp: ' . $e->getMessage());
+            Log::error('Errore nell\'invio WhatsApp: '.$e->getMessage());
 
             FilamentNotification::make()
                 ->danger()
@@ -149,7 +147,7 @@ class SendWhatsAppPage extends XotBasePage
     {
         $user = Filament::auth()->user();
 
-        if (!($user instanceof Model)) {
+        if (! ($user instanceof Model)) {
             throw new Exception(
                 'The authenticated user object must be an Eloquent model to allow the profile page to update it.',
             );

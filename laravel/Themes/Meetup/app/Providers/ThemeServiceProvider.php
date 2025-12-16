@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Themes\Meetup\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Blade;
 
 class ThemeServiceProvider extends ServiceProvider
 {

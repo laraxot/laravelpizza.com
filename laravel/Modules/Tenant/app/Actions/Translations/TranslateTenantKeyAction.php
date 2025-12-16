@@ -47,5 +47,3 @@ class TranslateTenantKeyAction
         return $res;
     }
 }
-
-

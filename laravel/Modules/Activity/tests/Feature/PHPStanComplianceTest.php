@@ -19,8 +19,6 @@ class PHPStanComplianceTest extends TestCase
 {
     /**
      * Test che PHPStan possa analizzare il modulo senza errori.
-     *
-     * @return void
      */
     public function test_phpstan_can_analyze_module(): void
     {
@@ -36,8 +34,6 @@ class PHPStanComplianceTest extends TestCase
 
     /**
      * Test che le classi del modulo estendano le classi corrette.
-     *
-     * @return void
      */
     public function test_classes_extend_correct_base_classes(): void
     {
@@ -58,8 +54,6 @@ class PHPStanComplianceTest extends TestCase
 
     /**
      * Test che le traduzioni siano strutturate correttamente.
-     *
-     * @return void
      */
     public function test_translations_are_properly_structured(): void
     {
@@ -86,8 +80,6 @@ class PHPStanComplianceTest extends TestCase
 
     /**
      * Test che il ServiceProvider sia configurato correttamente.
-     *
-     * @return void
      */
     public function test_service_provider_configuration(): void
     {
@@ -106,8 +98,6 @@ class PHPStanComplianceTest extends TestCase
 
     /**
      * Test che i modelli abbiano i trait corretti.
-     *
-     * @return void
      */
     public function test_models_have_correct_traits(): void
     {
@@ -119,8 +109,6 @@ class PHPStanComplianceTest extends TestCase
 
     /**
      * Test che le view esistano e siano strutturate correttamente.
-     *
-     * @return void
      */
     public function test_views_exist_and_are_structured(): void
     {

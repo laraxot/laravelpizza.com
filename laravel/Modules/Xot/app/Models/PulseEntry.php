@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\PulseEntryFactory;
-use Illuminate\Database\Eloquent\Builder;
 
 /**
  * @property string $id
@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Builder;
  * @property int|null $value
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
+ *
  * @method static PulseEntryFactory factory($count = null, $state = [])
  * @method static Builder<static>|PulseEntry newModelQuery()
  * @method static Builder<static>|PulseEntry newQuery()
@@ -27,7 +28,9 @@ use Illuminate\Database\Eloquent\Builder;
  * @method static Builder<static>|PulseEntry whereTimestamp($value)
  * @method static Builder<static>|PulseEntry whereType($value)
  * @method static Builder<static>|PulseEntry whereValue($value)
+ *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
 class PulseEntry extends BaseModel

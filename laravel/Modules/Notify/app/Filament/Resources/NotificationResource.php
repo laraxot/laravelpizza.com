@@ -2,22 +2,18 @@
 
 declare(strict_types=1);
 
-
 namespace Modules\Notify\Filament\Resources;
 
-use Override;
 use Filament\Forms\Components\DateTimePicker;
-use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Modules\Notify\Filament\Resources\NotificationResource\Pages;
 use Modules\Notify\Models\Notification;
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 class NotificationResource extends XotBaseResource
 {
-    protected static null|string $model = Notification::class;
+    protected static ?string $model = Notification::class;
 
     #[Override]
     public static function getFormSchema(): array

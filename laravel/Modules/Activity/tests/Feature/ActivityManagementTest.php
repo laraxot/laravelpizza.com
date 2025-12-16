@@ -9,7 +9,7 @@ test('user can create activity', function () {
     $user = User::factory()->create(); // @phpstan-ignore-line method.nonObject
     \assert($user instanceof User);
     expect($user)->not->toBeNull();
-    
+
     $activity = Activity::factory()->create([ // @phpstan-ignore-line method.nonObject
         'log_name' => 'test',
         'description' => 'Test Description',
@@ -18,7 +18,7 @@ test('user can create activity', function () {
     ]);
     \assert($activity instanceof Activity);
     expect($activity)->not->toBeNull();
-    
+
     expect($activity)
         ->toBeInstanceOf(Activity::class)
         ->and($activity->description)->toBe('Test Description')
@@ -32,11 +32,11 @@ test('activity can be updated', function () {
     ]);
     \assert($activity instanceof Activity);
     expect($activity)->not->toBeNull();
-    
+
     $activity->update([
         'description' => 'Updated Description',
     ]);
-    
+
     $freshActivity = $activity->fresh();
     \assert($freshActivity instanceof Activity);
     expect($freshActivity)->not->toBeNull();
@@ -50,10 +50,10 @@ test('activity can be deleted', function () {
     ]);
     \assert($activity instanceof Activity);
     expect($activity)->not->toBeNull();
-    
+
     $activityId = $activity->id;
     $activity->delete();
-    
+
     expect(Activity::find($activityId))->toBeNull();
 });
 
@@ -70,7 +70,7 @@ test('activity belongs to user', function () {
     ]);
     \assert($activity instanceof Activity);
     expect($activity)->not->toBeNull();
-    
+
     $causer = $activity->causer;
     \assert($causer instanceof User);
     expect($causer)->not->toBeNull()

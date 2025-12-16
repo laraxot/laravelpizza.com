@@ -9,6 +9,4 @@ use Tests\TestCase as BaseTestCase;
 /**
  * TestCase base per il modulo Cms.
  */
-abstract class TestCase extends BaseTestCase
-{
-}
+abstract class TestCase extends BaseTestCase {}

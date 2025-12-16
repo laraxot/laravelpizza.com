@@ -23,12 +23,12 @@ class GetProductsArrayDummyAction
     {
         // API
         $response = Http::get('https://dummyjson.com/products');
-        
+
         // Ensure we have a Response, not Promise
         if ($response instanceof \GuzzleHttp\Promise\PromiseInterface) {
             $response = $response->wait();
         }
-        
+
         /** @var \Illuminate\Http\Client\Response $response */
         Assert::isArray($products = $response->json());
         Assert::isArray($products['products']);

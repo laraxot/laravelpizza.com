@@ -6,14 +6,9 @@ namespace Modules\Tenant\Actions\Config;
 
 use Exception;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Str;
 use Modules\Tenant\Actions\GetTenantNameAction;
-use Modules\Xot\Services\RouteService;
-use Nwidart\Modules\Facades\Module;
 use Spatie\QueueableAction\QueueableAction;
 
 class ResolveTenantConfigValueAction
@@ -37,7 +32,6 @@ class ResolveTenantConfigValueAction
             throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
         }
 
-       
         $group = collect(explode('.', $key))->first();
 
         $originalConf = config((string) $group);
@@ -53,8 +47,6 @@ class ResolveTenantConfigValueAction
         if (! \is_array($extraConf)) {
             $extraConf = [];
         }
-
-        
 
         $mergeConf = collect($originalConf)->merge($extraConf)->all();
         if ($group === null) {
@@ -79,5 +71,3 @@ class ResolveTenantConfigValueAction
         throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
     }
 }
-
-

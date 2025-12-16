@@ -4,13 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Traits;
 
-use Illuminate\Support\Arr;
-use Webmozart\Assert\Assert;
-use Illuminate\Database\Eloquent\Builder;
-use Modules\Notify\Enums\ContactTypeEnum;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Relations\MorphOne;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Support\Arr;
+use Modules\Notify\Enums\ContactTypeEnum;
 
 /**
  * Trait HasContact.
@@ -23,8 +19,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
  */
 trait HasContact
 {
-
-     /**
+    /**
      * Initialize the trait
      *
      * @return void
@@ -32,7 +27,7 @@ trait HasContact
     protected function initializeHasContact()
     {
         // Automatically create a random token
-        $fields=Arr::map(ContactTypeEnum::cases(), fn ($item) => $item->value);
+        $fields = Arr::map(ContactTypeEnum::cases(), fn ($item) => $item->value);
         $this->mergeFillable($fields);
     }
 }

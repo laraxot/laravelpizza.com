@@ -19,32 +19,32 @@ class SmtpData extends Data
 {
     public string $transport = 'smtp';
 
-    public null|string $url = null;
+    public ?string $url = null;
 
     public string $host = '127.0.0.1';
 
     public int $port = 2525;
 
-    public null|string $encryption = null; // 'tls';
+    public ?string $encryption = null; // 'tls';
 
-    public null|bool $tls = null;
+    public ?bool $tls = null;
 
-    public null|string $username = null;
+    public ?string $username = null;
 
-    public null|string $password = null;
+    public ?string $password = null;
 
-    public null|string $timeout = null;
+    public ?string $timeout = null;
 
-    public null|string $local_domain = null;
+    public ?string $local_domain = null;
 
     private static array $instance = [];
 
     public static function make(string $name = 'smtp'): self
     {
-        if (!isset(self::$instance[$name]) || !(self::$instance[$name] instanceof self)) {
+        if (! isset(self::$instance[$name]) || ! (self::$instance[$name] instanceof self)) {
             // $data = TenantService::getConfig('mail');
             Assert::isArray($data = config('mail'));
-            $data_name = Arr::get($data, 'mailers.' . $name);
+            $data_name = Arr::get($data, 'mailers.'.$name);
             self::$instance[$name] = self::from($data_name);
         }
 
@@ -82,7 +82,7 @@ class SmtpData extends Data
         try {
             $transport->start();
         } catch (Exception $e) {
-            throw new Exception('Errore durante la connessione SMTP: ' . $e->getMessage());
+            throw new Exception('Errore durante la connessione SMTP: '.$e->getMessage());
         }
         $mailer = new Mailer($transport);
 
@@ -96,7 +96,7 @@ class SmtpData extends Data
         try {
             $mailer->send($mimeEmail);
         } catch (Exception $e) {
-            throw new Exception("Errore durante l'invio dell'email: " . $e->getMessage());
+            throw new Exception("Errore durante l'invio dell'email: ".$e->getMessage());
         }
     }
 }

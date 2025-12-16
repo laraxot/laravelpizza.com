@@ -43,8 +43,7 @@ interface PassportHasApiTokensContract
     /**
      * Determine if the current API token has a given scope.
      *
-     * @param string $scope
-     *
+     * @param  string  $scope
      * @return bool
      */
     public function tokenCan($scope);
@@ -52,9 +51,8 @@ interface PassportHasApiTokensContract
     /**
      * Create a new personal access token for the user.
      *
-     * @param string             $name
-     * @param array<int, string> $scopes
-     *
+     * @param  string  $name
+     * @param  array<int, string>  $scopes
      * @return PersonalAccessTokenResult
      */
     public function createToken($name, array $scopes = []);
@@ -62,8 +60,7 @@ interface PassportHasApiTokensContract
     /**
      * Set the current access token for the user.
      *
-     * @param Token|TransientToken $accessToken
-     *
+     * @param  Token|TransientToken  $accessToken
      * @return $this
      */
     public function withAccessToken($accessToken);

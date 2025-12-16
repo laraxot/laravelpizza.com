@@ -2,11 +2,9 @@
 
 declare(strict_types=1);
 
-
 namespace Modules\Notify\Datas;
 
 use Spatie\LaravelData\Data;
-use Spatie\LaravelData\Optional;
 
 class NetfunSmsData extends Data
 {
@@ -14,7 +12,7 @@ class NetfunSmsData extends Data
         public string $recipient,
         public string $message,
         public string $sender,
-        public null|string $reference = null,
-        public null|string $scheduledDate = null,
+        public ?string $reference = null,
+        public ?string $scheduledDate = null,
     ) {}
 }

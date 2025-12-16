@@ -22,27 +22,25 @@ use Modules\Geo\Exceptions\DistanceCalculationException;
 readonly class CalculateDistanceAction
 {
     /**
-     * @param CalculateDistanceMatrixAction $distanceMatrixAction Servizio per il calcolo delle distanze
+     * @param  CalculateDistanceMatrixAction  $distanceMatrixAction  Servizio per il calcolo delle distanze
      */
     public function __construct(
         private CalculateDistanceMatrixAction $distanceMatrixAction,
-    ) {
-    }
+    ) {}
 
     /**
      * Calcola la distanza e il tempo di percorrenza tra due punti.
      *
-     * @param LocationData $origin      Punto di origine con coordinate valide
-     * @param LocationData $destination Punto di destinazione con coordinate valide
-     *
-     * @throws DistanceCalculationException Se il calcolo della distanza fallisce o restituisce dati non validi
-     * @throws \InvalidArgumentException    Se le coordinate non sono valide
-     *
+     * @param  LocationData  $origin  Punto di origine con coordinate valide
+     * @param  LocationData  $destination  Punto di destinazione con coordinate valide
      * @return array{
      *     distance: array{text: string, value: int},
      *     duration: array{text: string, value: int},
      *     status: string
      * } Array con distanza, durata e stato
+     *
+     * @throws DistanceCalculationException Se il calcolo della distanza fallisce o restituisce dati non validi
+     * @throws \InvalidArgumentException Se le coordinate non sono valide
      */
     public function execute(LocationData $origin, LocationData $destination): array
     {
@@ -65,7 +63,7 @@ readonly class CalculateDistanceAction
     /**
      * Formatta la distanza in metri in una stringa leggibile.
      *
-     * @param int $meters Distanza in metri
+     * @param  int  $meters  Distanza in metri
      *
      * @throws \InvalidArgumentException Se il valore in metri è negativo
      */
@@ -87,7 +85,7 @@ readonly class CalculateDistanceAction
     /**
      * Valida le coordinate di una posizione.
      *
-     * @param LocationData $location Posizione da validare
+     * @param  LocationData  $location  Posizione da validare
      *
      * @throws \InvalidArgumentException Se le coordinate non sono valide
      */

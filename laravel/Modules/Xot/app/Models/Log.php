@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
-use Modules\Xot\Database\Factories\LogFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\File;
+use Modules\Xot\Database\Factories\LogFactory;
 use Override;
 use Sushi\Sushi;
 
@@ -18,6 +18,7 @@ use Sushi\Sushi;
  * @property string|null $id
  * @property string|null $name
  * @property int|null $size
+ *
  * @method static LogFactory factory($count = null, $state = [])
  * @method static Builder<static>|Log newModelQuery()
  * @method static Builder<static>|Log newQuery()
@@ -25,10 +26,12 @@ use Sushi\Sushi;
  * @method static Builder<static>|Log whereId($value)
  * @method static Builder<static>|Log whereName($value)
  * @method static Builder<static>|Log whereSize($value)
+ *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property-read string|null $file_content
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
  * @mixin \Eloquent
  */
 class Log extends BaseModel

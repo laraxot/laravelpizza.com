@@ -18,4 +18,3 @@ class XotBasePlaceholder extends Placeholder
 {
     // Logica comune futura per i placeholder Xot
 }
-

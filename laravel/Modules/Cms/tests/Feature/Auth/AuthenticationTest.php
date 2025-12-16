@@ -41,8 +41,7 @@ test('users can authenticate using the login screen', function (): void {
         ->set('password', 'password')
         ->call('authenticate');
 
-    $response->assertHasNoErrors()// ->assertRedirect(route('dashboard', absolute: false))
-    ;
+    $response->assertHasNoErrors(); // ->assertRedirect(route('dashboard', absolute: false))
 
     // expect(Auth::user())->not->toBeNull();
 });

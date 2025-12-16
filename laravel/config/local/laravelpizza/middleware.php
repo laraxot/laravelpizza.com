@@ -8,4 +8,3 @@ return [
         // Aggiungere qui middleware comuni come auth, locale, etc.
     ],
 ];
-

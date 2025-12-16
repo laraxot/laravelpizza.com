@@ -81,7 +81,7 @@ class AddressesField extends Repeater
             })
             ->afterStateUpdated(function ($state, $set, Get $get, Component $component): void {
                 // Se questo diventa primary, disattiva tutti gli altri
-                if (true === $state) {
+                if ($state === true) {
                     $addresses = $get('../../addresses') ?? [];
 
                     // Estrae l'indice dal path del componente (es. "addresses.0.is_primary")
@@ -89,7 +89,7 @@ class AddressesField extends Repeater
                     preg_match('/addresses\.(\d+)\.is_primary/', $path ?? '', $matches);
                     $currentIndex = $matches[1] ?? null;
 
-                    if (null !== $currentIndex) {
+                    if ($currentIndex !== null) {
                         // Disattiva is_primary negli altri elementi
                         /* @phpstan-ignore foreach.nonIterable */
                         foreach ($addresses as $index => $address) {

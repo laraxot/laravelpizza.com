@@ -92,7 +92,7 @@ trait SushiToJsons
          */
         static::creating(function ($model): void {
             /** @var static $model */
-            if (!$model instanceof Model) {
+            if (! $model instanceof Model) {
                 throw new \InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
 
@@ -140,7 +140,7 @@ trait SushiToJsons
          */
         static::updating(function ($model): void {
             /** @var static $model */
-            if (!$model instanceof Model) {
+            if (! $model instanceof Model) {
                 throw new \InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
 
@@ -163,7 +163,7 @@ trait SushiToJsons
 
         static::deleting(function ($model): void {
             /** @var static $model */
-            if (!$model instanceof Model) {
+            if (! $model instanceof Model) {
                 throw new \InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
 

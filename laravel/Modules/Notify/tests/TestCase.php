@@ -7,8 +7,8 @@ namespace Modules\Notify\Tests;
 require_once __DIR__.'/../../Xot/tests/CreatesApplication.php';
 
 use Illuminate\Foundation\Application;
-use Modules\Notify\Providers\NotifyServiceProvider;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Modules\Notify\Providers\NotifyServiceProvider;
 use Modules\Xot\Tests\CreatesApplication;
 
 /**
@@ -29,7 +29,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Get package providers.
      *
-     * @param Application $app
+     * @param  Application  $app
      * @return array<int, class-string>
      */
     protected function getPackageProviders($app): array

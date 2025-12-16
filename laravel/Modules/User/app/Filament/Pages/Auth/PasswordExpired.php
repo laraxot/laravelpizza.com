@@ -74,12 +74,12 @@ class PasswordExpired extends Page implements HasForms
         Assert::string($current_password = Arr::get($data, 'current_password'));
         Assert::string($password = Arr::get($data, 'password'));
         $user = Auth::user();
-        if (null === $user) {
+        if ($user === null) {
             return null;
         }
 
         // check if current password is correct
-        if (null === $user->password || ! Hash::check($current_password, $user->password)) {
+        if ($user->password === null || ! Hash::check($current_password, $user->password)) {
             Notification::make()
                 ->title(__('user::otp.notifications.wrong_password.title'))
                 ->body(__('user::otp.notifications.wrong_password.body'))
@@ -90,7 +90,7 @@ class PasswordExpired extends Page implements HasForms
         }
 
         // check if new password is different from the current password
-        if (null !== $user->password && Hash::check($password, $user->password)) {
+        if ($user->password !== null && Hash::check($password, $user->password)) {
             Notification::make()
                 ->title(__('user::otp.notifications.same_password.title'))
                 ->body(__('user::otp.notifications.same_password.body'))
@@ -142,7 +142,7 @@ class PasswordExpired extends Page implements HasForms
             ->success()
             ->send();
 
-        return new PasswordResetResponse();
+        return new PasswordResetResponse;
     }
 
     protected function getCurrentPasswordFormComponent(): Component

@@ -16,8 +16,7 @@ class ConfigHelper
     /**
      * Sostituisce le variabili template nei dati di configurazione.
      *
-     * @param array<string, mixed> $data
-     *
+     * @param  array<string, mixed>  $data
      * @return array<string, mixed>
      */
     public static function replaceTemplateVariables(array $data): array
@@ -29,7 +28,7 @@ class ConfigHelper
         $companyConfig = SafeArrayCastAction::cast($companyConfigRaw);
         /** @var array<string, mixed> $templateVariables */
         $templateVariables = SafeArrayCastAction::cast($templateVariablesRaw);
-        
+
         $availableVariables = array_merge($companyConfig, $templateVariables);
 
         return self::recursiveReplace($data, $availableVariables);
@@ -38,9 +37,8 @@ class ConfigHelper
     /**
      * Sostituisce ricorsivamente le variabili template in un array.
      *
-     * @param array<string, mixed> $data
-     * @param array<string, mixed> $variables
-     *
+     * @param  array<string, mixed>  $data
+     * @param  array<string, mixed>  $variables
      * @return array<string, mixed>
      */
     private static function recursiveReplace(array $data, array $variables): array
@@ -64,12 +62,12 @@ class ConfigHelper
     /**
      * Sostituisce le variabili template in una stringa.
      *
-     * @param array<string, mixed> $variables
+     * @param  array<string, mixed>  $variables
      */
     private static function replaceStringVariables(string $string, array $variables): string
     {
         foreach ($variables as $variable => $value) {
-            $placeholder = '{{' . $variable . '}}';
+            $placeholder = '{{'.$variable.'}}';
             $string = str_replace($placeholder, (string) $value, $string);
         }
 
@@ -87,6 +85,7 @@ class ConfigHelper
             $companyConfigRaw = Config::get('notify.company', []);
             /** @var array<string, mixed> $companyConfig */
             $companyConfig = SafeArrayCastAction::cast($companyConfigRaw);
+
             return self::replaceStringVariables($value, $companyConfig);
         }
 
@@ -108,6 +107,7 @@ class ConfigHelper
         $testDataRaw = Config::get('notify.test_data', []);
         /** @var array<string, mixed> $testData */
         $testData = SafeArrayCastAction::cast($testDataRaw);
+
         return self::replaceTemplateVariables($testData);
     }
 
@@ -121,6 +121,7 @@ class ConfigHelper
         $companyConfigRaw = Config::get('notify.company', []);
         /** @var array<string, mixed> $companyConfig */
         $companyConfig = SafeArrayCastAction::cast($companyConfigRaw);
+
         return self::replaceTemplateVariables($companyConfig);
     }
 
@@ -134,6 +135,7 @@ class ConfigHelper
         $webhookConfigRaw = Config::get('notify.webhooks', []);
         /** @var array<string, mixed> $webhookConfig */
         $webhookConfig = SafeArrayCastAction::cast($webhookConfigRaw);
+
         return self::replaceTemplateVariables($webhookConfig);
     }
 
@@ -147,6 +149,7 @@ class ConfigHelper
         $emailConfigRaw = Config::get('notify.email', []);
         /** @var array<string, mixed> $emailConfig */
         $emailConfig = SafeArrayCastAction::cast($emailConfigRaw);
+
         return self::replaceTemplateVariables($emailConfig);
     }
 
@@ -160,6 +163,7 @@ class ConfigHelper
         $pathConfigRaw = Config::get('notify.paths', []);
         /** @var array<string, mixed> $pathConfig */
         $pathConfig = SafeArrayCastAction::cast($pathConfigRaw);
+
         return self::replaceTemplateVariables($pathConfig);
     }
 }

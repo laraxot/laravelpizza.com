@@ -61,7 +61,7 @@ abstract class BaseUserResource extends XotBaseResource
             ])->columnSpan(8),
             'section02' => Section::make([
                 'created_at' => Placeholder::make('created_at')->content(static function ($record) {
-                    if (null === $record || ! $record instanceof Model) {
+                    if ($record === null || ! $record instanceof Model) {
                         return new HtmlString('&mdash;');
                     }
 
