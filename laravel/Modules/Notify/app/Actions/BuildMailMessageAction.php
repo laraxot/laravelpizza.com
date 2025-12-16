@@ -50,7 +50,7 @@ class BuildMailMessageAction
             $subject = 'Notifica';
         }
 
-        $email = new MailMessage()
+        $email = (new MailMessage())
             ->from($fromAddress, $fromName)
             ->subject($subject)
             ->view($view_html, $theme->view_params);

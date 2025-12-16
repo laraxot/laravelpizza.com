@@ -1,0 +1,18 @@
+Could not find requested format [table].
+No requested formats were found, using fallback [console] instead.
+
+    0/3743 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%
+
+ 3724/3743 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░]  99%
+
+ 3743/3743 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [ERROR] The code quality score is too low                                      
+
+
+  - Star or contribute to PHP Insights:
+    https://github.com/nunomaduro/phpinsights
+  - Sponsor the maintainers:
+    https://github.com/sponsors/nunomaduro
+  - Subscribe to my YouTube channel:
+    https://www.youtube.com/@nunomaduro

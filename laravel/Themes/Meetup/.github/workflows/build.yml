@@ -1,0 +1,37 @@
+name: Meetup Theme Build
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+    paths:
+      - 'laravel/Themes/Meetup/**'
+  pull_request:
+    branches:
+      - develop
+      - main
+    paths:
+      - 'laravel/Themes/Meetup/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install Node Dependencies
+        working-directory: laravel/Themes/Meetup
+        run: npm install
+
+      - name: Build Assets
+        working-directory: laravel/Themes/Meetup
+        run: npm run build && npm run copy
+

@@ -75,7 +75,7 @@ echo ""
 echo "🧪 Laravel Tests..."
 echo "=================="
 
-if ./vendor/bin/php artisan test --without-tty; then
+if php artisan test --without-tty; then
     print_status "Tests: PASSED"
 else
     print_warning "Tests: FAILED (check manually)"
@@ -87,14 +87,14 @@ echo "🏗️  Laraxot Architecture Check..."
 echo "================================="
 
 # Check for direct Filament extensions
-VIOLATIONS=$(grep -r "extends.*Filament\\" Modules/ --include="*.php" | grep -v "XotBase" | wc -l || true)
+VIOLATIONS=$(grep -r "extends.*Filament" Modules/ --include="*.php" | grep -v "XotBase" | wc -l || true)
 
 if [ "$VIOLATIONS" -eq 0 ]; then
     print_status "Laraxot Architecture: COMPLIANT"
 else
     print_error "Laraxot Architecture: $VIOLATIONS violations found"
     echo "Found direct Filament extensions. Please use XotBase classes."
-    grep -r "extends.*Filament\\" Modules/ --include="*.php" | grep -v "XotBase"
+    grep -r "extends.*Filament" Modules/ --include="*.php" | grep -v "XotBase"
 fi
 
 # 6. Check for property_exists() on Eloquent models

@@ -36,10 +36,9 @@ class GetAddressFromBingMapsAction
     /**
      * Get the Bing Maps API key from configuration.
      *
+     * @throws InvalidLocationException
      *
      * @return non-empty-string
-     *
-     * @throws InvalidLocationException
      */
     private function getApiKey(): string
     {
@@ -84,7 +83,7 @@ class GetAddressFromBingMapsAction
     }
 
     /**
-     * @param  array<string, mixed>  $response
+     * @param array<string, mixed> $response
      */
     private function parseResponse(array $response): BingMapData
     {
@@ -141,10 +140,11 @@ class GetAddressFromBingMapsAction
     /**
      * Extract location array from Bing Maps API response.
      *
-     * @param  array<string, mixed>  $response
-     * @return array<string, mixed>
+     * @param array<string, mixed> $response
      *
      * @throws InvalidLocationException
+     *
+     * @return array<string, mixed>
      */
     private function extractLocationFromResponse(array $response): array
     {
@@ -175,19 +175,23 @@ class GetAddressFromBingMapsAction
         }
 
         /** @var array<string, mixed> $location */
-        return $location;
+        $validatedLocation = $location;
+
+        return $validatedLocation;
     }
 
     /**
      * Extract coordinates from location array.
      *
-     * @param  array<string, mixed>  $location
-     * @return array{0: float, 1: float}
+     * @param array<string, mixed> $location
      *
      * @throws InvalidLocationException
+     *
+     * @return array{0: float, 1: float}
      */
     /**
-     * @param  array<string, mixed>  $location
+     * @param array<string, mixed> $location
+     *
      * @return array{0: float, 1: float}
      */
     private function extractCoordinatesFromLocation(array $location): array
@@ -213,8 +217,9 @@ class GetAddressFromBingMapsAction
      * Centralizes the repeated validation pattern: isset + is_string + default null.
      * This helper reduces cyclomatic complexity by applying DRY principle.
      *
-     * @param  array<string, mixed>  $data  Source array
-     * @param  string  $key  Field key to extract
+     * @param array<string, mixed> $data Source array
+     * @param string               $key  Field key to extract
+     *
      * @return string|null Validated string value or null if not found/not string
      */
     private function extractStringField(array $data, string $key): ?string

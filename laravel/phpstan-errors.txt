@@ -1,0 +1,1 @@
+Note: Using configuration file /var/www/_bases/base_laravelpizza/laravel/phpstan.neon.

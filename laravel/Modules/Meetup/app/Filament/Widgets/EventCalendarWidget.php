@@ -7,30 +7,36 @@ namespace Modules\Meetup\Filament\Widgets;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Grid;
-use Filament\Widgets\Widget;
 use Illuminate\Support\Str;
 use Modules\Meetup\Models\Event;
 use Modules\Xot\Datas\XotData;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Override;
 
-class EventCalendarWidget extends Widget
+class EventCalendarWidget extends XotBaseWidget
 {
     protected string $view = 'meetup::filament.widgets.event-calendar';
 
     public string $type = 'event';
 
+    /**
+     * @var array<string, mixed>
+     */
+    protected array $lastDateSelection = [];
+
     public function getActionName(string $function): string
     {
-        $action_suffix = Str::of($function)->studly()->append('Action')->toString();
+        $actionSuffix = Str::of($function)->studly()->append('Action')->toString();
         $resource = XotData::make()->getUserResourceClassByType($this->type);
         $model = $resource::getModel();
         $modelString = is_string($model) ? $model : (string) $model;
-        $action = Str::of($modelString)
-            ->replace('\\Models\\', '\\Actions\\')
-            ->append('\\Calendar\\'.$action_suffix)
-            ->toString();
 
-        return $action;
+        return Str::of($modelString)
+            ->replace('\Models\\', '\Actions\\')
+            ->append('\Calendar\\'.$actionSuffix)
+            ->toString();
     }
 
     /**
@@ -39,18 +45,17 @@ class EventCalendarWidget extends Widget
      */
     public function fetchEvents(array $fetchInfo): array
     {
-        // Fetch events for the calendar view
         /** @var array<int, array<string, mixed>> $events */
         $events = Event::whereBetween('start_date', [$fetchInfo['start'], $fetchInfo['end']])
             ->where('status', 'published')
             ->get()
-            ->map(function ($event) {
+            ->map(function (Event $event): array {
                 return [
                     'id' => $event->id,
                     'title' => $event->title,
                     'start' => $event->start_date->toISOString(),
                     'end' => $event->end_date->toISOString(),
-                    'backgroundColor' => '#DC2626', // Pizza red
+                    'backgroundColor' => '#DC2626',
                     'borderColor' => '#DC2626',
                     'textColor' => '#FFFFFF',
                 ];
@@ -62,18 +67,15 @@ class EventCalendarWidget extends Widget
     }
 
     /**
-     * Get the form schema for the widget.
-     *
-     * @return array<string, \Filament\Forms\Components\TextInput|\Filament\Forms\Components\Select|\Filament\Forms\Components\DateTimePicker|\Filament\Schemas\Components\Grid>
+     * @return array<int|string, Component>
      */
+    #[Override]
     public function getFormSchema(): array
     {
-        // Default schema for event creation/editing in calendar
         return [
             'title' => TextInput::make('title')
                 ->required()
                 ->maxLength(255),
-
             'dates' => Grid::make()
                 ->schema([
                     'start_date' => DateTimePicker::make('start_date')
@@ -81,10 +83,8 @@ class EventCalendarWidget extends Widget
                     'end_date' => DateTimePicker::make('end_date')
                         ->required(),
                 ]),
-
             'location' => TextInput::make('location')
                 ->maxLength(255),
-
             'status' => Select::make('status')
                 ->options([
                     'draft' => 'Draft',
@@ -97,17 +97,17 @@ class EventCalendarWidget extends Widget
     }
 
     /**
-     * Handle date selection for creating new events.
-     *
-     * @param  string  $_start  Start date (required by interface, not yet used)
-     * @param  string|null  $_end  End date (required by interface, not yet used)
-     * @param  bool  $_allDay  Whether the event is all day (required by interface, not yet used)
-     * @param  array<string, mixed>|null  $_view  View context (required by interface, not yet used)
-     * @param  array<string, mixed>|null  $_resource  Resource context (required by interface, not yet used)
+     * @param  array<string, mixed>|null  $view
+     * @param  array<string, mixed>|null  $resource
      */
-    public function onDateSelect(string $_start, ?string $_end, bool $_allDay, ?array $_view, ?array $_resource): void
+    public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void
     {
-        // Placeholder for future date selection implementation
-        // Parameters prefixed with _ to indicate intentionally unused (required by interface)
+        $this->lastDateSelection = [
+            'start' => $start,
+            'end' => $end,
+            'allDay' => $allDay,
+            'view' => $view,
+            'resource' => $resource,
+        ];
     }
 }

@@ -13,21 +13,21 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 /**
  * ---.
  *
- * @property string $id
- * @property array<array-key, mixed>|null $title
- * @property array<array-key, mixed>|null $description
- * @property string|null $slug
- * @property string|null $disk
- * @property array<array-key, mixed>|null $attachment
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property string                                                                                                                            $id
+ * @property array<array-key, mixed>|null                                                                                                      $title
+ * @property array<array-key, mixed>|null                                                                                                      $description
+ * @property string|null                                                                                                                       $slug
+ * @property string|null                                                                                                                       $disk
+ * @property array<array-key, mixed>|null                                                                                                      $attachment
+ * @property Carbon|null                                                                                                                       $created_at
+ * @property Carbon|null                                                                                                                       $updated_at
+ * @property string|null                                                                                                                       $created_by
+ * @property string|null                                                                                                                       $updated_by
+ * @property \Modules\Xot\Contracts\ProfileContract|null                                                                                       $creator
  * @property \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
- * @property int|null $media_count
- * @property mixed $translations
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property int|null                                                                                                                          $media_count
+ * @property mixed                                                                                                                             $translations
+ * @property \Modules\Xot\Contracts\ProfileContract|null                                                                                       $updater
  *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attachment newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attachment newQuery()
@@ -46,7 +46,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attachment whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attachment whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attachment whereUpdatedBy($value)
- * @method static static|null firstWhere(string $column, mixed $operator = null, mixed $value = null)
+ * @method static static|null                                              firstWhere(string $column, mixed $operator = null, mixed $value = null)
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
  *

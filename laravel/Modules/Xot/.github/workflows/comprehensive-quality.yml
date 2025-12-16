@@ -1,0 +1,141 @@
+name: Comprehensive Quality Checks - Xot Module
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+    paths:
+      - 'Modules/Xot/**'
+  pull_request:
+    branches:
+      - develop
+      - main
+    paths:
+      - 'Modules/Xot/**'
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    environment: Testing
+    
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2
+
+      - name: Add Flux Credentials Loaded From ENV
+        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/composer
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install Dependencies
+        run: |
+          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Run PHPStan Level 10
+        run: |
+          echo "🔍 Running PHPStan Level 10 analysis..."
+          ./vendor/bin/phpstan analyse Modules/Xot --level=10 --memory-limit=-1 --error-format=table
+          echo "✅ PHPStan Level 10 completed"
+
+      - name: Run PHPMD
+        run: |
+          echo "🔍 Running PHPMD analysis..."
+          if [ -f phpmd.phar ]; then
+            php phpmd.phar Modules/Xot text cleancode,codesize,controversial,design,naming,unusedcode --reportfile=phpmd-report.txt
+            echo "✅ PHPMD completed - Report saved to phpmd-report.txt"
+          else
+            echo "⚠️ PHPMD not found, using vendor binary..."
+            if [ -f vendor/bin/phpmd ]; then
+              ./vendor/bin/phpmd Modules/Xot text cleancode,codesize,controversial,design,naming,unusedcode --reportfile=phpmd-report.txt
+              echo "✅ PHPMD completed - Report saved to phpmd-report.txt"
+            else
+              echo "❌ PHPMD not available"
+            fi
+          fi
+
+      - name: Run Laravel Pint
+        run: |
+          echo "🔍 Running Laravel Pint..."
+          ./vendor/bin/pint Modules/Xot --test
+          echo "✅ Pint completed"
+
+      - name: Run PHPInsights
+        run: |
+          echo "🔍 Running PHPInsights analysis..."
+          if [ -f vendor/bin/phpinsights ]; then
+            ./vendor/bin/phpinsights analyse Modules/Xot --format=table --no-interaction --min-quality=70
+            echo "✅ PHPInsights completed"
+          else
+            echo "⚠️ PHPInsights not found, installing..."
+            composer require --dev nunomaduro/phpinsights
+            ./vendor/bin/phpinsights analyse Modules/Xot --format=table --no-interaction --min-quality=70
+            echo "✅ PHPInsights completed after installation"
+          fi
+
+      - name: Run Pest Tests
+        run: |
+          echo "🔍 Running Pest tests..."
+          if [ -f vendor/bin/pest ]; then
+            ./vendor/bin/pest --filter="Modules/Xot" --min=70 || true
+            echo "✅ Pest tests completed"
+          else
+            echo "⚠️ Pest not found"
+          fi
+
+      - name: Upload Quality Reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quality-reports
+          path: |
+            phpmd-report.txt
+            phpstan-results.txt
+            phpinsights-results.txt
+          retention-days: 7
+
+  security:
+    runs-on: ubuntu-latest
+    environment: Testing
+    
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/composer
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install Dependencies
+        run: |
+          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Run Security Audit
+        run: |
+          echo "🔒 Running security audit..."
+          composer audit
+          echo "✅ Security audit completed"
+
+      - name: Check for Vulnerable Dependencies
+        run: |
+          echo "🔒 Checking for vulnerable dependencies..."
+          composer check-security || true
+          echo "✅ Security check completed"

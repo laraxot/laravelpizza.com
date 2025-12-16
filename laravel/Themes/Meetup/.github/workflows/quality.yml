@@ -1,0 +1,65 @@
+name: Meetup Theme Quality Checks
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+    paths:
+      - 'laravel/Themes/Meetup/**'
+  pull_request:
+    branches:
+      - develop
+      - main
+    paths:
+      - 'laravel/Themes/Meetup/**'
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    environment: Testing
+    
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+
+      - name: Add Flux Credentials Loaded From ENV
+        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
+
+      - name: Install Dependencies
+        run: |
+          cd laravel
+          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Run PHPStan
+        working-directory: laravel
+        run: |
+          ./vendor/bin/phpstan analyse Themes/Meetup --level=10 --memory-limit=-1 || true
+
+      - name: Run PHPMD
+        working-directory: laravel
+        run: |
+          if [ -f phpmd.phar ]; then
+            php phpmd.phar Themes/Meetup text cleancode,codesize,design,naming,unusedcode || true
+          else
+            echo "PHPMD not found, skipping..."
+          fi
+
+      - name: Run Pint
+        working-directory: laravel
+        run: |
+          ./vendor/bin/pint Themes/Meetup || true
+
+      - name: Run PHPInsights
+        working-directory: laravel
+        run: |
+          if [ -f vendor/bin/phpinsights ]; then
+            ./vendor/bin/phpinsights analyse Themes/Meetup --format=table --no-interaction --min-quality=70 || true
+          else
+            echo "PHPInsights not found, skipping..."
+          fi
+

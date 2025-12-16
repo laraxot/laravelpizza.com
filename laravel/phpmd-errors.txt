@@ -1,0 +1,1 @@
+Trait method trans has not been applied, because there are collisions with other trait methods on Modules\Xot\Filament\Resources\Pages\XotBaseListRecords.
