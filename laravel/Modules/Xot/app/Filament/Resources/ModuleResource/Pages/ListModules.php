@@ -67,17 +67,17 @@ class ListModules extends XotBaseListRecords
     }
 
     /**
-     * Get table actions with string keys.
+     * Undocumented function.
      *
-     * @return array<string, Action|ActionGroup>
+     * @return array<Action|ActionGroup>
      */
     #[Override]
     public function getTableActions(): array
     {
         return [
-            'view' => ViewAction::make(),
-            'edit' => EditAction::make(),
-            'delete' => DeleteAction::make()->requiresConfirmation(),
+            ViewAction::make(),
+            EditAction::make(),
+            DeleteAction::make()->requiresConfirmation(),
         ];
     }
 

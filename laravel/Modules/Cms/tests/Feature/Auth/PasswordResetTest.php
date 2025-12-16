@@ -13,27 +13,19 @@ use function Pest\Laravel\get;
 
 uses(TestCase::class);
 
-<<<<<<< HEAD
 test('reset password link screen can be rendered', function (): void {
-=======
-test('forgot password page can be rendered', function () {
->>>>>>> 46d657c (.)
     $lang = app()->getLocale();
     $response = get('/'.$lang.'/forgot-password');
 
     $response->assertStatus(200);
 });
 
-<<<<<<< HEAD
 test('reset password link can be requested', function (): void {
     Notification::fake();
 
     /** @var class-string<\Illuminate\Database\Eloquent\Model> $userClass */
     $userClass = XotData::make()->getUserClass();
     /** @var \Illuminate\Contracts\Auth\Authenticatable&\Illuminate\Database\Eloquent\Model $user */
-=======
-test('password reset link can be sent', function () {
->>>>>>> 46d657c (.)
     $user = $userClass::factory()->create();
 
     LivewireVolt::test('auth.forgot-password')->set('email', $user->email)->call('sendPasswordResetLink');
@@ -41,16 +33,12 @@ test('password reset link can be sent', function () {
     Notification::assertSentTo($user, ResetPassword::class);
 });
 
-<<<<<<< HEAD
 test('reset password screen can be rendered', function (): void {
     Notification::fake();
 
     /** @var class-string<\Illuminate\Database\Eloquent\Model> $userClass */
     $userClass = XotData::make()->getUserClass();
     /** @var \Illuminate\Contracts\Auth\Authenticatable&\Illuminate\Database\Eloquent\Model $user */
-=======
-test('reset password link renders reset password page', function () {
->>>>>>> 46d657c (.)
     $user = $userClass::factory()->create();
     $lang = app()->getLocale();
 
@@ -64,16 +52,12 @@ test('reset password link renders reset password page', function () {
     });
 });
 
-<<<<<<< HEAD
 test('password can be reset with valid token', function (): void {
     Notification::fake();
 
     /** @var class-string<\Illuminate\Database\Eloquent\Model> $userClass */
     $userClass = XotData::make()->getUserClass();
     /** @var \Illuminate\Contracts\Auth\Authenticatable&\Illuminate\Database\Eloquent\Model $user */
-=======
-test('password can be reset', function () {
->>>>>>> 46d657c (.)
     $user = $userClass::factory()->create();
     $lang = app()->getLocale();
 

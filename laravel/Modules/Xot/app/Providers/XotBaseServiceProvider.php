@@ -9,7 +9,7 @@ use Exception;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
+use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\File\GetComponentsAction;
@@ -22,7 +22,7 @@ use Webmozart\Assert\Assert;
 /**
  * Class XotBaseServiceProvider.
  */
-abstract class XotBaseServiceProvider extends IlluminateServiceProvider
+abstract class XotBaseServiceProvider extends ServiceProvider
 {
     use PathNamespace;
 
@@ -71,12 +71,10 @@ abstract class XotBaseServiceProvider extends IlluminateServiceProvider
         $this->callAfterResolving(BladeIconsFactory::class, function (BladeIconsFactory $factory): void {
             $assetsPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'assets');
             $svgPath = $assetsPath.'/../svg';
-
             try {
                 $factory->add($this->nameLower, ['path' => $svgPath, 'prefix' => $this->nameLower]);
             } catch (Throwable $e) {
                 // Ignore missing SVG path
-
             }
         });
 

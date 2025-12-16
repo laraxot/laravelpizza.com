@@ -54,14 +54,8 @@ test(':type registration page contains expected elements', function (string $typ
     expect($response->status())->toBe(200);
 
     $content = $response->getContent();
-<<<<<<< HEAD
-    expect($content)->toContain('Registrazione')->toContain('Crea il tuo account')// ->toContain('<x-ui.logo')
-    // ->toContain('RegistrationWidget')
-    ;
-=======
     expect($content)->toContain('Registrazione')->toContain('Crea il tuo account'); // ->toContain('<x-ui.logo')
     // ->toContain('RegistrationWidget')
->>>>>>> 1810cfd (.)
 })->with('userTypes');
 
 test(':type registration page has proper HTML structure', function (string $type): void {

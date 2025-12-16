@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-20 w-20 text-red-500"><path d="M15 11h.01"></path><path d="M11 15h.01"></path><path d="M16 16h.01"></path><path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"></path><path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"></path></svg>
+<svg width="160" height="160">
+  <g fill="none" stroke="#3498db" stroke-width="2">
+    <!-- XOT Icon -->
+    <path d="M64,32 L72,48 M72,48 L60,48 M60,48 L64,32 Z" />
+    <!-- Fila3 Arrow -->
+    <path d="M80,88 L84,92 M84,92 L90,86 M90,86 L80,88 Z" />
+    <!-- Robot Mascotte (Iron Man-inspired) -->
+    <g transform="translate(72,64)">
+      <rect x="0" y="0" width="40" height="40" fill="#333" rx="10"/>
+      <path d="M20,40 L24,50 M24,50 L26,44 M26,44 L20,40 Z" stroke="#999" stroke-width="2" />
+      <circle cx="22" cy="42" r="8" fill="#fff" opacity="0.5"/>
+    </g>
+  </g>
+</svg>

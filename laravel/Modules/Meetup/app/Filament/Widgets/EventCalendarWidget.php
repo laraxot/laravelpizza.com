@@ -10,8 +10,8 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
 use Filament\Widgets\Widget;
 use Illuminate\Support\Str;
-use Modules\Xot\Datas\XotData;
 use Modules\Meetup\Models\Event;
+use Modules\Xot\Datas\XotData;
 
 class EventCalendarWidget extends Widget
 {
@@ -34,12 +34,13 @@ class EventCalendarWidget extends Widget
     }
 
     /**
-     * @param array<string, mixed> $fetchInfo
+     * @param  array<string, mixed>  $fetchInfo
      * @return array<int, array<string, mixed>>
      */
     public function fetchEvents(array $fetchInfo): array
     {
         // Fetch events for the calendar view
+        /** @var array<int, array<string, mixed>> $events */
         $events = Event::whereBetween('start_date', [$fetchInfo['start'], $fetchInfo['end']])
             ->where('status', 'published')
             ->get()
@@ -54,34 +55,37 @@ class EventCalendarWidget extends Widget
                     'textColor' => '#FFFFFF',
                 ];
             })
+            ->values()
             ->toArray();
 
         return $events;
     }
 
     /**
-     * @return array<int, \Filament\Forms\Components\TextInput|\Filament\Schemas\Components\Grid>
+     * Get the form schema for the widget.
+     *
+     * @return array<string, \Filament\Forms\Components\TextInput|\Filament\Forms\Components\Select|\Filament\Forms\Components\DateTimePicker|\Filament\Schemas\Components\Grid>
      */
     public function getFormSchema(): array
     {
         // Default schema for event creation/editing in calendar
-        $schema = [
-            TextInput::make('title')
+        return [
+            'title' => TextInput::make('title')
                 ->required()
                 ->maxLength(255),
 
-            Grid::make()
+            'dates' => Grid::make()
                 ->schema([
-                    DateTimePicker::make('start_date')
+                    'start_date' => DateTimePicker::make('start_date')
                         ->required(),
-                    DateTimePicker::make('end_date')
+                    'end_date' => DateTimePicker::make('end_date')
                         ->required(),
                 ]),
 
-            TextInput::make('location')
+            'location' => TextInput::make('location')
                 ->maxLength(255),
 
-            Select::make('status')
+            'status' => Select::make('status')
                 ->options([
                     'draft' => 'Draft',
                     'published' => 'Published',
@@ -90,8 +94,6 @@ class EventCalendarWidget extends Widget
                 ->default('draft')
                 ->required(),
         ];
-
-        return $schema;
     }
 
     public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void

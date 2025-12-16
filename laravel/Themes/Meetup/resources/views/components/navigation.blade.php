@@ -3,15 +3,19 @@
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
             <!-- Logo -->
-            @php
-                $metatag = \Modules\Xot\Datas\MetatagData::make();
-            @endphp
             <a href="{{ route('home') }}" class="flex items-center space-x-3">
-                <img src="{{ $metatag->getBrandLogo() }}" 
-                     alt="{{ $metatag->logo_alt ?: 'Logo' }}" 
-                     class="h-8 w-auto"
-                     style="height: {{ $metatag->getBrandLogoHeight() }};">
-                <span class="text-xl font-bold text-white">{{ $metatag->sitename ?: 'Laravel Pizza Meetups' }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="currentColor"
+                     class="h-8 w-8 text-red-500"
+                     aria-hidden="true">
+                    <path d="M12 2L22 20H2L12 2z" fill="currentColor"/>
+                    <circle cx="8" cy="14" r="1" fill="#fef2f2"/>
+                    <circle cx="12" cy="12" r="1" fill="#fef2f2"/>
+                    <circle cx="14" cy="16" r="1" fill="#fef2f2"/>
+                    <circle cx="10" cy="17" r="1" fill="#fef2f2"/>
+                </svg>
+                <span class="text-xl font-bold text-white">Laravel Pizza Meetups</span>
             </a>
 
             <!-- Desktop Navigation -->

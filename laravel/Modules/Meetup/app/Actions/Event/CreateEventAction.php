@@ -13,15 +13,21 @@ class CreateEventAction
 {
     use QueueableAction;
 
+    /**
+     * @param  array<string, mixed>  $data
+     */
     public function execute(array $data): Event
     {
         $userId = Auth::id();
-        
+
+        /** @var Event $event */
         $event = DB::transaction(function () use ($data, $userId) {
-            $event = new Event();
+            $event = new Event;
             $event->fill($data);
-            $event->user_id = $userId;
-            $event->created_by = (string) $userId;
+            if ($userId !== null) {
+                $event->user_id = (int) $userId;
+                $event->created_by = (string) $userId;
+            }
             $event->save();
 
             return $event;

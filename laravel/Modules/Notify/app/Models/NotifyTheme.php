@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
-use Override;
-use Modules\Media\Models\Media;
-use Modules\Notify\Database\Factories\NotifyThemeFactory;
-use Illuminate\Database\Eloquent\Builder;
-use Modules\Xot\Contracts\ProfileContract;
 use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
+use Modules\Media\Models\Media;
+use Modules\Notify\Database\Factories\NotifyThemeFactory;
+use Modules\Xot\Contracts\ProfileContract;
+use Override;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 
 /**
@@ -41,6 +41,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property Model|Eloquent $linkable
  * @property MediaCollection<int, Media> $media
  * @property int|null $media_count
+ *
  * @method static NotifyThemeFactory factory($count = null, $state = [])
  * @method static Builder|NotifyTheme newModelQuery()
  * @method static Builder|NotifyTheme newQuery()
@@ -64,18 +65,19 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder|NotifyTheme whereUpdatedAt($value)
  * @method static Builder|NotifyTheme whereUpdatedBy($value)
  * @method static Builder|NotifyTheme whereViewParams($value)
+ *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @method static Builder<static>|NotifyTheme whereDeletedAt($value)
  * @method static Builder<static>|NotifyTheme whereDeletedBy($value)
+ *
  * @mixin IdeHelperNotifyTheme
-<<<<<<< HEAD
+ *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
-=======
- * @property-read \Modules\TechPlanner\Models\Profile|null $deleter
->>>>>>> c8903a55c (.)
+ *
  * @mixin Eloquent
  */
 class NotifyTheme extends BaseModel
@@ -104,7 +106,7 @@ class NotifyTheme extends BaseModel
         'logo',
     ];
 
-    public function getLogoAttribute(null|array $value): array
+    public function getLogoAttribute(?array $value): array
     {
         return [
             // 'path' => asset(strval($this->logo_src)),

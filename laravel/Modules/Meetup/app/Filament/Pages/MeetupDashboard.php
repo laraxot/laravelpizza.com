@@ -4,19 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Pages;
 
-use Filament\Pages\Page;
 use Modules\Meetup\Filament\Widgets\EventCalendarWidget;
+use Modules\Xot\Filament\Pages\XotBasePage;
+use Override;
 
-class MeetupDashboard extends Page
+class MeetupDashboard extends XotBasePage
 {
-    protected static ?string $navigationIcon = 'heroicon-o-calendar';
+    protected string $view = 'meetup::filament.pages.meetup-dashboard';
 
-    protected static ?string $navigationLabel = 'Meetup Dashboard';
-
-    protected static string $view = 'meetup::filament.pages.meetup-dashboard';
-
-    protected static ?string $title = 'Meetup Dashboard';
-
+    /**
+     * @return array<int, class-string>
+     */
     public function getWidgets(): array
     {
         return [
@@ -24,8 +22,17 @@ class MeetupDashboard extends Page
         ];
     }
 
-    public function getColumns(): int | string | array
+    public function getColumns(): int|string|array
     {
         return 1;
+    }
+
+    /**
+     * @return array<string, \Filament\Schemas\Components\Component>
+     */
+    #[Override]
+    public function getFormSchema(): array
+    {
+        return [];
     }
 }

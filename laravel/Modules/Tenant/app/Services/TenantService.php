@@ -99,6 +99,17 @@ class TenantService
     }
 
     /**
+     * Ottiene i nomi di tutte le configurazioni disponibili.
+     *
+     * @return array<int, array{id: int, name: string}>
+     */
+    public static function getConfigNames(): array
+    {
+        // Must add the use Modules\Tenant\Actions\Config\GetTenantConfigNamesAction;
+        return app(\Modules\Tenant\Actions\Config\GetTenantConfigNamesAction::class)->execute();
+    }
+
+    /**
      * Risolve il nome completo della classe di un modello tenant-aware.
      *
      * @param  string  $name  Nome breve del modello (es. 'user', 'patient')
@@ -131,5 +142,15 @@ class TenantService
     public static function trans(string $key): string
     {
         return app(TranslateTenantKeyAction::class)->execute($key);
+    }
+
+    /**
+     * Ottiene tutti i moduli abilitati per il tenant corrente.
+     *
+     * @return array<int, string> Array di nomi moduli abilitati
+     */
+    public static function allModules(): array
+    {
+        return app(\Modules\Tenant\Actions\Modules\GetTenantModulesAction::class)->execute();
     }
 }

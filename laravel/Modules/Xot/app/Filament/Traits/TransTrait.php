@@ -5,16 +5,16 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Traits;
 
 use Exception;
-use TypeError;
-use LogicException;
+use Illuminate\Contracts\Translation\Translator;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Webmozart\Assert\Assert;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
+use LogicException;
 use Modules\Lang\Actions\SaveTransAction;
 use Modules\Xot\Actions\GetTransKeyAction;
-use Illuminate\Contracts\Translation\Translator;
+use TypeError;
+use Webmozart\Assert\Assert;
 
 trait TransTrait
 {
@@ -221,7 +221,8 @@ trait TransTrait
         ?string $locale = null,
         bool $useFallback = true,
     ): string {
-        $moduleNameLow = Str::lower(static::getModuleName());
+        $moduleName = static::getModuleName();
+        $moduleNameLow = Str::lower($moduleName);
         $p = Str::after(static::class, 'Filament\\Pages\\');
         $p_arr = explode('\\', $p);
         $slug = collect($p_arr)->map(Str::kebab(...))->implode('.');
@@ -261,7 +262,6 @@ trait TransTrait
         return static::getTranslatedString($key, $replace, $locale, $useFallback);
     }
 
-
     /**
      * Ottiene il nome del modulo dalla classe.
      * Estrae il nome del modulo dal namespace della classe.
@@ -279,5 +279,4 @@ trait TransTrait
 
         return $moduleName;
     }
-
 }

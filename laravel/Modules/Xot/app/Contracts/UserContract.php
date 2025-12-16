@@ -146,14 +146,4 @@ interface UserContract extends Authenticatable
      * Switch the user's context to the given team.
      */
     public function switchTeam(TeamContract $team): bool;
-
-    /**
-     * Determine if the user has verified their email address.
-     */
-    public function hasVerifiedEmail(): bool;
-
-    /**
-     * Send the email verification notification.
-     */
-    public function sendEmailVerificationNotification(): void;
 }

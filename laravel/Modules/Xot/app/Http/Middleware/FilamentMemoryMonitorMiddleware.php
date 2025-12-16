@@ -7,7 +7,6 @@ namespace Modules\Xot\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Modules\Xot\Contracts\UserContract;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -59,7 +58,7 @@ class FilamentMemoryMonitorMiddleware
                 'is_filament_admin' => $isFilamentAdmin,
                 'url' => $request->fullUrl(),
                 'method' => $request->method(),
-                'user_id' => ($request->user() instanceof UserContract) ? $request->user()->id : null,
+                'user_id' => $request->user()?->id,
             ]);
         }
 

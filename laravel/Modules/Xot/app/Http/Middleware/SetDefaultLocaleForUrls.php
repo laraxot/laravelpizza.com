@@ -11,7 +11,6 @@ namespace Modules\Xot\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
-use Modules\Xot\Contracts\UserContract;
 use Symfony\Component\HttpFoundation\Response;
 
 class SetDefaultLocaleForUrls
@@ -25,12 +24,8 @@ class SetDefaultLocaleForUrls
     {
         $user = $request->user();
         $lang = app()->getLocale();
-        if ($user instanceof UserContract) {
-            // Accesso sicuro alla proprietà lang tramite getAttribute per magic attributes
-            $userLang = $user->getAttribute('lang');
-            if (is_string($userLang) && $userLang !== '') {
-                $lang = $userLang;
-            }
+        if ($user !== null) {
+            $lang = $user->lang ?? app()->getLocale();
         }
 
         URL::defaults(['lang' => $lang]);

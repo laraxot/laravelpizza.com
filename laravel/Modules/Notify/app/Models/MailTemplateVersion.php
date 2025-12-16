@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models;
 
-use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
-use Override;
-use RuntimeException;
 use Carbon\Carbon;
-use Modules\User\Models\Profile;
-use Modules\Media\Models\Media;
-use Modules\Notify\Database\Factories\MailTemplateVersionFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Modules\Media\Models\Media;
+use Modules\Notify\Database\Factories\MailTemplateVersionFactory;
+use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Traits\Updater;
+use Override;
+use RuntimeException;
+use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 
 /**
  * @property int $id
@@ -31,11 +31,12 @@ use Modules\Xot\Traits\Updater;
  * @property Carbon|null $deleted_at
  * @property string|null $updated_by
  * @property string|null $deleted_by
- * @property-read Profile|null $creator
+ * @property-read ProfileContract|null $creator
  * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
  * @property-read MailTemplate|null $template
- * @property-read Profile|null $updater
+ * @property-read ProfileContract|null $updater
+ *
  * @method static MailTemplateVersionFactory factory($count = null, $state = [])
  * @method static Builder<static>|MailTemplateVersion newModelQuery()
  * @method static Builder<static>|MailTemplateVersion newQuery()
@@ -57,12 +58,11 @@ use Modules\Xot\Traits\Updater;
  * @method static Builder<static>|MailTemplateVersion whereVersion($value)
  * @method static Builder<static>|MailTemplateVersion withTrashed()
  * @method static Builder<static>|MailTemplateVersion withoutTrashed()
+ *
  * @mixin IdeHelperMailTemplateVersion
-<<<<<<< HEAD
+ *
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
-=======
- * @property-read \Modules\TechPlanner\Models\Profile|null $deleter
->>>>>>> c8903a55c (.)
+ *
  * @mixin \Eloquent
  */
 class MailTemplateVersion extends BaseModel

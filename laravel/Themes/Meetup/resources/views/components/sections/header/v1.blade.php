@@ -2,11 +2,8 @@
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
             <!-- Logo -->
-            @php
-                $metatag = \Modules\Xot\Datas\MetatagData::make();
-            @endphp
-            <a href="{{ route('home') }}" class="flex items-center space-x-3">
-                @svg('meetup-pizza', 'h-8 w-auto text-red-500')
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="/images/logo.svg" alt="Laravel Pizza Meetups Logo" class="w-8 h-8">
                 <span class="text-xl font-bold text-white">Laravel Pizza Meetups</span>
             </a>
 

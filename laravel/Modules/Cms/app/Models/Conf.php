@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Modules\Cms\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Modules\Tenant\Services\TenantService;
+use Modules\Tenant\Actions\Config\GetTenantConfigNamesAction;
 use Sushi\Sushi;
 
 /**
  * Modules\Cms\Models\Conf.
  *
- * @property int         $id
+ * @property int $id
  * @property string|null $name
  *
  * @method static Builder<static>|Conf newModelQuery()
@@ -19,18 +19,11 @@ use Sushi\Sushi;
  * @method static Builder<static>|Conf query()
  * @method static Builder<static>|Conf whereId($value)
  * @method static Builder<static>|Conf whereName($value)
- * @method static int                  count()
- *
- * <<<<<<< HEAD
+ * @method static int count()
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- *                                                                =======
- * @property \Modules\TechPlanner\Models\Profile|null    $creator
- * @property \Modules\TechPlanner\Models\Profile|null    $deleter
- * @property \Modules\TechPlanner\Models\Profile|null    $updater
- *                                                                >>>>>>> 46d657c (.)
  *
  * @method static \Modules\Cms\Database\Factories\ConfFactory factory($count = null, $state = [])
  *
@@ -51,9 +44,8 @@ class Conf extends BaseModel
      */
     public function getRows(): array
     {
-        //  local/ptvx
         /** @var array<int, array{id: int, name: string}> $configNames */
-        $configNames = TenantService::getConfigNames();
+        $configNames = app(GetTenantConfigNamesAction::class)->execute();
 
         return $configNames;
     }

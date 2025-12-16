@@ -46,13 +46,16 @@
 
     <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center">
-            {{-- Logo --}}
-            @php
-                $metatag = \Modules\Xot\Datas\MetatagData::make();
-            @endphp
+            {{-- Pizza Icon --}}
             <div class="mb-8 flex justify-center">
-                @svg('meetup-pizza', 'h-24 w-auto text-red-500')
-               
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-24 w-24 text-red-500" aria-hidden="true">
+                    <path d="M12 2L22 20H2L12 2z" fill="currentColor"/>
+                    <circle cx="8" cy="14" r="1.2" fill="#fef2f2"/>
+                    <circle cx="12" cy="12" r="1.2" fill="#fef2f2"/>
+                    <circle cx="14" cy="16" r="1.2" fill="#fef2f2"/>
+                    <circle cx="10" cy="17" r="1.2" fill="#fef2f2"/>
+                    <circle cx="15" cy="13" r="1.2" fill="#fef2f2"/>
+                </svg>
             </div>
 
             {{-- Heading --}}

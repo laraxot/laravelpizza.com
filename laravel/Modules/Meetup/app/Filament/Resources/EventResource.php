@@ -2,75 +2,78 @@
 
 declare(strict_types=1);
 
-namespace Modules\Meetup\Filament\Resources\EventResource;
+namespace Modules\Meetup\Filament\Resources;
 
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
+use Filament\Actions\ActionGroup;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Section;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Modules\Meetup\Filament\Resources\EventResource\Pages;
+use Modules\Meetup\Filament\Resources\EventResource\Pages\CreateEvent;
+use Modules\Meetup\Filament\Resources\EventResource\Pages\EditEvent;
+use Modules\Meetup\Filament\Resources\EventResource\Pages\ListEvents;
 use Modules\Meetup\Models\Event;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 class EventResource extends XotBaseResource
 {
     protected static ?string $model = Event::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-calendar';
+    // Le proprietà navigationIcon, navigationLabel, modelLabel, pluralModelLabel
+    // sono gestite automaticamente da XotBaseResource tramite traduzioni
 
-    protected static ?string $navigationLabel = 'Events';
-
-    protected static ?string $modelLabel = 'Event';
-
-    protected static ?string $pluralModelLabel = 'Events';
-
-    public static function form(Form $form): Form
+    /**
+     * Get the form schema for the resource.
+     *
+     * @return array<string, Component>
+     */
+    #[Override]
+    public static function getFormSchema(): array
     {
-        return $form
-            ->schema([
-                Forms\Components\Section::make('Event Details')
-                    ->schema([
-                        Forms\Components\TextInput::make('title')
-                            ->required()
-                            ->maxLength(255),
-                        
-                        Forms\Components\Textarea::make('description')
-                            ->maxLength(65535)
-                            ->columnSpanFull(),
-                        
-                        Forms\Components\DateTimePicker::make('start_date')
-                            ->required(),
-                        
-                        Forms\Components\DateTimePicker::make('end_date')
-                            ->required(),
-                        
-                        Forms\Components\TextInput::make('location')
-                            ->required()
-                            ->maxLength(255),
-                        
-                        Forms\Components\Select::make('status')
-                            ->options([
-                                'draft' => 'Draft',
-                                'published' => 'Published',
-                                'cancelled' => 'Cancelled',
-                            ])
-                            ->default('draft')
-                            ->required(),
-                        
-                        Forms\Components\TextInput::make('attendees_count')
-                            ->numeric()
-                            ->default(0),
-                        
-                        Forms\Components\TextInput::make('max_attendees')
-                            ->numeric()
-                            ->default(100),
-                        
-                        Forms\Components\FileUpload::make('cover_image')
-                            ->image(),
-                    ])
-                    ->columns(2),
-            ]);
+        return [
+            'event_details' => Section::make('Event Details')
+                ->schema([
+                    'title' => TextInput::make('title')
+                        ->required()
+                        ->maxLength(255),
+                    'description' => Textarea::make('description')
+                        ->maxLength(65535)
+                        ->columnSpanFull(),
+                    'start_date' => DateTimePicker::make('start_date')
+                        ->required(),
+                    'end_date' => DateTimePicker::make('end_date')
+                        ->required(),
+                    'location' => TextInput::make('location')
+                        ->required()
+                        ->maxLength(255),
+                    'status' => Select::make('status')
+                        ->options([
+                            'draft' => 'Draft',
+                            'published' => 'Published',
+                            'cancelled' => 'Cancelled',
+                        ])
+                        ->default('draft')
+                        ->required(),
+                    'attendees_count' => TextInput::make('attendees_count')
+                        ->numeric()
+                        ->default(0),
+                    'max_attendees' => TextInput::make('max_attendees')
+                        ->numeric()
+                        ->default(100),
+                    'cover_image' => FileUpload::make('cover_image')
+                        ->image(),
+                ])
+                ->columns(2),
+        ];
     }
 
     public static function table(Table $table): Table
@@ -80,18 +83,14 @@ class EventResource extends XotBaseResource
                 Tables\Columns\TextColumn::make('title')
                     ->searchable()
                     ->sortable(),
-                
                 Tables\Columns\TextColumn::make('start_date')
                     ->dateTime()
                     ->sortable(),
-                
                 Tables\Columns\TextColumn::make('end_date')
                     ->dateTime()
                     ->sortable(),
-                
                 Tables\Columns\TextColumn::make('location')
                     ->searchable(),
-                
                 Tables\Columns\TextColumn::make('status')
                     ->badge()
                     ->color(fn (string $state): string => match ($state) {
@@ -100,10 +99,8 @@ class EventResource extends XotBaseResource
                         'cancelled' => 'danger',
                         default => 'gray',
                     }),
-                
                 Tables\Columns\TextColumn::make('attendees_count')
                     ->numeric(),
-                
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable(),
@@ -117,22 +114,26 @@ class EventResource extends XotBaseResource
                     ]),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                'edit' => EditAction::make(),
+                'delete' => DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                'bulk_delete' => ActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
 
+    /**
+     * @return array<string, \Filament\Resources\Pages\PageRegistration>
+     */
+    #[Override]
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListEvents::route('/'),
-            'create' => Pages\CreateEvent::route('/create'),
-            'edit' => Pages\EditEvent::route('/{record}/edit'),
+            'index' => ListEvents::route('/'),
+            'create' => CreateEvent::route('/create'),
+            'edit' => EditEvent::route('/{record}/edit'),
         ];
     }
 }

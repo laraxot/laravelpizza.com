@@ -13,13 +13,19 @@ class UpdateEventAction
 {
     use QueueableAction;
 
+    /**
+     * @param  array<string, mixed>  $data
+     */
     public function execute(Event $event, array $data): Event
     {
         $userId = Auth::id();
-        
+
+        /** @var Event $event */
         $event = DB::transaction(function () use ($event, $data, $userId) {
             $event->fill($data);
-            $event->updated_by = (string) $userId;
+            if ($userId !== null) {
+                $event->updated_by = (string) $userId;
+            }
             $event->save();
 
             return $event;

@@ -26,6 +26,7 @@ class GetAddressFromBingMapsAction
     public function execute(float $latitude, float $longitude): AddressData
     {
         $apiKey = $this->getApiKey();
+        /** @var array<string, mixed> $response */
         $response = $this->makeApiRequest($latitude, $longitude, $apiKey);
         $data = $this->parseResponse($response);
 
@@ -35,9 +36,10 @@ class GetAddressFromBingMapsAction
     /**
      * Get the Bing Maps API key from configuration.
      *
-     * @throws InvalidLocationException
      *
      * @return non-empty-string
+     *
+     * @throws InvalidLocationException
      */
     private function getApiKey(): string
     {
@@ -81,8 +83,12 @@ class GetAddressFromBingMapsAction
         return $jsonResponse;
     }
 
+    /**
+     * @param  array<string, mixed>  $response
+     */
     private function parseResponse(array $response): BingMapData
     {
+        /** @var array<string, mixed> $location */
         $location = $this->extractLocationFromResponse($response);
         $coordinates = $this->extractCoordinatesFromLocation($location);
 
@@ -135,11 +141,10 @@ class GetAddressFromBingMapsAction
     /**
      * Extract location array from Bing Maps API response.
      *
-     * @param array<string, mixed> $response
+     * @param  array<string, mixed>  $response
+     * @return array<string, mixed>
      *
      * @throws InvalidLocationException
-     *
-     * @return array<string, mixed>
      */
     private function extractLocationFromResponse(array $response): array
     {
@@ -169,22 +174,28 @@ class GetAddressFromBingMapsAction
             throw InvalidLocationException::invalidData('Indirizzo mancante nella risposta');
         }
 
+        /** @var array<string, mixed> $location */
         return $location;
     }
 
     /**
      * Extract coordinates from location array.
      *
-     * @param array<string, mixed> $location
+     * @param  array<string, mixed>  $location
+     * @return array{0: float, 1: float}
      *
      * @throws InvalidLocationException
-     *
+     */
+    /**
+     * @param  array<string, mixed>  $location
      * @return array{0: float, 1: float}
      */
     private function extractCoordinatesFromLocation(array $location): array
     {
-        $point = $location['point'];
-        $coordinates = $point['coordinates'];
+        /** @var array<string, mixed> $point */
+        $point = $location['point'] ?? [];
+        /** @var array<int|string, mixed> $coordinates */
+        $coordinates = $point['coordinates'] ?? [];
 
         if (! isset($coordinates[0], $coordinates[1])) {
             throw InvalidLocationException::invalidData('Coordinate non valide');
@@ -202,9 +213,8 @@ class GetAddressFromBingMapsAction
      * Centralizes the repeated validation pattern: isset + is_string + default null.
      * This helper reduces cyclomatic complexity by applying DRY principle.
      *
-     * @param array<string, mixed> $data Source array
-     * @param string               $key  Field key to extract
-     *
+     * @param  array<string, mixed>  $data  Source array
+     * @param  string  $key  Field key to extract
      * @return string|null Validated string value or null if not found/not string
      */
     private function extractStringField(array $data, string $key): ?string

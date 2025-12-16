@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Actions\View;
 
-<<<<<<< HEAD
-=======
 use Exception;
->>>>>>> 46d657c (.)
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
@@ -25,28 +22,17 @@ class GetCmsViewAction
      * type-safe view resolution. This avoids direct PHPDoc hacks on local variables
      * and centralizes the "magic" needed for static analysis compliance.
      *
-     * @param string $viewName The name of the view to resolve (e.g., 'pub_theme::components.sections.home' or 'cms::components.section')
-<<<<<<< HEAD
-     *
-     * @throws \Exception If the view does not exist
-     *
-     * @return view-string The resolved and existing view name
-=======
+     * @param  string  $viewName  The name of the view to resolve (e.g., 'pub_theme::components.sections.home' or 'cms::components.section')
      * @return view-string The resolved and existing view name
      *
      * @throws Exception If the view does not exist
->>>>>>> 46d657c (.)
      */
     public function execute(string $viewName): string
     {
         Assert::stringNotEmpty($viewName, 'View name cannot be empty.');
 
         if (! view()->exists($viewName)) {
-<<<<<<< HEAD
-            throw new \Exception('View not found: '.$viewName);
-=======
             throw new Exception('View not found: '.$viewName);
->>>>>>> 46d657c (.)
         }
 
         // The @return view-string PHPDoc on the method itself is the key

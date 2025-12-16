@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
-use Illuminate\Support\Str;
-use Illuminate\Routing\Router;
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Str;
+use Modules\Xot\Http\Middleware\SetDefaultTenantForUrlsMiddleware;
 
 // public function boot(\Illuminate\Routing\Router $router)
 
@@ -69,7 +68,7 @@ class RouteServiceProvider extends ServiceProvider
         $langs = ['it', 'en'];
         $user = request()->user();
         $lang = app()->getLocale();
-        if ($user instanceof Model && $user instanceof UserContract) {
+        if ($user instanceof Model) {
             $userLang = $user->getAttribute('lang');
             if (is_string($userLang) && $userLang !== '') {
                 $lang = $userLang;

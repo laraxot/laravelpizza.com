@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Resources\EventResource\Pages;
 
-use Filament\Actions;
-use Filament\Resources\Pages\CreateRecord;
-use Modules\Meetup\Filament\Resources\EventResource;
+use Modules\Meetup\Filament\Resources\EventResource as EventResourceClass;
+use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
-class CreateEvent extends CreateRecord
+class CreateEvent extends XotBaseCreateRecord
 {
-    protected static string $resource = EventResource::class;
+    protected static string $resource = EventResourceClass::class;
 }

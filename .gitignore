@@ -33,9 +33,13 @@ docs/
 .claude/
 .gemini/
 .ai/
+.ai-context/
 .cursor/
 .Windsurf/
 .windsurf/
 .cursorrules
 laravel/database/migrations/
 _base_laravelpizza_1.code-workspace
+IFLOW.md
+GEMINI.md
+CLAUDE.md
