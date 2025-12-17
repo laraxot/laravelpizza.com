@@ -3,9 +3,701 @@ No requested formats were found, using fallback [console] instead.
 
     0/3743 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%
 
- 3724/3743 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░]  99%
+ 3596/3743 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░]  96%
+
+ 3602/3743 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░]  96%
+
+ 3673/3743 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░]  98%
 
  3743/3743 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+
+[2025-12-16 17:28:03] `/var/www/_bases/base_laravelpizza/laravel/Modules`
+
+                                                                            
+          66.0%            94.3%            41.2%            78.3%          
+                                                                            
+                                                                            
+          Code           Complexity      Architecture        Style          
+
+
+Score scale: ◼ 1-49 ◼ 50-79 ◼ 80-100
+
+[CODE] 66 pts within 73579 lines
+
+Comments ...................................................... 52.1 %
+Classes ....................................................... 24.0 %
+Functions ...................................................... 2.7 %
+Globally ...................................................... 21.2 %
+
+[COMPLEXITY] 94.3 pts with average of 1.84 cyclomatic complexity
+
+[ARCHITECTURE] 41.2 pts within 3739 files
+
+Classes ....................................................... 46.6 %
+Interfaces ..................................................... 1.6 %
+Globally ...................................................... 50.4 %
+Traits ......................................................... 1.4 %
+
+[MISC] 78.3 pts on coding style
+
+• [Code] Forbidden public property:
+  Xot/app/States/XotBaseState.php:29: Do not use public properties. Use method access instead.
+  Xot/app/Traits/HasCsrfToken.php:15: Do not use public properties. Use method access instead.
+  Xot/app/View/Components/XotBaseComponent.php:22: Do not use public properties. Use method access instead.
+  +681 issues omitted
+
+• [Code] Forbidden setter:
+  Xot/app/Models/Traits/HasExtraTrait.php:78: Setters are not allowed. Use constructor injection and behavior naming instead.
+  Xot/app/Services/ModuleService.php:50: Setters are not allowed. Use constructor injection and behavior naming instead.
+  Xot/app/Services/ThemeService.php:23: Setters are not allowed. Use constructor injection and behavior naming instead.
+  +46 issues omitted
+
+• [Code] Property declaration:
+  Geo/app/Services/GeoService.php:23: Property name "$_instance" should not be prefixed with an underscore to indicate visibility
+  Xot/app/Services/ModuleService.php:23: Property name "$_instance" should not be prefixed with an underscore to indicate visibility
+  Xot/app/Traits/HasCsrfToken.php:15: Property name "$_token" should not be prefixed with an underscore to indicate visibility
+  +1 issues omitted
+
+• [Code] Modern class name reference:
+  UI/app/View/Components/Render/Block.php:30: Class name referenced via magic constant.
+  UI/app/View/Components/Render/Block.php:54: Class name referenced via magic constant.
+  Xot/app/Actions/Array/DiffAssocRecursiveAction.php:24: Class name referenced via magic constant.
+  +8 issues omitted
+
+• [Code] Protected to private:
+  Notify/app/Factories/SmsActionFactory.php: 
+@@ -28,3 +28,3 @@
+      */
+-    protected array $supportedDrivers = [
++    private array $supportedDrivers = [
+         'smsfactor',
+@@ -42,3 +42,3 @@
+      */
+-    protected array $driverAliases = [
++    private array $driverAliases = [
+         'vonage' => 'nexmo',
+
+• [Code] Unused variable:
+  Xot/app/Services/RouteService.php:79: Unused variable $routename.
+  Xot/app/Services/RouteService.php:335: Unused variable $items.
+  Xot/app/States/XotBaseState.php:78: Unused variable $appointment.
+  +68 issues omitted
+
+• [Code] Useless variable:
+  UI/app/Filament/Forms/Components/RadioBadge.php:48: Useless variable $res.
+  UI/app/Filament/Widgets/UserCalendarWidget.php:26: Useless variable $action.
+  User/app/Filament/Widgets/EditUserWidget.php:113: Useless variable $result.
+  +17 issues omitted
+
+• [Code] Empty statement:
+  Xot/app/Providers/XotBaseServiceProvider.php:76: Empty CATCH statement detected
+  Xot/app/Providers/XotBaseServiceProvider.php:145: Empty IF statement detected
+  Xot/app/Services/ModuleService.php:107: Empty CATCH statement detected
+  +19 issues omitted
+
+• [Code] Useless overriding method:
+  User/app/Models/DeviceProfile.php:41: Possible useless method overriding detected
+  Xot/app/Filament/Forms/Components/XotBaseFormComponent.php:52: Possible useless method overriding detected
+  Xot/app/Filament/Schemas/Components/XotBaseSection.php:21: Possible useless method overriding detected
+  +12 issues omitted
+
+• [Code] Unnecessary string concat:
+  Xot/app/Actions/Import/ImportCsvAction.php:118: String concat is not required here; use a single string instead
+  Xot/app/Actions/Import/ImportCsvAction.php:121: String concat is not required here; use a single string instead
+  Xot/app/Actions/Import/ImportCsvAction.php:124: String concat is not required here; use a single string instead
+  +1 issues omitted
+
+• [Code] Assignment in condition:
+  Job/app/Models/JobManager.php:106: Assignment in if condition is not allowed.
+  Media/app/Models/TemporaryUpload.php:107: Assignment in if condition is not allowed.
+  Xot/app/Exceptions/Handlers/HandlersRepository.php:100: Assignment in if condition is not allowed.
+  +1 issues omitted
+
+• [Code] Disallow empty:
+  Xot/app/Filament/Widgets/XotBaseWidget.php:120: Use of empty() is disallowed.
+  Xot/app/Helpers/ResourceFormSchemaGenerator.php:91: Use of empty() is disallowed.
+  Xot/app/Helpers/ResourceFormSchemaGenerator.php:92: Use of empty() is disallowed.
+  +192 issues omitted
+
+• [Code] Disallow short ternary operator:
+  UI/app/Filament/Tables/Columns/SelectStateColumn.php:94: Use of short ternary operator is disallowed.
+  UI/app/Filament/Widgets/RedirectWidget.php:90: Use of short ternary operator is disallowed.
+  Xot/app/Filament/Widgets/ModulesOverviewWidget.php:69: Use of short ternary operator is disallowed.
+  +24 issues omitted
+
+• [Code] Disallow yoda comparison:
+  Lang/docs/italian-text-validation-refined.php:226: Yoda comparisons are disallowed.
+  Lang/docs/italian-text-validation-refined.php:226: Yoda comparisons are disallowed.
+  Lang/docs/obbligatorio-audit-script.php:68: Yoda comparisons are disallowed.
+  +120 issues omitted
+
+• [Code] Require only standalone increment and decrement operators:
+  Cms/app/Models/Module.php:53: Post-increment operator should be used only as single instruction.
+  Geo/app/Services/GeoService.php:167: Post-increment operator should be used only as single instruction.
+
+• [Code] Useless parentheses:
+  Notify/app/Actions/WhatsApp/SendFacebookWhatsAppAction.php:136: Useless parentheses.
+  Notify/app/Actions/WhatsApp/SendFacebookWhatsAppAction.php:166: Useless parentheses.
+  Notify/app/Console/Commands/AnalyzeTranslationFiles.php:172: Useless parentheses.
+  +22 issues omitted
+
+• [Code] Declare strict types:
+  User/app/Http/Controllers/Auth/EmailVerificationController.php:18: Expected 1 line before declare statement, found 0.
+  Xot/lang/en/main_dashboard.php:1: Missing declare(strict_types=1).
+  Xot/lang/it/filter_form.php:1: Missing declare(strict_types=1).
+  +22 issues omitted
+
+• [Code] Ternary to null coalescing:
+  User/app/Http/Controllers/Api/RegisterController.php: 
+@@ -60,3 +60,3 @@
+         $success['token'] = $user->createToken('MyApp')->accessToken;
+-        $success['name'] = isset($user->name) ? $user->name : '';
++        $success['name'] = $user->name ?? '';
+
+• [Code] New with braces:
+  Xot/database/migrations/2024_09_24_111828_create_pulse_aggregates_table.php: 
+@@ -7,3 +7,3 @@
+ 
+-return new class extends XotBaseMigration
++return new class() extends XotBaseMigration
+ {
+  Xot/database/migrations/2024_09_24_111828_create_pulse_entries_table.php: 
+@@ -7,3 +7,3 @@
+ 
+-return new class extends XotBaseMigration
++return new class() extends XotBaseMigration
+ {
+  Xot/database/migrations/2024_09_24_111828_create_pulse_values_table.php: 
+@@ -7,3 +7,3 @@
+ 
+-return new class extends XotBaseMigration
++return new class() extends XotBaseMigration
+ {
+  +160 issues omitted
+
+• [Code] No useless else:
+  Lang/Console/Commands/ConvertTranslations.php: 
+@@ -206,3 +206,3 @@
+             return $code;
+-        } else {
++        }  
+             $export = var_export($var, true);
+@@ -211,3 +211,3 @@
+             return $export;
+-        }
++        
+     }
+
+• [Code] Todo:
+  Xot/app/Actions/Pdf/PdfEngineEnum.php:14: Comment refers to a TODO task "Aggiungere altri engine se necessario"
+  Xot/app/Providers/XotServiceProvider.php:98: Comment refers to a TODO task "Re-implement when compatible with current Filament version"
+  Xot/app/Services/ArtisanService.php:25: Comment refers to a TODO task
+  +15 issues omitted
+
+• [Code] Inline doc comment declaration:
+  Xot/app/Services/RouteDynService.php:319: Missing variable $subs before or after the documentation comment.
+  Xot/app/Services/RouteDynService.php:335: No assignment to $v1 variable before or after the documentation comment.
+  Xot/app/View/Components/XDebug.php:38: Missing variable $view before or after the documentation comment.
+  +179 issues omitted
+
+• [Code] Disallow mixed type hint:
+  Xot/app/View/Components/XotBaseComponent.php:20: Usage of "mixed" type hint is disallowed.
+  Xot/app/View/Composers/XotComposer.php:30: Usage of "mixed" type hint is disallowed.
+  Xot/database/factories/XotBaseModelFactory.php:25: Usage of "mixed" type hint is disallowed.
+  +872 issues omitted
+
+• [Code] Parameter type hint:
+  Xot/app/Relations/CustomRelation.php:122: Method \Modules\Xot\Relations\CustomRelation::get() does not have native type hint for its parameter $columns but it should be possible to add it based on @param annotation "mixed".
+  Xot/app/Rules/DateTimeRule.php:22: Method \Modules\Xot\Rules\DateTimeRule::passes() does not have native type hint for its parameter $attribute but it should be possible to add it based on @param annotation "string".
+  Xot/app/Rules/DateTimeRule.php:22: Method \Modules\Xot\Rules\DateTimeRule::passes() does not have native type hint for its parameter $value but it should be possible to add it based on @param annotation "mixed".
+  +267 issues omitted
+
+• [Code] Property type hint:
+  Xot/database/factories/HealthCheckResultHistoryItemFactory.php:17: Property \Modules\Xot\Database\Factories\HealthCheckResultHistoryItemFactory::$model does not have native type hint nor @var annotation for its value.
+  Xot/database/factories/InformationSchemaTableFactory.php:17: Property \Modules\Xot\Database\Factories\InformationSchemaTableFactory::$model does not have native type hint nor @var annotation for its value.
+  Xot/database/factories/ModuleFactory.php:17: Property \Modules\Xot\Database\Factories\ModuleFactory::$model does not have native type hint nor @var annotation for its value.
+  +598 issues omitted
+
+• [Code] Return type hint:
+  Xot/database/factories/PulseEntryFactory.php:25: Method \Modules\Xot\Database\Factories\PulseEntryFactory::definition() does not have @return annotation for its traversable return value.
+  Xot/database/factories/PulseValueFactory.php:25: Method \Modules\Xot\Database\Factories\PulseValueFactory::definition() does not have @return annotation for its traversable return value.
+  Xot/database/factories/SessionFactory.php:26: Method \Modules\Xot\Database\Factories\SessionFactory::definition() does not have @return annotation for its traversable return value.
+  +685 issues omitted
+
+• [Code] Multiline comment opening closing:
+  Notify/app/Emails/SpatieEmail.php: 
+@@ -263,3 +263,3 @@
+     {
+-        /**@phpstan-ignore method.notFound */
++        /*@phpstan-ignore method.notFound */
+         $sms_template = $this->getMailTemplate()->getAttributeValue('sms_template');
+  UI/app/Rules/OpeningHoursRule.php: 
+@@ -34,3 +34,3 @@
+         foreach ($days as $dayKey => $dayLabel) {
+-            /**@phpstan-ignore-next-line */
++            /*@phpstan-ignore-next-line */
+             $dayHours = $value[$dayKey] ?? [];
+
+• [Code] No empty comment:
+  Xot/Filament/Forms/Components/XotBasePlaceholder.php: 
+@@ -10,3 +10,3 @@
+ {
+-    //
++    
+ }
+
+• [Code] Unused parameter:
+  Xot/database/factories/ModuleFactory.php:33: Unused parameter $_attributes.
+  Xot/database/factories/ModuleFactory.php:40: Unused parameter $_attributes.
+  Xot/database/factories/ModuleFactory.php:47: Unused parameter $_attributes.
+  +724 issues omitted
+
+• [Code] Static closure:
+  Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php:38: Closure not using "$this" should be declared static.
+  Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php:54: Closure not using "$this" should be declared static.
+  Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php:57: Closure not using "$this" should be declared static.
+  +485 issues omitted
+
+• [Code] Defining global helpers is prohibited:
+  Xot/database/migrations/2024_09_24_111828_create_pulse_aggregates_table.php:1:up
+  Xot/database/migrations/2024_09_24_111828_create_pulse_entries_table.php:1:up
+  Xot/database/migrations/2024_09_24_111828_create_pulse_values_table.php:1:up
+  +301 issues omitted
+
+• [Code] Return assignment:
+  Xot/app/Actions/Filament/GetModulesNavigationItems.php: 
+@@ -156,3 +156,3 @@
+         /** @var array<int, array{module: string, module_low: string, icon: string, sort: int}> $result */
+-        $result = Cache::remember($cacheKey, now()->addMinutes(10), static function () use ($modules): array {
++        return Cache::remember($cacheKey, now()->addMinutes(10), static function () use ($modules): array {
+             $out = [];
+@@ -186,4 +186,2 @@
+         });
+-
+-        return $result;
+     }
+  Xot/app/Filament/Pages/XotBasePage.php: 
+@@ -259,5 +259,3 @@
+         /** @var bool $result */
+-        $result = $user->hasPermissionTo($permission);
+-
+-        return $result;
++        return $user->hasPermissionTo($permission);
+     }
+  Xot/app/Filament/Resources/Pages/XotBasePage.php: 
+@@ -131,5 +131,3 @@
+         /** @var Collection<int, string> $resources */
+-        $resources = collect();
+-
+-        return $resources;
++        return collect();
+     }
+  +46 issues omitted
+
+• [Code] Void return:
+  UI/app/Filament/Tables/Columns/IconStateColumn.php: 
+@@ -132,3 +132,3 @@
+                 })
+-                ->action(function ($record, $data) {
++                ->action(function ($record, $data): void {
+                     /** @var array<string, mixed> $data */
+  UI/app/Filament/Tables/Columns/IconStateSplitColumn.php: 
+@@ -162,3 +162,3 @@
+             ->tooltip('Test Prova')
+-            ->action(function () use ($record) {
++            ->action(function () use ($record): void {
+                 $recordId = $record && isset($record->id) ? ((string) $record->id) : 'N/A';
+  User/database/migrations/2023_01_01_000008_create_tenants_table.php: 
+@@ -15,3 +15,3 @@
+     {
+-        Schema::create('tenants', function (Blueprint $table) {
++        Schema::create('tenants', function (Blueprint $table): void {
+             $table->string('id')->primary();
+  +15 issues omitted
+
+• [Code] 13 globals accesses detected:
+  Xot/app/Datas/XotData.php:472: Usage of super global $_SERVER found; Usage of GLOBALS are discouraged consider not relying on global scope
+  Xot/app/Datas/XotData.php:475: Usage of super global $_SERVER found; Usage of GLOBALS are discouraged consider not relying on global scope
+  Xot/app/Datas/XotData.php:479: Usage of super global $_SERVER found; Usage of GLOBALS are discouraged consider not relying on global scope
+  +8 issues omitted
+
+• [Complexity] Having `classes` with total cyclomatic complexity more than 5 is prohibited - Consider refactoring:
+  Xot/app/Services/RouteDynService.php: 26 cyclomatic complexity
+  Xot/app/Services/RouteService.php: 16 cyclomatic complexity
+  Xot/app/View/Composers/XotComposer.php: 6 cyclomatic complexity
+  +340 issues omitted
+
+• [Complexity] Having `classes` with average method cyclomatic complexity more than 5 is prohibited - Consider refactoring:
+  Xot/app/Providers/Filament/XotBaseMainPanelProvider.php: 11.00 cyclomatic complexity
+  Xot/app/Services/ArtisanService.php: 5.86 cyclomatic complexity
+  Xot/app/Services/HtmlService.php: 6.00 cyclomatic complexity
+  +64 issues omitted
+
+• [Complexity] Having `methods` with cyclomatic complexity more than 5 is prohibited - Consider refactoring:
+  Xot/app/Services/HtmlService.php:toPdf: 6 cyclomatic complexity
+  Xot/app/Services/ModuleService.php:getModels: 6 cyclomatic complexity
+  Xot/app/Services/RouteService.php:inAdmin: 6 cyclomatic complexity
+  +226 issues omitted
+
+• [Architecture] Normal classes are forbidden. Classes must be final or abstract:
+  Xot/database/seeders/XotDatabaseSeeder.php
+  Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php
+  Xot/packages/coolsam/panel-modules/src/Extensions/LaravelModulesServiceProvider.php
+  +1511 issues omitted
+
+• [Architecture] Valid class name:
+  Xot/app/Actions/Export/PdfByHtmlAction_Portrait.php:12: Class name "PdfByHtmlAction_Portrait" is not in PascalCase format
+
+• [Architecture] Superfluous interface naming:
+  Seo/app/Interfaces/MetatagDataInterface.php:9: Superfluous suffix "Interface".
+  Tenant/app/Services/Config/Contracts/ConfigResolverInterface.php:10: Superfluous suffix "Interface".
+  Xot/app/Services/Artisan/Contracts/CommandHandlerInterface.php:10: Superfluous suffix "Interface".
+  +4 issues omitted
+
+• [Architecture] Superfluous abstract class naming:
+  Xot/app/Services/Trend/Adapters/AbstractAdapter.php:7: Superfluous prefix "Abstract".
+
+• [Architecture] Define `globals` is prohibited:
+  Xot/Helpers/Helper.php: LARAVEL_START
+  Xot/app/Services/ArtisanService.php: STDIN
+  Xot/phpstan_constants.php: LARAVEL_DIR
+  +7 issues omitted
+
+• [Architecture] Superfluous exception naming:
+  Xot/app/Exceptions/JsonEncodeException.php:15: Superfluous suffix "Exception".
+  Xot/app/Exceptions/ModelDeletionException.php:16: Superfluous suffix "Exception".
+  Xot/app/Exceptions/RepositoryException.php:12: Superfluous suffix "Exception".
+  +5 issues omitted
+
+• [Architecture] Function length:
+  Xot/database/factories/InformationSchemaTableFactory.php:19: Your function is too long. Currently using 34 lines. Can be up to 20 lines.
+  Xot/database/migrations/2024_09_24_111828_create_pulse_aggregates_table.php:13: Your function is too long. Currently using 23 lines. Can be up to 20 lines.
+  Xot/packages/coolsam/panel-modules/src/CoolModulesServiceProvider.php:34: Your function is too long. Currently using 31 lines. Can be up to 20 lines.
+  +417 issues omitted
+
+• [Architecture] Method argument space:
+  Seo/app/Data/MetatagData.php: 
+@@ -244,3 +244,5 @@
+         throw new BadMethodCallException(sprintf(
+-            'Method %s::%s does not exist.', static::class, $method
++            'Method %s::%s does not exist.',
++            static::class,
++            $method
+         ));
+
+• [Architecture] The use of `traits` is prohibited:
+  Xot/app/Traits/HasCustomRelations.php
+  Xot/app/Traits/HasTableFunctionsTrait.php
+  Xot/app/Traits/Updater.php
+  +50 issues omitted
+
+• [Architecture] Superfluous trait naming:
+  Xot/app/Filament/Traits/TransTrait.php:19: Superfluous suffix "Trait".
+  Xot/app/Models/Traits/HasExtraTrait.php:25: Superfluous suffix "Trait".
+  Xot/app/Traits/HasTableFunctionsTrait.php:12: Superfluous suffix "Trait".
+  +11 issues omitted
+
+• [Style] Syntax Check:
+  ./Tenant/.vscode/.php-cs-fixer.php:15: PHP syntax error: syntax error, unexpected variable "$config"
+  ./Xot/.php-cs-fixer.dist.php:43: PHP syntax error: syntax error, unexpected token "return"
+  ./Xot/.vscode/.php-cs-fixer.php:13: PHP syntax error: syntax error, unexpected variable "$config"
+  +9 issues omitted
+
+• [Style] Side effects:
+  Lang/docs/italian-text-audit-script.php:1: A file should declare new symbols (classes, functions, constants, etc.) and cause no other side effects, or it should execute logic with side effects, but should not do both. The first symbol is defined on line 8 and the first side effect is on line 205.
+  Lang/docs/italian-text-validation-refined.php:1: A file should declare new symbols (classes, functions, constants, etc.) and cause no other side effects, or it should execute logic with side effects, but should not do both. The first symbol is defined on line 9 and the first side effect is on line 328.
+  Lang/docs/obbligatorio-audit-script.php:1: A file should declare new symbols (classes, functions, constants, etc.) and cause no other side effects, or it should execute logic with side effects, but should not do both. The first symbol is defined on line 9 and the first side effect is on line 226.
+  +1 issues omitted
+
+• [Style] Function closing brace:
+  Activity/database/seeders/ActivityDatabaseSeeder.php:19: Function closing brace must go on the next line following the body; found 1 blank lines before brace
+  Gdpr/Enums/ConsentType.php:57: Function closing brace must go on the next line following the body; found 1 blank lines before brace
+  Tenant/app/Models/Traits/SushiToPhpArray.php:90: Function closing brace must go on the next line following the body; found 1 blank lines before brace
+
+• [Style] Scope closing brace:
+  Xot/app/States/Transitions/XotBaseTransition.php:24: Closing brace must be on a line by itself
+  Xot/app/ValueObjects/PhoneValueObject.php:18: Closing brace must be on a line by itself
+  Xot/app/View/Components/XDebug.php:27: Closing brace must be on a line by itself
+  +150 issues omitted
+
+• [Style] Line length:
+  Xot/phpinsights.php:125: Line exceeds 80 characters; contains 83 characters
+  Xot/resources/lang/it/auth.php:34: Line exceeds maximum limit of 100 characters; contains 166 characters
+  Xot/resources/lang/it/widgets.php:11: Line exceeds maximum limit of 100 characters; contains 137 characters
+  +10406 issues omitted
+
+• [Style] Space after not:
+  Notify/app/Datas/EmailData.php:43: Expected 1 space after NOT operator; 0 found
+  Notify/app/Datas/EmailData.php:58: Expected 1 space after NOT operator; 0 found
+  Notify/app/Datas/EmailData.php:62: Expected 1 space after NOT operator; 0 found
+  +4 issues omitted
+
+• [Style] Arbitrary parentheses spacing:
+  Job/app/Filament/Resources/JobsWaitingResource/Widgets/JobsWaitingOverview.php:55: Expected 0 space before close parenthesis; newline found
+  Job/app/Filament/Resources/ScheduleResource/Pages/ViewSchedule.php:109: Expected 0 space after open parenthesis; newline found
+  Job/app/Filament/Resources/ScheduleResource/Pages/ViewSchedule.php:111: Expected 0 space before close parenthesis; newline found
+  +11 issues omitted
+
+• [Style] Camel caps method name:
+  Geo/app/Services/GeoService.php:160: Method name "GeoService::is_in_polygon" is not in camel caps format
+  Xot/Services/ArrayService.php:28: Method name "ArrayService::diff_assoc_recursive" is not in camel caps format
+  Xot/app/Services/RouteDynService.php:266: Method name "RouteDynService::dynamic_route" is not in camel caps format
+
+• [Style] Alphabetically sorted uses:
+  Lang/app/Actions/GetAllTranslationAction.php:12: Use statements should be sorted alphabetically. The first wrong one is Spatie\QueueableAction\QueueableAction.
+  Lang/app/Actions/WriteTranslationFileAction.php:14: Use statements should be sorted alphabetically. The first wrong one is Spatie\QueueableAction\QueueableAction.
+  Lang/app/Models/TranslationFile.php:20: Use statements should be sorted alphabetically. The first wrong one is Sushi\Sushi.
+  +10 issues omitted
+
+• [Style] Unused uses:
+  Xot/database/factories/LogFactory.php:8: Type Illuminate\Database\Eloquent\Model is not used in this file.
+  Xot/database/factories/SessionFactory.php:8: Type Illuminate\Database\Eloquent\Model is not used in this file.
+  Xot/packages/coolsam/panel-modules/database/factories/ModelFactory.php:7: Type Illuminate\Database\Eloquent\Factories\Factory is not used in this file.
+  +99 issues omitted
+
+• [Style] Use spacing:
+  Xot/app/Services/RouteDynService.php:12: Expected 0 lines between different types of use statement, found 1.
+  Xot/app/ValueObjects/PhoneValueObject.php:9: Expected 0 lines between different types of use statement, found 1.
+  Xot/app/View/Components/XDebug.php:13: Expected 0 lines between different types of use statement, found 1.
+  +125 issues omitted
+
+• [Style] Doc comment spacing:
+  Xot/app/Services/RouteService.php:24: Expected 1 line between different annotations types, found 0.
+  Xot/app/States/XotBaseState.php:98: Expected 1 line between different annotations types, found 0.
+  Xot/app/Traits/Updater.php:20: Expected 1 line between different annotations types, found 0.
+  +316 issues omitted
+
+• [Style] Class instantiation:
+  Xot/app/Services/UrlService.php:28: Parentheses must be used when instantiating a new class
+  Xot/app/Traits/HasCustomRelations.php:30: Parentheses must be used when instantiating a new class
+  Xot/app/View/Composers/XotComposer.php:74: Parentheses must be used when instantiating a new class
+  +77 issues omitted
+
+• [Style] Braces:
+  Xot/database/migrations/2024_09_24_111828_create_pulse_aggregates_table.php: 
+@@ -7,4 +7,3 @@
+ 
+-return new class extends XotBaseMigration
+-{
++return new class extends XotBaseMigration {
+     /**
+  Xot/database/migrations/2024_09_24_111828_create_pulse_entries_table.php: 
+@@ -7,4 +7,3 @@
+ 
+-return new class extends XotBaseMigration
+-{
++return new class extends XotBaseMigration {
+     /**
+  Xot/database/migrations/2024_09_24_111828_create_pulse_values_table.php: 
+@@ -7,4 +7,3 @@
+ 
+-return new class extends XotBaseMigration
+-{
++return new class extends XotBaseMigration {
+     /**
+  +245 issues omitted
+
+• [Style] Class definition:
+  Xot/database/migrations/2024_09_24_111828_create_pulse_aggregates_table.php: 
+@@ -7,4 +7,3 @@
+ 
+-return new class extends XotBaseMigration
+-{
++return new class extends XotBaseMigration {
+     /**
+  Xot/database/migrations/2024_09_24_111828_create_pulse_entries_table.php: 
+@@ -7,4 +7,3 @@
+ 
+-return new class extends XotBaseMigration
+-{
++return new class extends XotBaseMigration {
+     /**
+  Xot/database/migrations/2024_09_24_111828_create_pulse_values_table.php: 
+@@ -7,4 +7,3 @@
+ 
+-return new class extends XotBaseMigration
+-{
++return new class extends XotBaseMigration {
+     /**
+  +154 issues omitted
+
+• [Style] Phpdoc indent:
+  Cms/app/Filament/Fields/PageContent.php: 
+@@ -20,3 +20,3 @@
+ 
+-        /** @var list<Block> $blockList */ $blockList = [];
++/** @var list<Block> $blockList */ $blockList = [];
+  Cms/app/Filament/Fields/PageContentBuilder.php: 
+@@ -35,3 +35,3 @@
+     {
+-        /** @var list<Block> $blockList */ $blockList = [];
++/** @var list<Block> $blockList */ $blockList = [];
+
+• [Style] Ordered class elements:
+  UI/app/Filament/Tables/Columns/GroupColumn.php: 
+@@ -19,2 +19,12 @@
+ 
++    /**
++     * Initialize the component.
++     */
++    protected function setUp(): void
++    {
++        parent::setUp();
++
++        // Component initialization logic
++    }
++
+     public function getFields(): array
+@@ -41,12 +51,2 @@
+         return $this;
+-    }
+-
+-    /**
+-     * Initialize the component.
+-     */
+-    protected function setUp(): void
+-    {
+-        parent::setUp();
+-
+-        // Component initialization logic
+     }
+  UI/app/Filament/Widgets/UserCalendarWidget.php: 
+@@ -15,3 +15,2 @@
+ {
+-    protected string $view = 'ui::filament.widgets.user-calendar';
+ 
+@@ -18,2 +17,3 @@
+     public string $type;
++    protected string $view = 'ui::filament.widgets.user-calendar';
+ 
+@@ -63,26 +63,2 @@
+     /**
+-     * Validate that the given value is an array of events with string keys.
+-     */
+-    private static function isValidEventsArray(mixed $value): bool
+-    {
+-        if (! is_array($value)) {
+-            return false;
+-        }
+-
+-        foreach ($value as $event) {
+-            if (! is_array($event)) {
+-                return false;
+-            }
+-
+-            foreach (array_keys($event) as $key) {
+-                if (! is_string($key)) {
+-                    return false;
+-                }
+-            }
+-        }
+-
+-        return true;
+-    }
+-
+-    /**
+      * @return array<int, TextInput|Grid>
+@@ -120,2 +96,26 @@
+         // TODO: Implementare la logica per la selezione della data
++    }
++
++    /**
++     * Validate that the given value is an array of events with string keys.
++     */
++    private static function isValidEventsArray(mixed $value): bool
++    {
++        if (! is_array($value)) {
++            return false;
++        }
++
++        foreach ($value as $event) {
++            if (! is_array($event)) {
++                return false;
++            }
++
++            foreach (array_keys($event) as $key) {
++                if (! is_string($key)) {
++                    return false;
++                }
++            }
++        }
++
++        return true;
+     }
+  Xot/app/Filament/Traits/TransTrait.php: 
+@@ -195,15 +195,2 @@
+     /**
+-     * Get a translation according to an integer value.
+-     *
+-     * @param  array<string, bool|float|int|string|null>  $replace
+-     */
+-    protected function transChoice(string $key, int $number, array $replace = []): string
+-    {
+-        /** @var string $result */
+-        $result = trans_choice($key, $number, $replace);
+-
+-        return is_string($result) ? $result : $key;
+-    }
+-
+-    /**
+      * Ottiene la chiave di traduzione per un dato key.
+@@ -280,2 +267,15 @@
+         return $moduleName;
++    }
++
++    /**
++     * Get a translation according to an integer value.
++     *
++     * @param  array<string, bool|float|int|string|null>  $replace
++     */
++    protected function transChoice(string $key, int $number, array $replace = []): string
++    {
++        /** @var string $result */
++        $result = trans_choice($key, $number, $replace);
++
++        return is_string($result) ? $result : $key;
+     }
+  +32 issues omitted
+
+• [Style] Ordered imports:
+  Xot/app/Models/Traits/HasExtraTrait.php: 
+@@ -10,2 +10,3 @@
+ use Modules\Xot\Contracts\ExtraContract;
++use function Safe\json_encode;
+ use Spatie\SchemalessAttributes\SchemalessAttributes;
+@@ -11,2 +12,3 @@
+ use Spatie\SchemalessAttributes\SchemalessAttributes;
++
+ use Webmozart\Assert\Assert;
+@@ -12,4 +14,2 @@
+ use Webmozart\Assert\Assert;
+-
+-use function Safe\json_encode;
+  Xot/app/Services/ArtisanService.php: 
+@@ -14,3 +14,3 @@
+ use Illuminate\Support\Facades\Route;
+-use Webmozart\Assert\Assert;
++use function Safe\define;
+ 
+@@ -16,3 +16,2 @@
+ 
+-use function Safe\define;
+ use function Safe\fopen;
+@@ -19,2 +18,3 @@
+ use function Safe\preg_match_all;
++use Webmozart\Assert\Assert;
+  Xot/app/Services/RouteDynService.php: 
+@@ -9,2 +9,4 @@
+ use Illuminate\Support\Str;
++use function Safe\preg_replace;
++
+ use Webmozart\Assert\Assert;
+@@ -10,4 +12,2 @@
+ use Webmozart\Assert\Assert;
+-
+-use function Safe\preg_replace;
+  +62 issues omitted
 
  [ERROR] The code quality score is too low                                      
 

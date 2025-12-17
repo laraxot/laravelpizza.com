@@ -12,35 +12,35 @@ use Modules\Tenant\Models\Traits\SushiToJsons;
 /**
  * Modules\Cms\Models\Section.
  *
- * @property string                                      $id
- * @property array<array-key, mixed>|null                $name
- * @property string|null                                 $slug
- * @property array<array-key, mixed>|null                $blocks
- * @property Carbon|null                                 $created_at
- * @property Carbon|null                                 $updated_at
- * @property string|null                                 $created_by
- * @property string|null                                 $updated_by
+ * @property string $id
+ * @property array<array-key, mixed>|null $name
+ * @property string|null $slug
+ * @property array<array-key, mixed>|null $blocks
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $created_by
+ * @property string|null $updated_by
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property mixed                                       $translations
+ * @property mixed $translations
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
- * @method static Builder<static>|Section                               newModelQuery()
- * @method static Builder<static>|Section                               newQuery()
- * @method static Builder<static>|Section                               query()
- * @method static Builder<static>|Section                               whereBlocks($value)
- * @method static Builder<static>|Section                               whereCreatedAt($value)
- * @method static Builder<static>|Section                               whereCreatedBy($value)
- * @method static Builder<static>|Section                               whereId($value)
+ * @method static Builder<static>|Section newModelQuery()
+ * @method static Builder<static>|Section newQuery()
+ * @method static Builder<static>|Section query()
+ * @method static Builder<static>|Section whereBlocks($value)
+ * @method static Builder<static>|Section whereCreatedAt($value)
+ * @method static Builder<static>|Section whereCreatedBy($value)
+ * @method static Builder<static>|Section whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Section whereJsonContainsLocale(string $column, string $locale, ?mixed $value, string $operand = '=')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Section whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Section whereLocale(string $column, string $locale)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Section whereLocales(string $column, array $locales)
- * @method static Builder<static>|Section                               whereName($value)
- * @method static Builder<static>|Section                               whereSlug($value)
- * @method static Builder<static>|Section                               whereUpdatedAt($value)
- * @method static Builder<static>|Section                               whereUpdatedBy($value)
- * @method static int                                                   count()
- * @method static Builder<static>|Section                               where($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static Builder<static>|Section whereName($value)
+ * @method static Builder<static>|Section whereSlug($value)
+ * @method static Builder<static>|Section whereUpdatedAt($value)
+ * @method static Builder<static>|Section whereUpdatedBy($value)
+ * @method static int count()
+ * @method static Builder<static>|Section where($column, $operator = null, $value = null, $boolean = 'and')
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
  *

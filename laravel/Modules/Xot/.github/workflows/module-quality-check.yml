@@ -1,0 +1,79 @@
+name: Xot Module - Quality Check
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'Modules/Xot/**'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'Modules/Xot/**'
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./laravel
+        
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'
+        extensions: mbstring, xml, ctype, iconv, intl, pdo, sqlite, pdo_sqlite, bcmath, json, tokenizer, curl
+        coverage: none
+        
+    - name: Cache Composer dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.composer/cache/files
+        key: dependencies-xot-${{ runner.os }}-php-8.3-${{ hashFiles('**/composer.lock') }}
+        restore-keys: dependencies-xot-${{ runner.os }}-php-8.3-
+        
+    - name: Install Composer dependencies
+      run: composer install --no-progress --prefer-dist --optimize-autoloader
+      
+    - name: PHPStan Level 10 Analysis (Xot Module)
+      run: |
+        echo "🔍 Running PHPStan Level 10 Analysis on Xot Module..."
+        ./vendor/bin/phpstan analyse Modules/Xot --memory-limit=-1 --no-progress
+        
+    - name: Code Style Check (Pint)
+      run: |
+        echo "🎨 Checking code style with Pint..."
+        ./vendor/bin/pint --test Modules/Xot
+        
+    - name: PHPMD Analysis (Xot Module)
+      run: |
+        echo "🔍 Running PHPMD analysis on Xot Module..."
+        ./phpmd.phar Modules/Xot text Modules/Xot/phpmd.ruleset.xml || true
+        
+    - name: Check Xot Architecture Compliance
+      run: |
+        echo "🏗️  Checking Xot architecture compliance..."
+        
+        # Check that all classes extend proper base classes
+        VIOLATIONS=$(grep -r "extends.*Filament" Modules/Xot --include="*.php" | grep -v "XotBase" | wc -l || true)
+        if [ "$VIOLATIONS" -gt 0 ]; then
+          echo "❌ Found $VIOLATIONS direct Filament extensions in Xot:"
+          grep -r "extends.*Filament" Modules/Xot --include="*.php" | grep -v "XotBase"
+          exit 1
+        else
+          echo "✅ No direct Filament extensions found in Xot"
+        fi
+        
+    - name: Xot Module Quality Summary
+      run: |
+        echo "🎯 Xot Module Quality Check Summary"
+        echo "==================================="
+        echo "✅ PHPStan Level 10: PASSED"
+        echo "✅ Code Style: COMPLIANT"
+        echo "✅ Architecture: COMPLIANT"
+        echo ""
+        echo "🚀 Xot Module: QUALITY CHECK PASSED!"
