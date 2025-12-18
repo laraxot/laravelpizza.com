@@ -4,19 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources;
 
-use Filament\Forms\Components\DateTimePicker;
+use Override;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\DateTimePicker;
+use Modules\Job\Filament\Resources\ExportResource\Pages;
 use Modules\Job\Models\Export;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Override;
 
 class ExportResource extends XotBaseResource
 {
-    protected static ?string $model = Export::class;
+    protected static null|string $model = Export::class;
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     #[Override]
     public static function getFormSchema(): array

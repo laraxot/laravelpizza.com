@@ -2,10 +2,8 @@
 
 declare(strict_types=1);
 
-use PhpCsFixer\Config;
-use PhpCsFixer\Finder;
 
-$finder = Finder::create()
+$finder = PhpCsFixer\Finder::create()
     ->notPath('bootstrap/cache')
     ->notPath('storage')
     ->notPath('vendor')
@@ -13,9 +11,9 @@ $finder = Finder::create()
     ->name('*.php')
     ->notName('*.blade.php')
     ->ignoreDotFiles(true)
-    ->ignoreVCS(true);
+    ->ignoreVCS(true)
 
-$config = new Config();
+$config = new PhpCsFixer\Config();
 
 $config
     ->setRules([
@@ -40,6 +38,6 @@ $config
         'class_definition' => true,
         'elseif' => true,
     ])
-    ->setFinder($finder);
+    ->setFinder($finder)
 
 return $config;

@@ -8,12 +8,12 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\JobsWaitingResource\Pages;
 
+use Override;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Job\Filament\Resources\JobsWaitingResource;
 use Modules\Job\Filament\Resources\JobsWaitingResource\Widgets\JobsWaitingOverview;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-use Override;
 
 class ListJobsWaitings extends XotBaseListRecords
 {
@@ -45,7 +45,7 @@ class ListJobsWaitings extends XotBaseListRecords
             'status' => TextColumn::make('status')
                 ->badge()
                 ->sortable()
-                ->color(static fn (string $state): string => match ($state) {
+                ->color(static fn(string $state): string => match ($state) {
                     'running' => 'primary',
                     'waiting' => 'success',
                     'failed' => 'danger',

@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Illuminate\Support\Facades\DB;
 use Modules\Job\Tests\TestCase;
+use Illuminate\Support\Facades\DB;
 
 uses(TestCase::class);
 

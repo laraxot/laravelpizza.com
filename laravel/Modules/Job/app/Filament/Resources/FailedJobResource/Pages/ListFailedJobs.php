@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\FailedJobResource\Pages;
 
+use Override;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Tables\Columns\TextColumn;
@@ -15,7 +16,6 @@ use Illuminate\Support\Facades\Artisan;
 use Modules\Job\Filament\Resources\FailedJobResource;
 use Modules\Job\Models\FailedJob;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-use Override;
 
 class ListFailedJobs extends XotBaseListRecords
 {

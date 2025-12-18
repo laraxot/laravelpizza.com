@@ -46,11 +46,6 @@
             "Modules\\Job\\Database\\Seeders\\": "database/seeders/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Modules\\Job\\Tests\\": "tests/"
-        }
-    },
     "scripts": {
         "post-autoload-dump1": "@php ./vendor/bin/testbench package:discover --ansi",
         "analyse": "vendor/bin/phpstan analyse",

@@ -8,21 +8,23 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources;
 
+use Override;
+use Modules\Job\Filament\Resources\JobManagerResource\Pages\ListJobManagers;
+use Modules\Job\Filament\Resources\JobManagerResource\Pages\CreateJobManager;
+use Modules\Job\Filament\Resources\JobManagerResource\Pages\EditJobManager;
+use Modules\Job\Filament\Resources\JobManagerResource\Widgets\JobStatsOverview;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
-use Modules\Job\Filament\Resources\JobManagerResource\Pages\CreateJobManager;
-use Modules\Job\Filament\Resources\JobManagerResource\Pages\EditJobManager;
-use Modules\Job\Filament\Resources\JobManagerResource\Pages\ListJobManagers;
-use Modules\Job\Filament\Resources\JobManagerResource\Widgets\JobStatsOverview;
+use Modules\Job\Filament\Resources\JobManagerResource\Pages;
+use Modules\Job\Filament\Resources\JobManagerResource\Widgets;
 use Modules\Job\Models\JobManager;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Override;
 
 class JobManagerResource extends XotBaseResource
 {
-    protected static ?string $model = JobManager::class;
+    protected static null|string $model = JobManager::class;
 
     #[Override]
     public static function getFormSchema(): array

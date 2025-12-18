@@ -31,9 +31,10 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
  * @property string|null $phone
  * @property string|null $type
  * @property string|null $current_team_id
- * @property TeamContract|null $currentTeam
+ * @property TeamContract $currentTeam
+ * @property \Modules\Xot\Contracts\ProfileContract|null $profile
  * @property Collection<int, UserRole> $roles
- * @property Collection<int, Team> $teams
+ * @property Collection<int, \Modules\User\Models\Team> $teams
  * @property Collection<int, Tenant> $tenants
  *
  * @phpstan-require-extends Model

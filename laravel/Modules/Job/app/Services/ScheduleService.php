@@ -11,23 +11,19 @@ use Webmozart\Assert\Assert;
 
 class ScheduleService
 {
-    /**
-     * Undocumented variable.
-     *
-     * @var Schedule
-     */
-    private $model;
+    private Schedule $model;
 
     public function __construct()
     {
-        Assert::string($modelClass = config('job::model'), '['.__LINE__.']['.class_basename($this).']');
+        Assert::string($modelClass = config('job::model'), '[' . __LINE__ . '][' . class_basename($this) . ']');
+
         $model = app($modelClass);
-        Assert::isInstanceOf($model, Schedule::class);
+        Assert::isInstanceOf($model, Schedule::class, '[' . __LINE__ . '][' . class_basename($this) . ']');
         $this->model = $model;
     }
 
     /**
-     * Undocumented function.
+     * @return Collection<int, Schedule>
      */
     public function getActives(): Collection
     {
@@ -40,20 +36,23 @@ class ScheduleService
 
     public function clearCache(): void
     {
-        Assert::string($store = config('job::cache.store'), '['.__LINE__.']['.class_basename($this).']');
-        Assert::string($key = config('job::cache.key'), '['.__LINE__.']['.class_basename($this).']');
+        Assert::string($store = config('job::cache.store'), '[' . __LINE__ . '][' . class_basename($this) . ']');
+        Assert::string($key = config('job::cache.key'), '[' . __LINE__ . '][' . class_basename($this) . ']');
 
         Cache::store($store)->forget($key);
     }
 
     /**
-     * Undocumented function.
+     * @return Collection<int, Schedule>
      */
     private function getFromCache(): Collection
     {
-        Assert::string($store = config('job::cache.store'), '['.__LINE__.']['.class_basename($this).']');
-        Assert::string($key = config('job::cache.key'), '['.__LINE__.']['.class_basename($this).']');
+        Assert::string($store = config('job::cache.store'), '[' . __LINE__ . '][' . class_basename($this) . ']');
+        Assert::string($key = config('job::cache.key'), '[' . __LINE__ . '][' . class_basename($this) . ']');
 
-        return Cache::store($store)->rememberForever($key, $this->model->active()->get(...));
+        /** @var Collection<int, Schedule> $result */
+        $result = Cache::store($store)->rememberForever($key, fn (): Collection => $this->model->active()->get());
+
+        return $result;
     }
 }

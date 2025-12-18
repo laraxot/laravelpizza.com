@@ -64,6 +64,9 @@ use Modules\Notify\Enums\NotificationLogStatusEnum;
  */
 final class NotificationLog extends BaseModel
 {
+    /**
+     * @var list<string>
+     */
     protected $fillable = [
         'template_id',
         'recipient_id',
@@ -75,18 +78,25 @@ final class NotificationLog extends BaseModel
         'sent_at',
         'delivered_at',
         'opened_at',
-        'clicked_at',
     ];
 
-    protected $casts = [
-        'data' => 'array',
-        'channels' => 'array',
-        'sent_at' => 'datetime',
-        'delivered_at' => 'datetime',
-        'opened_at' => 'datetime',
-        'clicked_at' => 'datetime',
-        'status' => NotificationLogStatusEnum::class,
-    ];
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'data' => 'array',
+            'channels' => 'array',
+            'sent_at' => 'datetime',
+            'delivered_at' => 'datetime',
+            'opened_at' => 'datetime',
+            'clicked_at' => 'datetime',
+            'status' => NotificationLogStatusEnum::class,
+        ];
+    }
 
     /**
      * Ottiene il template associato a questo log.

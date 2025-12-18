@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Activity\Filament\Pages;
 
 use Filament\Forms\Components\Field;
+use Filament\Forms\Components\MorphToSelect;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
@@ -18,6 +19,8 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Collection;
+use InvalidArgumentException;
+use LogicException;
 use Livewire\WithPagination;
 use Modules\Activity\Filament\Pages\Concerns\CanPaginate;
 use Modules\Activity\Models\Activity;
@@ -57,12 +60,12 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
     public function getBreadcrumb(): string
     {
         $breadcrumb = static::$breadcrumb ?? __('activity::activities.breadcrumb');
-
+        
         // Convert to string (__() returns string|array|null)
         if (is_array($breadcrumb)) {
             return implode(' ', $breadcrumb);
         }
-
+        
         return (string) $breadcrumb;
     }
 
@@ -70,21 +73,19 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
     {
         // PHPStan Level 10: getRecordTitle returns string|Htmlable
         $recordTitle = $this->getRecordTitle();
-
+        
         // Convert to string (handle Htmlable)
-        if ($recordTitle instanceof \Illuminate\Contracts\Support\Htmlable) {
-            $titleString = $recordTitle->toHtml();
-        } else {
-            $titleString = (string) $recordTitle;
-        }
+        $titleString = ($recordTitle instanceof Htmlable)
+            ? $recordTitle->toHtml()
+            : (string) $recordTitle;
 
         $title = __('activity::activities.title', ['record' => $titleString]);
-
+        
         // __() returns string|array|null
         if (is_array($title)) {
             return implode(' ', $title);
         }
-
+        
         return (string) $title;
     }
 
@@ -93,16 +94,16 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
         // PHPStan Level 10: Type safety for Eloquent relations
         $record = $this->record;
         if (! $record instanceof Model) {
-            throw new \InvalidArgumentException('Record must be an Eloquent Model');
+            throw new InvalidArgumentException('Record must be an Eloquent Model');
         }
 
         if (! method_exists($record, 'activities')) {
-            throw new \LogicException('Record must have activities relationship');
+            throw new LogicException('Record must have activities relationship');
         }
 
         $relation = $record->activities();
         if (! $relation instanceof Relation) {
-            throw new \InvalidArgumentException('activities() must return a Relation');
+            throw new InvalidArgumentException('activities() must return a Relation');
         }
 
         $builderQuery = $relation
@@ -118,7 +119,7 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
         $paginated = $this->paginateQuery($builderQuery);
 
         if (! $paginated instanceof LengthAwarePaginator) {
-            throw new \InvalidArgumentException('paginateQuery() with PaginationMode::Default must return LengthAwarePaginator');
+            throw new InvalidArgumentException('paginateQuery() with PaginationMode::Default must return LengthAwarePaginator');
         }
 
         return $paginated;
@@ -163,7 +164,7 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
 
         $result = $this->prepareRestore($key);
         $error = $result['error'] ?? null;
-        if ($error !== null && $error !== '') {
+        if (null !== $error && '' !== $error) {
             $this->sendRestoreFailureNotification((string) $error);
 
             return;
@@ -179,7 +180,7 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
         }
 
         $oldProperties = data_get($activity, 'properties.old');
-        if ($oldProperties === null) {
+        if (null === $oldProperties) {
             $this->sendRestoreFailureNotification();
 
             return;
@@ -241,7 +242,7 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
 
         // PHPStan Level 10: Type safety for schema components
         if (! $schema instanceof Schema) {
-            throw new \InvalidArgumentException('Form must return a Schema instance');
+            throw new InvalidArgumentException('Form must return a Schema instance');
         }
 
         /** @var array<int|string, Component> $componentsArray */
@@ -308,7 +309,7 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
     {
         $title = __('activity::activities.events.restore_successful');
         $titleString = is_array($title) ? implode(' ', $title) : (string) $title;
-
+        
         return Notification::make()
             ->title($titleString)
             ->success()
@@ -319,15 +320,15 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
     {
         $title = __('activity::activities.events.restore_failed');
         $titleString = is_array($title) ? implode(' ', $title) : (string) $title;
-
+        
         $notification = Notification::make()
             ->title($titleString)
             ->danger();
-
+            
         if ($message !== null) {
             $notification->body($message);
         }
-
+        
         return $notification->send();
     }
 }

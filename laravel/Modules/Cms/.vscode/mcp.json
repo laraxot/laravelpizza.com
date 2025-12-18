@@ -1,0 +1,17 @@
+{
+  "mcp": {
+    "servers": {
+      "sequential-thinking": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-sequential-thinking"
+        ]
+      },
+      "laravel-boost": {
+              "command": "php",
+              "args": ["./laravel/artisan", "boost:mcp"]
+          }
+    }
+  }
+}

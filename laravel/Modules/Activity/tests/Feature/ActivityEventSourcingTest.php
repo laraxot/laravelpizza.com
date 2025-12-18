@@ -22,7 +22,7 @@ test('activity event sourcing lifecycle works correctly', function () {
         'causer_type' => User::class,
         'causer_id' => $user->id,
         'properties' => ['action' => 'test', 'result' => 'success'],
-        'event' => 'created',
+        'event' => 'created'
     ];
 
     $activity = Activity::query()->create($activityData);
@@ -58,7 +58,7 @@ test('activity can be queried with complex scopes', function () {
         'log_name' => 'security',
         'event' => 'login',
         'causer_type' => User::class,
-        'causer_id' => $user1->id,
+        'causer_id' => $user1->id
     ]);
     \assert($activity1 instanceof Activity);
     expect($activity1)->not->toBeNull();
@@ -67,7 +67,7 @@ test('activity can be queried with complex scopes', function () {
         'log_name' => 'security',
         'event' => 'logout',
         'causer_type' => User::class,
-        'causer_id' => $user2->id,
+        'causer_id' => $user2->id
     ]);
     \assert($activity2 instanceof Activity);
     expect($activity2)->not->toBeNull();
@@ -76,7 +76,7 @@ test('activity can be queried with complex scopes', function () {
         'log_name' => 'audit',
         'event' => 'update',
         'causer_type' => User::class,
-        'causer_id' => $user1->id,
+        'causer_id' => $user1->id
     ]);
     \assert($activity3 instanceof Activity);
 
@@ -107,10 +107,10 @@ test('snapshot creation and retrieval works correctly', function () {
             'balance' => 1000,
             'transactions' => [
                 ['id' => 1, 'amount' => 100, 'type' => 'credit'],
-                ['id' => 2, 'amount' => 50, 'type' => 'debit'],
+                ['id' => 2, 'amount' => 50, 'type' => 'debit']
             ],
-            'status' => 'active',
-        ],
+            'status' => 'active'
+        ]
     ];
 
     $snapshot = Snapshot::create($snapshotData);
@@ -144,8 +144,8 @@ test('stored event creation and event reconstruction works', function () {
         'action' => 'test_action',
         'metadata' => [
             'ip' => '127.0.0.1',
-            'user_agent' => 'Test Browser',
-        ],
+            'user_agent' => 'Test Browser'
+        ]
     ];
 
     $storedEvent = StoredEvent::create([
@@ -154,7 +154,7 @@ test('stored event creation and event reconstruction works', function () {
         'event_version' => 1,
         'event_class' => $eventClass,
         'event_properties' => $eventProperties,
-        'meta_data' => ['processed' => true, 'retry_count' => 0],
+        'meta_data' => ['processed' => true, 'retry_count' => 0]
     ]);
     \assert($storedEvent instanceof StoredEvent);
     expect($storedEvent)->not->toBeNull();
@@ -175,7 +175,7 @@ test('activity batch operations work correctly', function () {
 
     $activities = Activity::factory()->count(3)->create([ // @phpstan-ignore-line method.nonObject
         'batch_uuid' => $batchUuid,
-        'log_name' => 'batch_operation',
+        'log_name' => 'batch_operation'
     ]);
     \assert($activities instanceof \Illuminate\Database\Eloquent\Collection);
     expect($activities)->toHaveCount(3);
@@ -183,7 +183,7 @@ test('activity batch operations work correctly', function () {
     $batchActivities = Activity::forBatch($batchUuid)->get();
 
     expect($batchActivities)->toHaveCount(3);
-
+    
     foreach ($batchActivities as $activity) {
         \assert($activity instanceof Activity);
         expect($activity->batch_uuid)->toBe($batchUuid)
@@ -213,25 +213,25 @@ test('activity properties support complex nested structures', function () {
             'id' => 1,
             'name' => 'Test User',
             'roles' => ['admin', 'user'],
-            'permissions' => ['read', 'write', 'delete'],
+            'permissions' => ['read', 'write', 'delete']
         ],
         'action' => 'complex_operation',
         'context' => [
             'request' => [
                 'method' => 'POST',
                 'url' => '/api/test',
-                'headers' => ['Content-Type' => 'application/json'],
+                'headers' => ['Content-Type' => 'application/json']
             ],
             'response' => [
                 'status' => 200,
-                'data' => ['success' => true, 'message' => 'Operation completed'],
-            ],
+                'data' => ['success' => true, 'message' => 'Operation completed']
+            ]
         ],
         'timestamps' => [
             'started_at' => now()->subMinutes(5)->toISOString(),
             'completed_at' => now()->toISOString(),
-            'duration' => 300,
-        ],
+            'duration' => 300
+        ]
     ];
 
     $activity = Activity::factory()->create(['properties' => $complexProperties]); // @phpstan-ignore-line method.nonObject
@@ -261,7 +261,7 @@ test('activity properties support complex nested structures', function () {
 
 test('snapshot state maintains data integrity with large datasets', function () {
     $largeState = [
-        'users' => array_map(fn ($i) => [
+        'users' => array_map(fn($i) => [
             'id' => $i,
             'name' => "User {$i}",
             'email' => "user{$i}@example.com",
@@ -269,14 +269,14 @@ test('snapshot state maintains data integrity with large datasets', function () 
             'preferences' => [
                 'theme' => $i % 2 === 0 ? 'dark' : 'light',
                 'notifications' => true,
-                'language' => 'en',
-            ],
+                'language' => 'en'
+            ]
         ], range(1, 100)),
         'metadata' => [
             'generated_at' => now()->toISOString(),
             'version' => '1.0.0',
-            'checksum' => md5('test'),
-        ],
+            'checksum' => md5('test')
+        ]
     ];
 
     $snapshot = Snapshot::factory()->create(['state' => $largeState]); // @phpstan-ignore-line method.nonObject
@@ -304,19 +304,19 @@ test('stored event handles complex event properties with nested arrays', functio
     $complexEvent = [
         'order' => [
             'id' => 12345,
-            'items' => array_map(fn ($i) => [
+            'items' => array_map(fn($i) => [
                 'product_id' => $i,
                 'name' => "Product {$i}",
                 'quantity' => rand(1, 5),
                 'price' => rand(1000, 5000) / 100,
-                'attributes' => ['color' => 'red', 'size' => 'M'],
+                'attributes' => ['color' => 'red', 'size' => 'M']
             ], range(1, 50)),
             'totals' => [
                 'subtotal' => 1234.56,
                 'tax' => 123.46,
                 'shipping' => 15.00,
-                'total' => 1373.02,
-            ],
+                'total' => 1373.02
+            ]
         ],
         'customer' => [
             'id' => 67890,
@@ -327,15 +327,15 @@ test('stored event handles complex event properties with nested arrays', functio
                 'city' => 'Anytown',
                 'state' => 'CA',
                 'zip' => '12345',
-                'country' => 'US',
-            ],
+                'country' => 'US'
+            ]
         ],
         'payment' => [
             'method' => 'credit_card',
             'transaction_id' => 'txn_123456789',
             'status' => 'completed',
-            'amount' => 1373.02,
-        ],
+            'amount' => 1373.02
+        ]
     ];
 
     $storedEvent = StoredEvent::factory()->create(['event_properties' => $complexEvent]); // @phpstan-ignore-line method.nonObject

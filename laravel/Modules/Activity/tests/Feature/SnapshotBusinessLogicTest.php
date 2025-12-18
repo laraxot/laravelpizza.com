@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Str;
 use Modules\Activity\Models\Snapshot;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Str;
 
 class SnapshotBusinessLogicTest extends TestCase
 {
@@ -335,7 +335,7 @@ class SnapshotBusinessLogicTest extends TestCase
     public function it_can_handle_snapshot_with_timestamps(): void
     {
         $now = now();
-
+        
         $snapshot = Snapshot::create([
             'aggregate_uuid' => Str::uuid()->toString(),
             'aggregate_version' => 1,

@@ -10,8 +10,10 @@ namespace Modules\Job\Filament\Widgets;
 
 use Exception;
 use Filament\Widgets\Widget;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Process;
+use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\Console\Output\StreamOutput;
 
 use function Safe\fopen;
@@ -55,7 +57,7 @@ class QueueListenWidget extends Widget
 
     public function beginStream(): void
     {
-        $this->run = ! $this->run;
+        $this->run = !$this->run;
         // $output = new BufferedOutput();
         /*
          * $output = new class() extends StreamOutput {
@@ -82,7 +84,7 @@ class QueueListenWidget extends Widget
          */
         $resource = fopen('php://stdout', 'w');
         if ($resource === false) {
-            throw new Exception('['.__LINE__.']['.class_basename($this).']');
+            throw new Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
         }
         $output = new StreamOutput($resource);
         // $output = new StreamOutput(fopen('/path/to/output.log', 'a', false));

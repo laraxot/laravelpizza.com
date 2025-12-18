@@ -6,6 +6,7 @@ namespace Modules\Activity\Actions;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use InvalidArgumentException;
 use Modules\Activity\Models\Activity;
 use Modules\User\Models\User;
 use Spatie\QueueableAction\QueueableAction;
@@ -27,7 +28,7 @@ class LogActivityAction
         public ?string $description = null,
     ) {
         if ($type === '') {
-            throw new \InvalidArgumentException('Type cannot be empty');
+            throw new InvalidArgumentException('Type cannot be empty');
         }
     }
 
@@ -36,11 +37,11 @@ class LogActivityAction
         $causerId = null;
         if ($this->user !== null) {
             if (! $this->user instanceof User) {
-                throw new \InvalidArgumentException('User must be an instance of User');
+                throw new InvalidArgumentException('User must be an instance of User');
             }
             // Type narrowing for user ID - use getAttribute for Eloquent models
-            $id = $this->user->getAttribute('id');
-            $causerId = is_int($id) || is_string($id) ? $id : null;
+            $userId = $this->user->getAttribute('id');
+            $causerId = is_int($userId) || is_string($userId) ? $userId : null;
         }
         if ($causerId === null) {
             $causerId = Auth::id();

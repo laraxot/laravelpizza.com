@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Actions;
 
+use Illuminate\Database\Eloquent\Model;
 use Modules\Activity\Models\Activity;
 use Modules\User\Models\User;
 use Spatie\QueueableAction\QueueableAction;
@@ -19,7 +20,8 @@ class LogUserLogoutAction
 
     public function __construct(
         public User $user
-    ) {}
+    ) {
+    }
 
     public function execute(): Activity
     {

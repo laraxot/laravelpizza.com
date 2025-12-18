@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
+use function Safe\class_uses;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Activity\Models\Snapshot;
 use Spatie\EventSourcing\Snapshots\EloquentSnapshot;
-
-use function Safe\class_uses;
 
 describe('Snapshot Business Logic', function () {
     test('snapshot has correct connection configured', function () {
@@ -23,7 +23,7 @@ describe('Snapshot Business Logic', function () {
             'aggregate_version',
             'state',
             'created_at',
-            'updated_at',
+            'updated_at'
         ];
 
         expect($snapshot->getFillable())->toEqual($expectedFillable);

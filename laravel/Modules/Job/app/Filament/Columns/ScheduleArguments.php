@@ -50,37 +50,39 @@ class ScheduleArguments extends TextColumn
     /**
      * Format tags when they are in array format.
      */
-    /**
-     * @param  array<int|string, mixed>  $tags
-     * @return array<int, string>
-     */
     protected function formatArrayTags(array $tags): array
     {
-        $result = [];
+        $collection = collect($tags);
 
-        foreach ($tags as $key => $value) {
-            $keyStr = (string) $key;
+        if ($this->withValue) {
+            $collection = $collection->filter(
+                static function (mixed $value): bool {
+                    if (! is_array($value)) {
+                        return false;
+                    }
 
-            if (! $this->withValue) {
-                $valStr = is_scalar($value) ? (string) $value : '';
-                $result[] = $keyStr.'='.$valStr;
-
-                continue;
-            }
-
-            if (is_array($value)) {
-                $name = isset($value['name']) && is_scalar($value['name']) ? (string) $value['name'] : $keyStr;
-                $val = isset($value['value']) && is_scalar($value['value']) ? (string) $value['value'] : '';
-                $result[] = $name.'='.$val;
-
-                continue;
-            }
-
-            $valStr = is_scalar($value) ? (string) $value : '';
-            $result[] = $keyStr.'='.$valStr;
+                    return array_key_exists('value', $value) && $value['value'] !== null && $value['value'] !== '';
+                },
+            );
         }
 
-        return $result;
+        return $collection
+            ->map(
+                function (mixed $value, int|string $key): string {
+                    if ($this->withValue && is_array($value)) {
+                        $name = isset($value['name']) && is_string($value['name'])
+                            ? $value['name']
+                            : (string) $key;
+                        $val = isset($value['value']) ? (string) $value['value'] : '';
+
+                        return $name . '=' . $val;
+                    }
+
+                    return (string) $key . '=' . (string) $value;
+                },
+            )
+            ->values()
+            ->all();
     }
 
     /**

@@ -22,6 +22,6 @@ class GetTaskFrequenciesAction
             return $res;
         }
 
-        throw new Exception('['.__LINE__.']['.class_basename($this).']');
+        throw new Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
     }
 }

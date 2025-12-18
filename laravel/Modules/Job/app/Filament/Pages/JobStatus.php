@@ -14,13 +14,10 @@ class JobStatus extends XotBasePage
 
     protected string $view = 'job::filament.pages.job-status';
 
-    /**
-     * @return array<string, mixed>
-     */
     public function getHeaderWidgets(): array
     {
         return [
-            'clock' => ClockWidget::make(),
+            ClockWidget::make(),
         ];
     }
 

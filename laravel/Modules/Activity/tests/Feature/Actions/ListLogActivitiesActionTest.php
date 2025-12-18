@@ -7,6 +7,7 @@ namespace Modules\Activity\Tests\Feature\Actions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
 use Modules\Activity\Models\Activity;
+use Modules\IndennitaResponsabilita\Filament\Resources\IndennitaResponsabilitaResource;
 use Modules\IndennitaResponsabilita\Models\IndennitaResponsabilita;
 use Modules\User\Models\User;
 use Tests\TestCase;
@@ -55,11 +56,11 @@ class ListLogActivitiesActionTest extends TestCase
         $action = ListLogActivitiesAction::make();
 
         // Simula un Livewire component per testare l'URL generation
-        $mockLivewire = new class
+        $mockLivewire = new class()
         {
             public function getResource()
             {
-                return \Modules\IndennitaResponsabilita\Filament\Resources\IndennitaResponsabilitaResource::class;
+                return IndennitaResponsabilitaResource::class;
             }
         };
 

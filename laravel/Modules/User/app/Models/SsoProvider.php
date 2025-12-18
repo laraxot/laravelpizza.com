@@ -95,14 +95,17 @@ class SsoProvider extends BaseModel
     /**
      * The attributes that should be cast.
      *
-     * @var array<string, string>
+     * @return array<string, string>
      */
-    protected $casts = [
-        'settings' => 'array',
-        'domain_whitelist' => 'array',
-        'role_mapping' => 'array',
-        'is_active' => 'boolean',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'settings' => 'array',
+            'domain_whitelist' => 'array',
+            'role_mapping' => 'array',
+            'is_active' => 'boolean',
+        ];
+    }
 
     /**
      * Get all users associated with this SSO provider.

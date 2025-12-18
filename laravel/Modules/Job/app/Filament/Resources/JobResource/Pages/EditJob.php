@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\JobResource\Pages;
 
+use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 use Filament\Actions\DeleteAction;
 use Modules\Job\Filament\Resources\JobResource;
-use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 
 class EditJob extends XotBaseEditRecord
 {

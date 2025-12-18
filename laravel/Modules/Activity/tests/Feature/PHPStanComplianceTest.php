@@ -4,6 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
 
+use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
+use Modules\Activity\Filament\Pages\ListLogActivities;
+use Modules\Activity\Providers\ActivityServiceProvider;
+use Modules\Xot\Filament\Actions\XotBaseAction;
+use Modules\Xot\Filament\Pages\XotBasePage;
+use Modules\Xot\Providers\XotBaseServiceProvider;
+use ReflectionClass;
 use Tests\TestCase;
 
 /**
@@ -38,16 +45,16 @@ class PHPStanComplianceTest extends TestCase
     public function test_classes_extend_correct_base_classes(): void
     {
         // Verifica che ListLogActivitiesAction estenda XotBaseAction
-        $actionReflection = new \ReflectionClass(\Modules\Activity\Filament\Actions\ListLogActivitiesAction::class);
+        $actionReflection = new ReflectionClass(ListLogActivitiesAction::class);
         $this->assertTrue(
-            $actionReflection->isSubclassOf(\Modules\Xot\Filament\Actions\XotBaseAction::class),
+            $actionReflection->isSubclassOf(XotBaseAction::class),
             'ListLogActivitiesAction deve estendere XotBaseAction'
         );
 
         // Verifica che ListLogActivities estenda XotBasePage
-        $pageReflection = new \ReflectionClass(\Modules\Activity\Filament\Pages\ListLogActivities::class);
+        $pageReflection = new ReflectionClass(ListLogActivities::class);
         $this->assertTrue(
-            $pageReflection->isSubclassOf(\Modules\Xot\Filament\Pages\XotBasePage::class),
+            $pageReflection->isSubclassOf(XotBasePage::class),
             'ListLogActivities deve estendere XotBasePage'
         );
     }
@@ -83,16 +90,16 @@ class PHPStanComplianceTest extends TestCase
      */
     public function test_service_provider_configuration(): void
     {
-        $providerReflection = new \ReflectionClass(\Modules\Activity\Providers\ActivityServiceProvider::class);
+        $providerReflection = new ReflectionClass(ActivityServiceProvider::class);
 
         // Verifica che estenda XotBaseServiceProvider
         $this->assertTrue(
-            $providerReflection->isSubclassOf(\Modules\Xot\Providers\XotBaseServiceProvider::class),
+            $providerReflection->isSubclassOf(XotBaseServiceProvider::class),
             'ActivityServiceProvider deve estendere XotBaseServiceProvider'
         );
 
         // Verifica che abbia la proprietà name impostata
-        $provider = new \Modules\Activity\Providers\ActivityServiceProvider(app());
+        $provider = new ActivityServiceProvider(app());
         $this->assertEquals('Activity', $provider->name);
     }
 

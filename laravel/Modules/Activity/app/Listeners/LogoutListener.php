@@ -31,7 +31,7 @@ class LogoutListener
         if (isset($event->user->last_login_at)) {
             /** @var mixed $lastLoginRaw */
             $lastLoginRaw = $event->user->last_login_at;
-
+            
             // Type narrowing for $lastLoginRaw
             if (is_string($lastLoginRaw) || $lastLoginRaw instanceof \DateTimeInterface) {
                 /** @var \Illuminate\Support\Carbon $lastLogin */
@@ -49,16 +49,16 @@ class LogoutListener
         // We use the Activity model directly as per the test expectations
         // The test expects 'event' column to be set to 'logout'
 
-        $activity = new Activity;
+        $activity = new Activity();
         $activity->log_name = 'auth';
         $activity->description = 'User logged out'; // specific string not enforced but 'logout' must be contained
         $activity->event = 'logout';
-
+        
         // Type narrowing for $event->user to ensure it's a Model
         if ($event->user instanceof \Illuminate\Database\Eloquent\Model) {
             $activity->causer()->associate($event->user);
         }
-
+        
         $activity->properties = $properties;
         $activity->save();
     }

@@ -26,7 +26,6 @@ use Webmozart\Assert\Assert;
 abstract class XotBaseListRecords extends FilamentListRecords
 {
     use HasXotTable;
-    use TransTrait;
 
     public TableLayoutEnum $layoutView = TableLayoutEnum::LIST;
 

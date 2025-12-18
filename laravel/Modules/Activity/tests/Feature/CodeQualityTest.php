@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature;
 
+use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
+use Modules\Activity\Filament\Pages\ListLogActivities;
+use Modules\Activity\Providers\ActivityServiceProvider;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
 use Tests\TestCase;
 
 /**
@@ -36,9 +41,9 @@ class CodeQualityTest extends TestCase
     public function test_main_classes_exist_and_are_instantiable(): void
     {
         // Verifica che le classi principali esistano
-        $this->assertTrue(class_exists(\Modules\Activity\Providers\ActivityServiceProvider::class));
-        $this->assertTrue(class_exists(\Modules\Activity\Filament\Actions\ListLogActivitiesAction::class));
-        $this->assertTrue(class_exists(\Modules\Activity\Filament\Pages\ListLogActivities::class));
+        $this->assertTrue(class_exists(ActivityServiceProvider::class));
+        $this->assertTrue(class_exists(ListLogActivitiesAction::class));
+        $this->assertTrue(class_exists(ListLogActivities::class));
     }
 
     /**
@@ -96,7 +101,7 @@ class CodeQualityTest extends TestCase
      */
     public function test_service_provider_configuration(): void
     {
-        $provider = new \Modules\Activity\Providers\ActivityServiceProvider(app());
+        $provider = new ActivityServiceProvider(app());
 
         // Verifica che il provider sia configurato correttamente
         $this->assertEquals('Activity', $provider->name);
@@ -139,8 +144,8 @@ class CodeQualityTest extends TestCase
     {
         $phpFiles = [];
 
-        $iterator = new \RecursiveIteratorIterator(
-            new \RecursiveDirectoryIterator($directory, \RecursiveDirectoryIterator::SKIP_DOTS)
+        $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS)
         );
 
         foreach ($iterator as $file) {

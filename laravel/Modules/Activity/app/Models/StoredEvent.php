@@ -13,7 +13,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
 
 /**
  * Class StoredEvent.
- *
+ * 
  * Represents a stored event in the activity module.
  *
  * @property int $id
@@ -27,7 +27,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property-read ShouldBeStored|null $event
- *
  * @method static EloquentStoredEventQueryBuilder<static>|StoredEvent afterVersion(int $version)
  * @method static EloquentStoredEventCollection<static> all($columns = ['*'])
  * @method static EloquentStoredEventCollection<static> get($columns = ['*'])
@@ -52,7 +51,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static EloquentStoredEventQueryBuilder<static>|StoredEvent whereUpdatedBy($value)
  * @method static EloquentStoredEventQueryBuilder<static>|StoredEvent withMetaDataAttributes()
  * @method static \Modules\Activity\Database\Factories\StoredEventFactory factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
 class StoredEvent extends SpatieStoredEvent

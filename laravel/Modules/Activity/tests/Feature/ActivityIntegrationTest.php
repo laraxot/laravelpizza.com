@@ -20,8 +20,8 @@ test('activity module models work together in integrated scenarios', function ()
         'subject_id' => $user->id,
         'properties' => [
             'action' => 'user_registration',
-            'details' => ['source' => 'web', 'campaign' => 'test'],
-        ],
+            'details' => ['source' => 'web', 'campaign' => 'test']
+        ]
     ]);
     \assert($activity instanceof Activity);
     expect($activity)->not->toBeNull();
@@ -33,8 +33,8 @@ test('activity module models work together in integrated scenarios', function ()
         'state' => [
             'user' => $user->toArray(),
             'activities' => [$activity->toArray()],
-            'metadata' => ['version' => '1.0.0'],
-        ],
+            'metadata' => ['version' => '1.0.0']
+        ]
     ]);
     \assert($snapshot instanceof Snapshot);
     expect($snapshot)->not->toBeNull();
@@ -46,8 +46,8 @@ test('activity module models work together in integrated scenarios', function ()
             'user_id' => $user->id,
             'activity_id' => $activity->id,
             'snapshot_id' => $snapshot->id,
-            'changes' => ['profile_completed' => true],
-        ],
+            'changes' => ['profile_completed' => true]
+        ]
     ]);
     \assert($storedEvent instanceof StoredEvent);
     expect($storedEvent)->not->toBeNull();
@@ -88,7 +88,7 @@ test('activity batch processing with multiple models', function () {
     $activities = Activity::factory()->count(5)->create([ // @phpstan-ignore-line method.nonObject
         'batch_uuid' => $batchUuid,
         'causer_type' => User::class,
-        'causer_id' => $user->id,
+        'causer_id' => $user->id
     ]);
     \assert($activities instanceof \Illuminate\Database\Eloquent\Collection);
     expect($activities)->toHaveCount(5);
@@ -98,8 +98,8 @@ test('activity batch processing with multiple models', function () {
         'state' => [
             'batch_id' => $batchUuid,
             'activities_count' => $activities->count(),
-            'user_id' => $user->id,
-        ],
+            'user_id' => $user->id
+        ]
     ]);
     \assert($snapshot instanceof Snapshot);
     expect($snapshot)->not->toBeNull();
@@ -108,8 +108,8 @@ test('activity batch processing with multiple models', function () {
         'aggregate_uuid' => $aggregateUuid,
         'event_properties' => [
             'batch_id' => $batchUuid,
-            'processed_activities' => $activities->pluck('id')->toArray(),
-        ],
+            'processed_activities' => $activities->pluck('id')->toArray()
+        ]
     ]);
     \assert($storedEvents instanceof \Illuminate\Database\Eloquent\Collection);
     expect($storedEvents)->toHaveCount(3);
@@ -155,7 +155,7 @@ test('activity module handles concurrent operations correctly', function () {
             $activity = Activity::factory()->create([ // @phpstan-ignore-line method.nonObject
                 'causer_type' => User::class,
                 'causer_id' => $user->id,
-                'properties' => ['iteration' => $i, 'timestamp' => now()->toISOString()],
+                'properties' => ['iteration' => $i, 'timestamp' => now()->toISOString()]
             ]);
             \assert($activity instanceof Activity);
             expect($activity)->not->toBeNull();
@@ -167,8 +167,8 @@ test('activity module handles concurrent operations correctly', function () {
                     'state' => [
                         'activity_id' => $activity->id,
                         'iteration' => $i,
-                        'user_id' => $user->id,
-                    ],
+                        'user_id' => $user->id
+                    ]
                 ]);
                 \assert($snapshot instanceof Snapshot);
                 expect($snapshot)->not->toBeNull();
@@ -203,19 +203,19 @@ test('activity module supports complex query patterns', function () {
     $securityActivities = Activity::factory()->count(3)->create([ // @phpstan-ignore-line method.nonObject
         'log_name' => 'security',
         'causer_type' => User::class,
-        'causer_id' => $user1->id,
+        'causer_id' => $user1->id
     ]);
 
     $auditActivities = Activity::factory()->count(2)->create([ // @phpstan-ignore-line method.nonObject
         'log_name' => 'audit',
         'causer_type' => User::class,
-        'causer_id' => $user2->id,
+        'causer_id' => $user2->id
     ]);
 
     $applicationActivities = Activity::factory()->count(4)->create([ // @phpstan-ignore-line method.nonObject
         'log_name' => 'application',
         'causer_type' => User::class,
-        'causer_id' => $user1->id,
+        'causer_id' => $user1->id
     ]);
 
     $complexQuery = Activity::query()
@@ -223,7 +223,7 @@ test('activity module supports complex query patterns', function () {
         ->whereIn('log_name', ['security', 'audit'])
         ->where(function ($query) use ($user1, $user2) {
             $query->where('causer_id', $user1->id)
-                ->orWhere('causer_id', $user2->id);
+                  ->orWhere('causer_id', $user2->id);
         })
         ->orderBy('created_at', 'desc');
 
@@ -254,7 +254,7 @@ test('activity module handles data consistency across models', function () {
     $activity = Activity::factory()->create([ // @phpstan-ignore-line method.nonObject
         'causer_type' => User::class,
         'causer_id' => $user->id,
-        'properties' => ['action' => 'data_consistency_test'],
+        'properties' => ['action' => 'data_consistency_test']
     ]);
     \assert($activity instanceof Activity);
     expect($activity)->not->toBeNull();
@@ -264,8 +264,8 @@ test('activity module handles data consistency across models', function () {
         'state' => [
             'activity_id' => $activity->id,
             'user_id' => $user->id,
-            'consistent' => true,
-        ],
+            'consistent' => true
+        ]
     ]);
     \assert($snapshot instanceof Snapshot);
     expect($snapshot)->not->toBeNull();
@@ -276,8 +276,8 @@ test('activity module handles data consistency across models', function () {
             'activity_id' => $activity->id,
             'snapshot_id' => $snapshot->id,
             'user_id' => $user->id,
-            'consistent' => true,
-        ],
+            'consistent' => true
+        ]
     ]);
     \assert($storedEvent instanceof StoredEvent);
     expect($storedEvent)->not->toBeNull();
@@ -332,7 +332,7 @@ test('activity module supports bulk operations efficiently', function () {
             'causer_id' => $user->id,
             'properties' => ['index' => $i, 'batch' => 'bulk_test'],
             'created_at' => now(),
-            'updated_at' => now(),
+            'updated_at' => now()
         ];
     }
 

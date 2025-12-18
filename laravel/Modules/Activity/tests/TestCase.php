@@ -9,8 +9,7 @@ use Modules\Activity\Providers\ActivityServiceProvider;
 use Modules\User\Models\User;
 use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Providers\XotServiceProvider;
-
-// Added
+use Mockery; // Added
 
 /**
  * Base test case for Activity module tests.
@@ -31,6 +30,8 @@ abstract class TestCase extends BaseTestCase
     protected function setUp(): void
     {
         parent::setUp();
+
+
 
         // Re-configure essential services for testing based on .env.testing
         $this->app['config']->set('database.default', 'testing');
@@ -78,7 +79,7 @@ abstract class TestCase extends BaseTestCase
         // Bind a fallback model to the container for non-existent model classes
         // This attempts to prevent BindingResolutionException during XotBaseMigration construction.
         if (class_exists($xotBaseMigrationClass)) { // Check if XotBaseMigration exists
-            $this->app->bind(function ($app, $parameters) use ($mockModelClass) {
+            $this->app->bind(function ($app, $parameters) use ($xotBaseMigrationClass, $mockModelClass) {
                 $requestedClass = $parameters[0] ?? null;
 
                 // Check if the requested class name *looks like* a migration-derived model
@@ -92,7 +93,7 @@ abstract class TestCase extends BaseTestCase
                 return null; // Return null to let the container proceed with normal resolution
             });
         }
-
+        
         $this->artisan('migrate:fresh', [
             '--database' => 'user', // Run on 'user' connection (specific for User module)
             '--path' => 'Modules/User/database/migrations',

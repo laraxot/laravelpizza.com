@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Illuminate\Support\Carbon;
 use Modules\Job\Models\Job;
 
 describe('Job Business Logic', function () {

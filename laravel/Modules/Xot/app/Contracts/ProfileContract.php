@@ -19,6 +19,7 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
  * @property string $email
  * @property string $slug
  * @property string $user_id
+ * @property int|null $matr
  * @property Collection<int, Role> $roles
  * @property int|null $roles_count
  * @property UserContract $user

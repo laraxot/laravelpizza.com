@@ -25,43 +25,49 @@ class GetCommandsAction
         $commands = $artisan->all();
 
         /** @var Collection<int, CommandData> $commandDataCollection */
-        $commandDataCollection = collect($commands)->map(function (Command $command): CommandData {
-            $name = $command->getName() ?? '';
-            $description = $command->getDescription();
+        $commandDataCollection = collect($commands)->map(
+            /**
+             * @param  Command  $command
+             */
+            static function (Command $command): CommandData {
+                $name = (string) $command->getName();
+                $description = (string) $command->getDescription();
+                $signature = $name;
 
-            // Ensure signature is always a string
-            $rawSignature = method_exists($command, 'getSignature') ? $command->getSignature() : $name;
-            $signature = is_string($rawSignature) ? $rawSignature : (string) $name;
+                /** @var Collection<int, array{name: string, description: string, required: bool}> $arguments */
+                $arguments = collect($command->getDefinition()->getArguments())
+                    ->map(
+                        static fn ($argument): array => [
+                            'name' => (string) $argument->getName(),
+                            'description' => (string) $argument->getDescription(),
+                            'required' => (bool) $argument->isRequired(),
+                        ],
+                    )
+                    ->values();
 
-            /** @var Collection<int, array{name: string, description: string, required: bool}> $arguments */
-            $arguments = collect($command->getDefinition()->getArguments())
-                ->map(fn ($argument) => [
-                    'name' => $argument->getName(),
-                    'description' => $argument->getDescription(),
-                    'required' => $argument->isRequired(),
-                ])
-                ->values();
+                /** @var Collection<int, array{name: string, description: string, required: bool}> $options */
+                $options = collect($command->getDefinition()->getOptions())
+                    ->map(
+                        static fn ($option): array => [
+                            'name' => (string) $option->getName(),
+                            'description' => (string) $option->getDescription(),
+                            'required' => (bool) $option->isValueRequired(),
+                        ],
+                    )
+                    ->values();
 
-            /** @var Collection<int, array{name: string, description: string, required: bool}> $options */
-            $options = collect($command->getDefinition()->getOptions())
-                ->map(fn ($option) => [
-                    'name' => $option->getName(),
-                    'description' => $option->getDescription(),
-                    'required' => $option->isValueRequired(),
-                ])
-                ->values();
-
-            return new CommandData(
-                name: $name,
-                description: $description,
-                signature: $signature,
-                full_name: $name.' - '.$description,
-                arguments: $arguments->toArray(),
-                options: [
-                    'withValue' => $options->toArray(),
-                ],
-            );
-        });
+                return new CommandData(
+                    name: $name,
+                    description: $description,
+                    signature: $signature,
+                    full_name: $name . ' - ' . $description,
+                    arguments: $arguments->toArray(),
+                    options: [
+                        'withValue' => $options->toArray(),
+                    ],
+                );
+            },
+        );
 
         return new DataCollection(CommandData::class, $commandDataCollection->values()->all());
     }

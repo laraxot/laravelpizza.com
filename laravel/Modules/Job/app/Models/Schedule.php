@@ -23,11 +23,11 @@ use Webmozart\Assert\Assert;
  * @property string $id
  * @property string $command
  * @property string|null $command_custom
- * @property array<array-key, mixed>|null $params
+ * @property array<array-key, array{name?: string, value?: bool|float|int|string|null, required?: bool, type?: string}>|null $params
  * @property string $expression
- * @property array<array-key, mixed>|null $environments
- * @property array<array-key, mixed>|null $options
- * @property array<array-key, mixed>|null $options_with_value
+ * @property array<array-key, bool|float|int|string|null>|null $environments
+ * @property array<array-key, array{name?: string, value?: bool|float|int|string|null}|bool|float|int|string|null>|null $options
+ * @property array<array-key, array{name?: string, value?: bool|float|int|string|null, required?: bool, type?: string}>|null $options_with_value
  * @property string|null $log_filename
  * @property int $even_in_maintenance_mode
  * @property int $without_overlapping
@@ -178,25 +178,23 @@ class Schedule extends BaseModel
                 continue;
             }
 
-            if (empty($value['value'])) {
+            if (! array_key_exists('value', $value) || $value['value'] === null || $value['value'] === '') {
                 continue;
             }
 
-            /** @var array<string, mixed> $safeValue */
+            /** @var array{name?: string, value?: bool|float|int|string|null, required?: bool, type?: string} $safeValue */
             $safeValue = $value;
 
             if (isset($safeValue['type']) && $safeValue['type'] === 'function') {
                 // PHPStan Level 10: Ensure string for evaluateFunction
-                $functionString = is_string($safeValue['value']) ? $safeValue['value'] : '';
+                $functionString = isset($safeValue['value']) && is_string($safeValue['value']) ? $safeValue['value'] : '';
                 $arguments[$argument] = $this->evaluateFunction($functionString);
             } else {
                 $name = isset($safeValue['name']) && is_string($safeValue['name'])
                     ? $safeValue['name']
                     : (string) $argument;
 
-                $val = is_string($safeValue)
-                    ? $safeValue
-                    : (isset($safeValue['value']) ? (string) $safeValue['value'] : '');
+                $val = isset($safeValue['value']) ? (string) $safeValue['value'] : '';
 
                 $arguments[$name] = $val;
             }
@@ -217,18 +215,24 @@ class Schedule extends BaseModel
             $options = $options->merge($optionsWithValues);
         }
 
-        return $options->map(function ($value, $key) {
-            if (is_array($value)) {
-                Assert::nullOrString($value['name']);
+        return $options
+            ->map(
+                static function ($value, $key): string {
+                    if (is_array($value)) {
+                        $name = $value['name'] ?? null;
+                        $fallbackKey = (string) $key;
+                        $optionName = is_string($name) ? $name : $fallbackKey;
+                        $optionValue = $value['value'] ?? null;
 
-                return '--'.(string) ($value['name'] ?? $key).'='.((string) $value['value']);
-            }
+                        return '--' . $optionName . '=' . (string) $optionValue;
+                    }
 
-            // PHPStan Level 10: Cast to string for encapsed string
-            $strValue = is_string($value) ? $value : (string) $value;
+                    $strValue = (string) $value;
 
-            return "--{$strValue}";
-        })->toArray();
+                    return "--{$strValue}";
+                },
+            )
+            ->toArray();
     }
 
     /** @return array<string, string> */
