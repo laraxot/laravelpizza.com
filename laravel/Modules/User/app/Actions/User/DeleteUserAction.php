@@ -16,8 +16,9 @@ class DeleteUserAction
     /**
      * Elimina l'utente dopo aver verificato la password.
      *
-     * @param  User  $user  L'utente da eliminare
-     * @param  string  $confirmPassword  La password di conferma
+     * @param User   $user            L'utente da eliminare
+     * @param string $confirmPassword La password di conferma
+     *
      * @return array{success: bool, message: string} Risultato dell'operazione
      */
     public function execute(User $user, string $confirmPassword): array

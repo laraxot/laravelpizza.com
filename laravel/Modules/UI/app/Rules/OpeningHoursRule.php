@@ -60,7 +60,7 @@ class OpeningHoursRule implements ValidationRule
         $afternoonFrom = $this->cleanTimeValue($dayHours['afternoon_from'] ?? null);
 
         // Se ci sono entrambe le sessioni, la chiusura mattina deve essere prima dell'apertura pomeriggio
-        if ($morningTo !== null && $afternoonFrom !== null) {
+        if (null !== $morningTo && null !== $afternoonFrom) {
             if ($morningTo >= $afternoonFrom) {
                 $fail(static::trans('validation.morning_before_afternoon', params: ['day' => $dayLabel]));
             }
@@ -74,7 +74,7 @@ class OpeningHoursRule implements ValidationRule
     {
         $fromKey = "{$session}_from";
         $toKey = "{$session}_to";
-        $sessionLabel = $session === 'morning'
+        $sessionLabel = 'morning' === $session
             ? static::trans('validation.opening_hours.morning')
             : static::trans('validation.opening_hours.afternoon');
 
@@ -93,7 +93,7 @@ class OpeningHoursRule implements ValidationRule
          * }
          */
         // Validazione completezza: se uno è specificato, anche l'altro deve esserlo
-        if ($fromTime !== null && $toTime === null) {
+        if (null !== $fromTime && null === $toTime) {
             $fail(static::trans('validation.opening_hours.missing_closing_time', params: [
                 'session' => $sessionLabel,
                 'day' => $dayLabel,
@@ -102,7 +102,7 @@ class OpeningHoursRule implements ValidationRule
             return;
         }
 
-        if ($toTime !== null && $fromTime === null) {
+        if (null !== $toTime && null === $fromTime) {
             $fail(static::trans('validation.opening_hours.missing_opening_time', params: [
                 'session' => $sessionLabel,
                 'day' => $dayLabel,
@@ -112,7 +112,7 @@ class OpeningHoursRule implements ValidationRule
         }
 
         // Validazione logica: apertura deve essere prima della chiusura
-        if ($fromTime !== null && $toTime !== null) {
+        if (null !== $fromTime && null !== $toTime) {
             if ($fromTime >= $toTime) {
                 $fail(static::trans('validation.opening_hours.opening_before_closing', params: [
                     'session' => $sessionLabel,
@@ -129,14 +129,14 @@ class OpeningHoursRule implements ValidationRule
      */
     private function cleanTimeValue(mixed $value): ?string
     {
-        if ($value === null || $value === '' || $value === '--:--') {
+        if (null === $value || '' === $value || '--:--' === $value) {
             return null;
         }
 
         if (is_string($value)) {
             $cleaned = trim($value);
 
-            return $cleaned === '' ? null : $cleaned;
+            return '' === $cleaned ? null : $cleaned;
         }
 
         return null;
@@ -145,8 +145,10 @@ class OpeningHoursRule implements ValidationRule
     /**
      * Verifica se l'orario è nel formato HH:MM valido.
      */
+    /*
     private function isValidTimeFormat(string $time): bool
     {
         return (bool) preg_match('/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/', $time);
     }
+        */
 }

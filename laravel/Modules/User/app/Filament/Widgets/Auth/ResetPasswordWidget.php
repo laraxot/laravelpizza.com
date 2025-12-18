@@ -95,7 +95,7 @@ class ResetPasswordWidget extends XotBaseWidget
             ])->save();
         });
 
-        if ($status === Password::PASSWORD_RESET) {
+        if (Password::PASSWORD_RESET === $status) {
             session()->flash('status', __($status));
 
             return redirect()->route('login');

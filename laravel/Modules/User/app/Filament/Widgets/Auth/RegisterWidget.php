@@ -151,7 +151,7 @@ class RegisterWidget extends XotBaseWidget
     }
 
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     protected function logRegistrationAttempt(array $data): void
     {
@@ -164,7 +164,7 @@ class RegisterWidget extends XotBaseWidget
     }
 
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     protected function createUser(array $data): User
     {

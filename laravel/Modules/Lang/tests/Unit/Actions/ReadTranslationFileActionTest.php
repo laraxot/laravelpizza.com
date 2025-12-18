@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Modules\Lang\Actions\ReadTranslationFileAction;
 
 beforeEach(function () {
-    $this->action = new ReadTranslationFileAction;
+    $this->action = new ReadTranslationFileAction();
     $this->testFilePath = storage_path('test_translations.php');
     $this->testTranslations = [
         'auth' => [

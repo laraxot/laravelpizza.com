@@ -14,4 +14,6 @@ use Modules\Xot\Filament\Clusters\XotBaseCluster;
  * @see XotBaseCluster
  * @see \Modules\User\docs\errori\class-page-not-found.md
  */
-class Appearance extends XotBaseCluster {}
+class Appearance extends XotBaseCluster
+{
+}

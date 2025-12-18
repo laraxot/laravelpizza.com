@@ -10,11 +10,11 @@ use Illuminate\Support\Arr;
 use Sushi\Sushi;
 
 /**
- * @property int|null $region_id
- * @property int|null $province_id
- * @property string|null $name
- * @property int $id
- * @property array<array-key, mixed>|null $postal_code
+ * @property int|null                                    $region_id
+ * @property int|null                                    $province_id
+ * @property string|null                                 $name
+ * @property int                                         $id
+ * @property array<array-key, mixed>|null                $postal_code
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
@@ -95,7 +95,7 @@ class Locality extends BaseModel
         $city = $get('locality');
         $res = self::where('region_id', $region)
             ->where('province_id', $province)
-            ->when($city !== null, static fn ($query) => $query->where('id', $city))
+            ->when(null !== $city, static fn ($query) => $query->where('id', $city))
             ->select('postal_code')
             ->distinct()
             ->orderBy('postal_code')

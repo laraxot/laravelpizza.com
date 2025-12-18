@@ -21,14 +21,14 @@ class GetCurrentDeviceActionTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->action = new GetCurrentDeviceAction;
+        $this->action = new GetCurrentDeviceAction();
 
         // Mock the Agent class
         $this->mockAgent = \Mockery::mock(Agent::class);
     }
 
     /** @test */
-    public function it_creates_device_with_valid_agent_data(): void
+    public function itCreatesDeviceWithValidAgentData(): void
     {
         // Arrange
         $deviceData = [
@@ -91,7 +91,7 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     /** @test */
-    public function it_creates_device_with_mobile_id(): void
+    public function itCreatesDeviceWithMobileId(): void
     {
         // Arrange
         $mobileId = 'unique-mobile-identifier-123';
@@ -144,7 +144,7 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_empty_mobile_id(): void
+    public function itHandlesEmptyMobileId(): void
     {
         // Arrange
         $emptyMobileId = '';
@@ -155,7 +155,7 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_null_mobile_id(): void
+    public function itHandlesNullMobileId(): void
     {
         // Arrange
         $nullMobileId = null;
@@ -192,7 +192,7 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_unknown_device_types(): void
+    public function itHandlesUnknownDeviceTypes(): void
     {
         // Arrange
         // Mock Agent methods returning null/unknown values
@@ -229,7 +229,7 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_robot_detection(): void
+    public function itHandlesRobotDetection(): void
     {
         // Arrange
         // Mock Agent methods for robot
@@ -260,7 +260,7 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_tablet_detection(): void
+    public function itHandlesTabletDetection(): void
     {
         // Arrange
         // Mock Agent methods for tablet
@@ -295,7 +295,7 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_desktop_detection(): void
+    public function itHandlesDesktopDetection(): void
     {
         // Arrange
         // Mock Agent methods for desktop
@@ -334,7 +334,7 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_mobile_phone_detection(): void
+    public function itHandlesMobilePhoneDetection(): void
     {
         // Arrange
         // Mock Agent methods for mobile phone
@@ -371,7 +371,7 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_edge_case_platforms(): void
+    public function itHandlesEdgeCasePlatforms(): void
     {
         // Arrange
         // Mock Agent methods for edge case platform
@@ -406,7 +406,7 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_legacy_browsers(): void
+    public function itHandlesLegacyBrowsers(): void
     {
         // Arrange
         // Mock Agent methods for legacy browser
@@ -437,7 +437,7 @@ class GetCurrentDeviceActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_unknown_browser_versions(): void
+    public function itHandlesUnknownBrowserVersions(): void
     {
         // Arrange
         // Mock Agent methods with unknown browser version

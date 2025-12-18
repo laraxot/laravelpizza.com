@@ -59,7 +59,7 @@ trait HasAddress
     public function primaryAddress(): ?Address
     {
         $res = $this->addresses()->where('is_primary', true)->first();
-        if ($res === null) {
+        if (null === $res) {
             return $res;
         }
         Assert::isInstanceOf($res, Address::class);
@@ -79,7 +79,7 @@ trait HasAddress
 
     public function getFullAddressAttribute(?string $value): string
     {
-        if ($value !== null) {
+        if (null !== $value) {
             return $value;
         }
         $address = sprintf(
@@ -100,13 +100,13 @@ trait HasAddress
             return $value;
         }
         $address = $this->address()->first();
-        if ($address === null) {
+        if (null === $address) {
             return null;
         }
         Assert::isInstanceOf($address, Address::class);
 
         $locality = $address->getLocality();
-        if ($locality === null) {
+        if (null === $locality) {
             return null;
         }
 
@@ -210,13 +210,13 @@ trait HasAddress
     /**
      * Aggiunge un nuovo indirizzo al modello.
      *
-     * @param  array<string, mixed>  $data
-     * @param  bool  $setPrimary  Se impostare questo indirizzo come principale
+     * @param array<string, mixed> $data
+     * @param bool                 $setPrimary Se impostare questo indirizzo come principale
      */
     public function addAddress(array $data, bool $setPrimary = false): Address
     {
         // Se è il primo indirizzo o è richiesto esplicitamente, impostalo come principale
-        if ($setPrimary || $this->addresses()->count() === 0) {
+        if ($setPrimary || 0 === $this->addresses()->count()) {
             $data['is_primary'] = true;
 
             // Rimuovi il flag is_primary da tutti gli altri indirizzi
@@ -232,7 +232,7 @@ trait HasAddress
     /**
      * Aggiorna l'indirizzo principale.
      *
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function updatePrimaryAddress(array $data): ?Address
     {

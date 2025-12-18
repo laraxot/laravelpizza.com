@@ -12,7 +12,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
- * @method static PermissionUserFactory factory($count = null, $state = [])
+ * @method static PermissionUserFactory          factory($count = null, $state = [])
  * @method static Builder<static>|PermissionUser newModelQuery()
  * @method static Builder<static>|PermissionUser newQuery()
  * @method static Builder<static>|PermissionUser query()
@@ -23,4 +23,6 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @mixin \Eloquent
  */
-class PermissionUser extends ModelHasPermission {}
+class PermissionUser extends ModelHasPermission
+{
+}

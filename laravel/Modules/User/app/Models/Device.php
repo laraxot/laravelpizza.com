@@ -18,9 +18,9 @@ use Modules\Xot\Datas\XotData;
  * Device model representing a user's device in the system.
  *
  * @property EloquentCollection<int, Model&UserContract> $users
- * @property int|null $users_count
+ * @property int|null                                    $users_count
  *
- * @method static DeviceFactory factory($count = null, $state = [])
+ * @method static DeviceFactory  factory($count = null, $state = [])
  * @method static Builder|Device newModelQuery()
  * @method static Builder|Device newQuery()
  * @method static Builder|Device query()
@@ -42,27 +42,27 @@ use Modules\Xot\Datas\XotData;
  * @method static Builder|Device whereUpdatedBy($value)
  * @method static Builder|Device whereVersion($value)
  *
- * @property DeviceUser $pivot
+ * @property DeviceUser           $pivot
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- * @property string $id
- * @property string|null $mobile_id
- * @property array|null $languages
- * @property string|null $device
- * @property string|null $platform
- * @property string|null $browser
- * @property string|null $version
- * @property bool|null $is_robot
- * @property string|null $robot
- * @property bool|null $is_desktop
- * @property bool|null $is_mobile
- * @property bool|null $is_tablet
- * @property bool|null $is_phone
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property string|null $uuid
+ * @property string               $id
+ * @property string|null          $mobile_id
+ * @property array|null           $languages
+ * @property string|null          $device
+ * @property string|null          $platform
+ * @property string|null          $browser
+ * @property string|null          $version
+ * @property bool|null            $is_robot
+ * @property string|null          $robot
+ * @property bool|null            $is_desktop
+ * @property bool|null            $is_mobile
+ * @property bool|null            $is_tablet
+ * @property bool|null            $is_phone
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property string|null          $uuid
  *
  * @method static Builder<static>|Device whereUuid($value)
  *

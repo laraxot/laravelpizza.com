@@ -21,13 +21,13 @@ class FetchIPLocationAction
 
     public function __construct()
     {
-        $this->client = new Client;
+        $this->client = new Client();
     }
 
     /**
      * Ottiene le informazioni di geolocalizzazione per un indirizzo IP.
      *
-     * @param  string  $ip  Indirizzo IP da geolocalizzare
+     * @param string $ip Indirizzo IP da geolocalizzare
      *
      * @throws GuzzleException
      * @throws \RuntimeException
@@ -68,7 +68,7 @@ class FetchIPLocationAction
          */
         $data = json_decode($response->getBody()->getContents(), true);
 
-        if ($data['status'] !== 'success') {
+        if ('success' !== $data['status']) {
             throw new \RuntimeException('Failed to get IP location: '.($data['message'] ?? 'Unknown error'));
         }
 

@@ -6,11 +6,12 @@ namespace Modules\User\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Datas\XotData;
-use Symfony\Component\Console\Input\InputOption;
 
 use function Laravel\Prompts\select;
 use function Laravel\Prompts\text;
+
+use Modules\Xot\Datas\XotData;
+use Symfony\Component\Console\Input\InputOption;
 
 /**
  * Comando per impostare il team corrente per un utente.

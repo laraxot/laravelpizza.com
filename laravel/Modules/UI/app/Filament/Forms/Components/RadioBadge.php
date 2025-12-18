@@ -62,7 +62,7 @@ class RadioBadge extends Radio
         $icon = $this->getEnumValue($value)?->getIcon();
 
         // getIcon() può restituire Htmlable|string|null, ma dobbiamo restituire solo string|null
-        if ($icon === null) {
+        if (null === $icon) {
             return null;
         }
 

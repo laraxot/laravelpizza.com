@@ -12,7 +12,7 @@ class DeviceTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_can_create_device_with_minimal_data(): void
+    public function testCanCreateDeviceWithMinimalData(): void
     {
         $device = Device::factory()->create([
             'device' => 'iPhone',
@@ -26,7 +26,7 @@ class DeviceTest extends TestCase
         ]);
     }
 
-    public function test_can_create_device_with_all_fields(): void
+    public function testCanCreateDeviceWithAllFields(): void
     {
         $deviceData = [
             'uuid' => '550e8400-e29b-41d4-a716-446655440000',
@@ -65,7 +65,7 @@ class DeviceTest extends TestCase
         static::assertSame(['en', 'it', 'de'], $device->languages);
     }
 
-    public function test_device_has_soft_deletes(): void
+    public function testDeviceHasSoftDeletes(): void
     {
         $device = Device::factory()->create();
         $deviceId = $device->id;
@@ -76,7 +76,7 @@ class DeviceTest extends TestCase
         $this->assertDatabaseMissing('devices', ['id' => $deviceId]);
     }
 
-    public function test_can_restore_soft_deleted_device(): void
+    public function testCanRestoreSoftDeletedDevice(): void
     {
         if (! method_exists(Device::class, 'withTrashed')) {
             $this->markTestSkipped('SoftDeletes trait not present on Device model');
@@ -98,7 +98,7 @@ class DeviceTest extends TestCase
         static::assertNull($restoredDevice->deleted_at);
     }
 
-    public function test_can_find_device_by_uuid(): void
+    public function testCanFindDeviceByUuid(): void
     {
         $uuid = '550e8400-e29b-41d4-a716-446655440000';
         $device = Device::factory()->create(['uuid' => $uuid]);
@@ -109,7 +109,7 @@ class DeviceTest extends TestCase
         static::assertSame($device->id, $foundDevice->id);
     }
 
-    public function test_can_find_device_by_mobile_id(): void
+    public function testCanFindDeviceByMobileId(): void
     {
         $device = Device::factory()->create(['mobile_id' => 'unique_mobile_123']);
 
@@ -119,7 +119,7 @@ class DeviceTest extends TestCase
         static::assertSame($device->id, $foundDevice->id);
     }
 
-    public function test_can_find_device_by_device_type(): void
+    public function testCanFindDeviceByDeviceType(): void
     {
         $device = Device::factory()->create(['device' => 'iPhone 13 Pro']);
 
@@ -129,7 +129,7 @@ class DeviceTest extends TestCase
         static::assertSame($device->id, $foundDevice->id);
     }
 
-    public function test_can_find_device_by_platform(): void
+    public function testCanFindDeviceByPlatform(): void
     {
         Device::factory()->create(['platform' => 'iOS']);
         Device::factory()->create(['platform' => 'Android']);
@@ -141,7 +141,7 @@ class DeviceTest extends TestCase
         static::assertSame('iOS', $iosDevices->first()->platform);
     }
 
-    public function test_can_find_device_by_browser(): void
+    public function testCanFindDeviceByBrowser(): void
     {
         Device::factory()->create(['browser' => 'Safari']);
         Device::factory()->create(['browser' => 'Chrome']);
@@ -153,7 +153,7 @@ class DeviceTest extends TestCase
         static::assertSame('Safari', $safariDevices->first()->browser);
     }
 
-    public function test_can_find_device_by_version(): void
+    public function testCanFindDeviceByVersion(): void
     {
         $device = Device::factory()->create(['version' => '15.0.1']);
 
@@ -163,7 +163,7 @@ class DeviceTest extends TestCase
         static::assertSame($device->id, $foundDevice->id);
     }
 
-    public function test_can_find_desktop_devices(): void
+    public function testCanFindDesktopDevices(): void
     {
         Device::factory()->create(['is_desktop' => true]);
         Device::factory()->create(['is_desktop' => false]);
@@ -175,7 +175,7 @@ class DeviceTest extends TestCase
         static::assertTrue($desktopDevices->every(fn ($device) => $device->is_desktop));
     }
 
-    public function test_can_find_mobile_devices(): void
+    public function testCanFindMobileDevices(): void
     {
         Device::factory()->create(['is_mobile' => true]);
         Device::factory()->create(['is_mobile' => false]);
@@ -187,7 +187,7 @@ class DeviceTest extends TestCase
         static::assertTrue($mobileDevices->every(fn ($device) => $device->is_mobile));
     }
 
-    public function test_can_find_tablet_devices(): void
+    public function testCanFindTabletDevices(): void
     {
         Device::factory()->create(['is_tablet' => true]);
         Device::factory()->create(['is_tablet' => false]);
@@ -199,7 +199,7 @@ class DeviceTest extends TestCase
         static::assertTrue($tabletDevices->every(fn ($device) => $device->is_tablet));
     }
 
-    public function test_can_find_phone_devices(): void
+    public function testCanFindPhoneDevices(): void
     {
         Device::factory()->create(['is_phone' => true]);
         Device::factory()->create(['is_phone' => false]);
@@ -211,7 +211,7 @@ class DeviceTest extends TestCase
         static::assertTrue($phoneDevices->every(fn ($device) => $device->is_phone));
     }
 
-    public function test_can_find_robot_devices(): void
+    public function testCanFindRobotDevices(): void
     {
         Device::factory()->create(['is_robot' => true, 'robot' => 'Googlebot']);
         Device::factory()->create(['is_robot' => false, 'robot' => null]);
@@ -223,7 +223,7 @@ class DeviceTest extends TestCase
         static::assertTrue($robotDevices->every(fn ($device) => $device->is_robot));
     }
 
-    public function test_can_find_devices_by_language(): void
+    public function testCanFindDevicesByLanguage(): void
     {
         Device::factory()->create(['languages' => ['en', 'it']]);
         Device::factory()->create(['languages' => ['en', 'de']]);
@@ -235,7 +235,7 @@ class DeviceTest extends TestCase
         static::assertTrue($englishDevices->every(fn ($device) => in_array('en', $device->languages, strict: true)));
     }
 
-    public function test_can_find_devices_by_device_pattern(): void
+    public function testCanFindDevicesByDevicePattern(): void
     {
         Device::factory()->create(['device' => 'iPhone 13']);
         Device::factory()->create(['device' => 'iPhone 14']);
@@ -247,7 +247,7 @@ class DeviceTest extends TestCase
         static::assertTrue($iphoneDevices->every(fn ($device) => str_contains($device->device, 'iPhone')));
     }
 
-    public function test_can_update_device(): void
+    public function testCanUpdateDevice(): void
     {
         $device = Device::factory()->create(['device' => 'Old Device']);
 
@@ -259,7 +259,7 @@ class DeviceTest extends TestCase
         ]);
     }
 
-    public function test_can_handle_null_values(): void
+    public function testCanHandleNullValues(): void
     {
         $device = Device::factory()->create([
             'device' => 'Test Device',
@@ -280,7 +280,7 @@ class DeviceTest extends TestCase
         ]);
     }
 
-    public function test_can_find_devices_by_multiple_criteria(): void
+    public function testCanFindDevicesByMultipleCriteria(): void
     {
         Device::factory()->create([
             'platform' => 'iOS',
@@ -308,14 +308,14 @@ class DeviceTest extends TestCase
         static::assertSame('Safari', $devices->first()->browser);
     }
 
-    public function test_device_has_users_relationship(): void
+    public function testDeviceHasUsersRelationship(): void
     {
         $device = Device::factory()->create();
 
         static::assertTrue(method_exists($device, 'users'));
     }
 
-    public function test_device_has_factory(): void
+    public function testDeviceHasFactory(): void
     {
         $device = Device::factory()->create();
 
@@ -323,9 +323,9 @@ class DeviceTest extends TestCase
         static::assertInstanceOf(Device::class, $device);
     }
 
-    public function test_device_has_fillable_attributes(): void
+    public function testDeviceHasFillableAttributes(): void
     {
-        $device = new Device;
+        $device = new Device();
 
         $expectedFillable = [
             'id',
@@ -347,9 +347,9 @@ class DeviceTest extends TestCase
         static::assertSame($expectedFillable, $device->getFillable());
     }
 
-    public function test_device_has_casts(): void
+    public function testDeviceHasCasts(): void
     {
-        $device = new Device;
+        $device = new Device();
 
         $expectedCasts = [
             'id' => 'string',

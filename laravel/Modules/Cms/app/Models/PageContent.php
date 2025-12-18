@@ -12,16 +12,16 @@ use Spatie\Translatable\HasTranslations;
 /**
  * Modules\Cms\Models\PageContent.
  *
- * @property string $id
- * @property array<array-key, mixed>|null $name
- * @property string|null $slug
- * @property array<array-key, mixed>|null $blocks
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $created_by
- * @property string|null $updated_by
+ * @property string                                      $id
+ * @property array<array-key, mixed>|null                $name
+ * @property string|null                                 $slug
+ * @property array<array-key, mixed>|null                $blocks
+ * @property Carbon|null                                 $created_at
+ * @property Carbon|null                                 $updated_at
+ * @property string|null                                 $created_by
+ * @property string|null                                 $updated_by
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property mixed $translations
+ * @property mixed                                       $translations
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
  * @method static Builder<static>|PageContent newModelQuery()
@@ -39,7 +39,7 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|PageContent whereSlug($value)
  * @method static Builder<static>|PageContent whereUpdatedAt($value)
  * @method static Builder<static>|PageContent whereUpdatedBy($value)
- * @method static int count()
+ * @method static int                         count()
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
  *

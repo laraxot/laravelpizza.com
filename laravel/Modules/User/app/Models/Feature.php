@@ -13,15 +13,15 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
- * @method static FeatureFactory factory($count = null, $state = [])
+ * @method static FeatureFactory  factory($count = null, $state = [])
  * @method static Builder|Feature newModelQuery()
  * @method static Builder|Feature newQuery()
  * @method static Builder|Feature query()
  *
- * @property string $id
- * @property string $name
- * @property string $scope
- * @property string $value
+ * @property string      $id
+ * @property string      $name
+ * @property string      $scope
+ * @property string      $value
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by

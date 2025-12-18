@@ -15,9 +15,9 @@ use PHPUnit\Framework\TestCase;
 class UserModulePhpstanFixesTest extends TestCase
 {
     /** @test */
-    public function password_data_can_be_instantiated(): void
+    public function passwordDataCanBeInstantiated(): void
     {
-        $passwordData = new PasswordData;
+        $passwordData = new PasswordData();
 
         $this->assertInstanceOf(PasswordData::class, $passwordData);
         $this->assertEquals(15, $passwordData->otp_expiration_minutes);
@@ -33,7 +33,7 @@ class UserModulePhpstanFixesTest extends TestCase
     }
 
     /** @test */
-    public function password_data_can_be_configured(): void
+    public function passwordDataCanBeConfigured(): void
     {
         $passwordData = new PasswordData(
             otp_expiration_minutes: 30,
@@ -61,7 +61,7 @@ class UserModulePhpstanFixesTest extends TestCase
     }
 
     /** @test */
-    public function password_data_get_password_rule_works(): void
+    public function passwordDataGetPasswordRuleWorks(): void
     {
         $passwordData = new PasswordData(
             min: 8,
@@ -79,7 +79,7 @@ class UserModulePhpstanFixesTest extends TestCase
     }
 
     /** @test */
-    public function password_data_get_helper_text_works(): void
+    public function passwordDataGetHelperTextWorks(): void
     {
         $passwordData = new PasswordData(
             min: 8,
@@ -102,9 +102,9 @@ class UserModulePhpstanFixesTest extends TestCase
     }
 
     /** @test */
-    public function password_data_get_form_components_returns_array(): void
+    public function passwordDataGetFormComponentsReturnsArray(): void
     {
-        $passwordData = new PasswordData;
+        $passwordData = new PasswordData();
 
         // Test che il metodo esista e non lanci eccezioni
         $this->assertTrue(method_exists($passwordData, 'getPasswordFormComponents'));
@@ -117,12 +117,12 @@ class UserModulePhpstanFixesTest extends TestCase
     }
 
     /** @test */
-    public function events_can_be_instantiated(): void
+    public function eventsCanBeInstantiated(): void
     {
-        $addingTeam = new AddingTeam;
-        $login = new Login;
-        $registered = new Registered;
-        $socialiteUserConnected = new SocialiteUserConnected;
+        $addingTeam = new AddingTeam();
+        $login = new Login();
+        $registered = new Registered();
+        $socialiteUserConnected = new SocialiteUserConnected();
 
         $this->assertInstanceOf(AddingTeam::class, $addingTeam);
         $this->assertInstanceOf(Login::class, $login);
@@ -131,31 +131,31 @@ class UserModulePhpstanFixesTest extends TestCase
     }
 
     /** @test */
-    public function events_have_dispatchable_trait(): void
+    public function eventsHaveDispatchableTrait(): void
     {
-        $addingTeam = new AddingTeam;
-        $login = new Login;
+        $addingTeam = new AddingTeam();
+        $login = new Login();
 
         $this->assertTrue(method_exists($addingTeam, 'dispatch'));
         $this->assertTrue(method_exists($login, 'dispatch'));
     }
 
     /** @test */
-    public function password_data_static_make_method_exists(): void
+    public function passwordDataStaticMakeMethodExists(): void
     {
         $this->assertTrue(method_exists(PasswordData::class, 'make'));
     }
 
     /** @test */
-    public function password_data_get_validation_messages_method_exists(): void
+    public function passwordDataGetValidationMessagesMethodExists(): void
     {
-        $passwordData = new PasswordData;
+        $passwordData = new PasswordData();
 
         $this->assertTrue(method_exists($passwordData, 'getValidationMessages'));
     }
 
     /** @test */
-    public function password_data_get_form_schema_method_exists(): void
+    public function passwordDataGetFormSchemaMethodExists(): void
     {
         $this->assertTrue(method_exists(PasswordData::class, 'getFormSchema'));
     }

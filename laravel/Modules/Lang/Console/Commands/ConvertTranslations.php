@@ -6,10 +6,11 @@ namespace Modules\Lang\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
-use Webmozart\Assert\Assert;
 
 use function Safe\json_decode;
 use function Safe\json_encode;
+
+use Webmozart\Assert\Assert;
 
 class ConvertTranslations extends Command
 {
@@ -57,7 +58,7 @@ class ConvertTranslations extends Command
         }
 
         try {
-            if ($from === 'php' && $to === 'json') {
+            if ('php' === $from && 'json' === $to) {
                 $this->phpToJson($path, $locale);
             } else {
                 $this->jsonToPhp($path, $locale);
@@ -80,7 +81,7 @@ class ConvertTranslations extends Command
         $files = File::files($path);
 
         foreach ($files as $file) {
-            if ($file->getExtension() === 'php' && $file->getFilename() !== 'validation.php') {
+            if ('php' === $file->getExtension() && 'validation.php' !== $file->getFilename()) {
                 $key = $file->getFilenameWithoutExtension();
                 $fileTranslations = require $file->getPathname();
                 Assert::isArray($fileTranslations, 'Le traduzioni caricate devono essere un array');
@@ -144,7 +145,8 @@ class ConvertTranslations extends Command
     }
 
     /**
-     * @param  array<string, mixed>  $array
+     * @param array<string, mixed> $array
+     *
      * @return array<string, string>
      */
     protected function flattenArray(array $array, string $prefix = ''): array
@@ -169,7 +171,7 @@ class ConvertTranslations extends Command
     }
 
     /**
-     * @param  array<string, mixed>  $array
+     * @param array<string, mixed> $array
      */
     protected function setNestedValue(array &$array, string $key, mixed $value): void
     {

@@ -17,10 +17,10 @@ use Modules\Xot\Filament\Traits\TransTrait;
 /**
  * Defines the different types of appointments in the system.
  *
- * @method static self fromName(string $name)
- * @method static self fromValue(string $value)
- * @method static self tryFromName(string $name)
- * @method static self tryFromValue(string $value)
+ * @method static self        fromName(string $name)
+ * @method static self        fromValue(string $value)
+ * @method static self        tryFromName(string $name)
+ * @method static self        tryFromValue(string $value)
  * @method static array<self> cases()
  */
 enum FieldTypeEnum: string implements HasColor, HasIcon, HasLabel

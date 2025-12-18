@@ -51,7 +51,7 @@ class GeoDataService
      */
     public function __construct()
     {
-        $this->validator = new GeoDataValidator;
+        $this->validator = new GeoDataValidator();
     }
 
     /**
@@ -74,7 +74,8 @@ class GeoDataService
     /**
      * Ottiene le province di una regione.
      *
-     * @param  string  $regionCode  Codice della regione
+     * @param string $regionCode Codice della regione
+     *
      * @return Collection<int, array{name: string, code: string}>
      */
     public function getProvinces(string $regionCode): Collection
@@ -88,7 +89,7 @@ class GeoDataService
 
             if (! $region || ! \is_array($region) || ! isset($region['provinces']) || ! \is_array($region['provinces'])) {
                 /* @var Collection<int, array{name: string, code: string}> */
-                return new Collection;
+                return new Collection();
             }
 
             /** @var array<int, array<string, mixed>> $provinces */
@@ -109,7 +110,8 @@ class GeoDataService
     /**
      * Ottiene le città di una provincia.
      *
-     * @param  string  $provinceCode  Codice della provincia
+     * @param string $provinceCode Codice della provincia
+     *
      * @return Collection<int, array{name: string, code: string}>
      */
     public function getCities(string $provinceCode): Collection
@@ -125,7 +127,7 @@ class GeoDataService
 
             if (! $province || ! \is_array($province) || ! isset($province['cities']) || ! \is_array($province['cities'])) {
                 /* @var Collection<int, array{name: string, code: string}> */
-                return new Collection;
+                return new Collection();
             }
 
             /** @var array<int, array<string, mixed>> $cities */
@@ -146,8 +148,8 @@ class GeoDataService
     /**
      * Ottiene il CAP di una città.
      *
-     * @param  string  $provinceCode  Codice della provincia
-     * @param  string  $cityCode  Codice della città
+     * @param string $provinceCode Codice della provincia
+     * @param string $cityCode     Codice della città
      */
     public function getCap(string $provinceCode, string $cityCode): ?string
     {
@@ -193,10 +195,9 @@ class GeoDataService
     /**
      * Carica i dati dal file JSON.
      *
+     * @throws \RuntimeException Se il file non esiste o non è valido
      *
      * @return Collection<int, array<string, mixed>>
-     *
-     * @throws \RuntimeException Se il file non esiste o non è valido
      */
     private function loadData(): Collection
     {

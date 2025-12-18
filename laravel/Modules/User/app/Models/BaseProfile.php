@@ -22,37 +22,37 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
 use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
 
 /**
- * @property \Spatie\SchemalessAttributes\SchemalessAttributes $extra
- * @property string $avatar
- * @property Collection<int, DeviceUser> $deviceUsers
- * @property int|null $device_users_count
- * @property Collection<int, Device> $devices
- * @property int|null $devices_count
- * @property string|null $first_name
- * @property string|null $full_name
- * @property string|null $last_name
- * @property string|null $lang
- * @property MediaCollection<int, Media> $media
- * @property int|null $media_count
- * @property Collection<int, DeviceUser> $mobileDeviceUsers
- * @property int|null $mobile_device_users_count
- * @property Collection<int, Device> $mobileDevices
- * @property int|null $mobile_devices_count
+ * @property \Spatie\SchemalessAttributes\SchemalessAttributes         $extra
+ * @property string                                                    $avatar
+ * @property Collection<int, DeviceUser>                               $deviceUsers
+ * @property int|null                                                  $device_users_count
+ * @property Collection<int, Device>                                   $devices
+ * @property int|null                                                  $devices_count
+ * @property string|null                                               $first_name
+ * @property string|null                                               $full_name
+ * @property string|null                                               $last_name
+ * @property string|null                                               $lang
+ * @property MediaCollection<int, Media>                               $media
+ * @property int|null                                                  $media_count
+ * @property Collection<int, DeviceUser>                               $mobileDeviceUsers
+ * @property int|null                                                  $mobile_device_users_count
+ * @property Collection<int, Device>                                   $mobileDevices
+ * @property int|null                                                  $mobile_devices_count
  * @property DatabaseNotificationCollection<int, DatabaseNotification> $notifications
- * @property int|null $notifications_count
- * @property Collection<int, Permission> $permissions
- * @property int|null $permissions_count
- * @property Collection<int, Role> $roles
- * @property int|null $roles_count
- * @property UserContract|null $user
- * @property string|null $user_name
+ * @property int|null                                                  $notifications_count
+ * @property Collection<int, Permission>                               $permissions
+ * @property int|null                                                  $permissions_count
+ * @property Collection<int, Role>                                     $roles
+ * @property int|null                                                  $roles_count
+ * @property UserContract|null                                         $user
+ * @property string|null                                               $user_name
  *
  * @method static Builder|ProfileContract newModelQuery()
  * @method static Builder|ProfileContract newQuery()
  * @method static Builder|ProfileContract permission($permissions, $without = false)
  * @method static Builder|ProfileContract query()
  * @method static Builder|ProfileContract role($roles, $guard = null, $without = false)
- * @method static Builder|BaseProfile withExtraAttributes()
+ * @method static Builder|BaseProfile     withExtraAttributes()
  * @method static Builder|ProfileContract withoutPermission($permissions)
  * @method static Builder|ProfileContract withoutRole($roles, $guard = null)
  *
@@ -115,7 +115,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
     public function getAvatarUrl(): string
     {
         $avatar = $this->getFirstMediaUrl('avatar');
-        if ($avatar !== '') {
+        if ('' !== $avatar) {
             return $avatar;
         }
 
@@ -147,13 +147,13 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         $locale = config('app.locale');
         $defaultLocale = 'it';
 
-        if ($locale === null || ! is_string($locale)) {
+        if (null === $locale || ! is_string($locale)) {
             $locale = $defaultLocale;
         }
 
         $userLang = $this->lang;
 
-        if ($userLang === null || ! is_string($userLang)) {
+        if (null === $userLang || ! is_string($userLang)) {
             return $locale;
         }
 

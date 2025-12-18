@@ -19,9 +19,9 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder|Extra query()
  * @method static Builder|Extra withExtraAttributes()
  *
- * @property int $id
- * @property string $model_type
- * @property string $model_id
+ * @property int         $id
+ * @property string      $model_type
+ * @property string      $model_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by

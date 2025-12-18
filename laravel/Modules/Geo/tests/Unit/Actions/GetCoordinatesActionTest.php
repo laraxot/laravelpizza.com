@@ -17,11 +17,11 @@ class GetCoordinatesActionTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->action = new GetCoordinatesAction;
+        $this->action = new GetCoordinatesAction();
     }
 
     /** @test */
-    public function it_returns_coordinates_for_valid_address(): void
+    public function itReturnsCoordinatesForValidAddress(): void
     {
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
@@ -62,7 +62,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_exception_when_api_key_missing(): void
+    public function itThrowsExceptionWhenApiKeyMissing(): void
     {
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
@@ -74,7 +74,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_exception_when_api_request_fails(): void
+    public function itThrowsExceptionWhenApiRequestFails(): void
     {
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
@@ -90,7 +90,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_null_for_invalid_address(): void
+    public function itReturnsNullForInvalidAddress(): void
     {
         // Arrange
         $address = 'Invalid Address That Does Not Exist';
@@ -113,7 +113,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_null_for_over_query_limit_status(): void
+    public function itReturnsNullForOverQueryLimitStatus(): void
     {
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
@@ -136,7 +136,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_null_for_request_denied_status(): void
+    public function itReturnsNullForRequestDeniedStatus(): void
     {
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
@@ -159,7 +159,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_empty_results_array(): void
+    public function itHandlesEmptyResultsArray(): void
     {
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
@@ -182,7 +182,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_multiple_results_and_returns_first(): void
+    public function itHandlesMultipleResultsAndReturnsFirst(): void
     {
         // Arrange
         $address = 'Via Roma, Italia';
@@ -229,7 +229,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_special_characters_in_address(): void
+    public function itHandlesSpecialCharactersInAddress(): void
     {
         // Arrange
         $address = 'Via Roma 123, Milano, Italia - Ufficio 4° piano';
@@ -263,7 +263,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_numeric_coordinates_correctly(): void
+    public function itHandlesNumericCoordinatesCorrectly(): void
     {
         // Arrange
         $address = '123 Main St, New York, NY';
@@ -302,7 +302,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_very_long_addresses(): void
+    public function itHandlesVeryLongAddresses(): void
     {
         // Arrange
         $address = str_repeat('Via Roma 123, Milano, Italia - ', 50).'Ufficio 4° piano';
@@ -336,7 +336,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_coordinates_with_high_precision(): void
+    public function itHandlesCoordinatesWithHighPrecision(): void
     {
         // Arrange
         $address = 'Precise Location Test';
@@ -375,7 +375,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_network_timeout_gracefully(): void
+    public function itHandlesNetworkTimeoutGracefully(): void
     {
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';
@@ -391,7 +391,7 @@ class GetCoordinatesActionTest extends TestCase
     }
 
     /** @test */
-    public function it_handles_invalid_json_response(): void
+    public function itHandlesInvalidJsonResponse(): void
     {
         // Arrange
         $address = 'Via Roma 123, Milano, Italia';

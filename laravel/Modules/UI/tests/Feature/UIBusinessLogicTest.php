@@ -236,7 +236,7 @@ describe('UI Business Logic Integration', function () {
 
     describe('Component Service Business Rules', function () {
         it('enforces component rendering rules', function () {
-            $service = new ComponentService;
+            $service = new ComponentService();
 
             $component = Component::factory()->create([
                 'name' => 'renderable-component',
@@ -256,7 +256,7 @@ describe('UI Business Logic Integration', function () {
         });
 
         it('enforces component caching rules', function () {
-            $service = new ComponentService;
+            $service = new ComponentService();
 
             $component = Component::factory()->create([
                 'name' => 'cacheable-component',
@@ -277,7 +277,7 @@ describe('UI Business Logic Integration', function () {
         });
 
         it('enforces component validation rules', function () {
-            $service = new ComponentService;
+            $service = new ComponentService();
 
             $component = Component::factory()->create([
                 'name' => 'validated-component',
@@ -300,7 +300,7 @@ describe('UI Business Logic Integration', function () {
 
     describe('Theme Service Business Rules', function () {
         it('enforces theme compilation rules', function () {
-            $service = new ThemeService;
+            $service = new ThemeService();
 
             $theme = Theme::factory()->create([
                 'name' => 'Compilable Theme',
@@ -319,7 +319,7 @@ describe('UI Business Logic Integration', function () {
         });
 
         it('enforces theme asset compilation', function () {
-            $service = new ThemeService;
+            $service = new ThemeService();
 
             $theme = $this->theme;
             $assets = Asset::factory()
@@ -344,7 +344,7 @@ describe('UI Business Logic Integration', function () {
         });
 
         it('enforces theme configuration inheritance', function () {
-            $service = new ThemeService;
+            $service = new ThemeService();
 
             $parentTheme = Theme::factory()->create([
                 'name' => 'Parent Theme',
@@ -512,7 +512,7 @@ describe('UI Business Logic Integration', function () {
             expect($component->cache_duration)->toBeLessThan(86400); // 24 ore
 
             // Verifica che le strategie aggressive abbiano durate più lunghe
-            if ($component->cache_strategy === 'aggressive') {
+            if ('aggressive' === $component->cache_strategy) {
                 expect($component->cache_duration)->toBeGreaterThan(3600); // 1 ora
             }
         });

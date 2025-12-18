@@ -34,7 +34,8 @@ class PasswordData extends Data
         public int $compromisedThreshold = 0,
         public ?string $failMessage = null,
         private ?string $field_name = null,
-    ) {}
+    ) {
+    }
 
     /**
      * Crea un'istanza della classe PasswordData.
@@ -146,7 +147,7 @@ class PasswordData extends Data
      */
     public function getPasswordConfirmationFormComponent(): FormsTextInput
     {
-        if ($this->field_name === null) {
+        if (null === $this->field_name) {
             throw new \RuntimeException('Il nome del campo password non è stato impostato. Utilizzare setFieldName() prima di chiamare questo metodo.');
         }
 

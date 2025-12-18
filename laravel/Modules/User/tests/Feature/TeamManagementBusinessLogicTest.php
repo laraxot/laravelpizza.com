@@ -15,7 +15,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function it_can_create_team(): void
+    public function itCanCreateTeam(): void
     {
         // Arrange
         $teamData = [
@@ -43,7 +43,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_add_user_to_team(): void
+    public function itCanAddUserToTeam(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -67,7 +67,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_remove_user_from_team(): void
+    public function itCanRemoveUserFromTeam(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -88,7 +88,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_assign_team_role_to_user(): void
+    public function itCanAssignTeamRoleToUser(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -109,7 +109,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_assign_team_permissions_to_user(): void
+    public function itCanAssignTeamPermissionsToUser(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -133,7 +133,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_check_user_team_permissions(): void
+    public function itCanCheckUserTeamPermissions(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -152,7 +152,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_create_team_invitation(): void
+    public function itCanCreateTeamInvitation(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -187,7 +187,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_accept_team_invitation(): void
+    public function itCanAcceptTeamInvitation(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -219,7 +219,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_decline_team_invitation(): void
+    public function itCanDeclineTeamInvitation(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -242,7 +242,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_create_team_membership(): void
+    public function itCanCreateTeamMembership(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -276,7 +276,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_update_team_membership(): void
+    public function itCanUpdateTeamMembership(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -305,7 +305,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_remove_team_membership(): void
+    public function itCanRemoveTeamMembership(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -328,7 +328,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_create_team_permission(): void
+    public function itCanCreateTeamPermission(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -354,7 +354,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_assign_permission_to_team_role(): void
+    public function itCanAssignPermissionToTeamRole(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -377,7 +377,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_check_team_user_role(): void
+    public function itCanCheckTeamUserRole(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -391,7 +391,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_get_team_members(): void
+    public function itCanGetTeamMembers(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -414,7 +414,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_get_team_admins(): void
+    public function itCanGetTeamAdmins(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -437,7 +437,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_get_team_members_by_role(): void
+    public function itCanGetTeamMembersByRole(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -462,7 +462,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_check_team_is_personal(): void
+    public function itCanCheckTeamIsPersonal(): void
     {
         // Arrange
         $personalTeam = Team::factory()->create(['personal_team' => true]);
@@ -474,7 +474,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_check_team_has_user_with_permission(): void
+    public function itCanCheckTeamHasUserWithPermission(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -493,7 +493,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_get_team_invitations(): void
+    public function itCanGetTeamInvitations(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -523,7 +523,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_get_pending_team_invitations(): void
+    public function itCanGetPendingTeamInvitations(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -555,7 +555,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_get_team_statistics(): void
+    public function itCanGetTeamStatistics(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -579,7 +579,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_validate_team_slug_uniqueness(): void
+    public function itCanValidateTeamSlugUniqueness(): void
     {
         // Arrange
         Team::factory()->create(['slug' => 'unique-team']);
@@ -595,7 +595,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_handle_team_soft_delete(): void
+    public function itCanHandleTeamSoftDelete(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -609,7 +609,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_restore_soft_deleted_team(): void
+    public function itCanRestoreSoftDeletedTeam(): void
     {
         // Arrange
         $team = Team::factory()->create();
@@ -624,7 +624,7 @@ class TeamManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function it_can_force_delete_team(): void
+    public function itCanForceDeleteTeam(): void
     {
         // Arrange
         $team = Team::factory()->create();

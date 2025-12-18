@@ -137,10 +137,10 @@ class Login extends Component implements HasActions, HasForms
         // Se l'utente ha ruoli admin, redirect al pannello appropriato
         $adminRoles = $user->roles->filter(fn ($role) => str_ends_with($role->name, '::admin'));
 
-        if ($adminRoles->count() === 1) {
+        if (1 === $adminRoles->count()) {
             // Un solo ruolo admin - redirect al modulo specifico
             $role = $adminRoles->first();
-            if ($role !== null) {
+            if (null !== $role) {
                 $moduleName = str_replace('::admin', '', $role->name);
 
                 return redirect()->to("/{$moduleName}/admin");

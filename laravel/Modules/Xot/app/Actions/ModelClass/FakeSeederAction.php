@@ -110,14 +110,15 @@ class FakeSeederAction
         }
         app(self::class)->onQueue()->execute($modelClass, $qty - self::MAX_RECORDS);
     }
-
+/*
     private function getTableName(string $modelClass): string
     {
         Assert::classExists($modelClass, 'La classe del modello deve esistere');
 
-        /** @var Model */
+        //@var Model 
         $model = app($modelClass);
 
         return $model->getTable();
     }
+        */
 }

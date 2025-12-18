@@ -15,8 +15,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|TeamUser newQuery()
  * @method static Builder|TeamUser query()
  *
- * @property int $id
- * @property string $uuid
+ * @property int         $id
+ * @property string      $uuid
  * @property string|null $team_id
  * @property string|null $user_id
  * @property string|null $role
@@ -49,8 +49,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @mixin IdeHelperTeamUser
  *
  * @property ProfileContract|null $deleter
- * @property Team|null $team
- * @property User|null $user
+ * @property Team|null            $team
+ * @property User|null            $user
  *
  * @method static \Modules\User\Database\Factories\TeamUserFactory factory($count = null, $state = [])
  *

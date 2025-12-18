@@ -32,7 +32,8 @@ class UserCalendarWidget extends Widget
     }
 
     /**
-     * @param  array<string, mixed>  $fetchInfo
+     * @param array<string, mixed> $fetchInfo
+     *
      * @return array<int, array<string, mixed>>
      */
     public function fetchEvents(array $fetchInfo): array

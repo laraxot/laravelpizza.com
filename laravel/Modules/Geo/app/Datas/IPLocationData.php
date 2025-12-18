@@ -9,15 +9,15 @@ use Spatie\LaravelData\Data;
 /**
  * Data object per la gestione delle informazioni di geolocalizzazione IP.
  *
- * @property string $ip Indirizzo IP
- * @property string|null $city Nome della città
- * @property string|null $region Nome della regione
- * @property string|null $country Codice paese
+ * @property string      $ip          Indirizzo IP
+ * @property string|null $city        Nome della città
+ * @property string|null $region      Nome della regione
+ * @property string|null $country     Codice paese
  * @property string|null $countryName Nome del paese
- * @property float|null $latitude Latitudine
- * @property float|null $longitude Longitudine
- * @property string|null $timezone Fuso orario
- * @property string|null $isp Provider di servizi internet
+ * @property float|null  $latitude    Latitudine
+ * @property float|null  $longitude   Longitudine
+ * @property string|null $timezone    Fuso orario
+ * @property string|null $isp         Provider di servizi internet
  */
 class IPLocationData extends Data
 {
@@ -31,5 +31,6 @@ class IPLocationData extends Data
         public readonly ?float $longitude = null,
         public readonly ?string $timezone = null,
         public readonly ?string $isp = null,
-    ) {}
+    ) {
+    }
 }

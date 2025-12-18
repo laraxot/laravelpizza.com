@@ -19,7 +19,7 @@ parameters:
 
     ignoreErrors:
         - '#PHPDoc tag @mixin contains unknown class #'
-        - '#Static call to instance method Nwidart#'
+        #- '#Static call to instance method Nwidart#'
         - '#is used zero times and is not analysed#'
         - "#^Unsafe usage of new static#"
         # - '#Method .+::.+ should return .+<.+, (.+)> but returns .+<.+, \$this\(\1\)>#' # Ignora errori di covarianza nei tipi generici delle relazioni Eloquent
@@ -27,7 +27,7 @@ parameters:
         - identifier: missingType.generics
         - identifier: missingType.iterableValue
         - identifier: larastan.noEnvCallsOutsideOfConfig
-        - identifier: method.unused
+        #- identifier: method.unused
 
     excludePaths:
         - ./*/vendor/*

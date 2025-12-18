@@ -25,12 +25,12 @@ use Webmozart\Assert\Assert;
  * Provides team functionality for User models implementing team-based organization.
  * This trait handles team ownership, membership, permissions, and relationships.
  *
- * @property TeamContract $currentTeam
- * @property int|null $current_team_id
+ * @property TeamContract                  $currentTeam
+ * @property int|null                      $current_team_id
  * @property Collection<int, TeamContract> $teams
  * @property Collection<int, TeamContract> $ownedTeams
- * @property Collection<int, Membership> $teamUsers
- * @property UserContract|null $owner
+ * @property Collection<int, Membership>   $teamUsers
+ * @property UserContract|null             $owner
  */
 trait HasTeams
 {
@@ -73,7 +73,7 @@ trait HasTeams
     public function belongsToTeam(TeamContract $team): bool
     {
         $found = $this->teams()->where('teams.id', $team->id)->first();
-        if ($found === null) {
+        if (null === $found) {
             return false;
         }
         Assert::isInstanceOf($found, TeamContract::class, 'Team must implement TeamContract.');
@@ -166,11 +166,11 @@ trait HasTeams
             // Membership always extends Model, check only if user attribute exists
             $user = $membership->getAttribute('user');
 
-            return $user !== null ? $user : null;
+            return null !== $user ? $user : null;
         })->filter();
 
         $owner = $this->owner;
-        if ($owner !== null && $owner instanceof User) {
+        if (null !== $owner && $owner instanceof User) {
             return $users->merge([$owner]);
         }
 
@@ -189,13 +189,13 @@ trait HasTeams
             if (\is_object($memberUser) && method_exists($memberUser, 'getKey')) {
                 $memberUserKey = $memberUser->getKey();
 
-                return $memberUserKey !== null && $memberUserKey === $user->getKey();
+                return null !== $memberUserKey && $memberUserKey === $user->getKey();
             }
 
             return false;
         });
 
-        if ($userFound !== null) {
+        if (null !== $userFound) {
             return true;
         }
 
@@ -234,7 +234,7 @@ trait HasTeams
 
         $teamRole = $this->teamRole($team);
 
-        return $teamRole !== null && isset($teamRole->name) && $teamRole->name === $role;
+        return null !== $teamRole && isset($teamRole->name) && $teamRole->name === $role;
     }
 
     /**
@@ -245,11 +245,11 @@ trait HasTeams
     public function currentTeam(): BelongsTo
     {
         $xot = XotData::make();
-        if ($this->current_team_id === null && $this->id) {
+        if (null === $this->current_team_id && $this->id) {
             $this->switchTeam($this->personalTeam());
         }
 
-        if ($this->allTeams()->isEmpty() && $this->getKey() !== null) {
+        if ($this->allTeams()->isEmpty() && null !== $this->getKey()) {
             $this->current_team_id = null;
             $this->save();
         }
@@ -290,7 +290,7 @@ trait HasTeams
         /** @var Model|Pivot|null $teamUser */
         $teamUser = $this->teamUsers()->where('team_id', $team->id)->first();
 
-        if ($teamUser === null) {
+        if (null === $teamUser) {
             return null;
         }
 
@@ -309,7 +309,7 @@ trait HasTeams
     {
         $role = $this->teamRole($team);
 
-        if ($role === null || ! $role->permissions) {
+        if (null === $role || ! $role->permissions) {
             return [];
         }
 
@@ -343,7 +343,7 @@ trait HasTeams
      */
     public function switchTeam(?TeamContract $team): bool
     {
-        if ($team === null) {
+        if (null === $team) {
             return false;
         }
 
@@ -362,7 +362,7 @@ trait HasTeams
      */
     public function isCurrentTeam(TeamContract $team): bool
     {
-        if ($this->currentTeam === null) {
+        if (null === $this->currentTeam) {
             return false;
         }
 
@@ -377,7 +377,7 @@ trait HasTeams
         /** @var ?Model $found */
         $found = $this->ownedTeams()->where('teams.id', $team->id)->first();
 
-        return $found !== null;
+        return null !== $found;
     }
 
     /**

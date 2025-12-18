@@ -246,18 +246,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         View::composer('*', XotComposer::class);
     }
 
-    /**
-     * Register optimization console commands.
-     */
-    private function registerOptimizationCommands(): void
-    {
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                OptimizeFilamentMemoryCommand::class,
-            ]);
-        }
-    }
-
+   
     /**
      * Register Xot specific Livewire components.
      */

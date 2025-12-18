@@ -10,5 +10,6 @@ readonly class ElevationResultDTO
         public float $elevation,
         public float $latitude,
         public float $longitude,
-    ) {}
+    ) {
+    }
 }

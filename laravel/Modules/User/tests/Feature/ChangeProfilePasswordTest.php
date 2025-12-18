@@ -9,10 +9,11 @@ use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
-use Tests\TestCase;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\post;
+
+use Tests\TestCase;
 
 uses(TestCase::class);
 

@@ -11,7 +11,7 @@ use Sushi\Sushi;
 /**
  * Modules\Cms\Models\Conf.
  *
- * @property int $id
+ * @property int         $id
  * @property string|null $name
  *
  * @method static Builder<static>|Conf newModelQuery()
@@ -19,7 +19,7 @@ use Sushi\Sushi;
  * @method static Builder<static>|Conf query()
  * @method static Builder<static>|Conf whereId($value)
  * @method static Builder<static>|Conf whereName($value)
- * @method static int count()
+ * @method static int                  count()
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter

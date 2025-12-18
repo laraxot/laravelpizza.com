@@ -75,7 +75,8 @@ class NationalFlagSelect extends Select
     /**
      * Get filtered country options based on search query.
      *
-     * @param  string  $search  The search query
+     * @param string $search The search query
+     *
      * @return array<string, string>
      */
     protected function getFilteredCountryOptions(string $search): array

@@ -29,7 +29,7 @@ class TeamsRelationManager extends RelationManager
                     ->boolean()
                     ->default(function ($record, $livewire): bool {
                         /**
-                         * @var Model $record
+                         * @var Model           $record
                          * @var RelationManager $livewire
                          */
                         $user = $livewire->getOwnerRecord();
@@ -55,7 +55,7 @@ class TeamsRelationManager extends RelationManager
             ->recordActions([
                 DetachAction::make()->after(function ($record, $livewire): void {
                     /**
-                     * @var Model $record
+                     * @var Model           $record
                      * @var RelationManager $livewire
                      */
                     $user = $livewire->getOwnerRecord();

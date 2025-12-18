@@ -27,7 +27,7 @@ class ResetPassword extends BaseNotification
         Assert::string($subject = Lang::get('user::email.password_reset_subject'));
         Assert::string($action = Lang::get('user::email.reset_password'));
 
-        $mailMessage = new MailMessage;
+        $mailMessage = new MailMessage();
         $mailMessage = $mailMessage->subject($subject);
         $mailMessage = $mailMessage->line(Lang::get('user::email.password_cause_of_email'));
         $mailMessage = $mailMessage->action($action, $url);
