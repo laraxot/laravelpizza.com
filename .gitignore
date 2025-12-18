@@ -42,4 +42,7 @@ laravel/database/migrations/
 _base_laravelpizza_1.code-workspace
 IFLOW.md
 GEMINI.md
-CLAUDE.md
+CLAUDE.mdpublic_html/js/
+public_html/fonts/
+public_html/css/
+public_html/vendor/
