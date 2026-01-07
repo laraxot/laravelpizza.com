@@ -7,6 +7,8 @@ namespace Modules\User\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Modules\User\Database\Factories\TeamPermissionFactory;
+use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * Team Permission Model.
@@ -28,11 +30,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
  * @mixin IdeHelperTeamPermission
  *
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $deleter
+ * @property ProfileContract|null $updater
  *
- * @method static \Modules\User\Database\Factories\TeamPermissionFactory factory($count = null, $state = [])
+ * @method static TeamPermissionFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

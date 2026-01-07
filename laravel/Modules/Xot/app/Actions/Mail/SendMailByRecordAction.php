@@ -64,7 +64,7 @@ class SendMailByRecordAction
         }
 
         $emailData = new EmailData(
-            to: $to,
+            recipient: $to,
             subject: $subject,
             body_html: $bodyHtml,
             attachments: [
@@ -77,7 +77,7 @@ class SendMailByRecordAction
         SmtpData::make()->send($emailData);
 
         // myLogs è sempre disponibile su BaseModel
-        /** @phpstan-ignore-next-line - Dynamic relationship method */
+        /* @phpstan-ignore-next-line - Dynamic relationship method */
         $record->myLogs()->create([
             'act' => 'sendMail',
             'handle' => authId(),

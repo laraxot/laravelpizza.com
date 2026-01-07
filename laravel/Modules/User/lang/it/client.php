@@ -16,31 +16,51 @@ return [
     ],
     'fields' => [
         'name' => [
-            'label' => 'name',
+            'label' => 'Nome',
+        ],
+        'user' => [
+            'email' => [
+                'label' => 'Proprietario',
+            ],
         ],
         'create' => [
-            'label' => 'create',
+            'label' => 'Crea',
         ],
         'edit' => [
-            'label' => 'edit',
+            'label' => 'Modifica',
         ],
         'delete' => [
-            'label' => 'delete',
+            'label' => 'Elimina',
         ],
         'toggleColumns' => [
-            'label' => 'toggleColumns',
+            'label' => 'Gestisci Colonne',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
+            'label' => 'Riordina Record',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
+            'label' => 'Reimposta Filtri',
         ],
         'applyFilters' => [
-            'label' => 'applyFilters',
+            'label' => 'Applica Filtri',
         ],
         'openFilters' => [
-            'label' => 'openFilters',
+            'label' => 'Apri Filtri',
+        ],
+        'recordId' => [
+            'label' => 'ID Record',
+        ],
+        'client_id' => [
+            'description' => 'client_id',
+            'helper_text' => 'client_id',
+            'placeholder' => 'client_id',
+            'label' => 'client_id',
+        ],
+        'secret' => [
+            'label' => 'secret',
+        ],
+        'id' => [
+            'label' => 'id',
         ],
     ],
     'plural' => [
@@ -103,6 +123,46 @@ return [
             'icon' => 'detach',
             'label' => 'detach',
             'tooltip' => 'detach',
+        ],
+        'cancel' => [
+            'tooltip' => 'cancel',
+            'icon' => 'cancel',
+            'label' => 'cancel',
+        ],
+        'logout' => [
+            'tooltip' => 'logout',
+            'icon' => 'logout',
+            'label' => 'logout',
+        ],
+        'createAnother' => [
+            'tooltip' => 'createAnother',
+        ],
+        'attachAnother' => [
+            'tooltip' => 'attachAnother',
+        ],
+        'profile' => [
+            'tooltip' => 'profile',
+            'icon' => 'profile',
+            'label' => 'profile',
+        ],
+        'view' => [
+            'tooltip' => 'view',
+            'icon' => 'view',
+        ],
+        'submit' => [
+            'tooltip' => 'submit',
+            'icon' => 'submit',
+            'label' => 'submit',
+        ],
+        'associateExistingClient' => [
+            'tooltip' => 'associateExistingClient',
+            'icon' => 'associateExistingClient',
+            'label' => 'associateExistingClient',
+        ],
+    ],
+    'sections' => [
+        'empty' => [
+            'heading' => 'empty',
         ],
     ],
 ];

@@ -62,11 +62,11 @@ use Override;
  * @property int $attempt
  * @property int|null $progress
  * @property string|null $exception_message
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read ProfileContract|null $creator
  * @property-read string $status
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property-read ProfileContract|null $updater
  *
- * @method static \Modules\Job\Database\Factories\JobManagerFactory factory($count = null, $state = [])
+ * @method static JobManagerFactory factory($count = null, $state = [])
  * @method static Builder<static>|JobManager newModelQuery()
  * @method static Builder<static>|JobManager newQuery()
  * @method static Builder<static>|JobManager query()
@@ -81,7 +81,7 @@ use Override;
  * @method static Builder<static>|JobManager whereQueue($value)
  * @method static Builder<static>|JobManager whereStartedAt($value)
  *
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read ProfileContract|null $deleter
  *
  * @mixin \Eloquent
  */

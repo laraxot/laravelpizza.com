@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 return [
     'actions' => [
         'create' => [
@@ -13,5 +12,8 @@ return [
         'edit' => [
             'label' => 'edit',
         ],
+    ],
+    'navigation' => [
+        'sort' => 96,
     ],
 ];

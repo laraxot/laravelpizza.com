@@ -12,6 +12,7 @@ use Filament\Schemas\Components\Utilities\Get;
 use Filament\Tables\Columns\IconColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Modules\Xot\Contracts\StateContract as XotStateContract;
 use Spatie\ModelStates\HasStatesContract;
@@ -95,7 +96,7 @@ class IconStateColumn extends IconColumn
                             return false;
                         }
 
-                        /** @var \Illuminate\Support\Collection<string, class-string<State>> $states */
+                        /** @var Collection<string, class-string<State>> $states */
                         $states = $state::getStateMapping();
                         /** @var array<string, class-string<State>> $statesArray */
                         $statesArray = $states->toArray();

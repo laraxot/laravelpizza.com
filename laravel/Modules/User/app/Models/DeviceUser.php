@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
+use Modules\User\Database\Factories\DeviceUserFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
@@ -55,7 +56,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  *
  * @property ProfileContract|null $deleter
  *
- * @method static \Modules\User\Database\Factories\DeviceUserFactory factory($count = null, $state = [])
+ * @method static DeviceUserFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

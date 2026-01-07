@@ -6,6 +6,8 @@ namespace Modules\Notify\Services;
 
 use DateTime;
 use Exception;
+use GuzzleHttp\Promise\PromiseInterface;
+use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -255,11 +257,11 @@ class PushNotificationService
         ])->post($url, $payload);
 
         // Ensure we have a Response, not Promise
-        if ($response instanceof \GuzzleHttp\Promise\PromiseInterface) {
+        if ($response instanceof PromiseInterface) {
             $response = $response->wait();
         }
 
-        /** @var \Illuminate\Http\Client\Response $response */
+        /** @var Response $response */
         if ($response->successful()) {
             $responseData = $response->json();
 
@@ -403,11 +405,11 @@ class PushNotificationService
         ])->post($url, $payload);
 
         // Ensure we have a Response, not Promise
-        if ($response instanceof \GuzzleHttp\Promise\PromiseInterface) {
+        if ($response instanceof PromiseInterface) {
             $response = $response->wait();
         }
 
-        /** @var \Illuminate\Http\Client\Response $response */
+        /** @var Response $response */
         if ($response->successful()) {
             $responseData = $response->json();
 

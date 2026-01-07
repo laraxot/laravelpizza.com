@@ -19,40 +19,31 @@ class ViewProfile extends XotBaseViewRecord
     protected static string $resource = BaseProfileResource::class;
 
     /**
-     * @return array<int, Component>
+     * @return array<string, Component>
      */
     #[\Override]
     public function getInfolistSchema(): array
     {
         return [
-            Section::make()->schema([
-                Flex::make([
-                    Grid::make(2)->schema([
-                        Group::make([
-                            TextEntry::make('email'),
-                            TextEntry::make('first_name'),
-                            TextEntry::make('last_name'),
-                            TextEntry::make('created_at')
+            'profile_info' => Section::make()->schema([
+                'profile_flex' => Flex::make([
+                    'profile_grid' => Grid::make(2)->schema([
+                        'profile_group' => Group::make([
+                            'email' => TextEntry::make('email'),
+                            'first_name' => TextEntry::make('first_name'),
+                            'last_name' => TextEntry::make('last_name'),
+                            'created_at' => TextEntry::make('created_at')
                                 ->badge()
                                 ->date()
                                 ->color('success'),
                         ]),
-                        /*
-                         * Components\Group::make([
-                         * Components\TextEntry::make('author.name'),
-                         * Components\TextEntry::make('category.name'),
-                         * Components\TextEntry::make('tags')
-                         * ->badge()
-                         * ->getStateUsing(fn () => ['one', 'two', 'three', 'four']),
-                         * ]),
-                         */
                     ]),
-                    ImageEntry::make('image')->hiddenLabel()->grow(false),
+                    'image' => ImageEntry::make('image')->hiddenLabel()->grow(false),
                 ])->from('lg'),
             ]),
-            Section::make('Content')
+            'content' => Section::make('Content')
                 ->schema([
-                    TextEntry::make('content')
+                    'content_text' => TextEntry::make('content')
                         ->prose()
                         ->markdown()
                         ->hiddenLabel(),

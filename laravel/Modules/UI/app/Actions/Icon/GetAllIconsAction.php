@@ -9,6 +9,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
+use SplFileInfo;
 
 class GetAllIconsAction
 {

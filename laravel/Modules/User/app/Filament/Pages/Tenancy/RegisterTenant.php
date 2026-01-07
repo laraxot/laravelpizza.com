@@ -40,7 +40,7 @@ class RegisterTenant extends BaseRegisterTenant
         return static::transClass($tenantClass, $key);
     }
 
-    public function form(Schema $schema): Schema
+    public function schema(Schema $schema): Schema
     {
         /** @var array<Component> $components */
         $components = $this->getFormSchema();

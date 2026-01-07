@@ -5,16 +5,16 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources\HasMediaResource\Actions;
 
 use Exception;
-use Filament\Actions\Action;
 use Filament\Forms\Components\BaseFileUpload;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Support\Str;
+use Modules\Xot\Filament\Actions\XotBaseAction;
 use Webmozart\Assert\Assert;
 
-class AddAttachmentAction extends Action
+class AddAttachmentAction extends XotBaseAction
 {
     protected function setUp(): void
     {

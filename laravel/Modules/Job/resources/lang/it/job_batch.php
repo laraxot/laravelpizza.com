@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 return [
     'actions' => [
         'prune_batches' => [
@@ -13,5 +12,8 @@ return [
         'failed_job_ids' => [
             'label' => 'failed_job_ids',
         ],
+    ],
+    'navigation' => [
+        'sort' => 85,
     ],
 ];

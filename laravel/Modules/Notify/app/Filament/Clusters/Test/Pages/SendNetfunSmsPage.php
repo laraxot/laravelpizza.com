@@ -30,7 +30,7 @@ class SendNetfunSmsPage extends XotBasePage
 {
     public ?array $smsData = [];
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-device-phone-mobile';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-device-phone-mobile';
 
     protected string $view = 'notify::filament.pages.send-sms';
 
@@ -65,7 +65,7 @@ class SendNetfunSmsPage extends XotBasePage
 
     public function smsForm(Schema $schema): Schema
     {
-        return $schema->schema($this->getSmsFormSchema())->model($this->getUser())->statePath('smsData');
+        return $schema->components($this->getSmsFormSchema())->model($this->getUser())->statePath('smsData');
     }
 
     /**
@@ -74,7 +74,7 @@ class SendNetfunSmsPage extends XotBasePage
     public function getSmsFormSchema(): array
     {
         return [
-            'to' => TextInput::make('to')
+            'recipient' => TextInput::make('recipient')
                 ->label(__('notify::sms.form.to.label'))
                 ->tel()
                 ->required()
@@ -112,15 +112,10 @@ class SendNetfunSmsPage extends XotBasePage
         $data = $this->smsForm->getState();
 
         $smsData = SmsData::from($data);
-        /*
-         * $smsData->to = $data['to'];
-         * $smsData->from = $data['from'];
-         * $smsData->body = $data['body'];
-         */
         $provider = $data['provider'] ?? 'netfun';
 
         try {
-            Notification::route('sms', $data['to'])->notify(new SmsNotification($smsData, ['provider' => $provider]));
+            Notification::route('sms', $data['recipient'])->notify(new SmsNotification($smsData, ['provider' => $provider]));
 
             FilamentNotification::make()
                 ->success()
@@ -129,14 +124,14 @@ class SendNetfunSmsPage extends XotBasePage
                 ->send();
 
             Log::info('SMS inviato con successo', [
-                'to' => $data['to'],
+                'recipient' => $data['recipient'],
                 'from' => $data['from'],
                 'provider' => $provider,
             ]);
         } catch (Exception $e) {
             Log::error('Errore durante l\'invio dell\'SMS', [
                 'error' => $e->getMessage(),
-                'to' => $data['to'],
+                'recipient' => $data['recipient'],
                 'from' => $data['from'],
                 'provider' => $provider,
             ]);

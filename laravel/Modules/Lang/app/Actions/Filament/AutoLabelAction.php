@@ -187,9 +187,10 @@ class AutoLabelAction
             if (method_exists($component, 'iconButton')) {
                 $component->iconButton();
             }
+
             // $component->label('FIX:'.$label_key);
             // $component->tooltip('FIX:'.$label_key);
-            $component->{$type}('heroicon-o-question-mark-circle');
+            // $component->{$type}('heroicon-o-question-mark-circle');
 
             // $component->{$type}(null);
             return $component;

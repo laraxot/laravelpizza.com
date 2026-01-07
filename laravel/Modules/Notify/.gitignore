@@ -157,5 +157,6 @@ test_notifications.sql
 
 # 🚫 File specifici del progetto
 *.fila2
+*.old
 laravel
 public_html

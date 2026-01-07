@@ -103,7 +103,8 @@ trait TransTrait
 
         $module_low = Str::of($module)->lower()->toString();
 
-        $model = Str::of($class)->between('\\'.$type.'\\', '\\')->toString();
+        $model_str = Str::of($class)->after('\\'.$type.'\\');
+        $model = $model_str->contains('\\') ? $model_str->before('\\')->toString() : $model_str->toString();
         $model_snake = Str::of($model)->snake()->toString();
 
         return $module_low.'::'.$model_snake;

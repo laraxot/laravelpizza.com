@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
 use Modules\Xot\Console\Commands\GenerateFilamentResources;
-use Modules\Xot\Console\Commands\OptimizeFilamentMemoryCommand;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\View\Composers\XotComposer;
 use Override;
@@ -246,7 +245,6 @@ class XotServiceProvider extends XotBaseServiceProvider
         View::composer('*', XotComposer::class);
     }
 
-   
     /**
      * Register Xot specific Livewire components.
      */

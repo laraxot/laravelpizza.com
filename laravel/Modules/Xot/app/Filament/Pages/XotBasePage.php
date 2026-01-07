@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Pages;
 
+use UnitEnum;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms\Concerns\InteractsWithForms;
@@ -99,9 +100,9 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     /**
      * Ottiene il gruppo di navigazione.
      *
-     * @return string Il gruppo di navigazione
+     * @return UnitEnum|string|null Il gruppo di navigazione
      */
-    public static function getNavigationGroup(): string
+    public static function getNavigationGroup(): UnitEnum|string|null
     {
         return static::transFunc(__FUNCTION__);
     }
@@ -155,9 +156,9 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      * Imposta lo schema e il percorso dello stato per il form.
      *
      * @param  \Filament\Schemas\Schema  $schema  Il form da configurare
-     * @return \Filament\Schemas\Schema Il form configurato
+     * @return \Filament\Schemas\Schema Lo schema configurato
      */
-    public function form(Schema $schema): Schema
+    public function schema(Schema $schema): Schema
     {
         $schema = $schema->components($this->getFormSchema());
 

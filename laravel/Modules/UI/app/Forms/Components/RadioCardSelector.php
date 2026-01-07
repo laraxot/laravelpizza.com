@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Forms\Components;
 
-use Filament\Forms\Components\Field;
+use Modules\Xot\Filament\Forms\Components\XotBaseField;
 
 /**
  * Radio Card Selector Component.
@@ -12,7 +12,7 @@ use Filament\Forms\Components\Field;
  * Componente riutilizzabile per selezione tramite card radio.
  * Popola automaticamente un TextInput con il nome dell'elemento selezionato.
  */
-class RadioCardSelector extends Field
+class RadioCardSelector extends XotBaseField
 {
     protected string $view = 'ui::forms.components.radio-card-selector';
 
@@ -29,7 +29,7 @@ class RadioCardSelector extends Field
 
     protected ?string $emptyStateTitle = null;
 
-    protected ?string $emptyStateDescription = null;
+    protected ?string $emptyStateDesc = null;
 
     /**
      * Imposta le card disponibili per la selezione.
@@ -88,7 +88,7 @@ class RadioCardSelector extends Field
      */
     public function emptyStateDescription(?string $description): static
     {
-        $this->emptyStateDescription = $description;
+        $this->emptyStateDesc = $description;
 
         return $this;
     }
@@ -100,7 +100,7 @@ class RadioCardSelector extends Field
     {
         $result = $this->evaluate($this->cards);
 
-        return is_array($result) ? $result : [];
+        return \is_array($result) ? $result : [];
     }
 
     /**
@@ -140,6 +140,6 @@ class RadioCardSelector extends Field
      */
     public function getEmptyStateDescription(): ?string
     {
-        return $this->emptyStateDescription;
+        return $this->emptyStateDesc;
     }
 }

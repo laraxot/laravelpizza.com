@@ -35,7 +35,6 @@ interface HasTeamsContract
 {
     // extends
     // HasApiTokens, //no sanctum ma passport
-    // PassportHasApiTokensContract,
     // HasProfilePhotoContract,
     // TwoFactorAuthenticatableContract,
     // MustVerifyEmail,

@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
+use Illuminate\Support\Collection;
 use Modules\Activity\Models\Activity;
-use Modules\User\Models\User;
-use Modules\Activity\Tests\TestCase; // Added
+use Modules\Activity\Tests\TestCase;
+use Modules\User\Models\User; // Added
 
 uses(TestCase::class); // Use the custom TestCase
 
@@ -25,7 +26,7 @@ it('can create activity with basic information', function () {
     \assert($activity instanceof Activity);
 
     $properties = $activity->properties;
-    \assert($properties instanceof \Illuminate\Support\Collection);
+    \assert($properties instanceof Collection);
     $propertiesArray = $properties->toArray();
 
     expect($activity->log_name)->toBe('default')
@@ -37,4 +38,3 @@ it('can create activity with basic information', function () {
         ->and($activity->event)->toBe('logged_in')
         ->and($propertiesArray)->toBe(['ip_address' => '127.0.0.1']);
 });
-

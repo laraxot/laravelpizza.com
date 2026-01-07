@@ -12,7 +12,6 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Notifications\Notification;
-use Filament\Pages\Page;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Arr;
 use Modules\Cms\Actions\SaveHeadernavConfigAction;
@@ -20,6 +19,7 @@ use Modules\Cms\Datas\HeadernavData;
 use Modules\Cms\Filament\Clusters\Appearance;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Actions\Filament\Block\GetViewBlocksOptionsByTypeAction;
+use Modules\Xot\Filament\Pages\XotBasePage;
 use Webmozart\Assert\Assert;
 
 /**
@@ -27,7 +27,7 @@ use Webmozart\Assert\Assert;
  *
  * @property Schema $form
  */
-class Headernav extends Page implements HasForms
+class Headernav extends XotBasePage implements HasForms
 {
     use InteractsWithForms;
 
@@ -36,7 +36,7 @@ class Headernav extends Page implements HasForms
      */
     public ?HeadernavData $headernavData = null;
 
-    public ?array $data = [];
+    public array $data = [];
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-document-text';
 
@@ -57,7 +57,7 @@ class Headernav extends Page implements HasForms
     /**
      * Define the form schema.
      */
-    public function form(Schema $schema): Schema
+    public function schema(Schema $schema): Schema
     {
         $options = app(GetViewBlocksOptionsByTypeAction::class)->execute('headernav', false);
 

@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 return [
     'actions' => [
         'retry_all' => [
@@ -11,5 +10,8 @@ return [
         'delete_all' => [
             'label' => 'delete_all',
         ],
+    ],
+    'navigation' => [
+        'sort' => 20,
     ],
 ];

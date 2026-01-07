@@ -4,19 +4,23 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\RoleResource\RelationManagers;
 
+use Filament\Actions\Action;
+use Filament\Actions\BulkAction;
 use Filament\Actions\CreateAction;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
+use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 class PermissionsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'permissions';
+
+    protected static ?string $recordTitleAttribute = 'name';
 
     /**
      * Configura lo schema del form per la gestione dei permessi.
@@ -29,32 +33,52 @@ class PermissionsRelationManager extends XotBaseRelationManager
         return [
             'name' => TextInput::make('name')
                 ->required()
-                ->maxLength(255)
-                ->placeholder(__('Inserisci il nome del permesso')),
+                ->maxLength(255),
         ];
     }
 
     /**
-     * Configura la tabella per la visualizzazione e la gestione dei permessi.
+     * @return array<string, Column>
      */
     #[\Override]
-    public function table(Table $table): Table
+    public function getTableColumns(): array
     {
-        return $table
-            ->recordTitleAttribute('name')
-            ->columns([
-                TextColumn::make('name')->sortable()->searchable(),
-            ])
-            ->filters([]) // Aggiungi eventuali filtri qui se necessario
-            ->headerActions([
-                CreateAction::make()->tooltip(__('Crea un nuovo permesso')),
-            ])
-            ->recordActions([
-                EditAction::make()->tooltip(__('Modifica permesso')),
-                DeleteAction::make()->tooltip(__('Elimina permesso')),
-            ])
-            ->toolbarActions([
-                DeleteBulkAction::make()->tooltip(__('Elimina i permessi selezionati')),
-            ]);
+        return [
+            'name' => TextColumn::make('name')->sortable()->searchable(),
+        ];
+    }
+
+    /**
+     * @return array<string, Action>
+     */
+    #[\Override]
+    public function getTableHeaderActions(): array
+    {
+        return [
+            'create' => CreateAction::make(),
+        ];
+    }
+
+    /**
+     * @return array<string, Action>
+     */
+    #[\Override]
+    public function getTableActions(): array
+    {
+        return [
+            'edit' => EditAction::make(),
+            'delete' => DeleteAction::make(),
+        ];
+    }
+
+    /**
+     * @return array<string, BulkAction>
+     */
+    #[\Override]
+    public function getTableBulkActions(): array
+    {
+        return [
+            'delete' => DeleteBulkAction::make(),
+        ];
     }
 }

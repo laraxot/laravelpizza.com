@@ -5,20 +5,22 @@ declare(strict_types=1);
 namespace Modules\Geo\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Modules\Geo\Database\Factories\GeoNamesCapFactory;
+use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * Modules\Geo\Models\GeoNamesCap.
  *
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
  *
  * @method static Builder<static>|GeoNamesCap newModelQuery()
  * @method static Builder<static>|GeoNamesCap newQuery()
  * @method static Builder<static>|GeoNamesCap query()
  *
- * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property ProfileContract|null $deleter
  *
- * @method static \Modules\Geo\Database\Factories\GeoNamesCapFactory factory($count = null, $state = [])
+ * @method static GeoNamesCapFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

@@ -63,7 +63,7 @@ final class SendGammuSMSAction implements SmsActionContract
     public function execute(SmsData $smsData): array
     {
         // Normalizza il numero di telefono
-        $to = (string) $smsData->to;
+        $to = (string) $smsData->recipient;
         if (Str::startsWith($to, '00')) {
             $to = '+'.mb_substr($to, 2);
         }

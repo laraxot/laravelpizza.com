@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Modules\User\Contracts\TeamContract;
@@ -66,7 +67,7 @@ abstract class BaseTeamUser extends BasePivot
     /**
      * Relazione con User.
      *
-     * @return BelongsTo<\Illuminate\Database\Eloquent\Model&UserContract, $this>
+     * @return BelongsTo<Model&UserContract, $this>
      */
     public function user(): BelongsTo
     {
@@ -79,7 +80,7 @@ abstract class BaseTeamUser extends BasePivot
     /**
      * Relazione con Team.
      *
-     * @return BelongsTo<\Illuminate\Database\Eloquent\Model&TeamContract, $this>
+     * @return BelongsTo<Model&TeamContract, $this>
      */
     public function team(): BelongsTo
     {

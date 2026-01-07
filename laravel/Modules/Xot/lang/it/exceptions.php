@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 return [
     /*
-     * |--------------------------------------------------------------------------
-     * | Exception Language Lines
-     * |--------------------------------------------------------------------------
-     * |
-     * | The following language lines are used in Exceptions thrown throughout the system.
-     * | Regardless where it is placed, a button can be listed here so it is easily
-     * | found in a intuitive way.
-     * |
-     */
+    |--------------------------------------------------------------------------
+    | Exception Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used in Exceptions thrown throughout the system.
+    | Regardless where it is placed, a button can be listed here so it is easily
+    | found in a intuitive way.
+    |
+    */
 
     'backend' => [
         'access' => [
@@ -26,6 +26,7 @@ return [
                 'not_found' => 'Questo ruolo non esiste.',
                 'update_error' => "C'è stato un problema durante l'aggiornamento di questo ruolo. Si prega di riprovare più tardi.",
             ],
+
             'users' => [
                 'cant_deactivate_self' => 'Non puoi eseguire questa operazione su te stesso.',
                 'cant_delete_self' => 'Non puoi cancellare te stesso.',
@@ -44,6 +45,7 @@ return [
             ],
         ],
     ],
+
     'frontend' => [
         'auth' => [
             'confirmation' => [
@@ -52,12 +54,14 @@ return [
                 'created_confirm' => "Il tuo account è stato creato con successo. Ti abbiamo inviato un'email per confermare il tuo account.",
                 'mismatch' => 'Il tuo codice di conferma non corrisponde',
                 'not_found' => 'Questo codice di conferma non esiste.',
-                'resend' => 'Il tuo account non è confermato. Per cortesia clicca sul link di conferma nell\'email che ti abbiamo mandato, o clicca qui</a> per rimandare l\'email di conferma.',
+                'resend' => 'Il tuo account non è confermato. Per cortesia clicca sul link di conferma nell\'email che ti abbiamo mandato, o <a href="'.route('frontend.auth.account.confirm.resend', ':user_id').'">clicca qui</a> per rimandare l\'email di conferma.',
                 'success' => 'Il tuo account è stato confermato con successo!',
                 'resent' => "Una nuova e-mail di conferma è stata inviata all'indirizzo registrato.",
             ],
+
             'deactivated' => 'Il tuo account è stato disattivato.',
             'email_taken' => 'Questo indirizzo e-mail è stato già utilizzato.',
+
             'password' => [
                 'change_mismatch' => 'Questa non è la tua vecchia password.',
             ],

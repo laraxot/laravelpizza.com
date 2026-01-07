@@ -15,7 +15,7 @@ use Spatie\LaravelData\Data;
 class WhatsAppData extends Data
 {
     /**
-     * @param  string  $to  Numero di telefono del destinatario in formato E.164 (es. +393401234567)
+     * @param  string  $recipient  Numero di telefono del destinatario in formato E.164 (es. +393401234567)
      * @param  string  $body  Contenuto testuale del messaggio
      * @param  string|null  $from  Numero di telefono del mittente (opzionale, può essere definito nella configurazione)
      * @param  array|null  $media  Array di URL di media da allegare al messaggio (immagini, video, documenti)
@@ -24,7 +24,7 @@ class WhatsAppData extends Data
      * @param  string  $type  Tipo di messaggio: 'text', 'media', 'template', ecc.
      */
     public function __construct(
-        public string $to,
+        public string $recipient,
         public string $body,
         public ?string $from = null,
         public ?array $media = null,

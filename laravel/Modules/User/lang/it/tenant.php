@@ -87,6 +87,11 @@ return [
             'placeholder' => 'recordId',
             'label' => 'recordId',
         ],
+        'primary_color' => [
+            'description' => 'primary_color',
+            'helper_text' => 'primary_color',
+            'placeholder' => 'primary_color',
+        ],
     ],
     'actions' => [
         'import' => [
@@ -118,26 +123,32 @@ return [
         'attachAnother' => [
             'icon' => 'attachAnother',
             'label' => 'attachAnother',
+            'tooltip' => 'attachAnother',
         ],
         'submit' => [
             'icon' => 'submit',
             'label' => 'submit',
+            'tooltip' => 'submit',
         ],
         'detach' => [
             'icon' => 'detach',
             'label' => 'detach',
+            'tooltip' => 'detach',
         ],
         'edit' => [
             'label' => 'edit',
             'icon' => 'edit',
+            'tooltip' => 'edit',
         ],
         'attach' => [
             'label' => 'attach',
             'icon' => 'attach',
+            'tooltip' => 'attach',
         ],
         'create' => [
             'label' => 'create',
             'icon' => 'ui-create',
+            'tooltip' => 'create',
         ],
         'applyFilters' => [
             'label' => 'applyFilters',
@@ -162,10 +173,12 @@ return [
         'layout' => [
             'icon' => 'layout',
             'label' => 'layout',
+            'tooltip' => 'layout',
         ],
         'delete' => [
             'icon' => 'delete',
             'label' => 'delete',
+            'tooltip' => 'delete',
         ],
         'logout' => [
             'icon' => 'logout',
@@ -178,6 +191,11 @@ return [
         ],
         'view' => [
             'icon' => 'view',
+            'tooltip' => 'view',
+            'label' => 'view',
+        ],
+        'save' => [
+            'tooltip' => 'save',
         ],
     ],
     'label' => 'tenant',

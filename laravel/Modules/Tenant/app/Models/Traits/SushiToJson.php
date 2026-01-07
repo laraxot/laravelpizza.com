@@ -7,6 +7,7 @@ namespace Modules\Tenant\Models\Traits;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use InvalidArgumentException;
 use Modules\Tenant\Services\TenantService;
 use Sushi\Sushi;
 use Throwable;
@@ -38,7 +39,7 @@ trait SushiToJson
     {
         $tbl = $this->getTable();
         if (! is_string($tbl)) {
-            throw new \InvalidArgumentException(__FILE__.':'.__LINE__.' - '.class_basename(self::class).': Table name must be string');
+            throw new InvalidArgumentException(__FILE__.':'.__LINE__.' - '.class_basename(self::class).': Table name must be string');
         }
 
         return TenantService::filePath('database/content/'.$tbl.'.json');

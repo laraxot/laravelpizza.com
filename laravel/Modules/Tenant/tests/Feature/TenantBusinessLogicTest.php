@@ -10,6 +10,7 @@ use Modules\Tenant\Models\TenantSetting;
 use Modules\Tenant\Models\TenantSubscription;
 use Modules\User\Models\User;
 use Tests\TestCase;
+use Webmozart\Assert\Assert;
 
 class TenantBusinessLogicTest extends TestCase
 {
@@ -18,6 +19,7 @@ class TenantBusinessLogicTest extends TestCase
     {
         // Arrange
         $user = User::factory()->create();
+        Assert::isInstanceOf($user, User::class);
 
         // Act
         $tenant = Tenant::factory()->create([
@@ -26,6 +28,7 @@ class TenantBusinessLogicTest extends TestCase
             'status' => 'active',
             'owner_id' => $user->id,
         ]);
+        Assert::isInstanceOf($tenant, Tenant::class);
 
         // Assert
         $this->assertDatabaseHas('tenants', [
@@ -47,6 +50,7 @@ class TenantBusinessLogicTest extends TestCase
     {
         // Arrange
         $tenant = Tenant::factory()->create();
+        Assert::isInstanceOf($tenant, Tenant::class);
 
         // Act
         $domain = TenantDomain::factory()->create([
@@ -55,6 +59,7 @@ class TenantBusinessLogicTest extends TestCase
             'is_primary' => true,
             'status' => 'active',
         ]);
+        Assert::isInstanceOf($domain, TenantDomain::class);
 
         // Assert
         $this->assertDatabaseHas('tenant_domains', [

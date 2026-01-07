@@ -4,16 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Pages;
 
+use Nwidart\Modules\Laravel\Module;
 use Filament\Panel;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
+use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Collection;
 
 /**
  * Class Modules\Xot\Filament\Pages\MainDashboard.
  */
 class MainDashboard extends XotBaseDashboard
 {
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-home';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-home';
 
     protected string $view = 'xot::filament.pages.dashboard';
 
@@ -34,21 +39,26 @@ class MainDashboard extends XotBaseDashboard
 
     public function mount(): void
     {
-        Assert::notNull($user = auth()->user(), '['.__LINE__.']['.class_basename($this).']');
-        $modules = $user->roles->filter(static fn ($item) => Str::endsWith($item->name, '::admin'));
+        $user = Auth::user();
+        Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
+        // Usa roles() come metodo invece della magic property per type safety
+        $modules = $user->getModules();
 
-        if ($modules->count() === 1) {
-            Assert::notNull($module_first = $modules->first(), '['.__LINE__.']['.class_basename($this).']');
-            $panel_name = $module_first->name;
-            $module_name = Str::before($panel_name, '::admin');
-            $url = '/'.$module_name.'/admin';
-            redirect($url);
-        }
-
-        // Solo se non ha accesso a nessun modulo, redirect alla home locale
-        if ($modules->count() === 0) {
+        if (count($modules) === 0) {
             $url = '/'.app()->getLocale();
             redirect($url);
+
+            return;
+        }
+
+        if (count($modules) === 1) {
+            $module_first = Arr::first($modules);
+            Assert::isInstanceOf($module_first, Module::class);
+            $module_name = $module_first->getLowerName();
+            $url = '/'.$module_name.'/admin';
+            redirect($url);
+
+            return;
         }
 
         // In tutti gli altri casi, mostra il dashboard con i link ai moduli

@@ -9,7 +9,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-use Modules\Xot\Actions\Cast\SafeAttributeCastAction;
+use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
 
 /**
  * Notifica generica configurabile per il sistema il progetto.
@@ -154,16 +154,16 @@ class GenericNotification extends Notification implements ShouldQueue
         }
 
         if (is_object($notifiable) && $notifiable instanceof Model) {
-            if (SafeAttributeCastAction::hasNonEmpty($notifiable, 'full_name')) {
-                return SafeAttributeCastAction::getString($notifiable, 'full_name', 'Utente');
+            if (app(SafeEloquentCastAction::class)->hasNonEmptyAttribute($notifiable, 'full_name')) {
+                return app(SafeEloquentCastAction::class)->getStringAttribute($notifiable, 'full_name', 'Utente');
             }
 
-            if (SafeAttributeCastAction::hasNonEmpty($notifiable, 'first_name')) {
-                return SafeAttributeCastAction::getString($notifiable, 'first_name', 'Utente');
+            if (app(SafeEloquentCastAction::class)->hasNonEmptyAttribute($notifiable, 'first_name')) {
+                return app(SafeEloquentCastAction::class)->getStringAttribute($notifiable, 'first_name', 'Utente');
             }
 
-            if (SafeAttributeCastAction::hasNonEmpty($notifiable, 'name')) {
-                return SafeAttributeCastAction::getString($notifiable, 'name', 'Utente');
+            if (app(SafeEloquentCastAction::class)->hasNonEmptyAttribute($notifiable, 'name')) {
+                return app(SafeEloquentCastAction::class)->getStringAttribute($notifiable, 'name', 'Utente');
             }
         }
 

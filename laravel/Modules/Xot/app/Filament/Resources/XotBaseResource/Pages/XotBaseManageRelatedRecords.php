@@ -47,9 +47,9 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
     // abstract public static function getFormSchema(): array;
 
     /**
-     * Configura lo schema del form per i record correlati.
+     * Configura lo schema per i record correlati.
      */
-    public function form(Schema $schema): Schema
+    public function schema(Schema $schema): Schema
     {
         // getFormSchema() sempre ritorna array per definizione
         $formSchema = $this->getFormSchema();

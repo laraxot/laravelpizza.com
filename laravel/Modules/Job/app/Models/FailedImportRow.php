@@ -39,7 +39,7 @@ use Override;
  * @method static Builder<static>|FailedImportRow whereUpdatedBy($value)
  * @method static Builder<static>|FailedImportRow whereValidationError($value)
  *
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read ProfileContract|null $deleter
  *
  * @mixin \Eloquent
  */

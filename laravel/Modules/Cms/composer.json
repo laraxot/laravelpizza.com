@@ -24,8 +24,7 @@
         "psr-4": {
             "Modules\\Cms\\": "app/",
             "Modules\\Cms\\Database\\Factories\\": "database/factories/",
-            "Modules\\Cms\\Database\\Seeders\\": "database/seeders/",
-            "Modules\\Cms\\Tests\\": "tests/"
+            "Modules\\Cms\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {

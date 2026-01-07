@@ -1,33 +1,62 @@
-# 🔧 Activity Module .gitignore
-# File di configurazione per ignorare file e directory nel modulo Activity
+# ==============================================
+# LARAXOT MODULE ACTIVITY - .GITIGNORE
+# ==============================================
+# Modulo Activity Laraxot - Template standardizzato
+# Ultimo aggiornamento: 2025-01-31
+# ==============================================
 
-# 📦 Dipendenze e packages
+# ==============================================
+# DEPENDENCIES & PACKAGES
+# ==============================================
 /vendor/
+/vendor
 /node_modules/
+/node_modules
 /docs/vendor/
-
-# 🔒 Lock files e cache
-*.lock
-*.cache
-*.phar
-*.jar
 package-lock.json
+yarn.lock
 composer.lock
 yarn-error.log
 npm-debug.log
-.phpunit.result.cache
-.php-cs-fixer.cache
 
-# 📝 Log files
+# ==============================================
+# BUILD & COMPILED FILES
+# ==============================================
+/build
+/build/
+build/
+dist/
+docs/cache/
+cache/
+
+# ==============================================
+# CACHE & TEMPORARY FILES
+# ==============================================
+*.cache
+*.lock
+*.phar
+*.jar
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*:Zone.Identifier
+v8-compile-cache-*
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+# ==============================================
+# LOG FILES
+# ==============================================
 *.log
 error_log
+npm-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-# 🏗️ Build directories
-/build/
-/build
-build/
-
-# 📱 Laravel specifici
+# ==============================================
+# LARAVEL SPECIFIC
+# ==============================================
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -37,60 +66,97 @@ public_html/hot
 storage/*.key
 .env
 .env.*
+!.env.example
 
-# 🗃️ Database directories
-database/Factories_old
-database/Migrations_old
-database/Seeders_old
-database_old
-
-# ⚙️ Configurazioni locali
+# ==============================================
+# ENVIRONMENT & CONFIGURATION
+# ==============================================
 Homestead.yaml
 Homestead.json
 /.vagrant
-
-# 🛠️ IDE e editor
 /.idea
 .phpintel
 .vscode/
-*.swp
-*.swo
-*~
 
-# 🔄 Git specifici
-.git-blame-ignore-revs
+# ==============================================
+# GIT SPECIFIC
+# ==============================================
 .git-rewrite/
 .git-rewrite
+.git-blame-ignore-revs
 
-# 🗂️ File temporanei e di sistema
-*.tmp
-*.stackdump
-*.exe
-*:Zone.Identifier
+# ==============================================
+# SYSTEM FILES
+# ==============================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+*~
 
-# 📋 Backup files
+# ==============================================
+# BACKUP FILES
+# ==============================================
 *.old
 *.old1
+*.old2
 *.backup
 *.backup.*
 *.bak
+*.bakcup
 *.new
 
-# 📚 Documentation e cache
-docs/phpstan/
-docs/cache/
-cache/
-
-# 🎨 Risorse e componenti
-resources/views/Components_old
-
-# 🔧 Development tools
+# ==============================================
+# DEVELOPMENT TOOLS
+# ==============================================
 .windsurf/
 .cursor/
+.phpstorm.meta.php
 
-# 🚫 File specifici del progetto
+# ==============================================
+# DOCUMENTATION CACHE
+# ==============================================
+docs/phpstan/
+docs/cache/
+
+# ==============================================
+# LANGUAGE FILES
+# ==============================================
+lang/lang/
+resources/lang/
+
+# ==============================================
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+database/Migrations_old/
+database/Seeders_old/
+database/Factories_old/
+database_old/
+
+# ==============================================
+# MODULE SPECIFIC - ACTIVITY
+# ==============================================
+# File di configurazione locale
+config/local.php
+config/development.php
+
+# Cache activity log
+storage/activity/
+storage/logs/
+
+# File di test activity
+activity_test_data.json
+test_activity_logs.sql
+
+# ==============================================
+# END OF ACTIVITY .GITIGNORE
+# ==============================================
+
+# File specifici del progetto
 *.fila2
 laravel
 public_html

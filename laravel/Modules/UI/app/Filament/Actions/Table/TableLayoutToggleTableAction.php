@@ -17,7 +17,7 @@ final class TableLayoutToggleTableAction extends Action implements HasTableLayou
 
         $current = $this->getCurrentLayout();
 
-        $this->label('Toggle Layout')
+        $this->label(__('ui::table_layout.actions.toggle.label'))
             ->tooltip($current->getLabel())
             ->color($current->getColor())
             ->icon($current->getIcon())

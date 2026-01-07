@@ -9,116 +9,6 @@
 
 Modules is a FilamentPHP Plugin to enable easy integration with `nwidart/laravel-modules`
 
-<<<<<<< HEAD
-**NB: These docs are for v3, which only supports Filament 4. If you are using Filament
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d86d643a (.)
-=======
->>>>>>> d86d643a (.)
-=======
->>>>>>> 472bd9dc (.)
-=======
->>>>>>> d86d643a (.)
-<<<<<<< HEAD
->>>>>>> 6ca989d8 (.)
-=======
-=======
->>>>>>> 472bd9dc (.)
-<<<<<<< HEAD
->>>>>>> 62cc8443 (.)
-=======
-=======
->>>>>>> 3bf39332 (.)
-<<<<<<< HEAD
->>>>>>> ab5b3a4f (.)
-=======
-=======
->>>>>>> b7afadf9 (.)
-<<<<<<< HEAD
->>>>>>> 5cf46378 (.)
-=======
-=======
->>>>>>> cf971011 (.)
-<<<<<<< HEAD
->>>>>>> 88e745db5 (.)
-=======
-=======
->>>>>>> e7da37af (.)
-<<<<<<< HEAD
->>>>>>> 7e4835b8e (.)
-=======
-=======
->>>>>>> 6d05deed (.)
-<<<<<<< HEAD
->>>>>>> 9f193021d (.)
-=======
-=======
->>>>>>> 39bb163e (.)
->>>>>>> d9f43fce9 (.)
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
 
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
@@ -153,13 +43,6 @@ Modules is a FilamentPHP Plugin to enable easy integration with `nwidart/laravel
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5a14301c (.)
-=======
->>>>>>> 5cf46378 (.)
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
@@ -167,32 +50,7 @@ Modules is a FilamentPHP Plugin to enable easy integration with `nwidart/laravel
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
-<<<<<<< HEAD
-=======
->>>>>>> ca9324a4 (.)
-=======
-=======
->>>>>>> b7afadf9 (.)
->>>>>>> 0e51323 (.)
-=======
->>>>>>> 5cf46378 (.)
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
-<<<<<<< HEAD
-=======
->>>>>>> a5dccfe (.)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d86d643a (.)
-=======
->>>>>>> 62cc8443 (.)
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
@@ -413,232 +271,45 @@ Modules is a FilamentPHP Plugin to enable easy integration with `nwidart/laravel
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
-=======
->>>>>>> 43d67f21 (.)
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
->>>>>>> c84488b (.)
->>>>>>> c35986f4 (.)
-<<<<<<< HEAD
->>>>>>> 6ca989d8 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
->>>>>>> fb8add77 (.)
-<<<<<<< HEAD
->>>>>>> e6745a06 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 6cba4fe (.)
->>>>>>> 17684f52 (.)
-<<<<<<< HEAD
->>>>>>> ce6fc085 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 9db27d12 (.)
-<<<<<<< HEAD
->>>>>>> 091f883c (.)
-=======
-=======
->>>>>>> 472bd9dc (.)
-<<<<<<< HEAD
->>>>>>> 62cc8443 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> b7ea1cd1 (.)
-<<<<<<< HEAD
->>>>>>> ecd5ec32 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
->>>>>>> c84488b (.)
->>>>>>> 33af3e61 (.)
-<<<<<<< HEAD
->>>>>>> 67be6ac0 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
->>>>>>> 870b81d1 (.)
-<<<<<<< HEAD
->>>>>>> ba64409d (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 6cba4fe (.)
->>>>>>> 88e35986 (.)
-<<<<<<< HEAD
->>>>>>> 2bad128c (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> ba1d49f3 (.)
-<<<<<<< HEAD
->>>>>>> 59259b43 (.)
-=======
-=======
->>>>>>> 3bf39332 (.)
-<<<<<<< HEAD
->>>>>>> ab5b3a4f (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 53d6a6ba (.)
-=======
->>>>>>> b7afadf9 (.)
-<<<<<<< HEAD
->>>>>>> 5cf46378 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 71586de2 (.)
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
->>>>>>> c84488b (.)
->>>>>>> 5bd842e3 (.)
-<<<<<<< HEAD
->>>>>>> 88ee35c4e (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
->>>>>>> f3f26717 (.)
-<<<<<<< HEAD
->>>>>>> 309cf3180 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 6cba4fe (.)
->>>>>>> e0b8ebe3 (.)
-<<<<<<< HEAD
->>>>>>> 358ba79a7 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> b956ebe0 (.)
-<<<<<<< HEAD
->>>>>>> aba62c408 (.)
-=======
-=======
->>>>>>> cf971011 (.)
-<<<<<<< HEAD
->>>>>>> 88e745db5 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 76bec91a (.)
-<<<<<<< HEAD
->>>>>>> 5e6aa70fe (.)
-=======
-=======
->>>>>>> e7da37af (.)
-<<<<<<< HEAD
->>>>>>> 7e4835b8e (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 55fe1822 (.)
-<<<<<<< HEAD
->>>>>>> e39b54ba7 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
->>>>>>> c84488b (.)
->>>>>>> 6e7c1905 (.)
-<<<<<<< HEAD
->>>>>>> 6a52563d6 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
->>>>>>> f4398135 (.)
-<<<<<<< HEAD
->>>>>>> 6e42a2f13 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 6cba4fe (.)
->>>>>>> 90d386aa (.)
-<<<<<<< HEAD
->>>>>>> 5e6e0d054 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 4fb9bc4b (.)
-<<<<<<< HEAD
->>>>>>> 3c8d62b79 (.)
-=======
-=======
->>>>>>> 6d05deed (.)
-<<<<<<< HEAD
->>>>>>> 9f193021d (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 0d20089f (.)
-<<<<<<< HEAD
->>>>>>> ba7efc23f (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
->>>>>>> c84488b (.)
->>>>>>> 334816e8 (.)
-<<<<<<< HEAD
->>>>>>> 317b552da (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
->>>>>>> 52b7bbe4 (.)
-<<<<<<< HEAD
->>>>>>> 6c0d407c0 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> 6cba4fe (.)
->>>>>>> 3eee6f79 (.)
-<<<<<<< HEAD
->>>>>>> 0117b849c (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> c2f6854c (.)
-<<<<<<< HEAD
->>>>>>> 60f0a1820 (.)
-=======
-=======
->>>>>>> 39bb163e (.)
-<<<<<<< HEAD
->>>>>>> d9f43fce9 (.)
-=======
-=======
 **NB: These docs are for v3, which only supports Filament 3. If you are using Filament
->>>>>>> b396242e (.)
->>>>>>> 5df5c7505 (.)
-=======
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
 
->>>>>>> 551c768c4 (.)
->>>>>>> 38b70c7ba (.)
 v2, [see the documentation here](https://github.com/savannabits/filament-modules/tree/main#readme) to get started.**
 
 For example, if you have two modules (**Blog** and **Pos**), you should be able to have filament installed in each module with separate resources as below:
@@ -652,104 +323,16 @@ Additionally, each of these can have its own customized login page which redirec
 You can read more about Multiple Context for Filament [Here](https://github.com/iotronlab/filament-multi-guard).
 
 If this is your goal, then you are in the right place.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d86d643a (.)
-=======
->>>>>>> 472bd9dc (.)
-=======
->>>>>>> d86d643a (.)
-=======
->>>>>>> 472bd9dc (.)
-=======
-<<<<<<< HEAD
->>>>>>> 62cc8443 (.)
  
-=======
->>>>>>> 3bf39332 (.)
-=======
-<<<<<<< HEAD
->>>>>>> ab5b3a4f (.)
-=======
->>>>>>> cf971011 (.)
-=======
-<<<<<<< HEAD
->>>>>>> 88e745db5 (.)
-=======
->>>>>>> e7da37af (.)
-=======
-<<<<<<< HEAD
->>>>>>> 7e4835b8e (.)
-=======
->>>>>>> 6d05deed (.)
-=======
-<<<<<<< HEAD
->>>>>>> 9f193021d (.)
-=======
->>>>>>> 39bb163e (.)
-=======
->>>>>>> d9f43fce9 (.)
  
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
  
->>>>>>> b7afadf9 (.)
->>>>>>> 0e51323 (.)
-=======
  
->>>>>>> 5cf46378 (.)
->>>>>>> a5dccfe (.)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d86d643a (.)
-=======
->>>>>>> 62cc8443 (.)
  
  
  
  
  
  
-<<<<<<< HEAD
  
  
  
@@ -757,122 +340,6 @@ If this is your goal, then you are in the right place.
  
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-=======
->>>>>>> 43d67f21 (.)
-=======
->>>>>>> 472bd9dc (.)
-<<<<<<< HEAD
->>>>>>> 62cc8443 (.)
-=======
-=======
- 
->>>>>>> b7ea1cd1 (.)
-<<<<<<< HEAD
->>>>>>> ecd5ec32 (.)
-=======
-=======
->>>>>>> 3bf39332 (.)
-<<<<<<< HEAD
->>>>>>> ab5b3a4f (.)
-=======
-=======
- 
->>>>>>> 53d6a6ba (.)
-=======
->>>>>>> b7afadf9 (.)
-<<<<<<< HEAD
->>>>>>> 5cf46378 (.)
-=======
-=======
- 
->>>>>>> 71586de2 (.)
-=======
->>>>>>> cf971011 (.)
-<<<<<<< HEAD
->>>>>>> 88e745db5 (.)
-=======
-=======
- 
->>>>>>> 76bec91a (.)
-<<<<<<< HEAD
->>>>>>> 5e6aa70fe (.)
-=======
-=======
->>>>>>> e7da37af (.)
-<<<<<<< HEAD
->>>>>>> 7e4835b8e (.)
-=======
-=======
- 
->>>>>>> 55fe1822 (.)
-<<<<<<< HEAD
->>>>>>> e39b54ba7 (.)
-=======
-=======
->>>>>>> 6d05deed (.)
-<<<<<<< HEAD
->>>>>>> 9f193021d (.)
-=======
-=======
- 
->>>>>>> 0d20089f (.)
-<<<<<<< HEAD
->>>>>>> ba7efc23f (.)
-=======
-=======
->>>>>>> 39bb163e (.)
-<<<<<<< HEAD
->>>>>>> d9f43fce9 (.)
-=======
-=======
- 
->>>>>>> b396242e (.)
->>>>>>> 5df5c7505 (.)
-=======
->>>>>>> 551c768c4 (.)
->>>>>>> 38b70c7ba (.)
 
 ## Installation
 Before you proceed, this guide assumes that you have configured your app fully to work with Laravel Modules. If you haven't, follow the [Laravel Modules Docs](https://docs.laravelmodules.com/v9/installation-and-setup) before proceeding.
@@ -896,104 +363,16 @@ Additionally, each of these can have its own customized login page which redirec
 You can read more about Multiple Context for Filament [Here](https://github.com/iotronlab/filament-multi-guard).
 
 If this is your goal, then you are in the right place.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d86d643a (.)
-=======
->>>>>>> 472bd9dc (.)
-=======
->>>>>>> d86d643a (.)
-=======
->>>>>>> 472bd9dc (.)
-=======
-<<<<<<< HEAD
->>>>>>> 62cc8443 (.)
  
-=======
->>>>>>> 3bf39332 (.)
-=======
-<<<<<<< HEAD
->>>>>>> ab5b3a4f (.)
-=======
->>>>>>> cf971011 (.)
-=======
-<<<<<<< HEAD
->>>>>>> 88e745db5 (.)
-=======
->>>>>>> e7da37af (.)
-=======
-<<<<<<< HEAD
->>>>>>> 7e4835b8e (.)
-=======
->>>>>>> 6d05deed (.)
-=======
-<<<<<<< HEAD
->>>>>>> 9f193021d (.)
-=======
->>>>>>> 39bb163e (.)
-=======
->>>>>>> d9f43fce9 (.)
  
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
  
->>>>>>> b7afadf9 (.)
->>>>>>> 0e51323 (.)
-=======
  
->>>>>>> 5cf46378 (.)
->>>>>>> a5dccfe (.)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d86d643a (.)
-=======
->>>>>>> 62cc8443 (.)
  
  
  
  
  
  
-<<<<<<< HEAD
  
  
  
@@ -1001,122 +380,6 @@ If this is your goal, then you are in the right place.
  
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-=======
->>>>>>> 43d67f21 (.)
-=======
->>>>>>> 472bd9dc (.)
-<<<<<<< HEAD
->>>>>>> 62cc8443 (.)
-=======
-=======
- 
->>>>>>> b7ea1cd1 (.)
-<<<<<<< HEAD
->>>>>>> ecd5ec32 (.)
-=======
-=======
->>>>>>> 3bf39332 (.)
-<<<<<<< HEAD
->>>>>>> ab5b3a4f (.)
-=======
-=======
- 
->>>>>>> 53d6a6ba (.)
-=======
->>>>>>> b7afadf9 (.)
-<<<<<<< HEAD
->>>>>>> 5cf46378 (.)
-=======
-=======
- 
->>>>>>> 71586de2 (.)
-=======
->>>>>>> cf971011 (.)
-<<<<<<< HEAD
->>>>>>> 88e745db5 (.)
-=======
-=======
- 
->>>>>>> 76bec91a (.)
-<<<<<<< HEAD
->>>>>>> 5e6aa70fe (.)
-=======
-=======
->>>>>>> e7da37af (.)
-<<<<<<< HEAD
->>>>>>> 7e4835b8e (.)
-=======
-=======
- 
->>>>>>> 55fe1822 (.)
-<<<<<<< HEAD
->>>>>>> e39b54ba7 (.)
-=======
-=======
->>>>>>> 6d05deed (.)
-<<<<<<< HEAD
->>>>>>> 9f193021d (.)
-=======
-=======
- 
->>>>>>> 0d20089f (.)
-<<<<<<< HEAD
->>>>>>> ba7efc23f (.)
-=======
-=======
->>>>>>> 39bb163e (.)
-<<<<<<< HEAD
->>>>>>> d9f43fce9 (.)
-=======
-=======
- 
->>>>>>> b396242e (.)
->>>>>>> 5df5c7505 (.)
-=======
->>>>>>> 551c768c4 (.)
->>>>>>> 38b70c7ba (.)
 
 ## Installation
 Before you proceed, this guide assumes that you have configured your app fully to work with Laravel Modules. If you haven't, follow the [Laravel Modules Docs](https://docs.laravelmodules.com/v9/installation-and-setup) before proceeding.

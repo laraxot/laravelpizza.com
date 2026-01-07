@@ -7,6 +7,7 @@ namespace Modules\Activity\Database\Seeders;
 use Carbon\Carbon;
 use Exception;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Seeder;
@@ -14,6 +15,7 @@ use Modules\Activity\Database\Factories\ActivityFactory;
 use Modules\Activity\Models\Activity;
 use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Models\StoredEvent;
+use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder;
 use Webmozart\Assert\Assert;
 
 /**
@@ -150,11 +152,11 @@ class ActivityMassSeeder extends Seeder
 
         try {
             // Conta attività
-            /** @var \Illuminate\Database\Eloquent\Builder<Activity> $activityQuery */
+            /** @var Builder<Activity> $activityQuery */
             $activityQuery = Activity::query();
             $totalActivities = $activityQuery->count();
 
-            /** @var \Illuminate\Database\Eloquent\Builder<Activity> $recentActivitiesQuery */
+            /** @var Builder<Activity> $recentActivitiesQuery */
             $recentActivitiesQuery = Activity::query()
                 ->where('created_at', '>=', Carbon::now()->subDays(7));
             $recentActivities = $recentActivitiesQuery->count();
@@ -167,7 +169,7 @@ class ActivityMassSeeder extends Seeder
                 ' │');
 
             // Conta snapshot
-            /** @var \Illuminate\Database\Eloquent\Builder<Snapshot> $snapshotQuery */
+            /** @var Builder<Snapshot> $snapshotQuery */
             $snapshotQuery = Snapshot::query();
             $totalSnapshots = $snapshotQuery->count();
 
@@ -176,7 +178,7 @@ class ActivityMassSeeder extends Seeder
                 ' │');
 
             // Conta eventi memorizzati
-            /** @var \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventQueryBuilder<StoredEvent> $storedEventQuery */
+            /** @var EloquentStoredEventQueryBuilder<StoredEvent> $storedEventQuery */
             $storedEventQuery = StoredEvent::query();
             $totalEvents = $storedEventQuery->count();
             $recentEvents = $storedEventQuery

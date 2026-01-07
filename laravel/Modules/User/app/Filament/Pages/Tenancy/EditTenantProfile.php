@@ -16,11 +16,11 @@ class EditTenantProfile extends BaseEditTenantProfile
         return __('user::tenancy.navigation.edit');
     }
 
-    public function form(Schema $schema): Schema
+    public function schema(Schema $schema): Schema
     {
         $resource = XotData::make()->getTenantResourceClass();
 
-        Assert::isInstanceOf($res = $resource::form($schema), Schema::class);
+        Assert::isInstanceOf($res = $resource::schema($schema), Schema::class);
 
         return $res;
 

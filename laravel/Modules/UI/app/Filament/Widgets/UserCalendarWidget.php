@@ -7,11 +7,11 @@ namespace Modules\UI\Filament\Widgets;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
-use Filament\Widgets\Widget;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\XotData;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
-class UserCalendarWidget extends Widget
+class UserCalendarWidget extends XotBaseWidget
 {
     protected string $view = 'ui::filament.widgets.user-calendar';
 
@@ -22,7 +22,7 @@ class UserCalendarWidget extends Widget
         $action_suffix = Str::of($function)->studly()->append('Action')->toString();
         $resource = XotData::make()->getUserResourceClassByType($this->type);
         $model = $resource::getModel();
-        $modelString = is_string($model) ? $model : (string) $model;
+        $modelString = \is_string($model) ? $model : (string) $model;
         $action = Str::of($modelString)
             ->replace('\Models\\', '\\Actions\\')
             ->append('\\Calendar\\'.$action_suffix)
@@ -45,7 +45,7 @@ class UserCalendarWidget extends Widget
         }
 
         $actionInstance = app($action);
-        if (! is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
+        if (! \is_object($actionInstance) || ! method_exists($actionInstance, 'execute')) {
             return [];
         }
 
@@ -66,17 +66,17 @@ class UserCalendarWidget extends Widget
      */
     private static function isValidEventsArray(mixed $value): bool
     {
-        if (! is_array($value)) {
+        if (! \is_array($value)) {
             return false;
         }
 
         foreach ($value as $event) {
-            if (! is_array($event)) {
+            if (! \is_array($event)) {
                 return false;
             }
 
             foreach (array_keys($event) as $key) {
-                if (! is_string($key)) {
+                if (! \is_string($key)) {
                     return false;
                 }
             }
@@ -94,9 +94,9 @@ class UserCalendarWidget extends Widget
 
         if (class_exists($action)) {
             $actionInstance = app($action);
-            if (is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
+            if (\is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
-                if (is_array($resultRaw)) {
+                if (\is_array($resultRaw)) {
                     /** @var array<int, TextInput|Grid> $result */
                     $result = $resultRaw;
 
@@ -116,6 +116,9 @@ class UserCalendarWidget extends Widget
         ];
     }
 
+    /**
+     * @SuppressWarnings("PHPMD.UnusedFormalParameter")
+     */
     public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void
     {
         // TODO: Implementare la logica per la selezione della data

@@ -11,6 +11,7 @@ namespace Modules\Tenant\Models\Traits;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
+use InvalidArgumentException;
 use Modules\Tenant\Services\TenantService;
 use Sushi\Sushi;
 
@@ -93,7 +94,7 @@ trait SushiToJsons
         static::creating(function ($model): void {
             /** @var static $model */
             if (! $model instanceof Model) {
-                throw new \InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
+                throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
 
             // PHPStan Level 10: Type-safe max() call
@@ -141,7 +142,7 @@ trait SushiToJsons
         static::updating(function ($model): void {
             /** @var static $model */
             if (! $model instanceof Model) {
-                throw new \InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
+                throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
 
             $file = $model->getJsonFile();
@@ -164,7 +165,7 @@ trait SushiToJsons
         static::deleting(function ($model): void {
             /** @var static $model */
             if (! $model instanceof Model) {
-                throw new \InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
+                throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
 
             $file = $model->getJsonFile();

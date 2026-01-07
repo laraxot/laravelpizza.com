@@ -46,7 +46,7 @@ interface PassportHasApiTokensContract
      * @param  string  $scope
      * @return bool
      */
-    public function tokenCan($scope);
+    public function tokenCan(string $scope): bool;
 
     /**
      * Create a new personal access token for the user.
@@ -55,7 +55,7 @@ interface PassportHasApiTokensContract
      * @param  array<int, string>  $scopes
      * @return PersonalAccessTokenResult
      */
-    public function createToken($name, array $scopes = []);
+    public function createToken(string $name, array $scopes = []): PersonalAccessTokenResult;
 
     /**
      * Set the current access token for the user.
@@ -63,5 +63,5 @@ interface PassportHasApiTokensContract
      * @param  Token|TransientToken  $accessToken
      * @return $this
      */
-    public function withAccessToken($accessToken);
+    public function withAccessToken(Token|TransientToken|null $accessToken): static;
 }

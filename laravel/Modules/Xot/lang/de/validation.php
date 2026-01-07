@@ -121,11 +121,4 @@ return [
             'new_password_confirmation' => 'Neues Passwort (Wdh.)',
         ],
     ],
-    'password' => [
-        'letters' => 'Il campo :attribute deve contenere almeno una lettera.',
-        'mixed' => 'Il campo :attribute deve contenere almeno una lettera maiuscola e una minuscola.',
-        'numbers' => 'Il campo :attribute deve contenere almeno un numero.',
-        'symbols' => 'Il campo :attribute deve contenere almeno un simbolo.',
-        'uncompromised' => 'Il :attribute fornito è apparso in una violazione di dati. Scegli un :attribute diverso, per favore.',
-    ],
 ];

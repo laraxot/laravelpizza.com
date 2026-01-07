@@ -7,6 +7,7 @@ namespace Modules\User\Filament\Widgets\Auth;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 /**
@@ -18,45 +19,46 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  */
 class LoginWidget extends XotBaseWidget
 {
-    public ?array $data = [];
-
     /**
-     * Blade view del widget nel modulo User.
-     * IMPORTANTE: quando il widget viene usato con @livewire() direttamente nelle Blade,
-     * il path deve essere senza il namespace del modulo (senza "user::").
-     *
-     * @see \Modules\User\docs\WIDGETS_STRUCTURE.md - Sezione B
-     *
-     * @var view-string
-     *
-     * @phpstan-ignore property.defaultValue
+     * @return array<string, TextInput|Checkbox>
      */
-    protected string $view = 'pub_theme::filament.widgets.auth.login';
-
     #[\Override]
     public function getFormSchema(): array
     {
         return [
-            TextInput::make('email')->email()->required(),
-            TextInput::make('password')->password()->required(),
-            Checkbox::make('remember'),
+            'email' => TextInput::make('email')
+                ->email()
+                ->required()
+                ->autofocus(),
+            'password' => TextInput::make('password')
+                ->password()
+                ->required(),
+            'remember' => Checkbox::make('remember'),
         ];
     }
 
     public function login(): void
     {
-        $data = $this->form->getState();
+        try {
+            /** @var array<string, mixed> $data */
+            $data = $this->form->getState();
 
-        $credentials = [
-            'email' => is_string($data['email'] ?? null) ? $data['email'] : '',
-            'password' => is_string($data['password'] ?? null) ? $data['password'] : '',
-        ];
+            $credentials = [
+                'email' => is_string($data['email'] ?? null) ? $data['email'] : '',
+                'password' => is_string($data['password'] ?? null) ? $data['password'] : '',
+            ];
 
-        if (Auth::attempt($credentials)) {
-            session()->regenerate();
-            redirect()->intended('/');
+            $remember = isset($data['remember']) && true === $data['remember'];
+
+            if (Auth::attempt($credentials, $remember)) {
+                session()->regenerate();
+                redirect()->intended('/');
+            }
+
+            $this->addError('data.email', __('auth.failed'));
+        } catch (ValidationException $e) {
+            // La validazione Filament gestisce automaticamente gli errori
+            throw $e;
         }
-
-        $this->addError('email', __('auth.failed'));
     }
 }

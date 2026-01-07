@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Auth\Events\Logout;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Event;
 use Modules\Activity\Listeners\LogoutListener;
 use Modules\Activity\Models\Activity;
@@ -13,7 +14,7 @@ uses(TestCase::class);
 
 test('logout listener is registered for logout event', function () {
     Event::fake();
-    
+
     Event::assertListening(
         Logout::class,
         LogoutListener::class
@@ -25,7 +26,7 @@ test('logout listener handles logout event and creates activity', function () {
     \assert($user instanceof User);
     $event = new Logout('web', $user);
 
-    $listener = new LogoutListener();
+    $listener = new LogoutListener;
     $listener->handle($event);
 
     $activity = Activity::where('causer_type', User::class)
@@ -46,8 +47,7 @@ test('logout listener creates activity with correct properties', function () {
     \assert($user instanceof User);
     $event = new Logout('api', $user);
 
-
-    $listener = new LogoutListener();
+    $listener = new LogoutListener;
     $listener->handle($event);
 
     $activity = Activity::where('causer_id', $user->id)->latest()->first();
@@ -65,7 +65,6 @@ test('logout listener handles multiple logout events correctly', function () {
     \assert($user1 instanceof User);
     $user2 = User::factory()->create(); // @phpstan-ignore-line method.nonObject
     \assert($user2 instanceof User);
-
 
     $event1 = new Logout('web', $user1);
     $event2 = new Logout('api', $user2);
@@ -91,14 +90,13 @@ test('logout listener includes session duration when available', function () {
     $user = User::factory()->create(); // @phpstan-ignore-line method.nonObject
     \assert($user instanceof User);
 
-
     $loginTime = now()->subHours(2);
     $user->last_login_at = $loginTime;
     $user->save();
 
     $event = new Logout('web', $user);
 
-    $listener = new LogoutListener();
+    $listener = new LogoutListener;
     $listener->handle($event);
 
     $activity = Activity::where('causer_id', $user->id)->first();
@@ -113,8 +111,7 @@ test('logout listener uses correct log name for activities', function () {
     \assert($user instanceof User);
     $event = new Logout('web', $user);
 
-
-    $listener = new LogoutListener();
+    $listener = new LogoutListener;
     $listener->handle($event);
 
     $activity = Activity::where('causer_id', $user->id)->first();
@@ -125,12 +122,11 @@ test('logout listener uses correct log name for activities', function () {
 
 test('logout listener handles event without user gracefully', function () {
     $event = new Logout('web', null);
-    
 
-    $listener = new LogoutListener();
+    $listener = new LogoutListener;
 
     expect(fn () => $listener->handle($event))->not->toThrow(Exception::class);
-    
+
     $activities = Activity::where('event', 'logout')->get();
     expect($activities)->toBeEmpty();
 });
@@ -139,11 +135,10 @@ test('logout listener creates unique activities for same user different sessions
     $user = User::factory()->create(); // @phpstan-ignore-line method.nonObject
     \assert($user instanceof User);
 
-
     $event1 = new Logout('web', $user);
     $event2 = new Logout('api', $user);
 
-    $listener = new LogoutListener();
+    $listener = new LogoutListener;
     $listener->handle($event1);
     $listener->handle($event2);
 
@@ -166,11 +161,10 @@ test('logout listener tracks logout reason when provided', function () {
     \assert($user instanceof User);
     $event = new Logout('web', $user);
 
-
     // Assuming implementation checks request()
     request()->merge(['logout_reason' => 'user_initiated']);
 
-    $listener = new LogoutListener();
+    $listener = new LogoutListener;
     $listener->handle($event);
 
     $activity = Activity::where('causer_id', $user->id)->first();
@@ -181,8 +175,7 @@ test('logout listener tracks logout reason when provided', function () {
 
 test('logout listener handles concurrent logout events', function () {
     $users = User::factory()->count(5)->create(); // @phpstan-ignore-line method.nonObject
-    \assert($users instanceof \Illuminate\Database\Eloquent\Collection);
-
+    \assert($users instanceof Collection);
 
     $events = $users->map(fn ($user) => new Logout('web', $user));
 

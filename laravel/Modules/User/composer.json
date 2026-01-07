@@ -25,7 +25,8 @@
             "providers": [
                 "Livewire\\LivewireServiceProvider",
                 "Modules\\User\\Providers\\UserServiceProvider",
-                "Modules\\User\\Providers\\Filament\\AdminPanelProvider"
+                "Modules\\User\\Providers\\Filament\\AdminPanelProvider",
+                "Modules\\User\\Providers\\PassportServiceProvider"
             ],
             "aliases": {}
         }
@@ -45,7 +46,7 @@
     "require": {
         "flowframe/laravel-trend": "*",
         "jenssegers/agent": "*",
-        "laravel/passport": "^12.4",
+        "laravel/passport": "*",
         "socialiteproviders/auth0": "*",
         "spatie/laravel-personal-data-export": "*"
     },

@@ -30,7 +30,7 @@ class SendAwsEmailPage extends XotBasePage
 {
     public ?array $emailData = [];
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-envelope';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-envelope';
 
     protected string $view = 'notify::filament.pages.send-email';
 
@@ -65,7 +65,7 @@ class SendAwsEmailPage extends XotBasePage
 
     public function emailForm(Schema $schema): Schema
     {
-        return $schema->schema($this->getEmailFormSchema())->model($this->getUser())->statePath('emailData');
+        return $schema->components($this->getEmailFormSchema())->model($this->getUser())->statePath('emailData');
     }
 
     /**
@@ -74,7 +74,7 @@ class SendAwsEmailPage extends XotBasePage
     public function getEmailFormSchema(): array
     {
         return [
-            'to' => TextInput::make('to')
+            'recipient' => TextInput::make('recipient')
                 ->label(__('notify::email.form.to.label'))
                 ->email()
                 ->required()
@@ -112,17 +112,17 @@ class SendAwsEmailPage extends XotBasePage
         $data = $this->emailForm->getState();
 
         try {
-            $to = is_string($data['to']) ? $data['to'] : '';
+            $recipient = is_string($data['recipient']) ? $data['recipient'] : '';
             $subject = is_string($data['subject']) ? $data['subject'] : '';
             $bodyHtml = is_string($data['body_html']) ? $data['body_html'] : '';
 
-            $emailData = new EmailData($to, $subject, $bodyHtml);
+            $emailData = new EmailData($recipient, $subject, $bodyHtml);
 
             // Configurare lo specifico driver AWS SES per questo test
             config(['mail.default' => 'ses']);
 
             // Invia l'email utilizzando il servizio SES
-            Mail::to($to)->send(new EmailDataEmail($emailData));
+            Mail::to($recipient)->send(new EmailDataEmail($emailData));
 
             FilamentNotification::make()
                 ->success()

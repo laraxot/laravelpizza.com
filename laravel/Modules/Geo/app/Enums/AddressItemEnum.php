@@ -188,7 +188,7 @@ enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
     /**
      * Internal map of standard address column definitions.
      *
-     * @return array<string, \Closure(Blueprint): void>
+     * @return array<string, \Closure(Blueprint):void>
      */
     private static function getColumnDefinitions(): array
     {

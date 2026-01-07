@@ -7,6 +7,7 @@ namespace Modules\User\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 use Modules\Media\Models\Media;
 use Modules\User\Database\Factories\TenantFactory;
 use Modules\Xot\Contracts\ProfileContract;
@@ -33,16 +34,16 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  *
  * @mixin IdeHelperTenant
  *
- * @property string                          $id
- * @property string                          $name
- * @property string|null                     $slug
- * @property string|null                     $domain
- * @property string|null                     $database
- * @property int                             $is_active
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property \Illuminate\Support\Carbon|null $deleted_at
- * @property ProfileContract|null            $deleter
+ * @property string               $id
+ * @property string               $name
+ * @property string|null          $slug
+ * @property string|null          $domain
+ * @property string|null          $database
+ * @property int                  $is_active
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property Carbon|null          $deleted_at
+ * @property ProfileContract|null $deleter
  *
  * @method static Builder<static>|Tenant whereCreatedAt($value)
  * @method static Builder<static>|Tenant whereDatabase($value)

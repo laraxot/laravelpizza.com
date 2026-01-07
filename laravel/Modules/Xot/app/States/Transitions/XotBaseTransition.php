@@ -100,8 +100,9 @@ abstract class XotBaseTransition extends Transition
             return;
         }
 
+        // RecordNotification resolves MailTemplate internally from slug (lazy resolution)
+        // No need to pre-load MailTemplate - pass slug directly
         $notify = new RecordNotification($this->record, $slug);
-
         $mergeData = $data;
 
         $notify->mergeData($mergeData);

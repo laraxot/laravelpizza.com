@@ -13,19 +13,26 @@ use Carbon\Carbon;
 use Carbon\CarbonInterface;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\TextInput;
+use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Schemas\Components\Section;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\HtmlString;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
+use Modules\User\Filament\Resources\UserResource\RelationManagers\AuthenticationLogsRelationManager;
+use Modules\User\Filament\Resources\UserResource\RelationManagers\ClientsRelationManager;
+use Modules\User\Filament\Resources\UserResource\RelationManagers\OauthTokensRelationManager;
+use Modules\User\Filament\Resources\UserResource\RelationManagers\SocialiteUsersRelationManager;
+use Modules\User\Filament\Resources\UserResource\RelationManagers\TenantsRelationManager;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
+use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class UserResource extends XotBaseResource
 {
     // protected static ?string $model = \Modules\Xot\Datas\XotData::make()->getUserClass();
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-users';
+    // protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-users';
 
     // Static property Modules\User\Filament\Resources\UserResource::$enablePasswordUpdates is never read, only written.
     // private static bool|\Closure $enablePasswordUpdates = true;
@@ -108,5 +115,36 @@ class UserResource extends XotBaseResource
     public function hasCombinedRelationManagerTabsWithContent(): bool
     {
         return true;
+    }
+
+    /**
+     * Get the model class name for this resource.
+     *
+     * @return class-string<Model>
+     */
+    #[\Override]
+    public static function getModel(): string
+    {
+        $xot = XotData::make();
+
+        /* @var class-string<Model> */
+        return $xot->getUserClass();
+    }
+
+    /**
+     * Get the relations available for the resource.
+     *
+     * @return array<int, class-string<RelationManager>>
+     */
+    #[\Override]
+    public static function getRelations(): array
+    {
+        return [
+            AuthenticationLogsRelationManager::class,
+            OauthTokensRelationManager::class,
+            SocialiteUsersRelationManager::class,
+            ClientsRelationManager::class,
+            TenantsRelationManager::class,
+        ];
     }
 }

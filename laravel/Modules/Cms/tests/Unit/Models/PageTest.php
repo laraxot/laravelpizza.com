@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Unit\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Modules\Cms\Models\Page;
 
@@ -71,9 +72,9 @@ test('page can be searched by title', function (): void {
 });
 
 test('page can be filtered by status', function (): void {
-    /** @var \Illuminate\Database\Eloquent\Collection */
+    /** @var Collection */
     $publishedPage = Page/* @phpstan-ignore-line */ ::factory()->create(['status' => 'published']);
-    /** @var \Illuminate\Database\Eloquent\Collection */
+    /** @var Collection */
     $draftPage = Page/* @phpstan-ignore-line */ ::factory()->create(['status' => 'draft']);
 
     $publishedPages = Page::published()->get();
@@ -87,7 +88,7 @@ test('page can be filtered by status', function (): void {
 });
 
 test('page can be filtered by template', function (): void {
-    /** @var \Illuminate\Database\Eloquent\Collection */
+    /** @var Collection */
     $templatePage = Page/* @phpstan-ignore-line */ ::factory()->create(['template' => 'default']);
 
     $templatePages = Page::byTemplate('default')->get();

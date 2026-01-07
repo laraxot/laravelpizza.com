@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-use App\Models\User;
+use Modules\User\Models\User;
 use Illuminate\Auth\Events\Login;
 use Livewire\Attributes\Validate;
 use Livewire\Volt\Component;

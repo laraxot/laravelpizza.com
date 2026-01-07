@@ -12,25 +12,25 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Notifications\Notification;
-use Filament\Pages\Page;
 use Filament\Schemas\Schema;
 use Filament\Support\Colors\Color;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Modules\Xot\Filament\Pages\XotBasePage;
 use Webmozart\Assert\Assert;
 
 /**
  * @property Schema $form
  */
-class MetatagPage extends Page implements HasForms
+class MetatagPage extends XotBasePage implements HasForms
 {
     use InteractsWithForms;
     use NavigationLabelTrait;
 
-    public ?array $data = [];
+    public array $data = [];
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-document-text';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-document-text';
 
     protected string $view = 'xot::filament.pages.metatag';
 
@@ -42,7 +42,7 @@ class MetatagPage extends Page implements HasForms
         $this->form->fill($data);
     }
 
-    public function form(Schema $schema): Schema
+    public function schema(Schema $schema): Schema
     {
         $metatag = MetatagData::make();
 

@@ -17,35 +17,35 @@ class ViewSocialProvider extends XotBaseViewRecord
     protected static string $resource = SocialProviderResource::class;
 
     /**
-     * @return array<Component>
+     * @return array<string, Component>
      */
     #[\Override]
     protected function getInfolistSchema(): array
     {
         return [
-            Section::make()->schema([
-                TextEntry::make('id'),
-                TextEntry::make('name'),
-                TextEntry::make('scopes')->formatStateUsing(function ($state): string {
+            'provider_info' => Section::make()->schema([
+                'id' => TextEntry::make('id'),
+                'name' => TextEntry::make('name'),
+                'scopes' => TextEntry::make('scopes')->formatStateUsing(function ($state): string {
                     if (is_array($state)) {
                         return json_encode($state);
                     }
 
                     return is_string($state) ? $state : ((string) $state);
                 }),
-                TextEntry::make('parameters')->formatStateUsing(function ($state): string {
+                'parameters' => TextEntry::make('parameters')->formatStateUsing(function ($state): string {
                     if (is_array($state)) {
                         return json_encode($state);
                     }
 
                     return is_string($state) ? $state : ((string) $state);
                 }),
-                TextEntry::make('stateless')->badge()->color(fn (bool $state): string => $state ? 'success' : 'danger'),
-                TextEntry::make('active')->badge()->color(fn (bool $state): string => $state ? 'success' : 'danger'),
-                TextEntry::make('socialite')->badge()->color(fn (bool $state): string => $state ? 'success' : 'danger'),
-                TextEntry::make('svg')->html(),
-                TextEntry::make('created_at'),
-                TextEntry::make('updated_at'),
+                'stateless' => TextEntry::make('stateless')->badge()->color(fn (bool $state): string => $state ? 'success' : 'danger'),
+                'active' => TextEntry::make('active')->badge()->color(fn (bool $state): string => $state ? 'success' : 'danger'),
+                'socialite' => TextEntry::make('socialite')->badge()->color(fn (bool $state): string => $state ? 'success' : 'danger'),
+                'svg' => TextEntry::make('svg')->html(),
+                'created_at' => TextEntry::make('created_at'),
+                'updated_at' => TextEntry::make('updated_at'),
             ]),
         ];
     }

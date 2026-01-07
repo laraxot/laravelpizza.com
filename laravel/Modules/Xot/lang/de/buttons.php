@@ -34,8 +34,4 @@ return [
         'save' => 'Speichern',
         'view' => 'Anzeigen',
     ],
-    'save' => 'Salva',
-    'close' => 'Chiudi',
-    'back' => 'Indietro',
-    'confirm' => 'Conferma',
 ];

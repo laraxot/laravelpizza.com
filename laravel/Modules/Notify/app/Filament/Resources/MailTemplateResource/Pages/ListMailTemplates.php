@@ -18,7 +18,7 @@ class ListMailTemplates extends LangBaseListRecords
     {
         return [
             TextColumn::make('slug')->searchable()->sortable(),
-            TextColumn::make('mailable')->searchable()->sortable(),
+            //TextColumn::make('mailable')->searchable()->sortable(),
             TextColumn::make('subject')->searchable()->sortable(),
             TextColumn::make('counter')->searchable()->sortable(),
         ];

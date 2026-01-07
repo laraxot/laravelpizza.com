@@ -7,6 +7,7 @@ namespace Modules\Xot\Services;
 use Exception;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
@@ -143,14 +144,22 @@ class ArtisanService
 
         $pattern = '/url":"([^"]*)"/';
 
-        /** @var array<int, array<int, string>> $matches */
+        /** @var array<int, array<int, string>>|null $matches */
         $matches = [];
         preg_match_all($pattern, $content, $matches);
 
-        /** @var array<int, string> $urlsRaw */
-        $urlsRaw = $matches[1];
         /** @var array<int, string> $urls */
-        $urls = array_values(array_unique($urlsRaw));
+        $urls = [];
+<<<<<<< HEAD
+        if (is_array($matches)) {
+=======
+        if (is_array($matches) && isset($matches[1])) {
+>>>>>>> c85ea7588 (.)
+            /** @var array<int, string> $urlsRaw */
+            $urlsRaw = $matches[1];
+            $urls = array_values(array_unique($urlsRaw));
+        }
+
         $view_params = [
             'view' => $view,
             'lang' => app()->getLocale(),
@@ -196,7 +205,7 @@ class ArtisanService
 
         $out = view((string) $view, $view_params);
 
-        Assert::isInstanceOf($out, \Illuminate\Contracts\View\View::class);
+        Assert::isInstanceOf($out, View::class);
 
         return $out->render();
     }

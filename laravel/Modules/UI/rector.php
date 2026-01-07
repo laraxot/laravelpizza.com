@@ -5,6 +5,8 @@ declare(strict_types=1);
 use Rector\Config\RectorConfig;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
+use Rector\ValueObject\PhpVersion;
+use Rector\ValueObject\PhpVersion;
 
 /*
  * Standard Rector Configuration for Laravel Modules
@@ -26,7 +28,7 @@ return static function (RectorConfig $rectorConfig): void {
     ]);
 
     // PHP version target
-    $rectorConfig->phpVersion(Rector\ValueObject\PhpVersion::PHP_81);
+    $rectorConfig->phpVersion(PhpVersion::PHP_81);
 
     // Rule sets
     $rectorConfig->sets([

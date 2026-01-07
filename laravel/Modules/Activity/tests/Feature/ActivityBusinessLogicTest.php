@@ -13,9 +13,9 @@ describe('Activity Business Logic', function () {
         $activityData = [
             'log_name' => 'default',
             'description' => 'User logged in',
-            'subject_type' => 'App\Models\User',
+            'subject_type' => 'Modules\User\Models\User',
             'subject_id' => 123,
-            'causer_type' => 'App\Models\User',
+            'causer_type' => 'Modules\User\Models\User',
             'causer_id' => 123,
             'properties' => json_encode([
                 'ip_address' => '192.168.1.1',
@@ -35,7 +35,7 @@ describe('Activity Business Logic', function () {
             ->and($activity->description)
             ->toBe('User logged in')
             ->and($activity->subject_type)
-            ->toBe('App\Models\User')
+            ->toBe('Modules\User\Models\User')
             ->and($activity->subject_id)
             ->toBe(123)
             ->and($activity->event)
@@ -46,9 +46,9 @@ describe('Activity Business Logic', function () {
         $loginActivity = Activity::create([
             'log_name' => 'auth',
             'description' => 'User logged in successfully',
-            'subject_type' => 'App\Models\User',
+            'subject_type' => 'Modules\User\Models\User',
             'subject_id' => 456,
-            'causer_type' => 'App\Models\User',
+            'causer_type' => 'Modules\User\Models\User',
             'causer_id' => 456,
             'properties' => json_encode([
                 'ip_address' => '192.168.1.100',
@@ -61,9 +61,9 @@ describe('Activity Business Logic', function () {
         $logoutActivity = Activity::create([
             'log_name' => 'auth',
             'description' => 'User logged out',
-            'subject_type' => 'App\Models\User',
+            'subject_type' => 'Modules\User\Models\User',
             'subject_id' => 456,
-            'causer_type' => 'App\Models\User',
+            'causer_type' => 'Modules\User\Models\User',
             'causer_id' => 456,
             'properties' => json_encode([
                 'ip_address' => '192.168.1.100',
@@ -87,9 +87,9 @@ describe('Activity Business Logic', function () {
         $createActivity = Activity::create([
             'log_name' => 'models',
             'description' => 'User created',
-            'subject_type' => 'App\Models\User',
+            'subject_type' => 'Modules\User\Models\User',
             'subject_id' => 789,
-            'causer_type' => 'App\Models\User',
+            'causer_type' => 'Modules\User\Models\User',
             'causer_id' => 1,
             'properties' => json_encode([
                 'old' => null,
@@ -104,9 +104,9 @@ describe('Activity Business Logic', function () {
         $updateActivity = Activity::create([
             'log_name' => 'models',
             'description' => 'User updated',
-            'subject_type' => 'App\Models\User',
+            'subject_type' => 'Modules\User\Models\User',
             'subject_id' => 789,
-            'causer_type' => 'App\Models\User',
+            'causer_type' => 'Modules\User\Models\User',
             'causer_id' => 1,
             'properties' => json_encode([
                 'old' => [
@@ -139,7 +139,7 @@ describe('Activity Business Logic', function () {
             'description' => 'Batch operation started',
             'subject_type' => 'App\Models\Import',
             'subject_id' => 404,
-            'causer_type' => 'App\Models\User',
+            'causer_type' => 'Modules\User\Models\User',
             'causer_id' => 505,
             'properties' => json_encode(['step' => 'start']),
             'event' => 'batch_started',
@@ -151,7 +151,7 @@ describe('Activity Business Logic', function () {
             'description' => 'Batch operation completed',
             'subject_type' => 'App\Models\Import',
             'subject_id' => 404,
-            'causer_type' => 'App\Models\User',
+            'causer_type' => 'Modules\User\Models\User',
             'causer_id' => 505,
             'properties' => json_encode(['step' => 'complete', 'records_processed' => 1000]),
             'event' => 'batch_completed',
@@ -168,9 +168,9 @@ describe('Activity Business Logic', function () {
         Activity::create([
             'log_name' => 'auth',
             'description' => 'Login activity',
-            'subject_type' => 'App\Models\User',
+            'subject_type' => 'Modules\User\Models\User',
             'subject_id' => 606,
-            'causer_type' => 'App\Models\User',
+            'causer_type' => 'Modules\User\Models\User',
             'causer_id' => 606,
             'properties' => json_encode([]),
             'event' => 'login',
@@ -179,9 +179,9 @@ describe('Activity Business Logic', function () {
         Activity::create([
             'log_name' => 'models',
             'description' => 'Model activity',
-            'subject_type' => 'App\Models\User',
+            'subject_type' => 'Modules\User\Models\User',
             'subject_id' => 606,
-            'causer_type' => 'App\Models\User',
+            'causer_type' => 'Modules\User\Models\User',
             'causer_id' => 606,
             'properties' => json_encode([]),
             'event' => 'created',
@@ -223,7 +223,7 @@ describe('Activity Business Logic', function () {
             'description' => 'Complex operation with nested data',
             'subject_type' => 'App\Models\Order',
             'subject_id' => 909,
-            'causer_type' => 'App\Models\User',
+            'causer_type' => 'Modules\User\Models\User',
             'causer_id' => 1010,
             'properties' => json_encode([
                 'order_details' => [

@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 return [
     /*
-     * |--------------------------------------------------------------------------
-     * | Exception Language Lines
-     * |--------------------------------------------------------------------------
-     * |
-     * | The following language lines are used in Exceptions thrown throughout the system.
-     * | Regardless where it is placed, a button can be listed here so it is easily
-     * | found in a intuitive way.
-     * |
-     */
+    |--------------------------------------------------------------------------
+    | Exception Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used in Exceptions thrown throughout the system.
+    | Regardless where it is placed, a button can be listed here so it is easily
+    | found in a intuitive way.
+    |
+    */
 
     'backend' => [
         'access' => [
@@ -26,6 +26,7 @@ return [
                 'not_found' => 'Die rol bestaat niet.',
                 'update_error' => 'Er is een probleem opgetreden bij het bijwerken van deze rol. Probeer het nogmaals.',
             ],
+
             'users' => [
                 'cant_deactivate_self' => 'U kunt uzelf niet deactiveren',
                 'cant_delete_self' => 'U kunt uzelf niet verwijderen.',
@@ -44,6 +45,7 @@ return [
             ],
         ],
     ],
+
     'frontend' => [
         'auth' => [
             'confirmation' => [
@@ -52,12 +54,14 @@ return [
                 'created_confirm' => 'Uw account is succesvol aangemaakt. Een bevestigings email is verzonden.',
                 'mismatch' => 'Uw bevestigingscode komt niet overeen.',
                 'not_found' => 'De bevestigingscode bestaat niet.',
-                'resend' => 'Uw account kon niet worden bevestigd. Klik op de informatie link in de email die u heeft ontvangen, of klik hier</a> om de bevestigingsemail opnieuw te versturen.',
+                'resend' => 'Uw account kon niet worden bevestigd. Klik op de informatie link in de email die u heeft ontvangen, of <a href="'.route('frontend.auth.account.confirm.resend', ':user_id').'">klik hier</a> om de bevestigingsemail opnieuw te versturen.',
                 'success' => 'Uw account is succesvol bevestigd!',
                 'resent' => 'Een nieuwe bevestigings email is naar het ingegeven adres verstuurd.',
             ],
+
             'deactivated' => 'Uw account is gedactiveerd.',
             'email_taken' => 'Dat emailadres is al in gebruik.',
+
             'password' => [
                 'change_mismatch' => 'Dat is niet uw oude wachtwoord',
             ],

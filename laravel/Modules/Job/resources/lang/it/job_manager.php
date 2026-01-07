@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 return [
     'actions' => [
         'create' => [
@@ -25,5 +24,8 @@ return [
         'started_at' => [
             'label' => 'started_at',
         ],
+    ],
+    'navigation' => [
+        'sort' => 87,
     ],
 ];

@@ -76,7 +76,7 @@ class RouteService
         $route_params = [];
         if ($route_current instanceof \Illuminate\Routing\Route) {
             $route_params = $route_current->parameters();
-            $routename = $route_current->getName();
+            // $routename non utilizzata dopo l'assegnazione
         }
 
         /*
@@ -332,7 +332,7 @@ class RouteService
         $tmp_arr = explode('\\', $controllerName);
 
         $params = getRouteParameters();
-        [$containers, $items] = params2ContainerItem($params);
+        [$containers] = params2ContainerItem($params);
 
         $params['containers'] = implode('.', $containers);
 

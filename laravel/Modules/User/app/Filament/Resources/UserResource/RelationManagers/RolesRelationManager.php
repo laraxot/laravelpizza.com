@@ -9,7 +9,6 @@ use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Modules\User\Filament\Actions\Header\AttachRoleAction;
-use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 class RolesRelationManager extends XotBaseRelationManager
@@ -51,8 +50,6 @@ class RolesRelationManager extends XotBaseRelationManager
     #[\Override]
     public function getTableHeaderActions(): array
     {
-        $xotData = XotData::make();
-
         /** @var array<string, Action> $parentActions */
         $parentActions = parent::getTableHeaderActions();
 

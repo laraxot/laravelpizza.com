@@ -4,20 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Contracts;
 
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
-use Laravel\Passport\PersonalAccessTokenResult;
+use BackedEnum;
 use Laravel\Passport\Token;
-use Laravel\Passport\TransientToken;
-use Modules\User\Contracts\TeamContract;
-use Modules\User\Models\Role as UserRole;
 use Modules\User\Models\Team;
 use Modules\User\Models\Tenant;
+use Nwidart\Modules\Laravel\Module;
+use Laravel\Passport\TransientToken;
+use Illuminate\Database\Eloquent\Model;
+use Modules\User\Contracts\TeamContract;
+use Modules\User\Models\Role as UserRole;
 use Spatie\Permission\Contracts\Permission;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Laravel\Passport\PersonalAccessTokenResult;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
  * Modules\Xot\Contracts\UserContract.
@@ -32,9 +34,9 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
  * @property string|null $type
  * @property string|null $current_team_id
  * @property TeamContract $currentTeam
- * @property \Modules\Xot\Contracts\ProfileContract|null $profile
+ * @property ProfileContract|null $profile
  * @property Collection<int, UserRole> $roles
- * @property Collection<int, \Modules\User\Models\Team> $teams
+ * @property Collection<int, Team> $teams
  * @property Collection<int, Tenant> $tenants
  *
  * @phpstan-require-extends Model
@@ -61,10 +63,9 @@ interface UserContract extends Authenticatable
     /**
      * Create a new personal access token for the user.
      *
-     * @param  string  $name
-     * @return PersonalAccessTokenResult
+     * @param array<int, string> $scopes
      */
-    public function createToken($name, array $scopes = []);
+    public function createToken(string $name, array $scopes = []): PersonalAccessTokenResult;
 
     /**
      * Passport API tokens support.
@@ -123,7 +124,7 @@ interface UserContract extends Authenticatable
     /**
      * Revoke the given role from the model.
      *
-     * @param  string|int|array|UserRole|Collection|\BackedEnum  ...$role
+     * @param  string|int|array|UserRole|Collection|BackedEnum  ...$role
      * @return $this
      */
     public function removeRole(...$role);
@@ -147,4 +148,10 @@ interface UserContract extends Authenticatable
      * Switch the user's context to the given team.
      */
     public function switchTeam(TeamContract $team): bool;
+
+
+    /**
+    * @return list<Module>
+    */
+    public function getModules(): array;
 }

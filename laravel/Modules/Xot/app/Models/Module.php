@@ -6,6 +6,8 @@ namespace Modules\Xot\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
+use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Database\Factories\ModuleFactory;
 use Nwidart\Modules\Facades\Module as ModuleFacade;
 use Nwidart\Modules\Module as NModule;
 use Sushi\Sushi;
@@ -34,11 +36,11 @@ use function Safe\json_encode;
  * @method static Builder<static>|Module wherePriority($value)
  * @method static Builder<static>|Module whereStatus($value)
  *
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $deleter
+ * @property-read ProfileContract|null $updater
  *
- * @method static \Modules\Xot\Database\Factories\ModuleFactory factory($count = null, $state = [])
+ * @method static ModuleFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

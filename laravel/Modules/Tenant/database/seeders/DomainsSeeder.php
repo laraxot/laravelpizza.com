@@ -6,6 +6,7 @@ namespace Modules\Tenant\Database\Seeders;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Seeder;
+use InvalidArgumentException;
 use Modules\Tenant\Models\Domain;
 
 class DomainsSeeder extends Seeder
@@ -40,7 +41,7 @@ class DomainsSeeder extends Seeder
             /** @var Factory<Domain> $factory */
             $factory = Domain::factory();
             if (! method_exists($factory, 'create')) {
-                throw new \InvalidArgumentException('Factory must have create method');
+                throw new InvalidArgumentException('Factory must have create method');
             }
             $factory->create($domainData);
         }
@@ -50,10 +51,10 @@ class DomainsSeeder extends Seeder
             /** @var Factory<Domain> $factory */
             $factory = Domain::factory();
             if (! method_exists($factory, 'count')) {
-                throw new \InvalidArgumentException('Factory must have count method');
+                throw new InvalidArgumentException('Factory must have count method');
             }
             if (! method_exists($factory, 'create')) {
-                throw new \InvalidArgumentException('Factory must have create method');
+                throw new InvalidArgumentException('Factory must have create method');
             }
 
             /** @var Factory<Domain> $countedFactory */

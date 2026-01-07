@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 return [
     'fields' => [
         'status' => [
@@ -23,5 +22,8 @@ return [
         'created_at' => [
             'label' => 'created_at',
         ],
+    ],
+    'navigation' => [
+        'sort' => 91,
     ],
 ];

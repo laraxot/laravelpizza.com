@@ -8,45 +8,47 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
+use Modules\Geo\Database\Factories\AddressFactory;
 use Modules\Geo\Enums\AddressTypeEnum;
+use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * Class Address.
  *
  * Implementazione di Schema.org PostalAddress
  *
- * @property int                                         $id
- * @property string|null                                 $model_type
- * @property string|null                                 $model_id
- * @property string|null                                 $name                        Nome identificativo dell'indirizzo
- * @property string|null                                 $description                 Descrizione opzionale
- * @property string|null                                 $route                       Via/Piazza
- * @property string|null                                 $street_number               Numero civico
- * @property string|null                                 $locality                    Comune/Città
- * @property string|null                                 $administrative_area_level_3 Provincia
- * @property string|null                                 $administrative_area_level_2 Regione
- * @property string|null                                 $administrative_area_level_1 Stato/Paese
- * @property string|null                                 $country                     Codice paese ISO
- * @property string|null                                 $postal_code                 CAP
- * @property string|null                                 $formatted_address
- * @property string|null                                 $place_id                    ID Google Places
- * @property float|null                                  $latitude
- * @property float|null                                  $longitude
- * @property AddressTypeEnum|null                        $type                        Tipo indirizzo (home, work, etc.)
- * @property bool                                        $is_primary
- * @property array<array-key, mixed>|null                $extra_data
- * @property Carbon|null                                 $created_at
- * @property Carbon|null                                 $updated_at
- * @property string|null                                 $updated_by
- * @property string|null                                 $created_by
- * @property string|null                                 $deleted_at
- * @property string|null                                 $deleted_by
- * @property Model|\Eloquent|null                        $addressable
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property string                                      $full_address
- * @property string                                      $street_address
- * @property Model|\Eloquent|null                        $model
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ * @property int                          $id
+ * @property string|null                  $model_type
+ * @property string|null                  $model_id
+ * @property string|null                  $name                        Nome identificativo dell'indirizzo
+ * @property string|null                  $description                 Descrizione opzionale
+ * @property string|null                  $route                       Via/Piazza
+ * @property string|null                  $street_number               Numero civico
+ * @property string|null                  $locality                    Comune/Città
+ * @property string|null                  $administrative_area_level_3 Provincia
+ * @property string|null                  $administrative_area_level_2 Regione
+ * @property string|null                  $administrative_area_level_1 Stato/Paese
+ * @property string|null                  $country                     Codice paese ISO
+ * @property string|null                  $postal_code                 CAP
+ * @property string|null                  $formatted_address
+ * @property string|null                  $place_id                    ID Google Places
+ * @property float|null                   $latitude
+ * @property float|null                   $longitude
+ * @property AddressTypeEnum|null         $type                        Tipo indirizzo (home, work, etc.)
+ * @property bool                         $is_primary
+ * @property array<array-key, mixed>|null $extra_data
+ * @property Carbon|null                  $created_at
+ * @property Carbon|null                  $updated_at
+ * @property string|null                  $updated_by
+ * @property string|null                  $created_by
+ * @property string|null                  $deleted_at
+ * @property string|null                  $deleted_by
+ * @property Model|\Eloquent|null         $addressable
+ * @property ProfileContract|null         $creator
+ * @property string                       $full_address
+ * @property string                       $street_address
+ * @property Model|\Eloquent|null         $model
+ * @property ProfileContract|null         $updater
  *
  * @method static Builder<static>|Address nearby(float $latitude, float $longitude, float $radiusKm = 10)
  * @method static Builder<static>|Address newModelQuery()
@@ -81,9 +83,9 @@ use Modules\Geo\Enums\AddressTypeEnum;
  * @method static Builder<static>|Address whereUpdatedAt($value)
  * @method static Builder<static>|Address whereUpdatedBy($value)
  *
- * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property ProfileContract|null $deleter
  *
- * @method static \Modules\Geo\Database\Factories\AddressFactory factory($count = null, $state = [])
+ * @method static AddressFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */
@@ -214,13 +216,21 @@ class Address extends BaseModel
     public function getFullAddressAttribute(): string
     {
         $parts = array_filter([
-            $this->route.($this->street_number ? ' '.$this->street_number : ''),
+            is_string($this->route) && is_string($this->street_number) ? $this->route.('' !== $this->street_number ? ' '.$this->street_number : '') : null,
             $this->locality,
             $this->administrative_area_level_3, // Provincia
             $this->administrative_area_level_2, // Regione
             $this->postal_code,
             $this->country,
-        ]);
+        ], function ($part): bool {
+            // PHPStan L10: verifica prima il tipo, poi se è vuoto
+            if (! \is_string($part)) {
+                return false;
+            }
+
+            // Dopo is_string(), $part è string, quindi verifica se è vuoto
+            return '' !== $part;
+        });
 
         return implode(', ', $parts);
     }
@@ -244,7 +254,13 @@ class Address extends BaseModel
      */
     public function getStreetAddressAttribute(): string
     {
-        return trim(($this->route ?? '').' '.($this->street_number ?? ''));
+        $route = $this->route ?? '';
+        $streetNumber = $this->street_number ?? '';
+
+        $routeStr = is_string($route) ? $route : '';
+        $streetNumberStr = is_string($streetNumber) ? $streetNumber : '';
+
+        return trim($routeStr.' '.$streetNumberStr);
     }
 
     /**
@@ -252,7 +268,8 @@ class Address extends BaseModel
      */
     public function getFormattedAddressAttribute(?string $value): ?string
     {
-        if ($value) {
+        // PHPStan L10: $value è già ?string, dopo !== null è string
+        if (null !== $value) {
             return $value;
         }
 
@@ -260,20 +277,25 @@ class Address extends BaseModel
 
         // Indirizzo stradale
         if ($this->route) {
-            $parts[] = $this->getStreetAddressAttribute();
+            $route = $this->route;
+            $streetNumber = $this->street_number;
+            $streetAddress = is_string($route) && is_string($streetNumber) ? trim($route.' '.$streetNumber) : '';
+            if ('' !== $streetAddress) {
+                $parts[] = $streetAddress;
+            }
         }
 
         // Località e provincia (formato italiano)
         $localityParts = [];
-        if ($this->postal_code) {
+        if ($this->postal_code && is_string($this->postal_code)) {
             $localityParts[] = $this->postal_code;
         }
 
-        if ($this->locality) {
+        if ($this->locality && is_string($this->locality)) {
             $localityParts[] = $this->locality;
 
             // Per indirizzi italiani, aggiungiamo la sigla provincia
-            if ('IT' === $this->country && $this->administrative_area_level_3) {
+            if ('IT' === ($this->country ?? '') && $this->administrative_area_level_3 && is_string($this->administrative_area_level_3)) {
                 // Se è un'implementazione reale, potremmo derivare la sigla dalla provincia
                 $provinciaSigla = $this->extra_data['provincia_sigla'] ?? null;
                 if ($provinciaSigla && is_string($provinciaSigla)) {
@@ -287,14 +309,14 @@ class Address extends BaseModel
         }
 
         // Regione
-        if ($this->administrative_area_level_2) {
+        if ($this->administrative_area_level_2 && is_string($this->administrative_area_level_2)) {
             $parts[] = $this->administrative_area_level_2;
         }
 
         // Paese
-        if ($this->country) {
-            $countryName = $this->administrative_area_level_1 ?? $this->country;
-            $parts[] = strtoupper($countryName);
+        if ($this->country && is_string($this->country)) {
+            $countryName = ($this->administrative_area_level_1 ?? $this->country) ?? '';
+            $parts[] = strtoupper(is_string($countryName) ? $countryName : '');
         }
 
         return implode("\n", $parts);

@@ -14,4 +14,9 @@ return [
         'sort' => 90,
         'icon' => 'heroicon-o-map',
     ],
+    'actions' => [
+        'logout' => [
+            'tooltip' => 'logout',
+        ],
+    ],
 ];

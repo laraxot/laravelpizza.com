@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Tenant\Actions\Markdown;
 
 use Illuminate\Support\Arr;
+use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Spatie\QueueableAction\QueueableAction;
 
 class GetLocalizedMarkdownPathAction
@@ -16,8 +17,8 @@ class GetLocalizedMarkdownPathAction
         $lang = app()->getLocale();
 
         $paths = [
-            app(\Modules\Tenant\Actions\Config\GetTenantFilePathAction::class)->execute('lang/'.$lang.'/'.$name),
-            app(\Modules\Tenant\Actions\Config\GetTenantFilePathAction::class)->execute($name),
+            app(GetTenantFilePathAction::class)->execute('lang/'.$lang.'/'.$name),
+            app(GetTenantFilePathAction::class)->execute($name),
         ];
 
         /** @var string|false|null $path */

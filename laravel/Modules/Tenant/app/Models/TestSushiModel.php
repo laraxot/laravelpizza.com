@@ -7,6 +7,7 @@ namespace Modules\Tenant\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\File;
+use InvalidArgumentException;
 use Modules\Tenant\Database\Factories\TestSushiModelFactory;
 use Modules\Tenant\Models\Traits\SushiToJson;
 use Modules\Tenant\Services\TenantService;
@@ -111,7 +112,7 @@ class TestSushiModel extends BaseModel
 
         $filePath = $tenantService::filePath('database/content/'.$tbl.'.json');
         if (! is_string($filePath)) {
-            throw new \InvalidArgumentException('File path must be string');
+            throw new InvalidArgumentException('File path must be string');
         }
 
         return $filePath;

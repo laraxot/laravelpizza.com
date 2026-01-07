@@ -43,7 +43,4 @@ return [
         'view' => 'View',
     ],
     'save' => 'Save',
-    'close' => 'Chiudi',
-    'back' => 'Indietro',
-    'confirm' => 'Conferma',
 ];

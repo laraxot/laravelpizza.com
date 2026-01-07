@@ -9,7 +9,7 @@ use Filament\Forms\Set;
 use Modules\Geo\Models\Comune;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Group;
-use Filament\Forms\Components\Component;
+use Filament\Schemas\Components\Component;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Contracts\Support\Htmlable;
 

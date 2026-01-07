@@ -16,31 +16,36 @@ return [
     ],
     'fields' => [
         'name' => [
-            'label' => 'name',
+            'label' => 'Name',
+        ],
+        'user' => [
+            'email' => [
+                'label' => 'Owner',
+            ],
         ],
         'create' => [
-            'label' => 'create',
+            'label' => 'Create',
         ],
         'edit' => [
-            'label' => 'edit',
+            'label' => 'Edit',
         ],
         'delete' => [
-            'label' => 'delete',
+            'label' => 'Delete',
         ],
         'toggleColumns' => [
-            'label' => 'toggleColumns',
+            'label' => 'Toggle Columns',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
+            'label' => 'Reorder Records',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
+            'label' => 'Reset Filters',
         ],
         'applyFilters' => [
-            'label' => 'applyFilters',
+            'label' => 'Apply Filters',
         ],
         'openFilters' => [
-            'label' => 'openFilters',
+            'label' => 'Open Filters',
         ],
     ],
     'plural' => [

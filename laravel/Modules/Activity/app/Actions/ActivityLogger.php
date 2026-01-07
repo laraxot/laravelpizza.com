@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Actions;
 
+use Illuminate\Database\Eloquent\Builder;
+use InvalidArgumentException;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
@@ -29,6 +31,8 @@ class ActivityLogger
 
     /**
      * Log activity.
+     *
+     * @param array<string, mixed>|null $properties
      */
     public function log(
         string $type,
@@ -41,7 +45,7 @@ class ActivityLogger
         if ($user !== null) {
             // Type checking for User model
             if (! $user instanceof User) {
-                throw new \InvalidArgumentException('User must be an instance of User');
+                throw new InvalidArgumentException('User must be an instance of User');
             }
 
             // Type narrowing for user ID - use getAttribute for Eloquent models
@@ -123,6 +127,8 @@ class ActivityLogger
 
     /**
      * Log custom event.
+     *
+     * @param array<string, mixed>|null $properties
      */
     public function custom(
         string $type,
@@ -135,11 +141,13 @@ class ActivityLogger
 
     /**
      * Get activities for user.
+     *
+     * @return Collection<int, Activity>
      */
     public function getUserActivities(User $user, int $limit = 50): Collection
     {
         if ($limit <= 0) {
-            throw new \InvalidArgumentException('Limit must be positive');
+            throw new InvalidArgumentException('Limit must be positive');
         }
 
         /** @var Collection<int, Activity> $activities */
@@ -155,6 +163,8 @@ class ActivityLogger
 
     /**
      * Get activities for model.
+     *
+     * @return Collection<int, Activity>
      */
     public function getModelActivities(Model $model, int $limit = 50): Collection
     {
@@ -171,14 +181,16 @@ class ActivityLogger
 
     /**
      * Get activities by type.
+     *
+     * @return Collection<int, Activity>
      */
     public function getByType(string $type, int $limit = 50): Collection
     {
         if ($type === '') {
-            throw new \InvalidArgumentException('Type cannot be empty');
+            throw new InvalidArgumentException('Type cannot be empty');
         }
         if ($limit <= 0) {
-            throw new \InvalidArgumentException('Limit must be positive');
+            throw new InvalidArgumentException('Limit must be positive');
         }
 
         /** @var Collection<int, Activity> $activities */
@@ -193,11 +205,13 @@ class ActivityLogger
 
     /**
      * Get recent activities.
+     *
+     * @return Collection<int, Activity>
      */
     public function getRecent(int $limit = 50): Collection
     {
         if ($limit <= 0) {
-            throw new \InvalidArgumentException('Limit must be positive');
+            throw new InvalidArgumentException('Limit must be positive');
         }
 
         /** @var Collection<int, Activity> $activities */
@@ -215,7 +229,7 @@ class ActivityLogger
     public function cleanOld(int $days = 90): int
     {
         if ($days <= 0) {
-            throw new \InvalidArgumentException('Days must be positive');
+            throw new InvalidArgumentException('Days must be positive');
         }
 
         $deletedCount = Activity::where('created_at', '<', now()->subDays($days))
@@ -233,6 +247,8 @@ class ActivityLogger
 
     /**
      * Get activity statistics.
+     *
+     * @return array{total: int, by_type: array<string, int>, today: int, this_week: int, this_month: int}
      */
     public function getStatistics(?User $user = null): array
     {
@@ -245,11 +261,29 @@ class ActivityLogger
 
         return [
             'total' => $query->count(),
-            'by_type' => $query->clone()
-                ->selectRaw('event, COUNT(*) as count')
-                ->groupBy('event')
-                ->pluck('count', 'event')
-                ->toArray(),
+            'by_type' => (function () use ($query): array {
+                /** @var Builder<Activity> $clonedQuery */
+                $clonedQuery = $query->clone();
+
+                /** @var \Illuminate\Support\Collection<int, object{event: string, count: int}> $results */
+                $results = $clonedQuery
+                    ->selectRaw('event, COUNT(*) as count')
+                    ->groupBy('event')
+                    ->get();
+
+                // Explicitly map and cast to ensure types
+                /** @var array<string, int> $byType */
+                $byType = $results->mapWithKeys(function (object $item, int $_key): array {
+                    // PHPStan L10: isset() per magic attributes invece di property_exists()
+                    if (! isset($item->event, $item->count)) {
+                        return [];
+                    }
+
+                    return [(string) $item->event => (int) $item->count];
+                })->toArray();
+
+                return $byType;
+            })(),
             'today' => $query->clone()
                 ->whereDate('created_at', now()->toDateString())
                 ->count(),

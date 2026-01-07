@@ -14,27 +14,11 @@ class GetCoordinatesByAddressAction
     public function execute(string $address): ?CoordinatesData
     {
         // Prova con Google Maps
-        $coordinates = $this->getFromGoogle($address);
-
-        if (! $coordinates) {
-            // Prova con Bing Maps
-            $coordinates = $this->getFromBing($address);
-        }
-
-        if (! $coordinates) {
-            // Prova con OpenCage
-            $coordinates = $this->getFromOpenCage($address);
-        }
-
-        if (! $coordinates) {
-            // Prova con OpenStreetMap Nominatim
-            $coordinates = $this->getFromNominatim($address);
-        }
-
-        if (! $coordinates) {
-            // Prova con OpenAPI Geocoding
-            $coordinates = $this->getFromOpenApi($address);
-        }
+        $coordinates = $this->getFromGoogle($address)
+            ?? $this->getFromBing($address)
+            ?? $this->getFromOpenCage($address)
+            ?? $this->getFromNominatim($address)
+            ?? $this->getFromOpenApi($address);
 
         if (! $coordinates) {
             Notification::make()

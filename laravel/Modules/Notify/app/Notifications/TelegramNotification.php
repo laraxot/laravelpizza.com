@@ -12,7 +12,7 @@ namespace Modules\Notify\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
-use Modules\Notify\Notifications\Channels\TelegramChannel;
+use Modules\Notify\Channels\TelegramChannel;
 
 /**
  * Classe per inviare notifiche tramite Telegram.

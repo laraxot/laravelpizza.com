@@ -6,6 +6,7 @@ namespace Modules\Tenant\Services;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
+use Modules\Tenant\Actions\Config\GetTenantConfigNamesAction;
 use Modules\Tenant\Actions\Config\GetTenantConfigPathAction;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Modules\Tenant\Actions\Config\ResolveTenantConfigValueAction;
@@ -13,7 +14,9 @@ use Modules\Tenant\Actions\Config\SaveTenantConfigAction;
 use Modules\Tenant\Actions\GetTenantNameAction;
 use Modules\Tenant\Actions\Models\ResolveTenantModelClassAction;
 use Modules\Tenant\Actions\Models\ResolveTenantModelInstanceAction;
+use Modules\Tenant\Actions\Modules\GetTenantModulesAction;
 use Modules\Tenant\Actions\Translations\TranslateTenantKeyAction;
+use ReflectionException;
 
 /**
  * TenantService - Facade sottile per operazioni tenant-aware.
@@ -106,7 +109,7 @@ class TenantService
     public static function getConfigNames(): array
     {
         // Must add the use Modules\Tenant\Actions\Config\GetTenantConfigNamesAction;
-        return app(\Modules\Tenant\Actions\Config\GetTenantConfigNamesAction::class)->execute();
+        return app(GetTenantConfigNamesAction::class)->execute();
     }
 
     /**
@@ -126,7 +129,7 @@ class TenantService
      * @param  string  $name  Nome breve del modello (es. 'user', 'patient')
      * @return Model Istanza del modello risolto
      *
-     * @throws \ReflectionException Se la classe del modello non può essere istanziata
+     * @throws ReflectionException Se la classe del modello non può essere istanziata
      */
     public static function model(string $name): Model
     {
@@ -151,6 +154,6 @@ class TenantService
      */
     public static function allModules(): array
     {
-        return app(\Modules\Tenant\Actions\Modules\GetTenantModulesAction::class)->execute();
+        return app(GetTenantModulesAction::class)->execute();
     }
 }

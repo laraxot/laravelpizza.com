@@ -65,7 +65,7 @@ use Spatie\Translatable\HasTranslations;
  *
  * @mixin IdeHelperNotificationTemplate
  *
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read ProfileContract|null $deleter
  *
  * @mixin \Eloquent
  */

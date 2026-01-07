@@ -11,6 +11,9 @@ use Laravel\Passport\Passport;
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Models\User;
+use Modules\User\Tests\Traits\HasUserTestCase;
+
+uses(HasUserTestCase::class);
 
 beforeEach(function () {
     $user = User::factory()->create([

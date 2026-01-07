@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-use Filament\Forms\Components\Radio;
+use Modules\Xot\Filament\Forms\Components\XotBaseRadio;
 
-final class RadioIcon extends Radio
+final class RadioIcon extends XotBaseRadio
 {
     /**
      * @var view-string

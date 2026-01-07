@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Models;
 
+use Modules\Xot\Models\XotBaseMorphPivot;
 use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseMorphPivot.
  */
-abstract class BaseMorphPivot extends \Modules\Xot\Models\XotBaseMorphPivot
+abstract class BaseMorphPivot extends XotBaseMorphPivot
 {
     use Updater;
 

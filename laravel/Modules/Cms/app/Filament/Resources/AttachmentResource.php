@@ -9,6 +9,7 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Utilities\Get;
+use Filament\Support\Components\Component as BaseComponent;
 use Modules\Cms\Enums\AttachmentDiskEnum;
 use Modules\Cms\Filament\Resources\AttachmentResource\Pages\CreateAttachment;
 use Modules\Cms\Filament\Resources\AttachmentResource\Pages\EditAttachment;
@@ -21,7 +22,7 @@ class AttachmentResource extends LangBaseResource
     protected static ?string $model = Attachment::class;
 
     /**
-     * @return array<string, \Filament\Support\Components\Component>
+     * @return array<string, BaseComponent>
      */
     #[\Override]
     public static function getFormSchema(): array

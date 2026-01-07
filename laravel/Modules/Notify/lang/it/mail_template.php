@@ -142,6 +142,9 @@ return [
         'counter' => [
             'label' => 'counter',
         ],
+        'html_layout_path' => [
+            'description' => 'html_layout_path',
+        ],
     ],
     'actions' => [
         'preview' => [

@@ -29,7 +29,7 @@ use Modules\Xot\Database\Factories\PulseValueFactory;
  * @method static Builder<static>|PulseValue whereType($value)
  * @method static Builder<static>|PulseValue whereValue($value)
  *
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read ProfileContract|null $deleter
  *
  * @mixin \Eloquent
  */

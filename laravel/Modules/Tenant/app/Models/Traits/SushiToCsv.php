@@ -12,6 +12,7 @@ use Illuminate\Support\Arr;
 use League\Csv\Reader;
 use League\Csv\Writer;
 use Modules\Tenant\Services\TenantService;
+use RuntimeException;
 use Stringable;
 use Sushi\Sushi;
 use Webmozart\Assert\Assert;
@@ -39,7 +40,7 @@ trait SushiToCsv
     {
         $tbl = $this->getTable();
         if (! is_string($tbl)) {
-            throw new \RuntimeException('Table name must be a string');
+            throw new RuntimeException('Table name must be a string');
         }
         $file = $tbl.'.csv';
 

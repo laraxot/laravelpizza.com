@@ -24,22 +24,22 @@ class ViewLocation extends XotBaseViewRecord
     }
 
     /**
-     * @return array<int, Component>
+     * @return array<string, Component>
      */
     #[\Override]
     protected function getInfolistSchema(): array
     {
         return [
-            Section::make('Informazioni Location')->schema([
-                Grid::make(['default' => 2])->schema([
-                    TextEntry::make('name'),
-                    TextEntry::make('formatted_address'),
-                    TextEntry::make('street'),
-                    TextEntry::make('city'),
-                    TextEntry::make('state'),
-                    TextEntry::make('zip'),
-                    TextEntry::make('lat'),
-                    TextEntry::make('lng'),
+            'location_info' => Section::make('Informazioni Location')->schema([
+                'location_grid' => Grid::make(['default' => 2])->schema([
+                    'name' => TextEntry::make('name'),
+                    'formatted_address' => TextEntry::make('formatted_address'),
+                    'street' => TextEntry::make('street'),
+                    'city' => TextEntry::make('city'),
+                    'state' => TextEntry::make('state'),
+                    'zip' => TextEntry::make('zip'),
+                    'lat' => TextEntry::make('lat'),
+                    'lng' => TextEntry::make('lng'),
                 ]),
             ]),
         ];

@@ -45,10 +45,10 @@ return [
             'title' => 'Search Results',
             'results' => 'Search Results for :query',
         ],
-        'welcome' => '<p>Dies ist das AdminLTE theme von <a href=\"https://almsaeedstudio.com/\" target=\"_blank\">https://almsaeedstudio.com/</a>. Dies ist eine abgestufte version mit nur den nötigsten Styles und Scripten, damit es läuft. Downloade die Vollversion, um Komponenten zum Dashboard hinzufügen zu können.</p>
+        'welcome' => '<p>Dies ist das AdminLTE theme von <a href="https://almsaeedstudio.com/" target="_blank">https://almsaeedstudio.com/</a>. Dies ist eine abgestufte version mit nur den nötigsten Styles und Scripten, damit es läuft. Downloade die Vollversion, um Komponenten zum Dashboard hinzufügen zu können.</p>
 <p>Alle Funktionen für sind statisch mit Ausnahme der <strong>Benutzer Verwaltung</strong> auf der linken Seite. Dieser Boilerplate kommt mit einer voll funktionsfähigen Zugangskontroll-Bibliothek, um Benutzer/Rollen und Berechtigungen zu verwalten.</p>
 <p>Denken Sie daran, es ist \'work in progress\' und möglicherweise gibt es Fehler oder andere Probleme die ich noch nicht gesehen habe. Ich werde mein Bestes tun, um sie zu beheben, wie sie gemeldet werden.</p>
-<p>Hoffentlich genießen Sie die Arbeit, die ich hier reingesteckt habe. Bitte besuche die <a href=\"https://github.com/rappasoft/laravel-5-boilerplate\" target=\"_blank\">GitHub</a> Seite für weitere Informationen und meldet alle <a href=\"https://github.com/rappasoft/Laravel-5-Boilerplate/issues\" target=\"_blank\">Fehler hier</a>.</p>
+<p>Hoffentlich genießen Sie die Arbeit, die ich hier reingesteckt habe. Bitte besuche die <a href="https://github.com/rappasoft/laravel-5-boilerplate" target="_blank">GitHub</a> Seite für weitere Informationen und meldet alle <a href="https://github.com/rappasoft/Laravel-5-Boilerplate/issues" target="_blank">Fehler hier</a>.</p>
 <p><strong>This project is very demanding to keep up with given the rate at which the master Laravel branch changes, so any help is appreciated.</strong></p>
 <p>- Anthony Rappa</p>',
     ],
@@ -57,7 +57,7 @@ return [
             'error' => 'Whoops!',
             'greeting' => 'Hello!',
             'regards' => 'Regards,',
-            'trouble_clicking_button' => 'If you’re having trouble clicking the \":actionText\" button, copy and paste the URL below into your web browser:',
+            'trouble_clicking_button' => 'If you’re having trouble clicking the ":actionText" button, copy and paste the URL below into your web browser:',
             'thank_you_for_using_app' => 'Thank you for using our application!',
             'password_reset_subject' => 'Dein Link zum zurücksetzen des Passworts',
             'password_cause_of_email' => 'You are receiving this email because we received a password reset request for your account.',
@@ -76,18 +76,18 @@ return [
             'js_injected_from_controller' => 'Javascript von einem Controller Eingefügt',
             'using_blade_extensions' => 'Verwenden von Blade-Erweiterungen',
             'using_access_helper' => [
-                'array_permissions' => 'Verwenden von Access Helper mit Array von Berechtigungs-Namen oder ID\'s bei der der Benutzer alle besitzen muss.',
-                'array_permissions_not' => 'Verwenden von Access Helper mit Array von Berechtigungs-Namen oder ID\'s bei der der Benutzer nicht alle besitzen muss.',
-                'array_roles' => 'Verwenden von Access Helper mit Array von Rollen-Namen oder ID\'s bei der der Benutzer alle besitzen muss.',
-                'array_roles_not' => 'Verwenden von Access Helper mit Array von Rolen-Namen oder ID\'s bei der der Benutzer nicht alle besitzen muss.',
+                'array_permissions' => "Verwenden von Access Helper mit Array von Berechtigungs-Namen oder ID's bei der der Benutzer alle besitzen muss.",
+                'array_permissions_not' => "Verwenden von Access Helper mit Array von Berechtigungs-Namen oder ID's bei der der Benutzer nicht alle besitzen muss.",
+                'array_roles' => "Verwenden von Access Helper mit Array von Rollen-Namen oder ID's bei der der Benutzer alle besitzen muss.",
+                'array_roles_not' => "Verwenden von Access Helper mit Array von Rolen-Namen oder ID's bei der der Benutzer nicht alle besitzen muss.",
                 'permission_id' => 'Verwenden von Access Helper mit Berechtigungs-ID',
                 'permission_name' => 'Verwenden von Access Helper mit Berechtigungs-Name',
                 'role_id' => 'Vverwenden von Access Helper mit Rollen-ID',
                 'role_name' => 'Verwenden von Access Helper mit Rollen-Name',
             ],
-            'view_console_it_works' => 'Schaue in die Konsole, du solltest \'it works!\' sehen, welches vom FrontendController@index kommt',
-            'you_can_see_because' => 'Du kannst dies sehen, da du folgende Rolle besitzt \':role\'!',
-            'you_can_see_because_permission' => 'Du kannst dies sehen, da du folgende Berechtigung besitzt \':permission\'!',
+            'view_console_it_works' => "Schaue in die Konsole, du solltest 'it works!' sehen, welches vom FrontendController@index kommt",
+            'you_can_see_because' => "Du kannst dies sehen, da du folgende Rolle besitzt ':role'!",
+            'you_can_see_because_permission' => "Du kannst dies sehen, da du folgende Berechtigung besitzt ':permission'!",
         ],
         'user' => [
             'profile_updated' => 'Profil aktualisiert.',

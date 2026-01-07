@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Filament\Resources;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Support\Components\Component;
 use Modules\Geo\Filament\Resources\LocationResource\Pages\CreateLocation;
 use Modules\Geo\Filament\Resources\LocationResource\Pages\EditLocation;
 use Modules\Geo\Filament\Resources\LocationResource\Pages\ListLocations;
@@ -33,7 +34,7 @@ class LocationResource extends XotBaseResource
     protected static ?int $navigationSort = 2;
 
     /**
-     * @return array<string, \Filament\Support\Components\Component>
+     * @return array<string, Component>
      */
     #[\Override]
     public static function getFormSchema(): array
@@ -114,7 +115,7 @@ class LocationResource extends XotBaseResource
      * @param array{lat?: string|float|null, lng?: string|float|null} $coordinates Le coordinate da convertire
      *
      * @return array{lat: float, lng: float} Le coordinate convertite in float
-     
+
     private static function formatCoordinates(array $coordinates): array
     {
         return [

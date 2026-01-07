@@ -13,8 +13,6 @@ return [
         'buttons' => [
             'save' => 'Speichern',
             'update' => 'Aktualisieren',
-            'add' => 'Aggiungi',
-            'edit' => 'Cambia',
         ],
         'hide' => 'Verstecken',
         'inactive' => 'Inactive',

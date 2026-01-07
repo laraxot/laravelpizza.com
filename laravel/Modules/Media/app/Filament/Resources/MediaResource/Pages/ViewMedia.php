@@ -29,26 +29,26 @@ class ViewMedia extends XotBaseViewRecord
     /**
      * Restituisce lo schema dell'infolist per la visualizzazione dei dettagli del record.
      *
-     * @return array<int, Component>
+     * @return array<string, Component>
      */
     #[Override]
-    public function getInfolistSchema(): array
+    protected function getInfolistSchema(): array
     {
         return [
-            Grid::make(2)
+            'media_grid' => Grid::make(2)
                 ->schema([
-                    Section::make()->schema([
-                        ImageEntry::make('url')
+                    'media_preview' => Section::make()->schema([
+                        'image' => ImageEntry::make('url')
                             ->defaultImageUrl(fn (Media $record) => $record->getUrl())
                             ->size(500)
                             ->visible(fn (Media $record): bool => $record->type === 'image'),
-                        VideoEntry::make('url')
+                        'video' => VideoEntry::make('url')
                             ->defaultImageUrl(fn (Media $record) => $record->getUrl())
                             ->size(500)
                             ->visible(fn (Media $record): bool => $record->type === 'video'),
                     ]),
-                    Section::make()->schema([
-                        Actions::make([
+                    'media_details' => Section::make()->schema([
+                        'actions' => Actions::make([
                             Action::make('convert')
                                 ->tooltip('convert')
                                 ->icon('heroicon-o-scale')
@@ -65,32 +65,30 @@ class ViewMedia extends XotBaseViewRecord
                                     $record->mediaConverts()->create($convertArray);
                                 }),
                         ]),
-                        TextEntry::make('name'),
-                        TextEntry::make('collection_name'),
-                        TextEntry::make('mime_type'),
-                        TextEntry::make('human_readable_size'),
-                        TextEntry::make('created_at'),
+                        'name' => TextEntry::make('name'),
+                        'collection_name' => TextEntry::make('collection_name'),
+                        'mime_type' => TextEntry::make('mime_type'),
+                        'human_readable_size' => TextEntry::make('human_readable_size'),
+                        'created_at' => TextEntry::make('created_at'),
                     ]),
                 ]),
-            RepeatableEntry::make('entry_conversions')
+            'conversions' => RepeatableEntry::make('entry_conversions')
                 ->schema([
-                    TextEntry::make('name'),
-                    TextEntry::make('src'),
-                    ImageEntry::make('src'),
+                    'name' => TextEntry::make('name'),
+                    'src_text' => TextEntry::make('src'),
+                    'src_image' => ImageEntry::make('src'),
                 ])
                 ->columns(4),
         ];
     }
 
     /**
-     * @return array<DeleteAction>
-     *
-     * @psalm-return list{DeleteAction}
+     * @return array<string, DeleteAction>
      */
     protected function getHeaderActions(): array
     {
         return [
-            DeleteAction::make(),
+            'delete' => DeleteAction::make(),
         ];
     }
 

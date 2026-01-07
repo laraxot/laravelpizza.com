@@ -6,7 +6,8 @@
     "priority": 0,
     "providers": [
         "Modules\\User\\Providers\\UserServiceProvider",
-        "Modules\\User\\Providers\\Filament\\AdminPanelProvider"
+        "Modules\\User\\Providers\\Filament\\AdminPanelProvider",
+        "Modules\\User\\Providers\\PassportServiceProvider"
     ],
     "migration": {
         "seeds": [

@@ -38,7 +38,7 @@ class CreateSchedule extends XotBaseCreateRecord
         return $typedRes;
     }
 
-    public function form(Schema $schema): Schema
+    public function schema(Schema $schema): Schema
     {
         /** @var array<Htmlable|string> $formSchema */
         $formSchema = $this->getFormSchema();

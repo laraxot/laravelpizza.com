@@ -15,11 +15,11 @@ final class Navigation extends XotBaseBlock
     {
         return [
             Repeater::make('items')
-                ->label('Voci di navigazione')
+                ->label(__('ui::blocks.navigation.fields.items.label'))
                 ->schema([
-                    TextInput::make('label')->label('Testo link')->required(),
+                    TextInput::make('label')->label(__('ui::blocks.navigation.fields.text.label'))->required(),
                     TextInput::make('url')
-                        ->label('URL link')
+                        ->label(__('ui::blocks.navigation.fields.url.label'))
                         ->url()
                         ->required(),
                 ])

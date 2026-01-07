@@ -6,8 +6,8 @@ namespace Modules\User\Filament\Resources\DeviceResource\RelationManagers;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
-use Filament\Tables\Table;
-use Modules\User\Filament\Resources\UserResource;
+use Filament\Tables\Columns\Column;
+use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 class UsersRelationManager extends XotBaseRelationManager
@@ -25,9 +25,15 @@ class UsersRelationManager extends XotBaseRelationManager
         ];
     }
 
+    /**
+     * @return array<string, Column>
+     */
     #[\Override]
-    public function table(Table $table): Table
+    public function getTableColumns(): array
     {
-        return UserResource::table($table);
+        return [
+            'name' => TextColumn::make('name')->searchable()->sortable(),
+            'email' => TextColumn::make('email')->searchable()->sortable(),
+        ];
     }
 }

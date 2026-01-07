@@ -39,7 +39,6 @@ class ListProfiles extends XotBaseListRecords
 
                     // PHPStan Level 10: isset() invece di property_exists() per Eloquent relations/attributes
                     $userValue = $record->user ?? null;
-                    $user_class = XotData::make()->getUserClass();
 
                     if (null === $userValue) {
                         $emailValue = $record->email ?? null;

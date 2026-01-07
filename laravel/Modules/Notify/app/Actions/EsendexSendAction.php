@@ -40,13 +40,13 @@ class EsendexSendAction
             'message' => $smsData->body,
             'message_type' => 'N',
             'returnCredits' => false,
-            'recipient' => [$smsData->to],
+            'recipient' => [$smsData->recipient],
             'sender' => config('esendex.sender'),
         ];
 
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_URL, $this->base_endpoint.'sms');
+        $curlHandle = curl_init();
+        curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curlHandle, CURLOPT_URL, $this->base_endpoint.'sms');
 
         // Verifichiamo che i valori dell'array di autenticazione siano stringhe
         if (! is_string($auth[0])) {
@@ -57,18 +57,18 @@ class EsendexSendAction
             $auth[1] = '';
         }
 
-        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        curl_setopt($curlHandle, CURLOPT_HTTPHEADER, [
             'Content-type: application/json',
             'user_key: '.$auth[0],
             'Session_key: '.$auth[1],
         ]);
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data, JSON_THROW_ON_ERROR));
-        $response = curl_exec($ch);
-        $info = curl_getinfo($ch);
-        curl_close($ch);
+        curl_setopt($curlHandle, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curlHandle, CURLOPT_POST, 1);
+        curl_setopt($curlHandle, CURLOPT_POSTFIELDS, json_encode($data, JSON_THROW_ON_ERROR));
+        $response = curl_exec($curlHandle);
+        $info = curl_getinfo($curlHandle);
+        curl_close($curlHandle);
         Assert::isArray($info);
         if ($info['http_code'] !== 201) {
             return [];

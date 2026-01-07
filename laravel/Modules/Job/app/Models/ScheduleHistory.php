@@ -50,7 +50,7 @@ use Override;
  * @method static Builder<static>|ScheduleHistory whereUpdatedAt($value)
  * @method static Builder<static>|ScheduleHistory whereUpdatedBy($value)
  *
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read ProfileContract|null $deleter
  *
  * @mixin \Eloquent
  */

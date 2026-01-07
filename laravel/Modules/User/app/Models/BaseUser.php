@@ -25,22 +25,24 @@ use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Laravel\Passport\Contracts\OAuthenticatable;
+use Laravel\Passport\Contracts\ScopeAuthorizable;
 use Laravel\Passport\HasApiTokens;
+use Laravel\Passport\PersonalAccessTokenResult;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\Traits\HasAuthenticationLogTrait;
+use Modules\User\Models\Traits\HasModules;
+use Modules\User\Models\Traits\HasSpatiePermission;
 use Modules\User\Models\Traits\HasTeams;
-use Modules\Xot\Contracts\PassportHasApiTokensContract;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
+use Modules\Xot\Models\Traits as XotTraits;
 use Modules\Xot\Models\Traits\HasXotFactory;
-use Modules\Xot\Models\Traits\RelationX;
 use Parental\HasChildren;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Permission\Contracts\Role as SpatieRoleContract;
-use Spatie\Permission\Traits\HasPermissions;
-use Spatie\Permission\Traits\HasRoles;
 
 /**
  * Base User Model.
@@ -129,25 +131,47 @@ use Spatie\Permission\Traits\HasRoles;
  *
  * @mixin \Eloquent
  */
-abstract class BaseUser extends Authenticatable implements HasMedia, HasName, HasTenants, MustVerifyEmail, PassportHasApiTokensContract, UserContract
+abstract class BaseUser extends Authenticatable implements HasMedia, HasName, HasTenants, MustVerifyEmail, UserContract, OAuthenticatable
 {
-    use HasApiTokens;
-    use HasAuthenticationLogTrait;
+    use HasApiTokens {
+        HasApiTokens::tokenCan as protected passportTokenCan;
+        HasApiTokens::createToken as protected passportCreateToken;
+        HasApiTokens::withAccessToken as protected passportWithAccessToken;
+    }
     use HasChildren;
-    use HasPermissions;
-    use HasRoles;
-    use HasTeams;
     use HasUuids;
     use HasXotFactory;
     use InteractsWithMedia;
     use Notifiable;
-    use RelationX;
+    use HasAuthenticationLogTrait;
+    use HasModules;
+    use HasSpatiePermission;
+    use HasTeams;
     use Traits\HasTenants;
+    use XotTraits\RelationX;
 
+    /** @var bool */
     public $incrementing = false;
 
     /** @var Pivot|null */
     public $pivot;
+
+    public function tokenCan(string $scope): bool
+    {
+        return $this->passportTokenCan($scope);
+    }
+
+    public function createToken(string $name, array $scopes = []): PersonalAccessTokenResult
+    {
+        return $this->passportCreateToken($name, $scopes);
+    }
+
+    public function withAccessToken(?ScopeAuthorizable $accessToken): static
+    {
+        $this->passportWithAccessToken($accessToken);
+
+        return $this;
+    }
 
     /** @var string */
     protected $connection = 'user';
@@ -280,7 +304,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     /**
      * Verifica se l'utente ha il ruolo di super-admin.
      *
-     * @return bool True se l'utente è super-admin, altrimenti false
+     * @return bool True se l'utente Ã¨ super-admin, altrimenti false
      */
     public function isSuperAdmin(): bool
     {
@@ -471,7 +495,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     #[\Override]
     public function hasRole($roles, ?string $guard = null): bool
     {
-        // Se è una stringa semplice, utilizziamo il metodo interno tramite relazione roles
+        // Se Ã¨ una stringa semplice, utilizziamo il metodo interno tramite relazione roles
         if (\is_string($roles)) {
             return once(fn (): bool => $this->roles()->where('name', $roles)->exists());
         }
@@ -536,5 +560,15 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
             'created_by' => 'string',
             'deleted_by' => 'string',
         ];
+    }
+
+    /**
+     * User possiede molti Clients OAuth (per autenticazione API).
+     *
+     * @return MorphMany<OauthClient, $this>
+     */
+    public function clients(): MorphMany
+    {
+        return $this->morphMany(OauthClient::class, 'owner');
     }
 }

@@ -21,6 +21,8 @@ return new class extends XotBaseMigration {
             $table->foreignId('team_id')->nullable()->index();
             $table->string('name');
             $table->string('guard_name')->default('web');
+            $table->string('display_name')->nullable();
+            $table->text('description')->nullable();
         });
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
@@ -29,6 +31,12 @@ return new class extends XotBaseMigration {
             }
             if (! $this->hasColumn('team_id')) {
                 $table->foreignId('team_id')->nullable()->index();
+            }
+            if (! $this->hasColumn('display_name')) {
+                $table->string('display_name')->nullable();
+            }
+            if (! $this->hasColumn('description')) {
+                $table->text('description')->nullable();
             }
             $this->updateTimestamps($table);
         });

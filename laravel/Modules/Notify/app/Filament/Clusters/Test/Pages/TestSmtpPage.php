@@ -36,7 +36,7 @@ class TestSmtpPage extends XotBasePage implements HasForms
 
     public ?string $error_message = null;
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-paper-airplane';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-paper-airplane';
 
     protected string $view = 'notify::filament.pages.send-email';
 
@@ -78,7 +78,7 @@ class TestSmtpPage extends XotBasePage implements HasForms
                         ->required(),
                     TextInput::make('from'),
                     // ->default(config('mail.from.name'))
-                    TextInput::make('to')
+                    TextInput::make('recipient')
                         // ->default($defaultEmail)
                         ->email()
                         ->required(),

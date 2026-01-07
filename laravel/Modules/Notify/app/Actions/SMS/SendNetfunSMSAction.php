@@ -70,14 +70,8 @@ final class SendNetfunSMSAction implements SmsActionContract
             'Content-Type' => 'application/json',
         ];
 
-        // Normalizza il numero di telefono
-        $to = (string) $smsData->to;
-        if (Str::startsWith($to, '00')) {
-            $to = $to !== '' ? ('+'.mb_substr($to, 2)) : $to;
-        }
-        if (! Str::startsWith($to, '+')) {
-            $to = '+39'.$to;
-        }
+        // Normalizza il numero di telefono usando l'azione dedicata
+        $recipient = app(NormalizePhoneNumberAction::class)->execute($smsData->recipient);
 
         $body = [
             'api_token' => $this->token,
@@ -87,7 +81,7 @@ final class SendNetfunSMSAction implements SmsActionContract
             'utf8_enabled' => true,
             'destinations' => [
                 [
-                    'number' => $to,
+                    'number' => $recipient,
                 ],
             ],
         ];
@@ -109,33 +103,4 @@ final class SendNetfunSMSAction implements SmsActionContract
         return $this->vars;
     }
 
-    /**
-     * Normalizza il numero di telefono nel formato E.164
-     *
-     * @param  string  $phoneNumber  Numero di telefono da normalizzare
-     * @return string Numero di telefono normalizzato in formato E.164
-     */
-    /**
-     * Normalizza il numero di telefono nel formato E.164
-     *
-     * @param  string  $phoneNumber  Numero di telefono da normalizzare
-     * @return string Numero di telefono normalizzato in formato E.164
-     */
-    protected function normalizePhoneNumber(string $phoneNumber): string
-    {
-        // Rimuovi tutti i caratteri non numerici tranne il +
-        $cleaned = preg_replace('/[^0-9+]/', '', $phoneNumber);
-
-        // Se preg_replace restituisce null (non dovrebbe succedere con input string)
-        if (! is_string($cleaned) || $cleaned === '') {
-            $cleaned = '';
-        }
-
-        // Se il numero non inizia con '+'
-        if (! Str::startsWith($cleaned, '+')) {
-            $cleaned = '+39'.ltrim($cleaned, '0');
-        }
-
-        return $cleaned;
-    }
 }

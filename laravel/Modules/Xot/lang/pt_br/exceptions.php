@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 return [
     /*
-     |--------------------------------------------------------------------------
-     | Exception Language Lines
-     |--------------------------------------------------------------------------
-     |
-     | The following language lines are used in exceptions throughout the system.
-     | Regardless of where it is placed, a message can be listed here so it is
-     | easily found in an intuitive way.
-     |
-     |--------------------------------------------------------------------------
+      |--------------------------------------------------------------------------
+      | Exception Language Lines
+      |--------------------------------------------------------------------------
+      |
+      | The following language lines are used in Exceptions thrown throughout the system.
+      | Regardless where it is placed, a button can be listed here so it is easily
+      | found in a intuitive way.
+      |
+      |--------------------------------------------------------------------------
      */
 
     'backend' => [
@@ -53,7 +53,7 @@ return [
                 'created_confirm' => 'Sua conta foi criada com sucesso. Enviamos um e-mail para você confirmar a sua conta.',
                 'mismatch' => 'Seu código de confirmação não corresponde.',
                 'not_found' => 'Esse código de confirmação não existe.',
-                'resend' => 'Sua conta não está confirmada. Por favor, clique no link de confirmação em seu e-mail, ou clique aqui</a> para reenviar o e-mail de confirmação.',
+                'resend' => 'Sua conta não está confirmada. Por favor, clique no link de confirmação em seu e-mail, ou <a href="'.route('frontend.auth.account.confirm.resend', ':user_id').'">clique aqui</a> para reenviar o e-mail de confirmação.',
                 'success' => 'Sua conta foi confirmada com sucesso!',
                 'resent' => 'Um novo e-mail de confirmação foi enviado para você.',
             ],

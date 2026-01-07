@@ -42,7 +42,7 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @mixin IdeHelperNotifyThemeable
  *
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read ProfileContract|null $deleter
  *
  * @mixin \Eloquent
  */

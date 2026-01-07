@@ -11,7 +11,7 @@ use Webmozart\Assert\Assert;
 
 class EmailData extends Data
 {
-    public string $to;
+    public string $recipient;
 
     public ?string $from = null;
 
@@ -26,7 +26,7 @@ class EmailData extends Data
     public array $attachments = [];
 
     public function __construct(
-        string $to,
+        string $recipient,
         string $subject,
         string $body_html,
         array $attachments = [],
@@ -34,8 +34,8 @@ class EmailData extends Data
         ?string $from_email = null,
         ?string $body = null,
     ) {
-        Assert::email($to, 'Invalid "to" email format');
-        $this->to = $to;
+        Assert::email($recipient, 'Invalid "recipient" email format');
+        $this->recipient = $recipient;
         if (! is_string($from)) {
             Assert::string($from = config('mail.from.name', 'Default Sender'));
         }
@@ -75,7 +75,7 @@ class EmailData extends Data
 
         $email = (new MimeEmail)
             ->from($this->getFrom())
-            ->to($this->to)
+            ->to($this->recipient)
             ->subject(strip_tags($this->subject))
             ->html($this->body_html)
             ->text($this->body);

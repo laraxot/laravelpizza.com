@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Clusters\Test\Pages;
 
-use BackedEnum;
 use Exception;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
@@ -33,7 +32,7 @@ class SendSmsPage extends XotBasePage
 {
     public ?array $smsData = [];
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-device-phone-mobile';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-device-phone-mobile';
 
     protected string $view = 'notify::filament.pages.send-sms';
 
@@ -68,7 +67,7 @@ class SendSmsPage extends XotBasePage
 
     public function smsForm(Schema $schema): Schema
     {
-        return $schema->schema($this->getSmsFormSchema())->model($this->getUser())->statePath('smsData');
+        return $schema->components($this->getSmsFormSchema())->model($this->getUser())->statePath('smsData');
     }
 
     /**
@@ -77,7 +76,7 @@ class SendSmsPage extends XotBasePage
     public function getSmsFormSchema(): array
     {
         return [
-            'to' => TextInput::make('to')
+            'recipient' => TextInput::make('recipient')
                 ->tel()
                 ->required()
                 ->helperText(__('notify::sms.fields.to.helper_text')),
@@ -109,12 +108,12 @@ class SendSmsPage extends XotBasePage
              */
             $template_slug = $data['template_slug'];
             Assert::string($template_slug, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
+            // RecordNotification resolves MailTemplate internally from slug (lazy resolution)
+            // No need to pre-load MailTemplate - pass slug directly
             $recordNotification = new RecordNotification($user, $template_slug);
             $notify = $recordNotification->mergeData($data);
 
-            Notification::route('sms', $data['to'])
-                // ->locale('it')
-                // ->notify(new RecordNotification($user,'due'))
+            Notification::route('sms', $data['recipient'])
                 ->notify($notify);
 
             FilamentNotification::make()

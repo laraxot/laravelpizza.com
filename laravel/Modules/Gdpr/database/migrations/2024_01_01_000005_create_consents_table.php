@@ -16,7 +16,7 @@ return new class extends XotBaseMigration
 
         $this->tableCreate(
             function ($table): void {
-                /** @var \Illuminate\Database\Schema\Blueprint $table */
+                /** @var Blueprint $table */
                 $table->uuid('id')->primary();
                 $table->uuid('treatment_id');
                 // $table->foreignId('treatment_id')->nullable()->index();

@@ -102,11 +102,11 @@
             "Modules\\Xot\\": "app/",
             "Modules\\Xot\\Database\\Factories\\": "database/factories/",
             "Modules\\Xot\\Database\\Seeders\\": "database/seeders/",
-            "Modules\\Xot\\Tests\\": "tests/",
             "Coolsam\\FilamentModules\\": "packages/coolsam/panel-modules/src/"
             
         },
         "psr-4_comment": {
+            "Modules\\Xot\\Tests\\": "tests/",
             "Modules\\Xot\\Database\\Migrations\\": "database/migrations/"
         },
         "files": [

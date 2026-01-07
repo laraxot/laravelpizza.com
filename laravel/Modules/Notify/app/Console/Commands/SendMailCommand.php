@@ -37,7 +37,7 @@ class SendMailCommand extends Command
         Assert::string($from = config('mail.from.name', 'Default Sender'));
         Assert::string($from_email = config('mail.from.address', 'default@example.com'));
         $data = [];
-        $data['to'] = $this->ask('Enter the recipient\'s email address');
+        $data['recipient'] = $this->ask('Enter the recipient\'s email address');
         $data['subject'] = $this->ask('Enter the subject of the email');
         $data['from'] = $this->ask('Enter the sender\'s name', $from);
         $data['from_email'] = $this->ask('Enter the sender\'s email address', $from_email);
@@ -49,12 +49,12 @@ class SendMailCommand extends Command
         SmtpData::make()->send($emailData);
 
         /*
-         * Notification::route('mail', $emailData->to)
+         * Notification::route('mail', $emailData->recipient)
          * ->notify(new EmailDataNotification($emailData));
          */
-        // Mail::to($emailData->to)->send(new EmailDataEmail($emailData));
+        // Mail::to($emailData->recipient)->send(new EmailDataEmail($emailData));
 
-        $this->info('Email sent successfully to '.$emailData->to);
+        $this->info('Email sent successfully to '.$emailData->recipient);
 
         return Command::SUCCESS;
     }

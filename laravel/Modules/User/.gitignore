@@ -12,7 +12,6 @@ vendor/
 /vendor/
 node_modules/
 /node_modules/
-/docs/vendor/
 package-lock.json
 yarn.lock
 yarn-error.log
@@ -25,7 +24,6 @@ composer.lock
 /build/
 build/
 dist/
-docs/cache/
 cache/*
 
 # ==============================================

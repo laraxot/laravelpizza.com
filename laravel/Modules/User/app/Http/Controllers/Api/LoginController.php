@@ -11,7 +11,7 @@ namespace Modules\User\Http\Controllers\Api;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Modules\Xot\Contracts\PassportHasApiTokensContract;
+use Laravel\Passport\Contracts\OAuthenticatable;
 use Modules\Xot\Http\Controllers\XotBaseController;
 use Webmozart\Assert\Assert;
 
@@ -25,9 +25,9 @@ class LoginController extends XotBaseController
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             Assert::notNull($user = Auth::user(), '['.__LINE__.']['.class_basename($this).']');
 
-            // Verificare che l'utente implementi l'interfaccia PassportHasApiTokensContract
-            if (! ($user instanceof PassportHasApiTokensContract)) {
-                return $this->sendError('User model must implement PassportHasApiTokensContract interface', [
+            // Verificare che l'utente implementi l'interfaccia OAuthenticatable
+            if (! ($user instanceof OAuthenticatable)) {
+                return $this->sendError('User model must implement OAuthenticatable interface', [
                     'error' => 'Configuration Error',
                 ]);
             }

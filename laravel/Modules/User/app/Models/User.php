@@ -135,11 +135,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  */
 class User extends BaseUser
 {
-    /**
-     * The connection name for the model.
-     *
-     * @var string
-     */
+    /** @var string */
     public $connection = 'user';
 
     #[\Override]

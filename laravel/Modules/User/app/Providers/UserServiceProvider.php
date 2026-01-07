@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rules\Password;
-use Laravel\Passport\Passport;
 use Modules\Notify\Emails\SpatieEmail;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Models\TeamInvitation;
@@ -38,7 +37,7 @@ class UserServiceProvider extends XotBaseServiceProvider
     {
         parent::boot();
         $this->registerAuthenticationProviders();
-        $this->registerEventListener();
+        // $this->registerEventListener();
         $this->registerPasswordRules();
         $this->registerPulse();
         $this->registerMailsNotification();
@@ -48,7 +47,7 @@ class UserServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
-        $this->registerTeamModelBindings();
+        // $this->registerTeamModelBindings();
     }
 
     public function registerMailsNotification(): void
@@ -148,9 +147,9 @@ class UserServiceProvider extends XotBaseServiceProvider
         });
     }
 
-    /**
+    /*
      * Register the team model bindings.
-     */
+
     protected function registerTeamModelBindings(): void
     {
         $this->app->bind('team_user_model', fn () => TeamUser::class);
@@ -158,34 +157,20 @@ class UserServiceProvider extends XotBaseServiceProvider
         $this->app->bind('team_invitation_model', fn () => TeamInvitation::class);
     }
 
+    */
     protected function registerAuthenticationProviders(): void
     {
-        $this->registerPassport();
         $this->registerSocialite();
     }
-
+    /*
     protected function registerEventListener(): void
     {
-        $this->app->register(EventServiceProvider::class);
+       $this->app->register(EventServiceProvider::class);
     }
+    */
 
     private function registerSocialite(): void
     {
         $this->app->register(SocialiteServiceProvider::class);
-    }
-
-    private function registerPassport(): void
-    {
-        if (method_exists(Passport::class, 'routes')) {
-            Passport::routes();
-        }
-
-        Passport::tokensExpireIn(now()->addDays(1));
-        Passport::refreshTokensExpireIn(now()->addDays(30));
-        Passport::personalAccessTokensExpireIn(now()->addMonths(6));
-        Passport::tokensCan([
-            'view-user' => 'View user information',
-            'core-technicians' => 'the technicians can ',
-        ]);
     }
 }

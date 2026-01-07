@@ -10,8 +10,8 @@ namespace Modules\User\Filament\Resources\PermissionResource\RelationManager;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
+use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Table;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 
 class RoleRelationManager extends XotBaseRelationManager
@@ -32,13 +32,16 @@ class RoleRelationManager extends XotBaseRelationManager
         ];
     }
 
+    /**
+     * @return array<string, Column>
+     */
     #[\Override]
-    public function table(Table $table): Table
+    public function getTableColumns(): array
     {
-        return $table->columns([
-            TextColumn::make('name')->searchable(),
-            TextColumn::make('guard_name')->searchable(),
-        ])->filters([]);
+        return [
+            'name' => TextColumn::make('name')->searchable(),
+            'guard_name' => TextColumn::make('guard_name')->searchable(),
+        ];
     }
 
     protected static function getModelLabel(): ?string

@@ -83,7 +83,7 @@ class PasswordExpired extends XotBasePage
         }
 
         // check if new password is different from the current password
-        if (null !== $user->password && Hash::check($password, $user->password)) {
+        if (Hash::check($password, $user->password)) {
             Notification::make()
                 ->title(__('user::otp.notifications.same_password.title'))
                 ->body(__('user::otp.notifications.same_password.body'))

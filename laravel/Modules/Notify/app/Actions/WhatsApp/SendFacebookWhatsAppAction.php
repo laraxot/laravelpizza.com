@@ -69,7 +69,7 @@ final class SendFacebookWhatsAppAction
         // Log di debug se abilitato
         if ($this->debug) {
             Log::debug('Invio WhatsApp Facebook', [
-                'to' => $whatsAppData->to,
+                'to' => $whatsAppData->recipient,
                 'message_length' => strlen($whatsAppData->body),
                 'type' => $whatsAppData->type,
             ]);
@@ -88,7 +88,7 @@ final class SendFacebookWhatsAppAction
         $payload = [
             'messaging_product' => 'whatsapp',
             'recipient_type' => 'individual',
-            'to' => $whatsAppData->to,
+            'to' => $whatsAppData->recipient,
         ];
 
         // Gestione diversi tipi di messaggi
@@ -124,7 +124,7 @@ final class SendFacebookWhatsAppAction
             $this->vars['response_data'] = $responseData;
 
             Log::info('WhatsApp Facebook inviato con successo', [
-                'to' => $whatsAppData->to,
+                'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);
 
@@ -155,7 +155,7 @@ final class SendFacebookWhatsAppAction
             $this->vars['error_response'] = $responseBody;
 
             Log::warning('Errore invio WhatsApp Facebook', [
-                'to' => $whatsAppData->to,
+                'to' => $whatsAppData->recipient,
                 'status' => $statusCode,
                 'response' => $responseBody,
             ]);

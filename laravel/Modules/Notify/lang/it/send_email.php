@@ -242,6 +242,9 @@ return [
         'emailFormActions' => [
             'label' => 'emailFormActions',
         ],
+        'logout' => [
+            'tooltip' => 'logout',
+        ],
     ],
     'messages' => [
         'success' => 'Email inviata con successo! Controlla la casella email del destinatario.',

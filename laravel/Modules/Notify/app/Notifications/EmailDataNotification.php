@@ -75,7 +75,7 @@ class EmailDataNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'to' => $this->emailData->to,
+            'recipient' => $this->emailData->recipient,
             'from' => $this->emailData->from,
             'from_email' => $this->emailData->from_email,
             'subject' => $this->emailData->subject,

@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Carbon;
+use Modules\User\Database\Factories\RoleFactory;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\HasXotFactory;
@@ -70,11 +71,11 @@ use Webmozart\Assert\Assert;
  * @property string|null $display_name
  * @property string|null $description
  *
- * @method static \Modules\User\Database\Factories\RoleFactory factory($count = null, $state = [])
- * @method static Builder<static>|Role                         whereDescription($value)
- * @method static Builder<static>|Role                         whereDisplayName($value)
- * @method static static                                       firstOrCreate(array $attributes, array $values = [])
- * @method static static                                       updateOrCreate(array $attributes, array $values = [])
+ * @method static RoleFactory          factory($count = null, $state = [])
+ * @method static Builder<static>|Role whereDescription($value)
+ * @method static Builder<static>|Role whereDisplayName($value)
+ * @method static static               firstOrCreate(array $attributes, array $values = [])
+ * @method static static               updateOrCreate(array $attributes, array $values = [])
  *
  * @mixin \Eloquent
  */

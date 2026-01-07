@@ -52,7 +52,7 @@ class Alignment extends XotBasePage
         ];
     }
 
-    public function form(Schema $schema): Schema
+    public function schema(Schema $schema): Schema
     {
         return $schema
             ->components([

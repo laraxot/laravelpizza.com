@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Services;
 
 use Illuminate\Http\Client\PendingRequest;
+use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\RateLimiter;
@@ -69,7 +70,7 @@ abstract class BaseGeoService
             $client = $this->buildHttpClient();
             $methodLower = strtolower($method);
 
-            /** @var \Illuminate\Http\Client\Response $response */
+            /** @var Response $response */
             $response = $client->{$methodLower}($url, $params);
 
             if (! $response->successful()) {

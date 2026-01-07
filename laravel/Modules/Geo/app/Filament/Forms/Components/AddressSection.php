@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Filament\Forms\Components;
 
+use Filament\Forms\Components\TextInput;
 use Modules\Geo\Enums\AddressItemEnum;
 use Modules\Xot\Filament\Schemas\Components\XotBaseSection;
 
@@ -24,7 +25,7 @@ class AddressSection extends XotBaseSection
     }
 
     /**
-     * @return array<string, \Filament\Forms\Components\TextInput>
+     * @return array<string, TextInput>
      */
     public function getFormSchema(): array
     {

@@ -14,8 +14,12 @@ use Filament\Schemas\Schema;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use Modules\Xot\Contracts\UserContract;
+use Spatie\Permission\Models\Role;
+use Webmozart\Assert\Assert;
 
 /**
  * Componente Livewire per la gestione del login.
@@ -128,25 +132,28 @@ class Login extends Component implements HasActions, HasForms
      */
     protected function getRedirectUrl(): RedirectResponse
     {
+        /** @var UserContract|null $user */
         $user = Auth::user();
-
-        if (! $user) {
+        if (! $user instanceof UserContract) {
             return redirect()->to('/');
         }
 
-        // Se l'utente ha ruoli admin, redirect al pannello appropriato
-        $adminRoles = $user->roles->filter(fn ($role) => str_ends_with($role->name, '::admin'));
+        /** @var Collection<int, Role> $roles */
+        $roles = $user->roles()->get();
+        $adminRoles = $roles->filter(
+            static fn (Role $role): bool => str_ends_with($role->name, '::admin')
+        );
 
-        if (1 === $adminRoles->count()) {
-            // Un solo ruolo admin - redirect al modulo specifico
+        $adminCount = $adminRoles->count();
+        if (1 === $adminCount) {
             $role = $adminRoles->first();
-            if (null !== $role) {
-                $moduleName = str_replace('::admin', '', $role->name);
+            Assert::isInstanceOf($role, Role::class);
+            $moduleName = str_replace('::admin', '', $role->name);
 
-                return redirect()->to("/{$moduleName}/admin");
-            }
-        } elseif ($adminRoles->count() > 1) {
-            // Più ruoli admin - redirect alla dashboard principale
+            return redirect()->to("/{$moduleName}/admin");
+        }
+
+        if ($adminCount > 1) {
             return redirect()->to('/admin');
         }
 

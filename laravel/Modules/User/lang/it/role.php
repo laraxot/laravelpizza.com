@@ -102,6 +102,11 @@ return [
                 'false' => 'No',
             ],
         ],
+        'team' => [
+            'name' => [
+                'label' => 'team.name',
+            ],
+        ],
     ],
     'actions' => [
         'create' => [

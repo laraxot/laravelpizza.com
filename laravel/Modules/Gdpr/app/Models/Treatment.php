@@ -49,7 +49,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Treatment whereUpdatedBy($value)
  * @method static Builder<static>|Treatment whereWeight($value)
  *
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read ProfileContract|null $deleter
  *
  * @mixin \Eloquent
  */

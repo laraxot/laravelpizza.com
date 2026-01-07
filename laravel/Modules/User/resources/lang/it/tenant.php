@@ -40,7 +40,7 @@ return [
             'helper_text' => 'Indirizzo del tenant',
         ],
         'primary_color' => [
-            'label' => 'Colore Primario',
+            'label' => 'primary_color',
             'helper_text' => 'Colore primario del tenant',
         ],
         'secondary_color' => [
@@ -63,6 +63,18 @@ return [
             'label' => 'Elimina Tenant',
             'icon' => 'heroicon-o-trash',
             'color' => 'danger',
+        ],
+        'reorderRecords' => [
+            'tooltip' => 'reorderRecords',
+        ],
+        'cancel' => [
+            'tooltip' => 'cancel',
+        ],
+        'logout' => [
+            'tooltip' => 'logout',
+        ],
+        'detach' => [
+            'tooltip' => 'detach',
         ],
     ],
 ];

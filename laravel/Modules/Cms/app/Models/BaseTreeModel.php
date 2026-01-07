@@ -13,6 +13,7 @@ use Modules\Xot\Contracts\HasRecursiveRelationshipsContract;
 use Modules\Xot\Contracts\ProfileContract;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Staudenmeir\LaravelAdjacencyList\Eloquent\Collection;
+use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
 
 /**
  * Modules\Cms\Models\BaseTreeModel.
@@ -137,7 +138,7 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\Collection;
  */
 abstract class BaseTreeModel extends BaseModel implements HasRecursiveRelationshipsContract
 {
-    use \Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
+    use HasRecursiveRelationships;
 
     /** @var list<string> */
     protected $fillable = [

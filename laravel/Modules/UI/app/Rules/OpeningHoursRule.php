@@ -16,6 +16,9 @@ class OpeningHoursRule implements ValidationRule
 {
     use TransTrait;
 
+    /**
+     * @SuppressWarnings("PHPMD.UnusedFormalParameter")
+     */
     public function validate(string $_attribute, mixed $value, \Closure $fail): void
     {
         $days = app(GetDaysMappingAction::class)->execute();
@@ -35,12 +38,12 @@ class OpeningHoursRule implements ValidationRule
             /**@phpstan-ignore-next-line */
             $dayHours = $value[$dayKey] ?? [];
 
-            if (! is_array($dayHours)) {
+            if (! \is_array($dayHours)) {
                 continue;
             }
 
             // Type narrowing per dayLabel
-            $dayLabelString = is_string($dayLabel) ? $dayLabel : (string) $dayLabel;
+            $dayLabelString = \is_string($dayLabel) ? $dayLabel : (string) $dayLabel;
 
             // Valida ogni sessione (mattina e pomeriggio)
             $this->validateSession($dayHours, 'morning', $dayLabelString, $fail);
@@ -133,7 +136,7 @@ class OpeningHoursRule implements ValidationRule
             return null;
         }
 
-        if (is_string($value)) {
+        if (\is_string($value)) {
             $cleaned = trim($value);
 
             return '' === $cleaned ? null : $cleaned;
@@ -142,7 +145,7 @@ class OpeningHoursRule implements ValidationRule
         return null;
     }
 
-    /**
+    /*
      * Verifica se l'orario è nel formato HH:MM valido.
      */
     /*

@@ -9,6 +9,7 @@ use Filament\Notifications\Notification;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Collection;
 use Illuminate\View\View;
 use Livewire\Component;
 use Modules\User\Contracts\TeamContract;
@@ -39,7 +40,9 @@ class Change extends Component
         }
 
         $this->user = $authUser;
-        $this->teams = $this->user->allTeams()->toArray();
+        /** @var Collection<int, TeamContract> $allTeams */
+        $allTeams = $this->user->allTeams();
+        $this->teams = $allTeams->toArray();
     }
 
     /**

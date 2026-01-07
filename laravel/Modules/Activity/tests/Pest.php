@@ -15,8 +15,7 @@ use Modules\Activity\Tests\TestCase;
 | need to change it using the "pest()" function to bind a different classes or traits.
 |
 */
-
-/** @mixin \Modules\Activity\Tests\TestCase */
+/** @mixin TestCase */
 pest()->extend(TestCase::class)->in('Feature', 'Unit');
 
 /*

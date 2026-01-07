@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
+use Illuminate\Support\Carbon;
 use Modules\Media\Models\Media;
 use Modules\User\Contracts\UserContract;
 use Modules\User\Database\Factories\ProfileFactory;
@@ -77,14 +78,14 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttrib
  *
  * @mixin IdeHelperProfile
  *
- * @property string|null                     $user_id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null                     $updated_by
- * @property string|null                     $created_by
- * @property \Illuminate\Support\Carbon|null $deleted_at
- * @property string|null                     $deleted_by
- * @property ProfileContract|null            $deleter
+ * @property string|null          $user_id
+ * @property Carbon|null          $created_at
+ * @property Carbon|null          $updated_at
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property Carbon|null          $deleted_at
+ * @property string|null          $deleted_by
+ * @property ProfileContract|null $deleter
  *
  * @method static Builder<static>|Profile whereBio($value)
  * @method static Builder<static>|Profile whereCreatedAt($value)

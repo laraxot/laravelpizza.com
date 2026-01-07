@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Feature;
 
+use Livewire\Livewire;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Datas\PasswordData as PasswordDataClass;
+use Modules\User\Http\Livewire\Auth\Login;
 use Tests\TestCase;
 
 class PasswordDataLabelsTest extends TestCase
@@ -43,7 +45,7 @@ class PasswordDataLabelsTest extends TestCase
     {
         // Assemble
         app()->setLocale('it');
-        $component = new \Modules\User\Http\Livewire\Auth\Login();
+        $component = new Login();
 
         // Act
         // We simulate the form creation.
@@ -52,7 +54,7 @@ class PasswordDataLabelsTest extends TestCase
         // We can check if we can access the schema.
 
         // Using Livewire test helper is better
-        $livewire = \Livewire\Livewire::test(\Modules\User\Http\Livewire\Auth\Login::class);
+        $livewire = Livewire::test(Login::class);
 
         // We can inspect the form components via the testing interface if exposed,
         // but Livewire testing is mostly assertSee.

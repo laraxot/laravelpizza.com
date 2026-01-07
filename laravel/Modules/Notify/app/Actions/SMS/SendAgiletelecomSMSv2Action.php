@@ -23,7 +23,7 @@ class SendAgiletelecomSMSv2Action implements SmsActionContract
         $agile = AgiletelecomData::make();
 
         $url = 'https://secure.agiletelecom.com/services/sms/send';
-        $phone = app(NormalizePhoneNumberAction::class)->execute($data->to);
+        $recipient = app(NormalizePhoneNumberAction::class)->execute($data->recipient);
 
         $payload = [
             // 'globalId' => $data->reference ?? uniqid('sms_', true),
@@ -34,7 +34,7 @@ class SendAgiletelecomSMSv2Action implements SmsActionContract
             // 'simulation' => app()->environment('local', 'testing'),
             'messages' => [
                 [
-                    'destinations' => [$phone],
+                    'destinations' => [$recipient],
                     // 'ids' => [$data->reference ?? uniqid('msg_', true)],
                     // 'sender' => $config['sender'],
                     'sender' => $agile->sender,
@@ -46,7 +46,7 @@ class SendAgiletelecomSMSv2Action implements SmsActionContract
 
         // "{"globalId":"5a56f05b-a48c-41db-8fc2-063b53368e89","processedMessages":1,"processedSmsParts":1,"credit":9530.73}
 
-        $response = Http::withHeaders($agile->getAuthHeaders())->timeout($agile->timeout)->post($url, $payload);
+        Http::withHeaders($agile->getAuthHeaders())->timeout($agile->timeout)->post($url, $payload);
 
         // dddx($response->body());
 

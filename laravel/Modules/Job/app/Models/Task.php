@@ -11,6 +11,7 @@ use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
+use Modules\Job\Database\Factories\TaskFactory;
 use Modules\Job\Models\Traits\FrontendSortable;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\Traits\HasXotFactory;
@@ -81,9 +82,9 @@ use function Safe\json_decode;
  *
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read ProfileContract|null $deleter
  *
- * @method static \Modules\Job\Database\Factories\TaskFactory factory($count = null, $state = [])
+ * @method static TaskFactory factory($count = null, $state = [])
  * @method static Builder<static>|Task whereDeletedAt($value)
  * @method static Builder<static>|Task whereDeletedBy($value)
  *

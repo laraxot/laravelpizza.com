@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Traits;
 
+use UnitEnum;
+use BackedEnum;
 use Modules\Lang\Actions\SaveTransAction;
 use Modules\Xot\Actions\File\SvgExistsAction;
 
@@ -29,7 +31,7 @@ trait NavigationLabelTrait
         return static::transFunc(__FUNCTION__);
     }
 
-    public static function getNavigationGroup(): string
+    public static function getNavigationGroup(): UnitEnum|string|null
     {
         return static::transFunc(__FUNCTION__);
     }
@@ -64,7 +66,7 @@ trait NavigationLabelTrait
         return $value;
     }
 
-    public static function getNavigationIcon(): string
+    public static function getNavigationIcon(): BackedEnum|string|null
     {
         $default = 'heroicon-o-question-mark-circle';
 

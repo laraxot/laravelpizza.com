@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\File;
 
+use Illuminate\Support\Facades\Log;
 use Exception;
 use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
@@ -18,7 +19,7 @@ class CopyAction
             try {
                 File::makeDirectory(\dirname($to), 0o755, true, true);
             } catch (Exception $e) {
-                \Illuminate\Support\Facades\Log::error(
+                Log::error(
                     'Caught exception: '.
                     $e->getMessage().
                     ' ['.__LINE__.']['.class_basename(static::class).']',

@@ -6,6 +6,7 @@ namespace Modules\Tenant\Actions\Config;
 
 use Illuminate\Support\Facades\File;
 use Spatie\QueueableAction\QueueableAction;
+use Throwable;
 
 class GetTenantConfigArrayAction
 {
@@ -21,7 +22,7 @@ class GetTenantConfigArrayAction
         try {
             /** @var mixed $data */
             $data = File::getRequire($path);
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             $data = [];
         }
 

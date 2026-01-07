@@ -31,7 +31,7 @@ class SendFirebasePushNotificationPage extends XotBasePage
 {
     public ?array $pushData = [];
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-bell-alert';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-bell-alert';
 
     protected string $view = 'notify::filament.pages.send-push';
 
@@ -56,7 +56,7 @@ class SendFirebasePushNotificationPage extends XotBasePage
 
     public function pushForm(Schema $schema): Schema
     {
-        return $schema->schema($this->getPushFormSchema())->model($this->getUser())->statePath('pushData');
+        return $schema->components($this->getPushFormSchema())->model($this->getUser())->statePath('pushData');
     }
 
     /**

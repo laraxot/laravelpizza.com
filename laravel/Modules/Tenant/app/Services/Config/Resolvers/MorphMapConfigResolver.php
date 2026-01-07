@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Services\Config\Resolvers;
 
+use Exception;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Str;
 use Modules\Tenant\Services\Config\Contracts\ConfigResolverInterface;
 use Modules\Tenant\Services\TenantService;
+use Modules\Xot\Actions\Model\GetAllModelsByModuleNameAction;
 use Modules\Xot\Services\RouteService;
 
 /**
@@ -28,12 +30,12 @@ class MorphMapConfigResolver implements ConfigResolverInterface
     {
         $moduleName = Request::segment(2);
         if (! is_string($moduleName)) {
-            throw new \Exception('Invalid module name from request segment');
+            throw new Exception('Invalid module name from request segment');
         }
 
         // Use action directly instead of helper function to avoid autoload issues during package:discover
-        /** @var \Modules\Xot\Actions\Model\GetAllModelsByModuleNameAction $action */
-        $action = app(\Modules\Xot\Actions\Model\GetAllModelsByModuleNameAction::class);
+        /** @var GetAllModelsByModuleNameAction $action */
+        $action = app(GetAllModelsByModuleNameAction::class);
         /** @var array<string, class-string> $models */
         $models = $action->execute($moduleName);
         $originalConf = $this->getOriginalConfig();
@@ -48,7 +50,7 @@ class MorphMapConfigResolver implements ConfigResolverInterface
         $result = config($key);
 
         if (! is_numeric($result) && ! is_string($result) && ! is_array($result)) {
-            throw new \Exception('Invalid morph_map configuration type');
+            throw new Exception('Invalid morph_map configuration type');
         }
 
         return $result;

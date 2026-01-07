@@ -58,7 +58,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
         $headers = $this->smsFactorData->getAuthHeaders();
 
         // Normalizza il numero di telefono
-        $to = (string) $smsData->to;
+        $to = (string) $smsData->recipient;
         if (Str::startsWith($to, '00')) {
             $to = $to !== '' ? ('+'.substr($to, 2)) : $to;
         }

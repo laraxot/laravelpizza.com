@@ -118,7 +118,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  *
  * @mixin IdeHelperContact
  *
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read ProfileContract|null $deleter
  *
  * @mixin \Eloquent
  */

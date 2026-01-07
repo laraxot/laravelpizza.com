@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
+use Modules\Lang\Database\Factories\PostFactory;
 // --- traits ---
 use Modules\Xot\Contracts\ProfileContract;
 // use Laravel\Scout\Searchable;
@@ -93,7 +94,7 @@ use Spatie\Sluggable\SlugOptions;
  *
  * @property ProfileContract|null $deleter
  *
- * @method static \Modules\Lang\Database\Factories\PostFactory factory($count = null, $state = [])
+ * @method static PostFactory factory($count = null, $state = [])
  *
  * @mixin Eloquent
  */

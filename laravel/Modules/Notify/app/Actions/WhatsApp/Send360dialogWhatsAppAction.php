@@ -61,7 +61,7 @@ final class Send360dialogWhatsAppAction
         // Log di debug se abilitato
         if ($this->debug) {
             Log::debug('Invio WhatsApp 360dialog', [
-                'to' => $whatsAppData->to,
+                'to' => $whatsAppData->recipient,
                 'message_length' => strlen($whatsAppData->body),
                 'type' => $whatsAppData->type,
             ]);
@@ -78,7 +78,7 @@ final class Send360dialogWhatsAppAction
         $endpoint = $this->baseUrl.'/messages';
 
         $payload = [
-            'to' => $whatsAppData->to,
+            'to' => $whatsAppData->recipient,
         ];
 
         // Gestione diversi tipi di messaggi
@@ -118,7 +118,7 @@ final class Send360dialogWhatsAppAction
             $this->vars['response_data'] = $responseData;
 
             Log::info('WhatsApp 360dialog inviato con successo', [
-                'to' => $whatsAppData->to,
+                'to' => $whatsAppData->recipient,
                 'response_code' => $statusCode,
             ]);
 
@@ -149,7 +149,7 @@ final class Send360dialogWhatsAppAction
             $this->vars['error_response'] = $responseBody;
 
             Log::warning('Errore invio WhatsApp 360dialog', [
-                'to' => $whatsAppData->to,
+                'to' => $whatsAppData->recipient,
                 'status' => $statusCode,
                 'response' => $responseBody,
             ]);

@@ -15,7 +15,6 @@ use Modules\Job\Database\Factories\ScheduleFactory;
 use Modules\Job\Enums\Status;
 use Modules\Xot\Contracts\ProfileContract;
 use Override;
-use Webmozart\Assert\Assert;
 
 /**
  * Modules\Job\Models\Schedule.
@@ -89,7 +88,7 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static>|Schedule withTrashed(bool $withTrashed = true)
  * @method static Builder<static>|Schedule withoutTrashed()
  *
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read ProfileContract|null $deleter
  *
  * @mixin \Eloquent
  */
@@ -224,7 +223,7 @@ class Schedule extends BaseModel
                         $optionName = is_string($name) ? $name : $fallbackKey;
                         $optionValue = $value['value'] ?? null;
 
-                        return '--' . $optionName . '=' . (string) $optionValue;
+                        return '--'.$optionName.'='.(string) $optionValue;
                     }
 
                     $strValue = (string) $value;

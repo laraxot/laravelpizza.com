@@ -75,7 +75,7 @@ abstract class XotBaseState extends State implements StateContract
     #[Override]
     public function modalDescription(): string
     {
-        $appointment = $this->getModel();
+        // $appointment non utilizzata - rimossa
 
         return static::transClass(static::class, 'states.'.static::getName().'.modal_description');
 

@@ -14,7 +14,7 @@ class ViewSection extends LangBaseViewRecord
     protected static string $resource = SectionResource::class;
 
     #[\Override]
-    public function getInfolistSchema(): array
+    protected function getInfolistSchema(): array
     {
         // $view='pub_theme::components.sections.'.$this->record->slug;
         $view = 'cms::sections.preview';
@@ -24,8 +24,8 @@ class ViewSection extends LangBaseViewRecord
         }
 
         return [
-            Section::make('Anteprima')->schema([
-                ViewEntry::make('preview')->view($view, [
+            'preview' => Section::make('Anteprima')->schema([
+                'preview' => ViewEntry::make('preview')->view($view, [
                     'section' => $this->record,
                 ]),
             ]),

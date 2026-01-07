@@ -47,13 +47,13 @@ class NetfunSendAction
 
         // dddx([ord($this->body[0]), $this->body]);
 
-        $smsData->to .= '';
-        if (Str::startsWith($smsData->to, '00')) {
-            $smsData->to = '+39'.mb_substr($smsData->to, 2);
+        $smsData->recipient .= '';
+        if (Str::startsWith($smsData->recipient, '00')) {
+            $smsData->recipient = '+39'.mb_substr($smsData->recipient, 2);
         }
 
-        if (! Str::startsWith($smsData->to, '+')) {
-            $smsData->to = '+39'.$smsData->to;
+        if (! Str::startsWith($smsData->recipient, '+')) {
+            $smsData->recipient = '+39'.$smsData->recipient;
         }
 
         $body = [
@@ -72,7 +72,7 @@ class NetfunSendAction
             'utf8_enabled' => true,
             'destinations' => [
                 [
-                    'number' => $smsData->to,
+                    'number' => $smsData->recipient,
                     /*
                      * 'placeholders' => [
                      * 'fullName' => 'Santi',

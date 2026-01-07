@@ -7,6 +7,7 @@ namespace Modules\Tenant\Actions\Translations;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
@@ -25,7 +26,7 @@ class TranslateTenantKeyAction
 
         $arrayKey = Str::of($key)->after('.')->toString();
 
-        $path = app(\Modules\Tenant\Actions\Config\GetTenantFilePathAction::class)->execute('lang/'.$lang.'/'.$transFile);
+        $path = app(GetTenantFilePathAction::class)->execute('lang/'.$lang.'/'.$transFile);
         if (! File::exists($path)) {
             return $key;
         }

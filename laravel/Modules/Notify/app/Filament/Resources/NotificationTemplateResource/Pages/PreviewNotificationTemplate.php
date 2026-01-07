@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources\NotificationTemplateResource\Pages;
 
-use Filament\Resources\Pages\Page;
 use Modules\Notify\Filament\Resources\NotificationTemplateResource;
+use Modules\Xot\Filament\Resources\Pages\XotBaseResourcePage;
 
-class PreviewNotificationTemplate extends Page
+class PreviewNotificationTemplate extends XotBaseResourcePage
 {
     protected static string $resource = NotificationTemplateResource::class;
 

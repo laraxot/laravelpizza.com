@@ -6,7 +6,6 @@ namespace Modules\User\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\User\Models\OauthPersonalAccessClient;
-use Webmozart\Assert\Assert;
 
 /**
  * OauthPersonalAccessClient Factory.
@@ -19,14 +18,9 @@ class OauthPersonalAccessClientFactory extends Factory
 
     public function definition(): array
     {
-        /** @phpstan-ignore-next-line - Factory method returns proper object */
-
-        /** @phpstan-ignore-next-line - Method exists on Eloquent model */
-        $clientId = $client->getKey();
-        Assert::notNull($clientId);
-
         return [
-            'client_id' => $clientId,
+            'uuid' => (string) $this->faker->uuid(),
+            'client_id' => (string) $this->faker->uuid(),
         ];
     }
 }

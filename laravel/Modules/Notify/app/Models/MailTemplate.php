@@ -22,21 +22,22 @@ use Spatie\Translatable\HasTranslations;
  * @property int $id
  * @property string $mailable
  * @property string|null $subject
+ * @property string|null $html_layout_path
  * @property string $html_template
  * @property string|null $text_template
  * @property int $version
  * @property Carbon $created_at
  * @property Carbon $updated_at
  * @property Carbon|null $deleted_at
- * @property-read Collection<int, MailTemplateVersion> $versions
- * @property-read Collection<int, MailTemplateLog> $logs
+ * @property Collection<int, MailTemplateVersion> $versions
+ * @property Collection<int, MailTemplateLog> $logs
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $deleted_by
  * @property string $name
  * @property string $slug
- * @property-read array $variables
- * @property-read mixed $translations
+ * @property array $variables
+ * @property mixed $translations
  *
  * @method static Builder<static>|MailTemplate forMailable(Mailable $mailable)
  * @method static Builder<static>|MailTemplate newModelQuery()
@@ -64,11 +65,13 @@ use Spatie\Translatable\HasTranslations;
  *
  * @method static Builder<static>|MailTemplate whereParams($value)
  *
- * @property array<array-key, mixed>|null $sms_template
+ * @property string|null $sms_template
+ * @property string|null $whatsapp_template
  * @property int $counter
  *
  * @method static Builder<static>|MailTemplate whereCounter($value)
  * @method static Builder<static>|MailTemplate whereSmsTemplate($value)
+ * @method static Builder<static>|MailTemplate whereWhatsappTemplate($value)
  *
  * @mixin IdeHelperMailTemplate
  * @mixin \Eloquent
@@ -92,9 +95,11 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
         'name',
         'slug',
         'subject',
+        'html_layout_path',
         'html_template',
         'text_template',
         'sms_template',
+        'whatsapp_template',
         // 'version',  //under development
         'params',
         'counter',
@@ -119,7 +124,9 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
      */
     public function getSlugOptions(): SlugOptions
     {
-        return SlugOptions::create()->generateSlugsFrom('name')->saveSlugsTo('slug');
+        return SlugOptions::create()
+            ->generateSlugsFrom('subject')
+            ->saveSlugsTo('slug');
     }
 
     public function scopeForMailable(Builder $query, Mailable $mailable): Builder

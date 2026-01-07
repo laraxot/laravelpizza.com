@@ -9,18 +9,21 @@ return [
             'placeholder' => 'Enter your email',
             'help' => 'Enter the email address you used to register',
             'description' => 'Email address for login',
+            'helper_text' => 'email',
         ],
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Enter your password',
             'help' => 'Enter your account password',
             'description' => 'Password for login',
+            'helper_text' => 'password',
         ],
         'remember' => [
             'label' => 'Remember me',
             'placeholder' => 'Keep session active',
             'help' => 'Select to keep your session active for 30 days',
             'description' => 'Option to remember login',
+            'helper_text' => 'remember',
         ],
     ],
     'actions' => [

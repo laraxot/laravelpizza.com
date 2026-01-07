@@ -109,7 +109,7 @@ class EditUserWidget extends XotBaseWidget
         $appends = $model->getAppends();
         $fields = array_merge($fillable, $appends);
 
-        /** @var array<string, mixed> */
+        /** @var array<string, mixed> $result */
         $result = array_fill_keys($fields, null);
 
         return $result;

@@ -79,14 +79,14 @@ test(':type registration page uses Italian localization', function (string $type
     expect($content)->toContain('Registrazione')->toContain('Crea il tuo account');
 })->with('userTypes');
 
-// test('handles invalid user type gracefully', function (): void {
-//    $response = get('/it/auth/invalid-type/register');
-//     expect($response->status())->toBe(404);
-// });
-// test('handles missing type parameter appropriately', function (): void {
-//    $response = get('/it/auth/register');
-//    expect($response->status())->toBeGreaterThanOrEqual(300);
-// });
+test('handles invalid user type gracefully', function (): void {
+    $response = get('/it/auth/invalid-type/register');
+    expect($response->status())->toBe(404);
+});
+test('handles missing type parameter appropriately', function (): void {
+    $response = get('/it/auth/register');
+    expect($response->status())->toBeGreaterThanOrEqual(300);
+});
 
 test(':type registration page loads within acceptable time limits', function (string $type): void {
     $startTime = microtime(true);

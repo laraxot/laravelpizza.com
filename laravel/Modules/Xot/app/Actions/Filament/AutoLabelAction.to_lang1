@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\Filament;
 
 use Filament\Forms\Components\Field;
-use Filament\Forms\Components\Component;
+use Filament\Schemas\Components\Component;
 use Illuminate\Support\Arr;
 use Modules\Lang\Actions\SaveTransAction;
 use Modules\Xot\Actions\GetTransKeyAction;

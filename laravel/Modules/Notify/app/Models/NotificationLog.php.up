@@ -1,0 +1,175 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Notify\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Xot\Traits\Updater;
+
+/**
+ * Modello per il logging delle notifiche inviate.
+ *
+ * @property int $id
+ * @property int|null $template_id
+ * @property string|null $notifiable_type
+ * @property int|null $notifiable_id
+ * @property string|null $channel
+ * @property string|null $status
+ * @property string|null $status_message
+ * @property array|null $data
+ * @property array|null $metadata
+ * @property \Carbon\Carbon|null $sent_at
+ * @property \Carbon\Carbon|null $delivered_at
+ * @property \Carbon\Carbon|null $failed_at
+ * @property \Carbon\Carbon|null $opened_at
+ * @property \Carbon\Carbon|null $clicked_at
+ * @property int|null $tenant_id
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @property \Carbon\Carbon|null $deleted_at
+ * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $notifiable
+ * @property-read \Modules\Notify\Models\MailTemplate|\Modules\Notify\Models\NotificationTemplate|null $template
+ */
+class NotificationLog extends BaseModel
+{
+    use HasFactory;
+    use Updater;
+
+    public const STATUS_PENDING = 'pending';
+    public const STATUS_PROCESSING = 'processing';
+    public const STATUS_SENT = 'sent';
+    public const STATUS_DELIVERED = 'delivered';
+    public const STATUS_FAILED = 'failed';
+    public const STATUS_OPENED = 'opened';
+    public const STATUS_CLICKED = 'clicked';
+
+    /** @var string */
+    protected $table = 'notification_logs';
+
+    /** @var array<int, string> */
+    protected $fillable = [
+        'template_id',
+        'notifiable_type',
+        'notifiable_id',
+        'channel',
+        'status',
+        'status_message',
+        'data',
+        'metadata',
+        'sent_at',
+        'delivered_at',
+        'failed_at',
+        'opened_at',
+        'clicked_at',
+        'tenant_id',
+    ];
+
+    /** @var array<string, string> */
+    protected $casts = [
+        'data' => 'array',
+        'metadata' => 'array',
+        'sent_at' => 'datetime',
+        'delivered_at' => 'datetime',
+        'failed_at' => 'datetime',
+        'opened_at' => 'datetime',
+        'clicked_at' => 'datetime',
+    ];
+
+    public function notifiable(): MorphTo
+    {
+        return $this->morphTo();
+    }
+
+    public function template(): BelongsTo
+    {
+        // Prova prima con MailTemplate
+        $mailTemplate = $this->belongsTo(MailTemplate::class, 'template_id')->first();
+        if ($mailTemplate) {
+            return $this->belongsTo(MailTemplate::class, 'template_id');
+        }
+
+        // Se non trova MailTemplate, prova con NotificationTemplate
+        return $this->belongsTo(NotificationTemplate::class, 'template_id');
+    }
+
+    public function scopeWithStatus($query, string $status)
+    {
+        return $query->where('status', $status);
+    }
+
+    public function scopeForChannel($query, string $channel)
+    {
+        return $query->where('channel', $channel);
+    }
+
+    public function scopeForNotifiable($query, Model $notifiable)
+    {
+        return $query->where('notifiable_type', get_class($notifiable))
+            ->where('notifiable_id', $notifiable->getKey());
+    }
+
+    public function markAsSent(): self
+    {
+        $this->update([
+            'status' => self::STATUS_SENT,
+            'sent_at' => now(),
+        ]);
+
+        return $this;
+    }
+
+    public function markAsDelivered(): self
+    {
+        $this->update([
+            'status' => self::STATUS_DELIVERED,
+            'delivered_at' => now(),
+        ]);
+
+        return $this;
+    }
+
+    public function markAsFailed(string $message = null): self
+    {
+        $this->update([
+            'status' => self::STATUS_FAILED,
+            'status_message' => $message,
+            'failed_at' => now(),
+        ]);
+
+        return $this;
+    }
+
+    public function markAsOpened(): self
+    {
+        $this->update([
+            'status' => self::STATUS_OPENED,
+            'opened_at' => now(),
+        ]);
+
+        return $this;
+    }
+
+    public function markAsClicked(): self
+    {
+        $this->update([
+            'status' => self::STATUS_CLICKED,
+            'clicked_at' => now(),
+        ]);
+
+        return $this;
+    }
+
+    public function getStatusLabelAttribute(): string
+    {
+        return __('notify::notification.fields.status.' . $this->status);
+    }
+
+    public function getChannelLabelAttribute(): string
+    {
+        return __('notify::notification.fields.channel.options.' . $this->channel . '.label');
+    }
+}

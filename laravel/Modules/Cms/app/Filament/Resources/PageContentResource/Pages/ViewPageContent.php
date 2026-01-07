@@ -28,16 +28,16 @@ class ViewPageContent extends XotBaseViewRecord
     }
 
     /**
-     * @return array<int, Component>
+     * @return array<string, Component>
      */
     #[\Override]
     protected function getInfolistSchema(): array
     {
         return [
-            Section::make('Informazioni Page Content')->schema([
-                Grid::make(['default' => 2])->schema([
-                    TextEntry::make('name'),
-                    TextEntry::make('slug'),
+            'page_content_info' => Section::make('Informazioni Page Content')->schema([
+                'content_grid' => Grid::make(['default' => 2])->schema([
+                    'name' => TextEntry::make('name'),
+                    'slug' => TextEntry::make('slug'),
                 ]),
             ]),
         ];

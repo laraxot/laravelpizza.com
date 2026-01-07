@@ -93,9 +93,9 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     }
 
     /**
-     * Configure the form.
+     * Configure the schema.
      */
-    public function form(Schema $schema): Schema
+    public function schema(Schema $schema): Schema
     {
         return $schema->components($this->getFormSchema())->statePath('data');
     }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Feature;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Cms\Models\Page;
@@ -56,7 +57,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanCreatePageWithContent(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $contentData = [
             'page_id' => $page->id,
@@ -91,7 +92,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanCreatePageWithSections(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $sectionData = [
             'page_id' => $page->id,
@@ -126,7 +127,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanUpdatePageStatus(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create(['status' => 'draft']);
 
         // Act
@@ -148,7 +149,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanUpdatePageSeoMetadata(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $seoData = [
             'meta_title' => 'Nuovo Meta Title',
@@ -176,7 +177,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanManagePageVersions(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $contentV1 = PageContent::create([
             'page_id' => $page->id,
@@ -213,7 +214,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanManageMultilingualPageContent(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $italianContent = PageContent::create([
             'page_id' => $page->id,
@@ -249,7 +250,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanManagePageSectionsOrder(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $section1 = Section::create([
             'page_id' => $page->id,
@@ -290,7 +291,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanReorderPageSections(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $section1 = Section::create([
             'page_id' => $page->id,
@@ -347,7 +348,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanHandlePageSoftDelete(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
 
         // Act
@@ -365,7 +366,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanRestoreSoftDeletedPage(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         /* @phpstan-ignore-next-line method.nonObject */
         $page->delete();
@@ -385,7 +386,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanForceDeletePageWithRelatedData(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $content = PageContent::create([
             'page_id' => $page->id,
@@ -418,11 +419,11 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanSearchPagesByTitle(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page1 = Page/* @phpstan-ignore-line */ ::factory()->create(['title' => 'Home Page']);
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page2 = Page/* @phpstan-ignore-line */ ::factory()->create(['title' => 'About Us']);
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page3 = Page/* @phpstan-ignore-line */ ::factory()->create(['title' => 'Contact Page']);
 
         // Act
@@ -443,11 +444,11 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanSearchPagesByStatus(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $publishedPage = Page/* @phpstan-ignore-line */ ::factory()->create(['status' => 'published']);
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $draftPage = Page/* @phpstan-ignore-line */ ::factory()->create(['status' => 'draft']);
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $archivedPage = Page/* @phpstan-ignore-line */ ::factory()->create(['status' => 'archived']);
 
         // Act
@@ -469,7 +470,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanGetPagesWithRelatedContent(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $content = PageContent::create([
             'page_id' => $page->id,
@@ -496,7 +497,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanGetPagesWithRelatedSections(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $section = Section::create([
             'page_id' => $page->id,
@@ -523,7 +524,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanManagePageTemplates(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create(['template' => 'default']);
 
         // Act
@@ -545,7 +546,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanManagePagePermissions(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $permissions = [
             'view' => true,
@@ -574,7 +575,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanManagePageScheduling(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $publishDate = now()->addDays(7);
         $expiryDate = now()->addMonths(6);
@@ -599,7 +600,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanManagePageCategories(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $categories = ['informative', 'services', 'company'];
 
@@ -626,7 +627,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanManagePageTags(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $tags = ['salute', 'dentista', 'milano', 'benessere'];
 
@@ -653,7 +654,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanManagePageRedirects(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $redirectData = [
             'redirect_type' => '301',
@@ -679,7 +680,7 @@ class PageManagementBusinessLogicTest extends TestCase
     public function itCanManagePageAnalytics(): void
     {
         // Arrange
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var Collection */
         $page = Page/* @phpstan-ignore-line */ ::factory()->create();
         $analyticsData = [
             'page_views' => 1250,

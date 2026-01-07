@@ -18,6 +18,7 @@ use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use Modules\Xot\Actions\View\GetViewByClassAction;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Webmozart\Assert\Assert;
 
@@ -34,9 +35,6 @@ use Webmozart\Assert\Assert;
 abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasForms
 {
     use InteractsWithActions;
-
-    // use InteractsWithPageFilters; // Rimosso per evitare conflitto con InteractsWithForms in Filament v4
-    // use InteractsWithPageTable;
     use InteractsWithForms;
     use TransTrait;
 
@@ -49,9 +47,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
      *
      * @var array<string, string>
      */
-    public array $listener = [
-        // 'filters-updated' => 'filtersUpdated', // Rimosso per compatibilità Filament v4
-    ];
+    public array $listener = [];
 
     /**
      * Dati del form.
@@ -68,22 +64,11 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
 
     protected int|string|array $columnSpan = 'full';
 
-    /*
-     * public function __construct()
-     * {
-     * //parent::__construct();//Cannot call constructor
-     * $view = app(GetViewByClassAction::class)->execute(static::class);
-     * if(view()->exists($view)){
-     * $this->view = $view;
-     * }
-     * }
-     */
-    /*
-     * public function mount(): void
-     * {
-     * $this->form->fill();
-     * }
-     */
+    public function __construct()
+    {
+        $this->resolveView();
+    }
+
     /**
      * Ottiene lo schema del form.
      * Deve essere implementato nelle classi figlie.
@@ -102,24 +87,19 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
     {
         $schema = $schema->components($this->getFormSchema());
         $schema->statePath('data');
-        $data = $this->getFormFill();
 
         $model = $this->getFormModel();
         if ($model !== null) {
             // Ensure model is compatible with Schema::model()
-            if (is_string($model)) {
+            if (\is_string($model)) {
                 if (class_exists($model) && is_subclass_of($model, Model::class)) {
-                    /** @var class-string<Model> $model */
+                    /* @var class-string<Model> $model */
                     $schema->model($model);
                 }
             } else {
                 // $model is an instance of Model
                 $schema->model($model);
             }
-        }
-        if (! empty($data)) {
-            // $form->fill($data);
-            // $this->data=$data;
         }
 
         return $schema;
@@ -131,21 +111,20 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         if ($model === null) {
             return [];
         }
-        if (is_string($model)) {
+        if (\is_string($model)) {
             Assert::isInstanceOf($model = app($model), Model::class);
         }
 
         // Se il modello ha un ID, significa che è stato trovato nel database
         if ($model->exists) {
             try {
-                // dddx($model->getArrayableRelations());
                 $res = $model->toArray();
 
                 if (method_exists($model, 'getDataDefaults')) {
                     /** @var array<string, mixed> $defaults */
                     $defaults = $model->getDataDefaults();
                     $merge1 = array_merge($defaults, $res);
-                    $merge1 = Arr::map($merge1, function ($value, string|int $key) use ($defaults) {
+                    $merge1 = Arr::map($merge1, static function ($value, string|int $key) use ($defaults) {
                         if ($value === null) {
                             $value = Arr::get($defaults, $key, null);
                         }
@@ -157,10 +136,8 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
 
                 return $res;
 
-                // dddx($model->with('studio')->relationsToArray());
             } catch (Exception $e) {
                 // Se toArray() fallisce (problemi con enum), usa getAttributes()
-                // Log::warning("Errore in toArray() per modello {$this->model}: " . $e->getMessage());
                 return $model->getAttributes();
             }
         }
@@ -191,21 +168,8 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         // Implementare nelle classi figlie
     }
 
-    /**
-     * Eseguito quando i filtri vengono aggiornati.
-     * Rimosso per compatibilità Filament v4 - da reimplementare se necessario.
-     */
-    // public function filtersUpdated(): void
-    // {
-    //     $this->reset('data');
-    // }
-
     public static function getNavigationLabel(): string
     {
-        /*
-         * return (string) (static::$navigationLabel ?? (string) str(static::getLabel())
-         * ->headline());
-         */
         return static::transFunc(__FUNCTION__);
     }
 
@@ -260,5 +224,26 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         $schemaComponents = $this->$schema();
 
         return Step::make($name)->schema($schemaComponents);
+    }
+
+    private function resolveView(): void
+    {
+        $defaultView = 'xot::filament.widgets.base';
+
+        if ($this->view !== $defaultView && view()->exists($this->view)) {
+            return;
+        }
+
+        try {
+            $view = app(GetViewByClassAction::class)->execute(static::class);
+            if (view()->exists($view)) {
+                $this->view = $view;
+            }
+        } catch (Exception $e) {
+            /* @phpstan-ignore identical.alwaysTrue */
+            if ($this->view === $defaultView) {
+                throw $e;
+            }
+        }
     }
 }

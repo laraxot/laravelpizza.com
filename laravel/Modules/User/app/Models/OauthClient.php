@@ -4,13 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
+use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Foundation\Auth\Access\Authorizable;
+use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Support\Carbon;
 use Laravel\Passport\Client as PassportClient;
 use Laravel\Passport\Database\Factories\ClientFactory;
 use Modules\Xot\Contracts\UserContract;
+use Spatie\Permission\Exceptions\PermissionDoesNotExist;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * Modules\User\Models\OauthClient.
@@ -60,17 +65,119 @@ use Modules\Xot\Contracts\UserContract;
  * @mixin IdeHelperOauthClient
  * @mixin \Eloquent
  */
-class OauthClient extends PassportClient
+class OauthClient extends PassportClient implements AuthorizableContract
 {
-    use HasUuids;
-
+    use Authorizable;
+    use HasRoles;
     /** @var string */
     protected $connection = 'user';
 
-    /*
-     * protected $fillable = [
-     * 'id', 'user_id', 'name', 'secret', 'provider', 'redirect',
-     * 'personal_access_client', 'password_client', 'revoked',
-     * ];
+    /**
+     * The name of the guard for Spatie Permission.
+     * REQUIRED BY Spatie\Permission\Traits\HasRoles - MUST be public.
+     *
+     * @var string
      */
+    public $guard_name = 'api';
+
+    /**
+     * Determine if the entity has a given ability.
+     *
+     * @param iterable|string $ability
+     */
+    #[\Override]
+    public function can($ability, mixed $arguments = []): bool
+    {
+        if (is_string($ability)) {
+            return $this->checkPermission($ability);
+        }
+
+        /** @var iterable<string> $ability */
+        $permissions = $ability;
+
+        return $this->hasAnyPermission($permissions);
+    }
+
+    /**
+     * Determine if the entity does not have a given ability.
+     *
+     * @param iterable<string>|string $ability
+     * @param array<mixed>            $arguments
+     */
+    public function cant($ability, $arguments = []): bool
+    {
+        return ! $this->can($ability);
+    }
+
+    /**
+     * Determine if the entity does not have a given ability.
+     *
+     * @param iterable<string>|string $ability
+     * @param array<mixed>            $arguments
+     */
+    public function cannot($ability, $arguments = []): bool
+    {
+        return $this->cant($ability);
+    }
+
+    /**
+     * Determine if the entity has any of the given abilities.
+     *
+     * @param iterable<string> $abilities
+     * @param array<mixed>     $arguments
+     */
+    public function canAny($abilities, $arguments = []): bool
+    {
+        foreach ((array) $abilities as $ability) {
+            if ($this->can($ability)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Check if client has any of the given permissions.
+     *
+     * @param iterable<string> $permissions
+     */
+    /**
+     * Check if client has any of the given permissions.
+     *
+     * @param iterable<string> $permissions
+     */
+    private function hasAnyPermission(iterable $permissions): bool
+    {
+        /** @var iterable<string> $permissions */
+        foreach ($permissions as $perm) {
+            if ($this->checkPermission($perm)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Check if client has a single permission.
+     */
+    private function checkPermission(string $permission): bool
+    {
+        try {
+            return $this->hasPermissionTo($permission);
+        } catch (PermissionDoesNotExist) {
+            return false;
+        }
+    }
+
+    /**
+     * @return MorphTo<AuthUser, $this>
+     *
+     * @phpstan-return MorphTo<AuthUser, $this>
+     */
+    public function owner(): MorphTo
+    {
+        return parent::owner();
+    }
 }
