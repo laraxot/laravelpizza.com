@@ -12,7 +12,12 @@ use Filament\Schemas\Components\Section;
 use Illuminate\Database\Eloquent\Builder;
 use Laravel\Passport\Client;
 use Modules\User\Filament\Clusters\Passport;
+use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\Pages\CreateOauthClient;
+use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\Pages\EditOauthClient;
+use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\Pages\ListOauthClients;
+use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\Pages\ViewOauthClient;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 /**
  * Class OauthClientResource.
@@ -20,13 +25,17 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class OauthClientResource extends XotBaseResource
 {
     protected static ?string $cluster = Passport::class;
+
     protected static ?string $model = Client::class;
 
     protected static ?string $recordTitleAttribute = 'name';
 
     /**
      * Schema del form per la risorsa.
+     *
+     * @return array<string, Component>
      */
+    #[Override]
     public static function getFormSchema(): array
     {
         return [
@@ -70,5 +79,19 @@ class OauthClientResource extends XotBaseResource
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()->with(['user']);
+    }
+
+    /**
+     * @return array<string, \Filament\Resources\Pages\PageRegistration>
+     */
+    #[Override]
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListOauthClients::route('/'),
+            'create' => CreateOauthClient::route('/create'),
+            'edit' => EditOauthClient::route('/{record}/edit'),
+            'view' => ViewOauthClient::route('/{record}'),
+        ];
     }
 }

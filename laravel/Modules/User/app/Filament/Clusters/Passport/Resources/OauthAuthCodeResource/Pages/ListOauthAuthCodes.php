@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Clusters\Passport\Resources\OauthAuthCodeResource\Pages;
 
 use Filament\Actions\Action;
-use Filament\Actions\CreateAction;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAuthCodeResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+use Override;
 
 class ListOauthAuthCodes extends XotBaseListRecords
 {
@@ -16,7 +16,7 @@ class ListOauthAuthCodes extends XotBaseListRecords
     /**
      * @return array<string, Action>
      */
-    #[\Override]
+    #[Override]
     protected function getHeaderActions(): array
     {
         return [

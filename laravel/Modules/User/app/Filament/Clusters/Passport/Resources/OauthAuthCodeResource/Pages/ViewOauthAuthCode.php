@@ -11,10 +11,11 @@ use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Modules\User\Filament\Resources\ClientResource;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAuthCodeResource;
+use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+use Override;
 
 class ViewOauthAuthCode extends XotBaseViewRecord
 {
@@ -23,7 +24,7 @@ class ViewOauthAuthCode extends XotBaseViewRecord
     /**
      * @return array<string, Component>
      */
-    #[\Override]
+    #[Override]
     protected function getInfolistSchema(): array
     {
         return [
@@ -34,14 +35,14 @@ class ViewOauthAuthCode extends XotBaseViewRecord
                             'id' => TextEntry::make('id')
                                 ->formatStateUsing(fn (mixed $state): string => Str::limit((string) $state, 15, '...')),
                             'client_name' => TextEntry::make('client.name')
-                                ->url(function (mixed $state, $record): ?string {
+                                ->url(function (mixed $_state, $record): ?string {
                                     if (! $record instanceof Model) {
                                         return null;
                                     }
 
                                     $client = $record->getRelationValue('client');
                                     if (($client instanceof Model) && $client->exists) {
-                                        return ClientResource::getUrl('view', ['record' => $client]);
+                                        return OauthClientResource::getUrl('view', ['record' => $client]);
                                     }
 
                                     return null;

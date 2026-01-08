@@ -18,6 +18,9 @@ class ViewOauthClient extends XotBaseViewRecord
 {
     protected static string $resource = OauthClientResource::class;
 
+    /**
+     * @return array<string, Component>
+     */
     protected function getInfolistSchema(): array
     {
         return [

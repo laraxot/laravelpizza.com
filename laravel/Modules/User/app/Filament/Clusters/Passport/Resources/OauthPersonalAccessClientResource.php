@@ -15,8 +15,13 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\User\Filament\Clusters\Passport;
+use Modules\User\Filament\Clusters\Passport\Resources\OauthPersonalAccessClientResource\Pages\CreateOauthPersonalAccessClient;
+use Modules\User\Filament\Clusters\Passport\Resources\OauthPersonalAccessClientResource\Pages\EditOauthPersonalAccessClient;
+use Modules\User\Filament\Clusters\Passport\Resources\OauthPersonalAccessClientResource\Pages\ListOauthPersonalAccessClients;
+use Modules\User\Filament\Clusters\Passport\Resources\OauthPersonalAccessClientResource\Pages\ViewOauthPersonalAccessClient;
 use Modules\User\Models\OauthPersonalAccessClient;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 /**
  * Class OauthPersonalAccessClientResource.
@@ -38,7 +43,7 @@ final class OauthPersonalAccessClientResource extends XotBaseResource
     /**
      * @return array<string, Component>
      */
-    #[\Override]
+    #[Override]
     public static function getFormSchema(): array
     {
         return [
@@ -142,5 +147,19 @@ final class OauthPersonalAccessClientResource extends XotBaseResource
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()->with(['client']);
+    }
+
+    /**
+     * @return array<string, \Filament\Resources\Pages\PageRegistration>
+     */
+    #[Override]
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListOauthPersonalAccessClients::route('/'),
+            'create' => CreateOauthPersonalAccessClient::route('/create'),
+            'edit' => EditOauthPersonalAccessClient::route('/{record}/edit'),
+            'view' => ViewOauthPersonalAccessClient::route('/{record}'),
+        ];
     }
 }

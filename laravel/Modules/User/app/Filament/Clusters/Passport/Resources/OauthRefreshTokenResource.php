@@ -4,14 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources;
 
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteAction;
-use Filament\Actions\DeleteBulkAction;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
-use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\User\Filament\Clusters\Passport;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthRefreshTokenResource\Pages\ListOauthRefreshTokens;
@@ -26,6 +21,7 @@ use Override;
 class OauthRefreshTokenResource extends XotBaseResource
 {
     protected static ?string $cluster = Passport::class;
+
     protected static ?string $model = OauthRefreshToken::class;
 
     protected static ?string $recordTitleAttribute = 'id';
@@ -57,7 +53,7 @@ class OauthRefreshTokenResource extends XotBaseResource
     }
 
     /**
-     * @return array<string, class-string>
+     * @return array<string, \Filament\Resources\Pages\PageRegistration>
      */
     #[Override]
     public static function getPages(): array

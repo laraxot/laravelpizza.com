@@ -7,19 +7,21 @@ namespace Modules\User\Filament\Clusters\Passport\Resources\OauthPersonalAccessC
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
+use Modules\User\Filament\Clusters\Passport\Resources\OauthPersonalAccessClientResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+use Override;
 
 /**
  * Class ViewOauthPersonalAccessClient.
  */
 class ViewOauthPersonalAccessClient extends XotBaseViewRecord
 {
-    protected static string $resource = \Modules\User\Filament\Resources\OauthPersonalAccessClientResource::class;
+    protected static string $resource = OauthPersonalAccessClientResource::class;
 
     /**
      * @return array<string, Component>
      */
-    #[\Override]
+    #[Override]
     protected function getInfolistSchema(): array
     {
         return [
