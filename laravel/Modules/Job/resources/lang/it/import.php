@@ -15,5 +15,8 @@ return [
     ],
     'navigation' => [
         'sort' => 96,
+        'icon' => 'import.navigation',
+        'group' => 'import.navigation',
+        'label' => 'import.navigation',
     ],
 ];

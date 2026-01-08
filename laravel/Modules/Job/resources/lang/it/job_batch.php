@@ -15,5 +15,8 @@ return [
     ],
     'navigation' => [
         'sort' => 85,
+        'icon' => 'job batch.navigation',
+        'group' => 'job batch.navigation',
+        'label' => 'job batch.navigation',
     ],
 ];

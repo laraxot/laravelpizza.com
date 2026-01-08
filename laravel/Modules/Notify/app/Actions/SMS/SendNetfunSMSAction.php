@@ -7,8 +7,9 @@ namespace Modules\Notify\Actions\SMS;
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
-use Modules\Notify\Contracts\SmsActionContract;
+use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
 use Override;
 use Spatie\QueueableAction\QueueableAction;
@@ -73,10 +74,13 @@ final class SendNetfunSMSAction implements SmsActionContract
         // Normalizza il numero di telefono usando l'azione dedicata
         $recipient = app(NormalizePhoneNumberAction::class)->execute($smsData->recipient);
 
+        $plainText = strip_tags($smsData->body);
+        $textTemplate = mb_convert_encoding($plainText, 'UTF-8', 'UTF-8');
+
         $body = [
             'api_token' => $this->token,
             'sender' => $smsData->from ?? $this->defaultSender,
-            'text_template' => $smsData->body,
+            'text_template' => $textTemplate,
             'async' => true,
             'utf8_enabled' => true,
             'destinations' => [
@@ -99,6 +103,14 @@ final class SendNetfunSMSAction implements SmsActionContract
 
         $this->vars['status_code'] = $response->getStatusCode();
         $this->vars['status_txt'] = $response->getBody()->getContents();
+
+
+        Log::channel('daily')->error('Netfun SMS response', [
+            'request' => $body,
+            'status_code' => $this->vars['status_code'],
+            'status_txt' => $this->vars['status_txt'],
+        ]);
+
 
         return $this->vars;
     }

@@ -32,23 +32,14 @@ class ParsePrintPageStringAction
         $matches = [];
         preg_match_all($pattern, $str, $matches);
 
-<<<<<<< HEAD
         /**
          * @var array{list<string>, list<numeric-string>, list<''|numeric-string>} $matches
          */
-        if (! is_array($matches) || empty($matches[0])) {
+        if ($matches[0] === []) {
             throw new InvalidArgumentException('No valid page numbers found');
         }
 
         /** @var list<string> $matches0 */
-=======
-        // Verifica che $matches sia un array e che contenga almeno un elemento
-        if (!is_array($matches) || !isset($matches[0]) || empty($matches[0])) {
-            throw new InvalidArgumentException('No valid page numbers found');
-        }
-
-        /** @var array<int, string> $matches0 */
->>>>>>> c85ea7588 (.)
         $matches0 = $matches[0];
         $matchCount = count($matches0);
         $res = [];

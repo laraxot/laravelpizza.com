@@ -1,8 +1,3 @@
-<?php
-
-declare(strict_types=1);
-
-?>
 <div>
     {{-- <x-filament::section></x-filament::section>
     <x-filament::section>
@@ -41,10 +36,10 @@ declare(strict_types=1);
             <pre>{!! $out !!}</pre>
         </p>
 
-        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">conn</x-filament-forms::field-wrapper.label>
-        <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        wire.model.lazy="form_data.conn">
-            <option selected>Choose a country</option>
+        <label for="conn" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Connessione</label>
+        <select id="conn" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        wire:model.lazy="form_data.conn">
+            <option value="">Seleziona una connessione</option>
             <option value="sync">sync</option>
             <option value="database">database</option>
         </select>
@@ -56,7 +51,7 @@ declare(strict_types=1);
             1000 Dummy Action
         </button>
         @foreach ($acts as $act)
-            <button class="btn btn-primarybg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+            <button class="btn btn-primary bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
             wire:click="artisan('{{ $act->name }}')">
                 {{ $act->name }}
             </button>

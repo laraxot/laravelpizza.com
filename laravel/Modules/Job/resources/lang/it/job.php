@@ -7,6 +7,17 @@ return [
         'create' => [
             'label' => 'create',
         ],
+        'logout' => [
+            'tooltip' => 'logout',
+            'icon' => 'logout',
+            'label' => 'logout',
+        ],
+        'cancel' => [
+            'tooltip' => 'cancel',
+        ],
+        'reorderRecords' => [
+            'tooltip' => 'reorderRecords',
+        ],
     ],
     'fields' => [
         'edit' => [
@@ -36,5 +47,9 @@ return [
     ],
     'navigation' => [
         'sort' => 58,
+        'icon' => 'job.navigation',
+        'group' => 'job.navigation',
+        'label' => 'job.navigation',
     ],
+    'label' => 'job',
 ];

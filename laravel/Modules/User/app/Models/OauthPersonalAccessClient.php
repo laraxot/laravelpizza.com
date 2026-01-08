@@ -5,15 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Model;
-=======
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Model;
-=======
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
->>>>>>> 939bd20e2 (.)
->>>>>>> 9d7e4c81 (.)
 use Illuminate\Support\Carbon;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\User\Models\BaseModel;
@@ -27,16 +19,8 @@ use Modules\User\Models\BaseModel;
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
-<<<<<<< HEAD
- * @property int         $id
-=======
-<<<<<<< HEAD
- * @property int         $id
-=======
- * @property int $id
  * @property-read OauthClient|null $client
->>>>>>> 939bd20e2 (.)
->>>>>>> 9d7e4c81 (.)
+ * @property int $id
  *
  * @method static Builder|OauthPersonalAccessClient newModelQuery()
  * @method static Builder|OauthPersonalAccessClient newQuery()

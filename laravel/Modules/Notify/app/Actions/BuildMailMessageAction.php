@@ -49,10 +49,16 @@ class BuildMailMessageAction
             $subject = 'Notifica';
         }
 
+        $bodyHtml = $this->decodeRichText($theme->body_html);
+        $subject = $this->decodeRichText($subject);
+        $viewParams = $theme->view_params;
+        $viewParams['body_html'] = $bodyHtml;
+        $viewParams['subject'] = $subject;
+
         $email = (new MailMessage)
             ->from($fromAddress, $fromName)
             ->subject($subject)
-            ->view($view_html, $theme->view_params);
+            ->view($view_html, $viewParams);
 
         if ($dataCollection instanceof DataCollection) {
             foreach ($dataCollection as $attachment) {
@@ -61,5 +67,20 @@ class BuildMailMessageAction
         }
 
         return $email;
+    }
+
+    private function decodeRichText(?string $content): string
+    {
+        if ($content === null) {
+            return '';
+        }
+
+        $decoded = html_entity_decode($content, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+
+        if (! mb_check_encoding($decoded, 'UTF-8') || str_contains($decoded, 'Ã') || str_contains($decoded, 'Â')) {
+            $decoded = mb_convert_encoding($decoded, 'UTF-8', 'ISO-8859-1');
+        }
+
+        return $decoded;
     }
 }

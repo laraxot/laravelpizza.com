@@ -6,4 +6,10 @@ return [
     'navigation' => [
         'group' => 'job status.navigation',
     ],
+    'actions' => [
+        'logout' => [
+            'tooltip' => 'logout',
+            'icon' => 'logout',
+        ],
+    ],
 ];

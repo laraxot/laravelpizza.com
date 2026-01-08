@@ -13,5 +13,8 @@ return [
     ],
     'navigation' => [
         'sort' => 20,
+        'icon' => 'failed job.navigation',
+        'group' => 'failed job.navigation',
+        'label' => 'failed job.navigation',
     ],
 ];

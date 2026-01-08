@@ -136,11 +136,7 @@ class OptimizeFilamentMemoryCommand extends Command
             if ($file->getExtension() === 'php' && str_contains($file->getPathname(), '/Models/')) {
                 $content = File::get($file->getPathname());
 
-<<<<<<< HEAD
                 if (preg_match('/protected\s+\$with\s*=\s*\[([^\]]+)\]/', $content, $matches) === 1) {
-=======
-                if (preg_match('/protected\s+\$with\s*=\s*\[([^\]]+)\]/', $content, $matches) && isset($matches[1])) {
->>>>>>> c85ea7588 (.)
                     $withContent = $matches[1];
                     // Controlla se ha relazioni pesanti
                     if (str_contains($withContent, 'roles') ||

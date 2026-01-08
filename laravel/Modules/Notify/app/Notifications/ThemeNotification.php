@@ -33,7 +33,9 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function via(CanThemeNotificationContract $notifiable): array
     {
-        return $notifiable->getNotificationData($this->name, $this->view_params)->channels;
+        $notificationData = $notifiable->getNotificationData($this->name, $this->view_params);
+
+        return $notificationData->channels;
     }
 
     /**
@@ -60,16 +62,10 @@ class ThemeNotification extends Notification implements ShouldQueue
      */
     public function toSms(CanThemeNotificationContract $notifiable): SmsData
     {
-        return $notifiable->getNotificationData($this->name, $this->view_params)->getSmsData();
+        $smsData = $notifiable->getNotificationData($this->name, $this->view_params)->getSmsData();
+        $notifiable->sendSmsCallback();
 
-        /*
-         * return SmsData::from([
-         * 'from' => $this->from,
-         * 'to' => $notifiable->routeNotificationFor('mobile'),
-         * 'body' => $this->html,
-         * ]);
-         */
-        // $notifiable->sendSmsCallback()
+        return $smsData;
     }
 
     /**

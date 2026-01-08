@@ -27,5 +27,8 @@ return [
     ],
     'navigation' => [
         'sort' => 87,
+        'icon' => 'job manager.navigation',
+        'group' => 'job manager.navigation',
+        'label' => 'job manager.navigation',
     ],
 ];

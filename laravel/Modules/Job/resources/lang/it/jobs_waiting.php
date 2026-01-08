@@ -25,5 +25,8 @@ return [
     ],
     'navigation' => [
         'sort' => 91,
+        'icon' => 'jobs waiting.navigation',
+        'group' => 'jobs waiting.navigation',
+        'label' => 'jobs waiting.navigation',
     ],
 ];
