@@ -3,10 +3,7 @@
     "name": "laravel/livewire-starter-kit",
     "type": "project",
     "description": "The official Laravel starter kit for Livewire.",
-    "keywords": [
-        "laravel",
-        "framework"
-    ],
+    "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
         "php": "^8.2",
@@ -46,7 +43,8 @@
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -62,7 +60,7 @@
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ],
-        "go":[
+        "go": [
             "@php -d memory_limit=-1 composer.phar selfupdate",
             "rm -rf ./app/View/Components/vendor/",
             "rm -rf ./resources/views/vendor/",
@@ -78,6 +76,7 @@
             "@php artisan view:cache",
             "@php artisan icons:cache",
             "@php artisan route:clear",
+            "@php artisan livewire:publish --assets",
             "sudo chown -R www-data:www-data ..",
             "sudo chmod -R g+w ..",
             "@php artisan serve"

@@ -25,10 +25,10 @@ use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Laravel\Passport\Contracts\OAuthenticatable;
+use Laravel\Passport\Contracts\ScopeAuthorizable;
 use Laravel\Passport\HasApiTokens;
 use Laravel\Passport\PersonalAccessTokenResult;
-use Laravel\Passport\Token;
-use Laravel\Passport\TransientToken;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\Traits\HasAuthenticationLogTrait;
 use Modules\User\Models\Traits\HasModules;
@@ -131,7 +131,7 @@ use Spatie\Permission\Contracts\Role as SpatieRoleContract;
  *
  * @mixin \Eloquent
  */
-abstract class BaseUser extends Authenticatable implements HasMedia, HasName, HasTenants, MustVerifyEmail, UserContract
+abstract class BaseUser extends Authenticatable implements HasMedia, HasName, HasTenants, MustVerifyEmail, UserContract, OAuthenticatable
 {
     use HasApiTokens {
         HasApiTokens::tokenCan as protected passportTokenCan;
@@ -161,16 +161,33 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         return $this->passportTokenCan($scope);
     }
 
+    public function tokenCant(string $scope): bool
+    {
+        return ! $this->tokenCan($scope);
+    }
+
     public function createToken(string $name, array $scopes = []): PersonalAccessTokenResult
     {
         return $this->passportCreateToken($name, $scopes);
     }
 
-    public function withAccessToken(Token|TransientToken|null $accessToken): static
+    public function currentAccessToken(): ?ScopeAuthorizable
+    {
+        $token = $this->token();
+
+        return ($token instanceof ScopeAuthorizable) ? $token : null;
+    }
+
+    public function withAccessToken(?ScopeAuthorizable $accessToken): static
     {
         $this->passportWithAccessToken($accessToken);
 
         return $this;
+    }
+
+    public function getProviderName(): string
+    {
+        return (string) ($this->getAttribute('provider') ?? config('auth.guards.api.provider', 'users'));
     }
 
     /** @var string */

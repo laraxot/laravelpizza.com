@@ -3,7 +3,7 @@
 ## Namespace Structure
 
 - Base resource classes should be in: `Modules\<ModuleName>\Filament\Resources`
-- Never use `app/Filament` - this is a legacy pattern
+- In this codebase, Filament components are discovered under `Modules/<ModuleName>/app/Filament/*` (resources/pages/widgets/clusters). Therefore, namespaces must match `Modules\<ModuleName>\Filament\...` even if the filesystem path includes `app/Filament`.
 - Follow Filament's standard directory structure within the module's `Filament` directory
 
 ## Base Classes
@@ -36,10 +36,11 @@
 
 ## Example Structure
 
-```
+### Standard Resources
+```text
 Modules/
   User/
-    Filament/
+    app/Filament/
       Resources/
         UserResource.php
         UserResource/
@@ -47,3 +48,25 @@ Modules/
             BaseViewUser.php
             ViewUser.php
 ```
+
+### Cluster Resources
+```text
+Modules/
+  User/
+    app/Filament/
+      Clusters/
+        Passport.php
+        Passport/
+          Resources/
+            OauthClientResource.php
+            OauthClientResource/
+              Pages/
+                ListOauthClients.php
+                CreateOauthClient.php
+                EditOauthClient.php
+                ViewOauthClient.php
+```
+
+**Pattern**: Le risorse dentro un cluster seguono il namespace `Modules\{Module}\Filament\Clusters\{Cluster}\Resources`
+
+**Documentazione**: [Passport Cluster Pattern](./passport-cluster-resources-pattern.md)

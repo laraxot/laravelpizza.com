@@ -142,14 +142,6 @@ final class OauthPersonalAccessClientResource extends XotBaseResource
     }
 
     /**
-     * Configure the model query.
-     */
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()->with(['client']);
-    }
-
-    /**
      * @return array<string, \Filament\Resources\Pages\PageRegistration>
      */
     #[Override]
@@ -161,5 +153,13 @@ final class OauthPersonalAccessClientResource extends XotBaseResource
             'edit' => EditOauthPersonalAccessClient::route('/{record}/edit'),
             'view' => ViewOauthPersonalAccessClient::route('/{record}'),
         ];
+    }
+
+    /**
+     * Configure the model query.
+     */
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->with(['client']);
     }
 }

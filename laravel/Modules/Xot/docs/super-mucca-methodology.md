@@ -24,25 +24,51 @@ La metodologia "Super Mucca" è un approccio sistematico allo sviluppo che enfat
 
 ### 3. Processo di Sviluppo e Correzione
 
-#### Fase 1: Analisi e Studio
-1. Comprendi il contesto come descritto nel punto 1
-2. Identifica tutti i problemi presenti
-3. Scegli autonomamente la priorità (vedi [Autonomous Priority Rule](./autonomous-priority-rule.md))
+**⚠️ REGOLA FONDAMENTALE**: Prima di ogni azione, seguire sempre: Studio Docs → Aggiorna Docs → Scegli Soluzione Intelligente → Implementa → Verifica → Aggiorna Docs
 
-#### Fase 2: Aggiorna `docs`
-1. Documenta ciò che stai per fare
+Vedi [Intelligent Solution Rule](./intelligent-solution-rule.md) per dettagli completi.
+
+#### Fase 1: Analisi e Studio (Studio Attento delle Docs)
+1. **📚 STUDIO ATTENTO DELLE DOCS**: Leggi approfonditamente `Modules/{Modulo}/docs/` + `Themes/{Tema}/docs/`
+2. Comprendi il contesto come descritto nel punto 1
+3. Studia la logica, la filosofia, la business logic, lo scopo
+4. Identifica tutti i problemi presenti
+5. Scegli autonomamente la priorità (vedi [Autonomous Priority Rule](./autonomous-priority-rule.md))
+
+#### Fase 2: Aggiorna `docs` (PRIMA di Implementare)
+1. **✍️ AGGIORNA DOCS PRIMA DI IMPLEMENTARE**: Documenta ciò che stai per fare
 2. Aggiorna la documentazione esistente se necessario
 3. Crea nuovi documenti solo se non esistono già
+4. Crea pattern riusabili se identificati
 
-#### Fase 3: Implementa
-1. Scrivi il codice o la correzione
+#### Fase 3: Scegli Soluzione Intelligente
+1. **🧠 SCEGLI LA SOLUZIONE PIÙ INTELLIGENTE E PROFESSIONALE**: Valuta tutte le opzioni possibili
+2. Scegli autonomamente la priorità
+3. Applica principi DRY + KISS + SOLID
+4. Considera impatti a lungo termine
+
+#### Fase 4: Implementa
+1. **⚙️ IMPLEMENTA**: Scrivi il codice o la correzione
 2. Segui sempre PHPStan livello 10
 3. Applica principi DRY + KISS
 4. Mantieni Clean Code
 
-#### Fase 4: Verifica e Controlla
-1. Esegui i test necessari
+#### Fase 5: Verifica e Controlla
+1. **✅ VERIFICA E CONTROLLA**: Esegui i test necessari
 2. Controlla ogni file modificato con `phpstan` (livello 10)
+3. Controlla con `phpmd` e `phpinsights`
+4. Verifica che tutto funzioni correttamente
+
+#### Fase 6: Migliora e Rifinisci
+1. Rivedi il tuo lavoro per migliorarlo
+2. Applica refactoring se necessario
+3. Ottimizza il codice
+
+#### Fase 7: Aggiorna `docs` di Nuovo
+1. **📝 AGGIORNA DOCS DI NUOVO**: Finalizza la documentazione con i dettagli dell'implementazione
+2. Documenta decisioni prese e pattern applicati
+3. Aggiorna indici e riferimenti
+4. Verifica link relativi
 3. Verifica conformità PSR-12
 4. Controlla implicazioni di sicurezza
 
@@ -160,6 +186,7 @@ La metodologia "Super Mucca" è un approccio sistematico allo sviluppo che enfat
 
 ## Collegamenti
 
+- [Intelligent Solution Rule](./intelligent-solution-rule.md) - **REGOLA FONDAMENTALE**: Studio Docs → Aggiorna Docs → Scegli Soluzione Intelligente → Implementa → Verifica → Aggiorna Docs
 - [Autonomous Priority Rule](./autonomous-priority-rule.md)
 - [Laraxot Architecture Rules](./laraxot_architecture_rules.md)
 - [Code Quality Rules](./code-quality.md)

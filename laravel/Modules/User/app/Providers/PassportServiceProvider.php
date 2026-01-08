@@ -40,9 +40,7 @@ class PassportServiceProvider extends ServiceProvider
         Passport::useAuthCodeModel(OauthAuthCode::class);
         Passport::useClientModel(OauthClient::class);
 
-        if (method_exists(Passport::class, 'useDeviceCodeModel')) {
-            Passport::useDeviceCodeModel(OauthDeviceCode::class);
-        }
+        Passport::useDeviceCodeModel(OauthDeviceCode::class);
         Passport::enablePasswordGrant();
 
         Passport::tokensCan([

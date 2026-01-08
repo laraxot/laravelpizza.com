@@ -240,8 +240,8 @@ laravel/Modules/ModuleName/
 2. **Namespace Check**
    ```php
    // Verifica sempre il namespace corrisponda al path
-   namespace Modules\User\App\Http\Controllers;  // CORRETTO
-   namespace Modules\User\Http\Controllers;      // ERRATO
+   namespace Modules\User\Http\Controllers;      // CORRETTO
+   namespace Modules\User\App\Http\Controllers;  // ERRATO
    ```
 
 3. **Case Sensitivity**

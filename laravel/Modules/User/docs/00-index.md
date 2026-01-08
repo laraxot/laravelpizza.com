@@ -15,6 +15,7 @@
 - [Authentication Flow](./authentication-flow.md) - Flusso autenticazione
 - [Permission System](./permission-system.md) - Sistema permessi e ruoli
 - [User Relationships](./user-relationships.md) - Relazioni con altri modelli
+- [Passport Cluster](./passport-cluster-summary.md) - Cluster OAuth/Passport resources
 
 ### 🧩 Core Components
 - [User Model](../../app/Models/User.php) - Modello principale User

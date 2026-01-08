@@ -7,6 +7,8 @@ namespace Modules\User\Filament\Clusters\Passport\Resources;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Section;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\User\Filament\Clusters\Passport;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAuthCodeResource\Pages\ListOauthAuthCodes;
@@ -41,17 +43,26 @@ class OauthAuthCodeResource extends XotBaseResource
     public static function getFormSchema(): array
     {
         return [
-            'user_id' => Select::make('user_id')
-                ->relationship('user', 'name')
-                ->searchable(),
-            'client_id' => Select::make('client_id')
-                ->relationship('client', 'name')
-                ->searchable()
-                ->required(),
-            'scopes' => TextInput::make('scopes'),
-            'revoked' => TextInput::make('revoked')
-                ->numeric()
-                ->required(),
+            'oauth_auth_code_info' => Section::make('OAuth Authorization Code Information')
+                ->schema([
+                    'grid_1' => Grid::make(2)
+                        ->schema([
+                            'user_id' => Select::make('user_id')
+                                ->relationship('user', 'name')
+                                ->searchable(),
+                            'client_id' => Select::make('client_id')
+                                ->relationship('client', 'name')
+                                ->searchable()
+                                ->required(),
+                        ]),
+                    'grid_2' => Grid::make(2)
+                        ->schema([
+                            'scopes' => TextInput::make('scopes'),
+                            'revoked' => TextInput::make('revoked')
+                                ->numeric()
+                                ->required(),
+                        ]),
+                ]),
         ];
     }
 

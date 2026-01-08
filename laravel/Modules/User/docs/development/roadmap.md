@@ -2,6 +2,35 @@
 
 # Roadmap Modulo User
 
+## Quality Gates (operativo)
+
+### Obiettivo
+
+- `./vendor/bin/phpstan analyse Modules` (eseguito dalla directory `laravel/`)
+- Fix incrementali in batch piccoli (DRY/KISS)
+- Dopo ogni batch: PHPStan + (PHPMD, PHPInsights, lint)
+
+### Metodo (batch)
+
+1. Eseguire `./vendor/bin/phpstan analyse Modules`.
+2. Raggruppare gli errori per tipologia:
+   - namespace non conforme (`Modules\\*\\App|app\\...`)
+   - classi duplicate / autoload ambiguo
+   - Filament: Pages/Resource non coerenti (cluster Passport)
+   - tipizzazione PHPStan (return/param/generics)
+3. Correggere **solo** un gruppo per volta.
+4. Rieseguire PHPStan sul target minimo che copre la modifica.
+5. Annotare qui:
+   - numero errori prima/dopo
+   - file toccati
+   - eventuali regressioni/edge case
+
+### Stato corrente (da compilare dopo esecuzione)
+
+- Output ultimo run: _TBD_
+- Top error categories: _TBD_
+- Batch in corso: _TBD_
+
 ## Funzionalità Future
 
 ### Autenticazione

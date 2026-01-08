@@ -94,15 +94,18 @@ Devo creare un cluster Filament per raggruppare tutte le risorse Passport/OAuth 
 ### Decisione Finale
 
 **Implementazione**:
-1. ✅ Creare cluster `OAuthApi` che estende `XotBaseCluster`
-2. ✅ Spostare 5 risorse OAuth nel cluster
-3. ✅ Documentare pattern e decisioni
-4. ⏸️ Settings page: da implementare in futuro se necessario
+1. ✅ Creare cluster `Passport` che estende `XotBaseCluster`
+2. ✅ Posizionare le risorse OAuth sotto `app/Filament/Clusters/Passport/Resources`
+3. ✅ Lasciare che Filament le scopra tramite `discoverClusters()` (Filament v4 scopre anche le Resource dentro la directory dei cluster)
+4. ✅ Evitare duplicazioni: non mantenere una seconda copia delle stesse resource in `app/Filament/Resources` (collisioni di slug/route)
+5. ⏸️ Settings page: da implementare in futuro se necessario
 
 **Pattern da Seguire**:
 - Cluster estende `XotBaseCluster` (non `Filament\Clusters\Cluster` direttamente)
-- Risorse aggiungono `protected static ?string $cluster = OAuthApi::class;`
-- Navigation group rimane "Authentication" o viene gestito dal cluster
+- Le Resource OAuth stanno sotto `Modules/User/app/Filament/Clusters/Passport/Resources`
+- Ogni Resource del cluster imposta `protected static ?string $cluster = \Modules\User\Filament\Clusters\Passport::class;`
+- Discovery: il panel provider deve chiamare `discoverClusters(...)` (già fatto da `XotBasePanelProvider`)
+- Anti-duplicazione: una sola fonte di verità per ogni Resource (evitare duplicati top-level)
 
 ---
 
@@ -110,17 +113,17 @@ Devo creare un cluster Filament per raggruppare tutte le risorse Passport/OAuth 
 
 ### Step 1: Creare Cluster
 ```php
-// Modules/User/app/Filament/Clusters/OAuthApi.php
-class OAuthApi extends XotBaseCluster
+// Modules/User/app/Filament/Clusters/Passport.php
+class Passport extends XotBaseCluster
 {
     // Minimale - solo cluster base
 }
 ```
 
 ### Step 2: Spostare Risorse
-Aggiungere a ogni risorsa OAuth:
+Per ogni risorsa OAuth nel cluster:
 ```php
-protected static ?string $cluster = OAuthApi::class;
+protected static ?string $cluster = \Modules\User\Filament\Clusters\Passport::class;
 ```
 
 ### Step 3: Verificare Navigation
@@ -148,7 +151,7 @@ Navigation:
 ### Dopo (Cluster Organizzato)
 ```
 Navigation:
-- OAuth & API (Cluster)
+- Passport (Cluster)
   ├── OAuth Clients
   ├── OAuth Access Tokens
   ├── OAuth Refresh Tokens

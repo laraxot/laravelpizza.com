@@ -96,27 +96,14 @@ Modules/User/
 
 2. **Namespace Mapping**
    ```php
-   // ✅ CORRETTO
-   namespace Modules\User\App\Actions;
-   
-   // ❌ ERRATO
+   // ✅ CORRETTO (Laraxot / nwidart)
    namespace Modules\User\Actions;
-   ```
-   namespace Modules\User\Actions;
-   
-   // ❌ ERRATO
+
+   // ❌ ERRATO (segmento App/app vietato)
    namespace Modules\User\App\Actions;
    ```
-   // ✅ CORRETTO per classi in app/Actions/
-   namespace Modules\User\Actions;
-   
-   // ✅ CORRETTO per classi in app/Http/Livewire/
-   namespace Modules\User\Http\Livewire;
-   
-   // ❌ ERRATO
-   namespace Modules\User\App\Actions;
-   namespace Modules\User\App\Http\Livewire;
-   ```
+   Il path fisico `Modules/User/app/...` è mappato via PSR-4 sul prefisso `Modules\User\`.
+   Per questo motivo il namespace **NON** deve mai includere `App` o `app`.
    
    Il namespace deve riflettere il percorso relativo alla cartella `app/`, che è mappata al namespace base `Modules\User\` nel composer.json.
 

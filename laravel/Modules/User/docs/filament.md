@@ -17,6 +17,19 @@
 - RoleResource
 - PermissionResource
 
+## Clusters
+
+### Passport Cluster
+Cluster per organizzare tutte le risorse OAuth (Laravel Passport):
+
+- **OauthClientResource** - Gestione client OAuth
+- **OauthAccessTokenResource** - Token di accesso
+- **OauthRefreshTokenResource** - Token di refresh
+- **OauthAuthCodeResource** - Authorization codes
+- **OauthPersonalAccessClientResource** - Personal access clients
+
+**Documentazione**: [Passport Cluster Summary](./passport-cluster-summary.md)
+
 ## Widgets
 
 - LoginWidget

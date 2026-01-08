@@ -7,9 +7,6 @@ namespace Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\
 use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
-/**
- * Class CreateOauthClient.
- */
 class CreateOauthClient extends XotBaseCreateRecord
 {
     protected static string $resource = OauthClientResource::class;

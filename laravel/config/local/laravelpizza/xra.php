@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'adm_home' => '01',
     'enable_ads' => '1',
-    'main_module' => 'TechPlanner',
+    'main_module' => 'Meetup',
     'primary_lang' => 'it',
     'pub_theme' => 'Meetup',
     'search_action' => 'it/videos',

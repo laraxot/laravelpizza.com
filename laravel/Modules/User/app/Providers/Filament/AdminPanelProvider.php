@@ -22,11 +22,6 @@ class AdminPanelProvider extends XotBasePanelProvider
     {
         $panel = parent::panel($panel);
 
-        $panel = $panel->discoverResources(
-            in: base_path('Modules/User/app/Filament/Clusters/Passport/Resources'),
-            for: 'Modules\\User\\Filament\\Clusters\\Passport\\Resources',
-        );
-
         FilamentView::registerRenderHook('panels::auth.login.form.after', static fn (): string => Blade::render(
             "@livewire('socialite.buttons')",
         ));

@@ -15,7 +15,10 @@ use Modules\User\Filament\Clusters\Passport\Resources\OauthAuthCodeResource;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+use Modules\Xot\Filament\Schemas\Components\XotBaseSection;
 use Override;
+
+use function Safe\json_encode;
 
 class ViewOauthAuthCode extends XotBaseViewRecord
 {
@@ -28,14 +31,14 @@ class ViewOauthAuthCode extends XotBaseViewRecord
     protected function getInfolistSchema(): array
     {
         return [
-            'authorization_code_info' => Section::make('Authorization Code Information')
+            'authorization_code_info' => XotBaseSection::make('Authorization Code Information')
                 ->schema([
                     'code_grid' => Grid::make(2)
                         ->schema([
                             'id' => TextEntry::make('id')
                                 ->formatStateUsing(fn (mixed $state): string => Str::limit((string) $state, 15, '...')),
                             'client_name' => TextEntry::make('client.name')
-                                ->url(function (mixed $_state, $record): ?string {
+                                ->url(function (mixed $state, $record): ?string {
                                     if (! $record instanceof Model) {
                                         return null;
                                     }

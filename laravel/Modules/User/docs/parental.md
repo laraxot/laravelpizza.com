@@ -81,7 +81,7 @@ Nel Modulo User di il progetto, utilizziamo Tighten/Parental per gestire diversi
 ### 1. Gestione dei Ruoli con Modelli Dedicati
 Invece di utilizzare un sistema di permessi complesso, possiamo gestire comportamenti specifici per ruolo attraverso modelli dedicati:
 // Implementazione reale in il progetto
-namespace Modules\User\app\Models;
+namespace Modules\User\Models;
 class Doctor extends User
     public function appointments()
         return $this->hasMany(Appointment::class);

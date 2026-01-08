@@ -32,12 +32,12 @@ Attualmente le risorse sono sparse nella navigazione:
 
 ---
 
-## 💡 Proposta: Cluster "OAuth & API"
+## 💡 Proposta: Cluster "Passport"
 
 ### Struttura Cluster Proposta
 
 ```
-OAuth & API (Cluster)
+Passport (Cluster)
 ├── Clients
 │   ├── OAuth Clients (OauthClientResource)
 │   └── Personal Access Clients (OauthPersonalAccessClientResource)
@@ -54,41 +54,29 @@ OAuth & API (Cluster)
 #### 1. Creare Cluster Base
 
 ```php
-// Modules/User/app/Filament/Clusters/OAuthApi.php
+// Modules/User/app/Filament/Clusters/Passport.php
 namespace Modules\User\Filament\Clusters;
 
-use Filament\Clusters\Cluster;
-use Modules\Xot\Filament\Pages\XotBasePage;
+use Modules\Xot\Filament\Clusters\XotBaseCluster;
 
-class OAuthApi extends Cluster
+class Passport extends XotBaseCluster
 {
-    protected static ?string $navigationIcon = 'heroicon-o-key';
-    
-    protected static ?string $navigationLabel = 'OAuth & API';
-    
-    protected static ?int $navigationSort = 30;
-    
-    public static function getNavigationGroup(): ?string
-    {
-        return 'Authentication';
-    }
+    // Cluster minimale: le risorse OAuth vivono sotto app/Filament/Clusters/Passport/Resources
 }
 ```
 
 #### 2. Spostare Risorse nel Cluster
 
 ```php
-// Modules/User/app/Filament/Resources/OauthClientResource.php
-namespace Modules\User\Filament\Resources;
+// Modules/User/app/Filament/Clusters/Passport/Resources/OauthClientResource.php
+namespace Modules\User\Filament\Clusters\Passport\Resources;
 
-use Modules\User\Filament\Clusters\OAuthApi;
+use Modules\User\Filament\Clusters\Passport;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class OauthClientResource extends XotBaseResource
 {
-    protected static ?string $cluster = OAuthApi::class;
-    
-    // ... resto del codice invariato
+    protected static ?string $cluster = Passport::class;
 }
 ```
 
@@ -158,11 +146,12 @@ class Settings extends XotBasePage
 
 ### Step 1: Creare Cluster
 ```bash
-php artisan make:filament-cluster OAuthApi --module=User
+php artisan make:filament-cluster Passport --module=User
 ```
 
 ### Step 2: Spostare Risorse
-- Aggiungere `protected static ?string $cluster = OAuthApi::class;` a ogni risorsa
+- Posizionare le risorse sotto `Modules/User/app/Filament/Clusters/Passport/Resources`
+- Aggiungere `protected static ?string $cluster = Passport::class;` a ogni risorsa
 - Verificare che navigation group sia corretto
 
 ### Step 3: Aggiornare Navigation

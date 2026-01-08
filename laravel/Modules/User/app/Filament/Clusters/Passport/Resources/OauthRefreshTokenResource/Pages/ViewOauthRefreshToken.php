@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthRefreshTokenResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+use Modules\Xot\Filament\Schemas\Components\XotBaseSection;
 use Override;
 
 class ViewOauthRefreshToken extends XotBaseViewRecord
@@ -26,7 +27,7 @@ class ViewOauthRefreshToken extends XotBaseViewRecord
     protected function getInfolistSchema(): array
     {
         return [
-            'token_information' => Section::make('Token Information')
+            'token_information' => XotBaseSection::make('Token Information')
                 ->schema([
                     'token_grid' => Grid::make(2)
                         ->schema([

@@ -1,66 +1,58 @@
 # Proposta: Implementazione di Laravel Passport in un Filament Cluster
 
+**Status**: ✅ **IMPLEMENTATO** - Vedi [passport-cluster-summary.md](./passport-cluster-summary.md)
+
 ## Riepilogo
 
-Attualmente, le risorse OAuth di Laravel Passport sono gestite separatamente come risorse individuali (`OauthClientResource`, `OauthAccessTokenResource`, ecc.). Questo documento propone di organizzare tutte le risorse OAuth in un cluster dedicato chiamato `Passport` per una migliore organizzazione e usabilità.
+~~Attualmente, le risorse OAuth di Laravel Passport sono gestite separatamente come risorse individuali (`OauthClientResource`, `OauthAccessTokenResource`, ecc.). Questo documento propone di organizzare tutte le risorse OAuth in un cluster dedicato chiamato `Passport` per una migliore organizzazione e usabilità.~~
 
-## Attuale Struttura
+**✅ COMPLETATO**: Tutte le risorse OAuth sono state spostate nel cluster `Passport` seguendo il pattern standardizzato di Laraxot.
 
-Le risorse OAuth sono attualmente distribuite come:
+## ✅ Implementazione Completata
 
-- `OauthClientResource`
-- `OauthAccessTokenResource`
-- `OauthAuthCodeResource`
-- `OauthPersonalAccessClientResource`
-- `OauthRefreshTokenResource`
-- `ClientResource`
+### 1. Cluster Passport Creato
 
-## Proposta
-
-### 1. Creare un Cluster Passport
+**File**: `Modules/User/app/Filament/Clusters/Passport.php`
 
 ```php
-// Modules/User/app/Filament/Clusters/Passport.php
-<?php
-
-declare(strict_types=1);
-
 namespace Modules\User\Filament\Clusters;
 
 use Modules\Xot\Filament\Clusters\XotBaseCluster;
 
 class Passport extends XotBaseCluster
 {
-    protected static ?string $navigationGroup = 'API';
-
-    protected static ?string $navigationIcon = 'heroicon-o-key';
 }
 ```
 
-### 2. Spostare le risorse esistenti nel cluster
+**Decisione finale**: Cluster minimale KISS - solo base, nessuna proprietà aggiuntiva (rimosso `navigationGroup` che causava errori tipo).
 
-Spostare le seguenti risorse nel cluster Passport:
+### 2. Risorse Spostate nel Cluster
 
-- `OauthClientResource` → Diventa una pagina del cluster
-- `OauthAccessTokenResource` → Diventa una pagina del cluster
-- `OauthAuthCodeResource` → Diventa una pagina del cluster
-- `OauthPersonalAccessClientResource` → Diventa una pagina del cluster
-- `OauthRefreshTokenResource` → Diventa una pagina del cluster
-- `ClientResource` → Diventa una pagina del cluster
+Tutte le 5 risorse OAuth sono state spostate in `Clusters/Passport/Resources/`:
 
-### 3. Estendere le risorse per il cluster
+- ✅ `OauthClientResource` → `Clusters/Passport/Resources/OauthClientResource.php`
+- ✅ `OauthAccessTokenResource` → `Clusters/Passport/Resources/OauthAccessTokenResource.php`
+- ✅ `OauthAuthCodeResource` → `Clusters/Passport/Resources/OauthAuthCodeResource.php`
+- ✅ `OauthPersonalAccessClientResource` → `Clusters/Passport/Resources/OauthPersonalAccessClientResource.php`
+- ✅ `OauthRefreshTokenResource` → `Clusters/Passport/Resources/OauthRefreshTokenResource.php`
 
+**Nota**: `ClientResource` non è stata spostata (non esiste o è una risorsa diversa).
+
+### 3. Risorse Configurate per il Cluster
+
+Tutte le risorse hanno:
 ```php
-// Nelle risorse OAuth, aggiungere:
-protected static ?string $cluster = \Modules\User\Filament\Clusters\Passport::class;
+protected static ?string $cluster = Passport::class;
 ```
 
-## Vantaggi
+## ✅ Vantaggi Raggiunti
 
-1. **Organizzazione migliore**: Tutte le risorse OAuth in un unico posto
-2. **Usabilità**: Interfaccia più pulita e organizzata
-3. **Manutenibilità**: Più facile trovare e gestire le risorse OAuth
-4. **Conformità Laravel**: Segue le best practices di Laravel Filament
+1. ✅ **Organizzazione migliore**: Tutte le risorse OAuth in un unico posto
+2. ✅ **Usabilità**: Interfaccia più pulita e organizzata
+3. ✅ **Manutenibilità**: Più facile trovare e gestire le risorse OAuth
+4. ✅ **Conformità Laravel**: Segue le best practices di Laravel Filament
+
+**Documentazione completa**: Vedi [passport-cluster-summary.md](./passport-cluster-summary.md)
 
 ## Schema.org: Campi e Modelli Proposti
 
