@@ -48,6 +48,16 @@ class Page extends Component
 
         $metatag->concatDescription($page->description);
         $blocks = $page->$field;
+        if (is_array($blocks) && ! empty($blocks)) {
+            $locales = array_keys($blocks);
+            $current_lang = app()->getLocale();
+            if (in_array($current_lang, $locales)) {
+                $blocks = $blocks[$current_lang];
+            } elseif (in_array('it', $locales)) {
+                $blocks = $blocks['it'];
+            }
+        }
+
         if (! is_array($blocks)) {
             $primary_lang = XotData::make()->primary_lang;
             /* @phpstan-ignore-next-line method.notFound */

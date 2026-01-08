@@ -1,6 +1,6 @@
 {{--
 /**
- * CTA Banner Block - Theme Sixteen
+ * CTA Banner Block - Laravel Pizza Theme
  *
  * Banner call-to-action per conversioni.
  *
@@ -13,7 +13,7 @@
  */
 --}}
 
-<section class="py-16 {{ $background_color ?? 'bg-blue-600' }}">
+<section class="py-16 {{ $background_color ?? 'bg-red-600' }}">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center {{ $text_color ?? 'text-white' }}">
             {{-- Title --}}
@@ -35,32 +35,32 @@
                 @if(isset($cta_primary) && is_array($cta_primary))
                     @php
                         $primaryClasses = match($cta_primary['style'] ?? 'primary') {
-                            'white' => 'bg-white text-blue-600 hover:bg-gray-50',
-                            'outline-white' => 'border-2 border-white text-white hover:bg-white hover:text-blue-600',
-                            default => 'bg-blue-800 text-white hover:bg-blue-900'
+                            'white' => 'bg-white text-red-600 hover:bg-gray-50',
+                            'outline-white' => 'border-2 border-white text-white hover:bg-white hover:text-red-600',
+                            default => 'bg-red-700 text-white hover:bg-red-800'
                         };
                     @endphp
                     <a 
                         href="{{ $cta_primary['url'] ?? '#' }}" 
-                        class="{{ $primaryClasses }} px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg"
+                        class="{{ $primaryClasses }} px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
                     >
-                        {{ $cta_primary['label'] ?? 'Inizia Ora' }}
+                        {{ $cta_primary['label'] ?? 'Join the Community' }}
                     </a>
                 @endif
 
                 @if(isset($cta_secondary) && is_array($cta_secondary))
                     @php
                         $secondaryClasses = match($cta_secondary['style'] ?? 'secondary') {
-                            'outline-white' => 'border-2 border-white text-white hover:bg-white hover:text-blue-600',
-                            'white' => 'bg-white text-blue-600 hover:bg-gray-50',
-                            default => 'border-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white'
+                            'outline-white' => 'border-2 border-white text-white hover:bg-white hover:text-red-600',
+                            'white' => 'bg-white text-red-600 hover:bg-gray-50',
+                            default => 'border-2 border-red-700 text-red-500 hover:bg-red-700 hover:text-white'
                         };
                     @endphp
                     <a 
                         href="{{ $cta_secondary['url'] ?? '#' }}" 
                         class="{{ $secondaryClasses }} px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
                     >
-                        {{ $cta_secondary['label'] ?? 'Scopri di Più' }}
+                        {{ $cta_secondary['label'] ?? 'View Events' }}
                     </a>
                 @endif
             </div>

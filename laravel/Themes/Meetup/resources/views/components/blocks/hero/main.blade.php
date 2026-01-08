@@ -1,8 +1,9 @@
 {{--
 /**
- * Hero Section Block - Theme Sixteen
+ * Hero Section Block - Laravel Pizza Theme
  *
  * Blocco hero principale per homepage e landing page.
+ * Stile rosso Laravel Pizza con design moderno.
  *
  * @var array $title Titolo principale
  * @var array $subtitle Sottotitolo
@@ -13,32 +14,66 @@
  */
 --}}
 
-<section class="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white overflow-hidden">
-    {{-- Background Image Overlay --}}
+<section class="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+    {{-- Pattern SVG Background Overlay --}}
+    <div class="absolute inset-0 opacity-20">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="currentColor"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="currentColor" opacity="0.5"></path>
+        </svg>
+    </div>
+    
+    {{-- Background Image Overlay (opzionale) --}}
     @if(isset($background_image) && $background_image)
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ $background_image }}');"></div>
     @endif
     
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div class="text-center">
+            {{-- Pizza Icon --}}
+            <div class="flex justify-center mb-8">
+                <div class="bg-red-500 bg-opacity-20 backdrop-blur-sm p-6 rounded-full border border-red-400 border-opacity-30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+            </div>
+            
             {{-- Main Title --}}
             @if(isset($title) && $title)
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                    {{ $title }}
+                <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
+                    @php
+                        // Parse titolo: "Laravel Developers. Pizza. Community."
+                        // Split su ". " (punto + spazio) o "." (solo punto)
+                        $titleClean = trim($title);
+                        // Se contiene "Pizza.", dividi in due parti
+                        if (str_contains($titleClean, 'Pizza.')) {
+                            $parts = preg_split('/(?<=\.)\s*(?=Pizza\.)/', $titleClean, 2);
+                            $firstPart = trim($parts[0] ?? 'Laravel Developers.');
+                            $secondPart = trim($parts[1] ?? 'Pizza. Community.');
+                        } else {
+                            // Fallback: split su punti
+                            $parts = explode('.', $titleClean);
+                            $firstPart = trim($parts[0] ?? 'Laravel Developers') . '.';
+                            $secondPart = trim(($parts[1] ?? '') . '.' . ($parts[2] ?? ''));
+                        }
+                    @endphp
+                    <span class="text-white">{{ $firstPart }}</span><br>
+                    <span class="text-red-500">{{ $secondPart }}</span>
                 </h1>
             @endif
 
             {{-- Subtitle --}}
             @if(isset($subtitle) && $subtitle)
-                <h2 class="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+                <h2 class="text-xl md:text-2xl font-semibold mb-6 text-red-100">
                     {{ $subtitle }}
                 </h2>
             @endif
 
             {{-- Description --}}
             @if(isset($description) && $description)
-                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-blue-50 leading-relaxed">
+                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-red-50 leading-relaxed">
                     {{ $description }}
                 </p>
             @endif
@@ -48,18 +83,18 @@
                 @if(isset($cta_primary) && is_array($cta_primary))
                     <a 
                         href="{{ $cta_primary['url'] ?? '#' }}" 
-                        class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors duration-300 shadow-lg"
+                        class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                     >
-                        {{ $cta_primary['label'] ?? 'Scopri di Più' }}
+                        {{ $cta_primary['label'] ?? 'Join the Community' }}
                     </a>
                 @endif
 
                 @if(isset($cta_secondary) && is_array($cta_secondary))
                     <a 
                         href="{{ $cta_secondary['url'] ?? '#' }}" 
-                        class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors duration-300"
+                        class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-red-600 transition-all duration-300 transform hover:-translate-y-1"
                     >
-                        {{ $cta_secondary['label'] ?? 'Contattaci' }}
+                        {{ $cta_secondary['label'] ?? 'View Events' }}
                     </a>
                 @endif
             </div>
@@ -68,7 +103,7 @@
 
     {{-- Decorative Elements --}}
     <div class="absolute bottom-0 left-0 right-0">
-        <svg class="w-full h-16 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <svg class="w-full h-16 text-slate-900" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
             <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
             <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>

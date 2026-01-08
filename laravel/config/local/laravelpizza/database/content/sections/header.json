@@ -1,41 +1,57 @@
 {
     "id": "1",
     "name": {
-        "it": "headeryyy"
+        "it": "Header",
+        "en": "Header"
     },
     "slug": "header",
     "blocks": {
         "it": [
             {
                 "type": "navigation",
-                "slug": "nav1",
+                "slug": "main-nav",
                 "data": {
-                    "view": "pub_theme::components.blocks.navigation.simple",
+                    "view": "pub_theme::components.blocks.navigation.header-main",
+                    "brand": "Laravel Pizza Meetups",
+                    "logo": "/images/pizza-icon.png",
+                    "tagline": "Laravel Developers. Pizza. Community.",
+                    "home_url": "/",
+                    "show_navigation": true,
                     "items": [
                         {
-                            "label": "Amministrazione",
-                            "url": "\/",
+                            "label": "Events",
+                            "url": "/events",
                             "type": "link"
                         },
                         {
-                            "label": "{{ __('pub_theme::header.links.Project.label') }}",
-                            "url": "{{ route('pages.view',['slug'=>'progetto']) }}",
+                            "label": "Community Chat",
+                            "url": "/chat",
                             "type": "link"
                         },
                         {
-                            "label": "Partecipanti",
-                            "url": "{{ route('pages.view',['slug'=>'partners']) }}",
-                            "type": "link"
+                            "label": "English",
+                            "url": "#",
+                            "type": "language"
+                        },
+                        {
+                            "label": "Login",
+                            "url": "/auth/login",
+                            "type": "button",
+                            "style": "outline"
+                        },
+                        {
+                            "label": "Sign Up",
+                            "url": "/auth/register",
+                            "type": "button",
+                            "style": "solid"
                         }
-                    ],
-                    "alignment": null,
-                    "orientation": null
+                    ]
                 }
             }
         ]
     },
     "created_at": "2025-07-08T09:02:57.000000Z",
-    "updated_at": "2025-08-29T11:03:49.000000Z",
+    "updated_at": "2026-01-08T12:00:00.000000Z",
     "created_by": null,
     "updated_by": "01985ae8-8039-71ea-88c7-54ebce6295b0"
 }

@@ -288,5 +288,50 @@ function addSkipLink() {
     document.body.insertBefore(skipLink, document.body.firstChild);
 }
 
+// Global error handling with user feedback
+window.addEventListener('error', function(event) {
+    console.error('Global error:', event.error);
+    
+    // Show user-friendly notification
+    if (!event.error.message.includes('ResizeObserver loop limit exceeded')) {
+        // This specific error is benign and can be ignored
+        showNotification('Si è verificato un errore. Se il problema persiste, ricarica la pagina.', 'error');
+        
+        // Log error to analytics (if configured)
+        if (window.gtag) {
+            gtag('event', 'exception', {
+                description: event.error.toString(),
+                fatal: false
+            });
+        }
+    }
+});
+
+window.addEventListener('unhandledrejection', function(event) {
+    console.error('Unhandled promise rejection:', event.reason);
+    showNotification('Si è verificato un errore durante un\'operazione. Se il problema persiste, ricarica la pagina.', 'error');
+    
+    // Log to analytics
+    if (window.gtag) {
+        gtag('event', 'exception', {
+            description: 'Unhandled promise rejection: ' + event.reason.toString(),
+            fatal: false
+        });
+    }
+});
+
+// Register service worker for PWA functionality
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/themes/Meetup/sw.js')
+            .then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(function(error) {
+                console.log('ServiceWorker registration failed: ', error);
+            });
+    });
+}
+
 // Initialize skip link when DOM is loaded
 document.addEventListener('DOMContentLoaded', addSkipLink);

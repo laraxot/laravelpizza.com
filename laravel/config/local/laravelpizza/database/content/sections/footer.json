@@ -1,10 +1,109 @@
 {
     "id": "2",
-    "name": null,
+    "name": {
+        "it": "Footer",
+        "en": "Footer"
+    },
     "slug": "footer",
-    "blocks": [],
+    "blocks": {
+        "it": [
+            {
+                "type": "footer",
+                "slug": "main-footer",
+                "data": {
+                    "view": "pub_theme::components.blocks.navigation.footer-institutional",
+                    "logo": "/images/pizza-icon.png",
+                    "brand": "Laravel Pizza Meetups",
+                    "tagline": "Connecting Laravel developers over pizza since 2023",
+                    "copyright": "© 2026 Laravel Pizza Meetups. All rights reserved.",
+                    "social_links": [
+                        {
+                            "name": "Twitter",
+                            "url": "https://twitter.com/laravelpizza",
+                            "icon": "heroicon-m-social-twitter"
+                        },
+                        {
+                            "name": "GitHub",
+                            "url": "https://github.com/laravelpizza",
+                            "icon": "heroicon-m-social-github"
+                        },
+                        {
+                            "name": "LinkedIn",
+                            "url": "https://linkedin.com/company/laravelpizza",
+                            "icon": "heroicon-m-social-linkedin"
+                        }
+                    ],
+                    "links": [
+                        {
+                            "title": "Community",
+                            "items": [
+                                {
+                                    "label": "Events",
+                                    "url": "/events"
+                                },
+                                {
+                                    "label": "Meetups",
+                                    "url": "/meetups"
+                                },
+                                {
+                                    "label": "Community Chat",
+                                    "url": "/chat"
+                                },
+                                {
+                                    "label": "Resources",
+                                    "url": "/resources"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Company",
+                            "items": [
+                                {
+                                    "label": "About",
+                                    "url": "/about"
+                                },
+                                {
+                                    "label": "Contact",
+                                    "url": "/contact"
+                                },
+                                {
+                                    "label": "Careers",
+                                    "url": "/careers"
+                                },
+                                {
+                                    "label": "Blog",
+                                    "url": "/blog"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Legal",
+                            "items": [
+                                {
+                                    "label": "Privacy Policy",
+                                    "url": "/privacy"
+                                },
+                                {
+                                    "label": "Terms of Service",
+                                    "url": "/terms"
+                                },
+                                {
+                                    "label": "Cookie Policy",
+                                    "url": "/cookies"
+                                },
+                                {
+                                    "label": "GDPR",
+                                    "url": "/gdpr"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
     "created_at": "2025-07-08T09:07:40.000000Z",
-    "updated_at": "2025-07-08T09:07:40.000000Z",
+    "updated_at": "2026-01-08T12:00:00.000000Z",
     "created_by": null,
-    "updated_by": null
+    "updated_by": "01985ae8-8039-71ea-88c7-54ebce6295b0"
 }

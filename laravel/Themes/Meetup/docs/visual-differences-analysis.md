@@ -1,5 +1,21 @@
 # Visual Differences Analysis - Homepage Issue
 
+## Evidence (screenshots)
+
+Gli screenshot di confronto devono essere salvati nel tema in:
+
+`Themes/Meetup/docs/screenshots/`
+
+File attesi:
+
+- `local-it-home.png` (http://127.0.0.1:8002/it)
+- `prod-home.png` (https://laravelpizza.com/)
+
+File raw (generati da Chromium headless, tenuti per tracciabilità):
+
+- `screenshot_127_0_0_1_2026-01-08T21-06-05-138Z_frame1.png`
+- `screenshot_laravelpizza_com_2026-01-08T21-06-05-094Z_frame1.png`
+
 ## Current State (WRONG - Image 01c.png)
 
 ### Theme & Design
@@ -90,6 +106,18 @@ Possible causes:
 3. **Cache issue** - Old content is cached
 4. **View resolution issue** - The Folio page is not using the correct layout or blocks
 5. **Database seeding issue** - The pages table may have old content
+
+### Root cause confermata: Features Grid non allineata al tema dark
+
+Il blocco `pub_theme::components.blocks.features.grid` deve seguire la palette dark del tema Meetup.
+
+- Il template aveva `bg-white` e testi `text-gray-*`, quindi “staccava” visivamente su layout dark.
+- Inoltre usava classi Tailwind dinamiche (es. `hover:border-{{ $feature['color'] }}-200`). Con Tailwind v4 queste classi spesso non vengono generate se non safelistate, causando hover/border incoerenti.
+
+Regola pratica:
+
+- Usare classi Tailwind statiche (es. `hover:border-red-500`) per i blocchi public.
+- Se serve colorizzazione dinamica, va introdotta una safelist (decisione da documentare) invece di interpolare classi.
 
 ### What should be happening:
 

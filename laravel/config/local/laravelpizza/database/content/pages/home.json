@@ -65,54 +65,18 @@
                 }
             },
             {
-                "type": "stats",
-                "slug": "stats-section",
-                "data": {
-                    "view": "pub_theme::components.blocks.stats.overview",
-                    "title": "Laravel Pizza in Numbers",
-                    "background_color": "bg-slate-900",
-                    "stats": [
-                        {
-                            "number": "150+",
-                            "label": "Active Members",
-                            "description": "Developers in our community"
-                        },
-                        {
-                            "number": "25+",
-                            "label": "Cities",
-                            "description": "Meetups around the world"
-                        },
-                        {
-                            "number": "500+",
-                            "label": "Pizzas Shared",
-                            "description": "And counting!"
-                        },
-                        {
-                            "number": "100%",
-                            "label": "Laravel Love",
-                            "description": "Pure passion for code"
-                        }
-                    ]
-                }
-            },
-            {
                 "type": "cta",
                 "slug": "final-cta",
                 "data": {
                     "view": "pub_theme::components.blocks.cta.banner",
                     "title": "Ready to Join?",
-                    "description": "Be part of a growing community of Laravel developers who love pizza and code.",
+                    "description": "Sign up today and start connecting with Laravel developers in your area. The next pizza meetup is just around the corner!",
                     "background_color": "bg-red-600",
                     "text_color": "text-white",
                     "cta_primary": {
-                        "label": "Sign Up Now",
+                        "label": "Create Your Account",
                         "url": "/auth/register",
                         "style": "white"
-                    },
-                    "cta_secondary": {
-                        "label": "Browse Events",
-                        "url": "/events",
-                        "style": "outline-white"
                     }
                 }
             }
