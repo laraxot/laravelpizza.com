@@ -1,0 +1,580 @@
+# Regole Cursor per base_laravelpizza
+
+## ⚠️ REGOLA CRITICA - Architettura Frontoffice OBBLIGATORIA
+
+**PER IL FRONTOFFICE (pagine pubbliche), SEGUIRE SEMPRE QUESTA ARCHITETTURA:**
+
+### ❌ VIETATO (Frontoffice)
+- **NON creare controller** per pagine pubbliche
+- **NON scrivere rotte** in `routes/web.php` o `routes/api.php` per pagine pubbliche
+- **NON usare Route::get()** per routing frontoffice
+
+### ✅ OBBLIGATORIO (Frontoffice)
+- **Usare Folio** per routing file-based: pagine in `resources/views/pages/*.blade.php` = rotte automatiche
+- **Usare Volt** per interattività: `@volt('component-name')` direttamente nelle pagine Folio
+- **Usare Filament** SOLO per admin panel (backend)
+- **Chiamare Actions** da componenti Volt, non da controller
+
+### Pattern Architetturale
+```
+Request → Folio (routing) → Blade Page → Volt Component → Action → Service/Model
+```
+
+### Esempio Corretto
+```blade
+{{-- File: Themes/Meetup/resources/views/pages/events.blade.php --}}
+{{-- Folio crea automaticamente rotta /events --}}
+<x-layouts.app>
+    @volt('events')
+        @php
+            $events = app(\Modules\Meetup\Services\EventService::class)
+                ->getUpcomingEvents();
+        @endphp
+        
+        <div>
+            @foreach($events as $event)
+                <x-event-card :event="$event" />
+            @endforeach
+        </div>
+        
+        <button wire:click="register({{ $event->id }})">
+            Register
+        </button>
+    @endvolt
+</x-layouts.app>
+```
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA per il frontoffice!**
+
+---
+
+## ⚠️ REGOLA CRITICA - Gestione File Markdown OBBLIGATORIA
+
+**OGNI VOLTA CHE CREI O MODIFICHI FILE .md, SEGUIRE SEMPRE QUESTE REGOLE:**
+
+### ✅ OBBLIGATORIO
+- **File .md SOLO dentro cartelle docs esistenti**: `Modules/{ModuleName}/docs/` o `Themes/{ThemeName}/docs/`
+- **NON creare nuove cartelle docs**: Usare SOLO quelle esistenti
+- **Nomi file minuscoli**: Tutti i caratteri minuscoli, NO maiuscole
+- **Eccezioni**: Solo `README.md` e `CHANGELOG.md` possono avere maiuscole
+
+### ❌ VIETATO
+- **NON creare file .md** fuori dalle cartelle docs
+- **NON creare nuove cartelle docs** (usare quelle esistenti)
+- **NON usare caratteri maiuscoli** nei nomi file (tranne README.md e CHANGELOG.md)
+- **NON creare file** come `DOCUMENTATION_GAPS_ANALYSIS.md` (usare `documentation-gaps-analysis.md`)
+
+### Esempi Corretti
+```
+✅ Modules/Meetup/docs/documentation-gaps-analysis.md
+✅ Modules/Meetup/docs/seo-marketing-plan.md
+✅ Modules/Meetup/docs/README.md (eccezione permessa)
+✅ Themes/Meetup/docs/logo-implementation-error.md
+```
+
+### Esempi Errati
+```
+❌ laravel/DOCUMENTATION_GAPS_ANALYSIS.md (fuori da docs, maiuscole)
+❌ Modules/Meetup/docs/DOCUMENTATION_GAPS_ANALYSIS.md (maiuscole)
+❌ Modules/Meetup/docs/SEO-MARKETING-PLAN.md (maiuscole)
+❌ Modules/NewModule/docs/new-file.md (cartella docs nuova)
+```
+
+### Cartelle Docs Esistenti
+- `Modules/{ModuleName}/docs/` - Documentazione moduli
+- `Themes/{ThemeName}/docs/` - Documentazione temi
+- `laravel/docs_project/` - Documentazione progetto (se esiste)
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA per tutti i file .md!**
+
+---
+
+## ⚠️ REGOLA CRITICA - Controlli Qualità Codice OBBLIGATORI
+
+**OGNI VOLTA CHE MODIFICHI UN FILE PHP, DEVI CONTROLLARLO CON:**
+
+1. **PHPStan livello 10**: `./vendor/bin/phpstan analyse --level=10 path/to/file.php`
+2. **PHPMD** (se disponibile): `./vendor/bin/phpmd path/to/file.php text path/to/phpmd.ruleset.xml`
+3. **PHPInsights** (se disponibile): `./vendor/bin/phpinsights analyse path/to/file.php`
+
+**NON COMMITARE MAI codice che non passa questi controlli!**
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA e NON deve mai essere ignorata!**
+
+## Workflow Obbligatorio
+
+1. **Modifica il file**
+2. **Esegui PHPStan livello 10** - Corregge TUTTI gli errori (NON procedere se ci sono errori)
+3. **Esegui PHPMD** - Risolve code smells (se disponibile)
+4. **Esegui PHPInsights** - Verifica qualità complessiva (se disponibile)
+5. **Commit solo se tutti i controlli passano**
+
+## Verifica Finale
+
+Dopo aver corretto tutti gli errori in un file, esegui:
+```bash
+./vendor/bin/phpstan analyse --level=10 path/to/file.php
+```
+
+Deve restituire: `[OK] No errors`
+
+## Documentazione
+
+Vedi: `laravel/Modules/Xot/docs/code-quality-mandatory-checks.md`
+
+## Esempi di Correzione Comuni
+
+### Errori view-string
+```php
+/** @var string $view */
+$view = app(GetViewAction::class)->execute();
+/** @var view-string $view */
+return view($view, $params);
+```
+
+### Errori factory mixed
+```php
+/** @var Factory<Model> $factory */
+$factory = Model::factory(10);
+/** @var \Illuminate\Database\Eloquent\Collection<int, Model> $collection */
+$collection = $factory->create([...]);
+```
+
+---
+
+## ⚠️ REGOLA CRITICA - Frontend Asset Management OBBLIGATORIA
+
+**OGNI VOLTA CHE MODIFICHI FILE CSS O JAVASCRIPT, DEVI ESEGUIRE:**
+
+```bash
+cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
+npm install        # Prima volta o dopo modifiche package.json
+npm run build      # Compila CSS/JS (Vite + Tailwind)
+npm run copy       # Copia asset in public_html/themes/Meetup/
+```
+
+**Perché**:
+- Vite compila i file source (`resources/css/app.css`, `resources/js/app.js`) in asset ottimizzati
+- Tailwind CSS processa le classi e genera CSS ottimizzato
+- Gli asset devono essere copiati in `public_html/themes/Meetup/` per essere accessibili via web
+- **Senza build e copy, le modifiche NON sono visibili nel browser** (`http://127.0.0.1:8002/it`)
+
+**Quando**:
+- ✅ Dopo modifiche a `resources/css/app.css`
+- ✅ Dopo modifiche a `resources/js/app.js`
+- ✅ Dopo modifiche a `tailwind.config.js`
+- ✅ Dopo modifiche a `vite.config.js`
+- ✅ Prima di testare nel browser (`http://127.0.0.1:8002/it`)
+- ✅ Prima di commitare modifiche frontend
+- ❌ NON serve durante `npm run dev` (hot reload automatico)
+
+**Workflow Completo**:
+1. Modifica `resources/css/app.css` o `resources/js/app.js`
+2. Esegui `npm run build` (compila con Vite)
+3. Esegui `npm run copy` (copia in public_html)
+4. Verifica nel browser con hard refresh (Ctrl+Shift+R)
+
+**Documentazione**: `laravel/Themes/Meetup/docs/development-workflow-css-js-changes.md`
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA per vedere modifiche CSS/JS!**
+
+---
+
+## ⚠️ REGOLA CRITICA - Componenti Blade Anonimi con Namespace
+
+**I componenti anonimi registrati con `Blade::anonymousComponentPath()` NON supportano la sintassi namespace esplicita.**
+
+### ❌ ERRATO
+```blade
+<x-pub_theme::components.layouts.main>
+    {{ $slot }}
+</x-pub_theme::components.layouts.main>
+```
+
+### ✅ CORRETTO
+```blade
+<x-layouts.main>
+    {{ $slot }}
+</x-layouts.main>
+```
+
+**Perché**:
+- `CmsServiceProvider::registerNamespaces()` registra componenti anonimi con `Blade::anonymousComponentPath()`
+- I componenti anonimi funzionano solo con sintassi semplice `<x-component-name>`
+- La sintassi namespace esplicita cerca classi componenti o view namespace, non componenti anonimi
+
+**Documentazione**: `laravel/Themes/Meetup/docs/pub-theme-component-namespace-error-analysis.md`
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA per componenti anonimi!**
+
+---
+
+## ⚠️ REGOLA CRITICA - Filosofia Migrazioni Laraxot OBBLIGATORIA
+
+**UNA TABELLA = UNA MIGRAZIONE**
+
+**Per modificare una tabella esistente**:
+1. **MODIFICARE** direttamente la migrazione originale
+2. **AGGIORNARE** il timestamp nel nome del file
+3. **NON creare** mai nuove migrazioni separate
+
+### ❌ VIETATO
+- Creare `add_column_to_table.php` per aggiungere colonne
+- Creare `update_table.php` per modifiche
+- Creare più migrazioni per la stessa tabella
+
+### ✅ CORRETTO
+- Modificare `create_table.php` originale
+- Aggiungere colonne nella sezione `tableUpdate()` con controlli `hasColumn()`
+- Aggiornare timestamp: `2025_05_16_221811_create_table.php`
+
+**Principi**:
+- **Single Source of Truth**: Una sola fonte di verità per struttura tabella
+- **Evoluzione Organica**: La migrazione "cresce" nel tempo
+- **Anti-Frammentazione**: Evita esplosione di micro-migrazioni
+
+**Documentazione**: `laravel/Modules/User/docs/laraxot-migration-philosophy.md`
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA per tutte le migrazioni!**
+
+---
+
+## ⚠️ REGOLA CRITICA - Pagine Folio: Solo JSON, NO Blade Files OBBLIGATORIA
+
+**PER CREARE UNA NUOVA PAGINA PUBBLICA (FRONTOFFICE), SEGUIRE SEMPRE QUESTA REGOLA:**
+
+### ❌ VIETATO
+- **NON creare file Blade** in `Themes/Meetup/resources/views/pages/{slug}.blade.php` per pagine dinamiche
+- **NON creare rotte** in `routes/web.php` o `routes/api.php` per pagine pubbliche
+- **NON creare controller** per pagine pubbliche
+
+### ✅ OBBLIGATORIO
+- **Creare SOLO file JSON** in `config/local/laravelpizza/database/content/pages/{slug}.json`
+- Il file `[slug].blade.php` già esiste e gestisce automaticamente tutte le pagine dinamiche
+- Il componente `<x-page side="content" :slug="$slug" />` legge automaticamente il JSON corrispondente
+
+**Come funziona:**
+1. Folio usa `[slug].blade.php` come catch-all per tutte le pagine dinamiche
+2. Il middleware `PageSlugMiddleware` estrae lo slug dalla route e lo passa al componente Volt
+3. Il componente Volt `pages.view` riceve `$slug` e lo passa a `<x-page>`
+4. Il componente `<x-page>` cerca un record `Page` con quello slug
+5. Il modello `Page` usa `SushiToJsons` che carica i dati dai file JSON in `config/local/laravelpizza/database/content/pages/{slug}.json`
+6. I `content_blocks.it[]` nel JSON vengono processati da `BlockData::collect()`
+7. Ogni blocco viene renderizzato usando il componente Blade specificato in `data.view`
+
+**Struttura JSON esempio:**
+```json
+{
+    "slug": "home",
+    "content_blocks": {
+        "it": [
+            {
+                "type": "hero",
+                "data": {
+                    "view": "pub_theme::components.blocks.hero.main",
+                    "title": "Titolo",
+                    "subtitle": "Sottotitolo"
+                }
+            }
+        ]
+    }
+}
+```
+
+**Documentazione**: 
+- `laravel/Modules/Meetup/docs/folio-pages-json-only-rule.md`
+- `laravel/Themes/Meetup/docs/folio-pages-json-only-rule.md`
+- `laravel/Themes/Meetup/docs/system-architecture-complete.md`
+- `laravel/Themes/Meetup/docs/folio-volt-json-system-complete.md`
+- `laravel/Themes/Meetup/docs/laravelpizza-com-conversion-architecture.md`
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA per creare nuove pagine!**
+
+---
+
+## ⚠️ REGOLA CRITICA - Filament Methods Return Types OBBLIGATORIA
+
+**I metodi Filament DEVONO SEMPRE restituire array con chiavi STRING (NON mixed, NON int).**
+
+### Metodi Interessati
+- `getTableColumns()` → `array<string, Column>` (chiavi string obbligatorie)
+- `getFormSchema()` → `array<string, Component>` (chiavi string obbligatorie)
+- `getTableBulkActions()` → `array<string, BulkAction>` (chiavi string obbligatorie)
+- `getTableActions()` → `array<string, Action>` (chiavi string obbligatorie)
+- `getTableFilters()` → `array<string, Filter>` (chiavi string obbligatorie)
+- `getHeaderActions()` → `array<string, Action>` (chiavi string obbligatorie)
+
+**REGOLA ASSOLUTA**: Le chiavi degli array DEVONO essere sempre string esplicite.
+
+**❌ VIETATO**: Array con chiavi numeriche (`array<int, ...>`) o chiavi mixed (`array<mixed, ...>`).
+
+### ❌ ERRATO
+```php
+// Array numerico (chiavi int) - VIETATO
+public function getTableActions(): array
+{
+    return [EditAction::make(), DeleteAction::make()];
+}
+
+// Array con chiavi mixed - VIETATO
+/**
+ * @return array<mixed, Action>
+ */
+public function getTableActions(): array
+{
+    return [...];
+}
+```
+
+### ✅ CORRETTO
+```php
+// Array associativo (chiavi string) - OBBLIGATORIO
+/**
+ * @return array<string, Action>
+ */
+public function getTableActions(): array
+{
+    return [
+        'edit' => EditAction::make(),
+        'delete' => DeleteAction::make(),
+    ];
+}
+```
+
+**MIXED come tipo valore è consentito SOLO come ultima spiaggia e deve essere documentato con PHPDoc.**
+
+**Documentazione**: `laravel/Modules/Xot/docs/filament-methods-return-types.md`
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA per tutti i metodi Filament!**
+
+---
+
+## ⚠️ REGOLA CRITICA - Eloquent Magic Properties OBBLIGATORIA
+
+**`property_exists()` NON può essere usato con i modelli Eloquent perché gli attributi sono magici.**
+
+**USA SEMPRE `isset()` per verificare proprietà dinamiche dei modelli.**
+
+### ❌ ERRATO
+```php
+// property_exists() NON funziona con magic attributes
+if (property_exists($model, 'attribute')) {
+    $value = $model->attribute;
+}
+```
+
+### ✅ CORRETTO
+```php
+// usa isset() per magic attributes
+if (isset($model->attribute)) {
+    $value = $model->attribute;
+}
+
+// Con type narrowing per PHPStan L10
+if (is_object($model) && isset($model->attribute)) {
+    $value = $model->attribute;
+}
+```
+
+**Perché**: Gli attributi Eloquent sono magic attributes gestiti tramite `__get()`, `__set()`, `getAttribute()`. `property_exists()` controlla solo le proprietà reali della classe, non quelle gestite magicamente.
+
+**Documentazione**: `laravel/Modules/Xot/docs/eloquent-magic-properties-rule.md`
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA per accesso a proprietà modelli!**
+
+---
+
+## 🧠 FILOSOFIA DEL PROGETTO LARAVELPIZZA.COM
+
+**Obiettivo dichiarato**: Diventare il riferimento per chi vuole lanciare un Laravel Meetup "chiavi in mano", con codice riusabile ovunque.
+
+**Questo progetto non è un "esempio giocattolo", ma la base per meetup veri, pagine reali, community reali.**
+
+### Principi Fondamentali
+
+1. **DRY + KISS estremi**: Niente complicazioni inutili, ma anche niente "scorciatoie sporche"
+2. **Una tabella = una migrazione** (Laraxot Migration Philosophy)
+3. **Frontoffice = Folio + Volt**: Pattern obbligatorio `Request → Folio → Blade Page → Volt Component → Action → Service/Model`
+4. **Layout chiari**:
+   - `x-layouts.main` → shell HTML base (no header/footer), NON usare direttamente nelle pagine
+   - `x-layouts.app` → layout completo con header nav + footer (pagina pubblica frontoffice)
+   - `x-layouts.guest` → layout per login/registrazione/password (auth frontoffice)
+5. **Docs prima del codice**: Prima si aggiorna/legge `docs/`, poi si scrive codice
+6. **Qualità maniacale**: PHPStan livello 10 obbligatorio, niente conoscenza "nascosta"
+
+### Struttura del Progetto
+
+- **Root progetto**: `/var/www/_bases/base_laravelpizza/`
+- **Laravel app**: `laravel/`
+- **Moduli** (business logic, servizi, integrazioni): `laravel/Modules/*`
+- **Temi** (UI/UX, frontend, layout): `laravel/Themes/*`
+- **Tema principale**: `Themes/Meetup` (replica di `laravelpizza.com`)
+- **Docs per modulo/tema**: `Modules/{ModuleName}/docs/`, `Themes/{ThemeName}/docs/`
+
+Ogni cartella `docs` è pensata come **memoria viva del sistema**: regole, bugfix, decisioni architetturali, analisi delle pagine, tutto passa da lì.
+
+### Documentazione
+
+- **README Principale**: `/README.md` - Panoramica completa del progetto
+- **Filosofia Modulo**: `laravel/Modules/Meetup/docs/project-philosophy.md`
+- **Filosofia Tema**: `laravel/Themes/Meetup/docs/project-philosophy.md`
+- **Regole Critiche**: `laravel/Modules/Meetup/docs/rules-index.md`, `laravel/Themes/Meetup/docs/rules-index.md`
+
+**Questa filosofia è il cuore del progetto e deve essere rispettata in ogni decisione architetturale!**
+
+---
+
+## ⚠️ REGOLA CRITICA - Metodologia "Super Mucca" OBBLIGATORIA
+
+**OGNI VOLTA CHE LAVORI SUL PROGETTO, SEGUIRE SEMPRE QUESTA METODOLOGIA:**
+
+### 🎯 REGOLA FONDAMENTALE - Soluzione Intelligente e Professionale
+
+**PRIMA DI OGNI AZIONE, SEGUIRE SEMPRE QUESTO PROCESSO:**
+
+1. **📚 STUDIO ATTENTO DELLE DOCS**: 
+   - Leggi approfonditamente `Modules/{Modulo}/docs/` + `Themes/{Tema}/docs/`
+   - Studia la logica, la filosofia, la business logic, lo scopo
+   - Comprendi il contesto completo prima di agire
+   
+2. **✍️ AGGIORNA DOCS PRIMA DI IMPLEMENTARE**:
+   - Documenta ciò che stai per fare
+   - Aggiorna la documentazione esistente se necessario
+   - Crea pattern riusabili se identificati
+   
+3. **🧠 SCEGLI LA SOLUZIONE PIÙ INTELLIGENTE E PROFESSIONALE**:
+   - Valuta tutte le opzioni possibili
+   - Scegli autonomamente la priorità (vedi Autonomous Priority Rule)
+   - Applica principi DRY + KISS + SOLID
+   - Considera impatti a lungo termine
+   
+4. **⚙️ IMPLEMENTA**:
+   - Scrivi il codice o la correzione
+   - Segui sempre PHPStan livello 10
+   - Applica principi DRY + KISS
+   - Mantieni Clean Code
+   
+5. **✅ VERIFICA E CONTROLLA**:
+   - PHPStan livello 10: `./vendor/bin/phpstan analyse Modules/{ModuleName} --level=10`
+   - PHPMD: `php phpmd.phar Modules/{ModuleName} text codesize,design`
+   - PHP Insights: `./vendor/bin/phpinsights analyse Modules/{ModuleName} --format=table`
+   
+6. **📝 AGGIORNA DOCS DI NUOVO**:
+   - Finalizza la documentazione con i dettagli dell'implementazione
+   - Documenta decisioni prese e pattern applicati
+   - Aggiorna indici e riferimenti
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA e deve essere applicata SEMPRE prima di ogni modifica!**
+
+### Workflow Completo Super Mucca
+1. **Aumenta confidenza**: Studia architettura, business logic, documentazione root
+2. **Studia docs**: Leggi `Modules/{Modulo}/docs/` + `Themes/{Tema}/docs/`
+3. **Aggiorna docs**: Documenta ciò che stai per fare (PRIMA di implementare)
+4. **Scegli soluzione intelligente**: Valuta opzioni e scegli la migliore
+5. **Implementa**: Scrivi il codice o la correzione
+6. **Verifica e Controlla**: PHPStan L10, PHPMD, PHPInsights
+7. **Migliora e Rifinisci**: Rivedi il tuo lavoro per migliorarlo
+8. **Aggiorna docs di nuovo**: Finalizza la documentazione con i dettagli dell'implementazione
+9. **Git commit e push**: Dopo ogni modulo completato
+
+### Principi Fondamentali
+- **Workflow modulo per modulo**: Lavora un modulo alla volta, completa tutti gli errori, poi passa al successivo
+- **Docs come Bibbia**: La cartella `docs` è la tua memoria - studiala e aggiornala continuamente
+- **Naming files**: Minuscolo, no date, solo README.md e CHANGELOG.md possono avere maiuscole
+- **Link sempre relativi**: Mai path assoluti nei file .md
+- **Property exists**: NON funziona con magic attributes Eloquent - usa `isset()`
+- **Mixed solo come ultima spiaggia**: Evita `mixed` quando possibile - usa union types, type narrowing, generics
+- **Array keys sempre string**: Per metodi Filament (`getTableActions()`, `getFormSchema()`, ecc.) usare `array<string, ...>`
+- **Complexity target**: Ogni metodo < 8 cyclomatic complexity, < 15 righe (target)
+- **NO Controller**: Backoffice = Filament, Frontoffice = Folio + Volt
+- **NO Services**: Usa Spatie Queueable Actions
+- **Test in Pest**: Tutti i test devono essere in Pest
+
+### Risorse da Studiare
+- [PHPStan](https://phpstan.org/) - Static analysis best practices
+- [PHPMD](https://phpmd.org/) - Code quality rules
+- [PHPInsights](https://phpinsights.com/) - Quality metrics
+- [Pest](https://pestphp.com/) - Testing framework
+- [Filament](https://filamentphp.com/docs) - Admin panel docs
+- [Laravel Modules](https://laravelmodules.com/) - Modular architecture
+- [Laravel 12](https://laravel.com/docs/12.x) - Framework documentation
+- [Schema.org](https://schema.org/) - Structured data
+
+**Documentazione**: `laravel/Modules/Xot/docs/code-quality-improvements-consolidated.md`
+
+**Questa metodologia è ASSOLUTAMENTE OBBLIGATORIA per ogni modifica al progetto!**
+
+---
+
+## ⚠️ REGOLA CRITICA - Cluster Passport Resources OBBLIGATORIA
+
+**NELLA DIRECTORY `Modules/User/app/Filament/Clusters/Passport/Resources/` CI DEVONO STARE SOLO LE RISORSE ATTINENTI A PASSPORT/OAUTH.**
+
+### ✅ RISORSE CONSENTITE (Solo OAuth/Passport)
+- `OauthClientResource` - Client OAuth
+- `OauthAccessTokenResource` - Token di accesso
+- `OauthRefreshTokenResource` - Token di refresh
+- `OauthAuthCodeResource` - Authorization codes
+- `OauthPersonalAccessClientResource` - Personal access clients
+- `OauthDeviceCodeResource` - Device codes (se implementato)
+
+### ❌ VIETATO
+- **NON mettere risorse non attinenti a Passport/OAuth** in questa directory
+- **NON mettere risorse generiche** (User, Team, ecc.) nel cluster Passport
+- **NON creare risorse non OAuth** dentro `Passport/Resources/`
+
+### Pattern
+```
+Passport/Resources/
+├── OauthClientResource.php ✅
+├── OauthAccessTokenResource.php ✅
+├── OauthRefreshTokenResource.php ✅
+├── OauthAuthCodeResource.php ✅
+└── OauthPersonalAccessClientResource.php ✅
+```
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA per mantenere l'organizzazione del cluster Passport!**
+
+---
+
+## ⚠️ REGOLA CRITICA - Namespace Laravel Modules OBBLIGATORIA
+
+**NEI NAMESPACE DEI MODULI LARAVEL, NON INCLUDERE MAI `app` O `App`, ANCHE SE I FILE SONO FISICAMENTE NELLA DIRECTORY `app/`.**
+
+### ❌ VIETATO ASSOLUTAMENTE
+```php
+// ❌ GRAVEMENTE ERRATO - NON FARE MAI!
+use Modules\User\app\Models\User;
+use Modules\Meetup\app\Actions\CreateEventAction;
+use Modules\Tenant\app\Services\TenantService;
+```
+
+### ✅ CORRETTO
+```php
+// ✅ CORRETTO - SEMPRE COSÌ!
+use Modules\User\Models\User;
+use Modules\Meetup\Actions\CreateEventAction;
+use Modules\Tenant\Services\TenantService;
+```
+
+### Perché
+Nei file `composer.json` dei moduli, l'autoload PSR-4 è configurato come:
+```json
+"autoload": {
+    "psr-4": {
+        "Modules\\NomeModulo\\": "app/"
+    }
+}
+```
+
+Il namespace `Modules\NomeModulo\` **mappa direttamente** alla directory `app/`, quindi **NON serve** (e **NON si deve**) includere `app` nel namespace.
+
+### Struttura Fisica vs Namespace
+| Percorso Fisico | Namespace Corretto | ❌ Namespace Errato |
+|-----------------|-------------------|---------------------|
+| `Modules/User/app/Models/User.php` | `Modules\User\Models\User` | `Modules\User\app\Models\User` |
+| `Modules/Meetup/app/Actions/CreateEventAction.php` | `Modules\Meetup\Actions\CreateEventAction` | `Modules\Meetup\app\Actions\CreateEventAction` |
+
+**Documentazione**: `laravel/Modules/Xot/docs/laravel-modules-namespace-critical-rule.md`
+
+**Questa regola è ASSOLUTAMENTE OBBLIGATORIA per tutti i namespace dei moduli!**
