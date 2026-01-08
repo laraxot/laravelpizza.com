@@ -12,8 +12,9 @@ return [
     |
     */
     'name' => 'Meetup',
-    'description' => 'Modulo per la gestione eventi e meetup',
+    'description' => 'Event and Meetup Management Module - Gestione eventi e meetup per community Laravel',
     'icon' => 'heroicon-o-calendar-days',
+    'version' => '1.0.0',
 
     /*
     |--------------------------------------------------------------------------
@@ -25,8 +26,7 @@ return [
     */
     'navigation' => [
         'enabled' => true,
-        'sort' => 50,
-        'group' => 'Content',
+        'sort' => 40,
     ],
 
     /*
@@ -39,8 +39,7 @@ return [
     */
     'routes' => [
         'enabled' => true,
-        'middleware' => ['web'],
-        'prefix' => null,
+        'middleware' => ['web', 'auth'],
     ],
 
     /*

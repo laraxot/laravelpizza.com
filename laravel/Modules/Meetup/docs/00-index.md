@@ -14,6 +14,7 @@
 - [Module Implementation Guide](module-implementation-guide.md) - Step-by-step guide
 - [Folio + Volt Guide](laravel-folio-volt-guide.md) - Complete Folio/Volt documentation
 - [Services Guide](services-guide.md) - Service layer documentation
+- [Config Improvement](config-improvement.md) - Module configuration file improvements
 
 ## Theme Integration
 
