@@ -94,6 +94,21 @@ class LoginController extends Controller
 }
 ```
 
+### 🔐 **Passport OAuth Management**
+```php
+// Gestione completa OAuth/API in Filament Cluster
+// Admin UI per OAuth clients, tokens, refresh tokens, auth codes
+```
+
+**Passport Cluster**: Tutte le risorse OAuth sono organizzate in un cluster dedicato:
+- **OauthClientResource**: Gestione client OAuth
+- **OauthAccessTokenResource**: Token di accesso
+- **OauthRefreshTokenResource**: Token di refresh
+- **OauthAuthCodeResource**: Codici autorizzazione
+- **OauthPersonalAccessClientResource**: Personal access clients
+
+📚 **Documentazione**: [Passport Cluster Implementation](docs/passport-cluster-implementation-status.md)
+
 ### 👥 **Gestione Team e Tenants**
 ```php
 // Relazioni team
@@ -103,7 +118,7 @@ class User extends XotBaseUser
     {
         return $this->belongsToMany(Team::class);
     }
-    
+
     public function tenants(): BelongsToMany
     {
         return $this->belongsToMany(Tenant::class);
@@ -388,6 +403,7 @@ php artisan test --filter=TeamTest
 - [🧪 Testing](docs/testing.md)
 - [🚀 Deployment](docs/deployment.md)
 - [🔒 Sicurezza](docs/security.md)
+- [🔐 Passport Cluster](docs/passport-cluster-implementation-status.md)
 
 ### 🎨 **Guide Architetturali**
 - [🏗️ Multi-Type Architecture](docs/multi-type-architecture.md)
