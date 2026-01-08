@@ -83,7 +83,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
      * @param  Schema  $schema  Il form da configurare
      * @return Schema Il form configurato
      */
-    public function form(Schema $schema): Schema
+    final public function form(Schema $schema): Schema
     {
         $schema = $schema->components($this->getFormSchema());
         $schema->statePath('data');
@@ -228,22 +228,10 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
 
     private function resolveView(): void
     {
-        $defaultView = 'xot::filament.widgets.base';
-
-        if ($this->view !== $defaultView && view()->exists($this->view)) {
-            return;
-        }
-
-        try {
-            $view = app(GetViewByClassAction::class)->execute(static::class);
-            if (view()->exists($view)) {
-                $this->view = $view;
-            }
-        } catch (Exception $e) {
-            /* @phpstan-ignore identical.alwaysTrue */
-            if ($this->view === $defaultView) {
-                throw $e;
-            }
-        }
+        // GetViewByClassAction::execute() restituisce sempre un view-string valido
+        // (verificato con view()->exists() nell'Action)
+        /** @var view-string $view */
+        $view = app(GetViewByClassAction::class)->execute(static::class);
+        $this->view = $view;
     }
 }
