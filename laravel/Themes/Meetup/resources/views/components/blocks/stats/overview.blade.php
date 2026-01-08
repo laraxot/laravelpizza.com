@@ -1,25 +1,54 @@
-{{-- Stats Section - Laravel Pizza Meetups Style --}}
-<section class="{{ $background_color ?? 'bg-slate-800' }} py-16 sm:py-24 border-y border-slate-700">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-4xl text-center mb-16">
-            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                {{ $title ?? 'In Numbers' }}
-            </h2>
-        </div>
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            @foreach($stats ?? [] as $stat)
-            <div class="text-center group">
-                <p class="text-5xl font-bold text-red-500 group-hover:text-red-400 transition-colors">
-                    {{ $stat['number'] ?? '0' }}
-                </p>
-                <p class="mt-2 text-xl font-semibold text-white">
-                    {{ $stat['label'] ?? 'Label' }}
-                </p>
-                <p class="mt-1 text-sm text-gray-400">
-                    {{ $stat['description'] ?? 'Description' }}
-                </p>
+{{--
+/**
+ * Stats Overview Block - Theme Sixteen
+ *
+ * Sezione statistiche con numeri e metriche.
+ *
+ * @var string $title Titolo della sezione
+ * @var string $background_color Colore di sfondo
+ * @var array $stats Array di statistiche
+ */
+--}}
+
+<section class="py-16 {{ $background_color ?? 'bg-gray-50' }}">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {{-- Section Title --}}
+        @if(isset($title) && $title)
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    {{ $title }}
+                </h2>
             </div>
-            @endforeach
-        </div>
+        @endif
+
+        {{-- Stats Grid --}}
+        @if(isset($stats) && is_array($stats))
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                @foreach($stats as $stat)
+                    <div class="text-center">
+                        {{-- Number --}}
+                        @if(isset($stat['number']))
+                            <div class="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+                                {{ $stat['number'] }}
+                            </div>
+                        @endif
+
+                        {{-- Label --}}
+                        @if(isset($stat['label']))
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                                {{ $stat['label'] }}
+                            </h3>
+                        @endif
+
+                        {{-- Description --}}
+                        @if(isset($stat['description']))
+                            <p class="text-gray-600">
+                                {{ $stat['description'] }}
+                            </p>
+                        @endif
+                    </div>
+                @endforeach
+            </div>
+        @endif
     </div>
 </section>

@@ -33,7 +33,8 @@
         "laravel": {
             "providers": [
                 "Modules\\Meetup\\Providers\\MeetupServiceProvider",
-                "Modules\\Meetup\\Providers\\EventServiceProvider"
+                "Modules\\Meetup\\Providers\\EventServiceProvider",
+                "Modules\\Meetup\\Providers\\Filament\\AdminPanelProvider"
             ],
             "aliases": {}
         }

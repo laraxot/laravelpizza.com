@@ -12,9 +12,8 @@ return [
     |
     */
     'name' => 'Meetup',
-    'description' => 'Event and Meetup Management Module - Gestione eventi e meetup per community Laravel',
+    'description' => 'Modulo per la gestione eventi e meetup',
     'icon' => 'heroicon-o-calendar-days',
-    'version' => '1.0.0',
 
     /*
     |--------------------------------------------------------------------------

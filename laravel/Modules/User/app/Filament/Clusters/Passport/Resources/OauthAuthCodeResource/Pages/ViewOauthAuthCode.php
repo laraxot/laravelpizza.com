@@ -18,8 +18,6 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 use Modules\Xot\Filament\Schemas\Components\XotBaseSection;
 use Override;
 
-use function Safe\json_encode;
-
 class ViewOauthAuthCode extends XotBaseViewRecord
 {
     protected static string $resource = OauthAuthCodeResource::class;

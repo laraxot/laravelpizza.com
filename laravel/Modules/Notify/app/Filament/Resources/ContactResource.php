@@ -26,16 +26,13 @@ class ContactResource extends XotBaseResource
     {
         return [
             'name' => TextInput::make('name')
-                ->hint(static::trans('fields.name.hint'))
                 ->required()
                 ->maxLength(255),
             'email' => TextInput::make('email')
-                ->hint(static::trans('fields.email.hint'))
                 ->email()
                 ->required()
                 ->maxLength(255),
             'phone' => TextInput::make('phone')
-                ->hint(static::trans('fields.phone.hint'))
                 ->tel()
                 ->maxLength(255),
         ];

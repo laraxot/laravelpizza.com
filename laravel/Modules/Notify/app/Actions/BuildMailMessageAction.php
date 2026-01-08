@@ -11,6 +11,8 @@ use Modules\Notify\Datas\AttachmentData;
 use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 
+use function Safe\mb_convert_encoding;
+
 class BuildMailMessageAction
 {
     use QueueableAction;
@@ -75,10 +77,11 @@ class BuildMailMessageAction
             return '';
         }
 
-        $decoded = html_entity_decode($content, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $decoded = (string) html_entity_decode($content, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
         if (! mb_check_encoding($decoded, 'UTF-8') || str_contains($decoded, 'Ã') || str_contains($decoded, 'Â')) {
-            $decoded = mb_convert_encoding($decoded, 'UTF-8', 'ISO-8859-1');
+            $converted = mb_convert_encoding($decoded, 'UTF-8', 'ISO-8859-1');
+            $decoded = is_string($converted) ? $converted : '';
         }
 
         return $decoded;

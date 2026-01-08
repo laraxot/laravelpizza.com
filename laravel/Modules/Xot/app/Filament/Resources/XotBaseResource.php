@@ -20,6 +20,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
+use Modules\Xot\Actions\GetTransKeyAction;
 use Modules\Xot\Actions\ModelClass\CountAction;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use ReflectionClass;
@@ -35,6 +36,49 @@ abstract class XotBaseResource extends FilamentResource
     use NavigationLabelTrait;
 
     protected static ?string $model = null;
+
+    /**
+     * @param  array<string, bool|float|int|string|null>  $params
+     */
+    public static function trans(string $key, bool $exceptionIfNotExist = false, array $params = []): string
+    {
+        $tmp = static::getKeyTrans($key);
+        $res = trans($tmp, $params);
+
+        if (is_string($res)) {
+            if ($exceptionIfNotExist && $res === $tmp) {
+                throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
+            }
+
+            return $res;
+        }
+
+        if (is_array($res)) {
+            $first = current($res);
+            if (is_string($first) || is_numeric($first)) {
+                return is_string($first) ? $first : ((string) $first);
+            }
+        }
+
+        return 'fix:'.$tmp;
+    }
+
+    protected static function getKeyTrans(string $key): string
+    {
+        /** @var string */
+        $transKey = app(GetTransKeyAction::class)->execute(static::class);
+
+        $key = $transKey.'.'.$key;
+        $key = Str::of($key)->replace('.cluster.pages.', '.')->toString();
+        if (Str::startsWith($key, 'edit_')) {
+            $key = Str::after($key, 'edit_');
+        }
+        if (Str::endsWith($key, '_widget')) {
+            $key = Str::beforeLast($key, '_widget');
+        }
+
+        return $key;
+    }
 
     // protected static ?string $navigationIcon = 'heroicon-o-bell';
     // protected static ?string $navigationLabel = 'Custom Navigation Label';

@@ -6,7 +6,6 @@ namespace Modules\User\Filament\Clusters\Passport\Resources\OauthAuthCodeResourc
 
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAuthCodeResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-use Override;
 
 class ListOauthAuthCodes extends XotBaseListRecords
 {

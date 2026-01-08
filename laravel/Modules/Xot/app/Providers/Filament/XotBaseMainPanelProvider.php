@@ -29,9 +29,9 @@ abstract class XotBaseMainPanelProvider extends PanelProvider
 
     public function panel(Panel $panel): Panel
     {
-        $metatag = MetatagData::make();
 
-        $panel->id('admin')->path('admin');
+        $panel->id('admin')
+            ->path('admin');
 
         $modules = app('modules');
         $hasCms = is_object($modules) && method_exists($modules, 'has')
@@ -43,7 +43,11 @@ abstract class XotBaseMainPanelProvider extends PanelProvider
             $panel->login();
         }
 
-        $panel = $panel->passwordReset()->sidebarFullyCollapsibleOnDesktop()->spa()->profile(null, true);
+        $panel = $panel
+            ->passwordReset()
+            ->sidebarFullyCollapsibleOnDesktop()
+            ->spa()
+            ->profile(null, true);
 
         $panel = app(ApplyMetatagToPanelAction::class)->execute(panel: $panel);
 

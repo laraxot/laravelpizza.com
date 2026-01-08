@@ -1,48 +1,92 @@
-<section class="py-16 sm:py-24 bg-white">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                {{ $title ?? 'Testimonianze' }}
-            </h2>
-        </div>
-        <div class="mt-16 space-y-8">
-            @foreach($testimonials ?? [] as $testimonial)
-            <div class="mx-auto max-w-3xl">
-                <figure class="rounded-2xl bg-gray-50 p-8 shadow-sm">
-                    <blockquote class="text-lg leading-8 text-gray-900">
-                        <p>"{{ $testimonial['content'] ?? 'Contenuto testimonianza' }}"</p>
-                    </blockquote>
-                    <figcaption class="mt-6 flex items-center gap-x-4">
-                        @if(isset($testimonial['avatar']))
-                        <img
-                            class="h-12 w-12 rounded-full bg-gray-200"
-                            src="{{ $testimonial['avatar'] }}"
-                            alt="{{ $testimonial['author'] ?? 'Avatar' }}"
-                        >
-                        @else
-                        <div class="h-12 w-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold">
-                            {{ substr($testimonial['author'] ?? 'U', 0, 1) }}
+{{--
+/**
+ * Testimonials Carousel Block - Theme Sixteen
+ *
+ * Carosello di testimonianze clienti.
+ *
+ * @var string $title Titolo della sezione
+ * @var array $testimonials Array di testimonianze
+ */
+--}}
+
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {{-- Section Title --}}
+        @if(isset($title) && $title)
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    {{ $title }}
+                </h2>
+            </div>
+        @endif
+
+        {{-- Testimonials Grid --}}
+        @if(isset($testimonials) && is_array($testimonials))
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                @foreach($testimonials as $testimonial)
+                    <div class="bg-gray-50 rounded-xl p-8 relative">
+                        {{-- Quote Icon --}}
+                        <div class="absolute top-6 right-6 text-blue-200">
+                            <x-heroicon-o-chat-bubble-left-ellipsis class="w-8 h-8" />
                         </div>
+
+                        {{-- Rating --}}
+                        @if(isset($testimonial['rating']))
+                            <div class="flex mb-4">
+                                @for($i = 1; $i <= 5; $i++)
+                                    <x-heroicon-s-star class="w-5 h-5 {{ $i <= $testimonial['rating'] ? 'text-yellow-400' : 'text-gray-300' }}" />
+                                @endfor
+                            </div>
                         @endif
-                        <div>
-                            <div class="font-semibold text-gray-900">{{ $testimonial['author'] ?? 'Nome Autore' }}</div>
-                            <div class="text-sm text-gray-600">
-                                {{ $testimonial['role'] ?? 'Ruolo' }}{{ isset($testimonial['company']) ? ' - ' . $testimonial['company'] : '' }}
+
+                        {{-- Content --}}
+                        @if(isset($testimonial['content']))
+                            <blockquote class="text-gray-700 mb-6 italic leading-relaxed">
+                                "{{ $testimonial['content'] }}"
+                            </blockquote>
+                        @endif
+
+                        {{-- Author Info --}}
+                        <div class="flex items-center">
+                            @if(isset($testimonial['avatar']))
+                                <img 
+                                    src="{{ $testimonial['avatar'] }}" 
+                                    alt="{{ $testimonial['author'] ?? 'Cliente' }}"
+                                    class="w-12 h-12 rounded-full mr-4 object-cover"
+                                >
+                            @else
+                                <div class="w-12 h-12 bg-blue-600 rounded-full mr-4 flex items-center justify-center">
+                                    <span class="text-white font-semibold text-lg">
+                                        {{ substr($testimonial['author'] ?? 'C', 0, 1) }}
+                                    </span>
+                                </div>
+                            @endif
+
+                            <div>
+                                @if(isset($testimonial['author']))
+                                    <div class="font-semibold text-gray-900">
+                                        {{ $testimonial['author'] }}
+                                    </div>
+                                @endif
+                                
+                                @if(isset($testimonial['role']) || isset($testimonial['company']))
+                                    <div class="text-sm text-gray-600">
+                                        @if(isset($testimonial['role']))
+                                            {{ $testimonial['role'] }}
+                                        @endif
+                                        @if(isset($testimonial['role']) && isset($testimonial['company']))
+                                            {{ ' - ' }}
+                                        @endif
+                                        @if(isset($testimonial['company']))
+                                            {{ $testimonial['company'] }}
+                                        @endif
+                                    </div>
+                                @endif
                             </div>
                         </div>
-                        @if(isset($testimonial['rating']))
-                        <div class="ml-auto flex gap-x-1 text-yellow-400">
-                            @for($i = 0; $i < ($testimonial['rating'] ?? 5); $i++)
-                            <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            @endfor
-                        </div>
-                        @endif
-                    </figcaption>
-                </figure>
+                    </div>
+                @endforeach
             </div>
-            @endforeach
-        </div>
+        @endif
     </div>
 </section>

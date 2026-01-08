@@ -84,6 +84,8 @@ class TenantServiceProvider extends XotBaseServiceProvider
 
         $raw = TenantService::config('database');
 
+        
+
 
 
         /** @var array<string, array|float|int|string|null> $data */
@@ -123,10 +125,8 @@ class TenantServiceProvider extends XotBaseServiceProvider
         }
 
         $data = Arr::set($data, 'connections', $connections);
-
-
         Config::set('database', $data);
-
+        
 
         // Call to a member function prepare() on null
         // Database connection [mysql] not configured.

@@ -12,13 +12,11 @@ use Illuminate\Validation\ValidationException;
 use Modules\Job\Filament\Resources\ScheduleResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 use Modules\Xot\Filament\Traits\NavigationPageLabelTrait;
-use Modules\Xot\Filament\Traits\TransTrait;
 use Webmozart\Assert\Assert;
 
 class CreateSchedule extends XotBaseCreateRecord
 {
     use NavigationPageLabelTrait;
-    use TransTrait;
 
     public Collection $commands;
 

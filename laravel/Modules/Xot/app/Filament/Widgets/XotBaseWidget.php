@@ -83,85 +83,26 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
      * @param  Schema  $schema  Il form da configurare
      * @return Schema Il form configurato
      */
-    final public function form(Schema $schema): Schema
+    public function form(Schema $schema): Schema
     {
         $schema = $schema->components($this->getFormSchema());
         $schema->statePath('data');
 
         $model = $this->getFormModel();
         if ($model !== null) {
-            $this->configureSchemaModel($schema, $model);
-        }
-
-        $this->initializeFormData();
-
-        return $schema;
-    }
-
-    /**
-     * Configura il modello nello schema.
-     */
-    private function configureSchemaModel(Schema $schema, Model|string $model): void
-    {
-        if (\is_string($model)) {
-            if (class_exists($model) && is_subclass_of($model, Model::class)) {
-                /* @var class-string<Model> $model */
+            // Ensure model is compatible with Schema::model()
+            if (\is_string($model)) {
+                if (class_exists($model) && is_subclass_of($model, Model::class)) {
+                    /* @var class-string<Model> $model */
+                    $schema->model($model);
+                }
+            } else {
+                // $model is an instance of Model
                 $schema->model($model);
             }
-        } else {
-            $schema->model($model);
-        }
-    }
-
-    /**
-     * Inizializza $this->data con le chiavi dello schema se necessario.
-     * Questo garantisce che Livewire possa correttamente bindare i campi con statePath('data').
-     */
-    private function initializeFormData(): void
-    {
-        $data = $this->getFormFill();
-        if (empty($data)) {
-            $data = $this->getDefaultFormData();
         }
 
-        /** @var array<string, mixed> $data */
-        $this->data = $data;
-    }
-
-    /**
-     * Restituisce i dati di default del form basati sulle chiavi dello schema.
-     *
-     * @return array<string, mixed>
-     */
-    private function getDefaultFormData(): array
-    {
-        $schemaKeys = array_keys($this->getFormSchema());
-        /** @var array<string, mixed> $data */
-        $data = [];
-        foreach ($schemaKeys as $key) {
-            $keyString = is_string($key) ? $key : (string) $key;
-            // Per checkbox (remember, accept, ecc.), usa false come default
-            // Per altri campi, usa null
-            if ($this->isCheckboxField($keyString)) {
-                $data[$keyString] = false;
-            } else {
-                $data[$keyString] = null;
-            }
-        }
-
-        return $data;
-    }
-
-    /**
-     * Verifica se un campo è una checkbox basandosi sul nome.
-     */
-    private function isCheckboxField(string $key): bool
-    {
-        $keyLower = strtolower($key);
-
-        return str_contains($keyLower, 'remember')
-            || str_contains($keyLower, 'accept')
-            || str_contains($keyLower, 'agree');
+        return $schema;
     }
 
     public function getFormFill(): array
@@ -287,10 +228,22 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
 
     private function resolveView(): void
     {
-        // GetViewByClassAction::execute() restituisce sempre un view-string valido
-        // (verificato con view()->exists() nell'Action)
-        /** @var view-string $view */
-        $view = app(GetViewByClassAction::class)->execute(static::class);
-        $this->view = $view;
+        $defaultView = 'xot::filament.widgets.base';
+
+        if ($this->view !== $defaultView && view()->exists($this->view)) {
+            return;
+        }
+
+        try {
+            $view = app(GetViewByClassAction::class)->execute(static::class);
+            if (view()->exists($view)) {
+                $this->view = $view;
+            }
+        } catch (Exception $e) {
+            /* @phpstan-ignore identical.alwaysTrue */
+            if ($this->view === $defaultView) {
+                throw $e;
+            }
+        }
     }
 }

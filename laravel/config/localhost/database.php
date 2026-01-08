@@ -54,6 +54,62 @@ return [
             'engine' => null,
         ],
         */
+        'user_sqlite' => [
+            'driver' => 'sqlite',
+            'url' => env('DATABASE_URL'),
+            'database' => database_path(env('DB_DATABASE_USER', 'db_user').'.sqlite'),
+            'prefix' => '',
+            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+        ],
+
+        'user_mysql' => [
+            'driver' => env('DB_CONNECTION', 'mysql'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            // 'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',
+            'database' => env('DB_DATABASE_USER', 'forge86'),
+            'username' => env('DB_USERNAME_USER', 'forge_user_02_1b'),
+            'password' => env('DB_PASSWORD_USER', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
+        'user_mariadb' => [
+            'driver' => env('DB_CONNECTION', 'mysql'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            // 'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',
+            'database' => env('DB_DATABASE_USER', 'forge86'),
+            'username' => env('DB_USERNAME_USER', 'forge_user_02_1c'),
+            'password' => env('DB_PASSWORD_USER', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
+
+
+
+        'user' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            // 'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',
+            'database' => env('DB_DATABASE_USER', 'forge86'),
+            'username' => env('DB_USERNAME_USER', 'forge_user_06'),
+            'password' => env('DB_PASSWORD_USER', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),

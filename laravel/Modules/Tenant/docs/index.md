@@ -38,7 +38,7 @@ Questo documento serve come indice centrale per il modulo Tenant, fornendo una g
 ### Gestione Tenant
 - [Funzionalità Core](./core-functionality.md) - Funzionalità principali del modulo
 - [Gestione Domini](./domain-management.md) - Sistema di gestione domini
-- [Configurazione Tenant](./tenant-configuration.md) - Configurazione specifica per tenant
+- [Configurazione Tenant](./configuration.md) - Configurazione specifica per tenant
 - [Isolamento Dati](./data-isolation.md) - Meccanismi di isolamento dei dati
 - [Database Separati](./separate-databases.md) - Gestione di database separati per tenant
 

@@ -36,10 +36,9 @@ abstract class XotBasePanelProvider extends PanelProvider
     {
         $moduleNamespace = $this->getModuleNamespace();
         $moduleLow = Str::lower($this->module);
-        // Removed: $metatag = MetatagData::make(); // Unused local variable
-
-        $mainModule = Str::lower(XotData::make()->main_module); // Renamed to camelCase
-        $default = $mainModule === $moduleLow;
+        $mainModuleLow = Str::lower(XotData::make()->main_module); // Renamed to camelCase
+        $default = $mainModuleLow === $moduleLow;
+        
 
         $panel = $panel
             ->default($default)

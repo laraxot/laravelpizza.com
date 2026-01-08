@@ -7,7 +7,7 @@ namespace Modules\Xot\Database\Migrations;
 use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Migrations\Migration as LaravelMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Database\Schema\ColumnDefinition;
@@ -25,7 +25,7 @@ use Webmozart\Assert\Assert;
 /**
  * Class XotBaseMigration.
  */
-abstract class XotBaseMigration extends Migration
+abstract class XotBaseMigration extends LaravelMigration
 {
     protected Model $model;
 

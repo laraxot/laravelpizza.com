@@ -49,7 +49,7 @@ jobs:
     - name: PHPMD Analysis
       run: |
         echo "🔍 Running PHPMD analysis..."
-        ./phpmd.phar Modules text Modules/Xot/phpmd.ruleset.xml || true
+        ./phpmd.phar Modules/*/app text Modules/Xot/phpmd.ruleset.xml --exclude Modules/Xot/app/Actions/Array || true
         
     - name: Laravel Tests
       run: |

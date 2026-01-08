@@ -15,7 +15,10 @@
 - [Authentication Flow](./authentication-flow.md) - Flusso autenticazione
 - [Permission System](./permission-system.md) - Sistema permessi e ruoli
 - [User Relationships](./user-relationships.md) - Relazioni con altri modelli
-- [Passport Cluster](./passport-cluster-summary.md) - Cluster OAuth/Passport resources
+- [Passport Cluster Summary](./passport-cluster-summary.md) - Cluster OAuth/Passport resources
+- [Passport Cluster Implementation](./passport-cluster-implementation-completed.md) - Implementazione completata
+- [Passport Cluster Resources Only Rule](./passport-cluster-resources-only-rule.md) - ⚠️ REGOLA CRITICA: Solo risorse OAuth/Passport
+- [Passport vs Socialite Clarification](./passport-vs-socialite-clarification.md) - ⚠️ DISTINZIONE CRITICA: Passport (OAuth2 Server) vs Socialite (Social Auth)
 
 ### 🧩 Core Components
 - [User Model](../../app/Models/User.php) - Modello principale User

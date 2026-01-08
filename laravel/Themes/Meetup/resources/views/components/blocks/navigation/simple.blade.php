@@ -1,33 +1,66 @@
-<nav class="bg-white shadow-sm border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-            <!-- Logo -->
-            <div class="flex-shrink-0">
-                <a href="/" class="flex items-center">
-                    <x-heroicon-o-building-storefront class="h-8 w-8 text-blue-600" />
-                    <span class="ml-2 text-xl font-bold text-gray-900">Laravel Pizza Meetups</span>
-                </a>
-            </div>
+{{--
+/**
+ * Simple Navigation Component - Theme Sixteen
+ *
+ * Componente di navigazione semplice per il tema Sixteen.
+ * Utilizzato per blocchi CMS di navigazione base.
+ *
+ * @var array $data Dati di configurazione del blocco
+ */
+--}}
 
-            <!-- Navigation Links -->
-            <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-4">
-                    @foreach($items as $item)
-                        <a href="{{ $item['url'] }}"
-                           class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition duration-150 ease-in-out">
-                            {{ $item['label'] }}
-                        </a>
-                    @endforeach
+<nav class="simple-navigation" role="navigation" aria-label="@lang('pub_theme::navigation.main')">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-4">
+            {{-- Logo o titolo --}}
+            @if(isset($data['title']) || isset($data['brand']))
+                <div class="flex items-center">
+                    @if(isset($data['logo']))
+                        <img src="{{ $data['logo'] }}" alt="{{ $data['brand'] ?? $data['title'] ?? 'Logo' }}" class="h-8 w-auto mr-3">
+                    @endif
+                    <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">
+                        {{ $data['brand'] ?? $data['title'] ?? @lang('pub_theme::navigation.site_title') }}
+                    </h2>
                 </div>
-            </div>
+            @endif
 
-            <!-- Mobile menu button -->
-            <div class="md:hidden">
-                <button type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
-                    <span class="sr-only">Open main menu</span>
-                    <x-heroicon-o-bars-3 class="h-6 w-6" />
-                </button>
-            </div>
+            {{-- Menu di navigazione --}}
+            @if(isset($data['menu_items']) && is_array($data['menu_items']))
+                <ul class="flex space-x-8">
+                    @foreach($data['menu_items'] as $item)
+                        <li>
+                            <a 
+                                href="{{ $item['url'] ?? '#' }}" 
+                                class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-300 font-medium
+                                       {{ ($item['active'] ?? false) ? 'text-blue-600 dark:text-blue-400' : '' }}"
+                                @if($item['external'] ?? false) target="_blank" rel="noopener noreferrer" @endif
+                            >
+                                {{ $item['label'] ?? $item['title'] ?? 'Menu Item' }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            @else
+                {{-- Fallback menu --}}
+                <ul class="flex space-x-8">
+                    <li>
+                        <a href="/" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-300 font-medium">
+                            @lang('pub_theme::navigation.home')
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/about" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-300 font-medium">
+                            @lang('pub_theme::navigation.about')
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-300 font-medium">
+                            @lang('pub_theme::navigation.contact')
+                        </a>
+                    </li>
+                </ul>
+            @endif
         </div>
     </div>
 </nav>
+

@@ -127,6 +127,21 @@ return [
 **Database Configuration (config/localhost/database.php)**:
 Enhanced database configuration with multiple connections and advanced features.
 
+## Module configuration: `Modules/Meetup/config/config.php`
+
+Questo progetto usa uno schema coerente per i file `Modules/*/config/config.php` (vedi anche `Modules/User`, `Modules/Tenant`, `Modules/Xot`, `Modules/UI`).
+
+La scelta “vince” su DRY/KISS perché evita varianti non necessarie tra moduli e rende prevedibile l’autodiscovery (providers, navigation, routes).
+
+Chiavi standard mantenute:
+
+- **`name`**
+- **`description`**
+- **`icon`**
+- **`navigation`** (`enabled`, `sort`)
+- **`routes`** (`enabled`, `middleware`)
+- **`providers`** (FQCN Laraxot, namespace `Modules\\Meetup\\...` senza segmenti `App`)
+
 ### Database Configuration
 
 #### Multiple Database Connections

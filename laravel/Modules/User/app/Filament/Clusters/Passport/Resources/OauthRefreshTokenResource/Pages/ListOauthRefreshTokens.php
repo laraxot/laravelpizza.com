@@ -6,7 +6,6 @@ namespace Modules\User\Filament\Clusters\Passport\Resources\OauthRefreshTokenRes
 
 use Modules\User\Filament\Clusters\Passport\Resources\OauthRefreshTokenResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-use Override;
 
 class ListOauthRefreshTokens extends XotBaseListRecords
 {

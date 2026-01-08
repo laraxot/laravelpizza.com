@@ -50,6 +50,34 @@ Overall Module Completion: 60%
    - Complete property annotations
    - Priority: High
 
+## Quality gates (operativo)
+
+### PHPStan: `./vendor/bin/phpstan analyse Modules`
+
+**Ultimo run**: 2026-01-08 (eseguito da `laravel/`)
+
+**Esito**: ❌ 14 errori (bloccanti)
+
+**Categorie principali**:
+
+1. **thecodingmachine/safe**
+   - Uso di `mb_convert_encoding()` in:
+     - `Notify/app/Actions/BuildMailMessageAction.php`
+     - `Notify/app/Actions/SMS/SendNetfunSMSAction.php`
+   - Fix atteso: import `use function Safe\mb_convert_encoding;` e sostituzione chiamate.
+
+2. **Filament Resource API drift**
+   - `Notify/app/Filament/Resources/ContactResource.php`:
+     - `ContactResource::trans()` inesistente
+     - `Field::hint()` riceve `mixed` invece di `Closure|Htmlable|string|null`
+   - Fix atteso: rimuovere `trans()` e passare un `string|null` tipizzato a `hint()`.
+
+### Piano batch (DRY/KISS)
+
+1. Batch A (Safe functions): correggere i due Action sopra, rilanciare PHPStan su `Modules/Notify`.
+2. Batch B (ContactResource): correggere API drift + hint typing, rilanciare PHPStan su `Modules/Notify`.
+3. Solo dopo PHPStan green: PHPMD + PHPInsights + lint per il batch.
+
 2. Code Quality Improvements
    - Implement missing tests
    - Reduce code duplication
@@ -65,6 +93,24 @@ Overall Module Completion: 60%
    - Complete PHPStan fixes
    - Improve test coverage
    - Priority: High
+
+## PHPStan current blockers (resolved)
+
+1. **Filament Resources: `static::trans()`**
+   - Fix: implementazione di `trans()` nella base `Modules\Xot\Filament\Resources\XotBaseResource`
+   - Impatto: risolti gli errori PHPStan su `hint()`/`helperText()` in `ContactResource` e risorse simili
+
+2. **thecodingmachine/safe: `mb_convert_encoding`**
+   - Fix: uso della variante safe tramite `use function Safe\mb_convert_encoding;` e narrowing a string in `BuildMailMessageAction::decodeRichText()`
+   - Impatto: rimossi errori “unsafe function” e mismatch di tipi in return
+
+3. **Risultato**
+   - `./vendor/bin/phpstan analyse Modules --no-progress`: ✅ 0 errori (alla data dell'ultimo fix)
+
+4. **Prossimi quality gates (da rieseguire dopo ogni batch)**
+   - `./vendor/bin/pint --test`
+   - `./phpmd.phar Modules text Modules/Xot/phpmd.ruleset.xml`
+   - `./vendor/bin/phpinsights analyse Modules/Notify`
 
 2. Documentation
    - API documentation

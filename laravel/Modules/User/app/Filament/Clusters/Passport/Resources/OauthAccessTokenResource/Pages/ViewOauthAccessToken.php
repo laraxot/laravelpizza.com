@@ -13,7 +13,6 @@ class ViewOauthAccessToken extends XotBaseViewRecord
 {
     protected static string $resource = OauthAccessTokenResource::class;
 
-
     /**
      * @return array<string, Component>
      */
