@@ -35,6 +35,8 @@
 ### 🐛 Troubleshooting & Fixes
 - [Common Issues](./common-issues.md) - Problemi comuni e soluzioni
 - [Debugging Multi-tenancy](./debugging-multi-tenancy.md) - Debugging strategie
+- [RunningInConsole Check Removal](./runninginconsole-check-removal-summary.md) - Rimozione check console
+- [RunningInConsole Check Decision](./runninginconsole-check-decision.md) - Processo decisionale
 
 ### 📊 Code Quality
 - [phpstan/](./phpstan/) - PHPStan analysis reports
