@@ -20,9 +20,10 @@ We are aiming for a premium, high-fidelity reproduction of the original communit
 ## Action Plan
 
 ### 1. Theme and Assets
-- [ ] Fix `logo.svg` path in `header.json`.
+- [x] Fix `logo.svg` path in `header.json`.
 - [ ] Ensure all red accents use `#dc2626` (Tailwind `red-600`).
-- [ ] Run `npm run build && npm run copy` in `Themes/Meetup` to sync compiled assets.
+- [x] Run `npm run build && npm run copy` in `Themes/Meetup` to sync compiled assets.
+- [x] Fix `Page` component translation logic for localized block arrays.
 
 ### 2. Content Alignment (JSON)
 - [ ] Review `home.json` content blocks to ensure they focus on "Meetups", "Pizza", and "Community".

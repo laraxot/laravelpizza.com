@@ -1,0 +1,94 @@
+{
+    "id": "1",
+    "title": {
+        "it": "Upcoming Events - Laravel Pizza Meetups"
+    },
+    "slug": "events",
+    "middleware": null,
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "events",
+                "slug": "events-list",
+                "data": {
+                    "view": "pub_theme::components.blocks.events.list",
+                    "title": "Upcoming Events",
+                    "description": "Join us for pizza and Laravel discussions",
+                    "events": [
+                        {
+                            "status": "upcoming",
+                            "category": "Community Meetup",
+                            "title": "Laravel 11 Release Pizza Party",
+                            "description": "Celebrate the release of Laravel 11 with fellow developers! We'll discuss new features, share experiences, and enjoy delicious pizza together. Perfect for both beginners and experienced Laravel developers.",
+                            "date": "December 15, 2025",
+                            "time": "6:00 PM - 9:00 PM",
+                            "location": "Tech Hub Downtown, 123 Main St",
+                            "url": "/events/laravel-11-release-pizza-party"
+                        },
+                        {
+                            "status": "upcoming",
+                            "category": "Workshop",
+                            "title": "Filament Admin Panel Workshop",
+                            "description": "Deep dive into Filament admin panels while enjoying pizza! Learn best practices, tips and tricks, and build a complete admin panel from scratch. Bring your laptop and questions!",
+                            "date": "December 22, 2025",
+                            "time": "5:30 PM - 8:30 PM",
+                            "location": "Innovation Center, 456 Tech Ave",
+                            "url": "/events/filament-admin-panel-workshop"
+                        },
+                        {
+                            "status": "upcoming",
+                            "category": "Livewire Meetup",
+                            "title": "Livewire 3 Pizza Meetup",
+                            "description": "Explore the power of Livewire 3 with the community! Share your projects, learn new techniques, and network with other developers. Pizza and drinks provided!",
+                            "date": "January 5, 2026",
+                            "time": "6:30 PM - 9:00 PM",
+                            "location": "Startup Lounge, 789 Innovation Blvd",
+                            "url": "/events/livewire-3-pizza-meetup"
+                        },
+                        {
+                            "status": "past",
+                            "category": "Beginner Friendly",
+                            "title": "Laravel Beginner's Pizza Night",
+                            "description": "New to Laravel? Join us for a beginner-friendly evening! We'll cover the basics, answer questions, and help you get started with your first Laravel project.",
+                            "date": "November 20, 2025",
+                            "time": "6:00 PM - 8:30 PM",
+                            "location": "Community Center, 321 Learning Lane",
+                            "url": "/events/laravel-beginners-pizza-night"
+                        },
+                        {
+                            "status": "past",
+                            "category": "Advanced Topics",
+                            "title": "Advanced Eloquent & Pizza",
+                            "description": "A deep dive into advanced Eloquent patterns, performance tips, and real-world use cases. Perfect for developers who want to level up their database skills.",
+                            "date": "November 5, 2025",
+                            "time": "7:00 PM - 9:30 PM",
+                            "location": "Tech Loft, 987 Query St",
+                            "url": "/events/advanced-eloquent-and-pizza"
+                        },
+                        {
+                            "status": "past",
+                            "category": "Community Meetup",
+                            "title": "Testing & TDD Pizza Session",
+                            "description": "Hands-on evening focused on testing strategies, TDD workflows, and practical examples in Laravel. Bring your laptop and your testing questions.",
+                            "date": "October 18, 2025",
+                            "time": "6:30 PM - 9:00 PM",
+                            "location": "Dev Hub, 654 Refactor Rd",
+                            "url": "/events/testing-and-tdd-pizza-session"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": []
+    },
+    "footer_blocks": {
+        "it": []
+    },
+    "created_at": "2025-01-06T15:30:00.000000Z",
+    "updated_at": "2025-01-06T15:30:00.000000Z",
+    "created_by": null,
+    "updated_by": "01985ae8-8039-71ea-88c7-54ebce6295b0"
+}

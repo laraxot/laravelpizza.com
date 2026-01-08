@@ -47,11 +47,27 @@ Rendere la homepage locale `http://127.0.0.1:8002/it` visivamente equivalente a 
   - Grid coerente con 4 feature (`lg:grid-cols-4`)
   - Rimossa interpolazione di classi Tailwind (no `hover:border-{{ ... }}`) per compatibilità Tailwind v4
 
+### 2) Allineamento icona hero (pizza slice)
+- **JSON**: `home.json` usa `pub_theme::components.blocks.hero.main`
+- **Fix**: `Themes/Meetup/resources/views/components/blocks/hero/main.blade.php`
+  - Sostituita l’icona errata con l’icona pizza slice coerente con navbar/footer.
+
+## Regola operativa (cache)
+Dopo **qualsiasi** modifica a Blade/Views del tema, per vedere il risultato reale in browser:
+
+```bash
+php artisan view:clear
+php artisan optimize:clear
+```
+
+Poi hard refresh browser.
+
 ## Screenshots
 Salvare qui gli screenshot (PNG) per audit e regressioni:
 
 - `docs/assets/pixel-parity/home-local-before.png`
 - `docs/assets/pixel-parity/home-local-after-features.png`
+- `docs/assets/pixel-parity/home-local-after-hero-icon.png`
 - `docs/assets/pixel-parity/home-prod-reference.png`
 
 > Nota: gli screenshot devono essere aggiornati ad ogni cambio visivo significativo.

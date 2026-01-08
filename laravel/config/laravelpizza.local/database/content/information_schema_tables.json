@@ -1,0 +1,82 @@
+[
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila3_mono\/laravel\/database\/database.sqlite",
+        "table_name": "appointments",
+        "id": 1,
+        "updated_at": "2025-09-10T20:21:20.661544Z",
+        "created_at": "2025-09-10T20:21:20.656283Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila3_mono\/laravel\/database\/database.sqlite",
+        "table_name": "clients",
+        "id": 2,
+        "updated_at": "2025-09-10T20:21:20.680759Z",
+        "created_at": "2025-09-10T20:21:20.675934Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila3_mono\/laravel\/database\/database.sqlite",
+        "table_name": "machines",
+        "id": 3,
+        "updated_at": "2025-09-10T20:21:20.696550Z",
+        "created_at": "2025-09-10T20:21:20.693033Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila3_mono\/laravel\/database\/database.sqlite",
+        "table_name": "legal_offices",
+        "id": 4,
+        "updated_at": "2025-09-10T20:21:20.711630Z",
+        "created_at": "2025-09-10T20:21:20.707813Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila3_mono\/laravel\/database\/database.sqlite",
+        "table_name": "legal_representatives",
+        "id": 5,
+        "updated_at": "2025-09-10T20:21:20.721344Z",
+        "created_at": "2025-09-10T20:21:20.719119Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila3_mono\/laravel\/database\/database.sqlite",
+        "table_name": "medical_directors",
+        "id": 6,
+        "updated_at": "2025-09-10T20:21:20.729843Z",
+        "created_at": "2025-09-10T20:21:20.727862Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila3_mono\/laravel\/database\/database.sqlite",
+        "table_name": "phone_calls",
+        "id": 7,
+        "updated_at": "2025-09-10T20:21:20.739167Z",
+        "created_at": "2025-09-10T20:21:20.736840Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 0
+    },
+    {
+        "table_schema": "\/var\/www\/html\/_bases\/base_techplanner_fila3_mono\/laravel\/database\/database.sqlite",
+        "table_name": "work_hours",
+        "id": 8,
+        "updated_at": "2025-09-11T06:24:52.156227Z",
+        "created_at": "2025-09-11T06:24:52.152469Z",
+        "updated_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "created_by": "0199044b-fe7c-73a8-b8fc-d8159d3cf146",
+        "table_rows": 15
+    }
+]

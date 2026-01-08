@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+  <!-- Pizza Slice Shape -->
+  <path d="M12 2 L22 22 L2 22 Z" fill="#dc2626"/>
+  <!-- Cheese dots/toppings -->
+  <circle cx="12" cy="16" r="1.2" fill="#fef3c7"/>
+  <circle cx="9" cy="14" r="0.9" fill="#fef3c7"/>
+  <circle cx="15" cy="14" r="0.9" fill="#fef3c7"/>
+  <circle cx="11" cy="18" r="0.8" fill="#fef3c7"/>
+  <circle cx="13" cy="18" r="0.8" fill="#fef3c7"/>
+  <circle cx="12" cy="12" r="1" fill="#fef3c7"/>
+  <circle cx="10" cy="10" r="0.7" fill="#fef3c7"/>
+  <circle cx="14" cy="10" r="0.7" fill="#fef3c7"/>
+</svg>

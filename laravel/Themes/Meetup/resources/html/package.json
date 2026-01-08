@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "copy": "mkdir -p ../../../public_html/themes/Meetup && cp -r ./dist/* ../../../public_html/themes/Meetup"
+    "copy": "mkdir -p ../../../public_html/themes/Meetup && cp -r ./dist/* ../../../public_html/themes/Meetup && mkdir -p ../../../public_html/themes/Meetup/images && cp -r ./images/* ../../../public_html/themes/Meetup/images"
   },
   "devDependencies": {
     "axios": "^1.11.0",

@@ -32,12 +32,14 @@
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div class="text-center">
             {{-- Pizza Icon --}}
-            <div class="flex justify-center mb-8">
-                <div class="bg-red-500 bg-opacity-20 backdrop-blur-sm p-6 rounded-full border border-red-400 border-opacity-30">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                </div>
+            <div class="flex justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-24 w-24 text-red-500" aria-hidden="true">
+                    <path d="M15 11h.01"></path>
+                    <path d="M11 15h.01"></path>
+                    <path d="M16 16h.01"></path>
+                    <path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"></path>
+                    <path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"></path>
+                </svg>
             </div>
             
             {{-- Main Title --}}
@@ -73,7 +75,7 @@
 
             {{-- Description --}}
             @if(isset($description) && $description)
-                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-red-50 leading-relaxed">
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
                     {{ $description }}
                 </p>
             @endif
