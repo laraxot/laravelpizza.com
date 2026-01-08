@@ -1,0 +1,1 @@
+Error thrown in /var/www/html/_bases/base_fixcity_fila3_mono/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php on line 961 while loading bootstrap file /var/www/html/_bases/base_fixcity_fila3_mono/laravel/vendor/larastan/larastan/bootstrap.php: Class "Modules\Job\Providers\JobServiceProvider" not found

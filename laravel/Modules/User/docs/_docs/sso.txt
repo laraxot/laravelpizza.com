@@ -1,0 +1,1 @@
+https://fusionauth.io/blog/single-sign-on-laravel-fusionauth

@@ -1,0 +1,69 @@
+{
+    "blocks": [
+        {
+            "name": "Logo",
+            "type": "logo",
+            "data": {
+                "view": "pub_theme::components.blocks.logo",
+                "src": "<nome progetto>::images/logo.svg",
+                "alt": "{{ config('app.name') }}",
+                "width": 150,
+                "height": 32
+            }
+        },
+        {
+            "name": "Menu di Navigazione",
+            "type": "navigation",
+            "data": {
+                "view": "pub_theme::components.blocks.navigation",
+                "items": [
+                    {
+                        "label": "Home",
+                        "url": "/",
+                        "type": "link"
+                    },
+                    {
+                        "label": "Servizi",
+                        "url": "/servizi",
+                        "type": "link"
+                    },
+                    {
+                        "label": "Chi Siamo",
+                        "url": "/chi-siamo",
+                        "type": "link"
+                    },
+                    {
+                        "label": "Contatti",
+                        "url": "/contatti",
+                        "type": "link"
+                    }
+                ],
+                "alignment": "start",
+                "orientation": "horizontal"
+            }
+        },
+        {
+            "name": "Dropdown Utente",
+            "type": "user-dropdown",
+            "data": {
+                "view": "pub_theme::components.blocks.navigation.user-dropdown",
+                "guest_view": "pub_theme::components.blocks.navigation.login-buttons",
+                "menu_items": [
+                    {
+                        "label": "Profilo",
+                        "url": "/profilo-paziente",
+                        "icon": "heroicon-o-user"
+                    },
+                    {
+                        "type": "divider"
+                    },
+                    {
+                        "label": "Logout",
+                        "url": "/logout",
+                        "icon": "heroicon-o-arrow-left-on-rectangle"
+                    }
+                ]
+            }
+        }
+    ]
+}

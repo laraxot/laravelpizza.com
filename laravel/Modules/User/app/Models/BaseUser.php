@@ -25,10 +25,10 @@ use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use Laravel\Passport\Contracts\OAuthenticatable;
-use Laravel\Passport\Contracts\ScopeAuthorizable;
 use Laravel\Passport\HasApiTokens;
 use Laravel\Passport\PersonalAccessTokenResult;
+use Laravel\Passport\Token;
+use Laravel\Passport\TransientToken;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\Traits\HasAuthenticationLogTrait;
 use Modules\User\Models\Traits\HasModules;
@@ -131,7 +131,7 @@ use Spatie\Permission\Contracts\Role as SpatieRoleContract;
  *
  * @mixin \Eloquent
  */
-abstract class BaseUser extends Authenticatable implements HasMedia, HasName, HasTenants, MustVerifyEmail, UserContract, OAuthenticatable
+abstract class BaseUser extends Authenticatable implements HasMedia, HasName, HasTenants, MustVerifyEmail, UserContract
 {
     use HasApiTokens {
         HasApiTokens::tokenCan as protected passportTokenCan;
@@ -166,7 +166,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         return $this->passportCreateToken($name, $scopes);
     }
 
-    public function withAccessToken(?ScopeAuthorizable $accessToken): static
+    public function withAccessToken(Token|TransientToken|null $accessToken): static
     {
         $this->passportWithAccessToken($accessToken);
 

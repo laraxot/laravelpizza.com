@@ -29,7 +29,9 @@ Homestead.json
 .phpactor.json
 auth.json
 bashscripts/
-docs/
+
+
+## AI
 .claude/
 .gemini/
 .ai/
@@ -38,11 +40,13 @@ docs/
 .Windsurf/
 .windsurf/
 .cursorrules
-laravel/database/migrations/
-_base_laravelpizza_1.code-workspace
 IFLOW.md
 GEMINI.md
-CLAUDE.mdpublic_html/js/
+CLAUDE.md
+
+
+laravel/database/migrations/
+public_html/js/
 public_html/fonts/
 public_html/css/
 public_html/vendor/

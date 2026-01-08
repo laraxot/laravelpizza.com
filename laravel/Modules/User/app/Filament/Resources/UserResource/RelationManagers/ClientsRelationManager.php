@@ -119,11 +119,8 @@ class ClientsRelationManager extends XotBaseRelationManager
                     return;
                 }
 
-                $client->owner()->associate($owner);
                 $client->forceFill([
                     'user_id' => $owner->getKey(),
-                    'owner_id' => (string) $owner->getKey(),
-                    'owner_type' => $owner->getMorphClass(),
                 ]);
                 $client->save();
 

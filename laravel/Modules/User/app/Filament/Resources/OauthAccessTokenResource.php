@@ -18,6 +18,7 @@ use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
+use Modules\User\Filament\Clusters\Passport;
 use Modules\User\Filament\Resources\OauthAccessTokenResource\Pages\ListOauthAccessTokens;
 use Modules\User\Filament\Resources\OauthAccessTokenResource\Pages\ViewOauthAccessToken;
 use Modules\User\Models\OauthAccessToken;
@@ -27,6 +28,7 @@ use function Safe\json_encode;
 
 class OauthAccessTokenResource extends XotBaseResource
 {
+    protected static ?string $cluster = Passport::class;
     protected static ?string $model = OauthAccessToken::class;
 
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-key';

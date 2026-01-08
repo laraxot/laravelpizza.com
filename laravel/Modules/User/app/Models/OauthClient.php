@@ -7,7 +7,6 @@ namespace Modules\User\Models;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Support\Carbon;
@@ -171,13 +170,4 @@ class OauthClient extends PassportClient implements AuthorizableContract
         }
     }
 
-    /**
-     * @return MorphTo<AuthUser, $this>
-     *
-     * @phpstan-return MorphTo<AuthUser, $this>
-     */
-    public function owner(): MorphTo
-    {
-        return parent::owner();
-    }
 }

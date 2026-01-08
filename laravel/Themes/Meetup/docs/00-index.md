@@ -1,0 +1,49 @@
+# Meetup Theme Documentation Index
+
+## Core Concepts
+
+- [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup theme
+- [Project Purpose](project-purpose.md) - Why this theme exists
+- [Project Philosophy](project-philosophy.md) - Core philosophy of the theme
+- [Theme Development Rules](theme-development-rules.md) - Development guidelines
+- [Architecture Folio Volt Filament](architecture-folio-volt-filament.md) - Architecture patterns
+
+## Implementation Guides
+
+- [Theme Styling Implementation](theme-styling-implementation.md) - Styling approach
+- [Theme Integration Guide](theme-integration-guide.md) - Integration patterns
+- [Theme Improvements](theme-improvements.md) - Improvement strategies
+- [Folio Volt Implementation](theme-folio-volt-implementation.md) - Implementation guide
+- [Folio Volt Best Practices](folio-volt-best-practices.md) - Best practices
+
+## Frontend Assets
+
+- [Frontend Asset Management](frontend-asset-management.md) - Asset management
+- [Vite Build Output Directory](vite-build-output-directory.md) - Build configuration
+- [Vite Asset Loading Best Practices](vite-asset-loading-best-practices.md) - Asset loading
+- [Theme Asset Synchronization Plan](theme-asset-synchronization-plan.md) - Asset sync
+- [Theme Asset Build System](theme-asset-build-system.md) - Build system
+
+## Layout and Components
+
+- [Layout Component Strategy](layout-component-strategy.md) - Layout strategy
+- [Layout Hierarchy Rules](layout-hierarchy-rules.md) - Layout rules
+- [Layout Philosophy Laraxot](layout-philosophy-laraxot.md) - Layout philosophy
+- [Block Components Structure](block-components-structure.md) - Component structure
+- [Metatags Component Usage](metatags-component-usage.md) - Metatag usage
+
+## Pages and Features
+
+- [Events Page](events-page.md) - Event page implementation
+- [Events Page Analysis](events-page-analysis.md) - Event page analysis
+- [Events Page Differences Analysis](events-page-differences-analysis.md) - Event page differences
+- [Design Implementation Plan](design-implementation-plan.md) - Design approach
+- [Design Synthesis](design-synthesis.md) - Design synthesis
+
+## Troubleshooting
+
+- [Error Analysis and Solution](error-analysis-and-solution.md) - Error solutions
+- [Root Cause Found](root-cause-found.md) - Root cause analysis
+- [Missing View Fix Plan](missing-view-fix-plan.md) - Missing view fixes
+- [Missing Layout Section Fix Plan](missing-layout-section-fix-plan.md) - Layout fixes
+- [Troubleshooting Directory](troubleshooting/) - Detailed troubleshooting guides

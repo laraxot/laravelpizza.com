@@ -25,8 +25,8 @@ final class ClientResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'owner' => $this->when(
-                null !== $this->owner,
-                fn (): OwnerResource => new OwnerResource($this->owner)
+                null !== $this->user,
+                fn (): OwnerResource => new OwnerResource($this->user)
             ),
         ];
     }

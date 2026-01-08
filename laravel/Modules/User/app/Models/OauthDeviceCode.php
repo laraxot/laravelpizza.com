@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Carbon;
 use Laravel\Passport\Database\Factories\ClientFactory;
-use Laravel\Passport\DeviceCode as PassportDeviceCode;
 use Modules\Xot\Contracts\UserContract;
+use Modules\User\Models\BaseModel;
 
 /**
  * Modules\User\Models\OauthDeviceCode.
@@ -59,7 +59,7 @@ use Modules\Xot\Contracts\UserContract;
  * @mixin IdeHelperOauthClient
  * @mixin \Eloquent
  */
-class OauthDeviceCode extends PassportDeviceCode
+class OauthDeviceCode extends BaseModel
 {
     /** @var string */
     protected $connection = 'user';

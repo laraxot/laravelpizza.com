@@ -1,0 +1,34 @@
+~~~ php
+<?php
+
+declare(strict_types=1);
+
+return [
+    'adm_home' => '01',
+    'enable_ads' => '1',
+    'main_module' => 'Blog',
+    'primary_lang' => 'it',
+    'pub_theme' => 'One',
+    'search_action' => 'it/search',
+    'show_trans_key' => false,
+    'disable_admin_dynamic_route' => true,
+    'disable_frontend_dynamic_route' => true,
+    'register_adm_theme' => false,
+    'register_pub_theme' => false,
+    'forcessl' => false,
+];
+~~~
+### Versione HEAD
+
+
+## Collegamenti tra versioni di xra.md
+* [xra.md](../../../Xot/project_docs/install/xra.md)
+* [xra.md](../../../Tenant/project_docs/it/xra.md)
+* [xra.md](../../../Tenant/project_docs/it/config/xra.md)
+
+
+### Versione Incoming
+
+
+---
+
