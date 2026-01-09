@@ -15,7 +15,7 @@ return new class extends XotBaseMigration {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
             // $table->morphs('authenticatable');
-            $table->uuidMorphs('authenticatable', 'k_authenticatable');
+            $table->uuidMorphs('authenticatable', 'k_auth_log_morph');
             $table->string('ip_address', 45)->nullable();
             $table->text('user_agent')->nullable();
             $table->timestamp('login_at')->nullable();

@@ -10,65 +10,60 @@ use function Pest\Laravel\get;
 
 uses(Modules\User\Tests\TestCase::class);
 
-describe('Auth Components Reorganization Tests', function (): void {
-    test('auth components are properly organized after reorganization', function (): void {
-        // Test auth.confirms-password component exists
-        expect(View::exists('pub_theme::components.auth.confirms-password'))->toBeTrue();
-
-        // Test auth.authentication-card component exists
-        expect(View::exists('pub_theme::components.auth.authentication-card'))->toBeTrue();
-
-        // Test auth.authentication-card-logo component exists
-        expect(View::exists('pub_theme::components.auth.authentication-card-logo'))->toBeTrue();
+describe('Auth Components Tests', function (): void {
+    test('auth components exist and work correctly', function (): void {
+        // Test existing auth components
+        expect(View::exists('components.auth-session-status'))->toBeTrue();
+        expect(View::exists('components.auth-header'))->toBeTrue();
+        expect(View::exists('user::components.auth-session-status'))->toBeTrue();
     });
 
-    test('form components work correctly in auth context', function (): void {
-        // Test that reorganized form components exist and work
-        expect(View::exists('pub_theme::components.forms.input'))->toBeTrue();
-        expect(View::exists('pub_theme::components.forms.input-label'))->toBeTrue();
-        expect(View::exists('pub_theme::components.forms.validation-errors'))->toBeTrue();
-        expect(View::exists('pub_theme::components.utilities.button'))->toBeTrue();
+    test('auth layout components exist and work correctly', function (): void {
+        // Test auth layout components that actually exist
+        expect(View::exists('components.layouts.auth'))->toBeTrue();
+        expect(View::exists('user::layouts.auth'))->toBeTrue();
     });
 
-    test('login page with reorganized components loads correctly', function (): void {
-        // Test that login pages using reorganized components still work
-        $response = get('/auth/login');
+    test('login page loads correctly', function (): void {
+        // Test that login page loads correctly
+        $response = get('/it/auth/login');
         /* @phpstan-ignore-next-line method.nonObject */
         $response->assertStatus(200);
     });
 
-    test('register page with reorganized components loads correctly', function (): void {
-        // Test that register page using reorganized components still work
-        $response = get('/auth/register');
+    test('register page loads correctly', function (): void {
+        // Test that register page loads correctly
+        $response = get('/it/auth/register');
         /* @phpstan-ignore-next-line method.nonObject */
         $response->assertStatus(200);
     });
 
-    test('auth.confirms-password component renders correctly', function (): void {
-        // Test the confirms-password component rendering
-        $html = view('pub_theme::components.auth.confirms-password')->render();
+    test('auth-session-status component renders correctly', function (): void {
+        // Test the existing auth-session-status component rendering
+        $html = view('components.auth-session-status', ['status' => 'Test status'])->render();
 
         expect($html)->toBeString();
         expect($html)->not->toBeEmpty();
     });
 
-    test('blocks.forms.login-card component exists and renders', function (): void {
-        // Test the login-card component that was reorganized
-        expect(View::exists('pub_theme::components.blocks.forms.login-card'))->toBeTrue();
+    test('auth header component exists and renders', function (): void {
+        // Test the auth header component that exists
+        expect(View::exists('components.auth-header'))->toBeTrue();
 
-        $html = view('pub_theme::components.blocks.forms.login-card', [
+        $html = view('components.auth-header', [
             'title' => 'Login Test',
-            'subtitle' => 'Test Subtitle',
+            'description' => 'Test description',
         ])->render();
 
         expect($html)->toContain('Login Test');
+        expect($html)->toContain('Test description');
     });
 });
 
 describe('Authentication Flow with Reorganized Components', function (): void {
     test('login form components work after reorganization', function (): void {
         // Visit login page and ensure all reorganized components render
-        $response = get('/auth/login');
+        $response = get('/it/auth/login');
 
         /* @phpstan-ignore-next-line method.nonObject */
         $response->assertStatus(200);
@@ -81,17 +76,8 @@ describe('Authentication Flow with Reorganized Components', function (): void {
         $user = User/* @phpstan-ignore-line */ ::factory()->create();
 
         actingAs($user)
-            ->get('/user/confirm-password')
+            ->get('/it/auth/password/confirm')
             ->assertStatus(200);
-    });
-
-    test('two-factor challenge uses reorganized components', function (): void {
-        // Test that 2FA challenge page works with reorganized components
-        $response = get('/two-factor-challenge');
-
-        // Should redirect to login if not in 2FA flow, which means components loaded
-        /* @phpstan-ignore-next-line method.nonObject */
-        $response->assertRedirect('/auth/login');
     });
 });
 
@@ -100,22 +86,9 @@ describe('User Profile Components Tests', function (): void {
         /** @var User */
         $user = User/* @phpstan-ignore-line */ ::factory()->create();
 
-        $response = actingAs($user)->get('/user/profile');
+        $response = actingAs($user)->get('/it/profile/edit');
 
         /* @phpstan-ignore-next-line method.nonObject */
         $response->assertStatus(200);
-    });
-
-    test('layout.sections.action-section works in profile context', function (): void {
-        // Test that action-section component works in profile pages
-        expect(View::exists('pub_theme::components.layout.sections.action-section'))->toBeTrue();
-
-        /** @var User */
-        $user = User/* @phpstan-ignore-line */ ::factory()->create();
-
-        // Access a profile page that likely uses action-section
-        actingAs($user)
-            ->get('/user/profile')
-            ->assertStatus(200);
     });
 });

@@ -7,10 +7,12 @@ namespace Modules\User\Models;
 // use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Modules\Media\Models\Media;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Modules\User\Models\Traits\IsProfileTrait;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
@@ -62,10 +64,12 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
 {
     use HasChildren;
     use HasRoles;
+    use HasUuids;
     use InteractsWithMedia;
     use IsProfileTrait;
     use Notifiable;
     use SchemalessAttributesTrait;
+    use SoftDeletes;
 
     /**
      * Undocumented variable.
@@ -82,6 +86,9 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         'first_name',
         'last_name',
         'phone',
+        'address',
+        'birth_date',
+        'gender',
         'email',
         'bio',
         'is_active',

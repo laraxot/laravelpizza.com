@@ -7,6 +7,10 @@ use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;
 use Modules\User\Tests\TestCase;
 
+/**
+ * @property \Modules\User\Actions\GetCurrentDeviceAction $action
+ * @property \Mockery\MockInterface|\Jenssegers\Agent\Agent $mockAgent
+ */
 uses(TestCase::class);
 
 beforeEach(function () {
@@ -14,6 +18,7 @@ beforeEach(function () {
     
     // Mock the Agent class
     $this->mockAgent = \Mockery::mock(Agent::class);
+    $this->app->instance(Agent::class, $this->mockAgent);
 });
 
 afterEach(function () {
@@ -135,6 +140,18 @@ it('creates device with mobile id', function (): void {
 it('handles empty mobile id', function (): void {
     // Arrange
     $emptyMobileId = '';
+
+    // Agent methods are called before checking mobile_id
+    $this->mockAgent->shouldReceive('device')->andReturn(null);
+    $this->mockAgent->shouldReceive('platform')->andReturn(null);
+    $this->mockAgent->shouldReceive('browser')->andReturn(null);
+    $this->mockAgent->shouldReceive('isDesktop')->andReturn(false);
+    $this->mockAgent->shouldReceive('isMobile')->andReturn(false);
+    $this->mockAgent->shouldReceive('isTablet')->andReturn(false);
+    $this->mockAgent->shouldReceive('isPhone')->andReturn(false);
+    $this->mockAgent->shouldReceive('isRobot')->andReturn(false);
+    $this->mockAgent->shouldReceive('version')->andReturn(null);
+    $this->mockAgent->shouldReceive('robot')->andReturn(null);
 
     // Act & Assert
     expect(fn () => $this->action->execute($emptyMobileId))

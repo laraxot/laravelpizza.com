@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -146,6 +147,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     use HasModules;
     use HasSpatiePermission;
     use HasTeams;
+    use SoftDeletes;
     use Traits\HasTenants;
     use XotTraits\RelationX;
 
@@ -206,9 +208,6 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     /** @var array<string, mixed> */
     protected $attributes = [
-        // 'state' => Pending::class,
-        // 'state' => 'pending',
-        'is_otp' => false,
         'is_active' => true,
     ];
 
@@ -298,23 +297,19 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     #[\Override]
     public function profile(): HasOne
     {
-        try {
-            /** @var class-string<Model> */
-            $profileClass = XotData::make()->getProfileClass();
-            if (class_exists($profileClass)) {
-                return $this->hasOne($profileClass);
-            }
-
-            // Fallback: se non riesce a ottenere la classe Profile, usa una relazione generica
-            // Questo evita l'errore "Target [Illuminate\Database\Eloquent\Model] is not instantiable"
-            // Utilizziamo una classe che sicuramente esiste nel sistema
-            return $this->hasOne(Model::class);
-        } catch (\Exception $e) {
-            // Fallback: se non riesce a ottenere la classe Profile, usa una relazione generica
-            // Questo evita l'errore "Target [Illuminate\Database\Eloquent\Model] is not instantiable"
-            // Utilizziamo una classe che sicuramente esiste nel sistema
-            return $this->hasOne(Model::class);
+        $profileClass = \Modules\Xot\Datas\XotData::make()->getProfileClass();
+        if (class_exists($profileClass)) {
+            return $this->hasOne($profileClass);
         }
+
+        // Try direct module class if XotData failed
+        $directClass = 'Modules\User\Models\Profile';
+        if (class_exists($directClass)) {
+            return $this->hasOne($directClass);
+        }
+
+        // Fallback: stay on current model if nothing found
+        return $this->hasOne(static::class, 'id', 'id')->whereRaw('1=0');
     }
 
     /**
@@ -519,6 +514,15 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         // Per gli altri tipi, implementiamo una logica di base
         if (\is_array($roles) || $roles instanceof \Illuminate\Support\Collection) {
             foreach ($roles as $role) {
+                // Se $role è a sua volta un array, chiamiamo ricorsivamente
+                if (\is_array($role) || $role instanceof \Illuminate\Support\Collection) {
+                    if ($this->hasRole($role, $guard)) {
+                        return true;
+                    }
+
+                    continue;
+                }
+
                 // Type narrowing per $role
                 $roleParam = \is_string($role) || \is_int($role) || $role instanceof SpatieRoleContract ? $role : (string) $role;
                 if ($this->hasRole($roleParam, $guard)) {
@@ -530,11 +534,11 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         }
 
         if ($roles instanceof SpatieRoleContract) {
-            return $this->roles()->where('id', $roles->id)->exists();
+            return $this->roles()->where('roles.id', $roles->id)->exists();
         }
 
-        if (\is_int($roles)) {
-            return $this->roles()->where('id', $roles)->exists();
+        if (\is_int($roles) || \is_string($roles)) {
+            return $this->roles()->where('roles.id', (string) $roles)->exists();
         }
 
         return false;

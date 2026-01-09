@@ -138,6 +138,15 @@ class User extends BaseUser
     /** @var string */
     public $connection = 'user';
 
+    /** @var array<string, class-string> */
+    protected $childTypes = [
+        'master_admin' => self::class,
+        'backoffice_user' => self::class,
+        'customer_user' => self::class,
+        'system' => self::class,
+        'technician' => self::class,
+    ];
+
     #[\Override]
     public function canAccessSocialite(): bool
     {

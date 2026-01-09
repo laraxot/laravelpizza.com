@@ -2,478 +2,398 @@
 
 declare(strict_types=1);
 
-namespace Modules\Gdpr\Tests\Feature;
-
-use Modules\Gdpr\Models\GdprConsent;
-use Modules\Gdpr\Models\GdprDataDeletion;
-use Modules\Gdpr\Models\GdprDataExport;
-use Modules\Gdpr\Models\GdprRequest;
+use Modules\Gdpr\Models\Consent;
+use Modules\Gdpr\Models\Event;
+use Modules\Gdpr\Models\Treatment;
+use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Models\User;
-use Tests\TestCase;
 
-class GdprBusinessLogicTest extends TestCase
+uses(TestCase::class);
+
+it('can create and manage gdpr consents', function (): void
 {
-    /** @test */
-    public function it_can_create_and_manage_gdpr_requests(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
+    // Arrange
+    $user = User::factory()->create();
 
-        // Act
-        $gdprRequest = GdprRequest::factory()->create([
-            'user_id' => $user->id,
-            'type' => 'data_access',
-            'status' => 'pending',
-            'description' => 'Request to access personal data',
-        ]);
+    // Act - Create consent with fields that exist in the actual table
+    $consent = Consent::create([
+        'subject_id' => $user->id,
+        'treatment_id' => null, // Optional foreign key
+    ]);
 
-        // Assert
-        $this->assertDatabaseHas('gdpr_requests', [
-            'id' => $gdprRequest->id,
-            'user_id' => $user->id,
-            'type' => 'data_access',
-            'status' => 'pending',
-            'description' => 'Request to access personal data',
-        ]);
+    // Assert
+    $this->assertDatabaseHas('consents', [
+        'id' => $consent->id,
+        'subject_id' => $user->id,
+    ]);
 
-        $this->assertEquals($user->id, $gdprRequest->user_id);
-        $this->assertEquals('data_access', $gdprRequest->type);
-        $this->assertEquals('pending', $gdprRequest->status);
-    }
+    expect($consent->subject_id)->toBe($user->id);
+});
 
-    /** @test */
-    public function it_can_process_gdpr_request_workflow(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
-        $gdprRequest = GdprRequest::factory()->create([
-            'user_id' => $user->id,
-            'type' => 'data_deletion',
-            'status' => 'pending',
-        ]);
+it('can work with gdpr treatments', function (): void
+{
+    // Act
+    $treatment = Treatment::create([
+        'name' => 'Email Marketing',
+        'description' => 'Processing personal data for email marketing purposes',
+        'weight' => 10,
+        'active' => true,
+        'required' => false,
+    ]);
 
-        // Act - Pending to Under Review
-        $gdprRequest->update(['status' => 'under_review']);
+    // Assert
+    $this->assertDatabaseHas('treatments', [
+        'id' => $treatment->id,
+        'name' => 'Email Marketing',
+        'active' => true,
+    ]);
 
-        // Assert
-        $this->assertEquals('under_review', $gdprRequest->fresh()->status);
+    expect($treatment->name)->toBe('Email Marketing');
+    expect($treatment->active)->toBeTrue();
+    expect($treatment->required)->toBeFalse();
+});
 
-        // Act - Under Review to Approved
-        $gdprRequest->update(['status' => 'approved']);
+it('can link consents to treatments', function (): void
+{
+    // Arrange
+    $user = User::factory()->create();
+    $treatment = Treatment::create([
+        'name' => 'Data Analytics',
+        'description' => 'Processing data for analytics',
+        'weight' => 5,
+        'active' => true,
+        'required' => true,
+    ]);
 
-        // Assert
-        $this->assertEquals('approved', $gdprRequest->fresh()->status);
+    // Act
+    $consent = Consent::create([
+        'subject_id' => $user->id,
+        'treatment_id' => $treatment->id,
+    ]);
 
-        // Act - Approved to Completed
-        $gdprRequest->update(['status' => 'completed']);
+    // Assert
+    $this->assertDatabaseHas('consents', [
+        'id' => $consent->id,
+        'treatment_id' => $treatment->id,
+        'subject_id' => $user->id,
+    ]);
 
-        // Assert
-        $this->assertEquals('completed', $gdprRequest->fresh()->status);
-    }
+    expect($consent->treatment_id)->toBe($treatment->id);
+    expect($consent->subject_id)->toBe($user->id);
+});
 
-    /** @test */
-    public function it_can_manage_gdpr_consents(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
+it('can manage gdpr events', function (): void
+{
+    // Arrange
+    $user = User::factory()->create();
 
-        // Act
-        $gdprConsent = GdprConsent::factory()->create([
-            'user_id' => $user->id,
+    // Act
+    $event = Event::create([
+        'subject_id' => $user->id,
+        'action' => 'consent_given',
+        'ip' => '192.168.1.1',
+        'payload' => json_encode([
             'consent_type' => 'marketing',
-            'consent_given' => true,
-            'consent_date' => now(),
-            'ip_address' => '192.168.1.1',
             'user_agent' => 'Test Browser',
-        ]);
+        ]),
+    ]);
 
-        // Assert
-        $this->assertDatabaseHas('gdpr_consents', [
-            'id' => $gdprConsent->id,
-            'user_id' => $user->id,
-            'consent_type' => 'marketing',
-            'consent_given' => true,
-        ]);
+    // Assert
+    $this->assertDatabaseHas('gdpr_events', [
+        'id' => $event->id,
+        'subject_id' => $user->id,
+        'action' => 'consent_given',
+        'ip' => '192.168.1.1',
+    ]);
 
-        $this->assertEquals($user->id, $gdprConsent->user_id);
-        $this->assertEquals('marketing', $gdprConsent->consent_type);
-        $this->assertTrue($gdprConsent->consent_given);
-        $this->assertEquals('192.168.1.1', $gdprConsent->ip_address);
-    }
+    expect($event->subject_id)->toBe($user->id);
+    expect($event->action)->toBe('consent_given');
+    expect($event->ip)->toBe('192.168.1.1');
+});
 
-    /** @test */
-    public function it_can_track_consent_changes(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
-        $gdprConsent = GdprConsent::factory()->create([
-            'user_id' => $user->id,
-            'consent_type' => 'marketing',
-            'consent_given' => true,
-            'consent_date' => now()->subDays(30),
-        ]);
+it('can track gdpr audit trail', function (): void
+{
+    // Arrange
+    $user = User::factory()->create();
 
-        // Act - Withdraw consent
-        $gdprConsent->update([
-            'consent_given' => false,
-            'consent_withdrawn_at' => now(),
-        ]);
+    // Act - Create multiple consents
+    $consent1 = Consent::create([
+        'subject_id' => $user->id,
+        'treatment_id' => null,
+    ]);
 
-        // Assert
-        $this->assertDatabaseHas('gdpr_consents', [
-            'id' => $gdprConsent->id,
-            'consent_given' => false,
-        ]);
+    $consent2 = Consent::create([
+        'subject_id' => $user->id,
+        'treatment_id' => null,
+    ]);
 
-        $this->assertFalse($gdprConsent->fresh()->consent_given);
-        $this->assertNotNull($gdprConsent->fresh()->consent_withdrawn_at);
-    }
+    // Create events
+    Event::create([
+        'subject_id' => $user->id,
+        'action' => 'consent_given',
+        'ip' => '192.168.1.1',
+        'payload' => json_encode(['type' => 'marketing']),
+    ]);
 
-    /** @test */
-    public function it_can_manage_data_exports(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
+    Event::create([
+        'subject_id' => $user->id,
+        'action' => 'consent_withdrawn',
+        'ip' => '192.168.1.1',
+        'payload' => json_encode(['type' => 'analytics']),
+    ]);
 
-        // Act
-        $dataExport = GdprDataExport::factory()->create([
-            'user_id' => $user->id,
-            'export_type' => 'personal_data',
-            'status' => 'processing',
-            'file_path' => '/exports/user_data_123.json',
-            'expires_at' => now()->addDays(30),
-        ]);
+    // Assert
+    $userConsents = Consent::where('subject_id', $user->id)->get();
+    $userEvents = Event::where('subject_id', $user->id)->get();
 
-        // Assert
-        $this->assertDatabaseHas('gdpr_data_exports', [
-            'id' => $dataExport->id,
-            'user_id' => $user->id,
-            'export_type' => 'personal_data',
-            'status' => 'processing',
-        ]);
+    expect($userConsents)->toHaveCount(2);
+    expect($userEvents)->toHaveCount(2);
+});
 
-        $this->assertEquals($user->id, $dataExport->user_id);
-        $this->assertEquals('personal_data', $dataExport->export_type);
-        $this->assertEquals('processing', $dataExport->status);
-        $this->assertEquals('/exports/user_data_123.json', $dataExport->file_path);
-    }
+it('can handle different treatment types', function (): void
+{
+    // Act
+    $treatment1 = Treatment::create([
+        'name' => 'Marketing Communications',
+        'description' => 'Email marketing based on explicit consent',
+        'weight' => 1,
+        'active' => true,
+        'required' => false,
+    ]);
 
-    /** @test */
-    public function it_can_process_data_export_workflow(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
-        $dataExport = GdprDataExport::factory()->create([
-            'user_id' => $user->id,
-            'export_type' => 'personal_data',
-            'status' => 'requested',
-        ]);
+    $treatment2 = Treatment::create([
+        'name' => 'Service Delivery',
+        'description' => 'Processing necessary for service delivery',
+        'weight' => 2,
+        'active' => true,
+        'required' => true,
+    ]);
 
-        // Act - Requested to Processing
-        $dataExport->update(['status' => 'processing']);
+    $treatment3 = Treatment::create([
+        'name' => 'Analytics',
+        'description' => 'Analytics based on legitimate interests',
+        'weight' => 3,
+        'active' => false,
+        'required' => false,
+    ]);
 
-        // Assert
-        $this->assertEquals('processing', $dataExport->fresh()->status);
+    // Assert
+    expect($treatment1->name)->toBe('Marketing Communications');
+    expect($treatment1->required)->toBeFalse();
+    
+    expect($treatment2->name)->toBe('Service Delivery');
+    expect($treatment2->required)->toBeTrue();
+    
+    expect($treatment3->name)->toBe('Analytics');
+    expect($treatment3->active)->toBeFalse();
+});
 
-        // Act - Processing to Completed
-        $dataExport->update([
-            'status' => 'completed',
-            'completed_at' => now(),
-            'file_size' => 1024,
-        ]);
+it('can manage treatment weights', function (): void
+{
+    // Act
+    $treatmentLow = Treatment::create([
+        'name' => 'Low Priority',
+        'description' => 'Treatment with low priority',
+        'weight' => 1,
+        'active' => true,
+        'required' => false,
+    ]);
 
-        // Assert
-        $this->assertEquals('completed', $dataExport->fresh()->status);
-        $this->assertNotNull($dataExport->fresh()->completed_at);
-        $this->assertEquals(1024, $dataExport->fresh()->file_size);
-    }
+    $treatmentHigh = Treatment::create([
+        'name' => 'High Priority',
+        'description' => 'Treatment with high priority',
+        'weight' => 100,
+        'active' => true,
+        'required' => true,
+    ]);
 
-    /** @test */
-    public function it_can_manage_data_deletions(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
+    // Assert
+    expect($treatmentLow->weight)->toBe(1);
+    expect($treatmentHigh->weight)->toBe(100);
+    
+    // Check ordering by weight
+    $treatments = Treatment::orderBy('weight', 'asc')->get();
+    expect($treatments->first()->name)->toBe('Low Priority');
+    expect($treatments->last()->name)->toBe('High Priority');
+});
 
-        // Act
-        $dataDeletion = GdprDataDeletion::factory()->create([
-            'user_id' => $user->id,
-            'deletion_type' => 'complete',
-            'status' => 'scheduled',
-            'scheduled_at' => now()->addDays(7),
-            'reason' => 'User requested complete data deletion',
-        ]);
+it('can manage consent with treatment relationships', function (): void
+{
+    // Arrange
+    $user = User::factory()->create();
+    $treatment = Treatment::create([
+        'name' => 'Email Consent',
+        'description' => 'Consent for email communications',
+        'weight' => 5,
+        'active' => true,
+        'required' => false,
+    ]);
 
-        // Assert
-        $this->assertDatabaseHas('gdpr_data_deletions', [
-            'id' => $dataDeletion->id,
-            'user_id' => $user->id,
-            'deletion_type' => 'complete',
-            'status' => 'scheduled',
-        ]);
+    // Act
+    $consent = Consent::create([
+        'subject_id' => $user->id,
+        'treatment_id' => $treatment->id,
+    ]);
 
-        $this->assertEquals($user->id, $dataDeletion->user_id);
-        $this->assertEquals('complete', $dataDeletion->deletion_type);
-        $this->assertEquals('scheduled', $dataDeletion->status);
-        $this->assertEquals('User requested complete data deletion', $dataDeletion->reason);
-    }
+    // Assert
+    $this->assertDatabaseHas('consents', [
+        'id' => $consent->id,
+        'subject_id' => $user->id,
+        'treatment_id' => $treatment->id,
+    ]);
 
-    /** @test */
-    public function it_can_execute_data_deletion_workflow(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
-        $dataDeletion = GdprDataDeletion::factory()->create([
-            'user_id' => $user->id,
-            'deletion_type' => 'complete',
-            'status' => 'scheduled',
-            'scheduled_at' => now(),
-        ]);
+    expect($consent->subject_id)->toBe($user->id);
+    expect($consent->treatment_id)->toBe($treatment->id);
+});
 
-        // Act - Scheduled to Processing
-        $dataDeletion->update(['status' => 'processing']);
+it('can manage multiple consents per subject', function (): void
+{
+    // Arrange
+    $user = User::factory()->create();
+    $treatment1 = Treatment::create([
+        'name' => 'Treatment 1',
+        'description' => 'First treatment',
+        'weight' => 1,
+        'active' => true,
+        'required' => false,
+    ]);
+    
+    $treatment2 = Treatment::create([
+        'name' => 'Treatment 2',
+        'description' => 'Second treatment',
+        'weight' => 2,
+        'active' => true,
+        'required' => false,
+    ]);
 
-        // Assert
-        $this->assertEquals('processing', $dataDeletion->fresh()->status);
+    // Act
+    $consents = [
+        Consent::create([
+            'subject_id' => $user->id,
+            'treatment_id' => $treatment1->id,
+        ]),
+        Consent::create([
+            'subject_id' => $user->id,
+            'treatment_id' => $treatment2->id,
+        ]),
+    ];
 
-        // Act - Processing to Completed
-        $dataDeletion->update([
-            'status' => 'completed',
-            'completed_at' => now(),
-            'deleted_records_count' => 150,
-        ]);
+    // Assert
+    $userConsents = Consent::where('subject_id', $user->id)->get();
+    expect($userConsents)->toHaveCount(2);
 
-        // Assert
-        $this->assertEquals('completed', $dataDeletion->fresh()->status);
-        $this->assertNotNull($dataDeletion->fresh()->completed_at);
-        $this->assertEquals(150, $dataDeletion->fresh()->deleted_records_count);
-    }
+    $consentTreatmentIds = $userConsents->pluck('treatment_id')->toArray();
+    expect($consentTreatmentIds)->toContain($treatment1->id);
+    expect($consentTreatmentIds)->toContain($treatment2->id);
+});
 
-    /** @test */
-    public function it_can_validate_gdpr_request_types(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
+it('can create events with detailed payloads', function (): void
+{
+    // Arrange
+    $user = User::factory()->create();
 
-        // Act & Assert - Valid request types
-        $validTypes = ['data_access', 'data_rectification', 'data_deletion', 'data_portability'];
+    // Act
+    $event = Event::create([
+        'subject_id' => $user->id,
+        'action' => 'data_access_request',
+        'ip' => '203.0.113.1',
+        'payload' => json_encode([
+            'request_type' => 'access',
+            'data_categories' => ['personal', 'contact'],
+            'request_date' => now()->toISOString(),
+            'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'session_id' => 'session_' . uniqid(),
+        ]),
+    ]);
 
-        foreach ($validTypes as $type) {
-            $gdprRequest = GdprRequest::factory()->create([
-                'user_id' => $user->id,
-                'type' => $type,
-                'status' => 'pending',
-            ]);
+    // Assert
+    $this->assertDatabaseHas('gdpr_events', [
+        'id' => $event->id,
+        'subject_id' => $user->id,
+        'action' => 'data_access_request',
+        'ip' => '203.0.113.1',
+    ]);
 
-            $this->assertEquals($type, $gdprRequest->type);
-            $this->assertDatabaseHas('gdpr_requests', [
-                'id' => $gdprRequest->id,
-                'type' => $type,
-            ]);
-        }
-    }
+    $payload = json_decode($event->payload, true);
+    expect($payload['request_type'])->toBe('access');
+    expect($payload['data_categories'])->toContain('personal');
+});
 
-    /** @test */
-    public function it_can_manage_consent_categories(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
+it('can handle treatment document references', function (): void
+{
+    // Act
+    $treatmentWithDoc = Treatment::create([
+        'name' => 'Policy Update',
+        'description' => 'Updated privacy policy treatment',
+        'weight' => 10,
+        'active' => true,
+        'required' => true,
+        'documentVersion' => '2.1',
+        'documentUrl' => '/docs/privacy-policy-v2.1.pdf',
+    ]);
 
-        // Act
-        $marketingConsent = GdprConsent::factory()->create([
-            'user_id' => $user->id,
-            'consent_type' => 'marketing',
-            'consent_given' => true,
-        ]);
+    $treatmentWithoutDoc = Treatment::create([
+        'name' => 'Internal Processing',
+        'description' => 'Internal data processing',
+        'weight' => 5,
+        'active' => true,
+        'required' => false,
+        'documentVersion' => null,
+        'documentUrl' => null,
+    ]);
 
-        $analyticsConsent = GdprConsent::factory()->create([
-            'user_id' => $user->id,
-            'consent_type' => 'analytics',
-            'consent_given' => false,
-        ]);
+    // Assert
+    expect($treatmentWithDoc->documentVersion)->toBe('2.1');
+    expect($treatmentWithDoc->documentUrl)->toBe('/docs/privacy-policy-v2.1.pdf');
+    
+    expect($treatmentWithoutDoc->documentVersion)->toBeNull();
+    expect($treatmentWithoutDoc->documentUrl)->toBeNull();
+});
 
-        $necessaryConsent = GdprConsent::factory()->create([
-            'user_id' => $user->id,
-            'consent_type' => 'necessary',
-            'consent_given' => true,
-        ]);
+it('can manage treatment active status', function (): void
+{
+    // Act
+    $activeTreatment = Treatment::create([
+        'name' => 'Active Treatment',
+        'description' => 'Currently active treatment',
+        'weight' => 1,
+        'active' => true,
+        'required' => false,
+    ]);
 
-        // Assert
-        $this->assertDatabaseHas('gdpr_consents', [
-            'id' => $marketingConsent->id,
-            'consent_type' => 'marketing',
-        ]);
+    $inactiveTreatment = Treatment::create([
+        'name' => 'Inactive Treatment',
+        'description' => 'Inactive treatment',
+        'weight' => 2,
+        'active' => false,
+        'required' => false,
+    ]);
 
-        $this->assertDatabaseHas('gdpr_consents', [
-            'id' => $analyticsConsent->id,
-            'consent_type' => 'analytics',
-        ]);
+    // Assert
+    expect($activeTreatment->active)->toBeTrue();
+    expect($inactiveTreatment->active)->toBeFalse();
 
-        $this->assertDatabaseHas('gdpr_consents', [
-            'id' => $necessaryConsent->id,
-            'consent_type' => 'necessary',
-        ]);
+    $activeTreatments = Treatment::where('active', true)->get();
+    expect($activeTreatments)->toContain($activeTreatment);
+    expect($activeTreatments)->not->toContain($inactiveTreatment);
+});
 
-        $this->assertTrue($marketingConsent->consent_given);
-        $this->assertFalse($analyticsConsent->consent_given);
-        $this->assertTrue($necessaryConsent->consent_given);
-    }
+it('can manage consent timestamps', function (): void
+{
+    // Arrange
+    $user = User::factory()->create();
 
-    /** @test */
-    public function it_can_track_gdpr_audit_trail(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
+    // Act
+    $consent = Consent::create([
+        'subject_id' => $user->id,
+        'treatment_id' => null,
+    ]);
 
-        // Act - Create multiple requests
-        GdprRequest::factory()
-            ->count(3)
-            ->create([
-                'user_id' => $user->id,
-                'type' => 'data_access',
-            ]);
-
-        GdprRequest::factory()
-            ->count(2)
-            ->create([
-                'user_id' => $user->id,
-                'type' => 'data_deletion',
-            ]);
-
-        // Act - Create consents
-        GdprConsent::factory()
-            ->count(4)
-            ->create([
-                'user_id' => $user->id,
-                'consent_given' => true,
-            ]);
-
-        // Assert
-        $totalRequests = GdprRequest::where('user_id', $user->id)->count();
-        $accessRequests = GdprRequest::where('user_id', $user->id)->where('type', 'data_access')->count();
-        $deletionRequests = GdprRequest::where('user_id', $user->id)->where('type', 'data_deletion')->count();
-        $totalConsents = GdprConsent::where('user_id', $user->id)->count();
-
-        $this->assertEquals(5, $totalRequests);
-        $this->assertEquals(3, $accessRequests);
-        $this->assertEquals(2, $deletionRequests);
-        $this->assertEquals(4, $totalConsents);
-    }
-
-    /** @test */
-    public function it_can_manage_data_retention_policies(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
-
-        // Act
-        $dataExport = GdprDataExport::factory()->create([
-            'user_id' => $user->id,
-            'export_type' => 'personal_data',
-            'status' => 'completed',
-            'completed_at' => now()->subDays(25),
-            'expires_at' => now()->addDays(5),
-        ]);
-
-        // Assert
-        $this->assertDatabaseHas('gdpr_data_exports', [
-            'id' => $dataExport->id,
-            'status' => 'completed',
-        ]);
-
-        $this->assertEquals('completed', $dataExport->status);
-        $this->assertTrue($dataExport->expires_at->isFuture());
-        $this->assertTrue($dataExport->expires_at->diffInDays(now()) <= 30);
-    }
-
-    /** @test */
-    public function it_can_handle_urgent_deletion_requests(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
-
-        // Act
-        $urgentDeletion = GdprDataDeletion::factory()->create([
-            'user_id' => $user->id,
-            'deletion_type' => 'urgent',
-            'status' => 'pending',
-            'priority' => 'high',
-            'reason' => 'Legal requirement for immediate deletion',
-        ]);
-
-        // Assert
-        $this->assertDatabaseHas('gdpr_data_deletions', [
-            'id' => $urgentDeletion->id,
-            'deletion_type' => 'urgent',
-            'priority' => 'high',
-        ]);
-
-        $this->assertEquals('urgent', $urgentDeletion->deletion_type);
-        $this->assertEquals('high', $urgentDeletion->priority);
-        $this->assertEquals('Legal requirement for immediate deletion', $urgentDeletion->reason);
-    }
-
-    /** @test */
-    public function it_can_validate_consent_legal_basis(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
-
-        // Act
-        $explicitConsent = GdprConsent::factory()->create([
-            'user_id' => $user->id,
-            'consent_type' => 'marketing',
-            'consent_given' => true,
-            'legal_basis' => 'explicit_consent',
-            'consent_date' => now(),
-        ]);
-
-        $legitimateInterest = GdprConsent::factory()->create([
-            'user_id' => $user->id,
-            'consent_type' => 'necessary',
-            'consent_given' => true,
-            'legal_basis' => 'legitimate_interest',
-            'consent_date' => now(),
-        ]);
-
-        // Assert
-        $this->assertDatabaseHas('gdpr_consents', [
-            'id' => $explicitConsent->id,
-            'legal_basis' => 'explicit_consent',
-        ]);
-
-        $this->assertDatabaseHas('gdpr_consents', [
-            'id' => $legitimateInterest->id,
-            'legal_basis' => 'legitimate_interest',
-        ]);
-
-        $this->assertEquals('explicit_consent', $explicitConsent->legal_basis);
-        $this->assertEquals('legitimate_interest', $legitimateInterest->legal_basis);
-    }
-
-    /** @test */
-    public function it_can_manage_data_processing_activities(): void
-    {
-        // Arrange
-        $user = User::factory()->create();
-
-        // Act
-        $gdprRequest = GdprRequest::factory()->create([
-            'user_id' => $user->id,
-            'type' => 'data_access',
-            'status' => 'processing',
-            'processing_started_at' => now(),
-            'estimated_completion' => now()->addDays(3),
-        ]);
-
-        // Assert
-        $this->assertDatabaseHas('gdpr_requests', [
-            'id' => $gdprRequest->id,
-            'status' => 'processing',
-        ]);
-
-        $this->assertEquals('processing', $gdprRequest->status);
-        $this->assertNotNull($gdprRequest->processing_started_at);
-        $this->assertNotNull($gdprRequest->estimated_completion);
-        $this->assertTrue($gdprRequest->estimated_completion->isFuture());
-    }
-}
+    // Assert
+    expect($consent->created_at)->not->toBeNull();
+    expect($consent->updated_at)->not->toBeNull();
+    
+    // Created and updated should be close to now
+    $now = now();
+    expect($consent->created_at->between($now->subMinute(), $now->addMinute()))->toBeTrue();
+});

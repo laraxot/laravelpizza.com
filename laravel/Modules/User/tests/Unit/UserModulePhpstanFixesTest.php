@@ -8,6 +8,8 @@ use Modules\User\Events\AddingTeam;
 use Modules\User\Events\Login;
 use Modules\User\Events\Registered;
 use Modules\User\Events\SocialiteUserConnected;
+use Modules\User\Models\SocialiteUser;
+use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
@@ -105,7 +107,8 @@ it('password data get form components returns array', function (): void {
 });
 
 it('events can be instantiated', function (): void {
-    $addingTeam = new AddingTeam();
+    $owner = User::factory()->create();
+    $addingTeam = new AddingTeam($owner);
     $login = new Login();
     $registered = new Registered();
     $socialiteUserConnected = new SocialiteUserConnected();
@@ -117,7 +120,8 @@ it('events can be instantiated', function (): void {
 });
 
 it('events have dispatchable trait', function (): void {
-    $addingTeam = new AddingTeam();
+    $owner = User::factory()->create();
+    $addingTeam = new AddingTeam($owner);
     $login = new Login();
 
     expect(method_exists($addingTeam, 'dispatch'))->toBeTrue();

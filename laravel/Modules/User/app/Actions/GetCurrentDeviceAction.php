@@ -22,7 +22,7 @@ class GetCurrentDeviceAction
      */
     public function execute(?string $mobile_id = null): Device
     {
-        $agent = new Agent();
+        $agent = app(Agent::class);
 
         $device = $agent->device();
         $platform = $agent->platform();
@@ -39,8 +39,9 @@ class GetCurrentDeviceAction
             'is_robot' => $agent->isRobot(),
         ];
 
+        $browserVersion = is_string($browser) ? $agent->version($browser) : 'unknown';
         $up = [
-            'version' => is_string($browser) ? $agent->version($browser) : 'unknown',
+            'version' => is_string($browserVersion) ? $browserVersion : 'unknown',
             'robot' => is_string($agent->robot()) ? $agent->robot() : 'unknown',
         ];
 

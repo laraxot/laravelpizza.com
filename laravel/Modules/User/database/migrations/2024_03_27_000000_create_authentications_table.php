@@ -24,7 +24,7 @@ return new class extends XotBaseMigration {
             $table->timestamp('login_at')->nullable();
             $table->boolean('login_successful')->default(false);
             $table->timestamp('logout_at')->nullable();
-            $table->uuidMorphs('authenticatable', 'k_authenticatable');
+            $table->uuidMorphs('authenticatable', 'k_authentications_morph');
         });
 
         // -- UPDATE --
@@ -40,7 +40,7 @@ return new class extends XotBaseMigration {
                 $table->timestamp('logout_at')->nullable();
             }
             if (! $this->hasColumn('authenticatable_type')) {
-                $table->uuidMorphs('authenticatable', 'k_authenticatable');
+                $table->uuidMorphs('authenticatable', 'k_authentications_morph');
             }
 
             $this->updateTimestamps($table, true);

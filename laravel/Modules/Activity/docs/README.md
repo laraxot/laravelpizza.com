@@ -12,6 +12,12 @@
 
 > **🚀 Modulo Activity**: Sistema completo per audit trail, event sourcing e logging avanzato con dashboard Filament e analytics in tempo reale.
 
+## Riferimenti (classi principali)
+
+- ActivityServiceProvider
+- ListLogActivities
+- ListLogActivitiesAction
+
 ## 📋 **Panoramica**
 
 Il modulo **Activity** è il sistema di monitoraggio e audit dell'applicazione, fornendo:

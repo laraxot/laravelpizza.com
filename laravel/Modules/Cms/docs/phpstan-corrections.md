@@ -45,3 +45,7 @@ private const BASE_URL = 'https://maps.googleapis.com/maps/api/directions/json';
 - Correct namespace for PromiseInterface is `GuzzleHttp\Promise\PromiseInterface`
 - All HTTP client responses now properly handle both synchronous and asynchronous cases
 - PHPDoc casting ensures PHPStan recognizes the correct type after Promise resolution
+
+## Test Corrections (Pest)
+- Nei test, la connessione `user` usa SQLite in-memory: la tabella `users` deve esistere (altrimenti le factory falliscono con `no such table: users`).
+- Evitare assert fragili su stringhe hardcoded di localizzazione (il sito funziona): preferire stringhe realmente presenti nel markup o key/valori di traduzione attuali.

@@ -123,7 +123,14 @@ abstract class TestCase extends BaseTestCase
             $table->string('lang')->nullable();
             $table->timestamp('password_expires_at')->nullable();
             $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
         });
+
+        if (! Schema::connection('user')->hasColumn('users', 'deleted_at')) {
+            Schema::connection('user')->table('users', function (Blueprint $table): void {
+                $table->timestamp('deleted_at')->nullable();
+            });
+        }
         $this->artisan('migrate:fresh', [
             '--database' => 'xot', // Run on 'xot' connection (specific for Xot module)
             '--path' => 'Modules/Xot/database/migrations',

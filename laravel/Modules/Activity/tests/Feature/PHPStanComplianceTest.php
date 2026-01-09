@@ -8,7 +8,6 @@ use Modules\Activity\Providers\ActivityServiceProvider;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Modules\Xot\Filament\Resources\Pages\XotBasePage;
 use Modules\Xot\Providers\XotBaseServiceProvider;
-use ReflectionClass;
 
 uses(\Modules\Activity\Tests\TestCase::class);
 

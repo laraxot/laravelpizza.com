@@ -9,7 +9,7 @@ use Modules\User\Models\BaseTenant;
 use Modules\User\Models\Tenant;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\Sluggable\SlugOptions;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 

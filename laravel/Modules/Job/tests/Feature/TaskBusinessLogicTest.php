@@ -13,7 +13,6 @@ uses(TestCase::class);
 it('can create task with basic information', function (): void
 {
     $taskData = [
-        'id' => 'task_'.uniqid(),
         'description' => 'Pulizia database giornaliera',
         'command' => 'db:cleanup',
         'parameters' => '--days=30 --tables=logs,sessions',
@@ -36,13 +35,12 @@ it('can create task with basic information', function (): void
     $task = Task::create($taskData);
 
     $this->assertDatabaseHas('tasks', [
-        'id' => $task->id,
         'description' => 'Pulizia database giornaliera',
         'command' => 'db:cleanup',
         'expression' => '0 2 * * *',
         'timezone' => 'Europe/Rome',
         'is_active' => 1,
-    ]);
+    ], 'job');
 
     expect($task->description)->toBe('Pulizia database giornaliera');
     expect($task->command)->toBe('db:cleanup');
@@ -59,6 +57,7 @@ it('can manage task activation and deactivation', function (): void
         'timezone' => 'UTC',
         'is_active' => 1,
         'status' => 'active',
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     expect($task->is_active)->toBeTrue();
@@ -84,6 +83,7 @@ it('can handle task parameters and compilation', function (): void
         'timezone' => 'UTC',
         'is_active' => 1,
         'status' => 'active',
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     // Compila parametri per lo scheduler
@@ -104,6 +104,7 @@ it('can manage task frequencies', function (): void
         'timezone' => 'UTC',
         'is_active' => 1,
         'status' => 'active',
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     // Crea frequenze associate
@@ -156,6 +157,7 @@ it('can manage task execution settings', function (): void
         'run_in_maintenance' => 1,
         'run_on_one_server' => 1,
         'run_in_background' => 1,
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     expect($task->dont_overlap)->toBeTrue();
@@ -175,6 +177,7 @@ it('can handle task cleanup settings', function (): void
         'status' => 'active',
         'auto_cleanup_num' => 30,
         'auto_cleanup_type' => 'days',
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     expect($task->auto_cleanup_num)->toBe(30);
@@ -190,6 +193,7 @@ it('can manage task results and history', function (): void
         'timezone' => 'UTC',
         'is_active' => 1,
         'status' => 'active',
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     // Crea risultati associati
@@ -224,6 +228,7 @@ it('can handle task priority management', function (): void
         'is_active' => 1,
         'status' => 'active',
         'priority_id' => 'high',
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     $lowPriorityTask = Task::create([
@@ -234,6 +239,7 @@ it('can handle task priority management', function (): void
         'is_active' => 1,
         'status' => 'active',
         'priority_id' => 'low',
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     expect($highPriorityTask->priority_id)->toBe('high');
@@ -249,6 +255,7 @@ it('can manage task timezone handling', function (): void
         'timezone' => 'Europe/Rome',
         'is_active' => 1,
         'status' => 'active',
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     $utcTask = Task::create([
@@ -258,6 +265,7 @@ it('can manage task timezone handling', function (): void
         'timezone' => 'UTC',
         'is_active' => 1,
         'status' => 'active',
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     expect($romeTask->timezone)->toBe('Europe/Rome');
@@ -273,6 +281,7 @@ it('can handle task status transitions', function (): void
         'timezone' => 'UTC',
         'is_active' => 1,
         'status' => 'active',
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     expect($task->status)->toBe('active');
@@ -300,6 +309,7 @@ it('can handle task ordering and sorting', function (): void
         'is_active' => 1,
         'status' => 'active',
         'order_column' => 1,
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     $task2 = Task::create([
@@ -310,6 +320,7 @@ it('can handle task ordering and sorting', function (): void
         'is_active' => 1,
         'status' => 'active',
         'order_column' => 2,
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     expect($task1->order_column)->toBe(1);
@@ -326,6 +337,7 @@ it('can handle task maintenance mode', function (): void
         'is_active' => 1,
         'status' => 'active',
         'run_in_maintenance' => 1,
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     $normalTask = Task::create([
@@ -336,6 +348,7 @@ it('can handle task maintenance mode', function (): void
         'is_active' => 1,
         'status' => 'active',
         'run_in_maintenance' => 0,
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     expect($maintenanceTask->run_in_maintenance)->toBeTrue();

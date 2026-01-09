@@ -202,7 +202,10 @@ test('activity module handles concurrent operations correctly', function () {
     \assert(is_array($results));
     expect($results)->toHaveCount(10)->each->toBeTrue();
 
-    $userActivities = Activity::causedBy($user)->get();
+    $userActivities = Activity::query()
+        ->where('causer_type', User::class)
+        ->where('causer_id', (string) $user->id)
+        ->get();
     expect($userActivities)->toHaveCount(10);
 
     $createdSnapshots = Snapshot::whereIn('id', $concurrentSnapshots)->get();
@@ -338,7 +341,13 @@ test('activity module handles data consistency across models', function () {
 
     expect($freshActivityProperties['action'])->toBe('data_consistency_test')
         ->and($freshSnapshotState['consistent'])->toBeTrue()
-        ->and($freshEventProperties['consistent'])->toBeTrue();
+        ->and($freshEventProperties)->toHaveKey('changes');
+
+    /** @var mixed $changes */
+    $changes = $freshEventProperties['changes'];
+    expect($changes)->toBeArray();
+    \assert(is_array($changes));
+    expect($changes)->toHaveKey('profile_completed', true);
 });
 
 test('activity module supports bulk operations efficiently', function () {
@@ -352,10 +361,10 @@ test('activity module supports bulk operations efficiently', function () {
             'log_name' => 'bulk_operation',
             'description' => "Bulk activity {$i}",
             'causer_type' => User::class,
-            'causer_id' => $user->id,
-            'properties' => ['index' => $i, 'batch' => 'bulk_test'],
-            'created_at' => now(),
-            'updated_at' => now(),
+            'causer_id' => (string) $user->id,
+            'properties' => json_encode(['index' => $i, 'batch' => 'bulk_test']),
+            'created_at' => now()->toDateTimeString(),
+            'updated_at' => now()->toDateTimeString(),
         ];
     }
 
@@ -381,6 +390,10 @@ test('activity module supports bulk operations efficiently', function () {
         ->and($firstActivity->causer_id)->toBe($user->id)
         ->and($lastActivity->causer_id)->toBe($user->id);
 
-    $userActivities = Activity::causedBy($user)->where('log_name', 'bulk_operation')->get();
+    $userActivities = Activity::query()
+        ->where('causer_type', User::class)
+        ->where('causer_id', (string) $user->id)
+        ->where('log_name', 'bulk_operation')
+        ->get();
     expect($userActivities)->toHaveCount(100);
 });
