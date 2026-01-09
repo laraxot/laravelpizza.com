@@ -23,7 +23,8 @@ describe('Homepage Content Management', function () {
         $response->assertSee('<nome progetto> - Promozione della <slogan> per le gestanti');
     });
 
-    it('displays content blocks with correct structure', function () use ($locale) {
+    it('displays content blocks with correct structure', function () {
+        $locale = app()->getLocale();
         $response = get('/'.$locale);
 
         $response->assertStatus(200);

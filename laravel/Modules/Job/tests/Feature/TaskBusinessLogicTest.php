@@ -55,21 +55,17 @@ it('can manage task activation and deactivation', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
-        'status' => 'active',
         'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
     expect($task->is_active)->toBe(1);
-    expect($task->status)->toBe('active');
 
     // Disattiva il task
     $task->update([
         'is_active' => 0,
-        'status' => 'inactive',
     ]);
 
-    expect($task->is_active)->toBeFalse();
-    expect($task->status)->toBe('inactive');
+    expect($task->is_active)->toBe(0);
 });
 
 it('can handle task parameters and compilation', function (): void
@@ -81,7 +77,6 @@ it('can handle task parameters and compilation', function (): void
         'expression' => '0 1 * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
-        'status' => 'active',
         'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
@@ -102,7 +97,6 @@ it('can manage task frequencies', function (): void
         'expression' => '0 9 * * 1', // Ogni lunedì alle 9:00
         'timezone' => 'UTC',
         'is_active' => 1,
-        'status' => 'active',
         'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 

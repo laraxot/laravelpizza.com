@@ -17,6 +17,12 @@ it('can create result with basic information', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     $resultData = [
@@ -47,6 +53,12 @@ it('can manage result execution lifecycle', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     // Crea risultato
@@ -70,6 +82,12 @@ it('can handle result relationships with task', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     // Crea risultati multipli per lo stesso task
@@ -100,6 +118,12 @@ it('can manage result status variations', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     $result = Result::create([
@@ -129,6 +153,12 @@ it('can handle result with different durations', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     $result = Result::create([
@@ -149,6 +179,12 @@ it('can validate result data integrity', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     // Test con risultato valido
@@ -172,6 +208,12 @@ it('can manage multiple results for same task', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     // Crea un batch di risultati
@@ -207,6 +249,12 @@ it('can access task last result', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     // Crea risultati in sequenza
@@ -238,6 +286,12 @@ it('can calculate average runtime', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     // Crea risultati con diversi tempi di esecuzione
@@ -275,6 +329,12 @@ it('can handle result with empty values', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     $result = Result::create([
@@ -296,6 +356,12 @@ it('can handle result with large duration', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     $result = Result::create([
@@ -316,6 +382,12 @@ it('can manage result timestamps', function (): void
         'expression' => '0 * * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
+        'dont_overlap' => 0,
+        'run_in_maintenance' => 0,
+        'notification_slack_webhook' => '',
+        'auto_cleanup_num' => 0,
+        'run_on_one_server' => 0,
+        'run_in_background' => 0,
     ]);
 
     $result = Result::create([
