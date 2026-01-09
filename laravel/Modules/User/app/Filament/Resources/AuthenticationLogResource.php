@@ -33,7 +33,7 @@ class AuthenticationLogResource extends XotBaseResource
 
 
 
-    protected static ?int $navigationSort = 3;
+
 
     public static function getNavigationLabel(): string
     {

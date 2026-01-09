@@ -25,7 +25,7 @@ class TeamPermissionResource extends XotBaseResource
 
     protected static string|\UnitEnum|null $navigationGroup = 'Gestione Utenti';
 
-    protected static ?int $navigationSort = 15;
+
 
     public static function getNavigationLabel(): string
     {
