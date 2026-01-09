@@ -126,7 +126,6 @@ it('can handle task notifications', function (): void
         'expression' => '0 3 * * *',
         'timezone' => 'UTC',
         'is_active' => 1,
-        'status' => 'active',
         'notification_email_address' => 'admin@example.com',
         'notification_phone_number' => '+1234567890',
         'notification_slack_webhook' => 'https://hooks.slack.com/services/...',
