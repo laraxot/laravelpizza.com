@@ -27,12 +27,6 @@ return [
         'attempts' => [
             'label' => 'Intentos',
         ],
-        'status' => [
-            'label' => 'Estado',
-        ],
-        'display_name' => [
-            'label' => 'Nombre para Mostrar',
-        ],
         'reserved_at' => [
             'label' => 'Reservado En',
         ],

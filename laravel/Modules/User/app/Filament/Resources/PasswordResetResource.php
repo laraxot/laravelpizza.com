@@ -24,25 +24,6 @@ class PasswordResetResource extends XotBaseResource
 {
     protected static ?string $model = PasswordReset::class;
 
-
-
-
-
-    public static function getNavigationLabel(): string
-    {
-        return __('Password Resets');
-    }
-
-    public static function getPluralLabel(): string
-    {
-        return __('Password Resets');
-    }
-
-    public static function getModelLabel(): string
-    {
-        return __('Password Reset');
-    }
-
     public static function table(Table $table): Table
     {
         return $table

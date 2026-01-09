@@ -4,48 +4,30 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Log di autenticazione',
+        'label' => 'Log di Autenticazione',
+        'plural' => 'Log di Autenticazione',
+        'icon' => 'heroicon-o-shield-check',
         'group' => 'Sicurezza',
-        'icon' => 'heroicon-o-lock-closed',
-        'sort' => 36,
+        'sort' => 30,
     ],
-    'label' => 'Log di autenticazione',
-    'plural_label' => 'Log di autenticazione',
+    'label' => 'Log di Autenticazione',
+    'plural_label' => 'Log di Autenticazione',
     'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'user_id' => [
-            'label' => 'Utente',
-        ],
-        'ip_address' => [
-            'label' => 'Indirizzo IP',
-        ],
-        'user_agent' => [
-            'label' => 'User Agent',
-        ],
-        'login_at' => [
-            'label' => 'Accesso il',
-        ],
-        'logout_at' => [
-            'label' => 'Disconnessione il',
-        ],
-        'login_method' => [
-            'label' => 'Metodo di accesso',
-        ],
-        'success' => [
-            'label' => 'Successo',
-        ],
+        'id' => ['label' => 'ID'],
+        'authenticatable_type' => ['label' => 'Tipo Autenticabile'],
+        'authenticatable.name' => ['label' => 'Utente'],
+        'ip_address' => ['label' => 'Indirizzo IP'],
+        'user_agent' => ['label' => 'User Agent'],
+        'login_successful' => ['label' => 'Accesso Riuscito'],
+        'login_at' => ['label' => 'Data Accesso'],
+        'logout_at' => ['label' => 'Data Uscita'],
+        'cleared_by_user' => ['label' => 'Cancellato da Utente'],
+        'authenticatable_id' => ['label' => 'ID Autenticabile'],
     ],
     'actions' => [
-        'view_details' => [
-            'label' => 'Visualizza dettagli',
-        ],
-        'export_logs' => [
-            'label' => 'Esporta log',
-        ],
-        'reorderRecords' => [
-            'tooltip' => 'Riordina record',
+        'view_user' => [
+            'label' => 'Visualizza Utente',
+            'icon' => 'heroicon-o-user',
         ],
     ],
 ];

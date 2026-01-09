@@ -19,26 +19,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class TeamPermissionResource extends XotBaseResource
 {
-        protected static ?string $model = TeamPermission::class;
-    
-    
-
-
-
-    public static function getNavigationLabel(): string
-    {
-        return __('user::team_permission.navigation.label');
-    }
-
-    public static function getPluralLabel(): string
-    {
-        return __('user::team_permission.navigation.plural');
-    }
-
-    public static function getModelLabel(): string
-    {
-        return __('user::team_permission.navigation.name');
-    }
+    protected static ?string $model = TeamPermission::class;
 
     /**
      * Get the form schema for the resource (XotBaseResource pattern).

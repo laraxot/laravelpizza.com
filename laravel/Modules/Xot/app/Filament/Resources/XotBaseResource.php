@@ -36,13 +36,6 @@ abstract class XotBaseResource extends FilamentResource
 
     protected static ?string $model = null;
 
-    // protected static ?string $navigationIcon = 'heroicon-o-bell';
-    // protected static ?string $navigationLabel = 'Custom Navigation Label';
-    // protected static ?string $activeNavigationIcon = 'heroicon-s-document-text';
-    // protected static bool $shouldRegisterNavigation = false;
-    // protected static ?string $navigationGroup = 'Parametri di Sistema';
-    // protected static ?int $navigationSort = null;
-
     protected static ?\Filament\Pages\Enums\SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
     /**

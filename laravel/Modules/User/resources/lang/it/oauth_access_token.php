@@ -4,42 +4,24 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Token di accesso OAuth',
-        'group' => 'OAuth',
+        'label' => 'Token di Accesso OAuth',
+        'plural' => 'Token di Accesso OAuth',
         'icon' => 'heroicon-o-key',
-        'sort' => 33,
+        'group' => 'OAuth',
+        'sort' => 10,
     ],
-    'label' => 'Token di accesso OAuth',
-    'plural_label' => 'Token di accesso OAuth',
+    'label' => 'Token di Accesso OAuth',
+    'plural_label' => 'Token di Accesso OAuth',
     'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'user_id' => [
-            'label' => 'Utente',
-        ],
-        'client_id' => [
-            'label' => 'Client',
-        ],
-        'name' => [
-            'label' => 'Nome',
-        ],
-        'scopes' => [
-            'label' => 'Ambiti',
-        ],
-        'revoked' => [
-            'label' => 'Revocato',
-        ],
-        'expires_at' => [
-            'label' => 'Scade il',
-        ],
-    ],
-    'actions' => [
-        'revoke' => [
-            'label' => 'Revoca',
-        ],
-        'refresh' => [
-            'label' => 'Aggiorna',
-        ],
+        'id' => ['label' => 'ID'],
+        'user.name' => ['label' => 'Utente'],
+        'client.name' => ['label' => 'Client'],
+        'name' => ['label' => 'Nome'],
+        'scopes' => ['label' => 'Scopes'],
+        'revoked' => ['label' => 'Revocato'],
+        'created_at' => ['label' => 'Creato il'],
+        'expires_at' => ['label' => 'Scade il'],
+        'user_id' => ['label' => 'ID Utente'],
+        'client_id' => ['label' => 'ID Client'],
     ],
 ];

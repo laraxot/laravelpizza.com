@@ -5,47 +5,29 @@ declare(strict_types=1);
 return [
     'navigation' => [
         'label' => 'Authentication Logs',
+        'plural' => 'Authentication Logs',
+        'icon' => 'heroicon-o-shield-check',
         'group' => 'Security',
-        'icon' => 'heroicon-o-lock-closed',
-        'sort' => 36,
+        'sort' => 30,
     ],
     'label' => 'Authentication Log',
     'plural_label' => 'Authentication Logs',
     'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'user_id' => [
-            'label' => 'User',
-        ],
-        'ip_address' => [
-            'label' => 'IP Address',
-        ],
-        'user_agent' => [
-            'label' => 'User Agent',
-        ],
-        'login_at' => [
-            'label' => 'Login At',
-        ],
-        'logout_at' => [
-            'label' => 'Logout At',
-        ],
-        'login_method' => [
-            'label' => 'Login Method',
-        ],
-        'success' => [
-            'label' => 'Success',
-        ],
+        'id' => ['label' => 'ID'],
+        'authenticatable_type' => ['label' => 'Authenticatable Type'],
+        'authenticatable.name' => ['label' => 'User'],
+        'ip_address' => ['label' => 'IP Address'],
+        'user_agent' => ['label' => 'User Agent'],
+        'login_successful' => ['label' => 'Success'],
+        'login_at' => ['label' => 'Login Time'],
+        'logout_at' => ['label' => 'Logout Time'],
+        'cleared_by_user' => ['label' => 'Cleared by User'],
+        'authenticatable_id' => ['label' => 'Authenticatable ID'],
     ],
     'actions' => [
-        'view_details' => [
-            'label' => 'View Details',
-        ],
-        'export_logs' => [
-            'label' => 'Export Logs',
-        ],
-        'reorderRecords' => [
-            'tooltip' => 'Reorder records',
+        'view_user' => [
+            'label' => 'View User',
+            'icon' => 'heroicon-o-user',
         ],
     ],
 ];

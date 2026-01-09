@@ -31,25 +31,6 @@ class AuthenticationLogResource extends XotBaseResource
 {
     protected static ?string $model = AuthenticationLog::class;
 
-
-
-
-
-    public static function getNavigationLabel(): string
-    {
-        return __('Authentication Logs');
-    }
-
-    public static function getPluralLabel(): string
-    {
-        return __('Authentication Logs');
-    }
-
-    public static function getModelLabel(): string
-    {
-        return __('Authentication Log');
-    }
-
     public static function table(Table $table): Table
     {
         return $table

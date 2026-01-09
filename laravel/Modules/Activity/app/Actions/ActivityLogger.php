@@ -144,7 +144,6 @@ class ActivityLogger
             throw new InvalidArgumentException('Limit must be positive');
         }
 
-        /** @var Collection<int, Activity> $activities */
         return Activity::with('subject')
             ->where('causer_id', $user->getKey())
             ->where('causer_type', $user::class)
@@ -160,7 +159,6 @@ class ActivityLogger
      */
     public function getModelActivities(Model $model, int $limit = 50): Collection
     {
-        /** @var Collection<int, Activity> $activities */
         return Activity::with('causer')
             ->where('subject_type', $model::class)
             ->where('subject_id', $model->getKey())
@@ -183,7 +181,6 @@ class ActivityLogger
             throw new InvalidArgumentException('Limit must be positive');
         }
 
-        /** @var Collection<int, Activity> $activities */
         return Activity::with(['causer', 'subject'])
             ->where('event', $type)
             ->latest()
@@ -202,7 +199,6 @@ class ActivityLogger
             throw new InvalidArgumentException('Limit must be positive');
         }
 
-        /** @var Collection<int, Activity> $activities */
         return Activity::with(['causer', 'subject'])
             ->latest()
             ->limit($limit)

@@ -259,7 +259,6 @@ abstract class XotBasePage extends FilamentPage implements HasForms
         }
 
         // Use method_exists to safely call hasPermissionTo
-        /** @var bool $result */
         return $user->hasPermissionTo($permission);
     }
 

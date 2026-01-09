@@ -71,7 +71,6 @@ class UpdateCoordinatesResult extends Data
      */
     public function getErrorMessages(): array
     {
-        /** @var array<int, string> $errorMessages */
         return $this->errors
             ->map(fn (array $error): string => "{$error['model']}: {$error['error']}")
             ->values()

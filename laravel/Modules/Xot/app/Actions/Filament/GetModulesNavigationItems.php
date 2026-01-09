@@ -145,15 +145,15 @@ class GetModulesNavigationItems
 
         $cacheKey = 'xot:navigation:modules:'.md5((string) json_encode($modules));
 
-        /** @var array<int, array{module:string,module_low:string,icon:string,sort:int}> $cached */
         $cached = Cache::get($cacheKey);
+        /** @var array<int, array{module: string, module_low: string, icon: string, sort: int}> $cached */
         if (\is_array($cached)) {
             return $cached;
         }
 
         // Se non presente in cache, rigenera usando la stessa logica di execute()
-        /** @var array<int, array{module: string, module_low: string, icon: string, sort: int}> $result */
-        return Cache::remember($cacheKey, now()->addMinutes(10), static function () use ($modules): array {
+
+        $result = Cache::remember($cacheKey, now()->addMinutes(10), static function () use ($modules): array {
             $out = [];
             foreach ($modules as $module) {
                 Assert::string($module, 'Il nome del modulo deve essere una stringa');
@@ -183,5 +183,21 @@ class GetModulesNavigationItems
 
             return $out;
         });
+
+        Assert::isArray($result);
+        foreach ($result as $item) {
+            Assert::isArray($item);
+            Assert::keyExists($item, 'module');
+            Assert::keyExists($item, 'module_low');
+            Assert::keyExists($item, 'icon');
+            Assert::keyExists($item, 'sort');
+            Assert::string($item['module']);
+            Assert::string($item['module_low']);
+            Assert::string($item['icon']);
+            Assert::integer($item['sort']);
+        }
+
+        /** @var array<int, array{module: string, module_low: string, icon: string, sort: int}> $result */
+        return $result;
     }
 }
