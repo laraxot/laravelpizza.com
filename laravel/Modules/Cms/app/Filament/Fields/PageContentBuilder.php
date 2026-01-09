@@ -20,7 +20,7 @@ class PageContentBuilder
 
         $blockList = self::buildBlockList($blocks, $context);
 
-        /** @var list<Block> $blockList */
+        /* @var list<Block> $blockList */
         return Builder::make($name)
             ->blocks($blockList)
             ->collapsible();
@@ -33,7 +33,7 @@ class PageContentBuilder
      */
     private static function buildBlockList(DataCollection $blocks, string $context): array
     {
-/** @var list<Block> $blockList */ $blockList = [];
+        /** @var list<Block> $blockList */ $blockList = [];
 
         foreach ($blocks as $block) {
             Assert::isInstanceOf($block, ComponentFileData::class, '['.__LINE__.']['.__FILE__.']');

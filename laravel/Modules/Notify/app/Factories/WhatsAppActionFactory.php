@@ -56,6 +56,7 @@ final class WhatsAppActionFactory
         }
 
         $instance = app($className);
+        Assert::isInstanceOf($instance, WhatsAppProviderActionInterface::class);
         /** @var WhatsAppProviderActionInterface $instance */
         return $instance;
     }

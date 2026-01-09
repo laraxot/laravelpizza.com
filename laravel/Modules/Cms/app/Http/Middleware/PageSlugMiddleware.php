@@ -19,7 +19,7 @@ class PageSlugMiddleware
 
         // Handle case where slug might be null or not a string
         if (! \is_string($slug)) {
-            /** @var Response */
+            /* @var Response */
             return $next($request);
         }
 
@@ -27,7 +27,7 @@ class PageSlugMiddleware
         // Should return ["auth", "Modules\User\Http\Middleware\EnsureUserHasType:doctor"]
 
         if (empty($middlewares)) {
-            /** @var Response */
+            /* @var Response */
             return $next($request);
         }
         $this->kernel = app(Kernel::class);
@@ -53,7 +53,7 @@ class PageSlugMiddleware
             $parameters = [];
         }
 
-        /** @var array<string> $parameters */
+        /* @var array<string> $parameters */
         return [$name, $parameters];
     }
 
@@ -63,13 +63,13 @@ class PageSlugMiddleware
     protected function executeMiddlewareChain(Request $request, array $middlewares, \Closure $finalNext): Response
     {
         if (empty($middlewares)) {
-            /** @var Response */
+            /* @var Response */
             return $finalNext($request);
         }
 
         $middleware = array_shift($middlewares);
         if (! \is_string($middleware)) {
-            /** @var Response */
+            /* @var Response */
             return $finalNext($request);
         }
 
@@ -87,11 +87,11 @@ class PageSlugMiddleware
         // Execute current middleware
         if (\is_object($middlewareInstance) && method_exists($middlewareInstance, 'handle')) {
             if (empty($parameters)) {
-                /** @var Response */
+                /* @var Response */
                 return $middlewareInstance->handle($request, $next);
             }
 
-            /** @var Response */
+            /* @var Response */
             return $middlewareInstance->handle($request, $next, ...$parameters);
         }
 
@@ -112,7 +112,7 @@ class PageSlugMiddleware
         /** @var array<string, class-string> $routeMiddleware */
         $routeMiddleware = $this->kernel->getRouteMiddleware();
         if (isset($routeMiddleware[$middleware])) {
-            /** @var class-string */
+            /* @var class-string */
             return $routeMiddleware[$middleware];
         }
 

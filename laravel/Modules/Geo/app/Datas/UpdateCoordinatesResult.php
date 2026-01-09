@@ -76,6 +76,7 @@ class UpdateCoordinatesResult extends Data
             ->values()
             ->toArray();
         
+        Assert::isArray($messages);
         /** @var array<int, string> $messages */
         return $messages;
     }

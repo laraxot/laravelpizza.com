@@ -42,7 +42,7 @@ class Home extends XotBasePage
     public function getViewData(): array
     {
         $data = [];
-        if ($this->containers !== []) {
+        if ([] !== $this->containers) {
             Assert::string($container_last = last($this->containers), '['.__LINE__.']['.__FILE__.']');
             $item_last = last($this->items);
 
@@ -104,7 +104,7 @@ class Home extends XotBasePage
         if (\count($containers) > \count($items)) {
             $view = 'index';
         }
-        if ($containers === []) {
+        if ([] === $containers) {
             $view = 'home';
         }
 
@@ -112,7 +112,7 @@ class Home extends XotBasePage
 
         $views = [];
 
-        if ($containers !== []) {
+        if ([] !== $containers) {
             $views[] = 'pub_theme::'.implode('.', $containers).'.'.$view;
 
             $firstContainer = $containers[0] ?? '';
@@ -141,7 +141,7 @@ class Home extends XotBasePage
         $parameters['lang'] = app()->getLocale();
         $record = $parameters['record'] ?? null;
 
-        if ($record && is_object($record) && $name === 'show') {
+        if ($record && is_object($record) && 'show' === $name) {
             $container0 = class_basename($record);
             $container0 = Str::plural($container0);
             $container0 = Str::snake($container0);
@@ -151,7 +151,7 @@ class Home extends XotBasePage
             return route('test', $parameters);
         }
 
-        if ($record && is_object($record) && $name === 'index') {
+        if ($record && is_object($record) && 'index' === $name) {
             $container0 = class_basename($record);
             $container0 = Str::plural($container0);
             $container0 = Str::snake($container0);

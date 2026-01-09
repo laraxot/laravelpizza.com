@@ -9,7 +9,6 @@ use Modules\Cms\Database\Factories\ConfFactory;
 use Modules\Tenant\Actions\Config\GetTenantConfigNamesAction;
 use Modules\Xot\Contracts\ProfileContract;
 use Sushi\Sushi;
-use Webmozart\Assert\Assert;
 
 /**
  * Modules\Cms\Models\Conf.
@@ -47,10 +46,8 @@ class Conf extends BaseModel
      */
     public function getRows(): array
     {
-        $configNames = app(GetTenantConfigNamesAction::class)->execute();
-        Assert::isArray($configNames);
-        /** @var array<int, array{id: int, name: string}> $configNames */
-        return $configNames;
+        /* @var array<int, array{id: int, name: string}> $configNames */
+        return app(GetTenantConfigNamesAction::class)->execute();
     }
 
     /*

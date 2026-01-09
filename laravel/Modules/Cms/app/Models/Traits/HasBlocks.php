@@ -36,9 +36,8 @@ trait HasBlocks
 
         $blocks = $this->compile($blocks);
 
-        $collection = BlockData::collection($blocks);
-        /** @var DataCollection<BlockData> $collection */
-        return $collection;
+        /* @var DataCollection<BlockData> $collection */
+        return BlockData::collection($blocks);
     }
 
     /**

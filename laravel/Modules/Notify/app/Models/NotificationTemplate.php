@@ -259,8 +259,17 @@ class NotificationTemplate extends BaseModel implements HasMedia
     public function getGrapesJSData(): array
     {
         $data = $this->grapesjs_data ?? [];
+        if (! \is_array($data)) {
+            $data = [];
+        }
 
-        return $data;
+        $result = [];
+        foreach ($data as $key => $value) {
+            $result[(string) $key] = $value;
+        }
+
+        /** @var array<string, mixed> $result */
+        return $result;
     }
 
     /**
