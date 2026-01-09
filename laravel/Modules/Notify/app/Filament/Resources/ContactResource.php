@@ -14,8 +14,6 @@ class ContactResource extends XotBaseResource
 {
     protected static ?string $model = Contact::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
-
     /**
      * Get the form schema for the resource.
      *

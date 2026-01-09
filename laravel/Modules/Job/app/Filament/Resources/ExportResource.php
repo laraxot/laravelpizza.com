@@ -16,7 +16,7 @@ class ExportResource extends XotBaseResource
 {
     protected static null|string $model = Export::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+
 
     #[Override]
     public static function getFormSchema(): array

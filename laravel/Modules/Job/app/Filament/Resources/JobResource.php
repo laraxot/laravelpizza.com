@@ -19,9 +19,7 @@ class JobResource extends XotBaseResource
 {
     protected static null|string $model = Job::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-circle-stack';
 
-    protected static null|string $recordTitleAttribute = 'display_name';
 
     #[Override]
     public static function getFormSchema(): array
