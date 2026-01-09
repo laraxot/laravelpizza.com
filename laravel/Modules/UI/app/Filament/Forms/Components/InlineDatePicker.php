@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use Modules\Xot\Filament\Forms\Components\XotBaseDatePicker;
+
 use function Safe\preg_match;
 
 /**
@@ -21,7 +22,6 @@ use function Safe\preg_match;
  */
 class InlineDatePicker extends XotBaseDatePicker
 {
-
     /**
      * Mese attualmente visualizzato (formato Y-m).
      */
@@ -51,7 +51,7 @@ class InlineDatePicker extends XotBaseDatePicker
 
         // Hydration/Dehydration del valore
         $this->afterStateHydrated(static function (self $component, mixed $state): void {
-            if ($state !== null && \is_string($state) && $state !== '') {
+            if (null !== $state && \is_string($state) && '' !== $state) {
                 try {
                     $date = Carbon::parse($state);
                     $component->currentViewMonth = $date->format('Y-m');
@@ -63,7 +63,7 @@ class InlineDatePicker extends XotBaseDatePicker
         });
 
         $this->dehydrateStateUsing(static function (self $_component, mixed $state): ?string {
-            if ($state !== null && \is_string($state) && $state !== '') {
+            if (null !== $state && \is_string($state) && '' !== $state) {
                 try {
                     return Carbon::parse($state)->format('Y-m-d');
                 } catch (\Exception $e) {
@@ -152,7 +152,7 @@ class InlineDatePicker extends XotBaseDatePicker
 
         /** @var Collection<int, non-falsy-string> $result */
         $result = collect($dates)->map(static function (mixed $date): string {
-            if (! \is_string($date) || $date === '') {
+            if (! \is_string($date) || '' === $date) {
                 return '';
             }
             try {
@@ -160,7 +160,7 @@ class InlineDatePicker extends XotBaseDatePicker
             } catch (\Exception $e) {
                 return '';
             }
-        })->filter(static fn (string $v): bool => $v !== '')->values(); // Remove empty strings and reindex
+        })->filter(static fn (string $v): bool => '' !== $v)->values(); // Remove empty strings and reindex
 
         /** @var Collection<int, string> $resultTyped */
         $resultTyped = $result;

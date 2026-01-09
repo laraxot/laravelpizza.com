@@ -45,7 +45,7 @@ class IconStateColumn extends IconColumn
                         ->options(function (Model&HasStatesContract $record, string $_state): array {
                             $name = $this->getName();
                             $state = $record->getAttribute($name);
-                            if ($state === null) {
+                            if (null === $state) {
                                 $defaultStates = Arr::wrap($record->getDefaultStateFor($name));
 
                                 /** @var array<string, string> $options */
@@ -72,7 +72,8 @@ class IconStateColumn extends IconColumn
                                 $statesArray = $record->getStatesFor($name)->toArray();
                             }
 
-                            $states = Arr::mapWithKeys($statesArray, function ($state) use ($record) {
+                            /* @var array<int|string, mixed> $states */
+                            return Arr::mapWithKeys($statesArray, function ($state) use ($record) {
                                 if (! is_string($state)) {
                                     return [];
                                 }
@@ -82,7 +83,6 @@ class IconStateColumn extends IconColumn
 
                                 return [$state => $label];
                             });
-                            return $states;
                         })
                         ->required()
                         ->reactive(),

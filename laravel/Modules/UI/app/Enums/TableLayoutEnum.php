@@ -73,12 +73,12 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 
     public function isGridLayout(): bool
     {
-        return $this === self::GRID;
+        return self::GRID === $this;
     }
 
     public function isListLayout(): bool
     {
-        return $this === self::LIST;
+        return self::LIST === $this;
     }
 
     /**

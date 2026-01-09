@@ -13,7 +13,6 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 class UserCalendarWidget extends XotBaseWidget
 {
-
     public string $type;
     protected string $view = 'ui::filament.widgets.user-calendar';
 
@@ -25,7 +24,7 @@ class UserCalendarWidget extends XotBaseWidget
         $modelString = \is_string($model) ? $model : (string) $model;
 
         return Str::of($modelString)
-            ->replace('\\Models\\', '\\Actions\\')
+            ->replace('\Models\\', '\\Actions\\')
             ->append('\\Calendar\\'.$action_suffix)
             ->toString();
     }
@@ -54,9 +53,8 @@ class UserCalendarWidget extends XotBaseWidget
             return [];
         }
 
-        $result = $resultRaw;
-        /** @var array<int, array<string, mixed>> $result */
-        return $result;
+        /* @var array<int, array<string, mixed>> $result */
+        return $resultRaw;
     }
 
     /**
@@ -71,14 +69,14 @@ class UserCalendarWidget extends XotBaseWidget
             if (\is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
                 if (\is_array($resultRaw)) {
-                    /** @var array<int, TextInput|Grid> $result */
+                    /* @var array<int, TextInput|Grid> $result */
                     return $resultRaw;
                 }
             }
         }
 
         // Fallback schema
-        $fallback = [
+        return [
             TextInput::make('title'),
             Grid::make()
                 ->schema([
@@ -86,34 +84,19 @@ class UserCalendarWidget extends XotBaseWidget
                     DateTimePicker::make('ends_at'),
                 ]),
         ];
-        
-        return $fallback;
     }
 
+    /**
+     * @SuppressWarnings("PHPMD.UnusedFormalParameter")
+     */
     public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void
     {
         // TODO: Implementare la logica per la selezione della data
     }
 
-    private static function isValidFormSchema(mixed $value): bool
-    {
-        if (! \is_array($value)) {
-            return false;
-        }
-
-        foreach ($value as $key => $item) {
-            if (! \is_int($key)) {
-                return false;
-            }
-
-            if (! ($item instanceof TextInput) && ! ($item instanceof Grid)) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
+    /**
+     * Validate that the given value is an array of events with string keys.
+     */
     private static function isValidEventsArray(mixed $value): bool
     {
         if (! \is_array($value)) {
