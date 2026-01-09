@@ -5,40 +5,46 @@ declare(strict_types=1);
 return [
     'fields' => [
         'provider' => [
-            'label' => 'provider',
+            'label' => 'Anbieter',
         ],
         'provider_id' => [
-            'label' => 'provider_id',
+            'label' => 'Anbieter-ID',
         ],
         'name' => [
-            'label' => 'name',
+            'label' => 'Name',
         ],
         'email' => [
-            'label' => 'email',
+            'label' => 'E-Mail',
         ],
         'avatar' => [
-            'label' => 'avatar',
+            'label' => 'Avatar',
         ],
         'create' => [
-            'label' => 'create',
+            'label' => 'Erstellen',
         ],
         'attach' => [
-            'label' => 'attach',
+            'label' => 'Anhängen',
         ],
         'layout' => [
-            'label' => 'layout',
+            'label' => 'Layout',
         ],
         'view' => [
-            'label' => 'view',
+            'label' => 'Anzeigen',
         ],
         'edit' => [
-            'label' => 'edit',
+            'label' => 'Bearbeiten',
         ],
         'detach' => [
-            'label' => 'detach',
+            'label' => 'Trennen',
         ],
         'toggleColumns' => [
-            'label' => 'toggleColumns',
+            'label' => 'Spalten Umschalten',
         ],
+    ],
+    'navigation' => [
+        'sort' => 89,
+        'icon' => 'heroicon-o-user-circle',
+        'group' => 'Authentifizierung',
+        'label' => 'Socialite-Benutzer',
     ],
 ];

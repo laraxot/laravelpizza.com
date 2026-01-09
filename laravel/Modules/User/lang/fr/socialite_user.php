@@ -3,26 +3,12 @@
 declare(strict_types=1);
 
 return [
-    'navigation' => [
-        'label' => 'Utilisateur Socialite',
-        'group' => 'Authentification',
-        'icon' => 'heroicon-o-user-group',
-        'sort' => 40,
-    ],
-    'label' => 'Utilisateur Socialite',
-    'plural_label' => 'Utilisateurs Socialite',
     'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'user_id' => [
-            'label' => 'Utilisateur',
-        ],
         'provider' => [
             'label' => 'Fournisseur',
         ],
         'provider_id' => [
-            'label' => 'ID du fournisseur',
+            'label' => 'ID du Fournisseur',
         ],
         'name' => [
             'label' => 'Nom',
@@ -33,22 +19,32 @@ return [
         'avatar' => [
             'label' => 'Avatar',
         ],
-        'token' => [
-            'label' => 'Jeton',
+        'create' => [
+            'label' => 'Créer',
         ],
-        'refresh_token' => [
-            'label' => 'Jeton d\'actualisation',
+        'attach' => [
+            'label' => 'Attacher',
         ],
-        'expires_at' => [
-            'label' => 'Expire le',
+        'layout' => [
+            'label' => 'Mise en Page',
+        ],
+        'view' => [
+            'label' => 'Voir',
+        ],
+        'edit' => [
+            'label' => 'Modifier',
+        ],
+        'detach' => [
+            'label' => 'Détacher',
+        ],
+        'toggleColumns' => [
+            'label' => 'Basculer les Colonnes',
         ],
     ],
-    'actions' => [
-        'link_provider' => [
-            'label' => 'Lier le fournisseur',
-        ],
-        'unlink_provider' => [
-            'label' => 'Dissocier le fournisseur',
-        ],
+    'navigation' => [
+        'sort' => 89,
+        'icon' => 'heroicon-o-user-circle',
+        'group' => 'Authentification',
+        'label' => 'Utilisateurs Socialite',
     ],
 ];

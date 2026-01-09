@@ -29,6 +29,3 @@ return [
         'group' => 'Sistema',
         'label' => 'Trabajos en Espera',
     ],
-];
-
-];

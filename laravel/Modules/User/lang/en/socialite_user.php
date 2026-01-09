@@ -3,21 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'navigation' => [
-        'label' => 'Socialite User',
-        'group' => 'Authentication',
-        'icon' => 'heroicon-o-user-group',
-        'sort' => 40,
-    ],
-    'label' => 'Socialite User',
-    'plural_label' => 'Socialite Users',
     'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'user_id' => [
-            'label' => 'User',
-        ],
         'provider' => [
             'label' => 'Provider',
         ],
@@ -33,22 +19,32 @@ return [
         'avatar' => [
             'label' => 'Avatar',
         ],
-        'token' => [
-            'label' => 'Token',
+        'create' => [
+            'label' => 'Create',
         ],
-        'refresh_token' => [
-            'label' => 'Refresh Token',
+        'attach' => [
+            'label' => 'Attach',
         ],
-        'expires_at' => [
-            'label' => 'Expires At',
+        'layout' => [
+            'label' => 'Layout',
+        ],
+        'view' => [
+            'label' => 'View',
+        ],
+        'edit' => [
+            'label' => 'Edit',
+        ],
+        'detach' => [
+            'label' => 'Detach',
+        ],
+        'toggleColumns' => [
+            'label' => 'Toggle Columns',
         ],
     ],
-    'actions' => [
-        'link_provider' => [
-            'label' => 'Link Provider',
-        ],
-        'unlink_provider' => [
-            'label' => 'Unlink Provider',
-        ],
+    'navigation' => [
+        'sort' => 89,
+        'icon' => 'heroicon-o-user-circle',
+        'group' => 'Authentication',
+        'label' => 'Socialite Users',
     ],
 ];
