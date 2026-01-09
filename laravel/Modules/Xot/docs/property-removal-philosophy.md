@@ -25,6 +25,7 @@ Le classi che estendono `XotBaseResource` **NON DEVONO** definire:
 - `protected static string|\BackedEnum|null $navigationIcon`
 - `protected static ?string $modelLabel`
 - `protected static ?string $pluralModelLabel`
+- `protected static ?int $navigationSort`
 
 Questi valori vengono risolti dinamicamente da `XotBaseResource` tramite i file di traduzione sotto la chiave `.navigation` (e i suoi fallback).
 

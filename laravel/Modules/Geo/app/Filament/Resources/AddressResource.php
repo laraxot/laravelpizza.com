@@ -33,7 +33,7 @@ class AddressResource extends XotBaseResource
 
     // ✅ CORRETTO - NIENTE navigationGroup - La gestione è centralizzata in XotBaseResource
 
-    protected static ?int $navigationSort = 3;
+
 
     /**
      * @return array<string, Component>

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Utilisateurs d\'Équipe',
-        'group' => 'Équipes',
+        'label' => 'Team-Benutzer',
+        'group' => 'Teams',
         'icon' => 'heroicon-o-users',
         'sort' => 41,
     ],

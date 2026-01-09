@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Invitations d\'Équipe',
-        'group' => 'Équipes',
+        'label' => 'Convites de Equipe',
+        'group' => 'Equipes',
         'icon' => 'heroicon-o-envelope',
         'sort' => 34,
     ],

@@ -16,8 +16,6 @@ class ProfileResource extends XotBaseResource
 {
     protected static ?string $model = Profile::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
-
     protected static ?string $cluster = ProfileCluster::class;
 
     #[Override]
