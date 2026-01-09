@@ -15,7 +15,6 @@ use Modules\User\Filament\Clusters\Passport\Resources\OauthAuthCodeResource\Page
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAuthCodeResource\Pages\ViewOauthAuthCode;
 use Modules\User\Models\OauthAuthCode;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Override;
 
 /**
  * Class OauthAuthCodeResource.
@@ -31,7 +30,7 @@ class OauthAuthCodeResource extends XotBaseResource
      *
      * @return array<string, Component>
      */
-    #[Override]
+    #[\Override]
     public static function getFormSchema(): array
     {
         return [
@@ -61,7 +60,7 @@ class OauthAuthCodeResource extends XotBaseResource
     /**
      * @return array<string, \Filament\Resources\Pages\PageRegistration>
      */
-    #[Override]
+    #[\Override]
     public static function getPages(): array
     {
         return [
@@ -73,7 +72,7 @@ class OauthAuthCodeResource extends XotBaseResource
     /**
      * Modify the Eloquent query used to retrieve the records.
      */
-    #[Override]
+    #[\Override]
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()->with(['user', 'client']);

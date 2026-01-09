@@ -24,7 +24,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class TenantResource extends XotBaseResource
 {
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
+
 
     /**
      * Get the model class name for this resource.

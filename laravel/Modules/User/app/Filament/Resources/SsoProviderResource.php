@@ -21,6 +21,7 @@ class SsoProviderResource extends XotBaseResource
     protected static ?string $model = SsoProvider::class;
 
     protected static ?string $recordTitleAttribute = 'display_name';
+
     #[\Override]
     public static function getFormSchema(): array
     {
@@ -62,6 +63,7 @@ class SsoProviderResource extends XotBaseResource
     {
         return $table;
     }
+
     #[\Override]
     public static function getRelations(): array
     {

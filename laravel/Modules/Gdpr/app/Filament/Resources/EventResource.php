@@ -18,8 +18,6 @@ class EventResource extends XotBaseResource
 {
     protected static ?string $model = Event::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
-
     #[Override]
     public static function getFormSchema(): array
     {

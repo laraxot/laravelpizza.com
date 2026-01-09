@@ -21,7 +21,7 @@ class TeamPermissionResource extends XotBaseResource
 {
     protected static ?string $model = TeamPermission::class;
 
-    protected static \BackedEnum|string|null $navigationIcon = 'heroicon-o-shield-check';
+
 
     protected static string|\UnitEnum|null $navigationGroup = 'Gestione Utenti';
 

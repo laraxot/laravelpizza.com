@@ -8,7 +8,6 @@ use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
-use Override;
 
 /**
  * Class EditOauthAccessTokens.
@@ -20,7 +19,7 @@ class EditOauthAccessTokens extends XotBaseEditRecord
     /**
      * @return array<string, Action>
      */
-    #[Override]
+    #[\Override]
     protected function getHeaderActions(): array
     {
         return [

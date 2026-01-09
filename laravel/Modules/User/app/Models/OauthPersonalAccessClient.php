@@ -12,16 +12,14 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 /**
  * Modules\User\Models\OauthPersonalAccessClient.
  *
- * @property string      $uuid
- * @property string      $client_id
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- *
- * @property-read OauthClient|null $client
- *
- * @property int $id
+ * @property string           $uuid
+ * @property string           $client_id
+ * @property Carbon|null      $created_at
+ * @property Carbon|null      $updated_at
+ * @property string|null      $updated_by
+ * @property string|null      $created_by
+ * @property OauthClient|null $client
+ * @property int              $id
  *
  * @method static Builder|OauthPersonalAccessClient newModelQuery()
  * @method static Builder|OauthPersonalAccessClient newQuery()

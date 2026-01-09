@@ -7,7 +7,6 @@ namespace Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenReso
 use Filament\Schemas\Components\Component;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
-use Override;
 
 class ViewOauthAccessToken extends XotBaseViewRecord
 {
@@ -16,7 +15,7 @@ class ViewOauthAccessToken extends XotBaseViewRecord
     /**
      * @return array<string, Component>
      */
-    #[Override]
+    #[\Override]
     protected function getInfolistSchema(): array
     {
         return [];

@@ -7,7 +7,6 @@ namespace Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenReso
 use Filament\Actions\Action;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-use Override;
 
 /**
  * Class ListOauthAccessTokens.
@@ -19,7 +18,7 @@ class ListOauthAccessTokens extends XotBaseListRecords
     /**
      * @return array<string, Action>
      */
-    #[Override]
+    #[\Override]
     protected function getHeaderActions(): array
     {
         return [

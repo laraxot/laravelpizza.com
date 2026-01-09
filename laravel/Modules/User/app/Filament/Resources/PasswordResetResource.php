@@ -26,7 +26,7 @@ class PasswordResetResource extends XotBaseResource
 
 
 
-    protected static ?int $navigationSort = 4;
+
 
     public static function getNavigationLabel(): string
     {

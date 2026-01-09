@@ -9,7 +9,6 @@ use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthPersonalAccessClientResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
-use Override;
 
 /**
  * Class ViewOauthPersonalAccessClient.
@@ -21,7 +20,7 @@ class ViewOauthPersonalAccessClient extends XotBaseViewRecord
     /**
      * @return array<string, Component>
      */
-    #[Override]
+    #[\Override]
     protected function getInfolistSchema(): array
     {
         return [
