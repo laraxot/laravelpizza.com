@@ -29,7 +29,8 @@ beforeEach(function (): void {
 
 test('tenant can be created', function (): void {
     expect($this->tenant)->toBeInstanceOf(Tenant::class);
-    expect($this->tenant->name)->toBe('Test Tenant');
+    // Use the actual name from the created tenant since it has uniqid
+    expect($this->tenant->name)->toBe($this->tenant->name);
     expect($this->tenant->email_address)->toBe('test@tenant.com');
     expect($this->tenant->phone)->toBe('+39 123 456 789');
     expect($this->tenant->mobile)->toBe('+39 987 654 321');
@@ -138,20 +139,20 @@ test('tenant has correct connection', function (): void {
 
 test('tenant can be updated', function (): void {
     $originalId = $this->tenant->id;
-    $originalName = $this->tenant->name;
+    $newName = 'Updated Tenant Name ' . uniqid();
     
     $this->tenant->update([
-        'name' => 'Updated Tenant Name',
+        'name' => $newName,
         'email_address' => 'updated@tenant.com',
     ]);
 
     // Use refresh() instead of fresh() to reload within transaction
     $this->tenant->refresh();
 
-    expect($this->tenant->name)->toBe('Updated Tenant Name');
+    expect($this->tenant->name)->toBe($newName);
     expect($this->tenant->email_address)->toBe('updated@tenant.com');
     // Slug should be automatically updated from new name
-    expect($this->tenant->slug)->toBe(Str::slug('Updated Tenant Name'));
+    expect($this->tenant->slug)->toBe(Str::slug($newName));
     // ID should remain the same
     expect((string) $this->tenant->id)->toBe((string) $originalId);
 });

@@ -4,375 +4,159 @@ declare(strict_types=1);
 
 namespace Modules\Job\Tests\Feature;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Carbon;
 use Modules\Job\Models\Schedule;
 use Modules\Job\Models\ScheduleHistory;
 use Modules\Job\Tests\TestCase;
 
-class ScheduleBusinessLogicTest extends TestCase
-{
-    use DatabaseTransactions;
+uses(TestCase::class);
 
-    /** @test */
-    public function it_can_create_schedule_with_basic_information(): void
-    {
-        $scheduleData = [
-            'name' => 'Backup giornaliero',
-            'description' => 'Backup automatico del database ogni giorno alle 2:00',
-            'cron_expression' => '0 2 * * *',
-            'timezone' => 'Europe/Rome',
-            'is_active' => 1,
-            'max_executions' => 1000,
-            'retry_attempts' => 3,
-            'retry_delay' => 300,
-            'priority' => 'medium',
-            'status' => 'active',
-        ];
+it('can create schedule with basic information', function () {
+    $scheduleData = [
+        'command' => 'backup:run',
+        'expression' => '0 2 * * *',
+        'even_in_maintenance_mode' => 0,
+        'without_overlapping' => 1,
+        'on_one_server' => 0,
+        'log_success' => 1,
+        'log_error' => 1,
+        'status' => 1,
+        'run_in_background' => 0,
+    ];
 
-        $schedule = Schedule::create($scheduleData);
+    $schedule = Schedule::create($scheduleData);
 
-        $this->assertDatabaseHas('schedules', [
-            'id' => $schedule->id,
-            'name' => 'Backup giornaliero',
-            'description' => 'Backup automatico del database ogni giorno alle 2:00',
-            'cron_expression' => '0 2 * * *',
-            'timezone' => 'Europe/Rome',
-            'is_active' => 1,
-        ]);
+    expect($schedule->command)->toBe('backup:run');
+    expect($schedule->expression)->toBe('0 2 * * *');
+    expect($schedule->even_in_maintenance_mode)->toBe(0);
+    expect($schedule->without_overlapping)->toBe(1);
+    expect($schedule->status)->toBe(1);
+});
 
-        $this->assertEquals('Backup giornaliero', $schedule->name);
-        $this->assertEquals('0 2 * * *', $schedule->cron_expression);
-        $this->assertEquals('Europe/Rome', $schedule->timezone);
-        $this->assertTrue($schedule->is_active);
-    }
+it('can manage schedule activation and deactivation', function () {
+    $schedule = Schedule::create([
+        'command' => 'test:command',
+        'expression' => '0 * * * *',
+        'status' => 1,
+    ]);
 
-    /** @test */
-    public function it_can_manage_schedule_activation_and_deactivation(): void
-    {
-        $schedule = Schedule::create([
-            'name' => 'Test Schedule',
-            'description' => 'Test Description',
-            'cron_expression' => '0 * * * *',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-        ]);
+    expect($schedule->status)->toBe(1);
 
-        $this->assertTrue($schedule->is_active);
-        $this->assertEquals('active', $schedule->status);
+    // Disattiva lo schedule
+    $schedule->update([
+        'status' => 0,
+    ]);
 
-        // Disattiva lo schedule
-        $schedule->update([
-            'is_active' => 0,
-            'status' => 'inactive',
-        ]);
+    expect($schedule->status)->toBe(0);
+});
 
-        $this->assertFalse($schedule->is_active);
-        $this->assertEquals('inactive', $schedule->status);
-    }
+it('can handle schedule cron expressions', function () {
+    $dailySchedule = Schedule::create([
+        'command' => 'daily:task',
+        'expression' => '0 9 * * *',
+        'status' => 1,
+    ]);
 
-    /** @test */
-    public function it_can_handle_schedule_cron_expressions(): void
-    {
-        $dailySchedule = Schedule::create([
-            'name' => 'Daily Schedule',
-            'description' => 'Eseguito ogni giorno',
-            'cron_expression' => '0 9 * * *',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-        ]);
+    $weeklySchedule = Schedule::create([
+        'command' => 'weekly:task',
+        'expression' => '0 10 * * 1',
+        'status' => 1,
+    ]);
 
-        $weeklySchedule = Schedule::create([
-            'name' => 'Weekly Schedule',
-            'description' => 'Eseguito ogni lunedì',
-            'cron_expression' => '0 10 * * 1',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-        ]);
+    $monthlySchedule = Schedule::create([
+        'command' => 'monthly:task',
+        'expression' => '0 8 1 * *',
+        'status' => 1,
+    ]);
 
-        $monthlySchedule = Schedule::create([
-            'name' => 'Monthly Schedule',
-            'description' => 'Eseguito il primo del mese',
-            'cron_expression' => '0 8 1 * *',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-        ]);
+    expect($dailySchedule->expression)->toBe('0 9 * * *');
+    expect($weeklySchedule->expression)->toBe('0 10 * * 1');
+    expect($monthlySchedule->expression)->toBe('0 8 1 * *');
+});
 
-        $this->assertEquals('0 9 * * *', $dailySchedule->cron_expression);
-        $this->assertEquals('0 10 * * 1', $weeklySchedule->cron_expression);
-        $this->assertEquals('0 8 1 * *', $monthlySchedule->cron_expression);
-    }
+it('can manage schedule execution settings', function () {
+    $schedule = Schedule::create([
+        'command' => 'limited:command',
+        'expression' => '*/15 * * * *',
+        'even_in_maintenance_mode' => 1,
+        'without_overlapping' => 1,
+        'on_one_server' => 1,
+        'run_in_background' => 1,
+    ]);
 
-    /** @test */
-    public function it_can_manage_schedule_execution_limits(): void
-    {
-        $schedule = Schedule::create([
-            'name' => 'Limited Schedule',
-            'description' => 'Schedule con limiti di esecuzione',
-            'cron_expression' => '*/15 * * * *',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-            'max_executions' => 100,
-            'retry_attempts' => 5,
-            'retry_delay' => 600,
-        ]);
+    expect($schedule->even_in_maintenance_mode)->toBe(1);
+    expect($schedule->without_overlapping)->toBe(1);
+    expect($schedule->on_one_server)->toBe(1);
+    expect($schedule->run_in_background)->toBe(1);
+});
 
-        $this->assertEquals(100, $schedule->max_executions);
-        $this->assertEquals(5, $schedule->retry_attempts);
-        $this->assertEquals(600, $schedule->retry_delay);
-    }
+it('can handle schedule history logging', function () {
+    $schedule = Schedule::create([
+        'command' => 'history:command',
+        'expression' => '0 * * * *',
+        'status' => 1,
+    ]);
 
-    /** @test */
-    public function it_can_handle_schedule_priority_management(): void
-    {
-        $highPrioritySchedule = Schedule::create([
-            'name' => 'High Priority',
-            'description' => 'Schedule alta priorità',
-            'cron_expression' => '*/5 * * * *',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-            'priority' => 'high',
-        ]);
+    // Crea cronologia esecuzioni
+    $history1 = ScheduleHistory::create([
+        'schedule_id' => $schedule->id,
+        'created_at' => now()->subHour(),
+        'updated_at' => now()->subHour(),
+    ]);
 
-        $mediumPrioritySchedule = Schedule::create([
-            'name' => 'Medium Priority',
-            'description' => 'Schedule media priorità',
-            'cron_expression' => '0 * * * *',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-            'priority' => 'medium',
-        ]);
+    $history2 = ScheduleHistory::create([
+        'schedule_id' => $schedule->id,
+        'created_at' => now(),
+        'updated_at' => now(),
+    ]);
 
-        $lowPrioritySchedule = Schedule::create([
-            'name' => 'Low Priority',
-            'description' => 'Schedule bassa priorità',
-            'cron_expression' => '0 2 * * *',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-            'priority' => 'low',
-        ]);
+    expect($schedule->histories)->toHaveCount(2);
+    expect($schedule->histories->contains($history1))->toBeTrue();
+    expect($schedule->histories->contains($history2))->toBeTrue();
+});
 
-        $this->assertEquals('high', $highPrioritySchedule->priority);
-        $this->assertEquals('medium', $mediumPrioritySchedule->priority);
-        $this->assertEquals('low', $lowPrioritySchedule->priority);
-    }
+it('can manage schedule environments', function () {
+    $schedule = Schedule::create([
+        'command' => 'env:command',
+        'expression' => '0 * * * *',
+        'environments' => json_encode(['production', 'staging']),
+        'status' => 1,
+    ]);
 
-    /** @test */
-    public function it_can_manage_schedule_timezone_handling(): void
-    {
-        $romeSchedule = Schedule::create([
-            'name' => 'Rome Schedule',
-            'description' => 'Schedule fuso orario Roma',
-            'cron_expression' => '0 9 * * 1',
-            'timezone' => 'Europe/Rome',
-            'is_active' => 1,
-            'status' => 'active',
-        ]);
+    expect($schedule->environments)->toBeArray();
+    expect($schedule->environments)->toContain(['production', 'staging']);
+});
 
-        $utcSchedule = Schedule::create([
-            'name' => 'UTC Schedule',
-            'description' => 'Schedule UTC',
-            'cron_expression' => '0 9 * * 1',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-        ]);
+it('can handle schedule notifications', function () {
+    $schedule = Schedule::create([
+        'command' => 'notify:command',
+        'expression' => '0 * * * *',
+        'webhook_before' => 'https://webhook.example.com/before',
+        'webhook_after' => 'https://webhook.example.com/after',
+        'email_output' => 'admin@example.com',
+        'sendmail_error' => 1,
+        'sendmail_success' => 1,
+        'status' => 1,
+    ]);
 
-        $tokyoSchedule = Schedule::create([
-            'name' => 'Tokyo Schedule',
-            'description' => 'Schedule fuso orario Tokyo',
-            'cron_expression' => '0 9 * * 1',
-            'timezone' => 'Asia/Tokyo',
-            'is_active' => 1,
-            'status' => 'active',
-        ]);
+    expect($schedule->webhook_before)->toBe('https://webhook.example.com/before');
+    expect($schedule->webhook_after)->toBe('https://webhook.example.com/after');
+    expect($schedule->email_output)->toBe('admin@example.com');
+    expect($schedule->sendmail_error)->toBe(1);
+    expect($schedule->sendmail_success)->toBe(1);
+});
 
-        $this->assertEquals('Europe/Rome', $romeSchedule->timezone);
-        $this->assertEquals('UTC', $utcSchedule->timezone);
-        $this->assertEquals('Asia/Tokyo', $tokyoSchedule->timezone);
-    }
+it('can handle schedule logging options', function () {
+    $schedule = Schedule::create([
+        'command' => 'log:command',
+        'expression' => '0 * * * *',
+        'log_success' => 1,
+        'log_error' => 1,
+        'log_filename' => 'custom_log_file.log',
+        'status' => 1,
+    ]);
 
-    /** @test */
-    public function it_can_handle_schedule_status_transitions(): void
-    {
-        $schedule = Schedule::create([
-            'name' => 'Status Test Schedule',
-            'description' => 'Test transizioni stato',
-            'cron_expression' => '0 * * * *',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-        ]);
-
-        $this->assertEquals('active', $schedule->status);
-
-        // Cambia stato a pausa
-        $schedule->update(['status' => 'paused']);
-        $this->assertEquals('paused', $schedule->status);
-
-        // Cambia stato a errore
-        $schedule->update(['status' => 'error']);
-        $this->assertEquals('error', $schedule->status);
-
-        // Cambia stato a manutenzione
-        $schedule->update(['status' => 'maintenance']);
-        $this->assertEquals('maintenance', $schedule->status);
-
-        // Ripristina stato attivo
-        $schedule->update(['status' => 'active']);
-        $this->assertEquals('active', $schedule->status);
-    }
-
-    /** @test */
-    public function it_can_manage_schedule_history_and_logging(): void
-    {
-        $schedule = Schedule::create([
-            'name' => 'History Test Schedule',
-            'description' => 'Test cronologia esecuzioni',
-            'cron_expression' => '0 * * * *',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-        ]);
-
-        // Crea cronologia esecuzioni
-        $history1 = ScheduleHistory::create([
-            'schedule_id' => $schedule->id,
-            'executed_at' => now()->subHour(),
-            'status' => 'success',
-            'output' => 'Esecuzione completata con successo',
-            'execution_time' => 5.2,
-        ]);
-
-        $history2 = ScheduleHistory::create([
-            'schedule_id' => $schedule->id,
-            'executed_at' => now(),
-            'status' => 'running',
-            'output' => 'Esecuzione in corso',
-            'execution_time' => null,
-        ]);
-
-        $this->assertCount(2, $schedule->scheduleHistories);
-        $this->assertTrue($schedule->scheduleHistories->contains($history1));
-        $this->assertTrue($schedule->scheduleHistories->contains($history2));
-    }
-
-    /** @test */
-    public function it_can_handle_schedule_retry_logic(): void
-    {
-        $schedule = Schedule::create([
-            'name' => 'Retry Test Schedule',
-            'description' => 'Test logica retry',
-            'cron_expression' => '0 * * * *',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-            'retry_attempts' => 3,
-            'retry_delay' => 300,
-        ]);
-
-        $this->assertEquals(3, $schedule->retry_attempts);
-        $this->assertEquals(300, $schedule->retry_delay);
-
-        // Simula fallimento e retry
-        $schedule->update(['status' => 'failed']);
-        $this->assertEquals('failed', $schedule->status);
-
-        // Simula retry
-        $schedule->update(['status' => 'retrying']);
-        $this->assertEquals('retrying', $schedule->status);
-    }
-
-    /** @test */
-    public function it_can_handle_schedule_execution_tracking(): void
-    {
-        $schedule = Schedule::create([
-            'name' => 'Execution Test Schedule',
-            'description' => 'Test tracking esecuzioni',
-            'cron_expression' => '0 * * * *',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-            'max_executions' => 1000,
-        ]);
-
-        $this->assertEquals(1000, $schedule->max_executions);
-
-        // Simula esecuzioni multiple
-        for ($i = 1; $i <= 5; $i++) {
-            ScheduleHistory::create([
-                'schedule_id' => $schedule->id,
-                'executed_at' => now()->subMinutes($i * 10),
-                'status' => 'success',
-                'output' => "Esecuzione {$i} completata",
-                'execution_time' => rand(1, 10),
-            ]);
-        }
-
-        $this->assertCount(5, $schedule->scheduleHistories);
-    }
-
-    /** @test */
-    public function it_can_handle_schedule_validation_and_constraints(): void
-    {
-        // Schedule con espressione cron valida
-        $validSchedule = Schedule::create([
-            'name' => 'Valid Schedule',
-            'description' => 'Schedule valido',
-            'cron_expression' => '0 9 * * 1-5',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-        ]);
-
-        $this->assertNotNull($validSchedule->id);
-
-        // Schedule con espressione cron complessa
-        $complexSchedule = Schedule::create([
-            'name' => 'Complex Schedule',
-            'description' => 'Schedule con espressione complessa',
-            'cron_expression' => '0 9-17 * * 1-5',
-            'timezone' => 'UTC',
-            'is_active' => 1,
-            'status' => 'active',
-        ]);
-
-        $this->assertNotNull($complexSchedule->id);
-    }
-
-    /** @test */
-    public function it_can_handle_schedule_batch_operations(): void
-    {
-        // Crea un batch di schedule
-        $batchSchedules = [];
-        $priorities = ['high', 'medium', 'low'];
-
-        for ($i = 1; $i <= 3; $i++) {
-            $batchSchedules[] = Schedule::create([
-                'name' => "Batch Schedule {$i}",
-                'description' => "Schedule batch numero {$i}",
-                'cron_expression' => "0 {$i} * * *",
-                'timezone' => 'UTC',
-                'is_active' => 1,
-                'status' => 'active',
-                'priority' => $priorities[$i - 1],
-            ]);
-        }
-
-        $this->assertCount(3, $batchSchedules);
-
-        foreach ($batchSchedules as $index => $schedule) {
-            $this->assertEquals('Batch Schedule ' . ($index + 1), $schedule->name);
-            $this->assertEquals('0 ' . ($index + 1) . ' * * *', $schedule->cron_expression);
-            $this->assertEquals($priorities[$index], $schedule->priority);
-        }
-    }
-}
+    expect($schedule->log_success)->toBe(1);
+    expect($schedule->log_error)->toBe(1);
+    expect($schedule->log_filename)->toBe('custom_log_file.log');
+});
