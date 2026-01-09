@@ -21,8 +21,8 @@ class CreateEventAction
         $userId = Auth::id();
 
         /** @var Event $event */
-        $event = DB::transaction(function () use ($data, $userId) {
-            $event = new Event;
+        return DB::transaction(function () use ($data, $userId) {
+            $event = new Event();
             $event->fill($data);
             if ($userId !== null) {
                 $event->user_id = (int) $userId;
@@ -32,7 +32,5 @@ class CreateEventAction
 
             return $event;
         });
-
-        return $event;
     }
 }

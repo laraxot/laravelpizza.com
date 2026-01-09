@@ -13,11 +13,10 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+use function Safe\json_encode;
 use Spatie\QueueableAction\QueueableAction;
 use Throwable;
 use Webmozart\Assert\Assert;
-
-use function Safe\json_encode;
 
 /**
  * Classe per gestire gli elementi di navigazione per i moduli.
@@ -154,7 +153,7 @@ class GetModulesNavigationItems
 
         // Se non presente in cache, rigenera usando la stessa logica di execute()
         /** @var array<int, array{module: string, module_low: string, icon: string, sort: int}> $result */
-        $result = Cache::remember($cacheKey, now()->addMinutes(10), static function () use ($modules): array {
+        return Cache::remember($cacheKey, now()->addMinutes(10), static function () use ($modules): array {
             $out = [];
             foreach ($modules as $module) {
                 Assert::string($module, 'Il nome del modulo deve essere una stringa');
@@ -184,7 +183,5 @@ class GetModulesNavigationItems
 
             return $out;
         });
-
-        return $result;
     }
 }

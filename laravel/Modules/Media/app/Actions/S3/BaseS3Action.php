@@ -39,6 +39,7 @@ abstract class BaseS3Action
      * @param  string  $configKey  Config key to check first
      * @param  string  $envKey  Environment variable key as fallback
      * @param  string  $default  Default value if neither config nor env is valid
+     *
      * @return string Type-safe string value
      */
     protected function getStringConfig(string $configKey, string $envKey, string $default): string

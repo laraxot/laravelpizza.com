@@ -10,8 +10,6 @@ use Exception;
 use Illuminate\Contracts\Mail\Mailable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
 use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
 use Spatie\Sluggable\HasSlug;
@@ -83,11 +81,11 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
     // use SoftDeletes;
     use HasTranslations;
 
-    /** @var string */
-    protected $connection = 'notify';
-
     /** @var list<string> */
     public array $translatable = ['subject', 'html_template', 'text_template', 'sms_template'];
+
+    /** @var string */
+    protected $connection = 'notify';
 
     /** @var list<string> */
     protected $fillable = [
@@ -106,20 +104,6 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
     ];
 
     /**
-     * Define attribute casts.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'created_at' => 'datetime',
-            'updated_at' => 'datetime',
-            'deleted_at' => 'datetime',
-        ];
-    }
-
-    /**
      * Get the options for generating the slug.
      */
     public function getSlugOptions(): SlugOptions
@@ -136,7 +120,21 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
         }
         $slug = $mailable->getSlug();
 
-        return $query->where('mailable', get_class($mailable))->where('slug', $slug);
+        return $query->where('mailable', $mailable::class)->where('slug', $slug);
+    }
+
+    /**
+     * Define attribute casts.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+        ];
     }
 
     /*

@@ -8,7 +8,6 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Collection;
 use Modules\Geo\Datas\LocationData;
-
 use function Safe\json_decode;
 
 /**

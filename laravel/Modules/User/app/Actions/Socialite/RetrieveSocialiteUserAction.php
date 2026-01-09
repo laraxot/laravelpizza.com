@@ -11,7 +11,6 @@ namespace Modules\User\Actions\Socialite;
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Models\SocialiteUser;
-use ReflectionClass;
 use Spatie\QueueableAction\QueueableAction;
 
 class RetrieveSocialiteUserAction
@@ -38,7 +37,7 @@ class RetrieveSocialiteUserAction
             ->where('provider_id', $providerId)
             ->first();
 
-        if (null === $res) {
+        if ($res === null) {
             return null;
         }
 

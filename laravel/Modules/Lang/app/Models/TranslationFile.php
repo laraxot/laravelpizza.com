@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\File;
 use Modules\Lang\Actions\GetAllTranslationAction;
 use Modules\Lang\Database\Factories\TranslationFileFactory;
 use Modules\Xot\Contracts\ProfileContract;
-
 use function Safe\json_encode;
-
 use Sushi\Sushi;
 
 /**

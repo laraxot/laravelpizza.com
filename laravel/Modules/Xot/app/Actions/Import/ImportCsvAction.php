@@ -12,10 +12,9 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\ColumnData;
+use function Safe\ini_set;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
-
-use function Safe\ini_set;
 
 class ImportCsvAction
 {
@@ -96,6 +95,7 @@ class ImportCsvAction
      * Prepare fields for the SQL query.
      *
      * @param  array<ColumnData>  $columns
+     *
      * @return array<string>
      */
     private function prepareFields(array $columns): array
@@ -142,6 +142,7 @@ class ImportCsvAction
      * Transform columns into ColumnData objects.
      *
      * @param  array<string>  $columns
+     *
      * @return array<ColumnData>
      *
      * @deprecated This method is currently unused but kept for future expansion.

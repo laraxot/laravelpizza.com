@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Traits;
 
-use UnitEnum;
 use BackedEnum;
 use Modules\Lang\Actions\SaveTransAction;
 use Modules\Xot\Actions\File\SvgExistsAction;
+use UnitEnum;
 
 trait NavigationLabelTrait
 {

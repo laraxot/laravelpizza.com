@@ -45,4 +45,6 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
-interface ModelWithUserContract {}
+interface ModelWithUserContract
+{
+}

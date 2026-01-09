@@ -17,8 +17,6 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rules\Password;
 use Modules\Notify\Emails\SpatieEmail;
 use Modules\User\Datas\PasswordData;
-use Modules\User\Models\TeamInvitation;
-use Modules\User\Models\TeamUser;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;

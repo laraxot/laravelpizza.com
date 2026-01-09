@@ -33,16 +33,6 @@ use Modules\Xot\Filament\Tables\Actions\XotBaseBulkAction;
  */
 class UpdateCoordinatesBulkAction extends XotBaseBulkAction
 {
-    /**
-     * Nome di default dell'action.
-     *
-     * Questo nome viene utilizzato come chiave nell'array delle actions
-     * e per la generazione automatica delle traduzioni tramite LangServiceProvider.
-     */
-    public static function getDefaultName(): ?string
-    {
-        return 'update_coordinates_bulk';
-    }
 
     /**
      * Configurazione iniziale dell'azione.
@@ -55,37 +45,19 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
             ->icon('heroicon-o-map-pin')
             ->deselectRecordsAfterCompletion()
             ->action(function (Collection $records): void {
-                /* @var Collection<int, Place> $records */
+                /** @var Collection<int, Place> $records */
                 $this->processRecords($records);
             });
     }
-
     /**
-     * Elabora i record selezionati aggiornando le coordinate.
+     * Nome di default dell'action.
      *
-     * @param Collection<int, Place> $records
+     * Questo nome viene utilizzato come chiave nell'array delle actions
+     * e per la generazione automatica delle traduzioni tramite LangServiceProvider.
      */
-    private function processRecords(Collection $records): void
+    public static function getDefaultName(): ?string
     {
-        /** @var \Illuminate\Support\Collection<int, string> $errors */
-        $errors = collect();
-        $successCount = 0;
-        $action = app(UpdateCoordinatesAction::class);
-
-        foreach ($records as $record) {
-            try {
-                $action->execute($record);
-                ++$successCount;
-            } catch (\Throwable $e) {
-                $errors->push(sprintf('Place #%s: %s', (string) $record->getKey(), $e->getMessage()));
-            }
-        }
-
-        $this->sendNotifications(
-            $successCount,
-            $errors,
-            $records->count()
-        );
+        return 'update_coordinates_bulk';
     }
 
     /**
@@ -141,5 +113,33 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
                 ->persistent()
                 ->send();
         }
+    }
+
+    /**
+     * Elabora i record selezionati aggiornando le coordinate.
+     *
+     * @param Collection<int, Place> $records
+     */
+    private function processRecords(Collection $records): void
+    {
+        /** @var \Illuminate\Support\Collection<int, string> $errors */
+        $errors = collect();
+        $successCount = 0;
+        $action = app(UpdateCoordinatesAction::class);
+
+        foreach ($records as $record) {
+            try {
+                $action->execute($record);
+                ++$successCount;
+            } catch (\Throwable $e) {
+                $errors->push(sprintf('Place #%s: %s', (string) $record->getKey(), $e->getMessage()));
+            }
+        }
+
+        $this->sendNotifications(
+            $successCount,
+            $errors,
+            $records->count()
+        );
     }
 }

@@ -86,7 +86,6 @@ trait SushiToPhpArray
             if (! $model instanceof Model) {
                 return;
             }
-
         });
 
         // ----------------------

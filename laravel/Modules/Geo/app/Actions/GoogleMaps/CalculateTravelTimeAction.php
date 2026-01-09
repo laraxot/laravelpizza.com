@@ -9,9 +9,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Datas\TravelTimeData;
-
 use function Safe\json_decode;
-
 use Webmozart\Assert\Assert;
 
 /**

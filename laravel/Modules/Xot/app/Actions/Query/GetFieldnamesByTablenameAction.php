@@ -20,6 +20,7 @@ final class GetFieldnamesByTablenameAction
      *
      * @param  string  $table  Table name to get columns from
      * @param  string|null  $connectionName  Database connection name (optional)
+     *
      * @return list
      *
      * @throws InvalidArgumentException

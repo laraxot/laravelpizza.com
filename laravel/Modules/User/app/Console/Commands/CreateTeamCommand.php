@@ -6,9 +6,7 @@ namespace Modules\User\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Model;
-
 use function Laravel\Prompts\text;
-
 use Modules\Xot\Datas\XotData;
 use Webmozart\Assert\Assert;
 

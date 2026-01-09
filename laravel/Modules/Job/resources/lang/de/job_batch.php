@@ -5,18 +5,18 @@ declare(strict_types=1);
 return [
     'actions' => [
         'prune_batches' => [
-            'label' => 'Chargen bereinigen',
+            'label' => 'Batches Bereinigen',
         ],
     ],
     'fields' => [
         'failed_job_ids' => [
-            'label' => 'Fehlgeschlagene Auftrags-IDs',
+            'label' => 'IDs Fehlgeschlagener Aufträge',
         ],
     ],
     'navigation' => [
         'sort' => 85,
-        'icon' => 'job batch.navigation',
-        'group' => 'job batch.navigation',
-        'label' => 'job batch.navigation',
+        'icon' => 'heroicon-o-queue-list',
+        'group' => 'System',
+        'label' => 'Auftragsgruppen',
     ],
 ];

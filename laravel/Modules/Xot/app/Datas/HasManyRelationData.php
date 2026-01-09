@@ -22,5 +22,6 @@ class HasManyRelationData extends Data
         public ?array $from = null,
         #[MapInputName('to')]
         public ?array $to = null,
-    ) {}
+    ) {
+    }
 }

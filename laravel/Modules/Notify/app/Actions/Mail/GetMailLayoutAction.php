@@ -8,9 +8,8 @@ use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Actions\Theme\GetThemeContextAction;
 use Modules\Xot\Datas\XotData;
-use Spatie\QueueableAction\QueueableAction;
-
 use function Safe\file_get_contents;
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Action to resolve and load the appropriate email HTML layout.
@@ -26,6 +25,7 @@ class GetMailLayoutAction
      * Resolve and return the layout HTML content.
      *
      * @param string $baseName The base name of the layout (default: 'base')
+     *
      * @return string The HTML content of the layout
      */
     public function execute(string $baseName = 'base'): string

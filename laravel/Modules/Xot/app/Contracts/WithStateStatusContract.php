@@ -12,4 +12,6 @@ use Spatie\ModelStates\State;
  *
  * @phpstan-require-extends Model
  */
-interface WithStateStatusContract {}
+interface WithStateStatusContract
+{
+}

@@ -3,26 +3,15 @@
 declare(strict_types=1);
 
 return [
-    'navigation' => [
-        'label' => 'Waiting Jobs',
-        'group' => 'Jobs',
-        'icon' => 'heroicon-o-clock',
-        'sort' => 30,
-    ],
-    'label' => 'Waiting Job',
-    'plural_label' => 'Waiting Jobs',
     'fields' => [
-        'id' => [
-            'label' => 'ID',
+        'status' => [
+            'label' => 'Status',
         ],
-        'connection' => [
-            'label' => 'Connection',
+        'display_name' => [
+            'label' => 'Display Name',
         ],
         'queue' => [
             'label' => 'Queue',
-        ],
-        'payload' => [
-            'label' => 'Payload',
         ],
         'attempts' => [
             'label' => 'Attempts',
@@ -30,19 +19,14 @@ return [
         'reserved_at' => [
             'label' => 'Reserved At',
         ],
-        'available_at' => [
-            'label' => 'Available At',
-        ],
         'created_at' => [
             'label' => 'Created At',
         ],
     ],
-    'actions' => [
-        'process' => [
-            'label' => 'Process',
-        ],
-        'retry' => [
-            'label' => 'Retry',
-        ],
+    'navigation' => [
+        'sort' => 91,
+        'icon' => 'heroicon-o-clock',
+        'group' => 'System',
+        'label' => 'Jobs Waiting',
     ],
 ];

@@ -51,8 +51,6 @@ class ScheduleService
         Assert::string($key = config('job::cache.key'), '[' . __LINE__ . '][' . class_basename($this) . ']');
 
         /** @var Collection<int, Schedule> $result */
-        $result = Cache::store($store)->rememberForever($key, fn (): Collection => $this->model->active()->get());
-
-        return $result;
+        return Cache::store($store)->rememberForever($key, fn (): Collection => $this->model->active()->get());
     }
 }

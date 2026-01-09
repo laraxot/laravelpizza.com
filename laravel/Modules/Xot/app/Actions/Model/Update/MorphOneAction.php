@@ -52,6 +52,7 @@ final class MorphOneAction
      * Validate and prepare the data array.
      *
      * @param  array<string, mixed>  $data  The input data array
+     *
      * @return array<string, mixed> The validated and prepared data
      */
     private function validateAndPrepareData(array $data): array

@@ -55,6 +55,7 @@ final class SmsActionFactory
      * per istanziare l'action corretta.
      *
      * @param  string|null  $driver  Driver SMS da utilizzare (se null, viene utilizzato quello predefinito)
+     *
      * @return SmsActionContract Azione SMS corrispondente al driver
      *
      * @throws Exception Se il driver specificato non è supportato o la classe non esiste
@@ -102,6 +103,7 @@ final class SmsActionFactory
      * e gestendo eventuali casi speciali/alias.
      *
      * @param  string  $driver  Nome del driver da normalizzare
+     *
      * @return string Nome normalizzato
      */
     private function normalizeDriverName(string $driver): string

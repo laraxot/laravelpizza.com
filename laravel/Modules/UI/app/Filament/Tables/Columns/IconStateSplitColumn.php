@@ -75,6 +75,83 @@ final class IconStateSplitColumn extends Column
         return $result;
     }
 
+    public function canTransitionTo(int|string $recordId, string $stateClass): bool
+    {
+        try {
+            $record = $this->getCachedRecord($recordId);
+
+            return $record && isset($record->state) && $record->state instanceof State
+                ? $record->state->canTransitionTo($stateClass)
+                : false;
+        } catch (\Exception) {
+            return false;
+        }
+    }
+
+    /**
+     * Metodo per testare le azioni.
+     */
+    public function prova(int|string $recordId): void
+    {
+        Notification::make()
+            ->title(__('ui::actions.test_action.title'))
+            ->body(__('ui::actions.test_action.body', ['id' => $recordId]))
+            ->success()
+            ->send();
+    }
+
+    /**
+     * Restituisce le azioni per gli stati.
+     *
+     * @return array<string, Action>
+     */
+    public function getStateActions(): array
+    {
+        $actions = [];
+        $actions['prova'] = $this->getProvaAction();
+
+        $states = $this->getRecordStates();
+        foreach ($states as $stateKey => $stateData) {
+            $transitionAction = $this->getTransitionAction($stateKey, $stateData);
+
+            if ($transitionAction) {
+                $actions["transition_to_{$stateKey}"] = $transitionAction;
+            }
+        }
+
+        return $actions;
+    }
+
+    /**
+     * Listener per l'evento table-action.
+     */
+    #[On('table-action')]
+    public function handleTableAction(string $action, int|string $recordId): void
+    {
+        if ($action === 'prova') {
+            $this->prova($recordId);
+        }
+    }
+
+    /**
+     * Metodo per eseguire la transizione di stato.
+     */
+    public function transitionState(int|string $recordId, string $stateClass): void
+    {
+        try {
+            $record = $this->getRecordForTransition($recordId);
+            $state = $record->getAttribute('state');
+            if (! ($state instanceof State)) {
+                throw new \Exception(__('ui::icon_state.messages.invalid_state_instance'));
+            }
+            $state->transitionTo($stateClass);
+
+            $this->notifyTransitionSuccess();
+        } catch (\Exception $e) {
+            $this->notifyTransitionError($e->getMessage());
+        }
+    }
+
     /**
      * @return array<string, string>
      */
@@ -114,19 +191,6 @@ final class IconStateSplitColumn extends Column
         }
     }
 
-    public function canTransitionTo(int|string $recordId, string $stateClass): bool
-    {
-        try {
-            $record = $this->getCachedRecord($recordId);
-
-            return $record && isset($record->state) && $record->state instanceof State
-                ? $record->state->canTransitionTo($stateClass)
-                : false;
-        } catch (\Exception) {
-            return false;
-        }
-    }
-
     private function getCachedRecord(int|string $recordId): ?Model
     {
         if (! class_exists($this->modelClass) || ! method_exists($this->modelClass, 'find')) {
@@ -136,40 +200,6 @@ final class IconStateSplitColumn extends Column
         $record = $this->modelClass::find($recordId);
 
         return is_object($record) && $record instanceof Model ? $record : null;
-    }
-
-    /**
-     * Metodo per testare le azioni.
-     */
-    public function prova(int|string $recordId): void
-    {
-        Notification::make()
-            ->title(__('ui::actions.test_action.title'))
-            ->body(__('ui::actions.test_action.body', ['id' => $recordId]))
-            ->success()
-            ->send();
-    }
-
-    /**
-     * Restituisce le azioni per gli stati.
-     *
-     * @return array<string, Action>
-     */
-    public function getStateActions(): array
-    {
-        $actions = [];
-        $actions['prova'] = $this->getProvaAction();
-
-        $states = $this->getRecordStates();
-        foreach ($states as $stateKey => $stateData) {
-            $transitionAction = $this->getTransitionAction($stateKey, $stateData);
-
-            if ($transitionAction) {
-                $actions["transition_to_{$stateKey}"] = $transitionAction;
-            }
-        }
-
-        return $actions;
     }
 
     private function getProvaAction(): Action
@@ -197,7 +227,7 @@ final class IconStateSplitColumn extends Column
         $record = $this->getRecord();
         $recordIdRaw = is_object($record) && isset($record->id) ? $record->id : null;
 
-        if (null === $recordIdRaw || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
+        if ($recordIdRaw === null || (! is_int($recordIdRaw) && ! is_string($recordIdRaw))) {
             return null;
         }
 
@@ -215,36 +245,6 @@ final class IconStateSplitColumn extends Column
             ->action(function () use ($recordId, $stateClassName): void {
                 $this->transitionState($recordId, $stateClassName);
             });
-    }
-
-    /**
-     * Listener per l'evento table-action.
-     */
-    #[On('table-action')]
-    public function handleTableAction(string $action, int|string $recordId): void
-    {
-        if ('prova' === $action) {
-            $this->prova($recordId);
-        }
-    }
-
-    /**
-     * Metodo per eseguire la transizione di stato.
-     */
-    public function transitionState(int|string $recordId, string $stateClass): void
-    {
-        try {
-            $record = $this->getRecordForTransition($recordId);
-            $state = $record->getAttribute('state');
-            if (! ($state instanceof State)) {
-                throw new \Exception(__('ui::icon_state.messages.invalid_state_instance'));
-            }
-            $state->transitionTo($stateClass);
-
-            $this->notifyTransitionSuccess();
-        } catch (\Exception $e) {
-            $this->notifyTransitionError($e->getMessage());
-        }
     }
 
     /**

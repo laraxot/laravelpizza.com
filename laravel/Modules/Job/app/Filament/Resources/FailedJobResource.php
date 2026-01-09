@@ -8,14 +8,12 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources;
 
-use Override;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Modules\Job\Filament\Resources\FailedJobResource\Pages\ListFailedJobs;
-use Filament\Forms;
-use Modules\Job\Filament\Resources\FailedJobResource\Pages;
 use Modules\Job\Models\FailedJob;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 class FailedJobResource extends XotBaseResource
 {

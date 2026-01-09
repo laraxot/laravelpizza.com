@@ -23,7 +23,7 @@ class SeoServiceProvider extends XotBaseServiceProvider
         parent::register();
 
         $this->app->singleton(MetatagService::class, function ($app) {
-            return new MetatagService;
+            return new MetatagService();
         });
     }
 

@@ -18,7 +18,7 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Str;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Modules\Xot\Actions\Panel\ApplyMetatagToPanelAction;
-use Modules\Xot\Datas\MetatagData; // Remove if not used elsewhere implicitly
+// Remove if not used elsewhere implicitly
 use Modules\Xot\Datas\XotData;
 use Webmozart\Assert\Assert;
 
@@ -38,7 +38,6 @@ abstract class XotBasePanelProvider extends PanelProvider
         $moduleLow = Str::lower($this->module);
         $mainModuleLow = Str::lower(XotData::make()->main_module); // Renamed to camelCase
         $default = $mainModuleLow === $moduleLow;
-        
 
         $panel = $panel
             ->default($default)

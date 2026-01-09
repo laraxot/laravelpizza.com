@@ -73,7 +73,7 @@ class EmailData extends Data
             $this->body = strip_tags($this->body_html);
         }
 
-        $email = (new MimeEmail)
+        $email = (new MimeEmail())
             ->from($this->getFrom())
             ->to($this->recipient)
             ->subject(strip_tags($this->subject))
@@ -81,7 +81,7 @@ class EmailData extends Data
             ->text($this->body);
 
         foreach ($this->attachments as $attachment) {
-            Assert::string($attachment, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
+            Assert::string($attachment, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
             $email->attachFromPath($attachment); // string $path, ?string $name = null, ?string $contentType = null
         }
 

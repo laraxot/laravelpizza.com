@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
 /**

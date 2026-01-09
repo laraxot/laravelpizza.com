@@ -8,18 +8,21 @@ use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Str;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
 use Override;
-use Spatie\QueueableAction\QueueableAction;
-
 use function Safe\mb_convert_encoding;
-use function Safe\preg_replace;
+use Spatie\QueueableAction\QueueableAction;
 
 final class SendNetfunSMSAction implements SmsActionContract
 {
     use QueueableAction;
+
+    protected bool $debug;
+
+    protected int $timeout;
+
+    protected ?string $defaultSender = null;
 
     private string $token;
 
@@ -27,12 +30,6 @@ final class SendNetfunSMSAction implements SmsActionContract
 
     /** @var array<string, mixed> */
     private array $vars = [];
-
-    protected bool $debug;
-
-    protected int $timeout;
-
-    protected ?string $defaultSender = null;
 
     /**
      * Create a new action instance.
@@ -53,13 +50,14 @@ final class SendNetfunSMSAction implements SmsActionContract
         $sender = config('sms.from');
         $this->defaultSender = is_string($sender) ? $sender : null;
         $this->debug = (bool) config('sms.debug', false);
-        $this->timeout = is_numeric(config('sms.timeout', 30)) ? ((int) config('sms.timeout', 30)) : 30;
+        $this->timeout = is_numeric(config('sms.timeout', 30)) ? (int) config('sms.timeout', 30) : 30;
     }
 
     /**
      * Execute the action.
      *
      * @param  SmsData  $smsData  I dati del messaggio SMS
+     *
      * @return array Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio
@@ -105,15 +103,12 @@ final class SendNetfunSMSAction implements SmsActionContract
         $this->vars['status_code'] = $response->getStatusCode();
         $this->vars['status_txt'] = $response->getBody()->getContents();
 
-
         Log::channel('daily')->error('Netfun SMS response', [
             'request' => $body,
             'status_code' => $this->vars['status_code'],
             'status_txt' => $this->vars['status_txt'],
         ]);
 
-
         return $this->vars;
     }
-
 }

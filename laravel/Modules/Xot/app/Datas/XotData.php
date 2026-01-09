@@ -17,11 +17,10 @@ use Modules\User\Contracts\TenantContract;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use RuntimeException;
+use function Safe\realpath;
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 use Webmozart\Assert\Assert;
-
-use function Safe\realpath;
 
 /**
  * Class Modules\Xot\Datas\XotData.
@@ -349,7 +348,6 @@ class XotData extends Data implements Wireable
     {
         return asset('themes/'.$this->pub_theme.'/'.$key);
     }
-
 
     public function getMailHtmlLayoutPath(string $key = ''): string
     {

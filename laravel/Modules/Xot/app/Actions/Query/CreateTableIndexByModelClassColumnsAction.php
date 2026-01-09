@@ -36,7 +36,7 @@ class CreateTableIndexByModelClassColumnsAction
         }
 
         /** @var Model $modelInstance */
-        $modelInstance = new $modelClass;
+        $modelInstance = new $modelClass();
 
         $tableName = $modelInstance->getTable();
         $connectionName = $modelInstance->getConnectionName() ?? config('database.default');
@@ -89,6 +89,7 @@ class CreateTableIndexByModelClassColumnsAction
      * @param  string  $connectionName  database connection name
      * @param  string  $tableName  name of the table
      * @param  string  $indexName  name of the index
+     *
      * @return bool true if the index exists, false otherwise
      */
     private function indexExists(string $connectionName, string $tableName, string $indexName): bool

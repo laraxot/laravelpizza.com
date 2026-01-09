@@ -56,7 +56,7 @@ abstract class BaseGeoService
         if ($useCache && config('geo.cache.enabled')) {
             /** @var array<string, mixed>|null $cached */
             $cached = Cache::get($cacheKey);
-            if (null !== $cached) {
+            if ($cached !== null) {
                 return $cached;
             }
         }

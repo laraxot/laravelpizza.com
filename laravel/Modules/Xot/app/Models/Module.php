@@ -10,9 +10,8 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\ModuleFactory;
 use Nwidart\Modules\Facades\Module as ModuleFacade;
 use Nwidart\Modules\Module as NModule;
-use Sushi\Sushi;
-
 use function Safe\json_encode;
+use Sushi\Sushi;
 
 /**
  * @property int $id

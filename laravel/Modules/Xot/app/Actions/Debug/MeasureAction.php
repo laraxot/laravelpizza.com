@@ -19,6 +19,7 @@ class MeasureAction
      *
      * @param  Closure():T  $closure  La closure da eseguire e misurare
      * @param  string  $label  Etichetta opzionale per identificare la misurazione
+     *
      * @return T Il risultato dell'esecuzione della closure
      */
     public function execute(Closure $closure, string $label = ''): mixed

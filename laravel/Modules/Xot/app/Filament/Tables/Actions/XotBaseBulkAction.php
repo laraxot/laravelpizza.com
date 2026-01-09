@@ -12,7 +12,8 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @method ?Model getRecord()
  */
-abstract class XotBaseBulkAction extends FilamentBulkAction {
+abstract class XotBaseBulkAction extends FilamentBulkAction
+{
     /**
      * Nome di default dell'action.
      *

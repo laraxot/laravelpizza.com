@@ -43,6 +43,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property string|null $updated_by
  * @property int|null $user_id
  * @property int|null $organizer_id
+ *
  * @property-read User|null $creator
  * @property-read User|null $updater
  * @property-read User|null $owner

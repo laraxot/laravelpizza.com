@@ -14,7 +14,6 @@ use Filament\Resources\Pages\PageRegistration;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Modules\User\Filament\Resources\SocialiteUserResource\Pages;
 use Modules\User\Filament\Resources\SocialiteUserResource\Pages\EditSocialiteUser;
 use Modules\User\Filament\Resources\SocialiteUserResource\Pages\ListSocialiteUsers;
 use Modules\User\Models\SocialiteUser;

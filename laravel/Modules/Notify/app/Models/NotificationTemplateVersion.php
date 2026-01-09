@@ -51,21 +51,6 @@ class NotificationTemplateVersion extends BaseModel
         'change_notes',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    #[Override]
-    protected function casts(): array
-    {
-        return [
-            'channels' => 'array',
-            'variables' => 'array',
-            'conditions' => 'array',
-        ];
-    }
-
     public function template(): BelongsTo
     {
         return $this->belongsTo(NotificationTemplate::class, 'template_id');
@@ -89,5 +74,20 @@ class NotificationTemplateVersion extends BaseModel
         ]);
 
         return $template;
+    }
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    #[Override]
+    protected function casts(): array
+    {
+        return [
+            'channels' => 'array',
+            'variables' => 'array',
+            'conditions' => 'array',
+        ];
     }
 }

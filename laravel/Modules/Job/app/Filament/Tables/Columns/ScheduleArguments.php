@@ -52,6 +52,7 @@ class ScheduleArguments extends TextColumn
      */
     /**
      * @param  array<int|string, mixed>  $tags
+     *
      * @return array<int, string>
      */
     protected function formatArrayTags(array $tags): array

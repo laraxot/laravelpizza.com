@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace Modules\Job\Filament\Resources\ScheduleResource\Pages;
 
 use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Tables\Concerns\InteractsWithTable;
+use Filament\Tables\Columns\Layout\Panel;
 use Filament\Tables\Columns\Layout\Split;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\Layout\Panel;
-use Filament\Forms;
+use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\HtmlString;
@@ -67,15 +66,13 @@ class ViewSchedule extends XotBaseResourcePage implements HasTable
                     return (string) $state->diffInSeconds($record->created_at) . ' seconds';
                 }),
                 TextColumn::make('output')->formatStateUsing(
-                    static fn(string $state): string => (
-                        (count(explode('<br />', nl2br($state))) - 1) . ' rows of output'
-                    ),
+                    static fn (string $state): string => (count(explode('<br />', nl2br($state))) - 1) . ' rows of output',
                 ),
             ]),
             Panel::make([
                 TextColumn::make('output')
                     ->extraAttributes(['class' => '!max-w-max'], true)
-                    ->formatStateUsing(static fn(string $state): HtmlString => new HtmlString(nl2br(
+                    ->formatStateUsing(static fn (string $state): HtmlString => new HtmlString(nl2br(
                         $state,
                     ))),
             ])->collapsible(),

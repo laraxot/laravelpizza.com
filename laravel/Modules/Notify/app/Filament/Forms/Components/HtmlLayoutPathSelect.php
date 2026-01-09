@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Forms\Components;
 
-use Modules\Xot\Datas\XotData;
-use Illuminate\Support\Facades\File;
 use Filament\Forms\Components\Select;
-use Modules\Notify\Models\MailTemplate;
+use Illuminate\Support\Facades\File;
+use Modules\Xot\Datas\XotData;
 
 class HtmlLayoutPathSelect extends Select
 {
@@ -36,6 +35,7 @@ class HtmlLayoutPathSelect extends Select
      * Create a new MailTemplateSelect instance.
      *
      * @param string|null $name Field name (default: 'mail_template_slug')
+     *
      * @return static
      */
     public static function make(?string $name = null): static

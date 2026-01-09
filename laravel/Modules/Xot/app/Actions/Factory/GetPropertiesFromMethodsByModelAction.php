@@ -17,11 +17,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Str;
 use ReflectionMethod;
+use function Safe\preg_replace;
 use Spatie\QueueableAction\QueueableAction;
 use SplFileObject;
 use Webmozart\Assert\Assert;
-
-use function Safe\preg_replace;
 
 /**
  * Classe per estrarre proprietà dai metodi di relazione di un modello.
@@ -36,6 +35,7 @@ class GetPropertiesFromMethodsByModelAction
      * Estrae le proprietà dai metodi di relazione del modello.
      *
      * @param  Model  $model  Il modello da analizzare
+     *
      * @return array<string, string> Dati estratti dalle relazioni
      */
     public function execute(Model $model): array

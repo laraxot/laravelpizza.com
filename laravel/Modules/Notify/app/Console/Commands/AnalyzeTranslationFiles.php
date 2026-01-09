@@ -169,7 +169,7 @@ class AnalyzeTranslationFiles extends Command
             foreach (array_keys($allFiles) as $file) {
                 /** @var array<string, mixed>|null $fileData */
                 $fileData = $allFiles[$file] ?? null;
-                $row[] = (is_array($fileData) && isset($fileData[$key])) ? '✓' : '✗';
+                $row[] = is_array($fileData) && isset($fileData[$key]) ? '✓' : '✗';
             }
 
             $table->addRow($row);

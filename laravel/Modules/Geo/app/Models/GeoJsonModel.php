@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Geo\Models;
 
 use Illuminate\Support\Collection;
-
 use function Safe\file_get_contents;
 use function Safe\json_decode;
 

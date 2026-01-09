@@ -53,7 +53,6 @@ enum ConsentType: string implements HasColor, HasIcon, HasLabel
     public function getColor(): string
     {
         return $this->transClass(self::class, $this->value.'.color');
-
     }
 
     public function getIcon(): string

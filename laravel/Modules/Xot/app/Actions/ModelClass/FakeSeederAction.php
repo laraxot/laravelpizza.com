@@ -12,7 +12,6 @@ use Illuminate\Support\Collection;
 use InvalidArgumentException;
 use RuntimeException;
 use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 class FakeSeederAction
 {
@@ -110,15 +109,15 @@ class FakeSeederAction
         }
         app(self::class)->onQueue()->execute($modelClass, $qty - self::MAX_RECORDS);
     }
-/*
-    private function getTableName(string $modelClass): string
-    {
-        Assert::classExists($modelClass, 'La classe del modello deve esistere');
+    /*
+        private function getTableName(string $modelClass): string
+        {
+            Assert::classExists($modelClass, 'La classe del modello deve esistere');
 
-        //@var Model 
-        $model = app($modelClass);
+            //@var Model
+            $model = app($modelClass);
 
-        return $model->getTable();
-    }
-        */
+            return $model->getTable();
+        }
+            */
 }

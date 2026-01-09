@@ -5,19 +5,13 @@ declare(strict_types=1);
 namespace Modules\Activity\Actions;
 
 use Illuminate\Database\Eloquent\Builder;
-use InvalidArgumentException;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Request;
+use InvalidArgumentException;
 use Modules\Activity\Models\Activity;
 use Modules\User\Models\User;
-use Modules\Activity\Actions\LogModelCreatedAction;
-use Modules\Activity\Actions\LogModelUpdatedAction;
-use Modules\Activity\Actions\LogModelDeletedAction;
-use Modules\Activity\Actions\LogUserLoginAction;
-use Modules\Activity\Actions\LogUserLogoutAction;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -151,14 +145,12 @@ class ActivityLogger
         }
 
         /** @var Collection<int, Activity> $activities */
-        $activities = Activity::with('subject')
+        return Activity::with('subject')
             ->where('causer_id', $user->getKey())
             ->where('causer_type', $user::class)
             ->latest()
             ->limit($limit)
             ->get();
-
-        return $activities;
     }
 
     /**
@@ -169,14 +161,12 @@ class ActivityLogger
     public function getModelActivities(Model $model, int $limit = 50): Collection
     {
         /** @var Collection<int, Activity> $activities */
-        $activities = Activity::with('causer')
+        return Activity::with('causer')
             ->where('subject_type', $model::class)
             ->where('subject_id', $model->getKey())
             ->latest()
             ->limit($limit)
             ->get();
-
-        return $activities;
     }
 
     /**
@@ -194,13 +184,11 @@ class ActivityLogger
         }
 
         /** @var Collection<int, Activity> $activities */
-        $activities = Activity::with(['causer', 'subject'])
+        return Activity::with(['causer', 'subject'])
             ->where('event', $type)
             ->latest()
             ->limit($limit)
             ->get();
-
-        return $activities;
     }
 
     /**
@@ -215,12 +203,10 @@ class ActivityLogger
         }
 
         /** @var Collection<int, Activity> $activities */
-        $activities = Activity::with(['causer', 'subject'])
+        return Activity::with(['causer', 'subject'])
             ->latest()
             ->limit($limit)
             ->get();
-
-        return $activities;
     }
 
     /**
@@ -256,7 +242,7 @@ class ActivityLogger
 
         if ($user) {
             $query->where('causer_id', $user->getKey())
-                  ->where('causer_type', $user::class);
+                ->where('causer_type', $user::class);
         }
 
         return [

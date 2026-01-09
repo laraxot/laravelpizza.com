@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Pages;
 
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-use Modules\Xot\Filament\Pages\XotBasePage;
 
 class EnvPage extends XotBasePage
 {

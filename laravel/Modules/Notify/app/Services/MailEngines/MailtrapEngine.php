@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Services\MailEngines;
 
-use ErrorException;
-use Exception;
 use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Mail;
 use InvalidArgumentException;
@@ -35,7 +33,7 @@ class MailtrapEngine
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -69,7 +67,7 @@ class MailtrapEngine
         // Mail::raw('Hello World!', function($msg) {$msg->to('vair81@gmail.com')->subject('Test Email'); });
 
         // try {
-        Assert::string($this->body, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
+        Assert::string($this->body, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
         Mail::raw($this->body, function (Message $msg): void {
             // Verifichiamo che $this->to sia valido
             $to = $this->to;

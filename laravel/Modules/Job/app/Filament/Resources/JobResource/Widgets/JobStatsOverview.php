@@ -8,13 +8,13 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\JobResource\Widgets;
 
-use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 use Modules\Job\Models\JobManager;
 use Modules\Job\Traits\FormatSeconds;
+use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
 
 class JobStatsOverview extends BaseWidget
 {
@@ -42,11 +42,11 @@ class JobStatsOverview extends BaseWidget
             $totalJobs = $cast->getIntAttribute($aggregatedInfo, 'count', 0);
 
             $averageTime = $averageSeconds > 0.0
-                ? ((string) ceil($averageSeconds) . 's')
+                ? (string) ceil($averageSeconds) . 's'
                 : '0';
 
             $totalTime = $totalSeconds > 0
-                ? ($this->formatSeconds($totalSeconds) . 's')
+                ? $this->formatSeconds($totalSeconds) . 's'
                 : '0';
         }
 

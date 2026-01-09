@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\File;
 use Modules\Cms\Datas\ThemeData;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Filament\Pages\XotBasePage;
-
 use function Safe\json_decode;
-
 use Webmozart\Assert\Assert;
 
 class Themes extends XotBasePage

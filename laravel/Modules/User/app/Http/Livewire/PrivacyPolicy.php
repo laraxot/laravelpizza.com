@@ -8,9 +8,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Str;
 use Livewire\Component;
 use Modules\Tenant\Actions\Markdown\GetLocalizedMarkdownPathAction;
-
 use function Safe\file_get_contents;
-
 use Webmozart\Assert\Assert;
 
 class PrivacyPolicy extends Component
@@ -22,7 +20,7 @@ class PrivacyPolicy extends Component
     {
         $policyFile = app(GetLocalizedMarkdownPathAction::class)->execute('policy.md');
         Assert::string($policyFile, 'Policy file path must be a string');
-        if ('' === $policyFile || '#' === $policyFile) {
+        if ($policyFile === '' || $policyFile === '#') {
             throw new \RuntimeException('Policy file path is empty or invalid');
         }
         /**

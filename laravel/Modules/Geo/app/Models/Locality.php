@@ -97,7 +97,7 @@ class Locality extends BaseModel
         $city = $get('locality');
         $res = self::where('region_id', $region)
             ->where('province_id', $province)
-            ->when(null !== $city, static fn ($query) => $query->where('id', $city))
+            ->when($city !== null, static fn ($query) => $query->where('id', $city))
             ->select('postal_code')
             ->distinct()
             ->orderBy('postal_code')
@@ -112,9 +112,7 @@ class Locality extends BaseModel
             /** @var array<int, string> $postalCodes */
             $postalCodes = array_values((array) $item['postal_code']);
             /** @var array<string, string> $result */
-            $result = array_combine($postalCodes, $postalCodes);
-
-            return $result;
+            return array_combine($postalCodes, $postalCodes);
         });
 
         return $arr ?? [];

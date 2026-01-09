@@ -4,17 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\ScheduleResource\Pages;
 
-use Override;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\IconColumn;
-use Filament\Actions\EditAction;
-use Filament\Actions\RestoreAction;
-use Filament\Actions\DeleteAction;
-use Filament\Actions\ForceDeleteAction;
-use Filament\Actions\ViewAction;
-use Filament\Actions\DeleteBulkAction;
 use Closure;
-use Filament\Tables;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteAction;
+use Filament\Actions\RestoreAction;
+use Filament\Actions\ViewAction;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
 use Modules\Job\Filament\Resources\ScheduleResource;
 use Modules\Job\Models\Schedule;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -75,6 +73,6 @@ class ListSchedules extends XotBaseListRecords
 
     protected function getTableRecordUrlUsing(): null|Closure
     {
-        return static fn(): null|string => null;
+        return static fn (): null|string => null;
     }
 }

@@ -10,13 +10,16 @@ use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
 use Modules\Notify\Datas\WhatsAppData;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
-use Spatie\QueueableAction\QueueableAction;
-
 use function Safe\json_decode;
+use Spatie\QueueableAction\QueueableAction;
 
 final class Send360dialogWhatsAppAction
 {
     use QueueableAction;
+
+    protected bool $debug;
+
+    protected int $timeout;
 
     private string $apiKey;
 
@@ -24,10 +27,6 @@ final class Send360dialogWhatsAppAction
 
     /** @var array<string, mixed> */
     private array $vars = [];
-
-    protected bool $debug;
-
-    protected int $timeout;
 
     /**
      * Create a new action instance.
@@ -52,6 +51,7 @@ final class Send360dialogWhatsAppAction
      * Execute the action.
      *
      * @param  WhatsAppData  $whatsAppData  I dati del messaggio WhatsApp
+     *
      * @return array<string, mixed> Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio
@@ -125,9 +125,9 @@ final class Send360dialogWhatsAppAction
             /** @var array<string, mixed>|null $messages */
             $messages = $responseData['messages'] ?? null;
             /** @var array<string, mixed>|null $firstMessage */
-            $firstMessage = (is_array($messages) && isset($messages[0]) && is_array($messages[0])) ? $messages[0] : null;
+            $firstMessage = is_array($messages) && isset($messages[0]) && is_array($messages[0]) ? $messages[0] : null;
             /** @var string|null $messageId */
-            $messageId = (is_array($firstMessage) && isset($firstMessage['id']) && is_string($firstMessage['id']))
+            $messageId = is_array($firstMessage) && isset($firstMessage['id']) && is_string($firstMessage['id'])
                 ? $firstMessage['id']
                 : null;
 
@@ -157,9 +157,9 @@ final class Send360dialogWhatsAppAction
             /** @var array<int, array<string, mixed>>|null $errors */
             $errors = $responseBody['errors'] ?? null;
             /** @var array<string, mixed>|null $firstError */
-            $firstError = (is_array($errors) && isset($errors[0]) && is_array($errors[0])) ? $errors[0] : null;
+            $firstError = is_array($errors) && isset($errors[0]) && is_array($errors[0]) ? $errors[0] : null;
             /** @var string $errorMessage */
-            $errorMessage = (is_array($firstError) && isset($firstError['message']) && is_string($firstError['message']))
+            $errorMessage = is_array($firstError) && isset($firstError['message']) && is_string($firstError['message'])
                 ? $firstError['message']
                 : 'Errore sconosciuto';
 
@@ -176,6 +176,7 @@ final class Send360dialogWhatsAppAction
      * Determina il tipo di media basato sull'URL o sull'estensione del file.
      *
      * @param  string  $url  URL del media
+     *
      * @return string Tipo di media (image, video, audio, document)
      */
     private function determineMediaType(string $url): string

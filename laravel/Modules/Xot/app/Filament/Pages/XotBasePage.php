@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Pages;
 
-use UnitEnum;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms\Concerns\InteractsWithForms;
@@ -20,6 +19,7 @@ use LogicException;
 use Modules\Xot\Actions\View\GetViewByClassAction;
 use Modules\Xot\Filament\Traits\TransTrait;
 use RuntimeException;
+use UnitEnum;
 
 /**
  * Classe base astratta per tutte le pagine Filament non legate a risorse specifiche.
@@ -156,6 +156,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      * Imposta lo schema e il percorso dello stato per il form.
      *
      * @param  \Filament\Schemas\Schema  $schema  Il form da configurare
+     *
      * @return \Filament\Schemas\Schema Lo schema configurato
      */
     public function schema(Schema $schema): Schema
@@ -245,6 +246,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      * Utile per controlli granulari all'interno delle pagine.
      *
      * @param  string  $permission  Il permesso da verificare
+     *
      * @return bool True se l'utente ha il permesso, false altrimenti
      */
     protected function hasPermissionTo(string $permission): bool
@@ -258,9 +260,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
 
         // Use method_exists to safely call hasPermissionTo
         /** @var bool $result */
-        $result = $user->hasPermissionTo($permission);
-
-        return $result;
+        return $user->hasPermissionTo($permission);
     }
 
     /**
@@ -296,7 +296,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
         }
 
         /** @var class-string<Model> $modelClass */
-        $instance = new $modelClass;
+        $instance = new $modelClass();
         if (! ($instance instanceof Model)) {
             throw new LogicException("Class {$modelClass} must extend Eloquent Model");
         }

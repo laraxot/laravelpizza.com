@@ -84,6 +84,7 @@ interface MetatagDataInterface
      * Get extra metadata.
      *
      * @param  mixed  $default
+     *
      * @return mixed
      */
     public function get(string $key, $default = null);

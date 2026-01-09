@@ -24,5 +24,6 @@
     "TechPlanner": true,
     "Shop": true,
     "Employee":true,
-    "Ticket": true
+    "Ticket": true,
+    "Meetup": true
 }

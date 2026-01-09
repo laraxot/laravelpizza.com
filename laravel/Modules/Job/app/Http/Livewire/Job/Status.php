@@ -15,9 +15,8 @@ use Modules\Job\Models\FailedJob as FailedJobModel;
 use Modules\Job\Models\Job as JobModel;
 use Modules\Job\Models\JobBatch as JobBatchModel;
 use Modules\Xot\Actions\GetViewAction;
-use Webmozart\Assert\Assert;
-
 use function Safe\putenv;
+use Webmozart\Assert\Assert;
 
 /**
  * Class RolePermission.

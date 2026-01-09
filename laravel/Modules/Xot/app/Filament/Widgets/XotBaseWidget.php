@@ -81,6 +81,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
      * Configura il form del widget.
      *
      * @param  Schema  $schema  Il form da configurare
+     *
      * @return Schema Il form configurato
      */
     public function form(Schema $schema): Schema
@@ -93,7 +94,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
             // Ensure model is compatible with Schema::model()
             if (\is_string($model)) {
                 if (class_exists($model) && is_subclass_of($model, Model::class)) {
-                    /* @var class-string<Model> $model */
+                    /** @var class-string<Model> $model */
                     $schema->model($model);
                 }
             } else {
@@ -135,7 +136,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
                 }
 
                 return $res;
-
             } catch (Exception $e) {
                 // Se toArray() fallisce (problemi con enum), usa getAttributes()
                 return $model->getAttributes();

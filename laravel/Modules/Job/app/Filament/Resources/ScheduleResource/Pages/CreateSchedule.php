@@ -31,9 +31,7 @@ class CreateSchedule extends XotBaseCreateRecord
         Assert::isArray($res);
 
         /** @var array<Htmlable|string> $typedRes */
-        $typedRes = $res;
-
-        return $typedRes;
+        return $res;
     }
 
     public function schema(Schema $schema): Schema

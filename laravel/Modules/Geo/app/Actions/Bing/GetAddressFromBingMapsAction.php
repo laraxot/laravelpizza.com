@@ -50,7 +50,7 @@ class GetAddressFromBingMapsAction
         }
 
         // We've already checked that $apiKey is not empty
-        /* @var non-empty-string $apiKey */
+        /** @var non-empty-string $apiKey */
         return $apiKey;
     }
 
@@ -77,9 +77,7 @@ class GetAddressFromBingMapsAction
         }
 
         /** @var array<string, mixed> $jsonResponse */
-        $jsonResponse = $response->json();
-
-        return $jsonResponse;
+        return $response->json();
     }
 
     /**
@@ -179,9 +177,7 @@ class GetAddressFromBingMapsAction
         }
 
         /** @var array<string, mixed> $validatedLocation */
-        $validatedLocation = $location;
-
-        return $validatedLocation;
+        return $location;
     }
 
     /**

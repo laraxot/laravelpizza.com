@@ -56,9 +56,7 @@ class RegisterTenant extends BaseRegisterTenant
         $resourceClass = $this->resolveResourceClass();
 
         /** @var array<Component> $schema */
-        $schema = $resourceClass::getFormSchema();
-
-        return $schema;
+        return $resourceClass::getFormSchema();
     }
 
     /**
@@ -80,7 +78,7 @@ class RegisterTenant extends BaseRegisterTenant
      */
     private function resolveResourceClass(): string
     {
-        if (null !== $this->resourceClass) {
+        if ($this->resourceClass !== null) {
             return $this->resourceClass;
         }
 

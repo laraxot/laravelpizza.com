@@ -18,7 +18,7 @@ class DeleteEventAction
         $userId = Auth::id();
 
         /** @var bool $result */
-        $result = DB::transaction(function () use ($event, $userId) {
+        return DB::transaction(function () use ($event, $userId) {
             if ($userId !== null) {
                 $event->updated_by = (string) $userId;
             }
@@ -26,7 +26,5 @@ class DeleteEventAction
 
             return $deleted ?? false;
         });
-
-        return $result;
     }
 }

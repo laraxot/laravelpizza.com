@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'group' => 'job monitor.navigation',
+        'icon' => 'heroicon-o-eye',
+        'group' => 'System',
+        'label' => 'Auftragsmonitor',
+        'sort' => 88,
     ],
     'actions' => [
         'logout' => [

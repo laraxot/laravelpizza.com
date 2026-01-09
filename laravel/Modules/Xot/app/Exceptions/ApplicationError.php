@@ -12,7 +12,6 @@ use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 use JsonSerializable;
 use Override;
-
 use function Safe\json_encode;
 
 readonly class ApplicationError implements Arrayable, Jsonable, JsonSerializable
@@ -20,7 +19,8 @@ readonly class ApplicationError implements Arrayable, Jsonable, JsonSerializable
     public function __construct(
         private string $help = '',
         private string $error = '',
-    ) {}
+    ) {
+    }
 
     public function toArray(): array
     {

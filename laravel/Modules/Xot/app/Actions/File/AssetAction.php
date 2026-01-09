@@ -21,6 +21,7 @@ class AssetAction
      * Gestisce i percorsi degli asset, copiandoli nella directory pubblica se necessario.
      *
      * @param  string  $path  Il percorso dell'asset
+     *
      * @return string Il percorso pubblico dell'asset
      *
      * @throws Exception Se il file sorgente non esiste o non può essere copiato
@@ -116,7 +117,7 @@ class AssetAction
 
         $forceCopy = app()->environment() !== 'production';
         $this->copyAsset($filename_from, $filename_to, $assetPath, $forceCopy);
-        
+
         $asset = Str::replace(url(''), '', asset($assetPath));
         Assert::string($asset, '['.__LINE__.']['.class_basename(static::class).']');
 

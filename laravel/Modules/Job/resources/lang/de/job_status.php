@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'group' => 'job status.navigation',
+        'icon' => 'heroicon-o-information-circle',
+        'group' => 'System',
+        'label' => 'Auftragsstatus',
+        'sort' => 89,
     ],
     'actions' => [
         'logout' => [

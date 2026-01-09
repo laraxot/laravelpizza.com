@@ -17,9 +17,19 @@ class GroupColumn extends Column
 
     protected string $view = 'ui::filament.tables.columns.group';
 
+    /**
+     * Initialize the component.
+     */
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        // Component initialization logic
+    }
+
     public function getFields(): array
     {
-        /* @var array<string, mixed> */
+        /** @var array<string, mixed> */
         return $this->schema;
     }
 
@@ -39,15 +49,5 @@ class GroupColumn extends Column
         $this->schema = $filteredValues;
 
         return $this;
-    }
-
-    /**
-     * Initialize the component.
-     */
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        // Component initialization logic
     }
 }

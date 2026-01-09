@@ -28,6 +28,7 @@ class ContentPdfAction
      * @param  string|null  $view  Nome della vista Blade da renderizzare
      * @param  array<string, mixed>|null  $data  Dati da passare alla vista
      * @param  string  $_filename  Nome del file PDF (per riferimento, attualmente non utilizzato)
+     *
      * @return string Contenuto binario del PDF
      *
      * @throws Exception Se la vista non esiste
@@ -77,6 +78,7 @@ class ContentPdfAction
      * @param  string  $view  Nome della vista Blade
      * @param  array  $data  Dati da passare alla vista
      * @param  string  $filename  Nome del file PDF (per riferimento)
+     *
      * @return string Contenuto binario del PDF
      */
     /**
@@ -99,6 +101,7 @@ class ContentPdfAction
      *
      * @param  string  $html  Contenuto HTML
      * @param  string  $filename  Nome del file PDF (per riferimento)
+     *
      * @return string Contenuto binario del PDF
      */
     public function fromHtml(string $html, string $filename = 'document.pdf'): string

@@ -24,10 +24,10 @@ class Block extends Component
         public string $tpl = '',
     ) {
         $view = Arr::get($this->block, 'data.view', null);
-        if (null === $view) {
+        if ($view === null) {
             $view = 'ui::empty';
         }
-        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
+        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
         $this->view = $view;
     }
 
@@ -51,7 +51,7 @@ class Block extends Component
         $view_params = is_array($view_params_raw) ? $view_params_raw : [];
         /** @var array<string, mixed> $view_params */
         $view_params = (array) $view_params;
-        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
+        Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
         if (! view()->exists($view)) {
             throw new \Exception('view not found ['.$view.']');
         }

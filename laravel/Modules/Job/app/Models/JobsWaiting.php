@@ -26,6 +26,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $created_by
  * @property string|null $updated_by
  * @property Carbon|null $updated_at
+ *
  * @property-read ProfileContract|null $creator
  * @property-read string|null $display_name
  * @property-read string $status
@@ -52,4 +53,6 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @mixin \Eloquent
  */
-class JobsWaiting extends Job {}
+class JobsWaiting extends Job
+{
+}

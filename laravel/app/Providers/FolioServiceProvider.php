@@ -12,7 +12,6 @@ class FolioServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
     }
 
     /**
@@ -24,7 +23,7 @@ class FolioServiceProvider extends ServiceProvider
         if (is_dir($pagesPath)) {
             Folio::path($pagesPath)->middleware([
                 '*' => [
-                    //
+
                 ],
             ]);
         }

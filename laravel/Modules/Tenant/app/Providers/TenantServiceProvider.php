@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Schema;
 use Modules\Tenant\Actions\Config\GetTenantConfigNamesAction;
-use Modules\Tenant\Providers\Filament\AdminPanelProvider;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use Nwidart\Modules\Facades\Module;
@@ -64,7 +63,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
             }
         }
 
-        /* @var array<string, class-string<Model>> $typedMap */
+        /** @var array<string, class-string<Model>> $typedMap */
         Relation::morphMap($typedMap);
     }
 
@@ -84,10 +83,6 @@ class TenantServiceProvider extends XotBaseServiceProvider
 
         $raw = TenantService::config('database');
 
-        
-
-
-
         /** @var array<string, array|float|int|string|null> $data */
         $data = is_array($raw) ? $raw : [];
 
@@ -101,8 +96,6 @@ class TenantServiceProvider extends XotBaseServiceProvider
         if (Arr::get($data, 'connections.user', null) === null) {
             Arr::set($data, 'connections.user', Arr::get($data, 'connections.user_'.$default));
         }
-
-
 
         /** @var array|float|int|string|null $connectionsRaw */
         $connectionsRaw = Arr::get($data, 'connections', []);
@@ -126,7 +119,6 @@ class TenantServiceProvider extends XotBaseServiceProvider
 
         $data = Arr::set($data, 'connections', $connections);
         Config::set('database', $data);
-        
 
         // Call to a member function prepare() on null
         // Database connection [mysql] not configured.
@@ -143,7 +135,6 @@ class TenantServiceProvider extends XotBaseServiceProvider
 
     public function mergeConfigs(): void
     {
-
         $configs = app(GetTenantConfigNamesAction::class)->execute();
 
         foreach ($configs as $config) {

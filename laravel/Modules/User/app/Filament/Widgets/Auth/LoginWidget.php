@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets\Auth;
 
-use Modules\Xot\Datas\XotData;
-use Illuminate\Support\Facades\Auth;
 use Filament\Forms\Components\Checkbox;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Field;
-use Illuminate\Validation\ValidationException;
+use Filament\Forms\Components\TextInput;
+use Illuminate\Support\Facades\Auth;
+use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 /**
@@ -42,37 +41,33 @@ class LoginWidget extends XotBaseWidget
     public function login(): void
     {
         //try {
-            /** @var array<string, mixed> $data */
-            $data = $this->form->getState();
+        /** @var array<string, mixed> $data */
+        $data = $this->form->getState();
 
-            $credentials = [
-                'email' => is_string($data['email'] ?? null) ? $data['email'] : '',
-                'password' => is_string($data['password'] ?? null) ? $data['password'] : '',
-            ];
+        $credentials = [
+            'email' => is_string($data['email'] ?? null) ? $data['email'] : '',
+            'password' => is_string($data['password'] ?? null) ? $data['password'] : '',
+        ];
 
-            
-            $remember = isset($data['remember']) && true === $data['remember'];
-            
+        $remember = isset($data['remember']) && $data['remember'] === true;
 
-            if (Auth::attempt($credentials, $remember)) {
-                session()->regenerate();
-                redirect()->intended('/');
-            }
+        if (Auth::attempt($credentials, $remember)) {
+            session()->regenerate();
+            redirect()->intended('/');
+        }
 
-            $userClass = XotData::make()->getUserClass();
-            $user = $userClass::where('email', $credentials['email'])->first();
-            
-            
+        $userClass = XotData::make()->getUserClass();
+        $user = $userClass::where('email', $credentials['email'])->first();
 
-            $this->addError('data.email', __('auth.failed'));
+        $this->addError('data.email', __('auth.failed'));
         //} catch (ValidationException $e) {
-            //dddx([
+        //dddx([
             //    'credentials' => $credentials,
             //    'remember' => $remember,
             //    'e' => $e,
-            //]);
-            // La validazione Filament gestisce automaticamente gli errori
-            //throw $e;
+        //]);
+        // La validazione Filament gestisce automaticamente gli errori
+        //throw $e;
         //}
     }
 }

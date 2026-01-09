@@ -28,7 +28,7 @@ class Pdf
         if (isset($view_params[$file_name])) {
             $file_name = $view_params[$file_name];
         }
-        Assert::string($file_name, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
+        Assert::string($file_name, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
         $file_path = Storage::disk('cache')->path($file_name);
 
         HtmlService::toPdf(

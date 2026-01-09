@@ -16,28 +16,27 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Datas\XotData;
 use Mustache_Engine;
+use function Safe\file_get_contents;
 use Spatie\MailTemplates\Interfaces\MailTemplateInterface;
 use Spatie\MailTemplates\TemplateMailable;
 use Symfony\Component\Mime\MimeTypes;
 use Webmozart\Assert\Assert;
-
-use function Safe\file_get_contents;
 
 /**
  * @see https://github.com/spatie/laravel-database-mail-templates
  */
 class SpatieEmail extends TemplateMailable
 {
+
+    public string $slug;
+
+    public array $data = [];
     // use our custom mail template model
     /** @var class-string<MailTemplateInterface> */
     protected static $templateModelClass = MailTemplate::class;
 
-    public string $slug;
-
     /** @var array<int, Attachment> */
     protected array $customAttachments = [];
-
-    public array $data = [];
 
     /**
      * The email recipient.
@@ -131,7 +130,7 @@ class SpatieEmail extends TemplateMailable
      */
     public function envelope(): Envelope
     {
-        $envelope = new Envelope;
+        $envelope = new Envelope();
 
         // Set the recipient if available
         if ($this->recipient) {
@@ -176,9 +175,7 @@ class SpatieEmail extends TemplateMailable
             $mime = 'application/octet-stream';
         }
 
-        $res = $res->as($filename)->withMime($mime);
-
-        return $res;
+        return $res->as($filename)->withMime($mime);
     }
 
     public function getAttachmentFromData(array $attachment): Attachment
@@ -198,7 +195,7 @@ class SpatieEmail extends TemplateMailable
         if ($mime === null) {
             $mime = 'application/octet-stream';
         }
-        Assert::string($mime, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
+        Assert::string($mime, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
         /** @var string|null $asForMethod */
         $asForMethod = \is_string($asRaw) ? $asRaw : null;
@@ -248,15 +245,13 @@ class SpatieEmail extends TemplateMailable
 
     public function buildSms(): string
     {
-        /**@phpstan-ignore method.notFound */
+        /*@phpstan-ignore method.notFound */
         /** @var MailTemplate $mailTemplate */
         $mailTemplate = $this->getMailTemplate();
         $sms_template = $mailTemplate->sms_template;
         /** @var string $smsTemplateString */
         $smsTemplateString = app(SafeStringCastAction::class)->execute($sms_template);
         $mustache = app(Mustache_Engine::class);
-        $sms = $mustache->render($smsTemplateString, $this->data);
-
-        return $sms;
+        return $mustache->render($smsTemplateString, $this->data);
     }
 }

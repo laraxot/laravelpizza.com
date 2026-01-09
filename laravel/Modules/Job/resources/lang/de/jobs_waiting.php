@@ -17,16 +17,16 @@ return [
             'label' => 'Versuche',
         ],
         'reserved_at' => [
-            'label' => 'Reserviert am',
+            'label' => 'Reserviert Am',
         ],
         'created_at' => [
-            'label' => 'Erstellt am',
+            'label' => 'Erstellt Am',
         ],
     ],
     'navigation' => [
         'sort' => 91,
-        'icon' => 'jobs waiting.navigation',
-        'group' => 'jobs waiting.navigation',
-        'label' => 'jobs waiting.navigation',
+        'icon' => 'heroicon-o-clock',
+        'group' => 'System',
+        'label' => 'Wartende Aufträge',
     ],
 ];

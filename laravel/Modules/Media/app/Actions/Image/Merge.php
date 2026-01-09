@@ -23,7 +23,7 @@ class Merge
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
         // Intervention Image v3: il costruttore richiede un DriverInterface
-        $manager = new InterventionImageManager(new GdDriver);
+        $manager = new InterventionImageManager(new GdDriver());
 
         // Carica le immagini
         $image1 = $manager->read($path1);
@@ -47,6 +47,7 @@ class Merge
      *
      * @param  array<int, string>  $filenames  Array di percorsi relativi (es: 'chart/123-0.png')
      * @param  string  $outputFilename  Nome file output relativo (es: 'chart/123.png')
+     *
      * @return bool Successo operazione
      */
     public function execute(array $filenames, string $outputFilename): bool
@@ -83,7 +84,7 @@ class Merge
         }
 
         // Intervention Image v3
-        $manager = new InterventionImageManager(new GdDriver);
+        $manager = new InterventionImageManager(new GdDriver());
 
         // Carica tutte le immagini e calcola dimensioni totali
         $images = [];

@@ -27,11 +27,34 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
      * Create a new metatag data instance.
      *
      * @param  array<string, mixed>  $data
+     *
      * @return void
      */
     public function __construct(array $data = [])
     {
         $this->data = $data;
+    }
+
+    /**
+     * Handle dynamic method calls.
+     *
+     * @param  array<int, mixed>  $parameters
+     *
+     * @return mixed
+     */
+    public function __call(string $method, array $parameters)
+    {
+        if (strpos($method, 'get') === 0) {
+            $key = lcfirst(substr($method, 3));
+
+            return $this->get($key, $parameters[0] ?? null);
+        }
+
+        throw new BadMethodCallException(sprintf(
+            'Method %s::%s does not exist.',
+            static::class,
+            $method
+        ));
     }
 
     /**
@@ -92,7 +115,7 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
             $result[$strKey] = $strValue;
         }
 
-        return $result ?: $default;
+        return $result ? $result : $default;
     }
 
     /**
@@ -212,6 +235,7 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
      * Get extra metadata.
      *
      * @param  mixed  $default
+     *
      * @return mixed
      */
     public function get(string $key, $default = null)
@@ -225,25 +249,6 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
     public function has(string $key): bool
     {
         return Arr::has($this->data, $key);
-    }
-
-    /**
-     * Handle dynamic method calls.
-     *
-     * @param  array<int, mixed>  $parameters
-     * @return mixed
-     */
-    public function __call(string $method, array $parameters)
-    {
-        if (strpos($method, 'get') === 0) {
-            $key = lcfirst(substr($method, 3));
-
-            return $this->get($key, $parameters[0] ?? null);
-        }
-
-        throw new BadMethodCallException(sprintf(
-            'Method %s::%s does not exist.', static::class, $method
-        ));
     }
 
     /**

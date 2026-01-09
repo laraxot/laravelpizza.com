@@ -73,7 +73,7 @@ class ViewOauthAuthCode extends XotBaseViewRecord
                     'scopes' => TextEntry::make('scopes')
                         ->formatStateUsing(function (mixed $state): string {
                             if (is_array($state)) {
-                                /* @var array<int|string, mixed> $state */
+                                /** @var array<int|string, mixed> $state */
                                 return implode(', ', array_map(fn (mixed $item): string => (string) $item, $state));
                             }
 

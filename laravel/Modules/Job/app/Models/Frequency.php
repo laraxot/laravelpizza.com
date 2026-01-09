@@ -24,6 +24,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $updated_by
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ *
  * @property-read ProfileContract|null $creator
  * @property-read Collection<int, Parameter> $parameters
  * @property-read int|null $parameters_count
@@ -59,6 +60,16 @@ class Frequency extends BaseModel
         'interval',
     ];
 
+    public function task(): BelongsTo
+    {
+        return $this->belongsTo(Task::class);
+    }
+
+    public function parameters(): HasMany
+    {
+        return $this->hasMany(Parameter::class);
+    }
+
     /**
      * Get the attributes that should be cast.
      *
@@ -76,15 +87,5 @@ class Frequency extends BaseModel
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
         ]);
-    }
-
-    public function task(): BelongsTo
-    {
-        return $this->belongsTo(Task::class);
-    }
-
-    public function parameters(): HasMany
-    {
-        return $this->hasMany(Parameter::class);
     }
 }

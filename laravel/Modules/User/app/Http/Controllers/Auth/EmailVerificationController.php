@@ -32,7 +32,7 @@ class EmailVerificationController extends Controller
     public function __invoke(string $id, string $hash): RedirectResponse
     {
         $user = Auth::user();
-        if (null === $user) {
+        if ($user === null) {
             throw new AuthorizationException();
         }
 

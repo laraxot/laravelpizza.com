@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Models\Traits\HasXotFactory;
-use Modules\User\Models\BaseModel;
 
 /**
  * Modules\User\Models\OauthPersonalAccessClient.
@@ -19,7 +18,9 @@ use Modules\User\Models\BaseModel;
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
+ *
  * @property-read OauthClient|null $client
+ *
  * @property int $id
  *
  * @method static Builder|OauthPersonalAccessClient newModelQuery()

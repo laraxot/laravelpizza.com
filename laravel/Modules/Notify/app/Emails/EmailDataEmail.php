@@ -21,7 +21,8 @@ class EmailDataEmail extends Mailable
 
     public function __construct(
         public EmailData $email_data,
-    ) {}
+    ) {
+    }
 
     /**
      * Get the message envelope.
@@ -37,12 +38,10 @@ class EmailDataEmail extends Mailable
             $this->email_data->from_email = $from_email;
         }
 
-        $envelope = new Envelope(
+        return new Envelope(
             from: new Address($this->email_data->from_email, $this->email_data->from),
             subject: $this->email_data->subject,
         );
-
-        return $envelope;
     }
 
     /**

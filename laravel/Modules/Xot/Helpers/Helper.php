@@ -20,12 +20,11 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Services\ModuleService;
 use Nwidart\Modules\Facades\Module;
-use Webmozart\Assert\Assert;
-
 use function Safe\define;
 use function Safe\glob;
 use function Safe\json_decode;
 use function Safe\preg_match;
+use Webmozart\Assert\Assert;
 
 // ------------------------------------------------
 
@@ -1203,6 +1202,7 @@ if (! function_exists('trans_string')) {
      * @param  string  $key  Translation key
      * @param  array<string, bool|float|int|string|null>  $replace  Replacement values
      * @param  string|null  $locale  Specific locale to use
+     *
      * @return string|null The translated string or null
      *
      * @example trans_string('notify::contact.label') -> "Contact" (string)

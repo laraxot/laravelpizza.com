@@ -22,13 +22,13 @@ return [
             'label' => 'Fortschritt',
         ],
         'started_at' => [
-            'label' => 'Gestartet am',
+            'label' => 'Gestartet Am',
         ],
     ],
     'navigation' => [
         'sort' => 87,
-        'icon' => 'job manager.navigation',
-        'group' => 'job manager.navigation',
-        'label' => 'job manager.navigation',
+        'icon' => 'heroicon-o-cog-6-tooth',
+        'group' => 'System',
+        'label' => 'Auftragsmanager',
     ],
 ];

@@ -24,9 +24,8 @@ use Modules\Xot\Actions\GetTransKeyAction;
 use Modules\Xot\Actions\ModelClass\CountAction;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use ReflectionClass;
-use Webmozart\Assert\Assert;
-
 use function Safe\glob;
+use Webmozart\Assert\Assert;
 
 /**
  * @method static string getUrl(string $name, array<string, mixed> $parameters = [], bool $isAbsolute = true)
@@ -36,6 +35,15 @@ abstract class XotBaseResource extends FilamentResource
     use NavigationLabelTrait;
 
     protected static ?string $model = null;
+
+    // protected static ?string $navigationIcon = 'heroicon-o-bell';
+    // protected static ?string $navigationLabel = 'Custom Navigation Label';
+    // protected static ?string $activeNavigationIcon = 'heroicon-s-document-text';
+    // protected static bool $shouldRegisterNavigation = false;
+    // protected static ?string $navigationGroup = 'Parametri di Sistema';
+    // protected static ?int $navigationSort = null;
+
+    protected static ?\Filament\Pages\Enums\SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
     /**
      * @param  array<string, bool|float|int|string|null>  $params
@@ -62,32 +70,6 @@ abstract class XotBaseResource extends FilamentResource
 
         return 'fix:'.$tmp;
     }
-
-    protected static function getKeyTrans(string $key): string
-    {
-        /** @var string */
-        $transKey = app(GetTransKeyAction::class)->execute(static::class);
-
-        $key = $transKey.'.'.$key;
-        $key = Str::of($key)->replace('.cluster.pages.', '.')->toString();
-        if (Str::startsWith($key, 'edit_')) {
-            $key = Str::after($key, 'edit_');
-        }
-        if (Str::endsWith($key, '_widget')) {
-            $key = Str::beforeLast($key, '_widget');
-        }
-
-        return $key;
-    }
-
-    // protected static ?string $navigationIcon = 'heroicon-o-bell';
-    // protected static ?string $navigationLabel = 'Custom Navigation Label';
-    // protected static ?string $activeNavigationIcon = 'heroicon-s-document-text';
-    // protected static bool $shouldRegisterNavigation = false;
-    // protected static ?string $navigationGroup = 'Parametri di Sistema';
-    // protected static ?int $navigationSort = null;
-
-    protected static ?\Filament\Pages\Enums\SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
     public static function getModuleName(): string
     {
@@ -312,6 +294,23 @@ abstract class XotBaseResource extends FilamentResource
         $schema = app(GetAttachmentsSchemaAction::class)->execute($safeAttachments, $disk);
 
         return $schema;
+    }
+
+    protected static function getKeyTrans(string $key): string
+    {
+        /** @var string */
+        $transKey = app(GetTransKeyAction::class)->execute(static::class);
+
+        $key = $transKey.'.'.$key;
+        $key = Str::of($key)->replace('.cluster.pages.', '.')->toString();
+        if (Str::startsWith($key, 'edit_')) {
+            $key = Str::after($key, 'edit_');
+        }
+        if (Str::endsWith($key, '_widget')) {
+            $key = Str::beforeLast($key, '_widget');
+        }
+
+        return $key;
     }
 
     protected static function getStepByName(string $name): Step

@@ -19,4 +19,6 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @mixin \Eloquent
  */
-interface PivotContract {}
+interface PivotContract
+{
+}

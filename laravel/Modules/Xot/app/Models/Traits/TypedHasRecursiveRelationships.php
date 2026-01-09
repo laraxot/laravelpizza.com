@@ -50,57 +50,43 @@ trait TypedHasRecursiveRelationships
     public function getParentKeyName(): string
     {
         /** @var string $value */
-        $value = $this->vendorGetParentKeyName();
-
-        return $value;
+        return $this->vendorGetParentKeyName();
     }
 
     public function getQualifiedParentKeyName(): string
     {
         /** @var string $value */
-        $value = $this->vendorGetQualifiedParentKeyName();
-
-        return $value;
+        return $this->vendorGetQualifiedParentKeyName();
     }
 
     public function getLocalKeyName(): string
     {
         /** @var string $value */
-        $value = $this->vendorGetLocalKeyName();
-
-        return $value;
+        return $this->vendorGetLocalKeyName();
     }
 
     public function getQualifiedLocalKeyName(): string
     {
         /** @var string $value */
-        $value = $this->vendorGetQualifiedLocalKeyName();
-
-        return $value;
+        return $this->vendorGetQualifiedLocalKeyName();
     }
 
     public function getDepthName(): string
     {
         /** @var string $value */
-        $value = $this->vendorGetDepthName();
-
-        return $value;
+        return $this->vendorGetDepthName();
     }
 
     public function getPathName(): string
     {
         /** @var string $value */
-        $value = $this->vendorGetPathName();
-
-        return $value;
+        return $this->vendorGetPathName();
     }
 
     public function getPathSeparator(): string
     {
         /** @var string $value */
-        $value = $this->vendorGetPathSeparator();
-
-        return $value;
+        return $this->vendorGetPathSeparator();
     }
 
     /**
@@ -109,144 +95,108 @@ trait TypedHasRecursiveRelationships
     public function getCustomPaths(): array
     {
         /** @var array<int|string, string> $paths */
-        $paths = $this->vendorGetCustomPaths();
-
-        return $paths;
+        return $this->vendorGetCustomPaths();
     }
 
     public function getExpressionName(): string
     {
         /** @var string $value */
-        $value = $this->vendorGetExpressionName();
-
-        return $value;
+        return $this->vendorGetExpressionName();
     }
 
     public function ancestors(): Ancestors
     {
         /** @var Ancestors $relation */
-        $relation = $this->vendorAncestors();
-
-        return $relation;
+        return $this->vendorAncestors();
     }
 
     public function ancestorsAndSelf(): Ancestors
     {
         /** @var Ancestors $relation */
-        $relation = $this->vendorAncestorsAndSelf();
-
-        return $relation;
+        return $this->vendorAncestorsAndSelf();
     }
 
     public function bloodline(): Bloodline
     {
         /** @var Bloodline $relation */
-        $relation = $this->vendorBloodline();
-
-        return $relation;
+        return $this->vendorBloodline();
     }
 
     public function children(): HasMany
     {
         /** @var HasMany $relation */
-        $relation = $this->vendorChildren();
-
-        return $relation;
+        return $this->vendorChildren();
     }
 
     public function childrenAndSelf(): Descendants
     {
         /** @var Descendants $relation */
-        $relation = $this->vendorChildrenAndSelf();
-
-        return $relation;
+        return $this->vendorChildrenAndSelf();
     }
 
     public function descendants(): Descendants
     {
         /** @var Descendants $relation */
-        $relation = $this->vendorDescendants();
-
-        return $relation;
+        return $this->vendorDescendants();
     }
 
     public function descendantsAndSelf(): Descendants
     {
         /** @var Descendants $relation */
-        $relation = $this->vendorDescendantsAndSelf();
-
-        return $relation;
+        return $this->vendorDescendantsAndSelf();
     }
 
     public function parent(): BelongsTo
     {
         /** @var BelongsTo $relation */
-        $relation = $this->VendorHasRecursiveRelationships::parent();
-
-        return $relation;
+        return $this->VendorHasRecursiveRelationships::parent();
     }
 
     public function parentAndSelf(): Ancestors
     {
         /** @var Ancestors $relation */
-        $relation = $this->vendorParentAndSelf();
-
-        return $relation;
+        return $this->vendorParentAndSelf();
     }
 
     public function rootAncestor(): RootAncestor
     {
         /** @var RootAncestor $relation */
-        $relation = $this->vendorRootAncestor();
-
-        return $relation;
+        return $this->vendorRootAncestor();
     }
 
     public function rootAncestorOrSelf(): RootAncestorOrSelf
     {
         /** @var RootAncestorOrSelf $relation */
-        $relation = $this->vendorRootAncestorOrSelf();
-
-        return $relation;
+        return $this->vendorRootAncestorOrSelf();
     }
 
     public function siblings(): Siblings
     {
         /** @var Siblings $relation */
-        $relation = $this->vendorSiblings();
-
-        return $relation;
+        return $this->vendorSiblings();
     }
 
     public function siblingsAndSelf(): Siblings
     {
         /** @var Siblings $relation */
-        $relation = $this->vendorSiblingsAndSelf();
-
-        return $relation;
+        return $this->vendorSiblingsAndSelf();
     }
 
     public function getFirstPathSegment(): string
     {
         /** @var string $value */
-        $value = $this->vendorGetFirstPathSegment();
-
-        return $value;
+        return $this->vendorGetFirstPathSegment();
     }
 
     public function hasNestedPath(): bool
     {
         /** @var bool $result */
-        $result = $this->vendorHasNestedPath();
-
-        return $result;
+        return $this->vendorHasNestedPath();
     }
 
     public function isIntegerAttribute(string $attribute): bool
     {
         /** @var bool $result */
-        $result = $this->vendorIsIntegerAttribute($attribute);
-
-        return $result;
+        return $this->vendorIsIntegerAttribute($attribute);
     }
 }

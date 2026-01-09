@@ -10,25 +10,24 @@ use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SMS\GammuData;
 use Modules\Notify\Datas\SmsData;
 use Override;
-use Spatie\QueueableAction\QueueableAction;
-use Symfony\Component\Process\Process;
-
 use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
+use Spatie\QueueableAction\QueueableAction;
+use Symfony\Component\Process\Process;
 
 final class SendGammuSMSAction implements SmsActionContract
 {
     use QueueableAction;
 
+    protected bool $debug;
+
+    protected ?string $defaultSender = null;
+
     private GammuData $gammuData;
 
     /** @var array<string, mixed> */
     private array $vars = [];
-
-    protected bool $debug;
-
-    protected ?string $defaultSender = null;
 
     /**
      * Create a new action instance.
@@ -55,6 +54,7 @@ final class SendGammuSMSAction implements SmsActionContract
      * Execute the action.
      *
      * @param  SmsData  $smsData  I dati del messaggio SMS
+     *
      * @return array Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio

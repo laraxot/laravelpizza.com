@@ -32,13 +32,13 @@ final class ChangeProfilePasswordAction extends Action
             ->action(static function (ProfileContract $record, array $data): void {
                 $user = $record->user;
                 $profile_data = Arr::except($record->toArray(), ['id']);
-                if (null === $user) {
+                if ($user === null) {
                     $user_class = XotData::make()->getUserClass();
                     /** @var UserContract */
                     $user = XotData::make()->getUserByEmail($record->email);
                 }
 
-                if (null === $user) {
+                if ($user === null) {
                     /** @var array<string, mixed> $profile_data */
                     $user = $record->user()->create($profile_data);
                 }

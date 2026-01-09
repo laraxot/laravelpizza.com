@@ -11,7 +11,6 @@ use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-
 use function Safe\json_encode;
 
 /**
@@ -50,7 +49,7 @@ class AuthenticationLogsRelationManager extends XotBaseRelationManager
                             ->join(', ');
                     }
 
-                    if (null === $state) {
+                    if ($state === null) {
                         return 'N/A';
                     }
 

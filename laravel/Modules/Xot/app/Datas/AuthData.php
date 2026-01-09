@@ -38,13 +38,14 @@ class AuthData extends Data
             'twitter' => false,
             'github' => false,
         ],
-    ) {}
+    ) {
+    }
 
     /**
      * Create a new instance of AuthData with default values.
      */
     public static function make(): static
     {
-        return new static;
+        return new static();
     }
 }

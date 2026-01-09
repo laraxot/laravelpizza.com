@@ -129,9 +129,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     public static function getResources(): Collection
     {
         /** @var Collection<int, string> $resources */
-        $resources = collect();
-
-        return $resources;
+        return collect();
     }
 
     /**

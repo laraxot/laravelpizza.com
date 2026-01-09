@@ -129,7 +129,7 @@ enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
         // Colonne indirizzo - aggiungi con check solo se in UPDATE context
         // Following the Laraxot pattern from workers_table migration
         foreach (self::getColumnDefinitions() as $name => $definition) {
-            if (null === $migration || ! $migration->hasColumn($name)) {
+            if ($migration === null || ! $migration->hasColumn($name)) {
                 $definition($table);
             }
         }
@@ -341,7 +341,7 @@ enum AddressItemEnum: string implements HasColor, HasIcon, HasLabel
         ];
 
         foreach ($legacyColumns as $name => $definition) {
-            if (null === $migration || ! $migration->hasColumn($name)) {
+            if ($migration === null || ! $migration->hasColumn($name)) {
                 $definition($table);
             }
         }

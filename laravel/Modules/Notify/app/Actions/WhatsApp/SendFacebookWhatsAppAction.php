@@ -9,13 +9,16 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
 use Modules\Notify\Datas\WhatsAppData;
-use Spatie\QueueableAction\QueueableAction;
-
 use function Safe\json_decode;
+use Spatie\QueueableAction\QueueableAction;
 
 final class SendFacebookWhatsAppAction
 {
     use QueueableAction;
+
+    protected bool $debug;
+
+    protected int $timeout;
 
     private string $accessToken;
 
@@ -25,10 +28,6 @@ final class SendFacebookWhatsAppAction
 
     /** @var array<string, mixed> */
     private array $vars = [];
-
-    protected bool $debug;
-
-    protected int $timeout;
 
     /**
      * Create a new action instance.
@@ -60,6 +59,7 @@ final class SendFacebookWhatsAppAction
      * Execute the action.
      *
      * @param  WhatsAppData  $whatsAppData  I dati del messaggio WhatsApp
+     *
      * @return array<string, mixed> Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio
@@ -131,9 +131,9 @@ final class SendFacebookWhatsAppAction
             /** @var array<string, mixed>|null $messages */
             $messages = $responseData['messages'] ?? null;
             /** @var array<string, mixed>|null $firstMessage */
-            $firstMessage = (is_array($messages) && isset($messages[0]) && is_array($messages[0])) ? $messages[0] : null;
+            $firstMessage = is_array($messages) && isset($messages[0]) && is_array($messages[0]) ? $messages[0] : null;
             /** @var string|null $messageId */
-            $messageId = (is_array($firstMessage) && isset($firstMessage['id']) && is_string($firstMessage['id']))
+            $messageId = is_array($firstMessage) && isset($firstMessage['id']) && is_string($firstMessage['id'])
                 ? $firstMessage['id']
                 : null;
 
@@ -163,7 +163,7 @@ final class SendFacebookWhatsAppAction
             /** @var array<string, mixed>|null $error */
             $error = $responseBody['error'] ?? null;
             /** @var string $errorMessage */
-            $errorMessage = (is_array($error) && isset($error['message']) && is_string($error['message']))
+            $errorMessage = is_array($error) && isset($error['message']) && is_string($error['message'])
                 ? $error['message']
                 : 'Errore sconosciuto';
 

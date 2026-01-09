@@ -26,7 +26,6 @@ use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Models\OauthAccessToken;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Override;
-
 use function Safe\json_encode;
 
 class OauthAccessTokenResource extends XotBaseResource
@@ -94,7 +93,7 @@ class OauthAccessTokenResource extends XotBaseResource
                             return null;
                         }
                         if (is_array($state)) {
-                            /* @var array<string, mixed> $state */
+                            /** @var array<string, mixed> $state */
                             return json_encode($state);
                         }
 

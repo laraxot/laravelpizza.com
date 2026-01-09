@@ -74,7 +74,7 @@ trait SushiToJsons
         $data = $this->loadFromJson();
         $index = $this->findIndex($this->getKey());
 
-        if (null === $index) {
+        if ($index === null) {
             return false;
         }
 
@@ -92,7 +92,7 @@ trait SushiToJsons
         $data = $this->loadFromJson();
         $index = $this->findIndex($this->getKey());
 
-        if (null === $index) {
+        if ($index === null) {
             return false;
         }
 
@@ -114,7 +114,7 @@ trait SushiToJsons
 
         $data = json_decode(File::get($path), true);
 
-        if (JSON_ERROR_NONE !== json_last_error()) {
+        if (json_last_error() !== JSON_ERROR_NONE) {
             throw new \RuntimeException('Errore nel parsing del file JSON: '.json_last_error_msg());
         }
 

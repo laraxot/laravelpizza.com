@@ -4,16 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Actions;
 
-use Throwable;
-use Modules\Notify\Enums\ChannelEnum;
-use Illuminate\Database\Eloquent\Model;
-use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Collection;
-use Modules\Notify\Actions\SendRecordNotificationAction;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Notify\Actions\SendRecordsNotificationAction;
-use Modules\Xot\Filament\Tables\Actions\XotBaseBulkAction;
-use Modules\Notify\Filament\Forms\Components\MailTemplateSelect;
 use Modules\Notify\Filament\Forms\Components\ChannelCheckboxList;
+use Modules\Notify\Filament\Forms\Components\MailTemplateSelect;
+use Modules\Xot\Filament\Tables\Actions\XotBaseBulkAction;
 
 /**
  * ---
@@ -44,6 +40,4 @@ class SendRecordsNotificationBulkAction extends XotBaseBulkAction
             ])
             ->deselectRecordsAfterCompletion();
     }
-
-
 }

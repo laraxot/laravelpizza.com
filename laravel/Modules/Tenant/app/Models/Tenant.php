@@ -27,6 +27,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property array|null $settings
  * @property bool $is_active
  * @property string|null $logo
+ *
  * @property-read string $url
  * @property-read Collection<int, User> $users
  * @property-read int|null $users_count

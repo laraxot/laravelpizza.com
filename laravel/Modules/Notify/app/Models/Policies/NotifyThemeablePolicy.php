@@ -4,4 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Policies;
 
-class NotifyThemeablePolicy extends NotifyBasePolicy {}
+class NotifyThemeablePolicy extends NotifyBasePolicy
+{
+}

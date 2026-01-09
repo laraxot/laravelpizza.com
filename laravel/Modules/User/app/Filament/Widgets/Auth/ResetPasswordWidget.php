@@ -8,7 +8,6 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Hash;
@@ -88,14 +87,14 @@ class ResetPasswordWidget extends XotBaseWidget
 
         $reset_data = Arr::only($data, ['email', 'password', 'password_confirmation', 'token']);
         $status = Password::reset($reset_data, function (Authenticatable $user, string $password): void {
-            /* @var Model&Authenticatable $user */
+            /** @var Model&Authenticatable $user */
             $user->forceFill([
                 'password' => Hash::make($password),
                 'remember_token' => Str::random(60),
             ])->save();
         });
 
-        if (Password::PASSWORD_RESET === $status) {
+        if ($status === Password::PASSWORD_RESET) {
             session()->flash('status', __($status));
 
             return redirect()->route('login');

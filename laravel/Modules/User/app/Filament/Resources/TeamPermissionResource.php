@@ -87,7 +87,7 @@ class TeamPermissionResource extends XotBaseResource
                             return null;
                         }
                         $team = $record->team;
-                        if (null !== $team && method_exists($team, 'exists') && $team->exists) {
+                        if ($team !== null && method_exists($team, 'exists') && $team->exists) {
                             return TeamResource::getUrl('view', ['record' => $team]);
                         }
 
@@ -103,7 +103,7 @@ class TeamPermissionResource extends XotBaseResource
                             return null;
                         }
                         $user = $record->user;
-                        if (null !== $user && method_exists($user, 'exists') && $user->exists) {
+                        if ($user !== null && method_exists($user, 'exists') && $user->exists) {
                             return UserResource::getUrl('view', ['record' => $user]);
                         }
 

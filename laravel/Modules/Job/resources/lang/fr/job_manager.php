@@ -3,17 +3,14 @@
 declare(strict_types=1);
 
 return [
-    'navigation' => [
-        'label' => 'Gestionnaire de tâches',
-        'group' => 'Tâches',
-        'icon' => 'heroicon-o-cog',
-        'sort' => 43,
+    'actions' => [
+        'create' => [
+            'label' => 'Créer',
+        ],
     ],
-    'label' => 'Gestionnaire de tâches',
-    'plural_label' => 'Gestionnaires de tâches',
     'fields' => [
-        'id' => [
-            'label' => 'ID',
+        'status' => [
+            'label' => 'Statut',
         ],
         'name' => [
             'label' => 'Nom',
@@ -21,28 +18,17 @@ return [
         'queue' => [
             'label' => 'File d\'attente',
         ],
-        'status' => [
-            'label' => 'Statut',
+        'progress' => [
+            'label' => 'Progrès',
         ],
-        'last_heartbeat' => [
-            'label' => 'Dernier battement',
-        ],
-        'created_at' => [
-            'label' => 'Créé le',
-        ],
-        'updated_at' => [
-            'label' => 'Mis à jour le',
+        'started_at' => [
+            'label' => 'Démarré À',
         ],
     ],
-    'actions' => [
-        'restart' => [
-            'label' => 'Redémarrer',
-        ],
-        'pause' => [
-            'label' => 'Pause',
-        ],
-        'resume' => [
-            'label' => 'Reprendre',
-        ],
+    'navigation' => [
+        'sort' => 87,
+        'icon' => 'heroicon-o-cog-6-tooth',
+        'group' => 'Système',
+        'label' => 'Gestionnaire d\'Emplois',
     ],
 ];

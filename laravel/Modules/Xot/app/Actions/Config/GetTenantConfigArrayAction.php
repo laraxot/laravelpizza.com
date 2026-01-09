@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Config;
 
-use Illuminate\Support\Facades\Config as IlluminateConfig;
 use Illuminate\Support\Facades\File;
-use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Spatie\QueueableAction\QueueableAction;
 
 class GetTenantConfigArrayAction

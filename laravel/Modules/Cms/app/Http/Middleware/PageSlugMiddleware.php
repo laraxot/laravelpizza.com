@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Http\Middleware;
 
-use Closure;
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 use Modules\Cms\Models\Page;
@@ -21,9 +20,7 @@ class PageSlugMiddleware
         // Handle case where slug might be null or not a string
         if (! \is_string($slug)) {
             /** @var Response */
-            $response = $next($request);
-
-            return $response;
+            return $next($request);
         }
 
         $middlewares = Page::getMiddlewareBySlug($slug);
@@ -31,9 +28,7 @@ class PageSlugMiddleware
 
         if (empty($middlewares)) {
             /** @var Response */
-            $response = $next($request);
-
-            return $response;
+            return $next($request);
         }
         $this->kernel = app(Kernel::class);
 
@@ -58,7 +53,7 @@ class PageSlugMiddleware
             $parameters = [];
         }
 
-        /* @var array<string> $parameters */
+        /** @var array<string> $parameters */
         return [$name, $parameters];
     }
 
@@ -69,17 +64,13 @@ class PageSlugMiddleware
     {
         if (empty($middlewares)) {
             /** @var Response */
-            $response = $finalNext($request);
-
-            return $response;
+            return $finalNext($request);
         }
 
         $middleware = array_shift($middlewares);
         if (! \is_string($middleware)) {
             /** @var Response */
-            $response = $finalNext($request);
-
-            return $response;
+            return $finalNext($request);
         }
 
         [$middlewareClass, $parameters] = $this->parseMiddleware($middleware);
@@ -97,15 +88,11 @@ class PageSlugMiddleware
         if (\is_object($middlewareInstance) && method_exists($middlewareInstance, 'handle')) {
             if (empty($parameters)) {
                 /** @var Response */
-                $response = $middlewareInstance->handle($request, $next);
-
-                return $response;
+                return $middlewareInstance->handle($request, $next);
             }
 
             /** @var Response */
-            $response = $middlewareInstance->handle($request, $next, ...$parameters);
-
-            return $response;
+            return $middlewareInstance->handle($request, $next, ...$parameters);
         }
 
         // If middleware doesn't exist or doesn't have handle method, continue with next
@@ -126,9 +113,7 @@ class PageSlugMiddleware
         $routeMiddleware = $this->kernel->getRouteMiddleware();
         if (isset($routeMiddleware[$middleware])) {
             /** @var class-string */
-            $class = $routeMiddleware[$middleware];
-
-            return $class;
+            return $routeMiddleware[$middleware];
         }
 
         // If not an alias, return as-is (assuming it's a full class name)

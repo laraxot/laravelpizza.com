@@ -18,6 +18,7 @@ interface TelegramProviderActionInterface
      * Esegue l'invio del messaggio Telegram.
      *
      * @param  TelegramData  $telegramData  I dati del messaggio Telegram
+     *
      * @return array Risultato dell'operazione
      */
     public function execute(TelegramData $telegramData): array;

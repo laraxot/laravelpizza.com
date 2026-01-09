@@ -7,9 +7,8 @@ namespace Modules\Xot\Services;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
-use Webmozart\Assert\Assert;
-
 use function Safe\preg_replace;
+use Webmozart\Assert\Assert;
 
 /**
  * Class RouteDynService.
@@ -23,6 +22,7 @@ class RouteDynService
 
     /**
      * @param  array<string, mixed>  $v
+     *
      * @return array<string, mixed>
      */
     public static function getGroupOpts(array $v, ?string $namespace): array
@@ -151,6 +151,7 @@ class RouteDynService
 
     /**
      * @param  array<string, mixed>  $v
+     *
      * @return array<int, string>
      */
     public static function getParamsName(array $v, ?string $namespace): array
@@ -162,6 +163,7 @@ class RouteDynService
 
     /**
      * @param  array<string, mixed>  $v
+     *
      * @return array<string, mixed>
      */
     public static function getResourceOpts(array $v, ?string $namespace): array
@@ -219,6 +221,7 @@ class RouteDynService
 
     /**
      * @param  array<string, mixed>  $v
+     *
      * @return array<int, string>
      */
     public static function getMethod(array $v, ?string $_namespace): array
@@ -244,6 +247,7 @@ class RouteDynService
 
     /**
      * @param  array<string, mixed>  $v
+     *
      * @return array<string, mixed>
      */
     public static function getCallback(array $v, ?string $namespace, ?string $curr): array

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Filament\Forms\Components;
 
-use BackedEnum;
 use Filament\Forms\Components\Radio;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
@@ -44,9 +43,7 @@ class RadioBadge extends Radio
         }
 
         /** @var class-string<\BackedEnum&HasColor&HasIcon> $enumClass */
-        $res = $enumClass::tryFrom($value);
-
-        return $res;
+        return $enumClass::tryFrom($value);
     }
 
     public function getColorForOption(string $value): string
@@ -54,18 +51,18 @@ class RadioBadge extends Radio
         $enum = $this->getEnumValue($value);
         if ($enum instanceof HasColor) {
             $color = $enum->getColor();
-            if (null === $color) {
+            if ($color === null) {
                 return $this->selectedColor;
             }
 
             if (is_array($color)) {
                 $first = reset($color);
 
-                return is_string($first) && '' !== $first ? $first : $this->selectedColor;
+                return is_string($first) && $first !== '' ? $first : $this->selectedColor;
             }
 
             // PHPStan L10: $color è già verificato come non-array e non-null, quindi è string
-            if ('' !== $color) {
+            if ($color !== '') {
                 return $color;
             }
 
@@ -84,7 +81,7 @@ class RadioBadge extends Radio
         $icon = $enum->getIcon();
 
         // getIcon() può restituire Htmlable|string|null, ma dobbiamo restituire solo string|null
-        if (null === $icon) {
+        if ($icon === null) {
             return null;
         }
 

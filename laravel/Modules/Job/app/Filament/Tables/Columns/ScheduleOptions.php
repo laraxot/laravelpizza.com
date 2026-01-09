@@ -25,9 +25,7 @@ class ScheduleOptions extends TextColumn
 
         if ($this->withValue && \is_object($this->record) && method_exists($this->record, 'getOptions')) {
             /** @var array<int|string, string> $options */
-            $options = $this->record->getOptions();
-
-            return $options;
+            return $this->record->getOptions();
         }
 
         return [];

@@ -28,6 +28,7 @@ class MailTemplateSelect extends Select
      * Create a new MailTemplateSelect instance.
      *
      * @param string|null $name Field name (default: 'mail_template_slug')
+     *
      * @return static
      */
     public static function make(?string $name = null): static

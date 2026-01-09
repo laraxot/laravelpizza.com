@@ -54,6 +54,7 @@ class ExportXlsByCollection
      * @param  Collection<int|string, mixed>|EloquentCollection<int, Model>  $rows  La collezione da esportare
      * @param  array<int, string>  $fields  Campi da includere nell'export
      * @param  string  $filename  Nome del file Excel
+     *
      * @return string Il percorso del file generato
      */
     public function executeWithSpreadsheet(Collection|EloquentCollection $rows, array $fields, string $filename): string
@@ -63,7 +64,7 @@ class ExportXlsByCollection
             $rows = Collection::make($rows->toArray());
         }
 
-        $spreadsheet = new Spreadsheet;
+        $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
 
         $this->writeHeader($sheet, $fields);
@@ -112,6 +113,7 @@ class ExportXlsByCollection
      *
      * @param  mixed  $data  I dati da cui estrarre il valore
      * @param  string  $field  Il campo da estrarre
+     *
      * @return mixed Il valore estratto
      */
     protected function extractValue(mixed $data, string $field): mixed
@@ -124,6 +126,7 @@ class ExportXlsByCollection
      * Converte EloquentCollection in Support\Collection mantenendo i dati.
      *
      * @param  EloquentCollection<int, Model>  $eloquentCollection
+     *
      * @return Collection<int, mixed>
      */
     protected function convertToSupportCollection(EloquentCollection $eloquentCollection): Collection

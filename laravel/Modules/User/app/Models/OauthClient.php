@@ -8,7 +8,6 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Auth\Access\Authorizable;
-use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Support\Carbon;
 use Laravel\Passport\Client as PassportClient;
 use Laravel\Passport\Database\Factories\ClientFactory;
@@ -68,8 +67,6 @@ class OauthClient extends PassportClient implements AuthorizableContract
 {
     use Authorizable;
     use HasRoles;
-    /** @var string */
-    protected $connection = 'user';
 
     /**
      * The name of the guard for Spatie Permission.
@@ -78,6 +75,8 @@ class OauthClient extends PassportClient implements AuthorizableContract
      * @var string
      */
     public $guard_name = 'api';
+    /** @var string */
+    protected $connection = 'user';
 
     /**
      * Determine if the entity has a given ability.
@@ -169,5 +168,4 @@ class OauthClient extends PassportClient implements AuthorizableContract
             return false;
         }
     }
-
 }

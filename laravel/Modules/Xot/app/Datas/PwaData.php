@@ -36,13 +36,14 @@ class PwaData extends Data
             '1242x2208' => 'img/splash/splash-1242x2208.png',
             '1125x2436' => 'img/splash/splash-1125x2436.png',
         ],
-    ) {}
+    ) {
+    }
 
     /**
      * Create a new instance of PwaData with default values.
      */
     public static function make(): static
     {
-        return new static;
+        return new static();
     }
 }

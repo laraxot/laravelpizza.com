@@ -17,6 +17,7 @@ class ConfigHelper
      * Sostituisce le variabili template nei dati di configurazione.
      *
      * @param  array<string, mixed>  $data
+     *
      * @return array<string, mixed>
      */
     public static function replaceTemplateVariables(array $data): array
@@ -32,46 +33,6 @@ class ConfigHelper
         $availableVariables = array_merge($companyConfig, $templateVariables);
 
         return self::recursiveReplace($data, $availableVariables);
-    }
-
-    /**
-     * Sostituisce ricorsivamente le variabili template in un array.
-     *
-     * @param  array<string, mixed>  $data
-     * @param  array<string, mixed>  $variables
-     * @return array<string, mixed>
-     */
-    private static function recursiveReplace(array $data, array $variables): array
-    {
-        $result = [];
-
-        foreach ($data as $key => $value) {
-            if (is_string($value)) {
-                $result[$key] = self::replaceStringVariables($value, $variables);
-            } elseif (is_array($value)) {
-                /** @var array<string, mixed> $value */
-                $result[$key] = self::recursiveReplace($value, $variables);
-            } else {
-                $result[$key] = $value;
-            }
-        }
-
-        return $result;
-    }
-
-    /**
-     * Sostituisce le variabili template in una stringa.
-     *
-     * @param  array<string, mixed>  $variables
-     */
-    private static function replaceStringVariables(string $string, array $variables): string
-    {
-        foreach ($variables as $variable => $value) {
-            $placeholder = '{{'.$variable.'}}';
-            $string = str_replace($placeholder, (string) $value, $string);
-        }
-
-        return $string;
     }
 
     /**
@@ -165,5 +126,46 @@ class ConfigHelper
         $pathConfig = SafeArrayCastAction::cast($pathConfigRaw);
 
         return self::replaceTemplateVariables($pathConfig);
+    }
+
+    /**
+     * Sostituisce ricorsivamente le variabili template in un array.
+     *
+     * @param  array<string, mixed>  $data
+     * @param  array<string, mixed>  $variables
+     *
+     * @return array<string, mixed>
+     */
+    private static function recursiveReplace(array $data, array $variables): array
+    {
+        $result = [];
+
+        foreach ($data as $key => $value) {
+            if (is_string($value)) {
+                $result[$key] = self::replaceStringVariables($value, $variables);
+            } elseif (is_array($value)) {
+                /** @var array<string, mixed> $value */
+                $result[$key] = self::recursiveReplace($value, $variables);
+            } else {
+                $result[$key] = $value;
+            }
+        }
+
+        return $result;
+    }
+
+    /**
+     * Sostituisce le variabili template in una stringa.
+     *
+     * @param  array<string, mixed>  $variables
+     */
+    private static function replaceStringVariables(string $string, array $variables): string
+    {
+        foreach ($variables as $variable => $value) {
+            $placeholder = '{{'.$variable.'}}';
+            $string = str_replace($placeholder, (string) $value, $string);
+        }
+
+        return $string;
     }
 }

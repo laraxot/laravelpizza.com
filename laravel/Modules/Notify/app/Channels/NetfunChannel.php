@@ -22,6 +22,7 @@ class NetfunChannel
      * Invia la notifica tramite Netfun SMS
      *
      * @param  mixed  $notifiable
+     *
      * @return array|null
      */
     public function send($notifiable, Notification $notification)

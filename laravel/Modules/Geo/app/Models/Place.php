@@ -12,7 +12,6 @@ use Illuminate\Support\Carbon;
 use Modules\Geo\Contracts\HasGeolocation;
 use Modules\Geo\Database\Factories\PlaceFactory;
 use Modules\Xot\Contracts\ProfileContract;
-
 use function Safe\json_encode;
 
 /**
@@ -253,8 +252,8 @@ class Place extends BaseModel implements HasGeolocation
     #[\Override]
     public function hasValidCoordinates(): bool
     {
-        return null !== $this->latitude
-            && null !== $this->longitude
+        return $this->latitude !== null
+            && $this->longitude !== null
             && $this->latitude >= -90
             && $this->latitude <= 90
             && $this->longitude >= -180

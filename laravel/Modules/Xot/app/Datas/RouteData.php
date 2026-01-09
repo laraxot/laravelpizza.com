@@ -26,13 +26,14 @@ class RouteData extends Data
         public readonly bool $use_passport = false,
         public readonly array $except_verify = [],
         public readonly bool $enable = true,
-    ) {}
+    ) {
+    }
 
     /**
      * Create a new instance of RouteData with default values.
      */
     public static function make(): static
     {
-        return new static;
+        return new static();
     }
 }

@@ -8,8 +8,6 @@ use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Forms\Contracts\HasForms;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Illuminate\Database\Eloquent\Model;
@@ -68,9 +66,7 @@ class PasswordExpiredWidget extends XotBaseWidget
 
         // Ensure list type for PHPStan Level 10
         /** @var array<int, Component> $result */
-        $result = array_values($schema);
-
-        return $result;
+        return array_values($schema);
     }
 
     /**

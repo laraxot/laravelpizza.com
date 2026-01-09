@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\File;
 
-use Illuminate\Support\Facades\Log;
 use Exception;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Log;
 use Spatie\QueueableAction\QueueableAction;
 
 class CopyAction

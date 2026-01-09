@@ -114,22 +114,20 @@ class GetCoordinatesByAddressAction
     private function makeHttpRequest(string $url, array $params): Response
     {
         /** @var Response $response */
-        $response = Http::get($url, $params);
-
-        return $response;
+        return Http::get($url, $params);
     }
 
     private function getFromBing(string $address): ?CoordinatesData
     {
         $apiKey = config('services.bing.maps_api_key');
-        if (! is_string($apiKey) || '' === $apiKey) {
+        if (! is_string($apiKey) || $apiKey === '') {
             return null;
         }
 
         $data = $this->getBingResponse($address, $apiKey);
 
         $coordinates = $this->extractBingCoordinates($data);
-        if (null === $coordinates) {
+        if ($coordinates === null) {
             return null;
         }
 
@@ -201,7 +199,7 @@ class GetCoordinatesByAddressAction
     private function getFromOpenCage(string $address): ?CoordinatesData
     {
         $apiKey = config('services.opencage.api_key');
-        if (! is_string($apiKey) || '' === $apiKey) {
+        if (! is_string($apiKey) || $apiKey === '') {
             return null;
         }
 

@@ -126,9 +126,7 @@ class EditUserWidget extends XotBaseWidget
         Assert::isArray($schema, 'Schema must be array');
 
         /** @var array<int|string, Component> $result */
-        $result = $schema;
-
-        return $result;
+        return $schema;
     }
 
     /**
@@ -168,18 +166,14 @@ class EditUserWidget extends XotBaseWidget
         $modelClass = $this->model;
         if ($userId) {
             /** @var Model $user */
-            $user = $this->model::findOrFail($userId);
-
-            return $user;
+            return $this->model::findOrFail($userId);
         }
 
         // Se non è specificato un userId, usa l'utente correntemente autenticato
         $currentUser = Auth::user();
         if ($currentUser && \is_string($this->model) && $currentUser instanceof $this->model) {
             /** @var Model $user */
-            $user = $currentUser;
-
-            return $user;
+            return $currentUser;
         }
 
         // Fallback: cerca un utente del tipo corretto associato all'utente autenticato
@@ -190,7 +184,7 @@ class EditUserWidget extends XotBaseWidget
                 $user = $query->first();
 
                 if ($user instanceof Model) {
-                    /* @var Model $user */
+                    /** @var Model $user */
                     return $user;
                 }
             }
@@ -198,8 +192,6 @@ class EditUserWidget extends XotBaseWidget
 
         // Ultimo fallback: nuovo modello
         /** @var Model $user */
-        $user = app($this->model);
-
-        return $user;
+        return app($this->model);
     }
 }

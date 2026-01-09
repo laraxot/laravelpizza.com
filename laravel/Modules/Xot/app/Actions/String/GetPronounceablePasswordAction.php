@@ -14,6 +14,7 @@ class GetPronounceablePasswordAction
      * Genera una password pronunciabile con caratteri speciali e numeri.
      *
      * @param  int  $length  Lunghezza minima della password (default: 12)
+     *
      * @return string Password generata
      */
     public function execute(int $length = 12): string

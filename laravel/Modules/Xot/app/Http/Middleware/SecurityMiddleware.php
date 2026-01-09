@@ -7,11 +7,10 @@ namespace Modules\Xot\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Symfony\Component\HttpFoundation\Response;
-use Webmozart\Assert\Assert;
-
 use function Safe\json_encode;
 use function Safe\preg_match;
+use Symfony\Component\HttpFoundation\Response;
+use Webmozart\Assert\Assert;
 
 /**
  * Middleware di sicurezza avanzato.

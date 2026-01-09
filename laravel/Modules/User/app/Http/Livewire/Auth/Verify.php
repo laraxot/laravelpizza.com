@@ -39,8 +39,6 @@ class Verify extends Component
         $view = 'pub_theme::livewire.auth.verify';
 
         /** @var Factory|View $result */
-        $result = view($view)->extends('pub_theme::layouts.auth');
-
-        return $result;
+        return view($view)->extends('pub_theme::layouts.auth');
     }
 }

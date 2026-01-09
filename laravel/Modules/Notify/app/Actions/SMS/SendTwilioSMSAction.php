@@ -18,14 +18,14 @@ final class SendTwilioSMSAction implements SmsActionContract
 {
     use QueueableAction;
 
+    protected bool $debug;
+
+    protected ?string $defaultSender = null;
+
     private TwilioData $twilioData;
 
     /** @var array<string, mixed> */
     private array $vars = [];
-
-    protected bool $debug;
-
-    protected ?string $defaultSender = null;
 
     /**
      * Create a new action instance.
@@ -52,6 +52,7 @@ final class SendTwilioSMSAction implements SmsActionContract
      * Execute the action.
      *
      * @param  SmsData  $smsData  I dati del messaggio SMS
+     *
      * @return array Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio

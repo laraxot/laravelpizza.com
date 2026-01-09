@@ -26,7 +26,7 @@ class IconPicker extends TextInput
         $packsKeys = $packs;
         $packsCombined = array_combine($packsKeys, $packsKeys);
         /** @var array<string, string> $packs */
-        $packs = $packsCombined ?: [];
+        $packs = $packsCombined ? $packsCombined : [];
         // dddx($icons->toCollection()->get('heroicons')->toArray());
 
         $this->suffixAction(
@@ -37,9 +37,7 @@ class IconPicker extends TextInput
                     Select::make('pack')
                         ->options(function () use ($packs): array {
                             /** @var array<string, string> $packsOptions */
-                            $packsOptions = $packs;
-
-                            return $packsOptions;
+                            return $packs;
                         })
                         ->reactive()
                         ->live(),
@@ -73,7 +71,7 @@ class IconPicker extends TextInput
                             $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
                             $optsCombined = array_combine($optsKeys, $optsValues);
 
-                            return $optsCombined ?: [];
+                            return $optsCombined ? $optsCombined : [];
                         })
                         ->inline()
                         ->inlineLabel(false),

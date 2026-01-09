@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\Job\Filament\Resources\JobResource\Pages;
 
-use Filament\Tables\Filters\BaseFilter;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
-use Override;
-use Filament\Actions\ViewAction;
 use Filament\Actions\DeleteAction;
+use Filament\Actions\ViewAction;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ViewColumn;
+use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Job\Filament\Resources\JobResource;
 use Modules\Job\Models\Job;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+use Override;
 
 class ListJobs extends XotBaseListRecords
 {
@@ -35,7 +35,7 @@ class ListJobs extends XotBaseListRecords
             'attempts' => TextColumn::make('attempts')->numeric()->sortable(),
             'status' => TextColumn::make('status')
                 ->badge()
-                ->color(fn(string $state): string => match ($state) {
+                ->color(fn (string $state): string => match ($state) {
                     'running' => 'primary',
                     'waiting' => 'warning',
                     default => 'danger',

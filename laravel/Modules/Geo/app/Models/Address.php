@@ -216,7 +216,7 @@ class Address extends BaseModel
     public function getFullAddressAttribute(): string
     {
         $parts = array_filter([
-            is_string($this->route) && is_string($this->street_number) ? $this->route.('' !== $this->street_number ? ' '.$this->street_number : '') : null,
+            is_string($this->route) && is_string($this->street_number) ? $this->route.($this->street_number !== '' ? ' '.$this->street_number : '') : null,
             $this->locality,
             $this->administrative_area_level_3, // Provincia
             $this->administrative_area_level_2, // Regione
@@ -229,7 +229,7 @@ class Address extends BaseModel
             }
 
             // Dopo is_string(), $part è string, quindi verifica se è vuoto
-            return '' !== $part;
+            return $part !== '';
         });
 
         return implode(', ', $parts);
@@ -269,7 +269,7 @@ class Address extends BaseModel
     public function getFormattedAddressAttribute(?string $value): ?string
     {
         // PHPStan L10: $value è già ?string, dopo !== null è string
-        if (null !== $value) {
+        if ($value !== null) {
             return $value;
         }
 
@@ -280,7 +280,7 @@ class Address extends BaseModel
             $route = $this->route;
             $streetNumber = $this->street_number;
             $streetAddress = is_string($route) && is_string($streetNumber) ? trim($route.' '.$streetNumber) : '';
-            if ('' !== $streetAddress) {
+            if ($streetAddress !== '') {
                 $parts[] = $streetAddress;
             }
         }
@@ -295,7 +295,7 @@ class Address extends BaseModel
             $localityParts[] = $this->locality;
 
             // Per indirizzi italiani, aggiungiamo la sigla provincia
-            if ('IT' === ($this->country ?? '') && $this->administrative_area_level_3 && is_string($this->administrative_area_level_3)) {
+            if (($this->country ?? '') === 'IT' && $this->administrative_area_level_3 && is_string($this->administrative_area_level_3)) {
                 // Se è un'implementazione reale, potremmo derivare la sigla dalla provincia
                 $provinciaSigla = $this->extra_data['provincia_sigla'] ?? null;
                 if ($provinciaSigla && is_string($provinciaSigla)) {

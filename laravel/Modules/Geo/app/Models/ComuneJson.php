@@ -76,12 +76,10 @@ class ComuneJson extends GeoJsonModel
          *     codiceCatastale: string,
          *     popolazione: int
          * }> $result */
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, static::all()
+        return Cache::remember($cacheKey, self::CACHE_TTL, static::all()
             ->where('regione.codice', $regionCode)
             ->sortBy('nome')
             ->values(...));
-
-        return $result;
     }
 
     /**
@@ -110,12 +108,10 @@ class ComuneJson extends GeoJsonModel
          *     codiceCatastale: string,
          *     popolazione: int
          * }> $result */
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, static::all()
+        return Cache::remember($cacheKey, self::CACHE_TTL, static::all()
             ->where('provincia.codice', $provinceCode)
             ->sortBy('nome')
             ->values(...));
-
-        return $result;
     }
 
     /**
@@ -148,7 +144,7 @@ class ComuneJson extends GeoJsonModel
          *     codiceCatastale: string,
          *     popolazione: int
          * }> $result */
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($name, $limit) {
+        return Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($name, $limit) {
             $results = static::all()
                 /* @phpstan-ignore nullCoalesce.offset */
                 ->filter(static fn ($item) => str_contains(mb_strtolower($item['nome'] ?? ''), $name))
@@ -156,8 +152,6 @@ class ComuneJson extends GeoJsonModel
 
             return $limit > 0 ? $results->take($limit)->values() : $results->values();
         });
-
-        return $result;
     }
 
     /**
@@ -368,7 +362,7 @@ class ComuneJson extends GeoJsonModel
          *     },
          *     cap: array<int, string>
          * }|null $result */
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($comuneNome) {
+        return Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($comuneNome) {
             /** @var array{
              *     nome: string,
              *     codice: string,
@@ -396,8 +390,6 @@ class ComuneJson extends GeoJsonModel
                 'cap' => $comune['cap'] ?? [],
             ];
         });
-
-        return $result;
     }
 
     /**

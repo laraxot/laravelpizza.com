@@ -32,11 +32,14 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property Carbon|null $clicked_at
  * @property Carbon $created_at
  * @property Carbon $updated_at
+ *
  * @property-read NotificationTemplate|null $template
+ *
  * @property string $notifiable_type
  * @property int $notifiable_id
  * @property string $title
  * @property string|null $error
+ *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $deleter
  * @property-read MediaCollection<int, Media> $media
@@ -85,24 +88,6 @@ final class NotificationLog extends BaseModel
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'data' => 'array',
-            'channels' => 'array',
-            'sent_at' => 'datetime',
-            'delivered_at' => 'datetime',
-            'opened_at' => 'datetime',
-            'clicked_at' => 'datetime',
-            'status' => NotificationLogStatusEnum::class,
-        ];
-    }
-
-    /**
      * Ottiene il template associato a questo log.
      */
     public function template(): BelongsTo
@@ -149,5 +134,23 @@ final class NotificationLog extends BaseModel
         int $templateId,
     ): Builder {
         return $query->where('template_id', $templateId);
+    }
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'data' => 'array',
+            'channels' => 'array',
+            'sent_at' => 'datetime',
+            'delivered_at' => 'datetime',
+            'opened_at' => 'datetime',
+            'clicked_at' => 'datetime',
+            'status' => NotificationLogStatusEnum::class,
+        ];
     }
 }

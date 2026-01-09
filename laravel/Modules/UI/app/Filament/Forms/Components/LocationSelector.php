@@ -140,6 +140,62 @@ class LocationSelector extends XotBaseGroup
     }
 
     /**
+     * Validazione custom per verificare la coerenza dei dati.
+     */
+    public function validate(): array
+    {
+        $state = $this->getState();
+        $errors = [];
+
+        // Verifica che se è selezionata una provincia, sia selezionata anche la regione
+        /* @phpstan-ignore offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible */
+        if (! empty($state[$this->provinceFieldName]) && empty($state[$this->regionFieldName])) {
+            $errors[] = __('ui::location_selector.validation.region_required_for_province');
+        }
+
+        // Verifica che se è selezionato un CAP, siano selezionate regione e provincia
+        if (\is_array($state)) {
+            $capValue = $state[$this->capFieldName] ?? null;
+            $regionValue = $state[$this->regionFieldName] ?? null;
+            $provinceValue = $state[$this->provinceFieldName] ?? null;
+
+            if (! empty($capValue) && (empty($regionValue) || empty($provinceValue))) {
+                $errors[] = __('ui::location_selector.validation.region_province_required_for_cap');
+            }
+        }
+
+        return $errors;
+    }
+
+    /**
+     * Ottiene i dati geografici completi basati sulla selezione corrente.
+     *
+     * @return array<string, mixed>|null
+     */
+    public function getGeographicData(): ?array
+    {
+        $state = $this->getState();
+        if (! \is_array($state) || empty($state[$this->regionFieldName])) {
+            return null;
+        }
+
+        /** @var array<string, mixed> $validatedState */
+        $validatedState = $state;
+        try {
+            $comune = $this->getComuneFromState($validatedState);
+
+            return $comune ? $this->formatGeographicData($comune, $validatedState) : null;
+        } catch (\Exception $e) {
+            logger()->error('LocationSelector: Errore nel recupero dati geografici', [
+                'state' => $validatedState,
+                'error' => $e->getMessage(),
+            ]);
+
+            return null;
+        }
+    }
+
+    /**
      * Genera lo schema dei componenti figlio.
      *
      * @return array<Component>
@@ -282,62 +338,6 @@ class LocationSelector extends XotBaseGroup
             ]);
 
             return [];
-        }
-    }
-
-    /**
-     * Validazione custom per verificare la coerenza dei dati.
-     */
-    public function validate(): array
-    {
-        $state = $this->getState();
-        $errors = [];
-
-        // Verifica che se è selezionata una provincia, sia selezionata anche la regione
-        /* @phpstan-ignore offsetAccess.nonOffsetAccessible, offsetAccess.nonOffsetAccessible */
-        if (! empty($state[$this->provinceFieldName]) && empty($state[$this->regionFieldName])) {
-            $errors[] = __('ui::location_selector.validation.region_required_for_province');
-        }
-
-        // Verifica che se è selezionato un CAP, siano selezionate regione e provincia
-        if (\is_array($state)) {
-            $capValue = $state[$this->capFieldName] ?? null;
-            $regionValue = $state[$this->regionFieldName] ?? null;
-            $provinceValue = $state[$this->provinceFieldName] ?? null;
-
-            if (! empty($capValue) && (empty($regionValue) || empty($provinceValue))) {
-                $errors[] = __('ui::location_selector.validation.region_province_required_for_cap');
-            }
-        }
-
-        return $errors;
-    }
-
-    /**
-     * Ottiene i dati geografici completi basati sulla selezione corrente.
-     *
-     * @return array<string, mixed>|null
-     */
-    public function getGeographicData(): ?array
-    {
-        $state = $this->getState();
-        if (! \is_array($state) || empty($state[$this->regionFieldName])) {
-            return null;
-        }
-
-        /** @var array<string, mixed> $validatedState */
-        $validatedState = $state;
-        try {
-            $comune = $this->getComuneFromState($validatedState);
-
-            return $comune ? $this->formatGeographicData($comune, $validatedState) : null;
-        } catch (\Exception $e) {
-            logger()->error('LocationSelector: Errore nel recupero dati geografici', [
-                'state' => $validatedState,
-                'error' => $e->getMessage(),
-            ]);
-
-            return null;
         }
     }
 

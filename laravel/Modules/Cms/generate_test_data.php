@@ -94,6 +94,31 @@ class TestDataGenerator
         $this->printSummary();
     }
 
+    public function generateTinkerCommands(): void
+    {
+        echo "\n🔧 TINKER COMMANDS FOR MANUAL EXECUTION\n";
+        echo str_repeat('=', 50)."\n\n";
+
+        foreach ($this->businessModels as $module => $models) {
+            /** @var string $module */
+            /** @var array<string, string> $models */
+            echo "// Module: {$module}\n";
+
+            foreach ($models as $modelName => $factoryClass) {
+                /** @var string $modelName */
+                /** @var string $factoryClass */
+                // Convert factory class to model class
+                /** @var string $modelClass */
+                $modelClass = str_replace('\Database\Factories\\', '\Models\\', $factoryClass);
+                $modelClass = str_replace('Factory', '', $modelClass);
+
+                echo "// {$modelName}\n";
+                echo "(new {$factoryClass}())->count(100)->create();\n";
+                echo "// Alternative: {$modelClass}::factory()->count(100)->create(); // if HasFactory trait is added\n\n";
+            }
+        }
+    }
+
     private function generateModelData(string $module, string $modelName, string $factoryClass): void
     {
         try {
@@ -185,10 +210,10 @@ class TestDataGenerator
             foreach ($models as $modelName => $result) {
                 /** @var string $modelName */
                 /** @var array{status: string, count?: int, reason?: string, factory?: string} $result */
-                $status = 'success' === $result['status'] ? '✅' : '❌';
+                $status = $result['status'] === 'success' ? '✅' : '❌';
                 echo "  {$status} {$modelName}";
 
-                if ('success' === $result['status']) {
+                if ($result['status'] === 'success') {
                     /** @var int $count */
                     $count = $result['count'] ?? 0;
                     echo " - {$count} records";
@@ -209,31 +234,6 @@ class TestDataGenerator
         echo "✅ Successful: {$totalSuccess} models\n";
         echo "❌ Failed: {$totalFailed} models\n";
         echo "📈 Total records created: {$totalRecords}\n";
-    }
-
-    public function generateTinkerCommands(): void
-    {
-        echo "\n🔧 TINKER COMMANDS FOR MANUAL EXECUTION\n";
-        echo str_repeat('=', 50)."\n\n";
-
-        foreach ($this->businessModels as $module => $models) {
-            /** @var string $module */
-            /** @var array<string, string> $models */
-            echo "// Module: {$module}\n";
-
-            foreach ($models as $modelName => $factoryClass) {
-                /** @var string $modelName */
-                /** @var string $factoryClass */
-                // Convert factory class to model class
-                /** @var string $modelClass */
-                $modelClass = str_replace('\Database\Factories\\', '\Models\\', $factoryClass);
-                $modelClass = str_replace('Factory', '', $modelClass);
-
-                echo "// {$modelName}\n";
-                echo "(new {$factoryClass}())->count(100)->create();\n";
-                echo "// Alternative: {$modelClass}::factory()->count(100)->create(); // if HasFactory trait is added\n\n";
-            }
-        }
     }
 }
 

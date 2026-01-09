@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Modules\Meetup\Filament\Pages;
 
 use Modules\Meetup\Filament\Widgets\EventCalendarWidget;
+use Modules\Meetup\Filament\Widgets\MeetupStatsOverviewWidget;
+use Modules\Meetup\Filament\Widgets\RecentEventsWidget;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Override;
 
@@ -18,7 +20,9 @@ class MeetupDashboard extends XotBasePage
     public function getWidgets(): array
     {
         return [
+            MeetupStatsOverviewWidget::class,
             EventCalendarWidget::class,
+            RecentEventsWidget::class,
         ];
     }
 

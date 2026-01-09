@@ -6,7 +6,6 @@ namespace Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\
 
 use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
-use Override;
 
 class EditOauthClient extends XotBaseEditRecord
 {

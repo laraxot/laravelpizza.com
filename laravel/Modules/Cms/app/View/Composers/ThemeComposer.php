@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\View\Composers;
 
-use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\Cms\Models\Menu;
@@ -40,19 +39,19 @@ class ThemeComposer
 
     public function getMenuUrl(array $menu): string
     {
-        if ([] === $menu) {
+        if ($menu === []) {
             return '#';
         }
         $lang = app()->getLocale();
-        if ('internal' === $menu['type']) {
+        if ($menu['type'] === 'internal') {
             return route('page_slug.view', ['lang' => $lang, 'slug' => $menu['url']]);
         }
-        if ('external' === $menu['type']) {
+        if ($menu['type'] === 'external') {
             Assert::string($url = $menu['url'], __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
             return $url;
         }
-        if ('route_name' === $menu['type']) {
+        if ($menu['type'] === 'route_name') {
             Assert::string($url = $menu['url'], __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
             return route($url, ['lang' => $lang]);
@@ -135,17 +134,13 @@ class ThemeComposer
     public function getPages(): Collection
     {
         /** @var Collection<int, Page> $pages */
-        $pages = Page::all();
-
-        return $pages;
+        return Page::all();
     }
 
     public function getPageModel(string $slug): ?Page
     {
         /** @var Page|null $page */
-        $page = Page::where('slug', $slug)->first();
-
-        return $page;
+        return Page::where('slug', $slug)->first();
     }
 
     public function getUrlPage(string $slug): string

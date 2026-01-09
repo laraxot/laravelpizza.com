@@ -4,17 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Filament\Resources;
 
-use Override;
-use Illuminate\Support\Str;
-use Filament\Schemas\Components\View;
-use Filament\Schemas\Components\Group;
-use Filament\Forms\Components\Textarea;
-use Modules\Notify\Models\MailTemplate;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\RichEditor;
-use Filament\Schemas\Components\Utilities\Set;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Group;
+use Filament\Schemas\Components\View;
 use Modules\Lang\Filament\Resources\LangBaseResource;
 use Modules\Notify\Filament\Forms\Components\HtmlLayoutPathSelect;
+use Modules\Notify\Models\MailTemplate;
+use Override;
 
 class MailTemplateResource extends LangBaseResource
 {
@@ -34,16 +32,16 @@ class MailTemplateResource extends LangBaseResource
         return [
             'mailable_slug_group' => Group::make()
                 ->schema([
-            'mailable' => TextInput::make('mailable')
-                    ->default('Modules\Notify\Emails\SpatieEmail')
-                    ->required()
-                    ->readonly()
-                    ->maxLength(255),
-            'slug' => TextInput::make('slug')
-                    ->required()
-                    ->unique(ignoreRecord: true),
-            ])
-            ->columns(2),
+                    'mailable' => TextInput::make('mailable')
+                        ->default('Modules\Notify\Emails\SpatieEmail')
+                        ->required()
+                        ->readonly()
+                        ->maxLength(255),
+                    'slug' => TextInput::make('slug')
+                        ->required()
+                        ->unique(ignoreRecord: true),
+                ])
+                ->columns(2),
             /*
             'name_slug_group' => Group::make()
                 ->schema([
@@ -65,8 +63,7 @@ class MailTemplateResource extends LangBaseResource
                 ->required()
                 ->maxLength(255),
             'html_layout_path' => HtmlLayoutPathSelect::make('html_layout_path')
-                ->required()
-                ,
+                ->required(),
             'html_template' => RichEditor::make('html_template')
                 ->required()
                 ->columnSpanFull(),

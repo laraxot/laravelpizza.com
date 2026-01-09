@@ -50,6 +50,16 @@ class MailTemplateLog extends BaseModel
         'clicked_at',
     ];
 
+    public function template(): BelongsTo
+    {
+        return $this->belongsTo(MailTemplate::class, 'template_id');
+    }
+
+    public function mailable(): MorphTo
+    {
+        return $this->morphTo();
+    }
+
     /**
      * Get the attributes that should be cast.
      *
@@ -67,15 +77,5 @@ class MailTemplateLog extends BaseModel
             'opened_at' => 'datetime',
             'clicked_at' => 'datetime',
         ];
-    }
-
-    public function template(): BelongsTo
-    {
-        return $this->belongsTo(MailTemplate::class, 'template_id');
-    }
-
-    public function mailable(): MorphTo
-    {
-        return $this->morphTo();
     }
 }

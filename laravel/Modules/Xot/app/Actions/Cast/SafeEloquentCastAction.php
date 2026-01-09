@@ -32,6 +32,7 @@ class SafeEloquentCastAction
      *
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
+     *
      * @return bool True se l'attributo esiste
      */
     public function hasAttribute(Model $model, string $attribute): bool
@@ -47,6 +48,7 @@ class SafeEloquentCastAction
      *
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
+     *
      * @return bool True se l'attributo esiste e ha un valore non vuoto
      */
     public function hasNonEmptyAttribute(Model $model, string $attribute): bool
@@ -64,6 +66,7 @@ class SafeEloquentCastAction
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
      * @param  string|null  $default  Valore di default se l'attributo non esiste o è null
+     *
      * @return string Il valore dell'attributo convertito in string
      */
     public function getStringAttribute(Model $model, string $attribute, ?string $default = ''): string
@@ -85,6 +88,7 @@ class SafeEloquentCastAction
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
      * @param  int|null  $default  Valore di default se l'attributo non esiste o è null
+     *
      * @return int Il valore dell'attributo convertito in int
      */
     public function getIntAttribute(Model $model, string $attribute, ?int $default = 0): int
@@ -106,6 +110,7 @@ class SafeEloquentCastAction
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
      * @param  float|null  $default  Valore di default se l'attributo non esiste o è null
+     *
      * @return float Il valore dell'attributo convertito in float
      */
     public function getFloatAttribute(Model $model, string $attribute, ?float $default = 0.0): float
@@ -127,6 +132,7 @@ class SafeEloquentCastAction
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
      * @param  bool|null  $default  Valore di default se l'attributo non esiste o è null
+     *
      * @return bool Il valore dell'attributo convertito in boolean
      */
     public function getBooleanAttribute(Model $model, string $attribute, ?bool $default = false): bool
@@ -148,6 +154,7 @@ class SafeEloquentCastAction
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
      * @param  array|null  $default  Valore di default se l'attributo non esiste o è null
+     *
      * @return array Il valore dell'attributo convertito in array
      */
     public function getArrayAttribute(Model $model, string $attribute, ?array $default = []): array
@@ -170,6 +177,7 @@ class SafeEloquentCastAction
      * @param  string  $attribute  Il nome dell'attributo
      * @param  string  $type  Il tipo di cast desiderato (string, int, float, bool, array)
      * @param  mixed  $default  Valore di default se l'attributo non esiste o è null
+     *
      * @return mixed Il valore dell'attributo convertito nel tipo specificato
      */
     public function getTypedAttribute(Model $model, string $attribute, string $type, mixed $default = null): mixed
@@ -193,6 +201,7 @@ class SafeEloquentCastAction
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
      * @param  mixed  $expectedValue  Il valore atteso
+     *
      * @return bool True se l'attributo esiste e ha il valore atteso
      */
     public function hasAttributeValue(Model $model, string $attribute, mixed $expectedValue): bool
@@ -212,6 +221,7 @@ class SafeEloquentCastAction
      * @param  string  $type  Il tipo di cast desiderato
      * @param  callable|null  $validator  Funzione di validazione opzionale
      * @param  mixed  $default  Valore di default se la validazione fallisce
+     *
      * @return mixed Il valore dell'attributo validato e convertito
      */
     public function getValidatedAttribute(
@@ -239,6 +249,7 @@ class SafeEloquentCastAction
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
      * @param  callable  $condition  La condizione da verificare
+     *
      * @return bool True se l'attributo esiste e soddisfa la condizione
      */
     public function hasAttributeCondition(Model $model, string $attribute, callable $condition): bool
@@ -262,6 +273,7 @@ class SafeEloquentCastAction
      * @param  string  $fallbackAttribute  L'attributo di fallback
      * @param  string  $type  Il tipo di cast desiderato
      * @param  mixed  $default  Valore di default se entrambi gli attributi sono null
+     *
      * @return mixed Il valore dell'attributo primario o di fallback
      */
     public function getAttributeWithFallback(
@@ -291,6 +303,7 @@ class SafeEloquentCastAction
      * @param  string  $attribute  Il nome dell'attributo
      * @param  string  $type  Il tipo di cast desiderato
      * @param  mixed  $default  Valore di default
+     *
      * @return mixed Il valore dell'attributo convertito
      */
     public static function get(Model $model, string $attribute, string $type, mixed $default = null): mixed
@@ -303,6 +316,7 @@ class SafeEloquentCastAction
      *
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
+     *
      * @return bool True se l'attributo esiste
      */
     public static function has(Model $model, string $attribute): bool

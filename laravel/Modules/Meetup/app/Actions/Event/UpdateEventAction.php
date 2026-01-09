@@ -21,7 +21,7 @@ class UpdateEventAction
         $userId = Auth::id();
 
         /** @var Event $event */
-        $event = DB::transaction(function () use ($event, $data, $userId) {
+        return DB::transaction(function () use ($event, $data, $userId) {
             $event->fill($data);
             if ($userId !== null) {
                 $event->updated_by = (string) $userId;
@@ -30,7 +30,5 @@ class UpdateEventAction
 
             return $event;
         });
-
-        return $event;
     }
 }

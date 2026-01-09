@@ -21,6 +21,7 @@ class RouteService
      * Verifica se l'utente è in modalità amministrazione.
      *
      * @param  array<string,string>  $params  Parametri aggiuntivi
+     *
      * @return bool True se l'utente è in modalità amministrazione, false altrimenti
      */
     public static function inAdmin(array $params = []): bool

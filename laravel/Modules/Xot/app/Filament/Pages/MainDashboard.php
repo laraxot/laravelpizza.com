@@ -4,14 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Pages;
 
-use Nwidart\Modules\Laravel\Module;
 use Filament\Panel;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Webmozart\Assert\Assert;
-use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Database\Eloquent\Collection;
+use Nwidart\Modules\Laravel\Module;
+use Webmozart\Assert\Assert;
 
 /**
  * Class Modules\Xot\Filament\Pages\MainDashboard.

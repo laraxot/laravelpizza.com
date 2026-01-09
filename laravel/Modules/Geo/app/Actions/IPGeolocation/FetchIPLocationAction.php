@@ -7,7 +7,6 @@ namespace Modules\Geo\Actions\IPGeolocation;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Modules\Geo\Datas\IPLocationData;
-
 use function Safe\json_decode;
 
 /**
@@ -68,7 +67,7 @@ class FetchIPLocationAction
          */
         $data = json_decode($response->getBody()->getContents(), true);
 
-        if ('success' !== $data['status']) {
+        if ($data['status'] !== 'success') {
             throw new \RuntimeException('Failed to get IP location: '.($data['message'] ?? 'Unknown error'));
         }
 

@@ -15,7 +15,6 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Crypt;
 use Modules\Gdpr\Database\Factories\EventFactory;
 use Modules\Xot\Contracts\ProfileContract;
-
 use function Safe\json_encode;
 
 /**
@@ -34,6 +33,7 @@ use function Safe\json_encode;
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @property-read Consent|null $consent
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater

@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
-use Override;
 
 /**
  * Provides a widget for user logout functionality within Filament admin panels.
@@ -108,7 +107,7 @@ class LogoutWidget extends XotBaseWidget
 
             // Get the authenticated user before logging out
             $user = $this->getAuthenticatedUser();
-            if (null === $user) {
+            if ($user === null) {
                 $this->handleNoUserScenario();
 
                 return;

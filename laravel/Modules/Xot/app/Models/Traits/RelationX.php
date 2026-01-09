@@ -78,6 +78,7 @@ trait RelationX
      * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
      *
      * @param  class-string<TRelatedModel>  $related
+     *
      * @return MorphToMany<TRelatedModel, $this>
      */
     public function morphToManyX(

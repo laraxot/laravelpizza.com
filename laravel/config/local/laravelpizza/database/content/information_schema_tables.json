@@ -318,5 +318,16 @@
         "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
         "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
         "table_rows": 0
+    },
+    {
+        "table_schema": "laravelpizza_data",
+        "model_class": "Modules\\Meetup\\Models\\Event",
+        "table_name": "events",
+        "id": 31,
+        "updated_at": "2026-01-09T11:34:37.000000Z",
+        "created_at": "2026-01-09T11:34:37.000000Z",
+        "updated_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "created_by": "019b9f4e-5736-7332-9675-fc9770ce4fad",
+        "table_rows": 0
     }
 ]

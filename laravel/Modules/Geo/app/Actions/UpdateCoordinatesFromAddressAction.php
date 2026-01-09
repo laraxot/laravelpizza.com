@@ -70,7 +70,7 @@ class UpdateCoordinatesFromAddressAction
         // Esegui geocoding per ottenere i dati dell'indirizzo
         $addressData = $this->getAddressDataAction->execute($fullAddress);
 
-        if (null === $addressData) {
+        if ($addressData === null) {
             // Raccogli errori dal servizio di geocoding
             $geocodingErrors = $this->getAddressDataAction->getErrors();
             if ($geocodingErrors->isNotEmpty()) {
@@ -84,6 +84,16 @@ class UpdateCoordinatesFromAddressAction
 
         // Aggiorna il modello con le coordinate ottenute
         return $this->updateModelCoordinates($model, $addressData);
+    }
+
+    /**
+     * Restituisce la collezione degli errori verificatisi durante l'esecuzione.
+     *
+     * @return Collection<int, string>
+     */
+    public function getErrors(): Collection
+    {
+        return $this->errors;
     }
 
     /**
@@ -138,15 +148,5 @@ class UpdateCoordinatesFromAddressAction
 
             return false;
         }
-    }
-
-    /**
-     * Restituisce la collezione degli errori verificatisi durante l'esecuzione.
-     *
-     * @return Collection<int, string>
-     */
-    public function getErrors(): Collection
-    {
-        return $this->errors;
     }
 }

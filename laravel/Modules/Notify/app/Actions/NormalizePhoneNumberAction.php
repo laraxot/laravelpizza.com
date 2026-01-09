@@ -5,9 +5,8 @@ declare(strict_types=1);
 namespace Modules\Notify\Actions;
 
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
-use Spatie\QueueableAction\QueueableAction;
-
 use function Safe\preg_replace;
+use Spatie\QueueableAction\QueueableAction;
 
 class NormalizePhoneNumberAction
 {
@@ -17,6 +16,7 @@ class NormalizePhoneNumberAction
      * Normalizes a phone number to a consistent format (e.g., E.164).
      *
      * @param string|null $phoneNumber The phone number to normalize.
+     *
      * @return string Normalized phone number, or empty string if invalid/null.
      */
     public function execute(?string $phoneNumber): string
@@ -27,9 +27,9 @@ class NormalizePhoneNumberAction
 
         // Remove any non-digit characters
         $normalized = preg_replace('/[^0-9+]/', '', $phoneNumber);
-        
+
         // Ensure normalized is a string after preg_replace
-        if (!is_string($normalized)) {
+        if (! is_string($normalized)) {
             return '';
         }
 

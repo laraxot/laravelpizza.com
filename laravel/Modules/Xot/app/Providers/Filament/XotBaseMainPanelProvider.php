@@ -20,7 +20,6 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Modules\User\Filament\Pages\MyProfilePage;
 use Modules\Xot\Actions\Filament\GetModulesNavigationItems;
 use Modules\Xot\Actions\Panel\ApplyMetatagToPanelAction;
-use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Filament\Pages\MainDashboard;
 
 abstract class XotBaseMainPanelProvider extends PanelProvider
@@ -29,7 +28,6 @@ abstract class XotBaseMainPanelProvider extends PanelProvider
 
     public function panel(Panel $panel): Panel
     {
-
         $panel->id('admin')
             ->path('admin');
 

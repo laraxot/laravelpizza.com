@@ -24,18 +24,6 @@ use Webmozart\Assert\Assert;
  */
 trait HasAddress
 {
-    /**
-     * Initialize the trait.
-     *
-     * @return void
-     */
-    protected function initializeHasAddress()
-    {
-        // Automatically create a random token
-        /** @var array<int, string> $fields */
-        $fields = Arr::map(AddressItemEnum::cases(), fn (AddressItemEnum $item): string => $item->value);
-        $this->mergeFillable($fields);
-    }
 
     /**
      * Ottiene gli indirizzi associati al modello.
@@ -59,7 +47,7 @@ trait HasAddress
     public function primaryAddress(): ?Address
     {
         $res = $this->addresses()->where('is_primary', true)->first();
-        if (null === $res) {
+        if ($res === null) {
             return $res;
         }
         Assert::isInstanceOf($res, Address::class);
@@ -79,7 +67,7 @@ trait HasAddress
 
     public function getFullAddressAttribute(?string $value): string
     {
-        if (null !== $value) {
+        if ($value !== null) {
             return $value;
         }
         $address = sprintf(
@@ -100,13 +88,13 @@ trait HasAddress
             return $value;
         }
         $address = $this->address()->first();
-        if (null === $address) {
+        if ($address === null) {
             return null;
         }
         Assert::isInstanceOf($address, Address::class);
 
         $locality = $address->getLocality();
-        if (null === $locality) {
+        if ($locality === null) {
             return null;
         }
 
@@ -216,7 +204,7 @@ trait HasAddress
     public function addAddress(array $data, bool $setPrimary = false): Address
     {
         // Se è il primo indirizzo o è richiesto esplicitamente, impostalo come principale
-        if ($setPrimary || 0 === $this->addresses()->count()) {
+        if ($setPrimary || $this->addresses()->count() === 0) {
             $data['is_primary'] = true;
 
             // Rimuovi il flag is_primary da tutti gli altri indirizzi
@@ -285,5 +273,17 @@ trait HasAddress
         return $query->whereHas('addresses', function ($q) use ($postalCode): void {
             $q->where('postal_code', $postalCode);
         });
+    }
+    /**
+     * Initialize the trait.
+     *
+     * @return void
+     */
+    protected function initializeHasAddress()
+    {
+        // Automatically create a random token
+        /** @var array<int, string> $fields */
+        $fields = Arr::map(AddressItemEnum::cases(), fn (AddressItemEnum $item): string => $item->value);
+        $this->mergeFillable($fields);
     }
 }

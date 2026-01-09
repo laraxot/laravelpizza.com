@@ -18,7 +18,7 @@ class PageContent
         /** @var DataCollection<int, ComponentFileData> $blocks */
         $blocks = app(GetAllBlocksAction::class)->execute();
 
-        /** @var list<Block> $blockList */ $blockList = [];
+/** @var list<Block> $blockList */ $blockList = [];
 
         foreach ($blocks as $block) {
             Assert::isInstanceOf($block, ComponentFileData::class, '['.__LINE__.']['.__FILE__.']');
@@ -32,7 +32,7 @@ class PageContent
             $blockList[] = $blockInstance;
         }
 
-        /* @var list<Block> $blockList */
+        /** @var list<Block> $blockList */
         return Builder::make($name)
             ->blocks($blockList)
             ->collapsible();

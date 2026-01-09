@@ -20,6 +20,7 @@ final class TelegramActionFactory
      * Crea un'azione Telegram basata sul driver specificato o su quello predefinito.
      *
      * @param  string|null  $driver  Driver Telegram da utilizzare (se null, viene utilizzato quello predefinito)
+     *
      * @return TelegramProviderActionInterface Azione Telegram corrispondente al driver
      *
      * @throws Exception Se il driver specificato non è supportato
@@ -29,6 +30,7 @@ final class TelegramActionFactory
      * Utilizza una formula per calcolare il nome della classe dell'azione.
      *
      * @param  string|null  $driver  Driver Telegram da utilizzare (se null, viene utilizzato quello predefinito)
+     *
      * @return TelegramProviderActionInterface Azione Telegram corrispondente al driver
      *
      * @throws Exception Se il driver specificato non è supportato o la classe non esiste
@@ -58,8 +60,6 @@ final class TelegramActionFactory
         }
 
         /** @var TelegramProviderActionInterface $instance */
-        $instance = app($className);
-
-        return $instance;
+        return app($className);
     }
 }

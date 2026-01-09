@@ -18,4 +18,3 @@ class XotBaseViewField extends ViewField
 {
     // Logica comune futura per i componenti ViewField Xot
 }
-

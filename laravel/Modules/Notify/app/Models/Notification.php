@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Notify\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Modules\Notify\Database\Factories\NotificationFactory;
 use Modules\Xot\Contracts\ProfileContract;
@@ -34,6 +33,7 @@ use Override;
  * @property array<string>|string|null $channels
  * @property string|null $status
  * @property Carbon|null $sent_at
+ *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  *

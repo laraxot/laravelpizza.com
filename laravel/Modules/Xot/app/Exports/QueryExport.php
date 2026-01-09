@@ -154,17 +154,17 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
         }
 
         if ($row instanceof Arrayable) {
-            /* @var array<int|string, mixed> */
+            /** @var array<int|string, mixed> */
             return $row->toArray();
         }
 
         if (\is_array($row)) {
-            /* @var array<int|string, mixed> */
+            /** @var array<int|string, mixed> */
             return $row;
         }
 
         if ($row instanceof Traversable) {
-            /* @var array<int|string, mixed> */
+            /** @var array<int|string, mixed> */
             return iterator_to_array($row);
         }
 

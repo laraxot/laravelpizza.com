@@ -229,6 +229,7 @@ interface HasRecursiveRelationshipsContract
      * Create a new Eloquent query builder for the model.
      *
      * @param  \Illuminate\Database\Query\Builder  $query
+     *
      * @return AdjacencyBuilder
      */
     public function newEloquentBuilder($query);
@@ -237,6 +238,7 @@ interface HasRecursiveRelationshipsContract
      * Create a new Eloquent Collection instance.
      *
      * @param  list<static>  $models
+     *
      * @return Collection
      */
     public function newCollection(array $models = []);

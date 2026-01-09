@@ -18,7 +18,7 @@ class SelectStateColumn extends SelectColumn
         //  $this->selectablePlaceholder(false);
         $this->options(function (Model&HasStatesContract $record, mixed $state): array {
             $name = $this->getName();
-            if (null === $state) {
+            if ($state === null) {
                 // Record implements HasStatesContract which provides getDefaultStateFor()
                 $defaultStates = $record->getDefaultStateFor($name);
                 $states = Arr::wrap($defaultStates);
@@ -28,9 +28,7 @@ class SelectStateColumn extends SelectColumn
                 $statesKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($states));
                 $combined = array_combine($statesKeys, $statesValues);
                 /** @var array<int|string, int|string> $result */
-                $result = $combined ?: [];
-
-                return $result;
+                return $combined ? $combined : [];
             }
 
             $states = [];
@@ -63,7 +61,7 @@ class SelectStateColumn extends SelectColumn
                     } catch (\ReflectionException) {
                         // Property non esiste, $stateNameProperty rimane null
                     }
-                    if (null !== $stateNameProperty) {
+                    if ($stateNameProperty !== null) {
                         $statesValues = array_values($states);
                         /** @var list<int|string> $statesValuesTyped */
                         $statesValuesTyped = $statesValues;
@@ -83,7 +81,7 @@ class SelectStateColumn extends SelectColumn
             $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($statesFiltered));
             $combined = array_combine($statesKeys, $statesValues);
             /** @var array<int|string, int|string> $combinedTyped */
-            $combinedTyped = $combined ?: [];
+            $combinedTyped = $combined ? $combined : [];
 
             /** @var array<int|string> $statesKeys */
             $statesKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($statesFiltered));
@@ -91,9 +89,7 @@ class SelectStateColumn extends SelectColumn
             $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($statesFiltered));
             $combined = array_combine($statesKeys, $statesValues);
             /** @var array<int|string, int|string> $combinedTyped */
-            $combinedTyped = $combined ?: [];
-
-            return $combinedTyped;
+            return $combined ? $combined : [];
         });
 
         $this->beforeStateUpdated(function (Model&HasStatesContract $record, mixed $stateRaw): void {

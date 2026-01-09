@@ -10,13 +10,18 @@ use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
 use Modules\Notify\Contracts\WhatsAppProviderActionInterface;
 use Modules\Notify\Datas\WhatsAppData;
-use Spatie\QueueableAction\QueueableAction;
-
 use function Safe\json_decode;
+use Spatie\QueueableAction\QueueableAction;
 
 final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
 {
     use QueueableAction;
+
+    protected bool $debug;
+
+    protected int $timeout;
+
+    protected ?string $defaultSender = null;
 
     private string $accountSid;
 
@@ -26,12 +31,6 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
 
     /** @var array<string, mixed> */
     private array $vars = [];
-
-    protected bool $debug;
-
-    protected int $timeout;
-
-    protected ?string $defaultSender = null;
 
     /**
      * Create a new action instance.
@@ -65,6 +64,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
      * Execute the action.
      *
      * @param  WhatsAppData  $whatsAppData  I dati del messaggio WhatsApp
+     *
      * @return array Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio

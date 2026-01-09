@@ -95,21 +95,6 @@ class SsoProvider extends BaseModel
     ];
 
     /**
-     * The attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'settings' => 'array',
-            'domain_whitelist' => 'array',
-            'role_mapping' => 'array',
-            'is_active' => 'boolean',
-        ];
-    }
-
-    /**
      * Get all users associated with this SSO provider.
      */
     public function users(): HasMany
@@ -127,7 +112,7 @@ class SsoProvider extends BaseModel
         }
 
         $atPos = strrchr($email, '@');
-        if (false === $atPos) {
+        if ($atPos === false) {
             return false;
         }
 
@@ -155,5 +140,20 @@ class SsoProvider extends BaseModel
         }
 
         return $roles;
+    }
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'settings' => 'array',
+            'domain_whitelist' => 'array',
+            'role_mapping' => 'array',
+            'is_active' => 'boolean',
+        ];
     }
 }

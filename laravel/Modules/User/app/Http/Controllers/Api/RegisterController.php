@@ -59,7 +59,7 @@ class RegisterController extends XotBaseController
         /** @var UserContract */
         $user = $user_class::create($input);
         $success['token'] = $user->createToken('MyApp')->accessToken;
-        $success['name'] = isset($user->name) ? $user->name : '';
+        $success['name'] = $user->name ?? '';
 
         return $this->sendResponse('User register successfully.', $success);
     }

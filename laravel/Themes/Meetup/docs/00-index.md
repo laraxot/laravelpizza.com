@@ -5,6 +5,7 @@
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup theme
 - [Project Purpose](project-purpose.md) - Why this theme exists
 - [Project Philosophy](project-philosophy.md) - Core philosophy of the theme
+- [Dashboard Integration](dashboard-integration.md) - Integration between Meetup dashboard and theme
 - [Theme Development Rules](theme-development-rules.md) - Development guidelines
 - [Architecture Folio Volt Filament](architecture-folio-volt-filament.md) - Architecture patterns
 

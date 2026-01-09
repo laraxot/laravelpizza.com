@@ -27,6 +27,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $user_id
  * @property string|null $type
  * @property string|null $accepted_at
+ *
  * @property-read ProfileContract|null $creator
  * @property-read Treatment|null $treatment
  * @property-read ProfileContract|null $updater

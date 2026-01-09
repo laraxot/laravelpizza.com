@@ -70,6 +70,7 @@ class GetTenantNameAction
      * Ottiene il nome del server con fallback al default.
      *
      * @param  string  $default  Il valore di default da usare
+     *
      * @return string Il nome del server
      */
     private function getServerName(string $default): string
@@ -89,6 +90,7 @@ class GetTenantNameAction
      * Costruisce il percorso di configurazione.
      *
      * @param  Collection<int, string>  $parts  Le parti del percorso
+     *
      * @return string Il percorso completo
      */
     private function buildConfigPath(Collection $parts): string

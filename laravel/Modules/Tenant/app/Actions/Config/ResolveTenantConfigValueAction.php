@@ -22,6 +22,7 @@ class ResolveTenantConfigValueAction
      *
      * @param  string  $key  Config key (e.g., 'app.name', 'mail.driver')
      * @param  string|int|array<mixed>|null  $_default  Default value if config not found
+     *
      * @return float|int|string|array<mixed>|null Resolved configuration value
      *
      * @throws Exception If config key is invalid or value type is unexpected

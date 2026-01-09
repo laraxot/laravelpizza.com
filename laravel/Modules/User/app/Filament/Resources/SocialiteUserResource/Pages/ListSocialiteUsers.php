@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Resources\SocialiteUserResource\Pages;
 
 use Filament\Actions\Action;
-use Filament\Actions\CreateAction;
 use Modules\User\Filament\Resources\SocialiteUserResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 

@@ -16,7 +16,8 @@ class NetfunSmsResponseData extends Data
         public ?string $batchId = null,
         public ?array $messages = null,
         public ?string $error = null,
-    ) {}
+    ) {
+    }
 
     /**
      * @param  array{status: string, batchId?: string, messages?: array<int, array<string, mixed>>, error?: string}  $data

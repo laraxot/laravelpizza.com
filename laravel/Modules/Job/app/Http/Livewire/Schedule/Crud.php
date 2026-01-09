@@ -32,7 +32,7 @@ class Crud extends Component
             return $res;
         }
 
-        throw new Exception('[' . __LINE__ . '][' . class_basename(__CLASS__) . ']');
+        throw new Exception('[' . __LINE__ . '][' . class_basename(self::class) . ']');
     }
 
     public function render(): Renderable

@@ -40,7 +40,7 @@ readonly class OptimizeRouteAction
             $currentLocation = $optimizedLocations->last();
             $nearestLocation = $this->findNearestLocation($currentLocation, $remainingLocations);
 
-            if (null === $nearestLocation) {
+            if ($nearestLocation === null) {
                 break;
             }
 

@@ -4,29 +4,28 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Notifications;
 
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Str;
 use Modules\Notify\Channels\SmsChannel;
 use Modules\Notify\Datas\SmsData;
 use Modules\Notify\Emails\SpatieEmail;
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 class RecordNotification extends Notification implements ShouldQueue
 {
-
     use Queueable;
-
-    protected Model $record;
-
-    protected string $slug;
 
     /** @var array<string, mixed> */
     public array $data = [];
 
     /** @var array<int, array<string, string>> */
     public array $attachments = [];
+
+    protected Model $record;
+
+    protected string $slug;
 
     public function __construct(Model $record, string $slug)
     {
@@ -41,6 +40,7 @@ class RecordNotification extends Notification implements ShouldQueue
      * Uses `routeNotificationFor()` method to check if the notifiable supports each channel.
      *
      * @param object $notifiable The entity to be notified
+     *
      * @return array<string|class-string>
      */
     public function via(object $notifiable): array
@@ -67,6 +67,7 @@ class RecordNotification extends Notification implements ShouldQueue
      * SpatieEmail handles all template resolution, placeholder replacement, and layout logic.
      *
      * @param object $notifiable The entity to be notified
+     *
      * @return SpatieEmail Configured SpatieEmail instance ready to send
      */
     public function toMail(object $notifiable): SpatieEmail
@@ -123,15 +124,14 @@ class RecordNotification extends Notification implements ShouldQueue
             'recipient' => $to,
             'body' => $smsBody,
         ];
-        $smsData = SmsData::from($smsDataArray);
-
-        return $smsData;
+        return SmsData::from($smsDataArray);
     }
 
     /**
      * Merge additional data with record attributes for placeholder replacement.
      *
      * @param array<string, mixed> $data Additional data to merge
+     *
      * @return $this
      */
     public function mergeData(array $data): self
@@ -145,6 +145,7 @@ class RecordNotification extends Notification implements ShouldQueue
      * Add attachments to the notification.
      *
      * @param array<int, array<string, string>> $attachments Array of attachment data
+     *
      * @return $this
      */
     public function addAttachments(array $attachments): self
