@@ -31,34 +31,35 @@ abstract class GeoJsonModel
     /**
      * Filtra la collection per chiave/valore.
      *
-     * @param string $key
      * @param string|int|bool|null $value
+     *
      * @return Collection<int, array<string, mixed>>
      */
     public static function where(string $key, $value): Collection
     {
         /** @var Collection<int, array<string, mixed>> $all */
         $all = static::all();
-        
+
         return $all->where($key, $value);
     }
 
     /**
      * Carica e cache-izza i dati dal file json.
-     * 
+     *
      * @return Collection<int, array<string, mixed>>
      */
     protected static function loadData(): Collection
     {
         $path = module_path('Geo', static::$jsonFile);
         $cacheKey = 'geo_comuni_json_'.md5($path);
-        
+
         /** @var array<int, array<string, mixed>>|mixed $data */
         $data = cache()->rememberForever($cacheKey, fn () => json_decode(file_get_contents($path), true));
 
         if (! is_array($data)) {
             /** @var Collection<int, array<string, mixed>> $emptyResult */
             $emptyResult = collect();
+
             return $emptyResult;
         }
 

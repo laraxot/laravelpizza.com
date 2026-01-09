@@ -30,7 +30,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class UserResource extends XotBaseResource
 {
-
     public static function getWidgets(): array
     {
         return [

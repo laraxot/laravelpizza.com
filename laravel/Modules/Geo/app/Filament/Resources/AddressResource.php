@@ -33,8 +33,6 @@ class AddressResource extends XotBaseResource
 
     // ✅ CORRETTO - NIENTE navigationGroup - La gestione è centralizzata in XotBaseResource
 
-
-
     /**
      * @return array<string, Component>
      */

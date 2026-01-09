@@ -27,11 +27,7 @@ class LocationResource extends XotBaseResource
 {
     protected static ?string $model = Location::class;
 
-
-
     // ✅ CORRETTO - NIENTE navigationGroup - La gestione è centralizzata in XotBaseResource
-
-
 
     /**
      * @return array<string, Component>
