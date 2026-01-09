@@ -87,7 +87,8 @@ class GeoDataValidator
 
         $errors = $validator->errors()->toArray();
         Assert::isArray($errors);
-        /** @var array<string, array<int, string>> $errors */
+
+        /* @var array<string, array<int, string>> $errors */
         return $errors;
     }
 

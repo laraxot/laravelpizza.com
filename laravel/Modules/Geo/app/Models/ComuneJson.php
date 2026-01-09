@@ -93,7 +93,8 @@ class ComuneJson extends GeoJsonModel
                 ->sortBy('nome')
                 ->values();
         });
-        /** @var Collection<int, array{
+
+        /* @var Collection<int, array{
          *     nome: string,
          *     codice: string,
          *     regione: array{codice: string, nome: string},
@@ -137,7 +138,8 @@ class ComuneJson extends GeoJsonModel
                 ->sortBy('nome')
                 ->values();
         });
-        /** @var Collection<int, array{
+
+        /* @var Collection<int, array{
          *     nome: string,
          *     codice: string,
          *     regione: array{codice: string, nome: string},
@@ -178,7 +180,8 @@ class ComuneJson extends GeoJsonModel
 
             return $limit > 0 ? $results->take($limit)->values() : $results->values();
         });
-        /** @var Collection<int, array{
+
+        /* @var Collection<int, array{
          *     nome: string,
          *     codice: string,
          *     regione: array{codice: string, nome: string},
@@ -414,9 +417,11 @@ class ComuneJson extends GeoJsonModel
                 ],
                 'cap' => $comune['cap'] ?? [],
             ];
+
             return $result;
         });
-        /** @var array{
+
+        /* @var array{
          *     regione: array{codice: string, nome: string}|null,
          *     provincia: array{codice: string, nome: string}|null,
          *     comune: array{

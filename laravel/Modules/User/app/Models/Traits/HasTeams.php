@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Collection;
 use Modules\User\Contracts\TeamContract;
-use Modules\User\Models\BaseUser;
 use Modules\User\Models\Membership;
 use Modules\User\Models\Role;
 use Modules\User\Models\User;
@@ -321,7 +320,8 @@ trait HasTeams
                 $permissions[] = $value;
             }
         }
-        /** @var array<int, string> $permissions */
+
+        /* @var array<int, string> $permissions */
         return $permissions;
     }
 

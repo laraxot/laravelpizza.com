@@ -106,8 +106,7 @@
             
         },
         "psr-4_comment": {
-            "Modules\\Xot\\Tests\\": "tests/",
-            "Modules\\Xot\\Database\\Migrations\\": "database/migrations/"
+            "Modules\\Xot\\Tests\\": "tests/"
         },
         "files": [
             "Helpers/Helper.php"

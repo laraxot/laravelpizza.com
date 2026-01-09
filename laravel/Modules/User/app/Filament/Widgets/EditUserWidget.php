@@ -169,6 +169,7 @@ class EditUserWidget extends XotBaseWidget
         if ($userId) {
             $user = $this->model::findOrFail($userId);
             Assert::isInstanceOf($user, Model::class);
+
             return $user;
         }
 
@@ -176,6 +177,7 @@ class EditUserWidget extends XotBaseWidget
         $currentUser = Auth::user();
         if ($currentUser && \is_string($this->model) && $currentUser instanceof $this->model) {
             Assert::isInstanceOf($currentUser, Model::class);
+
             return $currentUser;
         }
 
@@ -195,6 +197,7 @@ class EditUserWidget extends XotBaseWidget
         // Ultimo fallback: nuovo modello
         $user = app($this->model);
         Assert::isInstanceOf($user, Model::class);
+
         return $user;
     }
 }

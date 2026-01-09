@@ -50,7 +50,16 @@ abstract class TestCase extends BaseTestCase
      */
     protected function configureTestConnections(): void
     {
-        // Configure the module-specific connection
+        // Set default connection to xot to match the models
+        $this->app['config']->set('database.default', 'xot');
+        
+        // Configure the module-specific connections
+        $this->app['config']->set('database.connections.xot', [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => '',
+        ]);
+        
         $this->app['config']->set('database.connections.job', [
             'driver' => 'sqlite',
             'database' => ':memory:',
@@ -101,9 +110,15 @@ abstract class TestCase extends BaseTestCase
             '--path' => database_path('migrations'),
         ]);
         
-        // Run the module migrations
+        // Run the xot tables migrations on the xot connection
         $this->artisan('migrate', [
-            '--database' => 'job',
+            '--database' => 'xot',
+            '--path' => database_path('migrations'),
+        ]);
+        
+        // Run the module migrations on xot connection (where Task and Result tables should be)
+        $this->artisan('migrate', [
+            '--database' => 'xot',
             '--path' => 'Modules/Job/database/migrations'
         ]);
         
@@ -118,6 +133,46 @@ abstract class TestCase extends BaseTestCase
                 $table->unsignedInteger('available_at');
                 $table->unsignedInteger('created_at');
                 $table->index(['queue', 'reserved_at']);
+            });
+        }
+        
+        // Create the tasks and results tables if they don't exist
+        if (!Schema::connection('xot')->hasTable('tasks')) {
+            Schema::connection('xot')->create('tasks', function (Blueprint $table) {
+                $table->uuid('id')->primary();
+                $table->string('description');
+                $table->string('command');
+                $table->text('parameters')->nullable();
+                $table->string('expression')->nullable();
+                $table->string('timezone');
+                $table->boolean('is_active')->default(false);
+                $table->boolean('dont_overlap')->default(false);
+                $table->boolean('run_in_maintenance')->default(false);
+                $table->string('notification_email_address')->nullable();
+                $table->string('notification_phone_number')->nullable();
+                $table->string('notification_slack_webhook'); // Not nullable as per the error
+                $table->integer('auto_cleanup_num')->default(0);
+                $table->string('auto_cleanup_type')->nullable();
+                $table->boolean('run_on_one_server')->default(false);
+                $table->boolean('run_in_background')->default(false);
+                $table->timestamps();
+                $table->string('created_by')->nullable();
+                $table->string('updated_by')->nullable();
+            });
+        }
+        
+        if (!Schema::connection('xot')->hasTable('results')) {
+            Schema::connection('xot')->create('results', function (Blueprint $table) {
+                $table->uuid('id')->primary();
+                $table->uuid('task_id');
+                $table->timestamp('ran_at');
+                $table->string('duration');
+                $table->string('result');
+                $table->timestamps();
+                $table->string('created_by')->nullable();
+                $table->string('updated_by')->nullable();
+                
+                $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
             });
         }
     }

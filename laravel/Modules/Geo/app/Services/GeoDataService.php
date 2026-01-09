@@ -66,7 +66,8 @@ class GeoDataService
             self::CACHE_TTL,
             fn (): Collection => $this->loadData()->pluck('name', 'code'),
         );
-        /** @var Collection<int, array{name: string, code: string}> $result */
+
+        /* @var Collection<int, array{name: string, code: string}> $result */
         return $result;
     }
 
@@ -113,7 +114,8 @@ class GeoDataService
 
             return $provinceResult;
         });
-        /** @var Collection<int, array{name: string, code: string}> $result */
+
+        /* @var Collection<int, array{name: string, code: string}> $result */
         return $result;
     }
 
@@ -149,7 +151,8 @@ class GeoDataService
 
             return $cityResult;
         });
-        /** @var Collection<int, array{name: string, code: string}> $result */
+
+        /* @var Collection<int, array{name: string, code: string}> $result */
         return $result;
     }
 
@@ -184,7 +187,8 @@ class GeoDataService
 
             return \is_array($city) && isset($city['cap']) && \is_string($city['cap']) ? $city['cap'] : null;
         });
-        /** @var string|null $result */
+
+        /* @var string|null $result */
         return $result;
     }
 
@@ -228,7 +232,8 @@ class GeoDataService
         }
 
         $result = new Collection($data['regions']);
-        /** @var Collection<int, array<string, mixed>> $result */
+
+        /* @var Collection<int, array<string, mixed>> $result */
         return $result;
     }
 }

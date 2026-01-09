@@ -24,6 +24,7 @@ class PageSlugMiddleware
                 // Middleware chain should always return Response, but if not, wrap it
                 return new Response('Internal Server Error', 500);
             }
+
             return $response;
         }
 
@@ -36,6 +37,7 @@ class PageSlugMiddleware
                 // Middleware chain should always return Response, but if not, wrap it
                 return new Response('Internal Server Error', 500);
             }
+
             return $response;
         }
         $this->kernel = app(Kernel::class);
@@ -75,6 +77,7 @@ class PageSlugMiddleware
             if (! $response instanceof Response) {
                 return new Response('Internal Server Error', 500);
             }
+
             return $response;
         }
 
@@ -84,6 +87,7 @@ class PageSlugMiddleware
             if (! $response instanceof Response) {
                 return new Response('Internal Server Error', 500);
             }
+
             return $response;
         }
 
@@ -105,6 +109,7 @@ class PageSlugMiddleware
                 if (! $response instanceof Response) {
                     return $next($request); // Use next if current middleware didn't return Response
                 }
+
                 return $response;
             }
 
@@ -112,6 +117,7 @@ class PageSlugMiddleware
             if (! $response instanceof Response) {
                 return $next($request); // Use next if current middleware didn't return Response
             }
+
             return $response;
         }
 

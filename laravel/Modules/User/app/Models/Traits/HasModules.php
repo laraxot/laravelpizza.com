@@ -35,7 +35,7 @@ trait HasModules
             }
         }
 
-        /** @var array<string, Module> $result */
+        /* @var array<string, Module> $result */
         return $result;
     }
 }
