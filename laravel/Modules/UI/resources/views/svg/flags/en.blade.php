@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 ?>
 <svg xmlns="http://www.w3.org/2000/svg" class="size-5" id="flag-icons-us" viewBox="0 0 640 480">
     <path fill="#bd3d44" d="M0 0h640v480H0"/>

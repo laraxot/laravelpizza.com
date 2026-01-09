@@ -1,0 +1,23 @@
+{
+    "recommendations": [
+        "cjhowe7.laravel-blade",
+        "austenc.laravel-blade-spacer",
+        "shufo.vscode-blade-formatter",
+        "onecentlin.laravel-blade",
+        "ihunte.laravel-blade-wrapper",
+        "robsontenorio.voltage",
+        "amirmarmul.laravel-blade-vscode",
+        "amiralizadeh9480.laravel-extra-intellisense",
+        "codingyu.laravel-goto-view",
+        "damms005.devdb",
+        "mohamedbenhida.laravel-intellisense",
+        "block.vscode-mcp-extension",
+        "aurorabiz.blade-ui-kit",
+        "laravel.vscode-laravel",
+        "porifa.laravel-intelephense",
+        "bmewburn.vscode-intelephense-client",
+        "davidanson.vscode-markdownlint",
+        "tomoki1207.pdf",
+        "mehedidracula.php-namespace-resolver"
+    ]
+}

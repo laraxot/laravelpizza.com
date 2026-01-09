@@ -1,0 +1,41 @@
+{
+	"editor.formatOnType": true,
+	"php-cs-fixer.onsave": true,
+	"php-cs-fixer.formatHtml": true,
+	"php-cs-fixer.config": ".php-cs-fixer.php",
+	"php-cs-fixer.executablePath": "php-cs-fixer",
+	"php-cs-fixer.executablePathWindows": "php-cs-fixer.bat",
+	"vscode-php-cs-fixer.allowRisky": true,
+	"phpmd.enabled": false,
+	"phpmd.validate.rulesets": "cleancode,codesize,controversial,design,naming,unusedcode",
+	"phpmd.SuppressWarnings":true,
+	"phpmd.verbose": false,
+	"php-cs-fixer.allowRisky": true,
+	"editor.defaultFormatter": "junstyle.php-cs-fixer",
+	"[php]": {
+		"editor.defaultFormatter": "junstyle.php-cs-fixer"
+	},
+	"editor.tokenColorCustomizations": {
+		"semanticHighlighting": true
+	},
+	"[blade]": {
+		"editor.defaultFormatter": "shufo.vscode-blade-formatter"
+	},
+	"vscode-php-cs-fixer.toolPath": ".",
+	"vscode-php-cs-fixer.useCache": true,
+	"files.eol": "\n",
+	"git.autofetch": "all",
+	"editor.wordWrapColumn": 120,
+	"[json]": {
+		"editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "octref.vetur"
+	}
+}

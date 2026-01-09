@@ -23,7 +23,7 @@ test('login screen can be rendered', function (): void {
 });
 
 test('users can authenticate using the login screen', function (): void {
-    /** @var class-string<Model> $userClass */
+    /** @var class-string<\Illuminate\Database\Eloquent\Model> $userClass */
     $userClass = XotData::make()->getUserClass();
     $factory = $userClass::factory();
     /*
@@ -35,7 +35,7 @@ test('users can authenticate using the login screen', function (): void {
      *
      * ]);
      */
-    /** @var Authenticatable&Model $user */
+    /** @var \Illuminate\Contracts\Auth\Authenticatable&\Illuminate\Database\Eloquent\Model $user */
     $user = $factory->create();
 
     $response = LivewireVolt::test('auth.login')

@@ -5,14 +5,15 @@ declare(strict_types=1);
 namespace Modules\Cms\Tests\Feature\Auth;
 
 use Livewire\Volt\Volt as LivewireVolt;
+use Modules\Xot\Datas\XotData;
 use Modules\Xot\Tests\TestCase;
 
 use function Pest\Laravel\actingAs;
 
 uses(TestCase::class);
 
-test('password confirmation page can be rendered', function () {
-    $userClass = $this->getUserClass();
+test('confirm password screen can be rendered', function () {
+    $userClass = XotData::make()->getUserClass();
     $user = $userClass::factory()->create();
 
     $lang = app()->getLocale();
@@ -21,8 +22,8 @@ test('password confirmation page can be rendered', function () {
     $response->assertStatus(200);
 });
 
-test('user can confirm password', function () {
-    $userClass = $this->getUserClass();
+test('password can be confirmed', function () {
+    $userClass = XotData::make()->getUserClass();
     $user = $userClass::factory()->create();
 
     actingAs($user);
@@ -32,8 +33,8 @@ test('user can confirm password', function () {
     $response->assertHasNoErrors()->assertRedirect(route('dashboard', absolute: false));
 });
 
-test('password confirmation fails with wrong password', function () {
-    $userClass = $this->getUserClass();
+test('password is not confirmed with invalid password', function () {
+    $userClass = XotData::make()->getUserClass();
     $user = $userClass::factory()->create();
 
     actingAs($user);

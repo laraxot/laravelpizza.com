@@ -10,7 +10,7 @@ $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__)
     ->name('*.php')
     ->notName('*.blade.php')
-    ->ignoreDotFiles(true)
+    ->ignoreDotFiles(true);
 
 $config = new PhpCsFixer\Config();
 
@@ -36,6 +36,6 @@ $config
         'blank_line_after_namespace' => true,
         'class_definition' => true,
         'elseif' => true,
-    ])
+    ]);
 
 return $config;

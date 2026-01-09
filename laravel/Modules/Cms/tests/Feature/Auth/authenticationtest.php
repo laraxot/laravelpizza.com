@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Tests\Feature\Auth;
 
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Volt\Volt as LivewireVolt;
 use Modules\Xot\Datas\XotData;
@@ -21,6 +23,7 @@ test('login screen can be rendered', function (): void {
 });
 
 test('users can authenticate using the login screen', function (): void {
+    /** @var class-string<Model> $userClass */
     $userClass = XotData::make()->getUserClass();
     $factory = $userClass::factory();
     /*
@@ -32,6 +35,7 @@ test('users can authenticate using the login screen', function (): void {
      *
      * ]);
      */
+    /** @var Authenticatable&Model $user */
     $user = $factory->create();
 
     $response = LivewireVolt::test('auth.login')
