@@ -1,10 +1,27 @@
 # PHPStan Corrections - Activity Module - Gennaio 2026
 
-**Data**: 2026-01-02
+**Data**: 2026-01-09
 **Status**: ✅ COMPLETATO
-**Errori corretti**: Da 2 a 0
+**Errori corretti**: Da 6 a 0
 
 ## File corretti
+
+### 1. app/Actions/ActivityLogger.php - PHPDoc cleanup
+
+**Problema**:
+- 4 errori `varTag.variableNotFound`: PHPDoc `@var Collection $activities` puntava a una variabile non esistente o era ridondante su un `return`.
+
+**Soluzione**:
+Rimosse le annotazioni `@var` ridondanti dove il tipo è già garantito dalla signature del metodo o dove la variabile non era definita.
+
+```php
+// ❌ PRIMA
+/** @var Collection<int, Activity> $activities */
+return Activity::with('subject')->...
+
+// ✅ DOPO
+return Activity::with('subject')->...
+```
 
 ### 1. app/Actions/ActivityLogger.php - getStatistics()
 

@@ -359,18 +359,7 @@ class ComuneJson extends GeoJsonModel
     {
         $cacheKey = 'geo_gerarchia_'.md5($comuneNome);
 
-        /** @var array{
-         *     regione: array{codice: string, nome: string}|null,
-         *     provincia: array{codice: string, nome: string}|null,
-         *     comune: array{
-         *         nome: string,
-         *         codice: string|null,
-         *         codiceCatastale: string|null,
-         *         popolazione: int|null
-         *     },
-         *     cap: array<int, string>
-         * }|null $result */
-        return Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($comuneNome) {
+        $result = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($comuneNome) {
             /** @var array{
              *     nome: string,
              *     codice: string,
@@ -383,7 +372,7 @@ class ComuneJson extends GeoJsonModel
             $comune = static::searchByName($comuneNome, 1)->first();
 
             if (! $comune) {
-                return;
+                return null;
             }
 
             return [
@@ -398,6 +387,19 @@ class ComuneJson extends GeoJsonModel
                 'cap' => $comune['cap'] ?? [],
             ];
         });
+        
+        /** @var array{
+         *     regione: array{codice: string, nome: string}|null,
+         *     provincia: array{codice: string, nome: string}|null,
+         *     comune: array{
+         *         nome: string,
+         *         codice: string|null,
+         *         codiceCatastale: string|null,
+         *         popolazione: int|null
+         *     },
+         *     cap: array<int, string>
+         * }|null $result */
+        return $result;
     }
 
     /**
