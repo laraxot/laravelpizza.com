@@ -16,13 +16,16 @@ class EmailTemplate extends Model
         'categories', 'version', 'is_active',
     ];
 
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
+     */
     protected function casts(): array
     {
         return [
             'variables' => 'array',
             'categories' => 'array',
+        ];
     }
 }

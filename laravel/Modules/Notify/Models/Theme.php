@@ -16,13 +16,16 @@ class Theme extends Model
         'version', 'is_active',
     ];
 
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
+     */
     protected function casts(): array
     {
         return [
             'colors' => 'array',
             'fonts' => 'array',
+        ];
     }
 }

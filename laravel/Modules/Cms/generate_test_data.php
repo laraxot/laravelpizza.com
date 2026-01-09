@@ -27,7 +27,9 @@ use Modules\Media\Database\Factories\TemporaryUploadFactory;
 
 require_once __DIR__.'/laravel/vendor/autoload.php';
 
+/** @var \Illuminate\Contracts\Foundation\Application $app */
 $app = require_once __DIR__.'/laravel/bootstrap/app.php';
+assert($app instanceof \Illuminate\Contracts\Foundation\Application);
 $app->make(Kernel::class)->bootstrap();
 
 class TestDataGenerator
@@ -76,9 +78,13 @@ class TestDataGenerator
         echo "🚀 Starting test data generation for business models...\n\n";
 
         foreach ($this->businessModels as $module => $models) {
+            /** @var string $module */
+            /** @var array<string, string> $models */
             echo "📦 Module: {$module}\n";
 
             foreach ($models as $modelName => $factoryClass) {
+                /** @var string $modelName */
+                /** @var string $factoryClass */
                 $this->generateModelData($module, $modelName, $factoryClass);
             }
 
@@ -96,23 +102,33 @@ class TestDataGenerator
             // Check if factory class exists
             if (! class_exists($factoryClass)) {
                 echo "❌ Factory class not found: {$factoryClass}\n";
-                $this->results[$module][$modelName] = ['status' => 'failed', 'reason' => 'Factory not found'];
+                /** @var array{status: string, reason: string} $resultData */
+                $resultData = ['status' => 'failed', 'reason' => 'Factory not found'];
+                /** @var array<string, array{status: string, count?: int, reason?: string, factory?: string}> $moduleResults */
+                $moduleResults = $this->results[$module] ?? [];
+                $moduleResults[$modelName] = $resultData;
+                $this->results[$module] = $moduleResults;
 
                 return;
             }
 
             // Create factory instance and generate records
+            /** @var object $factory */
             $factory = new $factoryClass();
 
             // Check if the factory has the count method (Laravel Factory pattern)
             if (method_exists($factory, 'count')) {
+                /** @var \Illuminate\Database\Eloquent\Collection<int, \Illuminate\Database\Eloquent\Model>|array<int, \Illuminate\Database\Eloquent\Model> $records */
                 $records = $factory->count(100)->create();
             } else {
                 // Fallback for custom factories
                 $records = [];
                 for ($i = 0; $i < 100; ++$i) {
                     if (method_exists($factory, 'create')) {
-                        $records[] = $factory->create();
+                        // Use call_user_func to avoid mixed type issues
+                        /** @var \Illuminate\Database\Eloquent\Model $record */
+                        $record = call_user_func([$factory, 'create']);
+                        $records[] = $record;
                     } else {
                         throw new Exception("Factory {$factoryClass} doesn't have create() method");
                     }
@@ -127,18 +143,28 @@ class TestDataGenerator
             }
             echo "✅ Created {$count} records\n";
 
-            $this->results[$module][$modelName] = [
+            /** @var array{status: string, count: int, factory: string} $resultData */
+            $resultData = [
                 'status' => 'success',
                 'count' => $count,
                 'factory' => $factoryClass,
             ];
+            /** @var array<string, array{status: string, count?: int, reason?: string, factory?: string}> $moduleResults */
+            $moduleResults = $this->results[$module] ?? [];
+            $moduleResults[$modelName] = $resultData;
+            $this->results[$module] = $moduleResults;
         } catch (Exception $e) {
             echo '❌ Error: '.$e->getMessage()."\n";
-            $this->results[$module][$modelName] = [
+            /** @var array{status: string, reason: string, factory: string} $resultData */
+            $resultData = [
                 'status' => 'failed',
                 'reason' => $e->getMessage(),
                 'factory' => $factoryClass,
             ];
+            /** @var array<string, array{status: string, count?: int, reason?: string, factory?: string}> $moduleResults */
+            $moduleResults = $this->results[$module] ?? [];
+            $moduleResults[$modelName] = $resultData;
+            $this->results[$module] = $moduleResults;
         }
     }
 
@@ -152,18 +178,26 @@ class TestDataGenerator
         $totalRecords = 0;
 
         foreach ($this->results as $module => $models) {
+            /** @var string $module */
+            /** @var array<string, array{status: string, count?: int, reason?: string, factory?: string}> $models */
             echo "Module: {$module}\n";
 
             foreach ($models as $modelName => $result) {
+                /** @var string $modelName */
+                /** @var array{status: string, count?: int, reason?: string, factory?: string} $result */
                 $status = 'success' === $result['status'] ? '✅' : '❌';
                 echo "  {$status} {$modelName}";
 
                 if ('success' === $result['status']) {
-                    echo " - {$result['count']} records";
+                    /** @var int $count */
+                    $count = $result['count'] ?? 0;
+                    echo " - {$count} records";
                     ++$totalSuccess;
-                    $totalRecords += $result['count'];
+                    $totalRecords += $count;
                 } else {
-                    echo " - Failed: {$result['reason']}";
+                    /** @var string $reason */
+                    $reason = $result['reason'] ?? 'Unknown error';
+                    echo " - Failed: {$reason}";
                     ++$totalFailed;
                 }
                 echo "\n";
@@ -183,16 +217,21 @@ class TestDataGenerator
         echo str_repeat('=', 50)."\n\n";
 
         foreach ($this->businessModels as $module => $models) {
+            /** @var string $module */
+            /** @var array<string, string> $models */
             echo "// Module: {$module}\n";
 
             foreach ($models as $modelName => $factoryClass) {
+                /** @var string $modelName */
+                /** @var string $factoryClass */
                 // Convert factory class to model class
+                /** @var string $modelClass */
                 $modelClass = str_replace('\Database\Factories\\', '\Models\\', $factoryClass);
                 $modelClass = str_replace('Factory', '', $modelClass);
 
                 echo "// {$modelName}\n";
                 echo "(new {$factoryClass}())->count(100)->create();\n";
-                echo '// Alternative: '.(is_string($modelClass) ? $modelClass : 'Unknown')."::factory()->count(100)->create(); // if HasFactory trait is added\n\n";
+                echo "// Alternative: {$modelClass}::factory()->count(100)->create(); // if HasFactory trait is added\n\n";
             }
         }
     }
