@@ -83,7 +83,14 @@ foreach ($connections as $conn) {
 $this->artisan('module:migrate', ['module' => 'Tenant', '--force' => true]);
 ```
 
-### Note
+### Problema Attuale
+- Errore: "no such table: tenants (Connection: tenant)"
 - Le migrazioni vengono eseguite sulla connessione default
-- La connessione 'tenant' usa lo stesso database in-memory
-- Questo riflette il comportamento reale del sito
+- SQLite :memory: crea database separati per ogni connessione
+- Soluzione tentata: database condiviso `file:memdb_...?mode=memory&cache=shared`
+- **Status**: Ancora in corso di risoluzione - test fallisce con QueryException
+
+### Note
+- Il sito funziona, quindi il test deve riflettere il comportamento reale
+- Potrebbe essere necessario verificare dove sono le migrazioni del modulo Tenant
+- Oppure verificare se il modello Tenant può usare la connessione default durante i test

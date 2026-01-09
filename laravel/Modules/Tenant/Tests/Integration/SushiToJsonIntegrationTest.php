@@ -40,7 +40,8 @@ class SushiToJsonIntegrationTest extends TestCase
         // Configure tenant connection for tests (required by Tenant model)
         // Use same approach as User\Tests\TestCase - shared in-memory database
         // The site works, so tests must reflect real behavior
-        $dbName = ':memory:';
+        // SQLite :memory: creates separate databases per connection, so we need shared memory
+        $dbName = 'file:memdb_'.uniqid().'?mode=memory&cache=shared';
         
         // Configure all connections that might be needed (following User TestCase pattern)
         $connections = ['sqlite', 'tenant', 'user', 'xot'];
@@ -57,7 +58,8 @@ class SushiToJsonIntegrationTest extends TestCase
             \Illuminate\Support\Facades\DB::purge($conn);
         }
 
-        // Run migrations - they will run on default connection, but tenant connection uses same DB
+        // Run migrations - they will run on default connection, but shared memory allows
+        // all connections to see the same tables
         $this->artisan('module:migrate', ['module' => 'Tenant', '--force' => true]);
 
         // Crea tenant di test
