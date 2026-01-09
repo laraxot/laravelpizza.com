@@ -94,3 +94,28 @@ $this->artisan('module:migrate', ['module' => 'Tenant', '--force' => true]);
 - Il sito funziona, quindi il test deve riflettere il comportamento reale
 - Potrebbe essere necessario verificare dove sono le migrazioni del modulo Tenant
 - Oppure verificare se il modello Tenant può usare la connessione default durante i test
+
+## 🔍 Scoperta Chiave
+
+### Problema Root Cause
+- La migrazione `create_tenants_table` è nel modulo **User**, non Tenant
+- La migrazione usa `Modules\User\Models\Tenant` che ha connessione **'user'**
+- Il test usa `Modules\Tenant\Models\Tenant` che ha connessione **'tenant'**
+- `XotBaseMigration::getConn()` usa `Schema::connection($this->model->getConnectionName())`
+- Quindi la migrazione crea la tabella sulla connessione **'user'**, non **'tenant'**
+
+### Tentativi di Soluzione
+1. ✅ Configurato database condiviso SQLite (`file:memdb_...?mode=memory&cache=shared`)
+2. ✅ Configurate tutte le connessioni (sqlite, tenant, user, xot)
+3. ✅ Eseguite migrazioni User e Tenant
+4. ❌ Creazione manuale tabella su connessione 'tenant' - ancora fallisce
+
+### Status Attuale
+- **Errore**: "no such table: tenants (Connection: tenant)"
+- **Causa**: SQLite non condivide tabelle tra connessioni diverse, anche con `cache=shared`
+- **Soluzione necessaria**: Usare la stessa connessione per migrazione e modello, oppure copiare i dati tra connessioni
+
+### Prossimi Step
+1. Verificare se il modello `Modules\Tenant\Models\Tenant` può usare connessione 'user' durante i test
+2. Oppure modificare la migrazione per creare la tabella anche sulla connessione 'tenant'
+3. Oppure usare un approccio diverso per i test (es: usare `Modules\User\Models\Tenant` nel test)
