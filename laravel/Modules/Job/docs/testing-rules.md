@@ -10,13 +10,18 @@
 ### 2. **NO RefreshDatabase - MAI**
 - **MAI** usare `use RefreshDatabase` nei test
 - **MAI** usare `RefreshDatabase` trait
-- Utilizzare `.env.testing` con SQLite in-memory
+- Utilizzare `.env.testing` con MySQL (stesso dialetto di produzione)
 - Usare `DatabaseTransactions` se necessario (raro)
 
 ### 3. **Configurazione Testing**
 - Tutti i test devono leggere `.env.testing`
 - PHPStan usa configurazione da `phpstan.neon` (non passare livello come parametro)
 - Script di conversione vanno in `bashscripts/`, non nella root di Laravel
+
+Nota DB:
+
+- Non forzare connessioni `sqlite` nei `TestCase` di modulo.
+- Se una tabella manca nel DB di test, il test deve essere corretto (o skippato) e il setup DB va risolto a livello di migrazioni/seed del database di test, non creando schema in `setUp()`.
 
 ### 4. **XotBase/LangBase Extension**
 - **MAI** estendere classi Filament direttamente
