@@ -146,13 +146,6 @@ Ma anche queste possono essere gestite via JSON se la logica è semplice.
 
 ---
 
-**Ultimo aggiornamento**: 2025-12-01  
-**Versione**: 1.0  
+**Ultimo aggiornamento**: 2025-12-01
+**Versione**: 1.0
 **Compatibilità**: LaravelPizza.com base_laravelpizza
-
-
-
-
-
-
-

@@ -79,7 +79,7 @@ class EventServiceProvider extends ServiceProvider
 public function boot(): void
 {
     parent::boot(); // Cruciale!
-    
+
     // Il resto del codice...
 }
 ```
@@ -213,12 +213,12 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
      * Nome del modulo in lowercase.
      */
     protected string $moduleNameLower = 'brain';
-    
+
     /**
      * Namespace delle routes del controller.
      */
     protected string $namespace = 'Modules\Brain\Http\Controllers';
-    
+
     /**
      * Boot del route service provider.
      */
@@ -226,7 +226,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
     {
         parent::boot();
     }
-    
+
     /**
      * Mappa le routes API.
      */
@@ -237,7 +237,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
             ->namespace($this->namespace)
             ->group(module_path('Brain', '/routes/api.php'));
     }
-    
+
     /**
      * Mappa le routes web.
      */
@@ -247,7 +247,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
             ->namespace($this->namespace)
             ->group(module_path('Brain', '/routes/web.php'));
     }
-    
+
     /**
      * Mappa le routes admin.
      */
@@ -286,7 +286,7 @@ class EventServiceProvider extends BaseEventServiceProvider
             'Modules\Brain\Listeners\UpdateConvenzioneStats',
         ],
     ];
-    
+
     /**
      * Gli subscribers da registrare.
      *
@@ -295,14 +295,14 @@ class EventServiceProvider extends BaseEventServiceProvider
     protected $subscribe = [
         'Modules\Brain\Listeners\BrainEventSubscriber',
     ];
-    
+
     /**
      * Boot dell'event service provider.
      */
     public function boot(): void
     {
         parent::boot();
-        
+
         // Eventuali registrazioni aggiuntive...
     }
 }
@@ -391,7 +391,7 @@ class RouteServiceProvider extends ServiceProvider
     }
 }
 
-// Risultato: le route potrebbero non essere caricate correttamente, mancare di 
+// Risultato: le route potrebbero non essere caricate correttamente, mancare di
 // middleware essenziali o non essere integrate con il sistema di permessi
 ```
 

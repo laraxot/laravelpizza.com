@@ -197,7 +197,7 @@ Questo approccio utilizza Volt all'interno di una pagina Folio per gestire il lo
             session()->invalidate();
             session()->regenerateToken();
         }
-        
+
         // Reindirizza alla home page localizzata
         $this->redirect('/' . app()->getLocale());
     });
@@ -329,7 +329,7 @@ $logout = function () {
     Auth::logout();
     session()->invalidate();
     session()->regenerateToken();
-    
+
     $locale = app()->getLocale();
     return redirect()->to('/' . $locale);
 };
@@ -362,7 +362,7 @@ $cancel = function () {
                 >
                     {{ __('Annulla') }}
                 </x-filament::button>
-                
+
                 <x-filament::button
                     wire:click="logout"
                     color="primary"
@@ -398,11 +398,11 @@ new class extends Component {
         Auth::logout();
         session()->invalidate();
         session()->regenerateToken();
-        
+
         $locale = app()->getLocale();
         return redirect()->to('/' . $locale);
     }
-    
+
     public function cancel()
     {
         $locale = app()->getLocale();

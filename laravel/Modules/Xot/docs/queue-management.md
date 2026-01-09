@@ -231,4 +231,4 @@ class JobFailed extends Notification
             ->line('Errore: ' . $this->exception);
     }
 }
-``` 
+```

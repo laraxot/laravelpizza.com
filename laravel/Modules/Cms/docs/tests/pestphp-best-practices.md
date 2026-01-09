@@ -21,7 +21,7 @@ uses(\Modules\Xot\Tests\TestCase::class);
 
 ### **Elementi Critici** 🔧
 1. ✅ **Solo** `declare(strict_types=1);` nell'header
-2. ✅ **MAI** dichiarare namespace nel corpo del file  
+2. ✅ **MAI** dichiarare namespace nel corpo del file
 3. ✅ **SEMPRE** usare `uses(\Modules\Xot\Tests\TestCase::class);`
 4. ✅ **Import diretti** delle classi usate nei test
 
@@ -102,7 +102,7 @@ describe('RegistrationWidget Core Tests', function () {
 describe('Form Interaction Tests', function () {
     test('widget can handle form data input', function () {
         $email = generateUniqueTestEmail();
-        
+
         Livewire::test(RegistrationWidget::class, ['type' => 'patient'])
             ->set('data.email', $email)
             ->assertSet('data.email', $email);
@@ -156,7 +156,7 @@ test('widget can be rendered for patient type', function () {
 test('widget maintains state after setting multiple fields', function () {
     $email = generateUniqueTestEmail();
     $name = 'Test User';
-    
+
     $widget = Livewire::test(RegistrationWidget::class, ['type' => 'doctor'])
         ->set('data.email', $email)
         ->set('data.name', $name);
@@ -211,7 +211,7 @@ describe('Page Rendering Tests', function () {
     });
 });
 
-// RegisterTypeWidgetTest.php - WIDGET  
+// RegisterTypeWidgetTest.php - WIDGET
 describe('Widget Logic Tests', function () {
     test('widget can be rendered for doctor type', function () {
         Livewire::test(RegistrationWidget::class, ['type' => 'doctor'])
@@ -233,7 +233,7 @@ describe('Widget Logic Tests', function () {
 // ✅ CORRETTO - Sintassi moderna expect()
 test('widget handles form data correctly', function () {
     $widget = Livewire::test(RegistrationWidget::class, ['type' => 'patient']);
-    
+
     expect($widget)->toBeInstanceOf(\Livewire\Testing\TestableLivewireComponent::class)
         ->and($widget->get('type'))->toBe('patient');
 });
@@ -241,7 +241,7 @@ test('widget handles form data correctly', function () {
 // ✅ CORRETTO - Chaining per leggibilità
 test('email validation works correctly', function () {
     $email = generateUniqueTestEmail();
-    
+
     expect($email)->toBeString()
         ->and(filter_var($email, FILTER_VALIDATE_EMAIL))->toBeTruthy()
         ->and(strlen($email))->toBeGreaterThan(5);
@@ -292,7 +292,7 @@ dataset('formValidationData', [
     'invalid_email' => [
         'type' => 'doctor',
         'email' => 'invalid-email',
-        'name' => 'Test Doctor', 
+        'name' => 'Test Doctor',
         'expectsError' => true
     ]
 ]);
@@ -332,6 +332,6 @@ Applicando questi pattern abbiamo ottenuto:
 - [<nome progetto> Testing Architecture](../../../<nome progetto>/docs/testing.md)
 
 ---
-**Ultimo aggiornamento**: Gennaio 2025  
-**Status**: ✅ PRODUCTION READY  
-**Verified**: 9 test / 4.44s / 100% pass rate 
+**Ultimo aggiornamento**: Gennaio 2025
+**Status**: ✅ PRODUCTION READY
+**Verified**: 9 test / 4.44s / 100% pass rate

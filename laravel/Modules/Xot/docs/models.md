@@ -246,7 +246,7 @@ try {
     Log::error('Errore nella creazione del prodotto', [
         'error' => $e->getMessage(),
     ]);
-    
+
     throw $e;
 }
 ```
@@ -310,4 +310,4 @@ class Comment extends Model
         return $this->morphTo();
     }
 }
-``` 
+```

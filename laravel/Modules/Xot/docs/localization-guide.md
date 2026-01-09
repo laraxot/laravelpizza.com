@@ -20,7 +20,7 @@ Modules/
     │   │   └── messages.php
     │   └── en/
     │       └── messages.php
-    ├── app/                
+    ├── app/
     │   ├── Models/         ✓ CORRETTO per i Models
     │   └── ...
     └── ...
@@ -144,7 +144,7 @@ class LocaleMiddleware
         // Recupera la lingua dalle preferenze dell'utente autenticato
         if (auth()->check() && auth()->user()->preferred_locale) {
             App::setLocale(auth()->user()->preferred_locale);
-        } 
+        }
         // Altrimenti usa la lingua dalla sessione o quella predefinita
         else if ($request->session()->has('locale')) {
             App::setLocale($request->session()->get('locale'));
@@ -179,17 +179,17 @@ enum SupportedLocale: string
     case ITALIAN = 'it';
     case ENGLISH = 'en';
     case FRENCH = 'fr';
-    
+
     public static function getDefault(): self
     {
         return self::ITALIAN;
     }
-    
+
     public static function getAllValues(): array
     {
         return array_column(self::cases(), 'value');
     }
-    
+
     public function getLabel(): string
     {
         return match($this) {
@@ -243,7 +243,7 @@ class RatingData extends Data
             $this->localized_label = __('rating::rating.score_labels.' . $this->score);
         }
     }
-    
+
     // Factory method con supporto per localizzazione
     public static function fromScoreWithLocale(int $score): self
     {
@@ -295,4 +295,4 @@ php artisan lang:clear
 
 ## Conclusione
 
-Seguendo queste linee guida, potrai implementare un sistema di localizzazione robusto e manutenibile all'interno del framework Laraxot <nome progetto>. Ricorda che i file di localizzazione devono rimanere nella directory `lang` alla radice del modulo, rispettando le convenzioni standard di Laravel. 
+Seguendo queste linee guida, potrai implementare un sistema di localizzazione robusto e manutenibile all'interno del framework Laraxot <nome progetto>. Ricorda che i file di localizzazione devono rimanere nella directory `lang` alla radice del modulo, rispettando le convenzioni standard di Laravel.

@@ -1,6 +1,6 @@
 # Bugfix: TestSushiSeeder PHPStan Mixed Type Errors
 
-**Data Fix**: 11 Novembre 2025  
+**Data Fix**: 11 Novembre 2025
 **Status**: ✅ RISOLTO
 
 ## Problema
@@ -64,7 +64,7 @@ if (app()->environment(['local', 'development'])) {
     $factory = TestSushiModel::factory();
     \Webmozart\Assert\Assert::methodExists($factory, 'count', 'Factory must have count method');
     \Webmozart\Assert\Assert::methodExists($factory, 'create', 'Factory must have create method');
-    
+
     /** @var \Illuminate\Database\Eloquent\Factories\Factory<TestSushiModel> $countedFactory */
     $countedFactory = $factory->count(10);
     $countedFactory->create();
@@ -115,7 +115,7 @@ if (app()->environment(['local', 'development'])) {
 class TestSushiModel extends Model
 {
     use HasXotFactory;
-    
+
     /**
      * @method static TestSushiModelFactory factory($count = null, $state = [])
      */
@@ -128,7 +128,7 @@ class TestSushiModel extends Model
 class TestSushiModelFactory extends Factory
 {
     protected $model = TestSushiModel::class;
-    
+
     public function definition(): array { /* ... */ }
 }
 

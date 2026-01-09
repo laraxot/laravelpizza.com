@@ -92,11 +92,11 @@ trait HasEnumFillable
     protected function getEnumFillable(): array
     {
         $fields = [];
-        
+
         if ($this->hasContacts()) {
             $fields = array_merge($fields, ContactTypeEnum::getColumnNames());
         }
-        
+
         return $fields;
     }
 }
@@ -226,7 +226,7 @@ $table->string('mobile')->nullable();
 class Client extends BaseModel
 {
     use HasEnumFillable;
-    
+
     public function hasContacts(): bool { return true; }
 }
 ```
@@ -236,7 +236,7 @@ class Client extends BaseModel
 class Product extends BaseModel
 {
     use HasEnumFillable;
-    
+
     public function hasContacts(): bool { return false; }
 }
 ```
@@ -246,7 +246,7 @@ class Product extends BaseModel
 class User extends BaseModel
 {
     use HasEnumFillable;
-    
+
     public function hasContacts(): bool
     {
         return $this->role === 'customer'; // Solo clienti hanno contatti
@@ -269,7 +269,7 @@ test('ContactTypeEnum provides correct field names', function () {
 test('Client fillable includes contact fields', function () {
     $client = new Client();
     $fillable = $client->getFillable();
-    
+
     expect($fillable)->toContain('phone', 'mobile', 'email');
 });
 ```

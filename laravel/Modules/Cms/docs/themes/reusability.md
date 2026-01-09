@@ -167,4 +167,4 @@ return [
 3. **Problemi di Cache**
    - Pulire la cache del CMS
    - Rigenerare gli assets
-   - Verificare le versioni 
+   - Verificare le versioni

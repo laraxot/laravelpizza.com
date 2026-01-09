@@ -60,7 +60,6 @@ Modules/Xot/
 - Performance testing
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](../../../Notify/project_docs/analysis.md)
 * [analysis.md](../../../Notify/project_docs/phpstan/analysis.md)
@@ -76,9 +75,6 @@ Modules/Xot/
 * [analysis.md](../../../Media/project_docs/phpstan/analysis.md)
 * [analysis.md](../../../../Themes/One/project_docs/analysis.md)
 
-
 ### Versione Incoming
 
-
 ---
-

@@ -156,7 +156,7 @@ class PageComponentTest extends TestCase
     public function test_page_component_renders_correctly()
     {
         $response = $this->get('/');
-        
+
         $response->assertStatus(200)
                 ->assertSee('home-content');
     }
@@ -214,7 +214,7 @@ public function boot(): void
     if (config('cms.use_legacy_theme_composer', false)) {
         return;
     }
-    
+
     $this->loadViewComponentsAs('cms', [
         Page::class,
     ]);
@@ -241,4 +241,4 @@ git checkout -- Themes/*/resources/views/pages/
 
 ---
 @see Themes/One/resources/views/pages/index.blade.php
-@see Modules/Cms/View/Composers/ThemeComposer.php 
+@see Modules/Cms/View/Composers/ThemeComposer.php

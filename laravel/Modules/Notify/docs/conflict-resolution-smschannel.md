@@ -11,7 +11,7 @@ Il conflitto è molto semplice e riguarda solo la presenza di una riga vuota agg
 ### Versione HEAD
 ```php
 $action = $this->factory->create();
-        
+
 return $action->execute($smsData);
 ```
 
@@ -40,7 +40,7 @@ Rimuovere i marker di conflitto mantenendo la versione HEAD con la riga vuota ag
 ## Codice Finale
 ```php
 $action = $this->factory->create();
-        
+
 return $action->execute($smsData);
 ```
 

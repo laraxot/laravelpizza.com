@@ -1,4 +1,4 @@
-# Implementazione Corretta della Pagina di Login 
+# Implementazione Corretta della Pagina di Login
 
 ## Collegamenti correlati
 - [Documentazione centrale](/docs/README.md)
@@ -32,7 +32,7 @@ Secondo le regole di SaluteOra, si devono utilizzare SEMPRE i componenti Blade n
     :label="__('auth.login.email')"
     required
 >
-    <x-filament::input 
+    <x-filament::input
         type="email"
         id="email"
         name="email"

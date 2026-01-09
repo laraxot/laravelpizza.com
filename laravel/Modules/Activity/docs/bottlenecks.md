@@ -26,7 +26,7 @@ class ActivityServiceProvider extends SpatieActivitylogServiceProvider
     public function boot()
     {
         parent::boot();
-        
+
         // Configura il logging solo per eventi significativi
         \Spatie\Activitylog\Models\Activity::saving(function ($activity) {
             // Ignora attività di basso valore come visualizzazioni semplici
@@ -37,7 +37,7 @@ class ActivityServiceProvider extends SpatieActivitylogServiceProvider
             ])) {
                 return false;
             }
-            
+
             return true;
         });
     }
@@ -65,7 +65,7 @@ class OptimizeActivityLogTable extends Migration
             $table->index(['causer_type', 'causer_id', 'created_at']);
         });
     }
-    
+
     public function down()
     {
         Schema::table('activity_log', function (Blueprint $table) {
@@ -88,20 +88,20 @@ use Illuminate\Support\Facades\DB;
 class CleanActivityLogs extends Command
 {
     protected $signature = 'activity:clean-logs {--days=90}';
-    
+
     protected $description = 'Clean old activity logs from the database';
-    
+
     public function handle()
     {
         $days = $this->option('days');
         $date = now()->subDays($days);
-        
+
         $count = DB::table('activity_log')
             ->where('created_at', '<', $date)
             ->delete();
-        
+
         $this->info("Deleted {$count} old activity logs.");
-        
+
         return Command::SUCCESS;
     }
 }
@@ -145,7 +145,7 @@ class ActivityRepository
     public function getLatestActivities($limit = 10)
     {
         return Activity::with([
-            'causer', 
+            'causer',
             'subject',
             // Carica solo le relazioni necessarie
         ])
@@ -153,7 +153,7 @@ class ActivityRepository
         ->take($limit)
         ->get();
     }
-    
+
     public function getActivitiesByUser($userId, $limit = 50)
     {
         return Activity::with([
@@ -189,19 +189,19 @@ use Modules\Activity\app\Repositories\ActivityRepository;
 class ActivityService
 {
     protected $activityRepository;
-    
+
     public function __construct(ActivityRepository $activityRepository)
     {
         $this->activityRepository = $activityRepository;
     }
-    
+
     public function getDashboardActivities()
     {
         return Cache::remember('dashboard_activities', 300, function () {
             return $this->activityRepository->getLatestActivities(5);
         });
     }
-    
+
     public function getUserActivities($userId)
     {
         return Cache::remember("user_activities_{$userId}", 300, function () use ($userId) {
@@ -253,19 +253,19 @@ use Modules\Activity\app\Services\ActivityService;
 class ActivityLogWidget extends XotBaseWidget
 {
     protected static string $view = 'activity::filament.widgets.activity-log';
-    
+
     // Limita il numero di aggiornamenti
     protected static ?string $pollingInterval = '60s';
-    
+
     // Usa il service ottimizzato
     protected $activityService;
-    
+
     public function __construct($id = null)
     {
         parent::__construct($id);
         $this->activityService = app(ActivityService::class);
     }
-    
+
     public function getActivities()
     {
         return $this->activityService->getDashboardActivities();
@@ -308,7 +308,7 @@ use Modules\Activity\app\Filament\Resources\ActivityResource;
 class ListActivities extends XotBasePage
 {
     protected static string $resource = ActivityResource::class;
-    
+
     protected function getTableRecordsPerPageSelectOptions(): array
     {
         return [10, 25, 50];
@@ -348,4 +348,3 @@ class ListActivities extends XotBasePage
 * [bottlenecks.md](../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
-

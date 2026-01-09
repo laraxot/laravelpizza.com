@@ -169,7 +169,7 @@ The application supports multiple database connections:
             PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
         ]) : [],
     ],
-    
+
     'pgsql' => [
         'driver' => 'pgsql',
         'url' => env('DATABASE_URL'),
@@ -192,12 +192,12 @@ The application supports multiple database connections:
 // config/database.php
 'redis' => [
     'client' => env('REDIS_CLIENT', 'phpredis'),
-    
+
     'options' => [
         'cluster' => env('REDIS_CLUSTER', 'redis'),
         'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
     ],
-    
+
     'default' => [
         'url' => env('REDIS_URL'),
         'host' => env('REDIS_HOST', '127.0.0.1'),
@@ -221,24 +221,24 @@ The application supports various cache drivers configured in `config/cache.php`:
     'apc' => [
         'driver' => 'apc',
     ],
-    
+
     'array' => [
         'driver' => 'array',
         'serialize' => false,
     ],
-    
+
     'database' => [
         'driver' => 'database',
         'table' => 'cache',
         'connection' => null,
         'lock_connection' => null,
     ],
-    
+
     'file' => [
         'driver' => 'file',
         'path' => storage_path('framework/cache/data'),
     ],
-    
+
     'memcached' => [
         'driver' => 'memcached',
         'persistent_id' => env('MEMCACHED_PERSISTENT_ID'),
@@ -257,7 +257,7 @@ The application supports various cache drivers configured in `config/cache.php`:
             ],
         ],
     ],
-    
+
     'redis' => [
         'driver' => 'redis',
         'connection' => 'cache',
@@ -293,14 +293,14 @@ The application supports various cache drivers configured in `config/cache.php`:
         'driver' => 'local',
         'root' => storage_path('app'),
     ],
-    
+
     'public' => [
         'driver' => 'local',
         'root' => storage_path('app/public'),
         'url' => env('APP_URL').'/storage',
         'visibility' => 'public',
     ],
-    
+
     's3' => [
         'driver' => 's3',
         'key' => env('AWS_ACCESS_KEY_ID'),
@@ -347,15 +347,15 @@ Each module can have its own configuration files in `Modules/{ModuleName}/config
 
 return [
     'name' => 'User',
-    
+
     'providers' => [
         // Service providers for the User module
     ],
-    
+
     'files' => [
         // Module-specific files
     ],
-    
+
     // Module-specific settings
 ];
 ```
@@ -371,28 +371,28 @@ use Laravel\Fortify\Features;
 
 return [
     'guard' => 'web',
-    
+
     'passwords' => 'users',
-    
+
     'username' => 'email',
-    
+
     'email' => 'email',
-    
+
     'home' => '/dashboard',
-    
+
     'prefix' => '',
-    
+
     'domain' => null,
-    
+
     'middleware' => ['web'],
-    
+
     'auth_middleware' => 'auth',
-    
+
     'limiters' => [
         'login' => 'login',
         'two-factor' => 'two-factor',
     ],
-    
+
     'redirects' => [
         'login' => null,
         'logout' => null,
@@ -401,7 +401,7 @@ return [
         'email-verification' => null,
         'password-reset' => null,
     ],
-    
+
     'features' => [
         Features::registration(),
         Features::resetPasswords(),
@@ -430,11 +430,11 @@ return [
         'it' => ['name' => 'Italian', 'script' => 'Latn', 'native' => 'Italiano'],
         'de' => ['name' => 'German', 'script' => 'Latn', 'native' => 'Deutsch'],
     ],
-    
+
     'useAcceptLanguageHeader' => true,
-    
+
     'hideDefaultLocaleInURL' => false,
-    
+
     'localesOrder' => ['en', 'it', 'de'],
 ];
 ```

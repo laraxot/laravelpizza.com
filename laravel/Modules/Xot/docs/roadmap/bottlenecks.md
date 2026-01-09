@@ -15,7 +15,7 @@
    {
        return $this->model->all();
    }
-   
+
    // Dopo
    public function index()
    {
@@ -32,7 +32,7 @@
    foreach($records as $record) {
        $record->relation->data;
    }
-   
+
    // Dopo
    $records = $model->with(['relation' => function($q) {
        $q->select('id', 'data');
@@ -43,7 +43,7 @@
    ```php
    // Prima
    return $this->model->all();
-   
+
    // Dopo
    return $this->model->paginate(25);
    ```
@@ -59,13 +59,13 @@
 1. **Template Standardizzati [Q2 2024]**
    ```markdown
    # Componente X
-   
+
    ## Utilizzo
    [Esempio base di utilizzo]
-   
+
    ## API
    [Documentazione metodi]
-   
+
    ## Best Practices
    [Linee guida]
    ```
@@ -98,7 +98,7 @@
            parent::setUp();
            // Setup comune
        }
-       
+
        /** @test */
        public function it_should_handle_base_functionality(): void
        {
@@ -112,7 +112,7 @@
    class XotBaseFactory extends Factory
    {
        protected $model = XotBaseModel::class;
-       
+
        public function definition(): array
        {
            return [
@@ -148,7 +148,7 @@
            parent::setUp();
            // Setup comune
        }
-       
+
        public function getView(): string
        {
            return 'xot::fields.base';
@@ -220,4 +220,3 @@
 * [bottlenecks.md](../../../Job/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Patient/docs/roadmap/bottlenecks.md)
-

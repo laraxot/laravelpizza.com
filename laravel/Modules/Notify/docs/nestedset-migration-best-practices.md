@@ -21,24 +21,24 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi categoria notifica
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia categorie
             NestedSet::columns($table);
-            
+
             // Metadati categoria
             $table->string('icon')->nullable();
             $table->string('color')->default('#6b7280');
             $table->json('metadata')->nullable();
-            
+
             // Configurazioni
             $table->boolean('is_active')->default(true);
             $table->integer('sort_order')->default(0);
-            
+
             $table->timestamps();
         });
     }
@@ -58,29 +58,29 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi canale
             $table->string('name');
             $table->string('code')->unique(); // email, sms, push, webhook
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia canali
             NestedSet::columns($table);
-            
+
             // Configurazioni canale
             $table->json('settings')->nullable();
             $table->json('credentials')->nullable(); // Credenziali crittografate
             $table->string('provider')->nullable(); // sendgrid, twilio, firebase
-            
+
             // Limiti e throttling
             $table->integer('rate_limit')->nullable(); // Limite orario
             $table->integer('daily_limit')->nullable();
             $table->integer('retry_attempts')->default(3);
-            
+
             // Stato
             $table->boolean('is_active')->default(true);
             $table->boolean('is_test_mode')->default(false);
-            
+
             $table->timestamps();
         });
     }
@@ -100,28 +100,28 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi template
             $table->string('name');
             $table->string('code')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia template
             NestedSet::columns($table);
-            
+
             // Contenuti template
             $table->string('subject')->nullable();
             $table->longText('content');
             $table->json('variables')->nullable(); // Variabili disponibili
-            
+
             // Localizzazione
             $table->json('translations')->nullable();
             $table->string('default_language')->default('it');
-            
+
             // Impostazioni
             $table->json('metadata')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -141,32 +141,32 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi evento
             $table->string('name');
             $table->string('code')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia eventi
             NestedSet::columns($table);
-            
+
             // Configurazioni evento
             $table->json('triggers')->nullable(); // Condizioni trigger
             $table->json('actions')->nullable(); // Azioni da eseguire
             $table->json('conditions')->nullable(); // Condizioni aggiuntive
-            
+
             // Canali associati
             $table->json('channels')->nullable(); // Canali da usare
             $table->json('templates')->nullable(); // Template per lingua
-            
+
             // Priorità e scheduling
             $table->integer('priority')->default(0);
             $table->boolean('is_async')->default(true);
             $table->integer('delay_seconds')->default(0);
-            
+
             // Stato
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -186,7 +186,7 @@ use Kalnoy\Nestedset\NodeTrait;
 class NotificationCategory extends Model
 {
     use NodeTrait;
-    
+
     protected $fillable = [
         'name',
         'slug',
@@ -197,30 +197,30 @@ class NotificationCategory extends Model
         'is_active',
         'sort_order',
     ];
-    
+
     protected $casts = [
         'metadata' => 'array',
         'is_active' => 'boolean',
         'sort_order' => 'integer',
     ];
-    
+
     // Relazioni
     public function notifications()
     {
         return $this->hasMany(Notification::class);
     }
-    
+
     // Scopes specifici Notify
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
     }
-    
+
     public function scopeOrdered($query)
     {
         return $query->orderBy('sort_order')->orderBy('name');
     }
-    
+
     // Metodi helper
     public function getAllNotificationsCount(): int
     {
@@ -229,15 +229,15 @@ class NotificationCategory extends Model
             ->get()
             ->sum('notifications_count');
     }
-    
+
     public function getEffectiveChannels(): array
     {
         $channels = $this->channels ?? [];
-        
+
         foreach ($this->ancestors as $ancestor) {
             $channels = array_merge($channels, $ancestor->channels ?? []);
         }
-        
+
         return array_unique($channels);
     }
 }
@@ -261,7 +261,7 @@ public function getEffectiveChannels(): array
     if ($this->channels) {
         return $this->channels;
     }
-    
+
     return $this->parent?->getEffectiveChannels() ?? ['email'];
 }
 ```
@@ -281,7 +281,7 @@ public function setVariablesAttribute($value)
             }
         }
     }
-    
+
     $this->attributes['variables'] = json_encode($value);
 }
 ```
@@ -312,27 +312,27 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi notifica
             $table->string('title');
             $table->text('message');
             $table->string('type'); // alert, info, promotion
-            
+
             // Campi geografici usando AddressItemEnum::columns()
             \Modules\Geo\Enums\AddressItemEnum::columns($table, withLegacy: true);
-            
+
             // Targeting geografico
             $table->decimal('radius_km', 8, 2)->nullable(); // Raggio area
             $table->json('target_filters')->nullable(); // Filtri target
-            
+
             // Programmazione
             $table->timestamp('scheduled_at')->nullable();
             $table->timestamp('expires_at')->nullable();
-            
+
             // Metadati
             $table->json('metadata')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -352,28 +352,28 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi workflow
             $table->string('name');
             $table->string('code')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia workflow
             NestedSet::columns($table);
-            
+
             // Configurazioni workflow
             $table->json('steps')->nullable(); // Passi sequenziali
             $table->json('conditions')->nullable(); // Condizioni branching
             $table->json('timeouts')->nullable(); // Timeout per step
-            
+
             // Trigger e azioni
             $table->json('triggers')->nullable();
             $table->json('actions')->nullable();
-            
+
             // Priorità e scheduling
             $table->integer('priority')->default(0);
             $table->boolean('is_enabled')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -393,25 +393,25 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Utente
             $table->unsignedBigInteger('user_id');
-            
+
             // NestedSet per gerarchia preferenze
             NestedSet::columns($table);
-            
+
             // Preferenze
             $table->string('category'); // email, sms, push, system
             $table->boolean('is_enabled')->default(true);
             $table->json('settings')->nullable(); // Impostazioni specifiche
-            
+
             // Orari e frequenza
             $table->json('quiet_hours')->nullable(); // Orari silenzio
             $table->string('frequency')->default('immediate'); // immediate, daily, weekly
             $table->json('schedule')->nullable(); // Programmazione personalizzata
-            
+
             $table->timestamps();
-            
+
             // Foreign key
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

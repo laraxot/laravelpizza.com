@@ -104,26 +104,26 @@ class SpatieEmail extends TemplateMailable
     {
         $data = $record->toArray();
         $this->setAdditionalData($data);
-        
+
         if ($templateSlug !== null) {
             static::$templateSlug = $templateSlug;
         }
     }
-    
+
     // Override del metodo per recuperare il template dal database
     public function getHtmlTemplate(): string
     {
         if (static::$templateSlug !== null) {
             $mailTemplate = MailTemplate::findBySlug(static::$templateSlug);
-            
+
             if ($mailTemplate) {
                 return $mailTemplate->html_template;
             }
         }
-        
+
         return parent::getHtmlTemplate();
     }
-    
+
     // Altri metodi da override per supportare lo slug...
 }
 ```

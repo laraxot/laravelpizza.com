@@ -9,4 +9,3 @@ Create an invoke function in one step and you are surely familiar with the use o
 php artisan make:controller TestController --invokable
 
 --------------------------------------------------------------
-

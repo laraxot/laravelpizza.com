@@ -30,7 +30,7 @@ class FragmentCache
         if (config('app.debug') && request()->has('no-cache')) {
             return $callback();
         }
-        
+
         return Cache::remember("fragment_{$key}", $ttl, $callback);
     }
 }
@@ -49,7 +49,7 @@ public function boot()
     Blade::directive('cache', function ($expression) {
         return "<?php if (! function_exists('cacheFragmentStart')) { function cacheFragmentStart(\$key, \$ttl) { \$__cache_key = \$key; \$__cache_ttl = \$ttl; ob_start(); } } ?>";
     });
-    
+
     Blade::directive('endcache', function () {
         return "<?php if (! function_exists('cacheFragmentEnd')) { function cacheFragmentEnd() { \$content = ob_get_clean(); echo FragmentCache::remember(\$__cache_key, \$__cache_ttl, function() use (\$content) { return \$content; }); } } cacheFragmentEnd(); ?>";
     });
@@ -88,12 +88,12 @@ class MenuItem extends Model
     protected static function boot()
     {
         parent::boot();
-        
+
         static::saved(function () {
             // Invalida solo la cache della navigazione quando un elemento del menu cambia
             Cache::forget('fragment_navigation_'.app()->getLocale());
         });
-        
+
         static::deleted(function () {
             Cache::forget('fragment_navigation_'.app()->getLocale());
         });
@@ -109,13 +109,13 @@ public static function remember(string $key, int $ttl, callable $callback)
 {
     $versionKey = "version_{$key}";
     $version = Cache::get($versionKey, 1);
-    
+
     $cacheKey = "fragment_{$key}_v{$version}";
-    
+
     if (config('app.debug') && request()->has('no-cache')) {
         return $callback();
     }
-    
+
     return Cache::remember($cacheKey, $ttl, $callback);
 }
 
@@ -123,7 +123,7 @@ public static function invalidate(string $key)
 {
     $versionKey = "version_{$key}";
     $version = Cache::get($versionKey, 1);
-    
+
     // Incrementa la versione invece di eliminare la cache
     Cache::forever($versionKey, $version + 1);
 }
@@ -143,17 +143,17 @@ class MeasureRenderTime
     public function handle($request, Closure $next)
     {
         $start = microtime(true);
-        
+
         $response = $next($request);
-        
+
         $time = microtime(true) - $start;
-        
+
         if ($request->has('debug-time')) {
             $response->setContent($response->getContent() . "<!-- Render time: {$time}s -->");
         }
-        
+
         Log::info("Render time for {$request->path()}: {$time}s");
-        
+
         return $response;
     }
 }
@@ -183,7 +183,7 @@ Schema::create('contents', function (Blueprint $table) {
     $table->json('content');
     $table->boolean('published')->default(false);
     $table->timestamps();
-    
+
     // Indice per ricerche efficienti
     $table->index('type');
     $table->index('published');
@@ -201,39 +201,39 @@ trait HasTranslations
     public function getTranslation($key, $locale = null, $fallback = true)
     {
         $locale = $locale ?: app()->getLocale();
-        
+
         $value = $this->getAttributeValue($key);
-        
+
         if (!is_array($value) && !is_object($value)) {
             return $value;
         }
-        
+
         $value = (array) $value;
-        
+
         if (isset($value[$locale])) {
             return $value[$locale];
         }
-        
+
         if ($fallback && config('app.fallback_locale')) {
             return $value[config('app.fallback_locale')] ?? null;
         }
-        
+
         return null;
     }
-    
+
     public function setTranslation($key, $locale, $value)
     {
         $translations = $this->getAttributeValue($key) ?: [];
-        
+
         if (!is_array($translations) && !is_object($translations)) {
             $translations = [];
         }
-        
+
         $translations = (array) $translations;
         $translations[$locale] = $value;
-        
+
         $this->attributes[$key] = json_encode($translations);
-        
+
         return $this;
     }
 }
@@ -251,27 +251,27 @@ use Modules\Cms\Traits\HasTranslations;
 class Content extends Model
 {
     use HasTranslations;
-    
+
     protected $casts = [
         'title' => 'array',
         'slug' => 'array',
         'content' => 'array',
     ];
-    
+
     protected $fillable = [
         'type', 'title', 'slug', 'content', 'published'
     ];
-    
+
     public function getTitleAttribute($value)
     {
         return json_decode($value, true);
     }
-    
+
     public function getSlugAttribute($value)
     {
         return json_decode($value, true);
     }
-    
+
     public function getContentAttribute($value)
     {
         return json_decode($value, true);
@@ -288,11 +288,11 @@ class Content extends Model
 public function scopeWhereTranslationLike($query, $key, $value, $locale = null)
 {
     $locale = $locale ?: app()->getLocale();
-    
+
     return $query->where(function ($q) use ($key, $value, $locale) {
         // Cerca nella lingua corrente
         $q->whereRaw("JSON_EXTRACT({$key}, '$.{$locale}') LIKE ?", ["%{$value}%"]);
-        
+
         // Se non trova nella lingua corrente, cerca nella lingua di fallback
         if ($locale !== config('app.fallback_locale')) {
             $q->orWhereRaw("JSON_EXTRACT({$key}, '$.".config('app.fallback_locale')."') LIKE ?", ["%{$value}%"]);
@@ -324,29 +324,29 @@ class ContentRepository
     public function findBySlug($slug, $type = null, $locale = null)
     {
         $locale = $locale ?: app()->getLocale();
-        
+
         $query = Content::where('published', true);
-        
+
         if ($type) {
             $query->where('type', $type);
         }
-        
+
         // Utilizza JSON_EXTRACT per query efficiente
         return $query->whereRaw("JSON_EXTRACT(slug, '$.{$locale}') = ?", [$slug])
             ->orWhereRaw("JSON_EXTRACT(slug, '$.".config('app.fallback_locale')."') = ?", [$slug])
             ->first();
     }
-    
+
     public function search($term, $type = null, $locale = null)
     {
         $locale = $locale ?: app()->getLocale();
-        
+
         $query = Content::where('published', true);
-        
+
         if ($type) {
             $query->where('type', $type);
         }
-        
+
         return $query->where(function ($q) use ($term, $locale) {
             $q->whereTranslationLike('title', $term, $locale)
               ->orWhereTranslationLike('content', $term, $locale);
@@ -374,9 +374,9 @@ Il modulo Cms carica tutti i media e gli assets in modo sincrono, causando tempi
 <img src="/storage/media/large-image.jpg" alt="Description">
 
 <!-- Dopo -->
-<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" 
-     data-src="/storage/media/large-image.jpg" 
-     alt="Description" 
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
+     data-src="/storage/media/large-image.jpg"
+     alt="Description"
      class="lazyload">
 ```
 
@@ -394,17 +394,17 @@ class MediaHelper
         $class = $options['class'] ?? '';
         $width = $options['width'] ?? null;
         $height = $options['height'] ?? null;
-        
+
         $class .= $lazy ? ' lazyload' : '';
-        
+
         $attributes = '';
         if ($width) $attributes .= " width=\"{$width}\"";
         if ($height) $attributes .= " height=\"{$height}\"";
-        
+
         if ($lazy) {
             return "<img src=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E\" data-src=\"{$path}\" alt=\"{$alt}\" class=\"{$class}\"{$attributes}>";
         }
-        
+
         return "<img src=\"{$path}\" alt=\"{$alt}\" class=\"{$class}\"{$attributes}>";
     }
 }
@@ -435,16 +435,16 @@ public static function responsiveImage($path, $alt = '', $options = [])
     $lazy = $options['lazy'] ?? true;
     $class = $options['class'] ?? '';
     $sizes = $options['sizes'] ?? '100vw';
-    
+
     $class .= $lazy ? ' lazyload' : '';
-    
+
     // Genera varianti dell'immagine
     $srcset = self::generateSrcset($path);
-    
+
     if ($lazy) {
         return "<img src=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E\" data-srcset=\"{$srcset}\" data-sizes=\"{$sizes}\" data-src=\"{$path}\" alt=\"{$alt}\" class=\"{$class}\">";
     }
-    
+
     return "<img src=\"{$path}\" srcset=\"{$srcset}\" sizes=\"{$sizes}\" alt=\"{$alt}\" class=\"{$class}\">";
 }
 
@@ -452,12 +452,12 @@ protected static function generateSrcset($path)
 {
     $widths = [320, 640, 960, 1280, 1920];
     $srcset = [];
-    
+
     foreach ($widths as $width) {
         $resizedPath = self::getResizedImagePath($path, $width);
         $srcset[] = "{$resizedPath} {$width}w";
     }
-    
+
     return implode(', ', $srcset);
 }
 
@@ -486,7 +486,7 @@ namespace Modules\Cms\Helpers;
 class PreloadHelper
 {
     protected static $preloads = [];
-    
+
     public static function add($url, $as = 'image', $media = null)
     {
         self::$preloads[] = [
@@ -495,16 +495,16 @@ class PreloadHelper
             'media' => $media,
         ];
     }
-    
+
     public static function render()
     {
         $html = '';
-        
+
         foreach (self::$preloads as $preload) {
             $media = $preload['media'] ? " media=\"{$preload['media']}\"" : '';
             $html .= "<link rel=\"preload\" href=\"{$preload['url']}\" as=\"{$preload['as']}\"{$media}>\n";
         }
-        
+
         return $html;
     }
 }
@@ -519,9 +519,9 @@ class PreloadHelper
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     {!! PreloadHelper::render() !!}
-    
+
     {{-- Altri meta tag e CSS --}}
 </head>
 <body>
@@ -568,12 +568,12 @@ class CreateContentRevisionsTable extends Migration
             $table->string('created_by');
             $table->text('change_summary')->nullable();
             $table->timestamps();
-            
+
             // Indici per query efficienti
             $table->index(['content_id', 'version']);
         });
     }
-    
+
     public function down()
     {
         Schema::dropIfExists('content_revisions');
@@ -593,17 +593,17 @@ use Modules\Cms\Traits\HasTranslations;
 class ContentRevision extends Model
 {
     use HasTranslations;
-    
+
     protected $casts = [
         'title' => 'array',
         'slug' => 'array',
         'content' => 'array',
     ];
-    
+
     protected $fillable = [
         'content_id', 'type', 'title', 'slug', 'content', 'version', 'created_by', 'change_summary'
     ];
-    
+
     public function content()
     {
         return $this->belongsTo(Content::class);
@@ -643,7 +643,7 @@ class ContentObserver
         if ($content->exists) {
             $latestRevision = $content->latestRevision;
             $version = $latestRevision ? $latestRevision->version + 1 : 1;
-            
+
             ContentRevision::create([
                 'content_id' => $content->id,
                 'type' => $content->type,
@@ -656,7 +656,7 @@ class ContentObserver
             ]);
         }
     }
-    
+
     public function created(Content $content)
     {
         // Crea la prima revisione
@@ -705,55 +705,55 @@ class ContentRevisionRepository
             ->orderBy('version', 'desc')
             ->paginate($perPage);
     }
-    
+
     public function getRevision($contentId, $version)
     {
         return ContentRevision::where('content_id', $contentId)
             ->where('version', $version)
             ->first();
     }
-    
+
     public function restoreRevision($contentId, $version)
     {
         $revision = $this->getRevision($contentId, $version);
-        
+
         if (!$revision) {
             return false;
         }
-        
+
         $content = Content::find($contentId);
-        
+
         if (!$content) {
             return false;
         }
-        
+
         $content->title = $revision->title;
         $content->slug = $revision->slug;
         $content->content = $revision->content;
         $content->save();
-        
+
         return true;
     }
-    
+
     public function compareRevisions($contentId, $versionA, $versionB)
     {
         $revisionA = $this->getRevision($contentId, $versionA);
         $revisionB = $this->getRevision($contentId, $versionB);
-        
+
         if (!$revisionA || !$revisionB) {
             return null;
         }
-        
+
         // Implementa la logica di confronto
         // ...
-        
+
         return [
             'title' => $this->compareField($revisionA->title, $revisionB->title),
             'slug' => $this->compareField($revisionA->slug, $revisionB->slug),
             'content' => $this->compareField($revisionA->content, $revisionB->content),
         ];
     }
-    
+
     protected function compareField($a, $b)
     {
         // Implementa la logica di confronto per campi specifici
@@ -795,7 +795,7 @@ trait SupportsFullTextSearch
     public function scopeSearch($query, $term)
     {
         $columns = implode(',', $this->searchable);
-        
+
         return $query->whereRaw("MATCH ({$columns}) AGAINST (? IN BOOLEAN MODE)", [$term]);
     }
 }
@@ -810,11 +810,11 @@ use Modules\Cms\Traits\SupportsFullTextSearch;
 class Content extends Model
 {
     use HasTranslations, SupportsFullTextSearch;
-    
+
     protected $searchable = [
         'title', 'content'
     ];
-    
+
     // ...
 }
 ```
@@ -826,16 +826,16 @@ class Content extends Model
 public function scopeSearchInLocale($query, $term, $locale = null)
 {
     $locale = $locale ?: app()->getLocale();
-    
+
     // Per ogni colonna searchable, estrai il valore nella lingua corrente
     $searchConditions = [];
-    
+
     foreach ($this->searchable as $column) {
         $searchConditions[] = "JSON_EXTRACT({$column}, '$.{$locale}')";
     }
-    
+
     $columns = implode(',', $searchConditions);
-    
+
     return $query->whereRaw("MATCH ({$columns}) AGAINST (? IN BOOLEAN MODE)", [$term]);
 }
 ```
@@ -855,32 +855,32 @@ class SearchService
         $type = $options['type'] ?? null;
         $locale = $options['locale'] ?? app()->getLocale();
         $perPage = $options['perPage'] ?? 15;
-        
+
         $query = Content::where('published', true);
-        
+
         if ($type) {
             $query->where('type', $type);
         }
-        
+
         // Utilizza la ricerca full-text
         $query->searchInLocale($term, $locale);
-        
+
         return $query->paginate($perPage);
     }
-    
+
     public function searchWithHighlighting($term, $options = [])
     {
         $results = $this->search($term, $options);
-        
+
         // Aggiungi highlighting ai risultati
         foreach ($results as $result) {
             $result->highlightedTitle = $this->highlight($result->getTranslation('title', $options['locale'] ?? app()->getLocale()), $term);
             $result->highlightedContent = $this->highlight($result->getTranslation('content', $options['locale'] ?? app()->getLocale()), $term);
         }
-        
+
         return $results;
     }
-    
+
     protected function highlight($text, $term)
     {
         return preg_replace("/($term)/i", '<mark>$1</mark>', $text);
@@ -900,26 +900,26 @@ use Modules\Cms\Services\SearchService;
 class SearchController extends Controller
 {
     protected $searchService;
-    
+
     public function __construct(SearchService $searchService)
     {
         $this->searchService = $searchService;
     }
-    
+
     public function index(Request $request)
     {
         $term = $request->input('q');
-        
+
         if (empty($term)) {
             return view('cms::search.index');
         }
-        
+
         $results = $this->searchService->searchWithHighlighting($term, [
             'type' => $request->input('type'),
             'locale' => app()->getLocale(),
             'perPage' => 15,
         ]);
-        
+
         return view('cms::search.results', compact('results', 'term'));
     }
 }
@@ -940,7 +940,6 @@ Implementando queste soluzioni, il modulo Cms potrà superare i principali colli
 * [BOTTLENECKS.md](laravel/Modules/User/docs/BOTTLENECKS.md)
 * [BOTTLENECKS.md](laravel/Modules/Media/docs/BOTTLENECKS.md)
 * [BOTTLENECKS.md](laravel/Modules/Cms/docs/BOTTLENECKS.md)
-
 
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
@@ -963,4 +962,3 @@ Implementando queste soluzioni, il modulo Cms potrà superare i principali colli
 * [bottlenecks.md](../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../Activity/docs/bottlenecks.md)
 * [bottlenecks.md](../../Patient/docs/roadmap/bottlenecks.md)
-

@@ -65,27 +65,27 @@ La classe `SpatieEmail` utilizza la classe `Illuminate\Mail\Mailables\Attachment
 public function addAttachments(array $attachments): self
 {
     $attachmentObjects = [];
-    
+
     foreach ($attachments as $item) {
         $attachment = null;
-        
+
         // Priorità 1: Se esiste 'path' e il file esiste, usa getAttachmentFromPath()
         if (isset($item['path']) && file_exists($item['path'])) {
             $attachment = $this->getAttachmentFromPath($item);
         }
-        
+
         // Priorità 2: Se non c'è path o file non esiste, prova con 'data' (contenuto binario)
         if ($attachment === null && isset($item['data'])) {
             $attachment = $this->getAttachmentFromData($item);
         }
-        
+
         if ($attachment) {
             $attachmentObjects[] = $attachment;
         }
     }
-    
+
     $this->customAttachments = $attachmentObjects;
-    
+
     return $this;
 }
 
@@ -267,7 +267,7 @@ use Modules\Xot\Actions\Pdf\GetPdfContentByRecordAction;
 
 foreach ($records as $record) {
     $pdfContent = app(GetPdfContentByRecordAction::class)->execute($record);
-    
+
     $attachments = [
         [
             'data' => $pdfContent,
@@ -275,10 +275,10 @@ foreach ($records as $record) {
             'mime' => 'application/pdf',
         ],
     ];
-    
+
     $notify = new RecordNotification($record, 'bulk-template');
     $notify->addAttachments($attachments);
-    
+
     Notification::route('mail', $record->email)->notify($notify);
 }
 ```

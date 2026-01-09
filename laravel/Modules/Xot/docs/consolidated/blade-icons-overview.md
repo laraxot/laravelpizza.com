@@ -29,4 +29,4 @@ Modules/
 
 ## Risorse Aggiuntive
 - [Documentazione dettagliata di registerBladeIcons](registerBladeIcons.md)
-- [Guida all'implementazione delle icone personalizzate](custom-icons-implementation.md) 
+- [Guida all'implementazione delle icone personalizzate](custom-icons-implementation.md)

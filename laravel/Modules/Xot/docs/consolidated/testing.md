@@ -155,7 +155,7 @@ trait CreatesApplication
 
         return $app;
     }
-    
+
     /**
      * Setup Xot-specific test environment.
      */
@@ -165,7 +165,7 @@ trait CreatesApplication
         config(['xot.test_mode' => true]);
         config(['cache.default' => 'array']);
         config(['session.driver' => 'array']);
-        
+
         // Module discovery in test mode
         config(['modules.scan.enabled' => true]);
         config(['modules.cache.enabled' => false]);
@@ -187,14 +187,14 @@ use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
-    
+
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         $this->setUpXotTestEnvironment();
     }
-    
+
     /**
      * Helper per mock di moduli in test.
      */
@@ -202,7 +202,7 @@ abstract class TestCase extends BaseTestCase
     {
         $moduleConfig = createTestModuleConfig($moduleName);
         $moduleConfig = array_merge($moduleConfig, $config);
-        
+
         config(["modules.modules.{$moduleName}" => $moduleConfig]);
     }
 }
@@ -217,9 +217,9 @@ use Modules\Xot\Datas\MetatagData;
 
 test('creates MetatagData with valid data', function (): void {
     $metaData = createTestMetatag();
-    
+
     $metatag = MetatagData::from($metaData);
-    
+
     expect($metatag->toArray())->toBeValidMetatag()
         ->and($metatag->title)->toBe('Test Page Title')
         ->and($metatag->description)->toBe('Test page description for SEO')
@@ -234,9 +234,9 @@ test('validates required fields in MetatagData', function (): void {
 test('generates proper HTML meta tags', function (): void {
     $metaData = createTestMetatag();
     $metatag = MetatagData::from($metaData);
-    
+
     $html = $metatag->toHtml();
-    
+
     expect($html)
         ->toContain('<title>Test Page Title</title>')
         ->toContain('<meta name="description" content="Test page description for SEO">')
@@ -252,30 +252,30 @@ use Modules\Xot\Models\Traits\HasXotTable;
 test('HasXotTable trait provides table naming', function (): void {
     $model = new class extends \Illuminate\Database\Eloquent\Model {
         use HasXotTable;
-        
+
         protected string $module = 'TestModule';
     };
-    
+
     expect($model->getTable())->toContain('test_module_');
 });
 
 test('HasXotTable respects custom table names', function (): void {
     $model = new class extends \Illuminate\Database\Eloquent\Model {
         use HasXotTable;
-        
+
         protected $table = 'custom_table';
     };
-    
+
     expect($model->getTable())->toBe('custom_table');
 });
 
 test('HasXotTable handles module detection', function (): void {
     $this->mockModule('SampleModule');
-    
+
     $model = new class extends \Illuminate\Database\Eloquent\Model {
         use HasXotTable;
     };
-    
+
     // Test automatico detection del modulo dal namespace
     expect($model->getModuleName())->not->toBeEmpty();
 });
@@ -294,16 +294,16 @@ test('SendMailByRecordAction sends email correctly', function (): void {
     $record = new \stdClass();
     $record->email = 'test@example.com';
     $record->name = 'Test User';
-    
+
     $action = app(SendMailByRecordAction::class);
-    
+
     $result = $action->execute($record, [
         'template' => 'welcome',
         'subject' => 'Welcome Email'
     ]);
-    
+
     expect($result)->toBeTrue();
-    
+
     Mail::assertSent(\Modules\Xot\Mail\GenericMail::class, function ($mail) {
         return $mail->hasTo('test@example.com');
     });
@@ -312,9 +312,9 @@ test('SendMailByRecordAction sends email correctly', function (): void {
 test('SendMailByRecordAction validates record data', function (): void {
     $invalidRecord = new \stdClass();
     // Missing email
-    
+
     $action = app(SendMailByRecordAction::class);
-    
+
     expect(fn() => $action->execute($invalidRecord, []))
         ->toThrow(\InvalidArgumentException::class, 'Email field required');
 });
@@ -332,11 +332,11 @@ test('ExportAction generates valid export data', function (): void {
         ['id' => 1, 'name' => 'Item 1'],
         ['id' => 2, 'name' => 'Item 2'],
     ]);
-    
+
     $action = app(ExportAction::class);
-    
+
     $result = $action->execute($testData, 'csv');
-    
+
     expect($result)
         ->toHaveKey('format', 'csv')
         ->toHaveKey('data')
@@ -346,11 +346,11 @@ test('ExportAction generates valid export data', function (): void {
 
 test('ImportAction processes CSV data correctly', function (): void {
     $csvData = "id,name\n1,Item 1\n2,Item 2";
-    
+
     $action = app(ImportAction::class);
-    
+
     $result = $action->execute($csvData, 'csv');
-    
+
     expect($result)
         ->toBeArray()
         ->toHaveCount(2)
@@ -369,18 +369,18 @@ test('ConfigService loads module configurations', function (): void {
     $this->mockModule('TestModule', [
         'custom_setting' => 'test_value'
     ]);
-    
+
     $service = app(ConfigService::class);
-    
+
     $config = $service->getModuleConfig('TestModule');
-    
+
     expect($config)->toBeValidConfig()
         ->and($config)->toHaveKey('custom_setting', 'test_value');
 });
 
 test('ConfigService merges configurations correctly', function (): void {
     $service = app(ConfigService::class);
-    
+
     $result = $service->mergeConfigs([
         'setting1' => 'value1',
         'nested' => ['key1' => 'val1']
@@ -388,7 +388,7 @@ test('ConfigService merges configurations correctly', function (): void {
         'setting2' => 'value2',
         'nested' => ['key2' => 'val2']
     ]);
-    
+
     expect($result)
         ->toHaveKey('setting1', 'value1')
         ->toHaveKey('setting2', 'value2')
@@ -403,21 +403,21 @@ use Modules\Xot\Services\CacheService;
 
 test('CacheService stores and retrieves data', function (): void {
     $service = app(CacheService::class);
-    
+
     $service->put('test_key', 'test_value', 60);
-    
+
     $result = $service->get('test_key');
-    
+
     expect($result)->toBe('test_value');
 });
 
 test('CacheService handles cache tags', function (): void {
     $service = app(CacheService::class);
-    
+
     $service->tags(['module:test'])->put('tagged_key', 'tagged_value', 60);
-    
+
     $result = $service->tags(['module:test'])->get('tagged_key');
-    
+
     expect($result)->toBe('tagged_value');
 });
 ```
@@ -435,7 +435,7 @@ test('BaseData validates required fields', function (): void {
         'name' => 'Test Item',
         'created_at' => now(),
     ]);
-    
+
     expect($data->id)->toBe(1)
         ->and($data->name)->toBe('Test Item')
         ->and($data->created_at)->toBeInstanceOf(\Carbon\Carbon::class);
@@ -447,10 +447,10 @@ test('BaseData converts to array correctly', function (): void {
         'name' => 'Test Item',
         'active' => true,
     ];
-    
+
     $data = BaseData::from($original);
     $array = $data->toArray();
-    
+
     expect($array)->toBe($original);
 });
 ```
@@ -464,7 +464,7 @@ use Modules\Xot\Helpers\StringHelper;
 
 test('StringHelper converts to camelCase correctly', function (string $input, string $expected) {
     $result = StringHelper::toCamelCase($input);
-    
+
     expect($result)->toBe($expected);
 })->with([
     ['hello_world', 'helloWorld'],
@@ -474,7 +474,7 @@ test('StringHelper converts to camelCase correctly', function (string $input, st
 
 test('StringHelper generates slugs correctly', function (): void {
     $result = StringHelper::generateSlug('Test Title With Spaces!');
-    
+
     expect($result)->toBe('test-title-with-spaces')
         ->and($result)->toMatch('/^[a-z0-9-]+$/');
 });
@@ -493,17 +493,17 @@ test('ArrayHelper flattens nested arrays', function (): void {
             ]
         ]
     ];
-    
+
     $flattened = ArrayHelper::flatten($nested);
-    
+
     expect($flattened)->toHaveKey('level1.level2.level3', 'value');
 });
 
 test('ArrayHelper filters by keys', function (): void {
     $array = ['a' => 1, 'b' => 2, 'c' => 3];
-    
+
     $filtered = ArrayHelper::only($array, ['a', 'c']);
-    
+
     expect($filtered)->toHaveKeys(['a', 'c'])
         ->and($filtered)->not->toHaveKey('b');
 });
@@ -516,12 +516,12 @@ test('ArrayHelper filters by keys', function (): void {
 ```php
 test('core services perform within benchmarks', function (string $service, float $maxTime) {
     $startTime = microtime(true);
-    
+
     $instance = app($service);
     $instance->performanceTestMethod();
-    
+
     $executionTime = microtime(true) - $startTime;
-    
+
     expect($executionTime)->toBeLessThan($maxTime);
 })->with([
     [ConfigService::class, 0.1],  // 100ms max
@@ -530,14 +530,14 @@ test('core services perform within benchmarks', function (string $service, float
 
 test('module loading performance is acceptable', function (): void {
     $startTime = microtime(true);
-    
+
     // Simula caricamento di 10 moduli
     for ($i = 1; $i <= 10; $i++) {
         $this->mockModule("TestModule{$i}");
     }
-    
+
     $loadTime = microtime(true) - $startTime;
-    
+
     expect($loadTime)->toBeLessThan(1.0); // Max 1 secondo per 10 moduli
 });
 ```
@@ -554,26 +554,26 @@ on: [push, pull_request]
 jobs:
   core-tests:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         php-version: [8.1, 8.2, 8.3]
-        
+
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Setup PHP ${{ matrix.php-version }}
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-version }}
         extensions: mbstring, xml, ctype, iconv, intl, pdo_sqlite
-        
+
     - name: Install dependencies
       run: composer install --prefer-dist --no-interaction
-      
+
     - name: Run Xot Core Tests
       run: ./vendor/bin/pest Modules/Xot/tests/ --coverage --min=90
-      
+
     - name: Test Framework Compatibility
       run: ./vendor/bin/pest Modules/Xot/tests/ --group=compatibility
 ```
@@ -595,7 +595,7 @@ test('framework maintains backward compatibility', function (): void {
     // Test che API pubbliche del framework non cambino
     expect(class_exists('Modules\Xot\Models\Traits\HasXotTable'))->toBeTrue();
     expect(interface_exists('Modules\Xot\Contracts\BaseDataContract'))->toBeTrue();
-    
+
     // Test che metodi pubblici esistano ancora
     $hasXotTable = new ReflectionClass('Modules\Xot\Models\Traits\HasXotTable');
     expect($hasXotTable->hasMethod('getTable'))->toBeTrue();
@@ -656,15 +656,15 @@ test('framework maintains backward compatibility', function (): void {
 // Test per memory leaks
 test('no memory leaks in repeated operations', function (): void {
     $startMemory = memory_get_usage();
-    
+
     for ($i = 0; $i < 1000; $i++) {
         $data = MetatagData::from(createTestMetatag());
         unset($data); // Force garbage collection
     }
-    
+
     $endMemory = memory_get_usage();
     $memoryIncrease = $endMemory - $startMemory;
-    
+
     // Acceptable memory increase < 1MB
     expect($memoryIncrease)->toBeLessThan(1024 * 1024);
 });
@@ -689,6 +689,6 @@ test('no memory leaks in repeated operations', function (): void {
 
 ---
 
-**Ultimo aggiornamento**: Dicembre 2024  
-**Framework**: Pest v2.x  
-**Coverage Target**: 90%+ per core framework  
+**Ultimo aggiornamento**: Dicembre 2024
+**Framework**: Pest v2.x
+**Coverage Target**: 90%+ per core framework

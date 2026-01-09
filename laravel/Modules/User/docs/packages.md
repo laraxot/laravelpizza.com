@@ -45,7 +45,7 @@
 - [Autenticazione](packages/authentication.md)
 - [Permessi](packages/permissions.md)
 - [Sicurezza](packages/security.md)
-- [Performance](packages/performance.md) 
+- [Performance](packages/performance.md)
 ### Versione HEAD
 ## Collegamenti tra versioni di packages.md
 * [packages.md](../../../Gdpr/docs/packages.md)

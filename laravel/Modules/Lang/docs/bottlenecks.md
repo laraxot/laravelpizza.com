@@ -128,8 +128,8 @@
 ### Collegamenti Interni
 - [Roadmap](roadmap.md)
 - [Best Practices](BEST-PRACTICES.md)
-- [Testing](testing.md) 
-- [Testing](testing.md) 
+- [Testing](testing.md)
+- [Testing](testing.md)
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
 * [bottlenecks.md](../../Chart/docs/bottlenecks.md)
@@ -151,4 +151,3 @@
 * [bottlenecks.md](../../Activity/docs/bottlenecks.md)
 * [bottlenecks.md](../../Patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
-

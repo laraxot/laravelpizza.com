@@ -17,12 +17,12 @@ Questo documento riassume le soluzioni implementate per risolvere i problemi pi√
 protected static function newFactory(): Factory
 {
     $factoryNamespace = UserFactory::class;
-    
-    // Utilizzo di app() invece di new 
+
+    // Utilizzo di app() invece di new
     if (class_exists($factoryNamespace)) {
         return app($factoryNamespace);
     }
-    
+
     return Factory::factoryForModel(static::class);
 }
 ```
@@ -127,4 +127,4 @@ Questo approccio incrementale permette di ridurre gradualmente gli errori, mante
 
 - [Documentazione PHPStan sui Generics](https://phpstan.org/blog/generics-in-php-using-phpdocs)
 - [Guida Risoluzione Problemi di Propriet√† Undefined](https://phpstan.org/blog/solving-phpstan-access-to-undefined-property)
-- [Solving Template Type Issues](https://phpstan.org/blog/solving-phpstan-error-unable-to-resolve-template-type) 
+- [Solving Template Type Issues](https://phpstan.org/blog/solving-phpstan-error-unable-to-resolve-template-type)

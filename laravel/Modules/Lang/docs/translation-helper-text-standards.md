@@ -173,4 +173,4 @@ Il file `Modules/SaluteOra/lang/it/profile_widget.php` conteneva:
 - [Best Practices Filament](../../laravel/Modules/Xot/docs/filament/)
 - [Standard di Qualità SaluteOra](../../laravel/Modules/SaluteOra/docs/translation_quality_standards.md)
 
-*Ultimo aggiornamento: Gennaio 2025* 
+*Ultimo aggiornamento: Gennaio 2025*

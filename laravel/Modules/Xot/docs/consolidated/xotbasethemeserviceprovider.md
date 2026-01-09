@@ -153,4 +153,4 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
 ## Link Utili
 - [service-provider-best-practices.md](service-provider-best-practices.md)
 - [blade-component-registration.md](blade-component-registration.md)
-- [theme-development.md](theme-development.md) 
+- [theme-development.md](theme-development.md)

@@ -86,7 +86,7 @@ public function form(Form $form): Form
                         $dates = [];
                         $date = now();
                         $count = 0;
-                        
+
                         while ($count < 30) {
                             if (!$date->isWeekend()) {
                                 $dates[] = $date->format('Y-m-d');
@@ -107,10 +107,10 @@ public function form(Form $form): Form
 }
 ### Input
 ```blade
-<x-ui::input 
-    name="email" 
-    type="email" 
-    label="Email" 
+<x-ui::input
+    name="email"
+    type="email"
+    label="Email"
     placeholder="Inserisci la tua email"
     :required="true"
     :disabled="false"
@@ -120,8 +120,8 @@ public function form(Form $form): Form
     :error="$errors->first('email')"
 />
 ### Select
-<x-ui::select 
-    name="role" 
+<x-ui::select
+    name="role"
     label="Ruolo"
     :options="[
         'admin' => 'Amministratore',
@@ -133,22 +133,22 @@ public function form(Form $form): Form
     :clearable="true"
     :error="$errors->first('role')"
 ### Checkbox
-<x-ui::checkbox 
-    name="terms" 
+<x-ui::checkbox
+    name="terms"
     label="Accetto i termini e condizioni"
     :checked="false"
     :error="$errors->first('terms')"
 ### Radio
-<x-ui::radio 
-    name="gender" 
+<x-ui::radio
+    name="gender"
     label="Genere"
         'male' => 'Maschio',
         'female' => 'Femmina',
         'other' => 'Altro'
     :error="$errors->first('gender')"
 ### Textarea
-<x-ui::textarea 
-    name="message" 
+<x-ui::textarea
+    name="message"
     label="Messaggio"
     placeholder="Inserisci il tuo messaggio"
     :rows="4"
@@ -169,7 +169,7 @@ use Livewire\Component;
 class UserForm extends Component
     public $name;
     public $email;
-    
+
     protected $rules = [
         'name' => 'required|min:3',
         'email' => 'required|email',
@@ -204,10 +204,10 @@ form.addEventListener('submit', (e) => {
 - [Componenti Table](./table-components.md)
 - [Componenti Chart](./chart-components.md)
 - [Componenti Layout](./layout-components.md)
-- [Documentazione Frontend](../Cms/project_docs/frontend-architecture.md) 
+- [Documentazione Frontend](../Cms/project_docs/frontend-architecture.md)
 ## Collegamenti tra versioni di form-components.md
 * [form-components.md](../../../UI/project_docs/form-components.md)
 * [form-components.md](../../../UI/project_docs/roadmap/form-components.md)
-- [Documentazione Frontend](../Cms/docs/frontend-architecture.md) 
+- [Documentazione Frontend](../Cms/docs/frontend-architecture.md)
 * [form-components.md](../../../UI/docs/form-components.md)
 * [form-components.md](../../../UI/docs/roadmap/form-components.md)

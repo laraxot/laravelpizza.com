@@ -18,7 +18,7 @@ ignoreErrors:
 
 **Moduli Interessati**: SaluteOra, Geo, User, e tutti i moduli con relazioni Eloquent
 
-**Documentazione Specifica**: 
+**Documentazione Specifica**:
 - [SaluteOra - PHPStan Relationship Covariance Fix](../SaluteOra/docs/phpstan-relationship-covariance-fix.md)
 
 ### 2. Cast da Mixed
@@ -66,7 +66,7 @@ includes:
 
 parameters:
     level: 9
-    
+
     paths:
         - ./Modules/
 
@@ -77,7 +77,7 @@ parameters:
         - "#^Unsafe usage of new static#"
         - '#Method .+::.+ should return .+<.+, (.+)> but returns .+<.+, \$this\(\1\)>#' # Ignora errori di covarianza nei tipi generici delle relazioni Eloquent
         - '#Cannot cast mixed to (string|float|double|int|bool|boolean).#' # Ignora errori di cast da mixed a tipi specifici
-        - '#Call to function is_object\(\) with .+ will always evaluate to true.#' 
+        - '#Call to function is_object\(\) with .+ will always evaluate to true.#'
         - identifier: missingType.generics
         - identifier: missingType.iterableValue
         - identifier: larastan.noEnvCallsOutsideOfConfig
@@ -199,8 +199,8 @@ La configurazione PHPStan implementata mantiene un alto livello di qualità del 
 
 ---
 
-**Ultimo Aggiornamento**: Gennaio 2025  
-**PHPStan Version**: 1.10+  
-**Laravel Version**: 10+  
-**Larastan Version**: 2.9+  
+**Ultimo Aggiornamento**: Gennaio 2025
+**PHPStan Version**: 1.10+
+**Laravel Version**: 10+
+**Larastan Version**: 2.9+
 **Stato**: ✅ Configurazione Stabile

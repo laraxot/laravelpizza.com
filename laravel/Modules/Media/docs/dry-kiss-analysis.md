@@ -21,4 +21,3 @@ Models: 8 | Resources: 3 | Services: 2 | Actions: 17 | Docs: 83
 Resources refactoring (2 giorni)
 
 **Status:** 🟢 BUONO
-

@@ -59,7 +59,6 @@ FileUpload::make('certifications')
 
 - [Documentazione Filament Forms](https://filamentphp.com/docs/3.x/forms/fields/file-upload)
 - [Best Practices Forms](../forms/best-practices.md)
-- [Errori Comuni](../filament-components-errors.md) 
+- [Errori Comuni](../filament-components-errors.md)
 ## Collegamenti tra versioni di file-upload.md
 * [file-upload.md](../components/file-upload.md)
-

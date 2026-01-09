@@ -64,17 +64,17 @@ function inAdmin(array $params = []): bool
     if (isset($params['in_admin'])) {
         return (bool) $params['in_admin'];
     }
-    
+
     // 2. Check URL segment
     if (Request::segment(1) === 'admin') {
         return true;
     }
-    
+
     // 3. Check Livewire session
     if (Request::segment(0) === 'livewire' && session('in_admin') === true) {
         return true;
     }
-    
+
     return false;
 }
 ```
@@ -94,18 +94,18 @@ function getModuleModels(string $moduleName): array
 {
     // 1. Trova modulo via nwidart
     $module = Module::find($moduleName);
-    
+
     // 2. Scansiona directory Models/
     $modelsPath = $module->getPath() . '/Models';
     $files = File::files($modelsPath);
-    
+
     // 3. Build array [nome => class-string]
     $models = [];
     foreach ($files as $file) {
         $className = 'Modules\\' . $moduleName . '\\Models\\' . $file->getBasename('.php');
         $models[$file->getBasename('.php')] = $className;
     }
-    
+
     return $models;
 }
 ```
@@ -251,7 +251,7 @@ $models = getModuleModels('User');
 // TenantService
 if (Request::segment(1) === 'admin') { }
 
-// UserService  
+// UserService
 if (Request::segment(1) === 'admin') { }
 
 // RatingService
@@ -407,22 +407,22 @@ Il merge plugin è **potente ma richiede ordine corretto**:
 
 ### Prima del Fix
 
-❌ Composer autoload: **BLOCCATO**  
-❌ Package discovery: **CRASH**  
+❌ Composer autoload: **BLOCCATO**
+❌ Package discovery: **CRASH**
 ❌ Applicazione: **NON FUNZIONANTE**
 
 ### Dopo il Fix
 
-✅ Composer autoload: **COMPLETO** (~5s)  
-✅ Package discovery: **SUCCESS** (151 packages)  
-✅ Applicazione: **FUNZIONANTE**  
+✅ Composer autoload: **COMPLETO** (~5s)
+✅ Package discovery: **SUCCESS** (151 packages)
+✅ Applicazione: **FUNZIONANTE**
 ✅ Helper functions: **DISPONIBILI** ovunque
 
 ## 🔄 Forward Fix Philosophy
 
 Questo fix segue la regola **"Git - Mai Tornare Indietro"**:
 
-❌ **NON fatto**: `git reset` a commit precedente  
+❌ **NON fatto**: `git reset` a commit precedente
 ✅ **Fatto**: Nuovo commit con fix forward
 
 **Commit message**:
@@ -440,7 +440,7 @@ Docs: aggiornata documentazione Xot e Tenant
 
 ## 🔄 Fix Aggiuntivo: getModuleModels() durante package:discover
 
-**Data**: Gennaio 2025  
+**Data**: Gennaio 2025
 **Problema**: Anche dopo aver aggiunto le helper functions, `getModuleModels()` causava ancora errori durante `package:discover`.
 
 **Causa**: Le helper functions sono caricate tramite `"files": ["Helpers/Helper.php"]` in `composer.json`, ma durante `package:discover` l'ordine di autoload non è garantito.
@@ -467,13 +467,12 @@ $models = $action->execute($moduleName);
 
 ---
 
-**Data Fix**: 2 Dicembre 2025 (helper functions) + Gennaio 2025 (bootstrap paths)  
-**Tipo**: Critical - Blocking autoload  
-**Status**: ✅ RISOLTO COMPLETAMENTE  
-**Tempo Risoluzione**: ~30 minuti (analisi + implementazione + test + docs)  
+**Data Fix**: 2 Dicembre 2025 (helper functions) + Gennaio 2025 (bootstrap paths)
+**Tipo**: Critical - Blocking autoload
+**Status**: ✅ RISOLTO COMPLETAMENTE
+**Tempo Risoluzione**: ~30 minuti (analisi + implementazione + test + docs)
 **Approccio**: Analisi → Documentazione → Fix → Verifica
 
 ---
 
 *"Il miglior fix è quello che non solo risolve il problema, ma documenta il perché esisteva."*
-

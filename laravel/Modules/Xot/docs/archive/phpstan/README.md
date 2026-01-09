@@ -101,7 +101,7 @@ Se PHPStan esaurisce la memoria durante l'analisi, è possibile aumentare il lim
 
 ```bash
 php -d memory_limit=1G analyze_modules_phpstan.php
-``` 
+```
 
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/project_docs/README.md)
@@ -180,4 +180,3 @@ php -d memory_limit=1G analyze_modules_phpstan.php
 * [README.md](../../../Cms/project_docs/components/README.md)
 * [README.md](../../../../Themes/Two/project_docs/README.md)
 * [README.md](../../../../Themes/One/project_docs/README.md)
-

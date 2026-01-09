@@ -272,7 +272,7 @@ public function execute(QuestionChart $q, ?string $group_by = null, ?string $sor
 
 **Benefits**:
 - Reduces cyclomatic complexity from 39 to <10 per method
-- Improves readability and maintainability  
+- Improves readability and maintainability
 - Makes testing easier with focused methods
 - Follows Single Responsibility Principle
 
@@ -280,7 +280,7 @@ public function execute(QuestionChart $q, ?string $group_by = null, ?string $sor
 
 **Problem**: Classes with overall complexity above threshold (typically 50) due to multiple responsibilities.
 
-**Solution**: 
+**Solution**:
 1. Extract smaller methods with single responsibilities
 2. Consider creating separate service classes for distinct concerns
 3. Use composition over large monolithic classes

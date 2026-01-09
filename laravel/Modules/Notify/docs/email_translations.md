@@ -57,13 +57,13 @@ class MailTranslationService
     public function translate(string $key, array $replace = [], string $locale = null): string
     {
         $locale = $locale ?? app()->getLocale();
-        
+
         $translation = trans("notify::mail.{$key}", $replace, $locale);
-        
+
         if ($translation === "notify::mail.{$key}") {
             return $this->fallbackTranslation($key, $replace);
         }
-        
+
         return $translation;
     }
 
@@ -381,4 +381,4 @@ class TranslationValidator
 ## Vedi Anche
 - [Laravel Localization](https://laravel.com/project_docs/localization)
 - [Laravel Lang](https://github.com/Laravel-Lang/lang)
-- [Laravel Translation Manager](https://github.com/barryvdh/laravel-translation-manager) 
+- [Laravel Translation Manager](https://github.com/barryvdh/laravel-translation-manager)

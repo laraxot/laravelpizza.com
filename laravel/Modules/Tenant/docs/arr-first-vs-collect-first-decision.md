@@ -1,7 +1,7 @@
 # Decisione: Arr::first() vs collect()->first()
 
-**Data**: 2025-01-22  
-**Metodologia**: Super Mucca - La Litigata Interna  
+**Data**: 2025-01-22
+**Metodologia**: Super Mucca - La Litigata Interna
 **File**: `app/Actions/Config/ResolveTenantConfigValueAction.php`
 
 ---
@@ -193,6 +193,6 @@ Il codice usa già `Arr::first()` invece di `collect()->first()`, che è:
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: ✅ Completato con successo

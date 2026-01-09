@@ -282,16 +282,16 @@ class EmailPerformanceTest extends TestCase
         $template = MailTemplate::factory()->create();
 
         $start = microtime(true);
-        
+
         $promises = [];
         for ($i = 0; $i < 100; $i++) {
             $promises[] = async(function () use ($template) {
                 return $template->render(['name' => 'John']);
             });
         }
-        
+
         await($promises);
-        
+
         $end = microtime(true);
 
         $this->assertLessThan(5, $end - $start);
@@ -424,4 +424,4 @@ class TestData
 ## Vedi Anche
 - [Laravel Testing](https://laravel.com/project_docs/testing)
 - [PHPUnit](https://phpunit.de/)
-- [Laravel Dusk](https://laravel.com/project_docs/dusk) 
+- [Laravel Dusk](https://laravel.com/project_docs/dusk)

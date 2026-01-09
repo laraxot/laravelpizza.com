@@ -90,45 +90,45 @@ Tools -> Git -> Resolve Conflicts
 resolve_conflicts() {
     local branch=$1
     local strategy=${2:-"ours"}
-    
+
     # Backup del branch corrente
     git branch "backup/$(date +%Y%m%d_%H%M%S)"
-    
+
     # Merge con strategia specificata
     if [[ "$strategy" == "ours" ]]; then
         git merge -X ours "$branch"
     else
         git merge -X theirs "$branch"
     fi
-    
+
     # Verifica risultato
     if git status | grep -q "conflict"; then
         echo "Risoluzione automatica fallita, necessario intervento manuale"
         return 1
     fi
-    
+
     return 0
 }
 
 safe_merge() {
     local branch=$1
-    
+
     # Verifica stato working directory
     if ! git diff-index --quiet HEAD --; then
         echo "Working directory non pulita. Commit o stash le modifiche."
         return 1
     fi
-    
+
     # Backup
     git branch "backup/$(date +%Y%m%d_%H%M%S)"
-    
+
     # Merge
     if ! git merge "$branch"; then
         echo "Conflitto rilevato, ripristino stato precedente"
         git merge --abort
         return 1
     fi
-    
+
     return 0
 }
 ```

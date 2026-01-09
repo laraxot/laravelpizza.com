@@ -21,24 +21,24 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi tenant
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('domain')->unique();
-            
+
             // NestedSet per gerarchia tenant
             NestedSet::columns($table);
-            
+
             // Configurazioni
             $table->json('settings')->nullable();
             $table->json('features')->nullable(); // Funzionalità abilitate
             $table->json('limits')->nullable(); // Limiti risorse
-            
+
             // Stato
             $table->boolean('is_active')->default(true);
             $table->timestamp('trial_ends_at')->nullable();
-            
+
             $table->timestamps();
         });
     }
@@ -58,27 +58,27 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi sottodominio
             $table->string('subdomain')->unique();
             $table->string('domain');
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia sottodomini
             NestedSet::columns($table);
-            
+
             // Configurazioni
             $table->unsignedBigInteger('tenant_id');
             $table->string('type')->default('subdomain'); // subdomain, custom_domain
             $table->boolean('is_primary')->default(false);
-            
+
             // DNS e SSL
             $table->json('dns_records')->nullable();
             $table->string('ssl_status')->default('none'); // none, pending, active, expired
             $table->date('ssl_expires_at')->nullable();
-            
+
             $table->timestamps();
-            
+
             // Foreign key
             $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
         });
@@ -99,29 +99,29 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi piano
             $table->string('name');
             $table->string('code')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia piani
             NestedSet::columns($table);
-            
+
             // Prezzi e fatturazione
             $table->decimal('monthly_price', 10, 2)->nullable();
             $table->decimal('yearly_price', 10, 2)->nullable();
             $table->string('currency', 3)->default('EUR');
-            
+
             // Limiti e funzionalità
             $table->json('limits')->nullable(); // utenti, storage, api_calls
             $table->json('features')->nullable(); // Funzionalità incluse
-            
+
             // Metadati
             $table->json('metadata')->nullable();
             $table->boolean('is_active')->default(true);
             $table->boolean('is_public')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -141,28 +141,28 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi team
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia team
             NestedSet::columns($table);
-            
+
             // Tenant associato
             $table->unsignedBigInteger('tenant_id');
-            
+
             // Gestione team
             $table->unsignedBigInteger('owner_id');
             $table->json('members')->nullable(); // Membri e ruoli
-            
+
             // Permessi
             $table->json('permissions')->nullable();
             $table->json('settings')->nullable();
-            
+
             $table->timestamps();
-            
+
             // Foreign keys
             $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
             $table->foreign('owner_id')->references('id')->on('users')->onDelete('cascade');
@@ -184,23 +184,23 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi risorsa
             $table->string('name');
             $table->string('type'); // storage, bandwidth, users, api_calls
-            
+
             // NestedSet per gerarchia risorse
             NestedSet::columns($table);
-            
+
             // Configurazioni
             $table->json('allocation')->nullable(); // Allocazione per tenant
             $table->json('usage')->nullable(); // Utilizzo corrente
             $table->json('limits')->nullable(); // Limiti globali
-            
+
             // Monitoring
             $table->json('metrics')->nullable(); // Metriche di utilizzo
             $table->timestamp('last_calculated')->nullable();
-            
+
             $table->timestamps();
         });
     }
@@ -220,7 +220,7 @@ use Kalnoy\Nestedset\NodeTrait;
 class Tenant extends Model
 {
     use NodeTrait;
-    
+
     protected $fillable = [
         'name',
         'slug',
@@ -231,7 +231,7 @@ class Tenant extends Model
         'is_active',
         'trial_ends_at',
     ];
-    
+
     protected $casts = [
         'settings' => 'array',
         'features' => 'array',
@@ -239,50 +239,50 @@ class Tenant extends Model
         'is_active' => 'boolean',
         'trial_ends_at' => 'datetime',
     ];
-    
+
     // Relazioni
     public function subdomains()
     {
         return $this->hasMany(TenantSubdomain::class);
     }
-    
+
     public function teams()
     {
         return $this->hasMany(TenantTeam::class);
     }
-    
+
     // Scopes specifici Tenant
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
     }
-    
+
     public function scopeOnTrial($query)
     {
         return $query->whereNotNull('trial_ends_at')
             ->where('trial_ends_at', '>', now());
     }
-    
+
     // Metodi helper
     public function getEffectiveLimits(): array
     {
         $limits = $this->limits ?? [];
-        
+
         foreach ($this->ancestors as $ancestor) {
             $limits = array_merge($limits, $ancestor->limits ?? []);
         }
-        
+
         return $limits;
     }
-    
+
     public function hasFeature(string $feature): bool
     {
         $features = $this->features ?? [];
-        
+
         foreach ($this->ancestors as $ancestor) {
             $features = array_merge($features, $ancestor->features ?? []);
         }
-        
+
         return in_array($feature, $features);
     }
 }
@@ -305,11 +305,11 @@ class Tenant extends Model
 public function getEffectiveLimits(): array
 {
     $limits = $this->limits ?? [];
-    
+
     foreach ($this->ancestors as $ancestor) {
         $limits = array_merge($limits, $ancestor->limits ?? []);
     }
-    
+
     return $limits;
 }
 ```
@@ -327,12 +327,12 @@ public function setDomainAttribute($value)
                     ->orWhereIn('parent_id', $this->ancestors()->pluck('id'));
             })
             ->exists();
-            
+
         if ($exists) {
             throw new \Exception("Domain '{$value}' already exists in hierarchy");
         }
     }
-    
+
     $this->attributes['domain'] = $value;
 }
 ```
@@ -363,23 +363,23 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi tenant
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('domain')->unique();
-            
+
             // Campi geografici usando AddressItemEnum::columns()
             \Modules\Geo\Enums\AddressItemEnum::columns($table, withLegacy: true);
-            
+
             // Contatti
             $table->string('contact_email')->nullable();
             $table->string(\Modules\Geo\Enums\AddressItemEnum::PHONE->value)->nullable();
-            
+
             // Configurazioni
             $table->json('settings')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -399,29 +399,29 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi billing
             $table->string('name');
             $table->string('code')->unique();
-            
+
             // NestedSet per gerarchia billing
             NestedSet::columns($table);
-            
+
             // Tenant associato
             $table->unsignedBigInteger('tenant_id');
-            
+
             // Fatturazione
             $table->string('billing_email');
             $table->json('address')->nullable(); // Indirizzo fatturazione
             $table->string('vat_number')->nullable();
             $table->string('tax_code')->nullable();
-            
+
             // Metodi pagamento
             $table->json('payment_methods')->nullable();
             $table->string('default_payment_method')->nullable();
-            
+
             $table->timestamps();
-            
+
             // Foreign key
             $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
         });

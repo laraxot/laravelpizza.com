@@ -82,7 +82,3 @@ Il ServiceProvider deve essere registrato nel `composer.json` del modulo:
 - Aggiornare documentazione se si cambia pacchetto
 
 *Ultimo aggiornamento: 2025-01-06*
-
-
-
-

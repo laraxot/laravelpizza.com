@@ -49,7 +49,7 @@ rm -rf Modules/Activity/tests/tests/
 class Activity extends SpatieActivity
 {
     protected $connection = null; // Usa default o config
-    
+
     protected $fillable = [
         'log_name',
         'description',
@@ -61,7 +61,7 @@ class Activity extends SpatieActivity
         'properties',
         'batch_uuid',
     ]; // Rimuovere 'id', 'created_at', 'updated_at'
-    
+
     protected function casts(): array
     {
         return [
@@ -89,17 +89,17 @@ public static function form(Form $form): Form
     return $form->schema([
         TextInput::make('log_name')->required()->maxLength(255),
         TextInput::make('description')->required()->maxLength(255),
-        
+
         Select::make('subject_type')
             ->options([
                 // Dynamically load available models
             ])
             ->required(),
-            
+
         TextInput::make('subject_id')
             ->numeric()
             ->required(),
-            
+
         // Use relationship selects where possible
     ]);
 }

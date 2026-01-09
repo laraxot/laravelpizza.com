@@ -128,7 +128,7 @@ Perché l'idea è semplice: **mettere insieme le due cose che rendono felice il 
 - mangiare una pizza in compagnia,
 - condividere esperienze, problemi, soluzioni.
 
-Questo repo è il passo successivo:  
+Questo repo è il passo successivo:
 **standardizzare un setup di meetup Laravel "replicabile" ovunque nel mondo.**
 
 ## Riferimenti
@@ -140,7 +140,6 @@ Questo repo è il passo successivo:
 
 ---
 
-**Ultimo aggiornamento**: 2025-12-01  
-**Versione**: 1.0  
+**Ultimo aggiornamento**: 2025-12-01
+**Versione**: 1.0
 **Compatibilità**: LaravelPizza.com base_laravelpizza
-

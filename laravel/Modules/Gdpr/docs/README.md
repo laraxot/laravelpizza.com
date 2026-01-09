@@ -146,4 +146,3 @@ php artisan test --filter=PrivacyTest
 - [Filament GDPR Resources](https://filamentphp.com/plugins/filament-gdpr)
 
 *Ultimo aggiornamento: Sistema di documentazione automatica*
-

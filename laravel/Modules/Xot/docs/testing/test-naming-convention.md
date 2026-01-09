@@ -1,7 +1,7 @@
 # Convenzione Naming File Test - Xot Module
 
-**Modulo:** Xot (Core Framework)  
-**Data:** 10 Ottobre 2025  
+**Modulo:** Xot (Core Framework)
+**Data:** 10 Ottobre 2025
 **Categoria:** Testing Standards
 
 ## 🎯 Regola Fondamentale
@@ -82,4 +82,3 @@ Esempi:
 ---
 
 **Xot Module - Test Naming PascalCase** ✅
-

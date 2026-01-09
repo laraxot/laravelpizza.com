@@ -20,5 +20,3 @@ Dopo aver analizzato il progetto, ho notato che la localizzazione degli URL è g
 - **Documentazione**: Aggiornare la documentazione del progetto per includere istruzioni sull'uso del pacchetto e sulle convenzioni di localizzazione.
 
 ## Conclusione
-
-

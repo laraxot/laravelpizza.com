@@ -75,7 +75,7 @@ $notificationData = [
 
 ### Moduli che DEVONO essere Generici
 - **Notify**: Sistema di notifiche per qualsiasi progetto
-- **User**: Gestione utenti per qualsiasi progetto  
+- **User**: Gestione utenti per qualsiasi progetto
 - **UI**: Componenti UI per qualsiasi progetto
 - **Xot**: Base framework per qualsiasi progetto
 - **Geo**: Gestione geografica per qualsiasi progetto

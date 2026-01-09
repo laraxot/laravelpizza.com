@@ -152,4 +152,4 @@ Ogni volta che scrivi un getter del brand, chiediti:
 - [Filosofia dei Getter](../philosophy/getter_zen.md)
 - [Filosofia Zen Avanzata](../philosophy/getter_zen_advanced.md)
 - [Convenzioni di Naming](../naming-conventions.md)
-- [Linee Guida Filament](../filament-best-practices.md) 
+- [Linee Guida Filament](../filament-best-practices.md)

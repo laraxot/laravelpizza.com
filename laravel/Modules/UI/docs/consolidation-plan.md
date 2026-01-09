@@ -181,7 +181,6 @@ Per ogni coppia di file duplicati:
 
 ---
 
-**Data creazione**: 2025-01-06  
-**Status**: Piano da implementare  
+**Data creazione**: 2025-01-06
+**Status**: Piano da implementare
 **Priorità**: Alta
-

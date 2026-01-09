@@ -3,7 +3,7 @@
 ## Fixed Issues
 
 ### 1. HTTP Client PromiseInterface|Response Union Type (Multiple Action files)
-**Date**: 2025-12-10  
+**Date**: 2025-12-10
 **Files affected**:
 - app/Actions/Bing/GetAddressFromBingMapsAction.php
 - app/Actions/GetCoordinatesAction.php
@@ -31,8 +31,8 @@ if ($response instanceof \GuzzleHttp\Promise\PromiseInterface) {
 ```
 
 ### 2. Missing BASE_URL Constant
-**File**: app/Actions/GoogleMaps/OptimizeRouteAction.php  
-**Issue**: Undefined constant `BASE_URL`  
+**File**: app/Actions/GoogleMaps/OptimizeRouteAction.php
+**Issue**: Undefined constant `BASE_URL`
 **Fix**: Added the missing constant:
 ```php
 private const BASE_URL = 'https://maps.googleapis.com/maps/api/directions/json';

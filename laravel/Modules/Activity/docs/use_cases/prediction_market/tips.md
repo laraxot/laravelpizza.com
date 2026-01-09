@@ -19,4 +19,4 @@
 ## Errori Comuni
 - Non validare input lato comando
 - Non gestire la concorrenza sugli aggregate
-- Dimenticare il rollback in caso di errore 
+- Dimenticare il rollback in caso di errore

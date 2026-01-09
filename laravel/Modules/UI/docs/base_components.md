@@ -158,4 +158,4 @@ $spacers: (
 ## 🔗 Collegamenti
 - [Performance](./standards/performance.md)
 - [Accessibilità](./standards/accessibility.md)
-- [UI Standards](./standards/ui-standards.md) 
+- [UI Standards](./standards/ui-standards.md)

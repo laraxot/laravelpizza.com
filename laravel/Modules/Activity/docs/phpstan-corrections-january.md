@@ -1,7 +1,7 @@
 # PHPStan Corrections - Activity Module - Gennaio 2025
 
-**Data**: 2025-01-10  
-**Modulo**: Activity  
+**Data**: 2025-01-10
+**Modulo**: Activity
 **Errori Risolti**: 2
 
 ---
@@ -57,4 +57,3 @@ public function snapshots(): MorphMany
 ---
 
 *Ultimo aggiornamento: 2025-01-10*
-

@@ -21,10 +21,10 @@ Modules/NomeModulo/
 │   ├── Datas/                   # Data Objects (Spatie Laravel Data)
 │   ├── Enums/                   # Classi Enum
 │   ├── Events/                  # Eventi
-│   ├── Filament/               
+│   ├── Filament/
 │   │   ├── Pages/
 │   │   └── Resources/
-│   ├── Http/                    
+│   ├── Http/
 │   │   ├── Controllers/
 │   │   ├── Middleware/
 │   │   └── Requests/
@@ -121,4 +121,4 @@ Per correggere automaticamente la struttura delle directory, utilizza lo script 
 2. **Autoloading Corretto**: Il PSR-4 autoloader è configurato per cercare le classi in `app/`
 3. **Compatibilità con PHPStan**: Evita errori di classi non trovate durante l'analisi statica
 4. **Manutenibilità**: Struttura coerente e prevedibile per tutti i moduli
-5. **Chiarezza**: Separazione netta tra codice applicativo e supporto (config, routes, ecc.) 
+5. **Chiarezza**: Separazione netta tra codice applicativo e supporto (config, routes, ecc.)

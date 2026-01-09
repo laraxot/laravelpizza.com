@@ -25,9 +25,9 @@ abstract class InvoiceState
     }
 
     abstract public function label(): string;
-    
+
     abstract public function color(): string;
-    
+
     public function canTransitionTo(InvoiceState $state): bool
     {
         return true;
@@ -48,15 +48,15 @@ class PendingState extends InvoiceState
     {
         return 'In Attesa';
     }
-    
+
     public function color(): string
     {
         return 'yellow';
     }
-    
+
     public function canTransitionTo(InvoiceState $state): bool
     {
-        return $state instanceof PaidState || 
+        return $state instanceof PaidState ||
                $state instanceof CancelledState;
     }
 }
@@ -67,7 +67,7 @@ class PaidState extends InvoiceState
     {
         return 'Pagata';
     }
-    
+
     public function color(): string
     {
         return 'green';
@@ -90,7 +90,7 @@ class Invoice extends Model
     protected $casts = [
         'state' => InvoiceState::class
     ];
-    
+
     public function state(): Attribute
     {
         return Attribute::make(
@@ -98,11 +98,11 @@ class Invoice extends Model
             set: fn (InvoiceState $state) => get_class($state)
         );
     }
-    
+
     protected static function boot()
     {
         parent::boot();
-        
+
         static::creating(function (Invoice $invoice) {
             $invoice->state = new PendingState($invoice);
         });
@@ -122,23 +122,23 @@ namespace Domain\Invoices\Transitions;
 abstract class InvoiceStateTransition
 {
     protected Invoice $invoice;
-    
+
     public function __construct(Invoice $invoice)
     {
         $this->invoice = $invoice;
     }
-    
+
     abstract public function handle(): Invoice;
-    
+
     protected function transitionTo(InvoiceState $state): Invoice
     {
         if (! $this->invoice->state->canTransitionTo($state)) {
             throw new InvalidStateTransition($this->invoice->state, $state);
         }
-        
+
         $this->invoice->state = $state;
         $this->invoice->save();
-        
+
         return $this->invoice;
     }
 }
@@ -157,16 +157,16 @@ class PendingToPaidTransition extends InvoiceStateTransition
     {
         // Logica pre-transizione
         $this->validatePayment();
-        
+
         // Esegui la transizione
         $invoice = $this->transitionTo(new PaidState($this->invoice));
-        
+
         // Logica post-transizione
         event(new InvoicePaid($invoice));
-        
+
         return $invoice;
     }
-    
+
     private function validatePayment(): void
     {
         // Validazione del pagamento
@@ -235,22 +235,22 @@ class InvoiceStateTest extends TestCase
         $invoice = Invoice::factory()->create([
             'state' => new PendingState($invoice)
         ]);
-        
+
         $transition = new PendingToPaidTransition($invoice);
         $invoice = $transition->handle();
-        
+
         $this->assertInstanceOf(PaidState::class, $invoice->state);
     }
-    
+
     /** @test */
     public function it_cannot_transition_from_paid_to_pending()
     {
         $this->expectException(InvalidStateTransition::class);
-        
+
         $invoice = Invoice::factory()->create([
             'state' => new PaidState($invoice)
         ]);
-        
+
         $invoice->state = new PendingState($invoice);
     }
 }
@@ -307,4 +307,4 @@ class InvoiceStateTest extends TestCase
 
 - [Laravel Beyond CRUD: States](https://stitcher.io/blog/laravel-beyond-crud-05-states)
 - [Spatie State Package](https://github.com/spatie/laravel-model-states)
-- [Laravel Documentation](https://laravel.com/docs) 
+- [Laravel Documentation](https://laravel.com/docs)

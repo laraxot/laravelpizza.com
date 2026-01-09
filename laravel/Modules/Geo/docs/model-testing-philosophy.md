@@ -35,7 +35,7 @@ public function test_calculate_appointment_duration(): void
         'start_time' => '09:00:00',
         'end_time' => '10:30:00'
     ]);
-    
+
     $this->assertEquals(90, $appointment->getDurationInMinutes());
 }
 ```
@@ -59,7 +59,7 @@ public function test_fillable_fields(): void
 - [Laraxot Framework](../../laravel/Modules/Xot/docs/laraxot-framework.md)
 
 ---
-**Ultimo aggiornamento**: Dicembre 2024  
-**Versione**: 1.0  
+**Ultimo aggiornamento**: Dicembre 2024
+**Versione**: 1.0
 **Compatibilità**: Laraxot <nome progetto>, Testing Philosophy
 **Compatibilità**: Laraxot <nome progetto>, Testing Philosophy

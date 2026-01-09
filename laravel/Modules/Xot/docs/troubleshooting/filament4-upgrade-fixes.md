@@ -169,4 +169,3 @@ Laravel Framework 12.28.1
 ✅ **DOCUMENTATO**: Soluzione centralizzata implementata
 
 *Ultimo aggiornamento: 19 Settembre 2025*
-

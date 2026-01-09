@@ -149,7 +149,7 @@ class CommandServiceProvider extends ServiceProvider
     {
         $this->app->booted(function () {
             $schedule = $this->app->make(Schedule::class);
-            
+
             $schedule->command('emails:send')
                     ->daily()
                     ->at('13:00');
@@ -191,7 +191,7 @@ try {
         'provider' => get_class($this),
         'error' => $e->getMessage(),
     ]);
-    
+
     throw $e;
 }
 ```
@@ -337,4 +337,4 @@ vendor/bin/pint --dirty Modules/Xot/app
 - [Merge Conflict Resolution 2025-11-04](./merge-conflict-resolution-2025-11-04.md) - Report completo
 - [File Locking Pattern](./file-locking-pattern.md) - Nuova regola fondamentale
 - [RouteServiceProvider Documentation](./consolidated/route-service-provider.md) - Linee guida esistenti
-- [Laraxot Architecture Rules](./laraxot-architecture-rules.md) - Convenzioni namespace 
+- [Laraxot Architecture Rules](./laraxot-architecture-rules.md) - Convenzioni namespace

@@ -106,7 +106,7 @@ if (is_array($fields)) {
        // Se non è né un oggetto con toArray né un array, saltiamo
        continue;
    }
-   
+
    // Convertiamo tutti i valori in stringhe o null
    $safeRowData = array_map(function ($item) {
        if ($item === null) {
@@ -134,7 +134,7 @@ if (is_array($fields)) {
    /** @var Model $model */
    $model = app($modelClass);
    $query = $model->query()->with($with);
-   
+
    // Applichiamo le condizioni where
    foreach ($where as $key => $value) {
        $query->where($key, $value);
@@ -240,10 +240,10 @@ public function execute(string $model_class): Factory
    ```php
    // Verifichiamo che la classe esista e sia una risorsa Filament
    Assert::classExists($class_name);
-   
+
    /** @var Resource $resourceInstance */
    $resourceInstance = app($class_name);
-   
+
    // Verifichiamo che il metodo getModel esista
    if (!method_exists($resourceInstance, 'getModel')) {
        return 0;
@@ -254,7 +254,7 @@ public function execute(string $model_class): Factory
    ```php
    /** @var string $modelClass */
    $modelClass = $resourceInstance->getModel();
-   
+
    /** @var Model $modelInstance */
    $modelInstance = app($modelClass);
    ```
@@ -267,10 +267,10 @@ public function execute(string $model_class): Factory
    ```php
    // Assicuriamoci che $configPath sia una stringa
    $configPathStr = is_string($configPath) ? $configPath : '';
-   
+
    // Costruiamo il percorso completo del file di configurazione
    $configFilePath = $configPathStr.'/config.php';
-   
+
    // Verifichiamo che il file esista
    if (!File::exists($configFilePath)) {
        continue; // Saltiamo questo modulo se il file di configurazione non esiste
@@ -288,11 +288,11 @@ public function execute(string $model_class): Factory
    // Assicuriamoci che $theme sia una stringa
    $theme = $xot->{$ns};
    Assert::string($theme, 'Il tema deve essere una stringa');
-   
+
    // Costruiamo i percorsi
    $themeResourcePath = 'Themes/'.$theme.'/resources/'.$ns_after;
    $filename_from = app(FixPathAction::class)->execute(base_path($themeResourcePath));
-   
+
    $themeAssetPath = 'themes/'.$theme.'/'.$ns_after;
    $asset = $themeAssetPath;
    ```
@@ -306,7 +306,7 @@ public function execute(string $model_class): Factory
 **Soluzione**: Aggiunta verifica del tipo degli elementi nell'array:
    ```php
    $moduleNameLower = Str::lower($moduleName);
-   
+
    $foundModule = collect($files)
        ->filter(
            static function ($item) use ($moduleNameLower): bool {
@@ -316,7 +316,7 @@ public function execute(string $model_class): Factory
                return Str::lower($item) === $moduleNameLower;
            }
        )->first();
-   
+
    // Se non troviamo il modulo, restituiamo un percorso di fallback
    if ($foundModule === null || !is_string($foundModule)) {
        return base_path('Modules/'.$moduleName);
@@ -341,10 +341,10 @@ public function execute(string $model_class): Factory
            return $paths[0];
        }
    }
-   
+
    // Assicuriamoci che $theme_name sia una stringa
    $theme_name = $xot->{$ns};
-   
+
    if (!is_string($theme_name)) {
        return null; // Restituiamo null se il tema non è una stringa
    }

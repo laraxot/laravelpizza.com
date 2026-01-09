@@ -13,10 +13,10 @@ Il file `logout.blade.php` deve essere implementato come una pagina Folio static
 ```blade
 @php
     use Illuminate\Support\Facades\Auth;
-    
+
     // Esegui il logout
     Auth::logout();
-    
+
     // Invalida e rigenera la sessione
     session()->invalidate();
     session()->regenerateToken();
@@ -39,7 +39,7 @@ Il file `logout.blade.php` deve essere implementato come una pagina Folio static
             </div>
 
             <div class="mt-8">
-                <a href="{{ route('home') }}" 
+                <a href="{{ route('home') }}"
                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     {{ __('Torna alla Home') }}
                 </a>
@@ -101,4 +101,4 @@ Il file `logout.blade.php` deve essere implementato come una pagina Folio static
 ## Collegamenti Correlati
 - [Best Practices Folio](./ROUTING_BEST_PRACTICES.md)
 - [Gestione Sessione](./SESSION_MANAGEMENT.md)
-- [Tema One Documentation](../../Themes/One/docs/README.md) 
+- [Tema One Documentation](../../Themes/One/docs/README.md)

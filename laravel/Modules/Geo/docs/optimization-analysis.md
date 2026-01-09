@@ -30,7 +30,7 @@ class GeocodingService
         private CacheManager $cache,
         private RateLimiter $rateLimiter
     ) {}
-    
+
     public function getCoordinates(string $address): ?array
     {
         return $this->cache->remember(
@@ -39,15 +39,15 @@ class GeocodingService
             fn() => $this->fetchCoordinatesWithRateLimit($address)
         );
     }
-    
+
     private function fetchCoordinatesWithRateLimit(string $address): ?array
     {
         if ($this->rateLimiter->tooManyAttempts('geocoding', 100)) {
             throw new RateLimitExceededException('Geocoding rate limit exceeded');
         }
-        
+
         $this->rateLimiter->hit('geocoding');
-        
+
         return $this->callGeocodingApi($address);
     }
 }
@@ -61,7 +61,7 @@ class CoordinateValidator
     {
         return $lat >= -90 && $lat <= 90 && $lng >= -180 && $lng <= 180;
     }
-    
+
     public function validateAddress(array $address): array
     {
         return [
@@ -82,4 +82,3 @@ class CoordinateValidator
 
 ---
 *Stato: 🟡 Funzionale ma Necessita Rate Limiting e Caching*
-

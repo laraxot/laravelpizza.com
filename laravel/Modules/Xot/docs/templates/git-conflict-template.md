@@ -82,4 +82,4 @@
 ### Timeline
 - Data risoluzione: [data]
 - Data verifica: [data]
-- Data follow-up: [data] 
+- Data follow-up: [data]

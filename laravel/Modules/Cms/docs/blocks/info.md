@@ -112,4 +112,4 @@ Il blocco può essere utilizzato in vari contesti:
 - [Documentazione Filament Forms](../filament-forms.md)
 - [UI Components](../ui/components.md)
 - [Branding Guidelines](../design/branding.md)
-- [Legal Requirements](../legal/requirements.md) 
+- [Legal Requirements](../legal/requirements.md)

@@ -35,10 +35,10 @@ class CustomComponent extends Component
     // Proprietà pubbliche con type hint
     public string $label;
     public ?string $hint = null;
-    
+
     // Proprietà private per stato interno
     private bool $isLoading = false;
-    
+
     // Metodi pubblici con return type
     public function render(): View
     {
@@ -54,12 +54,12 @@ class CustomComponent extends Component
     <div class="header">
         {{ $header ?? '' }}
     </div>
-    
+
     {{-- Gestire stati condizionali --}}
     <div class="content {{ $isLoading ? 'loading' : '' }}">
         {{ $slot }}
     </div>
-    
+
     {{-- Fornire fallback --}}
     <div class="footer">
         {{ $footer ?? 'Default Footer' }}
@@ -74,11 +74,11 @@ class CustomComponent extends Component
     &__header { }
     &__content { }
     &__footer { }
-    
+
     // Stati
     &--loading { }
     &--disabled { }
-    
+
     // Varianti
     &--primary { }
     &--secondary { }
@@ -239,17 +239,15 @@ class AdvancedForm extends Component
 - Configurazioni disponibili
 ### Versione HEAD
 
-- Breaking changes 
+- Breaking changes
 ## Collegamenti tra versioni di best-practices.md
 * [best-practices.md](docs/tecnico/filament/best-practices.md)
 * [best-practices.md](../../../Xot/docs/laraxot/best-practices.md)
 * [best-practices.md](../../../UI/docs/best-practices.md)
 * [best-practices.md](../../../../Themes/One/docs/best-practices.md)
 
-
 ### Versione Incoming
 
-- Breaking changes 
+- Breaking changes
 
 ---
-

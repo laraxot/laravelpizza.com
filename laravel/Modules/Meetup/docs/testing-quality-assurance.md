@@ -43,14 +43,14 @@ class CreateUserActionTest extends TestCase
             'email' => 'john@example.com',
             'password' => 'password123',
         ];
-        
+
         $user = $action->execute($userData);
-        
+
         $this->assertInstanceOf(User::class, $user);
         $this->assertEquals('John Doe', $user->name);
         $this->assertEquals('john@example.com', $user->email);
     }
-    
+
     /** @test */
     public function it_hashes_password_before_saving()
     {
@@ -60,9 +60,9 @@ class CreateUserActionTest extends TestCase
             'email' => 'john@example.com',
             'password' => 'password123',
         ];
-        
+
         $user = $action->execute($userData);
-        
+
         $this->assertNotEquals('password123', $user->password);
         $this->assertTrue(password_verify('password123', $user->password));
     }
@@ -102,13 +102,13 @@ class PageManagementTest extends TestCase
     {
         $user = User::factory()->create();
         $this->actingAs($user);
-        
+
         $response = $this->post('/api/cms/pages', [
             'title' => 'Test Page',
             'content' => 'Page content',
             'slug' => 'test-page',
         ]);
-        
+
         $response->assertStatus(201);
         $this->assertDatabaseHas('pages', [
             'title' => 'Test Page',
@@ -116,7 +116,7 @@ class PageManagementTest extends TestCase
             'user_id' => $user->id,
         ]);
     }
-    
+
     /** @test */
     public function unauthenticated_user_cannot_create_page()
     {
@@ -124,7 +124,7 @@ class PageManagementTest extends TestCase
             'title' => 'Test Page',
             'content' => 'Page content',
         ]);
-        
+
         $response->assertStatus(401);
     }
 }
@@ -263,10 +263,10 @@ class GeocodeActionTest extends TestCase
                 ]
             ])
         ]);
-        
+
         $action = new GeocodeAction();
         $result = $action->execute('New York, NY');
-        
+
         $this->assertEquals(40.7128, $result['lat']);
         $this->assertEquals(-74.0060, $result['lng']);
     }
@@ -287,16 +287,16 @@ class XotDataTest extends TestCase
     public function it_creates_data_object_with_defaults()
     {
         $data = XotData::from([]);
-        
+
         $this->assertEquals('user', $data->main_module);
         $this->assertEquals('noset', $data->param_name);
     }
-    
+
     /** @test */
     public function it_overrides_defaults_with_provided_data()
     {
         $data = XotData::from(['main_module' => 'cms']);
-        
+
         $this->assertEquals('cms', $data->main_module);
     }
 }
@@ -317,7 +317,7 @@ class UserResourceTest extends TestCase
     public function it_displays_users_in_table()
     {
         $user = \Modules\User\Models\User::factory()->create();
-        
+
         Livewire::test(UserResource\Pages\ListUsers::class)
             ->assertSuccessful()
             ->assertSee($user->name);
@@ -415,7 +415,7 @@ public function test_user_can_view_profile()
 {
     $user = User::factory()->create();
     $this->actingAs($user);
-    
+
     $response = $this->get('/profile');
     $response->assertStatus(200);
 }
@@ -436,14 +436,14 @@ trait CreatesTestUsers
 public function test_email_notification_sent()
 {
     Mail::fake();
-    
+
     $user = User::factory()->create();
     $this->post('/register', [
         'name' => 'John',
         'email' => 'john@example.com',
         'password' => 'password',
     ]);
-    
+
     Mail::assertSent(WelcomeEmail::class);
 }
 
@@ -453,7 +453,7 @@ public function test_geocoding_service()
     Http::fake([
         'https://api.geocoding.com/*' => Http::response(['lat' => 40.7128, 'lng' => -74.0060])
     ]);
-    
+
     $result = $this->geocodeAction->execute('New York');
     $this->assertEquals(40.7128, $result['lat']);
 }
@@ -471,7 +471,7 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     services:
       mysql:
         image: mysql:8.0
@@ -481,23 +481,23 @@ jobs:
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
           coverage: xdebug
-      
+
       - name: Install dependencies
         run: |
           composer install --no-interaction --no-progress --no-suggest --optimize-autoloader
           npm ci
-      
+
       - name: Run tests
         run: |
           php artisan config:clear
@@ -560,7 +560,7 @@ public function test_admin_can_access_admin_panel()
 {
     $admin = User::factory()->create(['role' => 'admin']);
     $this->actingAs($admin);
-    
+
     $response = $this->get('/admin');
     $response->assertStatus(200);
 }
@@ -569,7 +569,7 @@ public function test_regular_user_cannot_access_admin_panel()
 {
     $user = User::factory()->create(['role' => 'user']);
     $this->actingAs($user);
-    
+
     $response = $this->get('/admin');
     $response->assertStatus(403);
 }
@@ -583,7 +583,7 @@ public function test_invalid_email_is_rejected()
         'email' => 'invalid-email',
         'password' => 'password',
     ]);
-    
+
     $response->assertStatus(302);
     $response->assertSessionHasErrors(['email']);
 }

@@ -101,7 +101,7 @@ it('valida vincoli appuntamento', function () {
         'doctor_id' => $this->doctor->id,
         'status' => 'scheduled',
     ];
-    
+
     expect($appointment->patient_id)->toBe($this->patient->id);
 });
 ```
@@ -120,7 +120,7 @@ it('restituisce durata corretta per tipi appuntamento', function () {
 it('applica vincoli temporali appuntamento', function () {
     $startTime = Carbon::now()->addDay();
     $endTime = $startTime->copy()->addMinutes(30);
-    
+
     expect($startTime->isBefore($endTime))->toBeTrue();
     expect($endTime->diffInMinutes($startTime))->toBe(30);
 });
@@ -135,14 +135,14 @@ it('crea appuntamento con relazioni', function () {
     $patient = Patient::factory()->create();
     $doctor = Doctor::factory()->create();
     $studio = Studio::factory()->create();
-    
+
     // Crea modello principale con relazioni
     $appointment = Appointment::factory()->create([
         'patient_id' => $patient->id,
         'doctor_id' => $doctor->id,
         'studio_id' => $studio->id,
     ]);
-    
+
     expect($appointment->patient->id)->toBe($patient->id);
     expect($appointment->doctor->id)->toBe($doctor->id);
 });
@@ -152,7 +152,7 @@ it('crea appuntamento con relazioni', function () {
 ```php
 it('mantiene integrità referenziale', function () {
     $appointment = Appointment::factory()->create();
-    
+
     expect($appointment->patient)->toBeInstanceOf(Patient::class);
     expect($appointment->doctor)->toBeInstanceOf(Doctor::class);
     expect($appointment->studio)->toBeInstanceOf(Studio::class);
@@ -168,7 +168,7 @@ it('restituisce errori validazione per dati non validi', function () {
         'patient_id' => '', // Non valido
         'doctor_id' => '',  // Non valido
     ]);
-    
+
     $response->assertStatus(422)
         ->assertJsonValidationErrors(['patient_id', 'doctor_id']);
 });
@@ -183,14 +183,14 @@ it('previene appuntamenti sovrapposti', function () {
         'starts_at' => '2024-01-01 10:00:00',
         'ends_at' => '2024-01-01 10:30:00',
     ]);
-    
+
     // Prova a creare appuntamento sovrapposto
     $response = $this->postJson('/api/appointments', [
         'doctor_id' => $doctor->id,
         'starts_at' => '2024-01-01 10:15:00', // Sovrappone
         'ends_at' => '2024-01-01 10:45:00',
     ]);
-    
+
     $response->assertStatus(422)
         ->assertJson(['message' => 'Appointment time overlaps with existing appointment']);
 });
@@ -329,7 +329,7 @@ it('crea appuntamento con dati setup', function () {
         'doctor_id' => $this->doctor->id,
         'studio_id' => $this->studio->id,
     ]);
-    
+
     expect($appointment->patient_id)->toBe($this->patient->id);
 });
 ```
@@ -346,40 +346,40 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     services:
       mysql:
         image: mysql:8.0
         env:
           MYSQL_ROOT_PASSWORD: password
           MYSQL_DATABASE: testing
-    
+
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
           extensions: mbstring, xml, ctype, iconv, intl, pdo_mysql
           coverage: xdebug
-      
+
       - name: Copy .env
         run: cp .env.example .env
-      
+
       - name: Install dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-      
+
       - name: Generate key
         run: php artisan key:generate
-      
+
       - name: Set Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
-      
+
       - name: Create Database
         run: |
           mysql --host 127.0.0.1 --port 3306 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS testing;"
-      
+
       - name: Execute tests
         run: ./vendor/bin/pest Modules/ModuleName --coverage
 ```
@@ -393,7 +393,7 @@ jobs:
           key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-php-
-      
+
       - name: Cache npm dependencies
         uses: actions/cache@v3
         with:

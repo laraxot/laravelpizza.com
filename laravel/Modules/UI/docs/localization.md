@@ -126,4 +126,4 @@ Modules/UI/
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Documentazione Folio](https://laravel.com/docs/folio)
 - [Best Practices UI](./UI_BEST_PRACTICES.md)
-- [Guida Componenti](./COMPONENTS_GUIDE.md) 
+- [Guida Componenti](./COMPONENTS_GUIDE.md)

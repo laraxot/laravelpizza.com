@@ -108,13 +108,13 @@ class OutputSanitizer
     {
         // Sanitizzazione HTML
         $output = $this->sanitizeHtml($output);
-        
+
         // Sanitizzazione CSS
         $output = $this->sanitizeCss($output);
-        
+
         // Sanitizzazione JavaScript
         $output = $this->sanitizeJs($output);
-        
+
         return $output;
     }
 }
@@ -199,9 +199,9 @@ class SecureBackup extends Command
     public function handle()
     {
         $templates = Template::all();
-        
+
         $encrypted = encrypt($templates->toJson());
-        
+
         Storage::put(
             'backups/templates-' . now()->format('Y-m-d') . '.enc',
             $encrypted
@@ -273,4 +273,4 @@ class SecurityAlert
 - Eseguire scan di sicurezza
 - Formare il team sulla sicurezza
 - Documentare incidenti
-- Testare regolarmente 
+- Testare regolarmente

@@ -4,7 +4,7 @@
 
 Questo documento analizza le ragioni per cui, nel contesto specifico di il progetto, è preferibile utilizzare un widget Filament invece di una page per i form di autenticazione.
 
-⚠️ **IMPORTANTE**: 
+⚠️ **IMPORTANTE**:
 1. Tutte le implementazioni devono estendere le classi base di Xot con prefisso `XotBase`, mai direttamente le classi di Filament.
 2. Non utilizzare mai `->label()` nei form. Le traduzioni vengono gestite automaticamente dal `LangServiceProvider`.
 
@@ -129,7 +129,7 @@ class RegisterWidget extends XotBaseWidget
 <x-filament::widget>
     <x-filament::form wire:submit="register">
         {{ $this->form }}
-        
+
         <x-filament::button type="submit">
             {{ __('auth.register.actions.register') }}
         </x-filament::button>
@@ -185,4 +185,4 @@ L'utilizzo di widget per l'autenticazione in il progetto offre numerosi vantaggi
 - Sicurezza rafforzata
 - Gestione centralizzata delle traduzioni
 
-Questa scelta architetturale si allinea perfettamente con i requisiti del progetto e le best practices di Filament, utilizzando le classi base personalizzate di Xot e il `LangServiceProvider` per garantire coerenza e manutenibilità. 
+Questa scelta architetturale si allinea perfettamente con i requisiti del progetto e le best practices di Filament, utilizzando le classi base personalizzate di Xot e il `LangServiceProvider` per garantire coerenza e manutenibilità.

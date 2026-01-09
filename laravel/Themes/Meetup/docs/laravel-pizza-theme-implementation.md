@@ -9,13 +9,13 @@ Implement the Laravel Pizza Meetups design to match the original laravelpizza.co
 
 ### 1. Header Component
 - **File**: `Themes/Meetup/resources/views/components/blocks/navigation/header-main.blade.php`
-- **Changes**: 
+- **Changes**:
   - Updated to dark theme with red accents
   - Added pizza icon and proper navigation items
   - Implemented sticky navigation with backdrop blur
   - Added mobile menu support
 
-### 2. Hero Component  
+### 2. Hero Component
 - **File**: `Themes/Meetup/resources/views/components/blocks/hero/main.blade.php`
 - **Changes**:
   - Changed from blue to red gradient background

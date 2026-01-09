@@ -7,7 +7,6 @@ section: content
 
 # Creazione di una Resource {#creazione-resource}
 
-
 - vedi doc savanna e crea le resource con:
 
 ```bash

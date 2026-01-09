@@ -1,6 +1,6 @@
 # Nota: Forms Components Base Classes
 
-**Data**: 2025-12-23  
+**Data**: 2025-12-23
 **Status**: Mapping aggiornato per riflettere realtà codice
 
 ## 📋 Classi Rimosse dal Mapping

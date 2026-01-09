@@ -21,7 +21,7 @@ class AnalyticsController extends Controller
     {
         $visitors = $analytics->fetchVisitorsAndPageViews(Period::days(7));
         $topPages = $analytics->fetchMostVisitedPages(Period::days(7));
-        
+
         return view('analytics', compact('visitors', 'topPages'));
     }
 }
@@ -68,4 +68,4 @@ class AnalyticsController extends Controller
 
 - [Torna a packages.md](../packages.md)
 - [SEO](seo.md)
-- [Performance](performance.md) 
+- [Performance](performance.md)

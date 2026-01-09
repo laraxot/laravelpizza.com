@@ -122,7 +122,7 @@ public function form(Form $form): Form
                         $dates = [];
                         $date = now();
                         $count = 0;
-                        
+
                         while ($count < 30) {
                             if (!$date->isWeekend()) {
                                 $dates[] = $date->format('Y-m-d');
@@ -130,7 +130,7 @@ public function form(Form $form): Form
                             }
                             $date->addDay();
                         }
-                        
+
                         return $dates;
                     })
                     ->calendarConfig([
@@ -147,10 +147,10 @@ public function form(Form $form): Form
 
 ### Input
 ```blade
-<x-ui::input 
-    name="email" 
-    type="email" 
-    label="Email" 
+<x-ui::input
+    name="email"
+    type="email"
+    label="Email"
     placeholder="Inserisci la tua email"
     :required="true"
     :disabled="false"
@@ -163,8 +163,8 @@ public function form(Form $form): Form
 
 ### Select
 ```blade
-<x-ui::select 
-    name="role" 
+<x-ui::select
+    name="role"
     label="Ruolo"
     :options="[
         'admin' => 'Amministratore',
@@ -181,8 +181,8 @@ public function form(Form $form): Form
 
 ### Checkbox
 ```blade
-<x-ui::checkbox 
-    name="terms" 
+<x-ui::checkbox
+    name="terms"
     label="Accetto i termini e condizioni"
     :required="true"
     :checked="false"
@@ -193,8 +193,8 @@ public function form(Form $form): Form
 
 ### Radio
 ```blade
-<x-ui::radio 
-    name="gender" 
+<x-ui::radio
+    name="gender"
     label="Genere"
     :options="[
         'male' => 'Maschio',
@@ -208,8 +208,8 @@ public function form(Form $form): Form
 
 ### Textarea
 ```blade
-<x-ui::textarea 
-    name="message" 
+<x-ui::textarea
+    name="message"
     label="Messaggio"
     placeholder="Inserisci il tuo messaggio"
     :rows="4"
@@ -243,12 +243,12 @@ class UserForm extends Component
 {
     public $name;
     public $email;
-    
+
     protected $rules = [
         'name' => 'required|min:3',
         'email' => 'required|email',
     ];
-    
+
     public function save()
     {
         $this->validate();
@@ -288,8 +288,7 @@ form.addEventListener('submit', (e) => {
 - [Componenti Table](./table-components.md)
 - [Componenti Chart](./chart-components.md)
 - [Componenti Layout](./layout-components.md)
-- [Documentazione Frontend](../Cms/project_docs/frontend-architecture.md) 
+- [Documentazione Frontend](../Cms/project_docs/frontend-architecture.md)
 ## Collegamenti tra versioni di form-components.md
 * [form-components.md](../../../UI/project_docs/form-components.md)
 * [form-components.md](../../../UI/project_docs/roadmap/form-components.md)
-

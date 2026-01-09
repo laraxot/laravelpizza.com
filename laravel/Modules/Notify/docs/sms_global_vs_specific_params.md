@@ -21,7 +21,7 @@ return [
     'retry' => [...],
     'rate_limit' => [...],
     'circuit_breaker' => [...],
-    
+
     // Parametri specifici per provider (nella sezione 'drivers')
     'drivers' => [
         'provider1' => [

@@ -59,4 +59,4 @@ $result = $action->execute($data, $filename);
 
 - L'azione utilizza la libreria Safe per operazioni sicure
 - Implementa QueueableAction per supporto code
-- Supporta la validazione tramite Assert 
+- Supporta la validazione tramite Assert

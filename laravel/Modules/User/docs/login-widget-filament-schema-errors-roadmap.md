@@ -1,8 +1,8 @@
 # LoginWidget Filament Schema JavaScript Errors - Roadmap
 
-**Data**: 2025-01-22  
-**Status**: 🔄 In Progress  
-**Errore**: Multiple JavaScript errors  
+**Data**: 2025-01-22
+**Status**: 🔄 In Progress
+**Errore**: Multiple JavaScript errors
 **File**: `app/Filament/Widgets/Auth/LoginWidget.php`
 
 ---
@@ -46,7 +46,7 @@ Uncaught ReferenceError: $dispatch is not defined
 ### Widget Structure
 Il `LoginWidget` estende `XotBaseWidget` che usa `Filament\Schemas\Schema` (Filament 4).
 
-**Problema Principale**: 
+**Problema Principale**:
 - `XotBaseWidget::form()` usa `Schema` che richiede JavaScript `filamentSchema` e `filamentSchemaComponent`
 - Questi script sono disponibili solo nel contesto Filament Panel, NON nel frontend pubblico
 - Il widget viene usato in una pagina pubblica (`/login`) che non è un Filament Panel
@@ -101,7 +101,7 @@ private function getDefaultFormData(): array
 }
 ```
 
-**Risultato**: 
+**Risultato**:
 - ✅ `$this->data` viene inizializzato automaticamente con tutte le chiavi dello schema
 - ✅ Checkbox (remember, accept, agree) hanno default `false`
 - ✅ Altri campi hanno default `null`
@@ -177,5 +177,5 @@ private function getDefaultFormData(): array
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
+**Ultimo aggiornamento**: 2025-01-22
 **Versione**: 1.0.0

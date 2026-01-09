@@ -17,7 +17,7 @@ class LangServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadTranslationsFrom(__DIR__.'/../lang', 'lang');
-        
+
         // Cache delle traduzioni
         if ($this->app->runningInConsole()) {
             $this->commands([
@@ -37,13 +37,13 @@ class TranslationValidator
     {
         // Verifica che tutte le lingue supportate abbiano la traduzione
         $supportedLocales = config('app.supported_locales', ['it', 'en']);
-        
+
         foreach ($supportedLocales as $locale) {
             if (!isset($translations[$locale][$key])) {
                 return false;
             }
         }
-        
+
         return true;
     }
 }
@@ -57,13 +57,13 @@ class TranslationManager
     {
         $locale = $locale ?? app()->getLocale();
         $fallbackLocale = config('app.fallback_locale', 'en');
-        
+
         $translation = $this->getTranslation($key, $replace, $locale);
-        
+
         if ($translation === $key && $locale !== $fallbackLocale) {
             return $this->getTranslation($key, $replace, $fallbackLocale);
         }
-        
+
         return $translation;
     }
 }
@@ -76,7 +76,7 @@ class LangServiceProvider extends ServiceProvider
     protected function registerNamespaces(): void
     {
         $this->app['translator']->addNamespace('lang', __DIR__.'/../lang');
-        
+
         // Supporto per namespace personalizzati
         foreach (config('lang.namespaces', []) as $namespace => $path) {
             $this->app['translator']->addNamespace($namespace, $path);
@@ -96,7 +96,7 @@ class CacheTranslationsCommand extends Command
     {
         $translations = $this->getAllTranslations();
         Cache::put('translations', $translations, now()->addDay());
-        
+
         $this->info('Traduzioni cacheate con successo.');
     }
 }
@@ -128,11 +128,11 @@ class LocaleMiddleware
     public function handle($request, Closure $next)
     {
         $locale = $request->header('Accept-Language');
-        
+
         if ($locale && in_array($locale, config('lang.supported_locales'))) {
             app()->setLocale($locale);
         }
-        
+
         return $next($request);
     }
 }
@@ -175,4 +175,4 @@ class TranslationMissing
 - Implementare validazione delle chiavi
 - Gestire fallback locale
 - Supportare namespace personalizzati
-- Ottimizzare performance 
+- Ottimizzare performance

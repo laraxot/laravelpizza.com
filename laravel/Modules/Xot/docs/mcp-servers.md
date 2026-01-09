@@ -14,7 +14,7 @@
 
 ## Introduzione
 
-**Model Context Protocol (MCP)** è uno standard aperto che consente agli agenti AI di connettersi seamlessly con strumenti esterni, sorgenti dati e servizi. 
+**Model Context Protocol (MCP)** è uno standard aperto che consente agli agenti AI di connettersi seamlessly con strumenti esterni, sorgenti dati e servizi.
 
 ### Cos'è MCP?
 
@@ -539,4 +539,3 @@ iflow
 ## Licenza
 
 Questa documentazione è parte del progetto **base_quaeris_fila4_mono** ed è soggetta alla stessa licenza del progetto principale.
-

@@ -117,4 +117,4 @@ Dopo aver implementato tutte le correzioni, PHPStan al livello 10 non riporta pi
 
 1. Applicare principi simili ad altri moduli che potrebbero avere problemi simili
 2. Implementare linee guida di codifica per evitare errori simili in futuro
-3. Considerare l'utilizzo di strumenti di analisi statica come parte del processo di CI/CD 
+3. Considerare l'utilizzo di strumenti di analisi statica come parte del processo di CI/CD

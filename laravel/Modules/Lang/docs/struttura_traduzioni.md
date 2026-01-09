@@ -31,7 +31,7 @@ I file di traduzione nel modulo Lang devono seguire una struttura precisa dei pe
    return [
        'key' => 'value',
    ];
-   
+
    // File 2: Sintassi vecchia
    return array(
        'key' => 'value',

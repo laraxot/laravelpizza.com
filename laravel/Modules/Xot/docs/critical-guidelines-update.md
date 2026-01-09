@@ -104,8 +104,8 @@ if (property_exists($model, 'attachments')) {
 }
 
 // ✅ MIGLIORE - Pattern con default value
-$attachments = property_exists($model, 'attachments') 
-    ? $model::$attachments 
+$attachments = property_exists($model, 'attachments')
+    ? $model::$attachments
     : [];
 ```
 

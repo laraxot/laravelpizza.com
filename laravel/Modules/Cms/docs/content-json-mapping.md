@@ -66,7 +66,7 @@ trait SushiToJsons
 
         return $file;
     }
-    
+
     // Altri metodi...
 }
 ```

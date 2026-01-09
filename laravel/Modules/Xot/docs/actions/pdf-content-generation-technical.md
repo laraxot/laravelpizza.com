@@ -2,7 +2,7 @@
 
 ## 📋 Overview
 
-`GetPdfContentByRecordAction` è l'action core per la generazione di contenuto PDF binario da record Eloquent.  
+`GetPdfContentByRecordAction` è l'action core per la generazione di contenuto PDF binario da record Eloquent.
 È progettato specificamente per **allegati email, storage e operazioni che richiedono contenuto binario PDF**.
 
 ---
@@ -88,13 +88,13 @@ protected function generateViewName(Model $record): string
 {
     $modelClass = get_class($record);
     // Result: 'Modules\Ptv\Models\Scheda'
-    
+
     $modelName = class_basename($modelClass);
     // Result: 'Scheda'
-    
+
     $module = Str::between($modelClass, 'Modules\\', '\\Models');
     // Result: 'Ptv'
-    
+
     return mb_strtolower($module).'::'.Str::kebab($modelName).'.show.pdf';
     // Result: 'ptv::scheda.show.pdf'
 }
@@ -116,13 +116,13 @@ protected function prepareViewParameters(Model $record, string $viewName): array
     $modelClass = get_class($record);
     $modelName = class_basename($modelClass);
     $module = Str::between($modelClass, 'Modules\\', '\\Models');
-    
+
     $params = [
         'view' => $viewName,                  // Nome vista completo
         'row' => $record,                     // Record Eloquent
         'transKey' => mb_strtolower($module).'::'.Str::plural(mb_strtolower($modelName)).'.fields',
     ];
-    
+
     // Gestione relazione 'valutatore' (pattern specifico Laraxot)
     if (
         method_exists($record, 'valutatore') &&
@@ -134,7 +134,7 @@ protected function prepareViewParameters(Model $record, string $viewName): array
             $params['firma'] = $valutatore->nome_diri;
         }
     }
-    
+
     return $params;
 }
 ```
@@ -160,23 +160,23 @@ protected function generateFilename(Model $record): string
     $modelName = class_basename(get_class($record));
     $recordKey = $record->getKey();
     $baseFilename = mb_strtolower($modelName).'_'.((string)($recordKey ?? 'unknown'));
-    
+
     // PRIORITÀ 1: Record con identificativi personali (schede, anagrafiche)
     if (isset($record->matr, $record->cognome, $record->nome)) {
         $matr = is_string($record->matr) ? $record->matr : 'unknown';
         $cognome = is_string($record->cognome) ? $record->cognome : 'unknown';
         $nome = is_string($record->nome) ? $record->nome : 'unknown';
-        
+
         return 'scheda_'.((string)($recordKey ?? 'unknown')).'_'.$matr.'_'.$cognome.'_'.$nome.'.pdf';
         // Result: 'scheda_123_ABC123_Rossi_Mario.pdf'
     }
-    
+
     // PRIORITÀ 2: Record con campo 'name'
     if (isset($record->name) && is_string($record->name)) {
         return $baseFilename.'_'.Str::slug($record->name).'.pdf';
         // Result: 'user_456_mario-rossi.pdf'
     }
-    
+
     // PRIORITÀ 3: Default (solo ID)
     return $baseFilename.'.pdf';
     // Result: 'model_123.pdf'
@@ -201,17 +201,17 @@ protected function generatePdfContent(string $html, string $filename): string
             encoding: 'UTF-8',         // Encoding UTF-8
             margins: [10, 10, 10, 10]  // Margini 10mm su tutti i lati [top, right, bottom, left]
         );
-        
+
         // Configurazioni aggiuntive
         $html2pdf->setTestTdInOnePage(false);  // Permette celle tabella su più pagine
-        
+
         // Scrive HTML nel PDF
         $html2pdf->writeHTML($html);
-        
+
         // Genera e restituisce contenuto binario
         // 'S' = String mode (restituisce contenuto binario come stringa)
         return $html2pdf->output('', 'S');
-        
+
     } catch (Exception $e) {
         // Log dettagliato errore
         Log::error('PDF generation failed in GetPdfContentByRecordAction', [
@@ -219,7 +219,7 @@ protected function generatePdfContent(string $html, string $filename): string
             'error' => $e->getMessage(),
             'trace' => $e->getTraceAsString(),
         ]);
-        
+
         throw new Exception('Failed to generate PDF content: '.$e->getMessage(), 0, $e);
     }
 }
@@ -309,16 +309,16 @@ return response()->json([
     <div class="header">
         <h1>{{ __($transKey.'.title') }}</h1>
     </div>
-    
+
     <div class="content">
         <p><strong>ID:</strong> {{ $row->id }}</p>
         <p><strong>Data:</strong> {{ $row->created_at->format('d/m/Y') }}</p>
-        
+
         {{-- Contenuto dinamico --}}
         @if(isset($row->matr))
             <p><strong>Matricola:</strong> {{ $row->matr }}</p>
         @endif
-        
+
         {{-- Firma (se disponibile) --}}
         @if(isset($firma))
             <div style="margin-top: 50px; text-align: right;">
@@ -438,26 +438,26 @@ class GetPdfContentByRecordActionTest extends TestCase
     {
         // Arrange
         $record = Model::factory()->create();
-        
+
         // Act
         $pdfContent = app(GetPdfContentByRecordAction::class)->execute($record);
-        
+
         // Assert
         $this->assertIsString($pdfContent);
         $this->assertStringStartsWith('%PDF', $pdfContent); // PDF magic number
         $this->assertGreaterThan(100, strlen($pdfContent));
     }
-    
+
     /** @test */
     public function it_throws_exception_if_view_not_found(): void
     {
         $this->expectException(\Exception::class);
         $this->expectExceptionMessage('View');
-        
+
         $record = new class extends \Illuminate\Database\Eloquent\Model {
             protected $table = 'fake_table';
         };
-        
+
         app(GetPdfContentByRecordAction::class)->execute($record);
     }
 }
@@ -476,16 +476,16 @@ $startTime = microtime(true);
 
 try {
     $pdfContent = app(GetPdfContentByRecordAction::class)->execute($record);
-    
+
     $elapsedTime = microtime(true) - $startTime;
-    
+
     Log::info('PDF generated successfully', [
         'record_id' => $record->id,
         'model' => get_class($record),
         'size_bytes' => strlen($pdfContent),
         'time_ms' => round($elapsedTime * 1000, 2),
     ]);
-    
+
 } catch (\Exception $e) {
     Log::error('PDF generation failed', [
         'record_id' => $record->id,
@@ -516,8 +516,7 @@ try {
 
 ---
 
-**Ultimo aggiornamento:** 2025-01-22  
-**Versione:** 1.0  
-**Stato:** ✅ Production Ready  
+**Ultimo aggiornamento:** 2025-01-22
+**Versione:** 1.0
+**Stato:** ✅ Production Ready
 **PHPStan Level:** 10
-

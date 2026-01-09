@@ -102,7 +102,7 @@ protected $casts = [
    ```php
    // ❌ NON FARE QUESTO
    'welcome-email'
-   
+
    // ✅ FARE QUESTO
    'welcome-email-v1'
    ```
@@ -111,7 +111,7 @@ protected $casts = [
    ```php
    // ❌ NON FARE QUESTO
    '1.0'
-   
+
    // ✅ FARE QUESTO
    '1.0.0'
    ```
@@ -120,7 +120,7 @@ protected $casts = [
    ```php
    // ❌ NON FARE QUESTO
    'subject' => 'Welcome'
-   
+
    // ✅ FARE QUESTO
    'subject' => [
        'en' => 'Welcome',
@@ -147,4 +147,4 @@ protected $casts = [
 Per supporto tecnico:
 - Email: support@example.com
 - Documentazione: https://docs.example.com
-- Repository: https://github.com/organization/notify 
+- Repository: https://github.com/organization/notify

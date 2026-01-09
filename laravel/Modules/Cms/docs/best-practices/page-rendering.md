@@ -153,7 +153,7 @@ public function render(): View
     $content = Cache::remember("page_{$this->slug}", 3600, function () {
         return $this->theme->showPageContent($this->slug);
     });
-    
+
     return view('cms::components.page', compact('content'));
 }
 ```
@@ -165,7 +165,7 @@ public function render(): View
 
 3. **Personalizzazione del Layout**:
 ```blade
-<x-page 
+<x-page
     slug="home"
     :layout="$customLayout"
     :class="$additionalClasses"
@@ -188,4 +188,4 @@ Per una documentazione più dettagliata sul sistema di gestione dei contenuti e 
 
 ---
 @see laravel/Themes/One/resources/views/pages/index.blade.php
-@see laravel/docs/cms/components.md 
+@see laravel/docs/cms/components.md

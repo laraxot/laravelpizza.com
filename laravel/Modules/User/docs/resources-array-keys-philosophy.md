@@ -62,7 +62,7 @@ vs
            'name' => TextColumn::make('name'),
        ];
    }
-   
+
    // ❌ ERRATO
    /**
     * @return array<int, \Filament\Tables\Columns\Column>

@@ -41,13 +41,13 @@ namespace Modules\User\Providers;
 use Illuminate\Support\Facades\View;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 
-class UserServiceProvider extends XotBaseServiceProvider 
+class UserServiceProvider extends XotBaseServiceProvider
 {
     public function registerViews(): void
     {
         // ERRORE: Sovrascrivere completamente il metodo registerViews
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'user');
-        
+
         // ERRORE: Aggiungere path personalizzati per risolvere problemi specifici
         View::addNamespace('user-widgets', __DIR__.'/../resources/views/filament/widgets');
 
@@ -73,7 +73,7 @@ Se hai problemi con la risoluzione delle view:
 2. **VERIFICA la struttura delle cartelle** segua le convenzioni Windsurf/Xot
 3. **ADATTA i componenti** (widgets, livewire, ecc.) per utilizzare i path corretti
 
-### 📋 ESEMPIO CORRETTO 
+### 📋 ESEMPIO CORRETTO
 ```php
 class UserServiceProvider extends XotBaseServiceProvider
 {
@@ -84,7 +84,7 @@ class UserServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot(); // Questo registra già views, translations, ecc.
-        
+
         // Aggiungi funzionalità specifiche qui
         $this->registerAuthenticationProviders();
         $this->registerPasswordRules();
@@ -105,13 +105,13 @@ class LoginWidget extends XotBaseWidget
 {
     // Specificare correttamente il percorso della vista
     protected static string $view = 'user::filament.widgets.login';
-    
+
     // SOLUZIONE: Creare un metodo per gestire casi speciali se necessario
     public static function resolveViewPath(): string
     {
         // Logica condizionale senza modificare i ServiceProvider
-        return app()->runningInConsole() 
-            ? 'user::filament.widgets.login' 
+        return app()->runningInConsole()
+            ? 'user::filament.widgets.login'
             : 'filament.widgets.login';
     }
 }

@@ -99,4 +99,4 @@ class MenuItem extends Model implements ModelWithPosContract
 - Implementare la logica di riordinamento in modo efficiente
 - Gestire correttamente le transazioni per gli aggiornamenti multipli
 - Mantenere la consistenza delle posizioni
-- Documentare eventuali comportamenti specifici del gruppo 
+- Documentare eventuali comportamenti specifici del gruppo

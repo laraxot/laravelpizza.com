@@ -6,7 +6,6 @@ https://github.com/spatie/laravel-translatable
 
 https://blog.quickadminpanel.com/10-best-laravel-packages-for-multi-language-translations/
 
-
 ## Collegamenti tra versioni di readme.md
 * [readme.md](../../../Gdpr/docs/readme.md)
 * [readme.md](../../../UI/docs/readme.md)

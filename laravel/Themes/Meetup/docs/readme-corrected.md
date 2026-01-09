@@ -83,4 +83,3 @@ L'HTML in `resources/html/index.html` è **già corretto** per meetup:
 - Modello Event: `laravel/Modules/Meetup/app/Models/Event.php`
 - Migrazione: `laravel/Modules/Meetup/database/migrations/2025_01_01_000001_create_meetup_events_table.php`
 - Filament Resource: `laravel/Modules/Meetup/app/Filament/Resources/EventResource.php`
-

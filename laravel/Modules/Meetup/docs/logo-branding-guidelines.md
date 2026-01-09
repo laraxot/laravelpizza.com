@@ -13,15 +13,15 @@ Questo documento definisce le linee guida per l'uso del logo e degli elementi di
 Il logo è uno **spicchio di pizza stilizzato** estratto direttamente da `laravelpizza.com`.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" 
-     width="24" 
-     height="24" 
-     viewBox="0 0 24 24" 
-     fill="none" 
-     stroke="currentColor" 
-     stroke-width="2" 
-     stroke-linecap="round" 
-     stroke-linejoin="round" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="24"
+     height="24"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
      class="h-8 w-8 text-red-500">
   <path d="M15 11h.01"></path>
   <path d="M11 15h.01"></path>
@@ -75,16 +75,16 @@ Il logo è uno **spicchio di pizza stilizzato** estratto direttamente da `larave
 
 ```html
 <a href="/" class="flex items-center space-x-3">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         width="24" 
-         height="24" 
-         viewBox="0 0 24 24" 
-         fill="none" 
-         stroke="currentColor" 
-         stroke-width="2" 
-         stroke-linecap="round" 
-         stroke-linejoin="round" 
-         class="h-8 w-8 text-red-500" 
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="24"
+         height="24"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         class="h-8 w-8 text-red-500"
          aria-hidden="true">
         <path d="M15 11h.01"></path>
         <path d="M11 15h.01"></path>
@@ -100,15 +100,15 @@ Il logo è uno **spicchio di pizza stilizzato** estratto direttamente da `larave
 
 ```html
 <div class="flex justify-center mb-8">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         width="24" 
-         height="24" 
-         viewBox="0 0 24 24" 
-         fill="none" 
-         stroke="currentColor" 
-         stroke-width="2" 
-         stroke-linecap="round" 
-         stroke-linejoin="round" 
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="24"
+         height="24"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
          class="h-24 w-24 text-red-500">
         <path d="M15 11h.01"></path>
         <path d="M11 15h.01"></path>
@@ -193,4 +193,3 @@ Il logo si adatta automaticamente alle dimensioni del container:
 3. **Usare currentColor** - Per flessibilità di colore
 4. **Accessibilità** - Aggiungere `aria-hidden="true"` quando decorativo
 5. **Performance** - SVG inline è preferibile a immagini esterne
-

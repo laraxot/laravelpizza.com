@@ -61,7 +61,7 @@ if ($user === null) {
 ```php
 protected $appends = [
     'full_name',
-    'user_name', 
+    'user_name',
     'avatar',
 ];
 

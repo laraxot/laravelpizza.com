@@ -15,4 +15,4 @@
 - **Bounded Context**: area del dominio con regole e modelli propri (es. Order, Cart).
 - **Zen**: filosofia di semplicità, chiarezza, single responsibility.
 - **Command Bus**: pattern per disaccoppiare l'invio e la gestione dei comandi.
-- **CRUD**: Create, Read, Update, Delete; approccio tradizionale senza event sourcing. 
+- **CRUD**: Create, Read, Update, Delete; approccio tradizionale senza event sourcing.

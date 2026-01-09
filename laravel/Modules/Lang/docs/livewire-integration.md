@@ -59,11 +59,11 @@ class LivewireLocalization
         if ($request->hasHeader('X-Livewire') && $request->hasHeader('Referer')) {
             $referer = $request->header('Referer');
             $locale = $this->localization->getCurrentLocale();
-            
+
             // Estrai la lingua dall'URL di riferimento
             $path = parse_url($referer, PHP_URL_PATH);
             $segments = explode('/', trim($path, '/'));
-            
+
             if (count($segments) > 0 && in_array($segments[0], array_keys($this->localization->getSupportedLocales()))) {
                 $locale = $segments[0];
                 app()->setLocale($locale);
@@ -106,18 +106,18 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 class LocalizedComponent extends Component
 {
     protected $listeners = ['languageChanged' => '$refresh'];
-    
+
     public function mount()
     {
         $this->setLocale();
     }
-    
+
     protected function setLocale()
     {
         $locale = session('locale', config('app.locale'));
         app()->setLocale($locale);
     }
-    
+
     public function changeLanguage($locale)
     {
         if (array_key_exists($locale, LaravelLocalization::getSupportedLocales())) {
@@ -139,20 +139,20 @@ namespace App\Http\Livewire;
 class ExampleComponent extends LocalizedComponent
 {
     public $name = '';
-    
+
     protected $rules = [
         'name' => 'required|min:3',
     ];
-    
+
     public function save()
     {
         $this->validate();
-        
+
         // Logica di salvataggio...
-        
+
         session()->flash('message', __('messages.saved_successfully'));
     }
-    
+
     public function render()
     {
         return view('livewire.example-component');
@@ -202,40 +202,40 @@ class LanguageSwitcher extends Component
 {
     public $currentLocale;
     public $availableLocales = [];
-    
+
     public function mount()
     {
         $this->currentLocale = app()->getLocale();
         $this->availableLocales = LaravelLocalization::getSupportedLocales();
     }
-    
+
     public function changeLanguage($locale)
     {
         if (array_key_exists($locale, $this->availableLocales)) {
             session(['locale' => $locale]);
             app()->setLocale($locale);
-            
+
             // Reindirizza alla stessa pagina nella nuova lingua
             $currentUrl = url()->current();
             $newUrl = LaravelLocalization::getLocalizedURL($locale, null, [], true);
-            
+
             // Se l'URL corrente non è localizzato, mantieni il percorso
             $path = parse_url($currentUrl, PHP_URL_PATH);
             $path = ltrim($path, '/');
             $segments = explode('/', $path);
-            
+
             if (count($segments) > 0 && array_key_exists($segments[0], $this->availableLocales)) {
                 array_shift($segments);
             }
-            
+
             if (!empty($segments)) {
                 $newUrl = rtrim($newUrl, '/') . '/' . implode('/', $segments);
             }
-            
+
             return redirect($newUrl);
         }
     }
-    
+
     public function render()
     {
         return view('livewire.language-switcher');
@@ -259,7 +259,7 @@ use Tests\TestCase;
 class LivewireLocalizationTest extends TestCase
 {
     use RefreshDatabase;
-    
+
     /** @test */
     public function it_sets_locale_from_referer()
     {
@@ -267,11 +267,11 @@ class LivewireLocalizationTest extends TestCase
             'X-Livewire' => true,
             'Referer' => 'http://example.com/it/dashboard',
         ])->get('/livewire/update');
-        
+
         $response->assertStatus(200);
         $this->assertEquals('it', app()->getLocale());
     }
-    
+
     /** @test */
     public function it_handles_invalid_locale()
     {
@@ -279,7 +279,7 @@ class LivewireLocalizationTest extends TestCase
             'X-Livewire' => true,
             'Referer' => 'http://example.com/xx/dashboard',
         ])->get('/livewire/update');
-        
+
         $response->assertStatus(200);
         $this->assertEquals(config('app.locale'), app()->getLocale());
     }

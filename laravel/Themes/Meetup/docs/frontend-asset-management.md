@@ -34,7 +34,7 @@ This practice is essential due to the project's modular and theme-based architec
 3. **Vite Configuration Path Resolution:** The `vite.config.js` file uses `resolve(__dirname, ...)` to resolve paths. When executed from the theme directory:
    - `__dirname` = `/var/www/_bases/base_laravelpizza/laravel/Themes/Meetup`
    - Paths are correctly resolved relative to the theme directory
-   
+
    If executed from Laravel root:
    - `__dirname` = `/var/www/_bases/base_laravelpizza/laravel`
    - Paths would be incorrectly resolved ❌

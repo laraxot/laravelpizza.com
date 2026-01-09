@@ -36,7 +36,7 @@ abstract class XotBasePage extends Page
             // Azioni standard
         ];
     }
-    
+
     // Logica comune
     protected function getDefaultNavigationSort(): int
     {
@@ -153,4 +153,4 @@ L'utilizzo delle classi base Xot è una scelta architetturale che:
 - Facilita l'estensione
 - Centralizza il controllo
 
-Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto per mantenere la coerenza e la qualità del codice. 
+Questa convenzione dovrebbe essere seguita rigorosamente in tutto il progetto per mantenere la coerenza e la qualità del codice.

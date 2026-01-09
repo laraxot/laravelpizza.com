@@ -11,5 +11,3 @@ https://medium.com/@mwaqasiu/translating-text-in-laravel-made-easy-with-translat
 ## Extra risorse da _docs
 
 (Nessun nuovo link da aggiungere: i link di _docs/links01.txt sono già presenti in questo file)
-
-

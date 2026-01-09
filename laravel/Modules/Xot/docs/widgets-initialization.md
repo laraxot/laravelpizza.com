@@ -60,7 +60,7 @@ class LoginWidget extends XotBaseWidget
             'remember' => Checkbox::make('remember'),
         ];
     }
-    
+
     // mount() NON necessario - l'inizializzazione avviene in form()
 }
 ```
@@ -78,7 +78,7 @@ class EditUserWidget extends XotBaseWidget
         // Logica specifica (carica record, setta proprietà, ecc.)
         $this->type = $type;
         $this->record = $this->getFormModel($userId);
-        
+
         // NON serve chiamare initXotBaseWidget() - form() gestisce tutto
     }
 }
@@ -114,7 +114,7 @@ class LoginWidget extends XotBaseWidget
             'remember' => Checkbox::make('remember'),
         ];
     }
-    
+
     // mount() NON necessario
 }
 ```
@@ -131,7 +131,7 @@ class EditUserWidget extends XotBaseWidget
         // Solo logica specifica - NON inizializzare $this->data qui
         $this->type = $type;
         $this->record = $this->getFormModel($userId);
-        
+
         // form() gestirà automaticamente l'inizializzazione di $this->data
     }
 }

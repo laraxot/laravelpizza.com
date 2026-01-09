@@ -62,7 +62,6 @@ Modules/Job/
 
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](../../../Notify/docs/analysis.md)
 * [analysis.md](../../../Notify/docs/phpstan/analysis.md)
@@ -78,15 +77,10 @@ Modules/Job/
 * [analysis.md](../../../Media/docs/phpstan/analysis.md)
 * [analysis.md](../../../../Themes/One/docs/analysis.md)
 
-
 ### Versione Incoming
-
 
 ---
 
-
 ### Versione Incoming
 
-
 ---
-

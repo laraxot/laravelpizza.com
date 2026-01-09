@@ -46,9 +46,8 @@
 ## Collegamenti
 - [Roadmap Principale](../../roadmap.md)
 - [Best Practices Sicurezza](../../BEST-PRACTICES.md#security)
-- [Linee Guida Sicurezza](../../security/guidelines.md) 
+- [Linee Guida Sicurezza](../../security/guidelines.md)
 ## Collegamenti tra versioni di status.md
 * [status.md](../../../Xot/docs/roadmap/docs/status.md)
 * [status.md](../../../Xot/docs/roadmap/testing/status.md)
 * [status.md](../../../Xot/docs/roadmap/security/status.md)
-

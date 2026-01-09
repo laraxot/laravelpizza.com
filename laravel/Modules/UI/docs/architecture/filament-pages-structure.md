@@ -146,7 +146,7 @@ return [
 class S3Test extends XotBasePage
 {
     protected static string $view = 'ui::filament.clusters.test.pages.s3test';
-    
+
     public function emailForm(Form $form): Form
     {
         return $form->schema([
@@ -166,7 +166,7 @@ class S3Test extends XotBasePage
 
         <form wire:submit="sendEmail">
             {{ $this->emailForm }}
-            
+
             <div class="flex justify-end gap-4 mt-6">
                 {{ $this->getEmailFormActions() }}
             </div>
@@ -180,4 +180,4 @@ class S3Test extends XotBasePage
 - [UI Module README](./README.md)
 - [Blade Components](./blade-components.md)
 
-*Ultimo aggiornamento: 2025-01-06* 
+*Ultimo aggiornamento: 2025-01-06*

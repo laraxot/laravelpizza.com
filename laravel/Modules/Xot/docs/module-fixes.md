@@ -139,7 +139,7 @@ public static function getFormSchema(): array
    - Permessi dei file
 
 4. Rilanciare PHPStan dopo le correzioni
-5. Aggiornare la documentazione con i risultati finali 
+5. Aggiornare la documentazione con i risultati finali
 
 # Struttura Modulare del Progetto
 
@@ -265,7 +265,7 @@ use Modules\Xot\Actions\Import\ImportCsvAction;
 2. Standardizzare struttura tra moduli
 3. Aggiornare namespace non conformi
 4. Verificare dipendenze tra moduli
-5. Aggiornare documentazione moduli correlati 
+5. Aggiornare documentazione moduli correlati
 
 # Analisi PHPStan Livello 3
 
@@ -358,7 +358,7 @@ assert(is_array($config), 'Configuration must be an array');
 4. Ottimizzazione
    - [ ] Rifattorizzare codice duplicato
    - [ ] Migliorare performance
-   - [ ] Ridurre complessità ciclomatica 
+   - [ ] Ridurre complessità ciclomatica
 
 # Gestione Utenti e Profili
 
@@ -434,7 +434,7 @@ if (!$user) throw new Exception('User not found');
 1. [ ] Verificare tutte le occorrenze di User::class nel codice
 2. [ ] Sostituire con getUserClass() dove necessario
 3. [ ] Aggiungere test per la gestione utenti
-4. [ ] Documentare le interfacce UserContract e ProfileContract 
+4. [ ] Documentare le interfacce UserContract e ProfileContract
 
 # Gestione Autenticazione
 
@@ -527,7 +527,7 @@ public function isSuperAdmin(): bool
 1. [ ] Verificare altri utilizzi di auth() helper nel codice
 2. [ ] Standardizzare l'uso delle Facades in tutto il modulo
 3. [ ] Aggiungere test per i casi di autenticazione
-4. [ ] Documentare le best practices nei file README 
+4. [ ] Documentare le best practices nei file README
 
 # Errori PHPStan nel Modulo Xot
 
@@ -632,7 +632,7 @@ Utilizzare metodi alternativi o implementare i metodi mancanti
 1. [ ] Implementare le correzioni per ogni errore
 2. [ ] Aggiungere test per le funzionalità corrette
 3. [ ] Verificare la compatibilità con Doctrine
-4. [ ] Aggiornare la documentazione API 
+4. [ ] Aggiornare la documentazione API
 
 ## Gestione Email
 
@@ -674,7 +674,7 @@ $action->execute($recordData, 'destinatario@esempio.com');
 - [ ] Aggiungere supporto per allegati
 - [ ] Implementare template per diversi tipi di record
 - [ ] Aggiungere test per il sistema di email
-- [ ] Documentare opzioni di personalizzazione template 
+- [ ] Documentare opzioni di personalizzazione template
 
 ## Gestione Schema Database
 
@@ -708,7 +708,7 @@ $schemaManager = $action->execute(User::class);
 - [ ] Aggiungere cache per lo schema manager
 - [ ] Implementare supporto per migrazioni automatiche
 - [ ] Aggiungere test per diverse configurazioni di database
-- [ ] Documentare casi d'uso comuni 
+- [ ] Documentare casi d'uso comuni
 
 ## Gestione Relazioni
 
@@ -758,7 +758,7 @@ $data = [
 - [ ] Aggiungere supporto per relazioni polimorfe
 - [ ] Migliorare la gestione degli errori
 - [ ] Aggiungere test per ogni tipo di relazione
-- [ ] Documentare i pattern di utilizzo comuni 
+- [ ] Documentare i pattern di utilizzo comuni
 
 ## Azioni sui Modelli
 

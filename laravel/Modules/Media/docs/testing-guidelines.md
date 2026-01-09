@@ -39,7 +39,7 @@ describe('Media Management Business Logic', function () {
     it('uploads and stores media files securely', function () {
         $user = User::factory()->create();
         $file = UploadedFile::fake()->image('test-image.jpg', 800, 600);
-        
+
         $media = Media::createFromUpload($file, [
             'collection' => 'patient_documents',
             'user_id' => $user->id,
@@ -56,16 +56,16 @@ describe('Media Management Business Logic', function () {
 
     it('validates file types and sizes', function () {
         $user = User::factory()->create();
-        
+
         // Valid file
         $validFile = UploadedFile::fake()->image('valid.jpg', 800, 600);
         $validMedia = Media::createFromUpload($validFile, ['user_id' => $user->id]);
-        
+
         expect($validMedia)->toBeInstanceOf(Media::class);
 
         // Invalid file type
         $invalidFile = UploadedFile::fake()->create('malicious.exe', 1000);
-        
+
         expect(function () use ($invalidFile, $user) {
             Media::createFromUpload($invalidFile, ['user_id' => $user->id]);
         })->toThrow(\Modules\Media\Exceptions\InvalidFileTypeException::class);
@@ -74,7 +74,7 @@ describe('Media Management Business Logic', function () {
     it('generates thumbnails for images', function () {
         $user = User::factory()->create();
         $file = UploadedFile::fake()->image('large-image.jpg', 2000, 1500);
-        
+
         $media = Media::createFromUpload($file, [
             'user_id' => $user->id,
             'generate_thumbnails' => true,
@@ -90,7 +90,7 @@ describe('Media Management Business Logic', function () {
     it('extracts and stores metadata', function () {
         $user = User::factory()->create();
         $file = UploadedFile::fake()->image('metadata-test.jpg', 1024, 768);
-        
+
         $media = Media::createFromUpload($file, [
             'user_id' => $user->id,
             'extract_metadata' => true,
@@ -111,7 +111,7 @@ describe('Patient Document Business Logic', function () {
         $patient = Patient::factory()->create();
         $user = User::factory()->create();
         $file = UploadedFile::fake()->create('medical-report.pdf', 500);
-        
+
         $document = PatientDocument::createSecureDocument($file, [
             'patient_id' => $patient->id,
             'document_type' => 'medical_report',
@@ -130,7 +130,7 @@ describe('Patient Document Business Logic', function () {
         $doctor = User::factory()->create(['role' => 'doctor']);
         $nurse = User::factory()->create(['role' => 'nurse']);
         $admin = User::factory()->create(['role' => 'admin']);
-        
+
         $document = PatientDocument::factory()->create([
             'patient_id' => $patient->id,
             'access_level' => 'doctor_only',
@@ -145,11 +145,11 @@ describe('Patient Document Business Logic', function () {
         $patient = Patient::factory()->create();
         $user = User::factory()->create();
         $document = PatientDocument::factory()->create(['patient_id' => $patient->id]);
-        
+
         $document->recordAccess($user, 'view');
-        
+
         $accessLog = $document->accessLogs()->latest()->first();
-        
+
         expect($accessLog)->not->toBeNull()
             ->and($accessLog->user_id)->toBe($user->id)
             ->and($accessLog->action)->toBe('view')
@@ -183,7 +183,7 @@ describe('Image Processing Business Logic', function () {
     it('converts images to standardized formats', function () {
         $user = User::factory()->create();
         $file = UploadedFile::fake()->image('test.png', 800, 600);
-        
+
         $media = Media::createFromUpload($file, [
             'user_id' => $user->id,
             'convert_to' => 'jpg',
@@ -197,9 +197,9 @@ describe('Image Processing Business Logic', function () {
     it('compresses images without significant quality loss', function () {
         $user = User::factory()->create();
         $file = UploadedFile::fake()->image('large.jpg', 3000, 2000);
-        
+
         $originalSize = $file->getSize();
-        
+
         $media = Media::createFromUpload($file, [
             'user_id' => $user->id,
             'compress' => true,
@@ -215,7 +215,7 @@ describe('Image Processing Business Logic', function () {
     it('processes medical images with DICOM compliance', function () {
         $user = User::factory()->create();
         $file = UploadedFile::fake()->create('xray.dcm', 2000, 'application/dicom');
-        
+
         $media = Media::createFromUpload($file, [
             'user_id' => $user->id,
             'collection' => 'medical_images',
@@ -230,7 +230,7 @@ describe('Image Processing Business Logic', function () {
     it('generates multiple conversion sizes', function () {
         $user = User::factory()->create();
         $file = UploadedFile::fake()->image('original.jpg', 2000, 1500);
-        
+
         $media = Media::createFromUpload($file, [
             'user_id' => $user->id,
             'conversions' => ['thumb', 'medium', 'large'],
@@ -242,7 +242,7 @@ describe('Image Processing Business Logic', function () {
 
         $thumbPath = $media->getPath('thumb');
         $mediumPath = $media->getPath('medium');
-        
+
         Storage::disk('local')->assertExists($thumbPath);
         Storage::disk('local')->assertExists($mediumPath);
     });
@@ -256,7 +256,7 @@ describe('Media Security Business Logic', function () {
     it('encrypts sensitive patient documents', function () {
         $patient = Patient::factory()->create();
         $file = UploadedFile::fake()->create('sensitive-report.pdf', 1000);
-        
+
         $document = PatientDocument::createSecureDocument($file, [
             'patient_id' => $patient->id,
             'is_sensitive' => true,
@@ -271,7 +271,7 @@ describe('Media Security Business Logic', function () {
     it('scans uploaded files for malware', function () {
         $user = User::factory()->create();
         $cleanFile = UploadedFile::fake()->image('clean.jpg', 800, 600);
-        
+
         $media = Media::createFromUpload($cleanFile, [
             'user_id' => $user->id,
             'scan_for_malware' => true,
@@ -284,7 +284,7 @@ describe('Media Security Business Logic', function () {
     it('validates file integrity with checksums', function () {
         $user = User::factory()->create();
         $file = UploadedFile::fake()->create('document.pdf', 1000);
-        
+
         $media = Media::createFromUpload($file, [
             'user_id' => $user->id,
             'generate_checksum' => true,
@@ -300,14 +300,14 @@ describe('Media Security Business Logic', function () {
     it('implements secure file deletion', function () {
         $user = User::factory()->create();
         $file = UploadedFile::fake()->create('to-delete.pdf', 500);
-        
+
         $media = Media::createFromUpload($file, ['user_id' => $user->id]);
         $filePath = $media->getPath();
-        
+
         Storage::disk('local')->assertExists($filePath);
-        
+
         $media->secureDelete();
-        
+
         Storage::disk('local')->assertMissing($filePath);
         expect($media->fresh())->toBeNull();
     });
@@ -321,9 +321,9 @@ describe('Media Integration Tests', function () {
     it('integrates with patient management system', function () {
         $patient = Patient::factory()->create();
         $file = UploadedFile::fake()->image('patient-photo.jpg', 400, 400);
-        
+
         $media = $patient->addMediaFromUpload($file, 'profile_photos');
-        
+
         expect($patient->getMedia('profile_photos'))->toHaveCount(1)
             ->and($patient->getFirstMediaUrl('profile_photos'))->not->toBeEmpty();
     });
@@ -331,20 +331,20 @@ describe('Media Integration Tests', function () {
     it('handles bulk file uploads efficiently', function () {
         $user = User::factory()->create();
         $files = [];
-        
+
         for ($i = 0; $i < 10; $i++) {
             $files[] = UploadedFile::fake()->image("bulk-{$i}.jpg", 800, 600);
         }
-        
+
         $startTime = microtime(true);
-        
+
         $mediaItems = Media::createBulkFromUploads($files, [
             'user_id' => $user->id,
             'collection' => 'bulk_upload',
         ]);
-        
+
         $duration = microtime(true) - $startTime;
-        
+
         expect($mediaItems)->toHaveCount(10)
             ->and($duration)->toBeLessThan(5.0); // Should complete in under 5 seconds
     });
@@ -352,7 +352,7 @@ describe('Media Integration Tests', function () {
     it('synchronizes with external storage systems', function () {
         $user = User::factory()->create();
         $file = UploadedFile::fake()->create('sync-test.pdf', 1000);
-        
+
         $media = Media::createFromUpload($file, [
             'user_id' => $user->id,
             'sync_to_external' => true,
@@ -366,19 +366,19 @@ describe('Media Integration Tests', function () {
     it('generates audit reports for compliance', function () {
         $patient = Patient::factory()->create();
         $user = User::factory()->create();
-        
+
         // Create multiple documents with access logs
         $documents = PatientDocument::factory()->count(5)->create([
             'patient_id' => $patient->id,
         ]);
-        
+
         foreach ($documents as $document) {
             $document->recordAccess($user, 'view');
             $document->recordAccess($user, 'download');
         }
-        
+
         $auditReport = MediaAuditReport::generateForPatient($patient);
-        
+
         expect($auditReport)->toHaveKey('total_documents')
             ->and($auditReport)->toHaveKey('access_events')
             ->and($auditReport['total_documents'])->toBe(5)
@@ -394,16 +394,16 @@ describe('Media Performance Tests', function () {
     it('handles large file uploads efficiently', function () {
         $user = User::factory()->create();
         $largeFile = UploadedFile::fake()->create('large-file.pdf', 50000); // 50MB
-        
+
         $startTime = microtime(true);
-        
+
         $media = Media::createFromUpload($largeFile, [
             'user_id' => $user->id,
             'chunk_upload' => true,
         ]);
-        
+
         $duration = microtime(true) - $startTime;
-        
+
         expect($media)->toBeInstanceOf(Media::class)
             ->and($duration)->toBeLessThan(30.0); // Should complete in under 30 seconds
     });
@@ -411,14 +411,14 @@ describe('Media Performance Tests', function () {
     it('optimizes storage usage through compression', function () {
         $user = User::factory()->create();
         $files = [];
-        
+
         // Create multiple large images
         for ($i = 0; $i < 5; $i++) {
             $files[] = UploadedFile::fake()->image("large-{$i}.jpg", 2000, 1500);
         }
-        
+
         $totalOriginalSize = array_sum(array_map(fn($file) => $file->getSize(), $files));
-        
+
         $mediaItems = [];
         foreach ($files as $file) {
             $mediaItems[] = Media::createFromUpload($file, [
@@ -427,9 +427,9 @@ describe('Media Performance Tests', function () {
                 'quality' => 75,
             ]);
         }
-        
+
         $totalCompressedSize = array_sum(array_map(fn($media) => $media->size, $mediaItems));
-        
+
         expect($totalCompressedSize)->toBeLessThan($totalOriginalSize * 0.8); // At least 20% reduction
     });
 });

@@ -107,6 +107,6 @@ Queste regole si applicano a:
 
 **Questa è la REGOLA SUPREMA del progetto <nome progetto> e ha precedenza su qualsiasi altra considerazione di testing.**
 
-**Ultimo aggiornamento**: Gennaio 2025  
-**Status**: REGOLA SUPREMA E NON NEGOZIABILE  
+**Ultimo aggiornamento**: Gennaio 2025
+**Status**: REGOLA SUPREMA E NON NEGOZIABILE
 **Applicabilità**: UNIVERSALE - tutto il progetto

@@ -4,7 +4,6 @@
 
 https://github.com/phpstan/phpstan/issues/1242
 
-
 protected function callAction(array $match)
 {
     list($controller, $method) = $this->breakControllerAndAction(

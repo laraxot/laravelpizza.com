@@ -16,7 +16,7 @@ php artisan serve --port=8001
 
 **Output**:
 ```
-INFO  Server running on [http://127.0.0.1:8001].  
+INFO  Server running on [http://127.0.0.1:8001].
 Press Ctrl+C to stop the server
 ```
 
@@ -77,9 +77,9 @@ use Filament\Panel;
 property ?string $token;
 $panel->id($module.'::admin')
 
-// Versione CURRENT (locale)  
+// Versione CURRENT (locale)
 use Filament\Panel as FilamentPanel;
-property null|string $token;  
+property null|string $token;
 $panel->id($module . '::admin')
 
 // Risoluzione "Both Changes" (SBAGLIATA)
@@ -118,13 +118,13 @@ property null|string $token;  ← SECONDO (syntax order diverso)
 public ?string $token;
 
 // Moderno (PHP 8.0+)
-public null|string $token;  
+public null|string $token;
 
 // ✅ FIX: Tieni VECCHIO (più compatible)
 public ?string $token;
 ```
 
-**Rationale**: 
+**Rationale**:
 - Nullable modern syntax può confondere alcuni static analyzers
 - Sintassi tradizionale universalmente supportata
 - Minor benefits vs major compatibility
@@ -236,7 +236,7 @@ syntax-validation:
 [mergetool]
     prompt = false
     trustExitCode = true
-    
+
 # Oppure usa tool grafico come:
 # - meld (Linux)
 # - p4merge (Multi-platform)
@@ -268,12 +268,11 @@ Eccezioni rare:
 
 ---
 
-**Documento creato**: 4 Gennaio 2025  
-**Autore**: AI Assistant + Pattern Lock File  
-**Intervento**: Bugfix session conflitti Git mal risolti  
-**Outcome**: ✅ **SUCCESS** - Server running, zero critical errors  
+**Documento creato**: 4 Gennaio 2025
+**Autore**: AI Assistant + Pattern Lock File
+**Intervento**: Bugfix session conflitti Git mal risolti
+**Outcome**: ✅ **SUCCESS** - Server running, zero critical errors
 **Documentazione correlata**:
 - [git-conflicts-mal-risolti.md](./git-conflicts-mal-risolti.md)
 - [../../bashscripts/docs/file-locking-pattern.md](../../../bashscripts/docs/file-locking-pattern.md)
 - [../../User/docs/syntax-errors-to-fix.md](../../User/docs/syntax-errors-to-fix.md)
-

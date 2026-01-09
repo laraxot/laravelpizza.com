@@ -21,7 +21,7 @@ export function exportChart(chartInstanceId, filename = 'chart.png') {
     const chart = Filament.getChart(chartInstanceId); // Hypothetical helper if Filament exposes it
     // OR find canvas directly if strictly standard
     const canvas = document.getElementById(chartInstanceId).querySelector('canvas');
-    
+
     if (!canvas) {
         console.error('Canvas not found for export');
         return;
@@ -82,7 +82,7 @@ Standard generic `<canvas>` does not export to SVG. To get SVG, you need to swap
 If you need to attach the chart to a PDF report generated on the backend (e.g. `html2pdf` or `spatie/browsershot`):
 
 1.  **Do not render chart on server**: PHP cannot render Chart.js (it's JS).
-2.  **Solution**: 
+2.  **Solution**:
     -   Render page with `browsershot` (Headless Chrome), capture screenshot/PDF.
     -   OR send the data to a specialized microservice (QuickChart.io compatible).
 

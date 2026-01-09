@@ -3,18 +3,40 @@
 declare(strict_types=1);
 
 return [
-    'actions' => [
-        'retry_all' => [
-            'label' => 'retry_all',
+    'navigation' => [
+        'label' => 'Lavoro fallito',
+        'group' => 'Lavori falliti',
+        'icon' => 'heroicon-o-exclamation-triangle',
+        'sort' => 27,
+    ],
+    'label' => 'Lavoro fallito',
+    'plural_label' => 'Lavori falliti',
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
         ],
-        'delete_all' => [
-            'label' => 'delete_all',
+        'connection' => [
+            'label' => 'Connessione',
+        ],
+        'queue' => [
+            'label' => 'Coda',
+        ],
+        'payload' => [
+            'label' => 'Contenuto',
+        ],
+        'exception' => [
+            'label' => 'Eccezione',
+        ],
+        'failed_at' => [
+            'label' => 'Fallito il',
         ],
     ],
-    'navigation' => [
-        'sort' => 20,
-        'icon' => 'failed job.navigation',
-        'group' => 'failed job.navigation',
-        'label' => 'failed job.navigation',
+    'actions' => [
+        'retry' => [
+            'label' => 'Riprova',
+        ],
+        'delete' => [
+            'label' => 'Elimina',
+        ],
     ],
 ];

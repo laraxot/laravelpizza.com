@@ -13,7 +13,7 @@ In a module, for each table there must be only ONE migration responsible for its
 - **Issue**: Multiple tableCreate() calls for the same table
 - **Resolution**: Keep the most complete version (2025_05_16_221811_create_teams_table.php) and remove duplicates
 
-### 2. roles_table.php  
+### 2. roles_table.php
 - **Files**: 2023_01_01_000011_create_role_has_permissions_table.php, 2023_01_01_000012_create_roles_table.php, 2024_01_01_000011_create_permission_role_table.php, 2024_01_01_000011_create_roles_table.php, 2025_09_18_000000_create_roles_table.php
 - **Issue**: Multiple migrations creating roles table
 - **Resolution**: Consolidate to one proper migration

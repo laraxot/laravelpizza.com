@@ -29,7 +29,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 class DashboardStatsWidget extends XotBaseWidget
 {
     protected static string $view = 'dashboard::widgets.stats';
-    
+
     protected function getData(): array
     {
         return [
@@ -38,4 +38,4 @@ class DashboardStatsWidget extends XotBaseWidget
         ];
     }
 }
-``` 
+```

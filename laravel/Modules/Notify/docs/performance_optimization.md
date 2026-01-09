@@ -18,9 +18,9 @@ class PerformanceProfiler
     {
         $start = microtime(true);
         $memory = memory_get_usage();
-        
+
         $result = $this->templateService->render($template);
-        
+
         return [
             'render_time' => microtime(true) - $start,
             'memory_usage' => memory_get_usage() - $memory,
@@ -64,12 +64,12 @@ namespace Modules\Notify\Models;
 class Template extends Model
 {
     protected $with = ['translations', 'versions'];
-    
+
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
     }
-    
+
     public function scopeLatest($query)
     {
         return $query->whereHas('versions', function ($q) {
@@ -144,10 +144,10 @@ class TemplateRenderer
     {
         // Pre-compile template
         $compiled = $this->compile($template);
-        
+
         // Cache compiled version
         Cache::put("compiled.{$template->id}", $compiled, 3600);
-        
+
         return $this->execute($compiled, $data);
     }
 }
@@ -176,10 +176,10 @@ class AssetOptimizer
     {
         // Minify CSS
         $css = $this->minifyCss($template->styles);
-        
+
         // Optimize images
         $images = $this->optimizeImages($template->images);
-        
+
         // Inline critical CSS
         return $this->inlineCriticalCss($template->content, $css);
     }
@@ -238,4 +238,4 @@ return [
 - Implementare alert per anomalie
 - Mantenere log dettagliati
 - Ottimizzare continuamente
-- Testare su diversi ambienti 
+- Testare su diversi ambienti

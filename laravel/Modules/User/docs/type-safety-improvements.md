@@ -91,7 +91,7 @@ Use safe casting for all form data:
 protected function validateForm(): array
 {
     $data = $this->form->getState();
-    
+
     return [
         'first_name' => $this->safeStringCast($data['first_name'] ?? ''),
         'last_name' => $this->safeStringCast($data['last_name'] ?? ''),
@@ -169,7 +169,7 @@ if (!Hash::check($currentPassword, $userPasswordString)) {
 public function test_safe_string_cast_handles_various_types(): void
 {
     $widget = new TestWidget();
-    
+
     $this->assertEquals('test', $widget->safeStringCast('test'));
     $this->assertEquals('', $widget->safeStringCast(null));
     $this->assertEquals('1', $widget->safeStringCast(true));
@@ -227,4 +227,4 @@ public function test_safe_string_cast_handles_various_types(): void
 - All changes maintain backward compatibility
 - Type safety improvements enhance code reliability
 - Security is improved through safe handling of sensitive data
-- Documentation is updated to reflect all changes 
+- Documentation is updated to reflect all changes

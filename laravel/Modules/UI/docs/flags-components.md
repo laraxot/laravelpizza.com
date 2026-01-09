@@ -70,10 +70,10 @@ I componenti SVG supportano tutti gli attributi HTML standard, inclusi:
 ### Esempio con Attributi
 
 ```blade
-<x-ui-flags.it 
-    class="h-6 w-6 rounded-full shadow-sm" 
-    title="Italiano" 
-    aria-label="Seleziona lingua italiana" 
+<x-ui-flags.it
+    class="h-6 w-6 rounded-full shadow-sm"
+    title="Italiano"
+    aria-label="Seleziona lingua italiana"
 />
 ```
 
@@ -139,7 +139,7 @@ Le bandiere devono essere utilizzate come icone Filament:
 2. **Personalizzazione**: Facile da personalizzare con classi CSS
 3. **Prestazioni**: Gli SVG sono leggeri e non richiedono richieste HTTP aggiuntive
 4. **Accessibilità**: Possibilità di aggiungere attributi di accessibilità
-5. **Coerenza**: Utilizzo di componenti nativi di 
+5. **Coerenza**: Utilizzo di componenti nativi di
 5. **Coerenza**: Utilizzo di componenti nativi di SaluteOra
 5. **Coerenza**: Utilizzo di componenti nativi di <nome progetto>
 

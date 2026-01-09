@@ -140,4 +140,4 @@ class NotificationTemplate extends Model
 
 - [GrapesJS Documentation](https://grapesjs.com/docs/)
 - [Filament GrapesJS Plugin](https://filamentphp.com/plugins/dotswan-grapesjs)
-- [Laravel Notifications](https://laravel.com/docs/notifications) 
+- [Laravel Notifications](https://laravel.com/docs/notifications)

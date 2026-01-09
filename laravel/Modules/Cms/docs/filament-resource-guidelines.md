@@ -51,7 +51,7 @@ class MenuResource extends XotBaseResource
 - Only implements getFormSchema() ✓
 - No unnecessary method overrides ✓
 
-#### ✅ PageContentResource - CORRECT  
+#### ✅ PageContentResource - CORRECT
 - Extends LangBaseResource (for multilingual support) ✓
 - Only implements getFormSchema() ✓
 - No unnecessary method overrides ✓

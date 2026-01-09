@@ -10,4 +10,4 @@
 - **Reattore**: Componente che gestisce effetti collaterali.
 - **Aggregate Root**: Oggetto che incapsula la logica di business e gestisce gli eventi.
 - **CQRS**: Separazione tra comandi (scrittura) e query (lettura).
-- **Tokenizzazione**: Rappresentazione digitale di asset o quote tramite token. 
+- **Tokenizzazione**: Rappresentazione digitale di asset o quote tramite token.

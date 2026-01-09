@@ -222,15 +222,15 @@ use Modules\User\Models\User;
 
 class CreateTenantUserCommand extends Command
 {
-    protected $signature = 'user:create-tenant-user 
-                            {tenant : The tenant ID} 
-                            {name : User name} 
+    protected $signature = 'user:create-tenant-user
+                            {tenant : The tenant ID}
+                            {name : User name}
                             {email : User email}';
 
     public function handle(): int
     {
         $tenantId = $this->argument('tenant');
-        
+
         // ✅ Imposta manualmente tenant_id in contesto console
         $user = User::create([
             'name' => $this->argument('name'),
@@ -339,7 +339,7 @@ Monitorare log per:
 ## 👥 Contributors
 
 - **Analisi**: AI Assistant
-- **Fix**: AI Assistant  
+- **Fix**: AI Assistant
 - **Testing**: Da eseguire
 - **Review**: Da assegnare
 
@@ -371,4 +371,3 @@ Monitorare log per:
 **File Creati**:
 - `Modules/User/tests/Feature/TenantScopeConsoleTest.php`
 - `Modules/User/docs/bug-fixes/make-filament-user-crash-loop.md`
-

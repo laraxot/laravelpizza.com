@@ -17,13 +17,13 @@
 // PRIMA
 @return array<int, \Filament\Actions\Action>
 
-// DOPO  
+// DOPO
 @return array<string, \Filament\Actions\Action>
 ```
 
 ### 2. Risoluzione Problemi Array con Chiavi Stringhe
 - **Moduli coinvolti**: Lang, User
-- **File corretti**: 
+- **File corretti**:
   - `LangBaseListRecords.php`
   - `ListTranslationFiles.php`
   - `BaseListUsers.php`
@@ -151,4 +151,4 @@ Il progetto ora ha una **qualità del codice eccellente** e rispetta tutte le co
 - **100% conformità alle regole del progetto**
 - **Codice robusto e manutenibile**
 
-**Status**: ✅ **COMPLETATO CON SUCCESSO** 
+**Status**: ✅ **COMPLETATO CON SUCCESSO**

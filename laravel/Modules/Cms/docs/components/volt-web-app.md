@@ -74,18 +74,18 @@ $isPositive = computed(function () {
     <div class="p-6">
         <div class="max-w-sm mx-auto bg-white rounded-lg shadow-md p-6">
             <h2 class="text-2xl font-bold mb-4">Counter Magico</h2>
-            
+
             <div class="text-center">
                 <span class="text-4xl {{ $isPositive ? 'text-green-600' : 'text-red-600' }}">
                     {{ $count }}
                 </span>
             </div>
-            
+
             <div class="flex justify-center gap-4 mt-4">
                 <x-cms::button wire:click="decrement">
                     -
                 </x-cms::button>
-                
+
                 <x-cms::button wire:click="increment">
                     +
                 </x-cms::button>
@@ -119,7 +119,7 @@ rules([
 
 $submitForm = function () {
     $this->validate();
-    
+
     // Logica di invio
     $this->submitted = true;
     $this->formData = [
@@ -130,8 +130,8 @@ $submitForm = function () {
 };
 
 $isValid = computed(function () {
-    return !empty($this->formData['name']) && 
-           !empty($this->formData['email']) && 
+    return !empty($this->formData['name']) &&
+           !empty($this->formData['email']) &&
            !empty($this->formData['message']);
 });
 ?>
@@ -168,7 +168,7 @@ $isValid = computed(function () {
                 />
 
                 <div class="flex justify-end">
-                    <x-cms::button 
+                    <x-cms::button
                         type="submit"
                         :disabled="!$isValid"
                     >
@@ -195,13 +195,13 @@ state([
 
 $addItem = function () {
     if (empty($this->newItem)) return;
-    
+
     $this->items[] = [
         'id' => uniqid(),
         'text' => $this->newItem,
         'completed' => false,
     ];
-    
+
     $this->newItem = '';
 };
 
@@ -248,7 +248,7 @@ $completedCount = computed(function () {
                                 wire:model.live="item.completed"
                                 wire:click="toggleItem('{{ $item['id'] }}')"
                             />
-                            
+
                             <span class="{{ $item['completed'] ? 'line-through text-gray-500' : '' }}">
                                 {{ $item['text'] }}
                             </span>
@@ -382,4 +382,4 @@ trait WithSorting
 ### Documentation
 - [Laravel Volt](https://livewire.laravel.com/docs/volt)
 - [Livewire](https://livewire.laravel.com)
-- [TailwindCSS](https://tailwindcss.com) 
+- [TailwindCSS](https://tailwindcss.com)

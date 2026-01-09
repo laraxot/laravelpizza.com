@@ -133,4 +133,4 @@ Components/ → components/
 ---
 
 *Ultimo aggiornamento: 2025-01-27*
-*Stato: ATTIVO - REGOLA CRITICA* 
+*Stato: ATTIVO - REGOLA CRITICA*

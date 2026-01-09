@@ -46,14 +46,14 @@ abstract class XotBaseModel extends Model
     use HasXotFactory;
     use Traits\RelationX;
     use Updater;
-    
+
     // Common configurations
     public static $snakeAttributes = true;
     public $incrementing = true;
     public $timestamps = true;
     protected $perPage = 30;
     protected $connection = 'user';
-    
+
     protected function casts(): array
     {
         return [
@@ -78,7 +78,7 @@ abstract class BaseModel extends XotBaseModel implements HasMedia, ModelContract
     use InteractsWithMedia;
 
     protected $connection = 'quaeris'; // Module-specific connection
-    
+
     protected $with = [
         'extra', // Always load extra fields
     ];

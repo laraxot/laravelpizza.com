@@ -59,11 +59,11 @@ test('user factory creates different user types correctly', function () {
     $patient = UserFactory::new()->patient()->create();
     $doctor = UserFactory::new()->doctor()->create();
     $admin = UserFactory::new()->admin()->create();
-    
+
     expect($patient->type)->toBe(UserTypeEnum::PATIENT);
     expect($doctor->type)->toBe(UserTypeEnum::DOCTOR);
     expect($admin->type)->toBe(UserTypeEnum::ADMIN);
-    
+
     expect($patient)->toBeInstanceOf(Patient::class);
     expect($doctor)->toBeInstanceOf(Doctor::class);
     expect($admin)->toBeInstanceOf(Admin::class);
@@ -75,7 +75,7 @@ test('user factory creates different user types correctly', function () {
 test('doctor studio manages cross-database connections', function () {
     $doctor = Doctor::factory()->create();
     $studio = Studio::factory()->create();
-    
+
     $doctorStudio = DoctorStudio::create([
         'doctor_id' => $doctor->id,
         'studio_id' => $studio->id,
@@ -92,15 +92,15 @@ test('doctor studio manages cross-database connections', function () {
 test('doctor calendar widget shows only tenant appointments', function () {
     $studio1 = Studio::factory()->create();
     $studio2 = Studio::factory()->create();
-    
+
     $appointment1 = Appointment::factory()->create(['studio_id' => $studio1->id]);
     $appointment2 = Appointment::factory()->create(['studio_id' => $studio2->id]);
-    
+
     Filament::setTenant($studio1);
-    
+
     $widget = new DoctorCalendarWidget();
     $events = $widget->fetchEvents(['start' => now()->startOfMonth(), 'end' => now()->endOfMonth()]);
-    
+
     expect($events)->toHaveCount(1);
     expect($events[0]['id'])->toBe($appointment1->id);
 });
@@ -111,19 +111,19 @@ test('doctor calendar widget shows only tenant appointments', function () {
 test('appointment states have complete translations in all languages', function () {
     $states = AppointmentStatusEnum::cases();
     $languages = ['it', 'en', 'de'];
-    
+
     foreach ($states as $state) {
         foreach ($languages as $lang) {
             app()->setLocale($lang);
-            
+
             $label = __("<nome progetto>::states.{$state->value}.label");
             $description = __("<nome progetto>::states.{$state->value}.description");
-            
+
             expect($label)->not->toContain('<nome progetto>::');
             expect($description)->not->toContain('<nome progetto>::');
             $label = __("<nome progetto>::states.{$state->value}.label");
             $description = __("<nome progetto>::states.{$state->value}.description");
-            
+
             expect($label)->not->toContain('<nome progetto>::');
             expect($description)->not->toContain('<nome progetto>::');
         }
@@ -255,24 +255,24 @@ on: [push, pull_request]
 jobs:
   tests:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.2'
         extensions: mbstring, xml, ctype, iconv, intl, pdo_sqlite
-        
+
     - name: Install dependencies
       run: composer install --no-progress --prefer-dist --optimize-autoloader
-      
+
     - name: Setup test database
       run: |
         php artisan migrate:fresh --env=testing
         php artisan db:seed --env=testing
-        
+
     - name: Run tests
       run: ./scripts/run-module-tests.sh --all --coverage
 ```
@@ -325,20 +325,7 @@ jobs:
 
 ---
 
-**Ultimo aggiornamento**: 28 Gennaio 2025  
-**Stato**: ✅ Implementazione Completa  
-**Responsabile**: Team Development  
+**Ultimo aggiornamento**: 28 Gennaio 2025
+**Stato**: ✅ Implementazione Completa
+**Responsabile**: Team Development
 **Review**: Richiesta per validazione e deployment
-
-
-
-
-
-
-
-
-
-
-
-
-

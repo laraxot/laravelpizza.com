@@ -31,7 +31,7 @@ while (! feof($this->stream) && $this->start <= $this->end) {
 }
 ```
 
-Questo controllo garantisce che `fread()` venga chiamato solo con un valore positivo per il parametro `$length`, evitando anche potenziali loop infiniti nel caso in cui `$bytesToRead` fosse zero o negativo. 
+Questo controllo garantisce che `fread()` venga chiamato solo con un valore positivo per il parametro `$length`, evitando anche potenziali loop infiniti nel caso in cui `$bytesToRead` fosse zero o negativo.
 
 ### 2. Correzione in ViewMedia.php (getHeaderActions() Return Type)
 

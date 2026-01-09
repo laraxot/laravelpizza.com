@@ -16,9 +16,9 @@
 ```html
 <div class="form-group">
   <label for="email">Email</label>
-  <input 
-    type="email" 
-    id="email" 
+  <input
+    type="email"
+    id="email"
     class="form-control is-invalid"
     aria-describedby="email-error"
   >
@@ -32,9 +32,9 @@
 ```html
 <div class="form-group">
   <label for="search">Cerca</label>
-  <input 
-    type="text" 
-    id="search" 
+  <input
+    type="text"
+    id="search"
     class="form-control"
     list="suggestions"
     autocomplete="off"
@@ -53,9 +53,9 @@
 <div class="form-group">
   <label for="date">Data</label>
   <div class="input-group datepicker">
-    <input 
-      type="text" 
-      id="date" 
+    <input
+      type="text"
+      id="date"
       class="form-control"
       data-date-format="dd/mm/yyyy"
     >
@@ -71,9 +71,9 @@
 <div class="form-group">
   <label for="time">Ora</label>
   <div class="input-group timepicker">
-    <input 
-      type="text" 
-      id="time" 
+    <input
+      type="text"
+      id="time"
       class="form-control"
       data-time-format="HH:mm"
     >
@@ -90,9 +90,9 @@
 ```html
 <div class="form-group">
   <label for="range">Range</label>
-  <input 
-    type="range" 
-    id="range" 
+  <input
+    type="range"
+    id="range"
     class="form-range"
     min="0"
     max="100"
@@ -108,9 +108,9 @@
   <label for="quantity">Quantità</label>
   <div class="input-group">
     <button class="btn btn-outline-secondary" type="button">-</button>
-    <input 
-      type="number" 
-      id="quantity" 
+    <input
+      type="number"
+      id="quantity"
       class="form-control text-center"
       min="0"
       max="100"
@@ -159,10 +159,10 @@
     border-color: $primary;
     box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
   }
-  
+
   &.is-invalid {
     border-color: $danger;
-    
+
     &:focus {
       box-shadow: 0 0 0 0.2rem rgba($danger, 0.25);
     }
@@ -174,7 +174,7 @@
 ```scss
 .input-group {
   transition: all 0.3s ease;
-  
+
   &:focus-within {
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -186,4 +186,4 @@
 - [Componenti Base](./base-components.md)
 - [Feedback](./feedback-components.md)
 - [Accessibilità](./standards/accessibility.md)
-- [Performance](./standards/performance.md) 
+- [Performance](./standards/performance.md)

@@ -31,9 +31,9 @@ npm run copy
 ```
 
 ## ⚠️ NON Fare Mai
-❌ **NON modificare** `/public/css/` o `/public/js/` direttamente  
-❌ **NON usare** `npm run build` dalla root Laravel  
-❌ **NON dimenticare** il comando `npm run copy`  
+❌ **NON modificare** `/public/css/` o `/public/js/` direttamente
+❌ **NON usare** `npm run build` dalla root Laravel
+❌ **NON dimenticare** il comando `npm run copy`
 
 ## ✅ Processo Corretto
 1. **Modifica sorgenti** in `/Themes/[Theme]/resources/`
@@ -53,7 +53,7 @@ npm run copy         # Copia in /public/
 
 ### Tema Two
 ```bash
-cd /var/www/html/_bases/base_saluteora/laravel/Themes/Two  
+cd /var/www/html/_bases/base_saluteora/laravel/Themes/Two
 npm install
 npm run build
 npm run copy
@@ -84,7 +84,7 @@ export default defineConfig({
 
 ### Modifiche Non Visibili?
 1. Verificare di aver eseguito `npm run build`
-2. Verificare di aver eseguito `npm run copy`  
+2. Verificare di aver eseguito `npm run copy`
 3. Svuotare cache browser (Ctrl+F5)
 4. Verificare path corretti in vite.config.js
 

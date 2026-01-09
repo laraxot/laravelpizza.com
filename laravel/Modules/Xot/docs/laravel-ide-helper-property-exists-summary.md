@@ -47,7 +47,7 @@ php artisan ide-helper:models --write --reset
 #### File Corretti:
 1. **Modules/User/app/Filament/Resources/UserResource.php**
    - Sostituito `property_exists($record, 'created_at')` con `hasAttribute('created_at')`
-   
+
 2. **Modules/UI/app/Filament/Tables/Columns/IconStateColumn.php**
    - Sostituito `property_exists($record, 'state')` con `isset($record->state)`
    - Mantenuto `property_exists($state, 'name')` (State object, OK!)
@@ -210,6 +210,5 @@ Abbiamo compreso a fondo **perché**, **come**, e **quando** eliminare `property
 La filosofia è chiara: rispettare l'architettura Eloquent e fidarsi delle annotazioni generate.
 
 **La religione:** Trust the Magic (Methods)
-**La politica:** No property_exists() on Eloquent Models  
+**La politica:** No property_exists() on Eloquent Models
 **Lo Zen:** Semplicità attraverso la comprensione
-

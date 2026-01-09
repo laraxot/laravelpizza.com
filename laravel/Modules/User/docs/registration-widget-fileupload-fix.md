@@ -12,7 +12,7 @@ Il widget utilizzava il metodo `getFormFill()` per popolare il form con i dati e
 public function getFormFill(): array
 {
     $model = $this->getFormModel();
-    
+
     if ($model->exists) {
         return $model->toArray(); // ❌ PROBLEMA: file salvati come stringhe
     }
@@ -22,7 +22,7 @@ public function getFormFill(): array
 ## Codice Dopo la Correzione
         try {
             $data = $model->toArray();
-            
+
             // CORREZIONE BUG: Converti i campi file upload da stringhe ad array per Filament
             $attachments = [];
             try {
@@ -94,7 +94,7 @@ foreach($state as $file) {  // ✅ OK: $state è array
 ## Impact su Altri Componenti
 Questa correzione è compatibile con:
 1. **Nuovi upload**: FileUpload continua a funzionare normalmente
-2. **Form validation**: Le regole di validazione rimangono invariate  
+2. **Form validation**: Le regole di validazione rimangono invariate
 3. **Salvataggio**: I file vengono ancora salvati come stringhe nel database
 4. **Altri widget**: Non impatta widget che non gestiscono file
 ## Testing
@@ -124,4 +124,4 @@ Per evitare simili problemi in futuro:
 - [Problema principale: docs/fileupload-foreach-error-fix.md](../../../docs/fileupload-foreach-error-fix.md)
 - [Correzione XotBaseResource: Modules/Xot/docs/fileupload-components.md](../../Xot/docs/fileupload-components.md)
 - [Registration Widget base: registration-widget.md](./registration-widget.md)
-*Ultimo aggiornamento: 2025-01-03* 
+*Ultimo aggiornamento: 2025-01-03*

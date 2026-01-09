@@ -27,7 +27,7 @@ Migliorare la pagina `ListLogActivities` seguendo i principi DRY + KISS e la fil
                 {{ __('activity::activities.title', ['record' => $recordTitle]) }}
             </h3>
             <p class="text-xs text-blue-700 dark:text-blue-300 mt-1">
-                Visualizzazione delle attività registrate per questo elemento. 
+                Visualizzazione delle attività registrate per questo elemento.
                 @if($this->getActivities()->total() > 0)
                     Trovate {{ $this->getActivities()->total() }} attività totali.
                 @else
@@ -53,7 +53,7 @@ Migliorare la pagina `ListLogActivities` seguendo i principi DRY + KISS e la fil
                 Nessuna attività registrata
             </h3>
             <p class="text-sm text-gray-500 dark:text-gray-400">
-                Non ci sono ancora attività da visualizzare per questo elemento. 
+                Non ci sono ancora attività da visualizzare per questo elemento.
                 Le attività appariranno qui quando gli utenti inizieranno a interagire con il sistema.
             </p>
         </div>
@@ -77,9 +77,9 @@ Migliorare la pagina `ListLogActivities` seguendo i principi DRY + KISS e la fil
 #### Avatar Utente
 ```html
 @if($activityItem->causer)
-    <x-filament-panels::avatar.user 
-        :user="$activityItem->causer" 
-        class="!w-8 !h-8 flex-shrink-0" 
+    <x-filament-panels::avatar.user
+        :user="$activityItem->causer"
+        class="!w-8 !h-8 flex-shrink-0"
     />
 @else
     <div class="!w-8 !h-8 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center flex-shrink-0">
@@ -95,13 +95,13 @@ Migliorare la pagina `ListLogActivities` seguendo i principi DRY + KISS e la fil
 @php
     $eventColor = match($activityItem->event) {
         'created' => 'success',
-        'updated' => 'warning', 
+        'updated' => 'warning',
         'deleted' => 'danger',
         'restored' => 'info',
         default => 'gray'
     };
 @endphp
-<x-filament::badge 
+<x-filament::badge
     :color="$eventColor"
     class="text-xs"
 >
@@ -124,10 +124,10 @@ Migliorare la pagina `ListLogActivities` seguendo i principi DRY + KISS e la fil
 ```html
 @if($activityItem->subject_type && $activityItem->subject_id)
     <div class="mt-2 text-xs text-gray-600 dark:text-gray-400">
-        <span class="font-medium">{{ __('activity::activities.subject.type') }}:</span> 
+        <span class="font-medium">{{ __('activity::activities.subject.type') }}:</span>
         {{ class_basename($activityItem->subject_type) }}
         <span class="mx-1">•</span>
-        <span class="font-medium">{{ __('activity::activities.subject.id') }}:</span> 
+        <span class="font-medium">{{ __('activity::activities.subject.id') }}:</span>
         {{ $activityItem->subject_id }}
     </div>
 @endif
@@ -210,7 +210,7 @@ protected function getFieldType(mixed $old, mixed $new): string
     if (@strtotime((string) $old) || @strtotime((string) $new)) {
         return 'date';
     }
-    
+
     return 'string';
 }
 ```
@@ -292,7 +292,7 @@ PASS: 2 files formattati correttamente
 
 ---
 
-**Autore**: iFlow CLI  
-**Data**: 2025-12-04  
-**Versione**: 1.0  
+**Autore**: iFlow CLI
+**Data**: 2025-12-04
+**Versione**: 1.0
 **Status**: ✅ Production Ready

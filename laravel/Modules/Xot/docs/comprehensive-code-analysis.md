@@ -64,7 +64,7 @@ abstract class BaseModel extends Model implements ModelContract, HasMedia
 **File**: `Modules/User/app/Models/BaseUser.php`
 
 ```php
-abstract class BaseUser extends Authenticatable implements 
+abstract class BaseUser extends Authenticatable implements
     HasMedia, HasName, HasTenants, MustVerifyEmail, UserContract
 {
     use HasApiTokens;
@@ -224,10 +224,10 @@ public function customer(): HasOneThrough
 class <nome progetto>ServiceProvider extends XotBaseServiceProvider
 {
     public string $name = '<nome progetto>';
-    
+
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
-    
+
     public function register(): void
     {
         parent::register();
@@ -329,7 +329,7 @@ abstract class BaseModel extends Model implements ModelContract
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use Updater;
-    
+
     // Rimuovere: Cachable, HasExtraTrait, InteractsWithMedia
     // Creare trait specifici per ogni concern
 }
@@ -435,7 +435,7 @@ return [
 
 ---
 
-**Data Analisi**: 2025-01-06  
-**Analista**: AI Code Review System  
-**Priorità**: CRITICA - Richiede intervento immediato  
+**Data Analisi**: 2025-01-06
+**Analista**: AI Code Review System
+**Priorità**: CRITICA - Richiede intervento immediato
 **Stima Effort**: 40-60 ore di refactoring

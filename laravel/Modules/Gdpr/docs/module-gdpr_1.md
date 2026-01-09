@@ -128,4 +128,4 @@ composer format        # Formatta il codice
 - Trasferimenti
 
 ## Changelog
-Le modifiche vengono tracciate nel repository GitHub. 
+Le modifiche vengono tracciate nel repository GitHub.

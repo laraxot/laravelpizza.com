@@ -1,7 +1,7 @@
 # Media - Filosofia Completa: Logica, Religione, Politica, Zen
 
-**Data Creazione**: 2025-12-23  
-**Status**: Documentazione Filosofica Completa  
+**Data Creazione**: 2025-12-23
+**Status**: Documentazione Filosofica Completa
 **Versione**: 1.0.0
 
 ## 📋 Indice Filosofico
@@ -70,14 +70,14 @@ class Media extends BaseModel
 {
     // Polimorphic relation a qualsiasi model
     public function model(): MorphTo
-    
+
     // Collections per organizzazione
     public string $collection_name;
-    
+
     // Storage
     public string $disk;
     public string $file_name;
-    
+
     // Conversions
     public array $conversions;
 }
@@ -139,13 +139,13 @@ Il modulo Media **è utilizzato da** tutti i moduli che gestiscono file:
 class User extends BaseModel
 {
     use HasMedia;
-    
+
     // Collections organizzate
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('avatars')
             ->singleFile();
-            
+
         $this->addMediaCollection('documents')
             ->acceptsMimeTypes(['application/pdf']);
     }
@@ -199,7 +199,7 @@ Il modulo gestisce complessità (multi-disk, conversions, CDN) ma:
 class Client extends BaseModel
 {
     use HasMedia;
-    
+
     // Collections per organizzazione
     public function registerMediaCollections(): void
     {

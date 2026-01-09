@@ -188,7 +188,6 @@
 
 ### Versione HEAD
 
-
 ### Versione Incoming
 
 - [Documentazione Autenticazione](./authentication.md) - Guida all'autenticazione
@@ -220,9 +219,7 @@
 * [roadmap.md](../../../Cms/project_docs/roadmap.md)
 * [roadmap.md](../../../../Themes/One/project_docs/roadmap.md)
 
-
 ---
-
 
 ### Versione Incoming
 
@@ -464,4 +461,3 @@ Overall Module Completion: 82%
 - Laravel Excel v3.x
 
 ---
-

@@ -178,4 +178,4 @@ getDark*            // L'ombra del brand
 - [Convenzioni di Naming](../naming-conventions.md)
 - [Linee Guida Filament](../filament-best-practices.md)
 - [La Via del Brand](../brand/brand_way.md)
-- [Il Tao del Codice](../tao/code_tao.md) 
+- [Il Tao del Codice](../tao/code_tao.md)

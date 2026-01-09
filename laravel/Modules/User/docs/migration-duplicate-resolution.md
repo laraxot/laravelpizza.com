@@ -2,7 +2,7 @@
 
 ## 🚨 PROBLEMA IDENTIFICATO
 
-**Data**: 2025-11-17  
+**Data**: 2025-11-17
 **Violazione**: MULTIPLI migration duplicate per tabella `roles` nel modulo User
 
 ```text
@@ -86,7 +86,7 @@ return new class extends XotBaseMigration
             $table->string('name');
             $table->string('guard_name')->default('web');
         });
-        
+
         $this->tableUpdate(function (Blueprint $table): void {
             if (! $this->hasColumn('id')) {
                 $table->id();

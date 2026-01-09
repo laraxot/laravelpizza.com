@@ -1,7 +1,7 @@
 # Rimozione runningInConsole Check - Riepilogo
 
-**Data**: 2025-01-22  
-**File**: `app/Actions/Config/ResolveTenantConfigValueAction.php`  
+**Data**: 2025-01-22
+**File**: `app/Actions/Config/ResolveTenantConfigValueAction.php`
 **Status**: ✅ Completato
 
 ---
@@ -158,6 +158,6 @@ $mergeConf = collect($originalConf)->merge($extraConf)->all(); // ✅ Funziona s
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: ✅ Completato

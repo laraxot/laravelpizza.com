@@ -92,7 +92,6 @@ $res=Locality::query()
 
 ## Verifiche Post-Correzione
 
-
 ### 2. Validazione PHPStan
 ```bash
 cd laravel

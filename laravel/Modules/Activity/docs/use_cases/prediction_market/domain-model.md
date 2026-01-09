@@ -33,4 +33,4 @@ class BetPlaced implements ShouldBeStored
         public string $outcome
     ) {}
 }
-``` 
+```

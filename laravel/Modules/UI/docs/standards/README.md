@@ -61,7 +61,7 @@ use Filament\Widgets\Widget;
 class XotBaseStatsOverview extends Widget
 {
     protected static string $view = 'ui::widgets.stats-overview';
-    
+
     protected function getViewData(): array
     {
         return [
@@ -117,7 +117,7 @@ class XotBaseStatsOverview extends Widget
 - Core Web Vitals
 - Performance budget
 - Errori JavaScript
-- Tempi di caricamento 
+- Tempi di caricamento
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
 * [README.md](bashscripts/docs/it/README.md)
@@ -195,4 +195,3 @@ class XotBaseStatsOverview extends Widget
 * [README.md](../../../Cms/docs/components/README.md)
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
-

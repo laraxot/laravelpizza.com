@@ -204,5 +204,5 @@ Prima di dichiarare un metodo `final`, verificare:
 - [Documentazione PHPStan Fixes](phpstan_fixes.md)
 
 ## Ultimo aggiornamento
-2025-01-06 - Aggiornato per riflettere la decisione di mantenere i metodi final 
-2025-01-06 
+2025-01-06 - Aggiornato per riflettere la decisione di mantenere i metodi final
+2025-01-06

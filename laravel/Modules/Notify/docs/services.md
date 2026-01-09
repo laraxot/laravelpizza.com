@@ -213,4 +213,4 @@ final class NotificationEventSubscriber implements EventSubscriber
         ];
     }
 }
-``` 
+```

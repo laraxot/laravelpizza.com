@@ -60,7 +60,7 @@ public function registerViews(): void
     if ($this->name === '') {
         throw new Exception('name is empty on ['.static::class.']');
     }
-    
+
     $viewPath = module_path($this->name, 'resources/views');
     $this->loadViewsFrom($viewPath, $this->nameLower);
 }
@@ -177,7 +177,7 @@ class ActivityServiceProvider extends XotBaseServiceProvider
     public string $name = 'Activity'; // ← OBBLIGATORIO
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
-    
+
     public function boot(): void
     {
         parent::boot(); // ← OBBLIGATORIO chiamare parent
@@ -401,9 +401,9 @@ public function boot(): void
         'name' => $this->name,
         'nameLower' => $this->nameLower,
     ]);
-    
+
     parent::boot();
-    
+
     \Log::info("View namespace registered", [
         'namespace' => $this->nameLower,
         'path' => module_path($this->name, 'resources/views'),
@@ -482,8 +482,7 @@ docker-compose restart app
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
-**Versione Laravel**: 12.35.1  
-**Errore Code**: `InvalidArgumentException`  
+**Ultimo aggiornamento**: 27 Ottobre 2025
+**Versione Laravel**: 12.35.1
+**Errore Code**: `InvalidArgumentException`
 **Severità**: Alta (blocca funzionalità Activity Log)
-

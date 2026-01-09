@@ -21,7 +21,7 @@ public static function getFormSchema(): array
         // Campi modificabili dall'utente
         TextInput::make('name')->required(),
         Select::make('type')->options([...]),
-        
+
         // NO: Non includere campi automatici
         // TextInput::make('created_at')
         // TextInput::make('updated_at')
@@ -47,7 +47,7 @@ return [
                 // Campi del form
                 'name' => 'Nome',
                 'type' => 'Tipo',
-                
+
                 // Campi automatici (da mantenere)
                 'created_at' => 'Data Creazione',
                 'updated_at' => 'Ultima Modifica'
@@ -104,16 +104,12 @@ class MyResource extends XotBaseResource
 - Seguire una struttura modulare
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di best-practices.md
 * [best-practices.md](docs/tecnico/filament/best-practices.md)
 * [best-practices.md](../../../Xot/project_docs/laraxot/best-practices.md)
 * [best-practices.md](../../../UI/project_docs/best-practices.md)
 * [best-practices.md](../../../../Themes/One/project_docs/best-practices.md)
 
-
 ### Versione Incoming
 
-
 ---
-

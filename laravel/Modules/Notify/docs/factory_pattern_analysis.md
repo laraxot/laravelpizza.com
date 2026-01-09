@@ -24,7 +24,7 @@ $action = match ($driver) {
 public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -43,7 +43,7 @@ $action = $this->factory->create();
 public function getAction(): SmsActionInterface
 {
     $driver = Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -94,10 +94,10 @@ public function testSmsChannelSendsNotification()
 {
     $factoryMock = $this->mock(SmsActionFactory::class);
     $actionMock = $this->mock(SmsActionInterface::class);
-    
+
     $factoryMock->shouldReceive('create')->once()->andReturn($actionMock);
     $actionMock->shouldReceive('execute')->once()->andReturn(['success' => true]);
-    
+
     $channel = new SmsChannel($factoryMock);
     // Test del canale...
 }
@@ -123,7 +123,7 @@ Aggiungere un nuovo driver richiede modifiche solo alla factory:
 public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         // Driver esistenti...
         'nuovo_driver' => app(SendNuovoDriverSMSAction::class),

@@ -25,7 +25,7 @@ use Modules\User\Models\BasePivot;
 class DeviceUser extends BasePivot
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
-    
+
     protected $fillable = [/*...*/];
     // ...
 }
@@ -38,7 +38,7 @@ use Modules\Xot\Models\XotBasePivot;
 class DeviceUser extends XotBasePivot
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
-    
+
     protected $fillable = [/*...*/];
     // ... tutto il resto identico
 }
@@ -221,29 +221,29 @@ class DeviceUserTest extends TestCase
     public function test_device_user_uses_xot_base_pivot(): void
     {
         $pivot = new DeviceUser();
-        
+
         $this->assertInstanceOf(
-            \Modules\Xot\Models\XotBasePivot::class, 
+            \Modules\Xot\Models\XotBasePivot::class,
             $pivot
         );
     }
-    
+
     public function test_connection_is_user(): void
     {
         $pivot = new DeviceUser();
-        
+
         $this->assertEquals('user', $pivot->getConnectionName());
     }
-    
+
     public function test_snake_attributes_enabled(): void
     {
         $this->assertTrue(DeviceUser::$snakeAttributes);
     }
-    
+
     public function test_id_cast_as_string(): void
     {
         $pivot = DeviceUser::factory()->create();
-        
+
         $this->assertIsString($pivot->id);
     }
 }
@@ -455,9 +455,8 @@ protected $fillable = [
 
 ---
 
-*Documento User Module specifico*  
-*Versione: 1.0*  
-*Status: READY FOR IMPLEMENTATION*  
-*Priority: 🔴 HIGH (più Pivot concreti)*  
+*Documento User Module specifico*
+*Versione: 1.0*
+*Status: READY FOR IMPLEMENTATION*
+*Priority: 🔴 HIGH (più Pivot concreti)*
 *Effort: 45 minuti*
-

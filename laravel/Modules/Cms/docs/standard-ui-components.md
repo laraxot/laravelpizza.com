@@ -1,7 +1,7 @@
 # Standard UI Components in il progetto
 
 > **Nota**: Questo documento è una copia sincronizzata di [/docs/implementazione/standard_ui_components.md](../../../../docs/implementazione/standard_ui_components.md)
-> 
+>
 > Per modifiche, aggiornare il file originale e sincronizzare le modifiche qui.
 
 ## Perché utilizzare i componenti Filament
@@ -35,9 +35,9 @@
 
 ### ✅ Fare
 ```blade
-<x-filament::button 
-    size="sm" 
-    href="{{ route('register.type', ['type'=>$type]) }}" 
+<x-filament::button
+    size="sm"
+    href="{{ route('register.type', ['type'=>$type]) }}"
     tag="a">
     {{ ucfirst($type) }}
 </x-filament::button>
@@ -64,9 +64,8 @@
 - [Documentazione Ufficiale Filament](https://filamentphp.com/docs/3.x/support/blade-components/overview)
 - [Guida ai Componenti Filament](https://filamentphp.com/docs/3.x/support/blade-components/overview)
 - [Regole UI in Cursor](../../../../.cursor/rules/ui-components.mdc)
-- [Memoria UI in Cursor](../../../../.cursor/memories/ui-components.mdc) 
+- [Memoria UI in Cursor](../../../../.cursor/memories/ui-components.mdc)
 
 ## Collegamenti tra versioni di standard_ui_components.md
 * [standard_ui_components.md](docs/implementazione/standard_ui_components.md)
 * [standard_ui_components.md](laravel/Modules/Cms/docs/standard_ui_components.md)
-

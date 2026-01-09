@@ -131,6 +131,3 @@ php artisan translations:clean     # Pulisce le traduzioni non utilizzate
 
 - [Gestione console commands: filosofia e tecnica](./lang-service-provider.md)
 - [Filosofia Xot: zen e automazione](./PHILOSOPHY.md)
-
-
-

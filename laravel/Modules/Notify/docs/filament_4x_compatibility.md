@@ -1,13 +1,13 @@
 # Compatibilità Filament 4.x - Modulo Notify
 
-**Data**: 2025-01-27  
-**Status**: ✅ COMPLETATO  
-**Versione Filament**: 4.0.17  
+**Data**: 2025-01-27
+**Status**: ✅ COMPLETATO
+**Versione Filament**: 4.0.17
 
 ## 🔧 Correzioni Implementate
 
 ### 1. SpatieEmail
-**Problema**: Chiamata a metodo protetto `increment()`  
+**Problema**: Chiamata a metodo protetto `increment()`
 **Soluzione**: Sostituito con `update()` pubblico
 
 ```php

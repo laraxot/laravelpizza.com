@@ -1,4 +1,4 @@
-# Linee Guida per le Risorse Filament nel Progetto 
+# Linee Guida per le Risorse Filament nel Progetto
 # Linee Guida per le Risorse Filament nel Progetto SaluteOra
 # Linee Guida per le Risorse Filament nel Progetto SaluteOra
 # Linee Guida per le Risorse Filament nel Progetto SaluteOra
@@ -14,14 +14,14 @@
 # Linee Guida per le Risorse Filament nel Progetto SaluteOra
 # Linee Guida per le Risorse Filament nel Progetto SaluteOra
 # Linee Guida per le Risorse Filament nel Progetto SaluteOra
-# Linee Guida per le Risorse Filament nel Progetto 
-# Linee Guida per le Risorse Filament nel Progetto 
+# Linee Guida per le Risorse Filament nel Progetto
+# Linee Guida per le Risorse Filament nel Progetto
 # Linee Guida per le Risorse Filament nel Progetto <nome progetto>
 # Linee Guida per le Risorse Filament nel Progetto <nome progetto>
 # Linee Guida per le Risorse Filament nel Progetto SaluteOra
 # Linee Guida per le Risorse Filament nel Progetto SaluteOra
-# Linee Guida per le Risorse Filament nel Progetto 
-# Linee Guida per le Risorse Filament nel Progetto 
+# Linee Guida per le Risorse Filament nel Progetto
+# Linee Guida per le Risorse Filament nel Progetto
 # Linee Guida per le Risorse Filament nel Progetto SaluteOra
 # Linee Guida per le Risorse Filament nel Progetto SaluteOra
 # Linee Guida per le Risorse Filament nel Progetto SaluteOra

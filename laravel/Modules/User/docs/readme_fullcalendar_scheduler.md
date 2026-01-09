@@ -6,7 +6,7 @@ Questa documentazione è stata creata per risolvere i problemi comuni relativi a
 
 ## 📚 Documenti Creati
 
-### 1. **Troubleshooting Completo** 
+### 1. **Troubleshooting Completo**
 📄 `fullcalendar-scheduler-license-troubleshooting.md`
 - **400+ righe** di documentazione dettagliata
 - Copertura completa di tutti i problemi noti
@@ -50,7 +50,7 @@ Questa documentazione è stata creata per risolvere i problemi comuni relativi a
 private function getFullCalendarPlugin(): FilamentFullCalendarPlugin
 {
     $licenseKey = config('fullcalendar.scheduler_license_key');
-    
+
     // Validazione produzione
     if (app()->environment('production') && empty($licenseKey)) {
         throw new \Exception('Scheduler license required in production');
@@ -220,8 +220,8 @@ Log::info('FullCalendar configured', [
 
 ---
 
-**Creato**: Gennaio 2025  
-**Ultima modifica**: Gennaio 2025  
-**Versione FullCalendar**: v6.1.17  
-**Versione Filament**: v3.x  
-**Progetto**: SaluteOra Multi-Tenant Healthcare Platform 
+**Creato**: Gennaio 2025
+**Ultima modifica**: Gennaio 2025
+**Versione FullCalendar**: v6.1.17
+**Versione Filament**: v3.x
+**Progetto**: SaluteOra Multi-Tenant Healthcare Platform

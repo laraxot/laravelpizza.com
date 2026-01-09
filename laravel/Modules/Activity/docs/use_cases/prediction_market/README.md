@@ -128,7 +128,7 @@ Un prediction market è un mercato finanziario in cui i partecipanti possono neg
 ### 1. Previsioni di Mercato
 - **Descrizione**: Permettere agli utenti di investire sul risultato di eventi futuri.
 - **Esempio**: Scommettere sull'esito di elezioni politiche o sul prezzo futuro di una criptovaluta.
-- **Vantaggi**: 
+- **Vantaggi**:
   - Fornisce una visione aggregata delle aspettative del mercato.
   - Incentiva la ricerca e l'analisi approfondita.
 

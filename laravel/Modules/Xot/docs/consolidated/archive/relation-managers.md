@@ -30,9 +30,9 @@ use Filament\Tables\Columns\TextColumn;
 class EsempioRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'nomeRelazione';
-    
+
     protected static ?string $recordTitleAttribute = 'nome_attributo';
-    
+
     // Resto dell'implementazione...
 }
 ```
@@ -124,7 +124,7 @@ Il trait `HasXotTable` fornisce funzionalità aggiuntive per la gestione delle t
    ```php
    // ✅ CORRETTO
    class MioRelationManager extends XotBaseRelationManager
-   
+
    // ❌ ERRATO
    class MioRelationManager extends RelationManager
    ```
@@ -138,7 +138,7 @@ Il trait `HasXotTable` fornisce funzionalità aggiuntive per la gestione delle t
    ```php
    TextColumn::make('nome')
        ->label(trans('nomemodulo::relation.fields.nome.label'))
-       
+
    // ❌ ERRATO
    TextColumn::make('nome')
        ->label('Nome')

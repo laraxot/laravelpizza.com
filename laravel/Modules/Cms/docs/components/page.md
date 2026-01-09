@@ -135,10 +135,10 @@ BlockData garantisce che:
 ### Rendering Base
 
 ```blade
-<x-cms::page 
-    :blocks="$blocks" 
-    side="content" 
-    slug="homepage" 
+<x-cms::page
+    :blocks="$blocks"
+    side="content"
+    slug="homepage"
 />
 ```
 
@@ -149,7 +149,7 @@ BlockData garantisce che:
     <div class="space-y-6">
         <x-cms::page :blocks="$sidebarBlocks" side="sidebar" :slug="$page->slug" />
     </div>
-    
+
     <x-cms::page :blocks="$contentBlocks" side="content" :slug="$page->slug" />
 </div>
 ```
@@ -162,10 +162,10 @@ class PageController extends Controller
     public function show($slug)
     {
         $pageData = $this->getPageData($slug);
-        
+
         // BlockData gestisce automaticamente la validazione
         $blocks = BlockData::fromArray($pageData['blocks'] ?? []);
-        
+
         return view('cms::pages.show', [
             'blocks' => $blocks,
             'slug' => $slug

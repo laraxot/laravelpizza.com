@@ -54,9 +54,8 @@
 - [Localizzazione](packages/localization.md)
 - [Traduzioni](packages/translations.md)
 - [SEO](packages/seo.md)
-- [Performance](packages/performance.md) 
+- [Performance](packages/performance.md)
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di packages.md
 * [packages.md](../../../Gdpr/docs/packages.md)
@@ -69,9 +68,6 @@
 * [packages.md](../../../Media/docs/packages.md)
 * [packages.md](../../../Tenant/docs/packages.md)
 
-
 ### Versione Incoming
 
-
 ---
-

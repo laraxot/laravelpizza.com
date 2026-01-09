@@ -114,7 +114,7 @@ class LoginWidget extends XotBaseWidget
     public function login(): void
     {
         $data = $this->form->getState();
-        
+
         if (Auth::attempt($data)) {
             $this->redirect('/dashboard');
         }
@@ -392,17 +392,17 @@ trait PassportConfigurationTrait
         Passport::useAuthCodeModel(OauthAuthCode::class);
         Passport::useClientModel(OauthClient::class);
     }
-    
+
     protected function configurePassportRoutes(): void
     {
         // Registrazione rotte solo se necessario
         if ($this->app->routesAreCached()) {
             return;
         }
-        
+
         Passport::routes();
     }
-    
+
     protected function configurePassportTokens(): void
     {
         // Configurazione scadenze
@@ -410,7 +410,7 @@ trait PassportConfigurationTrait
         Passport::refreshTokensExpireIn(now()->addDays(30));
         Passport::personalAccessTokensExpireIn(now()->addMonths(6));
     }
-    
+
     protected function configurePassportScopes(): void
     {
         // Definizione scope
@@ -420,7 +420,7 @@ trait PassportConfigurationTrait
             // Altri scope...
         ]);
     }
-    
+
     protected function configurePassport(): void
     {
         $this->configurePassportModels();
@@ -443,13 +443,13 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 class UserServiceProvider extends XotBaseServiceProvider
 {
     use PassportConfigurationTrait;
-    
+
     protected function registerAuthenticationProviders(): void
     {
         $this->registerPassport();
         $this->registerSocialite();
     }
-    
+
     protected function registerPassport(): void
     {
         $this->configurePassport();
@@ -549,7 +549,7 @@ L'uso del trait è una soluzione pragmatica ed efficiente per architetture modul
    {
        use HasPassportConfiguration;
        use HasSocialiteConfiguration;
-       
+
        public function boot(): void
        {
            $this->configurePassport();
@@ -569,7 +569,7 @@ L'uso del trait è una soluzione pragmatica ed efficiente per architetture modul
    class UserServiceProvider extends XotBaseServiceProvider
    {
        use HasPassportConfiguration;
-       
+
        protected function registerAuthenticationProviders(): void
        {
            $this->registerPassport();
@@ -595,7 +595,7 @@ L'uso del trait è una soluzione pragmatica ed efficiente per architetture modul
            $this->configureTokens();
            $this->configureScopes();
        }
-       
+
        protected function configureModels(): void
        {
            Passport::useTokenModel(OauthAccessToken::class);
@@ -615,11 +615,11 @@ L'uso del trait è una soluzione pragmatica ed efficiente per architetture modul
    class PassportConfigurationTest extends TestCase
    {
        use HasPassportConfiguration;
-       
+
        public function test_models_are_configured_correctly(): void
        {
            $this->configureModels();
-           
+
            $this->assertEquals(
                OauthAccessToken::class,
                config('passport.token_model')
@@ -666,7 +666,7 @@ L'uso del trait è una soluzione pragmatica ed efficiente per architetture modul
    class UserServiceProvider extends XotBaseServiceProvider
    {
        use HasPassportConfiguration;
-       
+
        protected function registerPassport(): void
        {
            $this->configurePassport();
@@ -835,7 +835,7 @@ class PassportServiceProvider extends ServiceProvider
         Passport::useAuthCodeModel(OauthAuthCode::class);
         Passport::usePersonalAccessClientModel(OauthPersonalAccessClient::class);
         Passport::useRefreshTokenModel(OauthRefreshToken::class);
-        
+
         Passport::tokensExpireIn(now()->addDays(1));
         Passport::refreshTokensExpireIn(now()->addDays(30));
         Passport::personalAccessTokensExpireIn(now()->addMonths(6));
@@ -852,7 +852,7 @@ class SocialiteServiceProvider extends BaseSocialiteServiceProvider
     public function register(): void
     {
         parent::register();
-        
+
         $this->app->singleton('socialite.config', function ($app) {
             return new SocialiteConfig();
         });
@@ -1081,10 +1081,10 @@ Modules/User/
    ```php
    // In Modules/User/app/Providers/UserServiceProvider.php
    namespace Modules\User\Providers;
-   
+
    use Modules\User\Providers\Traits\HasPassportConfiguration;
    use Modules\User\Providers\Traits\HasSocialiteConfiguration;
-   
+
    class UserServiceProvider extends XotBaseServiceProvider
    {
        use HasPassportConfiguration;
@@ -1119,7 +1119,7 @@ trait HasPassportConfiguration
         $this->configureTokens();
         $this->configureScopes();
     }
-    
+
     // ... rest of the trait implementation
 }
 
@@ -1135,7 +1135,7 @@ trait HasSocialiteConfiguration
         $this->configureProviders();
         $this->configureCallbacks();
     }
-    
+
     // ... rest of the trait implementation
 }
 ```
@@ -1200,7 +1200,7 @@ trait HasPassportConfiguration
 {
     /**
      * Configurazione completa di Passport
-     * 
+     *
      * @return void
      * @throws \RuntimeException Se la configurazione fallisce
      */
@@ -1223,7 +1223,7 @@ trait HasPassportConfiguration
 
     /**
      * Configurazione dei modelli OAuth
-     * 
+     *
      * @return void
      */
     protected function configureModels(): void
@@ -1237,7 +1237,7 @@ trait HasPassportConfiguration
 
     /**
      * Configurazione delle scadenze dei token
-     * 
+     *
      * @return void
      */
     protected function configureTokens(): void
@@ -1255,7 +1255,7 @@ trait HasPassportConfiguration
 
     /**
      * Configurazione degli scope OAuth
-     * 
+     *
      * @return void
      */
     protected function configureScopes(): void
@@ -1270,7 +1270,7 @@ trait HasPassportConfiguration
 
     /**
      * Configurazione delle rotte OAuth
-     * 
+     *
      * @return void
      */
     protected function configureRoutes(): void
@@ -1287,7 +1287,7 @@ trait HasPassportConfiguration
 
     /**
      * Configurazione degli eventi OAuth
-     * 
+     *
      * @return void
      */
     protected function configureEvents(): void
@@ -1310,7 +1310,7 @@ trait HasSocialiteConfiguration
 {
     /**
      * Configurazione completa di Socialite
-     * 
+     *
      * @return void
      * @throws \RuntimeException Se la configurazione fallisce
      */
@@ -1331,7 +1331,7 @@ trait HasSocialiteConfiguration
 
     /**
      * Configurazione dei provider social
-     * 
+     *
      * @return void
      */
     protected function configureProviders(): void
@@ -1356,7 +1356,7 @@ trait HasSocialiteConfiguration
 
     /**
      * Configurazione dei callback
-     * 
+     *
      * @return void
      */
     protected function configureCallbacks(): void
@@ -1373,7 +1373,7 @@ trait HasSocialiteConfiguration
 
     /**
      * Configurazione degli eventi
-     * 
+     *
      * @return void
      */
     protected function configureEvents(): void
@@ -1406,7 +1406,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     /**
      * Boot del service provider
-     * 
+     *
      * @return void
      */
     public function boot(): void
@@ -1417,7 +1417,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     /**
      * Registrazione dei servizi
-     * 
+     *
      * @return void
      */
     public function register(): void
@@ -1429,7 +1429,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     /**
      * Registrazione della configurazione
-     * 
+     *
      * @return void
      */
     protected function registerConfig(): void
@@ -1442,7 +1442,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     /**
      * Registrazione dei comandi
-     * 
+     *
      * @return void
      */
     protected function registerCommands(): void
@@ -1455,7 +1455,7 @@ class UserServiceProvider extends XotBaseServiceProvider
 
     /**
      * Registrazione dei middleware
-     * 
+     *
      * @return void
      */
     protected function registerMiddleware(): void
@@ -1483,7 +1483,7 @@ class HasPassportConfigurationTest extends TestCase
     public function test_configure_models()
     {
         $this->configureModels();
-        
+
         $this->assertEquals(
             OauthAccessToken::class,
             Passport::tokenModel()
@@ -1493,7 +1493,7 @@ class HasPassportConfigurationTest extends TestCase
     public function test_configure_tokens()
     {
         $this->configureTokens();
-        
+
         $this->assertEquals(
             now()->addDays(1),
             Passport::tokensExpireIn()
@@ -1503,7 +1503,7 @@ class HasPassportConfigurationTest extends TestCase
     public function test_configure_scopes()
     {
         $this->configureScopes();
-        
+
         $this->assertArrayHasKey(
             'view-user',
             Passport::scopes()
@@ -1525,7 +1525,7 @@ class UserServiceProviderTest extends TestCase
     {
         $provider = new UserServiceProvider($this->app);
         $provider->boot();
-        
+
         $this->assertTrue($this->app->bound('passport'));
         $this->assertTrue($this->app->bound('socialite'));
     }
@@ -1534,7 +1534,7 @@ class UserServiceProviderTest extends TestCase
     {
         $provider = new UserServiceProvider($this->app);
         $provider->boot();
-        
+
         $this->assertArrayHasKey(
             'view-user',
             config('user.passport.scopes')
@@ -1549,7 +1549,7 @@ class UserServiceProviderTest extends TestCase
 ```php
 /**
  * Trait per la configurazione di Passport
- * 
+ *
  * Questo trait fornisce metodi per configurare Laravel Passport
  * all'interno del modulo User. Gestisce:
  * - Configurazione dei modelli OAuth
@@ -1557,7 +1557,7 @@ class UserServiceProviderTest extends TestCase
  * - Definizione degli scope
  * - Configurazione delle rotte
  * - Gestione degli eventi
- * 
+ *
  * @package Modules\User\Providers\Traits
  * @since 1.0.0
  */
@@ -1661,6 +1661,4 @@ trait HasPassportConfiguration
 ## Collegamenti tra versioni di passport.md
 * [passport.md](../../Tenant/docs/it/config/passport.md)
 
-
 ---
-

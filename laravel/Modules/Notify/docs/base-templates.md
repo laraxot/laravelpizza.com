@@ -16,12 +16,12 @@ Questo documento definisce i template email di base da utilizzare nel modulo Not
 <div class="welcome-container">
     <h1>Benvenuto su {{ app_name }}!</h1>
     <p>Grazie per esserti registrato. Siamo entusiasti di averti con noi.</p>
-    
+
     @include('mail-layouts.components.button', [
         'url' => $verification_url,
         'text' => 'Verifica il tuo account'
     ])
-    
+
     <p class="small">Se non hai creato tu questo account, ignora questa email.</p>
 </div>
 @endsection
@@ -37,12 +37,12 @@ Questo documento definisce i template email di base da utilizzare nel modulo Not
 <div class="confirmation-container">
     <h1>Conferma il tuo indirizzo email</h1>
     <p>Per completare la registrazione, clicca sul pulsante qui sotto:</p>
-    
+
     @include('mail-layouts.components.button', [
         'url' => $confirmation_url,
         'text' => 'Conferma Email'
     ])
-    
+
     <p class="small">Questo link scadrà tra 24 ore.</p>
 </div>
 @endsection
@@ -58,12 +58,12 @@ Questo documento definisce i template email di base da utilizzare nel modulo Not
 <div class="password-reset-container">
     <h1>Reset della Password</h1>
     <p>Hai richiesto il reset della password. Clicca sul pulsante per procedere:</p>
-    
+
     @include('mail-layouts.components.button', [
         'url' => $reset_url,
         'text' => 'Reset Password'
     ])
-    
+
     <p class="small">Se non hai richiesto tu il reset, ignora questa email.</p>
 </div>
 @endsection
@@ -78,13 +78,13 @@ Questo documento definisce i template email di base da utilizzare nel modulo Not
 @section('content')
 <div class="receipt-container">
     <h1>Ricevuta di Pagamento</h1>
-    
+
     <div class="receipt-details">
         <p><strong>Numero Ordine:</strong> {{ order_number }}</p>
         <p><strong>Data:</strong> {{ order_date }}</p>
         <p><strong>Importo:</strong> {{ order_amount }}</p>
     </div>
-    
+
     <div class="order-items">
         @foreach($items as $item)
             <div class="item">
@@ -93,7 +93,7 @@ Questo documento definisce i template email di base da utilizzare nel modulo Not
             </div>
         @endforeach
     </div>
-    
+
     @include('mail-layouts.components.button', [
         'url' => $order_url,
         'text' => 'Visualizza Ordine'
@@ -112,18 +112,18 @@ Questo documento definisce i template email di base da utilizzare nel modulo Not
 <div class="security-alert-container">
     <h1>Avviso di Sicurezza</h1>
     <p>Abbiamo rilevato un accesso al tuo account da un nuovo dispositivo.</p>
-    
+
     <div class="alert-details">
         <p><strong>Data:</strong> {{ login_date }}</p>
         <p><strong>IP:</strong> {{ login_ip }}</p>
         <p><strong>Dispositivo:</strong> {{ login_device }}</p>
     </div>
-    
+
     @include('mail-layouts.components.button', [
         'url' => $security_url,
         'text' => 'Verifica Attività'
     ])
-    
+
     <p class="small">Se non sei stato tu, cambia immediatamente la password.</p>
 </div>
 @endsection
@@ -248,4 +248,4 @@ Ogni template accetta le seguenti variabili comuni:
 Per supporto tecnico:
 - Email: support@example.com
 - Documentazione: https://docs.example.com
-- Repository: https://github.com/organization/notify 
+- Repository: https://github.com/organization/notify

@@ -1,4 +1,4 @@
-# Principi di Utilizzo delle Configurazioni 
+# Principi di Utilizzo delle Configurazioni
 
 ## Regola Fondamentale
 
@@ -26,7 +26,7 @@ Forms\Components\Select::make('driver')
 
 ```php
 Forms\Components\Select::make('driver')
-    ->options(collect(config('sms.drivers'))->mapWithKeys(fn ($config, $driver) => 
+    ->options(collect(config('sms.drivers'))->mapWithKeys(fn ($config, $driver) =>
         [$driver => Str::studly($driver)]
     )->toArray())
 ```
@@ -45,10 +45,10 @@ enum SmsDriverEnum: string
     case Plivo = 'plivo';
     case Gammu = 'gammu';
     case Netfun = 'netfun';
-    
+
     public static function toArray(): array
     {
-        return collect(self::cases())->mapWithKeys(fn (self $case) => 
+        return collect(self::cases())->mapWithKeys(fn (self $case) =>
             [$case->value => $case->name]
         )->toArray();
     }

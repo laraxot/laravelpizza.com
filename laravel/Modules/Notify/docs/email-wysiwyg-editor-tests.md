@@ -16,10 +16,10 @@ class EmailEditorTest extends TestCase
     public function it_sanitizes_html_input()
     {
         $editor = new EmailEditor('html_template');
-        
+
         $dirtyHtml = '<script>alert("xss")</script><p>Test</p>';
         $cleanHtml = $editor->sanitizeHtml($dirtyHtml);
-        
+
         $this->assertStringNotContainsString('<script>', $cleanHtml);
         $this->assertStringContainsString('<p>Test</p>', $cleanHtml);
     }
@@ -29,9 +29,9 @@ class EmailEditorTest extends TestCase
     {
         $editor = new EmailEditor('html_template');
         $state = '<p>Test</p>';
-        
+
         $editor->state($state);
-        
+
         $this->assertEquals($state, $editor->getState());
     }
 }
@@ -52,7 +52,7 @@ class BlockComponentsTest extends TestCase
     public function button_block_validates_required_fields()
     {
         $block = ButtonBlock::make();
-        
+
         $this->assertTrue($block->getSchema()->get('text')->isRequired());
         $this->assertTrue($block->getSchema()->get('url')->isRequired());
     }
@@ -61,7 +61,7 @@ class BlockComponentsTest extends TestCase
     public function image_block_validates_file_upload()
     {
         $block = ImageBlock::make();
-        
+
         $this->assertTrue($block->getSchema()->get('image')->isRequired());
         $this->assertTrue($block->getSchema()->get('image')->isImage());
     }
@@ -117,7 +117,7 @@ class ComponentActionsTest extends TestCase
     public function it_sends_test_email()
     {
         $template = MailTemplate::factory()->create();
-        
+
         Livewire::test(MailTemplateResource::class)
             ->call('test', [
                 'email' => 'test@example.com',
@@ -130,11 +130,11 @@ class ComponentActionsTest extends TestCase
     public function it_duplicates_template()
     {
         $template = MailTemplate::factory()->create();
-        
+
         Livewire::test(MailTemplateResource::class)
             ->call('duplicate', $template->id)
             ->assertEmitted('template-duplicated');
-            
+
         $this->assertDatabaseCount('mail_templates', 2);
     }
 }
@@ -223,12 +223,12 @@ class EditorPerformanceTest extends TestCase
     public function it_handles_large_templates()
     {
         $start = microtime(true);
-        
+
         $editor = new EmailEditor('html_template');
         $editor->state($this->getLargeTemplate());
-        
+
         $time = microtime(true) - $start;
-        
+
         $this->assertLessThan(1.0, $time);
     }
 
@@ -236,12 +236,12 @@ class EditorPerformanceTest extends TestCase
     public function it_optimizes_image_uploads()
     {
         $start = microtime(true);
-        
+
         $manager = new EmailAssetManager();
         $manager->uploadImage($this->getLargeImage());
-        
+
         $time = microtime(true) - $start;
-        
+
         $this->assertLessThan(2.0, $time);
     }
 }
@@ -261,12 +261,12 @@ class PreviewPerformanceTest extends TestCase
     public function it_caches_preview_rendering()
     {
         $start = microtime(true);
-        
+
         $preview = new EmailPreview('preview');
         $preview->renderPreview($this->getTemplate());
-        
+
         $time = microtime(true) - $start;
-        
+
         $this->assertLessThan(0.5, $time);
         $this->assertTrue(Cache::has('preview_' . md5($this->getTemplate())));
     }
@@ -288,13 +288,13 @@ class XSSPreventionTest extends TestCase
     public function it_prevents_xss_attacks()
     {
         $editor = new EmailEditor('html_template');
-        
+
         $maliciousInput = [
             '<script>alert("xss")</script>',
             '<img src="x" onerror="alert(\'xss\')">',
             '<a href="javascript:alert(\'xss\')">Click</a>'
         ];
-        
+
         foreach ($maliciousInput as $input) {
             $clean = $editor->sanitizeHtml($input);
             $this->assertStringNotContainsString('script', $clean);
@@ -318,13 +318,13 @@ class FileUploadSecurityTest extends TestCase
     public function it_validates_uploaded_files()
     {
         $manager = new EmailAssetManager();
-        
+
         $invalidFiles = [
             UploadedFile::fake()->create('test.exe', 100),
             UploadedFile::fake()->create('test.php', 100),
             UploadedFile::fake()->image('test.jpg')->size(10000)
         ];
-        
+
         foreach ($invalidFiles as $file) {
             $this->expectException(\Exception::class);
             $manager->uploadImage($file);
@@ -343,4 +343,4 @@ class FileUploadSecurityTest extends TestCase
 - [Dusk Documentation](https://laravel.com/project_docs/dusk)
 - [Laravel Testing Documentation](https://laravel.com/docs/testing)
 - [Dusk Documentation](https://laravel.com/docs/dusk)
-- [PHPUnit Documentation](https://phpunit.de/documentation.html) 
+- [PHPUnit Documentation](https://phpunit.de/documentation.html)

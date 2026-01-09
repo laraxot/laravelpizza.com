@@ -43,8 +43,8 @@
 3. **Consolidare per topic**
 4. **Archive obsoleti**
 
-**Target:** 550 → 200 files  
-**Effort:** 2 settimane  
+**Target:** 550 → 200 files
+**Effort:** 2 settimane
 **Benefit:** +200% navigabilità
 
 ### 2. Service/Action Buon Bilanciamento ✅
@@ -66,6 +66,5 @@
 2. **Resources refactoring** (4 giorni) 🟡
 3. **Models audit** (1 sett) 🟢
 
-**Status:** 🟡 Codice OK, Docs CRITICI  
+**Status:** 🟡 Codice OK, Docs CRITICI
 🐄 **MU-UU-UU!**
-

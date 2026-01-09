@@ -7,17 +7,17 @@
 
 ## Errori principali
 
-1. **Classe mancante**  
-   - File: `app/Filament/Actions/SendNotificationBulkAction.php` linee 79-82.  
+1. **Classe mancante**
+   - File: `app/Filament/Actions/SendNotificationBulkAction.php` linee 79-82.
    - Sintomi: `Modules\Notify\Actions\SendRecordsNotificationBulkAction` non esiste; la PHPDoc e la chiamata `execute()` puntano a una classe inesistente.
-2. **Tipi canali errati**  
-   - File: `app/Actions/SendRecordsNotificationAction.php` linee 64, 81.  
+2. **Tipi canali errati**
+   - File: `app/Actions/SendRecordsNotificationAction.php` linee 64, 81.
    - Sintomi: passiamo array di stringhe (es. `'mail'`) a metodi che aspettano `array<int, ChannelEnum>`; array_map riceve una closure tipizzata su `ChannelEnum` ma gli arrivano stringhe.
-3. **Email layout key nullable**  
-   - File: `app/Emails/SpatieEmail.php` linea 150.  
+3. **Email layout key nullable**
+   - File: `app/Emails/SpatieEmail.php` linea 150.
    - Sintomi: `XotData::getMailHtmlLayoutPath()` richiede `string $key`, ma `SpatieEmail` gli passa `string|null`.
-4. **PHPDoc Enum errata**  
-   - File: `app/Enums/ChannelEnum.php` linea 43.  
+4. **PHPDoc Enum errata**
+   - File: `app/Enums/ChannelEnum.php` linea 43.
    - Sintomi: PHPDoc cita `$channelEnum` che non esiste; serve documentare i parametri reali (es. `$value`).
 
 ## Piano di intervento

@@ -33,7 +33,7 @@ class IconStateSplitColumn extends Grid
     public string $stateClass='';
     public string $modelClass='';
     public array $data=[];
-    
+
     protected function setUp(): void
     {
         //$this->label('');
@@ -50,11 +50,11 @@ class IconStateSplitColumn extends ViewColumn
     protected array $stateConfigurations = [];
     protected array $cachedTableActions = [];
     protected string $view = 'ui::components.ui.state-icons-split';
-    
+
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         $this->label(__('ui::table.columns.state_actions.label'))
             ->alignCenter()
             ->width('120px')
@@ -78,7 +78,7 @@ Created `state-icons-split.blade.php` with:
 ->action(function (Model $record, array $data) use ($stateInstance): void {
     try {
         $stateInstance->modalActionByRecord($record, $data);
-        
+
         // Success notification
         \Filament\Notifications\Notification::make()
             ->title(__('ui::notifications.state_transition.success.title'))
@@ -87,7 +87,7 @@ Created `state-icons-split.blade.php` with:
             ]))
             ->success()
             ->send();
-            
+
     } catch (\Exception $e) {
         // Error notification with details
         \Filament\Notifications\Notification::make()
@@ -97,7 +97,7 @@ Created `state-icons-split.blade.php` with:
             ]))
             ->danger()
             ->send();
-            
+
         throw $e;
     }
 })
@@ -157,7 +157,7 @@ And updated Blade view to access data correctly:
 ### CSS Enhancements
 
 ```css
-.inline-flex items-center justify-center w-8 h-8 rounded-full 
+.inline-flex items-center justify-center w-8 h-8 rounded-full
 transition-all duration-200 ease-in-out
 hover:scale-110 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-1
 ```
@@ -271,6 +271,6 @@ This comprehensive refactor demonstrates best practices for Filament component d
 
 ---
 
-**Last Updated**: 2025-01-28  
-**Version**: 2.0.0  
+**Last Updated**: 2025-01-28
+**Version**: 2.0.0
 **Status**: ✅ Production Ready

@@ -1,7 +1,7 @@
 # Regola Critica: NO Services - Solo Spatie QueueableActions
 
-**Data Creazione**: 2025-01-18  
-**Status**: Regola Fondamentale Laraxot  
+**Data Creazione**: 2025-01-18
+**Status**: Regola Fondamentale Laraxot
 **Priorità**: CRITICA - Mai Violare
 
 ## 🚨 Regola Fondamentale
@@ -68,7 +68,7 @@ use Spatie\QueueableAction\QueueableAction;
 class GenerateChartAction
 {
     use QueueableAction;
-    
+
     public function execute(array $data): Chart
     {
         // Business logic qui
@@ -138,7 +138,7 @@ use Spatie\QueueableAction\QueueableAction;
 class [ActionName]Action
 {
     use QueueableAction;
-    
+
     /**
      * Execute the action.
      *
@@ -172,7 +172,7 @@ class ChartService
         $this->processChart($chart);
         return $chart;
     }
-    
+
     private function processChart(Chart $chart): void
     {
         // Logica privata
@@ -192,7 +192,7 @@ use Modules\Quaeris\Actions\Chart\ProcessChartAction;
 class GenerateChartAction
 {
     use QueueableAction;
-    
+
     public function execute(array $data): Chart
     {
         $chart = Chart::create($data);
@@ -210,7 +210,7 @@ use Modules\Quaeris\Models\Chart;
 class ProcessChartAction
 {
     use QueueableAction;
-    
+
     public function execute(Chart $chart): void
     {
         // Logica di processamento
@@ -241,4 +241,3 @@ Prima di ogni commit, verifica:
 ---
 
 **Filosofia**: Le Actions sono unità atomiche di business logic, riutilizzabili, testabili e queueable. I Services creano accoppiamento e violano il principio di responsabilità singola.
-

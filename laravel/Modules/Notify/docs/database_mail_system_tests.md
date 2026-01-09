@@ -37,7 +37,7 @@ class MailTemplateTest extends TestCase
             'variables' => ['user' => 'App\Models\User'],
 
         $user = User::factory()->create(['name' => 'Test User']);
-        
+
         $rendered = app(MailTemplateManager::class)
             ->renderTemplate($template, ['user' => $user]);
 
@@ -52,7 +52,7 @@ class MailTemplateTest extends TestCase
         ]);
 
         $this->expectException(InvalidVariableException::class);
-        
+
         app(MailTemplateManager::class)
             ->renderTemplate($template, []);
     }
@@ -165,7 +165,6 @@ class SendMailTemplateTest extends TestCase
     {
         $template = MailTemplate::factory()->create();
 
-
         $this->assertDatabaseHas('notify_mail_stats', [
             'template_id' => $template->id,
             'email' => $user->email,
@@ -199,12 +198,12 @@ class MailWorkflowTest extends TestCase
 
         // 3. Invia reminder
         Mail::fake();
-        
+
         $this->artisan('notify:send-appointment-reminders');
 
         // 4. Verifica
         Mail::assertSent(AppointmentReminder::class);
-        
+
         $this->assertDatabaseHas('notify_mail_stats', [
             'template_id' => $template->id,
             'status' => 'sent',
@@ -237,7 +236,7 @@ class MailTemplatePerformanceTest extends TestCase
         }
 
         $time = microtime(true) - $start;
-        
+
         // Dovrebbe renderizzare 100 template in meno di 1 secondo
         $this->assertLessThan(1.0, $time);
     }
@@ -256,7 +255,7 @@ class MailTemplatePerformanceTest extends TestCase
         });
 
         $time = microtime(true) - $start;
-        
+
         // L'accodamento dovrebbe essere rapido
         $this->assertLessThan(0.5, $time);
     }
@@ -325,71 +324,6 @@ class MailTemplateSecurityTest extends TestCase
 
 ```bash
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Esegui tutti i test
 php artisan test --filter=MailTemplate
 
@@ -429,6 +363,5 @@ php artisan test --coverage --filter=MailTemplate
 - [Testing Guide](../../../project_docs/testing-guide.md)
 - [CI/CD Pipeline](../../../project_docs/ci-cd.md)
 
-
 - [Laravel Testing](https://laravel.com/project_docs/testing)
-- [Pest PHP](https://pestphp.com/docs) 
+- [Pest PHP](https://pestphp.com/docs)

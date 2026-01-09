@@ -50,7 +50,7 @@ Il modulo User gestisce:
 #### 1. Authentication
 **Tipo**: Audit/Log Model
 **Business Logic**: Traccia tentativi di autenticazione (login/logout)
-**Differenza con AuthenticationLog**: 
+**Differenza con AuthenticationLog**:
 - `Authentication`: Tentativi generici (polymorphic)
 - `AuthenticationLog`: Log specifici utente (HasAuthenticationLogTrait)
 

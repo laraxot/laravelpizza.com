@@ -79,9 +79,6 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
 
-
-
-
 ## Categorie Principali
 
 ### Architettura e Struttura

@@ -125,7 +125,7 @@ Tutti i modelli attivi che necessitano factory le hanno.
 
 ### Dati Gestiti
 - **Regioni**: 20 regioni italiane
-- **Province**: 110+ province italiane  
+- **Province**: 110+ province italiane
 - **Comuni**: 8000+ comuni italiani
 - **CAP**: Sistema CAP completo
 - **Codici ISTAT**: Codici identificativi ufficiali

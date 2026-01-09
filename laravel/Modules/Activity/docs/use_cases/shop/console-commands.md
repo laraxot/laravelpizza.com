@@ -97,13 +97,13 @@ public function handle(CartService $cartService)
 {
     $userId = $this->argument('user_id');
     $products = $this->parseProducts($this->option('products'));
-    
+
     $cart = $cartService->createCart($userId);
-    
+
     foreach ($products as $productId => $quantity) {
         $cart->addItem($productId, $quantity);
     }
-    
+
     $this->info("Carrello creato con ID: " . $cart->getId());
     $this->table(
         ['Prodotto', 'Quantità', 'Prezzo'],
@@ -271,7 +271,7 @@ use Modules\Activity\App\Domain\Shop\CartAggregate;
 class CartAddItemCommand extends Command
 {
     protected $signature = 'activity:shop:add-item {cartUuid} {itemId} {quantity=1} {price}';
-    
+
     protected $description = 'Aggiunge un articolo al carrello della spesa nel modulo Activity';
 
     public function handle()
@@ -282,7 +282,7 @@ class CartAddItemCommand extends Command
         $price = (float) $this->argument('price');
 
         $cart = CartAggregate::retrieve($cartUuid);
-        
+
         $cart->addItem($itemId, $quantity, $price);
         $cart->persist();
 
@@ -318,7 +318,7 @@ use Modules\Activity\App\Domain\Shop\CartAggregate;
 class CartCheckoutCommand extends Command
 {
     protected $signature = 'activity:shop:checkout {cartUuid}';
-    
+
     protected $description = 'Completa un ordine dal carrello della spesa nel modulo Activity';
 
     public function handle()
@@ -326,7 +326,7 @@ class CartCheckoutCommand extends Command
         $cartUuid = $this->argument('cartUuid');
 
         $cart = CartAggregate::retrieve($cartUuid);
-        
+
         $orderUuid = uniqid('order_');
         $cart->checkout($orderUuid);
         $cart->persist();

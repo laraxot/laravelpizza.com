@@ -55,7 +55,7 @@ it('creates appointment when doctor and patient are available', function() {
     $doctor = User::factory()->doctor()->create();
     $patient = User::factory()->patient()->create();
     $studio = Studio::factory()->create();
-    
+
     $appointment = Appointment::create([
         'doctor_id' => $doctor->id,
         'patient_id' => $patient->id,
@@ -63,7 +63,7 @@ it('creates appointment when doctor and patient are available', function() {
         'start_time' => now()->addDay(),
         'duration' => 30,
     ]);
-    
+
     expect($appointment->isConfirmed())->toBeTrue();
     expect($appointment->doctor->id)->toBe($doctor->id);
     expect($appointment->patient->id)->toBe($patient->id);
@@ -73,14 +73,14 @@ it('prevents double booking for same time slot', function() {
     $doctor = User::factory()->doctor()->create();
     $studio = Studio::factory()->create();
     $timeSlot = now()->addDay()->setTime(10, 0);
-    
+
     // Prima prenotazione
     Appointment::factory()->create([
         'doctor_id' => $doctor->id,
         'studio_id' => $studio->id,
         'start_time' => $timeSlot,
     ]);
-    
+
     // Tentativo di doppia prenotazione
     expect(function() use ($doctor, $studio, $timeSlot) {
         Appointment::create([
@@ -156,6 +156,6 @@ Quando sistemo un test esistente che non funziona:
 
 **Questa regola è SUPREMA e ha precedenza su qualsiasi altra considerazione di testing.**
 
-**Ultimo aggiornamento**: Gennaio 2025  
-**Status**: REGOLA ASSOLUTA E NON NEGOZIABILE  
+**Ultimo aggiornamento**: Gennaio 2025
+**Status**: REGOLA ASSOLUTA E NON NEGOZIABILE
 **Applicabilità**: UNIVERSALE - ogni test, ogni modulo, ogni scenario

@@ -8,7 +8,7 @@
 
 ### Regola Fondamentale: Traduzioni Appropriate
 - **Italiano**: "Referto" (NON "Report") - specialmente in ambito medico/odontoiatrico
-- **Inglese**: "Report" 
+- **Inglese**: "Report"
 - **Tedesco**: "Bericht"
 
 ### Esempi di Terminologia Corretta
@@ -149,6 +149,6 @@ Ogni correzione terminologica deve essere documentata:
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025  
-**Regola Critica**: MAI rimuovere contenuto dalle traduzioni, SOLO aggiungere o migliorare  
-**Terminologia**: "Referto" in italiano, "Report" in inglese, "Bericht" in tedesco 
+**Ultimo aggiornamento**: Gennaio 2025
+**Regola Critica**: MAI rimuovere contenuto dalle traduzioni, SOLO aggiungere o migliorare
+**Terminologia**: "Referto" in italiano, "Report" in inglese, "Bericht" in tedesco

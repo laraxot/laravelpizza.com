@@ -38,7 +38,7 @@ Laravel offre diverse varianti di metodi per creare campi polimorfici:
 
 Nel nostro caso specifico:
 
-1. **Uso di `model` invece di `addressable`**: 
+1. **Uso di `model` invece di `addressable`**:
    - Mantiene la coerenza con altre parti del sistema
    - Riflette una terminologia più generale e neutrale
    - Si allinea con le convenzioni di naming esistenti nel progetto
@@ -67,7 +67,7 @@ $table->timestamps(); // Nella sezione tableCreate
 $this->updateTimestamps($table, true); // Nella sezione tableUpdate
 ```
 
-Questo codice crea una duplicazione: 
+Questo codice crea una duplicazione:
 1. `$table->timestamps()` crea le colonne `created_at` e `updated_at`
 2. `$this->updateTimestamps($table, true)` tenta di creare nuovamente queste colonne, più `deleted_at`
 

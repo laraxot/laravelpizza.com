@@ -23,7 +23,7 @@ Upon re-evaluation, I found that many of the duplicates identified in the initia
 ### 3. Other Tables (No Current Duplicates)
 - Users table: Only one creation migration exists
 - Teams table: No duplicates found
-- Roles table: Only one creation migration exists  
+- Roles table: Only one creation migration exists
 - Authentication log: Only one creation migration exists
 - Devices table: Only one creation migration exists
 - Device user table: Only one creation migration exists

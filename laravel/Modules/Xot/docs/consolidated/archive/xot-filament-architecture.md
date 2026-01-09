@@ -45,4 +45,4 @@ class MyPage extends XotBasePage
 - **Compatibilità**: Aggiornamenti Filament più sicuri
 - **Consistenza**: Comportamento uniforme tra moduli
 - **Manutenibilità**: Modifiche centralizzate nelle classi base
-- **Estensibilità**: Facile aggiunta di nuove funzionalità 
+- **Estensibilità**: Facile aggiunta di nuove funzionalità

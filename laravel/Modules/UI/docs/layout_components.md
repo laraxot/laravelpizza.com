@@ -142,4 +142,4 @@ $breakpoints: (
 ## 🔗 Collegamenti
 - [Componenti Base](./base-components.md)
 - [Performance](./standards/performance.md)
-- [Accessibilità](./standards/accessibility.md) 
+- [Accessibilità](./standards/accessibility.md)

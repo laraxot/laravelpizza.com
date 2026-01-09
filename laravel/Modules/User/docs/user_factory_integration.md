@@ -12,7 +12,7 @@ Questo documento descrive l'integrazione tra la `UserFactory` del modulo SaluteO
 BaseUser (Modules\User\Models\BaseUser)
 ├── User (Modules\SaluteOra\Models\User) - Base for STI
     ├── Patient (Modules\SaluteOra\Models\Patient) - uses HasParent
-    ├── Doctor (Modules\SaluteOra\Models\Doctor) - uses HasParent  
+    ├── Doctor (Modules\SaluteOra\Models\Doctor) - uses HasParent
     └── Admin (Modules\SaluteOra\Models\Admin) - uses HasParent
 ```
 
@@ -22,7 +22,7 @@ BaseUser (Modules\User\Models\BaseUser)
 // BaseUser (Modulo User)
 protected $connection = 'user'; // Default connection
 
-// User (Modulo SaluteOra) 
+// User (Modulo SaluteOra)
 protected $connection = 'salute_ora'; // Override for healthcare domain
 ```
 
@@ -81,7 +81,7 @@ namespace Modules\SaluteOra\Database\Factories;
 class UserFactory extends Factory
 {
     protected $model = \Modules\SaluteOra\Models\User::class;
-    
+
     // Genera dati compatibili con tutti i modelli della gerarchia
     public function definition(): array
     {
@@ -90,12 +90,12 @@ class UserFactory extends Factory
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'password' => Hash::make('password'),
-            
+
             // Campi User SaluteOra (specifici dominio)
             'type' => UserTypeEnum::PATIENT,
             'state' => Pending::class,
             'is_active' => true,
-            
+
             // Campi sanitari specifici
             'date_of_birth' => $this->faker->dateTimeBetween('-80 years', '-18 years'),
             'gender' => $this->faker->randomElement(['M', 'F', 'Other']),
@@ -114,15 +114,15 @@ public function patient(): static
 {
     return $this->state(fn () => [
         'type' => UserTypeEnum::PATIENT,
-        
+
         // Dati anagrafici
         'fiscal_code' => $this->generateItalianFiscalCode(),
         'nationality' => 'Italian',
-        
+
         // Dati sanitari
         'dental_problems' => $this->faker->optional()->sentence(),
         'last_dental_visit' => $this->faker->optional()->dateTimeBetween('-2 years'),
-        
+
         // Dati socio-economici
         'family_members' => $this->faker->numberBetween(1, 6),
         'children_count' => $this->faker->numberBetween(0, 4),
@@ -138,11 +138,11 @@ public function doctor(): static
 {
     return $this->state(fn () => [
         'type' => UserTypeEnum::DOCTOR,
-        
+
         // Dati professionali
         'registration_number' => 'OMD' . $this->faker->unique()->numberBetween(10000, 99999),
         'status' => 'active',
-        
+
         // Specializzazioni odontoiatriche
         'certifications' => [
             'odontoiatria_generale' => true,
@@ -273,7 +273,7 @@ expect($user->isActive())->toBeTrue();
 public function test_base_user_compatibility()
 {
     $user = User::factory()->create();
-    
+
     // Test authentication contracts
     expect($user->email)->toBeString();
     expect($user->password)->toBeString();
@@ -285,7 +285,7 @@ public function test_sti_functionality()
 {
     $patient = User::factory()->patient()->create();
     $doctor = User::factory()->doctor()->create();
-    
+
     expect($patient)->toBeInstanceOf(Patient::class);
     expect($doctor)->toBeInstanceOf(Doctor::class);
     expect($patient->type)->toBe(UserTypeEnum::PATIENT);
@@ -305,9 +305,9 @@ public function test_bulk_sti_creation()
         ...User::factory()->doctor()->count(20)->make(),
         ...User::factory()->admin()->count(5)->make(),
     ]);
-    
+
     User::insert($users->toArray());
-    
+
     expect(User::count())->toBe(75);
     expect(Patient::count())->toBe(50);
     expect(Doctor::count())->toBe(20);
@@ -351,7 +351,7 @@ public function test_bulk_sti_creation()
 
 ---
 
-**Created**: January 2025  
-**Purpose**: Document cross-module factory integration  
-**Maintainer**: Development Team  
-**Review Status**: Ready for implementation 
+**Created**: January 2025
+**Purpose**: Document cross-module factory integration
+**Maintainer**: Development Team
+**Review Status**: Ready for implementation

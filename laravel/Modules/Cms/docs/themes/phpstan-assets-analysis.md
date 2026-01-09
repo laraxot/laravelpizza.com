@@ -165,4 +165,4 @@ php artisan phpstan:incremental Modules/Theme
 3. **Continuous Integration**
    - Includere analisi PHPStan nel pipeline CI
    - Bloccare merge con errori PHPStan
-   - Automatizzare generazione baseline 
+   - Automatizzare generazione baseline

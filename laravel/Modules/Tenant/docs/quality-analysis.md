@@ -1,6 +1,6 @@
 # Analisi Qualità - Modulo Tenant
 
-**Ultimo aggiornamento**: 2025-01-27  
+**Ultimo aggiornamento**: 2025-01-27
 **Tool utilizzati**: PHPStan (Level 9), PHPMD, PHPInsights, Pint
 
 ---

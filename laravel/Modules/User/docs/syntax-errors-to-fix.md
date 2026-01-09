@@ -26,9 +26,9 @@ $this->currentState = 'loading';
 
 try {  // ← Questo try ESISTE (linea 132)
     $data = $this->form->getState();
-    
+
     $response = Password::broker()->reset(...);
-    
+
     if ($response === Password::PASSWORD_RESET) {
         // Success handling
     } else {
@@ -42,10 +42,10 @@ try {  // ← Questo try ESISTE (linea 132)
 **Analisi**:
 Il `try` esiste alla linea 132, quindi il problema NON è catch orfano.
 
-**Ipotesi**: 
+**Ipotesi**:
 - Duplicazioni interne al try block causano syntax error
 - Linea 126 duplicata (if statement)
-- Linea 153 duplicata (if check)  
+- Linea 153 duplicata (if check)
 - Linea 166 duplicata (Assert)
 - Linea 174 duplicata ($this->js)
 
@@ -62,7 +62,7 @@ $this->currentState = 'loading';
 
 try {
     $data = $this->form->getState();
-    
+
     $response = Password::broker()->reset(
         [
             'token' => $this->token,
@@ -77,21 +77,21 @@ try {
             event(new PasswordReset($user));
         },
     );
-    
+
     if ($response === Password::PASSWORD_RESET) {
         $this->currentState = 'success';
-        
+
         Notification::make()
             ->title(__('user::auth.password_reset.success.title'))
             ->body(__('user::auth.password_reset.success.message'))
             ->success()
             ->duration(8000)
             ->send();
-        
+
         Assert::string($email = $data['email'], __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
         $user = XotData::make()->getUserByEmail($email);
         Auth::guard()->login($user);
-        
+
         $this->js('setTimeout(() => { window.location.href = "' . route('login') . '"; }, 3000);');
     } else {
         $this->handleResetError($response);
@@ -105,7 +105,7 @@ try {
 
 **Priority**: P0 - CRITICO (blocca avvio applicazione)
 
-**Azione Richiesta**: 
+**Azione Richiesta**:
 1. Utente finisce modifiche
 2. Rimuove duplicazioni (linee 126, 153, 166, 174)
 3. Verifica syntax con `php -l PasswordResetConfirmWidget.php`
@@ -130,7 +130,6 @@ try {
 
 ---
 
-**Documento creato**: Gennaio 2025  
-**Pattern rilevato**: Conflitti Git risolti male mantenendo BOTH changes invece di choosing  
+**Documento creato**: Gennaio 2025
+**Pattern rilevato**: Conflitti Git risolti male mantenendo BOTH changes invece di choosing
 **Strategia fix**: Deduplica righe consecutive identiche, mantieni versione più moderna
-

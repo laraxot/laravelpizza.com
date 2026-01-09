@@ -108,9 +108,9 @@ Il componente List è utilizzato per visualizzare elenchi di elementi in modo st
                     <x-heroicon-o-information-circle class="w-5 h-5 text-primary-500" />
                 @endif
             </x-slot>
-            
+
             {{ $notification->message }}
-            
+
             <x-slot name="actions">
                 <x-filament::button
                     size="sm"
@@ -136,9 +136,9 @@ Il componente List è utilizzato per visualizzare elenchi di elementi in modo st
                     <x-heroicon-o-clock class="w-5 h-5 text-warning-500" />
                 @endif
             </x-slot>
-            
+
             {{ $task->title }}
-            
+
             <x-slot name="description">
                 {{ $task->description }}
             </x-slot>
@@ -167,4 +167,4 @@ Il componente List è utilizzato per visualizzare elenchi di elementi in modo st
 4. **Best Practices**
    - Limitare il numero di elementi visualizzati
    - Implementare infinite scroll per liste lunghe
-   - Utilizzare caching appropriato 
+   - Utilizzare caching appropriato

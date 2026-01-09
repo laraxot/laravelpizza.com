@@ -219,4 +219,4 @@ Validator::make($request->all(), [
         ]);
     }
 });
-``` 
+```

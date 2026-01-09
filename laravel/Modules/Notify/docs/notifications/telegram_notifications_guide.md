@@ -1,4 +1,4 @@
-# Notifiche Telegram 
+# Notifiche Telegram
 
 Questa documentazione descrive come implementare notifiche Telegram nel modulo Notify di <main module>.
 
@@ -82,21 +82,21 @@ use NotificationChannels\Telegram\TelegramMessage;
 class AppointmentNotification extends Notification
 {
     protected $appointment;
-    
+
     public function __construct($appointment)
     {
         $this->appointment = $appointment;
     }
-    
+
     public function via($notifiable)
     {
         return [TelegramChannel::class];
     }
-    
+
     public function toTelegram($notifiable)
     {
         $url = url("/appointments/{$this->appointment->id}");
-        
+
         return TelegramMessage::create()
             ->content("**Promemoria Appuntamento**\n\nHai un appuntamento il {$this->appointment->formatted_date} alle {$this->appointment->formatted_time} con il Dr. {$this->appointment->doctor->name}.")
             ->button('Visualizza Dettagli', $url)
@@ -135,7 +135,7 @@ public function toTelegram($notifiable)
 public function toTelegram($notifiable)
 {
     $appointmentId = $this->appointment->id;
-    
+
     return TelegramMessage::create()
         ->content("Confermi l'appuntamento del {$this->appointment->formatted_date}?")
         ->buttonWithCallback('Conferma', "confirm_appointment_{$appointmentId}")
@@ -176,19 +176,19 @@ class RegisterCommand extends Command
 {
     protected $name = 'register';
     protected $description = 'Collega il tuo account Telegram a <main module>';
-    
+
     public function handle()
     {
         $chatId = $this->update->getMessage()->getChat()->getId();
         $token = Str::random(8);
-        
+
         // Salva il token temporaneo
         TelegramToken::create([
             'token' => $token,
             'chat_id' => $chatId,
             'expires_at' => now()->addHours(1),
         ]);
-        
+
         $this->replyWithMessage([
             'text' => "Il tuo codice di collegamento è: {$token}\n\nInseriscilo nel tuo profilo <main module> per completare il collegamento."
         ]);
@@ -210,18 +210,18 @@ class VerifyTelegramToken
     public function handle(Request $request, Closure $next)
     {
         $token = $request->input('token');
-        
+
         $telegramToken = TelegramToken::where('token', $token)
             ->where('expires_at', '>', now())
             ->whereNull('user_id')
             ->first();
-        
+
         if (!$telegramToken) {
             return response()->json(['error' => 'Token non valido o scaduto'], 400);
         }
-        
+
         $request->merge(['telegram_token' => $telegramToken]);
-        
+
         return $next($request);
     }
 }
@@ -248,16 +248,16 @@ class TelegramNotificationTest extends TestCase
     {
         $user = User::factory()->create(['telegram_chat_id' => '123456789']);
         $appointment = Appointment::factory()->create();
-        
+
         $notification = new AppointmentNotification($appointment);
-        
+
         $telegramMessage = $notification->toTelegram($user);
-        
+
         $this->assertStringContainsString(
             $appointment->formatted_date,
             $telegramMessage->content
         );
-        
+
         $this->assertCount(2, $telegramMessage->buttons);
     }
 }

@@ -78,7 +78,7 @@ RateLimiter::for('login', function (Request $request) {
 'password' => [
     'min:12',
     'regex:/[a-z]/',      // lowercase
-    'regex:/[A-Z]/',      // uppercase  
+    'regex:/[A-Z]/',      // uppercase
     'regex:/[0-9]/',      // numbers
     'regex:/[@$!%*#?&]/', // special chars
     'confirmed'
@@ -105,7 +105,7 @@ public function assignRole(string $roleName): bool
     if (!$role) {
         throw new RoleNotFoundException("Role {$roleName} not found");
     }
-    
+
     return $this->roles()->attach($role->id);
 }
 ```
@@ -165,20 +165,20 @@ Route::prefix('api/v2')->group(function () {
 class UniqueEmailRule implements Rule
 {
     private ?int $excludeUserId;
-    
+
     public function __construct(?int $excludeUserId = null)
     {
         $this->excludeUserId = $excludeUserId;
     }
-    
+
     public function passes($attribute, $value): bool
     {
         $query = User::where('email', $value);
-        
+
         if ($this->excludeUserId) {
             $query->where('id', '!=', $this->excludeUserId);
         }
-        
+
         return !$query->exists();
     }
 }
@@ -202,7 +202,7 @@ class UserObserver
     public function created(User $user): void
     {
         event(new UserRegistered($user, request()->ip()));
-        
+
         // Log security event
         Log::info('User registered', [
             'user_id' => $user->id,
@@ -216,7 +216,7 @@ class UserObserver
 ### 3. Testing Enhancements
 ```php
 // ✅ Test helpers per User module
-trait HasUserTestHelpers 
+trait HasUserTestHelpers
 {
     protected function createUserWithRole(string $roleName): User
     {
@@ -225,12 +225,12 @@ trait HasUserTestHelpers
         $user->assignRole($role);
         return $user;
     }
-    
+
     protected function actingAsAdmin(): static
     {
         return $this->actingAs($this->createUserWithRole('admin'));
     }
-    
+
     protected function assertUserHasPermission(User $user, string $permission): void
     {
         $this->assertTrue(
@@ -268,12 +268,12 @@ class UserAnalytics
                    ->with(['profile'])
                    ->get();
     }
-    
+
     public function getRoleDistribution(): Collection
     {
         return Role::withCount('users')->get();
     }
-    
+
     public function getRegistrationTrends(int $months = 6): Collection
     {
         return User::selectRaw('DATE_FORMAT(created_at, "%Y-%m") as month, COUNT(*) as count')
@@ -317,24 +317,24 @@ class UserService
         private UserRepositoryInterface $userRepository,
         private NotificationService $notificationService
     ) {}
-    
+
     public function registerUser(array $userData): User
     {
         DB::beginTransaction();
-        
+
         try {
             $user = User::create($userData);
             $user->profile()->create($userData['profile'] ?? []);
-            
+
             // Assign default role
             $user->assignRole('user');
-            
+
             // Send welcome email
             $this->notificationService->sendWelcomeEmail($user);
-            
+
             DB::commit();
             return $user;
-            
+
         } catch (Exception $e) {
             DB::rollBack();
             throw new UserRegistrationException('Failed to register user', 0, $e);

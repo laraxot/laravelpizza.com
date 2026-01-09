@@ -74,7 +74,7 @@ name('page_slug.view');
 render(function (View $view, string $slug) {
     $locale = app()->getLocale();
     $page = Page::firstWhere(['slug' => $slug]);
-    
+
     return $view->with([
         'page' => $page,
         'locale' => $locale
@@ -225,4 +225,3 @@ $locale = app()->getLocale();
 ## Collegamenti tra versioni di routing.md
 * [routing.md](docs/routing.md)
 * [routing.md](laravel/Modules/Cms/docs/frontoffice/routing.md)
-

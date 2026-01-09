@@ -9,18 +9,17 @@ section: content
 
 https://spatie.be/docs/laravel-event-sourcing/v7/using-reactors/writing-your-first-reactor
 
-
-Li utilizzi quando vuoi eseguire delle azioni solo quando si verifica l'evento originale. Non vuoi fare questo lavoro quando riproduci gli eventi.  
-I reattori non dovrebbero modificare i modelli.  
-Sono pensati per gli effetti collaterali (come inviare un email se un evento viene chiamato)    
-E' una classe, proprio come un proiettore, ascolta gli eventi in arrivo.  
-A differenza dei proiettori, tuttavia, i reattori non verranno richiamati quando gli eventi vengono riprodotti. Verranno chiamati solo quando si attiva l'evento originale  
+Li utilizzi quando vuoi eseguire delle azioni solo quando si verifica l'evento originale. Non vuoi fare questo lavoro quando riproduci gli eventi.
+I reattori non dovrebbero modificare i modelli.
+Sono pensati per gli effetti collaterali (come inviare un email se un evento viene chiamato)
+E' una classe, proprio come un proiettore, ascolta gli eventi in arrivo.
+A differenza dei proiettori, tuttavia, i reattori non verranno richiamati quando gli eventi vengono riprodotti. Verranno chiamati solo quando si attiva l'evento originale
 Si raccomanda che tutti i reattori implementino Illuminate\Contracts\Queue\ShouldQueue, in quanto saranno lenti.
 
 ## Creazione
 ```php
 php artisan make:reactor NomeCheSiVuolDareReactor
-``` 
+```
 Nella cartella /Reactors
 
 ## Registrazione
@@ -51,4 +50,4 @@ class EventSourcingServiceProvider extends ServiceProvider
         ]);
     }
 }
-``` 
+```

@@ -65,7 +65,7 @@ Il componente Alert è utilizzato per mostrare messaggi importanti, notifiche o 
             Conferma
         </x-filament::button>
     </x-slot>
-    
+
     Devi confermare questa azione prima di procedere.
 </x-filament::alert>
 ```
@@ -148,7 +148,7 @@ Il componente Alert è utilizzato per mostrare messaggi importanti, notifiche o 
             dismissible
         >
             {{ $notification->message }}
-            
+
             @if ($notification->action)
                 <x-slot name="actions">
                     <x-filament::button
@@ -185,4 +185,4 @@ Il componente Alert è utilizzato per mostrare messaggi importanti, notifiche o 
 4. **Best Practices**
    - Non abusare degli alert
    - Preferire feedback inline quando possibile
-   - Mantenere consistenza nel design system 
+   - Mantenere consistenza nel design system

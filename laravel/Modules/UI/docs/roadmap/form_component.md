@@ -34,16 +34,16 @@ class FormBuilder extends XotBaseUIComponent
 {
     /** @var array<string, FormField> */
     protected array $fields = [];
-    
+
     /** @var array<string, mixed> */
     protected array $values = [];
-    
+
     public function addField(string $name, FormField $field): self
     {
         $this->fields[$name] = $field;
         return $this;
     }
-    
+
     public function validate(): ValidationResult
     {
         return $this->validator->validate($this->values);
@@ -60,7 +60,7 @@ abstract class FormField
     protected bool $required = false;
     protected ?string $placeholder = null;
     protected array $validators = [];
-    
+
     abstract public function render(): View;
     abstract public function validate($value): ValidationResult;
 }
@@ -70,7 +70,7 @@ class InputField extends FormField
     protected string $type = 'text';
     protected ?int $maxLength = null;
     protected ?string $pattern = null;
-    
+
     public function setType(string $type): self
     {
         $this->type = $type;
@@ -161,11 +161,11 @@ protected function validateField(string $name): void
     if (!isset($this->dirtyFields[$name])) {
         return;
     }
-    
+
     $result = $this->fields[$name]->validate(
         $this->values[$name]
     );
-    
+
     $this->errors[$name] = $result->errors();
 }
 ```
@@ -176,13 +176,13 @@ class FormState
 {
     /** @var array<string, mixed> */
     protected array $initialValues = [];
-    
+
     /** @var array<string, mixed> */
     protected array $currentValues = [];
-    
+
     public function isDirty(string $field): bool
     {
-        return $this->initialValues[$field] !== 
+        return $this->initialValues[$field] !==
                $this->currentValues[$field];
     }
 }
@@ -226,4 +226,4 @@ class FormState
 2. Implementare file upload
 3. Aggiungere nested form support
 4. Migliorare validation performance
-5. Documentare best practices 
+5. Documentare best practices

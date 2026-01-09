@@ -35,4 +35,4 @@ AddressField::make('address')
 3. Configurare correttamente i servizi di geocoding
 4. Testare con diversi formati di indirizzo
 
-[Torna alla documentazione UI](/docs/modules/module_ui.md#components) 
+[Torna alla documentazione UI](/docs/modules/module_ui.md#components)

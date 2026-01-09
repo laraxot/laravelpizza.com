@@ -80,10 +80,10 @@ CREATE INDEX idx_activities_event_type ON activities(event);
 // ✅ Test business behavior, not implementation
 it('tracks user login activity correctly', function () {
     $user = User::factory()->create();
-    
+
     // Act - perform business action
     activity()->performedOn($user)->log('user_login');
-    
+
     // Assert - verify business outcome
     expect(Activity::where('log_name', 'user_login')->count())->toBe(1);
     expect(Activity::first()->subject)->toBe($user);
@@ -99,10 +99,10 @@ it('can replay events to rebuild state', function () {
         ['event' => 'created', 'data' => ['name' => 'Test']],
         ['event' => 'updated', 'data' => ['name' => 'Updated']],
     ]);
-    
+
     // Act - replay events
     $finalState = EventSourcing::replay($events);
-    
+
     // Assert - verify final state
     expect($finalState['name'])->toBe('Updated');
 });
@@ -121,7 +121,7 @@ class ActivityServiceProvider extends ServiceProvider
             $this->enableEventPartitioning();
         }
     }
-    
+
     private function enableEventPartitioning()
     {
         // Implement monthly partitioning for large event volumes
@@ -158,16 +158,16 @@ class CreateActivitySnapshot extends Command
 class PrivacyAwareActivity extends Activity
 {
     protected $hidden = ['sensitive_data'];
-    
+
     public function toArray()
     {
         $array = parent::toArray();
-        
+
         // Remove sensitive information based on user permissions
         if (!auth()->user()?->can('view_full_activity_logs')) {
             unset($array['properties']['email'], $array['properties']['phone']);
         }
-        
+
         return $array;
     }
 }
@@ -185,7 +185,7 @@ class PrivacyAwareActivity extends Activity
 ```php
 /**
  * Log business activity with enhanced context
- * 
+ *
  * @param string $description Activity description
  * @param Model $subject The subject of the activity
  * @param array $properties Additional activity data
@@ -239,6 +239,6 @@ public function logActivity(string $description, Model $subject, array $properti
 
 ---
 
-**Last Updated**: December 2024  
-**Module Health**: 🟢 Good - Ready for optimization  
+**Last Updated**: December 2024
+**Module Health**: 🟢 Good - Ready for optimization
 **Priority Level**: High - Foundation module

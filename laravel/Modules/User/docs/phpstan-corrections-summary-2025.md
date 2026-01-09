@@ -1,7 +1,7 @@
 # PHPStan Corrections Summary - Modulo User
 
-**Data**: 2025-01-22  
-**Status**: In Progress  
+**Data**: 2025-01-22
+**Status**: In Progress
 **Versione**: 1.0.0
 
 ## 📊 Stato Attuale

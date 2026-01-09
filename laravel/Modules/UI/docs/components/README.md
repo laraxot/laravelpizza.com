@@ -29,9 +29,9 @@ Questo documento contiene la documentazione dettagliata dei componenti UI.
 
 ### Esempio Base
 ```php
-<x-ui::button 
-    type="submit" 
-    color="primary" 
+<x-ui::button
+    type="submit"
+    color="primary"
     size="lg"
     :disabled="$isDisabled"
 >
@@ -60,9 +60,9 @@ class XotBaseButton extends Component
     <x-slot name="header">
         <h2>Titolo</h2>
     </x-slot>
-    
+
     <p>Contenuto</p>
-    
+
     <x-slot name="footer">
         <x-ui::button>Salva</x-ui::button>
     </x-slot>
@@ -77,11 +77,11 @@ class XotBaseButton extends Component
     .btn {
         @apply px-4 py-2 rounded-md font-medium transition-colors;
     }
-    
+
     .btn-primary {
         @apply bg-blue-600 text-white hover:bg-blue-700;
     }
-    
+
     .btn-secondary {
         @apply bg-gray-600 text-white hover:bg-gray-700;
     }
@@ -125,7 +125,7 @@ class XotBaseModal extends Component
     {
         $this->setupKeyboardNavigation();
     }
-    
+
     private function setupKeyboardNavigation(): void
     {
         $this->dispatchBrowserEvent('keydown', [
@@ -176,7 +176,7 @@ class ButtonTest extends TestCase
         $view = $this->blade(
             '<x-ui::button>Test</x-ui::button>'
         );
-        
+
         $view->assertSee('Test');
     }
 }
@@ -196,7 +196,7 @@ class ButtonBrowserTest extends DuskTestCase
         });
     }
 }
-``` 
+```
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
 * [README.md](bashscripts/docs/it/README.md)
@@ -274,4 +274,3 @@ class ButtonBrowserTest extends DuskTestCase
 * [README.md](../../../Cms/docs/components/README.md)
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
-

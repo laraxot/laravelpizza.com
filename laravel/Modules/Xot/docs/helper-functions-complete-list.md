@@ -2,8 +2,8 @@
 
 ## 📋 Overview
 
-**File**: `Modules/Xot/Helpers/Helper.php`  
-**Autoload**: Via `"files": ["Helpers/Helper.php"]` in `Xot/composer.json`  
+**File**: `Modules/Xot/Helpers/Helper.php`
+**Autoload**: Via `"files": ["Helpers/Helper.php"]` in `Xot/composer.json`
 **Disponibilità**: Globale in tutto il framework Laraxot
 
 **Status**: ✅ PHPStan Level 10 compliant
@@ -280,7 +280,7 @@ if (! function_exists('helperName')) {
     function helperName(params): returnType
     {
         // Delega a Service/Action che contiene business logic
-        return Service::method() 
+        return Service::method()
             // oppure
             app(Action::class)->execute();
     }
@@ -321,7 +321,7 @@ if (! function_exists('helperName')) {
 # ✅ Result: [OK] No errors (148 files)
 
 # Xot
-./vendor/bin/phpstan analyse Modules/Xot --level=10  
+./vendor/bin/phpstan analyse Modules/Xot --level=10
 # ✅ Result: [OK] No errors (799 files)
 
 # Tenant
@@ -362,12 +362,11 @@ composer dump-autoload
 
 ---
 
-**Last Updated**: 2 Dicembre 2025  
-**Total Functions**: 10  
-**PHPStan Level**: 10 ✅  
+**Last Updated**: 2 Dicembre 2025
+**Total Functions**: 10
+**PHPStan Level**: 10 ✅
 **Status**: Production Ready
 
 ---
 
 *"Helper functions sono il vocabolario comune del framework: semplici da usare, potenti nell'implementazione."*
-

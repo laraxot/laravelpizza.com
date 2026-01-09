@@ -21,42 +21,42 @@ class MigrateJsonField extends XotBaseMigration
     {
         // Fase 1: Backup
         $this->backupData();
-        
+
         // Fase 2: Aggiungi colonna temporanea
         $this->addTemporaryColumn();
-        
+
         // Fase 3: Converti dati
         $this->convertData();
-        
+
         // Fase 4: Verifica dati
         $this->validateData();
-        
+
         // Fase 5: Rimuovi vecchia colonna
         $this->removeOldColumn();
     }
-    
+
     protected function backupData(): void
     {
         // Implementazione backup
     }
-    
+
     protected function addTemporaryColumn(): void
     {
         $this->tableUpdate(function (Blueprint $table): void {
             $table->json('new_column')->nullable()->after('old_column');
         });
     }
-    
+
     protected function convertData(): void
     {
         // Implementazione conversione
     }
-    
+
     protected function validateData(): void
     {
         // Implementazione validazione
     }
-    
+
     protected function removeOldColumn(): void
     {
         $this->tableUpdate(function (Blueprint $table): void {
@@ -76,17 +76,17 @@ protected function validateJsonData($data): array
     if (is_string($data)) {
         return ['default' => $data];
     }
-    
+
     // Caso 2: Array
     if (is_array($data)) {
         return $data;
     }
-    
+
     // Caso 3: JSON string
     if (is_string($data) && json_decode($data) !== null) {
         return json_decode($data, true);
     }
-    
+
     // Caso 4: Valore non valido
     return ['default' => ''];
 }
@@ -102,10 +102,10 @@ protected function handleMigrationError(\Exception $e): void
         'error' => $e->getMessage(),
         'trace' => $e->getTraceAsString()
     ]);
-    
+
     // Rollback
     $this->rollback();
-    
+
     // Notifica
     $this->notifyError($e);
 }
@@ -222,4 +222,4 @@ protected function rollback(): void
 Per supporto tecnico:
 - Email: support@example.com
 - Documentazione: https://docs.example.com
-- Repository: https://github.com/organization/notify 
+- Repository: https://github.com/organization/notify

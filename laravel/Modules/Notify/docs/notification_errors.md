@@ -91,7 +91,7 @@ class SendNotificationAction
     public function execute()
     {
         $this->validate();
-        
+
         Notification::route('mail', $this->to)
             ->notify(new YourNotification($this->data));
     }
@@ -161,4 +161,4 @@ class YourNotification extends Notification
 - [Documentazione Laravel Notifications](https://laravel.com/docs/notifications)
 - [Documentazione Laravel Mail](https://laravel.com/docs/mail)
 - [Documentazione Spatie Queueable Action](https://github.com/spatie/laravel-queueable-action)
-- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/) 
+- [Best Practices Email](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails/)

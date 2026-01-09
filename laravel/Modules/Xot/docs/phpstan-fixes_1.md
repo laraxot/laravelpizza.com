@@ -209,19 +209,19 @@ private function getComponentName(Field|Component $component): string
     if (method_exists($component, 'getName')) {
         return $component->getName();
     }
-    
+
     // Per i componenti generali di Filament che hanno getStatePath
     if (method_exists($component, 'getStatePath')) {
         return $component->getStatePath();
     }
-    
+
     // Fallback a reflection per altri casi
     $reflectionClass = new \ReflectionClass($component);
     if ($reflectionClass->hasProperty('name') && $reflectionClass->getProperty('name')->isPublic()) {
         $property = $reflectionClass->getProperty('name');
         return (string) $property->getValue($component);
     }
-    
+
     // Ultima risorsa
     return class_basename($component);
 }
@@ -655,7 +655,7 @@ private function exportTablesToCSV(string $mdbFile): void
 // Dopo:
 /**
  * Esporta tutte le tabelle dal file .mdb in formato CSV.
- * 
+ *
  * @return string[] Array di nomi di tabelle esportate
  */
 private function exportTablesToCSV(string $mdbFile): array
@@ -781,7 +781,7 @@ L'errore riguardava il tipo di ritorno del metodo `getProfileClass()`, che era d
 public function getProfileClass(): string
 {
     // ... implementazione ...
-    
+
     /** @var class-string<\Illuminate\Database\Eloquent\Model&\Modules\Xot\Contracts\ProfileContract> */
     return $class;
 }
@@ -806,7 +806,7 @@ L'errore riguardava la proprietà $listeners che, secondo PHPStan, non aveva un 
 ```php
 /**
  * Livewire event listeners for this component.
- * 
+ *
  * @var array<string, string>
  * @phpstan-var array<string, string>
  */

@@ -9,4 +9,4 @@
 - **MoneySubtracted**: Evento di prelievo fondi.
 - **AccountLimitHit**: Evento di superamento limite saldo.
 - **LoanProposed**: Evento di proposta prestito.
-- **Snapshotting**: Salvataggio dello stato corrente per ottimizzare la ricostruzione degli aggregate. 
+- **Snapshotting**: Salvataggio dello stato corrente per ottimizzare la ricostruzione degli aggregate.

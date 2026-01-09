@@ -7,12 +7,12 @@ Questa documentazione è stata creata per risolvere i problemi comuni relativi a
 
 ## 📚 Documenti Creati
 
-### 1. **Troubleshooting Completo** 
+### 1. **Troubleshooting Completo**
 📄 `fullcalendar-scheduler-license-troubleshooting.md`
 - **400+ righe** di documentazione dettagliata
 - Copertura completa di tutti i problemi noti
 - Soluzioni specifiche per Laravel/Filament
-- Best practices per ambiente sanitario 
+- Best practices per ambiente sanitario
 - Best practices per ambiente sanitario SaluteOra
 
 ### 2. **Riferimento Rapido**
@@ -53,7 +53,7 @@ Questa documentazione è stata creata per risolvere i problemi comuni relativi a
 private function getFullCalendarPlugin(): FilamentFullCalendarPlugin
 {
     $licenseKey = config('fullcalendar.scheduler_license_key');
-    
+
     // Validazione produzione
     if (app()->environment('production') && empty($licenseKey)) {
         throw new \Exception('Scheduler license required in production');
@@ -101,7 +101,7 @@ FULLCALENDAR_CACHE_TTL=300
 FULLCALENDAR_MAX_EVENTS=100
 ```
 
-## 🏥 Specifiche 
+## 🏥 Specifiche
 ## 🏥 Specifiche SaluteOra
 
 ### Business Hours Sanitarie
@@ -218,22 +218,22 @@ Log::info('FullCalendar configured', [
 ### Quando Aggiornare
 - Nuove versioni FullCalendar con breaking changes
 - Nuovi bug noti nella community
-- Modifiche architettura 
+- Modifiche architettura
 - Modifiche architettura SaluteOra
 - Nuovi requisiti sanitari/legali
 
 ### Come Aggiornare
 1. Verificare issue GitHub FullCalendar
-2. Testare soluzioni in ambiente 
+2. Testare soluzioni in ambiente
 2. Testare soluzioni in ambiente SaluteOra
 3. Aggiornare documenti pertinenti
 4. Aggiornare questo README
 
 ---
 
-**Creato**: Gennaio 2025  
-**Ultima modifica**: Gennaio 2025  
-**Versione FullCalendar**: v6.1.17  
-**Versione Filament**: v3.x  
-**Progetto**:  Multi-Tenant Healthcare Platform 
-**Progetto**: SaluteOra Multi-Tenant Healthcare Platform 
+**Creato**: Gennaio 2025
+**Ultima modifica**: Gennaio 2025
+**Versione FullCalendar**: v6.1.17
+**Versione Filament**: v3.x
+**Progetto**:  Multi-Tenant Healthcare Platform
+**Progetto**: SaluteOra Multi-Tenant Healthcare Platform

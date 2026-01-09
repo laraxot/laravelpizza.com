@@ -40,7 +40,7 @@ Route::group(
     }
 );
 ```
-**Risultato:**  
+**Risultato:**
 Tutte le pagine Folio saranno accessibili con il prefisso lingua (`/it/about`, `/en/about`, ecc).
 
 ---
@@ -64,7 +64,7 @@ Tutte le pagine Folio saranno accessibili con il prefisso lingua (`/it/about`, `
     ```
 3. Se vuoi che anche Folio generi le rotte con path tradotti, valuta di creare symlink o duplicati dei file Blade con nomi localizzati, oppure implementa una logica custom (ad oggi Folio non supporta nativamente il mapping automatico dei path tramite array di traduzioni).
 
-**Nota:**  
+**Nota:**
 Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte classiche per le pagine che richiedono path tradotti, oppure contribuisci/estendi Folio per supportare questa feature.
 
 ---
@@ -100,13 +100,13 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 ---
 
 ## 4. FAQ e problemi comuni
-- **Perché una pagina Folio non viene localizzata?**  
+- **Perché una pagina Folio non viene localizzata?**
   Verifica che la registrazione di Folio sia dentro il gruppo di localizzazione e che il middleware sia applicato.
-- **Come traduco i path delle pagine Folio?**  
+- **Come traduco i path delle pagine Folio?**
   Ad oggi serve una soluzione custom (symlink, duplicati, override di Folio) oppure accetta che i path siano in inglese ma i contenuti localizzati.
-- **Come gestisco redirect e link?**  
+- **Come gestisco redirect e link?**
   Usa sempre `route(LaravelLocalization::transRoute('routes.nome'))` per generare URL localizzati.
-- **Come gestisco i form POST?**  
+- **Come gestisco i form POST?**
   Usa sempre l'helper `localizeURL` per l'action dei form:
   ```blade
   <form action="{{ LaravelLocalization::localizeURL('/contatti') }}" method="POST">
@@ -124,13 +124,13 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 ---
 
 ## 6. Modifiche consigliate ai file del progetto
-- **routes/web.php**:  
+- **routes/web.php**:
   Sposta la registrazione di Folio dentro il gruppo localizzato.
-- **lang/{locale}/routes.php**:  
+- **lang/{locale}/routes.php**:
   Aggiungi mapping per i path delle pagine Folio se vuoi path tradotti.
-- **layouts Blade**:  
+- **layouts Blade**:
   Inserisci il language switcher in tutti i layout usati da Folio.
-- **Documentazione**:  
+- **Documentazione**:
   Aggiorna sempre questa guida ogni volta che cambi la struttura delle pagine o la strategia di localizzazione.
 
 ---
@@ -144,4 +144,4 @@ Se la localizzazione dei path è fondamentale, valuta se usare ancora le rotte c
 
 ---
 
-**Se vuoi che aggiorni direttamente la documentazione o vuoi esempi pratici di override/mapping path Folio, chiedi pure!** 
+**Se vuoi che aggiorni direttamente la documentazione o vuoi esempi pratici di override/mapping path Folio, chiedi pure!**

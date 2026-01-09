@@ -89,17 +89,17 @@ Tutti i template condividono elementi strutturali comuni:
     <div class="header">
         <!-- Logo e titoli -->
     </div>
-    
+
     <div class="content">
         <!-- Contenuto principale -->
-        
+
         <div class="main-box">
             <!-- Box principale specifico del template -->
         </div>
-        
+
         <!-- Altre sezioni -->
     </div>
-    
+
     <div class="footer">
         <!-- Contatti, social, etc. -->
     </div>
@@ -151,7 +151,7 @@ class SendAppointmentConfirmationAction
     public function execute(array $data)
     {
         $template = MailTemplate::where('mailable', 'appointment_confirmation')->first();
-        
+
         // Prepara i dati per il template
         $templateData = [
             'name' => $data['patient_name'],
@@ -162,11 +162,11 @@ class SendAppointmentConfirmationAction
             'service' => $data['service_name'],
             // Altri dati specifici
         ];
-        
+
         // Invia l'email
         Mail::to($data['patient_email'])
             ->send(new \Modules\Notify\Mail\AppointmentMail($template, $templateData));
-            
+
         return true;
     }
 }

@@ -13,11 +13,6 @@ The `IconStateSplitColumn` is a custom Filament table column component designed 
 - **Responsive Grid**: Adapts column count based on screen size
 - **Efficient Layout**: Icons are arranged in a grid to maximize space utilization
 
-
-
-
-
-
 ### 📱 **Responsive Design**
 - **Mobile**: 2 columns for touch-friendly interaction
 - **Small screens**: 3 columns for better visibility
@@ -25,21 +20,11 @@ The `IconStateSplitColumn` is a custom Filament table column component designed 
 - **Large screens**: 5 columns for enhanced layout
 - **Extra large screens**: 6 columns for maximum utilization
 
-
-
-
-
-
 ### 🎨 **Enhanced UX/UI**
 - **Hover Effects**: Smooth scale animation and color transitions
 - **Visual Feedback**: Clear indication of interactive elements
 - **Consistent Styling**: State-specific colors and icons throughout
 - **Accessibility**: Full keyboard navigation and screen reader support
-
-
-
-
-
 
 ### 🔧 **Technical Features**
 - **Error Handling**: Comprehensive error catching and user-friendly notifications
@@ -59,9 +44,6 @@ use Modules\<nome modulo>\Models\Appointment;
 use Modules\SaluteOra\States\Appointment\AppointmentState;
 use Modules\SaluteOra\Models\Appointment;
 
-
-
-
 ## Implementation
 ### Basic Usage
 ```php
@@ -73,7 +55,6 @@ use Modules\SaluteOra\Models\Appointment;
 
 use Modules\<nome modulo>\States\Appointment\AppointmentState;
 use Modules\<nome modulo>\Models\Appointment;
-
 
 use Modules\<nome modulo>\States\Appointment\AppointmentState;
 use Modules\<nome modulo>\Models\Appointment;
@@ -110,7 +91,7 @@ class IconStateSplitColumn extends Column
     protected string $view = 'ui::filament.tables.columns.icon-state-split';
     protected string $stateClass = '';
     protected string $modelClass = '';
-    
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -125,8 +106,7 @@ class IconStateSplitColumn extends Column
 }
 ### State Integration
 The component integrates with Spatie's Laravel State package:
-    
-    
+
     public function stateClass(string $stateClass, string $modelClass): static
         // Configure states and model
     public function getRecordStates(): array
@@ -143,19 +123,15 @@ The component integrates with Spatie's Laravel State package:
 
 ## Visual Design
 
-
-## Visual Design
-
-
 ## Visual Design
 
 ## Visual Design
 
 ## Visual Design
 
-
 ## Visual Design
 
+## Visual Design
 
 ## Visual Design
 
@@ -166,21 +142,11 @@ The component integrates with Spatie's Laravel State package:
 - **Gap Management**: Consistent spacing between icons (gap-1)
 - **Padding**: Minimal padding (p-1) for compact appearance
 
-
-
-
-
-
 ### Icon Design
 - **Size**: 32px (2rem) for optimal touch targets
 - **Shape**: Circular buttons with rounded-full class
 - **Colors**: State-specific colors with hover effects
 - **Transitions**: Smooth scale and color transitions
-
-
-
-
-
 
 ### Interactive Elements
 - **Hover Effects**: Scale up to 110% on hover
@@ -190,19 +156,15 @@ The component integrates with Spatie's Laravel State package:
 
 ## Template Structure
 
-
-## Template Structure
-
-
 ## Template Structure
 
 ## Template Structure
 
 ## Template Structure
 
-
 ## Template Structure
 
+## Template Structure
 
 ## Template Structure
 
@@ -214,11 +176,6 @@ The component integrates with Spatie's Laravel State package:
 - **Icon Rendering**: Uses Filament's icon component
 - **Action Integration**: Wire:click for modal dispatching
 - **Accessibility**: Proper ARIA labels and keyboard navigation
-
-
-
-
-
 
 ### CSS Classes
 ```css
@@ -244,20 +201,10 @@ The component integrates with Spatie's Laravel State package:
 - **Consistent Styling**: Shared CSS classes and design patterns
 - **Template Reuse**: Single template handles all state types
 
-
-
-
-
-
 ### KISS (Keep It Simple, Stupid)
 - **Simple API**: Single method `stateClass()` for configuration
 - **Clear Logic**: Straightforward state validation and rendering
 - **Minimal Dependencies**: Only depends on Filament core components
-
-
-
-
-
 
 ### UI/UX Focus
 - **Touch-Friendly**: 32px minimum touch targets
@@ -267,19 +214,15 @@ The component integrates with Spatie's Laravel State package:
 
 ## Error Handling
 
-
-## Error Handling
-
-
 ## Error Handling
 
 ## Error Handling
 
 ## Error Handling
 
-
 ## Error Handling
 
+## Error Handling
 
 ## Error Handling
 
@@ -290,11 +233,6 @@ The component integrates with Spatie's Laravel State package:
 - **Invalid Records**: Validates record existence before processing
 - **State Errors**: Catches and displays user-friendly error messages
 
-
-
-
-
-
 ### User Feedback
 - **Success Notifications**: Confirms successful state transitions
 - **Error Notifications**: Displays detailed error information
@@ -302,19 +240,15 @@ The component integrates with Spatie's Laravel State package:
 
 ## Performance Considerations
 
-
-## Performance Considerations
-
-
 ## Performance Considerations
 
 ## Performance Considerations
 
 ## Performance Considerations
 
-
 ## Performance Considerations
 
+## Performance Considerations
 
 ## Performance Considerations
 
@@ -329,7 +263,6 @@ The component integrates with Spatie's Laravel State package:
 - **Efficient Queries**: Optimized database queries for state checks
 ## Accessibility Features
 
-
 ### Memory Management
 - **Clean References**: Proper cleanup of event listeners
 - **Efficient Queries**: Optimized database queries for state checks
@@ -339,11 +272,6 @@ The component integrates with Spatie's Laravel State package:
 - **Focus Indicators**: Clear visual focus indicators
 - **Keyboard Actions**: Enter/Space key support for activation
 
-
-
-
-
-
 ### Screen Reader Support
 - **ARIA Labels**: Proper labeling for screen readers
 - **Role Attributes**: Correct semantic roles
@@ -351,19 +279,15 @@ The component integrates with Spatie's Laravel State package:
 
 ## Mobile Optimization
 
-
-## Mobile Optimization
-
-
 ## Mobile Optimization
 
 ## Mobile Optimization
 
 ## Mobile Optimization
 
-
 ## Mobile Optimization
 
+## Mobile Optimization
 
 ## Mobile Optimization
 
@@ -373,11 +297,6 @@ The component integrates with Spatie's Laravel State package:
 - **Touch Targets**: 32px minimum for reliable touch interaction
 - **Gesture Support**: Swipe and tap gesture recognition
 - **Viewport Adaptation**: Responsive design for all screen sizes
-
-
-
-
-
 
 ### Performance
 - **Reduced Animations**: Optimized animations for mobile devices
@@ -389,7 +308,6 @@ The component integrates with Spatie's Laravel State package:
 'state_actions' => IconStateSplitColumn::make()
     ->label('Azioni'),
 ### Patient Records
-
 
 ## Integration Examples
 ### Appointment Management
@@ -437,19 +355,15 @@ The component integrates with Spatie's Laravel State package:
 
 ### Debug Tips
 
-
-### Debug Tips
-
-
 ### Debug Tips
 
 ### Debug Tips
 
 ### Debug Tips
 
-
 ### Debug Tips
 
+### Debug Tips
 
 ### Debug Tips
 
@@ -462,19 +376,15 @@ The component integrates with Spatie's Laravel State package:
 
 ## Recent Fixes (June 2025)
 
-
-## Recent Fixes (June 2025)
-
-
 ## Recent Fixes (June 2025)
 
 ## Recent Fixes (June 2025)
 
 ## Recent Fixes (June 2025)
 
-
 ## Recent Fixes (June 2025)
 
+## Recent Fixes (June 2025)
 
 ## Recent Fixes (June 2025)
 
@@ -486,30 +396,15 @@ The component integrates with Spatie's Laravel State package:
    - **Solution**: Use current state from record instead of creating new instance
    - **Impact**: Prevents "Typed property must not be accessed before initialization" error
 
-
-
-
-
-
 2. **Action Integration**: Fixed wire:click not working in table columns
    - **Problem**: wire:click doesn't work in Filament table columns
    - **Solution**: Implemented custom JavaScript event system with Livewire integration
    - **Impact**: Enables proper action handling for state transitions
 
-
-
-
-
-
 3. **Error Handling**: Added comprehensive error handling with logging
    - **Problem**: Unhandled exceptions causing application crashes
    - **Solution**: Try-catch blocks with proper error handling
    - **Impact**: Graceful degradation and better debugging
-
-
-
-
-
 
 4. **Template Simplification**: Streamlined Blade template for better performance
    - **Problem**: Complex template logic causing rendering issues
@@ -529,12 +424,12 @@ The main issue was that `wire:click` doesn't work directly in Filament table col
 #### Solution Architecture
 ```javascript
 // Custom event dispatch
-onclick="window.dispatchEvent(new CustomEvent('state-transition', { 
-    detail: { 
-        recordId: {{ $record->id }}, 
+onclick="window.dispatchEvent(new CustomEvent('state-transition', {
+    detail: {
+        recordId: {{ $record->id }},
         stateClass: '{{ $state['class']::class }}',
         action: 'prova'
-    } 
+    }
 }))"
 // Event listener for Livewire integration
 document.addEventListener('state-transition', function(event) {
@@ -543,7 +438,6 @@ document.addEventListener('state-transition', function(event) {
         window.Livewire.find(document.querySelector('[wire\\:id]').getAttribute('wire:id'))
             .call(action, recordId, stateClass);
 });
-
 
 // Event listener for Livewire integration
 document.addEventListener('state-transition', function(event) {
@@ -588,27 +482,27 @@ document.addEventListener('state-transition', function(event) {
 3. **Error Handling**: Added proper error handling without logging
 4. **Type Safety**: Improved type checking and validation
 5. **Action System**: Implemented proper action handling for table columns
-**Compatibility**: Filament 3.x, Laravel 10.x 
-**Compatibility**: Filament 3.x, Laravel 10.x 
+**Compatibility**: Filament 3.x, Laravel 10.x
+**Compatibility**: Filament 3.x, Laravel 10.x
 
 ---
 **Last Updated**: June 2025
 **Version**: 2.1
-**Compatibility**: Filament 3.x, Laravel 10.x 
-**Compatibility**: Filament 3.x, Laravel 10.x 
-**Compatibility**: Filament 3.x, Laravel 10.x 
-**Compatibility**: Filament 3.x, Laravel 10.x 
-**Compatibility**: Filament 3.x, Laravel 10.x 
-**Compatibility**: Filament 3.x, Laravel 10.x 
+**Compatibility**: Filament 3.x, Laravel 10.x
+**Compatibility**: Filament 3.x, Laravel 10.x
+**Compatibility**: Filament 3.x, Laravel 10.x
+**Compatibility**: Filament 3.x, Laravel 10.x
+**Compatibility**: Filament 3.x, Laravel 10.x
+**Compatibility**: Filament 3.x, Laravel 10.x
 
 ---
 **Last Updated**: June 2025
 **Version**: 2.1
-**Compatibility**: Filament 3.x, Laravel 10.x 
-**Compatibility**: Filament 3.x, Laravel 10.x 
-**Compatibility**: Filament 3.x, Laravel 10.x 
-**Compatibility**: Filament 3.x, Laravel 10.x 
+**Compatibility**: Filament 3.x, Laravel 10.x
+**Compatibility**: Filament 3.x, Laravel 10.x
+**Compatibility**: Filament 3.x, Laravel 10.x
+**Compatibility**: Filament 3.x, Laravel 10.x
 ---
 **Last Updated**: June 2025
 **Version**: 2.1
-**Compatibility**: Filament 3.x, Laravel 10.x 
+**Compatibility**: Filament 3.x, Laravel 10.x

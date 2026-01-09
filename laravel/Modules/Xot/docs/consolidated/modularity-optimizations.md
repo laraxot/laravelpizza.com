@@ -78,23 +78,23 @@ class PathHelper
     {
         return env('PROJECT_BASE_PATH', base_path());
     }
-    
+
     public static function getLaravelBasePath(): string
     {
         return env('LARAVEL_BASE_PATH', base_path());
     }
-    
+
     public static function getModulesBasePath(): string
     {
         return env('MODULES_BASE_PATH', base_path('Modules'));
     }
-    
+
     public static function normalizePath(string $path): string
     {
         $projectPath = self::getProjectBasePath();
         $laravelPath = self::getLaravelBasePath();
         $modulesPath = self::getModulesBasePath();
-        
+
         // Normalizzazione dinamica
         return str_replace(
             ['/saluteora/', '/Modules/'],
@@ -139,7 +139,7 @@ class XotServiceProvider extends ServiceProvider
             $userClass = config('xot.models.user', \App\Models\User::class);
             return $userClass;
         });
-        
+
         $this->app->bind('xot.appointment.model', function ($app) {
             $appointmentClass = config('xot.models.appointment', \App\Models\Appointment::class);
             return $appointmentClass;
@@ -157,7 +157,7 @@ class ModelTrendChartWidget extends Widget
     {
         return config('xot.models.appointment', \App\Models\Appointment::class);
     }
-    
+
     protected function getData(): array
     {
         $modelClass = $this->getModelClass();
@@ -182,7 +182,7 @@ enum DayOfWeek: int
     case FRIDAY = 5;
     case SATURDAY = 6;
     case SUNDAY = 7;
-    
+
     public function getDescription(): string
     {
         $namespace = config('xot.translations.namespace', 'xot');
@@ -310,4 +310,3 @@ Dopo l'ottimizzazione completa, i comandi devono restituire **0 occorrenze**.
 ---
 
 **Queste ottimizzazioni sono CRITICHE per mantenere l'architettura modulare del sistema. Ogni violazione deve essere corretta immediatamente.**
-

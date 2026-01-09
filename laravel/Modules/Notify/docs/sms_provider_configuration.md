@@ -1,4 +1,4 @@
-# Configurazione Corretta dei Provider SMS 
+# Configurazione Corretta dei Provider SMS
 
 ## Regola Fondamentale
 
@@ -20,7 +20,7 @@ return [
         'enabled' => env('SMS_RATE_LIMIT_ENABLED', true),
         'max_attempts' => env('SMS_RATE_LIMIT_MAX_ATTEMPTS', 60),
         'decay_minutes' => env('SMS_RATE_LIMIT_DECAY_MINUTES', 1),
-    
+
     // Configurazione specifiche dei provider
     'drivers' => [
         'netfun' => [
@@ -54,7 +54,7 @@ public function __construct()
     if (!is_string($this->token)) {
         throw new Exception('API Key Netfun non configurata in sms.php');
     }
-    
+
     // Parametri generici a livello di root
     $this->defaultSender = config('sms.from');
     $this->timeout = config('sms.timeout', 30);

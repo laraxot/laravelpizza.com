@@ -39,7 +39,7 @@ php artisan ide-helper:models --write --reset
 ```php
 /**
  * @property string $id
- * @property string $email  
+ * @property string $email
  * @property Carbon|null $created_at
  * @property Collection<int, Team> $teams
  * @method static Builder|User whereEmail($value)
@@ -67,7 +67,7 @@ class User extends BaseModel { }
 
 **Chart Module (JpGraph objects):**
 - `ApplyGraphStyleAction.php`
-- `GetGraphAction.php`  
+- `GetGraphAction.php`
 - `Bar2Action.php`, `Bar3Action.php`, `Horizbar1Action.php`
 - `Pie1Action.php`, `PieAvgAction.php`, `LineSubQuestionAction.php`
 
@@ -100,7 +100,7 @@ $stateName = property_exists($state, 'name') ? $state::$name : '';
 **User Module:**
 - `UserResource.php` → Sostituito con `hasAttribute()`
 
-**UI Module:**  
+**UI Module:**
 - `IconStateColumn.php` → Sostituito con `isset()`
 - `IconStateGroupColumn.php` → Sostituito con `isset()`
 - `IconStateSplitColumn.php` → Sostituito con `isset()`
@@ -357,7 +357,7 @@ PHPStan + PHPMD + Pint + Tests = Qualità garantita
    - Filosofia, religione, politica, zen
    - 11,852 bytes
 
-2. **Modules/Xot/docs/property-exists-replacement-guide.md**  
+2. **Modules/Xot/docs/property-exists-replacement-guide.md**
    - Guida pratica con esempi concreti
    - Pattern di sostituzione
    - Checklist verifiche
@@ -381,8 +381,8 @@ PHPStan + PHPMD + Pint + Tests = Qualità garantita
 
 ✅ **Best Practices:** Applicati principi DRY, KISS, Laravel Way, Static Analysis First.
 
-**La religione:** Trust the Magic (Methods) ✨  
-**La politica:** No property_exists() on Eloquent Models 🚫  
+**La religione:** Trust the Magic (Methods) ✨
+**La politica:** No property_exists() on Eloquent Models 🚫
 **Lo Zen:** Semplicità attraverso la comprensione 🧘
 
 ---
@@ -396,6 +396,6 @@ PHPStan + PHPMD + Pint + Tests = Qualità garantita
 
 ---
 
-**Firma:** Claude Code  
-**Data:** 2025-11-05  
+**Firma:** Claude Code
+**Data:** 2025-11-05
 **Status:** COMPLETATO CON SUCCESSO ✅

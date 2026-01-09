@@ -55,9 +55,8 @@
 3. **Permessi**
    - Configurare correttamente
    - Testare i permessi
-   - Documentare le regole 
+   - Documentare le regole
 
 ## Collegamenti tra versioni di resources.md
 * [resources.md](docs/tecnico/filament/resources.md)
 * [resources.md](../../../UI/docs/filament/resources.md)
-

@@ -1,8 +1,8 @@
 # 🏛️ AGID Compliance - CMS Module
 
-**Module**: Cms  
-**Date**: 2025-10-02  
-**Reference**: [design-comuni-pagine-statiche v2.4.0](https://github.com/italia/design-comuni-pagine-statiche)  
+**Module**: Cms
+**Date**: 2025-10-02
+**Reference**: [design-comuni-pagine-statiche v2.4.0](https://github.com/italia/design-comuni-pagine-statiche)
 **Compliance Status**: **80%** ✅
 
 ---
@@ -52,7 +52,7 @@ class Page extends BaseModel
         'sidebar_blocks', // JSON: sidebar widgets
         'footer_blocks',  // JSON: footer content
     ];
-    
+
     protected $casts = [
         'content_blocks' => 'array',
         'sidebar_blocks' => 'array',
@@ -77,13 +77,13 @@ class Section extends BaseModel
 {
     use HasBlocks;
     use SushiToJsons;
-    
+
     protected $fillable = [
         'slug',
         'name',    // JSON: multi-language names
         'blocks',  // JSON: block configuration
     ];
-    
+
     protected $casts = [
         'name' => 'array',
         'blocks' => 'array',
@@ -110,7 +110,7 @@ class Menu extends BaseModel
         'position',
         'is_active',
     ];
-    
+
     protected $casts = [
         'items' => 'array',
         'is_active' => 'boolean',
@@ -346,12 +346,12 @@ trait HasSeoMetadata
     {
         return $this->meta_title ?? $this->title;
     }
-    
+
     public function getSeoDescription(): string
     {
         return $this->meta_description ?? $this->description ?? '';
     }
-    
+
     public function getOpenGraphData(): array
     {
         return [
@@ -362,13 +362,13 @@ trait HasSeoMetadata
             'og:type' => 'website',
         ];
     }
-    
+
     public function getSchemaMarkup(): array
     {
         if ($this->schema_data) {
             return $this->schema_data;
         }
-        
+
         return [
             '@context' => 'https://schema.org',
             '@type' => $this->schema_type ?? 'WebPage',
@@ -384,11 +384,11 @@ trait HasSeoMetadata
 <head>
     <title>{{ $page->getSeoTitle() }} - {{ config('app.name') }}</title>
     <meta name="description" content="{{ $page->getSeoDescription() }}">
-    
+
     @foreach ($page->getOpenGraphData() as $property => $content)
         <meta property="{{ $property }}" content="{{ $content }}">
     @endforeach
-    
+
     <script type="application/ld+json">
         {!! json_encode($page->getSchemaMarkup()) !!}
     </script>
@@ -419,18 +419,18 @@ class PageVersion extends Model
     {
         return $this->belongsTo(Page::class);
     }
-    
+
     public function creator()
     {
         return $this->belongsTo(User::class, 'created_by');
     }
-    
+
     public function restore(): Page
     {
         $page = $this->page;
         $page->fill($this->content_snapshot);
         $page->save();
-        
+
         return $page;
     }
 }
@@ -446,19 +446,19 @@ class Page extends BaseModel
     const STATUS_REVIEW = 'review';
     const STATUS_PUBLISHED = 'published';
     const STATUS_ARCHIVED = 'archived';
-    
+
     protected $fillable = [
         // ... existing
         'status',
         'published_at',
         'expires_at',
     ];
-    
+
     protected $casts = [
         'published_at' => 'datetime',
         'expires_at' => 'datetime',
     ];
-    
+
     public function scopePublished($query)
     {
         return $query->where('status', self::STATUS_PUBLISHED)
@@ -525,6 +525,6 @@ class Page extends BaseModel
 
 ---
 
-**Last Updated**: 2025-10-02  
-**Next Review**: Bi-weekly  
+**Last Updated**: 2025-10-02
+**Next Review**: Bi-weekly
 **Owner**: Cms Module Team

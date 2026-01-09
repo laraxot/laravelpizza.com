@@ -66,7 +66,7 @@ final public function form(Form $form): Form
 1. **Estensione della Classe**
    ```php
    namespace Modules\User\Filament\Widgets;
-   
+
    use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
    class RegistrationWidget extends XotBaseWidget
@@ -151,10 +151,10 @@ use Filament\Widgets\Concerns\CanPoll;
 class DashboardStatsWidget extends XotBaseWidget
 {
     use CanPoll;
-    
+
     // Personalizzare l'intervallo di polling (default: 5s)
     protected static ?string $pollingInterval = '10s';
-    
+
     protected function getPollingInterval(): ?string
     {
         return static::$pollingInterval;
@@ -171,4 +171,4 @@ Questo trait permette al widget di aggiornarsi automaticamente a intervalli rego
 - [NAMESPACE-RULES.md](../../NAMESPACE-RULES.md) - Regole per i namespace nei moduli
 - [FOLIO_VOLT_FILAMENT_INTEGRATION.md](../../FOLIO_VOLT_FILAMENT_INTEGRATION.md) - Integrazione Folio, Volt e Filament
 - [MODULE_STRUCTURE.md](../../MODULE_STRUCTURE.md) - Struttura standard dei moduli
-- [Documentazione Filament](https://filamentphp.com/project_docs/3.x/widgets/installation) 
+- [Documentazione Filament](https://filamentphp.com/project_docs/3.x/widgets/installation)

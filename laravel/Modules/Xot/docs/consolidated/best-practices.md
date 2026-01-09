@@ -65,7 +65,7 @@ public function process(UserContract $user) {
 public function process(\Modules\User\Models\User $user) {
     // Codice
 }
-``` 
+```
 # 🔧 **Best Practices Modulo Xot**
 
 ## 📋 **Panoramica**
@@ -145,7 +145,7 @@ use Modules\Xot\Models\Traits\HasExtra;
 class MioModello extends BaseModel
 {
     use HasXotTable, HasExtra;
-    
+
     // Implementazione specifica
 }
 ```
@@ -316,11 +316,11 @@ class MioModelloResource extends XotBaseResource
             Forms\Components\TextInput::make('nome')
                 ->required()
                 ->maxLength(255),
-                
+
             Forms\Components\Textarea::make('descrizione')
                 ->maxLength(1000)
                 ->columnSpanFull(),
-                
+
             Forms\Components\Toggle::make('is_active')
                 ->required(),
         ];
@@ -337,14 +337,14 @@ class MioModelloResource extends XotBaseResource
             Tables\Columns\TextColumn::make('nome')
                 ->searchable()
                 ->sortable(),
-                
+
             Tables\Columns\TextColumn::make('descrizione')
                 ->limit(50),
-                
+
             Tables\Columns\IconColumn::make('is_active')
                 ->boolean()
                 ->sortable(),
-                
+
             Tables\Columns\TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable()
@@ -367,7 +367,7 @@ public static function getTableActions(): array
     return [
         Tables\Actions\EditAction::make(),
         Tables\Actions\DeleteAction::make(),
-        
+
         // Azione personalizzata
         Tables\Actions\Action::make('custom_action')
             ->icon('heroicon-o-star')
@@ -407,7 +407,7 @@ class MioModuloServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-        
+
         // Personalizzazioni specifiche del modulo
         $this->registerCustomComponents();
         $this->registerCustomCommands();
@@ -467,7 +467,7 @@ return new class extends XotBaseMigration
             $table->boolean('is_active')->default(true);
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
-            
+
             // Indici per performance
             $table->index(['user_id', 'is_active']);
             $table->index('nome');
@@ -520,7 +520,7 @@ class MioModelloTest extends XotBaseTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         // Setup comune per tutti i test
     }
 
@@ -528,7 +528,7 @@ class MioModelloTest extends XotBaseTestCase
     public function it_can_create_model(): void
     {
         $user = User::factory()->create();
-        
+
         $modello = MioModello::create([
             'nome' => 'Test Model',
             'descrizione' => 'Test Description',
@@ -545,9 +545,9 @@ class MioModelloTest extends XotBaseTestCase
     public function it_can_update_model(): void
     {
         $modello = MioModello::factory()->create();
-        
+
         $modello->update(['nome' => 'Updated Name']);
-        
+
         $this->assertEquals('Updated Name', $modello->fresh()->nome);
     }
 
@@ -555,9 +555,9 @@ class MioModelloTest extends XotBaseTestCase
     public function it_can_delete_model(): void
     {
         $modello = MioModello::factory()->create();
-        
+
         $modello->delete();
-        
+
         $this->assertModelMissing($modello);
     }
 }

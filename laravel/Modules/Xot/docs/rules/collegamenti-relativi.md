@@ -68,9 +68,8 @@ Anche per le risorse e le immagini, è necessario utilizzare percorsi relativi:
 
 ## Integrazione con il Sistema di Documentazione
 
-Questa regola si integra con il sistema di documentazione centralizzato descritto in [Collegamenti alla Documentazione](../collegamenti-documentazione.md), che fornisce una mappa dei collegamenti tra i vari documenti e moduli del progetto. 
+Questa regola si integra con il sistema di documentazione centralizzato descritto in [Collegamenti alla Documentazione](../collegamenti-documentazione.md), che fornisce una mappa dei collegamenti tra i vari documenti e moduli del progetto.
 
 ## Collegamenti tra versioni di collegamenti-relativi.md
 * [collegamenti-relativi.md](docs/regole/collegamenti-relativi.md)
 * [collegamenti-relativi.md](../../../Xot/docs/rules/collegamenti-relativi.md)
-

@@ -91,14 +91,14 @@ module.exports = {
       <a href="/" class="flex items-center">
         <span class="text-xl font-bold text-white">Laravel Pizza</span>
       </a>
-      
+
       <!-- Links -->
       <div class="hidden md:flex items-center space-x-6">
         <a href="/menu" class="text-gray-300 hover:text-white">Menu</a>
         <a href="/chi-siamo" class="text-gray-300 hover:text-white">Chi Siamo</a>
         <a href="/contatti" class="text-gray-300 hover:text-white">Contatti</a>
       </div>
-      
+
       <!-- Carrello + Auth -->
       <div class="flex items-center space-x-4">
         <a href="/carrello" class="relative">
@@ -125,24 +125,24 @@ module.exports = {
   <div class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
     <!-- Pattern overlay -->
     <div class="absolute inset-0 bg-[url('data:image/svg+xml...')] opacity-20"></div>
-    
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative">
       <div class="text-center">
         <!-- Icona pizza -->
         <div class="flex justify-center mb-6">
           <svg class="w-24 h-24 text-red-500"><!-- pizza icon --></svg>
         </div>
-        
+
         <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
           La Pizza Artigianale<br>
           <span class="text-red-500">che ami, a casa tua</span>
         </h1>
-        
+
         <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
           Ingredienti freschi, ricette tradizionali e consegna veloce in tutta la città.
           Ordina ora la tua pizza preferita!
         </p>
-        
+
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/menu" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg">
             Ordina Ora
@@ -171,7 +171,7 @@ class HomeController extends Controller
         $featuredPizzas = $pizzaService->getFeaturedPizzas(4);
         $cartItems = $cartService->getCartWithDetails();
         $cartCount = count($cartItems);
-        
+
         return view('meetup::home', [
             'featuredPizzas' => $featuredPizzas,
             'cartCount' => $cartCount,
@@ -185,15 +185,15 @@ class HomeController extends Controller
 @extends('meetup::layouts.app')
 
 @section('content')
-    <x-meetup::hero 
+    <x-meetup::hero
         title="La Pizza Artigianale che ami, a casa tua"
         subtitle="Ingredienti freschi, ricette tradizionali e consegna veloce"
         :ctaPrimary="['text' => 'Ordina Ora', 'url' => '/menu']"
         :ctaSecondary="['text' => 'Sfoglia il Menu', 'url' => '/menu']"
     />
-    
+
     <x-meetup::features-section />
-    
+
     @if($featuredPizzas->count() > 0)
         <section class="py-20 bg-gray-800/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -208,8 +208,8 @@ class HomeController extends Controller
             </div>
         </section>
     @endif
-    
-    <x-meetup::cta-section 
+
+    <x-meetup::cta-section
         title="Pronto a Ordinare?"
         description="Ordina ora e ricevi la tua pizza preferita direttamente a casa tua"
         :buttons="[
@@ -263,4 +263,3 @@ class HomeController extends Controller
 2. **Prossimo**: Creare componenti Blade riutilizzabili
 3. **Dopo**: Integrare con servizi e modelli
 4. **Finale**: Testing e ottimizzazioni
-

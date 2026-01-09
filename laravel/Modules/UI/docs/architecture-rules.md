@@ -280,16 +280,16 @@ class UIServiceProvider extends XotBaseServiceProvider
   @volt('component.name')
   <?php
   use function Livewire\Volt\{state, mount};
-  
+
   state([
       'property' => null,
   ]);
-  
+
   $action = function () {
       // Logica dell'azione
   };
   ?>
-  
+
   <div>
       <!-- Template del componente -->
   </div>
@@ -303,15 +303,15 @@ class UIServiceProvider extends XotBaseServiceProvider
   <?php
   use function Laravel\Folio\{middleware, name};
   use function Livewire\Volt\{state, mount};
-  
+
   middleware(['auth']);
   name('page.name');
-  
+
   state([
       'property' => null,
   ]);
   ?>
-  
+
   <x-layouts.main>
       <!-- Contenuto della pagina -->
   </x-layouts.main>

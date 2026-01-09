@@ -12,4 +12,4 @@
 - Rate limiting e logging
 - Webhook per notifiche (es. proposta prestito)
 - API pubblica per dati di conto (solo lettura, audit)
-- Versionamento API 
+- Versionamento API

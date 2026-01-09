@@ -6,7 +6,7 @@ Lo script `/var/www/_bases/base_quaeris_fila4_mono/bashscripts/ai/ai_init.sh` no
 ## Situazione Prima della Correzione
 - `.ai` - ✅ Collegamento simbolico presente
 - `.cursor` - ❌ Cartella reale esistente, non collegamento simbolico
-- `.claude` - ❌ Cartella reale esistente, non collegamento simbolico  
+- `.claude` - ❌ Cartella reale esistente, non collegamento simbolico
 - `.gemini` - ✅ Collegamento simbolico presente
 - `.windsurf` - ❌ Cartella reale esistente, non collegamento simbolico
 
@@ -18,7 +18,7 @@ Lo script `/var/www/_bases/base_quaeris_fila4_mono/bashscripts/ai/ai_init.sh` no
 ## Risultato Attuale
 Tutti i collegamenti simbolici ora funzionano correttamente:
 - `.ai` → `bashscripts/ai/.ai`
-- `.cursor` → `bashscripts/ai/.cursor`  
+- `.cursor` → `bashscripts/ai/.cursor`
 - `.claude` → `bashscripts/ai/.claude`
 - `.gemini` → `bashscripts/ai/.gemini`
 - `.windsurf` → `bashscripts/ai/.windsurf`

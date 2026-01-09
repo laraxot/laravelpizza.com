@@ -106,4 +106,4 @@ $filePath = $action->executeWithSpreadsheet(
 - L'action è marcata come `final` per prevenire l'estensione
 - Utilizza strict typing per maggiore sicurezza
 - Implementa QueueableAction per supporto asincrono
-- Gestisce automaticamente la conversione dei tipi di campo 
+- Gestisce automaticamente la conversione dei tipi di campo

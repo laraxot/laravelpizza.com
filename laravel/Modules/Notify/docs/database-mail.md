@@ -95,7 +95,6 @@ Event::listen(UserRegistered::class, function ($event) {
 - **Branding e allegati**: logo, header/footer, allegati integrati
 - **Flessibilità eventi**: trigger su qualunque evento Laravel, multi-tenant ready
 
-
 ## Roadmap di implementazione
 1. Integrare visualbuilder/email-templates come base UI Filament
 2. Estendere EmailTemplate model per compatibilità Spatie e gestione variabili/allegati
@@ -114,7 +113,6 @@ Event::listen(UserRegistered::class, function ($event) {
 - [Guida logo email Laravel (Medium)](https://medium.com/@python-javascript-php-html-css/how-to-customize-laravel-email-templates-with-a-logo-3dc862fba8d0)
 - [Esempi invio email Spatie](https://laraveldaily.com/code-examples/example/spatie-be/send-email)
 
-
 **Questa architettura permette di avere un sistema di email transazionali robusto, moderno, estendibile e conforme alle best practice Laravel/Filament/Spatie.**
 
 ## Architettura
@@ -125,10 +123,10 @@ Event::listen(UserRegistered::class, function ($event) {
 class EmailTemplate extends Model
 {
     use HasTranslations;
-    
+
     protected $fillable = [
         'name',
-        'description', 
+        'description',
         'event',
         'subject',
         'body',
@@ -150,7 +148,7 @@ class EmailTemplate extends Model
         'body'
 }
 
-class EmailLog extends Model 
+class EmailLog extends Model
 {
     protected $fillable = [
         'template_id',
@@ -182,29 +180,29 @@ class EmailTemplateResource extends Resource
             Card::make()->schema([
                 TextInput::make('name')
                     ->required(),
-                    
+
                 Select::make('event')
                     ->options(EventRegistry::getEvents())
-                    
+
                 TinyMCE::make('body')
                     ->toolbarButtons([
-                        'bold', 'italic', 'link', 
+                        'bold', 'italic', 'link',
                         'bulletList', 'orderedList',
                         'table', 'image'
                     ])
                     ->fileAttachments()
-                    
+
                 KeyValue::make('variables')
                     ->keyLabel('Variable')
                     ->valueLabel('Description')
                     ->reorderable(),
-                    
+
                 Toggle::make('is_active'),
-                
+
                 TextInput::make('delay')
                     ->numeric()
                     ->suffix('minutes'),
-                    
+
                 TagsInput::make('cc'),
                 TagsInput::make('bcc')
             ])
@@ -229,18 +227,18 @@ class EmailService
         $template = EmailTemplate::where('event', $event)
             ->where('is_active', true)
             ->first();
-            
+
         if (!$template) {
             return;
         }
-        
+
         $variables = $this->events->getVariables($event, $data);
-        
+
         $mail = new TemplateMail(
             $template,
             $variables
         );
-        
+
         if ($template->delay) {
             $this->queue->later(
                 $mail,
@@ -269,21 +267,21 @@ class TemplateRenderer
 class EventRegistry
 {
     protected array $events = [];
-    
+
     public function register(string $event, array $variables = []): void
     {
         $this->events[$event] = $variables;
     }
-    
+
     public function getEvents(): array
     {
         return array_keys($this->events);
     }
-    
+
     public function getVariables(string $event, array $data): array
     {
         $variables = $this->events[$event] ?? [];
-        
+
         return collect($variables)
             ->mapWithKeys(fn ($var) => [
                 $var => data_get($data, $var)
@@ -302,7 +300,7 @@ class TemplateMail extends Mailable
         private EmailTemplate $template,
         private array $variables
     ) {}
-    
+
     public function build()
     {
         return $this
@@ -347,7 +345,7 @@ class ProcessDoctorModerationAction
     public function __construct(
         private EmailService $emailService
     ) {}
-    
+
     public function execute(Doctor $doctor, bool $approved): void
     {
         if ($approved) {
@@ -368,8 +366,6 @@ class ProcessDoctorModerationAction
 
 ```html
 <x-mail::message>
-
-
 
 # Registrazione Approvata
 

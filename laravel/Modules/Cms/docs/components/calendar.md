@@ -8,7 +8,7 @@ Il componente è parte del modulo Cms e viene registrato automaticamente.
 
 ## Usage
 ```php
-<x-pub_theme::components.blocks.calendar 
+<x-pub_theme::components.blocks.calendar
     :events="$events"
     :config="$config"
 />
@@ -51,4 +51,4 @@ Gli eventi devono seguire il formato standard di FullCalendar:
 
 ## Collegamenti
 - [Documentazione FullCalendar](../fullcalendar_parental_widgets.md)
-- [Configurazione Widget](../fullcalendar_widget_implementation.md) 
+- [Configurazione Widget](../fullcalendar_widget_implementation.md)

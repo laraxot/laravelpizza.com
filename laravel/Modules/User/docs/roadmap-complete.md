@@ -416,10 +416,8 @@ La cartella `docs/` contiene ~300+ file con molti duplicati:
 
 ---
 
-**Versione**: 1.0.0  
-**Ultimo Aggiornamento**: 2025-01-01  
-**Maintainer**: User Module Team  
-**Status**: 🚧 In Development (70% completo)  
+**Versione**: 1.0.0
+**Ultimo Aggiornamento**: 2025-01-01
+**Maintainer**: User Module Team
+**Status**: 🚧 In Development (70% completo)
 **Prossima Revisione**: 2025-02-01
-
-

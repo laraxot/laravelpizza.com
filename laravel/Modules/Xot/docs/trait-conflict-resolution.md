@@ -5,7 +5,7 @@
 Si verificava un conflitto di firma del metodo `trans()` quando `NavigationLabelTrait` veniva usato insieme a `XotBasePage`:
 
 ```
-PHP Fatal error: Declaration of Modules\Xot\Filament\Traits\NavigationLabelTrait::trans(...) 
+PHP Fatal error: Declaration of Modules\Xot\Filament\Traits\NavigationLabelTrait::trans(...)
 must be compatible with Modules\Xot\Filament\Pages\XotBasePage::trans(...)
 ```
 
@@ -88,6 +88,5 @@ Dopo la modifica, verifica con:
 
 ---
 
-*Risolto: 2025-01-10*  
+*Risolto: 2025-01-10*
 *Architecture Version: XotBase 2.1*
-

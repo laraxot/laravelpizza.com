@@ -170,11 +170,11 @@ Action::make('edit')
 1. Stili non applicati correttamente
    - Verificare la configurazione di Tailwind
    - Controllare i conflitti di classe
-   
+
 2. Eventi non triggrati
    - Verificare la corretta installazione di Livewire
    - Controllare gli eventi JavaScript
 
 3. Rendering non corretto
    - Pulire la cache delle view
-   - Verificare i conflitti di nome 
+   - Verificare i conflitti di nome

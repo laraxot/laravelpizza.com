@@ -194,7 +194,7 @@ try {
         'package' => 'spatie/laravel-permission',
         'error' => $e->getMessage(),
     ]);
-    
+
     throw $e;
 }
 ```
@@ -270,4 +270,4 @@ public function handle()
         'after_commit' => false,
     ],
 ],
-``` 
+```

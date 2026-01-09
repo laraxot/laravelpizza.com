@@ -2,9 +2,6 @@ https://github.com/statikbe/laravel-filament-chained-translation-manager
 
 https://filamentphp.com/plugins/34ml-translatable-field
 
-
-
-
 ## Collegamenti tra versioni di filament.md
 * [filament.md](docs/tecnico/filament/filament.md)
 * [filament.md](../../../Chart/docs/filament.md)
@@ -15,7 +12,6 @@ https://filamentphp.com/plugins/34ml-translatable-field
 * [filament.md](../../../Job/docs/filament.md)
 * [filament.md](../../../Activity/docs/filament.md)
 * [filament.md](../../../Cms/docs/filament.md)
-
 
 ## Extra risorse da _docs
 

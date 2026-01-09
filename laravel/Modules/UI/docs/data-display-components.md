@@ -169,7 +169,7 @@ new Chart(ctx, {
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  
+
   @media (max-width: 768px) {
     .table {
       min-width: 600px;
@@ -183,7 +183,7 @@ new Chart(ctx, {
 .chart-container {
   position: relative;
   height: 300px;
-  
+
   canvas {
     animation: fadeIn 0.5s ease;
   }
@@ -194,4 +194,4 @@ new Chart(ctx, {
 - [Componenti Base](./base-components.md)
 - [Form Avanzati](./advanced-form-components.md)
 - [Accessibilità](./standards/accessibility.md)
-- [Performance](./standards/performance.md) 
+- [Performance](./standards/performance.md)

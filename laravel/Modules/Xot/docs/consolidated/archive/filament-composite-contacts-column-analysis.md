@@ -53,7 +53,7 @@ TextColumn::make('contatti')
     ->label('Contatti')
     ->formatStateUsing(function ($record) {
         $contacts = [];
-        
+
         if ($record->phone) {
             $contacts[] = '<i class="heroicon-o-phone text-blue-500"></i> ' . $record->phone;
         }
@@ -69,7 +69,7 @@ TextColumn::make('contatti')
         if ($record->whatsapp) {
             $contacts[] = '<i class="fab fa-whatsapp text-green-600"></i> ' . $record->whatsapp;
         }
-        
+
         return new HtmlString(implode('<br>', $contacts));
     })
     ->html()
@@ -175,7 +175,7 @@ public function getTableColumns(): array
             ->label('Contatti')
             ->formatStateUsing(function ($record) {
                 $contacts = [];
-                
+
                 if ($record->phone) {
                     $contacts[] = '<i class="heroicon-o-phone text-blue-500 w-4 h-4 inline mr-1"></i>' . $record->phone;
                 }
@@ -191,7 +191,7 @@ public function getTableColumns(): array
                 if ($record->whatsapp) {
                     $contacts[] = '<i class="fab fa-whatsapp text-green-600 w-4 h-4 inline mr-1"></i>' . $record->whatsapp;
                 }
-                
+
                 return new HtmlString(implode('<br class="my-1">', $contacts));
             })
             ->html()

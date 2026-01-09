@@ -173,13 +173,13 @@ Questi spunti, insieme a quelli di Genesis, ci danno una base solida per disegna
 
 ## 8. Altri progetti Folio + Volt – UI/UX
 
-- **Siti SaaS / dashboard**  
+- **Siti SaaS / dashboard**
   I template Folio+Volt orientati al B2B (b2bsaas*, mini‑CRM) mostrano dashboard con navigazione chiara, sidebar persistente e contenuti principali in card/tabelle. Questo si traduce bene nella futura dashboard Meetup (statistiche eventi, lista iscrizioni, quick actions).
-- **Portfolio e siti personali**  
+- **Portfolio e siti personali**
   Progetti come GothamFolio confermano l'efficacia di layout a sezioni verticali (hero, about, skills, portfolio, contatti) con forte tipografia e uso di gradienti/ombre leggere. La pagina eventi può adottare la stessa logica, sostituendo i progetti con meetup.
-- **Podcast / media**  
+- **Podcast / media**
   I player podcast Folio+Volt usano barre fisse (bottom bar) e componenti compatti per controlli play/pause, timeline, cover. Questo pattern è riusabile per eventuali "recent talks" o highlight multimediali di meetup.
-- **Starter kit e boilerplate**  
+- **Starter kit e boilerplate**
   Starter come vflat, starter nativephp, personalized starter kit mostrano come strutturare il tema con layout coerenti (frontend/app), componenti UI piccoli e riutilizzabili e una gerarchia chiara delle pagine.
 
 L'insieme di questi esempi conferma le nostre scelte per il tema Meetup: interfaccia a blocchi, navigazione semplice, uso di Volt solo dove serve vera interazione (forms, filtri, player), mantenendo Blade + Tailwind per tutto il resto.

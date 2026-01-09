@@ -249,13 +249,13 @@ class ExampleResource extends XotBaseResource
                         ->required()
                         ->maxLength(255)
                         ->placeholder('Inserisci il nome dell\'esempio'),
-                        
+
                     Forms\Components\Textarea::make('descrizione')
                         ->label('Descrizione')
                         ->maxLength(1000)
                         ->placeholder('Inserisci una descrizione dettagliata')
                         ->columnSpanFull(),
-                        
+
                     Forms\Components\Toggle::make('is_active')
                         ->label('Attivo')
                         ->default(true)
@@ -273,7 +273,7 @@ class ExampleResource extends XotBaseResource
                         ->preload()
                         ->required()
                         ->placeholder('Seleziona un utente'),
-                        
+
                     Forms\Components\Select::make('category_id')
                         ->label('Categoria')
                         ->relationship('category', 'nome')
@@ -281,7 +281,7 @@ class ExampleResource extends XotBaseResource
                         ->preload()
                         ->required()
                         ->placeholder('Seleziona una categoria'),
-                        
+
                     Forms\Components\Select::make('tags')
                         ->label('Tag')
                         ->relationship('tags', 'nome')
@@ -319,22 +319,22 @@ class ExampleResource extends XotBaseResource
                 ->searchable()
                 ->sortable()
                 ->limit(50),
-                
+
             Tables\Columns\TextColumn::make('descrizione')
                 ->label('Descrizione')
                 ->limit(100)
                 ->searchable(),
-                
+
             Tables\Columns\TextColumn::make('user.name')
                 ->label('Utente')
                 ->searchable()
                 ->sortable(),
-                
+
             Tables\Columns\TextColumn::make('category.nome')
                 ->label('Categoria')
                 ->searchable()
                 ->sortable(),
-                
+
             Tables\Columns\IconColumn::make('is_active')
                 ->label('Stato')
                 ->boolean()
@@ -343,19 +343,19 @@ class ExampleResource extends XotBaseResource
                 ->falseIcon('heroicon-o-x-circle')
                 ->trueColor('success')
                 ->falseColor('danger'),
-                
+
             Tables\Columns\TextColumn::make('tags.nome')
                 ->label('Tag')
                 ->badge()
                 ->separator(',')
                 ->color('info'),
-                
+
             Tables\Columns\TextColumn::make('created_at')
                 ->label('Creato il')
                 ->dateTime('d/m/Y H:i')
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
-                
+
             Tables\Columns\TextColumn::make('updated_at')
                 ->label('Aggiornato il')
                 ->dateTime('d/m/Y H:i')
@@ -375,19 +375,19 @@ class ExampleResource extends XotBaseResource
             Tables\Filters\Filter::make('is_active')
                 ->label('Solo Attivi')
                 ->query(fn (Builder $query): Builder => $query->where('is_active', true)),
-                
+
             Tables\Filters\SelectFilter::make('category_id')
                 ->label('Categoria')
                 ->relationship('category', 'nome')
                 ->searchable()
                 ->preload(),
-                
+
             Tables\Filters\SelectFilter::make('user_id')
                 ->label('Utente')
                 ->relationship('user', 'name')
                 ->searchable()
                 ->preload(),
-                
+
             Tables\Filters\Filter::make('created_at')
                 ->form([
                     Forms\Components\DatePicker::make('created_from')
@@ -420,7 +420,7 @@ class ExampleResource extends XotBaseResource
             Tables\Actions\ViewAction::make(),
             Tables\Actions\EditAction::make(),
             Tables\Actions\DeleteAction::make(),
-            
+
             Tables\Actions\Action::make('activate')
                 ->label('Attiva')
                 ->icon('heroicon-o-check-circle')
@@ -431,7 +431,7 @@ class ExampleResource extends XotBaseResource
                 ->modalHeading('Attivare Esempio')
                 ->modalDescription('Sei sicuro di voler attivare questo esempio?')
                 ->modalSubmitActionLabel('Attiva'),
-                
+
             Tables\Actions\Action::make('deactivate')
                 ->label('Disattiva')
                 ->icon('heroicon-o-x-circle')
@@ -455,7 +455,7 @@ class ExampleResource extends XotBaseResource
         return [
             Tables\Actions\BulkActionGroup::make([
                 Tables\Actions\DeleteBulkAction::make(),
-                
+
                 Tables\Actions\BulkAction::make('activate')
                     ->label('Attiva Selezionati')
                     ->icon('heroicon-o-check-circle')
@@ -467,7 +467,7 @@ class ExampleResource extends XotBaseResource
                     ->modalHeading('Attivare Esempi Selezionati')
                     ->modalDescription('Sei sicuro di voler attivare gli esempi selezionati?')
                     ->modalSubmitActionLabel('Attiva'),
-                    
+
                 Tables\Actions\BulkAction::make('deactivate')
                     ->label('Disattiva Selezionati')
                     ->icon('heroicon-o-x-circle')
@@ -552,7 +552,7 @@ class ExampleWithCustomActionsResource extends XotBaseResource
                     // Logica di importazione
                 })
                 ->successNotificationTitle('Importazione completata'),
-                
+
             Action::make('export')
                 ->label('Esporta')
                 ->icon('heroicon-o-arrow-down-tray')
@@ -598,13 +598,13 @@ class ExampleServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-        
+
         // Registrazione policy
         $this->registerPolicies();
-        
+
         // Registrazione comandi
         $this->registerCommands();
-        
+
         // Registrazione componenti custom
         $this->registerCustomComponents();
     }
@@ -615,10 +615,10 @@ class ExampleServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
-        
+
         // Registrazione servizi
         $this->registerServices();
-        
+
         // Registrazione repository
         $this->registerRepositories();
     }
@@ -649,11 +649,11 @@ class ExampleServiceProvider extends XotBaseServiceProvider
     protected function registerCustomComponents(): void
     {
         // Registrazione componenti Livewire
-        \Livewire\Livewire::component('example::example-component', 
+        \Livewire\Livewire::component('example::example-component',
             \Modules\Example\app\Livewire\ExampleComponent::class);
-            
+
         // Registrazione componenti Blade
-        \Blade::component('example::example-card', 
+        \Blade::component('example::example-card',
             \Modules\Example\app\View\Components\ExampleCard::class);
     }
 
@@ -698,17 +698,17 @@ class ExampleWithConfigServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-        
+
         // Pubblica configurazione
         $this->publishes([
             __DIR__.'/../config/example.php' => config_path('example.php'),
         ], 'example-config');
-        
+
         // Carica configurazione
         $this->mergeConfigFrom(
             __DIR__.'/../config/example.php', 'example'
         );
-        
+
         // Carica routes
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
@@ -717,7 +717,7 @@ class ExampleWithConfigServiceProvider extends XotBaseServiceProvider
     public function register(): void
     {
         parent::register();
-        
+
         // Registra configurazione
         $this->app->singleton('example.config', function () {
             return Config::get('example');
@@ -757,28 +757,28 @@ return new class extends XotBaseMigration
 
         Schema::create($this->table_name, function (Blueprint $table) {
             $table->id();
-            
+
             // Campi base
             $table->string('nome');
             $table->text('descrizione')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             // Relazioni
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            
+
             // Campi extra (gestiti da Xot)
             $table->json('extra')->nullable();
-            
+
             // Timestamps
             $table->timestamps();
-            
+
             // Indici per performance
             $table->index(['user_id', 'is_active']);
             $table->index(['category_id', 'is_active']);
             $table->index('nome');
             $table->index('created_at');
-            
+
             // Vincoli univoci
             $table->unique(['user_id', 'nome']);
         });
@@ -819,24 +819,24 @@ return new class extends XotBaseMigration
                 $table->foreignId('user_id')->constrained()->onDelete('cascade');
                 $table->json('extra')->nullable();
                 $table->timestamps();
-                
+
                 $table->index(['user_id', 'is_active']);
                 $table->index('nome');
             });
-            
+
             $this->tableComment($this->table_name, 'Tabella per gli esempi');
             return;
         }
 
         // Aggiungi nuove colonne se la tabella esiste
-        
+
         if (! $this->hasColumn($this->table_name, 'priority')) {
             Schema::table($this->table_name, function (Blueprint $table) {
                 $table->enum('priority', ['low', 'medium', 'high'])
                     ->default('medium')
                     ->after('is_active');
             });
-            
+
             $this->columnComment($this->table_name, 'priority', 'Priorità dell\'esempio');
         }
 
@@ -844,7 +844,7 @@ return new class extends XotBaseMigration
             Schema::table($this->table_name, function (Blueprint $table) {
                 $table->date('due_date')->nullable()->after('priority');
             });
-            
+
             $this->columnComment($this->table_name, 'due_date', 'Data di scadenza');
         }
 
@@ -852,7 +852,7 @@ return new class extends XotBaseMigration
             Schema::table($this->table_name, function (Blueprint $table) {
                 $table->json('tags')->nullable()->after('due_date');
             });
-            
+
             $this->columnComment($this->table_name, 'tags', 'Tag associati all\'esempio');
         }
 
@@ -896,7 +896,7 @@ class ExampleTest extends XotBaseTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         // Setup comune per tutti i test
     }
 
@@ -905,7 +905,7 @@ class ExampleTest extends XotBaseTestCase
     {
         $user = User::factory()->create();
         $category = Category::factory()->create();
-        
+
         $example = Example::create([
             'nome' => 'Test Example',
             'descrizione' => 'Test Description',
@@ -925,12 +925,12 @@ class ExampleTest extends XotBaseTestCase
     public function it_can_update_example(): void
     {
         $example = Example::factory()->create();
-        
+
         $example->update([
             'nome' => 'Updated Example',
             'is_active' => false,
         ]);
-        
+
         $this->assertEquals('Updated Example', $example->fresh()->nome);
         $this->assertFalse($example->fresh()->is_active);
     }
@@ -939,9 +939,9 @@ class ExampleTest extends XotBaseTestCase
     public function it_can_delete_example(): void
     {
         $example = Example::factory()->create();
-        
+
         $example->delete();
-        
+
         $this->assertModelMissing($example);
     }
 
@@ -949,9 +949,9 @@ class ExampleTest extends XotBaseTestCase
     public function it_can_activate_example(): void
     {
         $example = Example::factory()->create(['is_active' => false]);
-        
+
         $result = $example->activate();
-        
+
         $this->assertTrue($result);
         $this->assertTrue($example->fresh()->is_active);
     }
@@ -960,9 +960,9 @@ class ExampleTest extends XotBaseTestCase
     public function it_can_deactivate_example(): void
     {
         $example = Example::factory()->create(['is_active' => true]);
-        
+
         $result = $example->deactivate();
-        
+
         $this->assertTrue($result);
         $this->assertFalse($example->fresh()->is_active);
     }
@@ -975,9 +975,9 @@ class ExampleTest extends XotBaseTestCase
             'nome' => 'Test Example',
             'category_id' => $category->id,
         ]);
-        
+
         $fullName = $example->full_name;
-        
+
         $this->assertEquals('Test Example - Test Category', $fullName);
     }
 
@@ -987,13 +987,13 @@ class ExampleTest extends XotBaseTestCase
         $example = Example::factory()->create([
             'created_at' => now()->subDays(3),
         ]);
-        
+
         $this->assertTrue($example->isRecent());
-        
+
         $oldExample = Example::factory()->create([
             'created_at' => now()->subDays(10),
         ]);
-        
+
         $this->assertFalse($oldExample->isRecent());
     }
 
@@ -1003,9 +1003,9 @@ class ExampleTest extends XotBaseTestCase
         Example::factory()->create(['is_active' => true]);
         Example::factory()->create(['is_active' => true]);
         Example::factory()->create(['is_active' => false]);
-        
+
         $activeExamples = Example::active()->get();
-        
+
         $this->assertEquals(2, $activeExamples->count());
         $this->assertTrue($activeExamples->every(fn ($example) => $example->is_active));
     }
@@ -1015,13 +1015,13 @@ class ExampleTest extends XotBaseTestCase
     {
         $user1 = User::factory()->create();
         $user2 = User::factory()->create();
-        
+
         Example::factory()->create(['user_id' => $user1->id]);
         Example::factory()->create(['user_id' => $user1->id]);
         Example::factory()->create(['user_id' => $user2->id]);
-        
+
         $user1Examples = Example::byUser($user1->id)->get();
-        
+
         $this->assertEquals(2, $user1Examples->count());
         $this->assertTrue($user1Examples->every(fn ($example) => $example->user_id === $user1->id));
     }
@@ -1053,7 +1053,7 @@ class ExampleRelationshipsTest extends XotBaseTestCase
     {
         $user = User::factory()->create();
         $example = Example::factory()->create(['user_id' => $user->id]);
-        
+
         $this->assertInstanceOf(User::class, $example->user);
         $this->assertEquals($user->id, $example->user->id);
     }
@@ -1063,7 +1063,7 @@ class ExampleRelationshipsTest extends XotBaseTestCase
     {
         $category = Category::factory()->create();
         $example = Example::factory()->create(['category_id' => $category->id]);
-        
+
         $this->assertInstanceOf(Category::class, $example->category);
         $this->assertEquals($category->id, $example->category->id);
     }
@@ -1074,7 +1074,7 @@ class ExampleRelationshipsTest extends XotBaseTestCase
         $example = Example::factory()->create();
         $comment1 = $example->comments()->create(['content' => 'Comment 1']);
         $comment2 = $example->comments()->create(['content' => 'Comment 2']);
-        
+
         $this->assertCount(2, $example->comments);
         $this->assertTrue($example->comments->contains($comment1));
         $this->assertTrue($example->comments->contains($comment2));
@@ -1086,9 +1086,9 @@ class ExampleRelationshipsTest extends XotBaseTestCase
         $example = Example::factory()->create();
         $tag1 = Tag::factory()->create();
         $tag2 = Tag::factory()->create();
-        
+
         $example->tags()->attach([$tag1->id, $tag2->id]);
-        
+
         $this->assertCount(2, $example->tags);
         $this->assertTrue($example->tags->contains($tag1));
         $this->assertTrue($example->tags->contains($tag2));
@@ -1099,9 +1099,9 @@ class ExampleRelationshipsTest extends XotBaseTestCase
     {
         $example = Example::factory()->create();
         $tag = Tag::factory()->create();
-        
+
         $example->tags()->attach($tag->id, ['added_at' => now()]);
-        
+
         $this->assertCount(1, $example->tags);
         $this->assertNotNull($example->tags->first()->pivot->added_at);
     }

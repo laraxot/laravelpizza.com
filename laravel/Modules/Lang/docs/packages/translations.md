@@ -23,11 +23,11 @@ class Post extends Model
     public function toArray()
     {
         $attributes = parent::toArray();
-        
+
         foreach ($this->getTranslatableAttributes() as $field) {
             $attributes[$field] = $this->getTranslation($field, app()->getLocale());
         }
-        
+
         return $attributes;
     }
 }
@@ -89,9 +89,8 @@ echo $post->getTranslation('title', 'it'); // Ciao Mondo
 
 - [Torna a packages.md](../packages.md)
 - [Localizzazione](localization.md)
-- [Performance](performance.md) 
+- [Performance](performance.md)
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di translations.md
 * [translations.md](../../../Chart/docs/translations.md)
@@ -112,9 +111,6 @@ echo $post->getTranslation('title', 'it'); // Ciao Mondo
 * [translations.md](../../../Patient/docs/translations.md)
 * [translations.md](../../../Cms/docs/translations.md)
 
-
 ### Versione Incoming
 
-
 ---
-

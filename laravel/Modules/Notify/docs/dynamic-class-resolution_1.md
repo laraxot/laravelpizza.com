@@ -10,7 +10,7 @@ Questo documento analizza l'approccio di risoluzione dinamica delle classi nei f
 public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -29,23 +29,23 @@ public function create(?string $driver = null): SmsActionInterface
 public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-    
+
     // Normalizza il nome del driver
     $normalizedDriver = ucfirst(strtolower($driver));
-    
+
     // Costruisci il nome completo della classe
     $className = "\\Modules\\Notify\\Actions\\SMS\\Send{$normalizedDriver}SMSAction";
-    
+
     // Verifica se la classe esiste
     if (!class_exists($className)) {
         throw new Exception("Unsupported SMS driver: {$driver}. Class {$className} not found.");
     }
-    
+
     // Verifica se la classe implementa l'interfaccia richiesta
     if (!is_subclass_of($className, SmsActionInterface::class)) {
         throw new Exception("Class {$className} does not implement SmsActionInterface.");
     }
-    
+
     return app($className);
 }
 ```

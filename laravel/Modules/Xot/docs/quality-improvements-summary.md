@@ -26,7 +26,7 @@ This document summarizes the quality improvements made to the PTVX system on Nov
 ### PHP Insights Results
 The system achieved:
 - **Code Quality**: 52.6/100
-- **Complexity**: 93.1/100  
+- **Complexity**: 93.1/100
 - **Architecture**: 35.3/100
 - **Style**: 60.2/100
 

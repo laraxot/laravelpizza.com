@@ -168,4 +168,4 @@ Questa documentazione fornisce una copertura completa per tutti gli aspetti dell
 3. **Riferimento quotidiano**: Quick Reference checklist
 4. **Configurazione produzione**: Best practices nel troubleshooting
 
-La documentazione è progettata per essere autosufficiente e ridurre la necessità di ricerche esterne, fornendo tutte le informazioni necessarie per una gestione efficace delle licenze FullCalendar Scheduler nel contesto sanitario di SaluteOra. 
+La documentazione è progettata per essere autosufficiente e ridurre la necessità di ricerche esterne, fornendo tutte le informazioni necessarie per una gestione efficace delle licenze FullCalendar Scheduler nel contesto sanitario di SaluteOra.

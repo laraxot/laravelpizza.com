@@ -76,4 +76,4 @@ Per correggere automaticamente i file che non seguono queste convenzioni:
 - Verificare sempre la checklist prima di committare
 - Mantenere aggiornata la documentazione
 - Seguire le convenzioni di naming
-- Usare gli strumenti di analisi statica 
+- Usare gli strumenti di analisi statica

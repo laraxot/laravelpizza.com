@@ -41,7 +41,6 @@ Getting started with the Fila3 Tenant Module is straightforward! Follow these st
    ```bash
    git clone https://github.com/laraxot/module_tenant_fila3.git
 
-
 Navigate to the project directory:
 bash
 Copia codice
@@ -202,4 +201,3 @@ This project is distributed under the MIT license. See the [LICENSE](LICENSE) fi
 Este proyecto está distribuido bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
-

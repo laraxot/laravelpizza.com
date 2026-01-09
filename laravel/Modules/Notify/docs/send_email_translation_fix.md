@@ -152,4 +152,4 @@ Ogni campo ora ha la struttura espansa completa:
     'helper_text' => '',
 ],
 
-*Ultimo aggiornamento: 2025-01-06* 
+*Ultimo aggiornamento: 2025-01-06*

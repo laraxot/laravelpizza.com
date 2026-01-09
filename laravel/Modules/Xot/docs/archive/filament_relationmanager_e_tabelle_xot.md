@@ -110,10 +110,10 @@ class MioRelatedRelationManager extends XotBaseRelationManager
     protected static string $relationship = 'nomeDellaRelazioneDefinitiaNelModelloPadre';
 
     // Obbligatorio: specifica la classe XotBaseResource a cui questo RelationManager è associato
-    protected static string $resourceClass = MioResource::class; 
+    protected static string $resourceClass = MioResource::class;
 
     // (Opzionale) Titolo del Relation Manager (verrà tradotto)
-    // protected static ?string $title = 'mia_relazione_manager.title'; 
+    // protected static ?string $title = 'mia_relazione_manager.title';
 
     // (Opzionale) Etichetta per il record (verrà tradotto)
     // protected static ?string $recordTitleAttribute = 'nome_attributo_del_related_model';

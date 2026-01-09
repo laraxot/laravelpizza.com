@@ -15,25 +15,25 @@ Based on analysis of community platforms like Laravel News and event management 
 @volt('events-list')
     @php
         use Modules\Meetup\Services\EventService;
-        
+
         $filter = [
             'category' => request()->query('category', 'all'),
             'location' => request()->query('location', 'all'),
             'date_range' => request()->query('date', 'upcoming'),
             'search' => request()->query('q', ''),
         ];
-        
+
         $events = app(EventService::class)->getFilteredEvents($filter);
     @endphp
 
     <div class="filter-controls">
-        <input 
-            type="text" 
-            wire:model.live.debounce.500ms="search" 
+        <input
+            type="text"
+            wire:model.live.debounce.500ms="search"
             placeholder="Search events..."
             class="search-input"
         />
-        
+
         <select wire:model.live="category" class="category-select">
             <option value="all">All Categories</option>
             <option value="laravel">Laravel</option>
@@ -44,9 +44,9 @@ Based on analysis of community platforms like Laravel News and event management 
 
     <div class="events-grid">
         @foreach($events as $event)
-            <x-event-card 
-                :event="$event" 
-                :show-registration-status="auth()->check()" 
+            <x-event-card
+                :event="$event"
+                :show-registration-status="auth()->check()"
             />
         @endforeach
     </div>
@@ -59,7 +59,7 @@ Based on analysis of community platforms like Laravel News and event management 
     @php
         use Modules\Meetup\Actions\Event\RegisterForEventAction;
         use Modules\Meetup\Actions\Event\CancelRegistrationAction;
-        
+
         $event = $event; // Passed via Folio route model binding
         $user = auth()->user();
     @endphp
@@ -70,10 +70,10 @@ Based on analysis of community platforms like Laravel News and event management 
         if (!$this->user) {
             return redirect()->route('login', ['redirect' => request()->fullUrl()]);
         }
-        
+
         $action = app(RegisterForEventAction::class);
         $result = $action->execute($this->event, $this->user);
-        
+
         if ($result->success) {
             $this->dispatch('event-registered', eventId: $this->event->id);
         } else {
@@ -84,7 +84,7 @@ Based on analysis of community platforms like Laravel News and event management 
     $cancel = function () {
         $action = app(CancelRegistrationAction::class);
         $result = $action->execute($this->event, $this->user);
-        
+
         if ($result->success) {
             $this->dispatch('registration-cancelled', eventId: $this->event->id);
         }
@@ -129,7 +129,7 @@ Based on Laravel Breeze and Spark implementations:
 @volt('user-profile')
     @php
         use Modules\Meetup\Actions\User\UpdateUserProfileAction;
-        
+
         $user = auth()->user();
         $name = $user->name;
         $email = $user->email;
@@ -164,7 +164,7 @@ Based on implementations in Laravel.io and community platforms:
 @volt('community-chat')
     @php
         use Modules\Meetup\Models\ChatMessage;
-        
+
         $channel = request()->query('channel', 'general');
         $messageText = '';
     @endphp
@@ -200,12 +200,12 @@ Based on implementations in Laravel.io and community platforms:
             <x-chat-message :message="$message" />
         @endforeach
     </div>
-    
+
     @volt('send-message')
         <form wire:submit="sendMessage" class="chat-form">
-            <input 
-                type="text" 
-                wire:model="messageText" 
+            <input
+                type="text"
+                wire:model="messageText"
                 placeholder="Type your message..."
                 class="message-input"
             />
@@ -224,7 +224,7 @@ Based on dashboard implementations in Laravel apps:
 @volt('user-dashboard')
     @php
         use Modules\Meetup\Services\UserStatsService;
-        
+
         $user = auth()->user();
     @endphp
 
@@ -244,23 +244,23 @@ Based on dashboard implementations in Laravel apps:
 
 <div class="dashboard-container">
     <div class="stats-grid">
-        <x-stat-card 
-            label="Events Attended" 
-            :value="$this->stats['events_attended']" 
+        <x-stat-card
+            label="Events Attended"
+            :value="$this->stats['events_attended']"
             icon="calendar"
         />
-        <x-stat-card 
-            label="Pizza Slices Shared" 
-            :value="$this->stats['pizza_slices_shared']" 
+        <x-stat-card
+            label="Pizza Slices Shared"
+            :value="$this->stats['pizza_slices_shared']"
             icon="pizza"
         />
-        <x-stat-card 
-            label="Community Points" 
-            :value="$this->stats['community_points']" 
+        <x-stat-card
+            label="Community Points"
+            :value="$this->stats['community_points']"
             icon="trophy"
         />
     </div>
-    
+
     <div class="dashboard-sections">
         <x-recent-activity :activities="$this->recentActivity" />
         <x-upcoming-events :user="$this->user" />
@@ -298,16 +298,16 @@ Based on dashboard implementations in Laravel apps:
         if (strlen($this->searchQuery) < 3) {
             return collect();
         }
-        
+
         return \Modules\Meetup\Models\Event::where('title', 'like', '%' . $this->searchQuery . '%')
             ->limit(10)
             ->get();
     });
 @endvolt
 
-<input 
-    type="text" 
-    wire:model.live.debounce.300ms="searchQuery" 
+<input
+    type="text"
+    wire:model.live.debounce.300ms="searchQuery"
     placeholder="Search events..."
 />
 ```
@@ -340,7 +340,7 @@ Based on dashboard implementations in Laravel apps:
         if (!auth()->check()) {
             return redirect()->route('login');
         }
-        
+
         // Additional policy checks
         $this->authorize('view', $event);
     @endphp
@@ -353,7 +353,7 @@ Based on dashboard implementations in Laravel apps:
     $processData = function () {
         $cleanInput = strip_tags($this->userInput);
         $this->userInput = e($cleanInput); // Escape for output
-        
+
         // Or use Laravel's built-in sanitization
         $this->userInput = clean($this->userInput); // If using mews/purifier
     };
@@ -368,7 +368,7 @@ Based on dashboard implementations in Laravel apps:
 @volt('event-creation')
     @php
         use Modules\Meetup\Actions\Event\CreateEventAction;
-        
+
         $title = '';
         $description = '';
         $date = '';
@@ -398,7 +398,7 @@ Based on dashboard implementations in Laravel apps:
 @volt('dashboard-stats')
     @php
         use Modules\Meetup\Services\AnalyticsService;
-        
+
         $analytics = app(AnalyticsService::class);
     @endphp
 
@@ -450,9 +450,9 @@ The Genesis starter kit provides comprehensive authentication implementations:
     @php
         use App\Models\User;
         use Illuminate\Auth\Events\Login;
-        
+
         middleware(['guest']); // Ensure only guests can access
-        
+
         $email = '';
         $password = '';
         $remember = false;
@@ -463,19 +463,19 @@ The Genesis starter kit provides comprehensive authentication implementations:
             'email' => 'required|email',
             'password' => 'required',
         ]);
-        
+
         if (!auth()->attempt($credentials, $this->remember)) {
             $this->addError('email', __('auth.failed'));
             return;
         }
-        
+
         // Fire login event for tracking
         event(new Login(
-            auth()->guard('web'), 
-            User::where('email', $this->email)->first(), 
+            auth()->guard('web'),
+            User::where('email', $this->email)->first(),
             $this->remember
         ));
-        
+
         return redirect()->intended('/');
     };
 @endvolt
@@ -486,9 +486,9 @@ The Genesis starter kit provides comprehensive authentication implementations:
 @volt('register')
     @php
         use Modules\Meetup\Actions\User\RegisterUserAction;
-        
+
         middleware(['guest']);
-        
+
         $name = '';
         $email = '';
         $password = '';
@@ -531,15 +531,15 @@ Implement persistent components and smooth navigation using `@persist` and `wire
     @persist('header')
         <x-layouts.header />
     @endpersist
-    
+
     <main class="py-8">
         {{ $slot }}
     </main>
-    
+
     @persist('chat-widget')
         <x-chat.widget />
     @endpersist
-    
+
     @persist('event-notifications')
         <x-event.notifications />
     @endpersist
@@ -576,16 +576,16 @@ Implement modular, reusable components following Warriorfolio's approach:
     @if($showFilters)
         <x-event.filters :categories="$categories" />
     @endif
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         @foreach($events as $event)
-            <x-event.card 
-                :event="$event" 
-                :show-registration-status="auth()->check()" 
+            <x-event.card
+                :event="$event"
+                :show-registration-status="auth()->check()"
             />
         @endforeach
     </div>
-    
+
     @if($events->hasPages())
         <div class="mt-8">
             {{ $events->links() }}
@@ -631,11 +631,11 @@ Implement cross-component communication as demonstrated in Laravel News:
 #### Event-based Communication
 ```blade
 {{-- resources/views/components/chat/widget.blade.php --}}
-<div 
-    x-data="{ 
-        showChat: false, 
+<div
+    x-data="{
+        showChat: false,
         toggle() { this.showChat = !this.showChat; },
-        openWithUser(user) { 
+        openWithUser(user) {
             this.showChat = true;
             $dispatch('chat-opened-with-user', user);
         }
@@ -648,7 +648,7 @@ Implement cross-component communication as demonstrated in Laravel News:
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
         </svg>
     </button>
-    
+
     <div x-show="showChat" class="absolute bottom-16 right-0 w-80 h-96 bg-white border rounded-lg shadow-lg">
         <x-chat.interface />
     </div>
@@ -664,7 +664,7 @@ Implement cross-component communication as demonstrated in Laravel News:
             'type' => 'speaker'
         ]);
     };
-    
+
     $contactOrganizer = function($organizerId) {
         $this->dispatch('open-chat-with-user', [
             'userId' => $organizerId,
@@ -673,7 +673,7 @@ Implement cross-component communication as demonstrated in Laravel News:
     };
 @endvolt
 
-<button 
+<button
     wire:click="contactSpeaker({{ $event->organizer->id }})"
     class="bg-blue-600 text-white px-4 py-2 rounded"
 >
@@ -717,21 +717,21 @@ Based on all these real-world examples, here are specific implementation pattern
 {{-- Following Genesis patterns --}}
 @volt('auth.login')
     middleware(['guest']);
-    
+
     $email = '';
     $password = '';
     $remember = false;
-    
+
     $login = function() {
         $credentials = $this->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
-        
+
         if (auth()->attempt($credentials, $this->remember)) {
             return redirect()->intended('/dashboard');
         }
-        
+
         $this->addError('email', 'Invalid credentials');
     };
 @endvolt
@@ -745,11 +745,11 @@ Based on all these real-world examples, here are specific implementation pattern
         if (!$this->user) {
             return redirect('/login?redirect=' . request()->fullUrl());
         }
-        
+
         // Registration logic
         $this->dispatch('event-registered', $this->event->id);
     };
-    
+
     $unregisterFromEvent = function() {
         // Unregistration logic
         $this->dispatch('event-unregistered', $this->event->id);
@@ -767,7 +767,7 @@ Based on all these real-world examples, here are specific implementation pattern
             ->orderBy('start_date', 'desc')
             ->paginate(12);
     });
-    
+
     $filters = [
         'categories' => ['laravel', 'filament', 'livewire', 'php'],
         'formats' => ['online', 'in-person', 'hybrid'],
@@ -775,10 +775,10 @@ Based on all these real-world examples, here are specific implementation pattern
     ];
 @endvolt
 
-<x-event.gallery 
-    :events="$this->events" 
-    :filters="$this->filters" 
-    :show-filters="true" 
+<x-event.gallery
+    :events="$this->events"
+    :filters="$this->filters"
+    :show-filters="true"
 />
 ```
 
@@ -787,7 +787,7 @@ Based on all these real-world examples, here are specific implementation pattern
 These real-world implementation patterns from Genesis, Laravel News, and Warriorfolio demonstrate that Folio + Volt provide a robust foundation for building modern Laravel applications. The Laravel Pizza Meetups project can leverage these patterns to create:
 
 - Production-ready authentication systems (Genesis)
-- SPA-like user experience with persistent components (Laravel News) 
+- SPA-like user experience with persistent components (Laravel News)
 - Modular and reusable component architecture (Warriorfolio)
 - Advanced routing and state management patterns
 - Cross-component communication strategies
@@ -800,5 +800,5 @@ By following these proven patterns, the project will benefit from the collective
 
 ---
 
-**Document Version**: 1.0  
+**Document Version**: 1.0
 **Last Updated**: November 29, 2025

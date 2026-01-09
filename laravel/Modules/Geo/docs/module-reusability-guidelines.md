@@ -123,12 +123,12 @@ class NotificationService
     {
         return XotData::make()->getUserClass();
     }
-    
+
     protected function createNotificationForUser(int $userId): void
     {
         $userClass = $this->getUserClass();
         $user = $userClass::find($userId);
-        
+
         // Logica di notifica...
     }
 }
@@ -140,7 +140,7 @@ class NotificationService
 public function definition(): array
 {
     $projectNamespace = XotData::make()->getProjectNamespace();
-    
+
     return [
         'themeable_type' => $this->faker->randomElement([
             "{$projectNamespace}\\Models\\Patient",
@@ -161,11 +161,11 @@ describe('Notification Management', function () {
         // Utilizzo dinamico della classe User
         $userClass = XotData::make()->getUserClass();
         $user = $userClass::factory()->create();
-        
+
         $notification = Notification::factory()->create([
             'user_id' => $user->id,
         ]);
-        
+
         expect($notification->user)->toBeInstanceOf($userClass);
     });
 });

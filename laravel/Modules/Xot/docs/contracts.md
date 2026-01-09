@@ -19,14 +19,14 @@ Definisce l'interfaccia per tutti i modelli User nel sistema, includendo autenti
 
 ### Interfacce Estese
 ```php
-interface UserContract extends 
-    Authenticatable, 
-    Authorizable, 
-    CanResetPassword, 
-    FilamentUser, 
-    HasTeamsContract, 
-    ModelContract, 
-    MustVerifyEmail, 
+interface UserContract extends
+    Authenticatable,
+    Authorizable,
+    CanResetPassword,
+    FilamentUser,
+    HasTeamsContract,
+    ModelContract,
+    MustVerifyEmail,
     PassportHasApiTokensContract,
     HasMedia
 ```

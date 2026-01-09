@@ -10,7 +10,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    ```php
    // CORRETTO ✅
    class ClienteResource extends XotBaseResource
-   
+
    // ERRATO ❌
    class ClienteResource extends Resource
    ```
@@ -33,7 +33,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    {
        protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack'; // GESTITO AUTOMATICAMENTE
    }
-   
+
    // ✅ CORRETTO
    class ReportResource extends XotBaseResource
    {
@@ -45,7 +45,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    ```php
    // ❌ ERRATO
    TextInput::make('name')->label('Nome')
-   
+
    // ✅ CORRETTO
    TextInput::make('name') // Label gestita da LangServiceProvider
    ```
@@ -59,7 +59,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    class CreateCliente extends XotBaseCreateRecord
    class EditCliente extends XotBaseEditRecord
    class ViewCliente extends XotBaseViewRecord
-   
+
    // ERRATO ❌
    class ListClienti extends ListRecords
    class CreateCliente extends CreateRecord
@@ -129,7 +129,7 @@ use Filament\Tables;
 
 /**
  * Pagina di elenco per i report.
- * 
+ *
  * ✅ IMPLEMENTAZIONE CORRETTA: Estende XotBaseListRecords
  * ✅ SEGUE IL PATTERN LARAXOT: Non estende ListRecords di Filament direttamente
  * ✅ IMPLEMENTA getTableColumns(): Metodo obbligatorio per XotBaseListRecords
@@ -271,7 +271,7 @@ use Filament\Actions;
 
 /**
  * Pagina di modifica per gli appuntamenti.
- * 
+ *
  * ✅ IMPLEMENTAZIONE CORRETTA: Estende XotBaseEditRecord
  * ✅ SEGUE IL PATTERN LARAXOT: Non estende EditRecord di Filament direttamente
  * ✅ DOCUMENTAZIONE AGGIORNATA: PHPDoc completo e chiaro
@@ -349,7 +349,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
 /**
  * Pagina di creazione per gli appuntamenti.
- * 
+ *
  * ✅ IMPLEMENTAZIONE CORRETTA: Estende XotBaseCreateRecord
  * ✅ SEGUE IL PATTERN LARAXOT: Non estende CreateRecord di Filament direttamente
  * ✅ DOCUMENTAZIONE AGGIORNATA: PHPDoc completo e chiaro
@@ -401,7 +401,7 @@ use Filament\Forms;
 
 /**
  * Risorsa Filament per i report.
- * 
+ *
  * ✅ IMPLEMENTAZIONE CORRETTA: Estende XotBaseResource
  * ✅ SEGUE IL PATTERN LARAXOT: Non estende Resource di Filament direttamente
  * ✅ IMPLEMENTA getFormSchema(): Metodo obbligatorio per XotBaseResource
@@ -426,7 +426,7 @@ class ReportResource extends XotBaseResource
             Forms\Components\Select::make('patient_id')
                 ->relationship('patient', 'name')
                 ->required(),
-            
+
             Forms\Components\Toggle::make('has_mouth_or_teeth_pain'),
             Forms\Components\Toggle::make('smokes'),
             // Altri campi reali del modello Report...

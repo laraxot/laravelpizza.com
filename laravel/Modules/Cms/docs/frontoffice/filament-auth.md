@@ -4,7 +4,7 @@
 
 Questa documentazione descrive come implementare correttamente i form di autenticazione utilizzando widget Filament nel frontoffice del CMS. L'approccio prevede l'utilizzo di widget per garantire maggiore flessibilità, performance e integrazione con il layout esistente.
 
-⚠️ **IMPORTANTE**: 
+⚠️ **IMPORTANTE**:
 1. Non estendere mai direttamente le classi di Filament. Utilizzare sempre le classi base di Xot con prefisso `XotBase`.
 2. Non utilizzare mai `->label()` nei form. Le traduzioni vengono gestite automaticamente dal `LangServiceProvider`.
 
@@ -106,7 +106,7 @@ class RegisterWidget extends XotBaseWidget
 <x-filament::widget>
     <x-filament::form wire:submit="register">
         {{ $this->form }}
-        
+
         <x-filament::button type="submit">
             {{ __('auth.register.actions.register') }}
         </x-filament::button>
@@ -171,11 +171,11 @@ Route::middleware('web')->group(function () {
     Route::get('register', function () {
         return view('user::auth.register');
     })->name('register');
-    
+
     Route::get('login', function () {
         return view('user::auth.login');
     })->name('login');
-    
+
     Route::get('reset-password', function () {
         return view('user::auth.reset-password');
     })->name('password.reset');
@@ -211,4 +211,4 @@ Route::middleware('web')->group(function () {
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/widgets)
 - [Documentazione Filament Forms](https://filamentphp.com/docs/forms)
 - [Best Practices Filament](https://filamentphp.com/docs/best-practices)
-- [Documentazione Xot](https://github.com/laraxot/modules) 
+- [Documentazione Xot](https://github.com/laraxot/modules)

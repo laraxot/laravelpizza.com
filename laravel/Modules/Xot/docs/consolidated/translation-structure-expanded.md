@@ -190,7 +190,7 @@ Il file attuale contiene principalmente etichette generali per l'interfaccia amm
 
 ---
 
-**Stato**: Documentazione completata, implementazione in corso  
-**Priorità**: Media (file già corretto linguisticamente)  
-**Responsabile**: Sistema automatico DRY/KISS  
+**Stato**: Documentazione completata, implementazione in corso
+**Priorità**: Media (file già corretto linguisticamente)
+**Responsabile**: Sistema automatico DRY/KISS
 **Data**: 2025-08-08

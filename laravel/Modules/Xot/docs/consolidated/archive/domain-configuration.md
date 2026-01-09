@@ -171,4 +171,4 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
 ## Collegamenti
 - [Configurazione Generale](CONFIGURATION.md)
 - [Gestione Asset](assets.md)
-- [Struttura Temi](themes.md) 
+- [Struttura Temi](themes.md)

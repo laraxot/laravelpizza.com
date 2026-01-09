@@ -16,7 +16,7 @@
 
 ### 🏗️ **Filament Components**
 - [ ] `getFormSchema()` restituisce array associativo con chiavi string
-- [ ] `getTableColumns()` restituisce array associativo con chiavi string  
+- [ ] `getTableColumns()` restituisce array associativo con chiavi string
 - [ ] `getTableActions()` restituisce array associativo con chiavi string
 - [ ] Mai usare `->label()` nei componenti (gestito da LangServiceProvider)
 - [ ] Nome view allineato al nome classe (kebab-case)
@@ -202,6 +202,6 @@ class ExamplePage extends XotBasePage
 
 ---
 
-**Versione**: 1.0  
-**Data**: 2025-08-07  
+**Versione**: 1.0
+**Data**: 2025-08-07
 **Applicabilità**: Tutti i file Filament del modulo Media

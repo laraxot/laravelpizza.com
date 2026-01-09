@@ -30,15 +30,15 @@ public function execute(Collection $collection): array
 {
     /** @var array<string>|string|null $fields */
     $fields = $collection->get('fields');
-    
+
     if (null === $fields) {
         return [];
     }
-    
+
     if (is_string($fields)) {
         $fields = [$fields];
     }
-    
+
     return Arr::only($item, $fields);
 }
 ```
@@ -94,7 +94,7 @@ class XotBaseClass
     {
         // Implementazione
     }
-    
+
     public static function __callStatic(string $method, array $parameters)
     {
         // Implementazione
@@ -131,11 +131,11 @@ public function execute(string $modelClass)
     if (! class_exists($modelClass)) {
         throw new \InvalidArgumentException("Class {$modelClass} does not exist");
     }
-    
+
     if (! method_exists($modelClass, 'factory')) {
         throw new \InvalidArgumentException("Class {$modelClass} does not have a factory method");
     }
-    
+
     return $modelClass::factory();
 }
 ```
@@ -196,7 +196,7 @@ public function getFileContents(string $path)
     if (!file_exists($path)) {
         return false;
     }
-    
+
     return file_get_contents($path);
 }
 ```
@@ -232,7 +232,7 @@ public function callMethod(object $class, string $method, ...$args)
     if (!method_exists($class, $method)) {
         throw new \BadMethodCallException("Method {$method} does not exist on class " . get_class($class));
     }
-    
+
     return $class->$method(...$args);
 }
 ```
@@ -265,7 +265,7 @@ public function processInput(Request $request): string
 {
     /** @var string|null $value */
     $value = $request->input('key');
-    
+
     return strtoupper((string) $value);
 }
 ```
@@ -278,11 +278,10 @@ Questi pattern rappresentano le soluzioni standard da adottare in tutto il modul
 
 1. Applicare sistematicamente questi pattern a tutto il codice del modulo Xot
 2. Estendere questi pattern ad altri moduli del progetto
-3. Aggiornare regolarmente questo documento con nuovi pattern identificati 
+3. Aggiornare regolarmente questo documento con nuovi pattern identificati
 ## Collegamenti tra versioni di PHPSTAN_PATTERN_SOLUZIONI.md
 * [PHPSTAN_PATTERN_SOLUZIONI.md](../../../Xot/project_docs/phpstan/PHPSTAN_PATTERN_SOLUZIONI.md)
 * [PHPSTAN_PATTERN_SOLUZIONI.md](../../../Xot/project_docs/PHPSTAN_PATTERN_SOLUZIONI.md)
-
 
 ## Collegamenti tra versioni di phpstan_pattern_soluzioni.md
 ### Versione HEAD
@@ -295,7 +294,6 @@ Questi pattern rappresentano le soluzioni standard da adottare in tutto il modul
 
 ---
 
-
-3. Aggiornare regolarmente questo documento con nuovi pattern identificati 
-3. Aggiornare regolarmente questo documento con nuovi pattern identificati 
-3. Aggiornare regolarmente questo documento con nuovi pattern identificati 
+3. Aggiornare regolarmente questo documento con nuovi pattern identificati
+3. Aggiornare regolarmente questo documento con nuovi pattern identificati
+3. Aggiornare regolarmente questo documento con nuovi pattern identificati

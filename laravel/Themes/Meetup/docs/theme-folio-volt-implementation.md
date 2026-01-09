@@ -48,12 +48,12 @@ use function Laravel\Volt\{mount};
 
 new class extends Component {
     public Event $event;
-    
+
     public function mount(Event $event)
     {
         $this->event = $event;
     }
-    
+
     public function getIsFullProperty()
     {
         return $this->event->current_attendees >= $this->event->capacity;
@@ -147,24 +147,24 @@ $stats = computed(fn () => [
     <!-- Hero Section -->
     <section id="home" class="relative py-20 md:py-32 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 to-slate-900"></div>
-        
+
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-4xl mx-auto text-center">
                 <div class="mb-8 flex justify-center">
                     <x-pizza-slice-icon class="w-24 h-24" />
                 </div>
-                
+
                 <h1 class="text-5xl md:text-7xl font-bold mb-4">
                     <span class="text-white">Laravel Developers.</span><br>
                     <span class="text-red-500">Pizza. Community.</span>
                 </h1>
-                
+
                 <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
                     Join fellow Laravel, Filament, and Livewire enthusiasts for pizza meetups.
                     <br class="hidden md:block">
                     Share knowledge, build connections, and enjoy great food together.
                 </p>
-                
+
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="{{ route('events.index') }}" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center justify-center">
                         Join the Community
@@ -182,7 +182,7 @@ $stats = computed(fn () => [
             </div>
         </div>
     </section>
-    
+
     <!-- Stats Section -->
     <section class="py-20 bg-slate-800/30">
         <div class="container mx-auto px-4">
@@ -206,7 +206,7 @@ $stats = computed(fn () => [
             </div>
         </div>
     </section>
-    
+
     <!-- Featured Events -->
     <section class="py-20">
         <div class="container mx-auto px-4">
@@ -214,13 +214,13 @@ $stats = computed(fn () => [
                 <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Featured Events</h2>
                 <p class="text-xl text-gray-400">Join us at our next meetup</p>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 @foreach($this->featuredEvents as $event)
                     <x-event-card :event="$event" />
                 @endforeach
             </div>
-            
+
             <div class="text-center mt-12">
                 <a href="{{ route('events.index') }}" class="inline-flex items-center text-red-500 hover:text-red-400 font-semibold text-lg">
                     View All Events
@@ -249,21 +249,21 @@ new class extends Component {
     public $selectedCategory = 'all';
     public $searchTerm = '';
     public $dateFilter = 'all';
-    
+
     public function getEventsProperty()
     {
         $query = Event::where('status', 'published')
             ->where('start_datetime', '>', now())
             ->with('category');
-        
+
         if ($this->selectedCategory !== 'all') {
             $query->where('category_id', $this->selectedCategory);
         }
-        
+
         if ($this->searchTerm) {
             $query->where('title', 'like', '%' . $this->searchTerm . '%');
         }
-        
+
         if ($this->dateFilter === 'today') {
             $query->whereDate('start_datetime', today());
         } elseif ($this->dateFilter === 'this-week') {
@@ -271,10 +271,10 @@ new class extends Component {
         } elseif ($this->dateFilter === 'this-month') {
             $query->whereMonth('start_datetime', now()->month);
         }
-        
+
         return $query->orderBy('start_datetime')->get();
     }
-    
+
     public function getCategoriesProperty()
     {
         return EventCategory::where('is_active', true)->get();
@@ -284,12 +284,12 @@ new class extends Component {
 <div class="container mx-auto px-4 py-8">
     <div class="mb-8">
         <h1 class="text-3xl font-bold text-white mb-6">Upcoming Events</h1>
-        
+
         <!-- Filters -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <div>
                 <label class="block text-gray-400 mb-2">Category</label>
-                <select 
+                <select
                     wire:model="selectedCategory"
                     class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-white"
                 >
@@ -299,10 +299,10 @@ new class extends Component {
                     @endforeach
                 </select>
             </div>
-            
+
             <div>
                 <label class="block text-gray-400 mb-2">Date</label>
-                <select 
+                <select
                     wire:model="dateFilter"
                     class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-white"
                 >
@@ -312,10 +312,10 @@ new class extends Component {
                     <option value="this-month">This Month</option>
                 </select>
             </div>
-            
+
             <div>
                 <label class="block text-gray-400 mb-2">Search</label>
-                <input 
+                <input
                     wire:model.debounce.300ms="searchTerm"
                     type="text"
                     placeholder="Search events..."
@@ -324,7 +324,7 @@ new class extends Component {
             </div>
         </div>
     </div>
-    
+
     <!-- Events Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         @forelse($this->events as $event)
@@ -357,12 +357,12 @@ new class extends Component {
         'num_guests' => 1,
         'special_requests' => '',
     ];
-    
+
     public function mount(Event $event)
     {
         $this->event = $event->load('category', 'organizer');
     }
-    
+
     public function register()
     {
         if (!Auth::check()) {
@@ -370,28 +370,28 @@ new class extends Component {
                 'redirect' => request()->url()
             ]));
         }
-        
+
         $this->validate([
             'registrationData.num_guests' => 'required|integer|min:1|max:10',
             'registrationData.special_requests' => 'nullable|string|max:500',
         ]);
-        
+
         // Check if already registered
         $existingRegistration = EventRegistration::where('event_id', $this->event->id)
             ->where('user_id', Auth::id())
             ->first();
-            
+
         if ($existingRegistration) {
             $this->addError('registration', 'You are already registered for this event.');
             return;
         }
-        
+
         // Check event capacity
         if ($this->event->current_attendees >= $this->event->capacity) {
             $this->addError('registration', 'This event is at full capacity.');
             return;
         }
-        
+
         EventRegistration::create([
             'event_id' => $this->event->id,
             'user_id' => Auth::id(),
@@ -399,22 +399,22 @@ new class extends Component {
             'special_requests' => $this->registrationData['special_requests'],
             'status' => 'confirmed',
         ]);
-        
+
         // Update event attendance count
         $this->event->increment('current_attendees');
-        
-        $this->dispatch('registration-success', 
+
+        $this->dispatch('registration-success',
             message: 'Successfully registered for the event!',
             eventId: $this->event->id
         );
     }
-    
+
     public function getIsRegisteredProperty()
     {
         if (!Auth::check()) {
             return false;
         }
-        
+
         return EventRegistration::where('event_id', $this->event->id)
             ->where('user_id', Auth::id())
             ->exists();
@@ -423,13 +423,13 @@ new class extends Component {
 
 <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
     <h3 class="text-xl font-bold text-white mb-4">Register for Event</h3>
-    
+
     @if(session('success'))
         <div class="bg-green-500/10 border border-green-500 text-green-500 p-4 rounded-lg mb-4">
             {{ session('success') }}
         </div>
     @endif
-    
+
     @if($this->isRegistered)
         <div class="bg-green-500/10 border border-green-500 text-green-500 p-4 rounded-lg">
             You're already registered for this event!
@@ -440,11 +440,11 @@ new class extends Component {
                 {{ $message }}
             </div>
         @enderror
-        
+
         <form wire:submit="register" class="space-y-4">
             <div>
                 <label class="block text-gray-400 mb-2">Number of Guests</label>
-                <select 
+                <select
                     wire:model="registrationData.num_guests"
                     class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-white"
                 >
@@ -453,18 +453,18 @@ new class extends Component {
                     @endfor
                 </select>
             </div>
-            
+
             <div>
                 <label class="block text-gray-400 mb-2">Special Requests</label>
-                <textarea 
+                <textarea
                     wire:model="registrationData.special_requests"
                     class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-white"
                     rows="3"
                     placeholder="Dietary restrictions, accessibility needs, etc."
                 ></textarea>
             </div>
-            
-            <button 
+
+            <button
                 type="submit"
                 class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"
             >
@@ -502,9 +502,9 @@ $featuredEvents = computed(fn () => Cache::remember(
 
 ```blade
 {{-- In a page that might not always show registration --}}
-<livewire:event-registration 
-    :event="$event" 
-    lazy 
+<livewire:event-registration
+    :event="$event"
+    lazy
     class="mt-8"
 />
 ```
@@ -522,20 +522,20 @@ use Illuminate\Support\Facades\Auth;
 
 new class extends Component {
     public Event $event;
-    
+
     public function mount(Event $event)
     {
         $this->event = $event;
-        
+
         // Authorization check
         abort_unless($this->event->status === 'published' || Auth::user()?->can('view', $this->event), 403);
     }
-    
+
     public function deleteEvent()
     {
         // Additional authorization check
         abort_unless(Auth::user()?->can('delete', $this->event), 403);
-        
+
         $this->event->delete();
         $this->redirect(route('events.index'));
     }
@@ -551,9 +551,9 @@ new class extends Component {
 public function test_event_page_shows_registration_form()
 {
     $event = Event::factory()->create();
-    
+
     $response = $this->get(route('events.show', $event));
-    
+
     $response->assertSuccessful();
     $response->assertSeeLivewire('event-registration');
 }
@@ -563,7 +563,7 @@ public function test_user_can_register_for_event()
 {
     $this->actingAs(User::factory()->create());
     $event = Event::factory()->create(['capacity' => 10]);
-    
+
     Livewire::test('event-registration', ['event' => $event])
         ->set('registrationData.num_guests', 2)
         ->call('register')
@@ -613,5 +613,5 @@ The Laravel Pizza Meetup theme successfully implements Laravel Folio and Volt to
 
 ---
 
-**Document Version**: 1.0  
+**Document Version**: 1.0
 **Last Updated**: November 28, 2025

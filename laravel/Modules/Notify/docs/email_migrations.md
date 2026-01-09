@@ -1,4 +1,4 @@
-# Sistema Migrazione Email 
+# Sistema Migrazione Email
 
 ## Panoramica
 
@@ -45,7 +45,7 @@ class MailTemplateMigration
         }
 
         $data = json_decode(Storage::get($path), true);
-        
+
         return MailTemplate::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -213,7 +213,7 @@ class MailNotificationMigration
         }
 
         $data = json_decode(Storage::get($path), true);
-        
+
         return MailNotification::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -382,7 +382,7 @@ class MailQueueMigration
         }
 
         $data = json_decode(Storage::get($path), true);
-        
+
         return MailQueue::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -759,4 +759,4 @@ class MailMigrationDebugger
 ## Vedi Anche
 - [Laravel Migrations](https://laravel.com/project_docs/migrations)
 - [Laravel Schema](https://laravel.com/project_docs/schema)
-- [Laravel Commands](https://laravel.com/project_docs/artisan) 
+- [Laravel Commands](https://laravel.com/project_docs/artisan)

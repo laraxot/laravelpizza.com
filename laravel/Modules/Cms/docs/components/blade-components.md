@@ -56,11 +56,11 @@
     @if($title)
         <h2>{{ $title }}</h2>
     @endif
-    
+
     @if($description)
         <p>{{ $description }}</p>
     @endif
-    
+
     {{ $slot }}
 </section>
 ```
@@ -114,7 +114,7 @@ $hasHeader = !empty($name);
     @if($hasHeader)
         <header>{{ $name }}</header>
     @endif
-    
+
     {{-- 5. Contenuto Principale --}}
     <div class="section-content">
         {{ $slot }}
@@ -131,7 +131,7 @@ public function test_section_renders_with_attributes()
     $view = $this->blade(
         '<x-section class="custom-class" id="test" />'
     );
-    
+
     $view->assertSee('class="section custom-class"', false);
     $view->assertSee('id="test"', false);
 }
@@ -144,12 +144,12 @@ public function test_section_renders_blocks()
     $blocks = [
         ['type' => 'text', 'content' => 'Test']
     ];
-    
+
     $view = $this->blade(
         '<x-section :blocks="$blocks" />',
         ['blocks' => $blocks]
     );
-    
+
     $view->assertSee('Test');
 }
 ```
@@ -157,4 +157,4 @@ public function test_section_renders_blocks()
 ## Collegamenti
 - [Documentazione Blade](https://laravel.com/docs/blade)
 - [Section Component](section-component.md)
-- [Documentazione Root](../../../../docs/components.md) 
+- [Documentazione Root](../../../../docs/components.md)

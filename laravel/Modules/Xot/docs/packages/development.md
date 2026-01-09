@@ -76,17 +76,13 @@ Ignition::editor('vscode');
 - [Testing](testing.md)
 - [Performance](performance.md)
 - [Debug](debug.md)
-- [Panoramica](../packages.md) 
+- [Panoramica](../packages.md)
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di development.md
 * [development.md](../../../Gdpr/docs/development.md)
 * [development.md](../../../Xot/docs/packages/development.md)
 
-
 ### Versione Incoming
 
-
 ---
-

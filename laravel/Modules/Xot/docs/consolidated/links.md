@@ -26,7 +26,7 @@
 - [Reporting](../Reporting/project_docs/README.md) - Report
 - [Gdpr](../Gdpr/project_docs/README.md) - GDPR
 - [Job](../Job/project_docs/README.md) - Jobs
-- [Chart](../Chart/project_docs/README.md) - Grafici 
+- [Chart](../Chart/project_docs/README.md) - Grafici
 
 ## Collegamenti tra versioni di LINKS.md
 * [LINKS.md](../../../Xot/project_docs/LINKS.md)
@@ -34,7 +34,6 @@
 * [LINKS.md](../../../UI/project_docs/LINKS.md)
 * [LINKS.md](../../../Cms/project_docs/LINKS.md)
 * [LINKS.md](../../../../Themes/One/project_docs/LINKS.md)
-
 
 ## Collegamenti tra versioni di links.md
 * [links.md](../../Gdpr/project_docs/links.md)
@@ -49,4 +48,3 @@
 * [links.md](../../Tenant/project_docs/it/links/links.md)
 * [links.md](../../Cms/project_docs/links.md)
 * [links.md](../../../Themes/One/project_docs/links.md)
-

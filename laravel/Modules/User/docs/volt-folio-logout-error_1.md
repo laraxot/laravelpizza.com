@@ -3,7 +3,7 @@
 ## Il Problema
 Il file `logout.blade.php` non funziona correttamente perché:
 
-1. **Layout Errato**: 
+1. **Layout Errato**:
    - Si usa `<x-layouts.app>` invece di `<x-layout>`
    - Il layout corretto è definito nel tema TwentyOne
 
@@ -37,7 +37,7 @@ Il file `logout.blade.php` non funziona correttamente perché:
 
             <div class="mt-8 space-y-6">
                 <div class="flex items-center justify-between space-x-4">
-                    <a href="{{ route('home') }}" 
+                    <a href="{{ route('home') }}"
                        class="flex-1 inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         {{ __('Annulla') }}
                     </a>
@@ -116,4 +116,4 @@ final class LogoutAction
 ## Collegamenti
 - [Best Practices Folio](./ROUTING_BEST_PRACTICES.md)
 - [Best Practices Volt](./VOLT_BEST_PRACTICES.md)
-- [Gestione Sessione](./SESSION_MANAGEMENT.md) 
+- [Gestione Sessione](./SESSION_MANAGEMENT.md)

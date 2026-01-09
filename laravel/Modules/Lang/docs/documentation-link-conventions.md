@@ -87,4 +87,4 @@ Prima di fare commit dei documenti:
 1. **Portabilità**: La documentazione funziona in qualsiasi ambiente
 2. **Manutenibilità**: Se la struttura cambia, sono necessarie meno modifiche
 3. **Collaborazione**: Facilita il lavoro di più sviluppatori
-4. **Coerenza**: Rispetta gli standard del progetto 
+4. **Coerenza**: Rispetta gli standard del progetto

@@ -4,7 +4,7 @@
 
 Quando si utilizzano migrazioni per convertire campi in formato JSON , è fondamentale considerare le seguenti regole:
 
-1. **Uso esclusivo dei metodi XotBaseMigration**: 
+1. **Uso esclusivo dei metodi XotBaseMigration**:
    - `$this->hasColumn()` anziché `Schema::hasColumn()`
    - `$this->isColumnType()` anziché controlli diretti sul tipo
    - `$this->getColumnType()` per ottenere il tipo di colonna
@@ -23,7 +23,7 @@ if ($this->hasColumn('subject') && !$this->isColumnType('subject', 'json')) {
     if (!$this->hasColumn('subject_json')) {
         $table->json('subject_json')->nullable()->after('subject');
     }
-    
+
     // Migrazione dati con chunking per performance
     if ($this->hasColumn('subject_json')) {
         DB::table('mail_templates')->chunkById(100, function ($records) {
@@ -39,7 +39,7 @@ if ($this->hasColumn('subject') && !$this->isColumnType('subject', 'json')) {
             }
         });
     }
-    
+
     // Operazioni finali
     $table->dropColumn('subject');
     $table->renameColumn('subject_json', 'subject');

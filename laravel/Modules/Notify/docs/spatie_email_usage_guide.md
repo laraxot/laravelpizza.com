@@ -43,7 +43,7 @@ class SpatieEmail extends TemplateMailable
         $data = $record->toArray();
         $this->setAdditionalData($data);
     }
-    
+
     public function getHtmlLayout(): string
     {
         return '<header>Site name!</header>{{{ body }}}<footer>Copyright 2018</footer>';
@@ -125,7 +125,7 @@ public function handle(Doctor $doctor, string $registrationUrl): void
 {
     // Arricchiamo il model con dati aggiuntivi per il template
     $doctor->setAttribute('registration_url', $registrationUrl);
-    
+
     Mail::to($doctor->email)
         ->locale(LaravelLocalization::getCurrentLocale())
         ->send(new SpatieEmail($doctor));
@@ -215,13 +215,13 @@ class SendRegistrationReminderAction
     {
         // Generare URL sicuro per completamento registrazione
         $registrationUrl = route(
-            'doctor.registration.continue', 
+            'doctor.registration.continue',
             ['token' => $doctor->registration_token]
         );
-        
+
         // Aggiungi dati temporanei al modello
         $doctor->setAttribute('registration_url', $registrationUrl);
-        
+
         $this->sendTemplatedEmailAction->execute($doctor, $doctor->email);
     }
 }
@@ -240,13 +240,13 @@ use Modules\Notify\Emails\SpatieEmail;
 class DoctorRegistrationEmail extends SpatieEmail
 {
     protected static string $templateName = 'doctor-registration';
-    
+
     public function __construct(Doctor $doctor, string $registrationUrl)
     {
         $doctor->setAttribute('registration_url', $registrationUrl);
         parent::__construct($doctor);
     }
-    
+
     // Override del layout per questo tipo specifico di email
     public function getHtmlLayout(): string
     {

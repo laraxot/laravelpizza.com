@@ -114,13 +114,13 @@ public function showPageContent(string $slug): Renderable
 {
     // Recupera la pagina dal database o crea una nuova se non esiste
     $page = Page::firstOrCreate(['slug' => $slug], ['title' => $slug, 'content_blocks' => []]);
-    
+
     // Ottiene i blocchi di contenuto
     $blocks = $page->content_blocks;
-    
+
     // Crea un'istanza del componente Blocks per renderizzare i blocchi
     $page = new \Modules\UI\View\Components\Render\Blocks(blocks: $blocks, model: $page);
-    
+
     // Renderizza i blocchi
     return $page->render();
 }
@@ -142,14 +142,14 @@ public function render(): Renderable
 {
     // Ottiene la vista da utilizzare
     $view = app(GetViewAction::class)->execute($this->tpl);
-    
+
     // Prepara i parametri da passare alla vista
     $view_params = [
         'view' => $view,
         'blocks' => $this->blocks,
         'model' => $this->model,
     ];
-    
+
     // Renderizza la vista
     return view($view, $view_params);
 }

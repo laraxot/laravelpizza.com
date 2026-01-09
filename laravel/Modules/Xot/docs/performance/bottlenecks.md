@@ -201,7 +201,6 @@ public function exportData()
 ```
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Xot/docs/bottlenecks.md)
@@ -214,9 +213,6 @@ public function exportData()
 * [bottlenecks.md](../../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Patient/docs/roadmap/bottlenecks.md)
 
-
 ### Versione Incoming
 
-
 ---
-

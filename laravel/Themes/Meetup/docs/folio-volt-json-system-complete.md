@@ -1,7 +1,7 @@
 # Sistema Completo Folio + Volt + JSON
 
-**Data**: 2025-01-22  
-**Status**: ✅ Documentazione Critica Completa  
+**Data**: 2025-01-22
+**Status**: ✅ Documentazione Critica Completa
 **Scopo**: Documentazione completa del sistema Folio + Volt + JSON per pagine dinamiche
 
 ---
@@ -240,7 +240,7 @@ npm run copy       # Copia asset in public_html/themes/Meetup/
 
 **File**: `Modules/Cms/app/View/Components/Page.php`
 
-**Funzione**: 
+**Funzione**:
 - Riceve `side` (content/sidebar/footer) e `slug`
 - Cerca `PageModel::firstWhere('slug', $slug)`
 - Estrae `content_blocks.it[]` o `sidebar_blocks.it[]` o `footer_blocks.it[]`
@@ -276,6 +276,6 @@ npm run copy       # Copia asset in public_html/themes/Meetup/
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: ✅ Documentazione Critica Completa

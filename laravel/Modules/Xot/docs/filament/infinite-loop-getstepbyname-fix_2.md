@@ -41,7 +41,7 @@ return Forms\Components\Wizard\Step::make($name)
 ```php
 $schema = Str::of($name)
     ->snake()      // 'studio_step' → 'studio_step'
-    ->studly()     // 'studio_step' → 'StudioStep'  
+    ->studly()     // 'studio_step' → 'StudioStep'
     ->prepend('get') // 'StudioStep' → 'getStudioStep'
     ->append('Schema') // 'getStudioStep' → 'getStudioStepSchema'
     ->toString();
@@ -63,7 +63,7 @@ $attachments = $model::$attachments;
 ```
 
 ### **Correzione Applicata**
-```php  
+```php
 // ✅ CORRETTO - Check esistenza proprietà
 $attachments = property_exists($model, 'attachments') ? $model::$attachments : [];
 ```
@@ -84,7 +84,7 @@ $attachments = property_exists($model, 'attachments') ? $model::$attachments : [
 
 ### **Verifica Wizard Steps**
 - [ ] studio_step → Chiama `getStudioStepSchema()` ✅
-- [ ] availability_step → Chiama `getAvailabilityStepSchema()` ✅  
+- [ ] availability_step → Chiama `getAvailabilityStepSchema()` ✅
 - [ ] personal_info_step → Chiama `getPersonalInfoStepSchema()` ✅
 
 ### **Verifica No Loop**
@@ -106,7 +106,7 @@ $attachments = property_exists($model, 'attachments') ? $model::$attachments : [
 $methodName = 'getMethodName';
 static::{$methodName}();
 
-// ✅ Property existence check  
+// ✅ Property existence check
 $prop = property_exists($class, 'property') ? $class::$property : [];
 ```
 
@@ -142,11 +142,11 @@ $prop = property_exists($class, 'property') ? $class::$property : [];
 
 ---
 
-**Priorità**: 🚨 **P0 - CRITICA**  
-**Creato**: Gennaio 2025  
-**Risolto**: Gennaio 2025  
-**Impatto**: Blocco completo sistema registrazione dottori  
-**Tempo risoluzione**: < 10 minuti dalla diagnosi  
+**Priorità**: 🚨 **P0 - CRITICA**
+**Creato**: Gennaio 2025
+**Risolto**: Gennaio 2025
+**Impatto**: Blocco completo sistema registrazione dottori
+**Tempo risoluzione**: < 10 minuti dalla diagnosi
 
 ## 💡 **Lesson Learned**
 
@@ -156,30 +156,30 @@ Questo fix dimostra l'importanza di:
 3. **Property existence checking** per codice robusto
 4. **Xdebug monitoring** per rilevazione loop infiniti
 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*

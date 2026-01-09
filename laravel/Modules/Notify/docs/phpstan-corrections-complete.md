@@ -13,7 +13,6 @@
 
 ## Problema Identificato
 
-
 Questi marker provenivano da merge di branch diversi mai completati correttamente.
 
 ## File Corretti

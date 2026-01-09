@@ -103,7 +103,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class AppointmentResource extends XotBaseResource
 {
     protected static ?string $model = Appointment::class;
-    
+
     public static function getFormSchema(): array
     {
         return [
@@ -131,7 +131,7 @@ class AppointmentResource extends XotBaseResource
                 ->columnSpan(2),
         ];
     }
-    
+
     public static function getTableColumns(): array
     {
         return [
@@ -206,9 +206,9 @@ class WorkflowForms
                 ])
         ];
     }
-    
+
     // Altri metodi per i vari step del workflow...
-    
+
     public static function getSummaryStep(AppointmentWorkflow $workflow): array
     {
         return [
@@ -283,7 +283,7 @@ class Dashboard extends BaseDashboard
             // Widget per l'intestazione
         ];
     }
-    
+
     protected function getFooterWidgets(): array
     {
         return [
@@ -343,9 +343,9 @@ use Filament\Clusters\Cluster;
 class MarketCluster extends Cluster
 {
     protected static ?string $navigationIcon = 'heroicon-o-chart-bar';
-    
+
     protected static ?string $navigationLabel = 'Gestione Mercati';
-    
+
     protected static ?int $navigationSort = 1;
 }
 ```
@@ -416,7 +416,7 @@ Questo permette un'architettura modulare dove ogni modulo può estendere il back
 
 ## Best Practices
 
-1. **Estendere XotBaseResource e XotBaseServiceProvider**: 
+1. **Estendere XotBaseResource e XotBaseServiceProvider**:
    - Utilizzare `XotBaseResource` come base per tutte le risorse Filament
    - Tutti i Service Provider dei moduli DEVONO estendere `XotBaseServiceProvider` e mai `Illuminate\Support\ServiceProvider`
    - Tutti i Route Service Provider dei moduli DEVONO estendere `XotBaseRouteServiceProvider` e mai `Illuminate\Foundation\Support\Providers\RouteServiceProvider`

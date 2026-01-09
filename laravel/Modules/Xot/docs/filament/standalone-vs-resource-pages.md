@@ -18,8 +18,8 @@ Method ::route does not exist
 
 ### 1. XotBasePage Standalone
 
-**Namespace**: `Modules\Xot\Filament\Pages\XotBasePage`  
-**Estende**: `Filament\Pages\Page`  
+**Namespace**: `Modules\Xot\Filament\Pages\XotBasePage`
+**Estende**: `Filament\Pages\Page`
 **File**: `Modules/Xot/app/Filament/Pages/XotBasePage.php`
 
 **Caratteristiche**:
@@ -45,8 +45,8 @@ class Dashboard extends XotBasePage
 
 ### 2. XotBasePage Resource
 
-**Namespace**: `Modules\Xot\Filament\Resources\Pages\XotBasePage`  
-**Estende**: `Filament\Resources\Pages\Page`  
+**Namespace**: `Modules\Xot\Filament\Resources\Pages\XotBasePage`
+**Estende**: `Filament\Resources\Pages\Page`
 **File**: `Modules/Xot/app/Filament/Resources/Pages/XotBasePage.php`
 
 **Caratteristiche**:
@@ -100,7 +100,7 @@ public static function getPages(): array
 
 # STANDALONE:
 Modules/MyModule/app/Filament/Pages/Dashboard.php
-#                            ↑↑↑↑↑ 
+#                            ↑↑↑↑↑
 #                          Pages/ diretto
 
 # RESOURCE:
@@ -163,7 +163,7 @@ class Dashboard extends XotBasePage
 {
     protected static ?string $navigationIcon = 'heroicon-o-home';
     protected static string $view = 'mymodule::filament.pages.dashboard';
-    
+
     // Accessibile da menu, NON usata in getPages() di Resource
 }
 ```
@@ -180,7 +180,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBasePage;  // ✅ Resource
 abstract class ListLogActivities extends XotBasePage
 {
     protected string $view = 'activity::filament.pages.list-log-activities';
-    
+
     // Usata in getPages() di Resource, NON nel menu
     // protected static string $resource viene definito nelle sottoclassi
 }
@@ -213,7 +213,7 @@ class CreateWizard extends XotBasePage
 {
     protected static string $resource = MyResource::class;
     protected string $view = 'mymodule::filament.resources.my-resource.pages.create-wizard';
-    
+
     // Usata in getPages()
 }
 ```
@@ -395,9 +395,7 @@ test('ListLogActivities has route method', function () {
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
-**Importanza**: CRITICA  
-**Categoria**: Architettura Filament 4  
+**Ultimo aggiornamento**: 27 Ottobre 2025
+**Importanza**: CRITICA
+**Categoria**: Architettura Filament 4
 **Pattern**: DRY + KISS con type safety
-
-

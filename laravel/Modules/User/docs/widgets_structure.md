@@ -11,7 +11,7 @@ I widget Filament devono:
 1. **Estendere XotBaseWidget**: Garantisce funzionalità e comportamenti coerenti
    ```php
    use Modules\Xot\Filament\Widgets\XotBaseWidget;
-   
+
    class LoginWidget extends XotBaseWidget
    {
        // ...
@@ -22,7 +22,7 @@ I widget Filament devono:
    ```php
    namespace Modules\User\Filament\Widgets;
    ```
-   
+
    > **IMPORTANTE**: MAI includere il segmento `app` nel namespace anche se i file si trovano fisicamente nella directory app: `Modules\User\App\Filament\Widgets` è ERRATO!
 
 3. **Definire una vista**: Ogni widget deve specificare una vista Blade
@@ -75,7 +75,7 @@ Per rendere i widget disponibili nell'applicazione:
    ```php
    use Filament\Support\Facades\FilamentView;
    use Filament\Support\Facades\FilamentAsset;
-   
+
    // In UserServiceProvider.php - metodo boot()
    FilamentView::registerRenderHook(
        'panels::body.start',
@@ -125,7 +125,7 @@ class LoginWidget extends XotBaseWidget
      * il path deve essere senza il namespace del modulo (senza "user::").
      */
     protected static string $view = 'user::filament.widgets.login';
-    
+
     protected int | string | array $columnSpan = 'full';
 
     public function getFormSchema(): array
@@ -152,7 +152,7 @@ class LoginWidget extends XotBaseWidget
     {
         try {
             $this->validate();
-            
+
             $data = $this->form->getState();
             if (!Auth::attempt([
                 'email' => $data['email'],
@@ -162,7 +162,7 @@ class LoginWidget extends XotBaseWidget
                     'email' => [__('Credenziali non valide.')],
                 ]);
             }
-            
+
             redirect(route('filament.admin.pages.dashboard'))->send();
         } catch (ValidationException $e) {
             $this->addError('email', $e->getMessage());
@@ -340,7 +340,7 @@ Il path della view Blade di un widget Filament deve seguire convenzioni diverse 
 #### B. Widget usato con direttiva @livewire in una Blade view (es. @livewire(\Modules\User\Filament\Widgets\LoginWidget::class))
 
 1. **Formato corretto**: `filament.widgets.<nome>` (SENZA il prefisso del namespace!)
-   - Esempio: `filament.widgets.login` 
+   - Esempio: `filament.widgets.login`
 
 2. **Formato ERRATO**: `user::filament.widgets.<nome>` (Con il prefisso del namespace)
    - Esempio ERRATO: `user::filament.widgets.login`
@@ -366,7 +366,7 @@ Il path della view Blade di un widget Filament deve seguire convenzioni diverse 
    ```php
    // NON fare questo - causa conflitti tra Livewire e Filament
    protected static string $view = 'user::filament.widgets.auth.login';
-   public string $view = 'user::filament.widgets.auth.login'; 
+   public string $view = 'user::filament.widgets.auth.login';
    ```
 
 3. **Soluzione raccomandata per widget usati con @livewire**

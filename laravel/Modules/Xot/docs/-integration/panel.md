@@ -2,5 +2,5 @@
 
 <!-- Contenuto migrato da _docs/panel.txt -->
 
-graphql legge i dati e cre file 
+graphql legge i dati e cre file
 https://dev.to/solomon04/get-started-with-graphql-and-laravel-4eh9

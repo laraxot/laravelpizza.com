@@ -336,4 +336,3 @@ npm run dev
 - **NON** rimuovere `resources/` senza commit
 - **SEMPRE** commit dopo modifiche significative
 - Se index.html viene ripristinato, verificare `git status` e re-applicare da questo documento
-

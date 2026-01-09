@@ -80,25 +80,19 @@ Artisan::call('queue:forget', ['id' => 'all']);
 - [Queue](queue.md)
 - [Performance](performance.md)
 - [Integrazioni](integrations.md)
-- [Panoramica](../packages.md) 
+- [Panoramica](../packages.md)
 ### Versione HEAD
 
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di monitoring.md
 * [monitoring.md](../../../Job/docs/packages/monitoring.md)
 * [monitoring.md](../../../../Themes/One/docs/monitoring.md)
 
-
 ### Versione Incoming
-
 
 ---
 
-
 ### Versione Incoming
 
-
 ---
-

@@ -21,76 +21,76 @@ use Closure;
 class StudioCardSelector extends Field
 {
     protected string $view = 'ui::forms.components.studio-card-selector';
-    
+
     // Dati studios da visualizzare
     protected Collection|Closure|null $studios = null;
-    
+
     // Personalizzazioni UI
     protected bool $showDistance = false;
     protected bool $showSpecializations = false;
     protected bool $showPhone = false;
     protected string $cardLayout = 'default'; // 'default', 'compact', 'detailed'
-    
+
     // Configure studios data source
     public function studios(Collection|Closure $studios): static
     {
         $this->studios = $studios;
         return $this;
     }
-    
+
     // Enable/disable features
     public function showDistance(bool $show = true): static
     {
         $this->showDistance = $show;
         return $this;
     }
-    
+
     public function showSpecializations(bool $show = true): static
     {
         $this->showSpecializations = $show;
         return $this;
     }
-    
+
     public function showPhone(bool $show = true): static
     {
         $this->showPhone = $show;
         return $this;
     }
-    
+
     // Layout variants
     public function compact(): static
     {
         $this->cardLayout = 'compact';
         return $this;
     }
-    
+
     public function detailed(): static
     {
         $this->cardLayout = 'detailed';
         return $this;
     }
-    
+
     // Data getters for view
     public function getStudios(): Collection
     {
         return $this->evaluate($this->studios) ?? collect();
     }
-    
+
     public function getCardLayout(): string
     {
         return $this->cardLayout;
     }
-    
+
     public function shouldShowDistance(): bool
     {
         return $this->showDistance;
     }
-    
+
     public function shouldShowSpecializations(): bool
     {
         return $this->showSpecializations;
     }
-    
+
     public function shouldShowPhone(): bool
     {
         return $this->showPhone;
@@ -119,13 +119,13 @@ protected function getStudioStepSchema(): array
 private function getStudiosForLocation(Get $get): Collection
 {
     $cap = $get('cap');
-    $province = $get('province'); 
+    $province = $get('province');
     $region = $get('region');
-    
+
     if (!$cap || !$province || !$region) {
         return collect();
     }
-    
+
     return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
     return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
     return \Modules\<nome modulo>\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
@@ -189,8 +189,8 @@ return [
 
 ---
 
-**Component Status**: 📋 Documented - Ready for Implementation  
-**Reusability**: 🔄 High - Cross-module compatible  
-**Last Updated**: January 2025 
-**Last Updated**: January 2025 
-**Last Updated**: January 2025 
+**Component Status**: 📋 Documented - Ready for Implementation
+**Reusability**: 🔄 High - Cross-module compatible
+**Last Updated**: January 2025
+**Last Updated**: January 2025
+**Last Updated**: January 2025

@@ -354,4 +354,3 @@ $this->assertSee('data-testid="component"');
 ---
 
 *Testing del Modulo UI: DRY + KISS + SOLID + ROBUST + LARAXOT*
-

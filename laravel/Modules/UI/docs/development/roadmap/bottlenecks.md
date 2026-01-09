@@ -28,7 +28,7 @@
    ```js
    // Prima
    import { AllComponents } from './components';
-   
+
    // Dopo
    const DynamicComponent = () => import('./components/DynamicComponent');
    ```
@@ -82,10 +82,10 @@
    ```scss
    // _variables.scss
    $color-contrast-ratio: 4.5;
-   
+
    @function check-contrast($color) {
-       @return if(contrast($color, $background) >= $color-contrast-ratio, 
-           $color, 
+       @return if(contrast($color, $background) >= $color-contrast-ratio,
+           $color,
            adjust-color($color, $lightness: 10%));
    }
    ```
@@ -132,7 +132,7 @@
    ```js
    // Prima
    import { Chart } from 'chart.js';
-   
+
    // Dopo
    const Chart = () => import('chart.js').then(m => m.Chart);
    ```
@@ -184,7 +184,7 @@
                $component = new DynamicComponent();
                $component->render();
            });
-           
+
            $this->assertLessThan(100, $metrics['renderTime']);
        }
    }
@@ -212,7 +212,7 @@
 - Priorità a performance e accessibilità
 - Monitoraggio continuo bundle size
 - Automazione test visivi
-- Documentazione aggiornata 
+- Documentazione aggiornata
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Xot/docs/bottlenecks.md)
@@ -224,4 +224,3 @@
 * [bottlenecks.md](../../../Job/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Patient/docs/roadmap/bottlenecks.md)
-

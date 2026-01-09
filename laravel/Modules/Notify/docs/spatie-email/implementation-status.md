@@ -10,7 +10,7 @@ Questo documento tiene traccia dello stato di implementazione delle email utiliz
    - Creato documentazione su best practices per gestione traduzioni
 
 2. **Documentazione**:
-   - Creata documentazione sulle proprietà traducibili in Laravel 12 
+   - Creata documentazione sulle proprietà traducibili in Laravel 12
    - Aggiornati i documenti sulla gestione delle traduzioni mancanti
    - Creato documento sulle best practices per l'implementazione del pacchetto
    - Documentate le regole per la localizzazione

@@ -57,9 +57,8 @@
 - [Storage](packages/storage.md)
 - [CDN](packages/cdn.md)
 - [Performance](packages/performance.md)
-- [Integrazioni](packages/integrations.md) 
+- [Integrazioni](packages/integrations.md)
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di packages.md
 * [packages.md](../../../Gdpr/docs/packages.md)
@@ -72,9 +71,6 @@
 * [packages.md](../../../Media/docs/packages.md)
 * [packages.md](../../../Tenant/docs/packages.md)
 
-
 ### Versione Incoming
 
-
 ---
-

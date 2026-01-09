@@ -30,7 +30,7 @@ final class QueueManagerService
     public function dispatch($job, string $priority = 'default'): void
     {
         $queue = $this->determineQueue($priority);
-        
+
         Queue::pushOn(
             $queue,
             $job->onQueue($queue)
@@ -79,7 +79,7 @@ final class JobMonitoringService
     public function trackJob($job, string $status): void
     {
         $metrics = $this->collectMetrics($job);
-        
+
         // Logging dettagliato
         Log::channel('jobs')
             ->info("Job {$status}", [
@@ -89,7 +89,7 @@ final class JobMonitoringService
                 'attempt' => $job->attempts(),
                 'metrics' => $metrics
             ]);
-            
+
         // Metriche per monitoring
         $this->updateMetrics($metrics);
     }
@@ -135,7 +135,7 @@ final class JobRetryService
     public function handleFailedJob($job, \Throwable $e): void
     {
         $retryStrategy = $this->determineRetryStrategy($job, $e);
-        
+
         if ($retryStrategy->shouldRetry()) {
             $this->scheduleRetry($job, $retryStrategy->getNextAttempt());
         } else {
@@ -182,7 +182,7 @@ private function setupPerformanceMonitoring(): void
     // Monitoring code
     Queue::looping(function () {
         $stats = Queue::getRedis()->info();
-        
+
         if ($stats['used_memory'] > 1024 * 1024 * 512) { // 512MB
             Log::channel('job_performance')
                 ->warning('Alto utilizzo memoria Redis', [
@@ -199,7 +199,7 @@ private function setupPerformanceMonitoring(): void
 
     Queue::after(function ($job) {
         $duration = microtime(true) - $job->start_time;
-        
+
         if ($duration > 30) { // 30 secondi
             Log::channel('job_performance')
                 ->warning('Job lento rilevato', [
@@ -299,12 +299,12 @@ abstract class BaseJob
     {
         // Impostare limite memoria per job
         ini_set('memory_limit', '64M');
-        
+
         // Garbage collection
         if (gc_enabled()) {
             gc_collect_cycles();
         }
-        
+
         // Clear static properties
         $reflection = new \ReflectionClass(static::class);
         foreach ($reflection->getProperties() as $property) {
@@ -318,23 +318,20 @@ abstract class BaseJob
 
 ### Versione HEAD
 
-``` 
+```
 ## Collegamenti tra versioni di bottlenecks_detailed.md
 * [bottlenecks_detailed.md](../../../Xot/docs/bottlenecks_detailed.md)
 * [bottlenecks_detailed.md](../../../Job/docs/bottlenecks_detailed.md)
 * [bottlenecks_detailed.md](../../../Media/docs/bottlenecks_detailed.md)
 
-
 ### Versione Incoming
 
-``` 
+```
 
 ---
 
-
 ### Versione Incoming
 
-``` 
+```
 
 ---
-

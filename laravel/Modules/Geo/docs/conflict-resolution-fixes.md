@@ -33,7 +33,7 @@ use Filament\Tables\Table;
 ```
 
 ## Metodologia di Risoluzione
-1. **Identificazione**: Script automatico per trovare tutti i marker 
+1. **Identificazione**: Script automatico per trovare tutti i marker
 2. **Selezione**: Sempre "current change" (contenuto tra `=======` e `>>>>>>>`)
 3. **Backup**: Backup automatico prima delle modifiche
 4. **Verifica**: Controllo che non rimangano marker di conflitto

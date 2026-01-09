@@ -52,4 +52,4 @@ Quando si sviluppano trait, metodi condivisi o interfacce che devono funzionare 
 - [[TeamContract]]
 - [[User]]
 - [[TeamPermission]]
-- [[HasTeamsContract]] 
+- [[HasTeamsContract]]

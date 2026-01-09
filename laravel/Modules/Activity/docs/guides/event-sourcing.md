@@ -33,29 +33,29 @@ class activity_aggregate_root
 {
     private $uuid;
     private $activities = [];
-    
+
     public static function start(string $uuid): self
     {
         $aggregate = new self();
         $aggregate->record_that(new activity_started($uuid));
         return $aggregate;
     }
-    
+
     public function log_activity(string $type, array $data)
     {
         $this->record_that(new activity_logged($this->uuid, $type, $data));
     }
-    
+
     protected function apply_activity_started(activity_started $event)
     {
         $this->uuid = $event->uuid;
     }
-    
+
     protected function apply_activity_logged(activity_logged $event)
     {
         $this->activities[] = ['type' => $event->type, 'data' => $event->data];
     }
-    
+
     private function record_that($event)
     {
         // logic to record the event

@@ -83,11 +83,11 @@ public function test_user_can_withdraw_consent()
 {
     $user = User::factory()->create();
     $consent = $user->consents()->create([/* ... */]);
-    
+
     $this->actingAs($user)
          ->delete(route('gdpr.consent.destroy', $consent))
          ->assertStatus(204);
-         
+
     $this->assertDatabaseMissing('consents', ['id' => $consent->id]);
 }
 ```

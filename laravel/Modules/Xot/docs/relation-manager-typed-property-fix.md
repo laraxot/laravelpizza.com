@@ -49,7 +49,7 @@ class MyRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'myRelationship';
     protected static string $resourceClass = MyResource::class; // ✅ CORRETTO
-    
+
     // NON usare:
     // protected static string $resource = MyResource::class; // ❌ ERRATO
 }

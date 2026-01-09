@@ -11,7 +11,7 @@
 ### Stack Trace
 ```
 Symfony\Component\ErrorHandler\Error\FatalError - Internal Server Error
-During class fetch: Uncaught ErrorException: include(/var/www/_bases/base_quaeris_fila4_mono/laravel/vendor/composer/../../Modules/Xot/app/Models/Traits/HasXotFactory.php): 
+During class fetch: Uncaught ErrorException: include(/var/www/_bases/base_quaeris_fila4_mono/laravel/vendor/composer/../../Modules/Xot/app/Models/Traits/HasXotFactory.php):
 Failed to open stream: No such file or directory
 ```
 
@@ -171,7 +171,7 @@ abstract class BasePivot extends Pivot
     {
         return app(GetFactoryAction::class)->execute(static::class);
     }
-    
+
     // ... resto della classe
 }
 ```
@@ -266,7 +266,7 @@ grep -r "HasXotFactory" laravel/Modules/
 
 **Problema**: Duplicazione tra `BaseModel::newFactory()` e `HasXotFactory::newFactory()`
 
-**Soluzione Attuale**: 
+**Soluzione Attuale**:
 - `BaseModel` ha implementazione diretta
 - `HasXotFactory` per modelli che non estendono `BaseModel`
 - `BasePivot` ha implementazione diretta
@@ -281,12 +281,12 @@ grep -r "HasXotFactory" laravel/Modules/
 ```php
 it('logs in user and creates device', function () {
     $user = User::factory()->create();
-    
+
     $this->post('/admin/login', [
         'email' => $user->email,
         'password' => 'password',
     ]);
-    
+
     expect(DeviceUser::where('user_id', $user->id)->exists())->toBeTrue();
 });
 ```
@@ -300,14 +300,14 @@ Aggiungere commenti che prevengono cancellazioni:
 ```php
 /**
  * ⚠️ CRITICAL TRAIT - DO NOT DELETE
- * 
+ *
  * Questo trait è utilizzato da 30+ modelli in tutti i moduli.
  * Prima di modificare o cancellare, verificare dipendenze:
- * 
+ *
  * ```bash
  * grep -r "HasXotFactory" laravel/Modules/
  * ```
- * 
+ *
  * @see Modules/Xot/docs/traits/hasxotfactory.md
  */
 trait HasXotFactory
@@ -388,17 +388,12 @@ Aggiungere al pipeline CI:
 
 ---
 
-**Stato**: ✅ **RISOLTO**  
-**Priorità**: 🔴 **CRITICA**  
-**Tempo di Risoluzione**: ~2 ore  
-**Test Status**: ✅ Tutti i test passano  
+**Stato**: ✅ **RISOLTO**
+**Priorità**: 🔴 **CRITICA**
+**Tempo di Risoluzione**: ~2 ore
+**Test Status**: ✅ Tutti i test passano
 **Documentazione**: ✅ Completa
 
-**Autore**: AI Assistant con supervisione Marco Sottana  
-**Revisore**: Marco Sottana  
+**Autore**: AI Assistant con supervisione Marco Sottana
+**Revisore**: Marco Sottana
 **Data Chiusura**: 22 Ottobre 2025
-
-
-
-
-

@@ -127,15 +127,15 @@ class GetFactoryAction
     public function execute(string $model_class): Factory
     {
         $factory_class = $this->getFactoryClass($model_class);
-        
+
         // Se esiste, la usa
         if (class_exists($factory_class)) {
             return $factory_class::new();
         }
-        
+
         // Altrimenti la crea
         $this->createFactory($model_class);
-        
+
         // Richiede refresh per caricarla
         throw new Exception('Factory created, press F5 to refresh');
     }
@@ -188,7 +188,7 @@ it('generates factory automatically', function () {
     $model = new class extends Model {
         use HasXotFactory;
     };
-    
+
     $factory = $model::factory();
     expect($factory)->toBeInstanceOf(Factory::class);
 });
@@ -202,9 +202,9 @@ it('uses GetFactoryAction', function () {
     $mockAction->shouldReceive('execute')
         ->once()
         ->andReturn(UserFactory::new());
-    
+
     app()->instance(GetFactoryAction::class, $mockAction);
-    
+
     User::factory();
 });
 ```
@@ -215,7 +215,7 @@ it('uses GetFactoryAction', function () {
 
 **Problema**: La factory non esiste e la generazione automatica fallisce
 
-**Causa**: 
+**Causa**:
 - Struttura modulo non standard
 - Permessi di scrittura mancanti
 - Namespace non risolto correttamente
@@ -358,12 +358,7 @@ protected static function newFactory(): Factory
 
 ---
 
-**Autore**: Laraxot Core Team  
-**Ultima modifica**: 22 Ottobre 2025  
-**Stato**: ✅ Produzione  
+**Autore**: Laraxot Core Team
+**Ultima modifica**: 22 Ottobre 2025
+**Stato**: ✅ Produzione
 **PHPStan**: Level 9 compliant
-
-
-
-
-

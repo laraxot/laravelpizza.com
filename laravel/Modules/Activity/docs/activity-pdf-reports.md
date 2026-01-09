@@ -80,39 +80,39 @@ class ActivityPdfService
     {
         try {
             $activities = $this->getUserActivities($user, $options);
-            
+
             $html = view('activity::pdf.user-report', [
                 'user' => $user,
                 'activities' => $activities,
                 'options' => $options,
                 'generatedAt' => now(),
             ])->render();
-            
+
             $html2pdf = new Html2Pdf('P', 'A4', 'it', true, 'UTF-8', [15, 20, 15, 20]);
             $html2pdf->setDefaultFont('Helvetica');
             $html2pdf->writeHTML($html);
-            
+
             return $html2pdf->output('', 'S');
-            
+
         } catch (Html2PdfException $e) {
             $html2pdf->clean();
             throw new PdfGenerationException('Failed to generate activity PDF: ' . $e->getMessage());
         }
     }
-    
+
     private function getUserActivities($user, array $options): Collection
     {
         $query = Activity::where('causer_id', $user->id)
                         ->where('causer_type', get_class($user));
-        
+
         if (isset($options['date_range'])) {
             $query->whereBetween('created_at', $options['date_range']);
         }
-        
+
         if (isset($options['event_types'])) {
             $query->whereIn('event', $options['event_types']);
         }
-        
+
         return $query->with('subject')
                     ->orderBy('created_at', 'desc')
                     ->limit(1000)
@@ -134,26 +134,26 @@ use Modules\Xot\Actions\Pdf\StreamDownloadPdfAction;
 class GenerateActivityPdfAction
 {
     private ActivityPdfService $pdfService;
-    
+
     public function __construct(ActivityPdfService $pdfService)
     {
         $this->pdfService = $pdfService;
     }
-    
+
     public function execute(array $params): string
     {
         if (isset($params['user'])) {
             return $this->pdfService->generateUserReport($params['user'], $params);
         }
-        
+
         if (isset($params['subject'])) {
             return $this->pdfService->generateSubjectReport($params['subject'], $params);
         }
-        
+
         if ($params['audit_trail'] ?? false) {
             return $this->pdfService->generateAuditTrail($params);
         }
-        
+
         throw new InvalidArgumentException('Invalid PDF generation parameters');
     }
 }
@@ -181,7 +181,7 @@ class GenerateActivityPdfAction
                 </td>
                 <td style="width: 50%; text-align: right; font-size: 9pt;">
                     Generato il: {{ $generatedAt->format('d/m/Y H:i') }}<br>
-                    Periodo: {{ $options['date_range']['start']->format('d/m/Y') }} - 
+                    Periodo: {{ $options['date_range']['start']->format('d/m/Y') }} -
                               {{ $options['date_range']['end']->format('d/m/Y') }}
                 </td>
             </tr>
@@ -227,7 +227,7 @@ class GenerateActivityPdfAction
 
         <!-- Activities List -->
         <h2 style="font-size: 12pt; margin-bottom: 8mm;">Dettaglio Attività</h2>
-        
+
         @foreach($activities as $activity)
         <div style="margin-bottom: 8mm; padding: 8mm; border: 1px solid #dee2e6; background-color: {{ $loop->index % 2 == 0 ? '#ffffff' : '#f8f9fa' }};">
             <table style="width: 100%; border-collapse: collapse;">
@@ -306,13 +306,13 @@ class GenerateActivityPdfAction
         @endif
 
         <h2 style="font-size: 12pt; margin-bottom: 8mm;">Storico Modifiche</h2>
-        
+
         @foreach($activities as $activity)
         <div style="margin-bottom: 10mm;">
             <div style="font-size: 10pt; font-weight: bold; margin-bottom: 3mm;">
                 {{ $activity->created_at->format('d/m/Y H:i') }} - {{ $activity->description }}
             </div>
-            
+
             @if($activity->properties)
             <div style="margin-left: 10mm; font-size: 9pt;">
                 @if(isset($activity->properties['old']))
@@ -332,7 +332,7 @@ class GenerateActivityPdfAction
                     </table>
                 </div>
                 @endif
-                
+
                 @if(isset($activity->properties['attributes']))
                 <div>
                     <strong>Nuovi Valori:</strong>
@@ -382,7 +382,7 @@ class ExportActivityPdfAction extends Action
             ->color('primary')
             ->action(function (array $data) {
                 $user = auth()->user();
-                
+
                 $pdf = app(GenerateActivityPdfAction::class)->execute([
                     'user' => $user,
                     'date_range' => [
@@ -391,7 +391,7 @@ class ExportActivityPdfAction extends Action
                     ],
                     'event_types' => $data['event_types'] ?? null,
                 ]);
-                
+
                 return response()->streamDownload(function () use ($pdf) {
                     echo $pdf;
                 }, "activity_report_{$user->id}.pdf");
@@ -401,12 +401,12 @@ class ExportActivityPdfAction extends Action
                     ->label('Data Inizio')
                     ->required()
                     ->default(now()->subMonth()),
-                
+
                 \Filament\Forms\Components\DatePicker::make('end_date')
                     ->label('Data Fine')
                     ->required()
                     ->default(now()),
-                
+
                 \Filament\Forms\Components\CheckboxList::make('event_types')
                     ->label('Tipi Evento')
                     ->options([
@@ -444,7 +444,7 @@ public static function getActions(): array
                     'includeProperties' => true,
                     'formatChanges' => true,
                 ]);
-                
+
                 return response()->streamDownload(function () use ($pdf) {
                     echo $pdf;
                 }, "activity_{$record->id}_report.pdf");
@@ -480,7 +480,7 @@ class ActivityPdfTest extends TestCase
             'causer_id' => $user->id,
             'causer_type' => User::class,
         ]);
-        
+
         $service = app(ActivityPdfService::class);
         $pdfContent = $service->generateUserReport($user, [
             'date_range' => [
@@ -488,12 +488,12 @@ class ActivityPdfTest extends TestCase
                 'end' => now(),
             ]
         ]);
-        
+
         $this->assertStringStartsWith('%PDF', $pdfContent);
         $this->assertGreaterThan(1000, strlen($pdfContent));
         $this->assertStringContainsString('Report Attività Utente', $pdfContent);
     }
-    
+
     /** @test */
     public function it_handles_large_activity_sets()
     {
@@ -502,12 +502,12 @@ class ActivityPdfTest extends TestCase
             'causer_id' => $user->id,
             'causer_type' => User::class,
         ]);
-        
+
         $service = app(ActivityPdfService::class);
-        
+
         // Should limit to 1000 activities
         $pdfContent = $service->generateUserReport($user);
-        
+
         $this->assertStringStartsWith('%PDF', $pdfContent);
         $this->assertStringContainsString('1000', $pdfContent); // Summary count
     }
@@ -525,13 +525,13 @@ public function user_can_export_activity_pdf()
         'causer_id' => $user->id,
         'causer_type' => User::class,
     ]);
-    
+
     $response = $this->actingAs($user)
                     ->post('/activity/export-pdf', [
                         'start_date' => now()->subMonth()->format('Y-m-d'),
                         'end_date' => now()->format('Y-m-d'),
                     ]);
-    
+
     $response->assertSuccessful();
     $this->assertEquals('application/pdf', $response->headers->get('Content-Type'));
 }
@@ -553,7 +553,7 @@ class ActivityPdfService
             'options' => $options,
             'last_activity' => $user->activities()->max('created_at'),
         ]));
-        
+
         return Cache::remember($cacheKey, 3600, function () use ($user, $options) {
             return $this->generateUserReport($user, $options);
         });
@@ -568,7 +568,7 @@ private function optimizeHtmlForPdf(string $html): string
 {
     // Remove unnecessary whitespace
     $html = preg_replace('/\s+/', ' ', $html);
-    
+
     // Limit activity count for performance
     if (str_contains($html, '@foreach($activities')) {
         // Ensure activities are limited
@@ -578,7 +578,7 @@ private function optimizeHtmlForPdf(string $html): string
             $html
         );
     }
-    
+
     return $html;
 }
 ```
@@ -594,23 +594,23 @@ public function generateWithErrorHandling($user, array $options = []): string
 {
     try {
         return $this->generateUserReport($user, $options);
-        
+
     } catch (Html2PdfException $e) {
         Log::error('Activity PDF generation failed', [
             'user_id' => $user->id,
             'error' => $e->getMessage(),
             'options' => $options,
         ]);
-        
+
         // Generate simplified fallback PDF
         return $this->generateFallbackPdf($user, $e);
-        
+
     } catch (Exception $e) {
         Log::error('Unexpected error in activity PDF generation', [
             'user_id' => $user->id,
             'error' => $e->getMessage(),
         ]);
-        
+
         throw new PdfGenerationException('Failed to generate activity PDF');
     }
 }
@@ -621,10 +621,10 @@ private function generateFallbackPdf($user, Exception $e): string
         'user' => $user,
         'error' => $e->getMessage(),
     ])->render();
-    
+
     $html2pdf = new Html2Pdf();
     $html2pdf->writeHTML($html);
-    
+
     return $html2pdf->output('', 'S');
 }
 ```
@@ -640,7 +640,7 @@ private function generateFallbackPdf($user, Exception $e): string
 
 ---
 
-**Last Updated:** 2025-12-09  
-**Version:** 1.0.0  
- **HTML2PDF Version:** 5.2.x  
+**Last Updated:** 2025-12-09
+**Version:** 1.0.0
+ **HTML2PDF Version:** 5.2.x
 **PHPStan Level:** 10 ✅

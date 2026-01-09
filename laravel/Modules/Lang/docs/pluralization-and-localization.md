@@ -169,9 +169,9 @@
 
 ## 3. FAQ e Problemi Comuni
 
-- **Come gestire plurale/singolare in più lingue?**  
+- **Come gestire plurale/singolare in più lingue?**
   Usa sempre file PHP e chiavi strutturate, sfrutta `trans_choice()` e `@choice()`.
-- **Come localizzare date e valute?**  
+- **Come localizzare date e valute?**
   Usa Carbon per le date e NumberFormatter per le valute, impostando la locale corretta.
 
 ---
@@ -182,4 +182,4 @@
 - [TRANSLATION_KEYS_BEST_PRACTICES.md](./TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [translations-storage.md](./translations-storage.md)
 - [translation-process.md](./translation-process.md)
-- [README.md](./README.md) 
+- [README.md](./README.md)

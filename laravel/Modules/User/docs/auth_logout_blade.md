@@ -20,10 +20,10 @@ laravel/Themes/One/resources/views/pages/auth/logout.blade.php
 ```blade
 @php
     use Illuminate\Support\Facades\Auth;
-    
+
     // Esegui il logout
     Auth::logout();
-    
+
     // Invalida e rigenera la sessione
     session()->invalidate();
     session()->regenerateToken();

@@ -91,13 +91,13 @@ class PreviewService
     {
         // 1. Compila template
         $compiled = $this->compileTemplate($template);
-        
+
         // 2. Sostituisci variabili
         $withVariables = $this->replaceVariables($compiled, $data);
-        
+
         // 3. Applica stili
         $withStyles = $this->applyStyles($withVariables);
-        
+
         // 4. Genera preview
         return $this->renderPreview($withStyles);
     }
@@ -152,9 +152,9 @@ class PreviewAction extends Action
     {
         $template = $this->getTemplate();
         $data = $this->getTestData();
-        
+
         $preview = $this->previewService->generatePreview($template, $data);
-        
+
         return $this->response()
             ->success()
             ->html($preview);
@@ -176,7 +176,7 @@ class TemplateController extends Controller
         ]);
 
         $saved = $this->templateService->save($template);
-        
+
         return response()->json([
             'success' => true,
             'template' => $saved,
@@ -245,7 +245,7 @@ class EditorTest extends TestCase
     public function test_editor_initialization()
     {
         $editor = $this->editorService->initializeEditor('#editor');
-        
+
         $this->assertInstanceOf(GrapesJS::class, $editor);
         $this->assertTrue($editor->isReady());
     }
@@ -261,16 +261,16 @@ class EditorSystemTest extends TestCase
     {
         // 1. Inizializzazione
         $editor = $this->initializeEditor();
-        
+
         // 2. Modifica contenuto
         $this->editContent($editor);
-        
+
         // 3. Preview
         $preview = $this->generatePreview($editor);
-        
+
         // 4. Salvataggio
         $saved = $this->saveContent($editor);
-        
+
         // 5. Validazione
         $this->assertValidContent($saved);
     }
@@ -336,4 +336,4 @@ class EditorLoggingService
 Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/linee-guida-documentazione.md) e le [Regole dei Collegamenti](../../../docs/regole_collegamenti_documentazione.md).
 
 ## Collegamenti Completi
-Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md). 
+Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md).

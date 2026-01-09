@@ -33,7 +33,7 @@ Il componente dropdown di Filament offre una soluzione completa per i menu a ten
             {{ __('More actions') }}
         </x-filament::button>
     </x-slot>
-    
+
     <x-filament::dropdown.list>
         <x-filament::dropdown.list.item>
             {{ __('View') }}
@@ -178,16 +178,16 @@ Il componente loading indicator di Filament mostra lo stato di caricamento:
   @volt('component.name')
   <?php
   use function Livewire\Volt\{state, mount};
-  
+
   state([
       'property' => null,
   ]);
-  
+
   $action = function () {
       // Logica dell'azione
   };
   ?>
-  
+
   <div>
       <!-- Template del componente -->
   </div>
@@ -201,15 +201,15 @@ Il componente loading indicator di Filament mostra lo stato di caricamento:
   <?php
   use function Laravel\Folio\{middleware, name};
   use function Livewire\Volt\{state, mount};
-  
+
   middleware(['auth']);
   name('page.name');
-  
+
   state([
       'property' => null,
   ]);
   ?>
-  
+
   <x-layouts.main>
       <!-- Contenuto della pagina -->
   </x-layouts.main>
@@ -255,7 +255,7 @@ $logout = function () {
     @else
         <!-- Default state -->
     @endif
-    
+
     @if($isLoggingOut)
         <x-filament::loading-indicator />
     @endif
@@ -303,7 +303,7 @@ $logout = function () {
         @else
             <!-- Default state -->
         @endif
-        
+
         @if($isLoggingOut)
             <x-filament::loading-indicator />
         @endif

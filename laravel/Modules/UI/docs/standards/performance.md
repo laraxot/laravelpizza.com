@@ -97,7 +97,7 @@ setTimeout(() => {
 ## 🔗 Collegamenti
 - [Standard UI](../ui-standards.md)
 - [Accessibilità](./accessibility.md)
-- [Componenti Base](../base-components.md) 
+- [Componenti Base](../base-components.md)
 ## Collegamenti tra versioni di performance.md
 * [performance.md](laravel/vendor/spatie/laravel-data/docs/advanced-usage/performance.md)
 * [performance.md](../../../Xot/docs/features/performance.md)
@@ -107,4 +107,3 @@ setTimeout(() => {
 * [performance.md](../../../Lang/docs/packages/performance.md)
 * [performance.md](../../../Job/docs/packages/performance.md)
 * [performance.md](../../../Cms/docs/frontoffice/performance.md)
-

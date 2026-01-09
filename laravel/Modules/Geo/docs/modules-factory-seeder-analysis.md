@@ -5,7 +5,7 @@
 ### ✅ Excellent Coverage (90-100%)
 - **<nome progetto>** (16/16 business models) - Core healthcare business
 - **<nome progetto>** (16/16 business models) - Core healthcare business
-- **User** (33/33 business models) - User management  
+- **User** (33/33 business models) - User management
 - **Notify** (10/10 business models) - Notifications
 - **Media** (3/3 business models) - File management
 - **Activity** (3/3 business models) - Audit & event sourcing
@@ -135,13 +135,13 @@
 
 ### 🟡 Support Systems (Should Have Factories)
 - Audit: Activity logging
-- Background processing: Jobs, queues  
+- Background processing: Jobs, queues
 - Internationalization: Translations
 - File management: Media processing
 
 ### 🔴 Infrastructure (No Factories Needed)
 - Abstract base classes
-- Policy classes  
+- Policy classes
 - Configuration classes
 - System utilities
 

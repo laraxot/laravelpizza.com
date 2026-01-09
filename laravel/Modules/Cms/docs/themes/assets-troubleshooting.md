@@ -53,4 +53,4 @@ Per maggiori dettagli sul funzionamento interno, consultare:
    - In sviluppo: utilizzare `npm run dev`
    - In produzione: utilizzare `npm run copy`
 
-Per una guida completa sulla risoluzione dei problemi, consultare la [documentazione principale](/docs/VITE_ASSETS_TROUBLESHOOTING.md). 
+Per una guida completa sulla risoluzione dei problemi, consultare la [documentazione principale](/docs/VITE_ASSETS_TROUBLESHOOTING.md).

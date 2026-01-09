@@ -1,4 +1,4 @@
-# Integrazione Telegram 
+# Integrazione Telegram
 
 Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto , seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
 Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto SaluteOra, seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
@@ -52,7 +52,7 @@ Il file `config/telegram.php` contiene tutte le impostazioni per i diversi provi
 ```php
 return [
     'default' => env('TELEGRAM_DRIVER', 'official'),
-    
+
     'drivers' => [
         'official' => [
             'token' => env('TELEGRAM_BOT_TOKEN'),
@@ -65,7 +65,7 @@ return [
             // configurazione...
         ],
     ],
-    
+
     // altre configurazioni...
 ];
 ```
@@ -94,14 +94,14 @@ class TelegramChannel
     {
         $telegramData = $notification->toTelegram($notifiable);
         $driver = Config::get('telegram.default', 'official');
-        
+
         $action = match ($driver) {
             'official' => app(SendOfficialTelegramAction::class),
             'botman' => app(SendBotmanTelegramAction::class),
             'nutgram' => app(SendNutgramTelegramAction::class),
             default => throw new Exception("Unsupported Telegram driver: {$driver}"),
         };
-        
+
         return $action->execute($telegramData);
     }
 }
@@ -138,7 +138,7 @@ class AppointmentReminder extends Notification
     {
         return [TelegramChannel::class];
     }
-    
+
     public function toTelegram($notifiable)
     {
         return new TelegramData(

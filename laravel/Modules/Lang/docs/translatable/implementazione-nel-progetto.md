@@ -15,12 +15,12 @@ use Filament\SpatieLaravelTranslatablePlugin;
 public function panel(Panel $panel): Panel
 {
     $panel = parent::panel($panel);
-    
+
     $spatieLaravelTranslatablePlugin = SpatieLaravelTranslatablePlugin::make()
         ->defaultLocales([config('app.locale')]);
-    
+
     $panel->plugins([$spatieLaravelTranslatablePlugin]);
-    
+
     return $panel;
 }
 ```
@@ -105,9 +105,9 @@ use Spatie\Translatable\HasTranslations;
 class MailTemplate extends SpatieMailTemplate
 {
     use HasTranslations;
-    
+
     public $translatable = ['subject', 'html_template', 'text_template'];
-    
+
     // ...
 }
 ```
@@ -211,12 +211,12 @@ Abbiamo esteso le funzionalità base con:
 trait HasStrictTranslations
 {
     use HasTranslations;
-    
+
     public function setTranslation($key, $locale, $value)
     {
         // Validazione personalizzata
         // ...
-        
+
         return parent::setTranslation($key, $locale, $value);
     }
 }
@@ -275,15 +275,15 @@ Per testare correttamente le traduzioni, utilizzare:
 public function testTranslations()
 {
     $model = ModelWithTranslations::create();
-    
+
     $model->setTranslations('name', [
         'it' => 'Nome in italiano',
         'en' => 'English name',
     ]);
-    
+
     $this->assertEquals('Nome in italiano', $model->getTranslation('name', 'it'));
     $this->assertEquals('English name', $model->getTranslation('name', 'en'));
-    
+
     // Test fallback
     app()->setLocale('fr');
     $this->assertEquals('Nome in italiano', $model->name); // Usa il fallback

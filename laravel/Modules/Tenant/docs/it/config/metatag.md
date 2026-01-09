@@ -38,10 +38,8 @@ return [
 * [metatag.md](../../../Xot/docs/install/metatag.md)
 * [metatag.md](../../../Tenant/docs/it/config/metatag.md)
 
-
 ### Versione Incoming
 
 ];
 
 ---
-

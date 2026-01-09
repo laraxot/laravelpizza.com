@@ -30,25 +30,15 @@ This document outlines specific considerations and changes for the `Notify` modu
 
 ### **4. Adherence to Laraxot `XotBaseSection` Rule**
 
-
-
 *   **Rule:** According to Laraxot philosophy, all custom Filament Section components **must extend `Modules\Xot\Filament\Schemas\Components\XotBaseSection`** instead of directly extending `Filament\Schemas\Components\Section`. This ensures architectural consistency and leverages shared `XotBaseSection` functionalities.
 
 *   **Status:** `ContactSection` (`Modules\Notify\Filament\Forms\Components\ContactSection.php`) already correctly extends `XotBaseSection`.
 
-
-
 ### **5. Resolution of `BadMethodCallException` (`disableLiveUpdates`)**
-
-
 
 *   **Issue:** A `BadMethodCallException` occurred, indicating that `disableLiveUpdates()` was being called on a component that did not possess this method in Filament v4. This was resolved by adding a compatibility shim (empty `public function disableLiveUpdates(): static`) to `Modules\Xot\Filament\Schemas\Components\XotBaseSection.php`. This fix ensures smooth operation of `ContactSection` and other `XotBaseSection`-derived components.
 
-
-
 ### **6. Filament v4 Section Component Behavior (`columnSpanFull`)**
-
-
 
 *   **Issue:** In Filament v3, `Section` components automatically spanned the full width of their parent grid. In Filament v4, `Section` components now only consume one column by default.
 
@@ -57,8 +47,6 @@ This document outlines specific considerations and changes for the `Notify` modu
     ```php
 
     use Modules\Notify\Filament\Forms\Components\ContactSection;
-
-
 
     // ... in your form schema
 
@@ -73,8 +61,6 @@ This document outlines specific considerations and changes for the `Notify` modu
     ```php
 
     use Filament\Schemas\Components\Section;
-
-
 
     Section::configureUsing(fn (Section $section) => $section->columnSpanFull());
 

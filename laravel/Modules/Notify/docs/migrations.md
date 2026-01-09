@@ -217,7 +217,7 @@ public function template(): BelongsTo
 - [Database Mail](database-mail.md)
 ### Versione HEAD
 
-- [Email Events](events.md) 
+- [Email Events](events.md)
 
 ### Versione Incoming
 
@@ -225,6 +225,4 @@ public function template(): BelongsTo
 * [migrations.md](../../Gdpr/docs/migrations.md)
 * [migrations.md](../../Activity/docs/database/migrations.md)
 
-
 ---
-

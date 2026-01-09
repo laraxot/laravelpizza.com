@@ -1,13 +1,13 @@
 # Piano Correzione PHPStan - XotBaseRelationManager
 
-**Data**: 2025-12-23  
+**Data**: 2025-12-23
 **File**: `app/Filament/Resources/RelationManagers/XotBaseRelationManager.php`
 
 ## 🎯 Soluzioni Definite
 
 ### Errore #1: Schema::components() Type Mismatch (Line 80)
 
-**Problema**: 
+**Problema**:
 ```php
 $schema->components($this->getTableColumns());
 // getTableColumns() restituisce array, ma PHPStan vuole tipo più specifico
@@ -61,7 +61,7 @@ public function canDeleteBulk(Model|\stdClass $record): bool
         // Oppure convertire in Model
         return true; // o logica appropriata
     }
-    
+
     // Logica esistente per Model
     // ...
 }
@@ -79,7 +79,7 @@ public function canDeleteBulk(Model|\stdClass $record): bool
     if ($record instanceof \stdClass) {
         return true;
     }
-    
+
     // Per Model, usare logica esistente
     return $this->canDelete($record);
 }
@@ -95,7 +95,7 @@ public function canDeleteBulk(Model|\stdClass $record): bool
 
 **Antitesi**: "Ma stdClass non è un Model, quindi la logica interna potrebbe non funzionare"
 
-**Sintesi**: 
+**Sintesi**:
 - Verificare se la logica esistente usa metodi specifici di Model
 - Se sì, bisogna gestire il caso stdClass separatamente
 - Se no, possiamo semplicemente accettare il tipo union
@@ -104,7 +104,7 @@ public function canDeleteBulk(Model|\stdClass $record): bool
 
 **Preoccupazione**: Cambiare il type hint potrebbe rompere codice esistente?
 
-**Risposta**: 
+**Risposta**:
 - Aumentare il tipo accettato (da `Model|null` a `Model|\stdClass|null`) è backward compatible
 - Il codice chiamante continuerà a funzionare
 - PHPStan sarà più felice

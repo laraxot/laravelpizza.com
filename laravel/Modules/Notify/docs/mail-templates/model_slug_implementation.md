@@ -16,7 +16,7 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
 {
     use HasTranslations;
     use HasSlug;
-    
+
     // ...
 }
 ```

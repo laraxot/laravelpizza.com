@@ -3,42 +3,52 @@
 declare(strict_types=1);
 
 return [
+    'navigation' => [
+        'label' => 'Socialite User',
+        'group' => 'Authentication',
+        'icon' => 'heroicon-o-user-group',
+        'sort' => 40,
+    ],
+    'label' => 'Socialite User',
+    'plural_label' => 'Socialite Users',
     'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'user_id' => [
+            'label' => 'User',
+        ],
         'provider' => [
-            'label' => 'provider',
+            'label' => 'Provider',
         ],
         'provider_id' => [
-            'label' => 'provider_id',
+            'label' => 'Provider ID',
         ],
         'name' => [
-            'label' => 'name',
+            'label' => 'Name',
         ],
         'email' => [
-            'label' => 'email',
+            'label' => 'Email',
         ],
         'avatar' => [
-            'label' => 'avatar',
+            'label' => 'Avatar',
         ],
-        'create' => [
-            'label' => 'create',
+        'token' => [
+            'label' => 'Token',
         ],
-        'attach' => [
-            'label' => 'attach',
+        'refresh_token' => [
+            'label' => 'Refresh Token',
         ],
-        'layout' => [
-            'label' => 'layout',
+        'expires_at' => [
+            'label' => 'Expires At',
         ],
-        'view' => [
-            'label' => 'view',
+    ],
+    'actions' => [
+        'link_provider' => [
+            'label' => 'Link Provider',
         ],
-        'edit' => [
-            'label' => 'edit',
-        ],
-        'detach' => [
-            'label' => 'detach',
-        ],
-        'toggleColumns' => [
-            'label' => 'toggleColumns',
+        'unlink_provider' => [
+            'label' => 'Unlink Provider',
         ],
     ],
 ];

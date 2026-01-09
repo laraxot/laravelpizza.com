@@ -1,7 +1,7 @@
 # Filament v4 Migration Guide - Modulo Xot
-**Data**: 10 Dicembre 2025  
-**Modulo**: Xot (Core Framework)  
-**Versione**: 4.0  
+**Data**: 10 Dicembre 2025
+**Modulo**: Xot (Core Framework)
+**Versione**: 4.0
 **Stato**: Ready for Implementation
 
 ## 🚨 CRITICAL CHANGES - IMPLEMENTAZIONE OBBLIGATORIA
@@ -113,33 +113,33 @@ use Filament\Forms\Components\Radio;
 public function boot()
 {
     // Mantenere comportamento layout v3
-    Fieldset::configureUsing(fn (Fieldset $fieldset) => 
+    Fieldset::configureUsing(fn (Fieldset $fieldset) =>
         $fieldset->columnSpanFull()
     );
-    Grid::configureUsing(fn (Grid $grid) => 
+    Grid::configureUsing(fn (Grid $grid) =>
         $grid->columnSpanFull()
     );
-    Section::configureUsing(fn (Section $section) => 
+    Section::configureUsing(fn (Section $section) =>
         $section->columnSpanFull()
     );
-    
+
     // Mantenere comportamento filtri v3
-    Table::configureUsing(fn (Table $table) => 
+    Table::configureUsing(fn (Table $table) =>
         $table->deferFilters(false)
     );
-    
+
     // Mantenere comportamento validazione v3
-    Field::configureUsing(fn (Field $field) => 
+    Field::configureUsing(fn (Field $field) =>
         $field->uniqueValidationIgnoresRecordByDefault(false)
     );
-    
+
     // Mantenere comportamento radio v3
-    Radio::configureUsing(fn (Radio $radio) => 
+    Radio::configureUsing(fn (Radio $radio) =>
         $radio->inlineLabel(fn (): bool => $radio->isInline())
     );
-    
+
     // Mantenere paginazione con opzione 'all'
-    Table::configureUsing(fn (Table $table) => 
+    Table::configureUsing(fn (Table $table) =>
         $table->paginationPageOptions([5, 10, 25, 50, 'all'])
     );
 }
@@ -155,7 +155,7 @@ abstract class XotBaseResource extends Resource
     // ✅ Metodi rimangono invariati
     public static function getFormSchema(): array { /* ... */ }
     public static function getPages(): array { /* ... */ }
-    
+
     // ❌ METODI VIETATI - Devono essere solo nelle pagine List
     // public function getTableColumns(): array { /* VIETATO */ }
     // public function getTableFilters(): array { /* VIETATO */ }
@@ -173,7 +173,7 @@ abstract class XotBaseListRecords extends ListRecords
 {
     // ✅ METODI OBBLIGATORI - Solo qui
     abstract public function getTableColumns(): array;
-    
+
     // ✅ Metodo aggiunto per compatibilità v4
     protected function getDefaultTableActions(): array
     {
@@ -182,7 +182,7 @@ abstract class XotBaseListRecords extends ListRecords
             Tables\Actions\DeleteAction::make(),
         ];
     }
-    
+
     // ✅ Layout con columnSpanFull() automatico
     protected function getTableContent(): ?View
     {
@@ -260,7 +260,7 @@ find laravel/Modules -name "*.php" -path "*/Filament/*" -exec grep -l "Radio::ma
 
 ---
 
-**Versione**: 1.0  
-**Stato**: Ready for Implementation  
-**Target**: Tutti i moduli PTVX  
+**Versione**: 1.0
+**Stato**: Ready for Implementation
+**Target**: Tutti i moduli PTVX
 **Deadline**: 31 Dicembre 2025

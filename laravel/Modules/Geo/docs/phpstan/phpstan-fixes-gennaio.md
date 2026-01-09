@@ -14,8 +14,8 @@ I seguenti errori **specificamente segnalati** sono stati completamente risolti:
 
 ### 1. BaseGeoService::makeRequest() - Return Type Mismatch ✅
 
-**File**: `laravel/Modules/Geo/app/Services/BaseGeoService.php` (riga 58)  
-**Errore**: `Method should return array<string, mixed> but returns mixed`  
+**File**: `laravel/Modules/Geo/app/Services/BaseGeoService.php` (riga 58)
+**Errore**: `Method should return array<string, mixed> but returns mixed`
 **Status**: ✅ **RISOLTO COMPLETAMENTE**
 
 **Soluzione Implementata**:
@@ -38,8 +38,8 @@ return $validatedData;
 
 ### 2. GeoDataService - Collection Template Types Resolution ✅
 
-**File**: `laravel/Modules/Geo/app/Services/GeoDataService.php` (righe 86, 108, 112, 135)  
-**Errori**: Multiple "Unable to resolve template type" per Collection operations  
+**File**: `laravel/Modules/Geo/app/Services/GeoDataService.php` (righe 86, 108, 112, 135)
+**Errori**: Multiple "Unable to resolve template type" per Collection operations
 **Status**: ✅ **RISOLTO COMPLETAMENTE**
 
 **Soluzioni Implementate**:
@@ -72,8 +72,8 @@ $provinces = $region['provinces'];
 
 ### 3. AddressFactory - Union Type Compatibility ✅
 
-**File**: `laravel/Modules/Geo/database/factories/AddressFactory.php` (righe 199-200, 214)  
-**Errore**: PHPDoc tag not subtype of native union type  
+**File**: `laravel/Modules/Geo/database/factories/AddressFactory.php` (righe 199-200, 214)
+**Errore**: PHPDoc tag not subtype of native union type
 **Status**: ✅ **RISOLTO COMPLETAMENTE**
 
 **Soluzioni Implementate**:
@@ -103,8 +103,8 @@ substr((string) $cityData['postal'], 0, 3)
 
 ### 4. SushiSeeder - Mixed Array Access ✅
 
-**File**: `laravel/Modules/Geo/database/seeders/SushiSeeder.php`  
-**Errore**: foreach su mixed e offset access su mixed  
+**File**: `laravel/Modules/Geo/database/seeders/SushiSeeder.php`
+**Errore**: foreach su mixed e offset access su mixed
 **Status**: ✅ **RISOLTO COMPLETAMENTE**
 
 **Soluzione Implementata**:
@@ -151,8 +151,8 @@ Risolti **5 file Filament** con correzioni avanzate per:
 
 ### 1. LocationResource.php ✅
 
-**File**: `laravel/Modules/Geo/app/Filament/Resources/LocationResource.php`  
-**Errore**: `Access to constant Dropdown on an unknown class FiltersLayout`  
+**File**: `laravel/Modules/Geo/app/Filament/Resources/LocationResource.php`
+**Errore**: `Access to constant Dropdown on an unknown class FiltersLayout`
 **Status**: ✅ **RISOLTO**
 
 **Soluzione**: Aggiunto import corretto per Filament v3:
@@ -162,8 +162,8 @@ use Filament\Tables\Enums\FiltersLayout;
 
 ### 2. LocationMapTableWidget.php ✅
 
-**File**: `laravel/Modules/Geo/app/Filament/Widgets/LocationMapTableWidget.php`  
-**Errori**: Return type mismatches e mixed access  
+**File**: `laravel/Modules/Geo/app/Filament/Widgets/LocationMapTableWidget.php`
+**Errori**: Return type mismatches e mixed access
 **Status**: ✅ **RISOLTO**
 
 **Soluzioni**:
@@ -175,7 +175,7 @@ use Filament\Tables\Enums\FiltersLayout;
 public function getData(): array
 {
     $iconUrl = $this->getMarkerIcon($location);
-    
+
     $data[] = [
         'label' => (string) $location->name,
         'id' => (int) $location->id,
@@ -190,8 +190,8 @@ public function getData(): array
 
 ### 3. LocationMapWidget.php ✅
 
-**File**: `laravel/Modules/Geo/app/Filament/Widgets/LocationMapWidget.php`  
-**Errori**: view-string property, mixed access, relazioni mancanti  
+**File**: `laravel/Modules/Geo/app/Filament/Widgets/LocationMapWidget.php`
+**Errori**: view-string property, mixed access, relazioni mancanti
 **Status**: ✅ **RISOLTO**
 
 **Soluzioni**:
@@ -215,8 +215,8 @@ protected function getOptions(): array
 
 ### 4. LocationWidget.php ✅
 
-**File**: `laravel/Modules/Geo/app/Filament/Widgets/LocationWidget.php`  
-**Errori**: Static method calls, return type mismatches, undefined methods  
+**File**: `laravel/Modules/Geo/app/Filament/Widgets/LocationWidget.php`
+**Errori**: Static method calls, return type mismatches, undefined methods
 **Status**: ✅ **RISOLTO**
 
 **Soluzioni**:
@@ -226,8 +226,8 @@ protected function getOptions(): array
 
 ### 5. OSMMapWidget.php ✅
 
-**File**: `laravel/Modules/Geo/app/Filament/Widgets/OSMMapWidget.php`  
-**Errori**: view-string property, nullable coordinates, missing relations  
+**File**: `laravel/Modules/Geo/app/Filament/Widgets/OSMMapWidget.php`
+**Errori**: view-string property, nullable coordinates, missing relations
 **Status**: ✅ **RISOLTO**
 
 **Soluzioni**:
@@ -255,7 +255,7 @@ public function getMarkers(): array
 
 ## 🎯 **Phase 3 Results Summary**
 
-**Prima Phase 3**: 15+ errori Filament UI components  
+**Prima Phase 3**: 15+ errori Filament UI components
 **Dopo Phase 3**: ✅ **100% RISOLTI** (tutti i problemi corretti)
 
 **Files Certificati Phase 3** ✅:
@@ -311,7 +311,7 @@ Errori rimanenti sono **fuori scope** dell'issue originale ma rappresentano oppo
 
 ## 📊 Impatto delle Correzioni (Issue Target + Phase 3)
 
-**Prima**: 4 errori PHPStan livello 9 (issue segnalata) + 15 errori Filament  
+**Prima**: 4 errori PHPStan livello 9 (issue segnalata) + 15 errori Filament
 **Dopo**: ✅ **0 errori PHPStan livello 9** (issue segnalata) + ✅ **0 errori Filament** (Phase 3 completata)
 
 **Metriche di Miglioramento Totale**:
@@ -359,7 +359,7 @@ cd /var/www/html/_bases/base_saluteora/laravel
 
 ### Issue Target (Già Consolidate)
 1. **API Integration**: ✅ Sempre validare response types
-2. **JSON Data**: ✅ Utilizzare type assertions per dati esterni  
+2. **JSON Data**: ✅ Utilizzare type assertions per dati esterni
 3. **Collection Operations**: ✅ Preferire `new Collection()` vs `collect()` per PHPStan
 4. **Factory Generation**: ✅ Evitare PHPDoc conflittuali con union types nativi
 5. **Seeder Implementation**: ✅ Validare struttura dati prima del processing
@@ -384,24 +384,24 @@ cd /var/www/html/_bases/base_saluteora/laravel
 
 ---
 
-✅ **Status Issue Target**: **COMPLETATO AL 100%** (4/4 errori risolti)  
-✅ **Status Phase 3**: **COMPLETATO AL 100%** (Filament UI components)  
-✅ **Status Phase 4**: **COMPLETATO AL 100%** (Console Commands)  
-📅 **Data**: Gennaio 2025  
-👨‍💻 **Impatto**: Issue segnalata + Phase 3 Filament + Phase 4 Console completate  
-🚀 **Pronto per**: Merge della issue target + Phase 3 + Phase 4  
-📋 **Future Work**: Phase 2 (Google/Mapbox), Phase 5 (Models) - se necessario 
+✅ **Status Issue Target**: **COMPLETATO AL 100%** (4/4 errori risolti)
+✅ **Status Phase 3**: **COMPLETATO AL 100%** (Filament UI components)
+✅ **Status Phase 4**: **COMPLETATO AL 100%** (Console Commands)
+📅 **Data**: Gennaio 2025
+👨‍💻 **Impatto**: Issue segnalata + Phase 3 Filament + Phase 4 Console completate
+🚀 **Pronto per**: Merge della issue target + Phase 3 + Phase 4
+📋 **Future Work**: Phase 2 (Google/Mapbox), Phase 5 (Models) - se necessario
 
 ## ✅ **Phase 4: Console Commands** ✅ **COMPLETATA 100%**
 
-**Target**: Console Commands PHPStan Level 9 Compliance  
-**Files**: 1 file comando console  
+**Target**: Console Commands PHPStan Level 9 Compliance
+**Files**: 1 file comando console
 **Status**: ✅ **100% COMPLETATO**
 
 ### 🎯 **SushiCommand.php - 13 Errori Risolti**
 
-**File**: `app/Console/Commands/SushiCommand.php`  
-**Errori Prima**: 13 errori critici  
+**File**: `app/Console/Commands/SushiCommand.php`
+**Errori Prima**: 13 errori critici
 **Errori Dopo**: ✅ **0 errori**
 
 **Problemi Risolti**:
@@ -420,7 +420,7 @@ cd /var/www/html/_bases/base_saluteora/laravel
 
 4. **Unsafe Offset Access** ✅ (8 errori)
    - **Issue**: Accesso diretto a `$comune['id']`, `$comune['regione']`, etc. su `mixed`
-   - **Fix**: 
+   - **Fix**:
      - Type guards: `if (!is_array($comune))` e `continue`
      - Metodo validazione: `isValidComuneData(array $comune): bool`
      - Cast espliciti: `(string) $validComune['regione']`, `(float) $validComune['lat']`
@@ -443,15 +443,15 @@ cd /var/www/html/_bases/base_saluteora/laravel
 
 ## ✅ **Phase 5: Cross-Module Fixes** ✅ **COMPLETATA 100%**
 
-**Target**: PHPStan Level 9 Fixes in altri moduli rilevati durante l'analisi  
-**Files**: 2 files in moduli Cms e DbForge  
+**Target**: PHPStan Level 9 Fixes in altri moduli rilevati durante l'analisi
+**Files**: 2 files in moduli Cms e DbForge
 **Status**: ✅ **100% COMPLETATO**
 
 ### 🎯 **Cms/lang/it/edit_section.php - Array Duplicate Key** ✅
 
-**File**: `Modules/Cms/lang/it/edit_section.php` (linea 211)  
-**Errore**: `Array has 2 duplicate keys with value 'sections'`  
-**Tipo**: Errore di configurazione array  
+**File**: `Modules/Cms/lang/it/edit_section.php` (linea 211)
+**Errore**: `Array has 2 duplicate keys with value 'sections'`
+**Tipo**: Errore di configurazione array
 
 **Problema Identificato**:
 - Due definizioni della chiave `'sections'` nello stesso array di traduzione
@@ -467,9 +467,9 @@ cd /var/www/html/_bases/base_saluteora/laravel
 
 ### 🎯 **DbForge/app/Console/Commands/GenerateResourceFormSchemaCommand.php - Method Not Found** ✅
 
-**File**: `Modules/DbForge/app/Console/Commands/GenerateResourceFormSchemaCommand.php`  
-**Errori**: 2 errori di metodi non trovati  
-**Tipo**: Chiamate a metodi inesistenti  
+**File**: `Modules/DbForge/app/Console/Commands/GenerateResourceFormSchemaCommand.php`
+**Errori**: 2 errori di metodi non trovati
+**Tipo**: Chiamate a metodi inesistenti
 
 **Problemi Identificati**:
 
@@ -512,9 +512,9 @@ cd /var/www/html/_bases/base_saluteora/laravel
 
 ## ✅ **Phase 2: Google/Mapbox Actions** ✅ **COMPLETATA 100%**
 
-**Target**: Google Maps e Mapbox Actions PHPStan Level 9 Compliance  
-**Files**: 32 files Google/Mapbox actions  
-**Status**: ✅ **100% COMPLETATO** 
+**Target**: Google Maps e Mapbox Actions PHPStan Level 9 Compliance
+**Files**: 32 files Google/Mapbox actions
+**Status**: ✅ **100% COMPLETATO**
 
 **AGGIORNAMENTO**: La Phase 2 è stata **completata al 100%** con la risoluzione degli ultimi errori PHPStan rimanenti.
 
@@ -522,7 +522,7 @@ cd /var/www/html/_bases/base_saluteora/laravel
 
 **Files Corretti Supplementari** ✅:
 - ✅ `app/Actions/GetCoordinatesByAddressAction.php` → `[OK] No errors`
-- ✅ `app/Actions/GoogleMaps/GetAddressFromGoogleMapsAction.php` → `[OK] No errors`  
+- ✅ `app/Actions/GoogleMaps/GetAddressFromGoogleMapsAction.php` → `[OK] No errors`
 - ✅ `app/Actions/Mapbox/GetAddressFromMapboxLatLngAction.php` → `[OK] No errors`
 
 **Problemi Risolti Phase 2 Supplementary**:
@@ -537,7 +537,7 @@ cd /var/www/html/_bases/base_saluteora/laravel
 - `Cannot access offset 'resourceSets' on mixed`: Implementato type guards sequenziali
 - `Cannot access offset 'results' on mixed`: Type-safe navigation con isset() checks
 
-#### 2. **GoogleMaps/GetAddressFromGoogleMapsAction.php** - 5 Errori Risolti ✅  
+#### 2. **GoogleMaps/GetAddressFromGoogleMapsAction.php** - 5 Errori Risolti ✅
 - **Mixed Property Access**: Type guards per object property access
 - **Return Type Mismatch**: Fix per getFirstResult() return consistency
 - **Nullsafe Operator Issues**: Rimozione ?-> operator dove non necessario
@@ -566,27 +566,27 @@ cd /var/www/html/_bases/base_saluteora/laravel
 
 **Pattern Consolidati Phase 2 Completata**:
 - **API Response Safety**: Sempre validare mixed data da API esterne con type guards
-- **PHPDoc Compatibility**: Usare array types semplici invece di array shapes complessi per compatibilità PHPStan  
+- **PHPDoc Compatibility**: Usare array types semplici invece di array shapes complessi per compatibilità PHPStan
 - **Type-Safe Navigation**: Implementare isset() checks sequenziali per nested array access
 - **Object Property Access**: Type guards con instanceof prima di property access
 - **Constructor Compatibility**: Cast PHPDoc espliciti per array structure matching
 
 ## 🎯 **RIEPILOGO FINALE COMPLETO PHASES 1-5**
 
-✅ **Status Issue Target**: **COMPLETATO AL 100%** (4/4 errori risolti)  
-✅ **Status Phase 2**: **COMPLETATO AL 100%** (Google/Mapbox Actions + Supplementary)  
-✅ **Status Phase 3**: **COMPLETATO AL 100%** (Filament UI components)  
-✅ **Status Phase 4**: **COMPLETATO AL 100%** (Console Commands)  
-✅ **Status Phase 5**: **COMPLETATO AL 100%** (Cross-Module Fixes)  
-📅 **Data**: Gennaio 2025  
-👨‍💻 **Impatto**: **Progetto Multi-Phase completato** - Tutti gli errori PHPStan risolti  
-🚀 **Pronto per**: **Merge completo del progetto di miglioramento PHPStan**  
+✅ **Status Issue Target**: **COMPLETATO AL 100%** (4/4 errori risolti)
+✅ **Status Phase 2**: **COMPLETATO AL 100%** (Google/Mapbox Actions + Supplementary)
+✅ **Status Phase 3**: **COMPLETATO AL 100%** (Filament UI components)
+✅ **Status Phase 4**: **COMPLETATO AL 100%** (Console Commands)
+✅ **Status Phase 5**: **COMPLETATO AL 100%** (Cross-Module Fixes)
+📅 **Data**: Gennaio 2025
+👨‍💻 **Impatto**: **Progetto Multi-Phase completato** - Tutti gli errori PHPStan risolti
+🚀 **Pronto per**: **Merge completo del progetto di miglioramento PHPStan**
 📋 **Total Files Fixed**: **22 files** across **4 modules** (Geo, Cms, DbForge, Xot)
 📈 **Total Errors Resolved**: **100+ errors** PHPStan Level 9
 
 ### **Distribuzione Errori per Phase**:
 - **Phase 1 (Issue Target)**: 4 errori ✅ COMPLETATA
-- **Phase 2 (Google/Mapbox)**: 12 errori ✅ COMPLETATA 
+- **Phase 2 (Google/Mapbox)**: 12 errori ✅ COMPLETATA
 - **Phase 3 (Filament UI)**: 15 errori ✅ COMPLETATA
 - **Phase 4 (Console)**: 13 errori ✅ COMPLETATA
 - **Phase 5 (Cross-Module)**: 3 errori ✅ COMPLETATA
@@ -621,10 +621,10 @@ cd /var/www/html/_bases/base_saluteora/laravel
 
 ## 🏆 **CERTIFICAZIONE PROGETTO COMPLETATO**
 
-✅ **TUTTI I FILES CORRETTI**: 15/15 files certificati PHPStan Level 9  
-✅ **TUTTI GLI ERRORI RISOLTI**: 100% success rate su tutti gli errori identificati  
-✅ **TUTTE LE FASI COMPLETATE**: Phase 1-5 completate al 100%  
-✅ **MULTI-MODULE COVERAGE**: Geo, Cms, DbForge, Xot modules covered  
-✅ **PRODUCTION READY**: Codice pronto per merge e deployment  
+✅ **TUTTI I FILES CORRETTI**: 15/15 files certificati PHPStan Level 9
+✅ **TUTTI GLI ERRORI RISOLTI**: 100% success rate su tutti gli errori identificati
+✅ **TUTTE LE FASI COMPLETATE**: Phase 1-5 completate al 100%
+✅ **MULTI-MODULE COVERAGE**: Geo, Cms, DbForge, Xot modules covered
+✅ **PRODUCTION READY**: Codice pronto per merge e deployment
 
-**🚀 Il progetto di miglioramento PHPStan Livello 9 è stato completato con successo al 100%.** 
+**🚀 Il progetto di miglioramento PHPStan Livello 9 è stato completato con successo al 100%.**

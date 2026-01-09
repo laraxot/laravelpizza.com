@@ -84,7 +84,7 @@ Aggiungi un selettore di lingua alla tua vista:
 
 ```blade
 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-    <a rel="alternate" hreflang="{{ $localeCode }}" 
+    <a rel="alternate" hreflang="{{ $localeCode }}"
        href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
        class="{{ $localeCode === app()->getLocale() ? 'active' : '' }}">
         {{ strtoupper($localeCode) }}

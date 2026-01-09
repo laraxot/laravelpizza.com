@@ -116,7 +116,7 @@ Laravel 12.x
 **Implementazione Specifica:**
 - **Laravel Folio**: Routing automatico tramite file structure (es. `/resources/views/pages/events/index.blade.php` → `/events`)
 - **Laravel Volt**: Componenti dichiarativi con PHP e Blade nello stesso file
-- **File Structure**: 
+- **File Structure**:
   - `/resources/views/pages/` per pagine pubbliche (gestite da Folio)
   - `/resources/views/components/` per componenti riutilizzabili (Volt/Livewire)
   - `/resources/views/layouts/` per layout template

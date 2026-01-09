@@ -1,7 +1,7 @@
 # OAuth Cluster - Processo Decisionale
 
-**Data**: 2025-01-22  
-**Metodologia**: Super Mucca  
+**Data**: 2025-01-22
+**Metodologia**: Super Mucca
 **Filosofia**: DRY + KISS + Organizzazione Logica
 
 ---
@@ -173,14 +173,14 @@ Se in futuro serve Settings page:
 
 ---
 
-**Filosofia Applicata**:  
-> "Fai solo quello che serve ora.  
-> Documenta il pattern per il futuro.  
-> Estendi solo quando necessario.  
+**Filosofia Applicata**:
+> "Fai solo quello che serve ora.
+> Documenta il pattern per il futuro.
+> Estendi solo quando necessario.
 > KISS sempre e comunque."
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: Decisione consolidata - da implementare

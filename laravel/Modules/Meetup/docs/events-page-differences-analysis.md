@@ -104,5 +104,3 @@ dalla versione statica `Themes/Meetup/resources/html/events.html`:
 - [ ] adeguare (se necessario) `events/list.blade.php`
 - [ ] verificare rendering `/it/events` rispetto a `laravelpizza.com/events`
 - [ ] aggiornare eventuali regole in `critical-rules-consolidated.md` se emergono nuovi pattern
-
-

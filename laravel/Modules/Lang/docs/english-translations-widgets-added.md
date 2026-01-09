@@ -24,12 +24,12 @@ Il file `laravel/Modules/SaluteOra/lang/en/widgets.php` era **incompleto** rispe
 ```php
 'doctor_appointments' => [
     'title' => 'Pending Appointments',
-    
+
     'empty' => [
         'title' => 'No pending appointments',          // ← Richiesto
         'description' => 'You have no appointments to confirm at this time.',  // ← Richiesto
     ],
-    
+
     'actions' => [
         'view_details' => ['label' => 'View Details', 'tooltip' => 'Show appointment details'],
         'confirm' => [
@@ -53,12 +53,12 @@ Il file `laravel/Modules/SaluteOra/lang/en/widgets.php` era **incompleto** rispe
             ],
         ],
     ],
-    
+
     'messages' => [
         'appointment_confirmed' => 'Appointment confirmed successfully',
         'appointment_rejected' => 'Appointment rejected successfully',
     ],
-    
+
     'errors' => [
         'cannot_confirm' => 'Cannot confirm this appointment',
         'cannot_reject' => 'Cannot reject this appointment',
@@ -66,7 +66,7 @@ Il file `laravel/Modules/SaluteOra/lang/en/widgets.php` era **incompleto** rispe
         'reject_failed' => 'Error rejecting the appointment',
         'appointment_not_found' => 'Appointment not found',
     ],
-    
+
     'status' => [
         'pending' => 'Pending',
         'confirmed' => 'Confirmed',
@@ -103,7 +103,7 @@ return [
 ```
 **29 righe totali**
 
-### Dopo  
+### Dopo
 ```php
 // File: laravel/Modules/SaluteOra/lang/en/widgets.php
 return [
@@ -132,7 +132,7 @@ Per testare le traduzioni aggiunte:
 __('saluteora::widgets.doctor_appointments.empty.title')
 // Output: "No pending appointments"
 
-__('saluteora::widgets.doctor_appointments.empty.description') 
+__('saluteora::widgets.doctor_appointments.empty.description')
 // Output: "You have no appointments to confirm at this time."
 ```
 
@@ -149,4 +149,4 @@ __('saluteora::widgets.doctor_appointments.empty.description')
 - [File inglese aggiornato](../laravel/Modules/SaluteOra/lang/en/widgets.php)
 - [Widget DoctorAppointments](../laravel/Modules/SaluteOra/app/Filament/Widgets/DoctorAppointmentsWidget.php)
 
-*Risoluzione completata: 2025-01-21* 
+*Risoluzione completata: 2025-01-21*

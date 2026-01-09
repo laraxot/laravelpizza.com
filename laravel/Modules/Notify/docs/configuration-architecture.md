@@ -8,7 +8,7 @@ La struttura di configurazione in Laravel segue un pattern consistente, visibile
 return [
     // 1. Driver predefinito
     'default' => env('MAIL_MAILER', 'smtp'),
-    
+
     // 2. Configurazioni specifiche dei driver
     'mailers' => [
         'smtp' => [
@@ -22,13 +22,13 @@ return [
             // Parametri specifici di SES
         ],
     ],
-    
+
     // 3. Configurazioni globali applicabili a tutti i driver
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS'),
         'name' => env('MAIL_FROM_NAME'),
     ],
-    
+
     // Altre configurazioni globali...
 ];
 ```
@@ -41,7 +41,7 @@ Lo stesso pattern deve essere applicato nei moduli SMS:
 return [
     // 1. Driver predefinito
     'default' => env('SMS_DRIVER', 'default_driver'),
-    
+
     // 2. Configurazioni specifiche dei driver (SOLO parametri di connessione e credenziali)
     'drivers' => [
         'netfun' => [
@@ -54,10 +54,10 @@ return [
             'auth_token' => env('TWILIO_AUTH_TOKEN'),  // Specifico di Twilio
         ],
     ],
-    
+
     // 3. Configurazioni globali applicabili a tutti i driver
     'sender' => env('SMS_SENDER'),  // Globale per tutti i driver
-    
+
     // Altre configurazioni globali
     'debug' => env('SMS_DEBUG', false),
     'retry' => [
@@ -91,7 +91,7 @@ I termini non sono intercambiabili:
 - **API Key**: Chiave specifica per API, spesso usata in combinazione con altri parametri di autenticazione
 - **Auth Token**: Valore di autorizzazione temporaneo o permanente
 
-## Implementazione Corretta 
+## Implementazione Corretta
 
 Per moduli riutilizzabili come Notify:
 

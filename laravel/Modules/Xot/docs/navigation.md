@@ -34,7 +34,6 @@ $page->navigation
 ```
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di navigation.md
 * [navigation.md](../../../Gdpr/docs/navigation.md)
 * [navigation.md](../../../Xot/docs/navigation.md)
@@ -43,9 +42,6 @@ $page->navigation
 * [navigation.md](../../../Cms/docs/navigation.md)
 * [navigation.md](../../../Cms/docs/components/navigation.md)
 
-
 ### Versione Incoming
 
-
 ---
-

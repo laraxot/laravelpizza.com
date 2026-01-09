@@ -1,7 +1,7 @@
 # PHPStan Errors - XotBaseRelationManager
 
-**Data**: 2025-12-23  
-**File**: `app/Filament/Resources/RelationManagers/XotBaseRelationManager.php`  
+**Data**: 2025-12-23
+**File**: `app/Filament/Resources/RelationManagers/XotBaseRelationManager.php`
 **Errori PHPStan**: 3
 
 ## 🔍 Analisi Errori
@@ -10,8 +10,8 @@
 
 **Messaggio PHPStan**:
 ```
-Parameter #1 $components of method Filament\Schemas\Schema::components() expects 
-array<Illuminate\Contracts\Support\Htmlable|string>|Closure|Illuminate\Contracts\Support\Htmlable|string, 
+Parameter #1 $components of method Filament\Schemas\Schema::components() expects
+array<Illuminate\Contracts\Support\Htmlable|string>|Closure|Illuminate\Contracts\Support\Htmlable|string,
 array given.
 ```
 
@@ -36,7 +36,7 @@ $schema->components($this->getTableColumns());
 
 **Messaggio PHPStan**:
 ```
-Parameter #1 $record of method Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager::canDeleteBulk() 
+Parameter #1 $record of method Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager::canDeleteBulk()
 expects Illuminate\Database\Eloquent\Model|null,
 Illuminate\Database\Eloquent\Model|stdClass given.
 ```
@@ -65,7 +65,7 @@ public function canDeleteBulk($record): bool
 
 **Messaggio PHPStan**:
 ```
-Parameter #1 $record of method Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager::canDetachBulk() 
+Parameter #1 $record of method Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager::canDetachBulk()
 expects Illuminate\Database\Eloquent\Model|null,
 Illuminate\Database\Eloquent\Model|stdClass given.
 ```
@@ -112,12 +112,12 @@ Illuminate\Database\Eloquent\Model|stdClass given.
 
 **Domanda**: Perché `getTableColumns()` restituisce un tipo che PHPStan non riconosce?
 
-**Risposta Possibile**: 
+**Risposta Possibile**:
 - Il metodo potrebbe non avere type hint esplicito
 - O il tipo di ritorno è troppo generico (`array` invece di `array<Component>`)
 - Oppure manca PHPDoc che aiuti PHPStan
 
-**Strategia**: 
+**Strategia**:
 1. Verificare type hint di `getTableColumns()`
 2. Se manca, aggiungere tipo esplicito
 3. Se necessario, aggiungere cast o assertion per aiutare PHPStan
@@ -126,7 +126,7 @@ Illuminate\Database\Eloquent\Model|stdClass given.
 
 **Domanda**: Perché Filament passa `stdClass` invece di `Model`?
 
-**Risposta**: 
+**Risposta**:
 - Nei bulk actions, Filament potrebbe usare stdClass per performance
 - O per gestire casi edge
 - Bisogna gestire entrambi i tipi

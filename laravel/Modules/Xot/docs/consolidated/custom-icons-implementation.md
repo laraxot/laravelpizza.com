@@ -51,4 +51,4 @@ Per problemi comuni e soluzioni, consultare la [documentazione di registerBladeI
 
 ## Risorse Aggiuntive
 - [Panoramica delle Blade Icons](blade-icons-overview.md)
-- [Documentazione dettagliata di registerBladeIcons](registerBladeIcons.md) 
+- [Documentazione dettagliata di registerBladeIcons](registerBladeIcons.md)

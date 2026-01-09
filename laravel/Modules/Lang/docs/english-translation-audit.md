@@ -299,4 +299,4 @@ return array(
 ---
 
 **Ultimo aggiornamento**: 2025-01-06
-**Status**: In corso 
+**Status**: In corso

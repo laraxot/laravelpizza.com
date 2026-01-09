@@ -82,7 +82,7 @@ Analizzare tutti i moduli del progetto <nome progetto>, verificare l'esistenza d
 
 #### **Factory Esistenti e Funzionanti**
 - ✅ **UserFactory** - Crea 100 users con successo
-- ✅ **DoctorFactory** - Crea 100 doctors con successo  
+- ✅ **DoctorFactory** - Crea 100 doctors con successo
 - ✅ **PatientFactory** - Crea 100 patients con successo
 - ✅ **StudioFactory** - Crea 100 studios con successo
 - ✅ **AppointmentFactory** - Crea 100 appointments con successo (dopo correzioni)

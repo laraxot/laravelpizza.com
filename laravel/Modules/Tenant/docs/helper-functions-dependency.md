@@ -10,7 +10,7 @@ Il modulo **Tenant** dipende da funzioni helper globali fornite dal modulo **Xot
 
 ### 1. `inAdmin(): bool`
 
-**Provider**: `Modules\Xot\Helpers\Helper.php`  
+**Provider**: `Modules\Xot\Helpers\Helper.php`
 **Wrapper per**: `Modules\Xot\Services\RouteService::inAdmin()`
 
 **Uso nel Tenant**:
@@ -36,7 +36,7 @@ public function canResolve(string $key): bool
 
 ### 2. `getModuleModels(string $moduleName): array`
 
-**Provider**: `Modules\Xot\Helpers\Helper.php`  
+**Provider**: `Modules\Xot\Helpers\Helper.php`
 **Wrapper per**: `Modules\Xot\Actions\Model\GetAllModelsByModuleNameAction`
 
 **Uso nel Tenant**:
@@ -228,7 +228,7 @@ Evita duplicazione della logica `inAdmin`:
 // File 1
 if (Request::segment(1) === 'admin') { }
 
-// File 2  
+// File 2
 if (session('in_admin')) { }
 
 // File 3
@@ -251,8 +251,7 @@ if (inAdmin()) { }
 
 ---
 
-**Data Fix**: 2 Dicembre 2025  
-**Tipo**: Helper functions dependency  
-**Status**: ✅ Risolto - Composer autoload funzionante  
+**Data Fix**: 2 Dicembre 2025
+**Tipo**: Helper functions dependency
+**Status**: ✅ Risolto - Composer autoload funzionante
 **Priority**: CRITICA (bloccava composer)
-

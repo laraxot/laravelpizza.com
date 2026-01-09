@@ -1,4 +1,4 @@
-# Sistema Log Email 
+# Sistema Log Email
 
 ## Panoramica
 
@@ -510,4 +510,4 @@ class MailLogDebugger
 ## Vedi Anche
 - [Laravel Logging](https://laravel.com/project_docs/logging)
 - [Laravel Events](https://laravel.com/project_docs/events)
-- [Laravel Observers](https://laravel.com/project_docs/eloquent#observers) 
+- [Laravel Observers](https://laravel.com/project_docs/eloquent#observers)

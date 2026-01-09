@@ -151,7 +151,7 @@ use Modules\Geo\Models\Traits\HasAddress;
 class MyModel extends Model
 {
     use HasAddress;
-    
+
     // ...
 }
 ```

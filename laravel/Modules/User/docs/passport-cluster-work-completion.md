@@ -1,7 +1,7 @@
 # Passport Cluster - Completamento Lavoro
 
-**Data**: 2025-01-22  
-**Status**: ✅ Completato  
+**Data**: 2025-01-22
+**Status**: ✅ Completato
 **Metodologia**: Super Mucca
 
 ---
@@ -167,6 +167,6 @@ Alcune risorse non hanno tutte le pages standard:
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: ✅ Lavoro completato e documentato

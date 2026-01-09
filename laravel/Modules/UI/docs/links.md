@@ -65,4 +65,3 @@
   > Template, layout e risorse grafiche condivise per il tema "One".
 
 ---
-

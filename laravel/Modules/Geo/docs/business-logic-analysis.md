@@ -60,7 +60,7 @@ enum UserType: string
 class User extends BaseUser
 {
     use HasParent;
-    
+
     protected $casts = [
         'type' => UserType::class,
         'email_verified_at' => 'datetime',
@@ -121,13 +121,13 @@ class Studio extends Model
         'name', 'description', 'address', 'phone', 'email',
         'business_hours', 'specializations', 'settings'
     ];
-    
+
     // Relazioni con utenti e appuntamenti
     public function doctors(): BelongsToMany
     {
         return $this->belongsToMany(Doctor::class);
     }
-    
+
     public function appointments(): HasMany
     {
         return $this->hasMany(Appointment::class);
@@ -150,18 +150,18 @@ graph TD
     A[User] --> B[Doctor]
     A --> C[Patient]
     A --> D[Admin]
-    
+
     B --> E[Studio]
     C --> F[Appointment]
     B --> F
-    
+
     F --> G[Report]
     F --> H[Address]
-    
+
     E --> H
     B --> H
     C --> H
-    
+
     I[Team] --> A
     J[Tenant] --> A
 ```
@@ -293,12 +293,12 @@ class AppointmentPolicy
         if ($user->type === UserType::DOCTOR) {
             return $user->patients->contains($appointment->patient_id);
         }
-        
+
         // Pazienti possono vedere solo i propri appuntamenti
         if ($user->type === UserType::PATIENT) {
             return $user->id === $appointment->patient_id;
         }
-        
+
         return false;
     }
 }
@@ -487,8 +487,8 @@ La documentazione deve essere mantenuta aggiornata in:
 
 ---
 
-**Ultimo aggiornamento**: Dicembre 2024  
-**Versione**: 1.0.0  
-**Status**: Production Ready  
-**Business Logic**: Completa e documentata  
+**Ultimo aggiornamento**: Dicembre 2024
+**Versione**: 1.0.0
+**Status**: Production Ready
+**Business Logic**: Completa e documentata
 **Architettura**: Modulare e scalabile

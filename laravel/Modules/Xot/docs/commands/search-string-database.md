@@ -30,4 +30,4 @@ php artisan xot:search-string-in-database {search_string} {--table=} {--column=}
 ## Collegamenti
 - [Database Guidelines](../DATABASE-GUIDELINES.md)
 - [Performance Guidelines](../performance/database-queries.md)
-- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md) 
+- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)

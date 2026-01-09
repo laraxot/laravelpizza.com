@@ -56,7 +56,7 @@ return [
    return [
        'key' => 'value',
    ];
-   
+
    // ERRATO
    return array(
        'key' => 'value',
@@ -66,9 +66,9 @@ return [
 2. **Dichiarazione strict types**:
    ```php
    <?php
-   
+
    declare(strict_types=1);
-   
+
    return [
        'key' => 'value',
    ];
@@ -102,7 +102,7 @@ return [
    ```php
    // CORRETTO
    ->label(__('modulo::risorsa.fields.nome_campo.label'))
-   
+
    // ERRATO
    ->label('Etichetta hardcoded')
    ```
@@ -111,7 +111,7 @@ return [
    ```php
    // Nel ServiceProvider
    Blade::component('modulo::components.icons.nome-icona', 'modulo-nome-icona');
-   
+
    // Nel file di traduzione
    'icona' => 'modulo-nome-icona',
    ```

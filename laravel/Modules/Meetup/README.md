@@ -17,7 +17,7 @@ The module follows the Laraxot modular architecture pattern with specific front 
 
 - **Front Office**: Laravel Folio for routing (NO traditional controllers/routes in web.php/api.php), Laravel Volt for components
 - **Back Office**: Filament for admin panel and backend management
-- **Models**: `Event` model with event sourcing capabilities 
+- **Models**: `Event` model with event sourcing capabilities
 - **Actions**: Create, Update, Delete operations using action pattern
 - **Filament Resources**: Complete CRUD interface for event management
 - **Widgets**: Calendar widget for visual event representation
@@ -51,8 +51,8 @@ Events are tracked using the Activity module's event sourcing capabilities:
 
 ## Calendar Integration
 
-The calendar widget is based on the UI module's calendar implementation, 
-though currently disabled due to Filament v4 compatibility issues with the 
+The calendar widget is based on the UI module's calendar implementation,
+though currently disabled due to Filament v4 compatibility issues with the
 saade/filament-fullcalendar package.
 
 ## Usage

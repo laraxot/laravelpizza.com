@@ -38,7 +38,7 @@ public function register()
     // Accesso ai dati inseriti nel form
     $firstName = $this->data['first_name'] ?? null;
     $newsletter = $this->data['newsletter'] ?? false;
-    
+
     // Operazioni con i dati
     if ($firstName) {
         // Logica di registrazione...

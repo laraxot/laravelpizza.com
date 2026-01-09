@@ -13,4 +13,3 @@ Models: 0 | Resources: 0 | Services: 1 | Actions: 0 | Docs: 21
 - Docs minime e chiare ⭐
 
 **Status:** 🟢 PERFETTO per scope
-

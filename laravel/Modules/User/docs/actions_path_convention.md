@@ -47,13 +47,13 @@ MODULE_NAME="User"  # Sostituisci con il nome del modulo
 if [ -d "Modules/$MODULE_NAME/Actions" ]; then
     # Crea la directory corretta se non esiste
     mkdir -p "Modules/$MODULE_NAME/app/Actions"
-    
+
     # Sposta i file
     mv "Modules/$MODULE_NAME/Actions"/* "Modules/$MODULE_NAME/app/Actions/"
-    
+
     # Rimuovi la directory vuota
     rmdir "Modules/$MODULE_NAME/Actions"
-    
+
     echo "Actions spostate correttamente nella directory app/Actions/"
 else
     echo "Nessuna Action trovata nella posizione errata"

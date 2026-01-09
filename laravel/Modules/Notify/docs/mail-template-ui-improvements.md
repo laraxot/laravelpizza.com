@@ -99,7 +99,7 @@ Section::make('Informazioni Template')
    ```php
    // ❌ NON FARE QUESTO
    ->unique()
-   
+
    // ✅ FARE QUESTO
    ->unique(ignoreRecord: true)
    ->validationMessages([
@@ -111,7 +111,7 @@ Section::make('Informazioni Template')
    ```php
    // ❌ NON FARE QUESTO
    ->helperText('Slug')
-   
+
    // ✅ FARE QUESTO
    ->helperText('Lo slug deve essere unico e URL-friendly')
    ->suffixAction(
@@ -126,7 +126,7 @@ Section::make('Informazioni Template')
    // ❌ NON FARE QUESTO
    TextInput::make('name')
    TextInput::make('slug')
-   
+
    // ✅ FARE QUESTO
    Grid::make(2)
        ->schema([
@@ -173,4 +173,4 @@ Section::make('Informazioni Template')
 Per supporto tecnico:
 - Email: support@example.com
 - Documentazione: https://docs.example.com
-- Repository: https://github.com/organization/notify 
+- Repository: https://github.com/organization/notify

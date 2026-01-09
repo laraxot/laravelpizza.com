@@ -29,9 +29,9 @@ Questo approccio presenta diversi problemi:
 ### Esempio corretto ✅
 
 ```blade
-<x-filament::button 
-    size="sm" 
-    href="{{ route('register.type', ['type'=>$type]) }}" 
+<x-filament::button
+    size="sm"
+    href="{{ route('register.type', ['type'=>$type]) }}"
     tag="a"
 >
     {{ ucfirst($type) }}
@@ -100,8 +100,8 @@ Per la documentazione completa dei componenti, consultare:
 </x-filament::button>
 
 <!-- Bottone come link -->
-<x-filament::button 
-    href="{{ route('dashboard') }}" 
+<x-filament::button
+    href="{{ route('dashboard') }}"
     tag="a"
 >
     Vai alla Dashboard
@@ -148,9 +148,8 @@ Per domande o problemi con i componenti Filament:
 - [Regole per l'uso dei componenti Filament](../../../../docs/rules/filament-components.mdc)
 - [Documentazione Filament nel CMS](../../../../docs/filament/componenti-blade.md)
 - [Convenzioni namespace Filament](../convenzioni-namespace-filament.md)
-- [Personalizzazioni avanzate Filament](../filament-personalizzazioni-avanzate.md) 
+- [Personalizzazioni avanzate Filament](../filament-personalizzazioni-avanzate.md)
 
 ## Collegamenti tra versioni di componenti-blade.md
 * [componenti-blade.md](docs/filament/componenti-blade.md)
 * [componenti-blade.md](laravel/Modules/Cms/docs/filament/componenti-blade.md)
-

@@ -94,7 +94,7 @@ public function switchTeam(?TeamContract $team): bool
         $this->save();
         return true;
     }
-    
+
     if (! $this->belongsToTeam($team) && ! $this->ownsTeam($team)) {
         return false;
     }
@@ -147,7 +147,7 @@ trait HasTeams
 public function addTeamMember(UserContract $user, ?Role $role = null): Model
 {
     Assert::notNull($user, 'User cannot be null'); // ✅ Validazione
-    
+
     $teamUser = $this->teamUsers()->create([
         'user_id' => $user->getKey(),
         'role_id' => $role?->getKey(), // ✅ Null-safe
@@ -234,7 +234,7 @@ public function ownsTeam(TeamContract $team): bool { /* unica implementazione */
 - [x] ✅ Completare PHPDoc per tutte le relazioni
 - [x] ✅ Rimuovere metodi duplicati
 - [x] ✅ Fix gestione null in `switchTeam()`
-- [x] ✅ Rimuovere helper `app()` 
+- [x] ✅ Rimuovere helper `app()`
 - [x] ✅ Correggere proprietà `$this->owner`
 - [x] ✅ Separare logica getter/setter
 - [x] ✅ Testare compatibilità PHPStan livello 9+
@@ -299,6 +299,6 @@ Il trait `HasTeams` ora è:
 
 ---
 
-**Data correzione**: Gennaio 2025  
-**Status**: ✅ **COMPLETATO**  
+**Data correzione**: Gennaio 2025
+**Status**: ✅ **COMPLETATO**
 **Conformità**: Laraxot PTVX Philosophy, PHPStan Level 9+, Windsurf Rules

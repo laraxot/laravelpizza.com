@@ -1,7 +1,7 @@
 # AddressColumn Implementation Plan
 
-**Date**: 2025-12-12  
-**Module**: Geo  
+**Date**: 2025-12-12
+**Module**: Geo
 **Status**: 📋 **PLANNING**
 
 ## Overview
@@ -20,7 +20,7 @@ The `AddressItemEnum` defines all address-related fields but is **missing the cr
 // In CREATE block:
 AddressItemEnum::columns($table, null, true);
 
-// In UPDATE block:  
+// In UPDATE block:
 AddressItemEnum::columns($table, $this, true);
 ```
 
@@ -56,7 +56,7 @@ public static function columns(Blueprint $table, ?XotBaseMigration $migration = 
             $definition($table);
         }
     }
-    
+
     // Legacy compatibility fields
     if ($withLegacy) {
         self::addLegacyColumns($table, $migration);
@@ -75,7 +75,7 @@ trait AddressColumn
     {
         AddressItemEnum::columns($table, $migration);
     }
-    
+
     public static function addFullAddressColumns(Blueprint $table, ?XotBaseMigration $migration = null): void
     {
         AddressItemEnum::columns($table, $migration, true);
@@ -93,7 +93,7 @@ $table->string('route')->nullable();
 $table->string('locality')->nullable();
 // ... 15+ more lines
 
-// After  
+// After
 AddressItemEnum::columns($table, $this);
 ```
 

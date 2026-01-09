@@ -38,7 +38,6 @@ git commit -m "fix: remove lowercase duplicate test file (PSR-4 compliance)"
 
 ---
 
-**Riferimenti**: 
+**Riferimenti**:
 - [Xot File Naming Rules](../../Xot/docs/file-naming-case-sensitivity.md)
 - [Bashscripts Location Policy](../../Xot/docs/bashscripts-location-policy.md)
-

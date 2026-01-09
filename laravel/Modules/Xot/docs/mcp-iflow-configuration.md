@@ -143,7 +143,7 @@ def analyze_php_file(file_path: str) -> dict:
             text=True,
             cwd="/var/www/_bases/base_quaeris_fila4_mono/laravel"
         )
-        
+
         if result.returncode == 0:
             return {"status": "success", "errors": []}
         else:
@@ -176,14 +176,14 @@ def run_artisan_command(command: str, args: list = None) -> dict:
         cmd = ["php", "artisan", command]
         if args:
             cmd.extend(args)
-        
+
         result = subprocess.run(
             cmd,
             capture_output=True,
             text=True,
             cwd="/var/www/_bases/base_quaeris_fila4_mono/laravel"
         )
-        
+
         return {
             "status": "success" if result.returncode == 0 else "error",
             "output": result.stdout,
@@ -333,4 +333,3 @@ Aggiungere al file `~/.codeium/windsurf/mcp_config.json`:
 - [MCP Editors Configuration](./mcp-editors-configuration.md) - Configurazione generale editor
 - [MCP Claude Code Configuration](./mcp-claude-code-configuration.md) - Configurazione Claude Code
 - [MCP Integration Guide](./mcp-integration.md) - Integrazione MCP nel codice PHP
-

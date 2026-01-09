@@ -8,13 +8,13 @@ Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzar
 
 - **PascalCase**: Prima lettera maiuscola, senza spazi o separatori (es. `UserProfile`)
   - Usato per: Nomi di classi, interfacce, enumerazioni, nomi dei moduli
-  
+
 - **camelCase**: Prima lettera minuscola, senza spazi o separatori (es. `getUserProfile`)
   - Usato per: Metodi, funzioni, proprietà non statiche
-  
+
 - **snake_case**: Tutte le lettere minuscole, parole separate da underscore (es. `user_profile`)
   - Usato per: Variabili, costanti di classe (non globali), nomi di file delle viste, tabelle del database, colonne del database
-  
+
 - **UPPER_SNAKE_CASE**: Tutte le lettere maiuscole, parole separate da underscore (es. `MAX_LOGIN_ATTEMPTS`)
   - Usato per: Costanti globali, enums
 
@@ -39,7 +39,7 @@ namespace Modules\NomeModulo;
 
 Il service provider principale di un modulo deve:
 
-1. Avere il nome che termina con `ServiceProvider` 
+1. Avere il nome che termina con `ServiceProvider`
 2. Estendere `XotBaseServiceProvider`
 3. Definire una proprietà `$name` con il nome del modulo in **PascalCase**
 

@@ -66,10 +66,10 @@ I componenti SVG supportano tutti gli attributi HTML standard, inclusi:
 ### Esempio con Attributi
 
 ```blade
-<x-ui-flags.it 
-    class="h-6 w-6 rounded-full shadow-sm" 
-    title="Italiano" 
-    aria-label="Seleziona lingua italiana" 
+<x-ui-flags.it
+    class="h-6 w-6 rounded-full shadow-sm"
+    title="Italiano"
+    aria-label="Seleziona lingua italiana"
 />
 ```
 

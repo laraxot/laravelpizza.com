@@ -18,19 +18,19 @@ Il file `Modules/Lang/app/Filament/Resources/TranslationFileResource/Pages/EditT
         // Salva le traduzioni nel file
         try {
             $this->record->saveTranslations($data['content']);
-            
+
             Notification::make()
                 ->title('Traduzioni salvate con successo')
                 ->success()
                 ->send();
-                
+
         } catch (\Exception $e) {
             Notification::make()
                 ->title('Errore durante il salvataggio')
                 ->body($e->getMessage())
                 ->danger()
                 ->send();
-                
+
             // Previeni il salvataggio se c'è un errore
             $this->halt();
         }
@@ -87,6 +87,5 @@ Il file `Modules/Lang/app/Filament/Resources/TranslationFileResource/Pages/EditT
 
 - [conflict-resolution-autolabelaction.md](conflict-resolution-autolabelaction.md)
 - [conflict-resolution-edit-translation-file.md](conflict-resolution-edit-translation-file.md)
-
 
 *Ultimo aggiornamento: 29 luglio 2025*

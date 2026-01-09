@@ -1,7 +1,7 @@
 # PHPStan Corrections - Tenant Module - Gennaio 2025
 
-**Data**: 2025-01-10  
-**Modulo**: Tenant  
+**Data**: 2025-01-10
+**Modulo**: Tenant
 **Errori Risolti**: 1
 
 ---
@@ -46,4 +46,3 @@ public static function getConfigNames(): array
 ---
 
 *Ultimo aggiornamento: 2025-01-10*
-

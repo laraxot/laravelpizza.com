@@ -11,11 +11,11 @@ class SmsData extends Data
     public string $from;
     public string $to;
     public string $body;
-    
+
     public function getAction(): SmsActionInterface
     {
         $driver = Config::get('sms.default', 'smsfactor');
-        
+
         return match ($driver) {
             'smsfactor' => app(SendSmsFactorSMSAction::class),
             'twilio' => app(SendTwilioSMSAction::class),
@@ -56,7 +56,7 @@ public function send($notifiable, Notification $notification)
 1. **Violazione del principio di Responsabilità Singola (25%)**: Il DTO assume due responsabilità distinte:
    - Contenere i dati del messaggio SMS
    - Selezionare l'implementazione dell'azione appropriata
-   
+
    Questo viola il principio SRP, che stabilisce che una classe dovrebbe avere una sola ragione per cambiare.
 
 2. **Accoppiamento con la configurazione del sistema (15%)**: Il DTO dipende direttamente dalla configurazione dell'applicazione (`Config::get()`), rendendo più difficile il suo utilizzo in contesti diversi (ad esempio, test unitari o ambienti isolati).
@@ -74,7 +74,7 @@ class SmsActionFactory
     public function create(?string $driver = null): SmsActionInterface
     {
         $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-        
+
         return match ($driver) {
             'smsfactor' => app(SendSmsFactorSMSAction::class),
             'twilio' => app(SendTwilioSMSAction::class),
@@ -129,15 +129,15 @@ public function send($notifiable, Notification $notification)
 public function send($notifiable, Notification $notification)
 {
     $smsData = $notification->toSms($notifiable);
-    
+
     $driver = Config::get('sms.default', 'smsfactor');
-    
+
     $action = match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
         // altri driver...
     };
-    
+
     return $action->execute($smsData);
 }
 ```

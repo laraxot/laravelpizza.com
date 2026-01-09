@@ -1,7 +1,7 @@
 # Testing - Documentazione Consolidata DRY + KISS
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTE le regole di testing del progetto
-> 
+>
 > **🔗 Riferimenti**: [coding-standards.md](coding-standards.md) | [best-practices.md](best-practices.md)
 
 ## 🚨 STOP DUPLICAZIONE!
@@ -541,9 +541,9 @@ public function it_uses_eager_loading(): void
 
     // Act & Assert
     DB::enableQueryLog();
-    
+
     $usersWithExamples = User::with('examples')->get();
-    
+
     $this->assertCount(5, $usersWithExamples);
     $this->assertLessThan(10, count(DB::getQueryLog())); // N+1 query prevention
 }
@@ -566,7 +566,7 @@ public function it_does_not_memory_leak(): void
     // Assert
     $finalMemory = memory_get_usage();
     $memoryIncrease = $finalMemory - $initialMemory;
-    
+
     $this->assertLessThan(10 * 1024 * 1024, $memoryIncrease); // Max 10MB increase
 }
 ```
@@ -581,7 +581,7 @@ public function it_does_not_memory_leak(): void
 class ExampleTest extends TestCase
 {
     use RefreshDatabase; // Garantisce database pulito
-    
+
     protected function setUp(): void
     {
         parent::setUp();

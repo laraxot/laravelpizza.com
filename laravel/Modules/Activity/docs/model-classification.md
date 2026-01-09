@@ -4,7 +4,7 @@
 
 ### ✅ Core Business Entities
 - **Activity** - User activity tracking
-- **Snapshot** - System state snapshots  
+- **Snapshot** - System state snapshots
 - **StoredEvent** - Event sourcing storage
 
 ## Base Classes (No Factories/Seeders Needed)

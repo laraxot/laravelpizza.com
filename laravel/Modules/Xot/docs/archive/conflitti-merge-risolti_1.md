@@ -1,4 +1,4 @@
-# Risoluzione Conflitti di Merge 
+# Risoluzione Conflitti di Merge
 
 # Risoluzione Conflitti di Merge in <main module>
 
@@ -85,7 +85,6 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 3. Il funzionamento dei metodi principali
 4. La gestione corretta delle eccezioni
 5. La compatibilità con PHPStan a livello massimo
-
 
 ## Prevenzione di Problemi Futuri
 

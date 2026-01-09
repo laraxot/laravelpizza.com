@@ -55,7 +55,7 @@ Il modulo UI è il sistema di componenti e interfacce utente condivisi di Salute
 
 ### 1. **Widget System - Gestione Widget Filament**
 - **Responsabilità**: Fornire widget riutilizzabili per dashboard
-- **Business Logic**: 
+- **Business Logic**:
   - Gestione stato widget
   - Gestione configurazione widget
   - Gestione dati widget
@@ -234,11 +234,10 @@ Il modulo UI è il sistema di componenti e interfacce utente condivisi di Salute
 **Ultimo aggiornamento**: Dicembre 2024
 **Versione**: 1.0
 **Stato**: In Progress
-**Responsabile**: Team Sviluppo 
+**Responsabile**: Team Sviluppo
 **Responsabile**: Team Sviluppo SaluteOra
-**Responsabile**: Team Sviluppo 
+**Responsabile**: Team Sviluppo
 **Responsabile**: Team Sviluppo SaluteOra
-**Responsabile**: Team Sviluppo 
+**Responsabile**: Team Sviluppo
 **Responsabile**: Team Sviluppo SaluteOra
 **Prossima Revisione**: Gennaio 2025
-

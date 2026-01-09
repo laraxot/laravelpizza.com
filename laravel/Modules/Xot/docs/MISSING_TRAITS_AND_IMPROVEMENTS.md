@@ -17,7 +17,7 @@ namespace Modules\Xot\Traits;
 
 /**
  * Trait per implementare il pattern Singleton in modo type-safe.
- * 
+ *
  * @template T of object
  * @mixin T
  */
@@ -28,7 +28,7 @@ trait SingletonTrait
 
     /**
      * Get the singleton instance.
-     * 
+     *
      * @return static
      */
     public static function getInstance(): static
@@ -41,7 +41,7 @@ trait SingletonTrait
 
     /**
      * Create or get the singleton instance.
-     * 
+     *
      * @return static
      */
     public static function make(): static
@@ -65,7 +65,7 @@ trait SingletonTrait
 class LimeJsonService
 {
     use SingletonTrait;
-    
+
     // Rimuovere getInstance() e make() duplicati
 }
 
@@ -73,7 +73,7 @@ class LimeJsonService
 class QuaerisService
 {
     use SingletonTrait;
-    
+
     // Rimuovere getInstance() e make() duplicati
 }
 ```
@@ -154,7 +154,7 @@ trait HasFormSchemaTrait
 {
     /**
      * Get common form fields based on model attributes.
-     * 
+     *
      * @return array<string, Component>
      */
     public function getCommonFormFields(): array
@@ -231,7 +231,7 @@ trait HasTableColumnsTrait
 {
     /**
      * Get common table columns based on model attributes.
-     * 
+     *
      * @return array<string, Column>
      */
     public function getCommonTableColumns(): array
@@ -307,7 +307,7 @@ trait HasQueryOptimizationTrait
 {
     /**
      * Eager load common relationships to prevent N+1 queries.
-     * 
+     *
      * @param array<string> $additionalRelations
      */
     public function scopeWithCommonRelations(Builder $query, array $additionalRelations = []): Builder
@@ -367,7 +367,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Base repository class for common database operations.
- * 
+ *
  * @template T of Model
  */
 abstract class BaseRepository
@@ -397,7 +397,7 @@ abstract class BaseRepository
 
     /**
      * Get all records.
-     * 
+     *
      * @return Collection<int, Model>
      */
     public function all(): Collection
@@ -407,7 +407,7 @@ abstract class BaseRepository
 
     /**
      * Create a new record.
-     * 
+     *
      * @param array<string, mixed> $data
      */
     public function create(array $data): Model
@@ -417,7 +417,7 @@ abstract class BaseRepository
 
     /**
      * Update a record.
-     * 
+     *
      * @param array<string, mixed> $data
      */
     public function update(Model $model, array $data): bool
@@ -459,7 +459,7 @@ use Modules\Xot\Repositories\BaseRepository;
 
 /**
  * Base service class for business logic.
- * 
+ *
  * @template T of \Illuminate\Database\Eloquent\Model
  */
 abstract class BaseService
@@ -538,7 +538,7 @@ touch laravel/Modules/Xot/app/Traits/SingletonTrait.php
 class LimeJsonService
 {
     use SingletonTrait;
-    
+
     // Rimuovere getInstance() e make() duplicati
     // Mantenere solo la logica specifica
 }
@@ -547,7 +547,7 @@ class LimeJsonService
 class QuaerisService
 {
     use SingletonTrait;
-    
+
     // Rimuovere getInstance() e make() duplicati
     // Mantenere solo la logica specifica
 }
@@ -618,7 +618,7 @@ class AlertWidget extends BaseTableWidget
 
 ---
 
-**Data Creazione**: 2025-01-06  
-**Priorità**: CRITICA  
-**Effort Stimato**: 20-30 ore  
+**Data Creazione**: 2025-01-06
+**Priorità**: CRITICA
+**Effort Stimato**: 20-30 ore
 **Benefici**: ALTI

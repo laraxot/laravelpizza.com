@@ -318,7 +318,7 @@ protected function schedule(Schedule $schedule)
     // Controlla e risolve i mercati scaduti ogni ora
     $schedule->command('markets:resolve-expired')
              ->hourly();
-             
+
     // Esegui il backup degli eventi ogni giorno
     $schedule->command('event-sourcing:backup')
              ->dailyAt('02:00');

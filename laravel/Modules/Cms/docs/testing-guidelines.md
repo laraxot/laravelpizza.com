@@ -100,19 +100,19 @@ describe('Section Business Logic', function () {
 
     it('orders sections correctly', function () {
         $page = Page::factory()->create();
-        
+
         $section1 = Section::factory()->create([
             'page_id' => $page->id,
             'order' => 1,
         ]);
-        
+
         $section2 = Section::factory()->create([
             'page_id' => $page->id,
             'order' => 2,
         ]);
 
         $orderedSections = $page->sections()->orderBy('order')->get();
-        
+
         expect($orderedSections->first()->id)->toBe($section1->id)
             ->and($orderedSections->last()->id)->toBe($section2->id);
     });
@@ -128,7 +128,7 @@ describe('Section Business Logic', function () {
         ]);
 
         $rendered = $section->render();
-        
+
         expect($rendered)->toContain('/images/test.jpg')
             ->and($rendered)->toContain('Test image')
             ->and($rendered)->toContain('Test caption');
@@ -162,7 +162,7 @@ describe('Menu Business Logic', function () {
         $menu3 = Menu::factory()->create(['order' => 3]);
 
         $navigation = Menu::getNavigationTree();
-        
+
         expect($navigation)->toHaveCount(3)
             ->and($navigation->first()->id)->toBe($menu1->id)
             ->and($navigation->last()->id)->toBe($menu3->id);
@@ -179,7 +179,7 @@ describe('Menu Business Logic', function () {
 
         $publicNavigation = Menu::getNavigationForRole('guest');
         $adminNavigation = Menu::getNavigationForRole('admin');
-        
+
         expect($publicNavigation)->toHaveCount(1)
             ->and($adminNavigation)->toHaveCount(2);
     });
@@ -208,7 +208,7 @@ describe('Configuration Business Logic', function () {
 
     it('provides default values for missing config', function () {
         $value = Conf::get('nonexistent.key', 'default_value');
-        
+
         expect($value)->toBe('default_value');
     });
 });
@@ -241,9 +241,9 @@ describe('Multi-Language Business Logic', function () {
         ]);
 
         app()->setLocale('fr'); // Non-existing translation
-        
+
         $page = Page::getBySlug($defaultPage->slug);
-        
+
         expect($page->title)->toBe('Default Title');
     });
 });
@@ -262,14 +262,14 @@ describe('Frontend Integration', function () {
         ]);
 
         $response = $this->get('/test-page');
-        
+
         $response->assertStatus(200)
             ->assertSee('Test Page');
     });
 
     it('handles 404 for non-existent pages', function () {
         $response = $this->get('/non-existent-page');
-        
+
         $response->assertStatus(404);
     });
 
@@ -280,7 +280,7 @@ describe('Frontend Integration', function () {
         ]);
 
         $response = $this->get('/draft-page');
-        
+
         $response->assertStatus(404);
     });
 });
@@ -291,7 +291,7 @@ describe('Frontend Integration', function () {
 describe('Admin Interface Integration', function () {
     it('allows admin to create pages', function () {
         $admin = User::factory()->admin()->create();
-        
+
         $this->actingAs($admin)
             ->post('/admin/pages', [
                 'title' => 'New Page',
@@ -305,7 +305,7 @@ describe('Admin Interface Integration', function () {
 
     it('prevents guests from accessing admin', function () {
         $response = $this->get('/admin/pages');
-        
+
         $response->assertRedirect('/login');
     });
 });
@@ -318,24 +318,24 @@ describe('Admin Interface Integration', function () {
 describe('Performance and Caching', function () {
     it('caches page content efficiently', function () {
         $page = Page::factory()->create();
-        
+
         // First load - should cache
         $startTime = microtime(true);
         $content1 = $page->getCachedContent();
         $firstLoadTime = microtime(true) - $startTime;
-        
+
         // Second load - should use cache
         $startTime = microtime(true);
         $content2 = $page->getCachedContent();
         $secondLoadTime = microtime(true) - $startTime;
-        
+
         expect($content1)->toBe($content2)
             ->and($secondLoadTime)->toBeLessThan($firstLoadTime);
     });
 
     it('handles large content efficiently', function () {
         $largeContent = str_repeat('Large content block. ', 1000);
-        
+
         $page = Page::factory()->create([
             'content' => $largeContent,
         ]);
@@ -343,7 +343,7 @@ describe('Performance and Caching', function () {
         $startTime = microtime(true);
         $rendered = $page->render();
         $renderTime = microtime(true) - $startTime;
-        
+
         expect($renderTime)->toBeLessThan(1.0) // 1 second max
             ->and($rendered)->toContain('Large content block.');
     });

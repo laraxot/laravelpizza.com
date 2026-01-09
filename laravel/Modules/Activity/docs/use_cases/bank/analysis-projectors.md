@@ -125,7 +125,7 @@ class SendThankYouEmail extends Reactor
     public function onMoneyDeposited(MoneyDeposited $event)
     {
         $account = Account::where('uuid', $event->accountUuid)->first();
-        
+
         if (! $account) {
             return;
         }
@@ -146,9 +146,9 @@ class SendThankYouEmail extends Reactor
 public function it_can_project_an_account_creation()
 {
     $uuid = Str::uuid();
-    
+
     event(new AccountCreated($uuid, 'Mario Rossi'));
-    
+
     $this->assertDatabaseHas('accounts', [
         'uuid' => $uuid,
         'account_holder' => 'Mario Rossi',
@@ -160,9 +160,9 @@ public function it_can_project_an_account_creation()
 public function it_can_project_a_deposit()
 {
     $account = Account::factory()->create(['balance' => 0]);
-    
+
     event(new MoneyDeposited($account->uuid, 1000, 'Deposito iniziale'));
-    
+
     $this->assertDatabaseHas('accounts', [
         'uuid' => $account->uuid,
         'balance' => 1000,

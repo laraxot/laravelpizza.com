@@ -426,4 +426,3 @@ cp Modules/Xot/docs/windsurf-mcp-config.json ~/.codeium/windsurf/mcp_config.json
 - [MCP Server Recommended](./mcp-server-recommended.md) - Server consigliati per moduli
 - [Model Context Protocol](./model-context-protocol.md) - Panoramica generale MCP
 - [PHPStan Level 10 Success](./phpstan-level10-success-nov2025.md) - Successo PHPStan Level 10
-

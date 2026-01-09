@@ -109,11 +109,11 @@
 
 ### Tooltip
 ```html
-<button 
-  type="button" 
-  class="btn btn-secondary" 
-  data-bs-toggle="tooltip" 
-  data-bs-placement="top" 
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-bs-toggle="tooltip"
+  data-bs-placement="top"
   title="Tooltip in alto"
 >
   Tooltip
@@ -122,11 +122,11 @@
 
 ### Popover
 ```html
-<button 
-  type="button" 
-  class="btn btn-secondary" 
-  data-bs-toggle="popover" 
-  data-bs-placement="right" 
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-bs-toggle="popover"
+  data-bs-placement="right"
   data-bs-content="Contenuto del popover"
   title="Titolo Popover"
 >
@@ -139,12 +139,12 @@
 ### Progress Bar
 ```html
 <div class="progress">
-  <div 
-    class="progress-bar progress-bar-striped progress-bar-animated" 
-    role="progressbar" 
-    style="width: 75%" 
-    aria-valuenow="75" 
-    aria-valuemin="0" 
+  <div
+    class="progress-bar progress-bar-striped progress-bar-animated"
+    role="progressbar"
+    style="width: 75%"
+    aria-valuenow="75"
+    aria-valuemin="0"
     aria-valuemax="100"
   >
     75%
@@ -206,4 +206,4 @@ $zindex-tooltip: 1070;
 - [Componenti Base](./base-components.md)
 - [Layout](./layout-components.md)
 - [Accessibilità](./standards/accessibility.md)
-- [Performance](./standards/performance.md) 
+- [Performance](./standards/performance.md)

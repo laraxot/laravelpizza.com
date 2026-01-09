@@ -1,4 +1,3 @@
-
 # Script di Risoluzione Conflitti Git - FixCity Project
 
 ## Panoramica
@@ -100,215 +99,12 @@ Contenuto aggiornato con riferimenti corretti al progetto.
 #### File SVG
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     fill="none" 
-     viewBox="0 0 24 24" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
      stroke="currentColor"
      stroke-width="1.5"
-     aria-hidden="true" 
-     role="img"
-     aria-label="Description">
-    <!-- Contenuto SVG -->
-</svg>
-```
-
-## Comandi Utili
-
-### Verifica Sintassi PHP
-```bash
-# Verifica singolo file
-php -l path/to/file.php
-
-# Verifica tutti i file PHP modificati
-find . -name "*.php" -exec php -l {} \;
-```
-
-
-# 🐄 SUPER MUCCA - Script Risoluzione Conflitti Git
-# Script di Risoluzione Conflitti Git - FixCity Project
-
-# Script di Risoluzione Conflitti Git - FixCity Project
-
-# Script di Risoluzione Conflitti Git - FixCity Project
-
-# Script di Risoluzione Conflitti Git - FixCity Project
-
-# Script di Risoluzione Conflitti Git - FixCity Project
-
-
-## Panoramica
-
-Questo documento fornisce una guida sistematica per la risoluzione dei conflitti Git nel progetto FixCity, basata sull'esperienza acquisita durante la risoluzione di 161 file con conflitti.
-
-## Workflow Sistematico
-
-### 1. Identificazione Conflitti
-
-```bash
-# Trova tutti i file con conflitti Git
-git status --porcelain | grep "^UU\|^AA\|^DD"
-
-# Lista dettagliata dei conflitti
-git diff --name-only --diff-filter=U
-
-# Conta i conflitti per categoria
-grep -r "&lt;&lt;&lt; HEAD" --include="*.php" . | wc -l
-grep -r "&lt;&lt;&lt; HEAD" --include="*.md" . | wc -l
-grep -r "&lt;&lt;&lt; HEAD" --include="*.svg" . | wc -l
-```
-
-### 2. Categorizzazione per Priorità
-
-**Priorità 1 - File Critici**
-- `composer.json`
-- File di configurazione (`config/`)
-- File `.env`
-- Service Provider
-
-**Priorità 2 - Logica Business**
-- Models
-- Services
-- Controllers
-- Migrations
-
-**Priorità 3 - Interfaccia**
-- Views Blade
-- Componenti Filament
-- Assets (CSS, JS)
-
-**Priorità 4 - Documentazione**
-- File `.md`
-- README
-- Changelog
-
-**Priorità 5 - Assets**
-- File SVG
-- Immagini
-- File statici
-
-### 3. Strategie di Risoluzione
-
-#### File PHP
-```php
-<?php
-
-declare(strict_types=1);
-
-// 1. Mantenere sempre declare(strict_types=1)
-// 2. Usare type hints espliciti
-// 3. Seguire PSR-12
-// 4. Aggiungere PHPDoc per metodi pubblici
-```
-
-
-
-# Script di Risoluzione Conflitti Git - FixCity Project
-
-## Panoramica
-
-Questo documento fornisce una guida sistematica per la risoluzione dei conflitti Git nel progetto FixCity, basata sull'esperienza acquisita durante la risoluzione di 161 file con conflitti.
-
-## Workflow Sistematico
-
-### 1. Identificazione Conflitti
-
-```bash
-# Trova tutti i file con conflitti Git
-git status --porcelain | grep "^UU\|^AA\|^DD"
-
-# Lista dettagliata dei conflitti
-git diff --name-only --diff-filter=U
-
-# Conta i conflitti per categoria
-grep -r "&lt;&lt;&lt; HEAD" --include="*.php" . | wc -l
-grep -r "&lt;&lt;&lt; HEAD" --include="*.md" . | wc -l
-grep -r "&lt;&lt;&lt; HEAD" --include="*.svg" . | wc -l
-```
-
-### 2. Categorizzazione per Priorità
-
-**Priorità 1 - File Critici**
-- `composer.json`
-- File di configurazione (`config/`)
-- File `.env`
-- Service Provider
-
-**Priorità 2 - Logica Business**
-- Models
-- Services
-- Controllers
-- Migrations
-
-**Priorità 3 - Interfaccia**
-- Views Blade
-- Componenti Filament
-- Assets (CSS, JS)
-
-**Priorità 4 - Documentazione**
-- File `.md`
-- README
-- Changelog
-
-**Priorità 5 - Assets**
-- File SVG
-- Immagini
-- File statici
-
-### 3. Strategie di Risoluzione
-
-#### File PHP
-```php
-<?php
-
-declare(strict_types=1);
-
-// 1. Mantenere sempre declare(strict_types=1)
-// 2. Usare type hints espliciti
-// 3. Seguire PSR-12
-// 4. Aggiungere PHPDoc per metodi pubblici
-```
-
-#### File di Configurazione
-```php
-<?php
-
-declare(strict_types=1);
-
-return [
-    /*
-     * |--------------------------------------------------------------------------
-     * | Section Name
-     * |--------------------------------------------------------------------------
-     * |
-     * | Description
-     * |
-     */
-    'key' => 'value',
-];
-```
-
-#### File di Documentazione
-```markdown
-# Titolo Documento - FixCity Project
-
-## Sezione
-
-Contenuto aggiornato con riferimenti corretti al progetto.
-
-## Collegamenti
-- [Documento Correlato](./related-document.md)
-- [Architettura](../architecture.md)
-```
-
-#### File SVG
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     fill="none" 
-     viewBox="0 0 24 24" 
-     stroke="currentColor"
-     stroke-width="1.5"
-     aria-hidden="true" 
+     aria-hidden="true"
      role="img"
      aria-label="Description">
     <!-- Contenuto SVG -->
@@ -337,12 +133,71 @@ find . -name "*.php" -exec php -l {} \;
 
 # Script di Risoluzione Conflitti Git - FixCity Project
 
-# Script di Risoluzione Conflitti Git - FixCity Project
+## Panoramica
+
+Questo documento fornisce una guida sistematica per la risoluzione dei conflitti Git nel progetto FixCity, basata sull'esperienza acquisita durante la risoluzione di 161 file con conflitti.
+
+## Workflow Sistematico
+
+### 1. Identificazione Conflitti
+
+```bash
+# Trova tutti i file con conflitti Git
+git status --porcelain | grep "^UU\|^AA\|^DD"
+
+# Lista dettagliata dei conflitti
+git diff --name-only --diff-filter=U
+
+# Conta i conflitti per categoria
+grep -r "&lt;&lt;&lt; HEAD" --include="*.php" . | wc -l
+grep -r "&lt;&lt;&lt; HEAD" --include="*.md" . | wc -l
+grep -r "&lt;&lt;&lt; HEAD" --include="*.svg" . | wc -l
+```
+
+### 2. Categorizzazione per Priorità
+
+**Priorità 1 - File Critici**
+- `composer.json`
+- File di configurazione (`config/`)
+- File `.env`
+- Service Provider
+
+**Priorità 2 - Logica Business**
+- Models
+- Services
+- Controllers
+- Migrations
+
+**Priorità 3 - Interfaccia**
+- Views Blade
+- Componenti Filament
+- Assets (CSS, JS)
+
+**Priorità 4 - Documentazione**
+- File `.md`
+- README
+- Changelog
+
+**Priorità 5 - Assets**
+- File SVG
+- Immagini
+- File statici
+
+### 3. Strategie di Risoluzione
+
+#### File PHP
+```php
+<?php
+
+declare(strict_types=1);
+
+// 1. Mantenere sempre declare(strict_types=1)
+// 2. Usare type hints espliciti
+// 3. Seguire PSR-12
+// 4. Aggiungere PHPDoc per metodi pubblici
+```
 
 # Script di Risoluzione Conflitti Git - FixCity Project
-
-# Script di Risoluzione Conflitti Git - FixCity Project
-
 
 ## Panoramica
 
@@ -408,7 +263,6 @@ declare(strict_types=1);
 // 4. Aggiungere PHPDoc per metodi pubblici
 ```
 
-
 #### File di Configurazione
 ```php
 <?php
@@ -444,12 +298,12 @@ Contenuto aggiornato con riferimenti corretti al progetto.
 #### File SVG
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     fill="none" 
-     viewBox="0 0 24 24" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
      stroke="currentColor"
      stroke-width="1.5"
-     aria-hidden="true" 
+     aria-hidden="true"
      role="img"
      aria-label="Description">
     <!-- Contenuto SVG -->
@@ -466,11 +320,23 @@ php -l path/to/file.php
 # Verifica tutti i file PHP modificati
 find . -name "*.php" -exec php -l {} \;
 ```
-
 
 # 🐄 SUPER MUCCA - Script Risoluzione Conflitti Git
 # Script di Risoluzione Conflitti Git - FixCity Project
 
+# Script di Risoluzione Conflitti Git - FixCity Project
+
+# Script di Risoluzione Conflitti Git - FixCity Project
+
+# Script di Risoluzione Conflitti Git - FixCity Project
+
+# Script di Risoluzione Conflitti Git - FixCity Project
+
+# Script di Risoluzione Conflitti Git - FixCity Project
+
+# Script di Risoluzione Conflitti Git - FixCity Project
+
+# Script di Risoluzione Conflitti Git - FixCity Project
 
 ## Panoramica
 
@@ -571,12 +437,12 @@ Contenuto aggiornato con riferimenti corretti al progetto.
 #### File SVG
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     fill="none" 
-     viewBox="0 0 24 24" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
      stroke="currentColor"
      stroke-width="1.5"
-     aria-hidden="true" 
+     aria-hidden="true"
      role="img"
      aria-label="Description">
     <!-- Contenuto SVG -->
@@ -593,12 +459,10 @@ php -l path/to/file.php
 # Verifica tutti i file PHP modificati
 find . -name "*.php" -exec php -l {} \;
 ```
-
 
 # 🐄 SUPER MUCCA - Script Risoluzione Conflitti Git
 # Script di Risoluzione Conflitti Git - FixCity Project
 
-
 ## Panoramica
 
 Questo documento fornisce una guida sistematica per la risoluzione dei conflitti Git nel progetto FixCity, basata sull'esperienza acquisita durante la risoluzione di 161 file con conflitti.
@@ -698,12 +562,12 @@ Contenuto aggiornato con riferimenti corretti al progetto.
 #### File SVG
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     fill="none" 
-     viewBox="0 0 24 24" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
      stroke="currentColor"
      stroke-width="1.5"
-     aria-hidden="true" 
+     aria-hidden="true"
      role="img"
      aria-label="Description">
     <!-- Contenuto SVG -->
@@ -720,12 +584,10 @@ php -l path/to/file.php
 # Verifica tutti i file PHP modificati
 find . -name "*.php" -exec php -l {} \;
 ```
-
 
 # 🐄 SUPER MUCCA - Script Risoluzione Conflitti Git
 # Script di Risoluzione Conflitti Git - FixCity Project
 
-
 ## Panoramica
 
 Questo documento fornisce una guida sistematica per la risoluzione dei conflitti Git nel progetto FixCity, basata sull'esperienza acquisita durante la risoluzione di 161 file con conflitti.
@@ -825,12 +687,12 @@ Contenuto aggiornato con riferimenti corretti al progetto.
 #### File SVG
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     fill="none" 
-     viewBox="0 0 24 24" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
      stroke="currentColor"
      stroke-width="1.5"
-     aria-hidden="true" 
+     aria-hidden="true"
      role="img"
      aria-label="Description">
     <!-- Contenuto SVG -->
@@ -847,11 +709,134 @@ php -l path/to/file.php
 # Verifica tutti i file PHP modificati
 find . -name "*.php" -exec php -l {} \;
 ```
-
 
 # 🐄 SUPER MUCCA - Script Risoluzione Conflitti Git
 # Script di Risoluzione Conflitti Git - FixCity Project
 
+## Panoramica
+
+Questo documento fornisce una guida sistematica per la risoluzione dei conflitti Git nel progetto FixCity, basata sull'esperienza acquisita durante la risoluzione di 161 file con conflitti.
+
+## Workflow Sistematico
+
+### 1. Identificazione Conflitti
+
+```bash
+# Trova tutti i file con conflitti Git
+git status --porcelain | grep "^UU\|^AA\|^DD"
+
+# Lista dettagliata dei conflitti
+git diff --name-only --diff-filter=U
+
+# Conta i conflitti per categoria
+grep -r "&lt;&lt;&lt; HEAD" --include="*.php" . | wc -l
+grep -r "&lt;&lt;&lt; HEAD" --include="*.md" . | wc -l
+grep -r "&lt;&lt;&lt; HEAD" --include="*.svg" . | wc -l
+```
+
+### 2. Categorizzazione per Priorità
+
+**Priorità 1 - File Critici**
+- `composer.json`
+- File di configurazione (`config/`)
+- File `.env`
+- Service Provider
+
+**Priorità 2 - Logica Business**
+- Models
+- Services
+- Controllers
+- Migrations
+
+**Priorità 3 - Interfaccia**
+- Views Blade
+- Componenti Filament
+- Assets (CSS, JS)
+
+**Priorità 4 - Documentazione**
+- File `.md`
+- README
+- Changelog
+
+**Priorità 5 - Assets**
+- File SVG
+- Immagini
+- File statici
+
+### 3. Strategie di Risoluzione
+
+#### File PHP
+```php
+<?php
+
+declare(strict_types=1);
+
+// 1. Mantenere sempre declare(strict_types=1)
+// 2. Usare type hints espliciti
+// 3. Seguire PSR-12
+// 4. Aggiungere PHPDoc per metodi pubblici
+```
+
+#### File di Configurazione
+```php
+<?php
+
+declare(strict_types=1);
+
+return [
+    /*
+     * |--------------------------------------------------------------------------
+     * | Section Name
+     * |--------------------------------------------------------------------------
+     * |
+     * | Description
+     * |
+     */
+    'key' => 'value',
+];
+```
+
+#### File di Documentazione
+```markdown
+# Titolo Documento - FixCity Project
+
+## Sezione
+
+Contenuto aggiornato con riferimenti corretti al progetto.
+
+## Collegamenti
+- [Documento Correlato](./related-document.md)
+- [Architettura](../architecture.md)
+```
+
+#### File SVG
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
+     stroke="currentColor"
+     stroke-width="1.5"
+     aria-hidden="true"
+     role="img"
+     aria-label="Description">
+    <!-- Contenuto SVG -->
+</svg>
+```
+
+## Comandi Utili
+
+### Verifica Sintassi PHP
+```bash
+# Verifica singolo file
+php -l path/to/file.php
+
+# Verifica tutti i file PHP modificati
+find . -name "*.php" -exec php -l {} \;
+```
+
+# 🐄 SUPER MUCCA - Script Risoluzione Conflitti Git
+# Script di Risoluzione Conflitti Git - FixCity Project
 
 ## Panoramica
 
@@ -952,12 +937,12 @@ Contenuto aggiornato con riferimenti corretti al progetto.
 #### File SVG
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     fill="none" 
-     viewBox="0 0 24 24" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
      stroke="currentColor"
      stroke-width="1.5"
-     aria-hidden="true" 
+     aria-hidden="true"
      role="img"
      aria-label="Description">
     <!-- Contenuto SVG -->
@@ -974,22 +959,11 @@ php -l path/to/file.php
 # Verifica tutti i file PHP modificati
 find . -name "*.php" -exec php -l {} \;
 ```
-
-
 
 ## COME FUNZIONANO
 
 ### Logica di Risoluzione
 Gli script risolvono i conflitti Git prendendo sempre la **"incoming change"** (develop):
-
-
-
-
-
-
-
-
-
 
 ```
 codice locale (viene RIMOSSO)
@@ -1002,14 +976,6 @@ BEGIN { skip = 0 }
 /^>>>>>>> / { next }                  # Rimuove marker finale
 !skip { print }                       # Stampa solo se non sta saltando
 ```
-
-
-
-
-
-
-
-
 
 ## RISULTATI OTTENUTI
 
@@ -1092,12 +1058,12 @@ Contenuto aggiornato con riferimenti corretti al progetto.
 #### File SVG
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     fill="none" 
-     viewBox="0 0 24 24" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
      stroke="currentColor"
      stroke-width="1.5"
-     aria-hidden="true" 
+     aria-hidden="true"
      role="img"
      aria-label="Description">
     <!-- Contenuto SVG -->

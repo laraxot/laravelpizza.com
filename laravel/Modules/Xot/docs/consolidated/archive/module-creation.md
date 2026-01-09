@@ -187,4 +187,4 @@ NomeModulo/
 - [blade-component-registration.md](blade-component-registration.md)
 - [XotBaseServiceProvider.md](XotBaseServiceProvider.md)
 - [XotBaseRouteServiceProvider.md](XotBaseRouteServiceProvider.md)
-- [XotBaseEventServiceProvider.md](XotBaseEventServiceProvider.md) 
+- [XotBaseEventServiceProvider.md](XotBaseEventServiceProvider.md)

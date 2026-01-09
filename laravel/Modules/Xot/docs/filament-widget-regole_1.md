@@ -30,4 +30,4 @@
 
 ---
 
-Vedi anche: [find-dentist-functionality.md](../../saluteora/docs/find-dentist-functionality.md) 
+Vedi anche: [find-dentist-functionality.md](../../saluteora/docs/find-dentist-functionality.md)

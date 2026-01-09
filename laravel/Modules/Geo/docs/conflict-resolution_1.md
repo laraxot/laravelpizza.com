@@ -94,7 +94,6 @@ use function Safe\json_decode;
 
 ## Verifiche Post-Correzione
 
-
 ### 2. Validazione PHPStan
 ```bash
 cd laravel

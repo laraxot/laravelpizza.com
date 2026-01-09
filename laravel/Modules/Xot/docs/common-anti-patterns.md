@@ -89,12 +89,12 @@ class UserWidget extends XotBaseWidget
     {
         // Form schema logic
     }
-    
+
     public function processPayment($amount): bool
     {
         // Payment processing logic - different responsibility
     }
-    
+
     public function sendEmail($user): void
     {
         // Email sending logic - different responsibility
@@ -197,7 +197,7 @@ class MyWidget extends XotBaseWidget
         private CacheInterface $cache,
         private LoggerInterface $logger
     ) {}
-    
+
     public function processData(): void
     {
         // Use injected dependencies
@@ -214,7 +214,7 @@ class MyWidget extends XotBaseWidget
 public function getFormSchema(): array
 {
     $fields = [];
-    
+
     if ($this->user->hasRole('admin')) {
         if ($this->user->hasPermission('manage_users')) {
             if ($this->user->isActive()) {
@@ -224,7 +224,7 @@ public function getFormSchema(): array
             }
         }
     }
-    
+
     if ($this->user->hasRole('user')) {
         if ($this->user->hasPermission('view_profile')) {
             if ($this->user->isActive()) {
@@ -234,9 +234,9 @@ public function getFormSchema(): array
             }
         }
     }
-    
+
     // ... more complex logic
-    
+
     return $fields;
 }
 ```
@@ -252,21 +252,21 @@ public function getFormSchema(): array
 private function buildFormSchema(): array
 {
     $fields = [];
-    
+
     if ($this->canShowAdminFields()) {
         $fields = array_merge($fields, $this->getAdminFields());
     }
-    
+
     if ($this->canShowUserFields()) {
         $fields = array_merge($fields, $this->getUserFields());
     }
-    
+
     return $fields;
 }
 
 private function canShowAdminFields(): bool
 {
-    return $this->user->hasRole('admin') 
+    return $this->user->hasRole('admin')
         && $this->user->hasPermission('manage_users')
         && $this->user->isActive()
         && $this->user->getTenantId() === $this->currentTenantId;
@@ -307,15 +307,15 @@ public function canAccess($user): bool
     if (!$user) {
         return false;
     }
-    
+
     if (!$user->isActive()) {
         return false;
     }
-    
+
     if (!$user->hasPermission('access')) {
         return false;
     }
-    
+
     return $user->getTenantId() === $this->currentTenantId;
 }
 ```
@@ -525,7 +525,3 @@ public function getTableActions(): array
 - ❌ Don't create N+1 query problems
 
 This document serves as a reference for avoiding common anti-patterns when extending Xot base classes and building modules on top of the Xot foundation.
-
-
-
-

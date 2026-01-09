@@ -138,7 +138,7 @@ class LogoutWidget extends XotBaseWidget
                 {{ $this->form }}
 
                 <div class="mt-6 flex flex-col gap-3">
-                    <x-filament::button 
+                    <x-filament::button
                         type="submit"
                         color="danger"
                         size="lg"
@@ -147,8 +147,8 @@ class LogoutWidget extends XotBaseWidget
                         {{ __('Conferma Logout') }}
                     </x-filament::button>
 
-                    <x-filament::button 
-                        tag="a" 
+                    <x-filament::button
+                        tag="a"
                         :href="'/' . app()->getLocale()"
                         color="gray"
                         size="lg"

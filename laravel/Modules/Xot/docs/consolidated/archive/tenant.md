@@ -14,7 +14,7 @@
    class TenantConnectionPool
    {
        protected $connections = [];
-       
+
        public function getConnection($tenant)
        {
            if (!isset($this->connections[$tenant->id])) {
@@ -24,10 +24,10 @@
                    fn() => $this->createConnection($tenant)
                );
            }
-           
+
            return $this->connections[$tenant->id];
        }
-       
+
        public function purgeInactive()
        {
            foreach ($this->connections as $id => $connection) {
@@ -47,7 +47,7 @@
        {
            return "tenant_{$tenant->id}_{$key}";
        }
-       
+
        public function remember($key, $tenant, $callback)
        {
            return Cache::tags(["tenant_{$tenant->id}"])
@@ -57,7 +57,7 @@
                    $callback
                );
        }
-       
+
        public function flush($tenant)
        {
            Cache::tags(["tenant_{$tenant->id}"])->flush();
@@ -80,7 +80,7 @@
                }])
                ->select($this->getRequiredColumns());
        }
-       
+
        public function cacheResults($query, $tenant, $key)
        {
            return Cache::tags(["tenant_{$tenant->id}"])
@@ -114,7 +114,7 @@
                ])
                ->thenReturn();
        }
-       
+
        public function getCachedAsset($path, $tenant)
        {
            return Cache::tags(["tenant_{$tenant->id}_assets"])
@@ -134,11 +134,11 @@
        public function pushToCDN($asset, $tenant)
        {
            $key = "tenant_{$tenant->id}/{$asset->path}";
-           
+
            if (!$this->cdn->exists($key)) {
                $this->cdn->put($key, $this->optimizeAsset($asset));
            }
-           
+
            return $this->cdn->url($key);
        }
    }
@@ -161,7 +161,7 @@
                    fn() => $this->findTenantByDomain($domain)
                );
        }
-       
+
        public function warmUpCache()
        {
            Tenant::select(['id', 'domain'])
@@ -215,4 +215,4 @@
 ## Collegamenti
 - [Database Guidelines](../../database/guidelines.md)
 - [Asset Management](../../assets/management.md)
-- [Domain Configuration](../../domains/configuration.md) 
+- [Domain Configuration](../../domains/configuration.md)

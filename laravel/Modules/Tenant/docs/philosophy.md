@@ -28,7 +28,7 @@ Il modulo Tenant adotta una filosofia di "**architettura federativa digitale**":
 3. **Condivisione Sicura**: Le risorse comuni (codice, configurazione) sono condivise senza compromettere l'isolamento
 4. **Scalabilità Orizzontale**: Il sistema cresce aggiungendo tenant, non aumentando complessità interna
 
-### Paradigma di Progettazione  
+### Paradigma di Progettazione
 Seguiamo un paradigma di "**design compartimentato**" che considera:
 
 - **Blast Radius**: Ogni errore impatta SOLO il tenant coinvolto
@@ -43,7 +43,7 @@ Nel modulo Tenant, trattiamo come "**sacri**" i seguenti valori:
 
 1. **Data Sovereignty**: I dati del tenant appartengono SOLO al tenant
 2. **Inviolabilità dei Confini**: Nessun cross-tenant data leak tollerato
-3. **Portabilità Totale**: Ogni tenant può migrare con tutti i suoi dati  
+3. **Portabilità Totale**: Ogni tenant può migrare con tutti i suoi dati
 4. **Immutabilità dell'Isolamento**: Le regole di isolamento NON possono essere sovrascritte
 
 ### Rituali di Sviluppo
@@ -117,7 +117,7 @@ Apprezziamo il concetto zen del "**vuoto che sostiene**":
 // LIVELLO 1: Database Connection
 protected $connection = 'tenant';  // ← Isolation point
 
-// LIVELLO 2: Domain-Based Identification  
+// LIVELLO 2: Domain-Based Identification
 public static function getName(): string {
     return app(GetTenantNameAction::class)->execute();
     // Identifica tenant da SERVER_NAME, non da session
@@ -137,7 +137,7 @@ config/{tenant_name}/app.php  // ← Tenant-specific settings
 **Onboarding Semplificato**:
 1. Admin crea Tenant (name, domain, database)
 2. Sistema genera slug automaticamente
-3. Tenant owner accede tramite domain  
+3. Tenant owner accede tramite domain
 4. Configurazione personalizzata disponibile subito
 
 **Autonomia Garantita**:
@@ -179,10 +179,10 @@ User::all();    // ← usa 'tenant' connection → solo utenti di questo tenant
 public static function config(string $key): mixed {
     // 1. Leggi config originale
     $original_conf = config($group);
-    
+
     // 2. Merge con config tenant-specific
     $extra_conf = config($tenant_name.'.'.$group);
-    
+
     // 3. Cache result
     Config::set($group, $merge_conf);
 }
@@ -210,7 +210,7 @@ public static function config(string $key): mixed {
 ```php
 class Domain extends BaseModel {
     use Sushi;  // ← In-memory model da JSON/CSV
-    
+
     public function getRows() {
         return app(GetDomainsArrayAction::class)->execute();
     }
@@ -231,7 +231,7 @@ class Domain extends BaseModel {
 // Base config: config/app.php
 ['name' => 'Laravel', 'locale' => 'en']
 
-// Tenant config: config/tenant_acme/app.php  
+// Tenant config: config/tenant_acme/app.php
 ['name' => 'ACME Corp']
 
 // Result per Tenant ACME:
@@ -248,7 +248,7 @@ class Domain extends BaseModel {
 - Tenant dipende da User per ownership
 - **Principio**: "L'utente esiste nel contesto del tenant"
 
-### Tenant ↔ Xot  
+### Tenant ↔ Xot
 **Relazione**: Foundation
 - Tenant estende BaseModel da Xot
 - Usa XotData per user management
@@ -264,15 +264,15 @@ class Domain extends BaseModel {
 ## 📖 Citazioni Filosofiche
 
 > "Un tenant è come una nazione in una federazione: autonoma nei confini, collaborativa oltre i confini."
-> 
+>
 > — **Principio della Sovranità Federata**
 
 > "L'isolamento perfetto non si vede. Se devi pensare al tenant mentre scrivi codice business, l'architettura ha fallito."
-> 
+>
 > — **Principio dell'Invisibilità**
 
 > "Tre tabelle, infinite possibilità. La semplicità è la sofisticazione suprema."
-> 
+>
 > — **Zen del Minimalismo Architetturale**
 
 ---
@@ -301,7 +301,7 @@ Il modulo Tenant incarna il **paradosso dell'unità nella diversità**:
 
 È come un **condominio** dove:
 - Ogni appartamento (tenant) è privato e autonomo
-- L'edificio (applicazione) è condiviso e gestito centralmente  
+- L'edificio (applicazione) è condiviso e gestito centralmente
 - Le mura (connection isolation) garantiscono privacy
 - I servizi comuni (Facades, BaseModel) riducono duplicazione
 
@@ -309,8 +309,7 @@ Il modulo Tenant incarna il **paradosso dell'unità nella diversità**:
 
 ---
 
-**Creato**: 5 Novembre 2025  
-**Autore**: Team Development  
-**Revision**: 1.0  
+**Creato**: 5 Novembre 2025
+**Autore**: Team Development
+**Revision**: 1.0
 **Status**: 📚 Foundation Document
-

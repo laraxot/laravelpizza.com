@@ -178,15 +178,3 @@ Ogni blocco supporta diversi contesti:
 - [Laravel Folio](../../docs/folio-routing.md)
 
 *Ultimo aggiornamento: Dicembre 2024*
-
-
-
-
-
-
-
-
-
-
-
-

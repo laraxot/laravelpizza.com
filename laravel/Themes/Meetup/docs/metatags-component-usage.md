@@ -128,10 +128,10 @@ Se devi aggiungere contenuti al `<head>`, usa lo slot:
 <x-metatags>
     {{-- Scripts aggiuntivi --}}
     <script src="https://example.com/script.js"></script>
-    
+
     {{-- Styles aggiuntivi --}}
     <link rel="stylesheet" href="https://example.com/style.css">
-    
+
     {{-- Meta tags aggiuntivi --}}
     <meta name="custom-meta" content="value">
 </x-metatags>
@@ -246,4 +246,3 @@ Il componente usa `MetatagData::make()` che legge:
 - [x] Forniti esempi corretti/errati
 - [x] Documentato come usare
 - [x] Elencato cosa include automaticamente
-

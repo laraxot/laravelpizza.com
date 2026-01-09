@@ -65,7 +65,7 @@ class UserService
     {
         // Logica di creazione utente
     }
-    
+
     public function updateUser($id, array $data)
     {
         // Logica di aggiornamento utente
@@ -87,7 +87,7 @@ use Spatie\QueueableAction\QueueableAction;
 class CreateUserAction
 {
     use QueueableAction;
-    
+
     public function execute(UserData $data): User
     {
         // Logica di creazione utente
@@ -97,7 +97,7 @@ class CreateUserAction
 class UpdateUserAction
 {
     use QueueableAction;
-    
+
     public function execute(User $user, UserData $data): User
     {
         // Logica di aggiornamento utente
@@ -112,10 +112,10 @@ class UpdateUserAction
 public function store(Request $request, CreateUserAction $action)
 {
     $userData = UserData::from($request->validated());
-    
+
     // Esecuzione sincrona
     $user = $action->execute($userData);
-    
+
     // O in background
     $action->onQueue('users')->execute($userData);
 }

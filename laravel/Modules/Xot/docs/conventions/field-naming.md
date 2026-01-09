@@ -155,4 +155,4 @@ public static function form(Form $form): Form
 ## Collegamenti
 - [Database Schema Guidelines](../database/schema.md)
 - [Internationalization Guide](../i18n/guide.md)
-- [GDPR Compliance](../gdpr/compliance.md) 
+- [GDPR Compliance](../gdpr/compliance.md)

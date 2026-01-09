@@ -40,4 +40,4 @@ cd laravel
 ## Collegamenti Principali
 
 - [Risoluzione Conflitti Git](../../../../docs/risoluzione_conflitti_git.md): Documentazione principale sulla risoluzione dei conflitti git.
-- [UI Conflict Links](../../../../docs/ui_conflict_links.md): Collegamenti ai file di risoluzione dei conflitti nel modulo UI. 
+- [UI Conflict Links](../../../../docs/ui_conflict_links.md): Collegamenti ai file di risoluzione dei conflitti nel modulo UI.

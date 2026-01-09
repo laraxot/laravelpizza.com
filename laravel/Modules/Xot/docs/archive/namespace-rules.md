@@ -33,7 +33,7 @@ namespace Modules\NomeModulo\Providers;
 
 use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
-class RouteServiceProvider extends XotBaseRouteServiceProvider 
+class RouteServiceProvider extends XotBaseRouteServiceProvider
 {
     /**
      * The module namespace to assume when generating URLs to actions.
@@ -66,4 +66,4 @@ Se incontri errori come `name is empty on [Modules\NomeModulo\Providers\RouteSer
 
 1. Che il namespace sia corretto (senza `app`)
 2. Che la proprietà `$name` sia definita e valorizzata
-3. Che il `$moduleNamespace` punti alla posizione corretta dei controller 
+3. Che il `$moduleNamespace` punti alla posizione corretta dei controller

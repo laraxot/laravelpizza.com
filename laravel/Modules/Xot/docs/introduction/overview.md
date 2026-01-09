@@ -128,4 +128,4 @@ Per contribuire al progetto:
 
 ## Licenza
 
-<nome progetto> è un software proprietario. Tutti i diritti riservati. 
+<nome progetto> è un software proprietario. Tutti i diritti riservati.

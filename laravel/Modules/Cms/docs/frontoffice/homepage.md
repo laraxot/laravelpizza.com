@@ -17,7 +17,7 @@ La homepage utilizza il sistema **Filament Builder Blocks** per gestione dinamic
 ```
 
 ```json
-// Homepage JSON Content  
+// Homepage JSON Content
 /config/local/<directory progetto>/database/content/pages/home.json
 
 {
@@ -123,7 +123,7 @@ La homepage utilizza il sistema **Filament Builder Blocks** per gestione dinamic
 - Test caricamento JSON
 - Test PageContentBuilder
 
-### Modulo <main module> Tests  
+### Modulo <main module> Tests
 - Test integrazione frontend
 - Test logica business specifica
 - Test tipi utente (patient, doctor, admin)
@@ -133,7 +133,7 @@ La homepage utilizza il sistema **Filament Builder Blocks** per gestione dinamic
 // tests/Feature/HomepageTest.php
 test('homepage renders with hero block', function () {
     $response = $this->get('/');
-    
+
     $response->assertOk()
         ->assertSee('<slogan> per Gestanti')
         ->assertSee('INIZIA ORA');

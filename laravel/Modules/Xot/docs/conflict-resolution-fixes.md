@@ -11,7 +11,7 @@ Documentazione della risoluzione dei conflitti Git nel modulo Xot che bloccavano
 
 **Conflitti risolti**:
 - `isRunningTestBench()` function
-- `isRunningTests()` function  
+- `isRunningTests()` function
 - `isRunningPest()` function
 - `isRunningPhpunit()` function
 - `isRunningDusk()` function
@@ -48,7 +48,7 @@ Documentazione della risoluzione dei conflitti Git nel modulo Xot che bloccavano
 - Docblock e tipizzazione
 
 ## Metodologia di Risoluzione
-1. **Identificazione**: Script automatico per trovare tutti i marker 
+1. **Identificazione**: Script automatico per trovare tutti i marker
 2. **Selezione**: Sempre "current change" (contenuto tra `=======` e `>>>>>>>`)
 3. **Backup**: Backup automatico prima delle modifiche
 4. **Verifica**: Controllo che non rimangano marker di conflitto

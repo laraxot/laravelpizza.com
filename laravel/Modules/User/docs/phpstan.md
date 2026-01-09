@@ -39,4 +39,4 @@ Il modulo User è attualmente in fase di analisi con PHPStan. Questo documento t
 2. Aggiornare i trait con i metodi mancanti
 3. Verificare e correggere tutti i tipi nelle relazioni
 4. Aggiornare la documentazione PHPDoc
-5. Eseguire nuovi test PHPStan 
+5. Eseguire nuovi test PHPStan

@@ -34,7 +34,7 @@
 
 #### Layout Components (x-layouts.*)
 - `x-layouts.app`
-- `x-layouts.guest` 
+- `x-layouts.guest`
 - `x-layouts.main`
 - `x-layouts.marketing`
 - `x-layouts.navigation`
@@ -76,7 +76,7 @@
 ```blade
 <x-layouts.main>
     <div class="flex flex-col items-center justify-center min-h-screen py-10">
-        
+
         <div class="w-full max-w-md">
             <x-ui.logo class="w-auto h-10 text-gray-700 fill-current dark:text-gray-100 mx-auto mb-6" />
 

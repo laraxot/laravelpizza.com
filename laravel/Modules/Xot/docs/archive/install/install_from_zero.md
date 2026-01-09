@@ -16,7 +16,6 @@ use Illuminate\Http\Request;
 define('LARAVEL_START', microtime(true));
 define('LARAVEL_DIR', __DIR__.'/../laravel');
 
-
 // Determine if the application is in maintenance mode...
 if (file_exists($maintenance = LARAVEL_DIR.'/storage/framework/maintenance.php')) {
     require $maintenance;
@@ -75,7 +74,7 @@ return Application::configure(basePath: dirname(__DIR__))
     })->create();
 ~~~
 
-edit file composer.json 
+edit file composer.json
 ~~~ json
 {
     "name": "laravel/laravel",
@@ -163,7 +162,7 @@ edit file composer.json
     "prefer-stable": true
 }
 
-~~~ 
+~~~
 
 from folder demo01
 ~~~ bash
@@ -184,12 +183,9 @@ create Folders :
  git submodule add https://github.com/laraxot/module_ui_fila3.git UI
 ~~~
 
-
 from folder laravel
 ~~~ bash
 git submodule add  https://github.com/laraxot/filament-modules.git  packages/savannabits/filament-modules
 
 composer update -W (--with-all-dependencies)
-~~~ 
-
-
+~~~

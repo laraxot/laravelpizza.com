@@ -31,12 +31,12 @@ use Strict\Type\Declarations;
 final class ExampleClass
 {
     private Type $property;
-    
+
     public function __construct(Type $dependency)
     {
         $this->property = $dependency;
     }
-    
+
     public function method(): ReturnType
     {
         // Implementation
@@ -216,9 +216,8 @@ public function store(Request $request): Response
 - [PHP-FIG PSRs](https://www.php-fig.org/psr/)
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 - [Laravel Best Practices](https://laravel.com/docs/master/best-practices)
-- [Security Best Practices](../security/README.md) 
+- [Security Best Practices](../security/README.md)
 
 ## Collegamenti tra versioni di coding-standards.md
 * [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
 * [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
-

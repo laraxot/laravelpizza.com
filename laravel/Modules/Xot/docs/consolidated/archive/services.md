@@ -232,15 +232,13 @@ return [
    - Utilizzare mock per le dipendenze
 ### Versione HEAD
 
-   - Testare i casi limite 
+   - Testare i casi limite
 ## Collegamenti tra versioni di services.md
 * [services.md](../../../Xot/project_docs/services.md)
 * [services.md](../../../Tenant/project_docs/it/config/services.md)
 
-
 ### Versione Incoming
 
-   - Testare i casi limite 
+   - Testare i casi limite
 
 ---
-

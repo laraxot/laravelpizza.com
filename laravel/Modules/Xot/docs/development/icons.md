@@ -120,7 +120,7 @@ class UserResource extends XotBaseResource
     use NavigationLabelTrait;
 
     protected static ?string $model = User::class;
-    
+
     // L'icona verrà automaticamente recuperata dal file di traduzione
     // o dagli SVG personalizzati nella cartella resources/svg
 }

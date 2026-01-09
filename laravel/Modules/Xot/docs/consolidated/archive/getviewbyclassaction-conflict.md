@@ -26,13 +26,13 @@ public function execute(string $class): string
 {
     // Convert class name to view name
     $view = strval($class);
-    
+
     // Remove namespace
     $view = preg_replace('/^.*\\\\/', '', $view);
-    
+
     // Convert to kebab case
     $view = Str::kebab($view);
-    
+
     return $view;
 }
 ```

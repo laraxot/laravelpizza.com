@@ -102,16 +102,16 @@ Problema: Accesso a offset annidati su mixed.
 ```php
 // ❌ PRIMA
 return [
-    'message_id' => isset($responseData['result']['message_id']) 
-        ? (int) $responseData['result']['message_id'] 
+    'message_id' => isset($responseData['result']['message_id'])
+        ? (int) $responseData['result']['message_id']
         : null,
 ];
 
 // ✅ DOPO
 $messageId = null;
 if (isset($responseData['result']) && is_array($responseData['result']) && isset($responseData['result']['message_id'])) {
-    $messageId = is_int($responseData['result']['message_id']) 
-        ? $responseData['result']['message_id'] 
+    $messageId = is_int($responseData['result']['message_id'])
+        ? $responseData['result']['message_id']
         : (int) $responseData['result']['message_id'];
 }
 
@@ -204,12 +204,12 @@ foreach ($allKeys as $key) {
 // ✅ DOPO
 foreach ($allKeys as $key) {
     $row = [$key];
-    
+
     // Type narrowing
     if (! is_string($key) && ! is_int($key)) {
         continue;
     }
-    
+
     $row[] = isset($fileData[$key]) ? '✓' : '✗';  // OK
 }
 ```
@@ -223,8 +223,8 @@ Problema: Check ridondanti per tipo già noto.
 // ❌ PRIMA
 $searchableResult = ContactTypeEnum::getSearchable();
 /** @var array<string>|bool|string $searchable */
-$searchable = is_array($searchableResult) || is_bool($searchableResult) || is_string($searchableResult) 
-    ? $searchableResult 
+$searchable = is_array($searchableResult) || is_bool($searchableResult) || is_string($searchableResult)
+    ? $searchableResult
     : false;
 
 // ✅ DOPO

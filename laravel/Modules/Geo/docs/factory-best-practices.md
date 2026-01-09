@@ -94,15 +94,15 @@ public function definition(): array
     static $patientId = null;
     static $doctorId = null;
     static $studioId = null;
-    
+
     if ($patientId === null) {
         $patientId = User::factory()->patient()->create()->id;
     }
-    
+
     if ($doctorId === null) {
         $doctorId = User::factory()->doctor()->create()->id;
     }
-    
+
     if ($studioId === null) {
         $studioId = Studio::factory()->create()->id;
     }
@@ -161,7 +161,7 @@ public function getRandomPhoneNumber(): ?string
     if ($this->faker->boolean(80)) { // 80% chance
         return (string) $this->faker->phoneNumber();
     }
-    
+
     return null;
 }
 ```
@@ -275,11 +275,11 @@ public function withRelations(): static
 public function createBatch(int $count): Collection
 {
     $records = collect();
-    
+
     for ($i = 0; $i < $count; $i++) {
         $records->push($this->create());
     }
-    
+
     return $records;
 }
 ```
@@ -297,7 +297,7 @@ public function validateData(): static
         if (empty($model->name)) {
             throw new \InvalidArgumentException('Name cannot be empty');
         }
-        
+
         if (!filter_var($model->email, FILTER_VALIDATE_EMAIL)) {
             throw new \InvalidArgumentException('Invalid email format');
         }
@@ -316,7 +316,7 @@ public function getRandomSpecialization(): string
         'Cardiologia', 'Dermatologia', 'Neurologia', 'Ortopedia',
         'Ginecologia', 'Pediatria', 'Psichiatria', 'Radiologia'
     ];
-    
+
     return $this->faker->randomElement($specializations) ?? 'Medicina Generale';
 }
 ```
@@ -330,7 +330,7 @@ public function getRandomSpecialization(): string
 public function it_creates_valid_user(): void
 {
     $user = User::factory()->create();
-    
+
     $this->assertNotNull($user->id);
     $this->assertNotEmpty($user->name);
     $this->assertNotEmpty($user->email);
@@ -345,7 +345,7 @@ public function it_creates_valid_user(): void
 public function it_creates_user_with_doctor_role(): void
 {
     $doctor = User::factory()->doctor()->create();
-    
+
     $this->assertEquals('doctor', $doctor->role);
     $this->assertNotEmpty($doctor->specialization);
 }
@@ -358,12 +358,12 @@ public function it_creates_user_with_doctor_role(): void
 public function it_creates_100_users_efficiently(): void
 {
     $startTime = microtime(true);
-    
+
     $users = User::factory()->count(100)->create();
-    
+
     $endTime = microtime(true);
     $executionTime = $endTime - $startTime;
-    
+
     $this->assertCount(100, $users);
     $this->assertLessThan(5.0, $executionTime); // Max 5 secondi
 }
@@ -485,10 +485,3 @@ Al completamento di tutte le best practices:
 **Priorità**: Type safety e schema alignment (ALTA)
 **Responsabile**: AI Assistant
 **Ultimo Aggiornamento**: 2025-01-06
-
-
-
-
-
-
-

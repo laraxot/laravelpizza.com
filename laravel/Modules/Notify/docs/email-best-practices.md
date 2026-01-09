@@ -15,4 +15,4 @@
 ### Compatibilità
 - Mantenere la retrocompatibilità
 - Gestire correttamente i rollback
-- Testare le migrazioni in ambiente di sviluppo 
+- Testare le migrazioni in ambiente di sviluppo

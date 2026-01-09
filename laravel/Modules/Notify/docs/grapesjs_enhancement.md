@@ -43,7 +43,7 @@ flowchart LR
   S --> R(Filament Resource)
   R --> A(RenderGrapesJSAction)
   A --> P(PublishAction) --> L(email_logs / deployment)
-``` 
+```
 
 ### 5.1 Migrazione e Modello
 ```php

@@ -1,4 +1,4 @@
-# Componenti di Navigazione 
+# Componenti di Navigazione
 
 ## Indice
 - [Panoramica](#panoramica)

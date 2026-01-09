@@ -1,6 +1,3 @@
-
-
-
 # Rapporto PHPStan Livello 9 per il modulo Xot
 
 Data analisi: 2025-04-15 21:56:07
@@ -72,4 +69,3 @@ aurmich/dev
 * [level_9.md](laravel/Modules/Activity/project_docs/phpstan/level_9.md)
 * [level_9.md](laravel/Modules/Patient/project_docs/phpstan/level_9.md)
 * [level_9.md](laravel/Modules/Cms/project_docs/phpstan/level_9.md)
-

@@ -48,7 +48,7 @@ protected function registerThemeSixteen(): void
 {
     // Registra le viste del tema Sixteen con il namespace pub_theme
     $this->app['view']->addNamespace('pub_theme', base_path('Themes/Sixteen/resources/views'));
-    
+
     // Registra le traduzioni del tema Sixteen
     $this->app['translator']->addNamespace('pub_theme', base_path('Themes/Sixteen/lang'));
 }
@@ -86,4 +86,3 @@ Il componente `Section` del modulo CMS:
 ---
 
 *Ultimo aggiornamento: Settembre 2025*
-

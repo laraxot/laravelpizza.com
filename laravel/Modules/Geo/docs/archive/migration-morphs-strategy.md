@@ -35,7 +35,7 @@ Il sistema <nome progetto> è **multi-modulo** con diverse strategie ID:
 2023_03_31_103351_create_activity_table.php  # Versione originale
 ↓
 2024_01_01_000001_create_activity_table.php  # Aggiunta nullable
-↓  
+↓
 2024_01_15_103351_create_activity_table.php  # Correzione tipo string
 ```
 
@@ -64,7 +64,7 @@ return new class extends XotBaseMigration
             $table->uuid('batch_uuid')->nullable();
             $table->string('event')->nullable();
         });
-        
+
         // Gestione DB esistenti
         $this->tableUpdate(function (Blueprint $table): void {
             if ($this->hasColumn('causer_id')) {
@@ -167,7 +167,6 @@ Schema::table('activity_log', function($table) { /* stessa logica */ });
 - [.cursor/rules/migration-morphs-polymorphic.md](../.cursor/rules/migration-morphs-polymorphic.md)
 - [.cursor/rules/migration-complete-rules.mdc](../.cursor/rules/migration-complete-rules.mdc)
 
-*Ultimo aggiornamento: 2025-01-06*  
-*Autore: Sistema di AI Learning <nome progetto>*  
+*Ultimo aggiornamento: 2025-01-06*
+*Autore: Sistema di AI Learning <nome progetto>*
 *Motivazione: Comprensione profonda architettura morphs polymorphic*
-

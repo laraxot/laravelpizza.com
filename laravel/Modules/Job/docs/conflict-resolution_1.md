@@ -213,7 +213,7 @@ Per ogni file con conflitti, seguiremo questi passaggi:
 2. Determinare quale versione contiene la funzionalità più completa e aggiornata
 3. Risolvere i conflitti mantenendo il codice più recente e funzionale
 4. Testare il file dopo la risoluzione per garantire il corretto funzionamento
-5. Aggiornare la documentazione pertinente 
+5. Aggiornare la documentazione pertinente
 
 ## Collegamenti
 

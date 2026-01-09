@@ -52,11 +52,11 @@ protected ?string $model_class = Translation::class;
 ```php
 /**
  * Migrazione per la creazione della tabella language_lines.
- * 
+ *
  * Questa tabella gestisce le traduzioni del sistema multilanguage,
  * memorizzando le chiavi di traduzione e i testi in formato JSON
  * per supportare multiple lingue.
- * 
+ *
  * @see docs/migration_standards.md
  */
 ```
@@ -70,24 +70,24 @@ $this->tableUpdate(
         if (! $this->hasColumn('group')) {
             $table->string('group')->index()->comment('Translation group (e.g., validation, auth)');
         }
-        
+
         if (! $this->hasColumn('key')) {
             $table->string('key')->comment('Translation key');
         }
-        
+
         if (! $this->hasColumn('text')) {
             $table->json('text')->comment('Translation text in JSON format');
         }
-        
+
         if (! $this->hasColumn('locale')) {
             $table->string('locale')->index()->comment('Language locale (e.g., en, it, de)');
         }
-        
+
         // Verifica se l'indice unique esiste
         if (! $this->hasIndex('language_lines_unique')) {
             $table->unique(['group', 'key', 'locale'], 'language_lines_unique');
         }
-        
+
         $this->updateTimestamps($table, true);
     }
 );
@@ -153,4 +153,3 @@ La migrazione ora segue completamente gli standard del progetto:
 3. **Implementare verifiche di esistenza** per evitare errori
 4. **Documentare completamente** lo scopo e la struttura
 5. **Seguire gli standard del progetto** per coerenza
-

@@ -4,8 +4,8 @@
 
 Il modulo Xot è il modulo foundation del progetto, contenente classi base, servizi condivisi e utilities per tutti gli altri moduli.
 
-**Namespace:** `Modules\Xot`  
-**Priority:** CRITICAL (Foundation module)  
+**Namespace:** `Modules\Xot`
+**Priority:** CRITICAL (Foundation module)
 **Dependencies:** Laravel core, Spatie packages
 
 ---

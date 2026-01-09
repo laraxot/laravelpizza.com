@@ -65,17 +65,17 @@ Il piè di pagina specifico della pagina, che può includere informazioni aggiun
     <header class="page-header">
         <x-page side="header" slug="articles" />
     </header>
-    
+
     <div class="page-body">
         <main class="page-content">
             <x-page side="content" slug="articles" />
         </main>
-        
+
         <aside class="page-sidebar">
             <x-page side="sidebar" slug="articles" />
         </aside>
     </div>
-    
+
     <footer class="page-footer">
         <x-page side="footer" slug="articles" />
     </footer>
@@ -89,7 +89,7 @@ Il piè di pagina specifico della pagina, che può includere informazioni aggiun
     <main class="page-content">
         <x-page side="content" slug="articles" />
     </main>
-    
+
     @if($showSidebar)
         <aside class="page-sidebar">
             <x-page side="sidebar" slug="articles" />
@@ -105,7 +105,7 @@ Il piè di pagina specifico della pagina, che può includere informazioni aggiun
     <main class="page-content">
         <x-page side="content" slug="articles" />
     </main>
-    
+
     <aside class="page-sidebar">
         <x-page side="sidebar" slug="articles" lazy />
     </aside>

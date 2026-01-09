@@ -186,11 +186,11 @@ class SpatieEmail extends TemplateMailable
         array $additionalData = []
     ) {
         parent::__construct($model);
-        
+
         if ($slug) {
             $this->template = MailTemplate::where('slug', $slug)->first();
         }
-        
+
         $this->additionalData = $additionalData;
     }
 }
@@ -237,4 +237,4 @@ MailTemplate::all()->each(function ($template) {
 
 - [Documentazione Email Template](./EMAIL_TEMPLATES.md)
 - [Gestione Traduzioni](../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
-- [Configurazione Email](../../../docs/email-configuration.md) 
+- [Configurazione Email](../../../docs/email-configuration.md)

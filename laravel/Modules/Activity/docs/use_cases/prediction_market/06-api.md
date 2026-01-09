@@ -13,4 +13,4 @@
 - Rate limiting e logging
 - Webhook per notifiche di payout
 - API pubblica per dati di mercato (come Polymarket, Kalshi)
-- Versionamento API 
+- Versionamento API

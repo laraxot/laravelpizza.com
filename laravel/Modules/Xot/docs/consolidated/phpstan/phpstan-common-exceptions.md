@@ -108,7 +108,7 @@ Questo errore si verifica quando si cerca di utilizzare il metodo `belongsToMany
 class MyModel extends BaseModel
 {
     use SomeTrait;
-    
+
     public function relatedModels()
     {
         return $this->belongsToManyX(RelatedModel::class);
@@ -122,7 +122,7 @@ class MyModel extends BaseModel
 {
     use SomeTrait;
     use RelationX;
-    
+
     public function relatedModels()
     {
         return $this->belongsToManyX(RelatedModel::class);
@@ -233,4 +233,4 @@ public function getModel(): ?Model
 
 ## Conclusione
 
-L'analisi statica del codice con PHPStan a livello 10 è uno strumento potente per migliorare la qualità del codice e prevenire errori durante l'esecuzione. Seguendo queste best practices, è possibile risolvere la maggior parte degli errori comuni e scrivere codice più robusto e manutenibile. 
+L'analisi statica del codice con PHPStan a livello 10 è uno strumento potente per migliorare la qualità del codice e prevenire errori durante l'esecuzione. Seguendo queste best practices, è possibile risolvere la maggior parte degli errori comuni e scrivere codice più robusto e manutenibile.

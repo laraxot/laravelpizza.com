@@ -1,4 +1,4 @@
-# Implementazione della Localizzazione 
+# Implementazione della Localizzazione
 
 ## Collegamenti correlati
 - [Documentazione centrale](/docs/README.md)

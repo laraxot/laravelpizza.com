@@ -35,7 +35,7 @@ class TailkitWrapper extends Component
 ```blade
 {{-- themes/custom/header.blade.php --}}
 <x-cms::section slug="header">
-    <x-ui::tailkit 
+    <x-ui::tailkit
         component="navigation.menu"
         :config="[
             'theme' => 'custom',
@@ -158,4 +158,4 @@ class TailkitAssetManager
 ## Collegamenti
 - [Tailkit Components](tailkit-components.md)
 - [Theme System](../themes/README.md)
-- [Performance Guidelines](../performance.md) 
+- [Performance Guidelines](../performance.md)

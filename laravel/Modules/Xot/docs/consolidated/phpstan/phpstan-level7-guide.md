@@ -118,7 +118,7 @@ $latitude = (float)$data['latitude'];
 #### Soluzione
 ```php
 // CORRETTO: Validazione e poi cast
-$latitude = is_numeric($data['latitude']) 
+$latitude = is_numeric($data['latitude'])
     ? (float)$data['latitude']
     : throw new InvalidArgumentException('Latitude must be numeric');
 ```
@@ -173,7 +173,7 @@ public function processApiResponse(mixed $response): void
     if (!is_array($response) || !isset($response['data']) || !is_array($response['data'])) {
         throw new InvalidArgumentException('Invalid API response format');
     }
-    
+
     foreach ($response['data'] as $item) {
         // Ora √® sicuro processare $item
     }
@@ -241,7 +241,5 @@ Mantenere il codice conforme a PHPStan livello 7 garantisce una maggiore qualit√
 * [PHPSTAN-LEVEL7-GUIDE.md](../../../Xot/project_docs/phpstan/PHPSTAN-LEVEL7-GUIDE.md)
 * [PHPSTAN-LEVEL7-GUIDE.md](../../../Xot/project_docs/PHPSTAN-LEVEL7-GUIDE.md)
 
-
 ## Collegamenti tra versioni di phpstan-level7-guide.md
 * [phpstan-level7-guide.md](../phpstan-level7-guide.md)
-

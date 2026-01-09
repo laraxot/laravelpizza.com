@@ -13,7 +13,7 @@ The User module contains multiple violations of the Laraxot migration philosophy
 
 **Issue:** Two migrations creating the same `devices` table
 
-### 2. Team User Table Violations  
+### 2. Team User Table Violations
 **Files:**
 - `2023_01_01_000004_create_team_user_table.php`
 - `2023_01_01_000006_create_team_user_table.php`
@@ -37,7 +37,7 @@ The User module contains multiple violations of the Laraxot migration philosophy
 **Issue:** Two migrations for same `tenants` table (one is .old)
 
 ### 5. Roles Table Violations
-**Files:**  
+**Files:**
 - `2023_01_01_000011_create_roles_table.php`
 - `2023_01_01_000012_create_roles_table.php`
 - `2024_01_01_000011_create_roles_table.php`
@@ -87,7 +87,7 @@ The User module contains multiple violations of the Laraxot migration philosophy
 2. **Tenants Table** - Core multi-tenancy functionality
 3. **Roles/Permissions Tables** - Core authorization system
 
-### Medium Impact Violations  
+### Medium Impact Violations
 1. **Teams Table** - Important for team functionality
 2. **Authentication Log Table** - Security monitoring
 3. **Devices Table** - Device management
@@ -117,7 +117,7 @@ The User module contains multiple violations of the Laraxot migration philosophy
 - Same table, same schema, different timestamps
 - Examples: roles, permissions, devices tables
 
-### Type B: Schema Evolution Duplicates  
+### Type B: Schema Evolution Duplicates
 - Same table, different schemas (evolution)
 - Example: different versions of teams table
 

@@ -21,7 +21,7 @@ use Modules\Xot\Filament\Traits\HasXotTable;
 class ExampleResource extends Resource
 {
     use HasXotTable;
-    
+
     // ...
 }
 ```
@@ -191,7 +191,6 @@ Il trait include meccanismi di gestione degli errori, ad esempio:
 * [FILAMENT-TABLES.md](../../../Xot/docs/filament/FILAMENT-TABLES.md)
 * [FILAMENT-TABLES.md](../../../Xot/docs/FILAMENT-TABLES.md)
 
-
 ## Collegamenti tra versioni di filament-tables.md
 ### Versione HEAD
 
@@ -202,5 +201,3 @@ Il trait include meccanismi di gestione degli errori, ad esempio:
 * [filament-tables.md](../filament-tables.md)
 
 ---
-
-

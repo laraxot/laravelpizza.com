@@ -31,12 +31,12 @@ Authentication tests are located in `tests/Feature/Auth/`. These tests cover:
 ```php
 test('users can login with valid credentials', function () {
     $user = User::factory()->create();
-    
+
     $response = $this->post('/login', [
         'email' => $user->email,
         'password' => 'password',
     ]);
-    
+
     $response->assertRedirect('/dashboard');
     $this->assertAuthenticatedAs($user);
 });

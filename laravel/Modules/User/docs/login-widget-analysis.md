@@ -1,6 +1,6 @@
 # Analisi Dettagliata di LoginWidget
 
-**File**: `Modules/User/app/Filament/Widgets/LoginWidget.php`  
+**File**: `Modules/User/app/Filament/Widgets/LoginWidget.php`
 **Namespace**: `Modules\User\Filament\Widgets`
 
 ## Estensione e Imports

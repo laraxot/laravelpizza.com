@@ -6,7 +6,7 @@ Questo documento descrive i conflitti Git risolti nel modulo Tenant, con partico
 
 ## Panoramica
 
-Questo documento traccia la risoluzione dei conflitti git nel modulo Tenant, identificati il 30/07/2023. 
+Questo documento traccia la risoluzione dei conflitti git nel modulo Tenant, identificati il 30/07/2023.
 I conflitti sono stati identificati nei seguenti file:
 
 1. `rector.php`
@@ -93,7 +93,7 @@ cd laravel
 2. Una versione che utilizzava `SetList` e `LaravelSetList` con funzione helper `safe_object_call`
 3. Una versione che utilizzava sia `PHPUnitLevelSetList` che `LevelSetList` con metodi diretti sul config
 
-**Soluzione implementata**: 
+**Soluzione implementata**:
 - Unificati i namespace necessari per tutte le funzionalità
 - Sostituito l'uso della funzione helper `safe_object_call` con chiamate dirette ai metodi dell'oggetto `$rectorConfig`
 - Combinate le regole e i set di tutte le versioni per mantenere tutte le funzionalità
@@ -120,7 +120,7 @@ cd laravel
 
 **Analisi**: Il file mostrava tre versioni in conflitto:
 1. Una versione che estendeva `\Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord` con namespace completo
-2. Una versione duplicata della precedente 
+2. Una versione duplicata della precedente
 3. Una versione che estendeva la classe Filament standard `CreateRecord`
 
 **Soluzione implementata**:
@@ -156,4 +156,3 @@ Questo errore indica che ci sono ancora conflitti git non risolti in altri modul
 - [Documentazione Principale Tenant](module_tenant.md)
 - [Rapporti PHPStan](phpstan/)
 - [Panoramica della Risoluzione dei Conflitti](../../../docs/risoluzione_conflitti_git.md)
-

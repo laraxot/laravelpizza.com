@@ -134,7 +134,7 @@ interface UserRepositoryInterface
 class UserRepository implements UserRepositoryInterface
 {
     /**
-     * @return User L'implementazione può restituire un tipo più specifico 
+     * @return User L'implementazione può restituire un tipo più specifico
      */
     public function getCurrentUser(): UserContract
     {
@@ -144,4 +144,4 @@ class UserRepository implements UserRepositoryInterface
 }
 ```
 
-Segui queste linee guida per risolvere la maggior parte degli errori relativi ai tipi generici nei tuoi modelli e relazioni Laravel. 
+Segui queste linee guida per risolvere la maggior parte degli errori relativi ai tipi generici nei tuoi modelli e relazioni Laravel.

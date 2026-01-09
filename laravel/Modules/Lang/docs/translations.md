@@ -17,7 +17,7 @@ TextInput::make('nome')
 TextInput::make('nome')  // Le traduzioni vengono gestite automaticamente dal LangServiceProvider
 ```
 
-**Motivazione**: 
+**Motivazione**:
 Il metodo `->label()` e simili non devono mai essere utilizzati direttamente nei componenti Filament. Le etichette vengono gestite automaticamente dal `LangServiceProvider` che intercetta la creazione dei componenti e applica le traduzioni dai file di lingua.
 
 ## Struttura delle Traduzioni

@@ -28,7 +28,7 @@ $action = match ($driver) {
 public function getAction(): SmsActionInterface
 {
     $driver = Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -87,7 +87,7 @@ class SmsActionFactory
     public function create(?string $driver = null): SmsActionInterface
     {
         $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-        
+
         return match ($driver) {
             'smsfactor' => app(SendSmsFactorSMSAction::class),
             'twilio' => app(SendTwilioSMSAction::class),

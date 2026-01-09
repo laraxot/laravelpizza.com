@@ -254,4 +254,4 @@ public function handle(Failed $event): void
 1. Continua l'utilizzo di queste pratiche in tutto il modulo User e in altri moduli.
 2. Considera l'uso di generics (come `@template`) per migliorare ulteriormente la tipizzazione delle classi che gestiscono diverse tipologie di dati.
 3. Mantieni aggiornata la documentazione quando vengono modificati metodi o proprietà.
-4. Utilizza strumenti di analisi automatica come PHPStan regolarmente per verificare che il codice rimanga conforme. 
+4. Utilizza strumenti di analisi automatica come PHPStan regolarmente per verificare che il codice rimanga conforme.

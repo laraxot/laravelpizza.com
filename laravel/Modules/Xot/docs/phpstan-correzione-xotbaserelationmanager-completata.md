@@ -1,7 +1,7 @@
 # Correzione PHPStan XotBaseRelationManager - COMPLETATA ✅
 
-**Data**: 2025-12-23  
-**File**: `app/Filament/Resources/RelationManagers/XotBaseRelationManager.php`  
+**Data**: 2025-12-23
+**File**: `app/Filament/Resources/RelationManagers/XotBaseRelationManager.php`
 **Status**: ✅ **COMPLETATO - 0 ERRORI**
 
 ## 📊 Errori PHPStan Risolti (3)

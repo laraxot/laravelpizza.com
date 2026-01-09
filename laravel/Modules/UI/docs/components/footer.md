@@ -37,7 +37,7 @@ Per maggiori dettagli sulla configurazione e l'implementazione, consultare la [d
 ## Vedi Anche
 - [Documentazione del Tema One](../../../../Themes/One/docs/README.md)
 - [Guida all'Implementazione dei Componenti](../../../Cms/docs/components/README.md)
-- [Linee Guida per il Web Design](../../../Cms/docs/webdesign/README.md) 
+- [Linee Guida per il Web Design](../../../Cms/docs/webdesign/README.md)
 
 ## Collegamenti tra versioni di footer.md
 * [footer.md](docs/laravel-app/themes/one/components/footer.md)
@@ -48,4 +48,3 @@ Per maggiori dettagli sulla configurazione e l'implementazione, consultare la [d
 * [footer.md](../../../Cms/docs/components/footer.md)
 * [footer.md](../../../../Themes/One/docs/components/layouts/footer.md)
 * [footer.md](../../../../Themes/One/docs/sections/footer.md)
-

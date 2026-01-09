@@ -48,7 +48,7 @@ protected static string $view = 'pub_theme::filament.widgets.auth.password.reset
 
 **File Affetti**:
 - `RegisterWidget.php`
-- `ResetPasswordWidget.php` 
+- `ResetPasswordWidget.php`
 - `PasswordExpiredWidget.php`
 - `UpdateUserAction.php`
 

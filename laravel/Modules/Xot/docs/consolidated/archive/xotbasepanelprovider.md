@@ -39,7 +39,7 @@ namespace Modules\YourModule\Providers\Filament;
 class AdminPanelProvider extends XotBasePanelProvider
 {
     protected string $module = 'YourModule';
-    
+
     // Opzionale: personalizza le impostazioni
     protected bool $topNavigation = true;
     protected bool $globalSearch = true;
@@ -66,4 +66,4 @@ Per estendere le funzionalità base:
 ## Note Tecniche
 - Il provider utilizza `strict_types=1`
 - Supporta la configurazione dei metatag attraverso `MetatagData`
-- Integra con il sistema di moduli Laravel attraverso la configurazione `modules.namespace` 
+- Integra con il sistema di moduli Laravel attraverso la configurazione `modules.namespace`

@@ -1,8 +1,8 @@
 # Passport Cluster - Status Attuale e Lavoro Necessario
 
-**Data**: 2025-01-22  
-**Status**: ✅ COMPLETATO  
-**Metodologia**: Super Mucca  
+**Data**: 2025-01-22
+**Status**: ✅ COMPLETATO
+**Metodologia**: Super Mucca
 **Vedi**: [passport-cluster-implementation-completed.md](./passport-cluster-implementation-completed.md)
 
 ---
@@ -98,6 +98,6 @@ Modules/User/app/Filament/Clusters/Passport/
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: 🔴 IN LAVORO

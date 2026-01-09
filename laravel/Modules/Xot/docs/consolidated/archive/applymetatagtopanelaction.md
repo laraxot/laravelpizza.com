@@ -23,7 +23,7 @@ Applica le configurazioni metatag al pannello Filament.
    ```php
    // Errato
    ->colors($metatag->getColors())
-   
+
    // Corretto
    ->colors($metatag->getFilamentColors())
    ```
@@ -34,6 +34,6 @@ La correzione dell'errore PHPStan richiede la modifica del metodo chiamato da `g
 ## Collegamenti
 - [MetatagData](../../datas/MetatagData.md)
 - [Filament Best Practices](../../filament-best-practices.md)
-- [PHPStan Common Exceptions](../../PHPSTAN-COMMON-EXCEPTIONS.md) 
+- [PHPStan Common Exceptions](../../PHPSTAN-COMMON-EXCEPTIONS.md)
 - [Filament Best Practices](../../FILAMENT-BEST-PRACTICES.md)
-- [PHPStan Common Exceptions](../../PHPSTAN-COMMON-EXCEPTIONS.md) 
+- [PHPStan Common Exceptions](../../PHPSTAN-COMMON-EXCEPTIONS.md)

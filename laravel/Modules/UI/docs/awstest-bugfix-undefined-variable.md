@@ -76,7 +76,7 @@ protected function getS3Solution(?string $errorCode): string
     if ($errorCode === null) {
         return 'Unknown error - check AWS credentials and configuration';
     }
-    
+
     // resto della logica...
 }
 ```

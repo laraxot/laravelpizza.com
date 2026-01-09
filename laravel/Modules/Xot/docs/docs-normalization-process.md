@@ -207,8 +207,6 @@ Per processi futuri, considerare script di automazione:
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025  
-**Stato**: Processo attivo  
+**Ultimo aggiornamento**: Gennaio 2025
+**Stato**: Processo attivo
 **Priorità**: Alta (conformità regole progetto)
-
-

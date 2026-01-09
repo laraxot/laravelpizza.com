@@ -2,7 +2,7 @@
 
 ## Core Concept: Theme as "Vestito"
 
-The Laraxot theme system follows the **"Vestito"** (Italian for "clothing") philosophy: 
+The Laraxot theme system follows the **"Vestito"** (Italian for "clothing") philosophy:
 
 > *Themes are like clothes - they cover the application and provide visual presentation, but they do not change the core functionality or structure of the underlying system.*
 
@@ -123,11 +123,11 @@ Themes provide layout structures:
     <header>
         @include('partials.header')
     </header>
-    
+
     <main>
         @yield('content')
     </main>
-    
+
     <footer>
         @include('partials.footer')
     </footer>

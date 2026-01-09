@@ -1,13 +1,13 @@
 # Compatibilità Filament 4.x - Modulo Cms
 
-**Data**: 2025-01-27  
-**Status**: ✅ COMPLETATO  
-**Versione Filament**: 4.0.17  
+**Data**: 2025-01-27
+**Status**: ✅ COMPLETATO
+**Versione Filament**: 4.0.17
 
 ## 🔧 Correzioni Implementate
 
 ### 1. SectionPreview Component
-**Problema**: Parametro `$name` non contravariante con classe padre  
+**Problema**: Parametro `$name` non contravariante con classe padre
 **Soluzione**: Utilizzato `parent::make($name)` per delegare alla classe padre
 
 ```php
@@ -34,11 +34,11 @@ public static function getNavigationIcon(): null|string
     $icon = static::$navigationIcon ??
         FilamentIcon::resolve('panels::pages.dashboard.navigation-item') ??
             (Filament::hasTopNavigation() ? 'heroicon-m-home' : 'heroicon-o-home');
-    
+
     if ($icon instanceof \BackedEnum) {
         return (string) $icon->value;
     }
-    
+
     return is_string($icon) ? $icon : null;
 }
 ```

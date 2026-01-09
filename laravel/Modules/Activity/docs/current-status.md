@@ -106,14 +106,12 @@ activity()
 
 ## Contatti
 
-**Responsabile**: TBD  
-**Team**: Backend  
-**Priority**: P0 (blocca Activity Log per modelli critici)  
+**Responsabile**: TBD
+**Team**: Backend
+**Priority**: P0 (blocca Activity Log per modelli critici)
 **ETA Fix Definitivo**: 6 settimane (3 sprint)
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
+**Ultimo aggiornamento**: 27 Ottobre 2025
 **Prossimo check**: Sprint Planning
-
-

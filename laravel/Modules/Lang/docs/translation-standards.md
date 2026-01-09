@@ -1,4 +1,4 @@
-# Standard per le Traduzioni nel Progetto 
+# Standard per le Traduzioni nel Progetto
 
 ## Struttura delle Cartelle
 

@@ -12,7 +12,7 @@ Il file `Modules/Lang/app/Providers/LangServiceProvider.php` presenta conflitti 
 ### Conflitto 1 (Linea 44)
 ```php
         $this->registerFilamentLabel();
-        
+
         $this->registerFilamentLabel();
 ```
 
@@ -22,7 +22,7 @@ Il file `Modules/Lang/app/Providers/LangServiceProvider.php` presenta conflitti 
 ```php
         Step::configureUsing(function (Step $component) {
             $component = app(AutoLabelAction::class)->execute($component);
-            
+
         Step::configureUsing(function (Step $component) {
             $component = app(AutoLabelAction::class)->execute($component);
 
@@ -45,7 +45,7 @@ Il file `Modules/Lang/app/Providers/LangServiceProvider.php` presenta conflitti 
 ```php
 // PRIMA (conflitto)
         $this->registerFilamentLabel();
-        
+
         $this->registerFilamentLabel();
 
 // DOPO (risolto)
@@ -57,10 +57,9 @@ Il file `Modules/Lang/app/Providers/LangServiceProvider.php` presenta conflitti 
 // PRIMA (conflitto)
         Step::configureUsing(function (Step $component) {
             $component = app(AutoLabelAction::class)->execute($component);
-            
+
         Step::configureUsing(function (Step $component) {
             $component = app(AutoLabelAction::class)->execute($component);
-
 
 // DOPO (risolto)
         Step::configureUsing(function (Step $component) {
@@ -106,4 +105,4 @@ Il file `Modules/Lang/app/Providers/LangServiceProvider.php` presenta conflitti 
 - **Data**: Gennaio 2025
 - **Modulo**: Lang
 - **File**: `app/Providers/LangServiceProvider.php`
-- **Tipo Conflitto**: Formattazione codice 
+- **Tipo Conflitto**: Formattazione codice

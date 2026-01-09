@@ -2,7 +2,6 @@
 
 <!-- Contenuto migrato da _docs/ffmpeg.txt -->
 
-
 on 10 Aug
 352 commits
 https://github.com/protonemedia/laravel-ffmpeg

@@ -109,25 +109,25 @@ class JobScheduler
             ->daily()
             ->at('02:00')
             ->onQueue('maintenance');
-        
+
         // Job settimanale per backup
         Schedule::job(new BackupJob())
             ->weekly()
             ->sundays()
             ->at('03:00')
             ->onQueue('backup');
-        
+
         // Job ogni 5 minuti per monitoraggio
         Schedule::job(new HealthCheckJob())
             ->everyFiveMinutes()
             ->onQueue('monitoring');
-        
+
         // Job personalizzato con cron
         Schedule::job(new CustomJob())
             ->cron('0 */6 * * *') // Ogni 6 ore
             ->onQueue('custom');
     }
-    
+
     public function scheduleBatchJobs(): void
     {
         // Batch di job per elaborazione massiva
@@ -158,7 +158,7 @@ class JobMonitoringService
     {
         $queues = ['default', 'high', 'low', 'emails', 'notifications'];
         $stats = [];
-        
+
         foreach ($queues as $queue) {
             $stats[$queue] = [
                 'jobs' => $this->getQueueSize($queue),
@@ -168,14 +168,14 @@ class JobMonitoringService
                 'throughput' => $this->getThroughput($queue),
             ];
         }
-        
+
         return $stats;
     }
-    
+
     public function getJobDetails(string $jobId): array
     {
         $job = Job::find($jobId);
-        
+
         return [
             'id' => $job->id,
             'queue' => $job->queue,
@@ -187,14 +187,14 @@ class JobMonitoringService
             'status' => $this->getJobStatus($job),
         ];
     }
-    
+
     public function monitorQueue(string $queueName): void
     {
         // Monitoraggio real-time via WebSocket
         $stats = $this->getQueueStats();
-        
+
         broadcast(new QueueStatsUpdated($queueName, $stats[$queueName]));
-        
+
         // Allerte se necessario
         if ($this->shouldAlert($queueName, $stats[$queueName])) {
             $this->sendAlert($queueName, $stats[$queueName]);
@@ -267,7 +267,7 @@ $batch = Bus::batch([
 class JobResource extends Resource
 {
     protected static ?string $model = Job::class;
-    
+
     public static function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
     {
         return $form
@@ -292,7 +292,7 @@ class JobResource extends Resource
                     ->default(0),
             ]);
     }
-    
+
     public static function table(Table $table): Table
     {
         return $table
@@ -349,7 +349,7 @@ class QueueMonitoringController extends Controller
     public function dashboard()
     {
         $monitoringService = app(JobMonitoringService::class);
-        
+
         return response()->json([
             'queue_stats' => $monitoringService->getQueueStats(),
             'failed_jobs' => $monitoringService->getFailedJobs(),
@@ -357,16 +357,16 @@ class QueueMonitoringController extends Controller
             'throughput' => $monitoringService->getThroughput(),
         ]);
     }
-    
+
     public function retryFailedJob(string $jobId)
     {
         $job = FailedJob::find($jobId);
-        
+
         if ($job) {
             $job->retry();
             return response()->json(['message' => 'Job riprovato con successo']);
         }
-        
+
         return response()->json(['error' => 'Job non trovato'], 404);
     }
 }
@@ -386,29 +386,29 @@ class QueueManager
         'emails' => EmailQueue::class,
         'notifications' => NotificationQueue::class,
     ];
-    
+
     public function getQueue(string $name): QueueInterface
     {
         $queueClass = $this->queues[$name] ?? DefaultQueue::class;
         return app($queueClass);
     }
-    
+
     public function dispatchToQueue(string $queueName, Job $job): void
     {
         $queue = $this->getQueue($queueName);
         $queue->push($job);
-        
+
         // Log dell'attività
         $this->logJobDispatch($queueName, $job);
-        
+
         // Broadcast real-time
         broadcast(new JobDispatched($queueName, $job));
     }
-    
+
     public function getQueueHealth(string $queueName): array
     {
         $queue = $this->getQueue($queueName);
-        
+
         return [
             'size' => $queue->size(),
             'failed' => $queue->failed(),
@@ -439,7 +439,7 @@ class JobAnalyticsService
             'queue_distribution' => $this->getQueueDistribution(),
         ];
     }
-    
+
     public function getQueueDistribution(): array
     {
         return Job::select('queue', DB::raw('count(*) as count'))
@@ -448,15 +448,15 @@ class JobAnalyticsService
             ->get()
             ->toArray();
     }
-    
+
     public function getSuccessRate(): float
     {
         $total = Job::count();
         $completed = Job::where('status', 'completed')->count();
-        
+
         return $total > 0 ? ($completed / $total) * 100 : 0;
     }
-    
+
     public function getAverageProcessingTime(): float
     {
         return Job::where('status', 'completed')
@@ -479,33 +479,33 @@ class JobSecurityService
             $this->logSecurityViolation($job, 'Invalid payload');
             return false;
         }
-        
+
         // Verifica autorizzazioni
         if (!$this->hasPermission($job)) {
             $this->logSecurityViolation($job, 'Permission denied');
             return false;
         }
-        
+
         // Verifica rate limiting
         if ($this->isRateLimited($job)) {
             $this->logSecurityViolation($job, 'Rate limited');
             return false;
         }
-        
+
         return true;
     }
-    
+
     public function sanitizeJob(Job $job): Job
     {
         // Sanitizza payload
         $job->payload = $this->sanitizePayload($job->payload);
-        
+
         // Rimuovi dati sensibili
         $job->payload = $this->removeSensitiveData($job->payload);
-        
+
         return $job;
     }
-    
+
     public function logSecurityViolation(Job $job, string $reason): void
     {
         Log::warning('Job security violation', [

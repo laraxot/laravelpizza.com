@@ -23,17 +23,17 @@ This document defines the standards and best practices for working with Enums in
 1. **Basic Structure**:
    ```php
    <?php
-   
+
    declare(strict_types=1);
-   
+
    namespace Modules\YourModule\Enums;
-   
+
    use Filament\Support\Contracts\HasLabel;
-   
+
    enum YourEnumNameEnum: string implements HasLabel
    {
        case EXAMPLE = 'example';
-       
+
        public function getLabel(): ?string
        {
            return match ($this) {
@@ -53,7 +53,7 @@ This document defines the standards and best practices for working with Enums in
 3. **Using Enums in Filament**:
    ```php
    use Modules\YourModule\Enums\YourEnumNameEnum;
-   
+
    // In your form/table
    Select::make('field_name')
        ->options(YourEnumNameEnum::class)
@@ -87,7 +87,7 @@ enum AppointmentTypeEnum: string implements HasLabel
     case CONSULTATION = 'consultation';
     case CLEANING = 'cleaning';
     // ... other cases
-    
+
     /**
      * Get the human-readable label for the enum case.
      */

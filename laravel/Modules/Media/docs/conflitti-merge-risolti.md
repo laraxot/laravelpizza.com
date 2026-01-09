@@ -57,15 +57,15 @@ protected function getBasePath(Media $media): string
  *
  * @param ConvertData $data I dati di configurazione per la conversione
  * @param MediaConvert $record Il record MediaConvert che tiene traccia della conversione
- * 
+ *
  * @throws \Exception Se il file non esiste o se mancano parametri essenziali
- * 
+ *
  * @return string|null L'URL del file convertito o null in caso di errore
  */
 public function execute(ConvertData $data, MediaConvert $record): ?string
 {
     $starting_time = microtime(true);
-    
+
     if (!$data->exists()) {
         throw new \Exception('Il file non esiste');
     }
@@ -252,7 +252,7 @@ public static function getFormSchema(): array
 <h4>[{{ $change_cat->id }}]{{ $change_cat->title }}</h4>
 @foreach ($changes->where('id_cat', $change_cat->id) as $change)
     <h5>[{{ $change->id }}]{{ $change->title }}</h5>
-    
+
     <div class="btn-group btn-group-toggle">
         <x-filament-forms::field-wrapper.label class="btn btn-danger">
             <input type="radio" wire:model="qty.{{ $change_cat->id }}.{{ $change->id }}"

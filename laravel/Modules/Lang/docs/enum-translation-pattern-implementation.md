@@ -19,7 +19,7 @@ use Modules\Xot\Filament\Traits\TransTrait;
 enum MyEnum: string implements HasColor, HasIcon, HasLabel
 {
     use TransTrait;
-    
+
     case VALUE1 = 'value1';
     case VALUE2 = 'value2';
 
@@ -164,7 +164,7 @@ Prima di ogni commit, verificare:
 enum StatusEnum: string implements HasColor, HasIcon, HasLabel
 {
     use TransTrait;
-    
+
     case ACTIVE = 'active';
     case INACTIVE = 'inactive';
     case PENDING = 'pending';
@@ -215,4 +215,4 @@ return [
 - [Translation Management](translation-management.md)
 
 ## Ultimo Aggiornamento
-2025-01-27 - Implementazione completa regola critica enum translation pattern 
+2025-01-27 - Implementazione completa regola critica enum translation pattern

@@ -173,4 +173,3 @@ Ogni card ha:
   - [Dashboard Page Design](./dashboard-page-design.md)
   - [Register Page Design](./register-page-design-error.md)
   - [Design Analysis](./laravelpizza-com-design-analysis.md)
-

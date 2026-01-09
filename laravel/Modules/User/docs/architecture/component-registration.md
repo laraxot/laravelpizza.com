@@ -1,6 +1,6 @@
 # Registrazione dei Componenti Blade nel Modulo User
 
-> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User. 
+> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User.
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/architecture/component-registration.md).
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/project_docs/architecture/component-registration.md).
 ## Implementazione Corretta nel Modulo User

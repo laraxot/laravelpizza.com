@@ -21,4 +21,3 @@ Models: 8 | Resources: 3 | Actions: 7 | Docs: 74
 Resources refactoring (2 giorni)
 
 **Status:** 🟢 **MODULO ESEMPIO DA SEGUIRE**
-

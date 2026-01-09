@@ -13,7 +13,7 @@ public function execute(Job $job) {
 class ProcessJobAction {
     public function execute(Job $job): void {
         $this->validateJob($job);
-        
+
         match ($job->priority) {
             'critical' => $this->processCriticalJob($job),
             'high' => $this->processHighPriorityJob($job),
@@ -21,25 +21,25 @@ class ProcessJobAction {
             'low' => $this->processLowPriorityJob($job)
         };
     }
-    
+
     private function processCriticalJob(Job $job): void {
         dispatch(new ProcessCriticalJob($job))
             ->onQueue('critical')
             ->allOnConnection('redis');
     }
-    
+
     private function processHighPriorityJob(Job $job): void {
         dispatch(new ProcessHighPriorityJob($job))
             ->onQueue('high')
             ->delay(now()->addSeconds(5));
     }
-    
+
     private function processNormalJob(Job $job): void {
         dispatch(new ProcessNormalJob($job))
             ->onQueue('default')
             ->delay(now()->addSeconds(30));
     }
-    
+
     private function processLowPriorityJob(Job $job): void {
         dispatch(new ProcessLowPriorityJob($job))
             ->onQueue('low')
@@ -59,19 +59,19 @@ public function monitor($job) {
 class JobMonitoringService {
     private $metrics;
     private $logger;
-    
+
     public function trackJob(Job $job): void {
         $this->metrics->increment("jobs.processed", 1, [
             'type' => $job->type,
             'queue' => $job->queue,
             'status' => $job->status
         ]);
-        
+
         $duration = $job->finished_at->diffInSeconds($job->started_at);
         $this->metrics->timing("jobs.duration", $duration, [
             'type' => $job->type
         ]);
-        
+
         if ($duration > config('job.thresholds.duration')) {
             $this->logger->warning('Long running job detected', [
                 'job_id' => $job->id,
@@ -80,13 +80,13 @@ class JobMonitoringService {
             ]);
         }
     }
-    
+
     public function trackFailure(Job $job, Exception $e): void {
         $this->metrics->increment("jobs.failed", 1, [
             'type' => $job->type,
             'error' => get_class($e)
         ]);
-        
+
         $this->logger->error('Job failed', [
             'job_id' => $job->id,
             'error' => $e->getMessage(),
@@ -107,20 +107,20 @@ public function retry($job) {
 class RetryManager {
     public function handleRetry(Job $job, Exception $e): void {
         $retryStrategy = $this->determineRetryStrategy($job, $e);
-        
+
         if ($retryStrategy->shouldRetry()) {
             $delay = $retryStrategy->getNextRetryDelay();
-            
+
             dispatch(new RetryJob($job))
                 ->onQueue($job->queue)
                 ->delay($delay);
-                
+
             $this->logRetryAttempt($job, $delay);
         } else {
             $this->handleFinalFailure($job);
         }
     }
-    
+
     private function determineRetryStrategy(Job $job, Exception $e): RetryStrategy {
         return match (true) {
             $e instanceof TemporaryException => new ExponentialBackoffStrategy(),
@@ -128,7 +128,7 @@ class RetryManager {
             default => new NoRetryStrategy()
         };
     }
-    
+
     private function logRetryAttempt(Job $job, int $delay): void {
         Log::info('Job scheduled for retry', [
             'job_id' => $job->id,
@@ -159,7 +159,7 @@ class Job extends Model {
                     ->orderBy('priority', 'desc')
                     ->orderBy('created_at', 'asc');
     }
-    
+
     public function scopeFailedJobs($query) {
         return $query->where('status', 'failed')
                     ->with('failureLog')
@@ -193,12 +193,12 @@ return [
 class JobCacheService {
     public function getJobStatus(string $jobId): ?array {
         return Cache::tags(['jobs'])
-            ->remember("job_status_{$jobId}", 
+            ->remember("job_status_{$jobId}",
                 config('job.cache.ttl.job_status'),
                 fn() => $this->fetchJobStatus($jobId)
             );
     }
-    
+
     public function getJobStats(): array {
         return Cache::tags(['stats'])
             ->remember('job_stats',
@@ -217,7 +217,7 @@ class JobCacheService {
 class QueueRateLimitService {
     public function canProcessJob(string $queue): bool {
         $key = "queue:{$queue}:rate";
-        
+
         return Redis::throttle($key)
             ->allow(config("job.limits.{$queue}.jobs_per_minute"))
             ->every(60)
@@ -226,7 +226,7 @@ class QueueRateLimitService {
                 fn() => false
             );
     }
-    
+
     public function trackJobProcessing(string $queue): void {
         Redis::incr("queue:{$queue}:processed");
         Redis::expire("queue:{$queue}:processed", 3600);
@@ -244,10 +244,10 @@ class QueueMonitor {
         collect(config('job.queues'))->each(function($queue) {
             $size = Queue::size($queue);
             $processed = Redis::get("queue:{$queue}:processed") ?? 0;
-            
+
             Metrics::gauge("queue.size", $size, ['queue' => $queue]);
             Metrics::counter("queue.processed", $processed, ['queue' => $queue]);
-            
+
             if ($size > config("job.thresholds.{$queue}.size")) {
                 Log::warning("Queue size threshold exceeded", [
                     'queue' => $queue,
@@ -267,19 +267,19 @@ class JobHealthCheck extends Check {
         $failedJobs = Job::where('status', 'failed')
             ->where('failed_at', '>=', now()->subHour())
             ->count();
-            
+
         $stuckJobs = Job::where('status', 'processing')
             ->where('started_at', '<=', now()->subHours(2))
             ->count();
-            
+
         if ($failedJobs > config('job.thresholds.failed_jobs')) {
             return Result::failed("High number of failed jobs: {$failedJobs}");
         }
-        
+
         if ($stuckJobs > 0) {
             return Result::failed("Found {$stuckJobs} stuck jobs");
         }
-        
+
         return Result::ok();
     }
 }
@@ -293,14 +293,14 @@ class JobHealthCheck extends Check {
 class ProcessJobTest extends TestCase {
     public function test_job_processing() {
         Queue::fake();
-        
+
         $job = Job::factory()->create([
             'type' => 'test',
             'priority' => 'high'
         ]);
-        
+
         app(ProcessJobAction::class)->execute($job);
-        
+
         Queue::assertPushedOn('high', ProcessHighPriorityJob::class);
     }
 }
@@ -313,10 +313,10 @@ class RetryTest extends TestCase {
     public function test_retry_strategy() {
         $job = Job::factory()->create();
         $exception = new TemporaryException('Test error');
-        
+
         $manager = app(RetryManager::class);
         $manager->handleRetry($job, $exception);
-        
+
         $this->assertDatabaseHas('jobs', [
             'id' => $job->id,
             'attempts' => 1
@@ -347,23 +347,20 @@ class RetryTest extends TestCase {
 
 ### Versione HEAD
 
-   - Aggiornamento strategie retry 
+   - Aggiornamento strategie retry
 ## Collegamenti tra versioni di solutions.md
 * [solutions.md](../../../Gdpr/docs/solutions.md)
 * [solutions.md](../../../Xot/docs/solutions.md)
 * [solutions.md](../../../Job/docs/solutions.md)
 
-
 ### Versione Incoming
 
-   - Aggiornamento strategie retry 
+   - Aggiornamento strategie retry
 
 ---
 
-
 ### Versione Incoming
 
-   - Aggiornamento strategie retry 
+   - Aggiornamento strategie retry
 
 ---
-

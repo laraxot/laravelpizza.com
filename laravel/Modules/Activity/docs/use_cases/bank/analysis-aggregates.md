@@ -49,9 +49,9 @@ Larabank Aggregates è un'implementazione di un sistema bancario semplificato ch
    ```php
    $sourceAccount = $this->repository->get($sourceAccountId);
    $destinationAccount = $this->repository->get($destinationAccountId);
-   
+
    $sourceAccount->transferMoney($destinationAccount, 1000);
-   
+
    $this->repository->save($sourceAccount);
    $this->repository->save($destinationAccount);
    ```
@@ -113,7 +113,7 @@ public function it_can_deposit_money()
 {
     $account = BankAccount::createAccount('1234567890', 'Mario Rossi');
     $account->addMoney(1000);
-    
+
     $this->assertEquals(1000, $account->getBalance());
 }
 
@@ -121,7 +121,7 @@ public function it_can_deposit_money()
 public function it_cannot_deposit_negative_amount()
 {
     $account = BankAccount::createAccount('1234567890', 'Mario Rossi');
-    
+
     $this->expectException(InvalidDepositAmount::class);
     $account->addMoney(-100);
 }

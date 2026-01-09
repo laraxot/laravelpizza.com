@@ -18,7 +18,7 @@ Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, Salut
 - **Soluzione**: Già presente cast `(string)` alla riga 22
 - **Stato**: ✅ Corretto
 
-#### GetFileInfoAction.php  
+#### GetFileInfoAction.php
 - **Problema**: `Cannot access offset 'effectiveUri' on mixed`
 - **Soluzione**: Già presente controllo `is_array($metadata)` alla riga 25
 - **Stato**: ✅ Corretto
@@ -46,7 +46,7 @@ $this->debugResults['file_operations'] = $this->getFileOperationsData();
 'all_tests_completed' => 'All tests completed',      // riga 59
 'all_tests_completed' => 'All Tests Completed',      // riga 71 - DUPLICATO
 
-// DOPO 
+// DOPO
 'all_tests_completed' => 'All tests completed',      // riga 59 - UNICO
 ```
 
@@ -62,12 +62,12 @@ $this->debugResults['file_operations'] = $this->getFileOperationsData();
 'private_key' => self::formatPrivateKey((string) env('CLOUDFRONT_PRIVATE_KEY', '')),
 ```
 
-### 🟢 ** Module** - Report Model  
-### 🟢 **SaluteOra Module** - Report Model  
-### 🟢 ** Module** - Report Model  
-### 🟢 **SaluteOra Module** - Report Model  
-### 🟢 ** Module** - Report Model  
-### 🟢 **SaluteOra Module** - Report Model  
+### 🟢 ** Module** - Report Model
+### 🟢 **SaluteOra Module** - Report Model
+### 🟢 ** Module** - Report Model
+### 🟢 **SaluteOra Module** - Report Model
+### 🟢 ** Module** - Report Model
+### 🟢 **SaluteOra Module** - Report Model
 **Stato**: ✅ Corretto
 
 #### Report.php
@@ -136,7 +136,7 @@ cd /var/www/html/_bases/base_saluteora/laravel
 - Controlli `is_array()` prima di accesso offset
 - Return types espliciti per tutti i metodi
 
-### 2. **Safe Functions**  
+### 2. **Safe Functions**
 - Import `use function Safe\*` per funzioni che possono restituire `false`
 - Gestione eccezioni invece di controlli `false`
 
@@ -151,7 +151,7 @@ cd /var/www/html/_bases/base_saluteora/laravel
 ## Documentazione Correlata
 
 - [S3Test Method Duplication Fix](s3test-method-duplication-bugfix.md)
-- [S3Test Null ErrorCode Handling](s3test-bugfix-null-errorcode.md) 
+- [S3Test Null ErrorCode Handling](s3test-bugfix-null-errorcode.md)
 - [AwsTest Undefined Variable Fix](awstest-bugfix-undefined-variable.md)
 - [Media Module PHPStan Fixes](../Media/project_docs/phpstan_level10_fixes.md)
 
@@ -159,6 +159,6 @@ cd /var/www/html/_bases/base_saluteora/laravel
 
 Questo documento deve essere aggiornato ogni volta che vengono rilevati e corretti nuovi errori PHPStan level 9+.
 
-**Data Ultimo Aggiornamento**: 2025-01-06  
-**PHPStan Version**: 1.12.x  
+**Data Ultimo Aggiornamento**: 2025-01-06
+**PHPStan Version**: 1.12.x
 **Laravel Version**: 12.21.0

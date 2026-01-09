@@ -1,8 +1,8 @@
 # Filament - Guida Completa Consolidata
 
-**Ultimo aggiornamento**: 2025-01-06  
-**Principi**: DRY + KISS  
-**Status**: ✅ CONSOLIDATO  
+**Ultimo aggiornamento**: 2025-01-06
+**Principi**: DRY + KISS
+**Status**: ✅ CONSOLIDATO
 
 ## 🎯 Panoramica
 
@@ -55,7 +55,7 @@ class PatientResource extends XotBaseResource
             DatePicker::make('birth_date'),
         ];
     }
-    
+
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */

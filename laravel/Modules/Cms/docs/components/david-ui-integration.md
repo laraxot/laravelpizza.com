@@ -208,9 +208,9 @@ class ButtonTest extends TestCase
     public function it_renders_with_correct_variant(): void
     {
         $button = new Button('primary', 'md');
-        
+
         $view = $button->render();
-        
+
         $this->assertStringContainsString('bg-primary-600', $view->render());
     }
 }
@@ -235,7 +235,7 @@ public function it_handles_click_events(): void
    ```bash
    # Ricompilare gli assets
    npm run dev
-   
+
    # Pulire la cache
    php artisan view:clear
    php artisan cache:clear
@@ -247,7 +247,7 @@ public function it_handles_click_events(): void
    import Alpine from 'alpinejs';
    window.Alpine = Alpine;
    Alpine.start();
-   
+
    // Poi inizializzare David UI
    import { initDavidUI } from '@david-ui/core';
    initDavidUI();
@@ -293,4 +293,4 @@ public function it_handles_click_events(): void
 ### Community
 - [Discord Server](https://discord.gg/davidui)
 - [GitHub Issues](https://github.com/creative-tim/david-ui/issues)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/david-ui) 
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/david-ui)

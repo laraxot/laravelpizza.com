@@ -82,25 +82,19 @@ SlackAlert::to('channel-name')->message('Job in corso...');
 - [Queue](queue.md)
 - [Monitoraggio](monitoring.md)
 - [Performance](performance.md)
-- [Panoramica](../packages.md) 
+- [Panoramica](../packages.md)
 ### Versione HEAD
 
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di integrations.md
 * [integrations.md](docs/tecnico/filament/integrations.md)
 * [integrations.md](../../../Job/docs/packages/integrations.md)
 
-
 ### Versione Incoming
-
 
 ---
 
-
 ### Versione Incoming
 
-
 ---
-

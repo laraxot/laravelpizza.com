@@ -31,7 +31,7 @@ Il comando `php artisan make:filament-resource` e il comando personalizzato `php
 ```php
 /**
  * Get the associated model class for this page.
- * 
+ *
  * This method must be non-static to properly override the parent method.
  * Returns the model class string or throws an exception if not set.
  */
@@ -40,7 +40,7 @@ public function getModel(): string
     if (static::$model === null) {
         throw new \LogicException('Model class not set for page: ' . static::class);
     }
-    
+
     return static::$model;
 }
 ```

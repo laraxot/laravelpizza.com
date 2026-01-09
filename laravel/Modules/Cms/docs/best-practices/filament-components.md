@@ -210,11 +210,10 @@ it('renders filament icon buttons for social links', function () {
 ## Collegamenti Interni
 - [Guida ai Temi](/laravel/Themes/One/docs/README.md)
 - [Componenti UI](/laravel/Modules/Cms/docs/components/README.md)
-- [Testing Components](/laravel/Modules/Cms/docs/testing/components.md) 
+- [Testing Components](/laravel/Modules/Cms/docs/testing/components.md)
 
 ## Collegamenti tra versioni di filament-components.md
 * [filament-components.md](laravel/Modules/User/docs/best-practices/filament-components.md)
 * [filament-components.md](laravel/Modules/Cms/docs/best-practices/filament-components.md)
 * [filament-components.md](laravel/Modules/Cms/docs/filament-components.md)
 * [filament-components.md](laravel/docs/rules/filament-components.md)
-

@@ -58,14 +58,14 @@ public function sendEmail(): void
             ->success()
             ->title(__('Email inviata con successo'))
             ->send();
-            
+
     } catch (\Exception $e) {
         Notification::make()
             ->danger()
             ->title(__('Errore nell\'invio dell\'email'))
             ->body($e->getMessage())
             ->send();
-            
+
         // Log dell'errore
         \Log::error('Errore invio email: ' . $e->getMessage(), [
             'exception' => $e,
@@ -110,7 +110,7 @@ Crea o aggiorna il file di configurazione `config/mail.php`:
 ```php
 return [
     'default' => env('MAIL_MAILER', 'smtp'),
-    
+
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
@@ -149,7 +149,7 @@ public function handle()
             $message->to(env('MAIL_TEST_RECIPIENT'))
                   ->subject('Test Email');
         });
-        
+
         $this->info('Email inviata con successo!');
     } catch (\Exception $e) {
         $this->error("Errore: ".$e->getMessage());

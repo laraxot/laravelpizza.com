@@ -1,7 +1,7 @@
 # User - Filosofia Completa: Logica, Religione, Politica, Zen
 
-**Data Creazione**: 2025-12-23  
-**Status**: Documentazione Filosofica Completa  
+**Data Creazione**: 2025-12-23
+**Status**: Documentazione Filosofica Completa
 **Versione**: 1.0.0
 
 ## 📋 Indice Filosofico
@@ -36,7 +36,7 @@ Il modulo fornisce **gestione completa utenti** per:
 BaseUser (Base - Single Table)
 ├── User (Estensione applicazione)
 ├── Doctor (STI - Tipo utente medico)
-├── Patient (STI - Tipo utente paziente)  
+├── Patient (STI - Tipo utente paziente)
 ├── Admin (STI - Tipo utente admin)
 │
 ├── Roles (Ruoli Spatie)
@@ -147,7 +147,7 @@ Il modulo User **è utilizzato da** tutti i moduli business:
 class Doctor extends User
 {
     use HasParent;
-    
+
     // Type-specific methods
     public function appointments(): HasMany
     {
@@ -160,7 +160,7 @@ class DoctorPolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->type === UserTypeEnum::DOCTOR 
+        return $user->type === UserTypeEnum::DOCTOR
             && Filament::getTenant() !== null;
     }
 }
@@ -207,7 +207,7 @@ class BaseUser extends Authenticatable
 {
     // STI Type
     public UserTypeEnum $type;  // DOCTOR, PATIENT, ADMIN
-    
+
     // Core relationships
     public function roles(): BelongsToMany  // Spatie
     public function permissions(): BelongsToMany  // Spatie
@@ -224,7 +224,7 @@ class BaseUser extends Authenticatable
 class Doctor extends User
 {
     use HasParent;
-    
+
     // Doctor-specific relationships
     public function appointments(): HasMany
     public function patients(): HasMany

@@ -8,7 +8,7 @@ Questo contratto definisce l'interfaccia per i modelli che supportano la gestion
 class YourModel extends Model implements ModelWithStatusContract
 {
     use \Spatie\ModelStatus\HasStatuses;
-    
+
     // Implementazione dei metodi richiesti dal contratto
 }
 ```
@@ -65,4 +65,4 @@ Imposta un nuovo stato per il modello con un motivo opzionale.
 ## Collegamenti correlati
 - [Documentazione Spatie Model Status](https://github.com/spatie/laravel-model-status)
 - [Documentazione Laravel Eloquent](https://laravel.com/docs/eloquent)
-- [Documentazione PHPStan](https://phpstan.org/) 
+- [Documentazione PHPStan](https://phpstan.org/)

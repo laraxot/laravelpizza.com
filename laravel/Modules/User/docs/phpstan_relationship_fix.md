@@ -2,7 +2,7 @@
 
 ## 🚨 Errore PHPStan Risolto
 
-**File**: `User/app/Models/Traits/HasAuthenticationLogTrait.php`  
+**File**: `User/app/Models/Traits/HasAuthenticationLogTrait.php`
 **Errore**: Type mismatch per relazioni MorphMany/MorphOne
 
 ### Problema
@@ -46,7 +46,7 @@ public function latestAuthentication(): MorphOne
 @return MorphOne<RelatedModel, $this>
 ```
 
-### HasMany/HasOne  
+### HasMany/HasOne
 ```php
 // ✅ CORRETTO
 @return HasMany<RelatedModel>
@@ -55,7 +55,7 @@ public function latestAuthentication(): MorphOne
 
 ### BelongsTo
 ```php
-// ✅ CORRETTO  
+// ✅ CORRETTO
 @return BelongsTo<RelatedModel, $this>
 ```
 

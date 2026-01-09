@@ -14,7 +14,7 @@ Il file `S3Test.php` violava le regole fondamentali di estensione Filament:
 class S3Test extends Page implements HasForms
 {
     use InteractsWithForms; // ERRORE: già presente in XotBasePage
-    
+
     public function emailForm(Form $form): Form { /* duplicazione */ }
     protected function getUser(): Authenticatable&Model { /* duplicazione */ }
 }
@@ -26,7 +26,7 @@ class S3Test extends XotBasePage
 {
     // NIENTE implements HasForms (già implementato)
     // NIENTE use InteractsWithForms (già presente)
-    
+
     protected function getFormSchema(): array { /* sovrascrittura specifica */ }
     protected function getFormActions(): array { /* sovrascrittura specifica */ }
 }
@@ -80,9 +80,9 @@ class S3Test extends XotBasePage
 
 ## Collegamenti
 - [Regole Estensione Filament](../../../.cursor/rules/filament-extension-rules.mdc)
-*Ultimo aggiornamento: 2025-01-06* 
+*Ultimo aggiornamento: 2025-01-06*
 - [XotBasePage Implementation](../../Xot/project_docs/xotbasepage_implementation.md)
 - [Filament Best Practices](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
 
-*Ultimo aggiornamento: 2025-01-06* 
-*Ultimo aggiornamento: 2025-01-06* 
+*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: 2025-01-06*

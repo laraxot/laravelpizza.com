@@ -84,7 +84,7 @@ public function boot()
 {
     // Imposta la localizzazione di Carbon
     Carbon::setLocale(config('app.locale'));
-    
+
     // Opzionale: imposta la localizzazione per le date in italiano
     setlocale(LC_TIME, 'it_IT.UTF-8');
 }
@@ -144,7 +144,7 @@ if (!function_exists('format_currency')) {
     {
         $locale = $locale ?: app()->getLocale();
         $formatter = new NumberFormatter($locale, NumberFormatter::CURRENCY);
-        
+
         return $formatter->formatCurrency($amount, $currency);
     }
 }
@@ -155,7 +155,7 @@ if (!function_exists('format_number')) {
         $locale = $locale ?: app()->getLocale();
         $formatter = new NumberFormatter($locale, NumberFormatter::DECIMAL);
         $formatter->setAttribute(NumberFormatter::FRACTION_DIGITS, $decimals);
-        
+
         return $formatter->format($number);
     }
 }
@@ -190,10 +190,10 @@ public function boot()
 {
     // Imposta la localizzazione di Carbon
     Carbon::setLocale(config('app.locale'));
-    
+
     // Imposta la localizzazione per le date
     setlocale(LC_TIME, config('app.locale') . '.UTF-8');
-    
+
     // Condivide le lingue disponibili con tutte le viste
     view()->composer('*', function ($view) {
         $view->with('availableLocales', config('laravellocalization.supportedLocales'));
@@ -222,30 +222,30 @@ class SetLocale
         if (Session::has('locale')) {
             App::setLocale(Session::get('locale'));
         }
-        
+
         // 2. Verifica la lingua nell'URL (se usi mcamara/laravel-localization)
         $locale = $request->segment(1);
         if (in_array($locale, array_keys(config('laravellocalization.supportedLocales')))) {
             App::setLocale($locale);
             Session::put('locale', $locale);
         }
-        
+
         // 3. Verifica l'header Accept-Language
         if (!Session::has('locale') && $request->hasHeader('Accept-Language')) {
             $preferredLanguage = $request->getPreferredLanguage(
                 array_keys(config('laravellocalization.supportedLocales'))
             );
-            
+
             if ($preferredLanguage) {
                 App::setLocale($preferredLanguage);
                 Session::put('locale', $preferredLanguage);
             }
         }
-        
+
         // Imposta la localizzazione per Carbon
         setlocale(LC_TIME, App::currentLocale() . '.UTF-8');
         \Carbon\Carbon::setLocale(App::currentLocale());
-        
+
         return $next($request);
     }
 }
@@ -261,7 +261,7 @@ if (!function_exists('trans_choice_with_count')) {
     function trans_choice_with_count($key, $count, $replace = [], $locale = null)
     {
         $replace['count'] = $count;
-        
+
         return trans_choice($key, $count, $replace, $locale);
     }
 }

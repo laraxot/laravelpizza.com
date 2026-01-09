@@ -72,4 +72,4 @@ class FindDoctorAndAppointmentWidget extends XotBaseWidget
 - [ ] Token CSRF gestito nel mount()
 - [ ] Token presente nella vista
 - [ ] Meta tag CSRF nel layout
-- [ ] Dipendenze Livewire aggiornate 
+- [ ] Dipendenze Livewire aggiornate

@@ -15,7 +15,7 @@ Static property Modules\User\Filament\Widgets\EditUserWidget::$view (view-string
 
 **Root Cause**: The Filament Widget base class uses `view-string` in PHPDoc annotations but declares the property as `string`.
 
-**Solution**: 
+**Solution**:
 - Added proper PHPDoc annotations to maintain type safety
 - Updated PHPStan configuration to ignore this specific Filament design issue
 - Fixed all affected Widget classes

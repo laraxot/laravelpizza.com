@@ -165,4 +165,4 @@ class MyModel extends BaseModel
      - Docs del modulo specifico
      - .cursor/rules per Cursor AI
      - .windsurfrules per Windsurf
-   - Mantenere coerenza tra le diverse documentazioni 
+   - Mantenere coerenza tra le diverse documentazioni

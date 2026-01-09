@@ -40,4 +40,4 @@ $user->hasRole($roleName);
 - Rimossi conflitti di merge
 - Migliorata la gestione dei tipi di ID
 - Aggiunto supporto per UUID
-- Ottimizzata la struttura degli indici 
+- Ottimizzata la struttura degli indici

@@ -16,11 +16,11 @@
     ```html
     <!-- Touch target ottimizzato -->
     <button class="
-      min-w-[48px] 
-      min-h-[48px] 
-      p-3 
+      min-w-[48px]
+      min-h-[48px]
+      p-3
       m-2
-      active:scale-95 
+      active:scale-95
       transition-transform
     ">
       <!-- Contenuto -->
@@ -51,12 +51,12 @@
   ```html
   <!-- Card Component -->
   <div class="
-    bg-white 
-    dark:bg-gray-800 
-    rounded-lg 
-    shadow-md 
-    p-4 
-    transition-all 
+    bg-white
+    dark:bg-gray-800
+    rounded-lg
+    shadow-md
+    p-4
+    transition-all
     duration-300
     hover:shadow-lg
   ">
@@ -67,10 +67,10 @@
 - **Sistema di Grid**
   ```html
   <div class="
-    grid 
-    grid-cols-1 
-    md:grid-cols-2 
-    lg:grid-cols-3 
+    grid
+    grid-cols-1
+    md:grid-cols-2
+    lg:grid-cols-3
     gap-4
   ">
     <!-- Cards -->
@@ -106,9 +106,9 @@
   - Implementazione:
     ```html
     <div class="
-      p-8 
+      p-8
       space-y-8
-      max-w-3xl 
+      max-w-3xl
       mx-auto
     ">
       <!-- Contenuto con spaziatura zen -->
@@ -121,7 +121,7 @@
   - Gerarchia visiva come persuasione
   ```html
   <div class="
-    text-center 
+    text-center
     space-y-4
   ">
     <h1 class="text-4xl font-bold">Ethos</h1>
@@ -134,22 +134,22 @@
 - **Yin e Yang nel Design**
   ```html
   <div class="
-    flex 
-    items-center 
+    flex
+    items-center
     justify-center
   ">
     <div class="
-      w-32 
-      h-32 
-      rounded-full 
-      bg-black 
+      w-32
+      h-32
+      rounded-full
+      bg-black
       dark:bg-white
     "></div>
     <div class="
-      w-32 
-      h-32 
-      rounded-full 
-      bg-white 
+      w-32
+      h-32
+      rounded-full
+      bg-white
       dark:bg-black
     "></div>
   </div>
@@ -200,10 +200,10 @@ const trackInteraction = (element, event) => {
 ### 1. Design Inclusivo
 - **Accessibilità**
   ```html
-  <button 
+  <button
     class="
-      px-4 py-2 
-      bg-blue-600 
+      px-4 py-2
+      bg-blue-600
       text-white
     "
     aria-label="Azione principale"
@@ -222,9 +222,9 @@ const trackInteraction = (element, event) => {
 ```html
 <!-- Design Sostenibile -->
 <div class="
-  bg-gray-50 
+  bg-gray-50
   dark:bg-gray-900
-  text-gray-900 
+  text-gray-900
   dark:text-gray-100
 ">
   <!-- Contenuto a basso consumo energetico -->
@@ -243,9 +243,9 @@ const trackInteraction = (element, event) => {
 - **Colori e Significati**
   ```html
   <div class="
-    bg-red-100 
+    bg-red-100
     text-red-900
-    dark:bg-red-900 
+    dark:bg-red-900
     dark:text-red-100
   ">
     <!-- Avviso importante -->
@@ -256,9 +256,9 @@ const trackInteraction = (element, event) => {
 ```html
 <!-- Proporzione Aurea -->
 <div class="
-  w-full 
+  w-full
   aspect-[1.618]
-  grid 
+  grid
   grid-cols-[1fr_0.618fr]
 ">
   <!-- Layout aureo -->
@@ -281,11 +281,11 @@ const observer = new IntersectionObserver((entries) => {
 
 ### 2. Accessibilità
 ```html
-<div 
-  role="alert" 
+<div
+  role="alert"
   aria-live="polite"
   class="
-    sr-only 
+    sr-only
     focus:not-sr-only
   "
 >
@@ -310,4 +310,4 @@ const observer = new IntersectionObserver((entries) => {
 ## Collegamenti
 - [Torna alla documentazione principale](../webdesign.md)
 - [Vai a Responsive Design](./responsive-design.md)
-- [Vai a Tipografia](./tipografia.md) 
+- [Vai a Tipografia](./tipografia.md)

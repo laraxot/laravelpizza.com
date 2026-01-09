@@ -80,4 +80,4 @@ class ApproveUserAction {
 
 **Nota:**
 - Tutte le label, i messaggi e le notifiche devono essere localizzati e privi di riferimenti hard-coded a domini specifici.
-- La documentazione e gli esempi devono essere neutrali e riutilizzabili in qualsiasi progetto che utilizza il modulo User. 
+- La documentazione e gli esempi devono essere neutrali e riutilizzabili in qualsiasi progetto che utilizza il modulo User.

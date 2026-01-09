@@ -16,7 +16,6 @@ I prompt sono file di testo che contengono istruzioni per l'AI. Devono seguire q
    - Il nome del file deve essere descrittivo
    - L'estensione deve essere `.txt`
 
-
 4. **Aggiornamenti**:
    Quando si modifica un prompt:
    - Aggiornare `.cursor/rules/` con le regole per Cursor AI
@@ -43,7 +42,7 @@ I prompt sono file di testo che contengono istruzioni per l'AI. Devono seguire q
 6. **Collegamenti**:
    - Questo documento deve essere collegato nella root `docs/` con un link bidirezionale
    - Gli altri moduli devono avere un link a questo documento
-   - I prompt devono essere aggiornati quando cambiano le regole 
+   - I prompt devono essere aggiornati quando cambiano le regole
 
 ## Regole per i Prompt
 
@@ -58,14 +57,11 @@ Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompt
 
 - [Miglioramenti al Prompt docs.txt](./prompt_docs_improvements.md)b6f667c (.)
 
-
 - [Miglioramenti al Prompt docs.txt](./prompt_docs_improvements.md)b6f667c (.)
-
 
 ## Collegamenti tra versioni di prompts.md
 * [prompts.md](docs/prompts.md)
 * [prompts.md](../../../Xot/docs/prompts.md)
-
 
 ## Modifiche al Prompt docs.txt
 

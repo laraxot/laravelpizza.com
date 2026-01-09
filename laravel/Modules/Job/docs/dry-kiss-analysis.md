@@ -41,4 +41,3 @@ Models/
 2. Resources refactoring (1 sett)
 
 **Status:** 🟡 DA RIORGANIZZARE
-

@@ -25,7 +25,7 @@
                    ->then(fn() => $this->tryMergeChunks($fileId));
            });
        }
-       
+
        protected function tryMergeChunks($fileId)
        {
            if ($this->allChunksUploaded($fileId)) {
@@ -48,7 +48,7 @@
                new UpdateSearchIndex($media),
            ])->dispatch();
        }
-       
+
        public function getProgress($mediaId)
        {
            return Cache::get("media_progress_{$mediaId}", [
@@ -75,7 +75,7 @@
                ])
                ->then(fn($media) => $this->moveToOptimalStorage($media));
        }
-       
+
        protected function moveToOptimalStorage(Media $media)
        {
            $strategy = $this->determineStorageStrategy($media);
@@ -147,7 +147,7 @@
        public function indexMedia(Media $media)
        {
            $metadata = $this->extractMetadata($media);
-           
+
            return $this->search->index([
                'id' => $media->id,
                'title' => $media->title,
@@ -158,7 +158,7 @@
                '_boost' => $this->calculateBoost($media)
            ]);
        }
-       
+
        protected function calculateBoost(Media $media)
        {
            return [
@@ -183,7 +183,7 @@
                }
            });
        }
-       
+
        public function optimizeIndex()
        {
            return $this->search->optimizeIndex([
@@ -219,8 +219,7 @@
 ## Collegamenti
 - [Upload Guidelines](../../media/upload.md)
 - [Image Processing](../../media/processing.md)
-- [Search Configuration](../../media/search.md) 
+- [Search Configuration](../../media/search.md)
 ## Collegamenti tra versioni di media.md
 * [media.md](../../../Xot/docs/features/media.md)
 * [media.md](../../../Xot/docs/roadmap/bottlenecks/media.md)
-

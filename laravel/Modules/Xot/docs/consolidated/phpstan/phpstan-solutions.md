@@ -259,4 +259,4 @@ public function user()
 7. **Utilizzare collections invece di array quando possibile**
 8. **Configurare .phpstan.neon per ignorare errori non risolvibili**
 
-Implementando queste soluzioni sistematicamente, sarà possibile risolvere la maggior parte degli errori PHPStan di livello 9. 
+Implementando queste soluzioni sistematicamente, sarà possibile risolvere la maggior parte degli errori PHPStan di livello 9.

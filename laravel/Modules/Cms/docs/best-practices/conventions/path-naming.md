@@ -106,13 +106,13 @@ class PathValidator
     {
         $errors = [];
         $standardDirs = ['resources', 'config', 'routes'];
-        
+
         foreach ($standardDirs as $dir) {
             if (file_exists(base_path("Modules/*/".ucfirst($dir)))) {
                 $errors[] = "Directory {$dir} deve essere lowercase";
             }
         }
-        
+
         return $errors;
     }
 }

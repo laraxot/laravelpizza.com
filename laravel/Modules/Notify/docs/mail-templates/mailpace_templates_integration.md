@@ -23,7 +23,7 @@ MailPace offre i seguenti template transazionali:
 - **Performance** - Ottimizzati per caricamento veloce
 - **Personalizzazione** - Facilmente personalizzabili con Maizzle
 
-## Integrazione 
+## Integrazione
 
 ### Struttura della Directory
 
@@ -79,7 +79,7 @@ use Modules\Notify\Models\MailTemplate;
 
 $mailTemplate = MailTemplate::findBySlug('welcome-email');
 $mailTemplate->send($user->email, [
-    'name' => $user->name, 
+    'name' => $user->name,
     'action_url' => $actionUrl
 ]);
 ```

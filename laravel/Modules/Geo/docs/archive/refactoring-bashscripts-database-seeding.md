@@ -25,15 +25,15 @@ La cartella `bashscripts/database/seeding` conteneva file specifici del progetto
 ### 1. Spostamento File Specifici
 
 #### Script <nome progetto>
-**Da**: `bashscripts/database/seeding/<nome progetto>-*.php`  
+**Da**: `bashscripts/database/seeding/<nome progetto>-*.php`
 **A**: `laravel/Modules/<nome progetto>/scripts/seeding/`
 
 #### Script <nome modulo>
-**Da**: `bashscripts/database/seeding/<nome modulo>-*.php`  
+**Da**: `bashscripts/database/seeding/<nome modulo>-*.php`
 **A**: `laravel/Modules/<nome modulo>/scripts/seeding/`
 
 #### Script Generatori
-**Da**: `bashscripts/<nome progetto>/generate_<nome progetto>_factories_and_seeders.sh`  
+**Da**: `bashscripts/<nome progetto>/generate_<nome progetto>_factories_and_seeders.sh`
 **A**: `laravel/Modules/<nome progetto>/scripts/generators/`
 
 ### 2. Creazione Script Generici
@@ -119,7 +119,7 @@ $recordCount = env('RECORD_COUNT', 100);
 // Generic logic that works with any module
 function genericFunction($module, $count) {
     $modelClass = "\\Modules\\{$module}\\Models\\User";
-    
+
     if (class_exists($modelClass)) {
         $modelClass::factory()->count($count)->create();
     }
@@ -219,6 +219,6 @@ La cartella bashscripts è ora veramente condivisibile tra progetti diversi, ris
 - **Tempo intervento**: ~2 ore
 - **Impatti negativi**: 0
 
-*Intervento completato: Gennaio 2025*  
-*Validato: PHPStan livello 9, documentazione completa*  
+*Intervento completato: Gennaio 2025*
+*Validato: PHPStan livello 9, documentazione completa*
 *Status: ✅ Produzione ready*

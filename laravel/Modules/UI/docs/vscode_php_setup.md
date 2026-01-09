@@ -235,4 +235,4 @@
 ## Vedi Anche
 - [VSCode Documentation](https://code.visualstudio.com/docs)
 - [PHP Intelephense](https://intelephense.com)
-- [Filament Documentation](https://filamentphp.com/docs) 
+- [Filament Documentation](https://filamentphp.com/docs)

@@ -1,28 +1,28 @@
 # Correzioni PHPStan Modulo Geo - 2025-01-27
 
-**Data**: 2025-01-27  
-**Versione PHPStan**: 1.12.x  
-**Livello**: 10  
-**Status**: ✅ COMPLETATO  
+**Data**: 2025-01-27
+**Versione PHPStan**: 1.12.x
+**Livello**: 10
+**Status**: ✅ COMPLETATO
 
 ## 🔧 Correzioni Implementate
 
 ### 1. WebbingbrasilMap Widget - Errore Proprietà Statica
 
-**Problema**: 
+**Problema**:
 ```
 Cannot redeclare non static Filament\Widgets\Widget::$view as static Modules\Geo\Filament\Widgets\WebbingbrasilMap::$view
 ```
 
 **Causa**: La proprietà `$view` era definita come `static` nella classe derivata mentre nella classe base `Widget` è non-statica.
 
-**Soluzione**: 
+**Soluzione**:
 1. Rinominato file originale come `.disabled4` per mantenere traccia storica
 2. Creato nuovo file stub che estende direttamente `Widget` invece di `XotBaseWidget`
 3. Corretto la proprietà `$view` da `protected static string` a `protected string`
 4. Mantenuto il metodo `canView()` che restituisce `false` per disabilitazione temporanea
 
-**File Modificato**: 
+**File Modificato**:
 - `Modules/Geo/app/Filament/Widgets/WebbingbrasilMap.php`
 
 **Codice Prima**:
@@ -39,7 +39,7 @@ class WebbingbrasilMap extends XotBaseWidget
 class WebbingbrasilMap extends Widget
 {
     protected string $view = 'geo::filament.widgets.webbingbrasil-map-stub';
-    
+
     public static function canView(): bool
     {
         return false; // Temporaneamente disabilitato per Filament v4

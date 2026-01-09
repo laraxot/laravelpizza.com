@@ -1,4 +1,4 @@
-# Implementazione del Logout con LaravelLocalization 
+# Implementazione del Logout con LaravelLocalization
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
@@ -42,16 +42,16 @@ mount(function() {
     if (Auth::check()) {
         // Dispatch dell'evento prima del logout
         Event::dispatch('auth.logout.attempting', [Auth::user()]);
-        
+
         // Esegui il logout
         Auth::logout();
         session()->invalidate();
         session()->regenerateToken();
-        
+
         // Dispatch dell'evento dopo il logout
         Event::dispatch('auth.logout.successful');
     }
-    
+
     // Reindirizza l'utente alla home page localizzata
     $this->redirect(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')));
 });

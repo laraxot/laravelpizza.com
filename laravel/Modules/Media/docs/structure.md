@@ -10,7 +10,7 @@ Modules\\Media\\Database\\Seeders
 Modules\\Media\\Tests
 - **Pacchetto Composer**: laraxot/module_media_fila3
 Marco Sottana
-- **Dipendenze**: php ^8.2 pbmedia/laravel-ffmpeg ^8.5 intervention/image * repositories type path url ../User type path url ../Tenant type path url ../UI type path 
+- **Dipendenze**: php ^8.2 pbmedia/laravel-ffmpeg ^8.5 intervention/image * repositories type path url ../User type path url ../Tenant type path url ../UI type path
 - **Totale file PHP**: 97
 - **Totale classi/interfacce**: 64
 
@@ -393,7 +393,6 @@ tests_old/Unit
 - [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/docs/phpstan/)
 
-
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
 * [structure.md](../../../Gdpr/docs/structure.md)
@@ -411,4 +410,3 @@ tests_old/Unit
 * [structure.md](../../../Cms/docs/structure.md)
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
-

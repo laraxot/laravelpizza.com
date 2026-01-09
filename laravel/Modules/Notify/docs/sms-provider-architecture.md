@@ -1,4 +1,4 @@
-# Architettura dei Provider SMS 
+# Architettura dei Provider SMS
 
 ## Convenzioni delle Interfacce
 
@@ -35,7 +35,7 @@ Esempio:
 final class SendNetfunSMSAction implements SmsActionContract
 {
     use QueueableAction;
-    
+
     // Implementazione...
 }
 ```
@@ -67,7 +67,7 @@ Tutti i provider SMS devono essere configurati in `/config/sms.php` e NON in `/c
 // /config/sms.php
 return [
     'default' => env('SMS_DRIVER', 'netfun'),
-    
+
     'drivers' => [
         'netfun' => [
             'api_key' => env('NETFUN_API_KEY'),

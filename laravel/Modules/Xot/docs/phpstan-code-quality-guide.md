@@ -1,8 +1,8 @@
 # PHPStan Code Quality Guide - Laraxot
 
-**Ultimo aggiornamento**: 2025-12-22  
-**Principi**: DRY + KISS + SOLID + Robust  
-**Stack**: Laravel 12 + Filament 4 + PHP 8.3 + Laraxot  
+**Ultimo aggiornamento**: 2025-12-22
+**Principi**: DRY + KISS + SOLID + Robust
+**Stack**: Laravel 12 + Filament 4 + PHP 8.3 + Laraxot
 **Obiettivo**: 0 errori PHPStan Level 10 + Complexity < 10 + Quality > 80%
 
 ---
@@ -1919,7 +1919,7 @@ $model->update($filtered);
 10. Git commit e push dopo ogni modulo completato
 11. Quando tutti i moduli sono a posto, controlla tutta la cartella Modules
 
-**Riferimenti**: 
+**Riferimenti**:
 - [XotBase Extension Rules](./filament-class-extension-rules.md) - Regole complete Filament
 - [PHPStan Code Quality Guide](./phpstan-code-quality-guide.md) - Guida completa PHPStan
 - [PHPStan Specific Patterns](./phpstan-specific-patterns.md) - Pattern specifici PHPStan

@@ -79,7 +79,7 @@ class EventServiceProvider extends ServiceProvider
 public function boot(): void
 {
     parent::boot(); // Cruciale!
-    
+
     // Il resto del codice...
 }
 ```
@@ -130,25 +130,25 @@ class BrainServiceProvider extends XotBaseServiceProvider
      * Nome del modulo.
      */
     protected string $moduleName = 'Brain';
-    
+
     /**
      * Nome del modulo in lowercase.
      */
     protected string $moduleNameLower = 'brain';
-    
+
     /**
      * Boot del service provider.
      */
     public function boot(): void
     {
         parent::boot();
-        
+
         $this->registerViews();
         $this->registerTranslations();
         $this->registerConfig();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'database/migrations'));
     }
-    
+
     /**
      * Registrazione del service provider.
      */
@@ -156,13 +156,13 @@ class BrainServiceProvider extends XotBaseServiceProvider
     {
         $this->app->register(RouteServiceProvider::class);
         $this->app->register(EventServiceProvider::class);
-        
+
         // Registrazione di servizi specifici
         $this->app->singleton('brain.service', function ($app) {
             return new \Modules\Brain\Services\BrainService();
         });
     }
-    
+
     /**
      * Registrazione delle configurazioni.
      */
@@ -171,12 +171,12 @@ class BrainServiceProvider extends XotBaseServiceProvider
         $this->publishes([
             module_path($this->moduleName, 'config/config.php') => config_path($this->moduleNameLower . '.php'),
         ], 'config');
-        
+
         $this->mergeConfigFrom(
             module_path($this->moduleName, 'config/config.php'), $this->moduleNameLower
         );
     }
-    
+
     /**
      * Registrazione delle viste.
      */
@@ -194,7 +194,7 @@ class BrainServiceProvider extends XotBaseServiceProvider
             return $path . '/modules/' . $this->moduleNameLower;
         }, config('view.paths')), [$sourcePath]), $this->moduleNameLower);
     }
-    
+
     /**
      * Registrazione delle traduzioni.
      */
@@ -208,7 +208,7 @@ class BrainServiceProvider extends XotBaseServiceProvider
             $this->loadTranslationsFrom(module_path($this->moduleName, 'resources/lang'), $this->moduleNameLower);
         }
     }
-    
+
     /**
      * Fornisce i servizi del provider.
      *
@@ -239,12 +239,12 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
      * Nome del modulo in lowercase.
      */
     protected string $moduleNameLower = 'brain';
-    
+
     /**
      * Namespace delle routes del controller.
      */
     protected string $namespace = 'Modules\Brain\Http\Controllers';
-    
+
     /**
      * Boot del route service provider.
      */
@@ -252,7 +252,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
     {
         parent::boot();
     }
-    
+
     /**
      * Mappa le routes API.
      */
@@ -263,7 +263,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
             ->namespace($this->namespace)
             ->group(module_path('Brain', '/routes/api.php'));
     }
-    
+
     /**
      * Mappa le routes web.
      */
@@ -273,7 +273,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
             ->namespace($this->namespace)
             ->group(module_path('Brain', '/routes/web.php'));
     }
-    
+
     /**
      * Mappa le routes admin.
      */
@@ -312,7 +312,7 @@ class EventServiceProvider extends BaseEventServiceProvider
             'Modules\Brain\Listeners\UpdateConvenzioneStats',
         ],
     ];
-    
+
     /**
      * Gli subscribers da registrare.
      *
@@ -321,14 +321,14 @@ class EventServiceProvider extends BaseEventServiceProvider
     protected $subscribe = [
         'Modules\Brain\Listeners\BrainEventSubscriber',
     ];
-    
+
     /**
      * Boot dell'event service provider.
      */
     public function boot(): void
     {
         parent::boot();
-        
+
         // Eventuali registrazioni aggiuntive...
     }
 }
@@ -417,7 +417,7 @@ class RouteServiceProvider extends ServiceProvider
     }
 }
 
-// Risultato: le route potrebbero non essere caricate correttamente, mancare di 
+// Risultato: le route potrebbero non essere caricate correttamente, mancare di
 // middleware essenziali o non essere integrate con il sistema di permessi
 ```
 

@@ -131,4 +131,3 @@ php artisan tinker
 - [Translation Updates 2024](../../../Themes/One/docs/translation_updates_20240721.md)
 
 *Ultimo aggiornamento: 6 Gennaio 2025 - TUTTI I PROBLEMI RISOLTI*
-

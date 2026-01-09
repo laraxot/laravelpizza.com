@@ -13,7 +13,6 @@ Componente Filament riutilizzabile per la visualizzazione e selezione di studi o
 
 ## Utilizzo nel Wizard
 
-
 ```php
 use Modules\UI\Filament\Forms\Components\StudioSelectorButtons;
 

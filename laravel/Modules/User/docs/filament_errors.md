@@ -149,4 +149,4 @@ class TeamsRelationManager extends RelationManager
 - [ ] Testare il funzionamento delle relazioni dopo le modifiche
 - [ ] Aggiornare i test unitari se presenti
 - [ ] Documentare le modifiche nel CHANGELOG
-- [ ] Eseguire PHPStan per verificare altri possibili errori 
+- [ ] Eseguire PHPStan per verificare altri possibili errori

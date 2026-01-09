@@ -21,7 +21,6 @@ squizlabs/php_codesniffer
 phpmd/phpmd
 phpstan/phpstan
 
-
 //------------------
 https://github.com/barryvdh/laravel-ide-helper
 php artisan ide-helper:models
@@ -30,7 +29,6 @@ questo e' quello che usiamo
 php artisan ide-helper:eloquent
 This will write /** @mixin \Eloquent */
 into the vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php file.
-
 
 //-----------------------------------
 https://laravel-news.com/6-eloquent-secrets
@@ -52,7 +50,6 @@ function getFullNameAttribute() {
      */
     protected $appends = ['full_name'];
 
-
 class Video extends Model
 {
     public function setDurationInMinutesAttribute($value)
@@ -66,15 +63,9 @@ class Video extends Model
     }
 }
 
-
 User::all()->pluck('id')->toArray();
 User::all()->modelKeys();
 
 //---------------------------------------------------
 https://tomgrohl.medium.com/using-php-traits-for-laravel-eloquent-relationships-7357901a01a4
 //-- usa set e get
-
-
-
-
-

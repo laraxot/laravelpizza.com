@@ -27,7 +27,7 @@ trait HasStates
         }
 
         $this->state()->update(['name' => $state]);
-        
+
         $this->fireStateChangedEvent($state);
     }
 
@@ -37,7 +37,7 @@ trait HasStates
     }
 
     abstract protected function allowedTransitions(): array;
-    
+
     protected function fireStateChangedEvent(string $newState): void
     {
         event(new StateChanged($this, $newState));
@@ -112,7 +112,7 @@ $transition = function (string $newState) {
     try {
         $this->model->transitionTo($newState);
         $this->currentState = $newState;
-        
+
         session()->flash('success', 'Stato aggiornato con successo');
     } catch (\Exception $e) {
         session()->flash('error', $e->getMessage());
@@ -282,4 +282,4 @@ class StateTest extends TestCase
 
 - [Laravel Documentation - Events](https://laravel.com/docs/events)
 - [Laravel Documentation - Notifications](https://laravel.com/docs/notifications)
-- [Design Patterns in PHP](https://refactoring.guru/design-patterns/state/php) 
+- [Design Patterns in PHP](https://refactoring.guru/design-patterns/state/php)

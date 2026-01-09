@@ -6,17 +6,17 @@
 - **Sistema Grid Fluido**
   ```html
   <div class="
-    container 
-    mx-auto 
+    container
+    mx-auto
     px-4
-    sm:px-6 
+    sm:px-6
     lg:px-8
   ">
     <div class="
-      grid 
-      grid-cols-1 
-      sm:grid-cols-2 
-      lg:grid-cols-3 
+      grid
+      grid-cols-1
+      sm:grid-cols-2
+      lg:grid-cols-3
       gap-4
     ">
       <!-- Contenuto -->
@@ -29,7 +29,7 @@
   @media (min-width: 640px) and (max-width: 1023px) {
     /* Tablet styles */
   }
-  
+
   @media (min-width: 1024px) and (orientation: landscape) {
     /* Desktop landscape */
   }
@@ -51,16 +51,16 @@
 ### 2. Immagini Responsive
 ```html
 <picture>
-  <source 
-    media="(min-width: 1024px)" 
+  <source
+    media="(min-width: 1024px)"
     srcset="large.jpg"
   >
-  <source 
-    media="(min-width: 640px)" 
+  <source
+    media="(min-width: 640px)"
     srcset="medium.jpg"
   >
-  <img 
-    src="small.jpg" 
+  <img
+    src="small.jpg"
     alt="Descrizione"
     class="w-full h-auto"
     loading="lazy"
@@ -94,8 +94,8 @@ h1 {
   - Implementazione:
     ```html
     <div class="
-      transition-all 
-      duration-300 
+      transition-all
+      duration-300
       ease-in-out
     ">
       <!-- Contenuto fluido -->
@@ -108,8 +108,8 @@ h1 {
   - Adattamento semantico
   ```html
   <div class="
-    text-base 
-    sm:text-lg 
+    text-base
+    sm:text-lg
     lg:text-xl
   ">
     <!-- Testo adattivo -->
@@ -120,8 +120,8 @@ h1 {
 ```html
 <!-- Sistema Adattivo -->
 <div class="
-  grid 
-  auto-rows-min 
+  grid
+  auto-rows-min
   auto-cols-min
   gap-4
   [&>*]:transition-all
@@ -191,14 +191,14 @@ const loadAdaptiveContent = () => {
 - **Accessibilità Globale**
   ```html
   <div class="
-    min-h-screen 
-    flex 
+    min-h-screen
+    flex
     flex-col
   ">
     <main class="
-      flex-grow 
-      container 
-      mx-auto 
+      flex-grow
+      container
+      mx-auto
       px-4
     ">
       <!-- Contenuto accessibile -->
@@ -216,8 +216,8 @@ const loadAdaptiveContent = () => {
 ```html
 <!-- Design Inclusivo -->
 <div class="
-  supports-[display:grid]:grid 
-  supports-[not(display:grid)]:flex 
+  supports-[display:grid]:grid
+  supports-[not(display:grid)]:flex
   flex-col
 ">
   <!-- Layout adattivo -->
@@ -232,8 +232,8 @@ const loadAdaptiveContent = () => {
   - Spaziatura armoniosa
   ```html
   <div class="
-    space-y-4 
-    sm:space-y-6 
+    space-y-4
+    sm:space-y-6
     lg:space-y-8
   ">
     <!-- Elementi in armonia -->
@@ -254,7 +254,7 @@ const loadAdaptiveContent = () => {
 ```html
 <!-- Layout Universale -->
 <div class="
-  grid 
+  grid
   [grid-template-areas:'header''main''footer']
   md:[grid-template-areas:'header header''main sidebar''footer footer']
 ">
@@ -280,10 +280,10 @@ const observer = new IntersectionObserver((entries) => {
 
 ### 2. Accessibilità Mobile
 ```html
-<button 
+<button
   class="
-    touch-target 
-    min-w-[44px] 
+    touch-target
+    min-w-[44px]
     min-h-[44px]
   "
   aria-label="Azione mobile"
@@ -303,4 +303,4 @@ const observer = new IntersectionObserver((entries) => {
 ## Collegamenti
 - [Torna alla documentazione principale](../webdesign.md)
 - [Vai a UX/UI Design](./ux-ui-design.md)
-- [Vai a Tipografia](./tipografia.md) 
+- [Vai a Tipografia](./tipografia.md)

@@ -1,8 +1,8 @@
-# Struttura Themes e Folio in 
+# Struttura Themes e Folio in
 # Struttura Themes e Folio in SaluteOra
-# Struttura Themes e Folio in 
+# Struttura Themes e Folio in
 # Struttura Themes e Folio in SaluteOra
-# Struttura Themes e Folio in 
+# Struttura Themes e Folio in
 # Struttura Themes e Folio in SaluteOra
 
 ## ⚠️ ATTENZIONE CRITICA

@@ -20,7 +20,7 @@
            Cache::put("translations_{$locale}", $translations);
        }
    }
-   
+
    // Dopo
    class LangServiceProvider extends ServiceProvider
    {
@@ -32,7 +32,7 @@
                    return array_dot($translations); // Flatten array per accesso più veloce
                });
        }
-       
+
        public function getTranslation($key, $locale)
        {
            return Cache::tags(['translations'])
@@ -48,7 +48,7 @@
    class TranslationLoader
    {
        protected $loaded = [];
-       
+
        public function load($group, $locale)
        {
            if (!isset($this->loaded[$locale][$group])) {
@@ -57,7 +57,7 @@
                        return $this->loadFromFile($group, $locale);
                    });
            }
-           
+
            return $this->loaded[$locale][$group];
        }
    }
@@ -96,7 +96,7 @@
                Cache::tags(['translations'])->flush();
            }
        }
-       
+
        public function warmUp($locales, $groups)
        {
            foreach ($locales as $locale) {
@@ -141,7 +141,7 @@
                ->mapWithKeys(function ($resource) {
                    return [$resource => $this->getResourceLabels($resource)];
                });
-           
+
            Cache::tags(['filament'])->put('preloaded_labels', $labels, now()->addHour());
        }
    }
@@ -156,7 +156,7 @@
    class LocaleFallbackManager
    {
        protected $fallbackChain = [];
-       
+
        public function getFallbackChain($locale)
        {
            if (!isset($this->fallbackChain[$locale])) {
@@ -166,10 +166,10 @@
                    fn() => $this->buildFallbackChain($locale)
                );
            }
-           
+
            return $this->fallbackChain[$locale];
        }
-       
+
        public function getTranslation($key, $locale)
        {
            foreach ($this->getFallbackChain($locale) as $fallbackLocale) {
@@ -177,7 +177,7 @@
                    return $translation;
                }
            }
-           
+
            return $key;
        }
    }
@@ -207,4 +207,4 @@
 ## Collegamenti
 - [Cache Guidelines](../../performance/cache.md)
 - [Translation Standards](../../lang/standards.md)
-- [Filament Integration](../../filament/integration.md) 
+- [Filament Integration](../../filament/integration.md)

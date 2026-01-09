@@ -17,8 +17,8 @@ vendor/lara-zeus/spatie-translatable/src/Resources/Pages/ListRecords/Concerns/Tr
 
 ## Contesto
 
-**URL**: `/notify/admin/mail-templates`  
-**Resource**: `Modules\Notify\Filament\Resources\MailTemplateResource`  
+**URL**: `/notify/admin/mail-templates`
+**Resource**: `Modules\Notify\Filament\Resources\MailTemplateResource`
 **Page**: `Modules\Notify\Filament\Resources\MailTemplateResource\Pages\ListMailTemplates`
 
 ## Business Logic
@@ -26,7 +26,7 @@ vendor/lara-zeus/spatie-translatable/src/Resources/Pages/ListRecords/Concerns/Tr
 ### Struttura Ereditarietà
 
 ```
-ListMailTemplates 
+ListMailTemplates
   └─> LangBaseListRecords (Modules/Lang)
        └─> trait Translatable (lara-zeus/spatie-translatable)
             └─> LocaleSwitcher::make()
@@ -46,7 +46,7 @@ ListMailTemplates
    ```php
    // Modules/Lang/.../Pages/LangBaseListRecords.php
    use LaraZeus\SpatieTranslatable\Resources\Pages\ListRecords\Concerns\Translatable;
-   
+
    abstract class LangBaseListRecords extends XotBaseListRecords
    {
        use Translatable;  // ← Richiede il plugin!
@@ -84,7 +84,7 @@ public function panel(Panel $panel): Panel
     // $panel->plugins([
     //     SpatieTranslatablePlugin::make(),
     // ]);
-    
+
     // ...
     return parent::panel($panel);
 }
@@ -108,7 +108,7 @@ public function panel(Panel $panel): Panel
         SpatieTranslatablePlugin::make()
             ->defaultLocales(['it', 'en']),
     ]);
-    
+
     // Database notifications...
     if (! XotData::make()->disable_database_notifications) {
         DatabaseNotifications::trigger('notify::livewire.database-notifications-trigger');
@@ -206,7 +206,7 @@ use Spatie\Translatable\HasTranslations;
 class MailTemplate extends BaseModel
 {
     use HasTranslations;
-    
+
     /** @var list<string> */
     public array $translatable = ['subject', 'html_template', 'text_template'];
 }
@@ -300,7 +300,7 @@ public function panel(Panel $panel): Panel
         SpatieTranslatablePlugin::make()
             ->defaultLocales(['it', 'en']),
     ]);
-    
+
     if (! XotData::make()->disable_database_notifications) {
         // ...
     }
@@ -339,9 +339,9 @@ public function panel(Panel $panel): Panel
             ->defaultLocales(config('app.available_locales', ['it', 'en']))
             ->persist(),  // Ricorda lingua selezionata
     ]);
-    
+
     // ... altre configurazioni ...
-    
+
     return parent::panel($panel);
 }
 ```
@@ -367,9 +367,7 @@ Prima di usare `LangBase*`:
 
 ---
 
-**Created**: 27 Ottobre 2025  
-**Status**: ⏳ ATTENDE DECISIONE  
-**Priority**: P1 (blocca funzionalità)  
+**Created**: 27 Ottobre 2025
+**Status**: ⏳ ATTENDE DECISIONE
+**Priority**: P1 (blocca funzionalità)
 **Next Step**: Decidere se MailTemplate deve essere traducibile
-
-

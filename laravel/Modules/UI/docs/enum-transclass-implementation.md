@@ -66,7 +66,7 @@ return [
     ],
     'grid' => [
         'label' => 'Griglia',
-        'color' => 'secondary', 
+        'color' => 'secondary',
         'icon' => 'heroicon-o-squares-2x2',
         'description' => 'Layout a griglia responsive con card',
         'tooltip' => 'Visualizza i dati in formato card responsive',

@@ -8,7 +8,7 @@ Attualmente, la selezione del provider SMS viene gestita all'interno di `SmsChan
 
 ```php
 $driver = Config::get('sms.default', 'smsfactor');
-        
+
 $action = match ($driver) {
     'smsfactor' => app(SendSmsFactorSMSAction::class),
     'twilio' => app(SendTwilioSMSAction::class),
@@ -29,7 +29,7 @@ Un approccio alternativo sarebbe integrare questa logica nel DTO `SmsData`:
 public function getProviderAction(): object
 {
     $driver = $this->provider ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -98,7 +98,7 @@ class SmsProviderFactory
     public function create(string $driver = null): SmsProviderActionInterface
     {
         $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-        
+
         return match ($driver) {
             'smsfactor' => app(SendSmsFactorSMSAction::class),
             'twilio' => app(SendTwilioSMSAction::class),

@@ -201,4 +201,4 @@ TextInput::make('full_name')
 ## Vedi Anche
 - [VSCode PHP Setup](vscode-php-setup.md)
 - [Development Tools](development-tools.md)
-- [Filament Documentation](https://filamentphp.com/docs) 
+- [Filament Documentation](https://filamentphp.com/docs)

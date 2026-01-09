@@ -31,7 +31,7 @@ describe('Address Business Logic', function () {
     it('creates address with required fields', function () {
         $province = Province::factory()->create();
         $comune = Comune::factory()->create(['province_id' => $province->id]);
-        
+
         $address = Address::create([
             'street' => 'Via Roma 123',
             'city' => 'Milano',
@@ -52,12 +52,12 @@ describe('Address Business Logic', function () {
     it('validates Italian postal codes', function () {
         $validCodes = ['20121', '00100', '10121', '80121'];
         $invalidCodes = ['1234', '123456', 'ABCDE'];
-        
+
         foreach ($validCodes as $code) {
             $address = Address::factory()->make(['postal_code' => $code]);
             expect($address->isValidPostalCode())->toBeTrue();
         }
-        
+
         foreach ($invalidCodes as $code) {
             $address = Address::factory()->make(['postal_code' => $code]);
             expect($address->isValidPostalCode())->toBeFalse();
@@ -88,7 +88,7 @@ describe('Address Business Logic', function () {
         ]);
 
         $formatted = $address->getFormattedAddress();
-        
+
         expect($formatted)->toContain('Via Roma 123')
             ->and($formatted)->toContain('Milano')
             ->and($formatted)->toContain('20121');
@@ -136,7 +136,7 @@ describe('Geographic Hierarchy Business Logic', function () {
         ]);
 
         $density = $region->getPopulationDensity();
-        
+
         expect($density)->toBeFloat()
             ->and($density)->toBeGreaterThan(0);
     });
@@ -152,14 +152,14 @@ describe('Location Services Business Logic', function () {
             'latitude' => 45.4642, // Milano
             'longitude' => 9.1900,
         ]);
-        
+
         $address2 = Address::factory()->create([
             'latitude' => 41.9028, // Roma
             'longitude' => 12.4964,
         ]);
 
         $distance = $address1->distanceTo($address2);
-        
+
         expect($distance)->toBeFloat()
             ->and($distance)->toBeGreaterThan(400) // ~480km Milano-Roma
             ->and($distance)->toBeLessThan(600);
@@ -170,20 +170,20 @@ describe('Location Services Business Logic', function () {
             'latitude' => 45.4642,
             'longitude' => 9.1900,
         ]);
-        
+
         // Create addresses at various distances
         $nearAddress = Address::factory()->create([
             'latitude' => 45.4700, // ~1km away
             'longitude' => 9.1950,
         ]);
-        
+
         $farAddress = Address::factory()->create([
             'latitude' => 41.9028, // ~480km away
             'longitude' => 12.4964,
         ]);
 
         $nearbyAddresses = Address::withinRadius($centerAddress, 5); // 5km radius
-        
+
         expect($nearbyAddresses)->toContain($nearAddress)
             ->and($nearbyAddresses)->not->toContain($farAddress);
     });
@@ -194,7 +194,7 @@ describe('Location Services Business Logic', function () {
 
         $optimizer = new RouteOptimizer();
         $optimizedRoute = $optimizer->optimize($startAddress, $destinations);
-        
+
         expect($optimizedRoute)->toBeArray()
             ->and($optimizedRoute)->toHaveCount(5)
             ->and($optimizedRoute['total_distance'])->toBeFloat();
@@ -214,7 +214,7 @@ describe('Geocoding Integration', function () {
         ]);
 
         $geocoded = GeocodingService::geocode($address);
-        
+
         expect($geocoded['latitude'])->toBeFloat()
             ->and($geocoded['longitude'])->toBeFloat()
             ->and($geocoded['accuracy'])->toBeGreaterThan(0.8);
@@ -228,7 +228,7 @@ describe('Geocoding Integration', function () {
         ]);
 
         $result = GeocodingService::geocode($invalidAddress);
-        
+
         expect($result['success'])->toBeFalse()
             ->and($result['error'])->not->toBeNull();
     });
@@ -238,7 +238,7 @@ describe('Geocoding Integration', function () {
         $longitude = 9.1900;
 
         $address = GeocodingService::reverseGeocode($latitude, $longitude);
-        
+
         expect($address)->toBeArray()
             ->and($address['city'])->toContain('Milano')
             ->and($address['country'])->toBe('IT');
@@ -255,14 +255,14 @@ describe('Healthcare Location Integration', function () {
             'latitude' => 45.4642,
             'longitude' => 9.1900,
         ]);
-        
+
         $nearProvider = HealthcareProvider::factory()->create([
             'address_id' => Address::factory()->create([
                 'latitude' => 45.4700, // 1km away
                 'longitude' => 9.1950,
             ])->id,
         ]);
-        
+
         $farProvider = HealthcareProvider::factory()->create([
             'address_id' => Address::factory()->create([
                 'latitude' => 41.9028, // 480km away
@@ -271,7 +271,7 @@ describe('Healthcare Location Integration', function () {
         ]);
 
         $nearestProviders = HealthcareProvider::nearestTo($patientAddress, 10); // 10km radius
-        
+
         expect($nearestProviders)->toContain($nearProvider)
             ->and($nearestProviders)->not->toContain($farProvider);
     });
@@ -281,7 +281,7 @@ describe('Healthcare Location Integration', function () {
         $providerAddress = Address::factory()->create();
 
         $travelTime = TravelTimeCalculator::calculate($patientAddress, $providerAddress);
-        
+
         expect($travelTime)->toBeArray()
             ->and($travelTime['driving_minutes'])->toBeInt()
             ->and($travelTime['walking_minutes'])->toBeInt()
@@ -300,7 +300,7 @@ describe('Healthcare Location Integration', function () {
 
         $testAddress = Address::factory()->create();
         $isInCoverage = $coverageArea->covers($testAddress);
-        
+
         expect($isInCoverage)->toBeBool();
     });
 });
@@ -316,11 +316,11 @@ describe('Geographic Performance', function () {
         $centerAddress = $addresses->first();
 
         $startTime = microtime(true);
-        
+
         $nearbyAddresses = Address::withinRadius($centerAddress, 10);
-        
+
         $duration = microtime(true) - $startTime;
-        
+
         expect($duration)->toBeLessThan(2.0) // 2 seconds max
             ->and($nearbyAddresses)->toBeInstanceOf(Collection::class);
     });
@@ -329,11 +329,11 @@ describe('Geographic Performance', function () {
         $addresses = Address::factory()->count(100)->create();
 
         $startTime = microtime(true);
-        
+
         $geocoded = GeocodingService::batchGeocode($addresses);
-        
+
         $duration = microtime(true) - $startTime;
-        
+
         expect($duration)->toBeLessThan(30.0) // 30 seconds max
             ->and($geocoded)->toHaveCount(100);
     });

@@ -14,4 +14,4 @@
 - Test di performance su conti con molti eventi
 
 ## Coverage
-- Obiettivo: almeno 80% di copertura su moduli core 
+- Obiettivo: almeno 80% di copertura su moduli core

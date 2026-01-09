@@ -78,7 +78,7 @@ class MailTemplate extends Model
     protected static function boot()
     {
         parent::boot();
-        
+
         static::creating(function ($template) {
             if (empty($template->slug)) {
                 $template->slug = Str::slug($template->subject);
@@ -279,4 +279,4 @@ $this->tableUpdate(
    - Facile da testare
    - Facile da estendere
 
-// ... existing code ... 
+// ... existing code ...

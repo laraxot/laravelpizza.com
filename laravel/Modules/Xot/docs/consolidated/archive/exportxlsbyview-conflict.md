@@ -28,13 +28,13 @@ public function execute(string $view, array $data, string $filename): BinaryFile
 {
     $html = view($view, $data)->render();
     $tempFile = tempnam(sys_get_temp_dir(), 'xls_');
-    
+
     if ($tempFile === false) {
         throw new \RuntimeException('Could not create temporary file');
     }
-    
+
     file_put_contents($tempFile, $html);
-    
+
     return response()->download($tempFile, $filename, [
         'Content-Type' => 'application/vnd.ms-excel',
     ])->deleteFileAfterSend(true);

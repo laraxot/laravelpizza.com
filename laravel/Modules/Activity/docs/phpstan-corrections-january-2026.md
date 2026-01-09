@@ -1,14 +1,14 @@
 # PHPStan Corrections - Activity Module - Gennaio 2026
 
-**Data**: 2026-01-02  
-**Status**: ✅ COMPLETATO  
+**Data**: 2026-01-02
+**Status**: ✅ COMPLETATO
 **Errori corretti**: Da 2 a 0
 
 ## File corretti
 
 ### 1. app/Actions/ActivityLogger.php - getStatistics()
 
-**Problema**: 
+**Problema**:
 - Return type mismatch: `by_type` deve essere `array<string, int>` ma restituisce `array<int|string, mixed>`
 - Parameter type mismatch: `mapWithKeys()` si aspetta `callable(object{event: string, count: int}, int): array<string, int>` ma riceve `Closure(\stdClass): non-empty-array<string, int>`
 

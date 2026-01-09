@@ -1,4 +1,4 @@
-# Regole di Namespace 
+# Regole di Namespace
 
 ## Struttura dei Namespace
 
@@ -87,4 +87,4 @@ Se si verificano errori "Class not found" o problemi di autoloading:
 - [Documentazione Xot](../CODE-STANDARDS.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 
-Ultima modifica: 31/03/2025 
+Ultima modifica: 31/03/2025

@@ -33,12 +33,12 @@ state(['search' => '']);
 
 $articles = computed(function () {
     $query = Article::query()->with(['user', 'category']);
-    
+
     if (!empty($this->search)) {
         $query->where('title', 'like', '%' . $this->search . '%')
               ->orWhere('content', 'like', '%' . $this->search . '%');
     }
-    
+
     return $query->orderBy('published_at', 'desc')->paginate(10);
 });
 
@@ -47,18 +47,18 @@ $articles = computed(function () {
 <x-layout>
     <div class="container mx-auto px-4 py-8">
         <h1>Latest Articles</h1>
-        
-        <input 
-            type="text" 
-            wire:model.live="search" 
+
+        <input
+            type="text"
+            wire:model.live="search"
             placeholder="Search articles..."
             class="mb-4 p-2 border rounded"
         />
-        
+
         @foreach($this->articles as $article)
             <x-article-card :article="$article" />
         @endforeach
-        
+
         {{ $this->articles->links() }}
     </div>
 </x-layout>
@@ -82,11 +82,11 @@ $articles = computed(function () {
         $cartTotal = collect($cart)->sum(fn($item) => $item['price'] * $item['quantity']);
         $cartCount = collect($cart)->sum('quantity');
     @endphp
-    
-    function addToCart($productId, $productName, $price) 
+
+    function addToCart($productId, $productName, $price)
     {
         $cart = session()->get('cart', []);
-        
+
         if (isset($cart[$productId])) {
             $cart[$productId]['quantity']++;
         } else {
@@ -96,11 +96,11 @@ $articles = computed(function () {
                 'quantity' => 1
             ];
         }
-        
+
         session()->put('cart', $cart);
         $this->dispatch('cart-updated');
     }
-    
+
     function removeFromCart($productId)
     {
         $cart = session()->get('cart', []);
@@ -141,23 +141,23 @@ $articles = computed(function () {
         $currentStep = session('checkout_step', 1);
         $formData = session('checkout_data', []);
     @endphp
-    
+
     function nextStep()
     {
         $currentStep = session('checkout_step', 1);
-        
+
         // Validate current step
         $this->validateStep($currentStep);
-        
+
         session(['checkout_step' => $currentStep + 1]);
     }
-    
+
     function prevStep()
     {
         $currentStep = session('checkout_step', 1);
         session(['checkout_step' => max(1, $currentStep - 1)]);
     }
-    
+
     function validateStep($step)
     {
         if ($step === 1) {
@@ -167,7 +167,7 @@ $articles = computed(function () {
                 'billingAddress' => 'required|string|max:255',
             ]);
         }
-        
+
         // Store validated data
         session(['checkout_data' => [
             'billing_name' => $this->billingName,
@@ -196,18 +196,18 @@ $articles = computed(function () {
         $password = '';
         $remember = false;
     @endphp
-    
+
     function login()
     {
         $credentials = $this->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
-        
+
         if (auth()->attempt($credentials, $this->remember)) {
             return redirect()->intended('/dashboard');
         }
-        
+
         $this->addError('email', 'Invalid credentials');
     }
 @endvolt
@@ -222,7 +222,7 @@ $articles = computed(function () {
         $password = '';
         $passwordConfirmation = '';
     @endphp
-    
+
     function register()
     {
         $validated = $this->validate([
@@ -230,15 +230,15 @@ $articles = computed(function () {
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8|confirmed',
         ]);
-        
+
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => Hash::make($validated['password']),
         ]);
-        
+
         auth()->login($user);
-        
+
         return redirect('/dashboard');
     }
 @endvolt
@@ -257,20 +257,20 @@ $articles = computed(function () {
         $messages = ChatMessage::latest()->take(50)->get();
         $newMessage = '';
     @endphp
-    
+
     function sendMessage()
     {
         if (empty(trim($this->newMessage))) {
             return;
         }
-        
+
         ChatMessage::create([
             'user_id' => auth()->id(),
             'message' => $this->newMessage,
         ]);
-        
+
         $this->newMessage = '';
-        
+
         // Broadcast to other users
         broadcast(new NewChatMessage($this->newMessage))->toOthers();
     }
@@ -279,7 +279,7 @@ $articles = computed(function () {
 <div @poll.2s="refreshMessages" class="chat-messages">
     @foreach($messages as $message)
         <div class="message">
-            <strong>{{ $message->user->name }}:</strong> 
+            <strong>{{ $message->user->name }}:</strong>
             {{ $message->message }}
         </div>
     @endforeach
@@ -302,7 +302,7 @@ $articles = computed(function () {
     @php
         $user = auth()->user();
     @endphp
-    
+
     $stats = computed(function () {
         return [
             'totalEvents' => $this->user->events()->count(),
@@ -321,7 +321,7 @@ $articles = computed(function () {
                 ->sum('amount'),
         ];
     });
-    
+
     $monthlyChart = computed(function () {
         $data = [];
         for ($i = 1; $i <= 12; $i++) {
@@ -416,28 +416,28 @@ Based on these real-world examples, here are specific implementations for the La
         $event = $event; // Passed from Folio route
         $user = auth()->user();
     @endphp
-    
+
     $isRegistered = computed(function () {
         return $this->user && $this->event->attendees()
             ->where('user_id', $this->user->id)
             ->exists();
     });
-    
+
     function registerForEvent()
     {
         if (!$this->user) {
             return redirect('/login?redirect=' . request()->url());
         }
-        
+
         if ($this->event->attendees()->count() >= $this->event->max_attendees) {
             $this->addError('registration', 'Event is fully booked');
             return;
         }
-        
+
         $this->event->attendees()->attach($this->user->id);
         $this->dispatch('event-registered', $this->event->id);
     }
-    
+
     function cancelRegistration()
     {
         $this->event->attendees()->detach($this->user->id);
@@ -454,27 +454,27 @@ Based on these real-world examples, here are specific implementations for the La
         $category = 'all';
         $dateRange = 'upcoming';
     @endphp
-    
+
     $events = computed(function () {
         $query = \Modules\Meetup\Models\Event::query()
             ->with(['organizer', 'venue'])
             ->where('published', true);
-        
+
         if (!empty($this->search)) {
             $query->where('title', 'like', '%' . $this->search . '%')
                   ->orWhere('description', 'like', '%' . $this->search . '%');
         }
-        
+
         if ($this->category !== 'all') {
             $query->where('category', $this->category);
         }
-        
+
         if ($this->dateRange === 'upcoming') {
             $query->where('start_date', '>', now());
         } elseif ($this->dateRange === 'past') {
             $query->where('start_date', '<', now());
         }
-        
+
         return $query->orderBy('start_date', 'asc')->paginate(12);
     });
 @endvolt
@@ -486,7 +486,7 @@ Based on these real-world examples, here are specific implementations for the La
     @php
         $user = auth()->user();
     @endphp
-    
+
     $stats = computed(function () {
         return [
             'eventsAttended' => $this->user->events()->count(),
@@ -526,12 +526,12 @@ rules(['email' => 'required|email', 'password' => 'required']);
 
 $authenticate = function() {
     $credentials = $this->validate();
-    
+
     if (!auth()->attempt($credentials, $this->remember)) {
         $this->addError('email', 'Invalid credentials');
         return;
     }
-    
+
     event(new Login(auth()->guard('web'), User::where('email', $this->email)->first(), $this->remember));
     return redirect()->intended('/');
 };
@@ -546,19 +546,19 @@ $authenticate = function() {
                     <input type="email" wire:model="email" class="w-full">
                     @error('email') <span class="text-red-500">{{ $message }}</span> @enderror
                 </div>
-                
+
                 <div class="mb-4">
                     <label>Password</label>
                     <input type="password" wire:model="password" class="w-full">
                     @error('password') <span class="text-red-500">{{ $message }}</span> @enderror
                 </div>
-                
+
                 <div class="mb-4">
                     <label>
                         <input type="checkbox" wire:model="remember"> Remember me
                     </label>
                 </div>
-                
+
                 <button type="submit" class="w-full bg-primary-600 text-white py-2">
                     Login
                 </button>
@@ -584,16 +584,16 @@ The Laravel News tutorial demonstrates how to create a persistent audio player u
     @persist('navigation')
         <x-navigation />
     @endpersist
-    
+
     <main>
         {{ $slot }}
     </main>
-    
+
     @persist('chat-widget')
         <x-chat-widget />
     @endpersist
-    
-    @persist('event-player') 
+
+    @persist('event-player')
         <x-event-countdown-timer />
     @endpersist
 </body>
@@ -617,7 +617,7 @@ Cross-component communication using events, demonstrated in the Laravel News pod
 
 **Event Player Component** (`resources/views/components/event-player.blade.php`):
 ```blade
-<div 
+<div
     x-data="{ activeEvent: null, play(event) { this.activeEvent = event; this.$nextTick(() => { this.$refs.audio.play() }); } }"
     x-on:play-event.window="play($event.detail)"
     x-show="activeEvent"
@@ -640,7 +640,7 @@ Cross-component communication using events, demonstrated in the Laravel News pod
     };
 @endvolt
 
-<button 
+<button
     x-on:click="$dispatch('play-event', @js($event))"
     class="bg-red-600 text-white px-4 py-2 rounded"
 >
@@ -737,11 +737,11 @@ use Sushi\Sushi;
 class Episode extends Model
 {
     use Sushi;
-    
+
     protected $casts = [
         'released_at' => 'datetime',
     ];
-    
+
     protected $rows = [
         [
             'number' => 195,
@@ -786,10 +786,10 @@ Session-based cart management:
         $product = $product; // From route model binding
         $quantity = 1;
     @endphp
-    
+
     $addToCart = function() {
         $cart = session()->get('cart', []);
-        
+
         $productId = $this->product->id;
         if (isset($cart[$productId])) {
             $cart[$productId]['quantity'] += $this->quantity;
@@ -801,7 +801,7 @@ Session-based cart management:
                 'quantity' => $this->quantity,
             ];
         }
-        
+
         session()->put('cart', $cart);
         $this->dispatch('cart-updated');
     };
@@ -817,27 +817,27 @@ Using session to maintain state across multiple pages:
     @php
         $currentStep = session('application_step', 'personal');
         $formData = session('application_data', []);
-        
+
         $personalInfo = $formData['personal'] ?? [];
         $education = $formData['education'] ?? [];
         $work = $formData['work'] ?? [];
     @endphp
-    
+
     $nextStep = function() {
         $steps = ['personal', 'education', 'work', 'review'];
         $currentIndex = array_search($this->currentStep, $steps);
-        
+
         if ($currentIndex !== false && $currentIndex < count($steps) - 1) {
             $nextStep = $steps[$currentIndex + 1];
-            
+
             // Validate current step
             $this->validateForStep($this->currentStep);
-            
+
             session(['application_step' => $nextStep]);
             return redirect()->to("/apply/{$nextStep}");
         }
     };
-    
+
     $validateForStep = function($step) {
         switch($step) {
             case 'personal':
@@ -853,10 +853,10 @@ Using session to maintain state across multiple pages:
                 ]);
                 break;
         }
-        
+
         // Store validated data
         $formData = session('application_data', []);
-        $formData[$step] = $this->$step === 'personal' ? $this->personalInfo : 
+        $formData[$step] = $this->$step === 'personal' ? $this->personalInfo :
                           ($this->step === 'education' ? $this->education : $this->work);
         session(['application_data' => $formData]);
     };
@@ -871,10 +871,10 @@ Using session to maintain state across multiple pages:
     @php
         $userId = auth()->id();
     @endphp
-    
+
     // Lock properties to prevent client-side modifications
     state(['userId'])->locked();
-    
+
     $deleteAccount = function() {
         // Use locked property for security
         User::find($this->userId)->delete();
@@ -887,7 +887,7 @@ Using session to maintain state across multiple pages:
 @volt('reactive-component')
     // When parent component updates a property, child components automatically update
     state(['parentId']);
-    
+
     $items = computed(fn() => Item::where('parent_id', $this->parentId)->get());
 @endvolt
 ```
@@ -941,21 +941,21 @@ Based on all these real-world examples, here are specific implementation pattern
 {{-- Following Genesis patterns --}}
 @volt('auth.login')
     middleware(['guest']);
-    
+
     $email = '';
     $password = '';
     $remember = false;
-    
+
     $login = function() {
         $credentials = $this->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
-        
+
         if (auth()->attempt($credentials, $this->remember)) {
             return redirect()->intended('/dashboard');
         }
-        
+
         $this->addError('email', 'Invalid credentials');
     };
 @endvolt
@@ -969,11 +969,11 @@ Based on all these real-world examples, here are specific implementation pattern
         if (!$this->user) {
             return redirect('/login?redirect=' . request()->fullUrl());
         }
-        
+
         // Registration logic
         $this->dispatch('event-registered', $this->event->id);
     };
-    
+
     $unregisterFromEvent = function() {
         // Unregistration logic
         $this->dispatch('event-unregistered', $this->event->id);
@@ -991,7 +991,7 @@ Based on all these real-world examples, here are specific implementation pattern
             ->orderBy('start_date', 'desc')
             ->paginate(12);
     });
-    
+
     $filters = [
         'categories' => ['laravel', 'filament', 'livewire', 'php'],
         'formats' => ['online', 'in-person', 'hybrid'],
@@ -999,10 +999,10 @@ Based on all these real-world examples, here are specific implementation pattern
     ];
 @endvolt
 
-<x-event.gallery 
-    :events="$this->events" 
-    :filters="$this->filters" 
-    :show-filters="true" 
+<x-event.gallery
+    :events="$this->events"
+    :filters="$this->filters"
+    :show-filters="true"
 />
 ```
 
@@ -1041,5 +1041,5 @@ These patterns align perfectly with the DRY, KISS, SOLID, and Laraxot principles
 
 ---
 
-**Document Version**: 1.0  
+**Document Version**: 1.0
 **Last Updated**: November 29, 2025

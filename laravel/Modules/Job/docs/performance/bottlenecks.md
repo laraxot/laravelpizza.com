@@ -25,7 +25,7 @@ public function dispatchJob($job) {
 protected function balanceQueues() {
     return $this->queues
         ->sortByDesc('load')
-        ->each(fn($queue) => 
+        ->each(fn($queue) =>
             $this->redistributeJobs($queue)
         );
 }
@@ -46,7 +46,7 @@ class BatchJobProcessor implements ShouldQueue {
     public function handle() {
         return $this->jobs
             ->chunk(100)
-            ->each(fn($chunk) => 
+            ->each(fn($chunk) =>
                 $this->processJobChunk($chunk)
             );
     }
@@ -75,7 +75,7 @@ File: `app/Services/JobTrackingService.php`
 // 1. Tracking ottimizzato
 public function trackJob($job) {
     return Cache::tags(['job_tracking'])
-        ->remember("job_{$job->id}", 
+        ->remember("job_{$job->id}",
             now()->addMinutes(30),
             fn() => $this->getJobStatus($job)
         );
@@ -108,7 +108,7 @@ File: `app/Services/FailedJobService.php`
 public function retryFailedJobs() {
     return DB::table('failed_jobs')
         ->lazyById(1000)
-        ->through(fn($job) => 
+        ->through(fn($job) =>
             $this->queueJobRetry($job)
         );
 }
@@ -118,7 +118,7 @@ protected function cleanupOldJobs() {
     return DB::table('failed_jobs')
         ->where('failed_at', '<', now()->subDays(7))
         ->lazyById(1000)
-        ->each(fn($job) => 
+        ->each(fn($job) =>
             $this->removeJob($job)
         );
 }
@@ -154,7 +154,7 @@ Implementare:
    // Cache per job status
    public function getJobStatus($id) {
        return Cache::tags(['jobs'])
-           ->remember("status_{$id}", 
+           ->remember("status_{$id}",
                now()->addMinutes(5),
                fn() => $this->fetchStatus($id)
            );
@@ -166,7 +166,7 @@ Implementare:
    // Code ottimizzate
    public function optimizeQueues() {
        return $this->queues
-           ->each(fn($queue) => 
+           ->each(fn($queue) =>
                $this->balanceQueue($queue)
            );
    }
@@ -179,7 +179,7 @@ Implementare:
        return LazyCollection::make(function () {
            yield from $this->getPendingJobs();
        })->chunk(100)
-         ->each(fn($chunk) => 
+         ->each(fn($chunk) =>
              $this->processChunk($chunk)
          );
    }
@@ -187,7 +187,6 @@ Implementare:
 ### Versione HEAD
 
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
@@ -201,15 +200,10 @@ Implementare:
 * [bottlenecks.md](../../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Patient/docs/roadmap/bottlenecks.md)
 
-
 ### Versione Incoming
-
 
 ---
 
-
 ### Versione Incoming
 
-
 ---
-

@@ -43,10 +43,10 @@ Main method that generates PDF content from HTML or Blade views.
    - Renders view with provided data
    - Throws exception if view not found
 
-2. **Content Validation**: 
+2. **Content Validation**:
    - Uses `Assert::string()` to ensure HTML content is available
 
-3. **PDF Configuration**: 
+3. **PDF Configuration**:
    - Creates Html2Pdf instance with identical settings to StreamDownloadPdfAction:
      - Orientation: Portrait ('P')
      - Format: A4
@@ -107,7 +107,7 @@ public function getNotificationAttachments(): array
     $view = 'pub_theme::appointment.report_pdf';
     $data = ['appointment' => $this->appointment];
     $filename = 'report-' . $this->appointment->id . '.pdf';
-    
+
     $pdfContent = app(ContentPdfAction::class)->execute(
         view: $view,
         data: $data,
@@ -219,12 +219,12 @@ public function execute(
             }
             $html = view($view, $data)->render();
         }
-        
+
         // Validate that we have HTML content
         if (empty($html)) {
             throw new \Exception('HTML content must be provided either directly or via view rendering');
         }
-        
+
         // Create and configure HTML2PDF
         $html2pdf = new Html2Pdf(
             orientation: 'P',
@@ -234,11 +234,11 @@ public function execute(
             encoding: 'UTF-8',
             margins: [10, 10, 10, 10]
         );
-        
+
         // Generate PDF
         $html2pdf->writeHTML($html);
         return $html2pdf->output('', 'S');
-        
+
     } catch (\Exception $e) {
         \Log::error('PDF generation failed', [
             'view' => $view,
@@ -313,9 +313,9 @@ public function test_generates_pdf_from_html()
 {
     $action = new ContentPdfAction();
     $html = '<h1>Test</h1><p>Content</p>';
-    
+
     $result = $action->fromHtml($html, 'test.pdf');
-    
+
     $this->assertIsString($result);
     $this->assertStringStartsWith('%PDF', $result); // PDF header
 }
@@ -323,9 +323,9 @@ public function test_generates_pdf_from_html()
 public function test_generates_pdf_from_view()
 {
     $action = new ContentPdfAction();
-    
+
     $result = $action->fromView('test.pdf-template', ['title' => 'Test']);
-    
+
     $this->assertIsString($result);
     $this->assertStringStartsWith('%PDF', $result);
 }
@@ -333,10 +333,10 @@ public function test_generates_pdf_from_view()
 public function test_throws_exception_for_missing_view()
 {
     $action = new ContentPdfAction();
-    
+
     $this->expectException(\Exception::class);
     $this->expectExceptionMessage('View non-existent-view not found');
-    
+
     $action->fromView('non-existent-view');
 }
 ```
@@ -346,7 +346,7 @@ public function test_throws_exception_for_missing_view()
 public function test_pdf_content_works_with_email_attachments()
 {
     $pdfContent = app(ContentPdfAction::class)->fromHtml('<h1>Test</h1>');
-    
+
     $email = new SpatieEmail($this->record, 'test-template');
     $email->addAttachments([
         [
@@ -354,7 +354,7 @@ public function test_pdf_content_works_with_email_attachments()
             'as' => 'test.pdf'
         ]
     ]);
-    
+
     $attachments = $email->attachments();
     $this->assertCount(1, $attachments);
 }

@@ -178,4 +178,4 @@ Per garantire la coerenza con il resto del progetto, abbiamo seguito queste line
 
 ## Collegamento con la Documentazione Principale
 
-Per una panoramica di tutti i conflitti risolti, vedere il documento principale sulla [risoluzione dei conflitti nel progetto](../../../../docs/logs/conflict_resolution_progress.md). 
+Per una panoramica di tutti i conflitti risolti, vedere il documento principale sulla [risoluzione dei conflitti nel progetto](../../../../docs/logs/conflict_resolution_progress.md).

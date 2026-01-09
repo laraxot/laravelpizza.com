@@ -26,7 +26,7 @@
 @props(['results' => null])
 
 @if ($results)
-    <div class="p-4 rounded-lg border mb-4 
+    <div class="p-4 rounded-lg border mb-4
     @if ($results['status'] === 'success') bg-success-50 border-success-200 @endif
     @if ($results['status'] === 'error') bg-danger-50 border-danger-200 @endif
     @if ($results['status'] === 'completed') bg-info-50 border-info-200 @endif">

@@ -113,13 +113,13 @@ return [
         'title_separator' => ' | ',
         'default_description' => 'Default site description',
     ],
-    
+
     'sitemap' => [
         'enabled' => true,
         'cache_duration' => 3600,
         'path' => 'sitemap.xml',
     ],
-    
+
     'structured_data' => [
         'enabled' => true,
         'organization' => [
@@ -150,7 +150,7 @@ php artisan seo:validate-schema
 class SeoResource extends XotBaseResource
 {
     protected static ?string $model = SeoMeta::class;
-    
+
     public static function getFormSchema(): array
     {
         return [
@@ -258,12 +258,8 @@ php artisan seo:validate-schema
 
 ---
 
-**🔄 Ultimo aggiornamento**: 14 Ottobre 2025  
-**📦 Versione**: 1.0.0  
-**🐛 PHPStan Level**: Target Level 9  
-**🌐 Translation**: IT/EN ✅  
+**🔄 Ultimo aggiornamento**: 14 Ottobre 2025
+**📦 Versione**: 1.0.0
+**🐛 PHPStan Level**: Target Level 9
+**🌐 Translation**: IT/EN ✅
 **🚀 SEO Score**: 95/100
-
-
-
-

@@ -76,5 +76,5 @@ return $response; // Scarica il file Excel
 - [Laravel Excel Documentation](https://docs.laravel-excel.com)
 - [Spatie Queueable Action](../traits/QUEUEABLE-ACTION.md)
 - [Performance Guidelines](../PERFORMANCE-GUIDELINES.md)
-- [Actions Overview](./README.md) 
+- [Actions Overview](./README.md)
 - [PHPStan Fixes Summary](../../../../project_docs/PHPSTAN-FIXES-SUMMARY.md)

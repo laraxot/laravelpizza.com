@@ -51,7 +51,7 @@ abstract class XotBaseRouteServiceProvider extends ServiceProvider
         $this->name = $this->getModuleNameFromNamespace();
         // Rest of logic remains the same
     }
-    
+
     private function getModuleNameFromNamespace(): string
     {
         // Extract module name automatically
@@ -69,7 +69,7 @@ abstract class XotBaseRouteServiceProvider extends ServiceProvider
 **Current State**: Each module has identical:
 ```
 package.json          (20+ duplicates)
-tailwind.config.js    (15+ duplicates)  
+tailwind.config.js    (15+ duplicates)
 vite.config.js        (12+ duplicates)
 postcss.config.js     (10+ duplicates)
 phpstan-baseline.neon (8+ duplicates)
@@ -193,7 +193,7 @@ class ModuleTestCase extends XotBaseTestCase
 
 ### Code Reduction
 - **~1,500 lines** removed from duplicate service providers
-- **~500 lines** removed from duplicate build configurations  
+- **~500 lines** removed from duplicate build configurations
 - **~300 lines** removed from duplicate test base classes
 - **~50 files** eliminated entirely
 

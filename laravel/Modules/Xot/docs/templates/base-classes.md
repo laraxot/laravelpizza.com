@@ -316,5 +316,5 @@ class Create{ModelName}Action
 
 ---
 
-**Ultimo aggiornamento:** Gennaio 2025  
+**Ultimo aggiornamento:** Gennaio 2025
 **Versione:** 2.0 - Consolidata DRY + KISS

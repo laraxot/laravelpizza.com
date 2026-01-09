@@ -22,4 +22,4 @@ Questo file contiene i collegamenti alla documentazione frontend che si trova ne
 ## Architettura Frontend
 
 Per la documentazione completa sull'architettura frontend, consultare:
-[Architettura Frontend](../laravel/Modules/Cms/docs/frontend-architecture.md) 
+[Architettura Frontend](../laravel/Modules/Cms/docs/frontend-architecture.md)

@@ -1,10 +1,10 @@
 # Guida Migrazione Step-by-Step: Modulo User - Filament 4
 
 ## Panoramica Migrazione
-**Modulo**: User (Modulo Critico)  
-**Complessità**: ⭐⭐⭐⭐⭐ MASSIMA  
-**Tempo Stimato**: 35-45 giorni  
-**Rischio**: CRITICO (autenticazione di sistema)  
+**Modulo**: User (Modulo Critico)
+**Complessità**: ⭐⭐⭐⭐⭐ MASSIMA
+**Tempo Stimato**: 35-45 giorni
+**Rischio**: CRITICO (autenticazione di sistema)
 **Priorità**: 1 (PRIMO modulo da migrare - base per tutti gli altri)
 
 ## Pre-requisiti Assoluti
@@ -76,20 +76,20 @@ class UserBaselineTest extends TestCase
         $user = User::factory()->create([
             'password' => Hash::make('password123'),
         ]);
-        
+
         // Test login standard
         $response = $this->post('/login', [
             'email' => $user->email,
             'password' => 'password123',
         ]);
-        
+
         $this->assertAuthenticated();
-        
+
         // Test accesso admin panel
         $response = $this->get('/admin');
         $expectedStatus = $user->hasRole('super_admin') ? 200 : 403;
         $response->assertStatus($expectedStatus);
-        
+
         // Salvare metriche baseline
         file_put_contents('user_baseline_metrics.json', json_encode([
             'total_users' => User::count(),
@@ -122,7 +122,7 @@ use Illuminate\Database\Eloquent\Builder;
 abstract class UserBaseResource extends XotBaseResource
 {
     protected static ?string $navigationGroup = 'Gestione Utenti';
-    
+
     public static function getMainSchema(): Schema
     {
         return Schema::make([
@@ -133,7 +133,7 @@ abstract class UserBaseResource extends XotBaseResource
             static::getTeamsSlot(),
         ]);
     }
-    
+
     protected static function getUserDetailsSlot(): Slot
     {
         return Slot::make([
@@ -141,13 +141,13 @@ abstract class UserBaseResource extends XotBaseResource
                 ->label('Nome Completo')
                 ->required()
                 ->maxLength(255),
-                
+
             TextInput::make('email')
                 ->label('Email')
                 ->email()
                 ->required()
                 ->unique(ignoreRecord: true),
-                
+
             TextInput::make('password')
                 ->label('Password')
                 ->password()
@@ -156,7 +156,7 @@ abstract class UserBaseResource extends XotBaseResource
                 ->same('password_confirmation')
                 ->dehydrateStateUsing(fn($state) => Hash::make($state))
                 ->dehydrated(fn($state) => filled($state)),
-                
+
             TextInput::make('password_confirmation')
                 ->label('Conferma Password')
                 ->password()
@@ -164,34 +164,34 @@ abstract class UserBaseResource extends XotBaseResource
                 ->dehydrated(false),
         ]);
     }
-    
+
     protected static function getSecuritySlot(): Slot
     {
         return Slot::make([
             Toggle::make('email_verified_at')
                 ->label('Email Verificata')
                 ->dehydrateStateUsing(fn($state) => $state ? now() : null),
-                
+
             Toggle::make('is_active')
                 ->label('Attivo')
                 ->default(true),
-                
+
             DateTimePicker::make('last_login_at')
                 ->label('Ultimo Login')
                 ->disabled()
                 ->displayFormat('d/m/Y H:i'),
-                
+
             TextInput::make('last_login_ip')
                 ->label('Ultimo IP')
                 ->disabled(),
-                
+
             Toggle::make('two_factor_enabled')
                 ->label('2FA Attivo')
                 ->disabled()
                 ->helperText('Gestito dall\'utente nel profilo'),
         ]);
     }
-    
+
     protected static function getRolesPermissionsSlot(): Slot
     {
         return Slot::make([
@@ -201,7 +201,7 @@ abstract class UserBaseResource extends XotBaseResource
                 ->multiple()
                 ->preload()
                 ->searchable(),
-                
+
             Select::make('permissions')
                 ->label('Permessi Diretti')
                 ->relationship('permissions', 'name')
@@ -210,7 +210,7 @@ abstract class UserBaseResource extends XotBaseResource
                 ->searchable(),
         ]);
     }
-    
+
     protected static function getProfileSlot(): Slot
     {
         return Slot::make([
@@ -222,11 +222,11 @@ abstract class UserBaseResource extends XotBaseResource
                 ->imageCropAspectRatio('1:1')
                 ->imageResizeTargetWidth('200')
                 ->imageResizeTargetHeight('200'),
-                
+
             TextInput::make('phone')
                 ->label('Telefono')
                 ->tel(),
-                
+
             Select::make('language')
                 ->label('Lingua')
                 ->options([
@@ -235,7 +235,7 @@ abstract class UserBaseResource extends XotBaseResource
                     'fr' => 'Français',
                 ])
                 ->default('it'),
-                
+
             Select::make('timezone')
                 ->label('Fuso Orario')
                 ->options([
@@ -246,7 +246,7 @@ abstract class UserBaseResource extends XotBaseResource
                 ->default('Europe/Rome'),
         ]);
     }
-    
+
     protected static function getTeamsSlot(): Slot
     {
         return Slot::make([
@@ -255,14 +255,14 @@ abstract class UserBaseResource extends XotBaseResource
                 ->relationship('teams', 'name')
                 ->multiple()
                 ->preload(),
-                
+
             Select::make('current_team_id')
                 ->label('Team Corrente')
                 ->relationship('currentTeam', 'name')
                 ->searchable(),
         ]);
     }
-    
+
     public static function getTableColumns(): array
     {
         return [
@@ -270,59 +270,59 @@ abstract class UserBaseResource extends XotBaseResource
                 ->label('Avatar')
                 ->circular()
                 ->size(40),
-                
+
             TextColumn::make('name')
                 ->label('Nome')
                 ->searchable()
                 ->sortable(),
-                
+
             TextColumn::make('email')
                 ->label('Email')
                 ->searchable()
                 ->copyable(),
-                
+
             BadgeColumn::make('roles.name')
                 ->label('Ruoli')
                 ->limit(2)
                 ->separator(','),
-                
+
             BooleanColumn::make('email_verified_at')
                 ->label('Verificato')
                 ->getStateUsing(fn($record) => !is_null($record->email_verified_at)),
-                
+
             BooleanColumn::make('is_active')
                 ->label('Attivo'),
-                
+
             BooleanColumn::make('two_factor_enabled')
                 ->label('2FA')
                 ->getStateUsing(fn($record) => !is_null($record->two_factor_secret)),
-                
+
             TextColumn::make('last_login_at')
                 ->label('Ultimo Login')
                 ->dateTime('d/m/Y H:i')
                 ->sortable(),
-                
+
             TextColumn::make('created_at')
                 ->label('Creato')
                 ->date('d/m/Y')
                 ->sortable(),
         ];
     }
-    
+
     public static function getTableFilters(): array
     {
         return [
             SelectFilter::make('roles')
                 ->relationship('roles', 'name')
                 ->label('Ruolo'),
-                
+
             TernaryFilter::make('email_verified_at')
                 ->label('Email Verificata')
                 ->nullable(),
-                
+
             TernaryFilter::make('is_active')
                 ->label('Attivo'),
-                
+
             Filter::make('last_login')
                 ->form([
                     DatePicker::make('last_login_from')
@@ -332,10 +332,10 @@ abstract class UserBaseResource extends XotBaseResource
                 ])
                 ->query(function (Builder $query, array $data): Builder {
                     return $query
-                        ->when($data['last_login_from'], fn(Builder $q, $date) => 
+                        ->when($data['last_login_from'], fn(Builder $q, $date) =>
                             $q->whereDate('last_login_at', '>=', $date)
                         )
-                        ->when($data['last_login_until'], fn(Builder $q, $date) => 
+                        ->when($data['last_login_until'], fn(Builder $q, $date) =>
                             $q->whereDate('last_login_at', '<=', $date)
                         );
                 }),
@@ -364,7 +364,7 @@ class UserResource extends UserBaseResource
     protected static ?string $navigationLabel = 'Utenti';
     protected static ?string $navigationIcon = 'heroicon-o-users';
     protected static ?int $navigationSort = 1;
-    
+
     public static function getMainSchema(): Schema
     {
         return Schema::make([
@@ -372,7 +372,7 @@ class UserResource extends UserBaseResource
                 ->warning()
                 ->body('Attenzione: Modifiche a ruoli e permessi hanno effetto immediato.')
                 ->visible(fn($context) => $context === 'edit'),
-                
+
             Wizard::make([
                 Wizard\Step::make('Dati Base')
                     ->schema([
@@ -380,14 +380,14 @@ class UserResource extends UserBaseResource
                             ->schema(parent::getUserDetailsSlot()->getComponents())
                             ->columns(2),
                     ]),
-                    
+
                 Wizard\Step::make('Sicurezza')
                     ->schema([
                         Section::make('Impostazioni Sicurezza')
                             ->schema(parent::getSecuritySlot()->getComponents())
                             ->columns(2),
                     ]),
-                    
+
                 Wizard\Step::make('Autorizzazioni')
                     ->schema([
                         Tabs::make('Permissions')
@@ -396,21 +396,21 @@ class UserResource extends UserBaseResource
                                     ->schema([
                                         parent::getRolesPermissionsSlot()->getComponents()[0], // roles
                                     ]),
-                                    
+
                                 Tabs\Tab::make('Permessi Diretti')
                                     ->schema([
                                         parent::getRolesPermissionsSlot()->getComponents()[1], // permissions
                                     ]),
                             ]),
                     ]),
-                    
+
                 Wizard\Step::make('Profilo')
                     ->schema([
                         Section::make('Dati Profilo')
                             ->schema(parent::getProfileSlot()->getComponents())
                             ->columns(2),
                     ]),
-                    
+
                 Wizard\Step::make('Team')
                     ->schema([
                         Section::make('Gestione Team')
@@ -422,7 +422,7 @@ class UserResource extends UserBaseResource
             ->persistStepInQueryString(),
         ]);
     }
-    
+
     public static function getCustomActions(): array
     {
         return [
@@ -442,17 +442,17 @@ class UserResource extends UserBaseResource
                         'password' => Hash::make($data['new_password']),
                         'password_changed_at' => now(),
                     ]);
-                    
+
                     // Invalidare tutte le sessioni
                     $record->tokens()->delete();
-                    
+
                     Notification::make()
                         ->success()
                         ->title('Password reimpostata')
                         ->body('L\'utente dovrà rieffettuare il login.')
                         ->send();
                 }),
-                
+
             Action::make('impersonate')
                 ->label('Impersona')
                 ->icon('heroicon-o-user-circle')
@@ -460,10 +460,10 @@ class UserResource extends UserBaseResource
                 ->visible(fn() => auth()->user()->can('impersonate_users'))
                 ->action(function (User $record) {
                     auth()->user()->impersonate($record);
-                    
+
                     return redirect('/admin');
                 }),
-                
+
             Action::make('send_verification')
                 ->label('Invia Verifica Email')
                 ->icon('heroicon-o-envelope')
@@ -471,13 +471,13 @@ class UserResource extends UserBaseResource
                 ->visible(fn(User $record) => is_null($record->email_verified_at))
                 ->action(function (User $record) {
                     $record->sendEmailVerificationNotification();
-                    
+
                     Notification::make()
                         ->success()
                         ->title('Email di verifica inviata')
                         ->send();
                 }),
-                
+
             Action::make('disable_2fa')
                 ->label('Disabilita 2FA')
                 ->icon('heroicon-o-shield-exclamation')
@@ -491,7 +491,7 @@ class UserResource extends UserBaseResource
                         'two_factor_secret' => null,
                         'two_factor_recovery_codes' => null,
                     ]);
-                    
+
                     Notification::make()
                         ->success()
                         ->title('2FA disabilitato')
@@ -499,26 +499,26 @@ class UserResource extends UserBaseResource
                 }),
         ];
     }
-    
+
     public static function getTableBulkActions(): array
     {
         return [
             BulkActionGroup::make([
                 DeleteBulkAction::make(),
-                
+
                 BulkAction::make('activate')
                     ->label('Attiva Selezionati')
                     ->icon('heroicon-o-check-circle')
                     ->color('success')
                     ->action(function (Collection $records) {
                         $records->each(fn(User $user) => $user->update(['is_active' => true]));
-                        
+
                         Notification::make()
                             ->success()
                             ->title('Utenti attivati')
                             ->send();
                     }),
-                    
+
                 BulkAction::make('deactivate')
                     ->label('Disattiva Selezionati')
                     ->icon('heroicon-o-x-circle')
@@ -526,13 +526,13 @@ class UserResource extends UserBaseResource
                     ->requiresConfirmation()
                     ->action(function (Collection $records) {
                         $records->each(fn(User $user) => $user->update(['is_active' => false]));
-                        
+
                         Notification::make()
                             ->success()
                             ->title('Utenti disattivati')
                             ->send();
                     }),
-                    
+
                 BulkAction::make('force_logout')
                     ->label('Forza Logout')
                     ->icon('heroicon-o-arrow-right-on-rectangle')
@@ -542,7 +542,7 @@ class UserResource extends UserBaseResource
                             $user->tokens()->delete();
                             DB::table('sessions')->where('user_id', $user->id)->delete();
                         });
-                        
+
                         Notification::make()
                             ->success()
                             ->title('Logout forzato completato')
@@ -578,7 +578,7 @@ class TwoFactorAuthResource extends Resource
     protected static ?string $navigationLabel = 'Autenticazione 2FA';
     protected static ?string $navigationIcon = 'heroicon-o-shield-check';
     protected static ?string $navigationGroup = 'Sicurezza';
-    
+
     public static function getMainSchema(): Schema
     {
         return Schema::make([
@@ -586,28 +586,28 @@ class TwoFactorAuthResource extends Resource
                 ->schema([
                     Placeholder::make('current_status')
                         ->label('Stato Corrente')
-                        ->content(fn(User $record) => $record->two_factor_secret ? 
+                        ->content(fn(User $record) => $record->two_factor_secret ?
                             '✅ 2FA Attivo' : '❌ 2FA Non Attivo'),
-                            
+
                     Toggle::make('two_factor_enabled')
                         ->label('Abilita 2FA')
                         ->disabled()
                         ->helperText('Gestito automaticamente dal sistema'),
-                        
+
                     Placeholder::make('recovery_codes_count')
                         ->label('Codici di Recupero')
-                        ->content(fn(User $record) => $record->two_factor_recovery_codes ? 
-                            count(json_decode(decrypt($record->two_factor_recovery_codes))) . ' codici disponibili' 
+                        ->content(fn(User $record) => $record->two_factor_recovery_codes ?
+                            count(json_decode(decrypt($record->two_factor_recovery_codes))) . ' codici disponibili'
                             : 'Nessun codice generato'),
                 ])
                 ->columns(2),
-                
+
             Section::make('Statistiche Sistema')
                 ->schema([
                     Placeholder::make('users_with_2fa')
                         ->label('Utenti con 2FA')
                         ->content(fn() => User::whereNotNull('two_factor_secret')->count()),
-                        
+
                     Placeholder::make('2fa_percentage')
                         ->label('Percentuale Adozione')
                         ->content(fn() => round((User::whereNotNull('two_factor_secret')->count() / User::count()) * 100, 1) . '%'),
@@ -615,30 +615,30 @@ class TwoFactorAuthResource extends Resource
                 ->columns(2),
         ]);
     }
-    
+
     public static function getTableColumns(): array
     {
         return [
             TextColumn::make('name')
                 ->label('Nome')
                 ->searchable(),
-                
+
             TextColumn::make('email')
                 ->label('Email')
                 ->searchable(),
-                
+
             BooleanColumn::make('two_factor_enabled')
                 ->label('2FA Attivo')
                 ->getStateUsing(fn(User $record) => !is_null($record->two_factor_secret)),
-                
+
             BadgeColumn::make('recovery_codes_status')
                 ->label('Codici Recupero')
                 ->getStateUsing(function (User $record) {
                     if (!$record->two_factor_recovery_codes) return 'none';
-                    
+
                     $codes = json_decode(decrypt($record->two_factor_recovery_codes));
                     $count = count($codes);
-                    
+
                     if ($count >= 8) return 'full';
                     if ($count >= 4) return 'partial';
                     return 'low';
@@ -657,14 +657,14 @@ class TwoFactorAuthResource extends Resource
                         'full' => 'Completi',
                     };
                 }),
-                
+
             TextColumn::make('two_factor_confirmed_at')
                 ->label('Confermato il')
                 ->dateTime('d/m/Y H:i')
                 ->sortable(),
         ];
     }
-    
+
     public static function getCustomActions(): array
     {
         return [
@@ -681,14 +681,14 @@ class TwoFactorAuthResource extends Resource
                         'two_factor_recovery_codes' => null,
                         'two_factor_confirmed_at' => null,
                     ]);
-                    
+
                     Notification::make()
                         ->success()
                         ->title('2FA reimpostato')
                         ->body('L\'utente dovrà riconfigurate la 2FA.')
                         ->send();
                 }),
-                
+
             Action::make('regenerate_codes')
                 ->label('Rigenera Codici')
                 ->icon('heroicon-o-key')
@@ -702,7 +702,7 @@ class TwoFactorAuthResource extends Resource
                             })->all()
                         )),
                     ]);
-                    
+
                     Notification::make()
                         ->success()
                         ->title('Codici rigenerati')
@@ -727,13 +727,13 @@ class TwoFactorStatsWidget extends ChartWidget
 {
     protected static ?string $heading = 'Adozione 2FA';
     protected static ?int $sort = 3;
-    
+
     protected function getData(): array
     {
         $total = User::count();
         $with2FA = User::whereNotNull('two_factor_secret')->count();
         $without2FA = $total - $with2FA;
-        
+
         return [
             'datasets' => [
                 [
@@ -748,12 +748,12 @@ class TwoFactorStatsWidget extends ChartWidget
             'labels' => ['Con 2FA', 'Senza 2FA'],
         ];
     }
-    
+
     protected function getType(): string
     {
         return 'doughnut';
     }
-    
+
     protected function getOptions(): array
     {
         return [
@@ -789,7 +789,7 @@ class TeamResource extends UserBaseResource
     protected static ?string $navigationLabel = 'Team';
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
     protected static ?int $navigationSort = 2;
-    
+
     public static function getMainSchema(): Schema
     {
         return Schema::make([
@@ -799,17 +799,17 @@ class TeamResource extends UserBaseResource
                         ->label('Nome Team')
                         ->required()
                         ->unique(ignoreRecord: true),
-                        
+
                     Textarea::make('description')
                         ->label('Descrizione')
                         ->rows(3),
-                        
+
                     Toggle::make('is_active')
                         ->label('Attivo')
                         ->default(true),
                 ])
                 ->columns(2),
-                
+
             Section::make('Membri Team')
                 ->schema([
                     Select::make('owner_id')
@@ -817,7 +817,7 @@ class TeamResource extends UserBaseResource
                         ->relationship('owner', 'name')
                         ->searchable()
                         ->required(),
-                        
+
                     Repeater::make('members')
                         ->label('Membri')
                         ->relationship('users')
@@ -827,7 +827,7 @@ class TeamResource extends UserBaseResource
                                 ->relationship('user', 'name')
                                 ->searchable()
                                 ->required(),
-                                
+
                             Select::make('role')
                                 ->label('Ruolo nel Team')
                                 ->options([
@@ -840,7 +840,7 @@ class TeamResource extends UserBaseResource
                         ->collapsible()
                         ->cloneable(),
                 ]),
-                
+
             Section::make('Permessi Team')
                 ->schema([
                     Select::make('permissions')
@@ -851,7 +851,7 @@ class TeamResource extends UserBaseResource
                 ]),
         ]);
     }
-    
+
     public static function getTableColumns(): array
     {
         return [
@@ -859,16 +859,16 @@ class TeamResource extends UserBaseResource
                 ->label('Nome')
                 ->searchable()
                 ->sortable(),
-                
+
             TextColumn::make('owner.name')
                 ->label('Proprietario')
                 ->searchable(),
-                
+
             BadgeColumn::make('users_count')
                 ->label('Membri')
                 ->counts('users')
                 ->color('primary'),
-                
+
             BadgeColumn::make('is_active')
                 ->label('Stato')
                 ->getStateUsing(fn($record) => $record->is_active ? 'Attivo' : 'Inattivo')
@@ -876,14 +876,14 @@ class TeamResource extends UserBaseResource
                     'success' => 'Attivo',
                     'danger' => 'Inattivo',
                 ]),
-                
+
             TextColumn::make('created_at')
                 ->label('Creato')
                 ->date('d/m/Y')
                 ->sortable(),
         ];
     }
-    
+
     public static function getCustomActions(): array
     {
         return [
@@ -896,12 +896,12 @@ class TeamResource extends UserBaseResource
                         ->options(User::pluck('name', 'id'))
                         ->searchable()
                         ->required(),
-                        
+
                     Select::make('role')
                         ->label('Ruolo')
                         ->options([
                             'admin' => 'Amministratore',
-                            'member' => 'Membro', 
+                            'member' => 'Membro',
                             'viewer' => 'Visualizzatore',
                         ])
                         ->required(),
@@ -912,7 +912,7 @@ class TeamResource extends UserBaseResource
                         'created_at' => now(),
                         'updated_at' => now(),
                     ]);
-                    
+
                     Notification::make()
                         ->success()
                         ->title('Utente aggiunto al team')
@@ -925,7 +925,7 @@ class TeamResource extends UserBaseResource
 
 ### 4.2 TenantResource Multi-Tenancy
 ```php
-// app/Filament/Resources/TenantResource.php  
+// app/Filament/Resources/TenantResource.php
 <?php
 
 namespace Modules\User\Filament\Resources;
@@ -941,7 +941,7 @@ class TenantResource extends UserBaseResource
     protected static ?string $navigationLabel = 'Tenant';
     protected static ?string $navigationIcon = 'heroicon-o-building-office';
     protected static ?int $navigationSort = 3;
-    
+
     public static function getMainSchema(): Schema
     {
         return Schema::make([
@@ -951,41 +951,41 @@ class TenantResource extends UserBaseResource
                         ->label('Nome Tenant')
                         ->required()
                         ->unique(ignoreRecord: true),
-                        
+
                     TextInput::make('domain')
                         ->label('Dominio')
                         ->unique(ignoreRecord: true)
                         ->placeholder('esempio.com'),
-                        
+
                     TextInput::make('database')
                         ->label('Database')
                         ->helperText('Nome database dedicato (opzionale)'),
-                        
+
                     Toggle::make('is_active')
                         ->label('Attivo')
                         ->default(true),
                 ])
                 ->columns(2),
-                
+
             Section::make('Configurazioni')
                 ->schema([
                     KeyValue::make('config')
                         ->label('Configurazioni Tenant')
                         ->keyLabel('Chiave')
                         ->valueLabel('Valore'),
-                        
+
                     DatePicker::make('expires_at')
                         ->label('Scade il')
                         ->helperText('Lasciare vuoto per nessuna scadenza'),
                 ]),
-                
+
             Section::make('Limiti')
                 ->schema([
                     TextInput::make('max_users')
                         ->label('Max Utenti')
                         ->numeric()
                         ->default(100),
-                        
+
                     TextInput::make('max_storage_gb')
                         ->label('Max Storage (GB)')
                         ->numeric()
@@ -994,7 +994,7 @@ class TenantResource extends UserBaseResource
                 ->columns(2),
         ]);
     }
-    
+
     public static function getTableColumns(): array
     {
         return [
@@ -1002,25 +1002,25 @@ class TenantResource extends UserBaseResource
                 ->label('Nome')
                 ->searchable()
                 ->sortable(),
-                
+
             TextColumn::make('domain')
                 ->label('Dominio')
                 ->searchable()
                 ->copyable(),
-                
+
             BadgeColumn::make('users_count')
                 ->label('Utenti')
                 ->counts('users')
                 ->color('primary'),
-                
+
             BooleanColumn::make('is_active')
                 ->label('Attivo'),
-                
+
             TextColumn::make('expires_at')
                 ->label('Scadenza')
                 ->date('d/m/Y')
                 ->placeholder('Mai'),
-                
+
             BadgeColumn::make('status')
                 ->label('Stato')
                 ->getStateUsing(function (Tenant $record) {
@@ -1059,7 +1059,7 @@ return new class extends Migration
             $table->json('original_data');
             $table->timestamp('backup_date');
         });
-        
+
         // Salvare dati attuali
         $users = DB::table('users')->get();
         foreach ($users as $user) {
@@ -1069,7 +1069,7 @@ return new class extends Migration
                 'backup_date' => now(),
             ]);
         }
-        
+
         // Nuove colonne per Filament 4
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('is_active')->default(true);
@@ -1081,11 +1081,11 @@ return new class extends Migration
             $table->string('timezone')->default('Europe/Rome');
             $table->timestamp('password_changed_at')->nullable();
             $table->json('preferences')->nullable();
-            
+
             $table->index(['is_active', 'last_login_at']);
             $table->index(['language', 'timezone']);
         });
-        
+
         // Aggiornare teams per multi-tenancy
         if (Schema::hasTable('teams')) {
             Schema::table('teams', function (Blueprint $table) {
@@ -1099,7 +1099,7 @@ return new class extends Migration
                 $table->integer('max_users')->default(100);
             });
         }
-        
+
         // Tabella per tracking sessioni
         Schema::create('user_session_logs', function (Blueprint $table) {
             $table->id();
@@ -1110,11 +1110,11 @@ return new class extends Migration
             $table->timestamp('login_at');
             $table->timestamp('logout_at')->nullable();
             $table->boolean('forced_logout')->default(false);
-            
+
             $table->index(['user_id', 'login_at']);
             $table->index(['session_id']);
         });
-        
+
         // Tabella per audit log
         Schema::create('user_audit_logs', function (Blueprint $table) {
             $table->id();
@@ -1123,11 +1123,11 @@ return new class extends Migration
             $table->json('data')->nullable();
             $table->string('ip_address')->nullable();
             $table->timestamp('created_at');
-            
+
             $table->index(['user_id', 'action', 'created_at']);
         });
     }
-    
+
     public function down()
     {
         // Rollback sicuro
@@ -1138,13 +1138,13 @@ return new class extends Migration
                 'password_changed_at', 'preferences'
             ]);
         });
-        
+
         if (Schema::hasTable('teams')) {
             Schema::table('teams', function (Blueprint $table) {
                 $table->dropColumn(['is_active', 'description', 'config', 'max_users']);
             });
         }
-        
+
         Schema::dropIfExists('user_session_logs');
         Schema::dropIfExists('user_audit_logs');
         Schema::dropIfExists('users_backup_pre_f4');
@@ -1167,29 +1167,29 @@ class MigrateUserDataToFilament4Command extends Command
 {
     protected $signature = 'user:migrate-filament4 {--chunk=100} {--dry-run}';
     protected $description = 'Migra dati utenti per Filament 4';
-    
+
     public function handle()
     {
         $chunkSize = $this->option('chunk');
         $dryRun = $this->option('dry-run');
-        
+
         $this->info('Inizio migrazione dati utenti per Filament 4...');
-        
+
         $totalUsers = User::count();
         $this->info("Totale utenti da migrare: {$totalUsers}");
-        
+
         $processed = 0;
         $errors = 0;
-        
+
         User::chunk($chunkSize, function ($users) use (&$processed, &$errors, $dryRun) {
             foreach ($users as $user) {
                 try {
                     if (!$dryRun) {
                         $this->migrateUser($user);
                     }
-                    
+
                     $processed++;
-                    
+
                     if ($processed % 100 === 0) {
                         $this->info("Processati: {$processed}");
                     }
@@ -1199,16 +1199,16 @@ class MigrateUserDataToFilament4Command extends Command
                 }
             }
         });
-        
+
         $this->info("Migrazione completata!");
         $this->info("Processati: {$processed}");
         $this->info("Errori: {$errors}");
-        
+
         if (!$dryRun && $errors === 0) {
             $this->info("✅ Tutti i dati migrati con successo!");
         }
     }
-    
+
     protected function migrateUser(User $user): void
     {
         // Migrazione dati base
@@ -1218,19 +1218,19 @@ class MigrateUserDataToFilament4Command extends Command
             'timezone' => $this->detectUserTimezone($user),
             'preferences' => $this->buildUserPreferences($user),
         ]);
-        
+
         // Migrazione avatar se esiste
         if ($user->profile_photo_path) {
             $user->update(['avatar' => $user->profile_photo_path]);
         }
-        
+
         // Migrazione sessioni storiche
         $this->migrateSessions($user);
-        
+
         // Audit log iniziale
         $this->createAuditLog($user, 'migrated_to_filament4');
     }
-    
+
     protected function detectUserLanguage(User $user): string
     {
         // Logica per rilevare lingua utente
@@ -1238,13 +1238,13 @@ class MigrateUserDataToFilament4Command extends Command
         if (str_contains($user->email, '.it')) return 'it';
         return 'it'; // Default
     }
-    
+
     protected function detectUserTimezone(User $user): string
     {
         // Logica per rilevare timezone
         return 'Europe/Rome'; // Default
     }
-    
+
     protected function buildUserPreferences(User $user): array
     {
         return [
@@ -1258,7 +1258,7 @@ class MigrateUserDataToFilament4Command extends Command
             ],
         ];
     }
-    
+
     protected function migrateSessions(User $user): void
     {
         // Migrare dati sessione esistenti se disponibili
@@ -1267,7 +1267,7 @@ class MigrateUserDataToFilament4Command extends Command
             ->latest('last_activity')
             ->limit(10)
             ->get();
-            
+
         foreach ($sessions as $session) {
             DB::table('user_session_logs')->insert([
                 'user_id' => $user->id,
@@ -1279,7 +1279,7 @@ class MigrateUserDataToFilament4Command extends Command
             ]);
         }
     }
-    
+
     protected function createAuditLog(User $user, string $action): void
     {
         DB::table('user_audit_logs')->insert([
@@ -1311,16 +1311,16 @@ use Illuminate\Support\Facades\Hash;
 class UserResourceFilament4Test extends TestCase
 {
     protected User $admin;
-    
+
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         $this->admin = User::factory()->create();
         $this->admin->assignRole('super_admin');
         $this->actingAs($this->admin);
     }
-    
+
     /** @test */
     public function can_list_users_with_new_columns()
     {
@@ -1328,13 +1328,13 @@ class UserResourceFilament4Test extends TestCase
             'is_active' => true,
             'last_login_at' => now()->subHours(2),
         ]);
-        
+
         Livewire::test(UserResource\Pages\ListUsers::class)
             ->assertCanSeeTableRecords($users)
             ->assertSee('Attivo') // Nuova colonna
             ->assertSee('2FA'); // Nuova colonna
     }
-    
+
     /** @test */
     public function can_create_user_with_wizard()
     {
@@ -1347,25 +1347,25 @@ class UserResourceFilament4Test extends TestCase
             'language' => 'it',
             'timezone' => 'Europe/Rome',
         ];
-        
+
         Livewire::test(UserResource\Pages\CreateUser::class)
             ->fillForm($userData)
             ->call('create')
             ->assertHasNoFormErrors();
-            
+
         $this->assertDatabaseHas('users', [
             'email' => 'test@example.com',
             'is_active' => true,
             'language' => 'it',
         ]);
     }
-    
+
     /** @test */
     public function can_reset_user_password()
     {
         $user = User::factory()->create();
         $originalPassword = $user->password;
-        
+
         Livewire::test(UserResource\Pages\EditUser::class, [
             'record' => $user->id,
         ])
@@ -1373,18 +1373,18 @@ class UserResourceFilament4Test extends TestCase
                 'new_password' => 'newpassword123',
             ])
             ->assertHasNoActionErrors();
-            
+
         $user->refresh();
         $this->assertNotEquals($originalPassword, $user->password);
         $this->assertTrue(Hash::check('newpassword123', $user->password));
         $this->assertNotNull($user->password_changed_at);
     }
-    
+
     /** @test */
     public function can_manage_user_roles_with_security_warning()
     {
         $user = User::factory()->create();
-        
+
         Livewire::test(UserResource\Pages\EditUser::class, [
             'record' => $user->id,
         ])
@@ -1394,48 +1394,48 @@ class UserResourceFilament4Test extends TestCase
             ])
             ->call('save')
             ->assertHasNoFormErrors();
-            
+
         $this->assertTrue($user->fresh()->hasRole('admin'));
     }
-    
+
     /** @test */
     public function can_bulk_activate_deactivate_users()
     {
         $users = User::factory()->count(3)->create(['is_active' => false]);
-        
+
         Livewire::test(UserResource\Pages\ListUsers::class)
             ->callTableBulkAction('activate', $users->pluck('id')->toArray())
             ->assertHasNoTableActionErrors();
-            
+
         foreach ($users as $user) {
             $this->assertTrue($user->fresh()->is_active);
         }
     }
-    
+
     /** @test */
     public function can_force_logout_users()
     {
         $user = User::factory()->create();
         $user->tokens()->create(['name' => 'test-token', 'token' => 'test', 'abilities' => ['*']]);
-        
+
         Livewire::test(UserResource\Pages\ListUsers::class)
             ->callTableBulkAction('force_logout', [$user->id])
             ->assertHasNoTableActionErrors();
-            
+
         $this->assertEquals(0, $user->fresh()->tokens()->count());
     }
-    
+
     /** @test */
     public function tracks_user_actions_in_audit_log()
     {
         $user = User::factory()->create();
-        
+
         Livewire::test(UserResource\Pages\EditUser::class, [
             'record' => $user->id,
         ])
             ->fillForm(['name' => 'Updated Name'])
             ->call('save');
-            
+
         $this->assertDatabaseHas('user_audit_logs', [
             'user_id' => $user->id,
             'action' => 'updated',
@@ -1460,39 +1460,39 @@ class AuthenticationPerformanceTest extends TestCase
     public function authentication_performance_baseline()
     {
         $this->markTestSkipped('Performance test - eseguire solo manualmente');
-        
+
         $users = User::factory()->count(1000)->create();
-        
+
         $startTime = microtime(true);
         $startMemory = memory_get_usage(true);
-        
+
         // Test batch login simulation
         $loginTimes = [];
         foreach ($users->take(100) as $user) {
             $loginStart = microtime(true);
-            
+
             $response = $this->post('/login', [
                 'email' => $user->email,
                 'password' => 'password',
             ]);
-            
+
             $loginEnd = microtime(true);
             $loginTimes[] = $loginEnd - $loginStart;
-            
+
             $this->post('/logout');
         }
-        
+
         $endTime = microtime(true);
         $endMemory = memory_get_usage(true);
-        
+
         $totalTime = $endTime - $startTime;
         $memoryUsed = ($endMemory - $startMemory) / 1024 / 1024; // MB
         $avgLoginTime = array_sum($loginTimes) / count($loginTimes);
-        
+
         $this->assertLessThan(60, $totalTime, 'Batch login dovrebbe completarsi in meno di 60 secondi');
         $this->assertLessThan(100, $memoryUsed, 'Dovrebbe usare meno di 100MB di memoria');
         $this->assertLessThan(2, $avgLoginTime, 'Login medio dovrebbe essere sotto 2 secondi');
-        
+
         $this->info("Tempo totale: {$totalTime}s");
         $this->info("Memoria utilizzata: {$memoryUsed}MB");
         $this->info("Tempo login medio: {$avgLoginTime}s");
@@ -1556,7 +1556,7 @@ php artisan user:migrate-filament4
 # 7. Cache rebuild
 echo "⚡ Rebuild cache..."
 php artisan config:cache
-php artisan route:cache  
+php artisan route:cache
 php artisan view:cache
 php artisan filament:optimize
 
@@ -1605,30 +1605,30 @@ class UserHealthCheckCommand extends Command
 {
     protected $signature = 'user:health-check {--detailed}';
     protected $description = 'Verifica salute sistema utenti post-migrazione';
-    
+
     public function handle()
     {
         $this->info('🔍 Health Check Sistema Utenti - Filament 4');
-        
+
         $issues = [];
-        
+
         // 1. Database integrity
         $issues = array_merge($issues, $this->checkDatabaseIntegrity());
-        
+
         // 2. Authentication
         $issues = array_merge($issues, $this->checkAuthentication());
-        
+
         // 3. Roles & Permissions
         $issues = array_merge($issues, $this->checkRolesPermissions());
-        
+
         // 4. Filament resources
         $issues = array_merge($issues, $this->checkFilamentResources());
-        
+
         // 5. Performance
         if ($this->option('detailed')) {
             $issues = array_merge($issues, $this->checkPerformance());
         }
-        
+
         // Report
         if (empty($issues)) {
             $this->info('✅ Tutti i controlli superati!');
@@ -1641,45 +1641,45 @@ class UserHealthCheckCommand extends Command
             return 1;
         }
     }
-    
+
     protected function checkDatabaseIntegrity(): array
     {
         $issues = [];
-        
+
         try {
             // Controllo tabelle critiche
             $userCount = User::count();
             if ($userCount === 0) {
                 $issues[] = 'Nessun utente trovato nel database';
             }
-            
+
             // Controllo colonne migrate
             $sampleUser = User::first();
             if ($sampleUser && !isset($sampleUser->is_active)) {
                 $issues[] = 'Colonna is_active mancante';
             }
-            
+
             // Controllo integrità ruoli
             $orphanedRoles = DB::table('model_has_roles')
                 ->leftJoin('users', 'model_has_roles.model_id', '=', 'users.id')
                 ->whereNull('users.id')
                 ->count();
-                
+
             if ($orphanedRoles > 0) {
                 $issues[] = "Trovati {$orphanedRoles} ruoli orfani";
             }
-            
+
         } catch (\Exception $e) {
             $issues[] = "Errore database: {$e->getMessage()}";
         }
-        
+
         return $issues;
     }
-    
+
     protected function checkAuthentication(): array
     {
         $issues = [];
-        
+
         try {
             // Test login programmatico
             $testUser = User::factory()->create([
@@ -1687,78 +1687,78 @@ class UserHealthCheckCommand extends Command
                 'password' => Hash::make('test123'),
                 'is_active' => true,
             ]);
-            
+
             // Simula login
             auth()->login($testUser);
-            
+
             if (!auth()->check()) {
                 $issues[] = 'Login programmatico fallito';
             }
-            
+
             auth()->logout();
             $testUser->delete();
-            
+
         } catch (\Exception $e) {
             $issues[] = "Errore autenticazione: {$e->getMessage()}";
         }
-        
+
         return $issues;
     }
-    
+
     protected function checkRolesPermissions(): array
     {
         $issues = [];
-        
+
         try {
             $superAdmins = User::role('super_admin')->count();
             if ($superAdmins === 0) {
                 $issues[] = 'Nessun super admin trovato';
             }
-            
+
         } catch (\Exception $e) {
             $issues[] = "Errore ruoli/permessi: {$e->getMessage()}";
         }
-        
+
         return $issues;
     }
-    
+
     protected function checkFilamentResources(): array
     {
         $issues = [];
-        
+
         try {
             // Test caricamento resource
             $userResource = new \Modules\User\Filament\Resources\UserResource;
             $schema = $userResource::getMainSchema();
-            
+
             if (empty($schema->getComponents())) {
                 $issues[] = 'Schema UserResource vuoto';
             }
-            
+
         } catch (\Exception $e) {
             $issues[] = "Errore Filament resource: {$e->getMessage()}";
         }
-        
+
         return $issues;
     }
-    
+
     protected function checkPerformance(): array
     {
         $issues = [];
-        
+
         try {
             $start = microtime(true);
             $users = User::with(['roles', 'permissions'])->limit(100)->get();
             $time = microtime(true) - $start;
-            
+
             if ($time > 2) {
                 $issues[] = "Query utenti lenta: {$time}s";
             }
-            
+
         } catch (\Exception $e) {
             $issues[] = "Errore performance: {$e->getMessage()}";
         }
-        
+
         return $issues;
     }
 }
@@ -1777,7 +1777,7 @@ return [
         'unified_schema' => true,
         'wizard_mode' => true,
     ],
-    
+
     'security' => [
         'require_2fa_for_admins' => true,
         'max_login_attempts' => 5,
@@ -1785,20 +1785,20 @@ return [
         'password_history' => 6,
         'force_password_change_days' => 90,
     ],
-    
+
     'audit' => [
         'enabled' => true,
         'track_sessions' => true,
         'track_role_changes' => true,
         'retention_days' => 365,
     ],
-    
+
     'performance' => [
         'cache_user_permissions' => true,
         'cache_ttl' => 3600, // 1 ora
         'eager_load_relations' => ['roles', 'permissions'],
     ],
-    
+
     'ui' => [
         'items_per_page' => 25,
         'show_avatar' => true,
@@ -1819,7 +1819,7 @@ return [
 - **Ora**: Wizard step-by-step guidato
 - **Vantaggio**: UX migliorata, meno errori
 
-### 2. Gestione 2FA Integrata  
+### 2. Gestione 2FA Integrata
 - Dashboard dedicata per monitoring 2FA
 - Reset 2FA per utenti bloccati
 - Statistiche adozione in tempo reale
@@ -1855,13 +1855,13 @@ return [
 ## Vantaggi Post-Migrazione
 
 ### ✅ Vantaggi Tecnici
-- **Unified Schema**: -70% codice duplicato  
+- **Unified Schema**: -70% codice duplicato
 - **Wizard UX**: +85% usability score
 - **Real-time Audit**: Compliance automatica
 - **Performance**: +50% velocità query con eager loading
 - **Security**: 2FA integrata + session tracking
 
-### ✅ Vantaggi Business  
+### ✅ Vantaggi Business
 - **UX Amministratori**: Workflow guidato e intuitivo
 - **Compliance**: GDPR ready con audit completo
 - **Sicurezza**: 2FA obbligatoria per admin + monitoring
@@ -1884,13 +1884,13 @@ return [
 
 ## Timeline Finale
 - **Giorni 1-8**: Analisi, backup, ricostruzione base
-- **Giorni 9-22**: MFA, team, multi-tenancy  
+- **Giorni 9-22**: MFA, team, multi-tenancy
 - **Giorni 23-35**: Migration database + testing
 - **Giorni 36-40**: Deploy critico + monitoring
 - **Giorni 41-45**: Documentazione + training
 
-**Stima Totale**: 45 giorni lavorativi  
-**Team Richiesto**: 3 senior developer + 1 security expert + 1 QA specialist  
+**Stima Totale**: 45 giorni lavorativi
+**Team Richiesto**: 3 senior developer + 1 security expert + 1 QA specialist
 **Budget Stimato**: €55.000 - €70.000
 
 <function_calls>

@@ -105,4 +105,4 @@ composer format        # Formatta il codice
 - Pest
 
 ## Changelog
-Le modifiche vengono tracciate nel repository GitHub. 
+Le modifiche vengono tracciate nel repository GitHub.

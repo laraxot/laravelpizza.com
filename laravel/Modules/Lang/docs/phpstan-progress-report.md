@@ -10,7 +10,7 @@
 
 **I Tre Pilastri:**
 1. **🌍 Universalità** - Ogni lingua merita rispetto
-2. **🤖 Automazione** - Google Translate come oracolo moderno  
+2. **🤖 Automazione** - Google Translate come oracolo moderno
 3. **📊 Qualità** - Translation Memory come saggezza accumulata
 
 ### Lo Scopo Spirituale
@@ -60,7 +60,7 @@ Tempo investito:   ~45 min
 // ❌ BEFORE
 Assert::string($file);  // Call to unknown class Modules\Lang\Actions\Assert
 
-// ✅ AFTER  
+// ✅ AFTER
 use Webmozart\Assert\Assert;
 Assert::string($file);  // Now resolves correctly
 ```
@@ -200,7 +200,7 @@ if ($component instanceof Action) {
 ### La Sfida del Mixed
 > "Come può PHPStan conoscere ciò che nemmeno il codice conosce?"
 
-Molti errori derivano da funzioni esterne (come `countries()`, helpers Laravel, etc.) che restituiscono `mixed`. 
+Molti errori derivano da funzioni esterne (come `countries()`, helpers Laravel, etc.) che restituiscono `mixed`.
 
 **La Via del Saggio**: Non combattere il mixed, guidalo con PHPDoc.
 
@@ -295,5 +295,5 @@ Noi abbiamo fatto i primi 345 li. Ne restano 655.
 *Namaste* 🙏
 
 **Status**: 🟡 IN PROGRESS
-**Next Session**: Completare SyncTranslationsAction e TranslationFile  
+**Next Session**: Completare SyncTranslationsAction e TranslationFile
 **Estimated Completion**: 2-3 sessioni aggiuntive

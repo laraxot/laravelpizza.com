@@ -20,7 +20,7 @@ Il `TableLayoutEnum` è un enum PHP che gestisce i layout delle tabelle nei comp
 class ListUsers extends ListRecords
 {
     protected TableLayoutEnum $layout = TableLayoutEnum::LIST;
-    
+
     public function table(Table $table): Table
     {
         return $table
@@ -202,12 +202,12 @@ return [
 class ListUsers extends ListRecords
 {
     protected TableLayoutEnum $layout;
-    
+
     public function mount(): void
     {
         $this->layout = TableLayoutEnum::init();
     }
-    
+
     protected function getHeaderActions(): array
     {
         return [
@@ -244,14 +244,14 @@ protected function getColumnsForLayout(): array
         Tables\Columns\TextColumn::make('email')->searchable(),
         Tables\Columns\TextColumn::make('created_at')->dateTime(),
     ];
-    
+
     $gridColumns = [
         Tables\Columns\Layout\Stack::make([
             Tables\Columns\TextColumn::make('name')->weight(FontWeight::Bold),
             Tables\Columns\TextColumn::make('email'),
         ]),
     ];
-    
+
     return $this->layout->getTableColumns($listColumns, $gridColumns);
 }
 ```
@@ -294,7 +294,7 @@ class TableLayoutEnumTest extends TestCase
     {
         $this->assertEquals(TableLayoutEnum::LIST, TableLayoutEnum::init());
     }
-    
+
     public function test_toggle_switches_layout(): void
     {
         $layout = TableLayoutEnum::LIST;
@@ -333,4 +333,4 @@ class TableLayoutEnumTest extends TestCase
 - [Translation Standards](../../../docs/translation_standards.md)
 - [Filament Best Practices](../../../docs/filament_best_practices.md)
 
-*Ultimo aggiornamento: 2025-01-06* 
+*Ultimo aggiornamento: 2025-01-06*

@@ -1,6 +1,6 @@
 # GDPR Module - Overview e Business Logic
 
-**Status**: PHPStan Level 10 ✅ (82 files, 0 errori)  
+**Status**: PHPStan Level 10 ✅ (82 files, 0 errori)
 **Data Verifica**: 16 Dicembre 2025
 
 ---
@@ -240,11 +240,10 @@ $consent->delete();
 
 ---
 
-**Maintainer**: Team Laraxot  
-**Compliance**: GDPR/RGPD Art. 5, 6, 7, 15-22  
+**Maintainer**: Team Laraxot
+**Compliance**: GDPR/RGPD Art. 5, 6, 7, 15-22
 **License**: MIT
 
 ---
 
 *"Privacy by design, security by default."*
-

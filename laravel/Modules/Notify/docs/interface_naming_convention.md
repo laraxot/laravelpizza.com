@@ -1,4 +1,4 @@
-# Convenzione di Naming per le Interfacce 
+# Convenzione di Naming per le Interfacce
 
 ## Regola Fondamentale
 

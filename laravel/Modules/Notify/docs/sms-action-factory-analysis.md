@@ -78,13 +78,13 @@ public function make(string $driver): SmsActionInterface
     }
 
     $actionClass = "Modules\\Notify\\Actions\\SMS\\Send" . ucfirst($driver) . "SMSAction";
-    
+
     if (!class_exists($actionClass)) {
         throw new \Exception("Classe action non trovata per il driver: {$driver}");
     }
 
     $action = app($actionClass);
-    
+
     if (!$action instanceof SmsActionInterface) {
         throw new \Exception("La classe {$actionClass} non implementa SmsActionInterface");
     }
@@ -107,4 +107,4 @@ La soluzione ibrida offre il miglior compromesso tra:
 - Manutenibilità e documentazione
 - Robustezza e gestione degli errori
 
-Si consiglia di implementare la soluzione ibrida per ottenere i vantaggi di entrambi gli approcci mantenendo un alto livello di sicurezza e manutenibilità. 
+Si consiglia di implementare la soluzione ibrida per ottenere i vantaggi di entrambi gli approcci mantenendo un alto livello di sicurezza e manutenibilità.

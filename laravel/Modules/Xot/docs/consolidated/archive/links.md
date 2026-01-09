@@ -2,11 +2,9 @@ https://github.com/pterodactyl/panel/tree/develop
 
 https://github.com/serversideup/financial-freedom
 
-
-https://github.com/Bottelet/DaybydayCRM  
-https://github.com/officelifehq/officelife 
+https://github.com/Bottelet/DaybydayCRM
+https://github.com/officelifehq/officelife
 https://github.com/monicahq/monica
-
 
 https://github.com/realodix/urlhub
 
@@ -16,16 +14,12 @@ https://github.com/amitavroy/doctor-app
 A fitness centre management web application
 https://github.com/amitavroy/fitness-center
 
-
 https://github.com/amitavroy/tranvas/
 
 Simple Exchange Rate App
 https://github.com/jigar-dhulla/exchange-rate
 
-
-
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di links.md
 * [links.md](../../../Gdpr/project_docs/links.md)
@@ -39,9 +33,6 @@ https://github.com/jigar-dhulla/exchange-rate
 * [links.md](../../../Cms/project_docs/links.md)
 * [links.md](../../../../Themes/One/project_docs/links.md)
 
-
 ### Versione Incoming
 
-
 ---
-

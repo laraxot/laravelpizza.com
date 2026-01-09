@@ -10,9 +10,9 @@ I file di traduzione nei moduli riutilizzabili contengono placeholder e testi ha
 
 **File da correggere:**
 - `Modules/Notify/lang/en/test_smtp.php` - "<nome progetto>" in placeholder
-- `Modules/Notify/lang/de/test_smtp.php` - "<nome progetto>" in placeholder  
+- `Modules/Notify/lang/de/test_smtp.php` - "<nome progetto>" in placeholder
 - `Modules/Notify/lang/en/test_smtp.php` - "<nome progetto>" in placeholder
-- `Modules/Notify/lang/de/test_smtp.php` - "<nome progetto>" in placeholder  
+- `Modules/Notify/lang/de/test_smtp.php` - "<nome progetto>" in placeholder
 - Altri file di traduzione con hardcoding
 
 **Pattern di correzione:**
@@ -37,7 +37,7 @@ I file di traduzione nei moduli riutilizzabili contengono placeholder e testi ha
 public static string $projectBasePath = '/var/www/html/<nome progetto>';
 public static string $projectBasePath = '/var/www/html/<nome progetto>';
 
-// ✅ DOPO  
+// ✅ DOPO
 public static function getProjectBasePath(): string
 {
     return config('app.project_path', '/var/www/html/project');
@@ -65,7 +65,7 @@ Aggiornare i test per utilizzare pattern dinamici con XotData.
 ### ✅ Completate
 1. **NotificationManagementBusinessLogicTest.php** - Rimosso hardcoding "<nome progetto>"
 1. **NotificationManagementBusinessLogicTest.php** - Rimosso hardcoding "<nome progetto>"
-2. **NotifyThemeableFactory.php** - Implementato `getProjectNamespace()` 
+2. **NotifyThemeableFactory.php** - Implementato `getProjectNamespace()`
 3. **Documentazione base** - Creata `docs/module_reusability_guidelines.md`
 4. **Regole Cursor/Windsurf** - Aggiornate con nuove regole critiche
 5. **Script di controllo** - Creato `bashscripts/check_module_reusability.sh`
@@ -77,7 +77,7 @@ Aggiornare i test per utilizzare pattern dinamici con XotData.
 
 ### ⏳ Da Fare
 1. **Modulo User** - 141 occorrenze da correggere
-2. **Modulo UI** - 115 occorrenze da correggere  
+2. **Modulo UI** - 115 occorrenze da correggere
 3. **Modulo Cms** - 194 occorrenze da correggere
 4. **Modulo Geo** - 86 occorrenze da correggere
 
@@ -88,7 +88,7 @@ Aggiornare i test per utilizzare pattern dinamici con XotData.
 - Aggiornare file di traduzione con placeholder dinamici
 - Correggere configurazioni database hardcoded
 
-### Fase 2: Documentazione (Prossima settimana)  
+### Fase 2: Documentazione (Prossima settimana)
 - Aggiornamento sistematico di tutti i file .md
 - Rimozione riferimenti specifici ai progetti
 - Aggiornamento link e path

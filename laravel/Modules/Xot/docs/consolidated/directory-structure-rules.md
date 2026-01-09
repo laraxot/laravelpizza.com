@@ -102,4 +102,4 @@ Prima di ogni commit, verificare:
 - [Struttura Moduli](module-structure.md)
 - [Convenzioni Namespace](namespace-rules.md)
 - [Best Practices](best-practices.md)
-- [PHPStan Configuration](phpstan/configuration.md) 
+- [PHPStan Configuration](phpstan/configuration.md)

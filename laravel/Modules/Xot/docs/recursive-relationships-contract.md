@@ -73,12 +73,12 @@ use Modules\Xot\Models\Traits\TypedHasRecursiveRelationships;
 class LimeQuestion extends BaseModel implements HasRecursiveRelationshipsContract
 {
     use \Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
-    
+
     public function getParentKeyName(): string
     {
         return 'parent_qid';  // Override se necessario
     }
-    
+
     public function getLocalKeyName(): string
     {
         return 'qid';  // Override se necessario
@@ -393,4 +393,3 @@ class MyModel extends BaseModel implements HasRecursiveRelationshipsContract
 ---
 
 **Filosofia**: In Laraxot, rispettiamo i vendor packages ma creiamo wrapper type-safe per garantire qualità del codice e manutenibilità.
-

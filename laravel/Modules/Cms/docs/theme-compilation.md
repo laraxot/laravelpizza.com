@@ -62,10 +62,10 @@ Questo comando esegue lo script `build` definito nel file `package.json`:
 ### Cosa Succede Durante la Compilazione
 
 1. **Inizializzazione di Vite**: Vite legge la configurazione dal file `vite.config.js`
-2. **Elaborazione dei File Sorgente**: 
+2. **Elaborazione dei File Sorgente**:
    - I file CSS vengono processati da PostCSS e Tailwind CSS
    - I file JavaScript vengono transpilati e bundled
-3. **Ottimizzazione**: 
+3. **Ottimizzazione**:
    - Minificazione dei file
    - Eliminazione del codice inutilizzato (tree-shaking)
    - Generazione di nomi di file con hash per il cache busting
@@ -214,4 +214,3 @@ npm update
 ## Collegamenti tra versioni di theme_compilation.md
 * [theme_compilation.md](docs/standards/theme_compilation.md)
 * [theme_compilation.md](laravel/Modules/Cms/docs/theme_compilation.md)
-

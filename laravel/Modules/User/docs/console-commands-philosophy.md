@@ -78,26 +78,26 @@ class {CommandName}Command extends Command
     {
         // Input gathering with Laravel Prompts
         $input = text('Prompt description?');
-        
+
         // Data retrieval via XotData and Contracts
         /** @var UserContract */
         $entity = XotData::make()->getMethodByParameter($input);
-        
+
         // Robust error handling
         if (!$entity) {
             $this->error(\"Entity with '{$input}' not found.\");
             return;
         }
-        
+
         // Method existence checking
         if (!method_exists($entity, 'requiredMethod')) {
             $this->error('Entity does not have required method.');
             return;
         }
-        
+
         // Current state information
         $this->info(\"Current state: {$entity->currentValue}\");
-        
+
         // Options preparation with Array helpers
         $options = Arr::mapWithKeys($entity->getOptions(),
             function ($item, string $key) use ($someClass) {
@@ -105,23 +105,23 @@ class {CommandName}Command extends Command
                 return [$key => $label];
             }
         );
-        
+
         // User selection
         $newValue = select('Select new option:', $options);
-        
+
         // Confirmation for destructive actions
         if (!confirm('Are you sure?')) {
             $this->info('Operation cancelled.');
             return;
         }
-        
+
         // State update
         $entity->property = $newValue;
         $entity->save();
-        
+
         // Success feedback
         $this->info(\"Operation completed successfully for {$input}\");
-        
+
         // Future implementation placeholders
         // $this->logActivity($entity, $oldValue, $newValue);
         // $this->sendNotification($entity);

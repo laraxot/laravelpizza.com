@@ -13,10 +13,8 @@ section: content
 * [model.md](../../../Xot/project_docs/model.md)
 * [model.md](../../../Xot/project_docs/service/model.md)
 
-
 ### Versione Incoming
 
 # Model Queuable Actions
 
 ---
-

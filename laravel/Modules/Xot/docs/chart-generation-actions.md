@@ -47,19 +47,19 @@ class GenerateSvgChartAction extends QueueableAction
     ) {
         $this->onQueue('charts');
     }
-    
+
     public function execute(): string
     {
         try {
             $dataProvider = new ChartDataProvider();
             $svgBuilder = new ChartSvgBuilder();
-            
+
             // Prepara dati
             $chartData = $dataProvider->prepareData($this->data, $this->chartType);
-            
+
             // Genera SVG
             $svg = $svgBuilder->build($this->chartType, $chartData, $this->options);
-            
+
             // Log attività
             activity()
                 ->causedBy(auth()->user())
@@ -69,19 +69,19 @@ class GenerateSvgChartAction extends QueueableAction
                     'svg_size' => strlen($svg),
                 ])
                 ->log('SVG chart generated');
-            
+
             return $svg;
-            
+
         } catch (\Exception $e) {
             Log::error('SVG chart generation failed', [
                 'chart_type' => $this->chartType,
                 'error' => $e->getMessage(),
             ]);
-            
+
             throw $e;
         }
     }
-    
+
     public function getUniqueId(): string
     {
         return 'svg_chart_' . md5(json_encode([
@@ -112,18 +112,18 @@ class ChartSvgBuilder
             default => throw new \InvalidArgumentException("Unsupported chart type: {$type}"),
         };
     }
-    
+
     private function buildLineChart(array $data, array $options): string
     {
         $width = $options['width'] ?? 800;
         $height = $options['height'] ?? 400;
         $padding = $options['padding'] ?? 50;
-        
+
         // Calcola scale
         $xScale = ($width - 2 * $padding) / (count($data) - 1);
         $yMax = max(array_column($data, 'value'));
         $yScale = ($height - 2 * $padding) / $yMax;
-        
+
         // Genera punti
         $points = [];
         foreach ($data as $index => $point) {
@@ -131,7 +131,7 @@ class ChartSvgBuilder
             $y = $height - $padding - ($point['value'] * $yScale);
             $points[] = "{$x},{$y}";
         }
-        
+
         // Costruisci SVG
         $svg = <<<SVG
 <svg width="{$width}" height="{$height}" xmlns="http://www.w3.org/2000/svg">
@@ -140,18 +140,18 @@ class ChartSvgBuilder
         <line x1="{$padding}" y1="{$padding}" x2="{$width - $padding}" y2="{$padding}" />
         <line x1="{$padding}" y1="{$height - $padding}" x2="{$width - $padding}" y2="{$height - $padding}" />
     </g>
-    
+
     <!-- Chart Line -->
-    <polyline points="{$points}" 
-              fill="none" 
-              stroke="#3498db" 
+    <polyline points="{$points}"
+              fill="none"
+              stroke="#3498db"
               stroke-width="2" />
-    
+
     <!-- Data Points -->
     <g fill="#3498db">
         {$this->generateCirclePoints($data, $padding, $xScale, $yScale, $height)}
     </g>
-    
+
     <!-- Labels -->
     <g font-family="Arial, sans-serif" font-size="12" fill="#666">
         {$this->generateXLabels($data, $padding, $xScale, $height)}
@@ -159,37 +159,37 @@ class ChartSvgBuilder
     </g>
 </svg>
 SVG;
-        
+
         return $svg;
     }
-    
+
     private function buildBarChart(array $data, array $options): string
     {
         $width = $options['width'] ?? 800;
         $height = $options['height'] ?? 400;
         $padding = $options['padding'] ?? 50;
-        
+
         $barWidth = ($width - 2 * $padding) / count($data) * 0.8;
         $barSpacing = ($width - 2 * $padding) / count($data) * 0.2;
         $yMax = max(array_column($data, 'value'));
         $yScale = ($height - 2 * $padding) / $yMax;
-        
+
         $bars = '';
         foreach ($data as $index => $item) {
             $x = $padding + $index * ($barWidth + $barSpacing);
             $barHeight = $item['value'] * $yScale;
             $y = $height - $padding - $barHeight;
-            
+
             $color = $this->getBarColor($index, count($data));
-            
+
             $bars .= <<<BAR
-    <rect x="{$x}" y="{$y}" width="{$barWidth}" height="{$barHeight}" 
+    <rect x="{$x}" y="{$y}" width="{$barWidth}" height="{$barHeight}"
           fill="{$color}" rx="2" />
-    <text x="{$x + $barWidth/2}" y="{$height - $padding + 20}" 
+    <text x="{$x + $barWidth/2}" y="{$height - $padding + 20}"
           text-anchor="middle" font-size="12" fill="#666">{$item['label']}</text>
 BAR;
         }
-        
+
         return <<<SVG
 <svg width="{$width}" height="{$height}" xmlns="http://www.w3.org/2000/svg">
     <!-- Grid -->
@@ -197,10 +197,10 @@ BAR;
         <line x1="{$padding}" y1="{$padding}" x2="{$width - $padding}" y2="{$padding}" />
         <line x1="{$padding}" y1="{$height - $padding}" x2="{$width - $padding}" y2="{$height - $padding}" />
     </g>
-    
+
     <!-- Bars -->
     {$bars}
-    
+
     <!-- Y-Axis Labels -->
     <g font-family="Arial, sans-serif" font-size="12" fill="#666">
         {$this->generateYLabels($yMax, $padding, $height - $padding, $height)}
@@ -208,7 +208,7 @@ BAR;
 </svg>
 SVG;
     }
-    
+
     private function buildPieChart(array $data, array $options): string
     {
         $width = $options['width'] ?? 400;
@@ -216,39 +216,39 @@ SVG;
         $centerX = $width / 2;
         $centerY = $height / 2;
         $radius = min($width, $height) / 2 - 50;
-        
+
         $total = array_sum(array_column($data, 'value'));
         $currentAngle = -90; // Start from top
-        
+
         $slices = '';
         foreach ($data as $index => $item) {
             $percentage = $item['value'] / $total;
             $angle = $percentage * 360;
             $endAngle = $currentAngle + $angle;
-            
+
             $slice = $this->generatePieSlice($centerX, $centerY, $radius, $currentAngle, $endAngle, $this->getPieColor($index));
             $slices .= $slice;
-            
+
             // Add label
             $labelAngle = $currentAngle + $angle / 2;
             $labelX = $centerX + cos(deg2rad($labelAngle)) * ($radius * 0.7);
             $labelY = $centerY + sin(deg2rad($labelAngle)) * ($radius * 0.7);
-            
+
             $slices .= <<<LABEL
-    <text x="{$labelX}" y="{$labelY}" text-anchor="middle" 
+    <text x="{$labelX}" y="{$labelY}" text-anchor="middle"
           font-size="12" fill="#fff" font-weight="bold">
-        {$item['label']} ({$percentage}%) 
+        {$item['label']} ({$percentage}%)
     </text>
 LABEL;
-            
+
             $currentAngle = $endAngle;
         }
-        
+
         return <<<SVG
 <svg width="{$width}" height="{$height}" xmlns="http://www.w3.org/2000/svg">
     <!-- Pie Slices -->
     {$slices}
-    
+
     <!-- Legend -->
     <g font-family="Arial, sans-serif" font-size="12">
         {$this->generatePieLegend($data, 20, $height - 20)}
@@ -256,7 +256,7 @@ LABEL;
 </svg>
 SVG;
     }
-    
+
     private function generateCirclePoints(array $data, int $padding, float $xScale, float $yScale, int $height): string
     {
         $points = '';
@@ -267,7 +267,7 @@ SVG;
         }
         return $points;
     }
-    
+
     private function generateXLabels(array $data, int $padding, float $xScale, int $height): string
     {
         $labels = '';
@@ -277,58 +277,58 @@ SVG;
         }
         return $labels;
     }
-    
+
     private function generateYLabels(float $max, int $padding, int $bottom, int $height): string
     {
         $labels = '';
         $steps = 5;
-        
+
         for ($i = 0; $i <= $steps; $i++) {
             $value = ($max / $steps) * $i;
             $y = $bottom - (($bottom - $padding) / $steps) * $i;
             $labels .= "<text x=\"{$padding - 10}\" y=\"{$y}\" text-anchor=\"end\">{$value}</text>";
         }
-        
+
         return $labels;
     }
-    
+
     private function getBarColor(int $index, int $total): string
     {
         $colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6'];
         return $colors[$index % count($colors)];
     }
-    
+
     private function getPieColor(int $index): string
     {
         $colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c', '#34495e'];
         return $colors[$index % count($colors)];
     }
-    
+
     private function generatePieSlice(float $cx, float $cy, float $r, float $startAngle, float $endAngle, string $color): string
     {
         $x1 = $cx + $r * cos(deg2rad($startAngle));
         $y1 = $cy + $r * sin(deg2rad($startAngle));
         $x2 = $cx + $r * cos(deg2rad($endAngle));
         $y2 = $cy + $r * sin(deg2rad($endAngle));
-        
+
         $largeArc = ($endAngle - $startAngle) > 180 ? 1 : 0;
-        
+
         return "<path d=\"M {$cx} {$cy} L {$x1} {$y1} A {$r} {$r} 0 {$largeArc} 1 {$x2} {$y2} Z\" fill=\"{$color}\" />";
     }
-    
+
     private function generatePieLegend(array $data, int $x, int $y): string
     {
         $legend = '';
         foreach ($data as $index => $item) {
             $color = $this->getPieColor($index);
             $legendY = $y + $index * 20;
-            
+
             $legend .= <<<LEGEND
     <rect x="{$x}" y="{$legendY}" width="15" height="15" fill="{$color}" />
     <text x="{$x + 20}" y="{$legendY + 12}" font-size="12">{$item['label']}</text>
 LEGEND;
         }
-        
+
         return $legend;
     }
 }
@@ -358,18 +358,18 @@ class GeneratePngChartAction extends QueueableAction
     ) {
         $this->onQueue('charts');
     }
-    
+
     public function execute(): string
     {
         try {
             // 1. Genera SVG
             $svgBuilder = new ChartSvgBuilder();
             $svg = $svgBuilder->build($this->chartType, $this->data, $this->options);
-            
+
             // 2. Converti in PNG
             $converter = new ChartPngConverter();
             $png = $converter->convertSvgToPng($svg, $this->options);
-            
+
             // Log attività
             activity()
                 ->causedBy(auth()->user())
@@ -379,19 +379,19 @@ class GeneratePngChartAction extends QueueableAction
                     'png_size' => strlen($png),
                 ])
                 ->log('PNG chart generated');
-            
+
             return $png;
-            
+
         } catch (\Exception $e) {
             Log::error('PNG chart generation failed', [
                 'chart_type' => $this->chartType,
                 'error' => $e->getMessage(),
             ]);
-            
+
             throw $e;
         }
     }
-    
+
     public function getUniqueId(): string
     {
         return 'png_chart_' . md5(json_encode([
@@ -419,38 +419,38 @@ class ChartPngConverter
         try {
             // Crea Imagick instance
             $imagick = new Imagick();
-            
+
             // Imposta opzioni
             $width = $options['width'] ?? 800;
             $height = $options['height'] ?? 400;
             $dpi = $options['dpi'] ?? 150;
-            
+
             // Carica SVG
             $imagick->readImageBlob($svg);
-            
+
             // Imposta dimensioni e qualità
             $imagick->setImageFormat('png');
             $imagick->setImageResolution($dpi, $dpi);
             $imagick->resizeImage($width, $height, Imagick::FILTER_LANCZOS, 1);
-            
+
             // Imposta qualità PNG
             $imagick->setOption('png:compression-level', 6);
             $imagick->setOption('png:compression-strategy', 1);
-            
+
             // Ottieni PNG binary
             $png = $imagick->getImageBlob();
-            
+
             // Pulisci
             $imagick->clear();
             $imagick->destroy();
-            
+
             return $png;
-            
+
         } catch (\ImagickException $e) {
             throw new \RuntimeException("Failed to convert SVG to PNG: " . $e->getMessage());
         }
     }
-    
+
     public function convertSvgToPngWithFallback(string $svg, array $options = []): string
     {
         try {
@@ -460,35 +460,35 @@ class ChartPngConverter
             Log::warning('PNG conversion failed, using SVG fallback', [
                 'error' => $e->getMessage(),
             ]);
-            
+
             // Crea un PNG placeholder con testo
             return $this->createPlaceholderPng($options);
         }
     }
-    
+
     private function createPlaceholderPng(array $options): string
     {
         $width = $options['width'] ?? 800;
         $height = $options['height'] ?? 400;
-        
+
         $imagick = new Imagick();
         $imagick->newImage($width, $height, '#f0f0f0');
         $imagick->setImageFormat('png');
-        
+
         // Aggiungi testo placeholder
         $draw = new \ImagickDraw();
         $draw->setFontSize(24);
         $draw->setFillColor('#666');
         $draw->setTextAlignment(\Imagick::ALIGN_CENTER);
         $draw->annotation($width / 2, $height / 2, 'Chart Generation Failed');
-        
+
         $imagick->drawImage($draw);
-        
+
         $png = $imagick->getImageBlob();
-        
+
         $imagick->clear();
         $imagick->destroy();
-        
+
         return $png;
     }
 }
@@ -516,7 +516,7 @@ class ChartDataProvider
             default => throw new \InvalidArgumentException("Unsupported chart type: {$chartType}"),
         };
     }
-    
+
     private function prepareXYData(array $rawData): array
     {
         return array_map(function ($item) {
@@ -527,11 +527,11 @@ class ChartDataProvider
             ];
         }, $rawData);
     }
-    
+
     private function preparePieData(array $rawData): array
     {
         $total = array_sum(array_column($rawData, 'value'));
-        
+
         return array_map(function ($item) use ($total) {
             return [
                 'label' => $item['label'] ?? '',
@@ -541,13 +541,13 @@ class ChartDataProvider
             ];
         }, $rawData);
     }
-    
+
     private function prepareAreaData(array $rawData): array
     {
         // Per area chart, prepariamo dati con fill
         return $this->prepareXYData($rawData);
     }
-    
+
     public function generateSampleData(string $chartType, int $points = 10): array
     {
         return match($chartType) {
@@ -558,7 +558,7 @@ class ChartDataProvider
             default => [],
         };
     }
-    
+
     private function generateLineSampleData(int $points): array
     {
         $data = [];
@@ -570,28 +570,28 @@ class ChartDataProvider
         }
         return $data;
     }
-    
+
     private function generateBarSampleData(int $points): array
     {
         $categories = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
         $data = [];
-        
+
         for ($i = 0; $i < min($points, count($categories)); $i++) {
             $data[] = [
                 'label' => $categories[$i],
                 'value' => rand(20, 100),
             ];
         }
-        
+
         return $data;
     }
-    
+
     private function generatePieSampleData(int $slices): array
     {
         $categories = ['Category A', 'Category B', 'Category C', 'Category D', 'Category E'];
         $data = [];
         $remaining = 100;
-        
+
         for ($i = 0; $i < min($slices - 1, count($categories) - 1); $i++) {
             $value = rand(10, 30);
             $data[] = [
@@ -600,16 +600,16 @@ class ChartDataProvider
             ];
             $remaining -= $value;
         }
-        
+
         // Add last slice with remaining
         $data[] = [
             'label' => $categories[$slices - 1],
             'value' => max($remaining, 5),
         ];
-        
+
         return $data;
     }
-    
+
     private function generateAreaSampleData(int $points): array
     {
         return $this->generateLineSampleData($points);
@@ -714,11 +714,11 @@ use Modules\Xot\Actions\Chart\GenerateSvgChartAction;
 class ChartWidget extends Widget
 {
     protected static string $view = 'xot::filament.widgets.chart-widget';
-    
+
     public function getViewData(): array
     {
         $dataProvider = new \Modules\Xot\Services\Chart\ChartDataProvider();
-        
+
         return [
             'chartSvg' => app(GenerateSvgChartAction::class)->execute(
                 'line',
@@ -749,7 +749,7 @@ class ExportChartAction extends \Filament\Actions\Action
             ->action(function (array $data) {
                 $dataProvider = new ChartDataProvider();
                 $chartData = $dataProvider->prepareData($data['data'], $data['chart_type']);
-                
+
                 $pngAction = new GeneratePngChartAction(
                     $data['chart_type'],
                     $chartData,
@@ -759,9 +759,9 @@ class ExportChartAction extends \Filament\Actions\Action
                         'dpi' => 300,
                     ]
                 );
-                
+
                 $png = $pngAction->execute();
-                
+
                 return response()->streamDownload(function () use ($png) {
                     echo $png;
                 }, "chart_{$data['chart_type']}" . date('Y-m-d_H-i-s') . '.png');
@@ -776,7 +776,7 @@ class ExportChartAction extends \Filament\Actions\Action
                         'area' => 'Area Chart',
                     ])
                     ->required(),
-                
+
                 \Filament\Forms\Components\KeyValue::make('data')
                     ->label('Chart Data')
                     ->addActionLabel('Add Data Point')
@@ -812,17 +812,17 @@ class ChartGenerationTest extends TestCase
             ['label' => 'B', 'value' => 20],
             ['label' => 'C', 'value' => 15],
         ];
-        
+
         $action = new GenerateSvgChartAction('line', $data);
         $svg = $action->execute();
-        
+
         $this->assertStringContainsString('<svg', $svg);
         $this->assertStringContainsString('polyline', $svg);
         $this->assertStringContainsString('A', $svg);
         $this->assertStringContainsString('B', $svg);
         $this->assertStringContainsString('C', $svg);
     }
-    
+
     /** @test */
     public function it_generates_png_chart()
     {
@@ -830,34 +830,34 @@ class ChartGenerationTest extends TestCase
             ['label' => 'Product A', 'value' => 45],
             ['label' => 'Product B', 'value' => 78],
         ];
-        
+
         $action = new GeneratePngChartAction('bar', $data);
         $png = $action->execute();
-        
+
         // Verifica che sia un PNG valido (header PNG)
         $this->assertStringStartsWith("\x89\x50\x4E\x47\x0D\x0A\x1A\x0A", $png);
         $this->assertGreaterThan(1000, strlen($png));
     }
-    
+
     /** @test */
     public function it_handles_invalid_chart_type()
     {
         $this->expectException(\InvalidArgumentException::class);
-        
+
         $action = new GenerateSvgChartAction('invalid_type', []);
         $action->execute();
     }
-    
+
     /** @test */
     public function it_generates_unique_ids()
     {
         $data = ['label' => 'Test', 'value' => 10];
-        
+
         $action1 = new GenerateSvgChartAction('line', $data);
         $action2 = new GenerateSvgChartAction('line', $data);
-        
+
         $this->assertEquals($action1->getUniqueId(), $action2->getUniqueId());
-        
+
         $action3 = new GenerateSvgChartAction('bar', $data);
         $this->assertNotEquals($action1->getUniqueId(), $action3->getUniqueId());
     }
@@ -920,7 +920,7 @@ try {
         'type' => $type,
         'error' => $e->getMessage(),
     ]);
-    
+
     // Fallback a chart placeholder
     $chart = $this->generatePlaceholderChart();
 }
@@ -946,7 +946,7 @@ GeneratePngChartAction::dispatch($type, $data)
 
 ---
 
-**Last Updated:** 2025-12-09  
-**Version:** 1.0.0  
-**PHPStan Level:** 10 ✅  
+**Last Updated:** 2025-12-09
+**Version:** 1.0.0
+**PHPStan Level:** 10 ✅
 **Dependencies:** Imagick, Spatie QueueableAction

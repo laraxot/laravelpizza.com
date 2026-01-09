@@ -113,7 +113,7 @@ class ValidateUserDataAction
         if (!$this->isValid($data)) {
             throw new InvalidUserDataException();
         }
-        
+
         return true;
     }
 }
@@ -135,9 +135,9 @@ class CreatePostActionTest extends TestCase
     {
         $action = app(CreatePostAction::class);
         $data = PostData::from([/* ... */]);
-        
+
         $result = $action->execute($data);
-        
+
         $this->assertDatabaseHas('posts', $data->toArray());
     }
 }
@@ -185,4 +185,4 @@ Per facilitare il debugging:
 
 - [[../architecture/actions.md|Architettura Actions]]
 - [[../testing/unit-tests.md|Unit Testing]]
-- [[../performance/optimization.md|Ottimizzazioni]] 
+- [[../performance/optimization.md|Ottimizzazioni]]

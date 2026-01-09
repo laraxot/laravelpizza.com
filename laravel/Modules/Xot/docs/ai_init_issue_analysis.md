@@ -26,7 +26,7 @@ Lo script cerca una cartella `.gemini` nella root del progetto e crea un symlink
 ## Soluzione
 
 Lo script deve essere corretto per invertire la logica:
-- Cercare le cartelle specifiche in `bashscripts/ai/` 
+- Cercare le cartelle specifiche in `bashscripts/ai/`
 - Creare symlink nella root del progetto che puntano a quelle cartelle
 
 ## Cartelle Coinvolte

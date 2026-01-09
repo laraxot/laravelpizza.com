@@ -141,9 +141,8 @@ Il blocco può essere utilizzato in vari contesti:
 - [Documentazione Filament Forms](../filament-forms.md)
 - [UI Components](../ui/components.md)
 - [Social Media Guidelines](../marketing/social-media.md)
-- [Analytics Integration](../marketing/analytics.md) 
+- [Analytics Integration](../marketing/analytics.md)
 
 ## Collegamenti tra versioni di social.md
 * [social.md](laravel/Modules/Tenant/docs/it/config/social.md)
 * [social.md](laravel/Modules/Cms/docs/blocks/social.md)
-

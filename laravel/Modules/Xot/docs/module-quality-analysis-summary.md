@@ -4,7 +4,7 @@
 
 ## TechPlanner Module
 - **Code Quality**: 80.4%
-- **Complexity**: 97.8% 
+- **Complexity**: 97.8%
 - **Architecture**: 82.4%
 - **Style**: 77.1%
 - **Lines**: 2,934

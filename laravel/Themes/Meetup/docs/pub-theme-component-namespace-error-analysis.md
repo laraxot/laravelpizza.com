@@ -63,4 +63,3 @@ Creare una classe componente che estende `Component` e registrarla nel namespace
 - `CmsServiceProvider::registerNamespaces()` - Registrazione namespace e componenti
 - `Themes/Meetup/resources/views/components/layouts/main.blade.php` - File componente
 - `Themes/Meetup/resources/views/pages/index.blade.php` - File che usa il componente
-

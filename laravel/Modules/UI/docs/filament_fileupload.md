@@ -95,4 +95,4 @@ return [
 
 ## Vedi Anche
 - [Filament File Upload](https://filamentphp.com/project_docs/forms/fields/file-upload)
-- [Laravel File Storage](https://laravel.com/project_docs/filesystem) 
+- [Laravel File Storage](https://laravel.com/project_docs/filesystem)

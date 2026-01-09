@@ -64,7 +64,7 @@ Block::make('navigation')
 - [Documentazione Blocchi](./README.md)
 - [Componente Header](../components/header.md)
 - [Componente Footer](../components/footer.md)
-- [Convenzioni Filament](../../../docs/filament-conventions.md) 
+- [Convenzioni Filament](../../../docs/filament-conventions.md)
 
 ## Collegamenti tra versioni di navigation.md
 * [navigation.md](laravel/Modules/Gdpr/docs/navigation.md)
@@ -73,4 +73,3 @@ Block::make('navigation')
 * [navigation.md](laravel/Modules/Cms/docs/blocks/navigation.md)
 * [navigation.md](laravel/Modules/Cms/docs/navigation.md)
 * [navigation.md](laravel/Modules/Cms/docs/components/navigation.md)
-

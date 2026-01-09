@@ -75,4 +75,4 @@ class NotificationTemplate extends BaseModel
 2. I cast sono gestiti tramite il metodo `casts()`
 3. Il namespace non include il segmento `app`
 4. Le funzionalità comuni vanno implementate qui
-5. La documentazione va mantenuta aggiornata 
+5. La documentazione va mantenuta aggiornata

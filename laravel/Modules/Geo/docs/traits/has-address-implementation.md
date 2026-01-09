@@ -59,7 +59,7 @@ public function addAddress(array $attributes): Address
     if (isset($attributes['is_primary']) && $attributes['is_primary']) {
         $this->addresses()->update(['is_primary' => false]);
     }
-    
+
     return $this->addresses()->create($attributes);
 }
 
@@ -72,10 +72,10 @@ public function setAsPrimaryAddress(Address $address): void
     if ($address->model_id !== $this->id || $address->model_type !== get_class($this)) {
         throw new \InvalidArgumentException('L\'indirizzo non appartiene a questo modello');
     }
-    
+
     // Rimuove l'attributo principale da tutti gli altri indirizzi
     $this->addresses()->where('id', '!=', $address->id)->update(['is_primary' => false]);
-    
+
     // Imposta questo indirizzo come principale
     $address->update(['is_primary' => true]);
 }
@@ -86,12 +86,12 @@ public function setAsPrimaryAddress(Address $address): void
 public function updatePrimaryAddress(array $attributes): ?Address
 {
     $address = $this->primaryAddress();
-    
+
     if ($address) {
         $address->update($attributes);
         return $address->fresh();
     }
-    
+
     // Se non esiste un indirizzo principale, ne crea uno nuovo
     $attributes['is_primary'] = true;
     return $this->addAddress($attributes);
@@ -224,7 +224,7 @@ public static function getFormSchema(): array
 {
     return [
         // ... altri campi
-        
+
         'addresses' => Forms\Components\Repeater::make('addresses')
             ->relationship('addresses')
             ->schema(AddressResource::getFormSchema()),

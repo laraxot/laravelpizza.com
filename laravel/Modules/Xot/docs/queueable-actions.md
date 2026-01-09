@@ -7,7 +7,7 @@ Le Queueable Actions sono una soluzione elegante per incapsulare la logica di bu
 ## Vantaggi
 
 - **Incapsulamento**: Logica di business isolata e riutilizzabile
-- **Flessibilità**: Esecuzione sincrona o asincrona 
+- **Flessibilità**: Esecuzione sincrona o asincrona
 - **Testabilità**: Facile da testare in isolamento
 - **Dependency Injection**: Supporto completo per DI
 - **Job Chaining**: Possibilità di concatenare azioni
@@ -37,7 +37,7 @@ app(ProcessDoctorModerationAction::class)->execute($workflow, true);
 ```
 
 ### Esecuzione Asincrona
-```php 
+```php
 app(ProcessDoctorModerationAction::class)->onQueue()->execute($workflow, true);
 ```
 
@@ -96,11 +96,11 @@ class ProcessDoctorModerationActionTest extends TestCase
     public function it_can_process_moderation()
     {
         $action = app(ProcessDoctorModerationAction::class);
-        
+
         $workflow = DoctorRegistrationWorkflow::factory()->create();
-        
+
         $action->execute($workflow, true);
-        
+
         $this->assertTrue($workflow->fresh()->isModerationApproved());
     }
 }
@@ -191,19 +191,19 @@ class ProcessDoctorModerationAction
     ): bool {
         try {
             // Aggiorna workflow
-            $workflow->status = $approved 
-                ? DoctorRegistrationWorkflow::STATUS_MODERATION_APPROVED 
+            $workflow->status = $approved
+                ? DoctorRegistrationWorkflow::STATUS_MODERATION_APPROVED
                 : DoctorRegistrationWorkflow::STATUS_MODERATION_REJECTED;
-            
+
             $workflow->moderation_notes = $notes;
             $workflow->moderated_at = now();
             $workflow->moderated_by = $moderatorId;
-            
+
             if ($approved) {
                 $workflow->generateModerationToken();
                 $workflow->current_step = 'contacts';
             }
-            
+
             $workflow->save();
 
             // Invia email
@@ -237,4 +237,4 @@ class ProcessDoctorModerationAction
 ## Vedi Anche
 
 - [Laravel Queues](https://laravel.com/docs/queues)
-- [Spatie Documentation](https://spatie.be/docs/laravel-queueable-action) 
+- [Spatie Documentation](https://spatie.be/docs/laravel-queueable-action)

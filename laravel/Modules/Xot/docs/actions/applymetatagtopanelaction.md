@@ -44,4 +44,4 @@ In caso di errore durante l'applicazione dei metatag:
 ## Note
 - Questa azione utilizza il trait `QueueableAction` di Spatie
 - Tutti i metodi sono fortemente tipizzati per PHPStan livello 10
-- La documentazione è mantenuta aggiornata nella cartella docs 
+- La documentazione è mantenuta aggiornata nella cartella docs

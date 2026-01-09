@@ -97,16 +97,16 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 class LoginWidget extends XotBaseWidget
 {
     protected static string $view = 'pub_theme::filament.widgets.auth.login';
-    
+
     public ?array $data = [];
-    
+
     public function getFormSchema(): array
     {
         return [
             // Definizione form Filament
         ];
     }
-    
+
     public function authenticate(): void
     {
         // Logica di autenticazione

@@ -20,9 +20,9 @@ La sintassi `@svg()` utilizzata nella view Blade non è compatibile con il siste
 ### **Sintassi Corretta per Filament 3.x**
 ```blade
 {{-- ✅ CORRETTO: Sintassi Filament per icone Heroicons --}}
-<x-filament::icon 
-    :icon="$icon" 
-    class="w-4 h-4 flex-shrink-0 {{ $color }}" 
+<x-filament::icon
+    :icon="$icon"
+    class="w-4 h-4 flex-shrink-0 {{ $color }}"
 />
 ```
 
@@ -52,18 +52,18 @@ La sintassi `@svg()` utilizzata nella view Blade non è compatibile con il siste
 
 ### **Opzione 1: Componente Filament Icon (RACCOMANDATO)**
 ```blade
-<x-filament::icon 
-    :icon="$icon" 
-    class="w-4 h-4 flex-shrink-0 {{ $color }}" 
+<x-filament::icon
+    :icon="$icon"
+    class="w-4 h-4 flex-shrink-0 {{ $color }}"
 />
 ```
 
 ### **Opzione 2: Blade Icons Package**
 ```blade
 @if(str_starts_with($icon, 'heroicon-'))
-    <x-dynamic-component 
-        :component="$icon" 
-        class="w-4 h-4 flex-shrink-0 {{ $color }}" 
+    <x-dynamic-component
+        :component="$icon"
+        class="w-4 h-4 flex-shrink-0 {{ $color }}"
     />
 @endif
 ```
@@ -90,9 +90,9 @@ La sintassi `@svg()` utilizzata nella view Blade non è compatibile con il siste
 ### **Modifica Specifica**
 ```diff
 - @svg($icon, 'w-4 h-4 flex-shrink-0 ' . $color)
-+ <x-filament::icon 
-+     :icon="$icon" 
-+     class="w-4 h-4 flex-shrink-0 {{ $color }}" 
++ <x-filament::icon
++     :icon="$icon"
++     class="w-4 h-4 flex-shrink-0 {{ $color }}"
 + />
 ```
 
@@ -135,7 +135,7 @@ La sintassi `@svg()` utilizzata nella view Blade non è compatibile con il siste
 
 ---
 
-**Data Analisi**: 2025-08-01  
-**Priorità**: 🔴 ALTA (Funzionalità core non funzionante)  
-**Tempo Stimato Fix**: 5 minuti  
+**Data Analisi**: 2025-08-01
+**Priorità**: 🔴 ALTA (Funzionalità core non funzionante)
+**Tempo Stimato Fix**: 5 minuti
 **Rischio**: 🟢 BASSO (Modifica isolata)

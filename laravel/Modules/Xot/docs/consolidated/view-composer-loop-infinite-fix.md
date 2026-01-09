@@ -39,13 +39,13 @@ public function compose(View $view): void
 {
     // Protezione anti-loop infinito
     static $composing = false;
-    
+
     if ($composing) {
         return; // Evita chiamate ricorsive
     }
-    
+
     $composing = true;
-    
+
     try {
         $lang = app()->getLocale();
         $view->with('lang', $lang);
@@ -82,15 +82,15 @@ private function isAuthenticationSafe(): bool
         if (!app()->bound('auth')) {
             return false;
         }
-        
+
         // Verifica se c'è una sessione attiva
         if (!app()->bound('session') || !session()->isStarted()) {
             return false;
         }
-        
+
         // Verifica Auth senza scatenare risoluzione complessa
         return Auth::hasUser() || Auth::guest();
-        
+
     } catch (\Exception $e) {
         return false; // In caso di errore, considera auth non sicuro
     }
@@ -143,12 +143,12 @@ public function test_composer_prevents_infinite_loop()
 {
     $composer = new XotComposer();
     $view = view('test');
-    
+
     // Simulazione di chiamate multiple
     for ($i = 0; $i < 10; $i++) {
         $composer->compose($view);
     }
-    
+
     // Non dovrebbe andare in timeout o stack overflow
     $this->assertTrue(true);
 }
@@ -160,10 +160,10 @@ public function test_composer_handles_auth_errors_gracefully()
 {
     // Mock Auth per generare eccezioni
     Auth::shouldReceive('hasUser')->andThrow(new \Exception('Auth error'));
-    
+
     $composer = new XotComposer();
     $view = view('test');
-    
+
     // Non dovrebbe fallire
     $composer->compose($view);
     $this->assertTrue(true);
@@ -189,7 +189,7 @@ public function test_composer_handles_auth_errors_gracefully()
 ## 🧬 Analisi Filosofica
 
 ### Lezione Epistemologica
-I **View Composers** sono potenti ma pericolosi. La **semplicità** nell'implementazione nasconde la **complessità** delle dependency resolution. 
+I **View Composers** sono potenti ma pericolosi. La **semplicità** nell'implementazione nasconde la **complessità** delle dependency resolution.
 
 ### Principio Zen
 *"La ricorsione è come uno specchio di fronte a un altro specchio - senza limiti diventa infinita"* - Serve sempre una **via d'uscita**.
@@ -223,7 +223,7 @@ grep -r "auth()->user()" Modules/*/View/Composers/
 
 ---
 
-**Risolto**: Dicembre 2024  
-**Priorità**: P0 (Critical) - Bloccava sistema completo  
-**Impatto**: Sistema completamente non funzionale  
-**Tempo di risoluzione**: 15 minuti  
+**Risolto**: Dicembre 2024
+**Priorità**: P0 (Critical) - Bloccava sistema completo
+**Impatto**: Sistema completamente non funzionale
+**Tempo di risoluzione**: 15 minuti

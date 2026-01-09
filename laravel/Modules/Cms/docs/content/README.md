@@ -11,7 +11,7 @@ Questa cartella contiene la documentazione relativa alla gestione dei contenuti.
 
 ## Note
 
-Questa documentazione descrive come gestire i contenuti nel CMS. 
+Questa documentazione descrive come gestire i contenuti nel CMS.
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
 * [README.md](bashscripts/docs/it/README.md)
@@ -89,4 +89,3 @@ Questa documentazione descrive come gestire i contenuti nel CMS.
 * [README.md](laravel/Modules/Cms/docs/components/README.md)
 * [README.md](laravel/Themes/Two/docs/README.md)
 * [README.md](laravel/Themes/One/docs/README.md)
-

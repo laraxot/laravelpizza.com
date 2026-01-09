@@ -24,7 +24,7 @@
                ])
                ->then(fn($batch) => $this->dispatchBatch($batch));
        }
-       
+
        protected function dispatchBatch(NotificationBatch $batch)
        {
            return Bus::batch($batch->jobs())
@@ -48,7 +48,7 @@
                default => false
            };
        }
-       
+
        protected function handleTemporary()
        {
            return [
@@ -74,7 +74,7 @@
                ])
                ->then(fn($job) => $this->dispatchOptimized($job));
        }
-       
+
        protected function dispatchOptimized($job)
        {
            gc_collect_cycles();
@@ -99,13 +99,13 @@
        public function send(Notification $notification)
        {
            $channels = $this->determineChannels($notification);
-           
+
            return collect($channels)
                ->map(fn($channel) => $this->sendToChannel($notification, $channel))
                ->filter()
                ->whenEmpty(fn() => $this->handleAllChannelsFailed());
        }
-       
+
        protected function sendToChannel($notification, $channel)
        {
            return Cache::lock("channel_{$channel}", 10)->block(3, function() use ($notification, $channel) {
@@ -125,7 +125,7 @@
        public function shouldSend($notification, $channel)
        {
            $key = $this->getRateLimitKey($notification, $channel);
-           
+
            return Cache::remember($key, now()->addMinutes(15), function() use ($channel) {
                return [
                    'remaining' => $this->getLimits($channel)['max_per_minute'],
@@ -133,7 +133,7 @@
                ];
            });
        }
-       
+
        public function increment($notification, $channel)
        {
            $key = $this->getRateLimitKey($notification, $channel);
@@ -153,13 +153,13 @@
        public function render($template, $data)
        {
            $cacheKey = $this->getCacheKey($template, $data);
-           
+
            return Cache::tags(['notifications', 'templates'])
                ->remember($cacheKey, now()->addHour(), function() use ($template, $data) {
                    return $this->renderTemplate($template, $data);
                });
        }
-       
+
        protected function renderTemplate($template, $data)
        {
            return Pipeline::send($template)
@@ -187,11 +187,11 @@
                }
            });
        }
-       
+
        public function warmCache($template)
        {
            $variants = $this->getCommonVariants($template);
-           
+
            foreach ($variants as $variant) {
                $this->templateManager->render($template, $variant);
            }
@@ -223,4 +223,4 @@
 ## Collegamenti
 - [Queue Guidelines](../../notify/queue.md)
 - [Channel Configuration](../../notify/channels.md)
-- [Template Management](../../notify/templates.md) 
+- [Template Management](../../notify/templates.md)

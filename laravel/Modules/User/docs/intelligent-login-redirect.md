@@ -33,7 +33,7 @@ return redirect()->intended();
 protected function getRedirectUrl(): RedirectResponse
 {
     $user = Auth::user();
-    
+
     if (!$user) {
         return redirect()->to('/');
     }
@@ -124,7 +124,7 @@ public function authenticate()
 
         if (Auth::attempt($data, $remember)) {
             session()->regenerate();
-            
+
             // ✅ NUOVO: Redirect intelligente
             return $this->getRedirectUrl();
         }
@@ -211,4 +211,4 @@ public function authenticate()
 - ✅ **Manutenibilità**: Codice documentato
 
 ## Ultimo aggiornamento
-2025-01-06 - Implementazione redirect intelligente basato sui ruoli utente 
+2025-01-06 - Implementazione redirect intelligente basato sui ruoli utente

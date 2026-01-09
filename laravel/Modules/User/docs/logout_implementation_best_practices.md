@@ -1,4 +1,4 @@
-# Best Practices per l'Implementazione del Logout 
+# Best Practices per l'Implementazione del Logout
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
@@ -40,13 +40,13 @@ new class extends Component
     public bool $logoutCompleted = false;
     public bool $hasError = false;
     public string $errorMessage = '';
-    
+
     public function mount(): void
     {
         // Non eseguiamo il logout automaticamente al mount
         // Il logout verrà eseguito solo quando l'utente clicca sul pulsante
     }
-    
+
     public function logout(): void
     {
         try {
@@ -60,7 +60,7 @@ new class extends Component
 
             // Dispatch dell'evento dopo il logout
             Event::dispatch('auth.logout.successful');
-            
+
             $this->logoutCompleted = true;
             $this->hasError = false;
         } catch (\Exception $e) {
@@ -70,7 +70,7 @@ new class extends Component
             $this->errorMessage = $e->getMessage();
         }
     }
-    
+
     public function redirectHome(): void
     {
         $locale = LaravelLocalization::getCurrentLocale();
@@ -98,7 +98,7 @@ Il template Blade associato al componente Volt dovrebbe gestire i diversi stati 
             @volt('auth.logout')
                 <div class="text-center">
                     <x-ui.logo class="w-auto h-12 mx-auto text-gray-700 fill-current dark:text-gray-200" />
-                    
+
                     @if($logoutCompleted)
                         <!-- Stato di successo -->
                         <h2 class="mt-6 text-3xl font-extrabold text-gray-900 dark:text-white">
@@ -107,12 +107,12 @@ Il template Blade associato al componente Volt dovrebbe gestire i diversi stati 
                         <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
                             {{ __('auth.logout.success_message') }}
                         </p>
-                        
+
                         <div class="mt-8">
-                            <x-ui.button 
-                                type="primary" 
-                                rounded="md" 
-                                tag="a" 
+                            <x-ui.button
+                                type="primary"
+                                rounded="md"
+                                tag="a"
                                 href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')) }}"
                                 class="w-full"
                             >
@@ -127,21 +127,21 @@ Il template Blade associato al componente Volt dovrebbe gestire i diversi stati 
                         <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
                             {{ __('auth.logout.error_message') }}
                         </p>
-                        
+
                         <div class="mt-8 space-y-4">
-                            <x-ui.button 
-                                type="danger" 
-                                rounded="md" 
+                            <x-ui.button
+                                type="danger"
+                                rounded="md"
                                 wire:click="logout"
                                 class="w-full"
                             >
                                 {{ __('auth.logout.try_again') }}
                             </x-ui.button>
-                            
-                            <x-ui.button 
-                                type="secondary" 
-                                rounded="md" 
-                                tag="a" 
+
+                            <x-ui.button
+                                type="secondary"
+                                rounded="md"
+                                tag="a"
                                 href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')) }}"
                                 class="w-full"
                             >
@@ -156,21 +156,21 @@ Il template Blade associato al componente Volt dovrebbe gestire i diversi stati 
                         <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
                             {{ __('auth.logout.confirm_message') }}
                         </p>
-                        
+
                         <div class="mt-8 space-y-4">
-                            <x-ui.button 
-                                type="primary" 
-                                rounded="md" 
+                            <x-ui.button
+                                type="primary"
+                                rounded="md"
                                 wire:click="logout"
                                 class="w-full"
                             >
                                 {{ __('auth.logout.confirm_button') }}
                             </x-ui.button>
-                            
-                            <x-ui.button 
-                                type="secondary" 
-                                rounded="md" 
-                                tag="a" 
+
+                            <x-ui.button
+                                type="secondary"
+                                rounded="md"
+                                tag="a"
                                 href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')) }}"
                                 class="w-full"
                             >

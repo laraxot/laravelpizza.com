@@ -2,7 +2,7 @@
 
 ## 📋 Overview
 
-Il modulo **Xot** fornisce un sistema completo e modulare per la generazione di PDF da record Eloquent.  
+Il modulo **Xot** fornisce un sistema completo e modulare per la generazione di PDF da record Eloquent.
 Sistema progettato con principi **DRY + KISS** per massima riutilizzabilità e manutenibilità.
 
 ---
@@ -86,7 +86,7 @@ $pdf = app(ContentPdfAction::class)->execute(
 public function downloadPdf($id)
 {
     $record = Model::findOrFail($id);
-    
+
     return app(StreamDownloadPdfAction::class)->execute($record);
     // → Download automatico PDF
 }
@@ -229,7 +229,7 @@ public function it_generates_valid_pdf_binary(): void
 {
     $record = Model::factory()->create();
     $pdf = app(GetPdfContentByRecordAction::class)->execute($record);
-    
+
     $this->assertIsString($pdf);
     $this->assertStringStartsWith('%PDF', $pdf);
     $this->assertGreaterThan(100, strlen($pdf));
@@ -243,10 +243,10 @@ public function it_generates_valid_pdf_binary(): void
 public function it_sends_email_with_generated_pdf(): void
 {
     Mail::fake();
-    
+
     $record = Model::factory()->create();
     app(SendMailByRecord::class)->execute($record);
-    
+
     Mail::assertSent(function ($mail) {
         return count($mail->attachments()) === 1 &&
                $mail->attachments()[0]->mime === 'application/pdf';
@@ -314,8 +314,7 @@ public function it_sends_email_with_generated_pdf(): void
 
 ---
 
-**Ultimo aggiornamento:** 2025-01-22  
-**Versione:** 1.0.0  
-**Stato:** ✅ Production Ready  
+**Ultimo aggiornamento:** 2025-01-22
+**Versione:** 1.0.0
+**Stato:** ✅ Production Ready
 **PHPStan Level:** 10
-

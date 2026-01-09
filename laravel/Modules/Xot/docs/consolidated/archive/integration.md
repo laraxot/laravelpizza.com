@@ -63,18 +63,14 @@
 - Aggiornare le dipendenze
 - Verificare la compatibilità
 - Testare le modifiche
-- Documentare i cambiamenti 
+- Documentare i cambiamenti
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di integration.md
 * [integration.md](../../../Gdpr/project_docs/integration.md)
 * [integration.md](../../../Xot/project_docs/integration.md)
 * [integration.md](../../../Job/project_docs/integration.md)
 
-
 ### Versione Incoming
 
-
 ---
-

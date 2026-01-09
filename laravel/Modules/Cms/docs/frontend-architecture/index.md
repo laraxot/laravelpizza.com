@@ -14,4 +14,3 @@
 * [index.md](laravel/Modules/Cms/docs/frontend-architecture/index.md)
 * [index.md](laravel/Themes/One/docs/roadmap/philosophy/index.md)
 * [index.md](laravel/Themes/One/docs/roadmap/inspiration/index.md)
-

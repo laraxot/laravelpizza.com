@@ -46,7 +46,7 @@ In Laraxot/PTVX esistono **DUE** classi `XotBasePage` con scopi DIVERSI:
    - Esempio uso: Dashboard, pagine custom isolate
 
 2. **`Modules\Xot\Filament\Resources\Pages\XotBasePage`**
-   - Estende: `Filament\Resources\Pages\Page`  
+   - Estende: `Filament\Resources\Pages\Page`
    - Scopo: **Resource Pages** (parte di una Resource)
    - Metodo `route()`: ✅ **DISPONIBILE**
    - Esempio uso: Custom pages dentro Resources
@@ -62,7 +62,7 @@ Modules\Xot\Filament\Pages\XotBasePage
 Modules\[Module]\Filament\Pages\MyStandalonePage
 
 # RESOURCE PAGE (con route())
-Filament\Resources\Pages\Page  
+Filament\Resources\Pages\Page
     ↓
 Modules\Xot\Filament\Resources\Pages\XotBasePage
     ↓
@@ -126,7 +126,7 @@ abstract class ListLogActivities extends XotBasePage
 
 **Esempi**:
 - Dashboard generale
-- Pagina impostazioni globali  
+- Pagina impostazioni globali
 - Pagina about/help
 - Report standalone
 
@@ -273,7 +273,7 @@ test('ListLogActivities has route method', function () {
 ```php
 test('can register ListLogActivities in getPages', function () {
     $pages = IndennitaResponsabilitaResource::getPages();
-    
+
     expect($pages)
         ->toHaveKey('log-activity')
         ->and($pages['log-activity'])
@@ -299,7 +299,7 @@ grep -r "extends XotBasePage" Modules/*/app/Filament/Resources/ \
 // Script di validazione
 foreach (glob('Modules/*/app/Filament/Resources/*/Pages/*.php') as $file) {
     $content = file_get_contents($file);
-    
+
     // Se è in Resources/*/Pages/ ma usa standalone XotBasePage
     if (str_contains($content, 'use Modules\Xot\Filament\Pages\XotBasePage')) {
         echo "❌ ERRORE: $file usa XotBasePage standalone ma è una Resource Page!\n";
@@ -320,9 +320,7 @@ foreach (glob('Modules/*/app/Filament/Resources/*/Pages/*.php') as $file) {
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
-**Versione Filament**: 4.x  
-**Severità**: Alta (blocca registrazione Resource Pages)  
+**Ultimo aggiornamento**: 27 Ottobre 2025
+**Versione Filament**: 4.x
+**Severità**: Alta (blocca registrazione Resource Pages)
 **Causa**: Confusione tra Standalone Page e Resource Page
-
-

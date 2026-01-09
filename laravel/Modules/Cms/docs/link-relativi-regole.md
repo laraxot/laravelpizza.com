@@ -21,7 +21,7 @@
 
 ### **Principi Zen Laraxot**
 - **Portabilità**: Il codice deve funzionare ovunque
-- **Autonomia**: Ogni modulo è indipendente 
+- **Autonomia**: Ogni modulo è indipendente
 - **Serenità**: Nessun link rotto dopo refactor
 - **Un solo punto di verità**: Nessun path assoluto
 
@@ -42,9 +42,9 @@
 ### **Dal modulo Cms alla root docs**
 ```
 Percorso: Modules/Cms/docs/ → ../../../docs/
-Logica: 
+Logica:
   Modules/Cms/docs/ → ../ (torna a Modules/)
-  Modules/ → ../ (torna a laravel/) 
+  Modules/ → ../ (torna a laravel/)
   laravel/ → ../ (torna a <directory progetto>/)
   <directory progetto>/ → docs/ (entra nella root docs)
 ```
@@ -127,7 +127,7 @@ Aggiornare sempre le regole personali:
 ### **Politica**
 "Ogni modulo deve essere autonomo e portabile"
 
-### **Religione**  
+### **Religione**
 "Non avrai altro path all'infuori del relativo"
 
 ### **Zen**
@@ -138,6 +138,6 @@ Aggiornare sempre le regole personali:
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025  
-**Versione**: 1.0  
+**Ultimo aggiornamento**: Gennaio 2025
+**Versione**: 1.0
 **Conformità**: Regole Laraxot per documentazione modulare e portabile

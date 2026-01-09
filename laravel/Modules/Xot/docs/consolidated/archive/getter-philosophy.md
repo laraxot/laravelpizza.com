@@ -59,4 +59,4 @@ I metodi getter devono nascondere i dettagli di implementazione:
 ## Collegamenti
 - [Convenzioni di Naming](../naming-conventions.md)
 - [Documentazione MetatagData](../datas/metatagdata.md)
-- [Linee Guida Filament](../filament-best-practices.md) 
+- [Linee Guida Filament](../filament-best-practices.md)

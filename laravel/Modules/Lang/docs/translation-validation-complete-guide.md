@@ -203,7 +203,7 @@ php docs/obbligatorio-audit-script.php
 
 ### File Corretti Durante il Progetto
 1. `/Modules/User/lang/de/registration.php` - Campi city e state
-2. `/Modules/User/lang/en/registration.php` - Campi city e province  
+2. `/Modules/User/lang/en/registration.php` - Campi city e province
 3. `/Modules/User/lang/de/register_tenant.php` - Campo address
 4. `/Themes/One/lang/de/auth.php` - Sezione login completa
 5. `/Modules/Geo/lang/en/address.php` - Campi province e region
@@ -243,7 +243,7 @@ php docs/obbligatorio-audit-script.php
 
 ---
 
-**Data Creazione**: 8 Agosto 2025  
-**Ultima Validazione**: 8 Agosto 2025  
-**Status**: ✅ TUTTI I CONTROLLI SUPERATI  
+**Data Creazione**: 8 Agosto 2025
+**Ultima Validazione**: 8 Agosto 2025
+**Status**: ✅ TUTTI I CONTROLLI SUPERATI
 **Conformità**: ✅ PROGETTO COMPLETAMENTE CONFORME

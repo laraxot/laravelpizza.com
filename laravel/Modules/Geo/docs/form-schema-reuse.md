@@ -45,7 +45,7 @@ public static function getFormSchema(): array
 {
     return [
         // Altri campi specifici dello Studio
-        
+
         'addresses' => Forms\Components\Repeater::make('addresses')
             ->relationship('addresses')
             ->schema(AddressResource::getFormSchema()),

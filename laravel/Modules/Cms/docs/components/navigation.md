@@ -91,11 +91,11 @@ I componenti di navigazione sono fondamentali per guidare gli utenti attraverso 
     <x-slot name="brand">
         <img src="/logo.svg" alt="Logo" />
     </x-slot>
-    
+
     <x-cms::navbar.item href="/dashboard">
         Dashboard
     </x-cms::navbar.item>
-    
+
     <x-cms::navbar.dropdown label="Profilo">
         <x-cms::navbar.dropdown.item href="/profile">
             Impostazioni
@@ -125,7 +125,7 @@ I componenti di navigazione sono fondamentali per guidare gli utenti attraverso 
     >
         Dashboard
     </x-cms::sidebar.item>
-    
+
     <x-cms::sidebar.group label="Amministrazione">
         <x-cms::sidebar.item href="/users">
             Utenti
@@ -203,18 +203,18 @@ public function getNavigationItems(): array
 1. Menu non responsivo
    - Verificare i breakpoint
    - Controllare la gestione mobile
-   
+
 2. Problemi di routing
    - Verificare le route definite
    - Controllare i middleware
-   
+
 3. Problemi di stile
    - Verificare i conflitti CSS
    - Controllare z-index
-   
+
 4. Performance
    - Ottimizzare le query di menu
-   - Implementare caching appropriato 
+   - Implementare caching appropriato
 
 ## Collegamenti tra versioni di navigation.md
 * [navigation.md](laravel/Modules/Gdpr/docs/navigation.md)
@@ -223,4 +223,3 @@ public function getNavigationItems(): array
 * [navigation.md](laravel/Modules/Cms/docs/blocks/navigation.md)
 * [navigation.md](laravel/Modules/Cms/docs/navigation.md)
 * [navigation.md](laravel/Modules/Cms/docs/components/navigation.md)
-

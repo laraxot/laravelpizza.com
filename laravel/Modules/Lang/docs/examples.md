@@ -33,7 +33,7 @@ return [
             'max' => 'Il nome non può superare :max caratteri'
         ]
     ],
-    
+
     'email' => [
         'label' => 'Indirizzo Email',
         'placeholder' => 'esempio@dominio.com',
@@ -45,7 +45,7 @@ return [
             'max' => 'L\'email non può superare :max caratteri'
         ]
     ],
-    
+
     'role' => [
         'label' => 'Ruolo',
         'placeholder' => 'Seleziona un ruolo',
@@ -61,7 +61,7 @@ return [
             'in' => 'Il ruolo selezionato non è valido'
         ]
     ],
-    
+
     'password' => [
         'label' => 'Password',
         'placeholder' => 'Inserisci la password',
@@ -72,7 +72,7 @@ return [
             'confirmed' => 'La conferma password non corrisponde'
         ]
     ],
-    
+
     'password_confirmation' => [
         'label' => 'Conferma Password',
         'placeholder' => 'Conferma la password inserita',
@@ -97,12 +97,12 @@ return [
         'label' => 'ID',
         'help' => 'Identificativo univoco'
     ],
-    
+
     'created_at' => [
         'label' => 'Data Creazione',
         'help' => 'Data e ora di creazione del record'
     ],
-    
+
     'updated_at' => [
         'label' => 'Data Aggiornamento',
         'help' => 'Data e ora dell\'ultimo aggiornamento'
@@ -142,7 +142,7 @@ return [
             'error' => 'Si è verificato un errore durante la creazione dell\'utente'
         ]
     ],
-    
+
     'edit' => [
         'label' => 'Modifica',
         'icon' => 'heroicon-o-pencil',
@@ -159,7 +159,7 @@ return [
             'error' => 'Si è verificato un errore durante la modifica dell\'utente'
         ]
     ],
-    
+
     'delete' => [
         'label' => 'Elimina',
         'icon' => 'heroicon-o-trash',
@@ -176,7 +176,7 @@ return [
             'error' => 'Si è verificato un errore durante l\'eliminazione dell\'utente'
         ]
     ],
-    
+
     'view' => [
         'label' => 'Visualizza',
         'icon' => 'heroicon-o-eye',
@@ -218,7 +218,7 @@ return [
             'error' => 'Si è verificato un errore durante l\'approvazione'
         ]
     ],
-    
+
     'suspend' => [
         'label' => 'Sospendi Utente',
         'icon' => 'heroicon-o-pause-circle',
@@ -253,7 +253,7 @@ return [
             'error' => 'Si è verificato un errore durante la sospensione'
         ]
     ],
-    
+
     'export' => [
         'label' => 'Esporta Utenti',
         'icon' => 'heroicon-o-document-download',
@@ -304,7 +304,7 @@ declare(strict_types=1);
  */
 return [
     'welcome' => 'Benvenuto nel sistema di gestione utenti',
-    
+
     'errors' => [
         'general' => 'Si è verificato un errore. Riprova più tardi.',
         'not_found' => 'L\'utente richiesto non è stato trovato.',
@@ -313,21 +313,21 @@ return [
         'database' => 'Errore di connessione al database.',
         'permission' => 'Non hai i permessi necessari per eseguire questa azione.'
     ],
-    
+
     'notifications' => [
         'success' => 'Operazione completata con successo',
         'info' => 'Informazione importante',
         'warning' => 'Attenzione',
         'error' => 'Errore'
     ],
-    
+
     'confirmations' => [
         'delete' => 'Sei sicuro di voler eliminare questo elemento?',
         'cancel' => 'Sei sicuro di voler annullare? Le modifiche non salvate andranno perse.',
         'discard' => 'Le modifiche non salvate andranno perse. Continuare?',
         'logout' => 'Sei sicuro di voler uscire dal sistema?'
     ],
-    
+
     'empty_states' => [
         'default' => 'Nessun elemento trovato',
         'users' => 'Nessun utente trovato',
@@ -335,7 +335,7 @@ return [
         'filtered' => 'Nessun elemento corrisponde ai filtri applicati',
         'no_permissions' => 'Non hai i permessi per visualizzare questi elementi'
     ],
-    
+
     'counts' => [
         'users' => '{0} Nessun utente|{1} Un utente|[2,*] :count utenti',
         'active_users' => '{0} Nessun utente attivo|{1} Un utente attivo|[2,*] :count utenti attivi',
@@ -368,7 +368,7 @@ return [
         'role' => 'ruolo',
         'status' => 'stato'
     ],
-    
+
     'custom' => [
         'email' => [
             'unique' => 'Questa email è già registrata nel sistema.',
@@ -381,7 +381,7 @@ return [
             'valid_role' => 'Il ruolo selezionato non è valido per il tuo account.'
         ]
     ],
-    
+
     'values' => [
         'accepted' => 'deve essere accettato',
         'accepted_if' => 'deve essere accettato quando :other è :value',
@@ -548,13 +548,13 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class UserResource extends XotBaseResource
 {
     protected static ?string $model = \Modules\User\Models\User::class;
-    
+
     protected static ?string $navigationIcon = 'heroicon-o-users';
-    
+
     protected static ?string $navigationGroup = 'Gestione Utenti';
-    
+
     protected static ?int $navigationSort = 1;
-    
+
     /**
      * @return array<int, \Filament\Forms\Components\Component>
      */
@@ -566,13 +566,13 @@ class UserResource extends XotBaseResource
                     Forms\Components\TextInput::make('name')
                         ->required()
                         ->maxLength(255),
-                        
+
                     Forms\Components\TextInput::make('email')
                         ->email()
                         ->required()
                         ->maxLength(255)
                         ->unique(ignoreRecord: true),
-                        
+
                     Forms\Components\Select::make('role')
                         ->options([
                             'admin' => __('fields.role.options.admin'),
@@ -581,20 +581,20 @@ class UserResource extends XotBaseResource
                             'guest' => __('fields.role.options.guest')
                         ])
                         ->required(),
-                        
+
                     Forms\Components\TextInput::make('password')
                         ->password()
                         ->required(fn (string $context): bool => $context === 'create')
                         ->minLength(8)
                         ->confirmed(),
-                        
+
                     Forms\Components\TextInput::make('password_confirmation')
                         ->password()
                         ->required(fn (string $context): bool => $context === 'create')
                 ])
         ];
     }
-    
+
     /**
      * @return array<int, \Filament\Tables\Columns\Column>
      */
@@ -604,26 +604,26 @@ class UserResource extends XotBaseResource
             Tables\Columns\TextColumn::make('name')
                 ->searchable()
                 ->sortable(),
-                
+
             Tables\Columns\TextColumn::make('email')
                 ->searchable()
                 ->sortable(),
-                
+
             Tables\Columns\TextColumn::make('role')
                 ->formatStateUsing(fn (string $state): string => __("fields.role.options.{$state}"))
                 ->sortable(),
-                
+
             Tables\Columns\IconColumn::make('email_verified_at')
                 ->boolean()
                 ->sortable(),
-                
+
             Tables\Columns\TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
         ];
     }
-    
+
     /**
      * @return array<string, \Filament\Tables\Actions\Action>
      */
@@ -635,7 +635,7 @@ class UserResource extends XotBaseResource
             Tables\Actions\DeleteAction::make(),
         ];
     }
-    
+
     /**
      * @return array<string, \Filament\Tables\Actions\BulkAction>
      */
@@ -668,7 +668,7 @@ class ApproveUserAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         $this->label(__('actions.approve.label'))
             ->icon(__('actions.approve.icon'))
             ->color(Color::from(__('actions.approve.color')))
@@ -679,7 +679,7 @@ class ApproveUserAction extends Action
             ->modalCancelActionLabel(__('actions.approve.modal.cancel'))
             ->action(function ($record): void {
                 $record->update(['status' => 'approved']);
-                
+
                 // Notifica successo
                 $this->successNotificationTitle(__('actions.approve.messages.success'));
             });
@@ -711,21 +711,21 @@ class UserController extends Controller
     public function __construct(
         private UserService $userService
     ) {}
-    
+
     /**
      * Display a listing of the resource.
      */
     public function index(Request $request): JsonResponse
     {
         $users = $this->userService->getPaginatedUsers($request);
-        
+
         return response()->json([
             'success' => true,
             'data' => $users,
             'message' => __('messages.success.retrieved', ['resource' => __('messages.counts.users', ['count' => $users->count()])])
         ]);
     }
-    
+
     /**
      * Store a newly created resource in storage.
      */
@@ -737,16 +737,16 @@ class UserController extends Controller
             'password' => 'required|string|min:8|confirmed',
             'role' => 'required|in:admin,manager,user,guest'
         ]);
-        
+
         $user = $this->userService->createUser($validated);
-        
+
         return response()->json([
             'success' => true,
             'data' => $user,
             'message' => __('messages.success.created', ['resource' => __('fields.name.label')])
         ], 201);
     }
-    
+
     /**
      * Display the specified resource.
      */
@@ -758,7 +758,7 @@ class UserController extends Controller
             'message' => __('messages.success.retrieved', ['resource' => __('fields.name.label')])
         ]);
     }
-    
+
     /**
      * Update the specified resource in storage.
      */
@@ -769,23 +769,23 @@ class UserController extends Controller
             'email' => 'sometimes|email|unique:users,email,' . $user->id,
             'role' => 'sometimes|in:admin,manager,user,guest'
         ]);
-        
+
         $user = $this->userService->updateUser($user, $validated);
-        
+
         return response()->json([
             'success' => true,
             'data' => $user,
             'message' => __('messages.success.updated', ['resource' => __('fields.name.label')])
         ]);
     }
-    
+
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(User $user): JsonResponse
     {
         $this->userService->deleteUser($user);
-        
+
         return response()->json([
             'success' => true,
             'message' => __('messages.success.deleted', ['resource' => __('fields.name.label')])
@@ -814,41 +814,41 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class UserTranslationTest extends TestCase
 {
     use RefreshDatabase;
-    
+
     /** @test */
     public function it_loads_user_field_translations(): void
     {
         $this->app->setLocale('it');
-        
+
         $this->assertEquals('Nome', __('fields.name.label'));
         $this->assertEquals('Inserisci il nome completo', __('fields.name.placeholder'));
         $this->assertEquals('Il nome verrà utilizzato per identificare l\'utente nel sistema', __('fields.name.help'));
     }
-    
+
     /** @test */
     public function it_loads_user_action_translations(): void
     {
         $this->app->setLocale('it');
-        
+
         $this->assertEquals('Nuovo Utente', __('actions.create.label'));
         $this->assertEquals('Crea Nuovo Utente', __('actions.create.modal.heading'));
         $this->assertEquals('Utente creato con successo', __('actions.create.messages.success'));
     }
-    
+
     /** @test */
     public function it_loads_user_validation_translations(): void
     {
         $this->app->setLocale('it');
-        
+
         $this->assertEquals('Il nome è obbligatorio', __('validation.custom.name.required'));
         $this->assertEquals('L\'email deve essere valida', __('validation.custom.email.email'));
     }
-    
+
     /** @test */
     public function it_handles_pluralization_correctly(): void
     {
         $this->app->setLocale('it');
-        
+
         $this->assertEquals('Nessun utente', trans_choice('messages.counts.users', 0));
         $this->assertEquals('Un utente', trans_choice('messages.counts.users', 1));
         $this->assertEquals('5 utenti', trans_choice('messages.counts.users', 5, ['count' => 5]));
@@ -873,30 +873,30 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class UserResourceTest extends TestCase
 {
     use RefreshDatabase;
-    
+
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         $this->actingAs(User::factory()->create(['role' => 'admin']));
     }
-    
+
     /** @test */
     public function it_displays_user_list_with_correct_translations(): void
     {
         $response = $this->get('/admin/users');
-        
+
         $response->assertStatus(200);
         $response->assertSee(__('actions.create.label'));
         $response->assertSee(__('fields.name.label'));
         $response->assertSee(__('fields.email.label'));
     }
-    
+
     /** @test */
     public function it_creates_user_with_correct_validation_messages(): void
     {
         $response = $this->post('/admin/users', []);
-        
+
         $response->assertSessionHasErrors([
             'name' => __('validation.custom.name.required'),
             'email' => __('validation.custom.email.required'),
@@ -921,7 +921,7 @@ class UserResourceTest extends TestCase
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025  
-**Versione**: 2.0.0  
-**Autore**: Team Laraxot  
+**Ultimo aggiornamento**: Gennaio 2025
+**Versione**: 2.0.0
+**Autore**: Team Laraxot
 **Mantenuto da**: Community Laraxot

@@ -11,5 +11,5 @@ Ricordarsi di modificare dentro laravel\config\event-sourcing.php, in quanto si 
 ```php
     // 'stored_event_model' => Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent::class,
     'stored_event_model' => Modules\Activity\Models\StoredEvent::class,
-``` 
+```
 per memorizzare gli eventi dentro la tabella stored_events

@@ -6,7 +6,7 @@
 
 **Genesis** è uno starter kit per il TALL Stack (Tailwind CSS, Alpine.js, Laravel, Livewire) costruito con **Laravel Folio** e **Livewire Volt**. È stato creato da TheDevDojo e rappresenta un esempio pratico e completo di come utilizzare Folio e Volt insieme in un'applicazione reale.
 
-**Repository**: [thedevdojo/genesis](https://github.com/thedevdojo/genesis)  
+**Repository**: [thedevdojo/genesis](https://github.com/thedevdojo/genesis)
 **Articolo Laravel News**: [Genesis is a Starter Kit for the TALL Stack](https://laravel-news.com/genesis-starter-kit)
 
 ---
@@ -210,19 +210,19 @@ state(['user' => fn() => auth()->user()]);
             <!-- Form fields -->
         </form>
     @endvolt
-    
+
     function updateProfile(): void
     {
         $this->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email,' . $this->user->id,
         ]);
-        
+
         $this->user->update([
             'name' => $this->name,
             'email' => $this->email,
         ]);
-        
+
         session()->flash('message', 'Profile updated!');
     }
 </x-layouts.app>
@@ -388,5 +388,5 @@ npm upgrade
 
 ---
 
-**Versione**: 1.0  
+**Versione**: 1.0
 **Ultimo Aggiornamento**: 2025-01-27

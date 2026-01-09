@@ -154,4 +154,4 @@ I pulsanti sono componenti fondamentali per l'interazione dell'utente. Questo co
 3. **Accessibilità e SEO**
    - Mantenere una struttura semantica
    - Implementare keyboard navigation
-   - Utilizzare attributi ARIA appropriati 
+   - Utilizzare attributi ARIA appropriati

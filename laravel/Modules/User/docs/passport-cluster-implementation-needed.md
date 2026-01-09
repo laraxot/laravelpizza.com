@@ -1,7 +1,7 @@
 # Passport Cluster - Implementazione Necessaria
 
-**Data**: 2025-01-22  
-**Status**: 🔴 DA IMPLEMENTARE  
+**Data**: 2025-01-22
+**Status**: 🔴 DA IMPLEMENTARE
 **Metodologia**: Super Mucca
 
 ---
@@ -102,7 +102,7 @@ class OauthClientResource extends XotBaseResource
 {
     protected static ?string $cluster = Passport::class;
     protected static ?string $model = OauthClient::class;
-    
+
     /**
      * @return array<string, Component>
      */
@@ -112,7 +112,7 @@ class OauthClientResource extends XotBaseResource
             // Schema components
         ];
     }
-    
+
     /**
      * @return array<string, class-string>
      */
@@ -194,6 +194,6 @@ class ListOauthClients extends XotBaseListRecords
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: 🔴 DA IMPLEMENTARE

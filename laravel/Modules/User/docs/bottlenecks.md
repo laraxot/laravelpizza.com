@@ -32,7 +32,7 @@ class OptimizeSessionsTable extends Migration
             $table->index(['user_id', 'last_activity']);
         });
     }
-    
+
     public function down()
             $table->dropIndex(['user_id', 'last_activity']);
 }
@@ -72,7 +72,7 @@ use Illuminate\Auth\Middleware\Authenticate as BaseAuthenticate;
 class OptimizedAuthenticate extends BaseAuthenticate
     public function handle($request, Closure $next, ...$guards)
         $this->authenticate($request, $guards);
-        
+
         // Se l'utente è autenticato, utilizza la versione cached
         if ($request->user()) {
             $cachedUser = $this->userService->findById($request->user()->id);

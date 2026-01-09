@@ -7,10 +7,8 @@ section: content
 
 # links links
 
-
 ...
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di links.md
 * [links.md](../../../Gdpr/docs/links.md)
@@ -24,9 +22,6 @@ section: content
 * [links.md](../../../Cms/docs/links.md)
 * [links.md](../../../../Themes/One/docs/links.md)
 
-
 ### Versione Incoming
 
-
 ---
-

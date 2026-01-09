@@ -51,7 +51,7 @@ class UserResource extends Resource
                     ->imageResizeTargetWidth('200')
                     ->imageResizeTargetHeight('200')
                     ->maxSize(2048),
-                    
+
                 TextInput::make('name')
                     ->required()
                     ->maxLength(255)
@@ -61,7 +61,7 @@ class UserResource extends Resource
                             $set('profile_updated', true);
                         }
                     }),
-                    
+
                 TextInput::make('email')
                     ->email()
                     ->required()
@@ -73,7 +73,7 @@ class UserResource extends Resource
                             $set('requires_verification', true);
                         }
                     }),
-                    
+
                 Select::make('language')
                     ->options([
                         'en' => '🇺🇸 English',
@@ -84,7 +84,7 @@ class UserResource extends Resource
                     ])
                     ->default('en')
                     ->required(),
-                    
+
                 Select::make('timezone')
                     ->options(collect(timezone_identifiers_list())->mapWithKeys(
                         fn($tz) => [$tz => $tz]
@@ -92,7 +92,7 @@ class UserResource extends Resource
                     ->default('UTC')
                     ->searchable(),
             ]),
-            
+
             Section::make('Access Control')->schema([
                 Select::make('roles')
                     ->relationship('roles', 'name')
@@ -106,13 +106,13 @@ class UserResource extends Resource
                             $set('requires_mfa', true);
                         }
                     }),
-                    
+
                 Select::make('teams')
                     ->relationship('teams', 'name')
                     ->multiple()
                     ->preload()
                     ->searchable(),
-                    
+
                 Toggle::make('is_active')
                     ->default(true)
                     ->live()
@@ -122,36 +122,36 @@ class UserResource extends Resource
                             activity()->performedOn($record)->log('User deactivated');
                         }
                     }),
-                    
+
                 DateTimePicker::make('email_verified_at')
                     ->label('Email Verified At')
                     ->native(false)
                     ->disabled()
                     ->visibleOn(['view', 'edit']),
             ]),
-            
+
             Section::make('Security Settings')->schema([
                 Toggle::make('two_factor_enabled')
                     ->disabled()
                     ->label('Two-Factor Authentication')
                     ->helperText('Managed by user in their profile'),
-                    
+
                 Toggle::make('requires_mfa')
                     ->label('Require MFA for Admin Access')
                     ->visible(fn($get) => collect($get('roles') ?? [])->intersect(['admin', 'super-admin'])->isNotEmpty()),
-                    
+
                 TextInput::make('failed_login_attempts')
                     ->numeric()
                     ->disabled()
                     ->default(0)
                     ->visibleOn(['view', 'edit']),
-                    
+
                 DateTimePicker::make('locked_until')
                     ->label('Account Locked Until')
                     ->native(false)
                     ->visibleOn(['view', 'edit']),
             ])->visibleOn(['view', 'edit']),
-            
+
             Section::make('Activity Information')->schema([
                 ViewField::make('login_activity')
                     ->view('user::login-activity')
@@ -172,20 +172,20 @@ class UserResource extends Resource
                 ImageColumn::make('avatar')
                     ->circular()
                     ->size(50)
-                    ->defaultImageUrl(fn($record) => 
+                    ->defaultImageUrl(fn($record) =>
                         'https://www.gravatar.com/avatar/' . md5($record->email) . '?d=mp'
                     ),
-                    
+
                 TextColumn::make('name')
                     ->searchable()
                     ->sortable()
                     ->weight('semibold'),
-                    
+
                 TextColumn::make('email')
                     ->searchable()
                     ->sortable()
                     ->copyable(),
-                    
+
                 BadgeColumn::make('roles')
                     ->formatStateUsing(function($record) {
                         return $record->roles->pluck('name')->join(', ');
@@ -196,7 +196,7 @@ class UserResource extends Resource
                         'success' => fn($state) => str_contains($state, 'user'),
                     ])
                     ->limit(30),
-                    
+
                 BadgeColumn::make('language')
                     ->formatStateUsing(fn($state) => match($state) {
                         'en' => '🇺🇸 EN',
@@ -206,7 +206,7 @@ class UserResource extends Resource
                         'de' => '🇩🇪 DE',
                         default => $state,
                     }),
-                    
+
                 IconColumn::make('email_verified_at')
                     ->boolean()
                     ->label('Verified')
@@ -215,7 +215,7 @@ class UserResource extends Resource
                         'success' => true,
                         'danger' => false,
                     ]),
-                    
+
                 IconColumn::make('two_factor_enabled')
                     ->boolean()
                     ->label('2FA')
@@ -223,7 +223,7 @@ class UserResource extends Resource
                         'success' => true,
                         'gray' => false,
                     ]),
-                    
+
                 BadgeColumn::make('online_status')
                     ->label('Status')
                     ->getStateUsing(function($record) {
@@ -236,7 +236,7 @@ class UserResource extends Resource
                     })
                     ->colors([
                         'success' => 'online',
-                        'warning' => 'recent', 
+                        'warning' => 'recent',
                         'gray' => 'offline',
                     ])
                     ->icons([
@@ -244,13 +244,13 @@ class UserResource extends Resource
                         'heroicon-o-clock' => 'recent',
                         'heroicon-o-minus' => 'offline',
                     ]),
-                    
+
                 TextColumn::make('last_login_at')
                     ->dateTime()
                     ->sortable()
                     ->since()
                     ->placeholder('Never'),
-                    
+
                 IconColumn::make('is_active')
                     ->boolean()
                     ->sortable(),
@@ -269,24 +269,24 @@ class UserResource extends Resource
                             ->performedOn($record)
                             ->causedBy(auth()->user())
                             ->log('User impersonation started');
-                            
+
                         session(['impersonate' => $record->id]);
                         return redirect('/');
                     }),
-                    
+
                 Action::make('send_verification')
                     ->icon('heroicon-o-envelope')
                     ->color('info')
                     ->visible(fn($record) => is_null($record->email_verified_at))
                     ->action(function($record) {
                         $record->sendEmailVerificationNotification();
-                        
+
                         Notification::make()
                             ->title('Verification email sent')
                             ->success()
                             ->send();
                     }),
-                    
+
                 Action::make('reset_2fa')
                     ->icon('heroicon-o-shield-exclamation')
                     ->color('danger')
@@ -296,17 +296,17 @@ class UserResource extends Resource
                     ->modalDescription('This will disable 2FA for this user. They will need to set it up again.')
                     ->action(function($record) {
                         app(TwoFactorService::class)->disable($record);
-                        
+
                         // Notify user
                         $record->notify(new TwoFactorResetNotification());
-                        
+
                         // Log action
                         activity()
                             ->performedOn($record)
                             ->causedBy(auth()->user())
                             ->log('Two-factor authentication reset');
                     }),
-                    
+
                 Action::make('unlock_account')
                     ->icon('heroicon-o-lock-open')
                     ->color('success')
@@ -323,13 +323,13 @@ class UserResource extends Resource
                     ->icon('heroicon-o-check-circle')
                     ->color('success')
                     ->action(fn($records) => $records->each->update(['is_active' => true])),
-                    
+
                 BulkAction::make('bulk_deactivate')
                     ->icon('heroicon-o-x-circle')
                     ->color('danger')
                     ->requiresConfirmation()
                     ->action(fn($records) => $records->each->update(['is_active' => false])),
-                    
+
                 BulkAction::make('send_notification')
                     ->icon('heroicon-o-bell')
                     ->form([
@@ -348,23 +348,23 @@ class UserResource extends Resource
                 SelectFilter::make('roles')
                     ->relationship('roles', 'name')
                     ->multiple(),
-                    
+
                 SelectFilter::make('teams')
                     ->relationship('teams', 'name')
                     ->multiple(),
-                    
+
                 Filter::make('active_users')
                     ->query(fn($query) => $query->where('is_active', true))
                     ->label('Active Only'),
-                    
+
                 Filter::make('verified_users')
                     ->query(fn($query) => $query->whereNotNull('email_verified_at'))
                     ->label('Verified Email'),
-                    
+
                 Filter::make('2fa_enabled')
                     ->query(fn($query) => $query->where('two_factor_enabled', true))
                     ->label('2FA Enabled'),
-                    
+
                 Filter::make('online_users')
                     ->query(fn($query) => $query->where('last_login_at', '>', now()->subMinutes(5)))
                     ->label('Online Now'),
@@ -381,29 +381,29 @@ class UserTeamResource extends Resource
 {
     protected static ?string $parentResource = UserResource::class;
     protected static string $relationship = 'teams';
-    
+
     public static function schema(): Schema
     {
         return Schema::make([
             Select::make('team_id')
                 ->relationship('team', 'name')
                 ->required(),
-                
+
             Select::make('role')
                 ->options([
                     'owner' => 'Owner',
-                    'admin' => 'Admin', 
+                    'admin' => 'Admin',
                     'member' => 'Member',
                     'viewer' => 'Viewer',
                 ])
                 ->required(),
-                
+
             DateTimePicker::make('joined_at')
                 ->default(now())
                 ->native(false),
         ]);
     }
-    
+
     // URL: /admin/users/123/teams
 }
 
@@ -412,7 +412,7 @@ class TeamUserResource extends Resource
 {
     protected static ?string $parentResource = TeamResource::class;
     protected static string $relationship = 'users';
-    
+
     // URL: /admin/teams/456/users
 }
 ```
@@ -429,7 +429,7 @@ class SecurityDashboardWidget extends Widget
             ->columns([
                 TextColumn::make('metric')
                     ->weight('semibold'),
-                    
+
                 TextColumn::make('value')
                     ->numeric()
                     ->color(fn($record) => match($record['status']) {
@@ -438,18 +438,18 @@ class SecurityDashboardWidget extends Widget
                         'good' => 'success',
                         default => 'info',
                     }),
-                    
+
                 BadgeColumn::make('status')
                     ->colors([
                         'danger' => 'critical',
                         'warning' => 'warning',
                         'success' => 'good',
                     ]),
-                    
+
                 TextColumn::make('trend')
                     ->formatStateUsing(fn($state) => $state > 0 ? "+{$state}%" : "{$state}%")
                     ->color(fn($state) => $state > 0 ? 'danger' : 'success'),
-                    
+
                 TextColumn::make('last_updated')
                     ->since(),
             ])
@@ -464,7 +464,7 @@ class SecurityDashboardWidget extends Widget
             ])
             ->poll('30s');
     }
-    
+
     private function getSecurityMetrics(): array
     {
         return [
@@ -512,7 +512,7 @@ class SecurityDashboardWidget extends Widget
 class PermissionManagementWidget extends Widget
 {
     protected static string $view = 'user::widgets.permission-matrix';
-    
+
     public function getViewData(): array
     {
         return [
@@ -521,22 +521,22 @@ class PermissionManagementWidget extends Widget
             'matrix' => $this->buildPermissionMatrix(),
         ];
     }
-    
+
     private function buildPermissionMatrix(): array
     {
         $roles = Role::with('permissions')->get();
         $permissions = Permission::all();
-        
+
         $matrix = [];
-        
+
         foreach ($permissions as $permission) {
             $matrix[$permission->name] = [];
-            
+
             foreach ($roles as $role) {
                 $matrix[$permission->name][$role->name] = $role->hasPermissionTo($permission);
             }
         }
-        
+
         return $matrix;
     }
 }
@@ -559,7 +559,7 @@ public function accountSettings(): Schema
         Section::make('Profile Settings')->schema([
             // User can edit own profile
         ])->authorizeUsing('update', auth()->user()),
-        
+
         Section::make('Security Settings')->schema([
             // 2FA setup, device management
         ])->authorizeUsing('manage-security', auth()->user()),
@@ -732,7 +732,7 @@ class UserAnalyticsService
 4. ✅ Extended maintenance window available
 5. ✅ Emergency response team ready
 
-**Strategic approach**: 
+**Strategic approach**:
 - Mantenere User module su Filament 3 stabile
 - Migrare TUTTI gli altri moduli prima
 - Pianificare User migration come progetto dedicato

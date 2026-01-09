@@ -57,10 +57,9 @@
 1. La documentazione dei componenti UI deve essere in `Modules/UI/project_docs/`
 2. Mantenere collegamenti bidirezionali aggiornati
 3. Seguire le convenzioni di naming del progetto
-4. Aggiornare la documentazione quando vengono aggiunti nuovi componenti 
+4. Aggiornare la documentazione quando vengono aggiunti nuovi componenti
 ## Collegamenti tra versioni di filament-components.md
 * [filament-components.md](../../User/project_docs/best-practices/filament-components.md)
 * [filament-components.md](../../Cms/project_docs/best-practices/filament-components.md)
 * [filament-components.md](../../Cms/project_docs/filament-components.md)
 * [filament-components.md](../../../project_docs/rules/filament-components.md)
-

@@ -1,8 +1,8 @@
 # PHPStan Syntax Fixes - Modulo User
 
-**Data**: 2025-01-11  
-**Versione PHPStan**: 1.12.x  
-**Livello**: max  
+**Data**: 2025-01-11
+**Versione PHPStan**: 1.12.x
+**Livello**: max
 **Status**: ✅ NAMESPACE ORDERING FIXATO
 
 ## 🔧 Correzione Implementata
@@ -69,7 +69,7 @@ namespace Your\Namespace;          // 3. Namespace declaration (PRIMA!)
 // Blank line
 
 use function Safe\something;      // 4. Function imports
-use const SOME_CONSTANT;          // 5. Constant imports  
+use const SOME_CONSTANT;          // 5. Constant imports
 use Some\Class;                    // 6. Class imports
 
 // Blank line
@@ -173,7 +173,7 @@ use function Safe\json_decode;     // ✅ Corretto
 use function Safe\something;
 namespace App;
 
-// ❌ ERRORE 2: Class import prima del namespace  
+// ❌ ERRORE 2: Class import prima del namespace
 use App\Model;
 namespace App;
 
@@ -190,7 +190,7 @@ use App\Model;
 
 ---
 
-**Fix Completato**: 2025-01-11  
-**Priority**: ALTA  
-**Impact**: MEDIO (Bloccava analisi test User)  
+**Fix Completato**: 2025-01-11
+**Priority**: ALTA
+**Impact**: MEDIO (Bloccava analisi test User)
 **Standard**: PSR-12 Compliant ✅

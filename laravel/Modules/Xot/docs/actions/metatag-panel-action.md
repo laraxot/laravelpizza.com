@@ -36,4 +36,4 @@ L'azione accetta un'istanza di `Panel` come parametro di riferimento e applica l
 - Risoluzione dei conflitti di merge
 - Aggiunta di type hints appropriati
 - Implementazione della gestione degli errori
-- Documentazione del codice 
+- Documentazione del codice

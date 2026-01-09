@@ -2,7 +2,7 @@
 
 ## Situazione Critica Identificata
 
-**Data audit**: 2025-01-06  
+**Data audit**: 2025-01-06
 **Gravità**: CRITICA - 8 factory mancanti su 11 models
 
 ## Models senza Factory
@@ -12,13 +12,13 @@
 - **Scopo**: Indirizzi geografici completi
 - **Priorità**: CRITICA - Usato in tutto il sistema
 
-### 2. CountyFactory.php  
+### 2. CountyFactory.php
 - **Model**: County.php
 - **Scopo**: Contee/Province geografiche
 - **Priorità**: ALTA
 
 ### 3. GeoNamesCapFactory.php
-- **Model**: GeoNamesCap.php  
+- **Model**: GeoNamesCap.php
 - **Scopo**: Codici postali GeoNames
 - **Priorità**: ALTA
 
@@ -44,13 +44,13 @@
 
 ### 8. StateFactory.php
 - **Model**: State.php
-- **Scopo**: Stati/Regioni geografiche  
+- **Scopo**: Stati/Regioni geografiche
 - **Priorità**: ALTA
 
 ## Factory Esistenti ✅
 
 - ComuneFactory.php ✅
-- ProvinceFactory.php ✅  
+- ProvinceFactory.php ✅
 - RegionFactory.php ✅
 
 ## Impatto Critico
@@ -75,7 +75,7 @@
 
 ### Gerarchia Corretta
 1. **Region** (Regione) ✅ Factory presente
-2. **Province** (Provincia) ✅ Factory presente  
+2. **Province** (Provincia) ✅ Factory presente
 3. **Comune** (Comune) ✅ Factory presente
 4. **Address** (Indirizzo) ❌ MANCA
 5. **Place** (Luogo) ❌ MANCA
@@ -99,7 +99,7 @@
 - [ ] PlaceFactory.php
 - [ ] LocationFactory.php
 
-### Priorità ALTA  
+### Priorità ALTA
 - [ ] StateFactory.php
 - [ ] CountyFactory.php
 - [ ] GeoNamesCapFactory.php
@@ -118,7 +118,7 @@
 ```
 
 ### Place (CRITICO)
-```php  
+```php
 // Relazioni principali
 - belongsTo: PlaceType, Address
 - morphTo: Placeable
@@ -126,7 +126,7 @@
 
 ### Location (ALTA)
 ```php
-// Relazioni principali  
+// Relazioni principali
 - belongsTo: Address, Place
 - hasMany: Locations (nested)
 ```
@@ -152,5 +152,5 @@
 - [Sushi Implementation](./sushi-implementation.md)
 
 ---
-**Errore gravissimo da non ripetere mai più**  
+**Errore gravissimo da non ripetere mai più**
 *Ultimo aggiornamento: 2025-01-06*

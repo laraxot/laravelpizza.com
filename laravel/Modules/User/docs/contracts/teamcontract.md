@@ -42,4 +42,4 @@ L'interfaccia `TeamContract` definisce il contratto per i team nel sistema.
 - [[UserContract]]
 - [[TeamInvitation]]
 - [[Team]]
-- [[User]] 
+- [[User]]

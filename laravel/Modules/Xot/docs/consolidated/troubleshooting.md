@@ -306,11 +306,11 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 class MioModuloServiceProvider extends XotBaseServiceProvider
 {
     protected string $module_name = 'MioModulo';
-    
+
     public function boot(): void
     {
         parent::boot(); // IMPORTANTE: chiamare sempre parent::boot()
-        
+
         // Solo personalizzazioni specifiche
     }
 }
@@ -341,13 +341,13 @@ SQLSTATE[42S02]: Base table or view not found
 return new class extends XotBaseMigration
 {
     protected string $table_name = 'mio_modello';
-    
+
     public function up(): void
     {
         if ($this->hasTable($this->table_name)) {
             return; // Importante: verificare esistenza
         }
-        
+
         Schema::create($this->table_name, function (Blueprint $table) {
             // Schema
         });
@@ -363,7 +363,7 @@ public function up(): void
     if ($this->hasTable($this->table_name)) {
         return;
     }
-    
+
     // Verificare esistenza colonne
     if ($this->hasColumn($this->table_name, 'nuova_colonna')) {
         return;
@@ -400,7 +400,7 @@ class MioModelloTest extends XotBaseTestCase
     {
         parent::setUp();
     }
-    
+
     /** @test */
     public function it_can_create_model(): void
     {
@@ -408,7 +408,7 @@ class MioModelloTest extends XotBaseTestCase
             'nome' => 'Test',
             'descrizione' => 'Test Description'
         ]);
-        
+
         $this->assertModelExists($modello);
     }
 }
@@ -440,11 +440,11 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class MioModelloTest extends XotBaseTestCase
 {
     use RefreshDatabase;
-    
+
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         // Setup database per i test
     }
 }
@@ -484,12 +484,12 @@ use Modules\MioModulo\app\Models\MioModello;
 class MioModelloPolicy
 {
     use HandlesAuthorization;
-    
+
     public function viewAny(User $user): bool
     {
         return $user->can('viewAny', MioModello::class);
     }
-    
+
     public function view(User $user, MioModello $modello): bool
     {
         return $user->can('view', $modello);
@@ -535,7 +535,7 @@ try {
         'data' => $data,
         'error' => $e->getMessage()
     ]);
-    
+
     throw new ModelCreationException('Impossibile creare il modello', 0, $e);
 }
 ```

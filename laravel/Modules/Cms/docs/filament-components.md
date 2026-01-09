@@ -2,7 +2,7 @@
 > **Collegamenti correlati**
 > - [FILAMENT_COMPONENTS.md tema One](../../../../Themes/One/docs/FILAMENT_COMPONENTS.md)
 
-# Utilizzo dei Componenti Filament 
+# Utilizzo dei Componenti Filament
 
 ## Regola Fondamentale
 
@@ -53,7 +53,7 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
     Pulsante Base
 </x-filament::button>
 
-<x-filament::button 
+<x-filament::button
     color="success"           {{-- primary, secondary, success, warning, danger --}}
     size="md"                {{-- xs, sm, md, lg, xl --}}
     icon="heroicon-o-plus"   {{-- qualsiasi icona Heroicon --}}
@@ -73,7 +73,7 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
     Base
 </x-filament::badge>
 
-<x-filament::badge 
+<x-filament::badge
     color="success"         {{-- primary, secondary, success, warning, danger --}}
     size="md"              {{-- xs, sm, md, lg --}}
     icon="heroicon-o-check" {{-- qualsiasi icona Heroicon --}}
@@ -102,10 +102,10 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 
 ```blade
 <x-filament::input.wrapper>
-    <x-filament::input 
-        type="text" 
-        wire:model="name" 
-        placeholder="Nome" 
+    <x-filament::input
+        type="text"
+        wire:model="name"
+        placeholder="Nome"
     />
 </x-filament::input.wrapper>
 
@@ -149,4 +149,3 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 * [filament-components.md](laravel/Modules/Cms/docs/best-practices/filament-components.md)
 * [filament-components.md](laravel/Modules/Cms/docs/filament-components.md)
 * [filament-components.md](laravel/docs/rules/filament-components.md)
-

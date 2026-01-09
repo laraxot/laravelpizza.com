@@ -45,7 +45,7 @@ Questo documento descrive i pattern comuni utilizzati nel tema Meetup per implem
 <x-layouts.app>
     @volt('event-detail')
         <h1>{{ $event->title }}</h1>
-        
+
         @volt('event-actions')
             @if(auth()->check())
                 <button wire:click="register">Register</button>
@@ -53,7 +53,7 @@ Questo documento descrive i pattern comuni utilizzati nel tema Meetup per implem
                 <a href="/login">Login to Register</a>
             @endif
         @endvolt
-        
+
         function register()
         {
             app(RegisterEventAction::class)->execute($this->event, auth()->user());
@@ -74,17 +74,17 @@ Questo documento descrive i pattern comuni utilizzati nel tema Meetup per implem
         <form wire:submit="register">
             <input type="text" wire:model="name" />
             @error('name') <span>{{ $message }}</span> @enderror
-            
+
             <input type="email" wire:model="email" />
             @error('email') <span>{{ $message }}</span> @enderror
-            
+
             <input type="password" wire:model="password" />
             @error('password') <span>{{ $message }}</span> @enderror
-            
+
             <button type="submit">Register</button>
         </form>
     @endvolt
-    
+
     function register()
     {
         $this->validate([
@@ -92,13 +92,13 @@ Questo documento descrive i pattern comuni utilizzati nel tema Meetup per implem
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8',
         ]);
-        
+
         app(RegisterUserAction::class)->execute([
             'name' => $this->name,
             'email' => $this->email,
             'password' => $this->password,
         ]);
-        
+
         return redirect('/dashboard');
     }
 </x-layouts.auth>
@@ -121,12 +121,12 @@ Questo documento descrive i pattern comuni utilizzati nel tema Meetup per implem
             <x-stat-card label="Events" :value="$stats['events']" />
             <x-stat-card label="Messages" :value="$stats['messages']" />
         </div>
-        
+
         @volt('recent-activity')
             @php
                 $activities = auth()->user()->activities()->latest()->limit(10)->get();
             @endphp
-            
+
             <div class="activity-list">
                 @foreach($activities as $activity)
                     <x-activity-item :activity="$activity" />
@@ -156,20 +156,20 @@ Questo documento descrive i pattern comuni utilizzati nel tema Meetup per implem
                 <a href="?channel=general">General</a>
                 <a href="?channel=laravel">Laravel</a>
             </div>
-            
+
             @volt('chat-messages')
                 <div class="messages" wire:poll.2s>
                     @foreach($messages as $message)
                         <x-chat-message :message="$message" />
                     @endforeach
                 </div>
-                
+
                 <form wire:submit="sendMessage">
                     <input type="text" wire:model="messageText" />
                     <button type="submit">Send</button>
                 </form>
             @endvolt
-            
+
             function sendMessage()
             {
                 app(SendChatMessageAction::class)->execute(
@@ -177,7 +177,7 @@ Questo documento descrive i pattern comuni utilizzati nel tema Meetup per implem
                     auth()->user(),
                     $this->messageText
                 );
-                
+
                 $this->messageText = '';
             }
         </div>
@@ -231,11 +231,11 @@ Questo documento descrive i pattern comuni utilizzati nel tema Meetup per implem
 </head>
 <body>
     <x-navigation />
-    
+
     <main>
         {{ $slot }}
     </main>
-    
+
     <x-footer />
 </body>
 </html>
@@ -985,4 +985,3 @@ it('renders button with ghost variant', function () {
 
 **Versione**: 2.0
 **Ultimo Aggiornamento**: 2025-01-29
-

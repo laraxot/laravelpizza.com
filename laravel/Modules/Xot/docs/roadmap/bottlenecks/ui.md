@@ -13,7 +13,7 @@
    ```php
    // Aggiungere logging per tracciare i re-render
    use function Livewire\Volt\{state, computed, effect};
-   
+
    effect(function() {
        logger()->debug('Component re-rendered', [
            'component' => static::class,
@@ -29,10 +29,10 @@
    public function getFilteredData() {
        return $this->data->filter(...);
    }
-   
+
    // Dopo
    use Illuminate\Support\Facades\Cache;
-   
+
    public function getFilteredData() {
        return Cache::remember("filtered_data_{$this->id}", now()->addMinutes(5), function() {
            return $this->data->filter(...);
@@ -44,7 +44,7 @@
    ```php
    // Prima
    <x-data-table :items="$this->allItems" />
-   
+
    // Dopo
    <x-data-table :items="$this->getVisibleItems()" />
    ```
@@ -67,7 +67,7 @@
    ```js
    // Prima
    import { DataTable } from './components';
-   
+
    // Dopo
    const DataTable = () => import('./components/DataTable');
    ```
@@ -76,7 +76,7 @@
    ```js
    // Prima
    import * as utils from './utils';
-   
+
    // Dopo
    import { only, needed, functions } from './utils';
    ```
@@ -85,7 +85,7 @@
    ```php
    // Prima
    <x-data-table />
-   
+
    // Dopo
    <x-lazy-load>
        <x-data-table />
@@ -115,9 +115,9 @@
    ```php
    // Prima
    <button>Submit</button>
-   
+
    // Dopo
-   <button 
+   <button
        aria-label="{{ __('ui.submit_form') }}"
        aria-describedby="submit-help"
    >
@@ -132,11 +132,11 @@
    ```php
    // Prima
    <div class="menu">
-   
+
    // Dopo
-   <div 
-       class="menu" 
-       role="menu" 
+   <div
+       class="menu"
+       role="menu"
        tabindex="0"
        @keydown.arrow-up.prevent="focusPrevious"
        @keydown.arrow-down.prevent="focusNext"
@@ -167,8 +167,7 @@
 ## Collegamenti
 - [Performance Guidelines](../../performance/guidelines.md)
 - [Accessibility Standards](../../accessibility/standards.md)
-- [Testing Protocols](../../testing/protocols.md) 
+- [Testing Protocols](../../testing/protocols.md)
 ## Collegamenti tra versioni di ui.md
 * [ui.md](../../../Xot/docs/roadmap/bottlenecks/ui.md)
 * [ui.md](../../../UI/docs/ui.md)
-

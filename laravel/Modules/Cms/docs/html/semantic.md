@@ -151,4 +151,4 @@ Contenuto autonomo con didascalia:
 - [Componenti HTML](../components/html.md)
 - [Accessibilità](../accessibility/README.md)
 
-[Fonte: W3Schools](https://www.w3schools.com/html/html5_semantic_elements.asp) 
+[Fonte: W3Schools](https://www.w3schools.com/html/html5_semantic_elements.asp)

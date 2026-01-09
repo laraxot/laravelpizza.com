@@ -38,7 +38,7 @@ use Modules\Xot\Models\Traits\TypedHasRecursiveRelationships;
 class Menu extends BaseModel implements HasRecursiveRelationshipsContract
 {
     use \Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
-    
+
     // Menu può avere parent e children, formando una struttura ad albero
     // Utilizza i metodi del contratto: parent(), children(), ancestors(), descendants()
 }
@@ -132,4 +132,3 @@ Questo componente incarna lo zen dell'auto-scoperta, creando automaticamente la 
 - [Relazioni Ricorsive (Contratto)](../../Xot/docs/recursive-relationships-contract.md)
 - [Documentazione Cms Blocks System](./content-blocks-system.md)
 - [Documentazione Cms Architecture](./architecture/)
-

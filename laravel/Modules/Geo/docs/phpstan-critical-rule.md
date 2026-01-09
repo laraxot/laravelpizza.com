@@ -130,4 +130,3 @@ Questa regola è documentata anche in:
 **RICORDA**: Il file `phpstan.neon` è SACRO. Non si tocca MAI. Punto.
 
 *Ultimo aggiornamento: Gennaio 2025*
-

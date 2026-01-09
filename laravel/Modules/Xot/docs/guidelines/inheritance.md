@@ -32,7 +32,7 @@ class Child extends Parent {
 /**
  * @inheritdoc
  * @override
- * 
+ *
  * Modifica il comportamento originale aggiungendo X
  */
 public function inheritedMethod()
@@ -85,4 +85,4 @@ class Child extends Parent {
 ## Risorse Utili
 - [Documentazione PHP su Ereditarietà](https://www.php.net/manual/en/language.oop5.inheritance.php)
 - [Principi SOLID](https://en.wikipedia.org/wiki/SOLID)
-- [PHPStan - Analisi Static](https://phpstan.org/) 
+- [PHPStan - Analisi Static](https://phpstan.org/)

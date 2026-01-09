@@ -69,18 +69,18 @@ $workflow->status->equals(PendingModeration::class); // true/false
 class ApproveDoctorRegistration extends Transition
 {
     private string $moderatorId;
-    
+
     public function __construct(string $moderatorId)
     {
         $this->moderatorId = $moderatorId;
     }
-    
+
     public function handle(DoctorRegistrationWorkflow $workflow): DoctorRegistrationState
     {
         $workflow->moderated_by = $this->moderatorId;
         $workflow->moderated_at = now();
         $workflow->save();
-        
+
         return new Approved($workflow);
     }
 }
@@ -104,7 +104,7 @@ class PendingModeration extends DoctorRegistrationState
         if ($state instanceof Approved) {
             return $this->model->hasValidDocuments();
         }
-        
+
         return parent::canTransitionTo($state);
     }
 }
@@ -251,7 +251,7 @@ $pendingWorkflows = DoctorRegistrationWorkflow::whereState('status', PendingMode
            if (!$workflow->hasValidDocuments()) {
                throw new InvalidTransitionException('Documents not valid');
            }
-           
+
            return new Approved($workflow);
        }
    }
@@ -274,4 +274,4 @@ $pendingWorkflows = DoctorRegistrationWorkflow::whereState('status', PendingMode
 
 - [Spatie Laravel Model States](https://spatie.be/project_docs/laravel-model-states)
 - [Laravel Events](https://laravel.com/project_docs/events)
-- [Queueable Actions](queueable-actions.md) 
+- [Queueable Actions](queueable-actions.md)

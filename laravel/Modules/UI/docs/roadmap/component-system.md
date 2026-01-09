@@ -194,4 +194,4 @@ protected function resolveLazyProp(string $key): mixed
 2. Implementare lazy loading
 3. Migliorare test coverage
 4. Documentare best practices
-5. Ottimizzare performance 
+5. Ottimizzare performance

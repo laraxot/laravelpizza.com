@@ -36,7 +36,7 @@ class MeetupServiceProvider extends XotBaseServiceProvider
     public string $name = 'Meetup';
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
-    
+
     // Il resto è gestito automaticamente da XotBaseServiceProvider
 }
 ```

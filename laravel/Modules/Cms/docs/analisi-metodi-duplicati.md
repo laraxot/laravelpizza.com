@@ -56,7 +56,7 @@ abstract class BaseModel extends XotBaseModel
 {
     // ✅ SOLO connection specifica del modulo
     protected $connection = 'cms';
-    
+
     // ✅ Tutto il resto ereditato da XotBaseModel
 }
 ```
@@ -130,7 +130,7 @@ Questo richiede logiche specifiche che NON vanno centralizzate.
    abstract class BaseModel extends Model {
        // Molte proprietà duplicate
    }
-   
+
    // Dopo (10 linee)
    abstract class BaseModel extends XotBaseModel {
        protected $connection = 'cms';
@@ -194,7 +194,7 @@ protected function casts(): array
 2. ✅ Test integrazione con TwentyOne
 3. ✅ Validazione rendering pagine
 
-**Tempo Totale:** 4 giorni  
+**Tempo Totale:** 4 giorni
 **Rischio:** 🟢 BASSO (modulo ben strutturato)
 
 ## Link Correlati
@@ -206,6 +206,5 @@ protected function casts(): array
 
 ---
 
-**Data:** 2025-10-15  
+**Data:** 2025-10-15
 **Status:** 📋 Draft per Review
-

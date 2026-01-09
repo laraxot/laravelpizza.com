@@ -29,27 +29,27 @@
 
 ### Politica Architetturale
 
-> "Non committare codice che non passa i quality check.  
-> Non procedere con nuove modifiche se quelle precedenti hanno errori.  
+> "Non committare codice che non passa i quality check.
+> Non procedere con nuove modifiche se quelle precedenti hanno errori.
 > La qualità è un requisito, non un optional."
 
 ### Religione del Codice
 
 **Comandamento**:
-> "Ogni modifica è un patto con la qualità.  
-> PHPStan è il guardiano della tipizzazione.  
-> PHPMD è il guardiano della complessità.  
-> PHP Insights è il guardiano della eccellenza.  
+> "Ogni modifica è un patto con la qualità.
+> PHPStan è il guardiano della tipizzazione.
+> PHPMD è il guardiano della complessità.
+> PHP Insights è il guardiano della eccellenza.
 > Rispetterai tutti e tre, sempre."
 
 ### Filosofia (Tao)
 
-> "Il codice di qualità è come l'acqua pura:  
-> trasparente (nessun errore),  
-> fluida (bassa complessità),  
-> salutare (best practices).  
-> 
-> I quality tools sono il filtro:  
+> "Il codice di qualità è come l'acqua pura:
+> trasparente (nessun errore),
+> fluida (bassa complessità),
+> salutare (best practices).
+>
+> I quality tools sono il filtro:
 > rimuovono impurità prima che inquinino il sistema."
 
 ## Comandi di Verifica
@@ -165,7 +165,7 @@ if [ $? -ne 0 ]; then
     # Correzioni...
 fi
 
-# PHP Insights  
+# PHP Insights
 ./vendor/bin/phpinsights -n --dir=Modules/Sigma
 if [ $? -ne 0 ]; then
     echo "⚠️ PHP Insights warnings - Review"
@@ -263,10 +263,10 @@ quality-check:
   steps:
     - name: PHPStan
       run: ./vendor/bin/phpstan analyze --level=10
-      
+
     - name: PHPMD
       run: ./vendor/bin/phpmd app text cleancode,codesize,design
-      
+
     - name: PHP Insights
       run: ./vendor/bin/phpinsights -n --min-quality=80
 ```
@@ -280,9 +280,8 @@ quality-check:
 
 ---
 
-**Creato**: 2025-01-29  
-**Tipo**: Regola Quality Gate Obbligatoria  
-**Applicazione**: Ogni modifica file  
-**Severità**: 🔴 CRITICA  
+**Creato**: 2025-01-29
+**Tipo**: Regola Quality Gate Obbligatoria
+**Applicazione**: Ogni modifica file
+**Severità**: 🔴 CRITICA
 **Memoria AI**: ID 10479003
-

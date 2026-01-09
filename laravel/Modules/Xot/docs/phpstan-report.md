@@ -51,4 +51,4 @@ protected $signature = 'user:set-current-team {team_id : The ID of the team}';
 1. Implementare la logica del comando `SetCurrentTeamCommand`
 2. Aggiornare la documentazione PHPDoc
 3. Implementare i test mancanti
-4. Eseguire nuovamente PHPStan dopo le correzioni 
+4. Eseguire nuovamente PHPStan dopo le correzioni

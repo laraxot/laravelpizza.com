@@ -51,9 +51,8 @@
 - [Componenti](packages/components.md)
 - [Styling](packages/styling.md)
 - [Performance](packages/performance.md)
-- [Accessibilità](packages/accessibility.md) 
+- [Accessibilità](packages/accessibility.md)
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di packages.md
 * [packages.md](../../../Gdpr/docs/packages.md)
@@ -66,9 +65,6 @@
 * [packages.md](../../../Media/docs/packages.md)
 * [packages.md](../../../Tenant/docs/packages.md)
 
-
 ### Versione Incoming
 
-
 ---
-

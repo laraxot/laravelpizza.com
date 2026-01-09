@@ -19,8 +19,3 @@
 ## note operative
 - ricordare di invocare `FieldRefreshAction::forField('nome_campo')` quando viene agganciata a componenti form per evitare set di state anonimi
 - mantenere l'uso delle Assert solo dove realmente necessario (niente assert ridondanti su variabili già tipizzate)
-
-
-
-
-

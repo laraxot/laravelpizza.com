@@ -28,7 +28,7 @@ public function iAmSuperAdmin(): bool
 
     // Utilizziamo un'asserzione per garantire che hasRole restituisca un booleano
     $result = $user->hasRole('super-admin');
-    
+
     return $result === true;
 }
 ```
@@ -53,9 +53,9 @@ if (method_exists($resource, 'getXlsFields')) {
 }
 
 return app(ExportXlsByCollection::class)->execute(
-    $rows, 
-    $filename, 
-    $transKey, 
+    $rows,
+    $filename,
+    $transKey,
     array_values($fields)
 );
 ```
@@ -85,11 +85,11 @@ if ($lazy->count() < 7) {
     // ...
     // Convertiamo l'array di campi in array<int|string, string>
     $stringFields = array_values($fields);
-    
+
     return app(ExportXlsByQuery::class)->execute(
-        $query, 
-        $filename, 
-        $stringFields, 
+        $query,
+        $filename,
+        $stringFields,
         null
     );
 }
@@ -117,9 +117,9 @@ if (method_exists($resource, 'getXlsFields')) {
 }
 
 return app(ExportXlsByCollection::class)->execute(
-    $rows, 
-    $filename, 
-    $transKey, 
+    $rows,
+    $filename,
+    $transKey,
     array_values($fields)
 );
 ```
@@ -134,4 +134,4 @@ return app(ExportXlsByCollection::class)->execute(
 
 4. **Uso di array_values()**: Per garantire che gli array abbiano chiavi numeriche consecutive, importante per la compatibilità dei tipi in alcune funzioni.
 
-5. **Utilizzo di Assert::isArray()**: Per verificare che le variabili siano effettivamente array prima di passarle a funzioni che richiedono array. 
+5. **Utilizzo di Assert::isArray()**: Per verificare che le variabili siano effettivamente array prima di passarle a funzioni che richiedono array.

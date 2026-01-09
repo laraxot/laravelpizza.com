@@ -95,7 +95,7 @@ class TenantControllerTest extends TestCase
         // Usa dati di test temporanei senza RefreshDatabase
         $tempDir = storage_path('testing/tenant_' . uniqid());
         config(['tenant.storage_path' => $tempDir]);
-        
+
         // Crea dati di test nel filesystem temporaneo
         $this->createTestTenantData($tempDir);
 
@@ -104,17 +104,17 @@ class TenantControllerTest extends TestCase
         $response->assertStatus(200)
                 ->assertViewIs('tenant::index')
                 ->assertViewHas('tenants');
-                
+
         // Cleanup
         $this->cleanupTestData($tempDir);
     }
-    
+
     private function createTestTenantData(string $path): void
     {
         File::makeDirectory($path, 0755, true);
         // Crea dati di test specifici
     }
-    
+
     private function cleanupTestData(string $path): void
     {
         if (File::exists($path)) {
@@ -157,30 +157,30 @@ class TenantDatabaseTest extends TestCase
         // Setup dati temporanei per il test
         $tempDir = storage_path('testing/tenant_' . uniqid());
         $this->setupTempTenantStorage($tempDir);
-        
+
         // Crea tenant utilizzando SushiToJson trait
         $tenant = new TestTenantModel([
             'name' => 'Test Tenant',
             'status' => 'active'
         ]);
         $tenant->save();
-        
+
         // Test soft delete
         $tenant->delete();
-        
+
         // Verifica che il record sia marcato come eliminato
         $this->assertNotNull($tenant->deleted_at);
-        
+
         // Cleanup
         $this->cleanupTempStorage($tempDir);
     }
-    
+
     private function setupTempTenantStorage(string $path): void
     {
         File::makeDirectory($path, 0755, true);
         config(['tenant.storage_path' => $path]);
     }
-    
+
     private function cleanupTempStorage(string $path): void
     {
         if (File::exists($path)) {
@@ -278,18 +278,18 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.1'
-        
+
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-        
+
     - name: Execute tests
       run: vendor/bin/phpunit
 ```
@@ -327,4 +327,4 @@ jobs:
 
 - [Struttura del Modulo](structure.md)
 - [Best Practices](README.md#best-practices)
-- [Documentazione PHPUnit](https://phpunit.de/documentation.html) 
+- [Documentazione PHPUnit](https://phpunit.de/documentation.html)

@@ -116,4 +116,4 @@ Il blocco può essere utilizzato in vari contesti:
 - [Documentazione Filament Forms](../filament-forms.md)
 - [UI Components](../ui/components.md)
 - [Maps Integration](../integrations/maps.md)
-- [Schema.org Guidelines](../seo/schema-org.md) 
+- [Schema.org Guidelines](../seo/schema-org.md)

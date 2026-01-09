@@ -83,7 +83,7 @@ $sizes = [
 $baseClasses = 'inline-flex items-center justify-center rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200';
 @endphp
 
-<button 
+<button
     {{ $attributes->merge(['class' => "{$baseClasses} {$variants[$variant]} {$sizes[$size]}"]) }}
     {{ $disabled ? 'disabled' : '' }}
 >
@@ -120,7 +120,7 @@ $baseClasses = 'inline-flex items-center justify-center rounded-md font-medium f
                 @if($title)
                     <h2 class="text-2xl font-bold text-gray-900">{{ $title }}</h2>
                 @endif
-                
+
                 @if($description)
                     <p class="mt-1 text-sm text-gray-500">{{ $description }}</p>
             </div>
@@ -210,7 +210,7 @@ $alignment = [
 @endphp
 
 <div class="{{ $alignment[$align] }}">
-    <a href="{{ $url }}" 
+    <a href="{{ $url }}"
        class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white {{ $colors[$color] }} {{ $fullWidth ? 'w-full' : '' }}"
        target="_blank">
         {{ $slot }}
@@ -377,4 +377,4 @@ class EmailTemplateTest extends DuskTestCase
 Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/linee-guida-documentazione.md) e le [Regole dei Collegamenti](../../../docs/regole_collegamenti_documentazione.md).
 
 ## Collegamenti Completi
-Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md). 
+Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md).

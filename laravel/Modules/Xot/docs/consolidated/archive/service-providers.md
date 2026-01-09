@@ -19,7 +19,7 @@ class ModuleNameServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-        
+
         // Registro solo le configurazioni specifiche del modulo
         $this->registerConfig();
     }
@@ -92,7 +92,7 @@ class ModuleNameServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-        
+
         // Registro solo le configurazioni specifiche del modulo
         $this->registerConfig();
     }
@@ -104,4 +104,4 @@ class ModuleNameServiceProvider extends XotBaseServiceProvider
 1. La registrazione dei componenti Blade è gestita automaticamente da `XotBaseServiceProvider`
 2. Non è necessario registrare manualmente le traduzioni o le viste
 3. Mantenere la struttura standard facilita la manutenzione
-4. Documentare sempre le personalizzazioni specifiche del modulo 
+4. Documentare sempre le personalizzazioni specifiche del modulo

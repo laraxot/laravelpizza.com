@@ -1,7 +1,7 @@
 # GitHub Workflows Standard - base_laravelpizza
 
-**Ultimo aggiornamento**: 2025-01-10  
-**Principi**: DRY + KISS + SOLID + Robust  
+**Ultimo aggiornamento**: 2025-01-10
+**Principi**: DRY + KISS + SOLID + Robust
 **Stack**: Laravel 12 + Filament 4 + PHP 8.3 + Laraxot
 
 ---
@@ -45,7 +45,7 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     environment: Testing
-    
+
     steps:
       - uses: actions/checkout@v5
 
@@ -116,8 +116,3 @@ Per ogni modulo/tema:
 ---
 
 **Filosofia**: DRY + KISS - Workflow standardizzati per tutti i moduli/temi, mantenibilità e coerenza.
-
-
-
-
-

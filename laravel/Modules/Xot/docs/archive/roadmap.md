@@ -424,7 +424,6 @@
 
 ### Versione HEAD
 
-
 ### Versione Incoming
 
 ## Collegamenti tra versioni di roadmap.md
@@ -445,9 +444,7 @@
 * [roadmap.md](../../../Cms/project_docs/roadmap.md)
 * [roadmap.md](../../../../Themes/One/project_docs/roadmap.md)
 
-
 ---
-
 
 ### Versione Incoming
 
@@ -530,4 +527,3 @@ Overall Module Completion: 60%
    - Priority: High
 
 ---
-

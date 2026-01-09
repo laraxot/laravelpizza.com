@@ -1,7 +1,7 @@
 # Correzioni PHPStan Livello 10 - Modulo Job
-**Data**: 2025-11-05  
-**Errori iniziali**: 31  
-**Errori finali**: 0  
+**Data**: 2025-11-05
+**Errori iniziali**: 31
+**Errori finali**: 0
 **Status**: ✅ COMPLETATO
 
 ## 📊 Riepilogo Generale
@@ -20,7 +20,7 @@ Questo documento traccia tutte le correzioni PHPStan di livello 10 implementate 
 ## 📝 Correzioni Implementate
 
 ### 1. GetCommandsAction.php
-**Errore**: Parameter `$signature` di tipo mixed  
+**Errore**: Parameter `$signature` di tipo mixed
 **Soluzione**: Cast esplicito a stringa con null coalescing
 
 ```php
@@ -28,7 +28,7 @@ Questo documento traccia tutte le correzioni PHPStan di livello 10 implementate 
 $signature = method_exists($command, 'getSignature') ? $command->getSignature() : $name;
 
 // Dopo
-$signature = method_exists($command, 'getSignature') 
+$signature = method_exists($command, 'getSignature')
     ? (string) ($command->getSignature() ?? $name)
     : $name;
 ```
@@ -38,7 +38,7 @@ $signature = method_exists($command, 'getSignature')
 ---
 
 ### 2. GetTaskCommandsAction.php
-**Errore**: sortBy callback con parametro tipo mixed  
+**Errore**: sortBy callback con parametro tipo mixed
 **Soluzione**: PHPDoc per tipizzare la Collection
 
 ```php
@@ -52,7 +52,7 @@ $all_commands = collect(Artisan::all());
 ---
 
 ### 3. ScheduleArguments.php (6 errori)
-**Errori**: Accessi offset e operazioni binarie su mixed  
+**Errori**: Accessi offset e operazioni binarie su mixed
 **Soluzione**: PHPDoc dettagliati, controlli di tipo, rimozione controlli ridondanti
 
 ```php
@@ -93,7 +93,7 @@ protected function formatArrayTags(array $tags): array
 ---
 
 ### 4. ListJobBatches.php
-**Errore**: Chiamata method progress() su mixed  
+**Errore**: Chiamata method progress() su mixed
 **Soluzione**: Tipizzazione parametro closure con il model
 
 ```php
@@ -109,7 +109,7 @@ protected function formatArrayTags(array $tags): array
 ---
 
 ### 5. JobStatsOverview.php e JobsWaitingOverview.php
-**Errore**: Parameter mixed in `Stat::make()`  
+**Errore**: Parameter mixed in `Stat::make()`
 **Soluzione**: Cast esplicito a int
 
 ```php
@@ -125,7 +125,7 @@ Stat::make(__('jobs::translations.total_jobs'), (int) ($aggregatedInfo->count ??
 ---
 
 ### 6. CreateSchedule.php
-**Errore**: Parameter type mismatch con `components()`  
+**Errore**: Parameter type mismatch con `components()`
 **Soluzione**: Rimozione PHPDoc troppo specifico e uso di suppressione mirata
 
 ```php
@@ -143,7 +143,7 @@ public function form(Schema $schema): Schema
 ---
 
 ### 7. ListSchedules.php
-**Errore**: Chiamata trashed() su mixed  
+**Errore**: Chiamata trashed() su mixed
 **Soluzione**: Tipizzazione parametro con il model
 
 ```php
@@ -157,7 +157,7 @@ public function form(Schema $schema): Schema
 ---
 
 ### 8. ViewSchedule.php (5 errori)
-**Errori**: Property access e method calls su mixed  
+**Errori**: Property access e method calls su mixed
 **Soluzioni**:
 
 ```php
@@ -188,7 +188,7 @@ function (
 ---
 
 ### 9. Status.php (Livewire) (3 errori)
-**Errori**: Binary operations e property assignment con mixed  
+**Errori**: Binary operations e property assignment con mixed
 **Soluzione**: PHPDoc per array strutturati + variabile locale tipizzata
 
 ```php
@@ -209,13 +209,13 @@ public function saveEnv(): void
 ---
 
 ### 10. Crud.php (Livewire)
-**Errore**: sortBy callback type mismatch  
+**Errore**: sortBy callback type mismatch
 **Soluzione**: PHPDoc per tipizzare Collection (identico a #2)
 
 ---
 
 ### 11. Schedule.php (Model) (5 errori)
-**Errori**: Offset access e operations su mixed  
+**Errori**: Offset access e operations su mixed
 **Soluzioni**:
 
 ```php
@@ -260,7 +260,7 @@ public function getArguments(): array
 ---
 
 ### 12. Task.php (Model)
-**Errore**: Return type mismatch in `compileParameters()`  
+**Errore**: Return type mismatch in `compileParameters()`
 **Soluzione**: Cambiato return type e uso di `array_values()`
 
 ```php
@@ -302,7 +302,7 @@ public function compileParameters(bool $forScheduler = false): array
 ---
 
 ### 13. ScheduleService.php
-**Errore**: Property assignment di mixed  
+**Errore**: Property assignment di mixed
 **Soluzione**: Assert per verificare istanza corretta
 
 ```php
@@ -322,7 +322,7 @@ public function __construct()
 ## 🔍 Pattern Comuni Identificati
 
 ### Pattern 1: Collection con Generics
-**Problema**: PHPStan non inferisce il tipo degli elementi  
+**Problema**: PHPStan non inferisce il tipo degli elementi
 **Soluzione**: PHPDoc esplicito
 
 ```php
@@ -331,7 +331,7 @@ $collection = collect($data);
 ```
 
 ### Pattern 2: Accesso a Proprietà Dinamiche
-**Problema**: Proprietà di modelli Eloquent sono mixed  
+**Problema**: Proprietà di modelli Eloquent sono mixed
 **Soluzione**: Cast esplicito
 
 ```php
@@ -340,7 +340,7 @@ $collection = collect($data);
 ```
 
 ### Pattern 3: Parametri Closure non Tipizzati
-**Problema**: Parametri inferiti come mixed  
+**Problema**: Parametri inferiti come mixed
 **Soluzione**: Type hints espliciti
 
 ```php
@@ -348,7 +348,7 @@ fn (ModelType $item): ReturnType => ...
 ```
 
 ### Pattern 4: Array con Struttura Dinamica
-**Problema**: Array con chiavi dinamiche sono mixed  
+**Problema**: Array con chiavi dinamiche sono mixed
 **Soluzione**: PHPDoc con array shapes
 
 ```php
@@ -356,7 +356,7 @@ fn (ModelType $item): ReturnType => ...
 ```
 
 ### Pattern 5: Controlli Ridondanti
-**Problema**: PHPStan sa che alcuni controlli sono sempre veri  
+**Problema**: PHPStan sa che alcuni controlli sono sempre veri
 **Soluzione**: Rimuovere il controllo o usare PHPDoc per forzare il tipo
 
 ```php
@@ -407,4 +407,3 @@ fn (ModelType $item): ReturnType => ...
 ---
 
 **Nota**: Tutte le correzioni seguono i principi DRY + KISS e mantengono la business logic invariata, migliorando solo la type safety e la verificabilità statica del codice.
-

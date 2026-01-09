@@ -56,4 +56,4 @@ Gli script di automazione si trovano nella directory `bashscripts/`:
 - Creare alert per problemi di permessi
 - Monitorare lo spazio disponibile
 - Verificare periodicamente l'integrità degli asset
-- Utilizzare lo script di verifica prima di ogni deploy 
+- Utilizzare lo script di verifica prima di ogni deploy

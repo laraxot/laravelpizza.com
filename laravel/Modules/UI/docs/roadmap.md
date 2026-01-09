@@ -1,7 +1,7 @@
 # Roadmap Modulo UI - Completamento e Miglioramenti
 
-**Data Creazione**: 2026-01-02  
-**Status**: 📋 IN LAVORAZIONE  
+**Data Creazione**: 2026-01-02
+**Status**: 📋 IN LAVORAZIONE
 **Versione**: 1.0.0
 
 ## 🎯 Obiettivo

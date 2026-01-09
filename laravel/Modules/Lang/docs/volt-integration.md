@@ -58,11 +58,11 @@ class VoltLocalization
     {
         if ($request->hasHeader('X-Livewire') && $request->hasHeader('Referer')) {
             $referer = $request->header('Referer');
-            
+
             // Estrai la lingua dall'URL di riferimento
             $path = parse_url($referer, PHP_URL_PATH);
             $segments = explode('/', trim($path, '/'));
-            
+
             if (count($segments) > 0 && in_array($segments[0], array_keys($this->localization->getSupportedLocales()))) {
                 $locale = $segments[0];
                 app()->setLocale($locale);
@@ -155,24 +155,24 @@ $changeLanguage = function ($locale) {
         $this->currentLocale = $locale;
         session(['locale' => $locale]);
         app()->setLocale($locale);
-        
+
         // Reindirizza alla stessa pagina nella nuova lingua
         $currentUrl = url()->current();
         $newUrl = LaravelLocalization::getLocalizedURL($locale, null, [], true);
-        
+
         // Se l'URL corrente non è localizzato, mantieni il percorso
         $path = parse_url($currentUrl, PHP_URL_PATH);
         $path = ltrim($path, '/');
         $segments = explode('/', $path);
-        
+
         if (count($segments) > 0 && array_key_exists($segments[0], $this->supportedLocales)) {
             array_shift($segments);
         }
-        
+
         if (!empty($segments)) {
             $newUrl = rtrim($newUrl, '/') . '/' . implode('/', $segments);
         }
-        
+
         return redirect($newUrl);
     }
 };
@@ -181,9 +181,9 @@ $save = function () {
     $this->validate([
         'name' => 'required|min:3',
     ]);
-    
+
     // Logica di salvataggio...
-    
+
     session()->flash('message', __('messages.saved_successfully'));
 };
 ?>
@@ -195,20 +195,20 @@ $save = function () {
             <input id="name" type="text" wire:model="name" class="form-control">
             @error('name') <span class="error">{{ $message }}</span> @enderror
         </div>
-        
+
         <div class="mt-4">
             <button type="submit" class="btn btn-primary">
                 {{ __('Save') }}
             </button>
         </div>
     </form>
-    
+
     <div class="mt-8">
         <h3 class="text-lg font-medium">{{ __('Change Language') }}</h3>
         <div class="mt-2">
             @foreach($this->supportedLocales as $localeCode => $properties)
-                <button 
-                    type="button" 
+                <button
+                    type="button"
                     wire:click="changeLanguage('{{ $localeCode }}')"
                     class="px-4 py-2 mr-2 text-sm font-medium {{ $currentLocale === $localeCode ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-800' }} rounded-md"
                 >
@@ -217,7 +217,7 @@ $save = function () {
             @endforeach
         </div>
     </div>
-    
+
     @if (session()->has('message'))
         <div class="mt-4 p-4 bg-green-100 text-green-700 rounded">
             {{ session('message') }}
@@ -241,7 +241,7 @@ use Tests\TestCase;
 class VoltLocalizationTest extends TestCase
 {
     use RefreshDatabase;
-    
+
     /** @test */
     public function it_sets_locale_from_referer()
     {
@@ -249,11 +249,11 @@ class VoltLocalizationTest extends TestCase
             'X-Livewire' => true,
             'Referer' => 'http://example.com/it/dashboard',
         ])->get('/livewire/update');
-        
+
         $response->assertStatus(200);
         $this->assertEquals('it', app()->getLocale());
     }
-    
+
     /** @test */
     public function it_handles_invalid_locale()
     {
@@ -261,7 +261,7 @@ class VoltLocalizationTest extends TestCase
             'X-Livewire' => true,
             'Referer' => 'http://example.com/xx/dashboard',
         ])->get('/livewire/update');
-        
+
         $response->assertStatus(200);
         $this->assertEquals(config('app.locale'), app()->getLocale());
     }

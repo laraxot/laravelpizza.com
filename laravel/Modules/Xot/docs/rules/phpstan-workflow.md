@@ -1,7 +1,7 @@
 # 🎯 PHPStan Workflow - Regola Critica
 
-**Data Creazione**: 11 Novembre 2025  
-**Categoria**: Workflow Obbligatorio  
+**Data Creazione**: 11 Novembre 2025
+**Categoria**: Workflow Obbligatorio
 **Priorità**: CRITICA ⚠️
 
 ## ⚡ Regola Fondamentale
@@ -109,15 +109,15 @@ for module_dir in Modules/*/; do
     if [ ! -d "$module_dir" ]; then
         continue
     fi
-    
+
     module_name=$(basename "$module_dir")
     TOTAL_MODULES=$((TOTAL_MODULES + 1))
-    
+
     echo -n "[$TOTAL_MODULES] Checking $module_name... "
-    
+
     # Analizza modulo singolarmente
     result=$(./vendor/bin/phpstan analyse "$module_dir" --level=10 --no-progress --memory-limit=-1 2>&1)
-    
+
     if echo "$result" | grep -q "\[OK\] No errors"; then
         echo "✅ OK"
         MODULES_OK=$((MODULES_OK + 1))
@@ -269,11 +269,11 @@ echo "✅ Tutti i moduli modificati hanno 0 errori"
 
 ---
 
-**Ricorda sempre**: 
+**Ricorda sempre**:
 1. **Modulo per modulo PRIMA**
 2. **Tutti assieme SOLO DOPO**
 3. **Zero compromessi**
 
-**Ultimo aggiornamento**: 11 Novembre 2025  
-**Categoria**: Workflow Critico  
+**Ultimo aggiornamento**: 11 Novembre 2025
+**Categoria**: Workflow Critico
 **Stato**: Regola Obbligatoria

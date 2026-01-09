@@ -182,7 +182,7 @@ Prima di commit, verifica:
 
 ---
 
-**Progetto**: base_<nome progetto>_fila4_mono  
-**PHPStan**: Level 10  
-**Status**: ✅ 0 Errors  
+**Progetto**: base_<nome progetto>_fila4_mono
+**PHPStan**: Level 10
+**Status**: ✅ 0 Errors
 **Ultimo aggiornamento**: 2025-01-06

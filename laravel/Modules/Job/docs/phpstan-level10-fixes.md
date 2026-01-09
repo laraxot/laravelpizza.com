@@ -18,7 +18,7 @@ private function evaluateFunction(string $functionString): mixed
    /**
     * @param string $functionString Il nome della funzione da valutare
     * @return string|null Il risultato della funzione o null se la funzione non è consentita
-    * 
+    *
     * @throws \InvalidArgumentException Se viene passato un argomento non valido
     */
    private function evaluateFunction(string $functionString): ?string
@@ -40,7 +40,7 @@ private function evaluateFunction(string $functionString): mixed
            return null;
        }
    }
-   
+
    // Funzione non consentita
    return null;
    ```
@@ -60,7 +60,7 @@ private function evaluateFunction(string $functionString): mixed
            ->required(),
        // altri componenti...
    ];
-   
+
    // A
    return [
        'name' => \Filament\Forms\Components\TextInput::make('name')
@@ -117,4 +117,4 @@ private function evaluateFunction(string $functionString): mixed
 
 1. Applicare principi simili agli altri file identificati nel modulo.
 2. Eseguire l'analisi PHPStan a livello 10 per verificare che le correzioni risolvano effettivamente gli errori.
-3. Documentare gli schemi e i pattern utilizzati per risolvere problemi simili in futuro. 
+3. Documentare gli schemi e i pattern utilizzati per risolvere problemi simili in futuro.

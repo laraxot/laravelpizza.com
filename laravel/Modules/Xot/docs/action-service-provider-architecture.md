@@ -61,7 +61,7 @@ use Spatie\QueueableAction\QueueableAction;
 class MyAction
 {
     use QueueableAction;
-    
+
     public function execute($parameter)
     {
         // Action implementation
@@ -175,11 +175,11 @@ public function registerBladeComponents(): void
 {
     $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
     Blade::anonymousComponentPath($componentViewPath);
-    
+
     $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
     $namespace = $this->module_ns.'\View\Components';
     Blade::componentNamespace($namespace, $this->nameLower);
-    
+
     app(RegisterBladeComponentsAction::class)->execute($componentClassPath, $this->module_ns);
 }
 ```
@@ -315,7 +315,7 @@ Don't override methods like `registerTranslations()` without calling parent, unl
 public function registerBladeComponents(): void
 {
     $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
-    
+
     try {
         app(RegisterBladeComponentsAction::class)->execute($componentClassPath, $this->module_ns);
     } catch (Exception $e) {
@@ -346,12 +346,12 @@ class ComplexOperationAction
 class DataProcessingAction
 {
     use QueueableAction;
-    
+
     public function __construct(
         private readonly SomeService $service,
         private readonly AnotherAction $subAction
     ) {}
-    
+
     public function execute($data)
     {
         $processed = $this->service->process($data);

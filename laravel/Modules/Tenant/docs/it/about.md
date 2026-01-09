@@ -93,10 +93,8 @@ Per ulteriori informazioni su come utilizzare il modulo, consulta la documentazi
 * [about.md](../../../Tenant/docs/en/about.md)
 * [about.md](../../../Tenant/docs/it/about.md)
 
-
 ### Versione Incoming
 
 Per ulteriori informazioni su come utilizzare il modulo, consulta la documentazione ufficiale sul sito web del suo autore o sulla pagina GitHub del progetto.
 
 ---
-

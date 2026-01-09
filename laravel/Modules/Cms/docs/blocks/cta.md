@@ -89,4 +89,4 @@ Il blocco CTA può essere utilizzato in diverse posizioni:
 - [Documentazione Filament Forms](../filament-forms.md)
 - [Gestione Contenuti](../content.md)
 - [UI Components](../ui/components.md)
-- [Best Practices UX](../ui/ux-guidelines.md) 
+- [Best Practices UX](../ui/ux-guidelines.md)

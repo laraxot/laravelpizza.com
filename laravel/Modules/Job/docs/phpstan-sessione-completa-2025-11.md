@@ -1,6 +1,6 @@
 # Sessione PHPStan Completa - Tutti i Moduli
-**Data**: 2025-11-05  
-**Obiettivo**: Portare tutti i moduli a PHPStan Level 10 (0 errori)  
+**Data**: 2025-11-05
+**Obiettivo**: Portare tutti i moduli a PHPStan Level 10 (0 errori)
 **Status**: ⏳ IN CORSO
 
 ## 📊 Progressi Totali
@@ -19,7 +19,7 @@
 ## 🎯 Pattern Comuni Identificati
 
 ### Pattern 1: Collection Generics Non Tipizzate
-**Problema**: `Collection` inferita come `Collection<mixed>`  
+**Problema**: `Collection` inferita come `Collection<mixed>`
 **Soluzione**: PHPDoc esplicito
 
 ```php
@@ -30,7 +30,7 @@ $collection = collect($data);
 **File interessati**: GetTaskCommandsAction.php, Crud.php, LanguageSwitcherWidget.php
 
 ### Pattern 2: Accesso a Proprietà Dinamiche Eloquent
-**Problema**: `$model->property` è di tipo `mixed`  
+**Problema**: `$model->property` è di tipo `mixed`
 **Soluzione**: Cast esplicito
 
 ```php
@@ -41,7 +41,7 @@ $collection = collect($data);
 **File interessati**: JobStatsOverview.php, JobsWaitingOverview.php, ViewSchedule.php
 
 ### Pattern 3: Closure senza Type Hints
-**Problema**: Parametri closure inferiti come `mixed`  
+**Problema**: Parametri closure inferiti come `mixed`
 **Soluzione**: Type hints espliciti
 
 ```php
@@ -55,7 +55,7 @@ fn (ModelType $record): string => $record->getPath()
 **File interessati**: ListJobBatches.php, ListSchedules.php, tutti i Resource Pages
 
 ### Pattern 4: Array Shapes Non Definiti
-**Problema**: Array con chiavi dinamiche inferiti come `array<mixed>`  
+**Problema**: Array con chiavi dinamiche inferiti come `array<mixed>`
 **Soluzione**: PHPDoc con array shapes
 
 ```php
@@ -66,7 +66,7 @@ $data = json_decode($json, true);
 **File interessati**: Schedule.php, ScheduleArguments.php, SendBotmanTelegramAction.php
 
 ### Pattern 5: Fluent API Librerie Esterne
-**Problema**: Metodi fluent ritornano `mixed`  
+**Problema**: Metodi fluent ritornano `mixed`
 **Soluzione**: Suppressione mirata con @phpstan-ignore-next-line
 
 ```php
@@ -77,7 +77,7 @@ $result = $media->toDisk($disk)->inFormat($format)->save($file);
 **File interessati**: ConvertVideoAction.php, ConvertWidget.php, AddAttachmentAction.php
 
 ### Pattern 6: Dependency Injection con app()
-**Problema**: `app($className)` ritorna `mixed`  
+**Problema**: `app($className)` ritorna `mixed`
 **Soluzione**: Assert::isInstanceOf()
 
 ```php
@@ -88,7 +88,7 @@ Assert::isInstanceOf($instance, ExpectedClass::class);
 **File interessati**: ScheduleService.php, TemporaryUpload.php
 
 ### Pattern 7: Offset Access su Mixed
-**Problema**: Accesso a `$array['key']` su array non tipizzato  
+**Problema**: Accesso a `$array['key']` su array non tipizzato
 **Soluzione**: Type guard prima dell'accesso
 
 ```php
@@ -101,7 +101,7 @@ $result = $value['key']; // Ora safe
 **File interessati**: Schedule.php, ScheduleArguments.php, SaveAttachmentsAction.php
 
 ### Pattern 8: Method Calls su Relazioni Dinamiche
-**Problema**: `$record->getFirstMedia()` ritorna `mixed`  
+**Problema**: `$record->getFirstMedia()` ritorna `mixed`
 **Soluzione**: Controlli dinamici
 
 ```php
@@ -182,4 +182,3 @@ $media = $record->getFirstMedia($attachment);
 ---
 
 **Prossimi passi**: Completare UI (98), User (120), Xot (76) con approccio pattern-based batch.
-

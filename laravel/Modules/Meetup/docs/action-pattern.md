@@ -132,7 +132,7 @@ class {ActionName}Action
 
 ### CRUD Actions
 - Create{Entity}Action
-- Update{Entity}Action  
+- Update{Entity}Action
 - Delete{Entity}Action
 - Get{Entity}Action
 

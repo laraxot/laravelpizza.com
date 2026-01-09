@@ -24,10 +24,10 @@ class PerformanceData extends Data
     public function __construct(
         #[Validation('required|string|max:255')]
         public readonly string $nome,
-        
+
         #[Validation('required|numeric|min:0|max:100')]
         public readonly float $punteggio,
-        
+
         #[Validation('nullable|date')]
         public readonly ?Carbon $data_valutazione = null,
     ) {}
@@ -110,13 +110,13 @@ class PerformanceResource extends XotBaseResource
                 ->required()
                 ->string()
                 ->maxLength(255),
-                
+
             Forms\Components\TextInput::make('punteggio')
                 ->required()
                 ->numeric()
                 ->min(0)
                 ->max(100),
-                
+
             Forms\Components\DatePicker::make('data_valutazione')
                 ->nullable(),
         ];
@@ -168,7 +168,7 @@ class PerformanceData extends Data
         return new self(
             nome: $request->input('nome'),
             punteggio: (float) $request->input('punteggio'),
-            data_valutazione: $request->has('data_valutazione') 
+            data_valutazione: $request->has('data_valutazione')
                 ? Carbon::parse($request->input('data_valutazione'))
                 : null,
         );

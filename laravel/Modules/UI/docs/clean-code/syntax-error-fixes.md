@@ -78,4 +78,3 @@ La correzione segue il pattern standard delle policy base del progetto:
 
 ### Filosofia
 La coerenza strutturale del codice è fondamentale per la manutenibilità e la prevenzione di bug sistemici. Ogni correzione va documentata per prevenire regressioni future.
-

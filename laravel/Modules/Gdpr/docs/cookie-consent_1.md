@@ -7,10 +7,3 @@ https://codebrisk.com/blog/make-your-laravel-app-compliant-with-the-eu-gdpr-cook
 https://github.com/statikbe/laravel-cookie-consent
 
 https://github.com/scify/laravel-cookies-consent
-
-
-
-
-
-
-

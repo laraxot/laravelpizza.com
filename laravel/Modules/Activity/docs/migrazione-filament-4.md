@@ -68,20 +68,20 @@ class ActivityResource extends Resource
                 TextInput::make('log_name')
                     ->required()
                     ->maxLength(255),
-                    
+
                 TextInput::make('description')
                     ->required()
                     ->maxLength(255),
-                    
+
                 TextInput::make('subject_type')
                     ->required()
                     ->maxLength(255),
-                    
+
                 TextInput::make('subject_id')
                     ->numeric()
                     ->required(),
             ]),
-            
+
             Section::make('Properties')->schema([
                 KeyValue::make('properties')
                     ->keyLabel('Key')
@@ -140,7 +140,7 @@ php artisan make:filament-resource Activity --nested=User
 class ActivityResource extends Resource
 {
     protected static ?string $parentResource = UserResource::class;
-    
+
     public static function getParentRelationship(): string
     {
         return 'activities';
@@ -177,9 +177,9 @@ Schema::make([
 ### 4. Componenti Blade Standalone
 ```blade
 {{-- Componenti Filament utilizzabili in Blade normali --}}
-<x-filament::input.text 
-    wire:model="log_name" 
-    label="Log Name" 
+<x-filament::input.text
+    wire:model="log_name"
+    label="Log Name"
 />
 ```
 
@@ -278,7 +278,7 @@ TOTALE: 9-15 ore per modulo
 
 ## 🔮 Conclusioni
 
-La migrazione ad Filament 4 per il modulo Activity offre benefici sostanziali in termini di performance e developer experience, ma richiede un investimento significativo di tempo e risorse. 
+La migrazione ad Filament 4 per il modulo Activity offre benefici sostanziali in termini di performance e developer experience, ma richiede un investimento significativo di tempo e risorse.
 
 **Raccomandazione**: Procedere con la migrazione se:
 - Timeline permettono 2-3 settimane di development

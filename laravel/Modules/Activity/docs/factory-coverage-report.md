@@ -18,7 +18,7 @@
 - **Purpose:** Generates event sourcing snapshots
 - **Fields:** aggregate_uuid, aggregate_version, state, timestamps
 
-#### StoredEventFactory  
+#### StoredEventFactory
 - **Location:** `Modules/Activity/database/factories/StoredEventFactory.php`
 - **Purpose:** Generates stored events for event sourcing
 - **Fields:** event_id, event_type, aggregate_root_id, payload, recorded_at
@@ -50,7 +50,7 @@ $snapshot = Snapshot::factory()->create([
 ## ✅ Verification
 All factories have been tested and:
 - ✅ Compile without PHPStan errors
-- ✅ Follow Laravel factory conventions  
+- ✅ Follow Laravel factory conventions
 - ✅ Generate valid data for models
 - ✅ Support model relationships where applicable
 

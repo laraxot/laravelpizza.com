@@ -127,15 +127,15 @@ class MailTrackingService
     protected function getDeviceType(): string
     {
         $userAgent = request()->userAgent();
-        
+
         if (preg_match('/(tablet|ipad|playbook)|(android(?!.*(mobi|opera mini)))/i', $userAgent)) {
             return 'tablet';
         }
-        
+
         if (preg_match('/(up.browser|up.link|mmp|symbian|smartphone|midp|wap|phone|android|iemobile)/i', $userAgent)) {
             return 'mobile';
         }
-        
+
         return 'desktop';
     }
 }
@@ -151,9 +151,9 @@ class TrackingController extends Controller
     public function pixel(string $statId)
     {
         $stat = MailStat::findOrFail($statId);
-        
+
         app(MailTrackingService::class)->trackOpen($stat);
-        
+
         return response()->file(
             public_path('images/pixel.gif'),
             ['Content-Type' => 'image/gif']
@@ -166,9 +166,9 @@ class TrackingController extends Controller
         $stat = MailStat::where('mail_template_id', $link->mail_template_id)
             ->where('recipient_email', request()->query('email'))
             ->firstOrFail();
-        
+
         app(MailTrackingService::class)->trackClick($stat, $link->tracking_url);
-        
+
         return redirect($link->original_url);
     }
 }
@@ -202,7 +202,7 @@ class MailAnalyticsService
         $opened = MailStat::where('mail_template_id', $template->id)
             ->whereNotNull('opened_at')
             ->count();
-            
+
         return $total > 0 ? ($opened / $total) * 100 : 0;
     }
 
@@ -212,7 +212,7 @@ class MailAnalyticsService
         $clicked = MailStat::where('mail_template_id', $template->id)
             ->whereNotNull('clicked_at')
             ->count();
-            
+
         return $total > 0 ? ($clicked / $total) * 100 : 0;
     }
 }
@@ -233,37 +233,37 @@ class MailAnalyticsResource extends XotBaseResource
                 Select::make('template')
                     ->options(MailTemplate::pluck('name', 'id'))
                     ->label('Template'),
-                    
+
                 DatePicker::make('from')
                     ->label('Da'),
-                    
+
                 DatePicker::make('to')
                     ->label('A'),
-                    
+
                 // Statistiche
                 StatsOverview::make([
                     Stat::make('Totale Invii', fn () => $this->getTotalSent())
                         ->description('Email inviate')
                         ->descriptionIcon('heroicon-m-envelope'),
-                        
+
                     Stat::make('Tasso Apertura', fn () => $this->getOpenRate())
                         ->description('Email aperte')
                         ->descriptionIcon('heroicon-m-eye'),
-                        
+
                     Stat::make('Tasso Click', fn () => $this->getClickRate())
                         ->description('Link cliccati')
                         ->descriptionIcon('heroicon-m-cursor-arrow-rays'),
                 ]),
-                
+
                 // Grafici
                 Chart::make('Aperture per Giorno')
                     ->type('line')
                     ->data($this->getOpensByDay()),
-                    
+
                 Chart::make('Click per Link')
                     ->type('bar')
                     ->data($this->getClicksByLink()),
-                    
+
                 Chart::make('Dispositivi')
                     ->type('pie')
                     ->data($this->getDeviceStats()),
@@ -290,7 +290,7 @@ class MailTemplateActions
                 ->url(fn (MailTemplate $record) => route('filament.resources.mail-analytics.index', [
                     'template' => $record->id,
                 ])),
-                
+
             // Esporta dati
             Action::make('export_analytics')
                 ->label('Esporta Dati')
@@ -303,10 +303,10 @@ class MailTemplateActions
                             'json' => 'JSON',
                         ])
                         ->required(),
-                        
+
                     DatePicker::make('from')
                         ->label('Da'),
-                        
+
                     DatePicker::make('to')
                         ->label('A'),
                 ])
@@ -354,8 +354,8 @@ class MailTrackingService
 
     public function shouldTrack(): bool
     {
-        return !$this->isBot() && 
-               !$this->isPreview() && 
+        return !$this->isBot() &&
+               !$this->isPreview() &&
                $this->hasConsent();
     }
 
@@ -445,4 +445,4 @@ class MailTrackingService
 ## Vedi Anche
 - [Laravel Analytics](https://github.com/spatie/laravel-analytics)
 - [Laravel Mail Tracking](https://github.com/spatie/laravel-mail-tracking)
-- [Laravel Mail Preview](https://github.com/spatie/laravel-mail-preview) 
+- [Laravel Mail Preview](https://github.com/spatie/laravel-mail-preview)

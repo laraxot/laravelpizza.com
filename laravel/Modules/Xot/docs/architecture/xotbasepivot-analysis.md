@@ -118,10 +118,10 @@ use Modules\Xot\Traits\Updater;
 
 /**
  * Base Pivot class for all modules.
- * 
+ *
  * Centralizes common Pivot configurations and behaviors.
  * The $connection is automatically set based on the child class namespace.
- * 
+ *
  * @property string|int $id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -154,7 +154,7 @@ abstract class XotBasePivot extends Pivot
 
     /**
      * Get the database connection for the model.
-     * 
+     *
      * Automatically determines connection from child class namespace.
      * Example: Modules\User\Models\MyPivot → 'user'
      */
@@ -206,10 +206,10 @@ use Modules\Xot\Traits\Updater;
 
 /**
  * Base MorphPivot class for all modules.
- * 
+ *
  * Centralizes common MorphPivot configurations and behaviors.
  * The $connection is automatically set based on the child class namespace.
- * 
+ *
  * @property string|int $id
  * @property string $morph_type
  * @property string|int $morph_id
@@ -246,7 +246,7 @@ abstract class XotBaseMorphPivot extends MorphPivot
 
     /**
      * Get the database connection for the model.
-     * 
+     *
      * Automatically determines connection from child class namespace.
      * Example: Modules\Rating\Models\RatingMorph → 'rating'
      */
@@ -324,7 +324,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 abstract class BasePivot extends XotBasePivot
 {
     use SoftDeletes; // Configurazione specifica del modulo Blog
-    
+
     // Altre configurazioni specifiche del modulo...
 }
 ```
@@ -586,7 +586,7 @@ class SpecialPivot extends XotBasePivot
      * Override per usare connection custom.
      */
     protected $connection = 'legacy_db';
-    
+
     // Oppure override del metodo:
     public function getConnectionName(): ?string
     {
@@ -819,8 +819,7 @@ class SpecialPivot extends XotBasePivot
 
 ---
 
-*Documento creato con i poteri della Super Mucca 🐮*  
-*Analisi completata il: 2025-10-15*  
-*Versione: 1.0*  
+*Documento creato con i poteri della Super Mucca 🐮*
+*Analisi completata il: 2025-10-15*
+*Versione: 1.0*
 *Status: READY FOR IMPLEMENTATION*
-

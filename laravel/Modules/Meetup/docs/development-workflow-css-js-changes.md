@@ -33,7 +33,7 @@ Dopo la compilazione, gli asset devono essere copiati nella directory pubblica:
    ```bash
    # Modifica CSS
    vim resources/css/app.css
-   
+
    # Modifica JS
    vim resources/js/app.js
    ```
@@ -228,4 +228,3 @@ echo "✅ Build e copy completati! Apri http://127.0.0.1:8000/it"
 - [x] Documentato workflow completo
 - [x] Aggiunto troubleshooting
 - [x] Aggiunte best practices
-

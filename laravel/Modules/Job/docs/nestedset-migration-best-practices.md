@@ -21,24 +21,24 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi categoria lavoro
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia categorie
             NestedSet::columns($table);
-            
+
             // Metadati categoria
             $table->string('icon')->nullable();
             $table->string('color')->default('#6b7280');
             $table->json('skills')->nullable(); // Competenze richieste
-            
+
             // Configurazioni
             $table->boolean('is_active')->default(true);
             $table->integer('sort_order')->default(0);
-            
+
             $table->timestamps();
         });
     }
@@ -58,31 +58,31 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi dipartimento
             $table->string('name');
             $table->string('code')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia dipartimenti
             NestedSet::columns($table);
-            
+
             // Gestione
             $table->unsignedBigInteger('manager_id')->nullable();
             $table->string('location')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
-            
+
             // Budget e risorse
             $table->decimal('budget', 15, 2)->nullable();
             $table->integer('employee_count')->default(0);
-            
+
             // Metadati
             $table->json('metadata')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
-            
+
             // Foreign key
             $table->foreign('manager_id')->references('id')->on('employees')->onDelete('set null');
         });
@@ -103,31 +103,31 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi posizione
             $table->string('title');
             $table->string('code')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia posizioni
             NestedSet::columns($table);
-            
+
             // Livello e categoria
             $table->string('level'); // junior, senior, manager, director
             $table->string('category'); // technical, administrative, executive
-            
+
             // Range salariale
             $table->decimal('min_salary', 10, 2)->nullable();
             $table->decimal('max_salary', 10, 2)->nullable();
             $table->string('currency', 3)->default('EUR');
-            
+
             // Requisiti
             $table->json('requirements')->nullable();
             $table->json('responsibilities')->nullable();
             $table->json('benefits')->nullable();
-            
+
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -147,28 +147,28 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi unità
             $table->string('name');
             $table->string('type'); // department, division, team, section
             $table->string('code')->unique();
-            
+
             // NestedSet per gerarchia organizzativa
             NestedSet::columns($table);
-            
+
             // Gestione
             $table->unsignedBigInteger('head_id')->nullable();
             $table->unsignedBigInteger('deputy_head_id')->nullable();
-            
+
             // Informazioni
             $table->text('description')->nullable();
             $table->string('location')->nullable();
             $table->string('cost_center')->nullable();
-            
+
             // Configurazioni
             $table->json('settings')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -188,26 +188,26 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi workflow
             $table->string('name');
             $table->string('type'); // job_approval, leave_request, expense_claim
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia workflow
             NestedSet::columns($table);
-            
+
             // Configurazioni
             $table->json('steps')->nullable(); // Sequenza passi approvazione
             $table->json('rules')->nullable(); // Regole condizionali
             $table->json('notifications')->nullable(); // Impostazioni notifiche
-            
+
             // Limiti e soglie
             $table->decimal('amount_threshold', 10, 2)->nullable();
             $table->integer('days_limit')->nullable();
-            
+
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -231,29 +231,29 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi sede lavorativa
             $table->string('name');
             $table->string('code')->unique();
             $table->string('type'); // headquarters, branch, remote
-            
+
             // Campi indirizzo usando AddressItemEnum::columns()
             AddressItemEnum::columns($table, withLegacy: true);
-            
+
             // Dettagli sede
             $table->integer('capacity')->nullable();
             $table->string('manager')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
-            
+
             // Orari
             $table->json('working_hours')->nullable();
             $table->string('timezone')->default('Europe/Rome');
-            
+
             // Metadati
             $table->json('facilities')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -273,7 +273,7 @@ use Kalnoy\Nestedset\NodeTrait;
 class JobCategory extends Model
 {
     use NodeTrait;
-    
+
     protected $fillable = [
         'name',
         'slug',
@@ -284,30 +284,30 @@ class JobCategory extends Model
         'is_active',
         'sort_order',
     ];
-    
+
     protected $casts = [
         'skills' => 'array',
         'is_active' => 'boolean',
         'sort_order' => 'integer',
     ];
-    
+
     // Relazioni
     public function jobPostings()
     {
         return $this->hasMany(JobPosting::class);
     }
-    
+
     // Scopes specifici Job
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
     }
-    
+
     public function scopeOrdered($query)
     {
         return $query->orderBy('sort_order')->orderBy('name');
     }
-    
+
     // Metodi helper
     public function getAllJobPostingsCount(): int
     {
@@ -316,15 +316,15 @@ class JobCategory extends Model
             ->get()
             ->sum('job_postings_count');
     }
-    
+
     public function getRequiredSkills(): array
     {
         $skills = $this->skills ?? [];
-        
+
         foreach ($this->descendants as $descendant) {
             $skills = array_merge($skills, $descendant->skills ?? []);
         }
-        
+
         return array_unique($skills);
     }
 }
@@ -360,7 +360,7 @@ public function setManagerIdAttribute($value)
 protected static function boot()
 {
     parent::boot();
-    
+
     static::saved(function ($department) {
         $department->updateEmployeeCount();
         $department->updateAncestorsEmployeeCount();
@@ -419,30 +419,30 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi offerta
             $table->string('title');
             $table->text('description');
             $table->string('employment_type'); // full-time, part-time, contract
-            
+
             // Relazione categoria gerarchica
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('job_categories');
-            
+
             // Location (con AddressItemEnum)
             AddressItemEnum::columns($table, withLegacy: true);
-            
+
             // Dettagli
             $table->decimal('salary_min', 10, 2)->nullable();
             $table->decimal('salary_max', 10, 2)->nullable();
             $table->json('requirements')->nullable();
             $table->json('benefits')->nullable();
-            
+
             // Stato
             $table->enum('status', ['draft', 'published', 'closed'])->default('draft');
             $table->date('published_at')->nullable();
             $table->date('expires_at')->nullable();
-            
+
             $table->timestamps();
         });
     }

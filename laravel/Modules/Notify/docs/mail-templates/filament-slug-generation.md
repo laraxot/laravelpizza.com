@@ -62,7 +62,7 @@ use App\Traits\HasSlug;
 class MailTemplate extends Model
 {
     use HasSlug;
-    
+
     protected $fillable = ['name', 'slug'];
 }
 ```
@@ -101,11 +101,11 @@ TextInput::make('name')
     ->afterStateUpdated(function ($state, callable $set) {
         $slug = Str::slug($state);
         $count = 1;
-        
+
         while (MailTemplate::where('slug', $slug)->exists()) {
             $slug = Str::slug($state) . '-' . $count++;
         }
-        
+
         $set('slug', $slug);
     })
 ```
@@ -193,7 +193,7 @@ public static function table(Table $table): Table
 TextInput::make('name')
     ->required()
     ->live()
-    ->afterStateUpdated(fn ($state, $set) => 
+    ->afterStateUpdated(fn ($state, $set) =>
         $set('slug', Str::slug($state))
     )
 ```
@@ -207,11 +207,11 @@ TextInput::make('name')
         $baseSlug = Str::slug($state);
         $slug = $baseSlug;
         $count = 1;
-        
+
         while (MailTemplate::where('slug', $slug)->exists()) {
             $slug = $baseSlug . '-' . $count++;
         }
-        
+
         $set('slug', $slug);
     })
 ```
@@ -236,4 +236,4 @@ TextInput::make('name')
 ## Collegamenti
 - [Laravel News Article](https://laravel-news.com/generating-slugs-from-a-title-in-filament)
 - [Filament Documentation](https://filamentphp.com/docs)
-- [Laravel Str Helper](https://laravel.com/docs/helpers#method-str-slug) 
+- [Laravel Str Helper](https://laravel.com/docs/helpers#method-str-slug)

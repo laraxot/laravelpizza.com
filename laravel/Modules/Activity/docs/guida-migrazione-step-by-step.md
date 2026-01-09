@@ -79,20 +79,20 @@ class ActivityResource extends XotBaseResource
             TextInput::make('log_name')
                 ->disabled()
                 ->label('Log Category'),
-                
+
             TextInput::make('description')
                 ->disabled()
                 ->label('Action Description'),
-                
+
             TextInput::make('causer.name')
                 ->disabled()
                 ->label('Performed By'),
-                
+
             TextInput::make('subject_type')
                 ->disabled()
                 ->formatStateUsing(fn($state) => class_basename($state))
                 ->label('Model Type'),
-                
+
             ViewField::make('properties_display')
                 ->view('activity::properties-display')
                 ->viewData(fn($record) => [
@@ -114,41 +114,41 @@ class ActivityResource extends XotBaseResource
                 ->sortable()
                 ->description(fn($record) => $record->created_at->diffForHumans())
                 ->weight('medium'),
-                
+
             BadgeColumn::make('log_name')
                 ->colors([
                     'primary' => 'default',
                     'success' => 'created',
-                    'warning' => 'updated', 
+                    'warning' => 'updated',
                     'danger' => 'deleted',
                     'info' => 'login',
                 ])
                 ->sortable(),
-                
+
             TextColumn::make('description')
                 ->searchable()
                 ->sortable()
                 ->limit(50)
                 ->tooltip(fn($record) => $record->description),
-                
+
             TextColumn::make('causer.name')
                 ->searchable()
                 ->sortable()
                 ->placeholder('System')
-                ->url(fn($record) => $record->causer_id ? 
+                ->url(fn($record) => $record->causer_id ?
                     route('filament.admin.resources.users.view', $record->causer_id) : null
                 )
                 ->openUrlInNewTab(),
-                
+
             TextColumn::make('subject_type')
                 ->formatStateUsing(fn($state) => $state ? class_basename($state) : 'N/A')
                 ->badge()
                 ->color('gray'),
-                
+
             TextColumn::make('subject_id')
                 ->sortable()
                 ->placeholder('N/A'),
-                
+
             BadgeColumn::make('changes_count')
                 ->getStateUsing(fn($record) => count($record->changes ?? []))
                 ->colors([
@@ -161,7 +161,7 @@ class ActivityResource extends XotBaseResource
     }
 
     /**
-     * STEP 3: Advanced filtering per large datasets  
+     * STEP 3: Advanced filtering per large datasets
      */
     public static function getTableFilters(): array
     {
@@ -176,13 +176,13 @@ class ActivityResource extends XotBaseResource
                     'logout' => 'Logout',
                 ])
                 ->multiple(),
-                
+
             SelectFilter::make('causer')
                 ->relationship('causer', 'name')
                 ->searchable()
                 ->multiple()
                 ->preload(),
-                
+
             SelectFilter::make('subject_type')
                 ->options(function() {
                     return Activity::query()
@@ -193,18 +193,18 @@ class ActivityResource extends XotBaseResource
                         ->toArray();
                 })
                 ->multiple(),
-                
+
             DateFilter::make('created_at')
                 ->label('Activity Date'),
-                
+
             \Filament\Tables\Filters\Filter::make('today')
                 ->query(fn($query) => $query->whereDate('created_at', today()))
                 ->label('Today'),
-                
+
             \Filament\Tables\Filters\Filter::make('with_changes')
                 ->query(fn($query) => $query->whereNotNull('properties->attributes'))
                 ->label('With Changes'),
-                
+
             \Filament\Tables\Filters\Filter::make('system_actions')
                 ->query(fn($query) => $query->whereNull('causer_id'))
                 ->label('System Actions'),
@@ -229,7 +229,7 @@ class ActivityResource extends XotBaseResource
                 })
                 ->modalHeading('Activity Changes')
                 ->modalWidth('3xl'),
-                
+
             Action::make('view_subject')
                 ->icon('heroicon-o-arrow-top-right-on-square')
                 ->color('success')
@@ -238,7 +238,7 @@ class ActivityResource extends XotBaseResource
                     // Navigate to subject if resource exists
                     return $this->redirectToSubject($record);
                 }),
-                
+
             Action::make('export_context')
                 ->icon('heroicon-o-document-arrow-down')
                 ->color('gray')
@@ -312,19 +312,19 @@ class ActivityDashboard extends Widget
             ->columns([
                 TextColumn::make('period')
                     ->weight('semibold'),
-                    
+
                 TextColumn::make('total_activities')
                     ->numeric()
                     ->color('primary'),
-                    
+
                 TextColumn::make('unique_users')
                     ->numeric()
                     ->color('success'),
-                    
+
                 TextColumn::make('system_actions')
                     ->numeric()
                     ->color('gray'),
-                    
+
                 BadgeColumn::make('trend')
                     ->colors([
                         'success' => fn($state) => str_contains($state, '+'),
@@ -424,17 +424,17 @@ class CleanupActivityLogsCommand extends Command
     {
         $days = (int) $this->option('days');
         $cutoffDate = Carbon::now()->subDays($days);
-        
+
         $this->info("Cleaning up activity logs older than {$days} days...");
-        
+
         $deletedCount = Activity::where('created_at', '<', $cutoffDate)->delete();
-        
+
         $this->info("Deleted {$deletedCount} old activity log entries.");
-        
+
         // Optimize table
         \DB::statement('OPTIMIZE TABLE activity_log');
         $this->info('Activity log table optimized.');
-        
+
         return Command::SUCCESS;
     }
 }
@@ -458,7 +458,7 @@ class CleanupActivityLogsCommand extends Command
             </div>
         </div>
     @endif
-    
+
     @if(!empty($changes))
         <div>
             <h4 class="font-semibold text-gray-900 dark:text-gray-100 mb-2">Changes</h4>
@@ -509,7 +509,7 @@ class ActivityResourceTest extends TestCase
     public function test_can_render_activity_list(): void
     {
         $this->actingAs(User::factory()->admin()->create());
-        
+
         Activity::factory()->count(10)->create();
 
         Livewire::test(ActivityResource\Pages\ListActivities::class)
@@ -519,7 +519,7 @@ class ActivityResourceTest extends TestCase
     public function test_can_filter_activities_by_log_name(): void
     {
         $this->actingAs(User::factory()->admin()->create());
-        
+
         Activity::factory()->create(['log_name' => 'created']);
         Activity::factory()->create(['log_name' => 'updated']);
 
@@ -532,17 +532,17 @@ class ActivityResourceTest extends TestCase
     public function test_performance_with_large_dataset(): void
     {
         $this->actingAs(User::factory()->admin()->create());
-        
+
         // Create large dataset
         Activity::factory()->count(1000)->create();
-        
+
         $start = microtime(true);
-        
+
         Livewire::test(ActivityResource\Pages\ListActivities::class)
             ->assertSuccessful();
-            
+
         $duration = microtime(true) - $start;
-        
+
         $this->assertLessThan(3.0, $duration, 'Activity resource loading too slow');
     }
 }
@@ -590,12 +590,12 @@ php artisan tinker
 
 ## ✅ Success Indicators
 
-✅ **Activity logs caricano velocemente** (< 2s con 1000+ records)  
-✅ **Filtri real-time** funzionano senza lag  
-✅ **Dashboard widgets** aggiornano automaticamente  
-✅ **Performance indexes** attivi e utilizzati  
-✅ **Cleanup automatico** configurato  
-✅ **Change tracking** visualizzazione chiara  
+✅ **Activity logs caricano velocemente** (< 2s con 1000+ records)
+✅ **Filtri real-time** funzionano senza lag
+✅ **Dashboard widgets** aggiornano automaticamente
+✅ **Performance indexes** attivi e utilizzati
+✅ **Cleanup automatico** configurato
+✅ **Change tracking** visualizzazione chiara
 
 ## 🎯 Miglioramenti Implementati
 

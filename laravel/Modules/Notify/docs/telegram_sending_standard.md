@@ -207,4 +207,4 @@ $action->onQueue('telegram')->execute($data);
 
 ---
 
-**Seguendo questo standard, l'invio di messaggi Telegram sarà sempre coerente, sicuro, testabile e facilmente estendibile.** 
+**Seguendo questo standard, l'invio di messaggi Telegram sarà sempre coerente, sicuro, testabile e facilmente estendibile.**

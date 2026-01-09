@@ -190,4 +190,4 @@ TextInput::make('slug')
 Per supporto tecnico:
 - Email: support@example.com
 - Documentazione: https://docs.example.com
-- Repository: https://github.com/organization/notify 
+- Repository: https://github.com/organization/notify

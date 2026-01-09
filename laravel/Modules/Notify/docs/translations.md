@@ -100,11 +100,11 @@ Notification::make()
 4. Documentare le modifiche
 ### Versione HEAD
 
-5. Testare tutte le lingue 
+5. Testare tutte le lingue
 
 ### Versione Incoming
 
-``` 
+```
 ## Collegamenti tra versioni di translations.md
 * [translations.md](../../../Chart/docs/translations.md)
 * [translations.md](../../../Reporting/docs/translations.md)
@@ -124,6 +124,4 @@ Notification::make()
 * [translations.md](../../../Patient/docs/translations.md)
 * [translations.md](../../../Cms/docs/translations.md)
 
-
 ---
-

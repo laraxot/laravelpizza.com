@@ -642,4 +642,4 @@ protected function updateAnalytics(string $messageId, string $event): void
         ]
     ]);
 }
-``` 
+```

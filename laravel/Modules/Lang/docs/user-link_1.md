@@ -20,5 +20,3 @@ Il modulo User utilizza le traduzioni fornite dal modulo Lang per:
 > Aggiorna entrambi i riferimenti se modifichi la struttura delle traduzioni o aggiungi nuove funzionalità che richiedono traduzioni.
 
 ## Collegamenti tra versioni di user-link.md
-
-

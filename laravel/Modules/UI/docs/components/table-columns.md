@@ -8,11 +8,11 @@ The `IconStateSplitColumn` is designed to display multiple state transition icon
 ### Enhanced Features (After Refactoring)
 1. **Responsive Grid Layout**: Configures grid with appropriate columns for different screen sizes
    - Mobile: 2 columns
-   - Small screens: 3 columns  
+   - Small screens: 3 columns
    - Medium screens: 4 columns
    - Large screens: 5 columns
    - Extra large screens: 6 columns
-2. **Optimized Space Usage**: 
+2. **Optimized Space Usage**:
    - Compact design that minimizes table space usage
    - Efficient grid layout that maximizes space utilization
    - Small icons (32px) for maximum compactness

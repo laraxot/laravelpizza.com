@@ -195,7 +195,7 @@ state([
 
 $products = computed(function () {
     return Product::query()
-        ->when($this->search, fn($query) => 
+        ->when($this->search, fn($query) =>
             $query->where('name', 'like', "%{$this->search}%")
                   ->orWhere('sku', 'like', "%{$this->search}%")
         )
@@ -290,7 +290,7 @@ $save = function () {
     $product->categories()->sync($this->selectedCategories);
 
     session()->flash('message', 'Prodotto salvato con successo.');
-    
+
     return redirect()->route('products.index');
 };
 ?>
@@ -405,9 +405,8 @@ class ProductTest extends TestCase
 
 - [Laravel Folio Documentation](https://github.com/laravel/folio)
 - [Laravel Volt Documentation](https://livewire.laravel.com/project_docs/volt)
-- [Filament Documentation](https://filamentphp.com) 
+- [Filament Documentation](https://filamentphp.com)
 
 ## Collegamenti tra versioni di product-management.md
 * [product-management.md](laravel/Modules/Cms/project_docs/product-management.md)
 * [product-management.md](laravel/Modules/Cms/project_docs/components/product-management.md)
-

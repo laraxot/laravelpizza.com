@@ -247,4 +247,3 @@ Aggiorna `docs/IMPLEMENTATION-LOG.md` OGNI volta che modifichi file importanti:
 - [Git Subtree Documentation](https://www.atlassian.com/git/tutorials/git-subtree)
 - [Vite HMR API](https://vitejs.dev/guide/api-hmr.html)
 - Tema originale: `Themes/Meetup` (subtree da repository esterno)
-

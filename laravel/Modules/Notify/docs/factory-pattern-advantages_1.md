@@ -11,7 +11,7 @@ SaluteOra implementa un pattern Factory ottimale attraverso `SmsActionFactory`:
 public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -41,7 +41,7 @@ L'alternativa sarebbe integrare questa logica nel DTO:
 public function getProviderAction(): SmsActionInterface
 {
     $driver = $this->provider ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         // Altri provider...

@@ -343,7 +343,7 @@ public function getSeoDescriptionAttribute()
 // <x-layout>
 //     <x-slot:title>{{ $this->event->seo_title }}</x-slot:title>
 //     <x-slot:description>{{ $this->event->seo_description }}</x-slot:description>
-//     
+//
 //     <!-- Event content -->
 // </x-layout>
 
@@ -376,7 +376,7 @@ public function getSeoDescriptionAttribute()
 //         <meta property="og:url" content="{{ url()->current() }}"/>
 //         <meta name="twitter:card" content="summary_large_image"/>
 //     </x-slot:meta>
-//     
+//
 //     <!-- Event content -->
 // </x-layout>
 ```
@@ -389,5 +389,5 @@ The strategy is designed to be flexible and adaptable based on performance data 
 
 ---
 
-**Document Version**: 1.0  
+**Document Version**: 1.0
 **Last Updated**: November 28, 2025

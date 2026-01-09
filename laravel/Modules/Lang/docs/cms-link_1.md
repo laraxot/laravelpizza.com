@@ -19,5 +19,3 @@ Quando aggiungi nuovi componenti Filament nel modulo Cms, ricorda di:
 3. Mantenere aggiornata la documentazione in entrambi i moduli
 
 ## Collegamenti tra versioni di cms-link.md
-
-

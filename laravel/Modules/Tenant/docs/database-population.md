@@ -26,7 +26,7 @@ Questo documento descrive come popolare il database del modulo Tenant utilizzand
 
 ### 1. TenantFactory
 
-**File**: `database/factories/TenantFactory.php`  
+**File**: `database/factories/TenantFactory.php`
 **Scopo**: Generazione di tenant per il sistema multi-tenant
 
 ```php
@@ -51,7 +51,7 @@ $tenants = \Modules\Tenant\Models\Tenant::factory()->count(10)->create();
 
 ### 2. DomainFactory
 
-**File**: `database/factories/DomainFactory.php`  
+**File**: `database/factories/DomainFactory.php`
 **Scopo**: Generazione di domini associati ai tenant
 
 ```php
@@ -303,6 +303,6 @@ private function generateRealisticDomain(string $tenantName, string $sector): st
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025  
-**Versione**: 1.0  
+**Ultimo aggiornamento**: Gennaio 2025
+**Versione**: 1.0
 **Autore**: Sistema Laraxot

@@ -57,16 +57,16 @@ public function register(): void
 {
     // 1. Calcola namespace lowercase
     $this->nameLower = Str::lower($this->name);
-    
+
     // 2. Normalizza module namespace
     $this->module_ns = collect(explode('\\', $this->module_ns))
         ->slice(0, -1)
         ->implode('\\');
-    
+
     // 3. Registra altri provider del modulo
     $this->app->register($this->module_ns.'\Providers\RouteServiceProvider');
     $this->app->register($this->module_ns.'\Providers\EventServiceProvider');
-    
+
     // 4. Registra Blade Icons
     $this->registerBladeIcons();
 }
@@ -102,7 +102,7 @@ public function boot(): void
 
 ### Il Problema che Risolve
 
-**Senza namespace**: 
+**Senza namespace**:
 ```blade
 {{-- Deve sapere il percorso esatto --}}
 @include('/var/www/html/ptvx/laravel/Modules/Activity/resources/views/filament/pages/list-log-activities.blade.php')
@@ -123,10 +123,10 @@ public function registerViews(): void
     if ($this->name === '') {
         throw new Exception('name is empty on ['.static::class.']');
     }
-    
+
     // 2. Calcola percorso view
     $viewPath = module_path($this->name, 'resources/views');
-    
+
     // 3. Registra namespace
     $this->loadViewsFrom($viewPath, $this->nameLower);
 }
@@ -169,7 +169,7 @@ Per ogni modulo con `$name = 'Activity'`:
    ↓
 6. FileViewFinder::parseNamespaceSegments('activity', 'filament.pages...')
    ↓
-7. FileViewFinder::getHints() 
+7. FileViewFinder::getHints()
    ↓
 8. Se 'activity' non è in $hints → InvalidArgumentException
 ```
@@ -234,18 +234,18 @@ public function execute(string $ns): ?string
 {
     // 1. Ottieni view factory
     $viewFactory = View::getFacadeRoot();
-    
+
     // 2. Ottieni finder
     $finder = $viewFactory->getViewFinder();
-    
+
     // 3. Ottieni hints registrati
     $viewHints = $finder->getHints();
-    
+
     // 4. Cerca il namespace
     if (isset($viewHints[$ns])) {
         return $viewHints[$ns][0];  // Primo path registrato
     }
-    
+
     return null;  // Namespace non trovato
 }
 ```
@@ -326,7 +326,7 @@ class ActivityServiceProvider extends XotBaseServiceProvider
     public string $name = 'Activity';
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
-    
+
     /**
      * Boot del service provider.
      * SEMPRE chiamare parent::boot() per registrazione automatica.
@@ -335,11 +335,11 @@ class ActivityServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();  // ← CRITICO: registra view, traduzioni, etc.
-        
+
         // Personalizzazioni specifiche del modulo
         $this->registerCustomConfig();
     }
-    
+
     /**
      * Registra configurazioni custom oltre a quelle standard.
      */
@@ -348,7 +348,7 @@ class ActivityServiceProvider extends XotBaseServiceProvider
         $this->publishes([
             module_path($this->name, 'config/activity.php') => config_path('activity.php'),
         ], 'config');
-        
+
         $this->mergeConfigFrom(
             module_path($this->name, 'config/activity.php'),
             'activity'
@@ -521,7 +521,7 @@ php artisan config:clear  # ← toglie cache!
 
 ### Module Discovery
 
-Il sistema `nwidart/laravel-modules` scansiona e registra automaticamente i moduli al boot dell'applicazione. 
+Il sistema `nwidart/laravel-modules` scansiona e registra automaticamente i moduli al boot dell'applicazione.
 
 **Per disabilitare moduli temporaneamente**:
 ```json
@@ -545,8 +545,6 @@ Il sistema `nwidart/laravel-modules` scansiona e registra automaticamente i modu
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
-**Versione Laravel**: 12.35.1  
+**Ultimo aggiornamento**: 27 Ottobre 2025
+**Versione Laravel**: 12.35.1
 **Filosofia**: DRY + KISS per registrazione automatica risorse modulari
-
-

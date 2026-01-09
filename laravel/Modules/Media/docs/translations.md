@@ -127,5 +127,4 @@ Notification::make()
 
 - [Documentazione Generale Media](../structure.md)
 - [Best Practice Traduzioni](../../../docs/translation-standards.md)
-- [Convenzioni Laraxot](../../../docs/laraxot_conventions.md) 
-
+- [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)

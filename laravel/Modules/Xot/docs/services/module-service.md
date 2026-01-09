@@ -85,4 +85,4 @@ Recupera tutti i modelli definiti nel modulo specificato.
 
 - [Documentazione Moduli](../../../docs/modules/index.md)
 - [Gestione Modelli](../../../docs/models/index.md)
-- [Pattern Singleton](../../../docs/patterns/singleton.md) 
+- [Pattern Singleton](../../../docs/patterns/singleton.md)

@@ -122,4 +122,4 @@ $page = Page::find(1)->translate('en');
 $page->setTranslation('title', 'en', 'About Us')
      ->setTranslation('title', 'it', 'Chi Siamo')
      ->save();
-``` 
+```

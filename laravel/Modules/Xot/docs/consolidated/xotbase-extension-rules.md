@@ -195,7 +195,7 @@ Always run `php artisan optimize:clear && ./vendor/bin/phpstan analyse` after ma
 
 ---
 
-*Last Updated: 2025-08-27*  
+*Last Updated: 2025-08-27*
 *Architecture Version: XotBase 2.0*
 # Regole di Estensione XotBase - Guida di Riferimento
 
@@ -288,7 +288,7 @@ use Modules\Xot\Filament\Pages\XotBaseDashboard;
 
 /**
  * Dashboard per il modulo Employee.
- * 
+ *
  * Estende XotBaseDashboard seguendo la regola architettturale fondamentale
  * di non estendere mai classi Filament direttamente.
  */
@@ -315,7 +315,7 @@ class EmployeeResource extends XotBaseResource
 {
     protected static ?string $model = Employee::class;
     protected static ?string $navigationIcon = 'heroicon-o-users';
-    
+
     // Implementazione specifica del resource...
 }
 ```
@@ -333,7 +333,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 class EmployeeStatsWidget extends XotBaseWidget
 {
     protected static string $view = 'employee::filament.widgets.stats';
-    
+
     // Implementazione specifica del widget...
 }
 ```
@@ -387,6 +387,6 @@ jobs:
 
 ---
 
-*Documento aggiornato: 2025-07-30*  
-*Priorità: CRITICA*  
+*Documento aggiornato: 2025-07-30*
+*Priorità: CRITICA*
 *Stato: OBBLIGATORIO per tutti i moduli*

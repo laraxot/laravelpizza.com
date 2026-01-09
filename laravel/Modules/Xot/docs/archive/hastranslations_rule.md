@@ -126,4 +126,4 @@ grep -r "use HasTranslations" laravel/Modules/*/app/Models/
 
 - [Pattern di Estensione Filament](filament_extension_pattern.md)
 - [Log Correzioni](filament_corrections_log.md)
-- [Best Practices Filament](filament_best_practices.md) 
+- [Best Practices Filament](filament_best_practices.md)

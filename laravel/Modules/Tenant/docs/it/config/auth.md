@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-
-
 return [
     /*
     |--------------------------------------------------------------------------
@@ -110,15 +108,11 @@ return [
 
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di auth.md
 * [auth.md](../../../Xot/docs/install/auth.md)
 * [auth.md](../../../User/docs/lang/en/auth.md)
 * [auth.md](../../../Tenant/docs/it/config/auth.md)
 
-
 ### Versione Incoming
 
-
 ---
-

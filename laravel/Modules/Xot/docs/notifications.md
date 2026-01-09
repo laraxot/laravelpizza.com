@@ -248,4 +248,4 @@ class InvoicePaid extends Notification
         return ['mail'];
     }
 }
-``` 
+```

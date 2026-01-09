@@ -28,7 +28,7 @@ public function debugConfig(): void
     $this->updateDebugOutput();
 }
 
-// Metodo logico privato  
+// Metodo logico privato
 private function debugConfig(): array
 {
     return [
@@ -82,7 +82,7 @@ public function debugConfig(): void
 {
     $this->debugResults['config'] = $this->getDebugConfig();
     $this->updateDebugOutput();
-    
+
     Notification::make()
         ->title(__('ui::s3test.notifications.config_debugged'))
         ->success()
@@ -112,7 +112,7 @@ private function getDebugConfig(): array
 
 ### Best Practice per Metodi di Azione
 1. **Nome Univoco**: Ogni metodo deve avere un nome univoco
-2. **Separazione Responsabilità**: 
+2. **Separazione Responsabilità**:
    - Metodo pubblico = azione/controller
    - Metodo privato = logica di business
 3. **Naming Convention**:
@@ -153,10 +153,10 @@ class S3Test extends XotBasePage
 {
     // Azioni pubbliche (controller)
     public function testCredentials(): void
-    public function testS3Connection(): void  
+    public function testS3Connection(): void
     public function testPermissions(): void
     public function debugConfig(): void
-    
+
     // Logica privata (business logic)
     private function getCredentialsData(): array
     private function getS3ConnectionData(): array
@@ -208,7 +208,7 @@ public function testCredentials(): void
 }
 ```
 
-### Metodo getFileOperationsData() Mancante  
+### Metodo getFileOperationsData() Mancante
 Identificato metodo mancante chiamato da `testFileOperations()`:
 
 ```php
@@ -231,7 +231,7 @@ private function getFileOperationsData(): array
         $s3->putObject([...]);
         $results['data']['Put Object'] = '✅ Success';
 
-        // Test Get Object  
+        // Test Get Object
         $response = $s3->getObject([...]);
         $results['data']['Get Object'] = '✅ Success';
 
@@ -258,7 +258,7 @@ private function getFileOperationsData(): array
 php -l laravel/Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php
 # Output: No syntax errors detected
 
-# 2. Controllo PHPStan Livello 9 - ✅ PASS  
+# 2. Controllo PHPStan Livello 9 - ✅ PASS
 ./vendor/bin/phpstan analyse Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php --level=9
 # Output: [OK] No errors
 

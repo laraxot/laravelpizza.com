@@ -1,7 +1,7 @@
 # Gerarchia delle Classi Base - Modulo User
 
-**Data:** 15 Ottobre 2025  
-**Tipo:** Documentazione Architetturale  
+**Data:** 15 Ottobre 2025
+**Tipo:** Documentazione Architetturale
 **Stato:** ✅ Aggiornato
 
 ## Principio Fondamentale
@@ -82,7 +82,7 @@ namespace Modules\User\Models;
 class User extends BaseModel
 {
     protected $fillable = ['name', 'email'];
-    
+
     public function teams(): BelongsToMany
     {
         return $this->belongsToMany(Team::class);
@@ -130,24 +130,24 @@ namespace Modules\User\Models;
 
 /**
  * TeamUser Pivot Model
- * 
+ *
  * Tabella pivot per la relazione many-to-many tra Team e User.
  */
 class TeamUser extends BasePivot
 {
     protected $table = 'team_user';
-    
+
     protected $fillable = [
         'team_id',
         'user_id',
         'role',
     ];
-    
+
     public function team(): BelongsTo
     {
         return $this->belongsTo(Team::class);
     }
-    
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
@@ -186,13 +186,13 @@ namespace Modules\User\Models;
 
 /**
  * ModelHasRole Morph Pivot
- * 
+ *
  * Tabella pivot polymorphic: qualsiasi modello può avere ruoli.
  */
 class ModelHasRole extends BaseMorphPivot
 {
     protected $table = 'model_has_role';
-    
+
     protected $fillable = [
         'role_id',
         'model_type',
@@ -370,14 +370,7 @@ Quando crei un nuovo modello nel modulo User:
 
 ---
 
-**Ultimo aggiornamento:** 15 Ottobre 2025  
-**Autore:** AI Assistant + Team Laraxot  
-**Versione:** 2.0 - Correzione gerarchia modelli  
+**Ultimo aggiornamento:** 15 Ottobre 2025
+**Autore:** AI Assistant + Team Laraxot
+**Versione:** 2.0 - Correzione gerarchia modelli
 **Status:** ✅ Production Ready
-
-
-
-
-
-
-

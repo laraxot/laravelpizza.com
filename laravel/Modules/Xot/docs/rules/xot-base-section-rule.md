@@ -2,7 +2,7 @@
 
 ## Scopo (Purpose)
 
-**REGOLA FONDAMENTALE**: NON estendere mai `Filament\Schemas\Components\Section` direttamente.  
+**REGOLA FONDAMENTALE**: NON estendere mai `Filament\Schemas\Components\Section` direttamente.
 SEMPRE estendere `Modules\Xot\Filament\Schemas\Components\XotBaseSection`.
 
 ## Logica (Logic)
@@ -71,13 +71,13 @@ grep -r "extends Section" Modules/*/app/Filament --include="*.php"
 
 ### Dogmi Immutabili
 
-> **"Thou shalt not extend Section directly"**  
+> **"Thou shalt not extend Section directly"**
 > Solo XotBaseSection può estendere Section. Tutti gli altri devono estendere XotBaseSection.
 
-> **"One base to rule them all"**  
+> **"One base to rule them all"**
 > Un solo punto di estensione per tutte le Section del progetto.
 
-> **"Follow the chain"**  
+> **"Follow the chain"**
 > Segui sempre la catena di estensione: Filament → Xot → Module.
 
 ## Zen (Zen)
@@ -96,8 +96,8 @@ Module lo specializza per il dominio
 
 ### Koan della Section
 
-> Un developer chiede: "Perché non posso estendere Section direttamente?"  
-> Il master risponde: "Quando estendiestendere Section, estendi solo Filament.  
+> Un developer chiede: "Perché non posso estendere Section direttamente?"
+> Il master risponde: "Quando estendiestendere Section, estendi solo Filament.
 > Quando estendi XotBaseSection, estendi l'intero ecosistema Laraxot."
 
 ## Errori Comuni
@@ -132,7 +132,7 @@ Method Modules\TechPlanner\Filament\Forms\Components\CompanySection::disableLive
 class CompanySection extends XotBaseSection
 {
     protected bool $disableLiveUpdates = false; // Property, not method!
-    
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -158,6 +158,6 @@ class CompanySection extends XotBaseSection
 
 ---
 
-**Data creazione**: 2025-12-12  
-**Status**: ✅ Regola attiva e obbligatoria  
+**Data creazione**: 2025-12-12
+**Status**: ✅ Regola attiva e obbligatoria
 **Priorità**: CRITICA - Violazioni bloccano il codice

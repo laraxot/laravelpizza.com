@@ -96,13 +96,13 @@ public static function getFormSchema(): array
     return [
         'name' => Forms\Components\TextInput::make('name')
             ->required(),
-            
+
         'slug' => Forms\Components\TextInput::make('slug')
             ->required()
             ->unique(ignoreRecord: true)
-            ->afterStateUpdated(fn (string $context, $state, callable $set) => 
+            ->afterStateUpdated(fn (string $context, $state, callable $set) =>
                 $context === 'create' ? $set('slug', Str::slug($state)) : null),
-            
+
         // Altri campi...
     ];
 }
@@ -140,7 +140,7 @@ public function registerDefaultTemplates()
             'html_template' => json_encode(['it' => '<p>Benvenuto nel sistema</p>', 'en' => '<p>Welcome to the system</p>']),
         ]
     );
-    
+
     // Altri template predefiniti...
 }
 ```

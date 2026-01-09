@@ -51,7 +51,7 @@ class GenerateChartPngAction
             ->waitUntilNetworkIdle()
             ->fullPage()
             ->screenshot(); // Returns raw binary content
-            
+
         return $screenshot;
     }
 }
@@ -94,13 +94,13 @@ However, if you must assume Chart.js, here is the theoretical implementation usi
 public function execute(string $widgetClass): string
 {
     // ... setup Browsershot ...
-    
+
     // We execute JS to extract the SVG serialization
     // *Requires chartjs-plugin-save-svg or similar loaded in the wrapper*
     $svg = Browsershot::html($html)
         ->waitUntilNetworkIdle()
         ->evaluate("document.querySelector('canvas').toDataURL('image/svg+xml')");
-        
+
     return $svg;
 }
 ```
@@ -117,7 +117,7 @@ use Modules\UI\Actions\Chart\GenerateChartPngAction;
 class SendReportAction
 {
     use QueueableAction;
-    
+
     public function execute(User $user)
     {
         // 1. Generate Chart Image
@@ -125,7 +125,7 @@ class SendReportAction
             widgetClass: MonthlySalesChart::class,
             data: ['userId' => $user->id]
         );
-        
+
         // 2. Attach to Email
         // ... (See PDF/Email Guide)
     }

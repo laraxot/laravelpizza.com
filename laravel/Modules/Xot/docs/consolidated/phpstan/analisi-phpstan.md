@@ -63,7 +63,7 @@ Questo documento contiene l'analisi dettagliata dei problemi rilevati da PHPStan
 ## Monitoraggio
 - Eseguire PHPStan dopo ogni modifica
 - Mantenere aggiornato questo documento
-- Verificare l'impatto delle correzioni sugli altri moduli 
+- Verificare l'impatto delle correzioni sugli altri moduli
 ## Collegamenti tra versioni di ANALISI_PHPSTAN.md
 * [ANALISI_PHPSTAN.md](../../../Gdpr/project_docs/phpstan/ANALISI_PHPSTAN.md)
 * [ANALISI_PHPSTAN.md](../../../Xot/project_docs/phpstan/ANALISI_PHPSTAN.md)
@@ -75,7 +75,6 @@ Questo documento contiene l'analisi dettagliata dei problemi rilevati da PHPStan
 * [ANALISI_PHPSTAN.md](../../../Tenant/project_docs/phpstan/ANALISI_PHPSTAN.md)
 * [ANALISI_PHPSTAN.md](../../../Activity/project_docs/phpstan/ANALISI_PHPSTAN.md)
 
-
 ## Collegamenti tra versioni di analisi_phpstan.md
 * [analisi_phpstan.md](../../../Gdpr/project_docs/phpstan/analisi_phpstan.md)
 * [analisi_phpstan.md](../../../User/project_docs/phpstan/analisi_phpstan.md)
@@ -85,4 +84,3 @@ Questo documento contiene l'analisi dettagliata dei problemi rilevati da PHPStan
 * [analisi_phpstan.md](../../../Media/project_docs/phpstan/analisi_phpstan.md)
 * [analisi_phpstan.md](../../../Tenant/project_docs/phpstan/analisi_phpstan.md)
 * [analisi_phpstan.md](../../../Activity/project_docs/phpstan/analisi_phpstan.md)
-

@@ -6,7 +6,7 @@ Durante il login utente, si verificava un Fatal Error causato dalla mancanza del
 
 ## Problema
 
-Il modello `DeviceUser` estende `BasePivot`, che a sua volta estende `Illuminate\Database\Eloquent\Relations\Pivot`. 
+Il modello `DeviceUser` estende `BasePivot`, che a sua volta estende `Illuminate\Database\Eloquent\Relations\Pivot`.
 
 ```php
 class DeviceUser extends BasePivot
@@ -74,8 +74,8 @@ php artisan tinker
 
 ## Impatto
 
-✅ **DeviceUser** - Login utente funziona correttamente  
-✅ **LoginListener** - Creazione/aggiornamento record device completata  
+✅ **DeviceUser** - Login utente funziona correttamente
+✅ **LoginListener** - Creazione/aggiornamento record device completata
 ✅ **Testing** - Factory disponibile per tutti i modelli Pivot
 
 ## Link Correlati
@@ -86,12 +86,7 @@ php artisan tinker
 
 ---
 
-**Data**: 22 Ottobre 2025  
-**Stato**: ✅ RISOLTO  
-**Modulo**: User  
+**Data**: 22 Ottobre 2025
+**Stato**: ✅ RISOLTO
+**Modulo**: User
 **File Modificati**: `Modules/User/app/Models/BasePivot.php`
-
-
-
-
-

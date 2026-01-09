@@ -18,4 +18,4 @@
 ## Spunti per il Progetto
 - Utilizzare aggregate per tutte le regole critiche
 - Gestire limiti e notifiche solo tramite eventi
-- Testare ogni regola con eventi e proiezioni 
+- Testare ogni regola con eventi e proiezioni

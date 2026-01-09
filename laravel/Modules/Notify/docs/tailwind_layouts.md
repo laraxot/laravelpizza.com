@@ -79,7 +79,7 @@ Questo documento descrive l'implementazione dei layout nel modulo Notify utilizz
             :active="request()->routeIs('notifications.*')"
             :href="route('notifications.index')"
         />
-        
+
             icon="heroicon-o-cog"
             :label="__('notify::layout.settings')"
             :active="request()->routeIs('settings.*')"

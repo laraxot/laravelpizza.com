@@ -85,7 +85,6 @@ Elenco di pratiche da evitare nello sviluppo.
 * [patterns.md](../../../Xot/docs/it/patterns.md)
 * [patterns.md](../../../Xot/docs/architecture/patterns.md)
 
-
 ### Versione Incoming
 
 # Design Patterns and Architecture
@@ -126,4 +125,3 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/bad_practices.txt}
 ```
 
 ---
-

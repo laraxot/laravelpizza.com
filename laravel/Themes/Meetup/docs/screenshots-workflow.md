@@ -1,6 +1,6 @@
 # Workflow Screenshot per Sviluppo e Documentazione
 
-**Data**: 2025-01-22  
+**Data**: 2025-01-22
 **Scopo**: Documentare il processo di cattura e gestione screenshot durante lo sviluppo
 
 ---
@@ -34,16 +34,16 @@
 browser_navigate({ url: "http://127.0.0.1:8002/it" })
 
 // Screenshot full page
-browser_take_screenshot({ 
+browser_take_screenshot({
     filename: "homepage-locale-after-fixes.png",
-    fullPage: true 
+    fullPage: true
 })
 
 // Screenshot elemento specifico
-browser_take_screenshot({ 
+browser_take_screenshot({
     filename: "hero-section.png",
     selector: "section.hero",
-    fullPage: false 
+    fullPage: false
 })
 ```
 
@@ -132,9 +132,9 @@ Quando prendi screenshot per un processo specifico, crea anche un documento MD c
 browser_navigate({ url: "http://127.0.0.1:8002/it" })
 
 # Screenshot stato iniziale
-browser_take_screenshot({ 
+browser_take_screenshot({
     filename: "homepage-locale-before.png",
-    fullPage: true 
+    fullPage: true
 })
 ```
 
@@ -147,16 +147,16 @@ browser_take_screenshot({
 
 ```bash
 # Screenshot stato finale
-browser_take_screenshot({ 
+browser_take_screenshot({
     filename: "homepage-locale-after-fixes.png",
-    fullPage: true 
+    fullPage: true
 })
 
 # Screenshot riferimento produzione
 browser_navigate({ url: "https://laravelpizza.com/" })
-browser_take_screenshot({ 
+browser_take_screenshot({
     filename: "homepage-produzione-reference.png",
-    fullPage: true 
+    fullPage: true
 })
 ```
 
@@ -211,6 +211,6 @@ Prima di completare un task con screenshot:
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: ✅ Documentazione Completa

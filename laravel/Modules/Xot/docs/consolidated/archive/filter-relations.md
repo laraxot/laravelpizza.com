@@ -93,5 +93,3 @@ function ($item) use ($model) {
 ```php
 return $res;
 ```
-
-

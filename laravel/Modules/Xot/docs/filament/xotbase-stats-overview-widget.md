@@ -298,11 +298,11 @@ class MyAdvancedStatsOverviewWidget extends XotBaseStatsOverviewWidget
     protected function getStats(): array
     {
         $cacheKey = 'mymodule:dashboard:advanced_stats_overview';
-        
+
         return $this->getCachedDataWithDefaultTtl($cacheKey, function () {
             $currentMonth = Carbon::now()->startOfMonth();
             $previousMonth = Carbon::now()->subMonth()->startOfMonth();
-            
+
             return [
                 // Statistica base con formattazione
                 $this->createStat(
@@ -312,7 +312,7 @@ class MyAdvancedStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-users',
                     'success'
                 ),
-                
+
                 // Statistica con trend calcolato automaticamente
                 $this->createStatWithCalculatedTrend(
                     'Nuovi Utenti',
@@ -321,7 +321,7 @@ class MyAdvancedStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-user-plus',
                     'info'
                 ),
-                
+
                 // Statistica da query con condizioni
                 $this->createStatFromQuery(
                     'Utenti Attivi',
@@ -332,7 +332,7 @@ class MyAdvancedStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-check-circle',
                     'success'
                 ),
-                
+
                 // Statistica con aggregazione
                 $this->createStatFromAggregateQuery(
                     'Valore Medio Ordini',
@@ -345,7 +345,7 @@ class MyAdvancedStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'warning',
                     2
                 ),
-                
+
                 // Statistica con URL
                 $this->createStatWithUrl(
                     'Vedi Tutti gli Utenti',
@@ -355,7 +355,7 @@ class MyAdvancedStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-arrow-right',
                     'primary'
                 ),
-                
+
                 // Statistica con badge
                 $this->createStatWithBadge(
                     'Ordini in Attesa',
@@ -366,7 +366,7 @@ class MyAdvancedStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-clock',
                     'warning'
                 ),
-                
+
                 // Statistica con trend da query
                 $this->createStatWithTrendFromQuery(
                     'Vendite Mensili',
@@ -416,7 +416,7 @@ protected function getStats(): array
             'heroicon-m-calculator',
             'info'
         ),
-        
+
         // Statistica con azione personalizzata
         $this->createStatWithAction(
             'Esporta Dati',
@@ -542,4 +542,4 @@ protected static ?string $pollingInterval = '2m'; // Per dati che cambiano spess
 ## Collegamenti Correlati
 - [XotBaseChartWidget](./xotbase-chart-widget.md)
 - [XotBaseWidget](./xotbase-widget.md)
-- [Filament Widgets Documentation](https://filamentphp.com/project_docs/2.x/admin/widgets) 
+- [Filament Widgets Documentation](https://filamentphp.com/project_docs/2.x/admin/widgets)

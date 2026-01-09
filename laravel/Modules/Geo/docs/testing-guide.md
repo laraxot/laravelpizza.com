@@ -168,15 +168,15 @@ Il workflow `.github/workflows/tests.yml` esegue:
 describe('Model Name', function () {
     it('can be created with factory', function () {
         $model = createModel();
-        
+
         expect($model)->toBeInstanceOf(Model::class)
             ->and($model->exists)->toBeTrue();
     });
-    
+
     describe('Relationships', function () {
         // Test delle relazioni
     });
-    
+
     describe('Business Logic', function () {
         // Test della logica di business
     });
@@ -249,6 +249,6 @@ vendor/bin/pest --filter="test_name" --verbose
 
 ---
 
-**Ultimo aggiornamento**: 18 Agosto 2025  
-**Versione Pest**: 3.8  
+**Ultimo aggiornamento**: 18 Agosto 2025
+**Versione Pest**: 3.8
 **Versione PHPUnit**: 11.x

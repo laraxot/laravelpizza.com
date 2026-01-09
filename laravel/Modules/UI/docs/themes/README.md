@@ -11,7 +11,7 @@ Questa cartella contiene la documentazione relativa ai temi e allo styling.
 
 ## Note
 
-Questa documentazione descrive come gestire e personalizzare i temi del progetto. 
+Questa documentazione descrive come gestire e personalizzare i temi del progetto.
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
 * [README.md](bashscripts/docs/it/README.md)
@@ -89,4 +89,3 @@ Questa documentazione descrive come gestire e personalizzare i temi del progetto
 * [README.md](../../../Cms/docs/components/README.md)
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
-

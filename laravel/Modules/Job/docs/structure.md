@@ -38,7 +38,7 @@ Il `RouteServiceProvider` gestisce:
 ## Collegamenti Bidirezionali
 - [Documentazione Generale dei Moduli](/docs/modules.md)
 - [Configurazione Job](/docs/module_job.md)
-- [Best Practices PHPStan](/docs/phpstan/PHPSTAN_LEVEL10_LINEE_GUIDA.md) 
+- [Best Practices PHPStan](/docs/phpstan/PHPSTAN_LEVEL10_LINEE_GUIDA.md)
 
 # Analisi Dettagliata del Modulo Job
 
@@ -52,15 +52,15 @@ Data: 2025-04-23 19:09:55
   - Modules\\Job\\Database\\Seeders
 - **Pacchetto Composer**: laraxot/module_job_fila3
 - **Autore**: Marco Sottana
-- **Dipendenze**: 
-  - repositories_comment 
-  - type path url ../User 
-  - type path url ../Tenant 
-  - type path url ../Xot 
-- **Autoload**: 
-  - psr-4 Modules\\Job\\ app/ 
-  - Modules\\Job\\Database\\Factories\\ database/factories/ 
-  - Modules\\Job\\Database\\Seeders\\ database/seeders/ 
+- **Dipendenze**:
+  - repositories_comment
+  - type path url ../User
+  - type path url ../Tenant
+  - type path url ../Xot
+- **Autoload**:
+  - psr-4 Modules\\Job\\ app/
+  - Modules\\Job\\Database\\Factories\\ database/factories/
+  - Modules\\Job\\Database\\Seeders\\ database/seeders/
 - **Totale file PHP**: 199
 - **Totale classi/interfacce**: 115
 
@@ -154,8 +154,6 @@ namespace Modules\Job\App\Filament\Resources;
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
 
-
 ### Versione Incoming
-
 
 * [structure.md](../../../Cms/docs/components/structure.md)

@@ -32,15 +32,15 @@ class BlockData extends Data implements Wireable
     {
         $this->type = $type;
         $this->data = $data;
-        
+
         // Estrae la vista dai dati o usa fallback
         $view = Arr::get($data, 'view', 'ui::empty');
-        
+
         // Valida che la vista esista
         if(!view()->exists($view)){
             throw new \Exception('view not found: '.$view);
         }
-        
+
         $this->view = $view;
     }
 }
@@ -252,4 +252,4 @@ Per debuggare problemi con `BlockData`:
 - [Componente Page](../components/page.md)
 - [Architettura CMS Agnostica](../components.md)
 - [Best Practices per il Rendering](../best-practices/page-rendering.md)
-- [View Resolution Laravel](https://laravel.com/docs/views) 
+- [View Resolution Laravel](https://laravel.com/docs/views)

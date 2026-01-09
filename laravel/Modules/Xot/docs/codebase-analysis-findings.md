@@ -10,7 +10,7 @@ Ho capito la distinzione importante per l'uso delle chiavi negli array:
 
 #### Contesti in Cui Usare Array Indicizzati
 - `getTableColumns()` - colonne della tabella
-- `getTableActions()` - azioni della tabella  
+- `getTableActions()` - azioni della tabella
 - `getTableFilters()` - filtri della tabella
 - `getTableBulkActions()` - azioni di massa
 - `getHeaderActions()` - azioni nell'header
@@ -23,7 +23,7 @@ Ho capito la distinzione importante per l'uso delle chiavi negli array:
 
 Ho trovato che **il progetto è già completamente allineato** con la regola fondamentale:
 
-❌ **MAI usare `property_exists()` con modelli Eloquent**  
+❌ **MAI usare `property_exists()` con modelli Eloquent**
 ✅ **Sempre usare `isset()`, `hasAttribute()`, `isFillable()` o `Schema::hasColumn()`**
 
 #### Risultato della ricerca:

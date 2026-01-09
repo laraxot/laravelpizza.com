@@ -108,12 +108,12 @@ class VerifyUserEmailAction
                     ]
                 ]
             );
-            
+
             if ($response['status'] === 'success') {
                 $data = $response['data'] ?? [];
                 return ($data['status'] ?? '') === 'valid';
             }
-            
+
             return false;
         } catch (\Exception $e) {
             Log::error('Email verification failed', [
@@ -121,7 +121,7 @@ class VerifyUserEmailAction
                 'email' => $user->email,
                 'error' => $e->getMessage()
             ]);
-            
+
             return false;
         }
     }
@@ -166,17 +166,17 @@ class UserStatisticsRepository
     public function getStatisticsByRole(): array
     {
         $results = $this->mcpService->mysql()->executeQuery(
-            'SELECT r.name as role, COUNT(u.id) as user_count, 
-             AVG(DATEDIFF(NOW(), u.created_at)) as avg_account_age, 
+            'SELECT r.name as role, COUNT(u.id) as user_count,
+             AVG(DATEDIFF(NOW(), u.created_at)) as avg_account_age,
              SUM(u.is_active) as active_users
              FROM users u
              JOIN role_user ru ON u.id = ru.user_id
              JOIN roles r ON ru.role_id = r.id
              GROUP BY r.name'
         );
-        
+
         $statistics = [];
-        
+
         foreach ($results as $result) {
             $statistics[$result['role']] = new UserStatisticsData(
                 role: $result['role'],
@@ -185,7 +185,7 @@ class UserStatisticsRepository
                 activeUsers: (int) $result['active_users']
             );
         }
-        
+
         return $statistics;
     }
 }
@@ -241,7 +241,7 @@ class UserCacheService
             'last_login' => $user->last_login_at?->toIso8601String(),
             'is_active' => $user->is_active
         ];
-        
+
         return $this->mcpService->redis()->set(
             "user_info_{$user->id}",
             $userInfo,
@@ -259,7 +259,7 @@ class UserCacheService
     public function getUserInfo(int $userId): ?array
     {
         $userInfo = $this->mcpService->redis()->get("user_info_{$userId}");
-        
+
         return $userInfo ?: null;
     }
 
@@ -298,7 +298,7 @@ use Filament\Forms\Components\Placeholder;
 class EditUser extends EditRecord
 {
     protected static string $resource = UserResource::class;
-    
+
     public function getHeaderActions(): array
     {
         return [
@@ -307,20 +307,20 @@ class EditUser extends EditRecord
                 ->icon('heroicon-o-envelope')
                 ->action(function () {
                     $user = $this->record;
-                    
+
                     /** @var MCPServiceContract $mcpService */
                     $mcpService = app(MCPServiceContract::class);
-                    
+
                     /** @var \Modules\User\Actions\VerifyUserEmailAction $verifyEmailAction */
                     $verifyEmailAction = app(\Modules\User\Actions\VerifyUserEmailAction::class);
-                    
+
                     $isValid = $verifyEmailAction->execute($user);
-                    
+
                     if ($isValid) {
                         $user->update([
                             'email_verified_at' => now()
                         ]);
-                        
+
                         Notification::make()
                             ->title('Email verificata con successo')
                             ->success()
@@ -331,14 +331,14 @@ class EditUser extends EditRecord
                             ->danger()
                             ->send();
                     }
-                    
+
                     $this->refreshFormData([
                         'email_verified_at'
                     ]);
                 })
         ];
     }
-    
+
     protected function getHeaderWidgets(): array
     {
         return [

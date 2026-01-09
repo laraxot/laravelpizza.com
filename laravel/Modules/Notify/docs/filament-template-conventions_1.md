@@ -1,4 +1,4 @@
-# Convenzioni per Template Blade di Filament 
+# Convenzioni per Template Blade di Filament
 
 ## Struttura Standard dei Template di Pagina
 

@@ -24,11 +24,11 @@ Converte file di traduzione tra formato PHP e JSON.
 protected function flattenArray(array $array, string $prefix = ''): array
 {
     $result = [];
-    
+
     foreach ($array as $key => $value) {
         Assert::string($key, 'Le chiavi degli array devono essere stringhe');
         $newKey = $prefix ? "{$prefix}.{$key}" : $key;
-        
+
         if (is_array($value)) {
             /** @var array<string, mixed> $value */
             $result = array_merge($result, $this->flattenArray($value, $newKey));
@@ -37,7 +37,7 @@ protected function flattenArray(array $array, string $prefix = ''): array
             $result[$newKey] = $value;
         }
     }
-    
+
     return $result;
 }
 ```
@@ -63,11 +63,11 @@ Trova traduzioni mancanti o vuote nel sistema.
 protected function checkArrayForMissing(array $array, string $namespace, string $file, string $parentKey = ''): array
 {
     $missing = [];
-    
+
     foreach ($array as $key => $value) {
         Assert::string($key, 'Le chiavi delle traduzioni devono essere stringhe');
         $currentKey = $parentKey ? "{$parentKey}.{$key}" : $key;
-        
+
         if (is_array($value)) {
             /** @var array<string, mixed> $value */
             $missing = array_merge(
@@ -82,7 +82,7 @@ protected function checkArrayForMissing(array $array, string $namespace, string 
             ];
         }
     }
-    
+
     return $missing;
 }
 ```

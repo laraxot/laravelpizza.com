@@ -1,7 +1,7 @@
 # PHPStan Corrections - Geo Module - Gennaio 2026
 
-**Data**: 2026-01-02  
-**Status**: ✅ COMPLETATO  
+**Data**: 2026-01-02
+**Status**: ✅ COMPLETATO
 **Errori corretti**: Da 13 a 0
 
 ## File corretti
@@ -23,7 +23,7 @@ use Modules\Geo\Models\GeoNamesCap;
 
 ### 2. app/Actions/UpdateClientCoordinatesBulkAction.php
 
-**Problema**: 
+**Problema**:
 - PHPDoc errato: `Collection<int, Client>` invece di `Collection<int, Address>`
 - Check ridondanti: `is_string()` su tipi già ristretti
 
@@ -60,7 +60,7 @@ public function execute(Collection $addresses): array
 
 ### 3. app/Models/Address.php
 
-**Problema**: 
+**Problema**:
 - `is_string($part)` chiamato su `non-empty-string` (riga 225)
 - `is_string($value)` chiamato su `string` (riga 263)
 

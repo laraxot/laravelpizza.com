@@ -3,4 +3,3 @@
 * [patterns.md](../../../Xot/project_docs/en/patterns.md)
 * [patterns.md](../../../Xot/project_docs/it/patterns.md)
 * [patterns.md](../../../Xot/project_docs/architecture/patterns.md)
-

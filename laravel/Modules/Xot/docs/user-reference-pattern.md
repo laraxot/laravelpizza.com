@@ -1,7 +1,7 @@
 # Pattern per Riferimenti User - Laraxot
 
-**Data**: 2025-01-10  
-**Obiettivo**: Standardizzare i riferimenti a User nel sistema Laraxot  
+**Data**: 2025-01-10
+**Obiettivo**: Standardizzare i riferimenti a User nel sistema Laraxot
 **Problema**: PHPStan segnala errori su `App\Models\User` che non esiste
 
 ---
@@ -119,12 +119,12 @@ use Illuminate\Http\Request;
 public function handle(Request $request, Closure $next): Response
 {
     $user = $request->user();
-    
+
     // ✅ CORRETTO - Verifica UserContract
     if ($user instanceof UserContract) {
         $lang = $user->lang ?? app()->getLocale();
     }
-    
+
     return $next($request);
 }
 ```
@@ -139,7 +139,7 @@ public function registerLang(): void
 {
     $user = request()->user();
     $lang = app()->getLocale();
-    
+
     // ✅ CORRETTO - Verifica Model e UserContract
     if ($user instanceof Model && $user instanceof UserContract) {
         $userLang = $user->getAttribute('lang');
@@ -224,5 +224,3 @@ if ($user instanceof UserContract) {
 ---
 
 *Ultimo aggiornamento: 2025-01-10*
-
-

@@ -52,4 +52,4 @@ class ProposeLoans extends Command
 - [Best practice bank](./04_best_practice.md)
 - [Testing bank](./07_test.md)
 - [API bank](./06_api.md)
-- [Glossario bank](./08_glossario.md) 
+- [Glossario bank](./08_glossario.md)

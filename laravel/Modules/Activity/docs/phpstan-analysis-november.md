@@ -107,7 +107,6 @@ Tutti i componenti Filament nel modulo sono compatibili con Filament 4.x:
 
 ---
 
-**Ultimo Aggiornamento:** 6 Novembre 2025  
-**Versione:** 1.0.0  
+**Ultimo Aggiornamento:** 6 Novembre 2025
+**Versione:** 1.0.0
 **Status:** ✅ Production Ready - PHPStan Level 10 Compliant
-

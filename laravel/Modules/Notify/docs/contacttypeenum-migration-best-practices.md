@@ -51,10 +51,10 @@ return new class extends XotBaseMigration
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
             $table->string('name');
-            
+
             // Campi contatto standard
             ContactTypeEnum::columns($table);
-            
+
             $table->timestamps();
         });
 
@@ -62,7 +62,7 @@ return new class extends XotBaseMigration
         $this->tableUpdate(function (Blueprint $table): void {
             // Per aggiungere nuovi campi in modo sicuro
             ContactTypeEnum::updateColumns($table, $this);
-            
+
             $this->updateTimestamps($table);
         });
     }
@@ -77,7 +77,7 @@ return new class extends XotBaseMigration
 $this->tableUpdate(function (Blueprint $table): void {
     // Aggiungi tutti i campi contatto se mancanti
     ContactTypeEnum::updateColumns($table, $this);
-    
+
     // Altri aggiornamenti specifici
     if (! $this->hasColumn('is_active')) {
         $table->boolean('is_active')->default(true);
@@ -96,13 +96,13 @@ use Modules\Notify\Enums\ContactTypeEnum;
 $this->tableCreate(function (Blueprint $table): void {
     $table->id();
     $table->string('name');
-    
+
     // Indirizzo
     AddressItemEnum::columns($table);
-    
+
     // Contatti
     ContactTypeEnum::columns($table);
-    
+
     $table->timestamps();
 });
 ```
@@ -122,14 +122,14 @@ return new class extends XotBaseMigration
             $table->id();
             $table->string('name');
             $table->string('type'); // customer, supplier, etc.
-            
+
             // Contatti principali
             ContactTypeEnum::columns($table);
-            
+
             // Contatti secondari (con prefisso)
             $table->string('billing_email')->nullable();
             $table->string('shipping_phone')->nullable();
-            
+
             $table->timestamps();
         });
     }
@@ -149,16 +149,16 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Relazione polimorfa
             $table->morphs('contactable');
-            
+
             // Tipo di contatto
             $table->string('type')->index(); // primary, billing, shipping
-            
+
             // Valore del contatto (usa enum per validazione)
             $table->string('value');
-            
+
             $table->timestamps();
         });
     }
@@ -173,21 +173,21 @@ return new class extends XotBaseMigration
 $this->tableCreate(function (Blueprint $table): void {
     $table->id();
     $table->string('name');
-    
+
     // Email unica
     $table->string('email')->unique()->nullable();
-    
+
     // Phone unico
     $table->string('phone')->unique()->nullable();
-    
+
     // Altri contatti non unici
     $table->string('mobile')->nullable();
     $table->string('whatsapp')->nullable();
     $table->string('fax')->nullable();
     $table->string('pec')->nullable();
-    
+
     $table->text('notes')->nullable();
-    
+
     $table->timestamps();
 });
 ```
@@ -207,7 +207,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class ContactModel extends Model
 {
     use SoftDeletes;
-    
+
     protected $fillable = [
         'name',
         'phone',
@@ -218,33 +218,33 @@ class ContactModel extends Model
         'fax',
         'notes',
     ];
-    
+
     protected $casts = [
         'notes' => 'string',
     ];
-    
+
     // Scopes per query comuni
     public function scopeHasEmail($query)
     {
         return $query->whereNotNull('email')->where('email', '!=', '');
     }
-    
+
     public function scopeHasPhone($query)
     {
         return $query->whereNotNull('phone')->where('phone', '!=', '');
     }
-    
+
     public function scopeHasMobile($query)
     {
         return $query->whereNotNull('mobile')->where('mobile', '!=', '');
     }
-    
+
     // Accessors per formattazione
     public function getFormattedPhoneAttribute(): string
     {
         return $this->phone ? '+39 ' . $this->phone : '';
     }
-    
+
     public function getPrimaryContactAttribute(): string
     {
         return $this->email ?? $this->phone ?? $this->mobile ?? '';
@@ -268,12 +268,12 @@ class ContactableModel extends Model
     {
         return $this->morphMany(Contact::class, 'contactable');
     }
-    
+
     public function getPrimaryContact(): ?Contact
     {
         return $this->contacts()->where('type', 'primary')->first();
     }
-    
+
     public function getBillingContact(): ?Contact
     {
         return $this->contacts()->where('type', 'billing')->first();
@@ -298,7 +298,7 @@ protected function form(Form $form): Form
             // Campi base
             TextInput::make('name')
                 ->required(),
-            
+
             // Campi contatto da enum
             ...ContactTypeEnum::getFormSchema(),
         ]);
@@ -318,7 +318,7 @@ protected function table(Table $table): Table
     return $table
         ->columns([
             TextColumn::make('name'),
-            
+
             ContactColumn::make('contacts')
                 ->label('Contacts'),
         ]);
@@ -342,9 +342,9 @@ protected function table(Table $table): Table
                     'yes' => 'Has Email',
                     'no' => 'No Email',
                 ])
-                ->query(fn ($query, $data) => 
-                    $data === 'yes' 
-                        ? $query->whereNotNull('email') 
+                ->query(fn ($query, $data) =>
+                    $data === 'yes'
+                        ? $query->whereNotNull('email')
                         : $query->whereNull('email')
                 ),
         ]);

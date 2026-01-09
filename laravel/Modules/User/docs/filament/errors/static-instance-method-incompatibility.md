@@ -1,6 +1,6 @@
 # Incompatibilità tra metodi statici e di istanza in Filament
 
-> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User. 
+> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User.
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/filament/errors/static-instance-method-incompatibility.md).
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/project_docs/filament/errors/static-instance-method-incompatibility.md).
 ## Errori incontrati

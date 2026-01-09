@@ -15,7 +15,7 @@
 ### 🔗 Relationship Entities
 - **TeamUser** - Team-User membership
 - **ModelHasPermission** - Model-permission assignments
-- **RoleHasPermission** - Role-permission assignments  
+- **RoleHasPermission** - Role-permission assignments
 - **ModelHasRole** - Model-role assignments
 - **PermissionRole** - Permission-role relationships
 - **PermissionUser** - Permission-user assignments

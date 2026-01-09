@@ -132,7 +132,7 @@ final class SendNewProviderSMSAction implements SmsActionInterface
     public function execute(SmsData $smsData): array
     {
         // Implementazione...
-        
+
         return [
             'success' => true,
             // Altri dati...

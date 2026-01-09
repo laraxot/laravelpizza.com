@@ -2,10 +2,10 @@
 
 ## Analisi Completa
 
-**Data Analisi**: 2025-01-22  
-**PHPStan Level**: 10  
-**Modulo**: Notify  
-**Errori Trovati**: 2  
+**Data Analisi**: 2025-01-22
+**PHPStan Level**: 10
+**Modulo**: Notify
+**Errori Trovati**: 2
 **Errori Corretti**: 2 ✅
 
 ---
@@ -14,7 +14,7 @@
 
 ### 1. NormalizePhoneNumberAction.php - ltrim con tipo errato
 
-**File**: `app/Actions/SMS/NormalizePhoneNumberAction.php`  
+**File**: `app/Actions/SMS/NormalizePhoneNumberAction.php`
 **Linea**: 24
 
 **Errore**: `Parameter #1 $string of function ltrim expects string, array<string>|string given.`
@@ -40,7 +40,7 @@ $phoneNumber = ltrim($phoneNumber, '0');
 
 ### 2. WhatsAppActionFactory.php - encapsed string con tipo errato
 
-**File**: `app/Factories/WhatsAppActionFactory.php`  
+**File**: `app/Factories/WhatsAppActionFactory.php`
 **Linea**: 46
 
 **Errore**: `Part $normalizedDriver (array<string>|string) of encapsed string cannot be cast to string.`
@@ -90,4 +90,3 @@ Stesso pattern di Chart: usare `Assert::string()` per type narrowing dopo `preg_
 - [Code Quality Standards](../../Xot/docs/code-quality-standards.md)
 
 *Ultimo aggiornamento: 2025-01-22*
-

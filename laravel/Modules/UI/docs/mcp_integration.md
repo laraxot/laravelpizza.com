@@ -52,23 +52,23 @@ class GenerateUIScreenshotsAction
     public function execute(array $routes, string $outputDir, array $options = []): array
     {
         $results = [];
-        
+
         // Assicurati che la directory di output esista
         if (!file_exists($outputDir)) {
             mkdir($outputDir, 0755, true);
         }
-        
+
         foreach ($routes as $route) {
             try {
                 $url = route($route);
                 $fileName = Str::slug($route) . '.png';
                 $outputPath = $outputDir . '/' . $fileName;
-                
+
                 Log::info("Generating screenshot for route: {$route}", [
                     'url' => $url,
                     'output_path' => $outputPath
                 ]);
-                
+
                 $screenshotPath = $this->mcpService->puppeteer()->captureScreenshot(
                     $url,
                     $outputPath,
@@ -78,7 +78,7 @@ class GenerateUIScreenshotsAction
                         'omitBackground' => false
                     ], $options)
                 );
-                
+
                 if ($screenshotPath) {
                     $results[$route] = $screenshotPath;
                     Log::info("Screenshot generated successfully", [
@@ -98,7 +98,7 @@ class GenerateUIScreenshotsAction
                 ]);
             }
         }
-        
+
         return $results;
     }
 }
@@ -146,10 +146,10 @@ class ThemeFileService
     public function readThemeFile(string $themeName, string $filePath): ?string
     {
         $fullPath = $this->getThemePath($themeName) . '/' . $filePath;
-        
+
         try {
             $content = $this->mcpService->filesystem()->readFile($fullPath);
-            
+
             return $content ?: null;
         } catch (\Exception $e) {
             Log::error("Failed to read theme file", [
@@ -157,7 +157,7 @@ class ThemeFileService
                 'file' => $filePath,
                 'message' => $e->getMessage()
             ]);
-            
+
             return null;
         }
     }
@@ -174,14 +174,14 @@ class ThemeFileService
     public function writeThemeFile(string $themeName, string $filePath, string $content): bool
     {
         $fullPath = $this->getThemePath($themeName) . '/' . $filePath;
-        
+
         try {
             // Assicurati che la directory esista
             $directory = dirname($fullPath);
             if (!file_exists($directory)) {
                 mkdir($directory, 0755, true);
             }
-            
+
             return $this->mcpService->filesystem()->writeFile($fullPath, $content);
         } catch (\Exception $e) {
             Log::error("Failed to write theme file", [
@@ -189,7 +189,7 @@ class ThemeFileService
                 'file' => $filePath,
                 'message' => $e->getMessage()
             ]);
-            
+
             return false;
         }
     }
@@ -205,11 +205,11 @@ class ThemeFileService
     public function listThemeFiles(string $themeName, string $directory = ''): array
     {
         $fullPath = $this->getThemePath($themeName);
-        
+
         if ($directory) {
             $fullPath .= '/' . $directory;
         }
-        
+
         try {
             return $this->mcpService->filesystem()->listDirectory($fullPath);
         } catch (\Exception $e) {
@@ -218,7 +218,7 @@ class ThemeFileService
                 'directory' => $directory,
                 'message' => $e->getMessage()
             ]);
-            
+
             return [];
         }
     }
@@ -281,7 +281,7 @@ class UICacheService
     public function cacheComponent(string $componentName, array $props, string $renderedHtml, int $ttl = 3600): bool
     {
         $cacheKey = $this->generateComponentCacheKey($componentName, $props);
-        
+
         try {
             return $this->mcpService->redis()->set(
                 $cacheKey,
@@ -296,7 +296,7 @@ class UICacheService
                 'component' => $componentName,
                 'message' => $e->getMessage()
             ]);
-            
+
             return false;
         }
     }
@@ -312,21 +312,21 @@ class UICacheService
     public function getCachedComponent(string $componentName, array $props): ?string
     {
         $cacheKey = $this->generateComponentCacheKey($componentName, $props);
-        
+
         try {
             $cached = $this->mcpService->redis()->get($cacheKey);
-            
+
             if ($cached && isset($cached['html'])) {
                 return $cached['html'];
             }
-            
+
             return null;
         } catch (\Exception $e) {
             Log::error("Failed to get cached UI component", [
                 'component' => $componentName,
                 'message' => $e->getMessage()
             ]);
-            
+
             return null;
         }
     }
@@ -344,27 +344,27 @@ class UICacheService
         if (empty($props)) {
             // Invalida tutti i componenti con questo nome
             $pattern = "ui_component_{$componentName}_*";
-            
+
             try {
                 $keys = $this->mcpService->redis()->keys($pattern);
-                
+
                 foreach ($keys as $key) {
                     $this->mcpService->redis()->delete($key);
                 }
-                
+
                 return true;
             } catch (\Exception $e) {
                 Log::error("Failed to invalidate UI component cache", [
                     'component' => $componentName,
                     'message' => $e->getMessage()
                 ]);
-                
+
                 return false;
             }
         } else {
             // Invalida un componente specifico
             $cacheKey = $this->generateComponentCacheKey($componentName, $props);
-            
+
             try {
                 return $this->mcpService->redis()->delete($cacheKey);
             } catch (\Exception $e) {
@@ -372,7 +372,7 @@ class UICacheService
                     'component' => $componentName,
                     'message' => $e->getMessage()
                 ]);
-                
+
                 return false;
             }
         }
@@ -389,7 +389,7 @@ class UICacheService
     private function generateComponentCacheKey(string $componentName, array $props): string
     {
         $propsHash = md5(json_encode($props));
-        
+
         return "ui_component_{$componentName}_{$propsHash}";
     }
 }
@@ -439,29 +439,29 @@ class AnalyzeUIAccessibilityAction
         try {
             // Estrai il contenuto HTML della pagina
             $html = $this->mcpService->puppeteer()->extractContent($url, 'html');
-            
+
             if (!$html) {
                 Log::error("Failed to extract HTML content", [
                     'url' => $url
                 ]);
-                
+
                 return new UIAnalysisData(
                     score: 0,
                     issues: ['Failed to extract HTML content'],
                     suggestions: ['Check if the URL is accessible']
                 );
             }
-            
+
             // Analizza l'accessibilità con sequential-thinking
             $analysis = $this->mcpService->sequentialThinking()->analyze(
                 $html,
                 ['accessibility', 'usability', 'performance']
             );
-            
+
             $accessibilityScore = $analysis['accessibility']['score'] ?? 0;
             $accessibilityIssues = $analysis['accessibility']['issues'] ?? [];
             $suggestions = $analysis['accessibility']['suggestions'] ?? [];
-            
+
             return new UIAnalysisData(
                 score: $accessibilityScore,
                 issues: $accessibilityIssues,
@@ -473,7 +473,7 @@ class AnalyzeUIAccessibilityAction
                 'message' => $e->getMessage(),
                 'trace' => $e->getTraceAsString()
             ]);
-            
+
             return new UIAnalysisData(
                 score: 0,
                 issues: ['Analysis failed: ' . $e->getMessage()],
@@ -505,22 +505,22 @@ class CachedUIComponent extends Component
      * @var string
      */
     public string $componentName;
-    
+
     /**
      * @var array<string, mixed>
      */
     public array $componentProps = [];
-    
+
     /**
      * @var int
      */
     public int $cacheTtl = 3600;
-    
+
     /**
      * @var bool
      */
     public bool $forceRefresh = false;
-    
+
     /**
      * Monta il componente.
      *
@@ -536,7 +536,7 @@ class CachedUIComponent extends Component
         $this->componentProps = $componentProps;
         $this->cacheTtl = $cacheTtl;
     }
-    
+
     /**
      * Forza l'aggiornamento del componente.
      *
@@ -546,7 +546,7 @@ class CachedUIComponent extends Component
     {
         $this->forceRefresh = true;
     }
-    
+
     /**
      * Renderizza il componente.
      *
@@ -556,24 +556,24 @@ class CachedUIComponent extends Component
     {
         /** @var MCPServiceContract $mcpService */
         $mcpService = app(MCPServiceContract::class);
-        
+
         /** @var UICacheService $uiCacheService */
         $uiCacheService = app(UICacheService::class);
-        
+
         $html = null;
-        
+
         if (!$this->forceRefresh) {
             $html = $uiCacheService->getCachedComponent($this->componentName, $this->componentProps);
         }
-        
+
         if ($html === null) {
             // Renderizza il componente
             $html = view("ui::components.{$this->componentName}", $this->componentProps)->render();
-            
+
             // Memorizza in cache
             $uiCacheService->cacheComponent($this->componentName, $this->componentProps, $html, $this->cacheTtl);
         }
-        
+
         return view('ui::livewire.cached-ui-component', [
             'html' => $html
         ]);
@@ -602,11 +602,11 @@ $mount = function (string $url = '') {
 
 $analyze = function () {
     $this->isAnalyzing = true;
-    
+
     try {
         /** @var AnalyzeUIAccessibilityAction $analyzeAction */
         $analyzeAction = app(AnalyzeUIAccessibilityAction::class);
-        
+
         $this->analysisResult = $analyzeAction->execute($this->url);
     } catch (\Exception $e) {
         $this->addError('analysis', $e->getMessage());
@@ -629,7 +629,7 @@ $analyze = function () {
         </div>
         @error('analysis') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
     </div>
-    
+
     @if($analysisResult)
         <div class="mt-6 bg-white shadow overflow-hidden sm:rounded-lg">
             <div class="px-4 py-5 sm:px-6">

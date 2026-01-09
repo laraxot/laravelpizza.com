@@ -205,7 +205,7 @@ trait HasTeams
 
     /**
      * Determine if the given team is the current team.
-     * 
+     *
      * @param TeamContract $team
      * @return bool
      */
@@ -308,7 +308,7 @@ trait HasTeams
     public function ownsTeam(TeamContract $team): bool
     {
         Assert::notNull($team, 'Team cannot be null');
-        
+
         return $this->id && $team->user_id && $this->id === $team->user_id;
     }
 
@@ -428,6 +428,6 @@ Un trait che **rispetta la religione Jetstream** ma **evolve con la filosofia La
 
 ---
 
-**Data creazione**: 10 giugno 2025  
-**Conformità**: Laravel Jetstream 5.x + Laraxot PTVX Philosophy  
+**Data creazione**: 10 giugno 2025
+**Conformità**: Laravel Jetstream 5.x + Laraxot PTVX Philosophy
 **PHPStan**: Level 9+ Compliant

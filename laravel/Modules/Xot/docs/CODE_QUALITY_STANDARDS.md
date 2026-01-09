@@ -10,7 +10,7 @@ This document establishes code quality standards and best practices for the Xot 
 ```php
 // ❌ SBAGLIATO - Mai estendere direttamente
 class MyPage extends ViewRecord
-class MyPage extends CreateRecord  
+class MyPage extends CreateRecord
 class MyPage extends EditRecord
 class MyPage extends ListRecords
 class MyPage extends Page
@@ -78,7 +78,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
 {
     use InteractsWithActions;
     use InteractsWithForms;
-    
+
     // Common functionality for all widgets
 }
 ```
@@ -89,7 +89,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
 abstract class XotBasePage extends FilamentPage implements HasForms
 {
     use InteractsWithForms;
-    
+
     // Common functionality for all pages
 }
 ```
@@ -190,7 +190,7 @@ class TranslationAndValidationService
     {
         // Translation logic
     }
-    
+
     public function validate(array $data): bool
     {
         // Validation logic - different responsibility
@@ -209,7 +209,7 @@ abstract class XotBaseWidget
     {
         return $this->buildFormSchema();
     }
-    
+
     abstract protected function buildFormSchema(): array;
 }
 
@@ -236,7 +236,7 @@ abstract class XotBasePage
     {
         return $this->buildTitle();
     }
-    
+
     abstract protected function buildTitle(): string;
 }
 
@@ -359,11 +359,11 @@ public function canAccess($user): bool
     if (!$user) {
         return false;
     }
-    
+
     if (!$user->isActive()) {
         return false;
     }
-    
+
     return $user->hasPermission('access');
 }
 

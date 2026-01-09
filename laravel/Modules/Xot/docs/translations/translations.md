@@ -188,7 +188,7 @@ class Translation extends Model
     public static function getTranslation($key, $locale = null)
     {
         $locale = $locale ?? app()->getLocale();
-        
+
         return static::where('key', $key)
             ->where('locale', $locale)
             ->value('value');

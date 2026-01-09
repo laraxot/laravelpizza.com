@@ -151,7 +151,7 @@ Il sistema di componenti UI di il progetto è costruito su una base solida di be
 1. **Lazy Loading**
    ```php
    use Illuminate\Database\Eloquent\Builder;
-   
+
    public function users(): Builder
    {
        return User::query()
@@ -388,4 +388,3 @@ public function it_shows_loading_state(): void
 * [README.md](laravel/Modules/Cms/docs/components/README.md)
 * [README.md](laravel/Themes/Two/docs/README.md)
 * [README.md](laravel/Themes/One/docs/README.md)
-

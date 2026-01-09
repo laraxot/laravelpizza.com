@@ -258,13 +258,13 @@ cd /var/www/_bases/base_ptvx_fila4_mono/laravel
 
 for MODULE in Modules/*/docs; do
     echo "Analyzing: $MODULE"
-    
+
     # Trova file con nome simile (ignora case e - vs _)
     find "$MODULE" -maxdepth 1 -name "*.md" -type f | while read file; do
         basename=$(basename "$file" .md | tr '_' '-' | tr '[:upper:]' '[:lower:]')
         echo "$basename -> $file"
     done | sort | uniq -d -w 30
-    
+
     echo ""
 done
 ```
@@ -277,15 +277,15 @@ done
 find Modules/*/docs -maxdepth 1 -name "*.md" -type f | while read file; do
     dir=$(dirname "$file")
     base=$(basename "$file")
-    
+
     # Skip README.md and CHANGELOG.md
     if [[ "$base" == "README.md" ]] || [[ "$base" == "CHANGELOG.md" ]]; then
         continue
     fi
-    
+
     # Convert to lowercase kebab-case
     new_base=$(echo "$base" | tr '[:upper:]' '[:lower:]' | tr '_' '-')
-    
+
     if [[ "$base" != "$new_base" ]]; then
         echo "Renaming: $file -> $dir/$new_base"
         mv "$file" "$dir/$new_base"
@@ -301,10 +301,10 @@ done
 find Modules/*/docs -maxdepth 1 -name "*-20[0-9][0-9]-*.md" -type f | while read file; do
     dir=$(dirname "$file")
     base=$(basename "$file")
-    
+
     # Crea archive se non esiste
     mkdir -p "$dir/archive/historical"
-    
+
     echo "Archiving: $file"
     mv "$file" "$dir/archive/historical/$base"
 done
@@ -353,7 +353,6 @@ Prima di considerare un modulo "consolidato":
 
 ---
 
-**Created:** 2025-11-04  
-**Purpose:** Strategic plan per ridurre documentation bloat  
+**Created:** 2025-11-04
+**Purpose:** Strategic plan per ridurre documentation bloat
 **Target:** ~350 total files across all modules (da ~5,267)
-

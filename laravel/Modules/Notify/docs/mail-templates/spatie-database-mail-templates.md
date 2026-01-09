@@ -39,7 +39,7 @@ public function getHtmlLayout(): string
 {
     // Percorso al layout HTML
     $pathToLayout = base_path('Modules/Notify/resources/mail-layouts/main.html');
-    
+
     // Legge il contenuto del file e lo restituisce
     return file_get_contents($pathToLayout);
 }
@@ -61,7 +61,7 @@ class WelcomeMail extends TemplateMailable
 {
     /** @var string */
     public $name;
-    
+
     /** @var string */
     public $activationUrl;
 
@@ -70,12 +70,12 @@ class WelcomeMail extends TemplateMailable
         $this->name = $user->name;
         $this->activationUrl = $activationUrl;
     }
-    
+
     public function getHtmlLayout(): string
     {
         // Percorso al layout HTML
         $pathToLayout = base_path('Modules/Notify/resources/mail-layouts/main.html');
-        
+
         return file_get_contents($pathToLayout);
     }
 }
@@ -131,7 +131,7 @@ Un layout HTML contiene l'intera struttura della mail, con un segnaposto `{{{ bo
     <title>SaluteOra</title>
     <style>
         /* Stili CSS inline */
-        body { 
+        body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
@@ -161,11 +161,11 @@ Un layout HTML contiene l'intera struttura della mail, con un segnaposto `{{{ bo
         <h1><nome progetto></h1>
         <h1>SaluteOra</h1>
     </div>
-    
+
     <div class="content">
         {{{ body }}}
     </div>
-    
+
     <div class="footer">
         <p>© 2025 <nome progetto> - Tutti i diritti riservati</p>
         <p>© 2025 SaluteOra - Tutti i diritti riservati</p>

@@ -1,7 +1,7 @@
 # Passport Filament Cluster Proposal - User Module
 
-**Data**: 2025-01-22  
-**Filosofia**: DRY + KISS + Organizzazione Logica  
+**Data**: 2025-01-22
+**Filosofia**: DRY + KISS + Organizzazione Logica
 **Obiettivo**: Raggruppare tutte le risorse Passport/OAuth in un cluster Filament
 
 ---
@@ -91,9 +91,9 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 class Settings extends XotBasePage
 {
     protected static ?string $navigationLabel = 'OAuth Settings';
-    
+
     protected static ?int $navigationSort = 1;
-    
+
     public function getFormSchema(): array
     {
         return [
@@ -183,21 +183,21 @@ php artisan make:filament-cluster Passport --module=User
 ## 🎯 Alternative Considerate
 
 ### Opzione A: Cluster Unico (SCELTA)
-**Pro**: Organizzazione logica, navigazione chiara  
+**Pro**: Organizzazione logica, navigazione chiara
 **Contro**: Nessuno significativo
 
 ### Opzione B: Navigation Group
-**Pro**: Più semplice da implementare  
+**Pro**: Più semplice da implementare
 **Contro**: Meno organizzato, non raggruppa logicamente
 
 ### Opzione C: Widget Dashboard
-**Pro**: Vista d'insieme rapida  
+**Pro**: Vista d'insieme rapida
 **Contro**: Non sostituisce cluster, può essere aggiunto
 
 **Decisione**: Opzione A - Cluster unico per massima organizzazione
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: Proposta - da implementare

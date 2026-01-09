@@ -2,7 +2,6 @@ https://ajaxray.com/blog/lets-beautify-filament-3-login-page/
 
 https://www.codef.site/blog/laravel/how-to-customize-laravel-filament-login-page
 
-
 https://v2.filamentphp.com/tricks/customizing-filament-breezy-registration-profile-page
 
 ### Versione HEAD
@@ -28,14 +27,14 @@ use Filament\Forms\Form;
 class LoginWidget extends XotBaseWidget
 {
     protected static string $view = 'filament.widgets.auth.login-form';
-    
+
     public ?array $data = [];
-    
+
     public function mount(): void
     {
         $this->form->fill();
     }
-    
+
     public function form(Form $form): Form
     {
         return $form
@@ -52,15 +51,15 @@ class LoginWidget extends XotBaseWidget
             ])
             ->statePath('data');
     }
-    
+
     public function login(): void
     {
         $data = $this->form->getState();
-        
+
         if (Auth::attempt($data)) {
             $this->redirect('/dashboard');
         }
-        
+
         $this->addError('email', 'Invalid credentials');
     }
 }
@@ -80,11 +79,6 @@ class LoginWidget extends XotBaseWidget
 - [Best Practices Filament](FILAMENT_BEST_PRACTICES.md)
 - [User Profile Models](user_profile_models.md)
 
-
 ### Versione Incoming
 
-
 ---
-
-
-

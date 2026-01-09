@@ -121,7 +121,7 @@ class ThemeManager
     {
         $colors = $metatag->getThemeColors();
         $settings = $metatag->getThemeSettings();
-        
+
         $this->applyColors($colors);
         $this->applySettings($settings);
     }
@@ -169,4 +169,4 @@ class BrandValidator
 - [MetatagData](../datas/metatag-data.md)
 - [ApplyMetatagToPanelAction](../actions/applymetatagtopanelaction.md)
 - [Best Practices](../best-practices.md)
-- [Theme Management](../theme/theme_management.md) 
+- [Theme Management](../theme/theme_management.md)

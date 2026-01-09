@@ -39,7 +39,7 @@ use Modules\Geo\Services\LocationService;
 // Get coordinates from address
 $location = LocationService::getCoordinates('Rome, Italy');
 
-// Get address from coordinates  
+// Get address from coordinates
 $address = LocationService::getAddress(41.9028, 12.4964);
 ```
 

@@ -45,7 +45,7 @@
 ## Collegamenti
 - [Roadmap Principale](../../roadmap.md)
 - [Gestione Traduzioni](../../translations.md)
-- [Best Practices](../../BEST-PRACTICES.md) 
+- [Best Practices](../../BEST-PRACTICES.md)
 ## Collegamenti tra versioni di translations.md
 * [translations.md](../../../Chart/docs/translations.md)
 * [translations.md](../../../Reporting/docs/translations.md)
@@ -64,4 +64,3 @@
 * [translations.md](../../../Activity/docs/translations.md)
 * [translations.md](../../../Patient/docs/translations.md)
 * [translations.md](../../../Cms/docs/translations.md)
-

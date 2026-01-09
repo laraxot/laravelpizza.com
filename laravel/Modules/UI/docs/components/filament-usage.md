@@ -66,7 +66,7 @@ il progetto utilizza Filament come starterkit sia per il backend che per il fron
 2. **Personalizzazione**
    ```blade
    <!-- ✅ CORRETTO -->
-   <x-filament::button 
+   <x-filament::button
        color="primary"
        size="lg"
        :disabled="$disabled"

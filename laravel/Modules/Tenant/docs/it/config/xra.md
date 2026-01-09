@@ -23,10 +23,8 @@ return [
 * [xra.md](../../../Tenant/docs/it/xra.md)
 * [xra.md](../../../Tenant/docs/it/config/xra.md)
 
-
 ### Versione Incoming
 
 ];
 
 ---
-

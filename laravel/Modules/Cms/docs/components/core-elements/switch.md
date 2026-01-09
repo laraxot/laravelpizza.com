@@ -172,7 +172,7 @@ public static function form(Form $form): Form
             ->label('Stato')
             ->helperText('Attiva o disattiva l\'elemento')
             ->required(),
-            
+
         Toggle::make('send_notifications')
             ->label('Notifiche')
             ->helperText('Invia notifiche email')
@@ -213,4 +213,4 @@ class SettingsManager extends Component implements HasForms
                 }),
         ];
     }
-} 
+}

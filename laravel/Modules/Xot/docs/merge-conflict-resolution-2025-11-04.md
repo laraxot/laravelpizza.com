@@ -64,7 +64,7 @@ at Modules/Xot/app/Providers/RouteServiceProvider.php:155
     - Import duplicati massivi: 13 use statements (Actions, ActionGroup, BulkAction, ecc.)
     - Metodo `getTableHeading()` con versione incompleta + TRE versioni duplicate
     - TRE `if (!app(TableExistsByModelClassActions)->execute())` con solo UNA chiusura
-    - `->columns()` chiamato DUE volte  
+    - `->columns()` chiamato DUE volte
     - Codice `->visible($resource::canEdit(...)); }` duplicato fuori contesto
 
 12. **XotBaseDashboard.php**
@@ -164,8 +164,7 @@ public ?string $super_admin = null;
 ```php
 // ❌ SBAGLIATO
 use Filament\Forms\Form;
-=======
->>>>>>> 041533e (.)
+
 use Modules\User\Datas\PasswordData;
 ```
 
@@ -206,16 +205,16 @@ php -l path/to/file.php
 
 ### Principi Applicati
 
-1. **DRY (Don't Repeat Yourself)**  
+1. **DRY (Don't Repeat Yourself)**
    Ogni istruzione, proprietà o metodo deve esistere UNA SOLA VOLTA
 
-2. **Type Safety Consistency**  
+2. **Type Safety Consistency**
    Preferire `?string` a `null|string` per coerenza PSR-12
 
-3. **Defensive Programming**  
+3. **Defensive Programming**
    Ogni `{` deve avere la sua `}` corrispondente
 
-4. **Import Hygiene**  
+4. **Import Hygiene**
    Nessun use statement duplicato
 
 ## 🔐 Nuova Regola: File Locking
@@ -281,4 +280,3 @@ Questi possono essere corretti in un secondo momento se necessario.
 - [Laraxot Architecture Rules](./laraxot-architecture-rules.md)
 - [Code Quality Standards](./code-quality-standards.md)
 - [File Locking Pattern](./file-locking-pattern.md) ← DA CREARE
-

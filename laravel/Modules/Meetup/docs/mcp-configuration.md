@@ -31,7 +31,7 @@ Configure MCP servers that specifically assist with UI/UX development:
 
 #### 1. Tailwind CSS Server
 - **Purpose**: Provides access to Tailwind CSS utilities and configuration
-- **Functionality**: 
+- **Functionality**:
   - View current Tailwind config file
   - Access to custom colors, spacing, typography
   - Component utility classes reference

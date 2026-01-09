@@ -96,9 +96,9 @@ use function Laravel\Folio\render;
 
 render(function (View $view) {
     $locale = app()->getLocale();
-    
+
     // Altre operazioni...
-    
+
     return $view->with([
         'data' => $data,
         'locale' => $locale,
@@ -171,4 +171,4 @@ dd(app()->getLocale());
 
 // Vedere tutti i parametri della richiesta
 dd(request()->all());
-``` 
+```

@@ -19,4 +19,3 @@ Models: 5 | Resources: 0 | Services: 1 | Actions: 5 | Docs: 233 🟡
 Docs cleanup (1 sett)
 
 **Status:** 🟢 OTTIMO, docs da consolidare
-

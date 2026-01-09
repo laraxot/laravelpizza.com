@@ -1,6 +1,6 @@
 # Bugfix: IconColumn View Path Mismatch
 
-**Data Fix**: 11 Novembre 2025  
+**Data Fix**: 11 Novembre 2025
 **Status**: ✅ RISOLTO
 
 ## Problema

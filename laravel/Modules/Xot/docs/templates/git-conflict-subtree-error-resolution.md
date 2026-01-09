@@ -40,4 +40,4 @@
 ## Follow-up
 - [x] Verifica post-risoluzione
 - [x] Aggiornamento documentazione
-- [x] Notifica team 
+- [x] Notifica team

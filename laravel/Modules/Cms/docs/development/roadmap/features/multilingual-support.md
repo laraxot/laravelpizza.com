@@ -71,11 +71,11 @@ class SetLocale
     public function handle($request, Closure $next)
     {
         $locale = $request->segment(1);
-        
+
         if (in_array($locale, config('app.available_locales'))) {
             app()->setLocale($locale);
         }
-        
+
         return $next($request);
     }
 }

@@ -27,7 +27,7 @@ class Product extends BaseModel
         if (is_null($value)) {
             return 0.0;
         }
-        
+
         if (is_string($value)) {
             $trimmed = trim($value);
             if (empty($trimmed)) {
@@ -41,18 +41,18 @@ class Product extends BaseModel
             }
             return 0.0;
         }
-        
+
         if (is_float($value)) {
             return $value;
         }
-        
+
         if (is_int($value)) {
             return (float) $value;
         }
-        
+
         return 0.0;
     }
-    
+
     public function setPriceAttribute($value): void
     {
         // Stessa logica duplicata...
@@ -60,7 +60,7 @@ class Product extends BaseModel
             $this->attributes['price'] = 0.0;
             return;
         }
-        
+
         if (is_string($value)) {
             $trimmed = trim($value);
             if (empty($trimmed)) {
@@ -77,7 +77,7 @@ class Product extends BaseModel
             $this->attributes['price'] = 0.0;
             return;
         }
-        
+
         // ... continua la duplicazione
     }
 }
@@ -93,17 +93,17 @@ class Product extends BaseModel
     {
         return SafeFloatCastAction::cast($value, 0.0);
     }
-    
+
     public function setPriceAttribute($value): void
     {
         $this->attributes['price'] = SafeFloatCastAction::cast($value, 0.0);
     }
-    
+
     public function getDiscountedPriceAttribute(): float
     {
         $price = SafeFloatCastAction::cast($this->price, 0.0);
         $discount = SafeFloatCastAction::cast($this->discount_percentage, 0.0);
-        
+
         return $price * (1 - ($discount / 100));
     }
 }
@@ -118,10 +118,10 @@ class CalculatorService
     public function calculateTotal(array $items): float
     {
         $total = 0.0;
-        
+
         foreach ($items as $item) {
             $price = $item['price'] ?? 0;
-            
+
             // Logica duplicata per ogni valore
             if (is_null($price)) {
                 $price = 0.0;
@@ -146,10 +146,10 @@ class CalculatorService
             } else {
                 $price = 0.0;
             }
-            
+
             $total += $price;
         }
-        
+
         return $total;
     }
 }
@@ -164,24 +164,24 @@ class CalculatorService
     public function calculateTotal(array $items): float
     {
         $total = 0.0;
-        
+
         foreach ($items as $item) {
             $price = SafeFloatCastAction::cast($item['price'] ?? 0, 0.0);
             $total += $price;
         }
-        
+
         return $total;
     }
-    
+
     public function calculatePercentage(float $value, float $total): float
     {
         $safeValue = SafeFloatCastAction::cast($value);
         $safeTotal = SafeFloatCastAction::cast($total);
-        
+
         if ($safeTotal === 0.0) {
             return 0.0;
         }
-        
+
         return ($safeValue / $safeTotal) * 100;
     }
 }
@@ -198,7 +198,7 @@ class OrderController extends Controller
         $total = $request->input('total');
         $tax = $request->input('tax');
         $shipping = $request->input('shipping');
-        
+
         // Validazione manuale per ogni campo
         if (is_null($total)) {
             $total = 0.0;
@@ -223,9 +223,9 @@ class OrderController extends Controller
         } else {
             $total = 0.0;
         }
-        
+
         // Stessa logica duplicata per tax e shipping...
-        
+
         $order = Order::create([
             'total' => $total,
             'tax' => $tax,
@@ -248,7 +248,7 @@ class OrderController extends Controller
             'tax' => SafeFloatCastAction::cast($request->input('tax'), 0.0),
             'shipping' => SafeFloatCastAction::cast($request->input('shipping'), 0.0),
         ]);
-        
+
         return response()->json($order);
     }
 }
@@ -265,7 +265,7 @@ class User extends BaseModel
         if (is_null($value)) {
             return 0.0;
         }
-        
+
         if (is_string($value)) {
             $trimmed = trim($value);
             if (empty($trimmed)) {
@@ -279,23 +279,23 @@ class User extends BaseModel
             }
             return 0.0;
         }
-        
+
         if (is_float($value)) {
             return $value;
         }
-        
+
         if (is_int($value)) {
             return (float) $value;
         }
-        
+
         return 0.0;
     }
-    
+
     public function addFunds($amount): void
     {
         $currentBalance = $this->getBalanceAttribute($this->balance);
         $safeAmount = $this->getBalanceAttribute($amount); // Duplicazione!
-        
+
         $this->update(['balance' => $currentBalance + $safeAmount]);
     }
 }
@@ -311,15 +311,15 @@ class User extends BaseModel
     {
         return SafeFloatCastAction::cast($value, 0.0);
     }
-    
+
     public function addFunds($amount): void
     {
         $currentBalance = SafeFloatCastAction::cast($this->balance, 0.0);
         $safeAmount = SafeFloatCastAction::cast($amount, 0.0);
-        
+
         $this->update(['balance' => $currentBalance + $safeAmount]);
     }
-    
+
     public function hasSufficientFunds(float $required): bool
     {
         $balance = SafeFloatCastAction::cast($this->balance, 0.0);
@@ -360,17 +360,17 @@ class Product extends BaseModel
         } else {
             $price = 0.0;
         }
-        
+
         // Logica di range duplicata...
         $minPrice = 0.0;
         $maxPrice = 10000.0;
-        
+
         if ($price < $minPrice) {
             $price = $minPrice;
         } elseif ($price > $maxPrice) {
             $price = $maxPrice;
         }
-        
+
         $this->attributes['price'] = $price;
     }
 }
@@ -385,9 +385,9 @@ class Product extends BaseModel
     public function setPriceAttribute($value): void
     {
         $this->attributes['price'] = SafeFloatCastAction::castWithRange(
-            $value, 
-            0.0, 
-            10000.0, 
+            $value,
+            0.0,
+            10000.0,
             0.0
         );
     }
@@ -444,4 +444,4 @@ class Product extends BaseModel
 
 ---
 
-*Ultimo aggiornamento: 2025-01-06* 
+*Ultimo aggiornamento: 2025-01-06*

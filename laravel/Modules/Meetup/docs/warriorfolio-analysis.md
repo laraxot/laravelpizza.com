@@ -538,7 +538,7 @@ class EventController {
     @php
         $events = app(\Modules\Meetup\Services\EventService::class)->getUpcomingEvents();
     @endphp
-    
+
     <div>
         @foreach($events as $event)
             <x-event-card :event="$event" />

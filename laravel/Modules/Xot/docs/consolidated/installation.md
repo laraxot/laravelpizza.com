@@ -135,4 +135,3 @@ php artisan serve
 * [installation.md](../../../Lang/project_docs/installation.md)
 * [installation.md](../../../Cms/project_docs/installation.md)
 * [installation.md](../../../../Themes/One/project_docs/installation.md)
-

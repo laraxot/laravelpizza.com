@@ -6,12 +6,12 @@ Il modulo Notify implementa un sistema avanzato di gestione delle email template
 
 ## 🚨 Errore Critico Identificato
 
-**Data**: 26 Giugno 2025  
-**Errore**: `MissingMailTemplate` durante registrazione pazienti  
-**Status**: CRITICO - Sistema registrazione bloccato  
+**Data**: 26 Giugno 2025
+**Errore**: `MissingMailTemplate` durante registrazione pazienti
+**Status**: CRITICO - Sistema registrazione bloccato
 
-➡️ **Documentazione completa**: [Modulo Generico: Missing Mail Template Error](../../<nome modulo>/docs/errori/missing-mail-template-spatiemail.md)  
-➡️ **Documentazione completa**: [SaluteOra: Missing Mail Template Error](../../SaluteOra/docs/errori/missing-mail-template-spatiemail.md)  
+➡️ **Documentazione completa**: [Modulo Generico: Missing Mail Template Error](../../<nome modulo>/docs/errori/missing-mail-template-spatiemail.md)
+➡️ **Documentazione completa**: [SaluteOra: Missing Mail Template Error](../../SaluteOra/docs/errori/missing-mail-template-spatiemail.md)
 ➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../docs/errori_gravi/missing-mail-template-patterns.md)
 
 ### Fix Immediato
@@ -116,12 +116,12 @@ use Illuminate\Support\Facades\Mail;
 // ✅ CORRETTO - Con validazione slug
 try {
     $user = User::find(1);
-    
+
     // Verifica esistenza template prima dell'invio
     if (!\Modules\Notify\Models\MailTemplate::where('slug', 'welcome-email')->exists()) {
         throw new \Exception('Template welcome-email non trovato');
     }
-    
+
     Mail::to($user->email)->send(new SpatieEmail($user, 'welcome-email'));
 } catch (\Exception $e) {
     \Log::error('Email sending failed', ['error' => $e->getMessage()]);
@@ -193,7 +193,7 @@ Questi template DEVONO esistere per il funzionamento del sistema:
 'patient-active'      // Account attivato
 'patient-rejected'    // Registrazione respinta
 
-// Dottore - Stati registrazione  
+// Dottore - Stati registrazione
 'doctor-pending'      // Registrazione in verifica
 'doctor-active'       // Account dottore attivato
 'doctor-rejected'     // Registrazione respinta
@@ -261,7 +261,7 @@ MailTemplate::create([
    Spatie\MailTemplates\Exceptions\MissingMailTemplate
    No mail template exists for mailable `SpatieEmail`.
    ```
-   
+
    **Soluzioni**:
    - Eseguire `CriticalMailTemplatesSeeder`
    - Verificare esistenza template con `php artisan mail:check-templates`
@@ -327,6 +327,6 @@ php artisan tinker
 
 ---
 
-**Ultimo aggiornamento**: 26 Giugno 2025  
-**Status**: Aggiornato per errore critico MissingMailTemplate  
+**Ultimo aggiornamento**: 26 Giugno 2025
+**Status**: Aggiornato per errore critico MissingMailTemplate
 **Priorità**: URGENT - Fix sistema registrazione

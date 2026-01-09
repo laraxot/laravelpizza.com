@@ -184,4 +184,4 @@ La navigazione (`navigation.blade.php`) deve includere:
 5. **Accessibilità**: Rendi il layout accessibile
 6. **SEO**: Includi i meta tag necessari
 7. **Manutenibilità**: Mantieni il codice pulito e documentato
-8. **Consistenza**: Mantieni uno stile coerente 
+8. **Consistenza**: Mantieni uno stile coerente

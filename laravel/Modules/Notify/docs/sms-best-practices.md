@@ -247,4 +247,4 @@ try {
 - Documentare procedure
 - Mantenere SLA
 - Monitorare ticket
-- Analizzare feedback 
+- Analizzare feedback

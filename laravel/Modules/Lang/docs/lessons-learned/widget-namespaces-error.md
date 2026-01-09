@@ -31,7 +31,7 @@ protected static string $view = 'pub_theme::filament.widgets.auth.password.reset
 ### Widget di Autenticazione → `pub_theme::`
 Tutti i widget che gestiscono **autenticazione/UI tema**:
 - `LoginWidget`
-- `RegistrationWidget` 
+- `RegistrationWidget`
 - `PasswordResetWidget` → `pub_theme::filament.widgets.auth.password.reset`
 - `PasswordResetConfirmWidget` → `pub_theme::filament.widgets.auth.password.reset-confirm`
 - `ForgotPasswordWidget`
@@ -109,7 +109,7 @@ Quando creo un nuovo widget, chiedermi:
 
 ### Immediate
 - [x] Corretto il widget attuale
-- [x] Creata view nel tema  
+- [x] Creata view nel tema
 - [x] Documentazione aggiornata
 
 ### Future
@@ -128,4 +128,4 @@ Questo errore ha evidenziato l'importanza di:
 
 La separazione tema/modulo è una decisione architetturale fondamentale che richiede comprensione, non automatismo.
 
-*Errore commesso e documentato: Dicembre 2024* 
+*Errore commesso e documentato: Dicembre 2024*

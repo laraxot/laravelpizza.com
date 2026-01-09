@@ -145,9 +145,9 @@ Il componente Rating Bar permette agli utenti di assegnare e visualizzare valuta
         :max="5"
         wire:change="updateRating"
     />
-    
+
     <p x-show="rating > 0" class="text-sm">
-        <span x-text="rating"></span> stelle - 
+        <span x-text="rating"></span> stelle -
         <span x-text="rating <= 2 ? 'Scarso' : (rating <= 3 ? 'Medio' : (rating <= 4 ? 'Buono' : 'Eccellente'))">
         </span>
     </p>
@@ -174,4 +174,4 @@ Il componente Rating Bar permette agli utenti di assegnare e visualizzare valuta
 4. **Accessibilità e SEO**
    - Utilizzare markup semantico
    - Implementare microdata per recensioni
-   - Mantenere supporto per screen reader 
+   - Mantenere supporto per screen reader

@@ -38,7 +38,7 @@ state(['search' => '']);
 
 $posts = computed(function () {
     return Post::query()
-        ->when($this->search, fn($query) => 
+        ->when($this->search, fn($query) =>
             $query->where('title', 'like', "%{$this->search}%")
         )
         ->latest()
@@ -51,7 +51,7 @@ $posts = computed(function () {
         <div class="px-4 py-6 sm:px-0">
             <div class="flex justify-between items-center mb-6">
                 <h1 class="text-2xl font-semibold">Post Recenti</h1>
-                
+
                 <x-cms::input-field
                     wire:model.live.debounce.300ms="search"
                     placeholder="Cerca post..."
@@ -66,12 +66,12 @@ $posts = computed(function () {
                             <h2 class="text-xl font-semibold mb-2">
                                 {{ $post->title }}
                             </h2>
-                            
+
                             <p class="text-gray-600 mb-4">
                                 {{ Str::limit($post->content, 100) }}
                             </p>
-                            
-                            <x-cms::link-button 
+
+                            <x-cms::link-button
                                 href="{{ route('cms.posts.show', $post) }}"
                             >
                                 Leggi di più
@@ -107,16 +107,16 @@ rules([
 
 $save = function () {
     $this->validate();
-    
+
     $post = Post::create([
         'title' => $this->title,
         'content' => $this->content,
         'published' => $this->published,
         'user_id' => auth()->id(),
     ]);
-    
+
     session()->flash('success', 'Post creato con successo!');
-    
+
     return redirect()->route('cms.posts.show', $post);
 };
 ?>
@@ -177,11 +177,11 @@ $delete = function () {
     if (! auth()->user()->can('delete', $this->post)) {
         return;
     }
-    
+
     $this->post->delete();
-    
+
     session()->flash('success', 'Post eliminato con successo!');
-    
+
     return redirect()->route('cms.posts.index');
 };
 ?>
@@ -294,10 +294,10 @@ class PostTest extends TestCase
 ```php
 $posts = computed(function () {
     $cacheKey = 'posts.list.' . $this->search;
-    
+
     return cache()->remember($cacheKey, now()->addMinutes(5), function () {
         return Post::query()
-            ->when($this->search, fn($query) => 
+            ->when($this->search, fn($query) =>
                 $query->where('title', 'like', "%{$this->search}%")
             )
             ->latest()
@@ -309,7 +309,7 @@ $posts = computed(function () {
 ### 2. Lazy Loading delle Immagini
 
 ```php
-<img 
+<img
     src="{{ $post->thumbnail_url }}"
     loading="lazy"
     class="w-full h-48 object-cover"
@@ -347,4 +347,4 @@ $posts = computed(function () {
 
 - [Esempio Completo su GitHub](https://github.com/jasonlbeggs/laravel-news-volt-folio-example)
 - [Documentazione Laravel Volt](https://livewire.laravel.com/docs/volt)
-- [Documentazione Laravel Folio](https://laravel.com/docs/folio) 
+- [Documentazione Laravel Folio](https://laravel.com/docs/folio)

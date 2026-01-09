@@ -62,7 +62,7 @@ class XotResource extends Resource
     protected static ?string $model = null;
     protected static ?string $navigationIcon = 'heroicon-o-cube';
     protected static ?string $navigationGroup = 'Xot';
-    
+
     public static function getNavigationLabel(): string
     {
         return static::$navigationLabel ?? Str::headline(static::getModelLabel());
@@ -81,14 +81,14 @@ class XotPage extends Page
     protected static ?string $navigationIcon = 'heroicon-o-cube';
     protected static ?string $navigationGroup = 'Xot';
     protected static string $view = 'xot::filament.pages.xot';
-    
+
     public function mount()
     {
         $this->form->fill([
             'xots' => $this->getXots(),
         ]);
     }
-    
+
     protected function getFormSchema(): array
     {
         return [
@@ -259,9 +259,9 @@ class XotServiceTest extends TestCase
             'description' => 'Descrizione Xot',
             'status' => 'draft'
         ];
-        
+
         $this->xotService->createXot($data);
-        
+
         $xot = Xot::where('name', $data['name'])->first();
         $this->assertNotNull($xot);
         $this->assertEquals($data['status'], $xot->status);
@@ -279,7 +279,7 @@ class XotPageTest extends TestCase
             ->assertStatus(200)
             ->assertSee('Gestione Xot');
     }
-    
+
     public function test_can_save_xot()
     {
         $this->post('/xot', [
@@ -291,18 +291,14 @@ class XotPageTest extends TestCase
         ->assertSessionHas('success');
     }
 }
-``` 
+```
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di implementation.md
 * [implementation.md](../../../Gdpr/project_docs/implementation.md)
 * [implementation.md](../../../Xot/project_docs/implementation.md)
 * [implementation.md](../../../Job/project_docs/implementation.md)
 
-
 ### Versione Incoming
 
-
 ---
-

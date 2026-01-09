@@ -75,12 +75,12 @@ wire:model.live="{{ $getStatePath() }}"
 ### 3. Event Handling Ottimizzato
 ```html
 <!-- Soluzione: Evitare event bubbling conflicts -->
-<label class="..." 
+<label class="..."
        wire:click="selectOption('{{ data_get($option, $getValueKey()) }}')"
        wire:key="{{ $getId() }}.{{ data_get($option, $getValueKey()) }}">
-    
+
     <!-- Input hidden ma ancora semanticamente valido -->
-    <input type="radio" 
+    <input type="radio"
            class="absolute opacity-0 pointer-events-none"
            name="{{ $getId() }}"
            value="{{ data_get($option, $getValueKey()) }}"
@@ -93,7 +93,7 @@ wire:model.live="{{ $getStatePath() }}"
 // Aggiungere nel template per debugging
 @if(config('app.debug'))
     <div class="text-xs text-gray-400 mt-1">
-        Debug: State={{ $getState() ?? 'null' }}, 
+        Debug: State={{ $getState() ?? 'null' }},
                Value={{ data_get($option, $getValueKey()) }},
                Type={{ gettype($getState()) }}/{{ gettype(data_get($option, $getValueKey())) }}
     </div>
@@ -140,56 +140,56 @@ use Illuminate\Support\Collection;
 class RadioCollection extends Field
 {
     protected string $view = 'ui::filament.forms.components.radio-collection';
-    
+
     protected Collection $options;
     protected string $itemView;
     protected string $valueKey = 'id';
     protected bool $debug = false;
-    
+
     public function options(Collection $options): static
     {
         $this->options = $options;
         return $this;
     }
-    
+
     public function itemView(string $view): static
     {
         $this->itemView = $view;
         return $this;
     }
-    
+
     public function valueKey(string $key): static
     {
         $this->valueKey = $key;
         return $this;
     }
-    
+
     public function debug(bool $debug = true): static
     {
         $this->debug = $debug;
         return $this;
     }
-    
+
     public function getOptions(): Collection
     {
         return $this->options ?? collect();
     }
-    
+
     public function getItemView(): string
     {
         return $this->itemView ?? 'ui::filament.forms.components.radio-collection-item';
     }
-    
+
     public function getValueKey(): string
     {
         return $this->valueKey;
     }
-    
+
     public function isDebugEnabled(): bool
     {
         return $this->debug || config('app.debug', false);
     }
-    
+
     /**
      * Type-safe comparison method
      */
@@ -197,7 +197,7 @@ class RadioCollection extends Field
     {
         $currentValue = (string) $this->getState();
         $optionValue = (string) data_get($option, $this->getValueKey());
-        
+
         return $currentValue === $optionValue;
     }
 }
@@ -212,12 +212,12 @@ class RadioCollection extends Field
                 $optionValue = data_get($option, $getValueKey());
                 $isSelected = $isOptionSelected($option);
             @endphp
-            
-            <label 
+
+            <label
                 class="flex items-center cursor-pointer p-3 rounded-lg border transition-all duration-200
                        hover:bg-gray-50 dark:hover:bg-gray-800 hover:shadow-sm
-                       {{ $isSelected 
-                          ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20 shadow-sm' 
+                       {{ $isSelected
+                          ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20 shadow-sm'
                           : 'border-gray-300 dark:border-gray-600' }}"
                 wire:key="{{ $getId() }}.{{ $optionValue }}"
                 @click="selectedValue = '{{ $optionValue }}'"
@@ -233,33 +233,33 @@ class RadioCollection extends Field
                     @if($isSelected) checked @endif
                     aria-describedby="{{ $getId() }}-{{ $optionValue }}-description"
                 />
-                
+
                 {{-- Indicatore visuale custom --}}
                 <div class="flex-shrink-0 w-5 h-5 border-2 rounded-full mr-3 flex items-center justify-center transition-all duration-200
-                           {{ $isSelected 
-                              ? 'border-primary-500 bg-primary-500' 
+                           {{ $isSelected
+                              ? 'border-primary-500 bg-primary-500'
                               : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800' }}">
-                    <div class="w-2 h-2 bg-white rounded-full transition-all duration-200 
+                    <div class="w-2 h-2 bg-white rounded-full transition-all duration-200
                                {{ $isSelected ? 'scale-100 opacity-100' : 'scale-0 opacity-0' }}"></div>
                 </div>
-                
+
                 {{-- Container del contenuto --}}
                 <div class="flex-1" id="{{ $getId() }}-{{ $optionValue }}-description">
                     @include($getItemView(), ['item' => $option])
                 </div>
             </label>
-            
+
             {{-- Debug info (solo in dev mode) --}}
             @if($isDebugEnabled())
                 <div class="ml-8 text-xs text-gray-400 bg-gray-100 dark:bg-gray-800 p-2 rounded">
-                    <strong>Debug:</strong> 
-                    State: "{{ $getState() ?? 'null' }}" ({{ gettype($getState()) }}), 
+                    <strong>Debug:</strong>
+                    State: "{{ $getState() ?? 'null' }}" ({{ gettype($getState()) }}),
                     Option: "{{ $optionValue }}" ({{ gettype($optionValue) }}),
                     Selected: {{ $isSelected ? 'true' : 'false' }}
                 </div>
             @endif
         @endforeach
-        
+
         {{-- Error display --}}
         @error($getStatePath())
             <div class="text-red-500 text-sm mt-2 flex items-center">
@@ -320,6 +320,6 @@ class RadioCollection extends Field
 
 ---
 
-**Diagnosi completata**: Dicembre 2024  
-**Correzione implementata**: v2.0.0  
-**Status**: Risolto ✅ 
+**Diagnosi completata**: Dicembre 2024
+**Correzione implementata**: v2.0.0
+**Status**: Risolto ✅

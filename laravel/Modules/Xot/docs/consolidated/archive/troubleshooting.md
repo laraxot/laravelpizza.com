@@ -74,4 +74,4 @@ npm run dev
 ## Collegamenti
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 - [Larastan Documentation](https://github.com/nunomaduro/larastan)
-- [Vite Configuration](../development/vite-configuration.md) 
+- [Vite Configuration](../development/vite-configuration.md)

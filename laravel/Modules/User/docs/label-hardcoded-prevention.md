@@ -83,7 +83,7 @@ class ExampleResource extends XotBaseResource
                 ->label(__('user::fields.name.label'))
                 ->placeholder(__('user::fields.name.placeholder'))
                 ->helperText(__('user::fields.name.help')),
-                
+
             'email' => TextInput::make('email')
                 ->label(__('user::fields.email.label'))
                 ->placeholder(__('user::fields.email.placeholder'))
@@ -192,7 +192,7 @@ return [
 
 ---
 
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
-**📦 Versione**: 3.1.0  
-**🎯 Obiettivo**: Zero ->label() hardcoded  
+**🔄 Ultimo aggiornamento**: 27 Gennaio 2025
+**📦 Versione**: 3.1.0
+**🎯 Obiettivo**: Zero ->label() hardcoded
 **✅ Status**: Prevenzione attiva e monitorata

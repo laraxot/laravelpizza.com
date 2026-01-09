@@ -7,7 +7,7 @@
 Errori PHPStan livello 9 nel trait `TransTrait`:
 
 1. **Parametri array non tipizzati**: `array $params` senza specificazione del tipo di valore
-2. **Variabili array non tipizzate**: `$res` senza specificazione del tipo di valore  
+2. **Variabili array non tipizzate**: `$res` senza specificazione del tipo di valore
 3. **Tipo di ritorno inconsistente**: `transClass()` poteva restituire `array|string` invece di `string`
 
 ## Errori Specifici

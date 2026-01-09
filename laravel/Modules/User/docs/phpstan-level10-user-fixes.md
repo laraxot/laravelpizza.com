@@ -2,15 +2,15 @@
 
 ## 📋 Riepilogo Intervento
 
-**Data**: 17 Novembre 2025  
-**Modulo**: User  
+**Data**: 17 Novembre 2025
+**Modulo**: User
 **Esito**: ✅ **0 ERRORI** - PHPStan Level 10 completato con successo
 
 ## 🔧 Correzioni Applicate
 
 ### 1. PasswordResetConfirmWidget.php
 
-**File**: `app/Filament/Widgets/Auth/PasswordResetConfirmWidget.php`  
+**File**: `app/Filament/Widgets/Auth/PasswordResetConfirmWidget.php`
 **Errori risolti**: 2
 
 #### Problemi
@@ -33,7 +33,7 @@ Auth::guard()->login($user);
 
 ### 2. RegistrationWidget.php
 
-**File**: `app/Filament/Widgets/RegistrationWidget.php`  
+**File**: `app/Filament/Widgets/RegistrationWidget.php`
 **Errori risolti**: 5
 
 #### Problemi
@@ -98,7 +98,7 @@ class RegistrationWidget extends XotBaseWidget
 }
 ```
 
-**Pattern applicato**: 
+**Pattern applicato**:
 1. Property nullable con inizializzazione a null
 2. Type assertion espliciti con Assert::isArray()
 3. Return types specifici con fully qualified class names
@@ -106,7 +106,7 @@ class RegistrationWidget extends XotBaseWidget
 
 ### 3. HasTeams.php
 
-**File**: `app/Models/Traits/HasTeams.php`  
+**File**: `app/Models/Traits/HasTeams.php`
 **Errori risolti**: 2
 
 #### Problemi
@@ -151,13 +151,13 @@ public function teamPermissions(TeamContract $team): array
 }
 ```
 
-**Pattern applicato**: 
+**Pattern applicato**:
 1. BelongsToMany con template types completi e specifici
 2. Type assertion per risultati di pluck()->values()->toArray()
 
 ### 4. HasTenants.php
 
-**File**: `app/Models/Traits/HasTenants.php`  
+**File**: `app/Models/Traits/HasTenants.php`
 **Errori risolti**: 1
 
 #### Problema
@@ -185,7 +185,7 @@ public function getTenants(Panel $_panel): array|Collection
 
 ### 5. ResetPassword.php
 
-**File**: `app/Notifications/Auth/ResetPassword.php`  
+**File**: `app/Notifications/Auth/ResetPassword.php`
 **Errori risolti**: 1
 
 #### Problema

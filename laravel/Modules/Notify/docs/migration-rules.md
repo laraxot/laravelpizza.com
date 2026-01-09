@@ -10,10 +10,10 @@
    ```php
    <?php
    declare(strict_types=1);
-   
+
    use Illuminate\Database\Schema\Blueprint;
    use Modules\Xot\Database\Migrations\XotBaseMigration;
-   
+
    return new class extends XotBaseMigration {
        public function up(): void
        {
@@ -21,7 +21,7 @@
            $this->tableCreate(function (Blueprint $table): void {
                // Definizione struttura base
            });
-           
+
            // -- UPDATE --
            $this->tableUpdate(function (Blueprint $table): void {
                // Modifiche e aggiornamenti
@@ -147,7 +147,7 @@ return new class () extends XotBaseMigration {
                 if (!$this->hasColumn('subject_json')) {
                     $table->json('subject_json')->nullable()->after('subject');
                 }
-                
+
                 // ... resto del codice
             }
         });
@@ -191,4 +191,4 @@ return new class () extends XotBaseMigration {
 Per supporto tecnico:
 - Email: support@example.com
 - Documentazione: https://docs.example.com
-- Repository: https://github.com/organization/notify 
+- Repository: https://github.com/organization/notify

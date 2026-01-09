@@ -10,7 +10,7 @@ Il comando `php artisan serve` ora funziona correttamente. Il server è attivo s
 
 ### 1. Ricorsione Infinita in `App\Application->make('env')`
 
-**Causa**: 
+**Causa**:
 - `App\Application` aveva un override di `make()` che cercava di risolvere "env" come `$this->environment()`
 - `AppServiceProvider` registrava un binding `'env'` che chiamava `$app->environment()`
 - Questo creava una ricorsione infinita: `make('env')` -> `environment()` -> `$this['env']` -> `make('env')` -> ...
@@ -21,7 +21,7 @@ Il comando `php artisan serve` ora funziona correttamente. Il server è attivo s
 
 ### 2. File di Configurazione con `app()->path()` e `app()->environment()`
 
-**Causa**: 
+**Causa**:
 - File di configurazione chiamavano `app()->path()` e `app()->environment()` durante il bootstrap
 - Questo causava problemi quando `app()` non era ancora completamente inizializzato
 
@@ -31,7 +31,7 @@ Il comando `php artisan serve` ora funziona correttamente. Il server è attivo s
 
 ### 3. Modulo Meetup senza Autoload
 
-**Causa**: 
+**Causa**:
 - Il modulo Meetup non aveva `composer.json` quindi le classi non venivano autoloadate
 - `MeetupServiceProvider` non veniva trovato
 
@@ -42,7 +42,7 @@ Il comando `php artisan serve` ora funziona correttamente. Il server è attivo s
 
 ### 4. Service Provider con Path Non Validi
 
-**Causa**: 
+**Causa**:
 - `FolioServiceProvider` e `VoltServiceProvider` cercavano di montare path che potrebbero non esistere
 - Questo causava errori durante il bootstrap
 
@@ -91,4 +91,3 @@ php artisan --version
 - Il problema principale era la ricorsione infinita causata da tentativi di risolvere "env" come classe
 - La soluzione è stata rimuovere tutti i binding e override che cercavano di risolvere "env" come classe
 - I file di configurazione devono usare helper functions (`base_path()`, `env()`) invece di `app()` durante il bootstrap
-

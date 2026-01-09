@@ -92,4 +92,4 @@ Il modulo Xot fornisce funzionalità base attraverso:
 - Gestione risorse
 
 ## Panoramica
-Il modulo Xot è il cuore dell'architettura dell'applicazione. Fornisce le classi base, i trait e le interfacce fondamentali utilizzate da tutti gli altri moduli. 
+Il modulo Xot è il cuore dell'architettura dell'applicazione. Fornisce le classi base, i trait e le interfacce fondamentali utilizzate da tutti gli altri moduli.

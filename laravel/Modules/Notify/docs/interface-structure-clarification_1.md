@@ -1,4 +1,4 @@
-# Chiarimento sulla Struttura delle Interfacce 
+# Chiarimento sulla Struttura delle Interfacce
 
 ## Struttura Corretta per le Interfacce SMS
 

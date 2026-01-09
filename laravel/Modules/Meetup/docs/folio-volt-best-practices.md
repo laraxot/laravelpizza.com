@@ -57,32 +57,32 @@ Response
     @volt('events')
         @php
             use Modules\Meetup\Services\EventService;
-            
+
             $eventService = app(EventService::class);
             $events = $eventService->getUpcomingEvents();
             $categories = ['all', 'meetups', 'workshops', 'conferences'];
-            
+
             $selectedCategory = request()->query('category', 'all');
-            $filteredEvents = $selectedCategory === 'all' 
-                ? $events 
+            $filteredEvents = $selectedCategory === 'all'
+                ? $events
                 : $events->filter(fn($e) => $e->category === $selectedCategory);
         @endphp
 
         <div class="container mx-auto px-4 py-8">
             <h1 class="text-3xl font-bold mb-6">Upcoming Events</h1>
-            
+
             {{-- Filtri --}}
             <div class="mb-6 flex gap-4">
                 @foreach($categories as $category)
-                    <a 
-                        href="?category={{ $category }}" 
+                    <a
+                        href="?category={{ $category }}"
                         class="px-4 py-2 rounded {{ $selectedCategory === $category ? 'bg-red-600 text-white' : 'bg-gray-200' }}"
                     >
                         {{ ucfirst($category) }}
                     </a>
                 @endforeach
             </div>
-            
+
             {{-- Lista Eventi --}}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach($filteredEvents as $event)
@@ -105,7 +105,7 @@ Response
             use Modules\Meetup\Actions\Event\RegisterEventAction;
             use Modules\Meetup\Actions\Event\CancelEventRegistrationAction;
             use Modules\Meetup\Models\Event;
-            
+
             // Folio fa automaticamente route model binding
             // $event è già disponibile come variabile
         @endphp
@@ -113,30 +113,30 @@ Response
         <div class="container mx-auto px-4 py-8">
             <h1 class="text-4xl font-bold mb-4">{{ $event->title }}</h1>
             <p class="text-gray-600 mb-6">{{ $event->description }}</p>
-            
+
             <div class="mb-6">
                 <p><strong>Date:</strong> {{ $event->start_date->format('F j, Y') }}</p>
                 <p><strong>Location:</strong> {{ $event->location }}</p>
                 <p><strong>Attendees:</strong> {{ $event->attendees_count }} / {{ $event->max_attendees }}</p>
             </div>
-            
+
             {{-- Componente Registrazione --}}
             @volt('event-registration')
                 @php
                     $user = auth()->user();
                     $isRegistered = $user && $event->attendees()->where('user_id', $user->id)->exists();
                 @endphp
-                
+
                 @if($user)
                     @if($isRegistered)
-                        <button 
+                        <button
                             wire:click="cancelRegistration"
                             class="bg-red-600 text-white px-6 py-2 rounded"
                         >
                             Cancel Registration
                         </button>
                     @else
-                        <button 
+                        <button
                             wire:click="register"
                             class="bg-green-600 text-white px-6 py-2 rounded"
                             {{ $event->attendees_count >= $event->max_attendees ? 'disabled' : '' }}
@@ -149,33 +149,33 @@ Response
                         Login to Register
                     </a>
                 @endif
-                
+
                 @script
                 <script>
                     $wire.on('registered', () => {
                         alert('Successfully registered!');
                     });
-                    
+
                     $wire.on('registration-cancelled', () => {
                         alert('Registration cancelled');
                     });
                 </script>
                 @endscript
             @endvolt
-            
+
             function register()
             {
                 $action = app(RegisterEventAction::class);
                 $action->execute($this->event, auth()->user());
-                
+
                 $this->dispatch('registered');
             }
-            
+
             function cancelRegistration()
             {
                 $action = app(CancelEventRegistrationAction::class);
                 $action->execute($this->event, auth()->user());
-                
+
                 $this->dispatch('registration-cancelled');
             }
         </div>
@@ -192,7 +192,7 @@ Response
     @volt('dashboard')
         @php
             use Modules\Meetup\Services\UserStatsService;
-            
+
             $statsService = app(UserStatsService::class);
             $user = auth()->user();
             $stats = $statsService->getUserStats($user);
@@ -200,26 +200,26 @@ Response
 
         <div class="container mx-auto px-4 py-8">
             <h1 class="text-3xl font-bold mb-6">Dashboard</h1>
-            
+
             {{-- Statistiche Cards --}}
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-                <x-statistics-card 
-                    label="Events Attended" 
-                    :value="$stats['events_attended']" 
+                <x-statistics-card
+                    label="Events Attended"
+                    :value="$stats['events_attended']"
                     icon="calendar"
                 />
-                <x-statistics-card 
-                    label="Messages Sent" 
-                    :value="$stats['messages_sent']" 
+                <x-statistics-card
+                    label="Messages Sent"
+                    :value="$stats['messages_sent']"
                     icon="chat"
                 />
-                <x-statistics-card 
-                    label="Pizza Slices" 
-                    :value="$stats['pizza_slices']" 
+                <x-statistics-card
+                    label="Pizza Slices"
+                    :value="$stats['pizza_slices']"
                     icon="pizza"
                 />
             </div>
-            
+
             {{-- Eventi Prossimi --}}
             @volt('upcoming-events')
                 @php
@@ -229,10 +229,10 @@ Response
                         ->limit(5)
                         ->get();
                 @endphp
-                
+
                 <div class="bg-white rounded-lg shadow p-6">
                     <h2 class="text-2xl font-bold mb-4">Your Upcoming Events</h2>
-                    
+
                     @if($upcomingEvents->isEmpty())
                         <p class="text-gray-500">No upcoming events</p>
                     @else
@@ -355,7 +355,7 @@ Route::get('/events', [EventController::class, 'index']);
             ->with(['attendees', 'location'])
             ->orderBy('start_date')
             ->get();
-        
+
         // Elaborazione complessa...
         foreach($events as $event) {
             // ...
@@ -394,7 +394,7 @@ Route::get('/events', function() {
 public function test_events_page_loads(): void
 {
     $response = $this->get('/events');
-    
+
     $response->assertStatus(200);
     $response->assertSee('Upcoming Events');
 }
@@ -408,12 +408,12 @@ public function test_user_can_register_for_event(): void
 {
     $user = User::factory()->create();
     $event = Event::factory()->create();
-    
+
     Livewire::actingAs($user)
         ->test('events.event-registration', ['event' => $event])
         ->call('register')
         ->assertDispatched('registered');
-    
+
     $this->assertTrue($event->attendees()->where('user_id', $user->id)->exists());
 }
 ```
@@ -981,6 +981,5 @@ php artisan route:cache
 
 ---
 
-**Versione**: 1.0  
+**Versione**: 1.0
 **Ultimo Aggiornamento**: 2025-01-27
-

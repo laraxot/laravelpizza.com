@@ -30,4 +30,3 @@
 - **Errori PHPStan**: 0
 - **File corretti**: 1
 - **Pattern applicati**: PHPDoc Contracts
-

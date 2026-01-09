@@ -18,10 +18,8 @@ E' la libreria di estensione di tutte le altre librerie.
 * [about.md](../../../Tenant/project_docs/en/about.md)
 * [about.md](../../../Tenant/project_docs/it/about.md)
 
-
 ### Versione Incoming
 
 E' la libreria di estensione di tutte le altre librerie.
 
 ---
-

@@ -14,7 +14,7 @@ Documentazione della risoluzione dei conflitti tra contratti e classi Eloquent n
 
 **Methods Removed**:
 - `save(array $options = []): bool` - Conflitto con signature di Eloquent
-- `toArray(): array` - Conflitto con signature di Eloquent  
+- `toArray(): array` - Conflitto con signature di Eloquent
 - `forceFill(array $attributes): static` - Conflitto con signature di Eloquent
 - `withoutRelations(): static` - Conflitto con signature di Eloquent
 
@@ -75,8 +75,8 @@ interface UserContract
 - Proper exception handling for filesystem operations
 
 ### 4. Uso corretto di `dddx()`
-**Contesto**: la funzione `dddx()` è definita nel file `Modules/Xot/Helpers/Helper.php` e viene autocaricata tramite la sezione `files` del `composer.json` del modulo Xot.  
-**Regola**: quando viene richiamata all'interno di classi namespaced (es. componenti Blade/Filament) va utilizzata come funzione globale (`\dddx()`), evitando `use function` inutili o riferimenti a namespace inesistenti.  
+**Contesto**: la funzione `dddx()` è definita nel file `Modules/Xot/Helpers/Helper.php` e viene autocaricata tramite la sezione `files` del `composer.json` del modulo Xot.
+**Regola**: quando viene richiamata all'interno di classi namespaced (es. componenti Blade/Filament) va utilizzata come funzione globale (`\dddx()`), evitando `use function` inutili o riferimenti a namespace inesistenti.
 **Esempio**:
 ```php
 public function render(): View

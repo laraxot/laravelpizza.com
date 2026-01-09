@@ -17,15 +17,15 @@ use Laravel\Fortify\Features;
 
 return [
     'guard' => 'web',
-    
+
     'passwords' => 'users',
-    
+
     'username' => 'email',
-    
+
     'email' => 'email',
-    
+
     'home' => '/dashboard',
-    
+
     'features' => [
         Features::registration(),
         Features::resetPasswords(),
@@ -120,7 +120,7 @@ class CreateUserAction
         $data['name'] = strip_tags($data['name']);
         $data['email'] = strtolower(trim($data['email']));
         $data['password'] = Hash::make($data['password']);
-        
+
         return User::create($data);
     }
 }
@@ -168,26 +168,26 @@ class SecurityHeaders
     public function handle($request, Closure $next)
     {
         $response = $next($request);
-        
+
         // Content Security Policy
-        $response->headers->set('Content-Security-Policy', 
+        $response->headers->set('Content-Security-Policy',
             "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; " .
             "style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; " .
             "font-src 'self' data:; connect-src 'self' https://api.example.com;"
         );
-        
+
         // X-Frame-Options
         $response->headers->set('X-Frame-Options', 'SAMEORIGIN');
-        
+
         // X-Content-Type-Options
         $response->headers->set('X-Content-Type-Options', 'nosniff');
-        
+
         // X-XSS-Protection
         $response->headers->set('X-XSS-Protection', '1; mode=block');
-        
+
         // Referrer-Policy
         $response->headers->set('Referrer-Policy', 'strict-origin-when-cross-origin');
-        
+
         return $response;
     }
 }
@@ -200,22 +200,22 @@ class SecurityHeaders
 
 return [
     'paths' => ['api/*', 'sanctum/csrf-cookie'],
-    
+
     'allowed_methods' => ['*'],
-    
+
     'allowed_origins' => [
         env('FRONTEND_URL', 'http://localhost:3000'),
         'https://yourdomain.com',
     ],
-    
+
     'allowed_origins_patterns' => [],
-    
+
     'allowed_headers' => ['*'],
-    
+
     'exposed_headers' => [],
-    
+
     'max_age' => 0,
-    
+
     'supports_credentials' => true,
 ];
 ```
@@ -270,9 +270,9 @@ class SecureFileUploadAction
         'image/jpeg', 'image/png', 'image/gif', 'image/webp',
         'application/pdf', 'text/plain'
     ];
-    
+
     private array $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'pdf', 'txt'];
-    
+
     private int $maxFileSize = 10485760; // 10MB
 
     public function execute(UploadedFile $file, string $directory = 'uploads'): string
@@ -289,10 +289,10 @@ class SecureFileUploadAction
 
         // Generate secure filename
         $filename = Str::random(40) . '.' . $file->getClientOriginalExtension();
-        
+
         // Store file
         $path = $file->storeAs($directory, $filename, 'public');
-        
+
         return $path;
     }
 
@@ -357,33 +357,33 @@ RateLimiter::for('api', function (Request $request) {
 
 return [
     'driver' => env('SESSION_DRIVER', 'redis'),
-    
+
     'lifetime' => env('SESSION_LIFETIME', 120),
-    
+
     'expire_on_close' => false,
-    
+
     'encrypt' => true,
-    
+
     'files' => storage_path('framework/sessions'),
-    
+
     'connection' => env('SESSION_CONNECTION'),
-    
+
     'table' => 'sessions',
-    
+
     'store' => env('SESSION_STORE'),
-    
+
     'lottery' => [2, 100],
-    
+
     'cookie' => env('SESSION_COOKIE', 'laravel_session'),
-    
+
     'path' => '/',
-    
+
     'domain' => env('SESSION_DOMAIN'),
-    
+
     'secure' => env('SESSION_SECURE_COOKIE'),
-    
+
     'http_only' => true,
-    
+
     'same_site' => 'lax', // or 'strict' for higher security
 ];
 ```
@@ -502,12 +502,12 @@ switch (config('app.env')) {
         $debug = true;
         $secureHeaders = false;
         break;
-    
+
     case 'production':
         $debug = false;
         $secureHeaders = true;
         break;
-    
+
     default:
         $debug = false;
         $secureHeaders = true;

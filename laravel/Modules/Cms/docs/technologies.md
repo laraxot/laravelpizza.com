@@ -113,4 +113,4 @@ Questo documento descrive le tecnologie principali utilizzate nel modulo CMS.
 - [API](api/README.md)
 - [Frontend](frontoffice/README.md)
 - [Sviluppo](developer/README.md)
-- [Utente](user/README.md) 
+- [Utente](user/README.md)

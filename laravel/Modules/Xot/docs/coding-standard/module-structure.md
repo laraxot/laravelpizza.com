@@ -55,7 +55,7 @@ namespace Modules\User\Http\Controllers;
 
 2. **Responsabilità singola**
    - Ogni modulo ha uno scopo specifico
-   - Ogni classe ha una sola responsabilità 
+   - Ogni classe ha una sola responsabilità
    - Ogni file contiene una sola classe
 
 3. **Minimizzare le dipendenze**

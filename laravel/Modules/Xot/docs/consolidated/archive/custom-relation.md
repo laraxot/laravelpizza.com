@@ -44,11 +44,10 @@ class Person extends Model
 ActiveContractsRelation sarà quindi il nome della relazione personalizzata
 che leggerà i contratti attivi per ogni persona passando per Habitant.
 
-In Laravel esiste una relazione di base che viene utilzzata da tutte le altre relazioni, 
+In Laravel esiste una relazione di base che viene utilzzata da tutte le altre relazioni,
 che è **Illuminate\Database\Eloquent\Relations\Relation**
 
 Quindi andiamo a vedere com'è fatta ed estendiamo la classe:
-
 
 ```php
 class ActiveContractsRelation extends Relation
@@ -117,7 +116,7 @@ Passare Models\Contract oppure Database\Eloquent\Builder serve per facilitare l'
     public function __construct(Person $parent)
     {
 	//qui usiamo sia il Builder che il modello Person
-//Questo consentirà all’IDE di avere un miglior completamento automatico 
+//Questo consentirà all’IDE di avere un miglior completamento automatico
         parent::__construct(Contract::query(), $parent);
     }
 ```
@@ -127,7 +126,7 @@ Quindi in pratica la relazione **interrogherà il modello Contract e utilizzerà
 ### Ora bisogna costruire la query della relazione.
 
 E' qui che entra in gioco il metodo **addConstraint**.
-Serve per configurare la query di base. Imposterà la nostra query di relazione in modo specifico per le nostre esigenze. 
+Serve per configurare la query di base. Imposterà la nostra query di relazione in modo specifico per le nostre esigenze.
 
 Questo è il luogo in cui sarà contenuta la maggior parte delle regole:
 
@@ -148,15 +147,15 @@ class ActiveContractsRelation extends Relation
         $this->query
             ->whereActive() //dove il contratto ha lo stato Attivo
             ->join(
-                'contract_habitants', 
-                'contract_habitants.contract_id', 
-                '=', 
+                'contract_habitants',
+                'contract_habitants.contract_id',
+                '=',
                 'contracts.id'
             ) //dove nella pivot contract_habitants.contract_id=contracts.id
             ->join(
-                'habitants', 
-                'habitants.id', 
-                '=', 
+                'habitants',
+                'habitants.id',
+                '=',
                 'contract_habitants.habitant_id'
             ); //dove contract_habitants.habitant_id=habitants.id
 
@@ -179,7 +178,7 @@ class ActiveContractsRelation extends Relation
     {
         //whereIn significa che cercherà tutti i $people->id in habitants.contact_id
         $this->query->whereIn(
-            'habitants.contact_id', 
+            'habitants.contact_id',
 		    //gli id delle persone sulle quali fare poi le relazioni
             collect($people)->pluck('id')
         );
@@ -198,7 +197,7 @@ public function initRelation(array $people, $relation)
     {
         foreach ($people as $person) {
             $person->setRelation(
-                $relation, 
+                $relation,
 			    //crea una relazione vuota sul modello related in questo caso è Contract
                 $this->related->newCollection()
             );
@@ -221,13 +220,13 @@ public function match(array $people, Collection $contracts, $relation)
 
         foreach ($people as $person) {
             $person->setRelation(
-                $relation, 
+                $relation,
                 $contracts->filter(function (Contract $contract) use ($person) {
                     //i contract di cui habitants->person_id contengono $person->id
                     //verranno aggiunti alla relazione $person->activeContracts()
                     return $contract->habitants->pluck('person_id')->contains($person->id);
                 })
-            );    
+            );
         }
 
         return $people;
@@ -240,12 +239,12 @@ andiamo ad aggiungerlo, e leggiamo solo i dati dalla tabella Contracts, ignorand
 ```php
 class ActiveContractsRelation extends Relation
 {
-//array people è l’array dell’insieme di persone 
+//array people è l’array dell’insieme di persone
 //su cui caricare i contatti
     public function addEagerConstraints(array $people)
     {
         $this->query->whereIn(
-            'habitants.contact_id', 
+            'habitants.contact_id',
              collect($people)->pluck('id')
         )->with('habitants')
             //seleziona solo i dati della tabella contracts
@@ -289,14 +288,14 @@ class Person
                 $relation->getQuery()
                 ->whereActive()
                 ->join(
-                    'contract_habitants', 
-                    'contract_habitants.contract_id', 
-                    '=', 
+                    'contract_habitants',
+                    'contract_habitants.contract_id',
+                    '=',
                     'contracts.id'
                 ->join(
-                    'habitants', 
-                    'habitants.id', 
-                    '=', 
+                    'habitants',
+                    'habitants.id',
+                    '=',
                     'contract_habitants.habitant_id'
             },
 

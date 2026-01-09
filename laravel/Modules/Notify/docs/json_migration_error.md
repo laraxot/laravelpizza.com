@@ -37,10 +37,10 @@ $this->tableUpdate(function (Blueprint $table): void {
 // Fase 2: Convertire i dati
 DB::table('mail_templates')->chunk(100, function ($templates) {
     foreach ($templates as $template) {
-        $subject = is_array($template->subject) 
-            ? $template->subject 
+        $subject = is_array($template->subject)
+            ? $template->subject
             : ['default' => $template->subject];
-            
+
         DB::table('mail_templates')
             ->where('id', $template->id)
             ->update(['subject_json' => json_encode($subject)]);
@@ -62,11 +62,11 @@ protected function validateJsonData($data)
     if (is_string($data)) {
         return ['default' => $data];
     }
-    
+
     if (is_array($data)) {
         return $data;
     }
-    
+
     return ['default' => ''];
 }
 ```
@@ -160,4 +160,4 @@ if ($validRecords !== $totalRecords) {
 Per supporto tecnico:
 - Email: support@example.com
 - Documentazione: https://docs.example.com
-- Repository: https://github.com/organization/notify 
+- Repository: https://github.com/organization/notify

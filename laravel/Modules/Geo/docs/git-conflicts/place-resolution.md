@@ -1,7 +1,7 @@
 # Place.php Conflict Resolution
 
 ## File: `laravel/Modules/Geo/app/Models/Place.php`
-**Status**: ✅ RESOLVED  
+**Status**: ✅ RESOLVED
 **Date**: 2025-07-31T09:09:37+02:00
 
 ## Conflict Analysis
@@ -18,7 +18,7 @@ The file had multiple Git conflict markers due to merge conflicts between differ
 - **Profile Model**: Used `\Modules\User\Models\Profile` (correct module exists)
 - **PHPDoc**: Kept complete PHPDoc with proper type annotations for PHPStan level 10
 - **Class Structure**: Maintained single clean class declaration
-- **Removed**: All Git conflict markers 
+- **Removed**: All Git conflict markers
 
 ## Changes Applied:
 1. Resolved PHPDoc conflicts by using User module Profile model

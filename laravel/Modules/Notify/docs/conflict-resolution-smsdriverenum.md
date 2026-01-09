@@ -50,10 +50,10 @@ enum SmsDriverEnum: string
     public function getDescription(): string
     {
         return $this->transClass(self::class,$this->value.'.description');
-    
+
     /**
      * Restituisce le opzioni per il componente Select di Filament
-     * 
+     *
      * @return array<string, string>
      */
     public static function options(): array
@@ -67,10 +67,10 @@ enum SmsDriverEnum: string
             self::NETFUN->value => 'Netfun',
         ];
     }
-    
+
     /**
      * Restituisce le etichette localizzate per il componente Select di Filament
-     * 
+     *
      * @return array<string, string>
      */
     public static function labels(): array
@@ -84,10 +84,10 @@ enum SmsDriverEnum: string
             self::NETFUN->value => __('notify::sms.drivers.netfun'),
         ];
     }
-    
+
     /**
      * Verifica se un driver è supportato
-     * 
+     *
      * @param string $driver
      * @return bool
      */
@@ -122,7 +122,6 @@ use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 use Modules\Xot\Filament\Traits\TransTrait;
-
 
 // DOPO (risolto)
 use Filament\Support\Contracts\HasIcon;
@@ -233,4 +232,4 @@ enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 - **Modulo**: Notify
 - **File**: `app/Enums/SmsDriverEnum.php`
 - **Tipo Conflitto**: Implementazione interfacce e trait
-- **Scelta**: Versione HEAD (interfacce Filament + TransTrait) 
+- **Scelta**: Versione HEAD (interfacce Filament + TransTrait)

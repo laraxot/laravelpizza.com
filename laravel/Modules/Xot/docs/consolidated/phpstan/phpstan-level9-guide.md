@@ -118,8 +118,8 @@ public function getValue(): int
 // Corretto
 public function getValue(): int
 {
-    return isset($this->data['value']) && is_numeric($this->data['value']) 
-        ? (int) $this->data['value'] 
+    return isset($this->data['value']) && is_numeric($this->data['value'])
+        ? (int) $this->data['value']
         : 0;
 }
 ```
@@ -170,4 +170,4 @@ Per categorie specifiche:
 ```php
 /** @phpstan-ignore offsetAccess.nonOffsetAccessible */
 $value = $data['key'];
-``` 
+```

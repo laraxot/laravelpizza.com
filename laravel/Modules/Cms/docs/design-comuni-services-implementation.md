@@ -1,7 +1,7 @@
 # 🏛️ Design Comuni - Services Implementation Guide
 
-**Date:** 2025-10-02  
-**Module:** Cms  
+**Date:** 2025-10-02
+**Module:** Cms
 **Related:** Theme Sixteen, Design Comuni Italia
 
 ---
@@ -42,29 +42,29 @@ return new class extends Migration
             $table->text('target_audience')->nullable()->comment('A chi si rivolge');
             $table->text('how_to')->nullable()->comment('Come fare');
             $table->text('requirements')->nullable()->comment('Cosa serve');
-            
+
             // Costi
             $table->decimal('cost', 10, 2)->nullable()->comment('Costo del servizio');
             $table->text('cost_description')->nullable()->comment('Descrizione costi');
-            
+
             // Tempi e scadenze
             $table->text('timing')->nullable()->comment('Tempi e scadenze');
             $table->integer('processing_days')->nullable()->comment('Giorni lavorazione');
-            
+
             // Accesso online
             $table->boolean('has_online_access')->default(false);
             $table->boolean('spid_required')->default(false);
             $table->boolean('cie_required')->default(false);
             $table->string('online_url')->nullable();
-            
+
             // Stato e visibilità
             $table->enum('status', ['draft', 'published', 'archived'])->default('draft');
             $table->timestamp('published_at')->nullable();
-            
+
             // Metadati
             $table->json('metadata')->nullable();
             $table->string('slug')->unique();
-            
+
             // Indici
             $table->index('status');
             $table->index('published_at');
@@ -472,7 +472,7 @@ class ServiceResource extends XotBaseResource
                                 ->required()
                                 ->maxLength(255)
                                 ->live(onBlur: true)
-                                ->afterStateUpdated(fn ($state, callable $set) => 
+                                ->afterStateUpdated(fn ($state, callable $set) =>
                                     $set('slug', \Str::slug($state))
                                 ),
 
@@ -715,11 +715,11 @@ class ServiceResource extends XotBaseResource
         return [
             Tables\Actions\BulkActionGroup::make([
                 Tables\Actions\DeleteBulkAction::make(),
-                
+
                 Tables\Actions\BulkAction::make('publish')
                     ->label('Pubblica')
                     ->icon('heroicon-o-check-circle')
-                    ->action(fn (Collection $records) => 
+                    ->action(fn (Collection $records) =>
                         $records->each->update(['status' => 'published', 'published_at' => now()])
                     )
                     ->deselectRecordsAfterCompletion(),
@@ -727,7 +727,7 @@ class ServiceResource extends XotBaseResource
                 Tables\Actions\BulkAction::make('archive')
                     ->label('Archivia')
                     ->icon('heroicon-o-archive-box')
-                    ->action(fn (Collection $records) => 
+                    ->action(fn (Collection $records) =>
                         $records->each->update(['status' => 'archived'])
                     )
                     ->deselectRecordsAfterCompletion(),
@@ -756,7 +756,7 @@ class ServiceTest extends TestCase
     public function it_can_create_a_service()
     {
         $category = ServiceCategory::factory()->create();
-        
+
         $service = Service::create([
             'title' => 'Carta d\'Identità',
             'description' => 'Rilascio carta d\'identità elettronica',
@@ -819,5 +819,5 @@ class ServiceTest extends TestCase
 
 ---
 
-**📝 Documento preparato da:** Super Mucca 🐮  
+**📝 Documento preparato da:** Super Mucca 🐮
 **📅 Data:** 2025-10-02

@@ -35,7 +35,7 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 class EsempioRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'nomeRelazione';
-    
+
     /**
      * @return array<int, \Filament\Tables\Columns\Column>
      */
@@ -45,7 +45,7 @@ class EsempioRelationManager extends XotBaseRelationManager
             // Definizione delle colonne
         ];
     }
-    
+
     /**
      * @return array<string, \Filament\Tables\Actions\Action>
      */
@@ -55,7 +55,7 @@ class EsempioRelationManager extends XotBaseRelationManager
             // Definizione delle azioni nell'header
         ];
     }
-    
+
     /**
      * @return array<string, \Filament\Tables\Actions\Action>
      */
@@ -65,7 +65,7 @@ class EsempioRelationManager extends XotBaseRelationManager
             // Definizione delle azioni per riga
         ];
     }
-    
+
     /**
      * @return array<string, \Filament\Tables\Actions\BulkAction>
      */
@@ -93,7 +93,7 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 class EsempioRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'nomeRelazione';
-    
+
     // ❌ GRAVEMENTE ERRATO - MAI IMPLEMENTARE QUESTO METODO
     public function table(Table $table): Table
     {

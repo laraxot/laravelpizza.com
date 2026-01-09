@@ -44,7 +44,7 @@ return [
    ```php
    // ❌ Errato
    TextInput::make('first_name')->label('Nome')
-   
+
    // ✅ Corretto
    TextInput::make('first_name') // Label da file traduzione
    ```
@@ -65,4 +65,3 @@ return [
    - Facilita il supporto multilingua
 
 ## Collegamenti
-

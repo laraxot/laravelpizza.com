@@ -4,7 +4,7 @@
 
 ### Modelli Presenti
 1. **Conf** - Gestione configurazioni tramite Sushi
-2. **Menu** - Gestione menu gerarchici con HasRecursiveRelationships  
+2. **Menu** - Gestione menu gerarchici con HasRecursiveRelationships
 3. **Module** - Gestione moduli CMS
 4. **Page** - Gestione pagine con traduzioni e blocchi
 5. **PageContent** - Contenuti delle pagine
@@ -42,7 +42,7 @@
 - **Integrazione**: Folio pages, middleware routing, view components
 - **Necessità**: CRITICA per CMS
 
-#### 2. Menu  
+#### 2. Menu
 - **Utilizzo**: Alto - Menu di navigazione gerarchici
 - **Business Logic**: Struttura ad albero per navigazione
 - **Integrazione**: Recursive relationships, tree management
@@ -83,7 +83,7 @@
 
 ### Modelli da Mantenere
 - **Page**: CRITICO - Core del CMS
-- **Menu**: CRITICO - Navigazione essenziale  
+- **Menu**: CRITICO - Navigazione essenziale
 - **Section**: IMPORTANTE - Struttura contenuti
 - **PageContent**: CRITICO - Gestione contenuti
 - **Conf**: UTILE - Configurazioni sistema

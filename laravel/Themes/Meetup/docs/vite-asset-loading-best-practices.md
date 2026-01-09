@@ -172,4 +172,3 @@ Se gli asset non vengono caricati, vedrai errori nella console del browser:
 - [x] Documentato best practices
 - [ ] Testato in produzione
 - [ ] Verificato hot reload in sviluppo
-

@@ -32,7 +32,7 @@ class CookieConsentController extends Controller
         ]);
 
         $this->logConsent($request->preferences);
-        
+
         return response()->json(['success' => true]);
     }
 }
@@ -93,9 +93,8 @@ class CookieConsentController extends Controller
 ## Collegamenti
 - [Architettura](../architecture.md)
 - [Sviluppo](../development.md)
-- [Pacchetti](../packages.md) 
+- [Pacchetti](../packages.md)
 
 ## Collegamenti tra versioni di cookie-consent.md
 * [cookie-consent.md](laravel/Modules/Gdpr/docs/packages/cookie-consent.md)
 * [cookie-consent.md](laravel/Modules/Gdpr/docs/roadmap/cookie-consent.md)
-

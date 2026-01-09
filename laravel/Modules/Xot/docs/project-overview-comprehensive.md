@@ -157,7 +157,7 @@ Modulo Xot (Base Foundation)
    ```php
    // ❌ Errato
    class MyResource extends Resource { }
-   
+
    // ✅ Corretto
    class MyResource extends XotBaseResource { }
    ```

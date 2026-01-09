@@ -55,4 +55,4 @@
 3. **Livewire**
    - Implementare l'interattività
    - Gestire lo stato
-   - Ottimizzare le performance 
+   - Ottimizzare le performance

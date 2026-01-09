@@ -123,7 +123,7 @@ Il componente `hero/main.blade.php` è stato modificato per:
     $title = $title ?? ($data['title'] ?? null);
     $subtitle = $subtitle ?? ($data['subtitle'] ?? '...');
     // ... altri campi
-    
+
     // Parse del titolo: "Laravel Developers. Pizza. Community." → due parti
     if (str_contains($title, 'Pizza.')) {
         $parts = explode('Pizza.', $title, 2);
@@ -152,4 +152,3 @@ Dopo l'implementazione, la hero section dovrebbe visualizzare:
 - [x] Cache view pulita
 - [ ] Testare visualizzazione nel browser
 - [ ] Verificare che tutti i dati vengano visualizzati correttamente
-

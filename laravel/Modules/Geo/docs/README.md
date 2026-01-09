@@ -145,7 +145,7 @@ return [
         'mapbox' => env('MAPBOX_API_KEY'),
         'here' => env('HERE_API_KEY'),
     ],
-    
+
     'cache' => [
         'enabled' => true,
         'ttl' => 86400, // 24 ore
@@ -295,10 +295,10 @@ CREATE INDEX idx_addresses_postal_code ON addresses (postal_code);
 - **🌐 Lingue Supportate**: 3 (IT, EN, DE)
 - **🧪 Test Coverage**: 95%
 - **⚡ Performance Score**: 98/100
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
-**📦 Versione**: 2.1.0  
-**🐛 PHPStan Level 9**: File core certificati ✅  
-**🌐 Translation Standards**: File traduzione certificati ✅  
+**🔄 Ultimo aggiornamento**: 27 Gennaio 2025
+**📦 Versione**: 2.1.0
+**🐛 PHPStan Level 9**: File core certificati ✅
+**🌐 Translation Standards**: File traduzione certificati ✅
 **🚀 Performance**: 98/100 score
 ### 🗺️ **Geocoding Services**
 // Geocoding automatico tramite API
@@ -449,7 +449,7 @@ php artisan test
 - [FAQ Generali](faq/general.md)
 - [FAQ Tecniche](faq/technical.md)
 - [FAQ Performance](faq/performance.md)
-**Ultimo aggiornamento**: Gennaio 2025  
-**Versione**: 2.0.0  
-**Autore**: Team Laraxot  
+**Ultimo aggiornamento**: Gennaio 2025
+**Versione**: 2.0.0
+**Autore**: Team Laraxot
 **Licenza**: MIT License

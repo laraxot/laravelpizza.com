@@ -184,7 +184,7 @@ test('register type page renders correctly')
     ->with('userTypes')
     ->covers(function (string $type, bool $isDoctor, string $heading): void {
         $response = get("/it/auth/{$type}/register");
-        
+
         expect($response)
             ->toBeSuccessful()
             ->and($response->getContent())
@@ -209,7 +209,7 @@ test('sets correct isDoctor flag')
 ```php
 test('handles invalid user type gracefully', function (): void {
     $response = get('/it/auth/invalid-type/register');
-    
+
     expect($response->status())->toBe(404);
 });
 ```
@@ -273,4 +273,4 @@ expect()->extend('toHaveDynamicHeading', function (string $type) {
 
 *Ultimo aggiornamento: Gennaio 2025*
 *Versione PestPHP: 2.x*
-*Compatibilità Laravel: 11.x* 
+*Compatibilità Laravel: 11.x*

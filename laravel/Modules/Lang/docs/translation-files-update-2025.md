@@ -21,7 +21,7 @@
 - **Motivazione**: Tipizzazione rigorosa per PHPStan livello 9+
 
 ### 3. Risoluzione Conflitti di Merge
-- **Risolti**: Tutti i conflitti di merge non risolti 
+- **Risolti**: Tutti i conflitti di merge non risolti
 - **Migliorato**: Struttura coerente e pulita
 
 ### 4. Rimozione Duplicazioni e Campi Vuoti
@@ -60,7 +60,7 @@
 
 Tutti i file sono stati validati con `php -l`:
 - ✅ `test_smtp.php` - Nessun errore di sintassi
-- ✅ `send_email.php` - Nessun errore di sintassi  
+- ✅ `send_email.php` - Nessun errore di sintassi
 - ✅ `lang_service.php` - Nessun errore di sintassi
 
 ## Impatto

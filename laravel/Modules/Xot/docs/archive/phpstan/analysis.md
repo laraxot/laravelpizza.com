@@ -32,4 +32,3 @@
 * [analysis.md](../../../Media/project_docs/analysis.md)
 * [analysis.md](../../../Media/project_docs/phpstan/analysis.md)
 * [analysis.md](../../../../Themes/One/project_docs/analysis.md)
-

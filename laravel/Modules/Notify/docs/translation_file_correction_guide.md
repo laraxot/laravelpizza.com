@@ -37,7 +37,6 @@ grep -r "nome_errato" /var/www/html/saluteora/laravel/Modules/Notify
 
 rm /var/www/html/saluteora/laravel/Modules/Notify/lang/it/nome_errato.php
 
-
 grep -r "nome_errato" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify
 
 rm /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/nome_errato.php

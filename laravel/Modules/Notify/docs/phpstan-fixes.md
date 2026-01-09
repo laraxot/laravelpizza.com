@@ -1,8 +1,8 @@
 # PHPStan Fixes Report - 19 Dicembre 2025
 
-**Status**: ✅ Correzioni Implementate  
-**Module**: Notify  
-**PHPStan Level**: 10  
+**Status**: ✅ Correzioni Implementate
+**Module**: Notify
+**PHPStan Level**: 10
 **Errors Fixed**: 17 → 0 (nel modulo Notify)
 
 ## Overview
@@ -276,7 +276,7 @@ $notify = new RecordNotification($this->record, $slug);
 
 ### 13. SendSmsPage e SendSpatieEmailPage - RecordNotification Constructor
 
-**File**: 
+**File**:
 - `Modules/Notify/app/Filament/Clusters/Test/Pages/SendSmsPage.php`
 - `Modules/Notify/app/Filament/Clusters/Test/Pages/SendSpatieEmailPage.php`
 
@@ -323,9 +323,9 @@ test('RecordNotification mergeData merges additional data correctly', function (
     $record = Client::factory()->create();
     $template = MailTemplate::factory()->create();
     $notification = new RecordNotification($record, $template);
-    
+
     $notification->mergeData(['custom' => 'value']);
-    
+
     expect($notification->additionalData)->toHaveKey('custom');
 });
 
@@ -365,5 +365,5 @@ L'errore `WhatsAppChannel not found` in `ChannelEnum.php` è stato risolto esegu
 
 ---
 
-**Ultimo aggiornamento**: 19 Dicembre 2025  
+**Ultimo aggiornamento**: 19 Dicembre 2025
 **Filosofia**: *"Type safety first, simplicity second, DRY always"*

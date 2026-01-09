@@ -263,4 +263,3 @@ Il comando dovrebbe restituire solo:
 - `Modules\User\Models\Extra` usa ora `getConnectionName()` pubblico per forzare la connection `user` senza violare le proprietà @final ereditate.
 - PHPStan L10 ✅, PHPMD ✅, PHPInsights ✅ (nessun avviso dopo refactor).
 - Regola: quando serve una connection custom, override tramite metodo, mai riscrivere `$connection` nelle sottoclassi.
-

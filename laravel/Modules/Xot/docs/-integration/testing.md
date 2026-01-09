@@ -2,7 +2,6 @@
 
 <!-- Contenuto migrato da _docs/testing.txt -->
 
-
 https://confidentlaravel.com/ !!!
 
 https://laravelshift.com/laravel-test-generator !!!!
@@ -15,6 +14,4 @@ https://github.com/davispeixoto/Laravel-4-Test-Generator
 
 https://laravel-news.com/tips-to-speed-up-phpunit-tests
 
-
 https://circleci.com/blog/automatic-testing-for-laravel-projects/
-

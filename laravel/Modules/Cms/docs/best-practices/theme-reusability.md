@@ -149,7 +149,7 @@ class FooterViewModel
 ```php
 it('uses application name from config', function () {
     Config::set('app.name', 'Test App');
-    
+
     $this->blade('<x-layouts.footer />')
         ->assertSee('Test App')
         ->assertDontSee('il progetto');
@@ -159,7 +159,7 @@ it('uses configured links', function () {
     Config::set('theme.footer.links', [
         ['label' => 'Test Link', 'url' => '/test']
     ]);
-    
+
     $this->blade('<x-layouts.footer />')
         ->assertSee('Test Link');
 });
@@ -180,10 +180,9 @@ Prima di committare modifiche a un tema, verificare che:
 
 - [Documentazione Temi](/laravel/Modules/Cms/docs/themes/README.md)
 - [Configurazione Temi](/laravel/Modules/Cms/docs/themes/configuration.md)
-- [Testing dei Temi](/laravel/Modules/Cms/docs/themes/testing.md) 
+- [Testing dei Temi](/laravel/Modules/Cms/docs/themes/testing.md)
 
 ## Collegamenti tra versioni di theme-reusability.md
 * [theme-reusability.md](laravel/Modules/Cms/docs/best-practices/theme-reusability.md)
 * [theme-reusability.md](laravel/Themes/One/docs/best_practices/theme-reusability.md)
 * [theme-reusability.md](laravel/Themes/One/docs/theme-reusability.md)
-

@@ -13,7 +13,7 @@ Il componente Table fornisce un modo strutturato per visualizzare dati tabulari 
             <x-filament::table.header>Ruolo</x-filament::table.header>
         </x-filament::table.row>
     </x-slot>
-    
+
     <x-filament::table.row>
         <x-filament::table.cell>Mario Rossi</x-filament::table.cell>
         <x-filament::table.cell>mario@example.com</x-filament::table.cell>
@@ -34,7 +34,7 @@ Il componente Table fornisce un modo strutturato per visualizzare dati tabulari 
             <x-filament::table.header>Email</x-filament::table.header>
         </x-filament::table.row>
     </x-slot>
-    
+
     @foreach($users as $user)
         <x-filament::table.row :record="$user">
             <x-filament::table.cell selection />
@@ -66,7 +66,7 @@ Il componente Table fornisce un modo strutturato per visualizzare dati tabulari 
             </x-filament::table.header>
         </x-filament::table.row>
     </x-slot>
-    
+
     <!-- Righe della tabella -->
 </x-filament::table>
 ```
@@ -81,7 +81,7 @@ Il componente Table fornisce un modo strutturato per visualizzare dati tabulari 
             <x-filament::table.header>Azioni</x-filament::table.header>
         </x-filament::table.row>
     </x-slot>
-    
+
     @foreach($users as $user)
         <x-filament::table.row>
             <x-filament::table.cell>{{ $user->name }}</x-filament::table.cell>
@@ -93,7 +93,7 @@ Il componente Table fornisce un modo strutturato per visualizzare dati tabulari 
                 >
                     Modifica
                 </x-filament::button>
-                
+
                 <x-filament::button
                     size="sm"
                     color="danger"
@@ -160,7 +160,7 @@ Il componente Table fornisce un modo strutturato per visualizzare dati tabulari 
             placeholder="Cerca..."
         />
     </div>
-    
+
     <x-filament::table>
         <x-slot name="header">
             <x-filament::table.row>
@@ -190,7 +190,7 @@ Il componente Table fornisce un modo strutturato per visualizzare dati tabulari 
                 </x-filament::table.header>
             </x-filament::table.row>
         </x-slot>
-        
+
         @foreach($users as $user)
             <x-filament::table.row>
                 <x-filament::table.cell>{{ $user->name }}</x-filament::table.cell>
@@ -207,7 +207,7 @@ Il componente Table fornisce un modo strutturato per visualizzare dati tabulari 
             </x-filament::table.row>
         @endforeach
     </x-filament::table>
-    
+
     <div class="mt-4">
         {{ $users->links() }}
     </div>
@@ -234,4 +234,4 @@ Il componente Table fornisce un modo strutturato per visualizzare dati tabulari 
 4. **Best Practices**
    - Limitare numero di righe visibili
    - Ottimizzare rendering colonne
-   - Implementare infinite scroll 
+   - Implementare infinite scroll

@@ -11,7 +11,7 @@ Several Blade template files were referencing a non-existent Blade component `pu
 
 ## Files Affected
 1. `Themes/Meetup/resources/views/pages/auth/login2.blade.php.old`
-2. `Themes/Meetup/resources/views/pages/auth/login3.blade.php.old` 
+2. `Themes/Meetup/resources/views/pages/auth/login3.blade.php.old`
 3. `Themes/Meetup/resources/views/components/layouts/auth.blade.php`
 
 ## Solution Applied

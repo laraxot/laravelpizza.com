@@ -232,4 +232,3 @@ echo "✅ Build e copy completati!"
 - [x] Documentata struttura directory
 - [x] Aggiunto troubleshooting
 - [x] Aggiunte best practices
-

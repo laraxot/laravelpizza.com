@@ -2,8 +2,8 @@
 
 ## L'Errore Gravissimo
 
-**Data**: 2025-01-06  
-**Problema**: 35+ factory mancanti su 13 moduli  
+**Data**: 2025-01-06
+**Problema**: 35+ factory mancanti su 13 moduli
 **Gravità**: CRITICA - Sistema di testing compromesso
 
 ## Lezioni Fondamentali
@@ -31,7 +31,7 @@ use Modules\ModuleName\Models\ModelName;
 
 /**
  * ModelName Factory
- * 
+ *
  * @extends Factory<ModelName>
  */
 class ModelNameFactory extends Factory
@@ -61,14 +61,14 @@ class ModelNameFactory extends Factory
 
 ### Models Aggiornati con HasFactory
 - ✅ Authentication, Membership, TeamUser, TenantUser (User)
-- ✅ PlaceType, Location (Geo)  
+- ✅ PlaceType, Location (Geo)
 - ✅ Media, TemporaryUpload (Media)
 - ✅ Snapshot, StoredEvent (Activity)
 
 ### Factory Create e Validate
 - ✅ **8 factory User**: Authentication, Membership, TeamUser, OauthAccessToken, OauthClient, PermissionRole, Notification, TenantUser
 - ✅ **4 factory Geo**: Address, Place, Location, PlaceType
-- ✅ **2 factory Media**: Media, TemporaryUpload  
+- ✅ **2 factory Media**: Media, TemporaryUpload
 - ✅ **2 factory Activity**: Snapshot, StoredEvent
 
 ### Tipizzazione PHPStan Applicata
@@ -132,7 +132,7 @@ done
 ### Prima (CRITICO)
 - ❌ 35+ factory mancanti
 - ❌ Testing impossibile
-- ❌ Seeding fallimentare  
+- ❌ Seeding fallimentare
 - ❌ Sviluppo locale bloccato
 - ❌ CI/CD compromesso
 

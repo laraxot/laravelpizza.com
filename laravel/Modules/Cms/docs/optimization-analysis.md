@@ -34,7 +34,7 @@ class ContentCacheService
             fn() => Page::where('slug', $slug)->with('blocks')->first()
         );
     }
-    
+
     public function invalidatePageCache(Page $page): void
     {
         Cache::forget("cms_page_{$page->slug}");
@@ -56,7 +56,7 @@ class TextBlock implements BlockInterface
     {
         return view('cms::blocks.text', $data);
     }
-    
+
     public function getSchema(): array
     {
         return [
@@ -74,4 +74,3 @@ class TextBlock implements BlockInterface
 
 ---
 *Stato: 🟡 Funzionale ma Necessita Caching e Modularità*
-

@@ -101,4 +101,4 @@ $post = Post::findOrFail($id);
 
 - [Struttura dei Temi](themes-structure.md)
 - [Standard del Codice](code-standards.md)
-- [Regole di Documentazione](documentation-rules.md) 
+- [Regole di Documentazione](documentation-rules.md)

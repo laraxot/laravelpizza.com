@@ -1,8 +1,8 @@
 # 🗺️ FARMSHOPS.EU - INTEGRATION GUIDE
 
-**Data**: 2025-10-02  
-**Source**: https://github.com/CodeforKarlsruhe/farmshops.eu  
-**Purpose**: Integrare tecnologie e pattern da farmshops.eu in FixCity  
+**Data**: 2025-10-02
+**Source**: https://github.com/CodeforKarlsruhe/farmshops.eu
+**Purpose**: Integrare tecnologie e pattern da farmshops.eu in FixCity
 
 ---
 
@@ -23,15 +23,15 @@ Mappa interattiva di negozi agricoli, distributori automatici di latte e altri v
 - **Overpass Turbo** - Query OSM API
 
 ### Features Principali
-✅ Visualizzazione punti da OpenStreetMap  
-✅ Marker differenziati per tipo  
-✅ Clustering automatico  
-✅ Popup informativi  
-✅ Link a OSM, Google Maps, OpenRouteService  
-✅ Gestione punti e poligoni  
-✅ Permalinks con posizione e zoom  
-✅ Geolocalizzazione utente  
-✅ Orari di apertura  
+✅ Visualizzazione punti da OpenStreetMap
+✅ Marker differenziati per tipo
+✅ Clustering automatico
+✅ Popup informativi
+✅ Link a OSM, Google Maps, OpenRouteService
+✅ Gestione punti e poligoni
+✅ Permalinks con posizione e zoom
+✅ Geolocalizzazione utente
+✅ Orari di apertura
 
 ---
 
@@ -75,29 +75,29 @@ import 'leaflet.markercluster';
 export class TicketMap {
     constructor(elementId, options = {}) {
         this.map = L.map(elementId).setView(
-            options.center || [45.4642, 9.1900], 
+            options.center || [45.4642, 9.1900],
             options.zoom || 13
         );
-        
+
         // Add tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
         }).addTo(this.map);
-        
+
         // Initialize marker cluster
         this.markerCluster = L.markerClusterGroup();
         this.map.addLayer(this.markerCluster);
     }
-    
+
     addTicket(ticket) {
         const marker = L.marker([ticket.latitude, ticket.longitude], {
             icon: this.getIconByStatus(ticket.status)
         });
-        
+
         marker.bindPopup(this.createPopup(ticket));
         this.markerCluster.addLayer(marker);
     }
-    
+
     getIconByStatus(status) {
         const colors = {
             'open': 'red',
@@ -105,7 +105,7 @@ export class TicketMap {
             'resolved': 'green',
             'closed': 'gray'
         };
-        
+
         return L.ExtraMarkers.icon({
             icon: 'fa-exclamation',
             markerColor: colors[status] || 'blue',
@@ -113,7 +113,7 @@ export class TicketMap {
             prefix: 'fa'
         });
     }
-    
+
     createPopup(ticket) {
         return `
             <div class="ticket-popup">
@@ -279,13 +279,13 @@ class TicketMap extends Component
     public $center = [45.4642, 9.1900];
     public $zoom = 13;
     public $filters = [];
-    
+
     public function mount()
     {
         // Get user location or default
         $this->center = $this->getUserLocation();
     }
-    
+
     public function getTicketsProperty()
     {
         return Ticket::query()
@@ -307,7 +307,7 @@ class TicketMap extends Component
                 ];
             });
     }
-    
+
     public function render()
     {
         return view('fixcity::livewire.ticket-map', [
@@ -324,7 +324,7 @@ class TicketMap extends Component
 ```blade
 <div wire:ignore>
     <div id="ticket-map" style="height: 600px;"></div>
-    
+
     <div id="sidebar" class="leaflet-sidebar collapsed">
         <div class="leaflet-sidebar-tabs">
             <ul role="tablist">
@@ -332,7 +332,7 @@ class TicketMap extends Component
                 <li><a href="#filters" role="tab"><i class="fa fa-filter"></i></a></li>
             </ul>
         </div>
-        
+
         <div class="leaflet-sidebar-content">
             <div class="leaflet-sidebar-pane" id="tickets">
                 <h1 class="leaflet-sidebar-header">
@@ -362,7 +362,7 @@ class TicketMap extends Component
             center: @json($center),
             zoom: {{ $zoom }}
         });
-        
+
         tickets.forEach(ticket => map.addTicket(ticket));
     });
 </script>
@@ -399,22 +399,22 @@ class TicketMap extends Component
 ## 🎯 BENEFITS FOR FIXCITY
 
 ### User Experience
-✅ **Mappa Interattiva** - Visualizzazione intuitiva  
-✅ **Clustering** - Performance con molti ticket  
-✅ **Geolocalizzazione** - Trova vicino a te  
-✅ **Mobile-Friendly** - Touch ottimizzato  
+✅ **Mappa Interattiva** - Visualizzazione intuitiva
+✅ **Clustering** - Performance con molti ticket
+✅ **Geolocalizzazione** - Trova vicino a te
+✅ **Mobile-Friendly** - Touch ottimizzato
 
 ### Technical
-✅ **Open Source** - No costi licenza  
-✅ **Performance** - Ottimizzato per grandi dataset  
-✅ **Customizable** - Totalmente personalizzabile  
-✅ **Plugin Ecosystem** - Tante estensioni  
+✅ **Open Source** - No costi licenza
+✅ **Performance** - Ottimizzato per grandi dataset
+✅ **Customizable** - Totalmente personalizzabile
+✅ **Plugin Ecosystem** - Tante estensioni
 
 ### Business
-✅ **AGID Compliant** - Accessibilità garantita  
-✅ **No Vendor Lock-in** - Indipendenza  
-✅ **Community Support** - Ampia community  
-✅ **Future-Proof** - Tecnologia consolidata  
+✅ **AGID Compliant** - Accessibilità garantita
+✅ **No Vendor Lock-in** - Indipendenza
+✅ **Community Support** - Ampia community
+✅ **Future-Proof** - Tecnologia consolidata
 
 ---
 
@@ -432,9 +432,9 @@ class TicketMap extends Component
 
 ---
 
-**Status**: 📋 READY TO IMPLEMENT  
-**Priority**: HIGH  
-**Estimated Time**: 3 weeks  
-**Impact**: MAJOR UX improvement  
+**Status**: 📋 READY TO IMPLEMENT
+**Priority**: HIGH
+**Estimated Time**: 3 weeks
+**Impact**: MAJOR UX improvement
 
 *"Integrando le migliori pratiche da farmshops.eu, FixCity avrà una mappa interattiva di livello mondiale!"*

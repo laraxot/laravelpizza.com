@@ -14,7 +14,7 @@ I widget di autenticazione sono parte dell'**interfaccia utente del tema** e dev
 ## Widget di Autenticazione (pub_theme::)
 
 ### Esempi di Widget Auth
-- `LoginWidget` 
+- `LoginWidget`
 - `RegistrationWidget`
 - `PasswordResetWidget` → `pub_theme::filament.widgets.auth.password.reset`
 - `PasswordResetConfirmWidget` → `pub_theme::filament.widgets.auth.password.reset-confirm`
@@ -29,7 +29,7 @@ class PasswordResetWidget extends XotBaseWidget
 {
     // ✅ CORRETTO: View nel tema con struttura gerarchica
     protected static string $view = 'pub_theme::filament.widgets.auth.password.reset';
-    
+
     // Logica del widget rimane nel modulo
     public function getFormSchema(): array
     {
@@ -41,7 +41,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
 {
     // ✅ CORRETTO: View nel tema con struttura gerarchica
     protected static string $view = 'pub_theme::filament.widgets.auth.password.reset-confirm';
-    
+
     // Logica del widget rimane nel modulo
     public function confirmPasswordReset(): void
     {
@@ -53,7 +53,7 @@ class PasswordResetConfirmWidget extends XotBaseWidget
 ### Struttura File del Tema
 ```
 laravel/Themes/One/resources/views/filament/widgets/auth/
-├── login.blade.php                    # LoginWidget view  
+├── login.blade.php                    # LoginWidget view
 ├── registration.blade.php             # RegistrationWidget view
 ├── password/
 │   ├── reset.blade.php               # PasswordResetWidget view
@@ -79,7 +79,7 @@ laravel/Themes/One/resources/views/filament/widgets/auth/
 
 ### Esempi di Widget Funzionali
 - `DoctorAppointmentsWidget`
-- `PatientStatsWidget` 
+- `PatientStatsWidget`
 - `StudioFilterWidget`
 - `RecentLoginsWidget`
 
@@ -91,7 +91,7 @@ class DoctorAppointmentsWidget extends XotBaseWidget
 {
     // ✅ CORRETTO: View nel modulo per logica funzionale
     protected static string $view = 'saluteora::filament.widgets.doctor-appointments';
-    
+
     // Logica specifica del modulo
 }
 ```
@@ -106,7 +106,7 @@ class DoctorAppointmentsWidget extends XotBaseWidget
 - [ ] View minimalista per styling del tema
 - [ ] Traduzioni sia in `user::` che in `pub_theme::`
 
-### ✅ Widget Funzionali  
+### ✅ Widget Funzionali
 - [ ] Widget PHP nel modulo: `Modules\ModuleName\Filament\Widgets\*`
 - [ ] View nel modulo: `modulename::filament.widgets.*`
 - [ ] File fisico: `laravel/Modules/ModuleName/resources/views/filament/widgets/*.blade.php`
@@ -122,7 +122,7 @@ protected static string $view = 'user::filament.widgets.auth.password.reset';
 ```
 
 ### ❌ Widget Funzionale con namespace tema
-```php  
+```php
 // SBAGLIATO per widget funzionali
 protected static string $view = 'pub_theme::filament.widgets.doctor-appointments';
 ```
@@ -144,7 +144,7 @@ protected static string $view = 'pub_theme::filament.widgets.doctor-appointments
 - Layout e colori personalizzabili per brand diversi
 - Mantiene coerenza con il design del tema
 
-### 🔧 **Logica Centralizzata**  
+### 🔧 **Logica Centralizzata**
 - Business logic rimane nel modulo User
 - Manutenzione semplificata
 - Nessuna duplicazione di codice
@@ -159,4 +159,4 @@ protected static string $view = 'pub_theme::filament.widgets.doctor-appointments
 - [Widget Autenticazione](../../laravel/Modules/User/docs/auth-widgets.md)
 - [Implementazione Temi](../frontend/theme-implementation.md)
 
-*Ultimo aggiornamento: Dicembre 2024* 
+*Ultimo aggiornamento: Dicembre 2024*

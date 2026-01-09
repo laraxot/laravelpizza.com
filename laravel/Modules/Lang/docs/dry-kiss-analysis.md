@@ -23,4 +23,3 @@ DRY: 7/10 🟢 | KISS: 6/10 🟡 | **Overall: 6.5/10 🟡**
 2. Resources refactoring (2 giorni)
 
 **Status:** 🟡 Codice OK, troppi docs
-

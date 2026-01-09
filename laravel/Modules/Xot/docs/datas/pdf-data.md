@@ -67,4 +67,4 @@ $pdfData = PdfData::make([
 La classe utilizza `Assert` per validare:
 - Presenza dei campi obbligatori
 - Tipi di dati corretti
-- Valori validi per orientamento e dimensioni pagina 
+- Valori validi per orientamento e dimensioni pagina

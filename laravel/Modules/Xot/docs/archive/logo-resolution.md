@@ -60,7 +60,7 @@ Il sistema utilizza il metodo `module_path()` per risolvere questi percorsi:
 function resolveModulePath($path) {
     // Esempio: 'module::images/logo.svg'
     list($module, $resourcePath) = explode('::', $path);
-    
+
     // Converte in: '/path/to/project/laravel/Modules/Module/resources/images/logo.svg'
     return module_path(ucfirst($module)) . '/resources/' . $resourcePath;
 }
@@ -77,8 +77,8 @@ Nei template Blade, i loghi vengono referenziati utilizzando gli helper appropri
 Per la versione dark:
 
 ```blade
-<img src="{{ Theme::asset($metatag['logo_header_dark']) }}" 
-     alt="{{ $metatag['logo_alt'] ?? 'Logo' }}" 
+<img src="{{ Theme::asset($metatag['logo_header_dark']) }}"
+     alt="{{ $metatag['logo_alt'] ?? 'Logo' }}"
      class="hidden dark:block">
 ```
 

@@ -2,9 +2,9 @@
 
 ## Status Iniziale
 
-**Data**: 2025-12-12  
-**Errori Totali**: 1565  
-**Obiettivo**: 0 errori  
+**Data**: 2025-12-12
+**Errori Totali**: 1565
+**Obiettivo**: 0 errori
 **Approccio**: Sistematico, pattern-based, documentato
 
 ## Categorie Errori Principali
@@ -17,7 +17,7 @@ Call to an undefined static method Modules\Activity\Models\Activity::create().
 Call to an undefined static method Modules\Activity\Models\Activity::where().
 ```
 
-**Causa**: Models non hanno PHPDoc @mixin per Eloquent Builder  
+**Causa**: Models non hanno PHPDoc @mixin per Eloquent Builder
 **Fix Tipo**: Aggiungere `@mixin \Illuminate\Database\Eloquent\Builder` ai Models
 
 **Priorità**: ALTA (blocca funzionalità base)
@@ -29,7 +29,7 @@ Call to an undefined static method Modules\Activity\Models\Activity::where().
 Parameter #1 $label expects string|null, array|string|null given.
 ```
 
-**Causa**: `__()` può restituire array se la chiave non esiste  
+**Causa**: `__()` può restituire array se la chiave non esiste
 **Fix Tipo**: Cast a string o gestione condizionale
 
 **Priorità**: MEDIA (non critico ma fastidioso)
@@ -41,7 +41,7 @@ Parameter #1 $label expects string|null, array|string|null given.
 Call to an undefined method Illuminate\Database\Eloquent\Builder::where().
 ```
 
-**Causa**: PHPStan non riconosce metodi Builder dinamici  
+**Causa**: PHPStan non riconosce metodi Builder dinamici
 **Fix Tipo**: PHPDoc @var annotations
 
 **Priorità**: ALTA (molto comune)
@@ -53,7 +53,7 @@ Call to an undefined method Illuminate\Database\Eloquent\Builder::where().
 Method should return int but returns mixed.
 ```
 
-**Causa**: Tipi di ritorno non espliciti o troppo generici  
+**Causa**: Tipi di ritorno non espliciti o troppo generici
 **Fix Tipo**: Type casting o explicit return types
 
 **Priorità**: MEDIA
@@ -65,7 +65,7 @@ Method should return int but returns mixed.
 Cannot call method delete() on mixed.
 ```
 
-**Causa**: Chain di metodi su tipi mixed  
+**Causa**: Chain di metodi su tipi mixed
 **Fix Tipo**: Assertions o type guards
 
 **Priorità**: ALTA (può causare runtime errors)
@@ -179,5 +179,5 @@ done
 
 ---
 
-**Mantenuto da**: Claude Sonnet 4.5  
+**Mantenuto da**: Claude Sonnet 4.5
 **Ultimo aggiornamento**: 2025-12-12

@@ -19,7 +19,7 @@ Questo documento fornisce un'analisi completa dello stato delle factory e seeder
 
 #### Modelli con Factory Funzionanti ✅
 - **User**: Factory completa e funzionante
-- **Doctor**: Factory completa e funzionante  
+- **Doctor**: Factory completa e funzionante
 - **Patient**: Factory completa e funzionante
 - **Admin**: Factory completa e funzionante
 - **Studio**: Factory completa e funzionante
@@ -243,7 +243,7 @@ class ModelNameSeeder extends Seeder
     {
         // Creazione record di base
         ModelName::factory()->count(10)->create();
-        
+
         // Creazione record con stati specifici
         ModelName::factory()->count(5)->active()->create();
         ModelName::factory()->count(3)->inactive()->create();
@@ -258,7 +258,7 @@ public function run(): void
     // Prima crea le entità base
     $studios = Studio::factory()->count(5)->create();
     $doctors = Doctor::factory()->count(10)->create();
-    
+
     // Poi crea le relazioni
     foreach ($studios as $studio) {
         $studio->doctors()->attach(

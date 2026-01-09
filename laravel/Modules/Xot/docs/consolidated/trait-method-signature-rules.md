@@ -95,7 +95,7 @@ Before committing any trait:
 
 ### Filament Specifics
 - **Resources**: Methods are generally non-static
-- **Pages**: Methods are generally non-static  
+- **Pages**: Methods are generally non-static
 - **Widgets**: Methods are generally non-static
 - **Actions**: Methods are generally non-static
 
@@ -134,5 +134,5 @@ If you encounter this error:
 
 ---
 
-*Last Updated: 2025-08-27*  
+*Last Updated: 2025-08-27*
 *Trait Standards Version: 2.0*

@@ -34,5 +34,5 @@ We have `AddressSection` in Filament, but a dedicated `Address` model (already p
 By aligning with Schema.org, we don't just "add fields"; we enable the application to "speak the language of the web". This makes the data more robust, interoperable, and ready for advanced integrations (AI, SEO, external APIs).
 
 ---
-**🔄 Zen Status**: Expanding  
+**🔄 Zen Status**: Expanding
 **🐄 Methodology**: Super Mucca ✅

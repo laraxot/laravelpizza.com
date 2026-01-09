@@ -12,7 +12,7 @@ Il modulo Notify contiene quattro layout email principali:
 ```
 resources/mail-layouts/
 ├── default.html       # Layout base con header, content e footer
-├── main.html          # Layout alternativo con design semplificato 
+├── main.html          # Layout alternativo con design semplificato
 ├── marketing.html     # Layout ottimizzato per comunicazioni marketing
 └── notification.html  # Layout specifico per notifiche di sistema
 ```
@@ -84,7 +84,7 @@ use Spatie\MailTemplates\MailTemplate as SpatieMailTemplate;
 class MailTemplate extends SpatieMailTemplate
 {
     // ...
-    
+
     public function getHtmlLayout(): string
     {
         // Recupera il layout in base al tipo di email
@@ -94,7 +94,7 @@ class MailTemplate extends SpatieMailTemplate
         } elseif ($this->isNotification()) {
             $layout = 'notification';
         }
-        
+
         return file_get_contents(module_path('Notify', "resources/mail-layouts/{$layout}.html"));
     }
 }
@@ -108,7 +108,7 @@ I layout supportano le seguenti variabili Blade:
 
 - `$subject` - L'oggetto dell'email
 - `$content` - Il contenuto principale dell'email
-- `config('app.name')` - Nome dell'applicazione 
+- `config('app.name')` - Nome dell'applicazione
 - `asset('images/logo.png')` - Percorso al logo
 - `date('Y')` - Anno corrente per il copyright
 

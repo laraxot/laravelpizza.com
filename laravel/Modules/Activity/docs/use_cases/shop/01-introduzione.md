@@ -25,4 +25,4 @@ Costruire uno shop moderno non significa solo gestire prodotti e ordini, ma prog
 - **Testabilità**: ogni regola è isolata e testabile.
 
 ## Obiettivo di questa documentazione
-Questa guida non si limita a confrontare due progetti, ma spiega come **progettare da zero** uno shop event sourced, illustrando ogni scelta, pattern, tecnologia, con esempi e motivazioni profonde. Non solo codice, ma anche filosofia, zen, e "religione" architetturale. 
+Questa guida non si limita a confrontare due progetti, ma spiega come **progettare da zero** uno shop event sourced, illustrando ogni scelta, pattern, tecnologia, con esempi e motivazioni profonde. Non solo codice, ma anche filosofia, zen, e "religione" architetturale.

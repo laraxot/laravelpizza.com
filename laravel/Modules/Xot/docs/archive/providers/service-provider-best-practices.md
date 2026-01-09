@@ -146,9 +146,9 @@ public function execute(string $moduleName, string $generatorPath): string
 
     $res = module_path($moduleName, $relativePath);
     Assert::string($res);
-    
+
     Assert::directory($res, 'The path '.$res.' is not a directory ['.$moduleName.']['.$generatorPath.']');
-    
+
     return $res;
 }
 ```
@@ -164,4 +164,4 @@ Questa implementazione:
 
 L'utilizzo di `GetModulePathByGeneratorAction` anziché chiamate dirette a `module_path` rappresenta una best practice importante nel progetto il progetto. Questo approccio migliora la robustezza, la leggibilità e la manutenibilità del codice nei service provider.
 
-Si raccomanda di seguire questo pattern in tutti i service provider personalizzati per garantire coerenza e affidabilità nell'accesso ai percorsi dei moduli. 
+Si raccomanda di seguire questo pattern in tutti i service provider personalizzati per garantire coerenza e affidabilità nell'accesso ai percorsi dei moduli.

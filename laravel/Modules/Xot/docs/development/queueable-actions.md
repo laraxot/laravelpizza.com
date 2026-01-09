@@ -87,12 +87,12 @@ class UpdateUserAction
     public function execute(UserData $userData): User
     {
         $user = User::findOrFail($userData->id);
-        
+
         $user->update([
             'name' => $userData->name,
             'email' => $userData->email,
         ]);
-        
+
         return $user;
     }
 }
@@ -123,7 +123,7 @@ class RegisterUserAction
     {
         $user = $this->createUserAction->execute($userData);
         $this->sendWelcomeEmailAction->execute($user);
-        
+
         return $user;
     }
 }
@@ -144,10 +144,10 @@ class CreateUserActionTest extends TestCase
             name: 'Test User',
             email: 'test@example.com',
         );
-        
+
         // Act
         $user = $action->execute($userData);
-        
+
         // Assert
         $this->assertInstanceOf(User::class, $user);
         $this->assertEquals('Test User', $user->name);
@@ -191,4 +191,4 @@ class CreateUserActionTest extends TestCase
 
 ## Conclusioni
 
-L'utilizzo di Spatie QueueableActions rappresenta un approccio moderno e efficace alla gestione della logica di business in Laravel. Questo pattern promuove la scrittura di codice pulito, testabile e manutenibile, allineandosi perfettamente con i principi di Domain-Driven Design e SOLID. 
+L'utilizzo di Spatie QueueableActions rappresenta un approccio moderno e efficace alla gestione della logica di business in Laravel. Questo pattern promuove la scrittura di codice pulito, testabile e manutenibile, allineandosi perfettamente con i principi di Domain-Driven Design e SOLID.

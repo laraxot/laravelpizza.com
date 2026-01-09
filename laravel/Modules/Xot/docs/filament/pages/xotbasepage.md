@@ -37,7 +37,7 @@ public static function getNavigationLabel(): string
     return static::transFunc(__FUNCTION__);
 }
 
-public function getTitle(): string 
+public function getTitle(): string
 {
     return static::transTitle();
 }
@@ -74,7 +74,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBasePage;
 class MyCustomPage extends XotBasePage
 {
     protected static ?string $navigationIcon = 'heroicon-o-document';
-    
+
     protected function getFormSchema(): array
     {
         return [
@@ -123,7 +123,7 @@ class MyCustomPage extends Page // ⚠️ ERRATO!
 class MyPage extends XotBasePage implements HasForms  // ⚠️ ERRATO!
 {
     use InteractsWithForms;  // ⚠️ ERRATO!
-    
+
     // ...
 }
 ```
@@ -135,7 +135,7 @@ class MyPage extends XotBasePage implements HasForms  // ⚠️ ERRATO!
 class MyPage extends XotBasePage
 {
     // Nessuna ridichiarazione di trait/interfacce già presenti
-    
+
     protected function getFormSchema(): array
     {
         return [

@@ -44,4 +44,4 @@ $cartAggregate->addProduct($productId, $qty);
 
 ## Alternative
 - In un CRUD tradizionale, molte di queste azioni sarebbero update diretti su tabelle, senza storia né audit.
-- Con event sourcing, ogni passaggio è tracciato e ricostruibile. 
+- Con event sourcing, ogni passaggio è tracciato e ricostruibile.

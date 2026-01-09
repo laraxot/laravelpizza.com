@@ -320,4 +320,3 @@ Analizzare repository GitHub che utilizzano Folio + Volt per estrarre pattern co
 
 ## Note
 Questo documento è in fase di compilazione. L'analisi dei repository è in corso.
-

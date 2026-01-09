@@ -182,4 +182,3 @@ Per gestire correttamente le route nei blocchi, seguire queste linee guida:
 * [blocks.md](../../../Cms/docs/blocks.md)
 * [blocks.md](../../../../Themes/One/docs/blocks.md)
 * [blocks.md](../../../../Themes/One/docs/components/blocks.md)
-

@@ -68,7 +68,7 @@ return new class extends XotBaseMigration {
 
 return new class extends XotBaseMigration {
     protected ?string $model_class = Role::class; // Opzionale ma raccomandato
-    
+
     public function up(): void
     {
         // Migrazione...
@@ -91,7 +91,7 @@ $this->tableUpdate(function (Blueprint $table): void {
     if (! $this->hasColumn('team_id')) {
         $table->foreignId('team_id')->nullable()->index();
     }
-    
+
     $this->updateTimestamps($table); // SEMPRE alla fine
 });
 ```
@@ -167,7 +167,7 @@ public function up(): void
         $table->id();
         $table->string('name');
     });
-    
+
     $this->tableUpdate(function (Blueprint $table) {
         $this->updateTimestamps($table);
     });
@@ -243,12 +243,12 @@ return new class extends XotBaseMigration {
             if (! $this->hasColumn('team_id')) {
                 $table->foreignId('team_id')->nullable()->index();
             }
-            
+
             // Aggiungi is_active se necessario
             if (! $this->hasColumn('is_active')) {
                 $table->boolean('is_active')->default(true);
             }
-            
+
             $this->updateTimestamps($table);
         });
     }
@@ -279,16 +279,16 @@ return new class extends XotBaseMigration {
             if (! $this->hasColumn('first_name')) {
                 $table->string('first_name')->nullable();
             }
-            
+
             if (! $this->hasColumn('last_name')) {
                 $table->string('last_name')->nullable();
             }
-            
+
             // Campi business
             if (! $this->hasColumn('is_active')) {
                 $table->boolean('is_active')->default(true);
             }
-            
+
             $this->updateTimestamps($table, true); // true = soft deletes
         });
     }

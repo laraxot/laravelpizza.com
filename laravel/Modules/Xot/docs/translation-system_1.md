@@ -1,4 +1,4 @@
-# Sistema di Traduzione 
+# Sistema di Traduzione
 
 ## Regola Fondamentale: NO ->label()
 
@@ -223,4 +223,4 @@ php artisan view:clear
 - [Documentazione Laravel Translations](https://laravel.com/docs/localization)
 - [Filament Form Components](https://filamentphp.com/docs/forms)
 - [Best Practices Filament](../docs/filament-best-practices.md)
-- [Schema Conventions](../docs/schema-conventions.md) 
+- [Schema Conventions](../docs/schema-conventions.md)

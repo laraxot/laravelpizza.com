@@ -78,4 +78,4 @@ app/Domain/PredictionMarket/
 - [Architettura prediction_market](./02_architettura.md)
 - [Best practice prediction_market](./04_best_practice.md)
 - [API prediction_market](./06_api.md)
-- [Testing prediction_market](./07_test.md) 
+- [Testing prediction_market](./07_test.md)

@@ -190,4 +190,3 @@ Traduzioni specifiche per gli eventi archiviati:
 * [translations.md](laravel/Modules/Activity/docs/translations.md)
 * [translations.md](laravel/Modules/Patient/docs/translations.md)
 * [translations.md](laravel/Modules/Cms/docs/translations.md)
-

@@ -1,7 +1,7 @@
 # Fix view:cache - Errore pub_theme::ui.logo
 
-**Data**: 2025-01-22  
-**Status**: ✅ Risolto  
+**Data**: 2025-01-22
+**Status**: ✅ Risolto
 **Comando**: `php artisan view:cache`
 
 ---
@@ -84,6 +84,6 @@ INFO  Blade templates cached successfully.
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: ✅ Risolto

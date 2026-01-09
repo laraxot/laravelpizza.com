@@ -20,5 +20,3 @@ https://github.com/phan/phan
 https://github.com/overtrue/phplint
 
 https://phpmd.org/
-
-

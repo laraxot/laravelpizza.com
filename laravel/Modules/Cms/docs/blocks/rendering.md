@@ -116,7 +116,7 @@ Le viste dei blocchi ricevono tutti i dati specificati nel campo `data` del bloc
         <div class="text-center">
             <h1 class="text-4xl font-bold text-white mb-4">{{ $title }}</h1>
             <p class="text-xl text-white opacity-80 mb-8">{{ $subtitle }}</p>
-            
+
             @if(isset($cta_text) && isset($cta_link))
                 <a href="{{ $cta_link }}" class="btn btn-white">{{ $cta_text }}</a>
             @endif

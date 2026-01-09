@@ -59,4 +59,3 @@ Das Script verwendet https://overpass-turbo.eu/ um diese Tags von OpenstreetMap 
 - https://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Dvending_machine ( Wobei vending machines indirekt über Tags wie vending:milk oder vending:food gezogen werden.)
 - https://wiki.openstreetmap.org/wiki/DE:Tag:amenity=marketplace
 - https://wiki.openstreetmap.org/wiki/DE:Tag:craft%3Dbeekeeper
-

@@ -79,8 +79,8 @@ Usa sempre le stesse classi per gli stessi scopi.
 
 ```blade
 {{-- Text Input --}}
-<input 
-    type="text" 
+<input
+    type="text"
     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
     placeholder="Nome pizza"
 >
@@ -91,7 +91,7 @@ Usa sempre le stesse classi per gli stessi scopi.
 </select>
 
 {{-- Textarea --}}
-<textarea 
+<textarea
     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
     rows="4"
 ></textarea>
@@ -145,29 +145,29 @@ Usa sempre le stesse classi per gli stessi scopi.
         @apply focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
         @apply transition-colors duration-200;
     }
-    
+
     /* Card Pizza */
     .pizza-card {
         @apply bg-white rounded-lg shadow-md overflow-hidden;
         @apply hover:shadow-lg transition-all duration-300;
     }
-    
+
     /* Input Form */
     .form-input {
         @apply w-full px-4 py-2 border border-gray-300 rounded-lg;
         @apply focus:ring-2 focus:ring-primary-500 focus:border-transparent;
         @apply transition-colors;
     }
-    
+
     /* Badge */
     .badge {
         @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
     }
-    
+
     .badge-primary {
         @apply bg-primary-100 text-primary-800;
     }
-    
+
     .badge-success {
         @apply bg-green-100 text-green-800;
     }
@@ -304,4 +304,3 @@ content: [
 - [ ] Transizioni smooth
 - [ ] Classi custom documentate
 - [ ] Purge configurato correttamente
-

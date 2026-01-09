@@ -54,4 +54,4 @@ class WelcomeMail extends TemplateMailable
 ## Note
 - Il layout è ottimizzato per la visualizzazione su dispositivi mobili
 - Supporta la maggior parte dei client email moderni
-- Include reset CSS per uniformità tra client 
+- Include reset CSS per uniformità tra client

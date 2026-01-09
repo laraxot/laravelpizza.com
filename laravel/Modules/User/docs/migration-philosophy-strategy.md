@@ -7,7 +7,7 @@
 - Multiple migrations creating the same table violates Laraxot philosophy
 - Subsequent changes should extend existing tables using `tableUpdate()`
 
-### 2. DRY (Don't Repeat Yourself) 
+### 2. DRY (Don't Repeat Yourself)
 - Avoid duplicating table structure definitions
 - Use centralized patterns for common operations
 - Leverage base migration classes for consistency

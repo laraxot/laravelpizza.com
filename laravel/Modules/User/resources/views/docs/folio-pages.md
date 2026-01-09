@@ -21,7 +21,7 @@ Themes/One/resources/views/pages/
 Laravel Folio utilizza delle convenzioni specifiche:
 
 - `/` → `index.blade.php`
-- `/pages` → `pages/index.blade.php` 
+- `/pages` → `pages/index.blade.php`
 - `/pages/{slug}` → `pages/[slug].blade.php`
 
 ## File [slug].blade.php
@@ -40,7 +40,7 @@ name('page_slug.view');
 render(function (View $view, string $slug) {
     $locale = app()->getLocale();
     $page = Page::firstWhere(['slug' => $slug]);
-    
+
     return $view->with('page', $page);
 });
 ?>
@@ -74,7 +74,7 @@ render(function (View $view) {
                 Tutte le Pagine
             </h1>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach($pages as $page)
                 <a href="{{ url('/' . $locale . '/pages/' . $page->slug) }}" class="block p-6 bg-white shadow-sm rounded-lg hover:shadow-md transition">

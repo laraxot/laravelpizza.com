@@ -36,4 +36,4 @@ it('un ordine può essere completato solo se pagato', function() {
 ## 7. Confronto con CRUD
 - In CRUD: test su controller e repository.
 - In event sourced: test su aggregate, eventi, projectors, reactors, flussi end-to-end.
-- **Motivazione**: garantire che il sistema sia realmente event sourced e auditabile. 
+- **Motivazione**: garantire che il sistema sia realmente event sourced e auditabile.

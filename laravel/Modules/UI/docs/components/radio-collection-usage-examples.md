@@ -35,7 +35,7 @@ RadioCollection::make('studio_selection')
                 </svg>
             </div>
         @endif
-        
+
         <div>
             <div class="font-semibold text-gray-900 dark:text-white">
                 {{ $item->name }}
@@ -54,7 +54,7 @@ RadioCollection::make('studio_selection')
             @endif
         </div>
     </div>
-    
+
     @if($item->rating ?? false)
         <div class="flex items-center">
             <div class="flex items-center">
@@ -107,7 +107,7 @@ RadioCollection::make('payment_method')
     ->debug(true, function (array $logData) {
         // Log personalizzato per analisi comportamento utente
         logger()->channel('user_behavior')->info('RadioCollection interaction', $logData);
-        
+
         // Invio metriche a servizio esterno
         if (app()->isProduction()) {
             Analytics::track('form_interaction', [
@@ -127,9 +127,9 @@ use Modules\UI\Filament\Forms\Components\RadioCollection;
 class SettingsWidget extends BaseWidget
 {
     protected static string $view = 'custom.settings-widget';
-    
+
     public $selectedTheme = 'light';
-    
+
     protected function getFormSchema(): array
     {
         return [
@@ -146,7 +146,7 @@ class SettingsWidget extends BaseWidget
                 ->afterStateUpdated(fn ($state) => $this->applyTheme($state)),
         ];
     }
-    
+
     public function applyTheme(string $theme): void
     {
         // Logica applicazione tema
@@ -256,4 +256,4 @@ RadioCollection::make('product_category')
     })
 ```
 
-*Esempi aggiornati: {{ now() }}* 
+*Esempi aggiornati: {{ now() }}*

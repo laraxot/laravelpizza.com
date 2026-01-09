@@ -24,7 +24,7 @@ MailPace offre i seguenti template transazionali:
 - **Performance** - Ottimizzati per caricamento veloce
 - **Personalizzazione** - Facilmente personalizzabili con Maizzle
 
-## Integrazione 
+## Integrazione
 
 ### Struttura della Directory
 
@@ -82,7 +82,7 @@ use Modules\Notify\Models\MailTemplate;
 
 $mailTemplate = MailTemplate::findBySlug('welcome-email');
 $mailTemplate->send($user->email, [
-    'name' => $user->name, 
+    'name' => $user->name,
     'action_url' => $actionUrl
 ]);
 ```
@@ -92,7 +92,7 @@ $mailTemplate->send($user->email, [
 1. **Mantieni la Struttura Base** - Non modificare la struttura HTML base per garantire compatibilità
 2. **Usa Variabili** - Utilizza variabili Blade per contenuti dinamici
 3. **Test Cross-Client** - Testa i template su diversi client email
-4. **Segui le Convenzioni di Branding** - Usa i colori e font definiti per 
+4. **Segui le Convenzioni di Branding** - Usa i colori e font definiti per
 4. **Segui le Convenzioni di Branding** - Usa i colori e font definiti per SaluteOra
 
 ## Riferimenti

@@ -1,4 +1,4 @@
-# Regole per le Chiavi di Traduzione 
+# Regole per le Chiavi di Traduzione
 
 ## Collegamenti correlati
 - [Documentazione centrale](./README.md)
@@ -134,10 +134,10 @@ return [
 <form>
     <label>{{ __('auth.login.fields.email.label') }}</label>
     <input type="email" placeholder="{{ __('auth.login.fields.email.placeholder') }}">
-    
+
     <label>{{ __('auth.login.fields.password.label') }}</label>
     <input type="password" placeholder="{{ __('auth.login.fields.password.placeholder') }}">
-    
+
     <button type="submit">{{ __('auth.login.button.label') }}</button>
 </form>
 ```

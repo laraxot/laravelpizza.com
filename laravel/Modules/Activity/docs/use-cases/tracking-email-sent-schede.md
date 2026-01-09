@@ -4,8 +4,8 @@
 
 Caso d'uso concreto: Tracciamento invio email schede valutazione nel modulo Ptv.
 
-**Modulo:** Ptv (Provincia di Treviso)  
-**Action:** `LogSchedaEmailSentAction`  
+**Modulo:** Ptv (Provincia di Treviso)
+**Action:** `LogSchedaEmailSentAction`
 **Integrazione:** `SendMailByRecord`
 
 ---
@@ -139,7 +139,7 @@ $emailLogs = Activity::forSubject($scheda)
 
 foreach ($emailLogs as $log) {
     $props = $log->properties;
-    
+
     echo sprintf(
         "%s - %s a %s da %s (%s)\n",
         $log->created_at->format('d/m/Y H:i:s'),
@@ -214,23 +214,23 @@ class SchedeEmailStatsWidget extends BaseWidget
     protected function getStats(): array
     {
         $query = Activity::where('description', 'like', '%Email scheda%');
-        
+
         $total = $query->count();
         $oggi = (clone $query)->whereDate('created_at', today())->count();
         $settimana = (clone $query)->whereBetween('created_at', [now()->subWeek(), now()])->count();
-        
+
         $successCount = (clone $query)->whereJsonContains('properties->result->success', true)->count();
         $successRate = $total > 0 ? round(($successCount / $total) * 100, 1) : 0;
-        
+
         return [
             Stat::make('Email Schede Oggi', $oggi)
                 ->description('Inviate nelle ultime 24 ore')
                 ->color('primary'),
-                
+
             Stat::make('Email Schede Settimana', $settimana)
                 ->description('Ultimi 7 giorni')
                 ->color('info'),
-                
+
             Stat::make('Success Rate', $successRate.'%')
                 ->description("{$successCount} successi su {$total} totali")
                 ->color($successRate > 95 ? 'success' : ($successRate > 80 ? 'warning' : 'danger')),
@@ -276,7 +276,7 @@ app(LogSchedaEmailSentAction::class)
 - Email destinatario
 - IP address mittente
 
-**Legal Basis:** Art. 6(1)(c) - Adempimento obbligo legale  
+**Legal Basis:** Art. 6(1)(c) - Adempimento obbligo legale
 (PA deve mantenere registro comunicazioni ufficiali)
 
 ### Retention Period
@@ -309,7 +309,7 @@ public function it_logs_email_sent_with_complete_data(): void
 {
     $scheda = Scheda::factory()->create();
     $this->actingAs(User::factory()->create());
-    
+
     $activity = app(LogSchedaEmailSentAction::class)->execute(
         scheda: $scheda,
         recipient: 'test@example.com',
@@ -318,7 +318,7 @@ public function it_logs_email_sent_with_complete_data(): void
         pdfSizeBytes: 50000,
         success: true,
     );
-    
+
     $this->assertInstanceOf(Activity::class, $activity);
     $this->assertEquals($scheda->matr, $activity->properties['scheda']['matr']);
     $this->assertTrue($activity->properties['result']['success']);
@@ -334,18 +334,18 @@ public function it_logs_activity_when_sending_email(): void
     $scheda = Scheda::factory()->create();
     $user = User::factory()->create();
     $this->actingAs($user);
-    
+
     Mail::fake();
-    
+
     app(SendMailByRecord::class)->execute($scheda);
-    
+
     // Verifica activity creata
     $this->assertDatabaseHas('activity_log', [
         'subject_type' => Scheda::class,
         'subject_id' => $scheda->id,
         'causer_id' => $user->id,
     ]);
-    
+
     $activity = Activity::latest()->first();
     $this->assertStringContains('Email scheda', $activity->description);
     $this->assertTrue($activity->properties['result']['success']);
@@ -363,8 +363,7 @@ public function it_logs_activity_when_sending_email(): void
 
 ---
 
-**Ultimo Aggiornamento:** 2025-01-22  
-**Versione:** 1.0  
-**Autore:** System Integration Documentation  
+**Ultimo Aggiornamento:** 2025-01-22
+**Versione:** 1.0
+**Autore:** System Integration Documentation
 **Stato:** ✅ Production Ready
-

@@ -1,7 +1,7 @@
 # Passport Cluster - Implementazione Completata
 
-**Data**: 2025-01-22  
-**Status**: ✅ COMPLETATO  
+**Data**: 2025-01-22
+**Status**: ✅ COMPLETATO
 **Metodologia**: Super Mucca
 
 ---
@@ -183,6 +183,6 @@ Modules/User/app/Filament/Clusters/Passport/
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: ✅ Completato e verificato (PHPStan L10)

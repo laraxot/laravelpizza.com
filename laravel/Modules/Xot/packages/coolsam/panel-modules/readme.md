@@ -323,23 +323,6 @@ Additionally, each of these can have its own customized login page which redirec
 You can read more about Multiple Context for Filament [Here](https://github.com/iotronlab/filament-multi-guard).
 
 If this is your goal, then you are in the right place.
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 
 ## Installation
 Before you proceed, this guide assumes that you have configured your app fully to work with Laravel Modules. If you haven't, follow the [Laravel Modules Docs](https://docs.laravelmodules.com/v9/installation-and-setup) before proceeding.
@@ -363,23 +346,6 @@ Additionally, each of these can have its own customized login page which redirec
 You can read more about Multiple Context for Filament [Here](https://github.com/iotronlab/filament-multi-guard).
 
 If this is your goal, then you are in the right place.
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 
 ## Installation
 Before you proceed, this guide assumes that you have configured your app fully to work with Laravel Modules. If you haven't, follow the [Laravel Modules Docs](https://docs.laravelmodules.com/v9/installation-and-setup) before proceeding.

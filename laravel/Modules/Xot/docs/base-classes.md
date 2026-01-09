@@ -110,9 +110,7 @@ class XotBaseEditRecord
 - [Service Provider](service-provider-best-practices.md)
 - [Convenzioni](conventions.md)
 
-
 ### Versione Incoming
-
 
 ---
 
@@ -128,12 +126,12 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class PolizzaConvenzioneResource extends XotBaseResource
 {
     protected static ?string $model = PolizzaConvenzione::class;
-    
+
     // Non definire proprietà di navigazione - gestite automaticamente
     // protected static ?string $navigationIcon = 'heroicon-o-document';
     // protected static ?string $navigationGroup = 'Portafoglio';
     // protected static ?int $navigationSort = 1;
-    
+
     public static function getPages(): array
     {
         return [
@@ -164,7 +162,7 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 class ConvenzioniStatistiche extends XotBasePage
 {
     // Non definire proprietà di navigazione - gestite automaticamente
-    
+
     protected function getFormSchema(): array
     {
         return [
@@ -176,7 +174,7 @@ class ConvenzioniStatistiche extends XotBasePage
                 ])
         ];
     }
-    
+
     protected function authorizeAccess(): void
     {
         $this->authorize('statistiche.read');
@@ -203,17 +201,17 @@ use Modules\Xot\Models\XotBaseModel;
 class PolizzaConvenzione extends XotBaseModel
 {
     protected $table = 'polizze_convenzione';
-    
+
     protected $fillable = [
         'numero_adesione',
         'data_decorrenza',
         'premio_lordo',
     ];
-    
+
     // Soft delete gestito automaticamente
-    
+
     // Timestamps gestiti automaticamente
-    
+
     // Relazioni standard disponibili
 }
 ```
@@ -240,11 +238,11 @@ class PolizzaConvenzioneController extends XotBaseController
     {
         $this->authorizeResource(PolizzaConvenzione::class);
     }
-    
+
     public function index()
     {
         $this->authorize('viewAny', PolizzaConvenzione::class);
-        
+
         // Logica del controller
     }
 }
@@ -257,10 +255,9 @@ class PolizzaConvenzioneController extends XotBaseController
 - Gestione errori standardizzata
 ### Versione HEAD
 
-- Risposte JSON predefinite 
+- Risposte JSON predefinite
 
 ### Versione Incoming
-
 
 ---
 
@@ -288,15 +285,13 @@ class PolizzaConvenzioneController extends XotBaseController
    - Mantenere la retrocompatibilità
 ### Versione HEAD
 
-   - Documentare le modifiche significative 
+   - Documentare le modifiche significative
 ## Collegamenti tra versioni di base-classes.md
 * [base-classes.md](../../../Xot/docs/base-classes.md)
 * [base-classes.md](../../../Xot/docs/roadmap/base-classes.md)
 
-
 ### Versione Incoming
 
-   - Documentare le modifiche significative 
+   - Documentare le modifiche significative
 
 ---
-

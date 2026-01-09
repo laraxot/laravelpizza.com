@@ -180,7 +180,7 @@ I file di traduzione non italiani (en, de) contengono testo italiano invece dell
 
 ---
 
-**Stato**: Implementazione in corso  
-**Priorità**: Alta  
-**Responsabile**: Sistema automatico DRY/KISS  
+**Stato**: Implementazione in corso
+**Priorità**: Alta
+**Responsabile**: Sistema automatico DRY/KISS
 **Data**: 2025-08-08

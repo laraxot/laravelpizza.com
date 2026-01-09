@@ -38,4 +38,4 @@
 
 ## Risorse
 - [Sito ufficiale Eventsauce](https://eventsauce.io/)
-- [Repo larabank-eventsauce](https://github.com/spatie/larabank-eventsauce) 
+- [Repo larabank-eventsauce](https://github.com/spatie/larabank-eventsauce)

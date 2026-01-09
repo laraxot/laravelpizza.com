@@ -10,7 +10,7 @@ Questo documento descrive le modifiche apportate durante la migrazione da Filame
 
 **Problema**: Dopo la migrazione, il logo appariva due volte nella pagina di login (`/admin/login`).
 
-**Causa**: 
+**Causa**:
 - Filament 4 ha cambiato la struttura delle pagine di autenticazione
 - Il sistema aveva sia il logo nativo di Filament che un logo personalizzato
 - La configurazione del pannello non era aggiornata per Filament 4
@@ -24,7 +24,7 @@ Questo documento descrive le modifiche apportate durante la migrazione da Filame
 
 **Problema**: Gli input del form di login non erano visibili correttamente.
 
-**Causa**: 
+**Causa**:
 - Stili CSS non compatibili tra Filament 3 e 4
 - Struttura HTML cambiata in Filament 4
 
@@ -89,7 +89,7 @@ class Login extends \Filament\Auth\Pages\Login
     use HasRoutes;
 
     protected static string $routePath = 'newlogin';
-    
+
     /**
      * View personalizzata per la pagina di login.
      * Rimuove il logo duplicato e migliora il layout.

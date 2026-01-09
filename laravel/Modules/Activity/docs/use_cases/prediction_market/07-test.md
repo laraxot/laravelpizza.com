@@ -13,4 +13,4 @@
 - Test di performance su mercati ad alto volume
 
 ## Coverage
-- Obiettivo: almeno 80% di copertura su moduli core 
+- Obiettivo: almeno 80% di copertura su moduli core

@@ -76,7 +76,7 @@ state([
 
 $products = computed(function () {
     return Product::query()
-        ->when($this->search, fn($query) => 
+        ->when($this->search, fn($query) =>
             $query->where('name', 'like', "%{$this->search}%")
         )
         ->orderBy($this->sortField, $this->sortDirection)
@@ -97,7 +97,7 @@ $sort = function (string $field) {
     <div class="space-y-6">
         <div class="flex justify-between items-center">
             <h1 class="text-2xl font-semibold">Prodotti</h1>
-            
+
             <x-cms::input-field
                 wire:model.live="search"
                 type="search"
@@ -132,7 +132,7 @@ $sort = function (string $field) {
                             <td>€ {{ number_format($product->price, 2) }}</td>
                             <td>{{ $product->stock }}</td>
                             <td>
-                                <x-cms::button-link 
+                                <x-cms::button-link
                                     :href="route('cms.products.edit', $product)"
                                     size="sm"
                                 >
@@ -182,7 +182,7 @@ rules([
 
 mount(function (?Product $product) {
     $this->categories = Category::all();
-    
+
     if ($product->exists) {
         $this->product = $product;
         $this->form = $product->only([
@@ -198,13 +198,13 @@ mount(function (?Product $product) {
 
 $save = function () {
     $this->validate();
-    
+
     if ($this->product) {
         $this->product->update($this->form);
     } else {
         Product::create($this->form);
     }
-    
+
     session()->flash('success', 'Prodotto salvato con successo.');
     return redirect()->route('cms.products.index');
 };
@@ -285,10 +285,10 @@ $save = function () {
 // Implementazione del caching per la lista prodotti
 $products = computed(function () {
     $cacheKey = "products.{$this->search}.{$this->sortField}.{$this->sortDirection}.{$this->perPage}";
-    
+
     return cache()->remember($cacheKey, now()->addMinutes(5), function () {
         return Product::query()
-            ->when($this->search, fn($query) => 
+            ->when($this->search, fn($query) =>
                 $query->where('name', 'like', "%{$this->search}%")
             )
             ->orderBy($this->sortField, $this->sortDirection)
@@ -304,7 +304,7 @@ class ProductImage extends Component
 {
     public string $src;
     public string $alt;
-    
+
     public function render()
     {
         return view('cms::components.product-image', [
@@ -316,7 +316,7 @@ class ProductImage extends Component
 
 ```blade
 <div wire:init="loadImage">
-    <img 
+    <img
         src="{{ $loaded ? $src : $placeholder }}"
         alt="{{ $alt }}"
         class="w-full h-48 object-cover"
@@ -357,7 +357,7 @@ class ProductPolicy
     {
         return $user->can('view products');
     }
-    
+
     public function update(User $user, Product $product): bool
     {
         return $user->can('edit products');
@@ -380,12 +380,12 @@ class ProductManagementTest extends TestCase
     public function it_can_list_products()
     {
         $products = Product::factory()->count(5)->create();
-        
+
         $this->get(route('cms.products.index'))
             ->assertSuccessful()
             ->assertSee($products->first()->name);
     }
-    
+
     /** @test */
     public function it_can_create_product()
     {
@@ -397,7 +397,7 @@ class ProductManagementTest extends TestCase
         ])
         ->assertRedirect()
         ->assertSessionHas('success');
-        
+
         $this->assertDatabaseHas('products', [
             'name' => 'Test Product',
         ]);
@@ -463,7 +463,7 @@ protected static function booted()
 $products = computed(function () {
     return Product::query()
         ->with(['category', 'images'])
-        ->when($this->search, fn($query) => 
+        ->when($this->search, fn($query) =>
             $query->where('name', 'like', "%{$this->search}%")
         )
         ->orderBy($this->sortField, $this->sortDirection)
@@ -476,9 +476,8 @@ $products = computed(function () {
 ### Documentation
 - [Laravel Volt](https://livewire.laravel.com/docs/volt)
 - [Laravel Folio](https://laravel.com/docs/folio)
-- [Filament Forms](https://filamentphp.com/docs/forms) 
+- [Filament Forms](https://filamentphp.com/docs/forms)
 
 ## Collegamenti tra versioni di product-management.md
 * [product-management.md](laravel/Modules/Cms/docs/product-management.md)
 * [product-management.md](laravel/Modules/Cms/docs/components/product-management.md)
-

@@ -39,4 +39,4 @@ L'interfaccia `HasTeamsAndUserContract` estende sia `HasTeamsContract` che `User
 
 - [[Team]]
 - [[Models]]
-- [[Contracts]] 
+- [[Contracts]]

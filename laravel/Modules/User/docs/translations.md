@@ -134,7 +134,7 @@ return [
 ## Risorse Utili
 - [Documentazione Laravel Localization](https://laravel.com/docs/localization)
 - [Guida Filament Translations](https://filamentphp.com/docs/3.x/panels/translations)
-- [Strumenti di Traduzione](https://laravel-lang.com/) 
+- [Strumenti di Traduzione](https://laravel-lang.com/)
 
 ## Collegamenti tra versioni di translations.md
 * [translations.md](../../../Chart/docs/translations.md)
@@ -154,4 +154,3 @@ return [
 * [translations.md](../../../Activity/docs/translations.md)
 * [translations.md](../../../Patient/docs/translations.md)
 * [translations.md](../../../Cms/docs/translations.md)
-

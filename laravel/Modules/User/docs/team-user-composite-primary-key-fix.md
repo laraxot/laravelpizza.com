@@ -207,7 +207,7 @@ $membership = Membership::where('team_id', $team->id)
    ```php
    // ❌ NON FARE
    $table->id(); // o $table->uuid('id')
-   
+
    // ✅ FARE
    $table->primary(['key1', 'key2']);
    ```
@@ -218,10 +218,10 @@ $membership = Membership::where('team_id', $team->id)
    class PivotModel extends BasePivot
    {
        use HasXotFactory;
-       
+
        protected $connection = 'appropriate_db';
        protected $table = 'pivot_table';
-       
+
        protected function casts(): array
        {
            return [
@@ -259,5 +259,5 @@ $membership = Membership::where('team_id', $team->id)
 
 ---
 
-*Ultimo aggiornamento: novembre 2025*  
+*Ultimo aggiornamento: novembre 2025*
 *Status: IMPLEMENTATO E VALIDATO*

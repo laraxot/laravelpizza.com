@@ -49,4 +49,4 @@ Per garantire la sicurezza del cambio password:
 1. Le password vengono sempre hashate prima di essere salvate nel database
 2. Viene verificata la password corrente prima di permettere il cambio
 3. Viene richiesta la conferma della nuova password
-4. Viene utilizzato il sistema di notifiche di Filament per informare l'utente del risultato dell'operazione 
+4. Viene utilizzato il sistema di notifiche di Filament per informare l'utente del risultato dell'operazione

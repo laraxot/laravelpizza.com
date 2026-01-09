@@ -208,4 +208,4 @@ class WelcomeEmail extends TemplateMailable
 ### 10.3 Guide
 - [Email Design Guide](https://www.campaignmonitor.com/dev-resources/guides/coding-html-emails)
 - [Responsive Email](https://www.emailonacid.com/blog/article/email-development/responsive-email-design)
-- [Email Best Practices](https://www.mailtrap.io/blog/email-design-best-practices) 
+- [Email Best Practices](https://www.mailtrap.io/blog/email-design-best-practices)

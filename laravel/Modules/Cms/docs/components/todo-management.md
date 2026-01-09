@@ -200,7 +200,7 @@ $filteredTodos = computed(function () {
 
 $stats = computed(function () {
     $todos = Todo::where('user_id', auth()->id());
-    
+
     return [
         'total' => $todos->count(),
         'completed' => $todos->where('completed', true)->count(),
@@ -267,7 +267,7 @@ $stats = computed(function () {
 ```php
 $filteredTodos = computed(function () {
     $cacheKey = "todos.{$this->filter}.{$this->priorityFilter}.".auth()->id();
-    
+
     return cache()->remember($cacheKey, now()->addMinutes(5), function () {
         return Todo::query()
             ->where('user_id', auth()->id())
@@ -284,7 +284,7 @@ state(['selected' => []]);
 $completeSelected = function () {
     Todo::whereIn('id', $this->selected)
         ->update(['completed' => true]);
-    
+
     $this->selected = [];
 };
 
@@ -310,24 +310,24 @@ class TodoManagementTest extends TestCase
     public function it_can_create_todo()
     {
         $this->actingAs($user = User::factory()->create());
-        
+
         Volt::test('todos.index')
             ->set('description', 'Test Todo')
             ->set('newTodoPriority', 1)
             ->call('addTodo');
-            
+
         $this->assertDatabaseHas('todos', [
             'description' => 'Test Todo',
             'user_id' => $user->id,
             'priority' => 1,
         ]);
     }
-    
+
     /** @test */
     public function it_can_toggle_todo_status()
     {
         $todo = Todo::factory()->create(['completed' => false]);
-        
+
         Volt::test('todos.index')
             ->call('toggleComplete', $todo)
             ->assertSet('todos.0.completed', true);
@@ -373,7 +373,7 @@ class TodoPriorityRule implements Rule
     {
         return in_array($value, [0, 1, 2]);
     }
-    
+
     public function message(): string
     {
         return 'La priorità deve essere bassa (0), media (1) o alta (2).';
@@ -401,4 +401,4 @@ class TodoCreated extends Notification
 ### Documentation
 - [Todo App Example by Nuno Maduro](https://nunomaduro.com/todo_application_with_laravel_folio_and_volt)
 - [Laravel Volt](https://livewire.laravel.com/docs/volt)
-- [Laravel Folio](https://laravel.com/docs/folio) 
+- [Laravel Folio](https://laravel.com/docs/folio)

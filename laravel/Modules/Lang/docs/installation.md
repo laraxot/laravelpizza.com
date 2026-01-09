@@ -7,7 +7,7 @@ section: content
 
 # Installazione {#installazione}
 
-Un'applicazione Laravel fresca è il modo ideale per iniziare con questo pacchetto. 
+Un'applicazione Laravel fresca è il modo ideale per iniziare con questo pacchetto.
 
 Per installare il bacchetto basta mettere il seguente comando nella linea di comando:
 
@@ -27,10 +27,8 @@ php artisan module_lang:install
 * [installation.md](../../../Cms/docs/installation.md)
 * [installation.md](../../../../Themes/One/docs/installation.md)
 
-
 ### Versione Incoming
 
 ```
 
 ---
-

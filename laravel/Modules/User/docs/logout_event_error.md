@@ -63,18 +63,18 @@ name('logout');
 try {
     // Ottieni l'utente prima del logout
     $user = Auth::user();
-    
+
     // Dispatch dell'evento prima del logout
     Event::dispatch('auth.logout.attempting', [$user]);
-    
+
     // Esegui il logout
     Auth::logout();
     request()->session()->invalidate();
     request()->session()->regenerateToken();
-    
+
     // Dispatch dell'evento dopo il logout, passando l'utente salvato
     Event::dispatch('auth.logout.successful', [$user]);
-    
+
     // Reindirizzamento con localizzazione
     $locale = app()->getLocale();
     return redirect()->to('/' . $locale)
@@ -82,7 +82,7 @@ try {
 } catch (\Exception $e) {
     // Log dell'errore
     Log::error('Errore durante il logout: ' . $e->getMessage());
-    
+
     // Reindirizzamento con messaggio di errore
     $locale = app()->getLocale();
     return redirect()->to('/' . $locale)
@@ -124,7 +124,7 @@ public function handle(Logout $event): void
                 ]);
             }
         }
-        
+
         // Resto del codice...
     } catch (\Exception $e) {
         Log::error('Errore durante la gestione dell\'evento di logout', [

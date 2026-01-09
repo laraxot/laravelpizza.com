@@ -94,4 +94,4 @@ try {
 
 ## Performance
 
-L'impatto sulle performance è minimo, circa 700μs per richiesta. Questo è un compromesso accettabile rispetto al miglioramento della sicurezza e della leggibilità del codice. 
+L'impatto sulle performance è minimo, circa 700μs per richiesta. Questo è un compromesso accettabile rispetto al miglioramento della sicurezza e della leggibilità del codice.

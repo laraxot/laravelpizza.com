@@ -94,7 +94,7 @@ class Product extends BaseModel
     {
         return SafeFloatCastAction::cast($value, 0.0);
     }
-    
+
     public function setPriceAttribute($value): void
     {
         $this->attributes['price'] = SafeFloatCastAction::cast($value, 0.0);
@@ -113,10 +113,10 @@ class OrderController extends Controller
     {
         $total = SafeFloatCastAction::cast($request->input('total'), 0.0);
         $tax = SafeFloatCastAction::cast($request->input('tax'), 0.0);
-        
+
         // Calcolo sicuro
         $finalTotal = $total + $tax;
-        
+
         // ...
     }
 }
@@ -133,11 +133,11 @@ class CalculationService
     {
         $safeValue = SafeFloatCastAction::cast($value);
         $safeTotal = SafeFloatCastAction::cast($total);
-        
+
         if ($safeTotal === 0.0) {
             return 0.0;
         }
-        
+
         return ($safeValue / $safeTotal) * 100;
     }
 }
@@ -162,13 +162,13 @@ class SafeFloatCastActionTest extends TestCase
         $result = SafeFloatCastAction::cast('123.45');
         $this->assertEquals(123.45, $result);
     }
-    
+
     public function test_cast_null_with_default()
     {
         $result = SafeFloatCastAction::cast(null, 10.0);
         $this->assertEquals(10.0, $result);
     }
-    
+
     public function test_cast_with_range()
     {
         $result = SafeFloatCastAction::castWithRange('150.0', 0.0, 100.0);
@@ -186,4 +186,4 @@ class SafeFloatCastActionTest extends TestCase
 
 ---
 
-*Ultimo aggiornamento: 2025-01-06* 
+*Ultimo aggiornamento: 2025-01-06*

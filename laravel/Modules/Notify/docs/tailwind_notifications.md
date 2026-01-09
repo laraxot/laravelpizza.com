@@ -191,7 +191,7 @@ class SendNotificationActionTest extends TestCase
         Notification::fake();
 
         $action = app(SendNotificationAction::class);
-        
+
         $action->execute(NotificationData::from([
             'title' => 'Test',
             'message' => 'Test message',

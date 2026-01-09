@@ -84,11 +84,11 @@ public function boot()
         if (!is_array($value)) {
             return false;
         }
-        
+
         if (isset($value['type']) && $value['type'] === 'divider') {
             return true;
         }
-        
+
         return isset($value['label']) && isset($value['url']);
     });
 }
@@ -119,4 +119,4 @@ public function boot()
 ## Collegamenti
 - [Documentazione Blocchi](../README.md)
 - [Best Practices CMS](../../best-practices.md)
-- [Guida Componenti](../../components.md) 
+- [Guida Componenti](../../components.md)

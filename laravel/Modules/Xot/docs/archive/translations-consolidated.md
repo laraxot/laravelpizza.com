@@ -1,7 +1,7 @@
 # Translations - Documentazione Consolidata DRY + KISS
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTA la documentazione traduzioni del progetto
-> 
+>
 > **🔗 Riferimenti**: [filament-best-practices.md](filament-best-practices.md) | [conventions.md](conventions.md)
 
 ## 🚨 STOP DUPLICAZIONE!
@@ -27,7 +27,7 @@ Questo documento sostituisce e consolida **107+ file traduzioni duplicati** trov
 ```php
 'field_name' => [
     'label' => 'Field Label',           // OBBLIGATORIO
-    'placeholder' => 'Placeholder',     // OBBLIGATORIO  
+    'placeholder' => 'Placeholder',     // OBBLIGATORIO
     'helper_text' => 'Help text',       // OBBLIGATORIO (può essere '')
     'description' => 'Description',     // OBBLIGATORIO
     'validation' => [...],              // SE PRESENTE IN IT
@@ -63,7 +63,7 @@ return [
         'group' => 'Group Name',
         'icon' => 'heroicon-o-icon-name', // NON tradurre nomi icone
     ],
-    
+
     // Pagine (tutti i moduli)
     'pages' => [
         'create' => [
@@ -79,7 +79,7 @@ return [
             'heading' => 'All Items',
         ],
     ],
-    
+
     // Campi form (tutti i moduli)
     'fields' => [
         'name' => [
@@ -100,7 +100,7 @@ return [
             ],
         ],
     ],
-    
+
     // Azioni (tutti i moduli)
     'actions' => [
         'create' => [
@@ -124,7 +124,7 @@ return [
             'confirmation' => 'Are you sure you want to delete this item?',
         ],
     ],
-    
+
     // Stati/Enum (tutti i moduli)
     'states' => [
         'active' => [
@@ -142,7 +142,7 @@ return [
             'icon' => 'heroicon-o-x-circle',
         ],
     ],
-    
+
     // Widget (tutti i moduli)
     'widgets' => [
         'stats_overview' => [
@@ -150,7 +150,7 @@ return [
             'description' => 'Key metrics and statistics',
         ],
     ],
-    
+
     // Messaggi (tutti i moduli)
     'messages' => [
         'empty_state' => 'No items found',
@@ -475,10 +475,10 @@ rm Modules/Lang/project_docs/translation_notify_conversion.md
 
 ---
 
-**🎯 Obiettivo**: Da 107+ file duplicati a 1 file centralizzato  
-**📈 Beneficio**: 99% riduzione duplicazioni, manutenzione semplificata  
+**🎯 Obiettivo**: Da 107+ file duplicati a 1 file centralizzato
+**📈 Beneficio**: 99% riduzione duplicazioni, manutenzione semplificata
 **🔗 Vedi anche**: [filament-best-practices.md](filament-best-practices.md) | [conventions.md](conventions.md)
 
-**Aggiornato**: 2025-08-07  
-**Categoria**: translations  
+**Aggiornato**: 2025-08-07
+**Categoria**: translations
 **Priorità**: CRITICA

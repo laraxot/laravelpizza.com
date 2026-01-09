@@ -129,7 +129,7 @@ Ogni volta che pensi di aggiungere una rotta in `web.php`, chiediti:
 - [Filosofia Zen Avanzata](../Xot/docs/philosophy/getter_zen_advanced.md)
 - [La Via del Brand](../Xot/docs/brand/brand_way.md)
 - [Il Tao del Codice](../Xot/docs/tao/code_tao.md)
-- [Best Practices Filament](./FILAMENT_BEST_PRACTICES.md) 
+- [Best Practices Filament](./FILAMENT_BEST_PRACTICES.md)
 
 ## Principi Fondamentali
 
@@ -350,7 +350,7 @@ class UserResource extends Resource
 - [Filament Best Practices](./filament_best_practices.md)
 - [Volt Documentation](https://livewire.laravel.com/docs/volt)
 - [Folio Documentation](https://laravel.com/docs/folio)
-- [Filament Documentation](https://filamentphp.com/docs) 
+- [Filament Documentation](https://filamentphp.com/docs)
 
 # Best Practices di Routing per le Blade di Autenticazione
 
@@ -457,7 +457,7 @@ public function logout()
     auth()->logout();
     session()->invalidate();
     session()->regenerateToken();
-    
+
     return redirect()->route('home');
 }
 ```
@@ -466,4 +466,4 @@ public function logout()
 
 - [Documentazione Volt](./VOLT_LOGOUT.md)
 - [Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md)
-- [Gestione Errori](./ERROR_HANDLING.md) 
+- [Gestione Errori](./ERROR_HANDLING.md)

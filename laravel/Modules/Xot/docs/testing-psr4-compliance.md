@@ -36,20 +36,20 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Helper class for testing HasExtraTrait.
  */
-class TestExtra extends Model implements ExtraContract 
+class TestExtra extends Model implements ExtraContract
 {
     protected $table = 'test_extras';
-    
+
     /** @var list<string> */
     protected $fillable = ['model_id', 'model_type', 'extra_attributes'];
-    
+
     protected function casts(): array
     {
         return [
             'extra_attributes' => 'collection',
         ];
     }
-    
+
     public function model()
     {
         return $this->morphTo();
@@ -98,7 +98,7 @@ composer dump-autoload
 
 - **Problema**: Classe `TestExtra` senza namespace appropriato
 - **Soluzione**: Aggiunto `namespace Modules\Xot\Tests\Unit;`
-- **Miglioramenti**: 
+- **Miglioramenti**:
   - Documentazione PHPDoc completa
   - Tipizzazione esplicita per proprietà `$fillable`
   - Type hints per metodi
@@ -113,4 +113,3 @@ composer dump-autoload
 
 *Ultimo aggiornamento: 2025-01-06*
 *Conformità: PSR-4, PHPStan livello 9+, Laraxot standards*
-

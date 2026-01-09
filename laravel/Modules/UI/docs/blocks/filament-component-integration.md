@@ -51,7 +51,7 @@ Per implementare un menu dropdown utente:
                     class="h-8 w-8"
                 />
             </x-slot>
-            
+
             @foreach($menu_items as $item)
                 @if(isset($item['type']) && $item['type'] === 'divider')
                     <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
@@ -71,15 +71,15 @@ Per implementare un menu dropdown utente:
         @include($guest_view)
     @else
         <div class="flex space-x-4">
-            <x-filament::button 
+            <x-filament::button
                 href="/{{ $locale }}/auth/login"
                 color="gray"
                 tag="a"
             >
                 {{ __('auth.login.link') }}
             </x-filament::button>
-            
-            <x-filament::button 
+
+            <x-filament::button
                 href="/{{ $locale }}/auth/register"
                 color="primary"
                 tag="a"
@@ -140,7 +140,7 @@ Per implementare un menu dropdown utente:
 
 ### Gestione Corretta della Larghezza dei Form
 
-Quando si integrano widget Filament contenenti form nel frontend, è fondamentale prestare attenzione alla larghezza disponibile per garantire una buona esperienza utente. 
+Quando si integrano widget Filament contenenti form nel frontend, è fondamentale prestare attenzione alla larghezza disponibile per garantire una buona esperienza utente.
 
 #### Problematiche Comuni
 
@@ -162,7 +162,7 @@ Quando si integrano widget Filament contenenti form nel frontend, è fondamental
 <x-filament-widgets::widget>
     <x-filament::section>
         <!-- Rimuovere max-w-lg per form complessi o aumentare a max-w-4xl -->
-        <div class="max-w-4xl mx-auto">  
+        <div class="max-w-4xl mx-auto">
             <form wire:submit.prevent="register" class="space-y-6">
                 {{ $this->form }}
             </form>

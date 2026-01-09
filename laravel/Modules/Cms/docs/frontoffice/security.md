@@ -61,12 +61,12 @@ function SanitizedContent({ content }) {
 public function handle($request, Closure $next)
 {
     $response = $next($request);
-    
+
     $response->headers->set('X-XSS-Protection', '1; mode=block');
     $response->headers->set('X-Content-Type-Options', 'nosniff');
     $response->headers->set('X-Frame-Options', 'SAMEORIGIN');
     $response->headers->set('Content-Security-Policy', "default-src 'self'");
-    
+
     return $response;
 }
 ```
@@ -78,15 +78,15 @@ public function handle($request, Closure $next)
 // resources/js/validation.js
 export function validateForm(data) {
     const errors = {};
-    
+
     if (!data.email || !isValidEmail(data.email)) {
         errors.email = 'Email non valida';
     }
-    
+
     if (!data.password || data.password.length < 8) {
         errors.password = 'Password troppo corta';
     }
-    
+
     return errors;
 }
 ```
@@ -131,10 +131,9 @@ export function validateForm(data) {
 3. **Problemi di Validazione**
    - Verificare le regole
    - Controllare i messaggi
-   - Testare gli input 
+   - Testare gli input
 
 ## Collegamenti tra versioni di security.md
 * [security.md](laravel/Modules/Gdpr/docs/packages/security.md)
 * [security.md](laravel/Modules/Cms/docs/frontoffice/security.md)
 * [security.md](laravel/Themes/One/docs/security.md)
-

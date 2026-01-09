@@ -17,4 +17,3 @@ Il file `Modules/Lang/docs/translation-file-syntax.md` presenta un conflitto Git
 - **Modulo**: Lang
 - **File**: `docs/translation-file-syntax.md`
 - **Tipo Conflitto**: Documentazione best practice
-

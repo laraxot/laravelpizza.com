@@ -169,7 +169,7 @@ class StatsOverview extends BaseWidget
 public function boot(): void
 {
     parent::boot();
-    
+
     // Registrazione componenti UI
     Blade::componentNamespace('Modules\\UI\\Components', 'ui');
 }
@@ -191,7 +191,7 @@ return [
 public function boot(): void
 {
     parent::boot();
-    
+
     // Registrazione asset
     $this->publishes([
         __DIR__.'/../resources/assets' => public_path('modules/ui'),
@@ -221,5 +221,5 @@ public function boot(): void
 
 ---
 
-**Ultimo aggiornamento:** Gennaio 2025  
+**Ultimo aggiornamento:** Gennaio 2025
 **Versione:** 2.0 - Consolidata DRY + KISS

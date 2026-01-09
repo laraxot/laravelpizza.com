@@ -56,7 +56,7 @@ SendWelcomeMailAction::assertRan(fn ($action) => $action->parameters === [$user]
 ```
 
 ---
-*Collegamenti:* 
+*Collegamenti:*
 - [Panoramica Template Email](email-template-landscape.md)
 - [Deep Dive Template](email-templates-deep-dive.md)
 - [Tool Analysis](codebrisk-tools-analysis.md)

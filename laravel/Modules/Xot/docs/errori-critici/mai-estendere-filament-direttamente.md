@@ -135,11 +135,11 @@ class ListLogActivitiesAction extends XotBaseAction  // ✅ ESTENSIONE CORRETTA!
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         // ✅ NESSUN ->tooltip() o ->label()
         // Le traduzioni avvengono automaticamente tramite LangServiceProvider
         // usando il nome 'list_log_activities'
-        
+
         $this->icon('heroicon-o-clock')
             ->color('gray')
             ->url(function ($livewire, $record): string {
@@ -210,7 +210,7 @@ use Spatie\QueueableAction\QueueableAction;
 class ProcessDataAction
 {
     use QueueableAction;
-    
+
     public function execute($data) { }
 }
 ```
@@ -279,7 +279,7 @@ class NoDirectFilamentExtensionRule implements Rule
         }
 
         $extends = $node->extends->toString();
-        
+
         if (str_starts_with($extends, 'Filament\\') && !str_contains($extends, 'XotBase')) {
             return [
                 "MAI estendere classi Filament direttamente! Usa una classe XotBase*"
@@ -343,10 +343,10 @@ class MyCustomAction extends XotBaseAction
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         // ✅ NESSUN ->label() o ->tooltip()!
         // Traduzioni automatiche tramite: {module}::actions.my_custom_action.*
-        
+
         $this->icon('heroicon-o-star')
             ->color('primary')
             ->action(fn () => $this->doSomething());
@@ -373,8 +373,8 @@ return [
 
 ### Caso Reale: ListLogActivitiesAction
 
-**Data**: 27 Ottobre 2025  
-**File**: `Modules/Activity/app/Filament/Actions/ListLogActivitiesAction.php`  
+**Data**: 27 Ottobre 2025
+**File**: `Modules/Activity/app/Filament/Actions/ListLogActivitiesAction.php`
 **Errore**: Estensione diretta di `Filament\Actions\Action`
 
 **Cosa è Successo**:
@@ -418,9 +418,7 @@ return [
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
-**Severità**: CRITICA  
-**Categoria**: Violazione Architettura Fondamentale  
+**Ultimo aggiornamento**: 27 Ottobre 2025
+**Severità**: CRITICA
+**Categoria**: Violazione Architettura Fondamentale
 **Status**: ✅ CORRETTO e DOCUMENTATO
-
-

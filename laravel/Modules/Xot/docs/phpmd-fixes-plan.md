@@ -1,6 +1,6 @@
 # Piano Correzione Warning PHPMD - XotBaseRelationManager
 
-**Data**: 2025-12-23  
+**Data**: 2025-12-23
 **File**: `app/Filament/Resources/RelationManagers/XotBaseRelationManager.php`
 
 ## 🔍 Warning Identificati
@@ -40,7 +40,7 @@ $actions['edit'] = EditAction::make()
     });
 ```
 
-**Decisione**: 
+**Decisione**:
 - **Priorità**: Bassa
 - **Azione**: Mantenere (pattern standard per closure con `$this`)
 - **Alternative**: Usare arrow functions `fn()` se PHP 7.4+, ma potrebbe limitare funzionalità

@@ -9,7 +9,7 @@ Modules\\Notify\\Database\\Factories
 Modules\\Notify\\Database\\Seeders
 - **Pacchetto Composer**: laraxot/module_notify_fila3
 Marco Sottana
-- **Dipendenze**: aws/aws-sdk-php * filament/filament * illuminate/contracts * illuminate/support * irazasyed/telegram-bot-sdk * kreait/laravel-firebase * laravel-notification-channels/fcm * laravel-notification-channels/telegram * phpdocumentor/type-resolver * symfony/http-client * symfony/postmark-mailer * repositories type path url ../Xot type path 
+- **Dipendenze**: aws/aws-sdk-php * filament/filament * illuminate/contracts * illuminate/support * irazasyed/telegram-bot-sdk * kreait/laravel-firebase * laravel-notification-channels/fcm * laravel-notification-channels/telegram * phpdocumentor/type-resolver * symfony/http-client * symfony/postmark-mailer * repositories type path url ../Xot type path
 - **Totale file PHP**: 165
 - **Totale classi/interfacce**: 73
 
@@ -430,9 +430,7 @@ tests/Unit
 - [Regola sulle rotte vuote in grapesjs-filament.md](grapesjs-filament.md#regola-sulle-rotte)
 ### Versione HEAD
 
-
 ### Versione Incoming
-
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
@@ -452,6 +450,4 @@ tests/Unit
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
 
-
 ---
-

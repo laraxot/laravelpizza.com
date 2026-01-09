@@ -95,7 +95,7 @@ class FilamentLocalization
     {
         // Imposta la lingua in base alla preferenza dell'utente o alla lingua predefinita
         $locale = auth()->user()->locale ?? config('app.locale');
-        
+
         if (in_array($locale, array_keys($this->localization->getSupportedLocales()))) {
             app()->setLocale($locale);
         }
@@ -144,19 +144,19 @@ class LanguageSwitcher extends \Filament\Support\Plugin
     use EvaluatesClosures;
 
     protected string $widget = \App\Filament\Widgets\LanguageSwitcherWidget::class;
-    
+
     protected string $view = 'filament.plugins.language-switcher';
-    
+
     public static function make(): static
     {
         return app(static::class);
     }
-    
+
     public function getSupportedLocales(): array
     {
         return LaravelLocalization::getSupportedLocales();
     }
-    
+
     public function boot(Panel $panel): void
     {
         $panel->renderHook(
@@ -183,7 +183,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 class LanguageSwitcherWidget extends Widget
 {
     protected static string $view = 'filament.widgets.language-switcher';
-    
+
     public function getSupportedLocales(): array
     {
         return LaravelLocalization::getSupportedLocales();
@@ -204,8 +204,8 @@ Crea la vista per il widget:
 @if(count($locales) > 1)
     <div class="flex items-center space-x-2">
         @foreach($locales as $localeCode => $properties)
-            <a 
-                href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}" 
+            <a
+                href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
                 class="px-2 py-1 text-sm font-medium rounded-md {{ $currentLocale === $localeCode ? 'bg-primary-500 text-white' : 'text-gray-600 hover:text-gray-900' }}"
             >
                 {{ strtoupper($localeCode) }}
@@ -250,31 +250,31 @@ use Tests\TestCase;
 class FilamentLocalizationTest extends TestCase
 {
     use RefreshDatabase;
-    
+
     /** @test */
     public function it_sets_locale_based_on_user_preference()
     {
         $user = User::factory()->create([
             'locale' => 'it',
         ]);
-        
+
         $response = $this->actingAs($user)
             ->get('/admin');
-            
+
         $response->assertStatus(200);
         $this->assertEquals('it', app()->getLocale());
     }
-    
+
     /** @test */
     public function it_falls_back_to_default_locale()
     {
         $user = User::factory()->create([
             'locale' => 'xx', // Lingua non supportata
         ]);
-        
+
         $response = $this->actingAs($user)
             ->get('/admin');
-            
+
         $response->assertStatus(200);
         $this->assertEquals(config('app.locale'), app()->getLocale());
     }

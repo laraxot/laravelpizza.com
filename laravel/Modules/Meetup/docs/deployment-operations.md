@@ -211,7 +211,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: production
-    
+
     steps:
       - name: Deploy to server
         uses: appleboy/ssh-action@v0.1.5
@@ -263,7 +263,7 @@ server {
     add_header Content-Security-Policy "default-src 'self' http: https: data: blob: 'unsafe-inline'" always;
 
     root /var/www/laravel-pizza/public;
-    
+
     index index.php;
 
     # Main location block
@@ -405,14 +405,14 @@ sudo journalctl -u laravel-pizza-queue -f
 
 return [
     'default' => env('CACHE_DRIVER', 'redis'),
-    
+
     'stores' => [
         'redis' => [
             'driver' => 'redis',
             'connection' => 'cache',
             'lock_connection' => 'default',
         ],
-        
+
         'file' => [
             'driver' => 'file',
             'path' => storage_path('framework/cache/data'),
@@ -442,20 +442,20 @@ php artisan event:clear
 
 return [
     'default' => env('LOG_CHANNEL', 'stack'),
-    
+
     'channels' => [
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single', 'slack'],
             'ignore_exceptions' => false,
         ],
-        
+
         'single' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
             'level' => env('LOG_LEVEL', 'error'),
         ],
-        
+
         'slack' => [
             'driver' => 'slack',
             'url' => env('LOG_SLACK_WEBHOOK_URL'),
@@ -500,12 +500,12 @@ class SecurityHeaders
     public function handle($request, Closure $next)
     {
         $response = $next($request);
-        
+
         $response->headers->set('X-Frame-Options', 'DENY');
         $response->headers->set('X-Content-Type-Options', 'nosniff');
         $response->headers->set('X-XSS-Protection', '1; mode=block');
         $response->headers->set('Referrer-Policy', 'no-referrer-when-downgrade');
-        
+
         return $response;
     }
 }
@@ -557,7 +557,7 @@ sub vcl_recv {
     if (req.url ~ "^/(admin|api|nova|horizon)/") {
         return (pass);
     }
-    
+
     # Cache static assets
     if (req.url ~ "\.(css|js|png|jpg|jpeg|gif|ico|svg)$") {
         unset req.http.cookie;
@@ -637,14 +637,14 @@ Route::get('/health', function () {
     try {
         // Test database connection
         DB::connection()->getPdo();
-        
+
         // Test cache connection
         Cache::get('health_check', 'healthy');
-        
+
         // Test storage
         Storage::disk('local')->put('health-test.txt', 'test');
         Storage::disk('local')->delete('health-test.txt');
-        
+
         return response()->json([
             'status' => 'healthy',
             'timestamp' => now(),

@@ -16,19 +16,19 @@ Il componente `<x-metatags>` **gi√† include il tag `<head>` completo** nel suo t
     <title>{{ $meta->getTitle() }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     {{-- SEO Basics --}}
     <!-- ... metatag SEO ... -->
-    
+
     {{-- Open Graph / Facebook --}}
     <!-- ... metatag Open Graph ... -->
-    
+
     {{-- Twitter Card --}}
     <!-- ... metatag Twitter ... -->
-    
+
     {{-- Favicon --}}
     <!-- ... favicon multi-size ... -->
-    
+
     {{ $slot }}  {{-- Slot per contenuti aggiuntivi --}}
     @filamentStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'], 'themes/' . $meta->getPubTheme())
@@ -106,7 +106,7 @@ Lo slot `{{ $slot }}` serve **solo** per contenuti aggiuntivi che **NON sono gi√
 <x-metatags>
     {{-- Font personalizzati --}}
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     {{-- Schema.org markup --}}
     <script type="application/ld+json">
     {
@@ -115,10 +115,10 @@ Lo slot `{{ $slot }}` serve **solo** per contenuti aggiuntivi che **NON sono gi√
       "name": "Laravel Pizza Meetups"
     }
     </script>
-    
+
     {{-- Script aggiuntivi --}}
     <script src="https://example.com/script.js"></script>
-    
+
     {{-- Meta tags aggiuntivi --}}
     <meta name="custom-meta" content="value">
 </x-metatags>
@@ -155,7 +155,7 @@ Lo slot `{{ $slot }}` serve **solo** per contenuti aggiuntivi che **NON sono gi√
     <x-metatags>
         {{-- Solo contenuti aggiuntivi specifici del tema --}}
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-        
+
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -190,15 +190,15 @@ Dopo il rendering, l'HTML dovrebbe essere:
     <!-- ... Open Graph ... -->
     <!-- ... Twitter Card ... -->
     <!-- ... favicon ... -->
-    
+
     <!-- Slot content (font, schema.org, etc.) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script type="application/ld+json">...</script>
-    
+
     <!-- Vite assets (automatico) -->
     <link rel="stylesheet" href="/build/assets/app.css">
     <script type="module" src="/build/assets/app.js"></script>
-    
+
     <!-- Filament styles (automatico) -->
     <link rel="stylesheet" href="/filament/styles.css">
 </head>
@@ -252,4 +252,3 @@ Dopo il rendering, l'HTML dovrebbe essere:
 - [x] Documentato cosa aggiungere nello slot
 - [x] Aggiunto troubleshooting
 - [x] Aggiunte best practices
-

@@ -1,7 +1,7 @@
 # Schema.org Enhancement Proposal - Meetup Module
 
-**Data**: 2025-01-22  
-**Filosofia**: DRY + KISS + SEO + Structured Data  
+**Data**: 2025-01-22
+**Filosofia**: DRY + KISS + SEO + Structured Data
 **Obiettivo**: Migliorare SEO e structured data seguendo schema.org
 
 ---
@@ -17,7 +17,7 @@ Basato su [schema.org/Event](https://schema.org/Event), propongo i seguenti camp
 // Campi da aggiungere al modello Event
 protected $fillable = [
     // ... campi esistenti ...
-    
+
     // Schema.org Event properties
     'event_status',              // EventStatusType: Scheduled, Postponed, Cancelled, MovedOnline
     'event_attendance_mode',     // EventAttendanceMode: OfflineEventAttendanceMode, OnlineEventAttendanceMode, MixedEventAttendanceMode
@@ -80,7 +80,7 @@ public function tableUpdate(): void
             $table->json('work_featured')->nullable()->after('typical_age_range');
             $table->json('aggregate_rating')->nullable()->after('work_featured');
             $table->json('review')->nullable()->after('aggregate_rating');
-            
+
             $table->foreign('super_event_id')->references('id')->on('events')->onDelete('set null');
             $table->index('event_status');
             $table->index('event_attendance_mode');
@@ -101,7 +101,7 @@ Basato su [schema.org/Person](https://schema.org/Person):
 // Campi da aggiungere al modello User (Person)
 protected $fillable = [
     // ... campi esistenti ...
-    
+
     // Schema.org Person properties
     'additional_name',            // Text - Nome aggiuntivo
     'family_name',               // Text - Cognome (già presente come last_name)
@@ -182,7 +182,7 @@ class LocalBusiness extends Organization
 {
     protected $fillable = [
         // ... campi Organization ...
-        
+
         // Schema.org LocalBusiness properties
         'price_range',            // Text - Fascia prezzo (€, €€, €€€, €€€€)
         'opening_hours',          // JSON - Orari apertura
@@ -228,6 +228,6 @@ class LocalBusiness extends Organization
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: Proposta - da implementare

@@ -66,7 +66,7 @@ use Modules\Notify\Filament\Forms\Components\ChannelCheckboxList;
 ChannelCheckboxList::make('channels')
 ```
 
-#### Features  
+#### Features
 - Pre-configured with proper label from translation files
 - Automatically loads channel options from ChannelEnum
 - 3-column layout by default

@@ -26,4 +26,4 @@ namespace Modules\Patient\app\States;
 ## Checklist
 - [ ] Nessun namespace contiene `app` dopo il nome del modulo
 - [ ] Tutti gli use statement sono coerenti con la struttura delle cartelle
-- [ ] Dopo ogni modifica, esegui `composer dump-autoload` 
+- [ ] Dopo ogni modifica, esegui `composer dump-autoload`

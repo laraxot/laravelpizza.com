@@ -162,8 +162,8 @@
 
 ---
 
-**Data Creazione**: 27 Gennaio 2025  
-**Stato**: Consolidato da docs/ root  
+**Data Creazione**: 27 Gennaio 2025
+**Stato**: Consolidato da docs/ root
 **Priorità**: MEDIA (Raccolta link)
 # Collegamenti Documentazione Modulo Xot
 
@@ -193,7 +193,7 @@
 - [Reporting](../Reporting/docs/README.md) - Report
 - [Gdpr](../Gdpr/docs/README.md) - GDPR
 - [Job](../Job/docs/README.md) - Jobs
-- [Chart](../Chart/docs/README.md) - Grafici 
+- [Chart](../Chart/docs/README.md) - Grafici
 
 ## Collegamenti tra versioni di LINKS.md
 * [LINKS.md](../../../Xot/docs/LINKS.md)
@@ -201,7 +201,6 @@
 * [LINKS.md](../../../UI/docs/LINKS.md)
 * [LINKS.md](../../../Cms/docs/LINKS.md)
 * [LINKS.md](../../../../Themes/One/docs/LINKS.md)
-
 
 ## Collegamenti tra versioni di links.md
 * [links.md](../../Gdpr/docs/links.md)
@@ -216,4 +215,3 @@
 * [links.md](../../Tenant/docs/it/links/links.md)
 * [links.md](../../Cms/docs/links.md)
 * [links.md](../../../Themes/One/docs/links.md)
-

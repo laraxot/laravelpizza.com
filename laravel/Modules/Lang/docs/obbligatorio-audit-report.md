@@ -27,4 +27,3 @@ Tutti i file di traduzione sono conformi e non contengono la parola "obbligatori
 **La parola "obbligatorio" e sue varianti NON devono apparire in file di traduzione non italiani.**
 
 Ogni occorrenza deve essere tradotta nella lingua appropriata del file.
-

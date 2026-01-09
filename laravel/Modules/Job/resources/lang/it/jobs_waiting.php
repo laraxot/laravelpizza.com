@@ -3,30 +3,46 @@
 declare(strict_types=1);
 
 return [
+    'navigation' => [
+        'label' => 'Lavori in attesa',
+        'group' => 'Lavori',
+        'icon' => 'heroicon-o-clock',
+        'sort' => 30,
+    ],
+    'label' => 'Lavoro in attesa',
+    'plural_label' => 'Lavori in attesa',
     'fields' => [
-        'status' => [
-            'label' => 'status',
+        'id' => [
+            'label' => 'ID',
         ],
-        'display_name' => [
-            'label' => 'display_name',
+        'connection' => [
+            'label' => 'Connessione',
         ],
         'queue' => [
-            'label' => 'queue',
+            'label' => 'Coda',
+        ],
+        'payload' => [
+            'label' => 'Contenuto',
         ],
         'attempts' => [
-            'label' => 'attempts',
+            'label' => 'Tentativi',
         ],
         'reserved_at' => [
-            'label' => 'reserved_at',
+            'label' => 'Riservato il',
+        ],
+        'available_at' => [
+            'label' => 'Disponibile il',
         ],
         'created_at' => [
-            'label' => 'created_at',
+            'label' => 'Creato il',
         ],
     ],
-    'navigation' => [
-        'sort' => 91,
-        'icon' => 'jobs waiting.navigation',
-        'group' => 'jobs waiting.navigation',
-        'label' => 'jobs waiting.navigation',
+    'actions' => [
+        'process' => [
+            'label' => 'Elabora',
+        ],
+        'retry' => [
+            'label' => 'Riprova',
+        ],
     ],
 ];

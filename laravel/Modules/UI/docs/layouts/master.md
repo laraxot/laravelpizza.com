@@ -33,4 +33,4 @@ Il layout `master.blade.php` è il template base per il modulo UI, fornendo la s
 - Rimossi conflitti di merge
 - Standardizzata l'indentazione
 - Migliorata la gestione degli assets con Vite
-- Aggiunta documentazione del layout 
+- Aggiunta documentazione del layout

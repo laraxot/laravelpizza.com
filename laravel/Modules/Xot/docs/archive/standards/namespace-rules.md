@@ -1,4 +1,4 @@
-# Regole di Namespace 
+# Regole di Namespace
 
 ## Struttura dei Namespace
 
@@ -40,6 +40,12 @@ namespace Modules\Patient\Models;
 namespace Modules\Patient\Models;
 namespace Modules\Patient\Models;
 
+// File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
+// File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
+// File in: /var/www/html/saluteora/laravel/Modules/Patient/app/Models/Patient.php
+// File in: /var/www/html/saluteora/laravel/Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+namespace Modules\Patient\Models;
 
 // File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
 // File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
@@ -48,7 +54,6 @@ namespace Modules\Patient\Models;
 namespace Modules\Patient\Models;
 namespace Modules\Patient\Models;
 
-
 // File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
 // File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
 // File in: /var/www/html/saluteora/laravel/Modules/Patient/app/Models/Patient.php
@@ -56,22 +61,12 @@ namespace Modules\Patient\Models;
 namespace Modules\Patient\Models;
 namespace Modules\Patient\Models;
 
-
 // File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
 // File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
 // File in: /var/www/html/saluteora/laravel/Modules/Patient/app/Models/Patient.php
 // File in: /var/www/html/saluteora/laravel/Modules/Patient/app/Models/Patient.php
 namespace Modules\Patient\Models;
 namespace Modules\Patient\Models;
-
-
-// File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
-// File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
-// File in: /var/www/html/saluteora/laravel/Modules/Patient/app/Models/Patient.php
-// File in: /var/www/html/saluteora/laravel/Modules/Patient/app/Models/Patient.php
-namespace Modules\Patient\Models;
-namespace Modules\Patient\Models;
-
 
 // File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
 // File in: /var/www/html/saluteora/laravel/Modules/Dental/app/Services/AppointmentService.php
@@ -143,4 +138,4 @@ Se si verificano errori "Class not found" o problemi di autoloading:
 - [Documentazione Xot](../CODE-STANDARDS.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 
-Ultima modifica: 31/03/2025 
+Ultima modifica: 31/03/2025

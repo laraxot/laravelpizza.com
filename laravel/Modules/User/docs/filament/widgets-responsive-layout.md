@@ -1,6 +1,6 @@
 # Widget Responsivi per Form di Registrazione
 
-> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User. 
+> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User.
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/blocks/filament-component-integration.md#layout-responsivo-dei-widget-filament).
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/project_docs/blocks/filament-component-integration.md#layout-responsivo-dei-widget-filament).
 ## Problema
@@ -25,7 +25,7 @@ Sostituire `max-w-lg` con `max-w-4xl` o rimuovere completamente la limitazione d
         <div class="max-w-4xl mx-auto">
 ## Regola Applicativa
 I form Filament complessi, in particolare quelli di registrazione e wizard multi-step, devono utilizzare le seguenti linee guida per la larghezza:
-- Form semplici (1-3 campi): `max-w-lg` (32rem/512px) 
+- Form semplici (1-3 campi): `max-w-lg` (32rem/512px)
 - Form di media complessità (4-8 campi): `max-w-3xl` (48rem/768px)
 - Form complessi (>8 campi o multi-step): `max-w-4xl` (56rem/896px)
 - Wizard con layout a griglia complessi: Nessuna limitazione di larghezza

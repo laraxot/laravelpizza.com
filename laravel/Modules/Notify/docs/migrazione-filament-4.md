@@ -43,12 +43,12 @@ class NotificationTemplateResource extends Resource
                     ->required()
                     ->maxLength(255)
                     ->live(onBlur: true),
-                    
+
                 TextInput::make('subject')
                     ->required()
                     ->maxLength(255)
                     ->placeholder('Email subject line'),
-                    
+
                 MarkdownEditor::make('content')
                     ->required()
                     ->toolbarButtons(['bold', 'italic', 'link', 'bulletList', 'orderedList'])
@@ -59,7 +59,7 @@ class NotificationTemplateResource extends Resource
                         $set('variables', $variables);
                     }),
             ]),
-            
+
             Section::make('Channel Configuration')->schema([
                 CheckboxList::make('channels')
                     ->options([
@@ -79,7 +79,7 @@ class NotificationTemplateResource extends Resource
                             $set('requires_subject', true);
                         }
                     }),
-                    
+
                 KeyValue::make('variables')
                     ->label('Template Variables')
                     ->keyLabel('Variable Name')
@@ -87,12 +87,12 @@ class NotificationTemplateResource extends Resource
                     ->addActionLabel('Add Variable')
                     ->reorderable()
                     ->columnSpanFull(),
-                    
+
                 Toggle::make('is_active')
                     ->default(true)
                     ->label('Template Active'),
             ]),
-            
+
             Section::make('Advanced Settings')->schema([
                 TextInput::make('priority')
                     ->numeric()
@@ -100,12 +100,12 @@ class NotificationTemplateResource extends Resource
                     ->minValue(1)
                     ->maxValue(10)
                     ->helperText('1 = Highest, 10 = Lowest'),
-                    
+
                 Toggle::make('track_opens')
                     ->default(false)
                     ->label('Track Email Opens')
                     ->visible(fn($get) => in_array('email', $get('channels') ?? [])),
-                    
+
                 Toggle::make('track_clicks')
                     ->default(false)
                     ->label('Track Link Clicks')
@@ -122,11 +122,11 @@ class NotificationTemplateResource extends Resource
                     ->searchable()
                     ->sortable()
                     ->weight('bold'),
-                    
+
                 TextColumn::make('subject')
                     ->limit(40)
                     ->tooltip(fn($record) => $record->subject),
-                    
+
                 BadgeColumn::make('channels')
                     ->formatStateUsing(fn($state) => count($state ?? []) . ' channels')
                     ->colors([
@@ -134,21 +134,21 @@ class NotificationTemplateResource extends Resource
                         'warning' => fn($state) => count($state ?? []) === 2,
                         'danger' => fn($state) => count($state ?? []) <= 1,
                     ]),
-                    
+
                 TextColumn::make('usage_count')
                     ->getStateUsing(fn($record) => $record->notifications()->count())
                     ->numeric()
                     ->sortable()
                     ->label('Times Used'),
-                    
+
                 BadgeColumn::make('success_rate')
                     ->getStateUsing(function($record) {
                         $total = $record->notifications()->count();
                         if ($total === 0) return 'N/A';
-                        
+
                         $successful = $record->notifications()
                             ->where('status', 'delivered')->count();
-                        
+
                         return round(($successful / $total) * 100) . '%';
                     })
                     ->colors([
@@ -156,11 +156,11 @@ class NotificationTemplateResource extends Resource
                         'warning' => fn($state) => str_replace('%', '', $state) >= 70,
                         'danger' => fn($state) => str_replace('%', '', $state) < 70,
                     ]),
-                    
+
                 IconColumn::make('is_active')
                     ->boolean()
                     ->sortable(),
-                    
+
                 TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
@@ -175,7 +175,7 @@ class NotificationTemplateResource extends Resource
                         return view('notify::template-preview', compact('record', 'rendered'));
                     })
                     ->modalWidth('4xl'),
-                    
+
                 Action::make('send_test')
                     ->icon('heroicon-o-paper-airplane')
                     ->color('success')
@@ -185,11 +185,11 @@ class NotificationTemplateResource extends Resource
                                 fn($channel) => [$channel => ucfirst($channel)]
                             ))
                             ->required(),
-                            
+
                         TextInput::make('recipient')
                             ->required()
                             ->helperText('Email, phone, or username depending on channel'),
-                            
+
                         KeyValue::make('test_data')
                             ->label('Test Variables')
                             ->default(fn($record) => collect($record->variables ?? [])->mapWithKeys(
@@ -205,13 +205,13 @@ class NotificationTemplateResource extends Resource
                                 data: $data['test_data'] ?? []
                             )
                         );
-                        
+
                         Notification::make()
                             ->title('Test notification sent')
                             ->success()
                             ->send();
                     }),
-                    
+
                 Action::make('duplicate')
                     ->icon('heroicon-o-document-duplicate')
                     ->action(function($record) {
@@ -219,7 +219,7 @@ class NotificationTemplateResource extends Resource
                         $copy->name = $copy->name . ' (Copy)';
                         $copy->is_active = false;
                         $copy->save();
-                        
+
                         return redirect(static::getUrl('edit', ['record' => $copy]));
                     }),
             ])
@@ -246,7 +246,7 @@ class NotificationTemplateResource extends Resource
                             }
                         }
                     }),
-                    
+
                 BulkAction::make('bulk_activate')
                     ->icon('heroicon-o-check-circle')
                     ->color('success')
@@ -264,11 +264,11 @@ class NotificationTemplateResource extends Resource
                             return $query->whereJsonContains('channels', $data['value']);
                         }
                     }),
-                    
+
                 Filter::make('active_only')
                     ->query(fn($query) => $query->where('is_active', true))
                     ->label('Active Templates'),
-                    
+
                 Filter::make('recently_used')
                     ->query(function($query) {
                         return $query->whereHas('notifications', function($q) {
@@ -300,19 +300,19 @@ class NotificationDashboardWidget extends Widget
                         'slack' => '💬 Slack',
                         default => $state,
                     }),
-                    
+
                 TextColumn::make('sent_today')
                     ->numeric()
                     ->color('info'),
-                    
+
                 TextColumn::make('delivered')
                     ->numeric()
                     ->color('success'),
-                    
+
                 TextColumn::make('failed')
                     ->numeric()
                     ->color('danger'),
-                    
+
                 TextColumn::make('success_rate')
                     ->formatStateUsing(fn($state) => $state . '%')
                     ->color(fn($state) => match(true) {
@@ -320,7 +320,7 @@ class NotificationDashboardWidget extends Widget
                         $state >= 90 => 'warning',
                         default => 'danger',
                     }),
-                    
+
                 TextColumn::make('avg_delivery_time')
                     ->formatStateUsing(fn($state) => $state . 's')
                     ->color('info'),
@@ -338,18 +338,18 @@ class NotificationDashboardWidget extends Widget
                     ])),
             ]);
     }
-    
+
     private function getNotificationStats(): array
     {
         return ['email', 'sms', 'push', 'whatsapp', 'telegram', 'slack']
             ->map(function($channel) {
                 $todayNotifications = Notification::where('channel', $channel)
                     ->whereDate('created_at', today());
-                    
+
                 $sent = $todayNotifications->count();
                 $delivered = $todayNotifications->where('status', 'delivered')->count();
                 $failed = $todayNotifications->where('status', 'failed')->count();
-                
+
                 return [
                     'channel' => $channel,
                     'sent_today' => $sent,
@@ -371,16 +371,16 @@ class ContactNotificationResource extends Resource
 {
     protected static ?string $parentResource = ContactResource::class;
     protected static string $relationship = 'notifications';
-    
+
     // URL: /admin/contacts/123/notifications
 }
 
-// Template -> Sent Notifications relationship  
+// Template -> Sent Notifications relationship
 class TemplateNotificationResource extends Resource
 {
     protected static ?string $parentResource = NotificationTemplateResource::class;
     protected static string $relationship = 'notifications';
-    
+
     // URL: /admin/notification-templates/456/notifications
 }
 ```
@@ -392,31 +392,31 @@ class BulkNotificationAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         $this
             ->form([
                 Select::make('template_id')
                     ->relationship('templates', 'name')
                     ->searchable()
                     ->required(),
-                    
+
                 CheckboxList::make('channels')
                     ->options([
                         'email' => 'Email',
-                        'sms' => 'SMS', 
+                        'sms' => 'SMS',
                         'push' => 'Push',
                     ])
                     ->required(),
-                    
+
                 Select::make('contact_group_id')
                     ->relationship('contactGroups', 'name')
                     ->multiple()
                     ->searchable(),
-                    
+
                 DateTimePicker::make('scheduled_at')
                     ->label('Schedule For')
                     ->native(false),
-                    
+
                 Toggle::make('test_mode')
                     ->helperText('Send to 10 random contacts only'),
             ])
@@ -428,7 +428,7 @@ class BulkNotificationAction extends Action
                     scheduledAt: $data['scheduled_at'],
                     testMode: $data['test_mode'] ?? false
                 );
-                
+
                 dispatch($job);
             });
     }
@@ -443,7 +443,7 @@ class BulkNotificationAction extends Action
 - **Channel fallback** automatico in caso di failure
 - **Performance analytics** per optimization
 
-### 2. Template Management Revolution  
+### 2. Template Management Revolution
 ```php
 // Advanced template features
 $template = NotificationTemplate::create([
@@ -462,7 +462,7 @@ $template = NotificationTemplate::create([
 ### 3. Real-time Analytics Dashboard
 - **Live delivery tracking**
 - **Channel performance comparison**
-- **Template effectiveness metrics**  
+- **Template effectiveness metrics**
 - **Failure analysis e automated retry**
 
 ### 4. Advanced Scheduling & Automation
@@ -484,7 +484,7 @@ NotificationScheduler::make()
 ```bash
 # Migration per existing templates
 ⚠️  Schema changes breaking existing templates
-⚠️  Variable system restructuring needed  
+⚠️  Variable system restructuring needed
 ⚠️  Channel configuration format changes
 ```
 
@@ -508,7 +508,7 @@ NotificationScheduler::make()
 ```php
 // Mock services per testing channels:
 - Email sandbox environments
-- SMS simulation services  
+- SMS simulation services
 - Push notification test devices
 - Webhook endpoint testing
 ```
@@ -527,7 +527,7 @@ NotificationScheduler::make()
 3. 🔄 Setup nested resources structure
 4. 🔄 Create real-time dashboard widgets
 
-### Fase 3: Advanced Features (3-4 giorni)  
+### Fase 3: Advanced Features (3-4 giorni)
 1. 🆕 Multi-channel bulk operations
 2. 🆕 Analytics e reporting system
 3. 🆕 A/B testing framework
@@ -552,7 +552,7 @@ NotificationScheduler::make()
 ### 🚀 Opportunità Uniche:
 
 1. **Complete template system redesign**
-2. **Real-time multi-channel monitoring**  
+2. **Real-time multi-channel monitoring**
 3. **Advanced personalization engine**
 4. **Comprehensive analytics dashboard**
 5. **Smart delivery optimization**
@@ -567,7 +567,7 @@ NotificationScheduler::make()
 ## 🕐 Timeline Stimato Notify Module
 
 - **Foundation recovery**: 3-4 giorni
-- **Core Filament 4 migration**: 5-6 giorni  
+- **Core Filament 4 migration**: 5-6 giorni
 - **Advanced features**: 4-5 giorni
 - **Integration testing**: 4-5 giorni
 - **Performance optimization**: 2-3 giorni
@@ -578,7 +578,7 @@ NotificationScheduler::make()
 
 **MIGRAZIONE PRIORITY ALTA** - Il modulo Notify ha **perso componenti critici** e la migrazione a Filament 4 è un'opportunità perfetta per:
 
-✅ **Ricostruire funzionalità mancanti** con architettura moderna  
+✅ **Ricostruire funzionalità mancanti** con architettura moderna
 ✅ **Implementare real-time monitoring** essenziale per notifications
 ✅ **Migliorare drasticamente UX** per template management
 ✅ **Aggiungere analytics avanzate** per optimization

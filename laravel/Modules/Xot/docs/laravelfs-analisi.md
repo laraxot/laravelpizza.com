@@ -34,4 +34,3 @@ Il progetto ha una struttura ben organizzata:
 - **tests/**: Test automatizzati
 
 ## Aspetti interessanti per il nostro progetto
-

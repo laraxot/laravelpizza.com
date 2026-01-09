@@ -192,7 +192,7 @@ try {
         'middleware' => get_class($this),
         'error' => $e->getMessage(),
     ]);
-    
+
     return response()->json([
         'message' => 'Errore interno del server',
     ], 500);
@@ -276,4 +276,4 @@ class Cors
         return $response;
     }
 }
-``` 
+```

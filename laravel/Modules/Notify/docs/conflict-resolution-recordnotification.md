@@ -24,7 +24,6 @@ dddx([
    // 'text' => $email->text(),
    'getHtmlLayout' => $email->getHtmlLayout(),
 
-
 ]);
 */
 ```

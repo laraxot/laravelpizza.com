@@ -3,7 +3,7 @@
 ## 🚨 Errori PHPStan Risolti
 
 ### 1. StoredEventFactory.php - Type Safety
-**Errore**: `array_merge` con parametri mixed invece di array  
+**Errore**: `array_merge` con parametri mixed invece di array
 **Soluzione**: Cast esplicito per garantire type safety
 
 ```php
@@ -17,8 +17,8 @@
 ),
 ```
 
-### 2. ActivityMassSeeder.php - Factory Method  
-**Errore**: `Activity::factory()` metodo non trovato  
+### 2. ActivityMassSeeder.php - Factory Method
+**Errore**: `Activity::factory()` metodo non trovato
 **Soluzione**: Utilizzo diretto della factory class
 
 ```php
@@ -31,7 +31,7 @@ $activities = \Modules\Activity\Database\Factories\ActivityFactory::new()
 ```
 
 ### 3. File Traduzione - Chiavi Duplicate
-**Errore**: Chiavi 'navigation' e 'fields' duplicate nei file DE e EN  
+**Errore**: Chiavi 'navigation' e 'fields' duplicate nei file DE e EN
 **Soluzione**: Rimozione sezioni duplicate alla fine dei file
 
 ## ✅ Risultati

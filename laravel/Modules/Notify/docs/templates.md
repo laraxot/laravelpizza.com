@@ -140,7 +140,6 @@ Testo più piccolo sotto il contenuto principale
         {{ $header }}
     </x-slot>
 
-
     <x-slot name="footer">
         {{ $footer }}
 </x-mail::card>
@@ -150,7 +149,7 @@ Testo più piccolo sotto il contenuto principale
 ```html
 <x-mail::timeline>
     @foreach($events as $event)
-    <x-mail::timeline-item 
+    <x-mail::timeline-item
         :date="$event->date"
         :title="$event->title"
         :description="$event->description"

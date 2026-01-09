@@ -103,7 +103,7 @@ use Livewire\Volt\Component;
 class PageEditor extends Component
 {
     public Page $page;
-    
+
     public function save(): void
     {
         $this->page->save();

@@ -37,4 +37,4 @@ protected function writeRows(Collection $rows, array $head, int $startRow = 2): 
 
 ## Impatto
 
-Questa modifica migliora la documentazione del codice e facilita l'analisi statica con PHPStan, mantenendo la compatibilità con il livello massimo di analisi. 
+Questa modifica migliora la documentazione del codice e facilita l'analisi statica con PHPStan, mantenendo la compatibilità con il livello massimo di analisi.

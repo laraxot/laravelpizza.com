@@ -10,7 +10,7 @@
   ```php
   // -- CREATE --
   $this->tableCreate(...)
-  
+
   // -- UPDATE --
   $this->tableUpdate(...)
   ```
@@ -156,4 +156,4 @@ app/
 - Mantenere retrocompatibilità
 - Aggiornare documentazione
 - Verificare test
-- Comunicare cambiamenti 
+- Comunicare cambiamenti

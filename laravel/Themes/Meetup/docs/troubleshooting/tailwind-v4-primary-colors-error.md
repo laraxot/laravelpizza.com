@@ -228,4 +228,3 @@ npm run dev
 **ATTENZIONE**: Tailwind CSS v4 usa un approccio **CSS-first**. NON usare più `tailwind.config.js` per definire colori. Usa `@theme` in CSS.
 
 Se vedi errori come "Cannot apply unknown utility class", controlla SEMPRE `css/app.css` prima di cercare altrove.
-

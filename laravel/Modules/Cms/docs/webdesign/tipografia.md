@@ -8,7 +8,7 @@
   :root {
     --type-scale: 1.25;
     --text-base: 1rem;
-    
+
     --text-xs: calc(var(--text-base) / var(--type-scale));
     --text-sm: var(--text-base);
     --text-md: calc(var(--text-base) * var(--type-scale));
@@ -20,8 +20,8 @@
 - **Implementazione Tailwind**
   ```html
   <div class="
-    text-base 
-    leading-relaxed 
+    text-base
+    leading-relaxed
     tracking-wide
   ">
     <h1 class="text-4xl font-bold">Titolo</h1>
@@ -33,11 +33,11 @@
 ### 2. Web Fonts
 ```html
 <!-- Ottimizzazione caricamento font -->
-<link 
-  rel="preload" 
-  href="font.woff2" 
-  as="font" 
-  type="font/woff2" 
+<link
+  rel="preload"
+  href="font.woff2"
+  as="font"
+  type="font/woff2"
   crossorigin
 >
 
@@ -58,8 +58,8 @@
   - Ritmo visivo
   ```html
   <p class="
-    tracking-wide 
-    leading-loose 
+    tracking-wide
+    leading-loose
     space-y-4
   ">
     <!-- Testo con spaziatura zen -->
@@ -73,8 +73,8 @@
   - Script: personalità, creatività
   ```html
   <div class="
-    font-serif 
-    text-gray-900 
+    font-serif
+    text-gray-900
     dark:text-gray-100
   ">
     <!-- Testo tradizionale -->
@@ -109,10 +109,10 @@ graph TD
 - **Leggibilità Universale**
   ```html
   <p class="
-    text-base 
-    leading-relaxed 
+    text-base
+    leading-relaxed
     max-w-prose
-    font-sans 
+    font-sans
     antialiased
   ">
     <!-- Testo accessibile -->
@@ -123,7 +123,7 @@ graph TD
 - **Supporto Multilingua**
   ```html
   <div class="
-    font-sans 
+    font-sans
     [&:lang(ar)]:font-arabic
     [&:lang(ja)]:font-japanese
   ">
@@ -139,8 +139,8 @@ graph TD
   - Pausa visiva
   ```html
   <div class="
-    space-y-8 
-    max-w-3xl 
+    space-y-8
+    max-w-3xl
     mx-auto
   ">
     <!-- Testo con ritmo -->
@@ -170,9 +170,9 @@ document.fonts.ready.then(() => {
 
 ### 2. Accessibilità
 ```html
-<p 
+<p
   class="
-    text-base 
+    text-base
     leading-relaxed
   "
   aria-label="Contenuto principale"
@@ -184,4 +184,4 @@ document.fonts.ready.then(() => {
 ## Collegamenti
 - [Torna alla documentazione principale](../webdesign.md)
 - [Vai a UX/UI Design](./ux-ui-design.md)
-- [Vai a Responsive Design](./responsive-design.md) 
+- [Vai a Responsive Design](./responsive-design.md)

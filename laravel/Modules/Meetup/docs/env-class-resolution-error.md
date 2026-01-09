@@ -123,4 +123,3 @@ Il problema era causato da:
 - Il problema si verifica durante `$kernel->bootstrap()`, non durante la creazione dell'applicazione
 - Tutti i tentativi di gestire l'errore con try-catch non hanno funzionato
 - Il problema richiede un'analisi più approfondita del bootstrap del kernel console
-

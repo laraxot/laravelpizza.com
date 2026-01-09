@@ -18,11 +18,11 @@ Il widget utilizzava il metodo `getFormFill()` per popolare il form con i dati e
 public function getFormFill(): array
 {
     $model = $this->getFormModel();
-    
+
     if ($model->exists) {
         return $model->toArray(); // ❌ PROBLEMA: file salvati come stringhe
     }
-    
+
     // resto del metodo...
 }
 ```
@@ -33,11 +33,11 @@ public function getFormFill(): array
 public function getFormFill(): array
 {
     $model = $this->getFormModel();
-    
+
     if ($model->exists) {
         try {
             $data = $model->toArray();
-            
+
             // CORREZIONE BUG: Converti i campi file upload da stringhe ad array per Filament
             $attachments = [];
             try {
@@ -52,21 +52,21 @@ public function getFormFill(): array
             } catch (\ReflectionException $e) {
                 // Se la proprietà non esiste, continua con array vuoto
             }
-            
+
             foreach ($attachments as $attachment) {
                 if (isset($data[$attachment]) && is_string($data[$attachment])) {
                     // Converte stringa singola in array per compatibilità Filament
                     $data[$attachment] = [$data[$attachment]];
                 }
             }
-            
+
             return $data;
         } catch (\Exception $e) {
             // Fallback per problemi con enum
             Log::warning("Errore in toArray() per modello {$this->model}: " . $e->getMessage());
-            
+
             $attributes = $model->getAttributes();
-            
+
             // Applica la stessa conversione anche agli attributi
             $attachments = [];
             try {
@@ -81,17 +81,17 @@ public function getFormFill(): array
             } catch (\ReflectionException $e) {
                 // Se la proprietà non esiste, continua con array vuoto
             }
-            
+
             foreach ($attachments as $attachment) {
                 if (isset($attributes[$attachment]) && is_string($attributes[$attachment])) {
                     $attributes[$attachment] = [$attributes[$attachment]];
                 }
             }
-            
+
             return $attributes;
         }
     }
-    
+
     // resto del metodo...
 }
 ```
@@ -177,7 +177,7 @@ foreach($state as $file) {  // ✅ OK: $state è array
 Questa correzione è compatibile con:
 
 1. **Nuovi upload**: FileUpload continua a funzionare normalmente
-2. **Form validation**: Le regole di validazione rimangono invariate  
+2. **Form validation**: Le regole di validazione rimangono invariate
 3. **Salvataggio**: I file vengono ancora salvati come stringhe nel database
 4. **Altri widget**: Non impatta widget che non gestiscono file
 
@@ -218,4 +218,3 @@ Per evitare simili problemi in futuro:
 - [Problema principale: docs/fileupload-foreach-error-fix.md](../../../docs/fileupload-foreach-error-fix.md)
 - [Correzione XotBaseResource: Modules/Xot/docs/fileupload-components.md](../../Xot/docs/fileupload-components.md)
 - [Registration Widget base: registration-widget.md](./registration-widget.md)
-

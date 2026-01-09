@@ -72,7 +72,7 @@ describe('UI Business Logic Integration', function () {
             'name' => 'Default Theme',
             'is_active' => true
         ]);
-        
+
         $this->component = createComponent([
             'name' => 'test-component',
             'theme_id' => $this->theme->id,
@@ -86,12 +86,12 @@ describe('UI Business Logic Integration', function () {
                 'name' => 'Test Theme',
                 'is_active' => false
             ]);
-            
+
             expect($theme->is_active)->toBeFalse();
-            
+
             $theme->update(['is_active' => true]);
             expect($theme->is_active)->toBeTrue();
-            
+
             $activeThemes = Theme::where('is_active', true)->get();
             expect($activeThemes)->toHaveCount(2);
         });
@@ -104,7 +104,7 @@ describe('UI Business Logic Integration', function () {
 describe('Component Management', function () {
     it('creates components with proper relationships', function () {
         $theme = createTheme(['name' => 'Test Theme']);
-        
+
         $component = createComponent([
             'name' => 'header-component',
             'theme_id' => $theme->id,
@@ -140,9 +140,9 @@ describe('Dark Mode Functionality', function () {
         // Test dark mode toggle logic
         $initialState = false;
         $toggledState = !$initialState;
-        
+
         expect($toggledState)->toBeTrue();
-        
+
         // Test persistence
         $persistedState = $toggledState;
         expect($persistedState)->toBe($toggledState);
@@ -151,7 +151,7 @@ describe('Dark Mode Functionality', function () {
     it('applies correct CSS classes for dark mode', function () {
         $darkModeClass = 'dark';
         $lightModeClass = 'light';
-        
+
         expect($darkModeClass)->toBe('dark')
             ->and($lightModeClass)->toBe('light');
     });
@@ -163,7 +163,7 @@ describe('Dark Mode Functionality', function () {
 describe('Component Rendering', function () {
     it('renders category tabs component correctly', function () {
         $categories = ['Technology', 'Design', 'Business'];
-        
+
         expect($categories)->toBeArray()
             ->and($categories)->toHaveCount(3)
             ->and($categories[0])->toBe('Technology');
@@ -171,7 +171,7 @@ describe('Component Rendering', function () {
 
     it('handles empty component states', function () {
         $emptyCategories = [];
-        
+
         expect($emptyCategories)->toBeArray()
             ->and($emptyCategories)->toHaveCount(0);
     });
@@ -186,9 +186,9 @@ describe('Theme Service Integration', function () {
     it('activates themes through service layer', function () {
         $themeService = app(ThemeService::class);
         $theme = createTheme(['is_active' => false]);
-        
+
         $result = $themeService->activate($theme);
-        
+
         expect($result)->toBeTrue()
             ->and($theme->fresh()->is_active)->toBeTrue();
     });
@@ -196,10 +196,10 @@ describe('Theme Service Integration', function () {
     it('deactivates previous theme when activating new one', function () {
         $activeTheme = createTheme(['is_active' => true]);
         $newTheme = createTheme(['is_active' => false]);
-        
+
         $themeService = app(ThemeService::class);
         $themeService->activate($newTheme);
-        
+
         expect($activeTheme->fresh()->is_active)->toBeFalse()
             ->and($newTheme->fresh()->is_active)->toBeTrue();
     });
@@ -211,15 +211,15 @@ describe('Theme Service Integration', function () {
 describe('Component Service Integration', function () {
     it('registers components correctly', function () {
         $componentService = app(ComponentService::class);
-        
+
         $componentData = [
             'name' => 'dynamic-widget',
             'type' => 'widget',
             'config' => ['position' => 'sidebar']
         ];
-        
+
         $component = $componentService->register($componentData);
-        
+
         expect($component)->toBeComponent()
             ->and($component->name)->toBe('dynamic-widget')
             ->and($component->type)->toBe('widget');
@@ -234,7 +234,7 @@ describe('Component Service Integration', function () {
 describe('Asset Management Performance', function () {
     it('loads assets efficiently', function () {
         $assets = collect();
-        
+
         for ($i = 0; $i < 10; $i++) {
             $assets->push(createAsset([
                 'name' => "asset-{$i}",
@@ -242,9 +242,9 @@ describe('Asset Management Performance', function () {
                 'size' => rand(1000, 5000)
             ]));
         }
-        
+
         expect($assets)->toHaveCount(10);
-        
+
         $totalSize = $assets->sum('size');
         expect($totalSize)->toBeGreaterThan(0);
     });
@@ -282,7 +282,7 @@ it('renders hero component with correct props', function () {
         'subtitle' => 'Get started today',
         'buttonText' => 'Learn More'
     ];
-    
+
     expect($heroProps['title'])->toBe('Welcome')
         ->and($heroProps['subtitle'])->toBe('Get started today')
         ->and($heroProps['buttonText'])->toBe('Learn More');
@@ -301,9 +301,9 @@ test('validates component configuration', function () {
 describe('Error Handling', function () {
     it('handles missing theme gracefully', function () {
         $component = createComponent(['theme_id' => 999]);
-        
+
         expect($component->theme)->toBeNull();
-        
+
         // Should not throw exception
         $fallbackTheme = $component->theme ?? createTheme(['name' => 'Fallback']);
         expect($fallbackTheme)->toBeTheme();
@@ -311,7 +311,7 @@ describe('Error Handling', function () {
 
     it('validates component configuration with fallbacks', function () {
         $component = createComponent(['config' => null]);
-        
+
         $config = $component->config ?? [];
         expect($config)->toBeArray();
     });
@@ -349,6 +349,6 @@ Based on existing UI module tests:
 - [CategoryTabsComponentTest.php](../../tests/Feature/CategoryTabsComponentTest.php)
 
 ---
-**Last Updated**: September 2025  
-**Status**: ✅ PRODUCTION READY  
+**Last Updated**: September 2025
+**Status**: ✅ PRODUCTION READY
 **Coverage**: UI Components + Business Logic + Service Integration

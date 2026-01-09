@@ -50,7 +50,7 @@ use Modules\UI\Enums\TableLayoutEnum;
 class YourResourceListRecords extends XotBaseListRecords
 {
     protected TableLayoutEnum $layout = TableLayoutEnum::LIST;
-    
+
     public function table(Table $table): Table
     {
         return $table
@@ -64,7 +64,7 @@ class YourResourceListRecords extends XotBaseListRecords
                     }),
             ]);
     }
-    
+
     protected function getColumnsForLayout(): array
     {
         $listColumns = [
@@ -74,7 +74,7 @@ class YourResourceListRecords extends XotBaseListRecords
             Tables\Columns\TextColumn::make('email')
                 ->searchable(),
         ];
-        
+
         $gridColumns = [
             Tables\Columns\Layout\Stack::make([
                 Tables\Columns\TextColumn::make('name')
@@ -82,7 +82,7 @@ class YourResourceListRecords extends XotBaseListRecords
                 Tables\Columns\TextColumn::make('email'),
             ]),
         ];
-        
+
         return $this->layout->getTableColumns($listColumns, $gridColumns);
     }
 }
@@ -165,4 +165,4 @@ Seleziona le colonne appropriate in base al layout corrente.
 - [Filament Best Practices](filament-widget-best-practices.md)
 
 ## Ultimo Aggiornamento
-2025-01-27 - Documentazione TableLayoutEnum nella root docs 
+2025-01-27 - Documentazione TableLayoutEnum nella root docs

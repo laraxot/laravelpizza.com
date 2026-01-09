@@ -70,7 +70,7 @@
 
 <main>
   <h1>Titolo principale</h1>
-  
+
   <section aria-labelledby="section-title">
     <h2 id="section-title">Titolo sezione</h2>
     <p>Contenuto</p>
@@ -87,9 +87,9 @@
 <form>
   <div class="form-group">
     <label for="email">Email</label>
-    <input 
-      type="email" 
-      id="email" 
+    <input
+      type="email"
+      id="email"
       name="email"
       required
       aria-required="true"
@@ -104,8 +104,8 @@
 
 ### Immagini
 ```html
-<img 
-  src="logo.png" 
+<img
+  src="logo.png"
   alt="Logo dell'azienda"
   width="200"
   height="100"
@@ -115,4 +115,4 @@
 ## 🔗 Collegamenti
 - [Performance](./performance.md)
 - [UI Standards](./ui-standards.md)
-- [Componenti Base](../base-components.md) 
+- [Componenti Base](../base-components.md)

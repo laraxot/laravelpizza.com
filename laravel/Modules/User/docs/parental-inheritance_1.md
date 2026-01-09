@@ -172,7 +172,7 @@ class ChangeTypeCommand extends Command
     {
         $email = $this->ask('User email?');
         $user = XotData::make()->getUserByEmail($email);
-        
+
         if (!$user) {
             $this->error("User not found: {$email}");
             return;
@@ -180,7 +180,7 @@ class ChangeTypeCommand extends Command
 
         // Ottieni i tipi disponibili dal modello corrente
         $availableTypes = $this->getAvailableTypes($user);
-        
+
         if (empty($availableTypes)) {
             $this->error('No user types configured for this project.');
             return;
@@ -310,8 +310,8 @@ class User extends BaseUser
 **Soluzione**: Rendere il comando generico usando reflection:
 
 ```php
-$typeValue = is_object($user->type) && method_exists($user->type, 'value') 
-    ? $user->type->value 
+$typeValue = is_object($user->type) && method_exists($user->type, 'value')
+    ? $user->type->value
     : (string) $user->type;
 ```
 

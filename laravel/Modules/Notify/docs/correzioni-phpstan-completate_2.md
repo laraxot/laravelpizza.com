@@ -16,7 +16,6 @@
 ### Falsi Syntax Errors
 L'analisi PHPStan riportava 147 "syntax errors", ma in realt� **NON erano errori di sintassi PHP**. Erano **conflitti git non risolti** lasciati nel codice sorgente dopo merge multipli.
 
-
 ## File Corretti
 
 ### 1. Modules/Notify/app/Actions/EsendexSendAction.php

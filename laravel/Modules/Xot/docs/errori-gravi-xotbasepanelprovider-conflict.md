@@ -141,5 +141,5 @@ try {
 
 ---
 
-**NOTA**: Questo documento serve come reminder per non ripetere mai più questi errori. 
+**NOTA**: Questo documento serve come reminder per non ripetere mai più questi errori.
 Ogni modifica futura deve rispettare DRY, KISS, SOLID e ROBUST.

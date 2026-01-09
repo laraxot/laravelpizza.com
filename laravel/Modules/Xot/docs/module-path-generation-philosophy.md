@@ -1,7 +1,7 @@
 # Module Path Generation - Philosophy and Business Logic
 
-**Data Creazione**: 2026-01-02  
-**Status**: 📚 Foundation Document  
+**Data Creazione**: 2026-01-02
+**Status**: 📚 Foundation Document
 **Versione**: 1.0.0
 
 ## 🧠 Logica (Logic)

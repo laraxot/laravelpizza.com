@@ -22,4 +22,3 @@ Il metodo `icon()` **NON esiste** sul componente `Filament\Forms\Components\File
 
 ## Collegamenti tra versioni di filament-error-fileupload-icon.md
 * [filament-error-fileupload-icon.md](../../Patient/project_docs/filament-error-fileupload-icon.md)
-

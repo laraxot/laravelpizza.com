@@ -167,13 +167,13 @@ FULLCALENDAR_MAX_EVENTS=100
 return [
     // Licenza Scheduler
     'scheduler_license_key' => env('FULLCALENDAR_SCHEDULER_LICENSE_KEY'),
-    
+
     // Validazione licenza
     'validate_license' => env('APP_ENV') === 'production',
-    
+
     // Fallback per sviluppo
     'development_mode' => env('APP_ENV') !== 'production',
-    
+
     // Plugin premium abilitati
     'premium_plugins' => [
         'resource-timeline',
@@ -205,7 +205,7 @@ class AdminPanelProvider extends XotBasePanelProvider
     private function getFullCalendarPlugin(): FilamentFullCalendarPlugin
     {
         $licenseKey = config('fullcalendar.scheduler_license_key');
-        
+
         // Validazione licenza in produzione
         if (app()->environment('production') && empty($licenseKey)) {
             throw new \Exception('FullCalendar Scheduler license key required in production');
@@ -233,23 +233,23 @@ class AdminPanelProvider extends XotBasePanelProvider
                 'resourceDayGrid',
                 'resourceTimeGrid',
             ],
-            
+
             // Configurazioni specifiche per SaluteOra
             'locale' => 'it',
             'timezone' => 'Europe/Rome',
             'firstDay' => 1,
-            
+
             // Business hours sanitarie
             'businessHours' => [
                 'daysOfWeek' => [1, 2, 3, 4, 5, 6], // Lun-Sab
                 'startTime' => '08:00',
                 'endTime' => '19:00',
             ],
-            
+
             // Validazioni
             'selectConstraint' => 'businessHours',
             'eventConstraint' => 'businessHours',
-            
+
             // Performance
             'lazyFetching' => true,
             'eventLimit' => config('fullcalendar.max_events', 100),
@@ -296,10 +296,10 @@ class FullCalendarDebug extends Command
     public function handle()
     {
         $licenseKey = config('fullcalendar.scheduler_license_key');
-        
+
         $this->info('FullCalendar Configuration Debug');
         $this->line('================================');
-        
+
         if (empty($licenseKey)) {
             $this->error('❌ No license key configured');
             $this->warn('Set FULLCALENDAR_SCHEDULER_LICENSE_KEY in .env');
@@ -307,10 +307,10 @@ class FullCalendarDebug extends Command
             $this->info('✅ License key configured');
             $this->line('Key: ' . substr($licenseKey, 0, 10) . '...');
         }
-        
+
         $this->line('Environment: ' . app()->environment());
         $this->line('Premium plugins: ' . json_encode(config('fullcalendar.premium_plugins', [])));
-        
+
         return 0;
     }
 }
@@ -353,14 +353,14 @@ class FullCalendarLicenseCheck
     public function checkLicenseValidity(): bool
     {
         $licenseKey = config('fullcalendar.scheduler_license_key');
-        
+
         if (empty($licenseKey)) {
             return false;
         }
-        
+
         // Implementare controllo validità se necessario
         // (FullCalendar non fornisce API per questo)
-        
+
         return true;
     }
 }
@@ -416,4 +416,4 @@ La gestione delle licenze FullCalendar Scheduler richiede attenzione particolare
 2. **Plugin premium richiesti** per `schedulerLicenseKey`
 3. **Workaround disponibili** per bug noti nelle versioni 5.x-6.x
 4. **Configurazione ambiente-specifica** per sviluppo vs produzione
-5. **Monitoring e logging** per troubleshooting proattivo 
+5. **Monitoring e logging** per troubleshooting proattivo

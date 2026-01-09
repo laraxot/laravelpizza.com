@@ -94,4 +94,3 @@
 - [Best Practices](./BEST_PRACTICES.md)
 
 *Ultimo aggiornamento: 2025-01-06*
-

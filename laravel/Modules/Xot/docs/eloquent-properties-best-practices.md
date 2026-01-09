@@ -146,11 +146,11 @@ public function getDisplayName(): string
     if (isset($this->full_name) && $this->full_name) {
         return $this->full_name;
     }
-    
+
     if (isset($this->first_name) && $this->first_name) {
         return $this->first_name;
     }
-    
+
     return 'Utente';
 }
 ```
@@ -163,7 +163,7 @@ public function getScore(): float
     if (isset($this->calculated_score) && $this->calculated_score) {
         return $this->calculated_score;
     }
-    
+
     return 0.0;
 }
 ```
@@ -176,7 +176,7 @@ public function getStatus(): string
     if (isset($this->current_status) && $this->current_status) {
         return $this->current_status;
     }
-    
+
     return 'pending';
 }
 ```

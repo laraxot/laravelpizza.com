@@ -83,7 +83,7 @@ Modules/<nome>/
 // ❌ ERRATO
 class PatientResource extends \Filament\Resources\Resource
 
-// ✅ CORRETTO  
+// ✅ CORRETTO
 class PatientResource extends \Modules\Xot\Filament\Resources\XotBaseResource
 
 // MODELLO con HasTranslations
@@ -158,7 +158,7 @@ TextInput::make('name')
 ### Metodi NON Implementare
 Chi estende `XotBaseResource` NON deve implementare:
 - `getTableColumn`
-- `getTableFilters` 
+- `getTableFilters`
 - `getBulkActions`
 - `table`
 - `getPages` (se restituisce solo index,create,edit o index,create,edit,view)

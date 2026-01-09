@@ -139,4 +139,4 @@ Aggiornare la documentazione del progetto per riflettere i nuovi percorsi dei co
 
 ---
 
-*Ultimo aggiornamento: Giugno 2025* 
+*Ultimo aggiornamento: Giugno 2025*

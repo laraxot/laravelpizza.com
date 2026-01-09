@@ -90,7 +90,6 @@ Questo documento confronta l'implementazione attuale basata su `GeoJsonModel` co
 | Avvio Applicazione      | ★★★★★        | ★★★☆☆         |
 | Supporto Documentazione | ★★☆☆☆        | ★★★★★         |
 
-
 ## Considerazioni Finali
 
 ### Quando usare GeoJsonModel (85% consigliato)

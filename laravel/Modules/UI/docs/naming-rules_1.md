@@ -43,4 +43,4 @@ I nomi specifici dell'applicazione devono apparire solo:
 ## Vedi Anche
 - [Documentazione Principale](../../../docs/README.md)
 - [Standard di Codice](../../../docs/standards/coding-standards.md)
-- [Best Practices](../../../docs/standards/best-practices.md) 
+- [Best Practices](../../../docs/standards/best-practices.md)

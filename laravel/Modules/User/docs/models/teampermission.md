@@ -28,4 +28,4 @@ Il modello `TeamPermission` rappresenta i permessi specifici di un utente all'in
 
 - [[Team]]
 - [[User]]
-- [[HasTeamsContract]] 
+- [[HasTeamsContract]]

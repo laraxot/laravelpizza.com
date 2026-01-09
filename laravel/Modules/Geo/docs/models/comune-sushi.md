@@ -17,7 +17,7 @@ use Sushi\Sushi;
 
 /**
  * Classe Comune - Implementazione Sushi per i comuni italiani
- * 
+ *
  * @property int $id
  * @property string $name Nome del comune
  * @property string $codice_istat Codice ISTAT del comune
@@ -33,14 +33,14 @@ use Sushi\Sushi;
 class Comune extends Model
 {
     use Sushi;
-    
+
     /**
      * Indica se il modello utilizza timestamps
      *
      * @var bool
      */
     public $timestamps = false;
-    
+
     /**
      * Gli attributi che possono essere assegnati in massa
      *
@@ -58,7 +58,7 @@ class Comune extends Model
         'latitude',
         'longitude',
     ];
-    
+
     /**
      * Schema personalizzato per i tipi di colonna
      *
@@ -73,7 +73,7 @@ class Comune extends Model
         'latitude' => 'float',
         'longitude' => 'float',
     ];
-    
+
     /**
      * Ottiene i dati per il modello.
      * Utilizzando getRows() invece di $rows per maggiore flessibilità.
@@ -115,10 +115,10 @@ class Comune extends Model
             // circa 7.904 comuni
         ];
     }
-    
+
     /**
      * Personalizzazione della migrazione dopo la creazione della tabella
-     * 
+     *
      * @param \Illuminate\Database\Schema\Blueprint $table
      * @return void
      */
@@ -130,30 +130,30 @@ class Comune extends Model
         $table->index('codice_istat');
         $table->index('codice_catastale');
     }
-    
+
     /**
      * Relazione con la provincia
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function provincia(): BelongsTo
     {
         return $this->belongsTo(Provincia::class);
     }
-    
+
     /**
      * Relazione con la regione
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function regione(): BelongsTo
     {
         return $this->belongsTo(Regione::class);
     }
-    
+
     /**
      * Scope per filtrare i comuni per provincia
-     * 
+     *
      * @param \Illuminate\Database\Eloquent\Builder $query
      * @param int|string $provincia ID o nome della provincia
      * @return \Illuminate\Database\Eloquent\Builder
@@ -163,15 +163,15 @@ class Comune extends Model
         if (is_numeric($provincia)) {
             return $query->where('provincia_id', $provincia);
         }
-        
+
         return $query->whereHas('provincia', function ($q) use ($provincia) {
             $q->where('name', $provincia);
         });
     }
-    
+
     /**
      * Scope per filtrare i comuni per regione
-     * 
+     *
      * @param \Illuminate\Database\Eloquent\Builder $query
      * @param int|string $regione ID o nome della regione
      * @return \Illuminate\Database\Eloquent\Builder
@@ -181,7 +181,7 @@ class Comune extends Model
         if (is_numeric($regione)) {
             return $query->where('regione_id', $regione);
         }
-        
+
         return $query->whereHas('regione', function ($q) use ($regione) {
             $q->where('name', $regione);
         });

@@ -1,6 +1,6 @@
 # Riepilogo Analisi Qualità Codice Completa
 
-**Data**: 2025-12-23  
+**Data**: 2025-12-23
 **Strumenti Utilizzati**: PHPStan (max), PHPMD, PHPInsights, Pint
 
 ## ✅ Risultati Finali

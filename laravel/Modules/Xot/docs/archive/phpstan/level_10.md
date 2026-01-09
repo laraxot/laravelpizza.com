@@ -526,4 +526,3 @@
 * [level_10.md](laravel/Modules/Media/docs/phpstan/level_10.md)
 * [level_10.md](laravel/Modules/Tenant/docs/phpstan/level_10.md)
 * [level_10.md](laravel/Modules/Activity/docs/phpstan/level_10.md)
-

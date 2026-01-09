@@ -244,4 +244,3 @@ Log::channel('user')->info('Azione utente', [
     'timestamp' => now(),
 ]);
 ```
-

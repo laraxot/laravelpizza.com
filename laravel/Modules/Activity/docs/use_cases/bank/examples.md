@@ -41,4 +41,4 @@ activity()
 
 ### Rollback (Event Sourcing)
 - Riprodurre tutti gli eventi fino al punto desiderato
-- Applicare snapshot periodici per velocizzare il replay 
+- Applicare snapshot periodici per velocizzare il replay

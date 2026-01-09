@@ -139,7 +139,7 @@ namespace Modules\Xot\Helpers;
 
 /**
  * Helper dinamico per la gestione dei percorsi nei progetti Laraxot.
- * 
+ *
  * Sostituisce i path hardcoded con configurazioni dinamiche.
  */
 class PathHelper

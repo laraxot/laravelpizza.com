@@ -1,7 +1,7 @@
 # Strategia Correzione Errori PHPStan - SendEmailPage.php
 
-**Data**: 2025-12-23  
-**File**: `app/Filament/Clusters/Test/Pages/SendEmailPage.php`  
+**Data**: 2025-12-23
+**File**: `app/Filament/Clusters/Test/Pages/SendEmailPage.php`
 **Errori**: 4
 
 ## 🔍 Analisi Approfondita Errori
@@ -20,7 +20,7 @@ Filament\Facades\Filament\Schemas\Components\Component.
 $formSchema = $this->getEmailFormSchema();
 ```
 
-**Problema**: 
+**Problema**:
 - Import errato: `use Filament\Facades\Filament\Schemas\Components\Component;` (Line 7)
 - Namespace corretto: `Filament\Schemas\Components\Component`
 
@@ -30,8 +30,8 @@ $formSchema = $this->getEmailFormSchema();
 
 **Messaggio PHPStan**:
 ```
-Parameter #1 $components of method Filament\Schemas\Schema::components() expects 
-array<Illuminate\Contracts\Support\Htmlable|string>|Closure|Illuminate\Contracts\Support\Htmlable|string, 
+Parameter #1 $components of method Filament\Schemas\Schema::components() expects
+array<Illuminate\Contracts\Support\Htmlable|string>|Closure|Illuminate\Contracts\Support\Htmlable|string,
 array<string, Filament\Facades\Filament\Schemas\Components\Component> given.
 ```
 
@@ -40,7 +40,7 @@ array<string, Filament\Facades\Filament\Schemas\Components\Component> given.
 return $schema->components($formSchema)->model($this->getUser())->statePath('emailData');
 ```
 
-**Problema**: 
+**Problema**:
 - `$formSchema` ha tipo `array<string, Filament\Facades\Filament\Schemas\Components\Component>` (namespace errato)
 - Il metodo si aspetta un tipo diverso
 
@@ -70,7 +70,7 @@ public function getEmailFormSchema(): array
 
 **Messaggio PHPStan**:
 ```
-Method getEmailFormSchema() should return array<string, Filament\Facades\Filament\Schemas\Components\Component> 
+Method getEmailFormSchema() should return array<string, Filament\Facades\Filament\Schemas\Components\Component>
 but returns array<string, Filament\Schemas\Components\Section>.
 ```
 
@@ -85,7 +85,7 @@ return [
 ];
 ```
 
-**Problema**: 
+**Problema**:
 - Il metodo ritorna `array<string, Section>`
 - Il PHPDoc dice `array<string, Component>`
 - `Section` estende `Component`, quindi il tipo è corretto ma il PHPDoc è troppo specifico

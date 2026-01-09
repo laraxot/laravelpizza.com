@@ -88,4 +88,4 @@ class SecondCompletedOrderReactor implements Reactor {
 - Ogni modulo fa una cosa sola e bene.
 - La logica di business non conosce la persistenza.
 - Ogni cambiamento è un evento, ogni evento è una storia.
-- "Sii pragmatico: la semplicità vince sempre nelle demo e nei PoC". 
+- "Sii pragmatico: la semplicità vince sempre nelle demo e nei PoC".

@@ -32,7 +32,7 @@ if (isset($model->attribute)) {
 // PHPStan L10: isset() invece di property_exists() - funziona per magic properties
 ```
 
-**Pattern Applied**: 
+**Pattern Applied**:
 - Il file già utilizzava `isset()` correttamente
 - Nessuna correzione necessaria nel codice
 - Commento informativo mantenuto come best practice
@@ -46,7 +46,7 @@ if (isset($model->attribute)) {
 // PHPStan Level 10: isset() invece di property_exists() per Eloquent magic properties
 ```
 
-**Pattern Applied**: 
+**Pattern Applied**:
 - Il file già utilizzava `isset()` correttamente
 - Nessuna correzione necessaria nel codice
 - Commento informativo mantenuto come best practice
@@ -104,7 +104,7 @@ La regola fondamentale è stata consolidata nel knowledge base:
 
 ## Summary
 
-Il modulo UI è già compliant con la regola fondamentale anti-`property_exists()`. 
+Il modulo UI è già compliant con la regola fondamentale anti-`property_exists()`.
 Entrambi i file utilizzano correttamente `isset()` e includono documentazione informativa.
 
 **Status**: ✅ COMPLETATO - Nessun errore property_exists() trovato

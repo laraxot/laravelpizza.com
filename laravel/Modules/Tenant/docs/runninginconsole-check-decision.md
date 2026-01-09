@@ -1,7 +1,7 @@
 # Decisione: Rimozione runningInConsole Check in ResolveTenantConfigValueAction
 
-**Data**: 2025-01-22  
-**Metodologia**: Super Mucca - La Litigata Interna  
+**Data**: 2025-01-22
+**Metodologia**: Super Mucca - La Litigata Interna
 **File**: `app/Actions/Config/ResolveTenantConfigValueAction.php`
 
 ---
@@ -125,7 +125,7 @@ if (app()->runningInConsole()) {
    - Es: `php artisan tenant:config:get app.name --tenant=acme`
 
 2. **Queue Workers**: I queue workers potrebbero processare job tenant-specific
-   - Job potrebbero chiamare `TenantService::config()` 
+   - Job potrebbero chiamare `TenantService::config()`
    - Senza merge tenant, ottengono config base invece di tenant-specific
 
 3. **Testing**: Test potrebbero essere eseguiti in contesto console
@@ -167,7 +167,7 @@ Request/Command → GetTenantNameAction → Tenant Config Path → Merge Config 
 php artisan tenant:do-something --tenant=acme
 
 // Internamente chiama:
-TenantService::config('app.name') 
+TenantService::config('app.name')
   → ResolveTenantConfigValueAction::execute('app.name')
   → ❌ Con runningInConsole check: ritorna config base
   → ✅ Senza check: fa merge e ritorna config tenant
@@ -193,7 +193,7 @@ class ProcessTenantDataJob {
 public function test_tenant_config_override() {
     // Setup tenant config
     // ...
-    
+
     $value = TenantService::config('app.name');
     // ❌ Con check: test fallisce (ritorna base)
     // ✅ Senza check: test passa (ritorna tenant)
@@ -245,7 +245,7 @@ if (app()->runningInConsole()) {
 **Implementazione**:
 ```php
 public function execute(
-    string $key, 
+    string $key,
     string|int|array|null $_default = null,
     bool $skipTenantMerge = false
 ): float|int|string|array|null {
@@ -357,6 +357,6 @@ Il blocco `runningInConsole()` è stato rimosso. Il codice ora funziona corretta
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: ✅ Completato con successo

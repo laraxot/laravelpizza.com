@@ -58,10 +58,8 @@ Here's a complete example of a properly formatted schema:
 * [schema_conventions.md](docs/schema_conventions.md)
 * [schema_conventions.md](../../../Notify/docs/schema_conventions.md)
 
-
 ### Versione Incoming
 
 ```
 
 ---
-

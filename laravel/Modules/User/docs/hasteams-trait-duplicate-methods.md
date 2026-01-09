@@ -80,7 +80,7 @@ Nel trait `HasTeams` sono presenti diversi metodi con lo stesso nome ma implemen
 
 ---
 
-> Questo documento va aggiornato ogni volta che si interviene sul trait HasTeams o si modificano le convenzioni di progetto relative ai trait e alle relazioni tra modelli. 
+> Questo documento va aggiornato ogni volta che si interviene sul trait HasTeams o si modificano le convenzioni di progetto relative ai trait e alle relazioni tra modelli.
 
 ## Nota architetturale: TeamContract vs Team
 
@@ -89,4 +89,4 @@ Quando si implementano trait come HasTeams, è fondamentale tipizzare e accettar
 - facilità di test tramite mock/stub
 - manutenibilità e flessibilità futura
 
-Per la motivazione dettagliata, vedi la sezione dedicata in [Team.md](./Models/Team.md#motivazione-preferire-teamcontract-a-team-nei-trait-e-nei-metodi). 
+Per la motivazione dettagliata, vedi la sezione dedicata in [Team.md](./Models/Team.md#motivazione-preferire-teamcontract-a-team-nei-trait-e-nei-metodi).

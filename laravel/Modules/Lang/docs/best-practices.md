@@ -311,7 +311,7 @@ $text = $allTranslations[$locale]['key'] ?? 'key';
 public function test_translation_structure(): void
 {
     $translations = require lang_path('it/fields.php');
-    
+
     $this->assertIsArray($translations);
     $this->assertArrayHasKey('name', $translations);
     $this->assertArrayHasKey('label', $translations['name']);
@@ -423,7 +423,7 @@ return [
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025  
-**Versione**: 2.0.0  
-**Autore**: Team Laraxot  
+**Ultimo aggiornamento**: Gennaio 2025
+**Versione**: 2.0.0
+**Autore**: Team Laraxot
 **Mantenuto da**: Community Laraxot

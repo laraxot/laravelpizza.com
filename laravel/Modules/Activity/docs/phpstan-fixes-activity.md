@@ -39,4 +39,3 @@
 - **Builder specializzati**: per builder custom (es. `EloquentStoredEventQueryBuilder`), assegnare sempre a una variabile annotata prima di invocare `count()/where()`.
 
 Queste regole vanno seguite per tutte le future modifiche al modulo Activity e aggiornate in questa doc quando emergono nuovi pattern di correzione.
-

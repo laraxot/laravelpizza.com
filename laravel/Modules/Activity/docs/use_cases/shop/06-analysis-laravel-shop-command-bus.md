@@ -63,4 +63,4 @@ $commandBus->dispatch(new CreateOrderCommand($cartId));
 ## 11. Alternative
 - CRUD tradizionale: più semplice, meno auditabile.
 - Event sourcing: più complesso, ma audit, rollback, proiezioni flessibili.
-- Command bus: aggiunge disaccoppiamento e testabilità, ma aumenta la complessità. 
+- Command bus: aggiunge disaccoppiamento e testabilità, ma aumenta la complessità.

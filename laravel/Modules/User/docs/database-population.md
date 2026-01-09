@@ -299,8 +299,3 @@ echo "User roles: " . $user->roles()->count() . "\n";
 **Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 1.0
 **Autore**: Sistema Laraxot
-
-
-
-
-

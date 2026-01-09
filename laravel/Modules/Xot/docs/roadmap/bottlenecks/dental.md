@@ -20,14 +20,14 @@
            });
        }
    }
-   
+
    // Dopo
    class Odontogram {
        constructor() {
            this.offscreenCanvas = new OffscreenCanvas(800, 600);
            this.ctx = this.offscreenCanvas.getContext('2d');
        }
-   
+
        render() {
            // Render su offscreen canvas
            this.teeth.forEach(tooth => {
@@ -36,7 +36,7 @@
                    this.drawTreatments(tooth);
                }
            });
-   
+
            // Copy to main canvas
            this.mainCtx.drawImage(this.offscreenCanvas, 0, 0);
        }
@@ -49,7 +49,7 @@
    teeth.forEach(tooth => {
        tooth.element.addEventListener('click', this.handleClick);
    });
-   
+
    // Dopo
    this.canvas.addEventListener('click', (e) => {
        const tooth = this.findToothAtPosition(e.offsetX, e.offsetY);
@@ -71,13 +71,13 @@
                fn() => $this->calculateTeethStatus($patientId)
            );
        }
-   
+
        public function updateTooth($toothId, $status)
        {
            DB::transaction(function () use ($toothId, $status) {
                $tooth = Tooth::findOrFail($toothId);
                $tooth->update(['status' => $status]);
-               
+
                Cache::tags(['odontogram'])->flush();
                event(new ToothStatusUpdated($tooth));
            });
@@ -136,7 +136,7 @@
            const gl = canvas.getContext('webgl2');
            gl.getExtension('EXT_color_buffer_float');
            gl.getExtension('OES_texture_float_linear');
-           
+
            // Enable hardware acceleration
            this.renderer = new THREE.WebGLRenderer({
                canvas,
@@ -177,7 +177,7 @@
        {
            return $records
                ->chunk(100)
-               ->each(fn($chunk) => 
+               ->each(fn($chunk) =>
                    SyncDentalRecords::dispatch($chunk)
                );
        }
@@ -208,9 +208,8 @@
 ## Collegamenti
 - [WebGL Best Practices](../../performance/webgl.md)
 - [Integration Guidelines](../../integration/guidelines.md)
-- [3D Optimization Guide](../../3d/optimization.md) 
+- [3D Optimization Guide](../../3d/optimization.md)
 ## Collegamenti tra versioni di dental.md
 * [dental.md](docs/moduli/dental.md)
 * [dental.md](docs/roadmap/moduli/dental.md)
 * [dental.md](../../../Xot/docs/roadmap/bottlenecks/dental.md)
-

@@ -61,7 +61,7 @@ public static function table(Table $table): Table { ... }
 - Implements unnecessary getPages() and getRelations() methods ✗
 - These methods return standard/default values and should be removed
 
-#### ❌ StoredEventResource - NEEDS REFACTORING  
+#### ❌ StoredEventResource - NEEDS REFACTORING
 - Extends XotBaseResource ✓
 - Implements unnecessary getPages() and getRelations() methods ✗
 - These methods return standard/default values and should be removed

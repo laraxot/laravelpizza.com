@@ -1,7 +1,7 @@
 # PHPStan Level 10 - Pattern Riutilizzabili
 
-> **Modulo**: UI  
-> **Scopo**: Pattern pratici per raggiungere PHPStan Level 10 senza compromessi  
+> **Modulo**: UI
+> **Scopo**: Pattern pratici per raggiungere PHPStan Level 10 senza compromessi
 > **Filosofia**: DRY + KISS - Pattern semplici, riutilizzabili, focalizzati sul PERCHÉ
 
 ---
@@ -30,7 +30,7 @@ Ogni `@phpstan-ignore` è un potenziale bug nascosto. PHPStan Level 10 garantisc
 
 Ogni pattern è documentato con:
 - ❌ **Anti-pattern** (cosa NON fare)
-- ✅ **Pattern corretto** (cosa fare)  
+- ✅ **Pattern corretto** (cosa fare)
 - 🎯 **Perché** (business logic)
 - 💡 **Quando usarlo** (caso d'uso)
 
@@ -549,11 +549,11 @@ Cacheare risultati di metodi costosi:
 
 ---
 
-**File**: InlineDatePicker.php  
-**Miglioramenti**: 10  
-**@phpstan-ignore Rimossi**: 5  
-**Status**: ✅ Completed  
-**PHPStan Level**: 10 Ready  
+**File**: InlineDatePicker.php
+**Miglioramenti**: 10
+**@phpstan-ignore Rimossi**: 5
+**Status**: ✅ Completed
+**PHPStan Level**: 10 Ready
 
 **Prossimo**: Apply to other UI components
 
@@ -732,8 +732,8 @@ $regions = $model::select('regione')->...
 **Pattern Applicato**:
 ```php
 ✅ // Magic property access con isset()
-isset($comune->regione) && is_array($comune->regione) 
-    ? ($comune->regione['codice'] ?? null) 
+isset($comune->regione) && is_array($comune->regione)
+    ? ($comune->regione['codice'] ?? null)
     : null
 ```
 
@@ -795,11 +795,11 @@ isset($comune->regione) && is_array($comune->regione)
 public function someMethod(): void
 {
     $data = $this->getData();
-    
+
     if (! is_array($data)) {
         return;  // Early return
     }
-    
+
     // Ora $data è array, accesso sicuro
     $value = $data['key'] ?? null;
 }
@@ -808,10 +808,10 @@ public function someMethod(): void
 public function someMethod(): void
 {
     $data = $this->getData();
-    
+
     /** @phpstan-ignore offsetAccess.nonOffsetAccessible */
     $value = $data['key'];
-    
+
     if (is_array($data)) {  // ⚠️ Troppo tardi
         // ...
     }
@@ -855,7 +855,7 @@ $value = $model->property['key'] ?? null;
 ### Immediate (Today) ✅
 
 1. ✅ InlineDatePicker.php - 10 miglioramenti
-2. ✅ LocationSelector.php - 8 miglioramenti  
+2. ✅ LocationSelector.php - 8 miglioramenti
 3. [ ] InteractiveMap.php - MapService @phpstan-ignore
 4. [ ] TreeField.php, PasswordStrengthField.php - property.defaultValue
 5. [ ] OpeningHoursRule.php - array access
@@ -881,7 +881,7 @@ $value = $model->property['key'] ?? null;
 ❌ public function validate(string $_attribute, mixed $value, Closure $fail): void
 {
     $days = app(GetDaysMappingAction::class)->execute();
-    
+
     // ...
     foreach ($days as $dayKey => $dayLabel) {
         /**@phpstan-ignore-next-line */
@@ -900,7 +900,7 @@ $value = $model->property['key'] ?? null;
     }
 
     $days = app(GetDaysMappingAction::class)->execute();
-    
+
     // ...
     foreach ($days as $dayKey => $dayLabel) {
         // PHPStan L10: $value è array dopo type check sopra
@@ -1016,7 +1016,7 @@ public function validate(string $_attribute, mixed $value, Closure $fail): void
     if (! is_array($value)) {
         return;  // Early return se non array
     }
-    
+
     // Ora $value è garantito array
     foreach ($value as $key => $item) {
         // Safe access
@@ -1070,7 +1070,7 @@ protected string $property = 'custom-value';
 ### Immediate (Today) ✅
 
 1. ✅ InlineDatePicker.php - 10 miglioramenti
-2. ✅ LocationSelector.php - 8 miglioramenti  
+2. ✅ LocationSelector.php - 8 miglioramenti
 3. ✅ OpeningHoursRule.php - 1 miglioramento
 4. ✅ RadioCollection.php - 1 miglioramento
 5. ✅ TreeField.php - 1 miglioramento
@@ -1087,10 +1087,10 @@ protected string $property = 'custom-value';
 
 ---
 
-**Files**: InlineDatePicker, LocationSelector, OpeningHoursRule, RadioCollection, TreeField, PasswordStrengthField  
-**Miglioramenti Totali**: 22 (era 18)  
-**@phpstan-ignore Rimossi**: 17 (era 13)  
-**Status**: ✅ 6/7 Files Completed  
-**PHPStan Level**: 10 Ready  
+**Files**: InlineDatePicker, LocationSelector, OpeningHoursRule, RadioCollection, TreeField, PasswordStrengthField
+**Miglioramenti Totali**: 22 (era 18)
+**@phpstan-ignore Rimossi**: 17 (era 13)
+**Status**: ✅ 6/7 Files Completed
+**PHPStan Level**: 10 Ready
 
 **Prossimo**: InteractiveMap.php (ultimo con @phpstan-ignore rilevanti)

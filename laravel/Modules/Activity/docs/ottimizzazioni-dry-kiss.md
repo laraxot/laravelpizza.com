@@ -226,7 +226,7 @@ Schema::create('activity_events', function (Blueprint $table) {
     $table->string('aggregate_id');
     $table->json('payload');
     $table->timestamps();
-    
+
     $table->index(['event_type', 'aggregate_type', 'aggregate_id']);
 });
 ```
@@ -300,7 +300,7 @@ protected function registerConfig(): void
     $this->publishes([
         module_path($this->name, 'config/config.php') => config_path('activity.php'),
     ], 'config');
-    
+
     $this->mergeConfigFrom(
         module_path($this->name, 'config/config.php'), 'activity'
     );

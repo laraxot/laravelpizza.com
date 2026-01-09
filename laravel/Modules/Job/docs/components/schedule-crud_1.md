@@ -59,4 +59,4 @@ class MyComponent extends Component
 }
 ```
 
-[Torna alla documentazione Job](/docs/modules/module_job.md#components) 
+[Torna alla documentazione Job](/docs/modules/module_job.md#components)

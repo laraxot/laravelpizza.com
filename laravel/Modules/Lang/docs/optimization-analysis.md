@@ -29,24 +29,24 @@ class TranslationService
     public function getTranslation(string $key, string $locale = null): string
     {
         $locale = $locale ?? app()->getLocale();
-        
+
         return Cache::remember(
             "translation_{$locale}_{$key}",
             3600,
             fn() => __($key, [], $locale)
         );
     }
-    
+
     public function validateTranslationStructure(array $translations): array
     {
         $errors = [];
-        
+
         foreach ($translations as $key => $value) {
             if (is_string($value) && !$this->isExpandedStructure($value)) {
                 $errors[] = "Key '{$key}' should use expanded structure";
             }
         }
-        
+
         return $errors;
     }
 }
@@ -60,4 +60,3 @@ class TranslationService
 
 ---
 *Stato: 🟡 Funzionale ma Necessita Standardizzazione*
-

@@ -24,11 +24,11 @@ class BackupService
             'size' => 0,
             'checksum' => null
         ]);
-        
+
         $backup->save();
-        
+
         dispatch(new CreateBackupJob($backup, $options));
-        
+
         return $backup;
     }
 
@@ -39,7 +39,7 @@ class BackupService
         }
 
         dispatch(new RestoreBackupJob($backup));
-        
+
         return true;
     }
 }
@@ -100,4 +100,4 @@ class BackupService
 ## Collegamenti
 - [Architettura](../architecture.md)
 - [Sviluppo](../development.md)
-- [Pacchetti](../packages.md) 
+- [Pacchetti](../packages.md)

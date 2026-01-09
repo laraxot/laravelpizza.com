@@ -3,7 +3,7 @@
 ## Panoramica
 Questo documento registra le correzioni PHPStan implementate nel modulo Lang.
 
-**Ultimo aggiornamento**: 2025-01-27  
+**Ultimo aggiornamento**: 2025-01-27
 **Status PHPStan Level 10**: ✅ **PASSED** - 0 errori
 
 ## Correzioni Implementate
@@ -23,7 +23,7 @@ use Modules\Lang\Database\Factories\PostFactory; // Riga 14 - DUPLICATO
 use Modules\Lang\Database\Factories\PostFactory;
 ```
 
-**File**: `app/Models/Post.php`  
+**File**: `app/Models/Post.php`
 **Risultato**: ✅ PHPStan Level 10 passa senza errori
 
 ### ConvertTranslations Command
@@ -97,4 +97,4 @@ if (is_array($value)) {
 1. **Type Hints**: Utilizzare sempre type hints espliciti
 2. **Mixed Types**: Gestire sempre i tipi `mixed` con type casting
 3. **Assertions**: Validare i tipi con assertions appropriate
-4. **Documentation**: Documentare sempre i parametri e return types 
+4. **Documentation**: Documentare sempre i parametri e return types

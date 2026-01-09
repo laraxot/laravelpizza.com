@@ -39,4 +39,4 @@ e questo progetto aderisce al [Semantic Versioning](https://semver.org/spec/v2.0
 - Documentazione base del modulo
 - Widget per il login e la registrazione
 - Gestione delle autenticazioni
-- Documentazione base del modulo 
+- Documentazione base del modulo

@@ -40,4 +40,4 @@
 - **Traditional**: per casi semplici e prototipi.
 - **Projectors**: per aggiungere audit/reporting senza cambiare la logica di business.
 - **Aggregates**: per sistemi mission critical, banking, compliance.
-- **Eventsauce**: per chi vuole uno standard ES puro e interoperabilità. 
+- **Eventsauce**: per chi vuole uno standard ES puro e interoperabilità.

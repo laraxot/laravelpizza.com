@@ -42,7 +42,7 @@ Larabank Traditional è un'implementazione di un sistema bancario che utilizza u
    ```php
    DB::transaction(function () use ($account, $amount) {
        $account->increment('balance', $amount);
-       
+
        $account->transactions()->create([
            'type' => 'deposit',
            'amount' => $amount,
@@ -57,9 +57,9 @@ Larabank Traditional è un'implementazione di un sistema bancario che utilizza u
        if ($account->balance < $amount) {
            throw new InsufficientFundsException();
        }
-       
+
        $account->decrement('balance', $amount);
-       
+
        $account->transactions()->create([
            'type' => 'withdrawal',
            'amount' => $amount,
@@ -74,17 +74,17 @@ Larabank Traditional è un'implementazione di un sistema bancario che utilizza u
        if ($source->balance < $amount) {
            throw new InsufficientFundsException();
        }
-       
+
        $source->decrement('balance', $amount);
        $destination->increment('balance', $amount);
-       
+
        $source->transactions()->create([
            'type' => 'transfer_out',
            'amount' => $amount,
            'balance_after' => $source->balance - $amount,
            'related_account_id' => $destination->id,
        ]);
-       
+
        $destination->transactions()->create([
            'type' => 'transfer_in',
            'amount' => $amount,
@@ -168,7 +168,7 @@ class BankingService
     {
         return DB::transaction(function () use ($account, $amount, $description) {
             $account->increment('balance', $amount);
-            
+
             $transaction = $account->transactions()->create([
                 'type' => 'deposit',
                 'amount' => $amount,
@@ -198,12 +198,12 @@ class BankingServiceTest extends TestCase
     {
         $user = User::factory()->create();
         $service = new BankingService();
-        
+
         $account = $service->createAccount($user, [
             'type' => 'savings',
             'currency' => 'USD',
         ]);
-        
+
         $this->assertInstanceOf(Account::class, $account);
         $this->assertEquals(0, $account->balance);
         $this->assertEquals('savings', $account->type);
@@ -215,9 +215,9 @@ class BankingServiceTest extends TestCase
     {
         $account = Account::factory()->create(['balance' => 100]);
         $service = new BankingService();
-        
+
         $transaction = $service->deposit($account, 50, 'Deposito test');
-        
+
         $this->assertEquals(150, $account->fresh()->balance);
         $this->assertEquals('deposit', $transaction->type);
         $this->assertEquals(50, $transaction->amount);

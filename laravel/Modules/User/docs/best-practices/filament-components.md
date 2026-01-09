@@ -87,11 +87,10 @@ composer show filament/spatie-laravel-media-library-plugin
 ## Risorse Utili
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Componenti Blade](https://laravel.com/docs/blade)
-- [TailwindCSS](https://tailwindcss.com/docs) 
+- [TailwindCSS](https://tailwindcss.com/docs)
 
 ## Collegamenti tra versioni di filament-components.md
 * [filament-components.md](../../../User/docs/best-practices/filament-components.md)
 * [filament-components.md](../../../Cms/docs/best-practices/filament-components.md)
 * [filament-components.md](../../../Cms/docs/filament-components.md)
 * [filament-components.md](laravel/docs/rules/filament-components.md)
-

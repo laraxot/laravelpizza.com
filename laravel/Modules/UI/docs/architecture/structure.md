@@ -9,7 +9,7 @@ Modules\\UI\\Database\\Factories
 Modules\\UI\\Database\\Seeders
 - **Pacchetto Composer**: laraxot/module_ui_fila3
 Marco Sottana
-- **Dipendenze**: owenvoke/blade-fontawesome * repositories type path url ../User type path url ../Tenant type path url ../Xot scripts post-autoload-dump1 @php vendor/bin/testbench package:discover --ansi 
+- **Dipendenze**: owenvoke/blade-fontawesome * repositories type path url ../User type path url ../Tenant type path url ../Xot scripts post-autoload-dump1 @php vendor/bin/testbench package:discover --ansi
 - **Totale file PHP**: 330
 - **Totale classi/interfacce**: 56
 
@@ -499,7 +499,6 @@ tests_old
 - [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/docs/phpstan/)
 
-
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
 * [structure.md](../../../Gdpr/docs/structure.md)
@@ -517,4 +516,3 @@ tests_old
 * [structure.md](../../../Cms/docs/structure.md)
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
-

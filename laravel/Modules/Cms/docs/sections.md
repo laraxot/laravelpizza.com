@@ -1,4 +1,4 @@
-# Sezioni 
+# Sezioni
 
 ## Indice
 1. [Introduzione](#introduzione)
@@ -47,7 +47,7 @@ Le sezioni sono renderizzate usando componenti Blade in `/laravel/Themes/One/res
 <!-- /components/sections/header.blade.php -->
 <section {{ $attributes }}>
     @foreach($blocks as $block)
-        <x-dynamic-component 
+        <x-dynamic-component
             :component="'blocks.'.$block['type']"
             :data="$block['data']"
         />

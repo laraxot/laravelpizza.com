@@ -1,14 +1,14 @@
 # Bugfix: HasFactory newFactory() Signature Compatibility
 
-**Data Fix**: 11 Novembre 2025  
+**Data Fix**: 11 Novembre 2025
 **Status**: ✅ RISOLTO
 
 ## Problema
 
 **Errore Fatal**:
 ```
-Declaration of Illuminate\Database\Eloquent\Factories\HasFactory::newFactory() 
-must be compatible with Modules\Xot\Models\BaseModel::newFactory(): 
+Declaration of Illuminate\Database\Eloquent\Factories\HasFactory::newFactory()
+must be compatible with Modules\Xot\Models\BaseModel::newFactory():
 Illuminate\Database\Eloquent\Factories\Factory
 ```
 
@@ -92,7 +92,7 @@ abstract class BaseModel extends Model
    ```php
    // ❌ PRIMA
    protected static function newFactory(): Factory
-   
+
    // ✅ DOPO
    protected static function newFactory(): ?Factory
    ```
@@ -158,4 +158,3 @@ class MyModel extends BaseModel
 - [Laravel 12 HasFactory Trait](https://github.com/laravel/framework/blob/12.x/src/Illuminate/Database/Eloquent/Factories/HasFactory.php)
 - [PHP 8.3 Method Signature Compatibility](https://www.php.net/manual/en/language.oop5.basic.php)
 - [Xot BaseModel Pattern](../../docs/traits/hasxotfactory.md)
-

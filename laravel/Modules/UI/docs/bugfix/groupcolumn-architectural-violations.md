@@ -1,6 +1,6 @@
 # Bugfix: GroupColumn Architectural Violations
 
-**Data Fix**: 11 Novembre 2025  
+**Data Fix**: 11 Novembre 2025
 **Status**: ✅ RISOLTO
 
 ## Problema
@@ -71,7 +71,7 @@ Questo garantisce:
 public array $form = [];
 ```
 
-**Problema**: 
+**Problema**:
 - Dichiarata ma MAI usata
 - Solo il parametro `$form` del metodo viene usato
 - Codice morto aumenta complessità

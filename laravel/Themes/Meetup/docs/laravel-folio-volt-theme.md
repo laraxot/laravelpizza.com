@@ -89,24 +89,24 @@ $categories = computed(fn () => EventCategory::where('is_active', true)
                 <h1 class="text-4xl font-bold text-white mb-4">Upcoming Events</h1>
                 <p class="text-xl text-gray-400">Join fellow Laravel developers for pizza and knowledge sharing</p>
             </div>
-            
+
             <!-- Category Filters -->
             <div class="flex flex-wrap justify-center gap-2 mb-8">
                 @foreach($this->categories as $category)
-                    <span class="px-4 py-2 rounded-full text-sm font-medium" 
+                    <span class="px-4 py-2 rounded-full text-sm font-medium"
                           style="background-color: {{ $category->color }}20; color: {{ $category->color }}">
                         {{ $category->name }}
                     </span>
                 @endforeach
             </div>
-            
+
             <!-- Events Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @foreach($this->events as $event)
                     <x-event-card :event="$event" />
                 @endforeach
             </div>
-            
+
             <!-- Pagination -->
             <div class="mt-8">
                 {{ $this->events->links() }}
@@ -134,12 +134,12 @@ new class extends Component {
         'guest_name' => '',
         'guest_email' => '',
     ];
-    
+
     public function mount(Event $event)
     {
         $this->event = $event;
     }
-    
+
     public function register()
     {
         if (!Auth::check()) {
@@ -147,12 +147,12 @@ new class extends Component {
                 'redirect' => request()->url()
             ]));
         }
-        
+
         $this->validate([
             'registrationData.num_guests' => 'required|integer|min:1|max:10',
             'registrationData.special_requests' => 'nullable|string|max:500',
         ]);
-        
+
         $registration = EventRegistration::create([
             'event_id' => $this->event->id,
             'user_id' => Auth::id(),
@@ -160,19 +160,19 @@ new class extends Component {
             'special_requests' => $this->registrationData['special_requests'],
             'status' => 'confirmed',
         ]);
-        
-        $this->dispatch('registration-success', 
+
+        $this->dispatch('registration-success',
             message: 'Successfully registered for the event!',
             eventId: $this->event->id
         );
     }
-    
+
     public function getIsRegisteredProperty()
     {
         if (!Auth::check()) {
             return false;
         }
-        
+
         return EventRegistration::where('event_id', $this->event->id)
             ->where('user_id', Auth::id())
             ->exists();
@@ -181,7 +181,7 @@ new class extends Component {
 
 <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
     <h3 class="text-xl font-bold text-white mb-4">Register for Event</h3>
-    
+
     @if($this->isRegistered)
         <div class="bg-green-500/10 border border-green-500 text-green-500 p-4 rounded-lg">
             You're already registered for this event!
@@ -190,7 +190,7 @@ new class extends Component {
         <form wire:submit="register" class="space-y-4">
             <div>
                 <label class="block text-gray-400 mb-2">Number of Guests</label>
-                <select 
+                <select
                     wire:model="registrationData.num_guests"
                     class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-white"
                 >
@@ -199,18 +199,18 @@ new class extends Component {
                     @endfor
                 </select>
             </div>
-            
+
             <div>
                 <label class="block text-gray-400 mb-2">Special Requests</label>
-                <textarea 
+                <textarea
                     wire:model="registrationData.special_requests"
                     class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-white"
                     rows="3"
                     placeholder="Dietary restrictions, accessibility needs, etc."
                 ></textarea>
             </div>
-            
-            <button 
+
+            <button
                 type="submit"
                 class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"
             >
@@ -236,18 +236,18 @@ new class extends Component {
     public $messages = [];
     public $newMessage = '';
     public $channel = 'general';
-    
+
     public function mount()
     {
         $this->loadMessages();
     }
-    
+
     #[On('new-message')]
     public function refreshMessages()
     {
         $this->loadMessages();
     }
-    
+
     public function loadMessages()
     {
         $this->messages = ChatMessage::where('channel', $this->channel)
@@ -258,22 +258,22 @@ new class extends Component {
             ->reverse()
             ->toArray();
     }
-    
+
     public function sendMessage()
     {
         if (empty(trim($this->newMessage))) {
             return;
         }
-        
+
         $message = ChatMessage::create([
             'user_id' => Auth::id(),
             'channel' => $this->channel,
             'content' => $this->newMessage,
         ]);
-        
+
         $this->newMessage = '';
-        
-        $this->dispatch('new-message', 
+
+        $this->dispatch('new-message',
             message: $message->content,
             user: $message->user->name,
             time: $message->created_at->format('H:i')
@@ -286,7 +286,7 @@ new class extends Component {
     <div class="p-4 border-b border-slate-700">
         <h3 class="text-lg font-bold text-white">#{{ $channel }}</h3>
     </div>
-    
+
     <!-- Messages Container -->
     <div wire:poll.5s="loadMessages" class="flex-1 overflow-y-auto p-4 space-y-4">
         @foreach($this->messages as $message)
@@ -304,18 +304,18 @@ new class extends Component {
             </div>
         @endforeach
     </div>
-    
+
     <!-- Message Input -->
     <div class="p-4 border-t border-slate-700">
         <div class="flex space-x-2">
-            <input 
+            <input
                 wire:model="newMessage"
                 type="text"
                 placeholder="Type your message..."
                 class="flex-1 bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-white"
                 wire:keydown.enter="sendMessage"
             />
-            <button 
+            <button
                 wire:click="sendMessage"
                 class="bg-red-600 hover:bg-red-700 text-white px-4 rounded-lg"
             >
@@ -335,7 +335,7 @@ new class extends Component {
 <x-layout>
     <div class="container mx-auto px-4 py-8">
         <!-- Event details content -->
-        
+
         <!-- Lazy load the registration component -->
         <div class="mt-8">
             <livewire:event-registration :event="$event" lazy />
@@ -446,7 +446,7 @@ export default defineConfig({
 public function test_events_page_loads()
 {
     $response = $this->get('/events');
-    
+
     $response->assertSuccessful();
     $response->assertSeeLivewire('event-registration');
 }
@@ -487,7 +487,7 @@ Components check user permissions:
 public function register()
 {
     abort_unless(Auth::check(), 403);
-    
+
     // Additional authorization checks
     if ($this->event->registration_deadline < now()) {
         throw new \Exception('Registration deadline has passed');
@@ -528,5 +528,5 @@ The architecture follows DRY, KISS, SOLID, and Laraxot principles, ensuring main
 
 ---
 
-**Document Version**: 1.0  
+**Document Version**: 1.0
 **Last Updated**: November 28, 2025

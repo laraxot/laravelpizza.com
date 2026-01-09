@@ -310,7 +310,7 @@ class MjmlService
         try {
             $mjml = $this->convertToMjml($template);
             $result = $this->mjml->render($mjml, $this->options);
-            
+
             return [
                 'html' => $result->html,
                 'errors' => $result->errors
@@ -598,11 +598,11 @@ class SendAction extends Action
 <body>
     <div class="container">
         @include('notify::partials.header')
-        
+
         <div class="content">
             {{ $slot }}
         </div>
-        
+
         @include('notify::partials.footer')
     </div>
 </body>
@@ -778,4 +778,4 @@ class TemplateControllerTest extends TestCase
 - [Laravel Mail Documentation](https://laravel.com/project_docs/mail)
 - [MJML Documentation](https://mjml.io/documentation/)
 - [Mailgun API](https://documentation.mailgun.com/en/latest/api_reference.html)
-- [Filament Documentation](https://filamentphp.com/docs) 
+- [Filament Documentation](https://filamentphp.com/docs)

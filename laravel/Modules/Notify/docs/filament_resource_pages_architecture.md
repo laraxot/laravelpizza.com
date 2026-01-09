@@ -1,4 +1,4 @@
-# Architettura delle Pagine di Risorse Filament 
+# Architettura delle Pagine di Risorse Filament
 
 ## Regola Fondamentale
 

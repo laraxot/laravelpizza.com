@@ -1,7 +1,7 @@
 # Strategia Correzione Errori PHPStan - RadioBadge.php
 
-**Data**: 2025-12-23  
-**File**: `app/Filament/Forms/Components/RadioBadge.php`  
+**Data**: 2025-12-23
+**File**: `app/Filament/Forms/Components/RadioBadge.php`
 **Errori**: 3
 
 ## 🔍 Analisi Approfondita Errori
@@ -61,7 +61,7 @@ public function getIconForOption(string $value): ?string
 }
 ```
 
-**Problema**: 
+**Problema**:
 - `getEnumValue()` ritorna `?BackedEnum` (tipo base)
 - PHPStan non sa che l'enum implementa `HasColor` e `HasIcon`
 - Anche se c'è una verifica runtime (line 43), PHPStan non può inferire il tipo

@@ -47,7 +47,7 @@ Il ServiceProvider deve definire le seguenti proprietà:
    ```php
    public string $name = 'NomeModulo';
    ```
-   
+
    > **IMPORTANTE**: La stessa proprietà deve essere definita anche nel `RouteServiceProvider` del modulo
 
 2. **protected string $module_dir**: Directory del modulo (default: `__DIR__`)
@@ -109,11 +109,11 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 
 class BlogServiceProvider extends XotBaseServiceProvider {
     public string $name = 'Blog';
-    
+
     protected string $module_dir = __DIR__;
-    
+
     protected string $module_ns = __NAMESPACE__;
-    
+
     // Metodi personalizzati se necessario
     public function registerConfig(): void
     {

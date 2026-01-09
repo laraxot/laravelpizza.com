@@ -18,7 +18,7 @@ class LogoutPage
         auth()->logout();
         session()->invalidate();
         session()->regenerateToken();
-        
+
         return redirect()->route('home');
     }
 }
@@ -44,7 +44,7 @@ class LogoutPage
             </div>
 
             <div class="mt-8">
-                <a href="{{ route('home') }}" 
+                <a href="{{ route('home') }}"
                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     {{ __('Torna alla Home') }}
                 </a>
@@ -115,4 +115,4 @@ class LogoutPage
 
 - [Documentazione Volt](./VOLT_LOGOUT.md)
 - [Best Practices Routing](./ROUTING_BEST_PRACTICES.md)
-- [Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md) 
+- [Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md)

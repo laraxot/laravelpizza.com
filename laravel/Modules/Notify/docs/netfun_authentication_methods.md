@@ -44,7 +44,7 @@ public function send($notifiable, Notification $notification)
 {
     // Ottieni la configurazione
     $config = config('sms.drivers.netfun');
-    
+
     // Determina il metodo di autenticazione
     $authParams = [];
     if (isset($config['api_key'])) {
@@ -55,10 +55,10 @@ public function send($notifiable, Notification $notification)
     } else {
         throw new \Exception('Configurazione Netfun incompleta: mancano credenziali di autenticazione');
     }
-    
+
     // Determina l'endpoint
     $endpoint = $config['endpoint'] ?? $config['api_url'] ?? 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json';
-    
+
     // Resto del codice...
 }
 ```

@@ -64,7 +64,7 @@ Il modello `Media.php` contiene diverse proprietà documentate con tipo `mixed`:
    ```php
    // Instanziamo il formato prima di usarlo
    $formatInstance = new $format();
-   
+
    // @phpstan-ignore-next-line
    FFMpeg::fromDisk($data->disk)
        ->open($data->file)

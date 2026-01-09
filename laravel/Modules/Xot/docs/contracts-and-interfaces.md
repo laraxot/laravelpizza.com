@@ -63,7 +63,7 @@ interface UserContract extends
 }
 ```
 
-> **Update 17-11-2025**  
+> **Update 17-11-2025**
 > La PHPDoc di `UserContract` è stata estesa con:
 > - `@property TeamContract|null $currentTeam`
 > - `@property \Illuminate\Database\Eloquent\Collection<int, UserRole> $roles`

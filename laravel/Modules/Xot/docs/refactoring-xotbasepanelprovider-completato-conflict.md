@@ -31,7 +31,7 @@
 ### **Metodi di Discovery**
 ```php
 protected function shouldDiscoverResources(): bool
-protected function shouldDiscoverPages(): bool  
+protected function shouldDiscoverPages(): bool
 protected function shouldDiscoverWidgets(): bool
 protected function shouldDiscoverClusters(): bool
 ```
@@ -109,7 +109,7 @@ protected function shouldDiscoverClusters(): bool
 
 ### ✅ **PRINCIPI RISPETTATI**
 - **DRY**: ✅ Nessuna duplicazione
-- **KISS**: ✅ Logica semplice e chiara  
+- **KISS**: ✅ Logica semplice e chiara
 - **SOLID**: ✅ Responsabilità singole
 - **ROBUST**: ✅ Gestione errori e fallback
 
@@ -135,6 +135,6 @@ protected function shouldDiscoverClusters(): bool
 
 **REFACTORING COMPLETATO CON SUCCESSO** ✅
 
-*Data: 2025-09-18*  
-*Principi applicati: DRY, KISS, SOLID, ROBUST*  
+*Data: 2025-09-18*
+*Principi applicati: DRY, KISS, SOLID, ROBUST*
 *Risultato: Codice pulito, manutenibile e robusto*

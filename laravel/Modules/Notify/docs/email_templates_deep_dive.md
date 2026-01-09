@@ -81,7 +81,7 @@ Link: https://filamentphp.com/plugins/visual-builder-email-templates
 | Beefree    | Editor email WYSIWYG                    | gratuito, integrazione API       | limite feature free          |
 | Unlayer    | Builder integrabile                     | API flessibile                   | documentazione frammentaria  |
 | Mailersend | SMTP + gestione template               | analytics, A/B testing           | costo                        |
-| Mailjet    | SMTP + template manager                | UI ricca                         | lock-in 
+| Mailjet    | SMTP + template manager                | UI ricca                         | lock-in
 | Mailtrap   | sandbox test email                     | zero invii reali, easy setup     | non per produzione          |
 
 ---

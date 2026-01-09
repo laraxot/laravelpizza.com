@@ -19,7 +19,7 @@ use Modules\Xot\Filament\Traits\TransTrait;
 enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 {
     use TransTrait;
-    
+
     case LIST = 'list';
     case GRID = 'grid';
 
@@ -136,7 +136,7 @@ use Modules\Xot\Filament\Traits\TransTrait;
 enum MyEnum: string implements HasColor, HasIcon, HasLabel
 {
     use TransTrait;
-    
+
     case VALUE1 = 'value1';
     case VALUE2 = 'value2';
 }
@@ -288,11 +288,11 @@ rules:
 
 ## Memoria Permanente
 
-**RICORDA SEMPRE**: 
+**RICORDA SEMPRE**:
 - SEMPRE `TransTrait` negli enum
 - SEMPRE `transClass()` per traduzioni
 - MAI `match()` per traduzioni
 - SEMPRE struttura espansa nelle traduzioni
 - SEMPRE sincronizzazione IT/EN/DE
 
-*Ultimo aggiornamento: 2025-01-06* 
+*Ultimo aggiornamento: 2025-01-06*

@@ -1,7 +1,7 @@
 # DRY & KISS Analysis - Modulo Tenant
 
-**Data:** 15 Ottobre 2025  
-**DRY Score:** ✅ 94%  
+**Data:** 15 Ottobre 2025
+**DRY Score:** ✅ 94%
 **KISS Score:** ✅ 90%
 
 ## ✅ Stato Attuale
@@ -11,7 +11,7 @@
 abstract class BaseModel extends XotBaseModel
 {
     protected $connection = 'tenant';
-    
+
     protected function casts(): array {
         return array_merge(parent::casts(), [
             'verified_at' => 'datetime',
@@ -20,7 +20,7 @@ abstract class BaseModel extends XotBaseModel
 }
 ```
 
-**Righe:** 13  
+**Righe:** 13
 **DRY Level:** ✅ 94%
 
 ## 🎯 Raccomandazioni
@@ -30,6 +30,3 @@ abstract class BaseModel extends XotBaseModel
 
 ---
 [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
-
-
-

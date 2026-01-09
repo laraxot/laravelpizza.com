@@ -35,7 +35,7 @@ Il problema è che i tag PHPDoc facevano riferimento a una classe `Builder` nel 
 
 ### Versione HEAD
 
-Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
+Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`.
 ## Collegamenti tra versioni di phpstan_fixes.md
 * [phpstan_fixes.md](../../../Xot/docs/phpstan/phpstan_fixes.md)
 * [phpstan_fixes.md](../../../Xot/docs/phpstan_fixes.md)
@@ -43,10 +43,8 @@ Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` ut
 * [phpstan_fixes.md](../../../UI/docs/phpstan_fixes.md)
 * [phpstan_fixes.md](../../../Media/docs/phpstan_fixes.md)
 
-
 ### Versione Incoming
 
-Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
+Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`.
 
 ---
-

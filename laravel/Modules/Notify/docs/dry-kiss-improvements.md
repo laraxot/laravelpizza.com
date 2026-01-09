@@ -46,7 +46,7 @@ return new class extends XotBaseMigration {
         $this->tableCreate(function (Blueprint $table): void {
             // ...
         });
-        
+
         $this->tableUpdate(function (Blueprint $table): void {
             // ...
         });
@@ -93,7 +93,7 @@ trait NotifyMigrationHelpers
             $definition($table);
         }
     }
-    
+
     /**
      * Add standard contact columns using ContactTypeEnum
      */
@@ -101,7 +101,7 @@ trait NotifyMigrationHelpers
     {
         ContactTypeEnum::columns($table);
     }
-    
+
     /**
      * Add standard notify fields
      */
@@ -112,7 +112,7 @@ trait NotifyMigrationHelpers
         $this->safeAddColumn($table, 'sent_at', fn($t) => $t->timestamp()->nullable());
         $this->safeAddColumn($table, 'read_at', fn($t) => $t->timestamp()->nullable());
     }
-    
+
     /**
      * Add email template specific columns
      */
@@ -140,22 +140,22 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 abstract class NotifyBaseMigration extends XotBaseMigration
 {
     use NotifyMigrationHelpers;
-    
+
     /**
      * Standard notify table structure
      */
     protected function createStandardNotifyTable(Blueprint $table, array $additionalColumns = []): void
     {
         $table->id();
-        
+
         // Add standard columns
         $this->addStandardNotifyColumns($table);
-        
+
         // Add additional columns
         foreach ($additionalColumns as $column => $definition) {
             $this->safeAddColumn($table, $column, $definition);
         }
-        
+
         $this->addTimestampsWithUsers($table);
     }
 }
@@ -197,7 +197,7 @@ return new class extends NotifyBaseMigration {
                 'subject' => fn($t) => $t->string(),
             ]);
         });
-        
+
         $this->tableUpdate(function (Blueprint $table): void {
             // Additional updates if needed
             $this->updateTimestamps($table);
@@ -213,10 +213,10 @@ return new class extends NotifyBaseMigration {
 $this->tableCreate(function (Blueprint $table): void {
     $table->id();
     $table->string('name');
-    
+
     // Add all contact columns automatically
     $this->addContactColumns($table);
-    
+
     $this->addTimestampsWithUsers($table);
 });
 ```

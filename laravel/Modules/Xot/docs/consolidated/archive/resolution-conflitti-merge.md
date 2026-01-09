@@ -52,7 +52,7 @@ public function execute(string $table, ?string $connectionName = null): array
 
     // Use default connection if none is provided
     Assert::string($connectionName = $connectionName ?? config('database.default'));
-    
+
     // Resto del metodo...
 }
 ```
@@ -136,7 +136,6 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 4. La gestione corretta delle eccezioni
 5. La compatibilità con PHPStan a livello massimo
 
-
 ## Prevenzione di Problemi Futuri
 
 Per prevenire problemi simili in futuro, si raccomanda di:
@@ -150,4 +149,4 @@ Per prevenire problemi simili in futuro, si raccomanda di:
 
 ## Conclusioni
 
-La risoluzione dei conflitti di merge ha ripristinato la corretta funzionalità delle classi nel modulo Xot, permettendo l'analisi statica con PHPStan e garantendo il corretto funzionamento dell'applicazione. Le soluzioni implementate hanno mantenuto la coerenza del codice e migliorato la robustezza delle classi interessate. 
+La risoluzione dei conflitti di merge ha ripristinato la corretta funzionalità delle classi nel modulo Xot, permettendo l'analisi statica con PHPStan e garantendo il corretto funzionamento dell'applicazione. Le soluzioni implementate hanno mantenuto la coerenza del codice e migliorato la robustezza delle classi interessate.

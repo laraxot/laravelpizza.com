@@ -27,10 +27,10 @@ use Modules\Xot\Models\Traits\RelationX;
 class Permission extends SpatiePermission
 {
     use RelationX;
-    
+
     /** @var string */
     protected $connection = 'user';
-    
+
     // Solo aggiunte specifiche del modulo
     // MAI sovrascrivere metodi core Spatie
 }
@@ -145,4 +145,3 @@ use RelationX;  // ✅ OK - Enhancement Laraxot
 ---
 
 *Pattern verificato e documentato: 2025-01-XX*
-

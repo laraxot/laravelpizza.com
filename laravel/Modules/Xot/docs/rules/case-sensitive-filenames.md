@@ -1,7 +1,7 @@
 # 📋 **Regola: Nomi File Case-Sensitive**
 
-**Data**: 11 Novembre 2025  
-**Categoria**: Convenzioni di Codice  
+**Data**: 11 Novembre 2025
+**Categoria**: Convenzioni di Codice
 **Priorità**: CRITICA ⚠️
 
 ## 🎯 **Regola**
@@ -151,10 +151,10 @@ Creare `.git/hooks/pre-commit`:
 #!/bin/bash
 # Verifica duplicati case-insensitive
 
-duplicates=$(find . -type f -name "*.php" | 
-  awk -F/ '{print tolower($NF)"\t"$0}' | 
-  sort | 
-  uniq -D -f0 | 
+duplicates=$(find . -type f -name "*.php" |
+  awk -F/ '{print tolower($NF)"\t"$0}' |
+  sort |
+  uniq -D -f0 |
   cut -f2-)
 
 if [ -n "$duplicates" ]; then
@@ -185,6 +185,6 @@ Aggiungere al workflow GitHub Actions:
 
 ---
 
-**Ultimo aggiornamento**: 11 Novembre 2025  
-**Modulo**: Xot  
+**Ultimo aggiornamento**: 11 Novembre 2025
+**Modulo**: Xot
 **Categoria**: Regole di Codice

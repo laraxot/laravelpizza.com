@@ -21,9 +21,9 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
  * Migrazione per [scopo della migrazione].
- * 
+ *
  * Questa migrazione gestisce [descrizione specifica].
- * 
+ *
  * @see docs/migration_standards.md
  */
 return new class extends XotBaseMigration
@@ -34,7 +34,7 @@ return new class extends XotBaseMigration
      * @var string
      */
     protected string $table = 'nome_tabella';
-    
+
     /**
      * Connessione al database.
      *
@@ -58,7 +58,7 @@ return new class extends XotBaseMigration
         $this->tableCreate(
             function (Blueprint $table): void {
                 // Definizione dei campi
-                
+
                 // Utilizziamo updateTimestamps per gestire created_at, updated_at e deleted_at
                 $this->updateTimestamps($table, true);
             }
@@ -68,7 +68,7 @@ return new class extends XotBaseMigration
         $this->tableUpdate(
             function (Blueprint $table): void {
                 // Verifiche e aggiornamenti
-                
+
                 $this->updateTimestamps($table, true);
             }
         );
@@ -179,16 +179,16 @@ $this->tableUpdate(
         if (! $this->hasColumn('group')) {
             $table->string('group')->index()->comment('Translation group');
         }
-        
+
         if (! $this->hasColumn('key')) {
             $table->string('key')->comment('Translation key');
         }
-        
+
         // Verifica indice unique
         if (! $this->hasIndex('language_lines_unique')) {
             $table->unique(['group', 'key', 'locale'], 'language_lines_unique');
         }
-        
+
         $this->updateTimestamps($table, true);
     }
 );
@@ -216,7 +216,7 @@ return new class extends XotBaseMigration
     protected string $table = 'language_lines';
     protected ?string $connection = 'mysql';
     protected ?string $model_class = Translation::class;
-    
+
     public function up(): void
     {
         // ...
@@ -276,11 +276,11 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
  * Migrazione per la creazione della tabella language_lines.
- * 
+ *
  * Questa tabella gestisce le traduzioni del sistema multilanguage,
  * memorizzando le chiavi di traduzione e i testi in formato JSON
  * per supportare multiple lingue.
- * 
+ *
  * @see docs/migration_standards.md
  */
 return new class extends XotBaseMigration
@@ -291,7 +291,7 @@ return new class extends XotBaseMigration
      * @var string
      */
     protected string $table = 'language_lines';
-    
+
     /**
      * Connessione al database.
      *
@@ -320,7 +320,7 @@ return new class extends XotBaseMigration
                 $table->json('text')->comment('Translation text in JSON format');
                 $table->string('locale')->index()->comment('Language locale (e.g., en, it, de)');
                 $table->unique(['group', 'key', 'locale'], 'language_lines_unique');
-                
+
                 // Utilizziamo updateTimestamps per gestire created_at, updated_at e deleted_at
                 $this->updateTimestamps($table, true);
             }
@@ -333,24 +333,24 @@ return new class extends XotBaseMigration
                 if (! $this->hasColumn('group')) {
                     $table->string('group')->index()->comment('Translation group (e.g., validation, auth)');
                 }
-                
+
                 if (! $this->hasColumn('key')) {
                     $table->string('key')->comment('Translation key');
                 }
-                
+
                 if (! $this->hasColumn('text')) {
                     $table->json('text')->comment('Translation text in JSON format');
                 }
-                
+
                 if (! $this->hasColumn('locale')) {
                     $table->string('locale')->index()->comment('Language locale (e.g., en, it, de)');
                 }
-                
+
                 // Verifica se l'indice unique esiste
                 if (! $this->hasIndex('language_lines_unique')) {
                     $table->unique(['group', 'key', 'locale'], 'language_lines_unique');
                 }
-                
+
                 $this->updateTimestamps($table, true);
             }
         );
@@ -368,4 +368,4 @@ Seguire queste best practices per le migrazioni del modulo Lang garantisce:
 - ✅ **Robustezza** con verifiche di esistenza
 - ✅ **Scalabilità** per supportare multiple lingue
 
-Consultare sempre la documentazione generale delle migrazioni in `Modules/Xot/docs/migration_standards.md` per ulteriori dettagli. 
+Consultare sempre la documentazione generale delle migrazioni in `Modules/Xot/docs/migration_standards.md` per ulteriori dettagli.

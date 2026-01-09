@@ -2,8 +2,8 @@
 
 ## Contesto
 
-**Data analisi:** 2025-01-27  
-**File con conflitti identificati:** 586 file PHP  
+**Data analisi:** 2025-01-27
+**File con conflitti identificati:** 586 file PHP
 **Approccio:** Risoluzione manuale focalizzata su business logic
 
 ## Business Logic e Motivazioni
@@ -33,7 +33,7 @@ I conflitti Git presenti nel codice sono **residui di merge passati non completa
 
 ### Priorità 1: Test Files (Business Logic Critica)
 
-**Focus:** File in `Modules/*/tests/`  
+**Focus:** File in `Modules/*/tests/`
 **Motivazione:** Test definiscono comportamento atteso del sistema
 
 **Pattern di risoluzione:**
@@ -49,7 +49,7 @@ I conflitti Git presenti nel codice sono **residui di merge passati non completa
 
 ### Priorità 2: Modelli e Business Logic
 
-**Focus:** File in `Modules/*/app/Models/`  
+**Focus:** File in `Modules/*/app/Models/`
 **Motivazione:** Core business domain
 
 **Checklist risoluzione:**
@@ -61,7 +61,7 @@ I conflitti Git presenti nel codice sono **residui di merge passati non completa
 
 ### Priorità 3: Services e Actions
 
-**Focus:** File in `Modules/*/app/Services/`, `Modules/*/app/Actions/`  
+**Focus:** File in `Modules/*/app/Services/`, `Modules/*/app/Actions/`
 **Motivazione:** Logica applicativa
 
 **Pattern preferito:**
@@ -71,7 +71,7 @@ I conflitti Git presenti nel codice sono **residui di merge passati non completa
 
 ### Priorità 4: Resources Filament
 
-**Focus:** File in `Modules/*/app/Filament/Resources/`  
+**Focus:** File in `Modules/*/app/Filament/Resources/`
 **Motivazione:** UI admin
 
 **Regole architetturali:**
@@ -257,4 +257,3 @@ I conflitti sono stati causati da:
 ---
 
 **Nota:** Questa documentazione è VIVA. Aggiungo pattern, lezioni, esempi man mano che risolvo conflitti.
-

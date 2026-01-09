@@ -110,11 +110,11 @@ mkdir -p Modules/{ModuleName}/resources/views/filament/pages
         <h2 class="text-2xl font-bold">
             {{ __('{modulename}::dashboard.title') }}
         </h2>
-        
+
         <p class="text-gray-600">
             {{ __('{modulename}::dashboard.description') }}
         </p>
-        
+
         {{-- Contenuto specifico del modulo --}}
     </div>
 </x-filament::page>

@@ -19,7 +19,7 @@
 
 Rimossi completamente i seguenti metodi che violavano la filosofia Jetstream:
 - `addTeamMember()` - gestito da Actions
-- `removeTeamMember()` - gestito da Actions  
+- `removeTeamMember()` - gestito da Actions
 - `inviteToTeam()` - gestito da Actions
 - `removeFromTeam()` - gestito da Actions
 - `promoteToAdmin()` - gestito da Actions
@@ -200,7 +200,7 @@ trait HasTeams
     public function ownsTeam(TeamContract $team): bool
     {
         Assert::notNull($team, 'Team cannot be null');
-        
+
         return $this->id && $team->user_id && $this->id === $team->user_id;
     }
 
@@ -403,7 +403,7 @@ SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key
 **Causa identificata:** La tabella `team_user` ha una chiave primaria vuota che causa conflitti durante i test.
 
 **Soluzioni possibili:**
-1. Verificare la struttura della tabella `team_user` 
+1. Verificare la struttura della tabella `team_user`
 2. Assicurarsi che la chiave primaria sia auto-incrementale
 3. Utilizzare database in-memory per i test
 4. Implementare factory per TeamUser con ID corretti

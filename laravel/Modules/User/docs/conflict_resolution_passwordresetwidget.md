@@ -14,12 +14,12 @@ Il conflitto riguarda l'aggiunta di un componente per la visualizzazione degli e
     ->label('')
     ->content(function ($get) {
         $error = Session::get('error');
-        
+
         if ($error && is_string($error)) {
             $str= '<div class="text-red-600 font-medium bg-red-50 p-3 rounded-md border border-red-200">' . $error . '</div>';
             return new HtmlString($str);
         }
-        
+
         return null;
     })
     ->reactive()
@@ -59,12 +59,12 @@ Rimuovere i marker di conflitto mantenendo la versione HEAD con il componente er
     ->label('')
     ->content(function ($get) {
         $error = Session::get('error');
-        
+
         if ($error && is_string($error)) {
             $str= '<div class="text-red-600 font-medium bg-red-50 p-3 rounded-md border border-red-200">' . $error . '</div>';
             return new HtmlString($str);
         }
-        
+
         return null;
     })
     ->reactive()

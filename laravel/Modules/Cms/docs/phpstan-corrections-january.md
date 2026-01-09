@@ -1,7 +1,7 @@
 # PHPStan Corrections - Cms Module - Gennaio 2025
 
-**Data**: 2025-01-10  
-**Modulo**: Cms  
+**Data**: 2025-01-10
+**Modulo**: Cms
 **Errori Risolti**: 8
 
 ---
@@ -118,4 +118,3 @@ public function sendEmailVerificationNotification(): void;
 ---
 
 *Ultimo aggiornamento: 2025-01-10*
-

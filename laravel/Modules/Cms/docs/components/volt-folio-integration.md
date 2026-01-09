@@ -29,7 +29,7 @@ Modules/Cms/
 public function boot()
 {
     $this->loadViewsFrom(__DIR__.'/../resources/views', 'cms');
-    
+
     // Registrazione componenti Volt
     Volt::mount([
         __DIR__.'/../resources/views/pages',
@@ -57,7 +57,7 @@ $sort = function ($field) {
     $this->sortDirection = $this->sortField === $field
         ? $this->sortDirection === 'asc' ? 'desc' : 'asc'
         : 'asc';
-    
+
     $this->sortField = $field;
 };
 
@@ -112,7 +112,7 @@ rules([
 
 $search = function () {
     $this->validate();
-    
+
     $this->results = Model::search($this->query)->get();
 };
 
@@ -129,11 +129,11 @@ $reset = function () {
             label="Cerca"
             :error="$errors->first('query')"
         />
-        
+
         <x-cms::button type="submit">
             Cerca
         </x-cms::button>
-        
+
         <x-cms::button
             type="button"
             wire:click="reset"
@@ -142,7 +142,7 @@ $reset = function () {
             Reset
         </x-cms::button>
     </form>
-    
+
     @if($results)
         <div class="mt-4">
             <!-- Risultati -->
@@ -162,13 +162,13 @@ $reset = function () {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title ?? config('cms.name') }}</title>
-    
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
         <x-cms::navigation />
-        
+
         <main class="py-10">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 {{ $slot }}
@@ -212,7 +212,7 @@ $refreshStats = function () {
     <div class="space-y-6">
         <div class="flex justify-between items-center">
             <h1 class="text-2xl font-semibold">Dashboard</h1>
-            
+
             <x-cms::button
                 wire:click="refreshStats"
                 wire:loading.attr="disabled"
@@ -220,7 +220,7 @@ $refreshStats = function () {
                 Aggiorna
             </x-cms::button>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             @foreach($stats as $key => $value)
                 <x-cms::stat-card
@@ -266,7 +266,7 @@ class SortableComponent
 {
     public $sortField = 'id';
     public $sortDirection = 'asc';
-    
+
     public function sort($field)
     {
         if ($this->sortField === $field) {
@@ -276,7 +276,7 @@ class SortableComponent
             $this->sortDirection = 'asc';
         }
     }
-    
+
     protected function applySorting($query)
     {
         return $query->orderBy($this->sortField, $this->sortDirection);
@@ -322,10 +322,10 @@ class DashboardTest extends TestCase
     public function it_displays_correct_stats()
     {
         $this->actingAs($user = User::factory()->create());
-        
+
         Post::factory()->count(3)->create();
         Comment::factory()->count(5)->create();
-        
+
         $this->get(route('cms.dashboard'))
             ->assertSuccessful()
             ->assertSee('3')  // posts count
@@ -375,4 +375,4 @@ public function mountDashboard()
 ### Documentation
 - [Laravel Volt Examples](https://github.com/jasonlbeggs/laravel-news-volt-folio-example)
 - [Livewire Best Practices](https://livewire.laravel.com/docs/best-practices)
-- [Laravel Folio Patterns](https://laravel.com/docs/folio) 
+- [Laravel Folio Patterns](https://laravel.com/docs/folio)

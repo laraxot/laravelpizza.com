@@ -136,7 +136,7 @@ Un header ottimizzato include:
       <h3 style="font-size: 18px; color: #333333;">{{ $title1 }}</h3>
       <p style="font-size: 14px; color: #666666;">{{ $content1 }}</p>
     </td>
-    
+
     <!-- Column Two -->
     <td class="column" width="50%" style="padding: 0 10px;">
       <img src="{{ $image2_url }}" alt="{{ $image2_alt }}" width="100%" style="max-width: 280px; height: auto; display: block; margin: 0 auto;">
@@ -167,18 +167,18 @@ Un header ottimizzato include:
 ```html
 <div class="footer" style="padding: 30px 0; background-color: #f9fafb; text-align: center; color: #6b7280; font-size: 12px;">
   <p>© {{ date('Y') }} {{ config('app.name') }}. Tutti i diritti riservati.</p>
-  
+
   <p>{{ $company_address ?? 'Via Roma 123, 00100 Roma, Italia' }}</p>
-  
+
   <p>
-    <a href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('privacy-policy')) }}" style="color: #4b5563; text-decoration: underline;">Privacy Policy</a> | 
+    <a href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('privacy-policy')) }}" style="color: #4b5563; text-decoration: underline;">Privacy Policy</a> |
     <a href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('terms-of-service')) }}" style="color: #4b5563; text-decoration: underline;">Termini e Condizioni</a>
   </p>
-  
+
   <p>Hai ricevuto questa email perché sei iscritto alle comunicazioni di {{ config('app.name') }}.</p>
-  
+
   <p>
-    <a href="{{ $unsubscribe_url }}" style="color: #4b5563; text-decoration: underline;">Annulla iscrizione</a> | 
+    <a href="{{ $unsubscribe_url }}" style="color: #4b5563; text-decoration: underline;">Annulla iscrizione</a> |
     <a href="{{ $preferences_url }}" style="color: #4b5563; text-decoration: underline;">Gestisci preferenze</a>
   </p>
 </div>
@@ -201,7 +201,7 @@ Un header ottimizzato include:
     color-scheme: light dark;
     supported-color-schemes: light dark;
   }
-  
+
   @media (prefers-color-scheme: dark) {
     body {
       background-color: #121212 !important;
@@ -283,14 +283,14 @@ return [
 ```html
 <!-- Saluto personalizzato basato sull'orario -->
 <h2 style="font-size: 24px; color: #333333;">
-  {{ $time < 12 ? __('email.greeting.morning') : ($time < 18 ? __('email.greeting.afternoon') : __('email.greeting.evening')) }}, 
+  {{ $time < 12 ? __('email.greeting.morning') : ($time < 18 ? __('email.greeting.afternoon') : __('email.greeting.evening')) }},
   {{ $name }}!
 </h2>
 
 <!-- Contenuto personalizzato basato sul profilo -->
 <div style="padding: 20px; background-color: {{ $user_preferences->favorite_color ?? '#f9fafb' }};">
   <p>Abbiamo selezionato questi contenuti in base ai tuoi interessi:</p>
-  
+
   @foreach($recommended_items as $item)
     <div style="margin-bottom: 15px;">
       <h4>{{ $item->title }}</h4>

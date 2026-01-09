@@ -91,9 +91,9 @@ public function test_panel_configuration(): void
     $panel = new Panel();
     $action = new ApplyMetatagToPanelAction();
     $metatag = MetatagData::make();
-    
+
     $panel = $action->execute($panel);
-    
+
     $this->assertEquals(
         $metatag->title,
         $panel->getBrandName()
@@ -106,9 +106,9 @@ public function test_panel_configuration(): void
     $panel = new Panel();
     $action = new ApplyMetatagToPanelAction();
     $metatag = MetatagData::make();
-    
+
     $panel = $action->execute($panel);
-    
+
     $this->assertEquals(
         $metatag->getBrandName(),
         $panel->getBrandName()
@@ -189,4 +189,4 @@ It is used consistently across the interface to maintain brand recognition.
 - [Brand Philosophy](../philosophy/brand_philosophy.md)
 - [Semantic Methods](../philosophy/semantic_methods.md)
 - [Testing Guide](../testing/brand_testing.md)
-- [Best Practices](../best-practices.md) 
+- [Best Practices](../best-practices.md)

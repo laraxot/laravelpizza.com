@@ -60,4 +60,4 @@ use Modules\Xot\Filament\Pages\MainDashboard;
 
 - [Documentazione Filament](../../../project_docs/filament/index.md)
 - [Sistema di Autorizzazioni](../../../project_docs/auth/index.md)
-- [Gestione Ruoli](../../../project_docs/auth/roles.md) 
+- [Gestione Ruoli](../../../project_docs/auth/roles.md)

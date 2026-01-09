@@ -1,7 +1,7 @@
 # Tenant Module Documentation Index
 
-**Last Update**: 18 Dicembre 2025  
-**Status**: ✅ PHPStan Level 10 Compliant  
+**Last Update**: 18 Dicembre 2025
+**Status**: ✅ PHPStan Level 10 Compliant
 **Module Version**: 1.0
 
 ## 📚 Quick Navigation

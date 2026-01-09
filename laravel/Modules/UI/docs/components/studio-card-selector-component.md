@@ -21,76 +21,76 @@ use Closure;
 class StudioCardSelector extends Field
 {
     protected string $view = 'ui::forms.components.studio-card-selector';
-    
+
     // Dati studios da visualizzare
     protected Collection|Closure|null $studios = null;
-    
+
     // Personalizzazioni UI
     protected bool $showDistance = false;
     protected bool $showSpecializations = false;
     protected bool $showPhone = false;
     protected string $cardLayout = 'default'; // 'default', 'compact', 'detailed'
-    
+
     // Configure studios data source
     public function studios(Collection|Closure $studios): static
     {
         $this->studios = $studios;
         return $this;
     }
-    
+
     // Enable/disable features
     public function showDistance(bool $show = true): static
     {
         $this->showDistance = $show;
         return $this;
     }
-    
+
     public function showSpecializations(bool $show = true): static
     {
         $this->showSpecializations = $show;
         return $this;
     }
-    
+
     public function showPhone(bool $show = true): static
     {
         $this->showPhone = $show;
         return $this;
     }
-    
+
     // Layout variants
     public function compact(): static
     {
         $this->cardLayout = 'compact';
         return $this;
     }
-    
+
     public function detailed(): static
     {
         $this->cardLayout = 'detailed';
         return $this;
     }
-    
+
     // Data getters for view
     public function getStudios(): Collection
     {
         return $this->evaluate($this->studios) ?? collect();
     }
-    
+
     public function getCardLayout(): string
     {
         return $this->cardLayout;
     }
-    
+
     public function shouldShowDistance(): bool
     {
         return $this->showDistance;
     }
-    
+
     public function shouldShowSpecializations(): bool
     {
         return $this->showSpecializations;
     }
-    
+
     public function shouldShowPhone(): bool
     {
         return $this->showPhone;
@@ -105,7 +105,7 @@ class StudioCardSelector extends Field
     :component="$getFieldWrapperView()"
     :field="$field"
 >
-    <div 
+    <div
         x-data="studioCardSelector({
             state: $wire.{{ $applyStateBindingModifiers("\$entangle('{$getStatePath()}')") }},
             studios: @js($getStudios()->toArray()),
@@ -116,7 +116,7 @@ class StudioCardSelector extends Field
             {{-- Studio Cards Grid --}}
             <div class="space-y-3">
                 @foreach($getStudios() as $studio)
-                    <div 
+                    <div
                         @class([
                             'studio-card cursor-pointer transition-all duration-200',
                             'bg-white rounded-lg shadow-md hover:shadow-lg',
@@ -138,42 +138,42 @@ class StudioCardSelector extends Field
                                 <div class="flex items-start gap-3">
                                     {{-- Selection Radio --}}
                                     <div class="mt-1">
-                                        <div 
+                                        <div
                                             @class([
                                                 'w-4 h-4 rounded-full border-2 transition-colors',
                                                 'border-gray-300' => true,
                                             ])
                                             x-bind:class="state == {{ $studio->id }} ? 'bg-primary-500 border-primary-500' : ''"
                                         >
-                                            <div 
+                                            <div
                                                 x-show="state == {{ $studio->id }}"
                                                 class="w-2 h-2 bg-white rounded-full mx-auto mt-0.5"
                                             ></div>
                                         </div>
                                     </div>
-                                    
+
                                     {{-- Studio Details --}}
                                     <div class="flex-1">
                                         <h3 @class([
                                             'font-bold text-primary-800',
                                             'text-lg' => $getCardLayout() === 'compact',
-                                            'text-xl' => $getCardLayout() === 'default', 
+                                            'text-xl' => $getCardLayout() === 'default',
                                             'text-2xl' => $getCardLayout() === 'detailed',
                                         ])>
                                             {{ $studio->name }}
                                         </h3>
-                                        
+
                                         <p class="text-gray-600 mt-1">
                                             {{ $studio->address?->formatted_address ?? $studio->address }}
                                         </p>
-                                        
+
                                         @if($shouldShowPhone() && $studio->phone)
                                             <p class="text-sm text-gray-500 mt-1">
                                                 <x-heroicon-s-phone class="w-4 h-4 inline mr-1" />
                                                 {{ $studio->phone }}
                                             </p>
                                         @endif
-                                        
+
                                         @if($shouldShowDistance() && isset($studio->distance))
                                             <div class="mt-2">
                                                 <x-filament::badge color="gray" size="sm">
@@ -182,7 +182,7 @@ class StudioCardSelector extends Field
                                                 </x-filament::badge>
                                             </div>
                                         @endif
-                                        
+
                                         @if($shouldShowSpecializations() && $studio->specializations && $studio->specializations->isNotEmpty())
                                             <div class="mt-2 flex flex-wrap gap-1">
                                                 @foreach($studio->specializations->take(3) as $specialization)
@@ -200,7 +200,7 @@ class StudioCardSelector extends Field
                                     </div>
                                 </div>
                             </div>
-                            
+
                             {{-- Action Button --}}
                             <div class="flex-shrink-0">
                                 <x-filament::button
@@ -240,12 +240,12 @@ class StudioCardSelector extends Field
 Alpine.data('studioCardSelector', (config) => ({
     state: config.state,
     studios: config.studios,
-    
+
     selectStudio(studioId) {
         this.state = studioId;
         this.$dispatch('studio-selected', { studioId });
     },
-    
+
     init() {
         this.$watch('state', (value) => {
             this.$dispatch('studio-changed', { studioId: value });
@@ -277,13 +277,13 @@ protected function getStudioStepSchema(): array
 private function getStudiosForLocation(Get $get): Collection
 {
     $cap = $get('cap');
-    $province = $get('province'); 
+    $province = $get('province');
     $region = $get('region');
-    
+
     if (!$cap || !$province || !$region) {
         return collect();
     }
-    
+
     return \Modules\SaluteOra\Models\Studio::whereHas('address', function($q) use ($cap, $province, $region) {
         $q->where('postal_code', $cap)
           ->where('administrative_area_level_3', $province)
@@ -397,7 +397,7 @@ return [
 
 ### Attributi ARIA
 ```html
-<div 
+<div
     role="button"
     tabindex="0"
     aria-label="{{ __('ui::studio-selector.accessibility.studio_card') }}: {{ $studio->name }}"
@@ -418,19 +418,19 @@ class StudioCardSelectorTest extends TestCase
     public function it_renders_studios_correctly()
     {
         $studios = Studio::factory()->count(3)->create();
-        
+
         $component = StudioCardSelector::make('studio')
             ->studios($studios);
-            
+
         $this->assertCount(3, $component->getStudios());
     }
-    
+
     /** @test */
     public function it_supports_layout_variants()
     {
         $component = StudioCardSelector::make('studio')->compact();
         $this->assertEquals('compact', $component->getCardLayout());
-        
+
         $component = StudioCardSelector::make('studio')->detailed();
         $this->assertEquals('detailed', $component->getCardLayout());
     }
@@ -451,7 +451,7 @@ class StudioCardSelectorTest extends DuskTestCase
                     ->assertSeeIn('@selected-studio', 'Studio 1');
         });
     }
-    
+
     /** @test */
     public function user_can_navigate_with_keyboard()
     {
@@ -502,8 +502,8 @@ class StudioCardSelectorTest extends DuskTestCase
 
 ---
 
-**Component Status**: 📋 Documented - Ready for Implementation  
-**Reusability**: 🔄 High - Cross-module compatible  
-**Complexity**: 🟡 Medium - Custom view with Alpine.js  
-**Maintenance**: 🟢 Low - Well-documented and tested  
-**Last Updated**: January 2025 
+**Component Status**: 📋 Documented - Ready for Implementation
+**Reusability**: 🔄 High - Cross-module compatible
+**Complexity**: 🟡 Medium - Custom view with Alpine.js
+**Maintenance**: 🟢 Low - Well-documented and tested
+**Last Updated**: January 2025

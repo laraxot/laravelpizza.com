@@ -41,9 +41,8 @@ Aggiorna sempre la documentazione in `/Modules/Lang/docs` e spiega la strategia 
 ## 12. Come personalizzare i messaggi di validazione?
 - Usa i metodi `attributes()` e `messages()` nelle Form Request.
 
-
 ## FAQ
 
 ### Devo registrare manualmente i comandi console?
 
-**No!** Tutti i comandi console sono autoregistrati tramite XotBaseServiceProvider. Non aggiungere mai `$this->commands([...])` nei provider. Perché? Vedi [lang-service-provider.md](./lang-service-provider.md) e [PHILOSOPHY.md](./PHILOSOPHY.md) 
+**No!** Tutti i comandi console sono autoregistrati tramite XotBaseServiceProvider. Non aggiungere mai `$this->commands([...])` nei provider. Perché? Vedi [lang-service-provider.md](./lang-service-provider.md) e [PHILOSOPHY.md](./PHILOSOPHY.md)

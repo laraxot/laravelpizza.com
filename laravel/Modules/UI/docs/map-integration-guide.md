@@ -1,8 +1,8 @@
 # 🗺️ GUIDA INTEGRAZIONE MAPPA INTERATTIVA
 
-**Modulo**: UI (User Interface)  
-**Data**: 2025-01-27  
-**Versione**: 1.0  
+**Modulo**: UI (User Interface)
+**Data**: 2025-01-27
+**Versione**: 1.0
 **Stato**: 🚧 IN SVILUPPO
 
 ---
@@ -102,29 +102,29 @@ class InteractiveMap extends Component
     public $markers = [];
     public $filters = [];
     public $selectedMarker = null;
-    
+
     protected $listeners = [
         'markerSelected' => 'selectMarker',
         'filtersChanged' => 'updateFilters'
     ];
-    
+
     public function render()
     {
         return view('ui::components.map.interactive-map');
     }
-    
+
     public function selectMarker($markerId)
     {
         $this->selectedMarker = $markerId;
         $this->emit('markerSelected', $markerId);
     }
-    
+
     public function updateFilters($filters)
     {
         $this->filters = $filters;
         $this->loadMarkers();
     }
-    
+
     private function loadMarkers()
     {
         // Carica marker basati sui filtri
@@ -157,7 +157,7 @@ class InteractiveMap extends Component
                 </label>
             </div>
         </div>
-        
+
         <div class="map-actions">
             <button wire:click="resetView" class="btn btn-secondary">
                 <i class="fas fa-home"></i> Reset Vista
@@ -167,9 +167,9 @@ class InteractiveMap extends Component
             </button>
         </div>
     </div>
-    
+
     <div id="map" class="map-container" wire:ignore></div>
-    
+
     @if($selectedMarker)
         <div class="marker-details">
             <h5>{{ $selectedMarker['title'] }}</h5>
@@ -188,12 +188,12 @@ class InteractiveMap extends Component
 document.addEventListener('DOMContentLoaded', function() {
     // Inizializza mappa Leaflet
     const map = L.map('map').setView([{{ $center[0] }}, {{ $center[1] }}], {{ $zoom }});
-    
+
     // Aggiungi layer OSM
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
-    
+
     // Carica marker
     @foreach($markers as $marker)
         const marker{{ $marker['id'] }} = L.marker([{{ $marker['lat'] }}, {{ $marker['lng'] }}])
@@ -238,13 +238,13 @@ class LocationPicker extends Component
     public $longitude = null;
     public $showMap = false;
     public $suggestions = [];
-    
+
     protected $rules = [
         'address' => 'required|string|max:255',
         'latitude' => 'nullable|numeric|between:-90,90',
         'longitude' => 'nullable|numeric|between:-180,180'
     ];
-    
+
     public function updatedAddress()
     {
         if (strlen($this->address) > 3) {
@@ -252,7 +252,7 @@ class LocationPicker extends Component
                 ->getSuggestions($this->address);
         }
     }
-    
+
     public function selectSuggestion($suggestion)
     {
         $this->address = $suggestion['address'];
@@ -261,12 +261,12 @@ class LocationPicker extends Component
         $this->suggestions = [];
         $this->showMap = true;
     }
-    
+
     public function toggleMap()
     {
         $this->showMap = !$this->showMap;
     }
-    
+
     public function render()
     {
         return view('ui::components.geo.location-picker');
@@ -375,7 +375,7 @@ class LocationPicker extends Component
         max-width: 100%;
         margin-bottom: 10px;
     }
-    
+
     .interactive-map-container {
         height: 400px;
     }
@@ -398,22 +398,22 @@ class MapService
     public function getMarkers(array $filters = []): array
     {
         $markers = [];
-        
+
         if (isset($filters['tickets'])) {
             $markers = array_merge($markers, $this->getTicketMarkers());
         }
-        
+
         if (isset($filters['users'])) {
             $markers = array_merge($markers, $this->getUserMarkers());
         }
-        
+
         if (isset($filters['locations'])) {
             $markers = array_merge($markers, $this->getLocationMarkers());
         }
-        
+
         return $markers;
     }
-    
+
     private function getTicketMarkers(): array
     {
         return Ticket::whereNotNull('latitude')
@@ -434,11 +434,11 @@ class MapService
             })
             ->toArray();
     }
-    
+
     public function exportData(array $filters = [], string $format = 'json'): string
     {
         $markers = $this->getMarkers($filters);
-        
+
         switch ($format) {
             case 'csv':
                 return $this->exportToCsv($markers);
@@ -467,19 +467,19 @@ class GeocodingService
             'q' => $query,
             'limit' => 5
         ]);
-        
+
         return $response->json()['results'] ?? [];
     }
-    
+
     public function geocodeAddress(string $address): array
     {
         // Implementa geocoding completo
         $response = Http::get('https://api.example.com/geocode', [
             'address' => $address
         ]);
-        
+
         $data = $response->json();
-        
+
         return [
             'address' => $data['formatted_address'],
             'latitude' => $data['geometry']['location']['lat'],
@@ -502,7 +502,7 @@ class GeocodingService
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-8">
-            <livewire:ui::components.map.interactive-map 
+            <livewire:ui::components.map.interactive-map
                 :filters="['tickets' => true]"
                 :center="[45.4642, 9.1900]"
                 :zoom="10"
@@ -524,14 +524,14 @@ class GeocodingService
         <label>Nome Ticket</label>
         <input type="text" wire:model="name" class="form-control">
     </div>
-    
+
     <div class="form-group">
         <label>Posizione</label>
-        <livewire:ui::components.geo.location-picker 
+        <livewire:ui::components.geo.location-picker
             wire:model="location"
         />
     </div>
-    
+
     <button type="submit" class="btn btn-primary">Salva</button>
 </form>
 ```
@@ -539,7 +539,7 @@ class GeocodingService
 ### 3. **Mappa Utenti**
 ```blade
 <!-- Mappa con utenti georeferenziati -->
-<livewire:ui::components.map.interactive-map 
+<livewire:ui::components.map.interactive-map
     :filters="['users' => true]"
     :center="[45.4642, 9.1900]"
     :zoom="8"
@@ -592,22 +592,11 @@ class GeocodingService
 
 ---
 
-**Last Updated**: 2025-01-27  
-**Next Review**: 2025-02-27  
-**Status**: 🚧 IN SVILUPPO  
+**Last Updated**: 2025-01-27
+**Next Review**: 2025-02-27
+**Status**: 🚧 IN SVILUPPO
 **Confidence Level**: 90%
 
 ---
 
 *Questa guida fornisce le basi per implementare funzionalità mappa interattiva nel modulo UI, migliorando significativamente l'esperienza utente con visualizzazioni geografiche avanzate.*
-
-
-
-
-
-
-
-
-
-
-

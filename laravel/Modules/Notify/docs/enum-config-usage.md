@@ -1,4 +1,4 @@
-# Utilizzo di Enum e Config 
+# Utilizzo di Enum e Config
 
 Questo documento definisce le best practices per l'utilizzo di Enum e file di configurazione nel sistema , con particolare attenzione alla gestione delle opzioni nei componenti Filament.
 Questo documento definisce le best practices per l'utilizzo di Enum e file di configurazione nel sistema SaluteOra, con particolare attenzione alla gestione delle opzioni nei componenti Filament.
@@ -51,7 +51,7 @@ enum SmsDriverEnum: string
     case PLIVO = 'plivo';
     case GAMMU = 'gammu';
     case NETFUN = 'netfun';
-    
+
     public static function options(): array
     {
         return [
@@ -63,7 +63,7 @@ enum SmsDriverEnum: string
             self::NETFUN->value => 'Netfun',
         ];
     }
-    
+
     public static function labels(): array
     {
         return [
@@ -136,7 +136,7 @@ return [
 - I valori sono specifici dell'applicazione e non del dominio
 - Hai bisogno di valori diversi in produzione, staging, test, ecc.
 
-## Implementazione 
+## Implementazione
 
 Per standardizzare l'approccio , si raccomanda di:
 

@@ -246,4 +246,3 @@
 - Rispettare PHPStan livello 10
 - Documentare ogni decisione importante
 - Mantenere DRY + KISS principles
-

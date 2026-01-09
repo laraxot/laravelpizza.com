@@ -32,13 +32,11 @@ Questa regola si applica a:
 Non è necessario applicare questa regola a:
 - Prompt utilizzati una sola volta
 - Prompt che richiedono specificamente formattazione per la leggibilità
-- Documentazione dei prompt 
+- Documentazione dei prompt
 
 ## Collegamenti tra versioni di PROMPT_RULES.md
 * [PROMPT_RULES.md](../../../Xot/docs/PROMPT_RULES.md)
 * [PROMPT_RULES.md](../../../Xot/docs/rules/PROMPT_RULES.md)
 
-
 ## Collegamenti tra versioni di prompt_rules.md
 * [prompt_rules.md](../prompt_rules.md)
-

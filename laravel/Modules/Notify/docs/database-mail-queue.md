@@ -134,7 +134,7 @@ class QueueWorkerManager
     public function startWorkers(): void
     {
         $workerCount = config('notify.queue.workers', 2);
-        
+
         for ($i = 0; $i < $workerCount; $i++) {
             Process::run('php artisan queue:work --queue=emails --tries=3');
         }
@@ -174,8 +174,6 @@ $users->each(function ($user) {
 ### 2. Gestione Worker
 
 ```bash
-
-
 
 # Avvia worker dedicato
 php artisan queue:work --queue=emails
@@ -349,8 +347,6 @@ if ($failedJobs > $threshold) {
 ### 1. Pulizia
 
 ```bash
-
-
 
 # Pulizia job vecchi
 php artisan queue:prune-failed --hours=168

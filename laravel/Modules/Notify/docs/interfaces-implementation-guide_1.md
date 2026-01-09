@@ -24,7 +24,7 @@ Le interfacce sono organizzate in due livelli:
    ```php
    // ✅ CORRETTO
    interface SmsActionContract
-   
+
    // ❌ ERRATO
    interface SmsActionInterface
    ```
@@ -33,7 +33,7 @@ Le interfacce sono organizzate in due livelli:
    ```php
    // Per interfacce nella directory principale
    namespace Modules\Notify\Contracts;
-   
+
    // Per interfacce in sottodirectory
    namespace Modules\Notify\Contracts\SMS;
    ```
@@ -65,7 +65,7 @@ use Modules\Notify\Datas\SmsData;
 final class SendNetfunSMSAction implements SmsActionContract
 {
     // Implementazione...
-    
+
     public function execute(SmsData $smsData): array
     {
         // Logica di invio SMS...

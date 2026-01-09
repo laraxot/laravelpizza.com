@@ -8,7 +8,7 @@
 
 ### Models with Factories:
 - **Menu** - ✅ `MenuFactory.php` (existing)
-- **Module** - ✅ `ModuleFactory.php` (existing)  
+- **Module** - ✅ `ModuleFactory.php` (existing)
 - **Page** - ✅ `PageFactory.php` (existing)
 - **PageContent** - ✅ `PageContentFactory.php` (existing)
 - **Section** - ✅ `SectionFactory.php` (existing)
@@ -50,7 +50,7 @@ $arrayConfig = Conf::factory()->create(['type' => 'array']);
 ## ✅ Verification
 All factories have been tested and:
 - ✅ Compile without PHPStan errors
-- ✅ Follow Laravel factory conventions  
+- ✅ Follow Laravel factory conventions
 - ✅ Generate valid data for CMS models
 - ✅ Support config hierarchy system
 

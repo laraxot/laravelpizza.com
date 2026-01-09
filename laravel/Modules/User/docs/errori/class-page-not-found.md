@@ -302,7 +302,7 @@ use Modules\Xot\Filament\Clusters\XotBaseCluster;
 class MyCluster extends XotBaseCluster
 {
     protected static ?string $navigationIcon = 'heroicon-o-folder';
-    
+
     // NO navigationLabel hardcoded!
     // Gestito automaticamente da NavigationLabelTrait
 }
@@ -322,7 +322,7 @@ use Modules\[Module]\Filament\Clusters\MyCluster;
 
 /**
  * ⚠️ IMPORTANTE: Estende XotBasePage (Standalone), MAI Filament\Pages\Page!
- * 
+ *
  * Cluster Pages sono SEMPRE Standalone Pages con property $cluster.
  */
 class MyPage extends XotBasePage
@@ -345,9 +345,7 @@ class MyPage extends XotBasePage
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
-**Severità**: Alta  
-**Tipo Errore**: Import classe inesistente + Violazione regola XotBase  
+**Ultimo aggiornamento**: 27 Ottobre 2025
+**Severità**: Alta
+**Tipo Errore**: Import classe inesistente + Violazione regola XotBase
 **Files Affetti**: 3 Pages + 1 Cluster
-
-

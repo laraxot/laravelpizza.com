@@ -99,15 +99,15 @@ Activity (eventi)
 ```php
 test('snapshot versioning works', function () {
     $uuid = Str::uuid();
-    
+
     // Crea versioni 1, 2, 3
     $s1 = Snapshot::create(['aggregate_uuid' => $uuid, 'aggregate_version' => 1]);
     $s2 = Snapshot::create(['aggregate_uuid' => $uuid, 'aggregate_version' => 2]);
     $s3 = Snapshot::create(['aggregate_uuid' => $uuid, 'aggregate_version' => 3]);
-    
+
     // Test versioning logic
     expect(Snapshot::where('aggregate_uuid', $uuid)->count())->toBe(3);
-    
+
     // ✅ Cleanup MANUALE
     $s1->delete();
     $s2->delete();
@@ -132,9 +132,9 @@ Esiste documentazione ufficiale: `Modules/Xot/docs/testing-strategy.md`
 ```php
 test('user creation', function () {
     $user = User::factory()->create();
-    
+
     // Test logic...
-    
+
     // ✅ Cleanup SOLO ciò che abbiamo creato
     $user->forceDelete();
 });
@@ -145,13 +145,13 @@ test('user creation', function () {
 ```php
 test('complex workflow', function () {
     $record = Model::create([...]);
-    
+
     // Se test fallisce, il record RESTA nel database
     // Posso ispezionarlo con:
     // - MySQL Workbench
     // - php artisan tinker
     // - SELECT * FROM ...
-    
+
     $record->delete();  // Cleanup esplicito
 });
 ```
@@ -162,14 +162,14 @@ test('complex workflow', function () {
 test('parallel safe test', function () {
     // Usa UUID univoci
     $uuid = Str::uuid();
-    
+
     $snapshot = Snapshot::create([
         'aggregate_uuid' => $uuid,  // ← Univoco!
         // ...
     ]);
-    
+
     // Nessun conflitto con altri test paralleli
-    
+
     $snapshot->delete();
 });
 ```
@@ -207,13 +207,13 @@ test('it can create snapshot', function (): void {
         'aggregate_version' => 1,
         'state' => json_encode(['name' => 'Test']),
     ];
-    
+
     // Act
     $snapshot = Snapshot::create($snapshotData);
-    
+
     // Assert
     expect($snapshot->aggregate_uuid)->toBe($snapshotData['aggregate_uuid']);
-    
+
     // ✅ Cleanup MANUALE
     $snapshot->delete();
 });
@@ -226,9 +226,9 @@ test('it can create snapshot', function (): void {
 ```php
 test('example test', function () {
     $record = Model::create([...]);
-    
+
     // ... test logic ...
-    
+
     $record->delete();  // ✅ Cleanup a fine test
 });
 ```
@@ -253,12 +253,12 @@ afterEach(function () {
 ```php
 test('isolated test', function () {
     $testUuid = 'test-'.Str::uuid();
-    
+
     // Usa testUuid per isolare dati
     $record = Model::create(['uuid' => $testUuid]);
-    
+
     // Test...
-    
+
     // Cleanup tutti i record con questo UUID
     Model::where('uuid', 'like', 'test-%')->delete();
 });
@@ -306,7 +306,7 @@ class Test extends TestCase
 protected function setUp(): void
 {
     parent::setUp();
-    
+
     // ❌ Truncate TUTTE le tabelle ad ogni test
     DB::table('snapshots')->truncate();
     DB::table('activities')->truncate();
@@ -348,46 +348,46 @@ uses(TestCase::class);
 
 /**
  * Test business logic Snapshot model.
- * 
+ *
  * ✅ NO RefreshDatabase: Usa MySQL reale con manual cleanup
  * ✅ UUID univoci per test isolation
  * ✅ Cleanup esplicito a fine ogni test
- * 
+ *
  * @see \Modules\Xot\docs\testing-strategy.md
  */
 
 test('snapshot versioning maintains history', function (): void {
     $uuid = Str::uuid()->toString();
-    
+
     // Crea 3 versioni
     $v1 = Snapshot::create([
         'aggregate_uuid' => $uuid,
         'aggregate_version' => 1,
         'state' => json_encode(['version' => 1, 'value' => 100]),
     ]);
-    
+
     $v2 = Snapshot::create([
         'aggregate_uuid' => $uuid,
         'aggregate_version' => 2,
         'state' => json_encode(['version' => 2, 'value' => 200]),
     ]);
-    
+
     $v3 = Snapshot::create([
         'aggregate_uuid' => $uuid,
         'aggregate_version' => 3,
         'state' => json_encode(['version' => 3, 'value' => 300]),
     ]);
-    
+
     // Test event sourcing replay
     $allVersions = Snapshot::where('aggregate_uuid', $uuid)
         ->orderBy('aggregate_version')
         ->get();
-    
+
     expect($allVersions)->toHaveCount(3)
         ->and($allVersions[0]->state['value'])->toBe(100)
         ->and($allVersions[1]->state['value'])->toBe(200)
         ->and($allVersions[2]->state['value'])->toBe(300);
-    
+
     // ✅ Cleanup manuale
     $v1->delete();
     $v2->delete();
@@ -408,13 +408,13 @@ test('simple user CRUD', function () {
     // 2. Non coinvolge altre connessioni
     // 3. Non è Event Sourcing
     // 4. Cleanup automatico desiderato
-    
+
     DB::beginTransaction();
-    
+
     $user = User::create([...]);
-    
+
     // Test...
-    
+
     DB::rollBack();  // Auto-cleanup
 });
 ```
@@ -473,7 +473,6 @@ fi
 
 ---
 
-**Policy Status**: 🔴 OBBLIGATORIA  
-**Eccezioni**: Nessuna per modulo Activity (Event Sourcing)  
+**Policy Status**: 🔴 OBBLIGATORIA
+**Eccezioni**: Nessuna per modulo Activity (Event Sourcing)
 **Ultimo aggiornamento**: 27 Ottobre 2025
-

@@ -83,9 +83,9 @@ public function sendEmail(): void
         $data = $this->emailForm->getState();
         $smtp = SmtpData::from($data);
         $emailData = EmailData::from($data);
-        
+
         $smtp->send($emailData);
-        
+
         Notification::make()
             ->success()
             ->title(__('notify::messages.email_sent'))
@@ -168,4 +168,4 @@ public function sendEmail(): void
 ### Zen
 - Semplificare dove possibile
 - Mantenere l'equilibrio tra funzionalità e complessità
-- Seguire il principio "meno è più" 
+- Seguire il principio "meno è più"

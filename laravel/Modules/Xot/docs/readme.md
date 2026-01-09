@@ -16,11 +16,10 @@ Classe base per tutte le pagine personalizzate dell'applicazione.
 - Gestione automatica delle traduzioni
 - Schema form configurabile
 
-
 ## 🎯 **Funzionalità Principali**
 
-**Data Creazione**: 27 Gennaio 2025  
-**Stato**: Consolidato da docs/ root  
+**Data Creazione**: 27 Gennaio 2025
+**Stato**: Consolidato da docs/ root
 **Priorità**: CRITICA (Documentazione principale)
 # 🏗️ **Xot Module** - Framework Base Laraxot
 
@@ -53,7 +52,7 @@ Il modulo **Xot** è il **framework base** di Laraxot, fornendo:
 class MiaPagina extends XotBasePage
 {
     protected static ?string $model = MiaModel::class;
-    
+
     protected function getFormSchema(): array
     {
         return [
@@ -158,13 +157,13 @@ class ProcessUserAction
 
     public function execute(UserData $data): UserData
     {
-        
+
         // Auto-logging con activity trail
         $this->logActivity('user.created', $user);
-        
+
         // Auto-dispatching eventi
         event(new UserCreated($user));
-        
+
         return $user;
         // Logica business
         // Logica business
@@ -181,7 +180,7 @@ enum UserStatus: string implements XotBaseEnum
     case ACTIVE = 'active';
     case INACTIVE = 'inactive';
     case SUSPENDED = 'suspended';
-    
+
     public function getLabel(): string
     {
         return match($this) {
@@ -224,7 +223,7 @@ Il modulo Xot fornisce `XotBaseServiceProvider`, la classe base per tutti i Serv
 
 ### Errori Comuni
 
-**"No hint path defined for [namespace]"**  
+**"No hint path defined for [namespace]"**
 Quando un view namespace non è registrato correttamente. Vedere:
 - [Activity Module - Errore No Hint Path](../activity/docs/errori/no-hint-path-defined.md)
 

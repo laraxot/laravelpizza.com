@@ -22,11 +22,11 @@ Il metodo è stato modificato per convertire i campi file upload da stringhe ad 
 public function getFormFill(): array
 {
     $model = $this->getFormModel();
-    
+
     if ($model->exists) {
         try {
             $data = $model->toArray();
-            
+
             // CORREZIONE BUG: Converti i campi file upload da stringhe ad array per Filament
             $attachments = $model::$attachments ?? [];
             foreach ($attachments as $attachment) {
@@ -137,9 +137,9 @@ Questo pattern può essere riutilizzato in altri widget che:
 - [Widget Error Troubleshooting](../../../Xot/docs/troubleshooting/widget-errors.md) - Guide generali
 - [Widget Error Troubleshooting](../../../Xot/project_docs/troubleshooting/widget-errors.md) - Guide generali
 ---
-**Creato**: 2025-01-07  
-**Aggiornato**: 2025-01-07  
-**Autore**: AI Assistant  
-**Tipo**: Bug Fix Documentation  
-**Priorità**: Critica (blocca registrazione paziente)  
-**Status**: ✅ **RISOLTO** 
+**Creato**: 2025-01-07
+**Aggiornato**: 2025-01-07
+**Autore**: AI Assistant
+**Tipo**: Bug Fix Documentation
+**Priorità**: Critica (blocca registrazione paziente)
+**Status**: ✅ **RISOLTO**

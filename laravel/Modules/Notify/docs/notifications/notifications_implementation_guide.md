@@ -1,4 +1,4 @@
-# Guida all'Implementazione delle Notifiche 
+# Guida all'Implementazione delle Notifiche
 
 Questa documentazione descrive come implementare correttamente le notifiche utilizzando Laravel Notifications nel modulo Notify.
 
@@ -18,10 +18,10 @@ use Illuminate\Database\Eloquent\Model;
 class RecordNotification extends Notification implements ShouldQueue
 {
     use Queueable;
-    
+
     protected Model $record;
     protected string $templateSlug;
-    
+
     /**
      * Create a new notification instance.
      */
@@ -30,7 +30,7 @@ class RecordNotification extends Notification implements ShouldQueue
         $this->record = $record;
         $this->templateSlug = $templateSlug;
     }
-    
+
     /**
      * Get the notification's delivery channels.
      */
@@ -38,7 +38,7 @@ class RecordNotification extends Notification implements ShouldQueue
     {
         return ['mail'];
     }
-    
+
     /**
      * Get the mail representation of the notification.
      */
@@ -65,12 +65,12 @@ Per utilizzare la classe SpatieEmail all'interno di una notifica, implementa il 
 public function toMail(object $notifiable): \Illuminate\Mail\Mailable
 {
     $email = new SpatieEmail($this->record, $this->templateSlug);
-    
+
     // Aggiungi eventuali allegati
     if ($this->attachments) {
         $email->addAttachments($this->attachments);
     }
-    
+
     return $email;
 }
 ```
@@ -130,12 +130,12 @@ $user->notify($notification);
 public function toMail(object $notifiable): \Illuminate\Mail\Mailable
 {
     $email = new SpatieEmail($this->record, $this->templateSlug);
-    
+
     // Imposta esplicitamente il destinatario
     // Questo non è necessario se si usa $notifiable->routeNotificationFor('mail')
     // ma è una buona pratica per la chiarezza
     $email->to($notifiable->email);
-    
+
     return $email;
 }
 ```

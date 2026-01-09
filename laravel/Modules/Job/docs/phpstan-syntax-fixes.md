@@ -1,8 +1,8 @@
 # PHPStan Syntax Fixes - Modulo Job
 
-**Data**: 2025-01-11  
-**Versione PHPStan**: 1.12.x  
-**Livello**: max  
+**Data**: 2025-01-11
+**Versione PHPStan**: 1.12.x
+**Livello**: max
 **Status**: ✅ IMPORT CONFLICT RISOLTO
 
 ## 🔧 Correzione Implementata
@@ -39,7 +39,7 @@ describe('GetTaskFrequenciesAction', function (): void {
     it('has queueable action trait', function (): void {
         $action = new GetTaskFrequenciesAction();
         $traits = class_uses($action);  // Usa l'import
-        
+
         expect($traits)->toContain('Spatie\QueueableAction\QueueableAction');
     });
 });
@@ -60,7 +60,7 @@ describe('GetTaskFrequenciesAction', function (): void {
     it('has queueable action trait', function (): void {
         $action = new GetTaskFrequenciesAction();
         $traits = \Safe\class_uses($action);  // ✅ Fully qualified name
-        
+
         expect($traits)->toContain('Spatie\QueueableAction\QueueableAction');
     });
 });
@@ -141,7 +141,7 @@ $content = file_get_contents($path);
 Pest tests hanno molte funzioni helper globali che possono confliggere:
 
 - `class_uses()` - Già disponibile
-- `method_exists()` - Già disponibile  
+- `method_exists()` - Già disponibile
 - `trait_exists()` - Già disponibile
 
 **Soluzione**: Usa FQN per Safe variants di queste funzioni.
@@ -192,7 +192,7 @@ $traits = \Safe\class_uses($object);
 use function Safe\file_get_contents;
 use function Safe\json_decode;
 
-// FQN quando c'è potential conflict  
+// FQN quando c'è potential conflict
 $traits = \Safe\class_uses($obj);
 ```
 
@@ -215,7 +215,7 @@ $traits = class_uses($obj);    // ❌ Può ritornare false!
 
 ---
 
-**Fix Completato**: 2025-01-11  
-**Priority**: ALTA  
-**Impact**: BASSO (Solo 1 test file)  
+**Fix Completato**: 2025-01-11
+**Priority**: ALTA
+**Impact**: BASSO (Solo 1 test file)
 **Type Safety**: MIGLIORATA ✅

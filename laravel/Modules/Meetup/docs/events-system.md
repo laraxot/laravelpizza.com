@@ -70,12 +70,12 @@ new class extends Component {
         'num_guests' => 1,
         'special_requests' => '',
     ];
-    
+
     public function mount(Event $event)
     {
         $this->event = $event;
     }
-    
+
     public function register()
     {
         if (!Auth::check()) {
@@ -83,22 +83,22 @@ new class extends Component {
                 'redirect' => request()->url()
             ]));
         }
-        
+
         $this->validate([
             'registrationData.num_guests' => 'required|integer|min:1|max:10',
             'registrationData.special_requests' => 'nullable|string|max:500',
         ]);
-        
+
         // Controllo se già registrato
         $existingRegistration = EventRegistration::where('event_id', $this->event->id)
             ->where('user_id', Auth::id())
             ->first();
-            
+
         if ($existingRegistration) {
             $this->addError('registration', 'Sei già registrato per questo evento.');
             return;
         }
-        
+
         EventRegistration::create([
             'event_id' => $this->event->id,
             'user_id' => Auth::id(),
@@ -106,21 +106,21 @@ new class extends Component {
             'special_requests' => $this->registrationData['special_requests'],
             'status' => 'confirmed',
         ]);
-        
+
         $this->event->increment('current_attendees');
-        
-        $this->dispatch('registration-success', 
+
+        $this->dispatch('registration-success',
             message: 'Registrazione completata con successo!',
             eventId: $this->event->id
         );
     }
-    
+
     public function getIsRegisteredProperty()
     {
         if (!Auth::check()) {
             return false;
         }
-        
+
         return EventRegistration::where('event_id', $this->event->id)
             ->where('user_id', Auth::id())
             ->exists();
@@ -170,7 +170,7 @@ new class extends Component {
         'dateRange' => null,
         'attendeeCount' => null
     ];
-    
+
     public function mount()
     {
         $this->searchTerm = request('q', '');
@@ -181,7 +181,7 @@ new class extends Component {
             'attendeeCount' => request('attendees', null)
         ];
     }
-    
+
     public function getEventsProperty()
     {
         return \App\Models\Event::with(['category', 'organizer', 'attendees'])
@@ -204,7 +204,7 @@ new class extends Component {
             ->orderBy('start_datetime', 'asc')
             ->paginate(12);
     }
-    
+
     public function searchUpdated()
     {
         $this->dispatch('events-search-updated');

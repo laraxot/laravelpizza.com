@@ -3,11 +3,11 @@
 ## Errori Risolti
 
 ### 1. WriteTranslationFileAction.php
-**Errori**: 
+**Errori**:
 - Call to undefined method `Illuminate\Contracts\Cache\Repository::flush()`
 - PHPDoc tag @var contains unknown class `Illuminate\Translation\LoaderInterface`
 
-**Soluzione**: 
+**Soluzione**:
 - Aggiunto `//@phpstan-ignore-next-line` per il metodo `flush()` del cache
 - Cambiato tipo da `Illuminate\Translation\LoaderInterface` a `mixed` per il loader
 

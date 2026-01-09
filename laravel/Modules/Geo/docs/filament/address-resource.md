@@ -35,20 +35,20 @@ public static function getFormSchema(): array
     return [
         'name' => Forms\Components\TextInput::make('name')
             ->maxLength(255),
-            
+
         'description' => Forms\Components\Textarea::make('description')
             ->maxLength(1000)
             ->columnSpanFull(),
-            
+
         'route' => Forms\Components\TextInput::make('route')
             ->required()
             ->maxLength(255),
-            
+
         'street_number' => Forms\Components\TextInput::make('street_number')
             ->maxLength(20),
-            
+
         // Altri campi...
-            
+
         'map' => Map::make('map')
             ->reactive()
             ->afterStateUpdated(/* ... */)
@@ -71,7 +71,7 @@ public static function getFormSchema(): array
 {
     return [
         // Campi specifici della risorsa...
-        
+
         'addresses' => Forms\Components\Repeater::make('addresses')
             ->relationship('addresses')
             ->schema(AddressResource::getFormSchema()),
@@ -127,14 +127,14 @@ public static function getTableColumns(): array
     return [
         'name' => Tables\Columns\TextColumn::make('name')
             ->searchable(),
-            
+
         'full_address' => Tables\Columns\TextColumn::make('full_address')
             ->searchable(),
-            
+
         'type' => Tables\Columns\TextColumn::make('type')
             ->badge()
             ->formatStateUsing(/* ... */),
-            
+
         // Altre colonne...
     ];
 }
@@ -150,9 +150,9 @@ public static function getTableFilters(): array
     return [
         'type' => Tables\Filters\SelectFilter::make('type')
             ->options([/* ... */]),
-            
+
         'is_primary' => Tables\Filters\TernaryFilter::make('is_primary'),
-            
+
         'locality' => Tables\Filters\SelectFilter::make('locality')
             ->options(fn (): array => Address::query()
                 ->select('locality')
@@ -160,7 +160,7 @@ public static function getTableFilters(): array
                 ->pluck('locality', 'locality')
                 ->toArray()
             ),
-            
+
         // Altri filtri...
     ];
 }
@@ -175,11 +175,11 @@ public static function getTableActions(): array
 {
     return [
         'edit' => Tables\Actions\EditAction::make(),
-            
+
         'view' => Tables\Actions\ViewAction::make(),
-            
+
         'delete' => Tables\Actions\DeleteAction::make(),
-            
+
         'setPrimary' => Tables\Actions\Action::make('setPrimary')
             ->visible(fn (Address $record): bool => !$record->is_primary)
             ->icon('heroicon-o-star')
@@ -204,15 +204,15 @@ public static function getInfolistSchema(): array
         Forms\Components\Section::make('address.sections.metadata.label')
             ->description('address.sections.metadata.description')
             ->schema([/* ... */]),
-            
+
         Forms\Components\Section::make('address.sections.address.label')
             ->description('address.sections.address.description')
             ->schema([/* ... */]),
-            
+
         Forms\Components\Section::make('address.sections.location.label')
             ->description('address.sections.location.description')
             ->schema([/* ... */]),
-            
+
         Forms\Components\Section::make('address.sections.map.label')
             ->description('address.sections.map.description')
             ->schema([/* ... */]),
@@ -230,7 +230,7 @@ return [
     'singular' => 'Indirizzo',
     'plural' => 'Indirizzi',
     'navigation' => 'Gestione Indirizzi',
-    
+
     'fields' => [
         'route' => [
             'label' => 'Via',
@@ -238,7 +238,7 @@ return [
         ],
         // Altri campi...
     ],
-    
+
     // Altre traduzioni...
 ];
 ```

@@ -19,7 +19,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 class WidgetName extends XotBaseWidget
 {
     protected static string $view = 'module::filament.widgets.widget-name';
-    
+
     // Widget logic here
 }
 ```
@@ -50,7 +50,7 @@ Replace Livewire components:
 **Location**: `Modules/UI/app/Filament/Widgets/DarkModeSwitcherWidget.php`
 **View**: `Modules/UI/resources/views/filament/widgets/dark-mode-switcher.blade.php`
 
-### Language Switcher Widget (Lang Module)  
+### Language Switcher Widget (Lang Module)
 **Location**: `Modules/Lang/app/Filament/Widgets/LanguageSwitcherWidget.php`
 **View**: `Modules/Lang/resources/views/filament/widgets/language-switcher.blade.php`
 
@@ -92,7 +92,7 @@ public function toggleDarkMode(): void
 
 ### Event Handling
 ```blade
-<button 
+<button
     x-data="{ darkMode: {{ $darkMode ? 'true' : 'false' }} }"
     @click="
         darkMode = !darkMode;

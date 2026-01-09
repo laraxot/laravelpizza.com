@@ -97,4 +97,4 @@ Modules/Cms/
 In caso di problemi, è possibile:
 1. Mantenere la vecchia struttura come backup
 2. Creare un branch di backup
-3. Documentare i punti di rollback 
+3. Documentare i punti di rollback

@@ -79,4 +79,4 @@ Cluster per organizzare tutte le risorse OAuth (Laravel Passport):
 - LoginWidget: Migrato al sistema Schema
 - RegisterWidget: Migrato al sistema Schema
 - ResetPasswordWidget: Migrato al sistema Schema
-- PasswordExpiredWidget: Migrato al sistema Schema 
+- PasswordExpiredWidget: Migrato al sistema Schema

@@ -21,7 +21,7 @@
 4. **Personalizzazione**
    - Override delle icone tramite configurazione
    - Registrazione di set di icone personalizzati
-   - Supporto per colori e dimensioni dinamiche 
+   - Supporto per colori e dimensioni dinamiche
 
 ## Gestione dei Blocchi
 
@@ -45,7 +45,7 @@
 4. **Validazione**
    - Verificare sempre la presenza dei dati necessari
    - Utilizzare valori di default appropriati
-   - Gestire i casi di dati mancanti 
+   - Gestire i casi di dati mancanti
 
 ## Gestione dei Percorsi delle Risorse
 
@@ -76,7 +76,7 @@
 5. **Validazione**
    - Controllare che i percorsi inizino con `/`
    - Verificare che le risorse esistano
-   - Gestire i casi di percorsi errati 
+   - Gestire i casi di percorsi errati
 
 ## Struttura delle Directory
 
@@ -114,7 +114,7 @@
    - Controllare i percorsi prima di creare file
    - Verificare i namespace
    - Assicurarsi che le directory esistano
-   - Seguire le convenzioni Laravel 
+   - Seguire le convenzioni Laravel
 
 ## Gestione delle Traduzioni
 
@@ -166,10 +166,9 @@
    - Generare template traduzione
    - Tradurre contenuti
    - Verificare collegamenti
-   - Aggiornare metadati 
+   - Aggiornare metadati
 
 ## Collegamenti tra versioni di search.md
 * [search.md](docs/rules/search.md)
 * [search.md](../../../Xot/docs/features/search.md)
 * [search.md](../../../Xot/docs/rules/search.md)
-

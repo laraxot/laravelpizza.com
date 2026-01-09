@@ -20,7 +20,7 @@ Models extending `BaseModel` or `XotBaseModel` MUST NEVER include:
 class County extends BaseModel
 {
     use \Modules\Xot\Models\Traits\HasXotFactory; // WRONG - BaseModel already has this
-    
+
     protected static function newFactory(): CountyFactory // WRONG - BaseModel already provides this
     {
         return CountyFactory::new();
@@ -48,7 +48,7 @@ class County extends BaseModel
 class Permission extends SpatiePermission
 {
     use \Modules\Xot\Models\Traits\HasXotFactory; // CORRECT - SpatiePermission doesn't include HasFactory
-    
+
     protected static function newFactory() // CORRECT - needed for factory functionality
     {
         return app(\Modules\Xot\Actions\Factory\GetFactoryAction::class)->execute(static::class);

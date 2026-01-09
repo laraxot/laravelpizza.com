@@ -153,7 +153,7 @@ protected function getStudioStepSchema(): array
             ->emptyStateDescription(__('saluteora::widgets.find_doctor_and_appointment.studio_list.empty_state.description'))
             ->required()
             ->columnSpanFull(),
-            
+
         Form\TextInput::make('selected_studio_name')
             ->readonly()
             ->required(),
@@ -166,7 +166,7 @@ protected function getStudioStepSchema(): array
 private function getStudioCards(Get $get): array
 {
     $studios = $this->getStudiosForLocationFull($get);
-    
+
     return $studios->map(function ($studio) {
         return [
             'id' => $studio->id,
@@ -226,7 +226,7 @@ Struttura card validata automaticamente:
 
 ### Benchmark
 - **< 100ms**: Rendering 20 cards
-- **< 200ms**: Rendering 50 cards 
+- **< 200ms**: Rendering 50 cards
 - **< 300ms**: Rendering 100 cards
 
 ## 🔗 **Best Practices**
@@ -278,6 +278,6 @@ RadioCardSelector::make('item')
 ---
 
 **Autore**: Implementazione completata per SaluteOra widget
-**Ultima modifica**: Gennaio 2025  
+**Ultima modifica**: Gennaio 2025
 **Versione**: 1.0.0
-**Status**: ✅ Production Ready 
+**Status**: ✅ Production Ready

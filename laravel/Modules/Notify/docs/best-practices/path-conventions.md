@@ -1,4 +1,4 @@
-# Convenzioni sui Percorsi 
+# Convenzioni sui Percorsi
 
 ## Regole Fondamentali
 

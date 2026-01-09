@@ -162,7 +162,7 @@ __('messages.welcome', ['name' => 'Mario']);
 class ExtractTranslations extends Command
 {
     protected $signature = 'translations:extract {locale} {--output=} {--source=resources/views}';
-    
+
     public function handle()
     {
         // Estrai le stringhe dai file di vista
@@ -182,22 +182,22 @@ on: [push, pull_request]
 jobs:
   check-translations:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-          
+
       - name: Install Dependencies
         run: |
           composer install -n --prefer-dist
-          
+
       - name: Check Missing Translations
         run: php artisan translations:missing it --json > missing.json
-        
+
       - name: Fail if Missing Translations
         if: ${{ !contains('0', '0') }}
         run: |

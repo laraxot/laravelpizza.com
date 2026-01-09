@@ -104,7 +104,7 @@ public function getData(): array
 public function getData(): array
 {
     $cacheKey = "widget_data_{$this->getWidgetId()}";
-    
+
     return Cache::remember($cacheKey, 300, function () {
         return $this->calculateExpensiveData();
     });
@@ -128,7 +128,7 @@ public function getFormSchema(): array
 public function getFormSchema(): array
 {
     $cacheKey = "form_schema_{$this->getFormType()}";
-    
+
     return Cache::remember($cacheKey, 3600, function () {
         return $this->buildComplexFormSchema();
     });
@@ -152,7 +152,7 @@ public function getTableColumns(): array
 public function getTableColumns(): array
 {
     $cacheKey = "table_columns_{$this->getTableType()}";
-    
+
     return Cache::remember($cacheKey, 3600, function () {
         return $this->buildComplexTableColumns();
     });
@@ -251,10 +251,10 @@ public function getData(): array
     if (Cache::has("processing_{$this->getJobId()}")) {
         return ['status' => 'processing'];
     }
-    
+
     // Dispatch job for heavy operation
     ProcessHeavyDataJob::dispatch($this->getJobId());
-    
+
     return ['status' => 'queued'];
 }
 ```
@@ -280,7 +280,7 @@ public function processAllRecords(): void
     $chunkSize = 1000;
     $totalRecords = Model::count();
     $totalChunks = ceil($totalRecords / $chunkSize);
-    
+
     for ($chunk = 0; $chunk < $totalChunks; $chunk++) {
         ProcessRecordsChunkJob::dispatch($chunk, $chunkSize);
     }
@@ -311,11 +311,11 @@ public function getFormSchema(): array
 public function getFormSchema(): array
 {
     $fields = $this->getBasicFields();
-    
+
     if ($this->showAdvancedFields) {
         $fields = array_merge($fields, $this->getAdvancedFields());
     }
-    
+
     return $fields;
 }
 ```
@@ -345,11 +345,11 @@ public function getTableColumns(): array
         TextColumn::make('name'),
         TextColumn::make('email'),
     ];
-    
+
     if (auth()->user()->isAdmin()) {
         $columns[] = TextColumn::make('admin_field');
     }
-    
+
     return $columns;
 }
 ```
@@ -362,19 +362,19 @@ public function getTableColumns(): array
 public function getData(): array
 {
     $startTime = microtime(true);
-    
+
     $data = $this->calculateData();
-    
+
     $endTime = microtime(true);
     $executionTime = $endTime - $startTime;
-    
+
     if ($executionTime > 1.0) {
         Log::warning('Slow operation detected', [
             'method' => __METHOD__,
             'execution_time' => $executionTime,
         ]);
     }
-    
+
     return $data;
 }
 ```
@@ -385,12 +385,12 @@ public function getData(): array
 public function processData(): void
 {
     $startMemory = memory_get_usage();
-    
+
     $this->performOperation();
-    
+
     $endMemory = memory_get_usage();
     $memoryUsed = $endMemory - $startMemory;
-    
+
     if ($memoryUsed > 50 * 1024 * 1024) { // 50MB
         Log::warning('High memory usage detected', [
             'method' => __METHOD__,
@@ -439,5 +439,3 @@ public function processData(): void
 - [Testing Guidelines](./testing-guidelines.md)
 
 This document provides comprehensive performance guidelines for maintaining optimal performance across the Xot module and modules that extend it.
-
-

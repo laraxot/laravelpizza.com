@@ -164,7 +164,7 @@ Safe\file_put_contents($filename, $modifiedContents);
    ```php
    // ❌ NON FARE
    $content = file_get_contents($file);
-   
+
    // ✅ CORRETTO
    $content = Safe\file_get_contents($file);
    ```
@@ -173,7 +173,7 @@ Safe\file_put_contents($filename, $modifiedContents);
    ```php
    // ❌ NON FARE
    Safe\file_put_contents($file, $content);
-   
+
    // ✅ CORRETTO
    try {
        Safe\file_put_contents($file, $content);
@@ -193,4 +193,4 @@ Safe\file_put_contents($filename, $modifiedContents);
 ## Riferimenti
 - [Documentazione thecodingmachine/safe](https://github.com/thecodingmachine/safe)
 - [Lista completa funzioni Safe](https://github.com/thecodingmachine/safe/blob/master/generated/Safe.php)
-- [Gestione Eccezioni in PHP](https://www.php.net/manual/en/language.exceptions.php) 
+- [Gestione Eccezioni in PHP](https://www.php.net/manual/en/language.exceptions.php)

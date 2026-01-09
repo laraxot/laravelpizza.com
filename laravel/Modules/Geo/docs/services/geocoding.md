@@ -61,19 +61,19 @@ class GoogleGeocodeService implements GeocodeServiceInterface
     {
         try {
             $query = is_string($address) ? $address : $this->formatAddressForGeocode($address);
-            
+
             // Per indirizzi italiani, appendere "Italia" per maggiore precisione
             if ($address instanceof Address && $address->address_country === 'IT') {
                 $query .= ', Italia';
             }
-            
+
             $response = Http::get('https://maps.googleapis.com/maps/api/geocode/json', [
                 'address' => $query,
                 'key' => config('geo.google_maps_api_key'),
             ]);
-            
+
             $data = $response->json();
-            
+
             if ($response->successful() && isset($data['results'][0]['geometry']['location'])) {
                 $location = $data['results'][0]['geometry']['location'];
                 return [
@@ -81,14 +81,14 @@ class GoogleGeocodeService implements GeocodeServiceInterface
                     'longitude' => $location['lng'],
                 ];
             }
-            
+
             return null;
         } catch (\Exception $e) {
             Log::error('Geocoding error: ' . $e->getMessage());
             return null;
         }
     }
-    
+
     /**
      * Reverse geocode (coordinate a indirizzo).
      *
@@ -103,20 +103,20 @@ class GoogleGeocodeService implements GeocodeServiceInterface
                 'latlng' => "{$latitude},{$longitude}",
                 'key' => config('geo.google_maps_api_key'),
             ]);
-            
+
             $data = $response->json();
-            
+
             if ($response->successful() && isset($data['results'][0])) {
                 return $this->parseGoogleAddress($data['results'][0]);
             }
-            
+
             return null;
         } catch (\Exception $e) {
             Log::error('Reverse geocoding error: ' . $e->getMessage());
             return null;
         }
     }
-    
+
     /**
      * Formatta un indirizzo per il geocoding.
      *
@@ -126,21 +126,21 @@ class GoogleGeocodeService implements GeocodeServiceInterface
     private function formatAddressForGeocode(Address $address): string
     {
         $parts = [];
-        
+
         if ($address->street_address) {
             $parts[] = $address->street_address;
         }
-        
+
         if ($address->address_locality) {
             $parts[] = $address->address_locality;
         }
-        
+
         // Per gli indirizzi italiani, includiamo sia provincia che regione
         if ($address->address_country === 'IT') {
             if ($address->province) {
                 $parts[] = $address->province;
             }
-            
+
             if ($address->address_region) {
                 $parts[] = $address->address_region;
             }
@@ -149,11 +149,11 @@ class GoogleGeocodeService implements GeocodeServiceInterface
                 $parts[] = $address->address_region;
             }
         }
-        
+
         if ($address->postal_code) {
             $parts[] = $address->postal_code;
         }
-        
+
         if ($address->address_country) {
             // Converti codice paese in nome paese completo
             $countryName = \Countries::getCountryName($address->address_country);
@@ -161,10 +161,10 @@ class GoogleGeocodeService implements GeocodeServiceInterface
                 $parts[] = $countryName;
             }
         }
-        
+
         return implode(', ', $parts);
     }
-    
+
     /**
      * Analizza una risposta Google per creare un oggetto Address.
      *
@@ -177,7 +177,7 @@ class GoogleGeocodeService implements GeocodeServiceInterface
         $address->formatted_address = $result['formatted_address'] ?? null;
         $address->latitude = $result['geometry']['location']['lat'] ?? null;
         $address->longitude = $result['geometry']['location']['lng'] ?? null;
-        
+
         // Mappa dei componenti dell'indirizzo
         $components = [];
         foreach ($result['address_components'] as $component) {
@@ -188,16 +188,16 @@ class GoogleGeocodeService implements GeocodeServiceInterface
                 ];
             }
         }
-        
+
         // Mappiamo i componenti ai campi del nostro modello
         $address->street_address = $this->getStreetAddress($components);
         $address->street_number = $components['street_number']['long_name'] ?? null;
         $address->address_locality = $components['locality']['long_name'] ?? ($components['postal_town']['long_name'] ?? null);
-        
+
         // Per l'Italia, gestiamo separatamente provincia e regione
         if (isset($components['country']) && $components['country']['short_name'] === 'IT') {
             $address->address_country = 'IT';
-            
+
             // Provincia (administrative_area_level_2 in Italia)
             if (isset($components['administrative_area_level_2'])) {
                 $address->province = $components['administrative_area_level_2']['long_name'];
@@ -206,7 +206,7 @@ class GoogleGeocodeService implements GeocodeServiceInterface
                     $address->province_short = $matches[1];
                 }
             }
-            
+
             // Regione (administrative_area_level_1 in Italia)
             if (isset($components['administrative_area_level_1'])) {
                 $address->address_region = $components['administrative_area_level_1']['long_name'];
@@ -216,12 +216,12 @@ class GoogleGeocodeService implements GeocodeServiceInterface
             $address->address_region = $components['administrative_area_level_1']['long_name'] ?? null;
             $address->address_country = $components['country']['short_name'] ?? null;
         }
-        
+
         $address->postal_code = $components['postal_code']['long_name'] ?? null;
-        
+
         return $address;
     }
-    
+
     /**
      * Ottiene l'indirizzo stradale completo dai componenti.
      *
@@ -232,14 +232,14 @@ class GoogleGeocodeService implements GeocodeServiceInterface
     {
         $route = $components['route']['long_name'] ?? null;
         $streetNumber = $components['street_number']['long_name'] ?? null;
-        
+
         if ($route) {
             if ($streetNumber) {
                 return "{$route}, {$streetNumber}";
             }
             return $route;
         }
-        
+
         return null;
     }
 }
@@ -261,12 +261,12 @@ use Modules\Geo\Models\Address;
 class AddressObserver
 {
     private GeocodeServiceInterface $geocodeService;
-    
+
     public function __construct(GeocodeServiceInterface $geocodeService)
     {
         $this->geocodeService = $geocodeService;
     }
-    
+
     /**
      * Handle the Address "saving" event.
      *
@@ -276,23 +276,23 @@ class AddressObserver
     public function saving(Address $address): void
     {
         // Verifica se le coordinate sono mancanti ma abbiamo un indirizzo
-        if ((!$address->latitude || !$address->longitude) && 
+        if ((!$address->latitude || !$address->longitude) &&
             ($address->street_address || $address->address_locality)) {
-            
+
             $coordinates = $this->geocodeService->geocode($address);
-            
+
             if ($coordinates) {
                 $address->latitude = $coordinates['latitude'];
                 $address->longitude = $coordinates['longitude'];
             }
         }
-        
+
         // Se non abbiamo un indirizzo formattato ma abbiamo le altre informazioni
         if (!$address->formatted_address && $address->street_address) {
             $address->formatted_address = $this->formatAddress($address);
         }
     }
-    
+
     /**
      * Formatta un indirizzo basato sui suoi componenti.
      *
@@ -302,44 +302,44 @@ class AddressObserver
     private function formatAddress(Address $address): string
     {
         $parts = [];
-        
+
         if ($address->street_address) {
             $parts[] = $address->street_address;
         }
-        
+
         $localityParts = [];
-        
+
         if ($address->postal_code) {
             $localityParts[] = $address->postal_code;
         }
-        
+
         if ($address->address_locality) {
             $localityParts[] = $address->address_locality;
         }
-        
+
         // Per indirizzi italiani, includiamo la sigla provincia tra parentesi
         if ($address->address_country === 'IT' && $address->province_short) {
             $localityParts[] = "({$address->province_short})";
         }
-        
+
         if (!empty($localityParts)) {
             $parts[] = implode(' ', $localityParts);
         }
-        
+
         // Per indirizzi italiani, aggiungiamo la regione
         if ($address->address_country === 'IT' && $address->address_region) {
             $parts[] = $address->address_region;
         } elseif ($address->address_region) {
             $parts[] = $address->address_region;
         }
-        
+
         if ($address->address_country) {
             $countryName = \Countries::getCountryName($address->address_country);
             if ($countryName) {
                 $parts[] = strtoupper($countryName);
             }
         }
-        
+
         return implode("\n", $parts);
     }
 }
@@ -362,7 +362,7 @@ class GeoServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app->bind(GeocodeServiceInterface::class, GoogleGeocodeService::class);
-        
+
         Address::observe(AddressObserver::class);
     }
 }
@@ -391,14 +391,14 @@ public function geocodeItalianAddress(Address $address): ?array
     if ($address->address_country !== 'IT') {
         return $this->geocode($address);
     }
-    
+
     // Costruisci query ottimizzata per l'Italia
     $query = [];
-    
+
     if ($address->street_address) {
         $query[] = $address->street_address;
     }
-    
+
     if ($address->address_locality) {
         // Aggiungi sigla provincia per maggiore precisione
         if ($address->province_short) {
@@ -407,19 +407,19 @@ public function geocodeItalianAddress(Address $address): ?array
             $query[] = $address->address_locality;
         }
     }
-    
+
     if ($address->postal_code) {
         $query[] = $address->postal_code;
     }
-    
+
     // Aggiungi sempre la regione per indirizzi italiani
     if ($address->address_region) {
         $query[] = $address->address_region;
     }
-    
+
     // Aggiungi sempre "Italia" alla fine
     $query[] = 'Italia';
-    
+
     return $this->geocode(implode(', ', $query));
 }
 ```

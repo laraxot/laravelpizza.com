@@ -220,10 +220,10 @@ Cannot call method lastMethod() on mixed
        ->intermediateMethod()
        ->problematicMethod($param)
        ->finalMethod();
-   
+
    // Preferire:
    $formatObj = new FormatClass(); // Istanziazione esplicita
-   
+
    // @phpstan-ignore-next-line
    LibraryClass::start()
        ->intermediateMethod()
@@ -239,7 +239,7 @@ Cannot call method lastMethod() on mixed
    ```php
    /**
     * Converte il video usando la libreria FFMpeg.
-    * 
+    *
     * @param FormatClass $format Il formato di output
     * @return string Il percorso del file convertito
     */

@@ -118,16 +118,16 @@ export default {
 import React from 'react';
 import { Link } from '@inertiajs/react';
 
-export default function Button({ 
-    type = 'button', 
-    className = '', 
-    processing, 
+export default function Button({
+    type = 'button',
+    className = '',
+    processing,
     children,
     href,
-    ...props 
+    ...props
 }) {
     const baseClasses = 'inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest transition ease-in-out duration-150';
-    
+
     const variantClasses = {
         primary: 'bg-primary-600 hover:bg-primary-700 focus:bg-primary-700 active:bg-primary-900',
         secondary: 'bg-secondary-600 hover:bg-secondary-700 focus:bg-secondary-700 active:bg-secondary-900',
@@ -165,12 +165,12 @@ export default function AppLayout({ children, title }) {
     return (
         <div className="min-h-screen bg-gray-100">
             <Head title={title} />
-            
+
             <Navbar />
-            
+
             <div className="flex">
                 <Sidebar />
-                
+
                 <main className="flex-1 p-6">
                     {children}
                 </main>

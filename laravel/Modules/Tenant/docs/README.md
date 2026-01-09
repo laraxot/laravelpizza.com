@@ -47,6 +47,5 @@ Il modulo **Tenant** fornisce supporto completo per **multi-tenancy** nel framew
 
 ---
 
-**Ultimo Aggiornamento**: 5 Novembre 2025  
+**Ultimo Aggiornamento**: 5 Novembre 2025
 **Status**: PHPStan Fixes In Progress
-

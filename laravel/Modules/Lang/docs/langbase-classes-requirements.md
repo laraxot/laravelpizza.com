@@ -74,7 +74,7 @@ public function panel(Panel $panel): Panel
         SpatieTranslatablePlugin::make()
             ->defaultLocales(['it', 'en']),
     ]);
-    
+
     return parent::panel($panel);
 }
 ```
@@ -91,7 +91,7 @@ use Spatie\Translatable\HasTranslations;
 class MyModel extends BaseModel
 {
     use HasTranslations;
-    
+
     /**
      * Campi traducibili.
      *
@@ -234,7 +234,7 @@ Prima di estendere `LangBase*` classes:
 - **Plugin**: Registrato
 - **Status**: ✅ Funzionante
 
-### ✅ Lang  
+### ✅ Lang
 - **Resource**: Varie (Post, Translation, etc.)
 - **Plugin**: Registrato
 - **Status**: ✅ Funzionante
@@ -284,9 +284,9 @@ test('can create translated record', function () {
             'en' => 'English name',
         ],
     ];
-    
+
     $record = MyModel::create($data);
-    
+
     expect($record->getTranslation('name', 'it'))->toBe('Nome italiano')
         ->and($record->getTranslation('name', 'en'))->toBe('English name');
 });
@@ -325,8 +325,6 @@ $value = $model->field;  // Ritorna traduzione 'en' se esiste, altrimenti fallba
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
-**Versione Plugin**: lara-zeus/spatie-translatable 1.0.4  
+**Ultimo aggiornamento**: 27 Ottobre 2025
+**Versione Plugin**: lara-zeus/spatie-translatable 1.0.4
 **Compatibilità**: Filament 4.x, Laravel 12.x
-
-

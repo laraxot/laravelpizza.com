@@ -99,7 +99,7 @@ Il componente Progress Bar visualizza l'avanzamento di un'operazione o il progre
         label="Caricamento file..."
         show-percentage
     />
-    
+
     @if($uploadProgress === 100)
         <div class="mt-2 text-success-500">
             Caricamento completato!
@@ -114,13 +114,13 @@ Il componente Progress Bar visualizza l'avanzamento di un'operazione o il progre
     <div class="mb-2">
         Passo {{ $currentStep }} di {{ $totalSteps }}
     </div>
-    
+
     <x-filament::progress
         :value="($currentStep / $totalSteps) * 100"
         color="primary"
         show-percentage
     />
-    
+
     <div class="mt-4">
         <!-- Contenuto del form -->
     </div>
@@ -136,7 +136,7 @@ Il componente Progress Bar visualizza l'avanzamento di un'operazione o il progre
                 <span>{{ $task->name }}</span>
                 <span>{{ $task->completed_subtasks }}/{{ $task->total_subtasks }}</span>
             </div>
-            
+
             <x-filament::progress
                 :value="($task->completed_subtasks / $task->total_subtasks) * 100"
                 :color="$task->completed_subtasks === $task->total_subtasks ? 'success' : 'primary'"
@@ -166,4 +166,4 @@ Il componente Progress Bar visualizza l'avanzamento di un'operazione o il progre
 4. **Best Practices**
    - Minimizzare il DOM
    - Utilizzare CSS per animazioni
-   - Implementare debounce per eventi frequenti 
+   - Implementare debounce per eventi frequenti

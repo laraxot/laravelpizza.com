@@ -8,7 +8,7 @@
 
 **Esempio di errore**:
 ```php
-<?php 
+<?php
 return [
 
 declare(strict_types=1);  // ERRORE: dopo return

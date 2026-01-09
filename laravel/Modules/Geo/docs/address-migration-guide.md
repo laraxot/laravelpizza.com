@@ -57,7 +57,7 @@ Nella tua domanda hai giustamente notato:
 > $table->string('address_region', 100)->nullable()->comment('Regione/Provincia');
 > $table->string('postal_code', 20)->nullable()->comment('Codice postale');
 > $table->string('address_country', 2)->nullable()->comment('Codice paese ISO 3166-1 alpha-2');`
-> 
+>
 > ripetere "address" quando siamo già nella tabella address?
 
 Hai perfettamente ragione. Esistono diverse considerazioni riguardo alle convenzioni di naming:

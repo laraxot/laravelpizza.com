@@ -76,4 +76,4 @@ Questa best practice risolve anche errori PHPStan di livello 9 e superiore relat
 Method Resource::getFormSchema() should return array<string, Filament\Forms\Components\Component> but returns array<int, Component>
 ```
 
-Seguendo queste best practices si assicura che il codice passi i controlli statici di PHPStan e sia più facile da mantenere. 
+Seguendo queste best practices si assicura che il codice passi i controlli statici di PHPStan e sia più facile da mantenere.

@@ -25,7 +25,7 @@ Dove:
 - `{TipoComponente}` è il tipo di componente (Actions, Models, Controllers, etc.)
 
 ### Perché l'Errore è Avvenuto
-1. **Struttura Directory vs Namespace**: 
+1. **Struttura Directory vs Namespace**:
    - La directory `app` è stata inclusa nel namespace
    - Questo è un errore comune quando si segue ciecamente la struttura delle directory
 
@@ -92,4 +92,4 @@ Modules/
 ## Riferimenti
 - [Documentazione Ufficiale Laravel Modules](https://nwidart.com/laravel-modules/v6/introduction)
 - [PSR-4 Autoloading Standard](https://www.php-fig.org/psr/psr-4/)
-- [Laravel Package Development](https://laravel.com/docs/package-development) 
+- [Laravel Package Development](https://laravel.com/docs/package-development)

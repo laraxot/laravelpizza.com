@@ -34,7 +34,7 @@ Based on the Genesis starter kit (https://github.com/thedevdojo/genesis), implem
 
 **Authentication Flow:**
 - `/auth/login` - Login page
-- `/auth/register` - Registration page  
+- `/auth/register` - Registration page
 - `/auth/verify` - Email verification
 - `/dashboard` - User dashboard
 - `/profile/edit` - Profile editing
@@ -124,7 +124,7 @@ use Livewire\Volt\Component;
 new class extends Component {
     public $name = '';
     public $email = '';
-    
+
     public function rules()
     {
         return [
@@ -132,7 +132,7 @@ new class extends Component {
             'email' => 'required|email|max:255',
         ];
     }
-    
+
     public function save()
     {
         $validated = $this->validate();
@@ -181,7 +181,7 @@ new class extends Component {
         'date' => null,
         'tags' => []
     ];
-    
+
     public function mount()
     {
         $this->searchTerm = request('q', '');
@@ -191,7 +191,7 @@ new class extends Component {
             'tags' => request('tags', [])
         ];
     }
-    
+
     public function getSearchResultsProperty()
     {
         return \App\Models\Event::when($this->searchTerm, function ($query) {
@@ -207,7 +207,7 @@ new class extends Component {
             ->orderBy('start_datetime', 'desc')
             ->get();
     }
-    
+
     // Debounced search method
     public function searchUpdated()
     {
@@ -217,10 +217,10 @@ new class extends Component {
 
 <div>
     <div class="relative">
-        <input 
+        <input
             wire:model.live.debounce.500ms="searchTerm"
             wire:keydown="searchUpdated"
-            type="text" 
+            type="text"
             placeholder="Search events..."
             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
@@ -312,7 +312,7 @@ use App\Models\Event;
 
 new class extends Component {
     public Event $event;
-    
+
     public function register()
     {
         // Registration logic
@@ -435,5 +435,5 @@ Following these rules ensures consistency across the Laravel Pizza Meetups proje
 
 ---
 
-**Document Version**: 1.0  
+**Document Version**: 1.0
 **Last Updated**: November 28, 2025

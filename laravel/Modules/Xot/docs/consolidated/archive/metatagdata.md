@@ -56,7 +56,7 @@ Restituisce l'altezza configurata per il logo.
 ### getBrandName(): string
 Restituisce il nome del brand (title).
 
-### getBrandLogo(): string  
+### getBrandLogo(): string
 Restituisce il percorso del logo del brand principale.
 
 ### getDarkModeBrandLogo(): string
@@ -71,7 +71,7 @@ Restituisce il logo del brand come data URI base64 per embedding inline.
 
 **Utilizzi principali:**
 - Email HTML con logo incorporato
-- Generazione PDF con logo embedded  
+- Generazione PDF con logo embedded
 - Riduzione richieste HTTP
 - Utilizzo offline senza dipendenze esterne
 
@@ -134,4 +134,4 @@ Restituisce il percorso del favicon.
 ## Collegamenti
 - [Filament Best Practices](../filament-best-practices.md)
 - [PHPStan Common Exceptions](../PHPSTAN-COMMON-EXCEPTIONS.md)
-- [Data Queableactions](../DATA-QUEABLEACTIONS.md) 
+- [Data Queableactions](../DATA-QUEABLEACTIONS.md)

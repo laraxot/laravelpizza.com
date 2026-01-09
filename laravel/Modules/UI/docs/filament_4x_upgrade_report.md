@@ -1,13 +1,13 @@
 # Rapporto Aggiornamento Filament 4.x - Modulo UI
 
-**Data**: 2025-01-27  
-**Status**: ✅ COMPLETATO  
-**Versione Filament**: 4.0.17  
+**Data**: 2025-01-27
+**Status**: ✅ COMPLETATO
+**Versione Filament**: 4.0.17
 
 ## 🔧 Correzioni Implementate
 
 ### 1. Widget FullCalendar Disabilitato
-**Problema**: Dipendenza da `saade/filament-fullcalendar` non compatibile con Filament 4.x  
+**Problema**: Dipendenza da `saade/filament-fullcalendar` non compatibile con Filament 4.x
 **Soluzione**: Disabilitazione temporanea del widget
 
 **File disabilitato**:
@@ -74,7 +74,7 @@ class UserCalendarWidget extends \Filament\Widgets\Widget
 class SimpleCalendarWidget extends \Filament\Widgets\Widget
 {
     protected static ?string $view = 'ui::filament.widgets.simple-calendar';
-    
+
     public function getEvents(): array
     {
         // Logica per recuperare eventi

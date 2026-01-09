@@ -1,7 +1,7 @@
 # Array Keys in Filament Methods - Regole Obbligatorie
 
-**Data**: 2025-01-18  
-**Status**: ✅ Regola consolidata  
+**Data**: 2025-01-18
+**Status**: ✅ Regola consolidata
 **Priorità**: CRITICA
 
 ## Principio Fondamentale
@@ -274,6 +274,6 @@ grep -r "array<mixed" Modules/ --include="*.php"
 
 ---
 
-**Filosofia**: Type Safety, Coerenza, Manutenibilità  
-**Pattern**: `array<string, T>` sempre, mai `array<int, T>` o `array<mixed, T>`  
+**Filosofia**: Type Safety, Coerenza, Manutenibilità
+**Pattern**: `array<string, T>` sempre, mai `array<int, T>` o `array<mixed, T>`
 **Priorità**: CRITICA - PHPStan Level 10 compliance

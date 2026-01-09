@@ -122,32 +122,32 @@ class AuditTrailService
             'session_id' => session()->getId(),
             'created_at' => now(),
         ]);
-        
+
         // Broadcast real-time se necessario
         if ($this->shouldBroadcast($event)) {
             broadcast(new ActivityLogged($activity));
         }
-        
+
         // Salva in cache per performance
         $this->cacheActivity($activity);
     }
-    
+
     public function getUserActivity(string $userId, array $filters = []): Collection
     {
         $query = Activity::where('user_id', $userId);
-        
+
         if (isset($filters['event'])) {
             $query->where('event', $filters['event']);
         }
-        
+
         if (isset($filters['date_from'])) {
             $query->where('created_at', '>=', $filters['date_from']);
         }
-        
+
         if (isset($filters['date_to'])) {
             $query->where('created_at', '<=', $filters['date_to']);
         }
-        
+
         return $query->orderBy('created_at', 'desc')->get();
     }
 }
@@ -169,7 +169,7 @@ class ActivityAnalyticsService
             'security_events' => $this->getSecurityEvents(),
         ];
     }
-    
+
     public function getTopEvents(): array
     {
         return Activity::select('event', DB::raw('count(*) as count'))
@@ -179,7 +179,7 @@ class ActivityAnalyticsService
             ->get()
             ->toArray();
     }
-    
+
     public function getUserActivityTrend(): array
     {
         return Activity::select(
@@ -229,11 +229,11 @@ use Modules\Activity\Services\AuditTrailService;
 class User extends Authenticatable
 {
     use TracksActivity;
-    
+
     protected static $trackEvents = [
         'created', 'updated', 'deleted', 'login', 'logout'
     ];
-    
+
     protected static $trackData = [
         'name', 'email', 'last_login_at'
     ];
@@ -257,7 +257,7 @@ class RecentActivityWidget extends Widget
 {
     protected static ?string $heading = 'Attività Recenti';
     protected static ?string $maxHeight = '400px';
-    
+
     protected function getData(): array
     {
         return Activity::with('user')
@@ -286,7 +286,7 @@ class ActivityAnalyticsController extends Controller
     public function dashboard()
     {
         $analyticsService = app(ActivityAnalyticsService::class);
-        
+
         return response()->json([
             'stats' => $analyticsService->getActivityStats(),
             'top_events' => $analyticsService->getTopEvents(),
@@ -307,7 +307,7 @@ class ActivityEventSubscriber
     public function handleUserLogin($event): void
     {
         $auditService = app(AuditTrailService::class);
-        
+
         $auditService->logActivity('user.login', [
             'ip_address' => request()->ip(),
             'user_agent' => request()->userAgent(),
@@ -315,14 +315,14 @@ class ActivityEventSubscriber
             'login_method' => $event->loginMethod ?? 'email',
         ], $event->user->id);
     }
-    
+
     public function handleModelCreated($event): void
     {
         $model = $event->model;
-        
+
         if ($this->shouldTrackModel($model)) {
             $auditService = app(AuditTrailService::class);
-            
+
             $auditService->logActivity('model.created', [
                 'model_type' => get_class($model),
                 'model_id' => $model->id,
@@ -342,11 +342,11 @@ class ActivityCacheService
     {
         $key = "activity_{$activity->id}";
         Cache::put($key, $activity, 3600); // 1 ora
-        
+
         // Cache per statistiche
         $this->updateStatsCache($activity);
     }
-    
+
     public function getCachedStats(): array
     {
         return Cache::remember('activity_stats', 300, function () {
@@ -354,15 +354,15 @@ class ActivityCacheService
             return $analyticsService->getActivityStats();
         });
     }
-    
+
     public function updateStatsCache(Activity $activity): void
     {
         $stats = Cache::get('activity_stats', []);
-        
+
         // Aggiorna contatori
         $stats['total_activities']++;
         $stats['activities_today']++;
-        
+
         Cache::put('activity_stats', $stats, 300);
     }
 }
@@ -379,14 +379,14 @@ class SecurityMonitoringService
             ->where('event', 'like', '%failed%')
             ->orWhere('event', 'like', '%violation%')
             ->get();
-        
+
         foreach ($suspiciousActivities as $activity) {
             if ($this->isSecurityViolation($activity)) {
                 $this->handleSecurityViolation($activity);
             }
         }
     }
-    
+
     public function isSecurityViolation(Activity $activity): bool
     {
         $violationPatterns = [
@@ -394,7 +394,7 @@ class SecurityMonitoringService
             'suspicious_ip' => $this->checkSuspiciousIP($activity),
             'unusual_activity' => $this->checkUnusualActivity($activity),
         ];
-        
+
         return in_array(true, $violationPatterns);
     }
 }
@@ -578,4 +578,3 @@ Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICE
   <br>
   <em>Costruito con ❤️ per la comunità Laravel</em>
 </div>
-

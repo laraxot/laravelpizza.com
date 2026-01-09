@@ -8,7 +8,7 @@ Un errore comune nei file di traduzione è la mancanza di parentesi chiuse negli
 
 **Esempio di errore**:
 ```php
-'azione_esempio' => 
+'azione_esempio' =>
 array (
   'label' => 'Etichetta azione',
 'altra_azione' => // Manca la parentesi chiusa e la virgola dell'array precedente
@@ -16,7 +16,7 @@ array (
 
 **Correzione**:
 ```php
-'azione_esempio' => 
+'azione_esempio' =>
 array (
   'label' => 'Etichetta azione',
 ), // Aggiunta parentesi chiusa e virgola
@@ -74,7 +74,7 @@ Le virgole mancanti tra gli elementi di un array o le virgole in eccesso alla fi
    ```php
    // NO: Etichetta hardcoded nel codice
    ->label('Crea nuovo')
-   
+
    // SI: Riferimento alla traduzione
    ->label(__('lang_service.actions.create.label'))
    ```
@@ -87,7 +87,7 @@ Le virgole mancanti tra gli elementi di un array o le virgole in eccesso alla fi
            'label' => 'Crea',
        ],
    ),
-   
+
    // SI: Mantenere lo stesso stile
    'azioni' => array(
        'crea' => array(
@@ -102,7 +102,7 @@ Le virgole mancanti tra gli elementi di un array o le virgole in eccesso alla fi
    'import_valutatori_' => [
        'label' => 'import_valutatori_',
    ],
-   
+
    // SI: Tradurre tutte le etichette
    'import_valutatori' => [
        'label' => 'Importa valutatori',

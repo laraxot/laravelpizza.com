@@ -201,10 +201,10 @@ Aggiungere test che verificano lo stato dei moduli:
 
 test('required modules are enabled', function () {
     $modules = ['Xot', 'User', 'Activity'];
-    
+
     foreach ($modules as $moduleName) {
         $module = Module::find($moduleName);
-        
+
         expect($module)
             ->not->toBeNull()
             ->and($module->isEnabled())
@@ -214,7 +214,7 @@ test('required modules are enabled', function () {
 
 test('activity view namespace is registered', function () {
     $hints = app('view')->getFinder()->getHints();
-    
+
     expect($hints)
         ->toHaveKey('activity')
         ->and($hints['activity'][0])
@@ -304,7 +304,7 @@ Se `module:enable Activity` non funziona:
    ```bash
    # Se usando php-fpm
    sudo systemctl restart php8.3-fpm
-   
+
    # Se usando octane
    php artisan octane:reload
    ```
@@ -322,9 +322,7 @@ Se `module:enable Activity` non funziona:
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
-**Caso Reale**: personale2022.prov.tv.local  
-**Soluzione Verificata**: ✅ Testata e funzionante  
+**Ultimo aggiornamento**: 27 Ottobre 2025
+**Caso Reale**: personale2022.prov.tv.local
+**Soluzione Verificata**: ✅ Testata e funzionante
 **Severità**: Critica (blocca completamente feature Activity Log)
-
-

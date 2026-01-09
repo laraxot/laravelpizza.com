@@ -19,4 +19,4 @@
 - Laravel
 - spatie/laravel-event-sourcing
 
-Questa architettura garantisce coerenza, auditabilità e facilità di estensione. 
+Questa architettura garantisce coerenza, auditabilità e facilità di estensione.

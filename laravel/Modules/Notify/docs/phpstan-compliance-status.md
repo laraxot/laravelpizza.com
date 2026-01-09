@@ -1,6 +1,6 @@
 # PHPStan Level 10 Compliance Status
 
-**Last Updated**: 2025-12-10  
+**Last Updated**: 2025-12-10
 **Status**: ✅ FULLY COMPLIANT (0 errors)
 
 ## Summary
@@ -9,9 +9,9 @@ The Notify module is now fully compliant with PHPStan Level 10 analysis. All sta
 ## Fixed Issues
 
 ### 1. HTTP Client PromiseInterface|Response Union Type
-**Problem**: HTTP client methods may return PromiseInterface or Response  
-**Solution**: Added proper type checking and casting  
-**File**: `app/Services/PushNotificationService.php`  
+**Problem**: HTTP client methods may return PromiseInterface or Response
+**Solution**: Added proper type checking and casting
+**File**: `app/Services/PushNotificationService.php`
 **Details**: Added instanceof check for PromiseInterface and wait() method call
 
 ```php

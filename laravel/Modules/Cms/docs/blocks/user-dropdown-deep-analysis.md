@@ -137,4 +137,4 @@ Carenze nell'accessibilità:
 - [Documentazione Blocchi](../blocks.md)
 - [Documentazione Navigation](../navigation.md)
 - [Best Practices UI/UX](../best-practices-ui-ux.md)
-- [Documentazione Accessibilità](../accessibility.md) 
+- [Documentazione Accessibilità](../accessibility.md)

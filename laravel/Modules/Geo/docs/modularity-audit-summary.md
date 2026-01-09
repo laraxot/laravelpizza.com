@@ -15,7 +15,7 @@ Questo errore viola i principi fondamentali dell'architettura modulare Laraxot e
 **Stato**: Configurazione e helper creati, refactoring in corso
 **File contaminati**:
 - Test files: 7 file con 32+ occorrenze
-- Factory files: 1 file con 3 occorrenze  
+- Factory files: 1 file con 3 occorrenze
 - Filament pages: 2 file con 3 occorrenze
 - Mail classes: 1 file con 1 occorrenza
 - Translation files: 2 file con 2 occorrenze
@@ -121,7 +121,7 @@ Questo errore viola i principi fondamentali dell'architettura modulare Laraxot e
 
 ### Moduli che DEVONO essere Generici
 - **Notify**: Sistema di notifiche per qualsiasi progetto
-- **User**: Gestione utenti per qualsiasi progetto  
+- **User**: Gestione utenti per qualsiasi progetto
 - **UI**: Componenti UI per qualsiasi progetto
 - **Xot**: Base framework per qualsiasi progetto
 - **Geo**: Gestione geografica per qualsiasi progetto

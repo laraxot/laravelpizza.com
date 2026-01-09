@@ -33,7 +33,7 @@ public function up()
             'label' => $record->subject,
             'variables' => []
         ];
-        
+
         DB::table('mail_templates')
             ->where('id', $record->id)
             ->update(['subject_new' => json_encode($newValue)]);
@@ -63,7 +63,7 @@ public function down()
     // 2. Convertire dati
     DB::table('mail_templates')->orderBy('id')->each(function ($record) {
         $oldValue = json_decode($record->subject, true)['label'] ?? '';
-        
+
         DB::table('mail_templates')
             ->where('id', $record->id)
             ->update(['subject_old' => $oldValue]);
@@ -98,10 +98,10 @@ try {
 } catch (QueryException $e) {
     // Log dell'errore
     Log::error('Errore migrazione: ' . $e->getMessage());
-    
+
     // Rollback automatico
     $this->down();
-    
+
     throw $e;
 }
 ```
@@ -112,9 +112,9 @@ private function backupTable($tableName)
 {
     $backup = DB::table($tableName)->get();
     $filename = storage_path("backups/{$tableName}_" . date('Y-m-d_His') . '.json');
-    
+
     File::put($filename, json_encode($backup));
-    
+
     return $filename;
 }
 ```
@@ -151,7 +151,7 @@ class ConvertSubjectToJson extends Migration
     {
         // Backup
         $backupFile = $this->backupTable('mail_templates');
-        
+
         try {
             // Implementazione conversione
             $this->convertColumnToJson('mail_templates', 'subject');
@@ -176,7 +176,7 @@ private function convertColumnToJson($table, $column)
     // 2. Conversione dati
     DB::table($table)->orderBy('id')->each(function ($record) use ($table, $column) {
         $newValue = $this->convertToJsonFormat($record->$column);
-        
+
         DB::table($table)
             ->where('id', $record->id)
             ->update(["{$column}_new" => json_encode($newValue)]);
@@ -210,4 +210,4 @@ private function convertColumnToJson($table, $column)
 ## Collegamenti
 - [Laravel Migrations](https://laravel.com/docs/migrations)
 - [MySQL JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)
-- [PostgreSQL JSON](https://www.postgresql.org/docs/current/datatype-json.html) 
+- [PostgreSQL JSON](https://www.postgresql.org/docs/current/datatype-json.html)

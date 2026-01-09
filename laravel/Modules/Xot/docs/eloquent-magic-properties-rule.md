@@ -30,13 +30,13 @@ isset($user->name);              // TRUE ✅
 class Model
 {
     protected array $attributes = [];
-    
+
     // Magic method per accesso attributi
     public function __get(string $key)
     {
         return $this->getAttribute($key);
     }
-    
+
     // Magic method per isset()
     public function __isset(string $key): bool
     {
@@ -145,8 +145,8 @@ if (isset($model->attribute)) {
 
 ```php
 // ✅ Pattern completo per state machine
-if (isset($record->state) 
-    && is_object($record->state) 
+if (isset($record->state)
+    && is_object($record->state)
     && method_exists($record->state, 'transitionTo')) {
     $record->state->transitionTo($newState, $message);
 }
@@ -233,7 +233,7 @@ if (property_exists($model, 'attribute')) {
 }
 ```
 
-**Fix**: 
+**Fix**:
 ```php
 // ✅ Corretto
 if (isset($model->attribute)) {
@@ -320,6 +320,6 @@ Quando scrivi codice con Eloquent:
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-06  
-**PHPStan Level**: 10  
+**Ultimo aggiornamento**: 2025-01-06
+**PHPStan Level**: 10
 **Status**: ✅ 0 Errors

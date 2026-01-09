@@ -14,7 +14,7 @@ return [
     'fields' => [
         'field_name' => [
             'label' => 'Campo Label',                    // OBBLIGATORIO
-            'placeholder' => 'Inserisci valore',        // OBBLIGATORIO  
+            'placeholder' => 'Inserisci valore',        // OBBLIGATORIO
             'tooltip' => 'Suggerimento breve',          // OBBLIGATORIO
             'helper_text' => 'Testo di aiuto dettagliato', // OBBLIGATORIO
             'description' => 'Descrizione completa del campo', // OBBLIGATORIO

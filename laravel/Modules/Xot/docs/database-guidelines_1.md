@@ -372,19 +372,19 @@ return new class extends Migration
             $table->id('id_nome_tabella');
             $table->string('nome', 255)->nullable()->comment('Nome del record');
             // Altri campi...
-            
+
             // Indici
             $table->index('campo_indicizzato');
-            
+
             // Chiavi esterne
             $table->foreignId('id_relazione')
                 ->constrained('tabella_relazione', 'id_tabella_relazione')
                 ->onUpdate('cascade')
                 ->onDelete('restrict');
-                
+
             $table->timestamps(); // created_at e updated_at
         });
-        
+
         // Commento sulla tabella
         DB::statement("ALTER TABLE `{$this->table}` COMMENT = 'Descrizione della tabella'");
     }

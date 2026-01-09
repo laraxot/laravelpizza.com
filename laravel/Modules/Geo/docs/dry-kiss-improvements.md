@@ -53,12 +53,12 @@ trait GeoMigrationHelpers
             $definition($table);
         }
     }
-    
+
     protected function addAddressColumns(Blueprint $table): void
     {
         AddressItemEnum::columns($table);
     }
-    
+
     protected function addStandardGeoColumns(Blueprint $table): void
     {
         $this->safeAddColumn($table, 'uuid', fn($t) => $t->uuid()->nullable());
@@ -74,7 +74,7 @@ trait GeoMigrationHelpers
 abstract class GeoBaseMigration extends XotBaseMigration
 {
     use GeoMigrationHelpers;
-    
+
     protected function addCommonGeoFields(Blueprint $table): void
     {
         $table->id();

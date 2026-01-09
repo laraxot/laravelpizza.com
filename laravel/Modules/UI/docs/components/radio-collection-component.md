@@ -81,7 +81,7 @@ data_get($option, $getValueKey())
 ### Ecosistema Software
 Il componente vive in un **ecosistema** di mutua dipendenza:
 - **Produttori**: Form parents che forniscono dati
-- **Consumatori**: Wire model che ricevono la selezione  
+- **Consumatori**: Wire model che ricevono la selezione
 - **Decompositori**: Garbage collector che pulisce le istanze
 ## 🏗️ Architettura & Topologia
 ### Geometria dell'Informazione
@@ -110,7 +110,7 @@ Permette **improvvisazione** dell'item view mantenendo la **struttura** del cont
 ### Armonia dei Colori
 // Accordo maggiore: Stati normali
 'border-gray-300 dark:border-gray-600'
-// Accordo settima dominante: Stato selected  
+// Accordo settima dominante: Stato selected
 'border-primary-500 bg-primary-50 dark:bg-primary-900/20'
 ## 🔬 Chimica Molecolare del Codice
 ### Legami Molecolari
@@ -128,7 +128,7 @@ wire:model
 ### Equilibrio Chimico
 Il sistema mantiene **equilibrio dinamico** tra:
 - **Reagenti**: Opzioni non selezionate
-- **Prodotti**: Opzione selezionata  
+- **Prodotti**: Opzione selezionata
 - **Catalizzatore**: UI feedback
 ## 📊 Teoria dei Giochi & Economia
 ### Strategia Dominante
@@ -146,7 +146,7 @@ border-primary-500 bg-primary-50
 ### Persistenza Temporale
 // Memoria persistente: Component state
 protected Collection $options
-// Memoria transitoria: DOM state  
+// Memoria transitoria: DOM state
 // Memoria epigenetica: User preferences via cookies
 ### Sincronicità vs Asincronia
 - **Sincrono**: Visual feedback immediato su hover
@@ -181,7 +181,7 @@ use Filament\Forms\Components\Field;
 use Illuminate\Support\Collection;
 /**
  * RadioCollection: Manifestazione digitale della scelta singola
- * 
+ *
  * Questo componente incarna la quintessenza della selezione mutuamente
  * esclusiva, dove ogni elemento esiste in superposizione quantistica
  * fino al momento dell'osservazione (selezione) dell'utente.
@@ -189,7 +189,7 @@ use Illuminate\Support\Collection;
 {
     // Il view path: porta verso la manifestazione visuale
     protected string $view = 'ui::filament.forms.components.radio-collection';
-    
+
     // La collezione: universo delle possibilità
     protected Collection $options;
     // L'item view: template di manifestazione per ogni possibilità
@@ -230,7 +230,7 @@ Il problema di non-selezione può manifestarsi attraverso diverse **rotture onto
 ### Possibili Cause Root
 // 1. ValueKey mismatch - La chiave non corrisponde alla struttura dati
 $getValueKey() !== property_exists($option, 'id')
-// 2. Wire:model path incorretto - La strada verso lo stato è interrotta  
+// 2. Wire:model path incorretto - La strada verso lo stato è interrotta
 $getStatePath() !== actual_model_path
 // 3. JavaScript event bubbling - Eventi che interferiscono
 // Label click → Input change → Wire update (potenziale conflict)
@@ -259,19 +259,19 @@ dd($this->getValueKey());
 wire:model.live="{{ $getStatePath() }}"
 ## 🎯 Collegamenti Spirituali & Documentazione Correlata
 - [Form Components Philosophy](./form-components-philosophy.md)
-- [UI Component Quantum Mechanics](./ui-quantum-mechanics.md)  
+- [UI Component Quantum Mechanics](./ui-quantum-mechanics.md)
 - [Accessibility Metaphysics](./accessibility-metaphysics.md)
 - [Design Pattern Zen](./design-pattern-zen.md)
 - [JavaScript Phenomenology](./javascript-phenomenology.md)
 ---
 *"In ogni scelta si cela l'universo intero, e in ogni click si manifesta la volontà dell'essere digitale."*
-**Ultimo aggiornamento ontologico**: Dicembre 2024  
-**Versione dell'esistenza**: 1.0.0  
-**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+ 
-**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+ 
-**Compatibilità karmica**: Filament 3.x, Livewire 3.x, Laravel 10+ 
-**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+ 
-**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+ 
-**Compatibilità karmica**: Filament 3.x, Livewire 3.x, Laravel 10+ 
-**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+ 
-**Compatibilità karmica**: Filament 3.x, Livewire 3.x, Laravel 10+ 
+**Ultimo aggiornamento ontologico**: Dicembre 2024
+**Versione dell'esistenza**: 1.0.0
+**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+
+**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+
+**Compatibilità karmica**: Filament 3.x, Livewire 3.x, Laravel 10+
+**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+
+**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+
+**Compatibilità karmica**: Filament 3.x, Livewire 3.x, Laravel 10+
+**Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+
+**Compatibilità karmica**: Filament 3.x, Livewire 3.x, Laravel 10+

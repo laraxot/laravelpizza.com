@@ -21,6 +21,6 @@ Il modulo UI fornisce componenti, widget e funzionalità di interfaccia utente c
 ### Fix Implementati
 - [Fix Traduzioni Opening Hours Field](opening_hours_translation_fix.md) - **REGOLA CRITICA**: Sincronizzazione obbligatoria tra lingue IT/EN
 - [Fix Traduzioni Opening Hours](opening_hours_translation_improvement.md) - Miglioramento traduzioni orari
-*Ultimo aggiornamento: gennaio 2025* 
-*Ultimo aggiornamento: gennaio 2025* 
-*Ultimo aggiornamento: gennaio 2025* 
+*Ultimo aggiornamento: gennaio 2025*
+*Ultimo aggiornamento: gennaio 2025*
+*Ultimo aggiornamento: gennaio 2025*

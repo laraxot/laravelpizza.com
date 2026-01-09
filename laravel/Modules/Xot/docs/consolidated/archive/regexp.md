@@ -11,9 +11,9 @@ strip_tags
 /<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>/g;
 
 var text = '<div class="foo">bar</div>';
-text.replace(/(<([^>]+)>)/ig,""); 
+text.replace(/(<([^>]+)>)/ig,"");
 
-//---- 
+//----
 extract attribute data-
 
 (data-\w+)=["']?((?:.(?!["']?\s+(?:\S+)=|\s*\/?[>"']))+.)["']?

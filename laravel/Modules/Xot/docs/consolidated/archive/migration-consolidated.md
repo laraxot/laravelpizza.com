@@ -1,7 +1,7 @@
 # Migrazioni - Documentazione Consolidata DRY + KISS
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTE le regole di migrazione del progetto
-> 
+>
 > **🔗 Riferimenti**: [coding-standards.md](coding-standards.md) | [best-practices.md](best-practices.md)
 
 ## 🚨 STOP DUPLICAZIONE!

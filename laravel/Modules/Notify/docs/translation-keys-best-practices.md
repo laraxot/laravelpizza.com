@@ -13,4 +13,4 @@ Il sistema di traduzioni è laico e neutrale rispetto a ogni credo. Non sono amm
 Le chiavi di traduzione devono essere oneste, non ingannevoli, non manipolatorie e non offensive. L'etica del progetto impone di evitare ogni forma di linguaggio discriminatorio, sessista, razzista o che possa ledere la dignità della persona.
 
 ## Zen
-La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia. 
+La chiave di traduzione perfetta è quella che non si nota: è naturale, fluida, non distrae e non crea attrito. Ogni parola superflua va eliminata, ogni concetto va reso con la massima semplicità e armonia.

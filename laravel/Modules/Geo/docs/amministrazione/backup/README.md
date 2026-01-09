@@ -196,7 +196,7 @@ php artisan backup:compress
 
 # Verifica integrità
 php artisan backup:verify
-``` 
+```
 
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
@@ -275,4 +275,3 @@ php artisan backup:verify
 * [README.md](laravel/Modules/Cms/docs/components/README.md)
 * [README.md](laravel/Themes/Two/docs/README.md)
 * [README.md](laravel/Themes/One/docs/README.md)
-

@@ -103,7 +103,7 @@ Modules/User/resources/views/pages/Auth/Logout.blade.php  # NO: maiuscole
    ```bash
    # Corretto
    php artisan module:make User
-   
+
    # Errato
    php artisan module:make user
    ```
@@ -113,7 +113,7 @@ Modules/User/resources/views/pages/Auth/Logout.blade.php  # NO: maiuscole
    # Corretto
    mkdir -p Modules/User/resources/views/pages/auth
    mkdir -p Modules/User/app/Filament/Widgets
-   
+
    # Errato
    mkdir -p Modules/User/Resources/Views
    mkdir -p Modules/User/Filament/Widgets
@@ -124,7 +124,7 @@ Modules/User/resources/views/pages/Auth/Logout.blade.php  # NO: maiuscole
    # Rinominare cartelle non conformi
    mv Modules/User/Resources Modules/User/resources_temp
    mv Modules/User/resources_temp Modules/User/resources
-   
+
    # Spostare Filament nella posizione corretta
    mv Modules/User/Filament Modules/User/app/Filament
    ```
@@ -143,16 +143,14 @@ Modules/User/resources/views/pages/Auth/Logout.blade.php  # NO: maiuscole
 - Utilizzare strumenti di linting per verificare la conformità
 - I componenti Filament devono sempre essere in `app/Filament/`
 - Le cartelle standard Laravel devono sempre essere in lowercase
-- Le pagine Folio devono seguire la struttura `resources/views/pages/` 
+- Le pagine Folio devono seguire la struttura `resources/views/pages/`
 ## Collegamenti tra versioni di CONVENTIONS.md
 * [CONVENTIONS.md](../../../Xot/docs/CONVENTIONS.md)
 * [CONVENTIONS.md](../../../Dental/docs/CONVENTIONS.md)
 * [CONVENTIONS.md](../../../Patient/docs/CONVENTIONS.md)
-
 
 ## Collegamenti tra versioni di conventions.md
 * [conventions.md](../../../../docs/tecnico/filament/conventions.md)
 * [conventions.md](../../../../docs/conventions.md)
 * [conventions.md](../../Dental/docs/conventions.md)
 * [conventions.md](../../Patient/docs/conventions.md)
-

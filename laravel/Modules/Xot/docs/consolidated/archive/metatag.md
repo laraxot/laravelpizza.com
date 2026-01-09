@@ -35,14 +35,10 @@ return [
 ~~~
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di metatag.md
 * [metatag.md](../../../Xot/project_docs/install/metatag.md)
 * [metatag.md](../../../Tenant/project_docs/it/config/metatag.md)
 
-
 ### Versione Incoming
 
-
 ---
-

@@ -1,4 +1,4 @@
-# Convenzioni di Naming per i Contracts 
+# Convenzioni di Naming per i Contracts
 
 ## Regola Fondamentale
 

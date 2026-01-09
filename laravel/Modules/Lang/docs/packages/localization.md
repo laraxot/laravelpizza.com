@@ -74,4 +74,4 @@ Route::group([
 
 - [Torna a packages.md](../packages.md)
 - [Traduzioni](translations.md)
-- [SEO](seo.md) 
+- [SEO](seo.md)

@@ -63,11 +63,10 @@ Il componente Page è uno dei componenti fondamentali del CMS. Per una documenta
 - `laravel/Themes/*/resources/views/components/`
 
 ---
-@see laravel/Modules/Cms/docs/best-practices/page-rendering.md 
+@see laravel/Modules/Cms/docs/best-practices/page-rendering.md
 
 ## Collegamenti tra versioni di components.md
 * [components.md](laravel/Modules/UI/docs/components.md)
 * [components.md](laravel/Modules/UI/docs/themes/components.md)
 * [components.md](laravel/Modules/Cms/docs/components.md)
 * [components.md](laravel/Themes/One/docs/components.md)
-

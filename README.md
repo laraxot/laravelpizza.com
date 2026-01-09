@@ -37,10 +37,10 @@ Benvenuto nella base ufficiale di **LaravelPizza.com**: qui costruiamo un ecosis
   - PHPStan livello **10** obbligatorio
   - Niente controller/routing classico per il frontoffice (solo Folio + Volt)
   - Docs curate dentro ogni modulo/tema, niente conoscenza “nascosta”.
-- **Obiettivo reale**: questo codice non è un “esempio giocattolo”, ma la base per meetup veri,  
+- **Obiettivo reale**: questo codice non è un “esempio giocattolo”, ma la base per meetup veri,
   pagine reali, community reali.
 
-Se ti piace imparare **architettura Laravel avanzata** mentre costruisci qualcosa di *tangibile*,  
+Se ti piace imparare **architettura Laravel avanzata** mentre costruisci qualcosa di *tangibile*,
 questo è un repo perfetto per te.
 
 ---
@@ -56,7 +56,7 @@ questo è un repo perfetto per te.
   - `Modules/{ModuleName}/docs/`
   - `Themes/{ThemeName}/docs/`
 
-Ogni cartella `docs` è pensata come **memoria viva del sistema**:  
+Ogni cartella `docs` è pensata come **memoria viva del sistema**:
 regole, bugfix, decisioni architetturali, analisi delle pagine, tutto passa da lì.
 
 ---
@@ -128,7 +128,7 @@ Perché l’idea è semplice: **mettere insieme le due cose che rendono felice i
 - mangiare una pizza in compagnia,
 - condividere esperienze, problemi, soluzioni.
 
-Questo repo è il passo successivo:  
+Questo repo è il passo successivo:
 **standardizzare un setup di meetup Laravel “replicabile” ovunque nel mondo.**
 
 Se vuoi far parte di questa cosa, **forka il repo, apri una PR e raccontaci cosa hai fatto nelle docs.**

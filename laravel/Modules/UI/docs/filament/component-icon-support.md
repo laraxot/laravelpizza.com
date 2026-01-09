@@ -69,9 +69,9 @@ Forms\Components\FileUpload::make('document')
     ->label(function () {
         return new HtmlString('
             <div class="flex items-center gap-x-2">
-                <x-filament::icon 
-                    name="heroicon-o-document-text" 
-                    class="h-5 w-5 text-gray-500" 
+                <x-filament::icon
+                    name="heroicon-o-document-text"
+                    class="h-5 w-5 text-gray-500"
                 />
                 <span>Documento</span>
             </div>

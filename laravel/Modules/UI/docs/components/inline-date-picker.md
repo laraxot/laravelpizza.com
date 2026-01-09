@@ -29,7 +29,7 @@ use Filament\Forms\Components\DatePicker;
 use Carbon\Carbon;
 /**
  * InlineDatePicker - Componente calendario inline con supporto multilingua
- * 
+ *
  * Estende il DatePicker standard con funzionalità avanzate:
  * - Navigazione mese precedente/successivo
  * - Supporto completo multilingua
@@ -94,18 +94,18 @@ InlineDatePicker::make('readonly_date')
    previousMonth() {
        this.navigateToMonth('prev');
    },
-   
+
    nextMonth() {
        this.navigateToMonth('next');
    navigateToMonth(direction) {
        const currentDate = new Date(this.currentViewMonth + '-01');
-       
+
        if (direction === 'prev') {
            currentDate.setMonth(currentDate.getMonth() - 1);
        } else if (direction === 'next') {
            currentDate.setMonth(currentDate.getMonth() + 1);
        }
-       this.currentViewMonth = currentDate.getFullYear() + '-' + 
+       this.currentViewMonth = currentDate.getFullYear() + '-' +
            String(currentDate.getMonth() + 1).padStart(2, '0');
        // Rigenera calendario localmente
        this.regenerateCalendar();
@@ -158,7 +158,7 @@ generateCalendarDataForMonth(year, month) {
     const firstDay = new Date(year, month - 1, 1);
     const startDate = new Date(firstDay);
     startDate.setDate(startDate.getDate() - firstDay.getDay() + 1);
-    
+
     const weeks = [];
     let currentDate = new Date(startDate);
     for (let week = 0; week < 6; week++) {
@@ -166,7 +166,7 @@ generateCalendarDataForMonth(year, month) {
         for (let day = 0; day < 7; day++) {
             const dateString = currentDate.toISOString().split('T')[0];
             const isCurrentMonth = currentDate.getMonth() === month - 1;
-            
+
             weekDays.push({
                 dateString: dateString,
                 datetime: dateString,
@@ -219,7 +219,7 @@ InlineDatePicker::make('recurring_event_date')
         $dates = collect();
         $start = now()->startOfMonth();
         $end = now()->addMonths(3)->endOfMonth();
-        
+
         while ($start->lte($end)) {
             if ($start->isMonday() || $start->isWednesday()) {
                 $dates->push($start->format('Y-m-d'));
@@ -245,7 +245,7 @@ InlineDatePicker::make('project_deadline')
 ### Supporto Screen Reader
 ```html
 <!-- Ogni elemento ha labels appropriati -->
-<button 
+<button
     aria-label=\"Seleziona {{ $day['date']->translatedFormat('d F Y') }}\"
     @if($isSelected) aria-pressed=\"true\" @endif
 >
@@ -394,18 +394,18 @@ public function register(): void
         Js::make('inline-date-picker', __DIR__.'/../resources/js/inline-date-picker.js'),
     ], 'ui');
 ---
-**Ultimo aggiornamento**: Dicembre 2024  
-**Versione**: 2.0 con Navigazione Temporale Avanzata  
-**Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x  
-**Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x  
-**Compatibilità**: Laraxot SaluteOra, Filament 3.x, Alpine.js 3.x  
-**Filosofia**: Fenomenologia Quantistica applicata al Design Temporale 
-**Filosofia**: Fenomenologia Quantistica applicata al Design Temporale 
-**Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x  
-**Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x  
-**Compatibilità**: Laraxot SaluteOra, Filament 3.x, Alpine.js 3.x  
-**Filosofia**: Fenomenologia Quantistica applicata al Design Temporale 
-**Filosofia**: Fenomenologia Quantistica applicata al Design Temporale 
-**Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x  
-**Compatibilità**: Laraxot SaluteOra, Filament 3.x, Alpine.js 3.x  
-**Filosofia**: Fenomenologia Quantistica applicata al Design Temporale 
+**Ultimo aggiornamento**: Dicembre 2024
+**Versione**: 2.0 con Navigazione Temporale Avanzata
+**Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x
+**Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x
+**Compatibilità**: Laraxot SaluteOra, Filament 3.x, Alpine.js 3.x
+**Filosofia**: Fenomenologia Quantistica applicata al Design Temporale
+**Filosofia**: Fenomenologia Quantistica applicata al Design Temporale
+**Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x
+**Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x
+**Compatibilità**: Laraxot SaluteOra, Filament 3.x, Alpine.js 3.x
+**Filosofia**: Fenomenologia Quantistica applicata al Design Temporale
+**Filosofia**: Fenomenologia Quantistica applicata al Design Temporale
+**Compatibilità**: Laraxot , Filament 4.x, Alpine.js 3.x
+**Compatibilità**: Laraxot SaluteOra, Filament 3.x, Alpine.js 3.x
+**Filosofia**: Fenomenologia Quantistica applicata al Design Temporale

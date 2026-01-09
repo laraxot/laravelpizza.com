@@ -44,4 +44,3 @@ Homepage URL: Your app's URL.
 Authorization callback URL: http://your-app-url.com/callback/github.
 
 ---
-

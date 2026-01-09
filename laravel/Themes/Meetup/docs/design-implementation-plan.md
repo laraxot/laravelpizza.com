@@ -36,7 +36,7 @@ Queste differenze guidano il lavoro di migrazione: dobbiamo portare header, hero
 
 #### Navigation
 - ✅ Mantenere: Logo, struttura sticky
-- 🔄 Cambiare: 
+- 🔄 Cambiare:
   - "Events" → "Menu"
   - "Community Chat" → "Chi Siamo" / "Contatti"
   - Aggiungere: Icona carrello con badge contatore
@@ -114,11 +114,11 @@ Queste differenze guidano il lavoro di migrazione: dobbiamo portare header, hero
   /* Dark Theme Colors */
   --color-dark-bg: rgb(2, 8, 23);
   --color-dark-text: rgb(248, 250, 252);
-  
+
   /* Light Theme Colors */
   --color-light-bg: #ffffff;
   --color-light-text: rgb(15, 23, 42);
-  
+
   /* Brand Colors */
   --color-primary-600: #dc2626;
   --color-secondary-500: #f59e0b;
@@ -144,15 +144,15 @@ Queste differenze guidano il lavoro di migrazione: dobbiamo portare header, hero
   <section class="hero bg-gradient-to-r from-primary-600 to-primary-700">
     <!-- Hero content -->
   </section>
-  
+
   <section class="features bg-white">
     <!-- Features grid -->
   </section>
-  
+
   <section class="pizzas bg-gray-50">
     <!-- Pizza cards -->
   </section>
-  
+
   <section class="cta bg-gradient-to-r from-primary-600 to-primary-700">
     <!-- CTA content -->
   </section>
@@ -216,4 +216,3 @@ screens: {
 - Il design originale è per community meetup, ma possiamo adattarlo elegantemente
 - Priorità: Usabilità > Estetica (per sistema ordinazione)
 - Testare su dispositivi reali prima di finalizzare
-

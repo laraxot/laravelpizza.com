@@ -33,7 +33,7 @@ class NotificationService
             $user->notify($notification);
         }, 1000);
     }
-    
+
     public function sendBulk(Collection $users, Notification $notification): void
     {
         $users->chunk(100)->each(function($chunk) use ($notification) {
@@ -66,4 +66,3 @@ class NotificationTemplateCache
 
 ---
 *Stato: 🟡 Funzionale ma Necessita Reliability Enhancement*
-

@@ -62,4 +62,4 @@ La soluzione proposta adotta il formato più leggibile e manutenibile della vers
 ## Collegamenti Bidirezionali
 
 - [Documento principale risoluzione conflitti](risoluzione_conflitti.md)
-- [Documentazione modulo Tenant](../../Tenant/docs/risoluzione_conflitti.md) 
+- [Documentazione modulo Tenant](../../Tenant/docs/risoluzione_conflitti.md)

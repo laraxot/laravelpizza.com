@@ -94,13 +94,13 @@ Action::make('sendEmail')
 graph TD
     A[S3Test Page] --> B[testCredentials - ❌ BROKEN]
     A --> C[testS3Connection - ✅ OK]
-    A --> D[testPermissions - ✅ OK] 
+    A --> D[testPermissions - ✅ OK]
     A --> E[testBucketPolicy - ✅ OK]
     A --> F[testCloudFront - ✅ OK]
     A --> G[testFileOperations - ✅ OK]
     A --> H[debugConfig - ❌ BROKEN]
     A --> I[sendEmail - ❌ MISSING]
-    
+
     B --> B1[❌ Infinite Recursion]
     H --> H1[❌ Infinite Recursion]
     I --> I1[❌ Method Not Found]

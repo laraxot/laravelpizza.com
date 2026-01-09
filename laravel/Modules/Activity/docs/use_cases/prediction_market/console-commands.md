@@ -31,7 +31,7 @@ use Modules\Activity\App\Domain\PredictionMarket\MarketAggregate;
 class MarketCreateCommand extends Command
 {
     protected $signature = 'activity:market:create {title} {description} {endDate}';
-    
+
     protected $description = 'Crea un nuovo mercato delle previsioni nel modulo Activity';
 
     public function handle()
@@ -42,7 +42,7 @@ class MarketCreateCommand extends Command
 
         $marketUuid = uniqid('market_');
         $market = MarketAggregate::retrieve($marketUuid);
-        
+
         $market->createMarket($title, $description, $endDate);
         $market->persist();
 
@@ -118,7 +118,7 @@ use Modules\Activity\App\Domain\PredictionMarket\MarketAggregate;
 class MarketPlaceBetCommand extends Command
 {
     protected $signature = 'activity:market:place-bet {marketUuid} {userId} {prediction} {amount}';
-    
+
     protected $description = 'Piazza una scommessa su un mercato delle previsioni nel modulo Activity';
 
     public function handle()
@@ -129,7 +129,7 @@ class MarketPlaceBetCommand extends Command
         $amount = (float) $this->argument('amount');
 
         $market = MarketAggregate::retrieve($marketUuid);
-        
+
         $market->placeBet($userId, $prediction, $amount);
         $market->persist();
 
@@ -165,7 +165,7 @@ use Modules\Activity\App\Domain\PredictionMarket\MarketAggregate;
 class MarketResolveCommand extends Command
 {
     protected $signature = 'activity:market:resolve {marketUuid} {outcome}';
-    
+
     protected $description = 'Risolve un mercato delle previsioni con un risultato nel modulo Activity';
 
     public function handle()
@@ -174,7 +174,7 @@ class MarketResolveCommand extends Command
         $outcome = $this->argument('outcome');
 
         $market = MarketAggregate::retrieve($marketUuid);
-        
+
         $market->resolveMarket($outcome);
         $market->persist();
 
@@ -214,7 +214,7 @@ use Modules\Activity\App\Domain\PredictionMarket\MarketAggregate;
 class MarketMassBetCommand extends Command
 {
     protected $signature = 'activity:market:mass-bet {marketUuid} {numberOfBets} {minAmount=10} {maxAmount=100}';
-    
+
     protected $description = 'Simula scommesse massive su un mercato di previsione nel modulo Activity';
 
     public function handle()
@@ -225,7 +225,7 @@ class MarketMassBetCommand extends Command
         $maxAmount = (float) $this->argument('maxAmount');
 
         $market = MarketAggregate::retrieve($marketUuid);
-        
+
         for ($i = 0; $i < $numberOfBets; $i++) {
             $userId = 'user_' . uniqid();
             $prediction = rand(0, 1) ? 'yes' : 'no';
@@ -233,7 +233,7 @@ class MarketMassBetCommand extends Command
             $market->placeBet($userId, $prediction, $amount);
             $this->info("Scommessa #$i: Utente {$userId} ha scommesso {$amount} su {$prediction}");
         }
-        
+
         $market->persist();
 
         $this->info("Simulazione completata: {$numberOfBets} scommesse piazzate sul mercato {$marketUuid}");
@@ -268,7 +268,7 @@ use Modules\Activity\App\Domain\PredictionMarket\MarketRepository;
 class MarketListActiveCommand extends Command
 {
     protected $signature = 'activity:market:list-active';
-    
+
     protected $description = 'Elenca tutti i mercati di previsione attivi nel modulo Activity';
 
     public function handle()
@@ -323,7 +323,7 @@ use Modules\Activity\App\Domain\PredictionMarket\MarketAggregate;
 class MarketQuickCreateCommand extends Command
 {
     protected $signature = 'activity:market:quick-create {title} {daysFromNow=7}';
-    
+
     protected $description = 'Crea rapidamente un mercato di previsione con parametri minimi nel modulo Activity';
 
     public function handle()

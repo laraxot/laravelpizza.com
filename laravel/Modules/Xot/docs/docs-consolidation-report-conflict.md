@@ -232,6 +232,6 @@ Le prossime fasi si concentreranno sul completamento del consolidamento e sul mi
 
 ---
 
-**Data Report**: 27 Gennaio 2025  
-**Stato**: Consolidamento in corso  
+**Data Report**: 27 Gennaio 2025
+**Stato**: Consolidamento in corso
 **Prossimo Update**: Completamento consolidamento root docs

@@ -134,7 +134,6 @@ return [
    - Usare le chiavi di traduzione
    - Mantenere la coerenza
 
-
 ### Versione Incoming
 
 # Sistema di Traduzioni
@@ -186,7 +185,6 @@ return [
     ],
 ];
 ```
-
 
 ---
 
@@ -366,7 +364,7 @@ Action::make('delete')
 - Verifica traduzioni mancanti
 - Test di coerenza
 - Validazione formati
-- Test di performance 
+- Test di performance
 
 ## Collegamenti tra versioni di translations.md
 * [translations.md](../../../Chart/project_docs/translations.md)
@@ -387,10 +385,8 @@ Action::make('delete')
 * [translations.md](../../../Patient/project_docs/translations.md)
 * [translations.md](../../../Cms/project_docs/translations.md)
 
-
 ### Versione Incoming
 
-``` 
+```
 
 ---
-

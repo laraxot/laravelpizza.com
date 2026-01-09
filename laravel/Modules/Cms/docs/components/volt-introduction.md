@@ -24,7 +24,7 @@ $setName = fn ($value) => $this->name = $value;
 <x-layouts.cms>
     <div>
         <h1>Ciao, {{ $name }}!</h1>
-        
+
         <x-cms::input-field
             wire:model.live="name"
             label="Nome"
@@ -51,7 +51,7 @@ $increment = fn () => $this->count++;
 <x-layouts.cms>
     <div>
         <h1>{{ $count }}</h1>
-        
+
         <x-cms::button wire:click="increment">
             Incrementa
         </x-cms::button>
@@ -68,12 +68,12 @@ $increment = fn () => $this->count++;
 <x-layouts.cms>
     <div>
         <h1>Dashboard</h1>
-        
+
         @volt('counter')
             state(['count' => 0]);
-            
+
             $increment = fn () => $this->count++;
-            
+
             <>
                 <div>
                     <h2>{{ $count }}</h2>
@@ -163,9 +163,9 @@ $filteredItems = computed(function () {
 ```php
 @volt('shared.alert', ['type' => 'success'])
     state(['visible' => true]);
-    
+
     $hide = fn () => $this->visible = false;
-    
+
     <>
         @if($visible)
             <div class="alert alert-{{ $type }}">
@@ -243,9 +243,8 @@ $emit = function ($event) {
 - [Documentazione Ufficiale Volt](https://livewire.laravel.com/docs/volt)
 - [Blog Laravel - Introducing Volt](https://blog.laravel.com/introducing-volt-an-elegantly-crafted-functional-api-for-livewire)
 - [Laravel Folio](https://laravel.com/docs/folio)
-- [Esempi di Componenti Volt](https://github.com/livewire/volt/tree/main/examples) 
+- [Esempi di Componenti Volt](https://github.com/livewire/volt/tree/main/examples)
 
 ## Collegamenti tra versioni di volt-introduction.md
 * [volt-introduction.md](laravel/Modules/Cms/docs/volt-introduction.md)
 * [volt-introduction.md](laravel/Modules/Cms/docs/components/volt-introduction.md)
-

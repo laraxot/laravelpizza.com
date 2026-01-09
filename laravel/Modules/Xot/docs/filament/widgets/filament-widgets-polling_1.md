@@ -43,17 +43,17 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 class DashboardStatsWidget extends XotBaseWidget
 {
     use CanPoll;
-    
+
     // Personalizzare l'intervallo di polling (default: 5s)
     protected static ?string $pollingInterval = '10s';
-    
+
     // Opzionale: sovrascrivere il metodo getPollingInterval
     protected function getPollingInterval(): ?string
     {
         // Logica personalizzata per determinare l'intervallo
         return static::$pollingInterval;
     }
-    
+
     // Il contenuto del widget verrà aggiornato automaticamente
     public function getFormSchema(): array
     {
@@ -96,15 +96,15 @@ use Filament\Forms\Components\Card;
 class ActiveUsersWidget extends XotBaseWidget
 {
     use CanPoll;
-    
+
     protected static ?string $pollingInterval = '30s';
     protected int | string | array $columnSpan = 'full';
     public string $title = 'Utenti Attivi';
-    
+
     public function getFormSchema(): array
     {
         $activeUsers = $this->getActiveUsers();
-        
+
         return [
             'stats' => Card::make()
                 ->schema([
@@ -116,7 +116,7 @@ class ActiveUsersWidget extends XotBaseWidget
                 ]),
         ];
     }
-    
+
     private function getActiveUsers(): int
     {
         // Logica per ottenere il numero di utenti attivi

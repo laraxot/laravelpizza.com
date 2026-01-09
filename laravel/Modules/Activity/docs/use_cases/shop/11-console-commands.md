@@ -52,4 +52,4 @@ class CloseExpiredOrders extends Command
 - [Best practice shop](./04_best_practice.md)
 - [Testing shop](./09_test.md)
 - [API shop](./08_api.md)
-- [Glossario shop](./10_glossario.md) 
+- [Glossario shop](./10_glossario.md)

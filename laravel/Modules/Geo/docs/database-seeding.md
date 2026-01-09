@@ -36,7 +36,7 @@ Gli script di seeding sono organizzati nella seguente struttura:
 
 Script ottimizzato per generare esattamente:
 - **1000 Doctor** (utenti con tipo 'doctor')
-- **1000 Patient** (utenti con tipo 'patient') 
+- **1000 Patient** (utenti con tipo 'patient')
 - **1000 Studio** (studi medici)
 - **500 Appointment** (appuntamenti di esempio)
 

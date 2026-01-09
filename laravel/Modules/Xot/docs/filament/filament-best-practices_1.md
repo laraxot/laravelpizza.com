@@ -10,7 +10,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    ```php
    // CORRETTO ✅
    class ClienteResource extends XotBaseResource
-   
+
    // ERRATO ❌
    class ClienteResource extends Resource
    ```
@@ -28,7 +28,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    ```php
    // CORRETTO ✅
    class CreateCliente extends XotBaseCreateRecord
-   
+
    // ERRATO ❌
    class CreateCliente extends CreateRecord
    ```
@@ -37,7 +37,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    ```php
    // CORRETTO ✅
    class EditCliente extends XotBaseEditRecord
-   
+
    // ERRATO ❌
    class EditCliente extends EditRecord
    ```
@@ -46,7 +46,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    ```php
    // CORRETTO ✅
    class ListClienti extends XotBaseListRecords
-   
+
    // ERRATO ❌
    class ListClienti extends ListRecords
    ```
@@ -63,7 +63,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
            // altri componenti...
        ];
    }
-   
+
    // ERRATO ❌
    public static function form(Form $form): Form
    {
@@ -78,7 +78,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
        TextInput::make('nome'),
        // altri componenti...
    ];
-   
+
    // ERRATO ❌
    return $form->schema([
        TextInput::make('nome'),
@@ -91,7 +91,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    ```php
    // CORRETTO ✅
    TextInput::make('nome')
-   
+
    // ERRATO ❌
    TextInput::make('nome')->label('Nome Cliente')
    ```
@@ -130,7 +130,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    }
    ```
 
-## Relazioni con Database 
+## Relazioni con Database
 
 ### Differenze tra Brain e Orisbroker
 
@@ -138,7 +138,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    - In **braindb**:
      - Le tabelle geografiche hanno il campo `nome` ma NON `descrizione`
      - Esempio: `nazione`, `regione`, `provincia`, `comune`
-   
+
    - In **orisbroker**:
      - Le stesse tabelle hanno sia `nome` che `descrizione`
 
@@ -146,7 +146,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
    ```php
    // Per modelli Brain (CORRETTO ✅)
    ->relationship('nazione_nascita', 'nome')
-   
+
    // Per modelli Orisbroker (CORRETTO ✅)
    ->relationship('nazione', 'descrizione')
    ```
@@ -187,10 +187,8 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
 * [FILAMENT_BEST_PRACTICES.md](../../../User/docs/FILAMENT_BEST_PRACTICES.md)
 * [FILAMENT_BEST_PRACTICES.md](../../../Job/docs/FILAMENT_BEST_PRACTICES.md)
 
-
 ## Collegamenti tra versioni di filament_best_practices.md
 * [filament_best_practices.md](../../../../../docs/rules/filament_best_practices.md)
 * [filament_best_practices.md](../filament_best_practices.md)
 * [filament_best_practices.md](../../../User/docs/filament_best_practices.md)
 * [filament_best_practices.md](../../../Job/docs/filament_best_practices.md)
-

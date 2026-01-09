@@ -145,9 +145,9 @@ curl -I http://127.0.0.1:8001/quaeris/admin/gaia/survey-pdfs
 
 ### Risultati Test
 
-✅ **Sintassi PHP**: Nessun errore di sintassi  
-✅ **Istanziazione**: Classe istanziabile correttamente  
-✅ **URL Test**: Errore originale risolto (ora errore di autenticazione, conferma che il fix ha funzionato)  
+✅ **Sintassi PHP**: Nessun errore di sintassi
+✅ **Istanziazione**: Classe istanziabile correttamente
+✅ **URL Test**: Errore originale risolto (ora errore di autenticazione, conferma che il fix ha funzionato)
 ✅ **PHPStan**: Nessun errore di linting rilevato
 
 ## Impatto
@@ -173,8 +173,8 @@ curl -I http://127.0.0.1:8001/quaeris/admin/gaia/survey-pdfs
 
 ---
 
-**Data**: 27 Gennaio 2025  
-**Modulo**: UI  
-**Tipo**: Bug Fix  
-**Priorità**: Alta  
+**Data**: 27 Gennaio 2025
+**Modulo**: UI
+**Tipo**: Bug Fix
+**Priorità**: Alta
 **Stato**: ✅ Risolto

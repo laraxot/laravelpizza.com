@@ -26,4 +26,4 @@ Modulo core che fornisce funzionalità di base e utility per l'intero sistema.
 ## Collegamenti
 - [Roadmap](../../Modules/Xot/docs/roadmap.md)
 - [Implementazione](../../Modules/Xot/docs/implementation.md)
-- [Integrazione](../../Modules/Xot/docs/integration.md) 
+- [Integrazione](../../Modules/Xot/docs/integration.md)

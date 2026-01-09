@@ -80,7 +80,7 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 class SendEmail extends XotBasePage implements HasForms
 ```
 
-### Approccio 2: Implementare la Configurazione SMTP 
+### Approccio 2: Implementare la Configurazione SMTP
 
 Aggiungere campi di configurazione nel form:
 
@@ -89,7 +89,7 @@ public function emailForm(Form $form): Form
 {
     Assert::isArray($mail_config = config('mail'));
     $smtpConfig = Arr::get($mail_config, 'mailers.smtp');
-    
+
     return $form
         ->schema(
             [
@@ -117,7 +117,7 @@ public function sendEmail(): void
     try {
         $data = $this->emailForm->getState();
         $email_data = EmailData::from($data);
-        
+
         // Crea configurazione temporanea
         $config = [
             'transport' => 'smtp',
@@ -127,14 +127,14 @@ public function sendEmail(): void
             'username' => $data['username'] ?? env('MAIL_USERNAME'),
             'password' => $data['password'] ?? env('MAIL_PASSWORD'),
         ];
-        
+
         // Crea mailer temporaneo
         $mailer = app('mail.manager')->createTransport($config);
         $symfony_mailer = new \Symfony\Component\Mailer\Mailer($mailer);
-        
+
         // Invia usando mailer temporaneo
         $symfony_mailer->send(new EmailDataEmail($email_data));
-        
+
         Notification::make()
             ->success()
             ->title(__('Email inviata con successo'))

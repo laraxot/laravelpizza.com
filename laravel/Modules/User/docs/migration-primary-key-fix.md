@@ -7,8 +7,8 @@
 
 ### Errore MySQL
 ```
-SQLSTATE[42000]: Syntax error or access violation: 1171 
-All parts of a PRIMARY KEY must be NOT NULL; 
+SQLSTATE[42000]: Syntax error or access violation: 1171
+All parts of a PRIMARY KEY must be NOT NULL;
 if you need NULL in a key, use UNIQUE instead
 ```
 
@@ -102,11 +102,11 @@ $this->tableCreate(static function (Blueprint $table): void {
     // FK NOT NULL per PRIMARY KEY composita
     $table->foreignId('parent_id');      // NOT NULL
     $table->uuid('child_id');             // NOT NULL (non nullable)
-    
+
     // Campi opzionali possono essere nullable
     $table->string('role')->nullable();
     $table->timestamp('assigned_at')->nullable();
-    
+
     // PRIMARY KEY composita
     $table->primary(['parent_id', 'child_id']);
 });
@@ -125,4 +125,3 @@ $this->tableCreate(static function (Blueprint $table): void {
 ✅ **Documentazione aggiornata**
 
 *Ultimo aggiornamento: 2025-01-15*
-

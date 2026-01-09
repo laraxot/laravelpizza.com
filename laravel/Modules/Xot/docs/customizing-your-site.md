@@ -85,7 +85,6 @@ class Foo extends bar
 
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di customizing-your-site.md
 * [customizing-your-site.md](../../../Gdpr/project_docs/customizing-your-site.md)
 * [customizing-your-site.md](../../../Xot/project_docs/customizing-your-site.md)
@@ -98,9 +97,6 @@ class Foo extends bar
 * [customizing-your-site.md](../../../Tenant/docs/it/customizing-your-site.md)
 * [customizing-your-site.md](../../../Cms/docs/customizing-your-site.md)
 
-
 ### Versione Incoming
 
-
 ---
-

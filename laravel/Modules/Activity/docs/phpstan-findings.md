@@ -1,7 +1,7 @@
 # PHPStan Findings - Activity Module
 
-**Data**: 2025-10-10  
-**Livello**: MAX (9)  
+**Data**: 2025-10-10
+**Livello**: MAX (9)
 **Status**: ✅ MODELS CORRETTI
 
 ## Errori Risolti

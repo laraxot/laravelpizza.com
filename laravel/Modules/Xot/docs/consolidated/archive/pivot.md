@@ -26,8 +26,6 @@ class UserResource extends JsonResource
 
 getRelationValue("pivot")
 
-
-
 $dpia = request()->route('dpias');
 $dpia = app('request')->route('dpias');
 ///////////////////////

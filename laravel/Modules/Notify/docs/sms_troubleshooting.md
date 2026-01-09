@@ -195,4 +195,4 @@ Log::debug('SMS Debug', [
 ### 3. Monitoraggio
 - Check periodici
 - Alert system
-- Report mensili 
+- Report mensili

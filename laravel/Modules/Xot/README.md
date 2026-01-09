@@ -92,7 +92,7 @@ php artisan xot:status
 class XotBaseModel extends Model
 {
     use HasFactory, SoftDeletes, HasUuid;
-    
+
     // Funzionalità automatiche
     protected $guarded = [];
     protected $casts = ['created_at' => 'datetime'];
@@ -117,13 +117,13 @@ class XotBaseServiceProvider extends ServiceProvider
 class XotBaseUser extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
-    
+
     // Relazioni automatiche
     public function teams(): BelongsToMany
     {
         return $this->belongsToMany(Team::class);
     }
-    
+
     public function tenants(): BelongsToMany
     {
         return $this->belongsToMany(Tenant::class);
@@ -137,12 +137,12 @@ class XotBaseUser extends Authenticatable
 class XotBaseResource extends Resource
 {
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    
+
     public static function getNavigationGroup(): ?string
     {
         return __('xot::navigation.groups.main');
     }
-    
+
     public static function getNavigationSort(): ?int
     {
         return 1;
@@ -238,11 +238,11 @@ class MyResource extends XotBaseResource
 class MyModuleServiceProvider extends XotBaseServiceProvider
 {
     protected string $module_name = 'MyModule';
-    
+
     public function boot(): void
     {
         parent::boot(); // Carica automaticamente views, translations, migrations
-        
+
         // Aggiungi funzionalità specifiche del modulo
         $this->registerCustomComponents();
     }
@@ -260,7 +260,7 @@ return new class extends XotBaseMigration
         if ($this->hasTable('my_table')) {
             return;
         }
-        
+
         Schema::create('my_table', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
@@ -278,7 +278,7 @@ trait HasParent
     {
         return $this->belongsTo(static::class, 'parent_id');
     }
-    
+
     public function children(): HasMany
     {
         return $this->hasMany(static::class, 'parent_id');

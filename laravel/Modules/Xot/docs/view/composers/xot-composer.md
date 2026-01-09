@@ -59,4 +59,4 @@ View::composer('*', XotComposer::class);
 - [Implementazione](../../../app/View/Composers/XotComposer.php)
 - [Test](../../../tests/Unit/View/Composers/XotComposerTest.php)
 - [RouteService](../../services/route-service.md)
-- [ThemeService](../../services/theme-service.md) 
+- [ThemeService](../../services/theme-service.md)

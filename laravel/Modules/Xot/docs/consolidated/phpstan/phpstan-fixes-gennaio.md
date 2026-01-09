@@ -44,7 +44,7 @@ In data Gennaio 2025, sono stati risolti diversi errori PHPStan livello 9 nel mo
 ### 5. DownloadZipByPathsDiskAction - Missing Return Type e Null Handling
 
 **File**: `laravel/Modules/Xot/app/Actions/File/DownloadZipByPathsDiskAction.php`
-**Errori**: 
+**Errori**:
 - Missing return type specification
 - `string|null` given to parameter expecting `string`
 
@@ -121,14 +121,14 @@ public function getAllColors(): array
 {
     $filamentColors = $this->getFilamentColors();
     $customColors = [];
-    
+
     foreach ($this->colors as $key => $value) {
         if (is_array($value) && Arr::has($value, 'color')) {
             $colorValue = (string) $value['color'];
             $customColors[$key] = [$colorValue];
         }
     }
-    
+
     return array_merge($filamentColors, $customColors);
 }
 ```
@@ -169,4 +169,4 @@ public function getAllColors(): array
 - [Exception Handler Types](exceptions/exception-handler-types.md)
 - [PHPStan Level 10 Guide](phpstan_livello10_linee_guida.md)
 
-*Ultimo aggiornamento: Gennaio 2025* 
+*Ultimo aggiornamento: Gennaio 2025*

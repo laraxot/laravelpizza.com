@@ -1,8 +1,8 @@
 ## stato analisi phpstan
 
-- **data**: 2025-11-12  
-- **ambito**: `Modules/Xot`  
-- **comando**: `./vendor/bin/phpstan analyse Modules/Xot --memory-limit=-1`  
+- **data**: 2025-11-12
+- **ambito**: `Modules/Xot`
+- **comando**: `./vendor/bin/phpstan analyse Modules/Xot --memory-limit=-1`
 - **risultato**: ✅ nessun errore (livello massimo configurato)
 
 ### osservazioni operative

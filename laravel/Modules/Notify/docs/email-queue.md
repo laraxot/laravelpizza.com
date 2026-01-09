@@ -228,25 +228,25 @@ class MailQueueResource extends XotBaseResource
                     Stat::make('In Coda', fn () => $this->getPendingCount())
                         ->description('Job in attesa')
                         ->descriptionIcon('heroicon-m-clock'),
-                        
+
                     Stat::make('In Elaborazione', fn () => $this->getProcessingCount())
                         ->description('Job in corso')
                         ->descriptionIcon('heroicon-m-arrow-path'),
-                        
+
                     Stat::make('Falliti', fn () => $this->getFailedCount())
                         ->description('Job falliti')
                         ->descriptionIcon('heroicon-m-x-circle'),
                 ]),
-                
+
                 // Grafici
                 Chart::make('Job per Ora')
                     ->type('line')
                     ->data($this->getJobsByHour()),
-                    
+
                 Chart::make('Tempo di Elaborazione')
                     ->type('bar')
                     ->data($this->getProcessingTime()),
-                    
+
                 Chart::make('Fallimenti per Causa')
                     ->type('pie')
                     ->data($this->getFailureReasons()),
@@ -278,22 +278,22 @@ class MailQueueManager
     protected function rateLimitTemplate(MailTemplate $template): void
     {
         $key = "mail:template:{$template->id}";
-        
+
         if (RateLimiter::tooManyAttempts($key, $template->hourly_limit)) {
             throw new \Exception('Template rate limit exceeded');
         }
-        
+
         RateLimiter::hit($key);
     }
 
     protected function rateLimitRecipient(string $recipient): void
     {
         $key = "mail:recipient:{$recipient}";
-        
+
         if (RateLimiter::tooManyAttempts($key, 5)) {
             throw new \Exception('Recipient rate limit exceeded');
         }
-        
+
         RateLimiter::hit($key);
     }
 }
@@ -402,7 +402,7 @@ class MailQueueManager
 ## Vedi Anche
 - [Laravel Queue](https://laravel.com/project_docs/queues)
 - [Laravel Horizon](https://laravel.com/project_docs/horizon)
-- [Laravel Supervisor](https://laravel.com/project_docs/queues#supervisor-configuration) 
+- [Laravel Supervisor](https://laravel.com/project_docs/queues#supervisor-configuration)
 - [Laravel Queue](https://laravel.com/docs/queues)
 - [Laravel Horizon](https://laravel.com/docs/horizon)
-- [Laravel Supervisor](https://laravel.com/docs/queues#supervisor-configuration) 
+- [Laravel Supervisor](https://laravel.com/docs/queues#supervisor-configuration)

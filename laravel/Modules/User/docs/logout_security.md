@@ -115,22 +115,22 @@ rules([
 $logout = function () {
     try {
         $this->validate();
-        
+
         // Logout e pulizia
         Auth::logout();
         session()->invalidate();
         session()->regenerateToken();
-        
+
         // Pulizia cookie
         Cookie::queue(Cookie::forget('remember_token'));
-        
+
         // Logging
         Log::info('Logout effettuato', [
             'user_id' => Auth::id(),
             'ip' => request()->ip(),
             'user_agent' => request()->userAgent()
         ]);
-        
+
         return redirect()->route('home')
             ->with('success', __('Logout effettuato con successo'))
             ->withCookie(Cookie::forget('remember_token'));
@@ -139,7 +139,7 @@ $logout = function () {
             'error' => $e->getMessage(),
             'user_id' => Auth::id()
         ]);
-        
+
         return back()->with('error', __('Errore durante il logout'));
     }
 };
@@ -173,4 +173,4 @@ Log::channel('auth')->info('Logout effettuato', [
 - [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
 - [Gestione Sessione](./SESSION_MANAGEMENT.md)
 - [Documentazione Volt](./VOLT_BLADE_IMPLEMENTATION.md)
-- [Tema One Documentation](../../Themes/One/docs/README.md) 
+- [Tema One Documentation](../../Themes/One/docs/README.md)

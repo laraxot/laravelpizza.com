@@ -182,4 +182,4 @@ Class "App\Models\NomeModello" not found
 
 6. **Considera l'upgrade gracefully**: Quando aggiorni il framework o le librerie, leggi attentamente le note di rilascio per identificare potenziali breaking changes.
 
-7. **Implementa test unitari**: I test possono rilevare errori prima che raggiungano l'ambiente di produzione. 
+7. **Implementa test unitari**: I test possono rilevare errori prima che raggiungano l'ambiente di produzione.

@@ -82,9 +82,8 @@ $package->state->transitionTo(Archived::class);
 - [Sviluppo](development.md)
 - [Testing](testing.md)
 - [Debug](debug.md)
-- [Panoramica](../packages.md) 
+- [Panoramica](../packages.md)
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di performance.md
 * [performance.md](laravel/vendor/spatie/laravel-data/docs/advanced-usage/performance.md)
@@ -96,9 +95,6 @@ $package->state->transitionTo(Archived::class);
 * [performance.md](../../../Job/docs/packages/performance.md)
 * [performance.md](../../../Cms/docs/frontoffice/performance.md)
 
-
 ### Versione Incoming
 
-
 ---
-

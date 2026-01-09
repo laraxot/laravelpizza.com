@@ -19,7 +19,7 @@ public function getPerfIndMediaAttribute(?float $value): ?float {
 }
 ```
 
-**Risultato**: 
+**Risultato**:
 - `Duplicate Entry` error SE id è fillable
 - `NULL in PRIMARY KEY` error altrimenti
 - Comportamento imprevedibile
@@ -31,18 +31,18 @@ public function getPerfIndMediaAttribute(?float $value): ?float {
 public function get<Nome>Attribute(?type $value): ?type
 {
     // ... cache check ...
-    
+
     // ✅ GUARD OBBLIGATORIO
     if (null == $this->getKey()) {
         return null; // O return $value se appropriato
     }
-    
+
     // Calcolo...
     $newValue = /* ... */;
-    
+
     // Ora save() è sicuro
     $this->save();
-    
+
     return $newValue;
 }
 ```
@@ -53,15 +53,15 @@ public function get<Nome>Attribute(?type $value): ?type
 
 **Politica**: "Accessor gestisce lifecycle di record ESISTENTI, non crea nuovi record"
 
-**Religione**: 
-> "Non salverai ciò che non esiste.  
-> Il null è il guardiano dell'esistenza.  
+**Religione**:
+> "Non salverai ciò che non esiste.
+> Il null è il guardiano dell'esistenza.
 > La Primary Key è prova di vita nel database."
 
 **Filosofia (Tao)**:
-> "L'accessor è come un giardiniere:  
-> innaffia le piante (record esistenti),  
-> ma non pianta semi (nuovi record).  
+> "L'accessor è come un giardiniere:
+> innaffia le piante (record esistenti),
+> ma non pianta semi (nuovi record).
 > Il seme lo pianta il create()."
 
 ### Scopo Business
@@ -145,7 +145,7 @@ public function getTotaleAttribute(): float {
     if (null == $this->getKey()) {
         return 0.0; // O null se appropriato
     }
-    
+
     $totale = $this->campo1 + $this->campo2;
     $this->save(); // ✅ Sicuro
     return $totale;
@@ -167,7 +167,7 @@ public function getStatusAttribute(): string {
     if (null == $this->getKey()) {
         return $this->calcolaStatus(); // Calcola ma non salva
     }
-    
+
     $this->attributes['status'] = $this->calcolaStatus();
     $this->save(); // ✅ Sicuro
     return $this->attributes['status'];
@@ -185,12 +185,12 @@ public function getMediaAttribute(): float {
     return $media;
 }
 
-// DOPO  
+// DOPO
 public function getMediaAttribute(): float {
     if (null == $this->getKey()) {
         return 0.0; // Nessun aggregato possibile
     }
-    
+
     $records = self::where('parent_id', $this->id)->get(); // ✅ id esiste
     $media = $records->avg('valore');
     $this->save(); // ✅ Sicuro
@@ -261,24 +261,24 @@ Per ogni file con accessor + save():
 ```php
 test('accessor ritorna null se model senza PK', function () {
     $model = new Scheda(['nome' => 'Test']);
-    
+
     // Model non salvato, nessuna PK
     expect($model->getKey())->toBeNull();
-    
+
     // Accessor deve gestire gracefully
     $valore = $model->perf_ind_media;
-    
+
     expect($valore)->toBeNull();
     // E non deve aver tentato save()
 });
 
 test('accessor salva se model ha PK', function () {
     $model = Scheda::factory()->create();
-    
+
     expect($model->getKey())->not->toBeNull();
-    
+
     $valore = $model->perf_ind_media;
-    
+
     expect($valore)->not->toBeNull();
     // E deve aver salvato
     $model->refresh();
@@ -303,9 +303,8 @@ test('accessor salva se model ha PK', function () {
 
 ---
 
-**Creato**: 2025-01-29  
-**Tipo**: Regola Architettutale Globale  
-**Applicazione**: Tutti i moduli  
-**Severità**: 🔴 CRITICA  
+**Creato**: 2025-01-29
+**Tipo**: Regola Architettutale Globale
+**Applicazione**: Tutti i moduli
+**Severità**: 🔴 CRITICA
 **Status**: 📖 Documentata, 🔄 Implementazione in corso
-

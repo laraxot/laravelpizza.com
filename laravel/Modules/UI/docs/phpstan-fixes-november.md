@@ -1,12 +1,12 @@
 # PHPStan Fixes - November 2025
 
-**Data:** 11 Novembre 2025  
+**Data:** 11 Novembre 2025
 **Risultato:** ✅ **COMPLETATO** - Risolti 44/44 errori (100%)
 
 ## 📊 Risultati
 
 - **Errori iniziali:** 44
-- **Errori risolti:** 44  
+- **Errori risolti:** 44
 - **Errori rimanenti:** 0
 - **Tasso di successo:** 100%
 - **PHPStan Level:** 10 (Maximum)
@@ -35,7 +35,7 @@ private function buildStateArray(array $stateMapping, mixed $record): array
     foreach ($stateMapping as $stateKey => $stateClass) {
         // ...
     }
-    
+
     return $result;
 }
 ```
@@ -49,7 +49,7 @@ private function buildStateArray(array $stateMapping, mixed $record): array
     foreach ($stateMapping as $stateKey => $stateClass) {
         // ...
     }
-    
+
     return $result;
 }
 ```

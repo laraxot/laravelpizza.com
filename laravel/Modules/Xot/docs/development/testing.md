@@ -22,7 +22,7 @@ class UpdatePerformanceActionTest extends TestCase
         $performance = Performance::factory()->create([
             'punteggio' => 80
         ]);
-        
+
         $data = new PerformanceData(
             nome: $performance->nome,
             punteggio: 90,
@@ -46,7 +46,7 @@ class UpdatePerformanceActionTest extends TestCase
     {
         // Arrange
         Queue::fake();
-        
+
         $data = new PerformanceData(
             nome: 'Test Performance',
             punteggio: 85,
@@ -70,7 +70,7 @@ class UpdatePerformanceActionTest extends TestCase
     {
         // Arrange
         $this->expectException(ValidationException::class);
-        
+
         $data = new PerformanceData(
             nome: 'Test Performance',
             punteggio: 101, // Oltre il massimo consentito
@@ -87,7 +87,7 @@ class UpdatePerformanceActionTest extends TestCase
     {
         // Arrange
         $performance = Performance::factory()->create();
-        
+
         $data = new PerformanceData(
             nome: $performance->nome,
             punteggio: 95,
@@ -98,7 +98,7 @@ class UpdatePerformanceActionTest extends TestCase
         DB::transaction(function () use ($data, $performance) {
             $action = app(UpdatePerformanceAction::class);
             $action->execute($data);
-            
+
             throw new Exception('Rollback test');
         });
 

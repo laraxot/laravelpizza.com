@@ -114,7 +114,7 @@ private function processActivityChunk($activities)
 public function searchActivities($searchTerm, $filters = [])
 {
     $cacheKey = "activity_search_" . md5($searchTerm . serialize($filters));
-    
+
     return Cache::remember($cacheKey, 300, function() use ($searchTerm, $filters) {
         $query = ActivityLog::with(['causer', 'subject'])
             ->where(function($q) use ($searchTerm) {
@@ -441,5 +441,3 @@ $defaultRecordsPerPageSelectOption → $defaultPerPageOption
 - [bottlenecks.md](./bottlenecks.md)
 
 This analysis provides a comprehensive roadmap for improving code quality in the Activity module while maintaining data integrity and performance.
-
-

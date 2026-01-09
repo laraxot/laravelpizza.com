@@ -54,4 +54,4 @@
 3. **Traduzioni**
    - Utilizzare le chiavi corrette
    - Mantenere la coerenza
-   - Documentare le modifiche 
+   - Documentare le modifiche

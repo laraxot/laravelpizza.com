@@ -55,4 +55,4 @@
 - [Gestione Contenuti](packages/content-management.md)
 - [Performance](packages/performance.md)
 - [SEO](packages/seo.md)
-- [Analytics](packages/analytics.md) 
+- [Analytics](packages/analytics.md)

@@ -110,4 +110,4 @@ class MetatagData
 ## Collegamenti
 - [MetatagData](../datas/metatag-data.md)
 - [ApplyMetatagToPanelAction](../actions/applymetatagtopanelaction.md)
-- [Best Practices](../best-practices.md) 
+- [Best Practices](../best-practices.md)

@@ -1,6 +1,6 @@
 # Screenshot Documentation
 
-**Data**: 2025-01-22  
+**Data**: 2025-01-22
 **Scopo**: Cartella per screenshot di riferimento durante lo sviluppo e l'allineamento del tema
 
 ---
@@ -47,9 +47,9 @@
 browser_navigate({ url: "http://127.0.0.1:8002/it" })
 
 // Prendi screenshot full page
-browser_take_screenshot({ 
+browser_take_screenshot({
     filename: "homepage-locale.png",
-    fullPage: true 
+    fullPage: true
 })
 ```
 

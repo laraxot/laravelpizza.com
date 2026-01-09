@@ -91,7 +91,7 @@ class CreateAccountHandler implements MessageConsumer
     public function handle(Message $message): void
     {
         $command = $message->payload();
-        
+
         if (! $command instanceof CreateAccount) {
             return;
         }
@@ -114,9 +114,9 @@ public function it_can_create_an_account()
 {
     $accountId = AccountId::generate();
     $command = new CreateAccount($accountId, 'Mario Rossi');
-    
+
     $this->commandBus->handle($command);
-    
+
     $account = $this->repository->retrieve($accountId);
     $this->assertInstanceOf(BankAccount::class, $account);
     $this->assertEquals('Mario Rossi', $account->getAccountHolder());

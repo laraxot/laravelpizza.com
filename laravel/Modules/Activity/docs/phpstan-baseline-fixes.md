@@ -58,7 +58,7 @@ private function assertPhpFileHasValidSyntax(string $filePath): void
     $output = [];
     $resultCode = 0;
     exec("php -l " . escapeshellarg($filePath) . " 2>&1", $output, $resultCode);
-    
+
     $this->assertEquals(0, $resultCode, "File {$filePath} ha errori...");
 }
 ```
@@ -123,4 +123,3 @@ Ogni file modificato verificato con:
 **PHPStan Level**: 10 (MAX)
 **Errori risolti**: 21 → 0
 **Stato**: ✅ PRODUCTION READY
-

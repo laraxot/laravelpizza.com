@@ -57,7 +57,7 @@ if ($this->hasColumn('subject') && !$this->isColumnType('subject', 'json')) {
     if (!$this->hasColumn('subject_json')) {
         $table->json('subject_json')->nullable()->after('subject');
     }
-    
+
     // 2. Migra i dati solo se la colonna temporanea esiste
     if ($this->hasColumn('subject_json')) {
         DB::table('mail_templates')->chunkById(100, function ($records) {
@@ -72,7 +72,7 @@ if ($this->hasColumn('subject') && !$this->isColumnType('subject', 'json')) {
             }
         });
     }
-    
+
     // 3. Rimuovi e rinomina
     $table->dropColumn('subject');
     $table->renameColumn('subject_json', 'subject');
@@ -96,17 +96,17 @@ Quando si utilizza `Schema::hasColumn()` direttamente, si bypassa tutta questa l
 
 ## Come evitare errori
 
-1. **Verifica esistenza colonna**: 
+1. **Verifica esistenza colonna**:
    ```php
    $this->hasColumn('column_name')
    ```
 
-2. **Verifica tipo colonna**: 
+2. **Verifica tipo colonna**:
    ```php
    $this->isColumnType('column_name', 'expected_type')
    ```
 
-3. **Ottieni tipo colonna**: 
+3. **Ottieni tipo colonna**:
    ```php
    $this->getColumnType('column_name')
    ```

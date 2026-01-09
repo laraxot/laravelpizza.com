@@ -61,7 +61,7 @@ if (isset($record->state) && is_object($record->state)) {
     $state = $record->state;
 }
 
-// ✅ AFTER (CORRECT) - Option B: getAttribute()  
+// ✅ AFTER (CORRECT) - Option B: getAttribute()
 $state = $record->getAttribute('state');
 if (is_object($state)) {
     // use $state
@@ -154,12 +154,11 @@ if ($model->isFillable('tenant_id')) {
 - Codice più pulito, meno boilerplate
 
 ### Livello Filosofico (Lo Zen)
-> "Non cercare l'anima guardando il corpo.  
+> "Non cercare l'anima guardando il corpo.
 > L'anima si manifesta attraverso le azioni (__get), non attraverso l'esistenza fisica (property_exists)."
 
 ## Conclusione
 
-**Regola d'oro:** 
+**Regola d'oro:**
 - Eloquent Model? → NO `property_exists()`, usa `isset()` o `hasAttribute()`
 - Altro object? → `property_exists()` va bene!
-

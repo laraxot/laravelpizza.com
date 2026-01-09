@@ -110,5 +110,3 @@ Per gli step dei wizard, la chiave di traduzione segue un formato leggermente di
 
 ## Collegamenti Bidirezionali
 - [LangServiceProvider](/var/www/html/base_<nome progetto>/laravel/Modules/Lang/app/Providers/LangServiceProvider.php)
-
-

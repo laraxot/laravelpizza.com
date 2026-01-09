@@ -380,7 +380,6 @@ Modules is a FilamentPHP Plugin to enable easy integration with `nwidart/laravel
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
 **NB: These docs are for v3, which only supports Filament 4. If you are using Filament
 
-
 v2, [see the documentation here](https://github.com/savannabits/filament-modules/tree/main#readme) to get started.**
 
 For example, if you have two modules (**Blog** and **Pos**), you should be able to have filament installed in each module with separate resources as below:
@@ -394,46 +393,6 @@ Additionally, each of these can have its own customized login page which redirec
 You can read more about Multiple Context for Filament [Here](https://github.com/iotronlab/filament-multi-guard).
 
 If this is your goal, then you are in the right place.
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 
 ## Installation
 Before you proceed, this guide assumes that you have configured your app fully to work with Laravel Modules. If you haven't, follow the [Laravel Modules Docs](https://docs.laravelmodules.com/v9/installation-and-setup) before proceeding.
@@ -457,46 +416,6 @@ Additionally, each of these can have its own customized login page which redirec
 You can read more about Multiple Context for Filament [Here](https://github.com/iotronlab/filament-multi-guard).
 
 If this is your goal, then you are in the right place.
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 
 ## Installation
 Before you proceed, this guide assumes that you have configured your app fully to work with Laravel Modules. If you haven't, follow the [Laravel Modules Docs](https://docs.laravelmodules.com/v9/installation-and-setup) before proceeding.

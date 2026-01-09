@@ -179,7 +179,7 @@ $this->label(__('media::s3test.actions.testCredentials.label'))
 public function test_no_direct_module_imports(): void
 {
     $file = file_get_contents(__DIR__ . '/../../app/Filament/Clusters/Test/Pages/S3Test.php');
-    
+
     // Verifica che non ci siano import diretti tra moduli
     $this->assertStringNotContainsString('use Modules\\Notify', $file);
     $this->assertStringNotContainsString('use Modules\\User', $file);
@@ -192,7 +192,7 @@ public function test_no_direct_module_imports(): void
 public function test_phpstan_compliance(): void
 {
     $output = shell_exec('./vendor/bin/phpstan analyse Modules/Media --level=9 --no-progress');
-    
+
     $this->assertStringNotContainsString('ERROR', $output);
     $this->assertStringNotContainsString('mixed', $output);
 }
@@ -204,12 +204,12 @@ public function test_translation_completeness(): void
 {
     $languages = ['it', 'en', 'de'];
     $translationFiles = ['s3test.php'];
-    
+
     foreach ($languages as $lang) {
         foreach ($translationFiles as $file) {
             $path = "Modules/Media/lang/{$lang}/{$file}";
             $this->assertFileExists($path);
-            
+
             $translations = require $path;
             $this->assertIsArray($translations);
             $this->assertNotEmpty($translations);
@@ -234,9 +234,9 @@ use Illuminate\Support\Facades\Log;
 class NewTestPage extends XotBasePage
 {
     protected static ?string $navigationIcon = 'heroicon-o-cog';
-    
+
     protected static string $view = 'media::filament.pages.new-test-page';
-    
+
     /**
      * Test method with proper typing.
      *
@@ -247,19 +247,19 @@ class NewTestPage extends XotBasePage
         try {
             // Test logic here
             $result = $this->executeTest();
-            
+
             Log::info('Test completed successfully', [
                 'test' => static::class,
                 'result' => $result
             ]);
-            
+
             return $result;
         } catch (\Exception $e) {
             Log::error('Test failed', [
                 'test' => static::class,
                 'error' => $e->getMessage()
             ]);
-            
+
             return ['error' => $e->getMessage()];
         }
     }
@@ -328,24 +328,24 @@ on: [push, pull_request]
 jobs:
   media-checks:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.2'
-        
+
     - name: Install dependencies
       run: composer install
-        
+
     - name: PHPStan check
       run: ./vendor/bin/phpstan analyse Modules/Media --level=9
-        
+
     - name: Translation check
       run: php artisan translation:check --module=Media
-        
+
     - name: Architecture check
       run: |
         if grep -r "use Modules\\" Modules/Media/app/ --include="*.php" | grep -v "use Modules\\Media"; then
@@ -378,7 +378,7 @@ jobs:
 
 ---
 
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
-**📦 Versione**: 3.1.0  
-**🎯 Obiettivo**: Prevenzione completa problemi futuri  
+**🔄 Ultimo aggiornamento**: 27 Gennaio 2025
+**📦 Versione**: 3.1.0
+**🎯 Obiettivo**: Prevenzione completa problemi futuri
 **✅ Status**: Linee guida implementate e testate

@@ -14,7 +14,7 @@ Analisi sistematica modulo per modulo con PHPStan 10, PHPMD e PHPInsights per ra
 
 #### Modulo Xot (Baseline)
 - **PHPStan**: ✅ 0 errori
-- **PHPInsights**: 
+- **PHPInsights**:
   - Code Quality: 75.3% ⚠️
   - Complexity: 91.7% ✅
   - Architecture: 47.1% ❌ (critico)
@@ -125,4 +125,3 @@ $user->authentications()
 2. **N+1 sono facili da identificare**: Loop con query individuali
 3. **DRY violations**: Duplicazioni interfacce/trait facilmente identificabili
 4. **Architecture score**: Richiede refactoring strutturale (interfacce, final classes)
-

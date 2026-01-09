@@ -106,11 +106,11 @@ Il progetto utilizza Tailwind CSS v4 con configurazione in:
     .pizza-card {
         @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300;
     }
-    
+
     .pizza-card:hover {
         @apply shadow-xl transform scale-105;
     }
-    
+
     .btn-primary {
         @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
     }
@@ -288,4 +288,3 @@ screens: {
 - Mantieni consistenza con design system
 - Documenta componenti custom
 - Testa su dispositivi reali
-

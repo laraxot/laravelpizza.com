@@ -74,7 +74,7 @@ Tabelle di relazione con colonne `*_type` e `*_id`:
 abstract class BaseModel extends XotBaseModel
 {
     protected $connection = 'user'; // ✓ Automatico per tutti
-    
+
     protected function casts(): array
     {
         return array_merge(parent::casts(), [
@@ -97,7 +97,7 @@ abstract class BasePivot extends XotBasePivot
 abstract class BaseMorphPivot extends XotBaseMorphPivot
 {
     protected $connection = 'user'; // ✓ Automatico per tutti i morph pivot
-    
+
     // ✓ Trait e configurazioni comuni
 }
 ```

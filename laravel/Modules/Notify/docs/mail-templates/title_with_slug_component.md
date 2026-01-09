@@ -23,7 +23,7 @@ Il componente è compatibile con l'architettura di <main module> e può essere i
 - Non utilizza componenti UI personalizzati
 - Può essere configurato per restituire array associativi con chiavi stringhe
 - Supporta la localizzazione attraverso file di traduzione
-- Si integra con il pattern di form di Filament utilizzato 
+- Si integra con il pattern di form di Filament utilizzato
 
 ## Installazione
 
@@ -56,16 +56,16 @@ public static function getFormSchema(): array
             fieldSlug: 'slug',
         )
         ->columnSpanFull(),
-        
+
         // Altri campi del form
         'subject' => Forms\Components\TextInput::make('subject')
             ->required()
             ->maxLength(255),
-            
+
         'html_template' => Forms\Components\RichEditor::make('html_template')
             ->required()
             ->columnSpanFull(),
-            
+
         'text_template' => Forms\Components\Textarea::make('text_template')
             ->maxLength(65535)
             ->columnSpanFull(),
@@ -142,7 +142,7 @@ Per la validazione dell'unicità, il componente offre parametri specifici:
 Il componente può generare un link per visualizzare direttamente la risorsa:
 
 ```php
-->urlVisitLinkRoute(fn(?Model $record) => $record?->slug 
+->urlVisitLinkRoute(fn(?Model $record) => $record?->slug
     ? route('notify.mail-templates.view', ['slug' => $record->slug])
     : null)
 ```
@@ -184,7 +184,7 @@ public static function getFormSchema(): array
             if (!$record?->slug) return null;
             return route('notify.mail-templates.view', ['slug' => $record->slug]);
         }),
-        
+
         // Altri campi...
     ];
 }

@@ -58,4 +58,4 @@ sudo chmod 664 /var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php
 ---
 
 **Nota:**
-La root `docs/` deve contenere solo il link a questo file, non la guida completa. 
+La root `docs/` deve contenere solo il link a questo file, non la guida completa.

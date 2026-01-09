@@ -216,7 +216,7 @@ Tutti i modelli attivi hanno le factory corrispondenti.
 - **Emergency Alerts**: Allerte mediche urgenti
 - **Prescription Reminders**: Promemoria farmaci
 
-#### User Integration  
+#### User Integration
 - **Welcome Messages**: Messaggi benvenuto
 - **Password Reset**: Email reset password
 - **Account Verification**: Verifiche account

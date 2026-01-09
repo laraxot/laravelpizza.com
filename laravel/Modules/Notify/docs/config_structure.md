@@ -10,7 +10,7 @@
    ```php
    return [
        'default' => env('SMS_DRIVER', 'default_driver'),
-       
+
        // Specifico per provider - Solo parametri di autenticazione e identificazione
        'drivers' => [
            'provider1' => [
@@ -24,19 +24,19 @@
                // Solo parametri specifici per la connessione!
            ],
        ],
-       
+
        // Configurazione generica - Applicabile a tutti i provider
        'retry' => [
            'attempts' => env('SMS_RETRY_ATTEMPTS', 3),
            'delay' => env('SMS_RETRY_DELAY', 60),
        ],
-       
+
        'rate_limit' => [
            'enabled' => env('SMS_RATE_LIMIT_ENABLED', true),
            'max_attempts' => env('SMS_RATE_LIMIT_MAX_ATTEMPTS', 60),
            'decay_minutes' => env('SMS_RATE_LIMIT_DECAY_MINUTES', 1),
        ],
-       
+
        // Altre configurazioni generiche
    ];
    ```

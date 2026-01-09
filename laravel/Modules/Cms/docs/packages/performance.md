@@ -77,4 +77,4 @@ $optimizerChain->optimize($pathToImage);
 
 - [Torna a packages.md](../packages.md)
 - [Gestione Contenuti](content-management.md)
-- [SEO](seo.md) 
+- [SEO](seo.md)

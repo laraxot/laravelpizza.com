@@ -40,15 +40,15 @@ class UserDataTest extends TestCase
             'name' => 'John Doe',
             'email' => 'john@example.com',
         ]);
-        
+
         $this->assertEquals('John Doe', $data->name);
         $this->assertEquals('john@example.com', $data->email);
     }
-    
+
     public function test_it_validates_required_fields(): void
     {
         $this->expectException(\Exception::class);
-        
+
         UserData::from([
             'name' => 'John Doe',
         ]);
@@ -74,23 +74,23 @@ class CreateUserActionTest extends TestCase
             'name' => 'John Doe',
             'email' => 'john@example.com',
         ]);
-        
+
         $user = CreateUserAction::execute($userData);
-        
+
         $this->assertInstanceOf(User::class, $user);
         $this->assertEquals('John Doe', $user->name);
         $this->assertEquals('john@example.com', $user->email);
     }
-    
+
     public function test_it_handles_duplicate_email(): void
     {
         $this->expectException(DuplicateEmailException::class);
-        
+
         $userData = UserData::from([
             'name' => 'John Doe',
             'email' => 'existing@example.com',
         ]);
-        
+
         CreateUserAction::execute($userData);
     }
 }
@@ -114,20 +114,20 @@ class UserApiTest extends TestCase
             'name' => 'John Doe',
             'email' => 'john@example.com',
         ]);
-        
+
         $response->assertCreated();
         $this->assertDatabaseHas('users', [
             'name' => 'John Doe',
             'email' => 'john@example.com',
         ]);
     }
-    
+
     public function test_it_validates_input(): void
     {
         $response = $this->postJson('/api/users', [
             'name' => 'John Doe',
         ]);
-        
+
         $response->assertUnprocessable();
         $response->assertJsonValidationErrors(['email']);
     }
@@ -148,9 +148,9 @@ class DatabaseTest extends TestCase
     public function test_it_maintains_referential_integrity(): void
     {
         $user = User::factory()->create();
-        
+
         $this->expectException(\Exception::class);
-        
+
         DB::table('users')->where('id', $user->id)->delete();
     }
 }
@@ -172,14 +172,14 @@ class PerformanceTest extends TestCase
     public function test_api_response_time(): void
     {
         $start = microtime(true);
-        
+
         $this->getJson('/api/users');
-        
+
         $time = microtime(true) - $start;
-        
+
         $this->assertLessThan(0.2, $time);
     }
-    
+
     public function test_cache_performance(): void
     {
         Cache::shouldReceive('remember')
@@ -188,12 +188,12 @@ class PerformanceTest extends TestCase
                 $start = microtime(true);
                 $result = $callback();
                 $time = microtime(true) - $start;
-                
+
                 $this->assertLessThan(0.1, $time);
-                
+
                 return $result;
             });
-            
+
         $this->getJson('/api/users');
     }
 }
@@ -212,11 +212,11 @@ class LoadTest extends TestCase
     public function test_concurrent_users(): void
     {
         $responses = [];
-        
+
         for ($i = 0; $i < 100; $i++) {
             $responses[] = $this->getJson('/api/users');
         }
-        
+
         foreach ($responses as $response) {
             $response->assertOk();
         }
@@ -239,16 +239,16 @@ class AuthenticationTest extends TestCase
     public function test_unauthenticated_access(): void
     {
         $response = $this->getJson('/api/users');
-        
+
         $response->assertUnauthorized();
     }
-    
+
     public function test_invalid_token(): void
     {
         $response = $this->withHeaders([
             'Authorization' => 'Bearer invalid-token',
         ])->getJson('/api/users');
-        
+
         $response->assertUnauthorized();
     }
 }
@@ -267,10 +267,10 @@ class AuthorizationTest extends TestCase
     public function test_unauthorized_access(): void
     {
         $user = User::factory()->create();
-        
+
         $response = $this->actingAs($user)
             ->getJson('/api/admin/users');
-            
+
         $response->assertForbidden();
     }
 }
@@ -287,21 +287,21 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.2'
-        
+
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
-        
+
     - name: Execute tests
       run: vendor/bin/phpunit
-      
+
     - name: Upload coverage
       uses: codecov/codecov-action@v1
 ```
@@ -341,4 +341,4 @@ test:
 - Mock esterni
 - Database in memoria
 - Cache disabilitata
-- Logging minimo 
+- Logging minimo

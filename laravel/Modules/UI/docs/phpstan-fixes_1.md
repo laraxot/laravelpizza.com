@@ -32,13 +32,13 @@ if ($livewire) {
     if (property_exists($livewire, 'layoutView')) {
         $livewire->layoutView = $newLayout;
     }
-    
+
     // These methods should be available on Filament components
     if (method_exists($livewire, 'dispatch')) {
         $livewire->dispatch('$refresh');
         $livewire->dispatch('refreshTable');
     }
-    
+
     if (method_exists($livewire, 'resetTable')) {
         $livewire->resetTable();
     }

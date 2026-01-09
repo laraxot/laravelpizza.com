@@ -46,7 +46,7 @@ return [
 
 - [Tema One - Overview](/laravel/Themes/One/docs/README.md)
 - [CMS Module - Components](/laravel/Modules/Cms/docs/components.md)
-- [Integrazione Temi](/laravel/Modules/Cms/docs/themes.md) 
+- [Integrazione Temi](/laravel/Modules/Cms/docs/themes.md)
 
 ## Collegamenti tra versioni di footer.md
 * [footer.md](docs/laravel-app/themes/one/components/footer.md)
@@ -57,4 +57,3 @@ return [
 * [footer.md](laravel/Modules/Cms/docs/components/footer.md)
 * [footer.md](laravel/Themes/One/docs/components/layouts/footer.md)
 * [footer.md](laravel/Themes/One/docs/sections/footer.md)
-

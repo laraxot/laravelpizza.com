@@ -23,13 +23,13 @@
 2. **Struttura dei contenuti**: Utilizzare titoli e sottotitoli organizzati in modo gerarchico:
    ```markdown
    # Titolo principale
-   
+
    ## Sezione 1
-   
+
    ### Sottosezione 1.1
-   
+
    ### Sottosezione 1.2
-   
+
    ## Sezione 2
    ```
 
@@ -43,7 +43,7 @@
 4. **Note e avvertimenti**: Utilizzare un formato standard per note e avvertimenti:
    ```markdown
    > **Nota**: Informazione importante.
-   
+
    > **Attenzione**: Avvertimento critico.
    ```
 

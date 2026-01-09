@@ -1,7 +1,7 @@
 # Filament v4 Theme Upgrade Guide - Modulo UI
-**Data**: 10 Dicembre 2025  
-**Modulo**: UI (Theme Components)  
-**Versione**: 4.0  
+**Data**: 10 Dicembre 2025
+**Modulo**: UI (Theme Components)
+**Versione**: 4.0
 **Stato**: Ready for Implementation
 
 ## 🎨 TAILWIND CSS V4 MIGRATION
@@ -36,10 +36,10 @@ Filament v4 richiede Tailwind CSS v4 con sintassi completamente diversa.
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-danger: #ef4444;
-  
+
   /* Font custom */
   --font-family-sans: 'Inter', system-ui, sans-serif;
-  
+
   /* Spazi custom */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
@@ -156,7 +156,7 @@ class ButtonComponent extends Component
     public string $variant = 'primary';
     public string $size = 'md';
     public bool $disabled = false;
-    
+
     public function render(): View
     {
         return view('ui::components.button');
@@ -166,7 +166,7 @@ class ButtonComponent extends Component
 
 ```blade
 <!-- resources/views/components/ui/button.blade.php -->
-<button 
+<button
     {{ $attributes->merge([
         'class' => match($variant) {
             'primary' => 'bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors',
@@ -192,16 +192,16 @@ class ButtonComponent extends Component
   --color-ptvx-blue: #1e40af;
   --color-ptvx-blue-light: #3b82f6;
   --color-ptvx-blue-dark: #1e3a8a;
-  
+
   --color-ptvx-green: #059669;
   --color-ptvx-green-light: #10b981;
-  
+
   --color-ptvx-orange: #ea580c;
   --color-ptvx-orange-light: #f97316;
-  
+
   --color-ptvx-red: #dc2626;
   --color-ptvx-red-light: #ef4444;
-  
+
   --color-ptvx-gray: #374151;
   --color-ptvx-gray-light: #6b7280;
 }
@@ -343,7 +343,7 @@ npm run build
 
 ---
 
-**Versione**: 1.0  
-**Stato**: Ready for Implementation  
-**Priority**: HIGH  
+**Versione**: 1.0
+**Stato**: Ready for Implementation
+**Priority**: HIGH
 **Deadline**: 31 Dicembre 2025

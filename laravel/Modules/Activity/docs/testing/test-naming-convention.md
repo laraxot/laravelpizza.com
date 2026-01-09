@@ -1,7 +1,7 @@
 # Convenzione Naming File Test - Activity Module
 
-**Modulo:** Activity  
-**Data:** 10 Ottobre 2025  
+**Modulo:** Activity
+**Data:** 10 Ottobre 2025
 **Categoria:** Testing Standards
 
 ## 🎯 Regola
@@ -52,4 +52,3 @@ done
 ---
 
 **Activity Module - Test Naming Standards** ✅
-

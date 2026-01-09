@@ -169,18 +169,18 @@ return [
     'name' => 'Employee',
     'description' => 'Employee management and time tracking',
     'icon' => 'heroicon-o-user-group',
-    
+
     'navigation' => [
         'enabled' => true,
         'sort' => 50,
         'group' => 'Human Resources',
     ],
-    
+
     'work_hours' => [
         'default_start' => env('EMPLOYEE_DEFAULT_START', '09:00'),
         'default_end' => env('EMPLOYEE_DEFAULT_END', '17:00'),
     ],
-    
+
     'features' => [
         'time_tracking' => env('EMPLOYEE_TIME_TRACKING', true),
         'gps_tracking' => env('EMPLOYEE_GPS_TRACKING', false),
@@ -241,5 +241,5 @@ Before committing a config file, verify:
 
 ---
 
-*Last Updated: 2025-08-27*  
+*Last Updated: 2025-08-27*
 *Configuration Standards Version: 2.0*

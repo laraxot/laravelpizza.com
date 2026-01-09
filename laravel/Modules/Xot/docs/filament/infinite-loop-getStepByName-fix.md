@@ -1,10 +1,8 @@
 # CRITICAL FIX: Loop Infinito in getStepByName() - XotBaseResource
 # CRITICAL FIX: Loop Infinito in getStepByName() - XotBaseResource
 
-
 ## 🚨 **PROBLEMA CRITICO RISOLTO**
 ## 🚨 **PROBLEMA CRITICO RISOLTO**
-
 
 ### **Sintomo**
 ### **Sintomo**
@@ -15,12 +13,10 @@ Xdebug has detected a possible infinite loop, and aborted your script with a sta
 ```
 ```
 
-
 ### **Causa Root**
 ### **Causa Root**
 Errore di sintassi PHP nel metodo `getStepByName()` di `XotBaseResource`:
 Errore di sintassi PHP nel metodo `getStepByName()` di `XotBaseResource`:
-
 
 ```php
 ```php
@@ -32,7 +28,6 @@ return Forms\Components\Wizard\Step::make($name)
     ->schema(static::$schema());
 ```
 ```
-
 
 ### **Correzione Applicata**
 ### **Correzione Applicata**
@@ -47,10 +42,8 @@ return Forms\Components\Wizard\Step::make($name)
 ```
 ```
 
-
 ## 🔍 **Analisi Tecnica**
 ## 🔍 **Analisi Tecnica**
-
 
 ### **Problema di Sintassi**
 ### **Problema di Sintassi**
@@ -61,7 +54,6 @@ return Forms\Components\Wizard\Step::make($name)
 - Questo causava **ricorsioni infinite** nel sistema di risoluzione delle classi
 - Questo causava **ricorsioni infinite** nel sistema di risoluzione delle classi
 
-
 ### **Soluzione Dinamica**
 ### **Soluzione Dinamica**
 - `static::{$schema}()` utilizza **variable variables** per chiamare dinamicamente il metodo
@@ -71,10 +63,8 @@ return Forms\Components\Wizard\Step::make($name)
 - Per `availability_step`: $schema = `getAvailabilityStepSchema` → chiama `static::getAvailabilityStepSchema()`
 - Per `availability_step`: $schema = `getAvailabilityStepSchema` → chiama `static::getAvailabilityStepSchema()`
 
-
 ## 🎯 **Meccanismo di Naming**
 ## 🎯 **Meccanismo di Naming**
-
 
 ### **Trasformazione Step Name → Method**
 ### **Trasformazione Step Name → Method**
@@ -84,8 +74,8 @@ $schema = Str::of($name)
 $schema = Str::of($name)
     ->snake()      // 'studio_step' → 'studio_step'
     ->snake()      // 'studio_step' → 'studio_step'
-    ->studly()     // 'studio_step' → 'StudioStep'  
-    ->studly()     // 'studio_step' → 'StudioStep'  
+    ->studly()     // 'studio_step' → 'StudioStep'
+    ->studly()     // 'studio_step' → 'StudioStep'
     ->prepend('get') // 'StudioStep' → 'getStudioStep'
     ->prepend('get') // 'StudioStep' → 'getStudioStep'
     ->append('Schema') // 'getStudioStep' → 'getStudioStepSchema'
@@ -94,7 +84,6 @@ $schema = Str::of($name)
     ->toString();
 ```
 ```
-
 
 ### **Esempi Mappatura**
 ### **Esempi Mappatura**
@@ -109,10 +98,8 @@ $schema = Str::of($name)
 | `personal_info_step` | `getPersonalInfoStepSchema()` |
 | `personal_info_step` | `getPersonalInfoStepSchema()` |
 
-
 ## 🛡️ **Fix Secondario: property_exists Check**
 ## 🛡️ **Fix Secondario: property_exists Check**
-
 
 ### **Problema Aggiuntivo**
 ### **Problema Aggiuntivo**
@@ -125,11 +112,10 @@ $attachments = $model::$attachments;
 ```
 ```
 
-
 ### **Correzione Applicata**
 ### **Correzione Applicata**
-```php  
-```php  
+```php
+```php
 // ✅ CORRETTO - Check esistenza proprietà
 // ✅ CORRETTO - Check esistenza proprietà
 $attachments = property_exists($model, 'attachments') ? $model::$attachments : [];
@@ -137,10 +123,8 @@ $attachments = property_exists($model, 'attachments') ? $model::$attachments : [
 ```
 ```
 
-
 ## 📋 **Impatto della Correzione**
 ## 📋 **Impatto della Correzione**
-
 
 ### **Prima** ❌
 ### **Prima** ❌
@@ -151,7 +135,6 @@ $attachments = property_exists($model, 'attachments') ? $model::$attachments : [
 - Sistema bloccato su qualsiasi step dinamico
 - Sistema bloccato su qualsiasi step dinamico
 
-
 ### **Dopo** ✅
 ### **Dopo** ✅
 - Homepage registrazione dottore → **Funzionante**
@@ -161,20 +144,17 @@ $attachments = property_exists($model, 'attachments') ? $model::$attachments : [
 - Wizard navigation → **Fluida**
 - Wizard navigation → **Fluida**
 
-
 ## 🧪 **Test di Regressione**
 ## 🧪 **Test di Regressione**
-
 
 ### **Verifica Wizard Steps**
 ### **Verifica Wizard Steps**
 - [ ] studio_step → Chiama `getStudioStepSchema()` ✅
 - [ ] studio_step → Chiama `getStudioStepSchema()` ✅
-- [ ] availability_step → Chiama `getAvailabilityStepSchema()` ✅  
-- [ ] availability_step → Chiama `getAvailabilityStepSchema()` ✅  
+- [ ] availability_step → Chiama `getAvailabilityStepSchema()` ✅
+- [ ] availability_step → Chiama `getAvailabilityStepSchema()` ✅
 - [ ] personal_info_step → Chiama `getPersonalInfoStepSchema()` ✅
 - [ ] personal_info_step → Chiama `getPersonalInfoStepSchema()` ✅
-
 
 ### **Verifica No Loop**
 ### **Verifica No Loop**
@@ -185,10 +165,8 @@ $attachments = property_exists($model, 'attachments') ? $model::$attachments : [
 - [ ] Xdebug non rileva più loop infiniti ✅
 - [ ] Xdebug non rileva più loop infiniti ✅
 
-
 ## ⚠️ **Regole di Prevenzione**
 ## ⚠️ **Regole di Prevenzione**
-
 
 ### **Syntax Check Obbligatorio**
 ### **Syntax Check Obbligatorio**
@@ -201,7 +179,6 @@ $attachments = property_exists($model, 'attachments') ? $model::$attachments : [
 4. **SEMPRE** verificare property_exists prima di accedere a proprietà statiche
 4. **SEMPRE** verificare property_exists prima di accedere a proprietà statiche
 
-
 ### **Pattern Corretto**
 ### **Pattern Corretto**
 ```php
@@ -213,18 +190,15 @@ $methodName = 'getMethodName';
 static::{$methodName}();
 static::{$methodName}();
 
-
-// ✅ Property existence check  
-// ✅ Property existence check  
+// ✅ Property existence check
+// ✅ Property existence check
 $prop = property_exists($class, 'property') ? $class::$property : [];
 $prop = property_exists($class, 'property') ? $class::$property : [];
 ```
 ```
 
-
 ## 🔗 **Collegamenti**
 ## 🔗 **Collegamenti**
-
 
 ### **File Modificati**
 ### **File Modificati**
@@ -233,14 +207,12 @@ $prop = property_exists($class, 'property') ? $class::$property : [];
 - [DoctorResource.php](../../../Modules/<nome progetto>/app/Filament/Resources/DoctorResource.php) - Utilizzo step
 - [DoctorResource.php](../../../Modules/<nome progetto>/app/Filament/Resources/DoctorResource.php) - Utilizzo step
 
-
 ### **Documentazione Correlata**
 ### **Documentazione Correlata**
 - [Wizard Step Implementation](../../../Modules/<nome progetto>/docs/wizard-step-implementation.md)
 - [Wizard Step Implementation](../../../Modules/<nome progetto>/docs/wizard-step-implementation.md)
 - [DoctorResource.php](../../../Modules/<nome progetto>/app/Filament/Resources/DoctorResource.php) - Utilizzo step
 - [DoctorResource.php](../../../Modules/<nome progetto>/app/Filament/Resources/DoctorResource.php) - Utilizzo step
-
 
 ### **Documentazione Correlata**
 ### **Documentazione Correlata**
@@ -249,7 +221,6 @@ $prop = property_exists($class, 'property') ? $class::$property : [];
 - [DoctorResource.php](../../../Modules/SaluteOra/app/Filament/Resources/DoctorResource.php) - Utilizzo step
 - [DoctorResource.php](../../../Modules/SaluteOra/app/Filament/Resources/DoctorResource.php) - Utilizzo step
 
-
 ### **Documentazione Correlata**
 ### **Documentazione Correlata**
 - [Wizard Step Implementation](../../../Modules/SaluteOra/docs/wizard-step-implementation.md)
@@ -257,26 +228,22 @@ $prop = property_exists($class, 'property') ? $class::$property : [];
 - [Infinite Loop Prevention](../critical-fixes/infinite-loop-prevention.md)
 - [Infinite Loop Prevention](../critical-fixes/infinite-loop-prevention.md)
 
-
 ---
 ---
 
-
-**Priorità**: 🚨 **P0 - CRITICA**  
-**Priorità**: 🚨 **P0 - CRITICA**  
-**Creato**: Gennaio 2025  
-**Creato**: Gennaio 2025  
-**Risolto**: Gennaio 2025  
-**Risolto**: Gennaio 2025  
-**Impatto**: Blocco completo sistema registrazione dottori  
-**Impatto**: Blocco completo sistema registrazione dottori  
-**Tempo risoluzione**: < 10 minuti dalla diagnosi  
-**Tempo risoluzione**: < 10 minuti dalla diagnosi  
-
+**Priorità**: 🚨 **P0 - CRITICA**
+**Priorità**: 🚨 **P0 - CRITICA**
+**Creato**: Gennaio 2025
+**Creato**: Gennaio 2025
+**Risolto**: Gennaio 2025
+**Risolto**: Gennaio 2025
+**Impatto**: Blocco completo sistema registrazione dottori
+**Impatto**: Blocco completo sistema registrazione dottori
+**Tempo risoluzione**: < 10 minuti dalla diagnosi
+**Tempo risoluzione**: < 10 minuti dalla diagnosi
 
 ## 💡 **Lesson Learned**
 ## 💡 **Lesson Learned**
-
 
 Questo fix dimostra l'importanza di:
 Questo fix dimostra l'importanza di:
@@ -289,26 +256,25 @@ Questo fix dimostra l'importanza di:
 4. **Xdebug monitoring** per rilevazione loop infiniti
 4. **Xdebug monitoring** per rilevazione loop infiniti
 
-
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
-*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema SaluteOra ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.*

@@ -1,29 +1,3 @@
->>>>>>> c8b1c8bf (.)
->>>>>>> 9cf0dc90 (.)
->>>>>>> 75179b8 (.)
->>>>>>> f963d2c (.)
->>>>>>> 75179b85 (.)
->>>>>>> f963d2c0 (.)
->>>>>>> ee18dd92 (.)
->>>>>>> 66453ace (.)
->>>>>>> 5fd545e4 (.)
->>>>>>> 2a97406c (.)
->>>>>>> 4f042b88 (.)
->>>>>>> 36321fcb (.)
->>>>>>> 712617d3 (.)
->>>>>>> fdb24863 (rebase 210)
->>>>>>> 54220b28 (rebase 210)
->>>>>>> 9c45d9bd (rebase 210)
->>>>>>> eb62d6cf (rebase 210)
->>>>>>> 8c8937e7 (rebase 210)
->>>>>>> 36ac4fc1 (.)
->>>>>>> fd1fcc4c (.)
->>>>>>> 4f3927d7 (.)
->>>>>>> c8b1c8bf (.)
->>>>>>> f963d2c (.)
->>>>>>> 9cf0dc90 (.)
->>>>>>> 75179b85 (.)
->>>>>>> f963d2c0 (.)
 # Notify Module Documentation
 
 ## Overview
@@ -77,8 +51,7 @@ This document serves as the central index for the Notify module, providing guida
 - [Email Templates](./EMAIL_TEMPLATES.md)
 - [SMS Implementation](./SMS_IMPLEMENTATION.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
->>>>>>> c8b1c8bf (.)
->>>>>>> 9cf0dc90 (.)
+
 # Indice della Documentazione - Modulo Notify
 
 ## Panoramica
@@ -106,9 +79,6 @@ Questo documento serve come indice centrale per il modulo Notify, fornendo una g
 - [Modulo Xot](../../Xot/docs/README.md)
 - [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
-
-
-
 
 ## Categorie Principali
 
@@ -199,30 +169,6 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 ## Documentazione e Aggiornamenti
 - Documentare qualsiasi implementazione personalizzata o nuovi canali di notifica nella cartella di documentazione pertinente
 - Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Notify
->>>>>>> 75179b8 (.)
->>>>>>> f963d2c (.)
->>>>>>> 75179b85 (.)
->>>>>>> f963d2c0 (.)
->>>>>>> ee18dd92 (.)
->>>>>>> 66453ace (.)
->>>>>>> 5fd545e4 (.)
->>>>>>> 2a97406c (.)
->>>>>>> 4f042b88 (.)
->>>>>>> 36321fcb (.)
->>>>>>> 712617d3 (.)
->>>>>>> fdb24863 (rebase 210)
->>>>>>> 54220b28 (rebase 210)
->>>>>>> 9c45d9bd (rebase 210)
->>>>>>> eb62d6cf (rebase 210)
->>>>>>> 8c8937e7 (rebase 210)
->>>>>>> 36ac4fc1 (.)
->>>>>>> fd1fcc4c (.)
->>>>>>> 4f3927d7 (.)
->>>>>>> c8b1c8bf (.)
->>>>>>> f963d2c (.)
->>>>>>> 9cf0dc90 (.)
->>>>>>> 75179b85 (.)
->>>>>>> f963d2c0 (.)
 
 ## Sottocartelle
 
@@ -233,8 +179,6 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 ### Notifications
 - [Index](./notifications/INDEX.md) - Indice della documentazione sulle notifiche
 
->>>>>>> c8b1c8bf (.)
->>>>>>> 9cf0dc90 (.)
 ## Collegamenti alla Documentazione Correlata
 - [Panoramica Architettura](./ARCHITECTURE.md)
 - [Implementazione Canali Notifica](./NOTIFICATION_CHANNELS_IMPLEMENTATION.md)
@@ -245,30 +189,6 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nella co
 ## Note sulla Manutenzione
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
 
->>>>>>> 75179b8 (.)
->>>>>>> f963d2c (.)
->>>>>>> 75179b85 (.)
->>>>>>> f963d2c0 (.)
->>>>>>> ee18dd92 (.)
->>>>>>> 66453ace (.)
->>>>>>> 5fd545e4 (.)
->>>>>>> 2a97406c (.)
->>>>>>> 4f042b88 (.)
->>>>>>> 36321fcb (.)
->>>>>>> 712617d3 (.)
->>>>>>> fdb24863 (rebase 210)
->>>>>>> 54220b28 (rebase 210)
->>>>>>> 9c45d9bd (rebase 210)
->>>>>>> eb62d6cf (rebase 210)
->>>>>>> 8c8937e7 (rebase 210)
->>>>>>> 36ac4fc1 (.)
->>>>>>> fd1fcc4c (.)
->>>>>>> 4f3927d7 (.)
->>>>>>> c8b1c8bf (.)
->>>>>>> f963d2c (.)
->>>>>>> 9cf0dc90 (.)
->>>>>>> 75179b85 (.)
->>>>>>> f963d2c0 (.)
 ## Note sulla Manutenzione
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
 
@@ -279,10 +199,9 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> c8b1c8bf (.)
->>>>>>> 9cf0dc90 (.)
+
 ## Note sulla Manutenzione
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
 
@@ -310,10 +229,10 @@ Ultimo aggiornamento: 14 Maggio 2025
 ## Risoluzione conflitti e standard
 - Il file `lang/it/notify_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10.
 - Il file `NOTIFICATION_CHANNELS_IMPLEMENTATION.md` è stato risolto manualmente mantenendo la versione più aggiornata e coerente con le best practice architetturali del modulo Notify.
->>>>>>> 4689a827 (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
@@ -328,112 +247,94 @@ Ultimo aggiornamento: 14 Maggio 2025
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
->>>>>>> 7325acf3 (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
->>>>>>> f2e64178 (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 *Ultimo aggiornamento: Gennaio 2025*
->>>>>>> 75179b8 (.)
->>>>>>> f963d2c (.)
->>>>>>> 75179b85 (.)
->>>>>>> f963d2c0 (.)
->>>>>>> c4bdacbf (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> ee18dd92 (.)
->>>>>>> dceba960 (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 66453ace (.)
->>>>>>> bd804d67 (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 5fd545e4 (.)
->>>>>>> 229a065a (rebase 210)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 2a97406c (.)
->>>>>>> 9f8e680a (rebase 210)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 4f042b88 (.)
->>>>>>> 5aedc39c (rebase 210)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 36321fcb (.)
->>>>>>> 22baa66d (rebase 210)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 712617d3 (.)
->>>>>>> 2effe245 (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> fdb24863 (rebase 210)
->>>>>>> e790eb33 (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 54220b28 (rebase 210)
->>>>>>> 3ee54c5d (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 9c45d9bd (rebase 210)
->>>>>>> d09cb759 (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Vedi anche: [../../../../project_docs/README.md](../../../../project_docs/README.md)
->>>>>>> d284d65 (.)
+
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> eb62d6cf (rebase 210)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 8c8937e7 (rebase 210)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 36ac4fc1 (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> fd1fcc4c (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 4f3927d7 (.)
->>>>>>> 75179b8 (.)
->>>>>>> c8b1c8bf (.)
->>>>>>> 9cf0dc90 (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> 75179b85 (.)
+
 - Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
->>>>>>> f963d2c0 (.)

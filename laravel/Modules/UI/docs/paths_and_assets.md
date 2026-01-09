@@ -8,7 +8,7 @@
 >
 > **Soluzione:** Seguire SEMPRE la regola documentata qui sotto e aggiornata anche in README.md e nella root docs/links.md.
 
-# Gestione dei Percorsi e degli Asset 
+# Gestione dei Percorsi e degli Asset
 
 ## Collegamenti correlati
 - [README modulo UI](/laravel/Modules/UI/docs/README.md)
@@ -60,7 +60,7 @@ Quando si fa riferimento agli asset nei componenti Blade, utilizzare sempre l'he
 Per garantire una buona esperienza utente, implementare sempre un fallback per le immagini che potrebbero non essere disponibili:
 
 ```php
-<img 
+<img
     src="{{ asset('images/avatars/default-' . $avatarNumber . '.svg') }}"
     alt="{{ $user->name ?? 'User' }}"
     onerror="this.src='{{ asset('images/default-avatar.svg') }}'"

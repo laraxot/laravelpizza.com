@@ -10,7 +10,7 @@ Correggere warning PHPMD e PHP Insights nel modulo User, mantenendo PHPStan a 0 
 2. ✅ **RolesRelationManager.php**: Rimossa `$xotData` non utilizzata
 
 ### Naming Conventions (CamelCase)
-1. ✅ **CreateProfile.php**: 
+1. ✅ **CreateProfile.php**:
    - `$user_data` → `$userData`
    - `$user_class` → `$userClass`
 2. ✅ **ListProfiles.php**: Rimossa `$user_class` non utilizzata

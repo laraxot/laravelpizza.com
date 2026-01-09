@@ -29,7 +29,7 @@ class LogoutPage
         auth()->logout();
         session()->invalidate();
         session()->regenerateToken();
-        
+
         return redirect()->route('home');
     }
 }
@@ -46,9 +46,9 @@ class LogoutPage
                     {{ __('Verrai reindirizzato alla home page tra pochi secondi...') }}
                 </p>
             </div>
-            
+
             <div class="mt-6">
-                <a href="{{ route('home') }}" 
+                <a href="{{ route('home') }}"
                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     {{ __('Torna alla Home') }}
                 </a>
@@ -102,7 +102,7 @@ class LogoutPage
             auth()->logout();
             session()->invalidate();
             session()->regenerateToken();
-            
+
             return redirect()->route('home');
         } catch (\Exception $e) {
             $this->processing = false;
@@ -123,9 +123,9 @@ class LogoutPage
                     {{ __('Verrai reindirizzato alla home page tra pochi secondi...') }}
                 </p>
             </div>
-            
+
             <div class="mt-6">
-                <a href="{{ route('home') }}" 
+                <a href="{{ route('home') }}"
                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     {{ __('Torna alla Home') }}
                 </a>
@@ -141,7 +141,7 @@ class LogoutPage
 </x-layouts.app>
 
 ### Differenze Chiave
-1. **Definizione della Classe**: 
+1. **Definizione della Classe**:
    - ❌ Non usare `<?php` direttamente
    - ✅ Definire una classe con nome descrittivo
 
@@ -184,4 +184,4 @@ class LogoutPage
 ### Link Correlati
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
 - [Best Practices Filament](../filament_best_practices.md)
-- [Routing Best Practices](../ROUTING_BEST_PRACTICES.md) 
+- [Routing Best Practices](../ROUTING_BEST_PRACTICES.md)

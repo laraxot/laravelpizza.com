@@ -28,7 +28,7 @@
 **Concetto**: Visualizzazione dati con grafici a barre e linee di trend
 **Animazioni**:
 - Barre che crescono (`growBar`)
-- Linea che si disegna (`drawLine`) 
+- Linea che si disegna (`drawLine`)
 - Punti che pulsano (`pulse`)
 
 ### CMS Module
@@ -64,12 +64,12 @@
 ### Struttura File SVG
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     fill="none" 
-     viewBox="0 0 24 24" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
      stroke="currentColor"
      stroke-width="1.5"
-     aria-hidden="true" 
+     aria-hidden="true"
      role="img">
     <style>
         /* Animazioni CSS */

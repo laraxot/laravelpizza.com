@@ -382,5 +382,5 @@ The strategy is designed to be flexible and responsive to market conditions and 
 
 ---
 
-**Document Version**: 1.0  
+**Document Version**: 1.0
 **Last Updated**: November 28, 2025

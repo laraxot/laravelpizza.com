@@ -32,7 +32,7 @@ The EditUserWidget development and localization has been successfully completed 
 class EditUserWidget extends XotBaseWidget implements HasForms
 {
     use InteractsWithForms;
-    
+
     protected static string $view = 'user::filament.widgets.edit-user';
     public function getFormSchema(): array
     {

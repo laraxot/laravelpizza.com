@@ -27,11 +27,11 @@ Questi richiedono il container Laravel completamente configurato durante l'istan
 it('exposes casts as array', function () {
     $reflection = new \ReflectionClass(TestBaseModel::class);
     expect($reflection->hasMethod('casts'))->toBeTrue();
-    
+
     $instance = $reflection->newInstanceWithoutConstructor();
     $method = $reflection->getMethod('casts');
     $method->setAccessible(true);
-    
+
     expect($method->invoke($instance))->toBeArray();
 });
 ```
@@ -91,7 +91,7 @@ FAILED  Modules\<nome modulo>\tests\Unit\BaseModelTest
 ```
 PASS  Modules\<nome modulo>\tests\Unit\BaseModelTest
 ✓ it has correct trait usage
-✓ it supports media methods presence  
+✓ it supports media methods presence
 ✓ it implements HasMedia interface
 ✓ it exposes casts as array
 
@@ -122,7 +122,7 @@ Tutti i moduli che utilizzano `BaseModel` o pattern simili:
 
 ### Compatibility
 - Laravel 12+ ✅
-- PHPUnit 10+ ✅  
+- PHPUnit 10+ ✅
 - Pest 3+ ✅
 - Spatie Media Library ✅
 - Laraxot Traits ✅

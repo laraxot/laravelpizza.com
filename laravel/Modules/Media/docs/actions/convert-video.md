@@ -58,4 +58,4 @@ $action = new ConvertVideoByConvertDataAction();
 $convertedPath = $action->execute($data);
 ```
 
-[Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
+[Torna alla documentazione Media](/docs/modules/module_media.md#actions)

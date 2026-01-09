@@ -5,12 +5,12 @@
 I seguenti warning PSR-4 sono stati segnalati:
 
 ```
-Class Modules\Notify\App\Jobs\SendScheduledPushNotification located in 
-./Modules/Notify/app/Jobs/SendScheduledPushNotification.php does not comply 
-with psr-4 autoloading standard (rule: Modules\Notify\ => ./Modules/Notify/app). 
+Class Modules\Notify\App\Jobs\SendScheduledPushNotification located in
+./Modules/Notify/app/Jobs/SendScheduledPushNotification.php does not comply
+with psr-4 autoloading standard (rule: Modules\Notify\ => ./Modules/Notify/app).
 
-Class Modules\Notify\App\Services\PushNotificationService located in 
-./Modules/Notify/app/Services/PushNotificationService.php does not comply 
+Class Modules\Notify\App\Services\PushNotificationService located in
+./Modules/Notify/app/Services/PushNotificationService.php does not comply
 with psr-4 autoloading standard (rule: Modules\Notify\ => ./Modules/Notify/app).
 ```
 
@@ -89,7 +89,6 @@ php artisan optimize:clear
 
 ---
 
-**Verifica**: Gennaio 2025  
-**Status**: ✅ File conformi PSR-4  
+**Verifica**: Gennaio 2025
+**Status**: ✅ File conformi PSR-4
 **Azione**: Nessuna (già corretti)
-

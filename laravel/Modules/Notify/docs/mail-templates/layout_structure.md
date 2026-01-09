@@ -164,4 +164,4 @@ class WelcomeMail extends TemplateMailable
     ",
     "text_template": "Order #{{ order_id }} confirmed. Total: {{ total }}"
 }
-``` 
+```

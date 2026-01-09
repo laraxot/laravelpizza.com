@@ -170,7 +170,7 @@ Il sistema di contenuti JSON utilizza percorsi specifici per memorizzare e caric
 
 **Problema**: `<x-section slug="header"/>` non mostrava la navigazione corretta
 
-**Root Cause**: 
+**Root Cause**:
 1. Section component cerca `pub_theme::components.sections.header` (file-based)
 2. Section model cerca anche `config/local/laravelpizza/database/content/sections/header.json`
 3. Entrambi devono esistere e funzionare insieme
@@ -186,7 +186,7 @@ Il sistema di contenuti JSON utilizza percorsi specifici per memorizzare e caric
 
 **Root Cause**: SVG icona non corretta nel componente
 
-**Soluzione**: 
+**Soluzione**:
 - Aggiornata l'icona SVG nel componente hero
 - Usata pizza slice con topping dots
 - Stile coerente con laravelpizza.com
@@ -247,6 +247,6 @@ $blocks = SectionModel::getBlocksBySlug($this->slug); // Carica blocchi da JSON
 
 ---
 
-**Ultimo aggiornamento**: 2026-01-08  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2026-01-08
+**Versione**: 1.0.0
 **Status**: ✅ Completato

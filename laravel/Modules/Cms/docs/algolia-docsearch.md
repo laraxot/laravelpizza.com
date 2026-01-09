@@ -76,4 +76,3 @@ For more details, visit the [official Algolia DocSearch documentation.](https://
 * [algolia-docsearch.md](laravel/Modules/Xot/project_docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/Modules/UI/project_docs/algolia-docsearch.md)
 * [algolia-docsearch.md](laravel/Modules/Cms/project_docs/algolia-docsearch.md)
-

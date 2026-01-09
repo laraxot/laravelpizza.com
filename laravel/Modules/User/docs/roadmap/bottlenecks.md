@@ -32,7 +32,7 @@
            $codes = collect(range(1, 8))->map(function() {
                return Str::random(10);
            })->all();
-           
+
            $this->user->recovery_codes = encrypt($codes);
            $this->user->save();
            return $codes;

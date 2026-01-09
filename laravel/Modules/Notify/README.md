@@ -122,7 +122,7 @@ class EmailTemplate
                 'variables' => ['user_name', 'activation_link'],
             ],
         ];
-        
+
         return $templates[$type] ?? [];
     }
 }
@@ -144,14 +144,14 @@ class RealTimeNotificationService
             'data' => $data['data'] ?? [],
             'channels' => $data['channels'] ?? ['in_app'],
         ]);
-        
+
         // Broadcast via WebSocket
         broadcast(new NotificationSent($notification));
-        
+
         // Invia ai canali configurati
         $this->sendToChannels($notification);
     }
-    
+
     public function sendToChannels(Notification $notification): void
     {
         foreach ($notification->channels as $channel) {
@@ -269,13 +269,13 @@ class ChannelManager
         'voice' => VoiceChannel::class,
         'in_app' => InAppChannel::class,
     ];
-    
+
     public function getChannel(string $type): ChannelInterface
     {
         $channelClass = $this->channels[$type] ?? InAppChannel::class;
         return app($channelClass);
     }
-    
+
     public function sendToAllChannels(Notification $notification): void
     {
         foreach ($notification->channels as $channelType) {
@@ -302,12 +302,12 @@ class NotificationAnalyticsService
             'recent_activity' => $this->getRecentActivity(),
         ];
     }
-    
+
     public function getChannelStats(): array
     {
         $stats = [];
         $channels = ['email', 'sms', 'push', 'slack', 'whatsapp'];
-        
+
         foreach ($channels as $channel) {
             $stats[$channel] = [
                 'sent' => Notification::whereJsonContains('channels', $channel)
@@ -316,7 +316,7 @@ class NotificationAnalyticsService
                     ->where('failed_at', '!=', null)->count(),
             ];
         }
-        
+
         return $stats;
     }
 }
@@ -330,29 +330,29 @@ class TemplateManager
     public function renderTemplate(string $templateName, array $variables): string
     {
         $template = $this->getTemplate($templateName);
-        
+
         // Sostituisci variabili
         $html = $template['html'];
         foreach ($variables as $key => $value) {
             $html = str_replace("{{" . $key . "}}", $value, $html);
         }
-        
+
         return $html;
     }
-    
+
     public function validateTemplate(string $templateName): array
     {
         $template = $this->getTemplate($templateName);
         $errors = [];
-        
+
         // Verifica variabili richieste
         $requiredVariables = $template['variables'] ?? [];
         $missingVariables = $this->findMissingVariables($template['html'], $requiredVariables);
-        
+
         if (!empty($missingVariables)) {
             $errors[] = "Variabili mancanti: " . implode(', ', $missingVariables);
         }
-        
+
         return $errors;
     }
 }

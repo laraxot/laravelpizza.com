@@ -1,7 +1,7 @@
 # Migrations - Documentazione Consolidata DRY + KISS
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTA la documentazione migrazioni del progetto
-> 
+>
 > **🔗 Riferimenti**: [database-guidelines.md](database-guidelines.md) | [best-practices.md](best-practices.md)
 
 ## 🚨 STOP DUPLICAZIONE!
@@ -40,7 +40,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 return new class() extends XotBaseMigration {
     protected string $table_name = 'table_name';
-    
+
     public function up(): void
     {
         // Implementazione...
@@ -136,17 +136,17 @@ return new class() extends XotBaseMigration {
                 $table->string('phone')->nullable();
                 $table->timestamps();
             });
-            
+
             $this->tableComment($this->table_name, 'Tabella utenti del sistema');
             return;
         }
-        
+
         // 2. Se la tabella esiste, aggiungi solo la nuova colonna
         if (!$this->hasColumn($this->table_name, 'phone')) {
             $this->tableUpdate(function (Blueprint $table): void {
                 $table->string('phone')->nullable()->after('email');
             });
-            
+
             $this->columnComment($this->table_name, 'phone', 'Numero di telefono utente');
         }
     }
@@ -174,22 +174,22 @@ return new class() extends XotBaseMigration {
 
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Chiavi esterne con foreignIdFor
             $table->foreignIdFor(\Modules\ModuleName\Models\ModelA::class)
                 ->comment('ID del primo modello');
             $table->foreignIdFor(\Modules\ModuleName\Models\ModelB::class)
                 ->comment('ID del secondo modello');
-            
+
             // Attributi aggiuntivi della relazione
             $table->json('metadata')->nullable()
                 ->comment('Metadati aggiuntivi della relazione');
             $table->boolean('is_primary')->default(false)
                 ->comment('Relazione principale');
-            
+
             // Indice composito per unicità
             $table->unique(['model_a_id', 'model_b_id']);
-            
+
             $table->timestamps();
         });
 
@@ -223,7 +223,7 @@ public function up(): void
         });
         return;
     }
-    
+
     // 2. Aggiunta colonne se tabella esiste
     if (!$this->hasColumn($this->table_name, 'new_column')) {
         $this->tableUpdate(function (Blueprint $table): void {
@@ -467,10 +467,10 @@ rm Modules/SaluteMo/project_docs/database/migrations.md
 
 ---
 
-**🎯 Obiettivo**: Da 26+ file duplicati a 1 file centralizzato  
-**📈 Beneficio**: 96% riduzione duplicazioni, manutenzione semplificata  
+**🎯 Obiettivo**: Da 26+ file duplicati a 1 file centralizzato
+**📈 Beneficio**: 96% riduzione duplicazioni, manutenzione semplificata
 **🔗 Vedi anche**: [database-guidelines.md](database-guidelines.md) | [best-practices.md](best-practices.md)
 
-**Aggiornato**: 2025-08-07  
-**Categoria**: database  
+**Aggiornato**: 2025-08-07
+**Categoria**: database
 **Priorità**: CRITICA

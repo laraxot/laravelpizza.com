@@ -197,6 +197,6 @@ In sintesi: il progetto è **un modulo Laravel dimostrativo + un tema frontend c
 
 ---
 
-**Versione Documento**: 1.1  
-**Ultimo Aggiornamento**: 2025-11-28  
+**Versione Documento**: 1.1
+**Ultimo Aggiornamento**: 2025-11-28
 **Autore**: AI Assistant (Auto, aggiornato)

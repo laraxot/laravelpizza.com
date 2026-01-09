@@ -116,4 +116,4 @@ Il blocco può essere utilizzato in vari contesti:
 - [Documentazione Filament Forms](../filament-forms.md)
 - [UI Components](../ui/components.md)
 - [Marketing Guidelines](../marketing/email-guidelines.md)
-- [GDPR Compliance](../legal/gdpr.md) 
+- [GDPR Compliance](../legal/gdpr.md)

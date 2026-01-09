@@ -85,7 +85,7 @@ StudioCardSelector::make('studio')
 
 #### Features Opzionali
 - `showDistance()`: Badge distanza con icona mappa
-- `showSpecializations()`: Tag specializzazioni mediche  
+- `showSpecializations()`: Tag specializzazioni mediche
 - `showPhone()`: Numero telefono con icona
 
 [**📖 Documentazione Completa**](./studio-card-selector-implementation.md)
@@ -155,7 +155,7 @@ Componente semplificato per la selezione di uno studio odontoiatrico tramite pul
 
 #### Utilizzo
 ```blade
-<x-ui::ui.studio-selector 
+<x-ui::ui.studio-selector
     :studios="$studios"
     :selected-studio="$selectedStudioId"
     target-field="selected_studio"
@@ -176,7 +176,7 @@ Componente avanzato per la visualizzazione dettagliata di uno studio (per liste,
 
 #### Utilizzo
 ```blade
-<x-ui::ui.studio-card 
+<x-ui::ui.studio-card
     :studio="$studio"
     :show-distance="true"
     :show-rating="true"
@@ -197,7 +197,7 @@ Componente avanzato per la visualizzazione dettagliata di uno studio (per liste,
 
 ### Bandiere (Flags)
 
-I componenti SVG per le bandiere sono registrati automaticamente e possono essere utilizzati con il prefisso `ui-flags`. 
+I componenti SVG per le bandiere sono registrati automaticamente e possono essere utilizzati con il prefisso `ui-flags`.
 
 #### Utilizzo
 ```blade
@@ -245,7 +245,7 @@ I componenti SVG per le bandiere sono registrati automaticamente e possono esser
 ## Collegamenti Correlati
 - [Documentazione SVG](./SVG.md)
 - [Best Practices UI](./UI_BEST_PRACTICES.md)
-- [Guida Componenti](./COMPONENTS_GUIDE.md) 
+- [Guida Componenti](./COMPONENTS_GUIDE.md)
 
 # Componenti UI - Documentazione Generale
 
@@ -380,4 +380,4 @@ Tutti i componenti UI condivisi devono essere posizionati in `Modules/UI/resourc
 - [RadioCollection Examples](./components/radio-collection-usage-examples.md)
 - [UI Components Architecture](../README.md)
 
-*Documentazione aggiornata: Dicembre 2024* 
+*Documentazione aggiornata: Dicembre 2024*

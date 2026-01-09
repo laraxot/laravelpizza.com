@@ -1,4 +1,3 @@
-
 # Standard di Codice per il progetto
 
 > **Nota**: Questo documento è correlato a [Convenzioni](../../../project_docs/conventions.md) e [Naming Conventions](../../../project_docs/naming-conventions.md). Per una panoramica completa, consulta tutti i documenti correlati.
@@ -19,7 +18,7 @@ Oltre ai principi generali documentati nel modulo Xot, in il progetto aderiamo a
 
 il progetto utilizza diversi moduli personalizzati che richiedono specifiche implementazioni:
 
-1. **Modulo Patient**: 
+1. **Modulo Patient**:
    - Implementare sempre la validazione ISEE
    - Utilizzare lo stato di gravidanza come flag per i trattamenti disponibili
 
@@ -95,7 +94,7 @@ Oltre ai principi generali documentati nel modulo Xot, in il progetto aderiamo a
 
 il progetto utilizza diversi moduli personalizzati che richiedono specifiche implementazioni:
 
-1. **Modulo Patient**: 
+1. **Modulo Patient**:
    - Implementare sempre la validazione ISEE
    - Utilizzare lo stato di gravidanza come flag per i trattamenti disponibili
 
@@ -228,7 +227,7 @@ enum GenderType: string
     case FEMALE = 'F';
     case MALE = 'M';
     case OTHER = 'O';
-    
+
     public function label(): string
     {
         return match($this) {
@@ -252,21 +251,21 @@ public function setGender(GenderType $gender): void
 final class TaxCode
 {
     private string $value;
-    
+
     public function __construct(string $taxCode)
     {
         if (!$this->isValid($taxCode)) {
             throw new InvalidArgumentException('Codice fiscale non valido');
         }
-        
+
         $this->value = $taxCode;
     }
-    
+
     public function value(): string
     {
         return $this->value;
     }
-    
+
     private function isValid(string $taxCode): bool
     {
         // Validazione del codice fiscale
@@ -298,13 +297,13 @@ public function findByTaxCode(string $taxCode): Patient
     if (!TaxCode::isValid($taxCode)) {
         throw new InvalidTaxCodeException($taxCode);
     }
-    
+
     $patient = $this->repository->findByTaxCode($taxCode);
-    
+
     if ($patient === null) {
         throw new PatientNotFoundException("Nessun paziente trovato con codice fiscale: {$taxCode}");
     }
-    
+
     return $patient;
 }
 ```
@@ -343,7 +342,6 @@ class StorePatientRequest extends FormRequest
     }
 }
 ```
-
 
 ## Collegamenti Correlati
 
@@ -418,7 +416,7 @@ class PatientTest extends TestCase
     {
         $birthDate = new DateTimeImmutable('1990-01-01');
         $patient = new Patient(['birth_date' => $birthDate]);
-        
+
         $this->assertEquals(33, $patient->getAge());
     }
 }
@@ -448,7 +446,7 @@ class PatientRegistrationTest extends TestCase
             'birth_date' => '1990-01-01',
             'gender' => 'M',
         ]);
-        
+
         $response->assertCreated();
         $this->assertDatabaseHas('patients', [
             'first_name' => 'Mario',
@@ -601,7 +599,7 @@ git commit -m "fix: correzione calcolo età paziente"
 
 - Implementare logging
 - Monitorare performance
-- Alert su errori 
+- Alert su errori
 
 ## Collegamenti tra versioni di coding-standards.md
 * [coding-standards.md](../../../Xot/project_docs/standards/coding-standards.md)
@@ -613,4 +611,3 @@ git commit -m "fix: correzione calcolo età paziente"
 - [Naming Conventions](../../../project_docs/naming-conventions.md)
 - [Documentazione Xot](../CODE-STANDARDS.md)
 - [Collegamenti Documentazione](../../../../project_docs/collegamenti-documentazione.md)
-

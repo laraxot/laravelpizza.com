@@ -89,4 +89,4 @@ class SecondCompletedOrderReactor implements Reactor {
 ## 14. Alternative
 - CRUD tradizionale: più semplice, meno auditabile.
 - Event sourcing: più complesso, ma audit, rollback, proiezioni flessibili.
-- Approccio minimalista: per demo o PoC, una struttura semplice con pochi comandi console e proiezioni può essere sufficiente. 
+- Approccio minimalista: per demo o PoC, una struttura semplice con pochi comandi console e proiezioni può essere sufficiente.

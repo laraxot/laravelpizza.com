@@ -43,27 +43,27 @@ La classe `SpatieEmail` utilizza la classe `Illuminate\Mail\Mailables\Attachment
 public function addAttachments(array $attachments): self
 {
     $attachmentObjects = [];
-    
+
     foreach ($attachments as $item) {
         if (!isset($item['path']) || !file_exists($item['path'])) {
             continue;
         }
-        
+
         $attachment = Attachment::fromPath($item['path']);
-        
+
         if (isset($item['as'])) {
             $attachment = $attachment->as($item['as']);
         }
-        
+
         if (isset($item['mime'])) {
             $attachment = $attachment->withMime($item['mime']);
         }
-        
+
         $attachmentObjects[] = $attachment;
     }
-    
+
     $this->customAttachments = $attachmentObjects;
-    
+
     return $this;
 }
 

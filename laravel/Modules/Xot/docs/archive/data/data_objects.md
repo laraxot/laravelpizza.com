@@ -67,4 +67,4 @@ Questa correzione garantisce che quando il metodo viene ereditato da classi figl
 
 - **PHPDoc incompleto per le relazioni Eloquent**: Aggiungere tutti i tipi di template nella documentazione PHPDoc.
 - **Accesso a proprietà inesistenti**: Verificare l'esistenza delle proprietà prima dell'accesso.
-- **Tipo di ritorno `class-string`**: Usare asserzioni o casting appropriati quando si restituiscono stringhe che rappresentano classi. 
+- **Tipo di ritorno `class-string`**: Usare asserzioni o casting appropriati quando si restituiscono stringhe che rappresentano classi.

@@ -17,7 +17,7 @@ class TranslationFile extends BaseModel
 
     protected $fillable = [
         'id',
-        'name', 
+        'name',
         'path',
     ];
 
@@ -46,7 +46,7 @@ public function execute(): array
     $lang = app()->getLocale();
     $path = base_path('Modules/*/lang/'.$lang.'/*.php');
     $files = glob($path);
-    
+
     $files = Arr::map($files, function($file) {
         $module_low = Str::of($file)->between('Modules/','/lang/')->lower()->toString();
         return [
@@ -54,7 +54,7 @@ public function execute(): array
             'path' => $file,
         ];
     });
-    
+
     return $files;
 }
 ```

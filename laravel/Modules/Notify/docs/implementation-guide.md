@@ -232,4 +232,4 @@ class TemplateControllerTest extends TestCase
 - Implementare caching appropriato
 - Testare su diversi client email
 - Monitorare le performance
-- Documentare le variabili disponibili 
+- Documentare le variabili disponibili

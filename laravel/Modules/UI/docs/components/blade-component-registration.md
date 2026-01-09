@@ -63,7 +63,7 @@ Blade::component('profile.dropdown', ProfileDropdown::class);
 
 ## Automatic Blade Component Registration
 
-Nei moduli che estendono `XotBaseServiceProvider` (incluso il modulo UI), **non è necessario** registrare manualmente i componenti Blade con `Blade::component()` o `Blade::componentNamespace()`.  
+Nei moduli che estendono `XotBaseServiceProvider` (incluso il modulo UI), **non è necessario** registrare manualmente i componenti Blade con `Blade::component()` o `Blade::componentNamespace()`.
 Il provider base gestisce automaticamente la registrazione di tutti i componenti presenti in `Modules/UI/View/Components`, esponendoli con il prefisso `ui` in formato dash-case.
 
 ### Usage

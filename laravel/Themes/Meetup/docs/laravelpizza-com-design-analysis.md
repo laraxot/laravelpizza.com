@@ -134,4 +134,3 @@ Il sito originale usa dark theme, ma per un sistema di ordinazione pizze potrebb
 3. Adattare componenti esistenti
 4. Testare responsive design
 5. Validare accessibilità
-

@@ -43,4 +43,4 @@
 ## 10. Zen
 - "Fai una cosa sola e falla bene" (Single Responsibility Principle).
 - "Ogni cambiamento è una storia" (event sourcing come narrazione).
-- "Il dominio non conosce la persistenza" (DDD puro). 
+- "Il dominio non conosce la persistenza" (DDD puro).

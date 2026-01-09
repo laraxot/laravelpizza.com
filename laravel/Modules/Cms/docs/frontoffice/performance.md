@@ -83,13 +83,13 @@ class CacheResponse
     public function handle(Request $request, Closure $next)
     {
         $response = $next($request);
-        
+
         if ($request->isMethod('GET')) {
             $response->setPublic();
             $response->setMaxAge(3600);
             $response->setSharedMaxAge(3600);
         }
-        
+
         return $response;
     }
 }
@@ -152,7 +152,7 @@ return [
 3. **Problemi di Performance**
    - Analizzare le metriche
    - Identificare i colli di bottiglia
-   - Implementare soluzioni 
+   - Implementare soluzioni
 
 ## Collegamenti tra versioni di performance.md
 * [performance.md](laravel/vendor/spatie/laravel-data/docs/advanced-usage/performance.md)
@@ -163,4 +163,3 @@ return [
 * [performance.md](laravel/Modules/Lang/docs/packages/performance.md)
 * [performance.md](laravel/Modules/Job/docs/packages/performance.md)
 * [performance.md](laravel/Modules/Cms/docs/frontoffice/performance.md)
-

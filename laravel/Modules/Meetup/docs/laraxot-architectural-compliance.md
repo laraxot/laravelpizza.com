@@ -8,7 +8,7 @@
 ### 1. MeetupServiceProvider
 - **Prima**: Estendeva `Illuminate\Support\ServiceProvider`
 - **Dopo**: Estende `Modules\Xot\Providers\XotBaseServiceProvider`
-- **Benefici**: 
+- **Benefici**:
   - Codice DRY, funzionalità automatiche
   - Coerenza con architettura Laraxot
   - Configurazione standardizzata
@@ -16,7 +16,7 @@
 ### 2. EventResource
 - **Rimosse**: Proprietà vietate in XotBaseResource
   - `$navigationIcon`
-  - `$navigationLabel` 
+  - `$navigationLabel`
   - `$modelLabel`
   - `$pluralModelLabel`
 - **Gestione**: Automatica tramite sistema traduzioni XotBase
@@ -24,7 +24,7 @@
 ### 3. Pagine Resource (CreateEvent, EditEvent, ListEvents)
 - **Prima**: Estendevano classi Filament dirette
   - `CreateRecord`
-  - `EditRecord` 
+  - `EditRecord`
   - `ListRecords`
 - **Dopo**: Estendono classi XotBase
   - `XotBaseCreateRecord`

@@ -1,4 +1,4 @@
-# Pattern di Estensione per Componenti Filament 
+# Pattern di Estensione per Componenti Filament
 
 Questo documento definisce il pattern di estensione standardizzato per i componenti Filament nel sistema , con particolare attenzione al principio di non estendere mai direttamente le classi Filament.
 Questo documento definisce il pattern di estensione standardizzato per i componenti Filament nel sistema SaluteOra, con particolare attenzione al principio di non estendere mai direttamente le classi Filament.
@@ -64,7 +64,7 @@ use Filament\Forms\Concerns\InteractsWithForms;
 class SendSmsPage extends XotBasePage implements HasForms
 {
     use InteractsWithForms;
-    
+
     // Implementazione...
 }
 ```
@@ -83,7 +83,7 @@ use Filament\Forms\Concerns\InteractsWithForms;
 class SendSmsPage extends Page implements HasForms // ❌ ERRORE
 {
     use InteractsWithForms;
-    
+
     // Implementazione...
 }
 ```

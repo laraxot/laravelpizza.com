@@ -35,4 +35,4 @@ Il comando `GenerateModelsFromSchemaCommand` genera modelli Laravel a partire da
 - Aggiunto supporto per tipi di dati aggiuntivi
 - Ottimizzata la generazione delle relazioni
 - Aggiunta validazione dello schema JSON
-- Standardizzazione dei messaggi in italiano 
+- Standardizzazione dei messaggi in italiano

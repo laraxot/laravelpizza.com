@@ -26,7 +26,7 @@ class SmsData extends Data
     public function getAction(): SendSmsActionInterface
     {
         $driver = Config::get('sms.default', 'smsfactor');
-        
+
         return match ($driver) {
             'smsfactor' => app(SendSmsFactorSMSAction::class),
             'twilio' => app(SendTwilioSMSAction::class),
@@ -102,7 +102,7 @@ class SmsDriverService
     public function getAction(string $driver = null): SendSmsActionInterface
     {
         $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-        
+
         return match ($driver) {
             'smsfactor' => app(SendSmsFactorSMSAction::class),
             'twilio' => app(SendTwilioSMSAction::class),
@@ -120,4 +120,4 @@ Questa soluzione:
 - Mantiene la separazione delle responsabilità
 - Centralizza la logica di selezione
 - È più facile da testare e mantenere
-- Non viola i principi SOLID 
+- Non viola i principi SOLID

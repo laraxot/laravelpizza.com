@@ -138,4 +138,4 @@ Il design responsive è fondamentale per il successo di un sito web moderno, con
 - [Componenti Responsive](../components/responsive.md)
 - [Performance Guidelines](../performance/guidelines.md)
 
-[Fonte: deborasilvestri.it](https://www.deborasilvestri.it/creare-un-sito-web/struttura-di-un-sito-web/) 
+[Fonte: deborasilvestri.it](https://www.deborasilvestri.it/creare-un-sito-web/struttura-di-un-sito-web/)

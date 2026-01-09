@@ -118,7 +118,7 @@ Questo approccio utilizza Volt all'interno di una pagina Folio per gestire il lo
             session()->invalidate();
             session()->regenerateToken();
         }
-        
+
         // Reindirizza alla home page localizzata
         $this->redirect('/' . app()->getLocale());
     });

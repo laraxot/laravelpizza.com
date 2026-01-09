@@ -103,4 +103,3 @@
 **I file di traduzione non italiani NON devono contenere testi in italiano.**
 
 Ogni testo deve essere tradotto nella lingua appropriata del file.
-

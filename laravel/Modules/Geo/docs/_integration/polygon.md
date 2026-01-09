@@ -24,7 +24,6 @@ Array
             [lng] => -79.746642
         )
 
-
 function is_in_polygon2($longitude_x, $latitude_y,$polygon){
   $i = $j = $c = 0;
   $points_polygon = count($polygon)-1;
@@ -36,11 +35,9 @@ function is_in_polygon2($longitude_x, $latitude_y,$polygon){
   return $c;
 }
 
-
 ------------------------------------------------------------------------
 Perform geometric operations on polygons
 https://www.phpclasses.org/browse/file/10683.html
-
 
 -------------------------------------------------------------------------
 https://stackoverflow.com/questions/38062642/detecting-point-within-polygon-latitude-and-longitude-in-php
@@ -62,9 +59,8 @@ return $inside;
 }
 
 -----------------------------------------------------------------------------------
-funzione js di google 
+funzione js di google
 https://developers.google.com/maps/documentation/javascript/examples/poly-containsLocation#try-it-yourself
-
 
 funzione di algolia
 https://www.algolia.com/doc/api-reference/api-parameters/insidePolygon/
@@ -73,7 +69,6 @@ https://www.algolia.com/doc/api-reference/api-parameters/insidePolygon/
  The point-in-polygon algorithm allows you to check if a point is
 inside a polygon or outside of it.
 https://assemblysys.com/php-point-in-polygon-algorithm/
-
 
 ---------------------------------------------------------------------------------------
 Find Point in polygon PHP
@@ -90,8 +85,7 @@ https://gist.github.com/vzool/e5ee5fab6608c7a9e82e2c4b800a86e3
 
 -------------------------------------------------------------------------------------------
 
-
-Find Restaurants with Geospatial Queries - MONGO 
+Find Restaurants with Geospatial Queries - MONGO
 https://docs.mongodb.com/manual/tutorial/geospatial-tutorial/
 
 ----------------------------------------------------------------------------------------------
@@ -100,8 +94,4 @@ soldi api maps
 https://laraveldaily.com/laravel-find-addresses-with-coordinates-via-google-maps-api/
 ---------------------------------------------------------------------------------------------
 
-
-
 https://css-tricks.com/lets-make-a-form-that-puts-current-location-to-use-in-a-map/
-
-

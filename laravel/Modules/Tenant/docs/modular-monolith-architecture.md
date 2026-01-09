@@ -76,7 +76,7 @@ Use one of these patterns for inter-module communication:
    ```php
    // In source module
    event(new TenantCreated($tenant));
-   
+
    // In consuming module
    class UpdateBillingOnTenantCreated
    {
@@ -91,7 +91,7 @@ Use one of these patterns for inter-module communication:
    ```php
    // In service provider
    $this->app->bind(TenantBillingServiceInterface::class, TenantBillingService::class);
-   
+
    // In consuming class
    public function __construct(
        private TenantBillingServiceInterface $billingService
@@ -168,14 +168,14 @@ sequenceDiagram
     participant App as Application Layer
     participant Domain as Domain Layer
     participant Infra as Infrastructure
-    
+
     UI->>App: CreateTenantRequest
     App->>Domain: CreateTenantCommand
     Domain->>Infra: TenantRepository::create()
     Infra-->>Domain: Tenant
     Domain-->>App: TenantCreated event
     App-->>UI: TenantResource
-    
+
     Note over Domain,Infra: Transaction boundary
     Note over Domain: Business rules validation
     Note over App: Event dispatch

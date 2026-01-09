@@ -58,9 +58,8 @@
 - [Development](packages/development.md)
 - [Testing](packages/testing.md)
 - [Performance](packages/performance.md)
-- [Debug](packages/debug.md) 
+- [Debug](packages/debug.md)
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di packages.md
 * [packages.md](../../../Gdpr/project_docs/packages.md)
@@ -73,9 +72,6 @@
 * [packages.md](../../../Media/project_docs/packages.md)
 * [packages.md](../../../Tenant/project_docs/packages.md)
 
-
 ### Versione Incoming
 
-
 ---
-

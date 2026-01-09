@@ -159,9 +159,9 @@ git commit -m "refactor: migliora performance di metodo in commit ghi789"
 
 ## Mantra
 
-> "Il codice va avanti, la storia resta.  
-> Ogni errore è un maestro, ogni commit è una lezione.  
-> Non cancellare, correggi. Non nascondere, documenta.  
+> "Il codice va avanti, la storia resta.
+> Ogni errore è un maestro, ogni commit è una lezione.
+> Non cancellare, correggi. Non nascondere, documenta.
 > Forward. Always forward. Never backward."
 
 ## Conseguenze Violazione
@@ -177,11 +177,11 @@ Violare questa regola significa:
 
 **Forward. Always forward. Never backward.**
 
-Non è un consiglio, è un **comandamento**.  
-Non è una preferenza, è una **legge**.  
+Non è un consiglio, è un **comandamento**.
+Non è una preferenza, è una **legge**.
 Non è una best practice, è **l'unica pratica**.
 
 ---
 
-**Ultima revisione**: Novembre 2025  
+**Ultima revisione**: Novembre 2025
 **Status**: Regola Assoluta e Immutabile

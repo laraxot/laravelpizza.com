@@ -1,4 +1,4 @@
-# Convenzioni dei Path in Laravel e 
+# Convenzioni dei Path in Laravel e
 
 ## Regole Fondamentali per i Path di Cartelle
 

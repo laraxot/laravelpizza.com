@@ -4,7 +4,7 @@
 
 Analisi dettagliata di progetti reali che utilizzano Folio + Volt, con focus su pattern UI/UX, componenti e implementazioni frontend applicabili al tema Meetup.
 
-**Data Analisi**: 2025-01-27  
+**Data Analisi**: 2025-01-27
 **Versione**: 1.0
 
 ---
@@ -245,17 +245,17 @@ Analisi dettagliata di progetti reali che utilizzano Folio + Volt, con focus su 
             </div>
         @endif
     </div>
-    
+
     {{-- Content --}}
     <h3 class="text-xl font-bold mb-2">{{ $event->title }}</h3>
     <p class="text-gray-600 mb-4 line-clamp-2">{{ $event->description }}</p>
-    
+
     {{-- Meta --}}
     <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
         <span>{{ $event->start_date->format('M j, Y') }}</span>
         <span>{{ $event->location }}</span>
     </div>
-    
+
     {{-- Actions --}}
     <div class="flex items-center justify-between">
         <span class="text-sm">
@@ -303,8 +303,8 @@ Analisi dettagliata di progetti reali che utilizzano Folio + Volt, con focus su 
                 <h2 class="text-xl font-bold text-white mb-4">Channels</h2>
                 <nav class="space-y-2">
                     @foreach($channels as $channel)
-                        <a 
-                            href="?channel={{ $channel }}" 
+                        <a
+                            href="?channel={{ $channel }}"
                             class="block px-4 py-2 rounded {{ $currentChannel === $channel ? 'bg-red-600 text-white' : 'text-gray-300 hover:bg-slate-700' }}"
                         >
                             # {{ $channel }}
@@ -313,7 +313,7 @@ Analisi dettagliata di progetti reali che utilizzano Folio + Volt, con focus su 
                 </nav>
             </div>
         </div>
-        
+
         {{-- Main Chat Area --}}
         <div class="flex-1 flex flex-col">
             {{-- Messages --}}
@@ -322,18 +322,18 @@ Analisi dettagliata di progetti reali che utilizzano Folio + Volt, con focus su 
                     <x-chat-message :message="$message" />
                 @endforeach
             </div>
-            
+
             {{-- Input --}}
             @volt('chat-input')
                 <form wire:submit="sendMessage" class="p-4 border-t border-slate-700">
                     <div class="flex gap-2">
-                        <input 
-                            type="text" 
-                            wire:model="messageText" 
+                        <input
+                            type="text"
+                            wire:model="messageText"
                             placeholder="Type a message..."
                             class="flex-1 bg-slate-700 text-white px-4 py-2 rounded"
                         />
-                        <button 
+                        <button
                             type="submit"
                             class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700"
                         >
@@ -499,6 +499,5 @@ Tutti i progetti seguono mobile-first:
 
 ---
 
-**Versione**: 1.0  
+**Versione**: 1.0
 **Ultimo Aggiornamento**: 2025-01-27
-

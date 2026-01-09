@@ -13,7 +13,6 @@ https://github.com/statikbe/laravel-filament-chained-translation-manager
 
 https://github.com/barryvdh/laravel-translation-manager
 
-
 ---
 
 https://github.com/tanmuhittin/laravel-google-translate
@@ -23,4 +22,3 @@ https://github.com/tanmuhittin/laravel-google-translate
 https://github.com/Astrotomic/laravel-translatable
 
 https://github.com/dimsav/laravel-translatable#step-1-install-package
-

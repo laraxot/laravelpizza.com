@@ -98,7 +98,7 @@ Mail::html($emailHtml, function($message) {
 });
 ```
 
-### Esempio 2: Logo in PDF 
+### Esempio 2: Logo in PDF
 ```php
 use Modules\Xot\Datas\MetatagData;
 
@@ -133,8 +133,8 @@ return $pdf->download('referto.pdf');
 
 <header class="company-header">
     @if($logoBase64)
-        <img src="{{ $logoBase64 }}" 
-             alt="{{ $metatag->getBrandName() }}" 
+        <img src="{{ $logoBase64 }}"
+             alt="{{ $metatag->getBrandName() }}"
              class="company-logo"
              style="max-height: 60px; width: auto;">
     @else
@@ -147,16 +147,16 @@ return $pdf->download('referto.pdf');
 ```php
 use Modules\Xot\Datas\MetatagData;
 
-function getCompanyLogo(): string 
+function getCompanyLogo(): string
 {
     $metatag = MetatagData::make();
     $logoBase64 = $metatag->getBrandLogoBase64();
-    
+
     if (empty($logoBase64)) {
         // Fallback: usa URL normale del logo
         return $metatag->getBrandLogo();
     }
-    
+
     return $logoBase64;
 }
 
@@ -294,4 +294,4 @@ La classe utilizza `Assert` per validare:
 - Presenza dei campi obbligatori
 - Formato corretto degli URL
 - Lunghezza appropriata dei testi
-- Valori validi per i tipi di card 
+- Valori validi per i tipi di card

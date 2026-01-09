@@ -167,6 +167,3 @@ GET / → Folio → index.blade.php
 - [Tema One](laravel/Themes/One/docs/homepage-structure.md)
 
 *Ultimo aggiornamento: Dicembre 2024*
-
-
-

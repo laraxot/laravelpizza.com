@@ -14,7 +14,7 @@ class MyModel extends BaseModel
         'name',
         'description',
     ];
-    
+
     // Relazioni e metodi del modello
 }
 ```

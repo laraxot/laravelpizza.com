@@ -53,4 +53,4 @@ class MyListRecords extends ListRecords
 - [Risoluzione Conflitti UI](../CONFLITTI_MERGE_RISOLTI.md): Documentazione dei conflitti risolti
 - [Test di Risoluzione Conflitti](../test_conflicts_resolution.md): Test automatici che verificano la corretta risoluzione
 
-[Torna alla documentazione UI](/docs/modules/module_ui.md#actions) 
+[Torna alla documentazione UI](/docs/modules/module_ui.md#actions)

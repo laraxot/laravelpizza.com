@@ -60,7 +60,7 @@ class AppointmentNotification extends GenericNotification
     public function __construct(Appointment $appointment)
     {
         $template = MailTemplate::where('type', 'appointment')->first();
-        
+
         $data = [
             'appointment' => $appointment,
             'patient' => $appointment->patient,
@@ -78,7 +78,7 @@ class PaymentNotification extends GenericNotification
     public function __construct(Payment $payment)
     {
         $template = MailTemplate::where('type', 'payment')->first();
-        
+
         $data = [
             'payment' => $payment,
             'amount' => $payment->amount,
@@ -103,10 +103,10 @@ class SendAppointmentNotification
     public function handle(AppointmentCreated $event): void
     {
         $appointment = $event->appointment;
-        
+
         // Notifica paziente
         $appointment->patient->notify(new AppointmentNotification($appointment));
-        
+
         // Notifica medico
         $appointment->doctor->notify(new AppointmentNotification($appointment));
     }
@@ -117,10 +117,10 @@ class SendPaymentNotification
     public function handle(PaymentReceived $event): void
     {
         $payment = $event->payment;
-        
+
         // Notifica paziente
         $payment->patient->notify(new PaymentNotification($payment));
-        
+
         // Notifica amministrazione
         User::where('role', 'admin')->get()
             ->each->notify(new PaymentNotification($payment));
@@ -178,13 +178,13 @@ class NotificationResource extends XotBaseResource
                     ->options(MailTemplate::pluck('name', 'id'))
                     ->required()
                     ->label('Template'),
-                    
+
                 // Dati
                 KeyValue::make('data')
                     ->label('Dati')
                     ->keyLabel('Chiave')
                     ->valueLabel('Valore'),
-                    
+
                 // Destinatari
                 Select::make('recipients')
                     ->multiple()
@@ -195,7 +195,7 @@ class NotificationResource extends XotBaseResource
                     ])
                     ->required()
                     ->label('Destinatari'),
-                    
+
                 // Programma
                 DateTimePicker::make('scheduled_at')
                     ->label('Programma')
@@ -221,7 +221,7 @@ class NotificationActions
                 ->action(function (Notification $record) {
                     $record->send();
                 }),
-                
+
             // Programma
             Action::make('schedule')
                 ->label('Programma')
@@ -234,7 +234,7 @@ class NotificationActions
                 ->action(function (array $data, Notification $record) {
                     $record->schedule($data['scheduled_at']);
                 }),
-                
+
             // Duplica
             Action::make('duplicate')
                 ->label('Duplica')
@@ -257,19 +257,19 @@ class NotificationTemplate
     public static function make(string $type, array $data = []): MailTemplate
     {
         $template = MailTemplate::where('type', $type)->first();
-        
+
         if (!$template) {
             throw new \Exception("Template {$type} not found");
         }
-        
+
         // Verifica placeholder
         $placeholders = $template->getPlaceholders();
         $missing = array_diff($placeholders, array_keys($data));
-        
+
         if (!empty($missing)) {
             throw new \Exception("Missing placeholders: " . implode(', ', $missing));
         }
-        
+
         return $template;
     }
 }
@@ -365,4 +365,4 @@ class NotificationDebugger
 ## Vedi Anche
 - [Laravel Notifications](https://laravel.com/project_docs/notifications)
 - [Laravel Events](https://laravel.com/project_docs/events)
-- [Laravel Mail](https://laravel.com/project_docs/mail) 
+- [Laravel Mail](https://laravel.com/project_docs/mail)

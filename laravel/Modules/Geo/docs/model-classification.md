@@ -18,7 +18,7 @@
 
 ### 🔧 Traits & Scopes
 - **GeoTrait** - Geographical functionality trait
-- **HasAddress** - Address relationship trait  
+- **HasAddress** - Address relationship trait
 - **HasPlaceTrait** - Place functionality trait
 - **GeographicalScopes** - Geographical query scopes
 

@@ -58,4 +58,4 @@ L'obiettivo è fornire una panoramica neutra e riutilizzabile dei pattern, dei v
 - **Projectors/Eventsauce**: sistemi critici, necessità di audit, rollback, proiezioni avanzate
 
 ## Prossimi passi
-Consulta i file flow.md, domain_model.md, examples.md e tips.md per dettagli su flussi, modelli, esempi e best practice. 
+Consulta i file flow.md, domain_model.md, examples.md e tips.md per dettagli su flussi, modelli, esempi e best practice.

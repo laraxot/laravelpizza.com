@@ -33,4 +33,3 @@ Si concentra su:
 **I file di traduzione non italiani NON devono contenere testi chiaramente italiani.**
 
 Ogni testo deve essere tradotto nella lingua appropriata del file, escludendo termini internazionali standard.
-

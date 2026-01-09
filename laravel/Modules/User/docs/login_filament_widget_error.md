@@ -80,7 +80,7 @@ Alternativa: creare due widget separati per i diversi contesti.
 public function boot(): void
 {
     parent::boot();
-    
+
     // Non sovrascrivere registerViews(), ma aggiungi questo se necessario:
     View::addNamespace('user-widgets', __DIR__.'/../resources/views/filament/widgets');
 }
@@ -124,10 +124,10 @@ class LoginWidget extends XotBaseWidget
 {
     // Per uso in pannelli Filament
     protected static string $view = 'user::filament.widgets.auth.login';
-    
+
     // OPPURE usa la vista relativa per @livewire e <x-filament::widget>
     // protected static string $view = 'filament.widgets.auth.login';
-    
+
     // OPPURE usa questa logica condizionale
     /*
     public function mount(): void
@@ -139,7 +139,7 @@ class LoginWidget extends XotBaseWidget
         }
     }
     */
-    
+
     // Resto dell'implementazione...
 }
 ```
@@ -151,10 +151,10 @@ class LoginWidget extends XotBaseWidget
 <div class="py-16 space-y-6">
     <h4 class="text-3xl font-semibold text-center">Welcome back!</h4>
     <!-- Altre parti dell'UI -->
-    
+
     {{-- Riferimento corretto al widget --}}
     <x-filament::widget name="login-widget" />
-    
+
     <!-- Footer, link di registrazione, ecc. -->
 </div>
 ```

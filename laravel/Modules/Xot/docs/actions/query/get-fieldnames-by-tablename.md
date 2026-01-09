@@ -23,7 +23,7 @@ Il metodo principale che esegue il recupero dei nomi delle colonne.
 - `array`: Lista dei nomi delle colonne della tabella
 
 #### Eccezioni
-- `\InvalidArgumentException`: 
+- `\InvalidArgumentException`:
   - Se il nome della tabella è vuoto
   - Se la connessione database non è valida
   - Se la tabella non esiste nella connessione specificata
@@ -65,4 +65,4 @@ $columns = $action->execute('products', 'mysql_secondary');
 Per testare l'action:
 ```php
 php artisan test Modules/Xot/Tests/Actions/Query/GetFieldnamesByTablenameActionTest.php
-``` 
+```

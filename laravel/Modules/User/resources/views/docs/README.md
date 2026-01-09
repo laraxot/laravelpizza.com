@@ -1,4 +1,4 @@
-# Tema One per 
+# Tema One per
 
 ## Introduzione
 
@@ -81,9 +81,9 @@ Il tema One si integra con il modulo CMS per la gestione dei contenuti. I conten
 
 ## Supporto
 
-Per supporto tecnico, contattare il team . 
+Per supporto tecnico, contattare il team .
 Il tema One si integra con il modulo CMS per la gestione dei contenuti. I contenuti sono definiti in file JSON nella directory `config/local/saluteora/database/content/pages`.
 
 ## Supporto
 
-Per supporto tecnico, contattare il team SaluteOra. 
+Per supporto tecnico, contattare il team SaluteOra.

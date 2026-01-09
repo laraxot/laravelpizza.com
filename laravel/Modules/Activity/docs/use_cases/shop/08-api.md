@@ -38,4 +38,4 @@
 ## 7. Differenze con CRUD
 - In CRUD: ogni endpoint aggiorna direttamente il database.
 - In event sourced: ogni comando genera un evento, lo stato è ricostruito dagli eventi.
-- **Motivazione**: audit, rollback, proiezioni flessibili, performance sulle letture. 
+- **Motivazione**: audit, rollback, proiezioni flessibili, performance sulle letture.

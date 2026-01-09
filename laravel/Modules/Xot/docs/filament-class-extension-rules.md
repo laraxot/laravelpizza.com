@@ -562,7 +562,7 @@ Prima di creare una nuova classe Filament:
 - [ ] Ho verificato quale classe XotBase estendere?
 - [ ] Non sto estendendo direttamente classi Filament?
 - [ ] Non sto replicando metodi della classe base?
-- [ ] Sto usando file di traduzione invece di ->label()? 
+- [ ] Sto usando file di traduzione invece di ->label()?
 - [ ] Sto usando Actions invece di Services?
 - [ ] Ho rimosso BadgeColumn deprecato?
 - [ ] Ho migrato da `protected $casts` a `casts()`?

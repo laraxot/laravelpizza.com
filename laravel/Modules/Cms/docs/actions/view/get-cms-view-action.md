@@ -76,7 +76,7 @@ class MyComponent extends Component
     public function render(): ViewContract
     {
         $viewAction = app(GetCmsViewAction::class);
-        
+
         try {
             $viewName = $viewAction->execute('pub_theme::my-custom-view');
             return view($viewName);

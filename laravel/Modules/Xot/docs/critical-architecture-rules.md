@@ -1,7 +1,7 @@
 # Regole Critiche di Architettura Laraxot
 
-**ULTIMO AGGIORNAMENTO**: 2025-01-XX  
-**STATUS**: ✅ REGOLE OBBLIGATORIE  
+**ULTIMO AGGIORNAMENTO**: 2025-01-XX
+**STATUS**: ✅ REGOLE OBBLIGATORIE
 **PRIORITÀ**: CRITICA - MAI VIOLARE
 
 ## 🚨 Regola Fondamentale: Mai Estendere Filament Direttamente
@@ -25,7 +25,7 @@
 
 ### XotBaseResource
 
-**VIETATO**: Metodo `getTableColumns()`  
+**VIETATO**: Metodo `getTableColumns()`
 **MOTIVO**: Gestito automaticamente dalla classe base
 
 ```php
@@ -47,7 +47,7 @@ class MyResource extends XotBaseResource
 
 ### XotBasePage
 
-**VIETATO**: Proprietà statiche di navigazione  
+**VIETATO**: Proprietà statiche di navigazione
 **MOTIVO**: Gestite automaticamente dal sistema di traduzione
 
 ```php
@@ -69,7 +69,7 @@ class MyPage extends XotBasePage
 
 ## 🔄 Services vs QueueableActions
 
-**VIETATO**: Creare classi Service  
+**VIETATO**: Creare classi Service
 **OBBLIGATORIO**: Usare Spatie QueueableActions
 
 ```php
@@ -100,7 +100,7 @@ class CreateUserAction
 
 ## 🌐 Traduzioni: Mai Usare ->label(), ->placeholder(), ->tooltip()
 
-**VIETATO**: Metodi diretti su componenti  
+**VIETATO**: Metodi diretti su componenti
 **OBBLIGATORIO**: File di traduzione tramite LangServiceProvider
 
 ```php
@@ -119,7 +119,7 @@ TextInput::make('name');
 
 ## 🏷️ BadgeColumn è Deprecated
 
-**VIETATO**: Usare `BadgeColumn`  
+**VIETATO**: Usare `BadgeColumn`
 **OBBLIGATORIO**: Usare `TextColumn` con metodo `badge()`
 
 ```php
@@ -139,7 +139,7 @@ TextColumn::make('status')
 
 ## 🔗 Estensioni Modelli: Usare BaseModel del Modulo
 
-**VIETATO**: Estendere `Model` direttamente o implementare contratti  
+**VIETATO**: Estendere `Model` direttamente o implementare contratti
 **OBBLIGATORIO**: Estendere `BaseModel` del modulo
 
 ```php
@@ -204,7 +204,7 @@ class MyResource extends XotBaseResource
 
 ## 🔧 $casts è Deprecated
 
-**VIETATO**: Usare `protected $casts`  
+**VIETATO**: Usare `protected $casts`
 **OBBLIGATORIO**: Usare metodo `casts()`
 
 ```php
@@ -242,4 +242,3 @@ class MyModel extends BaseModel
 2. **Violare queste regole causa problemi di manutenzione e compatibilità**
 3. **PHPStan dovrebbe rilevare molte di queste violazioni**
 4. **Aggiornare sempre questo documento quando vengono aggiunte nuove regole**
-

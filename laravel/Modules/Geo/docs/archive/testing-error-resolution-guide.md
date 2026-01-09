@@ -41,7 +41,7 @@ $this->faker->optional(0.9)->dateTimeBetween('-2 years', '-1 month')  // 90% cha
 it('validates appointment booking', function () {
     $patient = User::factory()->create(['type' => 'patient']);
     $doctor = User::factory()->create(['type' => 'doctor']);
-    
+
     expect($patient->type)->toBe('patient');
 });
 
@@ -49,7 +49,7 @@ it('validates appointment booking', function () {
 it('validates appointment booking logic', function () {
     $patient = (object) ['type' => 'patient', 'id' => 1001];
     $doctor = (object) ['type' => 'doctor', 'id' => 2001];
-    
+
     expect($patient->type)->toBe('patient');
     expect($doctor->type)->toBe('doctor');
 });
@@ -78,7 +78,7 @@ expect($appointment->type->getDuration())->toBe(20);  // Non-translation method
 
 **Cause**: Tests trying to resolve EventSourcing services without full Laravel container setup.
 
-**Solution**: 
+**Solution**:
 - Use pure tests without `TestCase` when testing business logic
 - Avoid dependency injection in simple feature tests
 - Use plain objects instead of services
@@ -145,7 +145,7 @@ expect($appointment->type->getDuration())->toBe(20);  // Non-translation method
 it('validates appointment time constraints', function () { });
 it('prevents double booking for same doctor', function () { });
 
-// Unit tests - describe component functionality  
+// Unit tests - describe component functionality
 it('has correct resource pages', function () { });
 it('exposes casts as array', function () { });
 ```
@@ -180,7 +180,7 @@ These patterns provide benefits across all <nome progetto> modules:
 - Document module-specific test strategies
 - Establish consistent test architecture
 
-### Phase 2: Optimization  
+### Phase 2: Optimization
 - Parallel test execution
 - Property-based testing for business rules
 - Mutation testing for coverage quality
@@ -203,7 +203,7 @@ These patterns provide benefits across all <nome progetto> modules:
 
 ---
 
-**Last Updated**: 2025-01-06  
-**Status**: Active Implementation  
-**Success Rate**: 100% (<nome modulo>: 44/44 tests passing)  
+**Last Updated**: 2025-01-06
+**Status**: Active Implementation
+**Success Rate**: 100% (<nome modulo>: 44/44 tests passing)
 **Philosophy**: Simple, Fast, Reliable Testing

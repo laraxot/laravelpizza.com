@@ -12,7 +12,7 @@
 
 **Context**: This error occurred during the execution of `php artisan migrate` when the migration attempted to reference a model class that does not exist in the project.
 
-**Resolution**: 
+**Resolution**:
 - Initially attempted to use standard Laravel `Illuminate\Database\Migrations\Migration` class to avoid the error.
 - As per user's correction, updated migration files to correctly use `XotBaseMigration` with `tableCreate` and `tableUpdate` methods, which is the intended approach for this project.
 

@@ -10,7 +10,7 @@ I file metatag in `config/local/<directory progetto>/lang/{locale}/metatag.php` 
 - `Themes/One/lang/it/navigation.php` - Contenuti hero e navigazione
 - `Themes/One/lang/it/landing.php` - Contenuti landing page
 - `Themes/One/lang/en/navigation.php` - Versione inglese
-- `Themes/One/lang/en/landing.php` - Versione inglese  
+- `Themes/One/lang/en/landing.php` - Versione inglese
 - `Themes/One/lang/de/navigation.php` - Versione tedesca
 
 ### Contenuti Chiave Estratti
@@ -31,19 +31,17 @@ Basato su: `navigation.hero.welcome_subtitle.label`
 
 ## Strategia SEO Keywords
 
-
-
 ### Keywords Inglesi
 ```
-oral health, pregnancy, pregnant women, dentist, prevention, dentistry, 
-free visits, ISEE, mother baby health, cavities, dental hygiene, 
+oral health, pregnancy, pregnant women, dentist, prevention, dentistry,
+free visits, ISEE, mother baby health, cavities, dental hygiene,
 dental checkup, first trimester
 ```
 
 ### Keywords Tedesche
 ```
-mundgesundheit, schwangerschaft, schwangere, zahnarzt, prävention, 
-zahnmedizin, kostenlose besuche, ISEE, mutter baby gesundheit, karies, 
+mundgesundheit, schwangerschaft, schwangere, zahnarzt, prävention,
+zahnmedizin, kostenlose besuche, ISEE, mutter baby gesundheit, karies,
 zahnhygiene, zahnkontrolle, erstes trimester
 ```
 
@@ -66,11 +64,10 @@ zahnhygiene, zahnkontrolle, erstes trimester
 
 ### Autore (author)
 - **IT**: "Progetto <main module> - ANDI, INMP, COI"
-- **EN**: "<main module> Project - ANDI, INMP, COI"  
+- **EN**: "<main module> Project - ANDI, INMP, COI"
 - **DE**: "<main module> Projekt - ANDI, INMP, COI"
 
 Basato sui partner del progetto identificati nelle traduzioni.
-
 
 ## Configurazioni Tecniche
 
@@ -120,7 +117,7 @@ I metatag vengono utilizzati nel componente `Modules\Cms\app\View\Components\Met
 
 ### Aggiornamenti Necessari
 - Aggiornare keywords se cambiano i servizi
-- Modificare descrizioni se cambia il focus del progetto  
+- Modificare descrizioni se cambia il focus del progetto
 - Aggiungere nuove lingue se necessario
 - Aggiornare informazioni partner se cambiano
 

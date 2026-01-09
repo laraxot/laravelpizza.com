@@ -11,7 +11,7 @@ Questa cartella contiene la documentazione relativa agli strumenti e alle pratic
 
 ## Note
 
-Questa documentazione è essenziale per tutti gli sviluppatori che lavorano al progetto. 
+Questa documentazione è essenziale per tutti gli sviluppatori che lavorano al progetto.
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
 * [README.md](bashscripts/docs/it/README.md)
@@ -89,4 +89,3 @@ Questa documentazione è essenziale per tutti gli sviluppatori che lavorano al p
 * [README.md](../../../Cms/docs/components/README.md)
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
-

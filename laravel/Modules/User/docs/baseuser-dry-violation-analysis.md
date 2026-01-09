@@ -1,7 +1,7 @@
 # BaseUser - Analisi Violazione Principio DRY
 
-**Data**: 15 Ottobre 2025  
-**File**: `Modules/User/app/Models/BaseUser.php`  
+**Data**: 15 Ottobre 2025
+**File**: `Modules/User/app/Models/BaseUser.php`
 **Problema**: Metodi duplicati già presenti in `Spatie\Permission\Traits\HasRoles`
 
 ## Problema Identificato
@@ -38,18 +38,18 @@ public function hasRole(\Spatie\Permission\Contracts\Role|...$roles, ?string $gu
 public function hasRole($roles, ?string $guard = null): bool
 {
     $this->loadMissing('roles');
-    
+
     // Supporta pipe syntax: 'admin|user'
     if (is_string($roles) && strpos($roles, '|') !== false) {
         $roles = $this->convertPipeToArray($roles);
     }
-    
+
     // Supporta BackedEnum
     if ($roles instanceof \BackedEnum) { ... }
-    
+
     // Gestione UUID
     if (is_int($roles) || PermissionRegistrar::isUid($roles)) { ... }
-    
+
     // ... 58 linee totali con gestione completa
 }
 ```
@@ -86,18 +86,18 @@ public function assignRoleOLD(...$roles = []): static
 public function assignRole(...$roles)
 {
     $roles = $this->collectRoles($roles);
-    
+
     // Gestione teams/tenancy
     $teamPivot = app(PermissionRegistrar::class)->teams && ...
-    
+
     // Attach con gestione eventi
     $this->roles()->attach(array_diff($roles, $currentRoles), $teamPivot);
-    
+
     // Event dispatching
     if (config('permission.events_enabled')) {
         event(new RoleAttached($this->getModel(), $roles));
     }
-    
+
     return $this;
 }
 ```
@@ -228,7 +228,7 @@ public function hasRole(...): bool
 #### Step 2: Rimuovere `assignRoleOLD()` (linee 211-236)
 
 ```php
-// ❌ RIMUOVERE COMPLETAMENTE  
+// ❌ RIMUOVERE COMPLETAMENTE
 public function assignRoleOLD(...): static
 {
     // 26 linee di codice obsoleto da cancellare
@@ -325,19 +325,19 @@ abstract class BaseUser extends Authenticatable implements ...
 {
     use HasRoles; // ✅ Il trait fornisce tutto ciò che serve
     // ... altri traits
-    
+
     // ❌ RIMOSSI:
     // - hasRole() - duplicato
     // - assignRoleOLD() - obsoleto
     // - hasPermission() - ridondante (usare hasPermissionTo)
-    
+
     // ✅ MANTENUTI:
     // - getName() - specifico per Filament
     // - profile() - relazione custom
     // - canAccessPanel() - logica business
     // - get*Attribute() - accessor specifici
     // - 2FA methods - specifici dell'app
-    
+
     // ... resto del codice pulito
 }
 ```
@@ -389,7 +389,7 @@ Prima del refactoring, creare questi test:
 test('hasRole works with string', function () {
     $user = User::factory()->create();
     $user->assignRole('admin');
-    
+
     expect($user->hasRole('admin'))->toBeTrue();
     expect($user->hasRole('user'))->toBeFalse();
 });
@@ -397,14 +397,14 @@ test('hasRole works with string', function () {
 test('hasRole works with array', function () {
     $user = User::factory()->create();
     $user->assignRole(['admin', 'editor']);
-    
+
     expect($user->hasRole(['admin', 'editor']))->toBeTrue();
 });
 
 test('hasRole works with guard parameter', function () {
     $user = User::factory()->create();
     $user->assignRole('admin', 'web');
-    
+
     expect($user->hasRole('admin', 'web'))->toBeTrue();
 });
 ```
@@ -448,12 +448,11 @@ La rimozione dei metodi duplicati in `BaseUser`:
 
 ## Principi Zen Applicati
 
-> **"Non ripetere te stesso, fidati di chi sa"**  
+> **"Non ripetere te stesso, fidati di chi sa"**
 > Il trait HasRoles è mantenuto da esperti, usalo!
 
-> **"Meno codice = Meno bug"**  
+> **"Meno codice = Meno bug"**
 > Ogni riga di codice è un potenziale bug
 
-> **"Se esiste già, non reinventare la ruota"**  
+> **"Se esiste già, non reinventare la ruota"**
 > Spatie ha fatto il lavoro per noi, usalo!
-

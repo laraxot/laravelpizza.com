@@ -109,7 +109,7 @@ class SendEmail extends XotBasePage
     {
         try {
             $data = $this->form->getState();
-            
+
             // Configura SMTP
             config([
                 'mail.mailers.smtp.host' => $data['smtp']['host'],
@@ -232,4 +232,4 @@ class SmtpData extends Data
 3. **Manutenzione**
    - Aggiornare regolarmente le dipendenze
    - Monitorare log errori
-   - Verificare configurazione SMTP 
+   - Verificare configurazione SMTP

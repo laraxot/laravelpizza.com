@@ -53,7 +53,7 @@
     <x-slot name="trigger">
         <x-filament::button>Menu</x-filament::button>
     </x-slot>
-    
+
     <x-filament::dropdown.list>
         <x-filament::dropdown.list.item href="/link">
             Voce Menu
@@ -64,8 +64,8 @@
 
 ### Avatar
 ```blade
-<x-filament::avatar 
-    src="{{ $user->getAvatarUrl() }}" 
+<x-filament::avatar
+    src="{{ $user->getAvatarUrl() }}"
     alt="{{ $user->name }}"
 />
 ```
@@ -88,7 +88,7 @@ Prima di usare un componente in produzione, testalo in un file di prova.
 
 ### SEMPRE fare prima di usare un componente:
 1. ✅ Verificare esistenza nella documentazione ufficiale
-2. ✅ Cercare esempi nel codebase esistente  
+2. ✅ Cercare esempi nel codebase esistente
 3. ✅ Testare in ambiente di sviluppo
 4. ✅ Verificare che non generi errori
 

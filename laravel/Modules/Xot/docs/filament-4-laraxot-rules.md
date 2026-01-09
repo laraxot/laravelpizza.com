@@ -189,12 +189,12 @@ class ViewQuestionChart extends XotBaseViewRecord
                 ->label('Edit Chart')
                 ->icon('heroicon-o-pencil')
                 ->url(fn () => static::getResource()::getUrl('edit', ['record' => $this->record])),
-            
+
             Action::make('generate')
                 ->label('Generate Chart')
                 ->icon('heroicon-o-chart-bar')
                 ->action('generateChart'),
-            
+
             DeleteAction::make()
                 ->requiresConfirmation(),
         ];
@@ -239,12 +239,12 @@ class QuestionChartFilterWidget extends XotBaseWidget
                 ->label('From Date')
                 ->live()
                 ->afterStateUpdated(fn () => $this->updateFilters()),
-            
+
             DatePicker::make('dateTo')
                 ->label('To Date')
                 ->live()
                 ->afterStateUpdated(fn () => $this->updateFilters()),
-            
+
             Select::make('answerFilter')
                 ->label('Answer Filter')
                 ->options([
@@ -275,7 +275,3 @@ class QuestionChartFilterWidget extends XotBaseWidget
 - [Filament 4 Migration Guide](./filament4_migration.md)
 
 Queste regole garantiscono coerenza con l'architettura Laraxot e compatibilità con Filament 4.
-
-
-
-

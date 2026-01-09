@@ -1,7 +1,7 @@
 # 🗺️ Farmshops.eu Integration Analysis
 
-**Date:** 2025-10-02  
-**Module:** Geo  
+**Date:** 2025-10-02
+**Module:** Geo
 **Status:** Analysis & Proposal
 
 ---
@@ -196,13 +196,13 @@ CREATE TABLE map_layers (
 
 ```blade
 <!-- resources/views/components/interactive-map.blade.php -->
-<div 
+<div
     x-data="interactiveMap()"
     x-init="initMap()"
     class="relative w-full h-screen"
 >
     <div id="map" class="w-full h-full"></div>
-    
+
     <!-- Sidebar -->
     <div id="sidebar" class="leaflet-sidebar">
         <div class="leaflet-sidebar-content">
@@ -219,32 +219,32 @@ function interactiveMap() {
     return {
         map: null,
         markers: [],
-        
+
         initMap() {
             this.map = L.map('map').setView([45.4642, 9.1900], 13);
-            
+
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '© OpenStreetMap contributors'
             }).addTo(this.map);
-            
+
             this.loadMarkers();
         },
-        
+
         async loadMarkers() {
             const response = await fetch('/api/map/points');
             const data = await response.json();
-            
+
             const markerCluster = L.markerClusterGroup();
-            
+
             data.forEach(point => {
                 const marker = L.marker([point.latitude, point.longitude])
                     .bindPopup(this.createPopup(point));
                 markerCluster.addLayer(marker);
             });
-            
+
             this.map.addLayer(markerCluster);
         },
-        
+
         createPopup(point) {
             return `
                 <div class="map-popup">
@@ -282,10 +282,10 @@ class MapService
     public function getGeoJSON(array $filters = []): array
     {
         $points = MapPoint::query()
-            ->when($filters['category'] ?? null, fn($q, $cat) => 
+            ->when($filters['category'] ?? null, fn($q, $cat) =>
                 $q->where('category_id', $cat)
             )
-            ->when($filters['status'] ?? null, fn($q, $status) => 
+            ->when($filters['status'] ?? null, fn($q, $status) =>
                 $q->where('status', $status)
             )
             ->get();
@@ -317,7 +317,7 @@ class MapService
     {
         $query = $this->buildOverpassQuery($bounds, $tags);
         $data = $this->queryOverpass($query);
-        
+
         return collect($data['elements'])->map(function ($element) {
             return MapPoint::updateOrCreate(
                 ['osm_id' => $element['id']],
@@ -339,7 +339,7 @@ class MapService
     {
         $bbox = implode(',', $bounds); // [south, west, north, east]
         $tagQueries = collect($tags)->map(fn($v, $k) => "[\"{$k}\"=\"{$v}\"]")->implode('');
-        
+
         return <<<QUERY
         [out:json][timeout:25];
         (
@@ -462,7 +462,7 @@ class MapPointResource extends XotBaseResource
         return [
             Tables\Actions\Action::make('view_on_map')
                 ->icon('heroicon-o-map')
-                ->url(fn (MapPoint $record): string => 
+                ->url(fn (MapPoint $record): string =>
                     route('map.show', ['lat' => $record->latitude, 'lon' => $record->longitude])
                 )
                 ->openUrlInNewTab(),
@@ -599,24 +599,24 @@ Realtà aumentata per visualizzare punti di interesse tramite fotocamera smartph
 ## 🎯 Conclusioni
 
 ### Pro dell'Integrazione
-✅ **Open Source** - Codice MIT, completamente riutilizzabile  
-✅ **Mature** - Progetto attivo dal 2018  
-✅ **Proven** - 40 stars, 10 forks, community attiva  
-✅ **Perfect Fit** - Allineato perfettamente con obiettivi FixCity  
-✅ **Scalable** - Architettura testata su migliaia di punti  
+✅ **Open Source** - Codice MIT, completamente riutilizzabile
+✅ **Mature** - Progetto attivo dal 2018
+✅ **Proven** - 40 stars, 10 forks, community attiva
+✅ **Perfect Fit** - Allineato perfettamente con obiettivi FixCity
+✅ **Scalable** - Architettura testata su migliaia di punti
 
 ### Raccomandazione
 
 **IMPLEMENTARE** - L'integrazione di farmshops.eu pattern nel modulo Geo porterebbe valore immediato a FixCity, permettendo visualizzazione geografica interattiva di segnalazioni e servizi civici.
 
-**Priority: HIGH**  
-**Effort: MEDIUM**  
+**Priority: HIGH**
+**Effort: MEDIUM**
 **Impact: HIGH**
 
 ---
 
-**📝 Documento preparato da:** Super Mucca 🐮  
-**📅 Data:** 2025-10-02  
+**📝 Documento preparato da:** Super Mucca 🐮
+**📅 Data:** 2025-10-02
 **📧 Contatto:** geo-team@fixcity.com
 
 ---

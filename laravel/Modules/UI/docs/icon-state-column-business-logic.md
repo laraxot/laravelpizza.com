@@ -1,15 +1,15 @@
- # IconStateColumn business logic
- 
+# IconStateColumn business logic
+
  ## Obiettivo
- 
+
  Garantire che la colonna `IconStateColumn`:
- 
+
  - usi callback sicuri per icona/colore
  - configuri l'azione di cambio stato durante `setUp()`
  - usi traduzioni (niente stringhe hardcoded e niente `->label()`/`->tooltip()` manuali)
- 
+
  ## Comportamento
- 
+
  - **Render**: icon + color provengono dallo state object (`StateContract`).
  - **Cambio stato**: azione `change-state` con `form()` (schema Filament Forms) e transizione tramite Spatie Model States.
  - **Opzioni transizione**:
@@ -17,9 +17,9 @@
    - se lo stato esiste, propone solo stati transitionable (con fallback)
  - **Messaggio**: può essere richiesto in base alla classe dello stato di destinazione.
  - **Notifica**: usa `Notification::make()` con label tradotta `pub_theme::*_states.*.label`.
- 
+
  ## Riferimenti
- 
+
  - codice: `Modules/UI/app/Filament/Tables/Columns/IconStateColumn.php`
  - regola: [never-use-label-rule.md](./never-use-label-rule.md)
 

@@ -15,7 +15,6 @@ Consulta la documentazione delle traduzioni qui:
 - [Vai a Struttura](./structure.md)
 - [Vai a Traduzioni](./translations.md)
 
-
 Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../../Lang/project_docs/).
 
 > Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.
@@ -35,4 +34,3 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](laravel/Modules/Activity/project_docs/lang-link.md)
 * [lang-link.md](laravel/Modules/Patient/project_docs/lang-link.md)
 * [lang-link.md](laravel/Modules/Cms/project_docs/lang-link.md)
-

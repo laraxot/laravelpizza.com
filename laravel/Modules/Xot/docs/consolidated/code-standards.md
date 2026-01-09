@@ -81,7 +81,7 @@ enum GenderType: string
     case FEMALE = 'F';
     case MALE = 'M';
     case OTHER = 'O';
-    
+
     public function label(): string
     {
         return match($this) {
@@ -105,21 +105,21 @@ public function setGender(GenderType $gender): void
 final class TaxCode
 {
     private string $value;
-    
+
     public function __construct(string $taxCode)
     {
         if (!$this->isValid($taxCode)) {
             throw new InvalidArgumentException('Codice fiscale non valido');
         }
-        
+
         $this->value = $taxCode;
     }
-    
+
     public function value(): string
     {
         return $this->value;
     }
-    
+
     private function isValid(string $taxCode): bool
     {
         // Validazione del codice fiscale
@@ -151,13 +151,13 @@ public function findByTaxCode(string $taxCode): Patient
     if (!TaxCode::isValid($taxCode)) {
         throw new InvalidTaxCodeException($taxCode);
     }
-    
+
     $patient = $this->repository->findByTaxCode($taxCode);
-    
+
     if ($patient === null) {
         throw new PatientNotFoundException("Nessun paziente trovato con codice fiscale: {$taxCode}");
     }
-    
+
     return $patient;
 }
 ```
@@ -220,7 +220,7 @@ public function getTableActions(): array
             ->label(__('module::actions.custom'))
             ->icon('heroicon-o-bolt')
             ->action(fn (Model $record) => $this->customAction($record)),
-            
+
         ...parent::getTableActions(),
     ];
 }
@@ -228,4 +228,4 @@ public function getTableActions(): array
 
 ## Collegamenti alla Documentazione Specifica
 
-- [Standard di Codice nel Progetto](../../../../project_docs/standard-codice.md) 
+- [Standard di Codice nel Progetto](../../../../project_docs/standard-codice.md)

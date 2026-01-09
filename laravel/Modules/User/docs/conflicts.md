@@ -1,6 +1,5 @@
 # Risoluzione Conflitti - User
 
-
 ## File modificati
 - app/Filament/Widgets/Auth/LoginWidget.php
 

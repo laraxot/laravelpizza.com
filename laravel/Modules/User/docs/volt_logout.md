@@ -26,8 +26,8 @@ const logout = () => {
 </script>
 
 <template>
-    <button 
-        @click="logout" 
+    <button
+        @click="logout"
         class="flex items-center w-full p-2 space-x-2 text-red-500 rounded hover:text-red-600 hover:bg-white"
     >
         <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -83,10 +83,10 @@ class LogoutController extends Controller
     public function __invoke(Request $request)
     {
         Auth::logout();
-        
+
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        
+
         return redirect()->route('home');
     }
 }
@@ -157,8 +157,8 @@ const logout = () => {
 ### 2. Styling Consistente
 ```vue
 <template>
-    <button 
-        @click="logout" 
+    <button
+        @click="logout"
         class="flex items-center w-full p-2 space-x-2 text-red-500 rounded hover:text-red-600 hover:bg-white"
         :disabled="form.processing"
     >
@@ -189,10 +189,10 @@ return [
 public function test_user_can_logout()
 {
     $user = User::factory()->create();
-    
+
     $response = $this->actingAs($user)
         ->post('/logout');
-        
+
     $response->assertRedirect('/');
     $this->assertGuest();
 }
@@ -205,9 +205,9 @@ public function test_logout_clears_session()
 {
     $user = User::factory()->create();
     $this->actingAs($user);
-    
+
     $this->post('/logout');
-    
+
     $this->assertGuest();
     $this->assertSessionMissing('auth');
 }
@@ -217,4 +217,4 @@ public function test_logout_clears_session()
 
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
 - [Best Practices Filament](./FILAMENT_BEST_PRACTICES.md)
-- [Routing Best Practices](./ROUTING_BEST_PRACTICES.md) 
+- [Routing Best Practices](./ROUTING_BEST_PRACTICES.md)

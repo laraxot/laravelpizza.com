@@ -7,7 +7,7 @@ section: content
 
 # Il file xra.php {#il-file-xra}
 
-Il file xra è uno dei file fondamentali. Ogni configurazione ne deve avere uno. 
+Il file xra è uno dei file fondamentali. Ogni configurazione ne deve avere uno.
 
 Esempio:
 
@@ -51,15 +51,11 @@ Di default viene utilizzata **laravel\Themes\adm_theme\Resources\views\admin\das
 **nome_modulo::admin.dashboard.item** è la blade che dovrà essere creata per ogni modulo.
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di xra.md
 * [xra.md](../../../Xot/docs/install/xra.md)
 * [xra.md](../../../Tenant/docs/it/xra.md)
 * [xra.md](../../../Tenant/docs/it/config/xra.md)
 
-
 ### Versione Incoming
 
-
 ---
-

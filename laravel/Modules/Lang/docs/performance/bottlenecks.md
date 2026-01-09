@@ -16,7 +16,7 @@ File: `app/Actions/Filament/AutoLabelAction.php`
 public function execute($object_class) {
     $cacheKey = "translation_key_".md5($object_class);
     return Cache::tags(['translations'])
-        ->remember($cacheKey, now()->addDay(), 
+        ->remember($cacheKey, now()->addDay(),
             fn() => $this->generateTransKey($object_class)
         );
 }
@@ -25,7 +25,7 @@ public function execute($object_class) {
 protected function findTranslation($key) {
     return LazyCollection::make(function() {
         yield from $this->getTranslationFiles();
-    })->first(fn($file) => 
+    })->first(fn($file) =>
         isset($file[$key])
     );
 }
@@ -51,7 +51,7 @@ public function loadTranslations($locale) {
 // 2. Cache file traduzioni
 protected function getTranslationFile($locale, $group) {
     $cacheKey = "trans_{$locale}_{$group}";
-    return Cache::remember($cacheKey, now()->addHour(), 
+    return Cache::remember($cacheKey, now()->addHour(),
         fn() => $this->loadTranslationFile($locale, $group)
     );
 }
@@ -73,7 +73,7 @@ File: `app/Services/FilamentLabelService.php`
 public function generateLabel($field, $resource) {
     $cacheKey = "label_{$resource}_{$field}";
     return Cache::tags(['filament_labels'])
-        ->remember($cacheKey, now()->addHour(), 
+        ->remember($cacheKey, now()->addHour(),
             fn() => $this->buildLabel($field, $resource)
         );
 }
@@ -135,7 +135,7 @@ File: `app/Services/TranslationRegistryService.php`
 public function registerTranslations() {
     return LazyCollection::make(function() {
         yield from $this->getTranslationPaths();
-    })->each(fn($path) => 
+    })->each(fn($path) =>
         $this->registerPath($path)
     );
 }
@@ -182,7 +182,7 @@ Implementare:
    // Cache strategico
    public function getTranslation($key, $locale) {
        return Cache::tags(['translations'])
-           ->remember("{$locale}.{$key}", 
+           ->remember("{$locale}.{$key}",
                now()->addDay(),
                fn() => $this->lookupTranslation($key, $locale)
            );
@@ -195,7 +195,7 @@ Implementare:
    public function updateTranslations($translations) {
        return collect($translations)
            ->chunk(100)
-           ->each(fn($chunk) => 
+           ->each(fn($chunk) =>
                $this->writeTranslationChunk($chunk)
            );
    }
@@ -213,7 +213,6 @@ Implementare:
    ```
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Xot/docs/bottlenecks.md)
@@ -226,9 +225,6 @@ Implementare:
 * [bottlenecks.md](../../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Patient/docs/roadmap/bottlenecks.md)
 
-
 ### Versione Incoming
 
-
 ---
-

@@ -25,7 +25,7 @@ La struttura base di un form Filament è definita nella classe astratta `XotBase
 abstract class XotBaseResource extends FilamentResource
 {
     // ...
-    
+
     /**
      * @return array<string|int,\Filament\Forms\Components\Component>
      */
@@ -36,7 +36,7 @@ abstract class XotBaseResource extends FilamentResource
         return $form
             ->schema(static::getFormSchema());
     }
-    
+
     // ...
 }
 ```
@@ -138,7 +138,7 @@ use Modules\Cms\Models\Page;
 class PageResource extends XotBaseResource
 {
     protected static ?string $model = Page::class;
-    
+
     // ...
 }
 ```
@@ -152,11 +152,11 @@ public static function getFormSchema(): array
         Forms\Components\TextInput::make('title')
             ->required()
             ->maxLength(255),
-            
+
         Forms\Components\TextInput::make('slug')
             ->required()
             ->unique(ignorable: fn ($record) => $record),
-            
+
         Forms\Components\RichEditor::make('content')
             ->columnSpanFull(),
     ];
@@ -191,7 +191,7 @@ public static function getFormSchema(): array
             ->schema([
                 // Campi per le informazioni base
             ]),
-            
+
         Forms\Components\Section::make('Contenuto')
             ->schema([
                 // Campi per il contenuto
@@ -208,10 +208,10 @@ Forms\Components\Grid::make()
     ->schema([
         Forms\Components\TextInput::make('first_name')
             ->columnSpan(6),
-            
+
         Forms\Components\TextInput::make('last_name')
             ->columnSpan(6),
-            
+
         Forms\Components\Textarea::make('bio')
             ->columnSpan(12),
     ])
@@ -251,12 +251,12 @@ Forms\Components\Tabs::make('Tabs')
             ->schema([
                 // ...
             ]),
-            
+
         Forms\Components\Tabs\Tab::make('Contenuto')
             ->schema([
                 // ...
             ]),
-            
+
         Forms\Components\Tabs\Tab::make('SEO')
             ->schema([
                 // ...
@@ -289,7 +289,7 @@ public static function getFormSchema(): array
                 ->columnSpan(1)
                 ->afterStateUpdated(static fn ($set, $state) => $set('slug', Str::slug($state))),
         ]),
-        
+
         Forms\Components\Section::make('Contenuto della Pagina')->schema([
             PageContent::make('content_blocks')
                 ->label('Blocchi Contenuto')
@@ -355,7 +355,7 @@ trait HasSeoFields
 class PageResource extends XotBaseResource
 {
     use HasSeoFields;
-    
+
     public static function getFormSchema(): array
     {
         return [

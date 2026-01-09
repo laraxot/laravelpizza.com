@@ -74,4 +74,4 @@ Questo documento fornisce linee guida per la gestione delle sessioni utente all'
 - [Best Practices per il Routing](./ROUTING_BEST_PRACTICES.md)
 - [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
 - [Documentazione Volt](./VOLT_BLADE_IMPLEMENTATION.md)
-- [Tema One Documentation](../../Themes/One/docs/README.md) 
+- [Tema One Documentation](../../Themes/One/docs/README.md)

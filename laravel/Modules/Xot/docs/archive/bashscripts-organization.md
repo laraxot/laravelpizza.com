@@ -103,7 +103,7 @@ bashscripts/
 
 #### 8. **translations/** - Gestione Traduzioni
 - `fix_all_english_translations.sh` - Fix traduzioni inglesi
-- `fix_<nome progetto>_translations.sh` - Fix traduzioni 
+- `fix_<nome progetto>_translations.sh` - Fix traduzioni
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
@@ -119,14 +119,14 @@ bashscripts/
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
-- `fix_<nome progetto>_translations.sh` - Fix traduzioni 
-- `fix_<nome progetto>_translations.sh` - Fix traduzioni 
+- `fix_<nome progetto>_translations.sh` - Fix traduzioni
+- `fix_<nome progetto>_translations.sh` - Fix traduzioni
 - `fix_<nome progetto>_translations.sh` - Fix traduzioni <nome progetto>
 - `fix_<nome progetto>_translations.sh` - Fix traduzioni <nome progetto>
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
-- `fix_<nome progetto>_translations.sh` - Fix traduzioni 
-- `fix_<nome progetto>_translations.sh` - Fix traduzioni 
+- `fix_<nome progetto>_translations.sh` - Fix traduzioni
+- `fix_<nome progetto>_translations.sh` - Fix traduzioni
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra
 - `fix_saluteora_translations.sh` - Fix traduzioni SaluteOra

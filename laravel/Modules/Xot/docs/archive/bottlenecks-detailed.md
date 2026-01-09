@@ -142,15 +142,15 @@ final class XotCacheService
     private function determineTags(string $key): array
     {
         $tags = ['xot'];
-        
+
         if (str_contains($key, 'config')) {
             $tags[] = 'config';
         }
-        
+
         if (str_contains($key, 'menu')) {
             $tags[] = 'menu';
         }
-        
+
         return $tags;
     }
 }
@@ -184,7 +184,7 @@ private function setupPerformanceMonitoring(): void
     // Monitoring memoria
     $this->app->terminating(function () {
         $memoryUsage = memory_get_peak_usage(true) / 1024 / 1024;
-        
+
         if ($memoryUsage > 100) {
             Log::channel('xot_performance')
                 ->warning('Alto utilizzo memoria', [
@@ -281,16 +281,14 @@ trait HasXotOptimizations
 }
 ### Versione HEAD
 
-``` 
+```
 ## Collegamenti tra versioni di bottlenecks_detailed.md
 * [bottlenecks_detailed.md](../../../Xot/project_docs/bottlenecks_detailed.md)
 * [bottlenecks_detailed.md](../../../Job/project_docs/bottlenecks_detailed.md)
 * [bottlenecks_detailed.md](../../../Media/project_docs/bottlenecks_detailed.md)
 
-
 ### Versione Incoming
 
-``` 
+```
 
 ---
-

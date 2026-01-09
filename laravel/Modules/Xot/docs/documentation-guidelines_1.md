@@ -1,4 +1,3 @@
-
 # Linee Guida per la Documentazione in Laraxot
 
 Questo documento definisce le best practices per la creazione e la manutenzione della documentazione all'interno del framework Laraxot.
@@ -141,7 +140,7 @@ Esempio:
 Modules\ModuloNome\Models\NomeModello
 ```
 
-**Tabella:** `nome_tabella`  
+**Tabella:** `nome_tabella`
 **Chiave primaria:** `id_nome`
 
 **Attributi principali:**
@@ -248,7 +247,7 @@ Rappresenta un socio dell'associazione.
 Modules\Brain\Models\Socio
 ```
 
-**Tabella:** `socio`  
+**Tabella:** `socio`
 **Chiave primaria:** `id_socio`
 
 **Relazioni:**

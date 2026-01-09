@@ -67,7 +67,6 @@ https://www.twilio.com/blog/how-queue-emails-laravel-php-twilio-sendgrid
 https://codegits.com/sendgrid-laravel-mail/
 https://signup.sendgrid.com/
 
-
 //--- zoho
 
 MAIL_DRIVER=smtp
@@ -77,9 +76,7 @@ MAIL_USERNAME=test@zoho.com
 MAIL_PASSWORD=123456
 MAIL_ENCRYPTION=ssl
 
-
 //--- sendmail
-
 
 //--- swift
 https://www.sitepoint.com/mail-logging-in-laravel-5-3-extending-the-mail-driver/
@@ -89,14 +86,8 @@ https://packagist.org/packages/talandis/laravel-mail-driver
 //--- nexmo
 https://itnext.io/building-driver-based-components-in-laravel-5b390dc25bd9
 
-
-
 //-- da prender spunto
 https://statamic.dev/email
-
-
-
-
 
 //--- links
 https://gabrieleromanato.com/2020/06/laravel-inviare-le-e-mail-usando-lsmtp-locale
@@ -117,15 +108,5 @@ https://laracasts.com/discuss/channels/servers/database-queue-on-shared-hosting
 
 https://stackoverflow.com/questions/46141652/running-laravel-queuework-on-a-shared-hosting
 
-
-
-
-
-
-
-
-
 //--- extra
 https://codegits.com/how-to-use-multiple-databases-in-laravel/
-
-

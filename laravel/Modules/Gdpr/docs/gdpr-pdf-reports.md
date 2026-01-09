@@ -85,17 +85,17 @@ class GdprPdfService
     {
         try {
             $data = $this->prepareComplianceData($options);
-            
+
             $html = view('gdpr::pdf.compliance-report', [
                 'data' => $data,
                 'options' => $options,
                 'generatedAt' => now(),
                 'reportId' => $this->generateReportId(),
             ])->render();
-            
+
             $html2pdf = new Html2Pdf('P', 'A4', 'it', true, 'UTF-8', [15, 20, 15, 20]);
             $html2pdf->setDefaultFont('Helvetica');
-            
+
             // Add watermark for confidentiality
             if ($options['watermark'] ?? false) {
                 $html2pdf->setTestIsImage(false);
@@ -103,15 +103,15 @@ class GdprPdfService
             } else {
                 $html2pdf->writeHTML($html);
             }
-            
+
             return $html2pdf->output('', 'S');
-            
+
         } catch (Html2PdfException $e) {
             $html2pdf->clean();
             throw new GdprPdfGenerationException('Failed to generate GDPR compliance PDF: ' . $e->getMessage());
         }
     }
-    
+
     private function prepareComplianceData(array $options): array
     {
         return [
@@ -123,19 +123,19 @@ class GdprPdfService
             'recommendations' => $this->generateRecommendations(),
         ];
     }
-    
+
     private function getConsentStatistics(array $options): array
     {
         $query = Consent::query();
-        
+
         if (isset($options['date_range'])) {
             $query->whereBetween('created_at', $options['date_range']);
         }
-        
+
         $total = $query->count();
         $active = $query->whereNull('revoked_at')->count();
         $revoked = $total - $active;
-        
+
         return [
             'total_consents' => $total,
             'active_consents' => $active,
@@ -150,7 +150,7 @@ class GdprPdfService
                 ]),
         ];
     }
-    
+
     private function calculateComplianceScore(): array
     {
         $scores = [
@@ -159,16 +159,16 @@ class GdprPdfService
             'data_retention' => $this->scoreDataRetention(),
             'documentation' => $this->scoreDocumentation(),
         ];
-        
+
         $overall = array_sum($scores) / count($scores);
-        
+
         return [
             'overall' => round($overall, 1),
             'components' => $scores,
             'grade' => $this->getComplianceGrade($overall),
         ];
     }
-    
+
     private function getComplianceGrade(float $score): string
     {
         return match(true) {
@@ -198,7 +198,7 @@ class UserConsentReportService
     {
         try {
             $data = $this->prepareUserData($user, $options);
-            
+
             $html = view('gdpr::pdf.user-consent-report', [
                 'user' => $user,
                 'data' => $data,
@@ -206,19 +206,19 @@ class UserConsentReportService
                 'generatedAt' => now(),
                 'requestId' => $this->generateRequestId(),
             ])->render();
-            
+
             $html2pdf = new Html2Pdf('P', 'A4', 'it', true, 'UTF-8', [20, 25, 20, 25]);
             $html2pdf->setDefaultFont('Helvetica');
             $html2pdf->writeHTML($html);
-            
+
             return $html2pdf->output('', 'S');
-            
+
         } catch (Html2PdfException $e) {
             $html2pdf->clean();
             throw new GdprPdfGenerationException('Failed to generate user consent PDF: ' . $e->getMessage());
         }
     }
-    
+
     private function prepareUserData($user, array $options): array
     {
         return [
@@ -229,16 +229,16 @@ class UserConsentReportService
             'data_retention' => $this->getUserDataRetention($user),
         ];
     }
-    
+
     private function getUserConsents($user, array $options): array
     {
         $query = Consent::where('subject_id', $user->id)
                         ->with('treatment');
-        
+
         if (isset($options['date_range'])) {
             $query->whereBetween('created_at', $options['date_range']);
         }
-        
+
         return $query->orderBy('created_at', 'desc')
                     ->get()
                     ->map(fn($consent) => [
@@ -278,7 +278,7 @@ class UserConsentReportService
                 </td>
                 <td style="width: 40%; text-align: right; font-size: 9pt;">
                     Generated: {{ $generatedAt->format('d/m/Y H:i') }}<br>
-                    Period: {{ $options['period']['start']->format('d/m/Y') }} - 
+                    Period: {{ $options['period']['start']->format('d/m/Y') }} -
                             {{ $options['period']['end']->format('d/m/Y') }}<br>
                     Status: <strong>CONFIDENTIAL</strong>
                 </td>
@@ -290,7 +290,7 @@ class UserConsentReportService
     <!-- Executive Summary -->
     <div style="margin: 15mm 0;">
         <h2 style="font-size: 14pt; color: #2c3e50; margin-bottom: 8mm;">Executive Summary</h2>
-        
+
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 10mm;">
             <tr>
                 <td style="width: 50%; padding: 8mm; background-color: #f8f9fa; border: 1px solid #dee2e6;">
@@ -350,7 +350,7 @@ class UserConsentReportService
     <!-- Consent Statistics -->
     <div style="margin: 15mm 0;">
         <h2 style="font-size: 14pt; color: #2c3e50; margin-bottom: 8mm;">Consent Management</h2>
-        
+
         <table style="width: 100%; border-collapse: collapse; margin-bottom: 10mm;">
             <tr>
                 <td style="width: 25%; padding: 8mm; background-color: #3498db; color: white;">
@@ -427,7 +427,7 @@ class UserConsentReportService
     <!-- Recommendations -->
     <div style="margin: 15mm 0;">
         <h2 style="font-size: 14pt; color: #2c3e50; margin-bottom: 8mm;">Recommendations</h2>
-        
+
         @foreach($data['recommendations'] as $recommendation)
         <div style="margin-bottom: 8mm; padding: 8mm; background-color: #f8f9fa; border-left: 4px solid #3498db;">
             <div style="font-size: 11pt; font-weight: bold; margin-bottom: 3mm;">
@@ -498,7 +498,7 @@ class UserConsentReportService
 
         <!-- Consents -->
         <h2 style="font-size: 14pt; margin-bottom: 8mm;">Consent Records</h2>
-        
+
         @foreach($data['consents'] as $consent)
         <div style="margin-bottom: 10mm; padding: 8mm; border: 1px solid #dee2e6;">
             <table style="width: 100%; border-collapse: collapse; font-size: 9pt;">
@@ -592,7 +592,7 @@ class ExportComplianceReportAction extends Action
                     'format' => $data['format'] ?? 'detailed',
                     'watermark' => $data['watermark'] ?? false,
                 ]);
-                
+
                 return response()->streamDownload(function () use ($pdf) {
                     echo $pdf;
                 }, "gdpr_compliance_report_{$data['start_date']}_to_{$data['end_date']}.pdf");
@@ -602,12 +602,12 @@ class ExportComplianceReportAction extends Action
                     ->label('Start Date')
                     ->required()
                     ->default(now()->subYear()),
-                
+
                 \Filament\Forms\Components\DatePicker::make('end_date')
                     ->label('End Date')
                     ->required()
                     ->default(now()),
-                
+
                 \Filament\Forms\Components\CheckboxList::make('sections')
                     ->label('Include Sections')
                     ->options([
@@ -617,7 +617,7 @@ class ExportComplianceReportAction extends Action
                         'retention_policy' => 'Data Retention Policy',
                     ])
                     ->default(['consents', 'audit_trail']),
-                
+
                 \Filament\Forms\Components\Select::make('format')
                     ->label('Report Format')
                     ->options([
@@ -625,7 +625,7 @@ class ExportComplianceReportAction extends Action
                         'detailed' => 'Detailed',
                     ])
                     ->default('detailed'),
-                
+
                 \Filament\Forms\Components\Toggle::make('watermark')
                     ->label('Add Confidential Watermark')
                     ->default(true),
@@ -652,7 +652,7 @@ class ExportUserConsentAction extends Action
                     includeLegalBasis: true,
                     format: 'gdpr_compliant'
                 );
-                
+
                 return response()->streamDownload(function () use ($pdf) {
                     echo $pdf;
                 }, "user_consent_{$record->id}_{$record->name}.pdf");
@@ -684,7 +684,7 @@ class GdprPdfTest extends TestCase
     {
         // Create test data
         Consent::factory()->count(50)->create();
-        
+
         $service = app(GdprPdfService::class);
         $pdfContent = $service->generateComplianceReport([
             'period' => [
@@ -692,13 +692,13 @@ class GdprPdfTest extends TestCase
                 'end' => now(),
             ]
         ]);
-        
+
         $this->assertStringStartsWith('%PDF', $pdfContent);
         $this->assertGreaterThan(2000, strlen($pdfContent));
         $this->assertStringContainsString('GDPR Compliance Report', $pdfContent);
         $this->assertStringContainsString('Compliance Score', $pdfContent);
     }
-    
+
     /** @test */
     public function it_includes_watermark_when_requested()
     {
@@ -706,24 +706,24 @@ class GdprPdfTest extends TestCase
         $pdfContent = $service->generateComplianceReport([
             'watermark' => true,
         ]);
-        
+
         $this->assertStringStartsWith('%PDF', $pdfContent);
         // Watermark would be visible in the actual PDF
     }
-    
+
     /** @test */
     public function it_handles_large_datasets_efficiently()
     {
         // Create large dataset
         Consent::factory()->count(5000)->create();
-        
+
         $startTime = microtime(true);
-        
+
         $service = app(GdprPdfService::class);
         $pdfContent = $service->generateComplianceReport();
-        
+
         $duration = microtime(true) - $startTime;
-        
+
         // Should generate within reasonable time
         $this->assertLessThan(10, $duration);
         $this->assertStringStartsWith('%PDF', $pdfContent);
@@ -738,7 +738,7 @@ class GdprPdfTest extends TestCase
 public function admin_can_export_compliance_report()
 {
     $admin = User::factory()->create(['role' => 'admin']);
-    
+
     $response = $this->actingAs($admin)
                     ->post('/gdpr/export-compliance-report', [
                         'start_date' => now()->subMonth()->format('Y-m-d'),
@@ -746,7 +746,7 @@ public function admin_can_export_compliance_report()
                         'sections' => ['consents', 'audit_trail'],
                         'format' => 'detailed',
                     ]);
-    
+
     $response->assertSuccessful();
     $this->assertEquals('application/pdf', $response->headers->get('Content-Type'));
 }
@@ -768,7 +768,7 @@ class GdprPdfService
             'last_consent' => Consent::max('updated_at'),
             'last_event' => Event::max('created_at'),
         ]));
-        
+
         return Cache::remember($cacheKey, 3600, function () use ($options) {
             return $this->generateComplianceReport($options);
         });
@@ -785,7 +785,7 @@ private function optimizeForLargeDatasets($query)
     $query->chunk(1000, function ($consents) {
         // Process in chunks
     });
-    
+
     // Limit data for PDF
     return $query->limit(1000)->get();
 }
@@ -800,21 +800,21 @@ public function generateWithErrorHandling(array $options = []): string
 {
     try {
         return $this->generateComplianceReport($options);
-        
+
     } catch (Html2PdfException $e) {
         Log::error('GDPR PDF generation failed', [
             'error' => $e->getMessage(),
             'options' => $options,
         ]);
-        
+
         // Generate simplified fallback
         return $this->generateFallbackReport($options);
-        
+
     } catch (Exception $e) {
         Log::error('Unexpected error in GDPR PDF generation', [
             'error' => $e->getMessage(),
         ]);
-        
+
         throw new GdprPdfGenerationException('Failed to generate GDPR report');
     }
 }
@@ -831,8 +831,8 @@ public function generateWithErrorHandling(array $options = []): string
 
 ---
 
-**Last Updated:** 2025-12-09  
-**Version:** 1.0.0  
-**HTML2PDF Version:** 5.2.x  
-**PHPStan Level:** 10 ✅  
+**Last Updated:** 2025-12-09
+**Version:** 1.0.0
+**HTML2PDF Version:** 5.2.x
+**PHPStan Level:** 10 ✅
 **GDPR Compliant:** ✅

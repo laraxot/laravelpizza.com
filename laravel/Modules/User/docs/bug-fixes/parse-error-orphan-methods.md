@@ -77,7 +77,7 @@ class RegisterWidget extends XotBaseWidget
     {
         // implementazione
     }
-    
+
     protected function method2(): array
     {
         // implementazione

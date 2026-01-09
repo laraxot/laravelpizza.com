@@ -208,7 +208,7 @@ Questo documento riassume la logica di business, la filosofia, le regole critich
 Il "zen" del progetto TechPlanner risiede nell'equilibrio tra:
 
 - **Funzionalità avanzate** e **semplicità di sviluppo**
-- **Flessibilità** e **coerenza architetturale**  
+- **Flessibilità** e **coerenza architetturale**
 - **Sicurezza** e **usabilità**
 - **Estensibilità** e **manutenibilità**
 - **Performance** e **leggibilità del codice**

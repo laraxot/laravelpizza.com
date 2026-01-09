@@ -130,4 +130,3 @@ L'errore si verifica anche durante PHPStan (`./vendor/bin/phpstan analyse`), il 
 - [Laravel Folio Documentation](https://laravel.com/docs/folio)
 - Documentazione Folio nel progetto: `laravel/Modules/Cms/docs/`
 - Service Provider: `laravel/Modules/Cms/app/Providers/FolioVoltServiceProvider.php`
-

@@ -49,9 +49,8 @@ Tabelle trovate: users, migrations, password_resets
 - Rimossi conflitti di merge
 - Migliorata la gestione degli errori
 - Aggiunta validazione input
-- Ottimizzata la query di estrazione tabelle 
+- Ottimizzata la query di estrazione tabelle
 
 ## Collegamenti tra versioni di database-schema-exporter.md
 * [database-schema-exporter.md](../../../Xot/project_docs/commands/database-schema-exporter.md)
 * [database-schema-exporter.md](../../../Xot/project_docs/console/commands/database-schema-exporter.md)
-

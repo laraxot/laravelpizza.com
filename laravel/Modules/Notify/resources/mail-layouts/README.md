@@ -42,4 +42,4 @@ class WelcomeMail extends TemplateMailable
 - I contenuti dinamici devono essere definiti nel database
 - I layout devono essere compatibili con i client email
 - Usare stili inline per massima compatibilità
-- Testare su vari dispositivi e client 
+- Testare su vari dispositivi e client

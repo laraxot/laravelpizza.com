@@ -116,7 +116,6 @@ composer format        # Formatta il codice
 
 ### Versione HEAD
 
-
 ### Versione Incoming
 
 # Modulo Tenant
@@ -237,9 +236,9 @@ composer format        # Formatta il codice
 
 ---
 
-Le modifiche vengono tracciate nel repository GitHub. 
+Le modifiche vengono tracciate nel repository GitHub.
 
 ## Collegamenti sulla risoluzione dei conflitti
 
 - [Risoluzione conflitti nel modulo Tenant](risoluzione_conflitti.md)
-- [Linee guida globali per la risoluzione dei conflitti git](../../../docs/risoluzione_conflitti_git.md) 
+- [Linee guida globali per la risoluzione dei conflitti git](../../../docs/risoluzione_conflitti_git.md)

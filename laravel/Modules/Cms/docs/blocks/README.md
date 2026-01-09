@@ -163,15 +163,15 @@ export default {
 ```scss
 .text-block {
     @apply prose max-w-none;
-    
+
     &.left {
         @apply text-left;
     }
-    
+
     &.center {
         @apply text-center;
     }
-    
+
     &.right {
         @apply text-right;
     }
@@ -222,7 +222,7 @@ class TextBlockTest extends TestCase
             'content' => '# Test',
             'format' => 'markdown',
         ]);
-        
+
         $this->assertStringContainsString(
             '<h1>Test</h1>',
             $block->render()
@@ -242,7 +242,7 @@ class BlockApiTest extends TestCase
             'type' => 'text',
             'content' => 'Test content',
         ]);
-        
+
         $response->assertCreated();
         $this->assertDatabaseHas('blocks', [
             'type' => 'text',
@@ -332,4 +332,3 @@ class BlockApiTest extends TestCase
 * [README.md](laravel/Modules/Cms/docs/components/README.md)
 * [README.md](laravel/Themes/Two/docs/README.md)
 * [README.md](laravel/Themes/One/docs/README.md)
-

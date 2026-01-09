@@ -252,8 +252,7 @@ class DataExportFactory extends Factory
 - [README Principale](./README.md)
 - [Implementazione](./implementation.md)
 - [Configurazione](./configuration.md)
-- [Testing](./testing.md) 
+- [Testing](./testing.md)
 ## Collegamenti tra versioni di migrations.md
 * [migrations.md](../../Notify/docs/migrations.md)
 * [migrations.md](../../Activity/docs/database/migrations.md)
-

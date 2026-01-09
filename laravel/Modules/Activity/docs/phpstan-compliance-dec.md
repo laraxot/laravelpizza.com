@@ -2,8 +2,8 @@
 
 ## 🎯 Status: COMPLIANCE NATIVA
 
-**Data**: 13 Dicembre 2025  
-**PHPStan Level**: 10 (MAX)  
+**Data**: 13 Dicembre 2025
+**PHPStan Level**: 10 (MAX)
 **Errori**: 0 (nativi)
 
 ## 📋 Stato del Modulo

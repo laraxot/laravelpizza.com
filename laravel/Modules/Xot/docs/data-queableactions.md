@@ -57,7 +57,7 @@ class RatingData extends Data
         public ?string $rated_id = null,
     ) {
     }
-    
+
     /**
      * Esempio di metodo factory per creare una nuova istanza
      */
@@ -78,7 +78,7 @@ class RatingData extends Data
 
 1. **Type Safety**: Tipi di dati espliciti per tutti i campi
 2. **Validazione Integrata**: Possibilità di integrare regole di validazione
-3. **Serializzazione**: Facile conversione da/a JSON 
+3. **Serializzazione**: Facile conversione da/a JSON
 4. **Immutabilità**: I dati non possono essere modificati dopo la creazione
 5. **API Resource**: Facile integrazione con le API Resource di Laravel
 
@@ -138,7 +138,7 @@ class CreateRatingAction
         $rating->rated_type = $data->rated_type;
         $rating->rated_id = $data->rated_id;
         $rating->save();
-        
+
         return $rating;
     }
 }
@@ -167,7 +167,7 @@ class RatingController extends Controller
             'rated_type' => 'required|string',
             'rated_id' => 'required|string',
         ]);
-        
+
         $ratingData = new RatingData(
             value: $validated['value'],
             comment: $validated['comment'],
@@ -175,9 +175,9 @@ class RatingController extends Controller
             rated_type: $validated['rated_type'],
             rated_id: $validated['rated_id'],
         );
-        
+
         $rating = $createRatingAction->execute($ratingData);
-        
+
         return redirect()->back()->with('success', 'Valutazione creata con successo');
     }
 }
@@ -224,7 +224,7 @@ class RatingService
     {
         // Logica di creazione
     }
-    
+
     public function updateRating(Rating $rating, array $data)
     {
         // Logica di aggiornamento
@@ -239,7 +239,7 @@ class RatingService
 class CreateRatingAction
 {
     use QueueableAction;
-    
+
     public function execute(RatingData $data): Rating
     {
         // Logica di creazione
@@ -250,7 +250,7 @@ class CreateRatingAction
 class UpdateRatingAction
 {
     use QueueableAction;
-    
+
     public function execute(Rating $rating, RatingData $data): Rating
     {
         // Logica di aggiornamento
@@ -266,4 +266,4 @@ class UpdateRatingAction
 4. **Facile Testabilità**: Componenti isolati e facili da testare
 5. **Scalabilità**: Facile aggiunta di nuove funzionalità
 6. **Manutenibilità**: Codice più leggibile e facile da mantenere
-7. **Compatibilità con PHPStan**: Struttura adatta per analisi PHPStan di livello 9 
+7. **Compatibilità con PHPStan**: Struttura adatta per analisi PHPStan di livello 9

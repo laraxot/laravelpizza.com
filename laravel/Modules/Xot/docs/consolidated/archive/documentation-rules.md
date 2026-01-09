@@ -34,4 +34,4 @@ Le linee guida complete per la documentazione sono disponibili in:
 ## Risorse Aggiuntive
 - [Changelog](../../../Xot/project_docs/changelog/README.md)
 - [Contributing](../../../Xot/project_docs/contributing.md)
-- [Security](../../../Xot/project_docs/security.md) 
+- [Security](../../../Xot/project_docs/security.md)

@@ -170,7 +170,7 @@ Modulo specifico per Modena, attualmente non utilizzato attivamente.
 
 ### Moduli Critici per Business Logic
 1. **** - Core sanitario ✅ Completo
-2. **User** - Autenticazione ✅ Completo  
+2. **User** - Autenticazione ✅ Completo
 3. **Notify** - Comunicazioni ✅ Completo
 4. **Media** - File management ✅ Completo
 5. **Geo** - Localizzazione ✅ Completo

@@ -33,10 +33,10 @@ use Spatie\Activitylog\Traits\LogsActivity;
 class User extends Model
 {
     use LogsActivity;
-    
+
     protected static $logAttributes = ['name', 'email', 'status'];
     protected static $logName = 'user_activity';
-    
+
     // Logging automatico su modifiche
     protected static $logOnlyDirty = true;
     protected static $submitEmptyLogs = false;
@@ -83,7 +83,7 @@ class EventStore
 class ActivityStatsWidget extends XotBaseWidget
 {
     protected static string $view = 'activity::filament.widgets.activity-stats';
-    
+
     public function getViewData(): array
     {
         return [
@@ -141,7 +141,7 @@ php artisan activity:setup-cleanup
 // config/activity.php
 return [
     'enabled' => env('ACTIVITY_LOGGER_ENABLED', true),
-    
+
     'log_events' => [
         'eloquent' => [
             'created' => true,
@@ -154,7 +154,7 @@ return [
             'failed' => true,
         ],
     ],
-    
+
     'cleanup' => [
         'enabled' => true,
         'older_than_days' => 90,
@@ -202,7 +202,7 @@ php artisan activity:test-events
 class ActivityResource extends XotBaseResource
 {
     protected static ?string $model = Activity::class;
-    
+
     public static function getFormSchema(): array
     {
         return [
@@ -229,7 +229,7 @@ class ActivityResource extends XotBaseResource
 class ActivityStatsWidget extends XotBaseWidget
 {
     protected static string $view = 'activity::filament.widgets.activity-stats';
-    
+
     public function getViewData(): array
     {
         return [
@@ -252,9 +252,9 @@ class UserService
     public function updateProfile(User $user, array $data): void
     {
         $oldData = $user->toArray();
-        
+
         $user->update($data);
-        
+
         activity()
             ->performedOn($user)
             ->causedBy(auth()->user())
@@ -278,7 +278,7 @@ class UserRegisteredEvent implements DomainEvent
         public readonly string $email,
         public readonly DateTimeImmutable $occurredAt,
     ) {}
-    
+
     public function toArray(): array
     {
         return [
@@ -302,7 +302,7 @@ class ActivityRepository
             ->limit($limit)
             ->get();
     }
-    
+
     public function getActivitiesByUser(User $user): Collection
     {
         return Activity::where('causer_id', $user->id)
@@ -411,11 +411,11 @@ php artisan activity:test-dashboard
 
 ---
 
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
-**📦 Versione**: 2.3.0  
-**🐛 PHPStan Level 9**: File core certificati ✅  
-**🌐 Translation Standards**: File traduzione certificati ✅  
-**🚀 Performance**: 94/100 score 
+**🔄 Ultimo aggiornamento**: 27 Gennaio 2025
+**📦 Versione**: 2.3.0
+**🐛 PHPStan Level 9**: File core certificati ✅
+**🌐 Translation Standards**: File traduzione certificati ✅
+**🚀 Performance**: 94/100 score
 # Modulo Activity - Documentazione
 
 ## Panoramica
@@ -479,7 +479,7 @@ use Modules\Activity\Traits\LogsActivity;
 class User extends Authenticatable
 {
     use LogsActivity;
-    
+
     protected static $logAttributes = ['name', 'email'];
     protected static $logOnlyDirty = true;
 }
@@ -536,4 +536,3 @@ Elimina un'attività (soft delete).
 - [Deployment](./deployment.md)
 
 *Ultimo aggiornamento: gennaio 2025*
-

@@ -43,4 +43,4 @@ Per correggere questi errori, seguiremo un approccio sistematico:
 2. **Modulo User** - Problemi con autenticazione, password e relazioni tra utenti.
 3. **Modulo Notify** - Errori nelle relazioni e nei metodi dei modelli.
 
-Procederemo analizzando e correggendo gli errori modulo per modulo, partendo dai casi più semplici e ripetitivi per poi affrontare quelli più complessi. 
+Procederemo analizzando e correggendo gli errori modulo per modulo, partendo dai casi più semplici e ripetitivi per poi affrontare quelli più complessi.

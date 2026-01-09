@@ -22,7 +22,6 @@ namespace Modules\Xot\Console\Commands;
 namespace Modules\Xot\app\Console\Commands;
 ### Versione HEAD
 
-
 ### Versione Incoming
 
 namespace Modules\Xot\Console\Commands;
@@ -66,7 +65,7 @@ class DatabaseSchemaExportCommand extends Command
     public function handle(): int
     {
         // Implementazione
-        
+
         return 0;
     }
 }

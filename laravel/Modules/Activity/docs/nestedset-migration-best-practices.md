@@ -21,21 +21,21 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi specifici per Activity
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
             $table->string('icon')->nullable();
             $table->string('color')->default('#6b7280');
-            
+
             // NestedSet per gerarchia categorie
             NestedSet::columns($table);
-            
+
             // Campi specifici del modulo
             $table->boolean('is_active')->default(true);
             $table->integer('sort_order')->default(0);
-            
+
             $table->timestamps();
         });
 
@@ -44,7 +44,7 @@ return new class extends XotBaseMigration
             if (!$this->hasColumn('metadata')) {
                 $table->json('metadata')->nullable()->comment('Dati aggiuntivi per la categoria');
             }
-            
+
             $this->updateTimestamps($table, true);
         });
     }
@@ -64,20 +64,20 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi per tipi di attività
             $table->string('name');
             $table->string('code')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia tipi
             NestedSet::columns($table);
-            
+
             // Configurazioni per tipi
             $table->json('settings')->nullable();
             $table->boolean('requires_approval')->default(false);
             $table->boolean('is_system')->default(false);
-            
+
             $table->timestamps();
         });
     }
@@ -97,20 +97,20 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi per stati workflow
             $table->string('name');
             $table->string('code')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia stati
             NestedSet::columns($table);
-            
+
             // Configurazioni workflow
             $table->json('transitions')->nullable()->comment('Transizioni possibili da questo stato');
             $table->boolean('is_final')->default(false);
             $table->boolean('is_initial')->default(false);
-            
+
             $table->timestamps();
         });
     }
@@ -130,7 +130,7 @@ use Kalnoy\Nestedset\NodeTrait;
 class ActivityCategory extends Model
 {
     use NodeTrait;
-    
+
     protected $fillable = [
         'name',
         'slug',
@@ -141,19 +141,19 @@ class ActivityCategory extends Model
         'sort_order',
         'metadata',
     ];
-    
+
     protected $casts = [
         'metadata' => 'array',
         'is_active' => 'boolean',
         'sort_order' => 'integer',
     ];
-    
+
     // Scopes specifici per Activity
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
     }
-    
+
     public function scopeOrdered($query)
     {
         return $query->orderBy('sort_order')->orderBy('name');

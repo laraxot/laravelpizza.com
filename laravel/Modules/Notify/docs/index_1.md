@@ -170,7 +170,7 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
   - Corretti 16 errori principali nel modulo Notify
   - Documentazione completa in [phpstan-level10-analysis.md](./phpstan-level10-analysis.md)
   - Pattern di correzione documentati per riutilizzo futuro
-- **Risoluzione Problemi Server**: 
+- **Risoluzione Problemi Server**:
   - Tabella cache creata manualmente
   - File traduzioni tenant-specifici creati
   - Migrazione workers corretta (duplicazione colonne)

@@ -225,4 +225,3 @@ assert($result === null || is_string($result));  // ✅ Never array
 **Status**: ✅ Implementato e pronto all'uso
 **Priorità**: CRITICA - Risolve 374 errori PHPStan (24% del totale)
 **Autore**: Claude Sonnet 4.5
-

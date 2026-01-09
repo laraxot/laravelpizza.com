@@ -1,4 +1,4 @@
-# Guida Completa ai Provider di Notifiche 
+# Guida Completa ai Provider di Notifiche
 
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di .
 Questo documento fornisce una panoramica completa dell'architettura standardizzata per tutti i provider di notifiche supportati nel modulo Notify di SaluteOra.
@@ -59,9 +59,9 @@ use Spatie\QueueableAction\QueueableAction;
 final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 {
     use QueueableAction;
-    
+
     // Costruttore con configurazione
-    
+
     // Metodo execute standardizzato
     public function execute({Type}Data $data): array
     {
@@ -76,7 +76,7 @@ final class Send{Provider}{Type}Action implements {Type}ProviderActionInterface
 // config/{type}.php
 return [
     'default' => env('{TYPE}_PROVIDER', 'default_provider'),
-    
+
     'providers' => [
         'provider1' => [
             // Configurazione specifica
@@ -85,7 +85,7 @@ return [
             // Configurazione specifica
         ],
     ],
-    
+
     // Parametri globali
     'from' => env('{TYPE}_FROM'),
     'debug' => (bool) env('{TYPE}_DEBUG', false),

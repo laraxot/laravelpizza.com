@@ -78,9 +78,9 @@ use Filament\Forms\Components\Select;
 class DashboardSettings extends XotBasePage
 {
     protected static ?string $navigationIcon = 'heroicon-o-cog';
-    
+
     protected static string $view = 'saluteora::filament.pages.dashboard-settings';
-    
+
     protected function getFormFields(): array
     {
         return [
@@ -103,7 +103,7 @@ class DashboardSettings extends XotBasePage
             ]
         ];
     }
-    
+
     public function submit(): void
     {
         $this->form->validate();

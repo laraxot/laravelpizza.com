@@ -40,4 +40,4 @@ Il comando `DatabaseSchemaExportCommand` esporta lo schema del database in forma
 - Migliorata la gestione degli errori
 - Aggiunto supporto per più tipi di database
 - Ottimizzata la struttura JSON
-- Standardizzazione dei messaggi in italiano 
+- Standardizzazione dei messaggi in italiano

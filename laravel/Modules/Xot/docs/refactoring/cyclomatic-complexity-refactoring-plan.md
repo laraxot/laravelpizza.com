@@ -1,7 +1,7 @@
 # Cyclomatic Complexity Refactoring Plan - Module Xot
 
-**Created:** 2025-10-01  
-**Status:** In Progress  
+**Created:** 2025-10-01
+**Status:** In Progress
 **Priority:** High
 
 ---
@@ -23,8 +23,8 @@ This document outlines the refactoring plan for methods with high cyclomatic com
 ## 🔴 High Complexity Methods Identified
 
 ### 1. ArtisanService::act (Complexity: 22)
-**File:** `app/Services/ArtisanService.php`  
-**Current Complexity:** 22  
+**File:** `app/Services/ArtisanService.php`
+**Current Complexity:** 22
 **Target Complexity:** ≤10
 
 **Issues:**
@@ -51,8 +51,8 @@ This document outlines the refactoring plan for methods with high cyclomatic com
 ---
 
 ### 2. SearchTextInDbCommand::handle (Complexity: 18)
-**File:** `app/Console/Commands/SearchTextInDbCommand.php`  
-**Current Complexity:** 18  
+**File:** `app/Console/Commands/SearchTextInDbCommand.php`
+**Current Complexity:** 18
 **Target Complexity:** ≤10
 
 **Refactoring Strategy:**
@@ -63,8 +63,8 @@ This document outlines the refactoring plan for methods with high cyclomatic com
 ---
 
 ### 3. AssetAction::execute (Complexity: 17)
-**File:** `app/Actions/File/AssetAction.php`  
-**Current Complexity:** 17  
+**File:** `app/Actions/File/AssetAction.php`
+**Current Complexity:** 17
 **Target Complexity:** ≤10
 
 **Refactoring Strategy:**
@@ -75,8 +75,8 @@ This document outlines the refactoring plan for methods with high cyclomatic com
 ---
 
 ### 4. RangeIntersectAction::execute (Complexity: 13)
-**File:** `app/Actions/Array/RangeIntersectAction.php`  
-**Current Complexity:** 13  
+**File:** `app/Actions/Array/RangeIntersectAction.php`
+**Current Complexity:** 13
 **Target Complexity:** ≤10
 
 **Refactoring Strategy:**
@@ -87,8 +87,8 @@ This document outlines the refactoring plan for methods with high cyclomatic com
 ---
 
 ### 5. GetTransKeyAction::execute (Complexity: 12)
-**File:** `app/Actions/GetTransKeyAction.php`  
-**Current Complexity:** 12  
+**File:** `app/Actions/GetTransKeyAction.php`
+**Current Complexity:** 12
 **Target Complexity:** ≤10
 
 **Refactoring Strategy:**
@@ -99,8 +99,8 @@ This document outlines the refactoring plan for methods with high cyclomatic com
 ---
 
 ### 6. GetComponentsAction::execute (Complexity: 12)
-**File:** `app/Actions/File/GetComponentsAction.php`  
-**Current Complexity:** 12  
+**File:** `app/Actions/File/GetComponentsAction.php`
+**Current Complexity:** 12
 **Target Complexity:** ≤10
 
 **Refactoring Strategy:**
@@ -111,8 +111,8 @@ This document outlines the refactoring plan for methods with high cyclomatic com
 ---
 
 ### 7. TransTrait::transFunc (Complexity: 11)
-**File:** `app/Filament/Traits/TransTrait.php`  
-**Current Complexity:** 11  
+**File:** `app/Filament/Traits/TransTrait.php`
+**Current Complexity:** 11
 **Target Complexity:** ≤10
 
 **Refactoring Strategy:**
@@ -123,8 +123,8 @@ This document outlines the refactoring plan for methods with high cyclomatic com
 ---
 
 ### 8. SafeArrayCastAction::execute (Complexity: 11)
-**File:** `app/Actions/Cast/SafeArrayCastAction.php`  
-**Current Complexity:** 11  
+**File:** `app/Actions/Cast/SafeArrayCastAction.php`
+**Current Complexity:** 11
 **Target Complexity:** ≤10
 
 **Refactoring Strategy:**
@@ -135,8 +135,8 @@ This document outlines the refactoring plan for methods with high cyclomatic com
 ---
 
 ### 9. GetViewNameSpacePathAction::execute (Complexity: 11)
-**File:** `app/Actions/File/GetViewNameSpacePathAction.php`  
-**Current Complexity:** 11  
+**File:** `app/Actions/File/GetViewNameSpacePathAction.php`
+**Current Complexity:** 11
 **Target Complexity:** ≤10
 
 **Refactoring Strategy:**
@@ -205,5 +205,5 @@ For each refactored method:
 
 ---
 
-*Document maintained by: Development Team*  
+*Document maintained by: Development Team*
 *Last Updated: 2025-10-01*

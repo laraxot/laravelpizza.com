@@ -92,7 +92,7 @@ Mail::to($recipient)->send($email);
 ```
 Approcci precedenti:
 ├── GetSeasonalEmailLayoutAction (101 righe di logica semplice)
-├── DetermineSeasonalLayoutPathAction (70+ righe di logica semplice)  
+├── DetermineSeasonalLayoutPathAction (70+ righe di logica semplice)
 └── 2 azioni separate per logica identica!
 ```
 

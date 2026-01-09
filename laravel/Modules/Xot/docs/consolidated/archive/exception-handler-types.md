@@ -23,18 +23,18 @@ public static function handles(Exceptions $exceptions): void
 {
     $exceptions->render(function (HttpException $e, Request $request) {
         $status_code = $e->getStatusCode();
-        
+
         if ($request->wantsJson()) {
             return response()->json([
                 'message' => $e->getMessage(),
             ], $status_code);
         }
-        
+
         $view = 'pub_theme::errors.' . $status_code;
         if (!view()->exists($view)) {
-            throw new \Exception('view not found: [' . $view . '] view path:' . app(GetViewPathAction::class)->execute($view));    
+            throw new \Exception('view not found: [' . $view . '] view path:' . app(GetViewPathAction::class)->execute($view));
         }
-        
+
         $view_params = ['exception' => $e];
         return response()->view($view, $view_params, $status_code);
     });
@@ -57,7 +57,7 @@ use Modules\Xot\Actions\View\GetViewPathAction;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
-class ExceptionHandler 
+class ExceptionHandler
 {
     /**
      * Configura la gestione delle eccezioni.
@@ -69,18 +69,18 @@ class ExceptionHandler
     {
         $exceptions->render(function (HttpException $e, Request $request) {
             $status_code = $e->getStatusCode();
-            
+
             if ($request->wantsJson()) {
                 return response()->json([
                     'message' => $e->getMessage(),
                 ], $status_code);
             }
-            
+
             $view = 'pub_theme::errors.' . $status_code;
             if (!view()->exists($view)) {
-                throw new \Exception('view not found: [' . $view . '] view path:' . app(GetViewPathAction::class)->execute($view));    
+                throw new \Exception('view not found: [' . $view . '] view path:' . app(GetViewPathAction::class)->execute($view));
             }
-            
+
             $view_params = ['exception' => $e];
             return response()->view($view, $view_params, $status_code);
         });
@@ -132,7 +132,7 @@ declare(strict_types=1);
 
 ```php
 if (!view()->exists($view)) {
-    throw new \Exception('view not found: [' . $view . '] view path:' . app(GetViewPathAction::class)->execute($view));    
+    throw new \Exception('view not found: [' . $view . '] view path:' . app(GetViewPathAction::class)->execute($view));
 }
 ```
 
@@ -188,4 +188,4 @@ class ModuleExceptionHandler
 - [PHPStan Collection Types](../phpstan-collection-types.md)
 - [Exception Handling Guidelines](../development-rules.md)
 
-*Ultimo aggiornamento: Gennaio 2025* 
+*Ultimo aggiornamento: Gennaio 2025*

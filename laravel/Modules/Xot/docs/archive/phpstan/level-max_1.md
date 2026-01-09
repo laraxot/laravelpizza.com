@@ -66,4 +66,3 @@ Trovati 4 errori al livello max.
 * [level_max.md](laravel/Modules/Activity/docs/phpstan/level_max.md)
 * [level_max.md](laravel/Modules/Patient/docs/phpstan/level_max.md)
 * [level_max.md](laravel/Modules/Cms/docs/phpstan/level_max.md)
-

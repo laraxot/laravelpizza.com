@@ -45,4 +45,4 @@ parameters:
 
 ## Collegamenti
 - [Documentazione Vite](docs/tools/vite.md)
-- [Configurazione Build](docs/deployment/build-configuration.md) 
+- [Configurazione Build](docs/deployment/build-configuration.md)

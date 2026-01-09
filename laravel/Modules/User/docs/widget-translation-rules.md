@@ -88,7 +88,7 @@ class EditUserWidget extends XotBaseWidget
     <h2 class="text-xl font-semibold mb-4">
         {{ __('user::widgets.edit_user.title') }}
     </h2>
-    
+
     <p class="text-gray-600 mb-6">
         {{ __('user::widgets.edit_user.description') }}
     </p>

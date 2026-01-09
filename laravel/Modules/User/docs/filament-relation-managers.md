@@ -9,7 +9,7 @@ use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
 class TeamsRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'teams';
-    
+
     // ...
 }
 ```
@@ -61,7 +61,7 @@ return [
    ```php
    // ❌ ERRATO: Non usare ->label()
    TextColumn::make('name')->label('Nome')
-   
+
    // ✅ CORRETTO: Lasciare che il sistema gestisca la traduzione
    TextColumn::make('name')
    ```
@@ -94,8 +94,8 @@ use Filament\Tables\Columns\TextColumn;
 - [Documentazione Filament RelationManager](https://filamentphp.com/project_docs/tables#relation-managers)
 - [XotBaseRelationManager](../Xot/project_docs/filament-relation-managers.md)
 - [Sistema di Traduzione](../Xot/project_docs/translation-system.md)
-- [Best Practices Filament](../Xot/project_docs/filament-best-practices.md) 
+- [Best Practices Filament](../Xot/project_docs/filament-best-practices.md)
 - [Documentazione Filament RelationManager](https://filamentphp.com/docs/tables#relation-managers)
 - [XotBaseRelationManager](../Xot/docs/filament-relation-managers.md)
 - [Sistema di Traduzione](../Xot/docs/translation-system.md)
-- [Best Practices Filament](../Xot/docs/filament-best-practices.md) 
+- [Best Practices Filament](../Xot/docs/filament-best-practices.md)

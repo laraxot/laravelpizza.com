@@ -25,7 +25,7 @@ Method Modules\Job\Filament\Resources\FailedImportRowResource::getFormSchema() s
            ->required(),
        // altri componenti...
    ];
-   
+
    // A
    return [
        'name' => \Filament\Forms\Components\TextInput::make('name')
@@ -80,4 +80,4 @@ Quando si crea una nuova risorsa Filament:
 
 3. Per il tipo di ritorno:
    - Essere consapevoli del tipo di ritorno atteso dai metodi
-   - Utilizzare PHPStan per verificare la correttezza dei tipi 
+   - Utilizzare PHPStan per verificare la correttezza dei tipi

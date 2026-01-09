@@ -72,4 +72,3 @@ L'HTML attuale in `index.html` ha contenuti per community ma:
 2. **Allineare HTML** al design di laravelpizza.com
 3. **Integrare con modello Event** esistente
 4. **Creare componenti Blade** per eventi/meetup
-

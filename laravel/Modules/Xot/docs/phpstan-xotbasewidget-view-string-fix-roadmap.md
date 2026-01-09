@@ -1,9 +1,9 @@
 # PHPStan Fix Roadmap - XotBaseWidget View-String Error
 
-**Data**: 2025-01-22  
-**Status**: ✅ Completato  
-**Errore**: 1 (risolto)  
-**Modulo**: Xot  
+**Data**: 2025-01-22
+**Status**: ✅ Completato
+**Errore**: 1 (risolto)
+**Modulo**: Xot
 **File**: `app/Filament/Widgets/XotBaseWidget.php`
 
 ---
@@ -49,7 +49,7 @@ Modificare il metodo `resolveView()` per usare un cast PHPDoc:
 private function resolveView(): void
 {
     $view = app(GetViewByClassAction::class)->execute(static::class);
-    
+
     /** @var view-string $view */
     $this->view = $view;
 }
@@ -96,5 +96,5 @@ private function resolveView(): void
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
+**Ultimo aggiornamento**: 2025-01-22
 **Versione**: 1.0.0

@@ -160,4 +160,4 @@ class AppointmentConfirmation extends MailTemplate
 - I layout devono essere HTML valido
 - Il placeholder `{{{ $content }}}` è obbligatorio
 - Testare su diversi client email
-- Mantenere la documentazione aggiornata 
+- Mantenere la documentazione aggiornata

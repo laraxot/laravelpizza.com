@@ -59,7 +59,7 @@ class XotServiceProvider extends ServiceProvider {
 ```php
 // Traits come "mattoncini" componibili
 trait HasExtraTrait {       // Campi extra dinamici
-trait HasCaching {          // Caching intelligente  
+trait HasCaching {          // Caching intelligente
 trait DispatchesDomainEvents { // Eventi di dominio
 trait HasQueryOptimization {   // Query ottimizzate
 ```
@@ -83,7 +83,7 @@ use Modules\Xot\Traits\Updater;
 
 /**
  * XotBaseModel: Il DNA di ogni modello Laraxot
- * 
+ *
  * Fornisce AUTOMATICAMENTE:
  * - Factory pattern con HasXotFactory
  * - Audit trail con Updater (created_by, updated_by)
@@ -139,12 +139,12 @@ abstract class XotBaseModel extends Model
     protected static function boot(): void
     {
         parent::boot();
-        
+
         // Event listeners automatici
         static::creating(function ($model) {
             // Logica pre-creazione automatica
         });
-        
+
         static::updating(function ($model) {
             // Logica pre-aggiornamento automatica
         });
@@ -167,7 +167,7 @@ use Illuminate\Routing\Controller;
 
 /**
  * XotBaseController: Il DNA di ogni controller Laraxot
- * 
+ *
  * Fornisce AUTOMATICAMENTE:
  * - Authorization con AuthorizesRequests
  * - Job dispatch con DispatchesJobs
@@ -219,7 +219,7 @@ use Modules\Xot\Datas\XotData;
 
 /**
  * XotBaseResource: Il DNA di ogni risorsa Filament
- * 
+ *
  * Fornisce AUTOMATICAMENTE:
  * - Form schema standard
  * - Table schema standard
@@ -270,7 +270,7 @@ abstract class XotBaseResource extends Resource
 // Ogni modulo DEVE avere il proprio BaseModel
 abstract class BaseModel extends XotBaseModel {
     protected $connection = 'quaeris';  // Connection specifica
-    
+
     // Solo funzionalità SPECIFICHE del modulo
     // MAI duplicare ciò che XotBaseModel già fornisce
 }
@@ -289,7 +289,7 @@ class MakePdfAction {
         private PdfGenerator $generator,
         private StorageService $storage
     ) {}
-    
+
     public function execute(SurveyPdf $survey): PdfResponse {
         // Logica pura, senza dipendenze dal framework
         $pdf = $this->generator->generate($survey);
@@ -306,7 +306,7 @@ trait HasExtraTrait {
     public function getExtra(string $key, mixed $default = null): mixed {
         return data_get($this->extra, $key, $default);
     }
-    
+
     public function setExtra(string $key, mixed $value): void {
         $this->extra = array_merge($this->extra ?? [], [$key => $value]);
         $this->save();
@@ -324,7 +324,7 @@ class SurveyData extends Data {
         public readonly ?string $description,
         public readonly array $questions,
     ) {}
-    
+
     public static function fromModel(Survey $survey): self {
         return new self(
             id: $survey->id,
@@ -345,13 +345,13 @@ class SurveyData extends Data {
 // Caching system integrato
 trait HasIntelligentCaching {
     protected function cacheKey(string $operation): string {
-        return sprintf('%s:%s:%s', 
-            static::class, 
-            $this->getKey(), 
+        return sprintf('%s:%s:%s',
+            static::class,
+            $this->getKey(),
             $operation
         );
     }
-    
+
     protected function remember(string $key, callable $callback): mixed {
         return Cache::remember($key, 3600, $callback);
     }
@@ -360,11 +360,11 @@ trait HasIntelligentCaching {
 // Event system automatico
 trait DispatchesDomainEvents {
     private array $domainEvents = [];
-    
+
     protected function recordEvent(DomainEventInterface $event): void {
         $this->domainEvents[] = $event;
     }
-    
+
     public function dispatchEvents(): void {
         foreach ($this->domainEvents as $event) {
             event($event);

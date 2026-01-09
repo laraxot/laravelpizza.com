@@ -26,7 +26,7 @@ trait HasValues
     {
         return array_map(fn ($case) => $case->value, static::cases());
     }
-    
+
     /**
      * Alias for getValues() - more semantic for database context
      */
@@ -34,7 +34,7 @@ trait HasValues
     {
         return static::getValues();
     }
-    
+
     /**
      * Get validation rules for all enum fields
      */
@@ -58,11 +58,11 @@ use Modules\Xot\Filament\Traits\TransTrait;
 enum YourItemEnum: string implements HasLabel, HasIcon, HasColor
 {
     use HasValues, TransTrait;
-    
+
     case FIELD_ONE = 'field_one';
     case FIELD_TWO = 'field_two';
     // ... other cases
-    
+
     // Standard enum methods (getLabel, getIcon, getColor)
     // getFormSchema() method for form components
     // columns() and updateColumns() methods for migrations
@@ -75,7 +75,7 @@ enum YourItemEnum: string implements HasLabel, HasIcon, HasColor
 class YourModel extends BaseModel
 {
     // NO static $fillable array - use dynamic approach
-    
+
     public function getFillable(): array
     {
         return [
@@ -84,14 +84,14 @@ class YourModel extends BaseModel
             'created_at',
             'updated_at',
             'user_id',
-            
+
             // Enum fields - automatic from enums
             ...AddressItemEnum::getValues(),
             ...ContactTypeEnum::getValues(),
             ...CompanyItemEnum::getValues(),
         ];
     }
-    
+
     /**
      * Get validation rules from enums
      */
@@ -103,7 +103,7 @@ class YourModel extends BaseModel
                 'user_id' => ['required', 'exists:users,id'],
                 'name' => ['required', 'string', 'max:255'],
             ],
-            
+
             // Enum field rules
             AddressItemEnum::getValidationRules(),
             ContactTypeEnum::getValidationRules(),
@@ -201,16 +201,16 @@ public function getFillable(): array
         // Core fields
         ...$this->getCoreFields(),
     ];
-    
+
     // Add enum fields based on conditions
     if ($this->shouldIncludeAddress()) {
         $fields = [...$fields, ...AddressItemEnum::getValues()];
     }
-    
+
     if ($this->shouldIncludeContacts()) {
         $fields = [...$fields, ...ContactTypeEnum::getValues()];
     }
-    
+
     return $fields;
 }
 ```
@@ -224,13 +224,13 @@ public function getFillable(): array
         // === IDENTITY ===
         'name',
         'user_id',
-        
+
         // === ADDRESS ===
         ...AddressItemEnum::getValues(),
-        
+
         // === CONTACT ===
         ...ContactTypeEnum::getValues(),
-        
+
         // === BUSINESS ===
         ...CompanyItemEnum::getValues(),
     ];
@@ -247,15 +247,15 @@ public function getFillable(): array
         'contacts' => true,
         'company' => false,
     ]);
-    
+
     $fields = $this->getCoreFields();
-    
+
     if ($groups['address']) {
         $fields = [...$fields, ...AddressItemEnum::getValues()];
     }
-    
+
     // ... other groups
-    
+
     return $fields;
 }
 ```

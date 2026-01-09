@@ -36,7 +36,7 @@ pub_theme::filament.widgets.auth.password.reset
 namespace Modules\User\Filament\Widgets\Auth;
 class LoginWidget extends XotBaseWidget
     protected static string $view = 'user::filament.widgets.auth.login';
-class PasswordResetWidget extends XotBaseWidget  
+class PasswordResetWidget extends XotBaseWidget
 class RegisterWidget extends XotBaseWidget
     protected static string $view = 'user::filament.widgets.auth.register';
 ### Override nel Tema (se necessario)
@@ -77,7 +77,7 @@ Themes/One/
 // SBAGLIATO - Widget del modulo User che usa pub_theme::
 class UserWidget extends XotBaseWidget
     protected static string $view = 'pub_theme::filament.widgets.user.profile';
-    //                               ^^^^^^^^^^ 
+    //                               ^^^^^^^^^^
     //                               Dovrebbe essere user::
 ### ❌ Errore 2: Struttura Directory Piatta
 // SBAGLIATO - Non segue struttura Laravel

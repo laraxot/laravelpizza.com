@@ -16,7 +16,6 @@ Documentazione della risoluzione dei conflitti Git nel modulo Tenant che bloccav
 - Controlli `isset()` con sintassi corretta
 - Signature del metodo `modelClass()` con tipizzazione corretta
 
-
 ## Metodologia di Risoluzione
 1. **Identificazione**: Script automatico per trovare tutti i marker
 2. **Selezione**: Sempre "current change" (contenuto tra `=======` e `>>>>>>>`)

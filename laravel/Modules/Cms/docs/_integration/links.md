@@ -16,7 +16,6 @@ https://github.com/FriendsOfPHP/Sami
 
 https://larecipe.saleem.dev/docs/2.2/installation
 
-
 https://docs.readthedocs.io/en/stable/tutorial/
 
 https://www.atlantis-cms.com/docs
@@ -26,7 +25,6 @@ https://beyondco.de/docs/laravel-apidoc-generator/getting-started/documenting-yo
 https://scribe.knuckles.wtf/laravel/reference/html
 
 mpociot/laravel-apidoc-generator
-
 
 //---- competitors
 
@@ -42,14 +40,5 @@ https://filamentphp.com/
 
 https://gohugo.io/
 
-
 //--- bootstrap component
 https://laravel-bootstrap-components.com/themes/liara/features
-
-
-
-
-
-
-
-

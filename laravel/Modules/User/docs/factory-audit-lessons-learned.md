@@ -44,7 +44,7 @@ Il modulo User aveva **16 factory mancanti** su 31 modelli totali - il 52% dei m
 class DeviceProfileFactory extends DeviceUserFactory
 {
     protected $model = DeviceProfile::class;
-    
+
     public function definition(): array
     {
         return array_merge(parent::definition(), [

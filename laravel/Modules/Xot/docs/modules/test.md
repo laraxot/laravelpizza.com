@@ -13,14 +13,10 @@ Modulo test serve per mettere azioni da testare.
 * Ce n’è uno per ogni base e **fa parte della repo della base. Non va in una repository "a parte"**
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di test.md
 * [test.md](../../../Xot/docs/modules/test.md)
 * [test.md](../../../Lang/docs/test.md)
 
-
 ### Versione Incoming
 
-
 ---
-

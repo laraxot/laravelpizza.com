@@ -29,7 +29,7 @@ Molte traduzioni utilizzano ancora il pattern `.navigation` invece di traduzioni
 
 ### Fase 1: Correzione Errori Sintassi UI ✅ COMPLETATO
 1. **UI/lang/it/collection_lang.php** ✅ - Corretto errore linea 55
-2. **UI/lang/it/field.php** ✅ - Corretto errore linea 51  
+2. **UI/lang/it/field.php** ✅ - Corretto errore linea 51
 3. **UI/lang/it/field_option.php** ✅ - Corretto errore linea 72
 
 ### Fase 2: Correzione Traduzioni Navigation ✅ COMPLETATO
@@ -67,7 +67,7 @@ Molte traduzioni utilizzano ancora il pattern `.navigation` invece di traduzioni
 
 ### Errori Sintassi UI ✅
 - [x] collection_lang.php - Corretto parentesi mancanti
-- [x] field.php - Corretto parentesi mancanti  
+- [x] field.php - Corretto parentesi mancanti
 - [x] field_option.php - Corretto parentesi mancanti
 
 ### Traduzioni Navigation ✅

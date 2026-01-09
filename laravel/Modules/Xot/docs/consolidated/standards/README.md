@@ -10,7 +10,7 @@ Questa cartella contiene gli standard di codice e le convenzioni utilizzate nel 
 
 ## Note
 
-Questi standard si applicano a tutti i moduli del progetto e devono essere seguiti per mantenere la coerenza del codice. 
+Questi standard si applicano a tutti i moduli del progetto e devono essere seguiti per mantenere la coerenza del codice.
 
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/project_docs/README.md)
@@ -128,4 +128,3 @@ class Doctor extends User
 ## Moduli che applicano questa regola
 - [Patient: Modello Doctor](../../../Patient/project_docs/Models/Doctor.md)
 // Aggiungere qui altri moduli se necessario
-

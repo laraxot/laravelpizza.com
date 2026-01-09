@@ -47,39 +47,39 @@ trait NavigationLabelTrait
         return static::transFunc(__FUNCTION__);
         // → trans('modulename::model-name.navigation.label')
     }
-    
+
     // 2. Gruppo navigation
     public static function getNavigationGroup(): string
     {
         return static::transFunc(__FUNCTION__);
         // → trans('modulename::model-name.navigation.group')
     }
-    
+
     // 3. Icona navigation
     public static function getNavigationIcon(): string
     {
         $icon = static::transFunc(__FUNCTION__);
         // → trans('modulename::model-name.navigation.icon')
-        
+
         if (svgExists($icon)) {
             return $icon;
         }
-        
+
         return 'heroicon-o-question-mark-circle';  // Fallback
     }
-    
+
     // 4. Sort navigation
     public static function getNavigationSort(): ?int
     {
         $res = static::transFunc(__FUNCTION__);
         $value = intval($res);
-        
+
         if ($value === 0) {
             // Auto-genera sort random se manca
             $value = rand(1, 100);
             saveTrans($key, $value);  // Salva per prossima volta
         }
-        
+
         return $value;
     }
 }
@@ -323,6 +323,5 @@ Ordinare risorse per frequenza uso:
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
+**Ultimo aggiornamento**: 27 Ottobre 2025
 **Maintainer**: Team PTVX
-

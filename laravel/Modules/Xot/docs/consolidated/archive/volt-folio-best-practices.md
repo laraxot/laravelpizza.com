@@ -104,7 +104,7 @@ mount(function() {
         session()->invalidate();
         session()->regenerateToken();
     }
-    
+
     // Reindirizza alla home page localizzata
     $this->redirect('/' . app()->getLocale());
 });

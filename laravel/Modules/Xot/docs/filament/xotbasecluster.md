@@ -63,7 +63,7 @@ abstract class XotBaseCluster extends Cluster
     public static function getNavigationLabel(): string
     {
         $key = static::getTranslationKey() . '.cluster.label';
-        
+
         return Lang::has($key) ? Lang::get($key) : static::getDefaultNavigationLabel();
     }
 
@@ -73,7 +73,7 @@ abstract class XotBaseCluster extends Cluster
     public static function getNavigationGroup(): ?string
     {
         $key = static::getTranslationKey() . '.navigation_group';
-        
+
         return Lang::has($key) ? Lang::get($key) : null;
     }
 
@@ -83,7 +83,7 @@ abstract class XotBaseCluster extends Cluster
     public static function getNavigationSort(): ?int
     {
         $key = static::getTranslationKey() . '.navigation_sort';
-        
+
         return Lang::has($key) ? (int) Lang::get($key) : null;
     }
 
@@ -93,7 +93,7 @@ abstract class XotBaseCluster extends Cluster
     public static function getNavigationIcon(): ?string
     {
         $key = static::getTranslationKey() . '.cluster.icon';
-        
+
         return Lang::has($key) ? Lang::get($key) : 'heroicon-o-squares-2x2';
     }
 
@@ -112,7 +112,7 @@ abstract class XotBaseCluster extends Cluster
     {
         $module = Str::lower(explode('\\', static::class)[1]);
         $name = Str::snake(str_replace('Cluster', '', class_basename(static::class)));
-        
+
         return "{$module}::{$name}";
     }
 }

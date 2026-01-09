@@ -31,7 +31,7 @@ class Section extends Component
     public function render()
     {
         $section = \Modules\Cms\Models\Section::where('slug', $this->slug)->first();
-        
+
         if (!$section) {
             return '';
         }
@@ -47,7 +47,7 @@ class Section extends Component
 
 ### Utilizzo
 ```blade
-<x-cms::section 
+<x-cms::section
     slug="main-header"
     :data="['showLogo' => true]"
 />
@@ -68,7 +68,7 @@ class Section extends Component
 ### 2. View Personalizzate
 ```blade
 {{-- custom-header.blade.php --}}
-<x-cms::section 
+<x-cms::section
     slug="main-header"
     view="themes.custom.header"
     :data="['theme' => 'dark']"
@@ -107,4 +107,4 @@ class Section extends Component
 ## Collegamenti
 - [Gestione Sezioni](../section-management.md)
 - [Documentazione Blocchi](../blocks/README.md)
-- [Documentazione Root](../../../../docs/components.md) 
+- [Documentazione Root](../../../../docs/components.md)

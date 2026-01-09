@@ -31,7 +31,7 @@ Successivamente è stato commesso un **errore di analisi superficiale**:
 
 2. WIDGET LOGIN (Livewire):
    - Classe: Modules\User\Filament\Widgets\Auth\LoginWidget
-   - Metodo: login() 
+   - Metodo: login()
    - Test: LoginWidgetTest.php (widget/unità)
 
 3. ALTRI COMPONENT:
@@ -48,7 +48,7 @@ Successivamente è stato commesso un **errore di analisi superficiale**:
 - Test delle validazioni del form
 - Test dell'autenticazione via widget
 
-// laravel/Modules/Cms/tests/Feature/Auth/AuthenticationTest.php  
+// laravel/Modules/Cms/tests/Feature/Auth/AuthenticationTest.php
 - Test dell'autenticazione Volt
 - Test della pagina /it/auth/login
 
@@ -86,12 +86,12 @@ function createTestUser(array $attributes = []): UserContract
         'password' => Hash::make('password123'),
         'name' => fake()->name(),
     ];
-    
+
     $userData = array_merge($defaultData, $attributes);
-    
+
     /** @var UserContract&\Illuminate\Database\Eloquent\Model $user */
     $user = $userClass::factory()->create($userData);
-    
+
     return $user;
 }
 ```
@@ -156,7 +156,7 @@ function createTestUser(array $attributes = []): UserContract
 - [laravel/Modules/User/tests/Feature/Filament/Widgets/LoginWidgetTest.php](../../User/tests/Feature/Filament/Widgets/LoginWidgetTest.php)
 - [laravel/Modules/Cms/tests/Feature/Auth/AuthenticationTest.php](../tests/Feature/Auth/AuthenticationTest.php)
 
-### **Sistema Folio/Volt** 
+### **Sistema Folio/Volt**
 - [laravel/Themes/One/docs/folio-pages.md](../../../Themes/One/docs/folio-pages.md)
 - [laravel/Themes/One/docs/routing_with_folio_volt.md](../../../Themes/One/docs/routing_with_folio_volt.md)
 
@@ -170,11 +170,11 @@ LoginTest.php → Pagina /it/auth/login (Folio/Volt)
 ├── Processo autenticazione
 └── Gestione errori
 
-LoginWidgetTest.php → Widget Livewire  
+LoginWidgetTest.php → Widget Livewire
 ├── Rendering widget
 ├── Validazione campi
 ├── Metodi del widget
 └── Interazioni specifiche
 ```
 
-*Ultimo aggiornamento: Dicembre 2024 - Analisi completa e correzione pattern* 
+*Ultimo aggiornamento: Dicembre 2024 - Analisi completa e correzione pattern*

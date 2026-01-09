@@ -39,7 +39,7 @@ Il modulo Cms è il sistema di gestione contenuti di <main module>, fornendo mod
 
 ### 1. **Page - Gestione Pagine**
 - **Responsabilità**: Gestire pagine del sito web
-- **Business Logic**: 
+- **Business Logic**:
   - Gestione struttura pagine
   - Gestione contenuti pagine
   - Gestione SEO e metadati

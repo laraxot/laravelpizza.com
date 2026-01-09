@@ -45,7 +45,7 @@ Il modulo Xot è la base fondamentale del sistema SaluteOra, fornendo classi bas
 
 ### 1. **XotBaseModel - Gestione Base**
 - **Responsabilità**: Fornire funzionalità base per tutti i modelli
-- **Business Logic**: 
+- **Business Logic**:
   - Gestione timestamps automatici
   - Gestione soft delete
   - Gestione tenant isolation
@@ -251,4 +251,3 @@ Il modulo Xot è la base fondamentale del sistema SaluteOra, fornendo classi bas
 **Stato**: In Progress
 **Responsabile**: Team Sviluppo SaluteOra
 **Prossima Revisione**: Gennaio 2025
-

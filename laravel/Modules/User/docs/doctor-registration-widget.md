@@ -71,10 +71,10 @@ class RegistrationWidget extends XotBaseWidget
     public function register()
     {
         $data = $this->form->getState();
-        
+
         // Validazione dei dati
         $this->validate();
-        
+
         // Creazione del dottore
         $doctor = Doctor::create([
             'full_name' => $data['full_name'] ?? ($data['first_name'] . ' ' . $data['last_name']),
@@ -83,7 +83,7 @@ class RegistrationWidget extends XotBaseWidget
             'certification' => $data['certification'] ?? null,
             'state' => \Modules\Patient\States\Pending::class, // Imposta lo stato iniziale
         ]);
-        
+
         // Creazione del workflow di registrazione
         $workflow = DoctorRegistrationWorkflow::create([
             'doctor_id' => $doctor->id,
@@ -93,21 +93,21 @@ class RegistrationWidget extends XotBaseWidget
             'last_interaction_at' => now(),
             'session_id' => session()->getId(),
         ]);
-        
+
         // Invio email di conferma
         $this->sendConfirmationEmail($doctor);
-        
+
         // Reindirizzamento alla pagina di conferma
         return redirect()->route('doctor.registration.confirmation');
     }
-    
+
     /**
      * Invia l'email di conferma della registrazione.
      */
     protected function sendConfirmationEmail(Doctor $doctor): void
     {
         $email = new SpatieEmail($doctor, 'registration_pending');
-        
+
         Mail::to($doctor->email)
             ->locale(app()->getLocale())
             ->send($email);
@@ -224,7 +224,7 @@ The SaluteOra Team'
                 ]
             ]
         );
-        
+
         // Altri template...
     }
 }

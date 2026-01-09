@@ -61,7 +61,7 @@ public static function generateUniqueSlug(string $subject): string
 ### 1. Miglioramento Identificazione Template
 - **Problema**: I template erano identificati solo tramite la classe Mailable
 - **Soluzione**: Aggiunto slug univoco per identificazione stabile
-- **Benefici**: 
+- **Benefici**:
   - Riferimento stabile ai template
   - Indipendenza dalla classe Mailable
   - Facilità di migrazione
@@ -146,4 +146,4 @@ $slug = MailTemplate::generateUniqueSlug('Welcome to our platform');
 ### 3. Manutenzione
 - Monitorare la lunghezza degli slug
 - Verificare la gestione dei duplicati
-- Controllare le performance delle query 
+- Controllare le performance delle query

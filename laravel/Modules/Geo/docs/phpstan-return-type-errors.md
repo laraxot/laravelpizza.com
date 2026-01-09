@@ -47,11 +47,11 @@ public function getFormattedAddressAttribute(): string
 public function getFormattedAddressAttribute(): string
 {
     $value = $this->some_property;
-    
+
     if (is_string($value)) {
         return $value;
     }
-    
+
     return ''; // fallback sicuro
 }
 ```
@@ -116,7 +116,7 @@ public function getFormattedAddressAttribute(): string
 {
     // Utilizzo di safe casting per garantire string
     $address = \Modules\Xot\Actions\Cast\SafeStringCastAction::cast($this->address, '');
-    
+
     // Formattazione aggiuntiva se necessaria
     return trim($address) ?: 'Indirizzo non disponibile';
 }
@@ -137,15 +137,15 @@ public function getDataAttribute(): array
 public function getDataAttribute(): array
 {
     $data = $this->data;
-    
+
     if (is_array($data)) {
         return $data;
     }
-    
+
     if (is_string($data)) {
         return json_decode($data, true) ?: [];
     }
-    
+
     return [];
 }
 ```
@@ -179,19 +179,19 @@ public function getIsActiveAttribute(): bool
 public function getIsActiveAttribute(): bool
 {
     $value = $this->is_active;
-    
+
     if (is_bool($value)) {
         return $value;
     }
-    
+
     if (is_numeric($value)) {
         return (bool) $value;
     }
-    
+
     if (is_string($value)) {
         return in_array(strtolower($value), ['true', '1', 'yes', 'on'], true);
     }
-    
+
     return false;
 }
 ```
@@ -207,7 +207,7 @@ public function getFormattedValueAttribute(): string
     if (!isset($this->value)) {
         return '';
     }
-    
+
     return \Modules\Xot\Actions\Cast\SafeStringCastAction::cast($this->value, '');
 }
 ```
@@ -238,7 +238,7 @@ public function getFormattedAddressAttribute(): string
         $this->city,
         $this->postal_code,
     ]);
-    
+
     return implode(', ', $components);
 }
 ```

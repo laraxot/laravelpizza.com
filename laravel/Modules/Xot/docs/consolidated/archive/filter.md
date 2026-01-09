@@ -25,4 +25,3 @@ Il file `GetYearFilter.php` presentava marker di conflitto (``) e duplicazioni d
 ## Collegamenti tra versioni di filter.md
 * [filter.md](../../../Xot/project_docs/actions/filter.md)
 * [filter.md](../../../Xot/project_docs/links/filter.md)
-

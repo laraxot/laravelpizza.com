@@ -366,7 +366,7 @@ Le viste dei widget devono utilizzare i componenti Filament:
             <x-filament::widget>
                 <x-filament::form wire:submit="register">
                     {{ $this->form }}
-                    
+
                     <x-filament::button type="submit">
                         Registrati
                     </x-filament::button>

@@ -19,9 +19,9 @@ use Modules\Xot\Models\Traits\RelationX;
 class Permission extends SpatiePermission  // ✅ CORRETTO
 {
     use RelationX;
-    
+
     protected $connection = 'user';
-    
+
     // Metodi specifici del modulo
 }
 ```
@@ -46,10 +46,10 @@ class Role extends SpatieRole  // ✅ CORRETTO
 {
     use HasFactory;
     use RelationX;
-    
+
     protected $connection = 'user';
     protected $keyType = 'string';
-    
+
     // Metodi specifici del modulo
 }
 ```
@@ -164,10 +164,10 @@ use Modules\Xot\Models\Traits\RelationX;  // Solo se necessario
 class Permission extends SpatiePermission  // Estende Spatie, NON BaseModel
 {
     use RelationX;  // Opzionale: solo se serve
-    
+
     /** @var string */
     protected $connection = 'user';  // Connection specifica modulo
-    
+
     // Solo metodi/relazioni specifiche del modulo
     // NON sovrascrivere metodi core Spatie
 }
@@ -175,7 +175,6 @@ class Permission extends SpatiePermission  // Estende Spatie, NON BaseModel
 
 ---
 
-**Ultima Verifica**: 2025-01-XX  
-**Status**: ✅ Tutti i modelli Spatie sono corretti  
+**Ultima Verifica**: 2025-01-XX
+**Status**: ✅ Tutti i modelli Spatie sono corretti
 **Filosofia**: Rispettata completamente
-

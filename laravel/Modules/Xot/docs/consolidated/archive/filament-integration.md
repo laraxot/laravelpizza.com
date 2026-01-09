@@ -16,11 +16,11 @@ public static function getFormSchema(): array
         TextInput::make('name')
             ->required()
             ->maxLength(255),
-            
+
         // Relazioni
         Select::make('type')
             ->relationship('type', 'name'),
-            
+
         // File e Media
         FileUpload::make('avatar')
             ->image()
@@ -64,15 +64,11 @@ public static function getFormSchema(): array
 - Ottimizzare le query del database
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di filament-integration.md
 * [filament-integration.md](../../../Xot/project_docs/laraxot/filament-integration.md)
 * [filament-integration.md](../../../Cms/project_docs/roadmap/features/filament-integration.md)
 * [filament-integration.md](../../../Cms/project_docs/filament-integration.md)
 
-
 ### Versione Incoming
 
-
 ---
-

@@ -1,6 +1,3 @@
-
-
-
 # Rapporto PHPStan Livello 5 per il modulo Xot
 
 Data analisi: 2025-04-15 21:54:17
@@ -72,4 +69,3 @@ aurmich/dev
 * [level_5.md](laravel/Modules/Activity/docs/phpstan/level_5.md)
 * [level_5.md](laravel/Modules/Patient/docs/phpstan/level_5.md)
 * [level_5.md](laravel/Modules/Cms/docs/phpstan/level_5.md)
-

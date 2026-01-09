@@ -12,7 +12,7 @@ Workbench\\Database\\Factories
 Workbench\\Database\\Seeders
 - **Pacchetto Composer**: laraxot/module_activity_fila3
 Marco Sottana
-- **Dipendenze**: spatie/laravel-activitylog * spatie/laravel-event-sourcing * repositories type path url ../Xot type path url ../Tenant type path url ../UI scripts post-autoload-dump 
+- **Dipendenze**: spatie/laravel-activitylog * spatie/laravel-event-sourcing * repositories type path url ../Xot type path url ../Tenant type path url ../UI scripts post-autoload-dump
 - **Totale file PHP**: 55
 - **Totale classi/interfacce**: 30
 
@@ -285,7 +285,6 @@ workbench/routes
 - [Vai a Roadmap](./roadmap.md)
 - [Vai a Bottlenecks](./bottlenecks.md)
 
-
 ```json
     "autoload": {
         "psr-4": {
@@ -347,7 +346,6 @@ workbench/routes
 - [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/docs/phpstan/)
 
-
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
 * [structure.md](laravel/Modules/Gdpr/docs/structure.md)
@@ -398,4 +396,3 @@ Modules/Activity/
 
 ### Collegamenti
 - [Best Practice Event Sourcing .mdc](../../.cursor/rules/ACTIVITY_EVENT_SOURCING_BEST_PRACTICES.mdc)
-

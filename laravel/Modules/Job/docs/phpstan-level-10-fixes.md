@@ -172,7 +172,7 @@ if ($someCondition) {
 ## 🎯 PROSSIMI PASSI
 
 1. ✅ Verificare con PHPMD
-2. ✅ Verificare con PHP Insights  
+2. ✅ Verificare con PHP Insights
 3. ✅ Aggiornare tests
 4. ✅ Documentare pattern per altri moduli
 

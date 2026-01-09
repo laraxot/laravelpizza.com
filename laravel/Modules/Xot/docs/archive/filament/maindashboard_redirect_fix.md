@@ -19,7 +19,7 @@ public function mount(): void
             return Str::endsWith($item->name, '::admin');
         }
     );
-    
+
     if (1 === $modules->count()) {
         $module_name = Str::before($modules->first()->name, '::admin');
         $url = '/'.$module_name.'/admin';
@@ -47,11 +47,11 @@ public function mount(): void
             return Str::endsWith($item->name, '::admin');
         }
     );
-    
+
     if (1 === $modules->count()) {
         $module_name = Str::before($modules->first()->name, '::admin');
         $current_path = request()->path();
-        
+
         // ✅ FIX: Controlla se già nel panel corretto
         if ($current_path !== $module_name.'/admin') {
             $url = '/'.$module_name.'/admin';
@@ -172,4 +172,3 @@ performance::admin
 - ✅ **Backward Compatible**: Nessun breaking change
 - ✅ **Multi-Ruolo**: Supporto mantenuto
 - ✅ **Performance**: Nessun impatto negativo
-

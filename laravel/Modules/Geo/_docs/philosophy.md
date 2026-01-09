@@ -105,8 +105,8 @@ class Address extends BaseModel
             ->selectRaw('
                 *,
                 (6371 * acos(
-                    cos(radians(?)) * cos(radians(latitude)) * 
-                    cos(radians(longitude) - radians(?)) + 
+                    cos(radians(?)) * cos(radians(latitude)) *
+                    cos(radians(longitude) - radians(?)) +
                     sin(radians(?)) * sin(radians(latitude))
                 )) AS distance
             ', [$latitude, $longitude, $latitude])
@@ -158,7 +158,7 @@ abstract class GeoJsonModel
     {
         $path = module_path('Geo', static::$jsonFile);
         $cacheKey = 'geo_comuni_json_'.md5($path);
-        $data = cache()->rememberForever($cacheKey, fn () => 
+        $data = cache()->rememberForever($cacheKey, fn () =>
             json_decode(file_get_contents($path), true)
         );
         return collect($data);
@@ -192,4 +192,3 @@ Questo approccio incarna lo zen della semplicità, nascondendo la complessità d
 - [Filosofia Completa Laraxot](../../Xot/docs/philosophy-complete.md)
 - [Regole Critiche di Architettura](../../Xot/docs/critical-architecture-rules.md)
 - [Documentazione Geo README](./README.md)
-

@@ -21,7 +21,7 @@ public function table(?Table $table): static
                 if ($child->getTable() !== $table) {
                     $child->table($table);
                 }
-                
+
                 // Set the record on the child column if available
                 if (method_exists($child, 'record') && $this->getRecord()) {
                     $child->record($this->getRecord());
@@ -46,7 +46,7 @@ public function getFields(): array
             }
         }
     }
-    
+
     return $this->schema;
 }
 ```
@@ -61,15 +61,15 @@ La view è stata aggiornata per:
 @php
     $name = $field->getName();
     $value = $record->getAttribute($name);
-    
+
     // Skip empty values to save space
     if (empty($value) && $value !== 0 && $value !== '0') {
         continue;
     }
-    
+
     // Format the value for display
     $formattedValue = $value;
-    
+
     // Add label if the field has one (for better readability)
     $label = $field->getLabel() ?? $name;
     $displayText = $label . ': ' . $formattedValue;

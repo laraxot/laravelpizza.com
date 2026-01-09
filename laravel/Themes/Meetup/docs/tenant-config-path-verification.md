@@ -1,7 +1,7 @@
 # Verifica Percorso Config Tenant - Reverse Domain Notation
 
-**Data**: 2025-01-22  
-**Status**: ✅ Verificato e Documentato  
+**Data**: 2025-01-22
+**Status**: ✅ Verificato e Documentato
 **Scopo**: Verificare e documentare il percorso corretto per i file di configurazione tenant
 
 ---
@@ -132,6 +132,6 @@ I file JSON per le pagine About e Contact sono stati creati nel percorso **CORRE
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: ✅ Verificato e Documentato

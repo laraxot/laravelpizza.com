@@ -174,4 +174,4 @@ public static function form(Form $form): Form
 - Mantenere aggiornata la documentazione
 - Testare su diversi client email
 - Monitorare le performance
-- Implementare logging appropriato 
+- Implementare logging appropriato

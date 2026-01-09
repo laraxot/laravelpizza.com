@@ -65,7 +65,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('login', 'AuthController@showLoginForm')->name('login');
     Route::post('login', 'AuthController@login');
     Route::post('logout', 'AuthController@logout')->name('logout');
-    
+
     // Profile Routes
     Route::get('profile', 'ProfileController@show')->name('profile');
     Route::put('profile', 'ProfileController@update')->name('profile.update');
@@ -229,7 +229,7 @@ laravel/Modules/ModuleName/
 
 - [Best Practices per le Traduzioni](TRANSLATION_BEST_PRACTICES.md)
 - [Regole per le Chiavi di Traduzione](TRANSLATION_KEYS_RULES.md)
-- [Convenzioni di Codice](CODE_CONVENTIONS.md) 
+- [Convenzioni di Codice](CODE_CONVENTIONS.md)
 1. **Verifica Path**
    ```bash
    # Prima di creare un file/cartella, verifica sempre il path
@@ -249,7 +249,7 @@ laravel/Modules/ModuleName/
    # Usa sempre lowercase per le cartelle standard Laravel
    mkdir -p resources/views
    mkdir -p lang/it
-   
+
    # NON usare mai
    mkdir -p Resources/views  # ERRATO
    mkdir -p Lang/it         # ERRATO
@@ -292,4 +292,4 @@ find . -type d -name "Resources" -o -name "Lang"
 # Correggi permessi
 chmod -R 755 laravel/Modules/*/app/
 chmod -R 644 laravel/Modules/*/resources/
-``` 
+```

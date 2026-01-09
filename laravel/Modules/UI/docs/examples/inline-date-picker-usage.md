@@ -24,14 +24,14 @@ class AppointmentBookingForm
                     $availableDates = [];
                     $start = Carbon::today();
                     $end = Carbon::today()->addDays(30);
-                    
+
                     while ($start <= $end) {
                         if ($start->isWeekday()) {
                             $availableDates[] = $start->format('Y-m-d');
                         }
                         $start->addDay();
                     }
-                    
+
                     return $availableDates;
                 })
                 ->calendarConfig([
@@ -41,7 +41,7 @@ class AppointmentBookingForm
                 ->afterStateUpdated(function ($state, Set $set) {
                     // Reset orario quando cambia la data
                     $set('appointment_time', null);
-                    
+
                     // Carica orari disponibili per la data selezionata
                     $this->loadAvailableTimeSlots($state);
                 })
@@ -115,7 +115,7 @@ class AdvancedBookingForm
     public function __construct(
         private AvailabilityService $availabilityService
     ) {}
-    
+
     public function getDatePickerSchema(): array
     {
         return [
@@ -123,11 +123,11 @@ class AdvancedBookingForm
                 ->enabledDates(function (Get $get) {
                     $serviceId = $get('service_id');
                     $locationId = $get('location_id');
-                    
+
                     if (!$serviceId || !$locationId) {
                         return [];
                     }
-                    
+
                     // Logica avanzata per date disponibili
                     return $this->availabilityService->getAvailableDates(
                         serviceId: $serviceId,
@@ -142,18 +142,18 @@ class AdvancedBookingForm
                 ])
                 ->afterStateUpdated(function ($state, Set $set, Get $get) {
                     if (!$state) return;
-                    
+
                     // Reset campi dipendenti
                     $set('booking_time', null);
                     $set('duration', null);
-                    
+
                     // Calcola durata massima per la data
                     $maxDuration = $this->availabilityService->getMaxDuration(
                         date: $state,
                         serviceId: $get('service_id'),
                         locationId: $get('location_id')
                     );
-                    
+
                     $set('max_duration', $maxDuration);
                 })
                 ->visible(fn (Get $get) => $get('service_id') && $get('location_id'))
@@ -186,14 +186,14 @@ class MultiStepWizardForm
                     ->schema([
                         // ... altri componenti
                     ]),
-                    
+
                 Wizard\Step::make('date_selection')
                     ->label('Selezione Data')
                     ->schema([
                         InlineDatePicker::make('appointment_date')
                             ->enabledDates(function (Get $get) {
                                 $serviceType = $get('service_type');
-                                
+
                                 // Date diverse per tipologia di servizio
                                 return match($serviceType) {
                                     'urgent' => $this->getUrgentDates(),
@@ -209,7 +209,7 @@ class MultiStepWizardForm
                             ->live()
                             ->required(),
                     ]),
-                    
+
                 Wizard\Step::make('confirmation')
                     ->label('Conferma')
                     ->schema([
@@ -218,52 +218,52 @@ class MultiStepWizardForm
             ])
         ];
     }
-    
+
     private function getUrgentDates(): array
     {
         // Solo i prossimi 7 giorni (giorni feriali)
         $dates = [];
         $start = Carbon::today();
-        
+
         for ($i = 0; $i < 7; $i++) {
             if ($start->isWeekday()) {
                 $dates[] = $start->format('Y-m-d');
             }
             $start->addDay();
         }
-        
+
         return $dates;
     }
-    
+
     private function getStandardDates(): array
     {
         // Prossime 4 settimane (solo giorni feriali)
         $dates = [];
         $start = Carbon::today();
         $end = Carbon::today()->addWeeks(4);
-        
+
         while ($start <= $end) {
             if ($start->isWeekday()) {
                 $dates[] = $start->format('Y-m-d');
             }
             $start->addDay();
         }
-        
+
         return $dates;
     }
-    
+
     private function getPremiumDates(): array
     {
         // Tutti i giorni dei prossimi 3 mesi
         $dates = [];
         $start = Carbon::today();
         $end = Carbon::today()->addMonths(3);
-        
+
         while ($start <= $end) {
             $dates[] = $start->format('Y-m-d');
             $start->addDay();
         }
-        
+
         return $dates;
     }
 }
@@ -316,7 +316,7 @@ class CustomCalendarForm
                 ->afterStateUpdated(function ($state) {
                     // Carica metadati per la data selezionata
                     $specialDate = SpecialDate::whereDate('date', $state)->first();
-                    
+
                     if ($specialDate) {
                         $this->selectedDateMetadata = $specialDate->metadata;
                         $this->selectedDateType = $specialDate->type;
@@ -325,21 +325,21 @@ class CustomCalendarForm
                 ->required(),
         ];
     }
-    
+
     private function isHoliday(string $date): bool
     {
         return SpecialDate::whereDate('date', $date)
             ->where('type', 'holiday')
             ->exists();
     }
-    
+
     private function isHighDemand(string $date): bool
     {
         return SpecialDate::whereDate('date', $date)
             ->where('priority', 'high')
             ->exists();
     }
-    
+
     private function isPremiumOnly(string $date): bool
     {
         return SpecialDate::whereDate('date', $date)
@@ -372,18 +372,18 @@ class InlineDatePickerTest extends TestCase
             Carbon::today()->format('Y-m-d'),
             Carbon::tomorrow()->format('Y-m-d'),
         ];
-        
+
         $component = InlineDatePicker::make('test_date')
             ->enabledDates($enabledDates);
-            
+
         $this->assertEquals($enabledDates, $component->getEnabledDates());
     }
-    
+
     /** @test */
     public function it_validates_date_selection(): void
     {
         $enabledDates = [Carbon::today()->format('Y-m-d')];
-        
+
         Livewire::test(TestFormComponent::class)
             ->assertFormFieldExists('test_date')
             ->fillForm([
@@ -391,13 +391,13 @@ class InlineDatePickerTest extends TestCase
             ])
             ->assertHasFormErrors(['test_date']);
     }
-    
+
     /** @test */
     public function it_generates_correct_month_grid(): void
     {
         $component = InlineDatePicker::make('test_date');
         $grid = $component->generateMonthGrid(2025, 1);
-        
+
         $this->assertArrayHasKey('year', $grid);
         $this->assertArrayHasKey('month', $grid);
         $this->assertArrayHasKey('days', $grid);
@@ -433,4 +433,4 @@ class InlineDatePickerTest extends TestCase
 ---
 
 *Ultima modifica: Gennaio 2025*
-*Versione: 1.0.0* 
+*Versione: 1.0.0*

@@ -27,7 +27,7 @@ Questa regola è **SACRA** e **IMMUTABILE** nel progetto <nome progetto>. Ogni m
 // PRIMA: Errori e colonne non esistenti
 'birth_date' => now()->subYears(random_int(18, 80)), // ❌ Colonna inesistente
 
-// DOPO: Factory corretta e tipizzata  
+// DOPO: Factory corretta e tipizzata
 'date_of_birth' => now()->subYears(random_int(18, 80)), // ✅ Colonna corretta
 ```
 
@@ -100,5 +100,3 @@ Questa regola è **SACRA** e **IMMUTABILE** nel progetto <nome progetto>. Ogni m
 ---
 
 **⚠️ RICORDA SEMPRE: Questa regola è SACRA e non può essere violata. Ogni modifica deve migliorare la codebase.**
-
-

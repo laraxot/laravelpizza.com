@@ -105,4 +105,4 @@ Ogni volta che scrivi un getter, chiediti:
 
 - [Filosofia dei Getter](../datas/getter_philosophy.md)
 - [Convenzioni di Naming](../naming-conventions.md)
-- [Linee Guida Filament](../filament-best-practices.md) 
+- [Linee Guida Filament](../filament-best-practices.md)

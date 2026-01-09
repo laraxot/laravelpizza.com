@@ -57,7 +57,6 @@
 # List Records in Filament
 # List Records in Filament
 
-
 > **AGGIORNAMENTO 2025-05-28:**
 > **AGGIORNAMENTO 2025-05-28:**
 > Questa policy è stata aggiornata e propagata anche in [SaluteOra/docs/resources/studio-resource.md](../../SaluteOra/docs/resources/studio-resource.md) e [SaluteOra/docs/README.md](../../SaluteOra/docs/README.md). Vedi esempi di implementazione e note di propagazione.

@@ -85,4 +85,4 @@ use Modules\Xot\Filament\Pages\MetatagPage;
 
 - [Documentazione Filament](../../../project_docs/filament/index.md)
 - [Configurazione SEO](../../../project_docs/seo/index.md)
-- [Gestione Temi](../../../project_docs/themes/index.md) 
+- [Gestione Temi](../../../project_docs/themes/index.md)

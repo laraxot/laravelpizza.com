@@ -84,4 +84,3 @@ Verificare che il namespace sia registrato correttamente prima che `BlockData` v
 - Risolve problemi di timing durante il bootstrap HTTP
 - Mantiene la validazione ma in modo più robusto
 - PHPStan livello 10: ✅ Nessun errore
-

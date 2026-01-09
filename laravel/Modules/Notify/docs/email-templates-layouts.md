@@ -82,7 +82,7 @@ protected function getHtmlLayout(): string
 {
     $theme = config('app.theme', 'One');
     $layout = base_path("Themes/{$theme}/resources/mail-layouts/basev1-it.html");
-    
+
     return file_get_contents($layout);
 }
 ```
@@ -140,6 +140,6 @@ MailTemplate::create([
 
 ---
 
-**Ultimo aggiornamento**: 2025-08-08  
-**Versione**: 1.0  
+**Ultimo aggiornamento**: 2025-08-08
+**Versione**: 1.0
 **Compatibilità**: Laravel 12.x, Filament 3.x, Spatie Mail Templates

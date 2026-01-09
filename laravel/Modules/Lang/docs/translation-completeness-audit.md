@@ -50,7 +50,7 @@ This document tracks the completeness and quality of translation files across th
 
 **Multilingual Support**:
 - ✅ **Italian**: Complete translations with medical terminology
-- ✅ **English**: Professional medical translations 
+- ✅ **English**: Professional medical translations
 - ✅ **German**: Proper medical German terminology
 - ✅ All template text now uses `@lang()` functions
 - ✅ No hardcoded text remaining in template
@@ -67,14 +67,14 @@ This document tracks the completeness and quality of translation files across th
 
 **Files Updated**:
 - `laravel/Themes/One/lang/it/common.php`
-- `laravel/Themes/One/lang/en/common.php`  
+- `laravel/Themes/One/lang/en/common.php`
 - `laravel/Themes/One/lang/de/common.php`
 
 **New Translation Keys Added**:
 - `'minutes'` → `'minuti'` / `'minutes'` / `'Minuten'`
 - `'page'` → `'Pagina'` / `'Page'` / `'Seite'`
 
-**Usage**: 
+**Usage**:
 - `minutes` used in PDF template for appointment duration display
 - `page` used in PDF footer for page numbering
 
@@ -121,7 +121,7 @@ This document tracks the completeness and quality of translation files across th
 
 **Issue**: Hardcoded Italian text "I miei dati" in Blade templates for doctor and patient profile sections.
 
-**Resolution**: 
+**Resolution**:
 1. Added proper translation keys in theme language files
 2. Replaced hardcoded text with `@lang()` calls in Blade templates
 3. Ensured complete translations in Italian, English, and German
@@ -216,7 +216,7 @@ This document tracks the completeness and quality of translation files across th
 
 **Files Updated**:
 - `laravel/Modules/Notify/lang/en/opening_hours.php`
-- `laravel/Modules/Notify/lang/en/send_email.php` 
+- `laravel/Modules/Notify/lang/en/send_email.php`
 - `laravel/Modules/SaluteOra/lang/en/find_doctor_widget.php`
 
 **Process**:
@@ -288,4 +288,4 @@ This document tracks the completeness and quality of translation files across th
 - [PDF Template](../laravel/Themes/One/resources/views/appointment/report_pdf.blade.php)
 
 ---
-*Last updated: 2025-01-06 - PDF template completely internationalized with full multilingual support* 
+*Last updated: 2025-01-06 - PDF template completely internationalized with full multilingual support*

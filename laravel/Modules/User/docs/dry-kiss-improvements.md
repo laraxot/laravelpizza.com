@@ -42,7 +42,7 @@ return new class extends XotBaseMigration {
         $this->tableCreate(function (Blueprint $table): void {
             // ...
         });
-        
+
         $this->tableUpdate(function (Blueprint $table): void {
             // ...
         });
@@ -101,7 +101,7 @@ trait UserMigrationHelpers
             $definition($table);
         }
     }
-    
+
     /**
      * Add standard user profile fields
      */
@@ -112,7 +112,7 @@ trait UserMigrationHelpers
         $this->safeAddColumn($table, 'avatar', fn($t) => $t->string()->nullable());
         $this->safeAddColumn($table, 'bio', fn($t) => $t->text()->nullable());
     }
-    
+
     /**
      * Add user authentication fields
      */
@@ -123,7 +123,7 @@ trait UserMigrationHelpers
         $this->safeAddColumn($table, 'two_factor_confirmed_at', fn($t) => $t->timestamp()->nullable());
         $this->safeAddColumn($table, 'password_expires_at', fn($t) => $t->timestamp()->nullable());
     }
-    
+
     /**
      * Add localization fields
      */
@@ -132,7 +132,7 @@ trait UserMigrationHelpers
         $this->safeAddColumn($table, 'lang', fn($t) => $t->string(3)->nullable());
         $this->safeAddColumn($table, 'timezone', fn($t) => $t->string()->nullable());
     }
-    
+
     /**
      * Add status fields
      */
@@ -142,14 +142,14 @@ trait UserMigrationHelpers
         $this->safeAddColumn($table, 'is_verified', fn($t) => $t->boolean()->default(false));
         $this->safeAddColumn($table, 'email_verified_at', fn($t) => $t->timestamp()->nullable());
     }
-    
+
     /**
      * Add UUID support with backward compatibility
      */
     protected function addUuidSupport(Blueprint $table): void
     {
         $this->safeAddColumn($table, 'uuid', fn($t) => $t->string(36)->nullable());
-        
+
         // Handle existing integer IDs
         if ($this->hasColumn('id') && $this->getColumnType('id') === 'bigint') {
             $table->string('id', 36)->change();
@@ -172,27 +172,27 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 abstract class UserBaseMigration extends XotBaseMigration
 {
     use UserMigrationHelpers;
-    
+
     /**
      * Standard user table structure
      */
     protected function createStandardUserTable(Blueprint $table, array $additionalColumns = []): void
     {
         $table->id();
-        
+
         // Add standard user columns
         $this->addUserProfileColumns($table);
         $this->addLocalizationColumns($table);
         $this->addStatusColumns($table);
-        
+
         // Add additional columns
         foreach ($additionalColumns as $column => $definition) {
             $this->safeAddColumn($table, $column, $definition);
         }
-        
+
         $this->addTimestampsWithUsers($table);
     }
-    
+
     /**
      * Enhanced user table with authentication
      */
@@ -202,7 +202,7 @@ abstract class UserBaseMigration extends XotBaseMigration
             'email' => fn($t) => $t->string()->unique(),
             'email_verified_at' => fn($t) => $t->timestamp()->nullable(),
         ], $additionalColumns));
-        
+
         $this->addAuthColumns($table);
     }
 }
@@ -219,7 +219,7 @@ return new class extends XotBaseMigration {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            
+
             if (!$this->hasColumn('first_name')) {
                 $table->string('first_name')->nullable();
             }
@@ -232,7 +232,7 @@ return new class extends XotBaseMigration {
             if (!$this->hasColumn('lang')) {
                 $table->string('lang', 3)->nullable();
             }
-            
+
             $table->timestamps();
         });
     }
@@ -251,7 +251,7 @@ return new class extends UserBaseMigration {
                 'email_verified_at' => fn($t) => $t->timestamp()->nullable(),
             ]);
         });
-        
+
         $this->tableUpdate(function (Blueprint $table): void {
             // Additional updates if needed
             $this->updateTimestamps($table);
@@ -269,24 +269,24 @@ return new class extends UserBaseMigration {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
             $table->string('username')->unique();
-            
+
             // Basic profile
             $this->addUserProfileColumns($table);
-            
+
             // Authentication
             $table->string('password');
             $this->addAuthColumns($table);
-            
+
             // Localization and status
             $this->addLocalizationColumns($table);
             $this->addStatusColumns($table);
-            
+
             // Additional fields
             $this->addUuidSupport($table);
-            
+
             $this->addTimestampsWithUsers($table);
         });
-        
+
         $this->tableUpdate(function (Blueprint $table): void {
             // Update logic
         });

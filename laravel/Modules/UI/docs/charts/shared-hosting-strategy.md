@@ -43,7 +43,7 @@ class GenerateChartPngViaApiAction
         // 1. Instantiate the Widget to get its Data
         // Note: We use Reflection because getData() is usually protected
         $widget = new $widgetClass();
-        
+
         $reflection = new ReflectionMethod($widgetClass, 'getData');
         $reflection->setAccessible(true);
         $data = $reflection->invoke($widget);
@@ -89,14 +89,14 @@ use Modules\UI\Actions\Chart\GenerateChartPngViaApiAction;
 class SendReportAction
 {
     use QueueableAction;
-    
+
     public function execute()
     {
         // 1. Generate via API
         $pngBinary = app(GenerateChartPngViaApiAction::class)->execute(
             widgetClass: MonthlySalesChart::class
         );
-        
+
         // 2. Save or Attach
         Storage::put('reports/chart.png', $pngBinary);
     }

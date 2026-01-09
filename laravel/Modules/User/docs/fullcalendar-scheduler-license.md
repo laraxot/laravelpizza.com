@@ -11,7 +11,7 @@ FullCalendar Scheduler requires a valid license key for use in production enviro
    - Required for production use
    - Removes the red banner
    - Available for purchase from [FullCalendar's pricing page](https://fullcalendar.io/pricing/)
-## Configuration in 
+## Configuration in
 ## Configuration in SaluteOra
 ### Setting the License Key
 1. **Environment Configuration**

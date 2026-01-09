@@ -38,4 +38,3 @@ TextInput::make('first_name') // la label viene risolta automaticamente
 
 ## Collegamenti tra versioni di langserviceprovider-labels.md
 * [langserviceprovider-labels.md](../../Patient/project_docs/langserviceprovider-labels.md)
-

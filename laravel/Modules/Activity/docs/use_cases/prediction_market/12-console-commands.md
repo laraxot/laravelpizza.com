@@ -52,4 +52,4 @@ class CloseExpiredMarkets extends Command
 - [Best practice prediction_market](./04_best_practice.md)
 - [Testing prediction_market](./07_test.md)
 - [API prediction_market](./06_api.md)
-- [Glossario prediction_market](./08_glossario.md) 
+- [Glossario prediction_market](./08_glossario.md)

@@ -46,7 +46,7 @@ Il modulo Geo è il sistema di gestione geografica di <main module>, fornendo mo
 
 ### 1. **State - Gestione Stati/Nazioni**
 - **Responsabilità**: Gestire stati e nazioni del mondo
-- **Business Logic**: 
+- **Business Logic**:
   - Gestione codici ISO stati
   - Gestione nomi multilingua
   - Gestione relazioni con regioni
@@ -275,4 +275,3 @@ Il modulo Geo è il sistema di gestione geografica di <main module>, fornendo mo
 **Stato**: In Progress
 **Responsabile**: Team Sviluppo <main module>
 **Prossima Revisione**: Gennaio 2025
-

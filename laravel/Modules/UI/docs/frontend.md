@@ -135,4 +135,4 @@ Il modulo UI fornisce i seguenti blocchi per la costruzione delle pagine:
 
 1. Verificare i log di Laravel
 2. Controllare la console del browser
-3. Verificare la struttura JSON 
+3. Verificare la struttura JSON

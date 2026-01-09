@@ -12,14 +12,10 @@ return [
 ~~~
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di app.md
 * [app.md](../../../Xot/project_docs/install/app.md)
 * [app.md](../../../Tenant/project_docs/it/config/app.md)
 
-
 ### Versione Incoming
 
-
 ---
-

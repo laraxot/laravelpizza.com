@@ -55,12 +55,12 @@ The item view receives an `$item` variable representing the current option from 
     @if(isset($item['image']))
         <img src="{{ $item['image'] }}" alt="{{ $item['name'] }}" class="w-12 h-12 rounded-md mr-3">
     @endif
-    
+
     <div>
         <div class="font-medium text-gray-900 dark:text-white">
             {{ $item['name'] }}
         </div>
-        
+
         @if(isset($item['description']))
             <div class="text-sm text-gray-500">
                 {{ $item['description'] }}
@@ -118,7 +118,7 @@ If options cannot be selected, check for these common issues:
    ```blade
    {{-- ❌ This can block events --}}
    <div onclick="doSomething(event)" class="absolute inset-0 z-10">...</div>
-   
+
    {{-- ✅ Better approach --}}
    <div class="relative">...</div>
    ```
@@ -127,7 +127,7 @@ If options cannot be selected, check for these common issues:
    ```blade
    {{-- ❌ Problem --}}
    <div class="z-50 absolute inset-0">...</div>
-   
+
    {{-- ✅ Better --}}
    <div class="relative">...</div>
    ```
@@ -136,7 +136,7 @@ If options cannot be selected, check for these common issues:
    ```blade
    {{-- ❌ Problem --}}
    <button @click.stop>...</button>
-   
+
    {{-- ✅ Better --}}
    <button>...</button>
    ```
@@ -145,7 +145,7 @@ If options cannot be selected, check for these common issues:
    ```blade
    {{-- ❌ Problem --}}
    <div class="pointer-events-none">...</div>
-   
+
    {{-- ✅ Better --}}
    <div>...</div>
    ```
@@ -190,16 +190,16 @@ RadioCollection::make('studio_id')
             <x-heroicon-o-building-office class="w-8 h-8 text-gray-400"/>
         </div>
     @endif
-    
+
     <div>
         <h3 class="font-medium text-gray-900 dark:text-white">{{ $item->name }}</h3>
-        
+
         @if($item->address)
             <p class="text-sm text-gray-500">
                 {{ $item->address }}
             </p>
         @endif
-        
+
         @if($item->specializations && count($item->specializations) > 0)
             <div class="mt-2 flex flex-wrap gap-1">
                 @foreach($item->specializations->take(3) as $specialization)
@@ -207,7 +207,7 @@ RadioCollection::make('studio_id')
                         {{ $specialization->name }}
                     </span>
                 @endforeach
-                
+
                 @if(count($item->specializations) > 3)
                     <span class="px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300">
                         +{{ count($item->specializations) - 3 }}

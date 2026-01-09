@@ -34,7 +34,7 @@ Durante la digitazione di `<x-filament::`, l'estensione suggerisce i componenti 
 
 ## Installazione
 - **Marketplace**: Cerca "Filament" su [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=doonfrs.vscode-filament) e installa l'estensione.
-- **Terminale**: 
+- **Terminale**:
   ```sh
   code --install-extension doonfrs.vscode-filament
   ```

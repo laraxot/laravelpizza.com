@@ -12,7 +12,7 @@ Il componente Timeline visualizza una sequenza di eventi in ordine cronologico, 
     >
         Descrizione dell'evento 1
     </x-filament::timeline.item>
-    
+
     <x-filament::timeline.item
         title="Evento 2"
         date="2024-03-14 09:00"
@@ -34,7 +34,7 @@ Il componente Timeline visualizza una sequenza di eventi in ordine cronologico, 
     >
         Ordine #123 creato dal cliente
     </x-filament::timeline.item>
-    
+
     <x-filament::timeline.item
         title="Pagamento Ricevuto"
         date="2024-03-15 14:35"
@@ -58,7 +58,7 @@ Il componente Timeline visualizza una sequenza di eventi in ordine cronologico, 
                 Completato
             </x-filament::badge>
         </x-slot>
-        
+
         Ordine elaborato con successo
     </x-filament::timeline.item>
 </x-filament::timeline>
@@ -135,12 +135,12 @@ Il componente Timeline visualizza una sequenza di eventi in ordine cronologico, 
                     {{ $event->status }}
                 </x-filament::badge>
             </x-slot>
-            
+
             <div class="space-y-2">
                 <p class="text-sm text-gray-600">
                     {{ $event->description }}
                 </p>
-                
+
                 @if($event->hasDetails())
                     <div class="text-xs text-gray-500">
                         {{ $event->details }}
@@ -177,12 +177,12 @@ Il componente Timeline visualizza una sequenza di eventi in ordine cronologico, 
                     </x-filament::badge>
                 @endif
             </x-slot>
-            
+
             <div class="space-y-2">
                 <p class="text-sm text-gray-600">
                     {{ $step->description }}
                 </p>
-                
+
                 @if($step->approver)
                     <div class="text-xs text-gray-500">
                         Approvato da: {{ $step->approver->name }}
@@ -214,4 +214,4 @@ Il componente Timeline visualizza una sequenza di eventi in ordine cronologico, 
 4. **Best Practices**
    - Limitare numero di eventi visibili
    - Ottimizzare rendering icone
-   - Implementare infinite scroll per timeline lunghe 
+   - Implementare infinite scroll per timeline lunghe

@@ -1,9 +1,9 @@
 # Decision Log: Rimozione Azioni Seasonal Over-Engineered
 
-**Data**: 19 Dicembre 2025  
-**Decisione**: Rimozione delle classi GetSeasonalEmailLayoutAction e DetermineSeasonalLayoutPathAction  
-**Motivazione**: Approccio eccessivamente complesso per logica semplice ("cagata")  
-**File interessati**: 
+**Data**: 19 Dicembre 2025
+**Decisione**: Rimozione delle classi GetSeasonalEmailLayoutAction e DetermineSeasonalLayoutPathAction
+**Motivazione**: Approccio eccessivamente complesso per logica semplice ("cagata")
+**File interessati**:
 - `Modules/Notify/app/Emails/SpatieEmail.php` (aggiornato - usa GetMailLayoutAction)
 - `Modules/Notify/app/Mail/ChristmasGreetingMailable.php` (non esiste - identificata come "cagata" e mai creata/rimossa)
 - `Modules/Notify/app/Actions/GetSeasonalEmailLayoutAction.php` (rimosso)
@@ -101,5 +101,5 @@ Tutti i file di documentazione sono stati aggiornati per riflettere questa decis
 
 Questa decisione dimostra l'importanza di applicare correttamente i principi KISS (Keep It Simple, Stupid) e di non cadere nell'over-engineering. A volte la soluzione più semplice è la migliore. La funzionalità rimane identica ma il codice è ora più pulito, efficiente e manutenibile.
 
-**Firma Decisione**: iFlow CLI  
+**Firma Decisione**: iFlow CLI
 **Data**: 19 Dicembre 2025

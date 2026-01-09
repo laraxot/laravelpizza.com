@@ -98,26 +98,26 @@ Modules/User/
    ```php
    // ✅ CORRETTO
    namespace Modules\User\App\Actions;
-   
+
    // ❌ ERRATO
    namespace Modules\User\Actions;
    ```
    namespace Modules\User\Actions;
-   
+
    // ❌ ERRATO
    namespace Modules\User\App\Actions;
    ```
    // ✅ CORRETTO per classi in app/Actions/
    namespace Modules\User\Actions;
-   
+
    // ✅ CORRETTO per classi in app/Http/Livewire/
    namespace Modules\User\Http\Livewire;
-   
+
    // ❌ ERRATO
    namespace Modules\User\App\Actions;
    namespace Modules\User\App\Http\Livewire;
    ```
-   
+
    Il namespace deve riflettere il percorso relativo alla cartella `app/`, che è mappata al namespace base `Modules\User\` nel composer.json.
 
 3. **Codice PHP**
@@ -287,4 +287,4 @@ namespace Modules\User\Http\Controllers;
 ### Common Pitfalls
 - Spostare migration tra cartelle senza aggiornare la history
 - Dimenticare di aggiornare la documentazione dopo lo spostamento
-- Creare migration duplicate in più moduli 
+- Creare migration duplicate in più moduli

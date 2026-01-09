@@ -19,18 +19,18 @@ public static function getFormSchema(): array
         'name' => Forms\Components\TextInput::make('name')
             ->required()
             ->maxLength(255),
-            
+
         'slug' => Forms\Components\TextInput::make('slug')
             ->required()
             ->unique(ignoreRecord: true)
             ->maxLength(255)
-            ->afterStateUpdated(fn (string $context, $state, callable $set) => 
+            ->afterStateUpdated(fn (string $context, $state, callable $set) =>
                 $context === 'create' ? $set('slug', Str::slug($state)) : null),
-            
+
         'mailable' => Forms\Components\TextInput::make('mailable')
             ->required()
             ->maxLength(255),
-        
+
         // Altri campi...
     ];
 }
@@ -43,7 +43,7 @@ public static function getFormSchema(): array
 3. **Validazione Unicità**: L'opzione `unique(ignoreRecord: true)` garantisce unicità, escludendo il record corrente durante l'aggiornamento.
 4. **Generazione Automatica**: La callback `afterStateUpdated()` genera automaticamente lo slug dal nome quando si crea un nuovo record.
 
-## Conformità con gli Standard 
+## Conformità con gli Standard
 ## Conformità con gli Standard SaluteOra
 
 Questa implementazione aderisce a diversi standard chiave del progetto:
@@ -69,16 +69,16 @@ public static function getListTableColumns(): array
     return [
         'id' => Tables\Columns\TextColumn::make('id')
             ->sortable(),
-            
+
         'name' => Tables\Columns\TextColumn::make('name')
             ->searchable()
             ->sortable(),
-            
+
         'slug' => Tables\Columns\TextColumn::make('slug')
             ->searchable()
             ->sortable()
             ->copyable(),
-            
+
         // Altri campi...
     ];
 }
@@ -106,7 +106,7 @@ public static function getTableFilters(): array
 {
     return [
         // Altri filtri...
-        
+
         'slug' => Tables\Filters\TextFilter::make('slug')
     ];
 }
@@ -150,7 +150,7 @@ return [
    ```php
    // Ordinare i template per slug
    MailTemplate::query()->orderBy('slug')->get();
-   
+
    // Cercare template per slug parziale
    MailTemplate::query()->where('slug', 'like', 'welcome-%')->get();
    ```

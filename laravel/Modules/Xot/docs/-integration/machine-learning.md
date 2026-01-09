@@ -19,7 +19,6 @@ https://pii-tools.com/detect-person-names-in-text/
 
 https://github.com/angeloskath/php-nlp-tools
 
-
 http://php-nlp-tools.com/documentation/
 
 ----------- PER RICERCA -------
@@ -27,7 +26,6 @@ https://www.php.net/manual/en/function.metaphone.php
 ---------------------------------
 
 https://www.phpclasses.org/package/10316-PHP-Detect-a-person-gender-from-the-name-in-Latin-text.html
-
 
 https://www.we-rc.com/blog/2021/04/04/named-entity-recognition-in-php
 
@@ -37,15 +35,12 @@ https://github.com/wamania/php-stemmer#languages
 
 https://www.youtube.com/watch?v=06-AZXmwHjo
 
-
 https://stackoverflow.com/questions/4304938/how-to-recognize-names-from-a-text-using-php +++
 http://www.complexityintelligence.com/en/knowledgebase/api/nlp_ner_v1/snippet_php
 http://www.alchemyapi.com/tools/
 http://www.opencalais.com/applications/opencalais-and-php-code
 https://nocodeapi.net/
 https://www.refinitiv.com/en/products/intelligent-tagging-text-analytics
-
-
 
 //--------------------------------------------------------------------------------------------------------
 PHP extension wrapping the MITIE data extraction C++ library. For named entity extraction in PHP.
@@ -80,13 +75,11 @@ https://cloudmersive.medium.com/perform-named-entity-recognition-using-nlp-in-ph
 LUCENE
 https://github.com/nqxcode/laravel-lucene-search
 
-
 -----------------------------------------------------------------------------------------------------------------------
 
 https://www.textrazor.com/demo
 
 --------------------------------------------------------------------------------------------------------------------------
-
 
 TIPO PERSON OF INTEREST
 https://towardsdatascience.com/object-detection-with-10-lines-of-code-d6cb4d86f606
@@ -94,7 +87,6 @@ https://towardsdatascience.com/object-detection-with-10-lines-of-code-d6cb4d86f6
 ----------------------------
 CON LIBRERIA Stanford
 https://github.com/yooper/php-text-analysis  !!!!!
-
 
 -----------------------------------------
 https://github.com/DaveChild/Text-Statistics
@@ -104,11 +96,9 @@ https://github.com/DaveChild/Best-websites-a-programmer-should-visit  !!
 
 https://github.com/elastic/elasticsearch-php/blob/master/src/Elasticsearch/Namespaces/IndicesNamespace.php   ????
 
-
 ------------------------------------------------
 
 https://github.com/patrickschur/language-detection
-
 
 ----------------------------------------------------
 https://www.sitepoint.com/how-to-analyze-tweet-sentiments-with-php-machine-learning/   !!!!!!!!!!!!!!!!!!!!!
@@ -123,12 +113,3 @@ https://cloud.google.com/natural-language/project_docs/analyzing-entities  !!!!!
 ----------------------------------------------------------
 
 https://accidentalfactors.com/part-of-speech-tagging/
-
-
-
-
-
-
-
-
-

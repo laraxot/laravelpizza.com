@@ -91,9 +91,9 @@ use Spatie\Translatable\HasTranslations;
 class Post extends Model
 {
     use HasTranslations;
-    
+
     public $translatable = ['title', 'content'];
-    
+
     // Resto dell'implementazione...
 }
 ```
@@ -111,7 +111,7 @@ use Modules\Lang\Filament\Resources\Pages\LangBaseCreateRecord;
 class CreatePost extends LangBaseCreateRecord
 {
     protected static string $resource = PostResource::class;
-    
+
     // Eventuali personalizzazioni...
 }
 ```

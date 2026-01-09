@@ -169,7 +169,6 @@ return [
 
 ## Verifiche Post-Correzione
 
-
 ### 2. Validazione Struttura
 ```bash
 php artisan lang:check

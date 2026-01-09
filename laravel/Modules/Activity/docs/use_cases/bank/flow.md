@@ -46,4 +46,4 @@ sequenceDiagram
 
 ## 5. Audit e Rollback
 - (Tradizionale) Audit limitato, rollback manuale
-- (Event Sourcing) Audit completo, rollback tramite replay eventi o snapshot 
+- (Event Sourcing) Audit completo, rollback tramite replay eventi o snapshot

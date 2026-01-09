@@ -106,4 +106,4 @@ namespace Modules\ModuleName\App\Models;
 3. **Testing**
    - Verificare le modifiche con PHPStan
    - Testare la compatibilità
-   - Validare le funzionalità 
+   - Validare le funzionalità

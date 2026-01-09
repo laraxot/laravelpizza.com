@@ -48,4 +48,4 @@ interface ModelContactContract extends ModelContract
 - [Model Guidelines](../models/README.md)
 - [Contact Management](../features/CONTACT-MANAGEMENT.md)
 - [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
-- [Contracts Overview](./README.md) 
+- [Contracts Overview](./README.md)

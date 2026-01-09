@@ -33,20 +33,20 @@ use Modules\Xot\Filament\Traits\TransTrait;
 enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 {
     use TransTrait;
-    
+
     case LIST = 'list';
     case GRID = 'grid';
-    
+
     public function getLabel(): string
     {
         return $this->transClass(self::class, $this->value.'.label');
     }
-    
+
     public function getColor(): string
     {
         return $this->transClass(self::class, $this->value.'.color');
     }
-    
+
     public function getIcon(): string
     {
         return $this->transClass(self::class, $this->value.'.icon');
@@ -78,19 +78,19 @@ use Filament\Support\Enums\FontWeight;
 class ListUsers extends ListRecords
 {
     protected TableLayoutEnum $layout;
-    
+
     public function mount(): void
     {
         $this->layout = TableLayoutEnum::LIST;
     }
-    
+
     public function table(Table $table): Table
     {
         return $table
             ->columns($this->getColumnsForLayout())
             ->contentGrid($this->layout->getTableContentGrid());
     }
-    
+
     /**
      * Restituisce le colonne appropriate per il layout corrente
             ->contentGrid($this->layout->getTableContentGrid())
@@ -98,7 +98,7 @@ class ListUsers extends ListRecords
                 'class' => $this->layout->getContainerClasses(),
             ]);
     }
-    
+
     /**
      * Get appropriate columns for current layout.
      */
@@ -109,7 +109,7 @@ class ListUsers extends ListRecords
             Tables\Columns\TextColumn::make('email'),
             Tables\Columns\TextColumn::make('created_at'),
         ];
-        
+
         $gridColumns = [
             Tables\Columns\Layout\Stack::make([
                 Tables\Columns\TextColumn::make('name')
@@ -125,7 +125,7 @@ class ListUsers extends ListRecords
                 ->dateTime()
                 ->sortable(),
         ];
-        
+
         $gridColumns = [
             Stack::make([
                 Tables\Columns\TextColumn::make('name')
@@ -138,10 +138,10 @@ class ListUsers extends ListRecords
                     ->size('sm'),
             ])->space(2),
         ];
-        
+
         return $this->layout->getTableColumns($listColumns, $gridColumns);
     }
-    
+
     /**
      * Layout toggle action.
      */
@@ -169,7 +169,7 @@ class ListUsers extends ListRecords
 
 Il metodo `getTableColumns()` ora richiede due parametri:
 - `$listColumns`: Array delle colonne per layout lista
-- `$gridColumns`: Array delle colonne per layout griglia 
+- `$gridColumns`: Array delle colonne per layout griglia
 ### Advantages of the New Approach
 
 1. **Type Safety**: No longer uses reflection or debug_backtrace

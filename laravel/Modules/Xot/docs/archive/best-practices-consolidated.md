@@ -1,7 +1,7 @@
 # Best Practices - Documentazione Consolidata DRY + KISS
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTE le best practices del progetto
-> 
+>
 > **🔗 Riferimenti**: [coding-standards.md](coding-standards.md) | [phpstan-consolidated.md](phpstan-consolidated.md)
 
 ## 🚨 STOP DUPLICAZIONE!

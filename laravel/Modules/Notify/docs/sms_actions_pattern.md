@@ -1,4 +1,4 @@
-# Pattern per le Azioni SMS 
+# Pattern per le Azioni SMS
 
 ## Struttura e Convenzioni
 
@@ -69,7 +69,7 @@ final class Send{Provider}SMSAction implements SmsActionInterface
     use QueueableAction;
 
     // Proprietà specifiche del provider
-    
+
     /**
      * Create a new action instance.
      */
@@ -99,11 +99,11 @@ La configurazione per i provider SMS deve seguire il pattern standardizzato nel 
 ```php
 return [
     'default' => env('SMS_DRIVER', 'netfun'),
-    
+
     'from' => env('SMS_FROM'),
     'debug' => env('SMS_DEBUG', false),
     'timeout' => env('SMS_TIMEOUT', 30),
-    
+
     'drivers' => [
         'netfun' => [
             'token' => env('NETFUN_TOKEN'),
@@ -116,12 +116,12 @@ return [
         ],
         // Altri provider...
     ],
-    
+
     'retry' => [
         'attempts' => env('SMS_RETRY_ATTEMPTS', 3),
         'delay' => env('SMS_RETRY_DELAY', 60),
     ],
-    
+
     'rate_limit' => [
         'enabled' => env('SMS_RATE_LIMIT_ENABLED', true),
         'max_attempts' => env('SMS_RATE_LIMIT_MAX_ATTEMPTS', 60),
@@ -174,7 +174,7 @@ public function execute(SmsData $smsData): array
         'reference' => (string) Str::uuid(), // Generato internamente
         'scheduledDate' => null, // Non supportato da SmsData, usa valore predefinito
     ];
-    
+
     // Resto dell'implementazione...
 }
 ```

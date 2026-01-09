@@ -59,4 +59,4 @@ This document outlines the structure and usage of the `BaseUser` model within a 
 - [[Tenant]]
 - [[Device]]
 - [[SocialiteUser]]
-- [[AuthenticationLog]] 
+- [[AuthenticationLog]]

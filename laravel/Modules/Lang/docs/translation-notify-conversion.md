@@ -96,7 +96,7 @@ La corretta implementazione degli standard di traduzione garantisce:
 - Coerenza nell'interfaccia utente
 - Facilità di manutenzione
 - Miglior supporto per la localizzazione
-- Conformità alle best practice di Laravel e 
+- Conformità alle best practice di Laravel e
 
 ## Collegamenti alla Documentazione
 

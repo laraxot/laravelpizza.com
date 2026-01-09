@@ -32,4 +32,3 @@ protected static function getPersonalStep(): Forms\Components\Wizard\Step
 
 ## Collegamenti tra versioni di clean-code-wizard-steps.md
 * [clean-code-wizard-steps.md](../../Patient/docs/clean-code-wizard-steps.md)
-

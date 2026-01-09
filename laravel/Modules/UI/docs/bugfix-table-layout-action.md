@@ -145,9 +145,9 @@ curl -I http://127.0.0.1:8001/<nome progetto>/admin/gaia/survey-pdfs
 
 ### Risultati Test
 
-✅ **Sintassi PHP**: Nessun errore di sintassi  
-✅ **Istanziazione**: Classe istanziabile correttamente  
-✅ **URL Test**: Errore originale risolto (ora errore di autenticazione, conferma che il fix ha funzionato)  
+✅ **Sintassi PHP**: Nessun errore di sintassi
+✅ **Istanziazione**: Classe istanziabile correttamente
+✅ **URL Test**: Errore originale risolto (ora errore di autenticazione, conferma che il fix ha funzionato)
 ✅ **PHPStan**: Nessun errore di linting rilevato
 
 ## Impatto
@@ -172,7 +172,6 @@ curl -I http://127.0.0.1:8001/<nome progetto>/admin/gaia/survey-pdfs
 - **Risultato**: eliminato l'errore statico garantendo type safety sulle azioni di header e allineamento con la regola “fix, don’t ignore”.
 - **Verifica**: `php -d memory_limit=4G ./vendor/bin/phpstan analyse Modules/UI --memory-limit=4G --no-progress`
 
-
 ## Riferimenti
 
 - [Interfaccia HasTableLayout](./HasTableLayout.php)
@@ -181,8 +180,8 @@ curl -I http://127.0.0.1:8001/<nome progetto>/admin/gaia/survey-pdfs
 
 ---
 
-**Data**: 27 Gennaio 2025  
-**Modulo**: UI  
-**Tipo**: Bug Fix  
-**Priorità**: Alta  
+**Data**: 27 Gennaio 2025
+**Modulo**: UI
+**Tipo**: Bug Fix
+**Priorità**: Alta
 **Stato**: ✅ Risolto

@@ -1,6 +1,6 @@
 # Verifica Mapping Classi Filament → XotBase
 
-**Data**: 2025-12-23  
+**Data**: 2025-12-23
 **Obiettivo**: Verificare coerenza tra file di regole e codice esistente
 
 ## ⚠️ Inconsistenze Identificate
@@ -20,7 +20,7 @@
 3. **`Modules\UI\Filament\Forms\Components\UIBaseRadio`**
    - **Nel mapping**: Presente (aggiunta recentemente)
    - **Nel codice**: ❌ Non esiste
-   - **Uso reale**: 
+   - **Uso reale**:
      - `RadioBadge` estende `Filament\Forms\Components\Radio`
      - `RadioIcon` estende `Filament\Forms\Components\Radio`
      - `RadioImage` estende `Filament\Forms\Components\Radio`

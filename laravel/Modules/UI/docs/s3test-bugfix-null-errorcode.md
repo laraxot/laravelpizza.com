@@ -30,7 +30,7 @@ private function getSolutionForError(?string $errorCode): string
     if ($errorCode === null) {
         return 'Unknown error - check AWS credentials and configuration';
     }
-    
+
     $solutions = [
         'AccessDenied' => 'Check IAM permissions for your AWS user',
         'SignatureDoesNotMatch' => 'Verify AWS_SECRET_ACCESS_KEY in .env',
@@ -38,7 +38,7 @@ private function getSolutionForError(?string $errorCode): string
         'NoSuchBucket' => 'Verify bucket name and region',
         'BucketRegionError' => 'Update AWS_DEFAULT_REGION to match bucket region',
     ];
-    
+
     return $solutions[$errorCode] ?? 'Check AWS documentation for error: ' . $errorCode;
 }
 ```
@@ -105,7 +105,7 @@ try {
 } catch (AwsException $e) {
     $errorCode = $e->getAwsErrorCode() ?? 'UnknownError';
     $solution = $this->getSolutionForError($errorCode);
-    
+
     return [
         'error' => $errorCode,
         'message' => $e->getMessage(),
@@ -127,4 +127,4 @@ try {
 AI Assistant
 
 ## Status
-✅ Risolto e testato 
+✅ Risolto e testato

@@ -29,13 +29,13 @@ class LMSRMarketMaker
 {
     private float $b; // liquidity parameter
     private array $quantities;
-    
+
     public function __construct(float $b, array $initialQuantities)
     {
         $this->b = $b;
         $this->quantities = $initialQuantities;
     }
-    
+
     public function calculatePrice(int $outcomeIndex): float
     {
         $sum = 0;
@@ -44,7 +44,7 @@ class LMSRMarketMaker
         }
         return exp($this->quantities[$outcomeIndex] / $this->b) / $sum;
     }
-    
+
     public function calculateCost(array $quantities): float
     {
         $sum = 0;
@@ -53,7 +53,7 @@ class LMSRMarketMaker
         }
         return $this->b * log($sum);
     }
-    
+
     public function updateQuantities(array $newQuantities): void
     {
         $this->quantities = $newQuantities;
@@ -99,51 +99,51 @@ class PredictionMarketAggregateRoot
     private $bets = [];
     private $status = 'open';
     private $marketMaker;
-    
+
     public static function create(string $uuid, string $name, string $description, array $outcomes, string $expiryDate, float $b): self
     {
         $aggregate = new self();
         $aggregate->recordThat(new MarketCreated($uuid, $name, $description, $outcomes, $expiryDate));
-        
+
         // Inizializza il market maker con quantità iniziali uguali per tutti gli outcomes
         $initialQuantities = array_fill(0, count($outcomes), 0);
         $aggregate->marketMaker = new LMSRMarketMaker($b, $initialQuantities);
         $aggregate->recordThat(new MarketMakerInitialized($uuid, $b, $initialQuantities));
-        
+
         return $aggregate;
     }
-    
+
     public function placeBet(string $userId, string $outcome, float $amount)
     {
         if ($this->status !== 'open') {
             throw new \Exception('Cannot place bet on a closed market');
         }
-        
+
         // Calcola il prezzo usando LMSR
         $outcomeIndex = array_search($outcome, $this->outcomes);
         $price = $this->marketMaker->calculatePrice($outcomeIndex);
-        
+
         // Aggiorna le quantità e registra l'evento
         $newQuantities = $this->marketMaker->getQuantities();
         $newQuantities[$outcomeIndex] += $amount;
         $this->marketMaker->updateQuantities($newQuantities);
-        
+
         $this->recordThat(new BetPlaced($this->uuid, $userId, $outcome, $amount, $price));
         $this->recordThat(new PriceUpdated($this->uuid, $this->marketMaker->getCurrentPrices()));
     }
-    
+
     public function updateLiquidityParameter(float $newB)
     {
         $this->marketMaker->setB($newB);
         $this->recordThat(new LiquidityParameterChanged($this->uuid, $newB));
         $this->recordThat(new PriceUpdated($this->uuid, $this->marketMaker->getCurrentPrices()));
     }
-    
+
     public function resolve(string $winningOutcome)
     {
         $this->status = 'resolved';
         $this->recordThat(new MarketResolved($this->uuid, $winningOutcome));
-        
+
         // Calcola i premi usando i prezzi finali del LMSR
         $finalPrices = $this->marketMaker->getCurrentPrices();
         foreach ($this->bets as $bet) {
@@ -154,13 +154,13 @@ class PredictionMarketAggregateRoot
             }
         }
     }
-    
+
     protected function applyMarketCreated(MarketCreated $event)
     {
         $this->uuid = $event->uuid;
         $this->outcomes = $event->outcomes;
     }
-    
+
     protected function applyBetPlaced(BetPlaced $event)
     {
         $this->bets[] = [
@@ -170,7 +170,7 @@ class PredictionMarketAggregateRoot
             'price' => $event->price
         ];
     }
-    
+
     private function recordThat($event)
     {
         // Logica per registrare l'evento
@@ -201,7 +201,7 @@ class MarketSummaryProjector
         $summary->total_amount = 0;
         $summary->save();
     }
-    
+
     public function onBetPlaced(BetPlaced $event, string $uuid)
     {
         $summary = MarketSummary::findOrCreate($uuid);
@@ -209,7 +209,7 @@ class MarketSummaryProjector
         $summary->total_amount += $event->amount;
         $summary->save();
     }
-    
+
     public function onMarketResolved(MarketResolved $event, string $uuid)
     {
         $summary = MarketSummary::findOrCreate($uuid);

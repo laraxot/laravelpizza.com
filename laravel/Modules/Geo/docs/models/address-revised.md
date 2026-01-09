@@ -15,11 +15,11 @@ Il modello `Address` è stato riveduto seguendo i principi di design ottimali e 
 Schema::create('addresses', function (Blueprint $table) {
     $table->id();
     $table->nullableMorphs('model'); // Relazione polimorfica standardizzata
-    
+
     // Campi informativi
     $table->string('name')->nullable()->comment('Nome identificativo dell\'indirizzo');
     $table->text('description')->nullable()->comment('Descrizione opzionale');
-    
+
     // Campi indirizzo (evitando prefissi ridondanti)
     $table->string('route')->nullable()->comment('Via/Piazza');
     $table->string('street_number')->nullable()->comment('Numero civico');
@@ -29,20 +29,20 @@ Schema::create('addresses', function (Blueprint $table) {
     $table->string('administrative_area_level_1')->nullable()->comment('Stato/Paese');
     $table->string('country', 2)->nullable()->comment('Codice paese ISO');
     $table->string('postal_code', 20)->nullable()->comment('CAP');
-    
+
     // Dati di geocoding
     $table->text('formatted_address')->nullable();
     $table->string('place_id')->nullable()->comment('ID Google Places');
     $table->decimal('latitude', 15, 10)->nullable();
     $table->decimal('longitude', 15, 10)->nullable();
-    
+
     // Campi tipo indirizzo
     $table->string('type', 50)->nullable()->index()->comment('Tipo indirizzo (home, work, etc.)');
     $table->boolean('is_primary')->default(false)->index();
-    
+
     // Dati aggiuntivi
     $table->json('extra_data')->nullable();
-    
+
     // Timestamps e soft delete
     $table->timestamps();
     $table->softDeletes();
@@ -68,9 +68,9 @@ use Modules\Geo\Enums\AddressTypeEnum;
 
 /**
  * Class Address
- * 
+ *
  * Implementazione di Schema.org PostalAddress
- * 
+ *
  * @property int $id
  * @property string|null $model_type
  * @property int|null $model_id
@@ -99,7 +99,7 @@ class Address extends Model implements HasGeolocation
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use SoftDeletes;
-    
+
     /** list<string> */
    protected $fillable = [
         'name',
@@ -120,7 +120,7 @@ class Address extends Model implements HasGeolocation
         'is_primary',
         'extra_data',
     ];
-    
+
     /**
      * The attributes that should be cast.
      *
@@ -133,7 +133,7 @@ class Address extends Model implements HasGeolocation
         'extra_data' => 'array',
         'type' => AddressTypeEnum::class,
     ];
-    
+
     /**
      * Create a new factory instance for the model.
      *
@@ -143,7 +143,7 @@ class Address extends Model implements HasGeolocation
     {
         return AddressFactory::new();
     }
-    
+
     /**
      * Get the parent model.
      *
@@ -153,7 +153,7 @@ class Address extends Model implements HasGeolocation
     {
         return $this->morphTo();
     }
-    
+
     /**
      * Relazione polimorfica (alternativa con nome più descrittivo)
      *
@@ -163,7 +163,7 @@ class Address extends Model implements HasGeolocation
     {
         return $this->morphTo('model');
     }
-    
+
     /**
      * Get the city relationship.
      *
@@ -173,7 +173,7 @@ class Address extends Model implements HasGeolocation
     {
         return $this->belongsTo(City::class, 'locality', 'name');
     }
-    
+
     /**
      * Get the province relationship.
      *
@@ -183,7 +183,7 @@ class Address extends Model implements HasGeolocation
     {
         return $this->belongsTo(Provincia::class, 'administrative_area_level_3', 'name');
     }
-    
+
     /**
      * Get the region relationship.
      *
@@ -193,7 +193,7 @@ class Address extends Model implements HasGeolocation
     {
         return $this->belongsTo(Regione::class, 'administrative_area_level_2', 'name');
     }
-    
+
     /**
      * Getter per l'indirizzo completo in formato italiano
      *
@@ -212,7 +212,7 @@ class Address extends Model implements HasGeolocation
 
         return implode(', ', $parts);
     }
-    
+
     /**
      * Getter per l'indirizzo strada completo
      *
@@ -222,7 +222,7 @@ class Address extends Model implements HasGeolocation
     {
         return trim(($this->route ?? '') . ' ' . ($this->street_number ?? ''));
     }
-    
+
     /**
      * Get the formatted address.
      *
@@ -233,23 +233,23 @@ class Address extends Model implements HasGeolocation
         if ($this->formatted_address) {
             return $this->formatted_address;
         }
-        
+
         $parts = [];
-        
+
         // Indirizzo stradale
         if ($this->route) {
             $parts[] = $this->getStreetAddressAttribute();
         }
-        
+
         // Località e provincia (formato italiano)
         $localityParts = [];
         if ($this->postal_code) {
             $localityParts[] = $this->postal_code;
         }
-        
+
         if ($this->locality) {
             $localityParts[] = $this->locality;
-            
+
             // Per indirizzi italiani, aggiungiamo la sigla provincia
             if ($this->country === 'IT' && $this->administrative_area_level_3) {
                 // Se è un'implementazione reale, potremmo derivare la sigla dalla provincia
@@ -259,25 +259,25 @@ class Address extends Model implements HasGeolocation
                 }
             }
         }
-        
+
         if (!empty($localityParts)) {
             $parts[] = implode(' ', $localityParts);
         }
-        
+
         // Regione
         if ($this->administrative_area_level_2) {
             $parts[] = $this->administrative_area_level_2;
         }
-        
+
         // Paese
         if ($this->country) {
             $countryName = $this->administrative_area_level_1 ?? $this->country;
             $parts[] = strtoupper($countryName);
         }
-        
+
         return implode("\n", $parts);
     }
-    
+
     /**
      * Get the latitude of the address.
      *
@@ -287,7 +287,7 @@ class Address extends Model implements HasGeolocation
     {
         return $this->latitude;
     }
-    
+
     /**
      * Get the longitude of the address.
      *
@@ -297,7 +297,7 @@ class Address extends Model implements HasGeolocation
     {
         return $this->longitude;
     }
-    
+
     /**
      * Restituisce i dati in formato Schema.org PostalAddress
      *
@@ -318,7 +318,7 @@ class Address extends Model implements HasGeolocation
             'postalCode' => $this->postal_code,
         ];
     }
-    
+
     /**
      * Metodo statico per creare da risposta Google Maps
      *
@@ -337,7 +337,7 @@ class Address extends Model implements HasGeolocation
             'description' => $description,
             'street_number' => $components->get('street_number')['long_name'] ?? null,
             'route' => $components->get('route')['long_name'] ?? null,
-            'locality' => $components->get('locality')['long_name'] ?? 
+            'locality' => $components->get('locality')['long_name'] ??
                         $components->get('administrative_area_level_3')['long_name'] ?? null,
             'administrative_area_level_3' => $components->get('administrative_area_level_2')['long_name'] ?? null, // Provincia
             'administrative_area_level_2' => $components->get('administrative_area_level_1')['long_name'] ?? null, // Regione
@@ -350,7 +350,7 @@ class Address extends Model implements HasGeolocation
             'longitude' => $googleData['geometry']['location']['lng'] ?? null,
         ]);
     }
-    
+
     /**
      * Scope per cercare indirizzi nelle vicinanze
      *
@@ -369,7 +369,7 @@ class Address extends Model implements HasGeolocation
         ->having('distance', '<', $radiusKm)
         ->orderBy('distance');
     }
-    
+
     /**
      * Scope a query to only include primary addresses.
      *
@@ -380,7 +380,7 @@ class Address extends Model implements HasGeolocation
     {
         return $query->where('is_primary', true);
     }
-    
+
     /**
      * Scope a query to filter by address type.
      *
@@ -416,11 +416,11 @@ return new class extends XotBaseMigration {
             function (Blueprint $table): void {
                 $table->id();
                 $table->nullableMorphs('model'); // Relazione polimorfica standardizzata
-                
+
                 // Campi informativi
                 $table->string('name')->nullable()->comment('Nome identificativo dell\'indirizzo');
                 $table->text('description')->nullable()->comment('Descrizione opzionale');
-                
+
                 // Campi indirizzo (evitando prefissi ridondanti)
                 $table->string('route')->nullable()->comment('Via/Piazza');
                 $table->string('street_number')->nullable()->comment('Numero civico');
@@ -430,22 +430,22 @@ return new class extends XotBaseMigration {
                 $table->string('administrative_area_level_1')->nullable()->comment('Stato/Paese');
                 $table->string('country', 2)->nullable()->comment('Codice paese ISO');
                 $table->string('postal_code', 20)->nullable()->comment('CAP');
-                
+
                 // Dati di geocoding
                 $table->text('formatted_address')->nullable();
                 $table->string('place_id')->nullable()->comment('ID Google Places');
                 $table->decimal('latitude', 15, 10)->nullable();
                 $table->decimal('longitude', 15, 10)->nullable();
-                
+
                 // Campi tipo indirizzo
                 $table->string('type', 50)->nullable()->index()->comment('Tipo indirizzo (home, work, etc.)');
                 $table->boolean('is_primary')->default(false)->index();
-                
+
                 // Dati aggiuntivi
                 $table->json('extra_data')->nullable();
             }
         );
-        
+
         // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table): void {
@@ -481,7 +481,7 @@ La convenzione di non ripetere il nome della tabella come prefisso nei nomi dei 
    ```php
    // Con prefisso (ridondante)
    $address->address_locality
-   
+
    // Senza prefisso (pulito)
    $address->locality
    ```

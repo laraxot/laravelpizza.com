@@ -137,7 +137,7 @@ composer.lock not found. Try launch composer install
 1. **PHPMD** - Analisi code smells essenziale
 2. **PHP-CS-Fixer** - Correzione automatica stile
 
-### Media Priorità  
+### Media Priorità
 3. **Fix PHPInsights** - Metriche architettura
 4. **Rector** - Refactoring automatico
 
@@ -203,7 +203,6 @@ php -l path/to/modified/file.php
 - Blocchi → cercare alternative (php-parse, php -l)
 
 **Filosofia**: "Il miglior tool è quello che funziona. Se non funziona, documentalo e vai avanti."
-
 
 ## Aggiornamento Tooling 2025-11-08
 

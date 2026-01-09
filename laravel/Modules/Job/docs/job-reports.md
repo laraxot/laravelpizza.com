@@ -89,30 +89,30 @@ class JobReportService
     {
         try {
             $data = $this->prepareQueueData($options);
-            
+
             $html = view('job::pdf.queue-system-report', [
                 'data' => $data,
                 'options' => $options,
                 'generatedAt' => now(),
                 'reportId' => $this->generateReportId(),
             ])->render();
-            
+
             $html2pdf = new Html2Pdf('P', 'A4', 'it', true, 'UTF-8', [15, 20, 15, 20]);
             $html2pdf->setDefaultFont('Helvetica');
             $html2pdf->writeHTML($html);
-            
+
             return $html2pdf->output('', 'S');
-            
+
         } catch (Html2PdfException $e) {
             $html2pdf->clean();
             throw new JobReportException('Failed to generate queue report: ' . $e->getMessage());
         }
     }
-    
+
     private function prepareQueueData(array $options): array
     {
         $monitor = app(QueueMonitorService::class);
-        
+
         return [
             'queue_statistics' => $this->getQueueStatistics($options),
             'health_status' => $monitor->getHealthStatus(),
@@ -122,21 +122,21 @@ class JobReportService
             'recommendations' => $this->generateRecommendations($options),
         ];
     }
-    
+
     private function getQueueStatistics(array $options): array
     {
         $query = Job::query();
-        
+
         if (isset($options['queue_filter'])) {
             $query->whereIn('queue_name', $options['queue_filter']);
         }
-        
+
         if (isset($options['period'])) {
             $query->whereBetween('created_at', $options['period']);
         }
-        
+
         $jobs = $query->get();
-        
+
         return [
             'total_jobs' => $jobs->count(),
             'by_queue' => $jobs->groupBy('queue_name')
@@ -155,22 +155,22 @@ class JobReportService
             'max_attempts' => $jobs->max('attempts'),
         ];
     }
-    
+
     private function getPerformanceMetrics(array $options): array
     {
         $query = Result::query();
-        
+
         if (isset($options['period'])) {
             $query->whereBetween('created_at', $options['period']);
         }
-        
+
         $results = $query->get();
-        
+
         return [
             'total_executions' => $results->count(),
             'successful_executions' => $results->where('status', 'success')->count(),
             'failed_executions' => $results->where('status', 'failed')->count(),
-            'success_rate' => $results->count() > 0 
+            'success_rate' => $results->count() > 0
                 ? round(($results->where('status', 'success')->count() / $results->count()) * 100, 2)
                 : 0,
             'avg_execution_time' => round($results->avg('execution_time'), 2),
@@ -182,17 +182,17 @@ class JobReportService
             ],
         ];
     }
-    
+
     private function getFailedJobsAnalysis(array $options): array
     {
         $query = FailedJob::query();
-        
+
         if (isset($options['period'])) {
             $query->whereBetween('failed_at', $options['period']);
         }
-        
+
         $failedJobs = $query->get();
-        
+
         return [
             'total_failed' => $failedJobs->count(),
             'by_queue' => $failedJobs->groupBy('queue')
@@ -205,14 +205,14 @@ class JobReportService
             'retry_rate' => $this->calculateRetryRate($failedJobs),
         ];
     }
-    
+
     private function generateRecommendations(array $options): array
     {
         $recommendations = [];
-        
+
         $stats = $this->getQueueStatistics($options);
         $performance = $this->getPerformanceMetrics($options);
-        
+
         // Queue size recommendations
         foreach ($stats['by_queue'] as $queue => $data) {
             if ($data['pending'] > 1000) {
@@ -224,7 +224,7 @@ class JobReportService
                 ];
             }
         }
-        
+
         // Failure rate recommendations
         if ($performance['success_rate'] < 90) {
             $recommendations[] = [
@@ -234,7 +234,7 @@ class JobReportService
                 'action' => 'Investigate job failures',
             ];
         }
-        
+
         // Performance recommendations
         if ($performance['avg_execution_time'] > 30) {
             $recommendations[] = [
@@ -244,7 +244,7 @@ class JobReportService
                 'action' => 'Optimize slow jobs',
             ];
         }
-        
+
         return $recommendations;
     }
 }
@@ -259,25 +259,25 @@ class PerformanceReportService
     {
         try {
             $data = $this->preparePerformanceData($options);
-            
+
             $html = view('job::pdf.performance-report', [
                 'data' => $data,
                 'options' => $options,
                 'generatedAt' => now(),
             ])->render();
-            
+
             $html2pdf = new Html2Pdf('L', 'A4', 'it', true, 'UTF-8', [15, 20, 15, 20]); // Landscape for charts
             $html2pdf->setDefaultFont('Helvetica');
             $html2pdf->writeHTML($html);
-            
+
             return $html2pdf->output('', 'S');
-            
+
         } catch (Html2PdfException $e) {
             $html2pdf->clean();
             throw new JobReportException('Failed to generate performance report: ' . $e->getMessage());
         }
     }
-    
+
     private function preparePerformanceData(array $options): array
     {
         return [
@@ -287,34 +287,34 @@ class PerformanceReportService
             'resource_usage' => $this->getResourceUsage($options),
         ];
     }
-    
+
     private function getExecutionTrends(array $options): array
     {
         $query = Result::query();
-        
+
         if (isset($options['date_range'])) {
             $query->whereBetween('created_at', $options['date_range']);
         }
-        
+
         return $query->selectRaw('DATE(created_at) as date, COUNT(*) as total, SUM(CASE WHEN status = "success" THEN 1 ELSE 0 END) as successful')
                   ->groupBy('date')
                   ->orderBy('date')
                   ->get()
                   ->toArray();
     }
-    
+
     private function getJobTypePerformance(array $options): array
     {
         $query = Result::query();
-        
+
         if (isset($options['job_types'])) {
             $query->whereIn('job_type', $options['job_types']);
         }
-        
+
         if (isset($options['date_range'])) {
             $query->whereBetween('created_at', $options['date_range']);
         }
-        
+
         return $query->selectRaw('job_type, COUNT(*) as total, AVG(execution_time) as avg_time, MAX(execution_time) as max_time')
                   ->groupBy('job_type')
                   ->orderBy('avg_time', 'desc')
@@ -346,7 +346,7 @@ class PerformanceReportService
                 </td>
                 <td style="width: 40%; text-align: right; font-size: 9pt;">
                     Generated: {{ $generatedAt->format('d/m/Y H:i') }}<br>
-                    Period: {{ $options['period']['start']->format('d/m/Y') }} - 
+                    Period: {{ $options['period']['start']->format('d/m/Y') }} -
                             {{ $options['period']['end']->format('d/m/Y') }}
                 </td>
             </tr>
@@ -357,7 +357,7 @@ class PerformanceReportService
     <!-- Health Status -->
     <div style="margin: 15mm 0;">
         <h2 style="font-size: 14pt; color: #2c3e50; margin-bottom: 8mm;">System Health</h2>
-        
+
         <table style="width: 100%; border-collapse: collapse;">
             <tr>
                 <td style="width: 50%; padding: 8mm; background-color: {{ $data['health_status'] == 'healthy' ? '#d4edda' : ($data['health_status'] == 'warning' ? '#fff3cd' : '#f8d7da') }}; border: 1px solid #dee2e6;">
@@ -383,7 +383,7 @@ class PerformanceReportService
     <!-- Queue Statistics -->
     <div style="margin: 15mm 0;">
         <h2 style="font-size: 14pt; color: #2c3e50; margin-bottom: 8mm;">Queue Statistics</h2>
-        
+
         <table style="width: 100%; border-collapse: collapse;">
             <tr style="background-color: #e9ecef;">
                 <th style="border: 1px solid #dee2e6; padding: 5mm; font-size: 10pt; text-align: left;">
@@ -427,7 +427,7 @@ class PerformanceReportService
     <!-- Performance Metrics -->
     <div style="margin: 15mm 0;">
         <h2 style="font-size: 14pt; color: #2c3e50; margin-bottom: 8mm;">Performance Metrics</h2>
-        
+
         <table style="width: 100%; border-collapse: collapse;">
             <tr>
                 <td style="width: 33%; padding: 8mm; background-color: #f8f9fa; border: 1px solid #dee2e6; vertical-align: top;">
@@ -461,7 +461,7 @@ class PerformanceReportService
     <!-- Recommendations -->
     <div style="margin: 15mm 0;">
         <h2 style="font-size: 14pt; color: #2c3e50; margin-bottom: 8mm;">Recommendations</h2>
-        
+
         @foreach($data['recommendations'] as $recommendation)
         <div style="margin-bottom: 8mm; padding: 8mm; background-color: #f8f9fa; border-left: 4px solid {{ $recommendation['priority'] == 'high' ? '#e74c3c' : '#f39c12' }};">
             <div style="font-size: 11pt; font-weight: bold; margin-bottom: 3mm;">
@@ -503,7 +503,7 @@ class PerformanceReportService
     <div style="margin: 10mm 0;">
         <!-- Job Type Performance Table -->
         <h2 style="font-size: 12pt; margin-bottom: 5mm;">Job Type Performance</h2>
-        
+
         <table style="width: 100%; border-collapse: collapse; font-size: 8pt;">
             <tr style="background-color: #e9ecef;">
                 <th style="border: 1px solid #dee2e6; padding: 3mm; text-align: left;">Job Type</th>
@@ -572,7 +572,7 @@ class ExportQueueReportAction extends Action
                     'include_sections' => $data['sections'] ?? [],
                     'queue_filter' => $data['queues'] ?? [],
                 ]);
-                
+
                 return response()->streamDownload(function () use ($pdf) {
                     echo $pdf;
                 }, "queue_report_{$data['start_date']}_to_{$data['end_date']}.pdf");
@@ -582,12 +582,12 @@ class ExportQueueReportAction extends Action
                     ->label('Start Date')
                     ->required()
                     ->default(now()->subDay()),
-                
+
                 \Filament\Forms\Components\DatePicker::make('end_date')
                     ->label('End Date')
                     ->required()
                     ->default(now()),
-                
+
                 \Filament\Forms\Components\CheckboxList::make('sections')
                     ->label('Include Sections')
                     ->options([
@@ -597,7 +597,7 @@ class ExportQueueReportAction extends Action
                         'performance_metrics' => 'Performance Metrics',
                     ])
                     ->default(['statistics', 'health_status', 'performance_metrics']),
-                
+
                 \Filament\Forms\Components\CheckboxList::make('queues')
                     ->label('Queue Filter')
                     ->options([
@@ -633,7 +633,7 @@ class ExportPerformanceReportAction extends Action
                     'include_charts' => $data['include_charts'] ?? false,
                     'include_failures' => $data['include_failures'] ?? true,
                 ]);
-                
+
                 return response()->streamDownload(function () use ($pdf) {
                     echo $pdf;
                 }, "performance_report_{$data['start_date']}_to_{$data['end_date']}.pdf");
@@ -643,12 +643,12 @@ class ExportPerformanceReportAction extends Action
                     ->label('Start Date')
                     ->required()
                     ->default(now()->subWeek()),
-                
+
                 \Filament\Forms\Components\DatePicker::make('end_date')
                     ->label('End Date')
                     ->required()
                     ->default(now()),
-                
+
                 \Filament\Forms\Components\CheckboxList::make('job_types')
                     ->label('Job Types')
                     ->options([
@@ -657,11 +657,11 @@ class ExportPerformanceReportAction extends Action
                         'GenerateReportJob' => 'Report Generation',
                         'ImportDataJob' => 'Data Import',
                     ]),
-                
+
                 \Filament\Forms\Components\Toggle::make('include_charts')
                     ->label('Include Charts')
                     ->default(true),
-                
+
                 \Filament\Forms\Components\Toggle::make('include_failures')
                     ->label('Include Failures Analysis')
                     ->default(true),
@@ -694,7 +694,7 @@ class JobReportTest extends TestCase
         // Create test data
         Job::factory()->count(100)->create();
         FailedJob::factory()->count(10)->create();
-        
+
         $service = app(JobReportService::class);
         $pdfContent = $service->generateQueueReport([
             'period' => [
@@ -702,40 +702,40 @@ class JobReportTest extends TestCase
                 'end' => now(),
             ]
         ]);
-        
+
         $this->assertStringStartsWith('%PDF', $pdfContent);
         $this->assertGreaterThan(2000, strlen($pdfContent));
         $this->assertStringContainsString('Queue System Report', $pdfContent);
         $this->assertStringContainsString('System Health', $pdfContent);
     }
-    
+
     /** @test */
     public function it_includes_performance_metrics()
     {
         Job::factory()->count(50)->create();
-        
+
         $service = app(JobReportService::class);
         $pdfContent = $service->generateQueueReport([
             'include_sections' => ['performance_metrics'],
         ]);
-        
+
         $this->assertStringStartsWith('%PDF', $pdfContent);
         $this->assertStringContainsString('Performance Metrics', $pdfContent);
     }
-    
+
     /** @test */
     public function it_handles_large_datasets_efficiently()
     {
         // Create large dataset
         Job::factory()->count(5000)->create();
-        
+
         $startTime = microtime(true);
-        
+
         $service = app(JobReportService::class);
         $pdfContent = $service->generateQueueReport();
-        
+
         $duration = microtime(true) - $startTime;
-        
+
         // Should generate within reasonable time
         $this->assertLessThan(10, $duration);
         $this->assertStringStartsWith('%PDF', $pdfContent);
@@ -750,7 +750,7 @@ class JobReportTest extends TestCase
 public function admin_can_export_queue_report()
 {
     $admin = User::factory()->create(['role' => 'admin']);
-    
+
     $response = $this->actingAs($admin)
                     ->post('/job/export-queue-report', [
                         'start_date' => now()->subDay()->format('Y-m-d'),
@@ -758,7 +758,7 @@ public function admin_can_export_queue_report()
                         'sections' => ['statistics', 'health_status'],
                         'queues' => ['default', 'high'],
                     ]);
-    
+
     $response->assertSuccessful();
     $this->assertEquals('application/pdf', $response->headers->get('Content-Type'));
 }
@@ -780,7 +780,7 @@ class JobReportService
             'last_job' => Job::max('updated_at'),
             'last_failed' => FailedJob::max('failed_at'),
         ]));
-        
+
         return Cache::remember($cacheKey, 1800, function () use ($options) { // 30 minutes
             return $this->generateQueueReport($options);
         });
@@ -797,7 +797,7 @@ private function optimizeForLargeReports($query)
     $query->chunk(500, function ($jobs) {
         // Process in chunks
     });
-    
+
     // Limit data for PDF
     return $query->limit(2000)->get();
 }
@@ -812,21 +812,21 @@ public function generateWithErrorHandling(array $options = []): string
 {
     try {
         return $this->generateQueueReport($options);
-        
+
     } catch (Html2PdfException $e) {
         Log::error('Job PDF generation failed', [
             'error' => $e->getMessage(),
             'options' => $options,
         ]);
-        
+
         // Generate simplified fallback
         return $this->generateFallbackReport($options);
-        
+
     } catch (Exception $e) {
         Log::error('Unexpected error in job PDF generation', [
             'error' => $e->getMessage(),
         ]);
-        
+
         throw new JobReportException('Failed to generate job report');
     }
 }
@@ -843,7 +843,7 @@ public function generateWithErrorHandling(array $options = []): string
 
 ---
 
-**Last Updated:** 2025-12-09  
-**Version:** 1.0.0  
-**HTML2PDF Version:** 5.2.x  
+**Last Updated:** 2025-12-09
+**Version:** 1.0.0
+**HTML2PDF Version:** 5.2.x
 **PHPStan Level:** 10 ✅

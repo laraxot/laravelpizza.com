@@ -47,4 +47,4 @@ $models = $action->execute('NomeModulo');
 ## Collegamenti correlati
 - [Documentazione Spatie QueueableAction](https://github.com/spatie/laravel-queueable-action)
 - [Documentazione Nwidart Modules](https://nwidart.com/laravel-modules/v6/introduction)
-- [PHP Reflection](https://www.php.net/manual/en/book.reflection.php) 
+- [PHP Reflection](https://www.php.net/manual/en/book.reflection.php)

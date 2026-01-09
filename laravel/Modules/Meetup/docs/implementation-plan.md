@@ -254,7 +254,7 @@ resources/views/pages/
 - `CancelEventRegistrationAction` chiamato da Volt
 - Nessuna rotta POST necessaria, tutto gestito da Livewire/Volt
 
-**Nota Architetturale**: 
+**Nota Architetturale**:
 - ❌ **NON creare controller** per frontoffice
 - ❌ **NON scrivere rotte** in `web.php` o `api.php`
 - ✅ **Folio** gestisce routing automaticamente

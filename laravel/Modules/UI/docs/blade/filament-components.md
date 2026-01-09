@@ -62,13 +62,13 @@ Filament mette a disposizione molti componenti Blade riutilizzabili:
     <x-slot name="heading">
         Titolo della scheda
     </x-slot>
-    
+
     <x-slot name="description">
         Descrizione opzionale della scheda.
     </x-slot>
-    
+
     Contenuto della scheda...
-    
+
     <x-slot name="footer">
         <x-filament::button>
             Azione

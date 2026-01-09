@@ -51,7 +51,7 @@ return [
         'tooltip' => 'Gestisci i diritti degli utenti'
     ]
 ];
-``` 
+```
 ## Collegamenti tra versioni di translations.md
 * [translations.md](laravel/Modules/Chart/docs/translations.md)
 * [translations.md](laravel/Modules/Reporting/docs/translations.md)
@@ -70,4 +70,3 @@ return [
 * [translations.md](laravel/Modules/Activity/docs/translations.md)
 * [translations.md](laravel/Modules/Patient/docs/translations.md)
 * [translations.md](laravel/Modules/Cms/docs/translations.md)
-

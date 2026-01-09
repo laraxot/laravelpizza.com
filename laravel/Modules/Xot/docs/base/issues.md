@@ -14,7 +14,7 @@ php artisan jwt:secret
 ```
 
 ### Errore: include(/var/www/base_BASE/laravel/vendor/composer/../../Modules/NOME_MODULO/Models/FILE.php): Failed to open stream: No such file or directory se il file esiste. Dalla cartella laravel:
-    
+
 ```bash
 composer dump autoload
 ```
@@ -25,12 +25,12 @@ composer dump autoload
 
 - mettere l'esensione della migrations FILE a .old
 
-### Errore StubService riga 418 (StubService:418). 
+### Errore StubService riga 418 (StubService:418).
 
 Significa che devi spostare il modello dal vendor al nostro modulo ed estenderlo, e cambiare in config la path nel nostro modulo.
 Gli stub sono dei file da dove poi vengono generati i modelli, pannelli e altri file di partenza.
 
-### pagina 404 
+### pagina 404
 
 controlla le route con uno dei seguenti comandi e vedi se esistono:
 
@@ -77,13 +77,13 @@ dddx($profile->hasArea('NOME_AREA'));
 
 Aggiungere la cartella nel MODULO/Http/Livewire con dentro il file .gitkeep
 
-### file_put_contents(/var/www/html/BASE/laravel/Modules/Test/Providers/../Http/Livewire/_components.json): Failed to open stream: Permission denied 
+### file_put_contents(/var/www/html/BASE/laravel/Modules/Test/Providers/../Http/Livewire/_components.json): Failed to open stream: Permission denied
 
 ```bash
 sudo chmod PERMESSI_CORRETTI -R .
 ```
 
-### Errore: Livewire encountered corrupt data when trying to hydrate the [modules.MODULO.http.livewire.form.nexi.payment] component. 
+### Errore: Livewire encountered corrupt data when trying to hydrate the [modules.MODULO.http.livewire.form.nexi.payment] component.
 
 Ensure that the [name, id, data] of the Livewire component wasn't tampered with between requests.
 
@@ -93,7 +93,7 @@ Analizzare che parametri siano stati passati con la richiesta.
 
 IMPORTANTE: sui modal pro non serve il mount, basta dichiarare le variabili nella classe e passarli come public tramite l’emit
 
-### Errore “Unable to call component method. Public method [METODO] not found on component: [COMPONENTE ESTESO]” 
+### Errore “Unable to call component method. Public method [METODO] not found on component: [COMPONENTE ESTESO]”
 
 Il div nella view potrebbe non essere stato chiuso correttamente, o potrebbe essere stato chiuso due volte. Formattare view e controllare
 
@@ -141,5 +141,3 @@ E' possibile fare un backup del progetto con il file
 ```bash
 ./bashscripts/backup.sh
 ```
-
-

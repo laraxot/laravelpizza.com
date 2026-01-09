@@ -4,7 +4,7 @@
 **File**: `laravel/Modules/Lang/app/Actions/Filament/AutoLabelAction.php`
 **Linee**: 32-95
 
-**Problema**: 
+**Problema**:
 - Lookup ripetitivo del backtrace per ogni componente
 - Chiamate multiple a GetTransKeyAction
 - Nessun caching delle traduzioni
@@ -43,34 +43,34 @@ final class AutoLabelAction
     public function execute($component)
     {
         Assert::isInstanceOf($component, Field::class);
-        
+
         $object_class = $this->getObjectClass();
         $trans_key = $this->getTransKey($object_class);
-        
+
         $label_key = $this->getLabelKey($component, $trans_key);
         $label = $this->getLabel($label_key);
-        
+
         return $this->applyLabel($component, $label, $label_key);
     }
 
     private function getObjectClass(): string
     {
         $cacheKey = md5(serialize(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 3)));
-        
+
         if (!isset($this->classCache[$cacheKey])) {
             $backtrace_slice = array_slice(debug_backtrace(), 2);
             $class = Arr::first($backtrace_slice, function (array $item): bool {
-                return isset($item['object']) && 
+                return isset($item['object']) &&
                        Str::startsWith($item['object']::class, 'Modules\\');
             });
-            
+
             $this->classCache[$cacheKey] = $class['object']::class ?? '';
         }
-        
+
         return $this->classCache[$cacheKey];
     }
 
-    private function getTransKey(string $object_class): string 
+    private function getTransKey(string $object_class): string
     {
         if (empty($object_class)) {
             return 'lang::txt';
@@ -85,16 +85,16 @@ final class AutoLabelAction
     private function getLabelKey($component, string $trans_key): string
     {
         Assert::string($name = $component->getName());
-        
+
         if ($component instanceof Step) {
             Assert::string($label = $component->getLabel());
             return "{$trans_key}.steps.{$label}.label";
         }
-        
+
         if ($component instanceof Action) {
             return "{$trans_key}.actions.{$name}.label";
         }
-        
+
         return "{$trans_key}.fields.{$name}.label";
     }
 
@@ -104,16 +104,16 @@ final class AutoLabelAction
             $this->translationCache[$label_key] = Cache::tags(['translations'])
                 ->remember($label_key, now()->addHour(), function() use ($label_key): string {
                     $label = trans($label_key);
-                    
+
                     if ($label === $label_key) {
                         $this->saveNewTranslation($label_key);
                         return $label_key;
                     }
-                    
+
                     return $label;
                 });
         }
-        
+
         return $this->translationCache[$label_key];
     }
 
@@ -121,7 +121,7 @@ final class AutoLabelAction
     {
         $parts = explode('.', $label_key);
         $value = end($parts);
-        
+
         app(SaveTransAction::class)->execute($label_key, $value);
     }
 
@@ -139,7 +139,7 @@ final class AutoLabelAction
         }
 
         $component->label($label);
-        
+
         if (method_exists($component, 'tooltip')) {
             $component->tooltip($label);
         }
@@ -187,7 +187,7 @@ final class LangServiceProvider extends XotBaseServiceProvider
     public string $name = 'Lang';
     protected string $module_dir = __DIR__;
     protected string $module_ns = __NAMESPACE__;
-    
+
     private array $componentConfigs = [];
 
     public function register(): void
@@ -305,7 +305,7 @@ final class SaveTransAction
     use QueueableAction;
 
     private array $pendingTranslations = [];
-    
+
     /**
      * @param string $key
      * @param int|string|array|Htmlable|null $data
@@ -313,40 +313,40 @@ final class SaveTransAction
     public function execute(string $key, $data): void
     {
         Assert::notEmpty($key);
-        
+
         $this->pendingTranslations[$key] = $data;
-        
+
         if (count($this->pendingTranslations) >= 50) {
             $this->flush();
         }
     }
-    
+
     public function __destruct()
     {
         $this->flush();
     }
-    
+
     private function flush(): void
     {
         if (empty($this->pendingTranslations)) {
             return;
         }
-        
+
         Cache::tags(['translations'])->flush();
-        
+
         foreach ($this->pendingTranslations as $key => $data) {
             $path = app(GetTransPathAction::class)->execute($key);
-            
+
             if (!is_dir(dirname($path))) {
                 mkdir(dirname($path), 0755, true);
             }
-            
+
             file_put_contents(
                 $path,
                 "<?php\n\nreturn " . var_export($data, true) . ";\n"
             );
         }
-        
+
         $this->pendingTranslations = [];
     }
 }

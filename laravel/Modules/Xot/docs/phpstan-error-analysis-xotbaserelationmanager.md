@@ -1,6 +1,6 @@
 # Analisi Errori PHPStan - XotBaseRelationManager
 
-**Data**: 2025-12-23  
+**Data**: 2025-12-23
 **File**: `app/Filament/Resources/RelationManagers/XotBaseRelationManager.php`
 
 ## 🔍 Errori PHPStan Originali (3)
@@ -9,8 +9,8 @@
 
 **Messaggio PHPStan**:
 ```
-Parameter #1 $components of method Filament\Schemas\Schema::components() expects 
-array<Illuminate\Contracts\Support\Htmlable|string>|Closure|Illuminate\Contracts\Support\Htmlable|string, 
+Parameter #1 $components of method Filament\Schemas\Schema::components() expects
+array<Illuminate\Contracts\Support\Htmlable|string>|Closure|Illuminate\Contracts\Support\Htmlable|string,
 array given.
 ```
 
@@ -106,8 +106,8 @@ Stessa soluzione per `canDetachBulk()`.
 
 ## ✅ Risultato Finale
 
-**PHPStan**: ✅ **0 errors**  
-**Pint**: ✅ **PASSED**  
+**PHPStan**: ✅ **0 errors**
+**Pint**: ✅ **PASSED**
 **PHPMD**: ⚠️ Warning pre-esistenti (non bloccanti)
 
 ---

@@ -158,5 +158,5 @@ use Modules\User\Models\User; // Namespace corretto
 
 ---
 
-**Ultimo aggiornamento:** Gennaio 2025  
+**Ultimo aggiornamento:** Gennaio 2025
 **Versione:** 2.0 - Consolidata DRY + KISS

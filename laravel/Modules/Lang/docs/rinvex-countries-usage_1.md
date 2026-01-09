@@ -47,36 +47,34 @@ $oceaniaCountries = \Rinvex\Country\CountryLoader::where('geo.continent', ['OC' 
 
 ## Usage in NationalFlagSelect Component
 
-
-
 ```php
 protected function getCountryOptions(): array
 {
     // Get all countries using the countries() helper
     $countries = countries();
-    
+
     // Sort countries by name
     $countries = Arr::sort($countries, function($c) {
         return $c['name'];
     });
-    
+
     // Map countries to select options with flags
     $options = Arr::mapWithKeys($countries, function($c) {
         $code = $c['iso_3166_1_alpha2'];
         $label = $c['name'];
         $flag_name = strtolower($code);
-        
+
         // Get localized country name from translation files
         $label = __('lang::countries.' . $flag_name);
-        
+
         // Generate flag image HTML
         $flag_src = app(AssetAction::class)->execute('lang::svg/flag/' . $flag_name . '.svg');
         $flag = '<img src="' . $flag_src . '" class="h-4 w-6 mr-2" inline-block />';
-        
+
         $html = '<span class="flex items-center gap-2">' . $flag . $label . '</span>';
         return [$code => "{$html}"];
     });
-    
+
     return $options;
 }
 ```
@@ -136,7 +134,7 @@ protected function getCountryOptions(): array
 The Lang module maintains synchronized translation files for country names and nationalities:
 
 - `Modules/Lang/lang/it/countries.php` - Italian country names
-- `Modules/Lang/lang/en/countries.php` - English country names  
+- `Modules/Lang/lang/en/countries.php` - English country names
 - `Modules/Lang/lang/de/countries.php` - German country names
 - `Modules/Lang/lang/it/nationalities.php` - Italian nationalities
 - `Modules/Lang/lang/en/nationalities.php` - English nationalities
@@ -163,7 +161,7 @@ $italy = country('it');
     'iso_3166_1_alpha2' => 'IT',
     'iso_3166_1_alpha3' => 'ITA',
     'iso_3166_1_numeric' => '380',
-    'currency' => ['EUR' => [...]], 
+    'currency' => ['EUR' => [...]],
     'tld' => ['.it'],
     'languages' => ['ita' => 'Italian'],
     'geo' => [

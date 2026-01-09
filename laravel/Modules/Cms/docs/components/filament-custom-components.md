@@ -102,10 +102,10 @@ use Filament\Widgets\Widget;
 class CustomWidget extends Widget
 {
     protected static string $view = 'filament.widgets.custom-widget';
-    
+
     // Opzionale: Configurare il polling
     protected static ?string $pollingInterval = '10s';
-    
+
     // Opzionale: Impostare la larghezza del widget
     protected static ?int $sort = 2;
     protected int|string|array $columnSpan = 'full';
@@ -161,7 +161,7 @@ class CustomDashboard extends Page
     protected static ?int $navigationSort = 1;
 
     protected static string $view = 'filament.pages.custom-dashboard';
-    
+
     protected function getHeaderWidgets(): array
     {
         return [
@@ -227,14 +227,14 @@ use Illuminate\Contracts\View\View;
 final class CustomWidget extends Widget
 {
     protected static string $view = 'filament.widgets.custom-widget';
-    
+
     public function render(): View
     {
         return view(static::$view, [
             'data' => $this->getData(),
         ]);
     }
-    
+
     protected function getData(): array
     {
         return [
@@ -249,7 +249,7 @@ final class CustomWidget extends Widget
 trait WithSortable
 {
     public bool $sortable = true;
-    
+
     protected function getSortableOptions(): array
     {
         return [
@@ -275,9 +275,9 @@ class CustomWidgetTest extends TestCase
     public function it_renders_correctly(): void
     {
         $widget = new CustomWidget();
-        
+
         $view = $widget->render();
-        
+
         $this->assertStringContainsString('custom-widget', $view->render());
     }
 }
@@ -365,4 +365,4 @@ public function increment(): void
 ### Community
 - [Filament Discord](https://discord.gg/filamentphp)
 - [GitHub Issues](https://github.com/filamentphp/filament/issues)
-- [Laravel Forums](https://laracasts.com/discuss) 
+- [Laravel Forums](https://laracasts.com/discuss)

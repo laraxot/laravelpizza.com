@@ -1,6 +1,6 @@
-# Censimento File con Marker 
+# Censimento File con Marker
 
-> **Ultimo aggiornamento**: Novembre 2025  
+> **Ultimo aggiornamento**: Novembre 2025
 > **Scope**: Repository `/var/www/_bases/base_ptvx_fila4_mono`
 
 ## 📊 Riepilogo Attuale
@@ -84,4 +84,3 @@ Aggiornare questa sezione (o il changelog del modulo) man mano che i file vengon
 - Per i documenti, rispettare convenzioni naming (lowercase, niente date nel filename)
 - Documentare eventuali decisioni o esclusioni (es. backup da archiviare)
 - Mantenere copia “prima/dopo” se i contenuti hanno valore storico
-

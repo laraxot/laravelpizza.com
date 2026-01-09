@@ -122,7 +122,7 @@ find Modules/User/lang -name "*.php" -exec php -l {} \;
 
 ---
 
-**Autore**: Sistema di Risoluzione Automatica  
-**Data**: 2025-01-15  
-**Versione**: 1.0  
+**Autore**: Sistema di Risoluzione Automatica
+**Data**: 2025-01-15
+**Versione**: 1.0
 **Stato**: Completato

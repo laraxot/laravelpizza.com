@@ -49,7 +49,7 @@ public function save()
     ]);
 
     $path = $this->document->store('documents', 'public');
-    
+
     // Salvataggio del percorso nel database
     $this->model->update(['document_path' => $path]);
 }
@@ -98,11 +98,11 @@ SaluteOra implementa un sistema di controllo degli accessi per i file sensibili:
 public function download($id)
 {
     $document = Document::findOrFail($id);
-    
+
     if (! auth()->user()->can('view', $document)) {
         abort(403);
     }
-    
+
     return Storage::download($document->path);
 }
 ```
@@ -132,7 +132,7 @@ protected static function booted()
         if ($model->avatar) {
             Storage::delete($model->avatar);
         }
-        
+
         if ($model->certifications) {
             foreach ($model->certifications as $certification) {
                 Storage::delete($certification);

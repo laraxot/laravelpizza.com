@@ -11,7 +11,7 @@ class ThemeTest extends TestCase
     public function test_theme_colors_are_semantically_correct(): void
     {
         $metatag = MetatagData::make();
-        
+
         $this->assertEquals(
             $metatag->getThemeColors(),
             $this->getExpectedColors()
@@ -29,7 +29,7 @@ class ThemeConsistencyTest extends TestCase
     public function test_theme_elements_are_consistent(): void
     {
         $metatag = MetatagData::make();
-        
+
         $this->assertNotEmpty($metatag->getThemeColors());
         $this->assertNotEmpty($metatag->getThemeSettings());
         $this->assertValidColors($metatag->getThemeColors());
@@ -47,7 +47,7 @@ class ThemeValidationTest extends TestCase
     {
         $metatag = MetatagData::make();
         $validator = new ColorValidator();
-        
+
         $this->assertTrue(
             $validator->validateColors($metatag->getThemeColors())
         );
@@ -82,9 +82,9 @@ class ThemeConfigurationTest extends TestCase
     {
         $metatag = MetatagData::make();
         $configurator = new ThemeConfigurator();
-        
+
         $configurator->configureTheme($metatag);
-        
+
         $this->assertEquals(
             $metatag->getThemeColors(),
             $configurator->getAppliedColors()
@@ -100,12 +100,12 @@ class ColorTest extends TestCase
     public function test_colors_are_valid(): void
     {
         $metatag = MetatagData::make();
-        
+
         foreach ($metatag->getThemeColors() as $color) {
             $this->assertColorIsValid($color);
         }
     }
-    
+
     private function assertColorIsValid(string $color): void
     {
         $this->assertMatchesRegularExpression(
@@ -124,16 +124,16 @@ class DarkModeTest extends TestCase
     {
         $metatag = MetatagData::make();
         $manager = new DarkModeManager();
-        
+
         $darkColors = $manager->getDarkModeColors(
             $metatag->getThemeColors()
         );
-        
+
         foreach ($darkColors as $color) {
             $this->assertColorIsDarkMode($color);
         }
     }
-    
+
     private function assertColorIsDarkMode(string $color): void
     {
         $this->assertLessThan(
@@ -171,4 +171,4 @@ class DarkModeTest extends TestCase
 - [Brand Philosophy](../philosophy/brand_philosophy.md)
 - [Semantic Methods](../philosophy/semantic_methods.md)
 - [Best Practices](../best-practices.md)
-- [Testing Guide](../testing.md) 
+- [Testing Guide](../testing.md)

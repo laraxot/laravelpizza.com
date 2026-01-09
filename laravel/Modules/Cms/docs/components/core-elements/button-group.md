@@ -207,8 +207,8 @@ Per creare un gruppo di bottoni toggle-style:
 Per bottoni con icone, utilizzare il componente `icon-button`:
 
 ```blade
-<x-job::icon-button 
-    :attributes="\Filament\Support\prepare_inherited_attributes($attributes)" 
+<x-job::icon-button
+    :attributes="\Filament\Support\prepare_inherited_attributes($attributes)"
     :dark-mode="config('tables.dark_mode')"
 >
     {{ $slot }}
@@ -222,19 +222,19 @@ Per gestire l'allineamento dei button group, utilizzare le classi Tailwind appro
 ```blade
 <div class="flex items-center mt-3">
     <!-- Allineamento a sinistra -->
-    <button :class="{ 'bg-zinc-200' : alignment == 'left' }" 
+    <button :class="{ 'bg-zinc-200' : alignment == 'left' }"
             class="p-2 rounded-l-md border border-zinc-200 text-zinc-600">
         <x-heroicon-o-bars-3-bottom-left class="w-5 h-5" />
     </button>
-    
+
     <!-- Allineamento al centro -->
-    <button :class="{ 'bg-zinc-200' : alignment == 'center' }" 
+    <button :class="{ 'bg-zinc-200' : alignment == 'center' }"
             class="p-2 border border-r-0 border-l-0 border-zinc-200 text-zinc-600">
         <x-heroicon-o-bars-3 class="w-5 h-5" />
     </button>
-    
+
     <!-- Allineamento a destra -->
-    <button :class="{ 'bg-zinc-200' : alignment == 'right' }" 
+    <button :class="{ 'bg-zinc-200' : alignment == 'right' }"
             class="p-2 rounded-r-md border border-zinc-200 text-zinc-600">
         <x-heroicon-o-bars-3-bottom-right class="w-5 h-5" />
     </button>
@@ -267,15 +267,15 @@ Per implementare un gruppo di bottoni per il social login:
 ```blade
 <div class="grid @if (count($providers) > 1) grid-cols-2 @endif gap-4">
     @foreach ($providers as $key => $provider)
-        <x-filament::button 
-            class="mt-3" 
-            color="gray" 
-            :icon="$provider['icon'] ?? null" 
-            tag="a" 
+        <x-filament::button
+            class="mt-3"
+            color="gray"
+            :icon="$provider['icon'] ?? null"
+            tag="a"
             :href="route('socialite.oauth.redirect', $key)"
         >
             {{ $provider['label'] }}
         </x-filament::button>
     @endforeach
 </div>
-``` 
+```

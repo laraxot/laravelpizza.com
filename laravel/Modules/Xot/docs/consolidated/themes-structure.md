@@ -224,9 +224,8 @@ resources/views/
 
 - [Regole di Namespacing](namespacing.md)
 - [Standard del Codice](code-standards.md)
-- [Regole di Documentazione](documentation-rules.md) 
+- [Regole di Documentazione](documentation-rules.md)
 
 ## Collegamenti tra versioni di themes-structure.md
 * [themes-structure.md](docs/tecnico/themes-structure.md)
 * [themes-structure.md](../../../Xot/project_docs/themes-structure.md)
-

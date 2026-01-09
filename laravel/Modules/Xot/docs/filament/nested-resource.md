@@ -21,7 +21,7 @@ utilizziamo questo pacchetto:
 https://github.com/laraxot/filament-nested-resources.git
 ```
 
-Per utilizzare il pacchetto bisogna installarlo come package. 
+Per utilizzare il pacchetto bisogna installarlo come package.
 
 Quindi segui la seguente procedura:
 

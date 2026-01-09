@@ -17,7 +17,7 @@
 
 **FILOSOFIA**: La qualità del codice richiede verifiche a **3 livelli**:
 1. **Static** (PHPStan + Larastan) - Compile-time
-2. **Runtime** (Webmozart Assert + Safe) - Execution-time  
+2. **Runtime** (Webmozart Assert + Safe) - Execution-time
 3. **Documentation** (IDE Helper) - Developer-time
 
 ---
@@ -51,7 +51,7 @@ php artisan ide-helper:models --write
  * @property string $email
  * @property string $name
  * @property \Carbon\Carbon $created_at
- * 
+ *
  * @property-read Profile $profile
  * @property-read Collection<int, Role> $roles
  */
@@ -98,7 +98,7 @@ php artisan ide-helper:models --write --reset
 ```php
 // PHPStan SA che $data è mixed
 function process(mixed $data): string {
-    return $data['key'];  
+    return $data['key'];
     // ✅ PHPStan: OK (mixed può essere array)
     // ❌ Runtime: BOOM se $data non è array!
 }
@@ -111,7 +111,7 @@ use Webmozart\Assert\Assert;
 function process(mixed $data): string {
     Assert::isArray($data);  // ← Runtime guard!
     Assert::keyExists($data, 'key');
-    
+
     return $data['key'];
     // ✅ PHPStan: OK
     // ✅ Runtime: Exception if data invalid
@@ -123,7 +123,7 @@ function process(mixed $data): string {
 #### 1. **Type Assertions**
 ```php
 Assert::string($value);        // Must be string
-Assert::integer($value);       // Must be integer  
+Assert::integer($value);       // Must be integer
 Assert::boolean($value);       // Must be boolean
 Assert::float($value);         // Must be float
 Assert::numeric($value);       // Must be numeric
@@ -202,7 +202,7 @@ public function execute(mixed $data): Model {
     Assert::keyExists($data, 'email');
     Assert::string($data['email']);
     Assert::email($data['email']);
-    
+
     return User::create($data);
 }
 ```
@@ -266,7 +266,7 @@ use function Safe\array_flip;
 use function Safe\ksort;
 use function Safe\usort;
 
-// DateTime operations  
+// DateTime operations
 use function Safe\DateTime;
 ```
 
@@ -349,7 +349,7 @@ Model::where()->orWhere()->with()->get()  // ✅ Tutto compreso!
 
 2. **Facades**
 ```php
-Cache::remember()  
+Cache::remember()
 DB::table()
 File::exists()  // ✅ Tutte le Facades!
 ```
@@ -467,7 +467,7 @@ cat phpmd.ruleset.xml  # ← Verifica regole attive
 
 #### 1. **Code Quality** (40%)
 - Complexity
-- Architecture  
+- Architecture
 - Code style
 - Best practices
 
@@ -725,9 +725,9 @@ $userValue = $record->user ?? null;
 
 **PRIMA**:
 ```php
-->visible(fn($record): bool => 
-    is_object($record) && 
-    property_exists($record, 'type') && 
+->visible(fn($record): bool =>
+    is_object($record) &&
+    property_exists($record, 'type') &&
     $record->type === 'image'
 )
 ```
@@ -742,8 +742,8 @@ $userValue = $record->user ?? null;
 ->visible(fn(Media $record): bool => $record->type === 'image')
 
 // O se $record può essere mixed:
-->visible(fn($record): bool => 
-    is_object($record) && 
+->visible(fn($record): bool =>
+    is_object($record) &&
     isset($record->type) &&  // ← Cambio QUI
     $record->type === 'image'
 )
@@ -816,28 +816,27 @@ else {
 ## ✍️ CITAZIONI FILOSOFICHE
 
 > "Gli strumenti di qualità sono come i sensi: PHPStan vede, Assert sente, Safe previene, PHPMD giudica, PHPInsights certifica. Insieme formano la percezione completa della qualità."
-> 
+>
 > — **Principio della Percezione Multi-Sensoriale**
 
-> "property_exists() chiede 'Esiste nella forma?'  
-> isset() chiede 'Esiste nella sostanza?'  
+> "property_exists() chiede 'Esiste nella forma?'
+> isset() chiede 'Esiste nella sostanza?'
 > Per Eloquent, la sostanza (DB) è più vera della forma (class)."
-> 
+>
 > — **Kōan della Forma e Sostanza**
 
-> "Un bug trovato da PHPStan costa 1€.  
-> Un bug fermato da Assert costa 10€.  
-> Un bug in produzione costa 1000€.  
+> "Un bug trovato da PHPStan costa 1€.
+> Un bug fermato da Assert costa 10€.
+> Un bug in produzione costa 1000€.
 > La prevenzione è economia."
-> 
+>
 > — **Principio del Costo Esponenziale**
 
 ---
 
-**Creato**: 5 Novembre 2025  
-**Scopo**: Unificare la comprensione degli strumenti  
-**Status**: 📘 Master Reference Document  
-**Revision**: 1.0  
+**Creato**: 5 Novembre 2025
+**Scopo**: Unificare la comprensione degli strumenti
+**Status**: 📘 Master Reference Document
+**Revision**: 1.0
 
 **Ora posso procedere con l'eliminazione sistematica! ⚔️**
-

@@ -47,7 +47,7 @@ Il file `Modules/Lang/app/Actions/Filament/AutoLabelAction.php` presenta conflit
                 }
             }
             return false;
-            
+
            if(isset($item['object']) && Str::startsWith($item['object']::class, 'Modules\\') && $item['object'] != $component){
               return true;
             }
@@ -57,7 +57,7 @@ Il file `Modules/Lang/app/Actions/Filament/AutoLabelAction.php` presenta conflit
                 if (!$reflection_class->isAbstract()) {
                     return true;
                 }
-                
+
             }
             return false;
 ```
@@ -159,7 +159,7 @@ Il file `Modules/Lang/app/Actions/Filament/AutoLabelAction.php` presenta conflit
                 }
             }
             return false;
-            
+
            if(isset($item['object']) && Str::startsWith($item['object']::class, 'Modules\\') && $item['object'] != $component){
               return true;
             }
@@ -169,7 +169,7 @@ Il file `Modules/Lang/app/Actions/Filament/AutoLabelAction.php` presenta conflit
                 if (!$reflection_class->isAbstract()) {
                     return true;
                 }
-                
+
             }
             return false;
 
@@ -258,4 +258,4 @@ Il file `Modules/Lang/app/Actions/Filament/AutoLabelAction.php` presenta conflit
 - **Modulo**: Lang
 - **File**: `app/Actions/Filament/AutoLabelAction.php`
 - **Tipo Conflitto**: Documentazione e formattazione codice
-- **Scelta**: Versione HEAD (documentazione completa + spazi) 
+- **Scelta**: Versione HEAD (documentazione completa + spazi)

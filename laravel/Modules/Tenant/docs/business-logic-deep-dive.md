@@ -122,14 +122,14 @@ if ($key === 'database') {
     // Per ogni modulo enabled
     foreach (Module::all() as $module) {
         $name = $module->getSnakeName();  // 'user', 'quaeris', etc.
-        
+
         // Se tenant non ha config per questo modulo
         if (!isset($extra_conf['connections'][$name])) {
             // Usa la default tenant connection
             $extra_conf['connections'][$name] = $extra_conf['connections'][$default];
         }
     }
-    
+
     // Result: Tutti i moduli usano stesso tenant DB
 }
 ```
@@ -145,7 +145,7 @@ if ($key === 'database') {
 **Business Flow**:
 ```php
 // Step 1: Analizza SERVER_NAME
-$serverName = $_SERVER['SERVER_NAME'];  
+$serverName = $_SERVER['SERVER_NAME'];
 // 'acme.<nome progetto>.it'
 
 // Step 2: Parsing domain strategy
@@ -189,19 +189,19 @@ return config('app.tenant_default', 'default');
 ```php
 class Domain extends BaseModel {
     use Sushi;  // ← Magic trait!
-    
+
     // NO database table!
     // Dati da getRows() invece che DB
-    
+
     public function getRows(): array {
         // Option 1: From JSON file
         $json = File::get(TenantService::filePath('domains.json'));
         return json_decode($json, true);
-        
+
         // Option 2: From CSV
         $csv = Reader::createFromPath(TenantService::filePath('domains.csv'));
         return $csv->getRecords();
-        
+
         // Option 3: From Action (dynamic)
         return app(GetDomainsArrayAction::class)->execute();
     }
@@ -267,7 +267,7 @@ class PathStrategy implements TenantIdentificationStrategy {
 
 ```php
 // Tenant-aware config facade
-TenantService::config('app.name');  
+TenantService::config('app.name');
 // invece di
 config('app.name');  // ← NO! Non tenant-aware!
 
@@ -284,7 +284,7 @@ config('app.name');  // ← NO! Non tenant-aware!
 class BaseModel extends EloquentModel {
     /** @var string */
     protected $connection = 'tenant';  // ← Explicitly typed
-    
+
     /** @var string */
     protected $keyType = 'string';     // ← UUID keys
 }
@@ -308,7 +308,7 @@ protected function casts(): array {
 ```php
 class Tenant extends BaseModel {
     // Future: readonly properties per immutable fields
-    public readonly string $slug;  
+    public readonly string $slug;
     public readonly string $database;
 }
 ```
@@ -337,7 +337,7 @@ public function getSushiRows(): array {
 }
 ```
 
-**Impact**: 
+**Impact**:
 - ⚠️ Difficile testing (molti branch)
 - ⚠️ Maintenance complessa
 - ⚠️ Bug-prone
@@ -352,7 +352,7 @@ class SushiToJson {
         $filtered = $this->filterEmptyValues($normalized);
         return $this->mapToSchema($filtered);
     }
-    
+
     private function loadJsonData(): array { /* ... */ }
     private function normalizeStructure(array $data): array { /* ... */ }
     private function filterEmptyValues(array $data): array { /* ... */ }
@@ -360,8 +360,8 @@ class SushiToJson {
 }
 ```
 
-**Priorità**: MEDIA  
-**Effort**: 2-3 giorni  
+**Priorità**: MEDIA
+**Effort**: 2-3 giorni
 **Risk**: BASSO (ben testato)
 
 ---
@@ -430,9 +430,9 @@ $slug = app('string')->slug($name);  // ← verbose, non-Laravel-way
 // Tenant-aware config è cached dopo merge
 public static function config(string $key): mixed {
     $merge_conf = collect($original_conf)->merge($extra_conf)->all();
-    
+
     Config::set($group, $merge_conf);  // ← Cache in Laravel config
-    
+
     return config($key);  // ← Subsequent calls use cache
 }
 ```
@@ -496,7 +496,7 @@ User::all();                           // ✅ YES! Auto-isolated by connection!
 // Only whitelisted domains accepted
 class Domain extends BaseModel {
     use Sushi;
-    
+
     // Domains loaded from controlled JSON/CSV
     // NOT from user input!
 }
@@ -692,7 +692,7 @@ chown www-data:tenant_acme config/tenant_acme/
 ### For Tenant Owners
 - ✅ **Data Privacy**: Guaranteed isolation
 - ✅ **Customization**: Configuration control
-- ✅ **Performance**: No cross-tenant interference  
+- ✅ **Performance**: No cross-tenant interference
 - ✅ **Portability**: Full data export capability
 
 ### For Developers
@@ -717,7 +717,6 @@ chown www-data:tenant_acme config/tenant_acme/
 
 ---
 
-**Document Version**: 1.0  
-**Last Updated**: 5 Novembre 2025  
+**Document Version**: 1.0
+**Last Updated**: 5 Novembre 2025
 **Status**: 📘 Authoritative Reference
-

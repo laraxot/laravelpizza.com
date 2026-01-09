@@ -88,13 +88,13 @@ protected function setUp(): void
 test('user can login', function () {
     // Arrange
     $user = User::factory()->create();
-    
+
     // Act & Assert
     $this->post('/login', [
         'email' => $user->email,
         'password' => 'password'
     ])->assertRedirect('/dashboard');
-    
+
     // Cleanup (if needed)
     $user->forceDelete();
 });

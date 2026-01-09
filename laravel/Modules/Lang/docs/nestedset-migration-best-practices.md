@@ -21,25 +21,25 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi categoria linguistica
             $table->string('name');
             $table->string('code')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia categorie
             NestedSet::columns($table);
-            
+
             // Dettagli linguistici
             $table->string('iso_639_1', 2)->nullable(); // es. 'en'
             $table->string('iso_639_2', 3)->nullable(); // es. 'eng'
             $table->string('locale', 10)->nullable(); // es. 'en_US'
-            
+
             // Metadati
             $table->json('metadata')->nullable();
             $table->boolean('is_active')->default(true);
             $table->boolean('is_default')->default(false);
-            
+
             $table->timestamps();
         });
     }
@@ -59,23 +59,23 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi gruppo traduzioni
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia gruppi
             NestedSet::columns($table);
-            
+
             // Configurazioni
             $table->string('module')->nullable(); // Nome modulo associato
             $table->string('context')->nullable(); // Contesto specifico
-            
+
             // Metadati
             $table->json('metadata')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -95,24 +95,24 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi file traduzione
             $table->string('name');
             $table->string('path');
             $table->string('extension', 10)->default('php');
-            
+
             // NestedSet per gerarchia file
             NestedSet::columns($table);
-            
+
             // Dettagli file
             $table->string('module')->nullable();
             $table->string('language', 10);
             $table->integer('lines_count')->default(0);
-            
+
             // Stato
             $table->boolean('is_loaded')->default(false);
             $table->timestamp('last_modified')->nullable();
-            
+
             $table->timestamps();
         });
     }
@@ -132,22 +132,22 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi namespace
             $table->string('name');
             $table->string('prefix')->nullable();
-            
+
             // NestedSet per gerarchia namespace
             NestedSet::columns($table);
-            
+
             // Configurazioni
             $table->json('supported_languages')->nullable();
             $table->string('default_language')->default('en');
-            
+
             // Metadati
             $table->json('metadata')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -167,25 +167,25 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi chiave traduzione
             $table->string('key');
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia chiavi
             NestedSet::columns($table);
-            
+
             // Metadati chiave
             $table->string('group')->nullable();
             $table->string('module')->nullable();
             $table->json('parameters')->nullable(); // Parametri richiesti
-            
+
             // Stato
             $table->boolean('is_active')->default(true);
             $table->boolean('is_translated')->default(false);
-            
+
             $table->timestamps();
-            
+
             // Indice unico
             $table->unique(['key', 'group', 'module']);
         });
@@ -206,7 +206,7 @@ use Kalnoy\Nestedset\NodeTrait;
 class TranslationGroup extends Model
 {
     use NodeTrait;
-    
+
     protected $fillable = [
         'name',
         'slug',
@@ -216,40 +216,40 @@ class TranslationGroup extends Model
         'metadata',
         'is_active',
     ];
-    
+
     protected $casts = [
         'metadata' => 'array',
         'is_active' => 'boolean',
     ];
-    
+
     // Relazioni
     public function translations()
     {
         return $this->hasMany(LanguageLine::class, 'group_id');
     }
-    
+
     public function keys()
     {
         return $this->hasMany(TranslationKey::class, 'group_id');
     }
-    
+
     // Scopes specifici Lang
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
     }
-    
+
     public function scopeByModule($query, $module)
     {
         return $query->where('module', $module);
     }
-    
+
     // Metodi helper
     public function getAllTranslationsCount(): int
     {
         return $this->descendants()->withCount('translations')->get()->sum('translations_count');
     }
-    
+
     public function getFullKey(string $key): string
     {
         $path = $this->ancestors()->pluck('slug')->push($this->slug)->implode('.');
@@ -318,25 +318,25 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi traduzione
             $table->string('key');
             $table->text('value');
             $table->string('language', 10);
-            
+
             // Campi geografici usando AddressItemEnum::columns()
             \Modules\Geo\Enums\AddressItemEnum::columns($table, withLegacy: true);
-            
+
             // Contesto
             $table->string('group')->nullable();
             $table->string('module')->nullable();
-            
+
             // Metadati
             $table->json('metadata')->nullable();
-            
+
             // Indici unici
             $table->unique(['key', 'language', 'country', 'administrative_area_level_2']);
-            
+
             $table->timestamps();
         });
     }
@@ -356,24 +356,24 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi struttura
             $table->string('entity_type'); // Model type
             $table->unsignedBigInteger('entity_id');
-            
+
             // NestedSet per gerarchia traduzioni entità
             NestedSet::columns($table);
-            
+
             // Dati traduzione
             $table->string('language', 10);
             $table->json('translated_fields');
-            
+
             // Stato
             $table->boolean('is_complete')->default(false);
             $table->timestamp('last_sync')->nullable();
-            
+
             $table->timestamps();
-            
+
             // Indici
             $table->index(['entity_type', 'entity_id']);
             $table->index('language');
@@ -395,28 +395,28 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi file linguaggio
             $table->string('name');
             $table->string('path');
             $table->string('language', 10);
-            
+
             // NestedSet per gerarchia file
             NestedSet::columns($table);
-            
+
             // Dettagli file
             $table->string('module')->nullable();
             $table->string('type')->default('php'); // php, json, yaml
-            
+
             // Statistiche
             $table->integer('keys_count')->default(0);
             $table->integer('translated_count')->default(0);
             $table->integer('percentage')->default(0);
-            
+
             // Stato
             $table->boolean('is_published')->default(false);
             $table->timestamp('last_import')->nullable();
-            
+
             $table->timestamps();
         });
     }

@@ -1,15 +1,15 @@
 # Analisi Errori PHPStan - Modulo Notify
 
-**Data**: 2025-12-23  
-**Modulo**: Notify  
-**Livello PHPStan**: max  
+**Data**: 2025-12-23
+**Modulo**: Notify
+**Livello PHPStan**: max
 **Status**: ✅ Corretto (0 errori)
 
 ## 📊 Risultati PHPStan
 
-**Comando eseguito**: `./vendor/bin/phpstan analyse Modules/Notify --memory-limit=-1`  
-**Livello**: max  
-**File con errori**: `app/Filament/Clusters/Test/Pages/SendEmailPage.php`  
+**Comando eseguito**: `./vendor/bin/phpstan analyse Modules/Notify --memory-limit=-1`
+**Livello**: max
+**File con errori**: `app/Filament/Clusters/Test/Pages/SendEmailPage.php`
 **Errori totali**: 0 (dopo correzione)
 
 ## 🔍 Errori Risolti

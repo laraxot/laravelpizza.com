@@ -63,7 +63,7 @@
 3. **Livewire**
    - Implementare l'interattività
    - Gestire lo stato
-   - Ottimizzare le performance 
+   - Ottimizzare le performance
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
@@ -82,4 +82,3 @@
 * [structure.md](laravel/Modules/Cms/docs/structure.md)
 * [structure.md](laravel/Modules/Cms/docs/themes/structure.md)
 * [structure.md](laravel/Modules/Cms/docs/components/structure.md)
-

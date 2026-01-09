@@ -8,8 +8,8 @@ Questo documento descrive la risoluzione degli errori PHPStan relativi a classi 
 
 ### 1. Classi Non Trovate in PHPDoc
 
-**Tipo:** Class Not Found  
-**Messaggio:** `PHPDoc tag @property contains unknown class Modules\Fixcity\Models\Profile`  
+**Tipo:** Class Not Found
+**Messaggio:** `PHPDoc tag @property contains unknown class Modules\Fixcity\Models\Profile`
 **File Coinvolti:**
 - `Geo/Models/Location.php` (linea 67)
 - `Geo/Models/Place.php` (linea 107)
@@ -18,32 +18,32 @@ Questo documento descrive la risoluzione degli errori PHPStan relativi a classi 
 
 ### 2. Proprietà Non Esistenti
 
-**Tipo:** Model Property Missing  
-**Messaggio:** `Property 'value' does not exist in model`  
+**Tipo:** Model Property Missing
+**Messaggio:** `Property 'value' does not exist in model`
 **File:** `Geo/Models/Location.php` (linea 85)
 
 **Causa:** Proprietà dichiarata in `$appends` senza accessor corrispondente.
 
 ### 3. Metodi Duplicati
 
-**Tipo:** Method Redeclaration  
-**Messaggio:** `Cannot redeclare method`  
+**Tipo:** Method Redeclaration
+**Messaggio:** `Cannot redeclare method`
 **File:** `Geo/app/Services/GoogleMapsService.php` (linee 101, 133)
 
 **Causa:** Dichiarazioni multiple degli stessi metodi nella classe.
 
 ### 4. Proprietà Non Definite
 
-**Tipo:** Undefined Property  
-**Messaggio:** `Access to an undefined property`  
+**Tipo:** Undefined Property
+**Messaggio:** `Access to an undefined property`
 **File:** `Geo/app/Services/GoogleMapsService.php` (linee 106, 108, 139, 142, 178, 180)
 
 **Causa:** Accesso a proprietà `$baseUrl` e `$apiKey` non dichiarate.
 
 ### 5. Tipo di Ritorno Errato
 
-**Tipo:** Return Type Mismatch  
-**Messaggio:** `should return string but returns mixed`  
+**Tipo:** Return Type Mismatch
+**Messaggio:** `should return string but returns mixed`
 **File:** `Geo/Models/Place.php` (linea 217)
 
 **Causa:** Metodo accessor che restituisce `mixed` invece di `string`.
@@ -141,7 +141,7 @@ class GoogleMapsService
     {
         $this->baseUrl = config('services.google_maps.base_url', 'https://maps.googleapis.com/maps/api');
         $this->apiKey = config('services.google_maps.api_key', '');
-        
+
         if (empty($this->apiKey)) {
             throw new \InvalidArgumentException('Google Maps API key is required');
         }
@@ -164,11 +164,11 @@ class GoogleMapsService
 public function getFormattedAddressAttribute(): string
 {
     $address = $this->getAttribute('formatted_address');
-    
+
     if (is_string($address)) {
         return $address;
     }
-    
+
     // Fallback per costruire l'indirizzo dai componenti
     $components = array_filter([
         $this->street_number,
@@ -178,7 +178,7 @@ public function getFormattedAddressAttribute(): string
         $this->postal_code,
         $this->country,
     ]);
-    
+
     return implode(', ', $components);
 }
 ```

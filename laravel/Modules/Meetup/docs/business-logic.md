@@ -4,7 +4,7 @@
 
 ### 1. Sistema di Ordini (Order Management)
 - **Creazione Ordini**: Gli utenti possono creare ordini selezionando pizze, ingredienti aggiuntivi e opzioni
-- **Stati Ordine**: 
+- **Stati Ordine**:
   - `pending` - Ordine appena creato
   - `confirmed` - Ordine confermato dal ristorante
   - `preparing` - In preparazione

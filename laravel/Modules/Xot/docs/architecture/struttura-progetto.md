@@ -135,4 +135,3 @@ rm -rf database/migrations
 * [struttura-progetto.md](docs/tecnico/struttura/struttura-progetto.md)
 * [struttura-progetto.md](docs/tecnico/struttura-progetto.md)
 * [struttura-progetto.md](../../../Xot/docs/architecture/struttura-progetto.md)
-

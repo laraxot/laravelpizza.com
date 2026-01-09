@@ -121,7 +121,7 @@ class AdminPanelProvider extends XotBasePanelProvider
         $panel = parent::panel($panel);
 
         // Render hooks per socialite, team selector, etc.
-        FilamentView::registerRenderHook('panels::auth.login.form.after', 
+        FilamentView::registerRenderHook('panels::auth.login.form.after',
             static fn(): string => Blade::render("@livewire('socialite.buttons')"));
 
         return $panel;

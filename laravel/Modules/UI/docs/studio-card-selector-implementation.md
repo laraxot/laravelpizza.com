@@ -5,19 +5,15 @@ Componente Filament Form altamente riutilizzabile per la selezione di studi medi
 
 ## 🏗️ **Architettura Component**
 
-
-## 🏗️ **Architettura Component**
-
-
 ## 🏗️ **Architettura Component**
 
 ## 🏗️ **Architettura Component**
 
 ## 🏗️ **Architettura Component**
 
-
 ## 🏗️ **Architettura Component**
 
+## 🏗️ **Architettura Component**
 
 ## 🏗️ **Architettura Component**
 
@@ -33,7 +29,6 @@ use Filament\Forms\Components\Field;
 use Illuminate\Database\Eloquent\Collection;
 use Closure;
 
-
 declare(strict_types=1);
 namespace Modules\UI\Forms\Components;
 use Filament\Forms\Components\Field;
@@ -42,26 +37,16 @@ use Closure;
 class StudioCardSelector extends Field
 {
     protected string $view = 'ui::forms.components.studio-card-selector';
-    
+
     // Dati studios da visualizzare
     protected Collection|Closure|null $studios = null;
-    
-    
-    
-    
-    
-    
+
     // Personalizzazioni UI
     protected bool $showDistance = false;
     protected bool $showSpecializations = false;
     protected bool $showPhone = false;
     protected string $cardLayout = 'default'; // 'default', 'compact', 'detailed'
-    
-    
-    
-    
-    
-    
+
     // Configure studios data source
     public function studios(Collection|Closure $studios): static
     {
@@ -98,8 +83,7 @@ class StudioCardSelector extends Field
 // Nel widget FindDoctorAndAppointmentWidget
 use Modules\UI\Forms\Components\StudioCardSelector;
 protected function getStudioStepSchema(): array
-    
-    
+
     // Enable/disable features
     public function showDistance(bool $show = true): static
         $this->showDistance = $show;
@@ -139,7 +123,7 @@ protected function getStudioStepSchema(): array
     ];
 private function getStudiosForLocation(Get $get): Collection
     $cap = $get('cap');
-    $province = $get('province'); 
+    $province = $get('province');
     $region = $get('region');
     if (!$cap || !$province || !$region) {
         return collect();
@@ -155,7 +139,7 @@ private function getStudiosForLocation(Get $get): Collection
 
 private function getStudiosForLocation(Get $get): Collection
     $cap = $get('cap');
-    $province = $get('province'); 
+    $province = $get('province');
     $region = $get('region');
     if (!$cap || !$province || !$region) {
         return collect();
@@ -232,17 +216,17 @@ return [
 - [Widget Analysis](../SaluteOra/docs/widgets/find-doctor-widget-studio-step-analysis.md)
 
 ---
-**Component Status**: 📋 Documented - Ready for Implementation  
-**Reusability**: 🔄 High - Cross-module compatible  
-**Last Updated**: January 2025 
-**Last Updated**: January 2025 
+**Component Status**: 📋 Documented - Ready for Implementation
+**Reusability**: 🔄 High - Cross-module compatible
+**Last Updated**: January 2025
+**Last Updated**: January 2025
         ],
 
 ---
-**Component Status**: 📋 Documented - Ready for Implementation  
-**Reusability**: 🔄 High - Cross-module compatible  
-**Last Updated**: January 2025 
-**Last Updated**: January 2025 
+**Component Status**: 📋 Documented - Ready for Implementation
+**Reusability**: 🔄 High - Cross-module compatible
+**Last Updated**: January 2025
+**Last Updated**: January 2025
         ],
         'phone' => [
             'label' => 'Telefono',
@@ -269,19 +253,19 @@ return [
 - [Widget Analysis](../SaluteOra/docs/widgets/find-doctor-widget-studio-step-analysis.md)
 
 ---
-**Component Status**: 📋 Documented - Ready for Implementation  
-**Reusability**: 🔄 High - Cross-module compatible  
-**Last Updated**: January 2025 
-**Last Updated**: January 2025 
-**Last Updated**: January 2025 
+**Component Status**: 📋 Documented - Ready for Implementation
+**Reusability**: 🔄 High - Cross-module compatible
+**Last Updated**: January 2025
+**Last Updated**: January 2025
+**Last Updated**: January 2025
 
 ---
-**Component Status**: 📋 Documented - Ready for Implementation  
-**Reusability**: 🔄 High - Cross-module compatible  
-**Last Updated**: January 2025 
-**Last Updated**: January 2025 
-**Last Updated**: January 2025 
+**Component Status**: 📋 Documented - Ready for Implementation
+**Reusability**: 🔄 High - Cross-module compatible
+**Last Updated**: January 2025
+**Last Updated**: January 2025
+**Last Updated**: January 2025
 ---
-**Component Status**: 📋 Documented - Ready for Implementation  
-**Reusability**: 🔄 High - Cross-module compatible  
-**Last Updated**: January 2025 
+**Component Status**: 📋 Documented - Ready for Implementation
+**Reusability**: 🔄 High - Cross-module compatible
+**Last Updated**: January 2025

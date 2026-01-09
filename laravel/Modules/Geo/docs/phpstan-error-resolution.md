@@ -34,12 +34,12 @@ Risolti sistematicamente 9 errori PHPStan critici attraverso l'analisi del codic
 ## Correzioni Dettagliate per Modulo
 
 ### Chart Module (8 Gennaio 2025)
-**File**: `Modules/Chart/app/Models/Chart.php`  
+**File**: `Modules/Chart/app/Models/Chart.php`
 **Problema**: Errori di tipizzazione nel metodo `getSettings()`
 - Return type mismatch: `array<string, array<int|string, mixed>>` vs `array<mixed>`
 - PHPDoc type mismatch con tipi nativi
 
-**Soluzione**: 
+**Soluzione**:
 - Corretta tipizzazione da `array<string, array<int|string, mixed>>` a `array<string, array<string, mixed>>`
 - Rimossa tipizzazione ridondante `array<int|string, mixed>`
 - Aggiunta documentazione PHPDoc completa
@@ -85,5 +85,5 @@ Risolti sistematicamente 9 errori PHPStan critici attraverso l'analisi del codic
 
 Questo intervento consolida l'approccio sistematico alla risoluzione di errori PHPStan nel progetto Laraxot, dimostrando come l'analisi approfondita del codice e l'applicazione coerente delle regole del framework portino a soluzioni robuste e scalabili.
 
-*Documento aggiornato: 8 Gennaio 2025*  
+*Documento aggiornato: 8 Gennaio 2025*
 *Conformità: PHPStan Level 9+, Laraxot Conventions*

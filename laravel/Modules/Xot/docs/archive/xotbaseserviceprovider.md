@@ -86,7 +86,7 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 class NotifyServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'Notify';
-    
+
     public function boot(): void
     {
         parent::boot();
@@ -111,7 +111,7 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 2. Non modificare mai la visibilità delle proprietà/metodi ereditati
 3. Seguire sempre il pattern di registrazione standard
 4. Documentare ogni modifica o estensione
-5. Mantenere la coerenza tra i moduli 
+5. Mantenere la coerenza tra i moduli
 ## Collegamenti tra versioni di XotBaseServiceProvider.md
 * [XotBaseServiceProvider.md](../../../../project_docs/moduli/xot/XotBaseServiceProvider.md)
 
@@ -227,4 +227,3 @@ $this->commands([
 
 ### Zen finale
 > "Il miglior comando è quello che non devi mai registrare a mano."
-

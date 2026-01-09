@@ -33,17 +33,17 @@ class SecureFileUploadService
         if (!in_array($file->getMimeType(), $allowedMimes)) {
             return false;
         }
-        
+
         // Validazione dimensione
         if ($file->getSize() > 10 * 1024 * 1024) { // 10MB
             return false;
         }
-        
+
         // Virus scan (se disponibile)
         if (class_exists(VirusScanner::class)) {
             return app(VirusScanner::class)->scan($file);
         }
-        
+
         return true;
     }
 }
@@ -59,7 +59,7 @@ class ImageOptimizationService
         $this->addConversion($media, 'medium', 800, 600);
         $this->addConversion($media, 'large', 1200, 900);
     }
-    
+
     private function addConversion(Media $media, string $name, int $width, int $height): void
     {
         $media->addMediaConversion($name)
@@ -80,4 +80,3 @@ class ImageOptimizationService
 
 ---
 *Stato: 🟡 Funzionale ma Necessita Security Enhancement*
-

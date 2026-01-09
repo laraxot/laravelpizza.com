@@ -11,7 +11,7 @@ Questa cartella contiene la documentazione relativa all'implementazione di Filam
 
 ## Note
 
-Questa documentazione si applica a tutti i moduli che utilizzano Filament per il backend. 
+Questa documentazione si applica a tutti i moduli che utilizzano Filament per il backend.
 
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/project_docs/README.md)
@@ -197,4 +197,3 @@ $prefix = static::$translationPrefix;
 ## Moduli che fanno riferimento a questa regola
 - [Patient: DoctorResource](../../../Patient/project_docs/filament/resources/doctor-resource.md)
 // Aggiungere qui altri moduli se necessario
-

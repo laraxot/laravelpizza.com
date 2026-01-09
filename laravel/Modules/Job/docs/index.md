@@ -123,12 +123,12 @@ $scheduler->schedule('App\Jobs\ProcessData', '0 */6 * * *', [
 // config/queue.php
 return [
     'default' => env('QUEUE_CONNECTION', 'redis'),
-    
+
     'connections' => [
         'sync' => [
             'driver' => 'sync',
         ],
-        
+
         'redis' => [
             'driver' => 'redis',
             'connection' => 'default',
@@ -136,7 +136,7 @@ return [
             'retry_after' => 90,
             'block_for' => null,
         ],
-        
+
         'database' => [
             'driver' => 'database',
             'table' => 'jobs',
@@ -144,7 +144,7 @@ return [
             'retry_after' => 90,
         ],
     ],
-    
+
     'failed' => [
         'driver' => env('QUEUE_FAILED_DRIVER', 'database-uuids'),
         'database' => env('DB_CONNECTION', 'mysql'),

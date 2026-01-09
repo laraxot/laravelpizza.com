@@ -44,9 +44,9 @@ I componenti UI forniscono elementi riutilizzabili e standardizzati per l'interf
     <x-slot name="header">
         <h3 class="text-lg font-semibold">Titolo Card</h3>
     </x-slot>
-    
+
     <p>Contenuto della card</p>
-    
+
     <x-slot name="footer">
         <x-ui::ui.button type="primary">Azione</x-ui::ui.button>
     </x-slot>
@@ -60,9 +60,9 @@ I componenti UI forniscono elementi riutilizzabili e standardizzati per l'interf
 
 ### 3. Input Component
 ```blade
-<x-ui::ui.input 
-    name="email" 
-    type="email" 
+<x-ui::ui.input
+    name="email"
+    type="email"
     placeholder="Inserisci email"
     :required="true"
     error="{{ $errors->first('email') }}"
@@ -79,13 +79,13 @@ I componenti UI forniscono elementi riutilizzabili e standardizzati per l'interf
 
 ### 4. Modal Component
 ```blade
-<x-ui::ui.modal 
-    id="confirm-modal" 
+<x-ui::ui.modal
+    id="confirm-modal"
     title="Conferma Azione"
     size="md"
 >
     <p>Sei sicuro di voler procedere?</p>
-    
+
     <x-slot name="footer">
         <x-ui::ui.button type="secondary" x-on:click="close">Annulla</x-ui::ui.button>
         <x-ui::ui.button type="danger">Conferma</x-ui::ui.button>
@@ -130,7 +130,7 @@ return [
 ```blade
 <x-ui::ui.card>
     <x-ui::ui.input name="search" placeholder="Cerca..." />
-    
+
     <div class="mt-4">
         <x-ui::ui.button type="primary" size="sm">
             <x-ui::ui.icon name="search" class="w-4 h-4 mr-2" />
@@ -142,7 +142,7 @@ return [
 
 ### Eventi e Interazioni
 ```blade
-<x-ui::ui.button 
+<x-ui::ui.button
     type="primary"
     x-data="{ loading: false }"
     x-on:click="loading = true; $wire.save().then(() => loading = false)"
@@ -166,7 +166,7 @@ return [
 
 ### Varianti Responsive
 ```blade
-<x-ui::ui.button 
+<x-ui::ui.button
     size="sm md:md lg:lg"
     class="w-full md:w-auto"
 >

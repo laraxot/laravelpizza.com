@@ -102,10 +102,10 @@ npm run copy
    ```bash
    # Verifica dipendenze
    npm list
-   
+
    # Pulizia cache
    npm cache clean --force
-   
+
    # Reinstallazione
    rm -rf node_modules
    npm install
@@ -115,7 +115,7 @@ npm run copy
    ```bash
    # Verifica permessi
    ls -la public/themes/One
-   
+
    # Forza copia
    npm run copy -- --force
    ```
@@ -156,4 +156,3 @@ npm run copy
 * [themes.md](docs/rules/themes.md)
 * [themes.md](laravel/Modules/Xot/docs/themes.md)
 * [themes.md](laravel/Modules/Cms/docs/frontoffice/themes.md)
-

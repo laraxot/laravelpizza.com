@@ -134,8 +134,8 @@ use Override;    // Seconda importazione - ERRORE!
 
 ### Scenario 1: Override Import Duplicato
 
-**File**: `Modules/Activity/app/Providers/ActivityServiceProvider.php`  
-**Linee**: 9 e 12 (presumibilmente)  
+**File**: `Modules/Activity/app/Providers/ActivityServiceProvider.php`
+**Linee**: 9 e 12 (presumibilmente)
 **Errore**: `Cannot use Override as Override because the name is already in use`
 
 **Contenuto problematico**:
@@ -229,6 +229,6 @@ Potrebbero esserci altri casi di import duplicati oltre a Override:
 
 ---
 
-**Ultimo aggiornamento**: 2026-01-08  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2026-01-08
+**Versione**: 1.0.0
 **Status**: In corso di implementazione

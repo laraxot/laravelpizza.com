@@ -76,21 +76,21 @@ use Livewire\Volt\Component;
 new class extends Component {
     public Event $event;
     public $registrationData = [];
-    
+
     public function mount(Event $event)
     {
         $this->event = $event;
     }
-    
+
     public function register()
     {
         $validated = $this->validate([
             'registrationData.name' => 'required|string|max:255',
             'registrationData.email' => 'required|email',
         ]);
-        
+
         // Registration logic here
-        
+
         return $this->redirect(route('events.show', $this->event));
     }
 }; ?>
@@ -98,17 +98,17 @@ new class extends Component {
 <div>
     <h1>{{ $event->title }}</h1>
     <p>{{ $event->description }}</p>
-    
+
     <form wire:submit="register">
-        <input 
-            wire:model="registrationData.name" 
-            type="text" 
-            placeholder="Your name" 
+        <input
+            wire:model="registrationData.name"
+            type="text"
+            placeholder="Your name"
         />
-        <input 
-            wire:model="registrationData.email" 
-            type="email" 
-            placeholder="Your email" 
+        <input
+            wire:model="registrationData.email"
+            type="email"
+            placeholder="Your email"
         />
         <button type="submit">Register</button>
     </form>
@@ -221,7 +221,7 @@ $events = computed(fn () => Event::where('start_datetime', '>', now())
 <x-layout>
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold mb-6">Upcoming Events</h1>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach($this->events as $event)
                 <x-event-card :event="$event" />
@@ -242,18 +242,18 @@ use function Laravel\Volt\{mount};
 
 new class extends Component {
     public Event $event;
-    
+
     public function mount(Event $event)
     {
         $this->event = $event->load('organizer');
     }
-    
+
     public function register()
     {
         if (!auth()->check()) {
             return $this->redirect(route('login', ['redirect' => request()->url()]));
         }
-        
+
         // Registration logic
         $this->dispatch('registration-success', eventId: $this->event->id);
     }
@@ -265,7 +265,7 @@ new class extends Component {
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="p-6">
                     <h1 class="text-3xl font-bold text-gray-900 mb-4">{{ $event->title }}</h1>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                         <div>
                             <p class="text-gray-600">Date</p>
@@ -280,15 +280,15 @@ new class extends Component {
                             <p class="font-medium">{{ $event->venue_name }}</p>
                         </div>
                     </div>
-                    
+
                     <div class="mb-6">
                         <h2 class="text-xl font-semibold mb-3">Description</h2>
                         <div class="text-gray-700">
                             {!! Str::markdown($event->description) !!}
                         </div>
                     </div>
-                    
-                    <button 
+
+                    <button
                         wire:click="register"
                         class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg"
                     >
@@ -454,7 +454,7 @@ class EventController extends Controller
         $events = Event::all();
         return view('events.index', compact('events'));
     }
-    
+
     public function show(Event $event)
     {
         return view('events.show', compact('event'));
@@ -491,7 +491,7 @@ use Livewire\Volt\Component;
 new class extends Component {
     public $title = '';
     public $description = '';
-    
+
     public function rules()
     {
         return [
@@ -499,17 +499,17 @@ new class extends Component {
             'description' => ['required', 'string'],
         ];
     }
-    
+
     public function createEvent()
     {
         $validated = $this->validate();
-        
+
         $event = Event::create([
             'title' => $validated['title'],
             'description' => $validated['description'],
             'user_id' => auth()->id(),
         ]);
-        
+
         $this->redirect(route('events.show', $event));
     }
 };
@@ -524,7 +524,7 @@ use Livewire\Attributes\On;
 
 new class extends Component {
     public $attendees = [];
-    
+
     #[On('user-joined-event')]
     public function refreshAttendees($eventId)
     {
@@ -543,5 +543,5 @@ For the Laravel Pizza Meetups project, this approach aligns perfectly with the D
 
 ---
 
-**Document Version**: 1.0  
+**Document Version**: 1.0
 **Last Updated**: November 28, 2025

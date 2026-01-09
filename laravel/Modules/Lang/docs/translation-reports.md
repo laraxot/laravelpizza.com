@@ -92,26 +92,26 @@ class TranslationReportService
     {
         try {
             $data = $this->prepareCoverageData($options);
-            
+
             $html = view('lang::pdf.translation-coverage', [
                 'data' => $data,
                 'options' => $options,
                 'generatedAt' => now(),
                 'reportId' => $this->generateReportId(),
             ])->render();
-            
+
             $html2pdf = new Html2Pdf('P', 'A4', 'it', true, 'UTF-8', [15, 20, 15, 20]);
             $html2pdf->setDefaultFont('Helvetica');
             $html2pdf->writeHTML($html);
-            
+
             return $html2pdf->output('', 'S');
-            
+
         } catch (Html2PdfException $e) {
             $html2pdf->clean();
             throw new TranslationReportException('Failed to generate coverage report: ' . $e->getMessage());
         }
     }
-    
+
     private function prepareCoverageData(array $options): array
     {
         return [
@@ -123,19 +123,19 @@ class TranslationReportService
             'recommendations' => $this->generateRecommendations($options),
         ];
     }
-    
+
     private function getCoverageStatistics(array $options): array
     {
         $locales = $options['locales'] ?? ['it', 'en'];
         $modules = $options['modules'] ?? ['all'];
-        
+
         $statistics = [];
-        
+
         foreach ($locales as $locale) {
             $totalKeys = $this->getTotalKeys($locale, $modules);
             $translatedKeys = $this->getTranslatedKeys($locale, $modules);
             $missingKeys = $totalKeys - $translatedKeys;
-            
+
             $statistics[$locale] = [
                 'total_keys' => $totalKeys,
                 'translated_keys' => $translatedKeys,
@@ -143,7 +143,7 @@ class TranslationReportService
                 'coverage_rate' => $totalKeys > 0 ? round(($translatedKeys / $totalKeys) * 100, 2) : 0,
             ];
         }
-        
+
         return [
             'by_locale' => $statistics,
             'overall' => [
@@ -154,15 +154,15 @@ class TranslationReportService
             ],
         ];
     }
-    
+
     private function getMissingTranslations(array $options): array
     {
         $locales = $options['locales'] ?? ['it', 'en'];
         $missing = [];
-        
+
         foreach ($locales as $locale) {
             $localeMissing = $this->findMissingTranslations($locale);
-            
+
             foreach ($localeMissing as $key => $context) {
                 $missing[] = [
                     'key' => $key,
@@ -173,22 +173,22 @@ class TranslationReportService
                 ];
             }
         }
-        
+
         return array_slice($missing, 0, 100); // Limit to 100 for PDF
     }
-    
+
     private function getLocaleComparison(array $options): array
     {
         $locales = $options['locales'] ?? ['it', 'en'];
         $comparison = [];
-        
+
         if (count($locales) >= 2) {
             $baseLocale = $locales[0];
             $compareLocale = $locales[1];
-            
+
             $baseKeys = $this->getAllKeys($baseLocale);
             $compareKeys = $this->getAllKeys($compareLocale);
-            
+
             $comparison = [
                 'base_locale' => $baseLocale,
                 'compare_locale' => $compareLocale,
@@ -197,16 +197,16 @@ class TranslationReportService
                 'common_keys' => array_intersect($baseKeys, $compareKeys),
             ];
         }
-        
+
         return $comparison;
     }
-    
+
     private function generateRecommendations(array $options): array
     {
         $recommendations = [];
-        
+
         $stats = $this->getCoverageStatistics($options);
-        
+
         // Coverage recommendations
         foreach ($stats['by_locale'] as $locale => $data) {
             if ($data['coverage_rate'] < 90) {
@@ -219,7 +219,7 @@ class TranslationReportService
                 ];
             }
         }
-        
+
         // Unused translations
         $unused = $this->getUnusedTranslations($options);
         if (count($unused) > 50) {
@@ -230,7 +230,7 @@ class TranslationReportService
                 'action' => 'Clean up unused translations',
             ];
         }
-        
+
         return $recommendations;
     }
 }
@@ -245,25 +245,25 @@ class TranslationUsageReportService
     {
         try {
             $data = $this->prepareUsageData($options);
-            
+
             $html = view('lang::pdf.translation-usage', [
                 'data' => $data,
                 'options' => $options,
                 'generatedAt' => now(),
             ])->render();
-            
+
             $html2pdf = new Html2Pdf('L', 'A4', 'it', true, 'UTF-8', [15, 20, 15, 20]); // Landscape for tables
             $html2pdf->setDefaultFont('Helvetica');
             $html2pdf->writeHTML($html);
-            
+
             return $html2pdf->output('', 'S');
-            
+
         } catch (Html2PdfException $e) {
             $html2pdf->clean();
             throw new TranslationReportException('Failed to generate usage report: ' . $e->getMessage());
         }
     }
-    
+
     private function prepareUsageData(array $options): array
     {
         return [
@@ -274,43 +274,43 @@ class TranslationUsageReportService
             'trending_keys' => $this->getTrendingKeys($options),
         ];
     }
-    
+
     private function getUsageStatistics(array $options): array
     {
         // Analyze codebase for translation usage
         $usage = [];
-        
+
         if ($options['include_components']['fields'] ?? true) {
             $usage['fields'] = $this->analyzeFieldUsage();
         }
-        
+
         if ($options['include_components']['actions'] ?? true) {
             $usage['actions'] = $this->analyzeActionUsage();
         }
-        
+
         if ($options['include_components']['notifications'] ?? true) {
             $usage['notifications'] = $this->analyzeNotificationUsage();
         }
-        
+
         if ($options['include_components']['validations'] ?? true) {
             $usage['validations'] = $this->analyzeValidationUsage();
         }
-        
+
         return $usage;
     }
-    
+
     private function analyzeFieldUsage(): array
     {
         // Scan PHP files for Field::make() calls
         $files = $this->findPhpFiles(base_path('modules'));
         $fieldUsage = [];
-        
+
         foreach ($files as $file) {
             $content = file_get_contents($file);
-            
+
             // Find Field::make('field_name') patterns
             preg_match_all('/Field::make\([\'"]([^\'"]+)[\'"]/', $content, $matches);
-            
+
             foreach ($matches[1] as $fieldName) {
                 $key = "txt.{$fieldName}";
                 if (!isset($fieldUsage[$key])) {
@@ -321,12 +321,12 @@ class TranslationUsageReportService
                         'files' => [],
                     ];
                 }
-                
+
                 $fieldUsage[$key]['usage_count']++;
                 $fieldUsage[$key]['files'][] = str_replace(base_path(), '', $file);
             }
         }
-        
+
         return array_values($fieldUsage);
     }
 }
@@ -364,7 +364,7 @@ class TranslationUsageReportService
     <!-- Coverage Overview -->
     <div style="margin: 15mm 0;">
         <h2 style="font-size: 14pt; color: #2c3e50; margin-bottom: 8mm;">Coverage Overview</h2>
-        
+
         <table style="width: 100%; border-collapse: collapse;">
             <tr>
                 <td style="width: 25%; padding: 8mm; background-color: #d4edda; border: 1px solid #dee2e6;">
@@ -398,7 +398,7 @@ class TranslationUsageReportService
     <!-- Coverage by Locale -->
     <div style="margin: 15mm 0;">
         <h2 style="font-size: 14pt; color: #2c3e50; margin-bottom: 8mm;">Coverage by Locale</h2>
-        
+
         <table style="width: 100%; border-collapse: collapse;">
             <tr style="background-color: #e9ecef;">
                 <th style="border: 1px solid #dee2e6; padding: 5mm; font-size: 10pt; text-align: left;">
@@ -454,7 +454,7 @@ class TranslationUsageReportService
     <!-- Missing Translations -->
     <div style="margin: 15mm 0;">
         <h2 style="font-size: 14pt; color: #2c3e50; margin-bottom: 8mm;">Missing Translations (Top 100)</h2>
-        
+
         <table style="width: 100%; border-collapse: collapse;">
             <tr style="background-color: #e9ecef;">
                 <th style="border: 1px solid #dee2e6; padding: 5mm; font-size: 10pt; text-align: left;">
@@ -498,7 +498,7 @@ class TranslationUsageReportService
     <!-- Recommendations -->
     <div style="margin: 15mm 0;">
         <h2 style="font-size: 14pt; color: #2c3e50; margin-bottom: 8mm;">Recommendations</h2>
-        
+
         @foreach($data['recommendations'] as $recommendation)
         <div style="margin-bottom: 8mm; padding: 8mm; background-color: #f8f9fa; border-left: 4px solid {{ $recommendation['priority'] == 'high' ? '#e74c3c' : '#f39c12' }};">
             <div style="font-size: 11pt; font-weight: bold; margin-bottom: 3mm;">
@@ -555,7 +555,7 @@ class ExportTranslationReportAction extends Action
                     'include_sections' => $data['sections'] ?? [],
                     'format' => $data['format'] ?? 'detailed',
                 ]);
-                
+
                 return response()->streamDownload(function () use ($pdf) {
                     echo $pdf;
                 }, "translation_coverage_report_{$data['format']}.pdf");
@@ -570,7 +570,7 @@ class ExportTranslationReportAction extends Action
                         'fr' => 'Français',
                     ])
                     ->default(['it', 'en']),
-                
+
                 \Filament\Forms\Components\CheckboxList::make('modules')
                     ->label('Modules')
                     ->options([
@@ -581,7 +581,7 @@ class ExportTranslationReportAction extends Action
                         'Job' => 'Job Module',
                     ])
                     ->default(['all']),
-                
+
                 \Filament\Forms\Components\CheckboxList::make('sections')
                     ->label('Include Sections')
                     ->options([
@@ -591,7 +591,7 @@ class ExportTranslationReportAction extends Action
                         'locale_comparison' => 'Locale Comparison',
                     ])
                     ->default(['statistics', 'missing_translations']),
-                
+
                 \Filament\Forms\Components\Select::make('format')
                     ->label('Report Format')
                     ->options([
@@ -624,7 +624,7 @@ class ExportUsageReportAction extends Action
                     'include_components' => $data['components'] ?? [],
                     'group_by' => $data['group_by'] ?? 'module',
                 ]);
-                
+
                 return response()->streamDownload(function () use ($pdf) {
                     echo $pdf;
                 }, "translation_usage_report_{$data['start_date']}_to_{$data['end_date']}.pdf");
@@ -634,12 +634,12 @@ class ExportUsageReportAction extends Action
                     ->label('Start Date')
                     ->required()
                     ->default(now()->subMonth()),
-                
+
                 \Filament\Forms\Components\DatePicker::make('end_date')
                     ->label('End Date')
                     ->required()
                     ->default(now()),
-                
+
                 \Filament\Forms\Components\CheckboxList::make('components')
                     ->label('Include Components')
                     ->options([
@@ -649,7 +649,7 @@ class ExportUsageReportAction extends Action
                         'validations' => 'Validations',
                     ])
                     ->default(['fields', 'actions']),
-                
+
                 \Filament\Forms\Components\Select::make('group_by')
                     ->label('Group By')
                     ->options([
@@ -684,18 +684,18 @@ class TranslationReportTest extends TestCase
     {
         // Create test translations
         Translation::factory()->count(100)->create();
-        
+
         $service = app(TranslationReportService::class);
         $pdfContent = $service->generateCoverageReport([
             'locales' => ['it', 'en'],
         ]);
-        
+
         $this->assertStringStartsWith('%PDF', $pdfContent);
         $this->assertGreaterThan(2000, strlen($pdfContent));
         $this->assertStringContainsString('Translation Coverage Report', $pdfContent);
         $this->assertStringContainsString('Coverage Overview', $pdfContent);
     }
-    
+
     /** @test */
     public function it_includes_missing_translations()
     {
@@ -704,30 +704,30 @@ class TranslationReportTest extends TestCase
             'locale' => 'it',
             'value' => 'Test Value',
         ]);
-        
+
         $service = app(TranslationReportService::class);
         $pdfContent = $service->generateCoverageReport([
             'locales' => ['it', 'en'],
             'include_sections' => ['missing_translations'],
         ]);
-        
+
         $this->assertStringStartsWith('%PDF', $pdfContent);
         $this->assertStringContainsString('Missing Translations', $pdfContent);
     }
-    
+
     /** @test */
     public function it_handles_large_translation_sets()
     {
         // Create large dataset
         Translation::factory()->count(2000)->create();
-        
+
         $startTime = microtime(true);
-        
+
         $service = app(TranslationReportService::class);
         $pdfContent = $service->generateCoverageReport();
-        
+
         $duration = microtime(true) - $startTime;
-        
+
         // Should generate within reasonable time
         $this->assertLessThan(10, $duration);
         $this->assertStringStartsWith('%PDF', $pdfContent);
@@ -750,7 +750,7 @@ class TranslationReportService
             'options' => $options,
             'last_translation' => Translation::max('updated_at'),
         ]));
-        
+
         return Cache::remember($cacheKey, 3600, function () use ($options) { // 1 hour
             return $this->generateCoverageReport($options);
         });
@@ -767,7 +767,7 @@ private function optimizeForLargeTranslationSets($query)
     $query->chunk(500, function ($translations) {
         // Process in chunks
     });
-    
+
     // Limit data for PDF
     return $query->limit(1000)->get();
 }
@@ -782,21 +782,21 @@ public function generateWithErrorHandling(array $options = []): string
 {
     try {
         return $this->generateCoverageReport($options);
-        
+
     } catch (Html2PdfException $e) {
         Log::error('Translation PDF generation failed', [
             'error' => $e->getMessage(),
             'options' => $options,
         ]);
-        
+
         // Generate simplified fallback
         return $this->generateFallbackReport($options);
-        
+
     } catch (Exception $e) {
         Log::error('Unexpected error in translation PDF generation', [
             'error' => $e->getMessage(),
         ]);
-        
+
         throw new TranslationReportException('Failed to generate translation report');
     }
 }
@@ -813,7 +813,7 @@ public function generateWithErrorHandling(array $options = []): string
 
 ---
 
-**Last Updated:** 2025-12-09  
-**Version:** 1.0.0  
-**HTML2PDF Version:** 5.2.x  
+**Last Updated:** 2025-12-09
+**Version:** 1.0.0
+**HTML2PDF Version:** 5.2.x
 **PHPStan Level:** 10 ✅

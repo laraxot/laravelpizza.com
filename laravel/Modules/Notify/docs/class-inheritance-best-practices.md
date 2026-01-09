@@ -12,7 +12,7 @@ abstract class XotBasePage extends Page implements HasForms
 {
     use TransTrait;
     use InteractsWithForms;
-    
+
     // ...
 }
 ```
@@ -44,7 +44,7 @@ class SendSmsPage extends XotBasePage
 class SendSmsPage extends XotBasePage implements HasForms
 {
     use InteractsWithForms;
-    
+
     // Implementazione...
 }
 ```

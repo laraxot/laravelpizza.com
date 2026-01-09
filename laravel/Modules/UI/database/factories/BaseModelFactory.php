@@ -17,7 +17,7 @@ class BaseModelFactory extends Factory
     /**
      * The name of the factory's corresponding model.
      *
-     * @var string
+     * @var class-string<BaseModel>
      */
     protected $model = BaseModel::class;
 
@@ -39,7 +39,7 @@ class BaseModelFactory extends Factory
      */
     public function active(): static
     {
-        return $this->state(static fn (array $attributes) => [
+        return $this->state(static fn () => [
             'is_active' => true,
         ]);
     }
@@ -49,7 +49,7 @@ class BaseModelFactory extends Factory
      */
     public function inactive(): static
     {
-        return $this->state(static fn (array $attributes) => [
+        return $this->state(static fn () => [
             'is_active' => false,
         ]);
     }

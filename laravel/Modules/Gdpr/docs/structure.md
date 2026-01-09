@@ -9,7 +9,7 @@ Modules\\Gdpr\\Database\\Factories
 Modules\\Gdpr\\Database\\Seeders
 - **Pacchetto Composer**: laraxot/module_gdpr_fila3
 Marco Sottana
-- **Dipendenze**: statikbe/laravel-cookie-consent * repositories type path url ../Xot type path url ../Tenant type path url ../UI scripts post-autoload-dump1 @php artisan vendor:publish --provider='Statikbe\\CookieConsent\\CookieConsentServiceProvider' --tag='cookie-public' 
+- **Dipendenze**: statikbe/laravel-cookie-consent * repositories type path url ../Xot type path url ../Tenant type path url ../UI scripts post-autoload-dump1 @php artisan vendor:publish --provider='Statikbe\\CookieConsent\\CookieConsentServiceProvider' --tag='cookie-public'
 - **Totale file PHP**: 68
 - **Totale classi/interfacce**: 43
 
@@ -342,7 +342,6 @@ tests/Unit
 - [Analisi strutturale complessiva](/docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/docs/phpstan/)
 
-
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
 * [structure.md](laravel/Modules/Gdpr/docs/structure.md)
@@ -360,4 +359,3 @@ tests/Unit
 * [structure.md](laravel/Modules/Cms/docs/structure.md)
 * [structure.md](laravel/Modules/Cms/docs/themes/structure.md)
 * [structure.md](laravel/Modules/Cms/docs/components/structure.md)
-

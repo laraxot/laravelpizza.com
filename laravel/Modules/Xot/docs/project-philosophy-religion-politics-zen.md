@@ -21,7 +21,7 @@ Il progetto Laravel Pizza è una conversione e miglioramento di https://laravelp
 
 - **Mai estendere classi Filament direttamente**: Sempre usare classi XotBase
 - **Filament Resources → XotBaseResource**
-- **Filament Pages → XotBasePage**  
+- **Filament Pages → XotBasePage**
 - **Filament Widgets → XotBaseWidget** (ATTENZIONE: Non definire `mount()` nella classe base per incompatibilità di signature; usare `initXotBaseWidget()` nei figli)
 - **Filament Actions → XotBaseAction**
 - **Service Providers → XotBaseServiceProvider**

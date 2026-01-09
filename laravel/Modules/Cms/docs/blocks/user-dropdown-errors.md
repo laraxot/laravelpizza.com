@@ -84,7 +84,7 @@
     $user = $user ?? auth()->user();
     $locale = LaravelLocalization::getCurrentLocale();
     $isLoggedIn = auth()->check();
-    
+
     // Validazione e sanitizzazione dei dati
     $menuItems = collect($menu_items)->map(function ($item) use ($locale) {
         return [
@@ -100,9 +100,9 @@
 ### 2. Struttura del Componente
 ```blade
 {{-- Componente principale --}}
-<div 
-    class="relative" 
-    x-data="{ open: false }" 
+<div
+    class="relative"
+    x-data="{ open: false }"
     @click.away="open = false"
     @keydown.escape.window="open = false"
     role="navigation"
@@ -149,7 +149,7 @@
                 @if($item['type'] === 'divider')
                     <div class="border-t border-gray-200 dark:border-gray-700 my-1" role="separator"></div>
                 @else
-                    <a 
+                    <a
                         href="{{ $item['url'] }}"
                         class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-700 transition duration-150 ease-in-out"
                         role="menuitem"
@@ -230,4 +230,4 @@ return [
 ## Collegamenti
 - [Documentazione User Dropdown](./user-dropdown.md)
 - [Best Practices UI/UX](./guida-implementazione-ux.md)
-- [Documentazione Accessibilità](./accessibility.md) 
+- [Documentazione Accessibilità](./accessibility.md)

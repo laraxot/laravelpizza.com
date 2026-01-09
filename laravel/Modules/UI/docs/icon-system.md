@@ -163,7 +163,7 @@ MenuItem::make()
 class StatsWidget extends Widget
 {
     protected static string $view = 'ui::widgets.stats';
-    
+
     public function getViewData(): array
     {
         return [
@@ -336,7 +336,6 @@ Tutte le icone sono compatibili con Filament 4.x e versioni successive.
 - **🔧 Registrazione Automatica**: Icone registrate automaticamente
 - **📚 Documentazione**: Documentazione completa del sistema
 - **🎯 Integrazione Filament**: Compatibilità completa con Filament 4.x
-
 
 ## ♻️ Manutenzione 2025-11
 

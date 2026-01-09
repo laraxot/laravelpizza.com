@@ -15,7 +15,7 @@ Per modificare una tabella esistente:
 
 ### 1. Single Source of Truth
 **Principio**: Una tabella = Una migrazione
-**Motivazione**: 
+**Motivazione**:
 - Tutta l'evoluzione della tabella visibile in un punto
 - Nessuna frammentazione della logica
 - Storia lineare e comprensibile

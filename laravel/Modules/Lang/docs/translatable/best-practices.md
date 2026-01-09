@@ -10,7 +10,7 @@ Questo documento raccoglie le migliori pratiche per l'utilizzo del pacchetto `sp
 class Page extends Model
 {
     use HasTranslations;
-    
+
     /**
      * Gli attributi che sono traducibili.
      *
@@ -29,7 +29,7 @@ class Page extends Model
 class Page extends Model
 {
     use HasTranslations;
-    
+
     public $translatable = ['title', 'content', 'meta_description'];
 }
 ```
@@ -70,7 +70,7 @@ Per modelli con esigenze specifiche di fallback:
 class MailTemplate extends Model
 {
     use HasTranslations;
-    
+
     /**
      * Determina la locale di fallback per questo modello.
      */
@@ -91,12 +91,12 @@ class MailTemplate extends Model
 public function rules()
 {
     $rules = [];
-    
+
     foreach (config('app.supported_locales') as $locale) {
         $rules["title.{$locale}"] = 'required|string|max:255';
         $rules["content.{$locale}"] = 'required|string';
     }
-    
+
     return $rules;
 }
 ```
@@ -108,7 +108,7 @@ public function rules()
 trait HasStrictTranslations
 {
     use HasTranslations;
-    
+
     /**
      * Imposta una traduzione con validazione.
      */
@@ -118,7 +118,7 @@ trait HasStrictTranslations
         if ($key === 'email_subject' && strlen($value) > 100) {
             throw new \InvalidArgumentException("L'oggetto email non può superare 100 caratteri");
         }
-        
+
         return parent::setTranslation($key, $locale, $value);
     }
 }
@@ -139,8 +139,8 @@ $translation = $model->field_name;
 $translation = $model->getTranslation('field_name', 'en');
 
 // Ottieni con fallback garantito
-$translation = $model->getTranslation('field_name', 'fr') 
-    ?? $model->getTranslation('field_name', app()->getFallbackLocale()) 
+$translation = $model->getTranslation('field_name', 'fr')
+    ?? $model->getTranslation('field_name', app()->getFallbackLocale())
     ?? '';
 ```
 
@@ -166,8 +166,8 @@ $translation = $model->getTranslation('field_name', 'fr')
     @foreach(config('app.available_locales') as $locale)
         <div class="tab" data-locale="{{ $locale }}">
             <label>{{ $title }} ({{ $locale }})</label>
-            <input type="text" 
-                   name="title[{{ $locale }}]" 
+            <input type="text"
+                   name="title[{{ $locale }}]"
                    value="{{ $model->getTranslation('title', $locale, false) }}">
         </div>
     @endforeach
@@ -253,15 +253,15 @@ $hasTranslation = $model->hasTranslation('field_name', 'en');
 public function testTranslations()
 {
     $model = Model::factory()->create();
-    
+
     $model->setTranslations('title', [
         'it' => 'Titolo italiano',
         'en' => 'English title',
     ]);
-    
+
     $this->assertEquals('Titolo italiano', $model->getTranslation('title', 'it'));
     $this->assertEquals('English title', $model->getTranslation('title', 'en'));
-    
+
     // Test fallback
     $this->assertEquals('Titolo italiano', $model->getTranslation('title', 'fr'));
 }

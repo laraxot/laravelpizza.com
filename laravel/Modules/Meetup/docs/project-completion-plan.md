@@ -506,7 +506,7 @@ Per evitare scope creep, questi elementi restano **esplicitamente fuori** dalla 
 
 #### Advertising & Services
 - **Job Postings**: $299 per posting or monthly packages
-- **Sponsorship Tiers**: 
+- **Sponsorship Tiers**:
   - Bronze: $500/month (logo placement)
   - Silver: $1,000/month (featured content)
   - Gold: $2,500/month (featured + speaking opportunities)

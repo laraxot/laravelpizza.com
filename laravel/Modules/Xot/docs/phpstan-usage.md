@@ -19,7 +19,7 @@ cd /percorso/al/progetto/laravel
 php artisan phpstan:analyse
 
 # NON chiamare direttamente phpstan senza entrare nella cartella laravel
-phpstan analyse 
+phpstan analyse
 
 # NON chiamare phpstan dalla directory root del progetto
 ./laravel/vendor/bin/phpstan analyse
@@ -40,7 +40,7 @@ cd /var/www/html/_bases/base_<nome progetto>_fila3/laravel
 - **Livello 10**: Rigidità massima, obiettivo da raggiungere per tutti i moduli.
 
 ```bash
-# Livello standard 
+# Livello standard
 ./vendor/bin/phpstan analyse Modules/NomeModulo --level=9
 
 # Livello avanzato
@@ -88,14 +88,14 @@ In rari casi, può essere necessario ignorare temporaneamente un errore. Utilizz
 $variabile = funzione_che_causa_errore();
 ```
 
-**Attenzione**: Ogni utilizzo di `@phpstan-ignore-next-line` deve essere giustificato con un commento che spieghi perché non è possibile correggere l'errore in modo appropriato. 
+**Attenzione**: Ogni utilizzo di `@phpstan-ignore-next-line` deve essere giustificato con un commento che spieghi perché non è possibile correggere l'errore in modo appropriato.
 
 ## Convenzioni per i Moduli
 
 1. Ogni modulo deve avere la propria documentazione nella cartella `docs` del modulo.
 2. I modelli devono essere tipizzati correttamente con i loro attributi.
 3. Le risorse Filament devono estendere la classe base corretta e implementare tutti i metodi richiesti.
-4. Utilizzare sempre le classi di tipo corrette per i filtri e le azioni. 
+4. Utilizzare sempre le classi di tipo corrette per i filtri e le azioni.
 
 ## Troubleshooting: php-cs-fixer e ENOENT
 
@@ -104,4 +104,4 @@ Se riscontri errori come ENOENT o "php-cs-fixer not found" durante l'uso di stru
 - Verifica che il binario sia installato e nel PATH.
 - Usa la versione locale se disponibile (`./vendor/bin/php-cs-fixer`).
 
-Per dettagli: [php-cs-fixer installation guide](https://cs.symfony.com/#installation) 
+Per dettagli: [php-cs-fixer installation guide](https://cs.symfony.com/#installation)

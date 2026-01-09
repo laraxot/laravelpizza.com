@@ -29,10 +29,10 @@ class PredictionMarketAggregateRoot
     private $winningOption = null;
 
     public static function createMarket(
-        string $marketId, 
-        string $title, 
-        string $description, 
-        string $endDate, 
+        string $marketId,
+        string $title,
+        string $description,
+        string $endDate,
         string $creatorId
     ): self {
         $aggregate = new self();

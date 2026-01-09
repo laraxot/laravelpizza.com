@@ -77,7 +77,6 @@ Overall Module Completion: 60%
    - Priority: High
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di roadmap.md
 * [roadmap.md](bashscripts/docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
@@ -96,9 +95,6 @@ Overall Module Completion: 60%
 * [roadmap.md](../../../Cms/docs/roadmap.md)
 * [roadmap.md](../../../../Themes/One/docs/roadmap.md)
 
-
 ### Versione Incoming
 
-
 ---
-

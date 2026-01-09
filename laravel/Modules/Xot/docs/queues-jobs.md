@@ -239,4 +239,4 @@ class JobFailedNotification extends Notification
             ->action('Vedi Dettagli', url('/jobs/failed'));
     }
 }
-``` 
+```

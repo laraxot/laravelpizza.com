@@ -7,7 +7,6 @@ section: content
 
 # Introducendo Cms {#introducendo-cms}
 
-
 Il modulo "module_Cms" è un pacchetto per Laravel che fornisce funzionalità per la gestione di un Cms all'interno di un'applicazione Laravel. Il modulo include metodi per gestire i post del Cms, le categorie e i tag, nonché per generare la struttura del Cms e le pagine del Cms.
 
 Per utilizzare il modulo, è necessario installarlo tramite Composer con il comando composer require laraxot/module_Cms. Una volta installato, il modulo può essere utilizzato nell'applicazione Laravel tramite il seguente codice:
@@ -26,4 +25,3 @@ Dipende un po da tutti i Moduli.
 ## Collegamenti tra versioni di introduzione.md
 * [introduzione.md](laravel/Modules/Chart/docs/introduzione.md)
 * [introduzione.md](laravel/Modules/Cms/docs/introduzione.md)
-

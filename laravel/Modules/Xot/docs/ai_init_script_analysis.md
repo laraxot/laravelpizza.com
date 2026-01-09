@@ -6,7 +6,7 @@ Dopo aver analizzato il funzionamento dello script `/var/www/_bases/base_quaeris
 
 ### Cartelle Presenti in bashscripts/ai/
 - `.ai` - esiste
-- `.cursor` - esiste  
+- `.cursor` - esiste
 - `.claude` - esiste
 - `.gemini` - esiste
 - `.windsurf` - esiste
@@ -15,7 +15,7 @@ Dopo aver analizzato il funzionamento dello script `/var/www/_bases/base_quaeris
 ### Collegamenti Simbolici Nella Root del Progetto
 - `.ai` - ✅ Collegamento simbolico presente e corretto
 - `.cursor` - ❌ Cartella reale esistente, non collegamento simbolico
-- `.claude` - ❌ Cartella reale esistente, non collegamento simbolico  
+- `.claude` - ❌ Cartella reale esistente, non collegamento simbolico
 - `.gemini` - ✅ Collegamento simbolico presente e corretto (creato manualmente in precedenza)
 - `.windsurf` - ❌ Cartella reale esistente, non collegamento simbolico
 

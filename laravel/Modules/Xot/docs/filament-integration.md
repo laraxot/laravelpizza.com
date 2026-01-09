@@ -26,12 +26,12 @@ abstract class XotBaseResource extends FilamentResource
 
     // Standard configurations
     protected static ?SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
-    
+
     public static function getModuleName(): string
     {
         return Str::between(static::class, 'Modules\\', '\Filament');
     }
-    
+
     public function hasCombinedRelationManagerTabsWithContent(): bool
     {
         return true;
@@ -123,7 +123,7 @@ public static function getNavigationBadge(): ?string
 All Filament pages extend Xot base classes:
 
 - `XotBaseListRecords` for list pages
-- `XotBaseCreateRecord` for create pages  
+- `XotBaseCreateRecord` for create pages
 - `XotBaseEditRecord` for edit pages
 - `XotBaseViewRecord` for view pages
 - `XotBaseWidget` for widgets
@@ -133,12 +133,12 @@ All Filament pages extend Xot base classes:
 class ListSurveys extends XotBaseListRecords
 {
     protected static string $resource = SurveyResource::class;
-    
+
     public function getTableColumns(): array
     {
         // Define table columns
     }
-    
+
     public function getTableActions(): array
     {
         // Define table actions

@@ -1,7 +1,7 @@
 # Best Practices - Documentazione Consolidata DRY + KISS
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTE le best practices del progetto
-> 
+>
 > **🔗 Riferimenti**: [coding-standards.md](coding-standards.md) | [phpstan-consolidated.md](phpstan-consolidated.md)
 
 ## 🚨 STOP DUPLICAZIONE!
@@ -271,7 +271,7 @@ class UserModerationResource extends XotBaseResource
 {
     protected static ?string $navigationGroup = 'User Management'; // ERRORE
     protected static ?string $navigationLabel = 'User Moderation'; // ERRORE
-    
+
     public static function table(Table $table): Table { // ERRORE
         return $table->columns([...]);
     }
@@ -631,7 +631,7 @@ class ExampleResource extends XotBaseResource
 {
     protected static ?string $navigationGroup = 'Group'; // ERRORE
     protected static ?string $navigationLabel = 'Label'; // ERRORE
-    
+
     public static function table(Table $table): Table { // ERRORE
         return $table->columns([...]);
     }

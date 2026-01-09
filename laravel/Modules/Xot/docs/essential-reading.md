@@ -5,55 +5,55 @@
 ## 🎯 Per Iniziare (3 docs)
 
 ### 1. [README.md](./README.md) ⭐⭐⭐
-**Cosa:** Entry point, panoramica generale, correzioni recenti  
-**Perché:** Primo documento da leggere sempre  
+**Cosa:** Entry point, panoramica generale, correzioni recenti
+**Perché:** Primo documento da leggere sempre
 **Tempo:** 5 minuti
 
 ### 2. [laraxot-framework.md](./laraxot-framework.md) ⭐⭐⭐
-**Cosa:** Filosofia Laraxot, principi DRY/KISS, pattern fondamentali  
-**Perché:** Capire la "religione" del framework  
+**Cosa:** Filosofia Laraxot, principi DRY/KISS, pattern fondamentali
+**Perché:** Capire la "religione" del framework
 **Tempo:** 10 minuti
 
 ### 3. [architecture-overview.md](./architecture-overview.md) ⭐⭐
-**Cosa:** Architettura modulare, stack tecnologico, workflow  
-**Perché:** Visione d'insieme del sistema  
+**Cosa:** Architettura modulare, stack tecnologico, workflow
+**Perché:** Visione d'insieme del sistema
 **Tempo:** 8 minuti
 
 ## 🏗️ Architettura e Pattern (3 docs)
 
 ### 4. [laraxot-architecture-rules.md](./laraxot-architecture-rules.md) ⭐⭐⭐
-**Cosa:** Regole architetturali MUST-FOLLOW  
-**Perché:** Evitare errori critici (XotBase, no labels, ecc.)  
+**Cosa:** Regole architetturali MUST-FOLLOW
+**Perché:** Evitare errori critici (XotBase, no labels, ecc.)
 **Tempo:** 12 minuti
 
 ### 5. [namespace-conventions.md](./namespace-conventions.md) ⭐⭐⭐
-**Cosa:** Convenzioni PSR-4 Laraxot (namespace NON include `app/`)  
-**Perché:** Evitare "does not comply with psr-4" warnings  
+**Cosa:** Convenzioni PSR-4 Laraxot (namespace NON include `app/`)
+**Perché:** Evitare "does not comply with psr-4" warnings
 **Tempo:** 7 minuti
 
 ### 6. [actions-pattern.md](./actions-pattern.md) ⭐⭐
-**Cosa:** Spatie QueueableActions vs Services  
-**Perché:** Pattern obbligatorio Laraxot (no Services!)  
+**Cosa:** Spatie QueueableActions vs Services
+**Perché:** Pattern obbligatorio Laraxot (no Services!)
 **Tempo:** 10 minuti
 
 ## 🎨 Filament e UI (2 docs)
 
 ### 7. [filament-best-practices.md](./filament-best-practices.md) ⭐⭐⭐
-**Cosa:** Best practices Filament, XotBase classes, no ->label()  
-**Perché:** Evitare violazioni architetturali in Filament  
+**Cosa:** Best practices Filament, XotBase classes, no ->label()
+**Perché:** Evitare violazioni architetturali in Filament
 **Tempo:** 15 minuti
 
 ### 8. [filament-guide.md](./filament-guide.md) ⭐⭐
-**Cosa:** Guida completa Filament integration  
-**Perché:** Reference per Resources, Pages, Widgets  
+**Cosa:** Guida completa Filament integration
+**Perché:** Reference per Resources, Pages, Widgets
 **Tempo:** 20 minuti
 
 ## 🆕 Nuove Regole (2 docs)
 
 ### 9. [file-locking-pattern.md](./file-locking-pattern.md) ⭐⭐⭐ 🆕
-**Cosa:** Pattern file locking per modifiche concorrenti sicure  
-**Perché:** Prevenire race conditions e merge conflicts  
-**Tempo:** 8 minuti  
+**Cosa:** Pattern file locking per modifiche concorrenti sicure
+**Perché:** Prevenire race conditions e merge conflicts
+**Tempo:** 8 minuti
 **Creato:** 2025-11-04
 
 ```bash
@@ -64,9 +64,9 @@ rm file.php.lock     # Dopo modifica
 ```
 
 ### 10. [merge-conflict-resolution-2025-11-04.md](./merge-conflict-resolution-2025-11-04.md) ⭐⭐ 🆕
-**Cosa:** Report tecnico risoluzione 18 file con merge conflicts  
-**Perché:** Case study completo, pattern da evitare  
-**Tempo:** 15 minuti  
+**Cosa:** Report tecnico risoluzione 18 file con merge conflicts
+**Perché:** Case study completo, pattern da evitare
+**Tempo:** 15 minuti
 **Creato:** 2025-11-04
 
 ## 📚 Letture Complementari (Opzionali)
@@ -160,7 +160,6 @@ Se hai risposto correttamente a tutte, sei pronto per contribuire! 🎉
 
 ---
 
-**Creato:** 2025-11-04  
-**Scopo:** Ridurre cognitive load navigando 2,560+ docs  
+**Creato:** 2025-11-04
+**Scopo:** Ridurre cognitive load navigando 2,560+ docs
 **Aggiornato:** Dopo risoluzione massiva merge conflicts
-

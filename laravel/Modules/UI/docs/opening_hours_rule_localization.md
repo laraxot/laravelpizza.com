@@ -128,7 +128,7 @@ App::setLocale('it');
 $rule = new OpeningHoursRule();
 // Verificare messaggi in italiano
 
-// Test inglese  
+// Test inglese
 App::setLocale('en');
 $rule = new OpeningHoursRule();
 // Verificare messaggi in inglese

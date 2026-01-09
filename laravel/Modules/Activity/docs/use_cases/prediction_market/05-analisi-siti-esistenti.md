@@ -26,4 +26,4 @@
 - Tokenizzazione delle quote
 - Commissioni: 1-2% sulle vincite
 - Trasparenza: tutte le transazioni sono pubbliche su blockchain
-- Inclusività: accesso globale, pochi limiti geografici 
+- Inclusività: accesso globale, pochi limiti geografici

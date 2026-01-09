@@ -1,7 +1,7 @@
 # Module Path Error Resolution - Activity Assets Issue
 
-**Data Creazione**: 2026-01-02  
-**Status**: 🔧 RESOLVED  
+**Data Creazione**: 2026-01-02
+**Status**: 🔧 RESOLVED
 **Versione**: 1.0.0
 
 ## 🚨 Problema Identificato
@@ -75,15 +75,15 @@ public function execute(string $moduleName, string $generatorPath): string
         // Fallback: costruisci path manualmente
         $modulePath = base_path('Modules/'.$moduleName);
         $fullPath = $modulePath.'/'.$relativePath;
-        
+
         if (File::exists($fullPath)) {
             return $fullPath;
         }
-        
+
         // Se ancora non esiste, lancia eccezione solo se necessario
         throw new Exception('Module path not found...');
     }
-    
+
     throw new Exception('Module path not found...');
 }
 ```

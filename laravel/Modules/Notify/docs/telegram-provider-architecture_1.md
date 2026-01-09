@@ -43,7 +43,7 @@ use Modules\Notify\Datas\TelegramData;
 
 /**
  * Interfaccia per tutte le azioni di invio Telegram.
- * 
+ *
  * Tutte le implementazioni di provider Telegram devono implementare questa interfaccia
  * per garantire una coerenza nel modo in cui vengono gestiti i messaggi
  * indipendentemente dal provider specifico utilizzato.
@@ -118,7 +118,7 @@ return [
     |
     */
     'default' => env('TELEGRAM_PROVIDER', 'bot'),
-    
+
     /*
     |--------------------------------------------------------------------------
     | Telegram Providers
@@ -133,7 +133,7 @@ return [
             'api_url' => env('TELEGRAM_API_URL', 'https://api.telegram.org'),
             'certificate_path' => env('TELEGRAM_CERTIFICATE_PATH'),
         ],
-        
+
         'api' => [
             'token' => env('TELEGRAM_API_TOKEN'),
             'api_id' => env('TELEGRAM_API_ID'),
@@ -141,7 +141,7 @@ return [
             'proxy' => env('TELEGRAM_PROXY'),
         ],
     ],
-    
+
     /*
     |--------------------------------------------------------------------------
     | Global Debug Mode
@@ -230,15 +230,15 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
     public function __construct()
     {
         $token = config('telegram.providers.bot.token');
-        
+
         if (!is_string($token)) {
             throw new Exception('Il token del bot Telegram deve essere configurato in config/telegram.php');
         }
-        
+
         $this->token = $token;
         $this->apiUrl = rtrim(config('telegram.providers.bot.api_url', 'https://api.telegram.org'), '/');
         $this->certificatePath = config('telegram.providers.bot.certificate_path');
-        
+
         // Parametri globali
         $this->debug = (bool) config('telegram.debug', false);
         $this->timeout = (int) config('telegram.timeout', 30);
@@ -258,31 +258,31 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
             'timeout' => $this->timeout,
             'http_errors' => false,
         ]);
-        
+
         try {
             // Prepara i parametri per la richiesta
             $params = [
                 'chat_id' => $telegramData->chatId,
                 'text' => $telegramData->text,
             ];
-            
+
             // Aggiungi parametri opzionali se presenti
             if ($telegramData->parseMode) {
                 $params['parse_mode'] = $telegramData->parseMode;
             }
-            
+
             if ($telegramData->disableWebPagePreview) {
                 $params['disable_web_page_preview'] = true;
             }
-            
+
             if ($telegramData->disableNotification) {
                 $params['disable_notification'] = true;
             }
-            
+
             if ($telegramData->replyToMessageId) {
                 $params['reply_to_message_id'] = $telegramData->replyToMessageId;
             }
-            
+
             // Gestione dei pulsanti
             if (!empty($telegramData->buttons)) {
                 $params['reply_markup'] = json_encode([
@@ -291,7 +291,7 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
             } elseif (!empty($telegramData->replyMarkup)) {
                 $params['reply_markup'] = json_encode($telegramData->replyMarkup);
             }
-            
+
             // Determina se inviare un messaggio semplice o con file
             if (empty($telegramData->files)) {
                 // Messaggio semplice
@@ -303,7 +303,7 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
                 // Messaggio con file (solo primo file supportato)
                 $file = $telegramData->files[0];
                 $method = $this->determineFileMethod($file);
-                
+
                 // Aggiunge il file come multipart
                 $multipart = [
                     [
@@ -315,14 +315,14 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
                         'contents' => $telegramData->text,
                     ],
                 ];
-                
+
                 // Aggiunge il file alla richiesta multipart
                 $multipart[] = [
                     'name' => $this->getFileParameterName($method),
                     'contents' => fopen($file['path'], 'r'),
                     'filename' => $file['name'] ?? basename($file['path']),
                 ];
-                
+
                 // Aggiunge parametri opzionali
                 if ($telegramData->parseMode) {
                     $multipart[] = [
@@ -330,7 +330,7 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
                         'contents' => $telegramData->parseMode,
                     ];
                 }
-                
+
                 if (!empty($telegramData->buttons)) {
                     $multipart[] = [
                         'name' => 'reply_markup',
@@ -339,17 +339,17 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
                         ]),
                     ];
                 }
-                
+
                 $response = $client->post(
                     "/bot{$this->token}/{$method}",
                     ['multipart' => $multipart]
                 );
             }
-            
+
             // Elabora la risposta
             $statusCode = $response->getStatusCode();
             $responseBody = json_decode((string) $response->getBody(), true);
-            
+
             if ($statusCode === 200 && ($responseBody['ok'] ?? false)) {
                 return [
                     'success' => true,
@@ -358,7 +358,7 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
                     'data' => $responseBody['result'] ?? [],
                 ];
             }
-            
+
             // Log in caso di errore
             if ($this->debug) {
                 Log::error('Telegram error', [
@@ -366,7 +366,7 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
                     'response' => $responseBody,
                 ]);
             }
-            
+
             return [
                 'success' => false,
                 'error' => $responseBody['description'] ?? 'Unknown error',
@@ -382,7 +382,7 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
                     'response' => $e->getResponse() ? (string) $e->getResponse()->getBody() : null,
                 ]);
             }
-            
+
             throw new Exception('Errore durante l\'invio del messaggio Telegram: ' . $e->getMessage(), 0, $e);
         } catch (Exception $e) {
             // Log dell'errore generico
@@ -391,11 +391,11 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
                     'exception' => $e->getMessage(),
                 ]);
             }
-            
+
             throw new Exception('Errore durante l\'invio del messaggio Telegram: ' . $e->getMessage(), 0, $e);
         }
     }
-    
+
     /**
      * Formatta i pulsanti per Telegram.
      *
@@ -406,32 +406,32 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
     {
         $formattedButtons = [];
         $row = [];
-        
+
         foreach ($buttons as $button) {
             $buttonData = [];
-            
+
             if (isset($button['text'])) {
                 $buttonData['text'] = $button['text'];
             }
-            
+
             if (isset($button['url'])) {
                 $buttonData['url'] = $button['url'];
             } elseif (isset($button['callback_data'])) {
                 $buttonData['callback_data'] = $button['callback_data'];
             }
-            
+
             $row[] = $buttonData;
-            
+
             // Se è impostato 'new_row' o è l'ultimo pulsante, aggiungi la riga
             if (($button['new_row'] ?? false) || end($buttons) === $button) {
                 $formattedButtons[] = $row;
                 $row = [];
             }
         }
-        
+
         return $formattedButtons;
     }
-    
+
     /**
      * Determina il metodo API appropriato per inviare un determinato tipo di file.
      *
@@ -441,7 +441,7 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
     private function determineFileMethod(array $file): string
     {
         $type = $file['type'] ?? $this->guessFileType($file['path']);
-        
+
         return match ($type) {
             'photo' => 'sendPhoto',
             'audio' => 'sendAudio',
@@ -453,7 +453,7 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
             default => 'sendDocument',
         };
     }
-    
+
     /**
      * Ottiene il nome del parametro per il file in base al metodo.
      *
@@ -473,7 +473,7 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
             default => 'document',
         };
     }
-    
+
     /**
      * Indovina il tipo di file in base all'estensione.
      *
@@ -483,7 +483,7 @@ final class SendBotTelegramAction implements TelegramProviderActionInterface
     private function guessFileType(string $path): string
     {
         $extension = strtolower(pathinfo($path, PATHINFO_EXTENSION));
-        
+
         return match ($extension) {
             'jpg', 'jpeg', 'png', 'gif', 'webp' => 'photo',
             'mp3', 'm4a', 'ogg' => 'audio',
@@ -545,20 +545,20 @@ class TelegramNotification extends Notification implements ShouldQueue
     public function toTelegram(object $notifiable): TelegramData
     {
         // Ottieni il chat_id dal notifiable o dalla configurazione predefinita
-        $chatId = $notifiable->routeNotificationForTelegram($this) 
+        $chatId = $notifiable->routeNotificationForTelegram($this)
             ?? config('telegram.default_chat_id');
-        
+
         if (!$chatId) {
             throw new \Exception('Nessun chat_id specificato per la notifica Telegram');
         }
-        
+
         // Prepara i parametri opzionali
         $parseMode = $this->options['parse_mode'] ?? 'HTML';
         $disableWebPagePreview = $this->options['disable_web_page_preview'] ?? false;
         $disableNotification = $this->options['disable_notification'] ?? false;
         $replyToMessageId = $this->options['reply_to_message_id'] ?? null;
         $replyMarkup = $this->options['reply_markup'] ?? [];
-        
+
         return new TelegramData(
             chatId: $chatId,
             text: $this->text,

@@ -51,7 +51,7 @@ $user->authentications()
 public function hasPermissionTo($permission, $guard = null): bool
 {
     $cacheKey = "user_permissions_{$this->id}_{$permission}";
-    
+
     return Cache::remember($cacheKey, 300, function() use ($permission, $guard) {
         return parent::hasPermissionTo($permission, $guard);
     });

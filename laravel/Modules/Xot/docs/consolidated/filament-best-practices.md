@@ -122,11 +122,11 @@ use Modules\Brain\Models\Socio;
 class SocioResource extends XotBaseResource
 {
     protected static ?string $model = Socio::class;
-    
+
     protected static ?string $navigationIcon = 'heroicon-o-user';
-    
+
     protected static ?int $navigationSort = 1;
-    
+
     // Form Schema - CORRETTO ✅
     public static function getFormSchema(): array
     {
@@ -134,24 +134,24 @@ class SocioResource extends XotBaseResource
             TextInput::make('cognome')
                 ->required()
                 ->maxLength(255),
-            
+
             TextInput::make('nome')
                 ->required()
                 ->maxLength(255),
-            
+
             DatePicker::make('data_nascita'),
-            
+
             TextInput::make('email')
                 ->email()
                 ->required(),
-            
+
             Select::make('id_stato_socio')
                 ->relationship('statoSocio', 'descrizione'),
-            
+
             Toggle::make('is_attivo'),
         ];
     }
-    
+
     // Table - CORRETTO ✅
     public static function table(\Filament\Tables\Table $table): \Filament\Tables\Table
     {
@@ -160,21 +160,21 @@ class SocioResource extends XotBaseResource
                 TextColumn::make('cognome')
                     ->sortable()
                     ->searchable(),
-                
+
                 TextColumn::make('nome')
                     ->sortable()
                     ->searchable(),
-                
+
                 TextColumn::make('sezione.descrizione'),
-                
+
                 TextColumn::make('statoSocio.descrizione'),
-                
+
                 BooleanColumn::make('is_attivo'),
             ])
             ->filters([
                 SelectFilter::make('id_stato_socio')
                     ->relationship('statoSocio', 'descrizione'),
-                
+
                 SelectFilter::make('id_sezione')
                     ->relationship('sezione', 'descrizione'),
             ])
@@ -184,7 +184,7 @@ class SocioResource extends XotBaseResource
                 Action::make('delete'),
             ]);
     }
-    
+
     // Query Scope - CORRETTO ✅
     public static function getEloquentQuery(): Builder
     {
@@ -207,7 +207,7 @@ return [
     'navigation_icon' => 'heroicon-o-user',
     'navigation_sort' => 1,
     'description' => 'Gestione completa dei soci',
-    
+
     'fields' => [
         'id_socio' => [
             'label' => 'ID Socio',
@@ -245,7 +245,7 @@ return [
             'tooltip' => 'Indica se il socio è attualmente attivo'
         ]
     ],
-    
+
     'actions' => [
         'create' => [
             'label' => 'Nuovo Socio',
@@ -272,7 +272,7 @@ return [
             'tooltip' => 'Rimuovi questo socio dal sistema'
         ]
     ],
-    
+
     'sections' => [
         'personal_data' => [
             'label' => 'Dati Personali',
@@ -287,13 +287,13 @@ return [
             'tooltip' => 'Dettagli relativi all\'iscrizione'
         ]
     ],
-    
+
     'messages' => [
         'created' => 'Socio creato con successo',
         'updated' => 'Socio aggiornato con successo',
         'deleted' => 'Socio eliminato con successo'
     ],
-    
+
     'table' => [
         'empty_text' => 'Nessun socio trovato',
         'search_prompt' => 'Cerca soci...'
@@ -320,7 +320,7 @@ public static function getFormSchema(): array
                         TextInput::make('nome')->required(),
                         DatePicker::make('data_nascita'),
                     ]),
-                
+
                 Forms\Components\Tabs\Tab::make(trans('socio-resource.sections.contact_info.label'))
                     ->icon('heroicon-o-mail')
                     ->schema([
@@ -345,13 +345,13 @@ Forms\Components\Section::make(trans('socio-resource.sections.personal_data.labe
                 TextInput::make('cognome')
                     ->required()
                     ->columnSpan(1),
-                
+
                 TextInput::make('nome')
                     ->required()
                     ->columnSpan(1),
             ])
             ->columns(2),
-            
+
         DatePicker::make('data_nascita')
             ->columnSpan('full'),
     ])
@@ -379,11 +379,11 @@ Per validazioni più complesse, utilizzare i metodi rules() o rule():
 ```php
 DatePicker::make('data_nascita')
     ->rules([
-        'required', 
-        'date', 
+        'required',
+        'date',
         'before:today'
     ])
-    
+
 TextInput::make('codice_fiscale')
     ->rule(fn() => function (string $attribute, $value, \Closure $fail) {
         if (!Str::isValidCF($value)) {
@@ -496,8 +496,8 @@ public static function getEloquentQuery(): Builder
 {
     return parent::getEloquentQuery()
         ->with([
-            'sezione', 
-            'statoSocio', 
+            'sezione',
+            'statoSocio',
             'convenzioni',
         ]);
 }
@@ -525,7 +525,6 @@ public static function table(Table $table): Table
 - [Filament Docs](https://filamentphp.com/docs)
 - [Best practices moduli riutilizzabili](../module-documentation-neutrality.md)
 - [Ereditarietà modelli](../model-inheritance-best-practices.md)
-
 
 ### Problema: Form non visualizzato correttamente
 
@@ -562,7 +561,7 @@ use Modules\Brain\Models\Socio;
 class SocioResource extends XotBaseResource
 {
     protected static ?string $model = Socio::class;
-    
+
     public static function getFormSchema(): array
     {
         return [
@@ -570,7 +569,7 @@ class SocioResource extends XotBaseResource
             TextInput::make('cognome')->required(),
         ];
     }
-    
+
     public static function table(\Filament\Tables\Table $table): \Filament\Tables\Table
     {
         return $table
@@ -662,4 +661,3 @@ Appointment::where('doctor_id', $doctorId)
 - Un solo punto di verità: nessuna duplicazione, nessun lock-in
 - DRY, KISS, serenità del codice
 - Refactoring sicuro, massima estendibilità
-

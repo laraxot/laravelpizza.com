@@ -13,7 +13,7 @@ La filosofia Laraxot stabilisce con chiarezza che **non devono mai esistere più
 
 Il modulo User violava questa filosofia fondamentale con tre migration files diversi per la stessa tabella `roles`:
 1. `2023_01_01_000011_create_roles_table.php`
-2. `2023_01_01_000012_create_roles_table.php` 
+2. `2023_01_01_000012_create_roles_table.php`
 3. `2025_09_18_000000_create_roles_table.php`
 
 Questo rappresenta una **violazione grave della religione e politica di Laraxot** perché:

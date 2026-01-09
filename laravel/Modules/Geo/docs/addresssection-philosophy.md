@@ -1,7 +1,7 @@
 # AddressSection - Filosofia del Componente Riutilizzabile
 
-**Data**: 2025-12-12  
-**Modulo**: Geo  
+**Data**: 2025-12-12
+**Modulo**: Geo
 **Status**: 📚 **DOCUMENTAZIONE**
 
 ## Concetto Fondamentale
@@ -157,7 +157,7 @@ class ClientAddressSection extends AddressSection
 // ClientResource.php
 /**
  * Address section for client form.
- * 
+ *
  * Uses AddressSection from Geo module for:
  * - Consistent address fields across app
  * - Centralized validation logic

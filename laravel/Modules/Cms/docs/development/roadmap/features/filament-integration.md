@@ -79,9 +79,9 @@ use Filament\Widgets\Concerns\CanPoll;
 class RecentActivitiesWidget extends XotBaseWidget
 {
     use CanPoll;
-    
+
     protected static ?string $pollingInterval = '30s';
-    
+
     // Implementazione
 }
 ```
@@ -121,4 +121,3 @@ I form avanzati sono implementati utilizzando i componenti Filament:
 * [filament-integration.md](laravel/Modules/Xot/docs/laraxot/filament-integration.md)
 * [filament-integration.md](laravel/Modules/Cms/docs/roadmap/features/filament-integration.md)
 * [filament-integration.md](laravel/Modules/Cms/docs/filament-integration.md)
-

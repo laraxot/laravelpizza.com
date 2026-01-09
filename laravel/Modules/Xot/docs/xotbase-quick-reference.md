@@ -43,7 +43,7 @@ namespace Modules\YourModule\App\Filament\Resources; // ❌ Wrong (contains App)
 ### Error: "contains 1 abstract method"
 **Fix:** Implement `getFormSchema()` method returning form components
 
-### Error: "Access level must be public"  
+### Error: "Access level must be public"
 **Fix:** Change `protected` to `public` for the method
 
 ### Error: "Cannot override final method"

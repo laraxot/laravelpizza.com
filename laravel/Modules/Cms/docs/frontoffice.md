@@ -10,7 +10,7 @@ Il frontoffice è basato su un'architettura moderna che utilizza:
 
 1. **Laravel Folio**: Per il routing basato su file
 2. **Laravel Volt**: Per componenti interattivi con sintassi semplificata
-3. **Livewire**: Per componenti interattivi più complessi 
+3. **Livewire**: Per componenti interattivi più complessi
 4. **Alpine.js**: Per interazioni JavaScript leggere e reattive
 5. **Tailwind CSS**: Per lo styling e la creazione di un'interfaccia moderna e accessibile
 
@@ -63,9 +63,9 @@ $patient = $appointment->patient;
 <x-app-layout>
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-2xl font-bold text-gray-800 mb-6">Dettaglio Appuntamento</h1>
-        
+
         <x-appointment-card :appointment="$appointment" :detailed="true" />
-        
+
         <!-- Cronologia appuntamenti -->
         <livewire:appointment-history :patient="$patient" :exclude="$appointment->id" />
     </div>
@@ -84,17 +84,17 @@ Il frontoffice utilizza Laravel Volt per componenti semplici e Livewire per comp
 <x-volt>
     @prop(['redirectTo' => 'appointment.create'])
     @state(['iseeValue' => '', 'isPregnant' => false, 'errors' => [], 'isEligible' => null])
-    
+
     <div class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-xl font-semibold mb-4">Verifica Idoneità</h2>
-        
+
         <form wire:submit="checkEligibility">
             <div class="mb-4">
                 <x-input-label for="iseeValue" value="Valore ISEE" />
                 <x-text-input id="iseeValue" wire:model="iseeValue" type="number" class="mt-1 block w-full" required />
                 @error('iseeValue') <p class="text-red-500 text-sm mt-1">{{ $message }}</p> @enderror
             </div>
-            
+
             <div class="mb-4">
                 <label class="flex items-center">
                     <input type="checkbox" wire:model="isPregnant" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500">
@@ -102,10 +102,10 @@ Il frontoffice utilizza Laravel Volt per componenti semplici e Livewire per comp
                 </label>
                 @error('isPregnant') <p class="text-red-500 text-sm mt-1">{{ $message }}</p> @enderror
             </div>
-            
+
             <x-primary-button type="submit">Verifica Idoneità</x-primary-button>
         </form>
-        
+
         @if ($isEligible === true)
             <div class="mt-4 p-4 bg-green-100 text-green-700 rounded-md">
                 <p class="font-medium">Congratulazioni! Sei idonea a partecipare al programma.</p>
@@ -118,22 +118,22 @@ Il frontoffice utilizza Laravel Volt per componenti semplici e Livewire per comp
             </div>
         @endif
     </div>
-    
+
     <script>
         function checkEligibility() {
             // Controlla che i valori siano validi
             this.errors = [];
-            
+
             if (!this.iseeValue) {
                 this.errors.push('Il valore ISEE è obbligatorio');
                 return;
             }
-            
+
             if (!this.isPregnant) {
                 this.errors.push('Solo le gestanti possono accedere al programma');
                 return;
             }
-            
+
             // Valore ISEE massimo per l'idoneità
             this.isEligible = (this.iseeValue <= 20000 && this.isPregnant);
         }
@@ -173,15 +173,15 @@ export default {
             params: { date, dentist_id: dentistId }
         });
     },
-    
+
     bookAppointment(data) {
         return axios.post('/api/appointments', data);
     },
-    
+
     rescheduleAppointment(id, data) {
         return axios.patch(`/api/appointments/${id}/reschedule`, data);
     },
-    
+
     cancelAppointment(id, reason) {
         return axios.delete(`/api/appointments/${id}`, {
             data: { cancellation_reason: reason }

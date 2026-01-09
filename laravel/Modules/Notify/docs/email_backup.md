@@ -1,4 +1,4 @@
-# Sistema Backup Email 
+# Sistema Backup Email
 
 ## Panoramica
 
@@ -45,7 +45,7 @@ class MailTemplateBackup
         }
 
         $data = json_decode(Storage::get($path), true);
-        
+
         return MailTemplate::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -174,7 +174,7 @@ class MailNotificationBackup
         }
 
         $data = json_decode(Storage::get($path), true);
-        
+
         return MailNotification::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -304,7 +304,7 @@ class MailQueueBackup
         }
 
         $data = json_decode(Storage::get($path), true);
-        
+
         return MailQueue::updateOrCreate(
             ['id' => $data['id']],
             [
@@ -634,4 +634,4 @@ class MailBackupDebugger
 ## Vedi Anche
 - [Laravel Storage](https://laravel.com/project_docs/storage)
 - [Laravel Encryption](https://laravel.com/project_docs/encryption)
-- [Laravel Commands](https://laravel.com/project_docs/artisan) 
+- [Laravel Commands](https://laravel.com/project_docs/artisan)

@@ -1,4 +1,4 @@
-# Componenti di Navigazione 
+# Componenti di Navigazione
 
 ## Indice
 - [Panoramica](#panoramica)
@@ -59,7 +59,7 @@ Il componente `user-dropdown` è progettato per gestire automaticamente la visua
       <i class="fas fa-times"></i>
     </button>
   </div>
-  
+
   <nav class="mobile-menu-nav">
     <ul>
       <li class="active">
@@ -121,7 +121,7 @@ Il componente `user-dropdown` è progettato per gestire automaticamente la visua
       </a>
     </li>
   </ul>
-  
+
   <div class="tab-content">
     <div class="tab-pane active" id="tab1">
       Contenuto Tab 1
@@ -139,14 +139,14 @@ Il componente `user-dropdown` è progettato per gestire automaticamente la visua
 ```scss
 .dropdown {
   position: relative;
-  
+
   &-menu {
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1000;
     display: none;
-    
+
     &.show {
       display: block;
     }
@@ -166,7 +166,7 @@ Il componente `user-dropdown` è progettato per gestire automaticamente la visua
   z-index: 1000;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
-  
+
   &.show {
     transform: translateX(0);
   }
@@ -176,4 +176,4 @@ Il componente `user-dropdown` è progettato per gestire automaticamente la visua
 ## 🔗 Collegamenti
 - [Componenti Base](./base-components.md)
 - [Layout](./layout-components.md)
-- [Accessibilità](./standards/accessibility.md) 
+- [Accessibilità](./standards/accessibility.md)

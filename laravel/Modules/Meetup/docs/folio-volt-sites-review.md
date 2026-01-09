@@ -134,9 +134,9 @@ Questo documento raccoglie una **rassegna di progetti reali** costruiti (o docum
 
 ## 5. Altri riferimenti ufficiali (Folio + Volt)
 
-- **Blog Laravel – Introducing Folio**  
+- **Blog Laravel – Introducing Folio**
   Spiega la filosofia "page-based" e come la struttura dei file sostituisce le rotte manuali.
-- **Blog Laravel – Introducing Volt**  
+- **Blog Laravel – Introducing Volt**
   Mostra come Volt vive dentro le pagine Folio (`@volt`), unendo logica PHP e Blade.
 
 ### Impatto sulle nostre scelte
@@ -177,8 +177,8 @@ Questo documento raccoglie una **rassegna di progetti reali** costruiti (o docum
   - `/auth/register` → `auth/register.blade.php`
   - `/dashboard` → `dashboard/index.blade.php`
   - `/profile/edit` → `profile/edit.blade.php`
-- Alcune pagine dichiarano middleware direttamente nel file, es.:  
-  `middleware(['auth', 'verified']);` per dashboard e profilo,  
+- Alcune pagine dichiarano middleware direttamente nel file, es.:
+  `middleware(['auth', 'verified']);` per dashboard e profilo,
   `middleware(['redirect-to-dashboard']);` per la homepage.
 
 ### Come integra Livewire / Volt
@@ -198,7 +198,7 @@ Questo documento raccoglie una **rassegna di progetti reali** costruiti (o docum
   - definire la stessa mappa di pagine Folio (login/register/dashboard/profile) nel tema Meetup;
   - usare componenti Volt per tutti i form auth/profile, evitando controller;
   - applicare middleware direttamente nei file Folio per proteggere dashboard/profile.
-- Genesis dimostra che l'approccio **Folio + Volt + Filament** può coprire tutto il ciclo:  
+- Genesis dimostra che l'approccio **Folio + Volt + Filament** può coprire tutto il ciclo:
   marketing + auth + dashboard + profilo, esattamente il perimetro che vogliamo per Laravel Pizza Meetups.
 
 ---
@@ -251,13 +251,13 @@ Questo documento raccoglie una **rassegna di progetti reali** costruiti (o docum
 
 ## 8. Altri progetti Folio + Volt (panoramica)
 
-- **SaaS e multi‑tenant** (es. b2bsaas0/b2bsaas, mini‑CRM)  
+- **SaaS e multi‑tenant** (es. b2bsaas0/b2bsaas, mini‑CRM)
   Molti template Folio+Volt orientati al B2B SaaS usano Folio per strutturare le aree app (dashboard, team, settings) e Volt per i flussi CRUD (team, utenti, fatture), spesso combinati con multitenancy. Questo rafforza l'idea che anche per Laravel Pizza Meetups possiamo avere in futuro un livello "multi‑tenant" (es. network di pizzerie / community locali) mantenendo Folio al centro del routing.
-- **Portfolio / siti personali** (es. GothamFolio, altri portfolio)  
+- **Portfolio / siti personali** (es. GothamFolio, altri portfolio)
   Confermano che Folio+Volt si adatta bene a siti portfolio con sezioni multiple (hero, progetti, blog, contatti) e componenti interattivi (form contatto, feedback). Il pattern si traduce quasi 1:1 in "portfolio di eventi" per i meetup.
-- **Podcast / media player** (es. progetti podcast player, WeLoveDevs)  
+- **Podcast / media player** (es. progetti podcast player, WeLoveDevs)
   Mostrano come gestire player persistenti e liste di contenuti multimediali con Volt e Folio, utile se in futuro vogliamo pubblicare registrazioni audio/video dei meetup.
-- **Starter kit e boilerplate** (es. vflat, nativephp starter, personalized starter kit)  
+- **Starter kit e boilerplate** (es. vflat, nativephp starter, personalized starter kit)
   Offrono esempi di come impostare layout, cartelle `pages/` e convenzioni di naming in modo coerente; molti riprendono direttamente i pattern di Genesis.
 
 In sintesi, l'ecosistema di progetti Folio+Volt conferma che l'architettura scelta per Laravel Pizza Meetups (Folio + Volt + Filament) è adeguata sia per casi semplici (todo, URL shortener) sia per casi complessi (SaaS, portfolio, media app) e che possiamo tranquillamente crescere in quella direzione senza cambiare stack.

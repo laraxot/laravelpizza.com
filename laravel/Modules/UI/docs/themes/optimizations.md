@@ -30,7 +30,7 @@ Documentazione delle ottimizzazioni, correzioni e miglioramenti per il sistema d
 // ✅ config/themes.php
 return [
     'default' => env('APP_THEME', 'one'),
-    
+
     'available' => [
         'one' => [
             'name' => 'Default Theme',
@@ -62,14 +62,14 @@ return [
             'js_entry' => 'themes/admin/app.js',
         ],
     ],
-    
+
     'features' => [
         'theme_switching' => env('THEME_SWITCHING_ENABLED', true),
         'user_preferences' => env('USER_THEME_PREFERENCES', true),
         'auto_dark_mode' => env('AUTO_DARK_MODE', true),
         'rtl_support' => env('RTL_SUPPORT', false),
     ],
-    
+
     'performance' => [
         'css_purge' => env('CSS_PURGE_ENABLED', true),
         'asset_versioning' => env('ASSET_VERSIONING', true),
@@ -86,74 +86,74 @@ class ThemeManager
 {
     private string $currentTheme;
     private array $themeConfig;
-    
+
     public function __construct()
     {
         $this->currentTheme = $this->resolveCurrentTheme();
         $this->themeConfig = config("themes.available.{$this->currentTheme}");
     }
-    
+
     public function setTheme(string $theme): void
     {
         if (!$this->isThemeAvailable($theme)) {
             throw new ThemeNotFoundException("Theme '{$theme}' not found");
         }
-        
+
         $this->currentTheme = $theme;
         $this->themeConfig = config("themes.available.{$theme}");
-        
+
         // Update user preference if logged in
         if (auth()->check()) {
             auth()->user()->update(['preferred_theme' => $theme]);
         }
-        
+
         // Store in session for guests
         session(['theme' => $theme]);
-        
+
         // Clear compiled assets cache
         $this->clearThemeCache();
     }
-    
+
     public function getCurrentTheme(): array
     {
         return array_merge($this->themeConfig, ['key' => $this->currentTheme]);
     }
-    
+
     public function getAssetPath(string $asset): string
     {
         $themePath = "themes/{$this->currentTheme}";
         return mix("{$themePath}/{$asset}", "public/build");
     }
-    
+
     public function getCSSPath(): string
     {
         return $this->getAssetPath($this->themeConfig['css_entry'] ?? 'app.css');
     }
-    
+
     public function getJSPath(): string
     {
         return $this->getAssetPath($this->themeConfig['js_entry'] ?? 'app.js');
     }
-    
+
     public function supportsFeature(string $feature): bool
     {
         return in_array($feature, $this->themeConfig['supports'] ?? []);
     }
-    
+
     private function resolveCurrentTheme(): string
     {
         // Priority: User preference > Session > Config default
         if (auth()->check() && auth()->user()->preferred_theme) {
             return auth()->user()->preferred_theme;
         }
-        
+
         if (session('theme')) {
             return session('theme');
         }
-        
+
         return config('themes.default', 'one');
     }
-    
+
     private function clearThemeCache(): void
     {
         Artisan::call('view:clear');
@@ -185,7 +185,7 @@ module.exports = {
         // Healthcare-focused color palette
         primary: {
           50: '#f0f9ff',
-          100: '#e0f2fe', 
+          100: '#e0f2fe',
           200: '#bae6fd',
           300: '#7dd3fc',
           400: '#38bdf8',
@@ -303,7 +303,7 @@ export default defineConfig({
                 // Theme-specific entries
                 'resources/themes/one/css/app.css',
                 'resources/themes/one/js/app.js',
-                'resources/themes/two/css/app.css', 
+                'resources/themes/two/css/app.css',
                 'resources/themes/two/js/app.js',
                 'resources/themes/admin/css/app.css',
                 'resources/themes/admin/js/app.js',
@@ -352,27 +352,27 @@ class GenerateCriticalCSSCommand extends Command
 {
     protected $signature = 'theme:critical-css {theme?}';
     protected $description = 'Generate critical CSS for themes';
-    
+
     public function handle(): void
     {
         $theme = $this->argument('theme') ?? config('themes.default');
-        
+
         if (!$this->isValidTheme($theme)) {
             $this->error("Theme '{$theme}' not found");
             return;
         }
-        
+
         $this->info("Generating critical CSS for theme: {$theme}");
-        
+
         $criticalCSS = $this->generateCriticalCSS($theme);
-        
+
         $outputPath = public_path("build/themes/{$theme}/critical.css");
         file_put_contents($outputPath, $criticalCSS);
-        
+
         $this->info("Critical CSS generated: {$outputPath}");
         $this->info("Size: " . number_format(filesize($outputPath) / 1024, 2) . " KB");
     }
-    
+
     private function generateCriticalCSS(string $theme): string
     {
         // Use tools like critical or puppeteer to extract above-the-fold CSS
@@ -397,49 +397,49 @@ class GenerateCriticalCSSCommand extends Command
 class DarkModeService
 {
     public function __construct(private ThemeManager $themeManager) {}
-    
+
     public function toggle(): void
     {
         $currentMode = $this->getCurrentMode();
         $newMode = $currentMode === 'dark' ? 'light' : 'dark';
-        
+
         $this->setMode($newMode);
     }
-    
+
     public function setMode(string $mode): void
     {
         if (!in_array($mode, ['light', 'dark', 'auto'])) {
             throw new InvalidArgumentException("Invalid mode: {$mode}");
         }
-        
+
         if (auth()->check()) {
             auth()->user()->update(['dark_mode_preference' => $mode]);
         }
-        
+
         session(['dark_mode' => $mode]);
-        
+
         // Emit event for real-time updates
         broadcast(new ThemeChangedEvent(auth()->id(), $mode));
     }
-    
+
     public function getCurrentMode(): string
     {
         // User preference > Session > System preference > Default
         if (auth()->check() && auth()->user()->dark_mode_preference) {
             return auth()->user()->dark_mode_preference;
         }
-        
+
         if (session('dark_mode')) {
             return session('dark_mode');
         }
-        
+
         return 'light';
     }
-    
+
     public function shouldUseDarkMode(): bool
     {
         $mode = $this->getCurrentMode();
-        
+
         return match($mode) {
             'dark' => true,
             'light' => false,
@@ -447,7 +447,7 @@ class DarkModeService
             default => false
         };
     }
-    
+
     private function isSystemDarkMode(): bool
     {
         // Use user agent hints or time-based logic
@@ -465,25 +465,25 @@ class DarkModeService
 abstract class ThemeComponent extends Component
 {
     use WithThemeSupport;
-    
+
     protected string $componentName = '';
     protected array $themeVariants = [];
-    
+
     public function render(): View
     {
         $theme = app(ThemeManager::class)->getCurrentTheme();
-        
+
         // Try theme-specific view first
         $themeView = "themes.{$theme['key']}.components.{$this->componentName}";
-        
+
         if (view()->exists($themeView)) {
             return view($themeView, $this->getViewData());
         }
-        
+
         // Fallback to default component view
         return view("components.{$this->componentName}", $this->getViewData());
     }
-    
+
     protected function getViewData(): array
     {
         return array_merge([
@@ -492,13 +492,13 @@ abstract class ThemeComponent extends Component
             'variant' => $this->resolveVariant(),
         ], $this->data());
     }
-    
+
     protected function resolveVariant(): string
     {
         $theme = app(ThemeManager::class)->getCurrentTheme();
         return $this->themeVariants[$theme['key']] ?? 'default';
     }
-    
+
     abstract protected function data(): array;
 }
 ```
@@ -514,18 +514,18 @@ class AssetManager
         private ThemeManager $themeManager,
         private CacheManager $cache
     ) {}
-    
+
     public function getOptimizedAssets(): array
     {
         return $this->cache->remember('theme_assets', 3600, function() {
             return $this->buildAssetManifest();
         });
     }
-    
+
     private function buildAssetManifest(): array
     {
         $theme = $this->themeManager->getCurrentTheme();
-        
+
         return [
             'css' => [
                 'critical' => $this->getCriticalCSS($theme['key']),
@@ -541,7 +541,7 @@ class AssetManager
             'icons' => $this->getIconSprite($theme['key']),
         ];
     }
-    
+
     private function getCriticalCSS(string $theme): string
     {
         return mix("themes/{$theme}/critical.css");
@@ -594,12 +594,12 @@ class ThemePerformanceMonitor
     public function measureLoadTime(string $theme): array
     {
         $start = microtime(true);
-        
+
         // Simulate theme loading
         app(ThemeManager::class)->setTheme($theme);
-        
+
         $loadTime = (microtime(true) - $start) * 1000;
-        
+
         return [
             'theme' => $theme,
             'load_time_ms' => round($loadTime, 2),
@@ -609,19 +609,19 @@ class ThemePerformanceMonitor
             'performance_score' => $this->calculatePerformanceScore($theme)
         ];
     }
-    
+
     private function calculatePerformanceScore(string $theme): int
     {
         // Scoring based on size, load time, etc.
         $cssSize = $this->getCSSSize($theme);
         $jsSize = $this->getJSSize($theme);
-        
+
         $score = 100;
-        
+
         // Penalize large assets
         if ($cssSize > 100) $score -= 10; // > 100KB CSS
         if ($jsSize > 200) $score -= 15;   // > 200KB JS
-        
+
         return max(0, $score);
     }
 }
@@ -642,7 +642,7 @@ module.exports = {
                 },
                 medical: {
                     emergency: '#ef4444',
-                    warning: '#f59e0b', 
+                    warning: '#f59e0b',
                     success: '#10b981',
                     info: '#3b82f6',
                 }
@@ -657,7 +657,7 @@ module.exports = {
 
 ### 2. Admin Dashboard Theme
 ```javascript
-// ✅ themes/admin/tailwind.config.js  
+// ✅ themes/admin/tailwind.config.js
 module.exports = {
     theme: {
         extend: {

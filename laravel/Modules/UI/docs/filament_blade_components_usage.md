@@ -1,4 +1,4 @@
-# Utilizzo dei Componenti Blade di Filament 
+# Utilizzo dei Componenti Blade di Filament
 
 ## Indice
 - [Panoramica](#panoramica)
@@ -182,7 +182,7 @@ I dropdown di Filament hanno una struttura specifica che deve essere rispettata.
 
 3. **NON nidificare** elementi dropdown in modo errato - Rispettare la struttura gerarchica dei componenti Filament.
 
-## Gestione delle Rotte 
+## Gestione delle Rotte
 
 ### Regole Fondamentali
 

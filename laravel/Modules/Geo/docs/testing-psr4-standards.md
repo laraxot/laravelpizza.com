@@ -93,7 +93,7 @@ use Modules\<nome modulo>\Models\BaseModel;
 class TestableBaseModel extends BaseModel
 {
     protected $table = 'test_models';
-    
+
     /** @var list<string> */
     protected $fillable = ['name', 'description'];
 }
@@ -120,13 +120,13 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Helper class for testing HasExtraTrait functionality.
  */
-class TestExtra extends Model implements ExtraContract 
+class TestExtra extends Model implements ExtraContract
 {
     protected $table = 'test_extras';
-    
+
     /** @var list<string> */
     protected $fillable = ['model_id', 'model_type', 'extra_attributes'];
-    
+
     /**
      * Get the attributes that should be cast.
      *
@@ -138,7 +138,7 @@ class TestExtra extends Model implements ExtraContract
             'extra_attributes' => 'collection',
         ];
     }
-    
+
     /**
      * Get the parent model.
      *
@@ -161,7 +161,7 @@ class TestExtra extends Model implements ExtraContract
 declare(strict_types=1);
 // Missing namespace!
 
-class TestHelper extends Model 
+class TestHelper extends Model
 {
     // ...
 }
@@ -177,7 +177,7 @@ namespace Modules\<nome modulo>\Tests\Unit;
 /**
  * Helper class for testing.
  */
-class TestHelper extends Model 
+class TestHelper extends Model
 {
     // ...
 }
@@ -216,8 +216,8 @@ composer dump-autoload
 Quando PSR-4 non è rispettato, si vedono errori come:
 
 ```
-Class TestExtra located in ./Modules/Xot/tests/Unit/HasExtraTraitTest.php 
-does not comply with psr-4 autoloading standard 
+Class TestExtra located in ./Modules/Xot/tests/Unit/HasExtraTraitTest.php
+does not comply with psr-4 autoloading standard
 (rule: Modules\Xot\Tests\ => ./Modules/Xot/tests). Skipping.
 ```
 
@@ -265,4 +265,3 @@ Prima di committare file di test:
 
 *Ultimo aggiornamento: 2025-01-06*
 *Standard: PSR-4, PHPStan livello 9+, Laraxot conventions*
-

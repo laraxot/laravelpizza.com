@@ -92,4 +92,4 @@ foreach (config('app.supported_locales') as $locale) {
 
 - [Torna a packages.md](../packages.md)
 - [Localizzazione](localization.md)
-- [Performance](performance.md) 
+- [Performance](performance.md)

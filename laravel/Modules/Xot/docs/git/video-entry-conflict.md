@@ -94,4 +94,4 @@ public function getHeight(): ?string
 ## Collegamenti Bidirezionali
 
 - [Documento principale risoluzione conflitti](risoluzione_conflitti.md)
-- [Documentazione modulo Media](../../Media/docs/CONFLITTI_MERGE_RISOLTI.md) 
+- [Documentazione modulo Media](../../Media/docs/CONFLITTI_MERGE_RISOLTI.md)

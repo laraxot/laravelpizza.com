@@ -36,4 +36,3 @@ DRY: 7/10 🟢 | KISS: 6/10 🟡 | **Overall: 6.5/10 🟡**
 3. Docs cleanup (1 sett)
 
 **Status:** 🟢 BUONO, ottimizzabile
-

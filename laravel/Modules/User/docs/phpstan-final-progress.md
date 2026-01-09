@@ -1,7 +1,7 @@
 # PHPStan Level 10 - Progresso Finale
 
-**Data**: 2025-01-22  
-**Status**: In Progress  
+**Data**: 2025-01-22
+**Status**: In Progress
 **Versione**: 1.0.0
 
 ## 📊 Statistiche Progresso

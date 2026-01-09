@@ -67,11 +67,11 @@ rules([
 
 $saveAndContinue = function () {
     $this->validate();
-    
+
     session(['step_1_data' => [
         'step_1_field' => $this->step_1_field,
     ]]);
-    
+
     return redirect()->route('form.step2');
 };
 ?>
@@ -82,7 +82,7 @@ $saveAndContinue = function () {
             wire:model="step_1_field"
             label="Campo Step 1"
         />
-        
+
         <x-cms::button type="submit">
             Continua
         </x-cms::button>
@@ -106,11 +106,11 @@ rules([
 
 $saveAndContinue = function () {
     $this->validate();
-    
+
     session(['step_2_data' => [
         'step_2_field' => $this->step_2_field,
     ]]);
-    
+
     return redirect()->route('form.review');
 };
 
@@ -125,7 +125,7 @@ $goBack = function () {
             wire:model="step_2_field"
             label="Campo Step 2"
         />
-        
+
         <div class="flex justify-between">
             <x-cms::button
                 type="button"
@@ -134,7 +134,7 @@ $goBack = function () {
             >
                 Indietro
             </x-cms::button>
-            
+
             <x-cms::button type="submit">
                 Continua
             </x-cms::button>
@@ -158,7 +158,7 @@ state([
 $mount = function () {
     $this->step_1_data = session('step_1_data', []);
     $this->step_2_data = session('step_2_data', []);
-    
+
     if (empty($this->step_1_data) || empty($this->step_2_data)) {
         return redirect()->route('form.step1');
     }
@@ -169,9 +169,9 @@ $submit = function () {
         'step_1_field' => $this->step_1_data['step_1_field'],
         'step_2_field' => $this->step_2_data['step_2_field'],
     ]);
-    
+
     session()->forget(['step_1_data', 'step_2_data']);
-    
+
     return redirect()->route('form.confirmation');
 };
 
@@ -183,17 +183,17 @@ $goBack = function () {
 <div>
     <div class="review-section">
         <h3>Rivedi i Dati</h3>
-        
+
         <div class="mt-4">
             <h4>Step 1</h4>
             <p>{{ $step_1_data['step_1_field'] }}</p>
         </div>
-        
+
         <div class="mt-4">
             <h4>Step 2</h4>
             <p>{{ $step_2_data['step_2_field'] }}</p>
         </div>
-        
+
         <div class="flex justify-between mt-6">
             <x-cms::button
                 type="button"
@@ -202,7 +202,7 @@ $goBack = function () {
             >
                 Indietro
             </x-cms::button>
-            
+
             <x-cms::button
                 type="button"
                 wire:click="submit"
@@ -257,15 +257,15 @@ class EnsureFormStepCompleted
     {
         $currentStep = $request->route()->getName();
         $sessionData = session()->all();
-        
+
         if ($currentStep === 'form.step2' && empty($sessionData['step_1_data'])) {
             return redirect()->route('form.step1');
         }
-        
+
         if ($currentStep === 'form.review' && (empty($sessionData['step_1_data']) || empty($sessionData['step_2_data']))) {
             return redirect()->route('form.step1');
         }
-        
+
         return $next($request);
     }
 }
@@ -284,7 +284,7 @@ class CustomFormRule implements Rule
         // Logica di validazione personalizzata
         return true;
     }
-    
+
     public function message()
     {
         return 'Il campo :attribute non è valido.';
@@ -307,12 +307,12 @@ class MultiStepFormTest extends TestCase
     public function it_can_complete_step_one()
     {
         $this->actingAs($user = User::factory()->create());
-        
+
         Volt::test('form-step1')
             ->set('step_1_field', 'Test Value')
             ->call('saveAndContinue')
             ->assertRedirect(route('form.step2'));
-            
+
         $this->assertEquals('Test Value', session('step_1_data.step_1_field'));
     }
 }
@@ -399,9 +399,8 @@ public function mount()
 ### Documentation
 - [Laravel Volt Documentation](https://livewire.laravel.com/docs/volt)
 - [Laravel Folio Documentation](https://laravel.com/docs/folio)
-- [Filament Forms Documentation](https://filamentphp.com/docs/forms) 
+- [Filament Forms Documentation](https://filamentphp.com/docs/forms)
 
 ## Collegamenti tra versioni di multi-step-forms.md
 * [multi-step-forms.md](laravel/Modules/Cms/docs/multi-step-forms.md)
 * [multi-step-forms.md](laravel/Modules/Cms/docs/components/multi-step-forms.md)
-

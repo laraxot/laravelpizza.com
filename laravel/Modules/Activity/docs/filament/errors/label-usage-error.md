@@ -1,6 +1,6 @@
 # Non utilizzare `->label()` nei componenti Filament
 
-> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo Activity. 
+> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo Activity.
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/filament/label-translation-system.md).
 
 ## Regola fondamentale

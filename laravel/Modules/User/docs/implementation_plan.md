@@ -34,7 +34,7 @@ mkdir -p laravel/Themes/One/resources/views/components/blocks/navigation
     <button @click="open = !open">
         <x-navigation.avatar />
     </button>
-    
+
     <div x-show="open" @click.away="open = false">
         <!-- Menu Items -->
     </div>
@@ -194,4 +194,4 @@ class NavigationTest extends TestCase
 ## Collegamenti Correlati
 - [Header Components](./HEADER_COMPONENTS.md)
 - [Navigation Structure](./NAVIGATION_STRUCTURE.md)
-- [Security Best Practices](./SECURITY_BEST_PRACTICES.md) 
+- [Security Best Practices](./SECURITY_BEST_PRACTICES.md)

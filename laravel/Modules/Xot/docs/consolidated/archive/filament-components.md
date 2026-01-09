@@ -90,7 +90,7 @@ DatePicker::make('field_name')
 1. Controlla sempre la documentazione ufficiale di Filament per i metodi più recenti
 2. Usa l'autocompletamento dell'IDE per verificare i metodi disponibili
 3. Mantieni consistenza nei nomi dei metodi in tutto il progetto
-4. Aggiorna questa documentazione quando trovi nuovi metodi o pattern utili 
+4. Aggiorna questa documentazione quando trovi nuovi metodi o pattern utili
 ## Collegamenti tra versioni di FILAMENT_COMPONENTS.md
 * [FILAMENT_COMPONENTS.md](../../../Xot/project_docs/FILAMENT_COMPONENTS.md)
 * [FILAMENT_COMPONENTS.md](../../../../Themes/One/project_docs/FILAMENT_COMPONENTS.md)
@@ -104,4 +104,3 @@ DatePicker::make('field_name')
 - Ogni correzione deve essere documentata qui e in FILAMENT_TABLE_COLUMNS.md.
 
 **Collegamento:** Vedi anche [FILAMENT_TABLE_COLUMNS.md](./FILAMENT_TABLE_COLUMNS.md)
-

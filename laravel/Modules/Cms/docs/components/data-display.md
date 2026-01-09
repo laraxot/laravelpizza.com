@@ -92,9 +92,9 @@ I componenti di visualizzazione dati sono essenziali per presentare informazioni
     <x-slot name="header">
         Titolo Card
     </x-slot>
-    
+
     Contenuto della card
-    
+
     <x-slot name="footer">
         Footer della card
     </x-slot>
@@ -237,11 +237,11 @@ public static function form(Form $form): Form
 1. Layout non responsivo
    - Verificare i breakpoint
    - Controllare il contenuto overflow
-   
+
 2. Performance lenta
    - Implementare paginazione
    - Ottimizzare query database
-   
+
 3. Problemi di stile
    - Verificare conflitti CSS
-   - Controllare specificity 
+   - Controllare specificity

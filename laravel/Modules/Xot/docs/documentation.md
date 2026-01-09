@@ -42,10 +42,9 @@ Modules/[Nome]/
 ## Collegamenti
 - [Indice della Documentazione](../docs/INDEX.md)
 - [Regole del Progetto](../docs/RULES.md)
-- [Struttura dei Moduli](../docs/STRUCTURE.md) 
+- [Struttura dei Moduli](../docs/STRUCTURE.md)
 ## Collegamenti tra versioni di documentation.md
 * [documentation.md](docs/rules/documentation.md)
 * [documentation.md](../../../Xot/docs/documentation.md)
 * [documentation.md](../../../Xot/docs/guidelines/documentation.md)
 * [documentation.md](../../../Cms/docs/roadmap/features/documentation.md)
-

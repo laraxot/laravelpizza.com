@@ -120,4 +120,3 @@ Lo sviluppo del progetto il progetto è guidato dai seguenti principi fondamenta
 ## Collegamenti tra versioni di filosofia.md
 * [filosofia.md](docs/filosofia.md)
 * [filosofia.md](../../../Xot/docs/development/filosofia.md)
-

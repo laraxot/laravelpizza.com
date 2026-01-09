@@ -1,4 +1,4 @@
-# Sistema Cache Email 
+# Sistema Cache Email
 
 ## Panoramica
 
@@ -476,4 +476,4 @@ class MailCacheDebugger
 ## Vedi Anche
 - [Laravel Cache](https://laravel.com/project_docs/cache)
 - [Laravel Events](https://laravel.com/project_docs/events)
-- [Laravel Observers](https://laravel.com/project_docs/eloquent#observers) 
+- [Laravel Observers](https://laravel.com/project_docs/eloquent#observers)

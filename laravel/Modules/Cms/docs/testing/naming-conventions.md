@@ -9,7 +9,7 @@ Per la documentazione completa delle convenzioni di naming dei test, consultare:
 
 ### Duplicati Eliminati nel Modulo Cms
 
-**Data:** Ottobre 2025  
+**Data:** Ottobre 2025
 **Duplicati trovati e eliminati:** 12 file (il modulo più interessato!)
 
 **Path:** `Modules/Cms/tests/Feature/Auth/`
@@ -122,4 +122,3 @@ find tests -type f -name "*.php" | grep -E "(test\.php|test\.pest\.php)" | grep 
 - [../../../../docs/testing/naming-conventions.md](../../../../docs/testing/naming-conventions.md) - Documentazione completa
 - [../auth/testing-patterns.md](../auth/testing-patterns.md) - Pattern test autenticazione
 - [../phpstan_fixes_cms.md](../phpstan_fixes_cms.md) - Correzioni PHPStan modulo Cms
-

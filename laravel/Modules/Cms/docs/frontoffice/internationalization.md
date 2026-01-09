@@ -131,4 +131,4 @@ Route::get('locale/{locale}', function ($locale) {
 3. **Problemi di Performance**
    - Ottimizzare il caricamento
    - Implementare il caching
-   - Utilizzare CDN 
+   - Utilizzare CDN

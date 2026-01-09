@@ -5,7 +5,7 @@
 Il file `Modules/Lang/app/Actions/ReadTranslationFileAction.php` presenta conflitti Git relativi alla localizzazione dei messaggi di errore e commenti. I conflitti riguardano:
 
 1. **Linea 14**: Documentazione PHPDoc in inglese vs italiano
-2. **Linea 31**: Messaggi di errore in inglese vs italiano  
+2. **Linea 31**: Messaggi di errore in inglese vs italiano
 3. **Linea 66**: Documentazione PHPDoc in inglese vs italiano
 4. **Linea 88**: Documentazione PHPDoc in inglese vs italiano
 5. **Linea 111**: Commenti PHPStan in inglese vs italiano
@@ -184,4 +184,4 @@ Il file `Modules/Lang/app/Actions/ReadTranslationFileAction.php` presenta confli
 - **Modulo**: Lang
 - **File**: `app/Actions/ReadTranslationFileAction.php`
 - **Tipo Conflitto**: Localizzazione e documentazione
-- **Scelta**: Versione italiana (Branch 7f8122e) 
+- **Scelta**: Versione italiana (Branch 7f8122e)

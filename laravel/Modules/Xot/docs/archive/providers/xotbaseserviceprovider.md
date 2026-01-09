@@ -105,7 +105,7 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 class ModuleNameServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'ModuleName';
-    
+
     // Eventuali override dei metodi base
 }
 ```
@@ -172,4 +172,4 @@ try {
 2. Il nome del modulo deve essere impostato nella classe figlia
 3. I percorsi sono relativi alla root del modulo
 4. Le eccezioni vengono gestite con fallback appropriati
-5. La registrazione dei componenti è automatica ma configurabile 
+5. La registrazione dei componenti è automatica ma configurabile

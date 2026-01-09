@@ -7,7 +7,6 @@ e questo progetto aderisce a [Semantic Versioning](https://semver.org/spec/v2.0.
 
 All notable changes to `:package_name` will be documented in this file.
 
-
 ## [Unreleased]
 
 ### Added
@@ -34,7 +33,7 @@ All notable changes to `:package_name` will be documented in this file.
   - `Modules\Notify\App\Services` → `Modules\Notify\Services`
 
 - **Import duplicati** rimossi: 30+ occorrenze
-- **Metodi duplicati** rimossi: 25+ occorrenze  
+- **Metodi duplicati** rimossi: 25+ occorrenze
 - **Proprietà duplicate** rimosse: 15+ occorrenze
 
 #### Added
@@ -139,6 +138,6 @@ All notable changes to `:package_name` will be documented in this file.
 
 ---
 
-**Maintained by:** Team Laraxot PTVX  
-**Format:** [Keep a Changelog](https://keepachangelog.com/)  
+**Maintained by:** Team Laraxot PTVX
+**Format:** [Keep a Changelog](https://keepachangelog.com/)
 **Versioning:** [Semantic Versioning](https://semver.org/)

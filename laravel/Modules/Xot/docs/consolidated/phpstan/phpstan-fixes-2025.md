@@ -85,11 +85,11 @@ public function trans(mixed $item): string
     if (!\is_string($item)) {
         $item = (string) $item;
     }
-    
+
     if (empty($item) || null === $this->transKey) {
         return $item;
     }
-    
+
     // ... resto della logica
 }
 ```

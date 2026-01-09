@@ -134,15 +134,15 @@ La struttura corretta per i componenti dropdown è:
     <x-slot name="trigger">
         <!-- Trigger content -->
     </x-slot>
-    
+
     <x-filament::dropdown.list>
         <x-filament::dropdown.list.item>
             <!-- Item content -->
         </x-filament::dropdown.list.item>
-        
+
         <!-- Separatore -->
         <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
-        
+
         <x-filament::dropdown.list.item>
             <!-- Another item -->
         </x-filament::dropdown.list.item>
@@ -172,7 +172,7 @@ class RegistrationWidget extends XotBaseWidget
         'newsletter' => false,
         // altri campi
     ];
-    
+
     // resto del widget
 }
 ```

@@ -88,7 +88,7 @@ public readonly array $default_meta = [
 // DOPO (corretto)
 /**
  * @param array<int, string>  $types
- * @param array<int, string>  $categories  
+ * @param array<int, string>  $categories
  * @param array<string, string>  $default_meta
  */
 public readonly array $types = ['post', 'page', 'news'],
@@ -135,7 +135,7 @@ string|array $data → string|array<string, mixed> $data
 ### ✅ **Contracts**
 - `ModelProfileContract.php` - Parametri roles e permissions tipizzati
 
-### ✅ **Traits**  
+### ✅ **Traits**
 - `TransTrait.php` - Parametro replace tipizzato
 
 ### ✅ **States**
@@ -151,7 +151,7 @@ string|array $data → string|array<string, mixed> $data
 
 #### Contracts
 - `ModelWithAuthorContract.php` - PHPDoc @method con array return types
-- `ModelWithPosContract.php` - PHPDoc @method con array return types  
+- `ModelWithPosContract.php` - PHPDoc @method con array return types
 - `ModelWithStatusContract.php` - PHPDoc @method con array return types
 - `ModelWithUserContract.php` - PHPDoc @method con array return types
 - `PassportHasApiTokensContract.php` - Parametro scopes
@@ -258,8 +258,8 @@ Le correzioni implementate risolvono sistematicamente tutti gli errori `missingT
 
 ---
 
-**Data Implementazione**: Gennaio 2025  
-**Errori Risolti**: 4 file critici completati  
-**Errori Rimanenti**: ~40 file da completare  
-**phpstan.neon**: ✅ INTOCCATO  
+**Data Implementazione**: Gennaio 2025
+**Errori Risolti**: 4 file critici completati
+**Errori Rimanenti**: ~40 file da completare
+**phpstan.neon**: ✅ INTOCCATO
 **Stato**: 🔄 In Corso - Priorità Alta Completata

@@ -579,4 +579,3 @@ Prima di creare una nuova classe Filament:
 ---
 
 **Filosofia**: DRY + KISS - Non duplicare, non complicare, usa sempre le classi base.
-

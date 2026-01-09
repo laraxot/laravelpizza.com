@@ -125,5 +125,3 @@ caratteristiche principali della pagina statica:
 - `Themes/Meetup/resources/views/components/blocks/events/list.blade.php`
 - `config/local/laravelpizza/database/content/pages/events.json`
 - `Modules/Meetup/docs/events-page-differences-analysis.md`
-
-

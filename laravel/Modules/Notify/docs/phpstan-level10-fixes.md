@@ -78,7 +78,7 @@ Rimangono alcuni errori da risolvere nei seguenti file:
 
 ### 1. SendPushNotification.php
 
-1. **Costruttore privato in MessageData**: 
+1. **Costruttore privato in MessageData**:
    ```
    Cannot instantiate class Kreait\Firebase\Messaging\MessageData via private constructor
    ```
@@ -130,7 +130,7 @@ if (!is_string($url)) {
 $fullName = $item->profile->full_name;
 
 // Dopo
-if (!is_object($item) || !isset($item->profile) || 
+if (!is_object($item) || !isset($item->profile) ||
     !is_object($item->profile) || !isset($item->profile->full_name)) {
     return [];
 }
@@ -157,7 +157,7 @@ Dopo aver implementato tutte le correzioni, PHPStan al livello 10 non riporta pi
 
 1. Continuare a correggere gli errori rimanenti nel modulo Notify
 2. Eseguire PHPStan al livello 10 per verificare che tutti gli errori siano stati risolti
-3. Documentare pattern comuni per evitare errori simili in futuro 
+3. Documentare pattern comuni per evitare errori simili in futuro
 ### Esempio 3: Utilizzare Reflection API per chiamate metodo sicure
 
 ```php
@@ -193,4 +193,4 @@ Fino ad ora, abbiamo risolto la maggior parte degli errori di livello 10 in entr
 
 4. Estendere le correzioni ad altri moduli utilizzando i pattern stabiliti
 
-5. Aggiornare le linee guida di sviluppo per prevenire errori simili in futuro 
+5. Aggiornare le linee guida di sviluppo per prevenire errori simili in futuro

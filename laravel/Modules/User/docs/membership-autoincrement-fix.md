@@ -216,4 +216,3 @@ Quando si crea un modello pivot che usa autoincrement come PRIMARY KEY:
 - [Migration Rules](../../../Xot/docs/migrations-consolidated.md)
 
 *Ultimo aggiornamento: gennaio 2025*
-

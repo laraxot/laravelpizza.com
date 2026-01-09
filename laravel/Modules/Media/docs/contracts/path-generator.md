@@ -44,4 +44,4 @@ Questa interfaccia definisce il contratto per la generazione dei percorsi dei fi
 ## Note di Manutenzione
 - Aggiornare la documentazione quando si modificano i metodi
 - Verificare che tutte le implementazioni rispettino il contratto
-- Testare la generazione dei percorsi in diverse condizioni 
+- Testare la generazione dei percorsi in diverse condizioni

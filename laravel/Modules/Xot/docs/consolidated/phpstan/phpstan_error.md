@@ -9,7 +9,6 @@ modulo Geo
   34     Call to an undefined method
          Illuminate\Database\Eloquent\Model::getAddress().
 
-
 modulo LU
   Line   Http\Controllers\Auth\LoginController.php
  ------ -----------------------------------------------------------------------
@@ -22,4 +21,3 @@ modulo Xot
  ------ -----------------------------------------------------------------------
   28     Method Illuminate\Support\Collection<int,mixed>::get() invoked with 0
          parameters, 1-2 required.
-

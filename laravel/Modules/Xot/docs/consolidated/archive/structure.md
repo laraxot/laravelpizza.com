@@ -9,7 +9,7 @@ Quando si lavora con il pacchetto nwidart/laravel-modules, è essenziale compren
 ```
 Modules/
   ├── NomeModulo/
-  │   ├── app/                      <- Directory che contiene le classi PHP 
+  │   ├── app/                      <- Directory che contiene le classi PHP
   │   │   ├── Models/               <- Modelli
   │   │   ├── Http/                 <- Controller, Middleware, Requests
   │   │   │   ├── Controllers/
@@ -22,7 +22,7 @@ Modules/
   │   │   ├── views/
   │   │   ├── lang/
   │   │   └── assets/
-  │   ├── routes/                   <- File delle rotte 
+  │   ├── routes/                   <- File delle rotte
   │   ├── config/                   <- Configurazioni
   │   ├── database/                 <- Migrazioni e seeders
   │   │   ├── migrations/

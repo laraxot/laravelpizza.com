@@ -146,4 +146,4 @@ I pulsanti con icona sono componenti compatti che utilizzano simboli grafici per
 3. **Bundle Size**
    - Importare solo le icone necessarie
    - Utilizzare un sistema di icon font quando appropriato
-   - Implementare code splitting per set di icone grandi 
+   - Implementare code splitting per set di icone grandi

@@ -28,13 +28,13 @@ use Modules\Xot\Filament\Resources\XotBaseListRecords;
 class ListUsers extends XotBaseListRecords
 {
     protected TableLayoutEnum $layout;
-    
+
     public function mount(): void
     {
         parent::mount();
         $this->layout = TableLayoutEnum::init();
     }
-    
+
     public function table(Table $table): Table
     {
         return $table
@@ -45,7 +45,7 @@ class ListUsers extends XotBaseListRecords
             ->searchable()
             ->filterable();
     }
-    
+
     /**
      * Restituisce le colonne appropriate per il layout corrente
      */
@@ -69,7 +69,7 @@ class ListUsers extends XotBaseListRecords
                     default => 'gray',
                 }),
         ];
-        
+
         $gridColumns = [
             Stack::make([
                 TextColumn::make('name')
@@ -88,10 +88,10 @@ class ListUsers extends XotBaseListRecords
                     default => 'gray',
                 }),
         ];
-        
+
         return $this->layout->getTableColumns($listColumns, $gridColumns);
     }
-    
+
     /**
      * Azioni header con toggle layout
      */
@@ -107,7 +107,7 @@ class ListUsers extends XotBaseListRecords
             // Altre azioni...
         ];
     }
-    
+
     /**
      * Azioni bulk per il layout corrente
      */
@@ -257,56 +257,56 @@ class TableLayoutEnumTest extends TestCase
     {
         $this->assertEquals(TableLayoutEnum::LIST, TableLayoutEnum::init());
     }
-    
+
     public function test_toggle_switches_layout(): void
     {
         $layout = TableLayoutEnum::LIST;
         $this->assertEquals(TableLayoutEnum::GRID, $layout->toggle());
         $this->assertEquals(TableLayoutEnum::LIST, $layout->toggle()->toggle());
     }
-    
+
     public function test_get_label_returns_translated_string(): void
     {
         $listLabel = TableLayoutEnum::LIST->getLabel();
         $gridLabel = TableLayoutEnum::GRID->getLabel();
-        
+
         $this->assertIsString($listLabel);
         $this->assertIsString($gridLabel);
         $this->assertNotEmpty($listLabel);
         $this->assertNotEmpty($gridLabel);
     }
-    
+
     public function test_get_color_returns_valid_color(): void
     {
         $listColor = TableLayoutEnum::LIST->getColor();
         $gridColor = TableLayoutEnum::GRID->getColor();
-        
+
         $this->assertIsString($listColor);
         $this->assertIsString($gridColor);
         $this->assertNotEmpty($listColor);
         $this->assertNotEmpty($gridColor);
     }
-    
+
     public function test_get_icon_returns_valid_icon(): void
     {
         $listIcon = TableLayoutEnum::LIST->getIcon();
         $gridIcon = TableLayoutEnum::GRID->getIcon();
-        
+
         $this->assertIsString($listIcon);
         $this->assertIsString($gridIcon);
         $this->assertNotEmpty($listIcon);
         $this->assertNotEmpty($gridIcon);
     }
-    
+
     public function test_get_table_content_grid_returns_null_for_list(): void
     {
         $this->assertNull(TableLayoutEnum::LIST->getTableContentGrid());
     }
-    
+
     public function test_get_table_content_grid_returns_array_for_grid(): void
     {
         $grid = TableLayoutEnum::GRID->getTableContentGrid();
-        
+
         $this->assertIsArray($grid);
         $this->assertArrayHasKey('sm', $grid);
         $this->assertArrayHasKey('md', $grid);
@@ -314,46 +314,46 @@ class TableLayoutEnumTest extends TestCase
         $this->assertArrayHasKey('xl', $grid);
         $this->assertArrayHasKey('2xl', $grid);
     }
-    
+
     public function test_get_table_columns_returns_correct_columns(): void
     {
         $listColumns = ['name', 'email'];
         $gridColumns = ['stack'];
-        
+
         $result = TableLayoutEnum::LIST->getTableColumns($listColumns, $gridColumns);
         $this->assertEquals($listColumns, $result);
-        
+
         $result = TableLayoutEnum::GRID->getTableColumns($listColumns, $gridColumns);
         $this->assertEquals($gridColumns, $result);
     }
-    
+
     public function test_is_grid_layout_returns_correct_boolean(): void
     {
         $this->assertTrue(TableLayoutEnum::GRID->isGridLayout());
         $this->assertFalse(TableLayoutEnum::LIST->isGridLayout());
     }
-    
+
     public function test_is_list_layout_returns_correct_boolean(): void
     {
         $this->assertTrue(TableLayoutEnum::LIST->isListLayout());
         $this->assertFalse(TableLayoutEnum::GRID->isListLayout());
     }
-    
+
     public function test_get_options_returns_all_options(): void
     {
         $options = TableLayoutEnum::getOptions();
-        
+
         $this->assertIsArray($options);
         $this->assertArrayHasKey('list', $options);
         $this->assertArrayHasKey('grid', $options);
         $this->assertCount(2, $options);
     }
-    
+
     public function test_get_container_classes_returns_valid_classes(): void
     {
         $listClasses = TableLayoutEnum::LIST->getContainerClasses();
         $gridClasses = TableLayoutEnum::GRID->getContainerClasses();
-        
+
         $this->assertEquals('table-layout-list', $listClasses);
         $this->assertEquals('table-layout-grid', $gridClasses);
     }
@@ -412,4 +412,4 @@ TextColumn::make('name')
 - [Filament Best Practices](../../../docs/filament_best_practices.md)
 - [Enum Translation Pattern](../../../docs/enum-translation-pattern.md)
 
-*Ultimo aggiornamento: 2025-01-27* 
+*Ultimo aggiornamento: 2025-01-27*

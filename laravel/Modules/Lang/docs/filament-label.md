@@ -21,4 +21,3 @@
 ## Collegamenti
 - [docs root](../../../../project_docs/actions.md)
 - [docs Xot](../../../Xot/project_docs/MODULE_NAMESPACE_RULES.md)
-

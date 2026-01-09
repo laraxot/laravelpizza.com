@@ -87,4 +87,4 @@ Errore che si verifica quando una funzione restituisce un tipo specifico ma è d
 2. Raggruppare gli errori per tipo e modulo
 3. Risolvere prima gli errori più comuni e semplici
 4. Documentare ogni soluzione nella cartella `docs` del modulo corrispondente
-5. Verificare che le soluzioni non introducano nuovi errori 
+5. Verificare che le soluzioni non introducano nuovi errori

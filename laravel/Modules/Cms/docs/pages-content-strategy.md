@@ -17,7 +17,7 @@
 ### Vision Strategica
 La pagina servizi deve comunicare:
 - **Cosa**: Servizi odontoiatrici gratuiti per gestanti
-- **Chi**: Donne incinte con ISEE ≤ 20.000€ 
+- **Chi**: Donne incinte con ISEE ≤ 20.000€
 - **Perché**: <slogan progetto> cruciale per mamma e bambino
 - **Come**: Processo semplice e umano
 - **Dove**: Rete nazionale di professionisti qualificati

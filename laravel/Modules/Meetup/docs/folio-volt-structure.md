@@ -27,7 +27,6 @@ use Livewire\Volt\Component;
 use Modules\Tenant\Services\TenantService;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 
-
 name('home');
 middleware(PageSlugMiddleware::class);
 
@@ -76,13 +75,10 @@ if(isset($slug)){
 */
 middleware(PageSlugMiddleware::class);
 
-
-
 new class extends Component
 {
     public string $slug;
 
-   
 };
 
 ?>

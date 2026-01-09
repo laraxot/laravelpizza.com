@@ -89,10 +89,10 @@ public function getTableActions(): array
 public function __construct()
 {
     parent::__construct();
-    
+
     // Disabilita la replica dei record
     static::$canReplicate = false;
-    
+
     // Disabilita la visualizzazione dei record
     static::$canView = false;
 }
@@ -109,7 +109,7 @@ public function __construct()
 protected function setUp(): void
 {
     parent::setUp();
-    
+
     // Imposta il layout a griglia
     $this->layoutView = TableLayoutEnum::GRID;
 }
@@ -193,9 +193,9 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 class DatiRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'dati';
-    
+
     protected static ?string $recordTitleAttribute = 'nome';
-    
+
     /**
      * Definisce le colonne della tabella.
      *
@@ -213,7 +213,7 @@ class DatiRelationManager extends XotBaseRelationManager
                 ->dateTime(),
         ];
     }
-    
+
     /**
      * Definisce lo schema del form.
      *

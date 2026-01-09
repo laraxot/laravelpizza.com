@@ -22,7 +22,7 @@ class BlockData extends Data implements Wireable
     public string $type;    // Sempre stringa valida
     public array $data;     // SEMPRE array valido
     public string $view;    // Sempre vista esistente
-    
+
     public function __construct(string $type, array $data) {
         $this->type = $type;
         $this->data = $data;  // Type hint garantisce array
@@ -69,15 +69,15 @@ if(isset($block->data)) { ... }
 public function __construct(string $type, array $data) {
     // 1. Type hint garantisce che $data sia array
     $this->data = $data;  // SEMPRE array valido
-    
+
     // 2. Estrae la vista dai dati o usa 'ui::empty' come default
     $view = Arr::get($data, 'view', 'ui::empty');
-    
+
     // 3. Verifica che la vista esista
     if(!view()->exists($view)){
         throw new \Exception('view not found: '.$view);
     }
-    
+
     // 4. Assegna la vista validata
     $this->view = $view;  // SEMPRE vista esistente
 }
@@ -195,10 +195,10 @@ class PageController extends Controller
     public function show($slug)
     {
         $pageData = $this->getPageData($slug);
-        
+
         // BlockData gestisce automaticamente la validazione e type safety
         $blocks = BlockData::fromArray($pageData['blocks'] ?? []);
-        
+
         // Ogni $block->data è garantito essere un array valido
         return view('cms::pages.show', compact('blocks'));
     }

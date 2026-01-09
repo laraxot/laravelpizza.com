@@ -28,16 +28,16 @@ class MyWidget extends Widget
     public function getStats(): array
     {
         $model = User::first();
-        
+
         // Verifica esistenza attributo
         if (app(SafeEloquentCastAction::class)->hasAttribute($model, 'email')) {
             $email = app(SafeEloquentCastAction::class)->getStringAttribute($model, 'email', '');
         }
-        
+
         // Cast sicuro a tipo specifico
         $age = app(SafeEloquentCastAction::class)->getIntAttribute($model, 'age', 0);
         $isActive = app(SafeEloquentCastAction::class)->getBooleanAttribute($model, 'is_active', false);
-        
+
         // Metodo di convenienza statico
         $name = SafeEloquentCastAction::get($model, 'name', 'string', 'Unknown');
     }
@@ -59,12 +59,12 @@ class MyService
         if (app(SafeObjectCastAction::class)->hasProperty($obj, 'value')) {
             $value = app(SafeObjectCastAction::class)->getStringProperty($obj, 'value', '');
         }
-        
+
         // Cast sicuro con validazione
         $count = app(SafeObjectCastAction::class)->getValidatedProperty(
-            $obj, 
-            'count', 
-            'int', 
+            $obj,
+            'count',
+            'int',
             fn(int $val) => $val > 0,
             0
         );
@@ -125,9 +125,9 @@ $age = (int) ($model->age ?? 0);
 
 // ✅ CORRETTO - Cast sicuro con validazione
 $age = app(SafeEloquentCastAction::class)->getValidatedAttribute(
-    $model, 
-    'age', 
-    'int', 
+    $model,
+    'age',
+    'int',
     fn(int $val) => $val >= 0 && $val <= 150,
     0
 );
@@ -175,15 +175,15 @@ class OldWidget extends Widget
     public function getStats(): array
     {
         $model = User::first();
-        
+
         if (property_exists($model, 'email')) {
             $email = $model->email;
         }
-        
+
         if (property_exists($model, 'age')) {
             $age = (int) $model->age;
         }
-        
+
         return ['email' => $email ?? '', 'age' => $age ?? 0];
     }
 }
@@ -197,10 +197,10 @@ class NewWidget extends Widget
     public function getStats(): array
     {
         $model = User::first();
-        
+
         $email = app(SafeEloquentCastAction::class)->getStringAttribute($model, 'email', '');
         $age = app(SafeEloquentCastAction::class)->getIntAttribute($model, 'age', 0);
-        
+
         return ['email' => $email, 'age' => $age];
     }
 }

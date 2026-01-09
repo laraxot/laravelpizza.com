@@ -4,10 +4,7 @@
 
 https://github.com/whitecube/nova-flexible-content
 
-
 https://filamentphp.com/plugins/statik-flexible-content-blocks
-
-
 
 https://tailblocks.cc/
 https://tailwindcomponents.com/
@@ -16,9 +13,6 @@ https://merakiui.com/
 https://tailwindui.com/
 https://www.tailwindtoolbox.com/
 https://tw-elements.com/docs/standard/navigation/navbar/
-
-
-
 
 https://freefrontend.com/tailwind-navbars/
 

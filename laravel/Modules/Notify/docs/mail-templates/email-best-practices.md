@@ -15,7 +15,7 @@ Questo documento descrive le best practices per la creazione e gestione di email
 
 ### 2. Branding Coerente
 
-- **Elementi visuali**: Utilizzare logo, colori e font 
+- **Elementi visuali**: Utilizzare logo, colori e font
 - **Elementi visuali**: Utilizzare logo, colori e font SaluteOra
 - **Voce e tono**: Mantenere un tono professionale ma amichevole
 - **Firma coerente**: Includere sempre lo stesso formato di firma e disclaimer
@@ -49,7 +49,7 @@ Questo documento descrive le best practices per la creazione e gestione di email
 - Separare il contenuto dalla presentazione per facilitare le traduzioni
 - Supportare lingue RTL quando necessario
 
-## Template e Layout 
+## Template e Layout
 
 ### Utilizzo di MailPace Templates
 

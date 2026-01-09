@@ -40,12 +40,12 @@ use App\Models\Event;
 
 new class extends Component {
     public Event $event;
-    
+
     public function mount(Event $event)
     {
         $this->event = $event;
     }
-    
+
     public function register()
     {
         // Logica registrazione
@@ -109,7 +109,7 @@ new class extends Component {
         'dateTo' => null,
         'attendeeCount' => null
     ];
-    
+
     public function getFilteredEventsProperty()
     {
         return \App\Models\Event::with(['category', 'organizer'])
@@ -124,7 +124,7 @@ new class extends Component {
             ->orderBy('start_datetime', 'asc')
             ->get();
     }
-    
+
     public function updatedSearchTerm()
     {
         // Implementazione debounced come in Warriorfolio

@@ -27,7 +27,7 @@
                ];
            });
    }
-   
+
    // Dopo
    public function getTimelineEvents()
    {
@@ -61,13 +61,13 @@
            <x-timeline-event :event="$event" />
        @endforeach
    </div>
-   
+
    // Dopo
    <div class="timeline" x-data="{ page: 1, loading: false }">
        <template x-for="event in visibleEvents">
            <x-timeline-event :event="event" />
        </template>
-       
+
        <div x-intersect="loadMore()">
            <x-loading-spinner x-show="loading" />
        </div>
@@ -78,9 +78,9 @@
    ```php
    // Implementazione cache tags
    use Illuminate\Support\Facades\Cache;
-   
+
    Cache::tags(['patient', "patient_{$id}"])->remember(...);
-   
+
    // Invalidazione mirata
    public function afterVisitSaved()
    {
@@ -112,7 +112,7 @@
            return $this->hasMany(DentalRecord::class);
        }
    }
-   
+
    // Dopo
    class Patient extends Model
    {
@@ -168,7 +168,7 @@
                Visit::factory()
                    ->count(50)
                    ->create(['patient_id' => $patient->id]);
-               
+
                DentalRecord::factory()
                    ->count(10)
                    ->create(['patient_id' => $patient->id]);
@@ -184,14 +184,14 @@
        $patient = Patient::factory()
            ->withCompleteHistory()
            ->create();
-   
+
        $startTime = microtime(true);
-       
+
        $response = $this->get("/patients/{$patient->id}/timeline");
-       
+
        $endTime = microtime(true);
        $executionTime = ($endTime - $startTime) * 1000;
-       
+
        $this->assertLessThan(
            500, // max 500ms
            $executionTime,
@@ -224,9 +224,8 @@
 ## Collegamenti
 - [Performance Guidelines](../../performance/guidelines.md)
 - [Integration Standards](../../integration/standards.md)
-- [Testing Best Practices](../../testing/best-practices.md) 
+- [Testing Best Practices](../../testing/best-practices.md)
 ## Collegamenti tra versioni di patient.md
 * [patient.md](docs/moduli/patient.md)
 * [patient.md](docs/roadmap/moduli/patient.md)
 * [patient.md](../../../Xot/project_docs/roadmap/bottlenecks/patient.md)
-

@@ -42,4 +42,3 @@ Le etichette dei Filament Blocks **NON** devono essere definite con `->label()`.
 * [footer.md](laravel/Modules/Cms/docs/components/footer.md)
 * [footer.md](laravel/Themes/One/docs/components/layouts/footer.md)
 * [footer.md](laravel/Themes/One/docs/sections/footer.md)
-

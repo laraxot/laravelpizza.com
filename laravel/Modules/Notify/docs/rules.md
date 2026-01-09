@@ -86,4 +86,4 @@
 - [PHP The Right Way](https://phptherightway.com/)
 - [Laravel Documentation](https://laravel.com/docs)
 - [Spatie Queueable Action](https://github.com/spatie/laravel-queueable-action)
-- [Laravel News](https://laravel-news.com/) 
+- [Laravel News](https://laravel-news.com/)

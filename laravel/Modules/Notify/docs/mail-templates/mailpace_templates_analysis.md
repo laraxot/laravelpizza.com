@@ -94,7 +94,7 @@ Il file `resources/mail-layouts/base/default.blade.php` dovrebbe contenere:
 <body>
     <div class="container">
         @include('notify::mail-layouts.components.header')
-        
+
         <main>
             @yield('content')
         </main>
@@ -208,4 +208,4 @@ return [
 ## Collegamenti
 - [Mailpace Templates](https://github.com/mailpace/templates)
 - [Email Best Practices](./EMAIL_BEST_PRACTICES.md)
-- [Template Management](./template-management.md) 
+- [Template Management](./template-management.md)

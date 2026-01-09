@@ -77,4 +77,4 @@ public static function getFormSchema(): array
 
 Questo pattern è stato corretto nelle seguenti risorse:
 - `ExportResource`
-- `FailedImportRowResource` 
+- `FailedImportRowResource`

@@ -21,33 +21,33 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi geografici
             $table->string('name');
             $table->string('code')->unique();
             $table->string('type'); // continent, country, region, province, city
-            
+
             // NestedSet per gerarchia geografica
             NestedSet::columns($table);
-            
+
             // Codici standard
             $table->string('iso_code', 10)->nullable(); // ISO 3166-1 alpha-2/3
             $table->string('fips_code', 10)->nullable(); // FIPS
             $table->string('nuts_code', 10)->nullable(); // NUTS (EU)
-            
+
             // Coordinate e area
             $table->decimal('latitude', 10, 8)->nullable();
             $table->decimal('longitude', 11, 8)->nullable();
             $table->decimal('area_km2', 12, 2)->nullable();
-            
+
             // Popolazione
             $table->integer('population')->nullable();
             $table->string('density')->nullable();
-            
+
             // Metadati
             $table->json('metadata')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -67,26 +67,26 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi tipo location
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia tipi
             NestedSet::columns($table);
-            
+
             // Configurazioni
             $table->string('icon')->nullable();
             $table->string('color')->default('#6b7280');
             $table->json('schema')->nullable(); // Schema dati per questo tipo
-            
+
             // Validazioni
             $table->json('validation_rules')->nullable();
             $table->json('required_fields')->nullable();
-            
+
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -106,29 +106,29 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi zona amministrativa
             $table->string('name');
             $table->string('code')->unique();
             $table->string('level'); // 1=regione, 2=provincia, 3=comune, 4=frazione
-            
+
             // NestedSet per gerarchia amministrativa
             NestedSet::columns($table);
-            
+
             // Codici ufficiali
             $table->string('istat_code', 10)->nullable(); // Codice ISTAT
             $table->string('catasto_code', 10)->nullable(); // Codice catasto
             $table->string('belfiore_code', 10)->nullable(); // Codice Belfiore
-            
+
             // Informazioni
             $table->string('capital')->nullable();
             $table->decimal('area_km2', 12, 2)->nullable();
             $table->integer('population')->nullable();
             $table->date('established_date')->nullable();
-            
+
             // Geometria (spaziale)
             $table->geometry('geometry')->nullable();
-            
+
             $table->timestamps();
         });
     }
@@ -148,27 +148,27 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi percorso
             $table->string('name');
             $table->string('type'); // route, street, avenue, boulevard
-            
+
             // NestedSet per gerarchia percorsi
             NestedSet::columns($table);
-            
+
             // Informazioni percorso
             $table->string('full_name')->nullable();
             $table->string('short_name')->nullable();
             $table->string('ref')->nullable(); // Rif. stradale
-            
+
             // Classificazione
             $table->string('classification')->nullable(); // primary, secondary, tertiary
             $table->integer('importance')->default(0);
-            
+
             // Metadati
             $table->json('attributes')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -232,11 +232,11 @@ enum AddressItemEnum: string
             ->comment('Country code ISO (Paese)');
         $table->string(self::POSTAL_CODE->value, 20)->nullable()
             ->comment('Postal code (CAP)');
-        
+
         // Componenti contatto
         $table->string(self::PHONE->value)->nullable()
             ->comment('Phone number');
-        
+
         // Componenti geocoding
         $table->text(self::FORMATTED_ADDRESS->value)->nullable()
             ->comment('Full formatted address');
@@ -246,7 +246,7 @@ enum AddressItemEnum: string
             ->comment('Latitude');
         $table->decimal(self::LONGITUDE->value, 15, 10)->nullable()
             ->comment('Longitude');
-        
+
         // Indici per performance (ispirati a NestedSet)
         $table->index([self::COUNTRY->value, self::ADMINISTRATIVE_AREA_LEVEL_1->value]);
         $table->index([self::ADMINISTRATIVE_AREA_LEVEL_2->value, self::ADMINISTRATIVE_AREA_LEVEL_3->value]);
@@ -262,13 +262,13 @@ enum AddressItemEnum: string
     public static function dropColumns(Blueprint $table): void
     {
         $columns = self::getDefaultColumns();
-        
+
         // Rimuovi indici
         $table->dropIndex([self::COUNTRY->value, self::ADMINISTRATIVE_AREA_LEVEL_1->value]);
         $table->dropIndex([self::ADMINISTRATIVE_AREA_LEVEL_2->value, self::ADMINISTRATIVE_AREA_LEVEL_3->value]);
         $table->dropIndex(self::POSTAL_CODE->value);
         $table->dropIndex([self::LATITUDE->value, self::LONGITUDE->value]);
-        
+
         // Rimuovi colonne
         $table->dropColumn($columns);
     }
@@ -314,22 +314,22 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi indirizzo standard usando AddressItemEnum::columns()
             AddressItemEnum::columns($table);
-            
+
             // Campi aggiuntivi specifici
             $table->string('name')->nullable()->comment('Nome identificativo indirizzo');
             $table->text('description')->nullable()->comment('Descrizione opzionale');
             $table->string('type', 50)->nullable()->index()->comment('Tipo indirizzo');
             $table->boolean('is_primary')->default(false)->index();
-            
+
             // Relazioni polimorfe
             $table->nullableUuidMorphs('model');
-            
+
             // Metadati
             $table->json('extra_data')->nullable();
-            
+
             $table->timestamps();
             $table->softDeletes();
         });
@@ -352,10 +352,10 @@ return new class extends XotBaseMigration
             $table->id();
             $table->string('name')->nullable();
             $table->string('vat_number')->nullable();
-            
+
             // Campi indirizzo usando AddressItemEnum::columns()
             AddressItemEnum::columns($table);
-            
+
             // Campi aggiuntivi cliente
             $table->string('email')->nullable()->comment('Email contatto principale');
             $table->boolean('business_closed')->default(false);
@@ -364,7 +364,7 @@ return new class extends XotBaseMigration
             $table->string('company_name')->nullable();
             $table->string('company_office')->nullable();
             $table->string('activity')->nullable();
-            
+
             $this->addCommonFields($table);
         });
     }

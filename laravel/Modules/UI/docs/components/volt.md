@@ -196,14 +196,14 @@ $rules = [
 
 $login = function() {
     $this->validate();
-    
+
     if (auth()->attempt([
         'email' => $this->email,
         'password' => $this->password,
     ], $this->remember)) {
         return redirect()->intended('/dashboard');
     }
-    
+
     $this->addError('email', 'Credenziali non valide');
 };
 
@@ -233,13 +233,13 @@ state([
 
 $addTodo = function() {
     $this->validate(['newTodo' => 'required|min:3']);
-    
+
     $this->todos[] = [
         'id' => uniqid(),
         'text' => $this->newTodo,
         'completed' => false,
     ];
-    
+
     $this->newTodo = '';
 };
 
@@ -263,11 +263,11 @@ $removeTodo = function($id) {
         <input type="text" wire:model="newTodo">
         <button type="submit">Aggiungi</button>
     </form>
-    
+
     <ul>
         @foreach($todos as $todo)
             <li>
-                <input type="checkbox" 
+                <input type="checkbox"
                        wire:click="toggleTodo({{ $todo['id'] }})"
                        {{ $todo['completed'] ? 'checked' : '' }}>
                 <span>{{ $todo['text'] }}</span>
@@ -391,4 +391,4 @@ mount(function() {
 ### Modulo Chart
 - [Grafici](../../Chart/docs/charts.md)
 - [Dashboard](../../Chart/docs/dashboard.md)
-- [Visualizzazione](../../Chart/docs/visualization.md) 
+- [Visualizzazione](../../Chart/docs/visualization.md)

@@ -33,4 +33,4 @@ Questi comandi permettono l'importazione di database Microsoft Access (MDB) in M
 - Migliorata la gestione degli errori
 - Aggiunto supporto per più versioni di Access
 - Ottimizzata la conversione dei tipi di dati
-- Standardizzazione dei messaggi in italiano 
+- Standardizzazione dei messaggi in italiano

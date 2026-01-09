@@ -73,7 +73,7 @@ use Filament\Resources\Pages\CreateRecord; // Wrong base class
 class CreateProduct extends CreateRecord // Should extend XotBaseCreateRecord
 {
     protected static string $resource = ProductResource::class;
-    
+
     // These should not be defined in XotBasePage children
     protected static ?string $navigationIcon = 'heroicon-o-plus';
     protected static ?string $title = 'Create Product';

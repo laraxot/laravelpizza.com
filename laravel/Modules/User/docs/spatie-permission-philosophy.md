@@ -83,7 +83,7 @@ class Role extends SpatieRole    // Natura Spatie preservata
     // Nessun conflitto, solo armonia
 }
 
-class Permission extends SpatiePermission  // Natura Spatie preservata  
+class Permission extends SpatiePermission  // Natura Spatie preservata
 {
     use RelationX;                       // Solo enhancement Laraxot
     // Equilibrio perfetto tra mondi

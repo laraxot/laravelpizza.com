@@ -55,18 +55,18 @@ public function handle(): int
             $this->error('Email non fornita.');
             return Command::FAILURE;
         }
-        
+
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $this->error('Email non valida: ' . $email);
             return Command::FAILURE;
         }
-        
+
         // Logica principale
         $result = $this->processCommand();
-        
+
         $this->info('Operazione completata con successo!');
         return Command::SUCCESS;
-        
+
     } catch (\Exception $e) {
         $this->error('Errore durante l\'esecuzione: ' . $e->getMessage());
         return Command::FAILURE;
@@ -93,7 +93,7 @@ class ChangePasswordCommand extends Command
 {
     // Metodo principale - coordinamento
     public function handle(): int { /* ... */ }
-    
+
     // Metodi privati - responsabilità specifiche
     private function getUserEmail(): string { /* ... */ }
     private function getUserByEmail(string $email): ?User { /* ... */ }
@@ -199,7 +199,7 @@ $email = text('Inserisci l\'email dell\'utente:')
 
 // Con validazione in tempo reale
 $email = text('Inserisci l\'email dell\'utente:')
-    ->validate(fn (string $value): string|bool => 
+    ->validate(fn (string $value): string|bool =>
         filter_var($value, FILTER_VALIDATE_EMAIL) ? true : 'Email non valida'
     );
 
@@ -328,12 +328,12 @@ public function it_changes_user_password_successfully(): void
 {
     // Arrange
     $user = User::factory()->create();
-    
+
     // Act
     $result = $this->artisan('user:change-password', [
         '--email' => $user->email
     ]);
-    
+
     // Assert
     $result->assertExitCode(Command::SUCCESS);
     $this->assertDatabaseHas('users', [
@@ -355,7 +355,7 @@ public function it_handles_nonexistent_user_gracefully(): void
     $result = $this->artisan('user:change-password', [
         '--email' => 'nonexistent@example.com'
     ]);
-    
+
     // Assert
     $result->assertExitCode(Command::FAILURE);
     $result->expectsOutput('Utente con email \'nonexistent@example.com\' non trovato.');
@@ -372,15 +372,15 @@ public function it_handles_large_datasets_efficiently(): void
 {
     // Arrange
     User::factory()->count(1000)->create();
-    
+
     // Act & Assert
     $startTime = microtime(true);
-    
+
     $result = $this->artisan('user:list');
-    
+
     $endTime = microtime(true);
     $executionTime = $endTime - $startTime;
-    
+
     $this->assertLessThan(5.0, $executionTime, 'Comando troppo lento');
     $result->assertExitCode(Command::SUCCESS);
 }
@@ -394,7 +394,7 @@ Mantenere **versioning chiaro** per ogni comando:
 ```php
 /**
  * ChangePasswordCommand
- * 
+ *
  * @version 2.0
  * @since 2025-01-27
  * @author Laraxot Team
@@ -456,4 +456,3 @@ private function getPasswordLegacy(): string
 - ✅ **Maintenance Policy**: Versioning, changelog e deprecation
 
 *Ultimo aggiornamento: 2025-01-27*
-

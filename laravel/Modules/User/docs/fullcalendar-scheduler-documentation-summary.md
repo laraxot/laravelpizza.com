@@ -10,7 +10,7 @@ Questa documentazione fornisce una guida completa per la gestione delle licenze 
 - Tipi di licenza disponibili (Commerciale, Non-Profit, GPLv3)
 - Problemi comuni e soluzioni dettagliate
 - Configurazione completa per Laravel/Filament
-- Best practices per 
+- Best practices per
 - Best practices per SaluteOra
 - Testing e debugging avanzato
 - Sicurezza e gestione ambienti
@@ -24,7 +24,7 @@ Questa documentazione fornisce una guida completa per la gestione delle licenze 
 #### 3. [FullCalendar Scheduler License](./fullcalendar-scheduler-license.md)
 Documentazione base esistente per:
 - Panoramica generale licenze
-- Configurazione di base in 
+- Configurazione di base in
 - Configurazione di base in SaluteOra
 - Problemi comuni basilari
 #### 4. [Scheduler License Key](./scheduler_license_key.md)
@@ -50,7 +50,7 @@ La documentazione è basata su ricerca approfondita di:
 3. **React/Vite Export Issues (v6.x)**
    - Problema: BASE_OPTION_DEFAULTS non esportato
    - Soluzione: Workaround con ignore directives
-### 🎯 Soluzioni Specifiche 
+### 🎯 Soluzioni Specifiche
 ### 🎯 Soluzioni Specifiche SaluteOra
 La documentazione include configurazioni specifiche per:
 - **Multi-tenancy**: Isolamento dati per studio
@@ -102,13 +102,13 @@ La documentazione è aggiornata per:
 Quando aggiornare la documentazione:
 - Nuove versioni FullCalendar con breaking changes
 - Nuovi bug noti nella community
-- Modifiche architettura 
+- Modifiche architettura
 - Modifiche architettura SaluteOra
 - Nuovi requisiti sanitari/legali
 ### 📝 Contributi
 Per aggiornare la documentazione:
 1. Verificare issue GitHub FullCalendar
-2. Testare soluzioni in ambiente 
+2. Testare soluzioni in ambiente
 2. Testare soluzioni in ambiente SaluteOra
 3. Aggiornare documenti pertinenti
 4. Aggiornare questo summary
@@ -135,5 +135,5 @@ Questa documentazione fornisce una copertura completa per tutti gli aspetti dell
 2. **Problemi complessi**: Troubleshooting completo
 3. **Riferimento quotidiano**: Quick Reference checklist
 4. **Configurazione produzione**: Best practices nel troubleshooting
-La documentazione è progettata per essere autosufficiente e ridurre la necessità di ricerche esterne, fornendo tutte le informazioni necessarie per una gestione efficace delle licenze FullCalendar Scheduler nel contesto sanitario di . 
-La documentazione è progettata per essere autosufficiente e ridurre la necessità di ricerche esterne, fornendo tutte le informazioni necessarie per una gestione efficace delle licenze FullCalendar Scheduler nel contesto sanitario di SaluteOra. 
+La documentazione è progettata per essere autosufficiente e ridurre la necessità di ricerche esterne, fornendo tutte le informazioni necessarie per una gestione efficace delle licenze FullCalendar Scheduler nel contesto sanitario di .
+La documentazione è progettata per essere autosufficiente e ridurre la necessità di ricerche esterne, fornendo tutte le informazioni necessarie per una gestione efficace delle licenze FullCalendar Scheduler nel contesto sanitario di SaluteOra.

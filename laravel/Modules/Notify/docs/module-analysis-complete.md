@@ -48,7 +48,7 @@ Il modulo Notify è il sistema di gestione notifiche e comunicazioni riutilizzab
 
 ### 1. **Notification - Gestione Notifiche**
 - **Responsabilità**: Gestire notifiche del sistema
-- **Business Logic**: 
+- **Business Logic**:
   - Gestione stato notifiche
   - Gestione destinatari notifiche
   - Gestione contenuti notifiche

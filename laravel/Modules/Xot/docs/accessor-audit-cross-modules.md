@@ -41,7 +41,7 @@ Verificare **TUTTI i moduli** per accessor che chiamano `save()` senza guard `if
 1. `Models/CondizioniLavoro.php`
    - ✅ getTotAttribute - HA GIÀ guard! (linea 283)
 2. `Models/ServizioEsterno.php` - Da verificare
-3. `Models/CondizioniLavoroAdm.php` - Da verificare  
+3. `Models/CondizioniLavoroAdm.php` - Da verificare
 4. `Models/CondizioniLavoroRep.php` - Da verificare
 5. `Models/Traits/MutatorTrait.php` - Da verificare
 
@@ -178,8 +178,7 @@ Ogni modulo deve avere:
 
 ---
 
-**Creato**: 2025-01-29  
-**Status**: 📊 Audit Framework Pronto  
-**Prossimo**: Audit IndennitaCondizioniLavoro  
+**Creato**: 2025-01-29
+**Status**: 📊 Audit Framework Pronto
+**Prossimo**: Audit IndennitaCondizioniLavoro
 **Timeline**: 3 settimane per audit completo
-

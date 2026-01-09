@@ -133,15 +133,15 @@ function processData(array $data): string {
     if (!isset($data['value'])) {
         return 'No value provided';
     }
-    
+
     $value = $data['value'];
     if (!is_string($value) && !is_numeric($value)) {
         return 'Invalid value type';
     }
-    
+
     $result = (string) $value . ' processed';
     return $result;
 }
 ```
 
-Seguendo queste linee guida, sarà possibile risolvere la maggior parte degli errori legati al tipo `mixed` segnalati da PHPStan al livello 9. 
+Seguendo queste linee guida, sarà possibile risolvere la maggior parte degli errori legati al tipo `mixed` segnalati da PHPStan al livello 9.

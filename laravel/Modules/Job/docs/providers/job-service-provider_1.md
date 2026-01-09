@@ -63,4 +63,4 @@ class AppServiceProvider extends ServiceProvider
 }
 ```
 
-[Torna alla documentazione Job](/docs/modules/module_job.md#providers) 
+[Torna alla documentazione Job](/docs/modules/module_job.md#providers)

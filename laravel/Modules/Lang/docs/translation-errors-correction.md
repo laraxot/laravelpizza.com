@@ -49,7 +49,7 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 
 #### ✅ Modulo Notify
 **File Tedeschi (DE):**
-- `send_email.php`: 
+- `send_email.php`:
   - `'subject_required' => 'Der Betreff ist erforderlich'`
   - `'to_required' => 'Der Empfänger ist erforderlich'`
   - `'content_required' => 'Der Inhalt ist erforderlich'`
@@ -108,7 +108,7 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 
 #### ✅ Modulo Xot
 **File Tedeschi (DE):**
-- `env.php`: 
+- `env.php`:
   - `'required' => 'Der Wert ist erforderlich'`
   - `'required' => 'Die Umgebung ist erforderlich'`
 - `extra.php`:

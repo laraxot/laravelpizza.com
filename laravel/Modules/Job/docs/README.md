@@ -2,11 +2,11 @@
 
 ## 📋 Overview
 Modulo avanzato per la gestione di code, job schedulati e processi batch in Laravel con integrazione Filament 4.x e supporto HTML2PDF per report.
-**Namespace:** `Modules\Job`  
-**Filament:** v4.2.0 (Full Integration)  
-**Queue System:** Laravel Queue + Redis  
-**PHPStan:** Level 10 Compliant  
-**HTML2PDF:** Report Job Analytics  
+**Namespace:** `Modules\Job`
+**Filament:** v4.2.0 (Full Integration)
+**Queue System:** Laravel Queue + Redis
+**PHPStan:** Level 10 Compliant
+**HTML2PDF:** Report Job Analytics
 ---
 ## 🎯 Core Features
 ### 1. Multi-Queue System
@@ -103,7 +103,7 @@ class Job extends XotBaseModel
         'available_at',
         'created_at',
     ];
-    
+
     protected $casts = [
         'payload' => 'json',
         'reserved_at' => 'datetime',
@@ -111,7 +111,7 @@ class Job extends XotBaseModel
     public function getDisplayNameAttribute(): string
     {
         $payload = $this->payload;
-        return $payload['displayName'] ?? 
+        return $payload['displayName'] ??
                class_basename($payload['job'] ?? 'Unknown Job');
     }
     public function batch(): BelongsTo
@@ -154,7 +154,7 @@ class JobManagerService
     public function dispatchJob(Job $job): bool
         try {
             $payload = json_decode($job->payload, true);
-            
+
             // Dispatch to Laravel queue
             \Queue::connection('redis')
                   ->pushRaw($job->payload, $job->queue_name);
@@ -189,7 +189,7 @@ class JobManagerService
 class QueueMonitorService
     public function getQueueStatistics(): array
         $queues = config('queue.queues', ['default']);
-        
+
         return collect($queues)->map(function ($queue) {
             return [
                 'name' => $queue,
@@ -259,9 +259,9 @@ class JobReportService
     </page_header>
     <div style="margin: 15mm 0;">
         <!-- Health Status -->
-        <div style="background-color: {{ $data['health_status'] == 'healthy' ? '#d4edda' : ($data['health_status'] == 'warning' ? '#fff3cd' : '#f8d7da') }}; 
-                    padding: 10mm; 
-                    margin-bottom: 10mm; 
+        <div style="background-color: {{ $data['health_status'] == 'healthy' ? '#d4edda' : ($data['health_status'] == 'warning' ? '#fff3cd' : '#f8d7da') }};
+                    padding: 10mm;
+                    margin-bottom: 10mm;
                     border: 1px solid #dee2e6;">
             <h2 style="font-size: 14pt; margin: 0 0 5mm 0;">
                 System Health: {{ ucfirst($data['health_status']) }}
@@ -320,7 +320,7 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 class JobStatus extends XotBasePage
 {
     protected string $view = 'job::filament.pages.job-status';
-    
+
     /**
      * @return array<string, mixed>
      */
@@ -346,7 +346,7 @@ class JobStatus extends Page // VIOLAZIONE ARCHITETTURALE
 class QueueManagementResource extends XotBaseResource
 {
     protected static ?string $model = Job::class;
-    
+
     /**
      * @return array<string, mixed>
      */
@@ -358,7 +358,7 @@ class QueueManagementResource extends XotBaseResource
             'schedule' => Pages\ScheduleCalendar::route('/schedule'),
         ];
     }
-    
+
     /**
      * @return array<string, mixed>
      */
@@ -378,14 +378,14 @@ class QueueManagementResource extends XotBaseResource
 class QueueStatsWidget extends XotBaseWidget
 {
     protected static string $view = 'job::filament.widgets.queue-stats';
-    
+
     /**
      * @return array<string, mixed>
      */
     public function getViewData(): array
     {
         $monitor = app(QueueMonitorService::class);
-        
+
         return [
             'statistics' => $monitor->getQueueStatistics(),
             'total_jobs' => Job::count(),
@@ -468,7 +468,7 @@ class ProcessDataJob extends BaseJob
             $this->processData();
                 ->performedOn($this->data)
                 ->log('Data processed successfully');
-                
+
             Log::error('Data processing failed', [
                 'data_id' => $this->data->id,
             $this->fail($e);
@@ -508,9 +508,9 @@ $batch = Bus::batch([
 - **PDF Reports**: [Job Reports](./job-reports.md)
 - **Testing Guide**: [Testing Guide](./testing.md)
 - **API Documentation**: [API Docs](./api.md)
-**Last Updated:** 2025-12-09  
-**Version:** 2.1.0  
-**Status:** ✅ Production Ready  
-**PHPStan Level:** 10 ✅  
-**Test Coverage:** 85% 🔄  
+**Last Updated:** 2025-12-09
+**Version:** 2.1.0
+**Status:** ✅ Production Ready
+**PHPStan Level:** 10 ✅
+**Test Coverage:** 85% 🔄
 **HTML2PDF Integration:** ✅

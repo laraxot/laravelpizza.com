@@ -31,4 +31,4 @@
 ### Collegamenti Correlati
 - [Proposta Slug](./SPATIE_EMAIL_SLUG_PROPOSAL.md)
 - [Sistema Template Email](./EMAIL_TEMPLATES.md)
-- [Email Dottori](./DOCTOR_EMAILS.md) 
+- [Email Dottori](./DOCTOR_EMAILS.md)

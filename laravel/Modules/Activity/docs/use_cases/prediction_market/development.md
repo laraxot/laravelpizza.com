@@ -70,7 +70,7 @@ app/
     Commands/
       Market/           # Comandi Artisan per la gestione dei mercati
       Bet/              # Comandi Artisan per la gestione delle scommesse
-  
+
   Domain/
     PredictionMarket/
       Models/          # Modelli Eloquent
@@ -80,7 +80,7 @@ app/
       Projectors/       # Proiettori per gli eventi
       Listeners/        # Listener per gli eventi
       Jobs/             # Job in coda
-      
+
   Http/
     Controllers/
       Api/
@@ -140,7 +140,7 @@ I test di integrazione verificano l'interazione tra i vari componenti del sistem
 public function test_can_create_market()
 {
     $user = User::factory()->create();
-    
+
     $response = $this->actingAs($user, 'sanctum')
         ->postJson('/api/v1/markets', [
             'title' => 'Test Market',
@@ -190,7 +190,7 @@ public function handle()
         ->count();
 
     $this->info("Closed {$count} expired markets.");
-    
+
     return Command::SUCCESS;
 }
 ```
@@ -206,7 +206,7 @@ use App\Http\Controllers\Api\V1\MarketController;
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('markets', MarketController::class);
-    
+
     // Altri endpoint...
 });
 ```
@@ -221,17 +221,17 @@ class MarketController extends Controller
     public function index(MarketRepository $repository)
     {
         $markets = $repository->getActiveMarkets();
-        
+
         return MarketResource::collection($markets);
     }
-    
+
     public function store(StoreMarketRequest $request, CreateMarketHandler $handler)
     {
         $market = $handler->handle($request->validated());
-        
+
         return new MarketResource($market);
     }
-    
+
     // Altri metodi...
 }
 ```

@@ -7,7 +7,7 @@ The Activity module implements event sourcing patterns for tracking system activ
 
 #### Key Models
 - **Activity**: Extends Spatie Activity Log for comprehensive activity tracking
-- **StoredEvent**: Manages event storage and replay capabilities  
+- **StoredEvent**: Manages event storage and replay capabilities
 - **Snapshot**: Provides point-in-time state snapshots for performance
 
 #### Business Rules
@@ -26,7 +26,7 @@ Activity::create([
     'description' => 'User updated profile',
     'subject_type' => User::class,
     'subject_id' => $user->id,
-    'causer_type' => User::class, 
+    'causer_type' => User::class,
     'causer_id' => auth()->id(),
     'properties' => $changes
 ]);
@@ -61,7 +61,7 @@ Activity::create([
 - Property serialization/deserialization
 - Batch operation handling
 
-#### Event Sourcing Tests  
+#### Event Sourcing Tests
 - Event storage and retrieval
 - State reconstruction from events
 - Snapshot creation and usage

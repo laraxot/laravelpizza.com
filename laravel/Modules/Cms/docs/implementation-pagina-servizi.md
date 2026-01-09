@@ -252,9 +252,9 @@ L'implementazione riflette una comprensione profonda delle implicazioni:
 
 ---
 
-**Data Implementazione**: 15 Gennaio 2025  
-**Versione Documentazione**: 1.0.0  
-**Maintainer**: Team <main module>  
+**Data Implementazione**: 15 Gennaio 2025
+**Versione Documentazione**: 1.0.0
+**Maintainer**: Team <main module>
 **Review**: Approvazione stakeholder medici, tecnici, UX
 
-*Implementazione completata seguendo rigorosamente la filosofia <main module>: democratizzazione dell'accesso alla <slogan> attraverso tecnologia umana, competente e inclusiva.* 
+*Implementazione completata seguendo rigorosamente la filosofia <main module>: democratizzazione dell'accesso alla <slogan> attraverso tecnologia umana, competente e inclusiva.*

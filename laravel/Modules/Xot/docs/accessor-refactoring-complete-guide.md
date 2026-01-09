@@ -4,7 +4,7 @@
 
 **Problema Risolto**: Accessor con `save()` causavano errori "Duplicate Entry" durante edit di record esistenti.
 
-**Soluzione Implementata**: 
+**Soluzione Implementata**:
 1. Guard obbligatorio: `if (null == $this->getKey()) return null;` prima di ogni `save()`
 2. Pattern "Accessor → Metodo Puro" per separare business logic da lifecycle
 
@@ -80,13 +80,13 @@ public function getValoreAttribute(): type {
 
 ### Filosofia - Il Tao del Codice
 
-> "Il metodo puro è come l'acqua:  
-> fluisce attraverso i parametri  
-> ma non lascia traccia (no side effects).  
-> 
-> L'accessor è il contenitore:  
-> preserva l'acqua (cache),  
-> protegge dalla fuga (guard PK),  
+> "Il metodo puro è come l'acqua:
+> fluisce attraverso i parametri
+> ma non lascia traccia (no side effects).
+>
+> L'accessor è il contenitore:
+> preserva l'acqua (cache),
+> protegge dalla fuga (guard PK),
 > e la riversa nel lago (save DB)."
 
 ## Pattern Template Definitivo
@@ -96,10 +96,10 @@ public function getValoreAttribute(): type {
 ```php
 /**
  * Calcola [descrizione business logic].
- * 
+ *
  * Business Rule: [regola normativa/CCNL]
  * [IMPORTANTE: Side effect se presente]
- * 
+ *
  * @return type|null Risultato calcolo
  */
 protected function get<Nome>(): ?type
@@ -108,13 +108,13 @@ protected function get<Nome>(): ?type
     if (/* condizione invalidante */) {
         return null;
     }
-    
+
     // 2. Setup dati
     $input = /* preparazione */;
-    
+
     // 3. Calcolo puro (o delegazione)
     $risultato = /* formula/query/delegazione */;
-    
+
     // 4. Return diretto
     return $risultato;
 }
@@ -126,7 +126,7 @@ protected function get<Nome>(): ?type
 /**
  * Accessor per <campo>.
  * Delega calcolo a get<Nome>().
- * 
+ *
  * @param type|null $value Valore cached dal DB
  * @return type|null Valore calcolato
  */
@@ -136,24 +136,24 @@ public function get<Nome>Attribute(?type $value): ?type
     if (null !== $value && ! request()->input('refresh', 0)) {
         return $value;
     }
-    
+
     // 2. Guard PK (OBBLIGATORIO se c'è save sotto)
     if (null == $this->getKey()) {
         return null;
     }
-    
+
     // 3. Delega calcolo
     $value = $this->get<Nome>();
-    
+
     // 4. Null safety
     if (null === $value) {
         return null;
     }
-    
+
     // 5. Persist
     $this->attributes['<campo>'] = $value;
     $this->save(); // Sicuro perché guard sopra
-    
+
     return $value;
 }
 ```
@@ -177,7 +177,7 @@ public function get<Nome>Attribute(?type $value): ?type
    Anche se errore (try/finally)
 ```
 
-**Memoria**: ID 10475806  
+**Memoria**: ID 10475806
 **Regole**: `.cursor/rules/file-locking-mandatory.mdc`
 
 ## Risultati Sessione 29 Gennaio 2025
@@ -325,4 +325,3 @@ Moduli con logica inline complessa:
 **Tipo**: Guida Completa Master
 **Scope**: Tutti i moduli progetto
 **Status**: 📚 Documentazione completa, 🔄 Implementazione 13% globale
-

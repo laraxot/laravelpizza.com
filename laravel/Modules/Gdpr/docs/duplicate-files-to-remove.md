@@ -22,7 +22,7 @@ Vedi documentazione completa: [Xot/docs/file-naming-case-sensitivity.md](../../X
 
 ## ⚠️ Problema
 
-Su Linux (production): due file diversi  
+Su Linux (production): due file diversi
 Su Windows/macOS (dev): stesso file → **conflitti Git**
 
 ## 🔧 Comando Cleanup
@@ -43,7 +43,6 @@ git commit -m "fix: remove lowercase duplicate test file (PSR-4 compliance)"
 
 ---
 
-**Riferimenti**: 
+**Riferimenti**:
 - [Xot File Naming Rules](../../Xot/docs/file-naming-case-sensitivity.md)
 - [Bashscripts Location Policy](../../Xot/docs/bashscripts-location-policy.md)
-

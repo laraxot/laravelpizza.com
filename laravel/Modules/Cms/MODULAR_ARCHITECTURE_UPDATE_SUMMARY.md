@@ -14,7 +14,7 @@ Ho aggiornato COMPLETAMENTE il sistema di memoria e documentazione per cristalli
 - **Geo** - Gestione geografica base
 - **UI** - Componenti UI base
 
-### Livello 2: Moduli Specifici  
+### Livello 2: Moduli Specifici
 - **<nome progetto>** - Business logic sanitaria
 - **Patient** - Gestione pazienti
 - **Studio** - Gestione studi medici
@@ -46,7 +46,7 @@ Livello 1 → Livello 2    ❌ MAI
 
 ### ⚙️ **Regole Sistema**
 - ✅ `.windsurf/rules/modular-architecture-critical.mdc` - NUOVO
-- ✅ `.cursor/rules/modular-architecture-critical.mdc` - NUOVO  
+- ✅ `.cursor/rules/modular-architecture-critical.mdc` - NUOVO
 - ✅ `.windsurf/rules/modular-architecture-dependency-rules.mdc` - Aggiornato
 - ✅ `.cursor/rules/modular-architecture-dependency-rules.mdc` - Aggiornato
 
@@ -182,7 +182,7 @@ use Modules\<nome progetto>\Models\Patient;     // ERRORE!
 
 ### Principi Guida Assoluti
 1. **Separation of Concerns**: Ogni modulo ha una responsabilità precisa
-2. **Dependency Inversion**: Dipendi da astrazioni, non da implementazioni  
+2. **Dependency Inversion**: Dipendi da astrazioni, non da implementazioni
 3. **Open/Closed Principle**: Base chiusi per modifiche, aperti per estensioni
 4. **Single Responsibility**: Un modulo, una responsabilità, un livello
 
@@ -225,6 +225,6 @@ Questa correzione è **CRITICA** per l'integrità architettuale del sistema.
 
 **Questa regola è ora SUPREMA e ha precedenza su qualsiasi altra considerazione architettuale.**
 
-**Data implementazione**: Gennaio 2025  
-**Status**: COMPLETATO - VIOLAZIONE DA CORREGGERE  
+**Data implementazione**: Gennaio 2025
+**Status**: COMPLETATO - VIOLAZIONE DA CORREGGERE
 **Applicabilità**: UNIVERSALE - tutto il sistema modulare**

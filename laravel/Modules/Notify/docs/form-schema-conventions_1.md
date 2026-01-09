@@ -1,4 +1,4 @@
-# Convenzioni per i Form Schema 
+# Convenzioni per i Form Schema
 
 ## Regola Fondamentale per Array di Schema
 

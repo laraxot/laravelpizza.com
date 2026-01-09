@@ -45,7 +45,7 @@ cd /var/www/html/ptvx/laravel && php artisan cache:clear && php artisan config:c
 
 ## Note su errori comuni
 
-Un errore comune è la duplicazione di percorsi (`lang/lang/it/` invece di `lang/it/`), che può portare a errori di sintassi difficili da tracciare. 
+Un errore comune è la duplicazione di percorsi (`lang/lang/it/` invece di `lang/it/`), che può portare a errori di sintassi difficili da tracciare.
 
 Un altro errore frequente è l'utilizzo della sintassi vecchia degli array (`array()`) invece della sintassi breve (`[]`), che è più leggibile e meno soggetta a errori.
 

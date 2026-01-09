@@ -18,4 +18,4 @@
 ## Testing
 - Unit test per ogni evento, proiettore, reattore
 - Feature test per flussi utente (creazione mercato, scommessa, payout)
-- Test di integrazione con oracoli esterni 
+- Test di integrazione con oracoli esterni

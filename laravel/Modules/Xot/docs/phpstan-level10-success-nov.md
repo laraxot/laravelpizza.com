@@ -149,4 +149,3 @@ Risultato ottenuto seguendo rigorosamente:
 - Zero compromessi su qualità codice
 
 **Mantra**: "Un modulo alla volta, un errore alla volta, zero compromessi"
-

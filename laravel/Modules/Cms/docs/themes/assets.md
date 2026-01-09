@@ -89,10 +89,9 @@
 3. **Problemi di Cache**
    - Pulire la cache del browser
    - Aggiornare la cache del CMS
-   - Verificare i timestamp dei file 
+   - Verificare i timestamp dei file
 
 ## Collegamenti tra versioni di assets.md
 * [assets.md](laravel/Modules/Xot/docs/assets.md)
 * [assets.md](laravel/Modules/Cms/docs/themes/assets.md)
 * [assets.md](laravel/Themes/One/docs/assets.md)
-

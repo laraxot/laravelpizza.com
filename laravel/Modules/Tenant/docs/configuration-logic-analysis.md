@@ -167,7 +167,7 @@ TenantService::filePath('database/content/pages/home.json')
 
 Il sistema supporta diversi tenant:
 - `config/local/laravelpizza/` → Tenant per sviluppo
-- `config/production/` → Tenant per produzione  
+- `config/production/` → Tenant per produzione
 - `config/cliente1/` → Tenant per cliente specifico
 - `config/localhost/` → Tenant per testing locale
 
@@ -224,6 +224,6 @@ I contenuti delle pagine sono memorizzati in JSON:
 
 ---
 
-**Ultimo aggiornamento**: 2026-01-08  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2026-01-08
+**Versione**: 1.0.0
 **Status**: ✅ Completato

@@ -8,7 +8,7 @@ Il file `/laravel/Modules/UI/lang/en/opening_hours_field.php` conteneva molte vo
 
 ### Campi per Ogni Giorno
 - `morning` - Sezione mattutina
-- `afternoon` - Sezione pomeridiana  
+- `afternoon` - Sezione pomeridiana
 - `morning_label` - Etichetta attività mattutine
 - `afternoon_label` - Etichetta attività pomeridiane
 
@@ -134,4 +134,3 @@ done
 - **REGOLA CRITICA**: Struttura espansa per tutti i campi
 - **REGOLA CRITICA**: Sintassi moderna e tipizzazione stretta
 - **REGOLA CRITICA**: Controllo automatico con script
-

@@ -18,7 +18,7 @@
 ```
 /var/www/html/saluteora/laravel/Modules/Notify/
 ├── app/                           # Directory fisica con app minuscolo
-│   ├── Actions/                  
+│   ├── Actions/
 │   │   ├── Email/                # Azioni per email
 │   │   ├── SMS/                  # Azioni per SMS
 │   │   └── WhatsApp/             # Azioni per WhatsApp

@@ -1,7 +1,7 @@
 # Pattern: Actions che chiamano altre Actions
 
-**Data**: 2025-01-18  
-**Modulo**: Notify  
+**Data**: 2025-01-18
+**Modulo**: Notify
 **Status**: ✅ Pattern consolidato
 
 ## Principio Fondamentale
@@ -58,7 +58,7 @@ class SendRecordsNotificationBulkAction
     {
         // Chiama altre Actions usando app() dentro execute()
         $normalizedPhone = app(NormalizePhoneNumberAction::class)->execute($phone);
-        
+
         // Logica business...
     }
 }
@@ -106,7 +106,7 @@ class UpdateCoordinatesAction
     {
         // ✅ Pattern corretto: app() dentro execute()
         $geocodingAction = app(GetAddressDataFromFullAddressAction::class);
-        
+
         // Usa l'action...
     }
 }
@@ -125,7 +125,7 @@ class SendMailByRecordsAction
             // ✅ Pattern corretto: app() dentro execute()
             app(SendMailByRecordAction::class)->execute($record, $mail_class);
         }
-        
+
         return true;
     }
 }
@@ -216,6 +216,6 @@ Prima di aggiungere dependency injection nel costruttore per chiamare altre Acti
 
 ---
 
-**Filosofia**: "La semplicità è la massima sofisticazione" - Leonardo da Vinci  
-**Principio**: KISS > DI quando non necessaria  
+**Filosofia**: "La semplicità è la massima sofisticazione" - Leonardo da Vinci
+**Principio**: KISS > DI quando non necessaria
 **Pattern**: `app(Action::class)->execute()` dentro `execute()`

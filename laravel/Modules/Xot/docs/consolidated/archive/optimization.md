@@ -46,9 +46,8 @@
 ## Collegamenti
 - [Roadmap Principale](../../roadmap.md)
 - [Best Practices Performance](../../BEST-PRACTICES.md#performance)
-- [Performance Guidelines](../../performance/optimization.md) 
+- [Performance Guidelines](../../performance/optimization.md)
 ## Collegamenti tra versioni di optimization.md
 * [optimization.md](../../../Xot/project_docs/roadmap/performance/optimization.md)
 * [optimization.md](../../../Job/project_docs/optimization.md)
 * [optimization.md](../../../Cms/project_docs/roadmap/performance/optimization.md)
-

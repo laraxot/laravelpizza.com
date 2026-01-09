@@ -76,14 +76,14 @@ $notificationData = [
 
 ### Moduli che DEVONO essere Generici
 - **Notify**: Sistema di notifiche per qualsiasi progetto
-- **User**: Gestione utenti per qualsiasi progetto  
+- **User**: Gestione utenti per qualsiasi progetto
 - **UI**: Componenti UI per qualsiasi progetto
 - **Xot**: Base framework per qualsiasi progetto
 - **Geo**: Gestione geografica per qualsiasi progetto
 - **Media**: Gestione media per qualsiasi progetto
 
 ### Moduli Specifici del Progetto
-- ****: Solo per progetto 
+- ****: Solo per progetto
 - **SaluteOra**: Solo per progetto SaluteOra
 - **SaluteMo**: Solo per progetto SaluteMo
 - **Patient**: Solo per progetti sanitari specifici
@@ -119,9 +119,9 @@ grep -r "saluteora\|salutemo" laravel/Modules/Xot/ --include="*.php"
 ### Variabili d'Ambiente
 ```env
 COMPANY_NAME=
-COMPANY_TEAM=Team 
+COMPANY_TEAM=Team
 WEBHOOK_BASE_URL=https://api.<nome progetto>.com
-CLINIC_NAME=Studio Dentistico 
+CLINIC_NAME=Studio Dentistico
 REPOSITORY_URL=https://github.com/<nome progetto>/notify
 COMPANY_NAME=SaluteOra
 COMPANY_TEAM=Team SaluteOra

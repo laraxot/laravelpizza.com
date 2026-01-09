@@ -186,11 +186,11 @@ return [
 class ContactColumn extends ViewColumn
 {
     protected string $view = 'notify::filament.tables.columns.contact';
-    
+
     protected function setUp(): void
     {
         parent::setUp();
-        
+
         $this->label(__('notify::columns.contact.label'))
             ->searchable(['phone', 'mobile', 'email', 'pec', 'whatsapp', 'fax', 'first_name', 'last_name'])
             ->sortable(false)
@@ -342,4 +342,4 @@ La ContactColumn ora:
 - ✅ Mostra correttamente le icone
 - ✅ Mostra solo i contatti del record specifico
 
-*Ultimo aggiornamento: 2025-01-06* 
+*Ultimo aggiornamento: 2025-01-06*

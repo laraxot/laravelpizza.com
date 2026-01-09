@@ -30,7 +30,7 @@ parameters:
         - '#Call to an undefined method#'
 
     checkMissingIterableValueType: false
-    
+
     # Paths to scan
     scanDirectories:
         - ../../vendor/laravel/framework
@@ -120,4 +120,4 @@ Utilizzare Rector per correggere automaticamente le chiamate alle funzioni:
 ```bash
 composer require --dev rector/rector
 vendor/bin/rector process app/ --config vendor/thecodingmachine/safe/rector-migrate.php
-``` 
+```

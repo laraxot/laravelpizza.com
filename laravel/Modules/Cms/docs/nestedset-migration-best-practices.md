@@ -21,21 +21,21 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi navigazione
             $table->string('title');
             $table->string('url')->nullable();
             $table->string('icon')->nullable();
             $table->string('target')->default('_self'); // _self, _blank, _parent
-            
+
             // NestedSet per gerarchia menu
             NestedSet::columns($table);
-            
+
             // Campi specifici CMS
             $table->integer('order')->default(0);
             $table->boolean('is_active')->default(true);
             $table->string('role')->nullable()->comment('Ruolo richiesto per visualizzare');
-            
+
             $table->timestamps();
         });
 
@@ -44,7 +44,7 @@ return new class extends XotBaseMigration
             if (!$this->hasColumn('parent_id')) {
                 $table->unsignedBigInteger('parent_id')->nullable();
             }
-            
+
             $this->updateTimestamps($table, true);
         });
     }
@@ -64,26 +64,26 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi pagina
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('excerpt')->nullable();
             $table->longText('content')->nullable();
-            
+
             // NestedSet per gerarchia pagine
             NestedSet::columns($table);
-            
+
             // Metadati SEO
             $table->string('meta_title')->nullable();
             $table->text('meta_description')->nullable();
             $table->string('meta_keywords')->nullable();
-            
+
             // Campi CMS
             $table->string('template')->default('default');
             $table->boolean('is_published')->default(false);
             $table->timestamp('published_at')->nullable();
-            
+
             $table->timestamps();
         });
     }
@@ -103,21 +103,21 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi categoria
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia categorie
             NestedSet::columns($table);
-            
+
             // Campi specifici CMS
             $table->string('color')->default('#6b7280');
             $table->string('icon')->nullable();
             $table->integer('sort_order')->default(0);
             $table->boolean('is_visible')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -137,20 +137,20 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi struttura
             $table->string('name');
             $table->string('type'); // page, category, link, section
             $table->string('reference_id')->nullable(); // ID del riferimento
             $table->string('reference_type')->nullable(); // Tipo del riferimento
-            
+
             // NestedSet per gerarchia sito
             NestedSet::columns($table);
-            
+
             // Configurazioni
             $table->json('settings')->nullable();
             $table->boolean('is_navigable')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -171,7 +171,7 @@ use Modules\Xot\Models\Traits\TypedHasRecursiveRelationships;
 class Menu extends BaseTreeModel
 {
     use NodeTrait;
-    
+
     protected $fillable = [
         'title',
         'url',
@@ -181,23 +181,23 @@ class Menu extends BaseTreeModel
         'is_active',
         'role',
     ];
-    
+
     protected $casts = [
         'is_active' => 'boolean',
         'order' => 'integer',
     ];
-    
+
     // Scopes specifici CMS
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
     }
-    
+
     public function scopeOrdered($query)
     {
         return $query->orderBy('order')->orderBy('title');
     }
-    
+
     public function scopeByRole($query, $role = null)
     {
         if ($role) {
@@ -242,7 +242,7 @@ public function getEffectiveTemplateAttribute(): string
     if ($this->template !== 'default') {
         return $this->template;
     }
-    
+
     return $this->parent?->effective_template ?? 'default';
 }
 ```
@@ -271,21 +271,21 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Multi-sito support
             $table->string('site_id');
             $table->string('title');
             $table->string('url')->nullable();
-            
+
             // NestedSet per gerarchia menu per sito
             NestedSet::columns($table);
-            
+
             // Campi specifici
             $table->integer('order')->default(0);
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
-            
+
             // Indici per multi-sito
             $table->index(['site_id', 'parent_id', 'is_active']);
         });

@@ -37,10 +37,10 @@ $attachments = [
    ```php
    // Creare l'istanza dell'email
    $email = new SpatieEmail($user, 'due');
-   
+
    // Aggiungere gli allegati
    $email->addAttachments($attachments);
-   
+
    // Inviare l'email
    Mail::to($data['to'])
        ->locale('it')
@@ -130,4 +130,4 @@ Mail::to($user->email)
 - Verificare la compatibilità
 - Documentare i tipi supportati
 - Implementare gestione errori
-- Monitorare le performance 
+- Monitorare le performance

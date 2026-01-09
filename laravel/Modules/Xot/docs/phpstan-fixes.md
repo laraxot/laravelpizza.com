@@ -2,9 +2,6 @@
 
 ## Errori Risolti
 
-
-
-
 5693302 (.)
 
 b6f667c (.)
@@ -209,9 +206,6 @@ Il problema è che il codice chiamava il metodo `getName()` sui componenti Filam
 }
 ```
 
-
-
-
 5693302 (.)
 
 b6f667c (.)
@@ -250,19 +244,19 @@ private function getComponentName(Field|Component $component): string
     if (method_exists($component, 'getName')) {
         return $component->getName();
     }
-    
+
     // Per i componenti generali di Filament che hanno getStatePath
     if (method_exists($component, 'getStatePath')) {
         return $component->getStatePath();
     }
-    
+
     // Fallback a reflection per altri casi
     $reflectionClass = new \ReflectionClass($component);
     if ($reflectionClass->hasProperty('name') && $reflectionClass->getProperty('name')->isPublic()) {
         $property = $reflectionClass->getProperty('name');
         return (string) $property->getValue($component);
     }
-    
+
     // Ultima risorsa
     return class_basename($component);
 }
@@ -696,7 +690,7 @@ private function exportTablesToCSV(string $mdbFile): void
 // Dopo:
 /**
  * Esporta tutte le tabelle dal file .mdb in formato CSV.
- * 
+ *
  * @return string[] Array di nomi di tabelle esportate
  */
 private function exportTablesToCSV(string $mdbFile): array

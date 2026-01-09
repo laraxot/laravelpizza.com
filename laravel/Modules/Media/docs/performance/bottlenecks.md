@@ -26,7 +26,7 @@ class ProcessMediaJob implements ShouldQueue {
 // 2. Chunked upload
 public function handleChunkedUpload($file) {
     return $file->chunks(1024 * 1024)
-        ->each(fn($chunk) => 
+        ->each(fn($chunk) =>
             $this->processChunk($chunk)
         );
 }
@@ -116,7 +116,7 @@ public function getMediaCollection($model) {
         ->select(['id', 'file_name', 'size'])
         ->lazyById(1000)
         ->remember()
-        ->each(fn($media) => 
+        ->each(fn($media) =>
             $this->processMedia($media)
         );
 }
@@ -124,7 +124,7 @@ public function getMediaCollection($model) {
 // 2. Cache metadati
 protected function getMediaMetadata($media) {
     return Cache::tags(['media_metadata'])
-        ->remember("metadata_{$media->id}", 
+        ->remember("metadata_{$media->id}",
             now()->addHour(),
             fn() => $this->generateMetadata($media)
         );
@@ -192,7 +192,7 @@ Implementare:
    // Cache per file frequenti
    public function getMedia($id) {
        return Cache::tags(['media'])
-           ->remember("media_{$id}", 
+           ->remember("media_{$id}",
                now()->addHour(),
                fn() => $this->fetchMedia($id)
            );
@@ -206,7 +206,7 @@ Implementare:
        return $this->media
            ->whereOlderThan(now()->subDays(30))
            ->chunk(100)
-           ->each(fn($chunk) => 
+           ->each(fn($chunk) =>
                $this->compressFiles($chunk)
            );
    }
@@ -219,13 +219,12 @@ Implementare:
        return LazyCollection::make(function () {
            yield from $this->getMediaFiles();
        })->chunk(100)
-         ->each(fn($chunk) => 
+         ->each(fn($chunk) =>
              $this->processChunk($chunk)
          );
    }
    ```
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
@@ -239,9 +238,6 @@ Implementare:
 * [bottlenecks.md](../../../Media/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Patient/docs/roadmap/bottlenecks.md)
 
-
 ### Versione Incoming
 
-
 ---
-

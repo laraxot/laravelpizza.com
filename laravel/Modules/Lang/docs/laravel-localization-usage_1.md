@@ -1,4 +1,4 @@
-# Utilizzo di mcamara/laravel-localization 
+# Utilizzo di mcamara/laravel-localization
 
 ## Collegamenti correlati
 - [README modulo Lang](./README.md)
@@ -76,17 +76,17 @@ $currentLocale = app()->getLocale();
 
 <div class="relative" x-data="{ open: false }">
     <button @click="open = !open" @click.away="open = false">
-        <x-dynamic-component 
-            :component="'ui-flags.' . ($currentLocale === 'en' ? 'gb' : $currentLocale)" 
+        <x-dynamic-component
+            :component="'ui-flags.' . ($currentLocale === 'en' ? 'gb' : $currentLocale)"
         />
         <span>{{ LaravelLocalization::getSupportedLocales()[$currentLocale]['native'] }}</span>
     </button>
-    
+
     <div x-show="open">
         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
             <a href="{{ LaravelLocalization::getLocalizedURL($localeCode) }}">
-                <x-dynamic-component 
-                    :component="'ui-flags.' . ($localeCode === 'en' ? 'gb' : $localeCode)" 
+                <x-dynamic-component
+                    :component="'ui-flags.' . ($localeCode === 'en' ? 'gb' : $localeCode)"
                 />
                 <span>{{ $properties['native'] }}</span>
             </a>
@@ -131,7 +131,7 @@ Questi middleware sono già configurati  e non è necessario modificarli.
    ```php
    // ERRATO
    <a href="{{ LaravelLocalization::getLocalizedURL('it') }}">Italiano</a>
-   
+
    // CORRETTO
    <a href="{{ LaravelLocalization::getLocalizedURL('it') }}">Italiano</a>
    ```
@@ -140,7 +140,7 @@ Questi middleware sono già configurati  e non è necessario modificarli.
    ```php
    // ERRATO
    <a href="{{ '/' . $locale . '/pages/about' }}">About</a>
-   
+
    // CORRETTO
    <a href="{{ LaravelLocalization::getLocalizedURL($locale, route('pages.about')) }}">About</a>
    ```
@@ -149,7 +149,7 @@ Questi middleware sono già configurati  e non è necessario modificarli.
    ```php
    // ERRATO
    @php app()->setLocale('it') @endphp
-   
+
    // CORRETTO - Lasciare che il middleware gestisca la locale
    // Non modificare manualmente la locale
    ```
@@ -170,7 +170,7 @@ Questi middleware sono già configurati  e non è necessario modificarli.
         <x-dynamic-component :component="'ui-flags.' . $flagCode" />
         <span>{{ LaravelLocalization::getSupportedLocales()[$currentLocale]['native'] }}</span>
     </button>
-    
+
     <div x-show="open">
         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
             @php

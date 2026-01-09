@@ -40,4 +40,4 @@ class HandlerDecorator implements ExceptionHandlerContract
 - [Exception Handling Guidelines](../EXCEPTION-HANDLING-GUIDE.md)
 - [Logging Best Practices](../LOGGING-BEST-PRACTICES.md)
 - [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
-- [Error Formatters](./formatters/README.md) 
+- [Error Formatters](./formatters/README.md)

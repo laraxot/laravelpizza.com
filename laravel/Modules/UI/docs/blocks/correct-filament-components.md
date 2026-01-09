@@ -101,10 +101,10 @@ Per il componente `user-dropdown.blade.php`, l'implementazione corretta è:
         @endforeach
     </x-filament::dropdown>
 
-    <form 
-        id="logout-form" 
-        action="{{ route('logout', ['locale' => $locale]) }}" 
-        method="POST" 
+    <form
+        id="logout-form"
+        action="{{ route('logout', ['locale' => $locale]) }}"
+        method="POST"
         class="hidden"
     >
         @csrf

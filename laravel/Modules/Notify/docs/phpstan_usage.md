@@ -114,13 +114,9 @@ parameters:
 Il file `phpstan.neon` nella directory Laravel contiene le configurazioni personalizzate per il progetto.
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di phpstan-usage.md
 * [phpstan-usage.md](../../Chart/project_docs/phpstan-usage.md)
 
-
 ### Versione Incoming
 
-
 ---
-

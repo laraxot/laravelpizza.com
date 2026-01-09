@@ -25,7 +25,7 @@
 // ❌ PRIMA
 return $progressStr.'%';
 
-// ✅ DOPO  
+// ✅ DOPO
 $progressStr = is_numeric($progress) ? ((string) $progress) : '0';
 return sprintf('%s%%', $progressStr);
 ```
@@ -48,7 +48,7 @@ Assert::string($date_format);
 **Soluzione**: Type narrowing esplicito
 
 ```php
-// ❌ PRIMA  
+// ❌ PRIMA
 ->hidden(fn ($record) => $record->trashed())
 
 // ✅ DOPO
@@ -112,7 +112,7 @@ return $schema->components($formSchema);
 ### Prossimi Step
 
 1. Lang (40+ errori)
-2. Media (20+ errori)  
+2. Media (20+ errori)
 3. Notify (60+ errori)
 4. Quaeris (30+ errori)
 5. Tenant (10+ errori)

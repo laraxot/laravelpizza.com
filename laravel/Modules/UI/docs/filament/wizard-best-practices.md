@@ -110,7 +110,7 @@ class PatientResource extends XotBaseResource
             ->submitAction(new HtmlString(self::getSubmitButton()))
         ];
     }
-    
+
     protected static function getPersonalDataStep(): Forms\Components\Wizard\Step
     {
         return Forms\Components\Wizard\Step::make('Dati Personali')
@@ -126,7 +126,7 @@ class PatientResource extends XotBaseResource
                 // ...altri campi
             ]);
     }
-    
+
     // ...altri metodi per gli step
 }
 ```
@@ -142,13 +142,13 @@ public static function getFormSchemaWidget(): array
         self::getPersonalDataStep(),
         self::getContactsStep(),
     ];
-    
+
     if (auth()->user()->hasRole('doctor')) {
         $steps[] = self::getMedicalInfoStep();
     }
-    
+
     $steps[] = self::getPrivacyStep();
-    
+
     return [
         Forms\Components\Wizard::make($steps)
             ->skippable(false)

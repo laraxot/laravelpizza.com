@@ -102,7 +102,7 @@ Customize the module to fit your app's GDPR needs. Update configurations via `mo
 
 ### Author 👨‍💻
 
-Developed and maintained by [Marco Sottana](https://github.com/marco76tv)  
+Developed and maintained by [Marco Sottana](https://github.com/marco76tv)
 📧 Email: marco.sottana@gmail.com
 
 ---

@@ -50,17 +50,17 @@ class ExampleChartAction
         $labels = $answersChartData->answers->toCollection()->pluck('label')->all();
         $data = $answersChartData->answers->toCollection()->pluck('avg')->all();
         $chart = $answersChartData->chart;
-        
+
         // Create chart object
         $graph = new Graph($chart->width, $chart->height);
-        
+
         // Apply styling and configuration
         $graph = app(ApplyGraphStyleAction::class)->execute($graph, $chart);
-        
+
         // Create and configure plot
         $plot = new SomePlotType($data);
         $plot->SetLegends($labels);
-        
+
         // Add to graph and return
         $graph->Add($plot);
         return $graph;
@@ -176,12 +176,12 @@ public function getChartJsData(): array
 {
     $datasets = [];
     $labels = [];
-    
+
     foreach ($this->answers as $answer) {
         $labels[] = $answer->label;
         $datasets[] = $answer->avg ?? $answer->value;
     }
-    
+
     return [
         'labels' => $labels,
         'datasets' => [
@@ -214,7 +214,7 @@ public function getChartJsOptionsArray(): array
             ]
         ]
     ];
-    
+
     switch ($this->getChartJsType()) {
         case 'bar':
             $baseOptions['indexAxis'] = $this->chart->type === 'horizbar1' ? 'y' : 'x';
@@ -224,7 +224,7 @@ public function getChartJsOptionsArray(): array
             $baseOptions['plugins']['legend']['position'] = 'right';
             break;
     }
-    
+
     return $baseOptions;
 }
 ```
@@ -258,28 +258,28 @@ class MakeImgByQuestionChartModel2Action
         // Process chart data
         $datas = app(GetChartsDataByQuestionChart::class)
             ->execute($q, $responses, $answersFilterData);
-        
+
         $filenames = [];
-        
+
         foreach ($datas as $k => $data_answers) {
             // Create chart data objects
             $answersData = AnswersChartData::from([
                 'answers' => $data_answers->answers,
                 'chart' => $chart_style,
             ]);
-            
+
             // Get and execute appropriate action
             $action_class = $chart_style->getActionClass();
             $graph = app($action_class)->execute($answersData);
-            
+
             // Save as PNG
             $filename = 'chart/'.$q->id.'-'.$k.'.png';
             $file_path = public_path($filename);
-            
+
             if (File::exists($file_path)) {
                 File::delete($file_path);
             }
-            
+
             try {
                 $graph->Stroke($file_path);
             } catch (\Throwable $e) {
@@ -288,20 +288,20 @@ class MakeImgByQuestionChartModel2Action
                     'file_path' => $file_path,
                 ]);
             }
-            
+
             $filenames[] = $filename;
         }
-        
+
         // Merge multiple charts if needed
         $fileName = 'chart/'.$q->id.'.png';
         $mergeAction = app(Merge::class);
         $mergeAction->execute($filenames, $fileName);
-        
+
         // Update model
         $q->img_src = $fileName;
         $q->generated_at = now();
         $q->save();
-        
+
         return ['filenames' => $fileName];
     }
 }
@@ -322,7 +322,7 @@ class ChartToSvgAction
     public function execute(ChartData $chartData, array $chartJsData): string
     {
         $svg = '<svg width="'.$chartData->width.'" height="'.$chartData->height.'" xmlns="http://www.w3.org/2000/svg">';
-        
+
         switch ($chartData->type) {
             case 'pie1':
                 $svg .= $this->generatePieChartSvg($chartJsData, $chartData);
@@ -331,43 +331,43 @@ class ChartToSvgAction
                 $svg .= $this->generateBarChartSvg($chartJsData, $chartData);
                 break;
         }
-        
+
         $svg .= '</svg>';
         return $svg;
     }
-    
+
     private function generatePieChartSvg(array $chartJsData, ChartData $chartData): string
     {
         $svg = '';
         $datasets = $chartJsData['datasets'][0]['data'] ?? [];
         $colors = $chartData->getColors();
-        
+
         $centerX = $chartData->width / 2;
         $centerY = $chartData->height / 2;
         $radius = min($chartData->width, $chartData->height) * 0.4;
-        
+
         $total = array_sum($datasets);
         $startAngle = 0;
-        
+
         foreach ($datasets as $i => $value) {
             if ($total == 0) continue;
-            
+
             $angle = (360 * $value) / $total;
             $endAngle = $startAngle + $angle;
-            
+
             $startX = $centerX + $radius * cos(deg2rad($startAngle));
             $startY = $centerY + $radius * sin(deg2rad($startAngle));
             $endX = $centerX + $radius * cos(deg2rad($endAngle));
             $endY = $centerY + $radius * sin(deg2rad($endAngle));
-            
+
             $largeArc = $angle > 180 ? 1 : 0;
-            
+
             $path = "M {$centerX} {$centerY} L {$startX} {$startY} A {$radius} {$radius} 0 {$largeArc} 1 {$endX} {$endY} Z";
             $svg .= '<path d="'.$path.'" fill="'.$colors[$i % count($colors)].'" />';
-            
+
             $startAngle = $endAngle;
         }
-        
+
         return $svg;
     }
 }
@@ -381,7 +381,7 @@ For Chart.js to SVG conversion, libraries like `canvg` can be used:
 function convertChartToSvg(canvasId) {
     const canvas = document.getElementById(canvasId);
     const ctx = canvas.getContext('2d');
-    
+
     // Use canvg or similar library to convert canvas to SVG
     const svg = canvg.fromString(ctx.canvas.toDataURL('image/png'));
     return svg;
@@ -417,7 +417,7 @@ class MakePdfAction
 
         // Generate HTML
         $html = app(MakeHtmlBySurveyPdfModelAction::class)->execute($surveyPdf);
-        
+
         if (request('debug', false)) {
             return $html;
         }
@@ -466,7 +466,7 @@ class HtmlService
             $html2pdf = new Html2Pdf($pdforientation, 'A4', 'it');
             $html2pdf->setTestTdInOnePage(false);
             $html2pdf->WriteHTML($html);
-            
+
             if ($out === 'content_PDF') {
                 return $html2pdf->Output($filename.'.pdf', 'S');
             }
@@ -519,7 +519,7 @@ PDFs support multi-page layouts with proper headers and footers:
             </tr>
         </table>
     </page_header>
-    
+
     <!-- Chart content -->
     @foreach ($rows as $row)
         <page pageset="old">
@@ -528,7 +528,7 @@ PDFs support multi-page layouts with proper headers and footers:
             </table>
         </page>
     @endforeach
-    
+
     <page_footer>
         <table class="page_footer">
             <tr>

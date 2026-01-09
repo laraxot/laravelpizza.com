@@ -21,25 +21,25 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi categoria trattamento
             $table->string('name');
             $table->string('code')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia categorie
             NestedSet::columns($table);
-            
+
             // Campi GDPR specifici
             $table->string('legal_basis'); // consent, contract, legal_obligation, vital_interests, public_task, legitimate_interests
             $table->string('purpose')->nullable();
             $table->text('retention_policy')->nullable();
             $table->integer('retention_days')->nullable();
-            
+
             // Metadati
             $table->json('metadata')->nullable();
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -59,26 +59,26 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi tipo dato personale
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia tipi
             NestedSet::columns($table);
-            
+
             // Classificazione sensibilità
             $table->string('sensitivity_level'); // low, medium, high, special
             $table->boolean('is_special_category')->default(false);
-            
+
             // Regole di trattamento
             $table->json('processing_rules')->nullable();
             $table->json('storage_requirements')->nullable();
             $table->json('encryption_requirements')->nullable();
-            
+
             $table->boolean('is_active')->default(true);
-            
+
             $table->timestamps();
         });
     }
@@ -98,28 +98,28 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi unità organizzativa
             $table->string('name');
             $table->string('type'); // controller, processor, dpo, data_protection_officer
             $table->string('contact_email');
-            
+
             // NestedSet per gerarchia organizzativa GDPR
             NestedSet::columns($table);
-            
+
             // Responsabilità
             $table->text('responsibilities')->nullable();
             $table->json('data_categories_processed')->nullable();
             $table->json('subprocessors')->nullable();
-            
+
             // Certificazioni
             $table->string('certification')->nullable();
             $table->date('certification_expiry')->nullable();
-            
+
             // Contatti
             $table->string('dpo_name')->nullable();
             $table->string('dpo_email')->nullable();
-            
+
             $table->timestamps();
         });
     }
@@ -139,24 +139,24 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi policy
             $table->string('title');
             $table->string('version');
             $table->text('summary')->nullable();
-            
+
             // NestedSet per gerarchia policy
             NestedSet::columns($table);
-            
+
             // Contenuto
             $table->longText('content')->nullable();
             $table->json('sections')->nullable();
-            
+
             // Metadati
             $table->string('language', 5)->default('it');
             $table->date('effective_date');
             $table->boolean('is_current')->default(false);
-            
+
             $table->timestamps();
         });
     }
@@ -180,29 +180,29 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Identificazione soggetto
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('email')->unique();
-            
+
             // Dati di contatto usando AddressItemEnum::columns()
             AddressItemEnum::columns($table, withLegacy: false);
-            
+
             // Dati GDPR specifici
             $table->string('tax_code')->nullable();
             $table->string('passport_number')->nullable();
             $table->date('birth_date')->nullable();
-            
+
             // Preferenze privacy
             $table->json('privacy_preferences')->nullable();
             $table->json('consents')->nullable();
             $table->timestamp('consent_updated_at')->nullable();
-            
+
             // Stato
             $table->boolean('is_active')->default(true);
             $table->timestamp('last_activity_at')->nullable();
-            
+
             $table->timestamps();
             $table->softDeletes();
         });
@@ -223,30 +223,30 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
-            
+
             // Campi attività
             $table->string('name');
             $table->text('description')->nullable();
-            
+
             // NestedSet per gerarchia attività
             NestedSet::columns($table);
-            
+
             // Dettagli trattamento
             $table->string('purpose');
             $table->string('legal_basis');
             $table->text('data_subjects')->nullable();
             $table->json('data_categories')->nullable();
-            
+
             // Sicurezza
             $table->json('security_measures')->nullable();
             $table->string('risk_level')->nullable();
-            
+
             // Controller/Processor
             $table->unsignedBigInteger('controller_id')->nullable();
             $table->unsignedBigInteger('processor_id')->nullable();
-            
+
             $table->timestamps();
-            
+
             // Foreign keys
             $table->foreign('controller_id')->references('id')->on('gdpr_organizational_units');
             $table->foreign('processor_id')->references('id')->on('gdpr_organizational_units');
@@ -268,7 +268,7 @@ use Kalnoy\Nestedset\NodeTrait;
 class TreatmentCategory extends Model
 {
     use NodeTrait;
-    
+
     protected $fillable = [
         'name',
         'code',
@@ -280,30 +280,30 @@ class TreatmentCategory extends Model
         'metadata',
         'is_active',
     ];
-    
+
     protected $casts = [
         'metadata' => 'array',
         'is_active' => 'boolean',
         'retention_days' => 'integer',
     ];
-    
+
     // Relazioni
     public function treatments()
     {
         return $this->hasMany(DataProcessingActivity::class, 'category_id');
     }
-    
+
     // Scopes specifici GDPR
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
     }
-    
+
     public function scopeByLegalBasis($query, $basis)
     {
         return $query->where('legal_basis', $basis);
     }
-    
+
     // Metodi helper
     public function getAllTreatments()
     {
@@ -312,13 +312,13 @@ class TreatmentCategory extends Model
             ->pluck('treatments')
             ->flatten();
     }
-    
+
     public function getRetentionPeriodDays(): ?int
     {
         if ($this->retention_days) {
             return $this->retention_days;
         }
-        
+
         return $this->ancestors()
             ->whereNotNull('retention_days')
             ->first()
@@ -350,11 +350,11 @@ public function setLegalBasisAttribute($value)
         'public_task',
         'legitimate_interests'
     ];
-    
+
     if (!in_array($value, $validBases)) {
         throw new \Exception('Invalid legal basis');
     }
-    
+
     $this->attributes['legal_basis'] = $value;
 }
 ```
@@ -366,7 +366,7 @@ public function setLegalBasisAttribute($value)
 protected static function boot()
 {
     parent::boot();
-    
+
     static::updated(function ($category) {
         AuditLog::create([
             'model_type' => static::class,

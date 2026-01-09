@@ -14,7 +14,7 @@ Questo documento descrive le correzioni PHPStan applicate al modulo User per rag
 $message = "User type changed to: {$typeLabel}";
 
 // DOPO
-$typeLabelString = is_string($typeLabel) ? $typeLabel : 
+$typeLabelString = is_string($typeLabel) ? $typeLabel :
     (method_exists($typeLabel, 'toHtml') ? $typeLabel->toHtml() : 'Unknown');
 $message = "User type changed to: {$typeLabelString}";
 ```
@@ -324,10 +324,3 @@ if (method_exists($createdAt, 'diffForHumans')) {
 - [Architettura Modulo User](../architecture.md)
 - [Guida PHPStan](../../../docs/phpstan-guide.md)
 - [Best Practices Laraxot](../../../docs/laraxot-best-practices.md)
-
-
-
-
-
-
-

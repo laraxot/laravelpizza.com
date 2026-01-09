@@ -1,4 +1,4 @@
-# Struttura dei percorsi nel progetto 
+# Struttura dei percorsi nel progetto
 
 > **Ambiente di riferimento**: `/var/www/_bases/base_ptvx_fila4_mono/`
 

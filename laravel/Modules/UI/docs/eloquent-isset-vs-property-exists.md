@@ -18,8 +18,8 @@ Gli attributi NON sono proprietà PHP reali dichiarate nella classe.
 
 ```php
 // ✅ CORRETTO - Usa isset()
-if (isset($record->state) 
-    && is_object($record->state) 
+if (isset($record->state)
+    && is_object($record->state)
     && method_exists($record->state, 'transitionTo')) {
     $record->state->transitionTo($state, $message);
 }
@@ -39,8 +39,8 @@ if (isset($state->{$name})) {
 }
 
 // ✅ CORRETTO - isset() per record state
-if (isset($record->state) 
-    && is_object($record->state) 
+if (isset($record->state)
+    && is_object($record->state)
     && method_exists($record->state, 'transitionTo')) {
     $record->state->transitionTo($state, $message);
 }
@@ -93,5 +93,5 @@ Tutti i file del modulo UI sono PHPStan Level 10 compliant usando `isset()`.
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-06  
+**Ultimo aggiornamento**: 2025-01-06
 **Status**: ✅ PHPStan Level 10 - 0 Errors

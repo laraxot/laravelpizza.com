@@ -22,4 +22,3 @@ In tutto il progetto, **usare SEMPRE** i campi `first_name` e `last_name` per ra
 
 ## Collegamenti tra versioni di naming-user-fields.md
 * [naming-user-fields.md](../../Patient/docs/naming-user-fields.md)
-

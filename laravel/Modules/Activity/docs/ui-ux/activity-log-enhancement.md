@@ -45,7 +45,7 @@ Comprehensive enhancement of the Activity log blade template (`list-log-activiti
 @php
     $eventColor = match($activity->event) {
         'created' => 'success',
-        'updated' => 'warning', 
+        'updated' => 'warning',
         'deleted' => 'danger',
         'restored' => 'info',
         default => 'gray'
@@ -90,7 +90,7 @@ Comprehensive enhancement of the Activity log blade template (`list-log-activiti
                 Nessuna attività registrata
             </h3>
             <p class="text-sm text-gray-500 dark:text-gray-400">
-                Non ci sono ancora attività da visualizzare per questo elemento. 
+                Non ci sono ancora attività da visualizzare per questo elemento.
                 Le attività appariranno qui quando gli utenti inizieranno a interagire con il sistema.
             </p>
         </div>
@@ -110,7 +110,7 @@ Comprehensive enhancement of the Activity log blade template (`list-log-activiti
                 {{ __('activity::activities.title', ['record' => $recordTitle]) }}
             </h3>
             <p class="text-xs text-blue-700 dark:text-blue-300 mt-1">
-                Visualizzazione delle attività registrate per questo elemento. 
+                Visualizzazione delle attività registrate per questo elemento.
                 Trovate {{ $this->getActivities()->total() }} attività totali.
             </p>
         </div>
@@ -125,7 +125,7 @@ Comprehensive enhancement of the Activity log blade template (`list-log-activiti
 ### 1. Helper Method Placement
 **Decision**: Moved `getFieldType()` method to `ListLogActivities` PHP class rather than keeping it in Blade template.
 
-**Rationale**: 
+**Rationale**:
 - Better separation of concerns
 - Reusable across the class
 - Easier testing and maintenance
@@ -207,7 +207,7 @@ Comprehensive enhancement of the Activity log blade template (`list-log-activiti
 public function testGetFieldType()
 {
     $page = new ListLogActivities();
-    
+
     $this->assertEquals('string', $page->getFieldType('test', 'new'));
     $this->assertEquals('boolean', $page->getFieldType(true, false));
     $this->assertEquals('array', $page->getFieldType(['test'], []));

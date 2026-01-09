@@ -107,6 +107,6 @@ ls -la Modules/<nome progetto>/app/Filament/Widgets/UserTypeRegistrationsChartWi
 
 **Questa correzione è CRITICA per mantenere l'integrità architetturale del sistema.**
 
-*Status: DA IMPLEMENTARE IMMEDIATAMENTE*  
-*Priorità: MASSIMA*  
+*Status: DA IMPLEMENTARE IMMEDIATAMENTE*
+*Priorità: MASSIMA*
 *Impatto: ARCHITETTURALE*

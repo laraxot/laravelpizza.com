@@ -202,21 +202,21 @@ protected function getStats(): array
             'heroicon-m-currency-euro',
             'success'
         ),
-        
+
         // Trend automatico
         $this->createStatWithCalculatedTrend(
             'Vendite Mensili',
             $currentMonthSales,
             $previousMonthSales
         ),
-        
+
         // Statistica interattiva
         $this->createStatWithUrl(
             'Vedi Ordini',
             $this->formatNumber($orderCount),
             '/admin/orders'
         ),
-        
+
         // Statistica con badge
         $this->createStatWithBadge(
             'Ordini in Attesa',
@@ -240,7 +240,7 @@ protected function getStats(): array
             '*',
             ['status' => 'active']
         ),
-        
+
         // Aggregazione
         $this->createStatFromAggregateQuery(
             'Durata Media Visita',
@@ -249,7 +249,7 @@ protected function getStats(): array
             'duration_minutes',
             ['status' => 'completed']
         ),
-        
+
         // Trend da query
         $this->createStatWithTrendFromQuery(
             'Nuovi Pazienti',
@@ -309,4 +309,4 @@ La classe è ora uno strumento potente e flessibile per creare dashboard statist
 **Ultimo aggiornamento**: Dicembre 2024
 **Versione**: 2.0
 **Stato**: ✅ Completato e Testato
-**Miglioramenti**: ✅ 15 nuovi metodi implementati 
+**Miglioramenti**: ✅ 15 nuovi metodi implementati

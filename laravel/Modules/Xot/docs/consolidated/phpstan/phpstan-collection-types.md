@@ -30,7 +30,7 @@ public function execute(Collection|EloquentCollection $collection, string $filen
     if ($collection instanceof EloquentCollection) {
         $collection = $collection->toBase();
     }
-    
+
     return Excel::download(new CollectionExport($collection), $filename);
 }
 ```
@@ -55,11 +55,11 @@ return collect(File::directories($modulesPath))
 public static function getModules(): array
 {
     $modulesPath = self::$modulesBasePath;
-    
+
     if (!File::exists($modulesPath)) {
         return [];
     }
-    
+
     return collect(File::directories($modulesPath))
         ->map(fn(string $path): string => basename($path))
         ->toArray();
@@ -80,7 +80,7 @@ private function ensureSupportCollection(Collection|EloquentCollection $collecti
     if ($collection instanceof EloquentCollection) {
         return $collection->toBase();
     }
-    
+
     return $collection;
 }
 ```
@@ -147,11 +147,11 @@ public function execute(Model $record, string $mailClass): void
     if (!property_exists($record, 'email')) {
         throw new \InvalidArgumentException('Model must have email property');
     }
-    
+
     if (!method_exists($record, 'option')) {
         throw new \InvalidArgumentException('Model must implement option method');
     }
-    
+
     // Resto del codice...
 }
 ```
@@ -185,18 +185,18 @@ public function getThemeColors(): array
 {
     $defaults = $this->getFilamentColors();
     $custom = [];
-    
+
     // Normalizza defaults in formato string
     foreach ($defaults as $key => $colorArray) {
         $defaults[$key] = is_array($colorArray) ? $colorArray[500] ?? $colorArray[0] : $colorArray;
     }
-    
+
     foreach ($this->colors as $key => $value) {
         if (Arr::has($value, 'color')) {
             $custom[$key] = (string) $value['color'];
         }
     }
-    
+
     return array_merge($defaults, $custom);
 }
 ```
@@ -204,7 +204,7 @@ public function getThemeColors(): array
 ## Best Practices Aggiornate
 
 1. **Type Hints Espliciti**: Sempre specificare tipi in closures e parametri
-2. **Cast Defensivi**: Usare cast quando l'inferenza PHPStan non è affidabile  
+2. **Cast Defensivi**: Usare cast quando l'inferenza PHPStan non è affidabile
 3. **Union Types**: Utilizzare union types per parametri che accettano diverse Collection
 4. **Method Existence Checks**: Verificare esistenza proprietà/metodi su Model generici
 5. **Array Type Consistency**: Mantenere coerenza nei tipi array di ritorno
@@ -218,5 +218,5 @@ public function getThemeColors(): array
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025  
-**Errori risolti**: ExportXls*, Collection chain inference, Model property access, Array type mismatches 
+**Ultimo aggiornamento**: Gennaio 2025
+**Errori risolti**: ExportXls*, Collection chain inference, Model property access, Array type mismatches

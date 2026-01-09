@@ -60,15 +60,15 @@ class Section extends Component
 
 ### Con Classe CSS
 ```blade
-<x-cms::section 
-    slug="main-header" 
+<x-cms::section
+    slug="main-header"
     :data="['class' => 'bg-primary']"
 />
 ```
 
 ### Con View Personalizzata
 ```blade
-<x-cms::section 
+<x-cms::section
     slug="main-header"
     view="themes.custom.header"
     :data="['theme' => 'dark']"
@@ -119,4 +119,4 @@ Questo permette:
 ## Collegamenti
 - [Documentazione Blocchi](../blocks/README.md)
 - [Gestione Sezioni](../section-management.md)
-- [Documentazione Root](../../../../docs/components.md) 
+- [Documentazione Root](../../../../docs/components.md)

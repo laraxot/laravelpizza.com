@@ -37,7 +37,7 @@ public function toSms($notifiable)
     if (empty($notifiable->routeNotificationFor('sms'))) {
         return null;
     }
-    
+
     return SmsData::from([
         'from' => config('app.name'),
         'to' => $notifiable->routeNotificationFor('sms'),
@@ -54,15 +54,15 @@ Modify the `via()` method to only return channels that are properly routed:
 public function via($notifiable)
 {
     $channels = [];
-    
+
     if ($notifiable->routeNotificationFor('mail')) {
         $channels[] = 'mail';
     }
-    
+
     if ($notifiable->routeNotificationFor('sms')) {
         $channels[] = SmsChannel::class;
     }
-    
+
     return $channels;
 }
 ```

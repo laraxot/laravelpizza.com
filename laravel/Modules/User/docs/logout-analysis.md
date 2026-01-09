@@ -22,7 +22,7 @@ $logout = function () {
     Auth::logout();
     session()->invalidate();
     session()->regenerateToken();
-    
+
     return redirect()->route('home');
 };
 @endphp
@@ -52,7 +52,7 @@ $logout = function () {
         Auth::logout();
         session()->invalidate();
         session()->regenerateToken();
-        
+
         return redirect()->route('home')->with('success', __('Logout effettuato con successo'));
     } catch (\Exception $e) {
         $this->isLoggingOut = false;
@@ -104,7 +104,7 @@ rules([
         @endif
 
         <div class="mt-8 flex space-x-4">
-            <a href="{{ route('home') }}" 
+            <a href="{{ route('home') }}"
                class="flex-1 flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 {{ __('Annulla') }}
             </a>
@@ -143,7 +143,7 @@ $logout = function () {
         Auth::logout();
         session()->invalidate();
         session()->regenerateToken();
-        
+
         return redirect()->route('home')->with('success', __('Logout effettuato con successo'));
     } catch (\Exception $e) {
         $this->isLoggingOut = false;
@@ -221,4 +221,4 @@ $logout = function () {
 - [Documentazione Volt](./VOLT_BLADE_IMPLEMENTATION.md)
 - [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
 - [Gestione Sessione](./SESSION_MANAGEMENT.md)
-- [Tema One Documentation](../../Themes/One/docs/README.md) 
+- [Tema One Documentation](../../Themes/One/docs/README.md)

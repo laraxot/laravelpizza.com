@@ -85,7 +85,7 @@ Modules/Cms/
 3. Aggiornare i namespace in tutti i file
 4. Aggiornare i riferimenti nei file di configurazione
 5. Aggiornare i riferimenti nelle views
-6. Aggiornare i riferimenti nelle routes 
+6. Aggiornare i riferimenti nelle routes
 
 ## Collegamenti Bidirezionali
 - [README](README.md) - Documentazione principale del modulo
@@ -96,7 +96,7 @@ Modules/Cms/
 
 ## Vedi Anche
 - [Modulo Xot](../Xot/docs/README.md) - Struttura base dei moduli
-- [Documentazione Laravel](https://laravel.com/docs/structure.html) - Struttura standard Laravel 
+- [Documentazione Laravel](https://laravel.com/docs/structure.html) - Struttura standard Laravel
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
 * [structure.md](laravel/Modules/Gdpr/docs/structure.md)
@@ -114,4 +114,3 @@ Modules/Cms/
 * [structure.md](laravel/Modules/Cms/docs/structure.md)
 * [structure.md](laravel/Modules/Cms/docs/themes/structure.md)
 * [structure.md](laravel/Modules/Cms/docs/components/structure.md)
-

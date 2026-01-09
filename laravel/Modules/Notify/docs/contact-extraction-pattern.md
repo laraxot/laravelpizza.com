@@ -1,7 +1,7 @@
 # Pattern DRY: Estrazione Attributi Contatti da Modelli
 
-**Data**: 2025-01-18  
-**Modulo**: Notify  
+**Data**: 2025-01-18
+**Modulo**: Notify
 **Status**: ✅ Pattern consolidato
 
 ## Problema Identificato
@@ -204,6 +204,6 @@ Utilizzo:
 
 ---
 
-**Filosofia**: "Estrai una volta, usa ovunque" - DRY Principle  
-**Pattern**: Metodo generico + wrapper specifici  
+**Filosofia**: "Estrai una volta, usa ovunque" - DRY Principle
+**Pattern**: Metodo generico + wrapper specifici
 **Beneficio**: ~30 righe duplicate eliminate, codice più manutenibile

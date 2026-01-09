@@ -79,4 +79,4 @@ class Page extends Model
 
 - [Torna a packages.md](../packages.md)
 - [Performance](performance.md)
-- [SEO](seo.md) 
+- [SEO](seo.md)

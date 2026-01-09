@@ -7,7 +7,7 @@ Il componente logo è uno degli elementi più importanti dell'interfaccia utente
 ### Utilizzo
 
 ```blade
-<x-blocks.logo 
+<x-blocks.logo
     src="/path/to/logo.svg"
     alt="Nome Azienda"
     size="h-12 w-auto"  // Dimensione predefinita
@@ -49,31 +49,30 @@ Il componente logo è uno degli elementi più importanti dell'interfaccia utente
 
 ```blade
 {{-- Logo nell'header --}}
-<x-blocks.logo 
+<x-blocks.logo
     src="/images/logo.svg"
     alt="il progetto"
     size="h-12 w-auto"
 />
 
 {{-- Logo nel footer --}}
-<x-blocks.logo 
+<x-blocks.logo
     src="/images/logo.svg"
     alt="il progetto"
     size="h-8 w-auto"
 />
 
 {{-- Logo con titolo --}}
-<x-blocks.logo 
+<x-blocks.logo
     src="/images/logo.svg"
     alt="il progetto"
     title="il progetto"
     description="La tua salute al primo posto"
 />
-``` 
+```
 
 ## Collegamenti tra versioni di components.md
 * [components.md](../../../UI/docs/components.md)
 * [components.md](../../../UI/docs/themes/components.md)
 * [components.md](../../../Cms/docs/components.md)
 * [components.md](../../../../Themes/One/docs/components.md)
-

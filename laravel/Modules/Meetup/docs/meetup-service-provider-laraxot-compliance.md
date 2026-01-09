@@ -50,16 +50,16 @@ use Override;
 class MeetupServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'Meetup';
-    
+
     protected string $module_dir = __DIR__;
-    
+
     protected string $module_ns = __NAMESPACE__;
-    
+
     #[Override]
     public function boot(): void
     {
         parent::boot(); // ← CRITICO: registra tutto automaticamente
-        
+
         // Solo personalizzazioni specifiche del modulo qui
     }
 }
@@ -117,6 +117,5 @@ $result = app(CreateEventAction::class)->execute($data);
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-10  
+**Ultimo aggiornamento**: 2025-01-10
 **Status**: ✅ Corretto per conformità Laraxot
-

@@ -64,7 +64,7 @@ enum UserType: string
 class User extends XotBaseUser
 {
     use HasParent;
-    
+
     protected $casts = [
         'type' => UserType::class,
         'email_verified_at' => 'datetime',
@@ -85,7 +85,7 @@ class LoginController extends Controller
             'password' => 'required',
             'type' => 'required|in:doctor,patient,admin'
         ]);
-        
+
         // Autenticazione con tipo specifico
         if (Auth::attempt($credentials)) {
             return redirect()->intended('/dashboard');
@@ -215,12 +215,12 @@ $team->users()->attach($nurse->id);
 class Doctor extends User
 {
     protected static string $type = 'doctor';
-    
+
     protected $fillable = [
         'name', 'email', 'password', 'specialization',
         'license_number', 'years_experience'
     ];
-    
+
     public function appointments(): HasMany
     {
         return $this->hasMany(Appointment::class);
@@ -230,12 +230,12 @@ class Doctor extends User
 class Patient extends User
 {
     protected static string $type = 'patient';
-    
+
     protected $fillable = [
         'name', 'email', 'password', 'date_of_birth',
         'phone', 'emergency_contact'
     ];
-    
+
     public function appointments(): HasMany
     {
         return $this->hasMany(Appointment::class);
@@ -254,11 +254,11 @@ class PermissionSeeder extends Seeder
         Permission::create(['name' => 'appointments.create']);
         Permission::create(['name' => 'appointments.edit']);
         Permission::create(['name' => 'patients.view']);
-        
+
         // Permessi per pazienti
         Permission::create(['name' => 'appointments.view_own']);
         Permission::create(['name' => 'profile.edit']);
-        
+
         // Ruoli
         $doctorRole = Role::create(['name' => 'doctor']);
         $doctorRole->givePermissionTo([
@@ -276,12 +276,12 @@ class PermissionSeeder extends Seeder
 class Tenant extends Model
 {
     protected $fillable = ['name', 'domain', 'settings'];
-    
+
     public function users(): BelongsToMany
     {
         return $this->belongsToMany(User::class);
     }
-    
+
     public function teams(): HasMany
     {
         return $this->hasMany(Team::class);
@@ -457,4 +457,3 @@ Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICE
   <br>
   <em>Costruito con ❤️ per la comunità Laravel</em>
 </div>
-

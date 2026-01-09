@@ -677,4 +677,4 @@ class BackupTemplates extends Command
 7. **Sicurezza**
    - Aggiornare dipendenze
    - Scansionare vulnerabilità
-   - Implementare best practices 
+   - Implementare best practices

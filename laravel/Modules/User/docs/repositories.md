@@ -1,4 +1,3 @@
-
 Tracker gathers a lot of information from your requests to identify and store:
 - Sessions
 - Page Views (hits on routes)

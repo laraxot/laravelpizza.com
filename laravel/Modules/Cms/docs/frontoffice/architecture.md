@@ -118,4 +118,3 @@ I blocchi sono l'unità base di contenuto. Ogni blocco:
 * [architecture.md](laravel/Modules/Cms/docs/frontoffice/architecture.md)
 * [architecture.md](laravel/Modules/Cms/docs/architecture.md)
 * [architecture.md](laravel/Themes/One/docs/roadmap/inspiration/architecture.md)
-

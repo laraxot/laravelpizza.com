@@ -80,7 +80,7 @@ Nel codice, supportiamo entrambi i pattern di accesso:
 
 ```php
 // Accesso standard
-$address->model; 
+$address->model;
 
 // Accesso semantico (implementato come alias)
 $address->addressable();

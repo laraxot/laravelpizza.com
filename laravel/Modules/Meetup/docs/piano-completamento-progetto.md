@@ -112,7 +112,7 @@ Completare la piattaforma Laravel Pizza Meetups con:
   {
       return $this->hasMany(EventAttendee::class);
   }
-  
+
   public function registeredAttendees(): HasMany
   {
       return $this->hasMany(EventAttendee::class)->where('status', 'registered');
@@ -283,7 +283,7 @@ Completare la piattaforma Laravel Pizza Meetups con:
   - Folio routing: `/login` → `auth/login.blade.php`, `/register` → `auth/register.blade.php`
   - Componenti Volt per form e validazione
 
-**Nota Architetturale**: 
+**Nota Architetturale**:
 - ❌ **NON creare controller** per il frontoffice
 - ❌ **NON scrivere rotte** in `web.php` o `api.php` per pagine pubbliche
 - ✅ **Usare Folio** per routing file-based
@@ -305,7 +305,7 @@ Completare la piattaforma Laravel Pizza Meetups con:
 
 **Obiettivo**: Implementare logica business tramite Actions e Services (chiamati da Volt/Folio)
 
-**Nota Architetturale**: 
+**Nota Architetturale**:
 - ❌ **NON creare controller** per il frontoffice
 - ✅ **Logica business** in Actions (Spatie QueableActions)
 - ✅ **Chiamare Actions** da componenti Volt nelle pagine Folio
@@ -375,7 +375,7 @@ Completare la piattaforma Laravel Pizza Meetups con:
 
 **Obiettivo**: Implementare componenti Volt per interattività nelle pagine Folio
 
-**Nota Architetturale**: 
+**Nota Architetturale**:
 - ✅ **Volt** è il metodo principale per interattività
 - ✅ **Componenti Volt** integrati direttamente nelle pagine Folio
 - ✅ **Actions** chiamate da componenti Volt per operazioni
@@ -429,7 +429,7 @@ Completare la piattaforma Laravel Pizza Meetups con:
 
 **Obiettivo**: Sistema completo di autenticazione e gestione utenti tramite Folio + Volt
 
-**Nota Architetturale**: 
+**Nota Architetturale**:
 - ✅ **Pagine auth** in Folio: `auth/login.blade.php`, `auth/register.blade.php`
 - ✅ **Componenti Volt** per form e logica autenticazione
 - ✅ **Actions** per operazioni: `LoginAction`, `RegisterAction`, `LogoutAction`
@@ -1100,8 +1100,8 @@ Completare la piattaforma Laravel Pizza Meetups con:
 
 ---
 
-**Versione Documento**: 2.0  
-**Ultimo Aggiornamento**: 2025-01-27  
+**Versione Documento**: 2.0
+**Ultimo Aggiornamento**: 2025-01-27
 **Autore**: AI Assistant (Auto)
 
 ## 🔴 REGOLA ARCHITETTURALE CRITICA
@@ -1128,13 +1128,13 @@ Completare la piattaforma Laravel Pizza Meetups con:
             $events = app(\Modules\Meetup\Services\EventService::class)
                 ->getUpcomingEvents();
         @endphp
-        
+
         <div>
             @foreach($events as $event)
                 <x-event-card :event="$event" />
             @endforeach
         </div>
-        
+
         <button wire:click="register({{ $event->id }})">
             Register
         </button>
@@ -1150,4 +1150,3 @@ Request → Folio (routing) → Blade Page → Volt Component → Action → Ser
 ```
 
 **Questa regola è OBBLIGATORIA e deve essere sempre rispettata!**
-

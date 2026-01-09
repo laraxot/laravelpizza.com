@@ -141,4 +141,4 @@ Il service provider deve essere registrato in:
 5. **Consistenza**: Mantieni uno stile coerente
 6. **Sicurezza**: Proteggi le informazioni sensibili
 7. **Performance**: Ottimizza il caricamento delle risorse
-8. **Versioning**: Gestisci correttamente le versioni 
+8. **Versioning**: Gestisci correttamente le versioni

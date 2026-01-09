@@ -1,7 +1,7 @@
 # PHPStan Corrections - UI Module - Gennaio 2026
 
-**Data**: 2026-01-02  
-**Status**: ✅ COMPLETATO  
+**Data**: 2026-01-02
+**Status**: ✅ COMPLETATO
 **Errori corretti**: Da 4 a 0
 
 ## File corretti
@@ -65,7 +65,7 @@ use Illuminate\Support\Collection;
 
 ### 5. app/Filament/Forms/Components/RadioBadge.php
 
-**Problema**: 
+**Problema**:
 - `is_string($color)` chiamato su tipo già ristretto (riga 67)
 - `is_object($icon)` chiamato su tipo già ristretto (riga 91)
 

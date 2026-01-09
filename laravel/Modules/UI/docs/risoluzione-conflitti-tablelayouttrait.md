@@ -13,7 +13,7 @@ Il `TableLayoutTrait` è un componente chiave del sistema di layout delle tabell
 
 1. **Conflitto di Namespace**: Esistevano due versioni diverse del namespace:
    - `namespace Modules\UI\Traits;`
-   - `namespace Modules\UI\app\Traits;` 
+   - `namespace Modules\UI\app\Traits;`
 
 2. **Incoerenza nella Formattazione del Codice**: Presenza di linee vuote e spazi bianchi inconsistenti.
 
@@ -64,4 +64,4 @@ Questo trait è strettamente correlato a:
 
 ## Conclusione
 
-La risoluzione dei conflitti in `TableLayoutTrait.php` è stata effettuata mantenendo il namespace corretto allineato con la struttura delle directory e garantendo la coerenza con il resto del codebase. Questa soluzione permette il corretto funzionamento del sistema di layout delle tabelle nel modulo UI, fornendo agli utenti la possibilità di scegliere tra visualizzazioni diverse dei dati. 
+La risoluzione dei conflitti in `TableLayoutTrait.php` è stata effettuata mantenendo il namespace corretto allineato con la struttura delle directory e garantendo la coerenza con il resto del codebase. Questa soluzione permette il corretto funzionamento del sistema di layout delle tabelle nel modulo UI, fornendo agli utenti la possibilità di scegliere tra visualizzazioni diverse dei dati.

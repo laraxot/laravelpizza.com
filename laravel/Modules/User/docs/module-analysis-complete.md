@@ -85,7 +85,7 @@ Il modulo User è il cuore del sistema di autenticazione e gestione utenti di Sa
 
 ### 1. **BaseUser - Gestione Utenti Base**
 - **Responsabilità**: Fornire funzionalità base per tutti gli utenti
-- **Business Logic**: 
+- **Business Logic**:
   - Gestione autenticazione base
   - Gestione profilo utente
   - Gestione ruoli e permessi
@@ -283,4 +283,3 @@ Il modulo User è il cuore del sistema di autenticazione e gestione utenti di Sa
 **Stato**: In Progress
 **Responsabile**: Team Sviluppo SaluteOra
 **Prossima Revisione**: Gennaio 2025
-

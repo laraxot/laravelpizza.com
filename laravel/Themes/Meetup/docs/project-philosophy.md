@@ -136,7 +136,6 @@ Il tema Meetup deve replicare **pixel-perfect** il design di `laravelpizza.com`:
 
 ---
 
-**Ultimo aggiornamento**: 2025-12-01  
-**Versione**: 1.0  
+**Ultimo aggiornamento**: 2025-12-01
+**Versione**: 1.0
 **Compatibilità**: LaravelPizza.com base_laravelpizza
-

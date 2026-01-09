@@ -54,7 +54,7 @@ class UserModerationResource extends XotBaseResource
 {
     protected static ?string $navigationGroup = 'User Management'; // ERRORE
     protected static ?string $navigationLabel = 'User Moderation'; // ERRORE
-    
+
     public static function table(Table $table): Table { // ERRORE
         return $table->columns([...]);
     }
@@ -448,7 +448,7 @@ class ExampleResource extends XotBaseResource
 {
     protected static ?string $navigationGroup = 'Group'; // ERRORE
     protected static ?string $navigationLabel = 'Label'; // ERRORE
-    
+
     public static function table(Table $table): Table { // ERRORE
         return $table->columns([...]);
     }
@@ -473,4 +473,3 @@ class ExampleResource extends XotBaseResource
 *Ultimo aggiornamento: 2025-08-04*
 *Modulo: Xot*
 *Categoria: Filament*
-

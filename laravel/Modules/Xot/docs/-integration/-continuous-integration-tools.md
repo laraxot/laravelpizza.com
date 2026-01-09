@@ -30,5 +30,3 @@ https://grafikart.fr/tutoriels/grumphp-836
 ----------------------------------------------------------------------
 
 https://jakzal.github.io/toolbox/
-
-

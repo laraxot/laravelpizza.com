@@ -30,9 +30,9 @@ $street = (string) $this->faker->randomElement($italianStreets);
 $fullAddress = $street . ' ' . (string) $this->faker->numberBetween(1, 999);
 
 // Sprintf con parametri tipizzati
-'formatted_address' => sprintf('%s, %s, %s, Italia', 
-    (string) ($attributes['street'] ?? 'Via Roma 1'), 
-    $city, 
+'formatted_address' => sprintf('%s, %s, %s, Italia',
+    (string) ($attributes['street'] ?? 'Via Roma 1'),
+    $city,
     $state ?? (string) ($attributes['state'] ?? 'Lazio')
 ),
 ```
@@ -51,7 +51,7 @@ $fullAddress = $street . ' ' . (string) $this->faker->numberBetween(1, 999);
 
 ### ✅ GIÀ ESISTENTI (3/3)
 - ComuneFactory ✅
-- ProvinceFactory ✅  
+- ProvinceFactory ✅
 - RegionFactory ✅
 
 ### ❌ NON NECESSARIE (2/2)

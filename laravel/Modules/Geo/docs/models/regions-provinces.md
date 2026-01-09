@@ -172,34 +172,34 @@ public function normalizeItalianAddress(Address $address): Address
         $normalizedRegion = Region::where('name', 'LIKE', $address->address_region)
             ->orWhere('name', 'LIKE', ucfirst(strtolower($address->address_region)))
             ->first();
-        
+
         if ($normalizedRegion) {
             $address->address_region = $normalizedRegion->name;
         }
     }
-    
+
     // Normalizza nome provincia
     if ($address->province) {
         $normalizedProvince = Province::where('name', 'LIKE', $address->province)
             ->orWhere('name', 'LIKE', ucfirst(strtolower($address->province)))
             ->first();
-        
+
         if ($normalizedProvince) {
             $address->province = $normalizedProvince->name;
             $address->province_short = $normalizedProvince->code;
         }
     }
-    
+
     // Normalizza CAP
     if ($address->postal_code) {
         $address->postal_code = preg_replace('/[^0-9]/', '', $address->postal_code);
-        
+
         // Assicura che sia di 5 cifre
         if (strlen($address->postal_code) < 5) {
             $address->postal_code = str_pad($address->postal_code, 5, '0', STR_PAD_LEFT);
         }
     }
-    
+
     return $address;
 }
 ```

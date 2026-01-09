@@ -20,7 +20,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 class LanguageSwitcherWidget extends XotBaseWidget
 {
     protected static string $view = 'lang::filament.widgets.language-switcher';
-    
+
     public function getViewData(): array
     {
         return [
@@ -28,12 +28,12 @@ class LanguageSwitcherWidget extends XotBaseWidget
             'available_locales' => $this->getAvailableLocales(),
         ];
     }
-    
+
     protected function getAvailableLocales(): Collection
     {
         // Implementation for retrieving available languages
     }
-    
+
     public function changeLanguage(string $locale): void
     {
         // Language switching logic
@@ -51,7 +51,7 @@ class LanguageSwitcherWidget extends XotBaseWidget
         <ul class="dropdown-content">
             @foreach($available_locales as $locale)
                 <li>
-                    <a 
+                    <a
                         href="{{ $this->getLanguageUrl($locale['code']) }}"
                         wire:click="changeLanguage('{{ $locale['code'] }}')"
                     >
@@ -97,8 +97,8 @@ Replace Livewire component with Filament widget:
 <livewire:lang.switcher />
 
 {{-- NEW --}}
-<x-filament-widgets::widget 
-    :widget="\Modules\Lang\Filament\Widgets\LanguageSwitcherWidget::class" 
+<x-filament-widgets::widget
+    :widget="\Modules\Lang\Filament\Widgets\LanguageSwitcherWidget::class"
 />
 ```
 
@@ -144,7 +144,7 @@ Ensure proper Laravel localization setup:
 - Test URL generation
 - Test language switching functionality
 
-### Integration Tests  
+### Integration Tests
 - Test widget rendering in different contexts
 - Test with different language configurations
 - Test error handling scenarios

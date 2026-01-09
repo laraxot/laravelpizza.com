@@ -1,4 +1,4 @@
-# Utilizzo dei Componenti Filament 
+# Utilizzo dei Componenti Filament
 
 ## Collegamenti correlati
 - [README modulo UI](/laravel/Modules/UI/docs/README.md)
@@ -131,11 +131,11 @@ Filament fornisce un componente `x-filament::dropdown` che può essere utilizzat
             Apri Menu
         </x-filament::button>
     </x-slot>
-    
+
     <x-filament::dropdown.item wire:click="action">
         Azione 1
     </x-filament::dropdown.item>
-    
+
     <x-filament::dropdown.item href="#">
         Azione 2
     </x-filament::dropdown.item>

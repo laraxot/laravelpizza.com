@@ -55,7 +55,7 @@ class Category extends BaseTreeModel
 {
     protected $connection = 'my_module';
     protected $table = 'categories';
-    
+
     // Inherits all tree functionality
 }
 ```
@@ -68,7 +68,7 @@ class LimeQuestion extends BaseTreeModel
     {
         return 'parent_qid';  // Custom parent key
     }
-    
+
     public function getLocalKeyName(): string
     {
         return 'qid';  // Custom primary key
@@ -84,7 +84,7 @@ class CustomTree extends BaseTreeModel
     {
         return 'tree_depth';  // Custom depth column
     }
-    
+
     public function getPathName(): string
     {
         return 'tree_path';   // Custom path column
@@ -265,12 +265,12 @@ class LimeQuestion extends BaseTreeModel
 {
     protected $connection = 'limesurvey';
     protected $table = 'lime_questions';
-    
+
     public function getParentKeyName(): string
     {
         return 'parent_qid';
     }
-    
+
     public function getLocalKeyName(): string
     {
         return 'qid';
@@ -283,12 +283,12 @@ class LimeQuestion extends BaseTreeModel
 class MenuItem extends BaseTreeModel
 {
     protected $table = 'menu_items';
-    
+
     public function getParentKeyName(): string
     {
         return 'parent_id';
     }
-    
+
     // Custom methods
     public function isActive(): bool
     {
@@ -310,7 +310,7 @@ class LimeQuestionTest extends TestCase
             'title' => 'Child',
             'parent_qid' => $parent->qid
         ]);
-        
+
         $this->assertEquals($parent->qid, $child->parent->qid);
         $this->assertTrue($parent->children->contains($child));
         $this->assertTrue($child->ancestors->contains($parent));
@@ -340,7 +340,7 @@ class OldModel extends Model {
     public function parent() {
         return $this->belongsTo(self::class, 'parent_id');
     }
-    
+
     public function children() {
         return $this->hasMany(self::class, 'parent_id');
     }

@@ -69,7 +69,7 @@ Questo documento esplora i componenti Filament che possono migliorare l'esperien
     ->required()
     ->unique(ignoreRecord: true)
     ->maxLength(255)
-    ->afterStateUpdated(fn (string $context, $state, callable $set) => 
+    ->afterStateUpdated(fn (string $context, $state, callable $set) =>
         $context === 'create' ? $set('slug', Str::slug($state)) : null)
     ->helperText('Identificatore unico utilizzato nel codice')
     ->prefixIcon('heroicon-o-link')
@@ -107,7 +107,7 @@ Questo documento esplora i componenti Filament che possono migliorare l'esperien
         Forms\Components\Actions\Action::make('regenerateSlug')
             ->icon('heroicon-o-arrow-path')
             ->tooltip('Rigenera dallo slug dal nome')
-            ->action(fn (Forms\Get $get, Forms\Set $set) => 
+            ->action(fn (Forms\Get $get, Forms\Set $set) =>
                 $set('slug', Str::slug($get('name'))))
     ),
 ```
@@ -131,7 +131,7 @@ Forms\Components\Group::make([
                 $set('slug', Str::slug($state));
             }
         }),
-        
+
     Forms\Components\Grid::make(2)
         ->schema([
             'generateSlug' => Forms\Components\Toggle::make('generateSlug')
@@ -143,7 +143,7 @@ Forms\Components\Group::make([
                         $set('slug', Str::slug($get('name')));
                     }
                 }),
-                
+
             'slug' => Forms\Components\TextInput::make('slug')
                 ->required()
                 ->unique(ignoreRecord: true)
@@ -214,7 +214,7 @@ return [
 ];
 ```
 
-## Conformità con gli Standard 
+## Conformità con gli Standard
 ## Conformità con gli Standard SaluteOra
 
 Tutti i componenti proposti:

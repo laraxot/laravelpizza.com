@@ -175,4 +175,4 @@ Per ottimizzare le performance della homepage:
 2. **Riutilizzabilità**: Creare blocchi personalizzabili e riutilizzabili
 3. **Localizzazione**: Gestire correttamente le traduzioni dei contenuti
 4. **Testing**: Verificare la responsiveness su diversi dispositivi
-5. **Manutenibilità**: Documentare le personalizzazioni e i blocchi personalizzati 
+5. **Manutenibilità**: Documentare le personalizzazioni e i blocchi personalizzati

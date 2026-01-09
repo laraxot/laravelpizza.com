@@ -136,4 +136,3 @@ $rows = $this->getSushiRows();
 - [Architettura Modulo Cms](./architecture.md)
 - [Middleware System](./middleware-system.md)
 - [Model Management](./model-management.md)
-

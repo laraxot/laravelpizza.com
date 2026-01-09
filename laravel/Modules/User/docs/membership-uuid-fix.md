@@ -150,4 +150,3 @@ Quando si crea un modello pivot che usa UUID come PRIMARY KEY:
 - [HasTeams Trait](../../app/Models/Traits/HasTeams.php)
 
 *Ultimo aggiornamento: gennaio 2025*
-

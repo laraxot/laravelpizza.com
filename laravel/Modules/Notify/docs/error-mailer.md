@@ -147,7 +147,7 @@ class NotificationService
     private function sendEmailNotification(ErrorLog $error): void
     {
         $notification = new ErrorEmailNotification($error);
-        
+
         foreach (config('error-mailer.notifications.email.recipients') as $recipient) {
             Mail::to($recipient)->queue($notification);
         }
@@ -176,35 +176,35 @@ class ErrorLogResource extends Resource
                 TextInput::make('message')
                     ->label('Messaggio Errore')
                     ->disabled(),
-                    
+
                 TextInput::make('file')
                     ->label('File')
                     ->disabled(),
-                    
+
                 TextInput::make('line')
                     ->label('Linea')
                     ->disabled(),
-                    
+
                 CodeEditor::make('trace')
                     ->label('Stack Trace')
                     ->language('json')
                     ->disabled()
                     ->columnSpanFull(),
-                    
+
                 TextInput::make('request_url')
                     ->label('URL Richiesta')
                     ->disabled(),
-                    
+
                 TextInput::make('request_method')
                     ->label('Metodo Richiesta')
                     ->disabled(),
-                    
+
                 CodeEditor::make('request_data')
                     ->label('Dati Richiesta')
                     ->language('json')
                     ->disabled()
                     ->columnSpanFull(),
-                    
+
                 Select::make('status')
                     ->label('Stato')
                     ->options([
@@ -214,7 +214,7 @@ class ErrorLogResource extends Resource
                         'ignored' => 'Ignorato'
                     ])
                     ->required(),
-                    
+
                 Textarea::make('resolution_notes')
                     ->label('Note Risoluzione')
                     ->visible(fn ($record) => $record->status === 'resolved'),
@@ -230,17 +230,17 @@ class ErrorLogResource extends Resource
                     ->label('Messaggio')
                     ->searchable()
                     ->limit(50),
-                    
+
                 TextColumn::make('file')
                     ->label('File')
                     ->searchable(),
-                    
+
                 TextColumn::make('line')
                     ->label('Linea'),
-                    
+
                 TextColumn::make('environment')
                     ->label('Ambiente'),
-                    
+
                 BadgeColumn::make('status')
                     ->label('Stato')
                     ->colors([
@@ -249,7 +249,7 @@ class ErrorLogResource extends Resource
                         'success' => 'resolved',
                         'secondary' => 'ignored',
                     ]),
-                    
+
                 TextColumn::make('created_at')
                     ->label('Data')
                     ->dateTime()
@@ -263,7 +263,7 @@ class ErrorLogResource extends Resource
                         'resolved' => 'Risolto',
                         'ignored' => 'Ignorato'
                     ]),
-                    
+
                 SelectFilter::make('environment')
                     ->options([
                         'local' => 'Local',
@@ -280,7 +280,7 @@ class ErrorLogResource extends Resource
                         'resolved_at' => now()
                     ]))
                     ->requiresConfirmation(),
-                    
+
                 Action::make('ignore')
                     ->label('Ignora')
                     ->icon('heroicon-o-x-mark')
@@ -297,7 +297,7 @@ class ErrorLogResource extends Resource
                         'resolved_at' => now()
                     ]))
                     ->requiresConfirmation(),
-                    
+
                 BulkAction::make('ignore')
                     ->label('Ignora Selezionati')
                     ->action(fn ($records) => $records->each->update([
@@ -315,7 +315,7 @@ class ErrorLogResource extends Resource
 class ErrorStatsWidget extends Widget
 {
     protected static string $view = 'notify::widgets.error-stats';
-    
+
     protected int|string|array $columnSpan = 2;
 
     public function getStats(): array
@@ -335,7 +335,7 @@ class ErrorStatsWidget extends Widget
 class ErrorChartWidget extends Widget
 {
     protected static string $view = 'notify::widgets.error-chart';
-    
+
     protected int|string|array $columnSpan = 'full';
 
     public function getData(): array
@@ -364,29 +364,29 @@ return [
             'recipients' => explode(',', env('ERROR_MAILER_EMAIL_RECIPIENTS')),
             'cooldown' => env('ERROR_MAILER_EMAIL_COOLDOWN', 10), // minuti
         ],
-        
+
         'discord' => [
             'enabled' => env('ERROR_MAILER_DISCORD_ENABLED', false),
             'webhook' => env('ERROR_MAILER_DISCORD_WEBHOOK'),
             'cooldown' => env('ERROR_MAILER_DISCORD_COOLDOWN', 10),
         ],
-        
+
         'slack' => [
             'enabled' => env('ERROR_MAILER_SLACK_ENABLED', false),
             'webhook' => env('ERROR_MAILER_SLACK_WEBHOOK'),
             'cooldown' => env('ERROR_MAILER_SLACK_COOLDOWN', 10),
         ]
     ],
-    
+
     'environments' => [
         'enabled' => explode(',', env('ERROR_MAILER_ENVIRONMENTS', 'production')),
     ],
-    
+
     'cleanup' => [
         'enabled' => env('ERROR_MAILER_CLEANUP_ENABLED', true),
         'older_than_days' => env('ERROR_MAILER_CLEANUP_DAYS', 30),
     ],
-    
+
     'rate_limiting' => [
         'enabled' => env('ERROR_MAILER_RATE_LIMITING_ENABLED', true),
         'max_attempts' => env('ERROR_MAILER_RATE_LIMITING_MAX_ATTEMPTS', 10),
@@ -438,4 +438,4 @@ return [
 - [Laravel Exceptions](https://laravel.com/docs/errors)
 - [Filament Forms](https://filamentphp.com/docs/forms)
 - [Discord Webhooks](https://discord.com/developers/docs/resources/webhook)
-- [Slack Webhooks](https://api.slack.com/messaging/webhooks) 
+- [Slack Webhooks](https://api.slack.com/messaging/webhooks)

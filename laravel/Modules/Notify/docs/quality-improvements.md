@@ -169,4 +169,3 @@ Tutti i pattern di correzione sono documentati in:
 - [Index](./index.md)
 
 *Ultimo aggiornamento: 2025-01-06*
-

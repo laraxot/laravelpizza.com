@@ -11,7 +11,7 @@ Laravel 12 ha introdotto un cambiamento fondamentale nell'architettura dei model
 ```php
 class User extends Model
 {
-    protected $fillable = ['name', 'email']; 
+    protected $fillable = ['name', 'email'];
     protected $casts = [
         'created_at' => 'datetime',
         'email_verified_at' => 'datetime',

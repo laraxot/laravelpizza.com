@@ -62,4 +62,4 @@ Per ogni modello:
 - **DOCUMENTARE**: Aggiornare questo piano con i risultati
 - **TESTARE**: Verificare che le correzioni funzionino
 
-*Ultimo aggiornamento: gennaio 2025 - Verifica critica dei campi del modello implementata* 
+*Ultimo aggiornamento: gennaio 2025 - Verifica critica dei campi del modello implementata*

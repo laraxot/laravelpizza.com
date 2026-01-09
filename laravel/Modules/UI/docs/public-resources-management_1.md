@@ -1,4 +1,4 @@
-# Gestione delle Risorse Pubbliche 
+# Gestione delle Risorse Pubbliche
 
 ## Indice
 - [Panoramica](#panoramica)
@@ -99,9 +99,9 @@ I font devono essere posizionati in `/public_html/fonts/` e organizzati per fami
 ### Avatar Utente
 
 ```blade
-<img 
-    src="{{ $user->avatar ? asset('images/avatars/' . $user->avatar) : asset('images/default-avatar.svg') }}" 
-    alt="{{ $user->name }}" 
+<img
+    src="{{ $user->avatar ? asset('images/avatars/' . $user->avatar) : asset('images/default-avatar.svg') }}"
+    alt="{{ $user->name }}"
     class="h-10 w-10 rounded-full"
 >
 ```
@@ -110,9 +110,9 @@ I font devono essere posizionati in `/public_html/fonts/` e organizzati per fami
 
 ```blade
 <a href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')) }}">
-    <img 
-        src="{{ asset('images/logos/saluteora-logo.svg') }}" 
-        alt="SaluteOra" 
+    <img
+        src="{{ asset('images/logos/saluteora-logo.svg') }}"
+        alt="SaluteOra"
         class="h-8"
     >
 </a>

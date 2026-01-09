@@ -1,4 +1,4 @@
-# Implementazione degli Avatar 
+# Implementazione degli Avatar
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
@@ -35,12 +35,12 @@ Il componente `x-ui.avatar` è stato implementato per gestire sia gli avatar per
         'xl' => 'h-12 w-12',
         '2xl' => 'h-16 w-16',
     ];
-    
+
     $sizeClass = $sizes[$size] ?? $sizes['md'];
-    
+
     // Determina l'avatar da utilizzare
     $hasCustomAvatar = $user && isset($user->profile_photo_url) && $user->profile_photo_url;
-    
+
     // Se non c'è un avatar personalizzato, seleziona un avatar SVG casuale
     if (!$hasCustomAvatar) {
         // Usa il seed fornito o l'ID utente o un valore casuale
@@ -50,8 +50,8 @@ Il componente `x-ui.avatar` è stato implementato per gestire sia gli avatar per
 @endphp
 
 @if($hasCustomAvatar)
-    <img 
-        src="{{ $user->profile_photo_url }}" 
+    <img
+        src="{{ $user->profile_photo_url }}"
         alt="{{ $user->name ?? 'User' }}"
         {{ $attributes->merge(['class' => "{$sizeClass} rounded-full object-cover"]) }}
     >
@@ -89,9 +89,9 @@ Il componente `x-ui.avatar` è stato implementato per gestire sia gli avatar per
 Il componente avatar viene utilizzato nel dropdown utente nell'header:
 
 ```php
-<x-ui.avatar 
-    :user="auth()->user()" 
-    size="md" 
+<x-ui.avatar
+    :user="auth()->user()"
+    size="md"
     class="ring-2 ring-white ring-opacity-50 shadow-sm"
 />
 ```

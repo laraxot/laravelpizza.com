@@ -37,7 +37,7 @@ foreach (['it', 'en', 'de'] as $locale) {
         'locale' => $locale,
         'data' => $contractData,
     ]);
-    
+
     // Save PDF with locale suffix
     file_put_contents("contract_{$locale}.pdf", $pdf);
 }
@@ -53,7 +53,7 @@ Utilizzo di placeholder con parametri tradotti:
     <div>
         <h1>{{ __('lang::pdf.welcome', ['name' => $user->name]) }}</h1>
         <p>{{ __('lang::pdf.document_date', ['date' => now()->format('d/m/Y')]) }}</p>
-        
+
         @foreach($items as $item)
         <div>
             <strong>{{ __('lang::pdf.item') }}:</strong> {{ $item->name }}
@@ -86,20 +86,20 @@ class PdfTranslationService
             // Set locale for translations
             $locale = $options['locale'] ?? app()->getLocale();
             app()->setLocale($locale);
-            
+
             // Prepare translated data
             $translatedData = $this->translateData($options['data'], $locale);
-            
+
             // Render template with translations
             $html = view($options['template'], [
                 'data' => $translatedData,
                 'locale' => $locale,
                 'translations' => $this->getTranslations($locale),
             ])->render();
-            
+
             // Clean HTML for HTML2PDF
             $html = $this->cleanHtmlForPdf($html);
-            
+
             // Generate PDF
             $html2pdf = new Html2Pdf(
                 $options['orientation'] ?? 'P',
@@ -109,35 +109,35 @@ class PdfTranslationService
                 'UTF-8',
                 $options['margins'] ?? [15, 20, 15, 20]
             );
-            
+
             $html2pdf->setDefaultFont($this->getFontForLocale($locale));
             $html2pdf->writeHTML($html);
-            
+
             return $html2pdf->output('', 'S');
-            
+
         } catch (Html2PdfException $e) {
             $html2pdf->clean();
             throw new PdfTranslationException('Failed to generate translated PDF: ' . $e->getMessage());
         }
     }
-    
+
     private function translateData(array $data, string $locale): array
     {
         $translator = app('translator');
-        
+
         return collect($data)->mapWithKeys(function ($value, $key) use ($translator, $locale) {
             if (is_string($value) && str_starts_with($value, 'lang::')) {
                 return [$key => $translator->get($value, [], $locale)];
             }
-            
+
             if (is_array($value)) {
                 return [$key => $this->translateData($value, $locale)];
             }
-            
+
             return [$key => $value];
         })->toArray();
     }
-    
+
     private function getTranslations(string $locale): array
     {
         return [
@@ -153,7 +153,7 @@ class PdfTranslationService
             ],
         ];
     }
-    
+
     private function getFontForLocale(string $locale): string
     {
         return match($locale) {
@@ -162,18 +162,18 @@ class PdfTranslationService
             default => 'Helvetica',
         };
     }
-    
+
     private function cleanHtmlForPdf(string $html): string
     {
         // Remove script tags
         $html = preg_replace('/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/mi', '', $html);
-        
+
         // Remove style tags (HTML2PDF doesn't support them)
         $html = preg_replace('/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/mi', '', $html);
-        
+
         // Convert special characters
         $html = str_replace('&nbsp;', ' ', $html);
-        
+
         return $html;
     }
 }
@@ -188,7 +188,7 @@ class MultiLinguaPdfGenerator
     {
         $locales = $options['locales'] ?? ['it', 'en'];
         $results = [];
-        
+
         foreach ($locales as $locale) {
             try {
                 $pdf = app(PdfTranslationService::class)->generatePdf([
@@ -197,13 +197,13 @@ class MultiLinguaPdfGenerator
                     'data' => $options['data'],
                     'filename' => str_replace('.pdf', "_{$locale}.pdf", $options['filename'] ?? 'document.pdf'),
                 ]);
-                
+
                 $results[$locale] = [
                     'success' => true,
                     'content' => $pdf,
                     'size' => strlen($pdf),
                 ];
-                
+
             } catch (Exception $e) {
                 $results[$locale] = [
                     'success' => false,
@@ -211,7 +211,7 @@ class MultiLinguaPdfGenerator
                 ];
             }
         }
-        
+
         return $results;
     }
 }
@@ -263,7 +263,7 @@ class MultiLinguaPdfGenerator
         <h2 style="font-size: 12pt; margin-bottom: 5mm;">
             {{ __('lang::invoice.items') }}
         </h2>
-        
+
         <table style="width: 100%; border-collapse: collapse;">
             <tr style="background-color: #e9ecef;">
                 <th style="border: 1px solid #dee2e6; padding: 5mm; font-size: 9pt; text-align: left;">
@@ -398,7 +398,7 @@ class MultiLinguaPdfGenerator
         <h2 style="font-size: 14pt; margin-bottom: 8mm;">
             {{ __('lang::reports.charts.title') }}
         </h2>
-        
+
         <div style="margin-bottom: 10mm;">
             <h3 style="font-size: 12pt;">
                 {{ __('lang::reports.charts.user_growth') }}
@@ -406,7 +406,7 @@ class MultiLinguaPdfGenerator
             <p style="font-size: 10px; color: #7f8c8d;">
                 {{ __('lang::reports.charts.description', ['period' => 'monthly']) }}
             </p>
-            
+
             <!-- Simple chart representation -->
             <table style="width: 100%; border-collapse: collapse;">
                 @foreach($monthlyData as $month => $count)
@@ -441,7 +441,7 @@ return [
     'of' => 'di',
     'generated_at' => 'Generato il',
     'confidential' => 'Riservato',
-    
+
     // Invoice translations
     'invoice' => [
         'title' => 'Fattura',
@@ -459,7 +459,7 @@ return [
         'vat_rate' => 'Aliquota IVA',
         'footer_text' => 'Grazie per il vostro business',
     ],
-    
+
     // Reports translations
     'reports' => [
         'analytics' => [
@@ -478,7 +478,7 @@ return [
             'description' => 'Andamento :period',
         ],
     ],
-    
+
     // Common terms
     'welcome' => 'Benvenuto :name',
     'document_date' => 'Data documento: :date',
@@ -497,7 +497,7 @@ return [
     'of' => 'of',
     'generated_at' => 'Generated on',
     'confidential' => 'Confidential',
-    
+
     // Invoice translations
     'invoice' => [
         'title' => 'Invoice',
@@ -515,7 +515,7 @@ return [
         'vat_rate' => 'VAT Rate',
         'footer_text' => 'Thank you for your business',
     ],
-    
+
     // Reports translations
     'reports' => [
         'analytics' => [
@@ -534,7 +534,7 @@ return [
             'description' => ':period trend',
         ],
     ],
-    
+
     // Common terms
     'welcome' => 'Welcome :name',
     'document_date' => 'Document date: :date',
@@ -577,7 +577,7 @@ class ExportTranslatedPdfAction extends Action
             ->color('primary')
             ->action(function (array $data, $record) {
                 $pdfService = app(PdfTranslationService::class);
-                
+
                 $pdf = $pdfService->generatePdf([
                     'template' => 'invoice',
                     'locale' => $data['locale'],
@@ -586,9 +586,9 @@ class ExportTranslatedPdfAction extends Action
                         'client' => $record->client,
                     ],
                 ]);
-                
+
                 $filename = "invoice_{$record->number}_{$data['locale']}.pdf";
-                
+
                 return response()->streamDownload(function () use ($pdf) {
                     echo $pdf;
                 }, $filename);
@@ -629,7 +629,7 @@ class PdfTranslationTest extends TestCase
     public function it_generates_pdf_with_italian_translations()
     {
         $service = app(PdfTranslationService::class);
-        
+
         $pdf = $service->generatePdf([
             'template' => 'test.invoice',
             'locale' => 'it',
@@ -640,17 +640,17 @@ class PdfTranslationTest extends TestCase
                 ],
             ],
         ]);
-        
+
         $this->assertStringStartsWith('%PDF', $pdf);
         $this->assertStringContainsString('Fattura', $pdf);
         $this->assertStringContainsString('Numero Fattura', $pdf);
     }
-    
+
     /** @test */
     public function it_generates_pdf_with_english_translations()
     {
         $service = app(PdfTranslationService::class);
-        
+
         $pdf = $service->generatePdf([
             'template' => 'test.invoice',
             'locale' => 'en',
@@ -661,17 +661,17 @@ class PdfTranslationTest extends TestCase
                 ],
             ],
         ]);
-        
+
         $this->assertStringStartsWith('%PDF', $pdf);
         $this->assertStringContainsString('Invoice', $pdf);
         $this->assertStringContainsString('Invoice Number', $pdf);
     }
-    
+
     /** @test */
     public function it_handles_missing_translations_gracefully()
     {
         $service = app(PdfTranslationService::class);
-        
+
         $pdf = $service->generatePdf([
             'template' => 'test.invoice',
             'locale' => 'fr', // Missing translations
@@ -681,7 +681,7 @@ class PdfTranslationTest extends TestCase
                 ],
             ],
         ]);
-        
+
         $this->assertStringStartsWith('%PDF', $pdf);
         // Should fallback to key or default value
     }
@@ -698,7 +698,7 @@ class PdfTranslationTest extends TestCase
 class PdfTranslationService
 {
     private array $translationCache = [];
-    
+
     private function getTranslations(string $locale): array
     {
         if (!isset($this->translationCache[$locale])) {
@@ -708,7 +708,7 @@ class PdfTranslationService
                 'common' => $this->loadCommonTranslations($locale),
             ];
         }
-        
+
         return $this->translationCache[$locale];
     }
 }
@@ -722,7 +722,7 @@ class BatchPdfGenerator
     public function generateBatch(array $documents): array
     {
         $results = [];
-        
+
         foreach ($documents as $document) {
             try {
                 $pdf = app(PdfTranslationService::class)->generatePdf($document);
@@ -739,7 +739,7 @@ class BatchPdfGenerator
                 ];
             }
         }
-        
+
         return $results;
     }
 }
@@ -756,7 +756,7 @@ class BatchPdfGenerator
 
 ---
 
-**Last Updated:** 2025-12-09  
-**Version:** 1.0.0  
-**HTML2PDF Version:** 5.2.x  
+**Last Updated:** 2025-12-09
+**Version:** 1.0.0
+**HTML2PDF Version:** 5.2.x
 **PHPStan Level:** 10 ✅

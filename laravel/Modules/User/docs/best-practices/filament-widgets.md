@@ -65,7 +65,7 @@ class UserStatsWidget extends XotBaseWidget
 ### 4. Testing
 public function testWidgetRendering()
     $user = User::factory()->create();
-    
+
     $this->get(route('filament.resources.users.view', $user))
         ->assertSuccessful()
         ->assertSee($user->name);
@@ -123,4 +123,4 @@ use Filament\Widgets\Concerns\CanPoll;
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Laravel Blade](https://laravel.com/docs/blade)
 - [Laravel Blade](https://laravel.com/project_docs/blade)
-- [Livewire](https://livewire.laravel.com/docs) 
+- [Livewire](https://livewire.laravel.com/docs)

@@ -58,13 +58,13 @@ Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament 
 <div>
     <form wire:submit="login">
         {{ $this->form }}
-        
+
         <div class="mt-4">
             <x-filament::button type="submit" class="w-full">
                 {{ __('auth.login.submit_button') }}
             </x-filament::button>
         </div>
-        
+
         @if ($errors->any())
             <div class="mt-4 p-4 bg-red-50 text-red-700 rounded-lg">
                 <ul class="list-disc pl-5">
@@ -84,13 +84,13 @@ Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament 
 <div>
     <form wire:submit="register">
         {{ $this->form }}
-        
+
         <div class="mt-4">
             <x-filament::button type="submit" class="w-full">
                 {{ __('auth.register.submit_button') }}
             </x-filament::button>
         </div>
-        
+
         @if ($errors->any())
             <div class="mt-4 p-4 bg-red-50 text-red-700 rounded-lg">
                 <ul class="list-disc pl-5">
@@ -141,14 +141,14 @@ class LoginFormWidget extends XotBaseWidget
     use InteractsWithForms;
 
     protected static string $view = 'user::livewire.widgets.login-form-widget';
-    
+
     public ?array $data = [];
-    
+
     public function mount(): void
     {
         $this->form->fill();
     }
-    
+
     public function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
     {
         return $form
@@ -163,21 +163,21 @@ class LoginFormWidget extends XotBaseWidget
             ])
             ->statePath('data');
     }
-    
+
     public function login(): void
     {
         $data = $this->form->getState();
-        
+
         if (Auth::attempt([
-            'email' => $data['email'], 
+            'email' => $data['email'],
             'password' => $data['password']
         ], $data['remember'] ?? false)) {
             session()->regenerate();
-            
+
             $locale = app()->getLocale();
             redirect('/' . $locale . '/dashboard');
         }
-        
+
         $this->addError('email', __('auth.failed'));
     }
 }
@@ -203,14 +203,14 @@ class RegisterFormWidget extends XotBaseWidget
     use InteractsWithForms;
 
     protected static string $view = 'user::livewire.widgets.register-form-widget';
-    
+
     public ?array $data = [];
-    
+
     public function mount(): void
     {
         $this->form->fill();
     }
-    
+
     public function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
     {
         return $form
@@ -234,20 +234,20 @@ class RegisterFormWidget extends XotBaseWidget
             ])
             ->statePath('data');
     }
-    
+
     public function register(): void
     {
         $data = $this->form->getState();
-        
+
         $user = User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-        
+
         Auth::login($user);
-        
+
         $locale = app()->getLocale();
         redirect('/' . $locale . '/dashboard');
     }
@@ -284,4 +284,4 @@ L'utilizzo di widget Filament per l'implementazione dei form  offre un approccio
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
 - [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
 - [Gestione Sessione](./SESSION_MANAGEMENT.md)
-- [Tema One Documentation](../../Themes/One/docs/README.md) 
+- [Tema One Documentation](../../Themes/One/docs/README.md)

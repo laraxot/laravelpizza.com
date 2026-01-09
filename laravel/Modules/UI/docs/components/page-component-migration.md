@@ -142,10 +142,10 @@ Per slug dinamici, utilizzare sempre il binding con `:`:
 Utilizzare la modalità debug in sviluppo:
 
 ```blade
-<x-page 
-    side="content" 
-    :slug="$page->slug" 
-    :debug="app()->environment('local')" 
+<x-page
+    side="content"
+    :slug="$page->slug"
+    :debug="app()->environment('local')"
 />
 ```
 
@@ -181,7 +181,7 @@ public function test_page_component_renders_content()
 {
     $component = new Page('test-page', 'content');
     $view = $component->render();
-    
+
     $this->assertInstanceOf(View::class, $view);
     $this->assertEquals('cms::components.page', $view->getName());
 }
@@ -193,7 +193,7 @@ public function test_page_component_renders_content()
 public function test_page_component_in_blade()
 {
     $response = $this->get('/test-page');
-    
+
     $response->assertSee('page-content-content');
     $response->assertSee('data-slug="test-page"');
 }
@@ -223,4 +223,4 @@ Log::error('Error loading page content', [
 
 - [Documentazione Componenti Blade](https://laravel.com/docs/blade#components)
 - [Sistema di Blocchi UI](../blocks/blocks-system.md)
-- [Migrazione CMS](../../Cms/docs/migrations/02_theme_content_to_page_component.md) 
+- [Migrazione CMS](../../Cms/docs/migrations/02_theme_content_to_page_component.md)

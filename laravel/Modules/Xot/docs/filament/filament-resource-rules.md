@@ -36,7 +36,7 @@ public static function getTableBulkActions(): array { ... }  // ❌ VIETATO in X
 class IntegparamResource extends XotBaseResource
 {
     protected static ?string $model = Integparam::class;
-    
+
     public static function getFormSchema(): array
     {
         return [
@@ -145,7 +145,7 @@ class ListIntegparams extends XotBaseListRecords
 class IntegparamResource extends XotBaseResource
 {
     protected static ?string $model = Integparam::class;
-    
+
     // Solo getFormSchema() è obbligatorio
     public static function getFormSchema(): array
     {
@@ -290,4 +290,4 @@ class IntegparamResource extends XotBaseResource
 **Causa**: Override di metodi già gestiti da XotBaseResource
 **Soluzione**: Rimuovere i metodi non necessari
 
-*Ultimo aggiornamento: 5 giugno 2025* 
+*Ultimo aggiornamento: 5 giugno 2025*

@@ -64,8 +64,8 @@ class LimeQuestion extends BaseTreeModel
     {
         return 'parent_qid';
     }
-    
-    public function getLocalKeyName(): string  
+
+    public function getLocalKeyName(): string
     {
         return 'qid';
     }

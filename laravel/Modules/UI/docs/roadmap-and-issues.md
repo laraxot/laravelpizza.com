@@ -1,8 +1,8 @@
 # UI Module - Roadmap, Issues & Optimization
 
-**Modulo**: UI (User Interface Components)  
-**Data Analisi**: 1 Ottobre 2025  
-**Maintainer**: Laraxot Core Team  
+**Modulo**: UI (User Interface Components)
+**Data Analisi**: 1 Ottobre 2025
+**Maintainer**: Laraxot Core Team
 **Status PHPStan**: ✅ 0 errori (level 10)
 
 ---
@@ -56,7 +56,7 @@
 
 **Soluzione**: Rimuovere completamente o implementare se necessario
 
-**Tempo Fix**: 2 minuti  
+**Tempo Fix**: 2 minuti
 **Priorità**: 🟢 BASSA (cleanup)
 
 ---
@@ -71,14 +71,14 @@
 
 **Soluzione**: Aggiungere ARIA attributes
 ```blade
-<button 
+<button
     aria-label="{{ __('ui::buttons.close') }}"
     aria-haspopup="true"
     aria-expanded="{{ $isOpen ? 'true' : 'false' }}"
 >
 ```
 
-**Tempo Fix**: 3-4 ore  
+**Tempo Fix**: 3-4 ore
 **Priorità**: 🟡 MEDIA
 
 ---
@@ -95,12 +95,37 @@
 }
 ```
 
-**Tempo Fix**: 2-3 ore  
+**Tempo Fix**: 2-3 ore
 **Priorità**: 🟡 MEDIA
 
 ---
 
-## 🎯 ROADMAP
+### Issue #4: PHPStan + PHPMD su Factory (BaseModelFactory)
+**File**: `database/factories/BaseModelFactory.php`
+
+**Problema**:
+- PHPStan: PHPDoc `@var string` su `$model` non covariante con la proprietà `Factory::$model` (attesa `class-string<...>`).
+- PHPMD: `UnusedFormalParameter` sulle closure passate a `state()`.
+
+**Fix**:
+- Aggiornato PHPDoc a `@var class-string<BaseModel>`.
+- Rimosso il parametro inutilizzato dalle closure `static fn () => [...]`.
+
+**Verifiche** (da `laravel/`):
+```bash
+./vendor/bin/phpstan analyse Modules/UI --level=9 --memory-limit=2G --no-progress
+php phpmd.phar Modules/UI/database/factories text cleancode,codesize,controversial,design,naming,unusedcode
+./vendor/bin/phpinsights analyse Modules/UI --no-interaction --composer=./composer.lock --disable-security-check
+```
+
+**Esito**:
+- PHPStan ✅
+- PHPMD ✅
+- PHPInsights ✅
+
+---
+
+## ROADMAP
 
 ### IMMEDIATE (Questa Settimana)
 
@@ -114,7 +139,7 @@
   - Props documentation
   - Use cases
 
-**Totale**: ~4.5 ore  
+**Totale**: ~4.5 ore
 **Impatto**: Maintainability +20%
 
 ---
@@ -137,7 +162,7 @@
   - Document all components
   - Interactive examples
 
-**Totale**: ~15 ore  
+**Totale**: ~15 ore
 **Impatto**: DX +50%, Accessibility +40%
 
 ---
@@ -256,10 +281,7 @@
 
 ---
 
-**Status**: ✅ ECCELLENTE  
-**PHPStan**: ✅ 0 errori  
-**Priorità Miglioramenti**: 🟡 MEDIA (già ottimo)  
+**Status**: ✅ ECCELLENTE
+**PHPStan**: ✅ 0 errori
+**Priorità Miglioramenti**: 🟡 MEDIA (già ottimo)
 **Focus**: Accessibility + Documentation
-
-
-

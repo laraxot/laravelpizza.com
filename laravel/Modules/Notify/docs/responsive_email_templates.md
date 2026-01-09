@@ -2,7 +2,7 @@
 
 ## Introduzione
 
-Questa guida fornisce una panoramica completa sulla creazione e l'utilizzo di template email HTML responsive nel contesto di <main module>, con focus su compatibilità, engagement e best practices di settore. 
+Questa guida fornisce una panoramica completa sulla creazione e l'utilizzo di template email HTML responsive nel contesto di <main module>, con focus su compatibilità, engagement e best practices di settore.
 
 ## Principi Fondamentali
 
@@ -129,7 +129,7 @@ I principali client email supportano diversi insiemi di funzionalità HTML/CSS:
 
 Il package `spatie/laravel-database-mail-templates` permette di archiviare e gestire template HTML nel database:
 
-### Implementazione 
+### Implementazione
 
 ```php
 // Nel modello MailTemplate
@@ -137,15 +137,15 @@ public function getHtmlLayout(): string
 {
     // Seleziona il layout in base al tipo di template
     $layoutType = $this->template_type ?? 'default';
-    
+
     // Percorso dinamico al layout
     $layoutPath = module_path('Notify', "resources/mail-layouts/{$layoutType}.html");
-    
+
     // Fallback se non esiste
     if (!file_exists($layoutPath)) {
         $layoutPath = module_path('Notify', "resources/mail-layouts/default.html");
     }
-    
+
     return file_get_contents($layoutPath);
 }
 

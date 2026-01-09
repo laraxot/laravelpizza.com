@@ -167,4 +167,4 @@ Alpine.data('navigation', () => ({
 - La configurazione è salvata in JSON per versionamento
 - Supporto multilingua integrato
 - Cache automatica dei contenuti
-- Backup incluso nel versionamento 
+- Backup incluso nel versionamento

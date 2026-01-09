@@ -46,7 +46,7 @@
 ```php
 // Instead of one complex method:
 private function validateActivityRestore(Activity $activity): bool
-private function performActivityRestore(Activity $activity): void  
+private function performActivityRestore(Activity $activity): void
 private function logActivityRestore(Activity $activity): void
 private function notifyActivityRestore(Activity $activity): void
 ```
@@ -67,7 +67,7 @@ if ($condition) {
     return $alternative;
 }
 
-// ✅ AFTER  
+// ✅ AFTER
 if ($condition) {
     return $result;
 }

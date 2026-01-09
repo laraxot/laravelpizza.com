@@ -30,7 +30,6 @@ This starter template includes a custom __404 Not Found__ error page, located at
 Depending on where your site is hosted, you may need to configure your server to use the custom 404 page. For more details, visit the [Jigsaw documentation about configuring a custom 404 page.](https://jigsaw.tighten.co/project_docs/custom-404-page/)
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di custom-404-page.md
 * [custom-404-page.md](../../../Gdpr/project_docs/custom-404-page.md)
 * [custom-404-page.md](../../../Xot/project_docs/custom-404-page.md)
@@ -38,9 +37,6 @@ Depending on where your site is hosted, you may need to configure your server to
 * [custom-404-page.md](../../../Tenant/project_docs/it/custom-404-page.md)
 * [custom-404-page.md](../../../Cms/project_docs/custom-404-page.md)
 
-
 ### Versione Incoming
 
-
 ---
-

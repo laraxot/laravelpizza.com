@@ -90,8 +90,6 @@ $password=Str::password(10);
     return [$password,$password_hash];
 });
 ```
-=======
->>>>>>> 4efd3ae9 (.)
 
 **Risoluzione:**
 - **Password Pronunciabili**: Scelta della versione con `GetPronounceablePasswordAction`

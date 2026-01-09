@@ -58,12 +58,12 @@ return new class () extends XotBaseMigration {
                 if(in_array($this->getColumnType('text_template'),['text'])){
                     $table->json('text_template')->nullable()->change();
                 }
-                
+
                 // Aggiungere il campo slug se non esiste già
                 if(!$this->hasColumn('slug')){
                     $table->string('slug')->nullable()->after('mailable')->index();
                 }
-                
+
                 $this->updateTimestamps(table: $table, hasSoftDeletes: true);
             }
         );
@@ -113,7 +113,7 @@ use Spatie\MailTemplates\Models\MailTemplate as SpatieMailTemplate;
 class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
 {
     use HasTranslations;
-    
+
     /** @var string */
     protected $connection = 'notify';
 
@@ -129,14 +129,14 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
         'text_template',
         'version',
     ];
-    
+
     /**
      * Boot del modello per garantire l'impostazione dello slug.
      */
     protected static function boot()
     {
         parent::boot();
-        
+
         static::creating(function ($model) {
             // Genera automaticamente uno slug se non fornito
             if (empty($model->slug) && !empty($model->mailable)) {
@@ -145,7 +145,7 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
             }
         });
     }
-    
+
     /**
      * Trova un template per slug.
      *
@@ -179,7 +179,7 @@ class SpatieEmail extends TemplateMailable
 {
     // Use our custom mail template model
     protected static $templateModelClass = MailTemplate::class;
-    
+
     // Slug per identificare il template
     protected static ?string $templateSlug = null;
 
@@ -187,12 +187,12 @@ class SpatieEmail extends TemplateMailable
     {
         $data = $record->toArray();
         $this->setAdditionalData($data);
-        
+
         if ($slug !== null) {
             static::$templateSlug = $slug;
         }
     }
-    
+
     /**
      * Override per recuperare il template tramite slug quando specificato.
      */
@@ -200,15 +200,15 @@ class SpatieEmail extends TemplateMailable
     {
         if (static::$templateSlug !== null) {
             $mailTemplate = MailTemplate::findBySlug(static::$templateSlug);
-            
+
             if ($mailTemplate) {
                 return $mailTemplate;
             }
         }
-        
+
         return parent::getTemplateModel();
     }
-    
+
     public function getHtmlLayout(): string
     {
         return '<header>Site name!</header>{{{ body }}}<footer>Copyright 2018</footer>';

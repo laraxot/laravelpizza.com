@@ -184,4 +184,3 @@ claude mcp add mysql-quaeris ~/bin/mcp-mysql-quaeris.sh
 - [Claude Code MCP Documentation](https://docs.anthropic.com/claude/docs/mcp)
 - [Model Context Protocol Specification](https://modelcontextprotocol.io)
 - [MCP Editors Configuration](../mcp-editors-configuration.md)
-

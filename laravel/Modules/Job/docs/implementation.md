@@ -62,7 +62,7 @@ class JobResource extends Resource
     protected static ?string $model = null;
     protected static ?string $navigationIcon = 'heroicon-o-briefcase';
     protected static ?string $navigationGroup = 'Job';
-    
+
     public static function getNavigationLabel(): string
     {
         return static::$navigationLabel ?? Str::headline(static::getModelLabel());
@@ -81,14 +81,14 @@ class JobPage extends Page
     protected static ?string $navigationIcon = 'heroicon-o-briefcase';
     protected static ?string $navigationGroup = 'Job';
     protected static string $view = 'job::filament.pages.job';
-    
+
     public function mount()
     {
         $this->form->fill([
             'jobs' => $this->getJobs(),
         ]);
     }
-    
+
     protected function getFormSchema(): array
     {
         return [
@@ -258,9 +258,9 @@ class JobServiceTest extends TestCase
             'description' => 'Descrizione lavoro',
             'status' => 'draft'
         ];
-        
+
         $this->jobService->createJob($data);
-        
+
         $job = Job::where('title', $data['title'])->first();
         $this->assertNotNull($job);
         $this->assertEquals($data['status'], $job->status);
@@ -278,7 +278,7 @@ class JobPageTest extends TestCase
             ->assertStatus(200)
             ->assertSee('Gestione Lavoro');
     }
-    
+
     public function test_can_save_job()
     {
         $this->post('/job', [
@@ -290,26 +290,20 @@ class JobPageTest extends TestCase
         ->assertSessionHas('success');
     }
 }
-``` 
+```
 ### Versione HEAD
 
 ### Versione HEAD
-
 
 ## Collegamenti tra versioni di implementation.md
 * [implementation.md](../../../Gdpr/docs/implementation.md)
 * [implementation.md](../../../Xot/docs/implementation.md)
 * [implementation.md](../../../Job/docs/implementation.md)
 
-
 ### Versione Incoming
-
 
 ---
 
-
 ### Versione Incoming
 
-
 ---
-

@@ -35,7 +35,7 @@ final class ImageProcessingService
     private function processSync(string $path, array $operations): string
     {
         $image = Image::make(Storage::path($path));
-        
+
         foreach ($operations as $operation => $params) {
             match ($operation) {
                 'resize' => $this->applyResize($image, $params),
@@ -43,14 +43,14 @@ final class ImageProcessingService
                 'watermark' => $this->applyWatermark($image, $params)
             };
         }
-        
+
         return $this->saveProcessedImage($image);
     }
 
     private function isHeavyOperation(array $operations): bool
     {
-        return isset($operations['resize']) && 
-            ($operations['resize']['width'] > 2000 || 
+        return isset($operations['resize']) &&
+            ($operations['resize']['width'] > 2000 ||
              $operations['resize']['height'] > 2000);
     }
 
@@ -86,7 +86,7 @@ final class MediaCacheService
     public function getCachedMedia(string $path, array $transformations = []): ?string
     {
         $cacheKey = $this->generateCacheKey($path, $transformations);
-        
+
         return Cache::tags(['media', $this->getPathTag($path)])
             ->remember($cacheKey, self::CACHE_TTL, function() use ($path, $transformations) {
                 return $this->processAndCache($path, $transformations);
@@ -145,10 +145,10 @@ final class MediaStorageService
     {
         // Pulizia file temporanei
         $this->cleanupTempFiles();
-        
+
         // Ottimizzazione storage
         $this->optimizeMediaFiles();
-        
+
         // Deduplicazione
         $this->deduplicateFiles();
     }
@@ -156,9 +156,9 @@ final class MediaStorageService
     private function cleanupTempFiles(): void
     {
         $tempFiles = Storage::files('temp');
-        
+
         collect($tempFiles)
-            ->filter(fn($file) => 
+            ->filter(fn($file) =>
                 Storage::lastModified($file) < now()->subDay()->timestamp
             )
             ->each(fn($file) => Storage::delete($file));
@@ -167,7 +167,7 @@ final class MediaStorageService
     private function optimizeMediaFiles(): void
     {
         $mediaFiles = Storage::allFiles('media');
-        
+
         collect($mediaFiles)
             ->filter(fn($file) => $this->shouldOptimize($file))
             ->each(fn($file) => $this->optimizeFile($file));
@@ -177,7 +177,7 @@ final class MediaStorageService
     {
         $size = Storage::size($file);
         $type = Storage::mimeType($file);
-        
+
         return $size > 1024 * 1024 && // > 1MB
                str_starts_with($type, 'image/');
     }
@@ -200,10 +200,10 @@ private function setupPerformanceMonitoring(): void
     // Monitoring elaborazione
     Event::listen(MediaProcessing::class, function ($event) {
         $start = microtime(true);
-        
+
         return function () use ($start) {
             $duration = microtime(true) - $start;
-            
+
             if ($duration > 2.0) { // 2 secondi
                 Log::channel('media_performance')
                     ->warning('Elaborazione media lenta', [
@@ -211,7 +211,7 @@ private function setupPerformanceMonitoring(): void
                         'duration' => $duration
                     ]);
             }
-            
+
             Metrics::timing('media.processing', $duration * 1000);
         };
     });
@@ -219,7 +219,7 @@ private function setupPerformanceMonitoring(): void
     // Monitoring storage
     Event::listen(MediaStored::class, function ($event) {
         $size = Storage::size($event->path);
-        
+
         Metrics::gauge('media.storage', $size, [
             'type' => Storage::mimeType($event->path)
         ]);
@@ -284,7 +284,7 @@ final class ImageOptimizer
     public function optimize(string $path): void
     {
         $optimizerChain = OptimizerChainFactory::create();
-        
+
         $optimizerChain
             ->setTimeout(60)
             ->useLogger(Log::channel('media_optimization'))
@@ -295,7 +295,7 @@ final class ImageOptimizer
     {
         collect($paths)
             ->chunk(10)
-            ->each(fn($chunk) => 
+            ->each(fn($chunk) =>
                 dispatch(new OptimizeImagesJob($chunk))
                     ->onQueue('media-optimization')
             );
@@ -333,7 +333,7 @@ final class Media extends Model
             ->all();
 
         $this->save();
-        
+
         return $this;
     }
 
@@ -349,16 +349,14 @@ final class Media extends Model
 }
 ### Versione HEAD
 
-``` 
+```
 ## Collegamenti tra versioni di bottlenecks_detailed.md
 * [bottlenecks_detailed.md](../../../Xot/docs/bottlenecks_detailed.md)
 * [bottlenecks_detailed.md](../../../Job/docs/bottlenecks_detailed.md)
 * [bottlenecks_detailed.md](../../../Media/docs/bottlenecks_detailed.md)
 
-
 ### Versione Incoming
 
-``` 
+```
 
 ---
-

@@ -153,7 +153,7 @@ class EmailTemplateRule implements Rule
     protected function hasValidPlaceholders(string $html): bool
     {
         preg_match_all('/\{\{\s*\$([a-zA-Z0-9_]+)\s*\}\}/', $html, $matches);
-        
+
         foreach ($matches[1] as $placeholder) {
             if (!in_array($placeholder, $this->allowedPlaceholders)) {
                 return false;
@@ -181,10 +181,10 @@ class EmailAssetManager
     public function uploadImage($file): string
     {
         $path = $file->store('email-assets', 'public');
-        
+
         // Ottimizza immagine
         $this->optimizeImage($path);
-        
+
         // Genera URL pubblico
         return Storage::url($path);
     }
@@ -192,12 +192,12 @@ class EmailAssetManager
     public function optimizeImage(string $path): void
     {
         $image = Image::make(storage_path("app/public/{$path}"));
-        
+
         $image->resize(800, null, function ($constraint) {
             $constraint->aspectRatio();
             $constraint->upsize();
         });
-        
+
         $image->save(null, 80);
     }
 }
@@ -432,4 +432,4 @@ class TemplateValidator
 ## Vedi Anche
 - [TinyMCE Documentation](https://www.tiny.cloud/docs)
 - [CKEditor Documentation](https://ckeditor.com/docs)
-- [Quill Documentation](https://quilljs.com/docs) 
+- [Quill Documentation](https://quilljs.com/docs)

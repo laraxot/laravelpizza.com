@@ -294,4 +294,4 @@ Ogni modulo dovrebbe documentare le soluzioni ai problemi PHPStan specifici in `
 
 ---
 
-Seguendo questa guida pratica, potrai affrontare e risolvere in modo metodico i problemi rilevati da PHPStan nel tuo codebase Laraxot <nome progetto>, migliorando la qualità complessiva del codice e riducendo gli errori a runtime. 
+Seguendo questa guida pratica, potrai affrontare e risolvere in modo metodico i problemi rilevati da PHPStan nel tuo codebase Laraxot <nome progetto>, migliorando la qualità complessiva del codice e riducendo gli errori a runtime.

@@ -5,7 +5,7 @@ extends: _layouts.documentation
 section: content
 ---
 
-# alcuni links 
+# alcuni links
 
 https://tsh.io/blog/php-static-code-analysis/
 https://tomasvotruba.com/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code/
@@ -24,8 +24,8 @@ SonarQube
 
 Rector
 
-Easy Coding Standard (ECS), 
-PHPStan, 
+Easy Coding Standard (ECS),
+PHPStan,
 Psalm.
 More on those three later. In addition to them, there are also a lot of other tools. In my personal experience, I only used them sparingly, but some of them are definitely viable.  You're welcome to give them a try.
 
@@ -51,7 +51,6 @@ Deptrac
 
 ### Versione HEAD
 
-
 ## Collegamenti tra versioni di links.md
 * [links.md](../../../Gdpr/project_docs/links.md)
 * [links.md](../../../Notify/project_docs/links.md)
@@ -64,9 +63,7 @@ Deptrac
 * [links.md](../../../Cms/project_docs/links.md)
 * [links.md](../../../../Themes/One/project_docs/links.md)
 
-
 ### Versione Incoming
-
 
 ---
 
@@ -292,4 +289,3 @@ return [
     Modules\Xot\Providers\EventServiceProvider::class,
 ],
 ```
-

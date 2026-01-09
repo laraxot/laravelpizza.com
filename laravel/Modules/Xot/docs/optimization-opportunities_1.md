@@ -51,18 +51,18 @@ php check_form_schema.php --mode=testing
 abstract class XotBaseModel extends Model
 {
     use HasFactory, Updater;
-    
+
     public static $snakeAttributes = true;
     public $incrementing = true;
     public $timestamps = true;
     protected $perPage = 30;
-    
+
     // Metodi comuni per tutti i moduli
     protected static function newFactory()
     {
         return app(GetFactoryAction::class)->execute(static::class);
     }
-    
+
     protected function casts(): array
     {
         return [
@@ -84,7 +84,7 @@ abstract class BaseModel extends XotBaseModel
 {
     // Solo configurazioni specifiche del modulo
     protected $connection = 'module_name';
-    
+
     // Override solo se necessario
 }
 ```
@@ -111,7 +111,7 @@ abstract class UIBaseStatsWidget extends XotBaseStatsOverviewWidget
 {
     protected static ?int $sort = 0;
     protected static ?string $pollingInterval = null;
-    
+
     // Metodi comuni per tutti i widget di statistiche
 }
 
@@ -119,7 +119,7 @@ abstract class UIBaseTestWidget extends XotBaseWidget
 {
     protected static string $view = 'ui::filament.widgets.base-test';
     protected static bool $isLazy = true;
-    
+
     // Metodi comuni per tutti i widget di test
 }
 
@@ -151,12 +151,12 @@ class StatsOverviewWidget extends UIBaseStatsWidget
 abstract class XotBaseCreateRecord extends CreateRecord
 {
     protected static string $resource;
-    
+
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');
     }
-    
+
     protected function mutateFormDataBeforeCreate(array $data): array
     {
         // Logica comune per tutti i moduli
@@ -168,7 +168,7 @@ abstract class XotBaseCreateRecord extends CreateRecord
 class CreateUser extends XotBaseCreateRecord
 {
     protected static string $resource = UserResource::class;
-    
+
     // Override solo se serve logica specifica
 }
 ```
@@ -194,7 +194,7 @@ class FactoryManager
         // Logica centralizzata per creare factory
         return $this->resolveFactory($modelClass);
     }
-    
+
     public function createModel(string $modelClass, array $attributes = []): Model
     {
         // Logica centralizzata per creare modelli
@@ -216,12 +216,12 @@ class XotValidationRules
     {
         return ['required', 'email', 'max:255'];
     }
-    
+
     public static function name(): array
     {
         return ['required', 'string', 'max:100'];
     }
-    
+
     public static function description(): array
     {
         return ['nullable', 'string', 'max:1000'];

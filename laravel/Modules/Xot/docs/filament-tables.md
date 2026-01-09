@@ -21,7 +21,7 @@ use Modules\Xot\Filament\Traits\HasXotTable;
 class ExampleResource extends Resource
 {
     use HasXotTable;
-    
+
     // ...
 }
 ```

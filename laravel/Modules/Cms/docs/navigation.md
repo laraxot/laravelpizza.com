@@ -40,4 +40,3 @@ $page->navigation
 * [navigation.md](laravel/Modules/Cms/docs/blocks/navigation.md)
 * [navigation.md](laravel/Modules/Cms/docs/navigation.md)
 * [navigation.md](laravel/Modules/Cms/docs/components/navigation.md)
-

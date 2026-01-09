@@ -142,4 +142,4 @@ class S3Test extends XotBasePage
 - [XotBasePage Implementation](../../Xot/docs/xotbasepage_implementation.md)
 - [DRY + KISS Principles](../../Xot/docs/dry_kiss_principles.md)
 
-*Ultimo aggiornamento: giugno 2025* 
+*Ultimo aggiornamento: giugno 2025*

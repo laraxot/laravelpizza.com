@@ -86,10 +86,8 @@ quindi le relazioni verranno create utilizzando il MorphMap, ovvero la stringa '
 * [structure.md](../../../Cms/docs/themes/structure.md)
 * [structure.md](../../../Cms/docs/components/structure.md)
 
-
 ### Versione Incoming
 
 - altri files
 
 ---
-

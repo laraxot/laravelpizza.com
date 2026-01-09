@@ -33,52 +33,52 @@ use Intervention\Image\Facades\Image;
 class ProcessImage implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    
+
     protected $mediaId;
     protected $formats;
-    
+
     public function __construct($mediaId, array $formats = [])
     {
         $this->mediaId = $mediaId;
         $this->formats = $formats ?: config('media.formats');
         $this->queue = 'media';
     }
-    
+
     public function handle()
     {
         $media = Media::findOrFail($this->mediaId);
         $originalPath = storage_path('app/public/' . $media->path);
-        
+
         if (!file_exists($originalPath)) {
             return;
         }
-        
+
         foreach ($this->formats as $format => $dimensions) {
             $this->processFormat($media, $format, $dimensions, $originalPath);
         }
-        
+
         // Aggiorna lo stato del media
         $media->update(['status' => 'processed']);
     }
-    
+
     protected function processFormat($media, $format, $dimensions, $originalPath)
     {
         $width = $dimensions['width'] ?? null;
         $height = $dimensions['height'] ?? null;
         $quality = $dimensions['quality'] ?? 90;
-        
+
         $formatPath = $this->getFormatPath($media->path, $format);
         $fullPath = storage_path('app/public/' . $formatPath);
-        
+
         // Crea la directory se non esiste
         $directory = dirname($fullPath);
         if (!is_dir($directory)) {
             mkdir($directory, 0755, true);
         }
-        
+
         // Elabora l'immagine
         $image = Image::make($originalPath);
-        
+
         if ($width && $height) {
             $image->fit($width, $height);
         } elseif ($width) {
@@ -90,16 +90,16 @@ class ProcessImage implements ShouldQueue
                 $constraint->upsize();
             });
         }
-        
+
         $image->save($fullPath, $quality);
-        
+
         // Salva il percorso del formato nel database
         $media->formats()->updateOrCreate(
             ['format' => $format],
             ['path' => $formatPath]
         );
     }
-    
+
     protected function getFormatPath($originalPath, $format)
     {
         $pathInfo = pathinfo($originalPath);
@@ -125,10 +125,10 @@ class MediaController extends Controller
         $request->validate([
             'file' => 'required|image|max:10240', // 10MB max
         ]);
-        
+
         $file = $request->file('file');
         $path = $file->store('media', 'public');
-        
+
         // Salva il record nel database con stato 'pending'
         $media = Media::create([
             'name' => $file->getClientOriginalName(),
@@ -137,10 +137,10 @@ class MediaController extends Controller
             'size' => $file->getSize(),
             'status' => 'pending',
         ]);
-        
+
         // Dispatch del job per l'elaborazione asincrona
         ProcessImage::dispatch($media->id)->onQueue('media');
-        
+
         return response()->json([
             'id' => $media->id,
             'name' => $media->name,
@@ -148,11 +148,11 @@ class MediaController extends Controller
             'message' => 'Upload completato. L\'immagine sarà elaborata a breve.',
         ]);
     }
-    
+
     public function status($id)
     {
         $media = Media::with('formats')->findOrFail($id);
-        
+
         return response()->json([
             'id' => $media->id,
             'name' => $media->name,
@@ -176,7 +176,7 @@ class MediaFormat extends Model
     protected $fillable = [
         'media_id', 'format', 'path',
     ];
-    
+
     public function media()
     {
         return $this->belongsTo(Media::class);
@@ -197,24 +197,24 @@ class Media extends Model
     protected $fillable = [
         'name', 'path', 'mime_type', 'size', 'status',
     ];
-    
+
     public function formats()
     {
         return $this->hasMany(MediaFormat::class);
     }
-    
+
     public function getUrl($format = null)
     {
         if (!$format) {
             return asset('storage/' . $this->path);
         }
-        
+
         $format = $this->formats()->where('format', $format)->first();
-        
+
         if (!$format) {
             return asset('storage/' . $this->path);
         }
-        
+
         return asset('storage/' . $format->path);
     }
 }
@@ -285,18 +285,18 @@ export default {
     async uploadFile(event) {
       const file = event.target.files[0];
       if (!file) return;
-      
+
       this.uploading = true;
-      
+
       const formData = new FormData();
       formData.append('file', file);
-      
+
       try {
         const response = await axios.post('/api/media/upload', formData);
         this.mediaId = response.data.id;
         this.uploading = false;
         this.processing = true;
-        
+
         // Controlla lo stato automaticamente dopo 5 secondi
         setTimeout(() => {
           this.checkStatus();
@@ -308,10 +308,10 @@ export default {
     },
     async checkStatus() {
       if (!this.mediaId) return;
-      
+
       try {
         const response = await axios.get(`/api/media/${this.mediaId}/status`);
-        
+
         if (response.data.status === 'processed') {
           this.processing = false;
           this.processed = true;
@@ -358,23 +358,23 @@ class MediaStorageService
     {
         // Genera un nome file unico
         $filename = $this->generateFilename($file);
-        
+
         // Crea una struttura di directory basata sulla data
         $datePath = date('Y/m/d');
         $relativePath = "{$directory}/{$datePath}";
-        
+
         // Salva il file
         $path = $file->storeAs($relativePath, $filename, 'public');
-        
+
         return $path;
     }
-    
+
     protected function generateFilename(UploadedFile $file)
     {
         $extension = $file->getClientOriginalExtension();
         $name = Str::slug(pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME));
         $uniqueId = Str::random(10);
-        
+
         return "{$name}_{$uniqueId}.{$extension}";
     }
 }
@@ -389,23 +389,23 @@ use Modules\Media\Services\MediaStorageService;
 class MediaController extends Controller
 {
     protected $mediaStorage;
-    
+
     public function __construct(MediaStorageService $mediaStorage)
     {
         $this->mediaStorage = $mediaStorage;
     }
-    
+
     public function upload(Request $request)
     {
         $request->validate([
             'file' => 'required|image|max:10240', // 10MB max
         ]);
-        
+
         $file = $request->file('file');
-        
+
         // Utilizza il servizio di storage
         $path = $this->mediaStorage->store($file);
-        
+
         // Salva il record nel database
         $media = Media::create([
             'name' => $file->getClientOriginalName(),
@@ -414,10 +414,10 @@ class MediaController extends Controller
             'size' => $file->getSize(),
             'status' => 'pending',
         ]);
-        
+
         // Dispatch del job per l'elaborazione asincrona
         ProcessImage::dispatch($media->id)->onQueue('media');
-        
+
         return response()->json([
             'id' => $media->id,
             'name' => $media->name,
@@ -450,7 +450,7 @@ class AddMetadataToMediaTable extends Migration
             $table->string('filename')->nullable()->after('directory');
         });
     }
-    
+
     public function down()
     {
         Schema::table('media', function (Blueprint $table) {
@@ -469,33 +469,33 @@ class Media extends Model
     protected $fillable = [
         'name', 'path', 'mime_type', 'size', 'metadata', 'disk', 'directory', 'filename', 'status',
     ];
-    
+
     protected $casts = [
         'metadata' => 'array',
     ];
-    
+
     // ...
-    
+
     public function getUrl($format = null)
     {
         if (!$format) {
             return asset('storage/' . $this->path);
         }
-        
+
         $format = $this->formats()->where('format', $format)->first();
-        
+
         if (!$format) {
             return asset('storage/' . $this->path);
         }
-        
+
         return asset('storage/' . $format->path);
     }
-    
+
     public function setMetadataAttribute($value)
     {
         $this->attributes['metadata'] = json_encode($value);
     }
-    
+
     public function getMetadataAttribute($value)
     {
         return json_decode($value, true);
@@ -517,51 +517,51 @@ use Illuminate\Support\Facades\Storage;
 class ReorganizeMediaFiles extends Command
 {
     protected $signature = 'media:reorganize {--chunk=100}';
-    
+
     protected $description = 'Reorganize media files into a hierarchical structure';
-    
+
     protected $mediaStorage;
-    
+
     public function __construct(MediaStorageService $mediaStorage)
     {
         parent::__construct();
         $this->mediaStorage = $mediaStorage;
     }
-    
+
     public function handle()
     {
         $chunkSize = $this->option('chunk');
-        
+
         Media::where('directory', null)
             ->chunkById($chunkSize, function ($medias) {
                 foreach ($medias as $media) {
                     $this->reorganizeMedia($media);
                 }
             });
-        
+
         $this->info('Media files reorganized successfully.');
     }
-    
+
     protected function reorganizeMedia(Media $media)
     {
         $oldPath = $media->path;
-        
+
         if (!Storage::disk('public')->exists($oldPath)) {
             $this->warn("File not found: {$oldPath}");
             return;
         }
-        
+
         // Crea nuova struttura di directory basata sulla data di creazione
         $datePath = $media->created_at->format('Y/m/d');
         $directory = "media/{$datePath}";
-        
+
         // Genera un nuovo nome file
         $filename = pathinfo($oldPath, PATHINFO_BASENAME);
         $newPath = "{$directory}/{$filename}";
-        
+
         // Crea la directory se non esiste
         Storage::disk('public')->makeDirectory($directory);
-        
+
         // Sposta il file
         if (Storage::disk('public')->move($oldPath, $newPath)) {
             // Aggiorna il record nel database
@@ -570,7 +570,7 @@ class ReorganizeMediaFiles extends Command
                 'directory' => $directory,
                 'filename' => $filename,
             ]);
-            
+
             $this->info("Moved: {$oldPath} -> {$newPath}");
         } else {
             $this->error("Failed to move: {$oldPath}");
@@ -610,22 +610,22 @@ class GalleryController extends Controller
                   ->orderBy('position')
                   ->limit(12); // Carica solo le prime 12 immagini
         }])->findOrFail($id);
-        
+
         return view('media::galleries.show', compact('gallery'));
     }
-    
+
     public function loadMore(Request $request, $id)
     {
         $request->validate([
             'offset' => 'required|integer|min:0',
             'limit' => 'required|integer|min:1|max:24',
         ]);
-        
+
         $offset = $request->input('offset');
         $limit = $request->input('limit');
-        
+
         $gallery = Gallery::findOrFail($id);
-        
+
         $media = $gallery->media()
             ->select('id', 'name', 'path', 'mime_type')
             ->where('status', 'processed')
@@ -633,7 +633,7 @@ class GalleryController extends Controller
             ->offset($offset)
             ->limit($limit)
             ->get();
-        
+
         return response()->json([
             'media' => $media->map(function ($item) {
                 return [
@@ -658,21 +658,21 @@ class GalleryController extends Controller
   <div class="gallery">
     <div class="gallery-grid">
       <div v-for="item in items" :key="item.id" class="gallery-item">
-        <img 
-          :data-src="item.thumbnail" 
-          class="lazyload" 
-          :alt="item.name" 
-          @click="openLightbox(item)" 
+        <img
+          :data-src="item.thumbnail"
+          class="lazyload"
+          :alt="item.name"
+          @click="openLightbox(item)"
         />
       </div>
     </div>
-    
+
     <div v-if="hasMore" class="load-more">
       <button @click="loadMore" :disabled="loading">
         {{ loading ? 'Loading...' : 'Load More' }}
       </button>
     </div>
-    
+
     <div v-if="lightbox.open" class="lightbox">
       <button class="close" @click="closeLightbox">&times;</button>
       <img :src="lightbox.current.large" :alt="lightbox.current.name" />
@@ -714,9 +714,9 @@ export default {
   methods: {
     async loadMore() {
       if (this.loading) return;
-      
+
       this.loading = true;
-      
+
       try {
         const response = await axios.get(`/api/galleries/${this.galleryId}/load-more`, {
           params: {
@@ -724,11 +724,11 @@ export default {
             limit: this.limit
           }
         });
-        
+
         this.items = [...this.items, ...response.data.media];
         this.offset += response.data.media.length;
         this.hasMore = response.data.has_more;
-        
+
         // Reinizializza lazysizes per le nuove immagini
         this.$nextTick(() => {
           if (window.lazySizes) {
@@ -744,14 +744,14 @@ export default {
     openLightbox(item) {
       this.lightbox.current = item;
       this.lightbox.open = true;
-      
+
       // Disabilita lo scroll della pagina
       document.body.style.overflow = 'hidden';
     },
     closeLightbox() {
       this.lightbox.open = false;
       this.lightbox.current = null;
-      
+
       // Riabilita lo scroll della pagina
       document.body.style.overflow = '';
     }
@@ -780,14 +780,14 @@ class Gallery extends Model
     protected $fillable = [
         'name', 'description', 'slug',
     ];
-    
+
     public function media()
     {
         return $this->belongsToMany(Media::class, 'gallery_media')
             ->withPivot('position')
             ->orderBy('position');
     }
-    
+
     public function getCoverImage()
     {
         return $this->media()
@@ -795,15 +795,15 @@ class Gallery extends Model
             ->orderBy('pivot_position')
             ->first();
     }
-    
+
     public function getCoverUrl($format = 'medium')
     {
         $cover = $this->getCoverImage();
-        
+
         if (!$cover) {
             return asset('images/no-image.jpg');
         }
-        
+
         return $cover->getUrl($format);
     }
 }
@@ -824,7 +824,6 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 * [BOTTLENECKS.md](../../../User/docs/BOTTLENECKS.md)
 * [BOTTLENECKS.md](../../../Media/docs/BOTTLENECKS.md)
 * [BOTTLENECKS.md](../../../Cms/docs/BOTTLENECKS.md)
-
 
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
@@ -847,4 +846,3 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 * [bottlenecks.md](../../Activity/docs/bottlenecks.md)
 * [bottlenecks.md](../../Patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
-

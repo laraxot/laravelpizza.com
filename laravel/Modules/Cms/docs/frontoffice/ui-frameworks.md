@@ -174,4 +174,4 @@ module.exports = {
 3. **Problemi di Performance**
    - Ottimizzare le classi Tailwind
    - Implementare il purging
-   - Utilizzare CDN per gli asset 
+   - Utilizzare CDN per gli asset

@@ -120,8 +120,8 @@ MAIUSCOLE (convenzione standard):
 ```markdown
 # Titolo Documento
 
-> **Descrizione breve del contenuto**  
-> **Modulo**: Nome Modulo  
+> **Descrizione breve del contenuto**
+> **Modulo**: Nome Modulo
 > **Status**: ✅ Updated / ⚠️ WIP / 🔄 Review Needed
 
 ---
@@ -163,8 +163,8 @@ Testo e spiegazioni...
 
 ---
 
-**Ultimo aggiornamento**: YYYY-MM-DD  
-**Autore**: Nome  
+**Ultimo aggiornamento**: YYYY-MM-DD
+**Autore**: Nome
 **Status**: ✅ / ⚠️ / 🔄
 ```
 
@@ -187,7 +187,7 @@ Panoramica generale dell'argomento coperto da questa sezione.
 
 ---
 
-**Cartella**: `path/to/this/folder/`  
+**Cartella**: `path/to/this/folder/`
 **Files**: X documenti
 ```
 
@@ -266,7 +266,7 @@ COUNT=$(echo "$EMPTY_FILES" | grep -c "^")
 if [ $COUNT -gt 0 ]; then
     echo "📋 Trovati $COUNT file vuoti"
     echo "$EMPTY_FILES"
-    
+
     read -p "Vuoi eliminarli? (y/n) " -n 1 -r
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -293,7 +293,7 @@ find $MODULE_PATH/*/docs -type f -name "*_*.md" ! -path "*/_archive/*" | while r
     dir=$(dirname "$file")
     base=$(basename "$file")
     new_name=$(echo "$base" | tr '_' '-')
-    
+
     if [ "$base" != "$new_name" ]; then
         echo "  $base → $new_name"
         mv "$dir/$base" "$dir/$new_name"
@@ -565,7 +565,7 @@ Per migliorare questa guida:
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-06  
-**Versione**: 1.0  
-**Status**: ✅ Active  
+**Ultimo aggiornamento**: 2025-01-06
+**Versione**: 1.0
+**Status**: ✅ Active
 **Maintainer**: Team Laraxot

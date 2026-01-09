@@ -1,7 +1,7 @@
 # Analisi Metodi Duplicati - Modulo Tenant
 
 **Data Generazione**: 2025-10-15 06:41:17
-**Totale Gruppi di Duplicati**: 
+**Totale Gruppi di Duplicati**:
 
 ## Sommario Esecutivo
 
@@ -490,7 +490,6 @@ public function execute(string $prompt): CompletionData
 
 ---
 
-
 ---
 
 ## Legenda
@@ -515,4 +514,3 @@ Indica quanto è probabile che il refactoring sia vantaggioso:
 - **70-89%**: Raccomandato
 - **50-69%**: Valutare caso per caso
 - **< 50%**: Richiede analisi dettagliata
-

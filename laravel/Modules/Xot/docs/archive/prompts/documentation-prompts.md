@@ -123,7 +123,6 @@ Questo documento descrive le regole e le best practices per i prompt di document
 [Documento in Root](../../../project_docs/documento.md)
 [Documento in Root](../../../project_docs/documento.md)
 
-
 [Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
 [Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
 [Documento in Root](../../../project_docs/documento.md)
@@ -132,23 +131,6 @@ Questo documento descrive le regole e le best practices per i prompt di document
 [Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
 [Documento in Root](../../../project_docs/documento.md)
 [Documento in Root](../../../project_docs/documento.md)
-
-
-[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
-[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
-[Documento in Root](../../../project_docs/documento.md)
-[Documento in Root](../../../project_docs/documento.md)
-[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
-[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
-[Documento in Root](../../../project_docs/documento.md)
-[Documento in Root](../../../project_docs/documento.md)
-
-
-[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
-[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
-[Documento in Root](../../../project_docs/documento.md)
-[Documento in Root](../../../project_docs/documento.md)
-
 
 [Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
 [Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
@@ -159,6 +141,19 @@ Questo documento descrive le regole e le best practices per i prompt di document
 [Documento in Root](../../../project_docs/documento.md)
 [Documento in Root](../../../project_docs/documento.md)
 
+[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
+[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
+[Documento in Root](../../../project_docs/documento.md)
+[Documento in Root](../../../project_docs/documento.md)
+
+[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
+[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
+[Documento in Root](../../../project_docs/documento.md)
+[Documento in Root](../../../project_docs/documento.md)
+[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
+[Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
+[Documento in Root](../../../project_docs/documento.md)
+[Documento in Root](../../../project_docs/documento.md)
 
 [Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)
 [Documento in Modulo Altro](../../AltroModulo/project_docs/documento.md)

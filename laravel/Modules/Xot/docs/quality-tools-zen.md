@@ -1,6 +1,6 @@
 # Lo Zen degli Strumenti di Qualità PHP - La Grande Unificazione
 
-**Data**: 2025-01-05  
+**Data**: 2025-01-05
 **Filosofia**: Type Safety, Fail Fast, Zero Tolerance
 
 ## 🎯 La Visione Complessiva
@@ -128,7 +128,7 @@ php artisan ide-helper:models -W
 **Tre Comandi Sacri**:
 ```bash
 php artisan ide-helper:generate  # Facades
-php artisan ide-helper:models    # Models  
+php artisan ide-helper:models    # Models
 php artisan ide-helper:meta      # PhpStorm Meta
 ```
 
@@ -151,7 +151,7 @@ public function process(array $data): Result
     Assert::keyExists($data, 'email', 'Email is required');
     Assert::email($data['email'], 'Invalid email format');
     Assert::stringNotEmpty($data['name'], 'Name cannot be empty');
-    
+
     // LOGIC - Safe to proceed
     return new Result($data);
 }
@@ -279,10 +279,10 @@ echo "✅ Quality checks passed!"
 steps:
   - name: PHPStan
     run: vendor/bin/phpstan analyze --level=10
-    
+
   - name: PHPMD
     run: vendor/bin/phpmd app text phpmd.ruleset.xml
-    
+
   - name: PHP Insights
     run: php artisan insights --min-quality=90
 ```
@@ -304,10 +304,10 @@ class UserService
         Assert::email($data['email']);
         Assert::keyExists($data, 'name');
         Assert::stringNotEmpty($data['name']);
-        
+
         // Safe: Parsing sicuro
         $metadata = json_decode($data['metadata'] ?? '{}');
-        
+
         // Type hint: PHPStan felice
         return User::create([
             'email' => $data['email'],
@@ -332,15 +332,15 @@ class ConfigLoader
         // Assert: Path validation
         Assert::fileExists($path);
         Assert::readable($path);
-        
+
         // Safe: No false returns
         $content = file_get_contents($path);
         $data = json_decode($content, true);
-        
+
         // Assert: Data validation
         Assert::isArray($data);
         Assert::keyExists($data, 'app_name');
-        
+
         return new Config($data);
     }
 }
@@ -425,10 +425,10 @@ php artisan insights
 
 ## 🧠 La Filosofia Finale
 
-> "Type safety non è una scelta, è una responsabilità.  
-> Assertions non sono paranoia, sono professionalità.  
-> Exceptions non sono errori, sono comunicazione.  
-> Metrics non sono numeri, sono obiettivi.  
+> "Type safety non è una scelta, è una responsabilità.
+> Assertions non sono paranoia, sono professionalità.
+> Exceptions non sono errori, sono comunicazione.
+> Metrics non sono numeri, sono obiettivi.
 > Quality non è un costo, è un investimento."
 
 **Il progetto perfetto ha**:

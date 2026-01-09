@@ -7,7 +7,7 @@ I componenti table forniscono una gestione efficiente e personalizzabile dei dat
 
 ### DataTable
 ```blade
-<x-ui::datatable 
+<x-ui::datatable
     :columns="[
         ['name' => 'id', 'label' => 'ID', 'sortable' => true],
         ['name' => 'name', 'label' => 'Nome', 'sortable' => true],
@@ -25,7 +25,7 @@ I componenti table forniscono una gestione efficiente e personalizzabile dei dat
 
 ### StatusBadge
 ```blade
-<x-ui::status-badge 
+<x-ui::status-badge
     :status="$user->status"
     :options="[
         'active' => ['label' => 'Attivo', 'color' => 'success'],
@@ -37,7 +37,7 @@ I componenti table forniscono una gestione efficiente e personalizzabile dei dat
 
 ### ActionButtons
 ```blade
-<x-ui::action-buttons 
+<x-ui::action-buttons
     :actions="[
         [
             'type' => 'view',
@@ -94,7 +94,7 @@ class UserTable extends Component
     public $sortDirection = 'asc';
     public $search = '';
     public $perPage = 10;
-    
+
     public function sortBy($field)
     {
         if ($this->sortField === $field) {
@@ -104,7 +104,7 @@ class UserTable extends Component
             $this->sortDirection = 'asc';
         }
     }
-    
+
     public function render()
     {
         $users = User::query()
@@ -114,7 +114,7 @@ class UserTable extends Component
             })
             ->orderBy($this->sortField, $this->sortDirection)
             ->paginate($this->perPage);
-            
+
         return view('livewire.user-table', compact('users'));
     }
 }
@@ -139,4 +139,4 @@ class UserTable extends Component
 - [Componenti Form](./form-components.md)
 - [Componenti Chart](./chart-components.md)
 - [Componenti Layout](./layout-components.md)
-- [Documentazione Frontend](../Cms/docs/frontend-architecture.md) 
+- [Documentazione Frontend](../Cms/docs/frontend-architecture.md)

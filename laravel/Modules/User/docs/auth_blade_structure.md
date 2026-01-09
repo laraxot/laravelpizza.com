@@ -30,13 +30,13 @@ class [NomePagina]Page
 {
     // Proprietà pubbliche per il binding
     public $property = '';
-    
+
     // Metodi pubblici per le azioni
     public function action()
     {
         // Logica dell'azione
     }
-    
+
     // Hook del ciclo di vita
     public function mount()
     {
@@ -49,7 +49,7 @@ class [NomePagina]Page
     <x-slot:title>
         {{ __('Titolo Pagina') }}
     </x-slot>
-    
+
     <!-- Contenuto -->
 </x-layout>
 ```
@@ -88,18 +88,18 @@ class LoginPage
     public $email = '';
     public $password = '';
     public $remember = false;
-    
+
     public function login()
     {
         $this->validate([
             'email' => 'required|email',
             'password' => 'required'
         ]);
-        
+
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
             return redirect()->intended(route('dashboard'));
         }
-        
+
         $this->addError('email', __('Credenziali non valide'));
     }
 }
@@ -115,7 +115,7 @@ class RegisterPage
     public $email = '';
     public $password = '';
     public $password_confirmation = '';
-    
+
     public function register()
     {
         $this->validate([
@@ -123,13 +123,13 @@ class RegisterPage
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8|confirmed'
         ]);
-        
+
         $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
             'password' => Hash::make($this->password)
         ]);
-        
+
         Auth::login($user);
         return redirect()->route('dashboard');
     }
@@ -146,18 +146,18 @@ class LogoutPage
     {
         try {
             Event::dispatch('auth.logout.attempting', [auth()->user()]);
-            
+
             auth()->logout();
             session()->invalidate();
             session()->regenerateToken();
-            
+
             Event::dispatch('auth.logout.successful');
-            
+
             Log::info('Utente disconnesso', [
                 'user_id' => auth()->id(),
                 'timestamp' => now()
             ]);
-            
+
             return redirect()->route('home');
         } catch (\Exception $e) {
             Log::error('Errore durante il logout: ' . $e->getMessage());
@@ -181,4 +181,4 @@ Ogni azione di autenticazione deve:
 - [Documentazione Volt](./VOLT_LOGOUT.md)
 - [Best Practices Routing](./ROUTING_BEST_PRACTICES.md)
 - [Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md)
-- [Gestione Errori](./ERROR_HANDLING.md) 
+- [Gestione Errori](./ERROR_HANDLING.md)

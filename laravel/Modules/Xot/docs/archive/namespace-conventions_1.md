@@ -20,7 +20,6 @@ namespace Modules\Xot\app\Console\Commands;
 
 ### Versione HEAD
 
-
 ### Versione Incoming
 
 namespace Modules\Xot\Console\Commands;

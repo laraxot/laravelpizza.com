@@ -160,10 +160,9 @@ rules:
 
 ## Memoria Permanente
 
-**RICORDA SEMPRE**: 
+**RICORDA SEMPRE**:
 - MAI usare `->label()` in componenti Filament
 - SEMPRE implementare traduzioni nei file `lang/`
 - SEMPRE struttura espansa (label, placeholder, tooltip, helper_text)
 - SEMPRE sincronizzare IT/EN/DE
 - SEMPRE testare le traduzioni prima del commit
-

@@ -119,7 +119,7 @@ Rappresenta [breve descrizione].
 Modules\[NomeModulo]\Models\[NomeModello1]
 ```
 
-**Tabella:** `[nome_tabella]`  
+**Tabella:** `[nome_tabella]`
 **Chiave primaria:** `[id_chiave]`
 
 **Relazioni:**

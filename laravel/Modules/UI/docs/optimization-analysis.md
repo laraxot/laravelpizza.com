@@ -6,7 +6,7 @@
 
 Il modulo UI fornisce l'infrastruttura di interfaccia utente per tutto il sistema, gestendo:
 - **50+ Componenti Blade** riutilizzabili
-- **Layouts** responsivi e tematizzabili  
+- **Layouts** responsivi e tematizzabili
 - **Widgets Filament** per dashboard
 - **Form Components** personalizzati
 - **Theming System** con dark/light mode
@@ -36,11 +36,11 @@ class UIComponentStyles
     {
         return 'appearance-none flex w-full px-3 py-2 text-sm bg-white dark:text-gray-300 dark:bg-white/[4%] border rounded-md border-gray-300 dark:border-white/10 ring-offset-background placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-gray-300 dark:focus:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200/60 dark:focus:ring-white/20 disabled:cursor-not-allowed disabled:opacity-50';
     }
-    
+
     public static function getInputClasses(string $type = 'text'): string
     {
         $base = self::getInputBaseClasses();
-        
+
         return match($type) {
             'text', 'email', 'password' => $base . ' h-10',
             'textarea' => $base . ' min-h-20',
@@ -59,8 +59,8 @@ class UIComponentStyles
             {{ $label }}
         </label>
     @endif
-    
-    <input 
+
+    <input
         type="{{ $type }}"
         class="{{ \Modules\UI\Services\UIComponentStyles::getInputClasses($type) }}"
         {{ $attributes }}
@@ -76,13 +76,13 @@ class UIComponentStyles
 class UIServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'UI';
-    
+
     public function boot(): void
     {
         parent::boot();
         // Codice commentato e non chiaro
     }
-    
+
     public function register(): void
     {
         parent::register();
@@ -97,69 +97,69 @@ class UIServiceProvider extends XotBaseServiceProvider
 class UIServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'UI';
-    
+
     public function boot(): void
     {
         parent::boot();
-        
+
         $this->registerBladeComponents();
         $this->registerBladeDirectives();
         $this->publishAssets();
         $this->registerViewComposers();
     }
-    
+
     public function register(): void
     {
         parent::register();
-        
+
         $this->registerUIServices();
         $this->registerThemeManager();
         $this->registerComponentRegistry();
     }
-    
+
     private function registerBladeComponents(): void
     {
         Blade::componentNamespace('Modules\\UI\\View\\Components', 'ui');
-        
+
         // Registrazione automatica componenti
         $componentsPath = __DIR__ . '/../resources/views/components/ui';
         if (is_dir($componentsPath)) {
             Blade::anonymousComponentPath($componentsPath, 'ui');
         }
     }
-    
+
     private function registerBladeDirectives(): void
     {
         // Direttive personalizzate per UI
         Blade::directive('theme', function ($expression) {
             return "<?php echo app('theme.manager')->getCurrentTheme(); ?>";
         });
-        
+
         Blade::directive('uiComponent', function ($expression) {
             return "<?php echo app('ui.component.registry')->render({$expression}); ?>";
         });
     }
-    
+
     private function publishAssets(): void
     {
         $this->publishes([
             __DIR__ . '/../resources/assets' => public_path('modules/ui'),
         ], 'ui-assets');
     }
-    
+
     private function registerViewComposers(): void
     {
         view()->composer('ui::layouts.*', UILayoutComposer::class);
         view()->composer('ui::components.*', UIComponentComposer::class);
     }
-    
+
     private function registerUIServices(): void
     {
         $this->app->singleton('ui.component.registry', ComponentRegistry::class);
         $this->app->singleton('theme.manager', ThemeManager::class);
         $this->app->singleton('ui.asset.manager', AssetManager::class);
     }
-    
+
     private function registerThemeManager(): void
     {
         $this->app->singleton(ThemeManager::class, function ($app) {
@@ -169,7 +169,7 @@ class UIServiceProvider extends XotBaseServiceProvider
             );
         });
     }
-    
+
     private function registerComponentRegistry(): void
     {
         $this->app->singleton(ComponentRegistry::class, function ($app) {
@@ -178,7 +178,7 @@ class UIServiceProvider extends XotBaseServiceProvider
             );
         });
     }
-    
+
     private function getComponentsConfig(): array
     {
         return config('ui.components', []);
@@ -200,15 +200,15 @@ class UIServiceProvider extends XotBaseServiceProvider
             {{ $label }}
         </label>
     @endif
-    
+
     <div data-model="{{ $wireModel }}" class="mt-1.5 rounded-md shadow-sm">
-        <input {{ $attributes->whereStartsWith('wire:model') }} 
-               id="{{ $id ?? '' }}" 
-               name="{{ $name ?? '' }}" 
-               type="{{ $type ?? '' }}" 
+        <input {{ $attributes->whereStartsWith('wire:model') }}
+               id="{{ $id ?? '' }}"
+               name="{{ $name ?? '' }}"
+               type="{{ $type ?? '' }}"
                class="[lunghissima stringa CSS...]" />
     </div>
-    
+
     @error($wireModel)
         <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
     @enderror
@@ -231,22 +231,22 @@ class Input extends Component
         $this->id = $this->id ?? Str::random(8);
         $this->name = $this->name ?? $this->id;
     }
-    
+
     public function render(): View
     {
         return view('ui::components.ui.input');
     }
-    
+
     public function getInputClasses(): string
     {
         return UIComponentStyles::getInputClasses($this->type);
     }
-    
+
     public function getLabelClasses(): string
     {
         return 'block text-sm font-medium leading-5 text-gray-700 dark:text-gray-300';
     }
-    
+
     public function getErrorClasses(): string
     {
         return 'mt-2 text-sm text-red-600';
@@ -262,8 +262,8 @@ class Input extends Component
             {{ $label }}
         </label>
     @endif
-    
-    <input 
+
+    <input
         id="{{ $id }}"
         name="{{ $name }}"
         type="{{ $type }}"
@@ -272,7 +272,7 @@ class Input extends Component
         @if($placeholder) placeholder="{{ $placeholder }}" @endif
         {{ $attributes }}
     />
-    
+
     @error($name)
         <p class="{{ $getErrorClasses() }}">{{ $message }}</p>
     @enderror
@@ -290,25 +290,25 @@ class ComponentRegistry
 {
     private array $components = [];
     private array $loadedComponents = [];
-    
+
     public function register(string $name, string $class): void
     {
         $this->components[$name] = $class;
     }
-    
+
     public function get(string $name): Component
     {
         if (!isset($this->loadedComponents[$name])) {
             if (!isset($this->components[$name])) {
                 throw new ComponentNotFoundException("Component not found: {$name}");
             }
-            
+
             $this->loadedComponents[$name] = app($this->components[$name]);
         }
-        
+
         return $this->loadedComponents[$name];
     }
-    
+
     public function render(string $name, array $data = []): string
     {
         return $this->get($name)->render($data);
@@ -323,17 +323,17 @@ class AssetManager
 {
     private array $styles = [];
     private array $scripts = [];
-    
+
     public function addStyle(string $path, array $attributes = []): void
     {
         $this->styles[] = compact('path', 'attributes');
     }
-    
+
     public function addScript(string $path, array $attributes = []): void
     {
         $this->scripts[] = compact('path', 'attributes');
     }
-    
+
     public function renderStyles(): string
     {
         $html = '';
@@ -343,7 +343,7 @@ class AssetManager
         }
         return $html;
     }
-    
+
     public function renderScripts(): string
     {
         $html = '';
@@ -353,7 +353,7 @@ class AssetManager
         }
         return $html;
     }
-    
+
     private function buildAttributes(array $attributes): string
     {
         return collect($attributes)
@@ -370,44 +370,44 @@ class ThemeManager
 {
     private array $themes;
     private string $currentTheme;
-    
+
     public function __construct(array $themes, string $defaultTheme)
     {
         $this->themes = $themes;
         $this->currentTheme = $defaultTheme;
     }
-    
+
     public function setTheme(string $theme): void
     {
         if (!$this->hasTheme($theme)) {
             throw new ThemeNotFoundException("Theme not found: {$theme}");
         }
-        
+
         $this->currentTheme = $theme;
-        
+
         // Cache del tema corrente
         Cache::put('ui.current_theme', $theme, 3600);
     }
-    
+
     public function getCurrentTheme(): string
     {
         return Cache::get('ui.current_theme', $this->currentTheme);
     }
-    
+
     public function getThemeAssets(string $theme = null): array
     {
         $theme = $theme ?? $this->getCurrentTheme();
-        
+
         return Cache::remember("ui.theme_assets.{$theme}", 3600, function() use ($theme) {
             return $this->themes[$theme]['assets'] ?? [];
         });
     }
-    
+
     public function hasTheme(string $theme): bool
     {
         return isset($this->themes[$theme]);
     }
-    
+
     public function getAvailableThemes(): array
     {
         return array_keys($this->themes);
@@ -429,14 +429,14 @@ trait HasSecureOutput
         if (is_string($value)) {
             return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
         }
-        
+
         if (is_array($value)) {
             return htmlspecialchars(json_encode($value), ENT_QUOTES, 'UTF-8');
         }
-        
+
         return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
     }
-    
+
     protected function allowedHtml(string $value, array $allowedTags = []): string
     {
         return strip_tags($value, $allowedTags);
@@ -447,7 +447,7 @@ trait HasSecureOutput
 class SafeComponent extends Component
 {
     use HasSecureOutput;
-    
+
     public function render(): View
     {
         return view('ui::components.safe', [
@@ -463,14 +463,14 @@ class SafeComponent extends Component
 class FormComponent extends Component
 {
     public bool $csrfProtection = true;
-    
+
     public function render(): View
     {
         $data = [
             'csrfToken' => $this->csrfProtection ? csrf_token() : null,
             'method' => $this->method ?? 'POST',
         ];
-        
+
         return view('ui::components.form', $data);
     }
 }
@@ -500,7 +500,7 @@ class FilamentComponentFactory implements ComponentFactoryInterface
             default => throw new UnsupportedComponentException("Unsupported component type: {$type}")
         };
     }
-    
+
     public function supports(string $type): bool
     {
         return in_array($type, ['form', 'table', 'widget']);
@@ -512,14 +512,14 @@ class BladeComponentFactory implements ComponentFactoryInterface
     public function create(string $type, array $props = []): Component
     {
         $className = "Modules\\UI\\View\\Components\\" . Str::studly($type);
-        
+
         if (!class_exists($className)) {
             throw new ComponentNotFoundException("Component class not found: {$className}");
         }
-        
+
         return new $className($props);
     }
-    
+
     public function supports(string $type): bool
     {
         $className = "Modules\\UI\\View\\Components\\" . Str::studly($type);
@@ -532,12 +532,12 @@ class ComponentManager
 {
     /** @var ComponentFactoryInterface[] */
     private array $factories = [];
-    
+
     public function addFactory(ComponentFactoryInterface $factory): void
     {
         $this->factories[] = $factory;
     }
-    
+
     public function create(string $type, array $props = []): Component
     {
         foreach ($this->factories as $factory) {
@@ -545,7 +545,7 @@ class ComponentManager
                 return $factory->create($type, $props);
             }
         }
-        
+
         throw new UnsupportedComponentException("No factory supports component type: {$type}");
     }
 }
@@ -560,31 +560,31 @@ class FormBuilder
     private array $actions = [];
     private ?string $method = null;
     private ?string $action = null;
-    
+
     public function addField(string $name, string $type, array $options = []): self
     {
         $this->fields[$name] = compact('type', 'options');
         return $this;
     }
-    
+
     public function addAction(string $label, string $action, array $options = []): self
     {
         $this->actions[] = compact('label', 'action', 'options');
         return $this;
     }
-    
+
     public function method(string $method): self
     {
         $this->method = $method;
         return $this;
     }
-    
+
     public function action(string $action): self
     {
         $this->action = $action;
         return $this;
     }
-    
+
     public function build(): Form
     {
         return new Form([
@@ -622,24 +622,24 @@ class UIComponentTest extends TestCase
             type: 'email',
             required: true
         );
-        
+
         $view = $component->render();
         $html = $view->render();
-        
+
         $this->assertStringContainsString('Test Label', $html);
         $this->assertStringContainsString('type="email"', $html);
         $this->assertStringContainsString('required', $html);
     }
-    
+
     public function test_component_styles_are_consistent(): void
     {
         $inputClasses = UIComponentStyles::getInputClasses('text');
         $textareaClasses = UIComponentStyles::getInputClasses('textarea');
-        
+
         // Verifica che le classi base siano presenti
         $this->assertStringContainsString('appearance-none', $inputClasses);
         $this->assertStringContainsString('appearance-none', $textareaClasses);
-        
+
         // Verifica differenze specifiche
         $this->assertStringContainsString('h-10', $inputClasses);
         $this->assertStringContainsString('min-h-20', $textareaClasses);
@@ -658,23 +658,23 @@ class ThemeManagerTest extends TestCase
             'light' => ['assets' => ['light.css']],
             'dark' => ['assets' => ['dark.css']],
         ], 'light');
-        
+
         $this->assertEquals('light', $manager->getCurrentTheme());
-        
+
         $manager->setTheme('dark');
         $this->assertEquals('dark', $manager->getCurrentTheme());
     }
-    
+
     public function test_theme_assets_are_cached(): void
     {
         Cache::shouldReceive('remember')
             ->once()
             ->with('ui.theme_assets.light', 3600, Closure::class)
             ->andReturn(['light.css']);
-            
+
         $manager = new ThemeManager(['light' => ['assets' => ['light.css']]], 'light');
         $assets = $manager->getThemeAssets('light');
-        
+
         $this->assertEquals(['light.css'], $assets);
     }
 }
@@ -698,15 +698,15 @@ class ComponentUsageTracker
             'user_id' => auth()->id(),
             'session_id' => session()->getId(),
         ];
-        
+
         Log::channel('analytics')->info('Component used', $usage);
-        
+
         // Metrics per dashboard
         Metrics::increment('ui.component.usage', 1, [
             'component' => $component,
         ]);
     }
-    
+
     public function getPopularComponents(int $limit = 10): array
     {
         return Cache::remember('ui.popular_components', 3600, function() use ($limit) {
@@ -763,7 +763,6 @@ class ComponentUsageTracker
 
 ---
 
-*Documento creato: Gennaio 2025*  
-*Principi: DRY + KISS + SOLID + ROBUST + Laraxot*  
+*Documento creato: Gennaio 2025*
+*Principi: DRY + KISS + SOLID + ROBUST + Laraxot*
 *Stato: 🟡 Buona Base ma Necessita Refactoring Componenti*
-

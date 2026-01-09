@@ -11,7 +11,7 @@ class BrandTest extends TestCase
     public function test_brand_name_is_semantically_correct(): void
     {
         $metatag = MetatagData::make();
-        
+
         $this->assertEquals(
             $metatag->getBrandName(),
             $metatag->title
@@ -29,7 +29,7 @@ class BrandConsistencyTest extends TestCase
     public function test_brand_elements_are_consistent(): void
     {
         $metatag = MetatagData::make();
-        
+
         $this->assertNotEmpty($metatag->getBrandName());
         $this->assertNotEmpty($metatag->getBrandLogo());
         $this->assertNotEmpty($metatag->getDarkModeBrandLogo());
@@ -47,11 +47,11 @@ class BrandValidationTest extends TestCase
     public function test_brand_files_exist(): void
     {
         $metatag = MetatagData::make();
-        
+
         $this->assertFileExists(
             public_path($metatag->getBrandLogo())
         );
-        
+
         $this->assertFileExists(
             public_path($metatag->getDarkModeBrandLogo())
         );
@@ -87,14 +87,14 @@ class PanelBrandTest extends TestCase
         $panel = new Panel();
         $action = new ApplyMetatagToPanelAction();
         $metatag = MetatagData::make();
-        
+
         $panel = $action->execute($panel);
-        
+
         $this->assertEquals(
             $metatag->getBrandName(),
             $panel->getBrandName()
         );
-        
+
         $this->assertEquals(
             $metatag->getBrandLogo(),
             $panel->getBrandLogo()
@@ -110,16 +110,16 @@ class BrandImageTest extends TestCase
     public function test_brand_images_are_valid(): void
     {
         $metatag = MetatagData::make();
-        
+
         $this->assertImageIsValid(
             $metatag->getBrandLogo()
         );
-        
+
         $this->assertImageIsValid(
             $metatag->getDarkModeBrandLogo()
         );
     }
-    
+
     private function assertImageIsValid(string $path): void
     {
         $this->assertFileExists($path);
@@ -135,13 +135,13 @@ class BrandPerformanceTest extends TestCase
     public function test_brand_loading_performance(): void
     {
         $start = microtime(true);
-        
+
         $metatag = MetatagData::make();
         $metatag->getBrandLogo();
         $metatag->getDarkModeBrandLogo();
-        
+
         $end = microtime(true);
-        
+
         $this->assertLessThan(
             0.1, // 100ms
             $end - $start
@@ -171,4 +171,4 @@ class BrandPerformanceTest extends TestCase
 - [Brand Philosophy](../philosophy/brand_philosophy.md)
 - [Semantic Methods](../philosophy/semantic_methods.md)
 - [Best Practices](../best-practices.md)
-- [Testing Guide](../testing.md) 
+- [Testing Guide](../testing.md)

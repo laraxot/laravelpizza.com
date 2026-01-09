@@ -137,4 +137,4 @@ Questo documento definisce lo stack tecnologico standard utilizzato in tutti i m
 - [Architettura](../architecture/module-structure.md)
 - [Configurazione](../config/README.md)
 - [Sviluppo](../development/README.md)
-- [Testing](../testing/README.md) 
+- [Testing](../testing/README.md)

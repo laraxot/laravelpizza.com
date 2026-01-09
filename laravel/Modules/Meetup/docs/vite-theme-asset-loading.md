@@ -156,4 +156,3 @@ $pubTheme = config('xra.pub_theme', 'Meetup');
 - [x] Documentato best practices
 - [ ] Testato hot reload
 - [ ] Testato build produzione
-

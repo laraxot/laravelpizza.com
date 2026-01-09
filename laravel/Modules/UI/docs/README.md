@@ -37,15 +37,15 @@ Il modulo **UI** è il cuore dell'interfaccia utente dell'applicazione, fornendo
     <x-slot:header>
         <h2>Dashboard</h2>
     </x-slot>
-    
+
     <x-ui.button variant="primary">
         Crea Nuovo
     </x-ui.button>
 </x-ui.card>
 
 // Componente con props tipizzate
-<x-ui.data-table 
-    :data="$users" 
+<x-ui.data-table
+    :data="$users"
     :columns="$columns"
     layout="grid"
     responsive="true"
@@ -58,7 +58,7 @@ Il modulo **UI** è il cuore dell'interfaccia utente dell'applicazione, fornendo
 class UserCalendarWidget extends XotBaseWidget
 {
     protected static string $view = 'ui::filament.widgets.user-calendar';
-    
+
     public function getViewData(): array
     {
         return [
@@ -124,15 +124,15 @@ use Modules\Xot\Filament\Traits\TransTrait;
 enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 {
     use TransTrait;
-    
+
     case LIST = 'list';
     case GRID = 'grid';
-    
+
     public function getLabel(): string
     {
         return $this->transClass(self::class, $this->value . '.label');
     }
-    
+
     public function getTableContentGrid(): array
     {
         return match($this) {
@@ -200,12 +200,12 @@ return [
         'auto_discovery' => true,
         'cache' => true,
     ],
-    
+
     'themes' => [
         'default' => 'light',
         'dark_mode' => true,
     ],
-    
+
     'table_layouts' => [
         'default' => TableLayoutEnum::LIST,
         'responsive' => true,
@@ -262,8 +262,8 @@ php artisan ui:test-components
 ### 📊 **Data Display**
 ```php
 // Tabella dati con layout dinamico
-<x-ui.data-table 
-    :data="$users" 
+<x-ui.data-table
+    :data="$users"
     :columns="[
         'name' => 'Nome',
         'email' => 'Email',
@@ -280,20 +280,20 @@ php artisan ui:test-components
 ```php
 // Form con validazione automatica
 <x-ui.form :action="route('users.store')" method="POST">
-    <x-ui.input 
-        name="name" 
+    <x-ui.input
+        name="name"
         label="Nome"
         placeholder="Inserisci il nome"
         required
     />
-    
-    <x-ui.select 
-        name="role" 
+
+    <x-ui.select
+        name="role"
         label="Ruolo"
         :options="$roles"
         required
     />
-    
+
     <x-ui.button type="submit" variant="primary">
         Salva
     </x-ui.button>
@@ -303,7 +303,7 @@ php artisan ui:test-components
 ### 🎯 **Interactive Components**
 ```php
 // Calendario interattivo
-<x-ui.calendar 
+<x-ui.calendar
     :events="$events"
     :editable="true"
     :selectable="true"
@@ -311,13 +311,13 @@ php artisan ui:test-components
 />
 
 // Modal con conferma
-<x-ui.modal 
+<x-ui.modal
     id="confirm-delete"
     title="Conferma Eliminazione"
     :show="false"
 >
     <p>Sei sicuro di voler eliminare questo elemento?</p>
-    
+
     <x-slot:footer>
         <x-ui.button variant="danger" @click="confirmDelete">
             Elimina
@@ -348,10 +348,10 @@ Action::make('save')->label('Salva')
 enum StatusEnum: string implements HasColor, HasIcon, HasLabel
 {
     use TransTrait;
-    
+
     case ACTIVE = 'active';
     case INACTIVE = 'inactive';
-    
+
     public function getLabel(): string
     {
         return $this->transClass(self::class, $this->value . '.label');
@@ -369,7 +369,7 @@ class DataTableComponent extends Component
         public readonly array $columns,
         public readonly TableLayoutEnum $layout = TableLayoutEnum::LIST,
     ) {}
-    
+
     public function render(): View
     {
         return view('ui::components.data-table', [
@@ -434,7 +434,7 @@ use Modules\UI\Enums\TableLayoutEnum;
 class ListUsers extends ListRecords
 {
     protected TableLayoutEnum $layout = TableLayoutEnum::LIST;
-    
+
     public function table(Table $table): Table
     {
         return $table
@@ -541,14 +541,14 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 
 ---
 
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
-**📦 Versione**: 4.1.0  
-**🐛 PHPStan level 10**: File core certificati ✅  
-**🐛 PHPStan Level 9**: File core certificati ✅  
-**🐛 PHPStan Level 9**: File core certificati ✅  
-**🐛 PHPStan Level 9**: File core certificati ✅  
-**🌐 Translation Standards**: File traduzione certificati ✅  
-**🚀 Performance**: 97/100 score 
+**🔄 Ultimo aggiornamento**: 27 Gennaio 2025
+**📦 Versione**: 4.1.0
+**🐛 PHPStan level 10**: File core certificati ✅
+**🐛 PHPStan Level 9**: File core certificati ✅
+**🐛 PHPStan Level 9**: File core certificati ✅
+**🐛 PHPStan Level 9**: File core certificati ✅
+**🌐 Translation Standards**: File traduzione certificati ✅
+**🚀 Performance**: 97/100 score
 ## Collegamenti
 
 - [Documentazione Root](../../../docs/translation_standards_links.md)
@@ -560,6 +560,6 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 - **[REGOLA CRITICA: MAI usare ->label()](never_use_label_rule.md)**
 - **[REGOLA CRITICA: SEMPRE usa transClass()](transclass_rule.md)**
 
-*Ultimo aggiornamento: gennaio 2025* 
-*Ultimo aggiornamento: gennaio 2025* 
-*Ultimo aggiornamento: gennaio 2025* 
+*Ultimo aggiornamento: gennaio 2025*
+*Ultimo aggiornamento: gennaio 2025*
+*Ultimo aggiornamento: gennaio 2025*

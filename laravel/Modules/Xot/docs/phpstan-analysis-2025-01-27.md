@@ -1,8 +1,8 @@
 # PHPStan Analysis - 27 Gennaio 2025
 
-**Data Analisi**: 2025-01-27  
-**PHPStan Level**: max (configurato in phpstan.neon)  
-**Comando**: `./vendor/bin/phpstan analyse Modules --memory-limit=2G`  
+**Data Analisi**: 2025-01-27
+**PHPStan Level**: max (configurato in phpstan.neon)
+**Comando**: `./vendor/bin/phpstan analyse Modules --memory-limit=2G`
 **Risultato**: 594 errori totali identificati
 
 ---
@@ -236,7 +236,7 @@ test('it can create and manage tenants', function (): void {
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-27  
+**Ultimo aggiornamento**: 2025-01-27
 **Status**: Implementazione in corso - 51% errori risolti (594 → 289, -305 errori)
 
 ---
@@ -271,7 +271,7 @@ test('it can create and manage tenants', function (): void {
 
 ### Modulo Tenant
 - ⚠️ **PHPStan**: 1 errore (Pest.php - risolto)
-- ⚠️ **PHPMD**: 
+- ⚠️ **PHPMD**:
   - CyclomaticComplexity alto (ResolveTenantConfigValueAction, SushiToCsv)
   - NPathComplexity alto (necessita refactoring)
   - ExcessiveMethodLength (SushiToCsv::bootSushiToCsv - 137 righe)

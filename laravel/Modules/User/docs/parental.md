@@ -45,7 +45,7 @@ use Parental\HasChildren;
 class User extends Model
 {
     use HasChildren;
-    
+
     protected $fillable = ['name', 'email', 'password', 'type'];
     // Opzionale: definire alias per i tipi
     protected $childTypes = [
@@ -130,7 +130,7 @@ Quando devi creare nuove istanze, puoi utilizzare un factory pattern:
 class UserFactory
     public static function create($type, array $attributes = [])
         $class = "App\\Models\\" . ucfirst($type);
-        
+
         if (!class_exists($class)) {
             throw new \InvalidArgumentException("User type {$type} not found");
         }
@@ -185,4 +185,4 @@ $users = User::with('specialties')->get(); // Funziona solo se la relazione è d
 - [Laravel Nova Support](https://github.com/tighten/parental#laravel-nova-support)
 - [Laravel Documentation - Eloquent ORM](https://laravel.com/docs/10.x/eloquent)
 - [Laravel Documentation - Eloquent ORM](https://laravel.com/project_docs/10.x/eloquent)
-- [Single Table Inheritance Pattern](https://martinfowler.com/eaaCatalog/singleTableInheritance.html) di Martin Fowler 
+- [Single Table Inheritance Pattern](https://martinfowler.com/eaaCatalog/singleTableInheritance.html) di Martin Fowler

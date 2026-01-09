@@ -10,7 +10,7 @@ Il `SmsDriverEnum` utilizza il `TransTrait` per gestire automaticamente le tradu
 enum SmsDriverEnum: string implements HasLabel, HasIcon, HasColor
 {
     use TransTrait;
-    
+
     case SMSFACTOR = 'smsfactor';
     case TWILIO = 'twilio';
     case NEXMO = 'nexmo';
@@ -467,7 +467,6 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 
 ---
 
-
 ---
 
 - [Documentazione Traduzioni](../../Lang/docs/)
@@ -557,4 +556,3 @@ php -l laravel/Modules/Notify/lang/de/sms_driver_enum.php
 - [Documentazione Traduzioni](../../Lang/docs/)- [Documentazione Traduzioni](../../Lang/project_docs/)
 
 ---
-

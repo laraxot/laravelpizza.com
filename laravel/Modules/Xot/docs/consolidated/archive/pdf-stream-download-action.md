@@ -44,7 +44,7 @@ Generates a PDF from HTML content and returns a streamable download response.
    - Renders view with provided data
    - Throws exception if view not found
 
-2. **PDF Configuration**: 
+2. **PDF Configuration**:
    - Creates Html2Pdf instance with:
      - Orientation: Portrait ('P')
      - Format: A4

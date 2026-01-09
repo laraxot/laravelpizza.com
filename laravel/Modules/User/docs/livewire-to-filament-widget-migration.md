@@ -52,7 +52,7 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 class LoginWidget extends XotBaseWidget
 {
     protected static string $view = 'pub_theme::filament.widgets.auth.login';
-    
+
     public function getFormSchema(): array
     {
         return [
@@ -101,7 +101,7 @@ class LoginWidget extends XotBaseWidget
             <h1 class="text-2xl font-bold mb-2">{{ $title }}</h1>
             <p class="text-blue-100 text-sm">{{ $subtitle }}</p>
         </div>
-        
+
         <!-- Body Card -->
         <div class="px-6 py-8">
             <!-- Widget Filament (STANDARD ARCHITETTURALE) -->
@@ -112,7 +112,7 @@ class LoginWidget extends XotBaseWidget
     </div>
 ### Utilizzo nei Layout
 {{-- Uso corretto nei layout --}}
-<x-pub_theme::blocks.forms.login-card 
+<x-pub_theme::blocks.forms.login-card
     title="Accedi al portale"
     subtitle="Area riservata cittadini"
     widgetClass="\Modules\User\Filament\Widgets\Auth\LoginWidget"

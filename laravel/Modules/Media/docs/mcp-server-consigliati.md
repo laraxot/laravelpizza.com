@@ -22,4 +22,4 @@ Gestione, manipolazione e automazione di file e media.
 ```
 
 **Nota:**
-Aggiungi solo i server che realmente ti servono per il tuo workflow. 
+Aggiungi solo i server che realmente ti servono per il tuo workflow.

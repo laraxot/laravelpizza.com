@@ -61,7 +61,7 @@ Components should never rely on variables that haven't been explicitly defined a
     @if($prop1)
         <h2>{{ $prop1 }}</h2>
     @endif
-    
+
     @if($prop2)
         <p>{{ $prop2 }}</p>
     @endif

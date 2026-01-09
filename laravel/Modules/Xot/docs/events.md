@@ -236,4 +236,4 @@ class SendShipmentNotification implements ShouldQueue
         // Invia notifica
     }
 }
-``` 
+```

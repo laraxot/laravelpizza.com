@@ -1,4 +1,4 @@
-# Best Practices per i Componenti di Autenticazione 
+# Best Practices per i Componenti di Autenticazione
 
 ## Collegamenti correlati
 - [README modulo User](./README.md)
@@ -149,7 +149,7 @@ Prima di utilizzare una chiave di traduzione, assicurarsi che i file di traduzio
 - `/laravel/Modules/Lang/lang/it/auth.php`
 - `/laravel/Modules/Lang/lang/en/auth.php`
 
-## Componenti di Autenticazione 
+## Componenti di Autenticazione
 
 ### 1. Pagine di Autenticazione
 

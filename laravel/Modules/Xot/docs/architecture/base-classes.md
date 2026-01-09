@@ -32,7 +32,7 @@ class MyResource extends XotBaseResource
 {
     // ✅ OK - Ha getFormSchema()
     public static function getFormSchema(): array { /* ... */ }
-    
+
     // ❌ VIETATO - ERRORE GRAVE
     // public function getTableColumns(): array { /* ... */ }
 }
@@ -48,7 +48,7 @@ class MyPage extends XotBasePage
     // protected static ?string $navigationIcon = 'heroicon-o-star';
     // protected static ?string $title = 'My Title';
     // protected static ?string $navigationLabel = 'My Label';
-    
+
     // ✅ OK - Solo proprietà specifiche
     protected static string $resource = MyResource::class;
 }
@@ -317,9 +317,9 @@ declare(strict_types=1);
 class ListRecords extends XotBaseListRecords // ✅ CORRECT
 {
     protected static string $resource = MyResource::class;
-    
+
     // ❌ VIETATO: $navigationIcon, $title, $navigationLabel qui
-    
+
     public function getTableColumns(): array // ✅ OK - Solo in Pages
     {
         return [

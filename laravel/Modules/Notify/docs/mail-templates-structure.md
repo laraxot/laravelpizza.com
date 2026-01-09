@@ -128,7 +128,7 @@ $attachments = [
 Per supporto tecnico:
 - Email: support@example.com
 - Documentazione: https://docs.example.com
-- Repository: https://github.com/organization/notify 
+- Repository: https://github.com/organization/notify
 
 ## Lezioni Apprese
 
@@ -219,4 +219,4 @@ Per supporto tecnico:
 2. I path relativi sono preferibili
 3. I mime type devono essere corretti
 4. La documentazione deve essere aggiornata
-5. I test devono essere completi 
+5. I test devono essere completi

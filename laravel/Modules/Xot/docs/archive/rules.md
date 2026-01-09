@@ -10,7 +10,7 @@
 ## Regole sui Model
 - Nei moduli, i model devono **sempre** estendere `BaseModel` e **mai** direttamente `Model`.
 - Il codice deve essere scritto già conforme agli standard richiesti da phpstan livello 10.
-- Evitare duplicazioni di model: vedi la discussione e i rischi nella [documentazione Performance](../../Performance/project_docs/azioni_organizzativa.md#duplicazione-tra-organizzativatotvalutatore-e-organizzativatotvalutatoreid). 
+- Evitare duplicazioni di model: vedi la discussione e i rischi nella [documentazione Performance](../../Performance/project_docs/azioni_organizzativa.md#duplicazione-tra-organizzativatotvalutatore-e-organizzativatotvalutatoreid).
 
 ## Regole permanenti per Action Filament custom
 
@@ -49,4 +49,4 @@
 - Le colonne delle tabelle Filament devono corrispondere esattamente a quelle del modello e della migrazione.
 - Non inventare mai colonne (es. name, field_name, op, value) se non esistono realmente.
 - Usare sempre i file di traduzione per le label.
-- Vedi [Performance/project_docs/organizzativa_cat_coeffs.md](../../Performance/project_docs/organizzativa_cat_coeffs.md) per esempio pratico, motivazione, correzione e checklist. 
+- Vedi [Performance/project_docs/organizzativa_cat_coeffs.md](../../Performance/project_docs/organizzativa_cat_coeffs.md) per esempio pratico, motivazione, correzione e checklist.

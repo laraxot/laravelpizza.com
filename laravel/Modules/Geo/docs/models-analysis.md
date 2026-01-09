@@ -6,7 +6,7 @@
 - Address - AddressFactory
 - Comune - ComuneFactory
 - County - CountyFactory
-- Location - LocationFactory 
+- Location - LocationFactory
 - Place - PlaceFactory
 - PlaceType - PlaceTypeFactory
 - Province - ProvinceFactory
@@ -26,7 +26,7 @@
 
 ### 🟢 Core Business Models (CRITICAL for application)
 1. **Address** - Indirizzi fisici per studi medici e pazienti
-2. **Place** - Luoghi/strutture mediche 
+2. **Place** - Luoghi/strutture mediche
 3. **PlaceType** - Tipologie di strutture (Ospedale, Clinica, Studio, etc.)
 4. **Comune** - Comuni italiani per form geografici
 5. **Province** - Province italiane
@@ -63,7 +63,7 @@ Tutte le factory business sono già state create ✅
 
 ### Seeder Missing che Servono
 - **AddressSeeder** - Per dati di test indirizzi
-- **PlaceSeeder** - Per strutture mediche di test  
+- **PlaceSeeder** - Per strutture mediche di test
 - **PlaceTypeSeeder** - Per tipologie strutture standard
 
 ## Usage in Application

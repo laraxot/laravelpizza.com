@@ -28,7 +28,7 @@ include(...PageContentResource.php): Failed to open stream: No such file or dire
    ```php
    // Da evitare
    use Modules\Cms\Filament\Resources\PageContentResource;
-   
+
    // Corretto
    use Modules\Cms\Filament\Resources\SectionResource;
    ```
@@ -59,4 +59,4 @@ include(...PageContentResource.php): Failed to open stream: No such file or dire
 ## Collegamenti
 - [Refactoring PageContent → Section](../refactoring/page-content-to-section.md)
 - [Gestione Sezioni](../section-management.md)
-- [Documentazione Root](../../../../docs/errors.md) 
+- [Documentazione Root](../../../../docs/errors.md)

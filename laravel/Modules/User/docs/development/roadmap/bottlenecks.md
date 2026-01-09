@@ -38,10 +38,10 @@
            $codes = collect(range(1, 8))->map(function() {
                return Str::random(10);
            })->all();
-           
+
            $this->user->recovery_codes = encrypt($codes);
            $this->user->save();
-           
+
            return $codes;
        }
    }
@@ -179,7 +179,7 @@
        public function handle($request, $next)
        {
            $key = $request->user()?->id ?? $request->ip();
-           
+
            return Redis::throttle("api:{$key}")
                ->allow(60)
                ->every(60)
@@ -255,4 +255,3 @@
 * [bottlenecks.md](../../../Job/project_docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Media/project_docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Patient/project_docs/roadmap/bottlenecks.md)
-

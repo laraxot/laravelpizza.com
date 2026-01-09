@@ -174,7 +174,7 @@ La configurazione PHPStan è **SACRA** e **INTOCCABILE**. Tutti gli errori PHPSt
 
 ---
 
-**Priorità**: 🚨 CRITICA  
-**Applicabilità**: Universale  
-**Violazioni**: 🚫 VIETATE ASSOLUTAMENTE  
+**Priorità**: 🚨 CRITICA
+**Applicabilità**: Universale
+**Violazioni**: 🚫 VIETATE ASSOLUTAMENTE
 **Stato**: ✅ Regola Attiva e Vincolante

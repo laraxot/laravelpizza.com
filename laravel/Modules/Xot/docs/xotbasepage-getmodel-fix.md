@@ -27,7 +27,7 @@ public function getModel(): string
     if (static::$model === null) {
         throw new \LogicException('Model class not set for page: ' . static::class);
     }
-    
+
     return static::$model;
 }
 ```

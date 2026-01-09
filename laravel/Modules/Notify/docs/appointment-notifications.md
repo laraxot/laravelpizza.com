@@ -26,7 +26,7 @@ namespace Modules\Notify\Mail;
 class AppointmentNotificationMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
-    
+
     // ...
 }
 ```

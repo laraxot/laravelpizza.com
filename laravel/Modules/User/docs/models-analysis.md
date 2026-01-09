@@ -7,7 +7,7 @@ Core business models have factories. Missing factories are mainly abstract base 
 
 ### Models senza Factory ❌ (23/56) - Correctly Missing
 - All `Base*` classes (abstract infrastructure)
-- All `*Policy` classes (authorization logic) 
+- All `*Policy` classes (authorization logic)
 - `UserBasePolicy` (base authorization)
 - Infrastructure models that don't need testing
 

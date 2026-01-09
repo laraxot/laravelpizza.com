@@ -40,7 +40,7 @@ use Spatie\ModelStates\HasStates;
 class Doctor extends User implements HasStatesContract
 {
     use HasStates;
-    
+
     protected function casts(): array
     {
         return [
@@ -59,12 +59,12 @@ Le transizioni di stato sono gestite attraverso classi dedicate che incapsulano 
 class ApproveDoctorRegistration extends Transition
 {
     private string $moderatorId;
-    
+
     public function __construct(string $moderatorId)
     {
         $this->moderatorId = $moderatorId;
     }
-    
+
     public function handle(Doctor $doctor): DoctorRegistrationState
     {
         // Logica di approvazione
@@ -72,14 +72,14 @@ class ApproveDoctorRegistration extends Transition
         $doctor->moderated_at = now();
         $doctor->generateModerationToken();
         $doctor->save();
-        
+
         // Invio email
         $email = new SpatieEmail($doctor, 'registration_moderated');
-        
+
         Mail::to($doctor->email)
             ->locale('it')
             ->send($email);
-        
+
         return new Approved($doctor);
     }
 }
@@ -170,41 +170,41 @@ class SpatieEmail extends TemplateMailable
 {
     protected static $templateModelClass = MailTemplate::class;
     public string $slug;
-    
+
     public function __construct(Model $record, string $slug)
     {
         $data = $record->toArray();
-        
+
         // Aggiungiamo dati specifici per la registrazione del dottore
         if ($slug === 'registration_moderated') {
             $data['is_approved'] = $record->registration_status instanceof Approved;
-            
+
             // Valori in italiano
             $data['status'] = $data['is_approved'] ? 'approvata' : 'in revisione';
             $data['status_text'] = $data['is_approved'] ? 'approvata' : 'messa in revisione';
             $data['rejection_reason'] = $record->moderation_notes ?? 'La tua richiesta richiede ulteriori verifiche.';
-            
+
             // Valori in inglese
             $data['status_en'] = $data['is_approved'] ? 'approved' : 'under review';
             $data['status_text_en'] = $data['is_approved'] ? 'approved' : 'placed under review';
             $data['rejection_reason_en'] = $record->moderation_notes ?? 'Your request requires further verification.';
-            
+
             if ($data['is_approved']) {
                 $data['continue_url'] = route('doctor.registration.continue', [
                     'token' => $record->moderation_token
                 ]);
             }
         }
-        
+
         $this->setAdditionalData($data);
         $this->slug = $slug;
     }
-    
+
     public function getSlug(): string
     {
         return $this->slug;
     }
-    
+
     /**
      * Add attachments to the email
      *
@@ -214,30 +214,30 @@ class SpatieEmail extends TemplateMailable
     public function addAttachments(array $attachments): self
     {
         $attachmentObjects = [];
-        
+
         foreach ($attachments as $item) {
             if (!isset($item['path']) || !file_exists($item['path'])) {
                 continue;
             }
-            
+
             $attachment = Attachment::fromPath($item['path']);
-            
+
             if (isset($item['as'])) {
                 $attachment = $attachment->as($item['as']);
             }
-            
+
             if (isset($item['mime'])) {
                 $attachment = $attachment->withMime($item['mime']);
             }
-            
+
             $attachmentObjects[] = $attachment;
         }
-        
+
         $this->customAttachments = $attachmentObjects;
-        
+
         return $this;
     }
-    
+
     /**
      * Get the HTML layout for the email
      *
@@ -289,7 +289,7 @@ class MailTemplatesTableSeeder extends Seeder
                 ]
             ]
         );
-        
+
         // Altri template...
     }
 }

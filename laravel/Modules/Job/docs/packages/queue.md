@@ -83,4 +83,4 @@ $action->onQueue('high')->retry(3)->execute();
 - [Monitoraggio](monitoring.md)
 - [Performance](performance.md)
 - [Integrazioni](integrations.md)
-- [Panoramica](../packages.md) 
+- [Panoramica](../packages.md)

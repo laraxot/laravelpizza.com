@@ -81,7 +81,7 @@ class UIServiceProvider extends ServiceProvider
             $userClass = config('ui.models.user', \App\Models\User::class);
             return new $userClass();
         });
-        
+
         $this->app->bind(UserStateInterface::class, function ($app) {
             $stateClass = config('ui.states.user', \App\States\User\UserState::class);
             return new $stateClass();
@@ -119,7 +119,7 @@ class SelectState extends Component
         $this->modelClass = $modelClass ?? config('ui.models.user');
         $this->stateClass = $stateClass ?? config('ui.states.user');
     }
-    
+
     public function getStates(): Collection
     {
         $stateClass = $this->stateClass;
@@ -232,4 +232,3 @@ Dopo l'ottimizzazione completa, i comandi devono restituire **0 occorrenze**.
 ---
 
 **Queste ottimizzazioni sono CRITICHE per mantenere l'architettura modulare del sistema. Ogni violazione deve essere corretta immediatamente.**
-

@@ -6,9 +6,9 @@
 
 Questo documento analizza il tutorial pratico "Learn Livewire 3, Volt, and Folio by building a podcast player" pubblicato su Laravel News. Il tutorial dimostra come costruire un'applicazione completa utilizzando Folio per il routing, Volt per i componenti Livewire, e Livewire 3 per l'interattività.
 
-**Articolo**: [Learn Livewire 3, Volt, and Folio by building a podcast player](https://laravel-news.com/livewire-volt-and-folio)  
-**Autore**: Jason Beggs  
-**Data**: July 27th, 2023  
+**Articolo**: [Learn Livewire 3, Volt, and Folio by building a podcast player](https://laravel-news.com/livewire-volt-and-folio)
+**Autore**: Jason Beggs
+**Data**: July 27th, 2023
 **Repository**: [jasonlbeggs/laravel-news-volt-folio-example](https://github.com/jasonlbeggs/laravel-news-volt-folio-example)
 
 ---
@@ -412,12 +412,12 @@ state(['event' => fn () => $event]);
             </button>
         </div>
     @endvolt
-    
+
     function register(): void
     {
         $action = app(\Modules\Meetup\Actions\Event\RegisterEventAction::class);
         $action->execute($this->event, auth()->user());
-        
+
         $this->dispatch('registered');
     }
 </x-layouts.app>
@@ -435,6 +435,5 @@ state(['event' => fn () => $event]);
 
 ---
 
-**Versione**: 1.0  
+**Versione**: 1.0
 **Ultimo Aggiornamento**: 2025-01-27
-

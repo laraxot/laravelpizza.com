@@ -50,4 +50,4 @@ Questa classe gestisce la generazione dei percorsi per i file temporanei caricat
 ## Note di Manutenzione
 - Mantenere la documentazione PHPDoc aggiornata
 - Verificare la compatibilità con le nuove versioni di Laravel
-- Testare la generazione di percorsi univoci 
+- Testare la generazione di percorsi univoci

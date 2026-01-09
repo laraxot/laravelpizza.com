@@ -1,4 +1,4 @@
-# Standard per le Migrazioni in 
+# Standard per le Migrazioni in
 
 ## Introduzione
 
@@ -11,10 +11,8 @@ Questo documento definisce gli standard e le best practices da seguire per tutte
 # Standard per le Migrazioni in <nome progetto>
 # Standard per le Migrazioni in <nome progetto>
 
-
 ## Introduzione
 ## Introduzione
-
 
 Questo documento definisce gli standard e le best practices da seguire per tutte le migrazioni nei moduli di <nome progetto>. Questi standard sono fondamentali per garantire la coerenza e la correttezza delle migrazioni in tutto il progetto.
 Questo documento definisce gli standard e le best practices da seguire per tutte le migrazioni nei moduli di <nome progetto>. Questi standard sono fondamentali per garantire la coerenza e la correttezza delle migrazioni in tutto il progetto.
@@ -40,7 +38,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
  * Migrazione per [scopo della migrazione].
- * 
+ *
  * @see docs/standards/migrations.md
  */
 return new class extends XotBaseMigration
@@ -51,7 +49,7 @@ return new class extends XotBaseMigration
      * @var string
      */
     protected string $table = 'nome_tabella';
-    
+
     /**
      * Connessione al database.
      *
@@ -66,12 +64,12 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table) {
             $table->id(); // o altro tipo di chiave primaria
-            
+
             // Definizione dei campi
-            
+
             // Utilizziamo updateTimestamps per gestire created_at, updated_at e deleted_at
             $this->updateTimestamps($table, true); // true per includere soft delete
-            
+
             // Verifica se le tabelle correlate esistono prima di creare foreign keys
             if (Schema::connection($this->getConnection())->hasTable('tabella_correlata')) {
                 $table->foreign('campo_id')
@@ -79,7 +77,7 @@ return new class extends XotBaseMigration
                     ->on('tabella_correlata')
                     ->onDelete('cascade');
             }
-            
+
             // Indici
             $table->index('campo_id');
         });
@@ -276,7 +274,7 @@ return new class extends XotBaseMigration
 {
     protected string $table = 'nome_tabella';
     protected ?string $connection = 'mysql';
-    
+
     public function up(): void
     {
         // ...

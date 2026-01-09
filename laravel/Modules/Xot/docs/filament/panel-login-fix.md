@@ -25,7 +25,7 @@ The `->login()` method call in `XotBasePanelProvider.php` was uncommented.
 +++ b/laravel/Modules/Xot/app/Providers/Filament/XotBasePanelProvider.php
 @@ -52,7 +52,7 @@
          $default = $mainModule === $moduleLow;
- 
+
          $panel = $panel
              ->default($default)
 -            // ->login()

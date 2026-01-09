@@ -44,7 +44,7 @@ return [
    ```php
    // ❌ Errato
    TextInput::make('first_name')->label('Nome')
-   
+
    // ✅ Corretto
    TextInput::make('first_name') // Label da file traduzione
    ```
@@ -71,4 +71,4 @@ return [
 
 ## Vedi Anche
 - [Laravel Translations](https://laravel.com/project_docs/localization)
-- [Filament i18n](https://filamentphp.com/project_docs/internationalization) 
+- [Filament i18n](https://filamentphp.com/project_docs/internationalization)

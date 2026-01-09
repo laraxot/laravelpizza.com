@@ -52,25 +52,25 @@ enum AddressItemEnum: string implements HasLabel, HasIcon, HasColor
 {
     // Contact Information
     case PHONE = 'phone';                    // Phone number associated with address
-    
+
     // Identification
     case NAME = 'name';                      // Name/label for the address
     case DESCRIPTION = 'description';        // Additional description
-    
+
     // Street Level
     case ROUTE = 'route';                    // Street name (Via Roma, Piazza Duomo)
     case STREET_NUMBER = 'street_number';    // Street number (123, 1/A)
-    
+
     // Administrative Divisions
     case LOCALITY = 'locality';              // Locality/frazione
     case ADMINISTRATIVE_AREA_LEVEL_3 = 'administrative_area_level_3';  // Comune
     case ADMINISTRATIVE_AREA_LEVEL_2 = 'administrative_area_level_2';  // Provincia
     case ADMINISTRATIVE_AREA_LEVEL_1 = 'administrative_area_level_1';  // Regione
-    
+
     // Country Level
     case COUNTRY = 'country';                // Country name/code
     case POSTAL_CODE = 'postal_code';        // CAP/Postal code
-    
+
     // Geocoding
     case FORMATTED_ADDRESS = 'formatted_address';  // Full formatted address
     case PLACE_ID = 'place_id';              // Google Places ID
@@ -156,7 +156,7 @@ public function formatAddress(array $addressData): string
         $addressData[AddressItemEnum::ADMINISTRATIVE_AREA_LEVEL_2->value] ?? '',
         $addressData[AddressItemEnum::COUNTRY->value] ?? '',
     ];
-    
+
     return implode(', ', array_filter($parts));
 }
 ```
@@ -272,7 +272,7 @@ class AddressItemEnumTest extends TestCase
         $this->assertEquals('Telefono', AddressItemEnum::PHONE->getLabel('it'));
         $this->assertEquals('Phone', AddressItemEnum::PHONE->getLabel('en'));
     }
-    
+
     /** @test */
     public function it_generates_form_schema()
     {
@@ -296,7 +296,7 @@ class AddressIntegrationTest extends TestCase
             'postal_code' => '00100',
             // ... other fields
         ]);
-        
+
         $this->assertDatabaseHas('addresses', [
             'route' => 'Via Roma',
             'street_number' => '123',
@@ -327,27 +327,27 @@ This is not just an enum; it's a **comprehensive addressing philosophy** encoded
 
 ## Da migliorare (DRY + KISS)
 
-- **Allineare gli esempi di integrazione client**  
+- **Allineare gli esempi di integrazione client**
   L'esempio "Client Table Integration" usa ancora alias storici (`address`, `city`, `province`, `country`, `phone`, `latitude`, `longitude`).
-  Nel codice reale (TechPlanner) ora i campi sono direttamente `AddressItemEnum::ROUTE->value`, `ADMINISTRATIVE_AREA_LEVEL_3->value`, ecc.  
+  Nel codice reale (TechPlanner) ora i campi sono direttamente `AddressItemEnum::ROUTE->value`, `ADMINISTRATIVE_AREA_LEVEL_3->value`, ecc.
   *Da fare*: aggiornare l'esempio per riflettere esattamente la migration `create_client_table` e distinguere chiaramente tra
   cache/denormalizzazione e fonte di verità (`addresses`).
 
-- **Separare responsabilità tra indirizzo e contatti**  
+- **Separare responsabilità tra indirizzo e contatti**
   Alcune sezioni mescolano ancora `PHONE` dentro l'address; nel progetto stiamo introducendo
-  `ContactTypeEnum` per i canali di contatto (phone, mobile, email, pec, whatsapp, fax, notes).  
+  `ContactTypeEnum` per i canali di contatto (phone, mobile, email, pec, whatsapp, fax, notes).
   *Da fare*: documentare esplicitamente che `AddressItemEnum::PHONE` è legacy e che i nuovi moduli
   dovrebbero preferire `ContactTypeEnum` per DRY/KISS.
 
-- **Esempi con AddressItemEnum::columns() / ensureColumns() aggiornati**  
+- **Esempi con AddressItemEnum::columns() / ensureColumns() aggiornati**
   La sezione migration mostra ancora esempi generici. Nel codice reale usiamo:
   `AddressItemEnum::columns($table, null, true)` in `tableCreate` e
-  `AddressItemEnum::columns($table, $this, true)` (o helper dedicato) in `tableUpdate`.  
+  `AddressItemEnum::columns($table, $this, true)` (o helper dedicato) in `tableUpdate`.
   *Da fare*: aggiungere esempi completi per entrambi i blocchi (CREATE/UPDATE) in stile XotBaseMigration,
   così che chi legge possa copiare/incollare senza reinventare controlli `hasColumn()`.
 
-- **Backlog validazione dinamica**  
+- **Backlog validazione dinamica**
   La sezione "Future Considerations" elenca idee (validazione country-specific, autocomplete, tracking storico)
-  ma non indica priorità né moduli impattati.  
+  ma non indica priorità né moduli impattati.
   *Da fare*: aggiungere una piccola roadmap (es. v1: CAP IT, v2: altri paesi, v3: autocomplete) collegata ai moduli
   che useranno queste feature (Geo, TechPlanner, eventuali CRM).

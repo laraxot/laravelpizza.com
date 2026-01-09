@@ -29,7 +29,7 @@ Analisi approfondita del design di laravelpizza.com (community meetup) per adatt
   <div class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
     <!-- Pattern SVG background con opacity-20 -->
     <div class="absolute inset-0 bg-[url('data:image/svg+xml...')] opacity-20"></div>
-    
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative">
       <div class="text-center">
         <!-- Icona pizza SVG grande -->
@@ -126,7 +126,7 @@ h-11 rounded-md px-8
   <a href="/menu">Menu</a>
   <a href="/chi-siamo">Chi Siamo</a>
   <a href="/contatti">Contatti</a>
-  
+
   <!-- Carrello con badge -->
   <div class="relative">
     <svg><!-- cart icon --></svg>
@@ -134,7 +134,7 @@ h-11 rounded-md px-8
       {{ cart_count }}
     </span>
   </div>
-  
+
   <!-- Auth -->
   <a href="/login">Login</a>
   <a href="/register" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg">Registrati</a>
@@ -207,7 +207,7 @@ h-11 rounded-md px-8
         Più di una semplice pizzeria - è la qualità che fa la differenza
       </p>
     </div>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div class="bg-gray-900 border border-red-900/20 rounded-lg overflow-hidden hover:border-red-500/50 transition-all group h-full p-6">
         <!-- Icona SVG clock -->
@@ -384,7 +384,7 @@ class HomeController extends Controller
     {
         $featuredPizzas = $this->pizzaService->getFeaturedPizzas(4);
         $cartCount = count($this->cartService->getCartWithDetails());
-        
+
         return view('meetup::home', [
             'featuredPizzas' => $featuredPizzas,
             'cartCount' => $cartCount,
@@ -444,4 +444,3 @@ class HomeController extends Controller
 2. **Short Term**: Integrare con PizzaService e CartService
 3. **Medium Term**: Creare pagina Menu con filtri e pizza cards
 4. **Long Term**: Implementare checkout completo con OrderService
-

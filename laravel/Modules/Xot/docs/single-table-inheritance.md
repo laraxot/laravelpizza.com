@@ -17,7 +17,7 @@
 1. **Modello Base**:
    ```php
    namespace Modules\User\Models;
-   
+
    class BaseUser extends Model
    {
        protected $connection = 'user';
@@ -28,7 +28,7 @@
 2. **Modello Specializzato**:
    ```php
    namespace Modules\Patient\Models;
-   
+
    class User extends BaseUser
    {
        protected $childTypes = [
@@ -78,4 +78,4 @@
 
 - [Modelli Patient](../Patient/docs/models.md)
 - [Best Practices Modelli](./models.md)
-- [Convenzioni di Codice](./coding-standards.md) 
+- [Convenzioni di Codice](./coding-standards.md)

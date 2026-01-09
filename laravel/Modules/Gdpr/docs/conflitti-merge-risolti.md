@@ -99,4 +99,3 @@ Per verificare la correttezza della soluzione, sono stati creati test Pest che v
 1. L'assenza di marcatori di conflitto nei file corretti
 2. L'istanziazione corretta delle classi
 3. L'accesso alle proprietà delle classi
-

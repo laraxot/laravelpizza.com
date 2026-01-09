@@ -55,4 +55,4 @@ return [
 ## Collegamenti
 - [Filament Best Practices](../filament-best-practices.md)
 - [Form Components](../COMPONENTI_PERSONALIZZATI.md)
-- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md) 
+- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)

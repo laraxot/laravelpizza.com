@@ -6,7 +6,7 @@ Questo documento analizza un approccio avanzato per la generazione di slug da ti
 
 ## Concetto Base
 
-La generazione automatica di slug a partire da un campo titolo è una pratica comune che migliora l'usabilità dei form. Tuttavia, una volta che un contenuto viene pubblicato, modificare lo slug può causare problemi di accessibilità (errori 404) per gli URL esistenti. 
+La generazione automatica di slug a partire da un campo titolo è una pratica comune che migliora l'usabilità dei form. Tuttavia, una volta che un contenuto viene pubblicato, modificare lo slug può causare problemi di accessibilità (errori 404) per gli URL esistenti.
 
 L'approccio qui documentato implementa una logica più sofisticata che:
 
@@ -51,12 +51,12 @@ TextInput::make('name')
         if ($operation === 'edit' && $record->isPublished()) {
             return;
         }
-        
+
         // Non aggiornare lo slug se è stato modificato manualmente
         if (($get('slug') ?? '') !== Str::slug($old)) {
             return;
         }
-        
+
         // Aggiorna lo slug solo se le condizioni sopra non sono verificate
         $set('slug', Str::slug($state));
     })
@@ -69,7 +69,7 @@ TextInput::make('slug')
     ->required()
     ->maxLength(255)
     ->unique(MailTemplate::class, 'slug', fn ($record) => $record)
-    ->disabled(fn (?string $operation, ?Model $record) => 
+    ->disabled(fn (?string $operation, ?Model $record) =>
         $operation === 'edit' && $record->isPublished())
 ```
 
@@ -98,7 +98,7 @@ public function isPublished(): bool
     if ($this->logs()->count() > 0) {
         return true;
     }
-    
+
     // O basata su un flag specifico
     return (bool) $this->is_published;
 }
@@ -119,23 +119,23 @@ public static function getFormSchema(): array
                 if ($operation === 'edit' && $record && $record->isPublished()) {
                     return;
                 }
-                
+
                 // Non aggiornare lo slug se è stato modificato manualmente
                 if (($get('slug') ?? '') !== Str::slug($old)) {
                     return;
                 }
-                
+
                 // Aggiorna lo slug solo se le condizioni sopra non sono verificate
                 $set('slug', Str::slug($state));
             }),
-            
+
         'slug' => TextInput::make('slug')
             ->required()
             ->unique(MailTemplate::class, 'slug', fn ($record) => $record)
             ->maxLength(255)
-            ->disabled(fn (?string $operation, ?Model $record) => 
+            ->disabled(fn (?string $operation, ?Model $record) =>
                 $operation === 'edit' && $record && $record->isPublished()),
-            
+
         // Altri campi...
     ];
 }

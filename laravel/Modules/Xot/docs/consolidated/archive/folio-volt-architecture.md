@@ -118,12 +118,12 @@ $update = function() {
         'name' => 'required|min:3',
         'email' => 'required|email',
     ]);
-    
+
     auth()->user()->update([
         'name' => $this->name,
         'email' => $this->email,
     ]);
-    
+
     $this->dispatch('profile-updated');
 };
 

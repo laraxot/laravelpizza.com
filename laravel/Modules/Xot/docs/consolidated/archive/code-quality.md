@@ -30,7 +30,7 @@ class ExampleModel extends BaseModel
 {
     /** @var list<string> */
     protected $fillable = ['name'];
-    
+
     /**
      * @return array<string, string>
      */
@@ -72,7 +72,7 @@ return new class extends XotBaseMigration {
             $table->id();
             $table->string('name');
         });
-        
+
         $this->tableUpdate(function (Blueprint $table): void {
             $this->updateTimestamps($table, false);
         });
@@ -210,7 +210,7 @@ class Dashboard extends XotBaseDashboard
 class ModuleServiceProvider extends XotBaseServiceProvider
 {
     protected string $module_name = 'ModuleName';
-    
+
     // Solo personalizzazioni specifiche del modulo
 }
 ```
@@ -275,8 +275,8 @@ unset($translations['existing_key']); // MAI!
 
 ## Ultimo Aggiornamento
 
-**Data**: 2025-08-01  
-**Versione**: 2.0  
+**Data**: 2025-08-01
+**Versione**: 2.0
 **Compatibilità**: Laraxot SaluteOra, PHP 8.2+, Laravel 11+
 
 ---

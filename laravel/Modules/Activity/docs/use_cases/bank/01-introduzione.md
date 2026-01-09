@@ -15,4 +15,4 @@ L'obiettivo è mostrare come implementare logiche bancarie robuste (limiti di sa
 - Un conto non può andare sotto -5000
 - Se il limite viene raggiunto 3 volte di seguito, viene proposta un'offerta di prestito
 
-La documentazione seguente dettaglia architettura, flussi, best practice e test per questo scenario. 
+La documentazione seguente dettaglia architettura, flussi, best practice e test per questo scenario.

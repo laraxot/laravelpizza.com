@@ -193,4 +193,4 @@ php artisan test --filter=TestClass
 - [Git Documentation](https://git-scm.com/doc)
 - [Workflow Git](../../../Xot/project_docs/git/workflow.md)
 - [Best Practices](../../../Xot/project_docs/best-practices/git.md)
-- [CI/CD Pipeline](../../../Xot/project_docs/ci-cd/README.md) 
+- [CI/CD Pipeline](../../../Xot/project_docs/ci-cd/README.md)

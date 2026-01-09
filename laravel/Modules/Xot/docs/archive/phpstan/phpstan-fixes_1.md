@@ -30,7 +30,6 @@
 **Soluzione**:
 - Aggiunto cast esplicito `@var array<string, mixed>` al risultato
 
-
 ### 4. <main module>/app/States/Appointment/ReportPending.php
 ### 4. <nome progetto>/app/States/Appointment/ReportPending.php
 
@@ -40,11 +39,9 @@
 
 ### 4. <nome progetto>/app/States/Appointment/ReportPending.php
 
-
 ### 4. <main module>/app/States/Appointment/ReportPending.php
 
 ### 4. <nome progetto>/app/States/Appointment/ReportPending.php
-
 
 **Problema**: Linea 27 - Tipo di ritorno errato
 - Metodo doveva restituire `array<string, Component>` ma restituiva `array<int|string, Component>`

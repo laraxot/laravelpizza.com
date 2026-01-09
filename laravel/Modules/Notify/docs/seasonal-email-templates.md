@@ -107,7 +107,7 @@ Mail::to($user)->send($email);
 
 **Caratteristiche Migliorate (2025)**:
 - ✅ **Pattern SVG decorativo**: Pattern natalizio email-safe nel background con stelle dorate
-- ✅ **Animazioni sofisticate**: 
+- ✅ **Animazioni sofisticate**:
   - Albero di Natale con animazione `tree-glow` (pulsazione dorata)
   - Effetto shimmer sull'header (luce che attraversa)
   - Decorazioni con `bounce-rotate` (rimbalzo + rotazione)
@@ -132,7 +132,7 @@ Mail::to($user)->send($email);
 
 **Caratteristiche Migliorate (2025)**:
 - ✅ **Pattern natalizio nel wrapper**: Sfondo decorativo con pattern oro/rosso
-- ✅ **Header decorato**: 
+- ✅ **Header decorato**:
   - Pattern a righe dorate
   - Shimmer effect elegante
   - Stelle decorative animate (⭐✨) con twinkle effect
@@ -163,7 +163,7 @@ Mail::to($user)->send($email);
 - ✅ **8 stelle CSS animate** (invece di 5): Maggiore densità di stelle nell'header
 - ✅ **Stelle emoji decorative**: 3 stelle emoji aggiuntive con animazione twinkle
 - ✅ **Shimmer elegante**: Effetto luce che attraversa l'header con animazione più lenta (4s)
-- ✅ **Box holiday-message decorato**: 
+- ✅ **Box holiday-message decorato**:
   - Pattern interno
   - Decorazioni ❅ animate con elegant-twinkle
   - Border e ombre più elaborate
@@ -182,7 +182,7 @@ Mail::to($user)->send($email);
 **Quando usare**: Comunicazioni natalizie vivaci e festose
 
 **Caratteristiche Migliorate (2025)**:
-- ✅ **Luci natalizie realistiche**: 
+- ✅ **Luci natalizie realistiche**:
   - Forma a bulbo con border-radius specifico (50% 50% 50% 50% / 60% 60% 40% 40%)
   - Cavo nero con gradiente realistico
   - 4 colori (rosso, verde, giallo, blu) con animazione `festive-flash`
@@ -192,7 +192,7 @@ Mail::to($user)->send($email);
 - ✅ **Pattern background**: Pattern natalizio doppio (oro + rosso) nel body
 - ✅ **Header con pattern**: Pattern decorativo interno nell'header
 - ✅ **Titolo con pulse**: Animazione `title-pulse` per il titolo festivo
-- ✅ **Gift box decorato**: 
+- ✅ **Gift box decorato**:
   - Decorazioni 🎁🎄 animate con bounce
   - Pattern interno
   - Border e ombre più elaborate

@@ -88,4 +88,4 @@ return [
 - **Modulo**: Lang
 - **File**: `lang/it/edit_translation_file.php`
 - **Tipo Conflitto**: Dichiarazione PHP
-- **Scelta**: Versione HEAD (con declare strict_types) 
+- **Scelta**: Versione HEAD (con declare strict_types)

@@ -27,7 +27,7 @@ cd /var/www/html/<nome progetto>
 laravel new laravel
 ```
 
-> ⚠️ **IMPORTANTE**: 
+> ⚠️ **IMPORTANTE**:
 > - Il progetto DEVE essere installato in `/var/www/html/<nome progetto>/laravel`
 > - NON utilizzare variazioni come `laravel new <nome progetto>` o `laravel new laravel --version=X.Y`
 > - NON creare il progetto in `/var/www/html/<nome progetto>/public_html` o altre posizioni
@@ -109,4 +109,3 @@ Dopo l'installazione iniziale, procedere con:
 * [installazione-iniziale.md](docs/installazione-iniziale.md)
 * [installazione-iniziale.md](docs/tecnico/installazione-iniziale.md)
 * [installazione-iniziale.md](../../../Xot/docs/implementation/installazione-iniziale.md)
-

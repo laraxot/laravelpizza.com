@@ -35,4 +35,4 @@ sequenceDiagram
 
 ## 4. Audit Trail e Rollback
 - Tutti gli eventi sono persistiti e possono essere rigiocati per ricostruire lo stato
-- Possibilità di rollback tramite snapshot e replay 
+- Possibilità di rollback tramite snapshot e replay

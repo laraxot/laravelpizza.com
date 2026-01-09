@@ -9,7 +9,7 @@ cd laravel/Modules/UI/docs
 
 # File vuoti con underscore
 rm -f advanced_form_components.md
-rm -f blade_data_handling.md  
+rm -f blade_data_handling.md
 rm -f naming_conventions.md
 rm -f phpstan_fixes_2025.md
 ```
@@ -133,4 +133,3 @@ grep -r "filament_4x_upgrade" . --include="*.md"
 ---
 
 **Nota**: Eseguire questo script con cautela, verificando sempre prima di eliminare.
-

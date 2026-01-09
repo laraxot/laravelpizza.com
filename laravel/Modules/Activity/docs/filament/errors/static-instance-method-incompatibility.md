@@ -1,6 +1,6 @@
 # Incompatibilità tra metodi statici e di istanza in Filament
 
-> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo Activity. 
+> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo Activity.
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/filament/errors/static-instance-method-incompatibility.md).
 
 ## Errore incontrato
@@ -37,7 +37,7 @@ public function getTableColumns(): array
 
 Oppure utilizzare il metodo corretto che Filament si aspetta per questa personalizzazione:
 
-```php 
+```php
 // Approccio consigliato
 protected function getTableColumns(): array
 {

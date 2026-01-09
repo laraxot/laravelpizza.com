@@ -96,4 +96,4 @@ composer format        # Formatta il codice
    - Verificare le restrizioni del dominio in Google Console
 
 ## Changelog
-Le modifiche vengono tracciate nel repository GitHub. 
+Le modifiche vengono tracciate nel repository GitHub.

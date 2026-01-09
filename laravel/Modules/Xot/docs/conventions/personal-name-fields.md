@@ -80,7 +80,7 @@ class User extends Model
         'email',
         // ...
     ];
-    
+
     // Accessor per il nome completo
     public function getFullNameAttribute(): string
     {
@@ -99,7 +99,7 @@ public static function form(Form $form): Form
             TextInput::make('first_name')
                 ->label(trans('user.fields.first_name.label'))
                 ->required(),
-                
+
             TextInput::make('last_name')
                 ->label(trans('user.fields.last_name.label'))
                 ->required(),

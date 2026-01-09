@@ -14,7 +14,7 @@ The SaluteOra project follows a modular Laraxot architecture with 14 modules con
 - **Seeders**: 15 seeders
 - **Test Data Generated**: 300 records successfully created
   - ✅ Patient: 100 records
-  - ✅ Studio: 100 records  
+  - ✅ Studio: 100 records
   - ✅ Profile: 100 records
   - ❌ Doctor: Constraint violations (unique email conflicts)
   - ❌ Appointment: Foreign key constraints
@@ -120,7 +120,7 @@ The SaluteOra project follows a modular Laraxot architecture with 14 modules con
 ### 3. Seeder Development
 Create missing seeders for:
 - Cms: 6 missing seeders
-- Gdpr: 4 missing seeders  
+- Gdpr: 4 missing seeders
 - Lang: 3 missing seeders
 - Media: 3 missing seeders
 

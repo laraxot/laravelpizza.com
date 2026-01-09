@@ -286,4 +286,4 @@ Se riscontri problemi di compatibilità con i blocchi, assicurati che:
 4. **Documentazione**: Mantieni sempre aggiornata la documentazione.
 5. **Sicurezza**: Assicurati che il tema sia sicuro e non contenga vulnerabilità.
 6. **Performance**: Ottimizza sempre le performance del tema.
-7. **Supporto**: Fornisci sempre supporto per il tema. 
+7. **Supporto**: Fornisci sempre supporto per il tema.

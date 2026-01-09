@@ -86,7 +86,7 @@ User (base)
 - **Relazioni**:
   - `hasMany(Doctor)` via DoctorStudio pivot
   - `hasMany(Patient)` via PatientStudio pivot
-  - `hasMany(Appointment)` 
+  - `hasMany(Appointment)`
   - `hasMany(Service)`
   - `hasMany(Address)` per sedi multiple
 

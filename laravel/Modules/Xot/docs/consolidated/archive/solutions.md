@@ -130,7 +130,7 @@ class PerformanceMonitor {
         $start = microtime(true);
         $response = $next($request);
         $duration = microtime(true) - $start;
-        
+
         Log::channel('performance')->info('Request duration', [
             'path' => $request->path(),
             'duration' => $duration,
@@ -217,7 +217,7 @@ class QueryBuilderTest extends TestCase {
     public function test_query_optimization() {
         $builder = new QueryBuilderService();
         $query = $builder->buildQuery(User::class, ['with' => ['posts']]);
-        
+
         $this->assertQueryUsesIndex($query, 'users_index');
         $this->assertQueryHasEagerLoading($query, ['posts']);
     }
@@ -230,9 +230,9 @@ class QueryBuilderTest extends TestCase {
 class CacheTest extends TestCase {
     public function test_cache_performance() {
         $start = microtime(true);
-        
+
         // Eseguire operazioni di cache
-        
+
         $duration = microtime(true) - $start;
         $this->assertLessThan(0.1, $duration);
     }
@@ -247,16 +247,14 @@ class CacheTest extends TestCase {
 4. Aggiornare la documentazione per ogni modifica
 ### Versione HEAD
 
-5. Mantenere compatibilità con le versioni precedenti 
+5. Mantenere compatibilità con le versioni precedenti
 ## Collegamenti tra versioni di solutions.md
 * [solutions.md](../../../Gdpr/project_docs/solutions.md)
 * [solutions.md](../../../Xot/project_docs/solutions.md)
 * [solutions.md](../../../Job/project_docs/solutions.md)
 
-
 ### Versione Incoming
 
-5. Mantenere compatibilità con le versioni precedenti 
+5. Mantenere compatibilità con le versioni precedenti
 
 ---
-

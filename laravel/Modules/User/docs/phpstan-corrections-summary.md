@@ -1,9 +1,9 @@
 # Riepilogo Correzioni PHPStan - Modulo User
 
-**Data**: 2025-01-22  
-**Status**: In Progress  
-**Errori Iniziali**: 221  
-**Errori Corretti**: ~15  
+**Data**: 2025-01-22
+**Status**: In Progress
+**Errori Iniziali**: 221
+**Errori Corretti**: ~15
 **Errori Rimanenti**: ~206
 
 ## ✅ Correzioni Completate

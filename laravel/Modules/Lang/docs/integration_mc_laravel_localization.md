@@ -64,12 +64,12 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 public function boot()
 {
     // ...
-    
+
     // Aggiungere middleware per la gestione delle lingue
     $this->app->singleton('localization.redirect', function ($app) {
         return new \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter($app['router']);
     });
-    
+
     $this->app->singleton('localization.view-path', function ($app) {
         return new \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath($app['router']);
     });

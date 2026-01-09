@@ -48,8 +48,6 @@
 ### Logica di Risoluzione
 Gli script risolvono i conflitti Git prendendo sempre la **"incoming change"** (develop):
 
-
-
 ## RISULTATI OTTENUTI
 
 ### 📊 **Statistiche Esecuzione**
@@ -197,5 +195,5 @@ La **SUPER MUCCA** 🐄 ha processato tutti i file e risolto ogni conflitto pren
 2. ✅ Verifica con `git diff`
 3. ✅ Committa con `git add . && git commit -m "Risolti conflitti merge"`
 
-*Script creati il: 2025-09-18*  
+*Script creati il: 2025-09-18*
 *Poteri della Super Mucca: ATTIVATI* 🐄✨

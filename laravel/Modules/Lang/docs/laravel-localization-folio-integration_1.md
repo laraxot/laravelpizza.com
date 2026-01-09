@@ -22,4 +22,3 @@ In the `saluteora` project, providing a multi-language experience with localized
   - **Solution**: Optimize middleware execution and cache locale settings where possible.
 
 ## Conclusion
-

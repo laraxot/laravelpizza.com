@@ -44,7 +44,5 @@ La documentazione dei componenti UI deve essere sempre inserita nella cartella `
 * [PROMPT_RULES.md](../../../Xot/docs/PROMPT_RULES.md)
 * [PROMPT_RULES.md](../../../Xot/docs/rules/PROMPT_RULES.md)
 
-
 ## Collegamenti tra versioni di prompt_rules.md
 * [prompt_rules.md](rules/prompt_rules.md)
-

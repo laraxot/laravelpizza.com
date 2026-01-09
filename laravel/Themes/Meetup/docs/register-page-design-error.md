@@ -11,7 +11,7 @@
 - **Logo Pizza**: Presente nella card del form (grande, sopra il titolo)
 - **Heading**: "Join the Community" (bianco, grande)
 - **Subtitle**: "Create your Laravel Pizza Meetups account" (grigio chiaro)
-- **Form Fields**: 
+- **Form Fields**:
   - Full Name (con icona)
   - Email Address (con icona)
   - Password (con icona)
@@ -25,7 +25,7 @@
 - **Form Container**: Card bianca (bg-white) su sfondo grigio chiaro
 - **Logo Pizza**: Assente nella card del form
 - **Heading**: "Create Your Account" (nero, piccolo)
-- **Form Fields**: 
+- **Form Fields**:
   - Full Name
   - Email Address
   - Password
@@ -116,15 +116,15 @@ Footer (dark)
             <div class="bg-slate-800 border border-slate-700 rounded-xl p-8">
                 <!-- Logo -->
                 <div class="flex justify-center mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" 
-                         width="24" 
-                         height="24" 
-                         viewBox="0 0 24 24" 
-                         fill="none" 
-                         stroke="currentColor" 
-                         stroke-width="2" 
-                         stroke-linecap="round" 
-                         stroke-linejoin="round" 
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="24"
+                         height="24"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
                          class="w-16 h-16 text-red-500">
                         <path d="M15 11h.01"></path>
                         <path d="M11 15h.01"></path>
@@ -150,7 +150,7 @@ Footer (dark)
                             Full Name
                         </label>
                         <div class="relative">
-                            <input type="text" 
+                            <input type="text"
                                    placeholder="John Doe"
                                    class="w-full px-4 py-3 pl-10 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
                             <!-- Icon -->
@@ -163,7 +163,7 @@ Footer (dark)
                             Email Address
                         </label>
                         <div class="relative">
-                            <input type="email" 
+                            <input type="email"
                                    placeholder="your@email.com"
                                    class="w-full px-4 py-3 pl-10 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
                             <!-- Icon -->
@@ -176,7 +176,7 @@ Footer (dark)
                             Password
                         </label>
                         <div class="relative">
-                            <input type="password" 
+                            <input type="password"
                                    placeholder="••••••••"
                                    class="w-full px-4 py-3 pl-10 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
                             <!-- Icon -->
@@ -184,7 +184,7 @@ Footer (dark)
                     </div>
 
                     <!-- Button -->
-                    <button type="submit" 
+                    <button type="submit"
                             class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors">
                         Create Account
                     </button>
@@ -247,4 +247,3 @@ Footer (dark)
 - [x] Soluzione documentata
 - [ ] Implementazione in corso
 - [ ] Verifica visiva da completare
-

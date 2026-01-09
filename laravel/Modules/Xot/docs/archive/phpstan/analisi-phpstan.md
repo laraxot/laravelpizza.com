@@ -63,4 +63,4 @@ Questo documento contiene l'analisi dettagliata dei problemi rilevati da PHPStan
 ## Monitoraggio
 - Eseguire PHPStan dopo ogni modifica
 - Mantenere aggiornato questo documento
-- Verificare l'impatto delle correzioni sugli altri moduli 
+- Verificare l'impatto delle correzioni sugli altri moduli

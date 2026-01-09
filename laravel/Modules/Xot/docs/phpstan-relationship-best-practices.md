@@ -147,7 +147,7 @@ public function morphChildren(): MorphMany
 PHPStan non supporta completamente la covarianza dei tipi generici. Quando si utilizza il nome esplicito della classe come secondo parametro generico, PHPStan genera errori del tipo:
 
 ```
-Method Model::relation() should return BelongsTo<User, Model> 
+Method Model::relation() should return BelongsTo<User, Model>
 but returns BelongsTo<User, $this(Model)>.
 ```
 
@@ -307,8 +307,8 @@ L'uso di `self` nelle annotazioni PHPDoc delle relazioni Eloquent è la best pra
 
 ---
 
-**Applicabile a**: Tutti i moduli Laraxot  
-**PHPStan Version**: 1.10+  
-**Laravel Version**: 10+  
-**Priorità**: Alta (Obbligatorio per nuovi modelli)  
+**Applicabile a**: Tutti i moduli Laraxot
+**PHPStan Version**: 1.10+
+**Laravel Version**: 10+
+**Priorità**: Alta (Obbligatorio per nuovi modelli)
 **Stato**: ✅ Standard Adottato

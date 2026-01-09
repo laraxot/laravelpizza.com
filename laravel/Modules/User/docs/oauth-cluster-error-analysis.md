@@ -1,7 +1,7 @@
 # OAuth Cluster - Analisi Errore e Correzione
 
-**Data**: 2025-01-22  
-**Problema**: Cluster Passport vuoto e file duplicato  
+**Data**: 2025-01-22
+**Problema**: Cluster Passport vuoto e file duplicato
 **Status**: ✅ Risolto
 
 ---
@@ -119,6 +119,6 @@ class Passport extends XotBaseCluster
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.1  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.1
 **Status**: ✅ Errore corretto e verificato

@@ -98,10 +98,10 @@ $userClass = XotData::make()->getUserClass();
 public function setUp(): void
 {
     parent::setUp();
-    
+
     $this->userClass = XotData::make()->getUserClass();
     $this->testDatabase = config('database.default') . '_test';
-    
+
     // Configurazione dynamic
     $this->app['config']->set("database.connections.{$this->testDatabase}", [
         'driver' => 'sqlite',

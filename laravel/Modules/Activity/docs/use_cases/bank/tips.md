@@ -26,4 +26,4 @@
 ## Risorse di Approfondimento
 - [Larabank Eventsauce (Spatie)](https://github.com/spatie/larabank-eventsauce)
 - [Larabank Projectors (Spatie)](https://github.com/spatie/larabank-projectors)
-- [Larabank Traditional (Spatie)](https://github.com/spatie/larabank-traditional) 
+- [Larabank Traditional (Spatie)](https://github.com/spatie/larabank-traditional)

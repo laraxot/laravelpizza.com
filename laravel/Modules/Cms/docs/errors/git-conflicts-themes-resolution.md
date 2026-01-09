@@ -43,10 +43,7 @@ Per ogni file con conflitti:
 ```php
 // PRIMA (conflitto)
 'Informazione' => 'Informazione',
-=======
 
->>>>>>> 109edea (.)
-=======
 'dark_mode_toggle' => 'Cambia modalità scura',
 // ... altre traduzioni
 
@@ -110,9 +107,9 @@ Per ogni file con conflitti:
 </x-button>
 
 {{-- DOPO (risolto) --}}
-<x-bootstrap-italia.button 
-    variant="outline-primary" 
-    href="/servizi" 
+<x-bootstrap-italia.button
+    variant="outline-primary"
+    href="/servizi"
     class="bg-white text-primary-600 hover:bg-primary-50">
     Esplora i servizi
 </x-bootstrap-italia.button>
@@ -189,4 +186,3 @@ php artisan view:clear
 
 *Ultimo aggiornamento: 6 gennaio 2025*
 *Autore: Sistema di Risoluzione Conflitti Git*
-

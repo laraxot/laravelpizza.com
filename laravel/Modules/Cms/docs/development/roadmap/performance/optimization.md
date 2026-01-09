@@ -119,4 +119,3 @@ Le altre ottimizzazioni sono in fase di implementazione:
 * [optimization.md](laravel/Modules/Xot/docs/roadmap/performance/optimization.md)
 * [optimization.md](laravel/Modules/Job/docs/optimization.md)
 * [optimization.md](laravel/Modules/Cms/docs/roadmap/performance/optimization.md)
-

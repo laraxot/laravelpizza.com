@@ -79,7 +79,7 @@ return [
     'navigation_icon' => 'heroicon-o-user',
     'navigation_sort' => 1,
     'description' => 'Gestione completa dei soci',
-    
+
     // Campi del form e tabella
     'fields' => [
         'id_socio' => [
@@ -98,7 +98,7 @@ return [
         ],
         // Altri campi...
     ],
-    
+
     // Azioni disponibili
     'actions' => [
         'create' => [
@@ -115,7 +115,7 @@ return [
         ],
         // Altre azioni...
     ],
-    
+
     // Sezioni del form
     'sections' => [
         'personal_data' => [
@@ -128,20 +128,20 @@ return [
         ],
         // Altre sezioni...
     ],
-    
+
     // Messaggi di feedback
     'messages' => [
         'created' => 'Socio creato con successo',
         'updated' => 'Socio aggiornato con successo',
         'deleted' => 'Socio eliminato con successo'
     ],
-    
+
     // Configurazione tabella
     'table' => [
         'empty_text' => 'Nessun socio trovato',
         'search_prompt' => 'Cerca soci...'
     ],
-    
+
     // Testi per i filtri
     'filters' => [
         'is_active' => [
@@ -167,7 +167,7 @@ return [
     // Titoli e sottotitoli
     'title' => 'Gestione Convenzioni',
     'subtitle' => 'Elenco completo delle convenzioni attive',
-    
+
     // Elementi UI
     'ui' => [
         'buttons' => [
@@ -194,7 +194,7 @@ return [
         ],
         // Altri elementi UI...
     ],
-    
+
     // Messaggi di feedback
     'messages' => [
         'success' => [
@@ -209,14 +209,14 @@ return [
         ],
         // Altri messaggi...
     ],
-    
+
     // Tooltip e aiuti
     'help' => [
         'discount' => 'Inserisci la percentuale di sconto senza il simbolo %',
         'expiry' => 'La data di scadenza deve essere futura',
         // Altri aiuti...
     ],
-    
+
     // Testi email e notifiche
     'notifications' => [
         'new_convention' => [
@@ -413,7 +413,7 @@ Esempio:
 
 /**
  * Traduzioni per la risorsa Convenzione
- * 
+ *
  * @package Modules\Brain\Resources
  */
 
@@ -424,7 +424,7 @@ return [
     'navigation_icon' => 'heroicon-o-document-text',
     'navigation_sort' => 3,
     'description' => 'Gestione delle convenzioni con enti e aziende',
-    
+
     'fields' => [
         'id_convenzione' => [
             'label' => 'ID',
@@ -442,7 +442,7 @@ return [
         ],
         // Altri campi...
     ],
-    
+
     // Resto della struttura...
 ];
 ```

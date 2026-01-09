@@ -84,47 +84,47 @@ public function handle(): int
     try {
         // 1. Recupera email utente
         $email = $this->getUserEmail();
-        
+
         // 2. Valida email
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $this->error('Email non valida: ' . $email);
             return Command::FAILURE;
         }
-        
+
         // 3. Recupera utente
         $user = $this->getUserByEmail($email);
         if ($user === null) {
             $this->error("Utente con email '{$email}' non trovato.");
             return Command::FAILURE;
         }
-        
+
         // 4. Verifica persistenza
         if (!$user->exists) {
             $this->error('Utente non persistente nel database.');
             return Command::FAILURE;
         }
-        
+
         // 5. Mostra informazioni utente
         $this->displayUserInfo($user);
-        
+
         // 6. Gestisce password
         $password = $this->getNewPassword();
         $confirmPassword = $this->confirmPassword($password);
-        
+
         if ($confirmPassword === null) {
             $this->error('Le password non coincidono!');
             return Command::FAILURE;
         }
-        
+
         // 7. Aggiorna password
         $this->updateUserPassword($user, $password);
-        
+
         // 8. Dispatches evento
         event(new NewPasswordSet($user));
-        
+
         $this->info('Password cambiata con successo!');
         return Command::SUCCESS;
-        
+
     } catch (\Exception $e) {
         $this->error('Errore durante il cambio password: ' . $e->getMessage());
         return Command::FAILURE;
@@ -138,11 +138,11 @@ Recupera l'email dall'opzione o prompt interattivo:
 private function getUserEmail(): string
 {
     $email = $this->option('email');
-    
+
     if (empty($email)) {
         $email = text('Inserisci l\'email dell\'utente:');
     }
-    
+
     return trim($email);
 }
 ```
@@ -205,7 +205,7 @@ private function updateUserPassword(\Modules\User\Models\User $user, string $pas
     // Recupera la configurazione password
     $passwordData = PasswordData::make();
     $passwordExpiryDateTime = now()->addDays($passwordData->expires_in);
-    
+
     // Aggiorna l'utente
     $user->update([
         'password_expires_at' => $passwordExpiryDateTime,
@@ -213,7 +213,7 @@ private function updateUserPassword(\Modules\User\Models\User $user, string $pas
         'password' => Hash::make($password),
         'updated_by' => 'console-command',
     ]);
-    
+
     $this->info('Password aggiornata nel database.');
 }
 ```
@@ -365,4 +365,3 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 - ✅ **Eventi**: Dispatched NewPasswordSet
 
 *Ultimo aggiornamento: 2025-01-27*
-

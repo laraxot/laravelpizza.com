@@ -224,7 +224,7 @@ Filament\Resources\RelationManagers\RelationManager
 
 **Cosa Aggiunge**:
 - InteractsWithActions
-- InteractsWithForms  
+- InteractsWithForms
 - TransTrait
 - Gestione filtri pagina
 
@@ -284,7 +284,7 @@ use Spatie\QueueableAction\QueueableAction;
 class CreateUserAction
 {
     use QueueableAction;
-    
+
     public function execute(array $data): User { }
 }
 ```
@@ -411,7 +411,7 @@ use PHPStan\Rules\RuleErrorBuilder;
 
 /**
  * Regola PHPStan per impedire estensione diretta di classi Filament.
- * 
+ *
  * @implements Rule<Class_>
  */
 class NoDirectFilamentExtensionRule implements Rule
@@ -436,7 +436,7 @@ class NoDirectFilamentExtensionRule implements Rule
         if (str_starts_with($extendsName, 'Filament\\')) {
             // Verifica se NON è una classe XotBase (che è permessa)
             $className = $node->namespacedName?->toString() ?? 'Unknown';
-            
+
             if (!str_contains($className, 'XotBase')) {
                 return [
                     RuleErrorBuilder::message(sprintf(
@@ -476,7 +476,7 @@ parameters:
 ### Pages
 - `XotBasePage` - Base per standalone Pages
 - `XotBaseCreateRecord` - Base per Create pages
-- `XotBaseEditRecord` - Base per Edit pages  
+- `XotBaseEditRecord` - Base per Edit pages
 - `XotBaseListRecords` - Base per List pages
 - `XotBaseViewRecord` - Base per View pages
 - `XotBaseManageRelatedRecords` - Base per Manage pages
@@ -543,7 +543,7 @@ use Filament\Actions\Action as FilamentAction;
 
 /**
  * Classe base per tutte le Actions Filament del sistema.
- * 
+ *
  * Fornisce funzionalità comuni e permette override centralizzato
  * per gestire breaking changes futuri di Filament.
  */
@@ -625,23 +625,23 @@ use Illuminate\Support\Facades\File;
 
 test('no direct filament extensions in modules', function () {
     $files = File::allFiles(base_path('Modules'));
-    
+
     foreach ($files as $file) {
         if (!str_ends_with($file->getFilename(), '.php')) {
             continue;
         }
-        
+
         if (str_contains($file->getPath(), '/vendor/')) {
             continue;
         }
-        
+
         if (str_contains($file->getPath(), '/Xot/app/Filament/')) {
             // Le classi XotBase possono estendere Filament
             continue;
         }
-        
+
         $content = $file->getContents();
-        
+
         // Verifica estensioni dirette Filament
         if (preg_match('/extends\s+Filament\\\\/', $content)) {
             $this->fail(
@@ -650,7 +650,7 @@ test('no direct filament extensions in modules', function () {
             );
         }
     }
-    
+
     expect(true)->toBeTrue();
 });
 ```
@@ -672,9 +672,7 @@ test('no direct filament extensions in modules', function () {
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
-**Importanza**: ⚠️⚠️⚠️ CRITICA  
-**Non Derogabile**: Questa regola NON ha eccezioni  
+**Ultimo aggiornamento**: 27 Ottobre 2025
+**Importanza**: ⚠️⚠️⚠️ CRITICA
+**Non Derogabile**: Questa regola NON ha eccezioni
 **Filosofia**: "XotBase è il nostro contratto con il futuro"
-
-

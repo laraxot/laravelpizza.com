@@ -19,7 +19,7 @@
 
 ## DOVE SPOSTARE LA DOCUMENTAZIONE:
 - **Traduzioni** → `Modules/Xot/project_docs/` (modulo che gestisce le traduzioni)
-- **Frontend** → `Modules/Cms/project_docs/` (modulo frontend)  
+- **Frontend** → `Modules/Cms/project_docs/` (modulo frontend)
 - **Audit generali** → `Modules/Xot/project_docs/` (modulo base)
 - **Modulo specifico** → `Modules/{NomeModulo}/project_docs/`
 

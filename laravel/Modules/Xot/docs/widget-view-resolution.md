@@ -1,7 +1,7 @@
 # Widget View Resolution - Risoluzione Automatica vs Manuale
 
-**Data**: 2025-01-27  
-**Status**: ✅ RISOLTO  
+**Data**: 2025-01-27
+**Status**: ✅ RISOLTO
 **Problema**: `XotBaseWidget` sovrascriveva view definite manualmente
 
 ---
@@ -44,7 +44,7 @@ public function __construct()
         // View già definita manualmente, usala
         return;
     }
-    
+
     // Cerca automaticamente la view basandosi sul nome della classe
     try {
         $view = app(GetViewByClassAction::class)->execute(static::class);
@@ -77,7 +77,7 @@ public function __construct()
 class TimeClockWidget extends XotBaseWidget
 {
     protected string $view = 'employee::filament.widgets.time-clock-widget';
-    
+
     public function getFormSchema(): array
     {
         return [];
@@ -98,7 +98,7 @@ class SimpleWidget extends XotBaseWidget
     // Non definire $view - viene cercata automaticamente
     // Pattern: {modulo}::filament.widgets.{nome-classe-slug}
     // Esempio: employee::filament.widgets.simple-widget
-    
+
     public function getFormSchema(): array
     {
         return [];
@@ -180,4 +180,3 @@ class MyWidget extends XotBaseWidget
 ---
 
 *Documento creato il 2025-01-27 durante la risoluzione del bug "View not found: timeclock"*
-

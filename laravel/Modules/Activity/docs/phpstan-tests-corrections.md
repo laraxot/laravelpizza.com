@@ -1,7 +1,7 @@
 # PHPStan Tests Corrections - Activity Module
 
-**Data**: 2025-10-10  
-**Livello PHPStan**: max  
+**Data**: 2025-10-10
+**Livello PHPStan**: max
 **Errori Totali**: 353
 
 ## Pattern di Errori Identificati

@@ -82,4 +82,4 @@ return [
 ## Note per lo sviluppo
 - Utilizzare sempre le chiavi di traduzione invece di stringhe hardcoded
 - Mantenere le traduzioni sincronizzate tra le diverse lingue
-- Aggiungere commenti per spiegare il contesto quando necessario 
+- Aggiungere commenti per spiegare il contesto quando necessario

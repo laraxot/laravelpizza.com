@@ -80,12 +80,12 @@ new class extends Component
 - Rendere l'interfaccia responsive
 
 ```blade
-<x-ui.input 
-    label="{{ __('auth.login.email') }}" 
-    type="email" 
-    id="email" 
-    name="email" 
-    wire:model="email" 
+<x-ui.input
+    label="{{ __('auth.login.email') }}"
+    type="email"
+    id="email"
+    name="email"
+    wire:model="email"
 />
 ```
 
@@ -144,4 +144,4 @@ new class extends Component
 - [Documentazione Livewire Volt](https://livewire.laravel.com/docs/volt)
 - [Documentazione Laravel Localization](https://github.com/mcamara/laravel-localization)
 - [Best Practices UI](./UI_BEST_PRACTICES.md)
-- [Regole Architetturali](./ARCHITECTURE_RULES.md) 
+- [Regole Architetturali](./ARCHITECTURE_RULES.md)

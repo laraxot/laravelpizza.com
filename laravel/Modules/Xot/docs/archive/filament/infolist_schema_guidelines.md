@@ -67,7 +67,7 @@ protected function getInfolistSchema(): array
                             ,
                     ]),
             ]),
-        
+
         'dettagli_account' => Section::make('Dettagli Account')
             ->schema([
                 // Altri componenti...
@@ -199,7 +199,7 @@ return [
 
 ## Conclusione
 
-Seguendo queste linee guida, garantirai un'implementazione corretta e coerente del metodo `getInfolistSchema()`, facilitando la manutenzione del codice e prevenendo errori di tipo rilevati da PHPStan. Ricorda: usa **sempre** chiavi di tipo stringa per gli array restituiti. 
+Seguendo queste linee guida, garantirai un'implementazione corretta e coerente del metodo `getInfolistSchema()`, facilitando la manutenzione del codice e prevenendo errori di tipo rilevati da PHPStan. Ricorda: usa **sempre** chiavi di tipo stringa per gli array restituiti.
 
 ## Non Utilizzare il Metodo ->label()
 
@@ -223,4 +223,4 @@ return [
 
 Il `LangServiceProvider` gestisce automaticamente le traduzioni delle label basandosi sulla struttura dei file di traduzione. Aggiungere manualmente le label compromette questo meccanismo automatico e crea incoerenze nel sistema.
 
-Infatti, il servizio `AutoLabelAction` intercetta la creazione dei componenti e applica automaticamente le traduzioni corrette, rendendo superfluo (e dannoso) l'uso esplicito del metodo `->label()`. 
+Infatti, il servizio `AutoLabelAction` intercetta la creazione dei componenti e applica automaticamente le traduzioni corrette, rendendo superfluo (e dannoso) l'uso esplicito del metodo `->label()`.

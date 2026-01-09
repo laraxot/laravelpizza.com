@@ -3,23 +3,40 @@
 declare(strict_types=1);
 
 return [
-    'fields' => [
-        'edit' => [
-            'label' => 'edit',
-        ],
-        'validation_error' => [
-            'label' => 'validation_error',
-        ],
-    ],
     'navigation' => [
-        'sort' => 8,
-        'icon' => 'failed import row.navigation',
-        'group' => 'failed import row.navigation',
-        'label' => 'failed import row.navigation',
+        'label' => 'Riga importazione fallita',
+        'group' => 'Righe importazione',
+        'icon' => 'heroicon-o-exclamation-circle',
+        'sort' => 28,
+    ],
+    'label' => 'Riga importazione fallita',
+    'plural_label' => 'Righe importazione fallite',
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'import_batch_id' => [
+            'label' => 'ID batch importazione',
+        ],
+        'row_index' => [
+            'label' => 'Indice riga',
+        ],
+        'errors' => [
+            'label' => 'Errori',
+        ],
+        'data' => [
+            'label' => 'Dati',
+        ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
     ],
     'actions' => [
-        'logout' => [
-            'tooltip' => 'logout',
+        'view_errors' => [
+            'label' => 'Visualizza errori',
+        ],
+        'fix_row' => [
+            'label' => 'Correggi riga',
         ],
     ],
 ];

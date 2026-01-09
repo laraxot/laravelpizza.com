@@ -147,6 +147,6 @@ rm -rf /var/www/html/_bases/base_ptvx_fila3_mono/laravel/docs
 
 ---
 
-**Data Creazione**: 27 Gennaio 2025  
-**Stato**: In Implementazione  
+**Data Creazione**: 27 Gennaio 2025
+**Stato**: In Implementazione
 **Priorità**: CRITICA (Violazione regole progetto)

@@ -18,7 +18,7 @@ class PasswordResetWidget extends XotBaseWidget
 {
     // View nel tema - personalizzabile con struttura gerarchica
     protected static string $view = 'pub_theme::filament.widgets.auth.password.reset';
-    
+
     // Logica centralizzata nel modulo User
     public function getFormSchema(): array
     {
@@ -47,14 +47,14 @@ class PasswordResetWidget extends XotBaseWidget
 
 ### Widget Esistenti da Verificare
 - [ ] `LoginWidget` - verificare se usa `pub_theme::`
-- [ ] `RegistrationWidget` - verificare se usa `pub_theme::`  
+- [ ] `RegistrationWidget` - verificare se usa `pub_theme::`
 - [x] `PasswordResetWidget` - **CORRETTO** usa `pub_theme::`
 
 ### Struttura Target nel Tema
 ```
 laravel/Themes/One/resources/views/filament/widgets/auth/
 ├── login.blade.php                    # per LoginWidget
-├── registration.blade.php             # per RegistrationWidget  
+├── registration.blade.php             # per RegistrationWidget
 ├── password/
 │   ├── reset.blade.php               # per PasswordResetWidget
 │   └── reset-confirm.blade.php       # per PasswordResetConfirmWidget
@@ -80,7 +80,7 @@ Le view nel tema devono essere **minimaliste** e focalizzate solo sul layout/sty
                     {{ __('pub_theme::auth.password.reset.subtitle') }}
                 </p>
             </div>
-            
+
             {{-- Form renderizzato dal widget --}}
             <div class="space-y-6">
                 {{ $this->form }}
@@ -144,4 +144,4 @@ Per ogni nuovo widget di autenticazione:
 - [Struttura Temi](../../../docs/tecnico/themes/theme-structure.md)
 - [Implementazione Auth Pages](auth-pages-implementation.md)
 
-*Ultimo aggiornamento: Dicembre 2024* 
+*Ultimo aggiornamento: Dicembre 2024*

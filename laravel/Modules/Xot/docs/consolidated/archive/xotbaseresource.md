@@ -58,4 +58,4 @@ class YourResource extends XotBaseResource
 ## Note Tecniche
 - Il resource utilizza `strict_types=1`
 - Supporta la configurazione dei metatag attraverso `MetatagData`
-- Integra con il sistema di moduli Laravel attraverso la configurazione `modules.namespace` 
+- Integra con il sistema di moduli Laravel attraverso la configurazione `modules.namespace`

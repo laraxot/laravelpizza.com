@@ -9,12 +9,12 @@ All SVG icons in Laraxot modules must follow these standards to ensure consisten
 ### 1. Basic Structure
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     fill="none" 
-     viewBox="0 0 24 24" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
      stroke="currentColor"
      stroke-width="1.5"
-     aria-hidden="true" 
+     aria-hidden="true"
      role="img">
     <!-- Content here -->
 </svg>
@@ -71,7 +71,7 @@ All SVG icons in Laraxot modules must follow these standards to ensure consisten
 ### 5. File Naming Convention
 - `icon.svg` - Primary module icon
 - `icon1.svg` - First variation
-- `icon2.svg` - Second variation  
+- `icon2.svg` - Second variation
 - `icon3.svg` - Third variation
 - `module-specific-name.svg` - Additional specialized icons
 
@@ -110,7 +110,7 @@ All SVG icons in Laraxot modules must follow these standards to ensure consisten
 <circle cx="12" cy="12" r="10" />
 
 <!-- BAD: Redundant -->
-<circle cx="12.000000" cy="12.000000" r="10.000000" 
+<circle cx="12.000000" cy="12.000000" r="10.000000"
         style="stroke: currentColor; stroke-width: 1.5;" />
 ```
 
@@ -156,14 +156,14 @@ Before committing any SVG icon, verify:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     fill="none" 
-     viewBox="0 0 24 24" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     fill="none"
+     viewBox="0 0 24 24"
      stroke="currentColor"
      stroke-width="1.5"
-     aria-hidden="true" 
+     aria-hidden="true"
      role="img">
-    
+
     <style>
         .icon-element {
             transition: all 0.3s ease-in-out;
@@ -182,12 +182,12 @@ Before committing any SVG icon, verify:
             svg { opacity: 0.9; }
         }
     </style>
-    
+
     <!-- Your icon content here -->
     <g class="icon-element">
         <circle cx="12" cy="12" r="10" />
     </g>
-    
+
 </svg>
 ```
 
@@ -197,7 +197,7 @@ Before committing any SVG icon, verify:
 - Use human figures, badges, time elements
 - Represent HR/management concepts
 
-### Tenant Module  
+### Tenant Module
 - Buildings, domains, multi-tenant concepts
 - Architecture and infrastructure themes
 
@@ -215,6 +215,6 @@ Before committing any SVG icon, verify:
 
 ---
 
-*Last Updated: 2025-08-27*  
-*SVG Standards Version: 2.0*  
+*Last Updated: 2025-08-27*
+*SVG Standards Version: 2.0*
 *Based on Heroicons Outline Style*

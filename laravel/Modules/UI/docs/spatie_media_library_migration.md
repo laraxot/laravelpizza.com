@@ -33,7 +33,7 @@
 // User Profile
 SpatieMediaLibraryFileUpload::make('photo_profile')
 
-// Notify Themes  
+// Notify Themes
 SpatieMediaLibraryFileUpload::make('logo_src')
 
 // UI Blocks
@@ -51,7 +51,7 @@ SpatieMediaLibraryFileUpload::make('image') // ImagesGallery
 ```php
 // PatientResource (4 documenti)
 Forms\Components\FileUpload::make('health_card')
-Forms\Components\FileUpload::make('identity_document') 
+Forms\Components\FileUpload::make('identity_document')
 Forms\Components\FileUpload::make('isee_certificate')
 Forms\Components\FileUpload::make('pregnancy_certificate')
 
@@ -60,7 +60,7 @@ Forms\Components\FileUpload::make('certifications')
 
 // UI Blocks Standard
 FileUpload::make('image') // Image block
-FileUpload::make('background') // Hero block  
+FileUpload::make('background') // Hero block
 FileUpload::make('logo') // InfoBlock, LogoBlock
 
 // Appearance Pages
@@ -90,7 +90,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
     // ... Profili utente pronti!
 }
 
-// BaseTenant - IMPLEMENTA GIÀ  
+// BaseTenant - IMPLEMENTA GIÀ
 abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia
 {
     use InteractsWithMedia;
@@ -110,16 +110,16 @@ Ogni tipo di documento dovrà avere la sua collection specifica:
 ```php
 // Patient Documents Collections
 'health_card' => 'tessere_sanitarie'
-'identity_document' => 'documenti_identita'  
+'identity_document' => 'documenti_identita'
 'isee_certificate' => 'certificazioni_isee'
 'pregnancy_certificate' => 'certificati_gravidanza'
 
-// Doctor Documents Collections  
+// Doctor Documents Collections
 'certifications' => 'certificazioni_professionali'
 
 // UI/Appearance Collections
 'logos' => 'loghi_sistema'
-'backgrounds' => 'sfondi_interfaccia' 
+'backgrounds' => 'sfondi_interfaccia'
 'headers' => 'intestazioni'
 ```
 
@@ -132,15 +132,15 @@ public function registerMediaCollections(): void
     $this->addMediaCollection('tessere_sanitarie')
         ->acceptsMimeTypes(['image/jpeg', 'image/png', 'application/pdf'])
         ->singleFile();
-        
+
     $this->addMediaCollection('documenti_identita')
         ->acceptsMimeTypes(['image/jpeg', 'image/png', 'application/pdf'])
         ->singleFile();
-        
+
     $this->addMediaCollection('certificazioni_isee')
         ->acceptsMimeTypes(['application/pdf'])
         ->singleFile();
-        
+
     $this->addMediaCollection('certificati_gravidanza')
         ->acceptsMimeTypes(['application/pdf'])
         ->singleFile();
@@ -167,14 +167,14 @@ class SpatieDocumentUpload
             ->maxSize(10240) // 10MB
             ->acceptedFileTypes(['image/jpeg', 'image/png', 'application/pdf']);
     }
-    
+
     public static function forHealthCard(): SpatieMediaLibraryFileUpload
     {
         return static::make('health_card', 'tessere_sanitarie')
             ->imagePreviewHeight('150')
             ->maxSize(5120); // 5MB per documenti leggeri
     }
-    
+
     public static function forCertifications(): SpatieMediaLibraryFileUpload
     {
         return static::make('certifications', 'certificazioni_professionali')
@@ -189,7 +189,7 @@ class SpatieDocumentUpload
 #### 2.2 Helper per Immagini UI
 
 ```php
-// Modules/UI/app/Filament/Components/SpatieImageUpload.php  
+// Modules/UI/app/Filament/Components/SpatieImageUpload.php
 class SpatieImageUpload
 {
     public static function forLogo(string $collection = 'logos'): SpatieMediaLibraryFileUpload
@@ -202,7 +202,7 @@ class SpatieImageUpload
             ->maxSize(2048) // 2MB
             ->singleFile();
     }
-    
+
     public static function forBackground(string $collection = 'backgrounds'): SpatieMediaLibraryFileUpload
     {
         return SpatieMediaLibraryFileUpload::make('background')
@@ -232,7 +232,7 @@ class SpatieImageUpload
     ->acceptedFileTypes(['image/jpeg', 'image/png', 'application/pdf'])
     ->maxSize(5120),
 
-// DOPO (SpatieMediaLibraryFileUpload)  
+// DOPO (SpatieMediaLibraryFileUpload)
 'health_card' => \Modules\UI\Filament\Components\SpatieDocumentUpload::forHealthCard()
     ->label(trans('<nome progetto>::patients.fields.health_card.label'))
     ->helperText(trans('<nome progetto>::patients.fields.health_card.help')),
@@ -246,7 +246,7 @@ class SpatieImageUpload
 // PRIMA
 FileUpload::make('image'),
 
-// DOPO  
+// DOPO
 \Modules\UI\Filament\Components\SpatieImageUpload::make('image', 'content_images')
     ->imagePreviewHeight('250')
     ->conversion('thumbnail'),
@@ -262,7 +262,7 @@ public function up(): void
 {
     // Migrazione automatica dei file esistenti
     $patients = Patient::whereNotNull('health_card')->get();
-    
+
     foreach($patients as $patient) {
         if($patient->health_card && Storage::exists($patient->health_card)) {
             $patient->addMediaFromUrl(Storage::url($patient->health_card))
@@ -279,7 +279,7 @@ public function up(): void
 Schema::table('users', function (Blueprint $table) {
     $table->dropColumn([
         'health_card',
-        'identity_document', 
+        'identity_document',
         'isee_certificate',
         'pregnancy_certificate',
         'certifications'
@@ -305,22 +305,22 @@ public function registerMediaCollections(): void
         ->acceptsMimeTypes(['image/jpeg', 'image/png', 'application/pdf'])
         ->singleFile()
         ->useDisk('private');
-        
+
     $this->addMediaCollection('documenti_identita')
         ->acceptsMimeTypes(['image/jpeg', 'image/png', 'application/pdf'])
         ->singleFile()
         ->useDisk('private');
-        
+
     $this->addMediaCollection('certificazioni_isee')
         ->acceptsMimeTypes(['application/pdf'])
         ->singleFile()
         ->useDisk('private');
-        
+
     $this->addMediaCollection('certificati_gravidanza')
         ->acceptsMimeTypes(['application/pdf'])
         ->singleFile()
         ->useDisk('private');
-        
+
     // Certificazioni dottore (multiple)
     $this->addMediaCollection('certificazioni_professionali')
         ->acceptsMimeTypes(['application/pdf'])
@@ -334,7 +334,7 @@ public function registerMediaConversions(Media $media = null): void
         ->height(300)
         ->sharpen(10)
         ->performOnCollections('tessere_sanitarie', 'documenti_identita');
-        
+
     $this->addMediaConversion('preview')
         ->width(600)
         ->height(400)
@@ -377,24 +377,24 @@ public function getCertificationsAttribute(): array
     @if($patient->hasMedia('tessere_sanitarie'))
         <div class="document-preview">
             <h4>{{ __('<nome progetto>::patients.health_card') }}</h4>
-            <img src="{{ $patient->getFirstMediaUrl('tessere_sanitarie', 'thumbnail') }}" 
+            <img src="{{ $patient->getFirstMediaUrl('tessere_sanitarie', 'thumbnail') }}"
                  alt="Tessera Sanitaria"
                  class="w-full h-32 object-cover rounded">
-            <a href="{{ $patient->getFirstMediaUrl('tessere_sanitarie') }}" 
-               target="_blank" 
+            <a href="{{ $patient->getFirstMediaUrl('tessere_sanitarie') }}"
+               target="_blank"
                class="text-blue-600 text-sm">
                 {{ __('<nome progetto>::common.view_document') }}
             </a>
         </div>
     @endif
-    
+
     @if($patient->hasMedia('certificazioni_isee'))
         <div class="document-preview">
             <h4>{{ __('<nome progetto>::patients.isee_certificate') }}</h4>
             <div class="bg-red-100 h-32 flex items-center justify-center rounded">
                 <i class="fas fa-file-pdf text-red-600 text-3xl"></i>
             </div>
-            <a href="{{ $patient->getFirstMediaUrl('certificazioni_isee') }}" 
+            <a href="{{ $patient->getFirstMediaUrl('certificazioni_isee') }}"
                target="_blank"
                class="text-blue-600 text-sm">
                 {{ __('<nome progetto>::common.download_pdf') }}
@@ -460,14 +460,14 @@ public function scopeExpiredDocuments($query)
 public function downloadDocument(Media $media): Response
 {
     $this->authorize('download', $media);
-    
+
     if($media->collection_name === 'tessere_sanitarie') {
         // Log accesso a documento sensibile
         activity()
             ->performedOn($media)
             ->log('downloaded_health_card');
     }
-    
+
     return response()->download($media->getPath());
 }
 ```
@@ -488,7 +488,7 @@ public function downloadDocument(Media $media): Response
 - [ ] Monitoring storage usage
 - [ ] User communication su downtime
 
-### **Post-Migrazione**  
+### **Post-Migrazione**
 - [ ] Cleanup file obsoleti
 - [ ] Performance comparison
 - [ ] User training su nuove features
@@ -514,7 +514,7 @@ public function downloadDocument(Media $media): Response
 
 ### **Ordine di Priorità**
 1. **CRITICO**: PatientResource (documenti sensibili)
-2. **ALTO**: DoctorResource (certificazioni professionali)  
+2. **ALTO**: DoctorResource (certificazioni professionali)
 3. **MEDIO**: UI Blocks (contenuti pubblici)
 4. **BASSO**: Appearance pages (configurazioni admin)
 
@@ -532,8 +532,8 @@ public function downloadDocument(Media $media): Response
 
 ---
 
-*Ultimo aggiornamento: Dicembre 2024*  
-*Versione: 1.0*  
-*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
-*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
-*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x* 
+*Ultimo aggiornamento: Dicembre 2024*
+*Versione: 1.0*
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x*
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x*
+*Compatibilità: Laraxot , Spatie Media Library 11.x, Filament 3.x*

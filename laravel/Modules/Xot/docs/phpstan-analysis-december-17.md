@@ -71,7 +71,7 @@ I seguenti 33 moduli sono stati analizzati e risultano conformi a PHPStan Level 
 
 **File rimosso**: `Modules/Xot/app/Filament/Widgets/TestWidget.php`
 
-**Motivo**: 
+**Motivo**:
 - Il widget non era utilizzato da nessuna parte nel progetto
 - Causava un errore PHPStan: "Property $view (view-string) does not accept default value of type string"
 - Esisteva un altro TestWidget nel modulo UI che è quello effettivamente utilizzato

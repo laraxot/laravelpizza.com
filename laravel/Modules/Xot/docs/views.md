@@ -297,4 +297,4 @@ php artisan make:component Alert
         </div>
     </div>
 </x-app-layout>
-``` 
+```

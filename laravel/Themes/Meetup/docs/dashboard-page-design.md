@@ -175,4 +175,3 @@ Ogni card ha:
 - **Documenti correlati**:
   - [Register Page Design](./register-page-design-error.md)
   - [Design Analysis](./laravelpizza-com-design-analysis.md)
-

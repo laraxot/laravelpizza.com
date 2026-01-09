@@ -152,17 +152,10 @@ use Modules\Xot\Filament\Traits\TransTrait;
 use Webmozart\Assert\Assert;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
-
 class ListXXX extends XotBaseListRecords
 {
-    
+
     protected static string $resource = XXXResource::class;
-
-    
-
-    
-
-  
 
     public function getGridTableColumns(): array
     {
@@ -185,7 +178,7 @@ class ListXXX extends XotBaseListRecords
     public function getTableActions(): array
     {
         return [
-            
+
             ViewAction::make()
                 ->label(''),
             EditAction::make()

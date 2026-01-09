@@ -62,4 +62,3 @@ Nella cartella `resources/mail-layouts/` creare file HTML, ad esempio `main.html
 ```
 
 > ![Anteprima Layout Email](mail-layouts/main-preview.png)
-

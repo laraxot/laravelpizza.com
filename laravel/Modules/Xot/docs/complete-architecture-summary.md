@@ -79,7 +79,7 @@ Every business operation is encapsulated in a single-purpose action class.
 class MyAction
 {
     use QueueableAction;
-    
+
     public function execute($parameter) { /* business logic */ }
 }
 ```
@@ -145,7 +145,7 @@ XotBaseResource automatically generates standard pages (index, create, edit).
 
 ### View Resolution Order
 1. Current Theme Views
-2. Module Views  
+2. Module Views
 3. Laravel Defaults
 
 ## Best Practices

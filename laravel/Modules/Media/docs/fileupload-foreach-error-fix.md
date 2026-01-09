@@ -56,7 +56,7 @@ public static function getAttachmentsSchema(bool $multiple=true): array{
     $attachments = $model::$attachments;
     $uuid = Str::uuid()->toString();
     $schema = [];
-    
+
     foreach ($attachments as $attachment) {
         $schema[] = Forms\Components\FileUpload::make($attachment)
             ->disk('local')
@@ -79,13 +79,13 @@ public static function getAttachmentsSchema(bool $multiple=true): array{
             })
             ->afterStateUpdated(function ($state, Forms\Set $set) use ($attachment, $multiple) {
                 if (!$state) return;
-                
+
                 // Normalizza sempre come array
                 $files = is_array($state) ? $state : [$state];
                 $sessionId = session()->getId();
                 $sessionDir = "session-uploads/{$sessionId}";
                 $sessionFiles = [];
-                
+
                 foreach ($files as $file) {
                     if ($file instanceof \Livewire\Features\SupportFileUploads\TemporaryUploadedFile) {
                         // Salva direttamente nella directory di sessione
@@ -97,7 +97,7 @@ public static function getAttachmentsSchema(bool $multiple=true): array{
                         $sessionFiles[] = $file;
                     }
                 }
-                
+
                 // Imposta il valore corretto in base al tipo
                 $finalValue = $multiple ? $sessionFiles : ($sessionFiles[0] ?? null);
                 $set($attachment, $finalValue);
@@ -115,11 +115,11 @@ Modifiche nel metodo `getFormFill()` per gestire correttamente i file:
 public function getFormFill(): array
 {
     $model = $this->getFormModel();
-    
+
     if ($model->exists) {
         try {
             $data = $model->toArray();
-            
+
             // Gestione specifica per i file upload
             if (isset($model::$attachments)) {
                 foreach ($model::$attachments as $attachment) {
@@ -129,14 +129,14 @@ public function getFormFill(): array
                     }
                 }
             }
-            
+
             return $data;
         } catch (\Exception $e) {
             Log::warning("Errore in toArray() per modello {$this->model}: " . $e->getMessage());
             // Fallback logic...
         }
     }
-    
+
     // Resto del metodo...
 }
 ```
@@ -177,7 +177,7 @@ public function getFormFill(): array
 // ✅ Pattern corretto
 ->afterStateUpdated(function ($state, Forms\Set $set) use ($attachment, $multiple) {
     if (!$state) return;
-    
+
     $files = is_array($state) ? $state : [$state];
     // Resto della logica...
 })
@@ -203,4 +203,4 @@ public function getFormFill(): array
 
 *Ultimo aggiornamento: 2025-01-03*
 *Autore: AI Assistant*
-*Versione: 1.0* 
+*Versione: 1.0*

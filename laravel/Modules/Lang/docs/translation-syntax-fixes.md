@@ -68,7 +68,7 @@ return [
 ### 2. declare() Posizionato Erroneamente
 ```php
 // ❌ ERRATO
-<?php 
+<?php
 return [
 declare(strict_types=1);
   'navigation' => [...],

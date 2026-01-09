@@ -16,4 +16,4 @@
 ### Componenti
 - [Filament Widgets](https://filamentphp.com/docs/3.x/widgets/installation)
 - [Filament Actions](https://filamentphp.com/docs/3.x/actions/installation)
-- [Filament Resources](https://filamentphp.com/docs/3.x/resources/installation) 
+- [Filament Resources](https://filamentphp.com/docs/3.x/resources/installation)

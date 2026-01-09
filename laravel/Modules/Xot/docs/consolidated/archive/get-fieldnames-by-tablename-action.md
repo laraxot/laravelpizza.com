@@ -76,4 +76,4 @@ $fields = $action->execute('users');
 - Implementare la gestione degli errori
 - Supportare diversi driver di database
 - Mantenere la compatibilità con le versioni future di Laravel
-- Documentare eventuali limitazioni o casi speciali 
+- Documentare eventuali limitazioni o casi speciali

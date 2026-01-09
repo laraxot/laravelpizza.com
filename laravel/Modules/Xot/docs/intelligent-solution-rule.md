@@ -1,7 +1,7 @@
 # Regola Critica: Soluzione Intelligente e Professionale
 
-**Data**: 2025-01-22  
-**Status**: ✅ Regola Critica OBBLIGATORIA  
+**Data**: 2025-01-22
+**Status**: ✅ Regola Critica OBBLIGATORIA
 **Integrazione**: Metodologia Super Mucca
 
 ---
@@ -32,7 +32,7 @@ Comprendere completamente il contesto prima di agire.
    ```bash
    # Esplora docs del modulo
    find Modules/{ModuleName}/docs -name "*.md" -type f | sort
-   
+
    # Leggi documenti chiave
    cat Modules/{ModuleName}/docs/README.md
    cat Modules/{ModuleName}/docs/00-index.md
@@ -273,6 +273,6 @@ Questa regola si integra perfettamente con la [Metodologia Super Mucca](./super-
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: ✅ Regola Critica OBBLIGATORIA

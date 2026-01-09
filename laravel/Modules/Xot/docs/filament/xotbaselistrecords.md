@@ -52,4 +52,4 @@ class ListYourRecords extends XotBaseListRecords
 ## Note Tecniche
 - La classe utilizza `strict_types=1`
 - Supporta la traduzione attraverso il trait `Translatable`
-- Integra con il sistema di layout delle tabelle di Filament 
+- Integra con il sistema di layout delle tabelle di Filament

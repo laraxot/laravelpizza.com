@@ -58,7 +58,7 @@ $logout = function () {
         request()->session()->invalidate();
         request()->session()->regenerateToken();
     }
-    
+
     // Reindirizzamento localizzato
     $locale = app()->getLocale();
     return redirect()->to('/' . $locale);
@@ -94,7 +94,7 @@ $logout = function () {
     <script>
         // Esegui il logout immediatamente
         window.livewire.dispatch('logout');
-        
+
         // Reindirizza dopo 3 secondi
         setTimeout(() => {
             window.location.href = "{{ url('/' . app()->getLocale()) }}";
@@ -128,13 +128,13 @@ new class extends Component {
             request()->session()->regenerateToken();
         }
     }
-    
+
     public function logout()
     {
         $locale = app()->getLocale();
         return redirect()->to('/' . $locale);
     }
-    
+
     public function render()
     {
         return <<<'BLADE'

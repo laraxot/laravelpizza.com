@@ -230,4 +230,4 @@ Questo documento definisce le best practices per la creazione di template email 
 Per supporto tecnico:
 - Email: support@example.com
 - Documentazione: https://docs.example.com
-- Repository: https://github.com/organization/notify 
+- Repository: https://github.com/organization/notify

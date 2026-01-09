@@ -1,7 +1,7 @@
 # Helper Functions - Xot Module
 
-**Purpose**: Funzioni helper globali per utilità comuni nel framework Laraxot  
-**Location**: `Modules/Xot/Helpers/Helper.php`  
+**Purpose**: Funzioni helper globali per utilità comuni nel framework Laraxot
+**Location**: `Modules/Xot/Helpers/Helper.php`
 **Pattern**: Global functions con `function_exists()` check per evitare collisioni
 
 ---
@@ -76,7 +76,7 @@ $json = dddx(['key' => 'value']);
 // Return: JSON formattato
 ```
 
-**Note**: 
+**Note**:
 - Usa `Safe\json_encode()` per type safety
 - Logga sempre via `Log::debug()`
 - Ritorna sempre string (non void)
@@ -114,7 +114,7 @@ if ($id !== null) {
 }
 ```
 
-**Note**: 
+**Note**:
 - Usa `Auth::user()?->id` (nullsafe operator)
 - Ritorna `string|int|null` per type safety
 
@@ -305,7 +305,6 @@ function authId(): string|int|null {
 
 ---
 
-**Last Updated**: 2025-01-02  
-**PHPStan Level**: 10 compliant  
+**Last Updated**: 2025-01-02
+**PHPStan Level**: 10 compliant
 **Status**: ✅ Production Ready
-

@@ -129,13 +129,13 @@ BlockData garantisce già che tutti i dati siano del tipo corretto:
             @php
                 // ERRATO: Debug nel componente
                 Log::info('Rendering block', ['type' => $block->type, 'view' => $block->view]);
-                
+
                 // ERRATO: Validazione ridondante
                 if(!view()->exists($block->view)) {
                     Log::error('Vista non trovata: ' . $block->view);
                     continue;
                 }
-                
+
                 // ERRATO: Manipolazione inutile dei dati
                 $blockData = (array) ($block->data ?? []);
                 $blockData['_debug'] = config('app.debug');
@@ -201,23 +201,23 @@ class PageController extends Controller
     {
         // ✅ Logging appropriato
         Log::info('Caricamento pagina', ['slug' => $slug]);
-        
+
         $pageData = $this->getPageData($slug);
-        
+
         // ✅ Validazione e gestione errori
         if (empty($pageData)) {
             Log::warning('Pagina non trovata', ['slug' => $slug]);
             abort(404);
         }
-        
+
         // ✅ Processamento dati
         $blocks = BlockData::fromArray($pageData['blocks'] ?? []);
-        
+
         // ✅ Debug appropriato
         if (config('app.debug')) {
             Log::debug('Blocchi processati', ['count' => $blocks->count()]);
         }
-        
+
         return view('cms::pages.show', [
             'blocks' => $blocks,
             'slug' => $slug
@@ -299,11 +299,11 @@ public function test_page_component_renders_blocks()
     $blocks = collect([
         new BlockData('hero', ['view' => 'ui::blocks.hero', 'title' => 'Test'])
     ]);
-    
+
     $view = $this->blade('<x-cms::page :blocks="$blocks" side="content" slug="test" />', [
         'blocks' => $blocks
     ]);
-    
+
     $view->assertSee('Test');
     $view->assertSee('page-content-content');
 }
@@ -324,7 +324,7 @@ public function test_page_component_handles_invalid_views()
 ### Template di Documentazione
 
 ```blade
-{{-- 
+{{--
 Componente: Nome del Componente
 Responsabilità: Descrizione breve della responsabilità
 Dipendenze: Cosa si aspetta di ricevere
@@ -338,7 +338,7 @@ Esempio di utilizzo:
 ### Esempio Completo
 
 ```blade
-{{-- 
+{{--
 Componente: Page
 Responsabilità: Rendering di blocchi validati da BlockData
 Dipendenze: Array di oggetti BlockData validati
@@ -388,4 +388,4 @@ Esempio di utilizzo:
 - [BlockData Documentation](/laravel/Modules/Cms/docs/data/blockdata.md)
 - [Page Component](/laravel/Modules/Cms/docs/components/page.md)
 - [Best Practices Generali](/laravel/Modules/Cms/docs/best-practices/)
-- [Blocks Documentation](/laravel/Modules/Cms/docs/blocks.md) 
+- [Blocks Documentation](/laravel/Modules/Cms/docs/blocks.md)

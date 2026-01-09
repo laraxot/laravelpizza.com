@@ -142,7 +142,7 @@ sequenceDiagram
     participant Cmd as Command Handler
     participant AR as Aggregate Root
     participant ES as Event Store
-    
+
     C->>API: POST /api/markets
     API->>Cmd: CreateMarketCommand
     Cmd->>AR: handle()
@@ -164,7 +164,7 @@ sequenceDiagram
     participant AR as Market Aggregate
     participant UP as UserProfile Aggregate
     participant ES as Event Store
-    
+
     C->>API: POST /api/bets
     API->>Cmd: PlaceBetCommand
     Cmd->>AR: handle()

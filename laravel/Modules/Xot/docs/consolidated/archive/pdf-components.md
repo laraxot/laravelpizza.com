@@ -83,7 +83,7 @@ Il componente è stato estratto dal template `report_pdf.blade.php` del tema One
         font-size: 10px;
         line-height: 1.3;
     }
-    
+
     /* Altre classi... */
 </style>
 ```
@@ -92,7 +92,7 @@ Il componente è stato estratto dal template `report_pdf.blade.php` del tema One
 ```blade
 <page backtop="20mm" backbottom="10mm" backleft="15mm" backright="15mm">
     @include('xot::pdf.css')
-    
+
     {{-- Contenuto del PDF --}}
 </page>
 ```
@@ -103,15 +103,15 @@ Il componente è stato estratto dal template `report_pdf.blade.php` del tema One
 ```blade
 <page backtop="20mm" backbottom="10mm" backleft="15mm" backright="15mm">
     @include('xot::pdf.css')
-    
+
     <page_header>
         {{-- Header standardizzato --}}
     </page_header>
-    
+
     <page_footer>
         {{-- Footer standardizzato --}}
     </page_footer>
-    
+
     {{-- Contenuto specifico del PDF --}}
 </page>
 ```
@@ -121,7 +121,7 @@ Il componente è stato estratto dal template `report_pdf.blade.php` del tema One
 <page backtop="20mm" backbottom="10mm" backleft="15mm" backright="15mm">
     @include('xot::pdf.css')
     @include('xot::pdf.medical-styles')
-    
+
     {{-- Contenuto medical specifico --}}
 </page>
 ```
@@ -163,4 +163,4 @@ Quando si aggiungono nuovi stili CSS per PDF:
 3. **Documentare**: Aggiornare questa documentazione per nuovi componenti
 4. **Testare**: Verificare che i PDF generati abbiano l'aspetto corretto
 
-**Ultimo aggiornamento**: Dicembre 2024 
+**Ultimo aggiornamento**: Dicembre 2024

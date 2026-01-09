@@ -97,5 +97,5 @@ I file modificati sono stati documentati sia nel loro specifico modulo che in qu
 ## Collegamenti Bidirezionali
 
 - [PHPStan Report](../../Media/docs/phpstan_report.md)
-- [Test Report](test_report.md) 
-- [Documentazione Conflitti Job](../../Job/docs/conflict_resolution.md) 
+- [Test Report](test_report.md)
+- [Documentazione Conflitti Job](../../Job/docs/conflict_resolution.md)

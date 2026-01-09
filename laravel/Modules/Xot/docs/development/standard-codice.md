@@ -70,7 +70,7 @@ class Patient extends Model
         'birth_date' => 'date',
         'is_active' => 'boolean',
     ];
-    
+
     public function appointments(): HasMany
     {
         return $this->hasMany(Appointment::class);
@@ -91,7 +91,7 @@ class PatientData
         public readonly ?DateTimeInterface $birthDate = null,
         public readonly bool $isActive = true,
     ) {}
-    
+
     public static function fromArray(array $data): self
     {
         return new self(
@@ -158,4 +158,3 @@ class MyResource extends XotBaseResource
 ## Collegamenti tra versioni di standard-codice.md
 * [standard-codice.md](docs/standard-codice.md)
 * [standard-codice.md](../../../Xot/docs/development/standard-codice.md)
-

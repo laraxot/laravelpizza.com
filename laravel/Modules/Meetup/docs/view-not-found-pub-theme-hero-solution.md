@@ -69,4 +69,3 @@ Dopo l'implementazione, la view `pub_theme::components.blocks.hero.main` dovrebb
 - Questa soluzione è specifica per view con namespace
 - Le view senza namespace continuano a usare `view()->exists()` normalmente
 - Il controllo del file fisico è un fallback, non sostituisce `view()->exists()`
-

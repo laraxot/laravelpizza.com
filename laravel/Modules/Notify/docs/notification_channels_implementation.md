@@ -1,4 +1,4 @@
-# Implementazione dei Canali di Notifica 
+# Implementazione dei Canali di Notifica
 
 Questo documento descrive l'architettura e l'implementazione dei canali di notifica nel progetto <main module>, con particolare attenzione al pattern Factory utilizzato.
 
@@ -47,7 +47,7 @@ Il pattern Factory è stato implementato per centralizzare la logica di selezion
 public function create(?string $driver = null): SmsActionInterface
 {
     $driver = $driver ?? Config::get('sms.default', 'smsfactor');
-    
+
     return match ($driver) {
         'smsfactor' => app(SendSmsFactorSMSAction::class),
         'twilio' => app(SendTwilioSMSAction::class),
@@ -78,7 +78,7 @@ class AppointmentReminder extends Notification
     {
         return [SmsChannel::class];
     }
-    
+
     public function toSms($notifiable)
     {
         return new SmsData(
@@ -146,11 +146,9 @@ L'architettura implementata facilita la manutenibilità:
 
 L'implementazione dei canali di notifica  segue un'architettura coerente e ben strutturata, basata sul pattern Factory. Questo approccio garantisce separazione delle responsabilità, riutilizzabilità, testabilità e manutenibilità, facilitando l'estensione del sistema con nuovi provider e tipi di comunicazione.
 
-
 ## Collegamenti a Documentazione Correlata
 - [Modulo di Notifica](./INDEX.md)
 - [Panoramica dell'Architettura](./ARCHITECTURE.md)
 - [Modelli di Email](./EMAIL_TEMPLATES.md)
 - [Implementazione SMS](./SMS_IMPLEMENTATION.md)
 - [Risoluzione dei Problemi](./TROUBLESHOOTING.md)
-

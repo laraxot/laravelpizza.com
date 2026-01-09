@@ -25,7 +25,7 @@ section: content
 
 - php artisan vendor:publish --tag="filament-jet-views"
 
-- mettere in composer 
+- mettere in composer
 
 ```bash
 "repositories": [
@@ -52,7 +52,7 @@ section: content
 - composer require savannabits/filament-modules versione 1.1
 
 - php artisan module:use Modulo
-- 
+-
 - php artisan module:make-filament-context Filament
 
 ### Versione HEAD
@@ -67,10 +67,8 @@ section: content
 * [installation.md](../../../Cms/docs/installation.md)
 * [installation.md](../../../../Themes/One/docs/installation.md)
 
-
 ### Versione Incoming
 
 - php artisan make:filament-user per creare utente
 
 ---
-

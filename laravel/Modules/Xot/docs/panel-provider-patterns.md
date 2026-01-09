@@ -43,7 +43,7 @@ public function panel(Panel $panel): Panel
         ->maxContentWidth('full')
         ->topNavigation($this->topNavigation)
         ->globalSearch($this->globalSearch);
-        
+
     return $panel;
 }
 ```

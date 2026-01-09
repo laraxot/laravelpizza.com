@@ -25,7 +25,7 @@ use Modules\Media\Traits\HasMedia;
 class User extends XotBaseModel
 {
     use HasMedia;
-    
+
     protected $fillable = ['name', 'email'];
 }
 // Upload con conversioni automatiche
@@ -47,7 +47,7 @@ class ImageOptimizationService
                   ->greyscale()
                   ->quality(85);
         });
-        
+
         $media->manipulate('webp', function ($image) {
             $image->format('webp')
                   ->quality(90);
@@ -171,7 +171,7 @@ class MediaResource extends XotBaseResource
                 ->visibility('public')
                 ->acceptedFileTypes(['image/*', 'video/*', 'application/pdf'])
                 ->maxSize(10240), // 10MB
-                
+
             Forms\Components\TextInput::make('name')
                 ->required()
                 ->maxLength(255),
@@ -297,9 +297,9 @@ ffmpeg -codecs
 - **📄 Document Formats**: 20+ formati documento (PDF, DOC, XLS)
 - **🧪 Test Coverage**: 95%
 - **⚡ Performance Score**: 95/100
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
-**📦 Versione**: 3.1.0  
-**🐛 PHPStan level 10**: File core certificati ✅  
-**🌐 Translation Standards**: File traduzione certificati ✅  
-**🚀 Performance**: 95/100 score  
+**🔄 Ultimo aggiornamento**: 27 Gennaio 2025
+**📦 Versione**: 3.1.0
+**🐛 PHPStan level 10**: File core certificati ✅
+**🌐 Translation Standards**: File traduzione certificati ✅
+**🚀 Performance**: 95/100 score
 **🔧 S3Test Corrections**: Completate ✅

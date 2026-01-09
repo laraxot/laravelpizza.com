@@ -159,7 +159,6 @@
 
 ### Versione HEAD
 
-
 ### Versione Incoming
 
 - [Documentazione Componenti](./components.md) - Guida ai componenti UI
@@ -195,9 +194,7 @@
 * [roadmap.md](../../../Cms/docs/roadmap.md)
 * [roadmap.md](../../../../Themes/One/docs/roadmap.md)
 
-
 ---
-
 
 ### Versione Incoming
 
@@ -359,7 +356,6 @@ Overall Module Completion: 60%
 4. 📝 Accessibility documentation
 5. 🧪 A11y testing suite
 
-[More details in docs/roadmap/weekly/week2.md] 
+[More details in docs/roadmap/weekly/week2.md]
 
 ---
-

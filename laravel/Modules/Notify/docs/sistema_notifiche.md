@@ -51,16 +51,16 @@ class CustomChannel
     public function send($notifiable, Notification $notification)
     {
         $message = $notification->toCustom($notifiable);
-        
+
         // 1. Validazione
         $this->validateMessage($message);
-        
+
         // 2. Preparazione
         $payload = $this->preparePayload($message);
-        
+
         // 3. Invio
         $this->sendMessage($payload);
-        
+
         // 4. Logging
         $this->logDelivery($message, $payload);
     }
@@ -74,7 +74,7 @@ class CustomChannel
 // config/queue.php
 return [
     'default' => env('QUEUE_CONNECTION', 'redis'),
-    
+
     'connections' => [
         'redis' => [
             'driver' => 'redis',
@@ -83,7 +83,7 @@ return [
             'retry_after' => 90,
             'block_for' => null,
         ],
-    
+
     'failed' => [
         'driver' => env('QUEUE_FAILED_DRIVER', 'database'),
         'database' => env('DB_CONNECTION', 'mysql'),
@@ -138,7 +138,7 @@ class NotificationRateLimiter
     public function check($notifiable, $notification)
     {
         $key = $this->getKey($notifiable, $notification);
-        
+
         return RateLimiter::attempt(
             $key,
             $this->getMaxAttempts(),
@@ -249,7 +249,7 @@ class NotificationTest extends TestCase
     public function test_notification_creation()
     {
         $notification = new TestNotification($this->getTestData());
-        
+
         $this->assertInstanceOf(BaseNotification::class, $notification);
         $this->assertArrayHasKey('mail', $notification->via());
     }
@@ -263,16 +263,16 @@ class NotificationSystemTest extends TestCase
     {
         // 1. Creazione
         $notification = $this->createNotification();
-        
+
         // 2. Invio
         $sent = $this->sendNotification($notification);
-        
+
         // 3. Verifica
         $delivered = $this->verifyDelivery($notification);
-        
+
         // 4. Analytics
         $metrics = $this->checkMetrics($notification);
-        
+
         // 5. Assertions
         $this->assertNotificationSent($notification);
     }
@@ -289,4 +289,4 @@ class NotificationSystemTest extends TestCase
 Per contribuire alla documentazione, seguire le [Linee Guida](../../../docs/linee-guida-documentazione.md) e le [Regole dei Collegamenti](../../../docs/regole_collegamenti_documentazione.md).
 
 ## Collegamenti Completi
-Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md). 
+Per una lista completa di tutti i collegamenti tra i README.md, consultare il file [README_links.md](../../../docs/README_links.md).

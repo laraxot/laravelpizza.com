@@ -72,4 +72,4 @@ php artisan activity:shop:checkout cart_12345_xxx
 - [README Bank](../bank/README.md)
 
 ---
-**Questa documentazione è neutra e riutilizzabile, senza riferimenti a progetti specifici, e segue le regole di neutralità e modularità.** 
+**Questa documentazione è neutra e riutilizzabile, senza riferimenti a progetti specifici, e segue le regole di neutralità e modularità.**

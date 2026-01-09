@@ -67,7 +67,7 @@ public function teamUsers(): HasMany
 ## Vantaggi del Fix
 ### Funzionalità Ripristinate
 - ✅ Creazione e gestione team
-- ✅ Inviti ai team  
+- ✅ Inviti ai team
 - ✅ Relazioni User-Team
 - ✅ Controllo permessi team-based
 - ✅ Switch tra team multipli
@@ -117,7 +117,7 @@ $this->assertTrue($user->belongsToTeam($team));
 - [Critical Errors Documentation](../../SaluteOra/docs/critical-errors-resolved.md)
 - [Critical Errors Documentation](../../SaluteOra/project_docs/critical-errors-resolved.md)
 ---
-**Autore**: AI Assistant  
-**Data**: Gennaio 2025  
-**Versione**: 1.0  
-**Status**: ✅ Risolto e Testato 
+**Autore**: AI Assistant
+**Data**: Gennaio 2025
+**Versione**: 1.0
+**Status**: ✅ Risolto e Testato

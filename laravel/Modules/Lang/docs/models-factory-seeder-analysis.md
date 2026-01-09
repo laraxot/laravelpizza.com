@@ -9,7 +9,7 @@
 
 ### Factory Presenti
 - ✅ **PostFactory** - Presente
-- ✅ **TranslationFactory** - Presente  
+- ✅ **TranslationFactory** - Presente
 - ✅ **TranslationFileFactory** - Presente
 
 ### Seeder Presenti
@@ -32,4 +32,3 @@
 
 ---
 *Ultimo aggiornamento: 2025-01-06*
-

@@ -84,7 +84,7 @@ When converting existing Filament Section components:
 use Filament\Schemas\Components\Section;
 class MySection extends Section
 
-// After  
+// After
 use Modules\Xot\Filament\Schemas\Components\XotBaseSection;
 class MySection extends XotBaseSection
 ```

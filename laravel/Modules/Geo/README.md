@@ -66,13 +66,13 @@ class Address extends Model
         'country', 'latitude', 'longitude',
         'is_primary', 'type', 'name'
     ];
-    
+
     protected $casts = [
         'latitude' => 'decimal:8',
         'longitude' => 'decimal:8',
         'is_primary' => 'boolean',
     ];
-    
+
     // Relazione polimorfa
     public function addressable(): MorphTo
     {
@@ -92,7 +92,7 @@ class GeocodingService
             'address' => $address,
             'key' => config('geo.google_maps_api_key')
         ]);
-        
+
         if ($response->successful()) {
             $data = $response->json();
             if (!empty($data['results'])) {
@@ -104,7 +104,7 @@ class GeocodingService
                 ];
             }
         }
-        
+
         return null;
     }
 }
@@ -202,7 +202,7 @@ public static function form(Form $form): Form
             Forms\Components\TextInput::make('name')
                 ->label('Nome Studio')
                 ->required(),
-            
+
             // Campo indirizzi riutilizzabile
             AddressesField::make('addresses')
                 ->relationship('addresses')
@@ -222,9 +222,9 @@ class GeocodingController extends Controller
     {
         $address = $request->input('address');
         $geocodingService = app(GeocodingService::class);
-        
+
         $coordinates = $geocodingService->geocode($address);
-        
+
         return response()->json($coordinates);
     }
 }
@@ -241,7 +241,7 @@ class Studio extends Model
     {
         return $this->morphMany(Address::class, 'addressable');
     }
-    
+
     public function primaryAddress(): MorphOne
     {
         return $this->morphOne(Address::class, 'addressable')
@@ -264,7 +264,7 @@ class Doctor extends Model
 class MapWidget extends Widget
 {
     protected static string $view = 'geo::widgets.map';
-    
+
     public function getViewData(): array
     {
         return [

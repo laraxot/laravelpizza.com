@@ -44,7 +44,7 @@ fi
 echo -e "\n📊 RIEPILOGO CONTROLLI"
 echo "======================"
 echo "Path assoluti: $ABSOLUTE_PATHS"
-echo "Link errati: $WRONG_RELATIVE" 
+echo "Link errati: $WRONG_RELATIVE"
 echo "Progetti vecchi: $OLD_PROJECTS"
 
 TOTAL_ERRORS=$((ABSOLUTE_PATHS + WRONG_RELATIVE + OLD_PROJECTS))
@@ -131,7 +131,7 @@ jobs:
 
 ### **Target Metriche**
 - **Link assoluti**: 0 (zero tolleranza)
-- **Link relativi errati**: 0 (zero tolleranza)  
+- **Link relativi errati**: 0 (zero tolleranza)
 - **Link rotti**: < 1% (controllo manuale)
 - **Copertura documentazione**: > 90%
 
@@ -156,6 +156,6 @@ jobs:
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025  
-**Versione**: 1.0  
+**Ultimo aggiornamento**: Gennaio 2025
+**Versione**: 1.0
 **Integrazione**: Sistema CI/CD e pre-commit hooks

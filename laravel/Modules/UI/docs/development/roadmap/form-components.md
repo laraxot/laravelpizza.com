@@ -89,8 +89,7 @@ I componenti form forniscono un'interfaccia standardizzata per la creazione e ge
 - Mantenere compatibilità browser
 - Focus su accessibilità
 - Ottimizzare performance
-- Aggiornare documentazione 
+- Aggiornare documentazione
 ## Collegamenti tra versioni di form-components.md
 * [form-components.md](../../../UI/docs/form-components.md)
 * [form-components.md](../../../UI/docs/roadmap/form-components.md)
-

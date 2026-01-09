@@ -1,7 +1,7 @@
 # Filosofia Laraxot: Consolidamento Migrazioni
 
-**Data Creazione**: 2025-01-22  
-**Status**: Documentazione Filosofica Completa  
+**Data Creazione**: 2025-01-22
+**Status**: Documentazione Filosofica Completa
 **Versione**: 1.0.0
 
 ## 🏛️ Comandamento Sacro: Una Tabella, Una Migration
@@ -115,7 +115,7 @@ return new class extends XotBaseMigration {
             $table->string('name');
             $table->string('guard_name')->default('web');
         });
-        
+
         $this->tableUpdate(function (Blueprint $table): void {
             $this->updateTimestamps($table);
         });
@@ -129,7 +129,7 @@ return new class extends XotBaseMigration {
 // 2024_06_15_143000_add_team_id_to_roles_table.php
 return new class extends XotBaseMigration {
     protected string $table_name = 'roles';
-    
+
     public function up(): void
     {
         $this->tableUpdate(function (Blueprint $table): void {
@@ -147,14 +147,14 @@ return new class extends XotBaseMigration {
 // 2025_09_18_000000_add_fields_to_roles_table.php
 return new class extends XotBaseMigration {
     protected string $table_name = 'roles';
-    
+
     public function up(): void
     {
         $this->tableUpdate(function (Blueprint $table): void {
             if (!$this->hasColumn('display_name')) {
                 $table->string('display_name')->nullable();
             }
-            
+
             if (!$this->hasColumn('description')) {
                 $table->text('description')->nullable();
             }

@@ -13,9 +13,9 @@ Il suo problema che non funzionava con le traduzioni
 
 Come Orbit, permette di salvare le istanze di un modello dentro dei file json, all'interno della configurazione locale che si sta utilizzando.
 
-Esempio: se si vuole utilizzare dentro il modello Page, il singolo json di ogni istanza salvata verrà memorizzato dentro laravel\config\estensione_dominio\dominio\database\content\pages  
+Esempio: se si vuole utilizzare dentro il modello Page, il singolo json di ogni istanza salvata verrà memorizzato dentro laravel\config\estensione_dominio\dominio\database\content\pages
 
-Per il modello Menu, il json verrà salvato dentro laravel\config\estensione_dominio\dominio\database\content\menus  
+Per il modello Menu, il json verrà salvato dentro laravel\config\estensione_dominio\dominio\database\content\menus
 
 Aggiungere al modello su cui si vuole utilizzare
 

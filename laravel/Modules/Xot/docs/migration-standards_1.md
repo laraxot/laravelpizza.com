@@ -25,7 +25,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
  * Migrazione per [scopo della migrazione].
- * 
+ *
  * @see docs/standards/migrations.md
  */
 return new class extends XotBaseMigration
@@ -36,7 +36,7 @@ return new class extends XotBaseMigration
      * @var string
      */
     protected string $table = 'nome_tabella';
-    
+
     /**
      * Connessione al database.
      *
@@ -51,12 +51,12 @@ return new class extends XotBaseMigration
     {
         $this->tableCreate(function (Blueprint $table) {
             $table->id(); // o altro tipo di chiave primaria
-            
+
             // Definizione dei campi
-            
+
             // Utilizziamo updateTimestamps per gestire created_at, updated_at e deleted_at
             $this->updateTimestamps($table, true); // true per includere soft delete
-            
+
             // Verifica se le tabelle correlate esistono prima di creare foreign keys
             if (Schema::connection($this->getConnection())->hasTable('tabella_correlata')) {
                 $table->foreign('campo_id')
@@ -64,7 +64,7 @@ return new class extends XotBaseMigration
                     ->on('tabella_correlata')
                     ->onDelete('cascade');
             }
-            
+
             // Indici
             $table->index('campo_id');
         });
@@ -161,7 +161,7 @@ return new class extends XotBaseMigration
 {
     protected string $table = 'nome_tabella';
     protected ?string $connection = 'mysql';
-    
+
     public function up(): void
     {
         // ...

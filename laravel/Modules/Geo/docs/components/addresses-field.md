@@ -74,7 +74,7 @@ class StudioResource extends XotBaseResource
     {
         return [
             // Altri campi dello studio...
-            
+
             'addresses' => AddressesField::make('addresses')
                 ->relationship('addresses')
                 ->minItems(1)
@@ -100,7 +100,7 @@ class PatientResource extends XotBaseResource
     {
         return [
             // Altri campi del paziente...
-            
+
             'addresses' => AddressesField::make('addresses')
                 ->relationship('addresses')
                 ->minItems(1)
@@ -129,7 +129,7 @@ class ClinicResource extends XotBaseResource
     {
         return [
             // Altri campi della clinica...
-            
+
             'addresses' => AddressesField::make('addresses')
                 ->relationship('addresses')
                 ->minItems(1)
@@ -348,7 +348,7 @@ class AddressesFieldTest extends TestCase
 public function studio_can_manage_multiple_addresses(): void
 {
     $studio = Studio::factory()->create();
-    
+
     $addressData = [
         [
             'name' => 'Sede Principale',
@@ -445,7 +445,7 @@ public function address(): BelongsTo
 ### V2.0 Planned Features
 
 1. **Validazione Geografica**: Controllo automatico coordinate e indirizzi validi
-2. **Integrazione Mappe**: Visualizzazione indirizzi su mappa interattiva  
+2. **Integrazione Mappe**: Visualizzazione indirizzi su mappa interattiva
 3. **Geofencing**: Definizione di aree geografiche per indirizzi
 4. **Import/Export**: Funzionalità per importare indirizzi da file CSV/Excel
 5. **Template Indirizzi**: Indirizzi predefiniti per tipologie comuni
@@ -475,4 +475,4 @@ public function address(): BelongsTo
 
 *Ultimo aggiornamento: Dicembre 2024*
 
-**Il componente AddressesField rappresenta un esempio eccellente di applicazione del principio DRY e di progettazione orientata al riutilizzo nel contesto Filament.** 
+**Il componente AddressesField rappresenta un esempio eccellente di applicazione del principio DRY e di progettazione orientata al riutilizzo nel contesto Filament.**

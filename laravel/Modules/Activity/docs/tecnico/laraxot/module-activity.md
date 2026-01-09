@@ -75,7 +75,7 @@ use Modules\Activity\Filament\Resources\ActivityResource;
 class ActivityResource extends XotBaseResource
 {
     protected static ?string $model = Activity::class;
-    
+
     public static function getTableColumns(): array
     {
         return [
@@ -99,11 +99,11 @@ class ActivityTest extends TestCase
     public function test_can_log_activity(): void
     {
         $user = User::factory()->create();
-        
+
         Activity::log('Test activity', [
             'user_id' => $user->id
         ]);
-        
+
         $this->assertDatabaseHas('activities', [
             'description' => 'Test activity',
             'user_id' => $user->id
@@ -144,4 +144,4 @@ class ActivityTest extends TestCase
 3. **Manutenzione**:
    - Pulizia periodica dei log
    - Backup dei dati di attività
-   - Monitoraggio delle performance 
+   - Monitoraggio delle performance

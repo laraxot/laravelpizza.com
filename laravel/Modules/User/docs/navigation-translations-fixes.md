@@ -11,7 +11,7 @@
 // ❌ PRIMA (Problematico)
 'navigation' => [
     'label' => 'device.navigation',
-    'group' => 'device.navigation', 
+    'group' => 'device.navigation',
     'icon' => 'device.navigation',
 ]
 ```
@@ -42,7 +42,7 @@
 // ✅ DOPO (Corretto)
 'navigation' => [
     'label' => 'Permessi',
-    'group' => 'Sicurezza', 
+    'group' => 'Sicurezza',
     'icon' => 'heroicon-o-shield-check',
 ]
 ```

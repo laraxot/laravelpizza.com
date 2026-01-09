@@ -44,7 +44,7 @@ Modules\[NomeModulo]\
    // Folio - routing automatico
    /pages/auth/login.blade.php -> /auth/login
    /pages/dashboard.blade.php -> /dashboard
-   
+
    // Volt - componenti
    <x-user::forms.login />
    <x-user::cards.user :user="$user" />
@@ -84,4 +84,4 @@ Route::get('/auth/login', [AuthController::class, 'login']);
 - Sfruttare il routing automatico di Folio
 - Usare namespace per i componenti Volt
 - Documentare eccezioni
-- Aggiornare moduli esistenti 
+- Aggiornare moduli esistenti

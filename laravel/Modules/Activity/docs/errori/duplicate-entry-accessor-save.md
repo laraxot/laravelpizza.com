@@ -3,12 +3,12 @@
 ## Problema
 
 ```
-SQLSTATE[23000]: Integrity constraint violation: 1062 
+SQLSTATE[23000]: Integrity constraint violation: 1062
 Duplicate entry '9075' for key 'indennita_responsabilita.PRIMARY'
 ```
 
-**Quando**: Durante il salvataggio di una modifica in Filament EditRecord  
-**Trigger**: Spatie Activity Log cerca di serializzare le properties  
+**Quando**: Durante il salvataggio di una modifica in Filament EditRecord
+**Trigger**: Spatie Activity Log cerca di serializzare le properties
 **Causa**: Accessor che chiamano `$this->save()` al loro interno
 
 ## Business Logic
@@ -83,7 +83,7 @@ public function getGgAttribute(?int $_value): ?int
     // ... calcolo ...
     $this->gg = $value;
     $this->save();  // ← MAI fare questo in un accessor!
-    
+
     return $value;
 }
 
@@ -92,7 +92,7 @@ public function getValutatoreIdAttribute(?int $value): ?int
     // ... logica ...
     $this->valutatore_id = $valutatore_id;
     $this->save();  // ← MAI fare questo in un accessor!
-    
+
     return $value;
 }
 
@@ -136,12 +136,12 @@ public function getValutatoreIdAttribute(?int $value): ?int
 
 /**
  * ⚠️ TEMPORANEAMENTE DISABILITATO
- * 
+ *
  * Activity Log causa errori "Duplicate Entry" perché SchedaTrait
  * ha accessor che chiamano $this->save() al loro interno.
- * 
+ *
  * Riabilitare SOLO dopo aver corretto tutti gli accessor in SchedaTrait.
- * 
+ *
  * @see \Modules\Activity\docs\errori\duplicate-entry-accessor-save.md
  */
 // use LogsActivity;  // ← COMMENTATO
@@ -190,10 +190,10 @@ public function getProproAttribute(?int $value): ?int
 
     // Calcola ma non salvare automaticamente
     $calculated = $this->calculatePropro();
-    
+
     // Cachea in memoria per questa request
     $this->attributes['propro'] = $calculated;
-    
+
     return $calculated;
 }
 
@@ -215,7 +215,7 @@ class BaseScheda extends BaseModel
         'propro_calculated',
         'gg_calculated',
     ];
-    
+
     /**
      * Accessor senza side effects.
      */
@@ -262,15 +262,15 @@ abstract class BaseScheda extends BaseModel
 {
     // COMMENTARE questo trait temporaneamente
     // use LogsActivity;
-    
+
     /**
      * Activity Log disabilitato temporaneamente.
-     * 
+     *
      * Causa: SchedaTrait ha accessor con $this->save() che causano
      *        errori "Duplicate Entry" durante serializzazione Activity Log.
-     * 
+     *
      * TODO: Riabilitare dopo aver corretto SchedaTrait accessor.
-     * 
+     *
      * @see \Modules\Activity\docs\errori\duplicate-entry-accessor-save.md
      */
 }
@@ -316,11 +316,11 @@ public function getProproAttribute(?int $value): ?int
     if ($value != null) {
         return $value;
     }
-    
+
     // Calcola e cacha in memoria
     $calculated = $this->calculateProproValue();
     $this->attributes['propro'] = $calculated;
-    
+
     return $calculated;
 }
 
@@ -344,21 +344,21 @@ public function persistPropro(): void
 
 test('accessor calculates value without saving', function () {
     $scheda = IndennitaResponsabilita::factory()->create(['propro' => null]);
-    
+
     // Prima del fix: questo causava save
     // Dopo il fix: calcola ma non salva
     $propro = $scheda->propro;
-    
+
     $scheda->refresh();
     expect($scheda->getAttributes()['propro'])->toBeNull('Accessor non deve salvare automaticamente');
 });
 
 test('persist method saves calculated value', function () {
     $scheda = IndennitaResponsabilita::factory()->create(['propro' => null]);
-    
+
     // Salva esplicitamente
     $scheda->persistPropro();
-    
+
     $scheda->refresh();
     expect($scheda->propro)->not->toBeNull('Persist deve salvare il valore');
 });
@@ -415,11 +415,11 @@ public function getSomethingAttribute($value)
     if ($value !== null) {
         return $value;
     }
-    
+
     // Calcola e cacha in memoria
     $calculated = $this->calculate();
     $this->attributes['something'] = $calculated;
-    
+
     return $calculated;
 }
 
@@ -459,10 +459,8 @@ class SchedaObserver
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
-**Severità**: CRITICA (blocca edit in produzione)  
-**Workaround**: Disabilitare temporaneamente LogsActivity trait  
-**Fix Definitivo**: Refactoring accessor in SchedaTrait  
+**Ultimo aggiornamento**: 27 Ottobre 2025
+**Severità**: CRITICA (blocca edit in produzione)
+**Workaround**: Disabilitare temporaneamente LogsActivity trait
+**Fix Definitivo**: Refactoring accessor in SchedaTrait
 **Impatto**: Tutti i modelli che usano BaseScheda (IndennitaResponsabilita, Progressioni, etc.)
-
-

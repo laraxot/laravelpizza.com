@@ -51,7 +51,6 @@ La configurazione di Netfun segue la struttura standardizzata con parametri glob
 
 Le seguenti variabili d'ambiente devono essere configurate nel file `.env` dell'applicazione:
 
-
 # Parametri globali
 SMS_FROM=YourSender
 SMS_DEBUG=false

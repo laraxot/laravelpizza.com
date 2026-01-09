@@ -36,7 +36,7 @@ use Modules\User\Models\Traits\HasAuthenticationLogTrait;
 class User extends Authenticatable
 {
     use HasAuthenticationLogTrait;
-    
+
     // ... resto del codice
 }
 ```
@@ -54,4 +54,4 @@ class User extends Authenticatable
   - `updated_at`
 - I log vengono automaticamente creati quando un utente tenta di autenticarsi
 - Le notifiche vengono inviate tramite email per default
-- Il trait supporta il tracciamento di tentativi di login falliti e riusciti 
+- Il trait supporta il tracciamento di tentativi di login falliti e riusciti

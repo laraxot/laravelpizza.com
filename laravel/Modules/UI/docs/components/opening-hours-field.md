@@ -73,7 +73,7 @@ Grid::make(3)->schema([
 
 // Zebra striping per righe alternate
 $isEvenRow = $dayIndex % 2 === 0;
-$rowClass = $isEvenRow 
+$rowClass = $isEvenRow
     ? 'bg-gray-50 dark:bg-gray-800/50 rounded-lg px-2 py-1'
     : 'bg-white dark:bg-gray-900/50 rounded-lg px-2 py-1';
 
@@ -109,7 +109,7 @@ Grid::make(3)->schema([...])
 │  Header: [Giorno] [Mattina]        [Pomeriggio]                    │ ← Intestazioni
 ├─────────────────────────────────────────────────────────────────────┤
 │  Lunedì   │ [Dalle▼08:00] [Alle▼12:30] │ [Dalle▼15:00] [Alle▼19:00] │ ← Bianco
-│  Martedì  │ [Dalle▼08:00] [Alle▼12:30] │ [Dalle▼15:00] [Alle▼19:00] │ ← Grigio  
+│  Martedì  │ [Dalle▼08:00] [Alle▼12:30] │ [Dalle▼15:00] [Alle▼19:00] │ ← Grigio
 │  Mercoledì│ [Dalle▼08:00] [Alle▼12:30] │ [Dalle▼15:00] [Alle▼19:00] │ ← Bianco
 │  Giovedì  │ [Dalle▼08:00] [Alle▼12:30] │ [Dalle▼15:00] [Alle▼19:00] │ ← Grigio
 │  Venerdì  │ [Dalle▼08:00] [Alle▼12:30] │ [Dalle▼15:00] [Alle▼19:00] │ ← Bianco
@@ -156,14 +156,14 @@ Il componente gestisce dati con la seguente struttura:
 [
     'monday' => [
         'morning_from' => '08:00',
-        'morning_to' => '12:30', 
+        'morning_to' => '12:30',
         'afternoon_from' => '15:00',
         'afternoon_to' => '19:00'
     ],
     'tuesday' => [
         'morning_from' => '08:00',
         'morning_to' => '12:30',
-        'afternoon_from' => '15:00', 
+        'afternoon_from' => '15:00',
         'afternoon_to' => '19:00'
     ],
     // ... altri giorni
@@ -182,7 +182,7 @@ Il componente gestisce dati con la seguente struttura:
 // PRIMA (formato stringa)
 'morning' => '08:00-12:30'
 
-// DOPO (TimePicker separati)  
+// DOPO (TimePicker separati)
 'morning_from' => '08:00',
 'morning_to' => '12:30'
 ```
@@ -245,7 +245,7 @@ Il componente include validazione automatica avanzata:
 TimePicker::make("{day}.morning_from")
     ->rules(['before_or_equal:' . $day . '.morning_to']),
 
-TimePicker::make("{day}.morning_to") 
+TimePicker::make("{day}.morning_to")
     ->rules(['after_or_equal:' . $day . '.morning_from']),
 ```
 
@@ -259,14 +259,14 @@ public function rules(): array
     return [
         'availability.*.morning_from' => ['nullable', 'date_format:H:i'],
         'availability.*.morning_to' => [
-            'nullable', 
+            'nullable',
             'date_format:H:i',
             'after_or_equal:availability.*.morning_from'
         ],
         'availability.*.afternoon_from' => ['nullable', 'date_format:H:i'],
         'availability.*.afternoon_to' => [
             'nullable',
-            'date_format:H:i', 
+            'date_format:H:i',
             'after_or_equal:availability.*.afternoon_from'
         ],
     ];
@@ -326,10 +326,10 @@ class Doctor extends BaseModel
     public function getOpeningHoursAttribute(): OpeningHours
     {
         $data = [];
-        
+
         foreach ($this->availability as $day => $hours) {
             $dayHours = [];
-            
+
             // Gestione mattina con nuova struttura separata
             if (!empty($hours['morning_from']) && !empty($hours['morning_to'])) {
                 $dayHours[] = [
@@ -337,7 +337,7 @@ class Doctor extends BaseModel
                     'close' => $hours['morning_to']
                 ];
             }
-            
+
             // Gestione pomeriggio con nuova struttura separata
             if (!empty($hours['afternoon_from']) && !empty($hours['afternoon_to'])) {
                 $dayHours[] = [
@@ -345,18 +345,18 @@ class Doctor extends BaseModel
                     'close' => $hours['afternoon_to']
                 ];
             }
-            
+
             $data[$day] = $dayHours;
         }
-        
+
         return OpeningHours::from($data);
     }
-    
+
     public function isAvailableAt(string $datetime): bool
     {
         return $this->opening_hours->isOpenAt($datetime);
     }
-    
+
     /**
      * Helper per convertire dalla vecchia struttura alla nuova.
      * Utile durante la migrazione.
@@ -365,17 +365,17 @@ class Doctor extends BaseModel
     {
         $availability = $this->availability;
         $migrated = [];
-        
+
         foreach ($availability as $day => $hours) {
             $migrated[$day] = [];
-            
+
             // Migra formato 'morning' => '08:00-12:30'
             if (isset($hours['morning']) && str_contains($hours['morning'], '-')) {
                 [$from, $to] = explode('-', $hours['morning']);
                 $migrated[$day]['morning_from'] = $from;
                 $migrated[$day]['morning_to'] = $to;
             }
-            
+
             // Migra formato 'afternoon' => '15:00-19:00'
             if (isset($hours['afternoon']) && str_contains($hours['afternoon'], '-')) {
                 [$from, $to] = explode('-', $hours['afternoon']);
@@ -383,7 +383,7 @@ class Doctor extends BaseModel
                 $migrated[$day]['afternoon_to'] = $to;
             }
         }
-        
+
         $this->update(['availability' => $migrated]);
     }
 }
@@ -414,4 +414,4 @@ class Doctor extends BaseModel
 
 ---
 
-*Ultimo aggiornamento: Dicembre 2024* 
+*Ultimo aggiornamento: Dicembre 2024*

@@ -61,10 +61,10 @@
 protected function setUp(): void
 {
     parent::setUp();
-    
+
     $this->options(function (Model $record, $state): array {
         $name = $this->getName();
-        
+
         try {
             if ($state === null) {
                 $defaultStates = $record->getDefaultStateFor($name);
@@ -78,26 +78,26 @@ protected function setUp(): void
                     Log::error("Stato non valido per {$name}", ['state' => $state]);
                     return [];
                 }
-                
+
                 $states = $state->transitionableStates();
                 if (!empty($state::$name)) {
                     $states = [$state::$name, ...$states];
                 }
             }
-            
+
             if (empty($states)) {
                 Log::warning("Nessuno stato disponibile per {$name}");
                 return [];
             }
-            
+
             return array_combine($states, $states);
-            
+
         } catch (Exception $e) {
             Log::error("Errore nel recupero degli stati per {$name}", [
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString()
             ]);
-            
+
             try {
                 $fallbackStates = $record->getStatesFor($name)->toArray();
                 return !empty($fallbackStates) ? array_combine($fallbackStates, $fallbackStates) : [];
@@ -133,4 +133,4 @@ protected function setUp(): void
 - Aggiungere test unitari per verificare il comportamento in vari scenari
 - Documentare chiaramente i requisiti e le dipendenze
 - Considerare l'aggiunta di un sistema di cache per migliorare le performance
-- Implementare un meccanismo di fallback più robusto per gli stati non validi 
+- Implementare un meccanismo di fallback più robusto per gli stati non validi

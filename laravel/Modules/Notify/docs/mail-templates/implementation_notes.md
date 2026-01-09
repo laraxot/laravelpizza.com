@@ -62,10 +62,10 @@ L'implementazione corretta degli allegati richiede una struttura specifica. Ecco
    ```php
    // Creare l'istanza dell'email
    $email = new SpatieEmail($user, 'due');
-   
+
    // Aggiungere gli allegati
    $email->addAttachments($attachments);
-   
+
    // Inviare l'email
    Mail::to($data['to'])
        ->locale('it')
@@ -130,7 +130,7 @@ L'implementazione corretta dimostra che:
 3. **Miglioramenti**
    - Considerare la validazione
    - Implementare logging
-   - Aggiungere monitoraggio 
+   - Aggiungere monitoraggio
 
 ## Visualizzazione Parametri come Badge
 
@@ -180,4 +180,4 @@ L'implementazione corretta dimostra che:
 ```
 Input: "name, email, company, date"
 Output: [name] [email] [company] [date] (come badge blu)
-``` 
+```

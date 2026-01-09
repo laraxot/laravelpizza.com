@@ -69,7 +69,7 @@ describe('StoredEvent Business Logic', function () {
     it('stores events immutably', function () {
         $event = StoredEvent::factory()->create();
         $originalData = $event->event_properties;
-        
+
         // Attempt to modify should not affect stored data
         expect($event->event_properties)->toBe($originalData);
     });
@@ -107,9 +107,9 @@ describe('Snapshot Business Logic', function () {
             'aggregate_uuid' => 'test-aggregate',
             'aggregate_version' => 5,
         ]);
-        
+
         $latestSnapshot = Snapshot::factory()->create([
-            'aggregate_uuid' => 'test-aggregate', 
+            'aggregate_uuid' => 'test-aggregate',
             'aggregate_version' => 10,
         ]);
 
@@ -129,12 +129,12 @@ describe('Snapshot Business Logic', function () {
 describe('Activity Logging Integration', function () {
     it('logs model changes automatically', function () {
         $user = User::factory()->create();
-        
+
         // Trigger activity logging
         $user->update(['name' => 'Updated Name']);
-        
+
         $activity = Activity::latest()->first();
-        
+
         expect($activity)
             ->not->toBeNull()
             ->and($activity->subject_type)->toBe(User::class)
@@ -143,13 +143,13 @@ describe('Activity Logging Integration', function () {
 
     it('handles batch operations', function () {
         $batchUuid = 'test-batch-' . uniqid();
-        
+
         Activity::factory()->count(3)->create([
             'batch_uuid' => $batchUuid,
         ]);
 
         $batchActivities = Activity::forBatch($batchUuid)->get();
-        
+
         expect($batchActivities)->toHaveCount(3);
     });
 });
@@ -192,12 +192,12 @@ tests/
 ```php
 it('handles large event volumes efficiently', function () {
     $startTime = microtime(true);
-    
+
     StoredEvent::factory()->count(1000)->create();
-    
+
     $endTime = microtime(true);
     $duration = $endTime - $startTime;
-    
+
     expect($duration)->toBeLessThan(5.0); // 5 seconds max
 });
 ```
@@ -209,18 +209,18 @@ it('creates snapshots efficiently', function () {
     StoredEvent::factory()->count(100)->create([
         'aggregate_uuid' => 'performance-test',
     ]);
-    
+
     $startTime = microtime(true);
-    
+
     // Create snapshot
     Snapshot::factory()->create([
         'aggregate_uuid' => 'performance-test',
         'aggregate_version' => 100,
     ]);
-    
+
     $endTime = microtime(true);
     $duration = $endTime - $startTime;
-    
+
     expect($duration)->toBeLessThan(1.0); // 1 second max
 });
 ```

@@ -7,23 +7,23 @@ section: content
 
 # Moduli Filament {#moduli-filament}
 
-Url di riferimento https://github.com/savannabits/filament-modules  
+Url di riferimento https://github.com/savannabits/filament-modules
 Installare il pacchetto di savannabits
 ```php
 composer require coolsam/modules
 ```
-Al suo interno si avrà già inglobato nwidart/laravel-modules.  
+Al suo interno si avrà già inglobato nwidart/laravel-modules.
 
-Per creare un modulo eseguire i comandi artisan di nwidart  
+Per creare un modulo eseguire i comandi artisan di nwidart
 url di riferimento https://nwidart.com/laravel-modules/v6/advanced-tools/artisan-commands
 ```php
 php artisan module:make NomeModulo
 ```
-Per creare l'AdminPanelProvider di filament nel modulo eseguire  
+Per creare l'AdminPanelProvider di filament nel modulo eseguire
 ```php
 php artisan module:make-filament-panel admin NomeModulo # php artisan module:make-filament-panel [id] [module]
 ```
-Sostituire il codice generato con 
+Sostituire il codice generato con
 ```php
 <?php
 
@@ -39,4 +39,3 @@ class AdminPanelProvider extends XotBasePanelProvider
 }
 
 ```
-

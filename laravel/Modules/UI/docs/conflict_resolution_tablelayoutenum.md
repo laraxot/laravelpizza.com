@@ -88,6 +88,6 @@ Il file `Modules/UI/app/Enums/TableLayoutEnum.php` presenta un conflitto Git nel
 - **Modulo**: UI
 - **File**: `app/Enums/TableLayoutEnum.php`
 - **Tipo Conflitto**: Sintassi PHPStan
-- **Scelta**: Versione Branch 988693e (sintassi moderna) 
-- **Scelta**: Versione Branch 988693e (sintassi moderna) 
-- **Scelta**: Versione Branch 988693e (sintassi moderna) 
+- **Scelta**: Versione Branch 988693e (sintassi moderna)
+- **Scelta**: Versione Branch 988693e (sintassi moderna)
+- **Scelta**: Versione Branch 988693e (sintassi moderna)

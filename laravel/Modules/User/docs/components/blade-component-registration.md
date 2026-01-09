@@ -1,10 +1,10 @@
 # Registrazione dei componenti Blade
 
-> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User. 
+> **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User.
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/components/blade-component-registration.md).
 > La documentazione principale e completa si trova nel [modulo UI](../../../UI/project_docs/components/blade-component-registration.md).
 ## Automatic Blade Component Registration
-In moduli che estendono `XotBaseServiceProvider`, **non è necessario** registrare manualmente i componenti Blade con `Blade::component()` o `Blade::componentNamespace()`.  
+In moduli che estendono `XotBaseServiceProvider`, **non è necessario** registrare manualmente i componenti Blade con `Blade::component()` o `Blade::componentNamespace()`.
 Il provider base si occupa automaticamente di scansionare la directory `Modules/User/View/Components` e di esporre i componenti con il prefisso `user` e lo schema dash-case.
 ### Usage
 Utilizzare direttamente i componenti nei template:

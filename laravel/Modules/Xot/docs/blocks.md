@@ -107,4 +107,3 @@ Ogni blocco deve seguire questa struttura:
 * [blocks.md](../../../Cms/docs/blocks.md)
 * [blocks.md](../../../../Themes/One/docs/blocks.md)
 * [blocks.md](../../../../Themes/One/docs/components/blocks.md)
-

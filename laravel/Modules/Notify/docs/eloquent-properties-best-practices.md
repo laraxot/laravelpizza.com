@@ -18,19 +18,19 @@ protected function getRecipientName($notifiable): string
     if (is_object($notifiable) && method_exists($notifiable, 'getFullName')) {
         return $notifiable->getFullName();
     }
-    
+
     if (is_object($notifiable) && property_exists($notifiable, 'full_name') && $notifiable->full_name) {
         return (string) ($notifiable->full_name ?? '');
     }
-    
+
     if (is_object($notifiable) && property_exists($notifiable, 'first_name') && $notifiable->first_name) {
         return (string) ($notifiable->first_name ?? '');
     }
-    
+
     if (is_object($notifiable) && property_exists($notifiable, 'name') && $notifiable->name) {
         return (string) ($notifiable->name ?? '');
     }
-    
+
     return 'Utente';
 }
 ```
@@ -43,20 +43,20 @@ protected function getRecipientName($notifiable): string
     if (is_object($notifiable) && method_exists($notifiable, 'getFullName')) {
         return $notifiable->getFullName();
     }
-    
+
     // Usa isset invece di property_exists per proprietà magiche dei modelli
     if (is_object($notifiable) && isset($notifiable->full_name) && $notifiable->full_name) {
         return (string) $notifiable->full_name;
     }
-    
+
     if (is_object($notifiable) && isset($notifiable->first_name) && $notifiable->first_name) {
         return (string) $notifiable->first_name;
     }
-    
+
     if (is_object($notifiable) && isset($notifiable->name) && $notifiable->name) {
         return (string) $notifiable->name;
     }
-    
+
     return 'Utente';
 }
 ```
@@ -169,7 +169,7 @@ Prima di ogni commit nel modulo Notify, verificare:
 public function toMail($notifiable): MailMessage
 {
     $recipientName = $this->getRecipientName($notifiable);
-    
+
     return (new MailMessage())
         ->subject($this->title)
         ->greeting('Gentile ' . $recipientName)
@@ -186,7 +186,7 @@ public function toTwilio($notifiable): array
         $routeResult = $notifiable->routeNotificationForTwilio($this);
         $to = (string) ($routeResult ?? '');
     }
-    
+
     return [
         'content' => $this->message,
         'to' => $to,

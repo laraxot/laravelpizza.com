@@ -83,4 +83,4 @@ class DoctorPolicy {
 
 ---
 
-**Nota:** Se la complessità della moderazione dovesse aumentare (es. moderazione multi-ruolo, workflow avanzati), valutare la migrazione verso un modulo Moderation dedicato. 
+**Nota:** Se la complessità della moderazione dovesse aumentare (es. moderazione multi-ruolo, workflow avanzati), valutare la migrazione verso un modulo Moderation dedicato.

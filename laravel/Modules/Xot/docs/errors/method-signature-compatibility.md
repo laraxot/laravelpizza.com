@@ -97,7 +97,7 @@ class XotBasePage extends BasePage
     {
         return $this->resolveView();
     }
-    
+
     // Nuovo metodo statico con nome diverso
     public static function resolveViewPath(): string
     {

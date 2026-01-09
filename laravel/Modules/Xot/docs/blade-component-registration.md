@@ -116,4 +116,4 @@ class MyComponent extends Component
 ## Link Utili
 - [XotBaseServiceProvider](XotBaseServiceProvider.md)
 - [service-provider-best-practices.md](service-provider-best-practices.md)
-- [filament-best-practices.md](filament-best-practices.md) 
+- [filament-best-practices.md](filament-best-practices.md)

@@ -61,7 +61,7 @@ public static function getProjectBasePath(): string {
 ```
 **Tempo**: 2 ore | **Impatto**: Sblocca riusabilità di tutto il framework
 
-#### Modulo Notify (Sistema Notifiche)  
+#### Modulo Notify (Sistema Notifiche)
 **Problema**: 336 occorrenze hardcoded bloccano uso in altri progetti
 - **Test files**: Aggiornare per usare `XotData::make()->getUserClass()`
 - **Factory**: Completare pattern dinamici per tutti i modelli
@@ -118,7 +118,7 @@ public static function getProjectBasePath(): string {
 
 #### Giorno 1-2: Xot PathHelper + Notify Core
 - **Mattina**: PathHelper refactoring completo
-- **Pomeriggio**: Notify test files correction  
+- **Pomeriggio**: Notify test files correction
 - **Sera**: Verifica script check passa
 
 #### Giorno 3-4: User + Cms Riusabilità
@@ -199,7 +199,7 @@ jobs:
         run: ./bashscripts/check_module_reusability.sh
 
   documentation:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
     steps:
       - name: Check Documentation Structure
         run: ./bashscripts/check_docs_structure.sh
@@ -252,6 +252,6 @@ jobs:
 - [Linee Guida Riusabilità](module_reusability_guidelines.md)
 - [Script di Controllo](../bashscripts/check_module_reusability.sh)
 
-*Report compilato: gennaio 2025*  
-*Analista: AI Assistant seguendo metodologia DRY+KISS*  
+*Report compilato: gennaio 2025*
+*Analista: AI Assistant seguendo metodologia DRY+KISS*
 *Validazione: Script automatici e review manuale*

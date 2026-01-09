@@ -11,7 +11,5 @@ https://medium.com/@jranand_io/creating-your-first-pwa-progressive-web-app-in-mi
 
 https://medium.com/james-johnson/a-simple-progressive-web-app-tutorial-f9708e5f2605
 
-
-
 https://www.telerik.com/blogs/from-responsive-to-progressive-making-tripxpert-a-progressive-web-app
 https://demos.telerik.com/aspnet-mvc/tripxpert/   !!!!!

@@ -92,15 +92,15 @@ class Page extends Component
                 'footer' => 'footer_blocks',
                 default => 'content_blocks',
             };
-            
+
             // Ottieni la lingua corrente
             $currentLocale = app()->getLocale();
-            
+
             // Verifica se il campo è traducibile
             if (in_array($blocksField, $page->translatable)) {
                 // Ottieni i blocchi per la lingua corrente
                 $blocks = $page->getTranslation($blocksField, $currentLocale);
-                
+
                 // Se non ci sono blocchi per la lingua corrente, prova con la lingua primaria
                 if (empty($blocks) && $currentLocale !== XotData::make()->primary_lang) {
                     $blocks = $page->getTranslation($blocksField, XotData::make()->primary_lang);
@@ -109,7 +109,7 @@ class Page extends Component
                 // Se il campo non è traducibile, ottieni direttamente il valore
                 $blocks = $page->{$blocksField};
             }
-            
+
             // Assicurati che $blocks sia un array
             if (!is_array($blocks)) {
                 $blocks = [];

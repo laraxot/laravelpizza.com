@@ -1,7 +1,7 @@
 # PHPStan MAX Level Findings - Xot Module
 
-**Data**: 2025-10-10  
-**Livello**: MAX (9)  
+**Data**: 2025-10-10
+**Livello**: MAX (9)
 **Modulo**: Xot
 
 ## ✅ Risultati
@@ -74,7 +74,7 @@ $model = new class extends Model {
 // ❌ PROBLEMA
 class MyClass {
     public $extra_attributes; // No type
-    
+
     public function model() // No return type
     {
         // ...
@@ -87,7 +87,7 @@ class MyClass {
 // ✅ CORRETTO
 class MyClass {
     public array $extra_attributes = [];
-    
+
     public function model(): Model
     {
         // ...
@@ -115,12 +115,12 @@ class HasTableWithXotTestClass implements HasTable
     {
         return Model::query();
     }
-    
+
     public function getTableFilterFormState(): array
     {
         return [];
     }
-    
+
     // ... altri metodi richiesti
 }
 ```

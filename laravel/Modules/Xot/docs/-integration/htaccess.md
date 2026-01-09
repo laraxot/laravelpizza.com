@@ -8,7 +8,7 @@ https://frostbutter.com/articles/htaccess-cache-control-for-a-faster-website/
 <IfModule mod_expires.c>
     # Turn on the module.
     ExpiresActive on
-    
+
     # Set the default cache times
     ExpiresDefault "access plus 7 days"
     ExpiresByType image/jpg "access plus 3 month"
@@ -26,10 +26,8 @@ https://frostbutter.com/articles/htaccess-cache-control-for-a-faster-website/
 
 # End cache control
 
-
 https://frostbutter.com/articles/redirect-http-to-https-force-https-with-htaccess/
 
 # redirect all http to https
-RewriteCond %{HTTPS} off 
+RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-

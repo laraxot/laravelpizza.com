@@ -201,4 +201,4 @@ TitleWithSlugInput::make()
 ### 3. Manutenzione
 - Versioning
 - Testing
-- Documentazione 
+- Documentazione

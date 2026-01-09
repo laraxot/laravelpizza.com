@@ -104,7 +104,7 @@ Modules/User/
    ```
    Il path fisico `Modules/User/app/...` è mappato via PSR-4 sul prefisso `Modules\User\`.
    Per questo motivo il namespace **NON** deve mai includere `App` o `app`.
-   
+
    Il namespace deve riflettere il percorso relativo alla cartella `app/`, che è mappata al namespace base `Modules\User\` nel composer.json.
 
 3. **Codice PHP**
@@ -274,4 +274,4 @@ namespace Modules\User\Http\Controllers;
 ### Common Pitfalls
 - Spostare migration tra cartelle senza aggiornare la history
 - Dimenticare di aggiornare la documentazione dopo lo spostamento
-- Creare migration duplicate in più moduli 
+- Creare migration duplicate in più moduli

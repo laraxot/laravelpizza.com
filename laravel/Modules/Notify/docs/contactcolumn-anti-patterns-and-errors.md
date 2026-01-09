@@ -56,17 +56,17 @@
 private function formatContacts(Client $record): string
 {
     $contacts = [];
-    
+
     if ($record->phone) {
         $contacts[] = '<a href="tel:' . $record->phone . '" class="inline-flex items-center text-blue-600 hover:text-blue-800">
             <i class="heroicon-o-phone text-blue-500 w-4 h-4 inline mr-1" title="Telefono"></i> ' . $record->phone . '
         </a>';
     }
-    
+
     // ... altri contatti
-    
-    return empty($contacts) 
-        ? '<span class="text-gray-400">Nessun contatto</span>' 
+
+    return empty($contacts)
+        ? '<span class="text-gray-400">Nessun contatto</span>'
         : implode('<br class="my-1">', $contacts);
 }
 ```
@@ -129,10 +129,10 @@ private function formatContacts(Client $record): string
 
 ---
 
-**GRAVITÀ**: CRITICA  
-**IMPATTO**: Alto - Pattern sbagliato potrebbe essere copiato  
-**PRIORITÀ**: Immediata - Correggere subito  
-**LEZIONE**: SEMPRE studiare docs/memories prima di implementare  
+**GRAVITÀ**: CRITICA
+**IMPATTO**: Alto - Pattern sbagliato potrebbe essere copiato
+**PRIORITÀ**: Immediata - Correggere subito
+**LEZIONE**: SEMPRE studiare docs/memories prima di implementare
 
-*Ultimo aggiornamento: 2025-08-01*  
+*Ultimo aggiornamento: 2025-08-01*
 *Errori identificati e documentati per prevenzione futura*

@@ -62,19 +62,7 @@ https://picsum.photos/200/300?random
 http://placeimg.com/350/250/people
 https://loremflickr.com/640/360
 
-
 https://github.com/salopot/image-generator  !!
-
-
-
-
-
-
-
-
-
-
-
 
 //------- FRASI ----------
 internet chuck norris database
@@ -85,4 +73,3 @@ http://enneagon.org/phrases
 
 //----- profilo ---
 https://www.fakenamegenerator.com/gen-male-fr-fr.php
-

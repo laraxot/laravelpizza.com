@@ -1,15 +1,15 @@
 # Analisi Errori PHPStan - Modulo UI
 
-**Data**: 2025-12-23  
-**Modulo**: UI  
-**Livello PHPStan**: max  
+**Data**: 2025-12-23
+**Modulo**: UI
+**Livello PHPStan**: max
 **Status**: ✅ Corretto (0 errori)
 
 ## 📊 Risultati PHPStan
 
-**Comando eseguito**: `./vendor/bin/phpstan analyse Modules/UI --memory-limit=-1`  
-**Livello**: max  
-**File con errori**: `app/Filament/Forms/Components/RadioBadge.php`  
+**Comando eseguito**: `./vendor/bin/phpstan analyse Modules/UI --memory-limit=-1`
+**Livello**: max
+**File con errori**: `app/Filament/Forms/Components/RadioBadge.php`
 **Errori totali**: 0 (dopo correzione)
 
 ## 🔍 Errori Risolti

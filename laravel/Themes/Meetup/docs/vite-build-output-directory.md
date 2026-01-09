@@ -224,4 +224,3 @@ ls -la public/manifest.json
 - [x] Documentata struttura directory corretta
 - [x] Aggiunto troubleshooting
 - [x] Aggiunte best practices
-

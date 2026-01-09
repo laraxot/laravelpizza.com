@@ -1,6 +1,6 @@
 # PHPStan Level 10 Compliance Status
 
-**Last Updated**: 2025-12-10  
+**Last Updated**: 2025-12-10
 **Status**: ✅ FULLY COMPLIANT (0 errors)
 
 ## Summary
@@ -9,9 +9,9 @@ The Lang module is now fully compliant with PHPStan Level 10 analysis. All stati
 ## Fixed Issues
 
 ### 1. PHPDoc Type Mismatch
-**Problem**: PHPDoc variable annotation didn't match the actual type  
-**Solution**: Removed incorrect PHPDoc variable annotation  
-**File**: `app/Providers/RouteServiceProvider.php`  
+**Problem**: PHPDoc variable annotation didn't match the actual type
+**Solution**: Removed incorrect PHPDoc variable annotation
+**File**: `app/Providers/RouteServiceProvider.php`
 **Details**: Removed `/** @var string|null $lang */` as it was causing type mismatch
 
 ## Compliance Verification

@@ -34,7 +34,7 @@ use Filament\Support\Contracts\HasIcon;
 ```php
 /**
  * Get enum value from string value
- * 
+ *
  * @param string $value
  * @return (BackedEnum&HasColor&HasIcon)|null
  */
@@ -74,7 +74,7 @@ class RadioBadge extends Radio
 
     /**
      * Get enum value from string value
-     * 
+     *
      * @param string $value
      * @return (BackedEnum&HasColor&HasIcon)|null
      */
@@ -93,7 +93,7 @@ class RadioBadge extends Radio
         $res = $enumClass::tryFrom($value);
         return $res;
     }
-   
+
     public function getColorForOption(string $value): string
     {
         return $this->getEnumValue($value)?->getColor() ?? $this->selectedColor;
@@ -143,10 +143,10 @@ class RadioBadge extends Radio
 
 - [Filament HasColor Interface](https://filamentphp.com/project_docs/3.x/support/colors)
 - [Filament HasIcon Interface](https://filamentphp.com/project_docs/3.x/support/icons)
-- [PHPStan Intersection Types](https://phpstan.org/writing-php-code/phpdoc-types#intersection-types) 
+- [PHPStan Intersection Types](https://phpstan.org/writing-php-code/phpdoc-types#intersection-types)
 - [Filament HasColor Interface](https://filamentphp.com/project_docs/3.x/support/colors)
 - [Filament HasIcon Interface](https://filamentphp.com/project_docs/3.x/support/icons)
-- [PHPStan Intersection Types](https://phpstan.org/writing-php-code/phpdoc-types#intersection-types) 
+- [PHPStan Intersection Types](https://phpstan.org/writing-php-code/phpdoc-types#intersection-types)
 - [Filament HasColor Interface](https://filamentphp.com/project_docs/3.x/support/colors)
 - [Filament HasIcon Interface](https://filamentphp.com/project_docs/3.x/support/icons)
-- [PHPStan Intersection Types](https://phpstan.org/writing-php-code/phpdoc-types#intersection-types) 
+- [PHPStan Intersection Types](https://phpstan.org/writing-php-code/phpdoc-types#intersection-types)

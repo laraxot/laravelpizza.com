@@ -74,4 +74,4 @@ Sistema di autorizzazione basato su ruoli e permessi, con supporto per politiche
 
 ## Related Features
 - [Gestione Utenti](./gestione-utenti.md)
-- [Autenticazione](./autenticazione.md) 
+- [Autenticazione](./autenticazione.md)

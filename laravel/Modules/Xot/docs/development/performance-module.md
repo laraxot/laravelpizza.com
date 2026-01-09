@@ -138,4 +138,4 @@ enum WorkerType: string
 3. **Documentazione**
    - Mantenere aggiornata la documentazione
    - Documentare le modifiche al database
-   - Documentare le API e i servizi 
+   - Documentare le API e i servizi

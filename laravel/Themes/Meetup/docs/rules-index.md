@@ -58,4 +58,3 @@
 - **2025-11-30**: Aggiunta regola Componenti Blade Anonimi
 - **2025-11-30**: Consolidata Vite Configuration
 - **2025-11-30**: Consolidata Metatags Component
-

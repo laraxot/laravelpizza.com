@@ -2,7 +2,7 @@
 
 ## 🐄✨ Riferimenti Principali
 
-📚 **DOCUMENTO MASTER (LEGGERE PRIMA!):** [../../../docs/analisi-metodi-duplicati-MASTER.md](../../../docs/analisi-metodi-duplicati-MASTER.md)  
+📚 **DOCUMENTO MASTER (LEGGERE PRIMA!):** [../../../docs/analisi-metodi-duplicati-MASTER.md](../../../docs/analisi-metodi-duplicati-MASTER.md)
 📖 **Documento Originale:** [../../../docs/analisi-metodi-duplicati.md](../../../docs/analisi-metodi-duplicati.md)
 
 > ⚠️ **IMPORTANTE:** Questo documento è specifico per il modulo Xot. Per l'analisi completa con dati reali, ROI, implementazioni concrete e migration guide, consultare il DOCUMENTO MASTER.
@@ -75,7 +75,7 @@ abstract class BaseModel extends Model
 
     /** @var list<string> */
     protected $appends = [];
-    
+
     /** @return array<string, string> */
     protected function casts(): array
     {
@@ -132,7 +132,7 @@ abstract class BaseModel extends Model
         // Es: Modules\User\Models\User -> 'user'
         $namespace = static::class;
         preg_match('/Modules\\\\([^\\\\]+)\\\\/', $namespace, $matches);
-        
+
         return strtolower($matches[1] ?? 'mysql');
     }
 
@@ -164,15 +164,15 @@ trait HasPublishableDates
         return $query->whereNotNull('published_at')
                     ->where('published_at', '<=', now());
     }
-    
+
     public function scopeDraft($query)
     {
         return $query->whereNull('published_at');
     }
-    
+
     public function isPublished(): bool
     {
-        return $this->published_at !== null && 
+        return $this->published_at !== null &&
                $this->published_at <= now();
     }
 }
@@ -221,7 +221,7 @@ class MyModuleServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot(); // ✅ CORRETTO: Chiama il parent che gestisce tutto
-        
+
         // Solo inizializzazioni SPECIFICHE del modulo
         $this->registerModuleSpecificStuff();
     }
@@ -330,6 +330,5 @@ Se l'unificazione viene implementata correttamente:
 
 ---
 
-**Stato:** 📋 Draft per Review  
+**Stato:** 📋 Draft per Review
 **Responsabile:** Team Xot Core
-

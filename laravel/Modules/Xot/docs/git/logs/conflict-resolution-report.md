@@ -13,9 +13,9 @@ Questo documento descrive le risoluzioni applicate ai file con conflitti git ide
 **Soluzione**: Unificazione delle annotazioni PHPDoc e mantenimento della definizione dell'interfaccia con stile coerente.
 
 **Dettagli**:
-- Rimossi i marcatori di conflitto git 
+- Rimossi i marcatori di conflitto git
 - Mantenute tutte le definizioni di proprietà senza duplicazioni
-- Aggiunto il metodo `treeSonsCount()` presente in alcune versioni 
+- Aggiunto il metodo `treeSonsCount()` presente in alcune versioni
 - Adottato uno stile coerente per la dichiarazione dell'interfaccia
 
 **Documentazione correlata**: [Dettagli risoluzione](../conflicts/model_with_pos_contract_resolution.md)
@@ -95,4 +95,4 @@ I file modificati sono stati analizzati con particolare attenzione a:
 
 ## Conclusioni
 
-Tutti i conflitti git identificati sono stati risolti con successo, ripristinando la coerenza del codice e mantenendo le convenzioni del progetto. È stata data priorità alla qualità del codice, alla tipizzazione forte e alla documentazione adeguata. 
+Tutti i conflitti git identificati sono stati risolti con successo, ripristinando la coerenza del codice e mantenendo le convenzioni del progetto. È stata data priorità alla qualità del codice, alla tipizzazione forte e alla documentazione adeguata.

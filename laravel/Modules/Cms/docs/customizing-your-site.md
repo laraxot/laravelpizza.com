@@ -80,4 +80,3 @@ class Foo extends bar
 * [customizing-your-site.md](laravel/Modules/UI/project_docs/customizing-your-site.md)
 * [customizing-your-site.md](laravel/Modules/Tenant/project_docs/it/customizing-your-site.md)
 * [customizing-your-site.md](laravel/Modules/Cms/project_docs/customizing-your-site.md)
-

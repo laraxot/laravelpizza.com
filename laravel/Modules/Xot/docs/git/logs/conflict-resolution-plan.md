@@ -75,4 +75,4 @@ Per ogni file risolto, verrà creata o aggiornata la documentazione seguendo que
 
 ## Monitoraggio e avanzamento
 
-L'avanzamento della risoluzione sarà tracciato in un documento dedicato in `docs/logs/conflict_resolution_progress.md`. 
+L'avanzamento della risoluzione sarà tracciato in un documento dedicato in `docs/logs/conflict_resolution_progress.md`.

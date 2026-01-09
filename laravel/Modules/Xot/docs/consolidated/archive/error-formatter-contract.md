@@ -8,7 +8,7 @@ Questa interfaccia definisce il contratto per i formattatori di errori nel siste
 interface ErrorFormatterContract
 {
     public function __construct(\Throwable $exception);
-    
+
     /**
      * @return array<string, mixed>
      */
@@ -37,4 +37,4 @@ interface ErrorFormatterContract
 ## Collegamenti
 - [Error Handling Guidelines](../EXCEPTION-HANDLING-GUIDE.md)
 - [Error Formatters](../exceptions/formatters/README.md)
-- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md) 
+- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)

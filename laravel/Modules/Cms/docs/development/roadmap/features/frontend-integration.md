@@ -46,11 +46,11 @@ I template base sono implementati utilizzando Folio e Blade, con supporto per:
     <x-slot name="header">
         @include('cms::partials.header')
     </x-slot>
-    
+
     <main>
         {{ $slot }}
     </main>
-    
+
     <x-slot name="footer">
         @include('cms::partials.footer')
     </x-slot>

@@ -39,7 +39,7 @@ class RegistrationWidget extends XotBaseWidget
 {
     // La proprietà $data è già ereditata dalla classe base
     // NON è necessario dichiarare: public ?array $data = [];
-    
+
     public function getFormSchema(): array
     {
         return [
@@ -50,13 +50,13 @@ class RegistrationWidget extends XotBaseWidget
             Checkbox::make('newsletter'),
         ];
     }
-    
+
     public function register()
     {
         // Qui puoi accedere ai dati del form tramite $this->data
         $firstName = $this->data['first_name'];
         $acceptedNewsletter = $this->data['newsletter'] ?? false;
-        
+
         // Logica di registrazione...
     }
 }
@@ -77,7 +77,7 @@ class RegistrationWidget extends XotBaseWidget
    ```blade
    <!-- ERRATO ❌ -->
    <x-filament::input.text wire:model="first_name" />
-   
+
    <!-- CORRETTO ✅ -->
    <x-filament::input.text wire:model="data.first_name" />
    ```
@@ -90,7 +90,7 @@ class RegistrationWidget extends XotBaseWidget
        return $this->makeForm()
            ->schema([...]);
    }
-   
+
    // CORRETTO ✅
    public function getFormSchema(): array
    {

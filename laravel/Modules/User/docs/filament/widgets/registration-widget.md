@@ -119,7 +119,7 @@ I widget di autenticazione (`LoginWidget`, `RegisterWidget`, `ResetPasswordWidge
 #### **1. Struttura Directory Obbligatoria**
 Modules/User/app/Filament/Widgets/Auth/
 ├── LoginWidget.php
-├── RegisterWidget.php  
+├── RegisterWidget.php
 ├── ResetPasswordWidget.php
 └── ForgotPasswordWidget.php
 #### **2. Namespace e Naming Convention**
@@ -134,7 +134,7 @@ protected static string $view = 'user::widgets.auth.reset-password-widget';
 #### **4. Proprietà Obbligatorie per Widget Auth**
 /**
  * Widget data array (CRITICAL: eredita da XotBaseWidget, NON ridichiarare!)
- * @var array<string, mixed>|null  
+ * @var array<string, mixed>|null
  */
 // NON dichiarare: public ?array $data = []; <- GIÀ in XotBaseWidget
  * Form schema with string keys (Filament requirement)
@@ -150,7 +150,7 @@ public function getFormSchema(): array
  * @return \Illuminate\Http\RedirectResponse|void
 public function resetPassword()
     $data = $this->form->getState();
-    
+
     // SEMPRE validazione rigorosa
     $status = Password::reset([
         'email' => (string) $data['email'],           // Cast espliciti
@@ -183,7 +183,7 @@ public function resetPassword()
     public function mount(): void
 ### **Checklist Widget Auth Quality**
 - [ ] Estende `XotBaseWidget` (mai direttamente Widget Filament)
-- [ ] Directory `Auth/` per organizzazione logica  
+- [ ] Directory `Auth/` per organizzazione logica
 - [ ] View path con namespace `user::widgets.auth.*`
 - [ ] NON ridichiarare proprietà `$data` di XotBaseWidget
 - [ ] `getFormSchema()` con chiavi stringa associative

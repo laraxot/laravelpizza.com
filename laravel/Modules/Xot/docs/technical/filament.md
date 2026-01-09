@@ -50,12 +50,12 @@ class PatientResource extends XotBaseResource
 class PatientResource extends XotBaseResource
 {
     protected static ?string $navigationIcon = 'heroicon-o-user';
-    
+
     public static function getRelations(): array
     {
         return [];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -187,4 +187,3 @@ class PatientResource extends XotBaseResource
 * [filament.md](../../../Job/docs/filament.md)
 * [filament.md](../../../Activity/docs/filament.md)
 * [filament.md](../../../Cms/docs/filament.md)
-

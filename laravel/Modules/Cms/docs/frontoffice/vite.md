@@ -123,4 +123,4 @@ export default defineConfig({
 
 Per progetti esistenti che utilizzano Laravel Mix, consultare:
 - [Guida alla Migrazione](https://dev.to/varzoeaa/laravel-mix-vs-vite-why-did-laravel-transitioned-to-vite-2k25)
-- [Documentazione Mix](https://laravel-mix.com/) 
+- [Documentazione Mix](https://laravel-mix.com/)

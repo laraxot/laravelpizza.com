@@ -11,7 +11,7 @@ use Modules\Geo\Traits\HasAddresses;
 class User extends Model
 {
     use HasAddresses;
-    
+
     // Altri metodi e proprietà...
 }
 ```

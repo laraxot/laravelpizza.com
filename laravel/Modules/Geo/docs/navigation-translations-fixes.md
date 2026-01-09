@@ -10,7 +10,7 @@
 ```php
 // ❌ CONTENUTO CORROTTO
 <?php return array (
-  'navigation' => 
+  'navigation' =>
   array (
     'label' => '.navigation',
     'group' => '.navigation',

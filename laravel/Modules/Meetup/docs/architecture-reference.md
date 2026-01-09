@@ -60,7 +60,7 @@ use Livewire\Volt\Component;
 
 new class extends Component {
     public Event $event;
-    
+
     public function mount(Event $event) {
         $this->event = $event;
     }
@@ -86,7 +86,7 @@ new class extends Component {
     public $email = '';
     public $password = '';
     public $remember = false;
-    
+
     public function rules()
     {
         return [
@@ -94,16 +94,16 @@ new class extends Component {
             'password' => ['required'],
         ];
     }
-    
+
     public function authenticate()
     {
         $credentials = $this->validate();
-        
+
         if (!Auth::attempt($credentials, $this->remember)) {
             $this->addError('email', trans('auth.failed'));
             return;
         }
-        
+
         return redirect()->intended('/dashboard');
     }
 }; ?>
@@ -116,14 +116,14 @@ new class extends Component {
                     Sign in to your account
                 </h2>
             </div>
-            
+
             <form class="mt-8 space-y-6" wire:submit="authenticate">
                 <div class="rounded-md shadow-sm space-y-4">
                     <div>
-                        <input 
-                            wire:model="email" 
-                            type="email" 
-                            required 
+                        <input
+                            wire:model="email"
+                            type="email"
+                            required
                             class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                             placeholder="Email address"
                         />
@@ -132,10 +132,10 @@ new class extends Component {
                         </div>
                     </div>
                     <div>
-                        <input 
-                            wire:model="password" 
-                            type="password" 
-                            required 
+                        <input
+                            wire:model="password"
+                            type="password"
+                            required
                             class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                             placeholder="Password"
                         />
@@ -147,9 +147,9 @@ new class extends Component {
 
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
-                        <input 
-                            wire:model="remember" 
-                            type="checkbox" 
+                        <input
+                            wire:model="remember"
+                            type="checkbox"
                             class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
                         />
                         <label class="ml-2 block text-sm text-gray-900">
@@ -182,7 +182,7 @@ new class extends Component {
         'date' => null,
         'tags' => []
     ];
-    
+
     public function mount()
     {
         $this->searchTerm = request('q', '');
@@ -192,7 +192,7 @@ new class extends Component {
             'tags' => request('tags', [])
         ];
     }
-    
+
     public function getSearchResultsProperty()
     {
         return \App\Models\Event::when($this->searchTerm, function ($query) {
@@ -208,7 +208,7 @@ new class extends Component {
             ->orderBy('start_datetime', 'desc')
             ->get();
     }
-    
+
     public function searchUpdated()
     {
         $this->dispatch('search-updated');
@@ -217,10 +217,10 @@ new class extends Component {
 
 <div class="relative">
     <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
-        <input 
+        <input
             wire:model.live.debounce.500ms="searchTerm"
             wire:keydown="searchUpdated"
-            type="text" 
+            type="text"
             placeholder="Search events, topics, speakers..."
             class="flex-1 px-4 py-2 focus:outline-none"
         />
@@ -230,7 +230,7 @@ new class extends Component {
             </svg>
         </button>
     </div>
-    
+
     @if($searchTerm && $this->searchResults->count() > 0)
         <div class="absolute top-full left-0 right-0 bg-white shadow-lg rounded-lg z-10 mt-1 border border-gray-200">
             <div class="p-3 border-b border-gray-200 bg-gray-50">
@@ -240,7 +240,7 @@ new class extends Component {
             </div>
             <div class="max-h-96 overflow-y-auto">
                 @foreach($this->searchResults->take(10) as $result)
-                    <a href="{{ route('events.show', $result) }}" 
+                    <a href="{{ route('events.show', $result) }}"
                        class="block p-3 border-b border-gray-100 hover:bg-blue-50 transition-colors">
                         <div class="font-medium text-gray-900">{{ $result->title }}</div>
                         <div class="text-sm text-gray-600 mt-1 line-clamp-2">{{ Str::limit($result->description, 100) }}</div>
@@ -276,5 +276,5 @@ new class extends Component {
 
 ---
 
-**Last Updated**: November 28, 2025  
+**Last Updated**: November 28, 2025
 **Focus**: Front office implementation using Folio + Volt (no traditional controllers/routes)

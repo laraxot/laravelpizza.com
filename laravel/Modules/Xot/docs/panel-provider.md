@@ -55,10 +55,10 @@ Se è necessario personalizzare il panel, sovrascrivere il metodo `panel()`:
 public function panel(Panel $panel): Panel
 {
     $panel = parent::panel($panel);
-    
+
     // Aggiungere personalizzazioni specifiche
     $panel->theme('custom-theme');
-    
+
     return $panel;
 }
 ```
@@ -91,4 +91,4 @@ public function panel(Panel $panel): Panel
 - [Architettura Filament](../../../docs/FILAMENT_BEST_PRACTICES.md)
 - [Configurazione Moduli](../../../docs/MODULE_ARCHITECTURE.md)
 
-*Ultimo aggiornamento: 2025-01-06* 
+*Ultimo aggiornamento: 2025-01-06*

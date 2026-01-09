@@ -53,7 +53,7 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 {
     case LIST = 'list';
     case GRID = 'grid';
-    
+
     // Metodi di implementazione...
 }
 ```
@@ -153,13 +153,13 @@ use Modules\Xot\Filament\Resources\XotBaseListRecords;
 class YourResourceListRecords extends XotBaseListRecords
 {
     protected TableLayoutEnum $layout = TableLayoutEnum::LIST;
-    
+
     public function mount(): void
     {
         parent::mount();
         $this->layout = TableLayoutEnum::LIST;
     }
-    
+
     public function table(Table $table): Table
     {
         return $table
@@ -174,7 +174,7 @@ class YourResourceListRecords extends XotBaseListRecords
                     }),
             ]);
     }
-    
+
     protected function getColumnsForLayout(): array
     {
         $listColumns = [
@@ -186,7 +186,7 @@ class YourResourceListRecords extends XotBaseListRecords
             Tables\Columns\TextColumn::make('created_at')
                 ->dateTime(),
         ];
-        
+
         $gridColumns = [
             Tables\Columns\Layout\Stack::make([
                 Tables\Columns\TextColumn::make('name')
@@ -198,7 +198,7 @@ class YourResourceListRecords extends XotBaseListRecords
                     ->dateTime(),
             ]),
         ];
-        
+
         return $this->layout->getTableColumns($listColumns, $gridColumns);
     }
 }
@@ -304,19 +304,19 @@ class TableLayoutEnumTest extends TestCase
         $this->assertEquals('Lista', TableLayoutEnum::LIST->getLabel());
         $this->assertEquals('Griglia', TableLayoutEnum::GRID->getLabel());
     }
-    
+
     /** @test */
     public function it_toggles_correctly(): void
     {
         $this->assertEquals(TableLayoutEnum::GRID, TableLayoutEnum::LIST->toggle());
         $this->assertEquals(TableLayoutEnum::LIST, TableLayoutEnum::GRID->toggle());
     }
-    
+
     /** @test */
     public function it_returns_correct_grid_configuration(): void
     {
         $gridConfig = TableLayoutEnum::GRID->getTableContentGrid();
-        
+
         $this->assertIsArray($gridConfig);
         $this->assertEquals(1, $gridConfig['sm']);
         $this->assertEquals(5, $gridConfig['2xl']);
@@ -360,4 +360,4 @@ dd($this->layout->getTableContentGrid());
 - [Enum Standards](../../../docs/enum_standards.md)
 
 ## Ultimo Aggiornamento
-2025-01-27 - Documentazione completa TableLayoutEnum 
+2025-01-27 - Documentazione completa TableLayoutEnum

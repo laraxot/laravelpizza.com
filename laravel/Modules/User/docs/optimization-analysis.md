@@ -60,24 +60,24 @@ interface UserContract extends Authenticatable
 {
     // Authentication methods
     public function getKey(): mixed;
-    
+
     // Team management
     public function currentTeam(): BelongsTo;
     public function teams(): BelongsToMany;
     public function ownsTeam(TeamContract $team): bool;
-    
+
     // Permissions
     public function teamPermissions(TeamContract $team): array;
     public function hasTeamPermission(TeamContract $team, string $permission): bool;
-    
+
     // Two Factor Auth
     public function recoveryCodes(): array;
     public function replaceRecoveryCode(string $code): void;
-    
+
     // JWT
     public function getJWTIdentifier(): mixed;
     public function getJWTCustomClaims(): array;
-    
+
     // Roles
     public function roles(): BelongsToMany;
 }
@@ -119,7 +119,7 @@ interface JwtAuthContract
 }
 
 // Composizione finale
-interface UserContract extends 
+interface UserContract extends
     AuthenticatableUserContract,
     TeamMemberContract,
     HasPermissionsContract,
@@ -221,7 +221,7 @@ class BaseUser extends Authenticatable
     {
         return $query->with(['roles:id,name', 'currentTeam:id,name']);
     }
-    
+
     public function scopeWithFullRelations(Builder $query): Builder
     {
         return $query->with([
@@ -231,7 +231,7 @@ class BaseUser extends Authenticatable
             'permissions:id,name',
         ]);
     }
-    
+
     public function scopeForApi(Builder $query): Builder
     {
         return $query->select(['id', 'name', 'email', 'type', 'is_active'])
@@ -257,7 +257,7 @@ trait HasCachedPermissions
             fn() => $this->getAllPermissions()
         );
     }
-    
+
     public function getCachedRoles(): Collection
     {
         return Cache::remember(
@@ -266,13 +266,13 @@ trait HasCachedPermissions
             fn() => $this->roles()->get()
         );
     }
-    
+
     public function flushPermissionCache(): void
     {
         Cache::forget("user_permissions_{$this->id}");
         Cache::forget("user_roles_{$this->id}");
     }
-    
+
     protected static function bootHasCachedPermissions(): void
     {
         static::saved(fn($user) => $user->flushPermissionCache());
@@ -293,7 +293,7 @@ public function up(): void
         $table->index(['email', 'type']);     // Per login multi-tipo
         $table->index('current_team_id');     // Per team queries
         $table->index('created_at');          // Per ordinamenti temporali
-        
+
         // Indice composito per query frequenti
         $table->index(['type', 'is_active', 'created_at'], 'users_type_active_created_idx');
     });
@@ -313,25 +313,25 @@ class AuthenticationRateLimiter
         private RateLimiter $limiter,
         private EventDispatcher $events
     ) {}
-    
+
     public function tooManyAttempts(Request $request): bool
     {
         $key = $this->throttleKey($request);
-        
+
         if ($this->limiter->tooManyAttempts($key, 5)) {
             $this->events->dispatch(new TooManyLoginAttempts($request));
             return true;
         }
-        
+
         return false;
     }
-    
+
     public function hit(Request $request): void
     {
         $key = $this->throttleKey($request);
         $this->limiter->hit($key, 300); // 5 minutes
     }
-    
+
     private function throttleKey(Request $request): string
     {
         return Str::lower($request->input('email')).'|'.$request->ip();
@@ -350,20 +350,20 @@ trait HasSecurePassword
         if (!$this->isPasswordStrong($value)) {
             throw new WeakPasswordException('Password does not meet security requirements');
         }
-        
+
         $this->attributes['password'] = Hash::make($value);
         $this->attributes['password_expires_at'] = now()->addMonths(3);
     }
-    
+
     private function isPasswordStrong(string $password): bool
     {
-        return strlen($password) >= 8 
+        return strlen($password) >= 8
             && preg_match('/[A-Z]/', $password)
             && preg_match('/[a-z]/', $password)
             && preg_match('/[0-9]/', $password)
             && preg_match('/[^A-Za-z0-9]/', $password);
     }
-    
+
     public function isPasswordExpired(): bool
     {
         return $this->password_expires_at && $this->password_expires_at->isPast();
@@ -380,13 +380,13 @@ class SecureSessionManager
     {
         // Rigenera session ID per prevenire session fixation
         request()->session()->regenerate();
-        
+
         // Log dell'evento di sicurezza
         activity('security')
             ->causedBy($user)
             ->log('Session rotated for security');
     }
-    
+
     public function invalidateOtherSessions(User $user): void
     {
         // Invalida tutte le altre sessioni dell'utente
@@ -394,7 +394,7 @@ class SecureSessionManager
             ->where('user_id', $user->id)
             ->where('id', '!=', request()->session()->getId())
             ->delete();
-            
+
         activity('security')
             ->causedBy($user)
             ->log('Other sessions invalidated');
@@ -427,7 +427,7 @@ class CreateUserHandler
         private UserRepositoryInterface $repository,
         private EventDispatcher $events
     ) {}
-    
+
     public function handle(CreateUserCommand $command): User
     {
         $user = $this->repository->create([
@@ -436,9 +436,9 @@ class CreateUserHandler
             'type' => $command->type->value,
             ...$command->attributes,
         ]);
-        
+
         $this->events->dispatch(new UserCreated($user));
-        
+
         return $user;
     }
 }
@@ -461,7 +461,7 @@ class EmailPasswordStrategy implements AuthenticationStrategyInterface
                   ->where('is_active', true)
                   ->first();
     }
-    
+
     public function supports(array $credentials): bool
     {
         return isset($credentials['email'], $credentials['password']);
@@ -474,7 +474,7 @@ class TwoFactorStrategy implements AuthenticationStrategyInterface
     {
         // Implementazione 2FA
     }
-    
+
     public function supports(array $credentials): bool
     {
         return isset($credentials['email'], $credentials['otp']);
@@ -486,12 +486,12 @@ class AuthenticationManager
 {
     /** @var AuthenticationStrategyInterface[] */
     private array $strategies = [];
-    
+
     public function addStrategy(AuthenticationStrategyInterface $strategy): void
     {
         $this->strategies[] = $strategy;
     }
-    
+
     public function authenticate(array $credentials): ?User
     {
         foreach ($this->strategies as $strategy) {
@@ -499,7 +499,7 @@ class AuthenticationManager
                 return $strategy->authenticate($credentials);
             }
         }
-        
+
         return null;
     }
 }
@@ -524,21 +524,21 @@ class UserTypeFactory implements UserFactoryInterface
             default => throw new InvalidUserTypeException("Unsupported user type: {$type->value}")
         };
     }
-    
+
     private function createAdmin(array $attributes): Admin
     {
         $admin = Admin::create($attributes);
         $admin->assignRole('admin');
         return $admin;
     }
-    
+
     private function createDoctor(array $attributes): Doctor
     {
         $doctor = Doctor::create($attributes);
         $doctor->assignRole('doctor');
         return $doctor;
     }
-    
+
     private function createPatient(array $attributes): Patient
     {
         $patient = Patient::create($attributes);
@@ -565,18 +565,18 @@ class AuthenticationTest extends TestCase
             'password' => Hash::make('password123'),
             'is_active' => true,
         ]);
-        
+
         // Act
         $result = Auth::attempt([
             'email' => 'test@example.com',
             'password' => 'password123',
         ]);
-        
+
         // Assert
         $this->assertTrue($result);
         $this->assertAuthenticatedAs($user);
     }
-    
+
     public function test_inactive_user_cannot_authenticate(): void
     {
         // Arrange
@@ -585,13 +585,13 @@ class AuthenticationTest extends TestCase
             'password' => Hash::make('password123'),
             'is_active' => false,
         ]);
-        
+
         // Act
         $result = Auth::attempt([
             'email' => 'test@example.com',
             'password' => 'password123',
         ]);
-        
+
         // Assert
         $this->assertFalse($result);
         $this->assertGuest();
@@ -610,10 +610,10 @@ class UserPermissionsTest extends TestCase
         $user = User::factory()->create();
         $role = Role::create(['name' => 'doctor', 'guard_name' => 'web']);
         $permission = Permission::create(['name' => 'view appointments', 'guard_name' => 'web']);
-        
+
         $role->givePermissionTo($permission);
         $user->assignRole($role);
-        
+
         // Act & Assert
         $this->assertTrue($user->hasPermissionTo('view appointments'));
         $this->assertTrue($user->hasRole('doctor'));
@@ -636,21 +636,21 @@ class AuthenticationMetrics
             'successful' => $successful ? 'true' : 'false',
             'user_type' => $this->getUserType($email),
         ];
-        
+
         Metrics::increment('auth.login_attempts', 1, $tags);
-        
+
         if (!$successful) {
             Metrics::increment('auth.failed_attempts', 1, $tags);
         }
     }
-    
+
     public function recordPasswordReset(string $email): void
     {
         Metrics::increment('auth.password_resets', 1, [
             'user_type' => $this->getUserType($email),
         ]);
     }
-    
+
     private function getUserType(string $email): string
     {
         $user = User::where('email', $email)->first();
@@ -668,7 +668,7 @@ class SecurityAlertService
         private NotificationService $notifications,
         private Logger $logger
     ) {}
-    
+
     public function handleSuspiciousActivity(User $user, string $activity): void
     {
         $this->logger->warning('Suspicious activity detected', [
@@ -677,10 +677,10 @@ class SecurityAlertService
             'ip' => request()->ip(),
             'user_agent' => request()->userAgent(),
         ]);
-        
+
         // Notifica amministratori
         $admins = User::whereHas('roles', fn($q) => $q->where('name', 'admin'))->get();
-        
+
         foreach ($admins as $admin) {
             $this->notifications->send(
                 $admin,
@@ -730,7 +730,6 @@ class SecurityAlertService
 
 ---
 
-*Documento creato: Gennaio 2025*  
-*Principi: DRY + KISS + SOLID + ROBUST + Laraxot*  
+*Documento creato: Gennaio 2025*
+*Principi: DRY + KISS + SOLID + ROBUST + Laraxot*
 *Stato: 🟡 Necessita Refactoring Interface e Performance*
-

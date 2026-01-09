@@ -9,9 +9,9 @@ class MailTemplate extends SpatieMailTemplate implements MailTemplateInterface
     use HasTranslations;
 
     protected $connection = 'notify';
-    
+
     public array $translatable = ['subject', 'html_template', 'text_template'];
-    
+
     protected $fillable = [
         'mailable',
         'slug',  // Nuovo campo
@@ -185,4 +185,4 @@ $template->save();
 ### 3. Deployment
 - Backup dati esistenti
 - Migrazione graduale
-- Monitoraggio performance 
+- Monitoraggio performance

@@ -1,4 +1,4 @@
-# Implementazione Corretta delle Pagine Auth 
+# Implementazione Corretta delle Pagine Auth
 
 ## Collegamenti correlati
 - [Documentazione centrale](../../../docs/README.md)
@@ -63,7 +63,7 @@ laravel/Themes/One/resources/views/pages/auth/
 
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
             session()->regenerate();
-            
+
             // Reindirizza alla home page localizzata
             return redirect()->to('/' . app()->getLocale());
         }
@@ -127,7 +127,7 @@ laravel/Themes/One/resources/views/pages/auth/
                 </div>
 
                 <div>
-                    <x-filament::button 
+                    <x-filament::button
                         type="submit"
                         size="lg"
                         color="primary"
@@ -262,7 +262,7 @@ laravel/Themes/One/resources/views/pages/auth/
                 </div>
 
                 <div>
-                    <x-filament::button 
+                    <x-filament::button
                         type="submit"
                         size="lg"
                         color="primary"
@@ -369,7 +369,7 @@ Quindi nel form:
             session()->invalidate();
             session()->regenerateToken();
         }
-        
+
         // Reindirizza alla home page localizzata
         $this->redirect('/' . app()->getLocale());
     });
@@ -417,7 +417,7 @@ url(app()->getLocale() . '/percorso')
 Utilizzare sempre i componenti Blade nativi di Filament:
 
 ```blade
-<x-filament::button 
+<x-filament::button
     type="submit"
     size="lg"
     color="primary"

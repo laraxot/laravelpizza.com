@@ -112,4 +112,4 @@ composer format        # Formatta il codice
 - File upload
 
 ## Changelog
-Le modifiche vengono tracciate nel repository GitHub. 
+Le modifiche vengono tracciate nel repository GitHub.

@@ -64,11 +64,11 @@ Le traduzioni del tema utilizzano il namespace `pub_theme::`:
 
 ### Namespace Alternativi
 - `pub_theme::` - Per traduzioni del tema attivo
-- `<nome progetto>::` - Per traduzioni del modulo 
+- `<nome progetto>::` - Per traduzioni del modulo
 - `saluteora::` - Per traduzioni del modulo SaluteOra
-- `<nome progetto>::` - Per traduzioni del modulo 
+- `<nome progetto>::` - Per traduzioni del modulo
 - `saluteora::` - Per traduzioni del modulo SaluteOra
-- `<nome progetto>::` - Per traduzioni del modulo 
+- `<nome progetto>::` - Per traduzioni del modulo
 - `saluteora::` - Per traduzioni del modulo SaluteOra
 - `ui::` - Per traduzioni del modulo UI
 
@@ -214,7 +214,7 @@ Includi sempre esempi pratici:
 <div class="widget">
     <h2>{{ __('pub_theme::widgets.doctor.profile.title') }}</h2>
     <p>{{ __('pub_theme::widgets.doctor.profile.description') }}</p>
-    
+
     @if($items->isEmpty())
         <div class="empty-state">
             <h3>{{ __('pub_theme::widgets.doctor.profile.empty.title') }}</h3>

@@ -126,4 +126,4 @@ Riorganizzazione degli elementi:
 - [Struttura Componenti](../components/structure.md)
 - [Documentazione Blocchi](../blocks/README.md)
 
-[Fonte: deborasilvestri.it](https://www.deborasilvestri.it/creare-un-sito-web/struttura-di-un-sito-web/) 
+[Fonte: deborasilvestri.it](https://www.deborasilvestri.it/creare-un-sito-web/struttura-di-un-sito-web/)

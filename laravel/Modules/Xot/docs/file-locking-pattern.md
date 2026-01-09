@@ -2,9 +2,9 @@
 
 ## 🔐 Filosofia
 
-> "Un file alla volta, un maestro alla volta.  
-> Il lock è la chiave, la chiave è il rispetto.  
-> Chi trova il lock, attende o va oltre.  
+> "Un file alla volta, un maestro alla volta.
+> Il lock è la chiave, la chiave è il rispetto.
+> Chi trova il lock, attende o va oltre.
 > Chi finisce la modifica, libera il lock."
 
 ## 📖 Regola Fondamentale
@@ -51,15 +51,15 @@ rm /path/to/MyClass.php.lock
 # Pseudo-codice pattern AI
 def modify_file(filepath):
     lockfile = filepath + '.lock'
-    
+
     # Check se lock esiste
     if exists(lockfile):
         log("File locked, skipping")
         return SKIP
-    
+
     # Acquisisci lock
     create_file(lockfile, metadata)
-    
+
     try:
         # Modifica il file
         content = read_file(filepath)
@@ -131,13 +131,13 @@ FILES=(
 
 for FILE in "${FILES[@]}"; do
     LOCK="${FILE}.lock"
-    
+
     # Verifica lock
     if [ -f "$LOCK" ]; then
         echo "⚠️  Skipping locked file: $FILE"
         continue
     fi
-    
+
     # Crea lock con metadata
     cat > "$LOCK" << EOF
 Locked by: $(whoami)
@@ -145,11 +145,11 @@ Process: $$
 Started: $(date)
 Reason: Merge conflict resolution
 EOF
-    
+
     # Modifica (esempio: rimuove linee duplicate)
     awk '!seen[$0]++' "$FILE" > "${FILE}.tmp"
     mv "${FILE}.tmp" "$FILE"
-    
+
     # Rilascia lock
     rm "$LOCK"
     echo "✅ Fixed and released: $FILE"

@@ -130,11 +130,11 @@
 - [Best Practices](BEST-PRACTICES.md)
 ### Versione HEAD
 
-- [Testing](testing.md) 
+- [Testing](testing.md)
 
 ### Versione Incoming
 
-- [Testing](testing.md) 
+- [Testing](testing.md)
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
 * [bottlenecks.md](../../Chart/docs/bottlenecks.md)
@@ -157,6 +157,4 @@
 * [bottlenecks.md](../../Patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
 
-
 ---
-

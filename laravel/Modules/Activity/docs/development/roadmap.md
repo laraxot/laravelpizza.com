@@ -185,7 +185,7 @@
 2. [ ] Setup sistema base
 3. [ ] Implementazione API
 4. [ ] Test performance
-5. [ ] Documentazione base 
+5. [ ] Documentazione base
 ## Collegamenti tra versioni di roadmap.md
 * [roadmap.md](bashscripts/docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
@@ -203,4 +203,3 @@
 * [roadmap.md](laravel/Modules/Patient/docs/roadmap.md)
 * [roadmap.md](laravel/Modules/Cms/docs/roadmap.md)
 * [roadmap.md](laravel/Themes/One/docs/roadmap.md)
-

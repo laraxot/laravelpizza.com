@@ -49,4 +49,3 @@ patient::doctor.fields.first_name.label
 
 ## Collegamenti tra versioni di automatic-translations.md
 * [automatic-translations.md](../../../Lang/docs/automatic-translations.md)
-

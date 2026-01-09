@@ -34,15 +34,15 @@ Il logo implementato inizialmente aveva:
 
 ### SVG Corretto da laravelpizza.com
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" 
-     width="24" 
-     height="24" 
-     viewBox="0 0 24 24" 
-     fill="none" 
-     stroke="currentColor" 
-     stroke-width="2" 
-     stroke-linecap="round" 
-     stroke-linejoin="round" 
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="24"
+     height="24"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
      class="h-8 w-8 text-red-500 group-hover:text-red-400 transition-colors">
   <path d="M15 11h.01"></path>
   <path d="M11 15h.01"></path>
@@ -70,16 +70,16 @@ Il logo implementato inizialmente aveva:
 ### File: `components/navigation.html`
 ```html
 <a href="index.html" class="flex items-center space-x-3">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         width="24" 
-         height="24" 
-         viewBox="0 0 24 24" 
-         fill="none" 
-         stroke="currentColor" 
-         stroke-width="2" 
-         stroke-linecap="round" 
-         stroke-linejoin="round" 
-         class="h-8 w-8 text-red-500" 
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="24"
+         height="24"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         class="h-8 w-8 text-red-500"
          aria-hidden="true">
         <path d="M15 11h.01"></path>
         <path d="M11 15h.01"></path>
@@ -130,4 +130,3 @@ Il logo implementato inizialmente aveva:
 - [x] Logo corretto in events.html (footer)
 - [x] Logo corretto in register.html (form card + footer)
 - [x] Logo corretto in login.html (footer)
-

@@ -8,12 +8,12 @@
 $this->bucketName = (string) (config('media.aws.bucket_name') ?? env('AWS_BUCKET_NAME', ''));
 ```
 
-**Problema**: 
+**Problema**:
 - `config()` e `env()` restituiscono `mixed`
 - Cast a `string` di un valore `mixed` non è type-safe
 - PHPStan non può garantire che il valore sia convertibile a stringa
 
-**Soluzione**: 
+**Soluzione**:
 - Validare il tipo prima del cast
 - Utilizzare valori di default sicuri
 - Gestire esplicitamente i casi null/false
@@ -71,12 +71,12 @@ private function getConfigValue(string $key, string $envKey, string $default): s
     if (is_string($value) && $value !== '') {
         return $value;
     }
-    
+
     $envValue = env($envKey);
     if (is_string($envValue) && $envValue !== '') {
         return $envValue;
     }
-    
+
     return $default;
 }
 ```
@@ -88,7 +88,7 @@ private function extractMetadata(mixed $result): array
     if (!is_array($result)) {
         return [];
     }
-    
+
     $metadata = $result['@metadata'] ?? null;
     return is_array($metadata) ? $metadata : [];
 }
@@ -116,7 +116,7 @@ $fileSize = filesize($localFilePath);
 - **Meccanismo**: Validation dei tipi prima del cast
 - **Risultato**: Eliminato warning PHPStan "Property does not accept mixed"
 
-#### **2. GetFileInfoAction - Offset Access su Mixed** ✅ RISOLTO  
+#### **2. GetFileInfoAction - Offset Access su Mixed** ✅ RISOLTO
 - **Soluzione Implementata**: Type guard con `is_array()` validation
 - **Meccanismo**: Controllo esplicito tipo prima dell'accesso offset
 - **Risultato**: Eliminato warning PHPStan "Cannot access offset on mixed"
@@ -134,10 +134,10 @@ protected function getStringConfig(string $configKey, string $envKey, string $de
 {
     $configValue = config($configKey);
     if (is_string($configValue) && trim($configValue) !== '') return $configValue;
-    
+
     $envValue = env($envKey);
     if (is_string($envValue) && trim($envValue) !== '') return $envValue;
-    
+
     return $default;
 }
 ```
@@ -145,8 +145,8 @@ protected function getStringConfig(string $configKey, string $envKey, string $de
 ### **Phase 2: Safe Array Access Pattern**
 ```php
 $metadata = $result['@metadata'] ?? [];
-$effectiveUri = is_array($metadata) && isset($metadata['effectiveUri']) 
-    ? (string) $metadata['effectiveUri'] 
+$effectiveUri = is_array($metadata) && isset($metadata['effectiveUri'])
+    ? (string) $metadata['effectiveUri']
     : null;
 ```
 
@@ -165,7 +165,7 @@ $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri'])
 
 ### **Benefici Operativi**
 - ✅ Deployment più sicuri
-- ✅ Debug semplificato  
+- ✅ Debug semplificato
 - ✅ Refactoring facilitato
 - ✅ Team productivity incrementata
 

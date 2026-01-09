@@ -71,7 +71,7 @@ class GooglePlacesService
     public function searchPlaces(string $query, string $country = 'IT'): array
     {
         $cacheKey = $this->cachePrefix . md5($query . $country);
-        
+
         return cache()->remember($cacheKey, $this->cacheTtl, function () use ($query, $country) {
             return $this->performApiCall($query, $country);
         });
@@ -80,7 +80,7 @@ class GooglePlacesService
     public function getPlaceDetails(string $placeId): ?array
     {
         $cacheKey = $this->cachePrefix . 'details_' . $placeId;
-        
+
         return cache()->remember($cacheKey, $this->cacheTtl * 7, function () use ($placeId) {
             return $this->performDetailsCall($placeId);
         });
@@ -92,7 +92,7 @@ class GooglePlacesService
         if (!$this->checkRateLimit()) {
             throw new RateLimitExceededException();
         }
-        
+
         // API call con retry logic
         return retry(3, function () use ($query, $country) {
             return Http::timeout(10)
@@ -120,11 +120,11 @@ class GoogleApiRateLimiter
     {
         $key = $this->keyPrefix . now()->format('Y-m-d_H:i');
         $current = cache()->get($key, 0);
-        
+
         if ($current >= $this->maxCallsPerMinute) {
             return false;
         }
-        
+
         cache()->put($key, $current + 1, 120); // 2 minuti
         return true;
     }
@@ -214,7 +214,7 @@ class AddressFactory extends Factory
 - [ ] **Documentazione** generalizzata
 - [ ] **Script check** passa senza errori
 
-### Performance  
+### Performance
 - [ ] **Google API calls** < 500ms
 - [ ] **Address validation** < 50ms
 - [ ] **Geocoding** < 200ms con caching

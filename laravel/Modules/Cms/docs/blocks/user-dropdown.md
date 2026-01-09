@@ -117,10 +117,10 @@ Il componente deve utilizzare i componenti Blade di Filament per il dropdown:
 </x-filament::dropdown>
 
 @if($isLoggedIn)
-    <form 
-        id="logout-form" 
-        action="{{ route('logout', ['locale' => $locale]) }}" 
-        method="POST" 
+    <form
+        id="logout-form"
+        action="{{ route('logout', ['locale' => $locale]) }}"
+        method="POST"
         class="hidden"
     >
         @csrf

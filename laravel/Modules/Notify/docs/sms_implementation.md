@@ -26,7 +26,7 @@ Queste classi implementano il pattern singleton e forniscono metodi helper per l
 // config/sms.php
 return [
     'default' => env('SMS_DRIVER', 'smsfactor'),
-    
+
     'drivers' => [
         'smsfactor' => [
             'token' => env('SMSFACTOR_TOKEN'),
@@ -138,7 +138,7 @@ class SmsChannel
     public function send($notifiable, Notification $notification)
     {
         $message = $notification->toSms($notifiable);
-        
+
         return $this->sms->send(
             $notifiable->phone_number,
             $message
@@ -290,7 +290,7 @@ class SmsIntegrationTest extends TestCase
             'name' => 'Test',
             'content' => 'Hello {{name}}!'
         ]);
-        
+
         $result = $template->render(['name' => 'John']);
         $this->assertEquals('Hello John!', $result);
     }
@@ -367,4 +367,4 @@ SMSFACTOR_SENDER=YourApp
 - [Documentazione SMSFactor](https://www.smsfactor.com)
 - [Documentazione Twilio](https://www.twilio.com/docs)
 - [Documentazione Nexmo](https://developer.nexmo.com)
-- [Documentazione Plivo](https://www.plivo.com/docs) 
+- [Documentazione Plivo](https://www.plivo.com/docs)

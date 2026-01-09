@@ -82,7 +82,7 @@
 // ❌ ERRATO
 __('ui::s3test.actions.testCredentials.label')
 
-// ✅ CORRETTO  
+// ✅ CORRETTO
 __('media::s3test.actions.testCredentials.label')
 ```
 
@@ -142,6 +142,6 @@ protected function getFormSchema(): array
 
 ---
 
-**Data Refactoring**: 2025-08-07  
-**Versione PHPStan**: Livello 9  
+**Data Refactoring**: 2025-08-07
+**Versione PHPStan**: Livello 9
 **Status**: ✅ Completato e Validato

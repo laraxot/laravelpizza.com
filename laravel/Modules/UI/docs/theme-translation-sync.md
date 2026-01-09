@@ -79,10 +79,10 @@ Entrambi i temi contengono i seguenti file di traduzione:
 - "Il tuo referto è pronto!"
 - "Scarica referto!"
 
-**Soluzione**: 
+**Soluzione**:
 1. Aggiunta sezione `report` in tutti i file `txt.php`:
    - `laravel/Themes/One/lang/it/txt.php`
-   - `laravel/Themes/One/lang/en/txt.php` 
+   - `laravel/Themes/One/lang/en/txt.php`
    - `laravel/Themes/One/lang/de/txt.php`
 
 2. Aggiornato il template Blade per usare le traduzioni:
@@ -234,4 +234,4 @@ return [
 
 **Ultimo aggiornamento**: 2025-01-06
 **Versione**: 2.2
-**Autore**: AI Assistant 
+**Autore**: AI Assistant

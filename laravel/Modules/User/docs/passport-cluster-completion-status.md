@@ -1,7 +1,7 @@
 # Passport Cluster - Status Completamento
 
-**Data**: 2025-01-22  
-**Status**: ✅ Completato e Verificato  
+**Data**: 2025-01-22
+**Status**: ✅ Completato e Verificato
 **Metodologia**: Super Mucca
 
 ---
@@ -32,7 +32,7 @@ class Passport extends XotBaseCluster
 
 Tutte le 5 risorse OAuth sono state spostate in `Clusters/Passport/Resources/`:
 
-1. ✅ **OauthClientResource** 
+1. ✅ **OauthClientResource**
    - Path: `Clusters/Passport/Resources/OauthClientResource.php`
    - Pages: List, Create, Edit, View
    - Namespace: `Modules\User\Filament\Clusters\Passport\Resources`
@@ -194,6 +194,6 @@ Alcune risorse non hanno tutte le pages standard:
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22  
-**Versione**: 1.0.0  
+**Ultimo aggiornamento**: 2025-01-22
+**Versione**: 1.0.0
 **Status**: ✅ Completato e verificato

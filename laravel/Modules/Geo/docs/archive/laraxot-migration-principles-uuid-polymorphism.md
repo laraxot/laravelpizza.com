@@ -41,7 +41,7 @@ class User extends BaseModel {
     protected $primaryKey = 'id'; // UUID string
 }
 
-// Admin Model (Integer)  
+// Admin Model (Integer)
 class Admin extends BaseModel {
     public $keyType = 'int';
     public $incrementing = true;
@@ -114,11 +114,11 @@ return new class extends XotBaseMigration {
             // Per sistemi con UUID + integer, sempre string per morphs
             $table->string('morphable_id')->nullable();
             $table->string('morphable_type')->nullable();
-            
+
             // O usando il helper (che crea string se configurato)
             $table->nullableMorphs('morphable');
         });
-        
+
         $this->tableUpdate(function (Blueprint $table) {
             // Aggiornamenti sicuri con controlli
             if ($this->hasColumn('morphable_id')) {

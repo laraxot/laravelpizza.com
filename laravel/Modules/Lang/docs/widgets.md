@@ -40,7 +40,7 @@ The widget requires no configuration and can be used directly in themes:
 The widget supports the following languages by default:
 
 - **Italian** (it) 🇮🇹
-- **English** (en) 🇬🇧  
+- **English** (en) 🇬🇧
 - **German** (de) 🇩🇪
 
 Additional languages can be added through the Language model or by extending the `getDefaultLanguages()` method.

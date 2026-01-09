@@ -1,4 +1,4 @@
-# Integrazione WhatsApp 
+# Integrazione WhatsApp
 
 ## Panoramica
 
@@ -28,7 +28,7 @@ use Modules\Notify\Datas\WhatsAppData;
 
 /**
  * Interface per tutte le azioni di invio WhatsApp.
- * 
+ *
  * Tutte le implementazioni di provider WhatsApp devono implementare questa interfaccia
  * per garantire una coerenza nel modo in cui vengono gestiti i messaggi WhatsApp
  * indipendentemente dal provider specifico utilizzato.
@@ -101,20 +101,20 @@ return [
             'auth_token' => env('TWILIO_AUTH_TOKEN'),
             'from' => env('TWILIO_WHATSAPP_FROM'),
         ],
-        
+
         'vonage' => [
             'api_key' => env('VONAGE_KEY'),
             'api_secret' => env('VONAGE_SECRET'),
             'from' => env('VONAGE_WHATSAPP_FROM'),
         ],
-        
+
         'facebook' => [
             'app_id' => env('FACEBOOK_APP_ID'),
             'app_secret' => env('FACEBOOK_APP_SECRET'),
             'access_token' => env('FACEBOOK_ACCESS_TOKEN'),
             'phone_number_id' => env('FACEBOOK_PHONE_NUMBER_ID'),
         ],
-        
+
         '360dialog' => [
             'api_key' => env('360DIALOG_API_KEY'),
             'phone_number_id' => env('360DIALOG_PHONE_NUMBER_ID'),
@@ -227,33 +227,33 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
     {
         $from = 'whatsapp:' . ($whatsAppData->from ?? $this->defaultSender);
         $to = 'whatsapp:' . $whatsAppData->to;
-        
+
         $client = new Client([
             'timeout' => $this->timeout,
             'auth' => [$this->accountSid, $this->authToken]
         ]);
-        
+
         $endpoint = $this->baseUrl . '/Accounts/' . $this->accountSid . '/Messages.json';
-        
+
         $payload = [
             'To' => $to,
             'From' => $from,
             'Body' => $whatsAppData->body,
         ];
-        
+
         // Aggiungi media se presente
         if (!empty($whatsAppData->media)) {
             $payload['MediaUrl'] = $whatsAppData->media[0];
         }
-        
+
         try {
             $response = $client->post($endpoint, [
                 'form_params' => $payload
             ]);
-            
+
             $this->vars['status_code'] = $response->getStatusCode();
             $this->vars['status_txt'] = $response->getBody()->getContents();
-            
+
             return [
                 'success' => true,
                 'message_id' => json_decode($this->vars['status_txt'], true)['sid'] ?? null,
@@ -326,15 +326,15 @@ final class SendFacebookWhatsAppAction implements WhatsAppProviderActionInterfac
                 'Content-Type' => 'application/json',
             ]
         ]);
-        
+
         $endpoint = $this->baseUrl . '/' . $this->phoneNumberId . '/messages';
-        
+
         $payload = [
             'messaging_product' => 'whatsapp',
             'recipient_type' => 'individual',
             'to' => $whatsAppData->to,
         ];
-        
+
         // Gestione diversi tipi di messaggi
         if ($whatsAppData->type === 'text') {
             $payload['type'] = 'text';
@@ -351,17 +351,17 @@ final class SendFacebookWhatsAppAction implements WhatsAppProviderActionInterfac
                 'link' => $whatsAppData->media[0],
             ];
         }
-        
+
         try {
             $response = $client->post($endpoint, [
                 'json' => $payload
             ]);
-            
+
             $this->vars['status_code'] = $response->getStatusCode();
             $this->vars['status_txt'] = $response->getBody()->getContents();
-            
+
             $responseData = json_decode($this->vars['status_txt'], true);
-            
+
             return [
                 'success' => true,
                 'message_id' => $responseData['messages'][0]['id'] ?? null,
@@ -467,9 +467,9 @@ class WhatsAppChannel
         }
 
         $whatsAppData = $notification->toWhatsApp($notifiable);
-        
+
         $driver = Config::get('whatsapp.default', 'twilio');
-        
+
         $action = match ($driver) {
             'twilio' => app(SendTwilioWhatsAppAction::class),
             'facebook' => app(SendFacebookWhatsAppAction::class),
@@ -477,7 +477,7 @@ class WhatsAppChannel
             '360dialog' => app(Send360dialogWhatsAppAction::class),
             default => throw new \Exception("Unsupported WhatsApp driver: {$driver}"),
         };
-        
+
         return $action->execute($whatsAppData);
     }
 }
@@ -513,7 +513,7 @@ final class SendLogWhatsAppAction implements WhatsAppProviderActionInterface
             'template' => $whatsAppData->template,
             'type' => $whatsAppData->type,
         ]);
-        
+
         return [
             'success' => true,
             'message_id' => 'log-' . uniqid(),

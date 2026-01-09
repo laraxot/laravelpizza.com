@@ -26,7 +26,7 @@
 
 ## Strumenti Utilizzati
 - Lock file `.lock` per garantire esclusività durante la modifica
-- Analisi manuale dei marker 
+- Analisi manuale dei marker
 - Pulizia con script Python per rimozione marcatori
 
 ## Verifiche

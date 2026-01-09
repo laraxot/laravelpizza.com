@@ -27,13 +27,13 @@ class EcommerceStatsOverviewWidget extends XotBaseStatsOverviewWidget
     protected function getStats(): array
     {
         $cacheKey = 'ecommerce:dashboard:stats_overview';
-        
+
         return $this->getCachedDataWithDefaultTtl($cacheKey, function () {
             $currentMonth = Carbon::now()->startOfMonth();
             $previousMonth = Carbon::now()->subMonth()->startOfMonth();
             $currentWeek = Carbon::now()->startOfWeek();
             $previousWeek = Carbon::now()->subWeek()->startOfWeek();
-            
+
             return [
                 // Statistica base con formattazione
                 $this->createStat(
@@ -43,7 +43,7 @@ class EcommerceStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-currency-euro',
                     'success'
                 ),
-                
+
                 // Statistica con trend calcolato automaticamente
                 $this->createStatWithCalculatedTrend(
                     'Fatturato Mensile',
@@ -53,7 +53,7 @@ class EcommerceStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'primary',
                     2
                 ),
-                
+
                 // Statistica da query con condizioni
                 $this->createStatFromQuery(
                     'Ordini Completati',
@@ -64,7 +64,7 @@ class EcommerceStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-check-circle',
                     'success'
                 ),
-                
+
                 // Statistica con aggregazione
                 $this->createStatFromAggregateQuery(
                     'Valore Medio Ordine',
@@ -77,7 +77,7 @@ class EcommerceStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'warning',
                     2
                 ),
-                
+
                 // Statistica con URL di navigazione
                 $this->createStatWithUrl(
                     'Vedi Tutti gli Ordini',
@@ -87,7 +87,7 @@ class EcommerceStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-arrow-right',
                     'primary'
                 ),
-                
+
                 // Statistica con badge per ordini in attesa
                 $this->createStatWithBadge(
                     'Ordini in Attesa',
@@ -98,7 +98,7 @@ class EcommerceStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-clock',
                     'warning'
                 ),
-                
+
                 // Statistica con trend da query per settimana
                 $this->createStatWithTrendFromQuery(
                     'Nuovi Clienti',
@@ -111,7 +111,7 @@ class EcommerceStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-user-plus',
                     'info'
                 ),
-                
+
                 // Statistica con azione personalizzata
                 $this->createStatWithAction(
                     'Esporta Report',
@@ -166,13 +166,13 @@ class HealthcareStatsOverviewWidget extends XotBaseStatsOverviewWidget
     protected function getStats(): array
     {
         $cacheKey = 'healthcare:dashboard:stats_overview';
-        
+
         return $this->getCachedDataWithDefaultTtl($cacheKey, function () {
             $today = Carbon::today();
             $yesterday = Carbon::yesterday();
             $currentMonth = Carbon::now()->startOfMonth();
             $previousMonth = Carbon::now()->subMonth()->startOfMonth();
-            
+
             return [
                 // Statistica base
                 $this->createStat(
@@ -182,7 +182,7 @@ class HealthcareStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-users',
                     'success'
                 ),
-                
+
                 // Statistica con trend calcolato
                 $this->createStatWithCalculatedTrend(
                     'Nuovi Pazienti',
@@ -191,7 +191,7 @@ class HealthcareStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-user-plus',
                     'info'
                 ),
-                
+
                 // Statistica da query con condizioni
                 $this->createStatFromQuery(
                     'Appuntamenti Oggi',
@@ -205,7 +205,7 @@ class HealthcareStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-calendar',
                     'primary'
                 ),
-                
+
                 // Statistica con aggregazione
                 $this->createStatFromAggregateQuery(
                     'Durata Media Visita',
@@ -218,7 +218,7 @@ class HealthcareStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'warning',
                     0
                 ),
-                
+
                 // Statistica comparativa
                 $this->createComparativeStat(
                     'Appuntamenti Mensili',
@@ -229,7 +229,7 @@ class HealthcareStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-chart-bar',
                     'primary'
                 ),
-                
+
                 // Statistica con URL
                 $this->createStatWithUrl(
                     'Gestisci Appuntamenti',
@@ -239,7 +239,7 @@ class HealthcareStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-calendar-days',
                     'warning'
                 ),
-                
+
                 // Statistica con badge per emergenze
                 $this->createStatWithBadge(
                     'Visite Urgenti',
@@ -250,7 +250,7 @@ class HealthcareStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-exclamation-triangle',
                     'danger'
                 ),
-                
+
                 // Statistica con gestione errori
                 $this->createStatWithErrorHandling(
                     'Fatturato Mensile',
@@ -305,13 +305,13 @@ class AnalyticsStatsOverviewWidget extends XotBaseStatsOverviewWidget
     protected function getStats(): array
     {
         $cacheKey = 'analytics:dashboard:stats_overview';
-        
+
         return $this->getCachedDataWithDefaultTtl($cacheKey, function () {
             $today = Carbon::today();
             $yesterday = Carbon::yesterday();
             $currentWeek = Carbon::now()->startOfWeek();
             $previousWeek = Carbon::now()->subWeek()->startOfWeek();
-            
+
             return [
                 // Statistica base
                 $this->createStat(
@@ -321,7 +321,7 @@ class AnalyticsStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-eye',
                     'info'
                 ),
-                
+
                 // Statistica con trend calcolato
                 $this->createStatWithCalculatedTrend(
                     'Visite Settimanali',
@@ -330,7 +330,7 @@ class AnalyticsStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-chart-bar',
                     'primary'
                 ),
-                
+
                 // Statistica da query con condizioni
                 $this->createStatFromQuery(
                     'Utenti Unici',
@@ -341,7 +341,7 @@ class AnalyticsStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-users',
                     'success'
                 ),
-                
+
                 // Statistica con aggregazione
                 $this->createStatFromAggregateQuery(
                     'Tempo Medio Sessione',
@@ -354,7 +354,7 @@ class AnalyticsStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'warning',
                     0
                 ),
-                
+
                 // Statistica con trend da query
                 $this->createStatWithTrendFromQuery(
                     'Conversioni',
@@ -367,7 +367,7 @@ class AnalyticsStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-arrow-trending-up',
                     'success'
                 ),
-                
+
                 // Statistica con URL
                 $this->createStatWithUrl(
                     'Report Dettagliato',
@@ -377,7 +377,7 @@ class AnalyticsStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-document-chart-bar',
                     'primary'
                 ),
-                
+
                 // Statistica con badge per performance
                 $this->createStatWithBadge(
                     'Performance Sito',
@@ -388,7 +388,7 @@ class AnalyticsStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-speedometer',
                     'success'
                 ),
-                
+
                 // Statistica con azione per esportazione
                 $this->createStatWithAction(
                     'Esporta Dati',
@@ -406,16 +406,16 @@ class AnalyticsStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-document-arrow-down',
                     'secondary'
                 ),
-                
+
                 // Statistica con gestione errori per dati complessi
                 $this->createStatWithErrorHandling(
                     'ROI Marketing',
                     function () {
                         $revenue = DB::table('orders')->where('status', 'completed')->sum('total_amount');
                         $cost = DB::table('marketing_campaigns')->sum('budget');
-                        
+
                         if ($cost == 0) return 0;
-                        
+
                         return (($revenue - $cost) / $cost) * 100;
                     },
                     '0',
@@ -461,11 +461,11 @@ class SystemStatsOverviewWidget extends XotBaseStatsOverviewWidget
     protected function getStats(): array
     {
         $cacheKey = 'system:dashboard:stats_overview';
-        
+
         return $this->getCachedDataWithDefaultTtl($cacheKey, function () {
             $today = Carbon::today();
             $yesterday = Carbon::yesterday();
-            
+
             return [
                 // Statistica base
                 $this->createStat(
@@ -475,7 +475,7 @@ class SystemStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-signal',
                     'success'
                 ),
-                
+
                 // Statistica con trend calcolato
                 $this->createStatWithCalculatedTrend(
                     'Nuovi Utenti',
@@ -484,7 +484,7 @@ class SystemStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-user-plus',
                     'info'
                 ),
-                
+
                 // Statistica da query con condizioni
                 $this->createStatFromQuery(
                     'Errori Sistema',
@@ -495,7 +495,7 @@ class SystemStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-exclamation-triangle',
                     'danger'
                 ),
-                
+
                 // Statistica con aggregazione
                 $this->createStatFromAggregateQuery(
                     'Tempo Medio Risposta',
@@ -508,7 +508,7 @@ class SystemStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'warning',
                     0
                 ),
-                
+
                 // Statistica con URL
                 $this->createStatWithUrl(
                     'Log Sistema',
@@ -518,7 +518,7 @@ class SystemStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-document-text',
                     'info'
                 ),
-                
+
                 // Statistica con badge per allarmi
                 $this->createStatWithBadge(
                     'Allarmi Attivi',
@@ -529,7 +529,7 @@ class SystemStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-bell-alert',
                     'danger'
                 ),
-                
+
                 // Statistica con gestione errori
                 $this->createStatWithErrorHandling(
                     'Utilizzo CPU',
@@ -543,7 +543,7 @@ class SystemStatsOverviewWidget extends XotBaseStatsOverviewWidget
                     'heroicon-m-cpu-chip',
                     'info'
                 ),
-                
+
                 // Statistica con trend da query
                 $this->createStatWithTrendFromQuery(
                     'Richieste API',
@@ -617,4 +617,4 @@ La classe `XotBaseStatsOverviewWidget` migliorata fornisce un set completo di st
 
 **Ultimo aggiornamento**: Dicembre 2024
 **Versione**: 2.0
-**Stato**: ✅ Completato e Documentato 
+**Stato**: ✅ Completato e Documentato

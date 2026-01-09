@@ -42,7 +42,7 @@ public static function table(Table $table): Table
 ### 2. LocationResource.php
 **File**: `laravel/Modules/Geo/app/Filament/Resources/LocationResource.php`
 
-**Violazioni**: 
+**Violazioni**:
 - Metodo `table()` presente
 - Proprietà `navigationGroup` presente
 

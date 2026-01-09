@@ -1,4 +1,4 @@
-# Regole per le Risorse Filament in 
+# Regole per le Risorse Filament in
 
 ## Panoramica
 
@@ -175,11 +175,11 @@ class DoctorResource extends XotBaseResource
             'first_name' => Forms\Components\TextInput::make('first_name')
                 ->required()
                 ->maxLength(255),
-                
+
             'last_name' => Forms\Components\TextInput::make('last_name')
                 ->required()
                 ->maxLength(255),
-                
+
             'email' => Forms\Components\TextInput::make('email')
                 ->email()
                 ->required()

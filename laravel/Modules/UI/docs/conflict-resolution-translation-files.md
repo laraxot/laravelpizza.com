@@ -28,9 +28,9 @@ return [
 
 // BRANCH (sintassi vecchia)
 return array (
-    'actions' => 
+    'actions' =>
     array (
-        'create' => 
+        'create' =>
         array (
             'label' => 'create',
         ),
@@ -66,9 +66,9 @@ return array (
 declare(strict_types=1);
 
 return array (
-  'actions' => 
+  'actions' =>
   array (
-    'create' => 
+    'create' =>
     array (
       'label' => 'create',
     ),

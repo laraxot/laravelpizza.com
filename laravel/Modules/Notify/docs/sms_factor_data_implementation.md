@@ -62,7 +62,7 @@ private SmsFactorData $smsFactorData;
 public function __construct()
 {
     $this->smsFactorData = SmsFactorData::make();
-    
+
     if (!$this->smsFactorData->token) {
         throw new Exception('Token SMSFactor non configurato in sms.php');
     }

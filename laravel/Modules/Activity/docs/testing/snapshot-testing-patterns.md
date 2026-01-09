@@ -10,17 +10,17 @@ Pattern e best practice per testare il modello `Snapshot` che implementa Event S
 test('snapshot test', function (): void {
     // 1. Arrange - Usa UUID univoco
     $uuid = Str::uuid()->toString();
-    
+
     // 2. Act - Crea snapshot
     $snapshot = Snapshot::create([
         'aggregate_uuid' => $uuid,
         'aggregate_version' => 1,
         'state' => json_encode(['data' => 'value']),
     ]);
-    
+
     // 3. Assert - Verifica comportamento
     expect($snapshot)->toBeInstanceOf(Snapshot::class);
-    
+
     // 4. ✅ Cleanup MANUALE
     $snapshot->delete();
 });
@@ -34,14 +34,14 @@ test('snapshot test', function (): void {
 test('multiple snapshots dont interfere', function () {
     $uuid1 = Str::uuid()->toString();
     $uuid2 = Str::uuid()->toString();
-    
+
     $s1 = Snapshot::create(['aggregate_uuid' => $uuid1, 'aggregate_version' => 1]);
     $s2 = Snapshot::create(['aggregate_uuid' => $uuid2, 'aggregate_version' => 1]);
-    
+
     // ✅ Isolati: UUID diversi
     expect(Snapshot::where('aggregate_uuid', $uuid1)->count())->toBe(1)
         ->and(Snapshot::where('aggregate_uuid', $uuid2)->count())->toBe(1);
-    
+
     $s1->delete();
     $s2->delete();
 });
@@ -52,7 +52,7 @@ test('multiple snapshots dont interfere', function () {
 ```php
 test('snapshot versioning maintains chronology', function () {
     $uuid = Str::uuid()->toString();
-    
+
     // Crea versioni in ordine
     $versions = collect([1, 2, 3, 4, 5])->map(fn ($v) =>
         Snapshot::create([
@@ -61,15 +61,15 @@ test('snapshot versioning maintains chronology', function () {
             'state' => json_encode(['version' => $v]),
         ])
     );
-    
+
     // Verifica ordine cronologico
     $snapshots = Snapshot::where('aggregate_uuid', $uuid)
         ->orderBy('aggregate_version')
         ->get();
-    
+
     expect($snapshots)->toHaveCount(5)
         ->and($snapshots->pluck('aggregate_version')->toArray())->toBe([1, 2, 3, 4, 5]);
-    
+
     // ✅ Cleanup collection
     $versions->each->delete();
 });
@@ -90,19 +90,19 @@ test('snapshot stores complex nested state', function () {
             'flags' => ['active' => true, 'verified' => false],
         ],
     ];
-    
+
     $snapshot = Snapshot::create([
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,
         'state' => json_encode($complexState),
     ]);
-    
+
     // Assert deep nesting
     expect($snapshot->state)->toBeArray()
         ->and($snapshot->state['user']['name'])->toBe('Test')
         ->and($snapshot->state['permissions'])->toHaveCount(3)
         ->and($snapshot->state['metadata']['flags']['active'])->toBeTrue();
-    
+
     $snapshot->delete();
 });
 ```
@@ -112,18 +112,18 @@ test('snapshot stores complex nested state', function () {
 ```php
 test('can query latest snapshot version', function () {
     $uuid = Str::uuid()->toString();
-    
+
     $s1 = Snapshot::create(['aggregate_uuid' => $uuid, 'aggregate_version' => 1]);
     $s2 = Snapshot::create(['aggregate_uuid' => $uuid, 'aggregate_version' => 5]);
     $s3 = Snapshot::create(['aggregate_uuid' => $uuid, 'aggregate_version' => 10]);
-    
+
     // Query latest
     $latest = Snapshot::where('aggregate_uuid', $uuid)
         ->orderByDesc('aggregate_version')
         ->first();
-    
+
     expect($latest->aggregate_version)->toBe(10);
-    
+
     $s1->delete();
     $s2->delete();
     $s3->delete();
@@ -136,26 +136,26 @@ test('can query latest snapshot version', function () {
 test('can filter snapshots by date range', function () {
     $yesterday = now()->subDay();
     $today = now();
-    
+
     $s1 = Snapshot::create([
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,
         'state' => json_encode(['date' => 'yesterday']),
         'created_at' => $yesterday,
     ]);
-    
+
     $s2 = Snapshot::create([
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,
         'state' => json_encode(['date' => 'today']),
         'created_at' => $today,
     ]);
-    
+
     $todaySnapshots = Snapshot::whereDate('created_at', today())->get();
-    
+
     expect($todaySnapshots)->toHaveCount(1)
         ->and($todaySnapshots->first()->state['date'])->toBe('today');
-    
+
     $s1->delete();
     $s2->delete();
 });
@@ -171,21 +171,21 @@ test('can filter snapshots by date range', function () {
 trait CleansSnapshots
 {
     protected array $createdSnapshots = [];
-    
+
     protected function createSnapshot(array $data): Snapshot
     {
         $snapshot = Snapshot::create($data);
         $this->createdSnapshots[] = $snapshot;
-        
+
         return $snapshot;
     }
-    
+
     protected function tearDown(): void
     {
         foreach ($this->createdSnapshots as $snapshot) {
             $snapshot->delete();
         }
-        
+
         parent::tearDown();
     }
 }
@@ -198,9 +198,9 @@ uses(CleansSnapshots::class);
 test('example', function () {
     $s1 = $this->createSnapshot([...]);  // ✅ Auto-tracked
     $s2 = $this->createSnapshot([...]);  // ✅ Auto-tracked
-    
+
     // Test...
-    
+
     // ✅ Cleanup automatico in tearDown()
 });
 ```
@@ -212,7 +212,7 @@ test('example', function () {
 ```php
 test('can reconstruct aggregate from snapshots', function () {
     $uuid = Str::uuid()->toString();
-    
+
     // Crea storia eventi via snapshot
     $snapshots = collect([
         ['version' => 1, 'value' => 100, 'action' => 'created'],
@@ -225,20 +225,20 @@ test('can reconstruct aggregate from snapshots', function () {
             'state' => json_encode($data),
         ])
     );
-    
+
     // Ricostruisci aggregate
     $history = Snapshot::where('aggregate_uuid', $uuid)
         ->orderBy('aggregate_version')
         ->get();
-    
+
     // Simula replay eventi
     $finalState = $history->reduce(function ($state, $snapshot) {
         return array_merge($state, $snapshot->state);
     }, []);
-    
+
     expect($finalState['value'])->toBe(200)
         ->and($finalState['action'])->toBe('finalized');
-    
+
     $snapshots->each->delete();
 });
 ```
@@ -257,7 +257,6 @@ test('can reconstruct aggregate from snapshots', function () {
 
 ---
 
-**Pattern**: Manual Cleanup con UUID Isolation  
-**Status**: ✅ STANDARD PROGETTO  
+**Pattern**: Manual Cleanup con UUID Isolation
+**Status**: ✅ STANDARD PROGETTO
 **Ultimo aggiornamento**: 27 Ottobre 2025
-

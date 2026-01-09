@@ -1,4 +1,4 @@
-# Actions Structure 
+# Actions Structure
 
 ## Directory Structure
 

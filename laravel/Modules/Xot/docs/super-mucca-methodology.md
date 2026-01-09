@@ -193,7 +193,6 @@ Vedi [Intelligent Solution Rule](./intelligent-solution-rule.md) per dettagli co
 
 ---
 
-**🔄 Ultimo aggiornamento**: Gennaio 2025  
-**📦 Versione**: 1.0.0  
+**🔄 Ultimo aggiornamento**: Gennaio 2025
+**📦 Versione**: 1.0.0
 **🐄 Metodologia**: Super Mucca ✅
-

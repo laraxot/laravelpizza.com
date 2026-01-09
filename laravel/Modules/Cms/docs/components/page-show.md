@@ -25,10 +25,10 @@ Il componente `x-page.show` è un componente Livewire che sostituisce la funzion
 
 ### Esempio completo
 ```blade
-<x-page.show 
-    slug="chi-siamo" 
-    :theme="$currentTheme" 
-    :cache="false" 
+<x-page.show
+    slug="chi-siamo"
+    :theme="$currentTheme"
+    :cache="false"
 />
 ```
 
@@ -64,7 +64,7 @@ Il componente Page/Show può essere facilmente integrato con altri componenti Li
 ```blade
 <div class="container">
     <x-page.show slug="home" />
-    
+
     <x-page.comments :page-id="$pageId" />
 </div>
 ```
@@ -78,4 +78,4 @@ Per visualizzare informazioni di debug sul caricamento della pagina, è possibil
 
 ## Collegamenti
 - [Documentazione Livewire](https://laravel-livewire.com/docs)
-- [Gestione Pagine CMS](/Modules/Cms/docs/content.md) 
+- [Gestione Pagine CMS](/Modules/Cms/docs/content.md)

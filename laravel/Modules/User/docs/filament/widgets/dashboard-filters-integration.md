@@ -20,12 +20,12 @@ protected function getData(): array
     // Accesso sicuro ai filtri della pagina con fallback appropriati
     $startDate = null;
     $endDate = null;
-    
+
     // Verifica se i filtri sono disponibili e validi
     if (is_array($this->filters) && !empty($this->filters)) {
-        $startDate = !empty($this->filters['startDate']) ? 
+        $startDate = !empty($this->filters['startDate']) ?
             Carbon::parse($this->filters['startDate']) : null;
-        $endDate = !empty($this->filters['endDate']) ? 
+        $endDate = !empty($this->filters['endDate']) ?
             Carbon::parse($this->filters['endDate']) : null;
     }
     // Fallback ai valori di default se i filtri non sono disponibili
@@ -56,7 +56,7 @@ $endDate = Carbon::parse($this->filters['endDate']); // Pericoloso
 ### Flusso di Propagazione
 Dashboard (HasFiltersForm)
     ↓ (form filters)
-    ↓ 
+    ↓
 Widget (InteractsWithPageFilters)
     ↓ ($this->filters)
     ↓

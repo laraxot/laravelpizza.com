@@ -78,7 +78,7 @@ Le traduzioni italiane nel file `opening_hours.php` contenevano errori grammatic
 'morning_hours' => 'Orario mattutino',
 'afternoon_hours' => 'Orario pomeridiano',
 
-// Dopo  
+// Dopo
 'morning_hours' => 'Orari del mattino',
 'afternoon_hours' => 'Orari del pomeriggio',
 ```

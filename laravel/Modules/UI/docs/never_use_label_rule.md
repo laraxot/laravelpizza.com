@@ -183,10 +183,4 @@ rules:
 
 - SEMPRE testare le traduzioni prima del commit
 
-
-
 *Ultimo aggiornamento: 2025-01-06*
-
-
-
-

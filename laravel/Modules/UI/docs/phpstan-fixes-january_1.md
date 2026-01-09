@@ -53,4 +53,3 @@
 - **Errori PHPStan**: 0
 - **File corretti**: 9
 - **Pattern applicati**: Type narrowing, Array safety, Closure hints
-

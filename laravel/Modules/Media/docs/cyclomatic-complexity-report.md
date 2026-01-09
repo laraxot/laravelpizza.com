@@ -1,6 +1,6 @@
 # Cyclomatic Complexity Report - Module: Media
 
-**Generated:** 2025-10-01 19:44:11  
+**Generated:** 2025-10-01 19:44:11
 **Analyzer:** Super Mucca 🐮
 
 ---
@@ -21,7 +21,7 @@
 
 ### What is Cyclomatic Complexity?
 
-La complessità ciclomatica è una metrica del software che misura la complessità di un programma. 
+La complessità ciclomatica è una metrica del software che misura la complessità di un programma.
 Viene calcolata contando il numero di percorsi di esecuzione indipendenti attraverso il codice sorgente.
 
 ### Interpretation Guidelines

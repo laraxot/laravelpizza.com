@@ -1,6 +1,6 @@
 # Troubleshooting: Livewire 404 Error
 
-**Data**: 11 Novembre 2025  
+**Data**: 11 Novembre 2025
 **Errore**: `404 Not Found` su `/livewire/update`
 
 ## 🔍 Problema
@@ -37,7 +37,7 @@ Modificare `.env` per riflettere l'URL effettivo di accesso:
 # Se accedi tramite 127.0.0.1:8000
 APP_URL=http://127.0.0.1:8000
 
-# Se accedi tramite localhost:8000  
+# Se accedi tramite localhost:8000
 APP_URL=http://localhost:8000
 
 # Se accedi tramite dominio locale
@@ -173,6 +173,6 @@ php artisan tinker --execute="echo route('livewire.update');"
 
 ---
 
-**Ultimo aggiornamento**: 11 Novembre 2025  
-**Modulo**: Xot  
+**Ultimo aggiornamento**: 11 Novembre 2025
+**Modulo**: Xot
 **Categoria**: Troubleshooting

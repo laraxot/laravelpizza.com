@@ -1,7 +1,7 @@
 # Mustache Variables - SpatieEmail Template System
 
-**Date**: 2025-12-19  
-**Module**: Notify  
+**Date**: 2025-12-19
+**Module**: Notify
 **Status**: ✅ Documentazione Completa
 
 ## Overview
@@ -347,5 +347,5 @@ $email->mergeData([
 
 ---
 
-**Creato per facilitare lo sviluppo di template email professionali**  
+**Creato per facilitare lo sviluppo di template email professionali**
 *Ultimo aggiornamento: 2025-12-19*

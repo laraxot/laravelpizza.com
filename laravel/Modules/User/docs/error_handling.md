@@ -18,10 +18,10 @@ public function action()
         // Logica principale
         $this->validate([...]);
         $result = $this->performAction();
-        
+
         // Evento di successo
         Event::dispatch('auth.action.successful', [$result]);
-        
+
         return redirect()->route('dashboard');
     } catch (ValidationException $e) {
         // Gestione errori di validazione
@@ -34,7 +34,7 @@ public function action()
             'action' => 'action_name',
             'trace' => $e->getTraceAsString()
         ]);
-        
+
         // Notifica all'utente
         session()->flash('error', __('Si è verificato un errore. Riprova più tardi.'));
         return null;
@@ -69,7 +69,7 @@ protected function addError($field, $message)
             <span class="block sm:inline">{{ session('error') }}</span>
         </div>
     @endif
-    
+
     @if (session('success'))
         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
             <span class="block sm:inline">{{ session('success') }}</span>
@@ -111,17 +111,17 @@ public function login()
             'email' => 'required|email',
             'password' => 'required'
         ]);
-        
+
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
             Event::dispatch('auth.login.successful', [auth()->user()]);
             return redirect()->intended(route('dashboard'));
         }
-        
+
         Log::warning('Tentativo di login fallito', [
             'email' => $this->email,
             'ip' => request()->ip()
         ]);
-        
+
         $this->addError('email', __('Credenziali non valide'));
     } catch (\Exception $e) {
         Log::error('Errore durante il login: ' . $e->getMessage());
@@ -140,16 +140,16 @@ public function register()
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8|confirmed'
         ]);
-        
+
         $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
             'password' => Hash::make($this->password)
         ]);
-        
+
         Event::dispatch('auth.register.successful', [$user]);
         Auth::login($user);
-        
+
         return redirect()->route('dashboard');
     } catch (ValidationException $e) {
         foreach ($e->errors() as $field => $messages) {
@@ -166,4 +166,4 @@ public function register()
 
 - [Documentazione Volt](./VOLT_LOGOUT.md)
 - [Best Practices Routing](./ROUTING_BEST_PRACTICES.md)
-- [Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md) 
+- [Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md)

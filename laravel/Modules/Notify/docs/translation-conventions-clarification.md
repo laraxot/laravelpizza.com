@@ -44,7 +44,7 @@ Dopo un'analisi approfondita, è stato determinato che:
    - L'uso della chiave `navigation` è intenzionale e necessario per il funzionamento del modulo Notify
 
 2. **Eccezioni alle convenzioni generali**
-   - Il modulo Notify rappresenta un'eccezione alle convenzioni generali di 
+   - Il modulo Notify rappresenta un'eccezione alle convenzioni generali di
    - Il modulo Notify rappresenta un'eccezione alle convenzioni generali di SaluteOra
    - Questa eccezione è documentata e intenzionale
 

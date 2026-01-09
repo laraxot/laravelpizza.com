@@ -30,7 +30,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class UserResource extends XotBaseResource
 {
     protected static ?string $model = User::class;
-    
+
     // Il metodo table() e form() NON devono essere sovrascritti
     // se non per aggiungere logica specifica, ma la base
     // è già fornita da XotBaseResource.

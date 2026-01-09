@@ -1,7 +1,7 @@
 # Troubleshooting - Documentazione Consolidata DRY + KISS
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTI i problemi comuni e le soluzioni del progetto
-> 
+>
 > **🔗 Riferimenti**: [best-practices-consolidated.md](best-practices-consolidated.md) | [phpstan-consolidated.md](phpstan-consolidated.md)
 
 ## 🚨 STOP DUPLICAZIONE!
@@ -49,7 +49,7 @@ protected function getUserTypeOptions() {} // ERRORE: metodo orfano
 // ✅ CORRETTO
 class Example {
     public function foo() {}
-    
+
     protected function getUserTypeOptions() {} // Metodo dentro la classe
 } // Ultima parentesi graffa
 ```
@@ -379,7 +379,7 @@ Test non isolati o dipendenze condivise.
 class ExampleTest extends TestCase
 {
     use RefreshDatabase; // Garantisce database pulito
-    
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -434,7 +434,6 @@ public function test_b(): void
 
 // Codice remoto
 ```
-
 
 **Soluzione**
 1. **Analizzare i conflitti**:

@@ -9,7 +9,7 @@ Modules\\User\\Database\\Factories
 Modules\\User\\Database\\Seeders
 - **Pacchetto Composer**: laraxot/module_user_fila3
 Marco Sottana
-- **Dipendenze**: flowframe/laravel-trend * jenssegers/agent * laravel/passport * socialiteproviders/auth0 * spatie/laravel-personal-data-export * repositories type path url ../Xot type path url ../Tenant type path url ../UI 
+- **Dipendenze**: flowframe/laravel-trend * jenssegers/agent * laravel/passport * socialiteproviders/auth0 * spatie/laravel-personal-data-export * repositories type path url ../Xot type path url ../Tenant type path url ../UI
 - **Totale file PHP**: 673
 - **Totale classi/interfacce**: 300
 
@@ -611,7 +611,6 @@ tests_old
 - [Analisi strutturale complessiva](/project_docs/phpstan/modules_structure_analysis.md)
 - [Report PHPStan](/project_docs/phpstan/)
 
-
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/project_docs/structure.md)
 * [structure.md](../../../Gdpr/project_docs/structure.md)
@@ -629,4 +628,3 @@ tests_old
 * [structure.md](../../../Cms/project_docs/structure.md)
 * [structure.md](../../../Cms/project_docs/themes/structure.md)
 * [structure.md](../../../Cms/project_docs/components/structure.md)
-

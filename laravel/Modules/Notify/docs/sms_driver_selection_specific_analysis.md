@@ -80,7 +80,7 @@ class SmsService
         }
 
         $driver = Config::get('sms.default', 'smsfactor');
-        
+
         return match ($driver) {
             'smsfactor' => app(SendSmsFactorSMSAction::class),
             'twilio' => app(SendTwilioSMSAction::class),
@@ -99,4 +99,4 @@ Questa soluzione:
 - Centralizza sia la validazione che la selezione del driver
 - È più facile da testare e mantenere
 - Non viola i principi SOLID
-- Mantiene `SmsData` focalizzato sulla sua responsabilità primaria 
+- Mantiene `SmsData` focalizzato sulla sua responsabilità primaria

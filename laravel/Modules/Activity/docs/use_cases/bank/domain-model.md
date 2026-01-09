@@ -42,4 +42,4 @@ class DepositMoney
         public float $amount
     ) {}
 }
-``` 
+```

@@ -70,7 +70,7 @@ final class SendNetfunSMSAction implements SmsActionInterface
 
 ## Principi Guida
 
-1. **Separazione delle Responsabilità**: 
+1. **Separazione delle Responsabilità**:
    - Le interfacce definiscono i contratti
    - Le implementazioni forniscono l'implementazione specifica
 

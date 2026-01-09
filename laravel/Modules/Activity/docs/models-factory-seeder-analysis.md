@@ -9,7 +9,7 @@
 
 ### Factory Presenti
 - ✅ **ActivityFactory** - Presente
-- ✅ **StoredEventFactory** - Presente  
+- ✅ **StoredEventFactory** - Presente
 - ✅ **SnapshotFactory** - Presente
 
 ### Seeder Presenti
@@ -33,7 +33,7 @@
 - **Integrazione**: Utilizzato da Spatie ActivityLog package
 - **Necessità**: CRITICA per compliance e audit
 
-#### 2. StoredEvent  
+#### 2. StoredEvent
 - **Utilizzo**: Alto - Event Sourcing
 - **Business Logic**: Persistenza eventi per ricostruzione stato
 - **Integrazione**: Utilizzato da Spatie Event Sourcing package
@@ -68,4 +68,3 @@ Il modulo Activity è completamente configurato con tutte le factory necessarie 
 ---
 *Ultimo aggiornamento: 2025-01-06*
 *Analizzato da: Sistema di analisi automatica moduli*
-

@@ -31,4 +31,3 @@ php artisan module_cms:show-versions
 ## Collegamenti tra versioni di upgrade.md
 * [upgrade.md](laravel/Modules/Lang/docs/upgrade.md)
 * [upgrade.md](laravel/Modules/Cms/docs/upgrade.md)
-

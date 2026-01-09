@@ -78,7 +78,7 @@ public function definition(): array
 
 ### Laravel Faker Standard
 - `$this->faker->unique()->safeEmail()` - user@example.org
-- `$this->faker->unique()->email()` - user@example.com  
+- `$this->faker->unique()->email()` - user@example.com
 - `$this->faker->unique()->freeEmail()` - user@gmail.com
 - `$this->faker->unique()->companyEmail()` - user@company.com
 
@@ -166,5 +166,3 @@ public function definition(): array
 ---
 
 **⚠️ RICORDA SEMPRE: Questa regola è SACRA e non può essere violata. Ogni factory deve usare SEMPRE faker per le email, MAI "@example.com"!**
-
-

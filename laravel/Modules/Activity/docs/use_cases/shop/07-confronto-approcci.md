@@ -32,4 +32,4 @@
 ## 7. Alternative
 - CRUD tradizionale: solo per casi senza audit o rollback.
 - Event sourcing + CQRS: per audit, rollback, proiezioni avanzate.
-- Command bus: per disaccoppiamento e cross-cutting concerns. 
+- Command bus: per disaccoppiamento e cross-cutting concerns.

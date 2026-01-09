@@ -56,4 +56,4 @@ throw new \Illuminate\Validation\ValidationException(
 - Questo genera errori runtime e non è supportato.
 
 ## Approfondimenti
-- [Patient: errors/validation.md](../../Patient/docs/errors/validation.md) 
+- [Patient: errors/validation.md](../../Patient/docs/errors/validation.md)

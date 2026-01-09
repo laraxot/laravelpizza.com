@@ -81,7 +81,7 @@ Per personalizzare un tema:
 5. **Provider**: Registra solo ciò che è necessario
 6. **Blocchi**: Crea blocchi riutilizzabili
 7. **Layout**: Mantieni i layout flessibili
-8. **Documentazione**: Documenta tutto accuratamente 
+8. **Documentazione**: Documenta tutto accuratamente
 ## Collegamenti tra versioni di themes.md
 * [themes.md](docs/rules/themes.md)
 * [themes.md](../../../Xot/project_docs/themes.md)
@@ -89,5 +89,3 @@ Per personalizzare un tema:
 
 * [README.md Tema One](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Themes/One/project_docs/README.md)
 * [Convenzioni Namespace Tema One](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Themes/One/project_docs/namespace-conventions.md)b6f667c (.)
-
-

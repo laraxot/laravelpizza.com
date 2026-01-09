@@ -28,9 +28,7 @@
 ### Regole Generali
 - [Regole Traduzioni](../../Xot/docs/translations.md) - Documentazione base sulle traduzioni
 
-
 ### Versione Incoming
-
 
 ---
 
@@ -295,11 +293,10 @@ public function testTranslations()
 ```php
 // Accesso alle traduzioni
 $translation = Lang::get('patient.registration.label');
-``` 
+```
 
 ### Versione Incoming
 
-Le modifiche vengono tracciate nel repository GitHub. 
+Le modifiche vengono tracciate nel repository GitHub.
 
 ---
-

@@ -9,7 +9,6 @@ install:
 cmd:
 ./vendor/bin/phpstan analyse ./Modules/Xot
 
-
 //----------------------------------------------------------
 https://github.com/phan/phan/wiki/Getting-Started
 
@@ -44,7 +43,6 @@ $ wget https://phar.phpunit.de/phpcpd.phar
 
 $ php phpcpd.phar --version
 
-
 //---------------------
 https://scrutinizer-ci.com/docs/tools/php/php-scrutinizer/
 
@@ -72,10 +70,6 @@ https://geekflare.com/php-security-scanner/
 https://hub.docker.com/r/adamculp/php-code-quality
 https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html
 
-
-
-
-
 https://github.com/enlightn/enlightn
 
  "edgedesign/phpqa": "^1.23",
@@ -83,15 +77,3 @@ https://github.com/enlightn/enlightn
  "phan/phan": "^4.0",
         "phpmetrics/phpmetrics": "^2.7",
         "phpunit/php-code-coverage": "^9.2",
-
-
-
-
-
-
-
-
-
-
-
-

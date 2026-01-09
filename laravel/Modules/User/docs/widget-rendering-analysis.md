@@ -21,7 +21,7 @@ Il login dovrebbe apparire come in https://docs.italia.it/accounts/login/ - desi
 class LoginWidget extends XotBaseWidget
 {
     protected string $view = 'pub_theme::filament.widgets.auth.login';
-    
+
     public function getFormSchema(): array
     {
         return [
@@ -30,7 +30,7 @@ class LoginWidget extends XotBaseWidget
             Checkbox::make('remember'),
         ];
     }
-    
+
     public function login(): void {
         // Logic di autenticazione
     }
@@ -72,16 +72,16 @@ Il widget Filament 4 richiede che il **form venga esplicitamente renderizzato** 
 <x-filament-widgets::widget>
     <div class="login-container">
         <h2>Login</h2>
-        
+
         <!-- ESSENZIALE: Renderizzare esplicitamente il form -->
         <form wire:submit="login">
             {{ $this->form }}
-            
+
             <x-filament::button type="submit" class="w-full">
                 {{ __('user::login.submit') }}
             </x-filament::button>
         </form>
-        
+
         {{ $this->notifications() }}
     </div>
 </x-filament-widgets::widget>
@@ -135,7 +135,7 @@ Il widget Filament 4 richiede che il **form venga esplicitamente renderizzato** 
 ```blade
 <x-filament-widgets::widget class="fi-wi-login">
     <div class="login-widget-container">
-        
+
         {{-- Header Branding --}}
         <div class="text-center mb-6">
             <div class="login-icon mx-auto mb-4">
@@ -150,44 +150,44 @@ Il widget Filament 4 richiede che il **form venga esplicitamente renderizzato** 
                 {{ __('user::login.subtitle') }}
             </p>
         </div>
-        
+
         {{-- Login Form --}}
         <div class="login-form-wrapper bg-white rounded-lg shadow-sm p-6 border border-italia-gray-200">
-            
+
             {{-- FORM FILAMENT - ESSENZIALE --}}
             <form wire:submit="login" class="space-y-4">
-                
+
                 {{-- Renderizza tutti i campi definiti in getFormSchema() --}}
                 {{ $this->form }}
-                
+
                 {{-- Actions --}}
                 <div class="flex items-center justify-between mt-6">
                     {{-- Remember Me già incluso nel form --}}
-                    
+
                     @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}" 
+                        <a href="{{ route('password.request') }}"
                            class="text-sm text-primary-600 hover:text-primary-700">
                             {{ __('user::login.forgot_password') }}
                         </a>
                     @endif
                 </div>
-                
+
                 {{-- Submit Button --}}
-                <x-filament::button 
-                    type="submit" 
+                <x-filament::button
+                    type="submit"
                     class="w-full mt-4"
                     color="primary"
                     size="lg">
                     {{ __('user::login.submit') }}
                 </x-filament::button>
-                
+
             </form>
-            
+
             {{-- Notifications --}}
             {{ $this->notifications() }}
-            
+
         </div>
-        
+
         {{-- Registration CTA --}}
         @if (Route::has('register'))
             <div class="text-center mt-6">
@@ -199,22 +199,22 @@ Il widget Filament 4 richiede che il **form venga esplicitamente renderizzato** 
                 </p>
             </div>
         @endif
-        
+
         {{-- SPID/CIE (Future) --}}
         <div class="mt-6 pt-6 border-t border-italia-gray-200">
             <p class="text-xs text-center text-italia-gray-500 mb-3">
                 {{ __('user::login.or_login_with') }}
             </p>
-            
+
             <div class="flex gap-3">
-                <button type="button" disabled 
+                <button type="button" disabled
                         class="flex-1 btn btn-outline-primary opacity-50 cursor-not-allowed">
                     <img src="/images/spid-icon.svg" alt="SPID" class="h-5 w-5 mr-2">
                     SPID
                     <span class="ml-2 text-xs">({{ __('common.coming_soon') }})</span>
                 </button>
-                
-                <button type="button" disabled 
+
+                <button type="button" disabled
                         class="flex-1 btn btn-outline-primary opacity-50 cursor-not-allowed">
                     <img src="/images/cie-icon.svg" alt="CIE" class="h-5 w-5 mr-2">
                     CIE 3.0
@@ -222,7 +222,7 @@ Il widget Filament 4 richiede che il **form venga esplicitamente renderizzato** 
                 </button>
             </div>
         </div>
-        
+
     </div>
 </x-filament-widgets::widget>
 
@@ -270,10 +270,10 @@ class LoginWidget extends XotBaseWidget
 {
     // ✅ Buono: Vista tema personalizzabile
     protected string $view = 'pub_theme::filament.widgets.auth.login';
-    
+
     // ✅ Buono: Data property per form state
     public ?array $data = [];
-    
+
     // ✅ Buono: Schema form chiaro
     public function getFormSchema(): array
     {
@@ -283,23 +283,23 @@ class LoginWidget extends XotBaseWidget
                 ->required()
                 ->autofocus()
                 ->placeholder(__('user::login.email_placeholder')),
-            
+
             TextInput::make('password')
                 ->password()
                 ->required()
                 ->revealable()
                 ->placeholder(__('user::login.password_placeholder')),
-            
+
             Checkbox::make('remember')
                 ->label(__('user::login.remember_me')),
         ];
     }
-    
+
     // ✅ Buono: Gestione errori completa
     public function login(): void
     {
         $data = $this->form->getState();
-        
+
         if (Auth::attempt([
             'email' => $data['email'],
             'password' => $data['password'],
@@ -308,7 +308,7 @@ class LoginWidget extends XotBaseWidget
             $this->redirect(route('dashboard'));
             return;
         }
-        
+
         $this->addError('email', __('auth.failed'));
     }
 }
@@ -375,7 +375,7 @@ return [
 
 **Problema**: Click su submit non fa nulla
 
-**Soluzione**: 
+**Soluzione**:
 1. Verifica `wire:submit="login"` nel form
 2. Controlla che il metodo `login()` esista nel widget
 3. Verifica CSRF token presente (automatico in Livewire)
@@ -398,11 +398,7 @@ return [
 
 ---
 
-**Creato**: 14 Ottobre 2025  
-**Autore**: Super Mucca Documentation Team  
-**Status**: ✅ Validato e Testato  
+**Creato**: 14 Ottobre 2025
+**Autore**: Super Mucca Documentation Team
+**Status**: ✅ Validato e Testato
 **Versione**: 1.0.0
-
-
-
-

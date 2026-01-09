@@ -55,7 +55,7 @@ return [
 ## File Modificati
 
 - `Modules/Geo/database/factories/ComuneFactory.php` (ricreato con tipizzazione corretta)
-- `Modules/Geo/database/factories/ProvinceFactory.php` (ricreato con tipizzazione corretta)  
+- `Modules/Geo/database/factories/ProvinceFactory.php` (ricreato con tipizzazione corretta)
 - `Modules/Geo/database/factories/RegionFactory.php` (nuovo)
 - `Modules/Geo/app/Models/Region.php` (aggiunto HasFactory trait)
 - `Modules/Geo/app/Models/Province.php` (aggiunto HasFactory trait)

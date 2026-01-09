@@ -16,7 +16,6 @@ MailTemplateResource gestisce i template delle email nel sistema. Estende `XotBa
 
 ---
 
-
 ### Schema del Form
 
 ```php
@@ -31,7 +30,6 @@ public static function getFormSchema(): array
 
 ### Versione HEAD
 
-
 ### Versione Incoming
 
                 Forms\Components\TextInput::make('code')
@@ -41,7 +39,6 @@ public static function getFormSchema(): array
 
                 Forms\Components\Textarea::make('description')
                     ->maxLength(65535),
-
 
 ---
 
@@ -222,7 +219,6 @@ public static function getTableActions(): array
 
 ### Versione HEAD
 
-
 ### Versione Incoming
 
 4. **Validazione JSON**
@@ -234,7 +230,6 @@ public static function getTableActions(): array
    - Tutte le traduzioni in file dedicati
    - Struttura gerarchica delle traduzioni
    - Supporto per tooltip e placeholder
-
 
 ---
 
@@ -256,13 +251,13 @@ public static function getTableActions(): array
 4. Le azioni della tabella seguono le convenzioni standard
 ### Versione HEAD
 
-5. Non ci sono override non necessari di metodi 
+5. Non ci sono override non necessari di metodi
 
 ### Versione Incoming
 
 5. Non ci sono override non necessari di metodi
 6. I campi JSON sono validati correttamente
-7. Le traduzioni seguono la struttura corretta 
+7. Le traduzioni seguono la struttura corretta
 ## Collegamenti tra versioni di filament-resources.md
 * [filament-resources.md](../../../../project_docs/tecnico/filament/filament-resources.md)
 * [filament-resources.md](../../../../project_docs/regole/filament-resources.md)
@@ -271,6 +266,4 @@ public static function getTableActions(): array
 * [filament-resources.md](../../Patient/project_docs/filament-resources.md)
 * [filament-resources.md](../../Cms/project_docs/filament-resources.md)
 
-
 ---
-

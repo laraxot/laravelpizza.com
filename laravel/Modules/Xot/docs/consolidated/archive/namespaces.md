@@ -83,10 +83,9 @@ it('uses correct namespace for view models', function () {
 - [PSR-4 Autoloading Standard](https://www.php-fig.org/psr/psr-4/)
 - [Laravel Module Development](https://laravel.com/project_docs/10.x/packages)
 - [Best Practices](../best-practices/README.md)
-- [Architettura Modulare](../architecture.md) 
+- [Architettura Modulare](../architecture.md)
 
 ## Collegamenti tra versioni di namespaces.md
 * [namespaces.md](docs/conventions/namespaces.md)
 * [namespaces.md](../../../Xot/project_docs/conventions/namespaces.md)
 * [namespaces.md](../../../Cms/project_docs/conventions/namespaces.md)
-

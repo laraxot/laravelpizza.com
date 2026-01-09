@@ -3,48 +3,52 @@
 declare(strict_types=1);
 
 return [
+    'navigation' => [
+        'label' => 'Utente Socialite',
+        'group' => 'Autenticazione',
+        'icon' => 'heroicon-o-user-group',
+        'sort' => 40,
+    ],
+    'label' => 'Utente Socialite',
+    'plural_label' => 'Utenti Socialite',
     'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'user_id' => [
+            'label' => 'Utente',
+        ],
         'provider' => [
-            'label' => 'provider',
+            'label' => 'Provider',
         ],
         'provider_id' => [
-            'label' => 'provider_id',
+            'label' => 'ID Provider',
         ],
         'name' => [
-            'label' => 'name',
+            'label' => 'Nome',
         ],
         'email' => [
-            'label' => 'email',
+            'label' => 'Email',
         ],
         'avatar' => [
-            'label' => 'avatar',
+            'label' => 'Avatar',
         ],
-        'create' => [
-            'label' => 'create',
+        'token' => [
+            'label' => 'Token',
         ],
-        'attach' => [
-            'label' => 'attach',
+        'refresh_token' => [
+            'label' => 'Token di aggiornamento',
         ],
-        'layout' => [
-            'label' => 'layout',
-        ],
-        'view' => [
-            'label' => 'view',
-        ],
-        'edit' => [
-            'label' => 'edit',
-        ],
-        'detach' => [
-            'label' => 'detach',
-        ],
-        'toggleColumns' => [
-            'label' => 'toggleColumns',
+        'expires_at' => [
+            'label' => 'Scade il',
         ],
     ],
-    'navigation' => [
-        'sort' => 89,
-        'icon' => 'socialite user.navigation',
-        'group' => 'socialite user.navigation',
-        'label' => 'socialite user.navigation',
+    'actions' => [
+        'link_provider' => [
+            'label' => 'Collega provider',
+        ],
+        'unlink_provider' => [
+            'label' => 'Scollega provider',
+        ],
     ],
 ];

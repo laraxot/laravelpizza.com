@@ -156,7 +156,7 @@ class XotBaseContentPage
 - Schema definition
 - Resolvers
 - Caching
-- Error handling 
+- Error handling
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
 * [README.md](bashscripts/docs/it/README.md)
@@ -234,4 +234,3 @@ class XotBaseContentPage
 * [README.md](laravel/Modules/Cms/docs/components/README.md)
 * [README.md](laravel/Themes/Two/docs/README.md)
 * [README.md](laravel/Themes/One/docs/README.md)
-

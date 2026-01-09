@@ -6,7 +6,7 @@
 ```php
 // ❌ SBAGLIATO - Mai estendere direttamente
 class MyPage extends ViewRecord
-class MyPage extends CreateRecord  
+class MyPage extends CreateRecord
 class MyPage extends EditRecord
 class MyPage extends ListRecords
 class MyPage extends Page
@@ -46,14 +46,14 @@ use Filament\Resources\Resource;
 class MyResource extends XotBaseResource
 {
     protected static ?string $model = MyModel::class;
-    
+
     public static function getFormSchema(): array
     {
         return [
             // Form components
         ];
     }
-    
+
     // ❌ NON includere getTableColumns in XotBaseResource
     // public static function getTableColumns(): array
 }
@@ -79,7 +79,7 @@ class MyPage extends XotBasePage
     // protected static ?string $navigationIcon;
     // protected static ?string $title;
     // protected static ?string $navigationLabel;
-    
+
     public function getFormSchema(): array
     {
         return [
@@ -134,7 +134,7 @@ use Spatie\QueueableAction\QueueableAction;
 class MyAction
 {
     use QueueableAction;
-    
+
     public function execute()
     {
         // Action logic
@@ -150,7 +150,6 @@ class MyAction
 
 declare(strict_types=1);
 
-
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
@@ -165,11 +164,11 @@ class ViewQuestionChart extends XotBaseViewRecord
             Action::make('edit')
                 ->icon('heroicon-o-pencil')
                 ->url(fn () => static::getResource()::getUrl('edit', ['record' => $this->record])),
-            
+
             Action::make('generate')
                 ->icon('heroicon-o-chart-bar')
                 ->action('generateChart'),
-            
+
             DeleteAction::make()
                 ->requiresConfirmation(),
         ];
@@ -195,7 +194,6 @@ class ViewQuestionChart extends XotBaseViewRecord
 
 declare(strict_types=1);
 
-
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
@@ -216,11 +214,11 @@ class QuestionChartFilterWidget extends XotBaseWidget
             DatePicker::make('dateFrom')
                 ->live()
                 ->afterStateUpdated(fn () => $this->updateFilters()),
-            
+
             DatePicker::make('dateTo')
                 ->live()
                 ->afterStateUpdated(fn () => $this->updateFilters()),
-            
+
             Select::make('answerFilter')
                 ->options([
                     'all' => 'All Answers',
@@ -249,7 +247,6 @@ class QuestionChartFilterWidget extends XotBaseWidget
 <?php
 
 declare(strict_types=1);
-
 
 class QuestionChartResource extends XotBaseResource
 {
@@ -354,5 +351,3 @@ BadgeColumn::make('status')
 - [Spatie Queueable Actions](https://github.com/spatie/laravel-queueable-action)
 
 Queste regole garantiscono coerenza con l'architettura Laraxot e compatibilità con Filament 4.
-
-

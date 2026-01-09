@@ -10,7 +10,7 @@ Questa cartella contiene le convenzioni di nomenclatura e le regole di stile uti
 
 ## Note
 
-Queste convenzioni devono essere seguite per mantenere la coerenza del codice in tutto il progetto. 
+Queste convenzioni devono essere seguite per mantenere la coerenza del codice in tutto il progetto.
 ## Collegamenti tra versioni di README.md
 * [README.md](bashscripts/docs/README.md)
 * [README.md](bashscripts/docs/it/README.md)
@@ -88,4 +88,3 @@ Queste convenzioni devono essere seguite per mantenere la coerenza del codice in
 * [README.md](../../../Cms/docs/components/README.md)
 * [README.md](../../../../Themes/Two/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)
-

@@ -1,8 +1,8 @@
 # PHPStan Level 10 - Modulo Tenant
 
-**Data Analisi**: 5 Novembre 2025  
-**Analista**: AI Assistant  
-**Livello PHPStan**: 10 (Massimo)  
+**Data Analisi**: 5 Novembre 2025
+**Analista**: AI Assistant
+**Livello PHPStan**: 10 (Massimo)
 **Risultato**: ✅ SUCCESSO COMPLETO
 
 ---
@@ -64,7 +64,7 @@ Il modulo Tenant ha raggiunto **PHPStan livello 10 senza correzioni** grazie all
 
 **Models/** (8 file)
 - `Models/BaseTenant.php` ✅
-- `Models/Domain.php` ✅  
+- `Models/Domain.php` ✅
 - `Models/Tenant.php` ✅
 - `Models/Policies/DomainPolicy.php` ✅
 - `Models/Policies/TenantBasePolicy.php` ✅
@@ -138,8 +138,8 @@ PHPMD non riesce a parsare:
 use Modules\Xot\Actions\Array\SaveArrayAction;
 ```
 
-**Causa**: "Array" è parola riservata PHP, parser PHPMD limitato  
-**Impatto**: Nessuno - PHPStan (più avanzato) gestisce correttamente  
+**Causa**: "Array" è parola riservata PHP, parser PHPMD limitato
+**Impatto**: Nessuno - PHPStan (più avanzato) gestisce correttamente
 **Soluzione**: Nessuna azione richiesta, è limite del tool PHPMD
 
 ### Warning PHPMD Rilevati (accettabili)
@@ -181,7 +181,7 @@ protected $connection = 'tenant';
 class Domain extends BaseModel
 {
     use Sushi;
-    
+
     public function getRows(): array
     {
         return app(GetDomainsArrayAction::class)->execute();
@@ -252,4 +252,3 @@ Il modulo Tenant rappresenta l'**eccellenza architettuale** del progetto Laraxot
 **Collegamenti Root**:
 - [PHPStan Guidelines](/docs/code-quality/phpstan.md)
 - [Quality Tooling](/docs/development/quality-tools.md)
-

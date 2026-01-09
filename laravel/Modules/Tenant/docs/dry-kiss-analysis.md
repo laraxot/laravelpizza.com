@@ -15,7 +15,7 @@ abstract class BaseModel extends EloquentModel  // ⚠️
 
 **Raccomandazione:** Investigare PERCHÉ e se possibile unificare
 
-**Priority:** 🔴 ALTA  
+**Priority:** 🔴 ALTA
 **Effort:** 1 settimana
 
 ## ⚠️ MIGLIORAMENTI
@@ -23,4 +23,3 @@ abstract class BaseModel extends EloquentModel  // ⚠️
 2. Services (6): Audit vs Actions (2)
 
 **Status:** 🟡 RICHIEDE ATTENZIONE
-

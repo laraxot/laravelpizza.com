@@ -86,4 +86,4 @@ public function boot()
 
 - Illuminate\View\Component
 - Illuminate\Contracts\Support\Renderable
-- Illuminate\Support\Str 
+- Illuminate\Support\Str

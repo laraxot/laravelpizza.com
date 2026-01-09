@@ -98,4 +98,4 @@ return [
 2. Seguire la struttura delle cartelle corretta
 3. Usare i namespace appropriati
 4. Definire le traduzioni nei file di traduzione
-5. Non duplicare la logica di registrazione 
+5. Non duplicare la logica di registrazione

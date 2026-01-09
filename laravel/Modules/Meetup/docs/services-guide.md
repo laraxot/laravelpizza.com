@@ -461,4 +461,3 @@ class MenuController extends Controller
 - [Business Logic](./business-logic.md)
 - [API Endpoints](./api_endpoints.md)
 - [Architettura Modelli](./models-architecture.md)
-

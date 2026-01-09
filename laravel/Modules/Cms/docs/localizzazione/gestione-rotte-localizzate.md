@@ -28,16 +28,16 @@ public function registerFolioRoutes(): void
     $xot = $this->xot;
     $theme = $xot->pub_theme;
     $path = base_path('Themes/'.$theme.'/resources/views/pages');
-    
+
     // Verifica che la directory delle pagine esista
     if (!File::exists($path)) {
         return;
     }
-    
+
     // Ottieni le lingue supportate
     $supportedLocales = array_keys(config('laravellocalization.supportedLocales', ['it' => [], 'en' => []]));
     $defaultLocale = config('app.locale', 'it');
-    
+
     // Registra le rotte Folio per ogni lingua supportata
     foreach ($supportedLocales as $locale) {
         Folio::path($path)
@@ -51,7 +51,7 @@ public function registerFolioRoutes(): void
                 ],
             ]);
     }
-    
+
     // Registra anche le rotte senza prefisso di lingua
     Folio::path($path)
         ->middleware([
