@@ -23,8 +23,9 @@ class UserCalendarWidget extends XotBaseWidget
         $resource = XotData::make()->getUserResourceClassByType($this->type);
         $model = $resource::getModel();
         $modelString = \is_string($model) ? $model : (string) $model;
+
         return Str::of($modelString)
-            ->replace('\Models\\', '\\Actions\\')
+            ->replace('\\Models\\', '\\Actions\\')
             ->append('\\Calendar\\'.$action_suffix)
             ->toString();
     }
@@ -53,7 +54,10 @@ class UserCalendarWidget extends XotBaseWidget
             return [];
         }
 
-        return $resultRaw;
+        /** @var array<int, array<string, mixed>> $result */
+        $result = $resultRaw;
+
+        return $result;
     }
 
     /**
@@ -67,8 +71,12 @@ class UserCalendarWidget extends XotBaseWidget
             $actionInstance = app($action);
             if (\is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
-                if (\is_array($resultRaw)) {
-                    return $resultRaw;
+
+                if (self::isValidFormSchema($resultRaw)) {
+                    /** @var array<int, TextInput|Grid> $result */
+                    $result = $resultRaw;
+
+                    return $result;
                 }
             }
         }
@@ -84,17 +92,30 @@ class UserCalendarWidget extends XotBaseWidget
         ];
     }
 
-    /**
-     * @SuppressWarnings("PHPMD.UnusedFormalParameter")
-     */
     public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void
     {
         // TODO: Implementare la logica per la selezione della data
     }
 
-    /**
-     * Validate that the given value is an array of events with string keys.
-     */
+    private static function isValidFormSchema(mixed $value): bool
+    {
+        if (! \is_array($value)) {
+            return false;
+        }
+
+        foreach ($value as $key => $item) {
+            if (! \is_int($key)) {
+                return false;
+            }
+
+            if (! ($item instanceof TextInput) && ! ($item instanceof Grid)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     private static function isValidEventsArray(mixed $value): bool
     {
         if (! \is_array($value)) {

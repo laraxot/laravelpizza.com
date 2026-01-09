@@ -20,15 +20,6 @@ final class WhatsAppActionFactory
 {
     /**
      * Crea un'azione WhatsApp basata sul driver specificato o su quello predefinito.
-     *
-     * @param  string|null  $driver  Driver WhatsApp da utilizzare (se null, viene utilizzato quello predefinito)
-     *
-     * @return WhatsAppProviderActionInterface Azione WhatsApp corrispondente al driver
-     *
-     * @throws Exception Se il driver specificato non è supportato
-     */
-    /**
-     * Crea un'azione WhatsApp basata sul driver specificato o su quello predefinito.
      * Utilizza una formula per calcolare il nome della classe dell'azione.
      *
      * @param  string|null  $driver  Driver WhatsApp da utilizzare (se null, viene utilizzato quello predefinito)

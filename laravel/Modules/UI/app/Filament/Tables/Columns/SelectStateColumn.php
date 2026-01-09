@@ -30,7 +30,6 @@ class SelectStateColumn extends SelectColumn
                 $result = $combined ? $combined : [];
                 return $result;
             }
-            }
 
             $states = [];
             try {
@@ -84,13 +83,7 @@ class SelectStateColumn extends SelectColumn
             /** @var array<int|string, int|string> $combinedTyped */
             $combinedTyped = $combined ? $combined : [];
 
-            /** @var array<int|string> $statesKeys */
-            $statesKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($statesFiltered));
-            /** @var array<int|string> $statesValues */
-            $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($statesFiltered));
-            $combined = array_combine($statesKeys, $statesValues);
-            /** @var array<int|string, int|string> $combinedTyped */
-            return $combined ? $combined : [];
+            return $combinedTyped;
         });
 
         $this->beforeStateUpdated(function (Model&HasStatesContract $record, mixed $stateRaw): void {
