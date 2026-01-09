@@ -151,7 +151,7 @@ interface UserContract extends Authenticatable
     public function switchTeam(TeamContract $team): bool;
 
     /**
-     * @return list<Module>
+     * @return array<string, Module>
      */
     public function getModules(): array;
 }
