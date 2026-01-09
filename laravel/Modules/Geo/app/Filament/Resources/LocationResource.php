@@ -27,7 +27,7 @@ class LocationResource extends XotBaseResource
 {
     protected static ?string $model = Location::class;
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-map-pin';
+
 
     // ✅ CORRETTO - NIENTE navigationGroup - La gestione è centralizzata in XotBaseResource
 

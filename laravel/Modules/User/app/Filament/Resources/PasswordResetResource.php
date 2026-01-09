@@ -24,7 +24,7 @@ class PasswordResetResource extends XotBaseResource
 {
     protected static ?string $model = PasswordReset::class;
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-key';
+
 
     protected static ?int $navigationSort = 4;
 

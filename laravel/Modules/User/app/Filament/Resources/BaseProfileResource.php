@@ -17,7 +17,7 @@ abstract class BaseProfileResource extends XotBaseResource
 
     protected static ?string $model = BaseProfile::class;
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-users';
+
 
     #[\Override]
     public static function getFormSchema(): array
