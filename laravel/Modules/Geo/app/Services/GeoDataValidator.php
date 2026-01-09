@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Geo\Services;
 
 use Illuminate\Support\Facades\Validator;
+use Webmozart\Assert\Assert;
 
 /**
  * Validatore per i dati geografici.

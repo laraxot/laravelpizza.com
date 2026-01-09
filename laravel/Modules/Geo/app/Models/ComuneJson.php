@@ -93,7 +93,15 @@ class ComuneJson extends GeoJsonModel
                 ->sortBy('nome')
                 ->values();
         });
-
+        /** @var Collection<int, array{
+         *     nome: string,
+         *     codice: string,
+         *     regione: array{codice: string, nome: string},
+         *     provincia: array{codice: string, nome: string},
+         *     cap: array<int, string>,
+         *     codiceCatastale: string,
+         *     popolazione: int
+         * }> $result */
         return $result;
     }
 
@@ -129,7 +137,15 @@ class ComuneJson extends GeoJsonModel
                 ->sortBy('nome')
                 ->values();
         });
-
+        /** @var Collection<int, array{
+         *     nome: string,
+         *     codice: string,
+         *     regione: array{codice: string, nome: string},
+         *     provincia: array{codice: string, nome: string},
+         *     cap: array<int, string>,
+         *     codiceCatastale: string,
+         *     popolazione: int
+         * }> $result */
         return $result;
     }
 
@@ -154,15 +170,6 @@ class ComuneJson extends GeoJsonModel
         $name = mb_strtolower($name);
         $cacheKey = 'geo_search_'.md5($name).'_'.$limit;
 
-        /* @var Collection<int, array{
-         *     nome: string,
-         *     codice: string,
-         *     regione: array{codice: string, nome: string},
-         *     provincia: array{codice: string, nome: string},
-         *     cap: array<int, string>,
-         *     codiceCatastale: string,
-         *     popolazione: int
-         * }> $result */
         $result = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($name, $limit) {
             $results = static::all()
                 /* @phpstan-ignore nullCoalesce.offset */
@@ -171,7 +178,15 @@ class ComuneJson extends GeoJsonModel
 
             return $limit > 0 ? $results->take($limit)->values() : $results->values();
         });
-
+        /** @var Collection<int, array{
+         *     nome: string,
+         *     codice: string,
+         *     regione: array{codice: string, nome: string},
+         *     provincia: array{codice: string, nome: string},
+         *     cap: array<int, string>,
+         *     codiceCatastale: string,
+         *     popolazione: int
+         * }> $result */
         return $result;
     }
 
@@ -372,18 +387,7 @@ class ComuneJson extends GeoJsonModel
     {
         $cacheKey = 'geo_gerarchia_'.md5($comuneNome);
 
-        /* @var array{
-         *     regione: array{codice: string, nome: string}|null,
-         *     provincia: array{codice: string, nome: string}|null,
-         *     comune: array{
-         *         nome: string,
-         *         codice: string|null,
-         *         codiceCatastale: string|null,
-         *         popolazione: int|null
-         *     },
-         *     cap: array<int, string>
-         * }|null $result */
-        $result = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($comuneNome) {
+        $result = Cache::remember($cacheKey, self::CACHE_TTL, static function () use ($comuneNome): ?array {
             /** @var array{
              *     nome: string,
              *     codice: string,
@@ -399,7 +403,7 @@ class ComuneJson extends GeoJsonModel
                 return null;
             }
 
-            return [
+            $result = [
                 'regione' => $comune['regione'] ?? null,
                 'provincia' => $comune['provincia'] ?? null,
                 'comune' => [
@@ -410,8 +414,19 @@ class ComuneJson extends GeoJsonModel
                 ],
                 'cap' => $comune['cap'] ?? [],
             ];
+            return $result;
         });
-
+        /** @var array{
+         *     regione: array{codice: string, nome: string}|null,
+         *     provincia: array{codice: string, nome: string}|null,
+         *     comune: array{
+         *         nome: string,
+         *         codice: string|null,
+         *         codiceCatastale: string|null,
+         *         popolazione: int|null
+         *     },
+         *     cap: array<int, string>
+         * }|null $result */
         return $result;
     }
 

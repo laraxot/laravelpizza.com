@@ -76,8 +76,12 @@ class GetAddressFromBingMapsAction
             throw InvalidLocationException::invalidData('Richiesta a Bing Maps fallita');
         }
 
-        /* @var array<string, mixed> $jsonResponse */
-        return $response->json();
+        $jsonResponse = $response->json();
+        if (!is_array($jsonResponse)) {
+            throw InvalidLocationException::invalidData('Risposta JSON non valida da Bing Maps');
+        }
+        /** @var array<string, mixed> $jsonResponse */
+        return $jsonResponse;
     }
 
     /**
@@ -176,7 +180,6 @@ class GetAddressFromBingMapsAction
             throw InvalidLocationException::invalidData('Indirizzo mancante nella risposta');
         }
 
-        /* @var array<string, mixed> $validatedLocation */
         return $location;
     }
 

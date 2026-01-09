@@ -19,16 +19,18 @@ class PageSlugMiddleware
 
         // Handle case where slug might be null or not a string
         if (! \is_string($slug)) {
-            /* @var Response */
-            return $next($request);
+            $response = $next($request);
+            \assert($response instanceof Response);
+            return $response;
         }
 
         $middlewares = Page::getMiddlewareBySlug($slug);
         // Should return ["auth", "Modules\User\Http\Middleware\EnsureUserHasType:doctor"]
 
         if (empty($middlewares)) {
-            /* @var Response */
-            return $next($request);
+            $response = $next($request);
+            \assert($response instanceof Response);
+            return $response;
         }
         $this->kernel = app(Kernel::class);
 
@@ -63,14 +65,16 @@ class PageSlugMiddleware
     protected function executeMiddlewareChain(Request $request, array $middlewares, \Closure $finalNext): Response
     {
         if (empty($middlewares)) {
-            /* @var Response */
-            return $finalNext($request);
+            $response = $finalNext($request);
+            \assert($response instanceof Response);
+            return $response;
         }
 
         $middleware = array_shift($middlewares);
         if (! \is_string($middleware)) {
-            /* @var Response */
-            return $finalNext($request);
+            $response = $finalNext($request);
+            \assert($response instanceof Response);
+            return $response;
         }
 
         [$middlewareClass, $parameters] = $this->parseMiddleware($middleware);
@@ -87,16 +91,17 @@ class PageSlugMiddleware
         // Execute current middleware
         if (\is_object($middlewareInstance) && method_exists($middlewareInstance, 'handle')) {
             if (empty($parameters)) {
-                /* @var Response */
-                return $middlewareInstance->handle($request, $next);
+                $response = $middlewareInstance->handle($request, $next);
+                return $response;
             }
 
-            /* @var Response */
-            return $middlewareInstance->handle($request, $next, ...$parameters);
+            $response = $middlewareInstance->handle($request, $next, ...$parameters);
+            return $response;
         }
 
         // If middleware doesn't exist or doesn't have handle method, continue with next
-        return $next($request);
+        $response = $next($request);
+        return $response;
     }
 
     /**

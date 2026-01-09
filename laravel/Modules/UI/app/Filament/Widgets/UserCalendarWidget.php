@@ -53,8 +53,10 @@ class UserCalendarWidget extends XotBaseWidget
             return [];
         }
 
-        /* @var array<int, array<string, mixed>> $result */
-        return $resultRaw;
+        /** @var array<int, array<string, mixed>> $result */
+        $result = $resultRaw;
+
+        return $result;
     }
 
     /**
@@ -68,9 +70,11 @@ class UserCalendarWidget extends XotBaseWidget
             $actionInstance = app($action);
             if (\is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
-                if (\is_array($resultRaw)) {
-                    /* @var array<int, TextInput|Grid> $result */
-                    return $resultRaw;
+                if (self::isValidFormSchema($resultRaw)) {
+                    /** @var array<int, TextInput|Grid> $result */
+                    $result = $resultRaw;
+
+                    return $result;
                 }
             }
         }
@@ -112,6 +116,25 @@ class UserCalendarWidget extends XotBaseWidget
                 if (! \is_string($key)) {
                     return false;
                 }
+            }
+        }
+
+        return true;
+    }
+
+    private static function isValidFormSchema(mixed $value): bool
+    {
+        if (! \is_array($value)) {
+            return false;
+        }
+
+        foreach ($value as $key => $item) {
+            if (! \is_int($key)) {
+                return false;
+            }
+
+            if (! ($item instanceof TextInput) && ! ($item instanceof Grid)) {
+                return false;
             }
         }
 
