@@ -19,11 +19,9 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class TeamPermissionResource extends XotBaseResource
 {
-    protected static ?string $model = TeamPermission::class;
-
-
-
-    protected static string|\UnitEnum|null $navigationGroup = 'Gestione Utenti';
+        protected static ?string $model = TeamPermission::class;
+    
+    
 
 
 
