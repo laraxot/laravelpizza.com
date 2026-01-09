@@ -26,14 +26,6 @@ class SocialiteUserResource extends XotBaseResource
 {
     protected static ?string $model = SocialiteUser::class;
 
-    protected static ?string $recordTitleAttribute = 'provider';
-
-    protected static ?string $modelLabel = 'Social Authentication';
-
-    protected static ?string $pluralModelLabel = 'Social Authentications';
-
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-user';
-
     /**
      * Get the form schema for the resource.
      *

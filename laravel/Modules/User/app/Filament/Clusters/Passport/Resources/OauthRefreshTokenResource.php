@@ -30,14 +30,6 @@ class OauthRefreshTokenResource extends XotBaseResource
 
     protected static ?string $model = OauthRefreshToken::class;
 
-    protected static ?string $recordTitleAttribute = 'id';
-
-    protected static ?string $modelLabel = 'OAuth Refresh Token';
-
-    protected static ?string $pluralModelLabel = 'OAuth Refresh Tokens';
-
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-arrow-path';
-
     /**
      * Get the form schema for the resource.
      *

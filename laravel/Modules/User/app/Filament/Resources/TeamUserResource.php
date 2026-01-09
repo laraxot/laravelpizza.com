@@ -27,16 +27,6 @@ final class TeamUserResource extends XotBaseResource
 {
     protected static ?string $model = TeamUser::class;
 
-    protected static ?string $recordTitleAttribute = 'id';
-
-    protected static ?string $modelLabel = 'Team User';
-
-    protected static ?string $pluralModelLabel = 'Team Users';
-
-    protected static \UnitEnum|string|null $navigationGroup = 'Teams';
-
-    protected static \BackedEnum|string|null $navigationIcon = 'heroicon-o-user-group';
-
     /**
      * @return array<string, Component>
      */

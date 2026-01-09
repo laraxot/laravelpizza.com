@@ -28,14 +28,6 @@ class TeamInvitationResource extends XotBaseResource
 {
     protected static ?string $model = TeamInvitation::class;
 
-    protected static ?string $recordTitleAttribute = 'email';
-
-    protected static ?string $modelLabel = 'Team Invitation';
-
-    protected static ?string $pluralModelLabel = 'Team Invitations';
-
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-envelope';
-
     /**
      * Get the form schema for the resource.
      *

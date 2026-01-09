@@ -27,16 +27,6 @@ final class TenantUserResource extends XotBaseResource
 {
     protected static ?string $model = TenantUser::class;
 
-    protected static ?string $recordTitleAttribute = 'id';
-
-    protected static ?string $modelLabel = 'Tenant User';
-
-    protected static ?string $pluralModelLabel = 'Tenant Users';
-
-    protected static \UnitEnum|string|null $navigationGroup = 'Tenants';
-
-    protected static \BackedEnum|string|null $navigationIcon = 'heroicon-o-building-office';
-
     /**
      * @return array<string, Component>
      */

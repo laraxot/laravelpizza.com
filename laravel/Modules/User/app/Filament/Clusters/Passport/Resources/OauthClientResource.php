@@ -28,14 +28,6 @@ class OauthClientResource extends XotBaseResource
 
     // use HasResourceFormComponents;
 
-    protected static ?string $recordTitleAttribute = 'name';
-
-    protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedKey;
-
-    protected static ?string $modelLabel = 'OAuth Client';
-
-    protected static ?string $pluralModelLabel = 'OAuth Clients';
-
     /**
      * Get the form schema for the resource (XotBaseResource pattern).
      *

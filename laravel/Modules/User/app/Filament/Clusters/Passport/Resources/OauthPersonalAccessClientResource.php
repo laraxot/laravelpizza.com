@@ -32,14 +32,6 @@ final class OauthPersonalAccessClientResource extends XotBaseResource
 
     protected static ?string $model = OauthPersonalAccessClient::class;
 
-    protected static ?string $recordTitleAttribute = 'id';
-
-    protected static ?string $modelLabel = 'OAuth Personal Access Client';
-
-    protected static ?string $pluralModelLabel = 'OAuth Personal Access Clients';
-
-    protected static \BackedEnum|string|null $navigationIcon = 'heroicon-o-key';
-
     /**
      * @return array<string, Component>
      */

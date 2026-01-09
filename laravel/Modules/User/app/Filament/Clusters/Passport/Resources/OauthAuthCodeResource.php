@@ -26,14 +26,6 @@ class OauthAuthCodeResource extends XotBaseResource
 
     protected static ?string $model = OauthAuthCode::class;
 
-    protected static ?string $recordTitleAttribute = 'id';
-
-    protected static ?string $modelLabel = 'OAuth Authorization Code';
-
-    protected static ?string $pluralModelLabel = 'OAuth Authorization Codes';
-
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-code-bracket';
-
     /**
      * Get the form schema for the resource.
      *
