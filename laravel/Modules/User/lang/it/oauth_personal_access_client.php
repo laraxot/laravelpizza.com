@@ -62,6 +62,7 @@ return [
         ],
         'reorderRecords' => [
             'tooltip' => 'reorderRecords',
+            'icon' => 'reorderRecords',
         ],
     ],
 ];

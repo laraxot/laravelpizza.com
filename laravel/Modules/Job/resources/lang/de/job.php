@@ -47,9 +47,9 @@ return [
     ],
     'navigation' => [
         'sort' => 58,
-        'icon' => 'job.navigation',
-        'group' => 'job.navigation',
-        'label' => 'job.navigation',
+        'icon' => 'heroicon-o-briefcase',
+        'group' => 'System',
+        'label' => 'Aufträge',
     ],
     'label' => 'Aufträge',
 ];
