@@ -20,7 +20,10 @@ class PageSlugMiddleware
         // Handle case where slug might be null or not a string
         if (! \is_string($slug)) {
             $response = $next($request);
-            \assert($response instanceof Response);
+            if (! $response instanceof Response) {
+                // Middleware chain should always return Response, but if not, wrap it
+                return new Response('Internal Server Error', 500);
+            }
             return $response;
         }
 
@@ -29,7 +32,10 @@ class PageSlugMiddleware
 
         if (empty($middlewares)) {
             $response = $next($request);
-            \assert($response instanceof Response);
+            if (! $response instanceof Response) {
+                // Middleware chain should always return Response, but if not, wrap it
+                return new Response('Internal Server Error', 500);
+            }
             return $response;
         }
         $this->kernel = app(Kernel::class);
@@ -66,14 +72,18 @@ class PageSlugMiddleware
     {
         if (empty($middlewares)) {
             $response = $finalNext($request);
-            \assert($response instanceof Response);
+            if (! $response instanceof Response) {
+                return new Response('Internal Server Error', 500);
+            }
             return $response;
         }
 
         $middleware = array_shift($middlewares);
         if (! \is_string($middleware)) {
             $response = $finalNext($request);
-            \assert($response instanceof Response);
+            if (! $response instanceof Response) {
+                return new Response('Internal Server Error', 500);
+            }
             return $response;
         }
 
@@ -92,16 +102,21 @@ class PageSlugMiddleware
         if (\is_object($middlewareInstance) && method_exists($middlewareInstance, 'handle')) {
             if (empty($parameters)) {
                 $response = $middlewareInstance->handle($request, $next);
+                if (! $response instanceof Response) {
+                    return $next($request); // Use next if current middleware didn't return Response
+                }
                 return $response;
             }
 
             $response = $middlewareInstance->handle($request, $next, ...$parameters);
+            if (! $response instanceof Response) {
+                return $next($request); // Use next if current middleware didn't return Response
+            }
             return $response;
         }
 
         // If middleware doesn't exist or doesn't have handle method, continue with next
-        $response = $next($request);
-        return $response;
+        return $next($request);
     }
 
     /**

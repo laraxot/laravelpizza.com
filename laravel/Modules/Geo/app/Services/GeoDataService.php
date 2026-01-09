@@ -86,7 +86,10 @@ class GeoDataService
             $region = $this->loadData()->firstWhere('code', $regionCode);
 
             if (! $region || ! \is_array($region) || ! isset($region['provinces']) || ! \is_array($region['provinces'])) {
-                return new Collection();
+                /** @var Collection<int, array{name: string, code: string}> $empty */
+                $empty = new Collection();
+
+                return $empty;
             }
 
             /** @var array<int, array<string, mixed>> $provinces */
@@ -95,12 +98,23 @@ class GeoDataService
             /** @var Collection<int, array<string, mixed>> $provincesCollection */
             $provincesCollection = new Collection($provinces);
 
-            /** @var Collection<string, string> $provinceResult */
-            return $provincesCollection->pluck('name', 'code');
+            /** @var Collection<int, array{name: string, code: string}> $provinceResult */
+            $provinceResult = $provincesCollection
+                ->map(static function (array $province): array {
+                    $name = $province['name'] ?? '';
+                    $code = $province['code'] ?? '';
+
+                    return [
+                        'name' => \is_string($name) ? $name : (string) $name,
+                        'code' => \is_string($code) ? $code : (string) $code,
+                    ];
+                })
+                ->values();
+
+            return $provinceResult;
         });
         /** @var Collection<int, array{name: string, code: string}> $result */
         return $result;
-    }
     }
 
     /**
@@ -121,7 +135,6 @@ class GeoDataService
                 : [])->firstWhere('code', $provinceCode);
 
             if (! $province || ! \is_array($province) || ! isset($province['cities']) || ! \is_array($province['cities'])) {
-                /* @var Collection<int, array{name: string, code: string}> */
                 return new Collection();
             }
 

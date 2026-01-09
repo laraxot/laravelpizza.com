@@ -66,15 +66,20 @@ class RegistrationWidget extends XotBaseWidget
 
     public function getFormModel(): Model
     {
+        /** @var class-string<Model> $modelClass */
+        $modelClass = $this->model;
+
         $data = request()->all();
         $email = Arr::get($data, 'email');
         $token = Arr::get($data, 'token');
 
         /** @var Model|null $user */
-        $user = $this->model::firstWhere('email', $email);
+        $user = $modelClass::firstWhere('email', $email);
         if (null === $user) {
-            /* @var Model $model */
-            return app($this->model);
+            $model = app($modelClass);
+            Assert::isInstanceOf($model, Model::class);
+
+            return $model;
         }
 
         $remember_token = $user->getAttribute('remember_token');
@@ -90,8 +95,10 @@ class RegistrationWidget extends XotBaseWidget
             return $user;
         }
 
-        /* @var Model $model */
-        return app($this->model);
+        $model = app($modelClass);
+        Assert::isInstanceOf($model, Model::class);
+
+        return $model;
     }
 
     /**

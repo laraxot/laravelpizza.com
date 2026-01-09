@@ -126,7 +126,9 @@ class EditUserWidget extends XotBaseWidget
         Assert::isArray($schema, 'Schema must be array');
 
         /** @var array<int|string, Component> $result */
-        return $schema;
+        $result = $schema;
+
+        return $result;
     }
 
     /**
@@ -185,7 +187,6 @@ class EditUserWidget extends XotBaseWidget
                 $user = $query->first();
 
                 if ($user instanceof Model) {
-                    Assert::isInstanceOf($user, Model::class);
                     return $user;
                 }
             }

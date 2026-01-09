@@ -180,6 +180,7 @@ class GetAddressFromBingMapsAction
             throw InvalidLocationException::invalidData('Indirizzo mancante nella risposta');
         }
 
+        /** @var array<string, mixed> $location */
         return $location;
     }
 

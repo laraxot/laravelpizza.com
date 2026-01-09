@@ -313,8 +313,16 @@ trait HasTeams
             return [];
         }
 
-        /* @var array<int, string> $permissions */
-        return $role->permissions->pluck('name')->values()->toArray();
+        $permissionsRaw = $role->permissions->pluck('name')->values()->toArray();
+
+        $permissions = [];
+        foreach ($permissionsRaw as $value) {
+            if (\is_string($value)) {
+                $permissions[] = $value;
+            }
+        }
+        /** @var array<int, string> $permissions */
+        return $permissions;
     }
 
     /**
@@ -381,14 +389,13 @@ trait HasTeams
     /**
      * Get all of the teams the user belongs to.
      *
-     * @return BelongsToMany<Model&TeamContract, BaseUser, Membership>
+     * @return BelongsToMany<Model&TeamContract, $this, Membership>
      */
     public function teams(): BelongsToMany
     {
         $xot = XotData::make();
         $teamClass = $xot->getTeamClass();
 
-        /* @var BelongsToMany<Model&TeamContract, BaseUser, Membership> $relation */
         return $this->belongsToMany($teamClass, 'team_user', 'user_id', 'team_id')->using(Membership::class);
     }
 
