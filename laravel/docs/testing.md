@@ -19,18 +19,46 @@ This will run:
 Notes:
 
 - Module discovery is configured via `laravel/phpunit.xml` using wildcard directories (see `testsuite name="Modules"`).
-- The test environment is configured via `laravel/phpunit.xml` (APP_ENV=testing, sqlite :memory:, cache/session array).
+- The test environment is configured via `laravel/phpunit.xml` (APP_ENV=testing, cache/session array).
 - Tests also load `laravel/.env.testing` automatically (Laravel default) when present.
+- In this repository, database configuration is expected to come from `.env.testing` (same DB dialect as `.env`).
+- If you change environment variables or config files, clear cached config before running tests:
+
+```bash
+php artisan config:clear
+```
 
 ### Test environment (.env.testing)
 
 The recommended settings for running tests are:
 
 - `APP_ENV=testing`
-- `DB_CONNECTION=sqlite` and `DB_DATABASE=:memory:`
+- `DB_CONNECTION=mysql` (same dialect as `.env`)
+- `DB_DATABASE=..._test` (separate testing databases)
 - `CACHE_STORE=array`
 - `SESSION_DRIVER=array`
 - `QUEUE_CONNECTION=sync`
+
+Important:
+
+- `laravel/phpunit.xml` must NOT override `DB_CONNECTION` / `DB_DATABASE` if the project relies on `.env.testing`.
+- Do not use `Illuminate\Foundation\Testing\RefreshDatabase` in tests: this codebase is designed around persistent test databases.
+
+### Composer merge-plugin (Modules)
+
+This project uses `wikimedia/composer-merge-plugin` with:
+
+- `extra.merge-plugin.include = ["Modules/*/composer.json"]`
+
+By default, the plugin also merges `autoload-dev` and `require-dev` from module composer files (unless `merge-dev` is set to false).
+
+### Composer autoload-dev rule
+
+In `laravel/composer.json`, `autoload-dev.psr-4` must include only:
+
+- `Tests\\` => `tests/`
+
+Do not add a generic `Modules\\` => `Modules/` mapping in `autoload-dev`.
 
 ### Run a specific module
 

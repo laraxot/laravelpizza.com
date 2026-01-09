@@ -6,6 +6,7 @@ namespace Modules\User\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Modules\Xot\Tests\CreatesApplication;
 
@@ -23,6 +24,7 @@ abstract class TestCase extends BaseTestCase
         config(['xra.main_module' => 'User']); 
         config(['xra.register_pub_theme' => true]);
         config(['app.key' => 'base64:Z/I+QUCmk9w7XQogD8eDwZdO5TM2sT7JPCiji05hrn8=']);
+        config(['pulse.storage.database.connection' => 'xot']);
 
         // Reset XotData singleton to ensure it picks up the new config
         \Modules\Xot\Datas\XotData::make()->update([
@@ -36,6 +38,9 @@ abstract class TestCase extends BaseTestCase
         
         $connections = [
             'sqlite',
+            'mysql',
+            'mariadb',
+            'pgsql',
             'user',
             'xot',
             'activity',
@@ -55,7 +60,19 @@ abstract class TestCase extends BaseTestCase
 
         // Purge to ensure fresh connection with new config
         foreach ($connections as $conn) {
-            \Illuminate\Support\Facades\DB::purge($conn);
+            DB::purge($conn);
+        }
+
+        foreach ($connections as $conn) {
+            try {
+                $pdo = DB::connection($conn)->getPdo();
+                if (method_exists($pdo, 'sqliteCreateFunction')) {
+                    $pdo->sqliteCreateFunction('md5', static fn (?string $value): ?string => $value === null ? null : md5($value));
+                    $pdo->sqliteCreateFunction('unhex', static fn (?string $value): ?string => $value);
+                }
+            } catch (\Throwable) {
+                // ignore: some connections may not be initialized
+            }
         }
 
         // Register additional providers needed for Folio/Volt

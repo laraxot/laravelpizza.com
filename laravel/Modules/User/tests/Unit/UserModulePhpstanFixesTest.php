@@ -17,17 +17,17 @@ uses(TestCase::class);
 it('password data can be instantiated', function (): void {
     $passwordData = new PasswordData();
 
-    expect($passwordData)->toBeInstanceOf(PasswordData::class);
-    expect($passwordData->otp_expiration_minutes)->toEqual(5);
-    expect($passwordData->otp_length)->toEqual(6);
-    expect($passwordData->expires_in)->toEqual(60);
-    expect($passwordData->min)->toEqual(8);
-    expect($passwordData->mixedCase)->toBeTrue();
-    expect($passwordData->letters)->toBeTrue();
-    expect($passwordData->numbers)->toBeTrue();
-    expect($passwordData->symbols)->toBeTrue();
-    expect($passwordData->uncompromised)->toBeTrue();
-    expect($passwordData->compromisedThreshold)->toEqual(0);
+    $this->assertInstanceOf(PasswordData::class, $passwordData);
+    $this->assertSame(5, $passwordData->otp_expiration_minutes);
+    $this->assertSame(6, $passwordData->otp_length);
+    $this->assertSame(60, $passwordData->expires_in);
+    $this->assertSame(8, $passwordData->min);
+    $this->assertTrue($passwordData->mixedCase);
+    $this->assertTrue($passwordData->letters);
+    $this->assertTrue($passwordData->numbers);
+    $this->assertTrue($passwordData->symbols);
+    $this->assertTrue($passwordData->uncompromised);
+    $this->assertSame(0, $passwordData->compromisedThreshold);
 });
 
 it('password data can be configured', function (): void {
@@ -44,16 +44,16 @@ it('password data can be configured', function (): void {
         compromisedThreshold: 5
     );
 
-    expect($passwordData->otp_expiration_minutes)->toEqual(30);
-    expect($passwordData->otp_length)->toEqual(8);
-    expect($passwordData->expires_in)->toEqual(60);
-    expect($passwordData->min)->toEqual(8);
-    expect($passwordData->mixedCase)->toBeTrue();
-    expect($passwordData->letters)->toBeTrue();
-    expect($passwordData->numbers)->toBeTrue();
-    expect($passwordData->symbols)->toBeTrue();
-    expect($passwordData->uncompromised)->toBeTrue();
-    expect($passwordData->compromisedThreshold)->toEqual(5);
+    $this->assertSame(30, $passwordData->otp_expiration_minutes);
+    $this->assertSame(8, $passwordData->otp_length);
+    $this->assertSame(60, $passwordData->expires_in);
+    $this->assertSame(8, $passwordData->min);
+    $this->assertTrue($passwordData->mixedCase);
+    $this->assertTrue($passwordData->letters);
+    $this->assertTrue($passwordData->numbers);
+    $this->assertTrue($passwordData->symbols);
+    $this->assertTrue($passwordData->uncompromised);
+    $this->assertSame(5, $passwordData->compromisedThreshold);
 });
 
 it('password data get password rule works', function (): void {
@@ -69,7 +69,7 @@ it('password data get password rule works', function (): void {
 
     $rule = $passwordData->getPasswordRule();
 
-    expect($rule)->toBeInstanceOf(Password::class);
+    $this->assertInstanceOf(Password::class, $rule);
 });
 
 it('password data get helper text works', function (): void {
@@ -84,60 +84,75 @@ it('password data get helper text works', function (): void {
 
     $helperText = $passwordData->getHelperText();
 
-    expect($helperText)->toBeString();
-    expect($helperText)->toContain('8 caratteri');
-    expect($helperText)->toContain('maiuscola e una minuscola');
-    expect($helperText)->toContain('lettera');
-    expect($helperText)->toContain('numero');
-    expect($helperText)->toContain('carattere speciale');
-    expect($helperText)->toContain('compromessa');
+    $this->assertIsString($helperText);
+    $this->assertStringContainsString('8 caratteri', $helperText);
+    $this->assertStringContainsString('maiuscola e una minuscola', $helperText);
+    $this->assertStringContainsString('lettera', $helperText);
+    $this->assertStringContainsString('numero', $helperText);
+    $this->assertStringContainsString('carattere speciale', $helperText);
+    $this->assertStringContainsString('compromessa', $helperText);
 });
 
 it('password data get form components returns array', function (): void {
     $passwordData = new PasswordData();
 
-    // Test che il metodo esista e non lanci eccezioni
-    expect(method_exists($passwordData, 'getPasswordFormComponents'))->toBeTrue();
-
-    // Test che il metodo getPasswordFormComponent esista
-    expect(method_exists($passwordData, 'getPasswordFormComponent'))->toBeTrue();
-
-    // Test che il metodo getPasswordConfirmationFormComponent esista
-    expect(method_exists($passwordData, 'getPasswordConfirmationFormComponent'))->toBeTrue();
+    // Smoke tests: methods should be callable without throwing.
+    $passwordData->getPasswordFormComponent('password');
+    $passwordData->setFieldName('password');
+    $passwordData->getPasswordConfirmationFormComponent();
 });
 
 it('events can be instantiated', function (): void {
-    $owner = User::factory()->create();
-    $addingTeam = new AddingTeam($owner);
-    $login = new Login();
-    $registered = new Registered();
-    $socialiteUserConnected = new SocialiteUserConnected();
+    $userFactory = User::factory();
+    \assert($userFactory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    $owner = $userFactory->create();
+    \assert($owner instanceof User);
 
-    expect($addingTeam)->toBeInstanceOf(AddingTeam::class);
-    expect($login)->toBeInstanceOf(Login::class);
-    expect($registered)->toBeInstanceOf(Registered::class);
-    expect($socialiteUserConnected)->toBeInstanceOf(SocialiteUserConnected::class);
+    $socialiteFactory = SocialiteUser::factory();
+    \assert($socialiteFactory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    $socialiteUser = $socialiteFactory->create();
+    \assert($socialiteUser instanceof SocialiteUser);
+
+    $addingTeam = new AddingTeam($owner);
+    $login = new Login($socialiteUser);
+    $registered = new Registered($socialiteUser);
+    $socialiteUserConnected = new SocialiteUserConnected($socialiteUser);
+
+    $this->assertInstanceOf(AddingTeam::class, $addingTeam);
+    $this->assertInstanceOf(Login::class, $login);
+    $this->assertInstanceOf(Registered::class, $registered);
+    $this->assertInstanceOf(SocialiteUserConnected::class, $socialiteUserConnected);
 });
 
 it('events have dispatchable trait', function (): void {
-    $owner = User::factory()->create();
-    $addingTeam = new AddingTeam($owner);
-    $login = new Login();
+    $userFactory = User::factory();
+    \assert($userFactory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    $owner = $userFactory->create();
+    \assert($owner instanceof User);
 
-    expect(method_exists($addingTeam, 'dispatch'))->toBeTrue();
-    expect(method_exists($login, 'dispatch'))->toBeTrue();
+    $socialiteFactory = SocialiteUser::factory();
+    \assert($socialiteFactory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    $socialiteUser = $socialiteFactory->create();
+    \assert($socialiteUser instanceof SocialiteUser);
+
+    // Smoke: calling dispatch should not error.
+    AddingTeam::dispatch($owner);
+    Login::dispatch($socialiteUser);
 });
 
 it('password data static make method exists', function (): void {
-    expect(method_exists(PasswordData::class, 'make'))->toBeTrue();
+    $passwordData = PasswordData::make();
+    $this->assertInstanceOf(PasswordData::class, $passwordData);
 });
 
 it('password data get validation messages method exists', function (): void {
     $passwordData = new PasswordData();
 
-    expect(method_exists($passwordData, 'getValidationMessages'))->toBeTrue();
+    $messages = $passwordData->getValidationMessages();
+    $this->assertIsArray($messages);
 });
 
 it('password data get form schema method exists', function (): void {
-    expect(method_exists(PasswordData::class, 'getFormSchema'))->toBeTrue();
+    $schema = PasswordData::getFormSchema();
+    $this->assertIsArray($schema);
 });

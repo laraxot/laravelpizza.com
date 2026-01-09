@@ -17,7 +17,7 @@ describe('Authentication Business Logic', function () {
             'name' => 'Mario Rossi',
             'email' => 'mario.rossi@example.com',
             'email_verified_at' => Carbon::now()->subDays(5),
-            'password' => '$2y$10$encrypted_password_hash',
+            'password' => '$2y$10$abcdefghijklmnopqrstuvwxyz1234567890ABcdefghijKlmnopqrstu',
             'remember_token' => 'remember_token_123',
             'current_team_id' => 2001,
             'profile_photo_path' => 'avatars/mario-rossi.jpg',

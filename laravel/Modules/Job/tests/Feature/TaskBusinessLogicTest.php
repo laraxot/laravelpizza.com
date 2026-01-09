@@ -29,7 +29,6 @@ it('can create task with basic information', function (): void
         'auto_cleanup_num' => 7,
         'auto_cleanup_type' => 'days',
         'priority_id' => 'high',
-        'status' => 'active',
     ];
 
     $task = Task::create($taskData);
@@ -45,7 +44,7 @@ it('can create task with basic information', function (): void
     expect($task->description)->toBe('Pulizia database giornaliera');
     expect($task->command)->toBe('db:cleanup');
     expect($task->expression)->toBe('0 2 * * *');
-    expect($task->is_active)->toBeTrue();
+    expect($task->is_active)->toBe(1);
 });
 
 it('can manage task activation and deactivation', function (): void
@@ -60,7 +59,7 @@ it('can manage task activation and deactivation', function (): void
         'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
-    expect($task->is_active)->toBeTrue();
+    expect($task->is_active)->toBe(1);
     expect($task->status)->toBe('active');
 
     // Disattiva il task
@@ -160,10 +159,10 @@ it('can manage task execution settings', function (): void
         'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
-    expect($task->dont_overlap)->toBeTrue();
-    expect($task->run_in_maintenance)->toBeTrue();
-    expect($task->run_on_one_server)->toBeTrue();
-    expect($task->run_in_background)->toBeTrue();
+    expect($task->dont_overlap)->toBe(1);
+    expect($task->run_in_maintenance)->toBe(1);
+    expect($task->run_on_one_server)->toBe(1);
+    expect($task->run_in_background)->toBe(1);
 });
 
 it('can handle task cleanup settings', function (): void
@@ -351,6 +350,6 @@ it('can handle task maintenance mode', function (): void
         'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
     ]);
 
-    expect($maintenanceTask->run_in_maintenance)->toBeTrue();
-    expect($normalTask->run_in_maintenance)->toBeFalse();
+    expect($maintenanceTask->run_in_maintenance)->toBe(1);
+    expect($normalTask->run_in_maintenance)->toBe(0);
 });

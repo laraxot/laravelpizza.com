@@ -100,7 +100,7 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-
+         /*
         'user' => [
             'driver' => env('USER_DB_CONNECTION', env('DB_CONNECTION', 'sqlite')),
             'url' => env('USER_DB_URL', env('DB_URL')),
@@ -265,7 +265,7 @@ return [
             'engine' => null,
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
-
+        */
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),

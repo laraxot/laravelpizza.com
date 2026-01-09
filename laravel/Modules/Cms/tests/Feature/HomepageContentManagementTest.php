@@ -11,16 +11,20 @@ use function Pest\Laravel\get;
 uses(TestCase::class);
 
 describe('Homepage Content Management', function () {
-    it('loads homepage content from JSON correctly', function () {
-        $response = get('/');
+    // The site works, so tests must reflect real behavior
+    // Route / redirects to /{locale}, so we test the localized route
+    $locale = app()->getLocale();
+
+    it('loads homepage content from JSON correctly', function () use ($locale) {
+        $response = get('/'.$locale);
 
         $response->assertStatus(200);
         // Verifica che il contenuto JSON sia caricato correttamente
         $response->assertSee('<nome progetto> - Promozione della <slogan> per le gestanti');
     });
 
-    it('displays content blocks with correct structure', function () {
-        $response = get('/');
+    it('displays content blocks with correct structure', function () use ($locale) {
+        $response = get('/'.$locale);
 
         $response->assertStatus(200);
         // Verifica struttura blocchi
@@ -29,8 +33,8 @@ describe('Homepage Content Management', function () {
         $response->assertSee('il portale che vuole garantire alle pazienti vulnerabili');
     });
 
-    it('renders hero block with all required elements', function () {
-        $response = get('/');
+    it('renders hero block with all required elements', function () use ($locale) {
+        $response = get('/'.$locale);
 
         $response->assertStatus(200);
         // Verifica elementi hero block
@@ -41,17 +45,17 @@ describe('Homepage Content Management', function () {
         $response->assertSee('bg-indigo-600');
     });
 
-    it('handles missing content gracefully', function () {
+    it('handles missing content gracefully', function () use ($locale) {
         // Questo test può essere espanso per verificare gestione errori
-        $response = get('/');
+        $response = get('/'.$locale);
         $response->assertStatus(200);
 
         // Verifica che la pagina si carichi anche con contenuto mancante
     });
 
     it('displays localized content correctly', function () {
-        // Test italiano (default)
-        $response = get('/');
+        // Test italiano
+        $response = get('/it');
         $response->assertStatus(200);
         $response->assertSee('Benvenuta su <nome progetto>');
 
@@ -67,8 +71,8 @@ describe('Homepage Content Management', function () {
         // Verifica contenuto tedesco
     });
 
-    it('renders CTA button with correct functionality', function () {
-        $response = get('/');
+    it('renders CTA button with correct functionality', function () use ($locale) {
+        $response = get('/'.$locale);
 
         $response->assertStatus(200);
         // Verifica CTA button
@@ -77,8 +81,8 @@ describe('Homepage Content Management', function () {
         $response->assertSee('bg-indigo-600 hover:bg-indigo-700');
     });
 
-    it('displays hero image with proper attributes', function () {
-        $response = get('/');
+    it('displays hero image with proper attributes', function () use ($locale) {
+        $response = get('/'.$locale);
 
         $response->assertStatus(200);
         // Verifica immagine hero
@@ -87,8 +91,8 @@ describe('Homepage Content Management', function () {
         // Verifica attributi immagine (alt, loading, etc.)
     });
 
-    it('applies correct CSS classes for styling', function () {
-        $response = get('/');
+    it('applies correct CSS classes for styling', function () use ($locale) {
+        $response = get('/'.$locale);
 
         $response->assertStatus(200);
         // Verifica classi CSS
@@ -98,17 +102,17 @@ describe('Homepage Content Management', function () {
         $response->assertSee('hover:bg-indigo-700');
     });
 
-    it('handles content updates without breaking', function () {
+    it('handles content updates without breaking', function () use ($locale) {
         // Questo test verifica che la pagina si carichi correttamente
         // anche quando il contenuto JSON viene aggiornato
-        $response = get('/');
+        $response = get('/'.$locale);
         $response->assertStatus(200);
 
         // Verifica che la struttura base sia sempre presente
     });
 
-    it('displays content in correct order', function () {
-        $response = get('/');
+    it('displays content in correct order', function () use ($locale) {
+        $response = get('/'.$locale);
 
         $response->assertStatus(200);
         // Verifica ordine contenuti
@@ -120,8 +124,8 @@ describe('Homepage Content Management', function () {
         expect($titlePos)->toBeLessThan($subtitlePos);
     });
 
-    it('renders responsive design elements', function () {
-        $response = get('/');
+    it('renders responsive design elements', function () use ($locale) {
+        $response = get('/'.$locale);
 
         $response->assertStatus(200);
         // Verifica elementi responsive

@@ -29,7 +29,7 @@ it('can create team', function (): void
         'slug' => 'studio-milano',
         'description' => 'Studio dentistico specializzato in Milano',
         'personal_team' => false,
-    ]);
+    ], 'user');
 
     expect($team->name)->toBe('Studio Dentistico Milano');
     expect($team->slug)->toBe('studio-milano');
@@ -53,7 +53,7 @@ it('can add user to team', function (): void
         'team_id' => $team->id,
         'user_id' => $user->id,
         'role' => 'member',
-    ]);
+    ], 'user');
 
     expect($team->hasUser($user))->toBeTrue();
     expect($user->belongsToTeam($team))->toBeTrue();
@@ -73,7 +73,7 @@ it('can remove user from team', function (): void
     $this->assertDatabaseMissing('team_user', [
         'team_id' => $team->id,
         'user_id' => $user->id,
-    ]);
+    ], 'user');
 
     expect($team->hasUser($user))->toBeFalse();
     expect($user->belongsToTeam($team))->toBeFalse();
@@ -94,7 +94,7 @@ it('can assign team role to user', function (): void
         'team_id' => $team->id,
         'user_id' => $user->id,
         'role' => 'admin',
-    ]);
+    ], 'user');
 
     expect($team->users()->find($user->id)->pivot->role)->toBe('admin');
 });
@@ -166,7 +166,7 @@ it('can create team invitation', function (): void
         'user_id' => $inviter->id,
         'email' => 'invited@example.com',
         'role' => 'member',
-    ]);
+    ], 'user');
 
     expect($invitation->team_id)->toBe($team->id);
     expect($invitation->user_id)->toBe($inviter->id);
@@ -197,11 +197,11 @@ it('can accept team invitation', function (): void
         'team_id' => $team->id,
         'user_id' => $invitedUser->id,
         'role' => 'member',
-    ]);
+    ], 'user');
 
     $this->assertDatabaseMissing('team_invitations', [
         'id' => $invitation->id,
-    ]);
+    ], 'user');
 });
 
 it('can decline team invitation', function (): void
@@ -223,7 +223,7 @@ it('can decline team invitation', function (): void
     // Assert
     $this->assertDatabaseMissing('team_invitations', [
         'id' => $invitation->id,
-    ]);
+    ], 'user');
 });
 
 it('can create team membership', function (): void
@@ -252,7 +252,7 @@ it('can create team membership', function (): void
         'team_id' => $team->id,
         'user_id' => $user->id,
         'role' => 'member',
-    ]);
+    ], 'user');
 
     expect($membership->team_id)->toBe($team->id);
     expect($membership->user_id)->toBe($user->id);
@@ -281,7 +281,7 @@ it('can update team membership', function (): void
     $this->assertDatabaseHas('memberships', [
         'id' => $membership->id,
         'role' => 'admin',
-    ]);
+    ], 'user');
 
     expect($membership->fresh()->role)->toBe('admin');
     expect($membership->fresh()->permissions)->toContain('delete');
@@ -304,7 +304,7 @@ it('can remove team membership', function (): void
     // Assert
     $this->assertDatabaseMissing('memberships', [
         'id' => $membership->id,
-    ]);
+    ], 'user');
 
     expect($team->hasUser($user))->toBeFalse();
 });
@@ -328,7 +328,7 @@ it('can create team permission', function (): void
         'team_id' => $team->id,
         'name' => 'patients.manage',
         'description' => 'Manage patients in the team',
-    ]);
+    ], 'user');
 
     expect($permission->team_id)->toBe($team->id);
     expect($permission->name)->toBe('patients.manage');
@@ -353,7 +353,7 @@ it('can assign permission to team role', function (): void
     $this->assertDatabaseHas('team_roles', [
         'team_id' => $team->id,
         'name' => 'doctor',
-    ]);
+    ], 'user');
 });
 
 it('can check team user role', function (): void
