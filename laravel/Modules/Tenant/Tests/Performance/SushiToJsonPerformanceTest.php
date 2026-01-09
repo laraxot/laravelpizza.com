@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Tenant\Tests\Performance;
 
 use Exception;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\File;
 use Modules\Tenant\Models\TestSushiModel;
 use Modules\Tenant\Services\TenantService;
@@ -23,7 +22,6 @@ use Tests\TestCase;
 #[Group('sushi-json')]
 class SushiToJsonPerformanceTest extends TestCase
 {
-    use RefreshDatabase;
 
     private TestSushiModel $model;
 

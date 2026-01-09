@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Tenant\Tests\Integration;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\File;
 use Modules\Tenant\Models\Tenant;
 use Modules\Tenant\Models\TestSushiModel;
@@ -24,7 +23,6 @@ use Tests\TestCase;
 #[Group('sushi-json')]
 class SushiToJsonIntegrationTest extends TestCase
 {
-    use RefreshDatabase;
 
     private Tenant $tenant1;
 

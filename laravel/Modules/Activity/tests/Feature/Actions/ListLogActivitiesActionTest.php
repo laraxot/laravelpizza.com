@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Model;
-use Mockery;
+use Mockery\MockInterface;
 use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
 
 uses(\Modules\Activity\Tests\TestCase::class);
