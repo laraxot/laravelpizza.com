@@ -54,8 +54,9 @@ class UserCalendarWidget extends XotBaseWidget
             return [];
         }
 
+        $result = $resultRaw;
         /** @var array<int, array<string, mixed>> $result */
-        return $resultRaw;
+        return $result;
     }
 
     /**

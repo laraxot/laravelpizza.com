@@ -61,12 +61,13 @@ class GeoDataService
      */
     public function getRegions(): Collection
     {
-        /* @var Collection<int, array{name: string, code: string}> $result */
-        return Cache::remember(
+        $result = Cache::remember(
             self::CACHE_KEY_REGIONS,
             self::CACHE_TTL,
             fn (): Collection => $this->loadData()->pluck('name', 'code'),
         );
+        /** @var Collection<int, array{name: string, code: string}> $result */
+        return $result;
     }
 
     /**
