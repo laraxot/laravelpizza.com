@@ -56,18 +56,6 @@ class IconPicker extends TextInput
                             $optsValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
                             /** @var array<int|string> $optsKeys */
                             $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
-                            $optsValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
-                            /** @var array<int|string> $optsKeys */
-                            $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
-                            $optsValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
-                            /** @var array<int|string> $optsKeys */
-                            $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
-                            $optsValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
-                            /** @var array<int|string> $optsKeys */
-                            $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
-                            $optsValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($optsRaw));
-                            /** @var array<int|string> $optsKeys */
-                            $optsKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($optsRaw));
                             $optsCombined = array_combine($optsKeys, $optsValues);
 
                             return $optsCombined ? $optsCombined : [];

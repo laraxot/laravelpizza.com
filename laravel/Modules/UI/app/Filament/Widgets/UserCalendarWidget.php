@@ -53,7 +53,6 @@ class UserCalendarWidget extends XotBaseWidget
             return [];
         }
 
-        /** @var array<int, array<string, mixed>> $result */
         return $resultRaw;
     }
 
@@ -69,7 +68,6 @@ class UserCalendarWidget extends XotBaseWidget
             if (\is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
                 if (\is_array($resultRaw)) {
-                    /** @var array<int, TextInput|Grid> $result */
                     return $resultRaw;
                 }
             }
