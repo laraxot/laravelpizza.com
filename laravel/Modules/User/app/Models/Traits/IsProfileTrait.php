@@ -71,24 +71,24 @@ trait IsProfileTrait
      */
     public function getFullNameAttribute(?string $value): ?string
     {
-        if ($value !== null) {
+        if (null !== $value) {
             return $value;
         }
 
         $user = $this->user;
-        if ($user === null) {
+        if (null === $user) {
             return null;
         }
         Assert::isInstanceOf($user, User::class);
 
         $res = trim(($this->first_name ?? '').' '.($this->last_name ?? ''));
-        if ($res !== '') {
+        if ('' !== $res) {
             return $res;
         }
 
         $userName = $user->getAttribute('name');
 
-        return \is_string($userName) && $userName !== '' ? $userName : null;
+        return \is_string($userName) && '' !== $userName ? $userName : null;
     }
 
     /**
@@ -101,18 +101,18 @@ trait IsProfileTrait
      */
     public function getFirstNameAttribute(?string $value): ?string
     {
-        if ($value !== null) {
+        if (null !== $value) {
             return $value;
         }
 
         $user = $this->user;
-        if ($user === null) {
+        if (null === $user) {
             return null;
         }
         Assert::isInstanceOf($user, User::class);
 
         $firstName = $user->getAttribute('first_name');
-        if (! \is_string($firstName) || $firstName === '') {
+        if (! \is_string($firstName) || '' === $firstName) {
             return null;
         }
 
@@ -131,18 +131,18 @@ trait IsProfileTrait
      */
     public function getLastNameAttribute(?string $value): ?string
     {
-        if ($value !== null) {
+        if (null !== $value) {
             return $value;
         }
 
         $user = $this->user;
-        if ($user === null) {
+        if (null === $user) {
             return null;
         }
         Assert::isInstanceOf($user, User::class);
 
         $lastName = $user->getAttribute('last_name');
-        if (! \is_string($lastName) || $lastName === '') {
+        if (! \is_string($lastName) || '' === $lastName) {
             return null;
         }
 
@@ -158,7 +158,7 @@ trait IsProfileTrait
      */
     public function isSuperAdmin(): bool
     {
-        if ($this->user === null) {
+        if (null === $this->user) {
             return false;
         }
 
@@ -172,7 +172,7 @@ trait IsProfileTrait
      */
     public function isNegateSuperAdmin(): bool
     {
-        if ($this->user === null) {
+        if (null === $this->user) {
             return false;
         }
 
@@ -189,7 +189,7 @@ trait IsProfileTrait
     public function toggleSuperAdmin(): void
     {
         $user = $this->user;
-        if ($user === null) {
+        if (null === $user) {
             throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
         Assert::isInstanceOf($user, User::class);
@@ -272,10 +272,10 @@ trait IsProfileTrait
     {
         $tokens = $this->mobileDeviceUsers()
             ->pluck('token')
-            ->filter(static fn (mixed $value): bool => is_string($value) && $value !== '')
+            ->filter(static fn (mixed $value): bool => is_string($value) && '' !== $value)
             ->map(static fn (mixed $value): string => (string) $value);
 
-        /** @var Collection<int|string, non-empty-string> $tokens */
+        /* @var Collection<int|string, non-empty-string> $tokens */
         return $tokens;
     }
 
@@ -288,14 +288,14 @@ trait IsProfileTrait
         return Attribute::make(
             get: function (): ?string {
                 $user = $this->user;
-                if ($user === null) {
+                if (null === $user) {
                     return null;
                 }
                 Assert::isInstanceOf($user, User::class);
 
                 $name = $user->getAttribute('name');
 
-                return \is_string($name) && $name !== '' ? $name : null;
+                return \is_string($name) && '' !== $name ? $name : null;
             }
         );
     }

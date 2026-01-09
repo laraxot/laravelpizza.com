@@ -115,7 +115,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
     public function getAvatarUrl(): string
     {
         $avatar = $this->getFirstMediaUrl('avatar');
-        if ($avatar !== '') {
+        if ('' !== $avatar) {
             return $avatar;
         }
 
@@ -147,13 +147,13 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         $locale = config('app.locale');
         $defaultLocale = 'it';
 
-        if ($locale === null || ! is_string($locale)) {
+        if (null === $locale || ! is_string($locale)) {
             $locale = $defaultLocale;
         }
 
         $userLang = $this->lang;
 
-        if ($userLang === null || ! is_string($userLang)) {
+        if (null === $userLang || ! is_string($userLang)) {
             return $locale;
         }
 

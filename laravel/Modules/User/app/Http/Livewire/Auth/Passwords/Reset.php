@@ -59,7 +59,7 @@ class Reset extends Component
                 'password' => $this->password,
             ],
             function (Authenticatable $user, string $password): void {
-                /** @var Model&Authenticatable $user */
+                /* @var Model&Authenticatable $user */
                 $user->setAttribute('password', Hash::make($password));
                 $user->setRememberToken(Str::random(60));
                 $user->save();
@@ -73,7 +73,7 @@ class Reset extends Component
         /* @phpstan-ignore argument.type */
         Assert::string($response_lang = trans((string) $response));
 
-        if ($response === Password::PASSWORD_RESET) {
+        if (Password::PASSWORD_RESET === $response) {
             session()->flash($response_lang);
 
             return redirect(route('home'));

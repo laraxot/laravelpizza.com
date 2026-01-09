@@ -19,8 +19,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class PermissionResource extends XotBaseResource
 {
-
-
     protected static ?string $model = Permission::class;
 
     #[\Override]

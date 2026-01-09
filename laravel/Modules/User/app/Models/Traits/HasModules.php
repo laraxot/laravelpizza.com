@@ -12,12 +12,12 @@ use Nwidart\Modules\Laravel\Module;
 trait HasModules
 {
     /**
-     * @return array<string, Module>
+     * @return list<Module>
      */
     public function getModules(): array
     {
         $modules = ModuleFacade::getOrdered();
-        //$roles = $this->roles;
+        $roles = $this->roles;
 
         /** @var array<string, Module> $filteredModules */
         $filteredModules = Arr::where($modules, function ($module, $key) {
@@ -27,6 +27,8 @@ trait HasModules
 
             return $this->hasRole($role_name);
         });
-        return $filteredModules;
+
+        /* @var list<Module> $modulesList */
+        return array_values($filteredModules);
     }
 }

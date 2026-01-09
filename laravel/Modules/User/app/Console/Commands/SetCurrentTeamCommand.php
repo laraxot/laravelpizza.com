@@ -6,8 +6,10 @@ namespace Modules\User\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Model;
+
 use function Laravel\Prompts\select;
 use function Laravel\Prompts\text;
+
 use Modules\Xot\Datas\XotData;
 use Symfony\Component\Console\Input\InputOption;
 

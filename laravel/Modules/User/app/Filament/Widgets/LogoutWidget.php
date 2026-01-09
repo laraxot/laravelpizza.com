@@ -107,7 +107,7 @@ class LogoutWidget extends XotBaseWidget
 
             // Get the authenticated user before logging out
             $user = $this->getAuthenticatedUser();
-            if ($user === null) {
+            if (null === $user) {
                 $this->handleNoUserScenario();
 
                 return;

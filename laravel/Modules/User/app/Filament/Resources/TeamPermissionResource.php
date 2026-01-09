@@ -21,6 +21,25 @@ class TeamPermissionResource extends XotBaseResource
 {
     protected static ?string $model = TeamPermission::class;
 
+    protected static string|\UnitEnum|null $navigationGroup = 'Gestione Utenti';
+
+    protected static ?int $navigationSort = 15;
+
+    public static function getNavigationLabel(): string
+    {
+        return __('user::team_permission.navigation.label');
+    }
+
+    public static function getPluralLabel(): string
+    {
+        return __('user::team_permission.navigation.plural');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('user::team_permission.navigation.name');
+    }
+
     /**
      * Get the form schema for the resource (XotBaseResource pattern).
      *
@@ -66,7 +85,7 @@ class TeamPermissionResource extends XotBaseResource
                             return null;
                         }
                         $team = $record->team;
-                        if ($team !== null && method_exists($team, 'exists') && $team->exists) {
+                        if (null !== $team && method_exists($team, 'exists') && $team->exists) {
                             return TeamResource::getUrl('view', ['record' => $team]);
                         }
 
@@ -82,7 +101,7 @@ class TeamPermissionResource extends XotBaseResource
                             return null;
                         }
                         $user = $record->user;
-                        if ($user !== null && method_exists($user, 'exists') && $user->exists) {
+                        if (null !== $user && method_exists($user, 'exists') && $user->exists) {
                             return UserResource::getUrl('view', ['record' => $user]);
                         }
 

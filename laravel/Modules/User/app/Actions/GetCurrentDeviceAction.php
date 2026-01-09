@@ -44,13 +44,13 @@ class GetCurrentDeviceAction
             'robot' => is_string($agent->robot()) ? $agent->robot() : 'unknown',
         ];
 
-        if ($mobile_id !== null) {
+        if (null !== $mobile_id) {
             if (empty($mobile_id)) {
                 throw new \InvalidArgumentException('L\'ID mobile non può essere vuoto');
             }
 
             $device = Device::firstOrCreate(['mobile_id' => $mobile_id]);
-            if ($device === null) {
+            if (null === $device) {
                 throw new \RuntimeException('Impossibile creare o trovare il dispositivo');
             }
             $device->update([...$data, ...$up]);
@@ -59,7 +59,7 @@ class GetCurrentDeviceAction
         }
 
         $device = Device::firstOrCreate($data);
-        if ($device === null) {
+        if (null === $device) {
             throw new \RuntimeException('Impossibile creare o trovare il dispositivo');
         }
         $device->update($up);

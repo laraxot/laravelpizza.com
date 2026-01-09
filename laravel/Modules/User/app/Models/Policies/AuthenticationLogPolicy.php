@@ -10,7 +10,6 @@ use Modules\Xot\Contracts\UserContract;
 
 class AuthenticationLogPolicy extends UserBasePolicy
 {
-
     /**
      * Determine whether the user can view any models.
      */
@@ -68,6 +67,7 @@ class AuthenticationLogPolicy extends UserBasePolicy
     {
         return $this->hasPermission($user, 'authentication-log.force-delete') || $user->hasRole('super-admin');
     }
+
     protected function hasPermission(UserContract $user, string $permission): bool
     {
         $exists = Permission::query()

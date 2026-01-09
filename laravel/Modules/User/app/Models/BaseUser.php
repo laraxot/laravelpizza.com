@@ -337,7 +337,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     public function canAccessPanel(Panel $panel): bool
     {
         // $panel->default('admin');
-        if ($panel->getId() !== 'admin') {
+        if ('admin' !== $panel->getId()) {
             $role = $panel->getId();
             /*
              * $xot = XotData::make();
@@ -409,7 +409,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     public function getProviderField(string $provider, string $field): string
     {
         $socialiteUser = $this->socialiteUsers()->firstWhere(['provider' => $provider]);
-        if ($socialiteUser === null) {
+        if (null === $socialiteUser) {
             throw new \Exception('SocialiteUser not found');
         }
 
@@ -442,22 +442,22 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function getFullNameAttribute(?string $value): string
     {
-        if ($value !== null) {
+        if (null !== $value) {
             return $value;
         }
 
         $fullName = trim(($this->first_name ?? '').' '.($this->last_name ?? ''));
 
-        return $fullName !== '' ? $fullName : ($this->email ?? 'User');
+        return '' !== $fullName ? $fullName : ($this->email ?? 'User');
     }
 
     public function getNameAttribute(?string $value): string
     {
-        if ($value !== null) {
+        if (null !== $value) {
             return $value;
         }
 
-        if ($this->getKey() === null) {
+        if (null === $this->getKey()) {
             return $this->email ?? 'User';
         }
 
@@ -472,7 +472,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
                 return true;
             }
 
-            return \PHP_SAPI === 'cli' && (getenv('APP_ENV') === 'testing' || getenv('ENV') === 'testing');
+            return \PHP_SAPI === 'cli' && ('testing' === getenv('APP_ENV') || 'testing' === getenv('ENV'));
         })();
         if ($isTesting) {
             // Do not call update() here to avoid hitting the database.
@@ -483,7 +483,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
         try {
             $value = $candidate;
-            while (self::firstWhere(['name' => $value]) !== null) {
+            while (null !== self::firstWhere(['name' => $value])) {
                 ++$i;
                 $value = $name.'-'.$i;
             }

@@ -82,7 +82,7 @@ class ClientsRelationManager extends XotBaseRelationManager
                             ->toArray();
                     })
                     ->getOptionLabelUsing(static function (?string $value): ?string {
-                        if ($value === null) {
+                        if (null === $value) {
                             return null;
                         }
 
@@ -108,9 +108,9 @@ class ClientsRelationManager extends XotBaseRelationManager
                 $owner = $ownerRecord;
                 $clientId = $data['client_id'] ?? null;
                 /** @var OauthClient|null $client */
-                $client = $clientId !== null ? OauthClient::query()->find($clientId) : null;
+                $client = null !== $clientId ? OauthClient::query()->find($clientId) : null;
 
-                if ($client === null) {
+                if (null === $client) {
                     Notification::make()
                         ->title('Client non trovato.')
                         ->danger()

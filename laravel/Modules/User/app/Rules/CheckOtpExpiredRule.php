@@ -26,7 +26,7 @@ class CheckOtpExpiredRule implements ValidationRule
      */
     public function validate(string $_attribute, mixed $_value, \Closure $fail): void
     {
-        if ($this->user->updated_at === null) {
+        if (null === $this->user->updated_at) {
             $fail($this->message);
 
             return;

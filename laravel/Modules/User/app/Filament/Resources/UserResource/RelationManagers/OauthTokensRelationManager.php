@@ -12,6 +12,7 @@ use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+
 use function Safe\json_encode;
 
 /**
@@ -39,7 +40,7 @@ class OauthTokensRelationManager extends XotBaseRelationManager
                 ->limit(30)
                 ->tooltip(function (TextColumn $column): ?string {
                     $state = $column->getState();
-                    if ($state === null) {
+                    if (null === $state) {
                         return null;
                     }
 

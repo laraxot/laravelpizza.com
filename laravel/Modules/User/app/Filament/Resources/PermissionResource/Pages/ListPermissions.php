@@ -109,6 +109,8 @@ class ListPermissions extends XotBaseListRecords
                         $query = $roleModel::query();
                         /** @var \Illuminate\Support\Collection<string|int, string> $collection */
                         $collection = $query->pluck('name', 'id');
+
+                        /* @var array<string|int, string> $options */
                         return $collection->toArray();
                     })->required(),
                 ])

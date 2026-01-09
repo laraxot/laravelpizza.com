@@ -67,7 +67,7 @@ trait HasAuthenticationLogTrait
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->first();
 
-        return $auth !== null ? $auth->login_at : null;
+        return null !== $auth ? $auth->login_at : null;
     }
 
     /**
@@ -80,7 +80,7 @@ trait HasAuthenticationLogTrait
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->where('login_successful', true)->first();
 
-        return $auth !== null ? $auth->login_at : null;
+        return null !== $auth ? $auth->login_at : null;
     }
 
     /**
@@ -93,7 +93,7 @@ trait HasAuthenticationLogTrait
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->first();
 
-        return $auth !== null ? $auth->ip_address : null;
+        return null !== $auth ? $auth->ip_address : null;
     }
 
     /**
@@ -106,7 +106,7 @@ trait HasAuthenticationLogTrait
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->where('login_successful', true)->first();
 
-        return $auth !== null ? $auth->ip_address : null;
+        return null !== $auth ? $auth->ip_address : null;
     }
 
     /**
@@ -119,7 +119,7 @@ trait HasAuthenticationLogTrait
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->skip(1)->first();
 
-        return $auth !== null ? $auth->login_at : null;
+        return null !== $auth ? $auth->login_at : null;
     }
 
     /**
@@ -132,7 +132,7 @@ trait HasAuthenticationLogTrait
         /** @var AuthenticationLog|null $auth */
         $auth = $this->authentications()->skip(1)->first();
 
-        return $auth !== null ? $auth->ip_address : null;
+        return null !== $auth ? $auth->ip_address : null;
     }
 
     /**

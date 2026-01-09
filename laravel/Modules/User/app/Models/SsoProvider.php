@@ -112,7 +112,7 @@ class SsoProvider extends BaseModel
         }
 
         $atPos = strrchr($email, '@');
-        if ($atPos === false) {
+        if (false === $atPos) {
             return false;
         }
 

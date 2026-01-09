@@ -54,17 +54,19 @@ class PasswordExpiredWidget extends XotBaseWidget
     /**
      * Get the form schema for password reset.
      *
-     * @return array<int|string, Component>
+     * @return array<int, Component>
      */
     #[\Override]
     public function getFormSchema(): array
     {
-        return [
+        $schema = [
             $this->getCurrentPasswordFormComponent(),
             ...PasswordData::make()->getPasswordFormComponents('password'),
         ];
 
-        
+        // Ensure list type for PHPStan Level 10
+        /* @var array<int, Component> $result */
+        return array_values($schema);
     }
 
     /**

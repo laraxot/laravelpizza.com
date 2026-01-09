@@ -72,10 +72,9 @@ class RegistrationWidget extends XotBaseWidget
 
         /** @var Model|null $user */
         $user = $this->model::firstWhere('email', $email);
-        if ($user === null) {
-            /** @var Model $model */
-            $model = app($this->model);
-            return $model;
+        if (null === $user) {
+            /* @var Model $model */
+            return app($this->model);
         }
 
         $remember_token = $user->getAttribute('remember_token');
@@ -91,9 +90,8 @@ class RegistrationWidget extends XotBaseWidget
             return $user;
         }
 
-        /** @var Model $model */
-        $model = app($this->model);
-        return $model;
+        /* @var Model $model */
+        return app($this->model);
     }
 
     /**

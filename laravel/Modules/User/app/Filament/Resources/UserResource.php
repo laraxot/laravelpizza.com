@@ -77,7 +77,7 @@ class UserResource extends XotBaseResource
                     /** @var Carbon|null $createdAt */
                     $createdAt = $record->getAttribute('created_at');
 
-                    if ($createdAt === null) {
+                    if (null === $createdAt) {
                         return new HtmlString('&mdash;');
                     }
                     if ($createdAt instanceof CarbonInterface) {
@@ -121,7 +121,7 @@ class UserResource extends XotBaseResource
     {
         $xot = XotData::make();
 
-        /** @var class-string<Model> */
+        /* @var class-string<Model> */
         return $xot->getUserClass();
     }
 
