@@ -30,7 +30,8 @@ class GetTenantConfigArrayAction
             $data = [];
         }
 
+        $dataArray = $data;
         /** @var array<string, mixed> $dataArray */
-        return $data;
+        return $dataArray;
     }
 }

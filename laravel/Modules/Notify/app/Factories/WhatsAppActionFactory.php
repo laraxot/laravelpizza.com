@@ -64,7 +64,8 @@ final class WhatsAppActionFactory
             throw new Exception("Class {$className} does not implement WhatsAppProviderActionInterface.");
         }
 
+        $instance = app($className);
         /** @var WhatsAppProviderActionInterface $instance */
-        return app($className);
+        return $instance;
     }
 }

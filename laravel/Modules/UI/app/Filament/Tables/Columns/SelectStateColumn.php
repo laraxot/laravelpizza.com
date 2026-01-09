@@ -27,8 +27,9 @@ class SelectStateColumn extends SelectColumn
                 $statesValues = array_map(fn ($v) => is_string($v) ? $v : (string) $v, array_values($states));
                 $statesKeys = array_map(fn ($k) => is_string($k) ? $k : (string) $k, array_keys($states));
                 $combined = array_combine($statesKeys, $statesValues);
-                /** @var array<int|string, int|string> $result */
-                return $combined ? $combined : [];
+                $result = $combined ? $combined : [];
+                return $result;
+            }
             }
 
             $states = [];

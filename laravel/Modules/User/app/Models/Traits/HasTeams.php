@@ -314,7 +314,8 @@ trait HasTeams
         }
 
         /** @var array<int, string> $permissions */
-        return $role->permissions->pluck('name')->values()->toArray();
+        $permissions = $role->permissions->pluck('name')->values()->toArray();
+        return $permissions;
     }
 
     /**
@@ -388,8 +389,8 @@ trait HasTeams
         $xot = XotData::make();
         $teamClass = $xot->getTeamClass();
 
-        /** @var BelongsToMany<Model&TeamContract, BaseUser, Membership> $relation */
-        return $this->belongsToMany($teamClass, 'team_user', 'user_id', 'team_id')->using(Membership::class);
+        return $this->belongsToManyX($teamClass, 'team_user', 'user_id', 'team_id');
+        
     }
 
     /**

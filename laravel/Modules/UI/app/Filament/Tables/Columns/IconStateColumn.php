@@ -72,8 +72,7 @@ class IconStateColumn extends IconColumn
                                 $statesArray = $record->getStatesFor($name)->toArray();
                             }
 
-                            /** @var array<int|string, mixed> $states */
-                            return Arr::mapWithKeys($statesArray, function ($state) use ($record) {
+                            $states = Arr::mapWithKeys($statesArray, function ($state) use ($record) {
                                 if (! is_string($state)) {
                                     return [];
                                 }
@@ -83,6 +82,7 @@ class IconStateColumn extends IconColumn
 
                                 return [$state => $label];
                             });
+                            return $states;
                         })
                         ->required()
                         ->reactive(),

@@ -36,7 +36,6 @@ class IconPicker extends TextInput
                 ->schema([
                     Select::make('pack')
                         ->options(function () use ($packs): array {
-                            /** @var array<string, string> $packsOptions */
                             return $packs;
                         })
                         ->reactive()

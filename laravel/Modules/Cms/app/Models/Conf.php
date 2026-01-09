@@ -9,6 +9,7 @@ use Modules\Cms\Database\Factories\ConfFactory;
 use Modules\Tenant\Actions\Config\GetTenantConfigNamesAction;
 use Modules\Xot\Contracts\ProfileContract;
 use Sushi\Sushi;
+use Webmozart\Assert\Assert;
 
 /**
  * Modules\Cms\Models\Conf.

@@ -118,8 +118,9 @@ trait SushiToJson
             $normalizedData,
         );
 
+        $rows = array_values($completedData);
         /** @var array<int, array<string, mixed>> $rows */
-        return array_values($completedData);
+        return $rows;
     }
 
     /**
