@@ -33,12 +33,11 @@ parameters:
         - ./*/vendor/*
         - ./*/build/*
         - ./*/docs/*
-        - ./*/Tests/*
+        # - ./*/tests/*
         - ./*/phpinsights.php
         - ./*/rector.php
         - ./*/*.blade.php
         - ./Modules/*/packages/*
-        - ./Modules/*/tests/*
 
     bootstrapFiles:
         # - ./phpstan_bootstrap.php

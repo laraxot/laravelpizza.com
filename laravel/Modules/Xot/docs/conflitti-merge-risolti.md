@@ -115,3 +115,4 @@ Durante la risoluzione dei conflitti, nel file `Modules/Xot/app/Filament/Resourc
 ## Conclusioni
 
 La risoluzione dei conflitti di merge ha ripristinato la corretta funzionalità delle classi nel modulo Xot, permettendo l'analisi statica con PHPStan e garantendo il corretto funzionamento dell'applicazione. Le soluzioni implementate hanno mantenuto la coerenza del codice e migliorato la robustezza delle classi interessate.
+

@@ -59,3 +59,4 @@ https://www.learnvern.com/laravel-tutorial
 https://www.objectivequiz.com/objective-questions/programming-technologies/laravel     !!!
 
 https://www.testgorilla.com/test-library/programming-skills-tests/laravel-test/  !!!
+

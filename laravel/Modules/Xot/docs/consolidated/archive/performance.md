@@ -38,3 +38,11 @@ Il modulo implementa diverse risorse Filament per la gestione delle performance:
 - [Convenzioni di Naming](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/project_docs/naming-conventions.md)
 - [Guide PHPStan Livello 9](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/project_docs/PHPSTAN-LEVEL9-GUIDE.md)
 - [QueueableActions](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/Xot/project_docs/queueable-actions.md)
+# _performance
+
+<!-- Contenuto migrato da _docs/_performance.txt -->
+
+//-----------------------------------------------------------
+4 tips to improve Laravel performance
+https://medium.com/@mianhaseeb41/4-tips-to-improve-laravel-performance-caff9ff46e76
+//-------------------------------------------------------------

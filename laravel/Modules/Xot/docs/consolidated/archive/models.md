@@ -43,3 +43,9 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/scope.txt}
 ### Versione Incoming
 
 ---
+# _models
+
+<!-- Contenuto migrato da _docs/_models.txt -->
+
+multi key, fixing lazy loading
+https://github.com/topclaudy/compoships

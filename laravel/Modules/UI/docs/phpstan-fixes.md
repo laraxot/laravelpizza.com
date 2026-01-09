@@ -59,3 +59,12 @@ if (isset($record->attribute)) {
 - [ ] PHP Insights (Quality > 80%)
 - [ ] Pint formatting (`--dirty`)
 - [ ] Zero TODO/Codice commentato
+# PHPStan Status: Modules/UI
+
+## Analysis
+- **Date**: 2025-12-24
+- **Total Errors**: 0
+- **Status**: Passed
+
+## Verification
+- UI module is compliant with current PHPStan configuration.

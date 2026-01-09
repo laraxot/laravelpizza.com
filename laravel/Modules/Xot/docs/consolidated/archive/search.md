@@ -172,3 +172,8 @@
 * [search.md](docs/rules/search.md)
 * [search.md](../../../Xot/project_docs/features/search.md)
 * [search.md](../../../Xot/project_docs/rules/search.md)
+# _search
+
+<!-- Contenuto migrato da _docs/_search.txt -->
+
+https://freek.dev/1182-searching-models-using-a-where-like-query-in-laravel#adding-support-for-relations
