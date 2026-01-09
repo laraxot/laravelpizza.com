@@ -118,9 +118,7 @@ trait SushiToJson
             $normalizedData,
         );
 
-        $rows = array_values($completedData);
-        /** @var array<int, array<string, mixed>> $rows */
-        return $rows;
+        return array_values($completedData);
     }
 
     /**
@@ -145,12 +143,14 @@ trait SushiToJson
         }
 
         // Assicura che i dati abbiano la struttura corretta
-        /** @var array<int, array<string, mixed>> $result */
         $result = [];
         foreach ($data as $item) {
             if (is_array($item)) {
-                /** @var array<string, mixed> $safeItem */
-                $safeItem = $item;
+                $safeItem = [];
+                foreach ($item as $key => $value) {
+                    $safeItem[(string) $key] = $value;
+                }
+
                 $result[] = $safeItem;
             }
         }

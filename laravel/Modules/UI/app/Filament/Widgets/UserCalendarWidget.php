@@ -55,9 +55,7 @@ class UserCalendarWidget extends XotBaseWidget
         }
 
         /** @var array<int, array<string, mixed>> $result */
-        $result = $resultRaw;
-
-        return $result;
+        return $resultRaw;
     }
 
     /**
@@ -71,18 +69,15 @@ class UserCalendarWidget extends XotBaseWidget
             $actionInstance = app($action);
             if (\is_object($actionInstance) && method_exists($actionInstance, 'execute')) {
                 $resultRaw = $actionInstance->execute();
-
-                if (self::isValidFormSchema($resultRaw)) {
+                if (\is_array($resultRaw)) {
                     /** @var array<int, TextInput|Grid> $result */
-                    $result = $resultRaw;
-
-                    return $result;
+                    return $resultRaw;
                 }
             }
         }
 
         // Fallback schema
-        return [
+        $fallback = [
             TextInput::make('title'),
             Grid::make()
                 ->schema([
@@ -90,6 +85,8 @@ class UserCalendarWidget extends XotBaseWidget
                     DateTimePicker::make('ends_at'),
                 ]),
         ];
+        
+        return $fallback;
     }
 
     public function onDateSelect(string $start, ?string $end, bool $allDay, ?array $view, ?array $resource): void

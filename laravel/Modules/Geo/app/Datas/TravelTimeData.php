@@ -60,7 +60,7 @@ class TravelTimeData extends Data
      */
     public static function fromGoogleResponse(array $response): self
     {
-        if ($response['status'] !== 'OK') {
+        if ('OK' !== $response['status']) {
             return self::error($response['status']);
         }
 

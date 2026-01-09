@@ -8,6 +8,7 @@ use GuzzleHttp\Promise\PromiseInterface;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use Modules\Geo\Datas\LocationData;
+
 use function Safe\json_decode;
 
 /**
@@ -45,7 +46,7 @@ class GetCoordinatesAction
         /** @var array{status: string, results: array<int, array{geometry: array{location: array{lat: float, lng: float}}}>} $data */
         $data = json_decode($response->body(), true);
 
-        if ($data['status'] !== 'OK' || empty($data['results'])) {
+        if ('OK' !== $data['status'] || empty($data['results'])) {
             return null;
         }
 

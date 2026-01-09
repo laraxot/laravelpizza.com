@@ -28,7 +28,7 @@ trait HasStrictTranslations
     {
         $value = $this->spatieGetTranslation($key, $locale, $useFallbackLocale);
 
-        if (is_string($value) || is_array($value) || is_int($value) || $value === null) {
+        if (is_string($value) || is_array($value) || is_int($value) || null === $value) {
             return $value;
         }
 

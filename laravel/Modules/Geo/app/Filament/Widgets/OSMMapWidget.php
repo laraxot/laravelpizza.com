@@ -34,7 +34,7 @@ class OSMMapWidget extends Widget
         $places = Place::with(['address', 'placeType'])->get();
 
         return $places
-            ->filter(fn (Place $place) => $place->latitude !== null && $place->longitude !== null)
+            ->filter(fn (Place $place) => null !== $place->latitude && null !== $place->longitude)
             ->map(function (Place $place): array {
                 $marker = [
                     'position' => [
@@ -46,7 +46,7 @@ class OSMMapWidget extends Widget
                 ];
 
                 $icon = $this->getMarkerIcon($place);
-                if ($icon !== null) {
+                if (null !== $icon) {
                     $marker['icon'] = $icon;
                 }
 

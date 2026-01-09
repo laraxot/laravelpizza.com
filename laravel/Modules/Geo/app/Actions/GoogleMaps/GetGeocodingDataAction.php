@@ -8,6 +8,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\GeocodingData;
+
 use function Safe\json_decode;
 
 /**
@@ -107,7 +108,7 @@ readonly class GetGeocodingDataAction
          * } $data */
         $data = json_decode($response, true);
 
-        if ($data['status'] !== 'OK' || empty($data['results'])) {
+        if ('OK' !== $data['status'] || empty($data['results'])) {
             Log::warning('Geocodifica fallita', [
                 'status' => $data['status'],
                 'error' => $data['error_message'] ?? 'Nessun risultato trovato',

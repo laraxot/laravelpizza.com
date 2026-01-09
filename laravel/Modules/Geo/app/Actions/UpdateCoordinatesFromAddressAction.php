@@ -70,7 +70,7 @@ class UpdateCoordinatesFromAddressAction
         // Esegui geocoding per ottenere i dati dell'indirizzo
         $addressData = $this->getAddressDataAction->execute($fullAddress);
 
-        if ($addressData === null) {
+        if (null === $addressData) {
             // Raccogli errori dal servizio di geocoding
             $geocodingErrors = $this->getAddressDataAction->getErrors();
             if ($geocodingErrors->isNotEmpty()) {

@@ -26,7 +26,7 @@ class TransCollectionAction
      */
     public function execute(Collection $collection, ?string $transKey): Collection
     {
-        if ($transKey === null) {
+        if (null === $transKey) {
             return $collection->map(SafeStringCastAction::cast(...));
         }
 
@@ -49,7 +49,7 @@ class TransCollectionAction
             $item = SafeStringCastAction::cast($item);
         }
 
-        if (empty($item) || $this->transKey === null) {
+        if (empty($item) || null === $this->transKey) {
             return $item;
         }
 

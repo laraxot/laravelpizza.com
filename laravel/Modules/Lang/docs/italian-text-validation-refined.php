@@ -219,11 +219,11 @@ function auditRealItalianText(string $basePath): array
             $lineNumber = 0;
             foreach ($lines as $line) {
                 ++$lineNumber;
-                if (stripos($line, $pattern) !== false) {
+                if (false !== stripos($line, $pattern)) {
                     // Verifica che non sia un falso positivo
                     $isExcluded = false;
                     foreach ($excludePatterns as $exclude) {
-                        if (stripos($line, $exclude) !== false && stripos($line, $pattern) !== false) {
+                        if (false !== stripos($line, $exclude) && false !== stripos($line, $pattern)) {
                             // Controlla se il pattern è parte del termine escluso
                             if (str_contains(strtolower($exclude), strtolower(trim($pattern)))) {
                                 $isExcluded = true;

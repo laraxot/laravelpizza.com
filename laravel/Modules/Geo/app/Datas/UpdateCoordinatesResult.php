@@ -6,6 +6,7 @@ namespace Modules\Geo\Datas;
 
 use Illuminate\Support\Collection;
 use Spatie\LaravelData\Data;
+use Webmozart\Assert\Assert;
 
 /**
  * Result DTO for bulk coordinate update operations.

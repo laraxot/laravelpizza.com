@@ -78,7 +78,7 @@ class ComuneJson extends GeoJsonModel
     {
         $cacheKey = "geo_region_{$regionCode}";
 
-        /** @var Collection<int, array{
+        /* @var Collection<int, array{
          *     nome: string,
          *     codice: string,
          *     regione: array{codice: string, nome: string},
@@ -114,7 +114,7 @@ class ComuneJson extends GeoJsonModel
     {
         $cacheKey = "geo_province_{$provinceCode}";
 
-        /** @var Collection<int, array{
+        /* @var Collection<int, array{
          *     nome: string,
          *     codice: string,
          *     regione: array{codice: string, nome: string},
@@ -154,7 +154,7 @@ class ComuneJson extends GeoJsonModel
         $name = mb_strtolower($name);
         $cacheKey = 'geo_search_'.md5($name).'_'.$limit;
 
-        /** @var Collection<int, array{
+        /* @var Collection<int, array{
          *     nome: string,
          *     codice: string,
          *     regione: array{codice: string, nome: string},
@@ -372,7 +372,7 @@ class ComuneJson extends GeoJsonModel
     {
         $cacheKey = 'geo_gerarchia_'.md5($comuneNome);
 
-        /** @var array{
+        /* @var array{
          *     regione: array{codice: string, nome: string}|null,
          *     provincia: array{codice: string, nome: string}|null,
          *     comune: array{

@@ -50,7 +50,7 @@ class GetAddressFromBingMapsAction
         }
 
         // We've already checked that $apiKey is not empty
-        /** @var non-empty-string $apiKey */
+        /* @var non-empty-string $apiKey */
         return $apiKey;
     }
 
@@ -76,9 +76,8 @@ class GetAddressFromBingMapsAction
             throw InvalidLocationException::invalidData('Richiesta a Bing Maps fallita');
         }
 
-        $jsonResponse = $response->json();
-        /** @var array<string, mixed> $jsonResponse */
-        return $jsonResponse;
+        /* @var array<string, mixed> $jsonResponse */
+        return $response->json();
     }
 
     /**
@@ -177,26 +176,8 @@ class GetAddressFromBingMapsAction
             throw InvalidLocationException::invalidData('Indirizzo mancante nella risposta');
         }
 
-        // Validate structure for PHPStan level 10 compliance
-        /** @var array<string, mixed> $location */
-        if (! $this->isValidLocationArray($location)) {
-            throw InvalidLocationException::invalidData('Struttura location non valida');
-        }
-
-        /** @var array<string, mixed> $location */
+        /* @var array<string, mixed> $validatedLocation */
         return $location;
-    }
-
-    /**
-     * Validate that the location array conforms to array<string, mixed> structure.
-     *
-     * @param array<string, mixed> $location
-     */
-    private function isValidLocationArray(array $location): bool
-    {
-        // After the previous validations, we know the key structure exists
-        // This method exists primarily to help PHPStan understand the type
-        return true;
     }
 
     /**

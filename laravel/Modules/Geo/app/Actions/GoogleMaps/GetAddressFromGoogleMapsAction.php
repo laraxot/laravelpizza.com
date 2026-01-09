@@ -71,7 +71,7 @@ final class GetAddressFromGoogleMapsAction
         /** @var GoogleMapResponseData $responseData */
         $responseData = GoogleMapResponseData::from($response->json());
 
-        if ($responseData->results->count() === 0) {
+        if (0 === $responseData->results->count()) {
             throw GoogleMapsApiException::noResultsFound();
         }
 

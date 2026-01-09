@@ -122,11 +122,9 @@ class EditUserWidget extends XotBaseWidget
      */
     public function getFormSchema(): array
     {
-        /** @var array<int|string, Component> $schema */
         $schema = $this->resource::getFormSchemaWidget();
-        //Assert::isArray($schema, 'Schema must be array');
-
-        
+        Assert::isArray($schema, 'Schema must be array');
+        /** @var array<int|string, Component> $schema */
         return $schema;
     }
 

@@ -17,8 +17,8 @@ trait HandlesCoordinates
      */
     protected function areValidCoordinates(?float $latitude, ?float $longitude): bool
     {
-        return $latitude !== null
-            && $longitude !== null
+        return null !== $latitude
+            && null !== $longitude
             && $latitude >= -90
             && $latitude <= 90
             && $longitude >= -180

@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace Modules\Lang\Actions;
 
 use Illuminate\Support\Facades\File;
+
 use function Safe\exec;
 use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
+
 use Spatie\QueueableAction\QueueableAction;
 
 class WriteTranslationFileAction
@@ -40,7 +42,7 @@ class WriteTranslationFileAction
         // Scrivi il file
         $result = File::put($filePath, $phpContent);
 
-        if ($result === false) {
+        if (false === $result) {
             throw new \Exception("Impossibile scrivere il file: {$filePath}");
         }
 
@@ -94,7 +96,7 @@ class WriteTranslationFileAction
         // Rimuove il file temporaneo
         unlink($tempFile);
 
-        if ($returnCode !== 0) {
+        if (0 !== $returnCode) {
             $error = implode("\n", $output ?? []);
             throw new \Exception("Sintassi PHP non valida: {$error}");
         }

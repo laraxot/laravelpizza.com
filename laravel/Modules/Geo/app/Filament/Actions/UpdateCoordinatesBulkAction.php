@@ -33,7 +33,6 @@ use Modules\Xot\Filament\Tables\Actions\XotBaseBulkAction;
  */
 class UpdateCoordinatesBulkAction extends XotBaseBulkAction
 {
-
     /**
      * Configurazione iniziale dell'azione.
      */
@@ -45,10 +44,11 @@ class UpdateCoordinatesBulkAction extends XotBaseBulkAction
             ->icon('heroicon-o-map-pin')
             ->deselectRecordsAfterCompletion()
             ->action(function (Collection $records): void {
-                /** @var Collection<int, Place> $records */
+                /* @var Collection<int, Place> $records */
                 $this->processRecords($records);
             });
     }
+
     /**
      * Nome di default dell'action.
      *
