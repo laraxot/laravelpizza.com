@@ -1,0 +1,89 @@
+# Fix: SushiToJsonIntegrationTest - Database Connection Configuration
+
+**Data**: 2025-01-22
+**Problema**: Test fallisce con "Database connection [tenant] not configured"
+**Principio**: Il sito funziona, quindi il test deve essere corretto per riflettere il comportamento reale
+
+## 🔍 Analisi del Problema
+
+### Errore Originale
+```
+InvalidArgumentException: Database connection [tenant] not configured.
+```
+
+### Causa
+- Il modello `Tenant` estende `BaseModel` che ha `protected $connection = 'tenant'`
+- Il test `SushiToJsonIntegrationTest` non configura la connessione 'tenant' nel setUp()
+- Il test estende `Tests\TestCase` che non configura automaticamente la connessione 'tenant'
+
+### Confronto con Test Funzionanti
+- `TenantBusinessLogicTest` funziona e usa `Tenant::factory()->create()`
+- `TenantBusinessLogicTest` estende `Tests\TestCase` (stesso del test fallito)
+- Differenza: probabilmente le migrazioni vengono eseguite sulla connessione default, non su 'tenant'
+
+## 🛠️ Soluzione
+
+### Pattern Corretto (da User\Tests\TestCase)
+```php
+// Configure all connections including tenant
+$dbName = ':memory:';
+$connections = ['sqlite', 'user', 'xot', 'activity', 'tenant', ...];
+
+foreach ($connections as $conn) {
+    $this->app['config']->set("database.connections.{$conn}.database", $dbName);
+    $this->app['config']->set("database.connections.{$conn}.driver", 'sqlite');
+}
+
+// Run migrations
+$this->artisan('module:migrate', ['module' => 'Tenant', '--force' => true]);
+```
+
+### Implementazione nel Test
+1. Configurare connessione 'tenant' nel setUp()
+2. Eseguire migrazioni per il modulo Tenant
+3. Verificare che le migrazioni creino la tabella 'tenants' sulla connessione 'tenant'
+
+## 📝 Note
+
+- Il modello `Tenant` usa connessione 'tenant' (da `BaseModel`)
+- Le migrazioni devono essere eseguite sulla connessione corretta
+- Il TestCase base non configura automaticamente tutte le connessioni
+
+## 🔗 Collegamenti
+
+- [Testing Rules](testing-rules.md)
+- [User TestCase](../../User/tests/TestCase.php) - Esempio di configurazione corretta
+- [TenantBusinessLogicTest](../Tests/Feature/TenantBusinessLogicTest.php) - Test funzionante
+
+---
+
+**Status**: In Progress
+**Prossimo step**: Implementare configurazione connessione seguendo pattern User TestCase
+
+## ✅ Soluzione Implementata
+
+### Pattern Corretto
+```php
+// Configure all connections (following User TestCase pattern)
+$connections = ['sqlite', 'tenant', 'user', 'xot'];
+foreach ($connections as $conn) {
+    $this->app['config']->set("database.connections.{$conn}", [
+        'driver' => 'sqlite',
+        'database' => ':memory:',
+        'prefix' => '',
+    ]);
+}
+
+// Purge connections
+foreach ($connections as $conn) {
+    DB::purge($conn);
+}
+
+// Run migrations
+$this->artisan('module:migrate', ['module' => 'Tenant', '--force' => true]);
+```
+
+### Note
+- Le migrazioni vengono eseguite sulla connessione default
+- La connessione 'tenant' usa lo stesso database in-memory
+- Questo riflette il comportamento reale del sito

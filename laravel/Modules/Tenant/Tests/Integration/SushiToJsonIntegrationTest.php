@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Tenant\Tests\Integration;
 
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Schema;
 use Modules\Tenant\Models\Tenant;
 use Modules\Tenant\Models\TestSushiModel;
 use Modules\Tenant\Services\TenantService;
@@ -35,6 +36,29 @@ class SushiToJsonIntegrationTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
+
+        // Configure tenant connection for tests (required by Tenant model)
+        // Use same approach as User\Tests\TestCase - shared in-memory database
+        // The site works, so tests must reflect real behavior
+        $dbName = ':memory:';
+        
+        // Configure all connections that might be needed (following User TestCase pattern)
+        $connections = ['sqlite', 'tenant', 'user', 'xot'];
+        foreach ($connections as $conn) {
+            $this->app['config']->set("database.connections.{$conn}", [
+                'driver' => 'sqlite',
+                'database' => $dbName,
+                'prefix' => '',
+            ]);
+        }
+
+        // Purge connections to ensure fresh connections with new config
+        foreach ($connections as $conn) {
+            \Illuminate\Support\Facades\DB::purge($conn);
+        }
+
+        // Run migrations - they will run on default connection, but tenant connection uses same DB
+        $this->artisan('module:migrate', ['module' => 'Tenant', '--force' => true]);
 
         // Crea tenant di test
         $this->tenant1 = Tenant::factory()->create([
