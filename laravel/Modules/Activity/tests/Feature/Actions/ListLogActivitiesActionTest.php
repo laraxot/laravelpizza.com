@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests\Feature\Actions;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Activity\Filament\Actions\ListLogActivitiesAction;
 use Modules\Activity\Models\Activity;
 use Modules\IndennitaResponsabilita\Filament\Resources\IndennitaResponsabilitaResource;
 use Modules\IndennitaResponsabilita\Models\IndennitaResponsabilita;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\Activity\Tests\TestCase;
 
 class ListLogActivitiesActionTest extends TestCase
 {
-    use RefreshDatabase;
+    use DatabaseTransactions;
 
     /**
      * Test che l'Action possa essere istanziata correttamente.

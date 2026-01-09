@@ -10,6 +10,8 @@ use Modules\Xot\Datas\XotData;
 
 use function Pest\Laravel\actingAs;
 
+uses(\Modules\Activity\Tests\TestCase::class);
+
 /**
  * Test per ListLogActivitiesAction.
  *

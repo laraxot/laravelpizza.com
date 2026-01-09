@@ -1,504 +1,275 @@
-# Testing Best Practices - Laraxot Framework
+# Testing Guide for Laraxot Modules
 
-## 🏆 **Gold Standard Pattern**
+## Introduzione
 
-Basato sui successi misurabili dei test RegisterTypeWidgetTest.php (9/9 test passati) e RegisterTypeTest.php (10/14 test passati).
+I test in Laraxot seguono le best practices di Laravel e Pest PHP. Ogni modulo dovrebbe avere una propria struttura di test organizzata in unit e feature test.
 
-## ✅ **Pattern Vincente per Widget Test**
+## Configurazione dell'Ambiente di Test
 
-### Struttura Base Obbligatoria
+### File `.env.testing`
+Il file `.env.testing` è usato per impostare le configurazioni specifiche per l'ambiente di test:
 
-```php
-<?php
-
-declare(strict_types=1);
-
-use Livewire\Livewire;
-use Modules\{Module}\Filament\Widgets\{WidgetName};
-
-// ✅ CRITICO: TestCase specifico
-uses(\Modules\Xot\Tests\TestCase::class);
-
-// ✅ CRITICO: Mock XotData per ogni test
-## 🏆 Gold Standard per i Test
-
-- Preferire Pest a PHPUnit class-based.
-- Usare `uses(\Modules\Xot\Tests\TestCase::class)` come base dei test.
-- Mockare sempre `XotData` in `beforeEach()` e registrarlo nel container.
-- Separare Page tests (routing/render) e Widget tests (logica Filament/Livewire).
-
-### Esempio Widget (Livewire/Filament)
-```php
-<?php
-declare(strict_types=1);
-
-use Livewire\\Livewire;
-use Modules\\{Module}\\Filament\\Widgets\\{WidgetName};
-
-uses(\\Modules\\Xot\\Tests\\TestCase::class);
-
-beforeEach(function (): void {
-    mockXotData();
-});
-
-test('widget can be rendered', function () {
-    Livewire::test({WidgetName}::class)
-        ->assertStatus(200);
-});
+```
+APP_ENV=testing
+DB_CONNECTION=sqlite
+DB_DATABASE=:memory:
+SESSION_DRIVER=array
+CACHE_DRIVER=array
+QUEUE_CONNECTION=sync
 ```
 
-### XotData Mock Pattern (Obbligatorio)
+### Struttura del TestCase
+Ogni modulo dovrebbe avere un TestCase base nella cartella `tests/`:
 
 ```php
-function mockXotData(): void
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\{ModuleName}\Tests;
+
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;  // Se hai bisogno di database
+use Modules\Xot\Tests\CreatesApplication;
+
+abstract class TestCase extends BaseTestCase
 {
-    $mockXotData = \Mockery::mock(\Modules\Xot\Datas\XotData::class)->makePartial();
-
-    $mockXotData->shouldReceive('getUserClass')
-        ->andReturn(\Modules\SaluteOra\Models\User::class);
-
-    $mockXotData->shouldReceive('make')
-        ->andReturn($mockXotData);
-
-    // ✅ CRITICO: Bind nel container
-    app()->instance(\Modules\Xot\Datas\XotData::class, $mockXotData);
+    use CreatesApplication;
+    use RefreshDatabase; // Rimuovi se non hai bisogno del database
 }
 ```
 
-## 🚨 **Regole Architetturali Critiche**
+## Tipi di Test
 
-### 1. **Separazione Assoluta**
-- **Page Tests**: Solo per route e rendering pagine Laravel Folio
-- **Widget Tests**: Solo per componenti Filament/Livewire logic
+### Unit Test
+I test unitari testano singole unità di codice come:
+- Actions
+- Services
+- Data Transfer Objects
+- Funzioni helper
 
-### 2. **TestCase Selection**
-- **SEMPRE** usare `\Modules\Xot\Tests\TestCase::class`
-- **MAI** usare namespace con `Modules\Cms\Tests\TestCase`
+### Feature Test
+I test funzionali testano flussi completi come:
+- API endpoints
+- Interazioni tra componenti
+- Business logic complessa
 
-### 3. **XotData Dependency**
-- **SEMPRE** mock XotData nei `beforeEach()`
-- **SEMPRE** usare `makePartial()` per flessibilità
-- **SEMPRE** bind nel container con `app()->instance()`
+## Sintassi Pest PHP
 
-## ❌ **Anti-Pattern Critici da Evitare**
-
-### 1. **Pattern che Causano Errori Fatali**
-
+### Test Semplici
 ```php
-// ❌ MAI usare describe() con Pest
-describe('Widget Tests', function () {
-    // Causa: "Undefined property: $__latestDescription"
-});
+it('has a welcome page', function () {
+    $response = $this->get('/');
 
-// ❌ MAI usare dataset() complessi
-dataset('userTypes', function () {
-    // Causa errori di inizializzazione Pest
+    $response->assertStatus(200);
 });
-
-// ❌ MAI TestCase sbagliato
-uses(Tests\TestCase::class); // Causa conflict resolution
 ```
 
-### 2. **Mock Pattern Problematici**
-
+### Test con Setup
 ```php
-// ❌ Mock rigido senza makePartial()
-\Mockery::mock(\Modules\Xot\Datas\XotData::class);
+describe('User authentication', function () {
+    it('allows user to login', function () {
+        $user = User::factory()->create();
 
-// ❌ Mock senza binding nel container
-$mock = \Mockery::mock(...);
-// Non basta, serve app()->instance()
+        $response = $this->post('/login', [
+            'email' => $user->email,
+            'password' => 'password',
+        ]);
 
-// ✅ Pattern corretto
-$mock = \Mockery::mock(...)->makePartial();
-app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
+        $response->assertRedirect('/dashboard');
+    });
+});
 ```
 
-## 📊 **Test Coverage Strategy**
+### Test con Dati di Esempio
+```php
+dataset('user_types', [
+    'admin' => ['type' => 'admin', 'permissions' => ['read', 'write', 'delete']],
+    'editor' => ['type' => 'editor', 'permissions' => ['read', 'write']],
+    'viewer' => ['type' => 'viewer', 'permissions' => ['read']],
+]);
 
-### Widget Tests (Target: 100%)
-1. **Core Rendering** (Obbligatorio)
-   - Basic rendering per ogni tipo supportato
-   - Status assertions (200)
-   - View assertions quando applicabile
+it('has correct permissions based on type', function ($type, $permissions) {
+    $user = User::factory()->create(['type' => $type]);
+    
+    expect($user->permissions)->toBe($permissions);
+})->with('user_types');
+```
 
-2. **Form Interaction** (Raccomandato)
-   - Input/output data flow
-   - State management
-   - Livewire compatibility
+## Best Practices
 
-3. **Business Logic** (Avanzato)
-   - Validation rules
-   - Error handling
-   - Process flow
+### 1. DRY + KISS + SOLID + Robust
+- **DRY**: Non duplicare logica di test
+- **KISS**: Mantieni i test semplici e diretti
+- **SOLID**: Segui principi SOLID nei componenti testati
+- **Robust**: Gestisci eccezioni e casi limite
 
-4. **Integration** (Critico)
-   - XotData resolution
-   - Resource dynamics
-   - Widget lifecycle
+### 2. Naming Conventions
+- Usa nomi descrittivi per i test
+- Segui il formato Given-When-Then
+- Mantieni i nomi in inglese
 
-### Page Tests (Target: 70%+)
-1. **Route Rendering** (Obbligatorio)
-   - HTTP status assertions
-   - Content presence
-   - Layout structure
+### 3. Struttura AAA (Arrange-Act-Assert)
+```php
+it('processes user data correctly', function () {
+    // Arrange
+    $user = User::factory()->create();
+    $data = ['name' => 'John', 'email' => 'john@example.com'];
 
-2. **Middleware** (Raccomandato)
-   - Authentication flow
-   - Authorization checks
-   - Redirect behavior
+    // Act
+    $result = $user->updateProfile($data);
 
-3. **UI Elements** (Avanzato)
-   - Component presence
-   - Dynamic content
-   - Responsive behavior
+    // Assert
+    expect($result)
+        ->toBeTrue()
+        ->and($user->refresh()->name)
+        ->toBe('John');
+});
+```
 
-## 🔧 **Development Workflow**
+### 4. Isolamento dei Test
+- Ogni test deve essere indipendente
+- Usa `RefreshDatabase` o `DatabaseMigrations` se necessario
+- Non fare affidamento su dati creati da altri test
 
-### Pre-Development
-1. **Identificare architettura** target (Page vs Widget)
-2. **Scegliere template** appropriato
-3. **Setup mock XotData** se necessario
+### 5. Coverage del 100%
+- Obiettivo: 100% di code coverage per ogni modulo
+- Testa tutti i percorsi logici
+- Testa anche i casi limite e le eccezioni
 
-### During Development
-1. **Test-driven approach**: Scrivere test prima dell'implementazione
-2. **Iterative testing**: Eseguire test frequentemente
-3. **Performance monitoring**: Mantenere < 5s per test suite
+## Conversione da PHPUnit a Pest
 
-### Post-Development
-1. **Code review**: Verificare pattern compliance
-2. **Documentation update**: Aggiornare docs se nuovi pattern
-3. **Performance validation**: Benchmark vs obiettivi
+### Vecchio stile (PHPUnit):
+```php
+class UserTest extends TestCase
+{
+    /** @test */
+    public function user_can_be_created()
+    {
+        $response = $this->post('/users', [
+            'name' => 'John',
+            'email' => 'john@example.com'
+        ]);
 
-## 🎯 **Quality Gates**
+        $this->assertDatabaseHas('users', [
+            'name' => 'John'
+        ]);
+    }
+}
+```
 
-### Minimum Acceptance Criteria
-- ✅ **Success Rate**: > 70% test passati
-- ✅ **Zero Errors**: Nessun errore fatale Pest
-- ✅ **Performance**: < 5 secondi per test suite
-- ✅ **Architecture**: Separazione rispettata
+### Nuovo stile (Pest):
+```php
+it('user can be created', function () {
+    $response = $this->post('/users', [
+        'name' => 'John',
+        'email' => 'john@example.com'
+    ]);
 
-### Gold Standard Criteria
-- ✅ **Success Rate**: > 90% test passati
-- ✅ **Zero Warnings**: Nessun warning PHP/Pest
-- ✅ **Performance**: < 3 secondi per test suite
-- ✅ **Coverage**: Tutti i path critici testati
+    $response->assertDatabaseHas('users', [
+        'name' => 'John'
+    ]);
+});
+```
 
-## 📈 **Metrics & Monitoring**
+## Esecuzione dei Test
 
-### Key Performance Indicators
-- **Test Execution Time**: Target < 5s per widget suite
-- **Success Rate**: Trend verso 100%
-- **Error Rate**: Target 0 errori fatali
-- **Coverage**: Incremento continuo
-
-### Monitoring Commands
+### Comandi Base
 ```bash
-# Execution time monitoring
-./vendor/bin/pest -v {TestFile} | grep -E "(seconds|ms)"
+# Esegui tutti i test
+./vendor/bin/pest
 
-# Success rate calculation
-./vendor/bin/pest {TestFile} --compact
+# Esegui test per un modulo specifico
+./vendor/bin/pest Modules/User/tests/
 
-# Memory usage monitoring
-./vendor/bin/pest {TestFile} --memory-limit=64M
+# Esegui test con coverage
+./vendor/bin/pest --coverage
+
+# Esegui solo test unitari
+./vendor/bin/pest --group=unit
+
+# Esegui solo test funzionali
+./vendor/bin/pest --group=feature
 ```
 
-## 🔄 **Continuous Improvement**
+## Debugging dei Test
 
-### Pattern Evolution
-- **Document** nuovi pattern che emergono
-- **Validate** pattern con test suite completa
-- **Standardize** pattern che dimostrano successo
-- **Deprecate** pattern che causano problemi
-
-### Knowledge Sharing
-- **Code Reviews**: Enforce pattern compliance
-- **Documentation**: Update con nuove discoveries
-- **Training**: Onboard team sui pattern stabiliti
-- **Retrospectives**: Analizzare fallimenti per migliorare
-
-## 🔗 **Related Documentation**
-
-- [Widget Test Patterns](../Cms/docs/tests/widget-test-patterns.md)
-- [Architecture Separation Rules](../Cms/docs/tests/architecture-separation-rules.md)
-- [XotData Testing Strategy](XOTDATA_TESTING.md)
-
----
-
-**Status**: ✅ Best Practices Validate
-**Enforcement**: Obbligatorio per tutti i test
-**Version**: 1.0 - Gold Standard
-**Last Update**: Dicembre 2024
-### Esempio unit test semplice
+### Log aggiuntivo
 ```php
-<?php
-declare(strict_types=1);
-
-use Illuminate\\Database\\Eloquent\\Relations\\Pivot;
-use Modules\\Xot\\Models\\BaseMorphPivot;
-
-it('extends pivot class', function () {
-    $pivot = new BaseMorphPivot();
-    expect($pivot)->toBeInstanceOf(Pivot::class);
+it('debug test', function () {
+    // Per stampare informazioni di debug
+    dump($variable);
+    info('Debug message');
+    
+    // Oppure usa expect()->debug() per vedere i risultati
+    expect($result)->debug();
 });
 ```
 
-### Mock XotData (obbligatorio)
+## Esempi di Test Comuni
+
+### Test per una Action
 ```php
-function mockXotData(): void
-{
-    $mock = \\Mockery::mock(\\Modules\\Xot\\Datas\\XotData::class)->makePartial();
-    $mock->shouldReceive('getUserClass')->andReturn(\\Modules\\SaluteOra\\Models\\User::class);
-    $mock->shouldReceive('make')->andReturn($mock);
-    app()->instance(\\Modules\\Xot\\Datas\\XotData::class, $mock);
-}
-```
-
-## 🚨 Regole Architetturali
-
-- Page vs Widget: non mischiare responsabilità nei test.
-- Base TestCase: usare sempre `\\Modules\\Xot\\Tests\\TestCase`.
-- Mock coerente delle dipendenze (XotData, servizi esterni).
-
-## ❌ Anti-pattern da evitare
-
-- TestCase errato (es. `Tests\\\\TestCase`).
-- Dataset eccessivamente complessi e non necessari.
-- Mock senza `makePartial()` o non registrati nel container.
-
-## 📊 Strategia Coverage
-
-- Widget: rendering (200), interazioni form, validazioni, integrazioni (XotData), lifecycle.
-- Page: route/status, contenuto, middleware, elementi UI principali.
-
-## 🔧 Workflow
-
-- Pre: definire architettura e template, predisporre mock.
-- Durante: TDD dove possibile, esecuzioni frequenti, attenzione alle performance.
-- Post: code review, aggiornamento documentazione, benchmark suite.
-
-## 🔗 Documentazione correlata
-
-- Widget Test Patterns (Cms)
-- Architecture Separation Rules (Cms)
-- XotData Testing Strategy (XOTDATA_TESTING.md)
-
-Status: Best Practices consolidate — Last Update: Dicembre 2024
-# Testing Best Practices - Laraxot Framework
-
-## 🏆 **Gold Standard Pattern**
-
-Basato sui successi misurabili dei test RegisterTypeWidgetTest.php (9/9 test passati) e RegisterTypeTest.php (10/14 test passati).
-
-## ✅ **Pattern Vincente per Widget Test**
-
-### Struttura Base Obbligatoria
-
-```php
-<?php
-
-declare(strict_types=1);
-
-use Livewire\Livewire;
-use Modules\{Module}\Filament\Widgets\{WidgetName};
-
-// ✅ CRITICO: TestCase specifico
-uses(\Modules\Xot\Tests\TestCase::class);
-
-// ✅ CRITICO: Mock XotData per ogni test
-beforeEach(function (): void {
-    mockXotData();
-});
-
-// ✅ CRITICO: Test diretti senza describe() o dataset()
-test('widget can be rendered', function () {
-    Livewire::test({WidgetName}::class)
-        ->assertStatus(200);
+it('processes data correctly', function () {
+    $action = new ProcessUserDataAction();
+    $result = $action->execute(['name' => 'John']);
+    
+    expect($result)->toBeArray();
+    expect($result['processed'])->toBeTrue();
 });
 ```
 
-### XotData Mock Pattern (Obbligatorio)
-
+### Test per un Modello
 ```php
-function mockXotData(): void
-{
-    $mockXotData = \Mockery::mock(\Modules\Xot\Datas\XotData::class)->makePartial();
-
-    $mockXotData->shouldReceive('getUserClass')
-        ->andReturn(\Modules\<nome progetto>\Models\User::class);
-        ->andReturn(\Modules\<nome progetto>\Models\User::class);
-
-    $mockXotData->shouldReceive('make')
-        ->andReturn($mockXotData);
-
-    // ✅ CRITICO: Bind nel container
-    app()->instance(\Modules\Xot\Datas\XotData::class, $mockXotData);
-}
-```
-
-## 🚨 **Regole Architetturali Critiche**
-
-### 1. **Separazione Assoluta**
-- **Page Tests**: Solo per route e rendering pagine Laravel Folio
-- **Widget Tests**: Solo per componenti Filament/Livewire logic
-
-### 2. **TestCase Selection**
-- **SEMPRE** usare `\Modules\Xot\Tests\TestCase::class`
-- **MAI** usare namespace con `Modules\Cms\Tests\TestCase`
-
-### 3. **XotData Dependency**
-- **SEMPRE** mock XotData nei `beforeEach()`
-- **SEMPRE** usare `makePartial()` per flessibilità
-- **SEMPRE** bind nel container con `app()->instance()`
-
-## ❌ **Anti-Pattern Critici da Evitare**
-
-### 1. **Pattern che Causano Errori Fatali**
-
-```php
-// ❌ MAI usare describe() con Pest
-describe('Widget Tests', function () {
-    // Causa: "Undefined property: $__latestDescription"
+it('has correct relationship', function () {
+    $user = User::factory()->create();
+    $post = Post::factory()->create(['user_id' => $user->id]);
+    
+    expect($user->posts)->toHaveCount(1);
 });
-
-// ❌ MAI usare dataset() complessi
-dataset('userTypes', function () {
-    // Causa errori di inizializzazione Pest
-});
-
-// ❌ MAI TestCase sbagliato
-uses(Tests\TestCase::class); // Causa conflict resolution
 ```
 
-### 2. **Mock Pattern Problematici**
-
+### Test per una API
 ```php
-// ❌ Mock rigido senza makePartial()
-\Mockery::mock(\Modules\Xot\Datas\XotData::class);
-
-// ❌ Mock senza binding nel container
-$mock = \Mockery::mock(...);
-// Non basta, serve app()->instance()
-
-// ✅ Pattern corretto
-$mock = \Mockery::mock(...)->makePartial();
-app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
+it('returns user data', function () {
+    $user = User::factory()->create();
+    
+    $response = $this->getJson("/api/users/{$user->id}");
+    
+    $response->assertOk()
+             ->assertJson(['id' => $user->id]);
+});
 ```
 
-## 📊 **Test Coverage Strategy**
+## Gestione delle Dipendenze e Mocking
 
-### Widget Tests (Target: 100%)
-1. **Core Rendering** (Obbligatorio)
-   - Basic rendering per ogni tipo supportato
-   - Status assertions (200)
-   - View assertions quando applicabile
-
-2. **Form Interaction** (Raccomandato)
-   - Input/output data flow
-   - State management
-   - Livewire compatibility
-
-3. **Business Logic** (Avanzato)
-   - Validation rules
-   - Error handling
-   - Process flow
-
-4. **Integration** (Critico)
-   - XotData resolution
-   - Resource dynamics
-   - Widget lifecycle
-
-### Page Tests (Target: 70%+)
-1. **Route Rendering** (Obbligatorio)
-   - HTTP status assertions
-   - Content presence
-   - Layout structure
-
-2. **Middleware** (Raccomandato)
-   - Authentication flow
-   - Authorization checks
-   - Redirect behavior
-
-3. **UI Elements** (Avanzato)
-   - Component presence
-   - Dynamic content
-   - Responsive behavior
-
-## 🔧 **Development Workflow**
-
-### Pre-Development
-1. **Identificare architettura** target (Page vs Widget)
-2. **Scegliere template** appropriato
-3. **Setup mock XotData** se necessario
-
-### During Development
-1. **Test-driven approach**: Scrivere test prima dell'implementazione
-2. **Iterative testing**: Eseguire test frequentemente
-3. **Performance monitoring**: Mantenere < 5s per test suite
-
-### Post-Development
-1. **Code review**: Verificare pattern compliance
-2. **Documentation update**: Aggiornare docs se nuovi pattern
-3. **Performance validation**: Benchmark vs obiettivi
-
-## 🎯 **Quality Gates**
-
-### Minimum Acceptance Criteria
-- ✅ **Success Rate**: > 70% test passati
-- ✅ **Zero Errors**: Nessun errore fatale Pest
-- ✅ **Performance**: < 5 secondi per test suite
-- ✅ **Architecture**: Separazione rispettata
-
-### Gold Standard Criteria
-- ✅ **Success Rate**: > 90% test passati
-- ✅ **Zero Warnings**: Nessun warning PHP/Pest
-- ✅ **Performance**: < 3 secondi per test suite
-- ✅ **Coverage**: Tutti i path critici testati
-
-## 📈 **Metrics & Monitoring**
-
-### Key Performance Indicators
-- **Test Execution Time**: Target < 5s per widget suite
-- **Success Rate**: Trend verso 100%
-- **Error Rate**: Target 0 errori fatali
-- **Coverage**: Incremento continuo
-
-### Monitoring Commands
-```bash
-# Execution time monitoring
-./vendor/bin/pest -v {TestFile} | grep -E "(seconds|ms)"
-
-# Success rate calculation
-./vendor/bin/pest {TestFile} --compact
-
-# Memory usage monitoring
-./vendor/bin/pest {TestFile} --memory-limit=64M
+### Mocking di Servizi
+```php
+it('uses external service', function () {
+    $mock = Mockery::mock(ExternalService::class);
+    $mock->shouldReceive('process')->andReturn(true);
+    
+    $this->app->instance(ExternalService::class, $mock);
+    
+    // Esegui test logica che usa ExternalService
+    $result = SomeAction::execute();
+    
+    expect($result)->toBeTrue();
+});
 ```
 
-## 🔄 **Continuous Improvement**
+## Risoluzione Comuni Problemi
 
-### Pattern Evolution
-- **Document** nuovi pattern che emergono
-- **Validate** pattern con test suite completa
-- **Standardize** pattern che dimostrano successo
-- **Deprecate** pattern che causano problemi
+### Problemi di Connessione al Database
+- Assicurati che `.env.testing` abbia configurazioni appropriate
+- Usa `RefreshDatabase` o `DatabaseMigrations` nei test che richiedono DB
+- Verifica che le migrazioni siano caricate correttamente
 
-### Knowledge Sharing
-- **Code Reviews**: Enforce pattern compliance
-- **Documentation**: Update con nuove discoveries
-- **Training**: Onboard team sui pattern stabiliti
-- **Retrospectives**: Analizzare fallimenti per migliorare
+### Errori di Configurazione
+- I test usano le configurazioni definite in `config/`
+- Usa `Config::set()` per modificare configurazioni specifiche nei test se necessario
 
-## 🔗 **Related Documentation**
-
-- [Widget Test Patterns](../Cms/docs/tests/widget-test-patterns.md)
-- [Architecture Separation Rules](../Cms/docs/tests/architecture-separation-rules.md)
-- [XotData Testing Strategy](XOTDATA_TESTING.md)
-
----
-
-**Status**: ✅ Best Practices Validate
-**Enforcement**: Obbligatorio per tutti i test
-**Version**: 1.0 - Gold Standard
-**Last Update**: Dicembre 2024
+### Performance dei Test
+- Usa `withoutExceptionHandling()` solo quando testi gestione errori
+- Usa `DatabaseMigrations` invece di `RefreshDatabase` per test più veloci
+- Evita chiamate di rete nei test (mocka i servizi esterni)

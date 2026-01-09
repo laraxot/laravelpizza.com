@@ -8,6 +8,8 @@ use Modules\User\Models\User;
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\get;
 
+uses(Modules\User\Tests\TestCase::class);
+
 describe('Auth Components Reorganization Tests', function (): void {
     test('auth components are properly organized after reorganization', function (): void {
         // Test auth.confirms-password component exists

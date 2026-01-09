@@ -6,11 +6,16 @@ namespace Modules\Activity\Tests;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 use Modules\Activity\Providers\ActivityServiceProvider;
+use Spatie\EventSourcing\StoredEvents\EventSubscriber;
+use Spatie\EventSourcing\StoredEvents\Repositories\EloquentStoredEventRepository;
 use Modules\User\Models\User;
 use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 use Modules\Xot\Providers\XotServiceProvider;
+use Modules\Xot\Tests\CreatesApplication;
 
 // Added
 /**
@@ -24,6 +29,8 @@ use Modules\Xot\Providers\XotServiceProvider;
  */
 abstract class TestCase extends BaseTestCase
 {
+    use CreatesApplication;
+
     public ?User $user = null;
 
     /**
@@ -62,16 +69,18 @@ abstract class TestCase extends BaseTestCase
             'prefix' => '',
         ]);
 
+        $this->app->bind(EventSubscriber::class, function (): EventSubscriber {
+            return new EventSubscriber(EloquentStoredEventRepository::class);
+        });
+
         // Run migrations for all relevant modules on their respective connections
         $this->artisan('migrate:fresh', [
             '--database' => 'testing',
             '--path' => 'database/migrations', // Main Laravel migrations
-            '--realpath' => true,
         ]);
         $this->artisan('migrate:fresh', [
             '--database' => 'activity', // Run on 'activity' connection
             '--path' => 'Modules/Activity/database/migrations',
-            '--realpath' => true,
         ]);
         $xotBaseMigrationClass = XotBaseMigration::class;
         $mockModelClass = Model::class;
@@ -96,13 +105,28 @@ abstract class TestCase extends BaseTestCase
 
         $this->artisan('migrate:fresh', [
             '--database' => 'user', // Run on 'user' connection (specific for User module)
-            '--path' => 'Modules/User/database/migrations',
-            '--realpath' => true,
+            '--path' => 'database/migrations',
         ]);
+
+        Schema::connection('user')->dropIfExists('users');
+        Schema::connection('user')->create('users', function (Blueprint $table): void {
+            $table->uuid('id')->primary();
+            $table->boolean('is_otp')->default(false);
+            $table->boolean('is_active')->default(true);
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('name')->nullable();
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->string('remember_token')->nullable();
+            $table->string('lang')->nullable();
+            $table->timestamp('password_expires_at')->nullable();
+            $table->timestamps();
+        });
         $this->artisan('migrate:fresh', [
             '--database' => 'xot', // Run on 'xot' connection (specific for Xot module)
             '--path' => 'Modules/Xot/database/migrations',
-            '--realpath' => true,
         ]);
 
         // Seed any required data for Activity tests

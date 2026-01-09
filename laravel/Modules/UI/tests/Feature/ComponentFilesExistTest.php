@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-describe('Component Files Existence Tests', static function (): void {
-    test('reorganized component files exist in correct locations', static function (): void {
-        $themeBasePath = '/var/www/html/_bases/base_<nome progetto>_fila3_mono/laravel/Themes/Sixteen/resources/views/components';
+describe('Component Files Existence Tests', function (): void {
+    test('reorganized component files exist in correct locations', function (): void {
+        $themeBasePath = base_path('Themes/Sixteen/resources/views/components');
 
         // Test forms components exist
         expect(file_exists($themeBasePath.'/forms/input.blade.php'))->toBeTrue();
@@ -70,8 +70,8 @@ describe('Component Files Existence Tests', static function (): void {
         expect(file_exists($themeBasePath.'/utilities/ui/tabs.blade.php'))->toBeTrue();
     });
 
-    test('no old component files remain in root components directory', static function (): void {
-        $themeBasePath = '/var/www/html/_bases/base_<nome progetto>_fila3_mono/laravel/Themes/Sixteen/resources/views/components';
+    test('no old component files remain in root components directory', function (): void {
+        $themeBasePath = base_path('Themes/Sixteen/resources/views/components');
 
         // These should NOT exist in the root anymore (they should be in subdirectories)
         expect(file_exists($themeBasePath.'/input.blade.php'))->toBeFalse();
@@ -81,8 +81,8 @@ describe('Component Files Existence Tests', static function (): void {
         expect(file_exists($themeBasePath.'/dropdown.blade.php'))->toBeFalse();
     });
 
-    test('component files contain proper blade syntax', static function (): void {
-        $themeBasePath = '/var/www/html/_bases/base_<nome progetto>_fila3_mono/laravel/Themes/Sixteen/resources/views/components';
+    test('component files contain proper blade syntax', function (): void {
+        $themeBasePath = base_path('Themes/Sixteen/resources/views/components');
 
         // Test a few key components have proper Blade syntax
         $buttonContent = file_get_contents($themeBasePath.'/utilities/button.blade.php');
@@ -95,8 +95,8 @@ describe('Component Files Existence Tests', static function (): void {
         expect($cardContent)->toContain('@props');
     });
 
-    test('directory structure is properly organized', static function (): void {
-        $themeBasePath = '/var/www/html/_bases/base_<nome progetto>_fila3_mono/laravel/Themes/Sixteen/resources/views/components';
+    test('directory structure is properly organized', function (): void {
+        $themeBasePath = base_path('Themes/Sixteen/resources/views/components');
 
         // Test that directories exist
         expect(is_dir($themeBasePath.'/forms'))->toBeTrue();

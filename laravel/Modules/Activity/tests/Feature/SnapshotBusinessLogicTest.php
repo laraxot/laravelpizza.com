@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Feature;
 
 use Modules\Activity\Models\Snapshot;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Modules\Activity\Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Str;
 
 class SnapshotBusinessLogicTest extends TestCase
 {
-    use RefreshDatabase;
+    use DatabaseTransactions;
 
     /** @test */
     public function it_can_create_snapshot_with_basic_information(): void

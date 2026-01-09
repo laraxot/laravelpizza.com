@@ -2,161 +2,138 @@
 
 declare(strict_types=1);
 
-namespace Modules\User\Tests\Unit;
-
 use Illuminate\Validation\Rules\Password;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Events\AddingTeam;
 use Modules\User\Events\Login;
 use Modules\User\Events\Registered;
 use Modules\User\Events\SocialiteUserConnected;
-use PHPUnit\Framework\TestCase;
+use Modules\User\Tests\TestCase;
 
-class UserModulePhpstanFixesTest extends TestCase
-{
-    /** @test */
-    public function passwordDataCanBeInstantiated(): void
-    {
-        $passwordData = new PasswordData();
+uses(TestCase::class);
 
-        $this->assertInstanceOf(PasswordData::class, $passwordData);
-        $this->assertEquals(15, $passwordData->otp_expiration_minutes);
-        $this->assertEquals(6, $passwordData->otp_length);
-        $this->assertEquals(30, $passwordData->expires_in);
-        $this->assertEquals(6, $passwordData->min);
-        $this->assertFalse($passwordData->mixedCase);
-        $this->assertFalse($passwordData->letters);
-        $this->assertFalse($passwordData->numbers);
-        $this->assertFalse($passwordData->symbols);
-        $this->assertFalse($passwordData->uncompromised);
-        $this->assertEquals(1, $passwordData->compromisedThreshold);
-    }
+it('password data can be instantiated', function (): void {
+    $passwordData = new PasswordData();
 
-    /** @test */
-    public function passwordDataCanBeConfigured(): void
-    {
-        $passwordData = new PasswordData(
-            otp_expiration_minutes: 30,
-            otp_length: 8,
-            expires_in: 60,
-            min: 8,
-            mixedCase: true,
-            letters: true,
-            numbers: true,
-            symbols: true,
-            uncompromised: true,
-            compromisedThreshold: 5
-        );
+    expect($passwordData)->toBeInstanceOf(PasswordData::class);
+    expect($passwordData->otp_expiration_minutes)->toEqual(5);
+    expect($passwordData->otp_length)->toEqual(6);
+    expect($passwordData->expires_in)->toEqual(60);
+    expect($passwordData->min)->toEqual(8);
+    expect($passwordData->mixedCase)->toBeTrue();
+    expect($passwordData->letters)->toBeTrue();
+    expect($passwordData->numbers)->toBeTrue();
+    expect($passwordData->symbols)->toBeTrue();
+    expect($passwordData->uncompromised)->toBeTrue();
+    expect($passwordData->compromisedThreshold)->toEqual(0);
+});
 
-        $this->assertEquals(30, $passwordData->otp_expiration_minutes);
-        $this->assertEquals(8, $passwordData->otp_length);
-        $this->assertEquals(60, $passwordData->expires_in);
-        $this->assertEquals(8, $passwordData->min);
-        $this->assertTrue($passwordData->mixedCase);
-        $this->assertTrue($passwordData->letters);
-        $this->assertTrue($passwordData->numbers);
-        $this->assertTrue($passwordData->symbols);
-        $this->assertTrue($passwordData->uncompromised);
-        $this->assertEquals(5, $passwordData->compromisedThreshold);
-    }
+it('password data can be configured', function (): void {
+    $passwordData = new PasswordData(
+        otp_expiration_minutes: 30,
+        otp_length: 8,
+        expires_in: 60,
+        min: 8,
+        mixedCase: true,
+        letters: true,
+        numbers: true,
+        symbols: true,
+        uncompromised: true,
+        compromisedThreshold: 5
+    );
 
-    /** @test */
-    public function passwordDataGetPasswordRuleWorks(): void
-    {
-        $passwordData = new PasswordData(
-            min: 8,
-            mixedCase: true,
-            letters: true,
-            numbers: true,
-            symbols: true,
-            uncompromised: true,
-            compromisedThreshold: 3
-        );
+    expect($passwordData->otp_expiration_minutes)->toEqual(30);
+    expect($passwordData->otp_length)->toEqual(8);
+    expect($passwordData->expires_in)->toEqual(60);
+    expect($passwordData->min)->toEqual(8);
+    expect($passwordData->mixedCase)->toBeTrue();
+    expect($passwordData->letters)->toBeTrue();
+    expect($passwordData->numbers)->toBeTrue();
+    expect($passwordData->symbols)->toBeTrue();
+    expect($passwordData->uncompromised)->toBeTrue();
+    expect($passwordData->compromisedThreshold)->toEqual(5);
+});
 
-        $rule = $passwordData->getPasswordRule();
+it('password data get password rule works', function (): void {
+    $passwordData = new PasswordData(
+        min: 8,
+        mixedCase: true,
+        letters: true,
+        numbers: true,
+        symbols: true,
+        uncompromised: true,
+        compromisedThreshold: 3
+    );
 
-        $this->assertInstanceOf(Password::class, $rule);
-    }
+    $rule = $passwordData->getPasswordRule();
 
-    /** @test */
-    public function passwordDataGetHelperTextWorks(): void
-    {
-        $passwordData = new PasswordData(
-            min: 8,
-            mixedCase: true,
-            letters: true,
-            numbers: true,
-            symbols: true,
-            uncompromised: true
-        );
+    expect($rule)->toBeInstanceOf(Password::class);
+});
 
-        $helperText = $passwordData->getHelperText();
+it('password data get helper text works', function (): void {
+    $passwordData = new PasswordData(
+        min: 8,
+        mixedCase: true,
+        letters: true,
+        numbers: true,
+        symbols: true,
+        uncompromised: true
+    );
 
-        $this->assertIsString($helperText);
-        $this->assertStringContainsString('8 caratteri', $helperText);
-        $this->assertStringContainsString('maiuscola e una minuscola', $helperText);
-        $this->assertStringContainsString('lettera', $helperText);
-        $this->assertStringContainsString('numero', $helperText);
-        $this->assertStringContainsString('carattere speciale', $helperText);
-        $this->assertStringContainsString('compromessa', $helperText);
-    }
+    $helperText = $passwordData->getHelperText();
 
-    /** @test */
-    public function passwordDataGetFormComponentsReturnsArray(): void
-    {
-        $passwordData = new PasswordData();
+    expect($helperText)->toBeString();
+    expect($helperText)->toContain('8 caratteri');
+    expect($helperText)->toContain('maiuscola e una minuscola');
+    expect($helperText)->toContain('lettera');
+    expect($helperText)->toContain('numero');
+    expect($helperText)->toContain('carattere speciale');
+    expect($helperText)->toContain('compromessa');
+});
 
-        // Test che il metodo esista e non lanci eccezioni
-        $this->assertTrue(method_exists($passwordData, 'getPasswordFormComponents'));
+it('password data get form components returns array', function (): void {
+    $passwordData = new PasswordData();
 
-        // Test che il metodo getPasswordFormComponent esista
-        $this->assertTrue(method_exists($passwordData, 'getPasswordFormComponent'));
+    // Test che il metodo esista e non lanci eccezioni
+    expect(method_exists($passwordData, 'getPasswordFormComponents'))->toBeTrue();
 
-        // Test che il metodo getPasswordConfirmationFormComponent esista
-        $this->assertTrue(method_exists($passwordData, 'getPasswordConfirmationFormComponent'));
-    }
+    // Test che il metodo getPasswordFormComponent esista
+    expect(method_exists($passwordData, 'getPasswordFormComponent'))->toBeTrue();
 
-    /** @test */
-    public function eventsCanBeInstantiated(): void
-    {
-        $addingTeam = new AddingTeam();
-        $login = new Login();
-        $registered = new Registered();
-        $socialiteUserConnected = new SocialiteUserConnected();
+    // Test che il metodo getPasswordConfirmationFormComponent esista
+    expect(method_exists($passwordData, 'getPasswordConfirmationFormComponent'))->toBeTrue();
+});
 
-        $this->assertInstanceOf(AddingTeam::class, $addingTeam);
-        $this->assertInstanceOf(Login::class, $login);
-        $this->assertInstanceOf(Registered::class, $registered);
-        $this->assertInstanceOf(SocialiteUserConnected::class, $socialiteUserConnected);
-    }
+it('events can be instantiated', function (): void {
+    $addingTeam = new AddingTeam();
+    $login = new Login();
+    $registered = new Registered();
+    $socialiteUserConnected = new SocialiteUserConnected();
 
-    /** @test */
-    public function eventsHaveDispatchableTrait(): void
-    {
-        $addingTeam = new AddingTeam();
-        $login = new Login();
+    expect($addingTeam)->toBeInstanceOf(AddingTeam::class);
+    expect($login)->toBeInstanceOf(Login::class);
+    expect($registered)->toBeInstanceOf(Registered::class);
+    expect($socialiteUserConnected)->toBeInstanceOf(SocialiteUserConnected::class);
+});
 
-        $this->assertTrue(method_exists($addingTeam, 'dispatch'));
-        $this->assertTrue(method_exists($login, 'dispatch'));
-    }
+it('events have dispatchable trait', function (): void {
+    $addingTeam = new AddingTeam();
+    $login = new Login();
 
-    /** @test */
-    public function passwordDataStaticMakeMethodExists(): void
-    {
-        $this->assertTrue(method_exists(PasswordData::class, 'make'));
-    }
+    expect(method_exists($addingTeam, 'dispatch'))->toBeTrue();
+    expect(method_exists($login, 'dispatch'))->toBeTrue();
+});
 
-    /** @test */
-    public function passwordDataGetValidationMessagesMethodExists(): void
-    {
-        $passwordData = new PasswordData();
+it('password data static make method exists', function (): void {
+    expect(method_exists(PasswordData::class, 'make'))->toBeTrue();
+});
 
-        $this->assertTrue(method_exists($passwordData, 'getValidationMessages'));
-    }
+it('password data get validation messages method exists', function (): void {
+    $passwordData = new PasswordData();
 
-    /** @test */
-    public function passwordDataGetFormSchemaMethodExists(): void
-    {
-        $this->assertTrue(method_exists(PasswordData::class, 'getFormSchema'));
-    }
-}
+    expect(method_exists($passwordData, 'getValidationMessages'))->toBeTrue();
+});
+
+it('password data get form schema method exists', function (): void {
+    expect(method_exists(PasswordData::class, 'getFormSchema'))->toBeTrue();
+});

@@ -8,6 +8,8 @@ use function Safe\json_encode;
 use Illuminate\Support\Str;
 use Modules\Activity\Models\Activity;
 
+uses(\Modules\Activity\Tests\TestCase::class);
+
 describe('Activity Business Logic', function () {
     it('can create activity with basic information', function () {
         $activityData = [

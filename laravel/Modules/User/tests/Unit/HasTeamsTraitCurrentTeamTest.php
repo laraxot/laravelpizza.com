@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Tests\TestCase;
@@ -17,7 +17,7 @@ use Tests\TestCase;
  */
 class HasTeamsTraitCurrentTeamTest extends TestCase
 {
-    use RefreshDatabase;
+    use DatabaseTransactions;
 
     /**
      * Test che currentTeam() non crashi quando l'utente non ha team.

@@ -5,12 +5,14 @@ declare(strict_types=1);
 use Modules\Activity\Models\Activity;
 use Modules\User\Models\User;
 
+uses(\Modules\Activity\Tests\TestCase::class);
+
 test('user can create activity', function () {
     $user = User::factory()->create(); // @phpstan-ignore-line method.nonObject
     \assert($user instanceof User);
     expect($user)->not->toBeNull();
     
-    $activity = Activity::factory()->create([ // @phpstan-ignore-line method.nonObject
+    $activity = Activity::create([
         'log_name' => 'test',
         'description' => 'Test Description',
         'causer_type' => User::class,
@@ -26,7 +28,7 @@ test('user can create activity', function () {
 });
 
 test('activity can be updated', function () {
-    $activity = Activity::factory()->create([ // @phpstan-ignore-line method.nonObject
+    $activity = Activity::create([
         'log_name' => 'test',
         'description' => 'Original Description',
     ]);
@@ -44,7 +46,7 @@ test('activity can be updated', function () {
 });
 
 test('activity can be deleted', function () {
-    $activity = Activity::factory()->create([ // @phpstan-ignore-line method.nonObject
+    $activity = Activity::create([
         'log_name' => 'test',
         'description' => 'Test Description',
     ]);
@@ -62,7 +64,7 @@ test('activity belongs to user', function () {
     \assert($user instanceof User);
     expect($user)->not->toBeNull();
 
-    $activity = Activity::factory()->create([ // @phpstan-ignore-line method.nonObject
+    $activity = Activity::create([
         'log_name' => 'test',
         'description' => 'Test Description',
         'causer_type' => User::class,

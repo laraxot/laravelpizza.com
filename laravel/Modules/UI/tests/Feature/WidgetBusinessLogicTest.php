@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Livewire\Livewire;
 use Modules\UI\Filament\Widgets\GroupWidget;
 use Modules\UI\Filament\Widgets\HeroWidget;
@@ -19,7 +19,7 @@ use Tests\TestCase;
 
 class WidgetBusinessLogicTest extends TestCase
 {
-    use RefreshDatabase;
+    use DatabaseTransactions;
 
     /** @test */
     public function rowWidgetCanRenderCorrectly(): void

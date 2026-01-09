@@ -5,8 +5,10 @@ declare(strict_types=1);
 namespace Modules\Job\Tests;
 
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Config;
 use Modules\Job\Providers\JobServiceProvider;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Xot\Tests\CreatesApplication;
 
 /**
@@ -15,6 +17,7 @@ use Modules\Xot\Tests\CreatesApplication;
 abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
+    use DatabaseTransactions;
 
     /**
      * Setup the test environment.
@@ -23,11 +26,25 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        // Load Job module specific configurations
-        $this->loadLaravelMigrations();
+        // Configure 'job' connection to use in-memory SQLite during tests
+        Config::set('database.connections.job', [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => '',
+        ]);
 
-        // Seed any required data for Job tests
-        $this->artisan('module:seed', ['module' => 'Job']);
+        // Ensure other connections use in-memory SQLite to prevent connection errors
+        $config = Config::get('database.connections', []);
+        foreach ($config as $name => $connection) {
+            Config::set("database.connections.{$name}", [
+                'driver' => 'sqlite',
+                'database' => ':memory:',
+                'prefix' => '',
+            ]);
+        }
+
+        // Run migrations for the job database
+        $this->artisan('migrate', ['--database' => 'job']);
     }
 
     /**

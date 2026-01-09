@@ -5,8 +5,6 @@ declare(strict_types=1);
 use Modules\Job\Tests\TestCase;
 use Illuminate\Support\Facades\DB;
 
-uses(TestCase::class);
-
 test('database connection works', function () {
     // Simple test to verify database connection
     expect(DB::connection())->not->toBeNull();

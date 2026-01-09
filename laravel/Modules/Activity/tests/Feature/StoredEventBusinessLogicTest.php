@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Modules\Activity\Tests\Feature;
 
 use Modules\Activity\Models\StoredEvent;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Modules\Activity\Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Str;
 
 class StoredEventBusinessLogicTest extends TestCase
 {
-    use RefreshDatabase;
+    use DatabaseTransactions;
 
     /** @test */
     public function it_can_create_stored_event_with_basic_information(): void

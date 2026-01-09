@@ -8,7 +8,7 @@ use function Safe\json_decode;
 
 
 use Exception;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\File;
 use Modules\Tenant\Models\TestSushiModel;
 use Modules\Tenant\Services\TenantService;
@@ -28,7 +28,7 @@ use function Safe\json_decode;
 #[Group('sushi-json')]
 class SushiToJsonPerformanceTest extends TestCase
 {
-    use RefreshDatabase;
+    use DatabaseTransactions;
 
     private TestSushiModel $model;
 

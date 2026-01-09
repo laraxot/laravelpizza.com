@@ -28,6 +28,12 @@ trait CreatesApplication
         // Explicitly set the base path before requiring bootstrap/app.php
         $_ENV['APP_BASE_PATH'] = $basePath;
 
+        // Set environment variables to ensure SQLite in memory is used for all connections during tests
+        if (!isset($_ENV['JOB_DB_CONNECTION'])) {
+            $_ENV['JOB_DB_CONNECTION'] = 'sqlite';
+            $_ENV['JOB_DB_DATABASE'] = ':memory:';
+        }
+
         $app = require $basePath.'/bootstrap/app.php';
 
         // Bind essential paths if they are not correctly resolved

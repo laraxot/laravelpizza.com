@@ -424,6 +424,12 @@ return [
             'helper_text' => 'test',
             'description' => 'test',
         ],
+        'view' => [
+            'label' => 'view',
+            'placeholder' => 'view',
+            'helper_text' => 'view',
+            'description' => 'view',
+        ],
     ],
     'actions' => [
         'authenticate' => [
@@ -470,6 +476,11 @@ return [
             'icon' => 'ui-showPassword',
             'label' => 'showPassword',
             'tooltip' => 'showPassword',
+        ],
+        'list_log_activities' => [
+            'label' => 'list_log_activities',
+            'icon' => 'list_log_activities',
+            'tooltip' => 'list_log_activities',
         ],
     ],
 ];

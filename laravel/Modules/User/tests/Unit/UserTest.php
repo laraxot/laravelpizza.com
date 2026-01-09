@@ -5,77 +5,91 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Enums\UserType;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 /*
  * @property User $user
  */
 uses(TestCase::class);
 
-beforeEach(function (): void {
+test('user can be created', function (): void {
     $user = User::factory()->create([
         'type' => UserType::MasterAdmin,
         'email' => fake()->unique()->safeEmail(),
         'password' => Hash::make('password123'),
     ]);
     \assert($user instanceof User);
-    $this->user = $user;
-});
 
-test('user can be created', function (): void {
-    \assert($this->user instanceof User);
-    expect($this->user)->toBeInstanceOf(User::class);
-    expect($this->user->email)->toBeString()->not->toBeEmpty();
-    expect($this->user->type)->toBe(UserType::MasterAdmin);
+    expect($user)->toBeInstanceOf(User::class);
+    expect($user->email)->toBeString()->not->toBeEmpty();
+    expect($user->type)->toBe(UserType::MasterAdmin);
 });
 
 test('user has correct type casting', function (): void {
-    \assert($this->user instanceof User);
-    expect($this->user->type)->toBeInstanceOf(UserType::class);
-    expect($this->user->type->value)->toBe('master_admin');
+    $user = User::factory()->create(['type' => UserType::MasterAdmin]);
+    \assert($user instanceof User);
+
+    $type = $user->type;
+    \assert($type instanceof UserType);
+
+    expect($type)->toBeInstanceOf(UserType::class);
+    expect($type->value)->toBe('master_admin');
 });
 
 test('user password is hashed', function (): void {
-    \assert($this->user instanceof User);
-    expect(Hash::check('password123', $this->user->password))->toBeTrue();
-    expect(Hash::check('wrongpassword', $this->user->password))->toBeFalse();
+    $user = User::factory()->create(['password' => Hash::make('password123')]);
+    \assert($user instanceof User);
+
+    expect(Hash::check('password123', $user->password))->toBeTrue();
+    expect(Hash::check('wrongpassword', $user->password))->toBeFalse();
 });
 
 test('user can change password', function (): void {
-    \assert($this->user instanceof User);
-    $this->user->update(['password' => Hash::make('newpassword123')]);
+    $user = User::factory()->create(['password' => Hash::make('password123')]);
+    \assert($user instanceof User);
 
-    $freshUser = $this->user->fresh();
+    $user->update(['password' => Hash::make('newpassword123')]);
+
+    $freshUser = $user->fresh();
     \assert($freshUser instanceof User);
     expect(Hash::check('newpassword123', $freshUser->password))->toBeTrue();
     expect(Hash::check('password123', $freshUser->password))->toBeFalse();
 });
 
 test('user can be updated', function (): void {
-    \assert($this->user instanceof User);
-    $this->user->update([
+    $user = User::factory()->create([
+        'type' => UserType::MasterAdmin,
+        'email' => fake()->unique()->safeEmail(),
+    ]);
+    \assert($user instanceof User);
+
+    $user->update([
         'email' => 'updated@example.com',
         'type' => UserType::BoUser,
     ]);
 
-    $this->user->refresh();
+    $user->refresh();
 
-    expect($this->user->email)->toBe('updated@example.com');
-    expect($this->user->type)->toBe(UserType::BoUser);
+    expect($user->email)->toBe('updated@example.com');
+    expect($user->type)->toBe(UserType::BoUser);
 });
 
 test('user can be deleted', function (): void {
-    \assert($this->user instanceof User);
-    $userId = $this->user->id;
+    $user = User::factory()->create();
+    \assert($user instanceof User);
 
-    $this->user->delete();
+    $userId = $user->id;
+
+    $user->delete();
 
     expect(User::find($userId))->toBeNull();
 });
 
 test('user has fillable attributes', function (): void {
-    \assert($this->user instanceof User);
-    $fillable = $this->user->getFillable();
+    $user = User::factory()->make();
+    \assert($user instanceof User);
+
+    $fillable = $user->getFillable();
 
     expect($fillable)->toContain('email');
     expect($fillable)->toContain('password');
@@ -83,30 +97,36 @@ test('user has fillable attributes', function (): void {
 });
 
 test('user has hidden attributes', function (): void {
-    \assert($this->user instanceof User);
-    $hidden = $this->user->getHidden();
+    $user = User::factory()->make();
+    \assert($user instanceof User);
+
+    $hidden = $user->getHidden();
 
     expect($hidden)->toContain('password');
     expect($hidden)->toContain('remember_token');
 });
 
 test('user can be found by email', function (): void {
-    \assert($this->user instanceof User);
-    $foundUser = User::where('email', $this->user->email)->first();
+    $user = User::factory()->create();
+    \assert($user instanceof User);
+
+    $foundUser = User::where('email', $user->email)->first();
 
     \assert($foundUser instanceof User);
     expect($foundUser)->toBeInstanceOf(User::class);
-    expect($foundUser->id)->toBe($this->user->id);
+    expect($foundUser->id)->toBe($user->id);
 });
 
 test('user can be found by type', function (): void {
-    \assert($this->user instanceof User);
+    $user = User::factory()->create(['type' => UserType::MasterAdmin]);
+    \assert($user instanceof User);
+
     $admins = User::where('type', UserType::MasterAdmin)->get();
 
     expect($admins)->toHaveCount(1);
     $firstAdmin = $admins->first();
     \assert($firstAdmin instanceof User);
-    expect($firstAdmin->id)->toBe($this->user->id);
+    expect($firstAdmin->id)->toBe($user->id);
 });
 
 test('user can be created with different types', function (): void {
@@ -120,9 +140,11 @@ test('user can be created with different types', function (): void {
 });
 
 test('user has timestamps', function (): void {
-    \assert($this->user instanceof User);
-    expect($this->user->created_at)->not->toBeNull();
-    expect($this->user->updated_at)->not->toBeNull();
+    $user = User::factory()->create();
+    \assert($user instanceof User);
+
+    expect($user->created_at)->not->toBeNull();
+    expect($user->updated_at)->not->toBeNull();
 });
 
 test('user soft delete functionality', function (): void {

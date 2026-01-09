@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Job\Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Carbon;
 use Modules\Job\Models\Result;
 use Modules\Job\Models\Task;
-use Tests\TestCase;
+use Modules\Job\Tests\TestCase;
 
 class ResultBusinessLogicTest extends TestCase
 {
-    use RefreshDatabase;
+    use DatabaseTransactions;
 
     /** @test */
     public function it_can_create_result_with_basic_information(): void

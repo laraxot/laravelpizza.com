@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Media\Models\Media;
 use Tests\TestCase;
 
 class MediaTest extends TestCase
 {
-    use RefreshDatabase;
+    use DatabaseTransactions;
 
     public function test_can_create_media_with_minimal_data(): void
     {

@@ -34,7 +34,7 @@ class HasAddressTest extends BaseModel
 
         static::creating(static function () {
             if (! app()->environment('testing')) {
-                throw new Exception('TestModel should only be used in tests.');
+                throw new \Exception('TestModel should only be used in tests.');
             }
         });
     }
@@ -159,7 +159,7 @@ it('can get formatted address', function () {
     expect($fullAddress)->toContain('Milano');
 });
 
-it('can filter models by city', static function () {
+it('can filter models by city', function () {
     // Crea due modelli con indirizzi in città diverse
     $model1 = new HasAddressTest();
     $model1->name = 'Model 1';

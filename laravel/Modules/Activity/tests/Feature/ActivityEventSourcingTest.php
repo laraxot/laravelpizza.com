@@ -9,6 +9,8 @@ use Modules\Activity\Models\Snapshot;
 use Modules\Activity\Models\StoredEvent;
 use Modules\User\Models\User;
 
+uses(\Modules\Activity\Tests\TestCase::class);
+
 test('activity event sourcing lifecycle works correctly', function () {
     $user = User::factory()->create(); // @phpstan-ignore-line method.nonObject // @phpstan-ignore-line method.nonObject
     \assert($user instanceof User);
@@ -81,7 +83,10 @@ test('activity can be queried with complex scopes', function () {
     \assert($activity3 instanceof Activity);
 
     $securityActivities = Activity::inLog('security')->get();
-    $user1Activities = Activity::causedBy($user1)->get();
+    $user1Activities = Activity::query()
+        ->where('causer_type', User::class)
+        ->where('causer_id', $user1->id)
+        ->get();
     $loginActivities = Activity::forEvent('login')->get();
 
     expect($securityActivities)->toHaveCount(2);
@@ -129,7 +134,7 @@ test('snapshot creation and retrieval works correctly', function () {
     expect($transactions)->toBeArray()->toHaveCount(2);
 
     /** @var Snapshot|null $retrievedSnapshot */
-    $retrievedSnapshot = Snapshot::uuid($aggregateUuid->toString())->first();
+    $retrievedSnapshot = Snapshot::uuid($aggregateUuid)->first();
     \assert($retrievedSnapshot instanceof Snapshot);
     expect($retrievedSnapshot)->not->toBeNull()
         ->and($retrievedSnapshot->id)->toBe($snapshot->id);
@@ -137,7 +142,7 @@ test('snapshot creation and retrieval works correctly', function () {
 
 test('stored event creation and event reconstruction works', function () {
     $eventClass = 'App\\Events\\TestEvent';
-    $aggregateUuid = Str::uuid();
+    $aggregateUuid = Str::uuid()->toString();
 
     $eventProperties = [
         'user_id' => 1,
@@ -234,7 +239,12 @@ test('activity properties support complex nested structures', function () {
         ]
     ];
 
-    $activity = Activity::factory()->create(['properties' => $complexProperties]); // @phpstan-ignore-line method.nonObject
+    $activity = Activity::create([
+        'log_name' => 'default',
+        'description' => 'Complex properties activity',
+        'properties' => $complexProperties,
+        'event' => 'created',
+    ]);
     \assert($activity instanceof Activity);
     expect($activity)->not->toBeNull();
 
@@ -279,7 +289,13 @@ test('snapshot state maintains data integrity with large datasets', function () 
         ]
     ];
 
-    $snapshot = Snapshot::factory()->create(['state' => $largeState]); // @phpstan-ignore-line method.nonObject
+    $snapshot = Snapshot::create([
+        'aggregate_uuid' => (string) Str::uuid(),
+        'aggregate_version' => 1,
+        'state' => $largeState,
+        'created_at' => now(),
+        'updated_at' => now(),
+    ]);
     \assert($snapshot instanceof Snapshot);
     expect($snapshot)->not->toBeNull();
 
@@ -338,7 +354,15 @@ test('stored event handles complex event properties with nested arrays', functio
         ]
     ];
 
-    $storedEvent = StoredEvent::factory()->create(['event_properties' => $complexEvent]); // @phpstan-ignore-line method.nonObject
+    $storedEvent = StoredEvent::query()->create([
+        'aggregate_uuid' => \Illuminate\Support\Str::uuid()->toString(),
+        'aggregate_version' => 1,
+        'event_version' => 1,
+        'event_class' => 'App\\Events\\ComplexEvent',
+        'event_properties' => $complexEvent,
+        'meta_data' => [],
+        'created_at' => now(),
+    ]);
     \assert($storedEvent instanceof StoredEvent);
     expect($storedEvent)->not->toBeNull();
 
