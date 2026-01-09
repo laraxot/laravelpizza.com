@@ -13,6 +13,7 @@ uses(TestCase::class);
 it('can create task with basic information', function (): void
 {
     $taskData = [
+        'id' => 'task_'.uniqid(),
         'description' => 'Pulizia database giornaliera',
         'command' => 'db:cleanup',
         'parameters' => '--days=30 --tables=logs,sessions',
@@ -22,6 +23,8 @@ it('can create task with basic information', function (): void
         'dont_overlap' => 1,
         'run_in_maintenance' => 0,
         'notification_email_address' => 'admin@example.com',
+        'notification_phone_number' => '+1234567890',
+        'notification_slack_webhook' => 'https://hooks.slack.com/services/TEST',
         'run_on_one_server' => 1,
         'run_in_background' => 1,
         'auto_cleanup_num' => 7,

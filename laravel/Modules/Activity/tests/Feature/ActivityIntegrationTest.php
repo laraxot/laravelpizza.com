@@ -74,7 +74,10 @@ test('activity module models work together in integrated scenarios', function ()
     expect($eventProperties)->toBeArray()
         ->and($eventProperties['user_id'])->toBe($user->id);
 
-    $relatedActivities = Activity::causedBy($user)->get();
+    $relatedActivities = Activity::query()
+        ->where('causer_type', User::class)
+        ->where('causer_id', (string) $user->id)
+        ->get();
     expect($relatedActivities->pluck('id')->all())->toContain($activity->id);
 
     $relatedSnapshots = Snapshot::uuid($aggregateUuid)->get();

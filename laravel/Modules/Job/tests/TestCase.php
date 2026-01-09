@@ -13,6 +13,11 @@ use Modules\Xot\Tests\CreatesApplication;
 
 /**
  * Base test case for Job module tests.
+ * 
+ * Follows Laraxot architecture rules:
+ * - Uses DatabaseTransactions for isolation
+ * - Configures all necessary database connections
+ * - Runs migrations for specific module connection
  */
 abstract class TestCase extends BaseTestCase
 {
@@ -26,25 +31,47 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        // Configure 'job' connection to use in-memory SQLite during tests
+        // Configure database connections for testing
+        $this->configureTestConnections();
+
+        // Run migrations for the job database
+        $this->runModuleMigrations();
+    }
+
+    /**
+     * Configure database connections for testing.
+     */
+    protected function configureTestConnections(): void
+    {
+        // Configure the module-specific connection
         Config::set('database.connections.job', [
             'driver' => 'sqlite',
             'database' => ':memory:',
             'prefix' => '',
         ]);
 
-        // Ensure other connections use in-memory SQLite to prevent connection errors
-        $config = Config::get('database.connections', []);
-        foreach ($config as $name => $connection) {
-            Config::set("database.connections.{$name}", [
-                'driver' => 'sqlite',
-                'database' => ':memory:',
-                'prefix' => '',
-            ]);
+        // Configure other common connections that might be used
+        $commonConnections = ['mysql', 'user', 'tenant', 'notify', 'activity', 'media', 'cms', 'geo'];
+        foreach ($commonConnections as $connection) {
+            if (!Config::has("database.connections.{$connection}")) {
+                Config::set("database.connections.{$connection}", [
+                    'driver' => 'sqlite',
+                    'database' => ':memory:',
+                    'prefix' => '',
+                ]);
+            }
         }
+    }
 
-        // Run migrations for the job database
-        $this->artisan('migrate', ['--database' => 'job']);
+    /**
+     * Run module-specific migrations.
+     */
+    protected function runModuleMigrations(): void
+    {
+        $this->artisan('migrate', [
+            '--database' => 'job',
+            '--path' => 'Modules/Job/database/migrations'
+        ]);
     }
 
     /**

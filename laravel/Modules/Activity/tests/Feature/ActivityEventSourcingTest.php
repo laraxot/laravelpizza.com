@@ -159,7 +159,8 @@ test('stored event creation and event reconstruction works', function () {
         'event_version' => 1,
         'event_class' => $eventClass,
         'event_properties' => $eventProperties,
-        'meta_data' => ['processed' => true, 'retry_count' => 0]
+        'meta_data' => ['processed' => true, 'retry_count' => 0],
+        'created_at' => now(),
     ]);
     \assert($storedEvent instanceof StoredEvent);
     expect($storedEvent)->not->toBeNull();
@@ -170,7 +171,10 @@ test('stored event creation and event reconstruction works', function () {
     expect($storedEvent->event_properties)->toHaveKey('action', 'test_action');
 
     $metaData = $storedEvent->meta_data;
-    expect($metaData)->toBeArray()
+    expect($metaData)->toBeInstanceOf(\Spatie\SchemalessAttributes\SchemalessAttributes::class);
+
+    $metaDataArray = $metaData->toArray();
+    expect($metaDataArray)->toBeArray()
         ->toHaveKey('processed', true)
         ->toHaveKey('retry_count', 0);
 });
