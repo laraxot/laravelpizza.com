@@ -3,23 +3,40 @@
 declare(strict_types=1);
 
 return [
-    'fields' => [
-        'edit' => [
-            'label' => 'Editar',
-        ],
-        'validation_error' => [
-            'label' => 'Erro de Validação',
-        ],
-    ],
     'navigation' => [
-        'sort' => 8,
-        'icon' => 'heroicon-o-x-circle',
-        'group' => 'Sistema',
-        'label' => 'Linhas de Importação Falhadas',
+        'label' => 'Linha de Importação Falhada',
+        'group' => 'Linhas de Importação',
+        'icon' => 'heroicon-o-exclamation-circle',
+        'sort' => 28,
+    ],
+    'label' => 'Linha de Importação Falhada',
+    'plural_label' => 'Linhas de Importação Falhadas',
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'import_batch_id' => [
+            'label' => 'ID do Lote de Importação',
+        ],
+        'row_index' => [
+            'label' => 'Índice da Linha',
+        ],
+        'errors' => [
+            'label' => 'Erros',
+        ],
+        'data' => [
+            'label' => 'Dados',
+        ],
+        'created_at' => [
+            'label' => 'Criado Em',
+        ],
     ],
     'actions' => [
-        'logout' => [
-            'tooltip' => 'Sair',
+        'view_errors' => [
+            'label' => 'Ver Erros',
+        ],
+        'fix_row' => [
+            'label' => 'Corrigir Linha',
         ],
     ],
 ];

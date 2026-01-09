@@ -4,75 +4,75 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Prueba SMTP',
-        'group' => 'Notificaciones',
+        'label' => 'SMTP-Test',
+        'group' => 'Benachrichtigungen',
         'icon' => 'heroicon-o-envelope-open',
         'sort' => 47,
     ],
-    'label' => 'Prueba SMTP',
-    'plural_label' => 'Pruebas SMTP',
+    'label' => 'SMTP-Test',
+    'plural_label' => 'SMTP-Tests',
     'fields' => [
         'id' => [
             'label' => 'ID',
         ],
         'name' => [
-            'label' => 'Nombre',
+            'label' => 'Name',
         ],
         'host' => [
             'label' => 'Host',
         ],
         'port' => [
-            'label' => 'Puerto',
+            'label' => 'Port',
         ],
         'username' => [
-            'label' => 'Nombre de Usuario',
+            'label' => 'Benutzername',
         ],
         'password' => [
-            'label' => 'Contraseña',
+            'label' => 'Passwort',
         ],
         'encryption' => [
-            'label' => 'Cifrado',
+            'label' => 'Verschlüsselung',
         ],
         'from_address' => [
-            'label' => 'Dirección Remitente',
+            'label' => 'Absenderadresse',
         ],
         'from_name' => [
-            'label' => 'Nombre Remitente',
+            'label' => 'Absendername',
         ],
         'status' => [
-            'label' => 'Estado',
+            'label' => 'Status',
         ],
         'last_tested_at' => [
-            'label' => 'Última Prueba En',
+            'label' => 'Zuletzt Getestet Am',
         ],
         'created_at' => [
-            'label' => 'Creado En',
+            'label' => 'Erstellt Am',
         ],
         'body_html' => [
-            'description' => 'Cuerpo HTML',
-            'helper_text' => 'Contenido HTML del correo',
+            'description' => 'HTML-Körper',
+            'helper_text' => 'HTML-Inhalt der E-Mail',
         ],
     ],
     'actions' => [
         'logout' => [
-            'tooltip' => 'Cerrar sesión',
+            'tooltip' => 'Abmelden',
             'icon' => 'logout',
-            'label' => 'Cerrar sesión',
+            'label' => 'Abmelden',
         ],
         'emailFormActions' => [
-            'tooltip' => 'Acciones del Formulario de Correo',
+            'tooltip' => 'E-Mail-Formularaktionen',
             'icon' => 'emailFormActions',
-            'label' => 'Acciones del Formulario de Correo',
+            'label' => 'E-Mail-Formularaktionen',
         ],
         'profile' => [
-            'tooltip' => 'Perfil',
+            'tooltip' => 'Profil',
             'icon' => 'profile',
         ],
         'send_test_email' => [
-            'label' => 'Enviar Correo de Prueba',
+            'label' => 'Test-E-Mail Senden',
         ],
         'test_connection' => [
-            'label' => 'Probar Conexión',
+            'label' => 'Verbindung Testen',
         ],
     ],
 ];

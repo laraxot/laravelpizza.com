@@ -162,7 +162,7 @@ public function test_example() {
 1. **Backup mentale**: Capisco ENTRAMBE le versioni
 2. **Scelta informata**: Seleziono versione migliore
 3. **Consolidamento**: Unisco parti valide se necessario
-4. **Pulizia marker**: Rimuovo TUTTI i `<<<<<<<`, `=======`, `>>>>>>>`
+4. **Pulizia marker**: Rimuovo TUTTI i ``, ``
 5. **Verifica sintassi**: `php -l file.php`
 6. **Verifica PHPStan**: `./vendor/bin/phpstan analyse file.php`
 

@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'group' => 'Authentification',
+        'group' => 'Authentifizierung',
         'icon' => 'heroicon-o-shield-exclamation',
-        'label' => 'Journaux d\'Authentification',
+        'label' => 'Authentifizierungsprotokolle',
         'sort' => 5,
     ],
     'actions' => [
         'reorderRecords' => [
-            'tooltip' => 'Réorganiser les Enregistrements',
+            'tooltip' => 'Datensätze Neu Anordnen',
             'icon' => 'reorderRecords',
-            'label' => 'Réorganiser les Enregistrements',
+            'label' => 'Datensätze Neu Anordnen',
         ],
     ],
 ];

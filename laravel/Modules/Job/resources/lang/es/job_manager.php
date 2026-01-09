@@ -3,14 +3,17 @@
 declare(strict_types=1);
 
 return [
-    'actions' => [
-        'create' => [
-            'label' => 'Crear',
-        ],
+    'navigation' => [
+        'label' => 'Gestor de Trabajos',
+        'group' => 'Trabajos',
+        'icon' => 'heroicon-o-cog',
+        'sort' => 43,
     ],
+    'label' => 'Gestor de Trabajos',
+    'plural_label' => 'Gestores de Trabajos',
     'fields' => [
-        'status' => [
-            'label' => 'Estado',
+        'id' => [
+            'label' => 'ID',
         ],
         'name' => [
             'label' => 'Nombre',
@@ -18,17 +21,37 @@ return [
         'queue' => [
             'label' => 'Cola',
         ],
+        'status' => [
+            'label' => 'Estado',
+        ],
         'progress' => [
             'label' => 'Progreso',
         ],
         'started_at' => [
             'label' => 'Iniciado En',
         ],
+        'last_heartbeat' => [
+            'label' => 'Último Latido',
+        ],
+        'created_at' => [
+            'label' => 'Creado En',
+        ],
+        'updated_at' => [
+            'label' => 'Actualizado En',
+        ],
     ],
-    'navigation' => [
-        'sort' => 87,
-        'icon' => 'heroicon-o-cog-6-tooth',
-        'group' => 'Sistema',
-        'label' => 'Gestor de Trabajos',
+    'actions' => [
+        'create' => [
+            'label' => 'Crear',
+        ],
+        'restart' => [
+            'label' => 'Reiniciar',
+        ],
+        'pause' => [
+            'label' => 'Pausar',
+        ],
+        'resume' => [
+            'label' => 'Reanudar',
+        ],
     ],
 ];

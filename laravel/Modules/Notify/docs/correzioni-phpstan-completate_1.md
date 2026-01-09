@@ -12,14 +12,7 @@ Implementazione di controlli per prevenire l'aggiunta di marker di conflitto Git
 git status
 grep -r "=======" Modules/Notify/
 grep -r ">>>>>>>" Modules/Notify/
-grep -r "<<<<<<<" Modules/Notify/
-```
-
-### 2.2 Pre-commit Hook
-```bash
-#!/bin/bash
-# Blocca commit con conflitti git
-if git grep -q "^<<<<<<< " || git grep -q "^=======$" || git grep -q "^>>>>>>> "; then
+grep -r "$" || git grep -q "^ "; then
     echo "L ERRORE: Conflitti git trovati! Risolvi prima di committare."
     exit 1
 fi
@@ -32,7 +25,7 @@ Aggiunta di controlli nella pipeline per rilevare conflitti Git.
 phpstan-notify:
   script:
     - ./vendor/bin/phpstan analyse Modules/Notify --level=9
-    - if git grep -q "^<<<<<<< \|^=======\|^>>>>>>> "; then exit 1; fi
+    - if git grep -q "^\|^ "; then exit 1; fi
 ```
 
 ### 4. IDE Configuration

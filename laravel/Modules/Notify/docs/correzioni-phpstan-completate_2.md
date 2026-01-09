@@ -125,15 +125,7 @@ $string = $var1.'::'.$var2.'.'.$var3;
 git status
 grep -r "=======" Modules/Notify/
 grep -r ">>>>>>>" Modules/Notify/
-grep -r "<<<<<<<" Modules/Notify/
-```
-
-### 2. Pre-commit Hook
-Aggiungere in `.git/hooks/pre-commit`:
-```bash
-#!/bin/bash
-# Blocca commit con conflitti git
-if git grep -q "^<<<<<<< " || git grep -q "^=======$" || git grep -q "^>>>>>>> "; then
+grep -r "$" || git grep -q "^ "; then
     echo "L ERRORE: Conflitti git trovati! Risolvi prima di committare."
     exit 1
 fi
@@ -148,7 +140,7 @@ Aggiungere nel pipeline CI/CD:
 phpstan-notify:
   script:
     - ./vendor/bin/phpstan analyse Modules/Notify --level=9
-    - if git grep -q "^<<<<<<< \|^=======\|^>>>>>>> "; then exit 1; fi
+    - if git grep -q "^\|^ "; then exit 1; fi
 ```
 
 ### 4. IDE Configuration

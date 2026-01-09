@@ -4,42 +4,42 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Token de Acceso OAuth',
+        'label' => 'OAuth-Autorisierungscode',
         'group' => 'OAuth',
         'icon' => 'heroicon-o-key',
-        'sort' => 33,
+        'sort' => 32,
     ],
-    'label' => 'Token de Acceso OAuth',
-    'plural_label' => 'Tokens de Acceso OAuth',
+    'label' => 'OAuth-Autorisierungscode',
+    'plural_label' => 'OAuth-Autorisierungscodes',
     'fields' => [
         'id' => [
             'label' => 'ID',
         ],
         'user_id' => [
-            'label' => 'Usuario',
+            'label' => 'Benutzer',
         ],
         'client_id' => [
-            'label' => 'Cliente',
+            'label' => 'Client',
         ],
         'name' => [
-            'label' => 'Nombre',
+            'label' => 'Name',
         ],
         'scopes' => [
-            'label' => 'Ámbitos',
+            'label' => 'Bereiche',
         ],
         'revoked' => [
-            'label' => 'Revocado',
+            'label' => 'Widerrufen',
         ],
         'expires_at' => [
-            'label' => 'Expira En',
+            'label' => 'Läuft Ab Am',
         ],
     ],
     'actions' => [
         'revoke' => [
-            'label' => 'Revocar',
+            'label' => 'Widerrufen',
         ],
-        'refresh' => [
-            'label' => 'Actualizar',
+        'view_scopes' => [
+            'label' => 'Bereiche Anzeigen',
         ],
     ],
 ];

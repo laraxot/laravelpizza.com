@@ -26,7 +26,7 @@ Aggiornamento massivo documentazione progetto con:
 
 **File**: `Modules/Xot/docs/README.md`
 
-**Problema**: 85 marker di conflitto Git (`<<<<<<<`, `=======`, `>>>>>>>`)
+**Problema**: 85 marker di conflitto Git (``, ``)
 
 **Soluzione**:
 - Creato README.md pulito e consolidato

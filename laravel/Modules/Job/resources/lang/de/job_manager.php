@@ -3,14 +3,17 @@
 declare(strict_types=1);
 
 return [
-    'actions' => [
-        'create' => [
-            'label' => 'Erstellen',
-        ],
+    'navigation' => [
+        'label' => 'Auftragsmanager',
+        'group' => 'Aufträge',
+        'icon' => 'heroicon-o-cog',
+        'sort' => 43,
     ],
+    'label' => 'Auftragsmanager',
+    'plural_label' => 'Auftragsmanager',
     'fields' => [
-        'status' => [
-            'label' => 'Status',
+        'id' => [
+            'label' => 'ID',
         ],
         'name' => [
             'label' => 'Name',
@@ -18,17 +21,37 @@ return [
         'queue' => [
             'label' => 'Warteschlange',
         ],
+        'status' => [
+            'label' => 'Status',
+        ],
         'progress' => [
             'label' => 'Fortschritt',
         ],
         'started_at' => [
             'label' => 'Gestartet Am',
         ],
+        'last_heartbeat' => [
+            'label' => 'Letzter Herzschlag',
+        ],
+        'created_at' => [
+            'label' => 'Erstellt Am',
+        ],
+        'updated_at' => [
+            'label' => 'Aktualisiert Am',
+        ],
     ],
-    'navigation' => [
-        'sort' => 87,
-        'icon' => 'heroicon-o-cog-6-tooth',
-        'group' => 'System',
-        'label' => 'Auftragsmanager',
+    'actions' => [
+        'create' => [
+            'label' => 'Erstellen',
+        ],
+        'restart' => [
+            'label' => 'Neustarten',
+        ],
+        'pause' => [
+            'label' => 'Pausieren',
+        ],
+        'resume' => [
+            'label' => 'Fortsetzen',
+        ],
     ],
 ];

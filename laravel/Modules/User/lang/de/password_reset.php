@@ -4,33 +4,33 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Réinitialisation de Mot de Passe',
-        'group' => 'Sécurité',
+        'label' => 'Passwort-Zurücksetzung',
+        'group' => 'Sicherheit',
         'icon' => 'heroicon-o-key',
         'sort' => 42,
     ],
-    'label' => 'Réinitialisation de Mot de Passe',
-    'plural_label' => 'Réinitialisations de Mot de Passe',
+    'label' => 'Passwort-Zurücksetzung',
+    'plural_label' => 'Passwort-Zurücksetzungen',
     'fields' => [
         'id' => [
             'label' => 'ID',
         ],
         'email' => [
-            'label' => 'Email',
+            'label' => 'E-Mail',
         ],
         'token' => [
-            'label' => 'Jeton',
+            'label' => 'Token',
         ],
         'created_at' => [
-            'label' => 'Créé À',
+            'label' => 'Erstellt Am',
         ],
     ],
     'actions' => [
         'resend_email' => [
-            'label' => 'Renvoyer l\'Email',
+            'label' => 'E-Mail Erneut Senden',
         ],
         'view_request' => [
-            'label' => 'Voir la Demande',
+            'label' => 'Anfrage Anzeigen',
         ],
     ],
 ];

@@ -3,23 +3,40 @@
 declare(strict_types=1);
 
 return [
-    'fields' => [
-        'edit' => [
-            'label' => 'Editar',
-        ],
-        'validation_error' => [
-            'label' => 'Error de Validación',
-        ],
-    ],
     'navigation' => [
-        'sort' => 8,
-        'icon' => 'heroicon-o-x-circle',
-        'group' => 'Sistema',
-        'label' => 'Filas de Importación Fallidas',
+        'label' => 'Fila de Importación Fallida',
+        'group' => 'Filas de Importación',
+        'icon' => 'heroicon-o-exclamation-circle',
+        'sort' => 28,
+    ],
+    'label' => 'Fila de Importación Fallida',
+    'plural_label' => 'Filas de Importación Fallidas',
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'import_batch_id' => [
+            'label' => 'ID de Lote de Importación',
+        ],
+        'row_index' => [
+            'label' => 'Índice de Fila',
+        ],
+        'errors' => [
+            'label' => 'Errores',
+        ],
+        'data' => [
+            'label' => 'Datos',
+        ],
+        'created_at' => [
+            'label' => 'Creado En',
+        ],
     ],
     'actions' => [
-        'logout' => [
-            'tooltip' => 'Cerrar sesión',
+        'view_errors' => [
+            'label' => 'Ver Errores',
+        ],
+        'fix_row' => [
+            'label' => 'Corregir Fila',
         ],
     ],
 ];

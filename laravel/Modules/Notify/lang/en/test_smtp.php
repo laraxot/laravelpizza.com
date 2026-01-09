@@ -48,8 +48,26 @@ return [
         'created_at' => [
             'label' => 'Created At',
         ],
+        'body_html' => [
+            'description' => 'HTML Body',
+            'helper_text' => 'HTML content of the email',
+        ],
     ],
     'actions' => [
+        'logout' => [
+            'tooltip' => 'Logout',
+            'icon' => 'logout',
+            'label' => 'Logout',
+        ],
+        'emailFormActions' => [
+            'tooltip' => 'Email Form Actions',
+            'icon' => 'emailFormActions',
+            'label' => 'Email Form Actions',
+        ],
+        'profile' => [
+            'tooltip' => 'Profile',
+            'icon' => 'profile',
+        ],
         'send_test_email' => [
             'label' => 'Send Test Email',
         ],

@@ -3,23 +3,40 @@
 declare(strict_types=1);
 
 return [
-    'fields' => [
-        'edit' => [
-            'label' => 'Modifier',
-        ],
-        'validation_error' => [
-            'label' => 'Erreur de Validation',
-        ],
-    ],
     'navigation' => [
-        'sort' => 8,
-        'icon' => 'heroicon-o-x-circle',
-        'group' => 'Système',
-        'label' => 'Lignes d\'Importation Échouées',
+        'label' => 'Ligne d\'Importation Échouée',
+        'group' => 'Lignes d\'Importation',
+        'icon' => 'heroicon-o-exclamation-circle',
+        'sort' => 28,
+    ],
+    'label' => 'Ligne d\'Importation Échouée',
+    'plural_label' => 'Lignes d\'Importation Échouées',
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'import_batch_id' => [
+            'label' => 'ID du Lot d\'Importation',
+        ],
+        'row_index' => [
+            'label' => 'Index de Ligne',
+        ],
+        'errors' => [
+            'label' => 'Erreurs',
+        ],
+        'data' => [
+            'label' => 'Données',
+        ],
+        'created_at' => [
+            'label' => 'Créé À',
+        ],
     ],
     'actions' => [
-        'logout' => [
-            'tooltip' => 'Déconnexion',
+        'view_errors' => [
+            'label' => 'Voir les Erreurs',
+        ],
+        'fix_row' => [
+            'label' => 'Corriger la Ligne',
         ],
     ],
 ];

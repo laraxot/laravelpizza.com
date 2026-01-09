@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Jeton d\'accès OAuth',
+        'label' => 'Jeton d\'Accès OAuth',
         'group' => 'OAuth',
         'icon' => 'heroicon-o-key',
         'sort' => 33,
     ],
-    'label' => 'Jeton d\'accès OAuth',
-    'plural_label' => 'Jetons d\'accès OAuth',
+    'label' => 'Jeton d\'Accès OAuth',
+    'plural_label' => 'Jetons d\'Accès OAuth',
     'fields' => [
         'id' => [
             'label' => 'ID',
@@ -25,13 +25,13 @@ return [
             'label' => 'Nom',
         ],
         'scopes' => [
-            'label' => 'Périmètres',
+            'label' => 'Portées',
         ],
         'revoked' => [
             'label' => 'Révoqué',
         ],
         'expires_at' => [
-            'label' => 'Expire le',
+            'label' => 'Expire À',
         ],
     ],
     'actions' => [

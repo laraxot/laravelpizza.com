@@ -3,20 +3,52 @@
 declare(strict_types=1);
 
 return [
-    'actions' => [
-        'prune_batches' => [
-            'label' => 'Limpar Lotes',
-        ],
+    'navigation' => [
+        'label' => 'Lote de Trabalhos',
+        'group' => 'Lotes',
+        'icon' => 'heroicon-o-queue-list',
+        'sort' => 29,
     ],
+    'label' => 'Lote de Trabalhos',
+    'plural_label' => 'Lotes de Trabalhos',
     'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'name' => [
+            'label' => 'Nome',
+        ],
+        'total_jobs' => [
+            'label' => 'Trabalhos Totais',
+        ],
+        'pending_jobs' => [
+            'label' => 'Trabalhos Pendentes',
+        ],
+        'failed_jobs' => [
+            'label' => 'Trabalhos Falhados',
+        ],
         'failed_job_ids' => [
             'label' => 'IDs de Trabalhos Falhados',
         ],
+        'options' => [
+            'label' => 'Opções',
+        ],
+        'created_at' => [
+            'label' => 'Criado Em',
+        ],
+        'finished_at' => [
+            'label' => 'Finalizado Em',
+        ],
     ],
-    'navigation' => [
-        'sort' => 85,
-        'icon' => 'heroicon-o-queue-list',
-        'group' => 'Sistema',
-        'label' => 'Lotes de Trabalhos',
+    'actions' => [
+        'view_details' => [
+            'label' => 'Ver Detalhes',
+        ],
+        'cancel' => [
+            'label' => 'Cancelar',
+        ],
+        'prune_batches' => [
+            'label' => 'Limpar Lotes',
+        ],
     ],
 ];

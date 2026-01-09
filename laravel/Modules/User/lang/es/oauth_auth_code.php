@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Código de autorización OAuth',
+        'label' => 'Código de Autorización OAuth',
         'group' => 'OAuth',
         'icon' => 'heroicon-o-key',
         'sort' => 32,
     ],
-    'label' => 'Código de autorización OAuth',
-    'plural_label' => 'Códigos de autorización OAuth',
+    'label' => 'Código de Autorización OAuth',
+    'plural_label' => 'Códigos de Autorización OAuth',
     'fields' => [
         'id' => [
             'label' => 'ID',
@@ -31,7 +31,7 @@ return [
             'label' => 'Revocado',
         ],
         'expires_at' => [
-            'label' => 'Expira en',
+            'label' => 'Expira En',
         ],
     ],
     'actions' => [
@@ -39,7 +39,7 @@ return [
             'label' => 'Revocar',
         ],
         'view_scopes' => [
-            'label' => 'Ver ámbitos',
+            'label' => 'Ver Ámbitos',
         ],
     ],
 ];

@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Code d\'authentification OAuth',
+        'label' => 'Code d\'Autorisation OAuth',
         'group' => 'OAuth',
         'icon' => 'heroicon-o-key',
         'sort' => 32,
     ],
-    'label' => 'Code d\'authentification OAuth',
-    'plural_label' => 'Codes d\'authentification OAuth',
+    'label' => 'Code d\'Autorisation OAuth',
+    'plural_label' => 'Codes d\'Autorisation OAuth',
     'fields' => [
         'id' => [
             'label' => 'ID',
@@ -25,13 +25,13 @@ return [
             'label' => 'Nom',
         ],
         'scopes' => [
-            'label' => 'Périmètres',
+            'label' => 'Portées',
         ],
         'revoked' => [
             'label' => 'Révoqué',
         ],
         'expires_at' => [
-            'label' => 'Expire le',
+            'label' => 'Expire À',
         ],
     ],
     'actions' => [
@@ -39,7 +39,7 @@ return [
             'label' => 'Révoquer',
         ],
         'view_scopes' => [
-            'label' => 'Voir les périmètres',
+            'label' => 'Voir les Portées',
         ],
     ],
 ];

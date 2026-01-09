@@ -3,14 +3,17 @@
 declare(strict_types=1);
 
 return [
-    'actions' => [
-        'create' => [
-            'label' => 'Create',
-        ],
+    'navigation' => [
+        'label' => 'Job Manager',
+        'group' => 'Jobs',
+        'icon' => 'heroicon-o-cog',
+        'sort' => 43,
     ],
+    'label' => 'Job Manager',
+    'plural_label' => 'Job Managers',
     'fields' => [
-        'status' => [
-            'label' => 'Status',
+        'id' => [
+            'label' => 'ID',
         ],
         'name' => [
             'label' => 'Name',
@@ -18,17 +21,37 @@ return [
         'queue' => [
             'label' => 'Queue',
         ],
+        'status' => [
+            'label' => 'Status',
+        ],
         'progress' => [
             'label' => 'Progress',
         ],
         'started_at' => [
             'label' => 'Started At',
         ],
+        'last_heartbeat' => [
+            'label' => 'Last Heartbeat',
+        ],
+        'created_at' => [
+            'label' => 'Created At',
+        ],
+        'updated_at' => [
+            'label' => 'Updated At',
+        ],
     ],
-    'navigation' => [
-        'sort' => 87,
-        'icon' => 'heroicon-o-cog-6-tooth',
-        'group' => 'System',
-        'label' => 'Job Manager',
+    'actions' => [
+        'create' => [
+            'label' => 'Create',
+        ],
+        'restart' => [
+            'label' => 'Restart',
+        ],
+        'pause' => [
+            'label' => 'Pause',
+        ],
+        'resume' => [
+            'label' => 'Resume',
+        ],
     ],
 ];

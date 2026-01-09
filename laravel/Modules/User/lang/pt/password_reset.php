@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Réinitialisation de Mot de Passe',
-        'group' => 'Sécurité',
+        'label' => 'Redefinição de Senha',
+        'group' => 'Segurança',
         'icon' => 'heroicon-o-key',
         'sort' => 42,
     ],
-    'label' => 'Réinitialisation de Mot de Passe',
-    'plural_label' => 'Réinitialisations de Mot de Passe',
+    'label' => 'Redefinição de Senha',
+    'plural_label' => 'Redefinições de Senha',
     'fields' => [
         'id' => [
             'label' => 'ID',
@@ -19,18 +19,18 @@ return [
             'label' => 'Email',
         ],
         'token' => [
-            'label' => 'Jeton',
+            'label' => 'Token',
         ],
         'created_at' => [
-            'label' => 'Créé À',
+            'label' => 'Criado Em',
         ],
     ],
     'actions' => [
         'resend_email' => [
-            'label' => 'Renvoyer l\'Email',
+            'label' => 'Reenviar Email',
         ],
         'view_request' => [
-            'label' => 'Voir la Demande',
+            'label' => 'Ver Solicitação',
         ],
     ],
 ];

@@ -3,23 +3,40 @@
 declare(strict_types=1);
 
 return [
-    'fields' => [
-        'edit' => [
-            'label' => 'Bearbeiten',
-        ],
-        'validation_error' => [
-            'label' => 'Validierungsfehler',
-        ],
-    ],
     'navigation' => [
-        'sort' => 8,
-        'icon' => 'heroicon-o-x-circle',
-        'group' => 'System',
-        'label' => 'Fehlgeschlagene Importzeilen',
+        'label' => 'Fehlgeschlagene Importzeile',
+        'group' => 'Fehlgeschlagene Importzeilen',
+        'icon' => 'heroicon-o-exclamation-circle',
+        'sort' => 28,
+    ],
+    'label' => 'Fehlgeschlagene Importzeile',
+    'plural_label' => 'Fehlgeschlagene Importzeilen',
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+        ],
+        'import_batch_id' => [
+            'label' => 'Import-Batch-ID',
+        ],
+        'row_index' => [
+            'label' => 'Zeilenindex',
+        ],
+        'errors' => [
+            'label' => 'Fehler',
+        ],
+        'data' => [
+            'label' => 'Daten',
+        ],
+        'created_at' => [
+            'label' => 'Erstellt Am',
+        ],
     ],
     'actions' => [
-        'logout' => [
-            'tooltip' => 'Abmelden',
+        'view_errors' => [
+            'label' => 'Fehler Anzeigen',
+        ],
+        'fix_row' => [
+            'label' => 'Zeile Korrigieren',
         ],
     ],
 ];

@@ -4,30 +4,30 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Token de Actualización OAuth',
+        'label' => 'OAuth-Aktualisierungstoken',
         'group' => 'OAuth',
         'icon' => 'heroicon-o-arrow-path',
         'sort' => 34,
     ],
-    'label' => 'Token de Actualización OAuth',
-    'plural_label' => 'Tokens de Actualización OAuth',
+    'label' => 'OAuth-Aktualisierungstoken',
+    'plural_label' => 'OAuth-Aktualisierungstoken',
     'fields' => [
         'id' => [
             'label' => 'ID',
         ],
         'access_token_id' => [
-            'label' => 'Token de Acceso',
+            'label' => 'Zugriffstoken',
         ],
         'revoked' => [
-            'label' => 'Revocado',
+            'label' => 'Widerrufen',
         ],
         'expires_at' => [
-            'label' => 'Expira En',
+            'label' => 'Läuft Ab Am',
         ],
     ],
     'actions' => [
         'revoke' => [
-            'label' => 'Revocar',
+            'label' => 'Widerrufen',
         ],
     ],
 ];
