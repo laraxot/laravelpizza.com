@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Modules\Media\Tests;
 
 use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Modules\Media\Providers\MediaServiceProvider;
 use Modules\Xot\Tests\CreatesApplication;
 
@@ -15,6 +18,7 @@ use Modules\Xot\Tests\CreatesApplication;
 abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
+    use DatabaseTransactions;
 
     /**
      * Setup the test environment.
@@ -23,11 +27,54 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        // Load Media module specific configurations
-        $this->loadLaravelMigrations();
+        // Il sito funziona, quindi i test devono riflettere il comportamento reale
+        // Usiamo SQLite shared memory seguendo pattern Activity/TestCase.php
+        $dbName = 'file:memdb_media_'.Str::random(10).'?mode=memory&cache=shared';
 
-        // Seed any required data for Media tests
-        $this->artisan('module:seed', ['module' => 'Media']);
+        $connections = [
+            'sqlite',
+            'mysql',
+            'mariadb',
+            'pgsql',
+            'activity',
+            'cms',
+            'gdpr',
+            'geo',
+            'job',
+            'lang',
+            'media',
+            'meetup',
+            'notify',
+            'seo',
+            'tenant',
+            'ui',
+            'user',
+            'xot',
+        ];
+
+        foreach ($connections as $conn) {
+            $this->app['config']->set("database.connections.{$conn}.driver", 'sqlite');
+            $this->app['config']->set("database.connections.{$conn}.database", $dbName);
+        }
+
+        foreach ($connections as $conn) {
+            DB::purge($conn);
+        }
+
+        foreach ($connections as $conn) {
+            try {
+                $pdo = DB::connection($conn)->getPdo();
+                if (method_exists($pdo, 'sqliteCreateFunction')) {
+                    $pdo->sqliteCreateFunction('md5', static fn (?string $value): ?string => $value === null ? null : md5($value));
+                    $pdo->sqliteCreateFunction('unhex', static fn (?string $value): ?string => $value);
+                }
+            } catch (\Throwable) {
+            }
+        }
+
+        $this->artisan('module:migrate', ['module' => 'Xot', '--force' => true]);
+        $this->artisan('module:migrate', ['module' => 'User', '--force' => true]);
+        $this->artisan('module:migrate', ['module' => 'Media', '--force' => true]);
     }
 
     /**

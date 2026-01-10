@@ -64,7 +64,7 @@ abstract class TestCase extends BaseTestCase
         foreach ($connections as $conn) {
             try {
                 $pdo = DB::connection($conn)->getPdo();
-                if (method_exists($pdo, 'sqliteCreateFunction')) {
+                if ($pdo instanceof \PDO && method_exists($pdo, 'sqliteCreateFunction')) {
                     $pdo->sqliteCreateFunction('md5', static fn (?string $value): ?string => $value === null ? null : md5($value));
                     $pdo->sqliteCreateFunction('unhex', static fn (?string $value): ?string => $value);
                 }
