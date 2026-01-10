@@ -16,7 +16,6 @@ use Modules\User\Models\TeamUser;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
-use Webmozart\Assert\Assert;
 
 /**
  * Trait HasTeams.

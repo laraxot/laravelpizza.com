@@ -9,14 +9,10 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Support\Carbon;
 use Modules\User\Database\Factories\RoleFactory;
-use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Models\Traits\RelationX;
@@ -27,8 +23,7 @@ use Webmozart\Assert\Assert;
 /**
  * Modules\User\Models\Role.
  *
- * @property int                                  $id
- *
+ * @property int $id
  * @property int $id
  *
  * @method static Builder|Role whereId($value)

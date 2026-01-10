@@ -111,8 +111,6 @@ class Profile extends BaseProfile implements HasMedia
 
     /**
      * Get the teams that the profile belongs to.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function teams(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
@@ -121,11 +119,8 @@ class Profile extends BaseProfile implements HasMedia
 
     /**
      * Scope a query to include schemaless attributes.
-     *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopeWithExtraAttributes(\Illuminate\Database\Eloquent\Builder $query): \Illuminate\Database\Eloquent\Builder
+    public function scopeWithExtraAttributes(Builder $query): Builder
     {
         return $query; // SchemalessAttributesTrait should handle this, but adding for completeness/test
     }

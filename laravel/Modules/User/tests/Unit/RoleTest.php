@@ -44,7 +44,6 @@ test('role has correct casts', function (): void {
     expect($casts['updated_at'])->toBe('datetime');
 });
 
-
 test('role can be updated', function (): void {
     $this->role->update([
         'name' => 'updated-role',
@@ -156,14 +155,14 @@ test('role can check if it has all permissions', function (): void {
 });
 
 test('role can be filtered by team_id', function (): void {
-    $team = \Modules\User\Models\Team::factory()->create();
+    $team = Modules\User\Models\Team::factory()->create();
     Role::withoutEvents(function () use ($team): void {
         $this->role->forceFill(['team_id' => $team->id])->save();
     });
-    
+
     $found = Role::where('team_id', $team->id)->first();
     expect($found)->not->toBeNull();
-    expect((int)$found->id)->toBe((int)$this->role->id);
+    expect((int) $found->id)->toBe((int) $this->role->id);
 });
 
 test('role handles null metadata values', function (): void {
@@ -174,9 +173,8 @@ test('role handles null metadata values', function (): void {
             'updated_by' => null,
         ])->save();
     });
-    
+
     expect($this->role->team_id)->toBeNull();
     expect($this->role->created_by)->toBeNull();
     expect($this->role->updated_by)->toBeNull();
 });
-

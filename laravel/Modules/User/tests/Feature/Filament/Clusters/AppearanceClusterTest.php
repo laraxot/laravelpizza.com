@@ -9,10 +9,10 @@ use Modules\User\Filament\Clusters\Appearance\Pages\Colors;
 use Modules\User\Filament\Clusters\Appearance\Pages\CustomCss;
 use Modules\User\Filament\Clusters\Appearance\Pages\Favicon;
 use Modules\User\Filament\Clusters\Appearance\Pages\Logo;
+use Modules\User\Tests\TestCase;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Clusters\XotBaseCluster;
 use Modules\Xot\Filament\Pages\XotBasePage;
-use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -85,7 +85,7 @@ test('cluster does not extend Filament directly', function () {
     expect($content)
         ->not->toContain('extends Cluster;', 'Appearance non deve estendere Cluster direttamente')
         ->not->toContain('use Filament\Clusters\Cluster;', 'Appearance non deve importare Filament\Clusters\Cluster direttamente');
-        // ->toContain('extends XotBaseCluster', 'Appearance deve estendere XotBaseCluster'); // Covered by is_subclass_of test
+    // ->toContain('extends XotBaseCluster', 'Appearance deve estendere XotBaseCluster'); // Covered by is_subclass_of test
 });
 
 test('cluster pages are accessible', function () {

@@ -111,7 +111,7 @@ describe('Homepage Content Management', function () {
     it('handles content updates without breaking', function () {
         $locale = (string) (config('app.locale') ?? 'it');
         $response = get('/'.$locale);
-        
+
         // For test environment, we accept 200 or 404 as valid responses
         // depending on whether content exists in test environment
         $status = $response->status();
@@ -123,7 +123,7 @@ describe('Homepage Content Management', function () {
         $response = get('/'.$locale);
 
         $status = $response->getStatusCode();
-        if ($status !== 200) {
+        if (200 !== $status) {
             $this->assertTrue(in_array($status, [301, 302, 303, 307, 308, 404], true));
 
             return;
@@ -140,7 +140,7 @@ describe('Homepage Content Management', function () {
         $response = get('/'.$locale);
 
         $status = $response->getStatusCode();
-        if ($status !== 200) {
+        if (200 !== $status) {
             $this->assertTrue(in_array($status, [301, 302, 303, 307, 308, 404], true));
 
             return;

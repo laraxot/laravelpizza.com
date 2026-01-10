@@ -6,10 +6,9 @@ use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Filament\Widgets\LoginWidget;
 use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
 
 use function Pest\Laravel\assertAuthenticatedAs;
-
-use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 

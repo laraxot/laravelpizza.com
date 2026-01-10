@@ -30,7 +30,7 @@ test('password data labels are translated', function (): void {
 test('login form labels are translated', function (): void {
     // Assemble
     app()->setLocale('it');
-    
+
     // Using Livewire test helper
     $livewire = Livewire::test(Login::class);
     $instance = $livewire->instance();

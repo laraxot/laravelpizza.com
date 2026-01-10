@@ -20,10 +20,10 @@ beforeEach(function (): void {
     $this->tenant = new Tenant();
     $this->tenant->incrementing = false;
     $this->tenant->setKeyType('string');
-    
+
     $tenantData = [
         'id' => (string) Str::uuid(),
-        'name' => 'Test Tenant ' . uniqid(),
+        'name' => 'Test Tenant '.uniqid(),
         'email_address' => 'test@tenant.com',
         'phone' => '+39 123 456 789',
         'mobile' => '+39 987 654 321',
@@ -31,7 +31,7 @@ beforeEach(function (): void {
         'primary_color' => '#FF0000',
         'secondary_color' => '#00FF00',
     ];
-    
+
     $this->tenant->fill($tenantData);
     $this->tenant->save();
 });
@@ -148,8 +148,8 @@ test('tenant has correct connection', function (): void {
 
 test('tenant can be updated', function (): void {
     $originalId = (string) $this->tenant->id;
-    $newName = 'Updated Tenant Name ' . uniqid();
-    
+    $newName = 'Updated Tenant Name '.uniqid();
+
     $this->tenant->update([
         'name' => $newName,
         'email_address' => 'updated@tenant.com',
@@ -175,7 +175,7 @@ test('tenant can be deleted', function (): void {
 });
 
 test('can find tenant by name', function (): void {
-    $name = 'Searchable Name ' . uniqid();
+    $name = 'Searchable Name '.uniqid();
     $tenant = Tenant::factory()->create(['name' => $name]);
 
     $foundTenant = Tenant::where('name', $name)->first();
@@ -195,13 +195,11 @@ test('can find active tenants', function (): void {
 });
 
 test('can find tenants by name pattern', function (): void {
-    $baseName = 'PatternCompany ' . uniqid();
-    Tenant::factory()->create(['name' => $baseName . ' One']);
-    Tenant::factory()->create(['name' => $baseName . ' Two']);
+    $baseName = 'PatternCompany '.uniqid();
+    Tenant::factory()->create(['name' => $baseName.' One']);
+    Tenant::factory()->create(['name' => $baseName.' Two']);
 
-    $companyTenants = Tenant::where('name', 'like', '%' . $baseName . '%')->get();
+    $companyTenants = Tenant::where('name', 'like', '%'.$baseName.'%')->get();
 
     expect($companyTenants->count())->toBeGreaterThanOrEqual(2);
 });
-
-

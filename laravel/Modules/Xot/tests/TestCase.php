@@ -17,11 +17,15 @@ abstract class TestCase extends BaseTestCase
     use CreatesApplication;
     use DatabaseTransactions;
 
+    protected static bool $migrated = false;
+
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->artisan('migrate', ['--database' => 'xot']);
-        $this->artisan('migrate', ['--database' => 'user']);
+        if (!self::$migrated) {
+            $this->artisan('module:migrate', ['module' => 'Xot', '--force' => true]);
+            self::$migrated = true;
+        }
     }
 }

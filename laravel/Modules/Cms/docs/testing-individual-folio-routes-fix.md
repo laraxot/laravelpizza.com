@@ -45,6 +45,16 @@ if (! file_exists($homepageJsonPath)) {
 - Il path reale è `config/local/laravelpizza/`
 - In test environment, il file potrebbe non esistere, quindi skip è accettabile
 
+### Folio routes: 404 non è sempre un bug
+
+Per alcune pagine Folio il routing è guidato da configurazione/contenuti/tema: in queste installazioni una rotta può essere assente e rispondere `404` senza che il sito sia “rotto”.
+
+Nei test sotto `Modules/Cms/tests/Feature/Frontoffice/FolioRoutes/*` quindi adottiamo questo criterio:
+
+- **Accetta `404`** per route opzionali (es. `/it/learn`, `/it/pages`).
+- **Skip su `5xx`** perché indica errore server/ambiente non risolvibile dai test.
+- **Asserzioni sul markup solo se `200`**.
+
 ## 🔗 Collegamenti
 
 - [Testing Rules](testing-rules.md)

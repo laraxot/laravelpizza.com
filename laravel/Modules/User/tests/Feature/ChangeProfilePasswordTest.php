@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
+use Filament\Facades\Filament;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Livewire;
 use Modules\User\Filament\Pages\MyProfilePage;
-use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\User;
-use function Pest\Laravel\actingAs;
+use Modules\User\Providers\Filament\AdminPanelProvider;
 use Modules\User\Tests\TestCase;
 
-use Filament\Facades\Filament;
-use Modules\User\Providers\Filament\AdminPanelProvider;
+use function Pest\Laravel\actingAs;
 
 uses(TestCase::class);
 

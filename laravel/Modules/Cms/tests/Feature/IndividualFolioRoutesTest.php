@@ -374,7 +374,7 @@ describe('CMS Individual Folio Routes Tests', function () {
 
                 // Verifica che sia processata correttamente nella pagina
                 $locale = (string) app()->getLocale();
-            $response = get('/'.$locale);
+                $response = get('/'.$locale);
                 $content = $response->getContent();
 
                 $expectedUrl = route('register');

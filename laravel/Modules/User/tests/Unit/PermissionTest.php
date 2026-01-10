@@ -187,20 +187,20 @@ test('permission can be filtered by created_by', function (): void {
     Permission::withoutEvents(function (): void {
         $this->permission->forceFill(['created_by' => 'user-123'])->save();
     });
-    
+
     $found = Permission::where('created_by', 'user-123')->first();
     expect($found)->not->toBeNull();
-    expect((int)$found->id)->toBe((int)$this->permission->id);
+    expect((int) $found->id)->toBe((int) $this->permission->id);
 });
 
 test('permission can be filtered by updated_by', function (): void {
     Permission::withoutEvents(function (): void {
         $this->permission->forceFill(['updated_by' => 'user-456'])->save();
     });
-    
+
     $found = Permission::where('updated_by', 'user-456')->first();
     expect($found)->not->toBeNull();
-    expect((int)$found->id)->toBe((int)$this->permission->id);
+    expect((int) $found->id)->toBe((int) $this->permission->id);
 });
 
 test('permission handles null metadata values', function (): void {
@@ -210,8 +210,7 @@ test('permission handles null metadata values', function (): void {
             'updated_by' => null,
         ])->save();
     });
-    
+
     expect($this->permission->created_by)->toBeNull();
     expect($this->permission->updated_by)->toBeNull();
 });
-

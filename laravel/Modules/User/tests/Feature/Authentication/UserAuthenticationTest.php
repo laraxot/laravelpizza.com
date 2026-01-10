@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Laravel\Passport\Passport;
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Models\User;
@@ -262,11 +260,11 @@ describe('User Authorization', function () {
 
 describe('User OAuth Authentication', function () {
     it('can have oauth clients', function () {
-        expect($this->user->clients())->toBeInstanceOf(\Illuminate\Database\Eloquent\Relations\MorphMany::class);
+        expect($this->user->clients())->toBeInstanceOf(Illuminate\Database\Eloquent\Relations\MorphMany::class);
     });
 
     it('can have oauth tokens', function () {
-        expect($this->user->tokens())->toBeInstanceOf(\Illuminate\Database\Eloquent\Relations\HasMany::class);
+        expect($this->user->tokens())->toBeInstanceOf(HasMany::class);
     });
 
     it('can find user for passport', function () {
@@ -285,12 +283,12 @@ describe('User OAuth Authentication', function () {
 
 describe('User Authentication Logging', function () {
     it('can log authentication attempts', function () {
-        expect($this->user->authentications())->toBeInstanceOf(\Illuminate\Database\Eloquent\Relations\MorphMany::class);
+        expect($this->user->authentications())->toBeInstanceOf(Illuminate\Database\Eloquent\Relations\MorphMany::class);
     });
 
     it('can get latest authentication log', function () {
         expect($this->user->latestAuthentication())
-            ->toBeInstanceOf(\Illuminate\Database\Eloquent\Relations\MorphOne::class);
+            ->toBeInstanceOf(Illuminate\Database\Eloquent\Relations\MorphOne::class);
     });
 });
 
