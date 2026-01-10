@@ -18,7 +18,6 @@ abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
     use DatabaseTransactions;
-    use DatabaseTransactions;
 
     /**
      * Setup the test environment.
