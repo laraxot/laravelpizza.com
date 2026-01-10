@@ -1,0 +1,52 @@
+{
+    "id": "16",
+    "title": {
+        "it": "Page with Template",
+        "en": "Page with Template"
+    },
+    "slug": "page-with-template",
+    "middleware": null,
+    "content": null,
+    "description": null,
+    "content_blocks": {
+        "it": [
+            {
+                "id": "layout-block",
+                "type": "layout",
+                "template": "default",
+                "content": {
+                    "it": "Layout content",
+                    "en": "Layout content"
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": [
+            {
+                "id": "sidebar-block",
+                "type": "widget",
+                "content": {
+                    "it": "Sidebar widget",
+                    "en": "Sidebar widget"
+                }
+            }
+        ]
+    },
+    "footer_blocks": {
+        "it": [
+            {
+                "id": "footer-block",
+                "type": "footer",
+                "content": {
+                    "it": "Footer content",
+                    "en": "Footer content"
+                }
+            }
+        ]
+    },
+    "created_at": "2026-01-10T17:22:20.000000Z",
+    "updated_at": "2026-01-10T17:22:20.000000Z",
+    "created_by": null,
+    "updated_by": null
+}
