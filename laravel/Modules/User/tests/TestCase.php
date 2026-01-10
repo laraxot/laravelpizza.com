@@ -6,6 +6,8 @@ namespace Modules\User\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Modules\Xot\Tests\CreatesApplication;
 
 /**
@@ -22,6 +24,25 @@ abstract class TestCase extends BaseTestCase
     use CreatesApplication;
     use DatabaseTransactions;
 
+    protected static bool $migrated = false;
+
+    protected $connectionsToTransact = [
+        'mysql',
+        'user',
+        'notify',
+        'geo',
+        'media',
+        'job',
+        'xot',
+        'activity',
+        'cms',
+        'gdpr',
+        'lang',
+        'meetup',
+        'seo',
+        'tenant',
+    ];
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -34,7 +55,12 @@ abstract class TestCase extends BaseTestCase
             'main_module' => 'User',
         ]);
 
-        $this->artisan('migrate', ['--database' => 'user']);
-        $this->artisan('migrate', ['--database' => 'xot']);
+        if (!self::$migrated) {
+            $this->artisan('module:migrate', ['module' => 'Xot', '--force' => true]);
+            $this->artisan('module:migrate', ['module' => 'User', '--force' => true]);
+            $this->artisan('module:migrate', ['module' => 'Cms', '--force' => true]);
+            $this->artisan('module:migrate', ['module' => 'Geo', '--force' => true]);
+            self::$migrated = true;
+        }
     }
 }

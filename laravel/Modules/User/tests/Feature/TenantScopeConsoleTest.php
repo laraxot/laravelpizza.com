@@ -8,6 +8,9 @@ use Illuminate\Foundation\Console\Kernel;
 use Illuminate\Support\Facades\Artisan;
 use Modules\User\Models\Tenant;
 use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
+
+uses(TestCase::class);
 
 describe('TenantScope Console Context Behavior', function (): void {
     beforeEach(function (): void {

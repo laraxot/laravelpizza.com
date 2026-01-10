@@ -23,6 +23,8 @@ return new class extends XotBaseMigration {
             // $table->foreignIdFor(\Modules\Xot\Datas\XotData::make()->getUserClass());
             $table->string('name');
             $table->boolean('personal_team')->default(false);
+            $table->softDeletes();
+            $table->timestamps();
         });
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
@@ -44,6 +46,22 @@ return new class extends XotBaseMigration {
 
             if (! $this->hasColumn('owner_id')) {
                 $table->uuid('owner_id')->nullable()->after('id');
+            }
+
+            if (! $this->hasColumn('slug')) {
+                $table->string('slug')->nullable()->unique();
+            }
+
+            if (! $this->hasColumn('description')) {
+                $table->text('description')->nullable();
+            }
+
+            if (! $this->hasColumn('avatar_path')) {
+                $table->string('avatar_path')->nullable();
+            }
+
+            if (! $this->hasColumn('settings')) {
+                $table->json('settings')->nullable();
             }
 
             $this->updateTimestamps($table, true);

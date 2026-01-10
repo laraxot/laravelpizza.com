@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-use Modules\Xot\Database\Migrations\XotBaseMigration;
 use Modules\User\Models\Profile;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 return new class extends XotBaseMigration {
     protected ?string $model_class = Profile::class;
@@ -35,7 +35,7 @@ return new class extends XotBaseMigration {
             $table->string('status')->nullable();
             $table->boolean('is_active')->default(true);
             $table->json('extra')->nullable();
-            
+
             $table->timestamps();
             $table->softDeletes();
             $table->string('created_by')->nullable();

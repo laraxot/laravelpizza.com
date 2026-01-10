@@ -5,7 +5,6 @@ declare(strict_types=1);
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\ValidationException;
 use Modules\User\Models\Permission;
 use Modules\User\Models\Profile;
 use Modules\User\Models\Role;
@@ -270,7 +269,8 @@ it('can delete user with profile', function () {
     ]);
 
     // Act
-    $profile->forceDelete(); $user->forceDelete();
+    $profile->forceDelete();
+    $user->forceDelete();
 
     // Assert
     expect(DB::table('users')->where(['id' => $user->id])->exists())->toBeFalse();

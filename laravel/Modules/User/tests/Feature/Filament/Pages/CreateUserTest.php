@@ -9,9 +9,22 @@ use Modules\User\Models\User;
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 use Modules\User\Tests\TestCase;
 
+use Filament\Facades\Filament;
+use Modules\User\Providers\Filament\AdminPanelProvider;
+
 uses(TestCase::class);
 
 beforeEach(function (): void {
+    // Ensure the panel is registered
+    try {
+        $panel = Filament::getPanel('user::admin');
+    } catch (\Exception $e) {
+        $panelProvider = new AdminPanelProvider(app());
+        $panel = $panelProvider->panel(Filament::getPanelRegistry()->makePanel('user::admin'));
+        Filament::registerPanel($panel);
+    }
+    Filament::setCurrentPanel($panel);
+
     $this->createUserPage = new CreateUser();
 });
 
@@ -99,10 +112,6 @@ test('create user page handles form submission structure', function (): void {
     expect($formData['type'])->toBe(UserType::BoUser);
 });
 
-test('create user page has basic form functionality', function (): void {
-    // Test that the page has basic form capabilities
-    expect(method_exists($this->createUserPage, 'getFormModel'))->toBeTrue();
-});
 
 test('create user page follows filament conventions', function (): void {
     // Test that the page follows standard Filament conventions

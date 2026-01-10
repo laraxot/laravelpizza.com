@@ -272,8 +272,12 @@ abstract class XotBaseMigration extends LaravelMigration
         $xot = XotData::make();
         $userClass = $xot->getUserClass();
 
-        if (! $this->hasColumn('updated_at') && ! $this->hasColumn('created_at')) {
-            $table->timestamps();
+        if (! $this->hasColumn('created_at')) {
+            $table->timestamp('created_at')->nullable();
+        }
+
+        if (! $this->hasColumn('updated_at')) {
+            $table->timestamp('updated_at')->nullable();
         }
 
         if (! $this->hasColumn('updated_by')) {
@@ -339,33 +343,14 @@ abstract class XotBaseMigration extends LaravelMigration
     /**
      * Get the migration connection name.
      */
+    /**
+     * Get the migration connection name.
+     */
     public function getConnection(): ?string
     {
-        /** @var string */
-        return Config::get('pulse.storage.database.connection');
+        return $this->model->getConnectionName();
     }
 
-    /**
-     * Determine if the migration should run.
-     */
-    public function shouldRun(): bool
-    {
-        if (in_array($this->driver(), ['mariadb', 'mysql', 'pgsql', 'sqlite'], strict: true)) {
-            return true;
-        }
-
-        if (! App::environment('testing')) {
-            throw new RuntimeException("Pulse does not support the [{$this->driver()}] database driver.");
-        }
-
-        if (Config::get('pulse.enabled')) {
-            throw new RuntimeException(
-                "Pulse does not support the [{$this->driver()}] database driver. You can disable Pulse in your testsuite by adding `<env name=\"PULSE_ENABLED\" value=\"false\"/>` to your project's `phpunit.xml` file.",
-            );
-        }
-
-        return false;
-    }
 
     /**
      * Add a foreign ID column to the table based on a related model.

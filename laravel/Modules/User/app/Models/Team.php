@@ -6,6 +6,7 @@ namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 use Modules\User\Database\Factories\TeamFactory;
 use Modules\Xot\Contracts\ProfileContract;
@@ -72,4 +73,36 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class Team extends BaseTeam
 {
+    use SoftDeletes;
+
+    protected $fillable = [
+        'user_id',
+        'name',
+        'slug',
+        'description',
+        'avatar_path',
+        'personal_team',
+        'settings',
+    ];
+
+    /**
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'personal_team' => 'boolean',
+        'settings' => 'array',
+    ];
+
+    public function users(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'team_user')
+            ->withPivot(['role', 'permissions', 'joined_at'])
+            ->withTimestamps()
+            ->as('membership');
+    }
+
+    public function permissions(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(TeamPermission::class);
+    }
 }

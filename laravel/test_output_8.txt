@@ -1,0 +1,605 @@
+
+   FAIL  Modules\User\tests\Feature\TeamManagementTest
+  ⨯ Team Creation and Management → it can create a team
+  ⨯ Team Creation and Management → it belongs to an owner
+  ⨯ Team Creation and Management → it can have multiple teams per user
+  ⨯ Team Creation and Management → it can update team information
+  ⨯ Team Creation and Management → it can delete a team
+  ⨯ Team Membership → it can add members to team
+  ⨯ Team Membership → it can remove members from team
+  ⨯ Team Membership → it can have multiple members
+  ⨯ Team Membership → it can check if user is team member
+  ⨯ Team Membership → it can get team membership with pivot data
+  ⨯ User Team Relationship → it user can belong to multiple teams
+  ⨯ User Team Relationship → it user can switch current team
+  ⨯ User Team Relationship → it user can leave a team
+  ⨯ User Team Relationship → it can get all team users for a user
+  ⨯ Team Invitations → it can validate team slug uniqueness
+  ⨯ Team Invitations → it can create team invitations
+  ⨯ Team Invitations → it can accept team invitations
+  ⨯ Team Invitations → it can cancel team invitations
+  ⨯ Team Invitations → it prevents duplicate invitations
+  ⨯ Team Permissions → it can have team-specific permissions
+  ⨯ Team Permissions → it can assign permissions to team members
+  ⨯ Team Permissions → it can check team member permissions
+  ⨯ Team Scopes and Queries → it can filter teams by owner
+  ⨯ Team Scopes and Queries → it can find teams by slug
+  ⨯ Team Scopes and Queries → it can get teams with member count
+  ⨯ Team Features → it can have team settings
+  ⨯ Team Features → it can have team avatar
+  ⨯ Team Features → it can check if team is full
+  ⨯ Team Events and Notifications → it can notify team members of changes
+  ⨯ Team Events and Notifications → it can log team activities
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_data_test.migrations' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: select `migration` from `migrations` order by `batch` asc, `migration` asc)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:413
+    409▕             // For select statements, we'll simply execute the query and return an array
+    410▕             // of the database result set. Each element in the array will be a single
+    411▕             // row from the database table, and will either be an array or objects.
+    412▕             $statement = $this->prepared(
+  ➜ 413▕                 $this->getPdoForSelect($useReadPdo)->prepare($query)
+    414▕             );
+    415▕ 
+    416▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    417▕
+
+      [2m+28 vendor frames [22m
+  29  Modules/User/tests/TestCase.php:50
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'mail_templates' already exists (Connection: notify, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: create table `mail_templates` (`id` int unsigned not null auto_increment primary key, `mailable` varchar(255) not null, `subject` text null, `html_template` longtext not null, `text_template` longtext null) default character set utf8mb4 collate 'utf8mb4_unicode_ci')
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:245
+  9   Modules/Notify/database/migrations/2018_10_10_000000_create_mail_templates_table.php:21
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'updated_by' (Connection: notify, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `mail_templates` add `updated_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Notify/database/migrations/2018_10_10_000000_create_mail_templates_table.php:30
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'deleted_by' (Connection: notify, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `mail_templates` add `deleted_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php:32
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'params' (Connection: notify, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `mail_templates` add `params` text null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Notify/database/migrations/2018_10_10_000005_create_mail_templates_table.php:32
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'body_html' (Connection: notify, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `notify_themes` add `body_html` text null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Notify/database/migrations/2020_01_01_000007_create_notify_themes_table.php:30
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'logo_width' (Connection: notify, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `notify_themes` add `logo_width` int null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Notify/database/migrations/2020_01_01_000007_create_notify_themes_table.php:30
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'updated_by' (Connection: xot, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `notifications` add `updated_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Notify/database/migrations/2022_10_12_133532_create_notifications_table.php:25
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'deleted_by' (Connection: xot, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `notifications` add `deleted_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Notify/database/migrations/2022_10_12_133532_create_notifications_table.php:25
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'created_at' (Connection: notify, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `contacts` add `created_at` timestamp null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Notify/database/migrations/2022_10_12_133535_create_notify_contacts_table.php:27
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'created_by' (Connection: notify, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `contacts` add `created_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Notify/database/migrations/2022_10_12_133535_create_notify_contacts_table.php:27
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'updated_by' (Connection: geo, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `locations` add `updated_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Geo/database/migrations/2022_11_02_044205_create_locations_table.php:30
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'deleted_by' (Connection: geo, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `locations` add `deleted_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Geo/database/migrations/2022_11_02_044205_create_locations_table.php:30
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'temporary_uploads' already exists (Connection: media, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: create table `temporary_uploads` (`id` char(36) not null, `session_id` varchar(255) not null, primary key (`id`)) default character set utf8mb4 collate 'utf8mb4_unicode_ci')
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:245
+  9   Modules/Media/database/migrations/2023_01_01_000000_create_temporary_uploads_table.php:21
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'updated_by' (Connection: media, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `temporary_uploads` add `updated_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Media/database/migrations/2023_01_01_000000_create_temporary_uploads_table.php:26
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'deleted_by' (Connection: media, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `temporary_uploads` add `deleted_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/Media/database/migrations/2023_01_01_000000_create_temporary_uploads_table.php:26
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'created_at' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `team_invitations` add `created_at` timestamp null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000002_create_team_invitations_table.php:29
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'updated_by' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `team_invitations` add `updated_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000002_create_team_invitations_table.php:29
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'deleted_by' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `team_invitations` add `deleted_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000002_create_team_invitations_table.php:29
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'updated_by' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `socialite_users` add `updated_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000003_create_socialite_user_table.php:38
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'created_at' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `tenant_user` add `created_at` timestamp null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000003_create_tenant_user_table.php:27
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'created_by' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `tenant_user` add `created_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000003_create_tenant_user_table.php:27
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'device_user' already exists (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: create table `device_user` (`id` bigint unsigned not null auto_increment primary key, `device_id` bigint unsigned not null, `user_id` char(36) not null, `login_at` datetime null, `logout_at` datetime null) default character set utf8mb4 collate 'utf8mb4_unicode_ci')
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:245
+  9   Modules/User/database/migrations/2023_01_01_000004_create_device_user_table.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'push_notifications_enabled' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `device_user` add `push_notifications_enabled` tinyint(1) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000004_create_device_user_table.php:26
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'updated_by' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `device_user` add `updated_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000004_create_device_user_table.php:26
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'created_at' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `oauth_clients` add `created_at` timestamp null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000004_create_oauth_clients_table.php:27
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'model_has_permission' already exists (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: create table `model_has_permission` (`id` bigint unsigned not null auto_increment primary key, `permission_id` bigint unsigned not null, `model_type` varchar(255) not null, `model_id` char(36) not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci')
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:245
+  9   Modules/User/database/migrations/2023_01_01_000005_create_model_has_permissions_table.php:20
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'created_at' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `model_has_permission` add `created_at` timestamp null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000005_create_model_has_permissions_table.php:26
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'created_by' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `model_has_permission` add `created_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000005_create_model_has_permissions_table.php:26
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'updated_by' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `oauth_personal_access_clients` add `updated_by` char(36) null)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:252
+  9   Modules/User/database/migrations/2023_01_01_000005_create_oauth_personal_access_clients_table.php:20
+
+
+  Tests:    30 failed (0 assertions)
+  Duration: 14.35s
+

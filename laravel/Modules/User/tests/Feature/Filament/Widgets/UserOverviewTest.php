@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Filament\Widgets\Widget;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\User\Models\User;
@@ -15,7 +16,7 @@ beforeEach(function (): void {
     $this->widget = new UserOverview();
     $this->user = User::factory()->create([
         'type' => UserType::MasterAdmin,
-        'email' => 'admin@example.com',
+        'email' => 'admin-'.Str::lower(Str::random(10)).'@example.com',
     ]);
 });
 

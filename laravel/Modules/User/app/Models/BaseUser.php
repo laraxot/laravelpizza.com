@@ -12,13 +12,13 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\Pivot;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
@@ -297,7 +297,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     #[\Override]
     public function profile(): HasOne
     {
-        $profileClass = \Modules\Xot\Datas\XotData::make()->getProfileClass();
+        $profileClass = XotData::make()->getProfileClass();
         if (class_exists($profileClass)) {
             return $this->hasOne($profileClass);
         }

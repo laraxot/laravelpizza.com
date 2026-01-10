@@ -113,6 +113,66 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        'user' => [
+            'driver' => 'mysql',
+            'url' => env('USER_DB_URL'),
+            'host' => env('USER_DB_HOST', '127.0.0.1'),
+            'port' => env('USER_DB_PORT', '3306'),
+            'database' => env('USER_DB_DATABASE', 'laravelpizza_user_test'),
+            'username' => env('USER_DB_USERNAME', 'root'),
+            'password' => env('USER_DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => env('DB_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
+        'notify' => [
+            'driver' => 'mysql',
+            'url' => env('NOTIFY_DB_URL'),
+            'host' => env('NOTIFY_DB_HOST', '127.0.0.1'),
+            'port' => env('NOTIFY_DB_PORT', '3306'),
+            'database' => env('NOTIFY_DB_DATABASE', 'laravelpizza_notify_test'),
+            'username' => env('NOTIFY_DB_USERNAME', 'root'),
+            'password' => env('NOTIFY_DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => env('DB_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
+        'geo' => [
+            'driver' => 'mysql',
+            'url' => env('GEO_DB_URL'),
+            'host' => env('GEO_DB_HOST', '127.0.0.1'),
+            'port' => env('GEO_DB_PORT', '3306'),
+            'database' => env('GEO_DB_DATABASE', 'laravelpizza_geo_test'),
+            'username' => env('GEO_DB_USERNAME', 'root'),
+            'password' => env('GEO_DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => env('DB_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
     ],
 
     /*

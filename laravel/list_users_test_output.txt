@@ -1,0 +1,239 @@
+
+   FAIL  Modules\User\tests\Feature\Filament\Pages\ListUsersTest
+  ✓ list users… 1.19s  
+  ✓ list users… 0.66s  
+  ✓ list users… 0.75s  
+  ✓ list users… 0.86s  
+  ✓ list users… 1.04s  
+  ✓ list users… 0.80s  
+  ⨯ list users… 0.73s  
+  ✓ list users… 0.81s  
+  ⨯ list users… 0.73s  
+  ✓ list users… 0.67s  
+  ⨯ list users… 0.64s  
+  ⨯ list users… 0.58s  
+  ✓ list users… 0.59s  
+  ⨯ list users… 0.62s  
+  ⨯ list users… 0.61s  
+  ⨯ list users… 0.64s  
+  ⨯ list users… 0.59s  
+  ⨯ list users… 0.55s  
+  ⨯ list users… 0.53s  
+  ⨯ list users… 0.52s  
+  ⨯ list users… 0.56s  
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\Filament\Pages\ListUsersTest > list users page has correct header widgets  BadMethodCallException   
+  Method Modules\User\Filament\Resources\UserResource\Pages\ListUsers::getHeaderWidgets does not exist.
+
+  at vendor/livewire/livewire/src/Component.php:138
+    134▕         if (static::hasMacro($method)) {
+    135▕             return $this->macroCall($method, $params);
+    136▕         }
+    137▕ 
+  ➜ 138▕         throw new BadMethodCallException(sprintf(
+    139▕             'Method %s::%s does not exist.', static::class, $method
+    140▕         ));
+    141▕     }
+    142▕
+
+      [2m+1 vendor frames [22m
+  2   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:109
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that 'master_admin' is identical to an object of class "Modules\User\Enums\UserType".
+
+  at Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:139
+    135▕     expect($users)->toHaveCount(3);
+    136▕ 
+    137▕     foreach ($users as $user) {
+    138▕         expect($user)->toBeInstanceOf(User::class);
+  ➜ 139▕         expect($user->type)->toBe(UserType::MasterAdmin);
+    140▕     }
+    141▕ });
+    142▕ 
+    143▕ test('list users page has correct navigation label', function (): void {
+
+  1   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:139
+
+  ───────────────────  
+   FAILED  M…  Error   
+  Non-static method Filament\Resources\Pages\ListRecords::getTitle() cannot be called statically
+
+  at Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:151
+    147▕     expect($label)->not->toBeNull();
+    148▕ });
+    149▕ 
+    150▕ test('list users page has correct title', function (): void {
+  ➜ 151▕     $title = ListUsers::getTitle();
+    152▕ 
+    153▕     // The title should be defined or fall back to default
+    154▕     expect($title)->not->toBeNull();
+    155▕ });
+
+  1   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:151
+
+  ───────────────────  
+   FAILED  M…  Error   
+  Non-static method Filament\Resources\Pages\Page::getBreadcrumbs() cannot be called statically
+
+  at Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:158
+    154▕     expect($title)->not->toBeNull();
+    155▕ });
+    156▕ 
+    157▕ test('list users page has correct breadcrumbs', function (): void {
+  ➜ 158▕     $breadcrumbs = ListUsers::getBreadcrumbs();
+    159▕ 
+    160▕     // Breadcrumbs should be an array
+    161▕     expect($breadcrumbs)->toBeArray();
+    162▕ });
+
+  1   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:158
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that false is true.
+
+  at Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:183
+    179▕     $nameColumn = $columns['name'];
+    180▕     $emailColumn = $columns['email'];
+    181▕ 
+    182▕     // By default, columns should be sortable
+  ➜ 183▕     expect($nameColumn->isSortable())->toBeTrue();
+    184▕     expect($emailColumn->isSortable())->toBeTrue();
+    185▕ });
+    186▕ 
+    187▕ test('list users page can handle pagination', function (): void {
+
+  1   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:183
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\Filament\Pages\ListUsersTest > list users page can handle pagination  BadMethodCallException   
+  Method Modules\User\Filament\Resources\UserResource\Pages\ListUsers::getTablePaginationPageOptions does not exist.
+
+  at vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:89
+     85▕      */
+     86▕     public static function __callStatic($method, $parameters)
+     87▕     {
+     88▕         if (! static::hasMacro($method)) {
+  ➜  89▕             throw new BadMethodCallException(sprintf(
+     90▕                 'Method %s::%s does not exist.', static::class, $method
+     91▕             ));
+     92▕         }
+     93▕
+
+      [2m+1 vendor frames [22m
+  2   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:189
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\Filament\Pages\ListUsersTest > list users page has correct table query  BadMethodCallException   
+  Method Modules\User\Filament\Resources\UserResource\Pages\ListUsers::getTableQuery does not exist.
+
+  at vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:89
+     85▕      */
+     86▕     public static function __callStatic($method, $parameters)
+     87▕     {
+     88▕         if (! static::hasMacro($method)) {
+  ➜  89▕             throw new BadMethodCallException(sprintf(
+     90▕                 'Method %s::%s does not exist.', static::class, $method
+     91▕             ));
+     92▕         }
+     93▕
+
+      [2m+1 vendor frames [22m
+  2   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:197
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\Filament\Pages\ListUsersTest > list users page can handle record selection  BadMethodCallException   
+  Method Modules\User\Filament\Resources\UserResource\Pages\ListUsers::canSelectRecords does not exist.
+
+  at vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:89
+     85▕      */
+     86▕     public static function __callStatic($method, $parameters)
+     87▕     {
+     88▕         if (! static::hasMacro($method)) {
+  ➜  89▕             throw new BadMethodCallException(sprintf(
+     90▕                 'Method %s::%s does not exist.', static::class, $method
+     91▕             ));
+     92▕         }
+     93▕
+
+      [2m+1 vendor frames [22m
+  2   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:205
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\Filament\Pages\ListUsersTest > list users page has correct table layout  BadMethodCallException   
+  Method Modules\User\Filament\Resources\UserResource\Pages\ListUsers::getTableLayout does not exist.
+
+  at vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:89
+     85▕      */
+     86▕     public static function __callStatic($method, $parameters)
+     87▕     {
+     88▕         if (! static::hasMacro($method)) {
+  ➜  89▕             throw new BadMethodCallException(sprintf(
+     90▕                 'Method %s::%s does not exist.', static::class, $method
+     91▕             ));
+     92▕         }
+     93▕
+
+      [2m+1 vendor frames [22m
+  2   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:213
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\Filament\Pages\ListUsersTest > list users page can handle empty state  BadMethodCallException   
+  Method Modules\User\Filament\Resources\UserResource\Pages\ListUsers::getTableEmptyStateHeading does not exist.
+
+  at vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:89
+     85▕      */
+     86▕     public static function __callStatic($method, $parameters)
+     87▕     {
+     88▕         if (! static::hasMacro($method)) {
+  ➜  89▕             throw new BadMethodCallException(sprintf(
+     90▕                 'Method %s::%s does not exist.', static::class, $method
+     91▕             ));
+     92▕         }
+     93▕
+
+      [2m+1 vendor frames [22m
+  2   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:221
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\Filament\Pages\ListUsersTest > list users page has correct table actions alignment  BadMethodCallException   
+  Method Modules\User\Filament\Resources\UserResource\Pages\ListUsers::getTableActionsAlignment does not exist.
+
+  at vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:89
+     85▕      */
+     86▕     public static function __callStatic($method, $parameters)
+     87▕     {
+     88▕         if (! static::hasMacro($method)) {
+  ➜  89▕             throw new BadMethodCallException(sprintf(
+     90▕                 'Method %s::%s does not exist.', static::class, $method
+     91▕             ));
+     92▕         }
+     93▕
+
+      [2m+1 vendor frames [22m
+  2   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:231
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\Filament\Pages\ListUsersTest > list users page can handle table records per page  BadMethodCallException   
+  Method Modules\User\Filament\Resources\UserResource\Pages\ListUsers::getTableRecordsPerPageSelectOptions does not exist.
+
+  at vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:89
+     85▕      */
+     86▕     public static function __callStatic($method, $parameters)
+     87▕     {
+     88▕         if (! static::hasMacro($method)) {
+  ➜  89▕             throw new BadMethodCallException(sprintf(
+     90▕                 'Method %s::%s does not exist.', static::class, $method
+     91▕             ));
+     92▕         }
+     93▕
+
+      [2m+1 vendor frames [22m
+  2   Modules/User/tests/Feature/Filament/Pages/ListUsersTest.php:239
+
+
+  Tests:    12 failed, 9 passed (27 assertions)
+  Duration: 14.77s
+

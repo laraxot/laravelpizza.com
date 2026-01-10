@@ -1,0 +1,977 @@
+
+   FAIL  Modules\User\tests\Feature\TeamManagementTest
+  ⨯ Team Creation and Management → it can create a team
+  ⨯ Team Creation and Management → it belongs to an owner
+  ⨯ Team Creation and Management → it can have multiple teams per user
+  ⨯ Team Creation and Management → it can update team information
+  ⨯ Team Creation and Management → it can delete a team
+  ⨯ Team Membership → it can add members to team
+  ⨯ Team Membership → it can remove members from team
+  ⨯ Team Membership → it can have multiple members
+  ⨯ Team Membership → it can check if user is team member
+  ⨯ Team Membership → it can get team membership with pivot data
+  ⨯ User Team Relationship → it user can belong to multiple teams
+  ⨯ User Team Relationship → it user can switch current team
+  ⨯ User Team Relationship → it user can leave a team
+  ⨯ User Team Relationship → it can get all team users for a user
+  ⨯ Team Invitations → it can validate team slug uniqueness
+  ⨯ Team Invitations → it can create team invitations
+  ⨯ Team Invitations → it can accept team invitations
+  ⨯ Team Invitations → it can cancel team invitations
+  ⨯ Team Invitations → it prevents duplicate invitations
+  ⨯ Team Permissions → it can have team-specific permissions
+  ⨯ Team Permissions → it can assign permissions to team members
+  ⨯ Team Permissions → it can check team member permissions
+  ⨯ Team Scopes and Queries → it can filter teams by owner
+  ⨯ Team Scopes and Queries → it can find teams by slug
+  ⨯ Team Scopes and Queries → it can get teams with member count
+  ⨯ Team Features → it can have team settings
+  ⨯ Team Features → it can have team avatar
+  ⨯ Team Features → it can check if team is full
+  ⨯ Team Events and Notifications → it can notify team members of changes
+  ⨯ Team Events and Notifications → it can log team activities
+
+   FAIL  Modules\User\tests\Feature\TeamManagementBusinessLogicTest
+  ⨯ it can cre… 0.20s  
+  ⨯ it can add… 0.24s  
+  ⨯ it can rem… 0.20s  
+  ⨯ it can ass… 0.17s  
+  ⨯ it can ass… 0.17s  
+  ⨯ it can che… 0.18s  
+  ⨯ it can cre… 0.17s  
+  ⨯ it can acc… 0.21s  
+  ⨯ it can dec… 0.18s  
+  ⨯ it can che… 0.18s  
+  ⨯ it can get… 0.18s  
+  ⨯ it can get… 0.18s  
+  ⨯ it can get… 0.18s  
+  ⨯ it can che… 0.20s  
+  ⨯ it can che… 0.19s  
+  ⨯ it can get… 0.20s  
+  ⨯ it can get… 0.24s  
+  ⨯ it can get… 0.26s  
+  ⨯ it can han… 0.19s  
+  ⨯ it can res… 0.17s  
+  ⨯ it can for… 0.18s  
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Margaretta, Cormier, Mr. Derek Berge, dach.shanie@example.net, 2026-01-10 15:31:58, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, Y6LniKzfDY, it, 0, 2026-09-10 22:01:58, 019ba852-36f4-70c2-80a2-f9189a0cb7c6, 2026-01-10 15:31:58, 2026-01-10 15:31:58))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Walker, Champlin, Susanna Dickens, cara92@example.net, 2026-01-10 15:31:59, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, yb6nDYbp9Y, it, 0, 2026-08-15 09:13:20, 019ba852-379a-7333-aff4-e5844aa22d44, 2026-01-10 15:31:59, 2026-01-10 15:31:59))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Alysa, Durgan, Ara Stiedemann, beahan.vaughn@example.net, 2026-01-10 15:31:59, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, beKWmlXiZj, de, 0, ?, 019ba852-383b-72dd-81f5-44668dc7c06b, 2026-01-10 15:31:59, 2026-01-10 15:31:59))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Cheyenne, Kautzer, Kristofer Durgan Jr., dooley.domenic@example.com, 2026-01-10 15:31:59, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, eLqZIoNudL, en, 0, ?, 019ba852-38df-7220-9927-30c686d3ba76, 2026-01-10 15:31:59, 2026-01-10 15:31:59))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Savion, Huels, Titus Lang, lera21@example.com, 2026-01-10 15:31:59, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, nJrDrbWOTT, en, 0, 2026-06-30 14:32:22, 019ba852-398a-7181-97a6-8d6aeb4ffcc2, 2026-01-10 15:31:59, 2026-01-10 15:31:59))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Angelina, Heller, Leopold Schoen, lamar01@example.net, 2026-01-10 15:31:59, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, EfGccSkhS7, de, 0, 2026-09-09 21:07:32, 019ba852-3a29-7315-bc2b-09a89c01f7f1, 2026-01-10 15:31:59, 2026-01-10 15:31:59))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Shanel, Murphy, Ethelyn Streich, myrtle.walsh@example.net, 2026-01-10 15:31:59, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, tYQooEf0DI, it, 0, 2026-12-31 14:43:46, 019ba852-3acb-700a-b6af-b3fdcbbd6e97, 2026-01-10 15:31:59, 2026-01-10 15:31:59))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Dylan, Streich, Dr. Brody Franecki III, lilian38@example.org, 2026-01-10 15:32:00, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, QUZZCsirz9, en, 0, ?, 019ba852-3b6e-7278-80c5-b240fa018f21, 2026-01-10 15:32:00, 2026-01-10 15:32:00))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Odie, Herman, Willow Stiedemann, feeney.jefferey@example.org, 2026-01-10 15:32:00, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, ayASWWboYj, it, 0, 2026-07-15 00:16:16, 019ba852-3c19-702b-864b-5a53f6635608, 2026-01-10 15:32:00, 2026-01-10 15:32:00))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Naomi, Hickle, Octavia Gutkowski, maxie.robel@example.net, 2026-01-10 15:32:00, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, aJJ4Qqn5Rs, en, 0, 2026-03-05 18:16:26, 019ba852-3cb7-7029-bf7c-ceb5c3f0bb44, 2026-01-10 15:32:00, 2026-01-10 15:32:00))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Fermin, Franecki, Prof. Shad Haley I, kacie.pfeffer@example.com, 2026-01-10 15:32:00, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, hnzfxA2D8n, de, 0, ?, 019ba852-3d55-71a6-9fa6-65fc0dc49da2, 2026-01-10 15:32:00, 2026-01-10 15:32:00))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Bernice, Schroeder, Isai Davis, jwiegand@example.net, 2026-01-10 15:32:00, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, YEseHyZ3xo, it, 0, 2026-09-23 10:25:56, 019ba852-3df4-70c4-9b98-10e94db1be60, 2026-01-10 15:32:00, 2026-01-10 15:32:00))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Liliane, Conroy, Sharon Dach, rhett16@example.com, 2026-01-10 15:32:00, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, jVQgRSnvei, en, 0, ?, 019ba852-3e9b-7184-b608-e83ae561d7c9, 2026-01-10 15:32:00, 2026-01-10 15:32:00))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Jaron, Hirthe, Alena Schulist, lueilwitz.armando@example.org, 2026-01-10 15:32:01, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, FE2HP2fk9F, en, 0, ?, 019ba852-3f3a-7355-8d1b-f05aaf64897b, 2026-01-10 15:32:01, 2026-01-10 15:32:01))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Toney, Emmerich, Forest Ebert II, ephraim48@example.com, 2026-01-10 15:32:01, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, bPZqT4OycZ, it, 0, 2026-05-06 22:37:48, 019ba852-3fdd-72b1-b316-6e19b708a1ed, 2026-01-10 15:32:01, 2026-01-10 15:32:01))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Brycen, Larson, Jovan Ernser, iromaguera@example.net, 2026-01-10 15:32:01, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, gy3to3aR8K, it, 0, 2026-07-06 07:51:21, 019ba852-407c-7120-887d-fd989a2e314d, 2026-01-10 15:32:01, 2026-01-10 15:32:01))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Ofelia, Streich, Toy Carter, corine11@example.net, 2026-01-10 15:32:01, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, Blk5TG7vrb, de, 0, 2026-09-21 03:39:47, 019ba852-4123-729b-8831-5bce9befdfe6, 2026-01-10 15:32:01, 2026-01-10 15:32:01))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Turner, Schaefer, Emmie Lueilwitz, bframi@example.net, 2026-01-10 15:32:01, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, AJC6RlGE53, en, 0, 2026-10-12 07:18:40, 019ba852-41d7-715d-a6bd-027be029cfc7, 2026-01-10 15:32:01, 2026-01-10 15:32:01))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Roman, Pollich, Kira Kutch, boris.graham@example.net, 2026-01-10 15:32:01, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, Ak1KijUfDj, en, 0, 2026-03-04 16:22:28, 019ba852-4287-72d1-bd6d-b4e0f641820f, 2026-01-10 15:32:01, 2026-01-10 15:32:01))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Loraine, Stiedemann, Vida Daniel, jaclyn.runte@example.org, 2026-01-10 15:32:02, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, iUF7X4HmuO, it, 0, ?, 019ba852-432e-704d-9859-8540ae42e8ff, 2026-01-10 15:32:02, 2026-01-10 15:32:02))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Martin, Oberbrunner, Cali Ferry V, alena95@example.net, 2026-01-10 15:32:02, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, mr32mNUaU8, en, 0, ?, 019ba852-43df-7260-82bc-8a08f5124526, 2026-01-10 15:32:02, 2026-01-10 15:32:02))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Faustino, Stamm, Ruth Stracke, lydia61@example.org, 2026-01-10 15:32:02, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 4LYw6tdZzm, de, 0, 2026-07-18 04:53:30, 019ba852-4482-72b7-9d84-52e8f163ed74, 2026-01-10 15:32:02, 2026-01-10 15:32:02))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Samara, Wunsch, Janessa Tromp, joana.marvin@example.org, 2026-01-10 15:32:02, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, zOjioNVohv, it, 0, ?, 019ba852-4531-704f-9386-29e4a17e54d5, 2026-01-10 15:32:02, 2026-01-10 15:32:02))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Charity, Zemlak, Emmalee Jacobson, florida70@example.org, 2026-01-10 15:32:02, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, hF7rnX9lTM, de, 0, 2026-04-13 05:01:17, 019ba852-45df-73b4-828e-b2b46fda8aaa, 2026-01-10 15:32:02, 2026-01-10 15:32:02))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Margarett, McCullough, Conor Crooks, bailey.moore@example.net, 2026-01-10 15:32:02, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, cjSsFuTKcL, en, 0, 2026-02-03 14:39:49, 019ba852-4696-721d-a4ea-720cb8702ee7, 2026-01-10 15:32:02, 2026-01-10 15:32:02))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Citlalli, Grant, Webster Osinski, antonette.conn@example.net, 2026-01-10 15:32:03, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, KOy4ExGTp8, it, 0, 2026-11-19 19:48:50, 019ba852-4750-72f6-a98d-f8df73f2c374, 2026-01-10 15:32:03, 2026-01-10 15:32:03))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Boris, Willms, Mr. Florian Torp V, achristiansen@example.net, 2026-01-10 15:32:03, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, gfr6cE4pvw, de, 0, 2026-05-24 23:05:59, 019ba852-4802-7173-8b0c-6d8e7d83280c, 2026-01-10 15:32:03, 2026-01-10 15:32:03))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Alena, Gaylord, Leda Hoppe, gbrown@example.net, 2026-01-10 15:32:03, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, HVHdYMKEr9, it, 0, 2026-03-31 00:40:02, 019ba852-48ac-73db-bb0d-6767acc4d55b, 2026-01-10 15:32:03, 2026-01-10 15:32:03))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Tony, Shields, Prof. Katlyn Walker, elsa.reichel@example.org, 2026-01-10 15:32:03, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, Zaw6Pnqfol, en, 0, 2026-08-17 11:04:27, 019ba852-496c-7023-8a82-2601bc94579c, 2026-01-10 15:32:03, 2026-01-10 15:32:03))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Marquise, Kunze, Ophelia Gleichner, hill.ramiro@example.net, 2026-01-10 15:32:03, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, xUuOMBYIpW, it, 0, ?, 019ba852-4a48-7111-9fea-9dbe3fef7e1a, 2026-01-10 15:32:03, 2026-01-10 15:32:03))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:17
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.teams' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `teams` (`name`, `personal_team`, `updated_at`, `created_at`) values (Studio Dentistico Milano 696262e41b6cd, 0, 2026-01-10 15:32:04, 2026-01-10 15:32:04))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+16 vendor frames [22m
+  17  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:22
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Alysson, Klocko, Harry Weimann, hkeebler@example.com, 2026-01-10 15:32:04, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, GysxwCv5lZ, it, 0, 2026-01-15 10:13:24, 019ba852-4c04-7123-8c07-b38afcdf8ed1, 2026-01-10 15:32:04, 2026-01-10 15:32:04))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:37
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Augustus, Lindgren, Ms. Antonina Graham DVM, dickens.lesly@example.net, 2026-01-10 15:32:04, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, t8cyytgWa8, en, 0, 2026-04-11 02:55:42, 019ba852-4ccd-73ed-b698-d5e3dd2e548f, 2026-01-10 15:32:04, 2026-01-10 15:32:04))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:59
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Amanda, Rau, Myrtle Dickinson, helmer93@example.com, 2026-01-10 15:32:04, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, mgVcE7DIoX, it, 0, 2026-12-28 17:34:02, 019ba852-4d78-71df-8fc1-22f3a7da9d3c, 2026-01-10 15:32:04, 2026-01-10 15:32:04))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:78
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Selmer, Champlin, Genoveva Greenfelder, owyman@example.net, 2026-01-10 15:32:04, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, siiSOptI41, de, 0, 2026-06-27 01:01:54, 019ba852-4e24-7335-8a8a-b9c9df057253, 2026-01-10 15:32:04, 2026-01-10 15:32:04))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:97
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Ashley, Gutkowski, Dusty Heller, dylan63@example.org, 2026-01-10 15:32:05, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, uLdz5MewTq, en, 0, 2026-08-26 10:27:26, 019ba852-4ed4-7049-a16e-b961fd32714a, 2026-01-10 15:32:05, 2026-01-10 15:32:05))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:119
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Lola, Bernhard, Taryn Gorczany, nakia.stark@example.org, 2026-01-10 15:32:05, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, E7b1qf99Y7, en, 0, ?, 019ba852-4f7f-73fe-ac46-e825bf2fbe86, 2026-01-10 15:32:05, 2026-01-10 15:32:05))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:136
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Verda, Conn, Jared Tromp, hwolf@example.org, 2026-01-10 15:32:05, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, C17c0LE4W5, en, 0, 2026-08-08 14:44:27, 019ba852-5056-71f6-8f56-ced07c3e3f18, 2026-01-10 15:32:05, 2026-01-10 15:32:05))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:169
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Laurine, Carroll, Tiara Hettinger, lue.pacocha@example.net, 2026-01-10 15:32:05, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, rTv3kwqPlX, en, 0, ?, 019ba852-510b-7131-90a2-dc62d42c04ba, 2026-01-10 15:32:05, 2026-01-10 15:32:05))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:199
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Woodrow, Harber, Keara Tremblay, hollie54@example.net, 2026-01-10 15:32:05, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, DGoIcafPFX, en, 0, 2026-09-25 04:55:07, 019ba852-51bd-7204-8f6c-e78245c25bf6, 2026-01-10 15:32:05, 2026-01-10 15:32:05))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:224
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Joelle, Walsh, Solon Collier, rcassin@example.org, 2026-01-10 15:32:05, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, a3z2eKEbOA, it, 0, ?, 019ba852-526e-73cb-94ff-7794ef26dba0, 2026-01-10 15:32:05, 2026-01-10 15:32:05))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:237
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Carlee, Walter, Dale Hodkiewicz, cgrant@example.org, 2026-01-10 15:32:06, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, udVtXkILqo, it, 0, ?, 019ba852-531f-7090-90a8-444eb681f5fc, 2026-01-10 15:32:06, 2026-01-10 15:32:06))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:258
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Bianka, Gutmann, Ana Deckow, aarmstrong@example.net, 2026-01-10 15:32:06, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, KMzNwECnP6, en, 0, 2026-04-11 00:45:14, 019ba852-53d8-71c2-bf1e-f68393874016, 2026-01-10 15:32:06, 2026-01-10 15:32:06))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:279
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Ian, Morissette, Bennie Connelly MD, madalyn.connelly@example.com, 2026-01-10 15:32:06, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 1OYJfEqN4f, de, 0, 2026-10-13 12:24:59, 019ba852-549f-7367-93ca-71b696ae8ae2, 2026-01-10 15:32:06, 2026-01-10 15:32:06))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+23 vendor frames [22m
+  24  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:302
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Stephanie, Dibbert, Dr. Mitchell Bauch IV, kristina97@example.com, 2026-01-10 15:32:06, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, fJraj8hlG9, it, 0, 2026-10-09 14:18:28, 019ba852-555d-710e-8d45-91e74fb6e497, 2026-01-10 15:32:06, 2026-01-10 15:32:06))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:312
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Watson, Fritsch, Leann Greenfelder, cleveland59@example.org, 2026-01-10 15:32:06, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, CuIhECXV2E, it, 0, 2026-10-17 11:32:24, 019ba852-5625-7275-abce-ef7397c275f2, 2026-01-10 15:32:06, 2026-01-10 15:32:06))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:329
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Victoria, Littel, Bernita Blick, davis.maybell@example.org, 2026-01-10 15:32:07, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 6yWXe7aFRu, de, 0, 2026-10-01 00:13:09, 019ba852-5714-72e7-a560-3071c5d32ced, 2026-01-10 15:32:07, 2026-01-10 15:32:07))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:356
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Kira, Cartwright, Melody Skiles, smith.waldo@example.net, 2026-01-10 15:32:07, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, IB6VriaVHx, it, 0, ?, 019ba852-581c-7349-b306-e2399585977a, 2026-01-10 15:32:07, 2026-01-10 15:32:07))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:388
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Dylan, Mertz, Dr. Loren Trantow, hbergnaum@example.com, 2026-01-10 15:32:07, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, EzgWibFahQ, it, 0, 2026-04-22 08:10:08, 019ba852-58d9-70f2-a917-0ba9cbfa9071, 2026-01-10 15:32:07, 2026-01-10 15:32:07))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:412
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Immanuel, Kuhlman, Mattie Wyman MD, fschneider@example.net, 2026-01-10 15:32:07, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, k0G9WO6cAt, en, 0, 2026-04-21 04:29:50, 019ba852-5984-70b9-b8f3-50a32303d69d, 2026-01-10 15:32:07, 2026-01-10 15:32:07))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:424
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_user_test.users' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Cooper, Stroman, Kaci Hill, kiara.koss@example.net, 2026-01-10 15:32:07, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, dabEiq7njD, it, 0, ?, 019ba852-5a35-7283-adb5-0178c414feea, 2026-01-10 15:32:07, 2026-01-10 15:32:07))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+22 vendor frames [22m
+  23  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:437
+
+
+  Tests:    51 failed (0 assertions)
+  Duration: 9.47s
+

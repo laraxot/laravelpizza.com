@@ -1,0 +1,977 @@
+
+   FAIL  Modules\User\tests\Feature\TeamManagementTest
+  ⨯ Team Creation and Management → it can create a team
+  ⨯ Team Creation and Management → it belongs to an owner
+  ⨯ Team Creation and Management → it can have multiple teams per user
+  ⨯ Team Creation and Management → it can update team information
+  ⨯ Team Creation and Management → it can delete a team
+  ⨯ Team Membership → it can add members to team
+  ⨯ Team Membership → it can remove members from team
+  ⨯ Team Membership → it can have multiple members
+  ⨯ Team Membership → it can check if user is team member
+  ⨯ Team Membership → it can get team membership with pivot data
+  ⨯ User Team Relationship → it user can belong to multiple teams
+  ⨯ User Team Relationship → it user can switch current team
+  ⨯ User Team Relationship → it user can leave a team
+  ⨯ User Team Relationship → it can get all team users for a user
+  ⨯ Team Invitations → it can validate team slug uniqueness
+  ⨯ Team Invitations → it can create team invitations
+  ⨯ Team Invitations → it can accept team invitations
+  ⨯ Team Invitations → it can cancel team invitations
+  ⨯ Team Invitations → it prevents duplicate invitations
+  ⨯ Team Permissions → it can have team-specific permissions
+  ⨯ Team Permissions → it can assign permissions to team members
+  ⨯ Team Permissions → it can check team member permissions
+  ⨯ Team Scopes and Queries → it can filter teams by owner
+  ⨯ Team Scopes and Queries → it can find teams by slug
+  ⨯ Team Scopes and Queries → it can get teams with member count
+  ⨯ Team Features → it can have team settings
+  ⨯ Team Features → it can have team avatar
+  ⨯ Team Features → it can check if team is full
+  ⨯ Team Events and Notifications → it can notify team members of changes
+  ⨯ Team Events and Notifications → it can log team activities
+
+   FAIL  Modules\User\tests\Feature\TeamManagementBusinessLogicTest
+  ⨯ it can create team
+  ⨯ it can add user to team
+  ⨯ it can remove user from team
+  ⨯ it can assign team role to user
+  ⨯ it can assign team permissions to user
+  ⨯ it can check user team permissions
+  ⨯ it can create team invitation
+  ⨯ it can accept team invitation
+  ⨯ it can decline team invitation
+  ⨯ it can check team user role
+  ⨯ it can get team members
+  ⨯ it can get team admins
+  ⨯ it can get team members by role
+  ⨯ it can check team is personal
+  ⨯ it can check team has user with permission
+  ⨯ it can get team invitations
+  ⨯ it can get pending team invitations
+  ⨯ it can get team statistics
+  ⨯ it can handle team soft delete
+  ⨯ it can restore soft deleted team
+  ⨯ it can force delete team
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+  ───────────────────  
+   FA…  PDOException   
+  SQLSTATE[HY000] [1049] Unknown database ':memory:'
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:66
+     62▕      */
+     63▕     protected function createPdoConnection($dsn, $username, #[\SensitiveParameter] $password, $options)
+     64▕     {
+     65▕         return version_compare(PHP_VERSION, '8.4.0', '<')
+  ➜  66▕             ? new PDO($dsn, $username, $password, $options)
+     67▕             : PDO::connect($dsn, $username, $password, $options); /** @phpstan-ignore staticMethod.notFound (PHP 8.4) */
+     68▕     }
+     69▕ 
+     70▕     /**
+
+      [2m+8 vendor frames [22m
+  9   Modules/User/tests/TestCase.php:46
+
+
+  Tests:    51 failed (0 assertions)
+  Duration: 9.83s
+

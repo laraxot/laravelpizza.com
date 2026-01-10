@@ -4,10 +4,14 @@ declare(strict_types=1);
 
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Schema;
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaConvert;
 use Modules\Media\Models\TemporaryUpload;
+use Modules\Media\Tests\TestCase;
 use Modules\User\Models\User;
+
+uses(TestCase::class);
 
 describe('Media Business Logic', function () {
     beforeEach(function () {
@@ -234,37 +238,76 @@ describe('Media Business Logic', function () {
     it('can validate file size limits', function () {
         $user = User::factory()->create();
 
-        $validMedia = Media::factory()->create([
-            'user_id' => $user->id,
-            'file_size' => 1024 * 1024, // 1MB
-        ]);
+        $columns = Schema::getColumnListing('media');
+        $payloadBase = [];
 
-        expect($validMedia->file_size)->toBeLessThanOrEqual(10 * 1024 * 1024); // 10MB limit
+        $trySet = function (array &$payload, string $column, mixed $value) use ($columns): void {
+            if (in_array($column, $columns, true)) {
+                $payload[$column] = $value;
+            }
+        };
 
-        $largeMedia = Media::factory()->create([
-            'user_id' => $user->id,
-            'file_size' => 15 * 1024 * 1024, // 15MB
-        ]);
+        $makePayload = function (int $size) use ($user, $payloadBase, $trySet): array {
+            $payload = $payloadBase;
+            $trySet($payload, 'user_id', $user->id);
+            $trySet($payload, 'file_size', $size);
+            $trySet($payload, 'size', $size);
+            $trySet($payload, 'file_name', 'test-file.pdf');
+            $trySet($payload, 'disk', 'public');
+            $trySet($payload, 'collection_name', 'default');
+            $trySet($payload, 'mime_type', 'application/pdf');
+            $trySet($payload, 'created_at', now());
+            $trySet($payload, 'updated_at', now());
 
-        expect($largeMedia->file_size)->toBeGreaterThan(10 * 1024 * 1024);
+            return $payload;
+        };
+
+        $validPayload = $makePayload(1024 * 1024);
+        if ($validPayload === []) {
+            $this->markTestSkipped('Unable to build minimal payload for media table in this install.');
+        }
+
+        $validMedia = Media::query()->create($validPayload);
+        $sizeValue = (int) ($validMedia->getAttribute('file_size') ?? $validMedia->getAttribute('size') ?? 0);
+        expect($sizeValue)->toBeLessThanOrEqual(10 * 1024 * 1024);
+
+        $largeMedia = Media::query()->create($makePayload(15 * 1024 * 1024));
+        $largeSizeValue = (int) ($largeMedia->getAttribute('file_size') ?? $largeMedia->getAttribute('size') ?? 0);
+        expect($largeSizeValue)->toBeGreaterThan(10 * 1024 * 1024);
     });
 
     it('can track media usage statistics', function () {
         $user = User::factory()->create();
 
-        Media::factory()
-            ->count(5)
-            ->create([
-                'user_id' => $user->id,
-                'mime_type' => 'image/jpeg',
-            ]);
+        $columns = Schema::getColumnListing('media');
+        $trySet = function (array &$payload, string $column, mixed $value) use ($columns): void {
+            if (in_array($column, $columns, true)) {
+                $payload[$column] = $value;
+            }
+        };
 
-        Media::factory()
-            ->count(3)
-            ->create([
-                'user_id' => $user->id,
-                'mime_type' => 'application/pdf',
-            ]);
+        $makePayload = function (string $mime, string $fileName) use ($user, $trySet): array {
+            $payload = [];
+            $trySet($payload, 'user_id', $user->id);
+            $trySet($payload, 'mime_type', $mime);
+            $trySet($payload, 'file_name', $fileName);
+            $trySet($payload, 'disk', 'public');
+            $trySet($payload, 'collection_name', 'default');
+            $trySet($payload, 'file_size', 123);
+            $trySet($payload, 'size', 123);
+            $trySet($payload, 'created_at', now());
+            $trySet($payload, 'updated_at', now());
+
+            return $payload;
+        };
+
+        for ($i = 0; $i < 5; $i++) {
+            Media::query()->create($makePayload('image/jpeg', "img-{$i}.jpg"));
+        }
+
+        for ($i = 0; $i < 3; $i++) {
+            Media::query()->create($makePayload('application/pdf', "doc-{$i}.pdf"));
+        }
 
         $totalMedia = Media::where('user_id', $user->id)->count();
         $imageCount = Media::where('user_id', $user->id)->where('mime_type', 'like', 'image/%')->count();

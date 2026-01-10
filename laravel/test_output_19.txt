@@ -1,0 +1,226 @@
+
+   FAIL  Modules\User\tests\Feature\TeamManagementTest
+  ✓ Team Creat… 0.40s  
+  ✓ Team Creat… 0.16s  
+  ✓ Team Creat… 0.17s  
+  ✓ Team Creat… 0.17s  
+  ✓ Team Creat… 0.16s  
+  ✓ Team Membe… 0.17s  
+  ✓ Team Membe… 0.16s  
+  ✓ Team Membe… 0.17s  
+  ✓ Team Membe… 0.18s  
+  ✓ Team Membe… 0.17s  
+  ✓ User Team…  0.16s  
+  ✓ User Team…  0.16s  
+  ✓ User Team…  0.18s  
+  ⨯ User Team…  0.18s  
+  ✓ Team Invit… 0.17s  
+  ✓ Team Invit… 0.17s  
+  ✓ Team Invit… 0.18s  
+  ✓ Team Invit… 0.17s  
+  ✓ Team Invit… 0.16s  
+  ✓ Team Permi… 0.16s  
+  ✓ Team Permi… 0.22s  
+  ✓ Team Permi… 0.18s  
+  ✓ Team Scope… 0.17s  
+  ✓ Team Scope… 0.18s  
+  ✓ Team Scope… 0.24s  
+  ✓ Team Featu… 0.20s  
+  ✓ Team Featu… 0.20s  
+  ✓ Team Featu… 0.23s  
+  ✓ Team Event… 0.20s  
+  ✓ Team Event… 0.19s  
+
+   FAIL  Modules\User\tests\Feature\TeamManagementBusinessLogicTest
+  ✓ it can cre… 0.19s  
+  ✓ it can add… 0.17s  
+  ✓ it can rem… 0.17s  
+  ✓ it can ass… 0.18s  
+  ✓ it can ass… 0.16s  
+  ✓ it can che… 0.17s  
+  ✓ it can cre… 0.17s  
+  ✓ it can acc… 0.17s  
+  ✓ it can dec… 0.17s  
+  ✓ it can che… 0.22s  
+  ✓ it can get… 0.18s  
+  ✓ it can get… 0.19s  
+  ✓ it can get… 0.19s  
+  ✓ it can che… 0.16s  
+  ✓ it can che… 0.17s  
+  ✓ it can get… 0.18s  
+  ✓ it can get… 0.16s  
+  ✓ it can get… 0.17s  
+  ⨯ it can han… 0.18s  
+  ⨯ it can res… 0.21s  
+  ✓ it can for… 0.17s  
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that false is true.
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:165
+    161▕ 
+    162▕         $allTeamUsers = $this->member->allTeamUsers();
+    163▕ 
+    164▕         // Check by IDs for safety
+  ➜ 165▕         expect($allTeamUsers->contains($teammate1))->toBeTrue();
+    166▕         expect($allTeamUsers->contains($teammate2))->toBeTrue();
+    167▕         // Self might be excluded
+    168▕         expect($allTeamUsers->contains($this->member))->toBeFalse();
+    169▕     });
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:165
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that any soft deleted row in the table [teams] matches the attributes {"id":181}.
+
+Found: [
+    {
+        "id": 1,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": "019ba84c-69ca-701a-a765-f73bd21e45a5",
+        "name": "Test Team",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 15:25:38",
+        "updated_at": "2026-01-10 15:25:38",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null,
+        "slug": null,
+        "description": null,
+        "avatar_path": null,
+        "settings": null
+    },
+    {
+        "id": 2,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": "019ba84c-69ca-701a-a765-f73bd21e45a5",
+        "name": "Marketing Team",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 15:25:38",
+        "updated_at": "2026-01-10 15:25:38",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null,
+        "slug": null,
+        "description": null,
+        "avatar_path": null,
+        "settings": null
+    },
+    {
+        "id": 3,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": "019ba84c-69ca-701a-a765-f73bd21e45a5",
+        "name": "Supporto Clienti Team",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 15:25:38",
+        "updated_at": "2026-01-10 15:25:38",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null,
+        "slug": null,
+        "description": null,
+        "avatar_path": null,
+        "settings": null
+    }
+] and 59 others.
+
+  at Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:418
+    414▕     // Act
+    415▕     $team->delete();
+    416▕ 
+    417▕     // Assert
+  ➜ 418▕     $this->assertSoftDeleted('teams', ['id' => $team->id]);
+    419▕     $this->assertDatabaseHas('teams', ['id' => $team->id]);
+    420▕ });
+    421▕ 
+    422▕ it('can restore soft deleted team', function (): void {
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that any existing row in the table [teams] matches the attributes {"id":182}.
+
+Found: [
+    {
+        "id": 1,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": "019ba84c-69ca-701a-a765-f73bd21e45a5",
+        "name": "Test Team",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 15:25:38",
+        "updated_at": "2026-01-10 15:25:38",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null,
+        "slug": null,
+        "description": null,
+        "avatar_path": null,
+        "settings": null
+    },
+    {
+        "id": 2,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": "019ba84c-69ca-701a-a765-f73bd21e45a5",
+        "name": "Marketing Team",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 15:25:38",
+        "updated_at": "2026-01-10 15:25:38",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null,
+        "slug": null,
+        "description": null,
+        "avatar_path": null,
+        "settings": null
+    },
+    {
+        "id": 3,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": "019ba84c-69ca-701a-a765-f73bd21e45a5",
+        "name": "Supporto Clienti Team",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 15:25:38",
+        "updated_at": "2026-01-10 15:25:38",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null,
+        "slug": null,
+        "description": null,
+        "avatar_path": null,
+        "settings": null
+    }
+] and 59 others.
+
+  at Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:431
+    427▕     // Act
+    428▕     $team->restore();
+    429▕ 
+    430▕     // Assert
+  ➜ 431▕     $this->assertNotSoftDeleted('teams', ['id' => $team->id]);
+    432▕     $this->assertDatabaseHas('teams', ['id' => $team->id]);
+    433▕ });
+    434▕ 
+    435▕ it('can force delete team', function (): void {
+
+
+  Tests:    3 failed, 48 passed (107 assertions)
+  Duration: 9.39s
+

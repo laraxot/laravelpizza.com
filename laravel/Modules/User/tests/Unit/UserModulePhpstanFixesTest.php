@@ -104,12 +104,12 @@ it('password data get form components returns array', function (): void {
 
 it('events can be instantiated', function (): void {
     $userFactory = User::factory();
-    \assert($userFactory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    \assert($userFactory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $owner = $userFactory->create();
     \assert($owner instanceof User);
 
     $socialiteFactory = SocialiteUser::factory();
-    \assert($socialiteFactory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    \assert($socialiteFactory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $socialiteUser = $socialiteFactory->create();
     \assert($socialiteUser instanceof SocialiteUser);
 
@@ -126,12 +126,12 @@ it('events can be instantiated', function (): void {
 
 it('events have dispatchable trait', function (): void {
     $userFactory = User::factory();
-    \assert($userFactory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    \assert($userFactory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $owner = $userFactory->create();
     \assert($owner instanceof User);
 
     $socialiteFactory = SocialiteUser::factory();
-    \assert($socialiteFactory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    \assert($socialiteFactory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $socialiteUser = $socialiteFactory->create();
     \assert($socialiteUser instanceof SocialiteUser);
 

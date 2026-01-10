@@ -1,0 +1,845 @@
+
+   FAIL  Modules\User\tests\Feature\TeamManagementTest
+  ⨯ Team Creation and Management → it can create a team
+  ✓ Team Creation and Management → it belongs to an owner                                                                                                                                                                                                                                                                        5.01s  
+  ✓ Team Creation and Management → it can have multiple teams per user                                                                                                                                                                                                                                                           0.18s  
+  ✓ Team Creation and Management → it can update team information                                                                                                                                                                                                                                                                0.18s  
+  ✓ Team Creation and Management → it can delete a team                                                                                                                                                                                                                                                                          0.20s  
+  ⨯ Team Membership → it can add members to team                                                                                                                                                                                                                                                                                 0.21s  
+  ⨯ Team Membership → it can remove members from team                                                                                                                                                                                                                                                                            0.20s  
+  ✓ Team Membership → it can have multiple members                                                                                                                                                                                                                                                                               0.23s  
+  ⨯ Team Membership → it can check if user is team member                                                                                                                                                                                                                                                                        0.29s  
+  ⨯ Team Membership → it can get team membership with pivot data                                                                                                                                                                                                                                                                 0.29s  
+  ✓ User Team Relationship → it user can belong to multiple teams                                                                                                                                                                                                                                                                0.25s  
+  ✓ User Team Relationship → it user can switch current team                                                                                                                                                                                                                                                                     0.22s  
+  ⨯ User Team Relationship → it user can leave a team                                                                                                                                                                                                                                                                            0.19s  
+  ⨯ User Team Relationship → it can get all team users for a user                                                                                                                                                                                                                                                                0.21s  
+  ⨯ Team Invitations → it can validate team slug uniqueness                                                                                                                                                                                                                                                                      0.20s  
+  ✓ Team Invitations → it can create team invitations                                                                                                                                                                                                                                                                            0.21s  
+  ⨯ Team Invitations → it can accept team invitations                                                                                                                                                                                                                                                                            0.21s  
+  ✓ Team Invitations → it can cancel team invitations                                                                                                                                                                                                                                                                            0.22s  
+  ✓ Team Invitations → it prevents duplicate invitations                                                                                                                                                                                                                                                                         0.21s  
+  ⨯ Team Permissions → it can have team-specific permissions                                                                                                                                                                                                                                                                     0.20s  
+  ✓ Team Permissions → it can assign permissions to team members                                                                                                                                                                                                                                                                 0.20s  
+  ⨯ Team Permissions → it can check team member permissions                                                                                                                                                                                                                                                                      0.19s  
+  ✓ Team Scopes and Queries → it can filter teams by owner                                                                                                                                                                                                                                                                       0.21s  
+  ✓ Team Scopes and Queries → it can find teams by slug                                                                                                                                                                                                                                                                          0.19s  
+  ✓ Team Scopes and Queries → it can get teams with member count                                                                                                                                                                                                                                                                 0.20s  
+  ⨯ Team Features → it can have team settings                                                                                                                                                                                                                                                                                    0.17s  
+  ⨯ Team Features → it can have team avatar                                                                                                                                                                                                                                                                                      0.22s  
+  ! Team Features → it can check if team is full → This test did not perform any assertions                                                                                                                                                                                                                                      0.22s  
+  ✓ Team Events and Notifications → it can notify team members of changes                                                                                                                                                                                                                                                        0.18s  
+  ⨯ Team Events and Notifications → it can log team activities                                                                                                                                                                                                                                                                   0.19s  
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Creation and Management` → it can create a team                                                                                                                                                                                                       QueryException   
+  SQLSTATE[HY000]: General error: 1824 Failed to open the referenced table 'mail_templates' (Connection: notify, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: alter table `mail_template_versions` add constraint `mail_template_versions_mail_template_id_foreign` foreign key (`mail_template_id`) references `mail_templates` (`id`) on delete cascade)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:577
+    573▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    574▕ 
+    575▕             $this->recordsHaveBeenModified();
+    576▕ 
+  ➜ 577▕             return $statement->execute();
+    578▕         });
+    579▕     }
+    580▕ 
+    581▕     /**
+
+      [2m+7 vendor frames [22m
+  8   Modules/Xot/app/Database/Migrations/XotBaseMigration.php:245
+  9   Modules/Notify/database/migrations/2024_04_20_000001_create_mail_template_versions_table.php:12
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Membership` → it can add members to team                                                                                                                                                                                                                               
+  Failed asserting that a traversable contains Modules\User\Models\User Object #15798 (
+    'connection' => 'user',
+    'table' => null,
+    'primaryKey' => 'id',
+    'keyType' => 'string',
+    'incrementing' => false,
+    'with' => Array &0 [],
+    'withCount' => Array &1 [],
+    'preventsLazyLoading' => false,
+    'perPage' => 15,
+    'exists' => true,
+    'wasRecentlyCreated' => true,
+    'escapeWhenCastingToString' => false,
+    'attributes' => Array &2 [
+        'is_active' => true,
+        'first_name' => 'Sherman',
+        'last_name' => 'Johns',
+        'name' => 'Mallie Wunsch',
+        'email' => 'fritz43@example.org',
+        'email_verified_at' => '2026-01-10 15:24:27',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'SPR0hawJTy',
+        'lang' => 'en',
+        'is_otp' => false,
+        'password_expires_at' => '2026-07-29 21:47:25',
+        'id' => '019ba84b-5512-721c-9c10-9c7de417a240',
+        'updated_at' => '2026-01-10 15:24:27',
+        'created_at' => '2026-01-10 15:24:27',
+    ],
+    'original' => Array &3 [
+        'is_active' => true,
+        'first_name' => 'Sherman',
+        'last_name' => 'Johns',
+        'name' => 'Mallie Wunsch',
+        'email' => 'fritz43@example.org',
+        'email_verified_at' => '2026-01-10 15:24:27',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'SPR0hawJTy',
+        'lang' => 'en',
+        'is_otp' => false,
+        'password_expires_at' => '2026-07-29 21:47:25',
+        'id' => '019ba84b-5512-721c-9c10-9c7de417a240',
+        'updated_at' => '2026-01-10 15:24:27',
+        'created_at' => '2026-01-10 15:24:27',
+    ],
+    'changes' => Array &4 [],
+    'previous' => Array &5 [],
+    'casts' => Array &6 [
+        'id' => 'string',
+        'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
+        'roles.pivot.id' => 'string',
+        'is_otp' => 'boolean',
+        'password_expires_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'deleted_by' => 'string',
+    ],
+    'classCastCache' => Array &7 [],
+    'attributeCastCache' => Array &8 [],
+    'dateFormat' => null,
+    'appends' => Array &9 [],
+    'dispatchesEvents' => Array &10 [],
+    'observables' => Array &11 [],
+    'relations' => Array &12 [],
+    'touches' => Array &13 [],
+    'relationAutoloadCallback' => null,
+    'relationAutoloadContext' => null,
+    'timestamps' => true,
+    'usesUniqueIds' => true,
+    'hidden' => Array &14 [
+        0 => 'password',
+        1 => 'remember_token',
+        2 => 'two_factor_recovery_codes',
+        3 => 'two_factor_secret',
+    ],
+    'visible' => Array &15 [],
+    'fillable' => Array &16 [
+        0 => 'id',
+        1 => 'name',
+        2 => 'first_name',
+        3 => 'last_name',
+        4 => 'email',
+        5 => 'password',
+        6 => 'lang',
+        7 => 'current_team_id',
+        8 => 'is_active',
+        9 => 'is_otp',
+        10 => 'password_expires_at',
+        11 => 'type',
+        12 => 'id',
+        13 => 'name',
+        14 => 'first_name',
+        15 => 'last_name',
+        16 => 'email',
+        17 => 'password',
+        18 => 'lang',
+        19 => 'current_team_id',
+        20 => 'is_active',
+        21 => 'is_otp',
+        22 => 'password_expires_at',
+        23 => 'type',
+    ],
+    'guarded' => Array &17 [
+        0 => '*',
+    ],
+    'authPasswordName' => 'password',
+    'rememberTokenName' => 'remember_token',
+    'pivot' => null,
+    'childColumn' => 'type',
+    'childTypes' => Array &18 [
+        'master_admin' => 'Modules\User\Models\User',
+        'backoffice_user' => 'Modules\User\Models\User',
+        'customer_user' => 'Modules\User\Models\User',
+        'system' => 'Modules\User\Models\User',
+        'technician' => 'Modules\User\Models\User',
+    ],
+    'guard_name' => 'web',
+    'accessToken' => null,
+    'hasChildren' => true,
+    'mediaConversions' => Array &19 [],
+    'mediaCollections' => Array &20 [],
+    'deletePreservingMedia' => false,
+    'unAttachedMediaLibraryItems' => Array &21 [],
+    'permissionClass' => null,
+    'wildcardClass' => null,
+    'roleClass' => null,
+    'forceDeleting' => false,
+).
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:78
+     74▕ describe('Team Membership', function () {
+     75▕     it('can add members to team', function () {
+     76▕         $this->team->users()->attach($this->member);
+     77▕ 
+  ➜  78▕         expect($this->team->users)->toContain($this->member);
+     79▕         expect($this->member->teams)->toContain($this->team);
+     80▕     });
+     81▕ 
+     82▕     it('can remove members from team', function () {
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:78
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Membership` → it can remove members from team                                                                                                                                                                                                                          
+  Failed asserting that a traversable contains Modules\User\Models\User Object #16566 (
+    'connection' => 'user',
+    'table' => null,
+    'primaryKey' => 'id',
+    'keyType' => 'string',
+    'incrementing' => false,
+    'with' => Array &0 [],
+    'withCount' => Array &1 [],
+    'preventsLazyLoading' => false,
+    'perPage' => 15,
+    'exists' => true,
+    'wasRecentlyCreated' => true,
+    'escapeWhenCastingToString' => false,
+    'attributes' => Array &2 [
+        'is_active' => true,
+        'first_name' => 'Morris',
+        'last_name' => 'Bashirian',
+        'name' => 'Ms. Yazmin Kautzer V',
+        'email' => 'kovacek.darrin@example.com',
+        'email_verified_at' => '2026-01-10 15:24:28',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'shYro2lq6K',
+        'lang' => 'it',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba84b-55df-715d-99ca-d0103826f418',
+        'updated_at' => '2026-01-10 15:24:28',
+        'created_at' => '2026-01-10 15:24:28',
+    ],
+    'original' => Array &3 [
+        'is_active' => true,
+        'first_name' => 'Morris',
+        'last_name' => 'Bashirian',
+        'name' => 'Ms. Yazmin Kautzer V',
+        'email' => 'kovacek.darrin@example.com',
+        'email_verified_at' => '2026-01-10 15:24:28',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'shYro2lq6K',
+        'lang' => 'it',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba84b-55df-715d-99ca-d0103826f418',
+        'updated_at' => '2026-01-10 15:24:28',
+        'created_at' => '2026-01-10 15:24:28',
+    ],
+    'changes' => Array &4 [],
+    'previous' => Array &5 [],
+    'casts' => Array &6 [
+        'id' => 'string',
+        'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
+        'roles.pivot.id' => 'string',
+        'is_otp' => 'boolean',
+        'password_expires_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'deleted_by' => 'string',
+    ],
+    'classCastCache' => Array &7 [],
+    'attributeCastCache' => Array &8 [],
+    'dateFormat' => null,
+    'appends' => Array &9 [],
+    'dispatchesEvents' => Array &10 [],
+    'observables' => Array &11 [],
+    'relations' => Array &12 [],
+    'touches' => Array &13 [],
+    'relationAutoloadCallback' => null,
+    'relationAutoloadContext' => null,
+    'timestamps' => true,
+    'usesUniqueIds' => true,
+    'hidden' => Array &14 [
+        0 => 'password',
+        1 => 'remember_token',
+        2 => 'two_factor_recovery_codes',
+        3 => 'two_factor_secret',
+    ],
+    'visible' => Array &15 [],
+    'fillable' => Array &16 [
+        0 => 'id',
+        1 => 'name',
+        2 => 'first_name',
+        3 => 'last_name',
+        4 => 'email',
+        5 => 'password',
+        6 => 'lang',
+        7 => 'current_team_id',
+        8 => 'is_active',
+        9 => 'is_otp',
+        10 => 'password_expires_at',
+        11 => 'type',
+        12 => 'id',
+        13 => 'name',
+        14 => 'first_name',
+        15 => 'last_name',
+        16 => 'email',
+        17 => 'password',
+        18 => 'lang',
+        19 => 'current_team_id',
+        20 => 'is_active',
+        21 => 'is_otp',
+        22 => 'password_expires_at',
+        23 => 'type',
+    ],
+    'guarded' => Array &17 [
+        0 => '*',
+    ],
+    'authPasswordName' => 'password',
+    'rememberTokenName' => 'remember_token',
+    'pivot' => null,
+    'childColumn' => 'type',
+    'childTypes' => Array &18 [
+        'master_admin' => 'Modules\User\Models\User',
+        'backoffice_user' => 'Modules\User\Models\User',
+        'customer_user' => 'Modules\User\Models\User',
+        'system' => 'Modules\User\Models\User',
+        'technician' => 'Modules\User\Models\User',
+    ],
+    'guard_name' => 'web',
+    'accessToken' => null,
+    'hasChildren' => true,
+    'mediaConversions' => Array &19 [],
+    'mediaCollections' => Array &20 [],
+    'deletePreservingMedia' => false,
+    'unAttachedMediaLibraryItems' => Array &21 [],
+    'permissionClass' => null,
+    'wildcardClass' => null,
+    'roleClass' => null,
+    'forceDeleting' => false,
+).
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:84
+     80▕     });
+     81▕ 
+     82▕     it('can remove members from team', function () {
+     83▕         $this->team->users()->attach($this->member);
+  ➜  84▕         expect($this->team->users)->toContain($this->member);
+     85▕ 
+     86▕         $this->team->users()->detach($this->member);
+     87▕         expect($this->team->fresh()->users)->not->toContain($this->member);
+     88▕     });
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:84
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Membership` → it can check if user is team member                                                                                                                                                                                                                      
+  Failed asserting that true is identical to false.
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:104
+    100▕     it('can check if user is team member', function () {
+    101▕         $this->team->users()->attach($this->member);
+    102▕ 
+    103▕         expect($this->team->hasUser($this->member))->toBe(true);
+  ➜ 104▕         expect($this->team->hasUser($this->owner))->toBe(false); // Owner is not a member, they own the team
+    105▕     });
+    106▕ 
+    107▕     it('can get team membership with pivot data', function () {
+    108▕         $this->team->users()->attach($this->member, [
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:104
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Membership` → it can get team membership with pivot data                                                                                                                                                                                              ErrorException   
+  Attempt to read property "role" on null
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:119
+    115▕             ->where('user_id', $this->member->id)
+    116▕             ->first()
+    117▕             ->pivot;
+    118▕ 
+  ➜ 119▕         expect($membership->role)->toBe('editor');
+    120▕         expect($membership->joined_at)->not->toBeNull();
+    121▕     });
+    122▕ });
+    123▕
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `User Team Relationship` → it user can leave a team                                                                                                                                                                                                                          
+  Failed asserting that a traversable contains Modules\User\Models\Team Object #4886 (
+    'connection' => 'user',
+    'table' => null,
+    'primaryKey' => 'id',
+    'keyType' => 'int',
+    'incrementing' => true,
+    'with' => Array &0 [],
+    'withCount' => Array &1 [],
+    'preventsLazyLoading' => false,
+    'perPage' => 30,
+    'exists' => true,
+    'wasRecentlyCreated' => true,
+    'escapeWhenCastingToString' => false,
+    'attributes' => Array &2 [
+        'name' => 'Test Team',
+        'user_id' => '019ba84b-5b8c-700c-b391-b88159c80f23',
+        'personal_team' => false,
+        'updated_at' => '2026-01-10 15:24:29',
+        'created_at' => '2026-01-10 15:24:29',
+        'id' => 16,
+    ],
+    'original' => Array &3 [
+        'name' => 'Test Team',
+        'user_id' => '019ba84b-5b8c-700c-b391-b88159c80f23',
+        'personal_team' => false,
+        'updated_at' => '2026-01-10 15:24:29',
+        'created_at' => '2026-01-10 15:24:29',
+        'id' => 16,
+    ],
+    'changes' => Array &4 [],
+    'previous' => Array &5 [],
+    'casts' => Array &6 [
+        'id' => 'integer',
+        'user_id' => 'string',
+        'personal_team' => 'boolean',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+    ],
+    'classCastCache' => Array &7 [],
+    'attributeCastCache' => Array &8 [],
+    'dateFormat' => null,
+    'appends' => Array &9 [],
+    'dispatchesEvents' => Array &10 [],
+    'observables' => Array &11 [],
+    'relations' => Array &12 [],
+    'touches' => Array &13 [],
+    'relationAutoloadCallback' => null,
+    'relationAutoloadContext' => null,
+    'timestamps' => true,
+    'usesUniqueIds' => false,
+    'hidden' => Array &14 [],
+    'visible' => Array &15 [],
+    'fillable' => Array &16 [
+        0 => 'uuid',
+        1 => 'user_id',
+        2 => 'name',
+        3 => 'personal_team',
+    ],
+    'guarded' => Array &17 [
+        0 => '*',
+    ],
+    'forceDeleting' => false,
+).
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:144
+    140▕     });
+    141▕ 
+    142▕     it('user can leave a team', function () {
+    143▕         $this->member->teams()->attach($this->team);
+  ➜ 144▕         expect($this->member->teams)->toContain($this->team);
+    145▕ 
+    146▕         $this->member->teams()->detach($this->team);
+    147▕         expect($this->member->fresh()->teams)->not->toContain($this->team);
+    148▕     });
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:144
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `User Team Relationship` → it can get all team users for a user                                                                                                                                                                         UniqueConstraintViolationException   
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '17-019ba84b-5c4e-7036-928e-c0f1fd62cee7' for key 'team_user.team_user_team_id_user_id_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `team_user` (`team_id`, `user_id`) values (17, 019ba84b-5c4e-7036-928e-c0f1fd62cee7))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+     52▕ 
+  ➜  53▕             $result = $statement->execute();
+     54▕ 
+     55▕             $this->lastInsertId = $this->getPdo()->lastInsertId($sequence);
+     56▕ 
+     57▕             return $result;
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:155
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Invitations` → it can validate team slug uniqueness                                                                                                                                                                                                                    
+  Failed asserting that exception of type "Illuminate\Database\QueryException" is thrown.
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Invitations` → it can accept team invitations                                                                                                                                                                                                                          
+  Failed asserting that a traversable contains Modules\User\Models\User Object #11981 (
+    'connection' => 'user',
+    'table' => null,
+    'primaryKey' => 'id',
+    'keyType' => 'string',
+    'incrementing' => false,
+    'with' => Array &0 [],
+    'withCount' => Array &1 [],
+    'preventsLazyLoading' => false,
+    'perPage' => 15,
+    'exists' => true,
+    'wasRecentlyCreated' => true,
+    'escapeWhenCastingToString' => false,
+    'attributes' => Array &2 [
+        'is_active' => true,
+        'first_name' => 'Wayne',
+        'last_name' => 'Waters',
+        'name' => 'Mr. Peyton Hayes',
+        'email' => 'berge.orpha@example.net',
+        'email_verified_at' => '2026-01-10 15:24:30',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'gzTQwkHAfY',
+        'lang' => 'en',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba84b-5eca-7012-b4d1-d85f4dbff943',
+        'updated_at' => '2026-01-10 15:24:30',
+        'created_at' => '2026-01-10 15:24:30',
+    ],
+    'original' => Array &3 [
+        'is_active' => true,
+        'first_name' => 'Wayne',
+        'last_name' => 'Waters',
+        'name' => 'Mr. Peyton Hayes',
+        'email' => 'berge.orpha@example.net',
+        'email_verified_at' => '2026-01-10 15:24:30',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'gzTQwkHAfY',
+        'lang' => 'en',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba84b-5eca-7012-b4d1-d85f4dbff943',
+        'updated_at' => '2026-01-10 15:24:30',
+        'created_at' => '2026-01-10 15:24:30',
+    ],
+    'changes' => Array &4 [],
+    'previous' => Array &5 [],
+    'casts' => Array &6 [
+        'id' => 'string',
+        'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
+        'roles.pivot.id' => 'string',
+        'is_otp' => 'boolean',
+        'password_expires_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'deleted_by' => 'string',
+    ],
+    'classCastCache' => Array &7 [],
+    'attributeCastCache' => Array &8 [],
+    'dateFormat' => null,
+    'appends' => Array &9 [],
+    'dispatchesEvents' => Array &10 [],
+    'observables' => Array &11 [],
+    'relations' => Array &12 [],
+    'touches' => Array &13 [],
+    'relationAutoloadCallback' => null,
+    'relationAutoloadContext' => null,
+    'timestamps' => true,
+    'usesUniqueIds' => true,
+    'hidden' => Array &14 [
+        0 => 'password',
+        1 => 'remember_token',
+        2 => 'two_factor_recovery_codes',
+        3 => 'two_factor_secret',
+    ],
+    'visible' => Array &15 [],
+    'fillable' => Array &16 [
+        0 => 'id',
+        1 => 'name',
+        2 => 'first_name',
+        3 => 'last_name',
+        4 => 'email',
+        5 => 'password',
+        6 => 'lang',
+        7 => 'current_team_id',
+        8 => 'is_active',
+        9 => 'is_otp',
+        10 => 'password_expires_at',
+        11 => 'type',
+        12 => 'id',
+        13 => 'name',
+        14 => 'first_name',
+        15 => 'last_name',
+        16 => 'email',
+        17 => 'password',
+        18 => 'lang',
+        19 => 'current_team_id',
+        20 => 'is_active',
+        21 => 'is_otp',
+        22 => 'password_expires_at',
+        23 => 'type',
+    ],
+    'guarded' => Array &17 [
+        0 => '*',
+    ],
+    'authPasswordName' => 'password',
+    'rememberTokenName' => 'remember_token',
+    'pivot' => null,
+    'childColumn' => 'type',
+    'childTypes' => Array &18 [
+        'master_admin' => 'Modules\User\Models\User',
+        'backoffice_user' => 'Modules\User\Models\User',
+        'customer_user' => 'Modules\User\Models\User',
+        'system' => 'Modules\User\Models\User',
+        'technician' => 'Modules\User\Models\User',
+    ],
+    'guard_name' => 'web',
+    'accessToken' => null,
+    'hasChildren' => true,
+    'mediaConversions' => Array &19 [],
+    'mediaCollections' => Array &20 [],
+    'deletePreservingMedia' => false,
+    'unAttachedMediaLibraryItems' => Array &21 [],
+    'permissionClass' => null,
+    'wildcardClass' => null,
+    'roleClass' => null,
+    'forceDeleting' => false,
+).
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:207
+    203▕         // Simulate accepting invitation
+    204▕         $this->team->users()->attach($this->member, ['role' => $invitation->role]);
+    205▕         $invitation->delete();
+    206▕ 
+  ➜ 207▕         expect($this->team->users)->toContain($this->member);
+    208▕         expect(TeamInvitation::find($invitation->id))->toBeNull();
+    209▕     });
+    210▕ 
+    211▕     it('can cancel team invitations', function () {
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:207
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Permissions` → it can have team-specific permissions                                                                                                                                                                                          BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::permissions()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementTest.php:241
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Permissions` → it can check team member permissions                                                                                                                                                                                                   ErrorException   
+  Attempt to read property "role" on null
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:266
+    262▕             ->where('user_id', $this->member->id)
+    263▕             ->first()
+    264▕             ->pivot;
+    265▕ 
+  ➜ 266▕         expect($membership->role)->toBe('admin');
+    267▕     });
+    268▕ });
+    269▕ 
+    270▕ describe('Team Scopes and Queries', function () {
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Features` → it can have team settings                                                                                                                                                                                                                 ErrorException   
+  Trying to access array offset on null
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:312
+    308▕         ]);
+    309▕ 
+    310▕         $settings = $this->team->fresh()->settings;
+    311▕ 
+  ➜ 312▕         expect($settings['allow_invitations'])->toBe(true);
+    313▕         expect($settings['max_members'])->toBe(50);
+    314▕         expect($settings['public'])->toBe(false);
+    315▕     });
+    316▕
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Features` → it can have team avatar                                                                                                                                                                                                                                    
+  Failed asserting that null is identical to 'teams/avatars/team-avatar.jpg'.
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:322
+    318▕         $this->team->update([
+    319▕             'avatar_path' => 'teams/avatars/team-avatar.jpg',
+    320▕         ]);
+    321▕ 
+  ➜ 322▕         expect($this->team->fresh()->avatar_path)->toBe('teams/avatars/team-avatar.jpg');
+    323▕     });
+    324▕ 
+    325▕     it('can check if team is full', function () {
+    326▕         // Assuming team has max_members setting
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:322
+
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Events and Notifications` → it can log team activities                                                                                                                                                                                                                 
+  Failed asserting that a traversable contains Modules\User\Models\User Object #12631 (
+    'connection' => 'user',
+    'table' => null,
+    'primaryKey' => 'id',
+    'keyType' => 'string',
+    'incrementing' => false,
+    'with' => Array &0 [],
+    'withCount' => Array &1 [],
+    'preventsLazyLoading' => false,
+    'perPage' => 15,
+    'exists' => true,
+    'wasRecentlyCreated' => true,
+    'escapeWhenCastingToString' => false,
+    'attributes' => Array &2 [
+        'is_active' => true,
+        'first_name' => 'Miles',
+        'last_name' => 'Murphy',
+        'name' => 'Bradly Mraz',
+        'email' => 'pagac.katarina@example.com',
+        'email_verified_at' => '2026-01-10 15:24:33',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'T2sQmAouEl',
+        'lang' => 'en',
+        'is_otp' => false,
+        'password_expires_at' => '2026-04-22 09:03:51',
+        'id' => '019ba84b-6904-732e-a278-421496b33ea2',
+        'updated_at' => '2026-01-10 15:24:33',
+        'created_at' => '2026-01-10 15:24:33',
+    ],
+    'original' => Array &3 [
+        'is_active' => true,
+        'first_name' => 'Miles',
+        'last_name' => 'Murphy',
+        'name' => 'Bradly Mraz',
+        'email' => 'pagac.katarina@example.com',
+        'email_verified_at' => '2026-01-10 15:24:33',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'T2sQmAouEl',
+        'lang' => 'en',
+        'is_otp' => false,
+        'password_expires_at' => '2026-04-22 09:03:51',
+        'id' => '019ba84b-6904-732e-a278-421496b33ea2',
+        'updated_at' => '2026-01-10 15:24:33',
+        'created_at' => '2026-01-10 15:24:33',
+    ],
+    'changes' => Array &4 [],
+    'previous' => Array &5 [],
+    'casts' => Array &6 [
+        'id' => 'string',
+        'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
+        'roles.pivot.id' => 'string',
+        'is_otp' => 'boolean',
+        'password_expires_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'deleted_by' => 'string',
+    ],
+    'classCastCache' => Array &7 [],
+    'attributeCastCache' => Array &8 [],
+    'dateFormat' => null,
+    'appends' => Array &9 [],
+    'dispatchesEvents' => Array &10 [],
+    'observables' => Array &11 [],
+    'relations' => Array &12 [],
+    'touches' => Array &13 [],
+    'relationAutoloadCallback' => null,
+    'relationAutoloadContext' => null,
+    'timestamps' => true,
+    'usesUniqueIds' => true,
+    'hidden' => Array &14 [
+        0 => 'password',
+        1 => 'remember_token',
+        2 => 'two_factor_recovery_codes',
+        3 => 'two_factor_secret',
+    ],
+    'visible' => Array &15 [],
+    'fillable' => Array &16 [
+        0 => 'id',
+        1 => 'name',
+        2 => 'first_name',
+        3 => 'last_name',
+        4 => 'email',
+        5 => 'password',
+        6 => 'lang',
+        7 => 'current_team_id',
+        8 => 'is_active',
+        9 => 'is_otp',
+        10 => 'password_expires_at',
+        11 => 'type',
+        12 => 'id',
+        13 => 'name',
+        14 => 'first_name',
+        15 => 'last_name',
+        16 => 'email',
+        17 => 'password',
+        18 => 'lang',
+        19 => 'current_team_id',
+        20 => 'is_active',
+        21 => 'is_otp',
+        22 => 'password_expires_at',
+        23 => 'type',
+    ],
+    'guarded' => Array &17 [
+        0 => '*',
+    ],
+    'authPasswordName' => 'password',
+    'rememberTokenName' => 'remember_token',
+    'pivot' => null,
+    'childColumn' => 'type',
+    'childTypes' => Array &18 [
+        'master_admin' => 'Modules\User\Models\User',
+        'backoffice_user' => 'Modules\User\Models\User',
+        'customer_user' => 'Modules\User\Models\User',
+        'system' => 'Modules\User\Models\User',
+        'technician' => 'Modules\User\Models\User',
+    ],
+    'guard_name' => 'web',
+    'accessToken' => null,
+    'hasChildren' => true,
+    'mediaConversions' => Array &19 [],
+    'mediaCollections' => Array &20 [],
+    'deletePreservingMedia' => false,
+    'unAttachedMediaLibraryItems' => Array &21 [],
+    'permissionClass' => null,
+    'wildcardClass' => null,
+    'roleClass' => null,
+    'forceDeleting' => false,
+).
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:361
+    357▕     it('can log team activities', function () {
+    358▕         $this->team->users()->attach($this->member);
+    359▕ 
+    360▕         // Test activity logging when members join/leave
+  ➜ 361▕         expect($this->team->users)->toContain($this->member);
+    362▕     });
+    363▕ });
+    364▕
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:361
+
+
+  Tests:    14 failed, 1 risky, 15 passed (29 assertions)
+  Duration: 31.12s
+

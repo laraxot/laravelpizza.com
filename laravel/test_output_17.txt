@@ -1,0 +1,376 @@
+
+   FAIL  Modules\User\tests\Feature\TeamManagementTest
+  ✓ Team Creat… 0.44s  
+  ✓ Team Creat… 0.17s  
+  ✓ Team Creat… 0.17s  
+  ✓ Team Creat… 0.17s  
+  ✓ Team Creat… 0.16s  
+  ✓ Team Membe… 0.17s  
+  ✓ Team Membe… 0.18s  
+  ✓ Team Membe… 0.18s  
+  ✓ Team Membe… 0.18s  
+  ✓ Team Membe… 0.17s  
+  ✓ User Team…  0.19s  
+  ✓ User Team…  0.18s  
+  ✓ User Team…  0.18s  
+  ⨯ User Team…  0.17s  
+  ✓ Team Invit… 0.17s  
+  ✓ Team Invit… 0.17s  
+  ✓ Team Invit… 0.18s  
+  ✓ Team Invit… 0.17s  
+  ✓ Team Invit… 0.17s  
+  ✓ Team Permi… 0.17s  
+  ✓ Team Permi… 0.17s  
+  ✓ Team Permi… 0.18s  
+  ✓ Team Scope… 0.17s  
+  ✓ Team Scope… 0.18s  
+  ✓ Team Scope… 0.19s  
+  ✓ Team Featu… 0.20s  
+  ✓ Team Featu… 0.18s  
+  ✓ Team Featu… 0.17s  
+  ✓ Team Event… 0.18s  
+  ⨯ Team Event… 0.16s  
+
+   FAIL  Modules\User\tests\Feature\TeamManagementBusinessLogicTest
+  ✓ it can cre… 0.18s  
+  ✓ it can add… 0.18s  
+  ✓ it can rem… 0.17s  
+  ✓ it can ass… 0.17s  
+  ⨯ it can ass… 0.22s  
+  ⨯ it can che… 0.18s  
+  ✓ it can cre… 0.18s  
+  ✓ it can acc… 0.20s  
+  ✓ it can dec… 0.21s  
+  ✓ it can che… 0.22s  
+  ✓ it can get… 0.18s  
+  ✓ it can get… 0.17s  
+  ✓ it can get… 0.18s  
+  ✓ it can che… 0.17s  
+  ⨯ it can che… 0.16s  
+  ✓ it can get… 0.17s  
+  ✓ it can get… 0.18s  
+  ✓ it can get… 0.17s  
+  ⨯ it can han… 0.17s  
+  ✓ it can res… 0.17s  
+  ⨯ it can for… 0.31s  
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `User Team Relationship` → it can get all team users for a user  BadMethodCallException   
+  Call to undefined method Modules\User\Models\User::allTeamUsers()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementTest.php:162
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that a traversable contains Modules\User\Models\User Object #12525 (
+    'connection' => 'user',
+    'table' => null,
+    'primaryKey' => 'id',
+    'keyType' => 'string',
+    'incrementing' => false,
+    'with' => Array &0 [],
+    'withCount' => Array &1 [],
+    'preventsLazyLoading' => false,
+    'perPage' => 15,
+    'exists' => true,
+    'wasRecentlyCreated' => true,
+    'escapeWhenCastingToString' => false,
+    'attributes' => Array &2 [
+        'is_active' => true,
+        'first_name' => 'Demarcus',
+        'last_name' => 'Durgan',
+        'name' => 'Prof. Garrison Gerhold',
+        'email' => 'morton53@example.com',
+        'email_verified_at' => '2026-01-10 15:36:19',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'uGSN31Gkv7',
+        'lang' => 'en',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba856-309c-73a2-a886-abb88d637d80',
+        'updated_at' => '2026-01-10 15:36:19',
+        'created_at' => '2026-01-10 15:36:19',
+    ],
+    'original' => Array &3 [
+        'is_active' => true,
+        'first_name' => 'Demarcus',
+        'last_name' => 'Durgan',
+        'name' => 'Prof. Garrison Gerhold',
+        'email' => 'morton53@example.com',
+        'email_verified_at' => '2026-01-10 15:36:19',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'uGSN31Gkv7',
+        'lang' => 'en',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba856-309c-73a2-a886-abb88d637d80',
+        'updated_at' => '2026-01-10 15:36:19',
+        'created_at' => '2026-01-10 15:36:19',
+    ],
+    'changes' => Array &4 [],
+    'previous' => Array &5 [],
+    'casts' => Array &6 [
+        'id' => 'string',
+        'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
+        'roles.pivot.id' => 'string',
+        'is_otp' => 'boolean',
+        'password_expires_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'deleted_by' => 'string',
+    ],
+    'classCastCache' => Array &7 [],
+    'attributeCastCache' => Array &8 [],
+    'dateFormat' => null,
+    'appends' => Array &9 [],
+    'dispatchesEvents' => Array &10 [],
+    'observables' => Array &11 [],
+    'relations' => Array &12 [],
+    'touches' => Array &13 [],
+    'relationAutoloadCallback' => null,
+    'relationAutoloadContext' => null,
+    'timestamps' => true,
+    'usesUniqueIds' => true,
+    'hidden' => Array &14 [
+        0 => 'password',
+        1 => 'remember_token',
+        2 => 'two_factor_recovery_codes',
+        3 => 'two_factor_secret',
+    ],
+    'visible' => Array &15 [],
+    'fillable' => Array &16 [
+        0 => 'id',
+        1 => 'name',
+        2 => 'first_name',
+        3 => 'last_name',
+        4 => 'email',
+        5 => 'password',
+        6 => 'lang',
+        7 => 'current_team_id',
+        8 => 'is_active',
+        9 => 'is_otp',
+        10 => 'password_expires_at',
+        11 => 'type',
+        12 => 'id',
+        13 => 'name',
+        14 => 'first_name',
+        15 => 'last_name',
+        16 => 'email',
+        17 => 'password',
+        18 => 'lang',
+        19 => 'current_team_id',
+        20 => 'is_active',
+        21 => 'is_otp',
+        22 => 'password_expires_at',
+        23 => 'type',
+    ],
+    'guarded' => Array &17 [
+        0 => '*',
+    ],
+    'authPasswordName' => 'password',
+    'rememberTokenName' => 'remember_token',
+    'pivot' => null,
+    'childColumn' => 'type',
+    'childTypes' => Array &18 [
+        'master_admin' => 'Modules\User\Models\User',
+        'backoffice_user' => 'Modules\User\Models\User',
+        'customer_user' => 'Modules\User\Models\User',
+        'system' => 'Modules\User\Models\User',
+        'technician' => 'Modules\User\Models\User',
+    ],
+    'guard_name' => 'web',
+    'accessToken' => null,
+    'hasChildren' => true,
+    'mediaConversions' => Array &19 [],
+    'mediaCollections' => Array &20 [],
+    'deletePreservingMedia' => false,
+    'unAttachedMediaLibraryItems' => Array &21 [],
+    'permissionClass' => null,
+    'wildcardClass' => null,
+    'roleClass' => null,
+    'forceDeleting' => false,
+).
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:371
+    367▕     it('can log team activities', function () {
+    368▕         $this->team->users()->attach($this->member);
+    369▕ 
+    370▕         // Test activity logging when members join/leave
+  ➜ 371▕         expect($this->team->users)->toContain($this->member);
+    372▕     });
+    373▕ });
+    374▕
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:371
+
+  ───────────────────  
+  …   QueryException   
+  Array to string conversion (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `team_user` (`created_at`, `permissions`, `role`, `team_id`, `updated_at`, `user_id`) values (2026-01-10 15:36:20, ?, member, 44, 2026-01-10 15:36:20, 019ba856-342f-718a-b898-931a0759f5d8))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:727
+    723▕      */
+    724▕     public function bindValues($statement, $bindings)
+    725▕     {
+    726▕         foreach ($bindings as $key => $value) {
+  ➜ 727▕             $statement->bindValue(
+    728▕                 is_string($key) ? $key : $key + 1,
+    729▕                 $value,
+    730▕                 match (true) {
+    731▕                     is_int($value) => PDO::PARAM_INT,
+
+      [2m+6 vendor frames [22m
+  7   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:101
+
+  ───────────────────  
+  …   QueryException   
+  Array to string conversion (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `team_user` (`created_at`, `permissions`, `role`, `team_id`, `updated_at`, `user_id`) values (2026-01-10 15:36:20, ?, member, 45, 2026-01-10 15:36:20, 019ba856-34e7-7178-9908-784a63511a9e))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:727
+    723▕      */
+    724▕     public function bindValues($statement, $bindings)
+    725▕     {
+    726▕         foreach ($bindings as $key => $value) {
+  ➜ 727▕             $statement->bindValue(
+    728▕                 is_string($key) ? $key : $key + 1,
+    729▕                 $value,
+    730▕                 match (true) {
+    731▕                     is_int($value) => PDO::PARAM_INT,
+
+      [2m+6 vendor frames [22m
+  7   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:123
+
+  ───────────────────  
+  …   QueryException   
+  Array to string conversion (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_user_test, SQL: insert into `team_user` (`created_at`, `permissions`, `role`, `team_id`, `updated_at`, `user_id`) values (2026-01-10 15:36:22, ?, member, 55, 2026-01-10 15:36:22, 019ba856-3b72-725b-b1b7-08666619a748))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:727
+    723▕      */
+    724▕     public function bindValues($statement, $bindings)
+    725▕     {
+    726▕         foreach ($bindings as $key => $value) {
+  ➜ 727▕             $statement->bindValue(
+    728▕                 is_string($key) ? $key : $key + 1,
+    729▕                 $value,
+    730▕                 match (true) {
+    731▕                     is_int($value) => PDO::PARAM_INT,
+
+      [2m+6 vendor frames [22m
+  7   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:316
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that any soft deleted row in the table [teams] matches the attributes {"id":59}.
+
+Found: [
+    {
+        "id": 1,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": "019ba84c-69ca-701a-a765-f73bd21e45a5",
+        "name": "Test Team",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 15:25:38",
+        "updated_at": "2026-01-10 15:25:38",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null,
+        "slug": null,
+        "description": null,
+        "avatar_path": null,
+        "settings": null
+    },
+    {
+        "id": 2,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": "019ba84c-69ca-701a-a765-f73bd21e45a5",
+        "name": "Marketing Team",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 15:25:38",
+        "updated_at": "2026-01-10 15:25:38",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null,
+        "slug": null,
+        "description": null,
+        "avatar_path": null,
+        "settings": null
+    },
+    {
+        "id": 3,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": "019ba84c-69ca-701a-a765-f73bd21e45a5",
+        "name": "Supporto Clienti Team",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 15:25:38",
+        "updated_at": "2026-01-10 15:25:38",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null,
+        "slug": null,
+        "description": null,
+        "avatar_path": null,
+        "settings": null
+    }
+] and 59 others.
+
+  at Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:418
+    414▕     // Act
+    415▕     $team->delete();
+    416▕ 
+    417▕     // Assert
+  ➜ 418▕     $this->assertSoftDeleted('teams', ['id' => $team->id]);
+    419▕     $this->assertDatabaseHas('teams', ['id' => $team->id]);
+    420▕ });
+    421▕ 
+    422▕ it('can restore soft deleted team', function (): void {
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that a row in the table [teams] does not match the attributes {
+    "id": 61
+}.
+
+Found similar results: [
+    {
+        "id": 61
+    }
+].
+
+  at Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:445
+    441▕     // Act
+    442▕     $team->forceDelete();
+    443▕ 
+    444▕     // Assert
+  ➜ 445▕     $this->assertDatabaseMissing('teams', ['id' => $team->id]);
+    446▕     $this->assertDatabaseMissing('team_user', [
+    447▕         'team_id' => $team->id,
+    448▕         'user_id' => $user->id,
+    449▕     ]);
+
+
+  Tests:    7 failed, 44 passed (96 assertions)
+  Duration: 9.50s
+

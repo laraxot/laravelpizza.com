@@ -7,7 +7,6 @@ namespace Modules\Cms\Tests\Feature\Auth;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Tests\TestCase;
 
-use function Pest\Laravel\actingAs;
 use function Pest\Laravel\get;
 
 uses(TestCase::class);

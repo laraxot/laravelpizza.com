@@ -1,0 +1,2346 @@
+
+   FAIL  Modules\User\tests\Feature\TeamManagementTest
+  ⨯ Team Creat… 0.52s  
+  ✓ Team Creat… 0.26s  
+  ✓ Team Creat… 0.27s  
+  ⨯ Team Creat… 0.23s  
+  ✓ Team Creat… 0.25s  
+  ⨯ Team Membe… 0.31s  
+  ⨯ Team Membe… 0.35s  
+  ✓ Team Membe… 0.34s  
+  ⨯ Team Membe… 0.31s  
+  ⨯ Team Membe… 0.25s  
+  ✓ User Team…  0.32s  
+  ✓ User Team…  0.29s  
+  ⨯ User Team…  0.29s  
+  ⨯ User Team…  0.34s  
+  ✓ Team Invit… 0.29s  
+  ⨯ Team Invit… 0.29s  
+  ✓ Team Invit… 0.33s  
+  ✓ Team Invit… 0.30s  
+  ⨯ Team Permi… 0.28s  
+  ⨯ Team Permi… 0.24s  
+  ⨯ Team Permi… 0.28s  
+  ⨯ Team Scopes and Queries → it can filter teams by owner
+  ⨯ Team Scope… 0.28s  
+  ✓ Team Scope… 0.28s  
+  ⨯ Team Featu… 0.31s  
+  ⨯ Team Featu… 0.40s  
+  ! Team Featu… 0.37s  
+  ✓ Team Event… 0.35s  
+  ⨯ Team Event… 0.33s  
+
+   FAIL  Modules\User\tests\Feature\TeamManagementBusinessLogicTest
+  ⨯ it can cre… 0.35s  
+  ⨯ it can add… 0.37s  
+  ✓ it can rem… 0.45s  
+  ⨯ it can ass… 0.33s  
+  ⨯ it can ass… 0.30s  
+  ⨯ it can che… 0.34s  
+  ⨯ it can cre… 0.32s  
+  ⨯ it can acc… 0.38s  
+  ⨯ it can dec… 0.28s  
+  ⨯ it can cre… 0.42s  
+  ⨯ it can upd… 0.30s  
+  ⨯ it can rem… 0.32s  
+  ⨯ it can cre… 0.28s  
+  ⨯ it can ass… 0.27s  
+  ⨯ it can che… 0.26s  
+  ⨯ it can get… 0.36s  
+  ⨯ it can get… 0.29s  
+  ⨯ it can get… 0.30s  
+  ✓ it can che… 0.26s  
+  ⨯ it can che… 0.33s  
+  ⨯ it can get… 0.30s  
+  ⨯ it can get… 0.35s  
+  ✓ it can get… 0.34s  
+  ⨯ it can val… 0.26s  
+  ⨯ it can han… 0.32s  
+  ⨯ it can res… 0.32s  
+  ⨯ it can for… 0.34s  
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'slug' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `teams` (`name`, `user_id`, `personal_team`, `slug`, `updated_at`, `created_at`) values (New Team, 019ba806-42b9-7055-9ba9-e7a68d8775de, 0, new-team, 2026-01-10 14:09:01, 2026-01-10 14:09:01))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+15 vendor frames [22m
+  16  Modules/User/tests/Feature/TeamManagementTest.php:25
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that null is identical to 'Updated description'.
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:55
+     51▕             'name' => 'Updated Team Name',
+     52▕             'description' => 'Updated description',
+     53▕         ]);
+     54▕ 
+  ➜  55▕         expect($this->team->fresh())->name->toBe('Updated Team Name')->description->toBe('Updated description');
+     56▕     });
+     57▕ 
+     58▕     it('can delete a team', function () {
+     59▕         $teamId = $this->team->id;
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:55
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that a traversable contains Modules\User\Models\User Object #17524 (
+    'connection' => 'user',
+    'table' => null,
+    'primaryKey' => 'id',
+    'keyType' => 'string',
+    'incrementing' => false,
+    'with' => Array &0 [],
+    'withCount' => Array &1 [],
+    'preventsLazyLoading' => false,
+    'perPage' => 15,
+    'exists' => true,
+    'wasRecentlyCreated' => true,
+    'escapeWhenCastingToString' => false,
+    'attributes' => Array &2 [
+        'is_active' => true,
+        'first_name' => 'Burnice',
+        'last_name' => 'Grady',
+        'name' => 'Jerrell Mertz',
+        'email' => 'ariane81@example.com',
+        'email_verified_at' => '2026-01-10 14:09:02',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'GGUWreCQRh',
+        'lang' => 'de',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba806-47e5-70b8-a79a-a7d6338216b5',
+        'updated_at' => '2026-01-10 14:09:02',
+        'created_at' => '2026-01-10 14:09:02',
+    ],
+    'original' => Array &3 [
+        'is_active' => true,
+        'first_name' => 'Burnice',
+        'last_name' => 'Grady',
+        'name' => 'Jerrell Mertz',
+        'email' => 'ariane81@example.com',
+        'email_verified_at' => '2026-01-10 14:09:02',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'GGUWreCQRh',
+        'lang' => 'de',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba806-47e5-70b8-a79a-a7d6338216b5',
+        'updated_at' => '2026-01-10 14:09:02',
+        'created_at' => '2026-01-10 14:09:02',
+    ],
+    'changes' => Array &4 [],
+    'previous' => Array &5 [],
+    'casts' => Array &6 [
+        'id' => 'string',
+        'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
+        'roles.pivot.id' => 'string',
+        'is_otp' => 'boolean',
+        'password_expires_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'deleted_by' => 'string',
+    ],
+    'classCastCache' => Array &7 [],
+    'attributeCastCache' => Array &8 [],
+    'dateFormat' => null,
+    'appends' => Array &9 [],
+    'dispatchesEvents' => Array &10 [],
+    'observables' => Array &11 [],
+    'relations' => Array &12 [],
+    'touches' => Array &13 [],
+    'relationAutoloadCallback' => null,
+    'relationAutoloadContext' => null,
+    'timestamps' => true,
+    'usesUniqueIds' => true,
+    'hidden' => Array &14 [
+        0 => 'password',
+        1 => 'remember_token',
+        2 => 'two_factor_recovery_codes',
+        3 => 'two_factor_secret',
+    ],
+    'visible' => Array &15 [],
+    'fillable' => Array &16 [
+        0 => 'id',
+        1 => 'name',
+        2 => 'first_name',
+        3 => 'last_name',
+        4 => 'email',
+        5 => 'password',
+        6 => 'lang',
+        7 => 'current_team_id',
+        8 => 'is_active',
+        9 => 'is_otp',
+        10 => 'password_expires_at',
+        11 => 'type',
+        12 => 'id',
+        13 => 'name',
+        14 => 'first_name',
+        15 => 'last_name',
+        16 => 'email',
+        17 => 'password',
+        18 => 'lang',
+        19 => 'current_team_id',
+        20 => 'is_active',
+        21 => 'is_otp',
+        22 => 'password_expires_at',
+        23 => 'type',
+    ],
+    'guarded' => Array &17 [
+        0 => '*',
+    ],
+    'authPasswordName' => 'password',
+    'rememberTokenName' => 'remember_token',
+    'pivot' => null,
+    'childColumn' => 'type',
+    'childTypes' => Array &18 [
+        'master_admin' => 'Modules\User\Models\User',
+        'backoffice_user' => 'Modules\User\Models\User',
+        'customer_user' => 'Modules\User\Models\User',
+        'system' => 'Modules\User\Models\User',
+        'technician' => 'Modules\User\Models\User',
+    ],
+    'guard_name' => 'web',
+    'accessToken' => null,
+    'hasChildren' => true,
+    'mediaConversions' => Array &19 [],
+    'mediaCollections' => Array &20 [],
+    'deletePreservingMedia' => false,
+    'unAttachedMediaLibraryItems' => Array &21 [],
+    'permissionClass' => null,
+    'wildcardClass' => null,
+    'roleClass' => null,
+    'forceDeleting' => false,
+).
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:70
+     66▕ describe('Team Membership', function () {
+     67▕     it('can add members to team', function () {
+     68▕         $this->team->users()->attach($this->member);
+     69▕ 
+  ➜  70▕         expect($this->team->users)->toContain($this->member);
+     71▕         expect($this->member->teams)->toContain($this->team);
+     72▕     });
+     73▕ 
+     74▕     it('can remove members from team', function () {
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:70
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that a traversable contains Modules\User\Models\User Object #11419 (
+    'connection' => 'user',
+    'table' => null,
+    'primaryKey' => 'id',
+    'keyType' => 'string',
+    'incrementing' => false,
+    'with' => Array &0 [],
+    'withCount' => Array &1 [],
+    'preventsLazyLoading' => false,
+    'perPage' => 15,
+    'exists' => true,
+    'wasRecentlyCreated' => true,
+    'escapeWhenCastingToString' => false,
+    'attributes' => Array &2 [
+        'is_active' => true,
+        'first_name' => 'Bonnie',
+        'last_name' => 'Doyle',
+        'name' => 'Omer Halvorson',
+        'email' => 'barton29@example.com',
+        'email_verified_at' => '2026-01-10 14:09:02',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'wtcj0PKW0o',
+        'lang' => 'it',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba806-4943-7391-91bd-8c5984017a06',
+        'updated_at' => '2026-01-10 14:09:02',
+        'created_at' => '2026-01-10 14:09:02',
+    ],
+    'original' => Array &3 [
+        'is_active' => true,
+        'first_name' => 'Bonnie',
+        'last_name' => 'Doyle',
+        'name' => 'Omer Halvorson',
+        'email' => 'barton29@example.com',
+        'email_verified_at' => '2026-01-10 14:09:02',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'wtcj0PKW0o',
+        'lang' => 'it',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba806-4943-7391-91bd-8c5984017a06',
+        'updated_at' => '2026-01-10 14:09:02',
+        'created_at' => '2026-01-10 14:09:02',
+    ],
+    'changes' => Array &4 [],
+    'previous' => Array &5 [],
+    'casts' => Array &6 [
+        'id' => 'string',
+        'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
+        'roles.pivot.id' => 'string',
+        'is_otp' => 'boolean',
+        'password_expires_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'deleted_by' => 'string',
+    ],
+    'classCastCache' => Array &7 [],
+    'attributeCastCache' => Array &8 [],
+    'dateFormat' => null,
+    'appends' => Array &9 [],
+    'dispatchesEvents' => Array &10 [],
+    'observables' => Array &11 [],
+    'relations' => Array &12 [],
+    'touches' => Array &13 [],
+    'relationAutoloadCallback' => null,
+    'relationAutoloadContext' => null,
+    'timestamps' => true,
+    'usesUniqueIds' => true,
+    'hidden' => Array &14 [
+        0 => 'password',
+        1 => 'remember_token',
+        2 => 'two_factor_recovery_codes',
+        3 => 'two_factor_secret',
+    ],
+    'visible' => Array &15 [],
+    'fillable' => Array &16 [
+        0 => 'id',
+        1 => 'name',
+        2 => 'first_name',
+        3 => 'last_name',
+        4 => 'email',
+        5 => 'password',
+        6 => 'lang',
+        7 => 'current_team_id',
+        8 => 'is_active',
+        9 => 'is_otp',
+        10 => 'password_expires_at',
+        11 => 'type',
+        12 => 'id',
+        13 => 'name',
+        14 => 'first_name',
+        15 => 'last_name',
+        16 => 'email',
+        17 => 'password',
+        18 => 'lang',
+        19 => 'current_team_id',
+        20 => 'is_active',
+        21 => 'is_otp',
+        22 => 'password_expires_at',
+        23 => 'type',
+    ],
+    'guarded' => Array &17 [
+        0 => '*',
+    ],
+    'authPasswordName' => 'password',
+    'rememberTokenName' => 'remember_token',
+    'pivot' => null,
+    'childColumn' => 'type',
+    'childTypes' => Array &18 [
+        'master_admin' => 'Modules\User\Models\User',
+        'backoffice_user' => 'Modules\User\Models\User',
+        'customer_user' => 'Modules\User\Models\User',
+        'system' => 'Modules\User\Models\User',
+        'technician' => 'Modules\User\Models\User',
+    ],
+    'guard_name' => 'web',
+    'accessToken' => null,
+    'hasChildren' => true,
+    'mediaConversions' => Array &19 [],
+    'mediaCollections' => Array &20 [],
+    'deletePreservingMedia' => false,
+    'unAttachedMediaLibraryItems' => Array &21 [],
+    'permissionClass' => null,
+    'wildcardClass' => null,
+    'roleClass' => null,
+    'forceDeleting' => false,
+).
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:76
+     72▕     });
+     73▕ 
+     74▕     it('can remove members from team', function () {
+     75▕         $this->team->users()->attach($this->member);
+  ➜  76▕         expect($this->team->users)->toContain($this->member);
+     77▕ 
+     78▕         $this->team->users()->detach($this->member);
+     79▕         expect($this->team->fresh()->users)->not->toContain($this->member);
+     80▕     });
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:76
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that true is identical to false.
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:96
+     92▕     it('can check if user is team member', function () {
+     93▕         $this->team->users()->attach($this->member);
+     94▕ 
+     95▕         expect($this->team->hasUser($this->member))->toBe(true);
+  ➜  96▕         expect($this->team->hasUser($this->owner))->toBe(false); // Owner is not a member, they own the team
+     97▕     });
+     98▕ 
+     99▕     it('can get team membership with pivot data', function () {
+    100▕         $this->team->users()->attach($this->member, [
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:96
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'joined_at' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `team_user` (`user_id`, `team_id`, `created_at`, `updated_at`, `role`, `joined_at`) values (019ba806-4cd5-7119-a8e2-a20257a43374, 309, 2026-01-10 14:09:03, 2026-01-10 14:09:03, editor, 2026-01-10 14:09:03))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:100
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that a traversable contains Modules\User\Models\Team Object #16227 (
+    'connection' => 'user',
+    'table' => null,
+    'primaryKey' => 'id',
+    'keyType' => 'int',
+    'incrementing' => true,
+    'with' => Array &0 [],
+    'withCount' => Array &1 [],
+    'preventsLazyLoading' => false,
+    'perPage' => 30,
+    'exists' => true,
+    'wasRecentlyCreated' => true,
+    'escapeWhenCastingToString' => false,
+    'attributes' => Array &2 [
+        'name' => 'Test Team',
+        'user_id' => '019ba806-504d-71d4-9c4e-f4566a74a6be',
+        'personal_team' => false,
+        'updated_at' => '2026-01-10 14:09:04',
+        'created_at' => '2026-01-10 14:09:04',
+        'id' => 314,
+    ],
+    'original' => Array &3 [
+        'name' => 'Test Team',
+        'user_id' => '019ba806-504d-71d4-9c4e-f4566a74a6be',
+        'personal_team' => false,
+        'updated_at' => '2026-01-10 14:09:04',
+        'created_at' => '2026-01-10 14:09:04',
+        'id' => 314,
+    ],
+    'changes' => Array &4 [],
+    'previous' => Array &5 [],
+    'casts' => Array &6 [
+        'id' => 'integer',
+        'user_id' => 'string',
+        'personal_team' => 'boolean',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+    ],
+    'classCastCache' => Array &7 [],
+    'attributeCastCache' => Array &8 [],
+    'dateFormat' => null,
+    'appends' => Array &9 [],
+    'dispatchesEvents' => Array &10 [],
+    'observables' => Array &11 [],
+    'relations' => Array &12 [],
+    'touches' => Array &13 [],
+    'relationAutoloadCallback' => null,
+    'relationAutoloadContext' => null,
+    'timestamps' => true,
+    'usesUniqueIds' => false,
+    'hidden' => Array &14 [],
+    'visible' => Array &15 [],
+    'fillable' => Array &16 [
+        0 => 'uuid',
+        1 => 'user_id',
+        2 => 'name',
+        3 => 'personal_team',
+    ],
+    'guarded' => Array &17 [
+        0 => '*',
+    ],
+).
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:136
+    132▕     });
+    133▕ 
+    134▕     it('user can leave a team', function () {
+    135▕         $this->member->teams()->attach($this->team);
+  ➜ 136▕         expect($this->member->teams)->toContain($this->team);
+    137▕ 
+    138▕         $this->member->teams()->detach($this->team);
+    139▕         expect($this->member->fresh()->teams)->not->toContain($this->team);
+    140▕     });
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:136
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `User Team Relationship` → it can get all team users for a user  UniqueConstraintViolationException   
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '315-019ba806-5187-72cc-aaf2-a5d3e42cb79d' for key 'team_user.team_user_team_id_user_id_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `team_user` (`team_id`, `user_id`) values (315, 019ba806-5187-72cc-aaf2-a5d3e42cb79d))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+     52▕ 
+  ➜  53▕             $result = $statement->execute();
+     54▕ 
+     55▕             $this->lastInsertId = $this->getPdo()->lastInsertId($sequence);
+     56▕ 
+     57▕             return $result;
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:147
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that a traversable contains Modules\User\Models\User Object #16333 (
+    'connection' => 'user',
+    'table' => null,
+    'primaryKey' => 'id',
+    'keyType' => 'string',
+    'incrementing' => false,
+    'with' => Array &0 [],
+    'withCount' => Array &1 [],
+    'preventsLazyLoading' => false,
+    'perPage' => 15,
+    'exists' => true,
+    'wasRecentlyCreated' => true,
+    'escapeWhenCastingToString' => false,
+    'attributes' => Array &2 [
+        'is_active' => true,
+        'first_name' => 'Eugene',
+        'last_name' => 'Franecki',
+        'name' => 'Jamel Terry',
+        'email' => 'block.roscoe@example.com',
+        'email_verified_at' => '2026-01-10 14:09:05',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'DRNL8upo4l',
+        'lang' => 'de',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba806-53d6-71e7-b250-b5b0d0c0ce3e',
+        'updated_at' => '2026-01-10 14:09:05',
+        'created_at' => '2026-01-10 14:09:05',
+    ],
+    'original' => Array &3 [
+        'is_active' => true,
+        'first_name' => 'Eugene',
+        'last_name' => 'Franecki',
+        'name' => 'Jamel Terry',
+        'email' => 'block.roscoe@example.com',
+        'email_verified_at' => '2026-01-10 14:09:05',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'DRNL8upo4l',
+        'lang' => 'de',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba806-53d6-71e7-b250-b5b0d0c0ce3e',
+        'updated_at' => '2026-01-10 14:09:05',
+        'created_at' => '2026-01-10 14:09:05',
+    ],
+    'changes' => Array &4 [],
+    'previous' => Array &5 [],
+    'casts' => Array &6 [
+        'id' => 'string',
+        'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
+        'roles.pivot.id' => 'string',
+        'is_otp' => 'boolean',
+        'password_expires_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'deleted_by' => 'string',
+    ],
+    'classCastCache' => Array &7 [],
+    'attributeCastCache' => Array &8 [],
+    'dateFormat' => null,
+    'appends' => Array &9 [],
+    'dispatchesEvents' => Array &10 [],
+    'observables' => Array &11 [],
+    'relations' => Array &12 [],
+    'touches' => Array &13 [],
+    'relationAutoloadCallback' => null,
+    'relationAutoloadContext' => null,
+    'timestamps' => true,
+    'usesUniqueIds' => true,
+    'hidden' => Array &14 [
+        0 => 'password',
+        1 => 'remember_token',
+        2 => 'two_factor_recovery_codes',
+        3 => 'two_factor_secret',
+    ],
+    'visible' => Array &15 [],
+    'fillable' => Array &16 [
+        0 => 'id',
+        1 => 'name',
+        2 => 'first_name',
+        3 => 'last_name',
+        4 => 'email',
+        5 => 'password',
+        6 => 'lang',
+        7 => 'current_team_id',
+        8 => 'is_active',
+        9 => 'is_otp',
+        10 => 'password_expires_at',
+        11 => 'type',
+        12 => 'id',
+        13 => 'name',
+        14 => 'first_name',
+        15 => 'last_name',
+        16 => 'email',
+        17 => 'password',
+        18 => 'lang',
+        19 => 'current_team_id',
+        20 => 'is_active',
+        21 => 'is_otp',
+        22 => 'password_expires_at',
+        23 => 'type',
+    ],
+    'guarded' => Array &17 [
+        0 => '*',
+    ],
+    'authPasswordName' => 'password',
+    'rememberTokenName' => 'remember_token',
+    'pivot' => null,
+    'childColumn' => 'type',
+    'childTypes' => Array &18 [
+        'master_admin' => 'Modules\User\Models\User',
+        'backoffice_user' => 'Modules\User\Models\User',
+        'customer_user' => 'Modules\User\Models\User',
+        'system' => 'Modules\User\Models\User',
+        'technician' => 'Modules\User\Models\User',
+    ],
+    'guard_name' => 'web',
+    'accessToken' => null,
+    'hasChildren' => true,
+    'mediaConversions' => Array &19 [],
+    'mediaCollections' => Array &20 [],
+    'deletePreservingMedia' => false,
+    'unAttachedMediaLibraryItems' => Array &21 [],
+    'permissionClass' => null,
+    'wildcardClass' => null,
+    'roleClass' => null,
+    'forceDeleting' => false,
+).
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:183
+    179▕         // Simulate accepting invitation
+    180▕         $this->team->users()->attach($this->member, ['role' => $invitation->role]);
+    181▕         $invitation->delete();
+    182▕ 
+  ➜ 183▕         expect($this->team->users)->toContain($this->member);
+    184▕         expect(TeamInvitation::find($invitation->id))->toBeNull();
+    185▕     });
+    186▕ 
+    187▕     it('can cancel team invitations', function () {
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:183
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Permissions` → it can have team-specific permissions  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::permissions()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementTest.php:216
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravelpizza_data_test.team_permissions' doesn't exist (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `team_permissions` (`team_id`, `permission`, `name`, `updated_at`, `created_at`) values (321, delete_projects, manage team, 2026-01-10 14:09:06, 2026-01-10 14:09:06))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+15 vendor frames [22m
+  16  Modules/User/tests/Feature/TeamManagementTest.php:221
+
+  ───────────────────  
+  …   ErrorException   
+  Attempt to read property "role" on null
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:241
+    237▕             ->where('user_id', $this->member->id)
+    238▕             ->first()
+    239▕             ->pivot;
+    240▕ 
+  ➜ 241▕         expect($membership->role)->toBe('admin');
+    242▕     });
+    243▕ });
+    244▕ 
+    245▕ describe('Team Scopes and Queries', function () {
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementTest > `Team Scopes and Queries` → it can filter teams by owner  UniqueConstraintViolationException   
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'hhuels@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Lilian, Dickens, Cordie Wolf, hhuels@example.com, 2026-01-10 14:09:07, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, QTzzTDBhh2, de, 0, ?, 019ba806-5aa2-7164-bb08-b596b0ce7a9c, 2026-01-10 14:09:07, 2026-01-10 14:09:07))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+     52▕ 
+  ➜  53▕             $result = $statement->execute();
+     54▕ 
+     55▕             $this->lastInsertId = $this->getPdo()->lastInsertId($sequence);
+     56▕ 
+     57▕             return $result;
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementTest.php:16
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'slug' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `teams` (`name`, `user_id`, `personal_team`, `slug`, `updated_at`, `created_at`) values (Contabilità Team, 019ba806-5bb8-7226-b54d-2678d1e2d020, 0, unique-team-slug, 2026-01-10 14:09:07, 2026-01-10 14:09:07))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+15 vendor frames [22m
+  16  Modules/User/tests/Feature/TeamManagementTest.php:256
+
+  ───────────────────  
+  …   ErrorException   
+  Trying to access array offset on null
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:286
+    282▕         ]);
+    283▕ 
+    284▕         $settings = $this->team->fresh()->settings;
+    285▕ 
+  ➜ 286▕         expect($settings['allow_invitations'])->toBe(true);
+    287▕         expect($settings['max_members'])->toBe(50);
+    288▕         expect($settings['public'])->toBe(false);
+    289▕     });
+    290▕
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that null is identical to 'teams/avatars/team-avatar.jpg'.
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:296
+    292▕         $this->team->update([
+    293▕             'avatar_path' => 'teams/avatars/team-avatar.jpg',
+    294▕         ]);
+    295▕ 
+  ➜ 296▕         expect($this->team->fresh()->avatar_path)->toBe('teams/avatars/team-avatar.jpg');
+    297▕     });
+    298▕ 
+    299▕     it('can check if team is full', function () {
+    300▕         // Assuming team has max_members setting
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:296
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that a traversable contains Modules\User\Models\User Object #12219 (
+    'connection' => 'user',
+    'table' => null,
+    'primaryKey' => 'id',
+    'keyType' => 'string',
+    'incrementing' => false,
+    'with' => Array &0 [],
+    'withCount' => Array &1 [],
+    'preventsLazyLoading' => false,
+    'perPage' => 15,
+    'exists' => true,
+    'wasRecentlyCreated' => true,
+    'escapeWhenCastingToString' => false,
+    'attributes' => Array &2 [
+        'is_active' => true,
+        'first_name' => 'Christ',
+        'last_name' => 'Powlowski',
+        'name' => 'Elmer Considine',
+        'email' => 'robin18@example.org',
+        'email_verified_at' => '2026-01-10 14:09:09',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'jgZZctyxAZ',
+        'lang' => 'en',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba806-6395-7377-a7f8-101cce643cec',
+        'updated_at' => '2026-01-10 14:09:09',
+        'created_at' => '2026-01-10 14:09:09',
+    ],
+    'original' => Array &3 [
+        'is_active' => true,
+        'first_name' => 'Christ',
+        'last_name' => 'Powlowski',
+        'name' => 'Elmer Considine',
+        'email' => 'robin18@example.org',
+        'email_verified_at' => '2026-01-10 14:09:09',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' => 'jgZZctyxAZ',
+        'lang' => 'en',
+        'is_otp' => false,
+        'password_expires_at' => null,
+        'id' => '019ba806-6395-7377-a7f8-101cce643cec',
+        'updated_at' => '2026-01-10 14:09:09',
+        'created_at' => '2026-01-10 14:09:09',
+    ],
+    'changes' => Array &4 [],
+    'previous' => Array &5 [],
+    'casts' => Array &6 [
+        'id' => 'string',
+        'email_verified_at' => 'datetime',
+        'is_active' => 'boolean',
+        'roles.pivot.id' => 'string',
+        'is_otp' => 'boolean',
+        'password_expires_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+        'updated_by' => 'string',
+        'created_by' => 'string',
+        'deleted_by' => 'string',
+    ],
+    'classCastCache' => Array &7 [],
+    'attributeCastCache' => Array &8 [],
+    'dateFormat' => null,
+    'appends' => Array &9 [],
+    'dispatchesEvents' => Array &10 [],
+    'observables' => Array &11 [],
+    'relations' => Array &12 [],
+    'touches' => Array &13 [],
+    'relationAutoloadCallback' => null,
+    'relationAutoloadContext' => null,
+    'timestamps' => true,
+    'usesUniqueIds' => true,
+    'hidden' => Array &14 [
+        0 => 'password',
+        1 => 'remember_token',
+        2 => 'two_factor_recovery_codes',
+        3 => 'two_factor_secret',
+    ],
+    'visible' => Array &15 [],
+    'fillable' => Array &16 [
+        0 => 'id',
+        1 => 'name',
+        2 => 'first_name',
+        3 => 'last_name',
+        4 => 'email',
+        5 => 'password',
+        6 => 'lang',
+        7 => 'current_team_id',
+        8 => 'is_active',
+        9 => 'is_otp',
+        10 => 'password_expires_at',
+        11 => 'type',
+        12 => 'id',
+        13 => 'name',
+        14 => 'first_name',
+        15 => 'last_name',
+        16 => 'email',
+        17 => 'password',
+        18 => 'lang',
+        19 => 'current_team_id',
+        20 => 'is_active',
+        21 => 'is_otp',
+        22 => 'password_expires_at',
+        23 => 'type',
+    ],
+    'guarded' => Array &17 [
+        0 => '*',
+    ],
+    'authPasswordName' => 'password',
+    'rememberTokenName' => 'remember_token',
+    'pivot' => null,
+    'childColumn' => 'type',
+    'childTypes' => Array &18 [
+        'master_admin' => 'Modules\User\Models\User',
+        'backoffice_user' => 'Modules\User\Models\User',
+        'customer_user' => 'Modules\User\Models\User',
+        'system' => 'Modules\User\Models\User',
+        'technician' => 'Modules\User\Models\User',
+    ],
+    'guard_name' => 'web',
+    'accessToken' => null,
+    'hasChildren' => true,
+    'mediaConversions' => Array &19 [],
+    'mediaCollections' => Array &20 [],
+    'deletePreservingMedia' => false,
+    'unAttachedMediaLibraryItems' => Array &21 [],
+    'permissionClass' => null,
+    'wildcardClass' => null,
+    'roleClass' => null,
+    'forceDeleting' => false,
+).
+
+  at Modules/User/tests/Feature/TeamManagementTest.php:335
+    331▕     it('can log team activities', function () {
+    332▕         $this->team->users()->attach($this->member);
+    333▕ 
+    334▕         // Test activity logging when members join/leave
+  ➜ 335▕         expect($this->team->users)->toContain($this->member);
+    336▕     });
+    337▕ });
+    338▕
+
+  1   Modules/User/tests/Feature/TeamManagementTest.php:335
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'slug' in 'where clause' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: select exists(select * from `teams` where (`id` = 330 and `name` = Studio Dentistico Milano and `slug` = studio-milano and `description` = Studio dentistico specializzato in Milano and `personal_team` = 0)) as `exists`)
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:413
+    409▕             // For select statements, we'll simply execute the query and return an array
+    410▕             // of the database result set. Each element in the array will be a single
+    411▕             // row from the database table, and will either be an array or objects.
+    412▕             $statement = $this->prepared(
+  ➜ 413▕                 $this->getPdoForSelect($useReadPdo)->prepare($query)
+    414▕             );
+    415▕ 
+    416▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+    417▕
+
+      [2m+5 vendor frames [22m
+  6   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:25
+
+  ───────────────────  
+  …   QueryException   
+  Array to string conversion (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `team_user` (`user_id`, `team_id`, `created_at`, `updated_at`, `role`, `permissions`) values (019ba806-667d-7123-91bf-251b21add2dc, 331, 2026-01-10 14:09:10, 2026-01-10 14:09:10, member, ?))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:727
+    723▕      */
+    724▕     public function bindValues($statement, $bindings)
+    725▕     {
+    726▕         foreach ($bindings as $key => $value) {
+  ➜ 727▕             $statement->bindValue(
+    728▕                 is_string($key) ? $key : $key + 1,
+    729▕                 $value,
+    730▕                 match (true) {
+    731▕                     is_int($value) => PDO::PARAM_INT,
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:44
+
+  ───────────────────  
+  …   ErrorException   
+  Attempt to read property "role" on null
+
+  at Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:95
+     91▕         'user_id' => $user->id,
+     92▕         'role' => 'admin',
+     93▕     ], 'user');
+     94▕ 
+  ➜  95▕     expect($team->users()->find($user->id)->pivot->role)->toBe('admin');
+     96▕ });
+     97▕ 
+     98▕ it('can assign team permissions to user', function (): void {
+     99▕     // Arrange
+
+  ───────────────────  
+  …   QueryException   
+  Array to string conversion (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `team_user` (`user_id`, `team_id`, `created_at`, `updated_at`, `role`, `permissions`) values (019ba806-6aaf-730d-b85e-a3bdc576bbaf, 334, 2026-01-10 14:09:11, 2026-01-10 14:09:11, member, ?))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:727
+    723▕      */
+    724▕     public function bindValues($statement, $bindings)
+    725▕     {
+    726▕         foreach ($bindings as $key => $value) {
+  ➜ 727▕             $statement->bindValue(
+    728▕                 is_string($key) ? $key : $key + 1,
+    729▕                 $value,
+    730▕                 match (true) {
+    731▕                     is_int($value) => PDO::PARAM_INT,
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:104
+
+  ───────────────────  
+  …   QueryException   
+  Array to string conversion (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `team_user` (`user_id`, `team_id`, `created_at`, `updated_at`, `role`, `permissions`) values (019ba806-6c03-72d6-b4c2-1ee8a82e6bc3, 335, 2026-01-10 14:09:11, 2026-01-10 14:09:11, member, ?))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:727
+    723▕      */
+    724▕     public function bindValues($statement, $bindings)
+    725▕     {
+    726▕         foreach ($bindings as $key => $value) {
+  ➜ 727▕             $statement->bindValue(
+    728▕                 is_string($key) ? $key : $key + 1,
+    729▕                 $value,
+    730▕                 match (true) {
+    731▕                     is_int($value) => PDO::PARAM_INT,
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:125
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can create team invitation  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::invitations()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:147
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can accept team invitation  UniqueConstraintViolationException   
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'invited@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Gerhard, McDermott, Breanna Kiehn Jr., invited@example.com, 2026-01-10 14:09:12, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, f3qxebm1XP, it, 0, ?, 019ba806-6ec7-73ad-8e03-ddb77cb94589, 2026-01-10 14:09:12, 2026-01-10 14:09:12))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+     52▕ 
+  ➜  53▕             $result = $statement->execute();
+     54▕ 
+     55▕             $this->lastInsertId = $this->getPdo()->lastInsertId($sequence);
+     56▕ 
+     57▕             return $result;
+
+      [2m+13 vendor frames [22m
+  14  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:173
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can decline team invitation  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::invitations()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:204
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can create team membership  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::memberships()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:231
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can update team membership  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::memberships()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:256
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can remove team membership  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::memberships()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:283
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can create team permission  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::permissions()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:310
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can assign permission to team role  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::permissions()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:327
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can check team user role  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::userHasRole()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:352
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that a traversable contains Array &0 [
+    0 => Modules\User\Models\User Object #9080 (
+        'connection' => 'user',
+        'table' => null,
+        'primaryKey' => 'id',
+        'keyType' => 'string',
+        'incrementing' => false,
+        'with' => Array &1 [],
+        'withCount' => Array &2 [],
+        'preventsLazyLoading' => false,
+        'perPage' => 15,
+        'exists' => true,
+        'wasRecentlyCreated' => true,
+        'escapeWhenCastingToString' => false,
+        'attributes' => Array &3 [
+            'is_active' => true,
+            'first_name' => 'Clint',
+            'last_name' => 'Kilback',
+            'name' => 'Beulah Orn',
+            'email' => 'rrowe@example.org',
+            'email_verified_at' => '2026-01-10 14:09:14',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'XXkrXlRDEF',
+            'lang' => 'de',
+            'is_otp' => false,
+            'password_expires_at' => '2026-12-07 13:40:19',
+            'id' => '019ba806-7853-710b-ab6e-973cae8679ee',
+            'updated_at' => '2026-01-10 14:09:14',
+            'created_at' => '2026-01-10 14:09:14',
+        ],
+        'original' => Array &4 [
+            'is_active' => true,
+            'first_name' => 'Clint',
+            'last_name' => 'Kilback',
+            'name' => 'Beulah Orn',
+            'email' => 'rrowe@example.org',
+            'email_verified_at' => '2026-01-10 14:09:14',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'XXkrXlRDEF',
+            'lang' => 'de',
+            'is_otp' => false,
+            'password_expires_at' => '2026-12-07 13:40:19',
+            'id' => '019ba806-7853-710b-ab6e-973cae8679ee',
+            'updated_at' => '2026-01-10 14:09:14',
+            'created_at' => '2026-01-10 14:09:14',
+        ],
+        'changes' => Array &5 [],
+        'previous' => Array &6 [],
+        'casts' => Array &7 [
+            'id' => 'string',
+            'email_verified_at' => 'datetime',
+            'is_active' => 'boolean',
+            'roles.pivot.id' => 'string',
+            'is_otp' => 'boolean',
+            'password_expires_at' => 'datetime',
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+            'updated_by' => 'string',
+            'created_by' => 'string',
+            'deleted_by' => 'string',
+        ],
+        'classCastCache' => Array &8 [],
+        'attributeCastCache' => Array &9 [],
+        'dateFormat' => null,
+        'appends' => Array &10 [],
+        'dispatchesEvents' => Array &11 [],
+        'observables' => Array &12 [],
+        'relations' => Array &13 [],
+        'touches' => Array &14 [],
+        'relationAutoloadCallback' => null,
+        'relationAutoloadContext' => null,
+        'timestamps' => true,
+        'usesUniqueIds' => true,
+        'hidden' => Array &15 [
+            0 => 'password',
+            1 => 'remember_token',
+            2 => 'two_factor_recovery_codes',
+            3 => 'two_factor_secret',
+        ],
+        'visible' => Array &16 [],
+        'fillable' => Array &17 [
+            0 => 'id',
+            1 => 'name',
+            2 => 'first_name',
+            3 => 'last_name',
+            4 => 'email',
+            5 => 'password',
+            6 => 'lang',
+            7 => 'current_team_id',
+            8 => 'is_active',
+            9 => 'is_otp',
+            10 => 'password_expires_at',
+            11 => 'type',
+            12 => 'id',
+            13 => 'name',
+            14 => 'first_name',
+            15 => 'last_name',
+            16 => 'email',
+            17 => 'password',
+            18 => 'lang',
+            19 => 'current_team_id',
+            20 => 'is_active',
+            21 => 'is_otp',
+            22 => 'password_expires_at',
+            23 => 'type',
+        ],
+        'guarded' => Array &18 [
+            0 => '*',
+        ],
+        'authPasswordName' => 'password',
+        'rememberTokenName' => 'remember_token',
+        'pivot' => null,
+        'childColumn' => 'type',
+        'childTypes' => Array &19 [
+            'master_admin' => 'Modules\User\Models\User',
+            'backoffice_user' => 'Modules\User\Models\User',
+            'customer_user' => 'Modules\User\Models\User',
+            'system' => 'Modules\User\Models\User',
+            'technician' => 'Modules\User\Models\User',
+        ],
+        'guard_name' => 'web',
+        'accessToken' => null,
+        'hasChildren' => true,
+        'mediaConversions' => Array &20 [],
+        'mediaCollections' => Array &21 [],
+        'deletePreservingMedia' => false,
+        'unAttachedMediaLibraryItems' => Array &22 [],
+        'permissionClass' => null,
+        'wildcardClass' => null,
+        'roleClass' => null,
+        'forceDeleting' => false,
+    ),
+    1 => Modules\User\Models\User Object #15554 (
+        'connection' => 'user',
+        'table' => null,
+        'primaryKey' => 'id',
+        'keyType' => 'string',
+        'incrementing' => false,
+        'with' => Array &23 [],
+        'withCount' => Array &24 [],
+        'preventsLazyLoading' => false,
+        'perPage' => 15,
+        'exists' => true,
+        'wasRecentlyCreated' => true,
+        'escapeWhenCastingToString' => false,
+        'attributes' => Array &25 [
+            'is_active' => true,
+            'first_name' => 'Sage',
+            'last_name' => 'Rice',
+            'name' => 'Prof. Antonette Medhurst',
+            'email' => 'hauck.delphia@example.com',
+            'email_verified_at' => '2026-01-10 14:09:14',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => '8HQRKf3GIb',
+            'lang' => 'de',
+            'is_otp' => false,
+            'password_expires_at' => '2026-02-17 15:16:17',
+            'id' => '019ba806-785a-71e6-a8fb-b43d6deb7c29',
+            'updated_at' => '2026-01-10 14:09:14',
+            'created_at' => '2026-01-10 14:09:14',
+        ],
+        'original' => Array &26 [
+            'is_active' => true,
+            'first_name' => 'Sage',
+            'last_name' => 'Rice',
+            'name' => 'Prof. Antonette Medhurst',
+            'email' => 'hauck.delphia@example.com',
+            'email_verified_at' => '2026-01-10 14:09:14',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => '8HQRKf3GIb',
+            'lang' => 'de',
+            'is_otp' => false,
+            'password_expires_at' => '2026-02-17 15:16:17',
+            'id' => '019ba806-785a-71e6-a8fb-b43d6deb7c29',
+            'updated_at' => '2026-01-10 14:09:14',
+            'created_at' => '2026-01-10 14:09:14',
+        ],
+        'changes' => Array &27 [],
+        'previous' => Array &28 [],
+        'casts' => Array &29 [
+            'id' => 'string',
+            'email_verified_at' => 'datetime',
+            'is_active' => 'boolean',
+            'roles.pivot.id' => 'string',
+            'is_otp' => 'boolean',
+            'password_expires_at' => 'datetime',
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+            'updated_by' => 'string',
+            'created_by' => 'string',
+            'deleted_by' => 'string',
+        ],
+        'classCastCache' => Array &30 [],
+        'attributeCastCache' => Array &31 [],
+        'dateFormat' => null,
+        'appends' => Array &32 [],
+        'dispatchesEvents' => Array &33 [],
+        'observables' => Array &34 [],
+        'relations' => Array &35 [],
+        'touches' => Array &36 [],
+        'relationAutoloadCallback' => null,
+        'relationAutoloadContext' => null,
+        'timestamps' => true,
+        'usesUniqueIds' => true,
+        'hidden' => Array &37 [
+            0 => 'password',
+            1 => 'remember_token',
+            2 => 'two_factor_recovery_codes',
+            3 => 'two_factor_secret',
+        ],
+        'visible' => Array &38 [],
+        'fillable' => Array &39 [
+            0 => 'id',
+            1 => 'name',
+            2 => 'first_name',
+            3 => 'last_name',
+            4 => 'email',
+            5 => 'password',
+            6 => 'lang',
+            7 => 'current_team_id',
+            8 => 'is_active',
+            9 => 'is_otp',
+            10 => 'password_expires_at',
+            11 => 'type',
+            12 => 'id',
+            13 => 'name',
+            14 => 'first_name',
+            15 => 'last_name',
+            16 => 'email',
+            17 => 'password',
+            18 => 'lang',
+            19 => 'current_team_id',
+            20 => 'is_active',
+            21 => 'is_otp',
+            22 => 'password_expires_at',
+            23 => 'type',
+        ],
+        'guarded' => Array &40 [
+            0 => '*',
+        ],
+        'authPasswordName' => 'password',
+        'rememberTokenName' => 'remember_token',
+        'pivot' => null,
+        'childColumn' => 'type',
+        'childTypes' => Array &41 [
+            'master_admin' => 'Modules\User\Models\User',
+            'backoffice_user' => 'Modules\User\Models\User',
+            'customer_user' => 'Modules\User\Models\User',
+            'system' => 'Modules\User\Models\User',
+            'technician' => 'Modules\User\Models\User',
+        ],
+        'guard_name' => 'web',
+        'accessToken' => null,
+        'hasChildren' => true,
+        'mediaConversions' => Array &42 [],
+        'mediaCollections' => Array &43 [],
+        'deletePreservingMedia' => false,
+        'unAttachedMediaLibraryItems' => Array &44 [],
+        'permissionClass' => null,
+        'wildcardClass' => null,
+        'roleClass' => null,
+        'forceDeleting' => false,
+    ),
+    2 => Modules\User\Models\User Object #6700 (
+        'connection' => 'user',
+        'table' => null,
+        'primaryKey' => 'id',
+        'keyType' => 'string',
+        'incrementing' => false,
+        'with' => Array &45 [],
+        'withCount' => Array &46 [],
+        'preventsLazyLoading' => false,
+        'perPage' => 15,
+        'exists' => true,
+        'wasRecentlyCreated' => true,
+        'escapeWhenCastingToString' => false,
+        'attributes' => Array &47 [
+            'is_active' => true,
+            'first_name' => 'Eryn',
+            'last_name' => 'Jaskolski',
+            'name' => 'Nathanial Stanton IV',
+            'email' => 'ydare@example.org',
+            'email_verified_at' => '2026-01-10 14:09:14',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'swrchUY6eS',
+            'lang' => 'it',
+            'is_otp' => false,
+            'password_expires_at' => '2026-10-07 02:50:25',
+            'id' => '019ba806-7861-7290-b135-da01fa1a6a6a',
+            'updated_at' => '2026-01-10 14:09:14',
+            'created_at' => '2026-01-10 14:09:14',
+        ],
+        'original' => Array &48 [
+            'is_active' => true,
+            'first_name' => 'Eryn',
+            'last_name' => 'Jaskolski',
+            'name' => 'Nathanial Stanton IV',
+            'email' => 'ydare@example.org',
+            'email_verified_at' => '2026-01-10 14:09:14',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'swrchUY6eS',
+            'lang' => 'it',
+            'is_otp' => false,
+            'password_expires_at' => '2026-10-07 02:50:25',
+            'id' => '019ba806-7861-7290-b135-da01fa1a6a6a',
+            'updated_at' => '2026-01-10 14:09:14',
+            'created_at' => '2026-01-10 14:09:14',
+        ],
+        'changes' => Array &49 [],
+        'previous' => Array &50 [],
+        'casts' => Array &51 [
+            'id' => 'string',
+            'email_verified_at' => 'datetime',
+            'is_active' => 'boolean',
+            'roles.pivot.id' => 'string',
+            'is_otp' => 'boolean',
+            'password_expires_at' => 'datetime',
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+            'updated_by' => 'string',
+            'created_by' => 'string',
+            'deleted_by' => 'string',
+        ],
+        'classCastCache' => Array &52 [],
+        'attributeCastCache' => Array &53 [],
+        'dateFormat' => null,
+        'appends' => Array &54 [],
+        'dispatchesEvents' => Array &55 [],
+        'observables' => Array &56 [],
+        'relations' => Array &57 [],
+        'touches' => Array &58 [],
+        'relationAutoloadCallback' => null,
+        'relationAutoloadContext' => null,
+        'timestamps' => true,
+        'usesUniqueIds' => true,
+        'hidden' => Array &59 [
+            0 => 'password',
+            1 => 'remember_token',
+            2 => 'two_factor_recovery_codes',
+            3 => 'two_factor_secret',
+        ],
+        'visible' => Array &60 [],
+        'fillable' => Array &61 [
+            0 => 'id',
+            1 => 'name',
+            2 => 'first_name',
+            3 => 'last_name',
+            4 => 'email',
+            5 => 'password',
+            6 => 'lang',
+            7 => 'current_team_id',
+            8 => 'is_active',
+            9 => 'is_otp',
+            10 => 'password_expires_at',
+            11 => 'type',
+            12 => 'id',
+            13 => 'name',
+            14 => 'first_name',
+            15 => 'last_name',
+            16 => 'email',
+            17 => 'password',
+            18 => 'lang',
+            19 => 'current_team_id',
+            20 => 'is_active',
+            21 => 'is_otp',
+            22 => 'password_expires_at',
+            23 => 'type',
+        ],
+        'guarded' => Array &62 [
+            0 => '*',
+        ],
+        'authPasswordName' => 'password',
+        'rememberTokenName' => 'remember_token',
+        'pivot' => null,
+        'childColumn' => 'type',
+        'childTypes' => Array &63 [
+            'master_admin' => 'Modules\User\Models\User',
+            'backoffice_user' => 'Modules\User\Models\User',
+            'customer_user' => 'Modules\User\Models\User',
+            'system' => 'Modules\User\Models\User',
+            'technician' => 'Modules\User\Models\User',
+        ],
+        'guard_name' => 'web',
+        'accessToken' => null,
+        'hasChildren' => true,
+        'mediaConversions' => Array &64 [],
+        'mediaCollections' => Array &65 [],
+        'deletePreservingMedia' => false,
+        'unAttachedMediaLibraryItems' => Array &66 [],
+        'permissionClass' => null,
+        'wildcardClass' => null,
+        'roleClass' => null,
+        'forceDeleting' => false,
+    ),
+].
+
+  at Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:374
+    370▕ 
+    371▕     // Assert
+    372▕     expect($members)
+    373▕         ->toHaveCount(3)
+  ➜ 374▕         ->toContain([$user1, $user2, $user3]);
+    375▕ });
+    376▕ 
+    377▕ it('can get team admins', function (): void {
+    378▕     // Arrange
+
+  1   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:374
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that a traversable contains Array &0 [
+    0 => Modules\User\Models\User Object #5559 (
+        'connection' => 'user',
+        'table' => null,
+        'primaryKey' => 'id',
+        'keyType' => 'string',
+        'incrementing' => false,
+        'with' => Array &1 [],
+        'withCount' => Array &2 [],
+        'preventsLazyLoading' => false,
+        'perPage' => 15,
+        'exists' => true,
+        'wasRecentlyCreated' => true,
+        'escapeWhenCastingToString' => false,
+        'attributes' => Array &3 [
+            'is_active' => true,
+            'first_name' => 'Carey',
+            'last_name' => 'Bergnaum',
+            'name' => 'Dr. Braden Bechtelar IV',
+            'email' => 'hahn.karson@example.com',
+            'email_verified_at' => '2026-01-10 14:09:15',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'q3tz4xDzbn',
+            'lang' => 'en',
+            'is_otp' => false,
+            'password_expires_at' => null,
+            'id' => '019ba806-797b-7140-a962-a1fcc9e5048d',
+            'updated_at' => '2026-01-10 14:09:15',
+            'created_at' => '2026-01-10 14:09:15',
+        ],
+        'original' => Array &4 [
+            'is_active' => true,
+            'first_name' => 'Carey',
+            'last_name' => 'Bergnaum',
+            'name' => 'Dr. Braden Bechtelar IV',
+            'email' => 'hahn.karson@example.com',
+            'email_verified_at' => '2026-01-10 14:09:15',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'q3tz4xDzbn',
+            'lang' => 'en',
+            'is_otp' => false,
+            'password_expires_at' => null,
+            'id' => '019ba806-797b-7140-a962-a1fcc9e5048d',
+            'updated_at' => '2026-01-10 14:09:15',
+            'created_at' => '2026-01-10 14:09:15',
+        ],
+        'changes' => Array &5 [],
+        'previous' => Array &6 [],
+        'casts' => Array &7 [
+            'id' => 'string',
+            'email_verified_at' => 'datetime',
+            'is_active' => 'boolean',
+            'roles.pivot.id' => 'string',
+            'is_otp' => 'boolean',
+            'password_expires_at' => 'datetime',
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+            'updated_by' => 'string',
+            'created_by' => 'string',
+            'deleted_by' => 'string',
+        ],
+        'classCastCache' => Array &8 [],
+        'attributeCastCache' => Array &9 [],
+        'dateFormat' => null,
+        'appends' => Array &10 [],
+        'dispatchesEvents' => Array &11 [],
+        'observables' => Array &12 [],
+        'relations' => Array &13 [],
+        'touches' => Array &14 [],
+        'relationAutoloadCallback' => null,
+        'relationAutoloadContext' => null,
+        'timestamps' => true,
+        'usesUniqueIds' => true,
+        'hidden' => Array &15 [
+            0 => 'password',
+            1 => 'remember_token',
+            2 => 'two_factor_recovery_codes',
+            3 => 'two_factor_secret',
+        ],
+        'visible' => Array &16 [],
+        'fillable' => Array &17 [
+            0 => 'id',
+            1 => 'name',
+            2 => 'first_name',
+            3 => 'last_name',
+            4 => 'email',
+            5 => 'password',
+            6 => 'lang',
+            7 => 'current_team_id',
+            8 => 'is_active',
+            9 => 'is_otp',
+            10 => 'password_expires_at',
+            11 => 'type',
+            12 => 'id',
+            13 => 'name',
+            14 => 'first_name',
+            15 => 'last_name',
+            16 => 'email',
+            17 => 'password',
+            18 => 'lang',
+            19 => 'current_team_id',
+            20 => 'is_active',
+            21 => 'is_otp',
+            22 => 'password_expires_at',
+            23 => 'type',
+        ],
+        'guarded' => Array &18 [
+            0 => '*',
+        ],
+        'authPasswordName' => 'password',
+        'rememberTokenName' => 'remember_token',
+        'pivot' => null,
+        'childColumn' => 'type',
+        'childTypes' => Array &19 [
+            'master_admin' => 'Modules\User\Models\User',
+            'backoffice_user' => 'Modules\User\Models\User',
+            'customer_user' => 'Modules\User\Models\User',
+            'system' => 'Modules\User\Models\User',
+            'technician' => 'Modules\User\Models\User',
+        ],
+        'guard_name' => 'web',
+        'accessToken' => null,
+        'hasChildren' => true,
+        'mediaConversions' => Array &20 [],
+        'mediaCollections' => Array &21 [],
+        'deletePreservingMedia' => false,
+        'unAttachedMediaLibraryItems' => Array &22 [],
+        'permissionClass' => null,
+        'wildcardClass' => null,
+        'roleClass' => null,
+        'forceDeleting' => false,
+    ),
+    1 => Modules\User\Models\User Object #14940 (
+        'connection' => 'user',
+        'table' => null,
+        'primaryKey' => 'id',
+        'keyType' => 'string',
+        'incrementing' => false,
+        'with' => Array &23 [],
+        'withCount' => Array &24 [],
+        'preventsLazyLoading' => false,
+        'perPage' => 15,
+        'exists' => true,
+        'wasRecentlyCreated' => true,
+        'escapeWhenCastingToString' => false,
+        'attributes' => Array &25 [
+            'is_active' => true,
+            'first_name' => 'Jamel',
+            'last_name' => 'Hahn',
+            'name' => 'Miss Harmony Lubowitz',
+            'email' => 'brad44@example.net',
+            'email_verified_at' => '2026-01-10 14:09:15',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'IKY3q8v1JG',
+            'lang' => 'it',
+            'is_otp' => false,
+            'password_expires_at' => null,
+            'id' => '019ba806-7981-7252-9df1-bab3e659b92d',
+            'updated_at' => '2026-01-10 14:09:15',
+            'created_at' => '2026-01-10 14:09:15',
+        ],
+        'original' => Array &26 [
+            'is_active' => true,
+            'first_name' => 'Jamel',
+            'last_name' => 'Hahn',
+            'name' => 'Miss Harmony Lubowitz',
+            'email' => 'brad44@example.net',
+            'email_verified_at' => '2026-01-10 14:09:15',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'IKY3q8v1JG',
+            'lang' => 'it',
+            'is_otp' => false,
+            'password_expires_at' => null,
+            'id' => '019ba806-7981-7252-9df1-bab3e659b92d',
+            'updated_at' => '2026-01-10 14:09:15',
+            'created_at' => '2026-01-10 14:09:15',
+        ],
+        'changes' => Array &27 [],
+        'previous' => Array &28 [],
+        'casts' => Array &29 [
+            'id' => 'string',
+            'email_verified_at' => 'datetime',
+            'is_active' => 'boolean',
+            'roles.pivot.id' => 'string',
+            'is_otp' => 'boolean',
+            'password_expires_at' => 'datetime',
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+            'updated_by' => 'string',
+            'created_by' => 'string',
+            'deleted_by' => 'string',
+        ],
+        'classCastCache' => Array &30 [],
+        'attributeCastCache' => Array &31 [],
+        'dateFormat' => null,
+        'appends' => Array &32 [],
+        'dispatchesEvents' => Array &33 [],
+        'observables' => Array &34 [],
+        'relations' => Array &35 [],
+        'touches' => Array &36 [],
+        'relationAutoloadCallback' => null,
+        'relationAutoloadContext' => null,
+        'timestamps' => true,
+        'usesUniqueIds' => true,
+        'hidden' => Array &37 [
+            0 => 'password',
+            1 => 'remember_token',
+            2 => 'two_factor_recovery_codes',
+            3 => 'two_factor_secret',
+        ],
+        'visible' => Array &38 [],
+        'fillable' => Array &39 [
+            0 => 'id',
+            1 => 'name',
+            2 => 'first_name',
+            3 => 'last_name',
+            4 => 'email',
+            5 => 'password',
+            6 => 'lang',
+            7 => 'current_team_id',
+            8 => 'is_active',
+            9 => 'is_otp',
+            10 => 'password_expires_at',
+            11 => 'type',
+            12 => 'id',
+            13 => 'name',
+            14 => 'first_name',
+            15 => 'last_name',
+            16 => 'email',
+            17 => 'password',
+            18 => 'lang',
+            19 => 'current_team_id',
+            20 => 'is_active',
+            21 => 'is_otp',
+            22 => 'password_expires_at',
+            23 => 'type',
+        ],
+        'guarded' => Array &40 [
+            0 => '*',
+        ],
+        'authPasswordName' => 'password',
+        'rememberTokenName' => 'remember_token',
+        'pivot' => null,
+        'childColumn' => 'type',
+        'childTypes' => Array &41 [
+            'master_admin' => 'Modules\User\Models\User',
+            'backoffice_user' => 'Modules\User\Models\User',
+            'customer_user' => 'Modules\User\Models\User',
+            'system' => 'Modules\User\Models\User',
+            'technician' => 'Modules\User\Models\User',
+        ],
+        'guard_name' => 'web',
+        'accessToken' => null,
+        'hasChildren' => true,
+        'mediaConversions' => Array &42 [],
+        'mediaCollections' => Array &43 [],
+        'deletePreservingMedia' => false,
+        'unAttachedMediaLibraryItems' => Array &44 [],
+        'permissionClass' => null,
+        'wildcardClass' => null,
+        'roleClass' => null,
+        'forceDeleting' => false,
+    ),
+].
+
+  at Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:394
+    390▕ 
+    391▕     // Assert
+    392▕     expect($admins)
+    393▕         ->toHaveCount(2)
+  ➜ 394▕         ->toContain([$admin1, $admin2])
+    395▕         ->not()->toContain($member);
+    396▕ });
+    397▕ 
+    398▕ it('can get team members by role', function (): void {
+
+  1   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:394
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that a traversable contains Array &0 [
+    0 => Modules\User\Models\User Object #7255 (
+        'connection' => 'user',
+        'table' => null,
+        'primaryKey' => 'id',
+        'keyType' => 'string',
+        'incrementing' => false,
+        'with' => Array &1 [],
+        'withCount' => Array &2 [],
+        'preventsLazyLoading' => false,
+        'perPage' => 15,
+        'exists' => true,
+        'wasRecentlyCreated' => true,
+        'escapeWhenCastingToString' => false,
+        'attributes' => Array &3 [
+            'is_active' => true,
+            'first_name' => 'Ted',
+            'last_name' => 'Hoeger',
+            'name' => 'Abbie Moore',
+            'email' => 'omertz@example.org',
+            'email_verified_at' => '2026-01-10 14:09:15',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'ZrPO1m3QAl',
+            'lang' => 'it',
+            'is_otp' => false,
+            'password_expires_at' => '2027-01-04 09:14:26',
+            'id' => '019ba806-7aa3-71ef-9cb0-b62bd867b579',
+            'updated_at' => '2026-01-10 14:09:15',
+            'created_at' => '2026-01-10 14:09:15',
+        ],
+        'original' => Array &4 [
+            'is_active' => true,
+            'first_name' => 'Ted',
+            'last_name' => 'Hoeger',
+            'name' => 'Abbie Moore',
+            'email' => 'omertz@example.org',
+            'email_verified_at' => '2026-01-10 14:09:15',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'ZrPO1m3QAl',
+            'lang' => 'it',
+            'is_otp' => false,
+            'password_expires_at' => '2027-01-04 09:14:26',
+            'id' => '019ba806-7aa3-71ef-9cb0-b62bd867b579',
+            'updated_at' => '2026-01-10 14:09:15',
+            'created_at' => '2026-01-10 14:09:15',
+        ],
+        'changes' => Array &5 [],
+        'previous' => Array &6 [],
+        'casts' => Array &7 [
+            'id' => 'string',
+            'email_verified_at' => 'datetime',
+            'is_active' => 'boolean',
+            'roles.pivot.id' => 'string',
+            'is_otp' => 'boolean',
+            'password_expires_at' => 'datetime',
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+            'updated_by' => 'string',
+            'created_by' => 'string',
+            'deleted_by' => 'string',
+        ],
+        'classCastCache' => Array &8 [],
+        'attributeCastCache' => Array &9 [],
+        'dateFormat' => null,
+        'appends' => Array &10 [],
+        'dispatchesEvents' => Array &11 [],
+        'observables' => Array &12 [],
+        'relations' => Array &13 [],
+        'touches' => Array &14 [],
+        'relationAutoloadCallback' => null,
+        'relationAutoloadContext' => null,
+        'timestamps' => true,
+        'usesUniqueIds' => true,
+        'hidden' => Array &15 [
+            0 => 'password',
+            1 => 'remember_token',
+            2 => 'two_factor_recovery_codes',
+            3 => 'two_factor_secret',
+        ],
+        'visible' => Array &16 [],
+        'fillable' => Array &17 [
+            0 => 'id',
+            1 => 'name',
+            2 => 'first_name',
+            3 => 'last_name',
+            4 => 'email',
+            5 => 'password',
+            6 => 'lang',
+            7 => 'current_team_id',
+            8 => 'is_active',
+            9 => 'is_otp',
+            10 => 'password_expires_at',
+            11 => 'type',
+            12 => 'id',
+            13 => 'name',
+            14 => 'first_name',
+            15 => 'last_name',
+            16 => 'email',
+            17 => 'password',
+            18 => 'lang',
+            19 => 'current_team_id',
+            20 => 'is_active',
+            21 => 'is_otp',
+            22 => 'password_expires_at',
+            23 => 'type',
+        ],
+        'guarded' => Array &18 [
+            0 => '*',
+        ],
+        'authPasswordName' => 'password',
+        'rememberTokenName' => 'remember_token',
+        'pivot' => null,
+        'childColumn' => 'type',
+        'childTypes' => Array &19 [
+            'master_admin' => 'Modules\User\Models\User',
+            'backoffice_user' => 'Modules\User\Models\User',
+            'customer_user' => 'Modules\User\Models\User',
+            'system' => 'Modules\User\Models\User',
+            'technician' => 'Modules\User\Models\User',
+        ],
+        'guard_name' => 'web',
+        'accessToken' => null,
+        'hasChildren' => true,
+        'mediaConversions' => Array &20 [],
+        'mediaCollections' => Array &21 [],
+        'deletePreservingMedia' => false,
+        'unAttachedMediaLibraryItems' => Array &22 [],
+        'permissionClass' => null,
+        'wildcardClass' => null,
+        'roleClass' => null,
+        'forceDeleting' => false,
+    ),
+    1 => Modules\User\Models\User Object #7626 (
+        'connection' => 'user',
+        'table' => null,
+        'primaryKey' => 'id',
+        'keyType' => 'string',
+        'incrementing' => false,
+        'with' => Array &23 [],
+        'withCount' => Array &24 [],
+        'preventsLazyLoading' => false,
+        'perPage' => 15,
+        'exists' => true,
+        'wasRecentlyCreated' => true,
+        'escapeWhenCastingToString' => false,
+        'attributes' => Array &25 [
+            'is_active' => true,
+            'first_name' => 'Chelsea',
+            'last_name' => 'Bahringer',
+            'name' => 'Clemens Kuphal',
+            'email' => 'efren.wisozk@example.org',
+            'email_verified_at' => '2026-01-10 14:09:15',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'vcRKQx1t9S',
+            'lang' => 'it',
+            'is_otp' => false,
+            'password_expires_at' => null,
+            'id' => '019ba806-7aa9-70b8-b5d1-23c393ed09d4',
+            'updated_at' => '2026-01-10 14:09:15',
+            'created_at' => '2026-01-10 14:09:15',
+        ],
+        'original' => Array &26 [
+            'is_active' => true,
+            'first_name' => 'Chelsea',
+            'last_name' => 'Bahringer',
+            'name' => 'Clemens Kuphal',
+            'email' => 'efren.wisozk@example.org',
+            'email_verified_at' => '2026-01-10 14:09:15',
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'remember_token' => 'vcRKQx1t9S',
+            'lang' => 'it',
+            'is_otp' => false,
+            'password_expires_at' => null,
+            'id' => '019ba806-7aa9-70b8-b5d1-23c393ed09d4',
+            'updated_at' => '2026-01-10 14:09:15',
+            'created_at' => '2026-01-10 14:09:15',
+        ],
+        'changes' => Array &27 [],
+        'previous' => Array &28 [],
+        'casts' => Array &29 [
+            'id' => 'string',
+            'email_verified_at' => 'datetime',
+            'is_active' => 'boolean',
+            'roles.pivot.id' => 'string',
+            'is_otp' => 'boolean',
+            'password_expires_at' => 'datetime',
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            'deleted_at' => 'datetime',
+            'updated_by' => 'string',
+            'created_by' => 'string',
+            'deleted_by' => 'string',
+        ],
+        'classCastCache' => Array &30 [],
+        'attributeCastCache' => Array &31 [],
+        'dateFormat' => null,
+        'appends' => Array &32 [],
+        'dispatchesEvents' => Array &33 [],
+        'observables' => Array &34 [],
+        'relations' => Array &35 [],
+        'touches' => Array &36 [],
+        'relationAutoloadCallback' => null,
+        'relationAutoloadContext' => null,
+        'timestamps' => true,
+        'usesUniqueIds' => true,
+        'hidden' => Array &37 [
+            0 => 'password',
+            1 => 'remember_token',
+            2 => 'two_factor_recovery_codes',
+            3 => 'two_factor_secret',
+        ],
+        'visible' => Array &38 [],
+        'fillable' => Array &39 [
+            0 => 'id',
+            1 => 'name',
+            2 => 'first_name',
+            3 => 'last_name',
+            4 => 'email',
+            5 => 'password',
+            6 => 'lang',
+            7 => 'current_team_id',
+            8 => 'is_active',
+            9 => 'is_otp',
+            10 => 'password_expires_at',
+            11 => 'type',
+            12 => 'id',
+            13 => 'name',
+            14 => 'first_name',
+            15 => 'last_name',
+            16 => 'email',
+            17 => 'password',
+            18 => 'lang',
+            19 => 'current_team_id',
+            20 => 'is_active',
+            21 => 'is_otp',
+            22 => 'password_expires_at',
+            23 => 'type',
+        ],
+        'guarded' => Array &40 [
+            0 => '*',
+        ],
+        'authPasswordName' => 'password',
+        'rememberTokenName' => 'remember_token',
+        'pivot' => null,
+        'childColumn' => 'type',
+        'childTypes' => Array &41 [
+            'master_admin' => 'Modules\User\Models\User',
+            'backoffice_user' => 'Modules\User\Models\User',
+            'customer_user' => 'Modules\User\Models\User',
+            'system' => 'Modules\User\Models\User',
+            'technician' => 'Modules\User\Models\User',
+        ],
+        'guard_name' => 'web',
+        'accessToken' => null,
+        'hasChildren' => true,
+        'mediaConversions' => Array &42 [],
+        'mediaCollections' => Array &43 [],
+        'deletePreservingMedia' => false,
+        'unAttachedMediaLibraryItems' => Array &44 [],
+        'permissionClass' => null,
+        'wildcardClass' => null,
+        'roleClass' => null,
+        'forceDeleting' => false,
+    ),
+].
+
+  at Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:415
+    411▕     $nurses = $team->users()->wherePivot('role', 'nurse')->get();
+    412▕ 
+    413▕     // Assert
+    414▕     expect($doctors)->toHaveCount(2);
+  ➜ 415▕     expect($doctors)->toContain([$doctor1, $doctor2]);
+    416▕     expect($nurses)->toHaveCount(1);
+    417▕     expect($nurses)->toContain($nurse);
+    418▕ });
+    419▕
+
+  1   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:415
+
+  ───────────────────  
+  …   QueryException   
+  Array to string conversion (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `team_user` (`user_id`, `team_id`, `created_at`, `updated_at`, `role`, `permissions`) values (019ba806-7d18-730c-bf50-6a57a574f74d, 350, 2026-01-10 14:09:16, 2026-01-10 14:09:16, member, ?))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:727
+    723▕      */
+    724▕     public function bindValues($statement, $bindings)
+    725▕     {
+    726▕         foreach ($bindings as $key => $value) {
+  ➜ 727▕             $statement->bindValue(
+    728▕                 is_string($key) ? $key : $key + 1,
+    729▕                 $value,
+    730▕                 match (true) {
+    731▕                     is_int($value) => PDO::PARAM_INT,
+
+      [2m+12 vendor frames [22m
+  13  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:436
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can get team invitations  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::invitations()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:452
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can get pending team invitations  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::invitations()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:480
+
+  ───────────────────  
+  …   QueryException   
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'slug' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: laravelpizza_data_test, SQL: insert into `teams` (`name`, `user_id`, `personal_team`, `slug`, `updated_at`, `created_at`) values (Logistica Team, 019ba806-8d66-7119-bcb0-8df96ac03f0d, 0, unique-team, 2026-01-10 14:09:20, 2026-01-10 14:09:20))
+
+  at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
+     43▕             if ($this->pretending()) {
+     44▕                 return true;
+     45▕             }
+     46▕ 
+  ➜  47▕             $statement = $this->getPdo()->prepare($query);
+     48▕ 
+     49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
+     50▕ 
+     51▕             $this->recordsHaveBeenModified();
+
+      [2m+15 vendor frames [22m
+  16  Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:530
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that any soft deleted row in the table [teams] matches the attributes {"id":354}.
+
+Found: [
+    {
+        "id": 1,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": null,
+        "name": "Studio Dentistico Milano",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 14:01:57",
+        "updated_at": "2026-01-10 14:01:57",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null
+    },
+    {
+        "id": 2,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": "019ba7ff-cab5-706a-862b-b00b02f5ff2c",
+        "name": "Risorse Umane Team",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 14:01:57",
+        "updated_at": "2026-01-10 14:01:57",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null
+    },
+    {
+        "id": 3,
+        "owner_id": null,
+        "uuid": null,
+        "user_id": "019ba7ff-cba7-7329-bb0a-22e67ba5a268",
+        "name": "Supporto Clienti Team",
+        "personal_team": 0,
+        "code": null,
+        "created_at": "2026-01-10 14:01:57",
+        "updated_at": "2026-01-10 14:01:57",
+        "updated_by": null,
+        "created_by": null,
+        "deleted_at": null,
+        "deleted_by": null
+    }
+] and 339 others.
+
+  at Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:550
+    546▕     // Act
+    547▕     $team->delete();
+    548▕ 
+    549▕     // Assert
+  ➜ 550▕     $this->assertSoftDeleted('teams', ['id' => $team->id]);
+    551▕     $this->assertDatabaseHas('teams', ['id' => $team->id]);
+    552▕ });
+    553▕ 
+    554▕ it('can restore soft deleted team', function (): void {
+
+  ───────────────────  
+   FAILED  Modules\User\tests\Feature\TeamManagementBusinessLogicTest > it can restore soft deleted team  BadMethodCallException   
+  Call to undefined method Modules\User\Models\Team::restore()
+
+  at vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67
+     63▕      * @throws \BadMethodCallException
+     64▕      */
+     65▕     protected static function throwBadMethodCallException($method)
+     66▕     {
+  ➜  67▕         throw new BadMethodCallException(sprintf(
+     68▕             'Call to undefined method %s::%s()', static::class, $method
+     69▕         ));
+     70▕     }
+     71▕ }
+
+      [2m+3 vendor frames [22m
+  4   Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:560
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that a row in the table [team_user] does not match the attributes {
+    "team_id": 356,
+    "user_id": "019ba806-912f-73d9-8cd0-9a88d3a99bd4"
+}.
+
+Found similar results: [
+    {
+        "team_id": 356,
+        "user_id": "019ba806-912f-73d9-8cd0-9a88d3a99bd4"
+    }
+].
+
+  at Modules/User/tests/Feature/TeamManagementBusinessLogicTest.php:578
+    574▕     $team->forceDelete();
+    575▕ 
+    576▕     // Assert
+    577▕     $this->assertDatabaseMissing('teams', ['id' => $team->id]);
+  ➜ 578▕     $this->assertDatabaseMissing('team_user', [
+    579▕         'team_id' => $team->id,
+    580▕         'user_id' => $user->id,
+    581▕     ]);
+    582▕ });
+
+
+  Tests:    41 failed, 1 risky, 14 passed (45 assertions)
+  Duration: 17.72s
+

@@ -199,7 +199,7 @@ describe('Filament Builder Blocks System', function () {
     test('page component integration with blocks system', function () {
         $response = get('/');
         $status = $response->getStatusCode();
-        if ($status !== 200) {
+        if (200 !== $status) {
             $this->assertTrue(true);
 
             return;
@@ -242,7 +242,7 @@ describe('Filament Builder Blocks System', function () {
             }
 
             $title = $data['title'] ?? null;
-            if (is_string($title) && $title !== '') {
+            if (is_string($title) && '' !== $title) {
                 $this->assertStringContainsString($title, $content);
             }
         }
@@ -341,7 +341,7 @@ describe('Filament Builder Blocks System', function () {
         $startTime = microtime(true);
 
         $response = get('/');
-        if ($response->getStatusCode() !== 200) {
+        if (200 !== $response->getStatusCode()) {
             $this->assertTrue(true);
 
             return;

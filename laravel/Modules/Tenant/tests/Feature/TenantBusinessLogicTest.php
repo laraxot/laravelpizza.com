@@ -9,8 +9,8 @@ use Modules\Tenant\Models\TenantDomain;
 use Modules\Tenant\Models\TenantSetting;
 use Modules\Tenant\Models\TenantSubscription;
 use Modules\User\Models\User;
-use Tests\TestCase;
 use Webmozart\Assert\Assert;
+use Modules\Tenant\Tests\TestCase;
 
 class TenantBusinessLogicTest extends TestCase
 {

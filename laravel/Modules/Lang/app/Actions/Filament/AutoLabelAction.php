@@ -98,11 +98,7 @@ class AutoLabelAction
             $label_tkey = $trans_key.'.actions.'.$val.'';
         }
 
-       
-
         $label_key = $label_tkey.'.'.Str::snake($type);
-
-        
 
         $label = trans($label_key);
         if (is_string($label) && $label_key === $label) { // se non esiste la traduzione, la salvo

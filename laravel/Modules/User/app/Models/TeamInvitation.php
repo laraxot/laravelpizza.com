@@ -11,6 +11,7 @@ use Illuminate\Support\Carbon;
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Database\Factories\TeamInvitationFactory;
 use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 
 /**
@@ -66,6 +67,9 @@ class TeamInvitation extends BaseModel
     protected $fillable = [
         'email',
         'role',
+        'accepted_at',
+        'declined_at',
+        'user_id',
     ];
 
     /**
@@ -80,5 +84,38 @@ class TeamInvitation extends BaseModel
         $team_class = $xotData->getTeamClass();
 
         return $this->belongsTo($team_class);
+    }
+
+    /**
+     * Accept the invitation.
+     */
+    public function accept(UserContract $user): void
+    {
+        if ($this->team) {
+            $this->team->users()->attach($user->getKey(), ['role' => $this->role]);
+        }
+        $this->delete();
+    }
+
+    /**
+     * Decline the invitation.
+     */
+    public function decline(): void
+    {
+        $this->delete();
+    }
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'id' => 'integer',
+            'accepted_at' => 'datetime',
+            'declined_at' => 'datetime',
+        ];
     }
 }

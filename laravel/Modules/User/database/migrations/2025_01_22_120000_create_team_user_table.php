@@ -25,12 +25,16 @@ return new class extends XotBaseMigration {
         // -- CREATE --
         $this->tableCreate(static function (Blueprint $table): void {
             $table->id();
-            $table->foreignId('team_id');
+            $table->foreignId('team_id')->constrained('teams')->cascadeOnDelete();
             $table->uuid('user_id')->nullable()->index();
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
             $table->string('role')->nullable();
+            $table->text('permissions')->nullable();
 
             // Indice univoco per evitare duplicati team_id + user_id
             $table->unique(['team_id', 'user_id']);
+            $table->softDeletes();
+            $table->timestamps();
         });
 
         // -- UPDATE --
@@ -52,6 +56,18 @@ return new class extends XotBaseMigration {
 
                 // Impostiamo la nuova PRIMARY KEY su id
                 $this->query('ALTER TABLE `'.$this->table_name.'` ADD PRIMARY KEY (`id`)');
+            }
+
+            if (! $this->hasColumn('role')) {
+                $table->string('role')->nullable();
+            }
+
+            if (! $this->hasColumn('permissions')) {
+                $table->text('permissions')->nullable();
+            }
+
+            if (! $this->hasColumn('joined_at')) {
+                $table->timestamp('joined_at')->nullable();
             }
 
             // Aggiorniamo i timestamp e soft deletes

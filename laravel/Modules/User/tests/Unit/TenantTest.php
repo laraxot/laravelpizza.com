@@ -8,9 +8,9 @@ use Illuminate\Support\Str;
 use Modules\User\Contracts\TenantContract;
 use Modules\User\Models\BaseTenant;
 use Modules\User\Models\Tenant;
+use Modules\User\Tests\TestCase;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\Sluggable\SlugOptions;
-use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 

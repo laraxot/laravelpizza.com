@@ -145,7 +145,7 @@ describe('HasTeams Trait', function () {
             ->get();
 
         expect($activeUserTeams)->toHaveCount(2);
-        expect($activeUserTeams->every(fn ($team) => isset($team->is_active) && $team->is_active === true))->toBeTrue();
+        expect($activeUserTeams->every(fn ($team) => isset($team->is_active) && true === $team->is_active))->toBeTrue();
     });
 
     it('can check team membership with timestamps', function () {

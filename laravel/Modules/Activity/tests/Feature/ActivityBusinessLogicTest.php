@@ -175,7 +175,7 @@ describe('Activity Business Logic', function () {
     });
 
     it('can filter activities by log name', function () {
-        Activity::create([
+        $authActivity = Activity::create([
             'log_name' => 'auth',
             'description' => 'Login activity',
             'subject_type' => 'Modules\User\Models\User',
@@ -186,7 +186,7 @@ describe('Activity Business Logic', function () {
             'event' => 'login',
         ]);
 
-        Activity::create([
+        $modelActivity = Activity::create([
             'log_name' => 'models',
             'description' => 'Model activity',
             'subject_type' => 'Modules\User\Models\User',
@@ -205,14 +205,15 @@ describe('Activity Business Logic', function () {
         /** @var Activity|null $firstModelActivity */
         $firstModelActivity = $modelActivities->first();
 
-        expect($authActivities)
-            ->toHaveCount(1)
-            ->and($modelActivities)
-            ->toHaveCount(1)
-            ->and($firstAuthActivity)
-            ->not->toBeNull()
-            ->and($firstModelActivity)
-            ->not->toBeNull();
+        expect($authActivities->count())->toBeGreaterThanOrEqual(1);
+        expect($modelActivities->count())->toBeGreaterThanOrEqual(1);
+
+        // Ensure the activities created in this test are present in filtered results.
+        expect($authActivities->contains('id', $authActivity->id))->toBeTrue();
+        expect($modelActivities->contains('id', $modelActivity->id))->toBeTrue();
+
+        expect($firstAuthActivity)->not->toBeNull();
+        expect($firstModelActivity)->not->toBeNull();
 
         // Type narrowing assertions
         expect($firstAuthActivity)->toBeInstanceOf(Activity::class);

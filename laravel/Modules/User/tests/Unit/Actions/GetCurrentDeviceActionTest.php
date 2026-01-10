@@ -7,7 +7,7 @@ use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;
 use Modules\User\Tests\TestCase;
 
-/**
+/*
  * @property \Modules\User\Actions\GetCurrentDeviceAction $action
  * @property \Mockery\MockInterface|\Jenssegers\Agent\Agent $mockAgent
  */
@@ -15,14 +15,14 @@ uses(TestCase::class);
 
 beforeEach(function () {
     $this->action = new GetCurrentDeviceAction();
-    
+
     // Mock the Agent class
-    $this->mockAgent = \Mockery::mock(Agent::class);
+    $this->mockAgent = Mockery::mock(Agent::class);
     $this->app->instance(Agent::class, $this->mockAgent);
 });
 
 afterEach(function () {
-    \Mockery::close();
+    Mockery::close();
 });
 
 it('creates device with valid agent data', function (): void {
@@ -155,7 +155,7 @@ it('handles empty mobile id', function (): void {
 
     // Act & Assert
     expect(fn () => $this->action->execute($emptyMobileId))
-        ->toThrow(\InvalidArgumentException::class, 'L\'ID mobile non può essere vuoto');
+        ->toThrow(InvalidArgumentException::class, 'L\'ID mobile non può essere vuoto');
 });
 
 it('handles null mobile id', function (): void {

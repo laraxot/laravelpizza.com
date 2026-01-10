@@ -119,7 +119,17 @@ abstract class BaseTeam extends BaseModel implements TeamContract
         /** @var class-string<Model> */
         $userClass = $xotData->getUserClass();
 
-        return $this->belongsToManyX($userClass);
+        return $this->belongsToManyX($userClass)
+            ->using(TeamUser::class)
+            ->withPivot(['role', 'permissions']);
+    }
+
+    /**
+     * Get the team users (memberships) relationship.
+     */
+    public function teamUsers(): HasMany
+    {
+        return $this->hasMany(TeamUser::class);
     }
 
     /**

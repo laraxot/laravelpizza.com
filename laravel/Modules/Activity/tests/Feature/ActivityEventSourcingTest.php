@@ -14,7 +14,7 @@ uses(\Modules\Activity\Tests\TestCase::class);
 test('activity event sourcing lifecycle works correctly', function () {
     $user = User::factory()->create(); // @phpstan-ignore-line method.nonObject // @phpstan-ignore-line method.nonObject
     \assert($user instanceof User);
-    expect($user)->not->toBeNull();
+    $this->assertNotNull($user);
 
     $activityData = [
         'log_name' => 'user_actions',
@@ -29,32 +29,30 @@ test('activity event sourcing lifecycle works correctly', function () {
 
     $activity = Activity::query()->create($activityData);
     \assert($activity instanceof Activity);
-    expect($activity)->not->toBeNull();
-
-    expect($activity)
-        ->toBeInstanceOf(Activity::class);
-
-    expect($activity->log_name)->toBe('user_actions')
-        ->and($activity->description)->toBe('User performed test action')
-        ->and($activity->subject_type)->toBe(User::class)
-        ->and($activity->subject_id)->toBe($user->id)
-        ->and($activity->causer_type)->toBe(User::class)
-        ->and($activity->causer_id)->toBe($user->id)
-        ->and($activity->event)->toBe('created');
+    $this->assertNotNull($activity);
+    $this->assertInstanceOf(Activity::class, $activity);
+    $this->assertSame('user_actions', $activity->log_name);
+    $this->assertSame('User performed test action', $activity->description);
+    $this->assertSame(User::class, $activity->subject_type);
+    $this->assertSame($user->id, $activity->subject_id);
+    $this->assertSame(User::class, $activity->causer_type);
+    $this->assertSame($user->id, $activity->causer_id);
+    $this->assertSame('created', $activity->event);
 
     $properties = $activity->properties;
-    expect($properties)->toHaveKey('action', 'test')
-        ->and($properties)->toHaveKey('result', 'success');
+    $this->assertInstanceOf(Collection::class, $properties);
+    $this->assertSame('test', $properties->get('action'));
+    $this->assertSame('success', $properties->get('result'));
 });
 
 test('activity can be queried with complex scopes', function () {
     $user1 = User::factory()->create(); // @phpstan-ignore-line method.nonObject
     \assert($user1 instanceof User);
-    expect($user1)->not->toBeNull();
+    $this->assertNotNull($user1);
 
     $user2 = User::factory()->create(); // @phpstan-ignore-line method.nonObject
     \assert($user2 instanceof User);
-    expect($user2)->not->toBeNull();
+    $this->assertNotNull($user2);
 
     $activity1 = Activity::factory()->create([ // @phpstan-ignore-line method.nonObject
         'log_name' => 'security',
@@ -63,7 +61,7 @@ test('activity can be queried with complex scopes', function () {
         'causer_id' => $user1->id
     ]);
     \assert($activity1 instanceof Activity);
-    expect($activity1)->not->toBeNull();
+    $this->assertNotNull($activity1);
 
     $activity2 = Activity::factory()->create([ // @phpstan-ignore-line method.nonObject
         'log_name' => 'security',
@@ -72,7 +70,7 @@ test('activity can be queried with complex scopes', function () {
         'causer_id' => $user2->id
     ]);
     \assert($activity2 instanceof Activity);
-    expect($activity2)->not->toBeNull();
+    $this->assertNotNull($activity2);
 
     $activity3 = Activity::factory()->create([ // @phpstan-ignore-line method.nonObject
         'log_name' => 'audit',
@@ -82,24 +80,31 @@ test('activity can be queried with complex scopes', function () {
     ]);
     \assert($activity3 instanceof Activity);
 
-    $securityActivities = Activity::inLog('security')->get();
+    $securityActivities = Activity::inLog('security')
+        ->whereKey([$activity1->id, $activity2->id])
+        ->get();
+
     $user1Activities = Activity::query()
         ->where('causer_type', User::class)
         ->where('causer_id', $user1->id)
+        ->whereKey([$activity1->id, $activity3->id])
         ->get();
-    $loginActivities = Activity::forEvent('login')->get();
 
-    expect($securityActivities)->toHaveCount(2);
-    expect($user1Activities)->toHaveCount(2);
+    $loginActivities = Activity::forEvent('login')
+        ->whereKey([$activity1->id])
+        ->get();
+
+    $this->assertCount(2, $securityActivities);
+    $this->assertCount(2, $user1Activities);
 
     /** @var Activity|null $firstLoginActivity */
     $firstLoginActivity = $loginActivities->first();
-    expect($loginActivities)->toHaveCount(1)
-        ->and($firstLoginActivity)->not->toBeNull();
+    $this->assertCount(1, $loginActivities);
+    $this->assertNotNull($firstLoginActivity);
 
-    // Type narrowing assertion
-    expect($firstLoginActivity)->toBeInstanceOf(Activity::class);
-    expect($firstLoginActivity->id)->toBe($activity1->id);
+    \assert($firstLoginActivity instanceof Activity);
+    $this->assertInstanceOf(Activity::class, $firstLoginActivity);
+    $this->assertSame($activity1->id, $firstLoginActivity->id);
 });
 
 test('snapshot creation and retrieval works correctly', function () {
@@ -120,24 +125,26 @@ test('snapshot creation and retrieval works correctly', function () {
 
     $snapshot = Snapshot::create($snapshotData);
     \assert($snapshot instanceof Snapshot);
-    expect($snapshot)->not->toBeNull();
-
-    expect($snapshot->aggregate_uuid)->toBe($aggregateUuid)
-        ->and($snapshot->aggregate_version)->toBe(5);
+    $this->assertNotNull($snapshot);
+    $this->assertSame($aggregateUuid, $snapshot->aggregate_uuid);
+    $this->assertSame(5, $snapshot->aggregate_version);
 
     $state = $snapshot->state;
-    expect($state)->toBeArray()
-        ->toHaveKey('balance', 1000)
-        ->toHaveKey('status', 'active');
+    $this->assertIsArray($state);
+    $this->assertArrayHasKey('balance', $state);
+    $this->assertSame(1000, $state['balance']);
+    $this->assertArrayHasKey('status', $state);
+    $this->assertSame('active', $state['status']);
 
     $transactions = $state['transactions'] ?? null;
-    expect($transactions)->toBeArray()->toHaveCount(2);
+    $this->assertIsArray($transactions);
+    $this->assertCount(2, $transactions);
 
     /** @var Snapshot|null $retrievedSnapshot */
     $retrievedSnapshot = Snapshot::uuid($aggregateUuid)->first();
     \assert($retrievedSnapshot instanceof Snapshot);
-    expect($retrievedSnapshot)->not->toBeNull()
-        ->and($retrievedSnapshot->id)->toBe($snapshot->id);
+    $this->assertNotNull($retrievedSnapshot);
+    $this->assertSame($snapshot->id, $retrievedSnapshot->id);
 });
 
 test('stored event creation and event reconstruction works', function () {
@@ -163,20 +170,25 @@ test('stored event creation and event reconstruction works', function () {
         'created_at' => now(),
     ]);
     \assert($storedEvent instanceof StoredEvent);
-    expect($storedEvent)->not->toBeNull();
-
-    expect($storedEvent->event_class)->toBe($eventClass);
-    expect($storedEvent->aggregate_uuid)->toBe($aggregateUuid);
-    expect($storedEvent->event_properties)->toHaveKey('user_id', 1);
-    expect($storedEvent->event_properties)->toHaveKey('action', 'test_action');
+    $this->assertNotNull($storedEvent);
+    $this->assertSame($eventClass, $storedEvent->event_class);
+    $this->assertSame($aggregateUuid, $storedEvent->aggregate_uuid);
+    $eventProps = $storedEvent->event_properties;
+    $this->assertIsArray($eventProps);
+    $this->assertArrayHasKey('user_id', $eventProps);
+    $this->assertSame(1, $eventProps['user_id']);
+    $this->assertArrayHasKey('action', $eventProps);
+    $this->assertSame('test_action', $eventProps['action']);
 
     $metaData = $storedEvent->meta_data;
-    expect($metaData)->toBeInstanceOf(\Spatie\SchemalessAttributes\SchemalessAttributes::class);
+    $this->assertInstanceOf(\Spatie\SchemalessAttributes\SchemalessAttributes::class, $metaData);
 
     $metaDataArray = $metaData->toArray();
-    expect($metaDataArray)->toBeArray()
-        ->toHaveKey('processed', true)
-        ->toHaveKey('retry_count', 0);
+    $this->assertIsArray($metaDataArray);
+    $this->assertArrayHasKey('processed', $metaDataArray);
+    $this->assertTrue((bool) $metaDataArray['processed']);
+    $this->assertArrayHasKey('retry_count', $metaDataArray);
+    $this->assertSame(0, (int) $metaDataArray['retry_count']);
 });
 
 test('activity batch operations work correctly', function () {
@@ -187,33 +199,33 @@ test('activity batch operations work correctly', function () {
         'log_name' => 'batch_operation'
     ]);
     \assert($activities instanceof \Illuminate\Database\Eloquent\Collection);
-    expect($activities)->toHaveCount(3);
+    $this->assertCount(3, $activities);
 
     $batchActivities = Activity::forBatch($batchUuid)->get();
 
-    expect($batchActivities)->toHaveCount(3);
+    $this->assertCount(3, $batchActivities);
     
     foreach ($batchActivities as $activity) {
         \assert($activity instanceof Activity);
-        expect($activity->batch_uuid)->toBe($batchUuid)
-            ->and($activity->log_name)->toBe('batch_operation');
+        $this->assertSame($batchUuid, $activity->batch_uuid);
+        $this->assertSame('batch_operation', $activity->log_name);
     }
 });
 
 test('activity with batch scope returns correct results', function () {
     $withBatch = Activity::factory()->create(['batch_uuid' => Str::uuid()->toString()]); // @phpstan-ignore-line method.nonObject
     \assert($withBatch instanceof Activity);
-    expect($withBatch)->not->toBeNull();
+    $this->assertNotNull($withBatch);
 
     Activity::factory()->create(['batch_uuid' => null]); // @phpstan-ignore-line method.nonObject
 
     $activitiesWithBatch = Activity::hasBatch()->get();
 
     $firstActivity = $activitiesWithBatch->first();
-    expect($activitiesWithBatch)->toHaveCount(1);
+    $this->assertCount(1, $activitiesWithBatch);
     \assert($firstActivity instanceof Activity);
-    expect($firstActivity)->not->toBeNull();
-    expect($firstActivity->id)->toBe($withBatch->id);
+    $this->assertNotNull($firstActivity);
+    $this->assertSame($withBatch->id, $firstActivity->id);
 });
 
 test('activity properties support complex nested structures', function () {
@@ -250,27 +262,37 @@ test('activity properties support complex nested structures', function () {
         'event' => 'created',
     ]);
     \assert($activity instanceof Activity);
-    expect($activity)->not->toBeNull();
+    $this->assertNotNull($activity);
 
     $freshActivity = $activity->fresh();
     \assert($freshActivity instanceof Activity);
-    expect($freshActivity)->not->toBeNull();
+    $this->assertNotNull($freshActivity);
 
     $properties = $freshActivity->properties;
-    expect($properties)
-        ->toBeInstanceOf(Collection::class)
-        ->toHaveKey('user')
-        ->toHaveKey('action')
-        ->toHaveKey('context')
-        ->toHaveKey('timestamps');
+    $this->assertInstanceOf(Collection::class, $properties);
+    $this->assertTrue($properties->has('user'));
+    $this->assertTrue($properties->has('action'));
+    $this->assertTrue($properties->has('context'));
+    $this->assertTrue($properties->has('timestamps'));
 
     $userData = $properties->get('user');
     $contextData = $properties->get('context');
     $timestampsData = $properties->get('timestamps');
 
-    expect($userData)->toBeArray()->toHaveKeys(['id', 'name', 'roles', 'permissions'])
-        ->and($contextData)->toBeArray()->toHaveKeys(['request', 'response'])
-        ->and($timestampsData)->toBeArray()->toHaveKeys(['started_at', 'completed_at', 'duration']);
+    $this->assertIsArray($userData);
+    $this->assertArrayHasKey('id', $userData);
+    $this->assertArrayHasKey('name', $userData);
+    $this->assertArrayHasKey('roles', $userData);
+    $this->assertArrayHasKey('permissions', $userData);
+
+    $this->assertIsArray($contextData);
+    $this->assertArrayHasKey('request', $contextData);
+    $this->assertArrayHasKey('response', $contextData);
+
+    $this->assertIsArray($timestampsData);
+    $this->assertArrayHasKey('started_at', $timestampsData);
+    $this->assertArrayHasKey('completed_at', $timestampsData);
+    $this->assertArrayHasKey('duration', $timestampsData);
 });
 
 test('snapshot state maintains data integrity with large datasets', function () {
@@ -301,23 +323,26 @@ test('snapshot state maintains data integrity with large datasets', function () 
         'updated_at' => now(),
     ]);
     \assert($snapshot instanceof Snapshot);
-    expect($snapshot)->not->toBeNull();
+    $this->assertNotNull($snapshot);
 
     $freshSnapshot = $snapshot->fresh();
     \assert($freshSnapshot instanceof Snapshot);
-    expect($freshSnapshot)->not->toBeNull();
+    $this->assertNotNull($freshSnapshot);
 
     $state = $freshSnapshot->state;
-    expect($state)
-        ->toBeArray()
-        ->toHaveKey('users')
-        ->toHaveKey('metadata');
+    $this->assertIsArray($state);
+    $this->assertArrayHasKey('users', $state);
+    $this->assertArrayHasKey('metadata', $state);
 
     $users = $state['users'] ?? null;
     $metadata = $state['metadata'] ?? null;
 
-    expect($users)->toBeArray()->toHaveCount(100)
-        ->and($metadata)->toBeArray()->toHaveKeys(['generated_at', 'version', 'checksum']);
+    $this->assertIsArray($users);
+    $this->assertCount(100, $users);
+    $this->assertIsArray($metadata);
+    $this->assertArrayHasKey('generated_at', $metadata);
+    $this->assertArrayHasKey('version', $metadata);
+    $this->assertArrayHasKey('checksum', $metadata);
 });
 
 test('stored event handles complex event properties with nested arrays', function () {
@@ -368,27 +393,40 @@ test('stored event handles complex event properties with nested arrays', functio
         'created_at' => now(),
     ]);
     \assert($storedEvent instanceof StoredEvent);
-    expect($storedEvent)->not->toBeNull();
+    $this->assertNotNull($storedEvent);
 
     $freshStoredEvent = $storedEvent->fresh();
     \assert($freshStoredEvent instanceof StoredEvent);
-    expect($freshStoredEvent)->not->toBeNull();
+    $this->assertNotNull($freshStoredEvent);
 
     $eventProperties = $freshStoredEvent->event_properties;
-    expect($eventProperties)
-        ->toBeArray()
-        ->toHaveKey('order')
-        ->toHaveKey('customer')
-        ->toHaveKey('payment');
+    $this->assertIsArray($eventProperties);
+    $this->assertArrayHasKey('order', $eventProperties);
+    $this->assertArrayHasKey('customer', $eventProperties);
+    $this->assertArrayHasKey('payment', $eventProperties);
 
     $order = $eventProperties['order'] ?? null;
     $customer = $eventProperties['customer'] ?? null;
     $payment = $eventProperties['payment'] ?? null;
 
-    expect($order)->toBeArray()->toHaveKeys(['id', 'items', 'totals'])
-        ->and($customer)->toBeArray()->toHaveKeys(['id', 'name', 'email', 'address'])
-        ->and($payment)->toBeArray()->toHaveKeys(['method', 'transaction_id', 'status', 'amount']);
+    $this->assertIsArray($order);
+    $this->assertArrayHasKey('id', $order);
+    $this->assertArrayHasKey('items', $order);
+    $this->assertArrayHasKey('totals', $order);
+
+    $this->assertIsArray($customer);
+    $this->assertArrayHasKey('id', $customer);
+    $this->assertArrayHasKey('name', $customer);
+    $this->assertArrayHasKey('email', $customer);
+    $this->assertArrayHasKey('address', $customer);
+
+    $this->assertIsArray($payment);
+    $this->assertArrayHasKey('method', $payment);
+    $this->assertArrayHasKey('transaction_id', $payment);
+    $this->assertArrayHasKey('status', $payment);
+    $this->assertArrayHasKey('amount', $payment);
 
     $items = $order['items'] ?? null;
-    expect($items)->toBeArray()->toHaveCount(50);
+    $this->assertIsArray($items);
+    $this->assertCount(50, $items);
 });

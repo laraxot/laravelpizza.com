@@ -60,4 +60,17 @@ use Modules\Xot\Contracts\ProfileContract;
 class TeamUser extends BaseTeamUser
 {
     protected $connection = 'user';
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'id' => 'integer',
+            'permissions' => 'array',
+        ];
+    }
 }

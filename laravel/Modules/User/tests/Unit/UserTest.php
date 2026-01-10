@@ -15,7 +15,7 @@ uses(TestCase::class);
 test('user can be created', function (): void {
     try {
         $factory = User::factory();
-        \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+        \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
 
         $user = $factory->create([
             'type' => UserType::MasterAdmin,
@@ -28,7 +28,7 @@ test('user can be created', function (): void {
         $this->assertIsString($user->email);
         $this->assertNotSame('', $user->email);
         $this->assertSame(UserType::MasterAdmin, $user->type);
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('User type aliases (e.g. master_admin) are not configured in this install.');
     }
 });
@@ -36,7 +36,7 @@ test('user can be created', function (): void {
 test('user has correct type casting', function (): void {
     try {
         $factory = User::factory();
-        \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+        \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
 
         $user = $factory->create(['type' => UserType::MasterAdmin]);
         \assert($user instanceof User);
@@ -46,14 +46,14 @@ test('user has correct type casting', function (): void {
 
         $this->assertInstanceOf(UserType::class, $type);
         $this->assertSame('master_admin', $type->value);
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('User type aliases (e.g. master_admin) are not configured in this install.');
     }
 });
 
 test('user password is hashed', function (): void {
     $factory = User::factory();
-    \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $user = $factory->create(['password' => Hash::make('password123')]);
     \assert($user instanceof User);
 
@@ -63,7 +63,7 @@ test('user password is hashed', function (): void {
 
 test('user can change password', function (): void {
     $factory = User::factory();
-    \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $user = $factory->create(['password' => Hash::make('password123')]);
     \assert($user instanceof User);
 
@@ -78,7 +78,7 @@ test('user can change password', function (): void {
 test('user can be updated', function (): void {
     try {
         $factory = User::factory();
-        \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+        \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
 
         $user = $factory->create([
             'type' => UserType::MasterAdmin,
@@ -93,14 +93,14 @@ test('user can be updated', function (): void {
         $user->refresh();
 
         $this->assertSame('updated@example.com', $user->email);
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('User type aliases (e.g. master_admin) are not configured in this install.');
     }
 });
 
 test('user can be deleted', function (): void {
     $factory = User::factory();
-    \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $user = $factory->create();
     \assert($user instanceof User);
 
@@ -113,7 +113,7 @@ test('user can be deleted', function (): void {
 
 test('user has fillable attributes', function (): void {
     $factory = User::factory();
-    \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $user = $factory->make();
     \assert($user instanceof User);
 
@@ -126,7 +126,7 @@ test('user has fillable attributes', function (): void {
 
 test('user has hidden attributes', function (): void {
     $factory = User::factory();
-    \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $user = $factory->make();
     \assert($user instanceof User);
 
@@ -138,7 +138,7 @@ test('user has hidden attributes', function (): void {
 
 test('user can be found by email', function (): void {
     $factory = User::factory();
-    \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $user = $factory->create();
     \assert($user instanceof User);
 
@@ -152,7 +152,7 @@ test('user can be found by email', function (): void {
 test('user can be found by type', function (): void {
     try {
         $factory = User::factory();
-        \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+        \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
 
         $user = $factory->create(['type' => UserType::MasterAdmin]);
         \assert($user instanceof User);
@@ -163,7 +163,7 @@ test('user can be found by type', function (): void {
         $firstAdmin = $admins->first();
         \assert($firstAdmin instanceof User);
         $this->assertSame($user->id, $firstAdmin->id);
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('User type aliases (e.g. master_admin) are not configured in this install.');
     }
 });
@@ -171,7 +171,7 @@ test('user can be found by type', function (): void {
 test('user can be created with different types', function (): void {
     try {
         $factory = User::factory();
-        \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+        \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
 
         $boUser = $factory->create(['type' => UserType::BoUser]);
         $customerUser = $factory->create(['type' => UserType::CustomerUser]);
@@ -180,14 +180,14 @@ test('user can be created with different types', function (): void {
 
         $this->assertSame(UserType::BoUser, $boUser->type);
         $this->assertSame(UserType::CustomerUser, $customerUser->type);
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('User type aliases are not configured in this install.');
     }
 });
 
 test('user has timestamps', function (): void {
     $factory = User::factory();
-    \assert($factory instanceof \Illuminate\Database\Eloquent\Factories\Factory);
+    \assert($factory instanceof Illuminate\Database\Eloquent\Factories\Factory);
     $user = $factory->create();
     \assert($user instanceof User);
 
