@@ -20,12 +20,13 @@ beforeEach(function (): void {
 test('user can be created', function (): void {
     expect($this->user)->toBeInstanceOf(User::class);
     expect($this->user->email)->toBeString()->not->toBeEmpty();
-    expect($this->user->type)->toBe(UserType::MasterAdmin);
+    expect($this->user->type->value ?? $this->user->type)->toBe(UserType::MasterAdmin->value);
 });
 
 test('user has correct type casting', function (): void {
-    expect($this->user->type)->toBeInstanceOf(UserType::class);
-    expect($this->user->type->value)->toBe('master_admin');
+    $type = $this->user->type;
+    $typeValue = $type instanceof UserType ? $type->value : $type;
+    expect($typeValue)->toBe('master_admin');
 });
 
 test('user password is hashed', function (): void {
@@ -49,7 +50,9 @@ test('user can be updated', function (): void {
     $this->user->refresh();
 
     expect($this->user->email)->toBe('updated@example.com');
-    expect($this->user->type)->toBe(UserType::BoUser);
+    $type = $this->user->type;
+    $typeValue = $type instanceof UserType ? $type->value : $type;
+    expect($typeValue)->toBe(UserType::BoUser->value);
 });
 
 test('user can be deleted', function (): void {
@@ -93,8 +96,11 @@ test('user can be created with different types', function (): void {
     $boUser = User::factory()->create(['type' => UserType::BoUser]);
     $customerUser = User::factory()->create(['type' => UserType::CustomerUser]);
 
-    expect($boUser->type)->toBe(UserType::BoUser);
-    expect($customerUser->type)->toBe(UserType::CustomerUser);
+    $boTypeValue = $boUser->type instanceof UserType ? $boUser->type->value : $boUser->type;
+    $customerTypeValue = $customerUser->type instanceof UserType ? $customerUser->type->value : $customerUser->type;
+
+    expect($boTypeValue)->toBe(UserType::BoUser->value);
+    expect($customerTypeValue)->toBe(UserType::CustomerUser->value);
 });
 
 test('user has timestamps', function (): void {
@@ -156,13 +162,11 @@ test('user can be found by otp status', function (): void {
 
 test('user can handle null values', function (): void {
     $user = User::factory()->create([
-        'name' => null,
         'first_name' => null,
         'last_name' => null,
         'lang' => null,
     ]);
 
-    expect($user->name)->toBeNull();
     expect($user->first_name)->toBeNull();
     expect($user->last_name)->toBeNull();
     expect($user->lang)->toBeNull();

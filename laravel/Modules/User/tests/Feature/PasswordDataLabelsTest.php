@@ -6,82 +6,53 @@ namespace Modules\User\Tests\Feature;
 
 use Livewire\Livewire;
 use Modules\User\Datas\PasswordData;
-use Modules\User\Datas\PasswordData as PasswordDataClass;
 use Modules\User\Http\Livewire\Auth\Login;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
-class PasswordDataLabelsTest extends TestCase
-{
-    /**
-     * Test that PasswordData generates components with correct labels.
-     */
-    public function testPasswordDataLabelsAreTranslated(): void
-    {
-        // Arrange
-        // We ensure we are in a known locale
-        app()->setLocale('it');
+uses(TestCase::class);
 
-        /** @var PasswordDataClass $passwordData */
-        $passwordData = PasswordDataClass::make();
-        $passwordData->setFieldName('password');
+test('password data labels are translated', function (): void {
+    // Arrange
+    app()->setLocale('it');
 
-        // Act
-        $passwordComponent = $passwordData->getPasswordFormComponent('password');
-        $confirmationComponent = $passwordData->getPasswordConfirmationFormComponent();
+    $passwordData = PasswordData::make();
+    $passwordData->setFieldName('password');
 
-        // Assert
-        // The label should be fetched from translation 'user::password-data.fields.password.label'
-        // Debug output to see what we are getting
-        // dump($passwordComponent->getLabel());
+    // Act
+    $passwordComponent = $passwordData->getPasswordFormComponent('password');
+    $confirmationComponent = $passwordData->getPasswordConfirmationFormComponent();
 
-        $this->assertEquals('Password', $passwordComponent->getLabel(), 'Label mismatch for password field. Got: '.$passwordComponent->getLabel());
-        $this->assertEquals('Conferma Password', $confirmationComponent->getLabel(), 'Label mismatch for confirmation field. Got: '.$confirmationComponent->getLabel());
-    }
+    // Assert
+    expect($passwordComponent->getLabel())->toBe('Password');
+    expect($confirmationComponent->getLabel())->toBe('Conferma Password');
+});
 
-    /**
-     * Test that Login form components have correct labels.
-     */
-    public function testLoginFormLabelsAreTranslated(): void
-    {
-        // Assemble
-        app()->setLocale('it');
-        $component = new Login();
+test('login form labels are translated', function (): void {
+    // Assemble
+    app()->setLocale('it');
+    
+    // Using Livewire test helper
+    $livewire = Livewire::test(Login::class);
+    $instance = $livewire->instance();
 
-        // Act
-        // We simulate the form creation.
-        // Since getFormSchema is protected, we use reflection or a Livewire test helper if possible.
-        // But simpler: Login extends Component and implements HasForms.
-        // We can check if we can access the schema.
+    // Filament forms are initialized on mount or when accessed.
+    $instance->mount();
 
-        // Using Livewire test helper is better
-        $livewire = Livewire::test(Login::class);
+    $form = $instance->getForm('form');
+    $components = $form->getComponents();
 
-        // We can inspect the form components via the testing interface if exposed,
-        // but Livewire testing is mostly assertSee.
-        // Let's rely on instance inspection which is safer for property checks.
+    // Find components
+    $email = collect($components)->first(fn ($c) => 'email' === $c->getName());
+    $password = collect($components)->first(fn ($c) => 'password' === $c->getName());
+    $remember = collect($components)->first(fn ($c) => 'remember' === $c->getName());
 
-        $instance = $livewire->instance();
+    // Assert
+    expect($email)->not->toBeNull();
+    expect($email->getLabel())->toBe('Email');
 
-        // We need to call form() to initialize components?
-        // Filament forms are initialized on mount or when accessed.
-        $instance->mount();
+    expect($password)->not->toBeNull();
+    expect($password->getLabel())->toBe('Password');
 
-        $form = $instance->getForm('form');
-        $components = $form->getComponents();
-
-        // Find components
-        $email = collect($components)->first(fn ($c) => 'email' === $c->getName());
-        $password = collect($components)->first(fn ($c) => 'password' === $c->getName());
-        $remember = collect($components)->first(fn ($c) => 'remember' === $c->getName());
-
-        // Assert
-        $this->assertNotNull($email);
-        $this->assertEquals('Email', $email->getLabel());
-
-        $this->assertNotNull($password);
-        $this->assertEquals('Password', $password->getLabel());
-
-        $this->assertNotNull($remember);
-        $this->assertEquals('Ricordami', $remember->getLabel());
-    }
-}
+    expect($remember)->not->toBeNull();
+    expect($remember->getLabel())->toBe('Ricordami');
+});

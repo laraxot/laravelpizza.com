@@ -28,6 +28,7 @@ return new class extends XotBaseMigration {
             $table->foreignId('team_id');
             $table->uuid('user_id')->nullable()->index();
             $table->string('role')->nullable();
+            $table->text('permissions')->nullable();
 
             // Indice univoco per evitare duplicati team_id + user_id
             $table->unique(['team_id', 'user_id']);
@@ -52,6 +53,11 @@ return new class extends XotBaseMigration {
 
                 // Impostiamo la nuova PRIMARY KEY su id
                 $this->query('ALTER TABLE `'.$this->table_name.'` ADD PRIMARY KEY (`id`)');
+            }
+
+            // Aggiungiamo la colonna permissions se manca
+            if (! $this->hasColumn('permissions')) {
+                $table->text('permissions')->nullable()->after('role');
             }
 
             // Aggiorniamo i timestamp e soft deletes

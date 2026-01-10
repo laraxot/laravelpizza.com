@@ -10,6 +10,7 @@ use Illuminate\Support\Carbon;
 use Modules\User\Database\Factories\PermissionFactory;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Models\Traits\RelationX;
+use Modules\Xot\Traits\Updater;
 use Spatie\Permission\Models\Permission as SpatiePermission;
 
 /**
@@ -51,6 +52,7 @@ class Permission extends SpatiePermission
 {
     use HasXotFactory;
     use RelationX;
+    use Updater;
 
     /** @var string */
     protected $connection = 'user';
@@ -64,5 +66,7 @@ class Permission extends SpatiePermission
         'guard_name',
         'display_name',
         'description',
+        'created_by',
+        'updated_by',
     ];
 }

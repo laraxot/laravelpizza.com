@@ -87,7 +87,7 @@ class MyProfilePage extends XotBasePage
                             ->currentPassword(),
                         PasswordData::make()
                             ->getPasswordFormComponent('new_password')
-                            ->dehydrateStateUsing(fn (string $value): string => Hash::make($value))
+                            ->dehydrateStateUsing(fn (string $state): string => Hash::make($state))
                             ->live(debounce: 500),
                         // ->same('passwordConfirmation')
                         /*
@@ -180,6 +180,15 @@ class MyProfilePage extends XotBasePage
     {
         try {
             $data = $this->editPasswordForm->getState();
+
+            if (isset($data['new_password'])) {
+                $data['password'] = $data['new_password'];
+                unset($data['new_password']);
+            }
+
+            if (isset($data['passwordConfirmation'])) {
+                unset($data['passwordConfirmation']);
+            }
 
             $this->handleRecordUpdate($this->getUser(), $data);
         } catch (Halt $exception) {

@@ -28,6 +28,11 @@ return new class extends XotBaseMigration {
             $table->date('birth_date')->nullable();
             $table->string('gender', 1)->nullable();
             $table->text('bio')->nullable();
+            $table->string('avatar')->nullable();
+            $table->string('timezone')->nullable();
+            $table->string('locale')->nullable();
+            $table->json('preferences')->nullable();
+            $table->string('status')->nullable();
             $table->boolean('is_active')->default(true);
             $table->json('extra')->nullable();
             
@@ -48,6 +53,21 @@ return new class extends XotBaseMigration {
             }
             if (! $this->hasColumn('phone')) {
                 $table->string('phone')->nullable()->after('email');
+            }
+            if (! $this->hasColumn('avatar')) {
+                $table->string('avatar')->nullable()->after('bio');
+            }
+            if (! $this->hasColumn('timezone')) {
+                $table->string('timezone')->nullable()->after('avatar');
+            }
+            if (! $this->hasColumn('locale')) {
+                $table->string('locale')->nullable()->after('timezone');
+            }
+            if (! $this->hasColumn('preferences')) {
+                $table->json('preferences')->nullable()->after('locale');
+            }
+            if (! $this->hasColumn('status')) {
+                $table->string('status')->nullable()->after('preferences');
             }
         });
     }

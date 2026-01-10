@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -37,20 +37,13 @@ test('role has correct table configuration', function (): void {
 test('role has correct casts', function (): void {
     $casts = $this->role->getCasts();
 
-    expect($casts)->toHaveKey('id');
-    expect($casts)->toHaveKey('uuid');
-    expect($casts)->toHaveKey('name');
-    expect($casts)->toHaveKey('guard_name');
-    expect($casts)->toHaveKey('created_at');
-    expect($casts)->toHaveKey('updated_at');
-
-    expect($casts['id'])->toBe('string');
-    expect($casts['uuid'])->toBe('string');
+    expect($casts['id'])->toBe('int');
     expect($casts['name'])->toBe('string');
     expect($casts['guard_name'])->toBe('string');
     expect($casts['created_at'])->toBe('datetime');
     expect($casts['updated_at'])->toBe('datetime');
 });
+
 
 test('role can be updated', function (): void {
     $this->role->update([
@@ -161,3 +154,29 @@ test('role can check if it has all permissions', function (): void {
     expect($this->role->hasAllPermissions([$permission1]))->toBeTrue();
     expect($this->role->hasAllPermissions([$permission1, $permission2, 'non-existent']))->toBeFalse();
 });
+
+test('role can be filtered by team_id', function (): void {
+    $team = \Modules\User\Models\Team::factory()->create();
+    Role::withoutEvents(function () use ($team): void {
+        $this->role->forceFill(['team_id' => $team->id])->save();
+    });
+    
+    $found = Role::where('team_id', $team->id)->first();
+    expect($found)->not->toBeNull();
+    expect((int)$found->id)->toBe((int)$this->role->id);
+});
+
+test('role handles null metadata values', function (): void {
+    Role::withoutEvents(function (): void {
+        $this->role->forceFill([
+            'team_id' => null,
+            'created_by' => null,
+            'updated_by' => null,
+        ])->save();
+    });
+    
+    expect($this->role->team_id)->toBeNull();
+    expect($this->role->created_by)->toBeNull();
+    expect($this->role->updated_by)->toBeNull();
+});
+

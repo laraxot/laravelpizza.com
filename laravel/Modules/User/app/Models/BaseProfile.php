@@ -91,6 +91,11 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
         'gender',
         'email',
         'bio',
+        'avatar',
+        'timezone',
+        'locale',
+        'preferences',
+        'status',
         'is_active',
         'extra',
     ];
@@ -181,6 +186,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
             'created_by' => 'string',
             'deleted_by' => 'string',
             'is_active' => 'boolean',
+            'preferences' => 'json',
             'extra' => SchemalessAttributes::class,
         ];
     }

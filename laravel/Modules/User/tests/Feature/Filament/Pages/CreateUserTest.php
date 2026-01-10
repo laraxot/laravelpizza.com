@@ -7,7 +7,7 @@ use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
 use Modules\User\Models\User;
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 

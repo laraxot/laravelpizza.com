@@ -39,6 +39,12 @@ abstract class BaseTenant extends BaseModel implements HasAvatar, HasMedia, Tena
     use HasSlug;
     use InteractsWithMedia;
 
+    /** @var bool */
+    public $incrementing = false;
+
+    /** @var string */
+    protected $keyType = 'string';
+
     /** @var list<string> */
     protected $fillable = [
         'id',

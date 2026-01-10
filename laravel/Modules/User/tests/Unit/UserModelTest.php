@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Modules\User\Models\AuthenticationLog;
 use Modules\User\Models\Team;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 

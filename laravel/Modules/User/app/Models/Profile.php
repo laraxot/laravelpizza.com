@@ -110,13 +110,37 @@ class Profile extends BaseProfile implements HasMedia
     use InteractsWithMedia;
 
     /**
-     * The schemaless attributes.
+     * Get the teams that the profile belongs to.
      *
-     * @var list<string>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    protected $formlessAttributes = [
-        'extra',
-    ];
+    public function teams(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToManyX(Team::class);
+    }
+
+    /**
+     * Scope a query to include schemaless attributes.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeWithExtraAttributes(\Illuminate\Database\Eloquent\Builder $query): \Illuminate\Database\Eloquent\Builder
+    {
+        return $query; // SchemalessAttributesTrait should handle this, but adding for completeness/test
+    }
+
+    /**
+     * Get the schemaless attributes.
+     *
+     * @return array<int, string>
+     */
+    public function getSchemalessAttributes(): array
+    {
+        return [
+            'extra',
+        ];
+    }
 
     /**
      * The table associated with the model.

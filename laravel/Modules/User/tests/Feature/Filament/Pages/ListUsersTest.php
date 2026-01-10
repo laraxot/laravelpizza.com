@@ -14,7 +14,7 @@ use Modules\User\Filament\Resources\UserResource\Pages\BaseListUsers;
 use Modules\User\Filament\Resources\UserResource\Pages\ListUsers;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 

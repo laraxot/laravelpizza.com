@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Job\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Support\Facades\Schema;
 use Modules\Job\Providers\JobServiceProvider;
@@ -34,6 +35,7 @@ use Modules\Xot\Tests\CreatesApplication;
 abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
+    use DatabaseTransactions;
 
     protected function setUp(): void
     {
@@ -41,7 +43,7 @@ abstract class TestCase extends BaseTestCase
 
         foreach (['job', 'xot'] as $connection) {
             $driver = config("database.connections.{$connection}.driver");
-            if (!is_string($driver) || $driver === '') {
+            if (!\is_string($driver) || $driver === '') {
                 $this->markTestSkipped('Missing database connection: '.$connection.' (expected from .env.testing)');
             }
 

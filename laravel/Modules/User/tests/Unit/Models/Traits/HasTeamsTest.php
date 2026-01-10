@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
 use Modules\User\Tests\Unit\Models\Traits\Fixtures\MockUserWithTeams;
+
+uses(TestCase::class);
 
 beforeEach(function () {
     $this->user = \Mockery::mock(MockUserWithTeams::class)->makePartial();

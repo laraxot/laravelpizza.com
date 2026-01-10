@@ -83,6 +83,7 @@ class Membership extends BasePivot
             'id' => 'integer',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
+            'permissions' => 'array',
         ];
     }
 }

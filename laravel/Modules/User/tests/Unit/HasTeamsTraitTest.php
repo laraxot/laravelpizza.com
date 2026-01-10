@@ -9,7 +9,7 @@ use Modules\User\Models\Role;
 use Modules\User\Models\Team;
 use Modules\User\Models\TeamUser;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 /*
  * Test per il trait HasTeams corretto secondo filosofia Jetstream + Laraxot.

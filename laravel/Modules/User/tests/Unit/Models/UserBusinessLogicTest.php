@@ -2,12 +2,16 @@
 
 declare(strict_types=1);
 
+use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\BaseUser;
 use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
+
+uses(TestCase::class);
 
 describe('User Business Logic', function () {
     test('user extends base user', function () {
-        expect(User::class)->toBeSubclassOf(BaseUser::class);
+        expect(new User())->toBeInstanceOf(BaseUser::class);
     });
 
     test('user has authentication capabilities', function () {
@@ -16,7 +20,7 @@ describe('User Business Logic', function () {
         $user->password = 'hashed-password';
 
         expect($user->email)->toBe('test@example.com');
-        expect($user->password)->toBe('hashed-password');
+        expect(Hash::check('hashed-password', $user->password))->toBeTrue();
     });
 
     test('user can have name components', function () {
@@ -55,14 +59,14 @@ describe('User Business Logic', function () {
         $user = new User();
         $user->email_verified_at = '2023-01-01 12:00:00';
 
-        expect($user->email_verified_at)->toBe('2023-01-01 12:00:00');
+        expect($user->email_verified_at->format('Y-m-d H:i:s'))->toBe('2023-01-01 12:00:00');
     });
 
     test('user has password expiry tracking', function () {
         $user = new User();
         $user->password_expires_at = '2023-12-31 23:59:59';
 
-        expect($user->password_expires_at)->toBe('2023-12-31 23:59:59');
+        expect($user->password_expires_at->format('Y-m-d H:i:s'))->toBe('2023-12-31 23:59:59');
     });
 
     test('user can have current team', function () {

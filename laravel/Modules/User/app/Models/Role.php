@@ -20,35 +20,14 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Models\Traits\RelationX;
+use Modules\Xot\Traits\Updater;
 use Spatie\Permission\Models\Role as SpatieRole;
 use Webmozart\Assert\Assert;
 
 /**
  * Modules\User\Models\Role.
  *
- * @property string                                      $id
- * @property string                                      $uuid
- * @property string|null                                 $team_id
- * @property string                                      $name
- * @property string                                      $guard_name
- * @property Carbon|null                                 $created_at
- * @property Carbon|null                                 $updated_at
- * @property Collection<int, Permission>                 $permissions
- * @property int|null                                    $permissions_count
- * @property Team|null                                   $team
- * @property EloquentCollection<int, Model&UserContract> $users
- * @property int|null                                    $users_count
- *
- * @method static Builder|Role newModelQuery()
- * @method static Builder|Role newQuery()
- * @method static Builder|Role permission($permissions)
- * @method static Builder|Role query()
- * @method static Builder|Role whereCreatedAt($value)
- * @method static Builder|Role whereGuardName($value)
- * @method static Builder|Role whereName($value)
- * @method static Builder|Role whereTeamId($value)
- * @method static Builder|Role whereUpdatedAt($value)
- * @method static Builder|Role whereUuid($value)
+ * @property int                                  $id
  *
  * @property int $id
  *
@@ -83,6 +62,7 @@ class Role extends SpatieRole
 {
     use HasXotFactory;
     use RelationX;
+    use Updater;
 
     // use HasUuids;
 
@@ -96,9 +76,18 @@ class Role extends SpatieRole
     protected $connection = 'user';
 
     /** @var string */
-    protected $keyType = 'string';
+    protected $keyType = 'int';
 
-    // protected $fillable=['id','']
+    /** @var list<string> */
+    protected $fillable = [
+        'name',
+        'guard_name',
+        'display_name',
+        'description',
+        'team_id',
+        'created_by',
+        'updated_by',
+    ];
 
     public function getTable(): string
     {
@@ -131,8 +120,7 @@ class Role extends SpatieRole
     protected function casts(): array
     {
         return [
-            'id' => 'string',
-            'uuid' => 'string',
+            'id' => 'int',
             'name' => 'string',
             'guard_name' => 'string',
             'created_at' => 'datetime',

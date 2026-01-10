@@ -5,6 +5,10 @@ declare(strict_types=1);
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+
+uses(TestCase::class, DatabaseTransactions::class);
 
 /*
  * Test per verificare la correzione del bug del loop infinito in currentTeam().

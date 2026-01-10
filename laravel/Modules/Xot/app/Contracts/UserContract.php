@@ -151,7 +151,17 @@ interface UserContract extends Authenticatable
     public function switchTeam(TeamContract $team): bool;
 
     /**
-     * @return array<string, Module>
+     * @return array<string, \Nwidart\Modules\Laravel\Module>
      */
     public function getModules(): array;
+
+    /**
+     * Find the user instance for the given username (Passport).
+     */
+    public static function findForPassport(string $username): ?self;
+
+    /**
+     * Validate the password of the user for the given password (Passport).
+     */
+    public function validateForPassportPasswordGrant(string $password): bool;
 }

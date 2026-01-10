@@ -9,7 +9,7 @@ use Modules\User\Models\User;
 
 use function Pest\Laravel\assertAuthenticatedAs;
 
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -78,7 +78,7 @@ test('it validates credentials', function (): void {
     // Check that the widget has error messages for invalid credentials
     $errorBag = $this->widget->getErrorBag();
     expect($errorBag->isNotEmpty())->toBeTrue();
-    expect(implode(' ', $errorBag->all()))->toContain('errore');
+    expect(implode(' ', $errorBag->all()))->toContain('credenziali');
 });
 
 test('it requires email and password', function (): void {

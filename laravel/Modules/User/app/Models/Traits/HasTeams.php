@@ -63,21 +63,19 @@ trait HasTeams
      */
     public function belongsToTeams(): bool
     {
-        return true;
+        return $this->allTeams()->isNotEmpty();
     }
 
     /**
      * Check if the user belongs to a specific team.
      */
-    public function belongsToTeam(TeamContract $team): bool
+    public function belongsToTeam(?TeamContract $team): bool
     {
-        $found = $this->teams()->where('teams.id', $team->id)->first();
-        if (null === $found) {
+        if (null === $team) {
             return false;
         }
-        Assert::isInstanceOf($found, TeamContract::class, 'Team must implement TeamContract.');
 
-        return true;
+        return $this->ownsTeam($team) || $this->teams->contains('id', (string) $team->id);
     }
 
     /**
@@ -211,7 +209,7 @@ trait HasTeams
      */
     public function hasTeams(): bool
     {
-        return true;
+        return $this->allTeams()->isNotEmpty();
     }
 
     /**
@@ -233,7 +231,17 @@ trait HasTeams
 
         $teamRole = $this->teamRole($team);
 
-        return null !== $teamRole && isset($teamRole->name) && $teamRole->name === $role;
+        return null !== $teamRole && $teamRole->name === $role;
+    }
+
+    /**
+     * Get the role name for a specific team.
+     */
+    public function teamRoleName(TeamContract $team): string
+    {
+        $role = $this->teamRole($team);
+
+        return $role?->name ?? 'Unknown';
     }
 
     /**
@@ -244,15 +252,6 @@ trait HasTeams
     public function currentTeam(): BelongsTo
     {
         $xot = XotData::make();
-        if (null === $this->current_team_id && $this->id) {
-            $this->switchTeam($this->personalTeam());
-        }
-
-        if ($this->allTeams()->isEmpty() && null !== $this->getKey()) {
-            $this->current_team_id = null;
-            $this->save();
-        }
-
         $teamClass = $xot->getTeamClass();
 
         return $this->belongsTo($teamClass, 'current_team_id');
@@ -286,6 +285,10 @@ trait HasTeams
      */
     public function teamRole(TeamContract $team): ?Role
     {
+        if ($this->ownsTeam($team)) {
+            return Role::where('name', 'owner')->first() ?? new Role(['name' => 'owner']);
+        }
+
         /** @var Model|Pivot|null $teamUser */
         $teamUser = $this->teamUsers()->where('team_id', $team->id)->first();
 
@@ -293,10 +296,17 @@ trait HasTeams
             return null;
         }
 
-        // Accesso sicuro alla proprietà role usando getAttribute
-        $role = $teamUser->getAttribute('role');
+        $roleValue = $teamUser->getAttribute('role');
 
-        return $role instanceof Role ? $role : null;
+        if ($roleValue instanceof Role) {
+            return $roleValue;
+        }
+
+        if (is_string($roleValue)) {
+            return Role::where('name', $roleValue)->first() ?? new Role(['name' => $roleValue]);
+        }
+
+        return null;
     }
 
     /**
@@ -306,23 +316,25 @@ trait HasTeams
      */
     public function teamPermissions(TeamContract $team): array
     {
-        $role = $this->teamRole($team);
+        $permissions = [];
 
-        if (null === $role || ! $role->permissions) {
-            return [];
+        // Permissions from Role
+        $role = $this->teamRole($team);
+        if (null !== $role && $role->permissions) {
+            $permissions = $role->permissions->pluck('name')->values()->toArray();
         }
 
-        $permissionsRaw = $role->permissions->pluck('name')->values()->toArray();
-
-        $permissions = [];
-        foreach ($permissionsRaw as $value) {
-            if (\is_string($value)) {
-                $permissions[] = $value;
+        // Permissions from Pivot
+        /** @var Model|Pivot|null $teamUser */
+        $teamUser = $this->teamUsers()->where('team_id', $team->id)->first();
+        if (null !== $teamUser) {
+            $pivotPermissions = $teamUser->getAttribute('permissions');
+            if (is_array($pivotPermissions)) {
+                $permissions = array_merge($permissions, array_keys(array_filter($pivotPermissions)));
             }
         }
 
-        /* @var array<int, string> $permissions */
-        return $permissions;
+        return array_values(array_unique($permissions));
     }
 
     /**
@@ -345,12 +357,31 @@ trait HasTeams
     }
 
     /**
+     * Initialize the user's current team.
+     */
+    public function initializeCurrentTeam(): void
+    {
+        if (null !== $this->current_team_id) {
+            return;
+        }
+
+        $team = $this->personalTeam() ?? $this->allTeams()->first();
+
+        if (null !== $team) {
+            $this->switchTeam($team);
+        }
+    }
+
+    /**
      * Switch the user's context to the given team.
      */
     public function switchTeam(?TeamContract $team): bool
     {
         if (null === $team) {
-            return false;
+            $this->current_team_id = null;
+            $this->save();
+
+            return true;
         }
 
         if (! $this->belongsToTeam($team)) {
@@ -378,12 +409,13 @@ trait HasTeams
     /**
      * Determine if the user owns the given team.
      */
-    public function ownsTeam(TeamContract $team): bool
+    public function ownsTeam(?TeamContract $team): bool
     {
-        /** @var ?Model $found */
-        $found = $this->ownedTeams()->where('teams.id', $team->id)->first();
+        if (null === $team) {
+            return false;
+        }
 
-        return null !== $found;
+        return (string) $this->getKey() === (string) $team->user_id;
     }
 
     /**

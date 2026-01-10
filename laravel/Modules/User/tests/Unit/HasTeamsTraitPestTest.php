@@ -8,6 +8,9 @@ use Modules\User\Contracts\TeamContract;
 use Modules\User\Models\Role;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
+
+uses(TestCase::class);
 
 beforeEach(function () {
     $this->user = User::factory()->create();
@@ -41,6 +44,7 @@ test('it correctly checks if user belongs to specific team', function () {
 
     // Test: Member team
     $this->user->teams()->attach($this->team->id, ['role' => 'member']);
+    $this->user->refresh();
     expect($this->user->belongsToTeam($this->team))->toBeTrue();
 
     // Test: Non-member team
@@ -72,9 +76,10 @@ test('it uses belongs to many x for teams relationship', function () {
 test('it correctly manages current team', function () {
     // Test: Switch to valid team
     $this->user->teams()->attach($this->team->id, ['role' => 'member']);
+    $this->user->refresh();
     $result = $this->user->switchTeam($this->team);
 
-    expect($result)->toBeTrue()->and($this->user->current_team_id)->toBe($this->team->id);
+    expect($result)->toBeTrue()->and($this->user->current_team_id)->toBe((string) $this->team->id);
 
     // Test: Switch to null
     $result = $this->user->switchTeam(null);
@@ -98,20 +103,24 @@ test('it correctly identifies current team', function () {
 test('it returns all teams user owns or belongs to', function () {
     // Add user as member of a team
     $this->user->teams()->attach($this->team->id, ['role' => 'member']);
+    $this->user->refresh();
 
     $allTeams = $this->user->allTeams();
 
     expect($allTeams)
         ->toBeInstanceOf(Collection::class)
-        ->toHaveCount(2)
-        ->toContain($this->personalTeam)
-        ->toContain($this->team); // personal team + member team
+        ->toHaveCount(2);
+
+    expect($allTeams->pluck('id')->toArray())
+        ->toContain($this->personalTeam->id)
+        ->toContain($this->team->id); // personal team + member team
 });
 
 test('it returns owned teams', function () {
     $ownedTeams = $this->user->ownedTeams;
 
-    expect($ownedTeams)->toBeInstanceOf(Collection::class)->toHaveCount(1)->toContain($this->personalTeam);
+    expect($ownedTeams)->toBeInstanceOf(Collection::class)->toHaveCount(1);
+    expect($ownedTeams->pluck('id')->toArray())->toContain($this->personalTeam->id);
 });
 
 test('it returns personal team', function () {
@@ -181,7 +190,7 @@ test('it correctly manages team permissions', function () {
     // Test: Member with specific permission
     $this->user->teams()->attach($this->team->id, [
         'role' => 'editor',
-        'permissions' => json_encode(['edit-content' => true]),
+        'permissions' => ['edit-content' => true],
     ]);
 
     expect($this->user->hasTeamPermission($this->team, 'edit-content'))

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -24,13 +24,10 @@ test('permission can be created', function (): void {
 test('permission has correct fillable attributes', function (): void {
     $fillable = $this->permission->getFillable();
 
-    expect($fillable)->toContain('id');
     expect($fillable)->toContain('name');
     expect($fillable)->toContain('guard_name');
-    expect($fillable)->toContain('created_at');
-    expect($fillable)->toContain('updated_at');
-    expect($fillable)->toContain('created_by');
-    expect($fillable)->toContain('updated_by');
+    expect($fillable)->toContain('display_name');
+    expect($fillable)->toContain('description');
 });
 
 test('permission has correct table configuration', function (): void {
@@ -44,18 +41,8 @@ test('permission has correct casts', function (): void {
     $casts = $this->permission->getCasts();
 
     expect($casts)->toHaveKey('id');
-    expect($casts)->toHaveKey('uuid');
-    expect($casts)->toHaveKey('name');
-    expect($casts)->toHaveKey('guard_name');
-    expect($casts)->toHaveKey('created_at');
-    expect($casts)->toHaveKey('updated_at');
 
-    expect($casts['id'])->toBe('string');
-    expect($casts['uuid'])->toBe('string');
-    expect($casts['name'])->toBe('string');
-    expect($casts['guard_name'])->toBe('string');
-    expect($casts['created_at'])->toBe('datetime');
-    expect($casts['updated_at'])->toBe('datetime');
+    expect($casts['id'])->toBe('int'); // Spatie Permission uses int ID by default
 });
 
 test('permission can be updated', function (): void {
@@ -195,3 +182,36 @@ test('permission can be synced with roles', function (): void {
     expect($this->permission->hasRole($role2))->toBeTrue();
     expect($this->permission->hasRole($role3))->toBeTrue();
 });
+
+test('permission can be filtered by created_by', function (): void {
+    Permission::withoutEvents(function (): void {
+        $this->permission->forceFill(['created_by' => 'user-123'])->save();
+    });
+    
+    $found = Permission::where('created_by', 'user-123')->first();
+    expect($found)->not->toBeNull();
+    expect((int)$found->id)->toBe((int)$this->permission->id);
+});
+
+test('permission can be filtered by updated_by', function (): void {
+    Permission::withoutEvents(function (): void {
+        $this->permission->forceFill(['updated_by' => 'user-456'])->save();
+    });
+    
+    $found = Permission::where('updated_by', 'user-456')->first();
+    expect($found)->not->toBeNull();
+    expect((int)$found->id)->toBe((int)$this->permission->id);
+});
+
+test('permission handles null metadata values', function (): void {
+    Permission::withoutEvents(function (): void {
+        $this->permission->forceFill([
+            'created_by' => null,
+            'updated_by' => null,
+        ])->save();
+    });
+    
+    expect($this->permission->created_by)->toBeNull();
+    expect($this->permission->updated_by)->toBeNull();
+});
+

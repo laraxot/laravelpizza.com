@@ -1,0 +1,179 @@
+
+   FAIL  Modules\User\tests\Feature\Filament\Resources\UserResourceTest
+  ⨯ user resou… 0.51s  
+  ✓ user resou… 0.27s  
+  ⨯ user resou… 0.26s  
+  ✓ user resou… 0.28s  
+  ✓ user resou… 0.29s  
+  ⨯ user resou… 0.29s  
+  ⨯ user resou… 0.26s  
+  ⨯ user resou… 0.26s  
+  ⨯ user resou… 0.27s  
+  ⨯ user resou… 0.30s  
+  ⨯ user resou… 0.30s  
+  ⨯ user resou… 0.35s  
+  ✓ user resou… 0.30s  
+  ✓ user resou… 0.27s  
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that two strings are identical.
+  -'heroicon-o-users'
+  +'ui-user-main'
+  
+
+  at Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:30
+     26▕     ]);
+     27▕ });
+     28▕ 
+     29▕ test('user resource has correct navigation icon', function (): void {
+  ➜  30▕     expect(UserResource::getNavigationIcon())->toBe('heroicon-o-users');
+     31▕ });
+     32▕ 
+     33▕ test('user resource has correct widgets', function (): void {
+     34▕     $widgets = UserResource::getWidgets();
+
+  1   Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:30
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Expecting null not to be null .
+
+  at Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:55
+     51▕     expect($section01Schema)->toHaveCount(3);
+     52▕ 
+     53▕     // Check if name field exists
+     54▕     $nameField = collect($section01Schema)->firstWhere('name', 'name');
+  ➜  55▕     expect($nameField)->not->toBeNull();
+     56▕     expect($nameField)->toBeInstanceOf(TextInput::class);
+     57▕ 
+     58▕     // Check if email field exists
+     59▕     $emailField = collect($section01Schema)->firstWhere('name', 'email');
+
+  1   Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:55
+
+  ───────────────────  
+   FAILED  Modules</>…   
+  Failed asserting that Array &0 [
+    'default' => 1,
+    'lg' => 8,
+] is identical to 8.
+
+  at Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:99
+     95▕ 
+     96▕     $section01 = $form['section01'];
+     97▕     $section02 = $form['section02'];
+     98▕ 
+  ➜  99▕     expect($section01->getColumnSpan())->toBe(8);
+    100▕     expect($section02->getColumnSpan())->toBe(4);
+    101▕ });
+    102▕ 
+    103▕ test('user resource name field is required', function (): void {
+
+  1   Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:99
+
+  ───────────────────  
+   FAILED  M…  Error   
+  Call to a member function isRequired() on null
+
+  at Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:110
+    106▕     $section01Schema = $section01->getDefaultChildComponents();
+    107▕ 
+    108▕     $nameField = collect($section01Schema)->firstWhere('name', 'name');
+    109▕ 
+  ➜ 110▕     expect($nameField->isRequired())->toBeTrue();
+    111▕ });
+    112▕ 
+    113▕ test('user resource email field is required', function (): void {
+    114▕     $form = UserResource::getFormSchema();
+
+  1   Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:110
+
+  ───────────────────  
+   FAILED  M…  Error   
+  Call to a member function isRequired() on null
+
+  at Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:120
+    116▕     $section01Schema = $section01->getDefaultChildComponents();
+    117▕ 
+    118▕     $emailField = collect($section01Schema)->firstWhere('name', 'email');
+    119▕ 
+  ➜ 120▕     expect($emailField->isRequired())->toBeTrue();
+    121▕ });
+    122▕ 
+    123▕ test('user resource password field is required only on create', function (): void {
+    124▕     $form = UserResource::getFormSchema();
+
+  1   Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:120
+
+  ───────────────────  
+   FAILED  M…  Error   
+  Call to a member function isRequired() on null
+
+  at Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:132
+    128▕     $passwordField = collect($section01Schema)->firstWhere('name', 'password');
+    129▕ 
+    130▕     // Test with CreateUser page
+    131▕     $createUserPage = new CreateUser();
+  ➜ 132▕     expect($passwordField->isRequired($createUserPage))->toBeTrue();
+    133▕ 
+    134▕     // Test with EditUser page
+    135▕     $editUserPage = new EditUser();
+    136▕     expect($passwordField->isRequired($editUserPage))->toBeFalse();
+
+  1   Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:132
+
+  ───────────────────  
+   FAILED  M…  Error   
+  Call to a member function getType() on null
+
+  at Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:146
+    142▕     $section01Schema = $section01->getDefaultChildComponents();
+    143▕ 
+    144▕     $passwordField = collect($section01Schema)->firstWhere('name', 'password');
+    145▕ 
+  ➜ 146▕     expect($passwordField->getType())->toBe('password');
+    147▕ });
+    148▕ 
+    149▕ test('user resource email field has unique validation', function (): void {
+    150▕     $form = UserResource::getFormSchema();
+
+  1   Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:146
+
+  ───────────────────  
+   FAILED  M…  Error   
+  Call to a member function getValidationRules() on null
+
+  at Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:157
+    153▕ 
+    154▕     $emailField = collect($section01Schema)->firstWhere('name', 'email');
+    155▕ 
+    156▕     // Check if the field has unique validation
+  ➜ 157▕     $validationRules = $emailField->getValidationRules();
+    158▕     expect($validationRules)->toContain('unique');
+    159▕ });
+    160▕ 
+    161▕ test('user resource created_at field shows diff for humans', function (): void {
+
+  1   Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:157
+
+  ───────────────────  
+   FAILED  M…  Error   
+  Call to a member function getContent() on null
+
+  at Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:169
+    165▕ 
+    166▕     $createdAtField = collect($section02Schema)->firstWhere('name', 'created_at');
+    167▕ 
+    168▕     // Test with a record
+  ➜ 169▕     $content = $createdAtField->getContent($this->user);
+    170▕     expect($content)->toBe($this->user->created_at->diffForHumans());
+    171▕ 
+    172▕     // Test with null record
+    173▕     $contentNull = $createdAtField->getContent(null);
+
+  1   Modules/User/tests/Feature/Filament/Resources/UserResourceTest.php:169
+
+
+  Tests:    9 failed, 5 passed (13 assertions)
+  Duration: 4.26s
+

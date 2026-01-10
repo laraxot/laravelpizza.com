@@ -8,9 +8,15 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Laravel\Passport\Passport;
 use Modules\Xot\Tests\CreatesApplication;
 
-abstract class TestCase extends BaseTestCase
+abstract /**
+ * @property \Modules\User\Models\Permission $permission
+ * @property \Modules\User\Models\Role       $role
+ * @property \Modules\User\Models\Tenant     $tenant
+ */
+class TestCase extends BaseTestCase
 {
     use CreatesApplication;
     use DatabaseTransactions;
@@ -18,6 +24,10 @@ abstract class TestCase extends BaseTestCase
     protected function setUp(): void
     {
         parent::setUp();
+
+        if (class_exists(Passport::class)) {
+            // Passport::ignoreKeys() does not exist in this version
+        }
 
         // Boot theme for pub_theme:: view resolution
         config(['xra.pub_theme' => 'Meetup']);

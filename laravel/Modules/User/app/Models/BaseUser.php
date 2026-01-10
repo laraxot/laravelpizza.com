@@ -508,7 +508,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     {
         // Se Ã¨ una stringa semplice, utilizziamo il metodo interno tramite relazione roles
         if (\is_string($roles)) {
-            return once(fn (): bool => $this->roles()->where('name', $roles)->exists());
+            return $this->roles()->where('name', $roles)->exists();
         }
 
         // Per gli altri tipi, implementiamo una logica di base
@@ -590,5 +590,21 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
             'created_by' => 'string',
             'deleted_by' => 'string',
         ];
+    }
+
+    /**
+     * Find the user instance for the given username.
+     */
+    public static function findForPassport(string $username): ?self
+    {
+        return static::where('email', $username)->first();
+    }
+
+    /**
+     * Validate the password of the user for the given password.
+     */
+    public function validateForPassportPasswordGrant(string $password): bool
+    {
+        return Hash::check($password, (string) $this->password);
     }
 }

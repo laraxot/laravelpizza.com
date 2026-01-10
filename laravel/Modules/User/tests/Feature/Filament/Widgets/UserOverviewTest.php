@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\User\Models\User;
-use Tests\TestCase;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -64,7 +64,7 @@ test('user overview widget has correct static properties', function (): void {
     $viewProperty = $reflection->getProperty('view');
     $viewProperty->setAccessible(true);
 
-    expect($viewProperty->isStatic())->toBeTrue();
+    expect($viewProperty->isStatic())->toBeFalse();
 });
 
 test('user overview widget view path is correct', function (): void {
