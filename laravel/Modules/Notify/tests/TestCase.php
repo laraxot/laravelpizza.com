@@ -7,7 +7,10 @@ namespace Modules\Notify\Tests;
 require_once __DIR__.'/../../Xot/tests/CreatesApplication.php';
 
 use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Modules\Notify\Providers\NotifyServiceProvider;
 use Modules\Xot\Tests\CreatesApplication;
 
