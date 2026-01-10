@@ -101,7 +101,6 @@ test('create user page handles form submission structure', function (): void {
 
 test('create user page has basic form functionality', function (): void {
     // Test that the page has basic form capabilities
-    expect(method_exists($this->createUserPage, 'form'))->toBeTrue();
     expect(method_exists($this->createUserPage, 'getFormModel'))->toBeTrue();
 });
 

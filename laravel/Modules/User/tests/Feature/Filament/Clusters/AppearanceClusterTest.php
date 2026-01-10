@@ -12,6 +12,9 @@ use Modules\User\Filament\Clusters\Appearance\Pages\Logo;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Clusters\XotBaseCluster;
 use Modules\Xot\Filament\Pages\XotBasePage;
+use Modules\User\Tests\TestCase;
+
+uses(TestCase::class);
 
 /*
  * Test per il Cluster Appearance e le sue Pages.
