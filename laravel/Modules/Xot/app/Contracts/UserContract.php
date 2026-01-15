@@ -20,6 +20,37 @@ use Modules\User\Models\Tenant;
 use Nwidart\Modules\Laravel\Module;
 use Spatie\Permission\Contracts\Permission;
 use Spatie\Permission\Exceptions\PermissionDoesNotExist;
+use Filament\Models\Contracts\HasName;
+use Filament\Models\Contracts\HasTenants;
+use Filament\Panel;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
+use Illuminate\Database\Eloquent\Relations\Pivot;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Notifications\DatabaseNotification;
+use Illuminate\Notifications\DatabaseNotificationCollection;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Laravel\Passport\Contracts\OAuthenticatable;
+use Laravel\Passport\HasApiTokens;
+use Modules\Xot\Contracts\PassportHasApiTokensContract;
+use Modules\User\Database\Factories\UserFactory;
+use Modules\User\Models\Traits\HasAuthenticationLogTrait;
+use Modules\User\Models\Traits\HasModules;
+use Modules\User\Models\Traits\HasSpatiePermission;
+use Modules\User\Models\Traits\HasTeams;
+use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Datas\XotData;
+use Modules\Xot\Models\Traits as XotTraits;
+use Modules\Xot\Models\Traits\HasXotFactory;
+use Parental\HasChildren;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
  * Modules\Xot\Contracts\UserContract.
@@ -43,7 +74,7 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
  *
  * @mixin \Eloquent
  */
-interface UserContract extends Authenticatable
+interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, MustVerifyEmail, OAuthenticatable
 {
     /*
      * public function isSuperAdmin();

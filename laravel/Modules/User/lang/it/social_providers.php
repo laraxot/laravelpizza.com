@@ -23,4 +23,8 @@ return [
         'svg.placeholder' => 'Inserisci il codice SVG dell\'icona',
         'svg.helper_text' => 'L\'icona SVG del provider social',
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

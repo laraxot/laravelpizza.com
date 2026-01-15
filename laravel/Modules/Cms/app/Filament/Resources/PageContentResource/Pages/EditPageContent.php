@@ -19,9 +19,9 @@ class EditPageContent extends XotBaseEditRecord
     protected function getHeaderActions(): array
     {
         return [
-            ViewAction::make(),
-            DeleteAction::make(),
-            LocaleSwitcher::make(),
+            'view' => ViewAction::make(),
+            'delete' => DeleteAction::make(),
+            'locale-switcher' => LocaleSwitcher::make(),
         ];
     }
 }

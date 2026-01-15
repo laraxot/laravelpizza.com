@@ -176,7 +176,7 @@ if (! function_exists('getModuleModels')) {
 ### Test Composer Autoload
 
 ```bash
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel
+cd laravel
 composer dump-autoload
 
 # Deve completare senza errori:

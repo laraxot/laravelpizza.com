@@ -1,44 +1,52 @@
-# PHPStan Error Resolution - Trait Method Collision Investigation
+# PHPStan Error Analysis and Resolution Roadmap - User Module
 
-## 🎯 Issue Analysis
+## Summary
+This document outlines the roadmap for resolving PHPStan errors in the User module, particularly addressing the Git conflict markers that are preventing proper static analysis.
 
-### Original Error (from historical context)
-- **Error**: Trait method `Modules\Xot\Filament\Traits\TransTrait::getKeyTransFunc` has not been applied as `Modules\Xot\Filament\Resources\XotBaseResource::getKeyTransFunc`, because of collision with `Modules\Xot\Filament\Traits\NavigationLabelTrait::getKeyTransFunc`
-- **Location**: Error occurred during PHPStan analysis when processing trait collisions
+## Current Issues Identified
+1. **Git Conflict Markers**: Multiple files in the User module contain unresolved Git conflict markers
+2. **Service Provider Registration**: The `PassportServiceProvider` had a Git conflict in the token expiration configuration
+3. **Bootstrapping Error**: Larastan cannot bootstrap the application due to parse errors from Git conflicts
 
-### Root Cause Analysis
-After investigation, the trait collision occurs when classes use multiple traits that have overlapping methods:
-- `TransTrait` (from HasXotTable) provides `getKeyTransFunc` and `transFunc` methods
-- `TransFuncTrait` (from NavigationLabelTrait via NavigationLabelTrait) also provides the same methods
-- When both traits are used in the same class, PHP throws a fatal error due to method name collision
+## Files with Git Conflict Markers
+- `app/Http/Resources/ClientResource.php`
+- `app/Filament/Clusters/Passport/Resources/OauthRefreshTokenResource.php`
+- `app/Filament/Clusters/Passport/Resources/OauthAccessTokenResource.php`
+- `app/Models/Passport/Client.php`
+- `app/Models/OauthPersonalAccessClient.php`
+- `app/Models/BaseUser.php`
+- `app/Models/Team.php`
+- `app/Models/Traits/HasTeams.php`
+- `app/Models/Role.php`
+- `app/Models/OauthClient.php`
+- `app/Filament/Widgets/Auth/LoginWidget.php`
+- `app/Filament/Widgets/RegistrationWidget.php`
+- And several other files...
 
-## 🔍 Actual Fix Applied
+## Resolution Strategy
+1. Resolve Git conflicts in all affected files
+2. Maintain the most recent/functional code in each conflict
+3. Verify each resolution maintains application functionality
+4. Run PHPStan analysis after each batch of fixes
+5. Document decisions for each conflict resolution
 
-### In `/Modules/Xot/app/Filament/Resources/XotBaseResource/Pages/XotBaseManageRelatedRecords.php`:
-- Removed unused import: `use Modules\Xot\Filament\Traits\TransTrait as XotTransTrait;`
-- This import was not being used in the class but could potentially cause conflicts during autoloading/analysis
+## Priority Order
+1. **Service Providers** - Critical for application bootstrapping
+2. **Core Models** - Essential for application functionality
+3. **Filament Resources** - Important for admin panel
+4. **Tests** - Ensure functionality is maintained
+5. **Other files** - Complete remaining conflicts
 
-### Architecture Understanding
-The Laraxot framework properly separates concerns:
-- `NavigationLabelTrait` uses `TransFuncTrait` (safe version without full trans method)
-- `HasXotTable` uses `TransTrait` (full translation functionality)
-- The design prevents conflicts by using different trait versions for different needs
+## Action Items
+- [ ] Fix all Git conflicts in User module
+- [ ] Verify application functionality after fixes
+- [ ] Run PHPStan analysis
+- [ ] Run PHPMD analysis
+- [ ] Run PHPInsights analysis
+- [ ] Update documentation
 
-## 📊 Resolution Status
-- ✅ Original trait collision issue was architectural rather than code-based
-- ✅ Removed unused trait import that could cause confusion
-- ✅ Code quality maintained
-- ✅ PHPStan analysis passes without errors
-- ✅ No functionality was broken
-
-## 🏆 Key Takeaways
-1. The framework already had proper safeguards against trait collisions
-2. `TransFuncTrait` was created specifically to avoid conflicts with `NavigationLabelTrait`
-3. Unused imports should be removed to prevent potential issues
-4. The existing architecture follows the documented pattern from `/Modules/Xot/docs/trait-conflict-resolution.md`
-
-## ✅ Verification
-- [x] PHPStan runs without errors
-- [x] All translation functionality remains intact
-- [x] Navigation labels continue to work
-- [x] No breaking changes to existing functionality
+## Success Criteria
+- PHPStan Level 10 compliance
+- All Git conflict markers removed
+- Application functions properly
+- All tests pass

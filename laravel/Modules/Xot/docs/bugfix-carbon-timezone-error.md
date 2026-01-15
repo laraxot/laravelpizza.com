@@ -2,7 +2,7 @@
 
 ## Problema Identificato
 **Errore**: `Non-static method Carbon\Carbon::setTimezone() cannot be called statically`
-**File**: `/var/www/html/ptvx/laravel/Modules/Xot/app/Providers/XotServiceProvider.php`
+**File**: `Modules/Xot/app/Providers/XotServiceProvider.php`
 **Linea**: 78
 **Contesto**: Errore emerso dopo risoluzione conflitti Git
 
@@ -81,7 +81,7 @@ public function registerTimezone(): void
 
 ## Problema Identificato
 **Errore**: `Non-static method Carbon\Carbon::setTimezone() cannot be called statically`
-**File**: `/var/www/html/ptvx/laravel/Modules/Xot/app/Providers/XotServiceProvider.php`
+**File**: `Modules/Xot/app/Providers/XotServiceProvider.php`
 **Linea**: 78
 **Contesto**: Errore emerso dopo risoluzione conflitti Git
 

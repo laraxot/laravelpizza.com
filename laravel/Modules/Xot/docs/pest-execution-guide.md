@@ -11,7 +11,7 @@
 ### Installazione Pest
 Pest è già installato nel progetto. Verifica con:
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 ./vendor/bin/pest --version
 ```
 
@@ -29,7 +29,7 @@ cd /var/www/_bases/base_laravelpizza/laravel
 ### Comando Base
 **SEMPRE eseguire dalla cartella `laravel/`**:
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 ./vendor/bin/pest [opzioni] [path]
 ```
 
@@ -130,31 +130,31 @@ function create{Model}(array $attributes = []): {Model}
 
 ### Pattern 1: Test Singolo Modulo
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 ./vendor/bin/pest Modules/User/tests/
 ```
 
 ### Pattern 2: Test Multipli Moduli
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 ./vendor/bin/pest Modules/User/tests/ Modules/Cms/tests/
 ```
 
 ### Pattern 3: Test con Coverage
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 ./vendor/bin/pest Modules/User/tests/ --coverage --min=100
 ```
 
 ### Pattern 4: Test con Filtro
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 ./vendor/bin/pest Modules/User/tests/ --filter="User Model"
 ```
 
 ### Pattern 5: Test Verboso per Debug
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 ./vendor/bin/pest Modules/User/tests/ -vv --filter="can be created"
 ```
 
@@ -203,7 +203,7 @@ abstract class TestCase extends BaseTestCase
 ## ⚠️ Problemi Comuni e Soluzioni
 
 ### Problema 1: "Test directory not found"
-**Errore**: `Test directory "/var/www/_bases/base_laravelpizza/laravel/tests/Feature" not found`
+**Errore**: `Test directory "tests/Feature" not found`
 
 **Causa**: Il file `laravel/tests/Pest.php` cerca directory che non esistono.
 
@@ -316,7 +316,7 @@ abstract class TestCase extends BaseTestCase
 
 **Esecuzione**:
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 composer test
 ```
 
@@ -328,7 +328,7 @@ composer test
 
 ### Esempio 1: Test Modulo User
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 ./vendor/bin/pest Modules/User/tests/
 ```
 
@@ -345,13 +345,13 @@ Duration: 4.18s
 
 ### Esempio 2: Test con Coverage
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 ./vendor/bin/pest Modules/User/tests/ --coverage --min=100
 ```
 
 ### Esempio 3: Test Specifico
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 ./vendor/bin/pest Modules/User/tests/Unit/UserModelTest.php -vv
 ```
 

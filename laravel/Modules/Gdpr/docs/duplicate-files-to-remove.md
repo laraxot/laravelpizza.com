@@ -29,7 +29,7 @@ Su Windows/macOS (dev): stesso file → **conflitti Git**
 
 ### Manuale
 ```bash
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel
+cd laravel
 rm Modules/Gdpr/tests/Feature/conflictresolutiontest.php
 git add -A
 git commit -m "fix: remove lowercase duplicate test file (PSR-4 compliance)"
@@ -38,7 +38,7 @@ git commit -m "fix: remove lowercase duplicate test file (PSR-4 compliance)"
 ### Automatico (Tutti i Moduli)
 ```bash
 # Script automatico (include anche altri moduli)
-/var/www/_bases/base_ptvx_fila4_mono/bashscripts/fix/cleanup-case-duplicates.sh
+bashscripts/fix/cleanup-case-duplicates.sh
 ```
 
 ---

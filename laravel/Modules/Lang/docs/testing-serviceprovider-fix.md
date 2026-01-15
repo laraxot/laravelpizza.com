@@ -124,7 +124,7 @@ test('module-specific feature works', function () {
 
 ## Related Documentation
 
-- `/var/www/_bases/base_laravelpizza/CLAUDE.md` - ServiceProvider rules
+- `CLAUDE.md` - ServiceProvider rules
 - `Modules/Xot/docs/serviceprovider-minimal-structure.md` - Pattern reference
 - `Modules/Meetup/docs/provider-errors-lessons-learned.md` - Common mistakes
 
@@ -143,4 +143,4 @@ The module's functionality is already covered by:
 
 **Date:** 2026-01-09
 **Status:** Documented - Ready for deletion
-**Relates to:** Test failures analysis in `/var/www/_bases/base_laravelpizza/laravel/docs/test-failures-analysis-2026-01-09.md`
+**Relates to:** Test failures analysis in `docs/test-failures-analysis-2026-01-09.md`

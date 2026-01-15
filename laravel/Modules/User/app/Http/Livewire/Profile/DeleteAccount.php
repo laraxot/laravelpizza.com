@@ -17,7 +17,10 @@ class DeleteAccount extends Component
 
     public function render(): View
     {
-        return view('user::livewire.profile.delete-account');
+        /** @var view-string $viewName */
+        $viewName = 'user::livewire.profile.delete-account';
+
+        return view($viewName);
     }
 
     public function destroy(): void

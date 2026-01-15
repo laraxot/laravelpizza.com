@@ -10,7 +10,7 @@ Risolvere tutti gli errori di syntax che impedivano l'avvio del server Laravel (
 
 **Comando**:
 ```bash
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel
+cd laravel
 php artisan serve --port=8001
 ```
 

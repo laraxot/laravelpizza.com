@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Codice di autorizzazione OAuth',
-        'group' => 'OAuth',
-        'icon' => 'heroicon-o-key',
-        'sort' => 32,
+        'label' => 'OAuth Authorization Codes',
+        'group' => '',
+        'icon' => 'heroicon-o-code-bracket',
+        'sort' => 31,
     ],
     'label' => 'Codice di autorizzazione OAuth',
     'plural_label' => 'Codici di autorizzazione OAuth',
@@ -20,9 +20,6 @@ return [
         ],
         'client_id' => [
             'label' => 'Client',
-        ],
-        'name' => [
-            'label' => 'Nome',
         ],
         'scopes' => [
             'label' => 'Ambiti',
@@ -37,9 +34,7 @@ return [
     'actions' => [
         'revoke' => [
             'label' => 'Revoca',
-        ],
-        'view_scopes' => [
-            'label' => 'Visualizza ambiti',
+            'success' => 'Codice di autorizzazione revocato con successo',
         ],
     ],
 ];

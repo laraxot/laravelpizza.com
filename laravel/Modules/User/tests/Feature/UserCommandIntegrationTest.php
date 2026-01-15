@@ -21,7 +21,7 @@ describe('User Command Integration', function () {
         // Non dobbiamo creare manualmente Application, ma verificare che il comando esista
         // Il comando è disponibile tramite Artisan facade
         expect($this->command->getName())->toBe('user:change-type');
-        
+
         // Verifica che il comando sia istanza di Command
         expect($this->command)->toBeInstanceOf(Command::class);
     });
@@ -157,7 +157,7 @@ describe('User Command Integration', function () {
         // Il sito funziona, quindi il comando può accedere alla configurazione
         // Verifica che la funzione helper config() esista
         expect(function_exists('config'))->toBeTrue();
-        
+
         // Non testiamo direttamente config() perché può causare problemi con il container
         // Il comando usa config() internamente, quindi se il comando funziona, anche config() funziona
         // Verifichiamo invece che il comando possa essere istanziato (cosa che richiede config)

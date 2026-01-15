@@ -7,7 +7,8 @@
     "providers": [
         "Modules\\User\\Providers\\UserServiceProvider",
         "Modules\\User\\Providers\\Filament\\AdminPanelProvider",
-        "Modules\\User\\Providers\\PassportServiceProvider"
+        "Modules\\User\\Providers\\PassportServiceProvider",
+        "Modules\\User\\Providers\\SocialiteServiceProvider"
     ],
     "migration": {
         "seeds": [

@@ -33,7 +33,7 @@ trait HasTeams
             ->withTimestamps()
             ->withPivot(['role']);
     }
-
+    
     /**
      * @param Team|int $team
      * @param string|null $role
@@ -43,14 +43,14 @@ trait HasTeams
     {
         $teamId = $team instanceof Team ? $team->id : $team;
         $query = $this->teams()->where('team_id', $teamId);
-
+        
         if ($role !== null) {
             $query->wherePivot('role', $role);
         }
-
+        
         return $query->exists();
     }
-
+    
     /**
      * @param Team $team
      * @param string $role
@@ -97,7 +97,7 @@ class TeamRoleManager
                 fn() => $this->loadRolePermissions($team)
             );
     }
-
+    
     /**
      * @param Team $team
      * @param string $role
@@ -113,7 +113,7 @@ class TeamRoleManager
         return isset($permissions[$role][$permission])
             && $permissions[$role][$permission] === true;
     }
-
+    
     /**
      * @param Team $team
      * @param string $role
@@ -129,7 +129,7 @@ class TeamRoleManager
             TeamPermission::where('team_id', $team->id)
                 ->where('role', $role)
                 ->delete();
-
+                
             $data = array_map(
                 fn($permission) => [
                     'team_id' => $team->id,
@@ -140,7 +140,7 @@ class TeamRoleManager
                 ],
                 $permissions
             );
-
+            
             TeamPermission::insert($data);
             Cache::tags(['teams', 'roles'])->flush();
         });
@@ -197,9 +197,9 @@ class HasTeamsTraitTest extends TestCase
     {
         $user = User::factory()->create();
         $team = Team::factory()->create();
-
+        
         $user->assignTeam($team, 'member');
-
+        
         $this->assertTrue($user->belongsToTeam($team));
         $this->assertTrue($user->belongsToTeam($team, 'member'));
         $this->assertFalse($user->belongsToTeam($team, 'admin'));
@@ -215,14 +215,14 @@ class TeamRoleManagerTest extends TestCase
     {
         $team = Team::factory()->create();
         $manager = new TeamRoleManager();
-
+        
         $manager->assignPermissions($team, 'admin', [
             'view',
             'create',
             'update',
             'delete'
         ]);
-
+        
         $this->assertTrue(
             $manager->hasPermission($team, 'admin', 'view')
         );

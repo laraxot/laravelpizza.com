@@ -4,12 +4,12 @@
 The S3Test component is a Filament page that provides diagnostic tools for AWS S3 and CloudFront integration. It allows administrators to test various aspects of the AWS configuration, including S3 connection, permissions, bucket policies, CloudFront signed URLs, and file operations.
 
 ## File Location
-- **Class**: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php`
-- **View**: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/resources/views/filament/components/test-results.blade.php`
-- **Translations**: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/lang/it/s3test.php`
-- **Class**: `/var/www/html/_bases/base_saluteora/laravel/Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php`
-- **View**: `/var/www/html/_bases/base_saluteora/laravel/Modules/UI/resources/views/filament/components/test-results.blade.php`
-- **Translations**: `/var/www/html/_bases/base_saluteora/laravel/Modules/UI/lang/it/s3test.php`
+- **Class**: `Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php`
+- **View**: `Modules/UI/resources/views/filament/components/test-results.blade.php`
+- **Translations**: `Modules/UI/lang/it/s3test.php`
+- **Class**: `Modules/UI/app/Filament/Clusters/Test/Pages/S3Test.php`
+- **View**: `Modules/UI/resources/views/filament/components/test-results.blade.php`
+- **Translations**: `Modules/UI/lang/it/s3test.php`
 
 ## Features
 - S3 connection testing

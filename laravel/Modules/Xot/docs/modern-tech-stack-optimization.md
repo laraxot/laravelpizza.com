@@ -15,7 +15,7 @@ Questa guida fornisce strategie specifiche per ottimizzare il codebase esistente
 - **Volt**: 1.7.2 ✅
 
 ### Packages Status
-- Laravel Passport: 12.4.2 ✅
+- Laravel Passport: 13.4.x ✅
 - Laravel Pennant: 1.18.2 ✅
 - Laravel Pulse: 1.4.3 ✅
 - Laravel Socialite: 5.23.0 ✅
@@ -975,7 +975,7 @@ Questa guida fornisce strategie specifiche per ottimizzare il codebase esistente
 - **Volt**: 1.7.2 ✅
 
 ### Packages Status
-- Laravel Passport: 12.4.2 ✅
+- Laravel Passport: 13.4.x ✅
 - Laravel Pennant: 1.18.2 ✅
 - Laravel Pulse: 1.4.3 ✅
 - Laravel Socialite: 5.23.0 ✅

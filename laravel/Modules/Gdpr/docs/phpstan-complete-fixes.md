@@ -35,7 +35,7 @@ Questo documento descrive la correzione completa di tutti gli errori PHPStan nel
 
 ## ✅ Risultato Finale
 ```
-Note: Using configuration file /var/www/_bases/base_techplanner_fila4_mono/laravel/phpstan.neon.
+Note: Using configuration file phpstan.neon.
 
 [OK] No errors
 ```

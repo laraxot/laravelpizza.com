@@ -1,7 +1,7 @@
 # Bulk Notification Action
 
-**Date**: 18 Dicembre 2025
-**Status**: ✅ Implementation Complete
+**Date**: 18 Dicembre 2025  
+**Status**: ✅ Implementation Complete  
 **Module**: Notify
 
 ## Overview
@@ -23,16 +23,16 @@ Notify Module
 
 ### Clean Code Principles Applied
 
-1. **Separation of Concerns**:
+1. **Separation of Concerns**: 
    - UI logic in Filament Action
    - Business logic in QueueableAction
    - Reusable across different resources
 
-2. **Single Responsibility**:
+2. **Single Responsibility**: 
    - Each action has one specific purpose
    - Easy to test and maintain
 
-3. **Reusability**:
+3. **Reusability**: 
    - Actions can be used across multiple resources
    - Consistent behavior across the application
 
@@ -122,7 +122,7 @@ The action provides detailed error reporting:
 
 Full multi-language support with:
 - Italian (it)
-- English (en)
+- English (en) 
 - German (de)
 - Spanish (es)
 - French (fr)

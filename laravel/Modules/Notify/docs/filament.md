@@ -12,11 +12,11 @@
                 {{ $status->label }}
             </x-filament::badge>
         </div>
-
+        
         <div class="prose max-w-none">
             {{ $content }}
         </div>
-
+        
         <div class="flex items-center justify-between text-sm text-gray-500">
             <span>{{ $created_at->diffForHumans() }}</span>
             <div class="flex items-center space-x-2">
@@ -45,7 +45,7 @@
                 :notification="$notification"
             />
         @endforeach
-
+        
         <div class="mt-4">
             {{ $notifications->links() }}
         </div>
@@ -67,7 +67,7 @@
                 required
             />
         </x-filament::input.wrapper>
-
+        
         <x-filament::input.wrapper>
             <x-filament::input.label for="content">
                 {{ __('Contenuto') }}
@@ -79,7 +79,7 @@
                 required
             />
         </x-filament::input.wrapper>
-
+        
         <div class="flex justify-end">
             <x-filament::button type="submit">
                 {{ __('Salva') }}
@@ -274,13 +274,13 @@ final class AnalyticsRelationManager extends RelationManager
                 :value="$sent"
                 icon="heroicon-o-paper-airplane"
             />
-
+            
             <x-filament::stats-card
                 :label="__('Aperture')"
                 :value="$open_rate . '%'"
                 icon="heroicon-o-eye"
             />
-
+            
             <x-filament::stats-card
                 :label="__('Click')"
                 :value="$click_rate . '%'"
@@ -302,7 +302,7 @@ final class EmailActivityWidget extends Widget
     protected function getViewData(): array
     {
         $analytics = app(AnalyticsService::class);
-
+        
         return [
             'chart' => [
                 'type' => 'line',
@@ -330,13 +330,13 @@ final class EmailActivityWidget extends Widget
                     :value="$sent"
                     icon="heroicon-o-paper-airplane"
                 />
-
+                
                 <x-filament::stats-card
                     :label="__('Aperture')"
                     :value="$open_rate . '%'"
                     icon="heroicon-o-eye"
                 />
-
+                
                 <x-filament::stats-card
                     :label="__('Click')"
                     :value="$click_rate . '%'"

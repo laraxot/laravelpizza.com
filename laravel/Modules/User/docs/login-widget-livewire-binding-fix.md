@@ -1,6 +1,6 @@
 # LoginWidget Livewire wire:model Binding Fix
 
-**Data**: 2025-12-18
+**Data**: 2025-12-18  
 **Errore**: `[wire:model="email"] property does not exist on component`
 
 ## Problema
@@ -8,7 +8,7 @@
 Il `LoginWidget` mostra errori nella console del browser:
 ```
 Livewire: [wire:model="email"] property does not exist on component
-Livewire: [wire:model="password"] property does not exist on component
+Livewire: [wire:model="password"] property does not exist on component  
 Livewire: [wire:model="remember"] property does not exist on component
 ```
 
@@ -32,7 +32,7 @@ Aggiornato il metodo per inizializzare `$this->data` con le chiavi dello schema 
 protected function initXotBaseWidget(): void
 {
     $fillData = $this->getFormFill();
-
+    
     // Se getFormFill() restituisce array vuoto (widget senza modello),
     // inizializza $this->data con le chiavi dello schema per garantire
     // che Livewire possa correttamente bindare i campi con statePath('data')
@@ -40,7 +40,7 @@ protected function initXotBaseWidget(): void
         $schemaKeys = array_keys($this->getFormSchema());
         $fillData = array_fill_keys($schemaKeys, null);
     }
-
+    
     $this->data = $fillData;
     $this->form->fill($this->data);
 }

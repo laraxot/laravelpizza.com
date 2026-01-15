@@ -56,3 +56,5 @@ Vedi: [Contact Extraction Pattern](./contact-extraction-pattern.md)
     - **Philosophy**: Keep Actions simple, stateless, and serialization-friendly.
 
 Vedi: [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md)
+
+

@@ -51,10 +51,10 @@ Aggiungere il metodo `hasPermissionTo()` al `UserContract`:
 
 ```php
 // In Modules/Xot/app/Contracts/UserContract.php
-interface UserContract
+interface UserContract 
 {
     // ... altri metodi
-
+    
     /**
      * Check if user has permission to perform action.
      *

@@ -2,7 +2,7 @@
 
 ## Introduzione
 
-Il pacchetto `mcamara/laravel-localization` offre un modo semplice per implementare la localizzazione in applicazioni Laravel. Questo documento analizza le funzionalità del pacchetto e suggerisce modifiche utili per il nostro progetto `saluteora`.
+Il pacchetto `mcamara/laravel-localization` offre un modo semplice per implementare la localizzazione in applicazioni Laravel. Questo documento analizza le funzionalità del pacchetto e suggerisce modifiche utili per il nostro progetto `<nome progetto>`.
 
 Dopo aver analizzato il progetto, ho notato che la localizzazione degli URL è già implementata seguendo la regola fondamentale di includere il prefisso della lingua come primo segmento del percorso (`/{locale}/{sezione}/{risorsa}`). Tuttavia, ci sono aree che possono essere migliorate:
 

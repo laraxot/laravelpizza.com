@@ -23,7 +23,63 @@ use Webmozart\Assert\Assert;
 /**
  * Modules\User\Models\Role.
  *
- * @property int $id
+ * <<<<<<< HEAD
+ * =======
+ *
+ * >>>>>>> 024bfed1 (.)
+ *
+ * @property int                                                                                      $id
+ *                                                                                                                       =======
+ * @property string                                                                                   $id
+ * @property string                                                                                   $uuid
+ * @property string|null                                                                              $team_id
+ * @property string                                                                                   $name
+ * @property string                                                                                   $guard_name
+ * @property Carbon|null                                                                              $created_at
+ * @property Carbon|null                                                                              $updated_at
+ * @property Collection<int, Permission>                                                              $permissions
+ * @property int|null                                                                                 $permissions_count
+ * @property Team|null                                                                                $team
+ * @property EloquentCollection<int, Model&UserContract>                                              $users
+ * @property int|null                                                                                 $users_count
+ *                                                                                                                       =======
+ * @property int                                                                                      $id
+ * @property string                                                                                   $uuid
+ * @property string|null                                                                              $team_id
+ * @property string                                                                                   $name
+ * @property string                                                                                   $guard_name
+ * @property \Illuminate\Support\Carbon|null                                                          $created_at
+ * @property \Illuminate\Support\Carbon|null                                                          $updated_at
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Spatie\Permission\Models\Permission>      $permissions
+ * @property int|null                                                                                 $permissions_count
+ * @property Team|null                                                                                $team
+ * @property \Illuminate\Database\Eloquent\Collection<int, Model&\Modules\Xot\Contracts\UserContract> $users
+ * @property int|null                                                                                 $users_count
+ *                                                                                                                       >>>>>>> 2880e04a (.)
+ *                                                                                                                       =======
+ * @property int                                                                                      $id
+ * @property string|null                                                                              $team_id
+ * @property string                                                                                   $name
+ * @property string                                                                                   $guard_name
+ * @property \Illuminate\Support\Carbon|null                                                          $created_at
+ * @property \Illuminate\Support\Carbon|null                                                          $updated_at
+ * @property \Illuminate\Support\Collection<int, Permission>                                          $permissions
+ * @property int|null                                                                                 $permissions_count
+ * @property Team|null                                                                                $team
+ * @property \Illuminate\Database\Eloquent\Collection<int, User>                                      $users
+ * @property int|null                                                                                 $users_count
+ *                                                                                                                       >>>>>>> 5aac2b68 (.)
+ *
+ * @method static Builder|Role newModelQuery()
+ * @method static Builder|Role newQuery()
+ * @method static Builder|Role permission($permissions)
+ * @method static Builder|Role query()
+ * @method static Builder|Role whereCreatedAt($value)
+ * @method static Builder|Role whereGuardName($value)
+ * @method static Builder|Role whereName($value)
+ * @method static Builder|Role whereTeamId($value)
+ * @method static Builder|Role whereUpdatedAt($value)
+ *
  * @property int $id
  *
  * @method static Builder|Role whereId($value)
@@ -52,6 +108,8 @@ use Webmozart\Assert\Assert;
  * @method static static               updateOrCreate(array $attributes, array $values = [])
  *
  * @mixin \Eloquent
+ *
+ * @phpstan-ignore-next-line
  */
 class Role extends SpatieRole
 {

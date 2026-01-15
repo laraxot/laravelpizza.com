@@ -119,7 +119,7 @@ L'errore fatale in CopyAction blocca tutto. Correggerlo per primo permette di pr
 ## Note Tecniche
 
 ### PHPStan Configuration
-- File configurazione: `/var/www/_bases/base_techplanner_fila4_mono/laravel/phpstan.neon`
+- File configurazione: `phpstan.neon`
 - Level: `max` (più stretto possibile)
 - Memory limit: `-1` (illimitato)
 

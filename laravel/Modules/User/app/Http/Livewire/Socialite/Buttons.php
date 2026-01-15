@@ -25,8 +25,11 @@ class Buttons extends Component
             $providers = [];
         }
 
+        /** @var view-string $viewName */
+        $viewName = 'user::livewire.socialite.buttons';
+
         // Return the view with the list of providers.
-        return view('user::livewire.socialite.buttons', [
+        return view($viewName, [
             'providers' => $providers,
         ]);
     }

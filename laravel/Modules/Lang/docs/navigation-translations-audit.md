@@ -1,4 +1,4 @@
-# Audit Traduzioni con ".navigation" - SaluteOra
+# Audit Traduzioni con ".navigation" - <nome progetto>
 
 ## Panoramica
 Questo documento elenca tutte le occorrenze di chiavi di traduzione che contengono ".navigation" nei file di lingua dei moduli. Queste chiavi violano le regole di traduzione e devono essere sistematizzate secondo i principi DRY + KISS.
@@ -133,7 +133,7 @@ Questo file contiene molteplici occorrenze problematiche:
 
 ## Collegamenti
 - [Regole Traduzioni](../Modules/Xot/docs/translation-rules.md)
-- [Standard Qualità Traduzioni](../Modules/SaluteOra/docs/translation-quality-standards.md)
+- [Standard Qualità Traduzioni](../Modules/<nome progetto>/docs/translation-quality-standards.md)
 
 *Audit creato il: 2025-08-07*
 *Ultimo aggiornamento: 2025-08-07*

@@ -3,21 +3,16 @@
 declare(strict_types=1);
 
 use Filament\Actions\Action;
-use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\ExportBulkAction;
+use Filament\Facades\Filament;
 use Filament\Tables\Columns\TextColumn;
-use Illuminate\Database\Eloquent\Builder;
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Actions\ChangePasswordAction;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Filament\Resources\UserResource\Pages\BaseListUsers;
 use Modules\User\Filament\Resources\UserResource\Pages\ListUsers;
-use Modules\User\Filament\Resources\UserResource\Widgets\UserOverview;
 use Modules\User\Models\User;
-use Modules\User\Tests\TestCase;
-
-use Filament\Facades\Filament;
 use Modules\User\Providers\Filament\AdminPanelProvider;
+use Modules\User\Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -25,7 +20,7 @@ beforeEach(function (): void {
     // Ensure the panel is registered
     try {
         $panel = Filament::getPanel('user::admin');
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
         $panelProvider = new AdminPanelProvider(app());
         $panel = $panelProvider->panel(Filament::getPanelRegistry()->makePanel('user::admin'));
         Filament::registerPanel($panel);
@@ -84,7 +79,7 @@ test('list users page has correct table filters', function (): void {
 
 test('list users page has correct table actions', function (): void {
     $actions = $this->listUsersPage->getTableActions();
-    
+
     // Debug output
     // dump($actions);
 
@@ -113,9 +108,9 @@ test('list users page has correct header widgets', function (): void {
 });
 
 test('list users page has correct bulk actions', function (): void {
-    // getTableBulkActions is available on BaseListUsers via inheritance/mixins effectively? 
+    // getTableBulkActions is available on BaseListUsers via inheritance/mixins effectively?
     // Usually defined in ListRecords or InteractsWithTable.
-    // However, calling it might rely on table() being set up. 
+    // However, calling it might rely on table() being set up.
     // For now, simpler test or skip if it's protected/complex.
     expect(true)->toBeTrue();
 });
@@ -123,16 +118,16 @@ test('list users page has correct bulk actions', function (): void {
 test('list users page can display users', function (): void {
     $createdUserIds = $this->users->pluck('id');
     $testUsers = User::whereIn('id', $createdUserIds)->get();
-    
+
     expect($testUsers)->toHaveCount(3);
 
     foreach ($testUsers as $user) {
         expect($user)->toBeInstanceOf(User::class);
         // Fix Enum check - use value comparison if type is string in DB/Accessor
         if (is_string($user->type)) {
-             expect($user->type)->toBe(UserType::MasterAdmin->value);
+            expect($user->type)->toBe(UserType::MasterAdmin->value);
         } else {
-             expect($user->type)->toBe(UserType::MasterAdmin);
+            expect($user->type)->toBe(UserType::MasterAdmin);
         }
     }
 });
@@ -152,7 +147,7 @@ test('list users page has correct breadcrumbs', function (): void {
     try {
         $breadcrumbs = $this->listUsersPage->getBreadcrumbs();
         expect($breadcrumbs)->toBeArray();
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
         expect(true)->toBeTrue(); // Skip if fails due to routing
     }
 });

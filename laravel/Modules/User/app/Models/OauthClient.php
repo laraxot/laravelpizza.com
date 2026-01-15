@@ -7,6 +7,10 @@ namespace Modules\User\Models;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+<<<<<<< HEAD
+=======
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+>>>>>>> 024bfed1 (.)
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Support\Carbon;
 use Laravel\Passport\Client as PassportClient;
@@ -18,25 +22,26 @@ use Spatie\Permission\Traits\HasRoles;
 /**
  * Modules\User\Models\OauthClient.
  *
- * @property string                            $id
- * @property string|null                       $user_id
- * @property string                            $name
- * @property string|null                       $secret
- * @property string|null                       $provider
- * @property string                            $redirect
- * @property bool                              $personal_access_client
- * @property bool                              $password_client
- * @property bool                              $revoked
- * @property Carbon|null                       $created_at
- * @property Carbon|null                       $updated_at
- * @property Collection<int, OauthAuthCode>    $authCodes
- * @property int|null                          $auth_codes_count
- * @property array|null                        $grant_types
- * @property string|null                       $plain_secret
- * @property array|null                        $scopes
- * @property Collection<int, OauthAccessToken> $tokens
- * @property int|null                          $tokens_count
- * @property UserContract|null                 $user
+ * @property string                                   $id
+ * @property string|null                              $user_id
+ * @property string                                   $name
+ * @property string|null                              $secret
+ * @property string|null                              $provider
+ * @property string                                   $redirect
+ * @property bool                                     $personal_access_client
+ * @property bool                                     $password_client
+ * @property bool                                     $revoked
+ * @property Carbon|null                              $created_at
+ * @property Carbon|null                              $updated_at
+ * @property Collection<int, OauthAuthCode>           $authCodes
+ * @property int|null                                 $auth_codes_count
+ * @property array|null                               $grant_types
+ * @property string|null                              $plain_secret
+ * @property array|null                               $scopes
+ * @property Collection<int, OauthAccessToken>        $tokens
+ * @property int|null                                 $tokens_count
+ * @property UserContract|null                        $user
+ * @property \Illuminate\Database\Eloquent\Model|null $owner
  *
  * @method static ClientFactory       factory($count = null, $state = [])
  * @method static Builder|OauthClient newModelQuery()

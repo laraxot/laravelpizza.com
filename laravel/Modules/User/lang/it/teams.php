@@ -75,4 +75,7 @@ return [
             'description' => 'Utente che ha creato questo team',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
 ];

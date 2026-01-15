@@ -23,14 +23,9 @@ composer global require laravel/installer
 È fondamentale creare il progetto nella posizione corretta:
 
 ```bash
-cd /var/www/html/<nome progetto>
-laravel new laravel
-```
-
-> ⚠️ **IMPORTANTE**:
-> - Il progetto DEVE essere installato in `/var/www/html/<nome progetto>/laravel`
+cd var/www/html/<nome progetto>/laravel`
 > - NON utilizzare variazioni come `laravel new <nome progetto>` o `laravel new laravel --version=X.Y`
-> - NON creare il progetto in `/var/www/html/<nome progetto>/public_html` o altre posizioni
+> - NON creare il progetto in `public_html` o altre posizioni
 
 ### 3. Installazione Laravel Modules
 
@@ -83,7 +78,7 @@ git subtree add -P bashscripts git@github.com:laraxot/bashscripts_fila3.git dev 
 Se Laravel è stato installato nella posizione errata, utilizzare questo comando per spostarlo:
 
 ```bash
-mv /var/www/html/<nome progetto>/public_html/laravel /var/www/html/<nome progetto>/laravel
+mv public_html/laravel laravel
 ```
 
 ## Verifica Installazione
@@ -91,7 +86,7 @@ mv /var/www/html/<nome progetto>/public_html/laravel /var/www/html/<nome progett
 Per verificare che l'installazione sia corretta:
 
 ```bash
-cd /var/www/html/<nome progetto>/laravel
+cd laravel
 php artisan --version
 ```
 

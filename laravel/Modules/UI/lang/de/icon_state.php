@@ -40,4 +40,15 @@ return [
             'helper_text' => '',
         ],
     ],
+    'messages' => [
+        'invalid_state_instance' => 'Ungültige Statusinstanz',
+        'record_not_found' => 'Datensatz nicht gefunden',
+        'transition_completed' => [
+            'title' => 'Übergang abgeschlossen',
+            'body' => 'Statusübergang wurde erfolgreich abgeschlossen',
+        ],
+        'transition_error' => [
+            'title' => 'Übergangsfehler',
+        ],
+    ],
 ];

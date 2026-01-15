@@ -140,4 +140,4 @@ L'utilizzo di Queueable Actions e componenti Blade di Filament garantisce:
 - Operazioni asincrone efficienti
 - UI/UX moderna e responsive
 - Integrazione nativa con Filament
-- Facilità di manutenzione
+- Facilità di manutenzione 

@@ -3,6 +3,9 @@
 **Ultimo aggiornamento**: 2025-12-22
 **Principi**: DRY + KISS + SOLID + Robust
 **Stack**: Laravel 12 + Filament 4 + PHP 8.3 + Laraxot
+**Ultimo aggiornamento**: 2025-12-22  
+**Principi**: DRY + KISS + SOLID + Robust  
+**Stack**: Laravel 12 + Filament 4 + PHP 8.3 + Laraxot  
 **Obiettivo**: 0 errori PHPStan Level 10 + Complexity < 10 + Quality > 80%
 
 ---
@@ -147,6 +150,7 @@ php artisan cache:clear
 ### Metodi Resource Filament
 - Chi estende `XotBaseResource` **NON deve avere** `getTableColumns()`
 - `getTableActions()` e `getTableBulkActions()` devono restituire `array<string, mixed>`
+- `getInfolistSchema()` deve restituire `array<string, mixed>` con chiavi stringa
 - Se solo azioni standard → **rimuovile completamente**
 - Se azioni personalizzate → includi `...parent::getTableActions()`
 
@@ -447,6 +451,38 @@ $address->update($up);
 ```
 
 **Regola**: Quando si usa `Arr::only()`, `Arr::except()`, o altri helper Laravel che restituiscono `array` non tipizzato, aggiungere sempre un PHPDoc esplicito se il risultato viene passato a metodi che richiedono tipi specifici.
+
+### 14. Infolist Schema con String Keys
+
+**Problema**: `getInfolistSchema()` restituisce array indicizzato invece di associativo
+
+**Soluzione**: Usare chiavi stringa per ogni componente
+
+```php
+// ❌ ERRORE - array indicizzato
+/**
+ * @return array<Component>
+ */
+public function getInfolistSchema(): array
+{
+    return [
+        Section::make('Info'),
+        Grid::make(),
+    ];
+}
+
+// ✅ CORRETTO - array associativo con chiavi stringa
+/**
+ * @return array<string, mixed>
+ */
+public function getInfolistSchema(): array
+{
+    return [
+        'info_section' => Section::make('Info'),
+        'grid' => Grid::make(),
+    ];
+}
+```
 
 ---
 
@@ -1923,3 +1959,7 @@ $model->update($filtered);
 - [XotBase Extension Rules](./filament-class-extension-rules.md) - Regole complete Filament
 - [PHPStan Code Quality Guide](./phpstan-code-quality-guide.md) - Guida completa PHPStan
 - [PHPStan Specific Patterns](./phpstan-specific-patterns.md) - Pattern specifici PHPStan
+**Riferimenti**: 
+- `laravel/Modules/Xot/docs/filament-extension-rules-complete.md` - Regole complete Filament
+- `laravel/Modules/Xot/docs/phpstan-code-quality-guide.md` - Guida completa PHPStan
+- `laravel/Modules/Xot/docs/phpstan-specific-patterns.md` - Pattern specifici PHPStan

@@ -148,7 +148,7 @@ This document serves as a reference for:
 - Code quality requirements
 - Documentation standards
 All widget development should follow these rules to maintain consistency and quality across the FixCity project.
-# Widget Translation Rules - SaluteOra Project
+# Widget Translation Rules - <nome progetto> Project
 
 ## Core Principles
 
@@ -346,4 +346,4 @@ This document serves as a reference for:
 - Code quality requirements
 - Documentation standards
 
-All widget development should follow these rules to maintain consistency and quality across the SaluteOra project.
+All widget development should follow these rules to maintain consistency and quality across the <nome progetto> project.

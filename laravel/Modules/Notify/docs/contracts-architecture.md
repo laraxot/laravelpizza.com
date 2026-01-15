@@ -8,21 +8,21 @@ Le interfacce **DEVONO** essere posizionate nella directory `app/Contracts/`, **
 
 ```
 ✅ CORRETTO:
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SmsProviderActionInterface.php
+Modules/Notify/app/Contracts/SmsProviderActionInterface.php
 
 ❌ ERRATO:
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/SMS/SmsActionInterface.php
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
-/var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SmsProviderActionInterface.php
+Modules/Notify/app/Actions/SMS/SmsActionInterface.php
+Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
+Modules/Notify/app/Contracts/SmsProviderActionInterface.php
 
 ❌ ERRATO:
-/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS/SmsActionInterface.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SmsProviderActionInterface.php
+Modules/Notify/app/Actions/SMS/SmsActionInterface.php
+Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
+Modules/Notify/app/Contracts/SmsProviderActionInterface.php
 
 ❌ ERRATO:
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/SMS/SmsActionInterface.php
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
+Modules/Notify/app/Actions/SMS/SmsActionInterface.php
+Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
 ```
 
 ### 2. Namespace Unificati per le Interfacce
@@ -63,9 +63,9 @@ SendSmsInterface
 ## Struttura di Directory Corretta
 
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/
-/var/www/html/saluteora/laravel/Modules/Notify/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/
+Modules/Notify/
+Modules/Notify/
+Modules/Notify/
 ├── app/
 │   ├── Actions/
 │   │   ├── Email/
@@ -110,11 +110,11 @@ Le interfacce **DEVONO** essere posizionate nella directory `app/Contracts/`, **
 
 ```
 ✅ CORRETTO:
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Contracts/SmsProviderActionInterface.php
+Modules/Notify/app/Contracts/SmsProviderActionInterface.php
 
 ❌ ERRATO:
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Actions/SMS/SmsActionInterface.php
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
+Modules/Notify/app/Actions/SMS/SmsActionInterface.php
+Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
 ```
 
 ### 2. Namespace Unificati per le Interfacce
@@ -155,7 +155,7 @@ SendSmsInterface
 ## Struttura di Directory Corretta
 
 ```
-/var/www/html/<directory progetto>/laravel/Modules/Notify/
+Modules/Notify/
 ├── app/
 │   ├── Actions/
 │   │   ├── Email/

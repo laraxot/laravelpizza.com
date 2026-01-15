@@ -17,7 +17,7 @@ Dove:
 Importante: Sebbene le classi possano essere fisicamente situate nella directory `app/`, il namespace NON deve includere il segmento "app".
 
 ### Esempi Corretti:
-- Classe: `/var/www/html/<nome progetto>/laravel/Modules/Patient/app/Models/Patient.php`
+- Classe: `Modules/Patient/app/Models/Patient.php`
 - Namespace: `Modules\Patient\Models`
 
 ### Esempi Errati:
@@ -36,7 +36,7 @@ use Modules\Dental\Models\Treatment;
 ## Traits e Interfaces
 
 I Traits seguono la stessa convenzione:
-- Directory: `/var/www/html/<nome progetto>/laravel/Modules/Tenant/app/Traits/`
+- Directory: `Modules/Tenant/app/Traits/`
 - Namespace: `Modules\Tenant\Traits\`
 
 ## Convenzioni PSR-12

@@ -6,7 +6,7 @@
 
 ### File: `auth.php` (English)
 
-**Path completo**: `/var/www/html/_bases/base_saluteora/laravel/resources/lang/en/auth.php`
+**Path completo**: `resources/lang/en/auth.php`
 
 - **Linea 8**: Pattern italiano `email` trovato
   ```php

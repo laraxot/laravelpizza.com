@@ -28,7 +28,7 @@ File: `.windsurf/mcp.json` (o `.cursor/mcp.json` per Cursor)
     "laravel-boost": {
       "command": "php",
       "args": [
-        "/var/www/_bases/base_techplanner_fila4_mono/laravel/artisan",
+        "artisan",
         "boost:mcp"
       ],
       "env": {
@@ -40,10 +40,10 @@ File: `.windsurf/mcp.json` (o `.cursor/mcp.json` per Cursor)
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "/var/www/_bases/base_techplanner_fila4_mono/laravel",
-        "/var/www/_bases/base_techplanner_fila4_mono/docs",
-        "/var/www/_bases/base_techplanner_fila4_mono/public_html",
-        "/var/www/_bases/base_techplanner_fila4_mono/bashscripts"
+        "laravel",
+        "docs",
+        "public_html",
+        "bashscripts"
       ]
     },
     "memory": {
@@ -64,11 +64,7 @@ File: `.windsurf/mcp.json` (o `.cursor/mcp.json` per Cursor)
     },
     "git": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-git", "/var/www/_bases/base_techplanner_fila4_mono"]
-    },
-    "playwright": {
-      "command": "npx",
-      "args": ["-y", "@executeautomation/playwright-mcp-server"],
+      "args": ["-y", "@modelcontextprotocol/server-git", "playwright-mcp-server"],
       "env": {}
     },
     "puppeteer": {
@@ -82,7 +78,7 @@ File: `.windsurf/mcp.json` (o `.cursor/mcp.json` per Cursor)
     "mysql": {
       "command": "node",
       "args": [
-        "/var/www/_bases/base_techplanner_fila4_mono/bashscripts/mcp/mysql-db-connector.js"
+        "bashscripts/mcp/mysql-db-connector.js"
       ]
     },
   }
@@ -109,7 +105,7 @@ File: `.windsurf/mcp.json` (o `.cursor/mcp.json` per Cursor)
 
 **Installazione**:
 ```bash
-cd /var/www/_bases/base_techplanner_fila4_mono/laravel
+cd laravel
 composer require laravel/boost
 php artisan boost:install
 ```
@@ -123,10 +119,10 @@ php artisan boost:install
 **Scopo**: Accesso completo ai file del progetto, anche quelli in gitignore.
 
 **Path Configurati**:
-- `/var/www/_bases/base_techplanner_fila4_mono/laravel` - Codice Laravel e moduli
-- `/var/www/_bases/base_techplanner_fila4_mono/docs` - Documentazione progetto
-- `/var/www/_bases/base_techplanner_fila4_mono/public_html` - Assets pubblici
-- `/var/www/_bases/base_techplanner_fila4_mono/bashscripts` - Script utility
+- `laravel` - Codice Laravel e moduli
+- `docs` - Documentazione progetto
+- `public_html` - Assets pubblici
+- `bashscripts` - Script utility
 
 **Capacità**:
 - ✅ Read/Write file (anche in gitignore come .env)
@@ -134,37 +130,7 @@ php artisan boost:install
 - ✅ Search file per pattern
 - ✅ File info (size, permissions, timestamps)
 
-**Miglioramento**: Path aggiornati dal vecchio `/var/www/html/_bases/` al path completo del progetto.
-
-### 3. Memory (Knowledge Graph) ✅
-
-**Stato**: Configurato
-
-**Scopo**: Memoria persistente con knowledge graph per ricordare pattern e decisioni architetturali.
-
-**Capacità**:
-- ✅ Knowledge graph persistente
-- ✅ Ricerca pattern nel codice
-- ✅ Memorizzazione decisioni tecniche
-- ✅ Contesto tra richieste multiple
-
-**Utilizzo**: Memorizzare pattern architetturali, decisioni business logic, fix comuni.
-
-### 4. Sequential Thinking ✅
-
-**Stato**: Configurato
-
-**Scopo**: Problem-solving dinamico e riflessivo per problemi complessi.
-
-**Capacità**:
-- ✅ Ragionamento strutturato step-by-step
-- ✅ Analisi multi-step
-- ✅ Revisione e correzione pensieri precedenti
-- ✅ Generazione ipotesi e verifica
-
-**Utilizzo**: Analisi complesse, debugging difficile, decisioni architetturali.
-
-### 5. Fetch (HTTP/API) ✅
+**Miglioramento**: Path aggiornati dal vecchio `API) ✅
 
 **Stato**: Aggiunto nella nuova configurazione
 
@@ -228,7 +194,7 @@ php artisan boost:install
 
 **Scopo**: Query dirette MySQL con credenziali da `.env`.
 
-**Path Script**: `/var/www/_bases/base_techplanner_fila4_mono/bashscripts/mcp/mysql-db-connector.js`
+**Path Script**: `bashscripts/mcp/mysql-db-connector.js`
 
 **Capacità**:
 - ✅ Query SQL dirette
@@ -276,7 +242,7 @@ php artisan boost:install
 
 **Passi per Laravel Boost**:
 ```bash
-cd /var/www/_bases/base_techplanner_fila4_mono/laravel
+cd laravel
 composer require laravel/boost
 php artisan boost:install
 ```
@@ -306,13 +272,13 @@ npx -y @modelcontextprotocol/server-git --version
 npx -y @executeautomation/playwright-mcp-server --version
 
 # Test mysql script
-node /var/www/_bases/base_techplanner_fila4_mono/bashscripts/mcp/mysql-db-connector.js
+node bashscripts/mcp/mysql-db-connector.js
 ```
 
 ### Test Laravel Boost (Dopo Installazione)
 
 ```bash
-cd /var/www/_bases/base_techplanner_fila4_mono/laravel
+cd laravel
 php artisan boost:mcp
 ```
 
@@ -404,7 +370,7 @@ npm install -g @executeautomation/playwright-mcp-server
 Sempre usare path assoluti nella configurazione MCP:
 ```json
 // ✅ CORRETTO
-"/var/www/_bases/base_techplanner_fila4_mono/laravel/artisan"
+"artisan"
 
 // ❌ ERRATO
 "./laravel/artisan"
@@ -431,7 +397,7 @@ Mai hardcodare credenziali:
 Limitare sempre lo scope alle directory necessarie:
 ```json
 // ✅ CORRETTO - Directory specifiche
-"/var/www/_bases/base_techplanner_fila4_mono/laravel"
+"laravel"
 
 // ❌ PERICOLOSO - Root directory
 "/"

@@ -27,6 +27,7 @@ use Filament\Tables\Enums\RecordActionsPosition;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
+use Filament\Widgets\TableWidget;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
@@ -162,6 +163,7 @@ trait HasXotTable
      */
     public function table(Table $table): Table
     {
+        /*
         $modelClass = $this->getModelClass();
         if (! app(TableExistsByModelClassActions::class)->execute($modelClass)) {
             $this->notifyTableMissing();
@@ -169,12 +171,12 @@ trait HasXotTable
             return $this->configureEmptyTable($table);
         }
 
-        /** @var Model $model */
+        //  @var Model $model
         $model = app($modelClass);
         Assert::isInstanceOf($model, Model::class);
-
+        */
         // Configurazione base della tabella
-        return $table
+        $table = $table
             ->recordTitleAttribute($this->getTableRecordTitleAttribute())
             ->heading($this->getTableHeading())
             ->columns($this->layoutView->getTableColumns($this->getTableColumns(), $this->getGridTableColumns()))
@@ -191,12 +193,19 @@ trait HasXotTable
             ->striped()
             ->paginated($this->getTablePaginated());
 
-        /*
-         * ->defaultSort(
-         * column: $this->getDefaultTableSortColumn(),
-         * direction: $this->getDefaultTableSortDirection(),
-         * );
-         */
+        // Configurazioni opzionali personalizzabili
+        $sortColumn = $this->getDefaultTableSortColumn();
+        $sortDirection = $this->getDefaultTableSortDirection();
+        if ($sortColumn !== null && $sortDirection !== null) {
+            $table = $table->defaultSort($sortColumn, $sortDirection);
+        }
+
+        $pollInterval = $this->getTablePollInterval();
+        if ($pollInterval !== null) {
+            $table = $table->poll($pollInterval);
+        }
+
+        return $table;
     }
 
     /**
@@ -216,25 +225,33 @@ trait HasXotTable
      */
     public function getTableActions(): array
     {
-        $actions = [];
-        $resource = $this->getResource();
+        if ($this instanceof TableWidget) {
+            return [];
+        }
 
+        $actions = [];
+        // $resource = $this->getResource();
+        $resource = $this;
+
+        // @phpstan-ignore-next-line function.alreadyNarrowedType
         if (method_exists($resource, 'canView')) {
             $actions['view'] = ViewAction::make()
                 ->iconButton()
-                ->visible($resource::canView(...));
+                ->visible(fn (Model $record): bool => (bool) $resource->canView($record));
         }
 
+        // @phpstan-ignore-next-line function.alreadyNarrowedType
         if (method_exists($resource, 'canEdit')) {
             $actions['edit'] = EditAction::make()
                 ->iconButton()
-                ->visible($resource::canEdit(...));
+                ->visible(fn (Model $record): bool => (bool) $resource->canEdit($record));
         }
 
+        // @phpstan-ignore-next-line function.alreadyNarrowedType
         if (method_exists($resource, 'canDelete')) {
             $actions['delete'] = DeleteAction::make()
                 ->iconButton()
-                ->visible($resource::canDelete(...));
+                ->visible(fn (Model $record): bool => (bool) $resource->canDelete($record));
         }
 
         if ($this->shouldShowReplicateAction()) {
@@ -330,11 +347,12 @@ trait HasXotTable
 
     /**
      * Get table search query.
+     *
+     * CRITICO: Deve essere public per rispettare il contratto ListRecords.
      */
-    public function getTableSearch(): string
+    public function getTableSearch(): ?string
     {
-        /** @var string */
-        return $this->tableSearch ?? '';
+        return $this->tableSearch ?? null;
     }
 
     protected function shouldShowAssociateAction(): bool
@@ -381,7 +399,13 @@ trait HasXotTable
         ];
     }
 
-    protected function getTablePaginated(): bool
+    /**
+     * Get table pagination options.
+     * Can return bool (true/false) or array of page sizes [10, 25, 50, 100].
+     *
+     * @return bool|array<int>
+     */
+    protected function getTablePaginated(): bool|array
     {
         return true;
     }
@@ -409,6 +433,15 @@ trait HasXotTable
     protected function getDefaultTableSortDirection(): ?string
     {
         return 'desc';
+    }
+
+    /**
+     * Get table polling interval.
+     * Returns null to disable polling, or a string like '30s' to enable.
+     */
+    protected function getTablePollInterval(): ?string
+    {
+        return null;
     }
 
     /**

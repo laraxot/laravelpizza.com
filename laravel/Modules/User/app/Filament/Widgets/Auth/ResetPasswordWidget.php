@@ -29,8 +29,6 @@ class ResetPasswordWidget extends XotBaseWidget
 {
     /**
      * The view for this widget.
-     *
-     * @var view-string
      */
     protected string $view = 'user::widgets.auth.reset-password-widget';
 

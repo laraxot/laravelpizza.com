@@ -55,8 +55,8 @@ abstract class BaseEditUser extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
-            DeleteAction::make(),
-            ChangePasswordHeaderAction::make('change-password'),
+            'delete' => DeleteAction::make(),
+            'change-password' => ChangePasswordHeaderAction::make('change-password'),
         ];
     }
 }

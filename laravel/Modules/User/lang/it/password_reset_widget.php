@@ -11,4 +11,8 @@ return [
             'description' => 'email',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

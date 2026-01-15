@@ -8,11 +8,11 @@ Le interfacce **DEVONO** essere posizionate nella directory `app/Contracts/`, **
 
 ```
 ✅ CORRETTO:
-/var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SmsProviderActionInterface.php
+Modules/Notify/app/Contracts/SmsProviderActionInterface.php
 
 ❌ ERRATO:
-/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS/SmsActionInterface.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
+Modules/Notify/app/Actions/SMS/SmsActionInterface.php
+Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
 ```
 
 ### 2. Namespace Unificati per le Interfacce
@@ -53,7 +53,7 @@ SendSmsInterface
 ## Struttura di Directory Corretta
 
 ```
-/var/www/html/saluteora/laravel/Modules/Notify/
+Modules/Notify/
 ├── app/
 │   ├── Actions/
 │   │   ├── Email/

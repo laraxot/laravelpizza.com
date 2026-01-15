@@ -10,7 +10,7 @@
 
 ## Panoramica
 
-Questo documento fornisce un'analisi corretta dell'implementazione attuale del file `logout.blade.php` situato in `Themes/One/resources/views/pages/auth/`, identifica problemi e propone miglioramenti in linea con le convenzioni di SaluteOra.
+Questo documento fornisce un'analisi corretta dell'implementazione attuale del file `logout.blade.php` situato in `Themes/One/resources/views/pages/auth/`, identifica problemi e propone miglioramenti in linea con le convenzioni di <nome progetto>.
 
 ## Analisi dell'Implementazione Attuale
 
@@ -187,7 +187,7 @@ Per il logout , si raccomanda di utilizzare l'approccio Folio con PHP puro, che 
 
 2. **Efficienza**: Il reindirizzamento immediato offre una migliore esperienza utente rispetto a una pagina di conferma.
 
-3. **Coerenza**: Questo approccio è coerente con le convenzioni di SaluteOra per le operazioni semplici.
+3. **Coerenza**: Questo approccio è coerente con le convenzioni di <nome progetto> per le operazioni semplici.
 
 4. **Sicurezza**: Implementa correttamente tutte le misure di sicurezza necessarie (invalidazione sessione, rigenerazione token).
 

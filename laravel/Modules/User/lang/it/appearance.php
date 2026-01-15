@@ -14,4 +14,8 @@ return [
         'icon' => 'heroicon-o-paint-brush',
         'sort' => 5,
     ],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
+    'actions' => [],
 ];

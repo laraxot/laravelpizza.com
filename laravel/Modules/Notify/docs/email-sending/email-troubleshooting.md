@@ -1,4 +1,4 @@
-# Risoluzione dei Problemi nelle Email
+# Risoluzione dei Problemi nelle Email 
 
 Questa documentazione fornisce soluzioni per i problemi comuni che possono verificarsi durante l'invio di email nel modulo Notify.
 
@@ -14,9 +14,9 @@ La classe `SpatieEmail` ora utilizza l'API moderna di Laravel per gli allegati t
 // Preparazione degli allegati
 $attachments = [
     [
-        'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/avatars/default.svg',
-        'path' => '/var/www/html/saluteora/public_html/images/avatars/default.svg',
-        'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/avatars/default.svg',
+        'path' => 'public_html/images/avatars/default.svg',
+        'path' => 'public_html/images/avatars/default.svg',
+        'path' => 'public_html/images/avatars/default.svg',
         'as' => 'logo.svg',
         'mime' => 'image/svg+xml',
     ],
@@ -177,7 +177,7 @@ Esempio di test per verificare il corretto funzionamento dell'invio email:
 public function test_can_send_email_with_attachments()
 {
     Mail::fake();
-
+    
     $user = User::factory()->create();
     $attachments = [
         [
@@ -186,15 +186,15 @@ public function test_can_send_email_with_attachments()
             'mime' => 'text/plain',
         ],
     ];
-
+    
     // Crea il file test se non esiste
     if (!file_exists(public_path('test-file.txt'))) {
         file_put_contents(public_path('test-file.txt'), 'Test content');
     }
-
+    
     // Invia email
     Mail::to($user->email)->send((new SpatieEmail($user, 'test-template'))->addAttachments($attachments));
-
+    
     // Verifica che l'email sia stata inviata
     Mail::assertSent(SpatieEmail::class, function ($mail) use ($user) {
         return $mail->hasTo($user->email);

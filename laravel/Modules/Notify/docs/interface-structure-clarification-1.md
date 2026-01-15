@@ -5,7 +5,7 @@
 , le interfacce per le azioni SMS seguono questa struttura:
 
 ```
-/var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+Modules/Notify/app/Contracts/SMS/SmsActionContract.php
 ```
 
 Con il namespace corrispondente:

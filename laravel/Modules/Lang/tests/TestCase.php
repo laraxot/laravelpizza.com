@@ -24,7 +24,7 @@ abstract class TestCase extends BaseTestCase
 
     /**
      * Setup the test environment.
-     * Il sito funziona, quindi i test devono riflettere il comportamento reale
+     * Il sito funziona, quindi i test devono riflettere il comportamento reale.
      */
     protected function setUp(): void
     {
@@ -67,7 +67,7 @@ abstract class TestCase extends BaseTestCase
             try {
                 $pdo = DB::connection($conn)->getPdo();
                 if ($pdo instanceof \PDO && method_exists($pdo, 'sqliteCreateFunction')) {
-                    $pdo->sqliteCreateFunction('md5', static fn (?string $value): ?string => $value === null ? null : md5($value));
+                    $pdo->sqliteCreateFunction('md5', static fn (?string $value): ?string => null === $value ? null : md5($value));
                     $pdo->sqliteCreateFunction('unhex', static fn (?string $value): ?string => $value);
                 }
             } catch (\Throwable) {

@@ -18,4 +18,36 @@ return [
     'success_attached' => 'Utente collegato con successo',
     'success_detached' => 'Utente scollegato con successo',
     'success_deleted' => 'Utenti eliminati con successo',
+    'oauth' => [
+        'revoke_client' => [
+            'label' => 'Revoca Client',
+            'modal' => [
+                'heading' => 'Revoca Client OAuth',
+                'description' => 'Sei sicuro di voler revocare questo client OAuth? Questa azione revocherà il client e tutti i token associati. L\'operazione non può essere annullata.',
+                'confirm' => 'Revoca Client',
+            ],
+            'success' => 'Client revocato con successo',
+            'error' => 'Errore durante la revoca del client',
+        ],
+        'revoke_token' => [
+            'label' => 'Revoca Token',
+            'modal' => [
+                'heading' => 'Revoca Token OAuth',
+                'description' => 'Sei sicuro di voler revocare questo token? L\'operazione non può essere annullata.',
+                'confirm' => 'Revoca Token',
+            ],
+            'success' => 'Token revocato con successo',
+            'error' => 'Errore durante la revoca del token',
+        ],
+        'create_client' => [
+            'label' => 'Crea Client',
+            'success' => 'Client creato con successo',
+            'error' => 'Errore durante la creazione del client',
+        ],
+    ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
+    'actions' => [],
 ];

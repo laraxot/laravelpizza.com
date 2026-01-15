@@ -81,7 +81,7 @@ Modules/User/database/migrations/2023_01_01_000008_create_tenants_table.php.LARA
 ### Option 1: Manual Copy
 
 ```bash
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel/Modules/User/database/migrations
+cd Modules/User/database/migrations
 
 # Backup original
 cp 2023_01_01_000008_create_tenants_table.php 2023_01_01_000008_create_tenants_table.php.BEFORE_LARAXOT_FIX
@@ -104,7 +104,7 @@ diff 2023_01_01_000008_create_tenants_table.php 2023_01_01_000008_create_tenants
 ### Step 1: PHPStan Level 10
 
 ```bash
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel
+cd laravel
 ./vendor/bin/phpstan analyze Modules/User/database/migrations/2023_01_01_000008_create_tenants_table.php --level=10
 ```
 

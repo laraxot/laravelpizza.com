@@ -2,9 +2,9 @@
 
 ## Informazioni Generali
 
-- **File**: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php`
-- **File**: `/var/www/html/saluteora/laravel/Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php`
-- **File**: `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php`
+- **File**: `Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php`
+- **File**: `Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php`
+- **File**: `Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php`
 - **Base**: `XotBaseMigration`
 - **Tabella**: `mail_templates`
 
@@ -221,7 +221,7 @@ public function tableUpdate(\Closure $next, ?string $table = null): void
 
 ## Informazioni Generali
 
-- **File**: `/var/www/html/<directory progetto>/laravel/Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php`
+- **File**: `Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php`
 - **Base**: `XotBaseMigration`
 - **Tabella**: `mail_templates`
 

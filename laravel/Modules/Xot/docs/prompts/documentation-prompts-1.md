@@ -52,15 +52,7 @@ Questo documento descrive le regole e le best practices per i prompt di document
 ### Regole Fondamentali
 - MAI usare percorsi assoluti nei collegamenti
 - MAI includere il nome del progetto nei percorsi
-- MAI usare percorsi che iniziano con `/var/www/html/` o simili
-- MAI usare percorsi che includono `<nome progetto>` o altri nomi specifici
-- MAI usare percorsi che includono `<nome progetto>` o altri nomi specifici
-
-### Formato Corretto
-```markdown
-
-# Collegamenti Corretti
-[Documento Correlato](../documento.md)
+- MAI usare percorsi che iniziano con `documento.md)
 [Documento in Sottodirectory](./sottodirectory/documento.md)
 [Documento in Modulo Altro](../../AltroModulo/docs/documento.md)
 [Documento in Root](../../../docs/documento.md)
@@ -70,11 +62,11 @@ Questo documento descrive le regole e le best practices per i prompt di document
 ```markdown
 
 # Collegamenti Non Corretti
-[Documento Correlato](/var/www/html/<nome progetto>/laravel/Modules/Xot/docs/documento.md)
+[Documento Correlato](../Xot/docs/documento.md)
 [Documento in Sottodirectory](https://github.com/<nome progetto>/progetto/blob/main/docs/documento.md)
 [Documento in Modulo Altro](C:\progetti\<nome progetto>\laravel\Modules\Xot\docs\documento.md)
-[Documento Correlato](/var/www/html/<nome progetto>/laravel/Modules/Xot/docs/documento.md)
-[Documento Correlato](/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Xot/docs/documento.md)
+[Documento Correlato](../Xot/docs/documento.md)
+[Documento Correlato](Modules/Xot/docs/documento.md)
 [Documento in Sottodirectory](https://github.com/<nome progetto>/progetto/blob/main/docs/documento.md)
 [Documento in Modulo Altro](C:\progetti\<nome progetto>\laravel\Modules\Xot\docs\documento.md)
 ```

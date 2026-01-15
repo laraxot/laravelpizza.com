@@ -8,4 +8,8 @@ return [
             'label' => 'test',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
 ];

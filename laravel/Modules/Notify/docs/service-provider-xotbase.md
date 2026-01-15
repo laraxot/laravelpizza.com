@@ -86,9 +86,9 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 - [x] Solo binding custom in `register()`
 
 ## 7. Riferimenti
-- [XotBaseServiceProvider](/var/www/html/base_<nome progetto>/laravel/Modules/Xot/app/Providers/XotBaseServiceProvider.php)
-- [Best Practices](/var/www/html/base_<nome progetto>/laravel/Modules/Xot/project_docs/service-provider-best-practices.md)
-- [Best Practices](/var/www/html/base_<nome progetto>/laravel/Modules/Xot/docs/service-provider-best-practices.md)
+- [XotBaseServiceProvider](Modules/Xot/app/Providers/XotBaseServiceProvider.php)
+- [Best Practices](Modules/Xot/project_docs/service-provider-best-practices.md)
+- [Best Practices](Modules/Xot/docs/service-provider-best-practices.md)
 
 ---
 
@@ -181,8 +181,8 @@ class NotifyServiceProvider extends XotBaseServiceProvider
 - [x] Solo binding custom in `register()`
 
 ## 7. Riferimenti
-- [XotBaseServiceProvider](/var/www/html/base_<nome progetto>/laravel/Modules/Xot/app/Providers/XotBaseServiceProvider.php)
-- [Best Practices](/var/www/html/base_<nome progetto>/laravel/Modules/Xot/project_docs/service-provider-best-practices.md)
+- [XotBaseServiceProvider](Modules/Xot/app/Providers/XotBaseServiceProvider.php)
+- [Best Practices](Modules/Xot/project_docs/service-provider-best-practices.md)
 
 ---
 

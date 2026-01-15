@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Geo\Services;
 
 use Illuminate\Support\Facades\Validator;
-use Webmozart\Assert\Assert;
 
 /**
  * Validatore per i dati geografici.
@@ -85,10 +84,9 @@ class GeoDataValidator
     {
         $validator = Validator::make($data, self::VALIDATION_RULES, self::CUSTOM_MESSAGES);
 
+        /** @var array<string, array<int, string>> $errors */
         $errors = $validator->errors()->toArray();
-        Assert::isArray($errors);
 
-        /* @var array<string, array<int, string>> $errors */
         return $errors;
     }
 

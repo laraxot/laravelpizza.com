@@ -19,7 +19,7 @@ D Modules/Notify/app/Filament/Resources/NotificationTemplateResource/Pages/
 ### 2. File Test Rimossi
 **File rimossi:**
 - `ContactManagementBusinessLogicTest.php`
-- `MailTemplateVersionBusinessLogicTest.php`
+- `MailTemplateVersionBusinessLogicTest.php`  
 - `NotificationTemplateVersionBusinessLogicTest.php`
 - Multipli unit test per models
 
@@ -39,7 +39,7 @@ git log --follow -- Modules/Notify/tests/
 class NotificationService
 {
     private array $channels = [];
-
+    
     public function __construct(
         private EmailService $email,
         private SmsService $sms,
@@ -57,51 +57,51 @@ class NotificationService
             'slack' => $this->slack,
         ];
     }
-
+    
     public function send(NotificationRequest $request): NotificationResult
     {
         $results = [];
-
+        
         foreach ($request->channels as $channelName) {
             if (!isset($this->channels[$channelName])) {
                 continue;
             }
-
+            
             try {
                 $channel = $this->channels[$channelName];
                 $result = $channel->send($request);
-
+                
                 $results[$channelName] = $result;
-
+                
                 $this->logSuccess($channelName, $request, $result);
-
+                
             } catch (\Exception $e) {
                 $results[$channelName] = [
                     'success' => false,
                     'error' => $e->getMessage(),
                 ];
-
+                
                 $this->logFailure($channelName, $request, $e);
             }
         }
-
+        
         return new NotificationResult($results);
     }
-
+    
     public function sendBulk(BulkNotificationRequest $request): BulkNotificationResult
     {
         $batch = Bus::batch([]);
-
+        
         foreach ($request->recipients as $recipient) {
             $individualRequest = $request->toIndividualRequest($recipient);
-
+            
             $batch->add(new SendNotificationJob($individualRequest));
         }
-
+        
         $batch->name("Bulk notification: {$request->template->name}")
              ->onQueue('notifications')
              ->dispatch();
-
+        
         return new BulkNotificationResult($batch->id);
     }
 }
@@ -120,7 +120,7 @@ class NotificationTemplate extends BaseModel
         'is_active',
         'version',
     ];
-
+    
     protected function casts(): array
     {
         return [
@@ -130,26 +130,26 @@ class NotificationTemplate extends BaseModel
             'version' => 'integer',
         ];
     }
-
+    
     // Relations
     public function versions(): HasMany
     {
         return $this->hasMany(NotificationTemplateVersion::class);
     }
-
+    
     public function notifications(): HasMany
     {
         return $this->hasMany(Notification::class);
     }
-
+    
     // Methods
     public function render(array $data = []): RenderedTemplate
     {
         $renderer = app(TemplateRenderer::class);
-
+        
         return $renderer->render($this, $data);
     }
-
+    
     public function createVersion(): NotificationTemplateVersion
     {
         return $this->versions()->create([
@@ -161,15 +161,15 @@ class NotificationTemplate extends BaseModel
             'created_by' => auth()->id(),
         ]);
     }
-
+    
     public function rollbackToVersion(int $versionNumber): bool
     {
         $version = $this->versions()->where('version_number', $versionNumber)->first();
-
+        
         if (!$version) {
             return false;
         }
-
+        
         return $this->update([
             'subject' => $version->subject,
             'content' => $version->content,
@@ -178,13 +178,13 @@ class NotificationTemplate extends BaseModel
             'version' => $this->version + 1,
         ]);
     }
-
+    
     // Scopes
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
     }
-
+    
     public function scopeForChannel($query, string $channel)
     {
         return $query->whereJsonContains('channels', $channel);
@@ -200,7 +200,7 @@ class NotificationTemplateResource extends XotBaseResource
     protected static ?string $model = NotificationTemplate::class;
     protected static ?string $navigationIcon = 'heroicon-o-bell';
     protected static ?string $navigationGroup = 'Communications';
-
+    
     public static function form(Form $form): Form
     {
         return $form->schema([
@@ -208,16 +208,16 @@ class NotificationTemplateResource extends XotBaseResource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-
+                    
                 Forms\Components\TextInput::make('subject')
                     ->required()
                     ->maxLength(255),
-
+                    
                 Forms\Components\MarkdownEditor::make('content')
                     ->required()
                     ->columnSpanFull(),
             ]),
-
+            
             Section::make('Configuration')->schema([
                 Forms\Components\CheckboxList::make('channels')
                     ->options([
@@ -229,19 +229,19 @@ class NotificationTemplateResource extends XotBaseResource
                         'slack' => 'Slack',
                     ])
                     ->required(),
-
+                    
                 Forms\Components\KeyValue::make('variables')
                     ->label('Template Variables')
                     ->keyLabel('Variable Name')
                     ->valueLabel('Default Value')
                     ->columnSpanFull(),
-
+                    
                 Forms\Components\Toggle::make('is_active')
                     ->default(true),
             ]),
         ]);
     }
-
+    
     public static function table(Table $table): Table
     {
         return $table
@@ -249,21 +249,21 @@ class NotificationTemplateResource extends XotBaseResource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->sortable(),
-
+                    
                 Tables\Columns\TextColumn::make('subject')
                     ->limit(50),
-
+                    
                 Tables\Columns\BadgeColumn::make('channels')
                     ->getStateUsing(fn($record) => count($record->channels ?? []))
                     ->label('Channels')
                     ->color('info'),
-
+                    
                 Tables\Columns\TextColumn::make('version')
                     ->sortable(),
-
+                    
                 Tables\Columns\IconColumn::make('is_active')
                     ->boolean(),
-
+                    
                 Tables\Columns\TextColumn::make('notifications_count')
                     ->counts('notifications')
                     ->label('Sent'),
@@ -273,7 +273,7 @@ class NotificationTemplateResource extends XotBaseResource
                     ->icon('heroicon-o-eye')
                     ->modalContent(fn($record) => view('notify::template-preview', compact('record')))
                     ->modalWidth('5xl'),
-
+                    
                 Tables\Actions\Action::make('send_test')
                     ->icon('heroicon-o-paper-airplane')
                     ->color('success')
@@ -292,15 +292,15 @@ class NotificationTemplateResource extends XotBaseResource
                             )
                         );
                     }),
-
+                    
                 Tables\Actions\EditAction::make(),
-
+                
                 Tables\Actions\Action::make('versions')
                     ->icon('heroicon-o-clock')
                     ->url(fn($record) => static::getUrl('versions', ['record' => $record])),
             ]);
     }
-
+    
     public static function getPages(): array
     {
         return [
@@ -323,22 +323,22 @@ class EmailService
         private MailManager $mail,
         private TemplateRenderer $renderer
     ) {}
-
+    
     public function send(NotificationRequest $request): array
     {
         $template = $this->renderer->render($request->template, $request->data);
-
+        
         $message = (new MailMessage)
             ->subject($template->subject)
             ->view('emails.notification', [
                 'content' => $template->content,
                 'data' => $request->data,
             ]);
-
+            
         foreach ($request->recipients as $recipient) {
             $this->mail->to($recipient)->send($message);
         }
-
+        
         return [
             'success' => true,
             'sent_count' => count($request->recipients),
@@ -352,27 +352,27 @@ class EmailService
 class SmsService
 {
     public function __construct(private SmsProviderManager $providerManager) {}
-
+    
     public function send(NotificationRequest $request): array
     {
         $provider = $this->providerManager->getDefault();
         $template = app(TemplateRenderer::class)->render($request->template, $request->data);
-
+        
         $results = [];
-
+        
         foreach ($request->recipients as $recipient) {
             try {
                 $messageId = $provider->send(
                     to: $recipient,
                     message: $template->content
                 );
-
+                
                 $results[] = [
                     'recipient' => $recipient,
                     'success' => true,
                     'message_id' => $messageId,
                 ];
-
+                
             } catch (\Exception $e) {
                 $results[] = [
                     'recipient' => $recipient,
@@ -381,7 +381,7 @@ class SmsService
                 ];
             }
         }
-
+        
         return [
             'success' => !empty(array_filter($results, fn($r) => $r['success'])),
             'results' => $results,
@@ -406,7 +406,7 @@ class NotificationAnalyticsService
             'delivery_times' => $this->getDeliveryTimes($from, $to),
         ];
     }
-
+    
     private function getChannelStats(Carbon $from, Carbon $to): array
     {
         return Notification::whereBetween('created_at', [$from, $to])
@@ -427,11 +427,11 @@ class NotificationAnalyticsService
 class NotificationStatsWidget extends BaseWidget
 {
     protected static string $view = 'notify::widgets.notification-stats';
-
+    
     public function getViewData(): array
     {
         $analytics = app(NotificationAnalyticsService::class);
-
+        
         return [
             'today_stats' => $analytics->getStats(today(), now()),
             'week_stats' => $analytics->getStats(now()->subWeek(), now()),
@@ -439,11 +439,11 @@ class NotificationStatsWidget extends BaseWidget
             'recent_failures' => $this->getRecentFailures(),
         ];
     }
-
+    
     private function getChannelPerformance(): array
     {
         return Notification::where('created_at', '>=', now()->subHours(24))
-            ->selectRaw('channel,
+            ->selectRaw('channel, 
                 COUNT(*) as total,
                 SUM(CASE WHEN status = "delivered" THEN 1 ELSE 0 END) as delivered,
                 AVG(TIMESTAMPDIFF(SECOND, created_at, delivered_at)) as avg_delivery_time')
@@ -464,29 +464,29 @@ class NotificationJobDispatcher
     {
         $priority = $this->calculatePriority($request);
         $queue = $this->getQueueForPriority($priority);
-
+        
         SendNotificationJob::dispatch($request)
             ->onQueue($queue)
             ->delay($this->calculateDelay($request));
     }
-
+    
     private function calculatePriority(NotificationRequest $request): int
     {
         $priority = 5; // Default
-
+        
         // Urgent notifications
         if ($request->template->hasTag('urgent')) {
             $priority = 1;
         }
-
+        
         // Bulk notifications
         if (count($request->recipients) > 100) {
             $priority = 8;
         }
-
+        
         return $priority;
     }
-
+    
     private function getQueueForPriority(int $priority): string
     {
         return match (true) {
@@ -511,19 +511,19 @@ class ContactManagementTest extends TestCase
             'email' => 'test@example.com',
             'phone' => '+1234567890',
         ]);
-
+        
         $this->assertDatabaseHas('contacts', [
             'email' => 'test@example.com',
         ]);
     }
-
+    
     test('can add contact to group')
     {
         $contact = Contact::factory()->create();
         $group = ContactGroup::factory()->create();
-
+        
         $contact->groups()->attach($group);
-
+        
         $this->assertTrue($contact->groups->contains($group));
     }
 }
@@ -537,21 +537,21 @@ class NotificationTemplateTest extends TestCase
             'content' => 'Hello {{name}}, welcome to {{app_name}}!',
             'variables' => ['name', 'app_name'],
         ]);
-
+        
         $rendered = $template->render([
             'name' => 'John',
             'app_name' => 'MyApp',
         ]);
-
+        
         $this->assertEquals('Hello John, welcome to MyApp!', $rendered->content);
     }
-
+    
     test('template versioning works correctly')
     {
         $template = NotificationTemplate::factory()->create(['version' => 1]);
-
+        
         $version = $template->createVersion();
-
+        
         $this->assertEquals(1, $version->version_number);
         $this->assertEquals($template->id, $version->notification_template_id);
     }

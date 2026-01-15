@@ -1,7 +1,7 @@
 # Risoluzione Conflitti RecordNotification.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Notifications/RecordNotification.php`
+**File**: `Modules/Notify/app/Notifications/RecordNotification.php`
 **Linee**: 77-91
 **Tipo**: Conflitto tra codice pulito e codice di debug
 
@@ -83,7 +83,7 @@ Verificare che:
 # Risoluzione Conflitti RecordNotification.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Notifications/RecordNotification.php`
+**File**: `Modules/Notify/app/Notifications/RecordNotification.php`
 **Linee**: 77-91
 **Tipo**: Conflitto tra codice pulito e codice di debug
 

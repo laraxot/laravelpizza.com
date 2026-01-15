@@ -16,7 +16,7 @@ L'errore si manifesta in due forme principali:
 
 ### 1. Architettura a Strati
 
-Il progetto SaluteOra utilizza un'architettura a strati per i componenti Filament:
+Il progetto <nome progetto> utilizza un'architettura a strati per i componenti Filament:
 
 ```
 Filament Core Classes (vendor)
@@ -30,7 +30,7 @@ Saltare il livello intermedio (XotBase) rompe questa architettura e crea inconsi
 
 ### 2. Personalizzazioni Centralizzate
 
-Le classi XotBase contengono personalizzazioni specifiche per il progetto SaluteOra:
+Le classi XotBase contengono personalizzazioni specifiche per il progetto <nome progetto>:
 - Gestione multilingua
 - Integrazione con il sistema di permessi
 - Logging e auditing
@@ -92,4 +92,4 @@ L'adozione coerente del pattern di estensione XotBase offre vantaggi significati
 
 ## Conclusione
 
-Il pattern di estensione XotBase è un aspetto fondamentale dell'architettura di SaluteOra. Seguire questo pattern garantisce coerenza, manutenibilità e estensibilità del codice. È essenziale comprendere non solo come implementare questo pattern, ma anche perché è importante per il successo a lungo termine del progetto.
+Il pattern di estensione XotBase è un aspetto fondamentale dell'architettura di <nome progetto>. Seguire questo pattern garantisce coerenza, manutenibilità e estensibilità del codice. È essenziale comprendere non solo come implementare questo pattern, ma anche perché è importante per il successo a lungo termine del progetto.

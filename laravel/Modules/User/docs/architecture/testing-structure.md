@@ -136,7 +136,7 @@ class LoginTest extends TestCase
     public function test_login_page_renders_correctly(): void
     {
         $response = $this->get('/it/auth/login');
-
+        
         $response->assertStatus(200);
         $response->assertSeeLivewire('auth.login');
         $response->assertSee(__('user::auth.login.title'));
@@ -145,7 +145,7 @@ class LoginTest extends TestCase
     public function test_unauthenticated_user_redirected_to_login(): void
     {
         $response = $this->get('/dashboard');
-
+        
         $response->assertRedirect('/it/auth/login');
     }
 }
@@ -169,7 +169,7 @@ class UserTest extends TestCase
     {
         $userClass = XotData::make()->getUserClass();
         $user = $userClass::factory()->create();
-
+        
         expect($user)->toBeInstanceOf($userClass);
         expect($user->id)->toBeGreaterThan(0);
     }
@@ -178,7 +178,7 @@ class UserTest extends TestCase
     {
         $userClass = XotData::make()->getUserClass();
         $user = $userClass::factory()->create();
-
+        
         expect($user->teams)->toBeInstanceOf(\Illuminate\Database\Eloquent\Collection::class);
     }
 }
@@ -293,3 +293,9 @@ dump($variable);
 ---
 
 *Ultimo aggiornamento: 2025-01-06*
+
+
+
+
+
+

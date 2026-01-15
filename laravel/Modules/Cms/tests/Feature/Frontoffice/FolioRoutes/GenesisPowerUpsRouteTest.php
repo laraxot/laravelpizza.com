@@ -13,6 +13,7 @@ it('GET /it/genesis/power-ups acceptable', function (): void {
     $status = (int) $res->getStatusCode();
     if ($status >= 500) {
         test()->markTestSkipped('Genesis power-ups route returned server error in this install.');
+
         return;
     }
 

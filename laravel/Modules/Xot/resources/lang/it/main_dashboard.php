@@ -19,5 +19,8 @@ return [
             'icon' => 'logout',
             'tooltip' => 'logout',
         ],
+        'userdefaultprofilemy-profile' => [
+            'tooltip' => 'userdefaultprofilemy-profile',
+        ],
     ],
 ];

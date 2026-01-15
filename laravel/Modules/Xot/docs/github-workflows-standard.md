@@ -107,6 +107,39 @@ Per ogni modulo/tema:
 
 ---
 
+## 🔄 Operational Workflows
+
+### Sync Remote Repo (`sync-remote-repo.yml`)
+
+Workflow per la sincronizzazione dei subtree e repository remoti.
+
+**Gestione Repository Privati (Bashscripts):**
+Per semplificare l'autenticazione, utilizziamo il fork/repository interno all'organizzazione `provtv/bashscripts_fila4`.
+Questo ci permette di usare il `GITHUB_TOKEN` standard invece di dover gestire un PAT segreto (`BASHSCRIPTS_PAT`) per repository esterni.
+
+```yaml
+      - name: Checkout bashscripts
+        uses: actions/checkout@v4
+        with:
+          repository: provtv/bashscripts_fila4
+          token: ${{ secrets.GITHUB_TOKEN }} # Accessibile nativamente nell'organizzazione
+          path: bashscripts
+```
+
+**Prevenzione Errori Submodule:**
+Il checkout principale deve disabilitare i submodule per evitare errori su indici corrotti ("zombie submodules").
+
+```yaml
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: false # Explicitly disable
+```
+
+---
+
 ## 📚 Documentazione Correlata
 
 - [CI/CD Tools Execution Report](./ci-cd-tools-execution-report.md)

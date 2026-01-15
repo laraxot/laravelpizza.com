@@ -1,12 +1,12 @@
 # PHPStan Level 10 Comprehensive Bugfixes
 
 ## Problema Generale
-Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, , UI, Xot.
-Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, SaluteOra, UI, Xot.
-Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, , UI, Xot.
-Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, SaluteOra, UI, Xot.
-Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, , UI, Xot.
-Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, SaluteMo, SaluteOra, UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, <nome progetto>, , UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, <nome progetto>, <nome progetto>, UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, <nome progetto>, , UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, <nome progetto>, <nome progetto>, UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, <nome progetto>, , UI, Xot.
+Errori PHPStan Level 9+ rilevati durante la scansione multi-modulo: Media, <nome progetto>, <nome progetto>, UI, Xot.
 
 ## Moduli Interessati e Correzioni
 
@@ -63,11 +63,11 @@ $this->debugResults['file_operations'] = $this->getFileOperationsData();
 ```
 
 ### 🟢 ** Module** - Report Model
-### 🟢 **SaluteOra Module** - Report Model
+### 🟢 **<nome progetto> Module** - Report Model
 ### 🟢 ** Module** - Report Model
-### 🟢 **SaluteOra Module** - Report Model
+### 🟢 **<nome progetto> Module** - Report Model
 ### 🟢 ** Module** - Report Model
-### 🟢 **SaluteOra Module** - Report Model
+### 🟢 **<nome progetto> Module** - Report Model
 **Stato**: ✅ Corretto
 
 #### Report.php
@@ -80,9 +80,9 @@ public function getSpecifyDiseases(): array
 {
 ```
 
-### 🟡 **SaluteMo Module** - ListReports
-### 🟡 **SaluteMo Module** - ListReports
-### 🟡 **SaluteMo Module** - ListReports
+### 🟡 **<nome progetto> Module** - ListReports
+### 🟡 **<nome progetto> Module** - ListReports
+### 🟡 **<nome progetto> Module** - ListReports
 **Stato**: ⚠️ Da Verificare
 
 #### ListReports.php
@@ -101,32 +101,32 @@ public function getSpecifyDiseases(): array
 | UI         | en/s3test.php                 | Duplicate array key        | ✅ Fix |
 | Xot        | GetCloudFrontSignedUrlAction  | Parameter type mismatch    | ✅ Fix |
 |   | Report.php                    | Missing return type        | ✅ Fix |
-| SaluteOra  | Report.php                    | Missing return type        | ✅ Fix |
-| SaluteMo   | ListReports.php               | Invalid return type        | ⚠️ TBD |
+| <nome progetto>  | Report.php                    | Missing return type        | ✅ Fix |
+| <nome progetto>   | ListReports.php               | Invalid return type        | ⚠️ TBD |
 |   | Report.php                    | Missing return type        | ✅ Fix |
-| SaluteOra  | Report.php                    | Missing return type        | ✅ Fix |
-| SaluteMo   | ListReports.php               | Invalid return type        | ⚠️ TBD |
+| <nome progetto>  | Report.php                    | Missing return type        | ✅ Fix |
+| <nome progetto>   | ListReports.php               | Invalid return type        | ⚠️ TBD |
 |   | Report.php                    | Missing return type        | ✅ Fix |
-| SaluteOra  | Report.php                    | Missing return type        | ✅ Fix |
-| SaluteMo   | ListReports.php               | Invalid return type        | ⚠️ TBD |
+| <nome progetto>  | Report.php                    | Missing return type        | ✅ Fix |
+| <nome progetto>   | ListReports.php               | Invalid return type        | ⚠️ TBD |
 
 ## Verifica Post-Correzione
 
 ### PHPStan Command
 ```bash
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
 ./vendor/bin/phpstan analyse --level=9 --memory-limit=2G
 ```
 
 ### Problemi Residui
-1. **SaluteMo/ListReports**: Richiede cache clear PHPStan
-1. **SaluteMo/ListReports**: Richiede cache clear PHPStan
-1. **SaluteMo/ListReports**: Richiede cache clear PHPStan
+1. **<nome progetto>/ListReports**: Richiede cache clear PHPStan
+1. **<nome progetto>/ListReports**: Richiede cache clear PHPStan
+1. **<nome progetto>/ListReports**: Richiede cache clear PHPStan
 2. **Media Module**: Verificare se la scansione PHPStan è aggiornata
 
 ## Best Practice Implementate

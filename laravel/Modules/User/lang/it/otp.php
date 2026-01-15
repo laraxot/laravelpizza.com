@@ -83,8 +83,6 @@ return [
         'send_otp' => 'Invia Codice OTP',
         'yes_send_otp' => 'Si, Invia Codice OTP',
         'confirm_otp' => 'Sei sicuro di voler inviare una password temporanea a questo utente? Sarà richiesto di cambiarla al primo accesso.',
-        // Are you sure you want to send a temporary password to this user? They will be required to change it upon first login.
-        // Temporary password sent successfully.
         'send_otp_success' => 'Password temporanea inviata con successo.',
     ],
     'navigation' => [
@@ -98,4 +96,6 @@ return [
         'sort' => 31,
         'icon' => 'user-user-otp',
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

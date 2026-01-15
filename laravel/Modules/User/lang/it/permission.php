@@ -38,4 +38,7 @@ return [
         'group' => 'Sicurezza',
         'icon' => 'heroicon-o-shield-check',
     ],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

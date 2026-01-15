@@ -91,7 +91,9 @@ composer format        # Formatta il codice
 
 ### Versione Incoming
 
+
 ---
+
 
 ## Best Practices
 1. Seguire le convenzioni di naming Laravel
@@ -115,7 +117,9 @@ composer format        # Formatta il codice
 7. Gestire correttamente gli stati dei form
 8. Implementare la validazione dei dati
 
+
 ### Versione Incoming
+
 
 ---
 
@@ -140,11 +144,12 @@ composer format        # Formatta il codice
    - Controllare la configurazione del form
 
 ## Changelog
-Le modifiche vengono tracciate nel repository GitHub.
+Le modifiche vengono tracciate nel repository GitHub. 
 
 ### Versione Incoming
 
 ## Changelog
-Le modifiche vengono tracciate nel repository GitHub.
+Le modifiche vengono tracciate nel repository GitHub. 
 
 ---
+

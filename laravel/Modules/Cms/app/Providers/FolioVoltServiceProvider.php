@@ -10,12 +10,12 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Folio\Folio;
 use Livewire\Volt\Volt;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter;
 use Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Datas\XotData;
 use Nwidart\Modules\Facades\Module;
+use Webmozart\Assert\Assert;
 
 class FolioVoltServiceProvider extends ServiceProvider
 {
@@ -70,16 +70,12 @@ class FolioVoltServiceProvider extends ServiceProvider
 
         $theme_path = XotData::make()->getPubThemeViewPath('pages');
 
-        /*
-         * // Ottieni la lingua corrente in modo sicuro
-         * $currentLocale = app()->getLocale();
-         * $supportedLocales = config('laravellocalization.supportedLocales', []);
-         * if (!isset($supportedLocales[$currentLocale])) {
-         * $currentLocale = array_key_first($supportedLocales) ?? 'it';
-         * app()->setLocale($currentLocale);
-         * }
-         */
-        // $currentLocale = LaravelLocalization::setLocale() ?? app()->getLocale();
+        // Ottieni tutte le lingue supportate
+        $supportedLocalesConfig = config('laravellocalization.supportedLocales', ['it' => []]);
+        Assert::isArray($supportedLocalesConfig);
+        /** @var array<string, mixed> $supportedLocalesConfig */
+        $supportedLocales = array_map('strval', array_keys($supportedLocalesConfig));
+        $defaultLocale = config('app.locale', 'it');
 
         /**
          * @var Collection<int, \Nwidart\Modules\Module> $modules
@@ -89,13 +85,20 @@ class FolioVoltServiceProvider extends ServiceProvider
 
         // Verifica che il percorso tema esista e sia una directory prima di passarlo a Folio
         if (File::exists($theme_path) && File::isDirectory($theme_path)) {
-            $locale = LaravelLocalization::setLocale() ?: app()->getLocale();
-            Folio::path($theme_path)
-                ->uri($locale)
-                // ->uri('{lang}')
-                ->middleware([
-                    '*' => $base_middleware,
-                ]);
+            // Registra Folio per ogni lingua supportata
+            foreach ($supportedLocales as $locale) {
+                Folio::path($theme_path)
+                    ->uri($locale)
+                    ->middleware([
+                        '*' => array_merge($base_middleware, [
+                            function ($request, callable $next) use ($locale) {
+                                app()->setLocale($locale);
+
+                                return $next($request);
+                            },
+                        ]),
+                    ]);
+            }
             $paths[] = $theme_path;
         }
 
@@ -105,13 +108,20 @@ class FolioVoltServiceProvider extends ServiceProvider
                 continue;
             }
             $paths[] = $path;
-            $locale = LaravelLocalization::setLocale() ?: app()->getLocale();
-            Folio::path($path)
-                ->uri($locale)
-                // ->uri('{lang}')
-                ->middleware([
-                    '*' => $base_middleware,
-                ]);
+            // Registra Folio per ogni lingua supportata
+            foreach ($supportedLocales as $locale) {
+                Folio::path($path)
+                    ->uri($locale)
+                    ->middleware([
+                        '*' => array_merge($base_middleware, [
+                            function ($request, callable $next) use ($locale) {
+                                app()->setLocale($locale);
+
+                                return $next($request);
+                            },
+                        ]),
+                    ]);
+            }
         }
 
         if (! empty($paths)) {

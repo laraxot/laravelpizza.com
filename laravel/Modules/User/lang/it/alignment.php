@@ -45,4 +45,6 @@ return [
         'sort' => 16,
         'icon' => 'heroicon-o-adjustments-horizontal',
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

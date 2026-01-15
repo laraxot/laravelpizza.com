@@ -7,7 +7,7 @@ Durante il lavoro coordinato tra più agenti AI, è emersa una discrepanza nell'
 Il widget `LoginWidget` (e più in generale la classe base `XotBaseWidget`) presentava il metodo `mount()` commentato o assente.
 
 ### Analisi Tecnica
-In Filament 4 (e v3), i componenti che usano `InteractsWithForms` necessitano di una chiamata a `$this->form->fill()` durante la fase di `mount()`.
+In Filament 4 (e v3), i componenti che usano `InteractsWithForms` necessitano di una chiamata a `$this->form->fill()` durante la fase di `mount()`. 
 - Senza `fill()`, l'array `$data` (o lo statePath definito) non viene inizializzato con le chiavi del form.
 - Livewire non riesce a sincronizzare correttamente i campi bound via `wire:model`.
 - Al momento del submit, `$this->form->getState()` esegue la validazione su uno stato vuoto, restituendo errori di "campo obbligatorio" anche se l'utente ha compilato i campi.

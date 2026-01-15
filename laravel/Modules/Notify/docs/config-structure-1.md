@@ -1,4 +1,4 @@
-# Struttura di Configurazione nei Moduli SaluteOra
+# Struttura di Configurazione nei Moduli <nome progetto>
 
 ## Principi di Configurazione
 

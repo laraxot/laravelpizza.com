@@ -243,13 +243,13 @@ class Media extends Model
 # Supervisor config (/etc/supervisor/conf.d/laravel-media-worker.conf)
 [program:laravel-media-worker]
 process_name=%(program_name)s_%(process_num)02d
-command=php /var/www/html/base_<nome progetto>/laravel/artisan queue:work database --queue=media --sleep=3 --tries=3 --max-time=3600
+command=php artisan queue:work database --queue=media --sleep=3 --tries=3 --max-time=3600
 autostart=true
 autorestart=true
 user=www-data
 numprocs=2
 redirect_stderr=true
-stdout_logfile=/var/www/html/base_<nome progetto>/laravel/storage/logs/media-worker.log
+stdout_logfile=storage/logs/media-worker.log
 ```
 
 7. **Implementare Interfaccia per Monitoraggio Stato**

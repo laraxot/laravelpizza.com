@@ -23,4 +23,8 @@ return [
             'description' => 'password_confirmation',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

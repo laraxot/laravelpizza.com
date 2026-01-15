@@ -674,7 +674,7 @@ test('no memory leaks in repeated operations', function (): void {
 
 ### Internal Documentation
 - [Root Testing Organization](../../../docs/testing-organization.md)
-- [SaluteOra Testing Guidelines](../../SaluteOra/docs/testing.md)
+- [<nome progetto> Testing Guidelines](../../<nome progetto>/docs/testing.md)
 - [Cms Testing Guidelines](../../Cms/docs/testing.md)
 
 ### Framework Documentation

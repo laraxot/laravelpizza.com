@@ -44,4 +44,7 @@ return [
             'too_many_attempts' => 'Troppi tentativi, riprova più tardi',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
 ];

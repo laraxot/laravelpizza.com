@@ -122,9 +122,9 @@ if(!$this->hasColumn('subject')) {
 ## Applicazione a
 
 Nel contesto di , tutte le migrazioni che coinvolgono la conversione di campi esistenti a JSON devono seguire queste linee guida, in particolare:
-## Applicazione a SaluteOra
+## Applicazione a <nome progetto>
 
-Nel contesto di SaluteOra, tutte le migrazioni che coinvolgono la conversione di campi esistenti a JSON devono seguire queste linee guida, in particolare:
+Nel contesto di <nome progetto>, tutte le migrazioni che coinvolgono la conversione di campi esistenti a JSON devono seguire queste linee guida, in particolare:
 
 1. Le migrazioni per `mail_templates` e tabelle simili
 2. Campi multilingua che utilizzano il trait `HasTranslations`
@@ -135,9 +135,9 @@ Nel contesto di SaluteOra, tutte le migrazioni che coinvolgono la conversione di
 È necessario esaminare tutte le migrazioni esistenti per identificare pattern simili di conversione diretta a JSON:
 
 ```bash
-grep -r "json.*change" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/*/database/migrations/
-grep -r "json.*change" /var/www/html/saluteora/laravel/Modules/*/database/migrations/
-grep -r "json.*change" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/*/database/migrations/
+grep -r "json.*change" Modules/*/database/migrations/
+grep -r "json.*change" Modules/*/database/migrations/
+grep -r "json.*change" Modules/*/database/migrations/
 ```
 
 I problemi più comuni si verificano in migrazioni che coinvolgono campi con traduzioni multilingua o configurazioni serializzate.
@@ -282,7 +282,7 @@ Nel contesto di <main module>, tutte le migrazioni che coinvolgono la conversion
 È necessario esaminare tutte le migrazioni esistenti per identificare pattern simili di conversione diretta a JSON:
 
 ```bash
-grep -r "json.*change" /var/www/html/<directory progetto>/laravel/Modules/*/database/migrations/
+grep -r "json.*change" Modules/*/database/migrations/
 ```
 
 I problemi più comuni si verificano in migrazioni che coinvolgono campi con traduzioni multilingua o configurazioni serializzate.

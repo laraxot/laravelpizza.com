@@ -211,7 +211,7 @@ Per verificare se le traduzioni sono applicate correttamente:
 
 ## Riferimenti
 
-- [SaluteOra Translation System](../../../../.cursor/rules/translations.rule)
+- [<nome progetto> Translation System](../../../../.cursor/rules/translations.rule)
 - [Filament Translations](../../../../.cursor/rules/filament-translations.rule)
 - [Laravel Localization](https://laravel.com/docs/10.x/localization)
 

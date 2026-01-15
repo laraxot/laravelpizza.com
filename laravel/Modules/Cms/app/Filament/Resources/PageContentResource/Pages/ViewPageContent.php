@@ -22,8 +22,8 @@ class ViewPageContent extends XotBaseViewRecord
     protected function getHeaderActions(): array
     {
         return [
-            EditAction::make(),
-            LocaleSwitcher::make(),
+            'edit' => EditAction::make(),
+            'locale-switcher' => LocaleSwitcher::make(),
         ];
     }
 

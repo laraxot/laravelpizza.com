@@ -1,7 +1,7 @@
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/ptvx/laravel/Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
+**File**: `Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
 **Linee**: 49-53
 **Tipo**: Conflitto di annotazione PHPStan
 
@@ -78,7 +78,7 @@ FFMpeg::fromDisk($data->disk)
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/ptvx/laravel/Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
+**File**: `Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
 **Linee**: 49-53
 **Tipo**: Conflitto di annotazione PHPStan
 

@@ -155,10 +155,10 @@ public function store(Request $request)
 
 This introduction to event sourcing sets the foundation for implementing a robust activity tracking system in `<nome progetto>`, ensuring full traceability and compliance with healthcare standards.
 This introduction to event sourcing sets the foundation for implementing a robust activity tracking system in `<nome progetto>`, ensuring full traceability and compliance with healthcare standards.
-# Event Sourcing in `saluteora`
+# Event Sourcing in `<nome progetto>`
 
 ## Introduction to Event Sourcing
-Event Sourcing is an architectural pattern where application state is derived from a sequence of events. Instead of storing the current state in a database, the application stores all events that led to the current state. This approach is particularly beneficial in a healthcare context like `saluteora` for tracking patient activities, medical records, and system interactions with full auditability.
+Event Sourcing is an architectural pattern where application state is derived from a sequence of events. Instead of storing the current state in a database, the application stores all events that led to the current state. This approach is particularly beneficial in a healthcare context like `<nome progetto>` for tracking patient activities, medical records, and system interactions with full auditability.
 
 ### Key Concepts
 - **Events**: Discrete actions or changes in the system (e.g., `PatientRegistered`, `AppointmentScheduled`).
@@ -189,8 +189,8 @@ php artisan migrate
 3. **Projectors**: Build read models from events for efficient querying.
 4. **Reactors**: Handle side effects like notifications or external API calls.
 
-## Application in `saluteora`
-In a healthcare system like `saluteora`, event sourcing can be applied to:
+## Application in `<nome progetto>`
+In a healthcare system like `<nome progetto>`, event sourcing can be applied to:
 - **Patient Management**: Track registration, updates to personal information, and medical history as events.
 - **Appointment Scheduling**: Record scheduling, rescheduling, and cancellation of appointments.
 - **Medical Records**: Log diagnoses, treatments, and prescriptions with full history.
@@ -290,7 +290,7 @@ public function store(Request $request)
 }
 ```
 
-## Best Practices for `saluteora`
+## Best Practices for `<nome progetto>`
 1. **Granular Events**: Define specific events for each action (e.g., `PatientRegistered`, `AppointmentScheduled`) to ensure detailed tracking.
 2. **Audit Compliance**: Store events indefinitely to meet healthcare audit requirements.
 3. **Performance Optimization**: Use projectors to build efficient read models for frequent queries, avoiding real-time event replay in production.
@@ -303,4 +303,4 @@ public function store(Request $request)
 - [Microsoft Azure Event Sourcing Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)
 - [Larabank Examples](https://github.com/spatie/larabank-traditional)
 
-This introduction to event sourcing sets the foundation for implementing a robust activity tracking system in `saluteora`, ensuring full traceability and compliance with healthcare standards.
+This introduction to event sourcing sets the foundation for implementing a robust activity tracking system in `<nome progetto>`, ensuring full traceability and compliance with healthcare standards.

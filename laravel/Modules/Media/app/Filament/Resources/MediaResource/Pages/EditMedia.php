@@ -13,14 +13,12 @@ class EditMedia extends XotBaseEditRecord
     protected static string $resource = MediaResource::class;
 
     /**
-     * @return array<DeleteAction>
-     *
-     * @psalm-return list{DeleteAction}
+     * @return array<string, \Filament\Actions\Action|\Filament\Actions\ActionGroup>
      */
     protected function getHeaderActions(): array
     {
         return [
-            DeleteAction::make(),
+            'delete' => DeleteAction::make(),
         ];
     }
 }

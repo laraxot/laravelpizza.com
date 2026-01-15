@@ -1,7 +1,7 @@
 # Risoluzione Conflitti SendSmsPage.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Filament/Clusters/Test/Pages/SendSmsPage.php`
+**File**: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendSmsPage.php`
 **Linee**: 10-13, 20-23
 **Tipo**: Conflitto di import delle classi
 
@@ -71,7 +71,7 @@ Verificare che:
 # Risoluzione Conflitti SendSmsPage.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Filament/Clusters/Test/Pages/SendSmsPage.php`
+**File**: `Modules/Notify/app/Filament/Clusters/Test/Pages/SendSmsPage.php`
 **Linee**: 10-13, 20-23
 **Tipo**: Conflitto di import delle classi
 

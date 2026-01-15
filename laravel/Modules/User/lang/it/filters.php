@@ -7,4 +7,9 @@ return [
     'active_users' => 'Utenti attivi',
     'created_from' => 'creati dal',
     'created_until' => 'creati al',
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
+    'actions' => [],
 ];

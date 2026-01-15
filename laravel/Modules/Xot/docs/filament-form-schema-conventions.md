@@ -2,7 +2,7 @@
 
 ## Regola Fondamentale
 
-In SaluteOra, il metodo `getFormSchema()` nelle risorse Filament deve **SEMPRE** restituire un array associativo con chiavi stringhe, mai un array numerico.
+In <nome progetto>, il metodo `getFormSchema()` nelle risorse Filament deve **SEMPRE** restituire un array associativo con chiavi stringhe, mai un array numerico.
 
 ## Implementazione Corretta
 

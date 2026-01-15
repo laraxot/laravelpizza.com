@@ -10,7 +10,7 @@ Questo documento definisce la struttura standardizzata del file di configurazion
 return [
     // Driver predefinito
     'default' => env('SMS_DRIVER', 'default_provider'),
-
+    
     // Parametri a livello di root
     'from' => env('SMS_FROM'),
     'debug' => env('SMS_DEBUG', false),
@@ -32,7 +32,7 @@ return [
         'enabled' => env('SMS_VALIDATION_ENABLED', true),
         'pattern' => env('SMS_VALIDATION_PATTERN', '/^\+[1-9]\d{1,14}$/'),
     ],
-
+    
     // Configurazione dei driver/provider
     'drivers' => [
         'provider1' => [

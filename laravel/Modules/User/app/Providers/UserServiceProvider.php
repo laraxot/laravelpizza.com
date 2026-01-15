@@ -19,7 +19,6 @@ use Modules\Notify\Emails\SpatieEmail;
 use Modules\User\Datas\PasswordData;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Providers\XotBaseServiceProvider;
-use SocialiteProviders\Manager\ServiceProvider as SocialiteServiceProvider;
 use Webmozart\Assert\Assert;
 
 class UserServiceProvider extends XotBaseServiceProvider
@@ -34,11 +33,11 @@ class UserServiceProvider extends XotBaseServiceProvider
     public function boot(): void
     {
         parent::boot();
-        $this->registerAuthenticationProviders();
         // $this->registerEventListener();
         $this->registerPasswordRules();
         $this->registerPulse();
         $this->registerMailsNotification();
+        $this->registerPolicies();
     }
 
     #[\Override]
@@ -145,30 +144,12 @@ class UserServiceProvider extends XotBaseServiceProvider
         });
     }
 
-    /*
-     * Register the team model bindings.
-
-    protected function registerTeamModelBindings(): void
+    /**
+     * Register policies (excluding OAuth ones which are handled by PassportServiceProvider).
+     */
+    protected function registerPolicies(): void
     {
-        $this->app->bind('team_user_model', fn () => TeamUser::class);
-
-        $this->app->bind('team_invitation_model', fn () => TeamInvitation::class);
-    }
-
-    */
-    protected function registerAuthenticationProviders(): void
-    {
-        $this->registerSocialite();
-    }
-    /*
-    protected function registerEventListener(): void
-    {
-       $this->app->register(EventServiceProvider::class);
-    }
-    */
-
-    private function registerSocialite(): void
-    {
-        $this->app->register(SocialiteServiceProvider::class);
+        // OAuth policies are handled by PassportServiceProvider
+        // Register other policies here if needed
     }
 }

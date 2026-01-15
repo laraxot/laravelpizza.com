@@ -93,9 +93,28 @@ protected function getOptions(): array
 
 ## 3. Best Practices
 
--   **Lazy Loading**: Enabled by default in Filament. Keep it.
--   **Colors**: Use Filament's color system or CSS variables rather than hardcoded hex codes to support Dark Mode.
 -   **Data Loading**: Use `polling` sparingly to avoid server load.
 
+## 4. Professional Configuration (Standards 2026)
+
+To achieve a premium "SaaS" look, configure your `getOptions()` to control fonts, layouts, and tooltips.
+See the **[LimeSurvey Professional Charts Guide](../../../Limesurvey/docs/professional-charts-and-pdfs.md)** for the detailed specification on:
+-   Font consistency (Inter/Roboto).
+-   Legend positioning.
+-   Gridline reduction (Data-Ink Ratio).
+
+## 5. PDF Reporting Strategy
+
+**Do NOT** use `dompdf` or client-side canvas capture for charts.
+The architectural standard for Quaeris is **Spatie Laravel PDF** (a wrapper around Browsershot).
+
+**Pattern:** "Shadow Report Views"
+1.  Create a dedicated Blade view for the report (linear layout).
+2.  Inject the *exact same* data aggregations used by your Dashboard widgets.
+3.  Use `Pdf::view(...)` to render.
+4.  **Critical**: Set `animation: false` in Chart.js options for the print view.
+
 ---
-**See Also**: [Export Strategy](./export-strategy.md)
+**See Also**:
+-   [Dashboard Best Practices](../../../Limesurvey/docs/dashboard-best-practices.md)
+-   [Professional Charts & PDF Guide](../../../Limesurvey/docs/professional-charts-and-pdfs.md)

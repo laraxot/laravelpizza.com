@@ -21,6 +21,5 @@ abstract class XotBaseRadio extends Radio
     protected function setUp(): void
     {
         parent::setUp();
-        // Common setup for all XotBaseRadio components can be added here.
     }
 }

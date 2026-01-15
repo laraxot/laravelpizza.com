@@ -14,4 +14,8 @@ return [
             'label' => 'team_id',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

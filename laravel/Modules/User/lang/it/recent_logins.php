@@ -69,4 +69,7 @@ return [
             'label' => 'openFilters',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
 ];

@@ -98,7 +98,7 @@ function generateReport(array $issues): string
 }
 
 // Esegui audit
-$basePath = '/var/www/html/_bases/base_saluteora/laravel';
+$basePath = '/var/www/html/_bases/base_<nome progetto>/laravel';
 $issues = auditHelperTextFiles($basePath);
 $report = generateReport($issues);
 

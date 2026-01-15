@@ -20,4 +20,8 @@ return [
             'label' => 'avatar',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

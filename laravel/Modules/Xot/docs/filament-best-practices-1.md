@@ -78,48 +78,48 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
 
 declare(strict_types=1);
 
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
 namespace Modules\<nome modulo>\Filament\Resources\ReportResource\Pages;
 
 use Modules\<nome modulo>\Filament\Resources\ReportResource;
@@ -221,48 +221,48 @@ public function getTableColumns(): array
 
 declare(strict_types=1);
 
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
 namespace Modules\<nome modulo>\Filament\Resources\AppointmentResource\Pages;
 
 use Modules\<nome modulo>\Filament\Resources\AppointmentResource;
@@ -300,48 +300,48 @@ class EditAppointment extends XotBaseEditRecord
 
 declare(strict_types=1);
 
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
 namespace Modules\<nome modulo>\Filament\Resources\AppointmentResource\Pages;
 
 use Modules\<nome modulo>\Filament\Resources\AppointmentResource;
@@ -376,25 +376,25 @@ namespace Modules\<nome modulo>\Filament\Resources;
 use Modules\<nome modulo>\Filament\Resources\ReportResource\Pages;
 use Modules\<nome progetto>\Models\Report;
 use Modules\<nome progetto>\Models\Report;
-namespace Modules\SaluteMo\Filament\Resources;
+namespace Modules\<nome progetto>\Filament\Resources;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 use Modules\<nome progetto>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
-use Modules\SaluteOra\Models\Report;
+use Modules\<nome progetto>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
-use Modules\SaluteOra\Models\Report;
+use Modules\<nome progetto>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
-use Modules\SaluteOra\Models\Report;
-use Modules\<nome modulo>\Models\Report;
-use Modules\<nome modulo>\Models\Report;
-use Modules\<nome modulo>\Models\Report;
+use Modules\<nome progetto>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
 use Modules\<nome modulo>\Models\Report;
-use Modules\SaluteOra\Models\Report;
+use Modules\<nome modulo>\Models\Report;
+use Modules\<nome modulo>\Models\Report;
+use Modules\<nome modulo>\Models\Report;
+use Modules\<nome progetto>\Models\Report;
 use Modules\<nome progetto>\Models\Report;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Filament\Forms;

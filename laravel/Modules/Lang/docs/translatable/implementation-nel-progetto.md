@@ -9,7 +9,7 @@ Questo documento descrive come è implementato e configurato il pacchetto `spati
 Il progetto utilizza il plugin ufficiale `filament/spatie-laravel-translatable-plugin` per l'integrazione con Filament:
 
 ```php
-// Modules/SaluteOra/app/Providers/Filament/AdminPanelProvider.php
+// Modules/<nome progetto>/app/Providers/Filament/AdminPanelProvider.php
 use Filament\SpatieLaravelTranslatablePlugin;
 
 public function panel(Panel $panel): Panel
@@ -226,13 +226,13 @@ trait HasStrictTranslations
 
 ### File di Contenuto Traducibili
 
-I contenuti JSON come quelli in `config/local/saluteora/database/content/pages/` supportano traduzioni:
+I contenuti JSON come quelli in `config/local/<nome progetto>/database/content/pages/` supportano traduzioni:
 
 ```json
 {
     "title": {
-        "it": "Area Dottore - SaluteOra",
-        "en": "Doctor Area - SaluteOra"
+        "it": "Area Dottore - <nome progetto>",
+        "en": "Doctor Area - <nome progetto>"
     },
     "content_blocks": {
         "it": [
@@ -240,7 +240,7 @@ I contenuti JSON come quelli in `config/local/saluteora/database/content/pages/`
                 "type": "hero",
                 "data": {
                     "title": "Benvenuto nella tua Area Dottore",
-                    "subtitle": "Gestisci le tue pazienti e monitora i loro percorsi di salute orale",
+                    "subtitle": "Gestisci le tue pazienti e monitora i loro percorsi di <slogan>",
                     "cta_text": "Continua la registrazione"
                 }
             }

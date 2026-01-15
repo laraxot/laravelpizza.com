@@ -4,7 +4,7 @@
 
 ### Struttura
 ```php
-// /var/www/html/base_<nome progetto>/laravel/Themes/One/resources/views/pages/auth/logout.blade.php
+// Themes/One/resources/views/pages/auth/logout.blade.php
 
 <?php
 
@@ -114,7 +114,7 @@ $logout = function() {
 
 ### Struttura
 ```php
-// /var/www/html/base_<nome progetto>/laravel/Themes/One/resources/views/pages/auth/logout.blade.php
+// Themes/One/resources/views/pages/auth/logout.blade.php
 
 <?php
 

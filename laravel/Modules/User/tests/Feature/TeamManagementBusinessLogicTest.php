@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Illuminate\Database\QueryException;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
@@ -11,7 +10,7 @@ uses(TestCase::class);
 
 it('can create team', function (): void {
     // Arrange
-    $name = 'Studio Dentistico Milano ' . uniqid();
+    $name = 'Studio Dentistico Milano '.uniqid();
     $teamData = [
         'name' => $name,
         'description' => 'Studio dentistico specializzato in Milano',
@@ -135,7 +134,7 @@ it('can create team invitation', function (): void {
     // Arrange
     $team = Team::factory()->create();
     $inviter = User::factory()->create();
-    $email = 'invited-' . uniqid() . '@example.com';
+    $email = 'invited-'.uniqid().'@example.com';
     $invitationData = [
         'email' => $email,
         'role' => 'member',
@@ -168,7 +167,7 @@ it('can accept team invitation', function (): void {
     // Arrange
     $team = Team::factory()->create();
     $inviter = User::factory()->create();
-    $email = 'invited-' . uniqid() . '@example.com';
+    $email = 'invited-'.uniqid().'@example.com';
     $invitedUser = User::factory()->create(['email' => $email]);
 
     $invitation = $team->teamInvitations()->create([
@@ -332,14 +331,14 @@ it('can get team invitations', function (): void {
     $invitation1 = $team->teamInvitations()->create([
         'team_id' => $team->id,
         'user_id' => $inviter->id,
-        'email' => 'user1-' . uniqid() . '@example.com',
+        'email' => 'user1-'.uniqid().'@example.com',
         'role' => 'member',
     ]);
 
     $invitation2 = $team->teamInvitations()->create([
         'team_id' => $team->id,
         'user_id' => $inviter->id,
-        'email' => 'user2-' . uniqid() . '@example.com',
+        'email' => 'user2-'.uniqid().'@example.com',
         'role' => 'admin',
     ]);
 
@@ -404,8 +403,6 @@ it('can get team statistics', function (): void {
     expect($adminCount)->toBe(1);
     expect($memberCount)->toBe(2);
 });
-
-
 
 it('can handle team soft delete', function (): void {
     // Arrange

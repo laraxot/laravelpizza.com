@@ -45,4 +45,6 @@ return [
         'sort' => 14,
         'icon' => 'heroicon-o-rectangle-stack',
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

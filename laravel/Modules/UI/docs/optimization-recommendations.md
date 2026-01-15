@@ -53,13 +53,13 @@
 #### Pattern di Correzione
 ```php
 // ❌ PROBLEMI ATTUALI (in documentazione)
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/UI/
+Modules/UI/
+Modules/UI/
+Modules/UI/
+Modules/UI/
+Modules/UI/
+Modules/UI/
+Modules/UI/
 https://api.<nome progetto>.com/
 
 // ✅ SOLUZIONI
@@ -290,9 +290,9 @@ php artisan ui:accessibility-check
 
 #### 1. Riusabilità Path (IMPORTANTE)
 - **115+ occorrenze hardcoded** di "<nome progetto>" in documentazione
-- **115+ occorrenze hardcoded** di "saluteora" in documentazione
-- **115+ occorrenze hardcoded** di "saluteora" in documentazione
-- **115+ occorrenze hardcoded** di "saluteora" in documentazione
+- **115+ occorrenze hardcoded** di "<nome progetto>" in documentazione
+- **115+ occorrenze hardcoded** di "<nome progetto>" in documentazione
+- **115+ occorrenze hardcoded** di "<nome progetto>" in documentazione
 - **Path assoluti** in esempi e guide
 - **Link interni** con riferimenti specifici al progetto
 
@@ -300,9 +300,9 @@ php artisan ui:accessibility-check
 - **README.md**: 407 righe (troppo denso)
 - **Informazioni duplicate** tra sezioni
 - **Esempi troppo specifici** per <nome progetto>
-- **Esempi troppo specifici** per SaluteOra
-- **Esempi troppo specifici** per SaluteOra
-- **Esempi troppo specifici** per SaluteOra
+- **Esempi troppo specifici** per <nome progetto>
+- **Esempi troppo specifici** per <nome progetto>
+- **Esempi troppo specifici** per <nome progetto>
 
 ## 🔧 RACCOMANDAZIONI SPECIFICHE
 
@@ -311,14 +311,14 @@ php artisan ui:accessibility-check
 #### Pattern di Correzione
 ```php
 // ❌ PROBLEMI ATTUALI (in documentazione)
-/var/www/html/<nome progetto>/laravel/Modules/UI/
+Modules/UI/
 https://api.<nome progetto>.com/
-/var/www/html/saluteora/laravel/Modules/UI/
-https://api.saluteora.com/
-/var/www/html/saluteora/laravel/Modules/UI/
-https://api.saluteora.com/
-/var/www/html/saluteora/laravel/Modules/UI/
-https://api.saluteora.com/
+Modules/UI/
+https://api.<nome progetto>.com/
+Modules/UI/
+https://api.<nome progetto>.com/
+Modules/UI/
+https://api.<nome progetto>.com/
 
 // ✅ SOLUZIONI
 {{project_path}}/laravel/Modules/UI/
@@ -459,9 +459,9 @@ class ComponentPerformanceMiddleware
 ```bash
 # Verifica path hardcoded
 grep -r "<nome progetto>" Modules/UI/docs/ --include="*.md" | wc -l
-grep -r "saluteora" Modules/UI/docs/ --include="*.md" | wc -l
-grep -r "saluteora" Modules/UI/docs/ --include="*.md" | wc -l
-grep -r "saluteora" Modules/UI/docs/ --include="*.md" | wc -l
+grep -r "<nome progetto>" Modules/UI/docs/ --include="*.md" | wc -l
+grep -r "<nome progetto>" Modules/UI/docs/ --include="*.md" | wc -l
+grep -r "<nome progetto>" Modules/UI/docs/ --include="*.md" | wc -l
 
 # Verifica lunghezza README
 wc -l Modules/UI/docs/README.md

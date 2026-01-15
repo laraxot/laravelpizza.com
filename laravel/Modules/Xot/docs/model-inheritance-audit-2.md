@@ -257,7 +257,7 @@ Per verificare tutti i moduli:
 
 ```bash
 #!/bin/bash
-cd /var/www/_bases/base_<nome progetto>_fila4_mono/laravel/Modules
+cd Modules
 
 for module in */; do
     echo "=== Checking $module ==="

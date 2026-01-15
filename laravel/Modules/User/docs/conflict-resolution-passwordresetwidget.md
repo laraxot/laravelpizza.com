@@ -1,7 +1,7 @@
 # Risoluzione Conflitti PasswordResetWidget.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/_bases/base_fixcity_fila4_mono/laravel/Modules/User/app/Filament/Widgets/Auth/PasswordResetWidget.php`
+**File**: `Modules/User/app/Filament/Widgets/Auth/PasswordResetWidget.php`
 **Linee**: 47-63
 **Tipo**: Conflitto di funzionalità (aggiunta componente error display)
 ## Descrizione del Conflitto
@@ -66,7 +66,7 @@ Verificare che:
 # Risoluzione Conflitti PasswordResetWidget.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/ptvx/laravel/Modules/User/app/Filament/Widgets/Auth/PasswordResetWidget.php`
+**File**: `Modules/User/app/Filament/Widgets/Auth/PasswordResetWidget.php`
 **Linee**: 47-63
 **Tipo**: Conflitto di funzionalità (aggiunta componente error display)
 

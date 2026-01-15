@@ -16,10 +16,9 @@ abstract class LangBaseViewRecord extends XotBaseViewRecord
 
     protected function getHeaderActions(): array
     {
-        return [
-            LocaleSwitcher::make(),
-            ...parent::getHeaderActions(),
-            // ...
-        ];
+        return array_merge(
+            ['locale-switcher' => LocaleSwitcher::make()],
+            parent::getHeaderActions(),
+        );
     }
 }

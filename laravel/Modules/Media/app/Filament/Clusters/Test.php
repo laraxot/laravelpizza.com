@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Clusters;
 
-use Filament\Clusters\Cluster;
+use Modules\Xot\Filament\Clusters\XotBaseCluster;
 
-class Test extends Cluster
+/**
+ * Cluster di test per il modulo Media.
+ * 
+ * ⚠️ IMPORTANTE: Estende XotBaseCluster, MAI Filament\Clusters\Cluster direttamente!
+ */
+class Test extends XotBaseCluster
 {
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-squares-2x2';
-
-    // protected static ?string $navigationParentItem = 'Notifications';
-    // protected static ?string $navigationGroup = 'Settings';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-squares-2x2';
 }

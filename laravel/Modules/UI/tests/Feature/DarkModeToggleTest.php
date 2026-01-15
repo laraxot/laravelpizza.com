@@ -16,8 +16,9 @@ test('pages include dark mode toggle functionality', function () {
     // Since home route redirects, test that our theme supports dark mode functionality
     // by checking the JSON config and component files exist
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
-    if (!file_exists($heroPath)) {
+    if (! file_exists($heroPath)) {
         test()->markTestSkipped('Theme TwentyOne hero component not present in this install.');
+
         return;
     }
 
@@ -32,8 +33,9 @@ test('pages include dark mode toggle functionality', function () {
 test('dark mode classes are present in components', function () {
     // Test that our component files include proper dark mode classes
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
-    if (!file_exists($heroPath)) {
+    if (! file_exists($heroPath)) {
         $this->markTestSkipped('Theme TwentyOne hero component not present in this install.');
+
         return;
     }
     $heroContent = file_get_contents($heroPath);
@@ -46,8 +48,9 @@ test('dark mode classes are present in components', function () {
 
 test('kalshi hero component supports dark mode', function () {
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
-    if (!file_exists($heroPath)) {
+    if (! file_exists($heroPath)) {
         test()->markTestSkipped('Theme TwentyOne hero component not present in this install.');
+
         return;
     }
     $content = file_get_contents($heroPath);
@@ -98,8 +101,9 @@ test('market cards support dark mode', function () {
 test('consistent dark mode color scheme', function () {
     // Test that hero component uses consistent dark mode colors
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
-    if (!file_exists($heroPath)) {
+    if (! file_exists($heroPath)) {
         $this->markTestSkipped('Theme TwentyOne hero component not present in this install.');
+
         return;
     }
     $content = file_get_contents($heroPath);
@@ -113,8 +117,9 @@ test('consistent dark mode color scheme', function () {
 test('dark mode javascript initialization', function () {
     // Test that components support theme switching functionality
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
-    if (!file_exists($heroPath)) {
+    if (! file_exists($heroPath)) {
         $this->markTestSkipped('Theme TwentyOne hero component not present in this install.');
+
         return;
     }
 
@@ -125,8 +130,9 @@ test('dark mode javascript initialization', function () {
 test('proper contrast ratios in dark mode', function () {
     // Test that hero component has proper contrast
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
-    if (!file_exists($heroPath)) {
+    if (! file_exists($heroPath)) {
         $this->markTestSkipped('Theme TwentyOne hero component not present in this install.');
+
         return;
     }
     $content = file_get_contents($heroPath);
@@ -143,8 +149,9 @@ test('proper contrast ratios in dark mode', function () {
 test('gradient backgrounds work in dark mode', function () {
     // Test that hero component gradients have dark variants
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
-    if (!file_exists($heroPath)) {
+    if (! file_exists($heroPath)) {
         $this->markTestSkipped('Theme TwentyOne hero component not present in this install.');
+
         return;
     }
     $content = file_get_contents($heroPath);
@@ -159,8 +166,9 @@ test('gradient backgrounds work in dark mode', function () {
 test('interactive elements have dark mode hover states', function () {
     // Test that hero component buttons have proper hover states
     $heroPath = base_path('Themes/TwentyOne/resources/views/components/blocks/hero/kalshi-inspired.blade.php');
-    if (!file_exists($heroPath)) {
+    if (! file_exists($heroPath)) {
         $this->markTestSkipped('Theme TwentyOne hero component not present in this install.');
+
         return;
     }
     $content = file_get_contents($heroPath);

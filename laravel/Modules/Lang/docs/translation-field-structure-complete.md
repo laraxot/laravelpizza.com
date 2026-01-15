@@ -1,4 +1,4 @@
-# Struttura Completa dei Campi di Traduzione - Standard Laraxot SaluteOra
+# Struttura Completa dei Campi di Traduzione - Standard Laraxot <nome progetto>
 
 ## Principi Fondamentali DRY + KISS
 
@@ -300,7 +300,7 @@ return [
 ## File da Aggiornare (Priorità)
 
 ### Alta Priorità - Tedeschi
-1. `/laravel/Modules/SaluteOra/lang/de/patient-resource.php`
+1. `/laravel/Modules/<nome progetto>/lang/de/patient-resource.php`
 2. `/laravel/Modules/User/lang/de/registration.php`
 3. `/laravel/Modules/User/lang/de/register_tenant.php`
 
@@ -310,7 +310,7 @@ return [
 
 ## Collegamenti Bidirezionali
 
-- [SaluteOra Translation Audit](../Modules/SaluteOra/docs/translation_audit_city_fields.md)
+- [<nome progetto> Translation Audit](../Modules/<nome progetto>/docs/translation_audit_city_fields.md)
 - [User Module Translation Rules](../Modules/User/docs/widget-translation-rules.md)
 - [Translation Syntax Fixes](translation_syntax_fixes.md)
 - [Windsurf Translation Rules](../.windsurf/rules/translation-complete-structure.mdc)

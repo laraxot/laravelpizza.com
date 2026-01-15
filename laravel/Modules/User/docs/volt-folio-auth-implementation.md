@@ -484,7 +484,7 @@ new class extends Component {
 3. **Struttura del Codice**
    - Separa la logica PHP dal template Blade
    - Usa l'approccio funzionale o la classe anonima in base alla complessità
-   - Segui le convenzioni di naming e struttura di SaluteOra
+   - Segui le convenzioni di naming e struttura di <nome progetto>
 
 4. **Sicurezza**
    - Invalida e rigenera sempre la sessione dopo il logout
@@ -528,7 +528,7 @@ new class extends Component {
 
 ## Conclusione
 
-Seguendo queste linee guida per l'implementazione delle pagine di autenticazione con Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di SaluteOra, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
+Seguendo queste linee guida per l'implementazione delle pagine di autenticazione con Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di <nome progetto>, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
 
 ## Riferimenti
 
@@ -1021,7 +1021,7 @@ new class extends Component {
 3. **Struttura del Codice**
    - Separa la logica PHP dal template Blade
    - Usa l'approccio funzionale o la classe anonima in base alla complessità
-   - Segui le convenzioni di naming e struttura di SaluteOra
+   - Segui le convenzioni di naming e struttura di <nome progetto>
 
 4. **Sicurezza**
    - Invalida e rigenera sempre la sessione dopo il logout
@@ -1065,7 +1065,7 @@ new class extends Component {
 
 ## Conclusione
 
-Seguendo queste linee guida per l'implementazione delle pagine di autenticazione con Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di SaluteOra, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
+Seguendo queste linee guida per l'implementazione delle pagine di autenticazione con Volt e Folio, garantirai che il tuo codice sia conforme alle convenzioni di <nome progetto>, sia facile da mantenere e sfrutti al meglio le capacità di Laravel, Livewire, Volt e Folio.
 
 ## Riferimenti
 

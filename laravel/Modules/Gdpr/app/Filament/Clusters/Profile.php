@@ -4,9 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Clusters;
 
-use Filament\Clusters\Cluster;
+use Modules\Xot\Filament\Clusters\XotBaseCluster;
 
-class Profile extends Cluster
+/**
+ * Cluster per la gestione del profilo GDPR.
+ *
+ * ⚠️ IMPORTANTE: Estende XotBaseCluster, MAI Filament\Clusters\Cluster direttamente!
+ */
+class Profile extends XotBaseCluster
 {
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-squares-2x2';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-squares-2x2';
 }

@@ -23,7 +23,7 @@ Per i form complessi , l'approccio raccomandato è utilizzare i widget Filament 
 ## Struttura delle Directory
 
 ```
-/var/www/html/saluteora/laravel/
+
 ├── Modules/
 │   └── User/
 │       └── app/

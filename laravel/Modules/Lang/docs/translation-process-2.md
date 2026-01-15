@@ -11,7 +11,7 @@
 
 ## Introduzione
 
-Questo documento descrive il processo di gestione delle traduzioni nel progetto SaluteOra, con particolare attenzione alla collaborazione tra sviluppatori e traduttori.
+Questo documento descrive il processo di gestione delle traduzioni nel progetto <nome progetto>, con particolare attenzione alla collaborazione tra sviluppatori e traduttori.
 
 ## Struttura dei File di Traduzione
 
@@ -230,4 +230,4 @@ find lang -type f -name "*.php" -o -name "*.json" | xargs dos2unix
 
 ## Conclusione
 
-Questo documento fornisce una guida completa per la gestione delle traduzioni nel progetto SaluteOra. Seguendo queste linee guida, è possibile garantire un processo di traduzione fluido e coerente in tutto il team di sviluppo.
+Questo documento fornisce una guida completa per la gestione delle traduzioni nel progetto <nome progetto>. Seguendo queste linee guida, è possibile garantire un processo di traduzione fluido e coerente in tutto il team di sviluppo.

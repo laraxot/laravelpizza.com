@@ -26,8 +26,8 @@ Se l'utente non ha i permessi, viene mostrato un messaggio di errore invece del 
 Ogni modulo che implementa un tipo di utente deve fornire la propria Action di aggiornamento, ad esempio:
 - `Modules\<nome modulo>\Actions\Doctor\UpdateUserAction`
 - `Modules\<nome modulo>\Actions\Patient\UpdateUserAction`
-- `Modules\SaluteOra\Actions\Doctor\UpdateUserAction`
-- `Modules\SaluteOra\Actions\Patient\UpdateUserAction`
+- `Modules\<nome progetto>\Actions\Doctor\UpdateUserAction`
+- `Modules\<nome progetto>\Actions\Patient\UpdateUserAction`
 Queste Action devono occuparsi di:
 - Validare i dati ricevuti
 - Aggiornare il modello corretto (Doctor, Patient, ...)
@@ -98,14 +98,14 @@ __('user::profile.no_permission')
 ## Esempi di implementazione specifica
 ### Action per Doctor
 namespace Modules\<nome modulo>\Actions\Doctor;
-namespace Modules\SaluteOra\Actions\Doctor;
+namespace Modules\<nome progetto>\Actions\Doctor;
 class UpdateUserAction extends \Modules\User\Actions\User\UpdateUserAction
     protected function afterUpdate(Model $user, array $data): void
         // Logica specifica per dottori
         // es. aggiornamento specializzazioni, studi, ecc.
 ### Action per Patient
 namespace Modules\<nome modulo>\Actions\Patient;
-namespace Modules\SaluteOra\Actions\Patient;
+namespace Modules\<nome progetto>\Actions\Patient;
         // Logica specifica per pazienti
         // es. aggiornamento dati medici, preferenze, ecc.
 ---

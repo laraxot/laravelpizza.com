@@ -23,4 +23,8 @@ return [
         'label' => 'Conferma Password',
         'placeholder' => 'Conferma la tua nuova password',
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
 ];

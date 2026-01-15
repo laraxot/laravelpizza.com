@@ -170,37 +170,37 @@ laravel/Modules/ModuleName/
 ### Controllers
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/app/Http/Controllers/
+Modules/User/app/Http/Controllers/
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Http/Controllers/
+Modules/User/Http/Controllers/
 ```
 
 ### Actions
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/app/Actions/
+Modules/User/app/Actions/
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Actions/
+Modules/User/Actions/
 ```
 
 ### Views
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/resources/views/
+Modules/User/resources/views/
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Resources/views/
+Modules/User/Resources/views/
 ```
 
 ### Translations
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/lang/it/
+Modules/User/lang/it/
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Lang/it/
+Modules/User/Lang/it/
 ```
 
 ## Best Practices
@@ -465,37 +465,37 @@ laravel/Modules/ModuleName/
 ### Controllers
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/app/Http/Controllers/
+Modules/User/app/Http/Controllers/
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Http/Controllers/
+Modules/User/Http/Controllers/
 ```
 
 ### Actions
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/app/Actions/
+Modules/User/app/Actions/
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Actions/
+Modules/User/Actions/
 ```
 
 ### Views
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/resources/views/
+Modules/User/resources/views/
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Resources/views/
+Modules/User/Resources/views/
 ```
 
 ### Translations
 ```php
 // CORRETTO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/lang/it/
+Modules/User/lang/it/
 
 // ERRATO
-/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules/User/Lang/it/
+Modules/User/Lang/it/
 ```
 
 ## Best Practices

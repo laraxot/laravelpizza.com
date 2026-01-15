@@ -61,4 +61,6 @@ return [
             'confirmation' => 'Sei sicuro di voler eliminare questo permesso team?',
         ],
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

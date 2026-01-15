@@ -129,10 +129,10 @@ protected function getFooterWidgets(): array
 ### Documentazione Correlata
 - [Modules/User/docs/best-practices/filament-widgets.md](../best-practices/filament-widgets.md)
 - [Modules/Xot/docs/filament/widgets/base-chart-widget.md](../../../Xot/docs/filament/widgets/base-chart-widget.md)
-- [Modules/SaluteMo/docs/dashboard-implementation.md](../../../SaluteMo/docs/dashboard-implementation.md)
+- [Modules/<nome progetto>/docs/dashboard-implementation.md](../../../<nome progetto>/docs/dashboard-implementation.md)
 - [Modules/User/project_docs/best-practices/filament-widgets.md](../best-practices/filament-widgets.md)
 - [Modules/Xot/project_docs/filament/widgets/base-chart-widget.md](../../../Xot/project_docs/filament/widgets/base-chart-widget.md)
-- [Modules/SaluteMo/project_docs/dashboard-implementation.md](../../../SaluteMo/project_docs/dashboard-implementation.md)
+- [Modules/<nome progetto>/project_docs/dashboard-implementation.md](../../../<nome progetto>/project_docs/dashboard-implementation.md)
 ### Widget Correlati
 - `UsersChartWidget`: Esempio di implementazione corretta dei filtri
 - Altri widget che estendono `XotBaseChartWidget`

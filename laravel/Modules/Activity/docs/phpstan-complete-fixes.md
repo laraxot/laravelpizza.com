@@ -68,7 +68,7 @@ if ($event->user instanceof \Illuminate\Database\Eloquent\Model) {
 
 ## ✅ Risultato Finale
 ```
-Note: Using configuration file /var/www/_bases/base_techplanner_fila4_mono/laravel/phpstan.neon.
+Note: Using configuration file phpstan.neon.
 
 [OK] No errors
 ```

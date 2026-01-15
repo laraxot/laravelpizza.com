@@ -3,18 +3,6 @@
 declare(strict_types=1);
 
 return [
-    /*
-     * |--------------------------------------------------------------------------
-     * | Messaggi di validazione
-     * |--------------------------------------------------------------------------
-     * |
-     * | Le seguenti righe contengono i messaggi di errore predefiniti utilizzati
-     * | dalla classe di validazione. Alcune di queste regole hanno più versioni,
-     * | come le regole di dimensione. Sentiti libero di modificare ciascuno di
-     * | questi messaggi.
-     * |
-     */
-
     'accepted' => 'Il campo :attribute deve essere accettato.',
     'active_url' => 'Il campo :attribute non è un URL valido.',
     'after' => 'Il campo :attribute deve essere una data successiva a :date.',
@@ -131,17 +119,6 @@ return [
     'uploaded' => 'Il campo :attribute non è riuscito a caricare.',
     'url' => 'Il formato del campo :attribute non è valido.',
     'uuid' => 'Il campo :attribute deve essere un UUID valido.',
-    /*
-     * |--------------------------------------------------------------------------
-     * | Personalizzazione degli attributi
-     * |--------------------------------------------------------------------------
-     * |
-     * | Qui puoi specificare attributi personalizzati per i messaggi di validazione
-     * | utilizzando la convenzione "attribute.rule" per nominare le linee. Questo
-     * | rende facile specificare un messaggio di attributo personalizzato.
-     * |
-     */
-
     'attributes' => [
         'data.password' => 'zu',
     ],
@@ -154,4 +131,9 @@ return [
     'email_format' => 'L\'email deve avere un formato valido.',
     'phone_format' => 'Il numero di telefono deve avere un formato valido.',
     'birth_date_before' => 'La data di nascita deve essere precedente ad oggi.',
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
+    'actions' => [],
 ];

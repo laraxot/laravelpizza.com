@@ -10,12 +10,9 @@ use Filament\Schemas\Components\Component;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-use Modules\Xot\Filament\Traits\HasXotTable;
 
 class UsersRelationManager extends XotBaseRelationManager
 {
-    use HasXotTable;
-
     protected static string $relationship = 'users';
 
     protected static ?string $recordTitleAttribute = 'name';

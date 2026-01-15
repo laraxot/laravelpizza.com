@@ -45,7 +45,7 @@
 - Cerchi di localizzazione che si espandono (`ripple`)
 - Globo che ruota lentamente (`rotate`)
 
-### SaluteMo Module
+### <nome progetto> Module
 **Concetto**: Salute e medicina con cuore e simboli medici
 **Animazioni**:
 - Cuore che batte (`heartbeat`)

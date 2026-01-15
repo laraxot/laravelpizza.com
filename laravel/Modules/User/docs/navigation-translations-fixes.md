@@ -11,7 +11,7 @@
 // ❌ PRIMA (Problematico)
 'navigation' => [
     'label' => 'device.navigation',
-    'group' => 'device.navigation',
+    'group' => 'device.navigation', 
     'icon' => 'device.navigation',
 ]
 ```
@@ -42,7 +42,7 @@
 // ✅ DOPO (Corretto)
 'navigation' => [
     'label' => 'Permessi',
-    'group' => 'Sicurezza',
+    'group' => 'Sicurezza', 
     'icon' => 'heroicon-o-shield-check',
 ]
 ```
@@ -77,7 +77,7 @@
 
 - [Audit Generale Traduzioni Navigation](../../docs/navigation-translations-audit.md)
 - [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
-- [Standard Qualità Traduzioni](../SaluteOra/docs/translation-quality-standards.md)
+- [Standard Qualità Traduzioni](../<nome progetto>/docs/translation-quality-standards.md)
 - [Documentazione Modulo User](README.md)
 
 ## Note Tecniche

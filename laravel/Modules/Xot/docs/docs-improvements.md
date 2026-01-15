@@ -106,13 +106,8 @@ docs/
 
 **Esempi trovati**:
 ```markdown
-[regole php](/var/www/html/<directory progetto>/laravel/docs/standards/php-inheritance-rules.md)
-public static string $projectBasePath = '/var/www/html/<nome progetto>';
-```
-
-**Dovrebbe essere**:
-```markdown
-[regole php](../../../docs/standards/php-inheritance-rules.md)
+[regole php](docs/standards/php-inheritance-rules.md)
+public static string $projectBasePath = '../../docs/standards/php-inheritance-rules.md)
 // Path configurabili tramite env, non hardcoded
 ```
 

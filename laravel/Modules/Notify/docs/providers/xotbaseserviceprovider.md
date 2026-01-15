@@ -20,16 +20,16 @@ public function register(): void
 {
     // Converte il nome in minuscolo
     $this->nameLower = Str::lower($this->name);
-
+    
     // Estrae il namespace del modulo
     $this->module_ns = collect(explode('\\', $this->module_ns))
         ->slice(0, -1)
         ->implode('\\');
-
+    
     // Registra i provider standard
     $this->app->register($this->module_ns.'\Providers\RouteServiceProvider');
     $this->app->register($this->module_ns.'\Providers\EventServiceProvider');
-
+    
     // Registra le icone Blade
     $this->registerBladeIcons();
 }
@@ -43,10 +43,10 @@ public function boot(): void
     $this->registerTranslations();
     $this->registerConfig();
     $this->registerViews();
-
+    
     // Carica migrazioni
     $this->loadMigrationsFrom($this->module_dir.'/../Database/Migrations');
-
+    
     // Registra componenti
     $this->registerLivewireComponents();
     $this->registerBladeComponents();
@@ -127,12 +127,14 @@ public function boot(): void
 - [Laravel Package Development](https://laravel.com/docs/packages)
 ### Versione HEAD
 
-- [Laravel Module Development](https://nwidart.com/laravel-modules/v6/introduction)
+- [Laravel Module Development](https://nwidart.com/laravel-modules/v6/introduction) 
 
 ### Versione Incoming
 
-- [Laravel Module Development](https://nwidart.com/laravel-modules/v6/introduction)
+- [Laravel Module Development](https://nwidart.com/laravel-modules/v6/introduction) 
 ## Collegamenti tra versioni di xotbaseserviceprovider.md
 * [xotbaseserviceprovider.md](../../../Xot/docs/providers/xotbaseserviceprovider.md)
 
+
 ---
+

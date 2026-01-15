@@ -45,7 +45,7 @@ npm run copy
 
 ### Tema One
 ```bash
-cd /var/www/html/_bases/base_saluteora/laravel/Themes/One
+cd Themes/One
 npm install          # Prima volta
 npm run build        # Compila Sass/JS
 npm run copy         # Copia in /public/
@@ -53,7 +53,7 @@ npm run copy         # Copia in /public/
 
 ### Tema Two
 ```bash
-cd /var/www/html/_bases/base_saluteora/laravel/Themes/Two
+cd Themes/Two
 npm install
 npm run build
 npm run copy

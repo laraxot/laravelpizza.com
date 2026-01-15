@@ -89,34 +89,7 @@ claude mcp remove <nome-server>
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_quaeris_fila4_mono"]
-    }
-  }
-}
-```
-
-**Configurazione Windsurf**:
-```json
-{
-  "mcpServers": {
-    "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_quaeris_fila4_mono"]
-    }
-  }
-}
-```
-
-#### 2. Fetch Server
-**Scopo**: Chiamate HTTP e API
-
-**Configurazione**:
-```json
-{
-  "mcpServers": {
-    "fetch": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch"]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "server-filesystem", "server-fetch"]
     }
   }
 }
@@ -233,11 +206,7 @@ File: `~/.cursor/mcp.json`
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_quaeris_fila4_mono"]
-    },
-    "fetch": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch"]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "server-fetch"]
     },
     "memory": {
       "command": "npx",
@@ -271,11 +240,7 @@ File: `~/.codeium/windsurf/mcp_config.json`
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_quaeris_fila4_mono"]
-    },
-    "fetch": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch"]
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "server-fetch"]
     },
     "memory": {
       "command": "npx",

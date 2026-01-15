@@ -16,10 +16,10 @@
 Questo è lo standard stabilito nel modulo Notify per tutti i DTOs:
 
 ```
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsData.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsRequestData.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsResponseData.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/SmsData.php
+Modules/Notify/app/Datas/NetfunSmsData.php
+Modules/Notify/app/Datas/NetfunSmsRequestData.php
+Modules/Notify/app/Datas/NetfunSmsResponseData.php
+Modules/Notify/app/Datas/SmsData.php
 ```
 
 ### ❌ ERRATO: ALTERNATIVE COMUNI MA ERRATE
@@ -43,13 +43,13 @@ Questo è lo standard stabilito nel modulo Notify per tutti i DTOs:
 ### Verificare Sempre le Directory Esistenti
 
 ```bash
-find /var/www/html/saluteora/laravel/Modules/Notify/app -type d -name "Data*"
+find Modules/Notify/app -type d -name "Data*"
 ```
 
 Questo restituirà:
 ```
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/SMS
+Modules/Notify/app/Datas
+Modules/Notify/app/Datas/SMS
 ```
 
 ## Esempi di Importazioni Corrette

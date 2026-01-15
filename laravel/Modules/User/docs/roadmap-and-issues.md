@@ -1,8 +1,8 @@
 # User Module - Roadmap, Issues & Optimization
 
-**Modulo**: User (Authentication, Authorization, Profiles)
-**Data Analisi**: 1 Ottobre 2025
-**Maintainer**: Team FixCity
+**Modulo**: User (Authentication, Authorization, Profiles)  
+**Data Analisi**: 1 Ottobre 2025  
+**Maintainer**: Team FixCity  
 **Status PHPStan**: ⚠️ 95 errori (Level 9)
 
 ---
@@ -36,15 +36,15 @@
 ### Errore Critico Risolto ✅
 
 #### BaseUser.php - Syntax Error (RISOLTO)
-**File**: `app/Models/BaseUser.php:377-419`
-**Problema**: Blocchi di codice orfani causavano 7 errori sintassi
-**Soluzione**: Rimosso codice orfano
+**File**: `app/Models/BaseUser.php:377-419`  
+**Problema**: Blocchi di codice orfani causavano 7 errori sintassi  
+**Soluzione**: Rimosso codice orfano  
 **Impatto**: Sbloccata tutta l'analisi PHPStan
 
 ### Miglioramento Implementato ✅
 
 #### BaseUser.php - Teams & Tenants Support
-**File**: `app/Models/BaseUser.php`
+**File**: `app/Models/BaseUser.php`  
 **Aggiunto**:
 - `teams()`: BelongsToMany relationship
 - `currentTeam()`: BelongsTo relationship
@@ -74,7 +74,7 @@ use Modules\Xot\Actions\Model\SafeAttributeCastAction;
 $name = SafeAttributeCastAction::getString($user, 'name', 'Guest');
 ```
 
-**Tempo Fix**: 3-4 ore
+**Tempo Fix**: 3-4 ore  
 **Priorità**: ALTA
 
 ---
@@ -94,7 +94,7 @@ public function getRole(): ?Role
 }
 ```
 
-**Tempo Fix**: 2-3 ore
+**Tempo Fix**: 2-3 ore  
 **Priorità**: ALTA
 
 ---
@@ -112,7 +112,7 @@ if ($user instanceof HasTeamsContract) {
 }
 ```
 
-**Tempo Fix**: 1-2 ore
+**Tempo Fix**: 1-2 ore  
 **Priorità**: MEDIA
 
 ---
@@ -139,7 +139,7 @@ DB::table('users')->where('email', $email)->first();
 User::query()->where('email', $email)->first();
 ```
 
-**Tempo Fix**: 2-3 ore
+**Tempo Fix**: 2-3 ore  
 **Gain**: Type safety + Events + Caching
 
 ---
@@ -173,13 +173,13 @@ public function setPasswordAttribute(?string $value): void
     if ($value === null || $value === '') {
         return;
     }
-
+    
     // Skip if already hashed (bcrypt/argon2 length)
     if (Str::startsWith($value, ['$2y$', '$2a$', '$argon'])) {
         $this->attributes['password'] = $value;
         return;
     }
-
+    
     $this->attributes['password'] = Hash::make($value);
 }
 ```
@@ -246,7 +246,7 @@ php artisan queue:prune-failed --hours=48
 - [ ] Fix method existence checks (1h)
 - [ ] Cleanup PHPStan suppressions
 
-**Totale**: ~6 ore
+**Totale**: ~6 ore  
 **Risultato**: ✅ 0 errori PHPStan Level 9
 
 ---
@@ -376,7 +376,10 @@ php artisan queue:prune-failed --hours=48
 
 ---
 
-**Status**: ⚠️ 95 ERRORI DA CORREGGERE
-**Priorità**: 🟡 ALTA
-**Timeline**: 2 Ottobre 2025
+**Status**: ⚠️ 95 ERRORI DA CORREGGERE  
+**Priorità**: 🟡 ALTA  
+**Timeline**: 2 Ottobre 2025  
 **Effort**: ~6 ore → 100% CLEAN
+
+
+

@@ -181,8 +181,17 @@ class GetAddressFromBingMapsAction
             throw InvalidLocationException::invalidData('Indirizzo mancante nella risposta');
         }
 
-        /* @var array<string, mixed> $location */
-        return $location;
+        /** @var array<string, mixed> $normalizedLocation */
+        $normalizedLocation = [];
+        foreach ($location as $key => $value) {
+            if (! \is_string($key)) {
+                continue;
+            }
+
+            $normalizedLocation[$key] = $value;
+        }
+
+        return $normalizedLocation;
     }
 
     /**
@@ -191,11 +200,6 @@ class GetAddressFromBingMapsAction
      * @param array<string, mixed> $location
      *
      * @throws InvalidLocationException
-     *
-     * @return array{0: float, 1: float}
-     */
-    /**
-     * @param array<string, mixed> $location
      *
      * @return array{0: float, 1: float}
      */

@@ -74,10 +74,10 @@ class RegistrationWidget extends XotBaseWidget
         $token = Arr::get($data, 'token');
 
         /** @var Model|null $user */
-        $user = $modelClass::firstWhere('email', $email);
+        $user = $this->model::firstWhere('email', $email);
         if (null === $user) {
-            $model = app($modelClass);
-            Assert::isInstanceOf($model, Model::class);
+            /** @var Model $model */
+            $model = app($this->model);
 
             return $model;
         }

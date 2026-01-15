@@ -12,7 +12,7 @@ use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\User;
-use Modules\SaluteOra\Models\User;
+use Modules\<nome progetto>\Models\User;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\User;
 
@@ -21,15 +21,15 @@ use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
 
 /** @var User $user */
 $user = User::factory()->create([...]);
@@ -62,38 +62,38 @@ $user = User::factory()->create([...]);
 1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce  → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
 1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
 2. **Configurabilità Persa**: La classe User è **dinamica** e configurabile
@@ -152,42 +152,42 @@ $user = $userClass::factory()->create($attributes);
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
         'model' => \Modules\<nome modulo>\Models\User::class, // CONFIGURABILE!
     ],
@@ -273,42 +273,42 @@ public function processUser(\Modules\<nome modulo>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\<nome modulo>\Models\User $user): void
-public function processUser(\Modules\<nome modulo>\Models\User $user): void
-public function processUser(\Modules\<nome modulo>\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\<nome modulo>\Models\User $user): void
-public function processUser(\Modules\<nome modulo>\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome modulo>\Models\User $user): void
+public function processUser(\Modules\<nome modulo>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
-public function processUser(\Modules\SaluteOra\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome modulo>\Models\User $user): void
+public function processUser(\Modules\<nome modulo>\Models\User $user): void
+public function processUser(\Modules\<nome modulo>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
 public function processUser(\Modules\<nome modulo>\Models\User $user): void
 ```
@@ -490,51 +490,51 @@ use Modules\<nome modulo>\Models\Patient;
 use Modules\<nome modulo>\Models\Patient;
 use Modules\<nome modulo>\Models\Doctor;
 use Modules\<nome modulo>\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\Patient;
 use Modules\<nome modulo>\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\Doctor;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\Patient;
@@ -544,33 +544,33 @@ use Modules\<nome modulo>\Models\Doctor;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\Patient;
 use Modules\<nome modulo>\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\Patient;
 use Modules\<nome modulo>\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
-use Modules\SaluteOra\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
+use Modules\<nome progetto>\Models\Doctor;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\Patient;
 use Modules\<nome modulo>\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\Patient;
 use Modules\<nome modulo>\Models\Doctor;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
 
 // ✅ CONSENTITO
 use Modules\Xot\Contracts\UserContract;
@@ -606,42 +606,42 @@ $user = \Modules\<nome modulo>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\<nome modulo>\Models\User::find($id);
-$user = \Modules\<nome modulo>\Models\User::find($id);
-$user = \Modules\<nome modulo>\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\<nome modulo>\Models\User::find($id);
-$user = \Modules\<nome modulo>\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome modulo>\Models\User::find($id);
+$user = \Modules\<nome modulo>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
-$user = \Modules\SaluteOra\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome modulo>\Models\User::find($id);
+$user = \Modules\<nome modulo>\Models\User::find($id);
+$user = \Modules\<nome modulo>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
 $user = \Modules\<nome modulo>\Models\User::find($id);
 
@@ -679,42 +679,42 @@ function updateUser(\Modules\<nome modulo>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\<nome modulo>\Models\User $user): void
-function updateUser(\Modules\<nome modulo>\Models\User $user): void
-function updateUser(\Modules\<nome modulo>\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\<nome modulo>\Models\User $user): void
-function updateUser(\Modules\<nome modulo>\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome modulo>\Models\User $user): void
+function updateUser(\Modules\<nome modulo>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
-function updateUser(\Modules\SaluteOra\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome modulo>\Models\User $user): void
+function updateUser(\Modules\<nome modulo>\Models\User $user): void
+function updateUser(\Modules\<nome modulo>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
 function updateUser(\Modules\<nome modulo>\Models\User $user): void
 
@@ -806,17 +806,17 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 - [IsTenant Trait](../../User/app/Models/Traits/IsTenant.php)
 
 ### **Documentazione Moduli**
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../<nome modulo>/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
 - [Cms Architecture](../../Cms/docs/architecture-xotdata-pattern.md)
 - [User Module Traits](../../User/docs/traits_complete_guide.md)
 - [Testing Strategy](../../<nome modulo>/docs/testing/real-data-testing-strategy.md)
@@ -824,17 +824,17 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 - [Cms Architecture](../../Cms/project_docs/architecture-xotdata-pattern.md)
 - [User Module Traits](../../User/project_docs/traits_complete_guide.md)
 - [User Module Traits](../../User/project_docs/traits_complete_guide.md)
-- [Testing Strategy](../../SaluteOra/project_docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/project_docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/project_docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/project_docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../<nome modulo>/docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../<nome modulo>/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../<nome modulo>/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
@@ -844,7 +844,7 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 - [User Module Traits](../../User/docs/traits_complete_guide.md)
 - [User Module Traits](../../User/docs/traits_complete_guide.md)
 - [Testing Strategy](../../<nome modulo>/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
 - [Cms Architecture](../../Cms/docs/architecture-xotdata-pattern.md)
@@ -852,7 +852,7 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 - [User Module Traits](../../User/docs/traits_complete_guide.md)
 - [User Module Traits](../../User/docs/traits_complete_guide.md)
 - [Testing Strategy](../../<nome modulo>/docs/testing/real-data-testing-strategy.md)
-- [Testing Strategy](../../SaluteOra/docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
 
@@ -920,7 +920,7 @@ Durante lo sviluppo è stata identificata una **violazione architetturale critic
 
 ```php
 // ❌ VIOLAZIONE CRITICA
-use Modules\SaluteOra\Models\User;
+use Modules\<nome progetto>\Models\User;
 
 /** @var User $user */
 $user = User::factory()->create([...]);
@@ -928,7 +928,7 @@ $user = User::factory()->create([...]);
 
 ### **Perché è un Errore Grave**
 
-1. **Accoppiamento Stretto**: Cms conosce SaluteOra → viola principio di disaccoppiamento
+1. **Accoppiamento Stretto**: Cms conosce <nome progetto> → viola principio di disaccoppiamento
 2. **Configurabilità Persa**: La classe User è **dinamica** e configurabile
 3. **Multi-tenancy Rotta**: XotData supporta tenant con User diverse
 4. **Pattern Ignorato**: XotData è il **core** dell'architettura Laraxot
@@ -960,7 +960,7 @@ $user = $userClass::factory()->create($attributes);
 'providers' => [
     'users' => [
         'driver' => 'eloquent',
-        'model' => \Modules\SaluteOra\Models\User::class, // CONFIGURABILE!
+        'model' => \Modules\<nome progetto>\Models\User::class, // CONFIGURABILE!
     ],
 ],
 ```
@@ -1018,7 +1018,7 @@ use Modules\SpecificModule\Models\User;
 public function processUser(UserContract $user): void
 
 // ❌ MAI implementazione specifica
-public function processUser(\Modules\SaluteOra\Models\User $user): void
+public function processUser(\Modules\<nome progetto>\Models\User $user): void
 ```
 
 ### **Regola 3: Factory tramite XotData**
@@ -1150,9 +1150,9 @@ class ChangeTypeCommand extends Command
 ### **1. Import Diretti**
 ```php
 // ❌ VIETATO
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\Models\Doctor;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\Models\Doctor;
 
 // ✅ CONSENTITO
 use Modules\Xot\Contracts\UserContract;
@@ -1162,7 +1162,7 @@ use Modules\Xot\Datas\XotData;
 ### **2. Hardcoding Classi**
 ```php
 // ❌ VIETATO
-$user = \Modules\SaluteOra\Models\User::find($id);
+$user = \Modules\<nome progetto>\Models\User::find($id);
 
 // ✅ CONSENTITO
 $userClass = XotData::make()->getUserClass();
@@ -1172,7 +1172,7 @@ $user = $userClass::find($id);
 ### **3. Type Hints Specifici**
 ```php
 // ❌ VIETATO
-function updateUser(\Modules\SaluteOra\Models\User $user): void
+function updateUser(\Modules\<nome progetto>\Models\User $user): void
 
 // ✅ CONSENTITO
 function updateUser(UserContract $user): void
@@ -1249,7 +1249,7 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 ### **Documentazione Moduli**
 - [Cms Architecture](../../Cms/project_docs/architecture-xotdata-pattern.md)
 - [User Module Traits](../../User/project_docs/traits_complete_guide.md)
-- [Testing Strategy](../../SaluteOra/project_docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../<nome progetto>/project_docs/testing/real-data-testing-strategy.md)
 
 ---
 

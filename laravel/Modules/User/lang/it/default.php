@@ -15,11 +15,11 @@ return [
     ],
     'two_factor' => [
         'heading' => 'Autenticazione a due fattori',
-        'description' => "Conferma l'accesso al tuo account inserendo il codice che trovi sulla tua app di autenticazione.",
+        'description' => 'Conferma l\'accesso al tuo account inserendo il codice che trovi sulla tua app di autenticazione.',
         'code_placeholder' => 'XXX-XXX',
         'recovery' => [
             'heading' => 'Autenticazione a due fattori',
-            'description' => "Conferma l'accesso al tuo account inserendo uno dei tuoi codice di emergenza.",
+            'description' => 'Conferma l\'accesso al tuo account inserendo uno dei tuoi codice di emergenza.',
         ],
         'recovery_code_placeholder' => 'abcdef-98765',
         'recovery_code_text' => 'Dispositivo smarrito?',
@@ -46,14 +46,14 @@ return [
     ],
     'verification' => [
         'title' => 'Verifica email',
-        'heading' => "Necessaria verifica dell'indirizzo Email",
+        'heading' => 'Necessaria verifica dell\'indirizzo Email',
         'submit' => [
             'label' => 'Log out',
         ],
         'notification_success' => 'Controlla la tua casella di posta per ulteriori istruzioni!',
         'notification_resend' => 'È stata inviata una email di verifica.',
         'before_proceeding' => 'Prima di procedere, controlla la tua casella di posta per verificare la tua email.',
-        'not_receive' => "Se non hai ricevuto l'email di verifica,",
+        'not_receive' => 'Se non hai ricevuto l\'email di verifica,',
         'request_another' => 'clicca qui per richiederla di nuovo',
     ],
     'profile' => [
@@ -79,7 +79,7 @@ return [
         ],
         '2fa' => [
             'title' => 'Autenticazione a due Fattori',
-            'description' => "Gestisci l'autenticazione a due fattori per il tuo account (raccomandato).",
+            'description' => 'Gestisci l\'autenticazione a due fattori per il tuo account (raccomandato).',
             'actions' => [
                 'enable' => 'Abilita',
                 'regenerate_codes' => 'Rigenera Codici',
@@ -90,18 +90,18 @@ return [
             'setup_key' => 'Chiave di Setup',
             'must_enable' => 'Per utilizzare questa applicazione devi abilitare la 2FA.',
             'not_enabled' => [
-                'title' => "Non hai abilitato l'autenticazione a due fattori.",
-                'description' => "Quando l'autenticazione a due fattori è attivata, durante l'autenticazione, ti verrà richiesto un token casuale. Potrai recuperare questo toke tramite l'app mobile di Google Authenticator",
+                'title' => 'Non hai abilitato l\'autenticazione a due fattori.',
+                'description' => 'Quando l\'autenticazione a due fattori è attivata, durante l\'autenticazione, ti verrà richiesto un token casuale. Potrai recuperare questo toke tramite l\'app mobile di Google Authenticator',
             ],
             'finish_enabling' => [
-                'title' => "Finisci di abilitare l'autenticazione a due fattori.",
-                'description' => "Per completare l'abilitazione del login con autenticazione a due fattori, scansiona il seguente QR code utilizzando una applicazione di autenticazione o inserisci la chiave insieme al codice OTP generato.",
+                'title' => 'Finisci di abilitare l\'autenticazione a due fattori.',
+                'description' => 'Per completare l\'abilitazione del login con autenticazione a due fattori, scansiona il seguente QR code utilizzando una applicazione di autenticazione o inserisci la chiave insieme al codice OTP generato.',
             ],
             'enabled' => [
                 'notify' => 'Autenticazione a due fattori attivata.',
-                'title' => "Hai abilitato l'autenticazione a due fattori!",
-                'description' => "L'autenticazione a due fattori adesso è abilitata. Questo permette di rendere più sicuro il tuo account.",
-                'store_codes' => "Salva questi codice di ripristino in un luogo sicuro. Possono essere utilizzati per ripristinare l'accesso al tuo account se il dispositivo che utilizzi viene smarrito",
+                'title' => 'Hai abilitato l\'autenticazione a due fattori!',
+                'description' => 'L\'autenticazione a due fattori adesso è abilitata. Questo permette di rendere più sicuro il tuo account.',
+                'store_codes' => 'Salva questi codice di ripristino in un luogo sicuro. Possono essere utilizzati per ripristinare l\'accesso al tuo account se il dispositivo che utilizzi viene smarrito',
             ],
             'disabling' => [
                 'notify' => 'L\'autenticazione a due fattori è stata disabilitata.',
@@ -116,7 +116,7 @@ return [
         ],
         'sanctum' => [
             'title' => 'Token API ',
-            'description' => "Gestisci i token API che permettono l'accesso a questa applicazione a servizi di terze parti. NOTA: il tuo token viene mostrato dopo la creazione. Se perdi il token, dovrai cancellarlo e crearlo nuovamente.",
+            'description' => 'Gestisci i token API che permettono l\'accesso a questa applicazione a servizi di terze parti. NOTA: il tuo token viene mostrato dopo la creazione. Se perdi il token, dovrai cancellarlo e crearlo nuovamente.',
             'create' => [
                 'notify' => 'Token creato correttamente!',
                 'message' => 'Il tuo token viene mostrato solo una volta. Se perdi il token, dovrai cancellarlo e crearne uno nuovo.',
@@ -155,4 +155,8 @@ return [
     ],
     'or' => 'O',
     'cancel' => 'Annulla',
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

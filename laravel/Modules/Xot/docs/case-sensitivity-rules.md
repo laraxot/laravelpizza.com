@@ -92,7 +92,7 @@ I seguenti file sono stati eliminati perché violavano le regole:
 Per verificare che non ci siano duplicati case-insensitive nel modulo:
 
 ```bash
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel/Modules/Xot
+cd Modules/Xot
 python3 << 'EOF'
 import os
 from collections import defaultdict

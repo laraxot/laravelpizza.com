@@ -12,7 +12,7 @@ beforeEach(function () {
         config(['app.locale' => 'en']);
     }
 
-    if (!View::exists('pub_theme::components.blocks.navigation.category-tabs')) {
+    if (! View::exists('pub_theme::components.blocks.navigation.category-tabs')) {
         $this->markTestSkipped('pub_theme category-tabs component view is not available in this install.');
     }
 });
@@ -27,7 +27,7 @@ test('category tabs component renders without errors', function () {
 
     try {
         $view = View::make('pub_theme::components.blocks.navigation.category-tabs', $componentData);
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view cannot be resolved in this install.');
     }
 
@@ -35,7 +35,7 @@ test('category tabs component renders without errors', function () {
 
     try {
         $html = $view->render();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view cannot be rendered in this install (missing includes/components).');
     }
     expect($html)->toContain('/markets');
@@ -49,7 +49,7 @@ test('category tabs shows all expected categories', function () {
             'show_counts' => true,
         ]);
         $html = $view->render();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view not available/renderable in this install.');
     }
 
@@ -69,7 +69,7 @@ test('category tabs shows counts when enabled', function () {
             'show_counts' => true,
         ]);
         $html = $view->render();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view not available/renderable in this install.');
     }
 
@@ -89,7 +89,7 @@ test('category tabs hides counts when disabled', function () {
             'show_counts' => false,
         ]);
         $html = $view->render();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view not available/renderable in this install.');
     }
 
@@ -108,7 +108,7 @@ test('category tabs has mobile scrollable styling', function () {
             'mobile_scrollable' => true,
         ]);
         $html = $view->render();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view not available/renderable in this install.');
     }
 
@@ -120,7 +120,7 @@ test('category tabs has proper responsive classes', function () {
     try {
         $view = View::make('pub_theme::components.blocks.navigation.category-tabs');
         $html = $view->render();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view not available/renderable in this install.');
     }
 
@@ -134,7 +134,7 @@ test('category tabs generates correct urls', function () {
             'base_url' => '/markets',
         ]);
         $html = $view->render();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view not available/renderable in this install.');
     }
 
@@ -153,7 +153,7 @@ test('category tabs highlights active category', function () {
             'active_category' => 'politics',
         ]);
         $html = $view->render();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view not available/renderable in this install.');
     }
 
@@ -165,7 +165,7 @@ test('category tabs has proper dark mode classes', function () {
     try {
         $view = View::make('pub_theme::components.blocks.navigation.category-tabs');
         $html = $view->render();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view not available/renderable in this install.');
     }
 
@@ -179,7 +179,7 @@ test('category tabs has sticky positioning', function () {
     try {
         $view = View::make('pub_theme::components.blocks.navigation.category-tabs');
         $html = $view->render();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view not available/renderable in this install.');
     }
 
@@ -191,7 +191,7 @@ test('category tabs has proper category icons', function () {
     try {
         $view = View::make('pub_theme::components.blocks.navigation.category-tabs');
         $html = $view->render();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         $this->markTestSkipped('pub_theme category-tabs view not available/renderable in this install.');
     }
 

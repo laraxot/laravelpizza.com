@@ -111,141 +111,141 @@ protected function getProjectNamespace(): string
 ### Validazione
 ```bash
 # Test PHPStan
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
+cd laravel
 ./vendor/bin/phpstan analyze Modules/Notify --level=9
 
 # Test funzionalità

@@ -41,4 +41,6 @@ return [
         'sort' => 10,
         'icon' => 'heroicon-o-photo',
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

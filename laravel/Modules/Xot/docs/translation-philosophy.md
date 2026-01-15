@@ -111,6 +111,12 @@ find Modules -name "*.php" -path "*/lang/de/*" | sed 's|.*/lang/de/||' | sort
 grep -A 10 "'navigation' =>" Modules/*/lang/it/*.php | grep -E "(label|group|icon|sort)"
 ```
 
+### Audit Gennaio 2026
+**Data**: 2026-01-22
+**Modulo**: User
+**File corretti**: 11 file con traduzioni `.navigation` sistemate
+**Documentazione**: [User/docs/navigation-translations-fixes-january-2026.md](../../User/docs/navigation-translations-fixes-january-2026.md)
+
 ### Automated Fixes
 When you find `.navigation` placeholders:
 1. **Study existing patterns** from well-structured modules (Activity, Geo, etc.)

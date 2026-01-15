@@ -171,4 +171,9 @@ return [
             'confirm' => 'Sei sicuro di voler uscire?',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
+    'actions' => [],
 ];

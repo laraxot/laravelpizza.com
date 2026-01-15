@@ -34,7 +34,7 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 - `txt.php`: `'title_required' => 'The title is required'`
 - `edit_section.php`: `'required' => 'This field is required'`
 
-#### ✅ Modulo SaluteOra
+#### ✅ Modulo <nome progetto>
 **File Tedeschi (DE):**
 - `doctor_availability_calendar.php`: `'required' => 'Dieses Feld ist erforderlich'`
 - `appointment.php`: `'required' => 'Das Feld :attribute ist erforderlich'`
@@ -75,7 +75,7 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 - `create.php`: `'required' => 'This field is required'`
 - `edit_section.php`: `'required' => 'This field is required'`
 
-#### ✅ Modulo SaluteMo
+#### ✅ Modulo <nome progetto>
 **File Tedeschi (DE):**
 - `user.php`: `'required' => 'Das Feld :attribute ist erforderlich'`
 - `doctor.php`: `'required' => 'Das Feld :attribute ist erforderlich'`
@@ -180,12 +180,12 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 
 ### Moduli con Documentazione Aggiornata
 1. **Lang Module**: `laravel/Modules/Lang/docs/translation_errors_correction_2025.md`
-2. **SaluteOra Module**: `laravel/Modules/SaluteOra/docs/translation_refactor_summary_2025.md`
+2. **<nome progetto> Module**: `laravel/Modules/<nome progetto>/docs/translation_refactor_summary_2025.md`
 
 ### Collegamenti Bidirezionali
 - [Root Docs: Translation Standards](../../docs/translation_standards.md)
 - [Lang Module: Translation Best Practices](translation_best_practices.md)
-- [SaluteOra Module: Translation Guidelines](../SaluteOra/docs/translation_guidelines.md)
+- [<nome progetto> Module: Translation Guidelines](../<nome progetto>/docs/translation_guidelines.md)
 
 ## Riepilogo Statistiche
 
@@ -197,10 +197,10 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 ### Moduli Interessati
 1. Lang Module ✅
 2. DbForge Module ✅
-3. SaluteOra Module ✅
+3. <nome progetto> Module ✅
 4. Notify Module ✅
 5. FormBuilder Module ✅
-6. SaluteMo Module ✅
+6. <nome progetto> Module ✅
 7. Cms Module ✅
 8. Xot Module ✅
 9. User Module ✅
@@ -286,7 +286,7 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 - `txt.php`: `'title_required' => 'The title is required'`
 - `edit_section.php`: `'required' => 'This field is required'`
 
-#### ✅ Modulo SaluteOra
+#### ✅ Modulo <nome progetto>
 **File Tedeschi (DE):**
 - `doctor_availability_calendar.php`: `'required' => 'Dieses Feld ist erforderlich'`
 - `appointment.php`: `'required' => 'Das Feld :attribute ist erforderlich'`
@@ -327,7 +327,7 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 - `create.php`: `'required' => 'This field is required'`
 - `edit_section.php`: `'required' => 'This field is required'`
 
-#### ✅ Modulo SaluteMo
+#### ✅ Modulo <nome progetto>
 **File Tedeschi (DE):**
 - `user.php`: `'required' => 'Das Feld :attribute ist erforderlich'`
 - `doctor.php`: `'required' => 'Das Feld :attribute ist erforderlich'`
@@ -432,12 +432,12 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 
 ### Moduli con Documentazione Aggiornata
 1. **Lang Module**: `laravel/Modules/Lang/docs/translation_errors_correction_2025.md`
-2. **SaluteOra Module**: `laravel/Modules/SaluteOra/docs/translation_refactor_summary_2025.md`
+2. **<nome progetto> Module**: `laravel/Modules/<nome progetto>/docs/translation_refactor_summary_2025.md`
 
 ### Collegamenti Bidirezionali
 - [Root Docs: Translation Standards](../../docs/translation_standards.md)
 - [Lang Module: Translation Best Practices](translation_best_practices.md)
-- [SaluteOra Module: Translation Guidelines](../SaluteOra/docs/translation_guidelines.md)
+- [<nome progetto> Module: Translation Guidelines](../<nome progetto>/docs/translation_guidelines.md)
 
 ## Riepilogo Statistiche
 
@@ -449,10 +449,10 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 ### Moduli Interessati
 1. Lang Module ✅
 2. DbForge Module ✅
-3. SaluteOra Module ✅
+3. <nome progetto> Module ✅
 4. Notify Module ✅
 5. FormBuilder Module ✅
-6. SaluteMo Module ✅
+6. <nome progetto> Module ✅
 7. Cms Module ✅
 8. Xot Module ✅
 9. User Module ✅

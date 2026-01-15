@@ -7,10 +7,7 @@ return [
         'name' => 'Personal Access Client',
         'plural' => 'Personal Access Clients',
         'label' => 'Personal Access Client',
-        'group' => [
-            'name' => 'API',
-            'description' => 'Gestione OAuth Personal Access Clients',
-        ],
+        'group' => '',
         'sort' => 6,
         'icon' => 'heroicon-o-key',
     ],
@@ -50,19 +47,14 @@ return [
             'error' => 'Errore durante l\'eliminazione del Personal Access Client',
             'confirmation' => 'Sei sicuro di voler eliminare questo Personal Access Client?',
         ],
+        'openColumnManager' => [
+            'tooltip' => 'openColumnManager',
+        ],
         'logout' => [
             'tooltip' => 'logout',
             'icon' => 'logout',
-            'label' => 'logout',
-        ],
-        'profile' => [
-            'tooltip' => 'profile',
-            'icon' => 'profile',
-            'label' => 'profile',
-        ],
-        'reorderRecords' => [
-            'tooltip' => 'reorderRecords',
-            'icon' => 'reorderRecords',
         ],
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

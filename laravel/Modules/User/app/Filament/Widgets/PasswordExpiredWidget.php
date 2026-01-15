@@ -45,7 +45,7 @@ class PasswordExpiredWidget extends XotBaseWidget
     public ?array $data = [];
 
     /**
-     * @var view-string
+     * The view for this widget.
      */
     protected string $view = 'user::filament.widgets.password-expired';
 

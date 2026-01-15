@@ -17,4 +17,8 @@ return [
         'sort' => 31,
         'icon' => 'user-user-permission',
     ],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
+    'actions' => [],
 ];

@@ -281,4 +281,6 @@ return [
             'step' => 'Passaggio completato correttamente',
         ],
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

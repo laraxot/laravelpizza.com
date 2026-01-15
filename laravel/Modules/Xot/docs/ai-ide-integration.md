@@ -43,7 +43,7 @@ The primary instruction file for Claude Code contains comprehensive Xot module g
 - Type Safety Rules
 - Magic Properties Warning
 
-**Location**: `/var/www/_bases/base_quaeris_fila4_mono/CLAUDE.md`
+**Location**: `CLAUDE.md`
 
 ### 2. Cursor Rules (`.cursor/rules/`)
 

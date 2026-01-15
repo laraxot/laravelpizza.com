@@ -226,9 +226,7 @@ trait IsProfileTrait
     public function mobileDevices(): BelongsToMany
     {
         // @phpstan-ignore return.type
-        return $this->belongsToMany(Device::class, 'mobile_device_users', 'profile_id', 'device_id')
-            ->withPivot('token')
-            ->withTimestamps();
+        return $this->belongsToManyX(Device::class);
     }
 
     /**

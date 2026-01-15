@@ -281,7 +281,7 @@ abstract class BaseScheda extends BaseModel
 ### Fase 1: Audit Completo
 
 ```bash
-cd /var/www/html/ptvx/laravel
+cd laravel
 grep -n "\$this->save()" Modules/Sigma/app/Models/Traits/SchedaTrait.php
 ```
 

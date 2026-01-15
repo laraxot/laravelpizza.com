@@ -239,7 +239,7 @@ Il modulo include test per:
 
 **Eseguire i test**:
 ```bash
-cd /var/www/html/ptvx/laravel
+cd laravel
 php artisan test --filter=ListLogActivitiesAction
 ```
 

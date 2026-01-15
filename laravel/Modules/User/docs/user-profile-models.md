@@ -549,7 +549,7 @@ class UserRepository
                    'first_name' => 'New',
                    'last_name' => 'Name',
                ]);
-
+           
            $response->assertOk();
            $this->assertEquals('New', $user->profile->fresh()->first_name);
        }
@@ -898,7 +898,7 @@ class UserRepository
        {
            return DB::transaction(function () use ($userId, $userData, $profileData) {
                $user = User::findOrFail($userId);
-
+               
                DB::transaction(function () use ($user, $userData) {
                    $user->update($userData);
                });
@@ -921,7 +921,7 @@ class UserRepository
        {
            return DB::transaction(function () use ($userId, $data, $attempts) {
                $profile = Profile::where('user_id', $userId)->firstOrFail();
-
+               
                for ($i = 0; $i < $attempts; $i++) {
                    try {
                        $profile->update($data);

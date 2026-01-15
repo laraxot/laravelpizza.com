@@ -7,7 +7,7 @@
 Durante operazioni di scrittura su file come `lang_service.php` in `Modules/Lang/lang/it/`, può comparire l'errore:
 
 ```
-file_put_contents(/var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php): Failed to open stream: Permission denied
+file_put_contents(Modules/Lang/lang/it/lang_service.php): Failed to open stream: Permission denied
 ```
 
 ## Causa
@@ -19,11 +19,11 @@ file_put_contents(/var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.p
 
 1. **Impostare la proprietà corretta:**
    ```bash
-   sudo chown www-data:www-data /var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php
+   sudo chown www-data:www-data Modules/Lang/lang/it/lang_service.php
    ```
 2. **Impostare permessi sicuri e scrivibili:**
    ```bash
-   sudo chmod 664 /var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php
+   sudo chmod 664 Modules/Lang/lang/it/lang_service.php
    ```
    - `664` = scrittura per owner e gruppo, lettura per tutti.
 
@@ -31,8 +31,8 @@ file_put_contents(/var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.p
    - Tutti i file di lingua devono essere di proprietà `www-data:www-data` e con permessi `664`.
    - Se si lavora in team, impostare anche la cartella `lang/it` con:
      ```bash
-     sudo chown -R www-data:www-data /var/www/html/ptvx/laravel/Modules/Lang/lang/it
-     sudo find /var/www/html/ptvx/laravel/Modules/Lang/lang/it -type f -exec chmod 664 {} \;
+     sudo chown -R www-data:www-data Modules/Lang/lang/it
+     sudo find Modules/Lang/lang/it -type f -exec chmod 664 {} \;
      ```
    - Evitare permessi `777` per motivi di sicurezza.
 
@@ -47,8 +47,8 @@ file_put_contents(/var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.p
 Supponiamo che il file sia stato creato da un utente locale (es. `msottana`). Per correggere:
 
 ```bash
-sudo chown www-data:www-data /var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php
-sudo chmod 664 /var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php
+sudo chown www-data:www-data Modules/Lang/lang/it/lang_service.php
+sudo chmod 664 Modules/Lang/lang/it/lang_service.php
 ```
 
 ## Collegamenti
@@ -67,7 +67,7 @@ sudo chmod 664 /var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php
 Durante operazioni di scrittura su file come `lang_service.php` in `Modules/Lang/lang/it/`, può comparire l'errore:
 
 ```
-file_put_contents(/var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php): Failed to open stream: Permission denied
+file_put_contents(Modules/Lang/lang/it/lang_service.php): Failed to open stream: Permission denied
 ```
 
 ## Causa
@@ -79,11 +79,11 @@ file_put_contents(/var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.p
 
 1. **Impostare la proprietà corretta:**
    ```bash
-   sudo chown www-data:www-data /var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php
+   sudo chown www-data:www-data Modules/Lang/lang/it/lang_service.php
    ```
 2. **Impostare permessi sicuri e scrivibili:**
    ```bash
-   sudo chmod 664 /var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php
+   sudo chmod 664 Modules/Lang/lang/it/lang_service.php
    ```
    - `664` = scrittura per owner e gruppo, lettura per tutti.
 
@@ -91,8 +91,8 @@ file_put_contents(/var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.p
    - Tutti i file di lingua devono essere di proprietà `www-data:www-data` e con permessi `664`.
    - Se si lavora in team, impostare anche la cartella `lang/it` con:
      ```bash
-     sudo chown -R www-data:www-data /var/www/html/ptvx/laravel/Modules/Lang/lang/it
-     sudo find /var/www/html/ptvx/laravel/Modules/Lang/lang/it -type f -exec chmod 664 {} \;
+     sudo chown -R www-data:www-data Modules/Lang/lang/it
+     sudo find Modules/Lang/lang/it -type f -exec chmod 664 {} \;
      ```
    - Evitare permessi `777` per motivi di sicurezza.
 
@@ -107,8 +107,8 @@ file_put_contents(/var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.p
 Supponiamo che il file sia stato creato da un utente locale (es. `msottana`). Per correggere:
 
 ```bash
-sudo chown www-data:www-data /var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php
-sudo chmod 664 /var/www/html/ptvx/laravel/Modules/Lang/lang/it/lang_service.php
+sudo chown www-data:www-data Modules/Lang/lang/it/lang_service.php
+sudo chmod 664 Modules/Lang/lang/it/lang_service.php
 ```
 
 ## Collegamenti

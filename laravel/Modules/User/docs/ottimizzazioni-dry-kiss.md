@@ -200,7 +200,7 @@ class User extends Authenticatable
                     ->withTimestamps()
                     ->withPivot('role');
     }
-
+    
     public function belongsToTeam($team)
     {
         // Logica duplicata per ogni modello
@@ -218,13 +218,13 @@ trait HasTeams
                     ->withTimestamps()
                     ->withPivot('role');
     }
-
+    
     public function belongsToTeam(Team|int $team): bool
     {
         $teamId = $team instanceof Team ? $team->id : $team;
         return $this->teams()->where('team_id', $teamId)->exists();
     }
-
+    
     public function hasTeamRole(Team|int $team, string $role): bool
     {
         return $this->teams()
@@ -248,7 +248,7 @@ class UserFactory extends Factory
             // Configurazione duplicata
         ];
     }
-
+    
     public function admin(): static
     {
         // Logica duplicata
@@ -266,7 +266,7 @@ class UserFactory extends Factory
         'email_verified_at' => null,
         'is_active' => true,
     ];
-
+    
     public function definition(): array
     {
         return array_merge([
@@ -275,7 +275,7 @@ class UserFactory extends Factory
             'password' => Hash::make('password'),
         ], $this->defaultConfig);
     }
-
+    
     public function admin(): static
     {
         return $this->state(fn (array $attributes) => [
@@ -283,7 +283,7 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
         ]);
     }
-
+    
     public function withProfile(): static
     {
         return $this->afterCreating(function (User $user) {
@@ -307,7 +307,7 @@ class LogoutController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-
+        
         return redirect('/login');
     }
 }
@@ -318,26 +318,26 @@ class LogoutService
     public function logoutUser(Request $request): RedirectResponse
     {
         $user = $request->user();
-
+        
         // Logout centralizzato
         $this->performLogout($request);
-
+        
         // Eventi centralizzati
         event(new UserLoggedOut($user));
-
+        
         // Notifiche centralizzate
         $this->notifyLogout($user);
-
+        
         return redirect()->route('login');
     }
-
+    
     protected function performLogout(Request $request): void
     {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
     }
-
+    
     protected function notifyLogout(User $user): void
     {
         // Notifica centralizzata
@@ -381,12 +381,12 @@ class User extends Authenticatable
     {
         $query->where('is_active', true);
     }
-
+    
     public function scopeVerified($query): void
     {
         $query->whereNotNull('email_verified_at');
     }
-
+    
     public function scopeActiveAndVerified($query): void
     {
         $query->active()->verified();
@@ -430,14 +430,14 @@ class UserFormComponents
             ->required()
             ->maxLength(255);
     }
-
+    
     public static function email(): EmailInput
     {
         return EmailInput::make('email')
             ->required()
             ->unique(ignoreRecord: true);
     }
-
+    
     public static function password(): TextInput
     {
         return TextInput::make('password')

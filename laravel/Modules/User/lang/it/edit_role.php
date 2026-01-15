@@ -17,4 +17,8 @@ return [
             'label' => 'save',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
 ];

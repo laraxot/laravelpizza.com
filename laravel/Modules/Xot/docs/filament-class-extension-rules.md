@@ -128,6 +128,167 @@ Non implementare questi metodi se restituiscono solo valori standard:
 - `getTableActions()` - se contiene solo azioni standard
 - `getTableBulkActions()` - se contiene solo azioni standard
 
+### Proprietà e Metodi Gestiti da LangServiceProvider
+
+Chi estende `XotBaseResource` **NON deve avere** le seguenti proprietà e metodi perché vengono gestiti automaticamente dal `LangServiceProvider` tramite i file di traduzione:
+
+**Proprietà NON consentite**:
+```php
+// ❌ SBAGLIATO
+class UserResource extends XotBaseResource
+{
+    protected static ?string $recordTitleAttribute;
+    protected static string|\BackedEnum|null $navigationIcon;
+    protected static string|\UnitEnum|null $navigationGroup;
+    protected static ?string $modelLabel;
+    protected static ?string $pluralModelLabel;
+}
+
+// ✅ CORRETTO
+class UserResource extends XotBaseResource
+{
+    // Queste proprietà sono gestite automaticamente da LangServiceProvider
+    // tramite i file di traduzione in Modules/{ModuleName}/lang/{locale}/{resource}.php
+}
+```
+
+**⚠️ REGOLA CRITICA**: Chi estende `XotBaseResource` **NON deve avere**:
+
+- `protected static ?string $recordTitleAttribute` 
+- `protected static string|\BackedEnum|null $navigationIcon`
+- `protected static string|\UnitEnum|null $navigationGroup` 
+- `protected static ?string $modelLabel` 
+- `protected static ?string $pluralModelLabel`
+- `public static function getNavigationLabel(): string`
+- `public static function getPluralLabel(): string`
+- `public static function getModelLabel(): string`
+
+**Perché?** Perché vengono gestiti automaticamente dai file delle traduzioni tramite `LangServiceProvider`. Se li trovi, devi:
+
+1. **Controllare le traduzioni collegate**: Verifica che esistano i file di traduzione in `Modules/{ModuleName}/lang/{locale}/{resource}.php`
+2. **Rimuoverli**: Elimina le proprietà e i metodi dalla Resource
+3. **Verificare le traduzioni**: Assicurati che i file di traduzione contengano tutte le chiavi necessarie
+
+**Metodi NON consentiti**:
+```php
+// ❌ SBAGLIATO
+class UserResource extends XotBaseResource
+{
+    public static function getNavigationLabel(): string
+    {
+        return 'Utenti';
+    }
+
+    public static function getPluralLabel(): string
+    {
+        return 'Utenti';
+    }
+
+    public static function getModelLabel(): string
+    {
+        return 'Utente';
+    }
+}
+
+// ✅ CORRETTO
+class UserResource extends XotBaseResource
+{
+    // Questi metodi sono gestiti automaticamente da LangServiceProvider
+    // tramite i file di traduzione
+}
+```
+
+**⚠️ IMPORTANTE**: Se trovi queste proprietà o metodi in una Resource:
+
+1. **Verifica i file di traduzione**: Controlla che esistano le traduzioni corrispondenti in `Modules/{ModuleName}/lang/{locale}/{resource}.php`
+2. **Rimuovi proprietà/metodi**: Elimina le proprietà e i metodi dalla Resource
+3. **Verifica funzionamento**: Assicurati che le traduzioni vengano caricate correttamente dal `LangServiceProvider`
+
+**⚠️ REGOLA CRITICA**: Chi estende `XotBaseResource` **NON deve avere**:
+
+- `protected static ?string $recordTitleAttribute` 
+- `protected static string|\BackedEnum|null $navigationIcon`
+- `protected static string|\UnitEnum|null $navigationGroup` 
+- `protected static ?string $modelLabel` 
+- `protected static ?string $pluralModelLabel`
+- `public static function getNavigationLabel(): string`
+- `public static function getPluralLabel(): string`
+- `public static function getModelLabel(): string`
+
+**Perché?** Perché vengono gestiti automaticamente dai file delle traduzioni tramite `LangServiceProvider`. Se li trovi, devi:
+
+1. **Controllare le traduzioni collegate**: Verifica che esistano i file di traduzione in `Modules/{ModuleName}/lang/{locale}/{resource}.php`
+2. **Rimuoverli**: Elimina le proprietà e i metodi dalla Resource
+3. **Verificare le traduzioni**: Assicurati che i file di traduzione contengano tutte le chiavi necessarie (`navigation`, `label`, `plural_label`, `fields`, `actions`)
+
+**Struttura file traduzione per Resource**:
+
+⚠️ **REGOLA OBBLIGATORIA**: I file di traduzione devono **SEMPRE** contenere le seguenti chiavi:
+
+```php
+// Modules/User/lang/it/user.php
+return [
+    // ✅ OBBLIGATORIO - Gestisce getNavigationLabel(), $navigationIcon, $navigationGroup
+    'navigation' => [
+        'label' => 'Utenti',           // getNavigationLabel()
+        'icon' => 'heroicon-o-users',  // $navigationIcon
+        'group' => 'Gestione',         // $navigationGroup
+    ],
+    
+    // ✅ OBBLIGATORIO - Gestisce getModelLabel()
+    'label' => 'Utente',               // getModelLabel()
+    
+    // ✅ OBBLIGATORIO - Gestisce getPluralLabel()
+    'plural_label' => 'Utenti',       // getPluralLabel()
+    
+    // ✅ OBBLIGATORIO - Gestisce $recordTitleAttribute e traduzioni dei campi
+    'fields' => [
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci nome',
+            'tooltip' => 'Il nome dell\'utente',
+        ],
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci email',
+        ],
+        // Altri campi...
+    ],
+    
+    // ✅ OBBLIGATORIO - Gestisce traduzioni delle azioni
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Utente',
+            'modal_heading' => 'Crea nuovo utente',
+        ],
+        'edit' => [
+            'label' => 'Modifica',
+        ],
+        'delete' => [
+            'label' => 'Elimina',
+            'modal_heading' => 'Elimina utente',
+        ],
+        // Altre azioni...
+    ],
+    
+    // Opzionale - Gestisce $recordTitleAttribute (se diverso da 'name')
+    'record' => [
+        'title_attribute' => 'name',  // $recordTitleAttribute
+    ],
+];
+```
+
+**Struttura minima obbligatoria**:
+```php
+return [
+    'navigation' => [...],    // ✅ OBBLIGATORIO
+    'label' => '...',         // ✅ OBBLIGATORIO
+    'plural_label' => '...',  // ✅ OBBLIGATORIO
+    'fields' => [...],        // ✅ OBBLIGATORIO
+    'actions' => [...],       // ✅ OBBLIGATORIO
+];
+```
+
 ---
 
 ## ⚠️ Regole Specifiche per XotBasePage
@@ -310,21 +471,97 @@ TextInput::make('name')
 // Le traduzioni sono gestite automaticamente da LangServiceProvider
 ```
 
-**Struttura file traduzione**:
+### Struttura File Traduzione per Resources
+
+⚠️ **REGOLA OBBLIGATORIA**: Tutti i file di traduzione per Resources devono contenere **SEMPRE** queste 5 chiavi:
+
+1. **`navigation`** - per navigazione, icona e gruppo
+2. **`label`** - per etichetta singolare del modello
+3. **`plural_label`** - per etichetta plurale del modello
+4. **`fields`** - per traduzioni dei campi del form
+5. **`actions`** - per traduzioni delle azioni
+
+**Percorso file traduzione**:
 ```
 Modules/{ModuleName}/lang/{locale}/{resource}.php
+```
 
-// Esempio: Modules/User/lang/it/user.php
+**Esempio completo**:
+```php
+// Modules/User/lang/it/user.php
 return [
+    // ✅ OBBLIGATORIO - Gestisce getNavigationLabel(), $navigationIcon, $navigationGroup
+    'navigation' => [
+        'label' => 'Utenti',           // getNavigationLabel()
+        'icon' => 'heroicon-o-users',  // $navigationIcon
+        'group' => 'Gestione',         // $navigationGroup
+    ],
+    
+    // ✅ OBBLIGATORIO - Gestisce getModelLabel()
+    'label' => 'Utente',               // getModelLabel()
+    
+    // ✅ OBBLIGATORIO - Gestisce getPluralLabel()
+    'plural_label' => 'Utenti',       // getPluralLabel()
+    
+    // ✅ OBBLIGATORIO - Gestisce traduzioni dei campi
     'fields' => [
         'name' => [
             'label' => 'Nome',
             'placeholder' => 'Inserisci nome',
             'tooltip' => 'Il nome dell\'utente',
         ],
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'Inserisci email',
+        ],
+        // Altri campi...
+    ],
+    
+    // ✅ OBBLIGATORIO - Gestisce traduzioni delle azioni
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Utente',
+            'modal_heading' => 'Crea nuovo utente',
+        ],
+        'edit' => [
+            'label' => 'Modifica',
+        ],
+        'delete' => [
+            'label' => 'Elimina',
+            'modal_heading' => 'Elimina utente',
+        ],
+        // Altre azioni...
+    ],
+    
+    // Opzionale - Gestisce $recordTitleAttribute (se diverso da 'name')
+    'record' => [
+        'title_attribute' => 'name',  // $recordTitleAttribute
     ],
 ];
 ```
+
+**Struttura minima obbligatoria**:
+```php
+return [
+    'navigation' => [...],    // ✅ OBBLIGATORIO
+    'label' => '...',         // ✅ OBBLIGATORIO
+    'plural_label' => '...',  // ✅ OBBLIGATORIO
+    'fields' => [...],        // ✅ OBBLIGATORIO
+    'actions' => [...],       // ✅ OBBLIGATORIO
+];
+```
+
+### Perché queste chiavi sono obbligatorie
+
+Queste chiavi sono gestite automaticamente dal `LangServiceProvider` e sostituiscono le proprietà e metodi che **NON devono** essere presenti nelle Resources:
+
+- `navigation` → sostituisce `$navigationIcon`, `$navigationGroup`, `getNavigationLabel()`
+- `label` → sostituisce `$modelLabel`, `getModelLabel()`
+- `plural_label` → sostituisce `$pluralModelLabel`, `getPluralLabel()`
+- `fields` → sostituisce `->label()`, `->placeholder()`, `->tooltip()` nei componenti form
+- `actions` → sostituisce le traduzioni hardcoded nelle azioni
+
+**Vedi anche**: [Proprietà e Metodi Gestiti da LangServiceProvider](#proprietà-e-metodi-gestiti-da-langserviceprovider)
 
 ---
 
@@ -395,6 +632,17 @@ class UserResource extends XotBaseResource
     // getTableColumns() NON necessario - gestito da XotBaseResource
     // getPages() NON necessario se standard
     // getTableActions() NON necessario se standard
+    
+    // ❌ NON usare queste proprietà/metodi - gestiti da LangServiceProvider:
+    // protected static ?string $recordTitleAttribute;
+    // protected static string|\BackedEnum|null $navigationIcon;
+    // protected static string|\UnitEnum|null $navigationGroup;
+    // protected static ?string $modelLabel;
+    // protected static ?string $pluralModelLabel;
+    // public static function getNavigationLabel(): string
+    // public static function getPluralLabel(): string
+    // public static function getModelLabel(): string
+    // Usa invece i file di traduzione in Modules/User/lang/{locale}/user.php
 }
 ```
 
@@ -568,6 +816,8 @@ Prima di creare una nuova classe Filament:
 - [ ] Ho migrato da `protected $casts` a `casts()`?
 - [ ] I miei metodi restituiscono array associativi quando richiesto?
 - [ ] Ho evitato l'uso di `property_exists()` sui modelli Eloquent?
+- [ ] Se estendo XotBaseResource, ho rimosso proprietà/metodi gestiti da LangServiceProvider? (`$recordTitleAttribute`, `$navigationIcon`, `$navigationGroup`, `$modelLabel`, `$pluralModelLabel`, `getNavigationLabel()`, `getPluralLabel()`, `getModelLabel()`)
+- [ ] Il file di traduzione contiene tutte le chiavi obbligatorie? (`navigation`, `label`, `plural_label`, `fields`, `actions`)
 
 ---
 
@@ -624,6 +874,7 @@ Quando finisci una modifica devi sempre controllare con:
 12. **Controlla sempre** con PHPStan livello 10, PHPMD, PHP Insights
 13. **Git commit e push** dopo ogni modulo completato
 14. **DRY + KISS**: Sempre applicare - non duplicare, non complicare
+15. **XotBaseResource**: Non usare proprietà/metodi gestiti da LangServiceProvider (`$recordTitleAttribute`, `$navigationIcon`, `$navigationGroup`, `$modelLabel`, `$pluralModelLabel`, `getNavigationLabel()`, `getPluralLabel()`, `getModelLabel()`) - usa sempre i file di traduzione con le 5 chiavi obbligatorie: `navigation`, `label`, `plural_label`, `fields`, `actions`
 
 ---
 

@@ -13,7 +13,7 @@ I was about to remove (or considered removing) the `fields` key from a translati
 
 **File in Question**:
 ```
-/var/www/_bases/base_laravelpizza/laravel/Modules/User/lang/fr/authentication_log.php
+Modules/User/lang/fr/authentication_log.php
 ```
 
 **What I Almost Did**: Remove the `fields` nesting level, flattening the structure.

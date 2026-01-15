@@ -12,13 +12,12 @@ use Modules\Gdpr\Filament\Resources\ConsentResource\Pages\EditConsent;
 use Modules\Gdpr\Filament\Resources\ConsentResource\Pages\ListConsents;
 use Modules\Gdpr\Models\Consent;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Override;
 
 class ConsentResource extends XotBaseResource
 {
     protected static ?string $model = Consent::class;
 
-    #[Override]
+    #[\Override]
     public static function getFormSchema(): array
     {
         return [
@@ -46,7 +45,7 @@ class ConsentResource extends XotBaseResource
         ];
     }
 
-    #[Override]
+    #[\Override]
     public static function getPages(): array
     {
         return [

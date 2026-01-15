@@ -61,6 +61,11 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
         return [];
     }
 
+    /**
+     * Get the header actions.
+     *
+     * @return array<string, \Filament\Actions\Action|\Filament\Actions\ActionGroup>
+     */
     protected function getHeaderActions(): array
     {
         return [

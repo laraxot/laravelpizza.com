@@ -16,14 +16,14 @@
 Questo è lo standard stabilito nel modulo Notify per tutti i DTOs:
 
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/NetfunSmsData.php
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/NetfunSmsRequestData.php
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/NetfunSmsResponseData.php
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/SmsData.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsData.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsRequestData.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsResponseData.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/SmsData.php
+Modules/Notify/app/Datas/NetfunSmsData.php
+Modules/Notify/app/Datas/NetfunSmsRequestData.php
+Modules/Notify/app/Datas/NetfunSmsResponseData.php
+Modules/Notify/app/Datas/SmsData.php
+Modules/Notify/app/Datas/NetfunSmsData.php
+Modules/Notify/app/Datas/NetfunSmsRequestData.php
+Modules/Notify/app/Datas/NetfunSmsResponseData.php
+Modules/Notify/app/Datas/SmsData.php
 ```
 
 ### ❌ ERRATO: ALTERNATIVE COMUNI MA ERRATE
@@ -40,26 +40,26 @@ Questo è lo standard stabilito nel modulo Notify per tutti i DTOs:
 
 ## Verifica dei Percorsi Prima di Utilizzarli
 
-1. **Usa `find_by_name` per verificare la directory corretta**
+1. **Usa `find_by_name` per verificare la directory corretta** 
 2. **Esamina file simili esistenti per convenzioni di nomenclatura**
-3. **Controlla il PSR-4 nel composer.json del modulo**
+3. **Controlla il PSR-4 nel composer.json del modulo** 
 
 ### Verificare Sempre le Directory Esistenti
 
 ```bash
-find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app -type d -name "Data*"
-find /var/www/html/saluteora/laravel/Modules/Notify/app -type d -name "Data*"
-find /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app -type d -name "Data*"
+find Modules/Notify/app -type d -name "Data*"
+find Modules/Notify/app -type d -name "Data*"
+find Modules/Notify/app -type d -name "Data*"
 ```
 
 Questo restituirà:
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/SMS
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/SMS
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/SMS
+Modules/Notify/app/Datas
+Modules/Notify/app/Datas/SMS
+Modules/Notify/app/Datas
+Modules/Notify/app/Datas/SMS
+Modules/Notify/app/Datas
+Modules/Notify/app/Datas/SMS
 ```
 
 ## Esempi di Importazioni Corrette

@@ -1,8 +1,8 @@
-# Guida Completa alla Validazione delle Traduzioni - SaluteOra
+# Guida Completa alla Validazione delle Traduzioni - <nome progetto>
 
 ## Panoramica
 
-Questa guida documenta il processo completo di validazione delle traduzioni nel progetto SaluteOra, seguendo i principi DRY (Don't Repeat Yourself) e KISS (Keep It Simple, Stupid).
+Questa guida documenta il processo completo di validazione delle traduzioni nel progetto <nome progetto>, seguendo i principi DRY (Don't Repeat Yourself) e KISS (Keep It Simple, Stupid).
 
 ## Regole Fondamentali
 
@@ -129,7 +129,7 @@ Ogni campo di traduzione DEVE includere:
 
 ### 1. Helper Text Audit
 ```bash
-cd /var/www/html/_bases/base_saluteora/laravel
+cd laravel
 php docs/helper-text-audit-script.php
 ```
 
@@ -183,7 +183,7 @@ php docs/obbligatorio-audit-script.php
 3. Verificare conformità agli standard
 4. Documentare il completamento
 
-## Status Progetto SaluteOra
+## Status Progetto <nome progetto>
 
 ### ✅ Validazioni Completate (2025-08-08)
 
@@ -233,7 +233,7 @@ php docs/obbligatorio-audit-script.php
 
 ### Documentazione Moduli
 - [User Module - City Field Refactor](../Modules/User/docs/translation-city-field-refactor-2025-08-08.md)
-- [SaluteOra Module - Refactor Summary](../Modules/SaluteOra/docs/translation-refactor-summary-2025-08-08.md)
+- [<nome progetto> Module - Refactor Summary](../Modules/<nome progetto>/docs/translation-refactor-summary-2025-08-08.md)
 - [Geo Module - Helper Text Fix](../Modules/Geo/docs/helper-text-normalization-fix.md)
 
 ### Script e Tool

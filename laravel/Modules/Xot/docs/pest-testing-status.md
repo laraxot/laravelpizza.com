@@ -49,7 +49,7 @@
 
 ### Esecuzione Base
 ```bash
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 
 # Test singolo modulo
 ./vendor/bin/pest Modules/User/tests/

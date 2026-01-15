@@ -19,7 +19,7 @@ class ViewLocation extends XotBaseViewRecord
     protected function getHeaderActions(): array
     {
         return [
-            EditAction::make(),
+            'edit' => EditAction::make(),
         ];
     }
 

@@ -107,7 +107,7 @@ La corretta implementazione degli standard di traduzione garantisce:
 
 ## Panoramica delle Problematiche
 
-Durante l'analisi del codice è emerso che numerosi file di traduzione nel modulo Notify non rispettano gli standard definiti per SaluteOra. Questo documento riassume i problemi identificati e le strategie di correzione implementate.
+Durante l'analisi del codice è emerso che numerosi file di traduzione nel modulo Notify non rispettano gli standard definiti per <nome progetto>. Questo documento riassume i problemi identificati e le strategie di correzione implementate.
 
 ## Standard Violati
 
@@ -201,7 +201,7 @@ La corretta implementazione degli standard di traduzione garantisce:
 - Coerenza nell'interfaccia utente
 - Facilità di manutenzione
 - Miglior supporto per la localizzazione
-- Conformità alle best practice di Laravel e SaluteOra
+- Conformità alle best practice di Laravel e <nome progetto>
 
 ## Collegamenti alla Documentazione
 

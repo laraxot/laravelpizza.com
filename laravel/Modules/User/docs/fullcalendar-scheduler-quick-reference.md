@@ -116,7 +116,7 @@ if (app()->environment('local') && empty($licenseKey)) {
 - [ ] Banner rosso rimosso
 - [ ] Funzionalità premium attive
 ## 🚀  Specifico
-## 🚀 SaluteOra Specifico
+## 🚀 <nome progetto> Specifico
 ### Business Hours Sanitarie
 businessHours: {
   daysOfWeek: [1, 2, 3, 4, 5, 6], // Lun-Sab
@@ -319,7 +319,7 @@ if (app()->environment('local') && empty($licenseKey)) {
 - [ ] Banner rosso rimosso
 - [ ] Funzionalità premium attive
 
-## 🚀 SaluteOra Specifico
+## 🚀 <nome progetto> Specifico
 
 ### Business Hours Sanitarie
 ```javascript

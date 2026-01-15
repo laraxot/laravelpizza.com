@@ -92,8 +92,11 @@ class Login extends Component implements HasActions, HasForms
      */
     public function render(): View|Factory
     {
+        /** @var view-string $viewName */
+        $viewName = 'user::livewire.auth.login';
+
         // app(ViewCopyAction::class)->execute('user::livewire.auth.login', 'pub_theme::livewire.auth.login');
-        return view('user::livewire.auth.login');
+        return view($viewName);
     }
 
     /**

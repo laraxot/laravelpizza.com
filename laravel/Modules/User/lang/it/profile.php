@@ -90,4 +90,6 @@ return [
         'update_success' => 'Profilo aggiornato con successo!',
         'no_permission' => 'Non hai i permessi per modificare questo profilo.',
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

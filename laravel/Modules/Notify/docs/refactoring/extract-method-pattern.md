@@ -1,8 +1,8 @@
 # 🧘 Pattern: Extract Method (Clean Code)
 
-**Status**: ✅ Pattern Consolidato
-**Data**: 19 Dicembre 2025
-**Modulo**: Notify
+**Status**: ✅ Pattern Consolidato  
+**Data**: 19 Dicembre 2025  
+**Modulo**: Notify  
 **Filosofia**: Clean Code, SRP, Leggibilità
 
 ## 🕉️ Filosofia
@@ -173,7 +173,7 @@ private function sendNoChannelsNotification(): void
 
 ### 1. Leggibilità Migliorata
 
-**Prima**: Metodo di 50+ righe, difficile da seguire
+**Prima**: Metodo di 50+ righe, difficile da seguire  
 **Dopo**: Metodo principale di 20 righe, logica chiaramente separata
 
 ```php
@@ -214,13 +214,13 @@ Metodi piccoli e focalizzati sono più facili da testare:
 test('getChannelsFromValues converts valid channel strings to ChannelEnum', function () {
     $action = new SendRecordsNotificationBulkAction();
     $values = ['mail', 'sms', 'whatsapp'];
-
+    
     $reflection = new ReflectionClass($action);
     $method = $reflection->getMethod('getChannelsFromValues');
     $method->setAccessible(true);
-
+    
     $result = $method->invoke($action, $values);
-
+    
     expect($result)->toHaveCount(3);
     expect($result[0])->toBeInstanceOf(ChannelEnum::class);
 });
@@ -331,7 +331,7 @@ class MyBulkAction extends XotBaseBulkAction
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         $this->label(...)
             ->action(function (Collection $records, array $data): void {
                 $this->processRecords($records, $data);
@@ -447,6 +447,6 @@ Prima di estrarre metodi:
 
 ---
 
-**Ultimo aggiornamento**: 19 Dicembre 2025
-**Filosofia**: *"Small methods, clear names, single responsibility - the path to maintainable code"*
+**Ultimo aggiornamento**: 19 Dicembre 2025  
+**Filosofia**: *"Small methods, clear names, single responsibility - the path to maintainable code"*  
 **Pattern**: Extract Method (Clean Code Refactoring)

@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
+use Webmozart\Assert\Assert;
+
 use function Safe\define;
 use function Safe\fopen;
 use function Safe\preg_match_all;
-use Webmozart\Assert\Assert;
 
 if (! defined('STDIN')) {
     define('STDIN', fopen('php://stdin', 'r'));
@@ -143,13 +144,12 @@ class ArtisanService
 
         $pattern = '/url":"([^"]*)"/';
 
-        /** @var array<int, array<int, string>>|null $matches */
+        /** @var array<int, array<int, string>> $matches */
         $matches = [];
         preg_match_all($pattern, $content, $matches);
 
         /** @var array<int, string> $urls */
         $urls = [];
-        /** @var array<int, string> $urlsRaw */
         $urlsRaw = $matches[1];
         if ($urlsRaw !== []) {
             $urls = array_values(array_unique($urlsRaw));

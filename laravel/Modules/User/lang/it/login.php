@@ -35,4 +35,7 @@ return [
             'tooltip' => 'showPassword',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
 ];

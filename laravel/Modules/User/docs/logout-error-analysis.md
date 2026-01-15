@@ -2,7 +2,7 @@
 
 ## Problema Identificato
 
-Il file `/var/www/html/saluteora/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione:
+Il file `Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione:
 
 1. **Errore di Sintassi**:
    - Uso errato della direttiva `@volt` quando il file dovrebbe essere una semplice blade template
@@ -127,7 +127,7 @@ class LogoutWidget extends XotBaseWidget
 
 ## Problema Identificato
 
-Il file `/var/www/html/saluteora/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione:
+Il file `Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione:
 
 1. **Errore di Sintassi**:
    - Uso errato della direttiva `@volt` quando il file dovrebbe essere una semplice blade template

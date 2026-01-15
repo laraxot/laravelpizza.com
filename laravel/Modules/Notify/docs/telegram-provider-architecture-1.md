@@ -1,6 +1,6 @@
-# Architettura Telegram Provider per SaluteOra
+# Architettura Telegram Provider per <nome progetto>
 
-Questo documento definisce l'architettura e gli standard per l'implementazione dei provider Telegram nel modulo Notify di SaluteOra, mantenendo coerenza con le architetture esistenti per SMS, email e WhatsApp.
+Questo documento definisce l'architettura e gli standard per l'implementazione dei provider Telegram nel modulo Notify di <nome progetto>, mantenendo coerenza con le architetture esistenti per SMS, email e WhatsApp.
 
 ## Principi Architetturali Fondamentali
 
@@ -14,7 +14,7 @@ L'architettura dei provider Telegram segue gli stessi principi dei provider SMS,
 ## Struttura Directory e Namespace
 
 ```
-/var/www/html/saluteora/laravel/Modules/Notify/
+Modules/Notify/
 ├── app/
 │   ├── Actions/
 │   │   └── Telegram/

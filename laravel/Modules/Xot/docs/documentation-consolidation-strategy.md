@@ -254,7 +254,7 @@ Common issues e soluzioni.
 #!/bin/bash
 # find_duplicate_docs.sh
 
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel
+cd laravel
 
 for MODULE in Modules/*/docs; do
     echo "Analyzing: $MODULE"

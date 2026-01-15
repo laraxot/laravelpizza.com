@@ -46,7 +46,7 @@
 
 ```bash
 # Analisi PHPStan completa
-cd /var/www/_bases/base_laravelpizza/laravel
+cd laravel
 ./vendor/bin/phpstan analyse Modules --memory-limit=-1
 
 # Analisi singolo modulo

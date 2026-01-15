@@ -11,4 +11,8 @@ return [
             'label' => 'logout_at',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

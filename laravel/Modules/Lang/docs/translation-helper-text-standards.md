@@ -1,4 +1,4 @@
-# Standard per helper_text nelle Traduzioni SaluteOra
+# Standard per helper_text nelle Traduzioni <nome progetto>
 
 ## Regola Critica: Gestione helper_text
 
@@ -142,12 +142,12 @@ Prima di considerare completo un file di traduzione:
 Questa regola si applica a:
 - `Modules/*/lang/*/` - Tutti i moduli
 - `Themes/*/lang/*/` - Tutti i temi
-- Qualsiasi file di traduzione del progetto SaluteOra
+- Qualsiasi file di traduzione del progetto <nome progetto>
 
-## Caso Studio: SaluteOra profile_widget.php
+## Caso Studio: <nome progetto> profile_widget.php
 
 ### Problema Identificato (Gennaio 2025)
-Il file `Modules/SaluteOra/lang/it/profile_widget.php` conteneva:
+Il file `Modules/<nome progetto>/lang/it/profile_widget.php` conteneva:
 - Sintassi `array()` invece di `[]`
 - Mancanza di `declare(strict_types=1)`
 - Campi `first_name` e `last_name` con valori non tradotti
@@ -171,6 +171,6 @@ Il file `Modules/SaluteOra/lang/it/profile_widget.php` conteneva:
 - [Regole Generali Traduzioni](translation_standards_links.md)
 - [Documentazione Modulo Lang](../../laravel/Modules/Lang/docs/)
 - [Best Practices Filament](../../laravel/Modules/Xot/docs/filament/)
-- [Standard di Qualità SaluteOra](../../laravel/Modules/SaluteOra/docs/translation_quality_standards.md)
+- [Standard di Qualità <nome progetto>](../../laravel/Modules/<nome progetto>/docs/translation_quality_standards.md)
 
 *Ultimo aggiornamento: Gennaio 2025*

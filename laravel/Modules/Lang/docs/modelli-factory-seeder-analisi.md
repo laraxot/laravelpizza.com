@@ -39,7 +39,7 @@ Questo documento analizza tutti i modelli del modulo Lang verificando la presenz
 - **Hot Reload**: Ricaricamento traduzioni senza restart
 - **Namespace Support**: Supporto namespace moduli
 
-**Business Logic SaluteOra**:
+**Business Logic <nome progetto>**:
 - **Medical Terms**: Traduzioni terminologia medica
 - **UI Elements**: Elementi interfaccia multilingua
 - **Error Messages**: Messaggi errore localizzati
@@ -99,7 +99,7 @@ Tutti i modelli attivi hanno le factory corrispondenti.
 - [Localization Best Practices](./localization_best_practices.md)
 
 ### Moduli Collegati
-- [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md) - Traduzioni mediche
+- [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Traduzioni mediche
 - [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Traduzioni utente
 - [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multilingua
 - [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Notifiche multilingua

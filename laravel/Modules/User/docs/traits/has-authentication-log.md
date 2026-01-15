@@ -36,7 +36,7 @@ use Modules\User\Models\Traits\HasAuthenticationLogTrait;
 class User extends Authenticatable
 {
     use HasAuthenticationLogTrait;
-
+    
     // ... resto del codice
 }
 ```
@@ -51,12 +51,14 @@ class User extends Authenticatable
   - `login_at`
 ### Versione HEAD
 
+
 ## Documentazione Correlata
 
 - [Integrazione Laravel Passport](../passport.md) - Configurazione e utilizzo di OAuth2 con Laravel Passport
 - [Modello BaseUser](../BaseUser.md) - Modello utente che utilizza questo trait
 
 ### Versione Incoming
+
 
 ---
 
@@ -65,4 +67,4 @@ class User extends Authenticatable
   - `updated_at`
 - I log vengono automaticamente creati quando un utente tenta di autenticarsi
 - Le notifiche vengono inviate tramite email per default
-- Il trait supporta il tracciamento di tentativi di login falliti e riusciti
+- Il trait supporta il tracciamento di tentativi di login falliti e riusciti 

@@ -141,7 +141,7 @@ def analyze_php_file(file_path: str) -> dict:
             ["vendor/bin/phpstan", "analyse", file_path, "--level", "10", "--no-progress", "--error-format", "json"],
             capture_output=True,
             text=True,
-            cwd="/var/www/_bases/base_quaeris_fila4_mono/laravel"
+            cwd="laravel"
         )
 
         if result.returncode == 0:
@@ -181,7 +181,7 @@ def run_artisan_command(command: str, args: list = None) -> dict:
             cmd,
             capture_output=True,
             text=True,
-            cwd="/var/www/_bases/base_quaeris_fila4_mono/laravel"
+            cwd="laravel"
         )
 
         return {

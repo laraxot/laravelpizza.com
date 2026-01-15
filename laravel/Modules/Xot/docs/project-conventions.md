@@ -143,7 +143,7 @@ bashscripts/
 set -e  # Exit on error
 
 # Configuration
-LARAVEL_DIR="/var/www/_bases/base_fixcity_fila4_mono/laravel"
+LARAVEL_DIR="laravel"
 cd "$LARAVEL_DIR"
 
 # Script logic here

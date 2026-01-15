@@ -27,7 +27,7 @@ public function panel(Panel $panel): Panel
         SpatieTranslatablePlugin::make()
             ->defaultLocales(['it', 'en']),
     ]);
-
+    
     return parent::panel($panel);
 }
 ```
@@ -82,7 +82,7 @@ use Spatie\Translatable\HasTranslations;
 class MailTemplate extends BaseModel
 {
     use HasTranslations;
-
+    
     /**
      * Campi traducibili.
      *
@@ -134,17 +134,17 @@ Nel form di edit/create:
 
 ### Errore: Plugin Not Registered
 
-**Causa**: Plugin non registrato nel panel
+**Causa**: Plugin non registrato nel panel  
 **Soluzione**: Vedere [plugin-spatie-translatable-not-registered.md](./errori/plugin-spatie-translatable-not-registered.md)
 
 ### Errore: Undefined Method `getTranslation()`
 
-**Causa**: Modello non ha trait `HasTranslations`
+**Causa**: Modello non ha trait `HasTranslations`  
 **Soluzione**: Aggiungere trait e proprietà `$translatable`
 
 ### Switcher Non Visibile
 
-**Causa**: Page non usa trait `Translatable`
+**Causa**: Page non usa trait `Translatable`  
 **Soluzione**: Verificare che Page estenda `LangBaseListRecords`
 
 ## Pattern Architetturale
@@ -191,7 +191,7 @@ use Spatie\Translatable\HasTranslations;
 class MyModel extends BaseModel
 {
     use HasTranslations;
-
+    
     public array $translatable = ['field1', 'field2'];
 }
 ```
@@ -204,7 +204,7 @@ use LaraZeus\SpatieTranslatable\Resources\Concerns\Translatable;
 class MyResource extends LangBaseResource
 {
     use Translatable;  // Solo se il modello è traducibile!
-
+    
     public static function getTranslatableLocales(): array
     {
         return ['it', 'en'];
@@ -231,7 +231,7 @@ test('can switch locale', function () {
     Livewire::test(ListMailTemplates::class)
         ->callAction('locale_switcher', data: ['locale' => 'en'])
         ->assertSuccessful();
-
+        
     expect(app()->getLocale())->toBe('en');
 });
 ```
@@ -265,6 +265,8 @@ Schema::table('mail_templates', function (Blueprint $table) {
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025
-**Status**: ✅ PLUGIN REGISTRATO
+**Ultimo aggiornamento**: 27 Ottobre 2025  
+**Status**: ✅ PLUGIN REGISTRATO  
 **Compatibilità**: Filament 4.x
+
+

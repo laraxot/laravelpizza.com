@@ -1,7 +1,7 @@
 # Notify Module - Roadmap, Issues & Optimization
 
-**Modulo**: Notify (Multi-Channel Notifications)
-**Data Analisi**: 1 Ottobre 2025
+**Modulo**: Notify (Multi-Channel Notifications)  
+**Data Analisi**: 1 Ottobre 2025  
 **Status PHPStan**: ✅ 0 errori (Level 9)
 
 ---
@@ -56,7 +56,7 @@ Echo.private(`App.Models.User.${userId}`)
     });
 ```
 
-**Tempo Fix**: 1 settimana
+**Tempo Fix**: 1 settimana  
 **Priorità**: 🔴 ALTA
 
 ---
@@ -78,7 +78,7 @@ public function toPush($notifiable)
 }
 ```
 
-**Tempo Fix**: 2 settimane
+**Tempo Fix**: 2 settimane  
 **Priorità**: 🔴 ALTA (per mobile app)
 
 ---
@@ -101,7 +101,7 @@ if ($user->wantsNotification('ticket.created', 'email')) {
 }
 ```
 
-**Tempo Fix**: 1 settimana
+**Tempo Fix**: 1 settimana  
 **Priorità**: 🟡 MEDIA
 
 ---
@@ -131,7 +131,7 @@ class TicketDigest extends Notification implements ShouldQueue
 }
 ```
 
-**Tempo Fix**: 2 ore
+**Tempo Fix**: 2 ore  
 **Gain**: Better queue management
 
 ---
@@ -247,6 +247,7 @@ class TicketDigest extends Notification implements ShouldQueue
 
 ---
 
-**Status**: ✅ BUONO
-**PHPStan**: ✅ 0 errori
+**Status**: ✅ BUONO  
+**PHPStan**: ✅ 0 errori  
 **Focus**: Real-Time + Push + Preferences
+

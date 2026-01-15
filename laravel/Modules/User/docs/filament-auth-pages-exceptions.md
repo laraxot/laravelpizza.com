@@ -57,7 +57,7 @@ namespace Modules\User\Filament\Pages\Auth;
 class EditProfile extends \Filament\Auth\Pages\EditProfile
 {
     public static ?string $title = 'Profilo Utente';
-
+    
     public function getFormSchema(): array
     {
         return [
@@ -84,7 +84,7 @@ class PasswordExpired extends \Filament\Pages\Page implements HasForms
     use InteractsWithFormActions;
     use InteractsWithForms;
     use NavigationPageLabelTrait; // Solo trait per traduzioni
-
+    
     protected static bool $shouldRegisterNavigation = false;
     protected string $view = 'user::filament.auth.pages.password-expired';
 }

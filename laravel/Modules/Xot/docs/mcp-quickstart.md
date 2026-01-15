@@ -78,11 +78,7 @@ npm install -g @iflow-ai/iflow-cli
 **Primo Utilizzo**:
 
 ```bash
-cd /var/www/_bases/base_quaeris_fila4_mono
-
-# Inizializza progetto
-iflow
-> /init
+cd init
 
 # Esempio: Analizza architettura
 > Analizza l'architettura modulare del progetto e documenta le dipendenze tra Modules
@@ -96,9 +92,9 @@ iflow
 
 **Accesso a**:
 
-- `/var/www/_bases/base_quaeris_fila4_mono/laravel`
-- `/var/www/_bases/base_quaeris_fila4_mono/Modules`
-- `/var/www/_bases/base_quaeris_fila4_mono/Themes`
+- `laravel`
+- `Modules`
+- `Themes`
 
 **Cosa fa**: Legge/scrive file, esplora struttura progetto
 
@@ -212,10 +208,10 @@ cat ~/.cursor/mcp.json | jq '.mcpServers.github.env'
 
 ```bash
 # Verifica permessi
-ls -la /var/www/_bases/base_quaeris_fila4_mono/
+ls -la 
 
 # Fix permessi se necessario
-sudo chown -R $USER:$USER /var/www/_bases/base_quaeris_fila4_mono/
+sudo chown -R $USER:$USER 
 ```
 
 ---

@@ -132,17 +132,7 @@
             "request": "launch",
             "port": 9003,
             "pathMappings": {
-                "/var/www/html/base_<nome progetto>": "${workspaceFolder}"
-            }
-        }
-    ]
-}
-```
-
-## Tasks Personalizzati
-
-```json
-// tasks.json
+                "/ tasks.json
 {
     "version": "2.0.0",
     "tasks": [
@@ -370,17 +360,7 @@
             "request": "launch",
             "port": 9003,
             "pathMappings": {
-                "/var/www/html/base_<nome progetto>": "${workspaceFolder}"
-            }
-        }
-    ]
-}
-```
-
-## Tasks Personalizzati
-
-```json
-// tasks.json
+                "/ tasks.json
 {
     "version": "2.0.0",
     "tasks": [

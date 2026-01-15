@@ -7,7 +7,7 @@ use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
 use Rector\ValueObject\PhpVersion;
 
-/**
+/*
  * Standard Rector Configuration for Laravel Modules
  *
  * Minimal configuration compatible with base Rector installation

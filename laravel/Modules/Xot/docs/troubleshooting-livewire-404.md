@@ -150,7 +150,7 @@ APP_URL=https://quaeris.com
 
 ```bash
 # Quick fix completo
-cd /var/www/_bases/base_quaeris_fila4_mono/laravel
+cd laravel
 
 # 1. Modifica APP_URL in .env
 nano .env  # o vim .env

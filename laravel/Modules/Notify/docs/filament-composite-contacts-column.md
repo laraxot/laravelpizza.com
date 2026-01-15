@@ -33,7 +33,7 @@ Il metodo helper nel controller/resource gestisce la logica di rendering:
 private function formatContacts($record): string
 {
     $contacts = [];
-
+    
     // Telefono
     if ($record->phone) {
         $contacts[] = '<a href="tel:' . $record->phone . '" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
@@ -43,7 +43,7 @@ private function formatContacts($record): string
             <span class="text-xs font-medium hidden sm:inline-block">' . htmlspecialchars($record->phone) . '</span>
         </a>';
     }
-
+    
     // Email
     if ($record->email) {
         $contacts[] = '<a href="mailto:' . $record->email . '" class="inline-flex items-center text-green-600 hover:text-green-800 transition-colors duration-200">
@@ -54,7 +54,7 @@ private function formatContacts($record): string
             <span class="text-xs font-medium hidden sm:inline-block">' . htmlspecialchars(Str::limit($record->email, 20)) . '</span>
         </a>';
     }
-
+    
     // PEC (Posta Elettronica Certificata)
     if ($record->pec) {
         $contacts[] = '<a href="mailto:' . $record->pec . '" class="inline-flex items-center text-purple-600 hover:text-purple-800 transition-colors duration-200">
@@ -64,7 +64,7 @@ private function formatContacts($record): string
             <span class="text-xs font-medium hidden sm:inline-block">PEC</span>
         </a>';
     }
-
+    
     // WhatsApp
     if ($record->whatsapp) {
         $whatsappNumber = preg_replace('/[^0-9]/', '', $record->whatsapp);
@@ -76,9 +76,9 @@ private function formatContacts($record): string
             <span class="text-xs font-medium hidden sm:inline-block">WA</span>
         </a>';
     }
-
-    return empty($contacts)
-        ? '<span class="text-gray-400 text-sm italic">Nessun contatto</span>'
+    
+    return empty($contacts) 
+        ? '<span class="text-gray-400 text-sm italic">Nessun contatto</span>' 
         : '<div class="flex flex-wrap gap-2 items-center">' . implode('', $contacts) . '</div>';
 }
 ```
@@ -147,7 +147,7 @@ private function formatContacts($record): string
 ### Campi Supportati
 Il modulo Notify supporta questi campi di contatto standard:
 - `phone` - Telefono fisso
-- `mobile` - Telefono cellulare
+- `mobile` - Telefono cellulare  
 - `email` - Email principale
 - `pec` - Posta Elettronica Certificata
 - `whatsapp` - Numero WhatsApp
@@ -227,6 +227,6 @@ Questo pattern può essere applicato a:
 
 ---
 
-*Ultimo aggiornamento: 2025-08-01*
-*Autore: Sistema Laraxot*
+*Ultimo aggiornamento: 2025-08-01*  
+*Autore: Sistema Laraxot*  
 *Versione: 1.0*

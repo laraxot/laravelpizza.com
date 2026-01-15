@@ -1,7 +1,7 @@
 # Pattern DRY: Composizione Actions Bulk → Single
 
-**Data**: 2025-01-18
-**Modulo**: Notify
+**Data**: 2025-01-18  
+**Modulo**: Notify  
 **Status**: ✅ Pattern consolidato
 
 ## Principio Fondamentale
@@ -118,7 +118,7 @@ class SendMailByRecordsAction
             // ✅ Compone SendMailByRecordAction
             app(SendMailByRecordAction::class)->execute($record, $mail_class);
         }
-
+        
         return true;
     }
 }
@@ -203,6 +203,6 @@ Prima di creare una bulk action:
 
 ---
 
-**Filosofia**: "Una volta, una sola volta, in un solo posto" - DRY Principle
-**Pattern**: Bulk Action compone Single Action
+**Filosofia**: "Una volta, una sola volta, in un solo posto" - DRY Principle  
+**Pattern**: Bulk Action compone Single Action  
 **Naming**: Bulk Action con plurale nel nome (Records, not Record)

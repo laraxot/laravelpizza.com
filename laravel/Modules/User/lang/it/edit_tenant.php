@@ -11,4 +11,8 @@ return [
             'label' => 'delete',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
 ];

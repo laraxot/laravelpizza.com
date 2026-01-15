@@ -11,3 +11,8 @@
 ## attività successive
 - introdurre DTO condivisi per la reportistica generata dal comando di analisi traduzioni
 - completare la migrazione dei mailer a `EmailData` + `SmtpData` con tipizzazione di ritorno/errore documentata
+
+
+
+
+

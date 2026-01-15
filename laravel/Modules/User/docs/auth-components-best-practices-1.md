@@ -183,7 +183,7 @@ Prima di implementare nuovi componenti di autenticazione o modificare quelli esi
 
 1. Che tutte le chiavi di traduzione siano definite in tutti i file di lingua supportati
 2. Che i componenti funzionino correttamente con la localizzazione delle URL
-3. Che i componenti rispettino le best practices di SaluteOra per le chiavi di traduzione
+3. Che i componenti rispettino le best practices di <nome progetto> per le chiavi di traduzione
 
 ## Riferimenti
 

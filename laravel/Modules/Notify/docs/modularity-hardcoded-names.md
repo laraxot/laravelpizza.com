@@ -2,8 +2,8 @@
 
 ## Problema Identificato
 
-Durante l'audit del modulo `Notify`, è stato identificato un **errore critico di architettura**: l'utilizzo di stringhe hardcoded con nomi di progetto specifici (es. "<nome progetto>", "salutemo") in un modulo che deve essere riutilizzabile in progetti diversi.
-Durante l'audit del modulo `Notify`, è stato identificato un **errore critico di architettura**: l'utilizzo di stringhe hardcoded con nomi di progetto specifici (es. "saluteora", "salutemo") in un modulo che deve essere riutilizzabile in progetti diversi.
+Durante l'audit del modulo `Notify`, è stato identificato un **errore critico di architettura**: l'utilizzo di stringhe hardcoded con nomi di progetto specifici (es. "<nome progetto>", "<nome progetto>") in un modulo che deve essere riutilizzabile in progetti diversi.
+Durante l'audit del modulo `Notify`, è stato identificato un **errore critico di architettura**: l'utilizzo di stringhe hardcoded con nomi di progetto specifici (es. "<nome progetto>", "<nome progetto>") in un modulo che deve essere riutilizzabile in progetti diversi.
 
 ## Impatto del Problema
 
@@ -21,14 +21,14 @@ Durante l'audit del modulo `Notify`, è stato identificato un **errore critico d
 'clinic_name' => 'Studio Dentistico ',
 'webhook' => 'https://api.<nome progetto>.com/webhooks',
 'author' => 'Team PTVX',
-'path' => '/var/www/html/_bases/base_ptvx_fila3_mono/public_html/images/',
-'subject' => 'Benvenuto su SaluteOra',
-'content' => 'Grazie per esserti registrato su SaluteOra',
-'clinic_name' => 'Studio Dentistico SaluteOra',
-'webhook' => 'https://api.saluteora.com/webhooks',
-'author' => 'Team SaluteOra',
-'path' => '/var/www/html/saluteora/public_html/images/',
-'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/',
+'path' => 'public_html/images/',
+'subject' => 'Benvenuto su <nome progetto>',
+'content' => 'Grazie per esserti registrato su <nome progetto>',
+'clinic_name' => 'Studio Dentistico <nome progetto>',
+'webhook' => 'https://api.<nome progetto>.com/webhooks',
+'author' => 'Team <nome progetto>',
+'path' => 'public_html/images/',
+'path' => 'public_html/images/',
 ```
 
 ## Soluzioni Implementate
@@ -84,8 +84,8 @@ $notificationData = [
 
 ### Moduli Specifici del Progetto
 - ****: Solo per progetto
-- **SaluteOra**: Solo per progetto SaluteOra
-- **SaluteMo**: Solo per progetto SaluteMo
+- **<nome progetto>**: Solo per progetto <nome progetto>
+- **<nome progetto>**: Solo per progetto <nome progetto>
 - **Patient**: Solo per progetti sanitari specifici
 
 ## Checklist Pre-Commit
@@ -104,14 +104,14 @@ Prima di ogni commit, verificare:
 Eseguire regolarmente:
 ```bash
 # Cerca stringhe hardcoded nei moduli generici
-grep -r "<nome progetto>\|salutemo" laravel/Modules/Notify/ --include="*.php"
-grep -r "<nome progetto>\|salutemo" laravel/Modules/User/ --include="*.php"
-grep -r "<nome progetto>\|salutemo" laravel/Modules/UI/ --include="*.php"
-grep -r "<nome progetto>\|salutemo" laravel/Modules/Xot/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/Notify/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/User/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/UI/ --include="*.php"
-grep -r "saluteora\|salutemo" laravel/Modules/Xot/ --include="*.php"
+grep -r "<nome progetto>\|<nome progetto>" laravel/Modules/Notify/ --include="*.php"
+grep -r "<nome progetto>\|<nome progetto>" laravel/Modules/User/ --include="*.php"
+grep -r "<nome progetto>\|<nome progetto>" laravel/Modules/UI/ --include="*.php"
+grep -r "<nome progetto>\|<nome progetto>" laravel/Modules/Xot/ --include="*.php"
+grep -r "<nome progetto>\|<nome progetto>" laravel/Modules/Notify/ --include="*.php"
+grep -r "<nome progetto>\|<nome progetto>" laravel/Modules/User/ --include="*.php"
+grep -r "<nome progetto>\|<nome progetto>" laravel/Modules/UI/ --include="*.php"
+grep -r "<nome progetto>\|<nome progetto>" laravel/Modules/Xot/ --include="*.php"
 ```
 
 ## Configurazione per Progetti
@@ -123,11 +123,11 @@ COMPANY_TEAM=Team
 WEBHOOK_BASE_URL=https://api.<nome progetto>.com
 CLINIC_NAME=Studio Dentistico
 REPOSITORY_URL=https://github.com/<nome progetto>/notify
-COMPANY_NAME=SaluteOra
-COMPANY_TEAM=Team SaluteOra
-WEBHOOK_BASE_URL=https://api.saluteora.com
-CLINIC_NAME=Studio Dentistico SaluteOra
-REPOSITORY_URL=https://github.com/saluteora/notify
+COMPANY_NAME=<nome progetto>
+COMPANY_TEAM=Team <nome progetto>
+WEBHOOK_BASE_URL=https://api.<nome progetto>.com
+CLINIC_NAME=Studio Dentistico <nome progetto>
+REPOSITORY_URL=https://github.com/<nome progetto>/notify
 ```
 
 ### Override per Progetti Specifici

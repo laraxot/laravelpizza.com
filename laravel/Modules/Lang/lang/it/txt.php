@@ -430,6 +430,12 @@ return [
             'helper_text' => 'view',
             'description' => 'view',
         ],
+        'address' => [
+            'label' => 'address',
+            'placeholder' => 'address',
+            'helper_text' => 'address',
+            'description' => 'address',
+        ],
     ],
     'actions' => [
         'authenticate' => [
@@ -481,6 +487,11 @@ return [
             'label' => 'list_log_activities',
             'icon' => 'list_log_activities',
             'tooltip' => 'list_log_activities',
+        ],
+        'table_layout_toggle' => [
+            'label' => 'table_layout_toggle',
+            'icon' => 'table_layout_toggle',
+            'tooltip' => 'table_layout_toggle',
         ],
     ],
 ];

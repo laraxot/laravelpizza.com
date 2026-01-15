@@ -51,4 +51,7 @@ return [
             'tooltip' => 'updatePasswordAction',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
 ];

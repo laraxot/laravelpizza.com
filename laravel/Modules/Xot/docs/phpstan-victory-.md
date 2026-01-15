@@ -230,7 +230,7 @@ done
 ## 🎯 Comando Finale di Verifica
 
 ```bash
-cd /var/www/_bases/base_fixcity_fila4_mono/laravel
+cd laravel
 ./vendor/bin/phpstan analyse Modules --no-progress
 
 # Output:

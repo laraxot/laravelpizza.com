@@ -137,7 +137,15 @@ return [
 ## Best Practices per l'Utilizzo
 
 1. **Non Sovrascrivere il Metodo table()**:
-   Il metodo `table()` nel trait `HasXotTable` contiene logica importante. Utilizzare invece `getTableColumns()`, `getTableActions()`, ecc.
+   Il metodo `table()` nel trait `HasXotTable` è `final` e contiene logica importante. Utilizzare invece `getTableColumns()`, `getTableActions()`, ecc.
+   
+   Per personalizzazioni (defaultSort, paginated array, poll), usare i metodi dedicati:
+   - `getDefaultTableSortColumn()` e `getDefaultTableSortDirection()`
+   - `getTablePaginated()` (può restituire `bool` o `array<int>`)
+   - `getTablePollInterval()` (restituisce `?string` come '30s')
+
+2. **Visibilità Metodi getTable*()**:
+   Tutti i metodi `getTableHeading()`, `getTableHeaderActions()`, `getTableActions()`, `getTableBulkActions()`, `getTableFilters()`, `getTableSearch()` **DEVONO** essere `public`, non `protected`.
 
 2. **Utilizzare Traduzioni per Tutte le Label**:
    ```php

@@ -19,7 +19,7 @@ Questo documento descrive il processo per determinare il logo di un'applicazione
 
 3. **Risoluzione del Percorso del Logo**:
    - I percorsi specificati in `metatag.php` utilizzano un namespace (es. `patient::`), che corrisponde a una directory specifica del modulo.
-   - Ad esempio, `patient::images/logo.svg` si traduce in `/var/www/html/base_<nome progetto>/laravel/Modules/Patient/resources/images/logo.svg`.
+   - Ad esempio, `patient::images/logo.svg` si traduce in `Modules/Patient/resources/images/logo.svg`.
 
 ## Considerazioni
 - **Modularità**: Questo approccio permette configurazioni diverse per domini diversi, garantendo adattabilità.

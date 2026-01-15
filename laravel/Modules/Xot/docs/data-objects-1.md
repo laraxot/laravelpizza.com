@@ -64,8 +64,8 @@
 ## Errori Comuni
 
 1. **Errore**: Directory errata
-   - ❌ `/var/www/html/saluteora/Modules/Module/Datas/`
-   - ✅ `/var/www/html/saluteora/laravel/Modules/Module/Datas/`
+   - ❌ `Modules/Module/Datas/`
+   - ✅ `Modules/Module/Datas/`
 
 2. **Errore**: Namespace errato
    - ❌ `namespace Modules\Module\App\Datas;`

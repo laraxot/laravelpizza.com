@@ -317,12 +317,12 @@ class AssetManagementService
 - **Documentation** auto-generated
 
 ## 🔗 Collegamenti Correlati
-- [Block Component](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/View/Components/Render/Block.php)
-- [Blocks Component](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/View/Components/Render/Blocks.php)
-- [GroupWidget](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/Filament/Widgets/GroupWidget.php)
-- [HeroWidget](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/Filament/Widgets/HeroWidget.php)
-- [GetAllIconsAction](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/Actions/Icon/GetAllIconsAction.php)
-- [Sidebar Component](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/UI/app/View/Components/Sidebar.php)
+- [Block Component](Modules/UI/app/View/Components/Render/Block.php)
+- [Blocks Component](Modules/UI/app/View/Components/Render/Blocks.php)
+- [GroupWidget](Modules/UI/app/Filament/Widgets/GroupWidget.php)
+- [HeroWidget](Modules/UI/app/Filament/Widgets/HeroWidget.php)
+- [GetAllIconsAction](Modules/UI/app/Actions/Icon/GetAllIconsAction.php)
+- [Sidebar Component](Modules/UI/app/View/Components/Sidebar.php)
 
 ---
 *Analisi completata con principi DRY + KISS | Data: $(date)*

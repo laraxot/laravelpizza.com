@@ -54,14 +54,7 @@ MCP agisce come un **"ponte universale"** tra il tuo IDE/AI assistant e:
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "/var/www/_bases/base_quaeris_fila4_mono"
-      ]
-    },
-    "brave-search": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-brave-search"
+        "server-brave-search"
       ],
       "env": {
         "BRAVE_API_KEY": "<YOUR_BRAVE_API_KEY>"
@@ -123,9 +116,9 @@ MCP agisce come un **"ponte universale"** tra il tuo IDE/AI assistant e:
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "/var/www/_bases/base_quaeris_fila4_mono/laravel",
-        "/var/www/_bases/base_quaeris_fila4_mono/Modules",
-        "/var/www/_bases/base_quaeris_fila4_mono/Themes"
+        "laravel",
+        "Modules",
+        "Themes"
       ]
     },
     "github": {
@@ -243,12 +236,7 @@ Cline ha un **MCP Marketplace** integrato per installare server con 1 click.
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "/var/www/_bases/base_quaeris_fila4_mono"
-      ]
-    },
-    "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
+        "server-github"],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
       }

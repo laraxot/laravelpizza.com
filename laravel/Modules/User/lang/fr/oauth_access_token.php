@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'navigation' => [
         'label' => 'Jeton d\'Accès OAuth',
-        'group' => 'OAuth',
+        'group' => '',
         'icon' => 'heroicon-o-key',
         'sort' => 33,
     ],

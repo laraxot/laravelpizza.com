@@ -5,7 +5,7 @@
 La struttura corretta del progetto il progetto segue questo schema:
 
 ```
-/var/www/html/base_<nome progetto>/
+
 ├── laravel/               # Directory principale per il codice Laravel
 │   ├── Modules/          # Moduli dell'applicazione
 │   │   ├── Xot/
@@ -42,12 +42,12 @@ La struttura corretta del progetto il progetto segue questo schema:
 ### 1. Percorso Errato dei Temi
 ❌ Errore riscontrato:
 ```
-/var/www/html/base_<nome progetto>/Themes/One/resources/views/pages/auth/register.blade.php
+Themes/One/resources/views/pages/auth/register.blade.php
 ```
 
 ✅ Percorso corretto:
 ```
-/var/www/html/base_<nome progetto>/laravel/Themes/One/resources/views/pages/auth/register.blade.php
+Themes/One/resources/views/pages/auth/register.blade.php
 ```
 
 **Causa dell'errore**: Omissione della directory `laravel/` nel percorso.

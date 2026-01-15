@@ -32,8 +32,8 @@ Nei progetti di Spatie come `laravel-shop-main`, la logica di business è organi
 
 ### Descrizione
 
-Il pacchetto Laravel Modules (documentazione: [https://laravelmodules.com/docs/12/getting-started/introduction](https://laravelmodules.com/docs/12/getting-started/introduction)) consente di organizzare un'applicazione Laravel in moduli separati, ognuno con la propria struttura di directory simile a un'applicazione Laravel completa. Nel nostro progetto, il modulo `Activity` si trova in `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Activity`.
-Il pacchetto Laravel Modules (documentazione: [https://laravelmodules.com/docs/12/getting-started/introduction](https://laravelmodules.com/docs/12/getting-started/introduction)) consente di organizzare un'applicazione Laravel in moduli separati, ognuno con la propria struttura di directory simile a un'applicazione Laravel completa. Nel nostro progetto, il modulo `Activity` si trova in `/var/www/html/<nome progetto>/laravel/Modules/Activity`.
+Il pacchetto Laravel Modules (documentazione: [https://laravelmodules.com/docs/12/getting-started/introduction](https://laravelmodules.com/docs/12/getting-started/introduction)) consente di organizzare un'applicazione Laravel in moduli separati, ognuno con la propria struttura di directory simile a un'applicazione Laravel completa. Nel nostro progetto, il modulo `Activity` si trova in `Modules/Activity`.
+Il pacchetto Laravel Modules (documentazione: [https://laravelmodules.com/docs/12/getting-started/introduction](https://laravelmodules.com/docs/12/getting-started/introduction)) consente di organizzare un'applicazione Laravel in moduli separati, ognuno con la propria struttura di directory simile a un'applicazione Laravel completa. Nel nostro progetto, il modulo `Activity` si trova in `Modules/Activity`.
 
 ### Struttura Tipica
 

@@ -6,7 +6,7 @@ describe('Component Files Existence Tests', function (): void {
     test('reorganized component files exist in correct locations', function (): void {
         $themeBasePath = base_path('Themes/Sixteen/resources/views/components');
 
-        if (!is_dir($themeBasePath)) {
+        if (! is_dir($themeBasePath)) {
             $this->markTestSkipped('Theme Sixteen components directory not present in this install.');
         }
 
@@ -53,7 +53,7 @@ describe('Component Files Existence Tests', function (): void {
         ];
 
         foreach ($expected as $relativePath) {
-            if (!file_exists($themeBasePath.$relativePath)) {
+            if (! file_exists($themeBasePath.$relativePath)) {
                 $this->markTestSkipped('Theme Sixteen expected component file missing: '.$relativePath);
             }
         }
@@ -125,7 +125,7 @@ describe('Component Files Existence Tests', function (): void {
     test('no old component files remain in root components directory', function (): void {
         $themeBasePath = base_path('Themes/Sixteen/resources/views/components');
 
-        if (!is_dir($themeBasePath)) {
+        if (! is_dir($themeBasePath)) {
             $this->markTestSkipped('Theme Sixteen components directory not present in this install.');
         }
 
@@ -140,7 +140,7 @@ describe('Component Files Existence Tests', function (): void {
     test('component files contain proper blade syntax', function (): void {
         $themeBasePath = base_path('Themes/Sixteen/resources/views/components');
 
-        if (!is_dir($themeBasePath)) {
+        if (! is_dir($themeBasePath)) {
             $this->markTestSkipped('Theme Sixteen components directory not present in this install.');
         }
 
@@ -158,7 +158,7 @@ describe('Component Files Existence Tests', function (): void {
     test('directory structure is properly organized', function (): void {
         $themeBasePath = base_path('Themes/Sixteen/resources/views/components');
 
-        if (!is_dir($themeBasePath)) {
+        if (! is_dir($themeBasePath)) {
             $this->markTestSkipped('Theme Sixteen components directory not present in this install.');
         }
 

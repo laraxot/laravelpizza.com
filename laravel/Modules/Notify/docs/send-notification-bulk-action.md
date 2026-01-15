@@ -1,12 +1,12 @@
 # SendNotificationBulkAction - Implementazione Completa
 
-**Data**: 2025-01-18
-**Status**: ✅ Implementazione completata e PHPStan Level 10 compliant
+**Data**: 2025-01-18  
+**Status**: ✅ Implementazione completata e PHPStan Level 10 compliant  
 **Module**: Notify
 
 ## Overview
 
-`SendNotificationBulkAction` è la BulkAction Filament riutilizzabile che permette di inviare notifiche a più record contemporaneamente utilizzando template MailTemplate e canali multipli (Email, SMS, WhatsApp).
+`SendNotificationBulkAction` è la BulkAction Filament riutilizzabile che permette di inviare notifiche a più record contemporaneamente utilizzando template MailTemplate e canali multipli (Email, SMS, WhatsApp).  
 Dal 2025‑12‑18 la catena interna è stata ulteriormente semplificata:
 
 ```
@@ -323,6 +323,6 @@ Vedi: [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md)
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-18
-**PHPStan Level**: ✅ 10
+**Ultimo aggiornamento**: 2025-01-18  
+**PHPStan Level**: ✅ 10  
 **Quality**: ✅ PHPMD, PHPInsights compliant

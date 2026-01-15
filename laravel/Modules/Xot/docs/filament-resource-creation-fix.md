@@ -87,14 +87,14 @@ php artisan filament:generate-resources ModuleName
 
 ### Test 1: Comando Standard
 ```bash
-cd /var/www/html/ptvx/laravel
+cd laravel
 php artisan make:filament-resource TestResource3
 ```
 ✅ **Risultato**: Successo - Resource creata in `Modules\Ptv\Filament\Resources\TestResource3s\TestResource3Resource`
 
 ### Test 2: Comando Personalizzato
 ```bash
-cd /var/www/html/ptvx/laravel
+cd laravel
 php artisan filament:generate-resources User
 ```
 ✅ **Risultato**: Successo - 49 resources generate per il modulo User

@@ -178,7 +178,7 @@ Laravel usa `database/migrations/`, `database/factories/`, `database/seeders/` (
 ### Script di Controllo
 
 ```bash
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel/Modules
+cd Modules
 python3 << 'EOF'
 import os
 from collections import defaultdict
@@ -310,7 +310,7 @@ python3 /path/to/check_duplicates.py
 ### Internal Documentation
 - [Modulo Xot Architecture](./architecture.md)
 - [Bashscripts Location Policy](./bashscripts-location-policy.md)
-- [CLAUDE.md - Project Guidelines](/var/www/_bases/base_ptvx_fila4_mono/laravel/CLAUDE.md)
+- [CLAUDE.md - Project Guidelines](CLAUDE.md)
 
 ## 🎯 Conclusioni
 

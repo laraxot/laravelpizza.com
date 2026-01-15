@@ -29,7 +29,7 @@ private function findAttributeValue(Model $record, array $attributes, ?callable 
         }
 
         $value = $record->getAttribute($attribute);
-
+        
         if (! is_string($value) || $value === '') {
             continue;
         }
@@ -52,8 +52,8 @@ Update `getRecordEmail`, `getRecordPhone`, and `getRecordWhatsApp` to use this h
 private function getRecordEmail(Model $record): string
 {
     return $this->findAttributeValue(
-        $record,
-        ['email', 'pec', 'contact_email'],
+        $record, 
+        ['email', 'pec', 'contact_email'], 
         fn($value) => filter_var($value, FILTER_VALIDATE_EMAIL) !== false
     );
 }
@@ -61,7 +61,7 @@ private function getRecordEmail(Model $record): string
 private function getRecordPhone(Model $record): string
 {
     return $this->findAttributeValue(
-        $record,
+        $record, 
         ['mobile', 'phone', 'telephone', 'contact_phone']
     );
 }
@@ -70,11 +70,11 @@ private function getRecordWhatsApp(Model $record): string
 {
     // Check specific whatsapp field first
     $whatsapp = $this->findAttributeValue($record, ['whatsapp']);
-
+    
     if ($whatsapp !== '') {
         return $whatsapp;
     }
-
+    
     // Fallback to phone
     return $this->getRecordPhone($record);
 }

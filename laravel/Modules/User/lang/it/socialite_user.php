@@ -3,52 +3,51 @@
 declare(strict_types=1);
 
 return [
-    'navigation' => [
-        'label' => 'Utente Socialite',
-        'group' => 'Autenticazione',
-        'icon' => 'heroicon-o-user-group',
-        'sort' => 40,
-    ],
-    'label' => 'Utente Socialite',
-    'plural_label' => 'Utenti Socialite',
     'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'user_id' => [
-            'label' => 'Utente',
-        ],
         'provider' => [
-            'label' => 'Provider',
+            'label' => 'provider',
         ],
         'provider_id' => [
-            'label' => 'ID Provider',
+            'label' => 'provider_id',
         ],
         'name' => [
-            'label' => 'Nome',
+            'label' => 'name',
         ],
         'email' => [
-            'label' => 'Email',
+            'label' => 'email',
         ],
         'avatar' => [
-            'label' => 'Avatar',
+            'label' => 'avatar',
         ],
-        'token' => [
-            'label' => 'Token',
+        'create' => [
+            'label' => 'create',
         ],
-        'refresh_token' => [
-            'label' => 'Token di aggiornamento',
+        'attach' => [
+            'label' => 'attach',
         ],
-        'expires_at' => [
-            'label' => 'Scade il',
+        'layout' => [
+            'label' => 'layout',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'detach' => [
+            'label' => 'detach',
+        ],
+        'toggleColumns' => [
+            'label' => 'toggleColumns',
         ],
     ],
-    'actions' => [
-        'link_provider' => [
-            'label' => 'Collega provider',
-        ],
-        'unlink_provider' => [
-            'label' => 'Scollega provider',
-        ],
+    'navigation' => [
+        'sort' => 89,
+        'icon' => 'heroicon-o-user',
+        'group' => 'Authentication',
+        'label' => 'Social Authentications',
     ],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

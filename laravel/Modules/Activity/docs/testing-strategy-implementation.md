@@ -144,7 +144,7 @@ git checkout --theirs {file}  # Usa versione incoming
 ### 1. Risoluzione Conflitti Git (URGENTE)
 
 ```bash
-cd /var/www/html/ptvx/laravel
+cd laravel
 
 # Risolvi tutti i conflitti
 

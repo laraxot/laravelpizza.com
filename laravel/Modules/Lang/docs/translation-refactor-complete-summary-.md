@@ -69,7 +69,7 @@ Tutti i campi di traduzione ora includono la struttura completa a 7 elementi:
 
 ### Documentazione Moduli
 - `/Modules/User/docs/translation-city-field-refactor-2025-08-08.md` - Dettagli refactor modulo User
-- `/Modules/SaluteOra/docs/translation-refactor-summary-2025-08-08.md` - Status modulo SaluteOra
+- `/Modules/<nome progetto>/docs/translation-refactor-summary-2025-08-08.md` - Status modulo <nome progetto>
 
 ## Principi DRY + KISS Applicati
 
@@ -144,7 +144,7 @@ Tutti i campi di traduzione ora includono la struttura completa a 7 elementi:
 
 - [Struttura Campi Traduzione Completa](translation-field-structure-complete.md)
 - [Refactor Modulo User](../Modules/User/docs/translation-city-field-refactor-2025-08-08.md)
-- [Status Modulo SaluteOra](../Modules/SaluteOra/docs/translation-refactor-summary-2025-08-08.md)
+- [Status Modulo <nome progetto>](../Modules/<nome progetto>/docs/translation-refactor-summary-2025-08-08.md)
 
 ---
 

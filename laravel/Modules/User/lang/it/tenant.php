@@ -199,4 +199,5 @@ return [
         ],
     ],
     'label' => 'tenant',
+    'plural_label' => '',
 ];

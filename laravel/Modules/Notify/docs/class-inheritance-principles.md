@@ -1,5 +1,5 @@
 # Principi di Ereditarietà nelle Classi
-# Principi di Ereditarietà nelle Classi SaluteOra
+# Principi di Ereditarietà nelle Classi <nome progetto>
 
 ## Regola Fondamentale: No Duplicate Declarations
 
@@ -75,9 +75,9 @@ Per identificare dichiarazioni duplicate, usare:
 ```bash
 
 # Trova classi che estendono XotBasePage e implementano HasForms
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/saluteora/laravel/Modules/
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/
+grep -r --include="*.php" "extends XotBasePage implements HasForms" Modules/
+grep -r --include="*.php" "extends XotBasePage implements HasForms" Modules/
+grep -r --include="*.php" "extends XotBasePage implements HasForms" Modules/
 ```
 
 ## Riferimenti
@@ -87,7 +87,7 @@ grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/htm
 - [DRY Principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 - [PHP OOP Best Practices](https://phptherightway.com/#object-oriented-programming)
 # Principi di Ereditarietà nelle Classi <nome progetto>
-# Principi di Ereditarietà nelle Classi SaluteOra
+# Principi di Ereditarietà nelle Classi <nome progetto>
 
 ## Regola Fondamentale: No Duplicate Declarations
 
@@ -155,9 +155,9 @@ Per identificare dichiarazioni duplicate, usare:
 ```bash
 
 # Trova classi che estendono XotBasePage e implementano HasForms
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/saluteora/laravel/Modules/
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/<nome progetto>/laravel/Modules/
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/
+grep -r --include="*.php" "extends XotBasePage implements HasForms" Modules/
+grep -r --include="*.php" "extends XotBasePage implements HasForms" Modules/
+grep -r --include="*.php" "extends XotBasePage implements HasForms" Modules/
 ```
 
 ## Riferimenti

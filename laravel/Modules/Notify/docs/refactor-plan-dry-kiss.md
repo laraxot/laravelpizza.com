@@ -146,7 +146,7 @@ Creare sistema di navigazione coerente:
 
 ---
 
-**Stato**: In corso
-**Priorità**: Alta
-**Responsabile**: Sistema automatico
+**Stato**: In corso  
+**Priorità**: Alta  
+**Responsabile**: Sistema automatico  
 **Deadline**: Immediata

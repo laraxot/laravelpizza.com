@@ -30,21 +30,9 @@ class Password extends XotBasePage
     public ?array $formData = [];
 
     /**
-     * Icona per la navigazione.
-     *
-     * @var string|null
-     */
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-document-text';
-
-    /**
      * Vista per la pagina.
      */
     protected string $view = 'user::filament.pages.password';
-
-    /**
-     * Ordinamento nella navigazione.
-     */
-    protected static ?int $navigationSort = 1;
 
     /**
      * Inizializza la pagina.

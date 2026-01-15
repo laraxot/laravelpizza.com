@@ -4,12 +4,12 @@
 
 Il progetto il progetto segue una struttura ben definita che separa chiaramente i componenti funzionali (moduli) dai componenti di presentazione (temi). Questa documentazione descrive la struttura corretta del progetto e le convenzioni da seguire.
 
-> ⚠️ **IMPORTANTE**: Tutti i percorsi all'interno dell'applicazione Laravel DEVONO includere il segmento `laravel/`. Ad esempio, il percorso corretto per un file nel tema One è `/var/www/html/base_<nome progetto>/laravel/Themes/One/...` e NON `/var/www/html/base_<nome progetto>/Themes/One/...`
+> ⚠️ **IMPORTANTE**: Tutti i percorsi all'interno dell'applicazione Laravel DEVONO includere il segmento `laravel/`. Ad esempio, il percorso corretto per un file nel tema One è `Themes/One/...` e NON `Themes/One/...`
 
 ## Struttura Directory Principale
 
 ```
-/var/www/html/<nome progetto>/
+
 ├── laravel/                 # Installazione Laravel (posizione corretta)
 │   ├── app/                 # Codice applicativo base
 │   ├── config/              # Configurazioni
@@ -25,7 +25,7 @@ Il progetto il progetto segue una struttura ben definita che separa chiaramente 
 
 ## Struttura Moduli
 
-I moduli sono componenti funzionali che implementano la logica di business e vanno posizionati in `/var/www/html/<nome progetto>/laravel/Modules/`:
+I moduli sono componenti funzionali che implementano la logica di business e vanno posizionati in `Modules/`:
 
 ```
 laravel/Modules/
@@ -39,7 +39,7 @@ laravel/Modules/
 
 ## Struttura Temi
 
-I temi sono componenti di presentazione che implementano l'interfaccia utente e vanno posizionati in `/var/www/html/<nome progetto>/laravel/Themes/`:
+I temi sono componenti di presentazione che implementano l'interfaccia utente e vanno posizionati in `Themes/`:
 
 ```
 laravel/Themes/

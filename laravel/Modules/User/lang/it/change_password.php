@@ -14,4 +14,12 @@ return [
             'label' => 'Cambia password',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [
+        'cancel' => [
+            'tooltip' => 'cancel',
+        ],
+    ],
 ];

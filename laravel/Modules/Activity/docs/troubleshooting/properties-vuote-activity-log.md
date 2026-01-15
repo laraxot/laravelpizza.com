@@ -203,7 +203,7 @@ class IndennitaResponsabilita extends BaseScheda
 ### Test Manuale
 
 ```bash
-cd /var/www/html/ptvx/laravel
+cd laravel
 php artisan tinker
 ```
 

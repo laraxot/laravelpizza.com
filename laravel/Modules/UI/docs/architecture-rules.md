@@ -145,8 +145,8 @@ class CustomMiddleware
 }
 
 // Non hardcodare percorsi delle risorse
-<img src="/var/www/html/_bases/base_techplanner_fila3_mono/laravel/public/images/avatar.png">
-<img src="/var/www/html/saluteora/laravel/public/images/avatar.png">
+<img src="public/images/avatar.png">
+<img src="public/images/avatar.png">
 
 // Non duplicare la registrazione dei componenti
 Blade::component('ui::components.icon', 'ui.icon');
@@ -602,7 +602,7 @@ class CustomMiddleware
 }
 
 // Non hardcodare percorsi delle risorse
-<img src="/var/www/html/<nome progetto>/laravel/public/images/avatar.png">
+<img src="public/images/avatar.png">
 
 // Non duplicare la registrazione dei componenti
 Blade::component('ui::components.icon', 'ui.icon');

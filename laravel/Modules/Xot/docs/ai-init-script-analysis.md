@@ -2,7 +2,7 @@
 
 ## Situazione Attuale
 
-Dopo aver analizzato il funzionamento dello script `/var/www/_bases/base_quaeris_fila4_mono/bashscripts/ai/ai_init.sh`, ho scoperto quanto segue:
+Dopo aver analizzato il funzionamento dello script `bashscripts/ai/ai_init.sh`, ho scoperto quanto segue:
 
 ### Cartelle Presenti in bashscripts/ai/
 - `.ai` - esiste

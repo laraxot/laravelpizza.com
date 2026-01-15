@@ -76,14 +76,16 @@ Sistema di autenticazione completo con supporto per multiple strategie di login,
 - [Gestione Utenti](./gestione-utenti.md)
 ### Versione HEAD
 
-- [Autorizzazione](./autorizzazione.md)
+- [Autorizzazione](./autorizzazione.md) 
 ## Collegamenti tra versioni di autenticazione.md
 * [autenticazione.md](docs/regole/autenticazione.md)
 * [autenticazione.md](docs/roadmap/core/autenticazione.md)
 * [autenticazione.md](../../../User/project_docs/roadmap/features/autenticazione.md)
 
+
 ### Versione Incoming
 
-- [Autorizzazione](./autorizzazione.md)
+- [Autorizzazione](./autorizzazione.md) 
 
 ---
+

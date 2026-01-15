@@ -211,7 +211,7 @@ This document outlines a comprehensive strategy for implementing a generic moder
 
 ## Addressing Specific Needs Without Hardcoding
 - **Project-Specific Customizations**: Projects using the `User` module can override or extend moderation profiles via their own configuration files or by registering custom validation rules or workflow steps in a service provider.
-- **Example for SaluteOra**: In the context of the SaluteOra project, a user type of 'dentist' can be configured with specific moderation requirements (like license verification) in the project's configuration, without altering the `User` module's generic approach. Similarly, other user types can have their own rules.
+- **Example for <nome progetto>**: In the context of the <nome progetto> project, a user type of 'dentist' can be configured with specific moderation requirements (like license verification) in the project's configuration, without altering the `User` module's generic approach. Similarly, other user types can have their own rules.
 
 ## Benefits of This Approach
 - **Unified System**: Aligns with the philosophy of a unique registration wizard by providing a unique moderation system adaptable to all user types.

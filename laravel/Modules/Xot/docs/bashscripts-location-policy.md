@@ -7,7 +7,7 @@
 ## 📂 Struttura Corretta
 
 ```
-/var/www/_bases/base_ptvx_fila4_mono/
+
 ├── laravel/                    # Codice applicativo (PHP/Laravel)
 │   ├── Modules/
 │   ├── composer.json
@@ -49,7 +49,7 @@ laravel/deploy.sh
 laravel/Modules/Xot/fix-something.sh
 
 # ❌ VIETATO - Script nella root progetto
-/var/www/_bases/base_ptvx_fila4_mono/cleanup.sh
+cleanup.sh
 ```
 
 ## 🧘 La Filosofia (WHY)

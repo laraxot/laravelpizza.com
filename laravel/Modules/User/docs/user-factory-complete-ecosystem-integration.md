@@ -2,18 +2,18 @@
 
 ## 🎯 Integration Achievement
 
-L'integrazione tra il **modulo User** e l'**ecosistema factory SaluteOra** è stata completata con successo, creando un sistema di generazione dati **enterprise-grade** per applicazioni sanitarie multi-modulo.
+L'integrazione tra il **modulo User** e l'**ecosistema factory <nome progetto>** è stata completata con successo, creando un sistema di generazione dati **enterprise-grade** per applicazioni sanitarie multi-modulo.
 
 ## 🏗️ Architectural Foundation
 
 ### Cross-Module Strategy
 ```
 BaseUser (Modules\User\Models\BaseUser)
-├── Connection Strategy: 'user' (default) vs 'salute_ora' (specialized)
+├── Connection Strategy: 'user' (default) vs '<nome progetto>' (specialized)
 ├── Trait Integration: HasTeams, HasRoles, HasAuthenticationLog
 └── Foundation for STI in specialized modules
 
-SaluteOra Factory Ecosystem
+<nome progetto> Factory Ecosystem
 ├── UserFactory (extends BaseUserFactory) - STI Foundation
 ├── PatientFactory (extends UserFactory) - Healthcare Consumer
 ├── DoctorFactory (extends UserFactory) - Healthcare Provider
@@ -25,12 +25,12 @@ SaluteOra Factory Ecosystem
 // BaseUser (User Module) - Foundation
 protected $connection = 'user'; // Default Laravel connection
 
-// SaluteOra User Models - Specialized
-protected $connection = 'salute_ora'; // Healthcare domain connection
+// <nome progetto> User Models - Specialized
+protected $connection = '<nome progetto>'; // Healthcare domain connection
 
 // Factory Resolution
 class UserFactory {
-    protected $model = User::class; // Resolves to SaluteOra\Models\User
+    protected $model = User::class; // Resolves to <nome progetto>\Models\User
 
     // Inherits all BaseUser functionality
     // Adds healthcare-specific business logic
@@ -47,7 +47,7 @@ BaseUser::class
 ├── HasRoles trait (permission management)
 └── HasAuthenticationLog trait (security audit)
 
-// SaluteOra Specialized Implementation
+// <nome progetto> Specialized Implementation
 User::class (extends BaseUser)
 ├── STI Parent for Patient/Doctor/Admin
 ├── Healthcare domain connection
@@ -65,12 +65,12 @@ Admin::class (HasParent trait)
 // Base Factory (User Module)
 // Provides authentication, roles, teams foundation
 
-// SaluteOra UserFactory
+// <nome progetto> UserFactory
 // Adds: codice_fiscale, healthcare addresses, Italian localization
 public function definition(): array {
     return array_merge(parent::definition(), [
         'codice_fiscale' => $this->generateCodiceFiscale(),
-        'connection' => 'salute_ora',
+        'connection' => '<nome progetto>',
         // ... healthcare specific fields
     ]);
 }
@@ -83,7 +83,7 @@ AdminFactory::definition()   // Administrative privileges
 
 ## 📊 Integration Benefits Matrix
 
-| Component | User Module Provides | SaluteOra Adds | Combined Result |
+| Component | User Module Provides | <nome progetto> Adds | Combined Result |
 |-----------|---------------------|----------------|-----------------|
 | **Authentication** | Laravel standard | Healthcare workflows | Medical-grade security |
 | **Authorization** | Roles & Permissions | Medical specializations | Granular clinical access |
@@ -102,9 +102,9 @@ AdminFactory::definition()   // Administrative privileges
         'driver' => 'mysql',
         'database' => env('DB_USER_DATABASE', 'laravel_users'),
     ],
-    'salute_ora' => [ // Healthcare specialized
+    '<nome progetto>' => [ // Healthcare specialized
         'driver' => 'mysql',
-        'database' => env('DB_SALUTEORA_DATABASE', 'saluteora_healthcare'),
+        'database' => env('DB_<nome progetto>_DATABASE', '<nome progetto>_healthcare'),
     ]
 ];
 
@@ -126,7 +126,7 @@ use Modules\User\Models\Traits\HasTeams;
 use Modules\User\Models\Traits\HasRoles;
 use Modules\User\Models\Traits\HasAuthenticationLogTrait;
 
-// SaluteOra models inherit ALL User module capabilities
+// <nome progetto> models inherit ALL User module capabilities
 class Doctor extends User {
     use HasTeams;    // Multi-studio assignment
     use HasRoles;    // Clinical privileges
@@ -149,7 +149,7 @@ class MasterSeeder extends Seeder {
         $teams = Team::factory()->count(5)->create(); // Studios
         $roles = Role::factory()->count(10)->create(); // Permissions
 
-        // 2. Create healthcare ecosystem (SaluteOra module)
+        // 2. Create healthcare ecosystem (<nome progetto> module)
         $systemAdmin = Admin::factory()
             ->systemAdmin()
             ->hasRole('super_admin')
@@ -176,14 +176,14 @@ class MasterSeeder extends Seeder {
 
 ### Cross-Module Testing
 ```php
-// Test User module integration with SaluteOra
+// Test User module integration with <nome progetto>
 public function test_doctor_team_assignment_and_permissions()
 {
     // Create using User module infrastructure
     $studio = Team::factory()->create(['name' => 'Studio Dentistico Roma']);
     $doctorRole = Role::factory()->create(['name' => 'specialist_doctor']);
 
-    // Create using SaluteOra specialized factory
+    // Create using <nome progetto> specialized factory
     $doctor = Doctor::factory()
         ->specialist()
         ->create();
@@ -207,7 +207,7 @@ public function test_healthcare_user_authentication_audit()
     // User module provides authentication logging
     $patient->logAuthentication(request());
 
-    // SaluteOra provides healthcare context
+    // <nome progetto> provides healthcare context
     $this->assertDatabaseHas('authentication_logs', [
         'authenticatable_id' => $patient->id,
         'authenticatable_type' => Patient::class
@@ -227,7 +227,7 @@ class HealthcareSystemInitializer {
             // Phase 1: User module foundation
             $this->createTeamsAndRoles();
 
-            // Phase 2: SaluteOra healthcare specialization
+            // Phase 2: <nome progetto> healthcare specialization
             $this->createHealthcareUsers();
 
             // Phase 3: Cross-module relationships
@@ -265,15 +265,15 @@ class HealthcareSystemInitializer {
 // Multi-module factory performance
 Benchmark::run([
     'User module only' => fn() => User::factory()->count(1000)->create(),
-    'SaluteOra Patient' => fn() => Patient::factory()->count(1000)->create(),
-    'SaluteOra Doctor' => fn() => Doctor::factory()->count(1000)->create(),
+    '<nome progetto> Patient' => fn() => Patient::factory()->count(1000)->create(),
+    '<nome progetto> Doctor' => fn() => Doctor::factory()->count(1000)->create(),
     'Cross-module relations' => fn() => $this->createWithRelations(1000),
 ]);
 
 Results:
 - User module only: 2.1s (baseline)
-- SaluteOra Patient: 2.8s (+33% for healthcare data)
-- SaluteOra Doctor: 3.2s (+52% for professional data)
+- <nome progetto> Patient: 2.8s (+33% for healthcare data)
+- <nome progetto> Doctor: 3.2s (+52% for professional data)
 - Cross-module relations: 4.1s (+95% for complete ecosystem)
 ```
 
@@ -289,7 +289,7 @@ public function test_complete_ecosystem_data_integrity()
     $this->assertAllUsersHaveValidTeams();
     $this->assertAllUsersHaveAppropriateRoles();
 
-    // Verify SaluteOra constraints
+    // Verify <nome progetto> constraints
     $this->assertAllHealthcareUsersHaveValidTypes();
     $this->assertAllCodiciFiscaliAreValid();
 
@@ -311,7 +311,7 @@ tests/
 │   │   ├── AuthenticationTest.php
 │   │   ├── RoleManagementTest.php
 │   │   └── TeamManagementTest.php
-│   └── SaluteOraIntegration/
+│   └── <nome progetto>Integration/
 │       ├── PatientWorkflowTest.php
 │       ├── DoctorCredentialsTest.php
 │       └── AdminPermissionsTest.php
@@ -328,8 +328,8 @@ tests/
 DB_USER_CONNECTION=sqlite
 DB_USER_DATABASE=:memory:
 
-DB_SALUTEORA_CONNECTION=sqlite
-DB_SALUTEORA_DATABASE=:memory:
+DB_<nome progetto>_CONNECTION=sqlite
+DB_<nome progetto>_DATABASE=:memory:
 
 # Enable cross-module testing
 MULTI_MODULE_TESTING=true
@@ -344,7 +344,7 @@ class MultiModuleSeeder extends Seeder {
         // Order matters for referential integrity
         $this->call([
             UserModuleSeeder::class,     // Foundation
-            SaluteOraSeeder::class,      // Healthcare specialization
+            <nome progetto>Seeder::class,      // Healthcare specialization
             RelationshipSeeder::class,   // Cross-module relationships
             PermissionSeeder::class,     // Access control
         ]);
@@ -384,7 +384,7 @@ class MultiModuleSeeder extends Seeder {
 
 ## 🏆 Integration Success Recognition
 
-**The User-SaluteOra factory integration represents a landmark achievement in:**
+**The User-<nome progetto> factory integration represents a landmark achievement in:**
 
 ✅ **Multi-Module Architecture**: Seamless cross-module functionality
 ✅ **Domain Specialization**: Healthcare expertise while maintaining flexibility
@@ -414,18 +414,18 @@ class MultiModuleSeeder extends Seeder {
 
 ## 🎯 Integration Achievement
 
-L'integrazione tra il **modulo User** e l'**ecosistema factory SaluteOra** è stata completata con successo, creando un sistema di generazione dati **enterprise-grade** per applicazioni sanitarie multi-modulo.
+L'integrazione tra il **modulo User** e l'**ecosistema factory <nome progetto>** è stata completata con successo, creando un sistema di generazione dati **enterprise-grade** per applicazioni sanitarie multi-modulo.
 
 ## 🏗️ Architectural Foundation
 
 ### Cross-Module Strategy
 ```
 BaseUser (Modules\User\Models\BaseUser)
-├── Connection Strategy: 'user' (default) vs 'salute_ora' (specialized)
+├── Connection Strategy: 'user' (default) vs '<nome progetto>' (specialized)
 ├── Trait Integration: HasTeams, HasRoles, HasAuthenticationLog
 └── Foundation for STI in specialized modules
 
-SaluteOra Factory Ecosystem
+<nome progetto> Factory Ecosystem
 ├── UserFactory (extends BaseUserFactory) - STI Foundation
 ├── PatientFactory (extends UserFactory) - Healthcare Consumer
 ├── DoctorFactory (extends UserFactory) - Healthcare Provider
@@ -437,12 +437,12 @@ SaluteOra Factory Ecosystem
 // BaseUser (User Module) - Foundation
 protected $connection = 'user'; // Default Laravel connection
 
-// SaluteOra User Models - Specialized
-protected $connection = 'salute_ora'; // Healthcare domain connection
+// <nome progetto> User Models - Specialized
+protected $connection = '<nome progetto>'; // Healthcare domain connection
 
 // Factory Resolution
 class UserFactory {
-    protected $model = User::class; // Resolves to SaluteOra\Models\User
+    protected $model = User::class; // Resolves to <nome progetto>\Models\User
 
     // Inherits all BaseUser functionality
     // Adds healthcare-specific business logic
@@ -459,7 +459,7 @@ BaseUser::class
 ├── HasRoles trait (permission management)
 └── HasAuthenticationLog trait (security audit)
 
-// SaluteOra Specialized Implementation
+// <nome progetto> Specialized Implementation
 User::class (extends BaseUser)
 ├── STI Parent for Patient/Doctor/Admin
 ├── Healthcare domain connection
@@ -477,12 +477,12 @@ Admin::class (HasParent trait)
 // Base Factory (User Module)
 // Provides authentication, roles, teams foundation
 
-// SaluteOra UserFactory
+// <nome progetto> UserFactory
 // Adds: codice_fiscale, healthcare addresses, Italian localization
 public function definition(): array {
     return array_merge(parent::definition(), [
         'codice_fiscale' => $this->generateCodiceFiscale(),
-        'connection' => 'salute_ora',
+        'connection' => '<nome progetto>',
         // ... healthcare specific fields
     ]);
 }
@@ -495,7 +495,7 @@ AdminFactory::definition()   // Administrative privileges
 
 ## 📊 Integration Benefits Matrix
 
-| Component | User Module Provides | SaluteOra Adds | Combined Result |
+| Component | User Module Provides | <nome progetto> Adds | Combined Result |
 |-----------|---------------------|----------------|-----------------|
 | **Authentication** | Laravel standard | Healthcare workflows | Medical-grade security |
 | **Authorization** | Roles & Permissions | Medical specializations | Granular clinical access |
@@ -514,9 +514,9 @@ AdminFactory::definition()   // Administrative privileges
         'driver' => 'mysql',
         'database' => env('DB_USER_DATABASE', 'laravel_users'),
     ],
-    'salute_ora' => [ // Healthcare specialized
+    '<nome progetto>' => [ // Healthcare specialized
         'driver' => 'mysql',
-        'database' => env('DB_SALUTEORA_DATABASE', 'saluteora_healthcare'),
+        'database' => env('DB_<nome progetto>_DATABASE', '<nome progetto>_healthcare'),
     ]
 ];
 
@@ -538,7 +538,7 @@ use Modules\User\Models\Traits\HasTeams;
 use Modules\User\Models\Traits\HasRoles;
 use Modules\User\Models\Traits\HasAuthenticationLogTrait;
 
-// SaluteOra models inherit ALL User module capabilities
+// <nome progetto> models inherit ALL User module capabilities
 class Doctor extends User {
     use HasTeams;    // Multi-studio assignment
     use HasRoles;    // Clinical privileges
@@ -561,7 +561,7 @@ class MasterSeeder extends Seeder {
         $teams = Team::factory()->count(5)->create(); // Studios
         $roles = Role::factory()->count(10)->create(); // Permissions
 
-        // 2. Create healthcare ecosystem (SaluteOra module)
+        // 2. Create healthcare ecosystem (<nome progetto> module)
         $systemAdmin = Admin::factory()
             ->systemAdmin()
             ->hasRole('super_admin')
@@ -588,14 +588,14 @@ class MasterSeeder extends Seeder {
 
 ### Cross-Module Testing
 ```php
-// Test User module integration with SaluteOra
+// Test User module integration with <nome progetto>
 public function test_doctor_team_assignment_and_permissions()
 {
     // Create using User module infrastructure
     $studio = Team::factory()->create(['name' => 'Studio Dentistico Roma']);
     $doctorRole = Role::factory()->create(['name' => 'specialist_doctor']);
 
-    // Create using SaluteOra specialized factory
+    // Create using <nome progetto> specialized factory
     $doctor = Doctor::factory()
         ->specialist()
         ->create();
@@ -619,7 +619,7 @@ public function test_healthcare_user_authentication_audit()
     // User module provides authentication logging
     $patient->logAuthentication(request());
 
-    // SaluteOra provides healthcare context
+    // <nome progetto> provides healthcare context
     $this->assertDatabaseHas('authentication_logs', [
         'authenticatable_id' => $patient->id,
         'authenticatable_type' => Patient::class
@@ -639,7 +639,7 @@ class HealthcareSystemInitializer {
             // Phase 1: User module foundation
             $this->createTeamsAndRoles();
 
-            // Phase 2: SaluteOra healthcare specialization
+            // Phase 2: <nome progetto> healthcare specialization
             $this->createHealthcareUsers();
 
             // Phase 3: Cross-module relationships
@@ -677,15 +677,15 @@ class HealthcareSystemInitializer {
 // Multi-module factory performance
 Benchmark::run([
     'User module only' => fn() => User::factory()->count(1000)->create(),
-    'SaluteOra Patient' => fn() => Patient::factory()->count(1000)->create(),
-    'SaluteOra Doctor' => fn() => Doctor::factory()->count(1000)->create(),
+    '<nome progetto> Patient' => fn() => Patient::factory()->count(1000)->create(),
+    '<nome progetto> Doctor' => fn() => Doctor::factory()->count(1000)->create(),
     'Cross-module relations' => fn() => $this->createWithRelations(1000),
 ]);
 
 Results:
 - User module only: 2.1s (baseline)
-- SaluteOra Patient: 2.8s (+33% for healthcare data)
-- SaluteOra Doctor: 3.2s (+52% for professional data)
+- <nome progetto> Patient: 2.8s (+33% for healthcare data)
+- <nome progetto> Doctor: 3.2s (+52% for professional data)
 - Cross-module relations: 4.1s (+95% for complete ecosystem)
 ```
 
@@ -701,7 +701,7 @@ public function test_complete_ecosystem_data_integrity()
     $this->assertAllUsersHaveValidTeams();
     $this->assertAllUsersHaveAppropriateRoles();
 
-    // Verify SaluteOra constraints
+    // Verify <nome progetto> constraints
     $this->assertAllHealthcareUsersHaveValidTypes();
     $this->assertAllCodiciFiscaliAreValid();
 
@@ -723,7 +723,7 @@ tests/
 │   │   ├── AuthenticationTest.php
 │   │   ├── RoleManagementTest.php
 │   │   └── TeamManagementTest.php
-│   └── SaluteOraIntegration/
+│   └── <nome progetto>Integration/
 │       ├── PatientWorkflowTest.php
 │       ├── DoctorCredentialsTest.php
 │       └── AdminPermissionsTest.php
@@ -740,8 +740,8 @@ tests/
 DB_USER_CONNECTION=sqlite
 DB_USER_DATABASE=:memory:
 
-DB_SALUTEORA_CONNECTION=sqlite
-DB_SALUTEORA_DATABASE=:memory:
+DB_<nome progetto>_CONNECTION=sqlite
+DB_<nome progetto>_DATABASE=:memory:
 
 # Enable cross-module testing
 MULTI_MODULE_TESTING=true
@@ -756,7 +756,7 @@ class MultiModuleSeeder extends Seeder {
         // Order matters for referential integrity
         $this->call([
             UserModuleSeeder::class,     // Foundation
-            SaluteOraSeeder::class,      // Healthcare specialization
+            <nome progetto>Seeder::class,      // Healthcare specialization
             RelationshipSeeder::class,   // Cross-module relationships
             PermissionSeeder::class,     // Access control
         ]);
@@ -796,7 +796,7 @@ class MultiModuleSeeder extends Seeder {
 
 ## 🏆 Integration Success Recognition
 
-**The User-SaluteOra factory integration represents a landmark achievement in:**
+**The User-<nome progetto> factory integration represents a landmark achievement in:**
 
 ✅ **Multi-Module Architecture**: Seamless cross-module functionality
 ✅ **Domain Specialization**: Healthcare expertise while maintaining flexibility

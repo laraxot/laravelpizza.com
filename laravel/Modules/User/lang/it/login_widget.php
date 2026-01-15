@@ -43,4 +43,7 @@ return [
         'forgot_password' => 'Password dimenticata?',
         'errors_title' => 'Si sono verificati degli errori',
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
 ];

@@ -32,6 +32,10 @@ class ExecuteArtisanCommandAction
         'route:cache',
         'event:cache',
         'queue:restart',
+        'passport:install --uuids',
+        'passport:keys',
+        'passport:purge',
+        'passport:hash',
     ];
 
     /**

@@ -2,7 +2,7 @@
 
 ## Introduzione
 
-In un'applicazione multilingue, è comune dover gestire traduzioni che cambiano in base al conteggio di elementi (singolare/plurale). Laravel offre strumenti come `trans_choice()` per semplificare questo processo. Questa documentazione, basata sul corso di Laravel Daily, esplora come implementare la pluralizzazione nel progetto `saluteora`, sia nei file JSON che PHP, e come utilizzare la direttiva `@choice` nelle viste Blade.
+In un'applicazione multilingue, è comune dover gestire traduzioni che cambiano in base al conteggio di elementi (singolare/plurale). Laravel offre strumenti come `trans_choice()` per semplificare questo processo. Questa documentazione, basata sul corso di Laravel Daily, esplora come implementare la pluralizzazione nel progetto `<nome progetto>`, sia nei file JSON che PHP, e come utilizzare la direttiva `@choice` nelle viste Blade.
 ```json
 {
     "{0} You have no new messages|{1} You have 1 new message|[2,*] You have :count new messages": "{0} You have no new messages|{1} You have 1 new message|[2,*] You have :count new messages"
@@ -25,7 +25,7 @@ In un'applicazione multilingue, è comune dover gestire traduzioni che cambiano 
 
 I file PHP offrono un modo più pulito per gestire la pluralizzazione, utilizzando chiavi specifiche.
 
-**Esempio** in `/var/www/html/saluteora/laravel/lang/en/messages.php`:
+**Esempio** in `lang/en/messages.php`:
    - Modifica: Creare o aggiornare il file con traduzioni plurali:
      ```php
      return [
@@ -34,7 +34,7 @@ I file PHP offrono un modo più pulito per gestire la pluralizzazione, utilizzan
          'newPatientIndicator' => '{0} Non hai nuovi pazienti|{1} Hai 1 nuovo paziente|[2,*] Hai :count nuovi pazienti',
      ];
      ```
-- File: `/var/www/html/saluteora/laravel/lang/en/messages.php`
+- File: `lang/en/messages.php`
    - Modifica: Aggiungere o aggiornare l'uso della direttiva `@choice` per mostrare notifiche:
      ```blade
      <div class="notification-bar">

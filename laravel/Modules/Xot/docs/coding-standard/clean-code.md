@@ -247,5 +247,5 @@ Questo documento definisce le linee guida di Clean Code adottate nel progetto, b
    - Non alterare le proprietà cruciali delle classi base
 
 4. **Rispetta la struttura standard dei moduli**
-   - Usa il percorso `/var/www/html/base_<nome progetto>/laravel/Modules/NomeModulo/app/Models/` per i modelli
+   - Usa il percorso `Modules/NomeModulo/app/Models/` per i modelli
    - Usa il namespace `Modules\NomeModulo\Models` (senza "app")

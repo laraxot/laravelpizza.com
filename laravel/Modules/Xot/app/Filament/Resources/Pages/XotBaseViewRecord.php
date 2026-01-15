@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\Pages;
 
+use Filament\Actions\Action;
+use Filament\Actions\ActionGroup;
 use Filament\Resources\Pages\ViewRecord as FilamentViewRecord;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
@@ -22,4 +24,14 @@ abstract class XotBaseViewRecord extends FilamentViewRecord
      * @return array<string, Component>
      */
     abstract protected function getInfolistSchema(): array;
+
+    /**
+     * Get the header actions.
+     *
+     * @return array<string, Action|ActionGroup>
+     */
+    protected function getHeaderActions(): array
+    {
+        return [];
+    }
 }

@@ -105,7 +105,7 @@ public function boot(): void
 **Senza namespace**:
 ```blade
 {{-- Deve sapere il percorso esatto --}}
-@include('/var/www/html/ptvx/laravel/Modules/Activity/resources/views/filament/pages/list-log-activities.blade.php')
+@include('Modules/Activity/resources/views/filament/pages/list-log-activities.blade.php')
 ```
 
 **Con namespace**:
@@ -225,7 +225,7 @@ Per ogni modulo con `$name = 'Activity'`:
 
 ```php
 $path = app(GetViewNameSpacePathAction::class)->execute('activity');
-// Ritorna: "/var/www/html/ptvx/laravel/Modules/Activity/resources/views"
+// Ritorna: "Modules/Activity/resources/views"
 ```
 
 **Implementazione**:
@@ -262,10 +262,10 @@ php artisan tinker
 // Output esempio:
 => [
      "activity" => [
-       "/var/www/html/ptvx/laravel/Modules/Activity/resources/views",
+       "Modules/Activity/resources/views",
      ],
      "xot" => [
-       "/var/www/html/ptvx/laravel/Modules/Xot/resources/views",
+       "Modules/Xot/resources/views",
      ],
      // ...
    ]

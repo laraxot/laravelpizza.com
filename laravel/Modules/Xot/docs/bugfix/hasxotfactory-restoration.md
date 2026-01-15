@@ -11,7 +11,7 @@
 ### Stack Trace
 ```
 Symfony\Component\ErrorHandler\Error\FatalError - Internal Server Error
-During class fetch: Uncaught ErrorException: include(/var/www/_bases/base_quaeris_fila4_mono/laravel/vendor/composer/../../Modules/Xot/app/Models/Traits/HasXotFactory.php):
+During class fetch: Uncaught ErrorException: include(vendor/composer/../../Modules/Xot/app/Models/Traits/HasXotFactory.php):
 Failed to open stream: No such file or directory
 ```
 
@@ -189,7 +189,7 @@ Creati documenti:
 ### Test 1: Autoload Trait
 
 ```bash
-cd /var/www/_bases/base_quaeris_fila4_mono/laravel
+cd laravel
 composer dump-autoload
 ```
 

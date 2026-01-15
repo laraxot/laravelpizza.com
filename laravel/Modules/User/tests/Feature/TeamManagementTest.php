@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Notification;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Modules\User\Models\Team;
 use Modules\User\Models\TeamInvitation;
 use Modules\User\Models\TeamPermission;
@@ -24,7 +23,7 @@ beforeEach(function () {
 
 describe('Team Creation and Management', function () {
     it('can create a team', function () {
-        $slug = 'new-team-' . uniqid();
+        $slug = 'new-team-'.uniqid();
         $team = Team::factory()->create([
             'user_id' => $this->owner->id,
             'name' => 'New Team',
@@ -58,7 +57,7 @@ describe('Team Creation and Management', function () {
         $fresh = $this->team->fresh();
         expect($fresh)->name->toBe('Updated Team Name');
 
-        if ($fresh->getAttribute('description') !== null) {
+        if (null !== $fresh->getAttribute('description')) {
             expect($fresh)->description->toBe('Updated description');
         }
     });
@@ -172,7 +171,7 @@ describe('User Team Relationship', function () {
 describe('Team Invitations', function () {
     it('can validate team slug uniqueness', function (): void {
         // Arrange
-        $slug = 'unique-team-' . uniqid();
+        $slug = 'unique-team-'.uniqid();
         Team::factory()->create(['slug' => $slug]);
 
         // Act & Assert
@@ -186,7 +185,7 @@ describe('Team Invitations', function () {
         ]);
     });
     it('can create team invitations', function () {
-        $email = 'invite-' . uniqid() . '@example.com';
+        $email = 'invite-'.uniqid().'@example.com';
         $invitation = TeamInvitation::factory()->create([
             'team_id' => $this->team->id,
             'email' => $email,
@@ -228,7 +227,7 @@ describe('Team Invitations', function () {
     });
 
     it('prevents duplicate invitations', function () {
-        $email = 'existing-' . uniqid() . '@example.com';
+        $email = 'existing-'.uniqid().'@example.com';
         TeamInvitation::factory()->create([
             'team_id' => $this->team->id,
             'email' => $email,
@@ -246,7 +245,7 @@ describe('Team Invitations', function () {
 describe('Team Permissions', function () {
     it('can have team-specific permissions', function () {
         expect($this->team->permissions())
-            ->toBeInstanceOf(\Illuminate\Database\Eloquent\Relations\HasMany::class);
+            ->toBeInstanceOf(Illuminate\Database\Eloquent\Relations\HasMany::class);
     });
 
     it('can assign permissions to team members', function () {
@@ -259,7 +258,7 @@ describe('Team Permissions', function () {
         $this->team->users()->attach($this->member, ['permissions' => json_encode([$permission->id])]);
         // Or if casted, just array? Assuming array cast on pivot or accessor
         // But attach expects scalar or json for simple columns.
-        
+
         // Test permission assignment logic
         expect($permission->team_id)->toBe($this->team->id);
     });
@@ -288,7 +287,7 @@ describe('Team Scopes and Queries', function () {
     });
 
     it('can find teams by slug', function () {
-        $slug = 'unique-team-slug-' . uniqid();
+        $slug = 'unique-team-slug-'.uniqid();
         $team = Team::factory()->create(['slug' => $slug]);
 
         $foundTeam = Team::where('slug', $slug)->first();
@@ -366,7 +365,6 @@ describe('Team Events and Notifications', function () {
 
     it('can log team activities', function () {
         $this->team->users()->attach($this->member);
-
 
         // Test activity logging when members join/leave
         expect($this->team->users->contains($this->member))->toBeTrue();

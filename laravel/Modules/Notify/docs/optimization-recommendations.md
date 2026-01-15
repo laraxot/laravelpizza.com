@@ -234,7 +234,7 @@ php artisan notify:benchmark
 
 #### 1. Riusabilità Compromessa
 - **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
-- **336+ occorrenze hardcoded** di "saluteora" in test e documentazione
+- **336+ occorrenze hardcoded** di "<nome progetto>" in test e documentazione
 - **Import diretti** da moduli project-specific
 - **Configurazioni database** hardcoded nei test
 - **Email domains** hardcoded nei test
@@ -249,13 +249,13 @@ php artisan notify:benchmark
 - Test che utilizzano `User::factory()` invece di `XotData::make()->getUserClass()`
 - Configurazioni database hardcoded
 - Riferimenti diretti a modelli <nome progetto>
-- Riferimenti diretti a modelli SaluteOra
+- Riferimenti diretti a modelli <nome progetto>
 
 ## ✅ OTTIMIZZAZIONI IMPLEMENTATE
 
 ### Riusabilità
 1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "<nome progetto>"
-1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "SaluteOra"
+1. **NotificationManagementBusinessLogicTest.php**: Rimosso hardcoding "<nome progetto>"
 2. **NotifyThemeableFactory.php**: Implementato `getProjectNamespace()` dinamico
 3. **File di traduzione**: Aggiornati placeholder con `{{app_name}}`
 4. **Documentazione base**: Creata guida riusabilità
@@ -270,7 +270,7 @@ php artisan notify:benchmark
 // ❌ PRIMA
 $user = User::factory()->create();
 'database' => '<nome progetto>_test'
-'database' => 'saluteora_test'
+'database' => '<nome progetto>_test'
 
 // ✅ DOPO
 $userClass = XotData::make()->getUserClass();

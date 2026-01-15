@@ -64,4 +64,9 @@ return [
             'description' => 'Il valore inserito è troppo corto.',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
+    'actions' => [],
 ];

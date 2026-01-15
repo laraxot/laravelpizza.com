@@ -57,7 +57,7 @@ Current modules for admin@example.com: User, Xot, UI
 
 Select modules (checked = assigned, unchecked = will be revoked):
  ◉ User
- ◉ Xot
+ ◉ Xot  
  ◉ UI
  ◯ Performance
  ◯ Patient
@@ -243,4 +243,4 @@ Modules/User/
 - [ ] Logging strutturato
 - [ ] Metriche di utilizzo
 
-*Ultimo aggiornamento: 2025-01-27*
+*Ultimo aggiornamento: 2025-01-27* 

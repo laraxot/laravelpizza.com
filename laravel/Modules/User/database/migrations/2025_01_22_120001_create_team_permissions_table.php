@@ -22,17 +22,17 @@ return new class extends XotBaseMigration {
             $table->foreignId('team_id')->constrained('teams')->cascadeOnDelete();
             $table->string('permission'); // The permission key/slug
             $table->string('name')->nullable(); // Human readable name
-            
+
             // Optional: Add uniqueness if needed, e.g. unique(['team_id', 'permission'])
             $table->unique(['team_id', 'permission']);
         });
 
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
-             if (! $this->hasColumn('permission')) {
+            if (! $this->hasColumn('permission')) {
                 $table->string('permission');
             }
-             if (! $this->hasColumn('name')) {
+            if (! $this->hasColumn('name')) {
                 $table->string('name')->nullable();
             }
 

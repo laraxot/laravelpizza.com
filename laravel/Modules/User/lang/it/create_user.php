@@ -29,4 +29,7 @@ return [
             'icon' => 'logout',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
 ];

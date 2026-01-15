@@ -5,7 +5,7 @@
 
 ## ⚠️ VIOLAZIONE GRAVE IDENTIFICATA
 
-Il file `/var/www/_bases/base_laravelpizza/laravel/Modules/User/database/migrations/2025_05_16_221811_add_owner_id_to_teams_table.php` **viola gravemente la filosofia, religione e politica Laraxot**.
+Il file `Modules/User/database/migrations/2025_05_16_221811_add_owner_id_to_teams_table.php` **viola gravemente la filosofia, religione e politica Laraxot**.
 
 ## Problema Identificato
 

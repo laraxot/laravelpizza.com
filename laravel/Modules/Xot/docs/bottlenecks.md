@@ -628,13 +628,13 @@ public function generateReport(Request $request)
 # Aggiungere al Supervisor
 [program:laravel-worker]
 process_name=%(program_name)s_%(process_num)02d
-command=php /var/www/html/base_<nome progetto>/laravel/artisan queue:work database --sleep=3 --tries=3 --max-time=3600
+command=php artisan queue:work database --sleep=3 --tries=3 --max-time=3600
 autostart=true
 autorestart=true
 user=www-data
 numprocs=8
 redirect_stderr=true
-stdout_logfile=/var/www/html/base_<nome progetto>/laravel/storage/logs/worker.log
+stdout_logfile=storage/logs/worker.log
 ```
 
 5. **Implementare Notifiche di Completamento**

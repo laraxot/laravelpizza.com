@@ -116,7 +116,7 @@ class SendSmsFactorSMSAction implements SmsActionContract
     public function __construct()
     {
         $this->smsFactorData = SmsFactorData::make();
-
+        
         if (!$this->smsFactorData->token) {
             throw new Exception('Token SMSFactor non configurato in sms.php');
         }
@@ -129,9 +129,9 @@ class SendSmsFactorSMSAction implements SmsActionContract
             'timeout' => $this->smsFactorData->getTimeout(),
             'headers' => $headers
         ]);
-
+        
         $response = $client->post(
-            $this->smsFactorData->getBaseUrl() . '/messages',
+            $this->smsFactorData->getBaseUrl() . '/messages', 
             ['json' => $body]
         );
     }

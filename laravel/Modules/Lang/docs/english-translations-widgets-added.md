@@ -1,17 +1,17 @@
-# English Translations Added for SaluteOra Widgets
+# English Translations Added for <nome progetto> Widgets
 
 ## ✅ Problema Risolto
 
 ### Errore Segnalato
 ```
 mancano queste traduzioni in inglese:
-saluteora::widgets.doctor_appointments.empty.title
-saluteora::widgets.doctor_appointments.empty.description
+<nome progetto>::widgets.doctor_appointments.empty.title
+<nome progetto>::widgets.doctor_appointments.empty.description
 ```
 
 ### Causa del Problema
 
-Il file `laravel/Modules/SaluteOra/lang/en/widgets.php` era **incompleto** rispetto alla versione italiana:
+Il file `laravel/Modules/<nome progetto>/lang/en/widgets.php` era **incompleto** rispetto alla versione italiana:
 
 - **File italiano**: 239 righe con traduzioni complete per tutti i widgets
 - **File inglese**: 29 righe con solo traduzioni parziali per `find_doctor_widget`
@@ -94,7 +94,7 @@ Traduzioni per widget filtro studio con:
 
 ### Prima
 ```php
-// File: laravel/Modules/SaluteOra/lang/en/widgets.php
+// File: laravel/Modules/<nome progetto>/lang/en/widgets.php
 return [
     'find_doctor_widget' => [
         // Solo traduzioni parziali...
@@ -105,7 +105,7 @@ return [
 
 ### Dopo
 ```php
-// File: laravel/Modules/SaluteOra/lang/en/widgets.php
+// File: laravel/Modules/<nome progetto>/lang/en/widgets.php
 return [
     'studio_overview' => [/* Traduzioni complete */],
     'find_doctor_and_appointment' => [/* Traduzioni complete */],
@@ -119,7 +119,7 @@ return [
 ## 🚀 Benefici
 
 1. **Internazionalizzazione Completa**: Il sistema ora supporta completamente l'inglese
-2. **Widget Bilingui**: Tutti i widget SaluteOra funzionano in entrambe le lingue
+2. **Widget Bilingui**: Tutti i widget <nome progetto> funzionano in entrambe le lingue
 3. **Coerenza**: Pattern uniforme tra file italiano e inglese
 4. **Manutenibilità**: Struttura espansa standard per tutti i campi
 
@@ -129,10 +129,10 @@ Per testare le traduzioni aggiunte:
 
 ```php
 // Nel browser o in tinker
-__('saluteora::widgets.doctor_appointments.empty.title')
+__('<nome progetto>::widgets.doctor_appointments.empty.title')
 // Output: "No pending appointments"
 
-__('saluteora::widgets.doctor_appointments.empty.description')
+__('<nome progetto>::widgets.doctor_appointments.empty.description')
 // Output: "You have no appointments to confirm at this time."
 ```
 
@@ -145,8 +145,8 @@ __('saluteora::widgets.doctor_appointments.empty.description')
 
 ## Collegamenti
 
-- [File italiano completo](../laravel/Modules/SaluteOra/lang/it/widgets.php)
-- [File inglese aggiornato](../laravel/Modules/SaluteOra/lang/en/widgets.php)
-- [Widget DoctorAppointments](../laravel/Modules/SaluteOra/app/Filament/Widgets/DoctorAppointmentsWidget.php)
+- [File italiano completo](../laravel/Modules/<nome progetto>/lang/it/widgets.php)
+- [File inglese aggiornato](../laravel/Modules/<nome progetto>/lang/en/widgets.php)
+- [Widget DoctorAppointments](../laravel/Modules/<nome progetto>/app/Filament/Widgets/DoctorAppointmentsWidget.php)
 
 *Risoluzione completata: 2025-01-21*

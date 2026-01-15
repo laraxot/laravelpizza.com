@@ -82,8 +82,8 @@ I componenti `FileUpload` si aspettano array:
 4. **Wizard Navigation**: Verifica navigazione tra step senza perdere file
 ### Comandi Test
 ```bash
-cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
+cd laravel
+cd laravel
 php artisan test --filter=RegistrationWidget
 ./vendor/bin/phpstan analyze Modules/User/app/Filament/Widgets/RegistrationWidget.php --level=9
 ### Test Manuale per Verifica
@@ -133,7 +133,7 @@ Questo pattern può essere riutilizzato in altri widget che:
 - [RegistrationWidget.php](../../app/Filament/Widgets/RegistrationWidget.php) - Widget corretto
 - [XotBaseResource.php](../../../Xot/app/Filament/Resources/XotBaseResource.php) - Schema attachments migliorato
 - [PatientResource.php](../../../<nome modulo>/app/Filament/Resources/PatientResource.php) - Risorsa paziente
-- [PatientResource.php](../../../SaluteOra/app/Filament/Resources/PatientResource.php) - Risorsa paziente
+- [PatientResource.php](../../../<nome progetto>/app/Filament/Resources/PatientResource.php) - Risorsa paziente
 - [Widget Error Troubleshooting](../../../Xot/docs/troubleshooting/widget-errors.md) - Guide generali
 - [Widget Error Troubleshooting](../../../Xot/project_docs/troubleshooting/widget-errors.md) - Guide generali
 ---

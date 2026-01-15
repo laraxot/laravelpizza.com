@@ -50,7 +50,7 @@ abstract class BaseUserResource extends XotBaseResource
                     ->password()
                     ->dehydrateStateUsing(function ($state) {
                         if (empty($state)) {
-                            return null;
+                            return;
                         }
 
                         return is_string($state) ? Hash::make($state) : null;

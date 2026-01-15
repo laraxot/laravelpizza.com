@@ -1,293 +1,187 @@
-# Regole Critiche per Filament Resources - Laraxot PTVX
+# Regole per le Risorse Filament in <nome progetto>
 
-## ⚠️ ERRORI GRAVI DA EVITARE ASSOLUTAMENTE
+## Panoramica
 
-### 1. USO DI `->label()`, `->placeholder()`, `->helperText()` - VIETATO!
+Questo documento definisce le regole fondamentali per l'implementazione delle risorse Filament nel progetto <nome progetto>. Seguire queste linee guida è essenziale per garantire coerenza, manutenibilità e prestazioni ottimali dell'applicazione.
 
-**❌ ERRORE GRAVE - MAI FARE QUESTO:**
+## Estensione di XotBaseResource
+
+Tutte le risorse Filament in <nome progetto> **DEVONO** estendere `Modules\Xot\Filament\Resources\XotBaseResource` invece di `Filament\Resources\Resource`. Questa classe base personalizzata fornisce funzionalità specifiche per il progetto e garantisce coerenza in tutta l'applicazione.
+
 ```php
-TextInput::make('ente')->label('Ente')  // ❌ VIETATO!
-DatePicker::make('anv2kd')->label('Data inizio validità')  // ❌ VIETATO!
-Toggle::make('anvist')->label('Stato attivo')  // ❌ VIETATO!
-```
+// ✅ CORRETTO
+use Modules\Xot\Filament\Resources\XotBaseResource;
 
-**✅ CORRETTO:**
-```php
-TextInput::make('ente')  // ✅ Label gestita automaticamente
-DatePicker::make('anv2kd')  // ✅ Label gestita automaticamente
-Toggle::make('anvist')  // ✅ Label gestita automaticamente
-```
-
-**Motivazione**: Le traduzioni sono gestite automaticamente dal LangServiceProvider tramite i file di traduzione. Usare `->label()` viola l'architettura e crea duplicazioni.
-
-### 2. METODI NON NECESSARI IN XotBaseResource - VIETATO!
-
-**❌ ERRORE GRAVE - MAI IMPLEMENTARE QUESTI METODI IN XotBaseResource:**
-```php
-public static function getTableColumns(): array { ... }  // ❌ VIETATO in XotBaseResource!
-public static function getTableFilters(): array { ... }  // ❌ VIETATO in XotBaseResource!
-public static function getTableActions(): array { ... }  // ❌ VIETATO in XotBaseResource!
-public static function getTableBulkActions(): array { ... }  // ❌ VIETATO in XotBaseResource!
-```
-
-**✅ CORRETTO per XotBaseResource:**
-```php
-// NESSUN metodo - gestiti automaticamente da XotBaseResource
-class IntegparamResource extends XotBaseResource
+class DoctorResource extends XotBaseResource
 {
-    protected static ?string $model = Integparam::class;
+    // ...
+}
 
-    public static function getFormSchema(): array
-    {
-        return [
-            // Solo getFormSchema() è obbligatorio
-        ];
-    }
+// ❌ ERRATO
+use Filament\Resources\Resource;
+
+class DoctorResource extends Resource
+{
+    // ...
 }
 ```
 
-**Motivazione**: XotBaseResource gestisce automaticamente questi metodi. Implementarli manualmente viola il principio DRY e crea inconsistenze.
+## Proprietà e Metodi da NON Dichiarare
 
-### 3. getPages() NON NECESSARIO - VIETATO!
+Le classi che estendono `XotBaseResource` **NON DEVONO** dichiarare le seguenti proprietà e metodi, poiché sono già gestiti dalla classe base o non sono consentiti per garantire coerenza architetturale:
 
-**❌ ERRORE GRAVE - MAI FARE QUESTO:**
+### Proprietà di Navigazione
+
 ```php
-public static function getPages(): array
+// ❌ NON DICHIARARE QUESTE PROPRIETÀ
+protected static ?string $navigationIcon = 'heroicon-o-users';
+protected static ?string $navigationGroup = 'Utenti';
+protected static ?string $navigationSort = 1;
+protected static ?string $translationPrefix = 'module::resource';
+```
+
+### Metodi di Navigazione
+
+```php
+// ❌ NON DICHIARARE QUESTI METODI
+public static function getNavigationLabel(): string
+public static function getPluralModelLabel(): string
+public static function getModelLabel(): string
+```
+
+### Metodi di Tabella
+
+```php
+// ❌ NON DICHIARARE QUESTI METODI
+public static function table(Table $table): Table
+public static function getListTableColumns(): array
+```
+
+## Cosa Dichiarare
+
+Le classi che estendono `XotBaseResource` **DEVONO** dichiarare solo:
+
+```php
+// ✅ DICHIARARE SOLO QUESTE PROPRIETÀ/METODI
+protected static ?string $model = YourModel::class;
+
+public static function getFormSchema(): array
 {
     return [
-        'index' => Pages\ListIntegparams::route('/'),
-        'create' => Pages\CreateIntegparam::route('/create'),
-        'edit' => Pages\EditIntegparam::route('/{record}/edit'),
-        'view' => Pages\ViewIntegparam::route('/{record}'),
+        'field_name' => Forms\Components\TextInput::make('field_name'),
+        // Altri campi...
     ];
 }
 ```
 
-**✅ CORRETTO:**
+## Traduzioni e Etichette
+
+**NON** utilizzare mai il metodo `->label()` nei componenti Filament. Le etichette sono gestite automaticamente dal `LangServiceProvider` utilizzando i file di traduzione.
+
 ```php
-// NESSUN getPages() - gestito automaticamente da XotBaseResource
+// ❌ ERRATO
+Forms\Components\TextInput::make('first_name')
+    ->label('Nome')
+
+// ✅ CORRETTO
+Forms\Components\TextInput::make('first_name')
+    // L'etichetta sarà recuperata automaticamente dal file di traduzione
 ```
 
-**Motivazione**: Se getPages() restituisce solo le pagine standard (index, create, edit, view), è gestito automaticamente da XotBaseResource. Implementarlo manualmente è ridondante.
+## Namespace di Traduzione
 
-## ⚠️ REGOLE SPECIFICHE PER XotBaseListRecords
-
-### Metodo OBBLIGATORIO: getTableColumns()
-
-**⚠️ IMPORTANTE**: Tutte le classi che estendono `XotBaseListRecords` DEVONO implementare il metodo `getTableColumns()`:
+**NON** utilizzare la proprietà `$translationPrefix` nelle classi che estendono `XotBaseResource`. Utilizzare invece direttamente il namespace di traduzione:
 
 ```php
-class ListIntegparams extends XotBaseListRecords
+// ❌ ERRATO
+$prefix = static::$translationPrefix;
+__("{$prefix}.field_name")
+
+// ✅ CORRETTO
+__('module::resource.field_name')
+```
+
+## Relazioni
+
+Se il metodo `getRelations()` restituisce un array vuoto, **NON** dichiararlo:
+
+```php
+// ❌ ERRATO
+public static function getRelations(): array
 {
-    protected static string $resource = IntegparamResource::class;
-
-    /**
-     * Get the table columns.
-     *
-     * @return array<string, \Filament\Tables\Columns\Column>
-     */
-    public function getTableColumns(): array
-    {
-        return [
-            'ente' => Tables\Columns\TextColumn::make('ente')
-                ->searchable()
-                ->sortable(),
-            'matr' => Tables\Columns\TextColumn::make('matr')
-                ->searchable()
-                ->sortable(),
-            'conome' => Tables\Columns\TextColumn::make('conome')
-                ->searchable()
-                ->sortable(),
-            'nome' => Tables\Columns\TextColumn::make('nome')
-                ->searchable()
-                ->sortable(),
-            'anv2kd' => Tables\Columns\TextColumn::make('anv2kd')
-                ->date()
-                ->sortable(),
-            'anv2ka' => Tables\Columns\TextColumn::make('anv2ka')
-                ->date()
-                ->sortable(),
-            'anvist' => Tables\Columns\IconColumn::make('anvist')
-                ->boolean()
-                ->sortable(),
-            'anvpar' => Tables\Columns\TextColumn::make('anvpar')
-                ->searchable(),
-            'anvimp' => Tables\Columns\TextColumn::make('anvimp')
-                ->numeric()
-                ->sortable(),
-            'anvqta' => Tables\Columns\TextColumn::make('anvqta')
-                ->numeric()
-                ->sortable(),
-            'anvvoc' => Tables\Columns\TextColumn::make('anvvoc')
-                ->searchable(),
-            'anvdes' => Tables\Columns\TextColumn::make('anvdes')
-                ->limit(50)
-                ->searchable(),
-        ];
-    }
+    return [];
 }
+
+// ✅ CORRETTO
+// Non dichiarare il metodo se restituisce un array vuoto
 ```
 
-**Regole per getTableColumns() in XotBaseListRecords:**
+## Pagine
 
-1. **Visibilità**: SEMPRE `public`
-2. **Tipo di ritorno**: SEMPRE `array<string, \Filament\Tables\Columns\Column>`
-3. **Struttura**: Array associativo con chiavi stringa
-4. **Campi Reali**: MAI inventare campi, usare solo quelli del modello
-5. **Traduzioni**: MAI usare `->label()`, gestite da LangServiceProvider
-6. **Tipizzazione**: Includere PHPDoc completo
+Se il metodo `getPages()` contiene solo le route standard (index, create, edit), **NON** dichiararlo:
 
-## REGOLE FONDAMENTALI
-
-### 1. Estensione Corretta
 ```php
-// ✅ SEMPRE estendere XotBaseResource
-class IntegparamResource extends XotBaseResource
+// ❌ ERRATO
+public static function getPages(): array
 {
-    protected static ?string $model = Integparam::class;
-
-    // Solo getFormSchema() è obbligatorio
-    public static function getFormSchema(): array
-    {
-        return [
-            TextInput::make('ente')->required()->maxLength(10),
-            TextInput::make('matr')->required()->maxLength(10),
-            // NESSUN ->label()!
-        ];
-    }
+    return [
+        'index' => Pages\ListRecords::route('/'),
+        'create' => Pages\CreateRecord::route('/create'),
+        'edit' => Pages\EditRecord::route('/{record}/edit'),
+    ];
 }
+
+// ✅ CORRETTO
+// Non dichiarare il metodo se contiene solo le route standard
 ```
 
-### 2. Pagine Corrette
-```php
-// ✅ SEMPRE estendere le classi base di Xot
-class ListIntegparams extends XotBaseListRecords  // DEVE avere getTableColumns()
-class CreateIntegparam extends XotBaseCreateRecord
-class EditIntegparam extends XotBaseEditRecord
-class ViewIntegparam extends XotBaseViewRecord
-```
+## Motivazioni
 
-### 3. Traduzioni Automatiche
-```php
-// ✅ Le traduzioni vengono dai file di lingua
-// Modules/Progressioni/lang/it/integparam.php
-return [
-    'fields' => [
-        'ente' => [
-            'label' => 'Ente',
-            'placeholder' => 'Inserisci codice ente',
-            'help' => 'Codice identificativo dell\'ente',
-        ],
-    ],
-];
-```
+1. **Centralizzazione della Configurazione**: Le configurazioni comuni sono centralizzate nella classe base
+2. **Manutenibilità**: Riduce la duplicazione del codice e semplifica gli aggiornamenti
+3. **Coerenza**: Garantisce un'esperienza utente coerente in tutta l'applicazione
+4. **Localizzazione**: Facilita la gestione delle traduzioni
+5. **Prestazioni**: Riduce il carico di memoria evitando la duplicazione di codice
 
-## CHECKLIST OBBLIGATORIA
-
-Prima di considerare completa una Filament Resource:
-
-### ✅ Estensione Base
-- [ ] Estende `XotBaseResource` (NON `Resource`)
-- [ ] Estende `XotBaseListRecords` (NON `ListRecords`)
-- [ ] Estende `XotBaseCreateRecord` (NON `CreateRecord`)
-- [ ] Estende `XotBaseEditRecord` (NON `EditRecord`)
-- [ ] Estende `XotBaseViewRecord` (NON `ViewRecord`)
-
-### ✅ Metodi Implementati
-- [ ] SOLO `getFormSchema()` implementato in XotBaseResource
-- [ ] NESSUN `getTableColumns()` in XotBaseResource (gestito automaticamente)
-- [ ] NESSUN `getTableFilters()` in XotBaseResource (gestito automaticamente)
-- [ ] NESSUN `getTableActions()` in XotBaseResource (gestito automaticamente)
-- [ ] NESSUN `getTableBulkActions()` in XotBaseResource (gestito automaticamente)
-- [ ] NESSUN `getPages()` se restituisce solo pagine standard
-- [ ] **OBBLIGATORIO**: `getTableColumns()` implementato in XotBaseListRecords
-
-### ✅ Traduzioni
-- [ ] NESSUN `->label()` nei form components
-- [ ] NESSUN `->placeholder()` hardcoded
-- [ ] NESSUN `->helperText()` hardcoded
-- [ ] File di traduzione completo nel modulo
-
-### ✅ Campi Reali
-- [ ] Tutti i campi esistono nel modello
-- [ ] Campi presi da `$fillable` del modello
-- [ ] Verificato con la migrazione
-
-## ESEMPIO CORRETTO
+## Esempio Completo
 
 ```php
 <?php
 
 declare(strict_types=1);
 
-namespace Modules\Progressioni\Filament\Resources;
+namespace Modules\Patient\Filament\Resources;
 
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\Section;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
-use Modules\Sigma\Models\Integparam;
+use Filament\Forms;
+use Modules\Patient\Models\Doctor;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 
-class IntegparamResource extends XotBaseResource
+class DoctorResource extends XotBaseResource
 {
-    protected static ?string $model = Integparam::class;
+    protected static ?string $model = Doctor::class;
 
     public static function getFormSchema(): array
     {
         return [
-            Section::make('Dati Anagrafici')
-                ->schema([
-                    TextInput::make('ente')->required()->maxLength(10),
-                    TextInput::make('matr')->required()->maxLength(10),
-                    TextInput::make('conome')->required()->maxLength(50),
-                    TextInput::make('nome')->required()->maxLength(50),
-                ])
-                ->columns(2),
+            'first_name' => Forms\Components\TextInput::make('first_name')
+                ->required()
+                ->maxLength(255),
 
-            Section::make('Validità Temporale')
-                ->schema([
-                    DatePicker::make('anv2kd')->required(),
-                    DatePicker::make('anv2ka')->required()->after('anv2kd'),
-                    Toggle::make('anvist')->default(0),
-                ])
-                ->columns(3),
+            'last_name' => Forms\Components\TextInput::make('last_name')
+                ->required()
+                ->maxLength(255),
 
-            Section::make('Parametri')
-                ->schema([
-                    TextInput::make('anvpar')->required()->maxLength(20),
-                    TextInput::make('anvimp')->numeric()->required()->step(0.00001),
-                    TextInput::make('anvqta')->numeric()->default(0.00)->step(0.01),
-                    TextInput::make('anvvoc')->required()->maxLength(10),
-                    Textarea::make('anvdes')->required()->maxLength(100)->rows(3),
-                ])
-                ->columns(2),
+            'email' => Forms\Components\TextInput::make('email')
+                ->email()
+                ->required()
+                ->maxLength(255),
         ];
     }
 }
 ```
 
-## MOTIVAZIONI ARCHITETTURALI
+## Documentazione Correlata
 
-1. **Separazione delle Responsabilità**: XotBaseResource gestisce la logica comune
-2. **DRY (Don't Repeat Yourself)**: Evita duplicazione di codice
-3. **Consistenza**: Tutte le risorse seguono lo stesso pattern
-4. **Manutenibilità**: Modifiche centralizzate nelle classi base
-5. **Traduzioni Automatiche**: LangServiceProvider gestisce tutte le traduzioni
-
-## ERRORI COMUNI E SOLUZIONI
-
-### Errore: "Class contains abstract method"
-**Causa**: Non implementato metodo obbligatorio
-**Soluzione**: Implementare solo i metodi richiesti dalla classe base
-
-### Errore: "Label not found"
-**Causa**: Uso di `->label()` invece di traduzioni
-**Soluzione**: Rimuovere `->label()` e aggiungere traduzioni nel file di lingua
-
-### Errore: "Method already exists"
-**Causa**: Override di metodi già gestiti da XotBaseResource
-**Soluzione**: Rimuovere i metodi non necessari
-
-*Ultimo aggiornamento: 5 giugno 2025*
+- [Filament Form Builder](/project_docs/filament-form-builder.md)
+- [Gestione delle Traduzioni](/project_docs/translation-management.md)
+- [Estensione delle Classi Filament](/project_docs/filament-extension-pattern.md)

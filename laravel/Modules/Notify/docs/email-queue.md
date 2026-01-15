@@ -168,7 +168,7 @@ return [
 ```ini
 [program:laravel-mail-worker]
 process_name=%(program_name)s_%(process_num)02d
-command=php /var/www/html/base_<nome progetto>/laravel/artisan queue:work redis --queue=mail-high,mail-default --tries=3 --timeout=60
+command=php artisan queue:work redis --queue=mail-high,mail-default --tries=3 --timeout=60
 autostart=true
 autorestart=true
 user=www-data
@@ -576,7 +576,7 @@ return [
 ```ini
 [program:laravel-mail-worker]
 process_name=%(program_name)s_%(process_num)02d
-command=php /var/www/html/base_<nome progetto>/laravel/artisan queue:work redis --queue=mail-high,mail-default --tries=3 --timeout=60
+command=php artisan queue:work redis --queue=mail-high,mail-default --tries=3 --timeout=60
 autostart=true
 autorestart=true
 user=www-data

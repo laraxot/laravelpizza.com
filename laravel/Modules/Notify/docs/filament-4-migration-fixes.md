@@ -44,10 +44,10 @@ The application was using deprecated Filament 3 components that don't exist in F
 
 ## Files Modified
 
-1. `/var/www/html/ptvx/laravel/Modules/Notify/resources/views/filament/pages/send-email.blade.php`
-2. `/var/www/html/ptvx/laravel/Modules/Notify/resources/views/filament/pages/send-sms.blade.php`
-3. `/var/www/html/ptvx/laravel/Modules/Notify/resources/views/filament/pages/send-push-notification.blade.php`
-4. `/var/www/html/ptvx/laravel/Modules/Notify/resources/views/filament/pages/send-email-parameters.blade.php`
+1. `Modules/Notify/resources/views/filament/pages/send-email.blade.php`
+2. `Modules/Notify/resources/views/filament/pages/send-sms.blade.php`
+3. `Modules/Notify/resources/views/filament/pages/send-push-notification.blade.php`
+4. `Modules/Notify/resources/views/filament/pages/send-email-parameters.blade.php`
 
 ## Verification
 

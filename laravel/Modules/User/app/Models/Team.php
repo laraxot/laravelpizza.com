@@ -86,19 +86,16 @@ class Team extends BaseTeam
     ];
 
     /**
-     * @var array<string, string>
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
      */
-    protected $casts = [
-        'personal_team' => 'boolean',
-        'settings' => 'array',
-    ];
-
-    public function users(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    protected function casts(): array
     {
-        return $this->belongsToMany(User::class, 'team_user')
-            ->withPivot(['role', 'permissions', 'joined_at'])
-            ->withTimestamps()
-            ->as('membership');
+        return [
+            'personal_team' => 'boolean',
+            'settings' => 'array',
+        ];
     }
 
     public function permissions(): \Illuminate\Database\Eloquent\Relations\HasMany

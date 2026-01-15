@@ -384,4 +384,5 @@ return [
         'user' => 'Utente',
     ],
     'label' => 'role',
+    'plural_label' => '',
 ];

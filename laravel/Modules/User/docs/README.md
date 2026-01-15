@@ -348,6 +348,7 @@ $user->revokeDevice($deviceId);
 #### UserResource
 **Purpose**: Complete CRUD interface for user management
 
+
 **Features**:
 - User creation and editing
 - Role and permission assignment
@@ -390,12 +391,99 @@ $user->revokeDevice($deviceId);
 
 #### TenantResource
 **Purpose**: Tenant management interface
+- **User**: `UserResource` (model dinamico via `XotData::getUserClass()`)
+- **Profile**: `ProfileResource`
+- **Team**: `TeamResource` (model dinamico via `XotData::getTeamClass()`)
+- **Tenant**: `TenantResource` (model dinamico via `XotData::getTenantClass()`)
+- **Role**: `RoleResource`
+- **Permission**: `PermissionResource`
+- **AuthenticationLog**: `AuthenticationLogResource`
+- **SocialProvider**: `SocialProviderResource`
+- **SocialiteUser**: `SocialiteUserResource`
+- **Device**: `DeviceResource`
+- **Feature**: `FeatureResource`
+- **PasswordReset**: `PasswordResetResource`
+- **OAuth**:
+  - `ClientResource` (Passport client model)
+  - `OauthAccessTokenResource`
+  - `OauthAuthCodeResource`
+  - `OauthRefreshTokenResource`
+- **SSO**: `SsoProviderResource`
 
 **Features**:
 - Tenant creation and configuration
 - User assignment to tenants
 - Tenant isolation settings
 
+=======
+
+**Features**:
+- User creation and editing
+- Role and permission assignment
+- Profile management
+- Password management
+- Team membership management
+- Account status management
+
+**Permissions Required**:
+- `view_user`: View user list
+- `create_user`: Create new users
+- `edit_user`: Edit existing users
+- `delete_user`: Delete users
+
+#### RoleResource
+**Purpose**: Role management interface
+
+**Features**:
+- Role creation and editing
+- Permission assignment
+- User assignment to roles
+- Role hierarchy management
+
+#### PermissionResource
+**Purpose**: Permission management interface
+
+**Features**:
+- Permission creation
+- Permission grouping
+- Role assignment
+
+#### TeamResource
+**Purpose**: Team management interface
+
+**Features**:
+- Team creation and editing
+- Member management
+- Team invitations
+- Team permissions
+
+#### TenantResource
+**Purpose**: Tenant management interface
+- **User**: `UserResource` (model dinamico via `XotData::getUserClass()`)
+- **Profile**: `ProfileResource`
+- **Team**: `TeamResource` (model dinamico via `XotData::getTeamClass()`)
+- **Tenant**: `TenantResource` (model dinamico via `XotData::getTenantClass()`)
+- **Role**: `RoleResource`
+- **Permission**: `PermissionResource`
+- **AuthenticationLog**: `AuthenticationLogResource`
+- **SocialProvider**: `SocialProviderResource`
+- **SocialiteUser**: `SocialiteUserResource`
+- **Device**: `DeviceResource`
+- **Feature**: `FeatureResource`
+- **PasswordReset**: `PasswordResetResource`
+- **OAuth**:
+  - `ClientResource` (Passport client model)
+  - `OauthAccessTokenResource`
+  - `OauthAuthCodeResource`
+  - `OauthRefreshTokenResource`
+- **SSO**: `SsoProviderResource`
+
+**Features**:
+- Tenant creation and configuration
+- User assignment to tenants
+- Tenant isolation settings
+
+>>>>>>> 2880e04a (.)
 ### Widgets & Pages
 
 #### LoginWidget
@@ -427,6 +515,21 @@ $user->revokeDevice($deviceId);
 
 #### EditProfile Page
 **Purpose**: User profile editing interface
+=======
+=======
+#### EditProfile Page
+**Purpose**: User profile editing interface
+>>>>>>> 2880e04a (.)
+- ✅ **Docs**: Risolti conflitti Git nella cartella `docs/`
+
+- ✅ **EditProfile.php**: Rimossi marker Git
+
+- ✅ **PasswordResetConfirmWidget.php**:
+  - Rimossi import duplicati
+  - Corrette proprietà duplicate
+  - Fixato metodo `confirmPasswordReset()` con if duplicati
+  - Corretta logica auto-login dopo reset password
+>>>>>>> 32e772a8 (.)
 
 **Features**:
 - Personal information editing
@@ -533,9 +636,22 @@ php artisan cache:clear
 return [
     // User model configuration
     'user_model' => \Modules\User\Models\User::class,
-
     // Profile configuration
     'profile_model' => \Modules\User\Models\Profile::class,
+=======
+=======
+    // Profile configuration
+    'profile_model' => \Modules\User\Models\Profile::class,
+>>>>>>> 2880e04a (.)
+#### Architettura e Filosofia
+- [Filosofia Modulo User](./FILOSOFIA_MODULO_USER.md) - Logica, politica, business logic, filosofia, zen
+- [Service Provider Architecture](./SERVICE_PROVIDER_ARCHITECTURE.md) - Module Pattern, DRY, Separation of Concerns
+- [Passport Integration](./PASSPORT_INTEGRATION.md) - Laravel Passport integrazione completa, filosofia, best practices
+
+#### Guide Tecniche
+- [Troubleshooting Login Component](./troubleshooting-login-component.md)
+- [Filament Filters and Widgets](./filament-filters-and-widgets.md)
+>>>>>>> 32e772a8 (.)
 
     // Authentication configuration
     'auth' => [

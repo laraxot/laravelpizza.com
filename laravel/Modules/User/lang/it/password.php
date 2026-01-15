@@ -92,4 +92,6 @@ return [
             'label' => 'updateDataAction',
         ],
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

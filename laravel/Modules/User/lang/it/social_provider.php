@@ -57,4 +57,6 @@ return [
             'label' => 'social provider.plural.model',
         ],
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

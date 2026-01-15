@@ -17,4 +17,6 @@ return [
             'label' => 'Aggiungi Studio',
         ],
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

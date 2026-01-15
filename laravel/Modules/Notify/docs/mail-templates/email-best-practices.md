@@ -16,7 +16,7 @@ Questo documento descrive le best practices per la creazione e gestione di email
 ### 2. Branding Coerente
 
 - **Elementi visuali**: Utilizzare logo, colori e font
-- **Elementi visuali**: Utilizzare logo, colori e font SaluteOra
+- **Elementi visuali**: Utilizzare logo, colori e font <nome progetto>
 - **Voce e tono**: Mantenere un tono professionale ma amichevole
 - **Firma coerente**: Includere sempre lo stesso formato di firma e disclaimer
 
@@ -62,9 +62,9 @@ I template di [mailpace/templates](https://github.com/mailpace/templates) integr
 
 ### Directory `mail-layouts`
 
-La directory `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/resources/mail-layouts/` contiene:
-La directory `/var/www/html/saluteora/laravel/Modules/Notify/resources/mail-layouts/` contiene:
-La directory `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/resources/mail-layouts/` contiene:
+La directory `Modules/Notify/resources/mail-layouts/` contiene:
+La directory `Modules/Notify/resources/mail-layouts/` contiene:
+La directory `Modules/Notify/resources/mail-layouts/` contiene:
 
 - **default.html**: Template base per la maggior parte delle comunicazioni
 - **main.html**: Alternativa minimalista
@@ -74,7 +74,7 @@ La directory `/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/N
 ### Integrazione con Spatie Mail Templates
 
 Seguendo le regole di progetto , ricordare di:
-Seguendo le regole di progetto SaluteOra, ricordare di:
+Seguendo le regole di progetto <nome progetto>, ricordare di:
 
 - NON creare controller personalizzati per gestire l'invio di email
 - Utilizzare il package `spatie/laravel-mail-templates`
@@ -185,7 +185,7 @@ I template di [mailpace/templates](https://github.com/mailpace/templates) integr
 
 ### Directory `mail-layouts`
 
-La directory `/var/www/html/<directory progetto>/laravel/Modules/Notify/resources/mail-layouts/` contiene:
+La directory `Modules/Notify/resources/mail-layouts/` contiene:
 
 - **default.html**: Template base per la maggior parte delle comunicazioni
 - **main.html**: Alternativa minimalista

@@ -125,19 +125,19 @@
 
 ### PHP CS Fixer (Ordina Import)
 ```bash
-cd /var/www/_bases/base_quaeris_fila4_mono/laravel
+cd laravel
 ./vendor/bin/php-cs-fixer fix Modules --rules=ordered_imports
 ```
 
 ### PHP Insights (Fix Automatici)
 ```bash
-cd /var/www/_bases/base_quaeris_fila4_mono/laravel
+cd laravel
 ./vendor/bin/phpinsights fix Modules
 ```
 
 ### PHPMD (Escludere file config)
 ```bash
-cd /var/www/_bases/base_quaeris_fila4_mono/laravel
+cd laravel
 ./vendor/bin/phpmd Modules text codesize,unusedcode,naming,design,controversial,cleancode --exclude "*.php-cs-fixer*.php"
 ```
 

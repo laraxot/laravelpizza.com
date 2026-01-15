@@ -160,7 +160,7 @@ TenantService::filePath('database/content/pages/home.json')
 // Il sistema fa:
 // 1. GetTenantNameAction → ritorna 'local/laravelpizza'
 // 2. Costruisce: base_path('config/local/laravelpizza/database/content/pages/home.json')
-// 3. Risolve a: /var/www/_bases/base_laravelpizza/laravel/config/local/laravelpizza/database/content/pages/home.json
+// 3. Risolve a: config/local/laravelpizza/database/content/pages/home.json
 ```
 
 ### Scenario 2: Configurazione Multi-Tenant

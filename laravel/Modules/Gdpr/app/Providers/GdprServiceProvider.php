@@ -8,7 +8,6 @@ use Illuminate\Routing\Router;
 use Modules\Gdpr\Datas\GdprData;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Providers\XotBaseServiceProvider;
-use Override;
 use Statikbe\CookieConsent\CookieConsentMiddleware;
 
 class GdprServiceProvider extends XotBaseServiceProvider
@@ -19,7 +18,7 @@ class GdprServiceProvider extends XotBaseServiceProvider
 
     protected string $module_ns = __NAMESPACE__;
 
-    #[Override]
+    #[\Override]
     public function boot(): void
     {
         parent::boot();
@@ -34,7 +33,7 @@ class GdprServiceProvider extends XotBaseServiceProvider
     public function registerMyMiddleware(Router $router): void
     {
         $gdpr = GdprData::make();
-        if ($gdpr->cookie_banner_enabled) {
+        if ($gdpr->cookie_banner_on) {
             $router->pushMiddlewareToGroup('web', CookieConsentMiddleware::class);
         }
     }

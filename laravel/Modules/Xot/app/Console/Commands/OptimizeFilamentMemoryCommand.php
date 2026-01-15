@@ -136,7 +136,7 @@ class OptimizeFilamentMemoryCommand extends Command
                 $content = File::get($file->getPathname());
 
                 if (preg_match('/protected\s+\$with\s*=\s*\[([^\]]+)\]/', $content, $matches) === 1) {
-                    $withContent = $matches[1];
+                    $withContent = $matches[1] ?? '';
                     // Controlla se ha relazioni pesanti
                     if (str_contains($withContent, 'roles') ||
                         str_contains($withContent, 'permissions') ||

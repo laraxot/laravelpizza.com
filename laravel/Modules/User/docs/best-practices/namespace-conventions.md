@@ -62,7 +62,7 @@ class LoginWidget extends XotBaseWidget
     protected static string $view = 'user::filament.widgets.auth.login';
 }
 
-class PasswordResetWidget extends XotBaseWidget
+class PasswordResetWidget extends XotBaseWidget  
 {
     protected static string $view = 'user::filament.widgets.auth.password.reset';
 }
@@ -134,7 +134,7 @@ Themes/One/
 class UserWidget extends XotBaseWidget
 {
     protected static string $view = 'pub_theme::filament.widgets.user.profile';
-    //                               ^^^^^^^^^^
+    //                               ^^^^^^^^^^ 
     //                               Dovrebbe essere user::
 }
 ```
@@ -195,3 +195,4 @@ Se l'override del tema non funziona:
 
 *Documento creato: Dicembre 2024*
 *Ultimo aggiornamento: Dicembre 2024*
+

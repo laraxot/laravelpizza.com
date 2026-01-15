@@ -158,4 +158,4 @@ public static function getFormSchemaWidget(): array
 - Testare la registrazione in ambiente di sviluppo
 - Monitorare le performance
 - Mantenere le traduzioni aggiornate
-- Documentare le modifiche
+- Documentare le modifiche 

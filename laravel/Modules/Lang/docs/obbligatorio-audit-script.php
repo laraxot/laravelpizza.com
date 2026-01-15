@@ -223,7 +223,7 @@ function generateObbligatorioReport(array $issues): string
 }
 
 // Esegui audit specifico per "obbligatorio"
-$basePath = '/var/www/html/_bases/base_saluteora/laravel';
+$basePath = '/var/www/html/_bases/base_<nome progetto>/laravel';
 echo "Inizio audit specifico per \"obbligatorio\" in file non italiani...\n";
 
 $issues = auditObbligatorioInNonItalianFiles($basePath);

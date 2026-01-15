@@ -7,30 +7,30 @@
 ### ✅ Path Corretti
 
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/SMS
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Http/Controllers
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Providers
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Models
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Filament
-/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS
-/var/www/html/saluteora/laravel/Modules/Notify/app/Http/Controllers
-/var/www/html/saluteora/laravel/Modules/Notify/app/Providers
-/var/www/html/saluteora/laravel/Modules/Notify/app/Models
-/var/www/html/saluteora/laravel/Modules/Notify/app/Filament
+Modules/Notify/app/Actions/SMS
+Modules/Notify/app/Http/Controllers
+Modules/Notify/app/Providers
+Modules/Notify/app/Models
+Modules/Notify/app/Filament
+Modules/Notify/app/Actions/SMS
+Modules/Notify/app/Http/Controllers
+Modules/Notify/app/Providers
+Modules/Notify/app/Models
+Modules/Notify/app/Filament
 ```
 
 ### ❌ Path Errati
 
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Actions/SMS
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Http/Controllers
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Providers
-/var/www/html/saluteora/laravel/Modules/Notify/App/Actions/SMS
-/var/www/html/saluteora/laravel/Modules/Notify/App/Http/Controllers
-/var/www/html/saluteora/laravel/Modules/Notify/App/Providers
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Actions/SMS
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Http/Controllers
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/App/Providers
+Modules/Notify/App/Actions/SMS
+Modules/Notify/App/Http/Controllers
+Modules/Notify/App/Providers
+Modules/Notify/App/Actions/SMS
+Modules/Notify/App/Http/Controllers
+Modules/Notify/App/Providers
+Modules/Notify/App/Actions/SMS
+Modules/Notify/App/Http/Controllers
+Modules/Notify/App/Providers
 ```
 
 ## Struttura Corretta dei Namespace
@@ -65,9 +65,9 @@ namespace Modules\Notify\App\Datas;
 
 **Path fisico corretto:**
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
+Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
+Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
+Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
 ```
 
 **Namespace corretto:**
@@ -79,9 +79,9 @@ namespace Modules\Notify\Actions\SMS;
 
 **Path fisico corretto:**
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
+Modules/Notify/app/Http/Controllers/NotificationController.php
+Modules/Notify/app/Http/Controllers/NotificationController.php
+Modules/Notify/app/Http/Controllers/NotificationController.php
 ```
 
 **Namespace corretto:**
@@ -93,9 +93,9 @@ namespace Modules\Notify\Http\Controllers;
 
 **Path fisico corretto:**
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
+Modules/Notify/app/Providers/NotifyServiceProvider.php
+Modules/Notify/app/Providers/NotifyServiceProvider.php
+Modules/Notify/app/Providers/NotifyServiceProvider.php
 ```
 
 **Namespace corretto:**
@@ -107,9 +107,9 @@ namespace Modules\Notify\Providers;
 
 **Path fisico corretto:**
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
+Modules/Notify/app/Datas/NetfunSMSMessage.php
+Modules/Notify/app/Datas/NetfunSMSMessage.php
+Modules/Notify/app/Datas/NetfunSMSMessage.php
 ```
 
 **Namespace corretto:**
@@ -127,7 +127,7 @@ namespace Modules\Notify\App\Datas;
 ## Motivo di questa Regola
 
 Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso. Questo approccio è stato adottato per standardizzare i namespace in tutto il progetto .
-Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso. Questo approccio è stato adottato per standardizzare i namespace in tutto il progetto SaluteOra.
+Questa struttura di namespace mantiene compatibilità con la convenzione di Laravel e il sistema di moduli Nwidart, anche se i file sono fisicamente organizzati in modo diverso. Questo approccio è stato adottato per standardizzare i namespace in tutto il progetto <nome progetto>.
 
 ## Esempio per Datas
 
@@ -159,9 +159,9 @@ Per le regole generali e condivise tra tutti i moduli, consulta anche:
 
 **Path fisico corretto:**
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
+Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
+Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
+Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
 ```
 
 **Namespace corretto:**
@@ -188,19 +188,19 @@ namespace Modules\Notify\App\Console\Commands;
 ### ✅ Path Corretti
 
 ```
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Actions/SMS
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Http/Controllers
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Providers
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Models
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Filament
+Modules/Notify/app/Actions/SMS
+Modules/Notify/app/Http/Controllers
+Modules/Notify/app/Providers
+Modules/Notify/app/Models
+Modules/Notify/app/Filament
 ```
 
 ### ❌ Path Errati
 
 ```
-/var/www/html/<directory progetto>/laravel/Modules/Notify/App/Actions/SMS
-/var/www/html/<directory progetto>/laravel/Modules/Notify/App/Http/Controllers
-/var/www/html/<directory progetto>/laravel/Modules/Notify/App/Providers
+Modules/Notify/App/Actions/SMS
+Modules/Notify/App/Http/Controllers
+Modules/Notify/App/Providers
 ```
 
 ## Struttura Corretta dei Namespace
@@ -235,7 +235,7 @@ namespace Modules\Notify\App\Datas;
 
 **Path fisico corretto:**
 ```
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
+Modules/Notify/app/Actions/SMS/SendNetfunSmsAction.php
 ```
 
 **Namespace corretto:**
@@ -247,7 +247,7 @@ namespace Modules\Notify\Actions\SMS;
 
 **Path fisico corretto:**
 ```
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Http/Controllers/NotificationController.php
+Modules/Notify/app/Http/Controllers/NotificationController.php
 ```
 
 **Namespace corretto:**
@@ -259,7 +259,7 @@ namespace Modules\Notify\Http\Controllers;
 
 **Path fisico corretto:**
 ```
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Providers/NotifyServiceProvider.php
+Modules/Notify/app/Providers/NotifyServiceProvider.php
 ```
 
 **Namespace corretto:**
@@ -271,7 +271,7 @@ namespace Modules\Notify\Providers;
 
 **Path fisico corretto:**
 ```
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Datas/NetfunSMSMessage.php
+Modules/Notify/app/Datas/NetfunSMSMessage.php
 ```
 
 **Namespace corretto:**
@@ -320,7 +320,7 @@ Per le regole generali e condivise tra tutti i moduli, consulta anche:
 
 **Path fisico corretto:**
 ```
-/var/www/html/<directory progetto>/laravel/Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
+Modules/Notify/app/Console/Commands/AnalyzeTranslationFiles.php
 ```
 
 **Namespace corretto:**

@@ -72,7 +72,7 @@ class TeamsRelationManager extends XotBaseRelationManager
     {
         return [
             'detach' => DetachAction::make()
-                ->after(function (Model $_record, self $livewire): void {
+                ->after(function (Model $record, self $livewire): void {
                     /** @var User $user */
                     $user = $livewire->getOwnerRecord();
 

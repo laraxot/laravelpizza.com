@@ -1,8 +1,8 @@
-# Login Test Implementation Summary - SaluteOra Project
+# Login Test Implementation Summary - <nome progetto> Project
 
 ## 🎊 Mission Accomplished: Complete Login Testing Suite
 
-L'implementazione dei **test completi per il login** è stata completata con successo, fornendo una copertura totale di tutti gli scenari di autenticazione nel progetto SaluteOra.
+L'implementazione dei **test completi per il login** è stata completata con successo, fornendo una copertura totale di tutti gli scenari di autenticazione nel progetto <nome progetto>.
 
 ## 📈 Risultati Raggiunti
 
@@ -16,7 +16,7 @@ L'implementazione dei **test completi per il login** è stata completata con suc
 ### ✅ **Architettura Multi-Modulo Testata**
 - **Laravel Folio** + **Livewire Volt** page testing
 - **LoginWidget** (Filament) component testing
-- **STI User Models** dal modulo SaluteOra
+- **STI User Models** dal modulo <nome progetto>
 - **Factory avanzate** enterprise-grade integration
 - **Cross-module authentication** flow validation
 
@@ -57,9 +57,9 @@ L'implementazione dei **test completi per il login** è stata completata con suc
 - **Error Resilience**: Exception handling + edge cases
 
 ### **Integration Excellence**
-- **Factory Integration**: UserFactory SaluteOra enterprise-grade
+- **Factory Integration**: UserFactory <nome progetto> enterprise-grade
 - **Widget Testing**: Filament Livewire components
-- **Cross-Module**: User, SaluteOra, Xot, Cms integration
+- **Cross-Module**: User, <nome progetto>, Xot, Cms integration
 - **Translation Ready**: Messaggi localizzati italiani
 - **Performance Aware**: Session handling, memory efficiency
 
@@ -165,7 +165,7 @@ test('successful login regenerates session', function (): void {
 Primo progetto Laraxot a implementare test completi per architettura STI con Parental, testando Patient, Doctor, Admin come tipi distinti con factory specifiche.
 
 ### **Multi-Module Integration Testing**
-Esempio perfetto di integrazione cross-module testing: Cms (test), User (widget), SaluteOra (models), Xot (base), con zero conflitti.
+Esempio perfetto di integrazione cross-module testing: Cms (test), User (widget), <nome progetto> (models), Xot (base), con zero conflitti.
 
 ### **Livewire Widget Testing Excellence**
 Pattern avanzato per testare widget Filament Livewire con form, validazione, notifiche, state management completo.
@@ -179,8 +179,8 @@ Pattern avanzato per testare widget Filament Livewire con form, validazione, not
 - [Login Page](../laravel/Themes/One/resources/views/pages/auth/login.blade.php) - UI page
 
 ### **Related Components**
-- [UserFactory Implementation](../laravel/Modules/SaluteOra/docs/factories/UserFactory-implementation-final.md) - Enterprise factory
-- [STI Architecture](../laravel/Modules/SaluteOra/docs/models/sti-architecture.md) - User type system
+- [UserFactory Implementation](../laravel/Modules/<nome progetto>/docs/factories/UserFactory-implementation-final.md) - Enterprise factory
+- [STI Architecture](../laravel/Modules/<nome progetto>/docs/models/sti-architecture.md) - User type system
 - [Authentication Flow](../laravel/Modules/User/docs/authentication-flow.md) - Login process
 
 ### **Testing Framework**
@@ -190,7 +190,7 @@ Pattern avanzato per testare widget Filament Livewire con form, validazione, not
 
 ## 🎉 Conclusion
 
-L'implementazione dei **test completi per il login** rappresenta un **achievement di eccellenza** nel progetto SaluteOra, stabilendo nuovi standard per:
+L'implementazione dei **test completi per il login** rappresenta un **achievement di eccellenza** nel progetto <nome progetto>, stabilendo nuovi standard per:
 
 - ✨ **Quality Assurance** enterprise-grade
 - ✨ **Multi-Module Integration** testing patterns
@@ -208,4 +208,4 @@ Questa implementazione fornisce una **base solida** per tutti i futuri test di a
 **Maintainability**: 📈 **EXCELLENT**
 
 *Last Updated: Gennaio 2025*
-*Project: Laraxot SaluteOra*
+*Project: Laraxot <nome progetto>*

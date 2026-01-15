@@ -1,8 +1,8 @@
 # Sistema di Traduzioni
 
 ## Collegamenti Bidirezionali
-- [Modulo SaluteMo - Regole Consolidate Traduzioni](../../SaluteMo/docs/translation-rules-consolidated.md)
-- [Modulo SaluteMo - Implementazione Appointment Report](../../SaluteMo/docs/appointment_report_translations_implementation.md)
+- [Modulo <nome progetto> - Regole Consolidate Traduzioni](../../<nome progetto>/docs/translation-rules-consolidated.md)
+- [Modulo <nome progetto> - Implementazione Appointment Report](../../<nome progetto>/docs/appointment_report_translations_implementation.md)
 - [Modulo User - Translation Best Practices](../../User/docs/translation_best_practices.md)
 
 ## Panoramica
@@ -150,7 +150,7 @@ return [
 
 ## Esempi di Implementazione Corretta
 
-### Modulo SaluteMo - Appointment Report
+### Modulo <nome progetto> - Appointment Report
 ```php
 <?php
 

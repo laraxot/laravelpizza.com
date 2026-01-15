@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'navigation' => [
         'label' => 'Cliente OAuth',
-        'group' => 'OAuth',
+        'group' => '',
         'icon' => 'heroicon-o-key',
         'sort' => 46,
     ],

@@ -1,7 +1,7 @@
 # Risoluzione Conflitti SmsChannel.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Channels/SmsChannel.php`
+**File**: `Modules/Notify/app/Channels/SmsChannel.php`
 **Linee**: 55-58
 **Tipo**: Conflitto di formattazione (riga vuota aggiuntiva)
 
@@ -58,7 +58,7 @@ return $action->execute($smsData);
 # Risoluzione Conflitti SmsChannel.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Channels/SmsChannel.php`
+**File**: `Modules/Notify/app/Channels/SmsChannel.php`
 **Linee**: 55-58
 **Tipo**: Conflitto di formattazione (riga vuota aggiuntiva)
 

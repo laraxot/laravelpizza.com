@@ -6,15 +6,15 @@ namespace Modules\Media\Filament\Resources\MediaResource\Widgets;
 
 use FFMpeg\Format\Video\WebM;
 use Filament\Notifications\Notification;
-use Filament\Widgets\Widget;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use RuntimeException;
 
-class ConvertWidget extends Widget
+class ConvertWidget extends XotBaseWidget
 {
     public Media $record;
 
@@ -33,6 +33,11 @@ class ConvertWidget extends Widget
     protected string $view = 'media::filament.widgets.convert';
 
     protected static string $resource = MediaResource::class;
+
+    public function getFormSchema(): array
+    {
+        return [];
+    }
 
     public function begin(): void
     {
@@ -102,13 +107,6 @@ class ConvertWidget extends Widget
 
             $this->start =
                 "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
-
-            // Decrement the counter...
-            // $this->start = $this->start - 1;
-            // $this->start = (string) now();
-            // if ('impossible' === $this->start) {
-            //    $cond = false;
-            // }
         }
     }
 }

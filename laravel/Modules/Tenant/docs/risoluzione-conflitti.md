@@ -134,7 +134,7 @@ cd laravel
 Durante il tentativo di validare il codice con PHPStan, è stato rilevato un errore nel file `Modules/Xot/app/Providers/XotServiceProvider.php` alla linea 81:
 
 ```
-ParseError thrown in /var/www/html/_bases/base_<nome progetto>_fila3_mono/laravel/Modules/Xot/app/Providers/XotServiceProvider.php on line 81 while loading bootstrap file: syntax error, unexpected token "<<"
+ParseError thrown in Modules/Xot/app/Providers/XotServiceProvider.php on line 81 while loading bootstrap file: syntax error, unexpected token "<<"
 ```
 
 Questo errore indica che ci sono ancora conflitti git non risolti in altri moduli che devono essere affrontati prima di poter completare l'analisi del codice.

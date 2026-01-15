@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets\Auth;
 
-use Filament\Widgets\Widget;
 use Illuminate\Support\Facades\Auth;
+use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
-abstract class BaseAuthWidget extends Widget
+abstract class BaseAuthWidget extends XotBaseWidget
 {
     public ?array $data = [];
 
@@ -37,5 +37,5 @@ abstract class BaseAuthWidget extends Widget
      *
      * @return array<mixed>
      */
-    abstract protected function getFormSchema(): array;
+    abstract public function getFormSchema(): array;
 }

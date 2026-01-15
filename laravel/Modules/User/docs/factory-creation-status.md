@@ -12,7 +12,7 @@ Il modulo User aveva **16 factory mancanti** su 31 modelli totali. Questo è un 
 
 ### ✅ COMPLETATE
 1. **Authentication.php** → AuthenticationFactory.php ✅
-2. **DeviceUser.php** → DeviceUserFactory.php ✅
+2. **DeviceUser.php** → DeviceUserFactory.php ✅  
 3. **DeviceProfile.php** → DeviceProfileFactory.php ✅
 4. **Membership.php** → MembershipFactory.php ✅
 
@@ -58,12 +58,12 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class ModelFactory extends Factory
 {
     protected $model = Model::class;
-
+    
     public function definition(): array
     {
         // Definition with realistic data
     }
-
+    
     // State methods for common scenarios
 }
 ```

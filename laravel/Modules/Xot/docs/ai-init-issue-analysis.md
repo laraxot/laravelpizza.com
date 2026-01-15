@@ -2,7 +2,7 @@
 
 ## Problema Identificato
 
-Lo script `/var/www/_bases/base_quaeris_fila4_mono/bashscripts/ai/ai_init.sh` non crea la junction richiesta per la cartella `/var/www/_bases/base_quaeris_fila4_mono/bashscripts/ai/.gemini` da vedere dentro `/var/www/_bases/base_quaeris_fila4_mono/`.
+Lo script `bashscripts/ai/ai_init.sh` non crea la junction richiesta per la cartella `bashscripts/ai/.gemini` da vedere dentro ``.
 
 ## Analisi
 
@@ -16,7 +16,7 @@ Dopo l'analisi dello script, è stato identificato un problema logico nell'imple
 
 Dovrebbe creare un symlink nella root del progetto:
 ```
-/var/www/_bases/base_quaeris_fila4_mono/.gemini -> /var/www/_bases/base_quaeris_fila4_mono/bashscripts/ai/.gemini
+.gemini -> bashscripts/ai/.gemini
 ```
 
 ## Comportamento Attuale
@@ -31,5 +31,5 @@ Lo script deve essere corretto per invertire la logica:
 
 ## Cartelle Coinvolte
 
-- Source: `/var/www/_bases/base_quaeris_fila4_mono/bashscripts/ai/.gemini`
-- Target symlink: `/var/www/_bases/base_quaeris_fila4_mono/.gemini`
+- Source: `bashscripts/ai/.gemini`
+- Target symlink: `.gemini`

@@ -2,12 +2,12 @@
 
 ## Panoramica
 
-Il widget di registrazione del dottore (`RegistrationWidget.php`) è un componente fondamentale nel processo di registrazione degli odontoiatri in SaluteOra. Questo documento descrive la sua implementazione corretta e come deve essere integrato con il sistema di gestione degli stati tramite `spatie/laravel-model-states`.
+Il widget di registrazione del dottore (`RegistrationWidget.php`) è un componente fondamentale nel processo di registrazione degli odontoiatri in <nome progetto>. Questo documento descrive la sua implementazione corretta e come deve essere integrato con il sistema di gestione degli stati tramite `spatie/laravel-model-states`.
 
 ## Posizione del File
 
 ```
-/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
+Modules/User/app/Filament/Widgets/RegistrationWidget.php
 ```
 
 ## Architettura
@@ -71,10 +71,10 @@ class RegistrationWidget extends XotBaseWidget
     public function register()
     {
         $data = $this->form->getState();
-
+        
         // Validazione dei dati
         $this->validate();
-
+        
         // Creazione del dottore
         $doctor = Doctor::create([
             'full_name' => $data['full_name'] ?? ($data['first_name'] . ' ' . $data['last_name']),
@@ -83,7 +83,7 @@ class RegistrationWidget extends XotBaseWidget
             'certification' => $data['certification'] ?? null,
             'state' => \Modules\Patient\States\Pending::class, // Imposta lo stato iniziale
         ]);
-
+        
         // Creazione del workflow di registrazione
         $workflow = DoctorRegistrationWorkflow::create([
             'doctor_id' => $doctor->id,
@@ -93,21 +93,21 @@ class RegistrationWidget extends XotBaseWidget
             'last_interaction_at' => now(),
             'session_id' => session()->getId(),
         ]);
-
+        
         // Invio email di conferma
         $this->sendConfirmationEmail($doctor);
-
+        
         // Reindirizzamento alla pagina di conferma
         return redirect()->route('doctor.registration.confirmation');
     }
-
+    
     /**
      * Invia l'email di conferma della registrazione.
      */
     protected function sendConfirmationEmail(Doctor $doctor): void
     {
         $email = new SpatieEmail($doctor, 'registration_pending');
-
+        
         Mail::to($doctor->email)
             ->locale(app()->getLocale())
             ->send($email);
@@ -191,18 +191,18 @@ class MailTemplatesTableSeeder extends Seeder
             ],
             [
                 'subject' => [
-                    'it' => 'Registrazione in attesa di moderazione - SaluteOra',
-                    'en' => 'Registration pending moderation - SaluteOra'
+                    'it' => 'Registrazione in attesa di moderazione - <nome progetto>',
+                    'en' => 'Registration pending moderation - <nome progetto>'
                 ],
                 'html_template' => [
                     'it' => '<p>Gentile {{ full_name }},</p>
 <p>La tua richiesta di registrazione è stata ricevuta e sarà esaminata dal nostro team.</p>
 <p>Riceverai un\'email quando la tua registrazione sarà stata moderata.</p>
-<p>Cordiali saluti,<br>Il team di SaluteOra</p>',
+<p>Cordiali saluti,<br>Il team di <nome progetto></p>',
                     'en' => '<p>Dear {{ full_name }},</p>
 <p>Your registration request has been received and will be reviewed by our team.</p>
 <p>You will receive an email when your registration has been moderated.</p>
-<p>Best regards,<br>The SaluteOra Team</p>'
+<p>Best regards,<br>The <nome progetto> Team</p>'
                 ],
                 'text_template' => [
                     'it' => 'Gentile {{ full_name }},
@@ -212,7 +212,7 @@ La tua richiesta di registrazione è stata ricevuta e sarà esaminata dal nostro
 Riceverai un\'email quando la tua registrazione sarà stata moderata.
 
 Cordiali saluti,
-Il team di SaluteOra',
+Il team di <nome progetto>',
                     'en' => 'Dear {{ full_name }},
 
 Your registration request has been received and will be reviewed by our team.
@@ -220,11 +220,11 @@ Your registration request has been received and will be reviewed by our team.
 You will receive an email when your registration has been moderated.
 
 Best regards,
-The SaluteOra Team'
+The <nome progetto> Team'
                 ]
             ]
         );
-
+        
         // Altri template...
     }
 }
@@ -240,7 +240,7 @@ The SaluteOra Team'
 
 ## Collegamenti Bidirezionali
 
-- [Email Doctor Registration](/var/www/html/saluteora/docs/email-doctor-registration.md)
-- [Registrazione Odontoiatra](/var/www/html/saluteora/docs/roadmap_frontoffice/13-registrazione-odontoiatra.md)
-- [DoctorResource](/var/www/html/saluteora/laravel/Modules/Patient/app/Filament/Resources/DoctorResource.php)
-- [RegistrationWidget](/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php)
+- [Email Doctor Registration](docs/email-doctor-registration.md)
+- [Registrazione Odontoiatra](docs/roadmap_frontoffice/13-registrazione-odontoiatra.md)
+- [DoctorResource](Modules/Patient/app/Filament/Resources/DoctorResource.php)
+- [RegistrationWidget](Modules/User/app/Filament/Widgets/RegistrationWidget.php)

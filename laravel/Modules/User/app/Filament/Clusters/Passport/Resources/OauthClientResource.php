@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources;
 
-use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -20,6 +18,7 @@ use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\Pages\
 use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\Pages\ListOauthClients;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\Pages\ViewOauthClient;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Webmozart\Assert\Assert;
 
 class OauthClientResource extends XotBaseResource
 {
@@ -70,10 +69,6 @@ class OauthClientResource extends XotBaseResource
                 TextColumn::make('updated_at')
                     ->dateTime(),
             ])
-            ->recordActions([
-                EditAction::make(),
-                DeleteAction::make(),
-            ])
             ->toolbarActions([
                 DeleteBulkAction::make(),
             ]);
@@ -81,10 +76,21 @@ class OauthClientResource extends XotBaseResource
 
     /**
      * Get the model class for the resource from Passport.
+     *
+     * @return class-string<\Illuminate\Database\Eloquent\Model>
      */
     public static function getModel(): string
     {
-        return LaravelPassport::clientModel();
+        $model = LaravelPassport::clientModel();
+        // @phpstan-ignore-next-line
+        if (! class_exists($model)) {
+            return \Modules\User\Models\OauthClient::class;
+        }
+
+        Assert::subclassOf($model, \Illuminate\Database\Eloquent\Model::class);
+
+        /* @var class-string<\Illuminate\Database\Eloquent\Model> $model */
+        return $model;
     }
 
     public static function getPages(): array

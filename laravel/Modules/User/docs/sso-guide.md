@@ -1,8 +1,8 @@
 # 🔑 SINGLE SIGN-ON (SSO) - GUIDA IMPLEMENTAZIONE
 
-**Versione**: 1.0
-**Status**: 📋 Pianificato Q1 2026
-**Data**: 2025-10-01
+**Versione**: 1.0  
+**Status**: 📋 Pianificato Q1 2026  
+**Data**: 2025-10-01  
 
 ---
 
@@ -236,7 +236,7 @@ class SamlService
     public function handleAssertion(SsoProvider $provider): User
     {
         $samlUser = $this->saml2Auth->getSaml2User();
-
+        
         $attributes = $samlUser->getAttributes();
         $nameId = $samlUser->getNameId();
 
@@ -382,7 +382,7 @@ class SamlController extends Controller
             ->firstOrFail();
 
         $this->samlService->login($ssoProvider->entity_id);
-
+        
         return redirect()->away($this->samlService->getLoginUrl());
     }
 
@@ -397,7 +397,7 @@ class SamlController extends Controller
 
         try {
             $user = $this->samlService->handleAssertion($ssoProvider);
-
+            
             Auth::login($user);
             session(['sso_authenticated' => true]);
 
@@ -415,7 +415,7 @@ class SamlController extends Controller
     {
         $this->samlService->logout();
         Auth::logout();
-
+        
         return redirect()->route('login');
     }
 
@@ -425,7 +425,7 @@ class SamlController extends Controller
     public function metadata(string $provider)
     {
         $metadata = $this->samlService->getMetadata();
-
+        
         return response($metadata, 200, [
             'Content-Type' => 'text/xml',
         ]);
@@ -528,7 +528,7 @@ class SsoProviderResource extends XotBaseResource
         return [
             'name' => Forms\Components\TextInput::make('name')
                 ->required(),
-
+            
             'type' => Forms\Components\Select::make('type')
                 ->options([
                     'saml' => 'SAML 2.0',
@@ -536,24 +536,24 @@ class SsoProviderResource extends XotBaseResource
                     'oauth' => 'OAuth 2.0',
                 ])
                 ->required(),
-
+            
             'entity_id' => Forms\Components\TextInput::make('entity_id')
                 ->required()
                 ->unique(ignoreRecord: true),
-
+            
             'metadata_url' => Forms\Components\TextInput::make('metadata_url')
                 ->url(),
-
+            
             'active' => Forms\Components\Toggle::make('active')
                 ->default(true),
-
+            
             'domain_whitelist' => Forms\Components\TagsInput::make('domain_whitelist')
                 ->placeholder('example.com'),
-
+            
             'settings' => Forms\Components\KeyValue::make('settings')
                 ->keyLabel('Setting')
                 ->valueLabel('Value'),
-
+            
             'role_mapping' => Forms\Components\KeyValue::make('role_mapping')
                 ->keyLabel('SSO Role')
                 ->valueLabel('Application Role'),
@@ -703,26 +703,26 @@ class SsoTest extends TestCase
 ## 📚 BEST PRACTICES
 
 ### Security
-✅ **Validate signatures**: Always verify SAML assertions
-✅ **Domain whitelist**: Restrict allowed email domains
-✅ **Audit logging**: Log all SSO events
-✅ **Session management**: Implement proper session handling
-✅ **Certificate rotation**: Plan for certificate updates
+✅ **Validate signatures**: Always verify SAML assertions  
+✅ **Domain whitelist**: Restrict allowed email domains  
+✅ **Audit logging**: Log all SSO events  
+✅ **Session management**: Implement proper session handling  
+✅ **Certificate rotation**: Plan for certificate updates  
 
 ### User Experience
-✅ **Auto-provisioning**: Create users automatically
-✅ **Role mapping**: Map SSO roles to app roles
-✅ **Fallback**: Provide alternative login methods
-✅ **Clear errors**: Show helpful error messages
+✅ **Auto-provisioning**: Create users automatically  
+✅ **Role mapping**: Map SSO roles to app roles  
+✅ **Fallback**: Provide alternative login methods  
+✅ **Clear errors**: Show helpful error messages  
 
 ### Operations
-✅ **Monitoring**: Track SSO success/failure rates
-✅ **Documentation**: Document provider setup
-✅ **Testing**: Test with each provider
-✅ **Support**: Provide SSO troubleshooting guide
+✅ **Monitoring**: Track SSO success/failure rates  
+✅ **Documentation**: Document provider setup  
+✅ **Testing**: Test with each provider  
+✅ **Support**: Provide SSO troubleshooting guide  
 
 ---
 
-**Last Updated**: 2025-10-01
-**Status**: Pianificato Q1 2026
-**Priority**: MEDIUM
+**Last Updated**: 2025-10-01  
+**Status**: Pianificato Q1 2026  
+**Priority**: MEDIUM  

@@ -140,12 +140,12 @@ if (!auth()->check()) {
 }
 ```
 
-## Authorization Patterns
+## Authorization Patterns  
 ```php
 // Policy-based
 $this->authorize('update', $model);
 
-// Gate-based
+// Gate-based  
 if (!Gate::allows('admin-access')) {
     abort(403);
 }

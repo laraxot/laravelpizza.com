@@ -6,7 +6,6 @@ namespace Modules\Geo\Datas;
 
 use Illuminate\Support\Collection;
 use Spatie\LaravelData\Data;
-use Webmozart\Assert\Assert;
 
 /**
  * Result DTO for bulk coordinate update operations.
@@ -72,14 +71,12 @@ class UpdateCoordinatesResult extends Data
      */
     public function getErrorMessages(): array
     {
+        /** @var array<int, string> $messages */
         $messages = $this->errors
             ->map(fn (array $error): string => "{$error['model']}: {$error['error']}")
             ->values()
             ->toArray();
 
-        Assert::isArray($messages);
-
-        /* @var array<int, string> $messages */
         return $messages;
     }
 

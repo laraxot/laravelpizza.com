@@ -61,13 +61,10 @@ class StoredEvent extends SpatieStoredEvent
 {
     use HasXotFactory;
 
-    /** @var string */
     protected $connection = 'activity';
 
-    /** @var string */
     protected $table = 'stored_events';
 
-    /** @var list<string> */
     protected $fillable = [
         'id',
         'aggregate_uuid',

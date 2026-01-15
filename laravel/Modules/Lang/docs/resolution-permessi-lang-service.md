@@ -6,15 +6,15 @@
    - Tutti i file e le sottodirectory di `Modules/Lang/lang` devono essere di proprietà `www-data:www-data`.
    - Comando:
      ```bash
-     sudo chown -R www-data:www-data /var/www/html/ptvx/laravel/Modules/Lang/lang
+     sudo chown -R www-data:www-data Modules/Lang/lang
      ```
 2. **Permessi sicuri e coerenti**
    - Tutte le directory: `ug+rwx,o+rx` (775)
    - Tutti i file: `ug+rw,o+r-w` (664)
    - Comando:
      ```bash
-     sudo find /var/www/html/ptvx/laravel/Modules/Lang/lang -type d -exec chmod 775 {} +
-     sudo find /var/www/html/ptvx/laravel/Modules/Lang/lang -type f -exec chmod 664 {} +
+     sudo find Modules/Lang/lang -type d -exec chmod 775 {} +
+     sudo find Modules/Lang/lang -type f -exec chmod 664 {} +
      ```
 3. **Motivazione**
    - Garantisce che Apache/PHP (utente www-data) possa sempre leggere/scrivere file lingua.
@@ -25,9 +25,9 @@
 Salva come `fix_lang_permissions.sh` e lancia con sudo:
 ```bash
 #!/bin/bash
-sudo chown -R www-data:www-data /var/www/html/ptvx/laravel/Modules/Lang/lang
-sudo find /var/www/html/ptvx/laravel/Modules/Lang/lang -type d -exec chmod 775 {} +
-sudo find /var/www/html/ptvx/laravel/Modules/Lang/lang -type f -exec chmod 664 {} +
+sudo chown -R www-data:www-data Modules/Lang/lang
+sudo find Modules/Lang/lang -type d -exec chmod 775 {} +
+sudo find Modules/Lang/lang -type f -exec chmod 664 {} +
 echo "Permessi corretti su Modules/Lang/lang."
 ```
 

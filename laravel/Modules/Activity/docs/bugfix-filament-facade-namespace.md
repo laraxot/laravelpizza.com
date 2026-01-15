@@ -111,7 +111,7 @@ class ListLogActivitiesAction extends XotBaseAction
 ### PHPStan Level 10
 
 ```bash
-cd /var/www/html/ptvx/laravel
+cd laravel
 php -d memory_limit=2G ./vendor/bin/phpstan analyse \
   Modules/Activity/app/Filament/Actions/ListLogActivitiesAction.php \
   --level=10 --no-progress
@@ -122,7 +122,7 @@ php -d memory_limit=2G ./vendor/bin/phpstan analyse \
 ### Laravel Pint
 
 ```bash
-cd /var/www/html/ptvx/laravel
+cd laravel
 vendor/bin/pint Modules/Activity/app/Filament/Actions/ListLogActivitiesAction.php
 ```
 

@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 return [
-    // NAVIGATION & STRUCTURE
     'navigation' => [
         'label' => 'Dispositivi',
         'plural_label' => 'Dispositivi',
@@ -15,13 +14,11 @@ return [
         'icon' => 'heroicon-o-device-phone-mobile',
         'badge' => 'Gestione dispositivi utente',
     ],
-    // MODEL INFORMATION
     'model' => [
         'label' => 'Dispositivo',
         'plural' => 'Dispositivi',
         'description' => 'Gestione e monitoraggio dei dispositivi degli utenti',
     ],
-    // FIELDS - STRUTTURA ESPANSA OBBLIGATORIA
     'fields' => [
         'uuid' => [
             'label' => 'UUID',
@@ -115,7 +112,6 @@ return [
             'help' => 'Indica se è uno smartphone o telefono cellulare',
         ],
     ],
-    // ACTIONS - STRUTTURA ESPANSA OBBLIGATORIA
     'actions' => [
         'create' => [
             'label' => 'Crea Dispositivo',
@@ -188,7 +184,6 @@ return [
             ],
         ],
     ],
-    // SECTIONS - ORGANIZZAZIONE FORM
     'sections' => [
         'device_info' => [
             'label' => 'Informazioni Dispositivo',
@@ -201,7 +196,6 @@ return [
         'browser_info' => [
             'label' => 'Informazioni Browser',
             'description' => 'Dettagli del browser utilizzato',
-            // FILTERS - RICERCA E FILTRI
         ],
     ],
     'filters' => [
@@ -232,12 +226,10 @@ return [
             ],
         ],
     ],
-    // MESSAGES - FEEDBACK UTENTE
     'messages' => [
         'empty_state' => 'Nessun dispositivo trovato',
         'search_placeholder' => 'Cerca dispositivi...',
         'loading' => 'Caricamento dispositivi in corso...',
-        // VALIDATION - MESSAGGI DI VALIDAZIONE
         'validation' => [
             'uuid_required' => 'L\'UUID è obbligatorio',
             'uuid_unique' => 'Questo UUID è già in uso',
@@ -245,7 +237,6 @@ return [
             'device_required' => 'Il nome del dispositivo è obbligatorio',
             'languages_array' => 'Le lingue devono essere un array',
         ],
-        // OPTIONS - OPZIONI E VALORI PREDEFINITI
         'options' => [
             'platforms' => [
                 'ios' => 'iOS',
@@ -267,4 +258,6 @@ return [
         ],
         'total_devices' => 'Totale dispositivi: :count',
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

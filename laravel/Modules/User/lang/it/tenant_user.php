@@ -4,39 +4,18 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Utente del tenant',
-        'group' => 'Tenant',
-        'icon' => 'heroicon-o-user-circle',
-        'sort' => 39,
+        'name' => 'Utente Tenant',
+        'plural' => 'Utenti Tenant',
+        'label' => 'Utenti Tenant',
+        'group' => [
+            'name' => 'Tenants',
+            'description' => 'Gestione degli utenti associati ai tenant',
+        ],
+        'sort' => 87,
+        'icon' => 'heroicon-o-building-office',
     ],
-    'label' => 'Utente del tenant',
-    'plural_label' => 'Utenti del tenant',
-    'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'user_id' => [
-            'label' => 'Utente',
-        ],
-        'tenant_id' => [
-            'label' => 'Tenant',
-        ],
-        'role' => [
-            'label' => 'Ruolo',
-        ],
-        'created_at' => [
-            'label' => 'Creato il',
-        ],
-        'updated_at' => [
-            'label' => 'Aggiornato il',
-        ],
-    ],
-    'actions' => [
-        'change_role' => [
-            'label' => 'Cambia ruolo',
-        ],
-        'remove_user' => [
-            'label' => 'Rimuovi utente',
-        ],
-    ],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
+    'actions' => [],
 ];

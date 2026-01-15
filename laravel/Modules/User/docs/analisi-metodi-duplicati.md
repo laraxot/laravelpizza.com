@@ -61,7 +61,7 @@ abstract class BaseModel extends XotBaseModel
 {
     // ✅ SOLO connection specifica del modulo
     protected $connection = 'user';
-
+    
     // ✅ SOLO se necessari override specifici
     protected function casts(): array
     {
@@ -147,5 +147,6 @@ protected function registerObservers(): void
 
 ---
 
-**Data:** 2025-10-15
+**Data:** 2025-10-15  
 **Status:** 📋 Draft per Review
+

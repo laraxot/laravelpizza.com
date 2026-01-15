@@ -47,4 +47,15 @@ return [
             'tooltip' => 'change-state',
         ],
     ],
+    'messages' => [
+        'invalid_state_instance' => 'Istanza di stato non valida',
+        'record_not_found' => 'Record non trovato',
+        'transition_completed' => [
+            'title' => 'Transizione completata',
+            'body' => 'La transizione di stato è stata completata con successo',
+        ],
+        'transition_error' => [
+            'title' => 'Errore durante la transizione',
+        ],
+    ],
 ];

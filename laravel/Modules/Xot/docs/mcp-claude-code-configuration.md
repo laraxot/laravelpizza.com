@@ -68,13 +68,7 @@ Per sviluppo locale, è preferibile utilizzare server STDIO invece di HTTP:
 ### Filesystem con STDIO
 
 ```bash
-claude mcp add filesystem-quaeris npx -y @modelcontextprotocol/server-filesystem /var/www/_bases/base_quaeris_fila4_mono
-```
-
-### Memory con STDIO
-
-```bash
-claude mcp add memory-quaeris npx -y @modelcontextprotocol/server-memory
+claude mcp add filesystem-quaeris npx -y @modelcontextprotocol/server-filesystem server-memory
 ```
 
 ### MySQL con STDIO
@@ -151,36 +145,6 @@ claude mcp add mysql-quaeris ~/bin/mcp-mysql-quaeris.sh
 
 2. Controllare permessi file:
    ```bash
-   ls -la /var/www/_bases/base_quaeris_fila4_mono
-   ```
-
-3. Verificare variabili d'ambiente:
-   ```bash
-   echo $DB_HOST
-   echo $DB_USERNAME
-   ```
-
-### Errori di autenticazione database
-
-1. Testare connessione manuale:
-   ```bash
-   mysql -h $DB_HOST -P $DB_PORT -u $DB_USERNAME -p$DB_PASSWORD $DB_DATABASE
-   ```
-
-2. Verificare credenziali nel file `.env`:
-   ```bash
-   grep DB_ /var/www/_bases/base_quaeris_fila4_mono/laravel/.env
-   ```
-
-## Best Practices
-
-1. **Utilizzare nomi descrittivi**: Prefissare i nomi server con il progetto (es. `filesystem-quaeris`)
-2. **Variabili d'ambiente**: Mai hardcodare credenziali nei comandi
-3. **Test regolari**: Verificare periodicamente che i server funzionino
-4. **Documentazione**: Mantenere questa documentazione aggiornata
-
-## Riferimenti
-
-- [Claude Code MCP Documentation](https://docs.anthropic.com/claude/docs/mcp)
+   ls -la /docs.anthropic.com/claude/docs/mcp)
 - [Model Context Protocol Specification](https://modelcontextprotocol.io)
 - [MCP Editors Configuration](../mcp-editors-configuration.md)

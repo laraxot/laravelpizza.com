@@ -10,16 +10,16 @@ Le interfacce sono organizzate in due livelli:
 
 1. **Interfacce Generiche**: Posizionate direttamente nella directory `app/Contracts/`
    ```
-   /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SmsActionContract.php
-   /var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SmsActionContract.php
-   /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SmsActionContract.php
+   Modules/Notify/app/Contracts/SmsActionContract.php
+   Modules/Notify/app/Contracts/SmsActionContract.php
+   Modules/Notify/app/Contracts/SmsActionContract.php
    ```
 
 2. **Interfacce Specifiche per Canale**: Posizionate in sottodirectory dedicate
    ```
-   /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
-   /var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
-   /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+   Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+   Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+   Modules/Notify/app/Contracts/SMS/SmsActionContract.php
    ```
 
 ### Convenzioni di Naming
@@ -112,12 +112,12 @@ Le interfacce sono organizzate in due livelli:
 
 1. **Interfacce Generiche**: Posizionate direttamente nella directory `app/Contracts/`
    ```
-   /var/www/html/<directory progetto>/laravel/Modules/Notify/app/Contracts/SmsActionContract.php
+   Modules/Notify/app/Contracts/SmsActionContract.php
    ```
 
 2. **Interfacce Specifiche per Canale**: Posizionate in sottodirectory dedicate
    ```
-   /var/www/html/<directory progetto>/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+   Modules/Notify/app/Contracts/SMS/SmsActionContract.php
    ```
 
 ### Convenzioni di Naming

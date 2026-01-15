@@ -9,7 +9,6 @@ use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Gdpr\Filament\Resources\ProfileResource;
 use Modules\User\Filament\Resources\BaseProfileResource\Pages\ListProfiles as UserListProfiles;
-use Override;
 
 class ListProfiles extends UserListProfiles
 {
@@ -18,7 +17,7 @@ class ListProfiles extends UserListProfiles
     /**
      * @return array<string, Tables\Columns\Column>
      */
-    #[Override]
+    #[\Override]
     public function getTableColumns(): array
     {
         return [

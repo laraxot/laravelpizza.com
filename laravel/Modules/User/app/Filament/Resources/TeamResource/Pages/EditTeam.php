@@ -17,8 +17,8 @@ class EditTeam extends XotBaseEditRecord
     protected function getHeaderActions(): array
     {
         return [
-            ViewAction::make(),
-            DeleteAction::make(),
+            'view' => ViewAction::make(),
+            'delete' => DeleteAction::make(),
         ];
     }
 }

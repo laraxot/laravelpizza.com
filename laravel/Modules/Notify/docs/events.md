@@ -266,4 +266,4 @@ class EventValidator
 
 - [Laravel Events](https://laravel.com/docs/events)
 - [Database Mail](database-mail.md)
-- [Email Templates](templates.md)
+- [Email Templates](templates.md) 

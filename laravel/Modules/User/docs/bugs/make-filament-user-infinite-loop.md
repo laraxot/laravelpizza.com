@@ -133,7 +133,7 @@ public function initializeCurrentTeam(): void
     }
 
     $personalTeam = $this->personalTeam();
-
+    
     if ($personalTeam !== null) {
         $this->switchTeam($personalTeam);
     } elseif ($this->allTeams()->isNotEmpty()) {
@@ -187,7 +187,7 @@ class UserObserver
 public function boot(): void
 {
     parent::boot();
-
+    
     // Register observer only if personal team creation is enabled
     if (config('user.create_personal_team', false)) {
         User::observe(UserObserver::class);
@@ -220,12 +220,12 @@ Aggiungere al file di configurazione `config/user.php`:
 ```php
 return [
     // ...
-
+    
     /**
      * Automatically create a personal team for new users
      */
     'create_personal_team' => env('USER_CREATE_PERSONAL_TEAM', false),
-
+    
     /**
      * Automatically set current team after user creation
      */
@@ -298,7 +298,7 @@ Dovrebbe completare senza errori o loop infiniti.
 
 ## Data Analisi
 
-**Data**: 2025-01-14
-**Analista**: Cascade AI
-**Priorità**: ALTA
+**Data**: 2025-01-14  
+**Analista**: Cascade AI  
+**Priorità**: ALTA  
 **Stato**: Identificato - In attesa di implementazione

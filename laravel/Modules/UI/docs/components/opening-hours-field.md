@@ -198,7 +198,7 @@ public function getFormSchema(): array
 {
     return [
         OpeningHoursField::make('availability')
-            ->label(__('saluteora::fields.availability.label'))
+            ->label(__('<nome progetto>::fields.availability.label'))
             ->columnSpanFull(),
     ];
 }
@@ -408,7 +408,7 @@ class Doctor extends BaseModel
 
 ## Collegamenti
 
-- [SaluteOra: Documentazione Opening Hours](../../SaluteOra/docs/opening-hours-filament-field.md)
+- [<nome progetto>: Documentazione Opening Hours](../../<nome progetto>/docs/opening-hours-filament-field.md)
 - [Spatie Opening Hours Library](https://github.com/spatie/opening-hours)
 - [Filament Custom Fields Documentation](https://filamentphp.com/docs/forms/fields/custom)
 

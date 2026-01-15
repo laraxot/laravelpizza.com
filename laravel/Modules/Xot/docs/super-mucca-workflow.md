@@ -47,7 +47,7 @@
 # 2. Identifica modulo/file coinvolto
 # 3. Studia documentazione modulo
 
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel
+cd laravel
 ls -la Modules/{ModuleName}/docs/
 cat Modules/{ModuleName}/docs/README.md
 ```
@@ -422,11 +422,11 @@ Modules/{Module}/documentation/doc.md
 
 ```bash
 # ✅ CORRETTO - Categorizzato in bashscripts
-/var/www/_bases/base_ptvx_fila4_mono/bashscripts/quality-assurance/script.sh
+bashscripts/quality-assurance/script.sh
 
 # ❌ SBAGLIATO - Root o laravel
-/var/www/_bases/base_ptvx_fila4_mono/script.sh
-/var/www/_bases/base_ptvx_fila4_mono/laravel/script.sh
+script.sh
+script.sh
 ```
 
 ---

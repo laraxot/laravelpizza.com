@@ -12,9 +12,9 @@ Durante l'audit del modulo `UI`, sono state identificate **violazioni critiche d
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\Patient;
 use Modules\<nome modulo>\States\User\UserState;
-use Modules\SaluteOra\Models\User;
-use Modules\SaluteOra\Models\Patient;
-use Modules\SaluteOra\States\User\UserState;
+use Modules\<nome progetto>\Models\User;
+use Modules\<nome progetto>\Models\Patient;
+use Modules\<nome progetto>\States\User\UserState;
 ```
 
 **File contaminati:**
@@ -28,12 +28,12 @@ use Modules\SaluteOra\States\User\UserState;
 // ❌ ERRORE CRITICO - Traduzioni hardcoded
 __('<nome progetto>::widgets.find_doctor_and_appointment.messages.studio_selected_title')
 __('<nome progetto>::widgets.find_doctor_and_appointment.studio_list.title')
-__('saluteora::widgets.find_doctor_and_appointment.messages.studio_selected_title')
-__('saluteora::widgets.find_doctor_and_appointment.studio_list.title')
-__('saluteora::widgets.find_doctor_and_appointment.messages.studio_selected_title')
-__('saluteora::widgets.find_doctor_and_appointment.studio_list.title')
-__('saluteora::widgets.find_doctor_and_appointment.messages.studio_selected_title')
-__('saluteora::widgets.find_doctor_and_appointment.studio_list.title')
+__('<nome progetto>::widgets.find_doctor_and_appointment.messages.studio_selected_title')
+__('<nome progetto>::widgets.find_doctor_and_appointment.studio_list.title')
+__('<nome progetto>::widgets.find_doctor_and_appointment.messages.studio_selected_title')
+__('<nome progetto>::widgets.find_doctor_and_appointment.studio_list.title')
+__('<nome progetto>::widgets.find_doctor_and_appointment.messages.studio_selected_title')
+__('<nome progetto>::widgets.find_doctor_and_appointment.studio_list.title')
 ```
 
 **File contaminati:**
@@ -201,8 +201,8 @@ Ogni progetto può personalizzare i modelli, stati e traduzioni tramite variabil
 # Verifica dipendenze hardcoded
 grep -r "Modules\\" laravel/Modules/UI/ --include="*.php"
 grep -r "<nome progetto>::" laravel/Modules/UI/ --include="*.php"
-grep -r "Modules\\SaluteOra" laravel/Modules/UI/ --include="*.php"
-grep -r "saluteora::" laravel/Modules/UI/ --include="*.php"
+grep -r "Modules\\<nome progetto>" laravel/Modules/UI/ --include="*.php"
+grep -r "<nome progetto>::" laravel/Modules/UI/ --include="*.php"
 ```
 
 ### Risultato Atteso

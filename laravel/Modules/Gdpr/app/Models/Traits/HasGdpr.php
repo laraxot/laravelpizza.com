@@ -13,12 +13,12 @@ use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 
 /**
- * Trait HasGdpr
+ * Trait HasGdpr.
  *
  * Provides GDPR-related functionality for Eloquent models.
  *
- * @property-read Collection<int, Consent> $consents
- * @property-read Collection<int, Consent> $activeConsents
+ * @property Collection<int, Consent> $consents
+ * @property Collection<int, Consent> $activeConsents
  */
 trait HasGdpr
 {
@@ -56,18 +56,28 @@ trait HasGdpr
     }
 
     /**
+     * <<<<<<< Updated upstream
      * Check if the user has given a specific consent.
-     *
-     * @param  bool  $cached  Use cached version if available
      */
-    public function hasGivenConsent(ConsentType|string $type, bool $cached = true): bool
+    public function hasGivenConsent(ConsentType|string $type): bool
     {
         $type = $type instanceof ConsentType ? $type->value : $type;
         $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
 
-        if ($cached && Cache::has($cacheKey)) {
+        if (Cache::has($cacheKey)) {
             return (bool) Cache::get($cacheKey);
         }
+
+        return $this->hasGivenConsentWithoutCache($type);
+    }
+
+    /**
+     * Check if the user has given a specific consent (bypassing cache).
+     */
+    public function hasGivenConsentWithoutCache(ConsentType|string $type): bool
+    {
+        $type = $type instanceof ConsentType ? $type->value : $type;
+        $cacheKey = 'user_'.(string) $this->getKey().'_consent_'.$type;
 
         $hasConsent = $this->activeConsents()->where('type', $type)->exists();
 
@@ -79,7 +89,7 @@ trait HasGdpr
     /**
      * Give consent for a specific type.
      *
-     * @param  array<string, mixed>  $metadata
+     * @param array<string, mixed> $metadata
      */
     public function giveConsent(ConsentType|string $type, array $metadata = []): Consent
     {
@@ -131,7 +141,7 @@ trait HasGdpr
     {
         $givenConsents = $this->activeConsents()->pluck('type')->toArray();
 
-        /** @var array<string> */
+        /* @var array<string> */
         return array_diff(ConsentType::getRequiredConsentTypes(), $givenConsents);
     }
 

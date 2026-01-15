@@ -57,6 +57,6 @@ Questa documentazione integra entrambe le versioni emerse dal conflitto per forn
 ```
 
 ## Collegamenti
-- [Componenti UI](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/UI/docs/components.md)
-- [Documentazione Filament](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/UI/docs/filament/README.md)
-- [Convenzioni di Naming](/var/www/html/_bases/base_ptvx_fila3_mono/laravel/Modules/UI/docs/naming-conventions.md)
+- [Componenti UI](laravel/Modules/UI/docs/components.md)
+- [Documentazione Filament](laravel/Modules/UI/docs/filament/README.md)
+- [Convenzioni di Naming](laravel/Modules/UI/docs/naming-conventions.md)

@@ -266,8 +266,8 @@ describe('Notification Types', function () {
 
         $validChannels = ['email', 'sms', 'push', 'in_app'];
         $typeChannels = json_decode($type->channels, true);
-
-        $hasValidChannels = collect($typeChannels)->every(fn($channel) =>
+        
+        $hasValidChannels = collect($typeChannels)->every(fn($channel) => 
             in_array($channel, $validChannels)
         );
 
@@ -430,7 +430,7 @@ describe('Security and Compliance', function () {
         ]);
 
         $storedData = $notification->getDecryptedData();
-
+        
         expect($storedData['patient_ssn'])->toBe('123-45-6789');
         expect($notification->data)->not->toContain('123-45-6789'); // Should be encrypted in storage
     });
@@ -471,15 +471,15 @@ describe('Security and Compliance', function () {
 protected function setUp(): void
 {
     parent::setUp();
-
+    
     // Use testing database
     config(['database.default' => 'sqlite']);
     config(['database.connections.sqlite.database' => ':memory:']);
-
+    
     // Configure notification testing
     config(['mail.default' => 'log']);
     config(['queue.default' => 'sync']);
-
+    
     // Set up test notification channels
     config(['notify.channels' => [
         'email' => TestEmailChannel::class,
@@ -494,7 +494,7 @@ protected function setUp(): void
 $this->mock(EmailServiceInterface::class, function ($mock) {
     $mock->shouldReceive('send')
          ->andReturn(true);
-
+    
     $mock->shouldReceive('getDeliveryStatus')
          ->andReturn('delivered');
 });

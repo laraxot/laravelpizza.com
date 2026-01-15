@@ -79,7 +79,7 @@ test('stats overview widget getStats method has correct return type', function (
     $getStatsMethod = $reflection->getMethod('getStats');
 
     $returnType = $getStatsMethod->getReturnType();
-    if ($returnType !== null) {
+    if (null !== $returnType) {
         expect($returnType->getName())->toBe('array');
     }
 });

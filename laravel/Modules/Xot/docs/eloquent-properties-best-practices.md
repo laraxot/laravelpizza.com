@@ -186,7 +186,7 @@ public function getStatus(): string
 Tutti i file devono passare la validazione PHPStan livello 9+:
 
 ```bash
-cd /var/www/html/ptvx/laravel
+cd laravel
 ./vendor/bin/phpstan analyze Modules --level=9
 ```
 

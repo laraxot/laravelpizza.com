@@ -932,3 +932,25 @@ class BlogPostsChartTest extends TestCase
 **Chart.js:** 4.x
 **Framework:** Laraxot/PTVX
 **PHPStan Level:** 10
+
+---
+
+## 🎯 Standard 2026: Professional Charts & PDF
+
+Per garantire un look "Premium" e la possibilità di esportare PDF perfetti in ambito Quaeris/PTVX:
+
+### 1. Configurazione Professionale
+Consultare la guida **[LimeSurvey Professional Charts Guide](../../../Limesurvey/docs/professional-charts-and-pdfs.md)**.
+- Font unificati (Inter/Roboto).
+- Legende posizionate correttamente.
+- Gridline minimali.
+
+### 2. Export PDF (Browsershot)
+**NON usare dompdf**. L'unico standard accettato è **Spatie Laravel PDF** (wrapper di Browsershot).
+Pattern:
+1.  Creare una Blade View dedicata ("Shadow Report").
+2.  Iniettare gli stessi dati del Dashboard (usando Actions).
+3.  Impostare `animation: false` nelle opzioni Chart.js per la stampa.
+
+Vedi: **[Dashboard Best Practices](../../../Limesurvey/docs/dashboard-best-practices.md)**.
+

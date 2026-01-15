@@ -23,7 +23,7 @@ Il sistema MCP è configurato per supportare lo sviluppo e la manutenzione del p
   - Esecuzione di comandi di sistema (migrate, seed, etc.)
   - Interazione con i modelli e le risorse
   - Gestione dei servizi Laravel
-- **Path**: `/var/www/_bases/base_techplanner_fila4_mono/laravel/artisan`
+- **Path**: `artisan`
 
 ### 2. Filesystem Server
 - **Scopo**: Accesso completo ai file del progetto

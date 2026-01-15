@@ -77,6 +77,9 @@ class Logout extends Component
      */
     public function render(): View
     {
-        return view('user::livewire.auth.logout');
+        /** @var view-string $viewName */
+        $viewName = 'user::livewire.auth.logout';
+
+        return view($viewName);
     }
 }

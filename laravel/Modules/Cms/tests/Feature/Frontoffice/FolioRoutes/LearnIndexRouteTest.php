@@ -13,6 +13,7 @@ it('GET /it/learn acceptable', function (): void {
     $status = (int) $res->getStatusCode();
     if ($status >= 500) {
         test()->markTestSkipped('Learn route returned server error in this install.');
+
         return;
     }
 

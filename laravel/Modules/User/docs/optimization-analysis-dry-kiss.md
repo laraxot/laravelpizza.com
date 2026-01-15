@@ -20,7 +20,7 @@ public function view(UserContract $user, $model): bool
     if ($user->hasRole('super-admin')) {
         return true;
     }
-
+    
     try {
         if ($user->hasPermissionTo('model.view')) {
             return true;
@@ -28,7 +28,7 @@ public function view(UserContract $user, $model): bool
     } catch (\Exception $e) {
         // Permission system not working
     }
-
+    
     return $user->id === $model->user_id; // Ownership logic
 }
 ```
@@ -45,7 +45,7 @@ trait HasStandardAuthorizationTrait
         if ($user->hasRole('super-admin')) {
             return true;
         }
-
+        
         // Permission check
         try {
             if ($user->hasPermissionTo($permission)) {
@@ -54,22 +54,22 @@ trait HasStandardAuthorizationTrait
         } catch (\Exception $e) {
             // Permission system not working, continue with ownership check
         }
-
+        
         // Ownership check if model provided
         return $model ? $this->checkOwnership($user, $model) : false;
     }
-
+    
     protected function checkOwnership(UserContract $user, Model $model): bool
     {
         // Standard ownership patterns
         if (property_exists($model, 'user_id')) {
             return $user->id === $model->user_id;
         }
-
+        
         if (property_exists($model, 'email')) {
             return $user->email === $model->email;
         }
-
+        
         return false;
     }
 }
@@ -130,7 +130,7 @@ trait HasRelationshipHelpersTrait
         // Logica standardizzata per relazioni many-to-many
         // con convenzioni di naming automatiche
     }
-
+    
     protected function canAccessRelated(Model $related): bool
     {
         // Logica comune per controllo accesso alle relazioni
@@ -198,9 +198,9 @@ trait HasStandardTranslationsTrait
 3. Refactoring Filament Resources
 
 ## 🔗 Collegamenti Correlati
-- [UserBasePolicy.php](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/User/app/Models/Policies/UserBasePolicy.php)
-- [BaseUser.php](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/User/app/Models/BaseUser.php)
-- [Trait Analysis - HasTenants](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/User/app/Models/Traits/HasTenants.php)
+- [UserBasePolicy.php](Modules/User/app/Models/Policies/UserBasePolicy.php)
+- [BaseUser.php](Modules/User/app/Models/BaseUser.php)
+- [Trait Analysis - HasTenants](Modules/User/app/Models/Traits/HasTenants.php)
 
 ---
 *Analisi completata con principi DRY + KISS | Data: $(date)*

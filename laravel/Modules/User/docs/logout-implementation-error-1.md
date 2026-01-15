@@ -11,17 +11,17 @@
 
 ## Errore Identificato
 
-L'implementazione attuale del file `/var/www/html/saluteora/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` presenta i seguenti problemi:
+L'implementazione attuale del file `Themes/One/resources/views/pages/auth/logout.blade.php` presenta i seguenti problemi:
 
 1. **Approccio non ottimale**: L'implementazione attuale utilizza Volt per gestire il logout, ma richiede una conferma da parte dell'utente, aggiungendo un passaggio non necessario al processo di logout.
 
-2. **Violazione delle convenzioni di SaluteOra**: Secondo le memorie del progetto, per il logout è raccomandato l'approccio "Folio con PHP puro" che esegue il logout immediatamente senza richiedere conferma.
+2. **Violazione delle convenzioni di <nome progetto>**: Secondo le memorie del progetto, per il logout è raccomandato l'approccio "Folio con PHP puro" che esegue il logout immediatamente senza richiedere conferma.
 
-3. **Mancanza di localizzazione URL**: L'implementazione attuale non utilizza `app()->getLocale()` per la localizzazione degli URL nel reindirizzamento, come richiesto dalle convenzioni di SaluteOra.
+3. **Mancanza di localizzazione URL**: L'implementazione attuale non utilizza `app()->getLocale()` per la localizzazione degli URL nel reindirizzamento, come richiesto dalle convenzioni di <nome progetto>.
 
 4. **Struttura non ottimale**: La struttura attuale combina Volt e PHP in modo non ottimale, definendo la logica PHP dopo il template Blade.
 
-5. **Mancato utilizzo di widget Filament**: Per form complessi, SaluteOra raccomanda l'utilizzo di widget Filament invece di reinventare la ruota con implementazioni personalizzate.
+5. **Mancato utilizzo di widget Filament**: Per form complessi, <nome progetto> raccomanda l'utilizzo di widget Filament invece di reinventare la ruota con implementazioni personalizzate.
 
 ## Soluzione Raccomandata
 
@@ -66,6 +66,6 @@ Se si desidera mantenere la conferma di logout, è preferibile utilizzare un wid
 
 ## Conclusione
 
-L'errore principale nell'implementazione attuale è l'utilizzo di un approccio non ottimale e non conforme alle convenzioni di SaluteOra per il logout. La soluzione raccomandata è utilizzare l'approccio "Folio con PHP puro" per un logout immediato, o in alternativa, implementare un widget Filament per il logout con conferma.
+L'errore principale nell'implementazione attuale è l'utilizzo di un approccio non ottimale e non conforme alle convenzioni di <nome progetto> per il logout. La soluzione raccomandata è utilizzare l'approccio "Folio con PHP puro" per un logout immediato, o in alternativa, implementare un widget Filament per il logout con conferma.
 
 La documentazione è stata aggiornata per riflettere queste raccomandazioni e per fornire esempi di implementazione corretta.

@@ -52,12 +52,12 @@ I file di localizzazione **devono rimanere nella directory principale**:
 
 ✅ CORRETTO:
 ```
-/var/www/html/_bases/base_<nome progetto>_fila3/laravel/Modules/Rating/lang/it/rating.php
+Modules/Rating/lang/it/rating.php
 ```
 
 ❌ ERRATO:
 ```
-/var/www/html/_bases/base_<nome progetto>_fila3/laravel/Modules/Rating/app/lang/it/rating.php
+Modules/Rating/app/lang/it/rating.php
 ```
 
 ## Eccezioni Tecniche (NON spostare in app/)

@@ -30,4 +30,8 @@ return [
             'tooltip' => 'logout',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'fields' => [],
 ];

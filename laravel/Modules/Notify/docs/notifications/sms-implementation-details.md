@@ -281,7 +281,7 @@ return [
         'username' => env('SMSHOSTING_USERNAME'),
         'password' => env('SMSHOSTING_PASSWORD'),
         'sender' => env('SMSHOSTING_SENDER', ''),
-        'sender' => env('SMSHOSTING_SENDER', 'SaluteOra'),
+        'sender' => env('SMSHOSTING_SENDER', '<nome progetto>'),
     ],
 ];
 ```
@@ -737,8 +737,8 @@ public function toTwilio($notifiable)
     return (new TwilioSmsMessage())
         ->content(": Promemoria appuntamento {$this->appointment->formatted_date}.
         Per annullare rispondere NO. Per info: <nome progetto>.it/privacy");
-        ->content("SaluteOra: Promemoria appuntamento {$this->appointment->formatted_date}.
-        Per annullare rispondere NO. Per info: saluteora.it/privacy");
+        ->content("<nome progetto>: Promemoria appuntamento {$this->appointment->formatted_date}.
+        Per annullare rispondere NO. Per info: <nome progetto>.it/privacy");
 }
 ```
 

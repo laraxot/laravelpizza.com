@@ -3,7 +3,7 @@
 ## 🎯 Obiettivo
 
 Questa documentazione è stata creata per risolvere i problemi comuni relativi alle licenze FullCalendar Scheduler nel progetto , basandosi sulla ricerca approfondita della documentazione ufficiale di FullCalendar e dei problemi noti nella community.
-Questa documentazione è stata creata per risolvere i problemi comuni relativi alle licenze FullCalendar Scheduler nel progetto SaluteOra, basandosi sulla ricerca approfondita della documentazione ufficiale di FullCalendar e dei problemi noti nella community.
+Questa documentazione è stata creata per risolvere i problemi comuni relativi alle licenze FullCalendar Scheduler nel progetto <nome progetto>, basandosi sulla ricerca approfondita della documentazione ufficiale di FullCalendar e dei problemi noti nella community.
 
 ## 📚 Documenti Creati
 
@@ -13,7 +13,7 @@ Questa documentazione è stata creata per risolvere i problemi comuni relativi a
 - Copertura completa di tutti i problemi noti
 - Soluzioni specifiche per Laravel/Filament
 - Best practices per ambiente sanitario
-- Best practices per ambiente sanitario SaluteOra
+- Best practices per ambiente sanitario <nome progetto>
 
 ### 2. **Riferimento Rapido**
 📄 `fullcalendar-scheduler-quick-reference.md`
@@ -73,7 +73,7 @@ private function getFullCalendarPlugin(): FilamentFullCalendarPlugin
             'resourceTimeline', 'resourceDayGrid', // Premium
         ],
         // Configurazioni  specifiche...
-        // Configurazioni SaluteOra specifiche...
+        // Configurazioni <nome progetto> specifiche...
     ]);
 }
 ```
@@ -102,7 +102,7 @@ FULLCALENDAR_MAX_EVENTS=100
 ```
 
 ## 🏥 Specifiche
-## 🏥 Specifiche SaluteOra
+## 🏥 Specifiche <nome progetto>
 
 ### Business Hours Sanitarie
 ```javascript
@@ -191,7 +191,7 @@ Log::info('FullCalendar configured', [
 ✅ **Bug versioning** - Soluzioni per v5.x e v6.x
 ✅ **Ambiente-specific** - Gestione produzione/sviluppo
 ✅ ** integration** - Configurazioni sanitarie specifiche
-✅ **SaluteOra integration** - Configurazioni sanitarie specifiche
+✅ **<nome progetto> integration** - Configurazioni sanitarie specifiche
 
 ### Benefici
 - **Riduzione troubleshooting time** - Soluzioni immediate disponibili
@@ -219,13 +219,13 @@ Log::info('FullCalendar configured', [
 - Nuove versioni FullCalendar con breaking changes
 - Nuovi bug noti nella community
 - Modifiche architettura
-- Modifiche architettura SaluteOra
+- Modifiche architettura <nome progetto>
 - Nuovi requisiti sanitari/legali
 
 ### Come Aggiornare
 1. Verificare issue GitHub FullCalendar
 2. Testare soluzioni in ambiente
-2. Testare soluzioni in ambiente SaluteOra
+2. Testare soluzioni in ambiente <nome progetto>
 3. Aggiornare documenti pertinenti
 4. Aggiornare questo README
 
@@ -236,12 +236,12 @@ Log::info('FullCalendar configured', [
 **Versione FullCalendar**: v6.1.17
 **Versione Filament**: v3.x
 **Progetto**:  Multi-Tenant Healthcare Platform
-**Progetto**: SaluteOra Multi-Tenant Healthcare Platform
+**Progetto**: <nome progetto> Multi-Tenant Healthcare Platform
 # FullCalendar Scheduler Documentation - README
 
 ## 🎯 Obiettivo
 
-Questa documentazione è stata creata per risolvere i problemi comuni relativi alle licenze FullCalendar Scheduler nel progetto SaluteOra, basandosi sulla ricerca approfondita della documentazione ufficiale di FullCalendar e dei problemi noti nella community.
+Questa documentazione è stata creata per risolvere i problemi comuni relativi alle licenze FullCalendar Scheduler nel progetto <nome progetto>, basandosi sulla ricerca approfondita della documentazione ufficiale di FullCalendar e dei problemi noti nella community.
 
 ## 📚 Documenti Creati
 
@@ -250,7 +250,7 @@ Questa documentazione è stata creata per risolvere i problemi comuni relativi a
 - **400+ righe** di documentazione dettagliata
 - Copertura completa di tutti i problemi noti
 - Soluzioni specifiche per Laravel/Filament
-- Best practices per ambiente sanitario SaluteOra
+- Best practices per ambiente sanitario <nome progetto>
 
 ### 2. **Riferimento Rapido**
 📄 `fullcalendar-scheduler-quick-reference.md`
@@ -308,7 +308,7 @@ private function getFullCalendarPlugin(): FilamentFullCalendarPlugin
             'dayGrid', 'timeGrid', 'list', 'interaction',
             'resourceTimeline', 'resourceDayGrid', // Premium
         ],
-        // Configurazioni SaluteOra specifiche...
+        // Configurazioni <nome progetto> specifiche...
     ]);
 }
 ```
@@ -335,7 +335,7 @@ FULLCALENDAR_CACHE_TTL=300
 FULLCALENDAR_MAX_EVENTS=100
 ```
 
-## 🏥 Specifiche SaluteOra
+## 🏥 Specifiche <nome progetto>
 
 ### Business Hours Sanitarie
 ```javascript
@@ -422,7 +422,7 @@ Log::info('FullCalendar configured', [
 ✅ **Configurazione incompleta** - Setup completo fornito
 ✅ **Bug versioning** - Soluzioni per v5.x e v6.x
 ✅ **Ambiente-specific** - Gestione produzione/sviluppo
-✅ **SaluteOra integration** - Configurazioni sanitarie specifiche
+✅ **<nome progetto> integration** - Configurazioni sanitarie specifiche
 
 ### Benefici
 - **Riduzione troubleshooting time** - Soluzioni immediate disponibili
@@ -448,12 +448,12 @@ Log::info('FullCalendar configured', [
 ### Quando Aggiornare
 - Nuove versioni FullCalendar con breaking changes
 - Nuovi bug noti nella community
-- Modifiche architettura SaluteOra
+- Modifiche architettura <nome progetto>
 - Nuovi requisiti sanitari/legali
 
 ### Come Aggiornare
 1. Verificare issue GitHub FullCalendar
-2. Testare soluzioni in ambiente SaluteOra
+2. Testare soluzioni in ambiente <nome progetto>
 3. Aggiornare documenti pertinenti
 4. Aggiornare questo README
 
@@ -463,4 +463,4 @@ Log::info('FullCalendar configured', [
 **Ultima modifica**: Gennaio 2025
 **Versione FullCalendar**: v6.1.17
 **Versione Filament**: v3.x
-**Progetto**: SaluteOra Multi-Tenant Healthcare Platform
+**Progetto**: <nome progetto> Multi-Tenant Healthcare Platform

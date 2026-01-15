@@ -82,4 +82,7 @@ return [
             'label' => 'expires_at',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
 ];

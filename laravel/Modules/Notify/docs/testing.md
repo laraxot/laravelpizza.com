@@ -213,7 +213,7 @@ final class NotificationTest extends TestCase
         ]);
 
         $service = app(NotificationService::class);
-
+        
         $service->send($template, ['test@example.com'], [
             'name' => 'John',
         ]);
@@ -394,7 +394,7 @@ final class SendNotificationActionTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         $this->action = app(SendNotificationAction::class);
         $this->template = Template::factory()->create();
         $this->user = User::factory()->create();
@@ -405,7 +405,7 @@ final class SendNotificationActionTest extends TestCase
         // Arrange
         $data = ['name' => 'Test User'];
         $channels = ['mail'];
-
+        
         // Act
         $result = $this->action->execute(
             recipient: $this->user,
@@ -413,7 +413,7 @@ final class SendNotificationActionTest extends TestCase
             data: $data,
             channels: $channels
         );
-
+        
         // Assert
         $this->assertTrue($result);
         $this->assertDatabaseHas('notification_logs', [
@@ -427,10 +427,10 @@ final class SendNotificationActionTest extends TestCase
     {
         // Arrange
         $invalidCode = 'invalid-template';
-
+        
         // Act & Assert
         $this->expectException(TemplateNotFoundException::class);
-
+        
         $this->action->execute(
             recipient: $this->user,
             templateCode: $invalidCode,
@@ -453,7 +453,7 @@ final class TrackNotificationEventActionTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         $this->action = app(TrackNotificationEventAction::class);
         $this->notification = NotificationLog::factory()->create();
     }
@@ -463,14 +463,14 @@ final class TrackNotificationEventActionTest extends TestCase
         // Arrange
         $eventType = 'delivered';
         $eventData = ['ip' => '127.0.0.1'];
-
+        
         // Act
         $result = $this->action->execute(
             notification: $this->notification,
             eventType: $eventType,
             eventData: $eventData
         );
-
+        
         // Assert
         $this->assertTrue($result);
         $this->assertDatabaseHas('template_analytics', [
@@ -504,10 +504,10 @@ final class TemplateTest extends TestCase
             'content' => 'New content',
             'metadata' => ['key' => 'value']
         ];
-
+        
         // Act
         $version = $this->template->createNewVersion($data);
-
+        
         // Assert
         $this->assertEquals(1, $version->version);
         $this->assertEquals($data['content'], $version->content);
@@ -518,10 +518,10 @@ final class TemplateTest extends TestCase
         // Arrange
         $this->template->createNewVersion(['content' => 'Version 1']);
         $this->template->createNewVersion(['content' => 'Version 2']);
-
+        
         // Act
         $latest = $this->template->latestVersion();
-
+        
         // Assert
         $this->assertEquals('Version 2', $latest->content);
     }
@@ -544,7 +544,7 @@ final class NotificationFlowTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         $this->sendAction = app(SendNotificationAction::class);
         $this->trackAction = app(TrackNotificationEventAction::class);
         $this->template = Template::factory()->create();
@@ -556,7 +556,7 @@ final class NotificationFlowTest extends TestCase
         // Arrange
         $data = ['name' => 'Test User'];
         $channels = ['mail'];
-
+        
         // Act - Send
         $sendResult = $this->sendAction->execute(
             recipient: $this->user,
@@ -564,30 +564,30 @@ final class NotificationFlowTest extends TestCase
             data: $data,
             channels: $channels
         );
-
+        
         // Assert - Send
         $this->assertTrue($sendResult);
         $notification = NotificationLog::first();
         $this->assertNotNull($notification);
-
+        
         // Act - Track Delivery
         $deliveryResult = $this->trackAction->execute(
             notification: $notification,
             eventType: 'delivered',
             eventData: ['ip' => '127.0.0.1']
         );
-
+        
         // Assert - Delivery
         $this->assertTrue($deliveryResult);
         $this->assertNotNull($notification->fresh()->delivered_at);
-
+        
         // Act - Track Open
         $openResult = $this->trackAction->execute(
             notification: $notification,
             eventType: 'opened',
             eventData: ['user_agent' => 'Mozilla/5.0']
         );
-
+        
         // Assert - Open
         $this->assertTrue($openResult);
         $this->assertNotNull($notification->fresh()->opened_at);
@@ -609,7 +609,7 @@ final class NotificationManagementTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         $this->admin = User::factory()->create(['is_admin' => true]);
         $this->template = Template::factory()->create();
     }
@@ -620,11 +620,11 @@ final class NotificationManagementTest extends TestCase
         $notification = NotificationLog::factory()->create([
             'template_id' => $this->template->id
         ]);
-
+        
         // Act
         $response = $this->actingAs($this->admin)
             ->get(route('admin.notifications.index'));
-
+        
         // Assert
         $response->assertStatus(200)
             ->assertViewHas('notifications')
@@ -637,11 +637,11 @@ final class NotificationManagementTest extends TestCase
         $notification = NotificationLog::factory()->create([
             'template_id' => $this->template->id
         ]);
-
+        
         // Act
         $response = $this->actingAs($this->admin)
             ->delete(route('admin.notifications.destroy', $notification));
-
+        
         // Assert
         $response->assertRedirect(route('admin.notifications.index'));
         $this->assertDatabaseMissing('notification_logs', [
@@ -674,7 +674,7 @@ final class NotificationCardTest extends TestCase
             '<x-notify::notification-card :notification="$notification" />',
             ['notification' => $this->notification]
         );
-
+        
         // Assert
         $view->assertSee($this->notification->id)
             ->assertSee($this->notification->template->name);
@@ -697,7 +697,7 @@ final class NotificationQueueTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         $this->action = app(SendNotificationAction::class);
         $this->template = Template::factory()->create();
         $this->users = User::factory()->count(100)->create();
@@ -707,7 +707,7 @@ final class NotificationQueueTest extends TestCase
     {
         // Arrange
         $startTime = microtime(true);
-
+        
         // Act
         foreach ($this->users as $user) {
             $this->action->execute(
@@ -717,11 +717,11 @@ final class NotificationQueueTest extends TestCase
                 channels: ['mail']
             );
         }
-
+        
         // Assert
         $endTime = microtime(true);
         $executionTime = $endTime - $startTime;
-
+        
         $this->assertLessThan(5.0, $executionTime);
         $this->assertDatabaseCount('notification_logs', 100);
     }
@@ -742,7 +742,7 @@ final class NotificationSecurityTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-
+        
         $this->user = User::factory()->create();
         $this->template = Template::factory()->create();
     }
@@ -753,13 +753,13 @@ final class NotificationSecurityTest extends TestCase
         $maliciousData = [
             'name' => '<script>alert("xss")</script>'
         ];
-
+        
         // Act
         $notification = NotificationLog::factory()->create([
             'template_id' => $this->template->id,
             'data' => $maliciousData
         ]);
-
+        
         // Assert
         $this->assertStringNotContainsString(
             '<script>',
@@ -771,10 +771,10 @@ final class NotificationSecurityTest extends TestCase
     {
         // Arrange
         $otherUser = User::factory()->create();
-
+        
         // Act & Assert
         $this->expectException(UnauthorizedException::class);
-
+        
         app(SendNotificationAction::class)->execute(
             recipient: $otherUser,
             templateCode: $this->template->code,
@@ -783,4 +783,4 @@ final class NotificationSecurityTest extends TestCase
         );
     }
 }
-```
+``` 

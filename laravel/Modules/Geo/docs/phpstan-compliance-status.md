@@ -1,10 +1,12 @@
 # PHPStan Level 10 Compliance Status
 
-**Last Updated**: 2025-12-10
-**Status**: ✅ FULLY COMPLIANT (0 errors)
+**Last Updated**: 2026-01-12
+**Status**: 🚧 REGRESSION DETECTED (8 errors found)
 
 ## Summary
-The Geo module is already compliant with PHPStan Level 10 analysis. No errors were found during the verification process, demonstrating excellent type safety and code quality standards.
+The Geo module was previously compliant with PHPStan Level 10 (as of 2025-12-10), but recent code additions have introduced **8 return type errors**. All errors are related to type narrowing and can be resolved with Assert statements and proper PHPDoc annotations.
+
+**See**: [PHPStan Errors Roadmap 2026-01-12](./phpstan-errors-roadmap-2026-01-12.md) for detailed fix plan.
 
 ## Compliance Verification
 ```bash

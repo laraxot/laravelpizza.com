@@ -46,14 +46,14 @@ Modules/Notify/resources/views/emails/templates/ark/wideImage.blade.php
 
 ## 📜 Regola
 
-**File PHP con classi**: UpperCamelCase (PSR-4)
+**File PHP con classi**: UpperCamelCase (PSR-4)  
 **Blade templates**: Seguire convenzione esistente (qui camelCase per i componenti)
 
 Vedi documentazione completa: [Xot/docs/file-naming-case-sensitivity.md](../../Xot/docs/file-naming-case-sensitivity.md)
 
 ## ⚠️ Problema
 
-Su Linux (production): file diversi per case
+Su Linux (production): file diversi per case  
 Su Windows/macOS (dev): stesso file → **conflitti Git**, **errori rendering template**
 
 ## 🔧 Script Cleanup
@@ -61,12 +61,12 @@ Su Windows/macOS (dev): stesso file → **conflitti Git**, **errori rendering te
 ### Automatico (Raccomandato)
 ```bash
 # Script automatico che elimina tutti i duplicati lowercase
-/var/www/_bases/base_ptvx_fila4_mono/bashscripts/fix/cleanup-case-duplicates.sh
+bashscripts/fix/cleanup-case-duplicates.sh
 ```
 
 ### Manuale (Solo Modulo Notify)
 ```bash
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel
+cd laravel
 
 # Tests
 rm Modules/Notify/tests/Feature/emailtemplatestest.php
@@ -103,6 +103,7 @@ git commit -m "fix: remove lowercase duplicate files (case sensitivity complianc
 
 ---
 
-**Riferimenti**:
+**Riferimenti**: 
 - [Xot File Naming Rules](../../Xot/docs/file-naming-case-sensitivity.md)
 - [Bashscripts Location Policy](../../Xot/docs/bashscripts-location-policy.md)
+

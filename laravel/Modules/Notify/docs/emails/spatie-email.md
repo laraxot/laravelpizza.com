@@ -271,7 +271,7 @@ public function toMail($notifiable): SpatieEmail
     $email = new SpatieEmail($this->record, $this->slug);
     $email = $email->mergeData($this->data);
     $email = $email->addAttachments($this->attachments);
-
+    
     if (method_exists($notifiable, 'routeNotificationFor')) {
         $to = $notifiable->routeNotificationFor('mail');
         $email->to($to);
@@ -279,7 +279,7 @@ public function toMail($notifiable): SpatieEmail
             $email->setRecipient($to);
         }
     }
-
+    
     return $email;
 }
 ```
@@ -313,13 +313,13 @@ public function addAttachments(array $attachments): self
     foreach ($attachments as $item) {
         try {
             $attachment = null;
-
+            
             // Validate attachment structure
             if (!is_array($item)) {
                 \Log::warning('Invalid attachment structure', ['item' => $item]);
                 continue;
             }
-
+            
             if (isset($item['path']) && file_exists($item['path'])) {
                 $attachment = $this->getAttachmentFromPath($item);
             } elseif (isset($item['data'])) {
@@ -328,7 +328,7 @@ public function addAttachments(array $attachments): self
                 \Log::warning('Attachment missing path or data', ['item' => $item]);
                 continue;
             }
-
+            
             if ($attachment) {
                 $attachmentObjects[] = $attachment;
             }
@@ -339,7 +339,7 @@ public function addAttachments(array $attachments): self
             ]);
         }
     }
-
+    
     $this->customAttachments = $attachmentObjects;
     return $this;
 }
@@ -366,9 +366,9 @@ private function validateFilePath(string $path): bool
 {
     $realPath = realpath($path);
     $allowedBasePath = realpath(storage_path('app'));
-
-    return $realPath &&
-           strpos($realPath, $allowedBasePath) === 0 &&
+    
+    return $realPath && 
+           strpos($realPath, $allowedBasePath) === 0 && 
            is_readable($realPath);
 }
 ```

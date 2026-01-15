@@ -78,9 +78,9 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
 
 declare(strict_types=1);
 
-namespace Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+namespace Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource;
+use Modules\<nome progetto>\Filament\Resources\ReportResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Filament\Actions;
 use Filament\Tables;
@@ -230,9 +230,9 @@ public static function getFormSchema(): array
 
 declare(strict_types=1);
 
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 use Filament\Actions;
 
@@ -267,9 +267,9 @@ class EditAppointment extends XotBaseEditRecord
 
 declare(strict_types=1);
 
-namespace Modules\SaluteMo\Filament\Resources\AppointmentResource\Pages;
+namespace Modules\<nome progetto>\Filament\Resources\AppointmentResource\Pages;
 
-use Modules\SaluteMo\Filament\Resources\AppointmentResource;
+use Modules\<nome progetto>\Filament\Resources\AppointmentResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
 /**
@@ -344,9 +344,9 @@ TextInput::make('nome')
 
 declare(strict_types=1);
 
-namespace Modules\SaluteMo\Filament\Resources;
+namespace Modules\<nome progetto>\Filament\Resources;
 
-use Modules\SaluteMo\Filament\Resources\ReportResource\Pages;
+use Modules\<nome progetto>\Filament\Resources\ReportResource\Pages;
 use Modules\<nome modulo>\Models\Report;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Filament\Forms;
@@ -937,8 +937,8 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 ## Riferimenti
 
 - [Documentazione Filament](https://filamentphp.com/docs)
-- [Documentazione XotBaseResource](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
-- [Best Practices Laraxot](/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
+- [Documentazione XotBaseResource](base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
+- [Best Practices Laraxot](base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
 
 ## Regole per Widget Filament: Path View e Localizzazione
 
@@ -950,13 +950,13 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 
 ### Esempio corretto
 ```php
-protected static string $view = 'saluteora::filament.widgets.find-doctor-and-appointment';
+protected static string $view = '<nome progetto>::filament.widgets.find-doctor-and-appointment';
 TextInput::make('location')->required()
 ```
 
 ### Esempio errato
 ```php
-protected static string $view = 'saluteora::widgets.find-doctor-and-appointment';
+protected static string $view = '<nome progetto>::widgets.find-doctor-and-appointment';
 TextInput::make('location')->label(__('modulo::campo.label'))
 ```
 

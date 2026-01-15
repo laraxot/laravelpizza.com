@@ -3,7 +3,7 @@
 ## Collegamenti Correlati
 - [Indice Documentazione Notify](../INDEX.md)
 - [README Modulo Notify](../README.md)
-- [Documentazione Generale <main module>](../../../../../docs/README.md)
+- [Documentazione Generale SaluteOra](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 
 ## Guida Implementazione
@@ -32,7 +32,7 @@
 - [Canale Telegram](../TELEGRAM_CHANNEL.md) - Documentazione del canale Telegram
 
 ## Note Importanti
-- <main module> utilizza il pattern Factory per la creazione delle azioni di invio messaggi
+- SaluteOra utilizza il pattern Factory per la creazione delle azioni di invio messaggi
 - Il sistema si basa su Queueable Actions (spatie/laravel-queueable-action) e non su Service Pattern
 - Le azioni specifiche per provider devono implementare l'interfaccia comune corrispondente
 - I DTO standardizzati vengono utilizzati come ponte tra il sistema e i provider specifici

@@ -4,20 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources;
 
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteAction;
-use Filament\Actions\DeleteBulkAction;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
-use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
+use Modules\User\Actions\Passport\RevokeAllUserTokensAction;
+use Modules\User\Actions\Passport\RevokeTokenAction;
 use Modules\User\Filament\Clusters\Passport;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource\Pages\EditOauthAccessTokens;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthAccessTokenResource\Pages\ListOauthAccessTokens;
@@ -38,12 +37,12 @@ class OauthAccessTokenResource extends XotBaseResource
     {
         return $table
             ->columns([
-                TextColumn::make('id')
+                \Filament\Tables\Columns\TextColumn::make('id')
                     ->searchable()
                     ->sortable()
                     ->copyable(),
 
-                TextColumn::make('user.name')
+                \Filament\Tables\Columns\TextColumn::make('user.name')
                     ->searchable()
                     ->sortable()
                     ->url(function (mixed $record): ?string {
@@ -59,15 +58,15 @@ class OauthAccessTokenResource extends XotBaseResource
                     })
                     ->openUrlInNewTab(),
 
-                TextColumn::make('client.name')
+                \Filament\Tables\Columns\TextColumn::make('client.name')
                     ->searchable()
                     ->sortable(),
 
-                TextColumn::make('name')
+                \Filament\Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->sortable(),
 
-                TextColumn::make('scopes')
+                \Filament\Tables\Columns\TextColumn::make('scopes')
                     ->limit(30)
                     ->tooltip(function (mixed $state): ?string {
                         if (null === $state) {
@@ -81,15 +80,15 @@ class OauthAccessTokenResource extends XotBaseResource
                         return is_string($state) ? $state : null;
                     }),
 
-                IconColumn::make('revoked')
+                \Filament\Tables\Columns\IconColumn::make('revoked')
                     ->boolean()
                     ->color(fn (bool $state): string => $state ? 'danger' : 'success'),
 
-                TextColumn::make('created_at')
+                \Filament\Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable(),
 
-                TextColumn::make('expires_at')
+                \Filament\Tables\Columns\TextColumn::make('expires_at')
                     ->dateTime()
                     ->sortable()
                     ->formatStateUsing(function (mixed $state): string {
@@ -116,12 +115,45 @@ class OauthAccessTokenResource extends XotBaseResource
                     ->query(fn (Builder $query) => $query->where('revoked', false)->where('expires_at', '>', now())),
             ])
             ->recordActions([
-                DeleteAction::make(),
+                \Filament\Actions\Action::make('revoke')
+                    ->label(static::trans('actions.revoke.label'))
+                    ->icon('heroicon-o-x-circle')
+                    ->color('danger')
+                    ->requiresConfirmation()
+                    ->modalHeading(static::trans('actions.revoke.label'))
+                    ->action(function (mixed $record) {
+                        if ($record instanceof \Illuminate\Database\Eloquent\Model) {
+                            if (app(RevokeTokenAction::class)->execute((string) $record->getKey())) {
+                                Notification::make()
+                                    ->title(static::trans('actions.revoke.success'))
+                                    ->success()
+                                    ->send();
+                            }
+                        }
+                    })
+                    ->visible(fn (mixed $record) => $record instanceof OauthAccessToken && ! $record->revoked),
+                \Filament\Actions\DeleteAction::make(),
             ])
-            ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
-                ]),
+            ->bulkActions([
+                \Filament\Actions\BulkAction::make('revoke_all_for_user')
+                    ->label(static::trans('actions.revoke_all_for_user.label'))
+                    ->icon('heroicon-o-x-circle')
+                    ->color('danger')
+                    ->requiresConfirmation()
+                    ->action(function (Collection $records) {
+                        $users = $records->pluck('user_id')->unique();
+                        $count = 0;
+                        foreach ($users as $userId) {
+                            if (is_string($userId) || is_int($userId)) {
+                                $count += app(RevokeAllUserTokensAction::class)->execute((string) $userId);
+                            }
+                        }
+                        Notification::make()
+                            ->title(static::trans('actions.revoke_all_for_user.success'))
+                            ->success()
+                            ->send();
+                    }),
+                \Filament\Actions\DeleteBulkAction::make(),
             ])
             ->defaultSort('created_at', 'desc');
     }

@@ -6,10 +6,14 @@ namespace Modules\UI\Filament\Blocks;
 
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Component;
 use Modules\Xot\Filament\Blocks\XotBaseBlock;
 
 final class Navigation extends XotBaseBlock
 {
+    /**
+     * @return array<int, Component>
+     */
     #[\Override]
     public static function getBlockSchema(): array
     {
@@ -17,7 +21,9 @@ final class Navigation extends XotBaseBlock
             Repeater::make('items')
                 ->label(__('ui::blocks.navigation.fields.items.label'))
                 ->schema([
-                    TextInput::make('label')->label(__('ui::blocks.navigation.fields.text.label'))->required(),
+                    TextInput::make('label')
+                        ->label(__('ui::blocks.navigation.fields.text.label'))
+                        ->required(),
                     TextInput::make('url')
                         ->label(__('ui::blocks.navigation.fields.url.label'))
                         ->url()
@@ -29,7 +35,7 @@ final class Navigation extends XotBaseBlock
     }
 
     /**
-     * @return array<string, mixed>
+     * @return array<string, Component>
      */
     public function getFormSchema(): array
     {
@@ -37,8 +43,10 @@ final class Navigation extends XotBaseBlock
             'items' => Repeater::make('items')
                 ->label(self::trans('blocks.navigation.fields.items.label'))
                 ->schema([
-                    TextInput::make('text')->label(self::trans('blocks.navigation.fields.text.label')),
-                    TextInput::make('url')->label(self::trans('blocks.navigation.fields.url.label')),
+                    TextInput::make('text')
+                        ->label(self::trans('blocks.navigation.fields.text.label')),
+                    TextInput::make('url')
+                        ->label(self::trans('blocks.navigation.fields.url.label')),
                 ]),
         ];
     }

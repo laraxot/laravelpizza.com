@@ -61,13 +61,13 @@ class GeoDataService
      */
     public function getRegions(): Collection
     {
+        /** @var Collection<int, array{name: string, code: string}> $result */
         $result = Cache::remember(
             self::CACHE_KEY_REGIONS,
             self::CACHE_TTL,
             fn (): Collection => $this->loadData()->pluck('name', 'code'),
         );
 
-        /* @var Collection<int, array{name: string, code: string}> $result */
         return $result;
     }
 
@@ -82,6 +82,7 @@ class GeoDataService
     {
         $cacheKey = \sprintf(self::CACHE_KEY_PROVINCES, $regionCode);
 
+        /** @var Collection<int, array{name: string, code: string}> $result */
         $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($regionCode): Collection {
             /** @var array<string, mixed>|null $region */
             $region = $this->loadData()->firstWhere('code', $regionCode);
@@ -115,7 +116,6 @@ class GeoDataService
             return $provinceResult;
         });
 
-        /* @var Collection<int, array{name: string, code: string}> $result */
         return $result;
     }
 
@@ -130,6 +130,7 @@ class GeoDataService
     {
         $cacheKey = \sprintf(self::CACHE_KEY_CITIES, $provinceCode);
 
+        /** @var Collection<int, array{name: string, code: string}> $result */
         $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($provinceCode): Collection {
             /** @var array<string, mixed>|null $province */
             $province = $this->loadData()->flatMap(static fn (array $region): array => \is_array($region['provinces'] ?? null)
@@ -152,7 +153,6 @@ class GeoDataService
             return $cityResult;
         });
 
-        /* @var Collection<int, array{name: string, code: string}> $result */
         return $result;
     }
 
@@ -166,6 +166,7 @@ class GeoDataService
     {
         $cacheKey = \sprintf(self::CACHE_KEY_CAP, $provinceCode, $cityCode);
 
+        /** @var string|null $result */
         $result = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($provinceCode, $cityCode): null|string {
             /** @var array<string, mixed>|null $province */
             $province = $this->loadData()->flatMap(static fn (array $region): array => \is_array($region['provinces'] ?? null)
@@ -188,7 +189,6 @@ class GeoDataService
             return \is_array($city) && isset($city['cap']) && \is_string($city['cap']) ? $city['cap'] : null;
         });
 
-        /* @var string|null $result */
         return $result;
     }
 
@@ -231,9 +231,12 @@ class GeoDataService
             throw new \RuntimeException('Regioni mancanti nel file JSON');
         }
 
-        $result = new Collection($data['regions']);
+        /** @var array<int, array<string, mixed>> $regions */
+        $regions = $data['regions'];
 
-        /* @var Collection<int, array<string, mixed>> $result */
+        /** @var Collection<int, array<string, mixed>> $result */
+        $result = (new Collection($regions))->values();
+
         return $result;
     }
 }

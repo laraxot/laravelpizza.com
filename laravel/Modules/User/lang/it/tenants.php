@@ -29,4 +29,8 @@ return [
         'domain.placeholder' => 'Inserisci il dominio',
         'domain.helper_text' => 'Il dominio personalizzato per questo tenant',
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

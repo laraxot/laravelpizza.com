@@ -2,7 +2,7 @@
 
 ## Introduzione
 
-Questa guida fornisce una panoramica completa sulla creazione e l'utilizzo di template email HTML responsive nel contesto di SaluteOra, con focus su compatibilità, engagement e best practices di settore.
+Questa guida fornisce una panoramica completa sulla creazione e l'utilizzo di template email HTML responsive nel contesto di <nome progetto>, con focus su compatibilità, engagement e best practices di settore.
 
 ## Principi Fondamentali
 
@@ -74,7 +74,7 @@ Migliore esperienza su client moderni:
 </div>
 ```
 
-Per SaluteOra, si raccomanda un **approccio ibrido**:
+Per <nome progetto>, si raccomanda un **approccio ibrido**:
 - Struttura base con tabelle per massima compatibilità
 - CSS moderno con fallback per funzionalità avanzate
 

@@ -2,7 +2,7 @@
 
 ## Panoramica del Processo
 
-Nel sistema SaluteOra, l'invio dell'email al dottore con il link per continuare la registrazione è un passaggio cruciale che avviene dopo la moderazione della richiesta iniziale. Questo documento descrive in dettaglio dove e come avviene questo processo utilizzando `SpatieEmail` e `spatie/laravel-model-states`.
+Nel sistema <nome progetto>, l'invio dell'email al dottore con il link per continuare la registrazione è un passaggio cruciale che avviene dopo la moderazione della richiesta iniziale. Questo documento descrive in dettaglio dove e come avviene questo processo utilizzando `SpatieEmail` e `spatie/laravel-model-states`.
 
 ## Architettura del Sistema
 
@@ -40,7 +40,7 @@ use Spatie\ModelStates\HasStates;
 class Doctor extends User implements HasStatesContract
 {
     use HasStates;
-
+    
     protected function casts(): array
     {
         return [
@@ -59,12 +59,12 @@ Le transizioni di stato sono gestite attraverso classi dedicate che incapsulano 
 class ApproveDoctorRegistration extends Transition
 {
     private string $moderatorId;
-
+    
     public function __construct(string $moderatorId)
     {
         $this->moderatorId = $moderatorId;
     }
-
+    
     public function handle(Doctor $doctor): DoctorRegistrationState
     {
         // Logica di approvazione
@@ -72,14 +72,14 @@ class ApproveDoctorRegistration extends Transition
         $doctor->moderated_at = now();
         $doctor->generateModerationToken();
         $doctor->save();
-
+        
         // Invio email
         $email = new SpatieEmail($doctor, 'registration_moderated');
-
+        
         Mail::to($doctor->email)
             ->locale('it')
             ->send($email);
-
+        
         return new Approved($doctor);
     }
 }
@@ -104,8 +104,8 @@ MailTemplate::firstOrCreate(
     // Valori da inserire se non viene trovato un record corrispondente
     [
         'subject' => [
-            'it' => 'Registrazione {{ status }} - SaluteOra',
-            'en' => 'Registration {{ status }} - SaluteOra'
+            'it' => 'Registrazione {{ status }} - <nome progetto>',
+            'en' => 'Registration {{ status }} - <nome progetto>'
         ],
         'html_template' => [
             'it' => '<p>Gentile {{ full_name }},</p>
@@ -115,7 +115,7 @@ MailTemplate::firstOrCreate(
 {% else %}
 <p>{{ rejection_reason }}</p>
 {% endif %}
-<p>Cordiali saluti,<br>Il team di SaluteOra</p>',
+<p>Cordiali saluti,<br>Il team di <nome progetto></p>',
             'en' => '<p>Dear {{ full_name }},</p>
 <p>Your registration request has been {{ status_text_en }}.</p>
 {% if is_approved %}
@@ -123,7 +123,7 @@ MailTemplate::firstOrCreate(
 {% else %}
 <p>{{ rejection_reason_en }}</p>
 {% endif %}
-<p>Best regards,<br>The SaluteOra Team</p>'
+<p>Best regards,<br>The <nome progetto> Team</p>'
         ],
         'text_template' => [
             'it' => 'Gentile {{ full_name }},
@@ -137,7 +137,7 @@ Per continuare la registrazione, visita il seguente link: {{ continue_url }}
 {% endif %}
 
 Cordiali saluti,
-Il team di SaluteOra',
+Il team di <nome progetto>',
             'en' => 'Dear {{ full_name }},
 
 Your registration request has been {{ status_text_en }}.
@@ -149,7 +149,7 @@ To continue with your registration, visit the following link: {{ continue_url }}
 {% endif %}
 
 Best regards,
-The SaluteOra Team'
+The <nome progetto> Team'
         ]
     ]
 );
@@ -170,41 +170,41 @@ class SpatieEmail extends TemplateMailable
 {
     protected static $templateModelClass = MailTemplate::class;
     public string $slug;
-
+    
     public function __construct(Model $record, string $slug)
     {
         $data = $record->toArray();
-
+        
         // Aggiungiamo dati specifici per la registrazione del dottore
         if ($slug === 'registration_moderated') {
             $data['is_approved'] = $record->registration_status instanceof Approved;
-
+            
             // Valori in italiano
             $data['status'] = $data['is_approved'] ? 'approvata' : 'in revisione';
             $data['status_text'] = $data['is_approved'] ? 'approvata' : 'messa in revisione';
             $data['rejection_reason'] = $record->moderation_notes ?? 'La tua richiesta richiede ulteriori verifiche.';
-
+            
             // Valori in inglese
             $data['status_en'] = $data['is_approved'] ? 'approved' : 'under review';
             $data['status_text_en'] = $data['is_approved'] ? 'approved' : 'placed under review';
             $data['rejection_reason_en'] = $record->moderation_notes ?? 'Your request requires further verification.';
-
+            
             if ($data['is_approved']) {
                 $data['continue_url'] = route('doctor.registration.continue', [
                     'token' => $record->moderation_token
                 ]);
             }
         }
-
+        
         $this->setAdditionalData($data);
         $this->slug = $slug;
     }
-
+    
     public function getSlug(): string
     {
         return $this->slug;
     }
-
+    
     /**
      * Add attachments to the email
      *
@@ -214,30 +214,30 @@ class SpatieEmail extends TemplateMailable
     public function addAttachments(array $attachments): self
     {
         $attachmentObjects = [];
-
+        
         foreach ($attachments as $item) {
             if (!isset($item['path']) || !file_exists($item['path'])) {
                 continue;
             }
-
+            
             $attachment = Attachment::fromPath($item['path']);
-
+            
             if (isset($item['as'])) {
                 $attachment = $attachment->as($item['as']);
             }
-
+            
             if (isset($item['mime'])) {
                 $attachment = $attachment->withMime($item['mime']);
             }
-
+            
             $attachmentObjects[] = $attachment;
         }
-
+        
         $this->customAttachments = $attachmentObjects;
-
+        
         return $this;
     }
-
+    
     /**
      * Get the HTML layout for the email
      *
@@ -276,20 +276,20 @@ class MailTemplatesTableSeeder extends Seeder
             // Valori da inserire se non trovato
             [
                 'subject' => [
-                    'it' => 'Registrazione {{ status }} - SaluteOra',
-                    'en' => 'Registration {{ status }} - SaluteOra'
+                    'it' => 'Registrazione {{ status }} - <nome progetto>',
+                    'en' => 'Registration {{ status }} - <nome progetto>'
                 ],
                 'html_template' => [
-                    'it' => '<p>Gentile {{ full_name }},</p>\n<p>La tua richiesta di registrazione è stata {{ status_text }}.</p>\n{% if is_approved %}\n<p>Per continuare la registrazione, <a href="{{ continue_url }}">clicca qui</a>.</p>\n{% else %}\n<p>{{ rejection_reason }}</p>\n{% endif %}\n<p>Cordiali saluti,<br>Il team di SaluteOra</p>',
-                    'en' => '<p>Dear {{ full_name }},</p>\n<p>Your registration request has been {{ status_text_en }}.</p>\n{% if is_approved %}\n<p>To continue with your registration, <a href="{{ continue_url }}">click here</a>.</p>\n{% else %}\n<p>{{ rejection_reason_en }}</p>\n{% endif %}\n<p>Best regards,<br>The SaluteOra Team</p>'
+                    'it' => '<p>Gentile {{ full_name }},</p>\n<p>La tua richiesta di registrazione è stata {{ status_text }}.</p>\n{% if is_approved %}\n<p>Per continuare la registrazione, <a href="{{ continue_url }}">clicca qui</a>.</p>\n{% else %}\n<p>{{ rejection_reason }}</p>\n{% endif %}\n<p>Cordiali saluti,<br>Il team di <nome progetto></p>',
+                    'en' => '<p>Dear {{ full_name }},</p>\n<p>Your registration request has been {{ status_text_en }}.</p>\n{% if is_approved %}\n<p>To continue with your registration, <a href="{{ continue_url }}">click here</a>.</p>\n{% else %}\n<p>{{ rejection_reason_en }}</p>\n{% endif %}\n<p>Best regards,<br>The <nome progetto> Team</p>'
                 ],
                 'text_template' => [
-                    'it' => 'Gentile {{ full_name }},\n\nLa tua richiesta di registrazione è stata {{ status_text }}.\n\n{% if is_approved %}\nPer continuare la registrazione, visita il seguente link: {{ continue_url }}\n{% else %}\n{{ rejection_reason }}\n{% endif %}\n\nCordiali saluti,\nIl team di SaluteOra',
-                    'en' => 'Dear {{ full_name }},\n\nYour registration request has been {{ status_text_en }}.\n\n{% if is_approved %}\nTo continue with your registration, visit the following link: {{ continue_url }}\n{% else %}\n{{ rejection_reason_en }}\n{% endif %}\n\nBest regards,\nThe SaluteOra Team'
+                    'it' => 'Gentile {{ full_name }},\n\nLa tua richiesta di registrazione è stata {{ status_text }}.\n\n{% if is_approved %}\nPer continuare la registrazione, visita il seguente link: {{ continue_url }}\n{% else %}\n{{ rejection_reason }}\n{% endif %}\n\nCordiali saluti,\nIl team di <nome progetto>',
+                    'en' => 'Dear {{ full_name }},\n\nYour registration request has been {{ status_text_en }}.\n\n{% if is_approved %}\nTo continue with your registration, visit the following link: {{ continue_url }}\n{% else %}\n{{ rejection_reason_en }}\n{% endif %}\n\nBest regards,\nThe <nome progetto> Team'
                 ]
             ]
         );
-
+        
         // Altri template...
     }
 }
@@ -343,7 +343,7 @@ Questo URL viene incluso nell'email solo se la moderazione è stata approvata.
 
 Il template dell'email si trova in:
 ```
-/var/www/html/saluteora/laravel/Modules/Patient/resources/views/emails/doctor-registration-moderated.blade.php
+Modules/Patient/resources/views/emails/doctor-registration-moderated.blade.php
 ```
 
 Il template visualizza:
@@ -398,7 +398,7 @@ Il template visualizza:
 Il processo di registrazione iniziale del dottore utilizza il widget di registrazione generico che si trova in:
 
 ```
-/var/www/html/saluteora/laravel/Modules/User/app/Filament/Widgets/RegistrationWidget.php
+Modules/User/app/Filament/Widgets/RegistrationWidget.php
 ```
 
 Questo widget è progettato per gestire la registrazione di diversi tipi di utenti, non solo i dottori. Per maggiori dettagli sul funzionamento del widget e su come completarlo correttamente, consultare la [documentazione del widget di registrazione](./registration-widget.md).
@@ -422,7 +422,7 @@ Per inviare correttamente le email di registrazione, è fondamentale raccogliere
 
 ## Conclusione
 
-Il processo di invio dell'email al dottore con il link per continuare la registrazione è un componente ben progettato del sistema SaluteOra, che garantisce:
+Il processo di invio dell'email al dottore con il link per continuare la registrazione è un componente ben progettato del sistema <nome progetto>, che garantisce:
 
 1. **Sicurezza**: Utilizzo di token univoci e validazione
 2. **Flessibilità**: Contenuto dell'email adattato in base all'esito della moderazione

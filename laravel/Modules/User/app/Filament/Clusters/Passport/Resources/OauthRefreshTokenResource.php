@@ -4,19 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources;
 
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteAction;
-use Filament\Actions\DeleteBulkAction;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
-use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Modules\User\Actions\Passport\RevokeRefreshTokenAction;
 use Modules\User\Filament\Clusters\Passport;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthRefreshTokenResource\Pages\ListOauthRefreshTokens;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthRefreshTokenResource\Pages\ViewOauthRefreshToken;
@@ -38,7 +35,7 @@ class OauthRefreshTokenResource extends XotBaseResource
     public static function getFormSchema(): array
     {
         return [
-            'oauth_refresh_token_info' => Section::make('OAuth Refresh Token Information')
+            'oauth_refresh_token_info' => Section::make(static::trans('label'))
                 ->schema([
                     'grid_1' => Grid::make(2)
                         ->schema([
@@ -59,20 +56,20 @@ class OauthRefreshTokenResource extends XotBaseResource
     {
         return $table
             ->columns([
-                TextColumn::make('id')
-                    ->searchable()
-                    ->sortable(),
-                TextColumn::make('accessToken.id')
+                \Filament\Tables\Columns\TextColumn::make('id')
                     ->searchable()
                     ->sortable()
-                    ->toggleable(),
-                IconColumn::make('revoked')
+                    ->copyable(),
+
+                \Filament\Tables\Columns\TextColumn::make('access_token_id')
+                    ->searchable()
+                    ->sortable(),
+
+                \Filament\Tables\Columns\IconColumn::make('revoked')
                     ->boolean()
-                    ->sortable(),
-                TextColumn::make('expires_at')
-                    ->dateTime()
-                    ->sortable(),
-                TextColumn::make('created_at')
+                    ->color(fn (bool $state): string => $state ? 'danger' : 'success'),
+
+                \Filament\Tables\Columns\TextColumn::make('expires_at')
                     ->dateTime()
                     ->sortable(),
             ])
@@ -80,14 +77,29 @@ class OauthRefreshTokenResource extends XotBaseResource
                 // Add filters for revoked status, expiration
             ])
             ->recordActions([
-                DeleteAction::make(),
+                \Filament\Actions\Action::make('revoke')
+                    ->label(static::trans('actions.revoke.label'))
+                    ->icon('heroicon-o-x-circle')
+                    ->color('danger')
+                    ->requiresConfirmation()
+                    ->modalHeading(static::trans('actions.revoke.label'))
+                    ->action(function (mixed $record) {
+                        if ($record instanceof OauthRefreshToken && app(RevokeRefreshTokenAction::class)->execute($record)) {
+                            Notification::make()
+                                ->title(static::trans('actions.revoke.success'))
+                                ->success()
+                                ->send();
+                        }
+                    })
+                    ->visible(fn (mixed $record) => $record instanceof OauthRefreshToken && ! $record->revoked),
+                \Filament\Actions\DeleteAction::make(),
             ])
-            ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+            ->bulkActions([
+                \Filament\Actions\BulkActionGroup::make([
+                    \Filament\Actions\DeleteBulkAction::make(),
                 ]),
             ])
-            ->defaultSort('created_at', 'desc');
+            ->defaultSort('expires_at', 'desc');
     }
 
     /**

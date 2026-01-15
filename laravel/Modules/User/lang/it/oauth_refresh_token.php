@@ -4,13 +4,15 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'Token di aggiornamento OAuth',
-        'group' => 'OAuth',
+        'name' => 'OAuth Refresh Token',
+        'plural' => 'OAuth Refresh Tokens',
+        'label' => 'OAuth Refresh Tokens',
+        'group' => '',
         'icon' => 'heroicon-o-arrow-path',
-        'sort' => 34,
+        'sort' => 27,
     ],
-    'label' => 'Token di aggiornamento OAuth',
-    'plural_label' => 'Token di aggiornamento OAuth',
+    'label' => 'Refresh Token OAuth',
+    'plural_label' => 'Refresh Token OAuth',
     'fields' => [
         'id' => [
             'label' => 'ID',
@@ -24,10 +26,14 @@ return [
         'expires_at' => [
             'label' => 'Scade il',
         ],
+        'created_at' => [
+            'label' => 'Creato il',
+        ],
     ],
     'actions' => [
         'revoke' => [
             'label' => 'Revoca',
+            'success' => 'Refresh token revocato con successo',
         ],
     ],
 ];

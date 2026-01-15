@@ -16,7 +16,7 @@ In Laravel puoi salvare le traduzioni in file PHP strutturati o in file JSON fla
 | **Consistenza**       | Più facile con chiavi            | Rischio duplicati/frasi simili  |
 | **Uso consigliato**   | UI, errori, messaggi brevi       | Frasi lunghe, onboarding, email |
 
-## Best Practice per SaluteOra
+## Best Practice per <nome progetto>
 - **Usa file PHP** per UI, errori, messaggi brevi, validazione, notifiche.
 - **Usa JSON** solo per frasi lunghe o onboarding, se serve collaborazione con traduttori non-dev.
 - **Non mischiare** chiavi tra PHP e JSON con lo stesso nome.
@@ -58,7 +58,7 @@ Uso:
 ```
 
 ## Raccomandazioni
-- Per SaluteOra, **PHP è la scelta principale**. JSON solo per casi particolari.
+- Per <nome progetto>, **PHP è la scelta principale**. JSON solo per casi particolari.
 - Documenta sempre la scelta e spiega ai traduttori/dev come aggiungere nuove stringhe.
 - Per fallback, imposta sempre `fallback_locale` in `config/app.php`.
 - Per traduzioni lunghe, valuta se usare chiavi dedicate in PHP o, solo se necessario, JSON.
@@ -71,7 +71,7 @@ Uso:
 ## Processo Dev → Traduttore: Checklist e Istruzioni
 
 1. **Preparazione**
-   - Esporta i file PHP/JSON di riferimento da `/var/www/html/saluteora/laravel/lang/en/` o `/lang/en.json`.
+   - Esporta i file PHP/JSON di riferimento da `lang/en/` o `/lang/en.json`.
    - Elimina tutte le stringhe non usate prima di inviare ai traduttori.
 2. **Istruzioni per i Traduttori**
    - Nei file PHP: traduci solo il testo a destra di `=>`, non cambiare chiavi o struttura.

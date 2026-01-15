@@ -1,13 +1,13 @@
-# Chiarimento sulla Struttura delle Interfacce
+# Chiarimento sulla Struttura delle Interfacce 
 
 ## Struttura Corretta per le Interfacce SMS
 
 , le interfacce per le azioni SMS seguono questa struttura:
 
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
-/var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+Modules/Notify/app/Contracts/SMS/SmsActionContract.php
 ```
 
 Con il namespace corrispondente:

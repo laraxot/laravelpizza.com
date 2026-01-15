@@ -77,7 +77,7 @@ use Filament\Tables\Columns\ViewColumn;
 class ContactColumn extends ViewColumn
 {
     protected string $view = 'notify::filament.tables.columns.contact-column';
-
+    
     public static function make(string $name = 'contacts'): static
     {
         return parent::make($name)
@@ -131,9 +131,9 @@ public function getContactsForColumn(): array
 ### **1. HTML Hardcoded in PHP**
 ```php
 // ❌ MAI FARE QUESTO
-return '<div class="flex items-center">' .
-       '<i class="heroicon-o-envelope"></i>' .
-       '<span>' . $value . '</span>' .
+return '<div class="flex items-center">' . 
+       '<i class="heroicon-o-envelope"></i>' . 
+       '<span>' . $value . '</span>' . 
        '</div>';
 ```
 
@@ -217,7 +217,7 @@ Implementare ContactColumn che:
 
 ---
 
-*Audit completato: 2025-08-01*
-*Gravità: CRITICA*
-*Stato: REFACTOR RICHIESTO*
+*Audit completato: 2025-08-01*  
+*Gravità: CRITICA*  
+*Stato: REFACTOR RICHIESTO*  
 *Responsabile: Laraxot Team*

@@ -10,7 +10,12 @@ use Illuminate\Support\Carbon;
 use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
- * Modules\User\Models\OauthPersonalAccessClient.
+ * OAuth Personal Access Client model.
+ *
+ * <<<<<<< HEAD
+ * =======
+ *
+ * >>>>>>> 024bfed1 (.)
  *
  * @property string           $uuid
  * @property string           $client_id
@@ -18,14 +23,32 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property Carbon|null      $updated_at
  * @property string|null      $updated_by
  * @property string|null      $created_by
- * @property OauthClient|null $client
  * @property int              $id
+ * @property string           $uuid
+ * @property string           $client_id
+ * @property Carbon|null      $created_at
+ * @property Carbon|null      $updated_at
+ * @property string|null      $updated_by
+ * @property string|null      $created_by
+ * @property int              $id
+ * @property OauthClient|null $client
+ *                                        <<<<<<< HEAD
+ * @property string           $uuid
+ *                                        =======
+ * @property string           $uuid
+ *                                        >>>>>>> 024bfed1 (.)
+ * @property string           $client_id
+ * @property Carbon|null      $created_at
+ * @property Carbon|null      $updated_at
+ * @property string|null      $updated_by
+ * @property string|null      $created_by
+ * @property int              $id
+ * @property OauthClient|null $client
  *
  * @method static Builder|OauthPersonalAccessClient newModelQuery()
  * @method static Builder|OauthPersonalAccessClient newQuery()
  * @method static Builder|OauthPersonalAccessClient query()
  * @method static Builder|OauthPersonalAccessClient whereClientId($value)
- * @method static Builder|OauthPersonalAccessClient whereCreatedAt($value)
  * @method static Builder|OauthPersonalAccessClient whereUpdatedAt($value)
  * @method static Builder|OauthPersonalAccessClient whereUuid($value)
  * @method static Builder|OauthPersonalAccessClient whereId($value)
@@ -45,8 +68,6 @@ class OauthPersonalAccessClient extends BaseModel
      * Get the OAuth client that this personal access client belongs to.
      *
      * @return BelongsTo<OauthClient, $this>
-     *
-     * @phpstan-return BelongsTo<OauthClient, $this>
      */
     public function client(): BelongsTo
     {

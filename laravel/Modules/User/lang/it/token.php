@@ -40,4 +40,6 @@ return [
             'icon' => 'reorderRecords',
         ],
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

@@ -23,4 +23,8 @@ return [
             'label' => 'changePassword',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

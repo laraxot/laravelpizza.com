@@ -68,4 +68,6 @@ return [
     'model' => [
         'label' => 'feature.model',
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

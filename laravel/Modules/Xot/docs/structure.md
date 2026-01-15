@@ -121,7 +121,7 @@ Si può utilizzare un script per automatizzare la modifica dei namespace nei fil
 #!/bin/bash
 
 # Trova tutti i file PHP nel modulo Chart
-find /var/www/html/<nome progetto>/laravel/Modules/Chart -type f -name "*.php" | while read file; do
+find Modules/Chart -type f -name "*.php" | while read file; do
     # Sostituisci namespace Modules\Chart\App\ con Modules\Chart\
     sed -i 's/namespace Modules\\\\Chart\\\\App\\\\/namespace Modules\\\\Chart\\\\/g' "$file"
 

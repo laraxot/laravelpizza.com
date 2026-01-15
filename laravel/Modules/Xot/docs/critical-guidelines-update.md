@@ -3,7 +3,7 @@
 ## 1. VIOLAZIONE GRAVE: Cartella Docs Root
 
 ### Problema Identificato
-La cartella `/var/www/html/ptvx/docs` ESISTE e viola la regola fondamentale:
+La cartella `docs` ESISTE e viola la regola fondamentale:
 - ❌ **VIOLAZIONE CRITICA**: Cartella docs root esistente
 - ❌ **RIFERIMENTI ASSOLUTI**: Link hardcoded in vari moduli
 - ❌ **DUPLICAZIONE**: Documentazione fuori dai moduli
@@ -21,20 +21,11 @@ Nei seguenti file sono presenti riferimenti assoluti alla cartella docs root:
 ```bash
 # 1. Spostare il contenuto utile nei moduli appropriati
 # 2. Eliminare la cartella root docs
-rm -rf /var/www/html/ptvx/docs/
+rm -rf docs/
 
 # 3. Verificare che non esistano altre cartelle docs root
-find /var/www/html/ptvx -maxdepth 2 -name "docs" -type d | grep -E "(^/var/www/html/ptvx/docs$)"
-# Se restituisce output → ERRORE CRITICO
-```
-
-#### B. Correzione Riferimenti
-Sostituire tutti i riferimenti assoluti con riferimenti relativi:
-
-**PRIMA (VIETATO):**
-```markdown
-- [Traduzioni Root](/var/www/html/ptvx/docs/translations.md)
-- [Standard Traduzioni](/var/www/html/ptvx/docs/translation-standards.md)
+find translations.md)
+- [Standard Traduzioni](docs/translation-standards.md)
 ```
 
 **DOPO (CORRETTO):**
@@ -134,7 +125,7 @@ if (!method_exists($record, 'getEmailAttribute')) {
 
 ### Fase 1: Eliminazione Docs Root (24 ore)
 - [ ] Spostare documentazione utile in `Modules/Xot/docs/`
-- [ ] Eliminare cartella `/var/www/html/ptvx/docs`
+- [ ] Eliminare cartella `docs`
 - [ ] Aggiornare tutti i riferimenti assoluti
 
 ### Fase 2: Correzione property_exists (48 ore)
@@ -166,10 +157,7 @@ if (!method_exists($record, 'getEmailAttribute')) {
 ## 6. Verifica Automatica
 ```bash
 # Verifica cartelle docs root
-find /var/www/html/ptvx -maxdepth 2 -name "docs" -type d | grep -E "(^/var/www/html/ptvx/docs$)"
-
-# Verifica usi errati di property_exists
-grep -r "property_exists" /var/www/html/ptvx/laravel/Modules/ --include="*.php" | grep -v "static" | grep -v "::"
+find  --include="*.php" | grep -v "static" | grep -v "::"
 ```
 
 ---

@@ -22,9 +22,11 @@ use Illuminate\Support\Collection;
 use InvalidArgumentException;
 use Livewire\WithPagination;
 use LogicException;
+use Modules\Activity\Actions\RestoreActivityAction;
 use Modules\Activity\Filament\Pages\Concerns\CanPaginate;
 use Modules\Activity\Models\Activity;
 use Modules\Xot\Filament\Resources\Pages\XotBasePage;
+use Webmozart\Assert\Assert;
 
 /**
  * Classe base per visualizzare lo storico delle attività di un record.
@@ -162,37 +164,17 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
             abort(403);
         }
 
-        $result = $this->prepareRestore($key);
-        $error = $result['error'] ?? null;
-        if ($error !== null && $error !== '') {
-            $this->sendRestoreFailureNotification((string) $error);
+        try {
+            $activity = $this->resolveActivity($key);
+            $oldProperties = $this->getOldProperties($activity);
 
-            return;
+            Assert::isInstanceOf($this->record, Model::class);
+            app(RestoreActivityAction::class)->execute($this->record, $oldProperties);
+
+            $this->sendRestoreSuccessNotification();
+        } catch (Exception $e) {
+            $this->sendRestoreFailureNotification($e->getMessage());
         }
-
-        $activity = $result['activity'] ?? null;
-        $record = $result['record'] ?? null;
-
-        if (! $record instanceof Model) {
-            $this->sendRestoreFailureNotification('Invalid record type');
-
-            return;
-        }
-
-        $oldProperties = data_get($activity, 'properties.old');
-        if ($oldProperties === null) {
-            $this->sendRestoreFailureNotification();
-
-            return;
-        }
-
-        if (! \is_array($oldProperties)) {
-            $this->sendRestoreFailureNotification('Invalid properties format');
-
-            return;
-        }
-
-        $this->performRestore($record, $oldProperties);
     }
 
     /**
@@ -297,39 +279,44 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
         return $notification->send();
     }
 
-    private function prepareRestore(int|string $key): array
+    private function resolveActivity(int|string $key): Activity
     {
         $record = $this->record;
-        if (! \is_object($record) || ! method_exists($record, 'activities')) {
-            return ['error' => 'Invalid record', 'activity' => null, 'record' => null];
+        if (! $record instanceof Model) {
+            throw new Exception('Invalid record');
         }
 
-        $activitiesRelation = $record->activities();
-        if (! \is_object($activitiesRelation) || ! method_exists($activitiesRelation, 'whereKey')) {
-            return ['error' => 'Invalid activities relation', 'activity' => null, 'record' => null];
+        if (! method_exists($record, 'activities')) {
+            throw new LogicException('Record must have activities relationship');
         }
 
-        $whereKeyQuery = $activitiesRelation->whereKey($key);
-        if (! \is_object($whereKeyQuery) || ! method_exists($whereKeyQuery, 'first')) {
-            return ['error' => 'Invalid query', 'activity' => null, 'record' => null];
+        $relation = $record->activities();
+        if (! $relation instanceof Relation) {
+            throw new Exception('Invalid activities relation');
         }
 
-        $activity = $whereKeyQuery->first();
+        /** @var Activity|null $activity */
+        $activity = $relation->whereKey($key)->first();
 
-        return ['error' => null, 'activity' => $activity, 'record' => $record];
+        if (! $activity instanceof Activity) {
+            throw new Exception('Activity not found');
+        }
+
+        return $activity;
     }
 
-    private function performRestore(Model $record, array $oldProperties): void
+    /**
+     * @return array<string, mixed>
+     */
+    private function getOldProperties(Activity $activity): array
     {
-        try {
-            /** @var array<string, mixed> $safeProperties */
-            $safeProperties = $oldProperties;
+        $old = data_get($activity, 'properties.old');
 
-            $record->update($safeProperties);
-
-            $this->sendRestoreSuccessNotification();
-        } catch (Exception $e) {
-            $this->sendRestoreFailureNotification($e->getMessage());
+        if (! \is_array($old)) {
+            throw new Exception('Invalid properties format in activity log');
         }
+
+        /** @var array<string, mixed> $old */
+        return $old;
     }
 }

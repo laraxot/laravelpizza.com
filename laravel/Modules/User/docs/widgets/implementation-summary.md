@@ -124,7 +124,7 @@ class EditUserWidget extends XotBaseWidget implements HasForms
 ## Conclusion
 The EditUserWidget implementation is complete and production-ready. All code follows project conventions, documentation is comprehensive, and the widget provides a robust user profile editing experience with proper internationalization support.
 The implementation serves as a reference pattern for future widget development in the  project, demonstrating best practices for:
-The implementation serves as a reference pattern for future widget development in the SaluteOra project, demonstrating best practices for:
+The implementation serves as a reference pattern for future widget development in the <nome progetto> project, demonstrating best practices for:
 - Filament widget architecture
 - Translation integration
 - Documentation standards

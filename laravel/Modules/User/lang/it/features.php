@@ -14,4 +14,8 @@ return [
         'value.placeholder' => 'Inserisci il valore della feature',
         'value.helper_text' => 'Il valore o la configurazione della feature',
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

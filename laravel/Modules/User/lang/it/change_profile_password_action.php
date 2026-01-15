@@ -14,4 +14,8 @@ return [
             'color' => 'warning',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
+    'actions' => [],
 ];

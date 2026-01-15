@@ -2,7 +2,7 @@
 
 ## Regola fondamentale
 
-Nel progetto SaluteOra, esiste una regola fondamentale: **utilizzare sempre i componenti Blade forniti da Filament quando disponibili**, invece di creare componenti personalizzati duplicati.
+Nel progetto <nome progetto>, esiste una regola fondamentale: **utilizzare sempre i componenti Blade forniti da Filament quando disponibili**, invece di creare componenti personalizzati duplicati.
 
 ## Vantaggi dei componenti Filament
 

@@ -141,4 +141,4 @@ return [
 - Testare le notifiche in ambiente di sviluppo
 - Monitorare i tassi di consegna
 - Aggiornare i template regolarmente
-- Mantenere le traduzioni aggiornate
+- Mantenere le traduzioni aggiornate 

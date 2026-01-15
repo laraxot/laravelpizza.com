@@ -51,4 +51,6 @@ return [
         'sort' => 13,
         'icon' => 'heroicon-o-swatch',
     ],
+    'label' => '',
+    'plural_label' => '',
 ];

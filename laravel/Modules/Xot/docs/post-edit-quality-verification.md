@@ -58,7 +58,7 @@
 
 ```bash
 # Per file singolo
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel
+cd laravel
 ./vendor/bin/phpstan analyze Modules/<Module>/app/path/to/File.php --level=10
 
 # Per modulo intero
@@ -81,7 +81,7 @@ timeout 60 ./vendor/bin/phpstan analyze Modules/<Module> --level=10 --memory-lim
 
 ```bash
 # Per file singolo
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel
+cd laravel
 ./vendor/bin/phpmd Modules/<Module>/app/path/to/File.php text cleancode,codesize,controversial,design,naming,unusedcode
 
 # Per modulo
@@ -102,7 +102,7 @@ cd /var/www/_bases/base_ptvx_fila4_mono/laravel
 
 ```bash
 # Per modulo
-cd /var/www/_bases/base_ptvx_fila4_mono/laravel
+cd laravel
 ./vendor/bin/phpinsights -n --dir=Modules/<Module>
 
 # Con dettagli

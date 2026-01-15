@@ -1,7 +1,7 @@
 # Setup Super Admin - Guida Completa
 
-**Data Creazione**: 15 Ottobre 2025
-**Comando**: `php artisan user:super-admin`
+**Data Creazione**: 15 Ottobre 2025  
+**Comando**: `php artisan user:super-admin`  
 **Prerequisiti**: Database migrato
 
 ## Problema Comune
@@ -9,9 +9,9 @@
 ### Errore "no such table: roles"
 
 ```
-SQLSTATE[HY000]: General error: 1 no such table: roles
-(Connection: sqlite, SQL: select * from "roles" where
-("team_id" is null or "team_id" is null) and "name" = super-admin
+SQLSTATE[HY000]: General error: 1 no such table: roles 
+(Connection: sqlite, SQL: select * from "roles" where 
+("team_id" is null or "team_id" is null) and "name" = super-admin 
 and "guard_name" = web limit 1)
 ```
 
@@ -92,7 +92,7 @@ super-admin assigned to marco.sottana@gmail.com
 
 Il comando cerca l'utente tramite email usando `XotData::getUserByEmail($email)`.
 
-**Se l'utente NON esiste**: Il comando FALLISCE.
+**Se l'utente NON esiste**: Il comando FALLISCE.  
 **Soluzione**: Creare prima l'utente (vedi sezione "Creazione Utente").
 
 ### 2. Crea Role Super Admin
@@ -163,7 +163,7 @@ class AdminUserSeeder extends Seeder
     public function run(): void
     {
         $userClass = XotData::make()->getUserClass();
-
+        
         $user = $userClass::firstOrCreate(
             ['email' => 'admin@example.com'],
             [
@@ -172,7 +172,7 @@ class AdminUserSeeder extends Seeder
                 'email_verified_at' => now(),
             ]
         );
-
+        
         $this->command->info('Admin user created: '.$user->email);
     }
 }
@@ -435,3 +435,4 @@ Il comando `user:super-admin` è fondamentale per il setup iniziale dell'applica
 4. ✅ Verifica funzionamento
 
 Con questa guida, il setup dovrebbe essere straightforward e senza errori! 🚀
+

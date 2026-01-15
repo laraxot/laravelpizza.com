@@ -1,7 +1,7 @@
 # Risoluzione Conflitti MailTemplate.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Models/MailTemplate.php`
+**File**: `Modules/Notify/app/Models/MailTemplate.php`
 **Linee**: 75-79
 **Tipo**: Conflitto di proprietà translatable
 
@@ -75,7 +75,7 @@ Verificare che:
 # Risoluzione Conflitti MailTemplate.php
 
 ## Contesto del Conflitto
-**File**: `/var/www/html/ptvx/laravel/Modules/Notify/app/Models/MailTemplate.php`
+**File**: `Modules/Notify/app/Models/MailTemplate.php`
 **Linee**: 75-79
 **Tipo**: Conflitto di proprietà translatable
 

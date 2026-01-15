@@ -177,7 +177,7 @@ Questo documento riporta la risoluzione sistematica di **161 file con conflitti 
 
 ### 3. File di Documentazione (147 file)
 - File `.md` in tutti i moduli
-- Aggiornamento riferimenti da "SaluteOra" a "FixCity"
+- Aggiornamento riferimenti da "<nome progetto>" a "FixCity"
 - Correzione backlink e collegamenti
 
 **Strategia**: Unificazione del contenuto mantenendo entrambe le versioni quando appropriato, aggiornamento dei riferimenti al progetto.
@@ -387,7 +387,7 @@ Questo documento riporta la risoluzione sistematica di **161 file con conflitti 
 
 ### 3. File di Documentazione (147 file)
 - File `.md` in tutti i moduli
-- Aggiornamento riferimenti da "SaluteOra" a "FixCity"
+- Aggiornamento riferimenti da "<nome progetto>" a "FixCity"
 - Correzione backlink e collegamenti
 
 **Strategia**: Unificazione del contenuto mantenendo entrambe le versioni quando appropriato, aggiornamento dei riferimenti al progetto.

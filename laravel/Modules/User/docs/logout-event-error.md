@@ -11,7 +11,7 @@
 
 ## Errore Identificato
 
-L'implementazione attuale del file `/var/www/html/saluteora/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` causa un errore quando viene eseguito il logout:
+L'implementazione attuale del file `Themes/One/resources/views/pages/auth/logout.blade.php` causa un errore quando viene eseguito il logout:
 
 ```
 Call to a member function getAuthIdentifier() on null
@@ -156,7 +156,7 @@ Questa modifica risolverà l'errore `Call to a member function getAuthIdentifier
 
 ## Errore Identificato
 
-L'implementazione attuale del file `/var/www/html/saluteora/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` causa un errore quando viene eseguito il logout:
+L'implementazione attuale del file `Themes/One/resources/views/pages/auth/logout.blade.php` causa un errore quando viene eseguito il logout:
 
 ```
 Call to a member function getAuthIdentifier() on null

@@ -61,7 +61,7 @@ final class SendSmsFactorSMSAction implements SmsActionContract
         // Normalizza il numero di telefono
         $to = (string) $smsData->recipient;
         if (Str::startsWith($to, '00')) {
-            $to = $to !== '' ? '+'.substr($to, 2) : $to;
+            $to = '+'.substr($to, 2);
         }
 
         if (! Str::startsWith($to, '+')) {

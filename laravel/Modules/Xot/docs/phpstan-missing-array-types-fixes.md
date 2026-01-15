@@ -2,7 +2,7 @@
 
 ## 🚨 REGOLA CRITICA RISPETTATA 🚨
 
-**NON è stato modificato** `/var/www/html/_bases/base_saluteora/laravel/phpstan.neon`
+**NON è stato modificato** `phpstan.neon`
 
 ## Problema Identificato
 

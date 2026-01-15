@@ -10,12 +10,12 @@ Le interfacce sono organizzate in due livelli:
 
 1. **Interfacce Generiche**: Posizionate direttamente nella directory `app/Contracts/`
    ```
-   /var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SmsActionContract.php
+   Modules/Notify/app/Contracts/SmsActionContract.php
    ```
 
 2. **Interfacce Specifiche per Canale**: Posizionate in sottodirectory dedicate
    ```
-   /var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionContract.php
+   Modules/Notify/app/Contracts/SMS/SmsActionContract.php
    ```
 
 ### Convenzioni di Naming

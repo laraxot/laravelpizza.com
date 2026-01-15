@@ -57,7 +57,7 @@ Le chiavi rimandano a **chiavi di traduzione nidificate** che devono essere defi
 
 ### Step 1: Creare directory per le 6 lingue
 ```bash
-mkdir -p /var/www/_bases/base_laravelpizza/laravel/Modules/Job/resources/lang/{en,es,fr,de,zh}
+mkdir -p Modules/Job/resources/lang/{en,es,fr,de,zh}
 ```
 
 ### Step 2: Tradurre i file .navigation

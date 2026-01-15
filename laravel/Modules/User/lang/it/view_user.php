@@ -40,4 +40,7 @@ return [
             'label' => 'empty',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
 ];

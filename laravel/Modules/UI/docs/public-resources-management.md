@@ -16,12 +16,12 @@ Questo documento descrive la corretta gestione delle risorse pubbliche (immagini
 La struttura corretta per le risorse pubbliche  è la seguente:
 
 ```
-/var/www/html/_bases/base_techplanner_fila3_mono/
-/var/www/html/saluteora/
-/var/www/html/_bases/base_techplanner_fila3_mono/
-/var/www/html/saluteora/
-/var/www/html/_bases/base_techplanner_fila3_mono/
-/var/www/html/saluteora/
+
+
+
+
+
+
 ├── public_html/           # Directory pubblica principale
 │   ├── images/            # Immagini pubbliche
 │   ├── css/               # File CSS
@@ -31,23 +31,23 @@ La struttura corretta per le risorse pubbliche  è la seguente:
 └── laravel/               # Applicazione Laravel (NON contiene file pubblici)
 ```
 
-> **IMPORTANTE**: MAI utilizzare `/var/www/html/_bases/base_ptvx_fila3_mono/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di PTVX.
-> **IMPORTANTE**: MAI utilizzare `/var/www/html/saluteora/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di SaluteOra.
-> **IMPORTANTE**: MAI utilizzare `/var/www/html/_bases/base_ptvx_fila3_mono/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di PTVX.
-> **IMPORTANTE**: MAI utilizzare `/var/www/html/saluteora/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di SaluteOra.
-> **IMPORTANTE**: MAI utilizzare `/var/www/html/_bases/base_ptvx_fila3_mono/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di PTVX.
-> **IMPORTANTE**: MAI utilizzare `/var/www/html/saluteora/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di SaluteOra.
+> **IMPORTANTE**: MAI utilizzare `laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di PTVX.
+> **IMPORTANTE**: MAI utilizzare `public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di <nome progetto>.
+> **IMPORTANTE**: MAI utilizzare `laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di PTVX.
+> **IMPORTANTE**: MAI utilizzare `public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di <nome progetto>.
+> **IMPORTANTE**: MAI utilizzare `laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di PTVX.
+> **IMPORTANTE**: MAI utilizzare `public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di <nome progetto>.
 
 ## Tipi di Risorse
 
 ### Immagini
 
-Le immagini devono essere posizionate in `/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/` e organizzate in sottocartelle per tipologia:
-Le immagini devono essere posizionate in `/var/www/html/saluteora/public_html/images/` e organizzate in sottocartelle per tipologia:
-Le immagini devono essere posizionate in `/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/` e organizzate in sottocartelle per tipologia:
-Le immagini devono essere posizionate in `/var/www/html/saluteora/public_html/images/` e organizzate in sottocartelle per tipologia:
-Le immagini devono essere posizionate in `/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/` e organizzate in sottocartelle per tipologia:
-Le immagini devono essere posizionate in `/var/www/html/saluteora/public_html/images/` e organizzate in sottocartelle per tipologia:
+Le immagini devono essere posizionate in `public_html/images/` e organizzate in sottocartelle per tipologia:
+Le immagini devono essere posizionate in `public_html/images/` e organizzate in sottocartelle per tipologia:
+Le immagini devono essere posizionate in `public_html/images/` e organizzate in sottocartelle per tipologia:
+Le immagini devono essere posizionate in `public_html/images/` e organizzate in sottocartelle per tipologia:
+Le immagini devono essere posizionate in `public_html/images/` e organizzate in sottocartelle per tipologia:
+Le immagini devono essere posizionate in `public_html/images/` e organizzate in sottocartelle per tipologia:
 
 - `/images/avatars/` - Avatar utenti
 - `/images/logos/` - Loghi
@@ -128,14 +128,14 @@ I font devono essere posizionati in `/public_html/fonts/` e organizzati per fami
     <img
         src="{{ asset('images/logos/<nome progetto>-logo.svg') }}"
         alt=""
-        src="{{ asset('images/logos/saluteora-logo.svg') }}"
-        alt="SaluteOra"
+        src="{{ asset('images/logos/<nome progetto>-logo.svg') }}"
+        alt="<nome progetto>"
         alt=""
-        src="{{ asset('images/logos/saluteora-logo.svg') }}"
-        alt="SaluteOra"
+        src="{{ asset('images/logos/<nome progetto>-logo.svg') }}"
+        alt="<nome progetto>"
         alt=""
-        src="{{ asset('images/logos/saluteora-logo.svg') }}"
-        alt="SaluteOra"
+        src="{{ asset('images/logos/<nome progetto>-logo.svg') }}"
+        alt="<nome progetto>"
         class="h-8"
     >
 </a>
@@ -151,11 +151,11 @@ I font devono essere posizionati in `/public_html/fonts/` e organizzati per fami
 ## Conclusione
 
 Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto .
-Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto SaluteOra.
+Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto <nome progetto>.
 Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto .
-Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto SaluteOra.
+Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto <nome progetto>.
 Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto .
-Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto SaluteOra.
+Seguendo queste linee guida per la gestione delle risorse pubbliche, si garantisce che tutte le risorse siano correttamente accessibili via web e organizzate in modo coerente, facilitando la manutenzione e l'evoluzione del progetto <nome progetto>.
 # Gestione delle Risorse Pubbliche
 
 ## Indice
@@ -174,7 +174,7 @@ Questo documento descrive la corretta gestione delle risorse pubbliche (immagini
 La struttura corretta per le risorse pubbliche  è la seguente:
 
 ```
-/var/www/html/<nome progetto>/
+
 ├── public_html/           # Directory pubblica principale
 │   ├── images/            # Immagini pubbliche
 │   ├── css/               # File CSS
@@ -184,13 +184,13 @@ La struttura corretta per le risorse pubbliche  è la seguente:
 └── laravel/               # Applicazione Laravel (NON contiene file pubblici)
 ```
 
-> **IMPORTANTE**: MAI utilizzare `/var/www/html/<nome progetto>/laravel/public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di <nome progetto>.
+> **IMPORTANTE**: MAI utilizzare `public/` per i file pubblici. Questa cartella non è accessibile via web nel setup di <nome progetto>.
 
 ## Tipi di Risorse
 
 ### Immagini
 
-Le immagini devono essere posizionate in `/var/www/html/<nome progetto>/public_html/images/` e organizzate in sottocartelle per tipologia:
+Le immagini devono essere posizionate in `public_html/images/` e organizzate in sottocartelle per tipologia:
 
 - `/images/avatars/` - Avatar utenti
 - `/images/logos/` - Loghi

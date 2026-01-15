@@ -34,4 +34,7 @@ return [
             'tooltip' => 'cancel',
         ],
     ],
+    'navigation' => [],
+    'label' => '',
+    'plural_label' => '',
 ];

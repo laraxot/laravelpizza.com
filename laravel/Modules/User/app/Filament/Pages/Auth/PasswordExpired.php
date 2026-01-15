@@ -32,9 +32,6 @@ class PasswordExpired extends XotBasePage
     use InteractsWithFormActions;
     use NavigationPageLabelTrait;
 
-    /**
-     * @var view-string
-     */
     protected string $view = 'user::filament.auth.pages.password-expired';
 
     protected static bool $shouldRegisterNavigation = false;
