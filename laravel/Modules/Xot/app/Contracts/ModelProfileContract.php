@@ -23,7 +23,6 @@ interface ModelProfileContract extends ModelContract
      * Grant the given permission(s) to a role.
      *
      * @param  string|int|array<int, string|int|Permission>|Permission|Collection<int, Permission>  $permissions
-     *
      * @return $this
      */
     public function givePermissionTo(string|int|array|Permission|Collection $permissions = []);
@@ -32,7 +31,6 @@ interface ModelProfileContract extends ModelContract
      * Assign the given role to the model.
      *
      * @param  array<int, string|int|\Spatie\Permission\Contracts\Role>|string|int|\Spatie\Permission\Contracts\Role|Collection<int, \Spatie\Permission\Contracts\Role>  $roles
-     *
      * @return $this
      */
     public function assignRole(array|string|int|\Spatie\Permission\Contracts\Role|Collection $roles = [

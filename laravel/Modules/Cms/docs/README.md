@@ -91,6 +91,29 @@ php artisan vendor:publish --tag=cms-config
 
 ---
 
+## Analisi Funzionalità Mancanti
+
+Per un'analisi completa delle funzionalità mancanti rispetto a LimeSurvey upstream, consultare:
+
+- **[missing-features-analysis.md](./missing-features-analysis.md)** - Analisi dettagliata funzionalità mancanti nel modulo Cms
+
+**Principali aree da implementare**:
+1. Survey Public Pages Integration (pagine pubbliche survey, embedding, landing pages)
+2. Survey Content Blocks (blocchi embed survey, risultati, statistiche, grafici)
+3. Survey SEO & Metadata (SEO specifico survey, Open Graph, Schema.org)
+
+## Filament 5.x Nested Resources
+
+Per un'analisi completa delle opportunità di applicare il nesting nativo di Filament 5.x, consultare:
+
+- **[filament-nesting-opportunities.md](./filament-nesting-opportunities.md)** - Opportunità di nesting nel modulo Cms
+
+**Principali opportunità**:
+1. Block come Nested Resource di Page (ALTA priorità)
+2. Block come Nested Resource di Section (ALTA priorità)
+3. Metatag come Nested Resource di Page (MEDIA priorità - opzionale)
+4. Menu Sub-items come Nested Resource ricorsivo (MEDIA priorità)
+
 ## 🔗 Collegamenti
 
 ### Moduli Correlati

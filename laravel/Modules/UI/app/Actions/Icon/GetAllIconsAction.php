@@ -71,7 +71,7 @@ class GetAllIconsAction
 
                 foreach ($files as $file) {
                     // Type narrowing per SplFileInfo
-                    if (! ($file instanceof \SplFileInfo)) {
+                    if (! $file instanceof \SplFileInfo) {
                         continue;
                     }
 

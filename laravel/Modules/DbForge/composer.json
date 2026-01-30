@@ -1,0 +1,83 @@
+{
+    "name": "laraxot/module_dbforge_fila3",
+    "description": "Modulo per la gestione e manipolazione del database con strumenti avanzati",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_dbforge",
+        "Laravel",
+        "Database",
+        "DbForge",
+        "Database management",
+        "Database tools",
+        "Xot"
+    ],
+    "homepage": "https://github.com/laraxot/module_dbforge_fila3",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\DbForge\\Providers\\DbForgeServiceProvider",
+                "Modules\\DbForge\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\DbForge\\": "app/",
+            "Modules\\DbForge\\Database\\Factories\\": "database/factories/",
+            "Modules\\DbForge\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\DbForge\\Tests\\": "tests/"
+        }
+    },
+    "require": {},
+    "require-dev": {},
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Xot"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../UI"
+        }
+    ],
+    "scripts": {
+        "post-autoload-dump": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wikimedia/composer-merge-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

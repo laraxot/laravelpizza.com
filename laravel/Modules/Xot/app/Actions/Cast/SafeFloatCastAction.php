@@ -40,7 +40,6 @@ class SafeFloatCastAction
      *
      * @param  mixed  $value  Il valore da convertire
      * @param  float|null  $default  Valore di default se la conversione fallisce (default: 0.0)
-     *
      * @return float Il valore convertito
      */
     public function execute(mixed $value, ?float $default = 0.0): float
@@ -89,7 +88,6 @@ class SafeFloatCastAction
      *
      * @param  mixed  $value  Il valore da convertire
      * @param  float|null  $default  Valore di default se la conversione fallisce (default: 0.0)
-     *
      * @return float Il valore convertito in float
      */
     public static function cast(mixed $value, ?float $default = 0.0): float
@@ -104,7 +102,6 @@ class SafeFloatCastAction
      * @param  float  $min  Valore minimo consentito
      * @param  float  $max  Valore massimo consentito
      * @param  float|null  $default  Valore di default se la conversione fallisce
-     *
      * @return float Il valore convertito e validato
      */
     public function executeWithRange(mixed $value, float $min, float $max, ?float $default = null): float
@@ -122,7 +119,6 @@ class SafeFloatCastAction
      * @param  float  $min  Valore minimo consentito
      * @param  float  $max  Valore massimo consentito
      * @param  float|null  $default  Valore di default se la conversione fallisce
-     *
      * @return float Il valore convertito e validato
      */
     public static function castWithRange(mixed $value, float $min, float $max, ?float $default = null): float
@@ -136,7 +132,6 @@ class SafeFloatCastAction
      * @param  mixed  $value  Il valore da convertire
      * @param  int  $precision  Numero di decimali (default: 2)
      * @param  float|null  $default  Valore di default se la conversione fallisce
-     *
      * @return float Il valore convertito con precisione specificata
      */
     public function executeWithPrecision(mixed $value, int $precision = 2, ?float $default = 0.0): float
@@ -152,7 +147,6 @@ class SafeFloatCastAction
      * @param  mixed  $value  Il valore da convertire
      * @param  int  $precision  Numero di decimali (default: 2)
      * @param  float|null  $default  Valore di default se la conversione fallisce
-     *
      * @return float Il valore convertito con precisione specificata
      */
     public static function castWithPrecision(mixed $value, int $precision = 2, ?float $default = 0.0): float
@@ -165,7 +159,6 @@ class SafeFloatCastAction
      *
      * @param  mixed  $value  Il valore da convertire
      * @param  float|null  $default  Valore di default se la conversione fallisce
-     *
      * @return float Il valore convertito come percentuale (0-100)
      */
     public function executeAsPercentage(mixed $value, ?float $default = 0.0): float
@@ -178,7 +171,6 @@ class SafeFloatCastAction
      *
      * @param  mixed  $value  Il valore da convertire
      * @param  float|null  $default  Valore di default se la conversione fallisce
-     *
      * @return float Il valore convertito come percentuale (0-100)
      */
     public static function castAsPercentage(mixed $value, ?float $default = 0.0): float
@@ -191,7 +183,6 @@ class SafeFloatCastAction
      *
      * @param  mixed  $value  Il valore da convertire
      * @param  float|null  $default  Valore di default se la conversione fallisce
-     *
      * @return float Il valore convertito come importo monetario
      */
     public function executeAsCurrency(mixed $value, ?float $default = 0.0): float
@@ -206,7 +197,6 @@ class SafeFloatCastAction
      *
      * @param  mixed  $value  Il valore da convertire
      * @param  float|null  $default  Valore di default se la conversione fallisce
-     *
      * @return float Il valore convertito come importo monetario
      */
     public static function castAsCurrency(mixed $value, ?float $default = 0.0): float
@@ -219,7 +209,6 @@ class SafeFloatCastAction
      *
      * @param  string  $value  La stringa da convertire
      * @param  float|null  $default  Valore di default
-     *
      * @return float Il valore convertito
      */
     private function parseStringToFloat(string $value, ?float $default = 0.0): float

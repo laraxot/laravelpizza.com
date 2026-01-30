@@ -27,6 +27,7 @@
 
 ### Regole Generali
 - [Regole Traduzioni](../../Xot/docs/translations.md) - Documentazione base sulle traduzioni
+- [Composer merge plugin](composer-merge-plugin.md) - Integrazione pacchetti locali
 
 ### Versione Incoming
 

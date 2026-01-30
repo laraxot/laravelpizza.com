@@ -25,14 +25,13 @@ class CookieData extends Data
         public readonly int $duration_days = 365,
         public readonly string $policy_url = '/cookie-policy',
         public readonly string $banner_style = 'bottom',
-    ) {
-    }
+    ) {}
 
     /**
      * Create a new instance of CookieData with default values.
      */
     public static function make(): static
     {
-        return new static();
+        return new static;
     }
 }

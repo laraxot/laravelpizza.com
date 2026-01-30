@@ -13,6 +13,7 @@ it('GET /it/pages acceptable', function (): void {
     $status = (int) $res->getStatusCode();
     if ($status >= 500) {
         test()->markTestSkipped('Pages index route returned server error in this install.');
+
         return;
     }
 

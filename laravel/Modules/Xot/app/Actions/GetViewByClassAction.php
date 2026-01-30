@@ -35,7 +35,6 @@ class GetViewByClassAction
      * Risolve il percorso della view basato sul namespace della classe.
      *
      * @param  string  $class  Il nome completo della classe
-     *
      * @return string Il percorso della view
      */
     public function executeOld(string $class): string

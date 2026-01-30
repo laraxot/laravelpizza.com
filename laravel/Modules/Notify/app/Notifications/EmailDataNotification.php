@@ -35,7 +35,6 @@ class EmailDataNotification extends Notification
      * Get the notification's delivery channels.
      *
      * @param  object  $_notifiable  The entity to be notified (not used in this method)
-     *
      * @return array<string>
      */
     public function via(object $_notifiable): array
@@ -50,7 +49,7 @@ class EmailDataNotification extends Notification
      */
     public function toMail(object $notifiable): MailMessage
     {
-        $mailMessage = (new MailMessage())
+        $mailMessage = (new MailMessage)
             ->subject($this->emailData->subject)
             ->line($this->emailData->body);
 
@@ -71,7 +70,6 @@ class EmailDataNotification extends Notification
      * Get the array representation of the notification.
      *
      * @param  object  $notifiable  The entity to be notified
-     *
      * @return array<string, string|null>
      */
     public function toArray(object $notifiable): array

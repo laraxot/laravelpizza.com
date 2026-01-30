@@ -28,10 +28,14 @@ return [
         'name' => [
             'label' => 'Nome',
             'placeholder' => 'Inserisci il nome della sezione',
+            'helper_text' => 'name',
+            'description' => 'name',
         ],
         'slug' => [
             'label' => 'Slug',
             'placeholder' => 'Inserisci lo slug della sezione',
+            'helper_text' => 'slug',
+            'description' => 'slug',
         ],
         'blocks' => [
             'label' => 'Blocchi',
@@ -275,5 +279,15 @@ return [
         'updated' => 'Sezione aggiornata con successo',
         'deleted' => 'Sezione eliminata con successo',
         'bulk_deleted' => 'Sezioni eliminate con successo',
+    ],
+    'sections' => [
+        'info' => [
+            'label' => 'info',
+            'heading' => 'info',
+        ],
+        'blocks' => [
+            'label' => 'blocks',
+            'heading' => 'blocks',
+        ],
     ],
 ];

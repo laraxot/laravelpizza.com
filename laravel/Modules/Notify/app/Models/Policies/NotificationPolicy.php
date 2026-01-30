@@ -4,6 +4,4 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Models\Policies;
 
-class NotificationPolicy extends NotifyBasePolicy
-{
-}
+class NotificationPolicy extends NotifyBasePolicy {}

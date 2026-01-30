@@ -6,12 +6,13 @@ namespace Modules\Media\Services;
 
 use Exception;
 use Illuminate\Support\Facades\Storage;
+use Webmozart\Assert\Assert;
+
 use function is_string;
 use function Safe\fclose;
 use function Safe\fread;
 use function Safe\ob_end_clean;
 use function Safe\set_time_limit;
-use Webmozart\Assert\Assert;
 
 /**
  * Handles video streaming from a given path.

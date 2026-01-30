@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Job\Tests;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Support\Facades\Schema;
 use Modules\Job\Providers\JobServiceProvider;
@@ -37,13 +37,20 @@ abstract class TestCase extends BaseTestCase
     use CreatesApplication;
     use DatabaseTransactions;
 
+    protected static bool $migrated = false;
+
     protected function setUp(): void
     {
         parent::setUp();
 
+        if (! self::$migrated) {
+            $this->artisan('migrate', ['--force' => true]);
+            self::$migrated = true;
+        }
+
         foreach (['job', 'xot'] as $connection) {
             $driver = config("database.connections.{$connection}.driver");
-            if (!\is_string($driver) || $driver === '') {
+            if (! \is_string($driver) || $driver === '') {
                 $this->markTestSkipped('Missing database connection: '.$connection.' (expected from .env.testing)');
             }
 
@@ -52,11 +59,11 @@ abstract class TestCase extends BaseTestCase
             }
         }
 
-        if (!Schema::connection('job')->hasTable('jobs')) {
+        if (! Schema::connection('job')->hasTable('jobs')) {
             $this->markTestSkipped('Missing jobs table on connection job. Run migrations on test DBs configured in .env.testing.');
         }
 
-        if (!Schema::connection('xot')->hasTable('tasks') || !Schema::connection('xot')->hasTable('results')) {
+        if (! Schema::connection('xot')->hasTable('tasks') || ! Schema::connection('xot')->hasTable('results')) {
             $this->markTestSkipped('Missing Job module tables (tasks/results) on connection xot. Run module migrations on test DBs configured in .env.testing.');
         }
     }

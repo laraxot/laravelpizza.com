@@ -108,7 +108,7 @@ class Show extends Component
             }
 
             // Type narrowing: ensure $page is a Page model
-            if (! ($page instanceof Page)) {
+            if (! $page instanceof Page) {
                 return ['error' => 'Invalid page type', 'slug' => $this->slug];
             }
 

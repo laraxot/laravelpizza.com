@@ -15,8 +15,9 @@ use Modules\Job\Database\Factories\TaskFactory;
 use Modules\Job\Models\Traits\FrontendSortable;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\Traits\HasXotFactory;
-use function Safe\json_decode;
 use Webmozart\Assert\Assert;
+
+use function Safe\json_decode;
 
 /**
  * Modules\Job\Models\Task.
@@ -41,7 +42,6 @@ use Webmozart\Assert\Assert;
  * @property string|null $updated_by
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- *
  * @property-read ProfileContract|null $creator
  * @property-read Collection<int, Frequency> $frequencies
  * @property-read int|null $frequencies_count
@@ -82,7 +82,6 @@ use Webmozart\Assert\Assert;
  *
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- *
  * @property-read ProfileContract|null $deleter
  *
  * @method static TaskFactory factory($count = null, $state = [])
@@ -134,7 +133,6 @@ class Task extends BaseModel
      * Compila i parametri del task per l'esecuzione.
      *
      * @param  bool  $forScheduler  Se true, i parametri vengono formattati per lo scheduler
-     *
      * @return array<int|string, mixed>
      */
     public function compileParameters(bool $forScheduler = false): array

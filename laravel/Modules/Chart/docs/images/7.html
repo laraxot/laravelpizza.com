@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salute Orale - Trattamento dati personali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .blob {
+            animation: blob-movement 10s infinite ease-in-out;
+            transform-origin: center;
+        }
+        
+        @keyframes blob-movement {
+            0%, 100% { transform: scale(1) translate(0px, 0px); }
+            33% { transform: scale(1.05) translate(5px, -5px); }
+            66% { transform: scale(0.95) translate(-5px, 5px); }
+        }
+        
+        .hamburger-line {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- SVG Background Animation -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
+        <svg class="absolute top-0 left-0 w-full opacity-5" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+            <path class="blob fill-blue-700" d="M539.8,137.6c55,8.2,106.7,34.3,149.1,69.9c46.5,39.2,83.2,89.8,97.6,147.3c15.7,62.8,4.3,129.5-22.8,187.6c-28.2,60.5-78.1,111.1-140.2,136.1c-55.8,22.4-119,26.3-177.6,12.1c-61.2-14.8-114.1-53.5-142.7-109.1C275.4,521.9,263,454.1,267,390c3.6-57.7,23.1-115.1,62.3-158.9c37.8-42.2,91.1-65.8,145.6-77.9C498.9,144.2,514.9,134.1,539.8,137.6z">
+                <animate attributeName="d" dur="20s" repeatCount="indefinite" values="M539.8,137.6c55,8.2,106.7,34.3,149.1,69.9c46.5,39.2,83.2,89.8,97.6,147.3c15.7,62.8,4.3,129.5-22.8,187.6c-28.2,60.5-78.1,111.1-140.2,136.1c-55.8,22.4-119,26.3-177.6,12.1c-61.2-14.8-114.1-53.5-142.7-109.1C275.4,521.9,263,454.1,267,390c3.6-57.7,23.1-115.1,62.3-158.9c37.8-42.2,91.1-65.8,145.6-77.9C498.9,144.2,514.9,134.1,539.8,137.6z;
+                M544.4,152.3c74.8,11.5,138.5,60.2,175.6,127.7c34.4,62.7,49.4,137.2,36.1,207.8c-12.3,65.1-48.5,124.9-103.1,162.6c-59.5,41-134.1,54.4-204.8,45.4c-64.6-8.2-128.8-37.2-166.1-91.4c-38.3-55.5-39.6-130.1-27.5-195.7c14-75.9,49.8-151.7,113.7-189.5c52.6-31.1,116.8-29.4,178.5-40.7c30-5.5,60.4-19.8,91.2-21.3c3.3-0.2,4.9-1.2,6.4,0.1z;
+                M539.8,137.6c55,8.2,106.7,34.3,149.1,69.9c46.5,39.2,83.2,89.8,97.6,147.3c15.7,62.8,4.3,129.5-22.8,187.6c-28.2,60.5-78.1,111.1-140.2,136.1c-55.8,22.4-119,26.3-177.6,12.1c-61.2-14.8-114.1-53.5-142.7-109.1C275.4,521.9,263,454.1,267,390c3.6-57.7,23.1-115.1,62.3-158.9c37.8-42.2,91.1-65.8,145.6-77.9C498.9,144.2,514.9,134.1,539.8,137.6z">
+                </animate>
+            </path>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white p-4 relative z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-light">
+                <span class="font-normal">Salute</span> Ora<span class="italic">le</span>
+            </a>
+            <button class="block md:hidden focus:outline-none" aria-label="Menu">
+                <div class="w-6 h-5 flex flex-col justify-between">
+                    <span class="hamburger-line bg-white h-0.5 w-full rounded-sm"></span>
+                    <span class="hamburger-line bg-white h-0.5 w-full rounded-sm"></span>
+                    <span class="hamburger-line bg-white h-0.5 w-full rounded-sm"></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 relative z-10">
+        <div class="max-w-3xl mx-auto">
+            <!-- Heading -->
+            <div class="mb-6">
+                <h1 class="text-3xl font-bold text-blue-900">Trattamento dati personali</h1>
+                <h2 class="text-xl text-gray-500">Informativa privacy ex art. 13 GDPR</h2>
+            </div>
+
+            <!-- Content -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                <div class="prose max-w-full overflow-y-auto max-h-96 text-gray-600">
+                    <p>
+                        Ai sensi del Regolamento (UE) 2016/679 del Parlamento europeo e del Consiglio del 27 aprile 2016 recante la disciplina europea per la protezione delle persone fisiche con riguardo al trattamento dei dati personali, nonché alla libera circolazione di tali dati (General Data Protection Regulation, nel prosieguo "GDPR"), e nel rispetto del decreto legislativo 30 giugno 2003, n. 196, così come novellato dal decreto legislativo 10 agosto 2018, n. 101, si informa che i dati personali forniti dai Soggetti proponenti progetti di ricerca e sviluppo nell'ambito del decreto del Ministro dello sviluppo economico dell'11 giugno 2020 e del decreto del Direttore generale della Direzione generale per gli incentivi alle imprese del 5 agosto 2020, formeranno oggetto di trattamento nel rispetto degli obblighi di riservatezza previsti dalla normativa sopra richiamata cui è tenuto il Ministero dello sviluppo economico - Direzione generale per gli incentivi alle imprese (nel prosieguo "DGIAI") in qualità di soggetto titolare della misura.
+                    </p>
+                    <p class="mt-4">
+                        1. Soggetti del trattamento Contitolari del trattamento, ai sensi dell'art. 26 del GDPR, in quanto hanno determinato congiuntamente le finalità e i mezzi del trattamento, sono: - il Ministero dello Sviluppo Economico (nel prosieguo "Ministero"), con sede in Roma (Italia), via V. Veneto 33, 00187 che esercita le sue funzioni, tra l'altro, per il tramite del Direttore Generale della DGIAI. Il Responsabile della protezione dei dati potrà essere contattato al seguente indirizzo email: protocollo_dgiai@pec.mise.gov.it
+                    </p>
+                </div>
+            </div>
+
+            <!-- Accept Button -->
+            <div class="mt-8 flex justify-center">
+                <button type="button" class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 uppercase text-lg tracking-wider">
+                    Accetta e Continua
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

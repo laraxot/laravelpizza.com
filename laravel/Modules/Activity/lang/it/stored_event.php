@@ -26,6 +26,8 @@ return [
             'help' => 'Nome completo della classe che rappresenta l\'evento',
             'validation' => 'required|string|max:255',
             'searchable' => true,
+            'helper_text' => 'event_class',
+            'description' => 'event_class',
         ],
         'event_properties' => [
             'label' => 'Proprietà Evento',
@@ -34,6 +36,8 @@ return [
             'validation' => 'required|json',
             'type' => 'json',
             'format' => 'json',
+            'helper_text' => 'event_properties',
+            'description' => 'event_properties',
         ],
         'aggregate_uuid' => [
             'label' => 'UUID Aggregato',
@@ -41,6 +45,8 @@ return [
             'help' => 'Identificativo unico dell\'aggregato di appartenenza',
             'validation' => 'required|uuid',
             'searchable' => true,
+            'helper_text' => 'aggregate_uuid',
+            'description' => 'aggregate_uuid',
         ],
         'aggregate_version' => [
             'label' => 'Versione Aggregato',
@@ -48,6 +54,8 @@ return [
             'help' => 'Numero di versione dell\'aggregato',
             'validation' => 'required|integer|min:1',
             'sortable' => true,
+            'helper_text' => 'aggregate_version',
+            'description' => 'aggregate_version',
         ],
         'event_version' => [
             'label' => 'Versione Evento',
@@ -62,6 +70,8 @@ return [
             'validation' => 'nullable|json',
             'type' => 'json',
             'format' => 'json',
+            'helper_text' => 'meta_data',
+            'description' => 'meta_data',
         ],
         'created_at' => [
             'label' => 'Data Creazione',
@@ -70,6 +80,8 @@ return [
             'validation' => 'required|date',
             'format' => 'd/m/Y H:i:s',
             'sortable' => true,
+            'helper_text' => 'created_at',
+            'description' => 'created_at',
         ],
         'created_by' => [
             'label' => 'Creato Da',
@@ -277,7 +289,7 @@ return [
         ],
         'filename_pattern' => 'eventi_archiviati_{date}_{time}',
         'max_records' => 50000,
-        'include_properties' => false, // Per performance, escludi di default i JSON payload
+        'include_properties' => false,
     ],
     'permissions' => [
         'view' => 'stored_events.view',
@@ -292,17 +304,26 @@ return [
     ],
     'pagination' => [
         'per_page' => 50,
-        'options' => [25, 50, 100, 200],
-        'simple' => false, // Usa paginazione completa per event sourcing
+        'options' => [
+            25,
+            50,
+            100,
+            200,
+        ],
+        'simple' => false,
     ],
     'cache' => [
-        'ttl' => 600, // 10 minuti - cache più lunga per eventi immutabili
-        'tags' => ['stored_events', 'event_sourcing', 'monitoring'],
+        'ttl' => 600,
+        'tags' => [
+            'stored_events',
+            'event_sourcing',
+            'monitoring',
+        ],
     ],
     'event_sourcing' => [
         'replay_batch_size' => 100,
-        'snapshot_frequency' => 1000, // Crea snapshot ogni 1000 eventi
-        'retention_days' => 2555, // ~7 anni di ritenzione per compliance
+        'snapshot_frequency' => 1000,
+        'retention_days' => 2555,
         'stream_patterns' => [
             'user' => 'user-{uuid}',
             'order' => 'order-{uuid}',

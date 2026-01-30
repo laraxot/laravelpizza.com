@@ -36,7 +36,7 @@ class SendTelegramPage extends XotBasePage implements HasForms
 
     public ?array $telegramData = [];
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-paper-airplane';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-paper-airplane';
 
     protected string $view = 'notify::filament.pages.send-telegram';
 

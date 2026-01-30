@@ -10,9 +10,10 @@ use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
 use Modules\Notify\Datas\TelegramData;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
+use Spatie\QueueableAction\QueueableAction;
+
 use function Safe\json_decode;
 use function Safe\json_encode;
-use Spatie\QueueableAction\QueueableAction;
 
 final class SendBotmanTelegramAction
 {
@@ -58,7 +59,6 @@ final class SendBotmanTelegramAction
      * Execute the action.
      *
      * @param  TelegramData  $telegramData  I dati del messaggio Telegram
-     *
      * @return array<string, mixed> Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio

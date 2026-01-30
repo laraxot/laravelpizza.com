@@ -131,7 +131,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 abstract class BaseUser extends Authenticatable implements HasMedia, HasName, HasTenants, MustVerifyEmail, OAuthenticatable, UserContract
 {
     use HasApiTokens;
-
     use HasAuthenticationLogTrait;
     use HasChildren;
     use HasModules;
@@ -469,7 +468,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
      * NOTE: This method has been moved to trait HasSpatiePermission.
      * If you need role checking functionality, use the trait method instead.
      *
-     * @see \Modules\User\Models\Traits\HasSpatiePermission::hasRole()
+     * @see HasSpatiePermission::hasRole()
      */
     public function setPasswordAttribute(?string $value): void
     {

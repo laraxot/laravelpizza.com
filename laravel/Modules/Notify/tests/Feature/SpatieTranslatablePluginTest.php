@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(\Modules\Notify\Tests\TestCase::class);
+
 use Filament\Facades\Filament;
 use LaraZeus\SpatieTranslatable\SpatieTranslatablePlugin;
 use Livewire\Livewire;

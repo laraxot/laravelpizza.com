@@ -493,5 +493,16 @@ return [
             'icon' => 'table_layout_toggle',
             'tooltip' => 'table_layout_toggle',
         ],
+        'update_coordinates' => [
+            'label' => 'update_coordinates',
+            'icon' => 'update_coordinates',
+            'tooltip' => 'update_coordinates',
+        ],
+    ],
+    'sections' => [
+        'address' => [
+            'label' => 'address',
+            'heading' => 'address',
+        ],
     ],
 ];

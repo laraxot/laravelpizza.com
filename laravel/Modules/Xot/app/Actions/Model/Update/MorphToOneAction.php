@@ -48,7 +48,6 @@ class MorphToOneAction
      * Prepare the data array for creation.
      *
      * @param  array<string, mixed>  $data  The input data array
-     *
      * @return array<string, mixed> The prepared data array
      */
     private function prepareData(array $data): array

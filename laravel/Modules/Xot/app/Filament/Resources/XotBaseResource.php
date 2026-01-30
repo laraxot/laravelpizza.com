@@ -5,28 +5,28 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Resources;
 
 use Exception;
-use ReflectionClass;
-use function Safe\glob;
-use Illuminate\Support\Str;
-use Filament\Schemas\Schema;
-use Webmozart\Assert\Assert;
-use Filament\Resources\Pages\Page;
-use Illuminate\Support\HtmlString;
-use Illuminate\Database\Eloquent\Model;
-use Filament\Support\Components\Component;
-use Illuminate\Contracts\Support\Htmlable;
-use Modules\Xot\Actions\GetTransKeyAction;
-use Filament\Schemas\Components\Wizard\Step;
-use Modules\Xot\Filament\Traits\HasXotTable;
-use Filament\Resources\Pages\PageRegistration;
 use Filament\Pages\Enums\SubNavigationPosition;
-use Modules\Xot\Actions\ModelClass\CountAction;
-use Filament\Resources\Resource as FilamentResource;
-use Modules\Media\Actions\GetAttachmentsSchemaAction;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Filament\Resources\Pages\Page;
+use Filament\Resources\Pages\PageRegistration;
 use Filament\Resources\RelationManagers\RelationGroup;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Resources\RelationManagers\RelationManagerConfiguration;
+use Filament\Resources\Resource as FilamentResource;
+use Filament\Schemas\Components\Wizard\Step;
+use Filament\Schemas\Schema;
+use Filament\Support\Components\Component;
+use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\HtmlString;
+use Illuminate\Support\Str;
+use Modules\Media\Actions\GetAttachmentsSchemaAction;
+use Modules\Xot\Actions\GetTransKeyAction;
+use Modules\Xot\Actions\ModelClass\CountAction;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use ReflectionClass;
+use Webmozart\Assert\Assert;
+
+use function Safe\glob;
 
 /**
  * @method static string getUrl(string $name, array<string, mixed> $parameters = [], bool $isAbsolute = true)
@@ -34,7 +34,6 @@ use Filament\Resources\RelationManagers\RelationManagerConfiguration;
 abstract class XotBaseResource extends FilamentResource
 {
     use NavigationLabelTrait;
-    
 
     protected static ?string $model = null;
 

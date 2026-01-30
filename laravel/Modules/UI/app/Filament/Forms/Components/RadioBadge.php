@@ -75,7 +75,7 @@ class RadioBadge extends Radio
     public function getIconForOption(string $value): ?string
     {
         $enum = $this->getEnumValue($value);
-        if (! ($enum instanceof HasIcon)) {
+        if (! $enum instanceof HasIcon) {
             return null;
         }
         $icon = $enum->getIcon();

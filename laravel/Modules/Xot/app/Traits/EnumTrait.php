@@ -104,9 +104,9 @@ trait EnumTrait
      */
     public static function columns(Blueprint $table, ?XotBaseMigration $migration = null): void
     {
-        //if (! method_exists(static::class, 'getColumnDefinitions')) {
+        // if (! method_exists(static::class, 'getColumnDefinitions')) {
         //    return;
-        //}
+        // }
 
         foreach (static::getColumnDefinitions() as $name => $definition) {
             if ($migration === null || ! $migration->hasColumn($name)) {

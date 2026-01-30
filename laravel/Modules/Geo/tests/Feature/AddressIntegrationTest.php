@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(Modules\Geo\Tests\TestCase::class);
+
 use Modules\Geo\Enums\AddressTypeEnum;
 
 /**

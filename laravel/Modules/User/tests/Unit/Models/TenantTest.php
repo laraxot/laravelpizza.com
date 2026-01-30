@@ -12,7 +12,7 @@ class TenantTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function testCanCreateTenantWithMinimalData(): void
+    public function test_can_create_tenant_with_minimal_data(): void
     {
         $tenant = Tenant::factory()->create([
             'name' => 'Test Tenant',
@@ -24,7 +24,7 @@ class TenantTest extends TestCase
         ]);
     }
 
-    public function testCanCreateTenantWithAllFields(): void
+    public function test_can_create_tenant_with_all_fields(): void
     {
         $tenantData = [
             'name' => 'Full Tenant',
@@ -51,7 +51,7 @@ class TenantTest extends TestCase
         static::assertSame(['theme' => 'dark', 'features' => ['chat', 'analytics']], $tenant->settings);
     }
 
-    public function testTenantHasSoftDeletes(): void
+    public function test_tenant_has_soft_deletes(): void
     {
         $tenant = Tenant::factory()->create();
         $tenantId = $tenant->id;
@@ -62,7 +62,7 @@ class TenantTest extends TestCase
         $this->assertDatabaseMissing('tenants', ['id' => $tenantId]);
     }
 
-    public function testCanRestoreSoftDeletedTenant(): void
+    public function test_can_restore_soft_deleted_tenant(): void
     {
         if (! method_exists(Tenant::class, 'withTrashed')) {
             $this->markTestSkipped('SoftDeletes trait not present on Tenant model');
@@ -84,7 +84,7 @@ class TenantTest extends TestCase
         static::assertNull($restoredTenant->deleted_at);
     }
 
-    public function testCanFindTenantByName(): void
+    public function test_can_find_tenant_by_name(): void
     {
         $tenant = Tenant::factory()->create(['name' => 'Unique Tenant Name']);
 
@@ -94,7 +94,7 @@ class TenantTest extends TestCase
         static::assertSame($tenant->id, $foundTenant->id);
     }
 
-    public function testCanFindTenantBySlug(): void
+    public function test_can_find_tenant_by_slug(): void
     {
         $tenant = Tenant::factory()->create(['slug' => 'unique-tenant']);
 
@@ -104,7 +104,7 @@ class TenantTest extends TestCase
         static::assertSame($tenant->id, $foundTenant->id);
     }
 
-    public function testCanFindTenantByDomain(): void
+    public function test_can_find_tenant_by_domain(): void
     {
         $tenant = Tenant::factory()->create(['domain' => 'uniquetenant.com']);
 
@@ -114,7 +114,7 @@ class TenantTest extends TestCase
         static::assertSame($tenant->id, $foundTenant->id);
     }
 
-    public function testCanFindTenantByDatabase(): void
+    public function test_can_find_tenant_by_database(): void
     {
         $tenant = Tenant::factory()->create(['database' => 'unique_db']);
 
@@ -124,7 +124,7 @@ class TenantTest extends TestCase
         static::assertSame($tenant->id, $foundTenant->id);
     }
 
-    public function testCanFindActiveTenants(): void
+    public function test_can_find_active_tenants(): void
     {
         Tenant::factory()->create(['is_active' => true]);
         Tenant::factory()->create(['is_active' => false]);
@@ -136,7 +136,7 @@ class TenantTest extends TestCase
         static::assertTrue($activeTenants->every(fn ($tenant) => $tenant->is_active));
     }
 
-    public function testCanFindTenantsByNamePattern(): void
+    public function test_can_find_tenants_by_name_pattern(): void
     {
         Tenant::factory()->create(['name' => 'Development Company']);
         Tenant::factory()->create(['name' => 'Marketing Agency']);
@@ -148,7 +148,7 @@ class TenantTest extends TestCase
         static::assertTrue($companyTenants->every(fn ($tenant) => str_contains($tenant->name, 'Company')));
     }
 
-    public function testCanFindTenantsByDomainPattern(): void
+    public function test_can_find_tenants_by_domain_pattern(): void
     {
         Tenant::factory()->create(['domain' => 'dev.example.com']);
         Tenant::factory()->create(['domain' => 'staging.example.com']);
@@ -160,7 +160,7 @@ class TenantTest extends TestCase
         static::assertTrue($exampleTenants->every(fn ($tenant) => str_ends_with($tenant->domain, '.example.com')));
     }
 
-    public function testCanUpdateTenant(): void
+    public function test_can_update_tenant(): void
     {
         $tenant = Tenant::factory()->create(['name' => 'Old Name']);
 
@@ -172,7 +172,7 @@ class TenantTest extends TestCase
         ]);
     }
 
-    public function testCanHandleNullValues(): void
+    public function test_can_handle_null_values(): void
     {
         $tenant = Tenant::factory()->create([
             'name' => 'Test Tenant',
@@ -189,7 +189,7 @@ class TenantTest extends TestCase
         ]);
     }
 
-    public function testCanFindTenantsByMultipleCriteria(): void
+    public function test_can_find_tenants_by_multiple_criteria(): void
     {
         Tenant::factory()->create([
             'name' => 'Active Company',
@@ -210,28 +210,28 @@ class TenantTest extends TestCase
         static::assertTrue($tenants->first()->is_active);
     }
 
-    public function testTenantHasUsersRelationship(): void
+    public function test_tenant_has_users_relationship(): void
     {
         $tenant = Tenant::factory()->create();
 
         static::assertTrue(method_exists($tenant, 'users'));
     }
 
-    public function testTenantHasMembersRelationship(): void
+    public function test_tenant_has_members_relationship(): void
     {
         $tenant = Tenant::factory()->create();
 
         static::assertTrue(method_exists($tenant, 'members'));
     }
 
-    public function testTenantHasMediaRelationship(): void
+    public function test_tenant_has_media_relationship(): void
     {
         $tenant = Tenant::factory()->create();
 
         static::assertTrue(method_exists($tenant, 'media'));
     }
 
-    public function testTenantHasFactory(): void
+    public function test_tenant_has_factory(): void
     {
         $tenant = Tenant::factory()->create();
 
@@ -239,7 +239,7 @@ class TenantTest extends TestCase
         static::assertInstanceOf(Tenant::class, $tenant);
     }
 
-    public function testCanFindTenantsByTrialStatus(): void
+    public function test_can_find_tenants_by_trial_status(): void
     {
         $activeTenant = Tenant::factory()->create([
             'trial_ends_at' => now()->addDays(30),
@@ -255,7 +255,7 @@ class TenantTest extends TestCase
         static::assertSame($activeTenant->id, $activeTrials->first()->id);
     }
 
-    public function testCanFindTenantsBySettingsValue(): void
+    public function test_can_find_tenants_by_settings_value(): void
     {
         Tenant::factory()->create([
             'settings' => ['theme' => 'dark', 'features' => ['chat']],

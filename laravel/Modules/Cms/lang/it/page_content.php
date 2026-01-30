@@ -22,6 +22,8 @@ return [
         'name' => [
             'label' => 'Nome',
             'placeholder' => 'Nome del contenuto',
+            'helper_text' => 'name',
+            'description' => 'name',
         ],
         'slug' => [
             'label' => 'Slug',
@@ -95,5 +97,11 @@ return [
     ],
     'model' => [
         'label' => 'page content.model',
+    ],
+    'sections' => [
+        'Content' => [
+            'label' => 'Content',
+            'heading' => 'Content',
+        ],
     ],
 ];

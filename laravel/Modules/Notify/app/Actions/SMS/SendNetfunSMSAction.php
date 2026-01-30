@@ -11,8 +11,9 @@ use Illuminate\Support\Facades\Log;
 use Modules\Notify\Contracts\SMS\SmsActionContract;
 use Modules\Notify\Datas\SmsData;
 use Override;
-use function Safe\mb_convert_encoding;
 use Spatie\QueueableAction\QueueableAction;
+
+use function Safe\mb_convert_encoding;
 
 final class SendNetfunSMSAction implements SmsActionContract
 {
@@ -57,7 +58,6 @@ final class SendNetfunSMSAction implements SmsActionContract
      * Execute the action.
      *
      * @param  SmsData  $smsData  I dati del messaggio SMS
-     *
      * @return array Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio

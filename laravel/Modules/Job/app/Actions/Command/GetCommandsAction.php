@@ -26,9 +26,6 @@ class GetCommandsAction
 
         /** @var Collection<int, CommandData> $commandDataCollection */
         $commandDataCollection = collect($commands)->map(
-            /**
-             * @param  Command  $command
-             */
             static function (Command $command): CommandData {
                 $name = (string) $command->getName();
                 $description = (string) $command->getDescription();
@@ -60,7 +57,7 @@ class GetCommandsAction
                     name: $name,
                     description: $description,
                     signature: $signature,
-                    full_name: $name . ' - ' . $description,
+                    full_name: $name.' - '.$description,
                     arguments: $arguments->toArray(),
                     options: [
                         'withValue' => $options->toArray(),

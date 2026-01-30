@@ -29,8 +29,8 @@ class TestActivityModel extends BaseModel
      */
     protected function casts(): array
     {
-        return [
-            'published_at' => 'datetime',
-        ];
+        return array_merge(parent::casts(), [
+            // Module-specific casts only
+        ]);
     }
 }

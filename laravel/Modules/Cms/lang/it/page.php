@@ -22,10 +22,14 @@ return [
         'title' => [
             'label' => 'Titolo',
             'placeholder' => 'Titolo della pagina',
+            'helper_text' => 'title',
+            'description' => 'title',
         ],
         'slug' => [
             'label' => 'Slug',
             'placeholder' => 'Slug della pagina',
+            'helper_text' => 'slug',
+            'description' => 'slug',
         ],
         'content' => [
             'label' => 'Contenuto',
@@ -142,5 +146,19 @@ return [
     ],
     'model' => [
         'label' => 'page.model',
+    ],
+    'sections' => [
+        'Content' => [
+            'label' => 'Content',
+            'heading' => 'Content',
+        ],
+        'Sidebar' => [
+            'label' => 'Sidebar',
+            'heading' => 'Sidebar',
+        ],
+        'Footer' => [
+            'label' => 'Footer',
+            'heading' => 'Footer',
+        ],
     ],
 ];

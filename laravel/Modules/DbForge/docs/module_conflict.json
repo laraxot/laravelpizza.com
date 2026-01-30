@@ -1,0 +1,18 @@
+{
+    "name": "DbForge",
+    "alias": "dbforge",
+    "description": "Modulo per la gestione e manipolazione del database con strumenti avanzati di database management",
+    "keywords": ["database", "dbforge", "database management", "database tools", "migration", "schema"],
+    "priority": 0,
+    "active": 1,
+    "order": 10,
+    "providers": [
+        "Modules\\DbForge\\Providers\\DbForgeServiceProvider",
+        "Modules\\DbForge\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": ["Xot", "User"],
+    "minimumCoreVersion": "10.0",
+    "phpVersion": "^8.1"
+}

@@ -26,6 +26,7 @@ class InlineDatePicker extends XotBaseDatePicker
      * Mese attualmente visualizzato (formato Y-m).
      */
     public string $currentViewMonth;
+
     /**
      * Date abilitate per la selezione.
      *

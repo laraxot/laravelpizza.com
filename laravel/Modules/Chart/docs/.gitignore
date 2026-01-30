@@ -1,0 +1,13 @@
+/build_*/
+/node_modules/
+/vendor/
+/source/assets/build/
+.env
+npm-debug.log
+*.cache
+*.phar
+*.lock
+package-lock.json
+-e 
+# PHPStan documentation
+docs/phpstan/

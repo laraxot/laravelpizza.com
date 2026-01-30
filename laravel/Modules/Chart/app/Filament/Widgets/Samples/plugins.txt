@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/68406981/chart-js-2-bars-with-one-customize-label-on-top

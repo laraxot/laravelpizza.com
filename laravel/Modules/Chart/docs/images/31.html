@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistiche - SALUTE ORALE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .data-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #10B981 0%, #059669 100%);
+            animation: barProgress 1.5s ease-out forwards;
+        }
+        @keyframes barProgress {
+            from { width: 0%; }
+            to { width: var(--target-width); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto p-6 max-w-4xl">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6">Statistiche</h1>
+            
+            <div class="space-y-8">
+                <!-- Totali -->
+                <div class="space-y-4">
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <span class="text-2xl font-bold text-green-600">1,842</span>
+                            <p class="text-gray-600">ACCETTATE</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-2xl font-bold text-red-600">326</span>
+                            <p class="text-gray-600">RIFIUTATE</p>
+                        </div>
+                    </div>
+                    <div class="relative pt-2">
+                        <div class="data-bar rounded-full" style="--target-width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

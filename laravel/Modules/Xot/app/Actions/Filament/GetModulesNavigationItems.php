@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
-use function Safe\json_encode;
 use Spatie\QueueableAction\QueueableAction;
 use Throwable;
 use Webmozart\Assert\Assert;
+
+use function Safe\json_encode;
 
 /**
  * Classe per gestire gli elementi di navigazione per i moduli.

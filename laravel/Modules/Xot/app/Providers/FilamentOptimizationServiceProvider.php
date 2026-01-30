@@ -11,8 +11,9 @@ use Illuminate\Support\ServiceProvider;
 use Modules\Xot\Http\Middleware\FilamentMemoryMonitorMiddleware;
 use Nwidart\Modules\Module;
 use PDO;
-use function Safe\preg_match;
 use Webmozart\Assert\Assert;
+
+use function Safe\preg_match;
 
 /**
  * Service Provider per ottimizzazioni Filament.

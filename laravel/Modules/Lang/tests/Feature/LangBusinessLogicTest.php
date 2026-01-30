@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(Modules\Lang\Tests\TestCase::class);
+
 use Modules\Lang\Models\Post;
 use Modules\Lang\Models\Translation;
 use Modules\Lang\Models\TranslationFile;

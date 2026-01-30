@@ -50,11 +50,11 @@ class JobsWaitingOverview extends BaseWidget
             $totalSeconds = (int) $cast->getStringAttribute($aggregatedInfo, 'total_time_elapsed', '0');
 
             $averageTime = $averageSeconds > 0.0
-                ? (string) ceil($averageSeconds) . 's'
+                ? (string) ceil($averageSeconds).'s'
                 : '0';
 
             $totalTime = $totalSeconds > 0
-                ? $this->formatSeconds($totalSeconds) . 's'
+                ? $this->formatSeconds($totalSeconds).'s'
                 : '0';
         }
 

@@ -201,7 +201,6 @@ trait TransTrait
      * @param  array<string, bool|float|int|string>  $replace  Parametri di sostituzione per la traduzione
      * @param  string|null  $locale  Locale da utilizzare (null = locale corrente)
      * @param  bool  $useFallback  Se true, utilizza la chiave come fallback se la traduzione non esiste
-     *
      * @return string La stringa tradotta o la chiave originale se non trovata
      */
     public static function getTranslatedString(
@@ -240,7 +239,6 @@ trait TransTrait
      * @param  array<string, bool|float|int|string>  $replace  Parametri di sostituzione per la traduzione
      * @param  string|null  $locale  Locale da utilizzare (null = locale corrente)
      * @param  bool  $useFallback  Se true, utilizza la chiave come fallback se la traduzione non esiste
-     *
      * @return string La stringa tradotta o la chiave originale se non trovata
      */
     public static function transOLD(

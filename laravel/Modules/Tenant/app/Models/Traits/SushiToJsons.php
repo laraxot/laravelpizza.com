@@ -13,9 +13,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use InvalidArgumentException;
 use Modules\Tenant\Services\TenantService;
+use Sushi\Sushi;
+
 use function Safe\json_encode;
 use function Safe\unlink;
-use Sushi\Sushi;
 
 trait SushiToJsons
 {

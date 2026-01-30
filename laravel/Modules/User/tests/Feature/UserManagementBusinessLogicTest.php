@@ -19,7 +19,7 @@ class UserManagementBusinessLogicTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function itCanCreateUserWithProfile(): void
+    public function it_can_create_user_with_profile(): void
     {
         // Arrange
         $userData = [
@@ -59,7 +59,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanAssignRoleToUser(): void
+    public function it_can_assign_role_to_user(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -75,7 +75,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanAssignMultipleRolesToUser(): void
+    public function it_can_assign_multiple_roles_to_user(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -94,7 +94,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanRemoveRoleFromUser(): void
+    public function it_can_remove_role_from_user(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -111,7 +111,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanSyncUserRoles(): void
+    public function it_can_sync_user_roles(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -132,7 +132,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanCheckUserPermissions(): void
+    public function it_can_check_user_permissions(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -149,7 +149,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanAssignDirectPermissionToUser(): void
+    public function it_can_assign_direct_permission_to_user(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -165,7 +165,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanRevokeDirectPermissionFromUser(): void
+    public function it_can_revoke_direct_permission_from_user(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -182,7 +182,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanCheckUserHasAnyRole(): void
+    public function it_can_check_user_has_any_role(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -198,7 +198,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanCheckUserHasAllRoles(): void
+    public function it_can_check_user_has_all_roles(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -213,7 +213,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanGetUserPermissions(): void
+    public function it_can_get_user_permissions(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -234,7 +234,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanGetUserRoles(): void
+    public function it_can_get_user_roles(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -253,7 +253,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanCheckUserIsSuperAdmin(): void
+    public function it_can_check_user_is_super_admin(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -267,7 +267,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanCheckUserIsAdmin(): void
+    public function it_can_check_user_is_admin(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -281,7 +281,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanCheckUserIsDoctor(): void
+    public function it_can_check_user_is_doctor(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -295,7 +295,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanCheckUserIsPatient(): void
+    public function it_can_check_user_is_patient(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -309,7 +309,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanUpdateUserProfile(): void
+    public function it_can_update_user_profile(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -337,7 +337,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanDeleteUserWithProfile(): void
+    public function it_can_delete_user_with_profile(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -354,7 +354,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanSoftDeleteUser(): void
+    public function it_can_soft_delete_user(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -368,7 +368,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanRestoreSoftDeletedUser(): void
+    public function it_can_restore_soft_deleted_user(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -383,7 +383,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanForceDeleteUser(): void
+    public function it_can_force_delete_user(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -400,7 +400,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanSearchUsersByName(): void
+    public function it_can_search_users_by_name(): void
     {
         // Arrange
         $user1 = User::factory()->create(['name' => 'Mario Rossi']);
@@ -418,7 +418,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanSearchUsersByEmail(): void
+    public function it_can_search_users_by_email(): void
     {
         // Arrange
         $user1 = User::factory()->create(['email' => 'mario@example.com']);
@@ -436,7 +436,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanFilterUsersByRole(): void
+    public function it_can_filter_users_by_role(): void
     {
         // Arrange
         $doctorRole = Role::factory()->create(['name' => 'doctor']);
@@ -461,7 +461,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanFilterUsersByPermission(): void
+    public function it_can_filter_users_by_permission(): void
     {
         // Arrange
         $role = Role::factory()->create(['name' => 'doctor']);
@@ -484,7 +484,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanGetUsersWithRolesAndPermissions(): void
+    public function it_can_get_users_with_roles_and_permissions(): void
     {
         // Arrange
         $role = Role::factory()->create(['name' => 'doctor']);
@@ -507,7 +507,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanValidateUserEmailUniqueness(): void
+    public function it_can_validate_user_email_uniqueness(): void
     {
         // Arrange
         User::factory()->create(['email' => 'test@example.com']);
@@ -523,7 +523,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanValidateUserPasswordStrength(): void
+    public function it_can_validate_user_password_strength(): void
     {
         // Arrange
         $userData = [
@@ -539,7 +539,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanHandleUserPasswordReset(): void
+    public function it_can_handle_user_password_reset(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -556,7 +556,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanHandleUserEmailVerification(): void
+    public function it_can_handle_user_email_verification(): void
     {
         // Arrange
         $user = User::factory()->create(['email_verified_at' => null]);
@@ -570,7 +570,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanHandleUserLastLogin(): void
+    public function it_can_handle_user_last_login(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -587,7 +587,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanHandleUserStatusChanges(): void
+    public function it_can_handle_user_status_changes(): void
     {
         // Arrange
         $user = User::factory()->create(['status' => 'active']);
@@ -606,7 +606,7 @@ class UserManagementBusinessLogicTest extends TestCase
     }
 
     /** @test */
-    public function itCanHandleUserPreferences(): void
+    public function it_can_handle_user_preferences(): void
     {
         // Arrange
         $user = User::factory()->create();

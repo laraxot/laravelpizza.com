@@ -54,6 +54,4 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
-interface ModelInputContract
-{
-}
+interface ModelInputContract {}

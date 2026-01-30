@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\MorphPivot as EloquentMorphPivot;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
+
 use function Safe\preg_match;
 
 /**

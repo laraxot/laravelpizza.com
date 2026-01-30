@@ -149,7 +149,11 @@ class ComuneFactory extends Factory
      */
     public function lombardia(): static
     {
-        return $this->state(function (array $attributes): array {
+        /*
+         * @param array<string, mixed> $attributes
+         * @return array<string, mixed>
+         */
+        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null) {
             /** @var array<int, array{nome: string, provincia: string, cap: string}> $comuniLombardia */
             $comuniLombardia = [
                 ['nome' => 'Milano', 'provincia' => 'Milano', 'cap' => '20100'],
@@ -162,12 +166,15 @@ class ComuneFactory extends Factory
             /** @var array{nome: string, provincia: string, cap: string} $comuneData */
             $comuneData = $this->faker->randomElement($comuniLombardia);
 
-            return array_merge($attributes, [
+            /** @var array<string, mixed> $result */
+            $result = array_merge($attributes, [
                 'nome' => $comuneData['nome'],
                 'regione' => 'Lombardia',
                 'provincia' => $comuneData['provincia'],
                 'cap' => $comuneData['cap'],
             ]);
+
+            return $result;
         });
     }
 
@@ -176,7 +183,11 @@ class ComuneFactory extends Factory
      */
     public function emiliaRomagna(): static
     {
-        return $this->state(function (array $attributes): array {
+        /*
+         * @param array<string, mixed> $attributes
+         * @return array<string, mixed>
+         */
+        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null) {
             /** @var array<int, array{nome: string, provincia: string, cap: string}> $comuniEmiliaRomagna */
             $comuniEmiliaRomagna = [
                 ['nome' => 'Bologna', 'provincia' => 'Bologna', 'cap' => '40100'],
@@ -194,12 +205,15 @@ class ComuneFactory extends Factory
             /** @var array{nome: string, provincia: string, cap: string} $comuneData */
             $comuneData = $this->faker->randomElement($comuniEmiliaRomagna);
 
-            return array_merge($attributes, [
+            /** @var array<string, mixed> $result */
+            $result = array_merge($attributes, [
                 'nome' => $comuneData['nome'],
                 'regione' => 'Emilia-Romagna',
                 'provincia' => $comuneData['provincia'],
                 'cap' => $comuneData['cap'],
             ]);
+
+            return $result;
         });
     }
 

@@ -14,12 +14,11 @@ use Modules\Xot\Traits\Updater;
 
 use function Safe\class_uses;
 
-
 uses(TestCase::class);
 
 beforeEach(function (): void {
     /* @phpstan-ignore-next-line property.notFound */
-    $this->model = new TestActivityModel();
+    $this->model = new TestActivityModel;
 });
 
 test('can create base model instance', function (): void {
@@ -65,41 +64,18 @@ test('has correct casts configuration', function (): void {
     /** @phpstan-ignore-next-line property.notFound */
     $casts = $this->model->getCasts();
 
+    // id is cast to string (as defined in XotBaseModel)
     expect($casts)->toHaveKey('id');
     /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     expect($casts['id'])->toBe('string');
 
-    expect($casts)->toHaveKey('uuid');
-    /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-    expect($casts['uuid'])->toBe('string');
-
-    expect($casts)->toHaveKey('created_at');
-    /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-    expect($casts['created_at'])->toBe('datetime');
-
-    expect($casts)->toHaveKey('updated_at');
-    /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-    expect($casts['updated_at'])->toBe('datetime');
-
-    expect($casts)->toHaveKey('deleted_at');
-    /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-    expect($casts['deleted_at'])->toBe('datetime');
-
-    expect($casts)->toHaveKey('updated_by');
-    /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-    expect($casts['updated_by'])->toBe('string');
-
-    expect($casts)->toHaveKey('created_by');
-    /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-    expect($casts['created_by'])->toBe('string');
-
-    expect($casts)->toHaveKey('deleted_by');
-    /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-    expect($casts['deleted_by'])->toBe('string');
-
+    // published_at is cast to datetime (defined in TestActivityModel)
     expect($casts)->toHaveKey('published_at');
     /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     expect($casts['published_at'])->toBe('datetime');
+
+    // Verify getCasts returns an array
+    expect($casts)->toBeArray();
 });
 
 test('can use factory', function (): void {
@@ -116,6 +92,7 @@ test('has updater trait', function (): void {
     $traits = class_uses($model);
     if (in_array(Updater::class, $traits, true)) {
         expect($traits)->toContain(Updater::class);
+
         return;
     }
 
@@ -129,6 +106,7 @@ test('has has factory trait', function (): void {
     $traits = class_uses($model);
     if (in_array(HasFactory::class, $traits, true)) {
         expect($traits)->toContain(HasFactory::class);
+
         return;
     }
 

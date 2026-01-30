@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Waves Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #002855;
+        }
+        
+        .wave {
+            animation: wave-animation 20s infinite linear;
+            transform-origin: center;
+        }
+        
+        .wave2 {
+            animation: wave-animation 15s infinite linear reverse;
+        }
+        
+        .glow {
+            animation: glow-animation 4s infinite ease-in-out;
+        }
+        
+        @keyframes wave-animation {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+            50% {
+                transform: translateX(20px) translateY(-15px);
+            }
+            100% {
+                transform: translateX(0) translateY(0);
+            }
+        }
+        
+        @keyframes glow-animation {
+            0% {
+                opacity: 0.4;
+                filter: blur(5px);
+            }
+            50% {
+                opacity: 0.8;
+                filter: blur(10px);
+            }
+            100% {
+                opacity: 0.4;
+                filter: blur(5px);
+            }
+        }
+    </style>
+</head>
+<body class="w-full h-screen flex items-center justify-center">
+    <svg width="100%" height="100%" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+        <!-- Background gradient -->
+        <defs>
+            <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#001F44" />
+                <stop offset="100%" stop-color="#003366" />
+            </linearGradient>
+        </defs>
+        
+        <!-- Background rectangle -->
+        <rect width="100%" height="100%" fill="url(#bgGradient)" />
+        
+        <!-- First wave -->
+        <path class="wave" d="M-100,300 C100,200 300,400 500,300 S700,150 900,250 L900,600 L-100,600 Z" 
+              fill="#0050AA" opacity="0.3" />
+        
+        <!-- Second wave -->
+        <path class="wave wave2" d="M-100,350 C50,300 200,450 400,350 S600,250 900,300 L900,600 L-100,600 Z" 
+              fill="#0066CC" opacity="0.2" />
+        
+        <!-- Third wave -->
+        <path class="wave" d="M-100,400 C200,350 400,500 600,400 S800,350 900,400 L900,600 L-100,600 Z" 
+              fill="#0077EE" opacity="0.1" />
+        
+        <!-- Light spots -->
+        <circle class="glow" cx="230" cy="430" r="10" fill="#4FB3FF" opacity="0.8" />
+        <circle class="glow" cx="750" cy="280" r="8" fill="#4FB3FF" opacity="0.6" />
+    </svg>
+    
+    <!-- Content for mobile can be added here -->
+    <div class="z-10 text-white p-4 text-center">
+        <!-- Your content here -->
+    </div>
+</body>
+</html>

@@ -33,8 +33,8 @@ return [
      * |
      */
     'database' => [
-        'connection' => env('SUSHI_DB_CONNECTION', 'sqlite'),
-        'database' => env('SUSHI_DB_DATABASE', ':memory:'),
+        'connection' => env('SUSHI_DB_CONNECTION', 'mysql'),
+        'database' => env('SUSHI_DB_DATABASE', 'quaeris_data_test'),
     ],
     /*
      * |--------------------------------------------------------------------------

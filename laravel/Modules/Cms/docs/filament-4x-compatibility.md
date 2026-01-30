@@ -1,63 +1,53 @@
-# Compatibilità Filament 4.x - Modulo Cms
+# Compatibilità Filament 5.x - Modulo Cms
 
-**Data**: 2025-01-27
+**Data**: 2026-01-30
 **Status**: ✅ COMPLETATO
-**Versione Filament**: 4.0.17
+**Versione Filament**: 5.1.1
 
-## 🔧 Correzioni Implementate
+> [!IMPORTANT]
+> Questo documento sostituisce la precedente documentazione Filament 4.x.
 
-### 1. SectionPreview Component
-**Problema**: Parametro `$name` non contravariante con classe padre
-**Soluzione**: Utilizzato `parent::make($name)` per delegare alla classe padre
+## Requisiti Filament 5.x
 
-```php
-public static function make(string|null $name = null): static
-{
-    return parent::make($name);
-}
+| Requisito | Minimo | Attuale |
+|-----------|--------|---------|
+| PHP | 8.2+ | 8.3.6 ✅ |
+| Laravel | v11.28+ | 12.48.1 ✅ |
+| Tailwind CSS | v4.0+ | v4.1.0 ✅ |
+| Livewire | v4.0+ | v4.x ✅ |
+
+## 🔧 Modifiche Principali Filament 5.x
+
+### 1. Tailwind CSS v4
+
+**Breaking change**: Filament 5.x richiede Tailwind CSS v4.0+
+
+```javascript
+// vite.config.js - Configurazione v4
+import tailwindcss from '@tailwindcss/vite';
+
+export default defineConfig({
+    plugins: [
+        laravel({...}),
+        tailwindcss(),  // ✅ Plugin Vite (NON PostCSS)
+    ],
+});
 ```
 
-### 2. Dashboard Page
-**Problemi**:
-- Proprietà `$view` non accetta valore di tipo string
-- Metodo `getNavigationIcon()` restituisce tipo non compatibile
-- PHPDoc del metodo `getColumns()` non corretto
-
-**Soluzioni**:
-- Cambiato `protected static string $view` in `protected string $view`
-- Aggiunto cast esplicito `(string) $icon->value` per BackedEnum
-- Corretto PHPDoc: `@return int|array<string, int|string|null>`
-
-```php
-public static function getNavigationIcon(): null|string
-{
-    $icon = static::$navigationIcon ??
-        FilamentIcon::resolve('panels::pages.dashboard.navigation-item') ??
-            (Filament::hasTopNavigation() ? 'heroicon-m-home' : 'heroicon-o-home');
-
-    if ($icon instanceof \BackedEnum) {
-        return (string) $icon->value;
-    }
-
-    return is_string($icon) ? $icon : null;
-}
+```css
+/* app.css - Sintassi v4 */
+@import 'tailwindcss';  /* ✅ NON @tailwind base/components/utilities */
 ```
 
-## 📋 Modifiche Filament 4.x
+### 2. File Rimossi
 
-### Breaking Changes Applicati
-1. **Tipo di ritorno NavigationIcon**: Ora deve essere `string|null` invece di `BackedEnum|string`
-2. **Proprietà View**: Non può essere statica per alcuni tipi di view
-3. **PHPDoc più rigoroso**: Richiesto per union types complessi
-
-### Compatibilità Mantenuta
-- ✅ Tutte le funzionalità esistenti preservate
-- ✅ Interfaccia utente invariata
-- ✅ Performance mantenute
+Durante l'upgrade a Filament 5.x + Tailwind v4:
+- `tailwind.config.js` - Non più necessario
+- `postcss.config.js` - Non più necessario
 
 ## 🔗 Collegamenti
 
-- [Rapporto Aggiornamento Filament 4.x](../../docs/filament_4x_upgrade_report.md)
-- [Guida Ufficiale Filament 4.x](https://filamentphp.com/docs/4.x/upgrade-guide)
+- [Filament 5.x Upgrade Guide](https://filamentphp.com/docs/5.x/upgrade-guide)
+- [Filament 5 Requirements](../../Xot/docs/filament-5-requirements.md)
 
-*Ultimo aggiornamento: 2025-01-27*
+*Ultimo aggiornamento: 2026-01-30*

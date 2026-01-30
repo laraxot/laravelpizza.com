@@ -8,8 +8,9 @@ use Exception;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Nwidart\Modules\Facades\Module;
-use function Safe\scandir;
 use Spatie\QueueableAction\QueueableAction;
+
+use function Safe\scandir;
 
 class GetModulePathAction
 {
@@ -19,7 +20,6 @@ class GetModulePathAction
      * Ottiene il percorso di un modulo.
      *
      * @param  string  $moduleName  Il nome del modulo
-     *
      * @return string Il percorso completo del modulo
      */
     public function execute(string $moduleName): string

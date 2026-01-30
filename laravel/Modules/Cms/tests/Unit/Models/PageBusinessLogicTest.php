@@ -1,6 +1,8 @@
 <?php
 
 declare(strict_types=1);
+
+uses(Modules\Cms\Tests\TestCase::class);
 use Modules\Cms\Models\BaseModelLang;
 use Modules\Cms\Models\Page;
 use Modules\Tenant\Models\Traits\SushiToJsons;
@@ -27,6 +29,7 @@ describe('Page Business Logic', function (): void {
         $page = new Page();
         $expectedFillable = [
             'content',
+            'description',
             'slug',
             'title',
             'middleware',
@@ -68,10 +71,17 @@ describe('Page Business Logic', function (): void {
     test('page has schema definition for structured data', function (): void {
         $page = new Page();
 
-        expect($page)->toHaveProperty('schema');
-        expect($page->schema['content_blocks'])->toBe('json');
-        expect($page->schema['sidebar_blocks'])->toBe('json');
-        expect($page->schema['footer_blocks'])->toBe('json');
+        // Use reflection to access protected $schema property
+        $reflection = new ReflectionClass($page);
+        $schemaProperty = $reflection->getProperty('schema');
+
+        expect($schemaProperty->isProtected())->toBeTrue();
+
+        $schema = $schemaProperty->getValue($page);
+        expect($schema)->toBeArray();
+        expect($schema['content_blocks'])->toBe('json');
+        expect($schema['sidebar_blocks'])->toBe('json');
+        expect($schema['footer_blocks'])->toBe('json');
     });
 
     test('page can get rows for sushi functionality', function (): void {

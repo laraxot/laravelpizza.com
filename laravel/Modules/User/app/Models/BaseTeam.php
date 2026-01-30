@@ -102,7 +102,7 @@ abstract class BaseTeam extends BaseModel implements TeamContract
     #[\Override]
     public function allUsers(): Collection
     {
-        if (! ($this->owner instanceof User)) {
+        if (! $this->owner instanceof User) {
             return $this->users;
         }
 

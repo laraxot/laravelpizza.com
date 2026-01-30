@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salute Orale - Informazioni Preventive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .floating-tooth {
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Background SVG animations -->
+    <div class="fixed inset-0 z-0 overflow-hidden">
+        <svg class="absolute top-0 left-0 w-full h-full opacity-5" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <!-- Stylized tooth shapes -->
+            <path class="floating-tooth" d="M20,20 Q25,15 30,20 Q35,25 30,30 Q25,35 20,30 Q15,25 20,20" fill="#0047AB" style="animation-delay: 0s;"></path>
+            <path class="floating-tooth" d="M70,30 Q75,25 80,30 Q85,35 80,40 Q75,45 70,40 Q65,35 70,30" fill="#0047AB" style="animation-delay: 1.5s;"></path>
+            <path class="floating-tooth" d="M30,60 Q35,55 40,60 Q45,65 40,70 Q35,75 30,70 Q25,65 30,60" fill="#0047AB" style="animation-delay: 2.5s;"></path>
+        </svg>
+    </div>
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+            <div class="text-2xl font-light">
+                <span class="font-bold">Salute</span> Ora<span class="italic">le</span>
+            </div>
+            <button class="text-3xl">☰</button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 container mx-auto p-4 max-w-md md:max-w-2xl lg:max-w-4xl">
+            <h1 class="text-2xl md:text-3xl text-blue-900 font-bold mb-8">Alcune informazioni preventive alla visita</h1>
+            
+            <div class="space-y-6 md:space-y-8">
+                <!-- Form elements -->
+                <div class="w-full bg-white rounded-full shadow-md p-2">
+                    <input type="text" 
+                           placeholder="Qual è l'ultima volta che è andata dal dentista?" 
+                           class="w-full px-6 py-4 text-gray-500 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-900">
+                </div>
+                
+                <div class="mt-10 md:mt-16">
+                    <button class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-full transition duration-300 ease-in-out pulse-button">
+                        CONTINUA
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

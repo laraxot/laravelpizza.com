@@ -9,8 +9,9 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
 use Modules\Notify\Datas\WhatsAppData;
-use function Safe\json_decode;
 use Spatie\QueueableAction\QueueableAction;
+
+use function Safe\json_decode;
 
 final class SendFacebookWhatsAppAction
 {
@@ -59,7 +60,6 @@ final class SendFacebookWhatsAppAction
      * Execute the action.
      *
      * @param  WhatsAppData  $whatsAppData  I dati del messaggio WhatsApp
-     *
      * @return array<string, mixed> Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio

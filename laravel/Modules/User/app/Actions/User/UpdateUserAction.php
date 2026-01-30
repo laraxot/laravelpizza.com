@@ -58,7 +58,7 @@ class UpdateUserAction
             ]);
 
             $updatedUser = $user->fresh();
-            if (! ($updatedUser instanceof Model)) {
+            if (! $updatedUser instanceof Model) {
                 throw new \Exception('Failed to refresh user model after update');
             }
 

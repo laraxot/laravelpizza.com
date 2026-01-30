@@ -109,7 +109,7 @@ class PasswordExpired extends XotBasePage
         $passwordExpiryDateTime = now()->addDays($pwd->expires_in);
 
         // Verificare che l'utente esistante e che sia un modello Eloquent
-        if (! ($user instanceof Model)) {
+        if (! $user instanceof Model) {
             throw new \InvalidArgumentException('L\'utente deve essere un modello Eloquent con il metodo update');
         }
 
@@ -121,7 +121,7 @@ class PasswordExpired extends XotBasePage
         ]);
 
         // Verificare che l'utente implementi l'interfaccia UserContract prima di passarlo all'evento
-        if (! ($user instanceof UserContract)) {
+        if (! $user instanceof UserContract) {
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
 

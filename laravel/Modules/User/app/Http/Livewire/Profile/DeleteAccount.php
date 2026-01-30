@@ -37,7 +37,7 @@ class DeleteAccount extends Component
         }
 
         // Assicuriamoci che sia del tipo corretto per l'action
-        if (! ($user instanceof UserContract)) {
+        if (! $user instanceof UserContract) {
             $this->dispatch('toast', [
                 'message' => 'Tipo di utente non supportato',
                 'type' => 'error',

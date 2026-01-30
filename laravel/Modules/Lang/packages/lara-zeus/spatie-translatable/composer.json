@@ -1,0 +1,43 @@
+{
+    "name": "lara-zeus/spatie-translatable",
+    "version": "dev-local",
+    "description": "Filament support for `spatie/laravel-translatable`.",
+    "license": "MIT",
+    "homepage": "https://github.com/lara-zeus/spatie-translatable",
+    "support": {
+        "issues": "https://github.com/lara-zeus/spatie-translatable/issues",
+        "source": "https://github.com/lara-zeus/spatie-translatable"
+    },
+    "require": {
+        "php": "^8.1",
+        "ext-intl": "*",
+        "filament/filament": "^4.0|^5.0",
+        "spatie/laravel-translatable": "^6.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "larastan/larastan": "^3.4",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^10.2",
+        "phpstan/extension-installer": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaraZeus\\SpatieTranslatable\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaraZeus\\SpatieTranslatable\\SpatieTranslatableServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "prefer-stable": true
+}

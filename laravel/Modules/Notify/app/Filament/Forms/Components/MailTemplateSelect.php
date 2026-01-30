@@ -27,13 +27,12 @@ class MailTemplateSelect extends Select
     /**
      * Create a new MailTemplateSelect instance.
      *
-     * @param string|null $name Field name (default: 'mail_template_slug')
-     *
-     * @return static
+     * @param  string|null  $name  Field name (default: 'mail_template_slug')
      */
     public static function make(?string $name = null): static
     {
         $name = $name ?? 'mail_template_slug';
+
         return parent::make($name);
     }
 }

@@ -12,10 +12,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use ReflectionClass;
-use function Safe\file;
 use Spatie\QueueableAction\QueueableAction;
 use Symfony\Component\Finder\SplFileInfo as File;
 use Webmozart\Assert\Assert;
+
+use function Safe\file;
 
 class GenerateFormByFileAction
 {
@@ -25,7 +26,6 @@ class GenerateFormByFileAction
      * Genera un form Filament basato su un file di risorsa.
      *
      * @param  File  $file  Il file della risorsa Filament
-     *
      * @return int Numero di input aggiunti
      */
     public function execute(File $file): int

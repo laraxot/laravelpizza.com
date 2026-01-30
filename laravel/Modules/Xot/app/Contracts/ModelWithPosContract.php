@@ -51,6 +51,4 @@ use Spatie\ModelStatus\Status;
  *
  * @mixin \Eloquent
  */
-interface ModelWithPosContract
-{
-}
+interface ModelWithPosContract {}

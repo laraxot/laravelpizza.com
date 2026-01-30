@@ -24,7 +24,6 @@ use Override;
  * @property string|null $updated_by
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- *
  * @property-read ProfileContract|null $creator
  * @property-read Task|null $task
  * @property-read ProfileContract|null $updater

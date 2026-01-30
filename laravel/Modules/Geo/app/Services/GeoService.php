@@ -29,7 +29,7 @@ class GeoService
      */
     public static function getInstance(): self
     {
-        if (! (self::$_instance instanceof GeoService)) {
+        if (! self::$_instance instanceof GeoService) {
             self::$_instance = new self();
         }
 

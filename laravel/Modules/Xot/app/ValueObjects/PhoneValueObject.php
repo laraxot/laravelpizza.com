@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\ValueObjects;
 
 use InvalidArgumentException;
+
 use function Safe\preg_match;
 
 /**
@@ -14,8 +15,7 @@ readonly class PhoneValueObject
 {
     private function __construct(
         private string $phone,
-    ) {
-    }
+    ) {}
 
     public static function fromString(string $phone): self
     {

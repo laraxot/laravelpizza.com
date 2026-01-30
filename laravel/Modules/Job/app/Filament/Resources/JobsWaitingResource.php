@@ -19,7 +19,7 @@ use Override;
 
 class JobsWaitingResource extends XotBaseResource
 {
-    protected static null|string $model = Job::class;
+    protected static ?string $model = Job::class;
 
     protected static bool $shouldRegisterNavigation = true;
 

@@ -21,8 +21,7 @@ class EmailDataEmail extends Mailable
 
     public function __construct(
         public EmailData $email_data,
-    ) {
-    }
+    ) {}
 
     /**
      * Get the message envelope.

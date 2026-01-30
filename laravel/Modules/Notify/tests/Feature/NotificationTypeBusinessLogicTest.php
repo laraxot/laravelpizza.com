@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(\Modules\Notify\Tests\TestCase::class);
+
 use Modules\Notify\Models\NotificationType;
 
 describe('Notification Type Business Logic', function () {

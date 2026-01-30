@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salute Orale - Richieste di prenotazione</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+        <div class="text-3xl font-light">
+            <span class="font-bold">SALUTE</span> ORA<span class="italic">le</span>
+        </div>
+        <button class="text-4xl">
+            ☰
+        </button>
+    </header>
+
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl text-blue-900 font-bold mb-8">Richieste di prenotazione</h1>
+
+        <div class="space-y-4">
+            <!-- Appointment 1 -->
+            <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center border-2 border-gray-300 mr-4">
+                    <span class="text-4xl text-blue-900 font-bold">L</span>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-2xl text-blue-900 font-bold">Nome Cognome</h2>
+                    <p class="text-gray-500">12 Novembre - 16:00</p>
+                </div>
+                <div class="flex space-x-2">
+                    <button class="w-12 h-12 bg-green-100 rounded-md flex items-center justify-center">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                        </svg>
+                    </button>
+                    <button class="w-12 h-12 bg-red-100 rounded-md flex items-center justify-center">
+                        <svg class="w-8 h-8 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Appointment 2 -->
+            <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center border-2 border-gray-300 mr-4">
+                    <span class="text-4xl text-blue-900 font-bold">E</span>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-2xl text-blue-900 font-bold">Nome Cognome</h2>
+                    <p class="text-gray-500">13 Novembre - 14:00</p>
+                </div>
+                <div class="flex space-x-2">
+                    <button class="w-12 h-12 bg-green-100 rounded-md flex items-center justify-center">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                        </svg>
+                    </button>
+                    <button class="w-12 h-12 bg-red-100 rounded-md flex items-center justify-center">
+                        <svg class="w-8 h-8 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Appointment 3 -->
+            <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center border-2 border-gray-300 mr-4">
+                    <span class="text-4xl text-blue-900 font-bold">M</span>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-2xl text-blue-900 font-bold">Nome Cognome</h2>
+                    <p class="text-gray-500">13 Novembre - 17:00</p>
+                </div>
+                <div class="flex space-x-2">
+                    <button class="w-12 h-12 bg-green-100 rounded-md flex items-center justify-center">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                        </svg>
+                    </button>
+                    <button class="w-12 h-12 bg-red-100 rounded-md flex items-center justify-center">
+                        <svg class="w-8 h-8 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Appointment 4 -->
+            <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center border-2 border-gray-300 mr-4">
+                    <span class="text-4xl text-blue-900 font-bold">A</span>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-2xl text-blue-900 font-bold">Nome Cognome</h2>
+                    <p class="text-gray-500">18 Novembre - 18:00</p>
+                </div>
+                <div class="flex space-x-2">
+                    <button class="w-12 h-12 bg-green-100 rounded-md flex items-center justify-center">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                        </svg>
+                    </button>
+                    <button class="w-12 h-12 bg-red-100 rounded-md flex items-center justify-center">
+                        <svg class="w-8 h-8 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 space-y-4">
+            <button class="bg-blue-900 text-white w-full py-4 rounded-full font-bold text-xl">
+                APPUNTAMENTI ACCETTATI
+            </button>
+            <button class="bg-blue-900 text-white w-full py-4 rounded-full font-bold text-xl">
+                APPUNTAMENTI RIFIUTATI
+            </button>
+        </div>
+    </div>
+
+    <!-- Background Animation -->
+    <div class="fixed inset-0 -z-10 pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <radialGradient id="bg-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                    <stop offset="0%" stop-color="#f0f9ff" stop-opacity="0.8" />
+                    <stop offset="100%" stop-color="#e0f2fe" stop-opacity="0.2" />
+                </radialGradient>
+                <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e40af" stop-opacity="0.1" />
+                    <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.3" />
+                </linearGradient>
+            </defs>
+            
+            <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+            
+            <g class="animate-pulse-slow">
+                <path d="M0,50 Q100,100 200,50 T400,50 T600,50 T800,50" stroke="url(#line-gradient)" stroke-width="2" fill="none" />
+                <path d="M0,100 Q100,150 200,100 T400,100 T600,100 T800,100" stroke="url(#line-gradient)" stroke-width="2" fill="none" />
+                <path d="M0,150 Q100,200 200,150 T400,150 T600,150 T800,150" stroke="url(#line-gradient)" stroke-width="2" fill="none" />
+                <path d="M0,200 Q100,250 200,200 T400,200 T600,200 T800,200" stroke="url(#line-gradient)" stroke-width="2" fill="none" />
+            </g>
+        </svg>
+    </div>
+</body>
+</html>

@@ -17,7 +17,6 @@ use Webmozart\Assert\Assert;
  * @property int|null $created_by ID dell'utente che ha creato il record
  * @property int|null $updated_by ID dell'utente che ha aggiornato il record
  * @property int|null $deleted_by ID dell'utente che ha eliminato il record
- *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  * @property-read ProfileContract|null $deleter

@@ -1,0 +1,273 @@
+# Installation Rules
+
+1. First command: composer global require laravel/installer
+2. Second command: cd /var/www/html/<nome progetto> && laravel new laravel
+3. Third command: cd laravel && composer require nwidart/laravel-modules
+4. Fourth command: php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider"
+
+# Important Notes
+- Do NOT use variations like 'laravel new <nome progetto>' or 'laravel new laravel --version=X.Y'
+- The project name MUST be exactly 'laravel'
+- The Laravel project MUST be installed directly in /var/www/html/<nome progetto>/laravel
+- Do NOT create the Laravel project in /var/www/html/<nome progetto>/public_html or any other location
+- All code MUST be strictly typed and robust
+- Follow PSR-12 coding standards
+- Use PHP 8.2+ features including enums and readonly properties
+
+# Directory Structure
+- /var/www/html/<nome progetto>/laravel        # Laravel application (correct location)
+- /var/www/html/<nome progetto>/laravel/Modules # Laravel Modules directory
+- /var/www/html/<nome progetto>/docs           # Documentation
+- /var/www/html/<nome progetto>/.cursor        # Cursor rules
+
+# Efficiency Rules
+- ALWAYS prefer simple system commands for corrections (e.g., use mv instead of reinstalling)
+- If Laravel is installed in the wrong directory, use: mv wrong_path/laravel /var/www/html/<nome progetto>/laravel
+- Document all operations in the implementation diary
+- Reuse existing work whenever possible
+- Choose the most efficient approach to solve problems
+
+# Regole per le Traduzioni
+
+- MAI utilizzare il metodo `->label()` nei componenti Filament
+- Le etichette sono gestite automaticamente dal LangServiceProvider
+- Utilizzare la struttura espansa per i campi nei file di traduzione
+- Seguire la convenzione di naming per le chiavi di traduzione: `modulo::risorsa.fields.campo.label`
+- Verificare sempre che il LangServiceProvider sia registrato correttamente
+
+# Regole per Filament
+
+## XotBaseResource
+- Non definire `navigationIcon` se la classe estende `XotBaseResource`
+- Rimuovere `getRelations()` se restituisce array vuoto
+- Rimuovere `getPages()` se contiene solo route standard
+- `getFormSchema()` deve restituire array associativo con chiavi stringhe
+
+## XotBaseListRecords
+- Rimuovere `Actions()` se restituisce solo `createAction`
+- `getListTableColumns()` deve restituire array associativo con chiavi stringhe
+
+## Esempio
+```php
+// Prima
+class MyResource extends XotBaseResource
+{
+    protected static ?string $navigationIcon = 'heroicon-o-document';
+
+    public static function getRelations(): array
+    {
+        return [];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => Pages\ListRecords::route('/'),
+            'create' => Pages\CreateRecord::route('/create'),
+            'edit' => Pages\EditRecord::route('/{record}/edit'),
+        ];
+    }
+
+    public static function getFormSchema(): array
+    {
+        return [
+            Forms\Components\TextInput::make('title'),
+            Forms\Components\RichEditor::make('content'),
+        ];
+    }
+}
+
+// Dopo
+class MyResource extends XotBaseResource
+{
+    public static function getFormSchema(): array
+    {
+        return [
+            'title' => Forms\Components\TextInput::make('title'),
+            'content' => Forms\Components\RichEditor::make('content'),
+        ];
+    }
+}
+```
+
+# Localizzazione degli URL 
+
+## Regola Fondamentale
+
+Tutti gli URL devono includere il prefisso della lingua come primo segmento del percorso:
+
+```
+/{locale}/{sezione}/{risorsa}
+```
+
+## Implementazione
+
+### 1. Recuperare la Locale Corrente
+
+Usare sempre la funzione `app()->getLocale()` per ottenere la lingua corrente:
+
+```php
+$locale = app()->getLocale();
+```
+
+Non utilizzare valori hardcoded come 'it' o 'en'.
+
+### 2. Generare Link Localizzati
+
+Quando si generano link, includere sempre la locale:
+
+```php
+// CORRETTO
+<a href="{{ url('/' . app()->getLocale() . '/pages/' . $page->slug) }}">{{ $page->title }}</a>
+
+// ERRATO
+<a href="{{ url('/pages/' . $page->slug) }}">{{ $page->title }}</a>
+```
+
+### 3. Nelle Pagine Folio
+
+Nelle pagine Folio, recuperare e passare sempre la locale alla vista:
+
+```php
+render(function (View $view) {
+    $locale = app()->getLocale();
+    // altre operazioni...
+    return $view->with([
+        'data' => $data,
+        'locale' => $locale,
+    ]);
+});
+```
+
+## Errori Comuni
+
+1. **URL senza prefisso lingua**: `/pages/chi-siamo` invece di `/it/pages/chi-siamo`
+2. **URL mal formati**: `it/pages/chi-siamo` (manca lo slash iniziale)
+3. **Link generati senza locale**: `url('/pages/' . $slug)` invece di `url('/' . $locale . '/pages/' . $slug)`
+
+## Esempi Corretti
+
+- `/it/pages/chi-siamo`
+- `/en/services/cardiology`
+- `/it/doctors/rossi-mario`
+
+## Test e Verifica
+
+Quando si testano le route e i link:
+
+1. Verificare sempre che l'URL contenga il prefisso lingua corretto
+2. Controllare che tutti i link nella pagina includano la locale
+3. Testare la navigazione tra pagine in lingue diverse
+
+# Regole per la Gestione dei Contenuti Statici
+
+## Struttura dei Contenuti
+- I contenuti statici sono gestiti in `/laravel/config/local/<nome progetto>/database/content/`
+- Le pagine sono definite in file JSON numerati
+- Ogni pagina ha un file JSON corrispondente nella struttura `pages/{id}.json`
+
+## Analisi dei Contenuti
+- PRIMA di analizzare qualsiasi contenuto, verificare sempre:
+  1. La presenza di file JSON nella cartella content
+  2. La struttura del file JSON corrispondente
+  3. Le relazioni tra i contenuti statici e il codice
+
+## Gestione dei Contenuti
+- I contenuti sono versionati e gestiti tramite file JSON
+- Ogni modifica ai contenuti deve essere tracciata
+- La struttura dei contenuti deve essere mantenuta coerente
+
+## Verifica dei Contenuti
+- Controllare sempre la fonte primaria dei contenuti
+- Verificare la coerenza tra contenuti statici e visualizzazione
+- Documentare eventuali discrepanze
+
+## Pattern di Gestione
+- Laravel gestisce i contenuti statici tramite file JSON
+- I contenuti sono organizzati gerarchicamente
+- Ogni modifica deve rispettare la struttura esistente
+
+## Documentazione
+- Mantenere aggiornata la documentazione dei contenuti
+- Tracciare i cambiamenti nella gestione
+- Verificare la coerenza tra documentazione e implementazione
+
+# Regole per la Gestione dei Contenuti e Documentazione
+
+## Analisi dei Contenuti
+- PRIMA di analizzare qualsiasi contenuto, verificare:
+  1. File di configurazione
+  2. Documentazione correlata
+  3. File di testo e immagini
+  4. Struttura del progetto
+
+## Pattern di Documentazione
+- La documentazione è parte integrante del sistema
+- I file .md possono contenere testo esatto da utilizzare
+- Verificare sempre la documentazione correlata
+
+## Gestione dei Contenuti
+- I contenuti sono gestiti in più punti:
+  1. File di configurazione JSON
+  2. Documentazione Markdown
+  3. File di testo e immagini
+
+## Verifica dei Contenuti
+- Controllare tutte le fonti di informazione
+- Verificare la coerenza tra documentazione e implementazione
+- Documentare eventuali discrepanze
+
+## Documentazione
+- Mantenere aggiornata la documentazione
+- Tracciare le relazioni tra file
+- Verificare la coerenza tra documentazione e implementazione
+
+## Considerazioni Architetturali
+- La struttura riflette la separazione tra codice e contenuti
+- La documentazione è parte integrante del sistema
+- Ogni ambiente può avere la propria configurazione
+
+## Best Practices
+1. **Analisi**
+   - Verificare tutte le fonti di informazione
+   - Considerare la documentazione come parte integrante
+   - Implementare controlli incrociati
+
+2. **Documentazione**
+   - Mantenere aggiornata
+   - Tracciare le relazioni
+   - Verificare la coerenza
+
+3. **Implementazione**
+   - Seguire le best practices
+   - Verificare la coerenza
+   - Documentare le modifiche
+
+# Regole per la Gestione della Homepage e dei Temi
+
+## Struttura della Homepage
+
+- La homepage deve essere gestita attraverso il sistema di temi
+- Non modificare direttamente i file nella directory public_html
+- Utilizzare sempre il sistema di temi per personalizzazioni
+
+## Sistema di Temi
+
+- Ogni tema deve essere contenuto nella directory laravel/Themes/
+- I temi devono seguire la struttura standard
+- Non modificare i temi di sistema senza documentazione
+- Mantenere la compatibilità con il sistema di temi
+
+## Best Practices
+
+- Documentare tutte le modifiche ai temi
+- Testare su diversi dispositivi e browser
+- Seguire le convenzioni di naming
+- Mantenere il codice pulito e organizzato
+- Utilizzare componenti riutilizzabili
+
+## Sicurezza
+
+- Non includere dati sensibili nei temi
+- Validare tutti gli input
+- Sanitizzare l'output

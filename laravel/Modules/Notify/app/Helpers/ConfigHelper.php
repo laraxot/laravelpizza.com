@@ -17,7 +17,6 @@ class ConfigHelper
      * Sostituisce le variabili template nei dati di configurazione.
      *
      * @param  array<string, mixed>  $data
-     *
      * @return array<string, mixed>
      */
     public static function replaceTemplateVariables(array $data): array
@@ -133,7 +132,6 @@ class ConfigHelper
      *
      * @param  array<string, mixed>  $data
      * @param  array<string, mixed>  $variables
-     *
      * @return array<string, mixed>
      */
     private static function recursiveReplace(array $data, array $variables): array

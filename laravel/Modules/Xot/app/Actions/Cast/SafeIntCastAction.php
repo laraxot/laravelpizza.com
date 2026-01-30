@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Cast;
 
-use function Safe\preg_match;
 use Spatie\QueueableAction\QueueableAction;
+
+use function Safe\preg_match;
 
 /**
  * Action per convertire in modo sicuro un valore mixed in int.
@@ -27,7 +28,6 @@ class SafeIntCastAction
      *
      * @param  mixed  $value  Il valore da convertire
      * @param  int|null  $default  Valore di default se la conversione fallisce (default: 0)
-     *
      * @return int Il valore convertito in int
      */
     public function execute(mixed $value, ?int $default = 0): int
@@ -76,7 +76,6 @@ class SafeIntCastAction
      *
      * @param  mixed  $value  Il valore da convertire
      * @param  int|null  $default  Valore di default se la conversione fallisce (default: 0)
-     *
      * @return int Il valore convertito in int
      */
     public static function cast(mixed $value, ?int $default = 0): int
@@ -91,7 +90,6 @@ class SafeIntCastAction
      * @param  int  $min  Valore minimo consentito
      * @param  int  $max  Valore massimo consentito
      * @param  int|null  $default  Valore di default se la conversione fallisce
-     *
      * @return int Il valore convertito e validato
      */
     public function executeWithRange(mixed $value, int $min, int $max, ?int $default = null): int
@@ -109,7 +107,6 @@ class SafeIntCastAction
      * @param  int  $min  Valore minimo consentito
      * @param  int  $max  Valore massimo consentito
      * @param  int|null  $default  Valore di default se la conversione fallisce
-     *
      * @return int Il valore convertito e validato
      */
     public static function castWithRange(mixed $value, int $min, int $max, ?int $default = null): int
@@ -122,7 +119,6 @@ class SafeIntCastAction
      *
      * @param  mixed  $value  Il valore da convertire
      * @param  int|null  $default  Valore di default se la conversione fallisce (default: 1)
-     *
      * @return int Il valore convertito come ID positivo
      */
     public function executeAsId(mixed $value, ?int $default = 1): int
@@ -137,7 +133,6 @@ class SafeIntCastAction
      *
      * @param  mixed  $value  Il valore da convertire
      * @param  int|null  $default  Valore di default se la conversione fallisce (default: 1)
-     *
      * @return int Il valore convertito come ID positivo
      */
     public static function castAsId(mixed $value, ?int $default = 1): int
@@ -150,7 +145,6 @@ class SafeIntCastAction
      *
      * @param  string  $value  La stringa da convertire
      * @param  int|null  $default  Valore di default
-     *
      * @return int Il valore convertito
      */
     private function parseStringToInt(string $value, ?int $default = 0): int

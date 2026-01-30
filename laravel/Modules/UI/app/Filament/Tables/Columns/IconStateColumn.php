@@ -116,7 +116,7 @@ class IconStateColumn extends IconColumn
                     /** @var Model&HasStatesContract $record */
                     $name = $this->getName();
                     $state = $record->getAttribute($name);
-                    if (! ($state instanceof State)) {
+                    if (! $state instanceof State) {
                         return [];
                     }
                     /** @var string $stateName */
@@ -145,7 +145,7 @@ class IconStateColumn extends IconColumn
 
                     /** @var Model&HasStatesContract $record */
                     $currentState = $record->getAttribute($this->getName());
-                    if (! ($currentState instanceof State)) {
+                    if (! $currentState instanceof State) {
                         throw new \Exception('Current state is not a valid State instance');
                     }
 

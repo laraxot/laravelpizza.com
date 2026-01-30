@@ -6,6 +6,7 @@ namespace Modules\Geo\Actions;
 
 use Illuminate\Support\Collection;
 use Modules\Geo\Actions\GoogleMaps\CalculateDistanceMatrixAction;
+use Modules\Geo\Contracts\CalculateDistanceActionContract as DistanceActionContract;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\DistanceCalculationException;
 
@@ -19,7 +20,7 @@ use Modules\Geo\Exceptions\DistanceCalculationException;
  *
  * @see https://developers.google.com/maps/documentation/distance-matrix
  */
-readonly class CalculateDistanceAction
+class CalculateDistanceAction implements DistanceActionContract
 {
     /**
      * @param CalculateDistanceMatrixAction $distanceMatrixAction Servizio per il calcolo delle distanze

@@ -6,6 +6,4 @@ namespace Modules\Notify\Models\Policies;
 
 use Modules\User\Models\Policies\UserBasePolicy;
 
-abstract class NotifyBasePolicy extends UserBasePolicy
-{
-}
+abstract class NotifyBasePolicy extends UserBasePolicy {}

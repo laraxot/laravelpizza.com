@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizzatore Immagini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .img-container {
+            max-height: 70vh;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="container mx-auto">
+        <h1 class="text-2xl font-bold mb-4">Visualizzatore Immagini</h1>
+        
+        <div class="mb-4">
+            <select id="imageSelector" class="p-2 border rounded w-full md:w-64">
+                <option value="">Seleziona un'immagine...</option>
+                <script>
+                    // Generazione dinamica delle opzioni
+                    for (let i = 0; i <= 31; i++) {
+                        document.write(`<option value="${i}.png">${i}.png</option>`);
+                    }
+                </script>
+            </select>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <div class="img-container mb-4 border rounded p-2">
+                <img id="selectedImage" src="" alt="Seleziona un'immagine" class="mx-auto">
+            </div>
+            <div>
+                <p>Nome file: <span id="filename" class="font-mono">-</span></p>
+                <p>Dimensioni: <span id="dimensions" class="font-mono">-</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const imageSelector = document.getElementById('imageSelector');
+        const selectedImage = document.getElementById('selectedImage');
+        const filenameEl = document.getElementById('filename');
+        const dimensionsEl = document.getElementById('dimensions');
+        
+        imageSelector.addEventListener('change', function() {
+            if (this.value) {
+                selectedImage.src = this.value;
+                filenameEl.textContent = this.value;
+                
+                // Aggiorna le dimensioni quando l'immagine è caricata
+                selectedImage.onload = function() {
+                    dimensionsEl.textContent = `${this.naturalWidth} x ${this.naturalHeight}px`;
+                };
+            } else {
+                selectedImage.src = '';
+                filenameEl.textContent = '-';
+                dimensionsEl.textContent = '-';
+            }
+        });
+    </script>
+</body>
+</html>

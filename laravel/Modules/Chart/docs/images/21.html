@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salute Orale - Appuntamenti Rifiutati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#004481',
+                        'light-gray': '#f5f7fa',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="bg-light-gray min-h-screen">
+    <!-- Header -->
+    <header class="bg-brand-blue text-white p-4 flex justify-between items-center">
+        <div class="text-3xl font-light">
+            <span class="mr-1">SALUTE</span>
+            <span class="font-normal">ORA<span class="italic">le</span></span>
+        </div>
+        <button class="text-3xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl text-brand-blue font-bold mb-6">Appuntamenti rifiutati</h1>
+
+        <!-- Appointment Cards -->
+        <div class="space-y-4">
+            <!-- Appointment 1 -->
+            <div class="bg-white rounded-xl shadow p-4 flex items-center animate-fade-in animate-delay-1">
+                <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mr-4">
+                    <span class="text-4xl text-gray-400">L</span>
+                </div>
+                <div>
+                    <h2 class="text-xl text-gray-500">Nome Cognome</h2>
+                    <p class="text-gray-400">12 Novembre - 15:30</p>
+                </div>
+            </div>
+
+            <!-- Appointment 2 -->
+            <div class="bg-white rounded-xl shadow p-4 flex items-center animate-fade-in animate-delay-2">
+                <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mr-4">
+                    <span class="text-4xl text-gray-400">E</span>
+                </div>
+                <div>
+                    <h2 class="text-xl text-gray-500">Nome Cognome</h2>
+                    <p class="text-gray-400">13 Novembre - 14:00</p>
+                </div>
+            </div>
+
+            <!-- Appointment 3 -->
+            <div class="bg-white rounded-xl shadow p-4 flex items-center animate-fade-in animate-delay-3">
+                <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mr-4">
+                    <span class="text-4xl text-gray-400">M</span>
+                </div>
+                <div>
+                    <h2 class="text-xl text-gray-500">Nome Cognome</h2>
+                    <p class="text-gray-400">13 Novembre - 17:30</p>
+                </div>
+            </div>
+
+            <!-- Appointment 4 -->
+            <div class="bg-white rounded-xl shadow p-4 flex items-center animate-fade-in animate-delay-4">
+                <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mr-4">
+                    <span class="text-4xl text-gray-400">A</span>
+                </div>
+                <div>
+                    <h2 class="text-xl text-gray-500">Nome Cognome</h2>
+                    <p class="text-gray-400">18 Novembre - 18:00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="mt-8 space-y-4">
+            <button class="bg-brand-blue text-white rounded-full py-4 px-6 w-full font-bold transform hover:scale-105 transition-transform">
+                RICHIESTE DI PRENOTAZIONE
+            </button>
+            <button class="bg-brand-blue text-white rounded-full py-4 px-6 w-full font-bold transform hover:scale-105 transition-transform">
+                APPUNTAMENTI ACCETTATI
+            </button>
+        </div>
+    </main>
+
+    <!-- SVG Background Animation -->
+    <div class="fixed bottom-0 left-0 w-full h-24 z-[-1] opacity-10">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full">
+            <path fill="#004481" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,128C384,128,480,160,576,165.3C672,171,768,149,864,154.7C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                <animate attributeName="d" 
+                    dur="10s"
+                    repeatCount="indefinite"
+                    values="
+                        M0,192L48,176C96,160,192,128,288,128C384,128,480,160,576,165.3C672,171,768,149,864,154.7C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                        M0,160L48,149.3C96,139,192,117,288,122.7C384,128,480,160,576,176C672,192,768,192,864,197.3C960,203,1056,213,1152,202.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                        M0,192L48,176C96,160,192,128,288,128C384,128,480,160,576,165.3C672,171,768,149,864,154.7C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                />
+            </path>
+        </svg>
+    </div>
+
+    <script>
+        // Animate elements when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.animate-fade-in');
+            elements.forEach(el => {
+                el.style.opacity = '0';
+            });
+            
+            setTimeout(() => {
+                elements.forEach(el => {
+                    el.style.opacity = '1';
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>

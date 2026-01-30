@@ -6,65 +6,31 @@ namespace Modules\Geo\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 use Modules\Xot\Tests\CreatesApplication;
 
 /**
  * Base test case for Geo module.
  *
- * Uses SQLite shared memory database following Activity/TestCase.php pattern.
+ * Uses MySQL from .env.testing (NOT SQLite).
+ * Database names must have "_test" suffix (es: quaeris_data_test).
+ * The .env.testing file is the single source of truth - NEVER override database configuration.
  */
 abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
     use DatabaseTransactions;
 
+    protected static bool $migrated = false;
+
     protected function setUp(): void
     {
         parent::setUp();
 
-        $dbName = 'file:memdb_geo_'.Str::random(10).'?mode=memory&cache=shared';
+        $this->app['config']->set('cache.default', 'array');
 
-        $connections = [
-            'sqlite',
-            'mysql',
-            'mariadb',
-            'pgsql',
-            'activity',
-            'cms',
-            'gdpr',
-            'geo',
-            'job',
-            'lang',
-            'media',
-            'meetup',
-            'notify',
-            'seo',
-            'tenant',
-            'ui',
-            'user',
-            'xot',
-        ];
-
-        foreach ($connections as $conn) {
-            $this->app['config']->set("database.connections.{$conn}.driver", 'sqlite');
-            $this->app['config']->set("database.connections.{$conn}.database", $dbName);
-        }
-
-        foreach ($connections as $conn) {
-            DB::purge($conn);
-        }
-
-        foreach ($connections as $conn) {
-            try {
-                $pdo = DB::connection($conn)->getPdo();
-                if ($pdo instanceof \PDO && method_exists($pdo, 'sqliteCreateFunction')) {
-                    $pdo->sqliteCreateFunction('md5', static fn (?string $value): ?string => null === $value ? null : md5($value));
-                    $pdo->sqliteCreateFunction('unhex', static fn (?string $value): ?string => $value);
-                }
-            } catch (\Throwable) {
-            }
+        if (! self::$migrated) {
+            $this->artisan('migrate', ['--force' => true]);
+            self::$migrated = true;
         }
 
         $this->artisan('module:migrate', ['module' => 'Xot', '--force' => true]);

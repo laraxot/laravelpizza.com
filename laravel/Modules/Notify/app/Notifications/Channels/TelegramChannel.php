@@ -14,7 +14,6 @@ class TelegramChannel
      * Invia la notifica tramite Telegram.
      *
      * @param  mixed  $notifiable
-     *
      * @return void
      */
     public function send($notifiable, Notification $notification)

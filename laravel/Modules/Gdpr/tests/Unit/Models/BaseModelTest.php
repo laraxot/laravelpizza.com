@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Gdpr\Tests\Unit\Models;
+uses(Modules\Gdpr\Tests\TestCase::class);
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\BaseModel;

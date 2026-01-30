@@ -83,6 +83,7 @@ class SmtpData extends Data
         } catch (Exception $e) {
             throw new Exception('Errore durante la connessione SMTP: '.$e->getMessage());
         }
+
         return new Mailer($transport);
     }
 

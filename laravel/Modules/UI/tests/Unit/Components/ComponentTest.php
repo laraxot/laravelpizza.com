@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(Modules\UI\Tests\TestCase::class);
+
 use Illuminate\View\Component;
 
 test('ui components can be rendered', function () {

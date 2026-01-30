@@ -98,7 +98,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
      * @return array<int|string, Column|LayoutComponent>
      */
     #[Override]
-    public function getTableColumns(): array
+    protected function getTableColumns(): array
     {
         $index = Arr::get($this->getResource()::getPages(), 'index');
         if (! $index) {
@@ -157,6 +157,14 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     }
 
     // */
+    /**
+     * Get table actions.
+     *
+     * CRITICO: Deve essere PUBLIC perché Filament\Tables\Concerns\InteractsWithTable
+     * richiede che questo metodo sia pubblico.
+     *
+     * @return array<string, \Filament\Actions\Action>
+     */
     public function getTableActions(): array
     {
         $actions = [];
@@ -184,6 +192,13 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         return $actions;
     }
 
+    /**
+     * Get table bulk actions.
+     *
+     * CRITICO: Deve essere PUBLIC per Filament InteractsWithTable.
+     *
+     * @return array<string, \Filament\Actions\BulkAction>
+     */
     public function getTableBulkActions(): array
     {
         $actions = [];
@@ -199,6 +214,13 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         return $actions;
     }
 
+    /**
+     * Get table header actions.
+     *
+     * CRITICO: Deve essere PUBLIC per Filament InteractsWithTable.
+     *
+     * @return array<string, \Filament\Actions\Action>
+     */
     public function getTableHeaderActions(): array
     {
         $actions = [];

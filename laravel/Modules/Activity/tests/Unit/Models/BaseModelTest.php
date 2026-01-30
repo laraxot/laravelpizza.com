@@ -2,52 +2,29 @@
 
 declare(strict_types=1);
 
-namespace Modules\Activity\Tests\Unit\Models;
+uses(\Modules\Activity\Tests\TestCase::class);
 
-use Illuminate\Database\Eloquent\Model;
 use Modules\Activity\Models\BaseModel;
-use Modules\Activity\Tests\TestCase;
 
-uses(TestCase::class);
-
-/**
- * Helper that returns an anonymous BaseModel configured for assertions.
- */
-function makeTestActivityModel(): BaseModel
+// Test per BaseModel - usiamo una classe concreta solo per test
+class TestBaseModel extends BaseModel
 {
-    return new class extends BaseModel
-    {
-        protected $table = 'test_activity_table';
-    };
+    protected $table = 'test_models';
+
+    protected $fillable = ['name'];
 }
 
-test('base model extends eloquent model', function (): void {
-    $model = makeTestActivityModel();
+test('BaseModel has correct connection', function () {
+    $model = new TestBaseModel;
+    $reflection = new \ReflectionClass($model);
+    $property = $reflection->getProperty('connection');
+    $property->setAccessible(true);
 
-    expect($model)->toBeInstanceOf(Model::class);
+    expect($property->getValue($model))->toBe('activity');
 });
 
-test('base model has correct table name', function (): void {
-    $model = makeTestActivityModel();
+test('BaseModel extends XotBaseModel', function () {
+    $model = new TestBaseModel;
 
-    expect($model->getTable())->toBe('test_activity_table');
-});
-
-test('base model can be instantiated', function (): void {
-    $model = makeTestActivityModel();
-
-    expect($model)->toBeInstanceOf(BaseModel::class);
-});
-
-test('base model has proper inheritance chain', function (): void {
-    $model = makeTestActivityModel();
-
-    expect($model)->toBeInstanceOf(BaseModel::class);
-    expect($model)->toBeInstanceOf(Model::class);
-});
-
-test('base model has timestamps enabled', function (): void {
-    $model = makeTestActivityModel();
-
-    expect($model->usesTimestamps())->toBeTrue();
+    expect($model)->toBeInstanceOf(\Modules\Xot\Models\XotBaseModel::class);
 });

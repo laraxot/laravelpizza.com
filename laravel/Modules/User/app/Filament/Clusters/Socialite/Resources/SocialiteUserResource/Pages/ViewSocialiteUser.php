@@ -11,7 +11,7 @@ use Filament\Schemas\Components\Section;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Modules\User\Filament\Clusters\Socialite\Resources\SocialiteUserResource;
-use Modules\User\Filament\Clusters\Socialite\Resources\UserResource;
+use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Models\SocialiteUser;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 
@@ -32,13 +32,13 @@ class ViewSocialiteUser extends XotBaseViewRecord
                         ->schema([
                             'user_name' => TextEntry::make('user.name')
                                 ->url(function (mixed $state, ?SocialiteUser $record): ?string {
-                                    if (null === $record) {
+                                    if ($record === null) {
                                         return null;
                                     }
 
                                     $user = $record->user;
                                     if (($user instanceof Model) && $user->exists) {
-                                        return UserResource::getUrl('view', ['record' => $user]);
+                                        return (string) UserResource::getUrl('view', ['record' => $user]);
                                     }
 
                                     return null;
@@ -64,7 +64,7 @@ class ViewSocialiteUser extends XotBaseViewRecord
                                 ->copyable()
                                 ->copyMessage('Email copied'),
                             'avatar' => TextEntry::make('avatar')
-                                ->url(fn ($state) => $state)
+                                ->url(fn (mixed $state): ?string => is_string($state) && $state !== '' ? $state : null)
                                 ->openUrlInNewTab(),
                         ]),
                 ])->columns(1),

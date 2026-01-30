@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(Modules\UI\Tests\TestCase::class);
+
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\View;
 use Modules\UI\Models\Asset;

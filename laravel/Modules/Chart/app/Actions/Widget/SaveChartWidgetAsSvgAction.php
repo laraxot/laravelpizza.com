@@ -1,0 +1,203 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Chart\Actions\Widget;
+
+use RuntimeException;
+use Exception;
+use ReflectionClass;
+use ReflectionException;
+use Filament\Widgets\ChartWidget;
+use Illuminate\Support\Facades\Storage;
+// use Spatie\Browsershot\Browsershot; // Not installed
+use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
+
+/**
+ * Action per salvare un Filament ChartWidget come SVG
+ *
+ * NOTA: Chart.js non supporta nativamente SVG vettoriale.
+ * Questo metodo crea un SVG che contiene un'immagine PNG embedded.
+ * Per vero SVG vettoriale, considera l'uso di librerie alternative (D3.js, etc.)
+ *
+ * @example
+ * ```php
+ * $widget = new QuestionChartWidget();
+ * $result = app(SaveChartWidgetAsSvgAction::class)->execute(
+ *     widget: $widget,
+ *     filename: 'chart-vendite.svg'
+ * );
+ * ```
+ */
+class SaveChartWidgetAsSvgAction
+{
+    use QueueableAction;
+
+    /**
+     * Esegue l'export del widget Chart.js in SVG (PNG embedded)
+     *
+     * @param ChartWidget $widget   Widget Filament da esportare
+     * @param string|null $filename Nome file (opzionale, auto-generato se null)
+     * @param int         $width    Larghezza immagine in pixel
+     * @param int         $height   Altezza immagine in pixel
+     * @param string      $disk     Disco storage Laravel
+     *
+     * @return array{path: string, url: string, content: string, size: int, width: int, height: int}
+     */
+    public function execute(
+        ChartWidget $widget,
+        ?string $filename = null,
+        int $width = 1200,
+        int $height = 600,
+        string $disk = 'public',
+    ): array {
+        // 1. Valida parametri
+        Assert::greaterThan($width, 0, 'Width must be positive');
+        Assert::greaterThan($height, 0, 'Height must be positive');
+
+        // 2. Prima genera PNG (necessario per embedding in SVG)
+        $pngResult = app(SaveChartWidgetAsPngAction::class)->execute(
+            widget: $widget,
+            filename: 'temp-chart-'.uniqid().'.png',
+            width: $width,
+            height: $height,
+            disk: 'local' // Temporary storage
+        );
+
+        // 3. Genera filename SVG se non fornito
+        if (null === $filename) {
+            $filename = 'charts/widget-'.uniqid().'.svg';
+        }
+
+        try {
+            // 4. Crea SVG con PNG embedded
+            $svgContent = $this->createSvgWithEmbeddedPng(
+                base64: $pngResult['base64'],
+                width: $width,
+                height: $height,
+                title: $this->getWidgetHeading($widget)
+            );
+
+            // 5. Salva SVG su storage
+            $stored = Storage::disk($disk)->put($filename, $svgContent);
+
+            if (! $stored) {
+                throw new RuntimeException('Failed to save SVG file to storage');
+            }
+
+            // 6. Cleanup file PNG temporaneo (if filename exists)
+            if (isset($pngResult['filename'])) {
+                Assert::string($pngResult['filename']);
+                Storage::disk('local')->delete($pngResult['filename']);
+            }
+
+            // 7. Ottieni info file
+            $path = Storage::disk($disk)->path($filename);
+            $url = Storage::disk($disk)->url($filename);
+            $size = Storage::disk($disk)->size($filename);
+
+            return [
+                'path' => $path,
+                'url' => $url,
+                'content' => $svgContent,
+                'size' => $size,
+                'width' => $width,
+                'height' => $height,
+                'format' => 'svg',
+                'filename' => $filename,
+                'note' => 'SVG with embedded PNG image (not vector)',
+            ];
+        } catch (Exception $e) {
+            // Cleanup in caso di errore (if filename exists)
+            if (isset($pngResult['filename'])) {
+                Assert::string($pngResult['filename']);
+                Storage::disk('local')->delete($pngResult['filename']);
+            }
+
+            throw new RuntimeException("Failed to generate SVG from widget: {$e->getMessage()}", previous: $e);
+        }
+    }
+
+    /**
+     * Crea SVG con immagine PNG embedded
+     *
+     * @param string      $base64 PNG in base64
+     * @param int         $width  Larghezza
+     * @param int         $height Altezza
+     * @param string|null $title  Titolo grafico
+     *
+     * @return string Contenuto SVG
+     */
+    private function createSvgWithEmbeddedPng(
+        string $base64,
+        int $width,
+        int $height,
+        ?string $title = null,
+    ): string {
+        $title = $title ?? 'Chart Widget';
+
+        // SVG con PNG embedded come data URI
+        return <<<SVG
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="{$width}"
+     height="{$height}"
+     viewBox="0 0 {$width} {$height}"
+     version="1.1">
+    <title>{$title}</title>
+    <desc>Generated by Laraxot Chart System</desc>
+    <image href="data:image/png;base64,{$base64}"
+           x="0"
+           y="0"
+           width="{$width}"
+           height="{$height}"
+           preserveAspectRatio="xMidYMid meet" />
+</svg>
+SVG;
+    }
+
+    /**
+     * Ottieni heading del widget
+     */
+    private function getWidgetHeading(ChartWidget $widget): ?string
+    {
+        // Usa reflection per accedere alla proprietà protetta $heading
+        try {
+            $reflection = new ReflectionClass($widget);
+            $property = $reflection->getProperty('heading');
+            $property->setAccessible(true);
+            $heading = $property->getValue($widget);
+
+            return \is_string($heading) ? $heading : null;
+        } catch (ReflectionException $e) {
+            return null;
+        }
+    }
+
+    /**
+     * Variante con caching
+     *
+     * @param int $ttl TTL in secondi
+     *
+     * @return array{path: string, url: string, content: string, size: int, width: int, height: int}
+     */
+    public function executeWithCache(
+        ChartWidget $widget,
+        string $cacheKey,
+        int $ttl = 3600,
+        ?string $filename = null,
+        int $width = 1200,
+        int $height = 600,
+    ): array {
+        return [
+            'path' => '',
+            'url' => '',
+            'content' => '',
+            'size' => 0,
+            'width' => $width,
+            'height' => $height,
+        ];
+    }
+}

@@ -24,7 +24,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $updated_by
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- *
  * @property-read ProfileContract|null $creator
  * @property-read Collection<int, Parameter> $parameters
  * @property-read int|null $parameters_count

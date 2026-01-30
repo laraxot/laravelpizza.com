@@ -120,3 +120,55 @@ public function store(Request $request, CreateUserAction $action)
     $action->onQueue('users')->execute($userData);
 }
 ```
+
+## Caso Speciale: Filament Widgets
+
+Per i Filament Widgets (specialmente Chart Widgets) con dati demo, **NON usare né Services né Actions**.
+
+### Pattern Self-Contained per Widgets
+
+I widget devono essere completamente autonomi:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Quaeris\Filament\Widgets;
+
+use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
+
+class SimpleChartWidget extends XotBaseChartWidget
+{
+    // Dati come costanti di classe (non in Service)
+    private const DEMO_DATA = [1250, 1380, 1520, 1680];
+    private const LABELS = ['Gen', 'Feb', 'Mar', 'Apr'];
+
+    protected function getData(): array
+    {
+        return [
+            'datasets' => [['data' => self::DEMO_DATA]],
+            'labels' => self::LABELS,
+        ];
+    }
+
+    // Logica helper come metodo privato
+    private function calculateGrowth(float $current, float $previous): float
+    {
+        return $previous > 0 ? (($current - $previous) / $previous) * 100 : 0.0;
+    }
+}
+```
+
+### Perché Self-Contained per Widget?
+
+1. **No costruttori custom** → Evita problemi di hydration Livewire
+2. **Dati immutabili** → Costanti garantiscono coerenza
+3. **Un file, una responsabilità** → Facile da mantenere e testare
+4. **Nessuna dipendenza esterna** → Zero rischi di autowiring
+
+### Riferimenti
+
+- [Chart Widget Best Practices (Quaeris)](../../../Quaeris/docs/chart-widget-best-practices.md)
+- [Critical No Services Rule](../critical-no-services-rule.md)
+```

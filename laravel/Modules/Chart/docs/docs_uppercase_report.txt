@@ -1,0 +1,320 @@
+# Uppercase Naming Violations Report
+Generated: Wed Jul  9 17:02:03 CEST 2025
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs
+Found 133 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs/filament
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs/filament/errors
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs/filament/errors/static-instance-method-incompatibility.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs/filament/errors/label-usage-error.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs/roadmap.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs/event_sourcing.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs/readme.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs/structure.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs/event-sourcing-examples.md
+- ... and 123 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs
+Found 59 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs/roadmap.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs/ci.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs/git-conflicts.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs/module-documentation-standards.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs/structure.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs/.env.example
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs/errori.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs/installazione.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs/bottlenecks.md
+- ... and 49 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs
+Found 9 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs/config.php.stub
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs/source
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs/source/_nav
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs/source/_nav/menu-tree.blade.php.stub
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs/source/_nav/menu-item-tree.blade.php.stub
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs/source/_layouts
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs/source/_layouts/master.blade.php.stub
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs/package.json.stub
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs
+Found 300 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs/leggi-ux.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs/frontoffice.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs/standard_ui_components.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs/utilizzo-modelli-user-in-<nome progetto>.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs/filament
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs/filament/componenti-blade.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs/roadmap.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs/filament_forms.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs/multi-step-forms.md
+- ... and 290 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs
+Found 79 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs/module_gdpr.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs/roadmap.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs/readme.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs/packages.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs/testing.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs/structure.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs/cloudflare.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs/bottlenecks.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs/implementation_guide.md
+- ... and 69 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs
+Found 109 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs/place-address-schemaorg.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs/filament
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs/filament/address-resource.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs/squire-integration.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs/address-model-italian.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs/comune-sushi-conversion.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs/databases.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs/laravel_packages.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs/unified-comune-model-analysis.md
+- ... and 99 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs
+Found 97 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/module_job.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/roadmap.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/tips.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/phpstan_filament_fixes.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/packages.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/artisan.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/structure.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/bottlenecks_detailed.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/phpstan
+- ... and 87 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs
+Found 11 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs/custom-404-page
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs/custom-404-page/index.html
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs/customizing-your-site
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs/customizing-your-site/index.html
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs/navigation
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs/navigation/index.html
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs/getting-started
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs/getting-started/index.html
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs/algolia-docsearch
+- ... and 1 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs
+Found 126 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs/module_lang.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs/filament
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs/filament/langbasecreaterecord.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs/roadmap.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs/readme.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs/packages.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs/traduzioni-navigation.mdc
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs/fixes
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs/fixes/lang-service-helper-text-fix.md
+- ... and 116 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs
+Found 96 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs/phpstan_level10_fixes_root_symlink.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs/roadmap_root_symlink.md~83f472a (.)
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs/filament
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs/filament/relation-managers
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs/filament/relation-managers/media-relation-manager.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs/roadmap.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs/xml_to_srt.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs/packages.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs/filament_resource_conflict_resolution.md
+- ... and 86 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs
+Found 364 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs/inheritance_conventions.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs/best-practices.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs/service-provider-xotbase.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs/tailwind_forms.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs/whatsapp_provider_architecture.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs/error-mailer.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs/json_migration_error.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs/rules.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs/phpstan_level10_fixes_root_symlink.md
+- ... and 354 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs
+Found 72 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs/provider-philosophy.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs/filament
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs/filament/best-practices.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs/filament/dashboard-specification.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs/filament/structure.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs/filament/admin-panel-specification.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs/filament/filament-dashboard-issues.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs/filament/dashboard-conventions.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs/filament/widgets.md
+- ... and 62 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs
+Found 423 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs/multi-tenant-calendar.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs/factories
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs/factories/factory-ecosystem-implementation.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs/factories/patient-doctor-admin-factories-analysis.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs/factories/userfactory-improvements-analysis.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs/factories/userfactory-implementation-final.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs/factories/userfactory-implementation-guide.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs/factories/userfactory-advanced-improvements-analysis.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs/factories/userfactory_implementation_completed.md
+- ... and 413 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs
+Found 76 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs/it
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs/it/xra.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs/it/phpunit.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs/it/getting-started.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs/it/custom-404-page.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs/it/config
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs/it/config/xra.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs/it/config/activitylog.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs/it/config/metatag.md
+- ... and 66 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs
+Found 204 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs/best-practices.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs/vscode-php-setup.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs/advanced-form-components.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs/module_ui.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs/filament
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs/filament/label-translation-system.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs/filament/best-practices.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs/filament/wizard-best-practices.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs/filament/wizard-step-naming.md
+- ... and 194 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs
+Found 246 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs/logout_implementation_error.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs/actions.mdc
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs/filament
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs/filament/teams_relation_manager.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs/filament/filament_table_columns.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs/filament/widgets-responsive-layout.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs/filament/errors
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs/filament/errors/static-instance-method-incompatibility.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs/filament/widgets
+- ... and 236 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/resources/views/docs
+Found 6 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/resources/views/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/resources/views/docs/blocks.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/resources/views/docs/folio-pages.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/resources/views/docs/installation.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/resources/views/docs/folio.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/resources/views/docs/links.md
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs
+Found 613 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/best-practices.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/custom-relation.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/documentation.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/directory-structure-guide.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/filament_widget_regole.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/ci
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/ci/phpcheckstyle.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/ci/sonarqube.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/ci/psalm.md
+- ... and 603 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/roadmap/docs
+Found 2 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/roadmap/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/roadmap/docs/status.md
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs
+Found 81 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs
+- /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs/best-practices.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs/theme-structure.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs/pages.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs/roadmap.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs/build.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs/root-link.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs/blocks.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs/deployment.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs/testing.md
+- ... and 71 more items
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/Themes/Two/docs
+Found 1 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/Themes/Two/docs
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/vendor/defuse/php-encryption/docs
+Found 10 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/defuse/php-encryption/docs/FAQ.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/defuse/php-encryption/docs/classes/Crypto.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/defuse/php-encryption/docs/classes/Key.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/defuse/php-encryption/docs/classes/File.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/defuse/php-encryption/docs/classes/KeyProtectedByPassword.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/defuse/php-encryption/docs/InternalDeveloperDocs.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/defuse/php-encryption/docs/CryptoDetails.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/defuse/php-encryption/docs/InstallingAndVerifying.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/defuse/php-encryption/docs/UpgradingFromV1.2.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/defuse/php-encryption/docs/Tutorial.md
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/vendor/mockery/mockery/docs
+Found 1 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/mockery/mockery/docs/Makefile
+
+## /var/www/html/_bases/base_<nome progetto>/laravel/vendor/psr/http-message/docs
+Found 2 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/psr/http-message/docs/PSR7-Usage.md
+- /var/www/html/_bases/base_<nome progetto>/laravel/vendor/psr/http-message/docs/PSR7-Interfaces.md
+
+## /var/www/html/_bases/base_<nome progetto>/laravel_bak/docs
+Found 2 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/docs/TESTING.md
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/docs/TESTING_FRAMEWORK_GUIDELINES.md
+
+## /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/defuse/php-encryption/docs
+Found 10 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/defuse/php-encryption/docs/FAQ.md
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/defuse/php-encryption/docs/classes/Crypto.md
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/defuse/php-encryption/docs/classes/Key.md
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/defuse/php-encryption/docs/classes/File.md
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/defuse/php-encryption/docs/classes/KeyProtectedByPassword.md
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/defuse/php-encryption/docs/InternalDeveloperDocs.md
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/defuse/php-encryption/docs/CryptoDetails.md
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/defuse/php-encryption/docs/InstallingAndVerifying.md
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/defuse/php-encryption/docs/UpgradingFromV1.2.md
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/defuse/php-encryption/docs/Tutorial.md
+
+## /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/mockery/mockery/docs
+Found 1 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/mockery/mockery/docs/Makefile
+
+## /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/psr/http-message/docs
+Found 2 items with uppercase letters
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/psr/http-message/docs/PSR7-Usage.md
+- /var/www/html/_bases/base_<nome progetto>/laravel_bak/vendor/psr/http-message/docs/PSR7-Interfaces.md
+

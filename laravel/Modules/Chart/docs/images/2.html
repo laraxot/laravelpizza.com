@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salute Orale - Servizi Odontoiatrici Gratuiti</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .logo-text {
+            font-family: 'Georgia', serif;
+        }
+        
+        .orale-text {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header con logo e bandiere -->
+    <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+        <div class="logo-text text-3xl">
+            <span>S</span>ALUTE <span>O</span>RA<span class="orale-text text-2xl">le</span>
+        </div>
+        <div class="flex space-x-4">
+            <div class="w-10 h-6 flex-shrink-0">
+                <div class="grid grid-cols-3 h-full">
+                    <div class="bg-green-600"></div>
+                    <div class="bg-white"></div>
+                    <div class="bg-red-600"></div>
+                </div>
+            </div>
+            <div class="w-10 h-6 bg-blue-900 relative flex-shrink-0">
+                <!-- Union Jack -->
+                <div class="absolute inset-0 bg-white"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="bg-red-600 h-1 w-full"></div>
+                    <div class="bg-red-600 h-full w-1 absolute"></div>
+                </div>
+                <div class="absolute inset-0">
+                    <div class="border-t-8 border-b-8 border-red-600 transform rotate-45 origin-center w-12 absolute -left-1 top-2"></div>
+                    <div class="border-t-8 border-b-8 border-red-600 transform -rotate-45 origin-center w-12 absolute -left-1 top-2"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Loghi partner -->
+    <div class="bg-gray-200 p-4 flex flex-wrap justify-center items-center gap-4">
+        <div class="flex-shrink-0">
+            <img src="/api/placeholder/100/50" alt="COI Logo" class="h-12" />
+        </div>
+        <div class="bg-blue-800 text-white p-2 flex items-center flex-shrink-0">
+            <span class="mr-2">INMP</span>
+            <div class="w-10 h-8 bg-gray-300 mr-2"></div>
+            <span>NIHMP</span>
+        </div>
+        <div class="flex-shrink-0">
+            <img src="/api/placeholder/100/50" alt="Fondazione ANDI Logo" class="h-12" />
+        </div>
+    </div>
+
+    <!-- Contenuto principale -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-2xl font-bold mb-2">
+            Benvenuta su <span class="font-extrabold">Salute Orale</span>,
+        </h1>
+        
+        <p class="text-lg mb-6">
+            il portale che vuole garantire alle pazienti vulnerabili in
+            stato di gravidanza la possibilità di accedere a <span class="font-bold">servizi
+            odontoiatrici</span> di prevenzione a titolo completamente
+            <span class="font-bold">gratuito</span>.
+        </p>
+        
+        <p class="text-lg mb-8">
+            Se sei una donna in stato di gravidanza residente in
+            Italia o in attesa di permesso di soggiorno, con un
+            valore ISEE pari a euro 20,000 o inferiore, e vuoi
+            partecipare a questa iniziativa clicca il pulsante qui
+            sotto:
+        </p>
+        
+        <div class="flex justify-center mb-8">
+            <button class="bg-blue-900 text-white text-xl font-bold py-4 px-8 rounded-full w-full max-w-md">
+                ISCRIVITI SUBITO
+            </button>
+        </div>
+    </main>
+</body>
+</html>

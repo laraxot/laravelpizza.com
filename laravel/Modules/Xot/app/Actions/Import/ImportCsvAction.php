@@ -12,9 +12,10 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\ColumnData;
-use function Safe\ini_set;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
+
+use function Safe\ini_set;
 
 class ImportCsvAction
 {
@@ -78,11 +79,8 @@ class ImportCsvAction
         $columns = $conn->getColumnListing($tbl);
         $excludedColumns = ['id'];
 
-        $filtered = array_values(array_diff($columns, $excludedColumns));
-
         return array_map(
-            function (mixed $column) use ($conn, $tbl): ColumnData {
-                $column = (string) $column;
+            function (string $column) use ($conn, $tbl) {
                 $type = $conn->getColumnType($tbl, $column);
 
                 return new ColumnData(
@@ -90,7 +88,7 @@ class ImportCsvAction
                     type: $type,
                 );
             },
-            $filtered,
+            array_diff($columns, $excludedColumns),
         );
     }
 
@@ -98,7 +96,6 @@ class ImportCsvAction
      * Prepare fields for the SQL query.
      *
      * @param  array<ColumnData>  $columns
-     *
      * @return array<string>
      */
     private function prepareFields(array $columns): array
@@ -145,7 +142,6 @@ class ImportCsvAction
      * Transform columns into ColumnData objects.
      *
      * @param  array<string>  $columns
-     *
      * @return array<ColumnData>
      *
      * @deprecated This method is currently unused but kept for future expansion.

@@ -241,3 +241,105 @@ Prima di ogni commit, verifica:
 ---
 
 **Filosofia**: Le Actions sono unità atomiche di business logic, riutilizzabili, testabili e queueable. I Services creano accoppiamento e violano il principio di responsabilità singola.
+
+---
+
+## 🎯 Caso Specifico: Filament Chart Widgets con Dati Demo
+
+### Problema Comune
+
+I Chart Widgets sperimentali spesso usano dati demo statici. **NON creare Services per centralizzare questi dati**.
+
+### ❌ Pattern SBAGLIATO
+
+```php
+// ❌ MAI FARE - ChartService per dati demo
+namespace Modules\Quaeris\Services;
+
+class ChartService
+{
+    private const DEMO_DATA = [1250, 1380, 1520];
+
+    public function getGrowthData(): array
+    {
+        return self::DEMO_DATA;
+    }
+}
+
+// ❌ MAI FARE - Widget che dipende dal Service
+class Simple02ChartWidget extends XotBaseChartWidget
+{
+    protected ChartService $chartService;
+
+    public function __construct(ChartService $chartService)
+    {
+        $this->chartService = $chartService;
+        parent::__construct();
+    }
+}
+```
+
+### ✅ Pattern CORRETTO: Self-Contained Widget
+
+```php
+// ✅ CORRETTO - Widget completamente self-contained
+namespace Modules\Quaeris\Filament\Widgets;
+
+use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
+
+class Simple02ChartWidget extends XotBaseChartWidget
+{
+    // Dati demo come costanti di classe
+    private const MONTHLY_DATA = [1250, 1380, 1520, 1680];
+    private const MONTH_LABELS = ['Gen', 'Feb', 'Mar', 'Apr'];
+
+    protected function getData(): array
+    {
+        return [
+            'datasets' => [['data' => self::MONTHLY_DATA]],
+            'labels' => self::MONTH_LABELS,
+        ];
+    }
+
+    // Metodi helper privati per logica specifica
+    private function calculateGrowthPercentage(float $current, float $previous): float
+    {
+        return $previous === 0.0 ? 0.0 : (($current - $previous) / $previous) * 100;
+    }
+}
+```
+
+### Benefici Pattern Self-Contained
+
+1. **No costruttori** → Evita problemi di hydration Livewire
+2. **No dependency injection** → Nessuna complessità di autowiring
+3. **Dati come costanti** → Immutabili e chiari
+4. **Metodi privati** → Logica incapsulata nel widget
+5. **Un file = una feature** → Facile da testare e mantenere
+
+---
+
+## 📅 Incidenti Risolti
+
+### 28 Gennaio 2026 - ChartService Eliminato
+
+**Problema**: `Modules\Quaeris\Services\ChartService` causava errori "Cannot call constructor" nei widget Simple05, Simple06, Simple11, Simple13, Simple20.
+
+**Causa**:
+- Il Service non era correttamente autoloadato da Composer
+- I widget tentavano di istanziare il Service nel costruttore
+- Alcuni metodi chiamati non esistevano nel Service
+
+**Soluzione**:
+1. Eliminato `ChartService.php`
+2. Eliminata directory `app/Services/`
+3. Refactored tutti i widget a pattern self-contained
+4. Aggiornata documentazione
+
+**File coinvolti**:
+- `Simple02ChartWidget.php` → Self-contained
+- `Simple05ChartWidget.php` → Self-contained
+- `Simple06ChartWidget.php` → Self-contained
+- `Simple11ChartWidget.php` → Self-contained
+- `Simple13ChartWidget.php` → Self-contained
+- `Simple20ChartWidget.php` → Self-contained

@@ -7,38 +7,26 @@ on:
       - master
 
 jobs:
-  test:
+  release:
     runs-on: ubuntu-latest
-
-    name: Tag New Version
     if: "!contains(github.event.head_commit.message, '[release]')"
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_TOKEN }}
 
-      - name: Set Node.js 19.x
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 19.x
+          node-version: 20
 
-      # node dependency cache
-      # this is not required but speeds up the process
-      - uses: actions/cache@v3
-        with:
-          path: ./node_modules
-          key: node-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            node
+      - name: Install semantic-release
+        run: npm install --no-save semantic-release @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/github
 
-      - name: Install JS deps
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install
-
-      - name: Tag Version
-        run: ./node_modules/semantic-release/bin/semantic-release.js --no-ci
+      - name: Run semantic-release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx semantic-release

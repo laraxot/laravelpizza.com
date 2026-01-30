@@ -19,8 +19,6 @@ abstract class XotBaseBulkAction extends FilamentBulkAction
      *
      * Questo nome viene utilizzato come chiave nell'array delle actions
      * e per la generazione automatica delle traduzioni tramite LangServiceProvider.
-     *
-     * @return string|null
      */
     public static function getDefaultName(): ?string
     {

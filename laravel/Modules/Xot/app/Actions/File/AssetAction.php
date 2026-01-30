@@ -21,7 +21,6 @@ class AssetAction
      * Gestisce i percorsi degli asset, copiandoli nella directory pubblica se necessario.
      *
      * @param  string  $path  Il percorso dell'asset
-     *
      * @return string Il percorso pubblico dell'asset
      *
      * @throws Exception Se il file sorgente non esiste o non può essere copiato

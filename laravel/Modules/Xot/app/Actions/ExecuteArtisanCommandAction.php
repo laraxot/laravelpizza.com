@@ -42,7 +42,6 @@ class ExecuteArtisanCommandAction
      * Esegue un comando Artisan e restituisce i risultati.
      *
      * @param  string  $command  Il comando Artisan da eseguire (senza "php artisan")
-     *
      * @return array{
      *     command: string,
      *     output: array<int, string>,
@@ -138,7 +137,6 @@ class ExecuteArtisanCommandAction
      * Verifica se un comando è presente nella lista dei comandi consentiti.
      *
      * @param  string  $command  Il comando da verificare
-     *
      * @return bool True se il comando è consentito, false altrimenti
      */
     private function isCommandAllowed(string $command): bool

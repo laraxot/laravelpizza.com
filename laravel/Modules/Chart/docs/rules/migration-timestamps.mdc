@@ -1,0 +1,92 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Regole per la Gestione dei Timestamp nelle Migrazioni
+
+## Problema
+La gestione dei timestamp nelle migrazioni può portare a ridondanze e inconsistenze se non gestita correttamente.
+
+## Soluzione
+Utilizzare il metodo `updateTimestamps()` della classe `XotBaseMigration` nella sezione UPDATE della migrazione:
+
+1. Nella sezione CREATE:
+```php
+$this->tableCreate(
+    function (Blueprint $table): void {
+        // ... altri campi ...
+        // NON aggiungere updateTimestamps qui
+    }
+);
+```
+
+2. Nella sezione UPDATE:
+```php
+$this->tableUpdate(
+    function (Blueprint $table): void {
+        // Aggiungere updateTimestamps qui
+        $this->updateTimestamps($table, true); // true per includere soft deletes
+    }
+);
+```
+
+## Regole Principali
+1. `updateTimestamps()` deve essere chiamato UNA SOLA VOLTA per tabella
+2. SEMPRE nella sezione UPDATE, NON nella sezione CREATE
+3. Non utilizzare direttamente `timestamps()` o `softDeletes()`
+4. Il parametro booleano in `updateTimestamps($table, true)` controlla l'inclusione di soft deletes
+
+## Esempio Corretto
+```php
+public function up(): void
+{
+    $this->tableCreate(
+        function (Blueprint $table): void {
+            $table->id();
+            $this->foreignIdFor($table, Tenant::class);
+            // ... altri campi ...
+            // NON aggiungere updateTimestamps qui
+        }
+    );
+    
+    $this->tableUpdate(
+        function (Blueprint $table): void {
+            // Aggiungere updateTimestamps qui
+            $this->updateTimestamps($table, true);
+        }
+    );
+}
+```
+
+## Esempio Errato
+```php
+public function up(): void
+{
+    $this->tableCreate(
+        function (Blueprint $table): void {
+            $table->id();
+            $this->foreignIdFor($table, Tenant::class);
+            // ... altri campi ...
+            // ERRATO: Non aggiungere updateTimestamps qui
+            $this->updateTimestamps($table, true);
+        }
+    );
+    
+    $this->tableUpdate(
+        function (Blueprint $table): void {
+            // ERRATO: Non ripetere updateTimestamps
+            $this->updateTimestamps($table, true);
+        }
+    );
+}
+```
+
+## Note
+- Il metodo `updateTimestamps()` gestisce automaticamente:
+  - `created_at`
+  - `updated_at`
+  - `deleted_at` (se il secondo parametro è true)
+- Non è necessario chiamare `timestamps()` o `softDeletes()` separatamente
+- La ridondanza può causare errori durante l'esecuzione delle migrazioni
+- La gestione dei timestamp nella sezione UPDATE permette una migliore manutenibilità e coerenza

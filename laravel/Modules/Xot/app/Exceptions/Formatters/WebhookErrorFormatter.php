@@ -11,8 +11,7 @@ class WebhookErrorFormatter
 {
     public function __construct(
         private Throwable $exception,
-    ) {
-    }
+    ) {}
 
     /**
      * @return array<string, mixed>

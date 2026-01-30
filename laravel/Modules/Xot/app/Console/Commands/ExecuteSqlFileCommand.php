@@ -7,8 +7,9 @@ namespace Modules\Xot\Console\Commands;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use function Safe\file_get_contents;
 use Webmozart\Assert\Assert;
+
+use function Safe\file_get_contents;
 
 class ExecuteSqlFileCommand extends Command
 {

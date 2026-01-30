@@ -26,7 +26,7 @@ class ActivityLogger
     /**
      * Log activity.
      *
-     * @param array<string, mixed>|null $properties
+     * @param  array<string, mixed>|null  $properties
      */
     public function log(
         string $type,
@@ -122,7 +122,7 @@ class ActivityLogger
     /**
      * Log custom event.
      *
-     * @param array<string, mixed>|null $properties
+     * @param  array<string, mixed>|null  $properties
      */
     public function custom(
         string $type,

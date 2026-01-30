@@ -47,6 +47,4 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
-interface ModelWithAuthorContract
-{
-}
+interface ModelWithAuthorContract {}

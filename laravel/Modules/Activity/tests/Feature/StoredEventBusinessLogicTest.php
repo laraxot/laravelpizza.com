@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use Modules\Activity\Models\StoredEvent;
 use Illuminate\Support\Str;
+use Modules\Activity\Models\StoredEvent;
 
 uses(Modules\Activity\Tests\TestCase::class);
 
-it('can create stored event with basic information', function (): void
-{
+it('can create stored event with basic information', function (): void {
     $eventData = [
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,
@@ -252,7 +251,6 @@ it('can query events by aggregate uuid', function (): void {
     \assert($first2 instanceof StoredEvent);
     $this->assertSame($uuid1, $first1->aggregate_uuid);
     $this->assertSame($uuid2, $first2->aggregate_uuid);
-
 });
 
 it('can query events by event class', function (): void {
@@ -309,7 +307,6 @@ it('can query events by event class', function (): void {
     $this->assertSame('App\\Events\\UserCreated', $firstCreated->event_class);
     $this->assertSame('App\\Events\\UserUpdated', $firstUpdated->event_class);
     $this->assertSame('App\\Events\\UserDeleted', $firstDeleted->event_class);
-
 });
 
 it('can handle event with empty properties', function (): void {
@@ -439,7 +436,7 @@ it('can compare event versions', function (): void {
 
 it('can handle event with timestamps', function (): void {
     $now = now();
-    
+
     $storedEvent = StoredEvent::create([
         'aggregate_uuid' => Str::uuid()->toString(),
         'aggregate_version' => 1,

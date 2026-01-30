@@ -13,7 +13,8 @@ class GetTenantConfigPathAction
 
     public function execute(string $name): string
     {
-        $filename = $name . '.php';
+        $filename = $name.'.php';
+
         return app(GetTenantFilePathAction::class)->execute($filename);
     }
 }

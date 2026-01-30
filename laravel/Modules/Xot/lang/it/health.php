@@ -28,6 +28,11 @@ return [
     'actions' => [
         'refresh' => [
             'label' => 'refresh',
+            'tooltip' => 'refresh',
+            'icon' => 'refresh',
+        ],
+        'logout' => [
+            'tooltip' => 'logout',
         ],
     ],
 ];

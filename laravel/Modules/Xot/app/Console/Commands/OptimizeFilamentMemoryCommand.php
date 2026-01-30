@@ -9,8 +9,9 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
-use function Safe\preg_match;
 use Symfony\Component\Process\Process;
+
+use function Safe\preg_match;
 
 /**
  * Comando per ottimizzare la memory usage di Filament.

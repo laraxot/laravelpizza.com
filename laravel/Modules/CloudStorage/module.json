@@ -1,0 +1,12 @@
+{
+    "name": "CloudStorage",
+    "alias": "cloudstorage",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CloudStorage\\Providers\\CloudStorageServiceProvider",
+        "Modules\\CloudStorage\\Providers\\Filament\\AdminPanelProvider"
+    ],
+    "files": []
+}

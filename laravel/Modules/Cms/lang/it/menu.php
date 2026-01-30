@@ -123,6 +123,30 @@ return [
             'description' => 'Titolo principale del menu',
             'helper_text' => '',
         ],
+        'items' => [
+            'label' => 'items',
+            'placeholder' => 'items',
+            'helper_text' => 'items',
+            'description' => 'items',
+        ],
+        'url' => [
+            'label' => 'url',
+            'placeholder' => 'url',
+            'helper_text' => 'url',
+            'description' => 'url',
+        ],
+        'target' => [
+            'label' => 'target',
+            'placeholder' => 'target',
+            'helper_text' => 'target',
+            'description' => 'target',
+        ],
+        'icon' => [
+            'label' => 'icon',
+            'placeholder' => 'icon',
+            'helper_text' => 'icon',
+            'description' => 'icon',
+        ],
     ],
     'actions' => [
         'create' => 'Crea Menu',

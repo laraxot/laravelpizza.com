@@ -12,8 +12,7 @@ class EmailAttachmentData extends Data
         private string $content,
         public string $name,
         public string $contentType = 'application/octet-stream',
-    ) {
-    }
+    ) {}
 
     public function getContent(): string
     {

@@ -39,8 +39,7 @@ class RecordNotification extends Notification implements ShouldQueue
      * Determines channels based on the notifiable's routing capabilities.
      * Uses `routeNotificationFor()` method to check if the notifiable supports each channel.
      *
-     * @param object $notifiable The entity to be notified
-     *
+     * @param  object  $notifiable  The entity to be notified
      * @return array<string|class-string>
      */
     public function via(object $notifiable): array
@@ -66,8 +65,7 @@ class RecordNotification extends Notification implements ShouldQueue
      * This follows the Zen Delegation pattern: RecordNotification is a bridge,
      * SpatieEmail handles all template resolution, placeholder replacement, and layout logic.
      *
-     * @param object $notifiable The entity to be notified
-     *
+     * @param  object  $notifiable  The entity to be notified
      * @return SpatieEmail Configured SpatieEmail instance ready to send
      */
     public function toMail(object $notifiable): SpatieEmail
@@ -124,14 +122,14 @@ class RecordNotification extends Notification implements ShouldQueue
             'recipient' => $to,
             'body' => $smsBody,
         ];
+
         return SmsData::from($smsDataArray);
     }
 
     /**
      * Merge additional data with record attributes for placeholder replacement.
      *
-     * @param array<string, mixed> $data Additional data to merge
-     *
+     * @param  array<string, mixed>  $data  Additional data to merge
      * @return $this
      */
     public function mergeData(array $data): self
@@ -144,8 +142,7 @@ class RecordNotification extends Notification implements ShouldQueue
     /**
      * Add attachments to the notification.
      *
-     * @param array<int, array<string, string>> $attachments Array of attachment data
-     *
+     * @param  array<int, array<string, string>>  $attachments  Array of attachment data
      * @return $this
      */
     public function addAttachments(array $attachments): self

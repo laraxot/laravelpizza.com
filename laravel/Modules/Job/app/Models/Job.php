@@ -14,8 +14,9 @@ use Illuminate\Support\Carbon;
 use Modules\Job\Database\Factories\JobFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Override;
-use function Safe\json_decode;
 use Webmozart\Assert\Assert;
+
+use function Safe\json_decode;
 
 /**
  * Modules\Job\Models\Job.
@@ -30,7 +31,6 @@ use Webmozart\Assert\Assert;
  * @property string|null $created_by
  * @property string|null $updated_by
  * @property Carbon|null $updated_at
- *
  * @property-read ProfileContract|null $creator
  * @property-read string|null $display_name
  * @property-read string $status

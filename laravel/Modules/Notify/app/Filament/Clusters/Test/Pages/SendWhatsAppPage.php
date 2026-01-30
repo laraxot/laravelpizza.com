@@ -30,7 +30,7 @@ class SendWhatsAppPage extends XotBasePage
 {
     public ?array $whatsappData = [];
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-chat-bubble-left-right';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-chat-bubble-left-right';
 
     protected string $view = 'notify::filament.pages.send-whatsapp';
 

@@ -39,14 +39,13 @@ class ArticleData extends Data
         public readonly bool $show_author = true,
         public readonly bool $show_date = true,
         public readonly bool $show_reading_time = true,
-    ) {
-    }
+    ) {}
 
     /**
      * Create a new instance of ArticleData with default values.
      */
     public static function make(): static
     {
-        return new static();
+        return new static;
     }
 }

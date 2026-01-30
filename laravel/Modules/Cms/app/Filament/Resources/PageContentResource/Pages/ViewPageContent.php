@@ -9,7 +9,7 @@ use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
-use LaraZeus\SpatieTranslatable\Actions\LocaleSwitcher;
+// use LaraZeus\SpatieTranslatable\Actions\LocaleSwitcher;
 use Modules\Cms\Filament\Resources\PageContentResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 
@@ -23,7 +23,7 @@ class ViewPageContent extends XotBaseViewRecord
     {
         return [
             'edit' => EditAction::make(),
-            'locale-switcher' => LocaleSwitcher::make(),
+            // 'locale-switcher' => LocaleSwitcher::make(), // Temporarily disabled until lara-zeus package is working
         ];
     }
 

@@ -26,7 +26,7 @@ class ViewSchedule extends XotBaseResourcePage implements HasTable
     }
 
     #[Url]
-    public null|string $activeTab = null;
+    public ?string $activeTab = null;
 
     protected static string $resource = ScheduleResource::class;
 
@@ -45,7 +45,7 @@ class ViewSchedule extends XotBaseResourcePage implements HasTable
     protected function getTableColumns(): array
     {
         $date_format = config('app.date_format');
-        Assert::string($date_format, '[' . __LINE__ . '][' . class_basename($this) . ']');
+        Assert::string($date_format, '['.__LINE__.']['.class_basename($this).']');
 
         return [
             Split::make([
@@ -63,10 +63,10 @@ class ViewSchedule extends XotBaseResourcePage implements HasTable
                         return 'Processing...';
                     }
 
-                    return (string) $state->diffInSeconds($record->created_at) . ' seconds';
+                    return (string) $state->diffInSeconds($record->created_at).' seconds';
                 }),
                 TextColumn::make('output')->formatStateUsing(
-                    static fn (string $state): string => (count(explode('<br />', nl2br($state))) - 1) . ' rows of output',
+                    static fn (string $state): string => (count(explode('<br />', nl2br($state))) - 1).' rows of output',
                 ),
             ]),
             Panel::make([

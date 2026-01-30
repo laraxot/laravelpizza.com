@@ -13,6 +13,7 @@ it('GET /it/patient/create acceptable', function (): void {
     $status = (int) $res->getStatusCode();
     if ($status >= 500) {
         test()->markTestSkipped('Patient create route returned server error in this install.');
+
         return;
     }
 

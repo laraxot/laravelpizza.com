@@ -62,7 +62,6 @@ use Override;
  * @property int $attempt
  * @property int|null $progress
  * @property string|null $exception_message
- *
  * @property-read ProfileContract|null $creator
  * @property-read string $status
  * @property-read ProfileContract|null $updater

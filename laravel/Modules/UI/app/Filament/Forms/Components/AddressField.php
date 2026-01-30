@@ -36,7 +36,7 @@ class AddressField extends Field
                 'zip' => null,
             ];
 
-            if (! ($record instanceof Model)) {
+            if (! $record instanceof Model) {
                 return;
             }
 

@@ -9,69 +9,29 @@ require_once __DIR__.'/../../Xot/tests/CreatesApplication.php';
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 use Modules\Notify\Providers\NotifyServiceProvider;
 use Modules\Xot\Tests\CreatesApplication;
 
 /**
- * Base test case for Notify module tests.
+ * Base test case for Notify module.
+ *
+ * Uses MySQL from .env.testing (NOT SQLite). Single source of truth: .env.testing.
+ * Runs full migrate first, then module migrations.
  */
 abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
     use DatabaseTransactions;
 
-    /**
-     * Setup the test environment.
-     * Il sito funziona, quindi i test devono riflettere il comportamento reale
-     */
+    protected static bool $migrated = false;
+
     protected function setUp(): void
     {
         parent::setUp();
 
-        // Usiamo SQLite shared memory seguendo pattern Activity/TestCase.php
-        $dbName = 'file:memdb_notify_'.Str::random(10).'?mode=memory&cache=shared';
-
-        $connections = [
-            'sqlite',
-            'mysql',
-            'mariadb',
-            'pgsql',
-            'activity',
-            'cms',
-            'gdpr',
-            'geo',
-            'job',
-            'lang',
-            'media',
-            'meetup',
-            'notify',
-            'seo',
-            'tenant',
-            'ui',
-            'user',
-            'xot',
-        ];
-
-        foreach ($connections as $conn) {
-            $this->app['config']->set("database.connections.{$conn}.driver", 'sqlite');
-            $this->app['config']->set("database.connections.{$conn}.database", $dbName);
-        }
-
-        foreach ($connections as $conn) {
-            DB::purge($conn);
-        }
-
-        foreach ($connections as $conn) {
-            try {
-                $pdo = DB::connection($conn)->getPdo();
-                if ($pdo instanceof \PDO && method_exists($pdo, 'sqliteCreateFunction')) {
-                    $pdo->sqliteCreateFunction('md5', static fn (?string $value): ?string => $value === null ? null : md5($value));
-                    $pdo->sqliteCreateFunction('unhex', static fn (?string $value): ?string => $value);
-                }
-            } catch (\Throwable) {
-            }
+        if (! self::$migrated) {
+            $this->artisan('migrate', ['--force' => true]);
+            self::$migrated = true;
         }
 
         $this->artisan('module:migrate', ['module' => 'Xot', '--force' => true]);
@@ -80,8 +40,6 @@ abstract class TestCase extends BaseTestCase
     }
 
     /**
-     * Get package providers.
-     *
      * @param  Application  $app
      * @return array<int, class-string>
      */

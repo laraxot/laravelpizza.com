@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Traits;
 
-use Exception;
 use Filament\Actions;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
@@ -35,6 +34,7 @@ use Modules\UI\Enums\TableLayoutEnum;
 use Modules\UI\Filament\Actions\Table\TableLayoutToggleTableAction;
 use Modules\Xot\Actions\Model\TableExistsByModelClassActions;
 use Webmozart\Assert\Assert;
+use Filament\Resources\Pages\ListRecords;
 
 /**
  * Trait HasXotTable.
@@ -57,6 +57,10 @@ trait HasXotTable
 
     /**
      * Get table header actions.
+     *
+     * CRITICO: Deve essere public perché viene chiamato da Filament/Livewire dall'esterno.
+     * Filament\Tables\Concerns\InteractsWithTable richiede visibilità PUBLIC.
+     * Vedi: Modules/Xot/docs/filament/widget-method-visibility-rules.md
      *
      * @return array<string, Action|ActionGroup>
      */
@@ -101,7 +105,7 @@ trait HasXotTable
      *
      * @return array<string, Tables\Columns\Column>
      */
-    abstract public function getTableColumns(): array;
+    abstract protected function getTableColumns(): array;
 
     /**
      * Get table filters form columns.
@@ -124,7 +128,7 @@ trait HasXotTable
     /**
      * Get table heading.
      */
-    public function getTableHeading(): ?string
+    protected function getTableHeading(): ?string
     {
         $key = static::getKeyTrans('table.heading');
         /** @var string|array<int|string,mixed>|null $trans */
@@ -139,7 +143,7 @@ trait HasXotTable
      *
      * @return array<string, Action>
      */
-    public function getTableEmptyStateActions(): array
+    protected function getTableEmptyStateActions(): array
     {
         return [];
     }
@@ -196,12 +200,12 @@ trait HasXotTable
         // Configurazioni opzionali personalizzabili
         $sortColumn = $this->getDefaultTableSortColumn();
         $sortDirection = $this->getDefaultTableSortDirection();
-        if ($sortColumn !== null && $sortDirection !== null) {
+        if (null !== $sortColumn && null !== $sortDirection) {
             $table = $table->defaultSort($sortColumn, $sortDirection);
         }
 
         $pollInterval = $this->getTablePollInterval();
-        if ($pollInterval !== null) {
+        if (null !== $pollInterval) {
             $table = $table->poll($pollInterval);
         }
 
@@ -210,6 +214,10 @@ trait HasXotTable
 
     /**
      * Get table filters.
+     *
+     * CRITICO: Deve essere public perché viene chiamato da Filament/Livewire dall'esterno.
+     * Filament\Tables\Concerns\InteractsWithTable richiede visibilità PUBLIC.
+     * Vedi: Modules/Xot/docs/filament/widget-method-visibility-rules.md
      *
      * @return array<string|int, Tables\Filters\Filter|TernaryFilter|BaseFilter>
      */
@@ -221,6 +229,14 @@ trait HasXotTable
     /**
      * Get table actions.
      *
+     * CRITICO: Deve essere public perché viene chiamato da Filament/Livewire dall'esterno.
+     * Vedi: Modules/Xot/docs/filament/widget-method-visibility-rules.md
+     *
+     * @return array<string, Action|ActionGroup>
+     */
+    /**
+     * @deprecated override the `table()` method to configure the table
+     *
      * @return array<string, Action|ActionGroup>
      */
     public function getTableActions(): array
@@ -230,8 +246,11 @@ trait HasXotTable
         }
 
         $actions = [];
-        // $resource = $this->getResource();
         $resource = $this;
+        if ($this instanceof ListRecords) {
+            $resourceClass = $this->getResource();
+            $resource = app($resourceClass);
+        }
 
         // @phpstan-ignore-next-line function.alreadyNarrowedType
         if (method_exists($resource, 'canView')) {
@@ -272,7 +291,6 @@ trait HasXotTable
             } elseif (method_exists($relationship, 'getTable')
                 && method_exists($relationship, 'getPivotClass')
             ) {
-                /** @var mixed $pivotClass */
                 $pivotClass = $relationship->getPivotClass();
 
                 // Type guard: ensure pivotClass is object/string with getKeyName method
@@ -292,6 +310,10 @@ trait HasXotTable
     /**
      * Get table bulk actions.
      *
+     * CRITICO: Deve essere public perché viene chiamato da Filament/Livewire dall'esterno.
+     * Filament\Tables\Concerns\InteractsWithTable richiede visibilità PUBLIC.
+     * Vedi: Modules/Xot/docs/filament/widget-method-visibility-rules.md
+     *
      * @return array<string, BulkAction>
      */
     public function getTableBulkActions(): array
@@ -308,9 +330,9 @@ trait HasXotTable
     /**
      * Get model class.
      *
-     * @return class-string<Model>
+     * @throws \Exception Se non viene trovata una classe modello valida
      *
-     * @throws Exception Se non viene trovata una classe modello valida
+     * @return class-string<Model>
      */
     public function getModelClass(): string
     {
@@ -318,7 +340,7 @@ trait HasXotTable
         if (method_exists($this, 'getRelationship')) {
             $relationship = $this->getRelationship();
             if ($relationship instanceof Relation) {
-                /** @var class-string<Model> */
+                /* @var class-string<Model> */
                 return get_class($relationship->getModel());
             }
         }
@@ -330,19 +352,19 @@ trait HasXotTable
                 Assert::classExists($model);
 
                 // Assert::isAOf($model, Model::class);
-                /** @var class-string<Model> */
+                /* @var class-string<Model> */
                 // @phpstan-ignore-next-line
                 return $model;
             }
             // @phpstan-ignore-next-line
             if ($model instanceof Model) {
-                /** @var class-string<Model> */
+                /* @var class-string<Model> */
                 // @phpstan-ignore-next-line
                 return $model::class;
             }
         }
 
-        throw new Exception('No model found in '.class_basename(self::class).'::'.__FUNCTION__);
+        throw new \Exception('No model found in '.class_basename(self::class).'::'.__FUNCTION__);
     }
 
     /**
@@ -390,7 +412,7 @@ trait HasXotTable
     /**
      * Get header actions.
      *
-     * @return array<string, Actions\Action>
+     * @return array<string, Action>
      */
     protected function getHeaderActions(): array
     {
@@ -422,7 +444,7 @@ trait HasXotTable
             Assert::isInstanceOf($model, Model::class);
 
             return $model->getTable().'.id';
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return null;
         }
     }

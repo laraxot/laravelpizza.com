@@ -7,6 +7,7 @@ namespace Modules\Xot\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
 use Nwidart\Modules\Facades\Module;
+
 use function Safe\scandir;
 
 class ListFilamentPanels extends Command

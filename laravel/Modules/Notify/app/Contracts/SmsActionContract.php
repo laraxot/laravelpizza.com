@@ -16,7 +16,6 @@ interface SmsActionContract
      * Invia un SMS utilizzando il provider specifico.
      *
      * @param  SmsData  $smsData  I dati del messaggio SMS
-     *
      * @return array Risultato dell'operazione
      */
     public function execute(SmsData $smsData): array;

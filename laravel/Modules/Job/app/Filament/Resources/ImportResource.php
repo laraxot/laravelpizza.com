@@ -14,7 +14,7 @@ use Override;
 
 class ImportResource extends XotBaseResource
 {
-    protected static null|string $model = Import::class;
+    protected static ?string $model = Import::class;
 
     #[Override]
     public static function getFormSchema(): array

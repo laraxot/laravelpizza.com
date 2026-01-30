@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(\Modules\Notify\Tests\TestCase::class);
+
 use Modules\Notify\Helpers\ConfigHelper;
 use Modules\Notify\Models\Contact;
 use Modules\Notify\Models\Notification;

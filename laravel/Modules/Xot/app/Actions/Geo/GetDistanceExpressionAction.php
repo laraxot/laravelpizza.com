@@ -24,7 +24,6 @@ class GetDistanceExpressionAction
      * @param  float  $latitude  Latitudine del punto di riferimento
      * @param  float  $longitude  Longitudine del punto di riferimento
      * @param  string|null  $alias  Alias per l'espressione (opzionale)
-     *
      * @return Expression Espressione SQL per il calcolo della distanza
      */
     public function execute(

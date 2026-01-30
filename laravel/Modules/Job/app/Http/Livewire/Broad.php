@@ -25,7 +25,7 @@ class Broad extends Component
 
     public function try(): void
     {
-        session()->flash('message', 'try [' . now() . ']');
+        session()->flash('message', 'try ['.now().']');
         // OrderShipped::dispatch();
         // event(new PublicEvent('test'));
         PublicEvent::dispatch();
@@ -33,7 +33,7 @@ class Broad extends Component
 
     public function notifyEvent(): void
     {
-        session()->flash('message', 'notifyEvent [' . now() . ']');
+        session()->flash('message', 'notifyEvent ['.now().']');
         dd('fine');
 
         // $this->showNewOrderNotification = true;

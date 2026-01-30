@@ -12,12 +12,13 @@ use Sushi\Sushi;
 
 /**
  * @property int|null $id
+ * @property string|int|null $tenant_id
  * @property string|null $name
  * @property string|null $domain
  * @property bool|null $is_primary
  * @property string|null $status
  * @property string|null $verification_token
- * @property string|null $verified_at
+ * @property \Carbon\Carbon|null $verified_at
  *
  * @method static Builder|TenantDomain newModelQuery()
  * @method static Builder|TenantDomain newQuery()
@@ -43,6 +44,7 @@ class TenantDomain extends BaseModel
     use Sushi;
 
     protected $fillable = [
+        'tenant_id',
         'name',
         'domain',
         'is_primary',

@@ -71,8 +71,8 @@ class ListSchedules extends XotBaseListRecords
         ];
     }
 
-    protected function getTableRecordUrlUsing(): null|Closure
+    protected function getTableRecordUrlUsing(): ?Closure
     {
-        return static fn (): null|string => null;
+        return static fn (): ?string => null;
     }
 }

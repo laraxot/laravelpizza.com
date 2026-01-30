@@ -12,7 +12,7 @@ use Override;
 
 class FailedImportRowResource extends XotBaseResource
 {
-    protected static null|string $model = FailedImportRow::class;
+    protected static ?string $model = FailedImportRow::class;
 
     #[Override]
     public static function getFormSchema(): array

@@ -14,9 +14,7 @@ use Override;
 
 class ExportResource extends XotBaseResource
 {
-    protected static null|string $model = Export::class;
-
-
+    protected static ?string $model = Export::class;
 
     #[Override]
     public static function getFormSchema(): array

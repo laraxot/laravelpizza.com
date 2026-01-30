@@ -51,7 +51,7 @@ class EmailVerificationController extends Controller
         $user->markEmailAsVerified();
 
         // Verificare che l'utente implementi l'interfaccia MustVerifyEmail
-        if (! ($user instanceof MustVerifyEmail)) {
+        if (! $user instanceof MustVerifyEmail) {
             throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia MustVerifyEmail');
         }
 

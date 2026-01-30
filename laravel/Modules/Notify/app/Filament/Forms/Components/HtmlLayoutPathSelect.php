@@ -34,13 +34,12 @@ class HtmlLayoutPathSelect extends Select
     /**
      * Create a new MailTemplateSelect instance.
      *
-     * @param string|null $name Field name (default: 'mail_template_slug')
-     *
-     * @return static
+     * @param  string|null  $name  Field name (default: 'mail_template_slug')
      */
     public static function make(?string $name = null): static
     {
         $name = $name ?? 'html_layout_path';
+
         return parent::make($name);
     }
 }

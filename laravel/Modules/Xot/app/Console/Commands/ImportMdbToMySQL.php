@@ -6,6 +6,7 @@ namespace Modules\Xot\Console\Commands;
 
 use Illuminate\Console\Command;
 use RuntimeException;
+
 use function Safe\shell_exec;
 
 class ImportMdbToMySQL extends Command
@@ -46,6 +47,7 @@ class ImportMdbToMySQL extends Command
         $tables = $this->exportTablesToSQL($mdbFile);
         if (empty($tables)) {
             $this->error('Nessuna tabella trovata nel file .mdb');
+
             return Command::FAILURE;
         }
 
@@ -53,6 +55,7 @@ class ImportMdbToMySQL extends Command
         $this->importTablesIntoMySQL($tables, $mysqlDb);
 
         $this->info('Importazione completata con successo!');
+
         return Command::SUCCESS;
     }
 
@@ -87,7 +90,7 @@ class ImportMdbToMySQL extends Command
     /**
      * Importa le tabelle in MySQL.
      *
-     * @param array<int, string> $tables
+     * @param  array<int, string>  $tables
      */
     private function importTablesIntoMySQL(array $tables, string $mysqlDb): void
     {

@@ -70,7 +70,6 @@ class GetFactoryAction
      * Get the factory class name for a model class.
      *
      * @param  string  $model_class  The model class name
-     *
      * @return string The fully qualified factory class name
      */
     public function getFactoryClass(string $model_class): string

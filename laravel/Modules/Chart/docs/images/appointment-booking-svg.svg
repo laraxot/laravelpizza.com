@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f0f0f0"/>
+  <text x="200" y="30" text-anchor="middle" font-size="20" font-weight="bold">Prenotazione Appuntamento</text>
+  
+  <g transform="translate(50, 70)">
+    <rect width="300" height="40" fill="#3498db" rx="10"/>
+    <text x="150" y="25" text-anchor="middle" fill="white">Ricerca Dentista</text>
+  </g>
+  
+  <g transform="translate(50, 130)">
+    <rect width="300" height="40" fill="#2ecc71" rx="10"/>
+    <text x="150" y="25" text-anchor="middle" fill="white">Selezione Fascia Oraria</text>
+  </g>
+  
+  <g transform="translate(50, 190)">
+    <rect width="300" height="40" fill="#e74c3c" rx="10"/>
+    <text x="150" y="25" text-anchor="middle" fill="white">Conferma/Rifiuto Dentista</text>
+  </g>
+  
+  <g transform="translate(50, 250)">
+    <rect width="300" height="40" fill="#f39c12" rx="10"/>
+    <text x="150" y="25" text-anchor="middle" fill="white">Appuntamento Confermato</text>
+  </g>
+  
+  <path d="M200,110 v20 M200,170 v20 M200,230 v20" stroke="#333" stroke-dasharray="5,5"/>
+</svg>

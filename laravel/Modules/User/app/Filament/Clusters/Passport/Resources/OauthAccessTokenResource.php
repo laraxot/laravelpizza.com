@@ -10,8 +10,6 @@ use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
-use Filament\Tables\Filters\Filter;
-use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
@@ -33,7 +31,7 @@ class OauthAccessTokenResource extends XotBaseResource
 
     protected static ?string $model = OauthAccessToken::class;
 
-    public static function table(Table $table): Table
+    public static function table(\Filament\Tables\Table $table): \Filament\Tables\Table
     {
         return $table
             ->columns([
@@ -105,13 +103,13 @@ class OauthAccessTokenResource extends XotBaseResource
                     }),
             ])
             ->filters([
-                Filter::make('revoked')
+                \Filament\Tables\Filters\Filter::make('revoked')
                     ->query(fn (Builder $query) => $query->where('revoked', true)),
 
-                Filter::make('expired')
+                \Filament\Tables\Filters\Filter::make('expired')
                     ->query(fn (Builder $query) => $query->where('expires_at', '<', now())),
 
-                Filter::make('valid')
+                \Filament\Tables\Filters\Filter::make('valid')
                     ->query(fn (Builder $query) => $query->where('revoked', false)->where('expires_at', '>', now())),
             ])
             ->recordActions([

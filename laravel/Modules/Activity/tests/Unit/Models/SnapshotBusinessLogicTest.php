@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(\Modules\Activity\Tests\TestCase::class);
+
 use Modules\Activity\Models\Snapshot;
 use Spatie\EventSourcing\Snapshots\EloquentSnapshot;
 

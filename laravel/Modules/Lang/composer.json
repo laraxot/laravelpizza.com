@@ -11,9 +11,12 @@
     ],
     "require": {
         "mcamara/laravel-localization": "*",
-        "lara-zeus/spatie-translatable": "*",
+        "lara-zeus/spatie-translatable": "dev-local",
         "rinvex/countries": "^9.1",
         "spatie/laravel-sluggable": "*"
+    },
+    "require-comment": {
+        
     },
     "repositories": [
         {
@@ -27,6 +30,10 @@
         {
             "type": "path",
             "url": "../UI"
+        },
+        {
+            "type": "path",
+            "url": "./packages/lara-zeus/spatie-translatable"
         }
     ],
     "autoload": {

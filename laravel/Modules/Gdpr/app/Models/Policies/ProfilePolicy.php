@@ -51,8 +51,6 @@ class ProfilePolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can restore the model.
-     *
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function restore(UserContract $user, Profile $_profile): bool
     {
@@ -61,8 +59,6 @@ class ProfilePolicy extends GdprBasePolicy
 
     /**
      * Determine whether the user can permanently delete the model.
-     *
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function forceDelete(UserContract $user, Profile $profile): bool
     {

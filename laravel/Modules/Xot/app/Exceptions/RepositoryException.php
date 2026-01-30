@@ -9,6 +9,4 @@ use Exception;
 /**
  * Class RepositoryException.
  */
-class RepositoryException extends Exception
-{
-}
+class RepositoryException extends Exception {}

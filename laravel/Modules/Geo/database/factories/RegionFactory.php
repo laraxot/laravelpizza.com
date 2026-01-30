@@ -65,7 +65,11 @@ class RegionFactory extends Factory
      */
     public function northern(): static
     {
-        return $this->state(function (array $attributes): array {
+        /*
+         * @param  array<string, mixed>  $attributes
+         * @return array<string, mixed>
+         */
+        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null) {
             $regioniNord = [
                 'Lombardia',
                 'Piemonte',
@@ -80,9 +84,12 @@ class RegionFactory extends Factory
             /** @var string $regionName */
             $regionName = $this->faker->randomElement($regioniNord);
 
-            return array_merge($attributes, [
+            /** @var array<string, mixed> $result */
+            $result = array_merge($attributes, [
                 'name' => $regionName,
             ]);
+
+            return $result;
         });
     }
 
@@ -91,7 +98,11 @@ class RegionFactory extends Factory
      */
     public function central(): static
     {
-        return $this->state(function (array $attributes): array {
+        /*
+         * @param  array<string, mixed>  $attributes
+         * @return array<string, mixed>
+         */
+        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null) {
             $regioniCentro = [
                 'Lazio',
                 'Toscana',
@@ -104,9 +115,12 @@ class RegionFactory extends Factory
             /** @var string $regionName */
             $regionName = $this->faker->randomElement($regioniCentro);
 
-            return array_merge($attributes, [
+            /** @var array<string, mixed> $result */
+            $result = array_merge($attributes, [
                 'name' => $regionName,
             ]);
+
+            return $result;
         });
     }
 
@@ -115,7 +129,11 @@ class RegionFactory extends Factory
      */
     public function southern(): static
     {
-        return $this->state(function (array $attributes): array {
+        /*
+         * @param  array<string, mixed>  $attributes
+         * @return array<string, mixed>
+         */
+        return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null) {
             $regioniSud = [
                 'Campania',
                 'Puglia',
@@ -128,9 +146,12 @@ class RegionFactory extends Factory
             /** @var string $regionName */
             $regionName = $this->faker->randomElement($regioniSud);
 
-            return array_merge($attributes, [
+            /** @var array<string, mixed> $result */
+            $result = array_merge($attributes, [
                 'name' => $regionName,
             ]);
+
+            return $result;
         });
     }
 

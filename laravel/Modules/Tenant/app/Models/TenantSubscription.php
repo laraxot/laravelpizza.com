@@ -20,8 +20,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property float|null $current_storage_gb
  * @property string|null $billing_cycle
  * @property float|null $billing_amount
- * @property string|null $next_billing_date
- * @property string|null $expires_at
+ * @property \Carbon\Carbon|null $next_billing_date
+ * @property \Carbon\Carbon|null $expires_at
  *
  * @method static Builder|TenantSubscription newModelQuery()
  * @method static Builder|TenantSubscription newQuery()
@@ -66,5 +66,18 @@ class TenantSubscription extends BaseModel
     public function tenant(): BelongsTo
     {
         return $this->belongsTo(Tenant::class);
+    }
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return array_merge(parent::casts(), [
+            'next_billing_date' => 'datetime',
+            'expires_at' => 'datetime',
+        ]);
     }
 }

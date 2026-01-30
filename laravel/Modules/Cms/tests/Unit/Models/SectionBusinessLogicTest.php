@@ -1,6 +1,9 @@
 <?php
 
 declare(strict_types=1);
+
+uses(Modules\Cms\Tests\TestCase::class);
+
 use Modules\Cms\Models\BaseModelLang;
 use Modules\Cms\Models\Section;
 use Modules\Cms\Models\Traits\HasBlocks;
@@ -61,10 +64,17 @@ describe('Section Business Logic', function (): void {
     test('section has schema definition for structured data', function (): void {
         $section = new Section();
 
-        expect($section)->toHaveProperty('schema');
-        expect($section->schema['name'])->toBe('json');
-        expect($section->schema['blocks'])->toBe('json');
-        expect($section->schema['slug'])->toBe('string');
+        // Use reflection to access protected $schema property
+        $reflection = new ReflectionClass($section);
+        $schemaProperty = $reflection->getProperty('schema');
+
+        expect($schemaProperty->isProtected())->toBeTrue();
+
+        $schema = $schemaProperty->getValue($section);
+        expect($schema)->toBeArray();
+        expect($schema['name'])->toBe('json');
+        expect($schema['blocks'])->toBe('json');
+        expect($schema['slug'])->toBe('string');
     });
 
     test('section can get rows for sushi functionality', function (): void {

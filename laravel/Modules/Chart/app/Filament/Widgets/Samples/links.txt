@@ -1,0 +1,17 @@
+https://jsfiddle.net/simonbrunel/mo5y35yg/
+
+https://quickchart.io/documentation/chart-js/custom-pie-doughnut-chart-labels/
+
+https://stackoverflow.com/questions/60333278/how-to-add-text-at-center-of-the-chart-js-donut-chart
+
+https://jsfiddle.net/kdvuxbtj/
+
+
+https://www.geeksforgeeks.org/how-to-add-text-inside-the-doughnut-chart-using-chart-js/
+
+
+https://jsfiddle.net/beaver71/rLcecb33/
+
+https://codepen.io/stockinail/pen/eYjRgXV
+
+

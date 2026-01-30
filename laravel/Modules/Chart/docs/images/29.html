@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rimborsi - SALUTE ORALE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .status-badge {
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            transition: all 0.3s;
+        }
+        .status-badge:hover {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto p-6 max-w-2xl">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex items-center justify-between mb-6">
+                <h1 class="text-2xl font-bold text-gray-800">Richieste rimborso</h1>
+            </div>
+
+            <div class="space-y-3">
+                <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg">
+                    <span class="font-mono text-gray-700">2024121</span>
+                    <span class="status-badge bg-red-100 text-red-700">Insoluta</span>
+                </div>
+                
+                <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg">
+                    <span class="font-mono text-gray-700">2024120</span>
+                    <span class="status-badge bg-green-100 text-green-700">Pagata</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

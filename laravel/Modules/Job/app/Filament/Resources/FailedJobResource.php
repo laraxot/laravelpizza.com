@@ -17,7 +17,7 @@ use Override;
 
 class FailedJobResource extends XotBaseResource
 {
-    protected static null|string $model = FailedJob::class;
+    protected static ?string $model = FailedJob::class;
 
     #[Override]
     public static function getFormSchema(): array

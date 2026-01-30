@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(Modules\Lang\Tests\TestCase::class);
+
 use Modules\Lang\Actions\ReadTranslationFileAction;
 
 // Helper functions for this test
@@ -23,7 +25,7 @@ if (! function_exists('cleanupTranslationFile')) {
 }
 
 beforeEach(function () {
-    $this->action = new ReadTranslationFileAction();
+    $this->action = new ReadTranslationFileAction;
     // Use sys_get_temp_dir() instead of storage_path() to avoid calling app() before setUp
     $this->testFilePath = sys_get_temp_dir().'/test_translations.php';
     $this->testTranslations = [

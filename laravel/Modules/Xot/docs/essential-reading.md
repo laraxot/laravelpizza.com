@@ -1,61 +1,23 @@
-# Essential Reading - Xot Module
+# 📖 Letture Essenziali - Modulo Xot
 
-Questa guida contiene le letture essenziali per comprendere e lavorare con il modulo Xot e l'architettura Laraxot.
+> **10 documenti fondamentali** da leggere per comprendere il modulo core Xot
 
-## 📚 Documentazione Fondamentale
+## 🎯 Per Iniziare (3 docs)
 
-### Per Iniziare
-1. [xot-engine-complete-guide.md](xot-engine-complete-guide.md) - Guida completa al motore Xot
-2. [project-conventions.md](../project-conventions.md) - Convenzioni del progetto
-3. [structure.md](structure.md) - Struttura del modulo Xot
+### 1. [README.md](./README.md) ⭐⭐⭐
+**Cosa:** Entry point, panoramica generale, correzioni recenti
+**Perché:** Primo documento da leggere sempre
+**Tempo:** 5 minuti
 
-### Filament
-1. [filament.md](filament.md) - Best practices Filament centralizzate
-2. [filament-4-laraxot-rules.md](filament-4-laraxot-rules.md) - Regole Laraxot per Filament 4
-3. [filament-5-laraxot-rules.md](filament-5-laraxot-rules.md) - ⭐ Regole Laraxot per Filament 5 (NUOVO)
-4. [filament-5-upgrade-guide.md](filament-5-upgrade-guide.md) - Guida upgrade Filament 5 (aggiornato)
-5. [filament-5-livewire-4-complete-guide.md](filament-5-livewire-4-complete-guide.md) - ⭐ Guida completa Filament 5 + Livewire 4 (NUOVO)
+### 2. [laraxot-framework.md](./laraxot-framework.md) ⭐⭐⭐
+**Cosa:** Filosofia Laraxot, principi DRY/KISS, pattern fondamentali
+**Perché:** Capire la "religione" del framework
+**Tempo:** 10 minuti
 
-### Architettura
-1. [xot-base-classes.md](xot-base-classes.md) - Classi base Xot
-2. [xotbase-architecture-complete.md](xotbase-architecture-complete.md) - Architettura completa XotBase
-
-## 🎯 Guide Specifiche
-
-### Testing
-1. [testing-best-practices.md](testing/testing-best-practices.md) - Best practices testing
-2. [testing-philosophy-unified.md](testing/testing-philosophy-unified.md) - Filosofia testing unificata
-3. [testing-strategy.md](testing/testing-strategy.md) - Strategia testing
-
-### Traduzioni
-1. [translation-system.md](translation-system.md) - Sistema di traduzione
-2. [translation-best-practices.md](translation/translation-best-practices.md) - Best practices traduzioni
-
-### Servizi
-1. [services.md](services.md) - Panoramica servizi
-2. [service-provider-best-practices.md](service-provider-best-practices.md) - Best practices service provider
-
-## 🔧 Troubleshooting
-
-1. [troubleshooting/README.md](troubleshooting/README.md) - Indice troubleshooting
-2. [common-issues.md](troubleshooting/common-issues.md) - Problemi comuni
-3. [phpstan.md](troubleshooting/phpstan.md) - PHPStan troubleshooting
-
-## 📋 Quick Reference
-
-### Filament 5 Upgrade Checklist
-- [x] Studio breaking changes completato
-- [x] Documentazione aggiornata
-- [ ] Config Livewire aggiornato
-- [ ] Composer verificato
-- [ ] Conflitti git risolti
-- [ ] Script upgrade eseguito
-- [ ] Livewire v4 installato
-- [ ] Plugin verificati
-- [ ] Moduli documentati
-- [ ] Test completati
-
-Vedi: [Guida Completa Filament 5 + Livewire 4](filament-5-livewire-4-complete-guide.md)
+### 3. [architecture-overview.md](./architecture-overview.md) ⭐⭐
+**Cosa:** Architettura modulare, stack tecnologico, workflow
+**Perché:** Visione d'insieme del sistema
+**Tempo:** 8 minuti
 
 ## 🏗️ Architettura e Pattern (3 docs)
 
@@ -85,8 +47,6 @@ Vedi: [Guida Completa Filament 5 + Livewire 4](filament-5-livewire-4-complete-gu
 **Cosa:** Guida completa Filament integration
 **Perché:** Reference per Resources, Pages, Widgets
 **Tempo:** 20 minuti
-
-**Upgrade Filament 5:** [filament-5-upgrade-guide.md](./filament-5-upgrade-guide.md) - Requisiti, passi ufficiali, compatibilità Laraxot.
 
 ## 🆕 Nuove Regole (2 docs)
 

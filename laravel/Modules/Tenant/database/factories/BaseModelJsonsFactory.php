@@ -27,10 +27,10 @@ class BaseModelJsonsFactory extends Factory
     public function definition(): array
     {
         return [
-            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
-            'updated_at' => $this->faker->dateTimeBetween('-1 month', 'now'),
-            'created_by' => $this->faker->uuid(),
-            'updated_by' => $this->faker->uuid(),
+            'created_at' => \Carbon\Carbon::now()->subDays(random_int(1, 365)),
+            'updated_at' => \Carbon\Carbon::now()->subDays(random_int(0, 30)),
+            'created_by' => (string) random_int(1000000000000000, 9999999999999999),
+            'updated_by' => (string) random_int(1000000000000000, 9999999999999999),
         ];
     }
 }

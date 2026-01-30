@@ -40,11 +40,8 @@ use Spatie\Translatable\HasTranslations;
  * @property Carbon $created_at
  * @property Carbon $updated_at
  * @property Carbon|null $deleted_at
- *
  * @property-read string $channels_label
- *
  * @property NotificationTypeEnum $type
- *
  * @property-read ProfileContract|null $creator
  * @property-read int|null $logs_count
  * @property-read MediaCollection<int, Media> $media
@@ -148,7 +145,6 @@ class NotificationTemplate extends BaseModel implements HasMedia
      * Compile the template with the given data.
      *
      * @param  array<string, mixed>  $data  The data to compile the template with
-     *
      * @return array{subject: string, body_html: string|null, body_text: string|null}
      */
     public function compile(array $data = []): array
@@ -189,7 +185,6 @@ class NotificationTemplate extends BaseModel implements HasMedia
      * Preview the template with the given data.
      *
      * @param  array<string, mixed>  $data  Additional data to merge with preview data
-     *
      * @return array{subject: string, body_html: string|null, body_text: string|null}
      */
     public function preview(array $data = []): array
@@ -206,7 +201,6 @@ class NotificationTemplate extends BaseModel implements HasMedia
      * Scope a query to only include active templates.
      *
      * @param  Builder  $query
-     *
      * @return Builder
      */
     public function scopeActive($query)
@@ -218,7 +212,6 @@ class NotificationTemplate extends BaseModel implements HasMedia
      * Scope a query to only include templates for a specific channel.
      *
      * @param  Builder  $query
-     *
      * @return Builder
      */
     public function scopeForChannel($query, string $channel)
@@ -230,7 +223,6 @@ class NotificationTemplate extends BaseModel implements HasMedia
      * Scope a query to only include templates for a specific category.
      *
      * @param  Builder  $query
-     *
      * @return Builder
      */
     public function scopeForCategory($query, string $category)

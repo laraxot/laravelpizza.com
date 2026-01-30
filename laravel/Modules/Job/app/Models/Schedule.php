@@ -258,7 +258,6 @@ class Schedule extends BaseModel
      * Safely evaluate function strings (avoiding eval).
      *
      * @param  string  $functionString  Il nome della funzione da valutare
-     *
      * @return string|null Il risultato della funzione o null se la funzione non è consentita
      *
      * @throws InvalidArgumentException Se viene passato un argomento non valido

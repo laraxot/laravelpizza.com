@@ -1,5 +1,8 @@
 # Convenzioni per i Link nella Documentazione
 
+## Collegamenti correlati
+- [Composer merge plugin](composer-merge-plugin.md)
+
 ## Regole Fondamentali per i Link Markdown
 
 ### 1. Utilizzare Sempre Percorsi Relativi

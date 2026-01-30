@@ -1,0 +1,55 @@
+Starting docs renaming process at Wed Jul  9 17:03:40 CEST 2025
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/roadmap/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/resources/views/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/node_modules/concurrently/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs
+[WARNING] ./sections/header_language_avatar_implementation.md already exists. Skipping rename of ./sections/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md
+[WARNING] ./sections/header_language_user_dropdown.md already exists. Skipping rename of ./sections/HEADER_LANGUAGE_USER_DROPDOWN.md
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel/Themes/Two/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/bashscripts/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/bashscripts/docs/docs
+\nProcessing: /var/www/html/_bases/base_<nome progetto>/laravel_bak/docs
+renamed './TESTING.md' -> './testing.md'
+renamed './TESTING_FRAMEWORK_GUIDELINES.md' -> './testing_framework_guidelines.md'
+\nRenaming process completed at Wed Jul  9 17:03:55 CEST 2025
+\nChecking for remaining uppercase files/directories...
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Chart/docs: 59 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Tenant/docs: 76 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Geo/docs: 109 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Gdpr/docs: 79 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Lang/docs: 126 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/docs: 300 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Cms/app/Console/Commands/stubs/docs: 9 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Media/docs: 96 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/SaluteMo/docs: 72 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs: 613 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Xot/docs/roadmap/docs: 2 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Notify/docs: 364 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/UI/docs: 204 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/docs: 246 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/User/resources/views/docs: 6 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Activity/docs: 132 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs: 97 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/Job/docs/build_local/docs: 11 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Modules/<nome progetto>/docs: 423 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Themes/One/docs: 81 items with uppercase letters
+/var/www/html/_bases/base_<nome progetto>/laravel/Themes/Two/docs: 1 items with uppercase letters

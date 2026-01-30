@@ -84,7 +84,6 @@ trait HasCommonScopes
      * Scope query to records created after a date.
      *
      * @param  Builder<static>  $query
-     *
      * @return Builder<static>
      */
     public function scopeCreatedAfter(Builder $query, mixed $date): Builder
@@ -96,7 +95,6 @@ trait HasCommonScopes
      * Scope query to records created before a date.
      *
      * @param  Builder<static>  $query
-     *
      * @return Builder<static>
      */
     public function scopeCreatedBefore(Builder $query, mixed $date): Builder
@@ -108,7 +106,6 @@ trait HasCommonScopes
      * Scope query to records updated after a date.
      *
      * @param  Builder<static>  $query
-     *
      * @return Builder<static>
      */
     public function scopeUpdatedAfter(Builder $query, mixed $date): Builder
@@ -120,7 +117,6 @@ trait HasCommonScopes
      * Scope query to records created by a specific user.
      *
      * @param  Builder<static>  $query
-     *
      * @return Builder<static>
      */
     public function scopeCreatedBy(Builder $query, string|int $userId): Builder

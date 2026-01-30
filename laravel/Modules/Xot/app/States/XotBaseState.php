@@ -95,7 +95,6 @@ abstract class XotBaseState extends State implements StateContract
      *
      * @param  array<string, mixed>  $arguments
      * @param  array<string, mixed>  $data
-     *
      * @return array<string, mixed>
      */
     public function modalFillForm(array $arguments, array $data): array

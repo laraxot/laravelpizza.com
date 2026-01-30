@@ -49,6 +49,7 @@ function createTenant(array $attributes = []): Tenant
     /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create($attributes);
     Assert::isInstanceOf($tenant, Tenant::class); // Added for PHPStan
+
     return $tenant;
 }
 
@@ -57,6 +58,7 @@ function makeTenant(array $attributes = []): Tenant
     /** @var Tenant $tenant */
     $tenant = Tenant::factory()->make($attributes);
     Assert::isInstanceOf($tenant, Tenant::class); // Added for PHPStan
+
     return $tenant;
 }
 

@@ -22,16 +22,16 @@ class TenantSubscriptionFactory extends Factory
     {
         return [
             'tenant_id' => Tenant::factory(),
-            'plan_name' => $this->faker->randomElement(['basic', 'pro', 'enterprise']),
-            'status' => $this->faker->randomElement(['active', 'inactive', 'trial', 'cancelled']),
-            'max_users' => $this->faker->numberBetween(1, 1000),
-            'current_users' => $this->faker->numberBetween(1, 500),
-            'max_storage_gb' => $this->faker->randomFloat(2, 1, 100),
-            'current_storage_gb' => $this->faker->randomFloat(2, 0, 50),
-            'billing_cycle' => $this->faker->randomElement(['monthly', 'yearly']),
-            'billing_amount' => $this->faker->randomFloat(2, 10, 500),
-            'next_billing_date' => $this->faker->dateTime,
-            'expires_at' => $this->faker->dateTime,
+            'plan_name' => ['basic', 'pro', 'enterprise'][array_rand(['basic', 'pro', 'enterprise'])],
+            'status' => ['active', 'inactive', 'trial', 'cancelled'][array_rand(['active', 'inactive', 'trial', 'cancelled'])],
+            'max_users' => random_int(1, 1000),
+            'current_users' => random_int(1, 500),
+            'max_storage_gb' => round(random_int(100, 10000) / 100, 2),
+            'current_storage_gb' => round(random_int(0, 5000) / 100, 2),
+            'billing_cycle' => ['monthly', 'yearly'][array_rand(['monthly', 'yearly'])],
+            'billing_amount' => round(random_int(1000, 50000) / 100, 2),
+            'next_billing_date' => \Carbon\Carbon::now()->addDays(random_int(1, 365)),
+            'expires_at' => \Carbon\Carbon::now()->addDays(random_int(1, 365)),
         ];
     }
 }

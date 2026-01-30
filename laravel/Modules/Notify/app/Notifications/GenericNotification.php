@@ -59,7 +59,6 @@ class GenericNotification extends Notification implements ShouldQueue
      * Ottiene i canali di consegna della notifica.
      *
      * @param  mixed  $_notifiable  L'entità da notificare (oggetto che riceverà la notifica)
-     *
      * @return array<int, string>
      */
     public function via(mixed $_notifiable): array
@@ -74,7 +73,7 @@ class GenericNotification extends Notification implements ShouldQueue
      */
     public function toMail($notifiable): MailMessage
     {
-        $mail = (new MailMessage())
+        $mail = (new MailMessage)
             ->subject($this->title)
             ->greeting('Gentile '.$this->getRecipientName($notifiable))
             ->line($this->message);
@@ -99,7 +98,6 @@ class GenericNotification extends Notification implements ShouldQueue
      * Ottiene la rappresentazione SMS della notifica.
      *
      * @param  mixed  $notifiable
-     *
      * @return array<string, mixed>
      */
     public function toTwilio($notifiable): array
@@ -128,7 +126,6 @@ class GenericNotification extends Notification implements ShouldQueue
      * Ottiene la rappresentazione database della notifica.
      *
      * @param  mixed  $notifiable
-     *
      * @return array<string, mixed>
      */
     public function toDatabase($notifiable): array
@@ -154,6 +151,7 @@ class GenericNotification extends Notification implements ShouldQueue
             if (is_string($fullName)) {
                 return $fullName;
             }
+
             return 'Utente';
         }
 

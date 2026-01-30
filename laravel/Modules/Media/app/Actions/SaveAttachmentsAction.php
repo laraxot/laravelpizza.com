@@ -6,11 +6,12 @@ namespace Modules\Media\Actions;
 
 use Exception;
 use Illuminate\Support\Facades\Storage;
+use Spatie\MediaLibrary\HasMedia;
+use Webmozart\Assert\Assert;
+
 use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
-use Spatie\MediaLibrary\HasMedia;
-use Webmozart\Assert\Assert;
 
 class SaveAttachmentsAction
 {

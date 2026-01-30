@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use function Safe\json_decode;
-use function Safe\json_encode;
-
 use Illuminate\Support\Str;
 use Modules\Activity\Models\Activity;
+
+use function Safe\json_decode;
+use function Safe\json_encode;
 
 uses(\Modules\Activity\Tests\TestCase::class);
 

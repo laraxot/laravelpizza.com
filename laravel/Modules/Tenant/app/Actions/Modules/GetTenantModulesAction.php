@@ -7,9 +7,10 @@ namespace Modules\Tenant\Actions\Modules;
 use Exception;
 use Illuminate\Support\Facades\File;
 use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
-use function Safe\json_decode;
 use Spatie\QueueableAction\QueueableAction;
 use Throwable;
+
+use function Safe\json_decode;
 
 class GetTenantModulesAction
 {

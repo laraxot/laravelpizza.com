@@ -1,0 +1,42 @@
+{
+    "name": "laraxot/module_cloudstorage_fila3",
+    "description": "",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\CloudStorage\\Providers\\CloudStorageServiceProvider",
+                "Modules\\CloudStorage\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\CloudStorage\\": "app/",
+            "Modules\\CloudStorage\\Database\\Factories\\": "database/factories/",
+            "Modules\\CloudStorage\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\CloudStorage\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "spatie/laravel-google-cloud-storage": "^2.3",
+        "google/apiclient": "^2.18"
+    },
+    "require-dev": {
+        "driftingly/rector-laravel": "^2.1",
+        "symplify/phpstan-rules": "^14.9",
+        "rector/rector": "^2.3"
+    }
+}

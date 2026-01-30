@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use Illuminate\Support\Carbon;
+uses(\Modules\Job\Tests\TestCase::class);
+
 use Modules\Job\Models\Job;
 
 describe('Job Business Logic', function () {

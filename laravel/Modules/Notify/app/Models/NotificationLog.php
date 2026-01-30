@@ -32,14 +32,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property Carbon|null $clicked_at
  * @property Carbon $created_at
  * @property Carbon $updated_at
- *
  * @property-read NotificationTemplate|null $template
- *
  * @property string $notifiable_type
  * @property int $notifiable_id
  * @property string $title
  * @property string|null $error
- *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $deleter
  * @property-read MediaCollection<int, Media> $media
@@ -85,6 +82,7 @@ final class NotificationLog extends BaseModel
         'sent_at',
         'delivered_at',
         'opened_at',
+        'clicked_at',
     ];
 
     /**
@@ -124,6 +122,26 @@ final class NotificationLog extends BaseModel
         NotificationLogStatusEnum $status,
     ): Builder {
         return $query->where('status', $status);
+    }
+
+    /**
+     * Segna il log come aperto (tracking apertura email).
+     */
+    public function markAsOpened(): void
+    {
+        if ($this->opened_at === null) {
+            $this->update(['opened_at' => now()]);
+        }
+    }
+
+    /**
+     * Segna il log come cliccato (tracking click su link).
+     */
+    public function markAsClicked(): void
+    {
+        if ($this->clicked_at === null) {
+            $this->update(['clicked_at' => now()]);
+        }
     }
 
     /**

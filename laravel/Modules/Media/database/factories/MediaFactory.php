@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 use Modules\Media\Models\Media;
 
 /**
@@ -30,33 +31,34 @@ class MediaFactory extends Factory
      */
     public function definition(): array
     {
-        /** @var string $fileName */
-        $fileName = $this->faker->word();
-        /** @var string $extension */
-        $extension = $this->faker->randomElement(['jpg', 'png', 'pdf', 'doc']);
+        $extensions = ['jpg', 'png', 'pdf', 'doc'];
+        $collections = ['default', 'avatars', 'documents'];
+
+        /** @var lowercase-string&non-falsy-string $fileName */
+        $fileName = 'file'.(string) random_int(1000, 9999);
+
+        /** @var lowercase-string&non-falsy-string $extension */
+        $extension = $extensions[array_rand($extensions)];
+
+        /** @var string $collectionName */
+        $collectionName = $collections[array_rand($collections)];
 
         return [
-            'model_type' => 'App\\Models\\User',
-            'model_id' => $this->faker->numberBetween(1, 100),
-            'uuid' => $this->faker->uuid(),
-            'collection_name' => $this->faker->randomElement(['default', 'avatars', 'documents']),
+            'model_type' => 'Modules\\User\\Models\\User',
+            'model_id' => (string) random_int(1, 100),
+            'uuid' => (string) Str::uuid(),
+            'collection_name' => $collectionName,
             'name' => $fileName,
             'file_name' => $fileName.'.'.$extension,
             'mime_type' => $this->getMimeTypeFromExtension($extension),
             'disk' => 'public',
             'conversions_disk' => 'public',
-            'size' => $this->faker->numberBetween(1024, 10485760), // 1KB to 10MB
+            'size' => random_int(1024, 10485760),
             'manipulations' => [],
             'custom_properties' => [],
             'generated_conversions' => [],
             'responsive_images' => [],
-            'order_column' => $this->faker->numberBetween(1, 100),
-            'directory' => $this->faker->randomElement(['uploads', 'documents', 'images']),
-            'path' => '/storage/'.$fileName.'.'.$extension,
-            'width' => $this->faker->optional()->numberBetween(100, 1920),
-            'height' => $this->faker->optional()->numberBetween(100, 1080),
-            'type' => $extension,
-            'ext' => $extension,
+            'order_column' => random_int(1, 100),
         ];
     }
 
@@ -65,16 +67,14 @@ class MediaFactory extends Factory
      */
     public function image(): static
     {
-        $extension = (string) $this->faker->randomElement(['jpg', 'png', 'gif']);
-        $fileName = (string) $this->faker->word();
+        $extensions = ['jpg', 'png', 'gif'];
+        $extension = $extensions[array_rand($extensions)];
+        $fileName = 'file'.(string) random_int(1000, 9999);
 
         return $this->state(fn (array $_attributes): array => [
             'mime_type' => $this->getMimeTypeFromExtension($extension),
             'file_name' => $fileName.'.'.$extension,
-            'type' => $extension,
-            'ext' => $extension,
-            'width' => $this->faker->numberBetween(100, 1920),
-            'height' => $this->faker->numberBetween(100, 1080),
+            'name' => $fileName,
         ]);
     }
 
@@ -83,16 +83,14 @@ class MediaFactory extends Factory
      */
     public function document(): static
     {
-        $extension = (string) $this->faker->randomElement(['pdf', 'doc', 'docx']);
-        $fileName = (string) $this->faker->word();
+        $extensions = ['pdf', 'doc', 'docx'];
+        $extension = $extensions[array_rand($extensions)];
+        $fileName = 'file'.(string) random_int(1000, 9999);
 
         return $this->state(fn (array $_attributes): array => [
             'mime_type' => $this->getMimeTypeFromExtension($extension),
             'file_name' => $fileName.'.'.$extension,
-            'type' => $extension,
-            'ext' => $extension,
-            'width' => null,
-            'height' => null,
+            'name' => $fileName,
         ]);
     }
 

@@ -30,7 +30,6 @@ use Override;
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  *

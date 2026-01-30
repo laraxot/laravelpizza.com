@@ -2,15 +2,13 @@
 
 declare(strict_types=1);
 
-use Illuminate\Support\Carbon;
 use Modules\Job\Models\Job;
 use Modules\Job\Models\JobBatch;
 use Modules\Job\Tests\TestCase;
 
 uses(TestCase::class);
 
-it('can create job batch with basic information', function (): void
-{
+it('can create job batch with basic information', function (): void {
     $batchData = [
         'id' => 'batch-123',
         'name' => 'Processamento utenti batch',
@@ -43,8 +41,7 @@ it('can create job batch with basic information', function (): void
     expect($batch->failed_jobs)->toBe(0);
 });
 
-it('can manage batch job progression', function (): void
-{
+it('can manage batch job progression', function (): void {
     $batch = JobBatch::create([
         'id' => 'progression-test',
         'name' => 'Test progressione',
@@ -67,8 +64,7 @@ it('can manage batch job progression', function (): void
     expect($batch->total_jobs - $batch->pending_jobs)->toBe(3);
 });
 
-it('can handle batch job failures', function (): void
-{
+it('can handle batch job failures', function (): void {
     $batch = JobBatch::create([
         'id' => 'failure-test',
         'name' => 'Test fallimenti',
@@ -92,8 +88,7 @@ it('can handle batch job failures', function (): void
     expect(json_decode($batch->failed_job_ids, true))->toBe($failedJobIds);
 });
 
-it('can manage batch completion status', function (): void
-{
+it('can manage batch completion status', function (): void {
     $batch = JobBatch::create([
         'id' => 'completion-test',
         'name' => 'Test completamento',
@@ -117,8 +112,7 @@ it('can manage batch completion status', function (): void
     expect($batch->cancelled())->toBeFalse();
 });
 
-it('can handle batch cancellation', function (): void
-{
+it('can handle batch cancellation', function (): void {
     $batch = JobBatch::create([
         'id' => 'cancellation-test',
         'name' => 'Test cancellazione',
@@ -139,8 +133,7 @@ it('can handle batch cancellation', function (): void
     expect($batch->cancelled())->toBeTrue();
 });
 
-it('can manage batch options and configuration', function (): void
-{
+it('can manage batch options and configuration', function (): void {
     $options = [
         'priority' => 'high',
         'notify_on_completion' => true,
@@ -165,8 +158,7 @@ it('can manage batch options and configuration', function (): void
     expect(json_decode($batch->options, true)['notify_on_completion'])->toBeTrue();
 });
 
-it('can calculate batch progress percentage', function (): void
-{
+it('can calculate batch progress percentage', function (): void {
     $batch = JobBatch::create([
         'id' => 'progress-test',
         'name' => 'Test progresso',
@@ -185,8 +177,7 @@ it('can calculate batch progress percentage', function (): void
     expect($progressPercentage)->toBe(25.0);
 });
 
-it('can handle batch job relationships', function (): void
-{
+it('can handle batch job relationships', function (): void {
     $batch = JobBatch::create([
         'id' => 'relationships-test',
         'name' => 'Test relazioni',
@@ -223,8 +214,7 @@ it('can handle batch job relationships', function (): void
     expect($job2->payload)->toContain($batch->id);
 });
 
-it('can manage batch cleanup and maintenance', function (): void
-{
+it('can manage batch cleanup and maintenance', function (): void {
     $batch = JobBatch::create([
         'id' => 'cleanup-test',
         'name' => 'Test pulizia',
@@ -243,8 +233,7 @@ it('can manage batch cleanup and maintenance', function (): void
     expect($batch->finished_at < now()->subDays(5))->toBeTrue();
 });
 
-it('can handle batch retry logic', function (): void
-{
+it('can handle batch retry logic', function (): void {
     $batch = JobBatch::create([
         'id' => 'retry-test',
         'name' => 'Test retry',
@@ -275,8 +264,7 @@ it('can handle batch retry logic', function (): void
     expect($batch->finished())->toBeFalse();
 });
 
-it('can handle batch notification settings', function (): void
-{
+it('can handle batch notification settings', function (): void {
     $batch = JobBatch::create([
         'id' => 'notification-test',
         'name' => 'Test notifiche',
@@ -299,8 +287,7 @@ it('can handle batch notification settings', function (): void
     expect($options['notification_slack'])->toBe('https://hooks.slack.com/...');
 });
 
-it('can handle batch bulk operations', function (): void
-{
+it('can handle batch bulk operations', function (): void {
     // Crea un batch di batch per testare operazioni bulk
     $batchList = [];
     $statuses = ['active', 'completed', 'failed'];
@@ -321,14 +308,13 @@ it('can handle batch bulk operations', function (): void
     expect($batchList)->toHaveCount(3);
 
     foreach ($batchList as $index => $batch) {
-        expect($batch->id)->toBe('bulk-batch-' . ($index + 1));
+        expect($batch->id)->toBe('bulk-batch-'.($index + 1));
         expect($batch->total_jobs)->toBe(($index + 1) * 10);
         expect($batch->status)->toBe($statuses[$index]);
     }
 });
 
-it('can validate batch integrity', function (): void
-{
+it('can validate batch integrity', function (): void {
     // Test con batch valido
     $validBatch = JobBatch::create([
         'id' => 'valid-batch',

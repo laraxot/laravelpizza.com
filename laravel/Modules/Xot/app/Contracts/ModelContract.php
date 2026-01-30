@@ -112,7 +112,6 @@ interface ModelContract
      *
      * @param  array  $attributes
      * @param  bool  $exists
-     *
      * @return static
      */
     public function newInstance($attributes = [], $exists = false);

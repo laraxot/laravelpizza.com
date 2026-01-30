@@ -35,6 +35,5 @@ class TelegramData extends Data
         public ?array $replyMarkup = null,
         public ?array $media = null,
         public string $type = 'text',
-    ) {
-    }
+    ) {}
 }

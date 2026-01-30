@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salute Orale - Prenota la tua visita</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animazioni SVG */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delay-1 {
+            animation: float 6s ease-in-out 1s infinite;
+        }
+        .animate-float-delay-2 {
+            animation: float 6s ease-in-out 2s infinite;
+        }
+        
+        /* Stile personalizzato */
+        .btn-primary {
+            @apply bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-6 rounded-md transition duration-300;
+        }
+        .nav-button {
+            @apply p-3 bg-blue-800 hover:bg-blue-900 text-white rounded-md transition;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- SVG Background Elements (Animati) -->
+    <div class="fixed -z-10 inset-0 overflow-hidden">
+        <svg class="absolute top-20 left-10 animate-float opacity-5" width="200" height="200" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" fill="#2563eb" />
+        </svg>
+        <svg class="absolute bottom-40 right-10 animate-float-delay-1 opacity-5" width="150" height="150" viewBox="0 0 100 100">
+            <rect x="10" y="10" width="80" height="80" rx="10" fill="#2563eb" />
+        </svg>
+        <svg class="absolute top-1/2 right-1/4 animate-float-delay-2 opacity-5" width="120" height="120" viewBox="0 0 100 100">
+            <polygon points="50,10 90,90 10,90" fill="#2563eb" />
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-3xl font-light">
+                <span class="font-bold">Salute</span> Ora<span class="italic">le</span>
+            </div>
+            <button class="text-3xl md:hidden">
+                ☰
+            </button>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:underline">Home</a>
+                <a href="#" class="hover:underline">Servizi</a>
+                <a href="#" class="hover:underline">Chi Siamo</a>
+                <a href="#" class="hover:underline">Contatti</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <h1 class="text-3xl font-bold text-blue-900 mb-8">Prenota la tua visita</h1>
+        
+        <!-- Calendar Component -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-blue-800">Novembre 2024</h2>
+                <div class="flex space-x-2">
+                    <button class="nav-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button class="nav-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Calendar Grid -->
+            <div class="grid grid-cols-7 gap-2 text-center font-bold mb-2">
+                <div class="text-blue-800">Do</div>
+                <div class="text-blue-800">Lu</div>
+                <div class="text-blue-800">Ma</div>
+                <div class="text-blue-800">Me</div>
+                <div class="text-blue-800">Gi</div>
+                <div class="text-blue-800">Ve</div>
+                <div class="text-blue-800">Sa</div>
+            </div>
+            
+            <div class="grid grid-cols-7 gap-2 text-center">
+                <div class="p-2 text-gray-300">27</div>
+                <div class="p-2 text-gray-300">28</div>
+                <div class="p-2 text-gray-300">29</div>
+                <div class="p-2 text-gray-300">30</div>
+                <div class="p-2 text-gray-300">31</div>
+                <div class="p-2">1</div>
+                <div class="p-2">2</div>
+                
+                <div class="p-2">3</div>
+                <div class="p-2">4</div>
+                <div class="p-2">5</div>
+                <div class="p-2">6</div>
+                <div class="p-2 bg-blue-100 rounded-md">7</div>
+                <div class="p-2">8</div>
+                <div class="p-2">9</div>
+                
+                <div class="p-2">10</div>
+                <div class="p-2">11</div>
+                <div class="p-2 bg-blue-800 text-white rounded-md">12</div>
+                <div class="p-2 bg-blue-100 rounded-md">13</div>
+                <div class="p-2">14</div>
+                <div class="p-2">15</div>
+                <div class="p-2">16</div>
+                
+                <div class="p-2">17</div>
+                <div class="p-2 bg-blue-100 rounded-md">18</div>
+                <div class="p-2">19</div>
+                <div class="p-2 bg-blue-100 rounded-md">20</div>
+                <div class="p-2">21</div>
+                <div class="p-2">22</div>
+                <div class="p-2">23</div>
+                
+                <div class="p-2">24</div>
+                <div class="p-2">25</div>
+                <div class="p-2 bg-blue-100 rounded-md">26</div>
+                <div class="p-2">27</div>
+                <div class="p-2 bg-blue-100 rounded-md">28</div>
+                <div class="p-2">29</div>
+                <div class="p-2">30</div>
+            </div>
+        </div>
+        
+        <!-- Availability Section -->
+        <div class="mb-4">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-blue-900">Disponibilità</h2>
+                <span class="text-gray-500">12 Novembre</span>
+            </div>
+        </div>
+        
+        <!-- Time Slots -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center text-xl">
+                        <span class="font-semibold">15:00</span>
+                        <span class="mx-4 text-gray-400">—</span>
+                        <span class="font-semibold">16:00</span>
+                    </div>
+                    <button class="btn-primary">Prenota</button>
+                </div>
+                
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center text-xl">
+                        <span class="font-semibold">16:00</span>
+                        <span class="mx-4 text-gray-400">—</span>
+                        <span class="font-semibold">17:00</span>
+                    </div>
+                    <button class="btn-primary">Prenota</button>
+                </div>
+                
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center text-xl">
+                        <span class="font-semibold">17:00</span>
+                        <span class="mx-4 text-gray-400">—</span>
+                        <span class="font-semibold">18:00</span>
+                    </div>
+                    <button class="btn-primary">Prenota</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white p-6 mt-10">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Salute Orale</h3>
+                    <p>Specialisti nella cura del tuo sorriso dal 1995.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contatti</h3>
+                    <p>Via Roma 123, Milano</p>
+                    <p>Tel: 02 1234567</p>
+                    <p>Email: info@<nome progetto>le.it</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Orari</h3>
+                    <p>Lun-Ven: 9:00 - 19:00</p>
+                    <p>Sabato: 9:00 - 13:00</p>
+                    <p>Domenica: Chiuso</p>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-4 text-center">
+                <p>&copy; 2024 Salute Orale. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script per gestire le interazioni del calendario e prenotazioni
+        document.addEventListener('DOMContentLoaded', function() {
+            // Qui potremmo aggiungere funzionalità JavaScript se necessario
+        });
+    </script>
+</body>
+</html>

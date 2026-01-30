@@ -11,6 +11,7 @@ use Filament\Tables\Filters\TernaryFilter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Modules\User\Models\User;
+
 use function Safe\strtotime;
 
 /**

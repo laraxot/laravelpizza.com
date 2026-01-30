@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Modules\Job\Tests\Unit\Models;
+uses(\Modules\Job\Tests\TestCase::class);
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Job\Models\BaseModel;
 
 beforeEach(function () {
-    $this->baseModel = new class extends BaseModel {
+    $this->baseModel = new class extends BaseModel
+    {
         protected $table = 'test_job_table';
     };
 });

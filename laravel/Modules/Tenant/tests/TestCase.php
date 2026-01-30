@@ -5,100 +5,42 @@ declare(strict_types=1);
 namespace Modules\Tenant\Tests;
 
 use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 use Modules\Tenant\Providers\TenantServiceProvider;
-use Orchestra\Testbench\TestCase as BaseTestCase;
+use Modules\Xot\Tests\CreatesApplication;
+use Modules\Xot\Tests\TestCase as XotTestCase;
 
 /**
  * Base test case for Tenant module tests.
+ *
+ * Uses MySQL from .env.testing (NOT SQLite). Single source of truth: .env.testing.
+ * Runs full migrate first, then module migrations.
+ *
+ * @property \Modules\Tenant\Models\TestSushiModel $model
+ * @property string $testDirectory
+ * @property string $testJsonPath
+ * @property \Closure $createTestData
  */
-abstract class TestCase extends BaseTestCase
+abstract class TestCase extends XotTestCase
 {
-    /**
-     * Define environment setup.
-     *
-     * @param  Application  $app
-     */
-    protected function defineEnvironment($app): void
-    {
-        // Setup default environment variables
-        $app['config']->set('app.key', 'AckfSECXIvnK5r28GVIWUAxmbBSjTsmF');
+    use CreatesApplication;
 
-        $dbName = 'file:memdb_tenant_'.Str::random(10).'?mode=memory&cache=shared';
-        $connections = [
-            'sqlite',
-            'mysql',
-            'mariadb',
-            'pgsql',
-            'tenant',
-            'user',
-            'xot',
-            'activity',
-            'cms',
-            'geo',
-            'job',
-            'lang',
-            'media',
-            'notify',
-            'ui',
-        ];
+    protected static bool $migrated = false;
 
-        foreach ($connections as $conn) {
-            $app['config']->set("database.connections.{$conn}.driver", 'sqlite');
-            $app['config']->set("database.connections.{$conn}.database", $dbName);
-        }
-    }
-
-    /**
-     * Setup the test environment.
-     */
     protected function setUp(): void
     {
         parent::setUp();
 
-        $connections = [
-            'sqlite',
-            'mysql',
-            'mariadb',
-            'pgsql',
-            'tenant',
-            'user',
-            'xot',
-            'activity',
-            'cms',
-            'geo',
-            'job',
-            'lang',
-            'media',
-            'notify',
-            'ui',
-        ];
-
-        foreach ($connections as $conn) {
-            DB::purge($conn);
+        if (! self::$migrated) {
+            $this->artisan('migrate', ['--force' => true]);
+            self::$migrated = true;
         }
 
-        foreach ($connections as $conn) {
-            try {
-                $pdo = DB::connection($conn)->getPdo();
-                if (method_exists($pdo, 'sqliteCreateFunction')) {
-                    $pdo->sqliteCreateFunction('md5', static fn (?string $value): ?string => $value === null ? null : md5($value));
-                    $pdo->sqliteCreateFunction('unhex', static fn (?string $value): ?string => $value);
-                }
-            } catch (\Throwable) {
-            }
-        }
-
-        // Module migrations (preferred in this codebase)
         $this->artisan('module:migrate', ['module' => 'Xot', '--force' => true]);
         $this->artisan('module:migrate', ['module' => 'User', '--force' => true]);
         $this->artisan('module:migrate', ['module' => 'Tenant', '--force' => true]);
     }
 
     /**
-     * Get package providers.
-     *
      * @param  Application  $app
      * @return array<int, class-string>
      */

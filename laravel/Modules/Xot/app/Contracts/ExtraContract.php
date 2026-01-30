@@ -48,6 +48,4 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  *
  * @mixin \Eloquent
  */
-interface ExtraContract
-{
-}
+interface ExtraContract {}

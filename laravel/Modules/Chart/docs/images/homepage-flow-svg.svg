@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f0f0f0"/>
+  <text x="200" y="50" text-anchor="middle" font-size="20" font-weight="bold">Portale Salute Orale</text>
+  
+  <rect x="50" y="100" width="300" height="50" fill="#4a90e2" rx="10"/>
+  <text x="200" y="130" text-anchor="middle" fill="white" font-size="16">Pagina Principale</text>
+  
+  <g transform="translate(100, 200)">
+    <rect width="80" height="40" fill="#2ecc71" rx="5"/>
+    <text x="40" y="25" text-anchor="middle" fill="white">Paziente</text>
+  </g>
+  
+  <g transform="translate(220, 200)">
+    <rect width="80" height="40" fill="#e74c3c" rx="5"/>
+    <text x="40" y="25" text-anchor="middle" fill="white">Dentista</text>
+  </g>
+  
+  <path d="M140,220 L220,220" stroke="#333" stroke-dasharray="5,5"/>
+</svg>

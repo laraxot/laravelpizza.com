@@ -81,7 +81,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
      * Configura il form del widget.
      *
      * @param  Schema  $schema  Il form da configurare
-     *
      * @return Schema Il form configurato
      */
     public function form(Schema $schema): Schema

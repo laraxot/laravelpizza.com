@@ -29,7 +29,7 @@ class MetatagPage extends XotBasePage implements HasForms
 
     public array $data = [];
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-document-text';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-document-text';
 
     protected string $view = 'xot::filament.pages.metatag';
 

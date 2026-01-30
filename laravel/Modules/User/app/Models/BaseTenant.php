@@ -22,15 +22,15 @@ use Spatie\Sluggable\SlugOptions;
 /**
  * Modules\User\Models\Tenant.
  *
- * @method static TenantFactory  factory($count = null, $state = [])
+ * @method static TenantFactory factory($count = null, $state = [])
  * @method static Builder|Tenant newModelQuery()
  * @method static Builder|Tenant newQuery()
  * @method static Builder|Tenant query()
  *
  * @property EloquentCollection<int, Model&UserContract> $members
- * @property int|null                                    $members_count
- * @property ProfileContract|null                        $creator
- * @property ProfileContract|null                        $updater
+ * @property int|null $members_count
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
  *
  * @mixin \Eloquent
  */

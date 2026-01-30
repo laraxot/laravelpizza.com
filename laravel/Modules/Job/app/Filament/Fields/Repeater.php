@@ -9,7 +9,7 @@ use Webmozart\Assert\Assert;
 
 class Repeater extends ComponentsRepeater
 {
-    public function getItemLabel(string $uuid): null|string
+    public function getItemLabel(string $uuid): ?string
     {
         $container = $this->getChildSchema($uuid);
         if ($container === null) {

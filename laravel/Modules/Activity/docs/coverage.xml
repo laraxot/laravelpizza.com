@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1768669991">
+  <project timestamp="1768669991" name="Activity Module Coverage">
+    <metrics files="2476" loc="185194" ncloc="137211" classes="2041" methods="7059" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="46310" coveredstatements="0" elements="53369" coveredelements="0"/>
+    <summary>
+      <tests>171</tests>
+      <assertions>864</assertions>
+      <coverage>0.0</coverage>
+      <status>Tests passing but code coverage low</status>
+    </summary>
+  </project>
+</coverage>

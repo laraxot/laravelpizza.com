@@ -21,18 +21,24 @@ abstract class TestCase extends BaseTestCase
     use CreatesApplication;
     use DatabaseTransactions;
 
+    protected static bool $migrated = false;
+
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->artisan('migrate', ['--database' => 'gdpr']);
-        $this->artisan('migrate', ['--database' => 'user']);
-        $this->artisan('migrate', ['--database' => 'xot']);
+        if (! self::$migrated) {
+            $this->artisan('migrate', ['--force' => true]);
+            self::$migrated = true;
+        }
+
+        $this->artisan('migrate', ['--database' => 'gdpr', '--force' => true]);
+        $this->artisan('migrate', ['--database' => 'user', '--force' => true]);
+        $this->artisan('migrate', ['--database' => 'xot', '--force' => true]);
     }
 
     /**
-     * @param \Illuminate\Foundation\Application $app
-     *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array<int, class-string>
      */
     protected function getPackageProviders($app): array

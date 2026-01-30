@@ -33,7 +33,6 @@ use Spatie\Activitylog\Models\Activity as SpatieActivity;
  * @property string|null $created_by
  * @property string|null $deleted_at
  * @property string|null $deleted_by
- *
  * @property-read Model|null $causer
  * @property-read Collection $changes
  * @property-read Model|null $subject

@@ -9,8 +9,9 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
 use Modules\Notify\Datas\WhatsAppData;
-use function Safe\json_decode;
 use Spatie\QueueableAction\QueueableAction;
+
+use function Safe\json_decode;
 
 final class SendVonageWhatsAppAction
 {
@@ -60,7 +61,6 @@ final class SendVonageWhatsAppAction
      * Execute the action.
      *
      * @param  WhatsAppData  $whatsAppData  I dati del messaggio WhatsApp
-     *
      * @return array<string, mixed> Risultato dell'operazione
      *
      * @throws Exception In caso di errore durante l'invio
@@ -184,7 +184,6 @@ final class SendVonageWhatsAppAction
      * Determina il tipo di media basato sull'URL o sull'estensione del file.
      *
      * @param  string  $url  URL del media
-     *
      * @return string Tipo di media (image, video, audio, file)
      */
     private function determineMediaType(string $url): string

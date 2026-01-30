@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+> [2025-05-28] Policy aggiornata: tutti i file e cartelle in docs/ devono essere lowercase, tranne README.md. Motivazione: coerenza, portabilità, manutenzione.

@@ -15,7 +15,6 @@ use Modules\Xot\Database\Factories\PulseValueFactory;
  * @property string $key
  * @property string|null $key_hash
  * @property string $value
- *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  *

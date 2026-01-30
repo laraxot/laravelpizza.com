@@ -22,7 +22,6 @@ use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
  * @property int $id
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
- *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $deleter
  * @property-read ProfileContract|null $updater

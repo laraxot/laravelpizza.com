@@ -60,7 +60,6 @@ class WhatsAppNotification extends Notification implements ShouldQueue
      * Get the notification's delivery channels.
      *
      * @param  mixed  $_notifiable  L'entità da notificare
-     *
      * @return array<int, string>
      */
     public function via(mixed $_notifiable): array

@@ -6,6 +6,9 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Models\BaseModel;
+use Modules\Media\Tests\TestCase;
+
+uses(TestCase::class);
 
 beforeEach(function () {
     $this->baseModel = new class extends BaseModel

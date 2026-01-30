@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\View as ViewFacade;
 use Illuminate\View\Component;
 use Modules\Xot\Actions\GetViewAction;
 use RuntimeException;
+
 use function Safe\ob_end_clean;
 use function Safe\ob_start;
 
@@ -23,8 +24,7 @@ class XDebug extends Component
         // public Post $article,
         // public bool $showAuthor = false,
         public string $tpl = 'v1',
-    ) {
-    }
+    ) {}
 
     public function render(): View
     {

@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salute Orale - Conferma Iscrizione</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .wave-animation {
+            animation: wave 8s ease-in-out infinite alternate;
+        }
+        
+        @keyframes wave {
+            0% { d: path('M0,100 C150,120 300,80 500,100 L500,0 L0,0 Z'); }
+            100% { d: path('M0,100 C200,80 300,120 500,100 L500,0 L0,0 Z'); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .success-checkmark {
+            animation: scaleCheck 1s ease-in-out;
+        }
+        
+        @keyframes scaleCheck {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Background SVG Wave -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="absolute top-0 w-full h-52">
+            <path 
+                d="M0,100 C150,120 300,80 500,100 L500,0 L0,0 Z" 
+                fill="#003b71" 
+                class="wave-animation">
+            </path>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-10 p-4 bg-transparent">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-light text-white">
+                <span class="font-normal">SALUTE</span> ORA<span class="italic">le</span>
+            </h1>
+            <!-- Mobile Menu Button -->
+            <button class="text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 px-4 pt-12 pb-20">
+        <div class="container mx-auto max-w-lg fade-in">
+            <!-- Success Icon (Hidden in mobile but visible in desktop) -->
+            <div class="hidden md:flex justify-center mb-8">
+                <div class="success-checkmark bg-green-100 p-4 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Confirmation Message -->
+            <div class="mb-6">
+                <h2 class="text-2xl font-normal text-gray-800">
+                    Ti ringraziamo per esserti iscritta al portale<br>
+                    <span class="font-bold text-black text-3xl">Salute Ora</span>
+                </h2>
+            </div>
+            
+            <!-- Information Text -->
+            <div class="text-lg text-gray-700 leading-relaxed">
+                <p>
+                    Procederemo all'esame dei dati e dei documenti inviatici. Qualora il tuo profilo dovesse rientrare nei requisiti richiesti, riceverai una mail di conferma e potrai effettuare l'accesso al servizio.
+                </p>
+            </div>
+            
+            <!-- Additional Info (Desktop only) -->
+            <div class="hidden md:block mt-10 bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="text-xl font-semibold text-[#003b71] mb-3">Prossimi passi:</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Controllo della documentazione (1-2 giorni lavorativi)</li>
+                    <li>Invio email di conferma</li>
+                    <li>Attivazione completa dell'account</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer (Desktop only) -->
+    <footer class="hidden md:block relative z-10 mt-10 bg-gray-200 py-6">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p>© 2025 Salute Orale. Tutti i diritti riservati.</p>
+            <div class="mt-2">
+                <a href="#" class="text-[#003b71] hover:underline mx-2">Privacy Policy</a>
+                <a href="#" class="text-[#003b71] hover:underline mx-2">Termini di Servizio</a>
+                <a href="#" class="text-[#003b71] hover:underline mx-2">Contatti</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

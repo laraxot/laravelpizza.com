@@ -237,7 +237,6 @@ abstract class ListLogActivities extends XotBasePage implements HasForms
             ->filter(static fn ($field): bool => $field instanceof Field)
             ->mapWithKeys(
                 /** @param Field $field
-                 *
                  * @return array<string, string>
                  */
                 static function (Component $field): array {

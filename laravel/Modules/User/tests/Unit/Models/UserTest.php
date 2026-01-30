@@ -7,14 +7,20 @@ use Modules\User\Enums\UserType;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
+// Import per le funzioni Safe
+use function Safe\json_decode;
+use function Safe\json_encode;
+
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->user = User::factory()->create([
+    /** @var User $user */
+    $user = User::factory()->create([
         'type' => UserType::MasterAdmin,
         'email' => fake()->unique()->safeEmail(),
         'password' => Hash::make('password123'),
     ]);
+    $this->user = $user;
 });
 
 test('user can be created', function (): void {
