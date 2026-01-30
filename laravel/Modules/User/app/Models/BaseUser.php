@@ -222,7 +222,17 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
             // Fallback in case database connection is not available (e.g., during testing)
             $this->fillable = array_values($this->getFillable());
             // Avoid calling parent constructor if database is not available
-            $this->attributes = $attributes;
+
+            $stringKeyAttributes = [];
+
+            foreach ($attributes as $key => $value) {
+                if (is_string($key)) {
+                    $stringKeyAttributes[$key] = $value;
+                }
+            }
+
+            /** @var array<string, mixed> $stringKeyAttributes */
+            $this->attributes = $stringKeyAttributes;
         }
     }
 

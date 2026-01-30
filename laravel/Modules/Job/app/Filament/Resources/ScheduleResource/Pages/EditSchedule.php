@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Job\Filament\Resources\ScheduleResource\Pages;
 
 use Filament\Notifications\Notification;
+use Filament\Support\Components\Component;
 use Illuminate\Support\Collection;
 use Illuminate\Validation\ValidationException;
 use Modules\Job\Filament\Resources\ScheduleResource;
@@ -20,11 +21,15 @@ class EditSchedule extends XotBaseEditRecord
 
     protected static string $resource = ScheduleResource::class;
 
-    #[Override]
-    public function getformSchema(): array
+    /**
+     * @return array<int, Component>
+     */
+    #[\Override]
+    public function getFormSchema(): array
     {
         Assert::isArray($res = $this->getResource()::getFormSchema());
 
+        /** @var array<int, Component> $res */
         return $res;
     }
 

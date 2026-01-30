@@ -95,9 +95,14 @@ class ListPermissions extends XotBaseListRecords
                         if (method_exists($record, 'roles')) {
                             /** @var BelongsToMany $rolesRelation */
                             $rolesRelation = $record->roles();
-                            $roleData = $data['role'];
+
+                            $roleData = $data['role'] ?? null;
+
                             if (is_array($roleData) || is_int($roleData) || is_string($roleData)) {
-                                $rolesRelation->sync($roleData);
+                                /** @var array<int, int|string> $ids */
+                                $ids = is_array($roleData) ? $roleData : [$roleData];
+
+                                $rolesRelation->sync($ids);
                                 $record->save();
                             }
                         }
