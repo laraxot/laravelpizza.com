@@ -28,7 +28,7 @@ trait SushiToJsons
     {
         $tbl = $this->getTable();
         $path = TenantService::filePath('database/content/'.$tbl);
-        
+
         $files = File::glob($path.'/*.json');
 
         /** @var array<int, array<string, mixed>> $rows */
