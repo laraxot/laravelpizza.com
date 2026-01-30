@@ -33,7 +33,7 @@ parameters:
         - ./*/vendor/*
         - ./*/build/*
         - ./*/docs/*
-        # - ./*/tests/*
+        - ./*/tests/*
         - ./*/phpinsights.php
         - ./*/rector.php
         - ./*/*.blade.php

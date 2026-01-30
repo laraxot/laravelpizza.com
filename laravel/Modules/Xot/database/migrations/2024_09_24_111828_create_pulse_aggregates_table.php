@@ -12,9 +12,6 @@ return new class extends XotBaseMigration
      */
     public function up(): void
     {
-        if (! $this->shouldRun()) {
-            return;
-        }
         // -- CREATE --
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();

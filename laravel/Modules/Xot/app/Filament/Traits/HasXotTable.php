@@ -18,6 +18,7 @@ use Filament\Actions\EditAction;
 use Filament\Actions\ReplicateAction;
 use Filament\Actions\ViewAction;
 use Filament\Notifications\Notification;
+use Filament\Resources\Pages\ListRecords;
 use Filament\Tables;
 use Filament\Tables\Columns\Layout\Stack;
 use Filament\Tables\Columns\TextColumn;
@@ -34,7 +35,6 @@ use Modules\UI\Enums\TableLayoutEnum;
 use Modules\UI\Filament\Actions\Table\TableLayoutToggleTableAction;
 use Modules\Xot\Actions\Model\TableExistsByModelClassActions;
 use Webmozart\Assert\Assert;
-use Filament\Resources\Pages\ListRecords;
 
 /**
  * Trait HasXotTable.
@@ -200,12 +200,12 @@ trait HasXotTable
         // Configurazioni opzionali personalizzabili
         $sortColumn = $this->getDefaultTableSortColumn();
         $sortDirection = $this->getDefaultTableSortDirection();
-        if (null !== $sortColumn && null !== $sortDirection) {
+        if ($sortColumn !== null && $sortDirection !== null) {
             $table = $table->defaultSort($sortColumn, $sortDirection);
         }
 
         $pollInterval = $this->getTablePollInterval();
-        if (null !== $pollInterval) {
+        if ($pollInterval !== null) {
             $table = $table->poll($pollInterval);
         }
 
@@ -247,26 +247,35 @@ trait HasXotTable
 
         $actions = [];
         $resource = $this;
+        /** @phpstan-ignore-next-line instanceof.alwaysFalse (TableWidget returns early; ListRecords/RelationManager reach here) */
         if ($this instanceof ListRecords) {
             $resourceClass = $this->getResource();
-            $resource = app($resourceClass);
+            /** @phpstan-ignore-next-line function.alreadyNarrowedType (getResource returns class-string in ListRecords) */
+            if (is_string($resourceClass)) {
+                $resource = app($resourceClass);
+            }
         }
 
-        // @phpstan-ignore-next-line function.alreadyNarrowedType
+        /** @phpstan-ignore-next-line function.alreadyNarrowedType (TableWidget returns early; $resource is object here) */
+        if (! is_object($resource)) {
+            return $actions;
+        }
+
+        /** @phpstan-ignore-next-line function.alreadyNarrowedType (TableWidget returns early; resource is object with methods) */
         if (method_exists($resource, 'canView')) {
             $actions['view'] = ViewAction::make()
                 ->iconButton()
                 ->visible(fn (Model $record): bool => (bool) $resource->canView($record));
         }
 
-        // @phpstan-ignore-next-line function.alreadyNarrowedType
+        /** @phpstan-ignore-next-line function.alreadyNarrowedType */
         if (method_exists($resource, 'canEdit')) {
             $actions['edit'] = EditAction::make()
                 ->iconButton()
                 ->visible(fn (Model $record): bool => (bool) $resource->canEdit($record));
         }
 
-        // @phpstan-ignore-next-line function.alreadyNarrowedType
+        /** @phpstan-ignore-next-line function.alreadyNarrowedType */
         if (method_exists($resource, 'canDelete')) {
             $actions['delete'] = DeleteAction::make()
                 ->iconButton()
@@ -330,9 +339,10 @@ trait HasXotTable
     /**
      * Get model class.
      *
-     * @throws \Exception Se non viene trovata una classe modello valida
      *
      * @return class-string<Model>
+     *
+     * @throws \Exception Se non viene trovata una classe modello valida
      */
     public function getModelClass(): string
     {

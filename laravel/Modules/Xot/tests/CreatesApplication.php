@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests;
 
-use function Safe\realpath;
-
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Application;
 
@@ -23,7 +21,7 @@ trait CreatesApplication
     public function createApplication(): Application
     {
         // Get base path (assuming tests are in Modules/{Module}/tests/)
-        $basePath = realpath(__DIR__.'/../../../');
+        $basePath = dirname(__DIR__, 3);
 
         // Explicitly set the base path before requiring bootstrap/app.php
         $_ENV['APP_BASE_PATH'] = $basePath;
@@ -31,6 +29,7 @@ trait CreatesApplication
         // Explicitly set the base path before requiring bootstrap/app.php
         $_ENV['APP_BASE_PATH'] = $basePath;
 
+        /** @var Application $app */
         $app = require $basePath.'/bootstrap/app.php';
 
         // Bind essential paths if they are not correctly resolved

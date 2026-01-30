@@ -8,8 +8,6 @@ use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
 // Import per le funzioni Safe
-use function Safe\json_decode;
-use function Safe\json_encode;
 
 uses(TestCase::class);
 

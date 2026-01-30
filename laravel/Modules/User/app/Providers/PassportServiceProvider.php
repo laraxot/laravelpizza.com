@@ -114,13 +114,13 @@ class PassportServiceProvider extends ServiceProvider
             $clientModel = OauthClient::class;
         }
 
-        /** @var class-string<\Laravel\Passport\Token> $tokenModel */
+        /* @var class-string<\Laravel\Passport\Token> $tokenModel */
         Passport::useTokenModel($tokenModel);
-        /** @var class-string<\Laravel\Passport\RefreshToken> $refreshTokenModel */
+        /* @var class-string<\Laravel\Passport\RefreshToken> $refreshTokenModel */
         Passport::useRefreshTokenModel($refreshTokenModel);
-        /** @var class-string<\Laravel\Passport\AuthCode> $authCodeModel */
+        /* @var class-string<\Laravel\Passport\AuthCode> $authCodeModel */
         Passport::useAuthCodeModel($authCodeModel);
-        /** @var class-string<\Laravel\Passport\Client> $clientModel */
+        /* @var class-string<\Laravel\Passport\Client> $clientModel */
         Passport::useClientModel($clientModel);
 
         // @phpstan-ignore-next-line - method_exists check kept for backward compatibility with older Passport versions
@@ -130,7 +130,7 @@ class PassportServiceProvider extends ServiceProvider
             if (! is_subclass_of($deviceCodeModel, \Laravel\Passport\DeviceCode::class)) {
                 $deviceCodeModel = OauthDeviceCode::class;
             }
-            /** @var class-string<\Laravel\Passport\DeviceCode> $deviceCodeModel */
+            /* @var class-string<\Laravel\Passport\DeviceCode> $deviceCodeModel */
             Passport::useDeviceCodeModel($deviceCodeModel);
         }
     }

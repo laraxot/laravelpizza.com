@@ -1,8 +1,0 @@
-dalla immagine che ti passo devi crearmi 3 file 
-- un file html con tailwindcss 
-- un file .md descrittivo per immagine dettagliato a fondo, questo e' mobile, percio' dovrai immaginare te la versione desktop , qui metti anche tuoi consigli e riflessioni
-- un file .blade.php , gli elementi del form falli con filamentphp + laravel + filamentphp + folio + volt + laraxot
-partiamo con prima immagine , se io ti passo poppo.png te mi dovrai restiuire 2 file poppo.html e poppo.md , 
-gli elementi dello sfondo falli animati in svg, stando attenti al peso che deve essere istantaneo e fluido , nel file .md aggiungi anche i tuoi consigli e riflessioni ,
-hai domande ?
-
