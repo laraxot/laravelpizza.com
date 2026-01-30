@@ -5,12 +5,9 @@ declare(strict_types=1);
 namespace Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\Pages;
 
 use Filament\Actions\Action;
-use Filament\Actions\Action;
+use Filament\Actions\CreateAction;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\TextInput;
-use Filament\Notifications\Notification;
-use Filament\Notifications\Notification;
-use Modules\User\Actions\Passport\CreateClientAction;
+use Filament\Notifications\Notification as FilamentNotification;
 use Modules\User\Actions\Passport\CreateClientAction;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -40,7 +37,7 @@ class ListOauthClients extends XotBaseListRecords
                         redirect: (string) config('app.url'),
                         personalAccess: true,
                     );
-                    Notification::make()
+                    FilamentNotification::make()
                         ->title(static::trans('actions.create_personal.success'))
                         ->success()
                         ->send();
@@ -66,7 +63,7 @@ class ListOauthClients extends XotBaseListRecords
                         password: true,
                         provider: (string) $data['provider'],
                     );
-                    Notification::make()
+                    FilamentNotification::make()
                         ->title(static::trans('actions.create_password.success'))
                         ->success()
                         ->send();
@@ -86,7 +83,7 @@ class ListOauthClients extends XotBaseListRecords
                         name: (string) $data['name'],
                         redirect: (string) config('app.url'),
                     );
-                    Notification::make()
+                    FilamentNotification::make()
                         ->title(static::trans('actions.create_client_credentials.success'))
                         ->success()
                         ->send();

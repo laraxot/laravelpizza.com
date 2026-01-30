@@ -56,7 +56,6 @@ trait HasGdpr
     }
 
     /**
-     * <<<<<<< Updated upstream
      * Check if the user has given a specific consent.
      */
     public function hasGivenConsent(ConsentType|string $type): bool

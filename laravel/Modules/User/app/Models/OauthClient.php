@@ -7,10 +7,6 @@ namespace Modules\User\Models;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-<<<<<<< HEAD
-=======
-use Illuminate\Database\Eloquent\Relations\MorphTo;
->>>>>>> 024bfed1 (.)
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Support\Carbon;
 use Laravel\Passport\Client as PassportClient;

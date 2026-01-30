@@ -464,6 +464,7 @@ class ExampleResource extends XotBaseResource
 
 ## Collegamenti
 
+- [filament-5-upgrade-guide.md](filament-5-upgrade-guide.md) - Guida upgrade a Filament v5
 - [Best Practices](best-practices-consolidated.md)
 - [PHPStan Guide](phpstan-consolidated.md)
 - [Testing Guide](testing-consolidated.md)

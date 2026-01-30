@@ -17,14 +17,9 @@ use Filament\Forms\Components\Toggle;
 use Filament\Resources\Pages\PageRegistration;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
-<<<<<<< HEAD:app/Filament/Clusters/Socialite/Resources/SsoProviderResource.php
 use Modules\User\Filament\Clusters\Socialite;
 use Modules\User\Filament\Clusters\Socialite\Resources\SsoProviderResource\Pages;
 use Modules\User\Filament\Clusters\Socialite\Resources\SsoProviderResource\RelationManagers\UsersRelationManager;
-=======
-use Modules\User\Filament\Resources\SsoProviderResource\Pages;
-use Modules\User\Filament\Resources\SsoProviderResource\RelationManagers\UsersRelationManager;
->>>>>>> 024bfed1 (.):app/Filament/Resources/SsoProviderResource.php
 use Modules\User\Models\SsoProvider;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 
@@ -72,10 +67,7 @@ class SsoProviderResource extends XotBaseResource
             'is_active' => Toggle::make('is_active'),
         ];
     }
-<<<<<<< HEAD:app/Filament/Clusters/Socialite/Resources/SsoProviderResource.php
 
-=======
->>>>>>> 024bfed1 (.):app/Filament/Resources/SsoProviderResource.php
     /**
      * @return array<string, TextColumn|IconColumn>
      */
@@ -125,10 +117,7 @@ class SsoProviderResource extends XotBaseResource
             ]),
         ];
     }
-<<<<<<< HEAD:app/Filament/Clusters/Socialite/Resources/SsoProviderResource.php
 
-=======
->>>>>>> 024bfed1 (.):app/Filament/Resources/SsoProviderResource.php
     /**
      * @return array<string, class-string<\Filament\Resources\RelationManagers\RelationManager>>
      */

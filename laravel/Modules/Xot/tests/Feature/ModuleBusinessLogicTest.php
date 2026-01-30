@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Xot\Models\Module;
+use Webmozart\Assert\Assert;
 
 uses(DatabaseTransactions::class);
 
@@ -19,6 +20,7 @@ it('can create module', function () {
     ];
 
     // Act
+    /** @var Modules\Xot\Models\Module $module */
     $module = Module::create($moduleData);
 
     // Assert
@@ -38,6 +40,7 @@ it('can create module', function () {
 
 it('can enable and disable module', function () {
     // Arrange
+    /** @var Modules\Xot\Models\Module $module */
     $module = Module::factory()->create(['enabled' => false]);
 
     // Act - Enable module
@@ -418,8 +421,15 @@ it('can manage module error logging', function () {
     // Assert
     $this->assertIsArray($module_error_log);
     $this->assertCount(1, $module_error_log);
-    $this->assertEquals('error', $module_error_log[0]['level']);
-    $this->assertEquals('Test error message', $module_error_log[0]['message']);
-    $this->assertEquals('test.php', $module_error_log[0]['context']['file']);
-    $this->assertEquals(42, $module_error_log[0]['context']['line']);
+    
+    // Type narrowing per array access sicuro
+    $logEntry = $module_error_log[0] ?? null;
+    $this->assertIsArray($logEntry);
+    $this->assertEquals('error', $logEntry['level']);
+    $this->assertEquals('Test error message', $logEntry['message']);
+    
+    $context = $logEntry['context'] ?? null;
+    $this->assertIsArray($context);
+    $this->assertEquals('test.php', $context['file']);
+    $this->assertEquals(42, $context['line']);
 });

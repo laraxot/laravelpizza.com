@@ -78,6 +78,15 @@ abstract class XotBaseMigration extends LaravelMigration
         return $this->model->getTable();
     }
 
+    /**
+     * Whether this migration should run (e.g. conditional on config or environment).
+     * Override in anonymous migration classes to skip execution.
+     */
+    public function shouldRun(): bool
+    {
+        return true;
+    }
+
     public function getConn(): Builder
     {
         return Schema::connection($this->model->getConnectionName());
