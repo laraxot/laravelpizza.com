@@ -1,302 +1,230 @@
-# MCP (Model Context Protocol) Configuration for UI/UX and Tailwind CSS Optimization
+# MCP Server Configuration - Meetup Module
 
-## Overview
-This document describes how to configure Model Context Protocol (MCP) servers specifically for enhancing UI/UX development and Tailwind CSS integration in the Laravel Pizza project. These configurations will help AI assistants better understand and work with your styling, design systems, and front-end components.
+**Last Updated**: 31 Gennaio 2026
+**Status**: ✅ Configured
+**MCP Servers**: Asana, ClickUp, Filesystem, Database, Redmine (Planned)
 
-## MCP for UI/UX Enhancement
+---
 
-### File Structure
-```
-Modules/{AnyModule}/
-├── docs/
-│   └── mcp_configuration.md    # This file
-├── config/
-│   └── mcp.php               # MCP-specific configurations
-├── resources/
-│   ├── css/
-│   │   └── app.css          # Tailwind CSS configuration
-│   ├── js/
-│   │   └── app.js           # JavaScript for UI interactions
-│   └── views/
-│       ├── components/      # Blade components
-│       ├── layouts/         # Layout templates
-│       └── pages/           # Page templates
-└── public/
-    └── css/                 # Compiled stylesheets
-```
+## 📋 Overview
 
-### MCP Server Configuration for UI/UX
+The Meetup module's MCP configuration enables AI assistants to interact with:
+- **Asana Work Graph** - Event management and task tracking
+- **ClickUp Workspace** - Advanced task workflows and time tracking
+- **Redmine** - Project management (planned, requires self-hosted instance)
+- **Filesystem** - Event model and Filament resource access
+- **Database** - Event, registration, and attendee data inspection
 
-Configure MCP servers that specifically assist with UI/UX development:
+---
 
-#### 1. Tailwind CSS Server
-- **Purpose**: Provides access to Tailwind CSS utilities and configuration
-- **Functionality**:
-  - View current Tailwind config file
-  - Access to custom colors, spacing, typography
-  - Component utility classes reference
+## 🔧 Configuration
 
-#### 2. Filesystem Server (UI Focus)
-- **Purpose**: Access to UI/UX related files
-- **Focus Areas**:
-  - Blade templates and components
-  - CSS files and configurations
-  - JavaScript for interactivity
-  - Image and media assets
-  - Design system documentation
+### Active MCP Servers
 
-#### 3. Asset Compilation Server
-- **Purpose**: Handle Vite/Laravel Mix compilation
-- **Functionality**:
-  - CSS/JS build processes
-  - Asset optimization
-  - Hot reloading for development
-
-### Environment Variables for UI/UX MCP
-
-Add these to your `.env` file:
-
-```env
-# MCP UI/UX Settings
-MCP_FILESYSTEM_ENABLED=true
-MCP_TAILWIND_ENABLED=true
-MCP_ASSET_SERVER_ENABLED=true
-MCP_CSS_ANALYSIS_ENABLED=true
-
-# MCP Security
-MCP_REQUIRE_AUTH=false
-MCP_LOGGING_ENABLED=true
-MCP_LOG_CHANNEL=stack
-MCP_LOG_LEVEL=info
-
-# UI/UX Specific
-MCP_TAILWIND_CONFIG_PATH=resources/css/app.css
-MCP_VITE_CONFIG_PATH=vite.config.js
-MCP_COMPONENT_SCAN_PATH=resources/views/components
-```
-
-## Recommended MCP Tools for Tailwind CSS
-
-### 1. Tailwind CSS Analysis Tool
 ```json
 {
-  "name": "tailwind-analyzer",
-  "command": "npx",
-  "args": ["tailwindcss", "--config", "tailwind.config.js"],
-  "description": "Analyzes Tailwind CSS usage and configuration"
-}
-```
-
-### 2. CSS Utility Generator
-- Generates Tailwind utility classes based on design requirements
-- Creates custom component classes
-- Validates CSS class combinations
-
-### 3. Component Inspector
-- Inspects existing Blade components
-- Analyzes component structure and styling
-- Suggests Tailwind class improvements
-
-### 4. Design System Server
-- Provides access to design tokens
-- Color palette management
-- Typography scales
-- Spacing systems
-
-## MCP Configuration for UI/UX Development
-
-### Tailwind CSS Server Configuration
-
-```php
-// config/localhost/mcp.php
-'servers' => [
-    'tailwind' => [
-        'command' => 'npx',
-        'args' => ['tailwindcss'],
-        'env' => [
-            'TAILWIND_CONFIG_FILE' => base_path('tailwind.config.js'),
-            'CSS_INPUT_FILE' => resource_path('css/app.css'),
-            'CSS_OUTPUT_FILE' => public_path('css/app.css'),
-        ],
-        'description' => 'Tailwind CSS compilation and analysis server',
-    ],
-    'vite' => [
-        'command' => 'npx',
-        'args' => ['vite'],
-        'env' => [
-            'VITE_CONFIG_FILE' => base_path('vite.config.js'),
-            'ASSET_PATH' => public_path('build'),
-        ],
-        'description' => 'Asset compilation and development server',
-    ],
-    'blade-inspector' => [
-        'command' => 'php',
-        'args' => ['artisan', 'view:cache'],
-        'env' => [
-            'BLADE_COMPILE_PATH' => storage_path('framework/views'),
-        ],
-        'description' => 'Blade template inspection and compilation',
-    ],
-],
-```
-
-## MCP Tools for UI/UX Enhancement
-
-### 1. Live Preview Server
-- Real-time preview of UI changes
-- Hot reloading for CSS/JS
-- Component isolation mode
-- Responsive design testing
-
-### 2. Accessibility Checker
-- WCAG compliance checking
-- Color contrast analysis
-- ARIA attribute validation
-- Keyboard navigation testing
-
-### 3. Performance Analyzer
-- CSS bundle size optimization
-- Unused class detection
-- Image optimization suggestions
-- Loading performance metrics
-
-### 4. Responsive Design Tool
-- Multi-device preview
-- Breakpoint testing
-- Touch interaction simulation
-- Mobile-first design validation
-
-## MCP Integration with Laravel Pizza UI Components
-
-### In Blade Components
-```php
-// MCP can assist with component creation
-class PizzaCard extends Component
-{
-    public function render()
-    {
-        // MCP can suggest optimal Tailwind classes
-        // for responsive design and accessibility
-        return view('components.pizza-card');
-    }
-}
-```
-
-### In Views
-```blade
-{{-- MCP can suggest Tailwind utility combinations --}}
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {{-- Dynamic pizza cards with proper spacing --}}
-</div>
-```
-
-### In CSS Configuration
-```js
-// tailwind.config.js - MCP can analyze and suggest improvements
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        'pizza-red': '#DC2626',
-        'pizza-gold': '#F59E0B',
-      },
-      fontFamily: {
-        'display': ['Poppins', 'sans-serif'],
-        'body': ['Inter', 'sans-serif'],
-      },
+  "mcpServers": {
+    "asana": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://mcp.asana.com/sse"],
+      "description": "Asana Work Graph integration"
     },
-  },
+    "clickup": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.clickup.com/mcp"],
+      "description": "ClickUp workspace integration"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_laravelpizza/laravel"],
+      "description": "Access to Meetup module files"
+    },
+    "database": {
+      "command": "npx",
+      "args": ["-y", "@bytebase/dbhub"],
+      "env": {
+        "DATABASE_URL": "sqlite:///var/www/_bases/base_laravelpizza/laravel/database/database.sqlite"
+      },
+      "description": "SQLite database queries"
+    }
+  }
 }
 ```
 
-## MCP Security Considerations for UI/UX
+---
 
-### 1. Asset Security
-- Prevent unauthorized access to design files
-- Validate uploaded media assets
-- Sanitize CSS content to prevent XSS
+## 🚀 Usage Examples
 
-### 2. Component Security
-- Validate component inputs
-- Prevent malicious template injection
-- Sanitize user-generated content in templates
-
-### 3. Performance Security
-- Limit excessive asset generation
-- Prevent CSS bloat through validation
-- Monitor build process resource usage
-
-## MCP Development Workflow for UI/UX
-
-### 1. Design System Creation
-- Generate consistent color palettes
-- Create typography scales
-- Build reusable component libraries
-- Document design patterns
-
-### 2. Component Development
-- Create atomic components (buttons, cards, forms)
-- Build molecule components (search bars, navigation)
-- Develop organism components (headers, footers)
-- Assemble page templates
-
-### 3. Responsive Design
-- Implement mobile-first approach
-- Create responsive breakpoints
-- Test cross-browser compatibility
-- Optimize for different devices
-
-### 4. Accessibility Integration
-- Add semantic HTML structure
-- Implement proper ARIA attributes
-- Ensure keyboard navigation
-- Validate color contrast ratios
-
-## MCP Configuration for Different Environments
-
-### Development
-- Full Tailwind CSS access
-- Hot reloading enabled
-- Detailed CSS analysis
-- Component isolation tools
-- Performance monitoring
-
-### Staging
-- Read-only CSS analysis
-- Limited asset generation
-- Performance validation only
-- Accessibility checking
-
-### Production
-- MCP disabled for UI/UX tools
-- Static asset optimization only
-- Security-focused validation
-- Performance monitoring
-
-## Sample MCP Commands for UI/UX
-
-### Tailwind CSS Analysis
+### Asana Integration
 ```bash
-# Analyze unused classes
-npx @tailwindcss/oxide analyze
+# Create task
+"Create task in 'LaravelPizza - Meetup Module' project: 'Implement recurring events feature'"
 
-# Optimize CSS bundle
-npx tailwindcss --minify
+# Track Folio page completion
+"Create task: 'Complete event detail page with Volt components'"
 
-# Check for deprecated classes
-npx tailwindcss --validate
+# Monitor RSVP system
+"Create task: 'Implement waitlist for sold-out events'"
 ```
 
-### Asset Optimization
+### ClickUp Integration
 ```bash
-# Build production assets
-npm run build
+# Create task
+"Create task in 'Meetup Development' space: 'Implement recurring events feature'"
 
-# Analyze bundle size
-npm run analyze
+# Update status
+"Update task 'Complete event detail page' status to 'In Progress'"
 
-# Check CSS performance
-npx cssstats
+# Log time
+"Log 4 hours on task 'Implement waitlist for sold-out events'"
 ```
 
-This MCP configuration will significantly enhance UI/UX development in the Laravel Pizza project by providing AI assistants with comprehensive access to styling tools, design systems, and front-end development utilities, enabling better suggestions for Tailwind CSS usage, component design, and overall user experience optimization.
+### Redmine Integration (Planned)
+```bash
+# Create issue
+"Create issue in project 'Meetup Module': task 'Implement recurring events feature' (Priority: Medium)"
+```
+
+### Filesystem Access
+
+```bash
+# Read Event model
+"Read file: Modules/Meetup/app/Models/Event.php"
+
+# Analyze Filament resources
+"List files in Modules/Meetup/app/Filament/Resources/"
+
+# Check Volt components
+"Read file: Themes/Meetup/resources/views/livewire/event-list.blade.php"
+```
+
+### Database Queries
+
+```bash
+# Check upcoming events
+"Query: SELECT * FROM events WHERE event_date >= NOW() ORDER BY event_date ASC"
+
+# Analyze registrations
+"Query: SELECT event_id, COUNT(*) as attendees FROM event_registrations GROUP BY event_id"
+
+# Check RSVP status
+"Query: SELECT * FROM event_registrations WHERE status = 'confirmed' ORDER BY created_at DESC"
+```
+
+---
+
+## 📊 MCP Servers Comparison
+
+| Server | Status | Auth | Best For |
+|--------|--------|------|----------|
+| **Asana** | ✅ Active | OAuth | Established workflows |
+| **ClickUp** | ✅ Active | OAuth | Time tracking, reports |
+| **Redmine** | 🔄 Planned | API Key | Self-hosted, custom workflows |
+| **Filesystem** | ✅ Active | N/A | Direct file access |
+| **Database** | ✅ Active | N/A | Schema inspection |
+
+---
+
+## 📊 Integration with Roadmap
+
+### Roadmap Tasks → Asana
+
+Map Meetup module roadmap tasks to Asana:
+
+| Roadmap Task | Asana Project | Priority |
+|--------------|---------------|----------|
+| Folio pages completion | LaravelPizza - Meetup Module | High |
+| Recurring events | LaravelPizza - Meetup Module | Medium |
+| Attendee registration | LaravelPizza - Meetup Module | High |
+| Event calendar integration | LaravelPizza - Meetup Module | Medium |
+
+---
+
+## 🔌 Editor-Specific Configurations
+
+### Claude Desktop
+- **Config File**: `~/.config/claude/claude_desktop_config.json`
+- **Server URL**: `https://mcp.asana.com/sse`
+
+### Cursor
+- **Config File**: `/var/www/_bases/base_laravelpizza/laravel/.cursor-mcp.json`
+- **Command**: `npx mcp-remote https://mcp.asana.com/sse`
+
+### Windsurf
+- **Config File**: `/var/www/_bases/base_laravelpizza/laravel/.windsurf-mcp.json`
+- **Command**: `npx mcp-remote https://mcp.asana.com/sse`
+
+---
+
+## 📝 Best Practices for Meetup Module
+
+1. **Task Naming Convention**:
+   ```
+   "[Meetup] Implement {feature} for event management"
+   "[Meetup] Create Folio page for {page}"
+   "[Meetup] Fix issue in {component}"
+   ```
+
+2. **Project Organization**:
+   - Create dedicated Asana project: "LaravelPizza - Meetup Module"
+   - Use sections: "Events", "Registration", "Folio Pages", "Testing", "Documentation"
+
+3. **Tagging System**:
+   - `meetup-events` - Event related tasks
+   - `meetup-rsvp` - Registration tasks
+   - `meetup-folio` - Folio/Volt tasks
+   - `meetup-phpstan` - PHPStan compliance tasks
+
+4. **Use Asana for**: Established workflows, team collaboration
+5. **Use ClickUp for**: Time tracking, executive reports
+6. **Use Redmine for**: Self-hosted requirements (when implemented)
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**MCP Server Not Connecting**:
+```bash
+# Check MCP server status
+# Verify authentication tokens
+# Restart MCP client
+```
+
+**Filesystem Access Denied**:
+```bash
+# Verify file permissions
+# Check path configuration
+# Ensure .mcp.json has correct paths
+```
+
+**Database Query Fails**:
+```bash
+# Verify DATABASE_URL
+# Check SQLite file exists
+# Validate database schema
+```
+
+---
+
+## 📚 Related Documentation
+
+- [Asana MCP Configuration](../../../docs/mcp-asana-configuration.md)
+- [ClickUp MCP Configuration](../../../docs/mcp-clickup-configuration.md)
+- [Redmine MCP Configuration](../../../docs/mcp-redmine-configuration.md)
+- [Meetup Module Roadmap](./roadmap-2026-01-31.md)
+
+---
+
+## 🔄 Updates
+
+- **2026-01-31**: Added ClickUp support
+- **2026-01-31**: Planned Redmine integration
+- **Servers Active**: 4 (Asana, ClickUp, Filesystem, Database)
+
+---
+
+**Module**: Meetup (Business Logic)
+**MCP Version**: 2.0.0
+**Last Review**: 31 Gennaio 2026
