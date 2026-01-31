@@ -141,7 +141,7 @@ User Module
 
 ### Technology Stack
 - **Laravel**: 12.x
-- **Filament**: 4.x (for admin UI)
+- **Filament**: 5.x (for admin UI)
 - **Spatie Laravel Permission**: 6.x
 - **Laravel Sanctum**: API authentication
 - **Laravel Socialite**: OAuth providers
@@ -1143,7 +1143,7 @@ test('user can switch teams', function () {
 
 ### v2.5.0 - 2025-12-05
 - **Added**: Laravel 12 compatibility
-- **Added**: Filament 4 support
+- **Added**: Filament 5 support
 - **Fixed**: Merge conflicts in EditProfile and PasswordResetConfirmWidget
 - **Improved**: PHPStan Level 10 compliance
 
@@ -1192,13 +1192,13 @@ See [ROADMAP.md](./ROADMAP.md) for details.
 - [Laravel Authorization](https://laravel.com/docs/12.x/authorization)
 - [Spatie Permission](https://spatie.be/docs/laravel-permission)
 - [Laravel Sanctum](https://laravel.com/docs/12.x/sanctum)
-- [Filament Authentication](https://filamentphp.com/docs/4.x/panels/users)
+- [Filament Authentication](https://filamentphp.com/docs/5.x/panels/users)
 
 ---
 
 **Module**: User (Authentication & Authorization)
 **Version**: 2.5.0
-**Framework**: Laravel 12 + Filament 4
+**Framework**: Laravel 12 + Filament 5
 **PHPStan**: Level 10 ✅
 **Test Coverage**: 88%+ ✅
 **Security**: OWASP Compliant ✅

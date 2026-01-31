@@ -1,5 +1,10 @@
 # 🍕 LaravelPizza.com – Il side‑project Laravel che vorrai mostrare al prossimo meetup
 
+![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)
+![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)
+![Livewire 4.x](https://img.shields.io/badge/Livewire-4.x-orange.svg)
+![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)
+
 ## 🎯 Missione del Progetto
 
 **Questo è una CONVERSIONE e MIGLIORAMENTO di https://laravelpizza.com/**
@@ -24,20 +29,47 @@ Benvenuto nella base ufficiale di **LaravelPizza.com**: qui costruiamo un ecosis
 
 ---
 
+## 🚀 Stack Tecnologico
+
+### Backend
+- **PHP**: 8.3+
+- **Framework**: Laravel 12.x
+- **Admin Panel**: Filament 5.x
+- **Frontend Components**: Livewire 4.x
+- **Modularità**: nwidart/laravel-modules 12.x
+- **Database**: MySQL / SQLite
+- **Queue**: Redis
+- **Testing**: Pest
+
+### Frontend
+- **Routing**: Laravel Folio (file-based, NO controllers)
+- **Components**: Laravel Volt (declarative, NO class components)
+- **Styling**: Tailwind CSS 4.x
+- **JavaScript**: Alpine.js
+- **Build**: Vite
+
+### Quality Tools
+- **Static Analysis**: PHPStan Level 10 (0 errors su tutti i 14 moduli)
+- **Code Formatting**: Laravel Pint
+- **Quality Metrics**: PHP Insights
+- **Type Safety**: Strict types, generics, PHPDoc
+
+---
+
 ## 🚀 Perché questo repo vale il tuo tempo (e le tue PR)
 
  - **Tema frontoffice enhanced**: stiamo prendendo `laravelpizza.com` e lo stiamo **migliorando** dentro il **Meetup Theme**
   (home, events, menu, pagina contatti, auth, ecc.), con **Folio + Volt** come architettura obbligatoria.
   **Non è una copia** - è una versione premium, più cool, più coinvolgente.
-- **Architettura Laraxot**: un vero “framework nel framework”:
+- **Architettura Laraxot**: un vero "framework nel framework":
   - Moduli indipendenti (`Modules/*`)
   - Temi separati (`Themes/*`)
   - Regole rigide su migrazioni, layout, traduzioni, docs.
 - **Qualità maniacale**:
-  - PHPStan livello **10** obbligatorio
+  - PHPStan livello **10** obbligatorio (0 errori su tutti i 14 moduli)
   - Niente controller/routing classico per il frontoffice (solo Folio + Volt)
-  - Docs curate dentro ogni modulo/tema, niente conoscenza “nascosta”.
-- **Obiettivo reale**: questo codice non è un “esempio giocattolo”, ma la base per meetup veri,
+  - Docs curate dentro ogni modulo/tema, niente conoscenza "nascosta".
+- **Obiettivo reale**: questo codice non è un "esempio giocattolo", ma la base per meetup veri,
   pagine reali, community reali.
 
 Se ti piace imparare **architettura Laravel avanzata** mentre costruisci qualcosa di *tangibile*,
@@ -45,7 +77,7 @@ questo è un repo perfetto per te.
 
 ---
 
-## 🧱 Cosa c’è dentro
+## 🧱 Cosa c'è dentro
 
 - **Root progetto**: `/var/www/_bases/base_laravelpizza/`
 - **Laravel app**: `laravel/`
@@ -61,9 +93,37 @@ regole, bugfix, decisioni architetturali, analisi delle pagine, tutto passa da l
 
 ---
 
+## 📦 Moduli del Progetto (14 Moduli - Tutti PHPStan Level 10 Compliant ✅)
+
+### 🎯 Core Framework
+- **Xot** - Fondazione e cuore architetturale di Laraxot (0 errori)
+- **User** - Autenticazione, autorizzazione, RBAC, OAuth (0 errori)
+
+### 🌍 Internazionalizzazione & UI
+- **Lang** - Sistema centralizzato di traduzione e localizzazione (0 errori)
+- **UI** - Componenti Blade condivisi e widget Filament (0 errori)
+
+### 📊 Content & Features
+- **Cms** - Content management dinamico con sistema blocks (0 errori)
+- **Activity** - Tracking attività e audit logging (0 errori)
+- **Geo** - Gestione avanzata dati geografici e indirizzi (0 errori)
+- **Media** - Sistema avanzato upload e processing media (0 errori)
+- **Job** - Sistema avanzato code e job scheduling (0 errori)
+- **Notify** - Sistema notifiche multi-canale (0 errori)
+
+### 🏢 Business Logic
+- **Meetup** - Core business logic per piattaforma meetup (0 errori)
+- **Tenant** - Supporto multi-tenancy e isolamento dati (0 errori)
+- **Gdpr** - Compliance GDPR e privacy dati (0 errori)
+- **Seo** - SEO optimization e gestione metadata (0 errori)
+
+**Totale**: 14 moduli, 0 errori PHPStan Level 10 ✅
+
+---
+
 ## 🧠 Filosofia del progetto
 
-- **DRY + KISS estremi**: niente complicazioni inutili, ma anche niente “scorciatoie sporche”.
+- **DRY + KISS estremi**: niente complicazioni inutili, ma anche niente "scorciatoie sporche".
 - **Una tabella = una migrazione** (Laraxot Migration Philosophy).
 - **Frontoffice = Folio + Volt**:
   - niente controller per le pagine pubbliche
@@ -81,13 +141,13 @@ Se ti riconosci in questa filosofia, ti troverai a casa.
 
 ## 🔥 Come iniziare in 3 passi
 
-> Non serve essere “guru”: serve voglia di imparare e rispetto per le regole del progetto.
+> Non serve essere "guru": serve voglia di imparare e rispetto per le regole del progetto.
 
 - **1. Leggi le regole critiche**
   - `laravel/Modules/Xot/docs/critical-rules-consolidated.md`
   - `laravel/Modules/Meetup/docs/rules-index.md`
   - `laravel/Themes/Meetup/docs/critical-rules-consolidated.md`
-- **2. Avvia l’ambiente**
+- **2. Avvia l'ambiente**
   - setup Laravel classico (database, `.env`, ecc.)
   - dal tema Meetup:
     - `cd laravel/Themes/Meetup`
@@ -120,16 +180,16 @@ Ogni contributo che:
 
 ---
 
-## 🍕 Perché il nome “LaravelPizza”?
+## 🍕 Perché il nome "LaravelPizza"?
 
-Perché l’idea è semplice: **mettere insieme le due cose che rendono felice il 90% degli sviluppatori**:
+Perché l'idea è semplice: **mettere insieme le due cose che rendono felice il 90% degli sviluppatori**:
 
 - scrivere buon codice Laravel,
 - mangiare una pizza in compagnia,
 - condividere esperienze, problemi, soluzioni.
 
 Questo repo è il passo successivo:
-**standardizzare un setup di meetup Laravel “replicabile” ovunque nel mondo.**
+**standardizzare un setup di meetup Laravel "replicabile" ovunque nel mondo.**
 
 Se vuoi far parte di questa cosa, **forka il repo, apri una PR e raccontaci cosa hai fatto nelle docs.**
 

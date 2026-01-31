@@ -1,0 +1,215 @@
+name: CI - LaravelPizza.com
+
+on:
+  push:
+    branches: [ dev, develop, main ]
+  pull_request:
+    branches: [ dev, develop, main ]
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+
+jobs:
+  phpstan:
+    name: PHPStan Level 10 Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, xml, ctype, json, bcmath
+          coverage: none
+          tools: composer:v2
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction --no-scripts
+
+      - name: Run PHPStan Level 10
+        run: ./vendor/bin/phpstan analyse Modules --level=10 --memory-limit=-1 --error-format=table
+
+  phpmd:
+    name: PHPMD Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, xml, ctype, json, bcmath
+          coverage: none
+          tools: composer:v2
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction --no-scripts
+
+      - name: Run PHPMD
+        run: ./vendor/bin/phpmd Modules text codesize,design,naming,unusedcode
+
+  phpinsights:
+    name: PHP Insights Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, xml, ctype, json, bcmath
+          coverage: none
+          tools: composer:v2
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction --no-scripts
+
+      - name: Run PHP Insights
+        run: ./vendor/bin/phpinsights analyse Modules --min-quality=80 --min-complexity=80 --min-architecture=90 --min-style=95
+
+  pint:
+    name: Laravel Pint - Code Formatting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, xml, ctype, json, bcmath
+          coverage: none
+          tools: composer:v2, pint
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction --no-scripts
+
+      - name: Run Laravel Pint
+        run: ./vendor/bin/pint --test --dirty
+
+  pest:
+    name: Pest Tests
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: laravelpizza_test
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, xml, ctype, json, bcmath, pdo, pdo_mysql
+          coverage: none
+          tools: composer:v2
+
+      - name: Copy .env.testing
+        run: cp .env.testing .env
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction --no-scripts
+
+      - name: Generate application key
+        run: php artisan key:generate
+
+      - name: Run migrations
+        run: php artisan migrate --force
+
+      - name: Run Pest tests
+        run: ./vendor/bin/pest --coverage
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage.xml
+          flags: php
+          name: php-coverage
+
+  build-theme:
+    name: Build Meetup Theme
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: laravel/Themes/Meetup/package-lock.json
+
+      - name: Install npm dependencies
+        working-directory: ./laravel/Themes/Meetup
+        run: npm ci
+
+      - name: Build theme assets
+        working-directory: ./laravel/Themes/Meetup
+        run: npm run build
+
+      - name: Build theme attestation
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: './laravel/Themes/Meetup/public/build'
+          subject-name: 'laravelpizza-meetup-theme-assets'
+
+  quality-summary:
+    name: Quality Summary
+    runs-on: ubuntu-latest
+    needs: [phpstan, phpmd, phpinsights, pint, pest]
+
+    steps:
+      - name: Check all jobs passed
+        run: |
+          echo "✅ All quality checks passed!"
+          echo "PHPStan: Level 10 compliant"
+          echo "PHPMD: Code quality verified"
+          echo "PHP Insights: Quality metrics met"
+          echo "Pint: Code formatting verified"
+          echo "Pest: Tests passed"

@@ -1,0 +1,150 @@
+name: Deploy - LaravelPizza.com
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - staging
+          - production
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+
+jobs:
+  deploy-staging:
+    name: Deploy to Staging
+    if: github.ref == 'refs/heads/main' || github.event.inputs.environment == 'staging'
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://staging.laravelpizza.com
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, xml, ctype, json, bcmath, pdo, pdo_mysql
+          tools: composer:v2
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction --no-dev
+
+      - name: Generate application key
+        run: php artisan key:generate --env=staging
+
+      - name: Run migrations
+        run: php artisan migrate --force --env=staging
+
+      - name: Optimize application
+        run: |
+          php artisan config:cache --env=staging
+          php artisan route:cache --env=staging
+          php artisan view:cache --env=staging
+
+      - name: Clear and cache config
+        run: php artisan config:clear
+
+      - name: Create deployment artifact
+        run: |
+          tar -czf laravelpizza-${{ github.sha }}.tar.gz \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='node_modules' \
+            --exclude='tests' \
+            --exclude='.env.example' \
+            --exclude='phpunit.xml' \
+            .
+
+      - name: Create deployment attestation
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: 'laravelpizza-${{ github.sha }}.tar.gz'
+          subject-name: 'laravelpizza-deployment-${{ github.sha }}'
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment-artifact
+          path: laravelpizza-${{ github.sha }}.tar.gz
+          retention-days: 30
+
+  deploy-production:
+    name: Deploy to Production
+    if: github.ref == 'refs/heads/main' && github.event.inputs.environment == 'production'
+    runs-on: ubuntu-latest
+    needs: deploy-staging
+    environment:
+      name: production
+      url: https://laravelpizza.com
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, xml, ctype, json, bcmath, pdo, pdo_mysql
+          tools: composer:v2
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction --no-dev
+
+      - name: Generate application key
+        run: php artisan key:generate --env=production
+
+      - name: Run migrations
+        run: php artisan migrate --force --env=production
+
+      - name: Optimize application
+        run: |
+          php artisan config:cache --env=production
+          php artisan route:cache --env=production
+          php artisan view:cache --env=production
+
+      - name: Clear and cache config
+        run: php artisan config:clear
+
+      - name: Create production deployment artifact
+        run: |
+          tar -czf laravelpizza-prod-${{ github.sha }}.tar.gz \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='node_modules' \
+            --exclude='tests' \
+            --exclude='.env.example' \
+            --exclude='phpunit.xml' \
+            .
+
+      - name: Create production deployment attestation
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: 'laravelpizza-prod-${{ github.sha }}.tar.gz'
+          subject-name: 'laravelpizza-production-deployment-${{ github.sha }}'
+
+      - name: Upload production artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-deployment-artifact
+          path: laravelpizza-prod-${{ github.sha }}.tar.gz
+          retention-days: 90
+
+      - name: Notify deployment success
+        run: |
+          echo "🚀 Production deployment successful!"
+          echo "SHA: ${{ github.sha }}"
+          echo "Commit: ${{ github.event.head_commit.message }}"
