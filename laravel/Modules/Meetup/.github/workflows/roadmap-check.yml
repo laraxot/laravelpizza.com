@@ -1,0 +1,25 @@
+name: Roadmap Check
+
+on:
+  pull_request:
+    paths:
+      - docs/roadmap.md
+      - docs/roadmap/**
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify roadmap file
+        run: |
+          if [ ! -f docs/roadmap.md ]; then
+            echo "::warning::docs/roadmap.md mancante"
+          fi

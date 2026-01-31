@@ -1,0 +1,215 @@
+name: User Module Release
+
+on:
+  workflow_call:
+    inputs:
+      module-name:
+        description: 'Name of the module'
+        required: false
+        type: string
+        default: 'User'
+      tag-prefix:
+        description: 'Tag prefix for this module'
+        required: false
+        type: string
+        default: ''
+  push:
+    branches: [main, master]
+    paths:
+      - '.'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: "${{ github.ref }}-${{ github.workflow }}"
+  cancel-in-progress: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Calculate User module version
+        id: calculate-version
+        uses: bitshifted/git-auto-semver@v2
+        with:
+          main_branch: ${{ github.ref_name }}
+          create_tag: true
+          initial_version: '1.0.0'
+          tag_prefix: 'User-'
+
+      - name: Generate User module changelog
+        id: build-changelog
+        run: |
+          LAST_TAG=$(git describe --tags --abbrev=0 --match "User-*" HEAD~1 2>/dev/null || echo "")
+          
+          if [ -z "$LAST_TAG" ]; then
+            COMMIT_RANGE="HEAD"
+          else
+            COMMIT_RANGE="${LAST_TAG}..HEAD"
+          fi
+          
+          cat > USER_CHANGELOG.md << EOF
+          ## 👤 User Module v${{ steps.calculate-version.outputs.version-string }}
+          
+          ### 📋 Changes in this release
+          EOF
+          
+          # Get changes related to User module
+          git log $COMMIT_RANGE --pretty=format:"%h %s" | grep -i -E "(user|auth|profile|permission)" | while read -r commit; do
+            commit_hash=$(echo "$commit" | cut -d' ' -f1)
+            commit_msg=$(echo "$commit" | cut -d' ' -f2-)
+            
+            if echo "$commit_msg" | grep -q "^feat"; then
+              echo "✨ **$commit_msg**" >> USER_CHANGELOG.md
+            elif echo "$commit_msg" | grep -q "^fix"; then
+              echo "🐛 **$commit_msg**" >> USER_CHANGELOG.md
+            elif echo "$commit_msg" | grep -q "^BREAKING CHANGE"; then
+              echo "💥 **$commit_msg**" >> USER_CHANGELOG.md
+            else
+              echo "🔧 **$commit_msg**" >> USER_CHANGELOG.md
+            fi
+          done
+          
+          # Add User module specific information
+          cat >> USER_CHANGELOG.md << 'EOF'
+          
+          ### 🔐 Authentication & Authorization
+          - User management and authentication
+          - Role-based permissions
+          - Profile management
+          - Security features
+          
+          ### 📦 Module Components
+          - Models: User, Role, Permission
+          - Controllers: Auth, Profile, Management
+          - Policies: User, Role policies
+          - Filament Resources: UserResource, RoleResource
+          
+          ### 🔗 Dependencies
+          - Laravel Authentication
+          - Spatie Laravel Permission
+          - Filament User Interface
+          
+          EOF
+          
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          cat USER_CHANGELOG.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create User module release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: "User-${{ steps.calculate-version.outputs.version-string }}"
+          name: "User Module v${{ steps.calculate-version.outputs.version-string }}"
+          body: ${{ steps.build-changelog.outputs.changelog }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          files: |
+            composer.json
+            app/**/*.php
+            database/**/*.php
+            resources/**/*.php
+            !tests/**
+            !node_modules/**
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update User module version
+        run: |
+          VERSION="${{ steps.calculate-version.outputs.version-string }}"
+          
+          # Update composer.json
+          if [ -f "composer.json" ]; then
+            if grep -q '"version"' "composer.json"; then
+              sed -i "s/\"version\": \"[^\"]*\"/\"version\": \"$VERSION\"/g" "composer.json"
+            else
+              sed -i "1a\    \"version\": \"$VERSION\"," "composer.json"
+            fi
+          fi
+          
+          # Create VERSION file
+          echo "$VERSION" > VERSION
+          
+          # Commit changes
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add composer.json VERSION 2>/dev/null || true
+          git commit -m "chore(User): update version to $VERSION [skip ci]" || true
+          git push
+
+      - name: Generate User module roadmap
+        run: |
+          cat > ROADMAP.md << 'EOF'
+          # 🗺️ User Module Roadmap
+          
+          ## 📊 Current Status
+          - **Current Version**: 
+          - **Last Updated**: 
+          - **Module Type**: Authentication & User Management
+          
+          ## 🎯 Planned Features (High Priority)
+          - Two-Factor Authentication (2FA)
+          - Social Login Integration
+          - Advanced User Profile Management
+          - Audit Logging for User Actions
+          - Bulk User Operations
+          
+          ## 🔒 Security Enhancements
+          - Password Policy Enforcement
+          - Session Management Improvements
+          - API Rate Limiting
+          - Advanced Permission Scopes
+          
+          ## 📱 User Experience
+          - Self-Service Password Reset
+          - Email Verification Flow
+          - User Preferences Management
+          - Notification Settings
+          
+          ## 🔧 Maintenance Tasks (Medium Priority)
+          - Performance Optimization
+          - Enhanced Testing Coverage
+          - Documentation Updates
+          - Dependency Security Updates
+          
+          ## 🚀 Future Enhancements (Low Priority)
+          - Multi-Tenant User Isolation
+          - LDAP/AD Integration
+          - Custom User Fields
+          - User Analytics Dashboard
+          
+          ## 📈 Metrics & Goals
+          - **Test Coverage Target**: >90%
+          - **Performance Goal**: <100ms auth response
+          - **Security Score**: A+ security rating
+          
+          ---
+          *This roadmap is automatically updated on each release.*
+          EOF
+          
+          # Update version in roadmap
+          sed -i "s/\*\*Current Version\*\*:.*/**Current Version**: $VERSION/" ROADMAP.md
+          sed -i "s/\*\*Last Updated\*\*:.*/**Last Updated**: $(date +%Y-%m-%d)/" ROADMAP.md
+          
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ROADMAP.md
+          git commit -m "docs(User): update roadmap [skip ci]" || true
+          git push

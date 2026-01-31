@@ -50,7 +50,7 @@ CLAUDE.md
 .clauderules
 .cursor
 .gemini
-.github
+#.github
 .github.backup-20260130_174027/
 .iflow
 .junie
