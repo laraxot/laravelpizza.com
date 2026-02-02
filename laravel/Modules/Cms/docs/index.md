@@ -58,6 +58,7 @@
 - [Esempio Volt Folio](./volt-folio-esempio.md) - Esempio di utilizzo di Volt con Folio
 - [Volt Web Application](./volt-web-application.md) - Creazione di applicazioni web con Volt
 - [Volt Single Root Element](./volt-single-root-element.md) - Utilizzo di elementi root singoli con Volt
+- [Folio routing e locale (mcamara)](./folio-routing-locale.md) - Prefisso lingua, middleware, uso di localizeUrl() in moduli e temi
 
 ### UI/UX
 - [Guida Implementazione UX](./guida-implementazione-ux.md) - Guida all'implementazione UX

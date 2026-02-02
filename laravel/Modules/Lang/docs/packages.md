@@ -10,8 +10,10 @@
 ### Localizzazione
 - [mcamara/laravel-localization](https://github.com/mcamara/laravel-localization)
   - Gestione lingue e traduzioni
-  - Routing multilingua
-  - Middleware per lingua
+  - Routing multilingua (prefisso `/{locale}/...`)
+  - Middleware per lingua (LocaleSessionRedirect, LaravelLocalizationRedirectFilter)
+  - Helper: `localizeUrl()`, `getLocalizedURL()`, `getCurrentLocale()`, `getSupportedLocales()`
+  - **Riferimento progetto**: [laravel-localization-mcamara-reference.md](laravel-localization-mcamara-reference.md)
 - [lara-zeus/spatie-translatable](../packages/lara-zeus/spatie-translatable/docs/introduction.md)
   - Supporto Filament per campi translatable
   - Pacchetto locale gestito via `path` repository

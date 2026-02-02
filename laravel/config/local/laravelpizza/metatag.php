@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'title' => 'Laravel Pizza Meetups',
     'sitename' => 'Laravel Pizza Meetups',
-    'subtitle' => 'Join fellow Laravel, Filament, and Livewire enthusiasts for pizza meetups',
+    'subtitle' => 'Join fellow Laravel, Filament, and Livewire enthusiasts for pizza meetups!!',
     'sottotitolo_comune' => '',
     'generator' => '',
     'charset' => 'UTF-8',

@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Models;
 
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Carbon;
-use Modules\Cms\Database\Factories\PageFactory;
-use Modules\Tenant\Models\Traits\SushiToJsons;
+use Modules\Cms\Models\Traits\HasBlocks;
+use Illuminate\Database\Eloquent\Builder;
 use Modules\Xot\Contracts\ProfileContract;
+use Illuminate\Database\Eloquent\Collection;
+use Modules\Tenant\Models\Traits\SushiToJsons;
+use Modules\Cms\Database\Factories\PageFactory;
 
 /**
  * Modules\Cms\Models\Page.
@@ -188,6 +189,7 @@ use Modules\Xot\Contracts\ProfileContract;
 class Page extends BaseModelLang
 {
     use SushiToJsons;
+    use HasBlocks;
 
     /** @var array<int, string> */
     public $translatable = [

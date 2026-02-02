@@ -15,6 +15,10 @@ Nel tema Meetup **non** usare SVG inline nelle Blade. Usare sempre file `.svg` n
 - Path: `laravel/Modules/Meetup/resources/svg/`.
 - Nomi icona: `meetup-logo`, `meetup-icon-calendar`, `meetup-icon-community`, `meetup-icon-sponsors`, `meetup-facebook`, `meetup-twitter`, `meetup-github`.
 
+## Logo
+
+Il logo ufficiale è il contenuto attuale di `Modules/Meetup/resources/svg/logo.svg`. Non sovrascrivere questo file con altre interpretazioni a meno che non sia esplicitamente richiesto dal committente. Vedi [logo-branding-guidelines.md](../../Modules/Meetup/docs/logo-branding-guidelines.md).
+
 ## Esempio (header / footer)
 
 ```blade

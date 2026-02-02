@@ -13,17 +13,17 @@
                 "slug": "hero-section",
                 "data": {
                     "view": "pub_theme::components.blocks.hero.main",
-                    "title": "Laravel Developers. Pizza. Community.",
-                    "subtitle": "Join fellow Laravel, Filament, and Livewire enthusiasts for pizza meetups.",
-                    "description": "Share knowledge, build connections, and enjoy great food together.",
+                    "title": "{{ trans('meetup::home.title') }}",
+                    "subtitle": "{{ trans('meetup::home.hero.subtitle') }}",
+                    "description": "{{ trans('meetup::home.hero.description') }}",
                     "background_image": "/images/hero-bg.jpg",
                     "cta_primary": {
-                        "label": "Join the Community",
+                        "label": "{{ trans('meetup::home.hero.cta_primary_label') }}",
                         "url": "/auth/register",
                         "style": "primary"
                     },
                     "cta_secondary": {
-                        "label": "View Events",
+                        "label": "{{ trans('meetup::home.hero.cta_secondary_label') }}",
                         "url": "/events",
                         "style": "secondary"
                     }
@@ -34,31 +34,31 @@
                 "slug": "features-grid",
                 "data": {
                     "view": "pub_theme::components.blocks.features.grid",
-                    "title": "Why Join Our Community?",
-                    "description": "More than just pizza - it's about building lasting connections with developers who share your passion",
+                    "title": "{{ trans('meetup::home.features.title') }}",
+                    "description": "{{ trans('meetup::home.features.description') }}",
                     "features": [
                         {
                             "icon": "heroicon-o-calendar",
-                            "title": "Regular Meetups",
-                            "description": "Join weekly pizza meetups with Laravel developers in your area",
+                            "title": "{{ trans('meetup::home.features.regular_meetups_title') }}",
+                            "description": "{{ trans('meetup::home.features.regular_meetups_description') }}",
                             "color": "red"
                         },
                         {
                             "icon": "heroicon-o-users",
-                            "title": "Growing Community",
-                            "description": "Connect with passionate developers who love Laravel and pizza",
+                            "title": "{{ trans('meetup::home.features.growing_community_title') }}",
+                            "description": "{{ trans('meetup::home.features.growing_community_description') }}",
                             "color": "red"
                         },
                         {
                             "icon": "heroicon-o-map-pin",
-                            "title": "Multiple Locations",
-                            "description": "Find meetups in cities around the world",
+                            "title": "{{ trans('meetup::home.features.multiple_locations_title') }}",
+                            "description": "{{ trans('meetup::home.features.multiple_locations_description') }}",
                             "color": "red"
                         },
                         {
                             "icon": "heroicon-o-chat-bubble-left-right",
-                            "title": "Real-time Chat",
-                            "description": "Stay connected with the community between meetups",
+                            "title": "{{ trans('meetup::home.features.realtime_chat_title') }}",
+                            "description": "{{ trans('meetup::home.features.realtime_chat_description') }}",
                             "color": "red"
                         }
                     ]
@@ -69,12 +69,12 @@
                 "slug": "final-cta",
                 "data": {
                     "view": "pub_theme::components.blocks.cta.banner",
-                    "title": "Ready to Join?",
-                    "description": "Sign up today and start connecting with Laravel developers in your area. The next pizza meetup is just around the corner!",
+                    "title": "{{ trans('meetup::home.cta.title') }}",
+                    "description": "{{ trans('meetup::home.cta.description') }}",
                     "background_color": "bg-red-600",
                     "text_color": "text-white",
                     "cta_primary": {
-                        "label": "Create Your Account",
+                        "label": "{{ trans('meetup::home.cta.cta_primary_label') }}",
                         "url": "/auth/register",
                         "style": "white"
                     }

@@ -45,11 +45,14 @@
 7. **[SVG: file .svg, no inline nelle Blade](./svg-icons-no-hardcoded-blade.md)** (regola: `.cursor/rules/svg-no-hardcoded-blade-icons-meetup.mdc`)
    - Icone in `Modules/Meetup/resources/svg/`, uso `<x-filament::icon icon="meetup-{nome}" />`
 
+8. **[Localization standard (mcamara)](./localization-standard.md)** (regola: `.cursor/rules/laravel-localization-mcamara.mdc`)
+   - Link con `LaravelLocalization::localizeUrl($path)`, form action localizzate, `getCurrentLocale()`, language selector
+
 ### Schema.org e task implementazione
 
-8. **[Schema.org Enhancement Recommendations](./schema-org-enhancement-recommendations.md)** – Riferimento tipi Schema.org studiati (Event, EventSeries, Offer, Place, Person, ecc.) e roadmap
-9. **[Task Schema.org Event/Series/Azioni](./tasks-schema-org-event-series-actions.md)** – Event, EventSeries, EventSchedule, JoinAction, LeaveAction, EventReservation, EducationEvent, attendee
-10. **[Task Schema.org Offer/Prezzo](./tasks-schema-org-offer-price.md)** – Offer, PriceSpecification, FoodEstablishment
+9. **[Schema.org Enhancement Recommendations](./schema-org-enhancement-recommendations.md)** – Riferimento tipi Schema.org studiati (Event, EventSeries, Offer, Place, Person, ecc.) e roadmap
+10. **[Task Schema.org Event/Series/Azioni](./tasks-schema-org-event-series-actions.md)** – Event, EventSeries, EventSchedule, JoinAction, LeaveAction, EventReservation, EducationEvent, attendee
+11. **[Task Schema.org Offer/Prezzo](./tasks-schema-org-offer-price.md)** – Offer, PriceSpecification, FoodEstablishment
 
 ## 🔄 Aggiornamenti Recenti
 

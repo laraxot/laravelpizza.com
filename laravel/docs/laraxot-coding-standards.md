@@ -135,3 +135,13 @@ Laraxot uses `mcamara/laravel-localization` as the exclusive solution for multi-
 ### Flags & UI
 - Integrate with the Icon Management standard: use `x-filament::icon` with the `ui-flags.` prefix.
 - Note: Use `gb` for the English flag if the locale is `en`.
+
+## Design & Branding Standards
+
+Laraxot follows the **"Symbolic Minimalism"** religion for all branding and UI assets.
+
+### Principles
+1. **Symbolic Over Literal**: Avoid detailed or photorealistic representations. A logo should be a stylized geometric symbol (e.g., Lucide-style line-art).
+2. **Premium Simplicity**: Professional, high-end design is achieved through geometric balance and clean strokes, not complex fills or many-colored gradients.
+3. **Asset Integrity**: Logos must be vector-based (`.svg`) and share uniform design tokens (stroke-width, caps, colors) with the site-wide icon set.
+4. **Learning from Failure**: The "Pizza Slice Error" (a complex, multi-colored slice with toppings) represents a low-end design failure. The correct standard is a stylized triangular geometry with minimalist points (as seen in `meetup-logo.svg`).

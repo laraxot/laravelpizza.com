@@ -3,7 +3,7 @@
  * Header Navigation Component - Laravel Pizza Theme
  *
  * Enhanced navigation bar matching laravelpizza.com design with:
- * - Authentic Italian pizza slice logo
+ * - Logo: single source Modules/Meetup/resources/svg/logo.svg (meetup-logo)
  * - Professional language switcher with flags
  * - Smooth dark/light theme toggle
  * - Responsive mobile menu

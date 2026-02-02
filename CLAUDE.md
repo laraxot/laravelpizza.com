@@ -522,28 +522,28 @@ git push origin feature/your-feature
 6. ❌ Creating duplicate migration files
    ✅ One table, one create migration
 
-6. ❌ Complex ServiceProviders with unnecessary methods
+7. ❌ Complex ServiceProviders with unnecessary methods
    ✅ Use minimal structure - let XotBase do the work
 
-7. ❌ Missing required properties in Providers (`$module_dir`, `$module_ns`)
+8. ❌ Missing required properties in Providers (`$module_dir`, `$module_ns`)
    ✅ Always include ALL required properties
 
-8. ❌ Not calling `parent::boot()` or `parent::register()` when overriding
+9. ❌ Not calling `parent::boot()` or `parent::register()` when overriding
    ✅ ALWAYS call parent FIRST
 
-9. ❌ Hardcoding strings in UI
-   ✅ Use translation files
+10. ❌ Hardcoding strings in UI
+    ✅ Use translation files
 
-10. ❌ Business logic in Blade/Livewire components
+11. ❌ Business logic in Blade/Livewire components
     ✅ Use Actions pattern
 
-11. ❌ Missing `declare(strict_types=1);`
+12. ❌ Missing `declare(strict_types=1);`
     ✅ Add to every PHP file
 
-12. ❌ UPPERCASE or CamelCase .md filenames
+13. ❌ UPPERCASE or CamelCase .md filenames
     ✅ Use lowercase-with-hyphens.md
 
-13. ❌ Forgetting `npm run copy` after theme build
+14. ❌ Forgetting `npm run copy` after theme build
     ✅ Always run copy to deploy assets
 
 ## PHPStan Configuration

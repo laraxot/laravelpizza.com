@@ -27,6 +27,7 @@
 
 ### Regole Generali
 - [Regole Traduzioni](../../Xot/docs/translations.md) - Documentazione base sulle traduzioni
+- [mcamara/laravel-localization — Riferimento](laravel-localization-mcamara-reference.md) - URL localizzati, helper, uso in moduli e temi
 - [Composer merge plugin](composer-merge-plugin.md) - Integrazione pacchetti locali
 
 ### Versione Incoming

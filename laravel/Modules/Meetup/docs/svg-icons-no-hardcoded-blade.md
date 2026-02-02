@@ -16,6 +16,10 @@
 - **Nav**: `icon-calendar.svg`, `icon-community.svg`, `icon-sponsors.svg` → `meetup-icon-calendar`, `meetup-icon-community`, `meetup-icon-sponsors`.
 - **Social**: `facebook.svg`, `twitter.svg`, `github.svg` → `meetup-facebook`, `meetup-twitter`, `meetup-github`.
 
+## Logo: non sovrascrivere logo.svg
+
+Il logo ufficiale del modulo Meetup è il **contenuto attuale** di `Modules/Meetup/resources/svg/logo.svg`. **Non sostituire** questo file con altre interpretazioni (pizza slice, icone diverse, ecc.) a meno che non sia **esplicitamente richiesto** dal committente. Vedi [logo-branding-guidelines.md](logo-branding-guidelines.md).
+
 ## Uso nelle Blade (tema Meetup)
 
 ```blade

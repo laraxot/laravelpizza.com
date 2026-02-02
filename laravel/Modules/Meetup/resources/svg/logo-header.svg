@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+    <!-- Base triangolare pizza slice -->
+    <path d="M50 10 L85 80 L15 80 Z" fill="#DC2626" stroke="#991B1B" stroke-width="1.5"/>
+    
+    <!-- Crosta dorata premium con dettaglio -->
+    <path d="M50 10 L85 80 L80 82 L48 15 Z" fill="#F59E0B" opacity="0.85"/>
+    <path d="M50 10 L85 80 L82 78 L50 12 Z" fill="#F97316" opacity="0.7"/>
+    
+    <!-- Peperoni con dettagli e ombre -->
+    <circle cx="45" cy="45" r="4.5" fill="#7F1D1D">
+        <circle cx="43" cy="43" r="1" fill="#991B1B"/>
+    </circle>
+    <circle cx="55" cy="55" r="3.5" fill="#7F1D1D">
+        <circle cx="53" cy="53" r="0.8" fill="#991B1B"/>
+    </circle>
+    <circle cx="35" cy="60" r="4" fill="#7F1D1D">
+        <circle cx="33" cy="58" r="0.9" fill="#991B1B"/>
+    </circle>
+    <circle cx="50" cy="65" r="3" fill="#7F1D1D">
+        <circle cx="48" cy="63" r="0.7" fill="#991B1B"/>
+    </circle>
+    
+    <!-- Formaggio premium con drips e dettagli -->
+    <ellipse cx="50" cy="35" rx="2.5" ry="4.5" fill="#FEF3C7" opacity="0.9"/>
+    <ellipse cx="40" cy="50" rx="2" ry="3.5" fill="#FEF3C7" opacity="0.9"/>
+    <ellipse cx="58" cy="48" rx="1.8" ry="3" fill="#FEF3C7" opacity="0.85"/>
+    <ellipse cx="44" cy="42" rx="1.2" ry="2" fill="#FEF3C7" opacity="0.7"/>
+    
+    <!-- Basilico decorativo premium -->
+    <ellipse cx="48" cy="42" rx="1.5" ry="2.5" fill="#10B981" opacity="0.6"/>
+    <ellipse cx="53" cy="58" rx="1" ry="1.8" fill="#10B981" opacity="0.5"/>
+    <path d="M45 25 L48 20 L52 28 Z" fill="#FCA5A5" opacity="0.4"/>
+    <ellipse cx="42" cy="38" rx="3" ry="2" fill="#FCA5A5" opacity="0.3"/>
+    
+    <!-- Ombra realistica -->
+    <ellipse cx="48" cy="75" rx="3" ry="1" fill="#000000" opacity="0.15"/>
+    
+    <!-- Dettaglio crosta effetto cottura -->
+    <path d="M50 10 L55 15 L85 80 L15 80 Z" fill="none" stroke="#F59E0B" stroke-width="2" opacity="0.8"/>
+    
+    <!-- Riflessi luce premium -->
+    <path d="M40 28 L42 25 L46 30 Z" fill="#FFFFFF" opacity="0.6"/>
+    <path d="M54 38 L52 35 L50 40 Z" fill="#FFFFFF" opacity="0.4"/>
+</svg>
