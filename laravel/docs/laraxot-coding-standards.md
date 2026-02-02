@@ -92,3 +92,46 @@ public function getOptions(): array
     ];
 }
 ```
+
+## Icon Management
+
+The Laraxot methodology follows a strict pattern for SVG icons to ensure DRY principles and clean Blade files.
+
+### Standalone SVG Files
+- NEVER include hardcoded SVG code directly in `.blade.php` files.
+- All icons MUST be stored as standalone `.svg` files within the `resources/svg` directory of the relevant module (e.g., `Modules/Meetup/resources/svg/logo.svg`).
+
+### Icon Usage
+- Icons are rendered using the `x-filament::icon` component.
+- The `icon` attribute should follow the pattern `{module-slash-name}-{filename}`.
+- For example, a file at `Modules/Meetup/resources/svg/logo.svg` is referenced as:
+  ```html
+  <x-filament::icon
+      icon="meetup-logo"
+      class="h-12 w-12 text-red-500"
+  />
+  ```
+
+### Registration
+- Icon sets are automatically registered by `XotBaseServiceProvider` via `BladeUI\Icons\Factory`.
+
+## Localization Management
+
+Laraxot uses `mcamara/laravel-localization` as the exclusive solution for multi-language support.
+
+### Routing & Switching
+- **NO Custom Routes**: Never create routes like `language.switch` or controllers to handle locale changes.
+- **Native Re-routing**: Use `LaravelLocalization::getLocalizedURL($locale)` to generate the URL for switching languages.
+- **Middleware**: Ensure `LaravelLocalizationRedirectFilter`, `LaravelLocalizationViewPath`, and `LaravelLocalizationRoutes` are active (handled by core providers).
+
+### Helpers vs. App Locale
+- **Preferred Helper**: Always use `LaravelLocalization::getCurrentLocale()` instead of `app()->getLocale()`.
+- **Supported Locales**: Use `LaravelLocalization::getSupportedLocales()` to iterate over active languages.
+
+### URL Localization
+- For all internal links, use `LaravelLocalization::localizeUrl($url)` to ensure the current locale is preserved.
+- Example: `<a href="{{ LaravelLocalization::localizeUrl('/events') }}">`
+
+### Flags & UI
+- Integrate with the Icon Management standard: use `x-filament::icon` with the `ui-flags.` prefix.
+- Note: Use `gb` for the English flag if the locale is `en`.

@@ -42,11 +42,14 @@
    - Vite Configuration
    - Metatags Component
 
+7. **[SVG: file .svg, no inline nelle Blade](./svg-icons-no-hardcoded-blade.md)** (regola: `.cursor/rules/svg-no-hardcoded-blade-icons-meetup.mdc`)
+   - Icone in `Modules/Meetup/resources/svg/`, uso `<x-filament::icon icon="meetup-{nome}" />`
+
 ### Schema.org e task implementazione
 
-7. **[Schema.org Enhancement Recommendations](./schema-org-enhancement-recommendations.md)** – Riferimento tipi Schema.org studiati (Event, EventSeries, Offer, Place, Person, ecc.) e roadmap
-8. **[Task Schema.org Event/Series/Azioni](./tasks-schema-org-event-series-actions.md)** – Event, EventSeries, EventSchedule, JoinAction, LeaveAction, EventReservation, EducationEvent, attendee
-9. **[Task Schema.org Offer/Prezzo](./tasks-schema-org-offer-price.md)** – Offer, PriceSpecification, FoodEstablishment
+8. **[Schema.org Enhancement Recommendations](./schema-org-enhancement-recommendations.md)** – Riferimento tipi Schema.org studiati (Event, EventSeries, Offer, Place, Person, ecc.) e roadmap
+9. **[Task Schema.org Event/Series/Azioni](./tasks-schema-org-event-series-actions.md)** – Event, EventSeries, EventSchedule, JoinAction, LeaveAction, EventReservation, EducationEvent, attendee
+10. **[Task Schema.org Offer/Prezzo](./tasks-schema-org-offer-price.md)** – Offer, PriceSpecification, FoodEstablishment
 
 ## 🔄 Aggiornamenti Recenti
 

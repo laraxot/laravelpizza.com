@@ -14,8 +14,8 @@
  */
 --}}
 @php
-    $locales = config('laravellocalization.supportedLocales', []);
-    $currentLocale = app()->getLocale();
+    $locales = LaravelLocalization::getSupportedLocales();
+    $currentLocale = LaravelLocalization::getCurrentLocale();
 @endphp
 
 <nav x-data="{ mobileMenuOpen: false }" 
@@ -24,9 +24,13 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
 
-            {{-- Logo (single source of truth: theme component) --}}
+            {{-- Logo (single source of truth: meetup-logo.svg) --}}
             <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="flex items-center space-x-3 group">
-                <x-ui.logo class="h-8 w-auto text-red-600 dark:text-red-500 transition-opacity group-hover:opacity-90" />
+                <x-filament::icon
+                    icon="meetup-logo"
+                    class="h-12 w-12 text-red-500 transition-opacity group-hover:opacity-90"
+                />
+
                 <div class="flex flex-col">
                     <span class="text-slate-900 dark:text-white font-bold text-lg md:text-xl leading-tight">
                         Laravel Pizza
@@ -40,21 +44,15 @@
             {{-- Navigation Links (hidden on mobile) --}}
             <div class="hidden lg:flex items-center space-x-8">
                 <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 transition-all duration-200 flex items-center space-x-2 font-medium group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
+                    <x-filament::icon icon="meetup-icon-calendar" class="h-5 w-5 group-hover:scale-110 transition-transform" />
                     <span>{{ __('Events') }}</span>
                 </a>
                 <a href="{{ LaravelLocalization::localizeUrl('/community') }}" class="text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 transition-all duration-200 flex items-center space-x-2 font-medium group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
+                    <x-filament::icon icon="meetup-icon-community" class="h-5 w-5 group-hover:scale-110 transition-transform" />
                     <span>{{ __('Community') }}</span>
                 </a>
                 <a href="{{ LaravelLocalization::localizeUrl('/sponsors') }}" class="text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 transition-all duration-200 flex items-center space-x-2 font-medium group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    <x-filament::icon icon="meetup-icon-sponsors" class="h-5 w-5 group-hover:scale-110 transition-transform" />
                     <span>{{ __('Sponsors') }}</span>
                 </a>
             </div>
@@ -93,21 +91,15 @@
          class="md:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900/95 backdrop-blur-sm">
         <div class="px-4 py-3 space-y-2">
             <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-red-950/20 hover:text-red-600 dark:hover:text-red-400 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+                <x-filament::icon icon="meetup-icon-calendar" class="h-5 w-5" />
                 <span class="font-medium">{{ __('Events') }}</span>
             </a>
             <a href="{{ LaravelLocalization::localizeUrl('/community') }}" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-red-950/20 hover:text-red-600 dark:hover:text-red-400 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+                <x-filament::icon icon="meetup-icon-community" class="h-5 w-5" />
                 <span class="font-medium">{{ __('Community') }}</span>
             </a>
             <a href="{{ LaravelLocalization::localizeUrl('/sponsors') }}" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-red-950/20 hover:text-red-600 dark:hover:text-red-400 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+                <x-filament::icon icon="meetup-icon-sponsors" class="h-5 w-5" />
                 <span class="font-medium">{{ __('Sponsors') }}</span>
             </a>
             

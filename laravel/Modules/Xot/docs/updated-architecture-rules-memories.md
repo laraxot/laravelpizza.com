@@ -86,6 +86,8 @@ Based on analysis of external packages like `olivierguerriat/filament-spatie-lar
 #### 3. Database & Frontend Standards
 - **Laravel 12.x Database**: Standardize all database connections using `env('DB_URL')` and version-safe SSL attribute handling.
 - **Filament 5.x / Tailwind v4**: Use the latest Filament 5.x requirements, specifically Tailwind CSS v4.1+ and the new Vite plugin architecture.
+- **Icon Management**: SVGs must reside in `resources/svg` of the responsible module and be consumed via `x-filament::icon`.
+- **Multilingual Standard**: Adherence to `mcamara/laravel-localization` is mandatory for all modules and themes. Use `LaravelLocalization::localizeUrl()` for all internal navigation to preserve state.
 - **Asset Sync**: Maintain strict synchronization between theme assets and the public-facing `public_html/themes` directory.
 
 ### Implementation Roadmap

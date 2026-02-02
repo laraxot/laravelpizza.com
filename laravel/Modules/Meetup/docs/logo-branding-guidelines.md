@@ -10,8 +10,8 @@ Questo documento definisce le linee guida per l'uso del logo e degli elementi di
 
 Il logo ha due varianti principali: quella **illustrata (Stroke)** usata nel tema Meetup e quella **solida (Fill)** usata sul sito `laravelpizza.com`.
 
-### Variante Theme (Stroke - Lucide Style)
-Questa è la versione attualmente implementata nel componente `<x-ui.logo>`.
+### Variante Theme (Pizza slice + icone meetup-*)
+Logo e icone sono in file `.svg` in `Modules/Meetup/resources/svg/` e si richiamano con `<x-filament::icon icon="meetup-logo" />` (vedi [svg-icons-no-hardcoded-blade.md](svg-icons-no-hardcoded-blade.md)). Il componente `<x-ui.logo>` usa internamente `meetup-logo`.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg"

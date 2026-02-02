@@ -15,21 +15,9 @@
  */
 --}}
 @php
-    $locales = $locales ?? config('laravellocalization.supportedLocales', []);
-    $currentLocale = $currentLocale ?? app()->getLocale();
+    $locales = $locales ?? LaravelLocalization::getSupportedLocales();
+    $currentLocale = $currentLocale ?? LaravelLocalization::getCurrentLocale();
     $isMobile = $mobile ?? false;
-    
-    // Country flags for language switcher
-    $flags = [
-        'it' => '🇮🇹',
-        'en' => '🇬🇧', 
-        'es' => '🇪🇸',
-        'fr' => '🇫🇷',
-        'de' => '🇩🇪',
-        'pt' => '🇵🇹',
-        'nl' => '🇳🇱',
-        'pl' => '🇵🇱',
-    ];
 @endphp
 
 <div class="relative" x-data="{ open: false }" @click.outside="open = false">
@@ -40,10 +28,12 @@
         
         @if($isMobile)
             {{-- Mobile: Just flag --}}
-            <span class="text-lg">{{ $flags[$currentLocale] ?? '🌐' }}</span>
-        @else
+            @php $flagCode = $currentLocale === 'en' ? 'gb' : $currentLocale; @endphp
+            <x-filament::icon :icon="'ui-flags.' . $flagCode" class="h-5 w-5" />
+@else
             {{-- Desktop: Flag + Language name --}}
-            <span class="text-lg">{{ $flags[$currentLocale] ?? '🌐' }}</span>
+            @php $flagCode = $currentLocale === 'en' ? 'gb' : $currentLocale; @endphp
+            <x-filament::icon :icon="'ui-flags.' . $flagCode" class="h-5 w-5" />
             <span class="hidden md:block">{{ $locales[$currentLocale]['native'] ?? strtoupper($currentLocale) }}</span>
             <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -60,7 +50,6 @@
          x-transition:leave-start="opacity-100 scale-100"
          x-transition:leave-end="opacity-0 scale-95"
          class="{{ $isMobile ? 'left-0' : 'right-0' }} absolute mt-2 w-48 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-black/20 z-50 lang-dropdown">
-        
         @foreach($locales as $code => $locale)
             <a href="{{ LaravelLocalization::getLocalizedURL($code, null, [], true) }}" 
                class="flex items-center gap-3 px-4 py-2.5 text-sm {{ 
@@ -68,7 +57,8 @@
                        ? 'bg-red-50 dark:bg-red-950/20 text-red-700 dark:text-red-400 font-medium' 
                        : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800' 
                }} transition-colors">
-                <span class="text-base">{{ $flags[$code] ?? '🌐' }}</span>
+                @php $flagCode = $code === 'en' ? 'gb' : $code; @endphp
+                <x-filament::icon :icon="'ui-flags.' . $flagCode" class="h-5 w-5" />
                 <span>{{ $locale['native'] ?? $code }}</span>
                 
                 @if($code === $currentLocale)

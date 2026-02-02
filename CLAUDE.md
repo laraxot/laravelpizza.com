@@ -86,6 +86,18 @@ Regola: `.cursor/rules/belongstomanyx-critical.md`. Memoria: `.cursor/memories/b
 
 Regola: `.cursor/rules/database-config-standard.mdc`. Memoria: `.cursor/memories/database-config-laravel-12-tenant.md`. Doc: `laravel/Modules/Tenant/docs/database-config-standard.md`.
 
+### 0d. SVG: file .svg, NO inline nelle Blade (CRITICAL)
+
+**Nelle Blade NON mettere SVG hardcoded.** Creare il file `.svg` in `Modules/Meetup/resources/svg/` e richiamare con `<x-filament::icon icon="meetup-{nome}" class="..." />`. Prefisso set = `meetup` (registrato da XotBaseServiceProvider). Esempio: `logo.svg` → `icon="meetup-logo"`, `icon-calendar.svg` → `icon="meetup-icon-calendar"`, `facebook.svg` → `icon="meetup-facebook"`.
+
+Regola: `.cursor/rules/svg-no-hardcoded-blade-icons-meetup.mdc`. Memoria: `.cursor/memories/svg-icons-meetup-blade.md`. Doc: `laravel/Modules/Meetup/docs/svg-icons-no-hardcoded-blade.md`, `laravel/Themes/Meetup/docs/svg-icons-no-hardcoded-blade.md`.
+
+### 0e. Localizzazione URL: mcamara/laravel-localization (CRITICAL)
+
+**Tutti i link** verso pagine localizzate devono usare **`LaravelLocalization::localizeUrl($path)`** (path senza prefisso). **Form action** (login, register, submit) devono essere localizzati (es. `LaravelLocalization::localizeUrl('/login')`), altrimenti POST diventa GET dopo redirect. **Locale corrente**: **`LaravelLocalization::getCurrentLocale()`** (preferire a `app()->getLocale()`). **Language selector**: **`LaravelLocalization::getLocalizedURL($code, null, [], true)`**. Rotte pubbliche sotto `/{locale}/...`; Folio+Volt (Cms) registra `->uri($locale)` per ogni lingua. Test: usare **refreshApplicationWithLocale($locale)** e request con prefisso (es. `$this->get('/en/')`).
+
+Regola: `.cursor/rules/laravel-localization-mcamara.mdc`. Memoria: `.cursor/memories/laravel-localization-mcamara.md`. Doc: `laravel/Modules/Lang/docs/laravel-localization-mcamara-reference.md`, `laravel/Modules/Cms/docs/folio-routing-locale.md`, `laravel/Modules/Meetup/docs/localization-standard.md`, `laravel/Themes/Meetup/docs/localization-standard.md`.
+
 ### 1. Front Office: Folio + Volt + CMS-Driven Pages ONLY
 
 **NEVER use traditional controllers or routes in web.php/api.php for front office.**
@@ -498,34 +510,40 @@ git push origin feature/your-feature
 2. ❌ Adding per-module connections (notify, geo, media, job, xot, activity, cms, gdpr, lang, meetup, seo, tenant) in config/database.php or config/local/{tenant}/database.php
    ✅ Follow Laravel 12: only driver connections + user_sqlite/user_mysql/user_mariadb; registerDB() adds module connections dynamically
 
-3. ❌ Extending Filament classes directly
+3. ❌ Putting SVG inline in Blade files
+   ✅ Create .svg in Modules/Meetup/resources/svg/ and use <x-filament::icon icon="meetup-{name}" class="..." />
+
+4. ❌ Building localized URLs manually (url(app()->getLocale() . '/path') or url('/path') for front pages)
+   ✅ Use LaravelLocalization::localizeUrl('/path') for links and form actions; use getLocalizedURL($code, null, [], true) for language selector
+
+5. ❌ Extending Filament classes directly
    ✅ Always extend XotBase abstracts
 
-4. ❌ Creating duplicate migration files
+6. ❌ Creating duplicate migration files
    ✅ One table, one create migration
 
-5. ❌ Complex ServiceProviders with unnecessary methods
+6. ❌ Complex ServiceProviders with unnecessary methods
    ✅ Use minimal structure - let XotBase do the work
 
-6. ❌ Missing required properties in Providers (`$module_dir`, `$module_ns`)
+7. ❌ Missing required properties in Providers (`$module_dir`, `$module_ns`)
    ✅ Always include ALL required properties
 
-7. ❌ Not calling `parent::boot()` or `parent::register()` when overriding
+8. ❌ Not calling `parent::boot()` or `parent::register()` when overriding
    ✅ ALWAYS call parent FIRST
 
-8. ❌ Hardcoding strings in UI
+9. ❌ Hardcoding strings in UI
    ✅ Use translation files
 
-9. ❌ Business logic in Blade/Livewire components
-   ✅ Use Actions pattern
+10. ❌ Business logic in Blade/Livewire components
+    ✅ Use Actions pattern
 
-10. ❌ Missing `declare(strict_types=1);`
+11. ❌ Missing `declare(strict_types=1);`
     ✅ Add to every PHP file
 
-11. ❌ UPPERCASE or CamelCase .md filenames
+12. ❌ UPPERCASE or CamelCase .md filenames
     ✅ Use lowercase-with-hyphens.md
 
-12. ❌ Forgetting `npm run copy` after theme build
+13. ❌ Forgetting `npm run copy` after theme build
     ✅ Always run copy to deploy assets
 
 ## PHPStan Configuration
