@@ -83,11 +83,10 @@ Based on analysis of external packages like `olivierguerriat/filament-spatie-lar
 - Activity tracking for template performance
 - Tenant isolation for multi-tenant scenarios
 
-#### 2. Event-Driven Architecture
-- Use events for cross-module communication
-- Implement proper error handling for event processing
-- Create event-based caching invalidation
-- Follow consistent event naming patterns
+#### 3. Database & Frontend Standards
+- **Laravel 12.x Database**: Standardize all database connections using `env('DB_URL')` and version-safe SSL attribute handling.
+- **Filament 5.x / Tailwind v4**: Use the latest Filament 5.x requirements, specifically Tailwind CSS v4.1+ and the new Vite plugin architecture.
+- **Asset Sync**: Maintain strict synchronization between theme assets and the public-facing `public_html/themes` directory.
 
 ### Implementation Roadmap
 

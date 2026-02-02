@@ -65,3 +65,5 @@ public_html/js/
 public_html/fonts/
 public_html/css/
 public_html/vendor/
+laravel/lang/vendor/
+vendor/

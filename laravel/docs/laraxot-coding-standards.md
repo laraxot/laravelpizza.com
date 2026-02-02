@@ -34,6 +34,26 @@ class User extends Model
 ```
 This approach is more consistent with other method-based configurations in Laravel and avoids potential issues with property overriding in complex inheritance scenarios.
 
+### Relationships: `belongsToManyX()` and `morphToManyX()`
+
+The Laraxot methodology requires using custom relationship wrappers instead of the standard Laravel methods for many-to-many relationships. This ensures automatic pivot model resolution, attribute mapping, and timestamp handling.
+
+**CRITICAL RULE:** Use `$this->belongsToManyX()` instead of `$this->belongsToMany()` and `$this->morphToManyX()` instead of `$this->morphToMany()`.
+
+**Why:**
+- **Automatic Pivot Resultion:** Automatically guesses the pivot class name (e.g., `User` + `Role` = `RoleUser`).
+- **DRY Attributes:** Automatically applies `withPivot()` using the pivot model's `$fillable` array.
+- **Consistent Timestamps:** Automatically applies `withTimestamps()`.
+- **Multi-Database Support:** Handles cross-database relationships by automatically prefixing table names with the database name.
+
+**Example:**
+```php
+public function attendees(): BelongsToMany
+{
+    return $this->belongsToManyX(User::class);
+}
+```
+
 ## Configuration Files
 
 ### `config/database.php` Synchronization

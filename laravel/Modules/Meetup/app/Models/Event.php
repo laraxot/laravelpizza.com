@@ -17,6 +17,7 @@ use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Enums\RepeatFrequency;
 use Modules\User\Models\User;
 use Modules\Xot\Models\Traits\HasXotFactory;
+use Modules\Xot\Models\Traits\RelationX;
 
 /**
  * Modules\Meetup\Models\Event.
@@ -229,17 +230,17 @@ class Event extends BaseModel
 
     public function attendees(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'event_user');
+        return $this->belongsToManyX(User::class, 'event_user');
     }
 
     public function performers(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'event_performer');
+        return $this->belongsToManyX(User::class, 'event_performer');
     }
 
     public function sponsors(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'event_sponsor');
+        return $this->belongsToManyX(User::class, 'event_sponsor');
     }
 
     /**

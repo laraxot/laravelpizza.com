@@ -31,10 +31,11 @@
 
 ### Riferimenti Cross-Module
 
-5. **[Regole Xot](../../Xot/docs/critical-rules-consolidated.md)**
+5. **[Regole Xot](../../Xot/docs/critical-rules-consolidated.md)** e **belongsToManyX** (regola progetto: `.cursor/rules/belongstomanyx-critical.md`)
    - Regole generali Laraxot
    - Filosofia Migrazioni
    - Estensioni Filament
+   - Relazioni many-to-many: usare sempre `belongsToManyX()`, mai `belongsToMany()` (RelationX)
 
 6. **[Regole Tema Meetup](../../../Themes/Meetup/docs/critical-rules-consolidated.md)**
    - Frontend Asset Management

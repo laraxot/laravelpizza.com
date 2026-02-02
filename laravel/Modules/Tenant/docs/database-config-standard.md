@@ -1,11 +1,12 @@
-# Database Config Standard Laravel 12.x - 2026-01-21
+# Database Config Standard Laravel 12.x
 
 **Status**: ✅ Completato  
-**Data**: 2026-01-21
+**Ultimo aggiornamento**: 2026-02-02
 
 ## Obiettivo
 
-Il file `config/database.php` è stato aggiornato per essere identico a quello standard di Laravel 12.x, garantendo compatibilità e manutenibilità.
+- **`config/database.php`** (base): identico allo standard Laravel 12.x.
+- **`config/local/{tenant}/database.php`** (override tenant, es. `config/local/laravelpizza/database.php`): allineato a Laravel 12, **senza** connessioni per-modulo (no notify, geo, media, job, xot, activity, cms, gdpr, lang, meetup, seo, tenant). Ammesse solo connessioni driver + `user_sqlite`, `user_mysql`, `user_mariadb`. Le connessioni modulari sono aggiunte da `TenantServiceProvider::registerDB()`.
 
 ## Motivazione
 
@@ -138,13 +139,17 @@ config('database.connections.limesurvey'); // ✅ Disponibile (da config tenant 
    - Variabili env: `DB_DATABASE_USER`, `DB_DATABASE_LIMESURVEY`
 3. **File standard** garantisce compatibilità con aggiornamenti Laravel
 
+## File tenant (config/local/{tenant}/database.php)
+
+Il file tenant **non** deve contenere connessioni per-modulo. Esempio corretto: `config/local/laravelpizza/database.php` con struttura Laravel 12 (default, connections [sqlite, mysql, mariadb, pgsql, sqlsrv, user_sqlite, user_mysql, user_mariadb], migrations, redis). Dopo il merge con la base, `registerDB()` aggiunge per ogni modulo una connessione come copia della default (stesso database).
+
 ## Riferimenti
 
-- [Database Config Standard Laravel 12](../../../docs/config/database-standard-laravel-12.md)
 - [Database Config Standard Rule](../../../../.cursor/rules/database-config-standard.mdc)
+- [Memoria database-config-laravel-12-tenant](../../../../.cursor/memories/database-config-laravel-12-tenant.md)
 - [TenantServiceProvider Database Registration](../app/Providers/TenantServiceProvider.php)
 - [DatabaseConfigResolver](../app/Services/Config/Resolvers/DatabaseConfigResolver.php)
 
-**Versione**: 1.0  
-**Ultimo aggiornamento**: 2026-01-21  
+**Versione**: 1.1  
+**Ultimo aggiornamento**: 2026-02-02  
 **Status**: ✅ Completato

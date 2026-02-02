@@ -11,10 +11,12 @@ Fornisce metodi estesi per gestire relazioni Eloquent complesse, supportando:
 
 ### belongsToManyX()
 Versione estesa di `belongsToMany` che:
-- Auto-rileva la pivot table tramite `guessPivot()`
+- Auto-rileva la pivot table tramite `guessPivot($related)` (nome da basename dei due modelli, es. Event+User → EventUser) oppure, se passi il secondo argomento (nome tabella), tramite `guessPivotFromTable($table)` (classe pivot = Studly del nome tabella nello stesso namespace del modello, es. `event_performer` → `EventPerformer`).
 - Supporta relazioni cross-database
-- Auto-configura `withPivot()` con i campi fillable
-- Aggiunge automaticamente timestamps
+- Auto-configura `withPivot()` con i campi fillable della pivot
+- Aggiunge automaticamente timestamps e `using(Pivot::class)`
+
+**Regola critica**: nei modelli Laraxot usare **sempre** `belongsToManyX()` e **mai** `belongsToMany()` per relazioni many-to-many. Vedi `.cursor/rules/belongstomanyx-critical.md`.
 
 **Business Logic:**
 - Rileva automaticamente il modello pivot appropriato

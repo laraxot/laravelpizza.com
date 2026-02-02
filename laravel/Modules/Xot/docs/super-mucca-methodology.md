@@ -139,7 +139,10 @@ Vedi [Intelligent Solution Rule](./intelligent-solution-rule.md) per dettagli co
 │  7. AGGIORNA DOCS (DOPO)           │
 │     - Finalizza documentazione     │
 │     - Documenta decisioni          │
-└─────────────────────────────────────┘
+### 8. Database and Frontend Standards (Laravel 12.x / Filament 5.x)
+- **Database Philosophy**: Always use `env('DB_URL')` for connections. For SSL, use `PHP_VERSION_ID` checks (e.g., `(PHP_VERSION_ID >= 80500 ? \Pdo\Mysql::ATTR_SSL_CA : \PDO::MYSQL_ATTR_SSL_CA)`).
+- **Filament Assets**: Follow Filament 5.x asset management. Use Tailwind CSS v4.1+ and `@tailwindcss/vite` in `vite.config.js`.
+- **Theme Assets**: Theme-specific assets must be compiled via `npm run build && npm run copy` and served from the consolidated public directory as per Laraxot rules.
 ```
 
 ## Regole Critiche

@@ -71,6 +71,21 @@ Il **tema pubblico** non è hardcodato: si ricava dalla configurazione tenant.
 
 Regola: `.cursor/rules/theme-resolution-critical.md`. Memoria: `.cursor/memories/theme-resolution.md`.
 
+### 0b. Relazioni many-to-many: belongsToManyX (CRITICAL)
+
+**NEVER use `$this->belongsToMany()` for many-to-many. ALWAYS use `$this->belongsToManyX()`.**
+
+- `belongsToManyX` è nel trait `RelationX` (XotBaseModel); auto-pivot, cross-database, withPivot, timestamps.
+- Sintassi: `$this->belongsToManyX(Related::class)` oppure `$this->belongsToManyX(Related::class, 'pivot_table_name')` se la pivot ha nome tabella esplicito (la classe pivot deve esistere nello stesso namespace, es. `event_performer` → `EventPerformer`).
+
+Regola: `.cursor/rules/belongstomanyx-critical.md`. Memoria: `.cursor/memories/belongstomanyx-laraxot.md`. Doc: `laravel/Modules/Xot/docs/traits/relation-x.md`.
+
+### 0c. Database config Laravel 12 (CRITICAL)
+
+**`config/database.php`** (base) e **`config/local/{tenant}/database.php`** devono seguire lo standard Laravel 12. **Nessuna** connessione per-modulo hardcoded (no `notify`, `geo`, `media`, `job`, `xot`, `activity`, `cms`, `gdpr`, `lang`, `meetup`, `seo`, `tenant`). Le connessioni modulari sono aggiunte da `TenantServiceProvider::registerDB()` come copia della default (stesso database). Nel file tenant sono ammesse solo connessioni driver (sqlite, mysql, mariadb, pgsql, sqlsrv) e `user_sqlite`, `user_mysql`, `user_mariadb`.
+
+Regola: `.cursor/rules/database-config-standard.mdc`. Memoria: `.cursor/memories/database-config-laravel-12-tenant.md`. Doc: `laravel/Modules/Tenant/docs/database-config-standard.md`.
+
 ### 1. Front Office: Folio + Volt + CMS-Driven Pages ONLY
 
 **NEVER use traditional controllers or routes in web.php/api.php for front office.**
@@ -480,34 +495,37 @@ git push origin feature/your-feature
 1. ❌ Creating traditional controllers for front office
    ✅ Use Folio + Volt + JSON pages
 
-2. ❌ Extending Filament classes directly
+2. ❌ Adding per-module connections (notify, geo, media, job, xot, activity, cms, gdpr, lang, meetup, seo, tenant) in config/database.php or config/local/{tenant}/database.php
+   ✅ Follow Laravel 12: only driver connections + user_sqlite/user_mysql/user_mariadb; registerDB() adds module connections dynamically
+
+3. ❌ Extending Filament classes directly
    ✅ Always extend XotBase abstracts
 
-3. ❌ Creating duplicate migration files
+4. ❌ Creating duplicate migration files
    ✅ One table, one create migration
 
-4. ❌ Complex ServiceProviders with unnecessary methods
+5. ❌ Complex ServiceProviders with unnecessary methods
    ✅ Use minimal structure - let XotBase do the work
 
-5. ❌ Missing required properties in Providers (`$module_dir`, `$module_ns`)
+6. ❌ Missing required properties in Providers (`$module_dir`, `$module_ns`)
    ✅ Always include ALL required properties
 
-6. ❌ Not calling `parent::boot()` or `parent::register()` when overriding
+7. ❌ Not calling `parent::boot()` or `parent::register()` when overriding
    ✅ ALWAYS call parent FIRST
 
-7. ❌ Hardcoding strings in UI
+8. ❌ Hardcoding strings in UI
    ✅ Use translation files
 
-8. ❌ Business logic in Blade/Livewire components
+9. ❌ Business logic in Blade/Livewire components
    ✅ Use Actions pattern
 
-9. ❌ Missing `declare(strict_types=1);`
-   ✅ Add to every PHP file
+10. ❌ Missing `declare(strict_types=1);`
+    ✅ Add to every PHP file
 
-10. ❌ UPPERCASE or CamelCase .md filenames
+11. ❌ UPPERCASE or CamelCase .md filenames
     ✅ Use lowercase-with-hyphens.md
 
-11. ❌ Forgetting `npm run copy` after theme build
+12. ❌ Forgetting `npm run copy` after theme build
     ✅ Always run copy to deploy assets
 
 ## PHPStan Configuration
