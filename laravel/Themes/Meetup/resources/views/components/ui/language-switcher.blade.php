@@ -35,9 +35,7 @@
             @php $flagCode = $currentLocale === 'en' ? 'gb' : $currentLocale; @endphp
             <x-filament::icon :icon="'ui-flags.' . $flagCode" class="h-5 w-5" />
             <span class="hidden md:block">{{ $locales[$currentLocale]['native'] ?? strtoupper($currentLocale) }}</span>
-            <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
+            <x-filament::icon icon="meetup-icon-arrow-down" class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" />
         @endif
     </button>
     
@@ -62,9 +60,7 @@
                 <span>{{ $locale['native'] ?? $code }}</span>
                 
                 @if($code === $currentLocale)
-                    <svg class="w-4 h-4 ml-auto text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                    </svg>
+                    <x-filament::icon icon="meetup-icon-check" class="w-4 h-4 ml-auto text-red-600" />
                 @endif
             </a>
         @endforeach
