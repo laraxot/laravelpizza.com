@@ -1,5 +1,14 @@
 # Meetup Module Documentation Index
 
+## Core Documentation
+
+### Laravel Localization
+- [Laravel Localization Implementation](laravel-localization-implementation-complete.md) - Complete Laravel Localization setup and configuration
+- [Localization Standard](localization-standard.md) - Standard localization practices and patterns
+- [Events Page Differences Analysis](events-page-differences-analysis.md) - Analysis of events page vs laravelpizza.com
+- [SVG Management Guide](svg-management-guide.md) - SVG management and Filament icon system
+- [Task Implementation from Research](task-implementation-from-research.md) - Implementation tasks from research findings
+
 ## Core Concepts
 
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup module
@@ -42,10 +51,16 @@
 
 ## Schema.org e SEO
 
+- [Schema.org Research Comprehensive](schema-org-research-comprehensive.md) - Ricerca approfondita: Event, EventSeries, eventSchedule, JoinAction, LeaveAction, EventReservation, EducationEvent, FoodEstablishment, Offer, PriceSpecification, GeoCircle, Person, Hotels
 - [Schema.org Enhancement Recommendations](schema-org-enhancement-recommendations.md) - Tipi Schema.org studiati e roadmap per Event, Page, User, Place
 - [Task Schema.org Event/Series/Azioni](tasks-schema-org-event-series-actions.md) - Event, EventSeries, JoinAction, LeaveAction, EventReservation, attendee
 - [Task Schema.org Offer/Prezzo](tasks-schema-org-offer-price.md) - Offer, PriceSpecification
 - [Event Schema.org Implementation](event-schema-org-implementation.md) - Implementazione campi Event
+- [Schema.org Implementation Tasks](schema-org-implementation-tasks.md) - Roadmap implementazione consolidata
+
+## Implementation Tasks (Prioritized)
+
+- [Task Implementation from Research](task-implementation-from-research.md) - Task consolidati da ricerca Schema.org e analisi visiva (CRITICO: pagina events rotta)
 
 ## Missing Features & Gaps
 

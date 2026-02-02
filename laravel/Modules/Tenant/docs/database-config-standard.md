@@ -1,155 +1,199 @@
-# Database Config Standard Laravel 12.x
+# Database Configuration Standard - Laravelpizza (Laravel 12.x)
 
-**Status**: ✅ Completato  
-**Ultimo aggiornamento**: 2026-02-02
+## 📋 Overview
 
-## Obiettivo
+Questo documento definisce la configurazione database standard per il progetto Laravel Pizza che segue la filosofia Laravel 12.x con multi-tenant support.
 
-- **`config/database.php`** (base): identico allo standard Laravel 12.x.
-- **`config/local/{tenant}/database.php`** (override tenant, es. `config/local/laravelpizza/database.php`): allineato a Laravel 12, **senza** connessioni per-modulo (no notify, geo, media, job, xot, activity, cms, gdpr, lang, meetup, seo, tenant). Ammesse solo connessioni driver + `user_sqlite`, `user_mysql`, `user_mariadb`. Le connessioni modulari sono aggiunte da `TenantServiceProvider::registerDB()`.
+## 🎯 Filosofia Laravel 12.x
 
-## Motivazione
+### **Single Database Connection**
+- ✅ **Una sola connessione principale** (`mysql`)
+- ✅ **Multi-tenant tramite database/schema separati**
+- ✅ **Modular connections gestite automaticamente**
 
-### Perché Standard Laravel 12.x
-
-1. **Gestione Dinamica Connessioni Modulari**
-   - Le connessioni modulari vengono aggiunte **automaticamente** da `TenantServiceProvider::registerDB()`
-   - Non serve hardcodare connessioni nel file principale
-   - Il sistema Laraxot gestisce tutto dinamicamente
-
-2. **Compatibilità Aggiornamenti**
-   - File standard = compatibilità garantita con aggiornamenti Laravel
-   - Nessuna modifica custom da mantenere
-   - Struttura sempre allineata con Laravel core
-
-3. **Configurazione Pulita**
-   - File pulito e leggibile
-   - Solo connessioni standard (sqlite, mysql, mariadb, pgsql, sqlsrv)
-   - Connessioni custom gestite via file tenant-specific o env
-
-## Architettura Connessioni
-
-### Connessioni Standard (in database.php)
-- `sqlite` - SQLite database
-- `mysql` - MySQL database (default)
-- `mariadb` - MariaDB database
-- `pgsql` - PostgreSQL database
-- `sqlsrv` - SQL Server database
-
-### Connessioni Modulari (aggiunte dinamicamente)
-Aggiunte automaticamente da `TenantServiceProvider::registerDB()`:
-- `activity`, `cms`, `gdpr`, `geo`, `job`, `lang`, `media`, `meetup`, `notify`, `seo`, `tenant`, `ui`, `user`, `xot`, `quaeris`, `chart`, `limesurvey`
-
-**Pattern**: Ogni modulo ottiene una connessione basata sulla connessione default, configurata automaticamente.
-
-### Connessioni Custom (config tenant-specific)
-Configurate via file tenant-specific in `config/it/{tenant}/database.php`:
-- `user` - Database utenti (se diverso da default)
-- `limesurvey` - Database LimeSurvey (se diverso da default)
-- `quaeris` - Database Quaeris (se diverso da default)
-
-**Pattern**: Usano variabili env specifiche:
-- `DB_DATABASE_USER` / `DB_USERNAME_USER` / `DB_PASSWORD_USER`
-- `DB_DATABASE_LIMESURVEY` / `DB_USERNAME_LIMESURVEY` / `DB_PASSWORD_LIMESURVEY`
-
-## Come Funziona
-
-### 1. Bootstrap Standard
+### **Configurazione Base**
 ```php
-// config/database.php (standard Laravel 12.x)
-'default' => env('DB_CONNECTION', 'sqlite'),
+'default' => env('DB_CONNECTION', 'mysql'),
 'connections' => [
-    'mysql' => [...], // Configurazione standard
-    // Nessuna connessione modulare hardcoded
-]
+    'mysql' => [ /* singola connessione */ ],
+    'sqlite' => [ /* fallback */ ],
+],
 ```
 
-### 2. Registrazione Dinamica (TenantServiceProvider)
-```php
-// Modules/Tenant/app/Providers/TenantServiceProvider.php
-public function registerDB(): void
-{
-    // Legge configurazione da TenantService::config('database')
-    // Aggiunge automaticamente connessioni per ogni modulo
-    foreach ($modules as $module) {
-        $name = $module->getSnakeName();
-        if (!isset($connections[$name])) {
-            $connections[$name] = $connections[$default]; // Copia default
-        }
-    }
-    Config::set('database', $data);
-}
-```
+## 📁 File Principali
 
-### 3. Configurazione Tenant-Specific (opzionale)
+### **1. `/config/database.php`** (Laravel Standard)
+- Configurazione base di Laravel 12.x
+- Singola connessione `mysql`
+- Supporto per SQLite fallback
+
+### **2. `/config/local/laravelpizza/database.php`** (Tenant Override)
+- Eredita configurazione standard
+- Aggiunge supporto Redis
+- NON deve avere connessioni modulari
+
+## 🔧 Configurazione Corretta
+
+### **database.php (Laravel Standard)**
 ```php
-// config/it/quaeris/database.php
 return [
+    'default' => env('DB_CONNECTION', 'sqlite'),
     'connections' => [
-        'user' => [
-            'database' => env('DB_DATABASE_USER', 'quaeris_user'),
-            // Configurazione custom per user
-        ],
-        'limesurvey' => [
-            'database' => env('DB_DATABASE_LIMESURVEY', 'quaeris_survey'),
-            // Configurazione custom per limesurvey
-        ],
+        'sqlite' => [ /* ... */ ],
+        'mysql' => [ /* ... */ ],
     ],
+    'migrations' => [ /* ... */ ],
+    'redis' => [ /* ... */ ],
 ];
 ```
 
-## Modifiche Applicate
-
-### File Sostituito
-- `laravel/config/database.php` → Standard Laravel 12.x
-
-### Rimozioni
-- ❌ Tutte le connessioni modulari hardcoded (activity, cms, gdpr, geo, job, lang, media, meetup, notify, seo, tenant, ui, user, xot duplicate)
-- ❌ Errori di sintassi (virgole doppie `,,`, parentesi errate `) : []`)
-- ❌ Configurazioni custom hardcoded
-
-### Aggiunte
-- ✅ Struttura standard Laravel 12.x
-- ✅ `transaction_mode` per SQLite
-- ✅ `sslmode` per PostgreSQL
-- ✅ Redis config aggiornato (max_retries, backoff_algorithm, etc.)
-- ✅ PHP 8.3+ compatibility (usato `\PDO::MYSQL_ATTR_SSL_CA` invece di `\Pdo\Mysql::ATTR_SSL_CA`)
-
-## Verifica Funzionamento
-
-### Test Connessioni Modulari
+### **database.php (Tenant Override)**
 ```php
-// Le connessioni modulari devono essere disponibili dopo bootstrap
-config('database.connections.user'); // ✅ Disponibile (aggiunta da TenantServiceProvider)
-config('database.connections.xot'); // ✅ Disponibile (aggiunta da TenantServiceProvider)
-config('database.connections.quaeris'); // ✅ Disponibile (aggiunta da TenantServiceProvider)
+return [
+    'default' => env('DB_CONNECTION', 'mysql'),
+    'connections' => [
+        'mysql' => [ /* singola connessione */ ],
+        'sqlite' => [ /* fallback */ ],
+    ],
+    'migrations' => [ /* ... */ ],
+    'redis' => [ /* ... */ ],
+];
 ```
 
-### Test Connessioni Custom
+## ❌ Configurazione Errata (Da Eliminare)
+
+### **NON fare mai questo:**
 ```php
-// Connessioni custom devono essere configurate via tenant-specific
-config('database.connections.limesurvey'); // ✅ Disponibile (da config tenant o default)
+// ❌ ERRATO - Connessioni multiple per modulo
+'notify' => [ /* ... */ ],
+'geo' => [ /* ... */ ],
+'media' => [ /* ... */ ],
+'job' => [ /* ... */ ],
+'xot' => [ /* ... */ ],
+'activity' => [ /* ... */ ],
+'cms' => [ /* ... */ ],
+'gdpr' => [ /* ... */ ],
+'lang' => [ /* ... */ ],
+'meetup' => [ /* ... */ ],
+'seo' => [ /* ... */ ],
+'tenant' => [ /* ... */ ],
 ```
 
-## Note Importanti
+## ✅ Come Funziona il Multi-Tenant
 
-1. **NON aggiungere connessioni modulari** in `config/database.php` - vengono aggiunte automaticamente
-2. **Connessioni custom** (`user`, `limesurvey`) possono essere configurate via:
-   - File tenant-specific: `config/it/{tenant}/database.php`
-   - Variabili env: `DB_DATABASE_USER`, `DB_DATABASE_LIMESURVEY`
-3. **File standard** garantisce compatibilità con aggiornamenti Laravel
+### **TenantServiceProvider::registerDB()**
+- ✅ Registra automaticamente connessioni modulari
+- ✅ Gestisce database separati per ogni modulo
+- ✅ Aggiorna configurazione dinamicamente
 
-## File tenant (config/local/{tenant}/database.php)
+### **Struttura Database per Multi-Tenant**
+```
+laravelpizza/                    # Database principale
+├── laravelpizza_notify_test/   # Database modulo Notify
+├── laravelpizza_geo_test/      # Database modulo Geo
+├── laravelpizza_media_test/    # Database modulo Media
+└── ...
+```
 
-Il file tenant **non** deve contenere connessioni per-modulo. Esempio corretto: `config/local/laravelpizza/database.php` con struttura Laravel 12 (default, connections [sqlite, mysql, mariadb, pgsql, sqlsrv, user_sqlite, user_mysql, user_mariadb], migrations, redis). Dopo il merge con la base, `registerDB()` aggiunge per ogni modulo una connessione come copia della default (stesso database).
+## 🚨 Problemi Identificati
 
-## Riferimenti
+### **Problema 1: Connessioni Modulari**
+- ❌ File attuale ha connessioni multiple
+- ❌ Violano filosofia Laravel 12.x
+- ❌ Duplicano funzionalità TenantServiceProvider
 
-- [Database Config Standard Rule](../../../../.cursor/rules/database-config-standard.mdc)
-- [Memoria database-config-laravel-12-tenant](../../../../.cursor/memories/database-config-laravel-12-tenant.md)
-- [TenantServiceProvider Database Registration](../app/Providers/TenantServiceProvider.php)
-- [DatabaseConfigResolver](../app/Services/Config/Resolvers/DatabaseConfigResolver.php)
+### **Problema 2: Configurazione Inconsistente**
+- ❌ Mischia configurazione Laravel e Tenant
+- ❌ Difficoltà nel debugging
+- ❌ Problemi di performance
 
-**Versione**: 1.1  
-**Ultimo aggiornamento**: 2026-02-02  
-**Status**: ✅ Completato
+## 📋 Checklist di Correzione
+
+### **Fase 1: Aggiornare database.php**
+- [ ] Rimuovere connessioni modulari
+- [ ] Mantenere solo `mysql` e `sqlite`
+- [ ] Seguire struttura Laravel standard
+
+### **Fase 2: Verificare TenantServiceProvider**
+- [ ] `registerDB()` registra connessioni modulari
+- [ ] Configurazione automatica funziona
+- [ ] Nessuna duplicazione necessaria
+
+### **Fase 3: Test Database**
+- [ ] Connessione principale funziona
+- [ ] Multi-tenant gestito correttamente
+- [ ] Nessun errore di connessione
+
+## 🔍 Come Verificare
+
+### **Test Connessione Principale**
+```bash
+php artisan tinker
+>>> DB::connection()->getPdo();
+```
+
+### **Test Multi-Tenant**
+```bash
+php artisan tinker
+>>> app('tenant')->id;
+>>> config('database.connections.notify');
+```
+
+## 📚 Riferimenti Ufficiali
+
+### **Laravel 12.x Database Docs**
+- https://laravel.com/docs/12.x/database
+- https://laravel.com/docs/12.x/multi-database
+
+### **Tenant Package Docs**
+- `Modules/Tenant/docs/`
+- `Modules/Tenant/app/Providers/TenantServiceProvider.php`
+
+## 🎯 Regole Fondamentali
+
+### **1. Single Connection Rule**
+> **MAI** avere più di una connessione `mysql` attiva
+
+### **2. Multi-Tenant Rule**
+> Le connessioni modulari devono essere gestite automaticamente
+
+### **3. Inheritance Rule**
+> Il file tenant override eredita sempre dalla configurazione standard
+
+### **4. No Duplication Rule**
+> Nessuna configurazione duplicata tra file diversi
+
+## 🔄 Workflow di Sviluppo
+
+### **Creazione Nuovo Modulo**
+1. Definire schema database
+2. Creare migration
+3. TenantServiceProvider gestisce connessione automaticamente
+4. Test multi-tenant
+
+### **Debug Database**
+1. Verificare `config('database.default')`
+2. Testare `DB::connection()->getPdo()`
+3. Controllare `app('tenant')->id`
+4. Verificare `config('database.connections.*')`
+
+## 📞 Supporto
+
+### **File Relativi**
+- `/config/database.php` - Configurazione base
+- `/config/local/laravelpizza/database.php` - Override tenant
+- `/Modules/Tenant/app/Providers/TenantServiceProvider.php` - Gestione connessioni
+- `/Modules/Tenant/docs/` - Documentazione tenant
+
+### **Comandi Utili**
+```bash
+php artisan config:cache
+php artisan config:clear
+php artisan optimize
+```
+
+---
+
+**Ultimo Aggiornamento**: 2026-02-02  
+**Versione**: 1.0  
+**Stato**: ✅ Configurazione Standard Definita

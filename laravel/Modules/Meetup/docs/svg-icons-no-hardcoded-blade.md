@@ -13,7 +13,8 @@
 ## Convenzione nomi
 
 - **Logo**: `logo.svg` → `meetup-logo`.
-- **Nav**: `icon-calendar.svg`, `icon-community.svg`, `icon-sponsors.svg` → `meetup-icon-calendar`, `meetup-icon-community`, `meetup-icon-sponsors`.
+- **Nav**: `icon-calendar.svg`, `icon-community.svg`, `icon-sponsors.svg`, `icon-chat.svg` → `meetup-icon-calendar`, `meetup-icon-community`, `meetup-icon-sponsors`, `meetup-icon-chat`.
+- **UI header/nav**: `icon-language.svg`, `icon-chevron-down.svg`, `icon-check.svg`, `icon-menu.svg` → `meetup-icon-language`, `meetup-icon-chevron-down`, `meetup-icon-check`, `meetup-icon-menu`.
 - **Social**: `facebook.svg`, `twitter.svg`, `github.svg` → `meetup-facebook`, `meetup-twitter`, `meetup-github`.
 
 ## Logo: non sovrascrivere logo.svg
@@ -33,6 +34,14 @@ Il logo ufficiale del modulo Meetup è il **contenuto attuale** di `Modules/Meet
 - Solo il markup SVG (elemento `<svg>...</svg>`), senza wrapper HTML.
 - Preferire `stroke="currentColor"` o `fill="currentColor"` per ereditare il colore da `class` (es. `text-red-500`).
 - Evitare dimensioni fisse nel file; usare `class="h-5 w-5"` (o simili) sul componente.
+
+## Componenti che usano meetup-* (no SVG inline)
+
+- `Themes/Meetup/resources/views/components/sections/header.blade.php` (header principale)
+- `Themes/Meetup/resources/views/components/sections/header/v1.blade.php` (header v1: logo, icon-calendar, icon-chat, icon-language, icon-chevron-down, icon-check, icon-menu)
+- `Themes/Meetup/resources/views/components/sections/footer.blade.php`
+
+Se aggiungi una nuova sezione/componente con icone, crea il file in `Modules/Meetup/resources/svg/` e usa `meetup-{nome}`.
 
 ## Riferimenti
 

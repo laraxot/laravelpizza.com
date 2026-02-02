@@ -20,6 +20,17 @@ class AdminPanelProvider extends XotBasePanelProvider
 
         FilamentIcon::register([
             'meetup-logo' => 'meetup-logo',
+            'meetup-icon-calendar' => 'meetup-icon-calendar',
+            'meetup-icon-chat' => 'meetup-icon-chat',
+            'meetup-icon-check' => 'meetup-icon-check',
+            'meetup-icon-chevron-down' => 'meetup-icon-chevron-down',
+            'meetup-icon-community' => 'meetup-icon-community',
+            'meetup-icon-language' => 'meetup-icon-language',
+            'meetup-icon-menu' => 'meetup-icon-menu',
+            'meetup-icon-sponsors' => 'meetup-icon-sponsors',
+            'meetup-facebook' => 'meetup-facebook',
+            'meetup-github' => 'meetup-github',
+            'meetup-twitter' => 'meetup-twitter',
         ]);
 
         return $panel;

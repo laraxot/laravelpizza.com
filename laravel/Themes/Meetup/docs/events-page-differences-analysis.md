@@ -44,7 +44,7 @@ attuale configurazione (semplificata):
     - location (`location`)
     - link dettagli (`url`).
 
-**problema**: `events.json` non popola `data.events` e nemmeno usa `events.list` come `view`.
+**stato**: `events.json` usa `pub_theme::components.blocks.events.list` e popola `data.events` con 6 eventi (attendees_current, attendees_max). Il componente `blocks/events/list.blade.php` è stato creato e allinea titolo, filtri (All/Upcoming/Past), grid e card a laravelpizza.com/events.
 
 ## design target (events.html)
 
@@ -102,26 +102,18 @@ caratteristiche principali della pagina statica:
    - prima fase: replicare la grid e la struttura visuale
    - fase successiva: aggiungere supporto ai filtri via js (eventualmente usando dati `status` negli eventi).
 
-## passi successivi (implementazione tecnica)
+## implementazione effettuata
 
-1. aggiornare `events.json`:
-   - sostituire i blocchi hero/features/stats/cta con un singolo blocco:
-     - `view`: `pub_theme::components.blocks.events.list`
-     - `title`: `Upcoming Events`
-     - `description`: `Join us for pizza and Laravel discussions`
-     - `events`: lista eventi statici (mappati da `events.html`).
+1. **events.json**: un solo blocco `events` con `view`: `pub_theme::components.blocks.events.list`, `title`, `description`, `events` (6 eventi con status, date, time, location, attendees_current, attendees_max, url).
 
-2. verificare/coordinare con il modulo meetup:
-   - documentazione: `Modules/Meetup/docs/events-page-differences-analysis.md`
-   - regole critiche: `Modules/Meetup/docs/critical-rules-consolidated.md`
+2. **blocks/events/list.blade.php**: creato; header (titolo + descrizione), filtri Alpine.js (All Events, Upcoming, Past Events), grid md:grid-cols-3, card con badge Upcoming/Past, descrizione, date/time/location, X / Y attendees.
 
-3. rifinitura visiva:
-   - controllare spacing, colori e tipografia rispetto a `events.html`
-   - eventualmente estendere `events/list.blade.php` per badge `Upcoming/Past`.
+3. **Confronto e screenshot**: [events-comparison/README.md](events-comparison/README.md) (differenze, come far funzionare tutto, istruzioni screenshot).
 
 ## riferimenti
 
+- [events-comparison/README.md](events-comparison/README.md) – confronto locale vs laravelpizza.com, come far funzionare tutto
 - `Themes/Meetup/resources/html/events.html`
 - `Themes/Meetup/resources/views/components/blocks/events/list.blade.php`
 - `config/local/laravelpizza/database/content/pages/events.json`
-- `Modules/Meetup/docs/events-page-differences-analysis.md`
+- [Modules/Meetup/docs/events-page-differences-analysis.md](../../Modules/Meetup/docs/events-page-differences-analysis.md)

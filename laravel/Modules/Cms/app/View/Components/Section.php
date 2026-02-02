@@ -33,7 +33,7 @@ class Section extends Component
 
     public ?string $id = null;
 
-    public ?string $tpl = null;
+    public string $tpl = 'v1';
 
     /**
      * Create a new component instance.
@@ -51,7 +51,9 @@ class Section extends Component
         $this->slug = $slug;
         $this->class = $class;
         $this->id = $id;
-        $this->tpl = $tpl;
+        if(null !== $tpl) {
+            $this->tpl = $tpl;
+        }
         $this->blocks = SectionModel::getBlocksBySlug($this->slug);
     }
 

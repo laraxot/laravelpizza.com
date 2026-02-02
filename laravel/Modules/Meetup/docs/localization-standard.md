@@ -40,6 +40,24 @@ Il modulo Meetup segue lo standard di localizzazione basato su **mcamara/laravel
 
 - Il middleware di mcamara (LocaleSessionRedirect, LaravelLocalizationRedirectFilter) gestisce session/cookie e redirect. Non impostare manualmente il locale in session per le pagine pubbliche.
 
+## Route caching
+
+- Il package **non è compatibile** con `php artisan route:cache` / `php artisan optimize` senza configurazione.
+- Usare i comandi dedicati:
+  - `php artisan route:trans:cache`
+  - `php artisan route:trans:clear`
+  - `php artisan route:trans:list {locale}`
+
+## Testing
+
+- In test può verificarsi 404 su rotte localizzate perché l’app viene bootstrapata prima della request.
+- Soluzione: settare `Mcamara\LaravelLocalization\LaravelLocalization::ENV_ROUTE_KEY` per la lingua prima di fare request (pattern ufficiale nel README del package).
+
+## Language switcher e hreflang
+
+- Per cambiare lingua mantenendo la pagina corrente usare `LaravelLocalization::getLocalizedURL($localeCode, null, [], true)`.
+- Aggiungere `rel="alternate"` e `hreflang` per SEO.
+
 ## Riferimenti incrociati
 
 - [Themes/Meetup/docs/localization-standard.md](../../../Themes/Meetup/docs/localization-standard.md)
