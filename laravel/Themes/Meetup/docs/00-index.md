@@ -19,6 +19,7 @@
 - [MCP Configuration](mcp-configuration.md) - MCP per confronto grafica e task
 - [Laravel Localization Implementation](laravel-localization-implementation-complete.md) - Complete Laravel Localization setup and configuration
 - [Localization Standard](localization-standard.md) - Standard localization practices and patterns
+- [UI/UX Language Switcher](../../Modules/Meetup/docs/ui-ux-language-switcher-standard.md) - Design standards for language selection
 - [Events Page Comparison](events-page-comparison.md) - Comparison of events page with laravelpizza.com
 - [Events Comparison](events-comparison/) - Detailed events page comparison analysis
 - [Visual Comparison](visual-comparison/) - Visual comparison tools and analysis

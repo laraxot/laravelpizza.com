@@ -3,8 +3,9 @@
 ## Core Documentation
 
 ### Laravel Localization
-- [Laravel Localization Implementation](laravel-localization-implementation-complete.md) - Complete Laravel Localization setup and configuration
-- [Localization Standard](localization-standard.md) - Standard localization practices and patterns
+- [Laravel Localization Implementation](laravel-localization-implementation-complete.md) - Integrazione locale completa
+- [Localization Standard](localization-standard.md) - Standard di localizzazione (Action, Middleware)
+- [UI/UX Language Switcher](ui-ux-language-switcher-standard.md) - Best practice e standard visuali
 - [Events Page Differences Analysis](events-page-differences-analysis.md) - Analysis of events page vs laravelpizza.com
 - [SVG Management Guide](svg-management-guide.md) - SVG management and Filament icon system
 - [Task Implementation from Research](task-implementation-from-research.md) - Implementation tasks from research findings
