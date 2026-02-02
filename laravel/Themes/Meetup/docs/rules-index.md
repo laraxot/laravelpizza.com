@@ -1,8 +1,5 @@
 # Indice Regole Critiche - Tema Meetup
 
-## Data
-2025-11-30
-
 ## 📚 Documentazione Regole Critiche
 
 ### Regole Consolidate
@@ -41,20 +38,36 @@
    - Comando copy corretto
    - Verifica asset
 
+7. **[Risoluzione tema e workflow](./theme-resolution-and-workflow.md)**
+   - Catena: APP_URL → config tenant → xra.php → pub_theme → Themes/Meetup
+   - Workflow: composer update -W, npm install, npm run build, npm run copy
+   - Regola agenti: `.cursor/rules/theme-resolution-critical.md`
+
+8. **[Filament 5 – riferimento tema](./filament-5-theme-reference.md)**
+   - Requisiti Filament 5 (PHP 8.2+, Laravel 11.28+, Tailwind v4.1+)
+   - Panel builder vs componenti singoli; nostro setup (CSS nel tema, admin in app)
+   - Riferimento: https://filamentphp.com/docs/5.x/introduction/installation
+
+9. **[Grafica vs laravelpizza.com](./grafica-confronto-laravelpizza.md)**, **[Differenze grafica e miglioramenti](./differenze-grafica-e-miglioramenti.md)** e **[Approfondimento tecnico](./differenze-grafica-approfondimento.md)** (file, codice, checklist)
+   - Confronto struttura e contenuti; uso MCP o `npm run screenshots` (Playwright)
+   - Screenshot in [screenshots/grafica-confronto](screenshots/grafica-confronto/); doc dettagliata differenze e priorità miglioramenti
+
 ### Riferimenti Cross-Module
 
-7. **[Regole Xot](../../Modules/Xot/docs/critical-rules-consolidated.md)**
-   - Regole generali Laraxot
-   - Filosofia Migrazioni
-   - Estensioni Filament
+10. **[Regole Xot](../../Modules/Xot/docs/critical-rules-consolidated.md)**
+    - Regole generali Laraxot
+    - Filosofia Migrazioni
+    - Estensioni Filament
 
-8. **[Regole Modulo Meetup](../../Modules/Meetup/docs/critical-rules-consolidated.md)**
-   - Architettura Frontoffice
-   - Folio + Volt pattern
+11. **[Regole Modulo Meetup](../../Modules/Meetup/docs/critical-rules-consolidated.md)**
+    - Architettura Frontoffice
+    - Folio + Volt pattern
 
 ## 🔄 Aggiornamenti Recenti
 
-- **2025-11-30**: Aggiunta regola Frontend Asset Management
-- **2025-11-30**: Aggiunta regola Componenti Blade Anonimi
-- **2025-11-30**: Consolidata Vite Configuration
-- **2025-11-30**: Consolidata Metatags Component
+- Aggiunta regola Risoluzione tema e workflow (APP_URL → config → pub_theme; build e copy)
+- Aggiunta regola Frontend Asset Management
+- Aggiunta regola Componenti Blade Anonimi
+- Consolidata Vite Configuration
+- Consolidata Metatags Component
+- Aggiunti Filament 5 theme reference e Grafica vs laravelpizza.com (MCP)

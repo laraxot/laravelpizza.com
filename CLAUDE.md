@@ -58,6 +58,19 @@ Modules/{ModuleName}/
 
 ## Critical Architecture Rules
 
+### 0. Theme Resolution (CRITICAL – separazione tema)
+
+Il **tema pubblico** non è hardcodato: si ricava dalla configurazione tenant.
+
+1. **`.env`** → `APP_URL` (es. `http://laravelpizza.local`)
+2. **Cartella config** → da `APP_URL` il modulo Tenant ricava il nome tenant (es. `local/laravelpizza`) → **`laravel/config/local/laravelpizza`**
+3. **`config/local/laravelpizza/xra.php`** → chiave **`pub_theme`** (es. `'Meetup'`)
+4. **Tema** → **`laravel/Themes/Meetup`**; view namespace **`pub_theme::`**
+
+**Workflow dalla cartella del tema** (`laravel/Themes/Meetup`): `composer update -W`, `npm install`, `npm run build`, `npm run copy`. Build e copy sono obbligatori per vedere modifiche CSS/JS.
+
+Regola: `.cursor/rules/theme-resolution-critical.md`. Memoria: `.cursor/memories/theme-resolution.md`.
+
 ### 1. Front Office: Folio + Volt + CMS-Driven Pages ONLY
 
 **NEVER use traditional controllers or routes in web.php/api.php for front office.**

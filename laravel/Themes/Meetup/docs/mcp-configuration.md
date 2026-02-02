@@ -1,8 +1,7 @@
 # MCP Server Configuration - Meetup Theme
 
-**Last Updated**: 31 Gennaio 2026
 **Status**: ✅ Configured
-**MCP Servers**: Asana, ClickUp, Filesystem, Database, Redmine (Planned)
+**MCP Servers**: Asana, ClickUp, Filesystem, Database, **cursor-browser-extension**, Redmine (Planned)
 
 ---
 
@@ -14,6 +13,7 @@ The Meetup theme's MCP configuration enables AI assistants to interact with:
 - **Redmine** - Project management (planned, requires self-hosted instance)
 - **Filesystem** - Theme assets, components, and page access
 - **Database** - Theme configuration and settings inspection
+- **cursor-browser-extension** - Navigazione e screenshot per confronto grafico con laravelpizza.com
 
 ---
 
@@ -111,6 +111,25 @@ The Meetup theme's MCP configuration enables AI assistants to interact with:
 "Query: SELECT * FROM navigation WHERE theme = 'meetup' ORDER BY sort_order"
 ```
 
+### Confronto grafica con laravelpizza.com (cursor-browser-extension)
+
+Per verificare se la nostra grafica è uguale a https://laravelpizza.com/:
+
+1. **Avviare l'app locale** (da `laravel/`): `composer dev` oppure `php artisan serve` su `http://127.0.0.1:8002`.
+2. **Aprire il sito originale**: usare MCP `browser_navigate` con `url: "https://laravelpizza.com/"`.
+3. **Catturare screenshot**: usare `browser_take_screenshot` con `fullPage: true` e `filename: "laravelpizza-com-home.png"`.
+4. **Aprire la nostra home**: `browser_navigate` con `url: "http://127.0.0.1:8002/it"`.
+5. **Screenshot della nostra home**: `browser_take_screenshot` con `fullPage: true` e `filename: "nostra-home.png"`.
+6. **Confronto**: confrontare visivamente i due screenshot (o usare diff immagini). Per struttura DOM/accessibilità usare `browser_snapshot` su entrambe le pagine.
+
+**Tool MCP utilizzati** (server `cursor-browser-extension`):
+- `browser_navigate` – navigazione a un URL
+- `browser_tabs` (action: list) – elenco tab aperti
+- `browser_snapshot` – snapshot accessibilità della pagina (per ref e interazioni)
+- `browser_take_screenshot` – screenshot viewport o fullPage (per confronto grafico)
+
+Riferimento analisi statica: [homepage-visual-alignment-analysis](homepage-visual-alignment-analysis.md), [visual-comparison-analysis](visual-comparison-analysis.md). Doc dedicata: [grafica-confronto-laravelpizza](grafica-confronto-laravelpizza.md).
+
 ---
 
 ## 📊 MCP Servers Comparison
@@ -122,6 +141,7 @@ The Meetup theme's MCP configuration enables AI assistants to interact with:
 | **Redmine** | 🔄 Planned | API Key | Self-hosted, custom workflows |
 | **Filesystem** | ✅ Active | N/A | Direct file access |
 | **Database** | ✅ Active | N/A | Schema inspection |
+| **cursor-browser-extension** | ✅ Active | N/A | Confronto grafica, screenshot, snapshot DOM |
 
 ---
 
@@ -217,14 +237,5 @@ Map Meetup theme roadmap tasks to Asana:
 
 ---
 
-## 🔄 Updates
-
-- **2026-01-31**: Added ClickUp support
-- **2026-01-31**: Planned Redmine integration
-- **Servers Active**: 4 (Asana, ClickUp, Filesystem, Database)
-
----
-
 **Theme**: Meetup (Frontend)
 **MCP Version**: 2.0.0
-**Last Review**: 31 Gennaio 2026

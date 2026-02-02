@@ -1,7 +1,5 @@
 # Visual Comparison Analysis: Laravel Pizza Meetups Implementation
 
-## Date: 2026-01-08
-
 ## Before Implementation
 - Light theme with blue accents
 - Wrong navigation (Italian text, business features)
@@ -76,3 +74,5 @@ The site now visually matches laravelpizza.com with:
 - Modern UI with glass morphism effects
 - Responsive design across all devices
 - Accessible navigation and interactive elements
+
+**Confronto live**: Per verificare la grafica lato a lato usare MCP **cursor-browser-extension**: `browser_navigate` su laravelpizza.com e su `http://127.0.0.1:8002/it`, poi `browser_take_screenshot` (fullPage) su entrambe. Vedi [mcp-configuration](mcp-configuration.md#confronto-grafica-con-laravelpizzacom-cursor-browser-extension).

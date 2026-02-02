@@ -1,6 +1,5 @@
 # Event Model - Schema.org Implementation
 
-**Data**: 2026-01-08
 **Status**: ✅ COMPLETED
 **Priorità**: HIGH (Phase 1)
 **Principi**: DRY + KISS + SOLID + Schema.org Best Practices
@@ -16,6 +15,8 @@ Implementare i campi Schema.org Event type sul modello Event esistente per:
 4. **Future-Proof**: Preparazione per Web 3.0 e Semantic Web
 
 **Reference**: [Schema.org Event Type](https://schema.org/Event)
+
+**Controlli qualità**: PHPStan livello 10 su `Event.php` → OK; PHPInsights eseguito su progetto (Event non segnalato); PHPMD non in dipendenze progetto.
 
 ---
 
@@ -558,7 +559,43 @@ php artisan migrate:fresh --path=Modules/Meetup/database/migrations
 - [x] Run Pint formatting (3 files formatted)
 - [ ] Test JSON-LD output (requires migration + data)
 - [x] Update documentation
+- [/] Add missing Schema.org properties (about, isAccessibleForFree, etc.)
 - [ ] Git commit
+
+---
+
+## Gap Analysis (Schema.org/Event)
+
+While the foundation is solid, several Schema.org recommendations are still missing for full compliance:
+
+### ❌ Missing High Recommended
+| Property | Model Property | Description |
+|----------|----------------|-------------|
+| `isAccessibleForFree` | `is_accessible_for_free` | Boolean for free events |
+| `performer` | `performer` | Speakers/Performers (MTM relation needed) |
+| `about` | `about` | Detailed subject/topic |
+| `audience` | `audience` | Target audience (JSON/String) |
+
+### ❌ Missing Advanced/Structural
+| Property | Model Property | Description |
+|----------|----------------|-------------|
+| `eventSchedule` | `schedule` | Recurring patterns (Schedule object) |
+| `superEvent` | `super_event_id` | Parental link for event series |
+| `subEvent` | `sub_events` | Links to child events |
+| `previousStartDate` | `previous_start_date` | History of rescheduling |
+
+---
+
+## Future Improvements
+
+1. **Detailed Location**: Transition `location` from a simple string to a `Place` model with `address` (PostalAddress) and `geo` (GeoCoordinates).
+2. **Performer Management**: Implement a `Speaker` model and relate it to `Event` via `performer` property.
+3. **Advanced Pricing**: Expand `offers` to support multiple ticket types (Base, VIP, Early Bird) using `Offer` type.
+
+---
+
+**Aggiornato il**: 2026-02-02
+**Status**: COMPLETED
 
 ---
 

@@ -6,6 +6,7 @@
 class NavigationManager {
     constructor() {
         this.currentLanguage = localStorage.getItem('language') || 'en';
+        this.theme = localStorage.getItem('theme') || 'dark'; // Default to dark as per current site
         this.languages = {
             en: 'English',
             it: 'Italiano',
@@ -17,8 +18,10 @@ class NavigationManager {
     }
 
     init() {
+        this.applyTheme();
         this.loadNavigation();
         this.setupLanguageDropdown();
+        this.setupThemeToggle();
         this.setupMobileMenu();
         this.highlightActiveLink();
     }
@@ -42,8 +45,10 @@ class NavigationManager {
             // Piccolo delay per assicurarsi che il DOM sia aggiornato
             setTimeout(() => {
                 this.setupLanguageDropdown();
+                this.setupThemeToggle();
                 this.setupMobileMenu();
                 this.highlightActiveLink();
+                this.updateThemeIcons();
             }, 10);
         } catch (error) {
             console.error('Error loading navigation:', error);
@@ -132,6 +137,53 @@ class NavigationManager {
 
         // Qui puoi aggiungere la logica per cambiare la lingua della pagina
         console.log('Language changed to:', lang);
+        
+        // Dispatch event for other components
+        document.dispatchEvent(new CustomEvent('language-changed', { detail: { language: lang } }));
+    }
+
+    /**
+     * Setup del toggle del tema (light/dark)
+     */
+    setupThemeToggle() {
+        const themeToggle = document.getElementById('theme-toggle');
+        if (!themeToggle) return;
+
+        themeToggle.addEventListener('click', () => {
+            this.theme = this.theme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', this.theme);
+            this.applyTheme();
+            this.updateThemeIcons();
+        });
+    }
+
+    /**
+     * Applica il tema corrente al documento
+     */
+    applyTheme() {
+        if (this.theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }
+
+    /**
+     * Aggiorna le icone del tema nel toggle
+     */
+    updateThemeIcons() {
+        const sunIcon = document.getElementById('theme-sun-icon');
+        const moonIcon = document.getElementById('theme-moon-icon');
+        
+        if (!sunIcon || !moonIcon) return;
+
+        if (this.theme === 'dark') {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        } else {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
     }
 
     /**

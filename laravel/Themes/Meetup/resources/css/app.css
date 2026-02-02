@@ -26,6 +26,8 @@
 
 @variant dark (&:where(.dark, .dark *));
 
+[x-cloak] { display: none !important; }
+
 @theme {
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
@@ -302,5 +304,103 @@
 
     .bg-gradient-pizza-alt {
         @apply bg-gradient-to-br from-primary-500 to-primary-600;
+    }
+
+    /* Enhanced Header Styles */
+    .header-logo {
+        filter: drop-shadow(0 2px 4px rgba(220, 38, 38, 0.1));
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .header-logo:hover {
+        filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.2));
+        transform: translateY(-1px);
+    }
+
+    /* Language switcher animations */
+    .lang-dropdown {
+        transform-origin: top right;
+        animation: dropdownSlide 0.2s ease-out;
+    }
+
+    @keyframes dropdownSlide {
+        from {
+            opacity: 0;
+            transform: translateY(-10px) scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    /* Mobile menu slide animation */
+    .mobile-menu {
+        transform-origin: top;
+        animation: mobileMenuSlide 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes mobileMenuSlide {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Enhanced button hover effects */
+    .btn-hover-lift {
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-hover-lift:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(220, 38, 38, 0.2);
+    }
+
+    .btn-hover-lift:active {
+        transform: translateY(0);
+    }
+
+    /* Pizza icon specific styling */
+    .pizza-slice {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .pizza-slice:hover {
+        filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.15));
+    }
+
+    /* Theme toggle animations */
+    .theme-toggle {
+        transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+        transform: rotate(180deg);
+    }
+
+    /* Navigation link hover effects */
+    .nav-link {
+        position: relative;
+        transition: color 0.2s ease;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #DC2626, #B91C1C);
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
     }
 }

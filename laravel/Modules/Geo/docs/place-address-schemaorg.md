@@ -89,6 +89,8 @@ Schema::create('addresses', function (Blueprint $table) {
 
 ## Collegamenti
 - [schema.org/PostalAddress](https://schema.org/PostalAddress)
+- [schema.org/address](https://schema.org/address) (proprietà address su Place e altri tipi)
+- [tasks-schema-org-place-geocircle](tasks-schema-org-place-geocircle.md) – task Place, GeoCircle e integrazione Meetup
 - [Geo Module Architecture](./architecture.md)
 - [Entità Geografiche](./geo_entities.md)
 - [location-select.md](./location-select.md)
@@ -96,5 +98,98 @@ Schema::create('addresses', function (Blueprint $table) {
 
 ---
 
-**Ultimo aggiornamento:** 2025-05-29
-Responsabile: Cascade AI
+## Schema.org Enhanced Features
+
+### GeoCircle for Service Areas
+
+For delivery zones and service areas:
+
+```php
+// Modules/Geo/app/Models/Place.php additions
+public function toGeoCircleSchema(): array
+{
+    return [
+        '@type' => 'GeoCircle',
+        'geoMidpoint' => [
+            '@type' => 'GeoCoordinates',
+            'latitude' => $this->latitude,
+            'longitude' => $this->longitude,
+        ],
+        'geoRadius' => [
+            '@type' => 'Distance',
+            'value' => $this->service_radius_km,
+            'unitCode' => 'KM',
+        ],
+    ];
+}
+```
+
+### Enhanced Place Schema
+
+```php
+// Modules/Geo/app/Models/Place.php toSchemaOrg() method
+public function toSchemaOrg(): array
+{
+    $schema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Place',
+        'name' => $this->name,
+        'address' => $this->getAddressSchemaOrg(),
+        'geo' => [
+            '@type' => 'GeoCoordinates',
+            'latitude' => $this->latitude,
+            'longitude' => $this->longitude,
+        ],
+    ];
+    
+    // Add service area if exists
+    if ($this->service_radius) {
+        $schema['areaServed'] = $this->toGeoCircleSchema();
+    }
+    
+    // Add opening hours if restaurant
+    if ($this->has('opening_hours')) {
+        $schema['openingHoursSpecification'] = $this->opening_hours;
+    }
+    
+    return $schema;
+}
+```
+
+### Enhanced Address Schema
+
+```php
+// Modules/Geo/app/Models/Address.php toSchemaOrg() method
+public function toSchemaOrg(): array
+{
+    return [
+        '@context' => 'https://schema.org',
+        '@type' => 'PostalAddress',
+        'streetAddress' => trim($this->street . ' ' . $this->street_number),
+        'addressLocality' => $this->locality,
+        'addressProvince' => $this->province, // Custom field
+        'addressRegion' => $this->region, // Custom field
+        'postalCode' => $this->postal_code,
+        'addressCountry' => $this->country,
+    ];
+}
+```
+
+---
+
+## Italian Administrative Levels Mapping
+
+According to Google Maps Geocoding API:
+
+| Google Level | Italian Name | Example |
+|--------------|--------------|---------|
+| `administrative_area_level_1` | Regione | Lombardia |
+| `administrative_area_level_2` | Provincia | Milano |
+| `administrative_area_level_3` | Comune | Milano |
+| `country` | Nazione | Italia |
+
+---
+
+**Ultimo aggiornamento:** 2026-02-10  
+**Responsabile:** AI Assistant Schema.org Research  
+**Versione Schema.org:** Latest (2026-02-10)

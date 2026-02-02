@@ -41,6 +41,12 @@
    - Vite Configuration
    - Metatags Component
 
+### Schema.org e task implementazione
+
+7. **[Schema.org Enhancement Recommendations](./schema-org-enhancement-recommendations.md)** – Riferimento tipi Schema.org studiati (Event, EventSeries, Offer, Place, Person, ecc.) e roadmap
+8. **[Task Schema.org Event/Series/Azioni](./tasks-schema-org-event-series-actions.md)** – Event, EventSeries, EventSchedule, JoinAction, LeaveAction, EventReservation, EducationEvent, attendee
+9. **[Task Schema.org Offer/Prezzo](./tasks-schema-org-offer-price.md)** – Offer, PriceSpecification, FoodEstablishment
+
 ## 🔄 Aggiornamenti Recenti
 
 - **2025-11-30**: Aggiunta regola Frontend Asset Management

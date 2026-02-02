@@ -16,14 +16,14 @@
         }
     },
     "require": {
-        "filament/actions": "^4.0",
-        "filament/forms": "^4.0",
-        "filament/infolists": "^4.0",
-        "filament/notifications": "^4.0",
-        "filament/schemas": "^4.0",
-        "filament/support": "^4.0",
-        "filament/tables": "^4.0",
-        "filament/widgets": "^4.0"
+        "filament/actions": "^5.1",
+        "filament/forms": "^5.1",
+        "filament/infolists": "^5.1",
+        "filament/notifications": "^5.1",
+        "filament/schemas": "^5.1",
+        "filament/support": "^5.1",
+        "filament/tables": "^5",
+        "filament/widgets": "^5.1"
     },
     "config": {
         "optimize-autoloader": true,

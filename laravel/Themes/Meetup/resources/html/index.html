@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Join fellow Laravel, Filament, and Livewire enthusiasts for pizza meetups. Share knowledge, build connections, and enjoy great food together.">
     <meta name="keywords" content="laravel, meetup, community, developers, pizza, events, filament, livewire">
-    <title>Laravel Pizza Meetups - Laravel Developers. Pizza. Community.</title>
+    <title>Laravel Pizza - Community Meetups</title>
+    
+    <!-- Theme Script to prevent FOUC -->
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,28 +35,33 @@
     <link rel="stylesheet" href="/css/app.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="font-sans antialiased bg-slate-900 text-white">
+<body class="font-sans antialiased bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-gray-100 transition-colors duration-300">
 
     <!-- Navigation Component -->
     <div id="navigation-container"></div>
 
     <!-- Hero Section -->
-    <section id="home" class="relative py-20 md:py-32 overflow-hidden">
+    <section id="home" class="relative py-24 md:py-36 overflow-hidden">
         <!-- Background gradient -->
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 to-slate-900"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-100 to-white dark:from-slate-900 dark:to-slate-950 transition-colors duration-300"></div>
+        
+        <!-- Subtle pattern overlay -->
+        <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
 
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-4xl mx-auto text-center">
                 <!-- Pizza Icon -->
-                <div class="mb-8 flex justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-24 w-24 text-red-500" aria-hidden="true">
-                        <path d="M12 2L22 20H2L12 2z" fill="currentColor"/>
-                        <circle cx="8" cy="14" r="1.2" fill="#fef2f2"/>
-                        <circle cx="12" cy="12" r="1.2" fill="#fef2f2"/>
-                        <circle cx="14" cy="16" r="1.2" fill="#fef2f2"/>
-                        <circle cx="10" cy="17" r="1.2" fill="#fef2f2"/>
-                        <circle cx="15" cy="13" r="1.2" fill="#fef2f2"/>
-                    </svg>
+                <div class="mb-10 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-red-600 blur-2xl opacity-20 dark:opacity-40 rounded-full"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                             viewBox="0 0 512 512" 
+                             fill="currentColor" 
+                             class="h-28 w-28 text-red-600 relative z-10 transform hover:rotate-12 transition-transform duration-500 cursor-pointer" 
+                             aria-hidden="true">
+                            <path d="M169.7 .9c-22.8-1.6-41.9 14-47.5 34.7L110.4 80c.5 0 1.1 0 1.6 0c176.7 0 320 143.3 320 320c0 .5 0 1.1 0 1.6l44.4-11.8c20.8-5.5 36.3-24.7 34.7-47.5C498.5 159.5 352.5 13.5 169.7 .9zM399.8 410.2c.1-3.4 .2-6.8 .2-10.2c0-159.1-128.9-288-288-288c-3.4 0-6.8 .1-10.2 .2L.5 491.9c-1.5 5.5 .1 11.4 4.1 15.4s9.9 5.6 15.4 4.1L399.8 410.2zM176 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm64 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM96 384a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
+                        </svg>
+                    </div>
                 </div>
 
                 <!-- Heading -->

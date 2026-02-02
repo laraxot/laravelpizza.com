@@ -3,11 +3,31 @@
 ## Core Concepts
 
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup theme
+- [Critical Rules and Patterns](critical-rules-and-patterns.md) - Stack (Folio, Volt, Filament 5, Tailwind)
 - [Project Purpose](project-purpose.md) - Why this theme exists
 - [Project Philosophy](project-philosophy.md) - Core philosophy of the theme
 - [Dashboard Integration](dashboard-integration.md) - Integration between Meetup dashboard and theme
 - [Theme Development Rules](theme-development-rules.md) - Development guidelines
 - [Architecture Folio Volt Filament](architecture-folio-volt-filament.md) - Architecture patterns
+- [Filament 5 – riferimento tema](filament-5-theme-reference.md) - Filament 5 requirements, nostro setup, CSS nel tema
+- [Grafica vs laravelpizza.com](grafica-confronto-laravelpizza.md) - Confronto grafica e uso MCP per screenshot
+- [Differenze grafica e miglioramenti](differenze-grafica-e-miglioramenti.md) - Differenze dettagliate (header, hero, features, CTA, footer) e priorità miglioramenti; screenshot in screenshots/grafica-confronto
+- [Differenze grafica approfondimento](differenze-grafica-approfondimento.md) - Mappatura file, codice (logo, hero SVG, nav/footer URL), checklist tecnica
+- [Evidenzia differenze](evidenzia-differenze.md) - Riepilogo rapido differenze e link agli screenshot
+- [Theme Resolution and Workflow](theme-resolution-and-workflow.md) - Risoluzione tema (APP_URL → pub_theme), build e copy
+- [MCP Configuration](mcp-configuration.md) - MCP per confronto grafica e task
+
+## Filament 5.x Upgrade
+
+- [Upgrade Analysis & Implementation](filament-5/upgrade-analysis.md) - Detailed impact of Filament 5.1
+- [Filament 5 – riferimento tema](filament-5-theme-reference.md) - Setup, CSS, and component usage
+- [Installation Guide](03-development/01-filament-5-installation-guide.md) - Complete setup guide
+
+## Visual Analysis & Parity
+
+- [Gap Documentation](visual-analysis/gap-documentation.md) - Status and differences from target site
+- [Difference Analysis](visual-analysis/difference-analysis.md) - Technical breakdown of UI inconsistencies
+- [Screenshots Cache](visual-analysis/screenshots/) - Collection of visual references
 
 ## Implementation Guides
 

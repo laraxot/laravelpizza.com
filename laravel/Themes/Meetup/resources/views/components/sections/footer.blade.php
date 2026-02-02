@@ -4,14 +4,8 @@
         <div class="grid md:grid-cols-4 gap-8">
             <div>
                 <div class="flex items-center space-x-2 mb-4">
-                    <svg class="w-8 h-8 text-red-500" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" opacity="0.5"/>
-                        <circle cx="12" cy="12" r="1.5"/>
-                        <circle cx="9" cy="10" r="1"/>
-                        <circle cx="15" cy="10" r="1"/>
-                        <circle cx="9" cy="14" r="1"/>
-                        <circle cx="15" cy="14" r="1"/>
-                    </svg>
+                    {{-- Logo pizza slice (stesso dell'header) per parity con laravelpizza.com – vedi docs/footer-logo-confronto.md --}}
+                    <x-ui.logo class="h-8 w-8 [&_svg]:h-8 [&_svg]:w-8 text-red-500 shrink-0" />
                     <span class="text-xl font-bold text-white">Laravel Pizza Meetups</span>
                 </div>
                 <p class="text-gray-400 text-sm">

@@ -3,12 +3,14 @@
 ## Architecture Overview
 
 **Framework Stack**:
-- Laravel 12.x
+- Laravel 11.28+
 - Livewire Volt (functional API)
 - Laravel Folio (file-based routing)
-- Filament 4.x (admin panel only)
+- Filament 5.x (admin panel only; componenti singoli nel tema per form/notifiche/widget)
 - Tailwind CSS 4 (using `@theme` syntax)
 - Alpine.js 3.x
+
+Riferimento Filament 5 e uso nel tema: [filament-5-theme-reference](filament-5-theme-reference.md).
 
 **Core Principle**: NO Controllers, NO web.php routes - ONLY Folio + Volt + Filament
 

@@ -20,6 +20,7 @@
 ## Theme Integration
 
 - [Theme Integration](theme-integration.md) - How Meetup module integrates with theme
+- [Theme Infrastructure](theme.md) - Theme Discovery and Deployment workflow
 - [Modular Architecture](modular-architecture.md) - Modular design patterns
 - [Architecture Rules](architecture-rules.md) - Rules for architecture compliance
 
@@ -36,6 +37,13 @@
 - [Tailwind Best Practices](tailwind-best-practices.md) - CSS framework usage
 - [Vite Theme Asset Loading](vite-theme-asset-loading.md) - Asset compilation
 - [Build and Copy Workflow](build-and-copy-workflow.md) - Build process
+
+## Schema.org e SEO
+
+- [Schema.org Enhancement Recommendations](schema-org-enhancement-recommendations.md) - Tipi Schema.org studiati e roadmap per Event, Page, User, Place
+- [Task Schema.org Event/Series/Azioni](tasks-schema-org-event-series-actions.md) - Event, EventSeries, JoinAction, LeaveAction, EventReservation, attendee
+- [Task Schema.org Offer/Prezzo](tasks-schema-org-offer-price.md) - Offer, PriceSpecification
+- [Event Schema.org Implementation](event-schema-org-implementation.md) - Implementazione campi Event
 
 ## Missing Features & Gaps
 

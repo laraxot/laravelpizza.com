@@ -1,0 +1,82 @@
+{{--
+/**
+ * Enhanced Language Switcher Component
+ * 
+ * Professional language dropdown with:
+ * - Country flags for visual identification
+ * - Smooth animations
+ * - Mobile responsive design
+ * - Current language highlighting
+ * - Clean, modern styling
+ * 
+ * @param array $locales - Supported locales
+ * @param string $currentLocale - Current active locale
+ * @param bool $mobile - Mobile version (compact)
+ */
+--}}
+@php
+    $locales = $locales ?? config('laravellocalization.supportedLocales', []);
+    $currentLocale = $currentLocale ?? app()->getLocale();
+    $isMobile = $mobile ?? false;
+    
+    // Country flags for language switcher
+    $flags = [
+        'it' => '🇮🇹',
+        'en' => '🇬🇧', 
+        'es' => '🇪🇸',
+        'fr' => '🇫🇷',
+        'de' => '🇩🇪',
+        'pt' => '🇵🇹',
+        'nl' => '🇳🇱',
+        'pl' => '🇵🇱',
+    ];
+@endphp
+
+<div class="relative" x-data="{ open: false }" @click.outside="open = false">
+    {{-- Trigger Button --}}
+    <button type="button" 
+            @click="open = !open" 
+            class="{{ $isMobile ? 'p-2' : 'hidden sm:flex items-center gap-2 px-3 py-2' }} rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 bg-gray-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-red-500/50 dark:hover:border-red-500/50 hover:bg-red-50 dark:hover:bg-red-950/20 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-all duration-200">
+        
+        @if($isMobile)
+            {{-- Mobile: Just flag --}}
+            <span class="text-lg">{{ $flags[$currentLocale] ?? '🌐' }}</span>
+        @else
+            {{-- Desktop: Flag + Language name --}}
+            <span class="text-lg">{{ $flags[$currentLocale] ?? '🌐' }}</span>
+            <span class="hidden md:block">{{ $locales[$currentLocale]['native'] ?? strtoupper($currentLocale) }}</span>
+            <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        @endif
+    </button>
+    
+    {{-- Dropdown Menu --}}
+    <div x-show="open" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 scale-95"
+         x-transition:enter-end="opacity-100 scale-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 scale-100"
+         x-transition:leave-end="opacity-0 scale-95"
+         class="{{ $isMobile ? 'left-0' : 'right-0' }} absolute mt-2 w-48 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-black/20 z-50 lang-dropdown">
+        
+        @foreach($locales as $code => $locale)
+            <a href="{{ LaravelLocalization::getLocalizedURL($code, null, [], true) }}" 
+               class="flex items-center gap-3 px-4 py-2.5 text-sm {{ 
+                   $code === $currentLocale 
+                       ? 'bg-red-50 dark:bg-red-950/20 text-red-700 dark:text-red-400 font-medium' 
+                       : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800' 
+               }} transition-colors">
+                <span class="text-base">{{ $flags[$code] ?? '🌐' }}</span>
+                <span>{{ $locale['native'] ?? $code }}</span>
+                
+                @if($code === $currentLocale)
+                    <svg class="w-4 h-4 ml-auto text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                @endif
+            </a>
+        @endforeach
+    </div>
+</div>

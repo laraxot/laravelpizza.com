@@ -2,85 +2,129 @@
 /**
  * Header Navigation Component - Laravel Pizza Theme
  *
- * Full navigation bar for the Laravel Pizza Meetups site.
- * Fixed top navbar with logo, menu items, and auth buttons.
+ * Enhanced navigation bar matching laravelpizza.com design with:
+ * - Authentic Italian pizza slice logo
+ * - Professional language switcher with flags
+ * - Smooth dark/light theme toggle
+ * - Responsive mobile menu
+ * - Italian typography styling
+ * - Component-based architecture
  *
- * Based on production design from https://laravelpizza.com/
+ * Enhanced version of https://laravelpizza.com/ design
  */
 --}}
+@php
+    $locales = config('laravellocalization.supportedLocales', []);
+    $currentLocale = app()->getLocale();
+@endphp
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
+<nav x-data="{ mobileMenuOpen: false }" 
+     @mobile-menu-toggle.window="mobileMenuOpen = !mobileMenuOpen"
+     class="fixed top-0 left-0 right-0 z-50 bg-slate-100/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
 
-            {{-- Logo with Pizza Slice Icon --}}
-            <div class="flex items-center space-x-3">
-                {{-- Pizza Slice SVG Icon --}}
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="currentColor" viewBox="0 0 24 24">
-                    {{-- Pizza slice triangular shape --}}
-                    <path d="M12 2L2 22h20L12 2z" opacity="0.9"/>
-                    {{-- Pizza toppings (dots) --}}
-                    <circle cx="9" cy="16" r="1.2" fill="currentColor"/>
-                    <circle cx="12" cy="11" r="1.2" fill="currentColor"/>
-                    <circle cx="15" cy="16" r="1.2" fill="currentColor"/>
-                    <circle cx="10.5" cy="13" r="0.9" fill="currentColor"/>
-                    <circle cx="13.5" cy="13.5" r="0.9" fill="currentColor"/>
-                </svg>
-
-                {{-- Logo Text --}}
-                <span class="text-white font-bold text-lg md:text-xl">
-                    Laravel Pizza Meetups
-                </span>
-            </div>
+            {{-- Logo (single source of truth: theme component) --}}
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="flex items-center space-x-3 group">
+                <x-ui.logo class="h-8 w-auto text-red-600 dark:text-red-500 transition-opacity group-hover:opacity-90" />
+                <div class="flex flex-col">
+                    <span class="text-slate-900 dark:text-white font-bold text-lg md:text-xl leading-tight">
+                        Laravel Pizza
+                    </span>
+                    <span class="text-slate-600 dark:text-slate-400 text-xs md:text-sm font-medium">
+                        Meetups
+                    </span>
+                </div>
+            </a>
 
             {{-- Navigation Links (hidden on mobile) --}}
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="{{ url('/events') }}" class="text-white hover:text-red-400 transition-colors duration-200 flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 transition-all duration-200 flex items-center space-x-2 font-medium group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                    <span>Events</span>
+                    <span>{{ __('Events') }}</span>
                 </a>
-
-                <a href="{{ url('/chat') }}" class="text-white hover:text-red-400 transition-colors duration-200 flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                <a href="{{ LaravelLocalization::localizeUrl('/community') }}" class="text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 transition-all duration-200 flex items-center space-x-2 font-medium group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
-                    <span>Community Chat</span>
+                    <span>{{ __('Community') }}</span>
+                </a>
+                <a href="{{ LaravelLocalization::localizeUrl('/sponsors') }}" class="text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 transition-all duration-200 flex items-center space-x-2 font-medium group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>{{ __('Sponsors') }}</span>
                 </a>
             </div>
 
-            {{-- Right Side: Language Selector + Auth Buttons --}}
-            <div class="flex items-center space-x-4">
+            {{-- Right: Language + Theme toggle + Auth buttons --}}
+            <div class="flex items-center space-x-2 sm:space-x-3">
 
-                {{-- Language Selector --}}
-                <div class="hidden sm:block">
-                    <select class="bg-transparent text-white text-sm border border-slate-700 rounded px-3 py-1.5 focus:outline-none focus:border-red-500 transition-colors">
-                        <option value="en" class="bg-slate-900">🌐 English</option>
-                        <option value="it" class="bg-slate-900">🇮🇹 Italiano</option>
-                    </select>
+                {{-- Language Switcher Component --}}
+                @if(count($locales) > 1)
+                    <x-ui.language-switcher :current-locale="$currentLocale" :locales="$locales" />
+                @endif
+
+                {{-- Theme Toggle Component --}}
+                <x-ui.theme-toggle size="md" />
+
+                {{-- Auth Buttons (Desktop only) --}}
+                <div class="hidden sm:flex items-center gap-2">
+                    <x-ui.auth-buttons show-labels="true" size="md" />
                 </div>
 
-                {{-- Login Button --}}
-                <a href="{{ url('/login') }}" class="hidden sm:inline-block text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-slate-900 transition-all duration-200">
-                    Login
-                </a>
+                {{-- Mobile Menu Button Component --}}
+                <x-ui.mobile-menu-button size="md" />
 
-                {{-- Sign Up Button --}}
-                <a href="{{ url('/register') }}" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold transition-all duration-200 shadow-lg hover:shadow-xl">
-                    Sign Up
-                </a>
+            </div>
+        </div>
+    </div>
 
-                {{-- Mobile Menu Button --}}
-                <button type="button" class="md:hidden text-white p-2" aria-label="Open menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
+    {{-- Enhanced Mobile Navigation Menu --}}
+    <div x-show="mobileMenuOpen" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 transform -translate-y-2"
+         x-transition:enter-end="opacity-100 transform translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 transform translate-y-0"
+         x-transition:leave-end="opacity-0 transform -translate-y-2"
+         class="md:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900/95 backdrop-blur-sm">
+        <div class="px-4 py-3 space-y-2">
+            <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-red-950/20 hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span class="font-medium">{{ __('Events') }}</span>
+            </a>
+            <a href="{{ LaravelLocalization::localizeUrl('/community') }}" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-red-950/20 hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span class="font-medium">{{ __('Community') }}</span>
+            </a>
+            <a href="{{ LaravelLocalization::localizeUrl('/sponsors') }}" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-red-950/20 hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="font-medium">{{ __('Sponsors') }}</span>
+            </a>
+            
+            <!-- Mobile Auth buttons -->
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-700 space-y-2">
+                <a href="{{ LaravelLocalization::localizeUrl('/login') }}" 
+                   class="block w-full text-center px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 bg-gray-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    {{ __('Login') }}
+                </a>
+                <a href="{{ LaravelLocalization::localizeUrl('/register') }}" 
+                   class="block w-full text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-red-700 text-white text-sm font-semibold transition-all duration-200">
+                    {{ __('Sign Up') }}
+                </a>
             </div>
         </div>
     </div>
 </nav>
 
-{{-- Spacer to prevent content from hiding under fixed navbar --}}
+<!-- Enhanced Spacer to prevent content from hiding under fixed navbar -->
 <div class="h-16"></div>

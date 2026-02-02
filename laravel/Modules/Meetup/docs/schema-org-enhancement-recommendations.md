@@ -538,6 +538,56 @@ Use Google Search Console to monitor:
 
 ---
 
+## Reference: Schema.org types studiati (uso nel progetto)
+
+Sintesi dei tipi e proprietà Schema.org rilevanti per meetup, eventi, prenotazioni e luoghi. Usare per implementazioni JSON-LD e per allineare modelli e API.
+
+### Eventi e programmazione
+
+- **Event** – Tipo base: `name`, `startDate`, `endDate`, `eventStatus`, `eventAttendanceMode`, `location` (Place o VirtualLocation), `organizer`, `offers`, `performer`, `attendee`/`attendees`, `maximumAttendeeCapacity`, `isAccessibleForFree`, `inLanguage`.
+- **EventSchedule** – Programma ricorrente: `repeatFrequency`, `byDay`, `byMonth`, `duration`, `scheduleTimezone`; usare in `Event` o in **EventSeries** per eventi ricorrenti (es. "Laravel Pizza Milano mensile").
+- **EventSeries** – Serie di eventi: `superEvent` (serie), `subEvent` (singoli eventi), estende Event; ideale per meetup ricorrenti con stesso titolo/location pattern.
+- **EducationEvent** – Sottotipo di Event per eventi formativi; aggiungere quando l’evento è esplicitamente didattico/workshop.
+
+### Azioni di partecipazione
+
+- **JoinAction** – Iscrizione a un evento: `target` = Event, `participant` = Person; modellare la registrazione (RSVP) come JoinAction in JSON-LD o in Activity.
+- **LeaveAction** – Disiscrizione: stesso pattern; utile per audit e per "ha cancellato la partecipazione".
+- **EventReservation** – Prenotazione/registrazione: `reservationFor` = Event, `reservationStatus`, `underName` (Person), `reservationId`; collegare a biglietto/offerta se presente.
+
+### Partecipanti e relazioni
+
+- **attendee** / **attendees** – Person o Organization che partecipa; in Event usare per lista partecipanti (anche anonimizzata per privacy).
+- **participant** – In JoinAction/LeaveAction indica chi compie l’azione; in Event può indicare speaker/relatore oltre a `performer`.
+
+### Offerte e prezzi
+
+- **Offer** – Prezzo e disponibilità: `price`, `priceCurrency`, `availability`, `url`, `validFrom`/`validUntil`, `eligibleQuantity`; in Event.offers per biglietti/registrazione.
+- **PriceSpecification** – Dettaglio prezzo: `price`, `priceCurrency`, `valueAddedTaxIncluded`; per prezzi complessi (es. early bird + standard).
+- **DeliveryChargeSpecification** – Sottotipo per costi di consegna; rilevante solo se si modellano delivery (es. pizza/merchandise); altrimenti usare solo Offer/PriceSpecification.
+
+### Luoghi e geografia
+
+- **Place** – `name`, `address` (PostalAddress), `geo` (GeoCoordinates), `openingHours`, `maximumAttendeeCapacity`; per location fisica dell’evento.
+- **address** (PostalAddress) – `streetAddress`, `addressLocality`, `addressRegion`, `addressProvince` (custom IT), `postalCode`, `addressCountry`; vedi [place-address-schemaorg](../../Geo/docs/place-address-schemaorg.md) nel modulo Geo.
+- **GeoCircle** – Area geografica: `geoMidpoint` (GeoCoordinates), `geoRadius` (Distance o Number); utile per "eventi nel raggio di X km" e per service area.
+
+### Persona e organizzazione
+
+- **Person** – Per profili utente, speaker, attendee: `name`, `jobTitle`, `url`, `image`, `sameAs` (social); vedi [schema-org-enhancements](../../User/docs/schema-org-enhancements.md) nel modulo User.
+- **FoodEstablishment** – Sottotipo di LocalBusiness per venue tipo pizzeria/ristorante; usare se il luogo è esplicitamente un locale food (es. "Laravel Pizza presso Pizzeria X").
+
+### Collegamenti esterni (reference)
+
+- [Event](https://schema.org/Event) · [EventSchedule](https://schema.org/eventSchedule) · [EventSeries](https://schema.org/EventSeries)
+- [JoinAction](https://schema.org/JoinAction) · [LeaveAction](https://schema.org/LeaveAction) · [EventReservation](https://schema.org/EventReservation)
+- [EducationEvent](https://schema.org/EducationEvent) · [attendees](https://schema.org/attendees) · [attendee](https://schema.org/attendee) · [participant](https://schema.org/participant)
+- [Offer](https://schema.org/Offer) · [PriceSpecification](https://schema.org/PriceSpecification) · [DeliveryChargeSpecification](https://schema.org/DeliveryChargeSpecification)
+- [Place](https://schema.org/Place) · [address](https://schema.org/address) · [GeoCircle](https://schema.org/GeoCircle)
+- [Person](https://schema.org/Person) · [FoodEstablishment](https://schema.org/FoodEstablishment)
+
+---
+
 ## Resources & References
 
 - [Event - Schema.org Type](https://schema.org/Event)

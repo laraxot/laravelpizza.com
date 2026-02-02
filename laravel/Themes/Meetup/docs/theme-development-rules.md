@@ -1,5 +1,14 @@
 # Theme Development Rules - Laravel Pizza Meetups
 
+## 0. Theme Discovery (How to find the active theme)
+
+**Rule**: The active theme is dynamically determined by the application state and environment.
+
+1.  **Environment**: Check `.env` for `APP_URL` (defines the tenant/site).
+2.  **Config Directory**: Configs are located in `laravel/config/local/{site_name}/` (e.g., `laravel/config/local/laravelpizza/`).
+3.  **Active Theme**: Open `xra.php` and look for the `'pub_theme'` key (e.g., `'Meetup'`).
+4.  **Physical Path**: Themes are located in `laravel/Themes/{ThemeName}/`.
+
 ## Critical Rules (MUST FOLLOW)
 
 ### 1. Custom Public Directory Path
@@ -319,6 +328,15 @@ npm run build && npm run copy
 **Check**: Is `tsc &&` in the build script when you're not using TypeScript?
 
 **Fix**: Remove `tsc &&` from package.json build script.
+
+## 8. Philosophical Approach: separation of concerns
+
+**Concept**: The theme is a distinct entity from the business logic.
+
+- **Modularity**: Themes reside in `laravel/Themes/`, isolated from `laravel/app/` and `laravel/Modules/`.
+- **Knowledge Base**: Always study the `docs/` folder within the theme and its associated modules *before* starting work.
+- **Continuous Documentation**: Update the `docs/` content immediately after implementation to preserve architectural intent.
+- **Critical Thinking**: Approach UI/UX changes not just as code tasks, but as part of a philosophical alignment with the "Laraxot" methodology.
 
 ## References
 

@@ -7,22 +7,65 @@
                 <x-ui.logo class="block w-auto text-gray-800 fill-current h-7 dark:text-gray-200" />
             </a>
 
-            <!-- Navigation -->
-            <div :class="{ 'absolute left-0' : open, 'relative' : !open }" class="flex flex-col justify-start w-full sm:relative sm:flex-row sm:justify-between" x-cloak>
-                @php
-                    $navLinks = ['Dashboard' => '/dashboard', 'Learn More' => '/learn'];
-                @endphp
-                <!-- Navigation Links -->
-                <nav :class="{'flex flex-col bg-white dark:bg-gray-900 relative z-50 w-full h-auto px-4 py-5 left-0 mt-16': open, 'hidden': ! open}" class="items-center space-y-3 sm:space-x-3 sm:space-y-0 sm:mt-0 sm:bg-transparent sm:p-0 sm:relative sm:flex sm:-my-px sm:ml-8" x-cloak>
-                    @foreach($navLinks as $title => $route)
-                        <x-ui.nav-link href="{{ $route }}">{{ $title }}</x-ui.nav-link>
-                    @endforeach
-                </nav>
+                            <!-- Navigation -->
 
-                <div class="flex items-center">
-                    <div class="hidden w-[38px] h-[38px] overflow-hidden rounded-full sm:block" x-cloak>
-                        <x-ui.light-dark-switch></x-ui.light-dark-switch>
-                    </div>
+                            <div :class="{'absolute left-0' : open, 'relative' : !open }" class="flex flex-col justify-start w-full sm:relative sm:flex-row sm:justify-between" x-cloak>
+
+                                @php
+
+                                    $navLinks = ['Dashboard' => '/dashboard', 'Learn More' => '/learn'];
+
+                                @endphp
+
+                                <!-- Navigation Links -->
+
+                                <nav :class="{'flex flex-col bg-white dark:bg-gray-900 relative z-50 w-full h-auto px-4 py-5 left-0 mt-16': open, 'hidden': ! open}" class="items-center space-y-3 sm:space-x-3 sm:space-y-0 sm:mt-0 sm:bg-transparent sm:p-0 sm:relative sm:flex sm:-my-px sm:ml-8" x-cloak>
+
+                                    @foreach($navLinks as $title => $route)
+
+                                        <x-ui.nav-link href="{{ $route }}">{{ $title }}</x-ui.nav-link>
+
+                                    @endforeach
+
+                                </nav>
+
+            
+
+                                <div class="flex items-center">
+
+                                    <div class="hidden w-[38px] h-[38px] overflow-hidden rounded-full sm:block" x-cloak>
+
+                                        <x-ui.light-dark-switch></x-ui.light-dark-switch>
+
+                                    </div>
+
+            
+
+                                    {{-- Theme Toggle --}}
+
+                                    <button 
+
+                                        id="theme-toggle"
+
+                                        class="ml-4 flex items-center text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white"
+
+                                        onclick="toggleTheme()"
+
+                                    >
+
+                                        <svg id="theme-toggle-light-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+
+                                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-1 4a1 1 0 100 2v1a1 1 0 100-2v-1zm-8-4a1 1 0 01-1 1v1a1 1 0 112 0v-1a1 1 0 01-1-1zm-1-4a1 1 0 100-2V7a1 1 0 100 2v1zm12 8a1 1 0 100 2v1a1 1 0 100-2v-1zM4 11a1 1 0 01-1 1v1a1 1 0 112 0v-1a1 1 0 01-1-1z" clip-rule="evenodd" />
+
+                                        </svg>
+
+                                        <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20">
+
+                                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+
+                                        </svg>
+
+                                    </button>
                     {{--
                     <!-- User Dropdown -->
                     <div x-data="{ dropdownOpen: false }"
@@ -74,4 +117,40 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Check if there's a saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        const htmlElement = document.documentElement;
+        
+        // Set initial theme
+        if (savedTheme === 'dark') {
+            htmlElement.classList.add('dark');
+            document.getElementById('theme-toggle-light-icon').classList.add('hidden');
+            document.getElementById('theme-toggle-dark-icon').classList.remove('hidden');
+        } else {
+            htmlElement.classList.remove('dark');
+            document.getElementById('theme-toggle-light-icon').classList.remove('hidden');
+            document.getElementById('theme-toggle-dark-icon').classList.add('hidden');
+        }
+
+        function toggleTheme() {
+            const htmlElement = document.documentElement;
+            const isDark = htmlElement.classList.toggle('dark');
+            
+            // Update icons
+            const lightIcon = document.getElementById('theme-toggle-light-icon');
+            const darkIcon = document.getElementById('theme-toggle-dark-icon');
+            
+            if (isDark) {
+                lightIcon.classList.add('hidden');
+                darkIcon.classList.remove('hidden');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+    </script>
 </header>
