@@ -1,6 +1,6 @@
 # Confronto logo footer – laravelpizza.com vs tema Meetup
 
-Analisi delle **differenze del logo nel footer** tra https://laravelpizza.com/ e la nostra implementazione (es. http://127.0.0.1:8000/it), con roadmap per l’allineamento.
+Analisi delle **differenze del logo nel footer** tra [laravelpizza.com](https://laravelpizza.com/) e la nostra implementazione (es. [127.0.0.1:8000/it](http://127.0.0.1:8000/it)), con roadmap per l’allineamento.
 
 Gli screenshot della sezione footer sono in:
 
@@ -19,13 +19,13 @@ Gli screenshot della sezione footer sono in:
 ### 1.2 Nostro header (sections/header.blade.php)
 
 - **Logo**: componente `<x-ui.logo>` = **pizza slice** (triangolo, crosta, pepperoni) da `components/ui/logo.blade.php`.
-- Stesso brand “Laravel Pizza” + “Meetups” ma **icona diversa** da quella del footer.
+- Stesso brand “Laravel Pizza” + “Meetups”.
 
 Nota: questa riga era vera in una versione precedente del tema. Attualmente footer e header sono già allineati sullo stesso componente.
 
 ### 1.3 Produzione (laravelpizza.com)
 
-- Il dominio `https://laravelpizza.com/` **in questo momento non sembra servire l’app LaravelPizza** (risulta una landing esterna). Di conseguenza:
+- Il dominio [laravelpizza.com](https://laravelpizza.com/) **in questo momento non sembra servire l’app LaravelPizza** (risulta una landing esterna). Di conseguenza:
   - lo screenshot `screenshots/footer/footer-laravelpizza.png` va trattato come **evidenza dello stato attuale del dominio**, non come source-of-truth del tema.
   - per una vera parity di produzione serve un URL (staging/production) che serva davvero il front LaravelPizza.
 
@@ -39,7 +39,7 @@ Nota: questa riga era vera in una versione precedente del tema. Attualmente foot
 ## 2. Differenze da evidenziare
 
 | Aspetto | Dominio pubblico (laravelpizza.com) | Nostra implementazione (locale) | Evidenza |
-|--------|-------------------------------------|-------------------------------|----------|
+| --- | --- | --- | --- |
 | **Icona footer** | Non affidabile come source-of-truth (dominio non serve l’app) | `<x-ui.logo>` (pizza slice) | `docs/screenshots/footer/` |
 | **Coerenza header–footer** | Non valutabile finché il dominio non serve l’app | Header e footer usano `<x-ui.logo>` → **coerenti** | `resources/views/components/sections/header.blade.php` + `.../footer.blade.php` |
 | **Chiusura footer** | Non affidabile come parity testuale | Include “Made with ❤️ for the Laravel community” | `resources/views/components/sections/footer.blade.php` |
@@ -80,7 +80,7 @@ Conclusione (stato attuale): nel tema Meetup locale **header e footer sono già 
 ## 4. Riepilogo interventi
 
 | # | Priorità | Azione | File |
-|---|----------|--------|------|
+| --- | --- | --- | --- |
 | 1 | Alta | Ottenere URL produzione/staging reale (non landing) per verificare parity | N/A |
 | 2 | Media | Rifare screenshot footer su URL reale e aggiornare questo doc | `docs/screenshots/footer/` |
 | 3 | Bassa | Allineare eventuali altri dettagli footer (link, colonne) | Come da [differenze-grafica-approfondimento](differenze-grafica-approfondimento.md) |
