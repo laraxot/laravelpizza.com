@@ -37,6 +37,8 @@
 - [Tailwind Best Practices](tailwind-best-practices.md) - CSS framework usage
 - [Vite Theme Asset Loading](vite-theme-asset-loading.md) - Asset compilation
 - [Build and Copy Workflow](build-and-copy-workflow.md) - Build process
+- [Logo Branding Guidelines](logo-branding-guidelines.md) - Design standards and parity findings
+- [Visual Parity Analysis](../../Themes/Meetup/docs/grafica-confronto-laravelpizza.md) - Pixel parity vs production
 
 ## Schema.org e SEO
 

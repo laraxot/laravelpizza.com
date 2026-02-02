@@ -14,6 +14,7 @@
 - [Differenze grafica e miglioramenti](differenze-grafica-e-miglioramenti.md) - Differenze dettagliate (header, hero, features, CTA, footer) e priorità miglioramenti; screenshot in screenshots/grafica-confronto
 - [Differenze grafica approfondimento](differenze-grafica-approfondimento.md) - Mappatura file, codice (logo, hero SVG, nav/footer URL), checklist tecnica
 - [Evidenzia differenze](evidenzia-differenze.md) - Riepilogo rapido differenze e link agli screenshot
+- [Footer logo confronto](footer-logo-confronto.md) - Logo footer vs laravelpizza.com, screenshot, roadmap
 - [Theme Resolution and Workflow](theme-resolution-and-workflow.md) - Risoluzione tema (APP_URL → pub_theme), build e copy
 - [MCP Configuration](mcp-configuration.md) - MCP per confronto grafica e task
 

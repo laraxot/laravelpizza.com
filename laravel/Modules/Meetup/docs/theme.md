@@ -55,3 +55,7 @@ Prima di procedere con qualsiasi modifica UI/UX, analizzare sempre la struttura 
 - **Regola critica per agenti**: `.cursor/rules/theme-resolution-critical.md`.
 - **Memoria progetto**: `.cursor/memories/theme-resolution.md`.
 - **Modulo Tenant**: risoluzione nome tenant da `APP_URL` (es. `GetTenantNameAction`), caricamento config (es. `xra.php`) dalla cartella `config/<tenant_name>/`.
+
+## Confronto grafica e logo footer
+
+- **Footer logo confronto**: `laravel/Themes/Meetup/docs/footer-logo-confronto.md` – confronto logo footer con laravelpizza.com, screenshot in `docs/screenshots/footer-logo-confronto/`, roadmap allineamento.

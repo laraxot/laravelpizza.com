@@ -48,9 +48,9 @@
    - Panel builder vs componenti singoli; nostro setup (CSS nel tema, admin in app)
    - Riferimento: https://filamentphp.com/docs/5.x/introduction/installation
 
-9. **[Grafica vs laravelpizza.com](./grafica-confronto-laravelpizza.md)**, **[Differenze grafica e miglioramenti](./differenze-grafica-e-miglioramenti.md)** e **[Approfondimento tecnico](./differenze-grafica-approfondimento.md)** (file, codice, checklist)
-   - Confronto struttura e contenuti; uso MCP o `npm run screenshots` (Playwright)
-   - Screenshot in [screenshots/grafica-confronto](screenshots/grafica-confronto/); doc dettagliata differenze e priorità miglioramenti
+9. **[Grafica vs laravelpizza.com](./grafica-confronto-laravelpizza.md)**, **[Differenze grafica e miglioramenti](./differenze-grafica-e-miglioramenti.md)**, **[Approfondimento tecnico](./differenze-grafica-approfondimento.md)** (file, codice, checklist), **[Footer logo confronto](./footer-logo-confronto.md)**
+   - Confronto struttura e contenuti; uso MCP o `npm run screenshots` / `npm run screenshots:footer` (Playwright)
+   - Screenshot in [screenshots/grafica-confronto](screenshots/grafica-confronto/), [screenshots/footer-logo-confronto](screenshots/footer-logo-confronto/README.md)
 
 ### Riferimenti Cross-Module
 

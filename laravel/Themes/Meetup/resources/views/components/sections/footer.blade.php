@@ -55,8 +55,9 @@
             </div>
         </div>
 
-        <div class="mt-8 pt-8 border-t border-slate-800 text-center text-gray-400 text-sm">
+        <div class="mt-8 pt-8 border-t border-slate-800 text-center text-gray-400 text-sm space-y-1">
             <p>&copy; {{ date('Y') }} Laravel Pizza Meetups. All rights reserved.</p>
+            <p>Made with ❤️ for the Laravel community.</p>
         </div>
     </div>
 </footer>

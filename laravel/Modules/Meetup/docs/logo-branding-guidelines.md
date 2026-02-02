@@ -8,9 +8,10 @@ Questo documento definisce le linee guida per l'uso del logo e degli elementi di
 
 ## 🍕 Logo Principale
 
-### SVG Originale da laravelpizza.com
+Il logo ha due varianti principali: quella **illustrata (Stroke)** usata nel tema Meetup e quella **solida (Fill)** usata sul sito `laravelpizza.com`.
 
-Il logo è uno **spicchio di pizza stilizzato** estratto direttamente da `laravelpizza.com`.
+### Variante Theme (Stroke - Lucide Style)
+Questa è la versione attualmente implementata nel componente `<x-ui.logo>`.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg"
@@ -172,9 +173,9 @@ Il logo si adatta automaticamente alle dimensioni del container:
 ## 🔗 Riferimenti
 
 - **Sito Originale**: https://laravelpizza.com
+- **Analisi Parità visiva**: [differenze-grafica-approfondimento](../../Themes/Meetup/docs/differenze-grafica-approfondimento.md)
+- **Confronto Footer**: [footer-logo-confronto](../../Themes/Meetup/docs/footer-logo-confronto.md)
 - **File Componente**: `laravel/Themes/Meetup/resources/html/components/navigation.html`
-- **Documentazione Errore**: [Logo Implementation Error](../Themes/Meetup/docs/logo-implementation-error.md)
-- **Design System**: [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md)
 
 ## ✅ Checklist Implementazione
 

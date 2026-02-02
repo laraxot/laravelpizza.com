@@ -59,6 +59,19 @@ Trasformare la versione HTML statica in un tema Laravel completo, mantenendo sti
 - [ ] Monitoraggio performance (Lighthouse + analitiche)
 
 ---
+## Fase 6 · Visual Parity & Branding Alignment (Current Focus)
+- [ ] **Unificazione Logo**: Sostituire SVG inline in Header/Footer con componente `<x-ui.logo>`.
+- [ ] **Design Solido vs Stroke**: Allineare SVG illustrato (stroke) a versione produzione (fill 512x512).
+- [ ] **Pixel Parity Header**: Portare testo brand su singola riga per rispecchiare `laravelpizza.com`.
+- [ ] **Social Credit**: Aggiungere "Made with ❤️" al footer per parity testuale.
+- [ ] **Centralizzazione Config**: Usare `config/local/laravelpizza/metatag.php` per asset del logo.
+
+### Output
+- Logo consistente in tutto il sito.
+- Parità visiva 1:1 con `laravelpizza.com`.
+- Documentazione approfondita in `differenze-grafica-approfondimento.md`.
+
+---
 ## Checklist Trasversale
 - [ ] Favicon e meta tags aggiornati
 - [ ] Placeholder immagini sostituiti con assets reali

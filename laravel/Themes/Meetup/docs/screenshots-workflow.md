@@ -80,10 +80,12 @@ browser_take_screenshot({
 Themes/Meetup/docs/screenshots/
 ├── README.md                          # Questo file
 ├── homepage-locale-after-fixes.png    # Homepage locale dopo correzioni
-├── homepage-produzione-reference.png   # Homepage produzione riferimento
-├── hero-section-before.png            # Hero section prima
-├── hero-section-after.png             # Hero section dopo
-└── ...
+├── ...
+└── visual-analysis/                   # Analisi comparative strutturate
+    └── footer/                        # Confronto logo e layout footer
+        ├── README.md
+        ├── footer-laravelpizza-com.png
+        └── footer-locale-it.png
 ```
 
 ### Convenzioni Naming
