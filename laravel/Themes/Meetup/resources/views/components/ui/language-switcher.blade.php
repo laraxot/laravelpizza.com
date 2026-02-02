@@ -35,7 +35,9 @@
             @php $flagCode = $currentLocale === 'en' ? 'gb' : $currentLocale; @endphp
             <x-filament::icon :icon="'ui-flags.' . $flagCode" class="h-5 w-5" />
             <span class="hidden md:block">{{ $locales[$currentLocale]['native'] ?? strtoupper($currentLocale) }}</span>
-            <x-filament::icon icon="meetup-icon-arrow-down" class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" />
+            <span class="inline-block transition-transform duration-200" x-bind:class="{ 'rotate-180': open }">
+                <x-filament::icon icon="meetup-icon-arrow-down" class="w-4 h-4 shrink-0" />
+            </span>
         @endif
     </button>
     
