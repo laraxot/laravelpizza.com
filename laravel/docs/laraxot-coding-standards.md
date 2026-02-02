@@ -60,9 +60,35 @@ public function attendees(): BelongsToMany
 
 The `config/database.php` file should be kept in sync with the version from the official [laravel/laravel](https://github.com/laravel/laravel) repository for the project's current major Laravel version.
 
-**Why:**
-- **Compatibility:** Ensures all available configuration options are present.
-- **Security:** Incorporates the latest security-related changes and best practices from the framework.
-- **New Features:** Provides access to new database connection features as they are added to Laravel.
+**Action**: Before a major Laravel upgrade or when debugging database connection issues, always compare the project's `config/database.php` with the upstream version.
 
-**Action:** Before a major Laravel upgrade or when debugging database connection issues, always compare the project's `config/database.php` with the upstream version.
+### Modular Dynamic Database Connections
+
+In the Laraxot multi-tenant architecture, modular database connections (e.g., `notify`, `geo`, `xot`) MUST NOT be hardcoded in `config/database.php`.
+
+**Rule:**
+1. Keep `database.php` as close as possible to the Laravel 12.x standard.
+2. Modular connections are automatically registered by `TenantServiceProvider::registerDB()`.
+3. If a module requires a separate database, configure it via tenant-specific config or environment variables (e.g., `DB_DATABASE_USER`).
+
+## Filament 4/5 Components
+
+### Form Definitions
+The `form()` method is deprecated in many Filament contexts; always use `schema()` or `getFormSchema()` instead.
+
+### Chart Widgets
+Always use the pattern of returning a PHP array for options and use `RawJs` only for JavaScript callbacks.
+
+**Good:**
+```php
+public function getOptions(): array
+{
+    return [
+        'scales' => [
+            'y' => [
+                'beginAtZero' => true,
+            ],
+        ],
+    ];
+}
+```

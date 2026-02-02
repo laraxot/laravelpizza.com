@@ -1,8 +1,8 @@
 # Modulo Xot - Framework Base
 
-> **Version**: 3.0 - DRY + KISS Documentation Refactor
+> **Version**: 3.1 - Laravel 12 + Filament 5 Alignment
 > **Status**: ✅ Core Framework Module
-> **Last Updated**: December 2025
+> **Last Updated**: February 2026
 
 ## 📋 Overview
 
@@ -159,7 +159,7 @@ Il modulo Xot include il trait `CreatesApplication` per tutti i test dei moduli:
 - **✅ Compatibilità Laravel 12**: Test funzionanti con la nuova versione
 - **✅ Struttura Consistente**: Pattern standardizzato per tutti i moduli
 
-📚 **Documentazione Completa**: [Fix Testing Issues](docs/testing-fixes.md)
+📚 **Documentazione Completa**: [Fix Testing Issues](docs/testing-fixes.md) | [Guida Migrazione Filament 5](docs/01-filament-5-migration-guide.md)
 
 ## 🚀 Installazione SUPER VELOCE
 

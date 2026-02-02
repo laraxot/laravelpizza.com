@@ -67,3 +67,6 @@ public_html/css/
 public_html/vendor/
 laravel/lang/vendor/
 vendor/
+laravel/Themes/Meetup/resources/views/profile/partials/delete-user-form.blade.php:Zone.Identifier
+laravel/Themes/Meetup/resources/views/profile/partials/update-password-form.blade.php:Zone.Identifier
+laravel/Themes/Meetup/resources/views/profile/partials/update-profile-information-form.blade.php:Zone.Identifier
