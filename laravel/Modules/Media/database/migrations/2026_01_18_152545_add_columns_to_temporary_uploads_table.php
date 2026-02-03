@@ -1,9 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+/**
+ * This migration adds columns to temporary_uploads table.
+ * It safely checks if the table exists first before attempting alterations.
+ */
 return new class extends Migration
 {
     /**
@@ -11,7 +17,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('temporary_uploads', function (Blueprint $table) {
+        // Only run if the table exists (it should be created by the main migration)
+        if (! Schema::hasTable('temporary_uploads')) {
+            return;
+        }
+
+        Schema::table('temporary_uploads', function (Blueprint $table): void {
             if (! Schema::hasColumn('temporary_uploads', 'user_id')) {
                 $table->uuid('user_id')->nullable();
             }
@@ -35,7 +46,11 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('temporary_uploads', function (Blueprint $table) {
+        if (! Schema::hasTable('temporary_uploads')) {
+            return;
+        }
+
+        Schema::table('temporary_uploads', function (Blueprint $table): void {
             $columnsToDrop = [];
             if (Schema::hasColumn('temporary_uploads', 'user_id')) {
                 $columnsToDrop[] = 'user_id';
