@@ -158,4 +158,8 @@ Before committing any model:
 
 ---
 
-**CRITICAL**: Always use `protected function casts(): array` in new code and migrate old code when touching files. Riferimento ufficiale: [Laravel 12.x Eloquent Mutators & Casting](https://laravel.com/docs/12.x/eloquent-mutators#attribute-casting).
+**CRITICAL**: Always use `protected function casts(): array` in new code and migrate old code when touching files.
+
+**Last Updated**: 2026-01-13  
+**Laravel Version**: 11+  
+**Status**: MANDATORY for all new code

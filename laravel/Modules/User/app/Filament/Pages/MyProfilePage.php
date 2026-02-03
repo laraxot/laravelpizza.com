@@ -213,7 +213,7 @@ class MyProfilePage extends XotBasePage
     {
         $data = $this->getUser()->attributesToArray();
 
-        /** @var array<string, mixed> $data */
+        /* @var array<string, mixed> $data */
         $this->editProfileForm->fill($data);
         $this->editPasswordForm->fill();
     }

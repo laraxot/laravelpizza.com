@@ -15,8 +15,8 @@ use Modules\Xot\Tests\CreatesApplication;
  * Runs full migrate first, then module migrations.
  *
  * @property \Modules\User\Models\Permission $permission
- * @property \Modules\User\Models\Role $role
- * @property \Modules\User\Models\Tenant $tenant
+ * @property \Modules\User\Models\Role       $role
+ * @property \Modules\User\Models\Tenant     $tenant
  */
 abstract class TestCase extends BaseTestCase
 {
@@ -31,11 +31,11 @@ abstract class TestCase extends BaseTestCase
 
         foreach (['user', 'xot', 'cms', 'geo'] as $connection) {
             $driver = config("database.connections.{$connection}.driver");
-            if (! \is_string($driver) || $driver === '') {
+            if (! \is_string($driver) || '' === $driver) {
                 $this->markTestSkipped('Missing database connection: '.$connection.' (expected from .env.testing)');
             }
 
-            if ($driver !== 'mysql') {
+            if ('mysql' !== $driver) {
                 $this->markTestSkipped('Invalid DB driver for connection '.$connection.': '.$driver.' (expected mysql from .env.testing)');
             }
         }

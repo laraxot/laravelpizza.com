@@ -1,15 +1,5 @@
 # Meetup Module Documentation Index
 
-## Core Documentation
-
-### Laravel Localization
-- [Laravel Localization Implementation](laravel-localization-implementation-complete.md) - Integrazione locale completa
-- [Localization Standard](localization-standard.md) - Standard di localizzazione (Action, Middleware)
-- [UI/UX Language Switcher](ui-ux-language-switcher-standard.md) - Best practice e standard visuali
-- [Events Page Differences Analysis](events-page-differences-analysis.md) - Analysis of events page vs laravelpizza.com
-- [SVG Management Guide](svg-management-guide.md) - SVG management and Filament icon system
-- [Task Implementation from Research](task-implementation-from-research.md) - Implementation tasks from research findings
-
 ## Core Concepts
 
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup module
@@ -30,7 +20,6 @@
 ## Theme Integration
 
 - [Theme Integration](theme-integration.md) - How Meetup module integrates with theme
-- [Theme Infrastructure](theme.md) - Theme Discovery and Deployment workflow
 - [Modular Architecture](modular-architecture.md) - Modular design patterns
 - [Architecture Rules](architecture-rules.md) - Rules for architecture compliance
 
@@ -47,21 +36,6 @@
 - [Tailwind Best Practices](tailwind-best-practices.md) - CSS framework usage
 - [Vite Theme Asset Loading](vite-theme-asset-loading.md) - Asset compilation
 - [Build and Copy Workflow](build-and-copy-workflow.md) - Build process
-- [Logo Branding Guidelines](logo-branding-guidelines.md) - Design standards and parity findings
-- [Visual Parity Analysis](../../Themes/Meetup/docs/grafica-confronto-laravelpizza.md) - Pixel parity vs production
-
-## Schema.org e SEO
-
-- [Schema.org Research Comprehensive](schema-org-research-comprehensive.md) - Ricerca approfondita: Event, EventSeries, eventSchedule, JoinAction, LeaveAction, EventReservation, EducationEvent, FoodEstablishment, Offer, PriceSpecification, GeoCircle, Person, Hotels
-- [Schema.org Enhancement Recommendations](schema-org-enhancement-recommendations.md) - Tipi Schema.org studiati e roadmap per Event, Page, User, Place
-- [Task Schema.org Event/Series/Azioni](tasks-schema-org-event-series-actions.md) - Event, EventSeries, JoinAction, LeaveAction, EventReservation, attendee
-- [Task Schema.org Offer/Prezzo](tasks-schema-org-offer-price.md) - Offer, PriceSpecification
-- [Event Schema.org Implementation](event-schema-org-implementation.md) - Implementazione campi Event
-- [Schema.org Implementation Tasks](schema-org-implementation-tasks.md) - Roadmap implementazione consolidata
-
-## Implementation Tasks (Prioritized)
-
-- [Task Implementation from Research](task-implementation-from-research.md) - Task consolidati da ricerca Schema.org e analisi visiva (CRITICO: pagina events rotta)
 
 ## Missing Features & Gaps
 

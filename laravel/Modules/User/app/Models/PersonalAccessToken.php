@@ -38,13 +38,9 @@ class PersonalAccessToken extends Model
         'expires_at',
     ];
 
-    /** @return array<string, string> */
-    protected function casts(): array
-    {
-        return [
-            'abilities' => 'array',
-            'last_used_at' => 'datetime',
-            'expires_at' => 'datetime',
-        ];
-    }
+    protected $casts = [
+        'abilities' => 'array',
+        'last_used_at' => 'datetime',
+        'expires_at' => 'datetime',
+    ];
 }

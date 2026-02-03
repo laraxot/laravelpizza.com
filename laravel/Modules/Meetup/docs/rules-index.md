@@ -31,28 +31,15 @@
 
 ### Riferimenti Cross-Module
 
-5. **[Regole Xot](../../Xot/docs/critical-rules-consolidated.md)** e **belongsToManyX** (regola progetto: `.cursor/rules/belongstomanyx-critical.md`)
+5. **[Regole Xot](../../Xot/docs/critical-rules-consolidated.md)**
    - Regole generali Laraxot
    - Filosofia Migrazioni
    - Estensioni Filament
-   - Relazioni many-to-many: usare sempre `belongsToManyX()`, mai `belongsToMany()` (RelationX)
 
 6. **[Regole Tema Meetup](../../../Themes/Meetup/docs/critical-rules-consolidated.md)**
    - Frontend Asset Management
    - Vite Configuration
    - Metatags Component
-
-7. **[SVG: file .svg, no inline nelle Blade](./svg-icons-no-hardcoded-blade.md)** (regola: `.cursor/rules/svg-no-hardcoded-blade-icons-meetup.mdc`)
-   - Icone in `Modules/Meetup/resources/svg/`, uso `<x-filament::icon icon="meetup-{nome}" />`
-
-8. **[Localization standard (mcamara)](./localization-standard.md)** (regola: `.cursor/rules/laravel-localization-mcamara.mdc`)
-   - Link con `LaravelLocalization::localizeUrl($path)`, form action localizzate, `getCurrentLocale()`, language selector
-
-### Schema.org e task implementazione
-
-9. **[Schema.org Enhancement Recommendations](./schema-org-enhancement-recommendations.md)** – Riferimento tipi Schema.org studiati (Event, EventSeries, Offer, Place, Person, ecc.) e roadmap
-10. **[Task Schema.org Event/Series/Azioni](./tasks-schema-org-event-series-actions.md)** – Event, EventSeries, EventSchedule, JoinAction, LeaveAction, EventReservation, EducationEvent, attendee
-11. **[Task Schema.org Offer/Prezzo](./tasks-schema-org-offer-price.md)** – Offer, PriceSpecification, FoodEstablishment
 
 ## 🔄 Aggiornamenti Recenti
 

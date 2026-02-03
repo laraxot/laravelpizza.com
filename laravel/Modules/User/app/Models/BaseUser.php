@@ -231,7 +231,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
                 }
             }
 
-            /** @var array<string, mixed> $stringKeyAttributes */
+            /* @var array<string, mixed> $stringKeyAttributes */
             $this->attributes = $stringKeyAttributes;
         }
     }

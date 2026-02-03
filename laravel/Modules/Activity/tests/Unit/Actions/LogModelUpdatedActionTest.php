@@ -2,20 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Modules\Activity\Tests\Unit\Actions;
-
 uses(\Modules\Activity\Tests\TestCase::class);
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Activity\Actions\LogModelUpdatedAction;
 use Modules\User\Models\User;
 
-test('LogModelUpdatedAction can be instantiated', function () {
-    $model = new class extends Model {
-        protected $table = 'test_models';
+// Modello fittizio per testare LogModelUpdatedAction
+class LogModelUpdatedActionTestModel extends Model
+{
+    protected $table = 'test_models';
 
-        protected $fillable = ['name'];
-    };
+    protected $fillable = ['name'];
+}
+
+test('LogModelUpdatedAction can be instantiated', function () {
+    $model = new LogModelUpdatedActionTestModel;
     $user = User::factory()->make();
 
     $action = new LogModelUpdatedAction($model, $user);

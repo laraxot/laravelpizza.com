@@ -18,30 +18,30 @@ use Spatie\Permission\Traits\HasRoles;
 /**
  * Modules\User\Models\OauthClient.
  *
- * @property string $id
- * @property string|null $user_id
- * @property string $name
- * @property string|null $secret
- * @property string|null $provider
- * @property string $redirect
- * @property bool $personal_access_client
- * @property bool $password_client
- * @property bool $revoked
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property Collection<int, OauthAuthCode> $authCodes
- * @property int|null $auth_codes_count
- * @property array|null $grant_types
- * @property string|null $plain_secret
- * @property array|null $scopes
- * @property Collection<int, OauthAccessToken> $tokens
- * @property int|null $tokens_count
- * @property UserContract|null $user
+ * @property string                                   $id
+ * @property string|null                              $user_id
+ * @property string                                   $name
+ * @property string|null                              $secret
+ * @property string|null                              $provider
+ * @property string                                   $redirect
+ * @property bool                                     $personal_access_client
+ * @property bool                                     $password_client
+ * @property bool                                     $revoked
+ * @property Carbon|null                              $created_at
+ * @property Carbon|null                              $updated_at
+ * @property Collection<int, OauthAuthCode>           $authCodes
+ * @property int|null                                 $auth_codes_count
+ * @property array|null                               $grant_types
+ * @property string|null                              $plain_secret
+ * @property array|null                               $scopes
+ * @property Collection<int, OauthAccessToken>        $tokens
+ * @property int|null                                 $tokens_count
+ * @property UserContract|null                        $user
  * @property \Illuminate\Database\Eloquent\Model|null $owner
- * @property string|null $updated_by
- * @property string|null $created_by
+ * @property string|null                              $updated_by
+ * @property string|null                              $created_by
  *
- * @method static ClientFactory factory($count = null, $state = [])
+ * @method static ClientFactory       factory($count = null, $state = [])
  * @method static Builder|OauthClient newModelQuery()
  * @method static Builder|OauthClient newQuery()
  * @method static Builder|OauthClient query()
@@ -80,7 +80,7 @@ class OauthClient extends PassportClient implements AuthorizableContract
     /**
      * Determine if the entity has a given ability.
      *
-     * @param  iterable|string  $ability
+     * @param iterable|string $ability
      */
     #[\Override]
     public function can($ability, mixed $arguments = []): bool
@@ -98,8 +98,8 @@ class OauthClient extends PassportClient implements AuthorizableContract
     /**
      * Determine if the entity does not have a given ability.
      *
-     * @param  iterable<string>|string  $ability
-     * @param  array<mixed>  $arguments
+     * @param iterable<string>|string $ability
+     * @param array<mixed>            $arguments
      */
     public function cant($ability, $arguments = []): bool
     {
@@ -109,8 +109,8 @@ class OauthClient extends PassportClient implements AuthorizableContract
     /**
      * Determine if the entity does not have a given ability.
      *
-     * @param  iterable<string>|string  $ability
-     * @param  array<mixed>  $arguments
+     * @param iterable<string>|string $ability
+     * @param array<mixed>            $arguments
      */
     public function cannot($ability, $arguments = []): bool
     {
@@ -120,8 +120,8 @@ class OauthClient extends PassportClient implements AuthorizableContract
     /**
      * Determine if the entity has any of the given abilities.
      *
-     * @param  iterable<string>  $abilities
-     * @param  array<mixed>  $arguments
+     * @param iterable<string> $abilities
+     * @param array<mixed>     $arguments
      */
     public function canAny($abilities, $arguments = []): bool
     {
@@ -137,7 +137,7 @@ class OauthClient extends PassportClient implements AuthorizableContract
     /**
      * Check if client has any of the given permissions.
      *
-     * @param  iterable<string>  $permissions
+     * @param iterable<string> $permissions
      */
     private function hasAnyPermission(iterable $permissions): bool
     {

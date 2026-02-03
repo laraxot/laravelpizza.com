@@ -30,12 +30,6 @@ A separate model for managing multiple contact methods (Technical support, Billi
 #### **[PostalAddress](https://schema.org/PostalAddress)**
 We have `AddressSection` in Filament, but a dedicated `Address` model (already partly present in `Geo` module maybe?) that strictly follows Schema.org properties (`streetAddress`, `addressLocality`, `addressRegion`, `postalCode`, `addressCountry`) is superior.
 
-## Task implementazione Person
-
-Per i task operativi su Person (Profile/User), campi da aggiungere e integrazione con Meetup: vedi [tasks-schema-org-person](tasks-schema-org-person.md).
-
----
-
 ## The "Super Mucca" Rationale
 By aligning with Schema.org, we don't just "add fields"; we enable the application to "speak the language of the web". This makes the data more robust, interoperable, and ready for advanced integrations (AI, SEO, external APIs).
 

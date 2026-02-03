@@ -41,17 +41,20 @@ it('can create module', function () {
     /** @var Module $module */
     $module = Module::create($moduleData);
 
-    // Assert - Use model assertions instead of assertDatabaseHas since Module uses Sushi (in-memory SQLite)
-    $this->assertNotNull($module->id);
+    // Assert
+    /** @phpstan-ignore-next-line method.protected (Laravel TestCase trait provides public assertDatabaseHas) */
+    $this->assertDatabaseHas('modules', [
+        'id' => $module->id,
+        'name' => 'TestModule',
+        'slug' => 'test-module',
+        'version' => '1.0.0',
+        'enabled' => true,
+    ]);
+
     $this->assertEquals('TestModule', $module->name);
     $this->assertEquals('test-module', $module->slug);
     $this->assertEquals('1.0.0', $module->version);
     $this->assertTrue($module->enabled);
-
-    // Verify the module exists in Sushi's in-memory store
-    $found = Module::where('slug', 'test-module')->first();
-    $this->assertNotNull($found);
-    $this->assertEquals($module->id, $found->id);
 });
 
 it('can enable and disable module', function () {
@@ -84,15 +87,15 @@ it('can update module version', function () {
     // Act
     $module->update(['version' => '2.0.0']);
 
-    // Assert - Use model assertions since Module uses Sushi (in-memory SQLite)
+    // Assert
     /** @var Module $freshModule */
     $freshModule = $module->fresh();
-    $this->assertNotNull($freshModule);
     $this->assertEquals('2.0.0', $freshModule->version);
-
-    // Verify in Sushi's store via query
-    $found = Module::where('id', $module->id)->where('version', '2.0.0')->first();
-    $this->assertNotNull($found);
+    /** @phpstan-ignore-next-line method.protected */
+    $this->assertDatabaseHas('modules', [
+        'id' => $module->id,
+        'version' => '2.0.0',
+    ]);
 });
 
 it('can manage module dependencies', function () {
@@ -115,24 +118,17 @@ it('can manage module dependencies', function () {
 it('can validate module slug uniqueness', function () {
     /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
-    $firstModule = createModule(['slug' => 'unique-module']);
+    createModule(['slug' => 'unique-module']);
 
-    // Note: Sushi (in-memory SQLite) doesn't enforce unique constraints at DB level,
-    // so we test that both modules exist but can be distinguished by their IDs
-    $secondModule = Module::create([
+    // Act & Assert - Try to create module with same slug
+    /** @phpstan-ignore-next-line method.protected (Laravel TestCase provides expectException) */
+    $this->expectException(QueryException::class);
+    \Modules\Xot\Models\Module::create([
         'name' => 'Another Module',
         'slug' => 'unique-module', // Same slug
         'version' => '1.0.0',
         'enabled' => true,
     ]);
-
-    // Assert - Both modules exist with same slug but different IDs
-    $this->assertNotEquals($firstModule->id, $secondModule->id);
-    $this->assertEquals('unique-module', $firstModule->slug);
-    $this->assertEquals('unique-module', $secondModule->slug);
-
-    // In production with a real database, this would throw a QueryException
-    // due to unique constraint. This test verifies the model allows creation.
 });
 
 it('can manage module configuration', function () {

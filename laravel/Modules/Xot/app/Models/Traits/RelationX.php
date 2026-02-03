@@ -40,9 +40,7 @@ trait RelationX
             Model::class,
             '['.__LINE__.']['.class_basename($this).']',
         );
-        $pivot = $_table !== null && $_table !== ''
-            ? $this->guessPivotFromTable($_table, $related)
-            : $this->guessPivot($related);
+        $pivot = $this->guessPivot($related);
         $table = $pivot->getTable();
         $pivotFields = $pivot->getFillable();
 
@@ -128,23 +126,6 @@ trait RelationX
         $pivot_class = $this->guessPivotFullClass($pivot_name, $related, $class);
         $pivot = app($pivot_class);
         Assert::isInstanceOf($pivot, MorphPivot::class);
-
-        return $pivot;
-    }
-
-    /**
-     * Guess the pivot class from a table name.
-     *
-     * @param  string  $table    The pivot table name
-     * @param  string  $related  The related model class name
-     */
-    public function guessPivotFromTable(string $table, string $related): Pivot
-    {
-        $pivot_name = Str::studly(Str::singular($table));
-        $pivot_class = $this->guessPivotFullClass($pivot_name, $related);
-
-        $pivot = app($pivot_class);
-        Assert::isInstanceOf($pivot, Pivot::class);
 
         return $pivot;
     }

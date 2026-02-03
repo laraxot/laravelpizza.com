@@ -49,10 +49,8 @@
           'created_at' => 'datetime',
           'updated_at' => 'datetime',
       ];
+  }
   ```
-- **ALWAYS** use `$this->belongsToManyX()` instead of `$this->belongsToMany()` for many-to-many relationships.
-- **ALWAYS** use `$this->morphToManyX()` instead of `$this->morphToMany()` for polymorphic many-to-many.
-  - These methods automate pivot model resolution, `withPivot`, `withTimestamps`, and handle cross-database table prefixing.
 
 ## MIGRATIONS
 - ALWAYS extend XotBaseMigration

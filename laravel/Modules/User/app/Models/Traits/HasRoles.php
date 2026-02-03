@@ -18,7 +18,7 @@ trait HasRoles
      */
     public function roles(): BelongsToMany
     {
-        return $this->belongsToManyX(Role::class, 'model_has_roles', 'model_id', 'role_id')->where(
+        return $this->belongsToMany(Role::class, 'model_has_roles', 'model_id', 'role_id')->where(
             'model_type',
             self::class,
         );

@@ -11,7 +11,6 @@ use Modules\Cms\Datas\BlockData;
 use Modules\Cms\Models\Page as PageModel;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Datas\XotData;
-use Spatie\LaravelData\DataCollection;
 
 class Page extends Component
 {
@@ -19,23 +18,11 @@ class Page extends Component
 
     public string $slug;
 
-     /** @var DataCollection<BlockData> */
-     public DataCollection $blocks;
+    public array $blocks = [];
 
     public array $data = [];
 
     public function __construct(string $side, string $slug, ?string $type = null, array $data = [])
-    {
-        $this->data = $data;
-        $this->side = $side;
-        if (null !== $type) {
-            $slug = $type.'-'.$slug;
-        }
-        $this->slug = $slug;
-        $this->blocks = PageModel::getBlocksBySlug($slug, $side);
-    }
-
-    public function __constructOLD(string $side, string $slug, ?string $type = null, array $data = [])
     {
         $this->data = $data;
         $this->side = $side;
@@ -102,7 +89,6 @@ class Page extends Component
             return $block;
         });
 
-        
         $this->blocks = BlockData::collect($blocks);
     }
 

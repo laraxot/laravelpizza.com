@@ -34,12 +34,6 @@
 - Ogni blocco ha un `type` e un `data.view` che punta al componente Blade del tema
 - I blocchi vengono processati da `BlockData::collect()` e renderizzati automaticamente
 
-### 4. Traduzioni nei valori
-- Nei valori testuali del JSON si possono usare `{{ trans('meetup::chiave') }}`
-- `HasBlocks::compile()` (Cms) risolve le stringhe che contengono `{{ }}` tramite `Blade::render()`, quindi `trans()` usa la locale corrente (`app()->getLocale()`)
-- Esempio: `"title": "{{ trans('meetup::home.title') }}"` → in italiano "Sviluppatori Laravel. Pizza. Community.", in inglese "Laravel Developers. Pizza. Community."
-- File traduzioni home: `Modules/Meetup/lang/{locale}/home.php` (it, en, de, fr, es, pt, ru)
-
 ## Esempio: Creare Pagina Contact
 
 ### ❌ ERRATO

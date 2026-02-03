@@ -53,7 +53,3 @@
 
  - Se un valore non esiste e viene passato un default, il default viene restituito senza side effects.
  - Gli override tenant-specific devono essere espressi nei file di configurazione del tenant.
-
- ## Risoluzione tema pubblico (pub_theme)
-
- Il nome tenant determina la cartella da cui si carica `xra.php`; da lì il valore `pub_theme` definisce il tema attivo (es. Meetup → `laravel/Themes/Meetup`). Vedi [tenant-name-to-pub-theme](tenant-name-to-pub-theme.md).

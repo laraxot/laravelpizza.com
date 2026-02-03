@@ -100,13 +100,7 @@ dalla versione statica `Themes/Meetup/resources/html/events.html`:
 - [x] identificato flusso `/it/events` → `[slug].blade.php` → `events.json`
 - [x] confrontato `events.json` con `events.html` statico
 - [x] elencate differenze architetturali e di contenuto
-- [x] aggiornare `events.json` con blocco `events.list` (6 eventi, attendees_current/attendees_max)
-- [x] creato `Themes/Meetup/resources/views/components/blocks/events/list.blade.php` (titolo, filtri All/Upcoming/Past, grid card)
-- [ ] verificare rendering `/it/events` rispetto a `laravelpizza.com/events` (screenshot in [Themes/Meetup/docs/events-comparison](../../Themes/Meetup/docs/events-comparison/README.md))
+- [ ] aggiornare `events.json` con blocco `events.list`
+- [ ] adeguare (se necessario) `events/list.blade.php`
+- [ ] verificare rendering `/it/events` rispetto a `laravelpizza.com/events`
 - [ ] aggiornare eventuali regole in `critical-rules-consolidated.md` se emergono nuovi pattern
-
-## riferimenti implementazione
-
-- Confronto e come far funzionare: [Themes/Meetup/docs/events-comparison/README.md](../../Themes/Meetup/docs/events-comparison/README.md)
-- View blocco: `pub_theme::components.blocks.events.list` → `Themes/Meetup/resources/views/components/blocks/events/list.blade.php`
-- CMS: `config/local/laravelpizza/database/content/pages/events.json`
