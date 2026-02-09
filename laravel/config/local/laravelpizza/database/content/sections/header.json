@@ -11,7 +11,7 @@
                 "type": "navigation",
                 "slug": "main-nav",
                 "data": {
-                    "view": "themes.meetup::components.sections.header",
+                    "view": "pub_theme::components.blocks.navigation.v1",
                     "brand": "Laravel Pizza",
                     "logo": "/themes/Meetup/images/pizza-slice-logo.svg",
                     "tagline": "Laravel Developers. Pizza. Community.",

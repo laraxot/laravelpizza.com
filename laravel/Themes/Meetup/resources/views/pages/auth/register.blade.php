@@ -16,9 +16,9 @@ name('register');
     <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
         <div class="w-full max-w-md">
             
-            {{-- Register Widget Filament 4 --}}
+            {{-- GDPR-Compliant Register Widget --}}
             <div class="bg-white dark:bg-gray-800 shadow-xl rounded-lg overflow-hidden">
-                @livewire(\Modules\User\Filament\Widgets\Auth\RegisterWidget::class)
+                @livewire(\Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget::class)
             </div>
 
             <!-- Login CTA -->

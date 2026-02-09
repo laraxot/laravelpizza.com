@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
-use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Models\Treatment;
 use Modules\User\Datas\PasswordData;
+use Modules\User\Events\UserRegistered;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
@@ -142,8 +141,15 @@ class RegisterWidget extends XotBaseWidget
 
             $user = DB::transaction(function () use ($validatedData, $formData) {
                 $user = $this->createUser($validatedData);
-                $this->saveGDPRConsents($user, $formData);
                 $this->afterUserCreated($user, $formData);
+
+                // Dispatch event for GDPR and other listeners
+                UserRegistered::dispatch(
+                    user: $user,
+                    formData: $formData,
+                    ipAddress: request()->ip(),
+                    userAgent: request()->userAgent(),
+                );
 
                 return $user;
             });
@@ -177,69 +183,6 @@ class RegisterWidget extends XotBaseWidget
         if ($validator->fails()) {
             throw new ValidationException($validator);
         }
-    }
-
-    /**
-     * Save GDPR consents to database using Gdpr module.
-     *
-     * @param User $user
-     * @param array<string, mixed> $formData
-     */
-    protected function saveGDPRConsents(User $user, array $formData): void
-    {
-        $ipAddress = request()->ip();
-        $userAgent = request()->userAgent();
-        
-        // Get or create treatments
-        $treatments = Treatment::whereIn('name', [
-            'privacy_policy',
-            'terms_conditions',
-            'data_processing',
-            'marketing_consent',
-            'profiling_consent',
-            'analytics_consent',
-            'third_party_consent',
-        ])->get()->keyBy('name');
-
-        // Map form field names to treatment names
-        $consentMapping = [
-            'privacy_policy_accepted' => 'privacy_policy',
-            'terms_accepted' => 'terms_conditions',
-            'data_processing_accepted' => 'data_processing',
-            'marketing_consent' => 'marketing_consent',
-            'profiling_consent' => 'profiling_consent',
-            'analytics_consent' => 'analytics_consent',
-            'third_party_consent' => 'third_party_consent',
-        ];
-
-        // Create consent records
-        foreach ($consentMapping as $formField => $treatmentName) {
-            if (!isset($formData[$formField])) {
-                continue;
-            }
-
-            $isAccepted = (bool) $formData[$formField];
-            $treatment = $treatments->get($treatmentName);
-
-            if ($treatment) {
-                Consent::create([
-                    'user_id' => $user->id,
-                    'user_type' => get_class($user),
-                    'treatment_id' => $treatment->id,
-                    'type' => $treatmentName,
-                    'accepted_at' => $isAccepted ? now() : null,
-                    'subject_id' => $user->id,
-                    'created_by' => 'system',
-                    'updated_by' => 'system',
-                ]);
-            }
-        }
-
-        Log::info('GDPR consents saved for user registration', [
-            'user_id' => $user->id,
-            'ip' => $ipAddress,
-            'consents' => array_keys($consentMapping),
-        ]);
     }
 
     /**

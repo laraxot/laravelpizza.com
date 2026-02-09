@@ -28,3 +28,6 @@ analizza a fondo e ragiona a fondo su come aggiornare il modulo GDPR per usarlo 
 studia su internet anche tutte le cose wcag
 
 se avessi studiato a fondo come ti ho chiesto piu' volte il codice e le cartelle docs , sapresti che ->label(  non lo utilizziamo da molto tempo perche' ci arrangiamo con i files di traduzione tramite langserviceprovider, dato il tuo errore grossolano devi analizzare il codice finche' non lo capisci da solo, poi aggiorni le tue rules le tue memories le tue skills e anche quelle degli altri agenti ai
+
+
+http://127.0.0.1:8001/it/auth/register  migliorala controllala bene ! e dato che user non dipendete da gdpr ma gdpr dipende da user probabilmente era meglio non @livewire(\Modules\User\Filament\Widgets\Auth\RegisterWidget::class)  ma @livewire(\Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget::class)  , ragiona a fondo 

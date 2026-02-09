@@ -42,6 +42,7 @@ Before making any changes, study the existing documentation:
 2.  **File coinvolti**:
     *   Blade: `laravel/Themes/Meetup/resources/views/components/sections/header.blade.php` (richiamato come `<x-section slug="header"/>`).
     *   Dati: `laravel/config/local/laravelpizza/database/content/sections/header.json`.
+    *   **CRITICAL FIX**: The `header.json` currently points its `view` property back to the generic `header` component, causing a circular reference. This needs to be changed to a specific navigation block component (e.g., `pub_theme::components.blocks.navigation.v1`).
 3.  **Funzionalità**: Implementare supporto per dropdown utente (se loggato), cambio lingua (vedi Modulo Lang), e menu responsivo.
 4.  **Verifica**: Assicurati che l'header sia sticky e che tutti i link funzionino correttamente, specialmente il cambio lingua.
 
