@@ -8,6 +8,8 @@ use Illuminate\Auth\Events\Failed;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Auth\Events\OtherDeviceLogout;
+use Modules\Gdpr\Listeners\GdprRegistrationListener;
+use Modules\User\Events\UserRegistered;
 use Modules\User\Listeners\FailedLoginListener;
 use Modules\User\Listeners\LoginListener;
 use Modules\User\Listeners\LogoutListener;
@@ -46,6 +48,9 @@ class EventServiceProvider extends XotBaseEventServiceProvider
         ],
         OtherDeviceLogout::class => [
             OtherDeviceLogoutListener::class,
+        ],
+        UserRegistered::class => [
+            GdprRegistrationListener::class,
         ],
     ];
 

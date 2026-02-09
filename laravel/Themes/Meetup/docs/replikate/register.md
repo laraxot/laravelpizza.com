@@ -87,3 +87,7 @@
 ---
 
 *Last updated: February 2026*
+
+
+i files .md non voglio che abbiano date per esempio mi fa schifo "*Last updated: February 2026*" ancora peggio nei nomi dei files, 
+in  http://127.0.0.1:8001/it/auth/register  hai messo dei checkbox per i consensi.. ma non hai ne messo il link per andarli a leggere ne un modal per leggerli .. ha messo sia i checkbox che la scritta Proseguendo, dichiari di aver letto e accettato l'informativa privacy e i termini e condizioni . hai messo 2 volte il controllo del hai un account.. togli   Hai già un account? Accedi  e lascia il tastone sotto . per il register studia molto a fonod https://devdojo.com/auth/docs/getting-started/ e  https://github.com/thedevdojo/auth  e poi fai un register che sia bello, pulito, moderno, che segua i principi di Laravel e che sia conforme al GDPR che wcag .  

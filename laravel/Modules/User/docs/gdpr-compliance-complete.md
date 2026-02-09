@@ -897,9 +897,122 @@ tramite notifica sul sito e, quando necessario, via email.
 - [ISO 27001 - Information Security Management](https://www.iso.org/standard/27001)
 - [ISO 27018 - Protection of PII in Public Clouds](https://www.iso.org/standard/27018)
 
+## Integrazione Reale con Modulo Gdpr
+
+Il modulo User è ora pienamente integrato con il modulo Gdpr per la gestione dei consensi. Questa sezione descrive come l'integrazione funziona in pratica.
+
+### Architettura dell'Integrazione
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    REGISTRAZIONE UTENTE                       │
+│                   (RegisterWidget)                              │
+└─────────────────────┬───────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────┐
+│                EVENTO UserRegistered                         │
+│            (Modules/User/Events/UserRegistered.php)           │
+│                                                              │
+│  - User $user                                                  │
+│  - array $formData (inclusi consensi GDPR)                   │
+│  - string $ipAddress                                           │
+│  - string $userAgent                                           │
+└─────────────────────┬───────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────┐
+│            EVENT SERVICE PROVIDER                             │
+│     (Modules/User/Providers/EventServiceProvider.php)            │
+│                                                              │
+│  protected $listen = [                                         │
+│      UserRegistered::class => [                              │
+│          GdprRegistrationListener::class,                   │
+│      ],                                                        │
+│  ];                                                          │
+└─────────────────────┬───────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────┐
+│            GdprRegistrationListener                         │
+│              (Modules/Gdpr/Listeners/GdprRegistrationListener.php) │
+│                                                              │
+│  1. Riceve l'evento UserRegistered                                     │
+│  2. Estrae i consensi GDPR:                                        │
+│     - $gdprConsents = $event->getGdprConsents()                   │
+│  3. Mappa i form field names ai ConsentType enum values:          │
+│     - 'privacy_policy_accepted' → ConsentType::PRIVACY_POLICY    │
+│     - 'terms_accepted' → ConsentType::TERMS_AND_CONDITIONS      │
+│     - 'data_processing_accepted' → ConsentType::PERSONALIZATION │
+│     - 'marketing_consent' → ConsentType::MARKETING_EMAIL       │
+│     - 'profiling_consent' → ConsentType::PROFILING            │
+│     - 'analytics_consent' → ConsentType::ANALYTICS            │
+│     - 'third_party_consent' → ConsentType::THIRD_PARTY_SHARING │
+│  4. Per ogni consenso accettato:                                    │
+│     - $user->giveConsent($consentType, $metadata)               │
+│     - Salva record nella tabella 'consents'                    │
+│  5. Log dell'operazione                                             │
+└─────────────────────┬───────────────────────────────────────┘
+                      │
+                      ▼
+┌──────────────────────────────────────────────┐   ┌─────────────────────────────────────┐
+│        USER MODEL (HasGdpr Trait)          │   │      CONSENT MODEL                  │
+│  (Modules/User/Models/User.php)              │   │ (Modules/Gdpr/Models/Consent.php)  │
+│                                           │   │                                      │
+│  use HasGdpr;                             │   │  id: UUID                           │
+│                                           │   │  user_id: string (morphMany)      │
+│  public function giveConsent(...)       │   │  user_type: string (morphMany)    │
+│  public function hasGivenConsent(...)    │   │  type: string (ConsentType)       │
+│  public function revokeConsent(...)     │   │  accepted_at: Carbon               │
+│  public function consents()              │   │  revoked_at: Carbon?              │
+│  public function activeConsents()       │   │  metadata: JSON                    │
+│                                           │   │  ip_address: string                 │
+└──────────────────────────────────────────────┘   │  user_agent: string                │
+                                                     │  ...                             │
+                                                     └─────────────────────────────────┘
+```
+
+### Mapping Form Fields → ConsentType
+
+Il RegisterWidget usa questi field names nel form:
+
+| Field nel Form | ConsentType Enum | Required | Descrizione |
+|----------------|------------------|----------|-------------|
+| `privacy_policy_accepted` | `PRIVACY_POLICY` | ✅ Sì | Accettazione privacy policy |
+| `terms_accepted` | `TERMS_AND_CONDITIONS` | ✅ Sì | Accettazione termini e condizioni |
+| `data_processing_accepted` | `PERSONALIZATION` | ✅ Sì | Consenso trattamento dati personali |
+| `marketing_consent` | `MARKETING_EMAIL` | ❌ No | Consenso comunicazioni marketing |
+| `profiling_consent` | `PROFILING` | ❌ No | Consenso profilazione |
+| `analytics_consent` | `ANALYTICS` | ❌ No | Consenso analisi |
+| `third_party_consent` | `THIRD_PARTY_SHARING` | ❌ No | Condivisione con terze parti |
+
+### Verifica dell'Integrazione
+
+Per verificare che l'integrazione funzioni correttamente, puoi:
+
+1. **Registrare un nuovo utente** con tutti i consensi
+2. **Controllare il database** nella tabella `consents`:
+```sql
+SELECT * FROM consents WHERE user_id = 'user-uuid' ORDER BY created_at;
+```
+
+3. **Verificare i consensi nel codice**:
+```php
+$user = User::find('user-uuid');
+$hasPrivacyConsent = $user->hasGivenConsent(ConsentType::PRIVACY_POLICY); // true
+$hasMarketingConsent = $user->hasGivenConsent(ConsentType::MARKETING_EMAIL); // false
+$allConsents = $user->activeConsents()->pluck('type')->toArray();
+// ['privacy_policy', 'terms_and_conditions', 'personalization']
+```
+
+4. **Verificare i log**:
+```bash
+tail -f storage/logs/laravel.log | grep "GDPR consents saved"
+```
+
 ---
 
-**Document Version**: 1.0.0  
+**Document Version**: 1.1.0 (Aggiornata con integrazione reale modulo Gdpr)  
 **Last Updated**: 2026-02-09  
 **Next Review**: 2026-08-09  
 **Responsible**: GDPR Compliance Team  

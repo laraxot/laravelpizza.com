@@ -136,6 +136,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  */
 class User extends BaseUser
 {
+    use HasGdpr;
+
     /** @var string */
     public $connection = 'user';
 
