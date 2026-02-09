@@ -50,7 +50,7 @@ class TreatmentsTableSeeder extends Seeder
                 'documentVersion' => '1.0',
             ],
             [
-                'name' 'profiling_consent',
+                'name' => 'profiling_consent',
                 'description' => 'Consenso all\'analisi del comportamento per personalizzazione dell\'esperienza',
                 'required' => false,
                 'active' => true,
@@ -67,7 +67,7 @@ class TreatmentsTableSeeder extends Seeder
             ],
             [
                 'name' => 'third_party_consent',
-                'description' 'Consenso alla condivisione dei dati con partner terzi selezionati',
+                'description' => 'Consenso alla condivisione dei dati con partner terzi selezionati',
                 'required' => false,
                 'active' => true,
                 'weight' => 13,

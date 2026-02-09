@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
+use Modules\Gdpr\Models\Consent;
+use Modules\Gdpr\Models\Treatment;
+use Modules\User\Datas\PasswordData;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
@@ -69,29 +72,19 @@ class RegisterWidget extends XotBaseWidget
                     'password' => TextInput::make('password')
                         ->password()
                         ->required()
-                        ->string()
-                        ->minLength(12)
-                        ->maxLength(255)
-                        ->rules([
-                            'required',
-                            'string',
-                            'min:12',
-                            'regex:/[A-Z]/',
-                            'regex:/[a-z]/',
-                            'regex:/[0-9]/',
-                            'regex:/[^A-Za-z0-9]/',
-                        ])
+                        ->rule(PasswordData::make()->getPasswordRule())
                         ->validationMessages([
                             'password.regex' => __('user::auth.validation.password.complexity'),
                         ])
+                        ->helperText(PasswordData::make()->getHelperText())
                         ->autocomplete('new-password')
                         ->confirmed(),
                     'password_confirmation' => TextInput::make('password_confirmation')
                         ->password()
                         ->required()
                         ->string()
-                        ->minLength(12)
-                        ->maxLength(255)
+                        //->minLength(12)
+                        //->maxLength(255)
                         ->autocomplete('new-password')
                         ->dehydrated(false)
                         ->same('password'),
@@ -166,6 +159,7 @@ class RegisterWidget extends XotBaseWidget
         } catch (ValidationException $e) {
             throw $e;
         } catch (\Exception $e) {
+            dddx($e->getMessage());
             $this->handleRegistrationError($e);
         }
     }

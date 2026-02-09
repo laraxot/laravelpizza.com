@@ -26,3 +26,5 @@ analizza a fondo e ragiona a fondo su come aggiornare il modulo GDPR per usarlo 
 
 
 studia su internet anche tutte le cose wcag
+
+se avessi studiato a fondo come ti ho chiesto piu' volte il codice e le cartelle docs , sapresti che ->label(  non lo utilizziamo da molto tempo perche' ci arrangiamo con i files di traduzione tramite langserviceprovider, dato il tuo errore grossolano devi analizzare il codice finche' non lo capisci da solo, poi aggiorni le tue rules le tue memories le tue skills e anche quelle degli altri agenti ai

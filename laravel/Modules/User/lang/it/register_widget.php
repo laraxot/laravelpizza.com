@@ -50,6 +50,14 @@ return [
         ],
         'third_party_consent' => [
             'description' => 'third_party_consent',
+            'helper_text' => 'third_party_consent',
+            'placeholder' => 'third_party_consent',
+            'label' => 'third_party_consent',
+        ],
+        'analytics_consent' => [
+            'description' => 'analytics_consent',
+            'helper_text' => 'analytics_consent',
+            'placeholder' => 'analytics_consent',
         ],
     ],
 ];
