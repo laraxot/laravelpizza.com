@@ -24,7 +24,8 @@ Il modulo Meetup segue lo standard di localizzazione basato su **mcamara/laravel
 
 ## Locale e lingue supportate
 
-- **Locale corrente**: usare **`LaravelLocalization::getCurrentLocale()`** (preferire a `app()->getLocale()`).
+- **Locale corrente nei Blade components**: rilevare dal primo segmento URL (`request()->segment(1)`), con fallback a `app()->getLocale()`. Il middleware `SetLocale` (`Modules/UI/Http/Middleware/SetLocale.php`) detecta il locale dall'URL e lo persiste in session.
+- `LaravelLocalization::getCurrentLocale()` puo' non funzionare correttamente nel contesto Folio perche' `LaravelLocalization::setLocale()` non viene chiamato come nelle route tradizionali. Preferire URL detection.
 - **Lingue supportate**: **`LaravelLocalization::getSupportedLocales()`** o **`getLocalesOrder()`** (es. per language switcher).
 
 ## Traduzioni (testi)
@@ -38,7 +39,9 @@ Il modulo Meetup segue lo standard di localizzazione basato su **mcamara/laravel
 
 ## Preservare stato
 
-- Il middleware di mcamara (LocaleSessionRedirect, LaravelLocalizationRedirectFilter) gestisce session/cookie e redirect. Non impostare manualmente il locale in session per le pagine pubbliche.
+- Il middleware `SetLocale` rileva il locale dall'URL prefix, lo persiste in session, e lo imposta con `app()->setLocale()`.
+- Il middleware di mcamara (LocaleSessionRedirect, LaravelLocalizationRedirectFilter) e' registrato nel Folio middleware stack (`FolioVoltServiceProvider`) per gestire redirect.
+- Il locale viene anche impostato dalla closure inline di Folio per ogni prefisso lingua.
 
 ## Route caching
 

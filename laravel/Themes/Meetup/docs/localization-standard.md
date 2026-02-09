@@ -11,13 +11,35 @@ Il tema Meetup implementa lo standard di localizzazione Laraxot basato su **mcam
 - **Memoria**: [.cursor/memories/laravel-localization-mcamara.md](../../../.cursor/memories/laravel-localization-mcamara.md)
 - **Riferimento completo**: [Modules/Lang/docs/laravel-localization-mcamara-reference.md](../../Modules/Lang/docs/laravel-localization-mcamara-reference.md)
 
+## Locale detection in Folio context (CRITICAL)
+
+Nel contesto Folio, `LaravelLocalization::setLocale()` NON viene chiamato come nelle route tradizionali. La detection avviene tramite:
+
+1. **URL prefix** (source of truth): il primo segmento dell'URL (es. `/en/events` -> `'en'`)
+2. **Session**: persistito dal middleware `SetLocale` dopo la prima detection da URL
+3. **Config default**: `config('app.locale')` come fallback
+
+Il middleware `SetLocale` (`Modules/UI/Http/Middleware/SetLocale.php`) rileva il locale dall'URL, lo persiste in session, e chiama `app()->setLocale()`. Questo garantisce che `app()->getLocale()` restituisca sempre il valore corretto.
+
+**Pattern corretto per Blade components:**
+```php
+// Rileva dal URL (più affidabile in Folio)
+$segments = request()->segments();
+$urlLocale = $segments[0] ?? null;
+$supportedKeys = array_keys($locales);
+$currentLocale = (is_string($urlLocale) && in_array($urlLocale, $supportedKeys, true))
+    ? $urlLocale
+    : app()->getLocale();
+```
+
 ## Componenti principali
 
 ### Language switcher
 
 - **Componente**: `x-ui.language-switcher`
-- Usa **`LaravelLocalization::getSupportedLocales()`** (o `getLocalesOrder()`) e **`LaravelLocalization::getLocalizedURL($code, null, [], true)`** per mantenere la pagina corrente e cambiare lingua.
-- Locale corrente: **`LaravelLocalization::getCurrentLocale()`**.
+- Usa **`LaravelLocalization::getSupportedLocales()`** per la lista delle lingue.
+- Usa **`LaravelLocalization::getLocalizedURL($code, null, [], true)`** per i link (mantiene pagina corrente).
+- Locale corrente: rileva dal primo segmento URL, con fallback a `app()->getLocale()`.
 
 ### Navigation (header e footer)
 
@@ -30,9 +52,10 @@ Il tema Meetup implementa lo standard di localizzazione Laraxot basato su **mcam
 
 ## Best practices
 
-- **Non usare** `app()->getLocale()` nei componenti; preferire **`LaravelLocalization::getCurrentLocale()`** per coerenza con il package.
+- **Per il locale corrente** nei Blade components, rilevare dal primo segmento URL (`request()->segment(1)`), con fallback a `app()->getLocale()`. Questo e' affidabile nel contesto Folio perche' il middleware `SetLocale` detecta dal URL e persiste in session.
 - **Non costruire** URL a mano (es. `url(app()->getLocale() . '/events')`); usare sempre **`LaravelLocalization::localizeUrl('/events')`**.
 - Tutti i testi tradotti: **`__(...)`** o **`@lang`**; nessuna stringa hardcoded.
+- `LaravelLocalization::getCurrentLocale()` puo' non funzionare correttamente in Folio perche' `setLocale()` non viene chiamato. Preferire URL detection.
 
 ## Regole operative (mcamara)
 

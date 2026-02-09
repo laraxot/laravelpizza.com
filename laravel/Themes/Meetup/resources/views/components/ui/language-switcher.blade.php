@@ -16,8 +16,15 @@
 --}}
 @php
     $locales = $locales ?? LaravelLocalization::getSupportedLocales();
-    $currentLocale = app()->getLocale();
     $isMobile = $mobile ?? false;
+
+    // Detect locale from URL prefix (source of truth in Folio context)
+    $segments = request()->segments();
+    $urlLocale = $segments[0] ?? null;
+    $supportedKeys = array_keys($locales);
+    $currentLocale = (is_string($urlLocale) && in_array($urlLocale, $supportedKeys, true))
+        ? $urlLocale
+        : app()->getLocale();
 @endphp
 
 <div class="relative" x-data="{ open: false }" @click.outside="open = false" @keydown.escape.window="open = false">
