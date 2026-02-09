@@ -51,3 +51,7 @@ Quando hai finito di modificare un file devi controllarlo con:
 - **SOLID**: Single Responsibility, Open/Closed, Liskov, Interface Segregation, Dependency Inversion
 - **ROBUST**: Type safety, error handling, validazioni, PHPStan Level 10
 - **Laraxot**: Rispetta architettura framework - XotBase sempre, traduzioni centralizzate
+
+
+
+costantemente migliora i prompt che sono dentro laravel/Themes/Meetup/docs/replikate e anche le memorie e le skills e quelle degli altri agenti ai

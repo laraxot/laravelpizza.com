@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 return [
     'gdpr' => [
-        'notice' => 'Al continuar, confirmas que has leído y aceptado',
         'privacy_policy' => [
             'required' => 'Debes aceptar la política de privacidad para continuar.',
         ],

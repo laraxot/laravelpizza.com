@@ -48,8 +48,6 @@ return [
         'success' => 'Registration completed successfully.',
         'failed' => 'Unable to complete registration.',
         'already_have_account' => 'Already have an account?',
-        'login' => 'Sign in',
-        'already_registered' => 'Already have an account?',
         'error_occurred' => 'An error occurred during registration. Please try again.',
         'name_structured' => [
             'label' => 'Name',
@@ -85,7 +83,6 @@ return [
         ],
     ],
     'gdpr' => [
-        'notice' => 'By continuing, you confirm that you have read and accepted',
         'privacy_policy' => [
             'required' => 'You must accept the privacy policy to continue.',
         ],

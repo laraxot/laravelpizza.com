@@ -73,7 +73,7 @@ name('register');
 
                 <!-- GDPR-Compliant Register Widget -->
                 <div class="p-6 sm:p-8">
-                    @livewire(\Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget::class)
+                    @livewire(\Modules\User\Filament\Widgets\Auth\RegisterWidget::class)
                 </div>
             </div>
 

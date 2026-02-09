@@ -98,12 +98,112 @@ Questo pattern garantisce che:
 - Listener: `Modules/Gdpr/app/Listeners/SaveGdprConsents.php`
 - Documentazione: `Modules/User/docs/architecture/user-gdpr-decoupling.md`
 
-### 4. Struttura View
+### 4. Layout e Spaziatura (UX)
 
-Il tema Meetup utilizza:
-- `@livewire()` per includere il widget Filament
-- Layout coerente con il login
-- Design responsive con Tailwind CSS
+La pagina di registrazione utilizza un layout **wide-container** (max-w-4xl) invece del tradizionale narrow-container (max-w-md):
+
+```blade
+<div class="w-full max-w-4xl mx-auto">
+```
+
+Questo permette:
+- Form più largo e leggibile
+- Migliore utilizzo dello spazio su schermi grandi
+- Sezioni chiaramente separate
+- Visual hierarchy migliorata
+
+### 5. Progress Indicator (UX/WCAG)
+
+Indicatori di progresso visibili per guidare l'utente:
+
+```blade
+<div class="flex items-center space-x-4" aria-label="Progresso registrazione">
+    <div class="flex items-center">
+        <span class="w-8 h-8 rounded-full bg-primary-600 text-white" aria-current="step">1</span>
+        <span class="ml-2 text-sm font-medium">Dati personali</span>
+    </div>
+    <div class="flex-1 h-1 bg-primary-200 rounded">
+        <div class="h-full w-full bg-primary-600 rounded"></div>
+    </div>
+</div>
+```
+
+### 6. Trust Indicators (UX)
+
+Elementi di trust visibili per aumentare la fiducia dell'utente:
+
+- Badge "Dati protetti con crittografia SSL"
+- Badge "GDPR Compliant"
+- Design professionale e pulito
+
+### 7. Organizzazione del Form
+
+Il form è organizzato in sezioni logiche:
+
+1. **Informazioni personali** (nome, cognome, email)
+2. **Sicurezza** (password, conferma)
+3. **Consensi e Privacy**:
+   - Consensi Obbligatori (Privacy, Termini, Trattamento dati)
+   - Consensi Opzionali (Marketing, Profilazione, Analytics, Terze parti)
+
+Ogni sezione ha:
+- Titolo chiaro
+- Descrizione esplicativa
+- Icona identificativa
+- Possibilità di collassare (per sezioni lunghe)
+
+## WCAG Compliance (2.1 AA)
+
+### Contrasto
+
+- Testo su sfondo: rapporto minimo 4.5:1
+- Testo grande (18px+): rapporto minimo 3:1
+- Elementi UI interattivi: sempre visibili
+
+```css
+/* Esempio: testo grigio su bianco */
+.text-gray-600 /* 6.4:1 ratio */
+.text-gray-700 /* 7.5:1 ratio */
+```
+
+### Focus Visibile
+
+Tutti gli elementi interattivi hanno focus indicator visibile:
+
+```css
+.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-primary-500
+```
+
+### ARIA Labels
+
+Landmark e labels per screen reader:
+
+```blade
+<section aria-labelledby="register-heading">
+<h1 id="register-heading">Crea il tuo account</h1>
+
+<div role="form" aria-label="Form di registrazione">
+<div role="complementary" aria-label="Accesso alternativo">
+```
+
+### Touch Targets
+
+Tutti i target touch sono minimo 44x44px (WCAG 2.5.5):
+
+```css
+.min-h-[48px] /* Pulsanti */
+```
+
+### Autocomplete
+
+Campi con attributi autocomplete corretti:
+
+```php
+->autocomplete('given-name')   // Nome
+->autocomplete('family-name')  // Cognome
+->autocomplete('email')         // Email
+->autocomplete('new-password')  // Password
+```
 
 ## File Correlati
 
@@ -114,4 +214,7 @@ Il tema Meetup utilizza:
 
 ## Ultimo Aggiornamento
 
-2026-02-09 - Implementato pattern Event/Listener per disaccoppiare User da Gdpr (UserRegistered event + SaveGdprConsents listener).
+2026-02-09 - Layout wide-container, progress indicator, trust badges, sezioni form organizzate, WCAG 2.1 AA compliance.
+
+
+costantemente migliora i prompt che sono dentro laravel/Themes/Meetup/docs/replikate e anche le memorie e le skills e quelle degli altri agenti ai
