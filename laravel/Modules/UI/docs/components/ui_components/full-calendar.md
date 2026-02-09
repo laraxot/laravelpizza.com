@@ -43,4 +43,3 @@ When making changes to the FullCalendar component:
 4. Verify compliance with rules in Cursor and Windsurf .mdc files
 5. Ensure all class names and attributes follow English naming conventions
 
-*Last updated: June 2025*

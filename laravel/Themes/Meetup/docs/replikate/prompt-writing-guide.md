@@ -252,4 +252,3 @@ npm run copy
 
 ---
 
-*This guide is maintained by the Meetup theme development team. Last updated: February 2026*

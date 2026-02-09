@@ -8,7 +8,7 @@ Il file `laravel/Modules/Geo/lang/it/address.php` conteneva problemi critici:
 ```php
 'region' => [
     'label' => 'region',
-    'placeholder' => 'region',
+    'placeholder' => 'region', 
     'helper_text' => 'region', // ❌ ERRORE: uguale alla chiave
 ],
 'province' => [
@@ -205,7 +205,7 @@ return [
 
 Le stesse correzioni sono state applicate a:
 - `laravel/Modules/Geo/lang/it/address.php` - Italiano
-- `laravel/Modules/Geo/lang/en/address.php` - Inglese
+- `laravel/Modules/Geo/lang/en/address.php` - Inglese  
 - `laravel/Modules/Geo/lang/de/address.php` - Tedesco
 
 ## Collegamenti
@@ -216,4 +216,4 @@ Le stesse correzioni sono state applicate a:
 
 ---
 
-**Ultimo aggiornamento**: 27 Gennaio 2025
+**Ultimo aggiornamento**: 27 Gennaio 2025  

@@ -1,202 +1,217 @@
-# CMS Module - Complete Roadmap
+# Cms Module - Content Management Roadmap
 
-## Module Overview
-**Purpose**: Content management system with pages, blocks, menus
-**Status**: Content management infrastructure
-**Dependencies**: Xot (core framework), User (content management), UI (components)
-
-## Current State Analysis
-
-### ✅ Completed Components
-- Basic content management system
-- Page management functionality
-- Block/content management
-- Menu management system
-- PHPStan Level 10 compliance
-
-### 🔄 In Progress Components
-- [ ] Advanced content editing features
-- [ ] Content versioning system
-
-### ❌ Missing/Incomplete Components
-- Complete WYSIWYG editor integration
-- Advanced media management system
-- Content workflow and approval process
-- Multi-language content support
-- Content personalization engine
-- Advanced SEO tools
-- Content analytics and reporting
-- Content template system
-
-## Module Structure
-```
-Cms/
-├── app/
-│   ├── Actions/          # Content management actions
-│   ├── Console/          # CMS commands
-│   ├── Contracts/        # CMS contracts
-│   ├── Datas/           # CMS data transfer objects
-│   ├── Enums/           # CMS-related enums
-│   ├── Filament/        # CMS Filament resources/pages/widgets
-│   ├── Http/            # CMS controllers, middleware
-│   ├── Models/          # CMS models (Page, Block, Menu, etc.)
-│   ├── Policies/        # CMS policies
-│   ├── Providers/       # Service providers
-│   └── Services/        # CMS services
-├── config/              # CMS configuration
-├── database/            # CMS migrations, seeds, factories
-├── docs/                # CMS documentation
-├── resources/           # CMS views, assets, translations
-├── routes/              # CMS routes
-└── tests/               # CMS tests
-```
-
-## Detailed Component Analysis
-
-### 1. Page Management
-**Status**: ✅ Partial
-- Basic page creation and management
-- Page hierarchy support
-- **Missing**: Advanced page features, versioning
-
-### 2. Block/Content Management
-**Status**: ✅ Partial
-- Basic content blocks
-- Content editing capabilities
-- **Missing**: Advanced editing, rich content
-
-### 3. Menu Management
-**Status**: ✅ Partial
-- Basic menu system
-- Menu item management
-- **Missing**: Advanced menu features
-
-### 4. Content Architecture
-**Status**: ⚠️ Basic
-- Basic content models
-- **Needs**: Advanced content relationships and organization
-
-## Roadmap for Completion
-
-### Phase 1: Content Editing Enhancement (Priority: High)
-**Timeline**: 3-4 weeks
-**Tasks**:
-- [ ] Complete WYSIWYG editor integration (TinyMCE, CKEditor, or similar)
-- [ ] Advanced content block system
-- [ ] Media library with drag-and-drop
-- [ ] Content component library
-- [ ] Real-time content preview
-
-**Deliverables**:
-- Rich text editing
-- Advanced media management
-- Content components
-
-### Phase 2: Content Workflow (Priority: High)
-**Timeline**: 4-5 weeks
-**Tasks**:
-- [ ] Content versioning and history system
-- [ ] Content approval workflow
-- [ ] Content scheduling and publishing
-- [ ] Content collaboration tools
-- [ ] Content audit trail
-
-**Deliverables**:
-- Version control system
-- Approval workflows
-- Publishing schedules
-
-### Phase 3: Multi-language Support (Priority: Medium)
-**Timeline**: 3-4 weeks
-**Tasks**:
-- [ ] Complete multi-language content management
-- [ ] Translation management system
-- [ ] Language switcher implementation
-- [ ] Localized content routing
-- [ ] Content translation workflows
-
-**Deliverables**:
-- Multi-language CMS
-- Translation tools
-- Localization features
-
-### Phase 4: Content Personalization (Priority: Medium)
-**Timeline**: 4-6 weeks
-**Tasks**:
-- [ ] Content personalization engine
-- [ ] User-based content targeting
-- [ ] A/B testing for content
-- [ ] Content recommendation system
-- [ ] Dynamic content blocks
-
-**Deliverables**:
-- Personalization engine
-- Targeting system
-- Recommendation features
-
-### Phase 5: SEO & Analytics (Priority: Low)
-**Timeline**: 3-4 weeks
-**Tasks**:
-- [ ] Advanced SEO tools and optimization
-- [ ] Content analytics and reporting
-- [ ] SEO audit and suggestions
-- [ ] Content performance tracking
-- [ ] Search engine indexing tools
-
-**Deliverables**:
-- SEO optimization tools
-- Analytics dashboard
-- Performance tracking
-
-### Phase 6: Advanced Features (Priority: Low)
-**Timeline**: 4-6 weeks
-**Tasks**:
-- [ ] Content template system
-- [ ] Page builder functionality
-- [ ] Content import/export tools
-- [ ] API for headless CMS usage
-- [ ] Content syndication features
-
-**Deliverables**:
-- Template system
-- Page builder
-- API endpoints
-
-## Dependencies & Integration Points
-
-### Core Dependencies
-- Xot (base classes and services)
-- User (content creators and editors)
-- UI (components and widgets)
-- Media (file management)
-
-### Integration Points
-- Authentication system for content management
-- File management for media uploads
-- Frontend integration for content display
-- Multi-tenancy for multi-site support
-
-## Key Metrics
-- **PHPStan**: Level 10 compliance achieved
-- **Test Coverage**: Target 85%+
-- **Performance**: Efficient content rendering
-- **Usability**: User-friendly content editing
-
-## Success Criteria
-- [ ] Complete WYSIWYG editing
-- [ ] Content workflow system
-- [ ] Multi-language support
-- [ ] 85%+ test coverage
-- [ ] SEO optimization tools
-
-## Next Steps
-1. Begin Phase 1 with rich text editor integration
-2. Implement content workflow system
-3. Add multi-language support
-4. Develop personalization features
+**Data**: 2026-01-31
+**Status**: 🟡 In Progress (75% Completato)
+**Priorità**: Alta
+**Obiettivo**: 100% completamento con advanced blocks, SEO e versioning
 
 ---
 
-**Last Updated**: 2026-01-02
-**Maintainer**: Team Laraxot
-**Status**: Active Development
+## 📊 Stato Attuale
+
+### Completamento Globale: **75%**
+
+| Componente | Completamento | Stato |
+|-----------|--------------|-------|
+| Page Management System | 100% | ✅ |
+| Block-Based Content Builder | 100% | ✅ |
+| Folio File-Based Routing | 100% | ✅ |
+| Volt Components | 100% | ✅ |
+| Filament Integration | 100% | ✅ |
+| Menu Management | 100% | ✅ |
+| Media Integration | 100% | ✅ |
+| Custom Layouts | 100% | ✅ |
+| Advanced Block Types | 60% | 🔄 |
+| SEO Optimization Features | 50% | 🔄 |
+| Content Versioning | 0% | ❌ |
+| Content Scheduling | 0% | ❌ |
+| Filament 5.x Migration | 0% | ❌ |
+| PHPStan Level 10 | 95% | ✅ |
+| Test Coverage | 75% | ✅ |
+
+---
+
+## ✅ Funzionalità Completate
+
+### 1. Page Management System (100%)
+- ✅ Create/Edit/Delete pages
+- ✅ Page hierarchy (parent/child)
+- ✅ Page status (draft, published, archived)
+- ✅ Page templates
+- ✅ Page permissions
+- ✅ Page revisions
+
+### 2. Block-Based Content Builder (100%)
+- ✅ Drag & drop interface
+- ✅ Basic block types (text, image, video)
+- ✅ Block ordering
+- ✅ Block nesting
+- ✅ Block settings
+
+### 3. Folio File-Based Routing (100%)
+- ✅ File-based page routing
+- ✅ Automatic route generation
+- ✅ Dynamic parameters
+- ✅ Route caching
+
+### 4. Volt Components (100%)
+- ✅ Interactive components
+- ✅ Live wire integration
+- ✅ Reactive data binding
+- ✅ Event handling
+
+### 5. Menu Management (100%)
+- ✅ Create/Edit/Delete menus
+- ✅ Menu hierarchy
+- ✅ Menu items with links
+- ✅ Active state detection
+
+### 6. Media Integration (100%)
+- ✅ Image selection from media library
+- ✅ Video embedding
+- ✅ File uploads
+- ✅ Image optimization
+
+---
+
+## 🔄 Funzionalità in Corso
+
+### 1. Advanced Block Types (60%)
+**Status**: Basic blocks implemented
+**Priorità**: Alta
+**File interessati**: `app/Filament/Resources/BlockResource.php`
+
+**Task da completare**:
+- [ ] Implementa carousel block
+- [ ] Add testimonial block
+- [ ] Add pricing table block
+- [ ] Add accordion block
+- [ ] Add tab block
+- [ ] Add form block
+- [ ] Add social media block
+- [ ] Add gallery block
+- [ ] Add map block
+- [ ] Add countdown block
+- [ ] Add chart block
+- [ ] Test suite completa
+- [ ] Documentation
+
+**Stima tempo**: 5-6 giorni
+**Assegnao a**: TBD
+
+### 2. SEO Optimization Features (50%)
+**Status**: Basic SEO implemented
+**Priorità**: Alta
+**File interessati**: `app/Models/Page.php`
+
+**Task da completare**:
+- [ ] Implementa meta tag management
+- [ ] Add OpenGraph integration
+- [ ] Add Twitter Card integration
+- [ ] Add Schema.org markup
+- [ ] Add canonical URL management
+- [ ] Add sitemap integration
+- [ ] Add robots.txt management
+- [ ] Add structured data testing
+- [ ] Test suite completa
+
+**Stima tempo**: 4-5 giorni
+**Assegnao a**: TBD
+
+---
+
+## 📋 Task da Fare
+
+### Priorità ALTA (Questa settimana)
+
+#### 1.1 Completa Advanced Block Types
+- [ ] **Task**: Implementa 12+ advanced block types
+- [ ] **File**: `app/Filament/Resources/BlockResource.php`
+- [ ] **Responsabile**: TBD
+- [ ] **Stima**: 5-6 giorni
+- [ ] **Percentuale**: 60% → 100%
+- [ ] **Output**: 20+ block types con documentazione
+
+#### 1.2 Implementa Content Versioning
+- [ ] **Task**: Crea sistema di versioning per content
+- [ ] **File**: `app/Models/PageVersion.php`
+- [ ] **Responsabile**: TBD
+- [ ] **Stima**: 4-5 giorni
+- [ ] **Percentuale**: 0% → 100%
+- [ ] **Output**: Versioning system con restore e diff
+
+### Priorità MEDIA (Prossime 2 settimane)
+
+#### 1.3 Completa SEO Optimization Features
+- [ ] **Task**: Implementa advanced SEO features
+- [ ] **File**: `app/Models/Page.php`
+- [ ] **Responsabile**: TBD
+- [ ] **Stima**: 4-5 giorni
+- [ ] **Percentuale**: 50% → 100%
+- [ ] **Output**: SEO completo con structured data
+
+#### 1.4 Migrate to Filament 5.x
+- [ ] **Task**: Aggiorna da Filament 3.x a 5.x
+- [ ] **File**: `composer.json`, `app/Filament/*`
+- [ ] **Responsabile**: TBD
+- [ ] **Stima**: 2-3 giorni
+- [ ] **Percentuale**: 0% → 100%
+- [ ] **Output**: Filament 5.x completo compatibile
+
+### Priorità BASSA (Prossimo mese)
+
+#### 1.5 Implementa Content Scheduling
+- [ ] **Task**: Aggiunge scheduling per publish/unpublish
+- [ ] **File**: `app/Services/ContentScheduleService.php`
+- [ ] **Responsabile**: TBD
+- [ ] **Stima**: 3-4 giorni
+- [ ] **Percentuale**: Nuovo (0%)
+- [ ] **Output**: Scheduling con job queue
+
+#### 1.6 Crea Content Template Library
+- [ ] **Task**: Crea template library per common layouts
+- [ ] **File**: `app/Models/PageTemplate.php`
+- [ ] **Responsabile**: TBD
+- [ ] **Stima**: 4-5 giorni
+- [ ] **Percentuale**: Nuovo (0%)
+- [ ] **Output**: 10+ templates ready-to-use
+
+---
+
+## 📊 Metriche di Progresso
+
+### Completamento Totale: 75%
+
+| Area | Corrente | Target | Gap | Azione |
+|------|---------|--------|-----|--------|
+| Page Management | 100% | 100% | 0% | ✅ Completo |
+| Block Builder | 100% | 100% | 0% | ✅ Completo |
+| Folio + Volt | 100% | 100% | 0% | ✅ Completo |
+| Advanced Blocks | 60% | 100% | 40% | Complete blocks |
+| SEO Features | 50% | 100% | 50% | Complete SEO |
+| Content Versioning | 0% | 100% | 100% | Implement versioning |
+| Content Scheduling | 0% | 100% | 100% | Implement scheduling |
+
+---
+
+## 🎯 Prossimi Passi
+
+1. **Settimana 1**: Complete advanced blocks + Content versioning
+2. **Settimana 2**: Complete SEO features + Filament 5.x migration
+3. **Settimana 3**: Content scheduling + Template library
+4. **Settimana 4**: Testing e polish
+
+---
+
+## 📝 Note Importanti
+
+- **PHPStan Level 10**: Mantenere standard attuale (95%)
+- **Test Coverage**: Aumentare da 75% a 90%+
+- **Folio + Volt**: Tutte le front office pages DEVONO usare Folio + Volt
+- **No Controllers**: Non usare controller tradizionali per front office
+
+---
+
+**Responsabile**: TBD
+**Last Updated**: 2026-01-31
+**Next Review**: 2026-02-07

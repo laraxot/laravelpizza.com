@@ -197,4 +197,3 @@ The widget includes robust error handling:
 - [Internationalization Best Practices](./i18n-best-practices.md)
 - [Widget vs Livewire Components](../../../project_docs/widget_vs_livewire_components.md)
 
-*Last updated: January 2025*

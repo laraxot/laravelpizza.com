@@ -249,3 +249,4 @@ Ogni sezione `navigation` deve includere:
 
 *Intervento completato il: 2025-01-22*
 *Conforme alle regole DRY + KISS*
+

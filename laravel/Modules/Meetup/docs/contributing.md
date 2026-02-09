@@ -613,4 +613,3 @@ Contributors will be:
 
 ---
 
-*Last updated: 2025-11-27*

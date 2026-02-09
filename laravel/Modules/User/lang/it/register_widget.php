@@ -47,6 +47,8 @@ return [
         ],
         'password' => [
             'description' => 'password',
+            'helper_text' => 'password',
+            'placeholder' => 'password',
         ],
         'third_party_consent' => [
             'description' => 'third_party_consent',

@@ -8,6 +8,9 @@ return [
             'label' => 'Informazioni Personali',
             'heading' => 'Informazioni Personali',
         ],
+        'Consenso Facoltativo' => [
+            'heading' => 'Consenso Facoltativo',
+        ],
     ],
     'fields' => [
         'first_name' => [
@@ -30,6 +33,21 @@ return [
         ],
         'third_party_consent' => [
             'description' => 'third_party_consent',
+        ],
+        'already_registered' => [
+            'description' => 'already_registered',
+        ],
+    ],
+    'actions' => [
+        'hidePassword' => [
+            'tooltip' => 'hidePassword',
+            'icon' => 'hidePassword',
+            'label' => 'hidePassword',
+        ],
+        'showPassword' => [
+            'tooltip' => 'showPassword',
+            'icon' => 'showPassword',
+            'label' => 'showPassword',
         ],
     ],
 ];

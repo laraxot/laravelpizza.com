@@ -1,105 +1,139 @@
-# PHPStan Fixes - Modulo Cms
+# Correzioni PHPStan - Gennaio 2025
 
 ## Panoramica
+Documentazione delle correzioni PHPStan applicate al modulo Cms per raggiungere il livello massimo di analisi statica.
 
-Documentazione dei fix applicati al modulo Cms per raggiungere PHPStan livello 9.
+## File Modificati
 
-## Fix Applicati
-
-### 1. generate_business_data.php
-
-**Problema**: Uso di `file_put_contents` non sicuro
-
-```php
-// PRIMA (non sicuro)
-file_put_contents($filePath, $content);
-
-// DOPO (sicuro)
-use function Safe\file_put_contents;
-file_put_contents($filePath, $content);
-```
-
-**Motivazione**:
-
-- Utilizzo della funzione sicura `Safe\file_put_contents` per gestione errori robusta
-- Prevenzione di errori runtime in caso di problemi di scrittura file
-- Conformità agli standard di sicurezza PHPStan
-
-### 2. DownloadAttachmentPlaceHolder (Filament placeholder)
-
-**Problema**: PHPStan segnalava `method.impossibleType` e `argument.type` perché la view veniva costruita tramite `view()->exists()` e `view()` restituendo `mixed`.
+### 1. app/Http/Controllers/Admin/XotPanelController.php
+**Problema**: Chiamata a `method_exists()` su tipo potenzialmente non-oggetto
+**Soluzione**: Aggiunto controllo `is_object($panel)` prima di chiamare `method_exists()`
 
 ```php
-// PRIMA (ambiguità tipo view-string)
-$view = 'cms::filament.forms.components.download-attachment-place-holder';
-Assert::true(view()->exists($view));
-$out = view($view, $data);
+// PRIMA
+if (method_exists($panel, 'out')) {
+    return $panel->out();
+}
 
-// DOPO (type safety + Cast Actions)
-$title = SafeStringCastAction::cast($attachment->title);
-$asset = SafeStringCastAction::cast($attachment->asset());
-$html = sprintf(
-    '<a href="%s" class="underline" ...>%s</a>%s',
-    htmlspecialchars($asset, ENT_QUOTES, 'UTF-8'),
-    htmlspecialchars($title, ENT_QUOTES, 'UTF-8'),
-    $description !== '' ? '<div class="text-sm text-gray-600">'.htmlspecialchars($description, ENT_QUOTES, 'UTF-8').'</div>' : ''
-);
-return new HtmlString($html);
+// DOPO
+if (is_object($panel) && method_exists($panel, 'out')) {
+    return $panel->out();
+}
 ```
 
-**Motivazione**:
+### 2. app/Http/Middleware/PageSlugMiddleware.php
+**Problemi**:
+- Casting di tipo non sicuro
+- Chiamata a `method_exists()` su tipo potenzialmente non-oggetto
+- Variabile non trovata in PHPDoc
 
-- Eliminato il check `view()->exists()` non necessario (la view è stata sostituita da markup generato).
-- Tutti i valori provenienti dal model passano da `SafeStringCastAction` per impedire mixed->string non tipizzati.
-- L’output è HTML sanitizzato via `htmlspecialchars`, conforme alle linee guida Filament v4.
-
-### 3. ViewSection.php (getInfolistSchema() Return Type)
-
-#### Problema
-Il metodo `getInfolistSchema()` in `Modules\Cms\Filament\Resources\SectionResource\Pages\ViewSection.php` generava un errore `return.type`. PHPStan riportava che il metodo doveva restituire `array<string, Filament\Schemas\Components\Component>` ma restituiva `array<int, Filament\Schemas\Components\Section>`. Sebbene l'array fosse già associativo, PHPStan aveva difficoltà a risolvere i tipi dei componenti Filament senza una qualificazione esplicita.
-
-#### Soluzione
-Sono stati utilizzati i Fully Qualified Class Names (FQCNs) per `\Filament\Schemas\Components\Section::make()` e `\Filament\Infolists\Components\ViewEntry::make()` all'interno del metodo `getInfolistSchema()`. Questo ha fornito a PHPStan le informazioni di tipo esplicite necessarie per una corretta risoluzione.
+**Soluzioni**:
+- Migliorato parsing dei parametri middleware
+- Aggiunto controllo `is_object($middlewareInstance)` prima di chiamare `method_exists()`
+- Rimosso PHPDoc ridondante per `$response`
 
 ```php
-// PRIMA (generava errore)
-// return [
-//     'preview' => Section::make('Anteprima')->schema([
-//         'preview' => ViewEntry::make('preview')->view($view, [
-//             'section' => $this->record,
-//         ]),
-//     ]),
-// ];
+// PRIMA
+protected function parseMiddleware(string $middleware): array
+{
+    $parts = explode(':', $middleware, 2);
+    $name = $parts[0];
+    $parameters = $parts[1] ?? '';
+    $parameters = $parameters ? explode(',', $parameters) : [];
+    return [$name, $parameters];
+}
 
-// DOPO (corretto con FQCNs)
-return [
-    'preview' => \Filament\Schemas\Components\Section::make('Anteprima')->schema([
-        'preview' => \Filament\Infolists\Components\ViewEntry::make('preview')->view($view, [
-            'section' => $this->record,
-        ]),
-    ]),
-];
+// DOPO
+protected function parseMiddleware(string $middleware): array
+{
+    $parts = explode(':', $middleware, 2);
+    $name = $parts[0];
+    $parameters = $parts[1] ?? '';
+
+    if (is_string($parameters) && $parameters !== '') {
+        $parameters = explode(',', $parameters);
+    } else {
+        $parameters = [];
+    }
+
+    if (! is_array($parameters)) {
+        $parameters = [];
+    }
+
+    return [$name, $parameters];
+}
 ```
 
-#### Benefici
-- Risoluzione dell'errore `return.type` per `getInfolistSchema()`.
-- Maggiore chiarezza nella definizione dello schema per l'analisi statica.
+### 3. app/Models/Module.php
+**Problema**: Chiamata a `method_exists()` su tipo potenzialmente non-oggetto
+**Soluzione**: Aggiunto controllo `is_object($module)` prima di chiamare `method_exists()`
 
-## Risultati
+```php
+// PRIMA
+if (method_exists($module, 'getName')) {
+    $tmp = [
+        'id' => $i++,
+        'name' => $module->getName(),
+    ];
+    $rows[] = $tmp;
+}
 
-- ✅ **0 errori** PHPStan livello 9
-- ✅ **Conformità** agli standard di sicurezza
-- ✅ **Gestione errori** robusta per operazioni file
+// DOPO
+if (is_object($module) && method_exists($module, 'getName')) {
+    $tmp = [
+        'id' => $i++,
+        'name' => $module->getName(),
+    ];
+    $rows[] = $tmp;
+}
+```
 
-## Da migliorare (DRY + KISS)
+### 4. app/Models/Section.php
+**Problema**: Controllo `is_array()` ridondante
+**Soluzione**: Rimosso controllo ridondante su `getSushiRows()`
 
-- [ ] Migrare le altre componenti Filament del modulo Cms all’uso esteso delle Cast Actions per eliminare mixed residui.
-- [ ] Documentare una guida unica per i placeholder download (oggi la logica è duplicata in alcune risorse legacy).
-- [ ] Verificare se esistono ancora view Blade dedicate (`cms::filament.forms.components.*`) non più referenziate e, in caso positivo, rimuoverle o aggiornarle.
+```php
+// PRIMA
+$rows = $this->getSushiRows();
+if (is_array($rows)) {
+    // ...
+}
 
-## Collegamenti
+// DOPO
+$rows = $this->getSushiRows();
+// getSushiRows() restituisce sempre un array
+```
 
-- [Report Completo PHPStan Fixes](../../../bashscripts/docs/phpstan_fixes_comprehensive_report.md)
-- [Script Risoluzione Conflitti](../../../bashscripts/docs/conflict_resolution_script_improvements.md)
+## Lezioni Apprese
 
-_Ultimo aggiornamento: dicembre 2025_
+### Type Safety per Metodi Dinamici
+- Sempre verificare `is_object()` prima di chiamare `method_exists()`
+- Utilizzare controlli espliciti per proprietà dinamiche
+
+### Gestione Parametri Middleware
+- Validare sempre i parametri prima dell'uso
+- Gestire casi edge con valori vuoti o non validi
+
+### Controlli Ridondanti
+- Rimuovere controlli di tipo su variabili già tipizzate
+- Verificare che i metodi restituiscano sempre il tipo atteso
+
+## Impatto Architetturale
+
+### Miglioramenti di Sicurezza
+- Prevenzione di errori runtime su oggetti null
+- Gestione robusta dei parametri middleware
+
+### Performance
+- Riduzione di controlli ridondanti
+- Ottimizzazione del parsing middleware
+
+### Manutenibilità
+- Codice più robusto e prevedibile
+- Migliore gestione degli errori
+
+## Collegamenti Correlati
+- [Architettura Modulo Cms](./architecture.md)
+- [Middleware System](./middleware-system.md)
+- [Model Management](./model-management.md)
+

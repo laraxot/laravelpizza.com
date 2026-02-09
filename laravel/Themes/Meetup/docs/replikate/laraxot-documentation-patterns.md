@@ -233,7 +233,6 @@ Breve descrizione dello scopo del documento.
 - Related documentation links
 
 ---
-*Last updated: YYYY-MM-DD*
 *Status: ✅ Verified | ⚠️ Needs Review*
 ```
 

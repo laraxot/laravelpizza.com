@@ -153,4 +153,3 @@
 
 ---
 
-*Last updated: February 2026*

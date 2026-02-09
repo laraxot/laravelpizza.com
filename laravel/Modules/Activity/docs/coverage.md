@@ -83,4 +83,3 @@ To run with coverage:
 ```
 
 ---
-*Last updated: January 17, 2026*

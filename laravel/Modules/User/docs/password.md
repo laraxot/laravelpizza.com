@@ -80,4 +80,3 @@ TextInput::make('password')
 
 ---
 
-*Last updated: February 2026*

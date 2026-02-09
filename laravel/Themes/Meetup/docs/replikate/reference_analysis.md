@@ -166,6 +166,4 @@ These may be added as improvements, but they are NOT on the current target site.
 7. **Theme build**: `npm run build && npm run copy` dopo ogni modifica CSS/JS
 8. **Routine**: Studio Docs → Implementazione → Verifica → Aggiornamento Docs
 
----
 
-*Last updated: February 2026*

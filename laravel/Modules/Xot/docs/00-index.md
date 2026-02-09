@@ -51,4 +51,3 @@
 - [Laravel Modules Namespace Critical Rule](./laravel-modules-namespace-critical-rule.md) - ⚠️ REGOLA CRITICA: Namespace senza "app"
 
 ---
-*Last updated: 2025-12-18*

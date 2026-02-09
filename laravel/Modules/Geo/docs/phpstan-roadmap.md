@@ -1,78 +1,92 @@
-# PHPStan Roadmap - Geo Module
+# PHPStan Level 10 Roadmap - Geo Module
 
-> **Created**: 2026-01-21  
-> **Updated**: 2026-01-21
-> **Status**: ✅ Fully Compliant (Level 10)  
-> **Errors**: 0  
-> **Priority**: N/A (Resolved)
+**Data**: 2026-01-21  
+**Status**: ✅ Completato  
+**Errori Totali**: 9 → 0  
+**Priorità**: Media
 
-## Resolution Summary (2026-01-21)
-All 7 PHPStan Level 10 compliance issues have been successfully resolved.
+## Errori Identificati e Risolti
 
-### Applied Fixes
+### ✅ Completati
 
-#### 1. Fixed Factory State Method Signatures
-**Files**: 
-- `Geo/database/factories/ComuneFactory.php`
-- `Geo/database/factories/ProvinceFactory.php` 
-- `Geo/database/factories/RegionFactory.php`
+1. **BaseGeoService.php:118** - `is_object($exception)` sempre true
+   - **Fix**: Rimosso controllo `is_object()` e tipizzato parametro come `\Throwable`
+   - **Status**: ✅ Risolto
 
-**Problem**: PHPStan expected `array<string, mixed>|callable` but received `Closure(array): non-empty-array`
+2. **ComuneFactory.php:152** - Closure state() type mismatch
+   - **Fix**: Aggiunto secondo parametro `?Model $model = null` e PHPDoc per return type
+   - **Status**: ✅ Risolto
 
-**Solution**: Restructured factory state methods with proper callable structure:
+3. **ComuneFactory.php:179** - Closure state() type mismatch  
+   - **Fix**: Aggiunto secondo parametro e PHPDoc per return type
+   - **Status**: ✅ Risolto
+
+### 🔄 In Progress
+
+4. **ComuneFactory.php** - 1 errore rimanente
+   - **Fix**: Applicare stesso pattern a tutte le closure
+
+5. **ProvinceFactory.php** - 3 errori
+   - **Fix**: Applicare pattern closure con 2 parametri + PHPDoc
+
+6. **RegionFactory.php** - 3 errori
+   - **Fix**: Applicare pattern closure con 2 parametri + PHPDoc
+
+## Pattern di Correzione
+
+### Closure Factory State Pattern
 
 ```php
-// Before
-return $this->state(function (array $attributes, ?Model $model = null): array {
-    // implementation
+// ❌ ERRATO
+return $this->state(function (array $attributes): array {
+    return array_merge($attributes, [...]);
 });
 
-// After
-return $this->state(
-    /** @param array<string, mixed> $attributes */
-    /** @return array<string, mixed> */
-    function (array $attributes, ?Model $model = null): array {
-        // implementation
-    }
-);
+// ✅ CORRETTO
+/** 
+ * @param array<string, mixed> $attributes 
+ * @return array<string, mixed>
+ */
+return $this->state(function (array $attributes, ?\Illuminate\Database\Eloquent\Model $model = null) {
+    /** @var array<string, mixed> $result */
+    $result = array_merge($attributes, [...]);
+    return $result;
+});
 ```
 
-**Pattern Applied**:
-1. Convert `state()` calls to use proper callable structure
-2. Add explicit `@param` and `@return` annotations
-3. Ensure `array<string, mixed>` return type for PHPStan compliance
-4. Maintain Laravel factory compatibility
+### BaseGeoService Retry Pattern
 
-#### 2. Methods Fixed
-- **ComuneFactory**: `emiliaRomagna()` method
-- **ProvinceFactory**: `northern()`, `central()`, `southern()` methods  
-- **RegionFactory**: Multiple factory state methods
+```php
+// ❌ ERRATO
+return Http::timeout($timeout)->retry($retryTimes, $retrySleep, function ($exception) use ($whenTypes) {
+    if (! is_object($exception)) {
+        return false;
+    }
+    // ...
+});
 
-## Verification Results
-- ✅ PHPStan analysis returns 0 errors for entire Geo module
-- ✅ All factory functionality preserved
-- ✅ Factory state methods work correctly
-- ✅ Model creation and relationships intact
-- ✅ Seeding functionality maintained
+// ✅ CORRETTO
+return Http::timeout($timeout)->retry($retryTimes, $retrySleep, function (\Throwable $exception) use ($whenTypes): bool {
+    // ...
+});
+```
 
-## Technical Notes
-- **No breaking changes**: All existing factory method signatures preserved
-- **Backward compatibility**: Factory usage patterns unchanged
-- **Type safety**: Enhanced PHPStan compliance without runtime impact
-- **Code quality**: Cleaner, more documented factory methods
+## Prossimi Passi
 
-## Maintenance Strategy
-1.  **Strict Typing**: Ensure all new code uses strict types (`declare(strict_types=1);`).
-2.  **Regular Checks**: Run PHPStan before every commit.
-3.  **Documentation**: Keep PHPDocs up-to-date for complex types.
-4.  **Factory Patterns**: Apply consistent callable structure for all new state methods.
+1. [x] Completare correzione ComuneFactory (1 errore rimanente)
+2. [x] Applicare pattern a ProvinceFactory (3 errori)
+3. [x] Applicare pattern a RegionFactory (3 errori)
+4. [x] Verificare con PHPStan Level 10
+5. [ ] Eseguire test modulo Geo
+6. [ ] Commit delle modifiche
 
-## Future Goals
-- Maintain 0 errors.
-- Apply same pattern to any new factory methods.
-- Monitor Laravel factory best practices.
+## Note
 
----
+- Le closure `state()` devono accettare 2 parametri: `array $attributes` e `?Model $model = null`
+- Il return type deve essere annotato con PHPDoc `@return array<string, mixed>`
+- Il risultato di `array_merge()` deve essere castato esplicitamente con `@var array<string, mixed>`
 
-**Status**: ✅ Fully Compliant (Level 10)
-**Next**: Monitor for any future regressions
+## Riferimenti
+
+- [Laravel Factory State Documentation](https://laravel.com/docs/12.x/database-testing#factory-states)
+- [PHPStan Closure Type Hints](https://phpstan.org/writing-php-code/phpdoc-types#callable-types)
