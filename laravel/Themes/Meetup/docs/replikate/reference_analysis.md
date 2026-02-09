@@ -1,199 +1,170 @@
 # LaravelPizza.com Homepage Replication & Enhancement Plan
 
 ## Target: https://laravelpizza.com/
-## Our Site: http://127.0.0.1:8000/it
+## Our Site: `/{locale}` (resolved via APP_URL + Tenant + `xra.php` → `pub_theme` → `laravel/Themes/Meetup/`)
 
 ---
+
 ## STRUTTURA E GESTIONE CONTENUTI (Strict Rules)
 
 1. **Filosofia Componenti**: Utilizziamo **Filament PHP** per il builder e **Laravel Folio + Volt** per il frontend.
    - Docs Builder: https://filamentphp.com/docs/5.x/forms/builder
 
 2. **Sorgenti Dati (JSON)**:
-   - I contenuti della homepage si trovano in:
-     laravel/config/local/laravelpizza/database/content/pages/home.json
-   - I contenuti delle sezioni (es. header, footer) sono in:
-     laravel/config/local/laravelpizza/database/content/sections/{slug}.json
-   - **REGOLA**: Se devi aggiungere nuovi blocchi di contenuto, modifica SEMPRE i file JSON, non hard-codare testo nelle view.
+   - Homepage: `laravel/config/local/laravelpizza/database/content/pages/home.json`
+   - Sezioni (header, footer): `laravel/config/local/laravelpizza/database/content/sections/{slug}.json`
+   - **REGOLA**: Nuovi blocchi di contenuto → modifica JSON, mai hardcodare testo nelle view.
 
 3. **Componenti Blade (Blocks)**:
-   - I blocchi visuali si trovano in:
-     laravel/Themes/Meetup/resources/views/components/blocks/
-   - Se crei un nuovo blocco, assicurati che sia compatibile con la struttura dati definiti nel JSON e che erediti correttamente layout e stili.
+   - Blocchi in: `laravel/Themes/Meetup/resources/views/components/blocks/`
+   - Nuovi blocchi devono essere compatibili con la struttura dati JSON.
 
 ---
 
-## Target Site Analysis (Screenshots taken Feb 2026)
+## Target Site Analysis (from actual screenshots Feb 2026)
 
 ### Mission: CONVERSION & ELEVATION
-Non stiamo solo replicando - stiamo **ELEVANDO** il sito originale per renderlo:
-- ✨ **PIÙ COOL** - Design premium e moderno che cattura l'attenzione
-- 🚀 **PIÙ CLICKBAIT** - Headlines e CTA irresistibili che convertono
-- 💥 **PIÙ ENGAGING** - Animazioni fluide e interazioni wow-factor
-- 🔥 **PIÙ VIRALE** - Progettato per essere condiviso e diventare virale
+Non stiamo solo replicando - stiamo **ELEVANDO** il sito originale.
 
-### Section Structure (top to bottom)
+### Actual Section Structure (verified from screenshots)
+
+The real laravelpizza.com has a **dark-themed** design with **exactly these sections**:
 
 1. **Sticky Navigation Bar**
-   - Left: Brand "LaravelPizza" con logo pizza SVG
-   - Center: Home | Chi Siamo | Eventi | Blog | FAQ | Contatti
-   - Right: CTA button "Partecipa agli Eventi" (arancione/red accent)
-   - Background: blu scuro (#0f2b46) con backdrop blur, sticky on scroll
-   - Hover effects su link con transizioni fluide
+   - Left: Pizza slice logo (red SVG) + "Laravel Pizza Meetups" (white, bold)
+   - Center: Events (calendar icon) | Community Chat (chat icon) | Language selector (globe + "English")
+   - Right: "Login" text + "Sign Up" red CTA button
+   - Background: Very dark (#0f172a slate-900), sticky on scroll
 
 2. **Hero Section**
-   - Full-width background: immagine pizza/meetup comunitaria
-   - Dark overlay (~70% opacity) per leggibilità
-   - Large bold title (white, 56-72px, font-bold)
-   - Subtitle engaging (white/90%, 18-20px)
-   - Two CTAs: Primary (arancione/red gradient) + Secondary (outline white)
-   - **Social proof**: Stats bar con "1000+ Developers", "50+ Eventi", "10+ Città"
+   - Full-width, dark background matching nav
+   - Centered pizza slice icon (large, red outline SVG)
+   - Two-tone title: "Laravel Developers." (white) + "Pizza. Community." (red #dc2626)
+   - Subtitle: "Join fellow Laravel, Filament, and Livewire enthusiasts for pizza meetups..."
+   - Two CTAs: "Join the Community →" (red bg) + "View Events" (outline red)
+   - Generous vertical padding
 
-3. **Features/Benefits** (3 columns)
-   - Cards con glassmorphism effect
-   - Icona pizza/codecircolare colorata
-   - Title engaging, description benefit-driven
-   - "Scopri di più →" con hover animation
-   - Shadow soft, rounded corners xl
+3. **Features: "Why Join Our Community?"**
+   - Section title (white, bold, centered)
+   - Subtitle: "More than just pizza - it's about building lasting connections..."
+   - 4 cards on dark bg (slate-800):
+     - Regular Meetups (calendar icon)
+     - Growing Community (users icon)
+     - Multiple Locations (map-pin icon)
+     - Realtime Chat (chat-bubble icon)
 
-4. **Why Join Section**
-   - Pre-title in arancione uppercase ("PERCHÉ PARTECIPARE")
-   - Bold centered title con gradiente text
-   - 4 cards in grid: icona animata, title, benefit list
-   - Microinteractions su hover (lift, glow)
+4. **CTA Banner**
+   - Red background (#dc2626), rounded corners
+   - "Ready to Join?" (white, bold)
+   - Description + "Create Your Account →" (white bg, red text)
 
-5. **Events Showcase** (carousel/grid)
-   - Featured events con date cards
-   - Gradient badges per tipologie (Tech, Social, Workshop)
-   - "Iscriviti" CTA prominenti
-   - Lazy loading per performance
+5. **Footer**
+   - Very dark bg (~slate-950)
+   - 3 columns: Brand (logo + description + social) | Quick Links | Community
+   - Bottom bar: "Made with ♥ for the Laravel community"
 
-6. **Community/Speakers** (split layout)
-   - Left: Testimonials con avatar, role, company
-   - Right: Speaker cards con photo, bio, social links
-   - Star rating system
-   - Quote icon decorativo
+**IMPORTANT**: The target does NOT have these sections (previously incorrectly listed):
+- ~~Events Showcase/carousel~~
+- ~~Community/Speakers split layout~~
+- ~~Latest Blog Posts~~
+- ~~Newsletter CTA section~~
+- ~~Testimonials~~
+- ~~Resources/Downloads~~
 
-7. **Latest Blog Posts**
-   - Cards con featured image
-   - Category tags color-coded
-   - Reading time indicator
-   - "Leggi tutto" CTA
-
-8. **Newsletter CTA**
-   - Gradient background (blu → arancione → rosso)
-   - Pizza icon animato
-   - "Rimani aggiornato" title
-   - Email input + "Iscriviti" button con hover effect
-   - GDPR compliant disclaimer
-
-9. **Footer**
-   - Background: gradient blu scuro (#0f2b46 → #1e3a5f)
-   - 4 columns: Brand + Social, Quick Links, Resources, Contact
-   - Social icons con hover effects
-   - Bottom bar: Copyright + Privacy/Terms links
+These may be added as improvements, but they are NOT on the current target site.
 
 ---
 
-## Current Site Issues
+## WORKFLOW DI REPLICAZIONE
 
-1. **Layout**: Uses sidebar layout (2-column) - deve essere full-width
-2. **Navigation**: Shows generic "Laravel" text, nav incompleta
-3. **Hero**: Has glass panel overlay, needs professional redesign con pizza imagery
-4. **Content**: Generic placeholder content, non LaravelPizza-specific
-5. **Block rendering**: Uses `ui::components.blocks.{type}` - blocks devono matchare type names
-6. **Missing blocks**: No events showcase, community testimonials, blog grid
-7. **Styling**: Mix di DaisyUI e Tailwind - needs consistent Tailwind approach
-8. **Animations**: No scroll animations, no microinteractions
-9. **SEO**: Missing Schema.org, Open Graph, structured data
+1. **Analisi e Documentazione (MCP)**:
+   - Screenshot di https://laravelpizza.com/ in `laravel/Themes/Meetup/docs/screenshots/`
+   - Analizza UI/UX e documenta in `laravel/Themes/Meetup/docs/`
+   - Obiettivo: PIU BELLO dell'originale
+
+2. **Funzionalita Richieste**:
+   - **Multilingua**: Tutto traducibile via JSON + lang files. URL via `LaravelLocalization::localizeUrl()`
+   - **SEO Ready**: HTML semantico, H1/H2/H3, meta tags, Schema.org
+   - **Inbound Marketing**: CTA, form, download
+   - **AdSense Ready**: Spazi per banner
+
+3. **Apprendimento Continuo**:
+   - Memoria = cartelle docs nei moduli e nel tema
+   - AGGIORNA COSTANTEMENTE con scoperte, errori corretti, best practices
 
 ---
 
 ## Implementation Plan
 
 ### Phase 1: Layout & Navigation
-- [ ] Remove sidebar da home.blade.php → full-width
-- [ ] Update navigation con sticky header professional
-- [ ] Implement smooth scroll behavior
+- [ ] Sticky dark nav matching target
+- [ ] Logo + brand, menu items, language selector, Login + Sign Up CTA
+- [ ] All links via `LaravelLocalization::localizeUrl()`
 
-### Phase 2: Block Components (in Themes/Meetup/resources/views/components/blocks/)
-- [ ] hero/pizza.blade.php → Full-width hero con stats bar
-- [ ] features/cards.blade.php → 3 cards con glassmorphism
-- [ ] why-join/grid.blade.php → Pre-title + 4 icon cards
-- [ ] events/showcase.blade.php → NEW: Events carousel/grid
-- [ ] community/split.blade.php → NEW: Testimonials + speakers
-- [ ] blog/grid.blade.php → NEW: Blog posts cards
-- [ ] newsletter/signup.blade.php → Gradient + email form
-- [ ] cta/banner.blade.php → Gradient CTA section
+### Phase 2: Block Components (`Themes/Meetup/resources/views/components/blocks/`)
+- [ ] `hero/main.blade.php` → Dark bg hero with pizza icon, two-tone title, dual CTAs
+- [ ] `features/grid.blade.php` → "Why Join" section with dark icon cards
+- [ ] `cta/banner.blade.php` → Red CTA banner "Ready to Join?"
 
-### Phase 3: Content (home.json in config/local/laravelpizza/database/content/pages/)
-- [ ] Update tutti content_blocks con LaravelPizza-specific content
-- [ ] Aggiungere dati events mock
-- [ ] Aggiungere testimonials community
-- [ ] Blog posts placeholder
+### Phase 3: Content (`home.json`)
+- [ ] Verify `config/local/laravelpizza/database/content/pages/home.json`
+- [ ] content_blocks: hero, features, cta — all with correct views
+- [ ] Translation keys in `Modules/Meetup/resources/lang/`
 
-### Phase 4: SEO & Marketing Improvements
-- [ ] Meta tags dinamici per multilingua
-- [ ] Schema.org JSON-LD per Organization, Event, BlogPosting
-- [ ] Open Graph tags per social sharing
-- [ ] Newsletter integration
-- [ ] Analytics tracking ready
+### Phase 4: SEO & Marketing (improvements beyond target)
+- [ ] Meta tags dinamici
+- [ ] Schema.org JSON-LD per Organization, Event
+- [ ] Open Graph + Twitter Card tags
+- [ ] hreflang tags
 
 ---
 
-## Color Palette (LaravelPizza Brand)
-- **Primary Dark**: #0f2b46 (navy scuro - navigation, footer, hero overlay)
-- **Primary**: #ef4444 (red arancione - CTAs, accents, pizza color)
-- **Secondary**: #f97316 (arancione - secondary CTAs, highlights)
-- **Accent**: #06b6d4 (cyan - tech elements, links)
-- **Background**: #f8fafc (light gray sections)
-- **Card Background**: rgba(255,255,255,0.9) con backdrop blur
-- **Text Primary**: #1e293b (slate-900)
-- **Text Secondary**: #64748b (slate-500)
+## TASK SPECIFICI
+
+### 1. Header & Navigation
+- File Blade: via `<x-section slug="header"/>` → CMS Section resolution
+- Dati: `laravel/config/local/laravelpizza/database/content/sections/header.json`
+- Funzionalita: dropdown utente, cambio lingua, menu responsivo
+
+### 2. Footer
+- Vedi: `footer_improvement_prompt.md` (NOT `replikate_footer.txt` which is deprecated)
+- Dati: `laravel/config/local/laravelpizza/database/content/sections/footer.json`
+- Via `<x-section slug="footer"/>` → CMS Section resolution
+
+---
+
+## Color Palette (verified from actual screenshots)
+
+- **Background Primary**: #0f172a (Tailwind slate-900) — nav, hero, page bg
+- **Background Darker**: #0b1120 (~slate-950) — footer
+- **Card Background**: #1e293b (slate-800) — feature cards
+- **Accent/CTA**: #dc2626 (Tailwind red-600) — buttons, highlights, accent text
+- **Text Primary**: #ffffff (white) — headings, brand
+- **Text Secondary**: #9ca3af (gray-400) — body text, descriptions
+- **Text Muted**: #6b7280 (gray-500) — copyright, subtle text
+- **Border**: #334155 (slate-700) — dividers
+
+**WRONG colors (from previous incorrect versions — DO NOT USE)**:
+- #0f2b46, #1e3a5f (wrong navy), #ef4444 (wrong red), #f97316 (wrong orange), #06b6d4 (wrong cyan), #f8fafc (wrong light bg), #2563eb (wrong blue), #059669 (wrong emerald)
 
 ## Typography
-- Font: Inter (Google Fonts) o system-ui
-- Headings: font-bold/extrabold, tighter tracking
-- Hero title: 56-72px (mobile: 36-48px)
-- Section titles: 32-40px (mobile: 24-32px)
-- Body: 16-18px, leading-relaxed
-- Button text: font-semibold
+- Font: Inter / system-ui
+- Hero title: 48-60px, two-tone (white + red)
+- Section titles: 32-40px, white, bold
+- Body: 16-18px, gray-400
 
 ---
 
-## Improvements Over Target (our site deve essere MIGLIORE)
+## REGOLE TECNICHE CRITICHE
 
-1. **Performance**: Lazy loading images, optimized SVGs, code splitting
-2. **Animations**: Smooth scroll animations con Intersection Observer, parallax effects
-3. **Accessibility**: WCAG 2.1 AA compliance, proper ARIA labels, keyboard navigation
-4. **SEO**: Schema.org JSON-LD completo, proper heading hierarchy, meta descriptions
-5. **Multilingual**: All content translatable via JSON, hreflang tags, language switcher
-6. **AdSense Ready**: Strategic ad placement areas (non-intrusive)
-7. **Inbound Marketing**: Lead magnets, newsletter, resource downloads, event registration
-8. **Mobile First**: Superior mobile experience con touch-friendly interactions
-9. **Dark Mode**: Optional dark mode support con system preference detection
-10. **Microinteractions**: Hover effects, smooth transitions, loading states, feedback
-
----
-
-## URL Mapping Rule
-Target site usa schema flat (/{slug}) mentre local site usa multilingual ({lang}/pages/{slug}):
-- / → /it
-- /chi-siamo → /it/pages/chi-siamo
-- /eventi → /it/pages/eventi
-- /blog → /it/pages/blog
-- /faq → /it/pages/faq
-- /contatti → /it/pages/contatti
-
----
-
-## Critical Workflow Rules
-1. **DOPO ogni modifica CSS/JS**: `cd laravel/Themes/Meetup && npm run build && npm run copy`
-2. **DOPO ogni modifica PHP**: Verifica con PHPStan Level 10
-3. **SEMPRE**: Usa Folio + Volt, NO controllers per pagine pubbliche
-4. **SEMPRE**: Contenuti in config/local/laravelpizza/database/content/pages/{slug}.json
-5. **SEMPRE**: Componenti blocks in Themes/Meetup/resources/views/components/blocks/
-6. **SEMPRE**: Localizza URL con LaravelLocalization::localizeUrl()
+1. **NO Controller**: Folio + Volt + JSON CMS only
+2. **No property_exists()**: Usa `isset()` o `hasAttribute()`
+3. **SVG Icons**: File in `Modules/Meetup/resources/svg/` + `<x-filament::icon icon="meetup-{name}" />`. NO inline SVG.
+4. **URL Localization**: `LaravelLocalization::localizeUrl('/path')` sempre. Mai hardcodare `/it/...`
+5. **belongsToManyX**: Mai `belongsToMany()` per M2M
+6. **XotBase**: Filament classes SEMPRE extend XotBase*
+7. **Theme build**: `npm run build && npm run copy` dopo ogni modifica CSS/JS
+8. **Routine**: Studio Docs → Implementazione → Verifica → Aggiornamento Docs
 
 ---
 

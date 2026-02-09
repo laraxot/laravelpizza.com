@@ -14,7 +14,7 @@ Carefully inspect the rendered homepage at the URL above. Look for:
 - Content that doesn't match LaravelPizza brand
 - Text from other business domains (e.g., "Marco Sottana", "Consulenza Sicurezza", "Odontoiatria", "Medicina Veterinaria")
 - Generic placeholder text (e.g., "Lorem Ipsum", "Dolor sit amet")
-- Content from Meetup or other projects
+- Content from TechPlanner or other projects
 
 ### 2. Identify Duplication
 Check if any sections, blocks, or text passages appear more than once without a clear design reason. Common duplication patterns:

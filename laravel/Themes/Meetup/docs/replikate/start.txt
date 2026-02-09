@@ -1,0 +1,53 @@
+e' importante che laravel/Modules/Cms/app/Models/Page.php abbia oltre che  use SushiToJsons; abbia anche use HasBlocks; come giustamente ne fa uso laravel/Modules/Cms/app/Models/Section.php
+
+# Workflow Azioni - Approccio Filosofico Laraxot
+
+## Approccio di Lavoro Completo
+
+### 1. Comprensione Iniziale
+Prima di procedere devi capire:
+- **Logica** del codice
+- **Politica** architetturale
+- **Business logic** sottostante
+- **Filosofia** del progetto
+- **Storia** del modulo
+- **Religione** (pattern architetturali)
+- **Zen** (approccio meditativo al codice)
+
+### 2. Documentazione
+- Aggiorna, studia e migliorare le cartelle `docs` dentro i moduli e dentro i temi
+- Fare sempre tutto seguendo i principi **DRY + KISS**
+- Evitare i commenti ovvi
+
+### 3. Approccio Critico
+- Poi "litiga" con te stesso fuoriosamente (analisi critica)
+- Il vincitore della "litigata" spiegherà perché ha vinto dentro le cartelle `docs` dentro i moduli e dentro i temi
+- Poi ragioni ancora (approfondimento)
+
+### 4. Implementazione
+- Implementa
+- Controlla
+- Correggi
+- Verifica
+- Migliora
+
+### 5. Qualità Codice (ROBUST)
+Quando hai finito di modificare un file devi controllarlo con:
+- **PHPStan Level 10**: `./vendor/bin/phpstan analyse Modules/{Module} --level=10`
+- **PHPMD**: `./vendor/bin/phpmd Modules/{Module} text codesize,unusedcode,naming`
+- **PHP Insights**: `./vendor/bin/phpinsights analyse Modules/{Module}`
+- **Pint**: `./vendor/bin/pint --dirty` (formattazione PSR-12)
+
+### 6. Apprendimento Continuo (DRY+KISS)
+- Capire il tuo errore (root cause analysis)
+- Cercare una regola per non commettere più errori del genere
+- Aggiornare le tue rules e le tue memories (`.cursor/rules/`, `.windsurf/rules/`)
+- Documentare pattern e anti-pattern in `Modules/{Modulo}/docs/`
+- Fare tutto quello che puoi per migliorare la tua performance e la tua qualità
+
+### 7. Principi Laraxot (SOLID+ROBUST)
+- **DRY**: Non duplicare - usa pattern riutilizzabili, documenta in un solo posto
+- **KISS**: Mantieni semplice - soluzioni dirette, non complicate
+- **SOLID**: Single Responsibility, Open/Closed, Liskov, Interface Segregation, Dependency Inversion
+- **ROBUST**: Type safety, error handling, validazioni, PHPStan Level 10
+- **Laraxot**: Rispetta architettura framework - XotBase sempre, traduzioni centralizzate

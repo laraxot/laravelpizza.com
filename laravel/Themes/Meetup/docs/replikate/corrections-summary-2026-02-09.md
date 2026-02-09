@@ -16,7 +16,7 @@ All prompts contained references to "Marco Sottana - Consulenza Sicurezza" inste
 ### 2. **Wrong Color Palette**
 Prompts described colors from a different business:
 - Wrong: #1e3a5f (navy blue), #2563eb (blue), #059669 (emerald)
-- Correct: #0f2b46 (navy), #ef4444 (red-orange), #f97316 (orange), #06b6d4 (cyan)
+- Correct: #0f172a (slate-900 bg), #dc2626 (red-600 accent), #1e293b (slate-800 cards), #0b1120 (slate-950 footer)
 
 ### 3. **Missing Context**
 - No mention of URL mapping (flat vs multilingual)
@@ -160,11 +160,12 @@ Prompts described colors from a different business:
 ## LaravelPizza Brand Guidelines
 
 ### Color Palette
-- **Primary Dark**: #0f2b46 (navy - navigation, footer, hero overlay)
-- **Primary**: #ef4444 (red-orange - CTAs, accents, pizza color)
-- **Secondary**: #f97316 (orange - secondary CTAs, highlights)
-- **Accent**: #06b6d4 (cyan - tech elements, links)
-- **Background**: #f8fafc (light gray sections)
+- **Background Primary**: #0f172a (Tailwind slate-900) — nav, hero, page bg
+- **Background Darker**: #0b1120 (~slate-950) — footer
+- **Card Background**: #1e293b (slate-800) — feature cards
+- **Accent/CTA**: #dc2626 (Tailwind red-600) — buttons, highlights, accent text
+- **Text Primary**: #ffffff (white) — headings
+- **Text Secondary**: #9ca3af (gray-400) — body text
 
 ### Content Rules
 - ✅ Focus on Laravel development, meetups, community
@@ -254,7 +255,7 @@ Then verify in browser with hard refresh.
 
 ### After Corrections
 - ✅ All prompts have correct LaravelPizza content
-- ✅ Correct color palette (#0f2b46, #ef4444, #f97316, #06b6d4)
+- ✅ Correct color palette (#0f172a slate-900, #dc2626 red-600, #1e293b slate-800, #0b1120 slate-950)
 - ✅ URL mapping clearly defined
 - ✅ Workflow reminders included
 - ✅ No circular files

@@ -21,13 +21,17 @@ trait HasBlocks
     /**
      * @return DataCollection<BlockData>
      */
-    public function getBlocks(): DataCollection
+    public function getBlocks(?string $side = null): DataCollection
     {
-        $blocks = $this->blocks;
+        $field='blocks';
+        if($side) {
+            $field = $side.'_blocks';
+        }
+        $blocks = $this->{$field};
 
         if (! is_array($blocks)) {
             $primary_lang = XotData::make()->primary_lang;
-            $blocks = $this->getTranslation('blocks', $primary_lang);
+            $blocks = $this->getTranslation($field, $primary_lang);
         }
 
         if (! is_array($blocks)) {
@@ -46,7 +50,8 @@ trait HasBlocks
     public function compile(array $blocks): array
     {
         $result = [];
-
+       
+        
         foreach ($blocks as $key => $value) {
             if (! is_string($key)) {
                 $key = (string) $key;
@@ -57,8 +62,13 @@ trait HasBlocks
             } else {
                 $result[$key] = $value;
             }
+            if(is_array($value)) {
+                $result[$key] = $this->compile($value);
+            }
         }
 
+        
+        
         return $result;
     }
 
@@ -67,7 +77,7 @@ trait HasBlocks
      *
      * @return DataCollection<BlockData>
      */
-    public static function getBlocksBySlug(string $slug): DataCollection
+    public static function getBlocksBySlug(string $slug,?string $side = null): DataCollection
     {
         // This trait requires the class to extend Model (@phpstan-require-extends Model)
         // So we can safely use static methods
@@ -88,7 +98,7 @@ trait HasBlocks
         }
 
         /** @var DataCollection<BlockData> $blocks */
-        $blocks = $record->getBlocks();
+        $blocks = $record->getBlocks($side);
 
         return $blocks;
     }

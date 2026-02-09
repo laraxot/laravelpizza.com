@@ -11,41 +11,49 @@
                 "type": "navigation",
                 "slug": "main-nav",
                 "data": {
-                    "view": "pub_theme::components.blocks.navigation.header-main",
-                    "brand": "Laravel Pizza Meetups",
+                    "view": "themes.meetup::components.sections.header",
+                    "brand": "Laravel Pizza",
                     "logo": "/themes/Meetup/images/pizza-slice-logo.svg",
                     "tagline": "Laravel Developers. Pizza. Community.",
                     "home_url": "/",
                     "show_navigation": true,
                     "items": [
                         {
+                            "label": "Home",
+                            "url": "/",
+                            "type": "link"
+                        },
+                        {
                             "label": "Events",
                             "url": "/events",
                             "type": "link"
                         },
                         {
-                            "label": "Community Chat",
-                            "url": "/chat",
+                            "label": "About",
+                            "url": "/about",
                             "type": "link"
                         },
                         {
-                            "label": "English",
-                            "url": "#",
-                            "type": "language"
+                            "label": "Blog",
+                            "url": "/blog",
+                            "type": "link"
                         },
                         {
-                            "label": "Login",
-                            "url": "/auth/login",
-                            "type": "button",
-                            "style": "outline"
+                            "label": "FAQ",
+                            "url": "/faq",
+                            "type": "link"
                         },
                         {
-                            "label": "Sign Up",
-                            "url": "/auth/register",
-                            "type": "button",
-                            "style": "solid"
+                            "label": "Contact",
+                            "url": "/contact",
+                            "type": "link"
                         }
-                    ]
+                    ],
+                    "cta_button": {
+                        "label": "Join Now",
+                        "url": "/register",
+                        "style": "solid"
+                    }
                 }
             }
         ]

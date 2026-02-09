@@ -1,1 +1,95 @@
-{"id": "1", "title": {"it": "Laravel Pizza Meetups - Home"}, "slug": "home", "middleware": null, "content": null, "content_blocks": {"it": [{"type": "hero", "slug": "hero-section", "data": {"view": "themes.meetup::components.blocks.hero.main", "title": "Laravel Developers. Pizza. Community.", "subtitle": "Più di una semplice community", "description": "Unisciti a weekly pizza meetups con sviluppatori Laravel nella tua zona. Costruisci connessioni durature, impara nuove tecnologie e condividi la tua passione per il codice.", "background_image": "/images/pizza-meetup-bg.jpg", "cta_primary": {"label": "Trova un Meetup", "url": "/it/pages/eventi", "style": "primary"}, "cta_secondary": {"label": "Unisciti alla Community", "url": "https://github.com/laravel-pizza", "style": "secondary"}}}, {"type": "features", "slug": "why-join", "data": {"view": "themes.meetup::components.blocks.features.grid", "title": "Perché unirti alla nostra community?", "description": "More than just pizza - it's about building lasting connections with developers who share your passion", "features": [{"icon": "heroicon-o-calendar", "title": "Regular Meetups", "description": "Join weekly pizza meetups with Laravel developers in your area", "color": "red"}, {"icon": "heroicon-o-users", "title": "Growing Community", "description": "Connect with passionate developers who love Laravel and pizza", "color": "orange"}, {"icon": "heroicon-o-map-pin", "title": "Multiple Locations", "description": "Find meetups in cities around the world", "color": "cyan"}, {"icon": "heroicon-o-chat-bubble-left-right", "title": "Real-time Chat", "description": "Stay connected with the community between meetups", "color": "blue"}]}}, {"type": "cta", "slug": "final-cta", "data": {"view": "themes.meetup::components.blocks.cta.banner", "title": "Pronto a unirti?", "description": "Trova il prossimo meetup Laravel Pizza vicino a te. Pizza, codice e amicizia ti aspettano!", "background_color": "bg-red-600", "text_color": "text-white", "cta_primary": {"label": "Vedi Eventi", "url": "/it/pages/eventi", "style": "white"}}}]}, "sidebar_blocks": {"it": []}, "footer_blocks": {"it": []}, "created_at": "2025-01-06T15:30:00.000000Z", "updated_at": "2025-01-06T15:30:00.000000Z", "created_by": null, "updated_by": "01985ae8-8039-71ea-88c7-54ebce6295b0"}
+{
+    "id": "1",
+    "title": {
+        "it": "Laravel Pizza Meetups - Home"
+    },
+    "slug": "home",
+    "middleware": null,
+    "content": null,
+    "content_blocks": {
+        "it": [
+            {
+                "type": "hero",
+                "slug": "hero-section",
+                "data": {
+                    "view": "pub_theme::components.blocks.hero.main",
+                    "title": "{{ trans('meetup::home.title') }}",
+                    "subtitle": "{{ trans('meetup::home.hero.subtitle') }}",
+                    "description": "{{ trans('meetup::home.hero.description') }}",
+                    "background_image": "/images/hero-bg.jpg",
+                    "cta_primary": {
+                        "label": "{{ trans('meetup::home.hero.cta_primary_label') }}",
+                        "url": "/auth/register",
+                        "style": "primary"
+                    },
+                    "cta_secondary": {
+                        "label": "{{ trans('meetup::home.hero.cta_secondary_label') }}",
+                        "url": "/events",
+                        "style": "secondary"
+                    }
+                }
+            },
+            {
+                "type": "features",
+                "slug": "features-grid",
+                "data": {
+                    "view": "pub_theme::components.blocks.features.grid",
+                    "title": "{{ trans('meetup::home.features.title') }}",
+                    "description": "{{ trans('meetup::home.features.description') }}",
+                    "features": [
+                        {
+                            "icon": "heroicon-o-calendar",
+                            "title": "{{ trans('meetup::home.features.regular_meetups_title') }}",
+                            "description": "{{ trans('meetup::home.features.regular_meetups_description') }}",
+                            "color": "red"
+                        },
+                        {
+                            "icon": "heroicon-o-users",
+                            "title": "{{ trans('meetup::home.features.growing_community_title') }}",
+                            "description": "{{ trans('meetup::home.features.growing_community_description') }}",
+                            "color": "red"
+                        },
+                        {
+                            "icon": "heroicon-o-map-pin",
+                            "title": "{{ trans('meetup::home.features.multiple_locations_title') }}",
+                            "description": "{{ trans('meetup::home.features.multiple_locations_description') }}",
+                            "color": "red"
+                        },
+                        {
+                            "icon": "heroicon-o-chat-bubble-left-right",
+                            "title": "{{ trans('meetup::home.features.realtime_chat_title') }}",
+                            "description": "{{ trans('meetup::home.features.realtime_chat_description') }}",
+                            "color": "red"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "cta",
+                "slug": "final-cta",
+                "data": {
+                    "view": "pub_theme::components.blocks.cta.banner",
+                    "title": "{{ trans('meetup::home.cta.title') }}",
+                    "description": "{{ trans('meetup::home.cta.description') }}",
+                    "background_color": "bg-red-600",
+                    "text_color": "text-white",
+                    "cta_primary": {
+                        "label": "{{ trans('meetup::home.cta.cta_primary_label') }}",
+                        "url": "/auth/register",
+                        "style": "white"
+                    }
+                }
+            }
+        ]
+    },
+    "sidebar_blocks": {
+        "it": []
+    },
+    "footer_blocks": {
+        "it": []
+    },
+    "created_at": "2025-01-06T15:30:00.000000Z",
+    "updated_at": "2025-01-06T15:30:00.000000Z",
+    "created_by": null,
+    "updated_by": "01985ae8-8039-71ea-88c7-54ebce6295b0"
+}

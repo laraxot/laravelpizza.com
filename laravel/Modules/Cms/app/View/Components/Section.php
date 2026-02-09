@@ -33,7 +33,7 @@ class Section extends Component
 
     public ?string $id = null;
 
-    public ?string $tpl = null;
+    public string $tpl = 'v1';
 
     /**
      * Create a new component instance.
@@ -51,7 +51,9 @@ class Section extends Component
         $this->slug = $slug;
         $this->class = $class;
         $this->id = $id;
-        $this->tpl = $tpl;
+        if (is_string($tpl)) {
+            $this->tpl = $tpl;
+        }
         $this->blocks = SectionModel::getBlocksBySlug($this->slug);
     }
 
@@ -60,24 +62,16 @@ class Section extends Component
      */
     public function render(): ViewContract
     {
-        $baseViewName = 'pub_theme::components.sections.'.$this->slug;
-        if ($this->tpl) {
-            $baseViewName .= '.'.$this->tpl;
-        }
+        $view = 'pub_theme::components.sections.'.$this->slug. '.'.$this->tpl;
+        
+        $viewData = [
+            'section' => null,
+            'name' => $this->name,
+            'blocks' => $this->blocks,
+            'class' => $this->class,
+            'id' => $this->id,
+        ];
 
-        $viewAction = app(GetCmsViewAction::class);
-
-        try {
-            // The action's execute method returns view-string, so PHPStan should be happy
-            $view = $viewAction->execute($baseViewName);
-
-            return view($view);
-        } catch (\Exception $e) {
-            // Fallback: this view exists in the Cms module
-            // The action's execute method returns view-string
-            $fallbackView = $viewAction->execute('cms::components.section');
-
-            return view($fallbackView);
-        }
+        return view($view, $viewData);
     }
 }

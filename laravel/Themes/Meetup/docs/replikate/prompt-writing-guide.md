@@ -120,17 +120,34 @@ This guide establishes the strict rules for writing prompts for the Meetup theme
 - ✅ Focus on Laravel development, meetups, community
 - ✅ Topics: Events, workshops, networking, PHP, Laravel
 
-### Color Palette
-- Primary Dark: #0f2b46 (navy)
-- Primary: #ef4444 (red-orange)
-- Secondary: #f97316 (orange)
-- Accent: #06b6d4 (cyan)
-- Background: #f8fafc (light gray)
+### Color Palette (verified from actual site screenshots Feb 2026)
+- Background Primary: #0f172a (Tailwind slate-900) — nav, hero, page bg
+- Background Darker: #0b1120 (~slate-950) — footer
+- Card Background: #1e293b (slate-800) — feature cards
+- Accent/CTA: #dc2626 (Tailwind red-600) — buttons, highlights, "Pizza. Community." text
+- Text Primary: #ffffff (white) — headings
+- Text Secondary: #9ca3af (gray-400) — body text
+- Text Muted: #6b7280 (gray-500) — copyright, subtle text
+- Border: #334155 (slate-700) — dividers on dark bg
+
+**WARNING**: Do NOT use these wrong colors from previous versions:
+- #0f2b46 (wrong navy), #ef4444 (wrong red), #f97316 (wrong orange), #06b6d4 (wrong cyan), #f8fafc (wrong light bg)
 
 ### URL Structure
 - Target: Flat URLs (/{slug})
-- Local: Multilingual ({lang}/pages/{slug})
-- Use `LaravelLocalization::localizeUrl()` for all URLs
+- Local: Multilingual via Folio (`/{locale}/...`)
+- **ALWAYS** use `LaravelLocalization::localizeUrl('/path')` — never hardcode locale prefix
+- Language selector: `LaravelLocalization::getLocalizedURL($code, null, [], true)`
+- Current locale: `LaravelLocalization::getCurrentLocale()`
+
+### SVG Icons
+- **NO inline SVG** in Blade files
+- Create `.svg` files in `Modules/Meetup/resources/svg/`
+- Use: `<x-filament::icon icon="meetup-{filename}" class="..." />`
+- Prefix `meetup-` is registered by XotBaseServiceProvider
+
+### Many-to-Many Relations
+- **ALWAYS** `$this->belongsToManyX(Related::class)`, never `belongsToMany()`
 
 ## 6. Standard Prompt Template
 
