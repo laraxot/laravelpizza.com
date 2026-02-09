@@ -28,5 +28,8 @@ return [
             'helper_text' => 'email',
             'description' => 'email',
         ],
+        'third_party_consent' => [
+            'description' => 'third_party_consent',
+        ],
     ],
 ];

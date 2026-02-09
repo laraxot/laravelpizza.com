@@ -57,21 +57,18 @@ class RegisterWidget extends XotBaseWidget
                 ->description(__('gdpr::register.sections.user_info_description'))
                 ->schema([
                     'first_name' => TextInput::make('first_name')
-                        ->label(__('gdpr::register.fields.first_name'))
                         ->required()
                         ->string()
                         ->minLength(2)
                         ->maxLength(255)
                         ->autocomplete('given-name'),
                     'last_name' => TextInput::make('last_name')
-                        ->label(__('gdpr::register.fields.last_name'))
                         ->required()
                         ->string()
                         ->minLength(2)
                         ->maxLength(255)
                         ->autocomplete('family-name'),
                     'email' => TextInput::make('email')
-                        ->label(__('gdpr::register.fields.email'))
                         ->required()
                         ->email()
                         ->maxLength(255)
@@ -79,7 +76,6 @@ class RegisterWidget extends XotBaseWidget
                         ->autocomplete('email'),
                     'password_grid' => Grid::make(2)->schema([
                         'password' => TextInput::make('password')
-                            ->label(__('gdpr::register.fields.password'))
                             ->password()
                             ->required()
                             ->string()
@@ -98,7 +94,6 @@ class RegisterWidget extends XotBaseWidget
                             ->autocomplete('new-password')
                             ->confirmed(),
                         'password_confirmation' => TextInput::make('password_confirmation')
-                            ->label(__('gdpr::register.fields.password_confirmation'))
                             ->password()
                             ->required()
                             ->string()
@@ -111,7 +106,6 @@ class RegisterWidget extends XotBaseWidget
                 ->description(__('gdpr::register.sections.required_consents_description'))
                 ->schema([
                     'privacy_policy_accepted' => Checkbox::make('privacy_policy_accepted')
-                        ->label(__('gdpr::register.consents.privacy_policy_label'))
                         ->accepted()
                         ->required()
                         ->validationMessages([
@@ -120,7 +114,6 @@ class RegisterWidget extends XotBaseWidget
                         ->helperText(__('gdpr::register.consents.privacy_policy_hint'))
                         ->default(false),
                     'terms_accepted' => Checkbox::make('terms_accepted')
-                        ->label(__('gdpr::register.consents.terms_label'))
                         ->accepted()
                         ->required()
                         ->validationMessages([
@@ -129,7 +122,6 @@ class RegisterWidget extends XotBaseWidget
                         ->helperText(__('gdpr::register.consents.terms_hint'))
                         ->default(false),
                     'data_processing_accepted' => Checkbox::make('data_processing_accepted')
-                        ->label(__('gdpr::register.consents.data_processing_label'))
                         ->accepted()
                         ->required()
                         ->validationMessages([
@@ -142,19 +134,15 @@ class RegisterWidget extends XotBaseWidget
                 ->description(__('gdpr::register.sections.optional_consents_description'))
                 ->schema([
                     'marketing_consent' => Checkbox::make('marketing_consent')
-                        ->label(__('gdpr::register.consents.marketing_label'))
                         ->helperText(__('gdpr::register.consents.marketing_hint'))
                         ->default(false),
                     'profiling_consent' => Checkbox::make('profiling_consent')
-                        ->label(__('gdpr::register.consents.profiling_label'))
                         ->helperText(__('gdpr::register.consents.profiling_hint'))
                         ->default(false),
                     'analytics_consent' => Checkbox::make('analytics_consent')
-                        ->label(__('gdpr::register.consents.analytics_label'))
                         ->helperText(__('gdpr::register.consents.analytics_hint'))
                         ->default(false),
                     'third_party_consent' => Checkbox::make('third_party_consent')
-                        ->label(__('gdpr::register.consents.third_party_label'))
                         ->helperText(__('gdpr::register.consents.third_party_hint'))
                         ->default(false),
                 ]),
