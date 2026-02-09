@@ -46,10 +46,12 @@
         this.$dispatch('theme-changed', { isDark: this.dark });
     }
 }" x-init="init()" class="flex items-center">
-    <button type="button" 
-            @click="toggle()" 
-            aria-label="Toggle light/dark mode" 
-            class="relative {{ $sizeClass }} rounded-xl text-slate-600 dark:text-slate-300 bg-gray-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-red-500/50 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-all duration-200 group theme-toggle">
+    <button type="button"
+            @click="toggle()"
+            role="switch"
+            :aria-checked="dark.toString()"
+            :aria-label="dark ? '{{ __('Switch to light mode') }}' : '{{ __('Switch to dark mode') }}'"
+            class="relative {{ $sizeClass }} rounded-xl text-slate-600 dark:text-slate-300 bg-gray-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-red-500/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 transition-all duration-200 group theme-toggle">
         
         <!-- Sun icon (light mode) -->
         <svg x-show="!dark" 

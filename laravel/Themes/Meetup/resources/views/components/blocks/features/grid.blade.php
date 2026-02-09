@@ -10,16 +10,16 @@
  */
 --}}
 
-<section class="py-16 bg-slate-900" id="features">
+<section class="py-16 bg-slate-900" id="features" aria-labelledby="features-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {{-- Header Section --}}
         <div class="text-center mb-16">
             @if(isset($title) && $title)
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                <h2 id="features-heading" class="text-3xl md:text-4xl font-bold text-white mb-4">
                     {{ $title }}
                 </h2>
             @endif
-            
+
             @if(isset($description) && $description)
                 <p class="text-xl text-slate-300 max-w-3xl mx-auto">
                     {{ $description }}
@@ -29,15 +29,15 @@
 
         {{-- Features Grid --}}
         @if(isset($features) && is_array($features))
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list">
                 @foreach($features as $feature)
-                    <div class="group bg-slate-800/50 backdrop-blur-sm rounded-xl transition-all duration-300 p-8 border border-slate-700 hover:border-red-500">
+                    <article class="group bg-slate-800/50 backdrop-blur-sm rounded-xl transition-all duration-300 p-8 border border-slate-700 hover:border-red-500" role="listitem">
                         {{-- Icon --}}
                         @if(isset($feature['icon']))
-                            <div class="w-16 h-16 bg-red-600/20 rounded-lg flex items-center justify-center mb-6 transition-colors duration-300">
-                                <x-dynamic-component 
-                                    :component="$feature['icon']" 
-                                    class="w-8 h-8 text-red-500" 
+                            <div class="w-16 h-16 bg-red-600/20 rounded-lg flex items-center justify-center mb-6 transition-colors duration-300" aria-hidden="true">
+                                <x-dynamic-component
+                                    :component="$feature['icon']"
+                                    class="w-8 h-8 text-red-500"
                                 />
                             </div>
                         @endif
@@ -55,7 +55,7 @@
                                 {{ $feature['description'] }}
                             </p>
                         @endif
-                    </div>
+                    </article>
                 @endforeach
             </div>
         @endif

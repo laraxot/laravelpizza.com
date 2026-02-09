@@ -5,16 +5,17 @@
  * e <x-filament::icon icon="meetup-{nome}" />. Vedi Modules/Meetup/docs/svg-icons-no-hardcoded-blade.md
  */
 --}}
-<nav class="bg-slate-900/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50" role="navigation" id="main-navigation">
+<nav class="bg-slate-900/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50" role="navigation" aria-label="{{ __('Main navigation') }}" id="main-navigation">
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
             <!-- Logo -->
-            <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="flex items-center space-x-3 group">
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="flex items-center space-x-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-lg" aria-label="{{ __('Laravel Pizza Meetups - Home') }}">
                 <x-filament::icon
                     icon="meetup-logo"
                     class="h-12 w-12 text-red-500 transition-opacity group-hover:opacity-90"
+                    aria-hidden="true"
                 />
-                <span class="text-xl font-bold text-white group-hover:text-red-400 transition-colors">Laravel Pizza Meetups</span>
+                <span class="text-xl font-bold text-white group-hover:text-red-400 transition-colors" aria-hidden="true">Laravel Pizza Meetups</span>
             </a>
 
             <!-- Desktop Navigation -->
@@ -48,9 +49,8 @@
             </div>
 
             <!-- Mobile menu button -->
-            <!-- WCAG 2.1 AA: text-slate-100 on slate-800 = 9:1 contrast (4.5:1 required) -->
-            <button id="mobile-menu-button" class="md:hidden text-slate-100 hover:text-white p-2 rounded-lg hover:bg-slate-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" aria-expanded="false" aria-controls="mobile-menu">
-                <x-filament::icon icon="meetup-icon-menu" class="w-6 h-6" />
+            <button id="mobile-menu-button" class="md:hidden text-slate-100 hover:text-white p-2 rounded-lg hover:bg-slate-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" aria-expanded="false" aria-controls="mobile-menu" aria-label="{{ __('Toggle mobile menu') }}">
+                <x-filament::icon icon="meetup-icon-menu" class="w-6 h-6" aria-hidden="true" />
             </button>
         </div>
 

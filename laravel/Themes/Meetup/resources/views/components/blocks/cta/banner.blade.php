@@ -40,13 +40,13 @@
                             default => 'bg-white text-red-600 hover:bg-gray-100'
                         };
                     @endphp
-                    <a 
-                        href="{{ $cta_primary['url'] ?? '#' }}" 
-                        class="{{ $primaryClasses }} px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg inline-flex items-center"
+                    <a
+                        href="{{ $cta_primary['url'] ?? '#' }}"
+                        class="{{ $primaryClasses }} px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-red-600"
                     >
                         {{ $cta_primary['label'] ?? 'Create Your Account' }}
                         @if(isset($cta_primary['style']) && $cta_primary['style'] === 'white')
-                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                             </svg>
                         @endif
@@ -61,9 +61,9 @@
                             default => 'border-2 border-white text-white hover:bg-white hover:text-red-600'
                         };
                     @endphp
-                    <a 
-                        href="{{ $cta_secondary['url'] ?? '#' }}" 
-                        class="{{ $secondaryClasses }} px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
+                    <a
+                        href="{{ $cta_secondary['url'] ?? '#' }}"
+                        class="{{ $secondaryClasses }} px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-red-600"
                     >
                         {{ $cta_secondary['label'] ?? 'Browse Events' }}
                     </a>

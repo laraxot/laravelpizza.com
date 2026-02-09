@@ -356,3 +356,7 @@ npm run copy
 
 
 ci sono molte funzioni dentro laravel/Modules/Gdpr/app/Filament/Widgets/Auth/RegisterWidget.php  che dovrebbero essere https://github.com/spatie/laravel-queueable-action qualcuna nel modulo user e qualcuna nel modulo gdpr e qualcuna in altri moduli , come sempre prima studi, aggiorni e migliori le cartelle docs dentro i moduli e dentro i temi poi implementi e poi controlli
+
+
+per controllare che il register del modulo gdpr funzioni.. devi creare anche i pest test dentro il modulo gdpr , ti ricordo che utilizziamo la configurazione .env.testing non utilizziamo sqlite per i test ma mysql non utilizziamo MAI
+  refreshdatabase, e nei test partiano da php artisan migrate , generico senza force senza specificare il modulo , capisci da solo il perche' e documentala nelle cartelle docs dentro i moduli

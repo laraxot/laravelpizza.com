@@ -4,4 +4,6 @@
     with proper LaravelLocalization, SVG icons, and responsive design.
     Block data from header.json is available via $blocks if needed for future dynamic rendering.
 --}}
-@include('pub_theme::components.sections.header.v1')
+<header role="banner">
+    @include('pub_theme::components.sections.header.v1')
+</header>
