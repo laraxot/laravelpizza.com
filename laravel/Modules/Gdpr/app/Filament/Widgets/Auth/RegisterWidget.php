@@ -7,7 +7,6 @@ namespace Modules\Gdpr\Filament\Widgets\Auth;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
-use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -74,9 +73,8 @@ class RegisterWidget extends XotBaseWidget
                         ->maxLength(255)
                         ->unique(User::class, 'email')
                         ->autocomplete('email'),
-                    'password_grid' => Grid::make(2)->schema(
-                        PasswordData::make()->getPasswordFormComponents('password')
-                    ),
+                    'password' => PasswordData::make()->getPasswordFormComponents('password')[0],
+                    'password_confirmation' => PasswordData::make()->getPasswordFormComponents('password')[1],
                 ]),
             'required_consents' => Section::make(__('gdpr::register.sections.required_consents'))
                 ->description(__('gdpr::register.sections.required_consents_description'))
@@ -87,32 +85,20 @@ class RegisterWidget extends XotBaseWidget
                         ->validationMessages([
                             'accepted' => __('gdpr::register.consents.privacy_policy_required'),
                         ])
-                        ->helperText(__('gdpr::register.consents.privacy_policy_hint'))
                         ->default(false),
 
-                    'data_processing_accepted' => Checkbox::make('data_processing_accepted')
+                    'terms_accepted' => Checkbox::make('terms_accepted')
                         ->accepted()
                         ->required()
                         ->validationMessages([
-                            'accepted' => __('gdpr::register.consents.data_processing_required'),
+                            'accepted' => __('gdpr::register.consents.terms_required'),
                         ])
-                        ->helperText(__('gdpr::register.consents.data_processing_hint'))
                         ->default(false),
                 ]),
             'optional_consents' => Section::make(__('gdpr::register.sections.optional_consents'))
                 ->description(__('gdpr::register.sections.optional_consents_description'))
                 ->schema([
                     'marketing_consent' => Checkbox::make('marketing_consent')
-                        ->helperText(__('gdpr::register.consents.marketing_hint'))
-                        ->default(false),
-                    'profiling_consent' => Checkbox::make('profiling_consent')
-                        ->helperText(__('gdpr::register.consents.profiling_hint'))
-                        ->default(false),
-                    'analytics_consent' => Checkbox::make('analytics_consent')
-                        ->helperText(__('gdpr::register.consents.analytics_hint'))
-                        ->default(false),
-                    'third_party_consent' => Checkbox::make('third_party_consent')
-                        ->helperText(__('gdpr::register.consents.third_party_hint'))
                         ->default(false),
                 ]),
         ];
@@ -161,10 +147,14 @@ class RegisterWidget extends XotBaseWidget
 
     /**
      * Valida e sanitizza i dati utente
+     * 
+     * @param array<string, mixed> $formData
+     * @return array<string, mixed>
      */
     protected function validateUserData(array $formData): array
     {
-        return [
+        /** @var array<string, mixed> $data */
+        $data = [
             'first_name' => app(SafeStringCastAction::class)->execute($formData['first_name']),
             'last_name' => app(SafeStringCastAction::class)->execute($formData['last_name']),
             'email' => app(SafeStringCastAction::class)->execute($formData['email']),
@@ -175,10 +165,14 @@ class RegisterWidget extends XotBaseWidget
             'state' => 'active', // Utente attivo direttamente dopo registrazione GDPR-compliant
             'email_verified_at' => now(), // Email verificata automaticamente per semplificare
         ];
+
+        return $data;
     }
 
     /**
      * Crea l'utente nel database
+     * 
+     * @param array<string, mixed> $data
      */
     protected function createUser(array $data): User
     {
