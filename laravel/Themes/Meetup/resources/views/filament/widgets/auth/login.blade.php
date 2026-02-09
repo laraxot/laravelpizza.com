@@ -39,7 +39,7 @@
                 <p class="text-italia-gray-600 dark:text-gray-400">
                     {{ __('user::login.no_account') }}
                     <a 
-                        href="{{ url('/' . app()->getLocale() . '/auth/register') }}" 
+                        href="{{ \LaravelLocalization::localizeUrl('/auth/register') }}" 
                         class="font-medium text-primary-600 hover:text-primary-500 underline"
                     >
                         {{ __('user::login.register_now') }}
@@ -49,7 +49,7 @@
                 <p class="text-italia-gray-600 dark:text-gray-400">
                     {{ __('user::login.forgot_password_text') }}
                     <a 
-                        href="{{ url('/' . app()->getLocale() . '/auth/password/reset') }}" 
+                        href="{{ \LaravelLocalization::localizeUrl('/auth/password/reset') }}" 
                         class="font-medium text-primary-600 hover:text-primary-500 underline"
                     >
                         {{ __('user::login.reset_it') }}

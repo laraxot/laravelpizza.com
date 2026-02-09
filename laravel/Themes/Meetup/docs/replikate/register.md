@@ -22,3 +22,7 @@ migliora il register studiando a fondo in internet tutte le cose del gdpr, priva
 
 regola importantissima  che non devi mai dimenticare con git si va solo in avanti mai indietro, quindi prima di fare modifiche fai sempre il commit e il push di quello che hai fatto, poi fai il pull e poi fai le modifiche, se fai modifiche senza fare il commit e il push e poi fai il pull rischi di perdere il tuo lavoro, quindi fai sempre il commit e il push di quello che hai fatto prima di fare modifiche
 
+analizza a fondo e ragiona a fondo su come aggiornare il modulo GDPR per usarlo con la registrazione, poi aggiorna, studia e migliora le cartelle docs dentro i moduli e dentro i temi, ricorda che abbiamo e dobbiamo usare anche il modulo Gdpr
+
+
+studia su internet anche tutte le cose wcag

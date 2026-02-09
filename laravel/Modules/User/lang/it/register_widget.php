@@ -32,11 +32,24 @@ return [
             'description' => 'password_confirmation',
             'helper_text' => 'password_confirmation',
             'placeholder' => 'password_confirmation',
+            'label' => 'password_confirmation',
         ],
         'privacy_policy_accepted' => [
             'description' => 'privacy_policy_accepted',
             'helper_text' => 'privacy_policy_accepted',
             'placeholder' => 'privacy_policy_accepted',
+        ],
+        'marketing_consent' => [
+            'description' => 'marketing_consent',
+            'helper_text' => 'marketing_consent',
+            'placeholder' => 'marketing_consent',
+            'label' => 'marketing_consent',
+        ],
+        'password' => [
+            'description' => 'password',
+        ],
+        'third_party_consent' => [
+            'description' => 'third_party_consent',
         ],
     ],
 ];

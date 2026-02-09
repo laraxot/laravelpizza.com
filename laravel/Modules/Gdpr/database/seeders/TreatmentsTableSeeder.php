@@ -15,40 +15,75 @@ class TreatmentsTableSeeder extends Seeder
     public function run(): void
     {
         $treatments = [
+            // Consensi obbligatori per registrazione (Base giuridica: Contratto - Art. 6(1)(b) GDPR)
             [
                 'name' => 'privacy_policy',
-                'description' => 'user::auth.consents.privacy_policy',
+                'description' => 'Consenso all\'informativa privacy ai sensi degli Art. 13 e 14 del GDPR',
                 'required' => true,
+                'active' => true,
                 'weight' => 1,
+                'documentVersion' => '1.0',
             ],
             [
-                'name' => 'terms_of_service',
-                'description' => 'user::auth.consents.terms_of_service',
+                'name' => 'terms_conditions',
+                'description' => 'Accettazione dei termini e condizioni di servizio',
                 'required' => true,
+                'active' => true,
                 'weight' => 2,
+                'documentVersion' => '1.0',
             ],
             [
-                'name' => 'marketing',
-                'description' => 'user::auth.consents.marketing',
-                'required' => false,
+                'name' => 'data_processing',
+                'description' => 'Consenso al trattamento dei dati personali per la gestione dell\'account',
+                'required' => true,
+                'active' => true,
                 'weight' => 3,
+                'documentVersion' => '1.0',
+            ],
+            // Consensi opzionali (Base giuridica: Consenso - Art. 6(1)(a) GDPR)
+            [
+                'name' => 'marketing_consent',
+                'description' => 'Consenso al ricevimento di comunicazioni promozionali e newsletter',
+                'required' => false,
+                'active' => true,
+                'weight' => 10,
+                'documentVersion' => '1.0',
             ],
             [
-                'name' => 'profiling',
-                'description' => 'user::auth.consents.profiling',
+                'name' 'profiling_consent',
+                'description' => 'Consenso all\'analisi del comportamento per personalizzazione dell\'esperienza',
                 'required' => false,
-                'weight' => 4,
+                'active' => true,
+                'weight' => 11,
+                'documentVersion' => '1.0',
+            ],
+            [
+                'name' => 'analytics_consent',
+                'description' => 'Consenso all\'utilizzo di analytics per il monitoraggio delle prestazioni',
+                'required' => false,
+                'active' => true,
+                'weight' => 12,
+                'documentVersion' => '1.0',
+            ],
+            [
+                'name' => 'third_party_consent',
+                'description' 'Consenso alla condivisione dei dati con partner terzi selezionati',
+                'required' => false,
+                'active' => true,
+                'weight' => 13,
+                'documentVersion' => '1.0',
             ],
         ];
 
         foreach ($treatments as $treatment) {
-            Treatment::firstOrCreate(
+            Treatment::updateOrCreate(
                 ['name' => $treatment['name']],
                 [
                     'description' => $treatment['description'],
                     'required' => $treatment['required'],
-                    'active' => true,
+                    'active' => $treatment['active'],
                     'weight' => $treatment['weight'],
+                    'documentVersion' => $treatment['documentVersion'] ?? '1.0',
                 ]
             );
         }

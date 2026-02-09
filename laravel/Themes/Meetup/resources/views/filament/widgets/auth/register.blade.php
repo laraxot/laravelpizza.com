@@ -34,6 +34,18 @@
                 </div>
             </form>
 
+            <div class="text-xs leading-5 text-italia-gray-600 dark:text-gray-400">
+                {{ __('user::auth.gdpr.notice') }}
+                <a href="{{ \LaravelLocalization::localizeUrl('/privacy') }}" class="underline hover:no-underline">
+                    {{ __('user::auth.gdpr.links.privacy') }}
+                </a>
+                {{ __('user::auth.gdpr.links.and') }}
+                <a href="{{ \LaravelLocalization::localizeUrl('/terms') }}" class="underline hover:no-underline">
+                    {{ __('user::auth.gdpr.links.terms') }}
+                </a>
+                {{ __('user::auth.gdpr.links.period') }}
+            </div>
+
             {{-- Links AGID Style --}}
             <div class="mt-6 text-center text-sm">
                 <p class="text-italia-gray-600 dark:text-gray-400">
