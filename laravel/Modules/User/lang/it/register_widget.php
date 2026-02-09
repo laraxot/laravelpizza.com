@@ -58,6 +58,7 @@ return [
             'description' => 'analytics_consent',
             'helper_text' => 'analytics_consent',
             'placeholder' => 'analytics_consent',
+            'label' => 'analytics_consent',
         ],
     ],
 ];

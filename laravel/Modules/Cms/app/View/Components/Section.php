@@ -6,7 +6,6 @@ namespace Modules\Cms\View\Components;
 
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\View\Component;
-use Modules\Cms\Actions\View\GetCmsViewAction;
 use Modules\Cms\Datas\BlockData;
 use Modules\Cms\Models\Section as SectionModel;
 use Spatie\LaravelData\DataCollection;
@@ -62,8 +61,8 @@ class Section extends Component
      */
     public function render(): ViewContract
     {
-        $view = 'pub_theme::components.sections.'.$this->slug. '.'.$this->tpl;
-        
+        $view = 'pub_theme::components.sections.'.$this->slug.'.'.$this->tpl;
+
         $viewData = [
             'section' => null,
             'name' => $this->name,

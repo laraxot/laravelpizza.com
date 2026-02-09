@@ -23,8 +23,8 @@ trait HasBlocks
      */
     public function getBlocks(?string $side = null): DataCollection
     {
-        $field='blocks';
-        if($side) {
+        $field = 'blocks';
+        if ($side) {
             $field = $side.'_blocks';
         }
         $blocks = $this->{$field};
@@ -50,8 +50,7 @@ trait HasBlocks
     public function compile(array $blocks): array
     {
         $result = [];
-       
-        
+
         foreach ($blocks as $key => $value) {
             if (! is_string($key)) {
                 $key = (string) $key;
@@ -62,13 +61,11 @@ trait HasBlocks
             } else {
                 $result[$key] = $value;
             }
-            if(is_array($value)) {
+            if (is_array($value)) {
                 $result[$key] = $this->compile($value);
             }
         }
 
-        
-        
         return $result;
     }
 
@@ -77,7 +74,7 @@ trait HasBlocks
      *
      * @return DataCollection<BlockData>
      */
-    public static function getBlocksBySlug(string $slug,?string $side = null): DataCollection
+    public static function getBlocksBySlug(string $slug, ?string $side = null): DataCollection
     {
         // This trait requires the class to extend Model (@phpstan-require-extends Model)
         // So we can safely use static methods

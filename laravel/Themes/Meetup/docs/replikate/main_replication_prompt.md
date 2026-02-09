@@ -18,13 +18,52 @@ Bring the local `Meetup` theme frontend as close as possible to the target site 
 ## Mission: ELEVATION, NOT JUST REPLICATION
 We're not just copying - we're **ELEVATING** the original site to be MORE COOL, MORE ENGAGING, MORE VIRALE.
 
-## Pre-Task Study (Mandatory)
-Before making any changes, study the existing documentation:
+## Pre-Task Study (Mandatory - Enhanced 2026)
 
-1. **Theme Documentation**: `laravel/Themes/Meetup/docs/`
-2. **CMS Module Documentation**: `laravel/Modules/Cms/docs/` (Section.php, content blocks)
-3. **Other Modules**: `Modules/Lang/docs/`, `Modules/UI/docs/`, `Modules/Xot/docs/`
-4. **Reference Plan**: `laravel/Themes/Meetup/docs/replikate/reference_analysis.md` (for detailed design, content, and architectural specifications)
+Before making any changes, apply **Advanced Prompt Engineering Protocol**:
+
+### **Phase 1: Context Analysis**
+1. **Deep Documentation Study**: Systematic review of `Themes/Meetup/docs/`, `Modules/Cms/docs/`, `Modules/*/docs/`
+2. **Pattern Recognition**: Identify established architectural patterns and constraints
+3. **Cross-Reference Analysis**: Connect related documentation across modules
+4. **Historical Context**: Review previous implementations and lessons learned
+5. **Current State Assessment**: Understand existing implementation status
+
+### **Phase 2: Strategic Planning**
+1. **Goal Decomposition**: Break objectives into atomic, measurable sub-goals
+2. **Resource Mapping**: Identify all necessary files, components, and dependencies
+3. **Risk Assessment**: Identify potential blockers and mitigation strategies
+4. **Quality Gates**: Define completion criteria and validation checkpoints
+5. **Documentation Planning**: Plan knowledge transfer and memory updates
+
+### **Phase 3: Execution with Continuous Learning**
+1. **Implementation**: Execute changes following Laraxot patterns
+2. **Real-time Validation**: Continuous testing and quality assurance
+3. **Issue Resolution**: Immediate identification and correction of problems
+4. **Pattern Extraction**: Convert solutions to reusable templates
+5. **Knowledge Synthesis**: Update documentation with new insights
+
+### **Phase 4: Enhancement & Memory Update**
+1. **Performance Analysis**: Measure efficiency gains and optimization opportunities
+2. **Pattern Refinement**: Improve existing templates and approaches
+3. **Skill Integration**: Incorporate new techniques into capability matrix
+4. **Documentation Evolution**: Update all relevant docs with latest best practices
+5. **Cross-Agent Knowledge Sharing**: Share insights with other AI agents
+
+### **Context Sources to Master:**
+- **Primary**: `laravel/Themes/Meetup/docs/replikate/prompt-engineering-skills.md`
+- **Architectural**: `laravel/Themes/Meetup/docs/replikate/main_replication_prompt.md`
+- **Technical**: `laravel/Modules/Xot/docs/`, `laravel/Modules/Cms/docs/`
+- **Domain**: Complete LaravelPizza project understanding (meetup platform, NOT e-commerce)
+- **Legal/Accessibility**: GDPR compliance + WCAG 2.1 AA standards
+- **Advanced Patterns**: Chain-of-thought, few-shot learning, ReAct methodology
+
+### **Quality Assurance Framework:**
+- **Prompt Clarity**: 9/10 minimum score for all instructions
+- **Context Utilization**: 85%+ effective use of provided information
+- **Error Recovery**: <5% failure rate with graceful handling
+- **Documentation Consistency**: 95% adherence to established patterns
+- **Innovation Index**: +30% improvement over previous approaches
 
 ## Step-by-Step Implementation Plan
 

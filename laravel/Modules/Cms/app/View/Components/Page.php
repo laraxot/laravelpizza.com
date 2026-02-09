@@ -19,8 +19,8 @@ class Page extends Component
 
     public string $slug;
 
-     /** @var DataCollection<BlockData> */
-     public DataCollection $blocks;
+    /** @var DataCollection<BlockData> */
+    public DataCollection $blocks;
 
     public array $data = [];
 
@@ -102,7 +102,6 @@ class Page extends Component
             return $block;
         });
 
-        
         $this->blocks = BlockData::collect($blocks);
     }
 
