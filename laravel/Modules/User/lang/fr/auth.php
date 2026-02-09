@@ -3,6 +3,36 @@
 declare(strict_types=1);
 
 return [
+    'register' => [
+        'title' => 'Créer un nouveau compte',
+        'subtitle' => 'Entrez vos coordonnées pour vous inscrire',
+        'name' => 'Nom complet',
+        'name_placeholder' => 'Marie Dupont',
+        'email' => 'Adresse e-mail',
+        'email_placeholder' => 'exemple@email.com',
+        'password' => 'Mot de passe',
+        'password_placeholder' => '••••••••',
+        'password_confirmation' => 'Confirmer le mot de passe',
+        'password_confirmation_placeholder' => '••••••••',
+        'submit' => 'S\'inscrire',
+        'success' => 'Inscription terminée avec succès.',
+        'failed' => 'Impossible de terminer l\'inscription.',
+        'already_have_account' => 'Vous avez déjà un compte ?',
+        'login' => 'Se connecter',
+        'error_occurred' => 'Une erreur s\'est produite lors de l\'inscription. Veuillez réessayer.',
+        'fields' => [
+            'first_name' => 'Prénom',
+            'last_name' => 'Nom',
+            'email' => 'Adresse e-mail',
+            'password' => 'Mot de passe',
+            'password_confirmation' => 'Confirmer le mot de passe',
+        ],
+        'validation' => [
+            'password' => [
+                'complexity' => 'Le mot de passe doit répondre aux exigences de sécurité.',
+            ],
+        ],
+    ],
     'gdpr' => [
         'privacy_policy' => [
             'required' => 'Vous devez accepter la politique de confidentialité pour continuer.',

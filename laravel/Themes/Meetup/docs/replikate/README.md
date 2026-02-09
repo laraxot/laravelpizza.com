@@ -12,9 +12,11 @@ This directory contains structured prompts and reference documents to guide the 
 
 - **`main_replication_prompt.md`** — Master prompt for overall site alignment. Step-by-step process, architectural rules, verification.
 
-- **`footer_improvement_prompt.md`** — Focused prompt for footer alignment: content, layout, colors, localization.
+- **`footer.md`** — Focused prompt for footer alignment: content, layout, colors, localization.
 
-- **`home_content_review_prompt.md`** — Task for analyzing homepage content: wrong domain content, duplications, placeholder text.
+- **`home.md`** — Task for analyzing homepage content: wrong domain content, duplications, placeholder text.
+
+- **`register.md`** — Registration page implementation guide with GDPR, WCAG 2.2, and UI/UX best practices.
 
 ## Guides
 

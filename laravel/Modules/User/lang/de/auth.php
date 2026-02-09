@@ -278,7 +278,6 @@ return [
         'user' => 'Non riusciamo a trovare un utente con questo indirizzo email.',
     ],
     'gdpr' => [
-        'notice' => 'Indem Sie fortfahren, bestätigen Sie, dass Sie gelesen und akzeptiert haben',
         'privacy_policy' => [
             'required' => 'Sie müssen die Datenschutzrichtlinie akzeptieren, um fortzufahren.',
         ],
