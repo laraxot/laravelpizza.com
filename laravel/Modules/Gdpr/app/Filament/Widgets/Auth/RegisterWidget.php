@@ -74,33 +74,9 @@ class RegisterWidget extends XotBaseWidget
                         ->maxLength(255)
                         ->unique(User::class, 'email')
                         ->autocomplete('email'),
-                    'password_grid' => Grid::make(2)->schema([
-                        'password' => TextInput::make('password')
-                            ->password()
-                            ->required()
-                            ->string()
-                            ->rules([
-                                'required',
-                                'string',
-                                'min:12',
-                                'regex:/[A-Z]/',
-                                'regex:/[a-z]/',
-                                'regex:/[0-9]/',
-                                'regex:/[^A-Za-z0-9]/',
-                            ])
-                            ->validationMessages([
-                                'password.regex' => __('gdpr::register.validation.password_complexity'),
-                            ])
-                            ->autocomplete('new-password')
-                            ->confirmed(),
-                        'password_confirmation' => TextInput::make('password_confirmation')
-                            ->password()
-                            ->required()
-                            ->string()
-                            ->rules(['required', 'min:12', 'same:password'])
-                            ->autocomplete('new-password')
-                            ->dehydrated(false),
-                    ]),
+                    'password_grid' => Grid::make(2)->schema(
+                        PasswordData::make()->getPasswordFormComponents('password')
+                    ),
                 ]),
             'required_consents' => Section::make(__('gdpr::register.sections.required_consents'))
                 ->description(__('gdpr::register.sections.required_consents_description'))

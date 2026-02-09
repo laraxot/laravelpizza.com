@@ -14,7 +14,7 @@
                     "view": "pub_theme::components.blocks.navigation.v1",
                     "brand": "Laravel Pizza",
                     "logo": "/themes/Meetup/images/pizza-slice-logo.svg",
-                    "tagline": "Laravel Developers. Pizza. Community.",
+                    "tagline": "Sviluppatori Laravel. Pizza. Comunità.",
                     "home_url": "/",
                     "show_navigation": true,
                     "items": [
@@ -24,13 +24,13 @@
                             "type": "link"
                         },
                         {
-                            "label": "Events",
-                            "url": "/events",
+                            "label": "Chi Siamo",
+                            "url": "/about",
                             "type": "link"
                         },
                         {
-                            "label": "About",
-                            "url": "/about",
+                            "label": "Eventi",
+                            "url": "/events",
                             "type": "link"
                         },
                         {
@@ -44,13 +44,13 @@
                             "type": "link"
                         },
                         {
-                            "label": "Contact",
+                            "label": "Contatti",
                             "url": "/contact",
                             "type": "link"
                         }
                     ],
                     "cta_button": {
-                        "label": "Join Now",
+                        "label": "Partecipa Ora",
                         "url": "/register",
                         "style": "solid"
                     }
