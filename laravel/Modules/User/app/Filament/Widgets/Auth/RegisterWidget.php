@@ -92,7 +92,6 @@ class RegisterWidget extends XotBaseWidget
             ]),
             'gdpr' => Section::make()->schema([
                 'privacy_policy_accepted' => Checkbox::make('privacy_policy_accepted')
-                    ->label(__('user::auth.gdpr.privacy_policy_label'))
                     ->accepted()
                     ->required()
                     ->validationMessages([
@@ -101,7 +100,6 @@ class RegisterWidget extends XotBaseWidget
                     ->helperText(__('user::auth.gdpr.privacy_policy_hint'))
                     ->default(false),
                 'terms_accepted' => Checkbox::make('terms_accepted')
-                    ->label(__('user::auth.gdpr.terms_label'))
                     ->accepted()
                     ->required()
                     ->validationMessages([
@@ -110,7 +108,6 @@ class RegisterWidget extends XotBaseWidget
                     ->helperText(__('user::auth.gdpr.terms_hint'))
                     ->default(false),
                 'data_processing_accepted' => Checkbox::make('data_processing_accepted')
-                    ->label(__('user::auth.gdpr.data_processing_label'))
                     ->accepted()
                     ->required()
                     ->validationMessages([
@@ -119,19 +116,15 @@ class RegisterWidget extends XotBaseWidget
                     ->helperText(__('user::auth.gdpr.data_processing_hint'))
                     ->default(false),
                 'marketing_consent' => Checkbox::make('marketing_consent')
-                    ->label(__('user::auth.gdpr.marketing_label'))
                     ->helperText(__('user::auth.gdpr.marketing_hint'))
                     ->default(false),
                 'profiling_consent' => Checkbox::make('profiling_consent')
-                    ->label(__('user::auth.gdpr.profiling_label'))
                     ->helperText(__('user::auth.gdpr.profiling_hint'))
                     ->default(false),
                 'analytics_consent' => Checkbox::make('analytics_consent')
-                    ->label(__('user::auth.gdpr.analytics_label'))
                     ->helperText(__('user::auth.gdpr.analytics_hint'))
                     ->default(false),
                 'third_party_consent' => Checkbox::make('third_party_consent')
-                    ->label(__('user::auth.gdpr.third_party_label'))
                     ->helperText(__('user::auth.gdpr.third_party_hint'))
                     ->default(false),
             ]),
@@ -159,7 +152,6 @@ class RegisterWidget extends XotBaseWidget
         } catch (ValidationException $e) {
             throw $e;
         } catch (\Exception $e) {
-            dddx($e->getMessage());
             $this->handleRegistrationError($e);
         }
     }
