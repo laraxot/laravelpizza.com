@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 return [
     // === SECTIONS ===
+    'register' => [
+        'title' => 'Beginnen Sie Ihre Pizza-Reise 🍕',
+        'subtitle' => 'Schließen Sie sich 5.000+ Pizza-Liebhabern und Entwicklern an. Exklusiver Zugang zu Meetups und Tutorials.',
+        'submit' => 'Treten Sie der Community bei',
+        'submitting' => 'Wir heizen den Ofen vor...',
+        'already_have_account' => 'Bereits Mitglied?',
+    ],
+
     'sections' => [
         'user_info' => 'Persönliche Informationen',
         'user_info_description' => 'Geben Sie Ihre persönlichen Daten ein, um Ihr Konto zu erstellen',
@@ -24,6 +32,7 @@ return [
 
     // === CONSENTS ===
     'consents' => [
+        'title' => 'Erforderliche Zustimmung',
         'privacy_policy_label' => 'Ich habe die Datenschutzerklärung gelesen und verstanden und stimme der Verarbeitung meiner persönlichen Daten zu, wie in der Richtlinie beschrieben.',
         'privacy_policy_hint' => 'Vollständige Information gemäß Art. 13 und 14 der Verordnung (EU) 2016/679 (DSGVO)',
         'privacy_policy_required' => 'Sie müssen die Datenschutzerklärung akzeptieren, um mit der Registrierung fortzufahren.',
@@ -47,6 +56,9 @@ return [
         
         'third_party_label' => 'Ich stimme der Weitergabe meiner Daten an ausgewählte Partner für integrierte Dienstleistungen zu',
         'third_party_hint' => 'Nur DSGVO-konforme Partner für spezifische und begrenzte Zwecke.',
+        
+        'privacy_checkbox_html' => 'Ich habe die <a href=":privacy_url" target="_blank" class="underline font-bold">Datenschutzerklärung</a> gelesen',
+        'terms_checkbox_html' => 'Ich akzeptiere die <a href=":terms_url" target="_blank" class="underline font-bold">Nutzungsbedingungen</a>',
     ],
 
     // === VALIDATION ===
@@ -62,4 +74,7 @@ return [
     
     'error' => 'Fehler bei der Registrierung',
     'error_message' => 'Bei der Registrierung ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut. Wenn das Problem besteht, kontaktieren Sie unseren Support.',
+
+    'login' => 'Anmelden',
+    'already_registered' => 'Haben Sie bereits ein Konto?',
 ];

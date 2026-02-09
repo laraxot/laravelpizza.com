@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 return [
     // === SECTIONS ===
+    'register' => [
+        'title' => 'Commencez votre voyage Pizza 🍕',
+        'subtitle' => 'Rejoignez 5 000+ amateurs de pizza et développeurs. Accès exclusif aux meetups et tutoriels.',
+        'submit' => 'Rejoindre la communauté',
+        'submitting' => 'Nous préchauffons le four...',
+        'already_have_account' => 'Déjà membre ?',
+    ],
+
     'sections' => [
         'user_info' => 'Informations Personnelles',
         'user_info_description' => 'Entrez vos informations personnelles pour créer votre compte',
@@ -24,6 +32,7 @@ return [
 
     // === CONSENTS ===
     'consents' => [
+        'title' => 'Consentement Requis',
         'privacy_policy_label' => 'J\'ai lu et compris la Politique de Confidentialité et j\'accepte le traitement de mes données personnelles comme décrit dans la politique.',
         'privacy_policy_hint' => 'Information complète conformément aux Art. 13 et 14 du Règlement (UE) 2016/679 (RGPD)',
         'privacy_policy_required' => 'Vous devez accepter la politique de confidentialité pour procéder à l\'inscription.',
@@ -47,6 +56,9 @@ return [
         
         'third_party_label' => 'J\'accepte le partage de mes données avec des partenaires sélectionnés pour des services intégrés',
         'third_party_hint' => 'Uniquement des partenaires conformes RGPD pour des fins spécifiques et limitées.',
+        
+        'privacy_checkbox_html' => 'J\'ai lu la <a href=":privacy_url" target="_blank" class="underline font-bold">Politique de Confidentialité</a>',
+        'terms_checkbox_html' => 'J\'accepte les <a href=":terms_url" target="_blank" class="underline font-bold">Conditions Générales</a>',
     ],
 
     // === VALIDATION ===
@@ -62,4 +74,7 @@ return [
     
     'error' => 'Erreur lors de l\'inscription',
     'error_message' => 'Une erreur est survenue lors de l\'inscription. Veuillez réessayer plus tard. Si le problème persiste, contactez notre support.',
+
+    'login' => 'Se connecter',
+    'already_registered' => 'Avez-vous déjà un compte ?',
 ];

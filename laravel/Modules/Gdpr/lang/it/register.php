@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 return [
+    // === REGISTER PAGE ===
     'register' => [
-        'title' => 'Inizia il tuo Viaggio nella Pizza 🍕',
-        'subtitle' => 'Unisciti a 5.000+ appassionati e developer. Accesso esclusivo a meetup e tutorial.',
-        'submit' => 'Entra nella Community ora',
-        'submitting' => 'Stiamo preparando il forno...',
-        'already_have_account' => 'Sei già dei nostri?',
+        'title' => 'Unisciti alla Pizza Revolution 🍕',
+        'subtitle' => 'Entra nella community di 5.000+ developer e appassionati. Meetup esclusivi, tutorial e networking ti aspettano.',
+        'submit' => 'Crea il mio account gratis',
+        'submitting' => 'Stiamo preparando il tuo account...',
     ],
 
     // === FIELDS ===
@@ -16,21 +16,18 @@ return [
         'first_name' => 'Nome',
         'last_name' => 'Cognome',
         'email' => 'La tua migliore Email',
-        'password' => 'Password Sicura',
+        'password' => 'Password sicura',
         'password_confirmation' => 'Conferma Password',
     ],
 
     // === CONSENTS ===
     'consents' => [
-        'privacy_policy_required' => 'Accetta l\'informativa privacy per procedere.',
-        'terms_required' => 'Accetta i termini e condizioni per procedere.',
-        'marketing_label' => 'Voglio ricevere consigli sulla pizza e inviti ai meetup (Opzionale)',
-        
-        'privacy_checkbox_html' => 'Ho letto l\'<a href=":privacy_url" target="_blank" class="underline font-bold">Informativa Privacy</a>',
-        'terms_checkbox_html' => 'Accetto i <a href=":terms_url" target="_blank" class="underline font-bold">Termini e Condizioni</a>',
-
-        'title' => 'Consensi Obbligatori',
-        'required_consent_missing' => 'Devi accettare tutti i consensi obbligatori per procedere.',
+        'title' => 'Consensi Privacy',
+        'privacy_checkbox_html' => 'Ho letto e accetto l\'<a href=":privacy_url" target="_blank" class="text-primary-600 dark:text-primary-400 underline font-semibold hover:text-primary-700">Informativa Privacy</a>',
+        'privacy_policy_required' => 'Devi accettare l\'informativa privacy per procedere.',
+        'terms_checkbox_html' => 'Ho letto e accetto i <a href=":terms_url" target="_blank" class="text-primary-600 dark:text-primary-400 underline font-semibold hover:text-primary-700">Termini e Condizioni</a>',
+        'terms_required' => 'Devi accettare i termini e condizioni per procedere.',
+        'marketing_label' => 'Voglio ricevere consigli sulla pizza e inviti ai meetup (facoltativo)',
     ],
 
     // === VALIDATION ===
@@ -39,11 +36,10 @@ return [
     ],
 
     // === MESSAGES ===
-    'success' => 'Registrazione completata! Benvenuto in famiglia.',
+    'already_registered' => 'Hai già un account?',
+    'login' => 'Accedi subito',
+    'success' => 'Benvenuto nella famiglia! 🎉',
     'success_message' => 'Il tuo account è pronto. Ora puoi esplorare tutti i meetup!',
     'error' => 'Ops! Qualcosa è andato storto.',
     'error_message' => 'Riprova tra un istante, stiamo sistemando il problema.',
-
-    'login' => 'Accedi',
-    'already_registered' => 'Hai già un account?',
 ];
