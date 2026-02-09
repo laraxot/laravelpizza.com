@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 use Livewire\Attributes\Validate;
+use Modules\Gdpr\Actions\SaveGdprConsentsAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
+use Modules\User\Actions\Activity\LogRegistrationAction;
+use Modules\User\Actions\User\CreateUserAction;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
@@ -59,27 +62,35 @@ class RegisterWidget extends XotBaseWidget
                     ->string()
                     ->minLength(2)
                     ->maxLength(255)
-                    ->autocomplete('given-name'),
+                    ->autocomplete('given-name')
+                    ->placeholder(__('gdpr::register.fields.first_name.placeholder'))
+                    ->helperText(__('gdpr::register.fields.first_name.helper_text')),
                 'last_name' => TextInput::make('last_name')
                     ->required()
                     ->string()
                     ->minLength(2)
                     ->maxLength(255)
-                    ->autocomplete('family-name'),
+                    ->autocomplete('family-name')
+                    ->placeholder(__('gdpr::register.fields.last_name.placeholder'))
+                    ->helperText(__('gdpr::register.fields.last_name.helper_text')),
             ]),
             'email' => TextInput::make('email')
                 ->required()
                 ->email()
                 ->maxLength(255)
                 //->unique(User::class, 'email')
-                ->autocomplete('email'),
+                ->autocomplete('email')
+                ->placeholder(__('gdpr::register.fields.email.placeholder'))
+                ->helperText(__('gdpr::register.fields.email.helper_text')),
             'password' => TextInput::make('password')
                 ->password()
                 ->required()
-                //->rule(PasswordData::make()->getPasswordRule())
+                ->rule(PasswordData::make()->getPasswordRule())
                 ->autocomplete('new-password')
                 ->revealable()
-                ->confirmed(),
+                ->confirmed()
+                ->placeholder(__('gdpr::register.fields.password.placeholder'))
+                ->helperText(__('gdpr::register.fields.password.helper_text')),
             'password_confirmation' => TextInput::make('password_confirmation')
                 ->password()
                 ->required()
@@ -87,13 +98,15 @@ class RegisterWidget extends XotBaseWidget
                 ->autocomplete('new-password')
                 ->revealable()
                 ->dehydrated(false)
-                ->same('password'),
+                ->same('password')
+                ->placeholder(__('gdpr::register.fields.password_confirmation.placeholder'))
+                ->helperText(__('gdpr::register.fields.password_confirmation.helper_text')),
         ];
     }
 
     public function submit(): void
     {
-        //try {
+        try {
             $formData = $this->form->getState();
             $this->validateGDPRConsent();
 
@@ -101,20 +114,21 @@ class RegisterWidget extends XotBaseWidget
             $this->logRegistrationAttempt($formData);
 
             $user = DB::transaction(function () use ($validatedData) {
-                $user = $this->createUser($validatedData);
-                $this->saveAllGDPRConsents($user);
-                $this->afterUserCreated($user);
+                $user = app(CreateUserAction::class)->execute($validatedData);
+                app(SaveGdprConsentsAction::class)->execute($user, $this->collectGdprConsents());
+                app(LogRegistrationAction::class)->execute($user, [
+                    'gdpr_consents' => $this->collectGdprConsents(),
+                ]);
 
                 return $user;
             });
 
             $this->handleSuccessfulRegistration($user);
-            /*
         } catch (ValidationException $e) {
             throw $e;
         } catch (\Exception $e) {
             $this->handleRegistrationError($e);
-        }*/
+        }
     }
 
     /**
@@ -173,62 +187,6 @@ class RegisterWidget extends XotBaseWidget
         ];
     }
 
-    /**
-     * @param array<string, mixed> $data
-     */
-    protected function createUser(array $data): User
-    {
-        return User::create($data);
-    }
-
-    protected function saveAllGDPRConsents(User $user): void
-    {
-        $ipAddress = request()->ip();
-        $userAgent = request()->userAgent();
-        $consents = $this->collectGdprConsents();
-
-        $treatments = Treatment::whereIn('name', [
-            'privacy_policy',
-            'terms_conditions',
-            'marketing_consent',
-        ])->get()->keyBy('name');
-
-        $consentMapping = [
-            'privacy_accepted' => 'privacy_policy',
-            'terms_accepted' => 'terms_conditions',
-            'marketing_consent' => 'marketing_consent',
-        ];
-
-        foreach ($consentMapping as $property => $treatmentName) {
-            $isAccepted = $consents[$property] ?? false;
-            $treatment = $treatments->get($treatmentName);
-
-            if ($treatment) {
-                Consent::create([
-                    'user_id' => $user->id,
-                    'user_type' => get_class($user),
-                    'treatment_id' => $treatment->id,
-                    'type' => $treatmentName,
-                    'accepted_at' => $isAccepted ? now() : null,
-                    'subject_id' => $user->id,
-                    'created_by' => 'gdpr_register_widget',
-                    'updated_by' => 'gdpr_register_widget',
-                    'ip_address' => $ipAddress,
-                    'user_agent' => $userAgent,
-                ]);
-            }
-        }
-
-        Log::info('GDPR consents saved', [
-            'user_id' => $user->id,
-            'ip' => $ipAddress,
-            'consents' => $consents,
-        ]);
-    }
-
-    /**
-     * @param array<string, mixed> $formData
-     */
     protected function logRegistrationAttempt(array $formData): void
     {
         $email = app(SafeStringCastAction::class)->execute($formData['email']);
@@ -239,20 +197,6 @@ class RegisterWidget extends XotBaseWidget
             'user_agent' => request()->userAgent(),
             'gdpr_consents' => $this->collectGdprConsents(),
         ]);
-    }
-
-    protected function afterUserCreated(User $user): void
-    {
-        activity()
-            ->causedBy($user)
-            ->performedOn($user)
-            ->withProperties([
-                'type' => $user->type,
-                'ip_address' => request()->ip(),
-                'user_agent' => request()->userAgent(),
-                'gdpr_consents' => $this->collectGdprConsents(),
-            ])
-            ->log('User registered via GDPR-compliant RegisterWidget');
     }
 
     protected function handleSuccessfulRegistration(User $user): void

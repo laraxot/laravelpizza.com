@@ -142,12 +142,16 @@ class User extends BaseUser
     public $connection = 'user';
 
     /** @var array<string, class-string> */
+use Modules\User\Models\User;
+
+// ...
+
     protected $childTypes = [
-        'master_admin' => self::class,
-        'backoffice_user' => self::class,
-        'customer_user' => self::class,
-        'system' => self::class,
-        'technician' => self::class,
+        'master_admin' => User::class,
+        'backoffice_user' => User::class,
+        'customer_user' => User::class,
+        'system' => User::class,
+        'technician' => User::class,
     ];
 
     #[\Override]

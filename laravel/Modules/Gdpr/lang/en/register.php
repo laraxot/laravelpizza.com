@@ -5,20 +5,30 @@ declare(strict_types=1);
 return [
     // === REGISTER PAGE ===
     'register' => [
-        'title' => 'Join the Pizza Revolution 🍕',
-        'subtitle' => 'Join 5,000+ developers and food lovers. Exclusive meetups, tutorials, and networking await you.',
-        'submit' => 'Create my free account',
-        'submitting' => 'Setting up your account...',
+        'title' => 'Unlock Your Pizza Passion: Register Now! 🚀',
+        'subtitle' => 'Join 5,000+ developers and food lovers. Get instant access to exclusive meetups, cutting-edge tutorials, and unparalleled networking. Your next big idea (or slice) awaits!',
+        'submit' => 'Claim Your Free Account Now!',
+        'submitting' => 'Igniting your pizza journey...',
         'already_have_account' => 'Already a member?',
     ],
 
     // === FIELDS ===
     'fields' => [
         'first_name' => 'First Name',
+        'first_name.placeholder' => 'Enter your first name',
+        'first_name.helper_text' => 'We\'ll use this to personalize your experience.',
         'last_name' => 'Last Name',
+        'last_name.placeholder' => 'Enter your last name',
+        'last_name.helper_text' => 'So we know what to call you.',
         'email' => 'Your best Email',
+        'email.placeholder' => 'your.email@example.com',
+        'email.helper_text' => 'We\'ll send you exclusive updates and offers.',
         'password' => 'Secure Password',
+        'password.placeholder' => '••••••••••••',
+        'password.helper_text' => 'Must be at least 12 characters, including numbers and symbols for ultimate security.',
         'password_confirmation' => 'Confirm Password',
+        'password_confirmation.placeholder' => '••••••••••••',
+        'password_confirmation.helper_text' => 'Just to make sure you typed it correctly!',
     ],
 
     // === CONSENTS ===

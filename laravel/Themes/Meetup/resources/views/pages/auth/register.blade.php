@@ -36,6 +36,11 @@ name('register');
                 <p class="mt-3 text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
                     {{ __('gdpr::register.register.subtitle') }}
                 </p>
+                <div class="mt-5 text-center">
+                    <p class="text-sm font-semibold text-primary-600 dark:text-primary-400">
+                        Trusted by thousands of developers and pizza enthusiasts worldwide!
+                    </p>
+                </div>
             </div>
 
             <div class="bg-white dark:bg-gray-800 shadow-2xl rounded-3xl p-8 sm:p-12 border border-gray-200 dark:border-gray-700 backdrop-blur-sm bg-opacity-95">
