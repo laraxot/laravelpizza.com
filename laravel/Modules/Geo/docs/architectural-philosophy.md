@@ -55,7 +55,7 @@ The Geo module follows a strict separation between:
 
 ### **❌ WRONG - Violates Clean Code**
 ```php
-// In TechPlanner/ListClients.php
+// In Meetup/ListClients.php
 public function getTableBulkActions(): array
 {
     return [
@@ -71,7 +71,7 @@ public function getTableBulkActions(): array
 
 ### **✅ CORRECT - Follows Architectural Principles**
 ```php
-// In TechPlanner/ListClients.php
+// In Meetup/ListClients.php
 public function getTableBulkActions(): array
 {
     return [

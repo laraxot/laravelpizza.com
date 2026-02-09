@@ -10,7 +10,7 @@ This document describes the reusable actions available in the Geo module.
 - **Namespace**: `Modules\Geo\Actions`
 - **Purpose**: Fetches latitude and longitude for a given model based on its address fields and safely updates the record.
 - **Dependencies**: `GetAddressDataFromFullAddressAction`.
-- **Status**: In uso e riferimento unico per tutti i moduli (TechPlanner, Job, Tenant, ecc.).
+- **Status**: In uso e riferimento unico per tutti i moduli (Meetup, Job, Tenant, ecc.).
 
 ## UpdateCoordinatesBulkAction
 - **Type**: Filament Bulk Action (riusabile)

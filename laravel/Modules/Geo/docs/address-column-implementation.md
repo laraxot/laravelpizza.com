@@ -138,7 +138,7 @@ AddressItemEnum::columns($table, $this);
 
 1. **Implement AddressItemEnum::columns()** method
 2. **Create AddressColumn trait** for convenience
-3. **Update TechPlanner module** migrations first
+3. **Update Meetup module** migrations first
 4. **Progressively update other modules**
 5. **Test with PHPStan level 10**
 

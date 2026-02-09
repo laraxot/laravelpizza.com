@@ -136,7 +136,7 @@ Durante l'audit delle traduzioni, sono state identificate numerose traduzioni ch
 - `metatag.php`: `'required' => 'The title is required'`
 
 #### ✅ Temi
-**Themes/Two:**
+**Themes/Meetup:**
 - `lang/de/theme.php`: `'required' => 'Pflichtfeld'`
 - `lang/en/theme.php`: `'required' => 'Required field'`
 

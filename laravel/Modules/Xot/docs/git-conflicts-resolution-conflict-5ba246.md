@@ -112,9 +112,9 @@ $res=Locality::query()
 
 #### doctor_states.php
 **Percorsi**:
-- `laravel/Themes/Two/lang/it/doctor_states.php`
-- `laravel/Themes/Two/lang/en/doctor_states.php`
-- `laravel/Themes/Two/lang/de/doctor_states.php`
+- `laravel/Themes/Meetup/lang/it/doctor_states.php`
+- `laravel/Themes/Meetup/lang/en/doctor_states.php`
+- `laravel/Themes/Meetup/lang/de/doctor_states.php`
 
 **Conflitti Risolti**:
 - Rimossa duplicazione delle chiavi integration_*
@@ -123,9 +123,9 @@ $res=Locality::query()
 
 #### patient_states.php
 **Percorsi**:
-- `laravel/Themes/Two/lang/it/patient_states.php`
-- `laravel/Themes/Two/lang/en/patient_states.php`
-- `laravel/Themes/Two/lang/de/patient_states.php`
+- `laravel/Themes/Meetup/lang/it/patient_states.php`
+- `laravel/Themes/Meetup/lang/en/patient_states.php`
+- `laravel/Themes/Meetup/lang/de/patient_states.php`
 
 **Conflitti Risolti**:
 - Rimossa duplicazione delle chiavi integration_*

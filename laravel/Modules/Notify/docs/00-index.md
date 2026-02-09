@@ -84,8 +84,8 @@
 ## 🔗 Related Modules
 
 - [Xot](../../Xot/docs/README.md) - Core framework
-- [TechPlanner](../../TechPlanner/docs/README.md) - Business logic integration
-- [Client Resource](../../TechPlanner/app/Filament/Resources/ClientResource/) - Integration examples
+- [Meetup](../../Meetup/docs/README.md) - Business logic integration
+- [Client Resource](../../Meetup/app/Filament/Resources/ClientResource/) - Integration examples
 
 ## 🎯 Quick Start
 

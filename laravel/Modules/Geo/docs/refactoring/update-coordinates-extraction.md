@@ -8,16 +8,16 @@
 
 ### Current Violations
 
-The `ListClients.php` page in TechPlanner module contains **duplicated geocoding logic** that violates:
+The `ListClients.php` page in Meetup module contains **duplicated geocoding logic** that violates:
 
 1. **DRY Principle**: Same geocoding logic appears twice
-2. **Single Responsibility**: TechPlanner implements Geo functionality
+2. **Single Responsibility**: Meetup implements Geo functionality
 3. **SOLID Principles**: High coupling, low cohesion
 4. **Reusability**: Logic cannot be reused by other modules
 
 ### Code Locations
 
-**File**: `Modules/TechPlanner/app/Filament/Resources/ClientResource/Pages/ListClients.php`
+**File**: `Modules/Meetup/app/Filament/Resources/ClientResource/Pages/ListClients.php`
 
 **Violation #1** (Lines 163-214): `updateCoordinates` BulkAction
 - Bulk updates coordinates for selected clients
@@ -37,7 +37,7 @@ The `ListClients.php` page in TechPlanner module contains **duplicated geocoding
 > "Same logic, different places. Classic DRY violation. When geocoding logic changes, we must update multiple places."
 
 **🏛️ SOLID Perspective**:
-> "TechPlanner should USE Geo services, not IMPLEMENT them. This violates Single Responsibility."
+> "Meetup should USE Geo services, not IMPLEMENT them. This violates Single Responsibility."
 
 **💋 KISS Perspective**:
 > "100+ lines of geocoding in a List page? This should be 5 lines calling a service."
@@ -49,7 +49,7 @@ The `ListClients.php` page in TechPlanner module contains **duplicated geocoding
 
 ```
 ┌─────────────────┐
-│  TechPlanner    │
+│  Meetup    │
 │  (Business)     │
 │                 │
 │  "I need to     │
@@ -69,8 +69,8 @@ The `ListClients.php` page in TechPlanner module contains **duplicated geocoding
 └─────────────────┘
 ```
 
-**Current Reality**: TechPlanner IMPLEMENTS geocoding (❌)
-**Desired State**: TechPlanner USES Geo geocoding (✅)
+**Current Reality**: Meetup IMPLEMENTS geocoding (❌)
+**Desired State**: Meetup USES Geo geocoding (✅)
 
 ## Solution Architecture
 
@@ -108,7 +108,7 @@ Layer 2: UI Integration
                     │
 Layer 3: Resource Usage
 ┌──────────────────────────────────────────┐
-│ Modules/TechPlanner/.../ListClients.php  │
+│ Modules/Meetup/.../ListClients.php  │
 │                                          │
 │ getTableBulkActions(): array {           │
 │   return [                               │
@@ -215,11 +215,11 @@ UpdateCoordinatesBulkAction::make()
 
 ### Files to Modify
 
-1. `Modules/TechPlanner/.../ListClients.php` (-100 lines, +5 lines)
+1. `Modules/Meetup/.../ListClients.php` (-100 lines, +5 lines)
 2. `Modules/Geo/docs/` (+this doc)
-3. `Modules/TechPlanner/docs/` (changelog)
+3. `Modules/Meetup/docs/` (changelog)
 
-**Total Reduction**: -95 lines in TechPlanner
+**Total Reduction**: -95 lines in Meetup
 
 ### Net Impact
 

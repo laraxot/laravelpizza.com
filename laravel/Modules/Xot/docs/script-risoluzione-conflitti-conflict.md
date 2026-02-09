@@ -998,7 +998,7 @@ BEGIN { skip = 0 }
 - `Modules/Xot/`
 - `Modules/Geo/`
 - `Modules/User/`
-- `Modules/TechPlanner/`
+- `Modules/Meetup/`
 - `Modules/Employee/`
 - File di configurazione root
 

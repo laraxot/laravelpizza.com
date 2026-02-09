@@ -50,7 +50,7 @@ The **Xot Module** is the foundational core of the Laraxot PTVX ecosystem. It pr
 ┌─────────────────────────────────────────┐
 │           Application Layer              │
 ├─────────────────────────────────────────┤
-│  TechPlanner │ Employee │ Cms │ ...     │  ← Business Modules
+│  Meetup │ Employee │ Cms │ ...     │  ← Business Modules
 ├─────────────────────────────────────────┤
 │  User │ UI │ Tenant │ Geo │ Lang │ ...  │  ← Infrastructure Modules
 ├─────────────────────────────────────────┤
@@ -75,7 +75,7 @@ Xot Module (Foundation - No dependencies)
     ├── Media Module
     ├── Activity Module
     ├── Cms Module
-    ├── TechPlanner Module
+    ├── Meetup Module
     ├── Employee Module
     └── All other modules
 ```

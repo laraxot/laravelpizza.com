@@ -16,7 +16,7 @@ We are adding a bulk action to trigger notifications using `RecordNotification`.
 - **Inputs**: Selection of records.
 
 ### 3. Integration
-- Integrated into `Modules/TechPlanner/app/Filament/Resources/ClientResource/Pages/ListClients.php`.
+- Integrated into `Modules/Meetup/app/Filament/Resources/ClientResource/Pages/ListClients.php`.
 
 ## Data Flow
 Customer List -> Bulk Action -> Modal (Select Template + Channels) -> Submit -> Loop Records -> SendRecordNotificationAction -> Notification::route -> RecordNotification

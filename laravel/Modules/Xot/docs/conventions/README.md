@@ -86,5 +86,5 @@ Queste convenzioni devono essere seguite per mantenere la coerenza del codice in
 * [README.md](../../../Cms/docs/content/README.md)
 * [README.md](../../../Cms/docs/frontoffice/README.md)
 * [README.md](../../../Cms/docs/components/README.md)
-* [README.md](../../../../Themes/Two/docs/README.md)
+* [README.md](../../../../Themes/Meetup/docs/README.md)
 * [README.md](../../../../Themes/One/docs/README.md)

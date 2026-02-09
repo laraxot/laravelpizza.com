@@ -5,7 +5,7 @@
 
 ## 📋 Panoramica
 
-Questo documento fornisce un indice completo di tutta la documentazione filosofica (Logica, Religione, Politica, Zen) di tutti i moduli del progetto TechPlanner.
+Questo documento fornisce un indice completo di tutta la documentazione filosofica (Logica, Religione, Politica, Zen) di tutti i moduli del progetto Meetup.
 
 ---
 
@@ -26,8 +26,8 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 
 ## 💼 Moduli Business
 
-### TechPlanner - Business Principale
-**File**: [../../TechPlanner/docs/philosophy-complete.md](../../TechPlanner/docs/philosophy-complete.md)
+### Meetup - Business Principale
+**File**: [../../Meetup/docs/philosophy-complete.md](../../Meetup/docs/philosophy-complete.md)
 
 **Filosofia**: Client-Centric, Compliance-First, Integration Over Duplication
 
@@ -220,7 +220,7 @@ Xot (Foundation)
     ↓
 User (Identity Foundation)
     ↓
-├── TechPlanner (Business Logic)
+├── Meetup (Business Logic)
 │   ├── Geo (Geolocalizzazione)
 │   ├── Notify (Comunicazioni)
 │   ├── Media (File Management)

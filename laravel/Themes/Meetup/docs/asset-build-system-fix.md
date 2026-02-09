@@ -261,7 +261,7 @@ In browser DevTools Network tab:
 ## Impact
 
 ### Before Fix
-- ❌ Wrong styles loading (TechPlanner/indigo colors)
+- ❌ Wrong styles loading (Meetup/indigo colors)
 - ❌ Tailwind v3 syntax (outdated)
 - ❌ Assets not compiling correctly
 - ❌ Alpine.js not working

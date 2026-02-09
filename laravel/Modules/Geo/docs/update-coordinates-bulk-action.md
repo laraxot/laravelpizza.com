@@ -84,7 +84,7 @@ public function execute(Model $model): bool
 ### In ListRecords Page
 
 ```php
-namespace Modules\TechPlanner\Filament\Resources\ClientResource\Pages;
+namespace Modules\Meetup\Filament\Resources\ClientResource\Pages;
 
 use Modules\Geo\Filament\Actions\UpdateCoordinatesBulkAction;
 
@@ -117,7 +117,7 @@ class ListClients extends XotBaseListRecords
 - ✅ Separazione UI (Filament) da Business Logic (Actions)
 - ✅ Supporto per qualsiasi modello con `full_address`
 
-## Migrazione da TechPlanner
+## Migrazione da Meetup
 
 **Prima** (violazione Clean Code):
 ```php

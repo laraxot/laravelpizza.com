@@ -9,9 +9,9 @@ I file di traduzione del tema Two presentavano conflitti Git che coinvolgevano s
 
 ### 1. doctor_states.php
 **Percorsi**:
-- `laravel/Themes/Two/lang/it/doctor_states.php`
-- `laravel/Themes/Two/lang/en/doctor_states.php`
-- `laravel/Themes/Two/lang/de/doctor_states.php`
+- `laravel/Themes/Meetup/lang/it/doctor_states.php`
+- `laravel/Themes/Meetup/lang/en/doctor_states.php`
+- `laravel/Themes/Meetup/lang/de/doctor_states.php`
 
 **Conflitti Risolti**:
 - Rimossa duplicazione delle chiavi `integration_approved`, `integration_rejected`, `integration_pending`
@@ -70,9 +70,9 @@ return [
 
 ### 2. patient_states.php
 **Percorsi**:
-- `laravel/Themes/Two/lang/it/patient_states.php`
-- `laravel/Themes/Two/lang/en/patient_states.php`
-- `laravel/Themes/Two/lang/de/patient_states.php`
+- `laravel/Themes/Meetup/lang/it/patient_states.php`
+- `laravel/Themes/Meetup/lang/en/patient_states.php`
+- `laravel/Themes/Meetup/lang/de/patient_states.php`
 
 **Conflitti Risolti**:
 - Rimossa duplicazione delle chiavi `integration_approved`, `integration_rejected`, `integration_pending`
@@ -182,9 +182,9 @@ I file di traduzione del tema Two presentavano conflitti Git che coinvolgevano s
 
 ### 1. doctor_states.php
 **Percorsi**:
-- `laravel/Themes/Two/lang/it/doctor_states.php`
-- `laravel/Themes/Two/lang/en/doctor_states.php`
-- `laravel/Themes/Two/lang/de/doctor_states.php`
+- `laravel/Themes/Meetup/lang/it/doctor_states.php`
+- `laravel/Themes/Meetup/lang/en/doctor_states.php`
+- `laravel/Themes/Meetup/lang/de/doctor_states.php`
 
 **Conflitti Risolti**:
 - Rimossa duplicazione delle chiavi `integration_approved`, `integration_rejected`, `integration_pending`
@@ -243,9 +243,9 @@ return [
 
 ### 2. patient_states.php
 **Percorsi**:
-- `laravel/Themes/Two/lang/it/patient_states.php`
-- `laravel/Themes/Two/lang/en/patient_states.php`
-- `laravel/Themes/Two/lang/de/patient_states.php`
+- `laravel/Themes/Meetup/lang/it/patient_states.php`
+- `laravel/Themes/Meetup/lang/en/patient_states.php`
+- `laravel/Themes/Meetup/lang/de/patient_states.php`
 
 **Conflitti Risolti**:
 - Rimossa duplicazione delle chiavi `integration_approved`, `integration_rejected`, `integration_pending`
@@ -399,7 +399,7 @@ php artisan lang:missing --locale=it,en,de
 
 ### Collegamenti Esterni
 - [Translation Standards](../../../project_docs/translation-standards.md)
-- [Theme Documentation](../../../Themes/Two/project_docs/README.md)
+- [Theme Documentation](../../../Themes/Meetup/project_docs/README.md)
 
 ## Note per Sviluppatori
 

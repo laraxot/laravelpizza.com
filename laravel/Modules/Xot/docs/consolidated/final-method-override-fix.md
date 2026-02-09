@@ -85,7 +85,7 @@ class MyRelationManager extends XotBaseRelationManager
 ### Moduli Beneficiati
 - **Activity**: RelationManager ora utilizzano template pattern
 - **User**: Form personalizzabili tramite metodi astratti
-- **TechPlanner**: Tabelle estendibili tramite metodi astratti
+- **Meetup**: Tabelle estendibili tramite metodi astratti
 - **Geo**: Widget personalizzabili tramite metodi astratti
 - **Tutti i moduli**: Struttura coerente e prevedibile
 
@@ -105,7 +105,7 @@ abstract class XotBaseClass extends BaseClass
     final public function form(Form $form): Form
 - **Activity**: RelationManager ora funzionanti
 - **User**: Form personalizzabili
-- **TechPlanner**: Tabelle estendibili
+- **Meetup**: Tabelle estendibili
 - **Geo**: Widget personalizzabili
 - **Tutti i moduli**: Maggiore flessibilità
 

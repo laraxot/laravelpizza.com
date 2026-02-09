@@ -12,14 +12,14 @@ I componenti riutilizzabili devono risiedere nel modulo che ne definisce la **lo
 
 1. **Single Source of Truth** - Il modulo Geo è la fonte della verità per tutto ciò che riguarda gli indirizzi
 2. **DRY Principle** - Un solo componente, utilizzabile da tutti i moduli
-3. **Separazione delle Responsabilità** - Geo gestisce la logica, TechPlanner la usa
+3. **Separazione delle Responsabilità** - Geo gestisce la logica, Meetup la usa
 4. **Manutenibilità Centralizzata** - Modifiche in un solo posto
 
 ## Esempio Concreto: AddressColumn
 
 ### ❌ Approccio Errato (Prima)
 ```
-Modules/TechPlanner/Filament/Tables/Columns/AddressColumn.php
+Modules/Meetup/Filament/Tables/Columns/AddressColumn.php
 ```
 - Violazione del principio DRY
 - Duplicazione del codice
@@ -36,7 +36,7 @@ Modules/Geo/Filament/Tables/Columns/AddressColumn.php
 ## Utilizzo in Altri Moduli
 
 ```php
-// In TechPlanner/ListClients.php
+// In Meetup/ListClients.php
 use Modules\Geo\Filament\Tables\Columns\AddressColumn;
 
 // La colonna è disponibile per tutti
@@ -60,7 +60,7 @@ AddressColumn::make('address')
 - **ContactTypeEnum** - Definizione campi contatto
 - **Notification Actions** - Logica notifiche
 
-### Componenti nel Modulo TechPlanner
+### Componenti nel Modulo Meetup
 - **Business Logic** - Logica specifica del business
 - **Domain Models** - Modelli specifici del dominio
 - **Business Rules** - Regole di business
@@ -75,7 +75,7 @@ AddressColumn::make('address')
 
 > "Il componente non è dove viene creato, ma dove la sua anima risiede."
 
-L'AddressColumn risiede in Geo perché la sua anima è la logica degli indirizzi, anche se viene manifestato in TechPlanner.
+L'AddressColumn risiede in Geo perché la sua anima è la logica degli indirizzi, anche se viene manifestato in Meetup.
 
 ## Pattern da Seguire
 

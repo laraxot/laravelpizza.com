@@ -142,7 +142,7 @@ class MyModel extends BaseModel
 ### Architettura Modulare
 Il progetto utilizza un'architettura modulare con Laravel Modules:
 - **Xot**: Modulo core con funzionalità fondamentali
-- **TechPlanner**: Modulo principale per la pianificazione tecnica
+- **Meetup**: Modulo principale per la pianificazione tecnica
 - **User**: Gestione utenti e autenticazione
 - **UI**: Componenti frontend e temi
 - **Media**: Gestione file e media

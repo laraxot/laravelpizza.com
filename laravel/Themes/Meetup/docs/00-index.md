@@ -24,6 +24,18 @@
 - [Events Comparison](events-comparison/) - Detailed events page comparison analysis
 - [Visual Comparison](visual-comparison/) - Visual comparison tools and analysis
 
+## Replikate - LaravelPizza Replication
+
+- [Replikate Directory](replikate/) - Structured prompts for replicating laravelpizza.com
+  - [README](replikate/README.md) - Guide to using replikate prompts
+  - [Replicate Analysis](replikate/replicate.md) - Detailed target site analysis and implementation plan
+  - [Main Replication Prompt](replikate/main_replication_prompt.md) - Master prompt for site alignment
+  - [Footer Improvement](replikate/footer_improvement_prompt.md) - Specific footer UI/UX task
+  - [Home Content Review](replikate/home_content_review_prompt.md) - Homepage content analysis task
+  - [Prompt Writing Guide](replikate/prompt-writing-guide.md) - Standards for writing prompts
+  - [Corrections Summary](replikate/corrections-summary-2026-02-09.md) - History of prompt corrections (Feb 2026)
+  - [Legacy Footer](replikate/replikate_footer.txt) - Deprecated prompt (kept for reference)
+
 ## Filament 5.x Upgrade
 
 - [Upgrade Analysis & Implementation](filament-5/upgrade-analysis.md) - Detailed impact of Filament 5.1

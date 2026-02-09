@@ -1,4 +1,4 @@
-# 🏗️ TechPlanner Fila4 Mono - Panoramica Completa del Progetto
+# 🏗️ Meetup Fila4 Mono - Panoramica Completa del Progetto
 
 ## 📋 Sommario
 
@@ -11,7 +11,7 @@
 
 ## Introduzione
 
-Il progetto **TechPlanner Fila4 Mono** è un'applicazione Laravel 12.x modulare costruita con Filament 4.x, seguendo l'architettura **Laraxot**. Il sistema implementa un approccio modulare con una gerarchia chiara di dipendenze e una filosofia di sviluppo basata sui principi **DRY (Don't Repeat Yourself)** e **KISS (Keep It Simple, Stupid)**.
+Il progetto **Meetup Fila4 Mono** è un'applicazione Laravel 12.x modulare costruita con Filament 4.x, seguendo l'architettura **Laraxot**. Il sistema implementa un approccio modulare con una gerarchia chiara di dipendenze e una filosofia di sviluppo basata sui principi **DRY (Don't Repeat Yourself)** e **KISS (Keep It Simple, Stupid)**.
 
 ## Architettura del Sistema
 
@@ -22,7 +22,7 @@ L'architettura del sistema si basa su un modulo **Xot** che funge da base per tu
 ```
 Modulo Xot (Base Foundation)
 ├── Moduli Core (User, Tenant, Activity, Notify)
-├── Moduli Business (TechPlanner, Employee, Job)
+├── Moduli Business (Meetup, Employee, Job)
 ├── Moduli Supporto (Geo, Media, AI, Cms, Gdpr)
 └── Moduli UI (UI, Themes)
 ```
@@ -107,7 +107,7 @@ Modulo Xot (Base Foundation)
 - Security monitoring
 - Advanced analytics
 
-### 🌐 TechPlanner Module - Sistema di Pianificazione Tecnica
+### 🌐 Meetup Module - Sistema di Pianificazione Tecnica
 
 **Logica & Filosofia:**
 - **Scopo**: Pianificazione e gestione di servizi tecnici e ispezioni
@@ -165,8 +165,8 @@ Modulo Xot (Base Foundation)
 2. **Seguire il pattern BaseModel**:
    ```php
    // Ogni modulo ha il proprio BaseModel che estende XotBaseModel
-   class TechPlannerBaseModel extends XotBaseModel { }
-   class MyModel extends TechPlannerBaseModel { }
+   class MeetupBaseModel extends XotBaseModel { }
+   class MyModel extends MeetupBaseModel { }
    ```
 
 3. **Uso di enum per valori fissi**:
@@ -224,7 +224,7 @@ Modulo Xot (Base Foundation)
 
 ## Conclusione
 
-Il progetto TechPlanner Fila4 Mono rappresenta un'applicazione enterprise modulare che combina:
+Il progetto Meetup Fila4 Mono rappresenta un'applicazione enterprise modulare che combina:
 - **Flessibilità** grazie all'architettura modulare
 - **Sicurezza** con sistemi di autenticazione e autorizzazione avanzati
 - **Scalabilità** con supporto multi-tenant e code asincrone

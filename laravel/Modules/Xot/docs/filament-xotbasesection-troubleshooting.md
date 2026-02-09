@@ -7,7 +7,7 @@ Quando si estende `XotBaseSection` invece di `Filament\Schemas\Components\Sectio
 
 ```
 BadMethodCallException - Internal Server Error
-Method Modules\TechPlanner\Filament\Forms\Components\CompanySection::disableLiveUpdates does not exist.
+Method Modules\Meetup\Filament\Forms\Components\CompanySection::disableLiveUpdates does not exist.
 ```
 
 ### Causa

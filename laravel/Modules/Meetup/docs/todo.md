@@ -1,3 +1,7 @@
+# TODO List - Meetup Module
+
+- [ ] **Optimize Prompts**: Apply strict rules (no property_exists, Folio/Volt, XotBase*) to all documentation and prompts in this folder. See `Themes/Meetup/docs/replikate/prompt-writing-guide.md`.
+
 # 📋 Lista Attività - Modulo Meetup
 
 ## 🎯 Fase 1: Analisi e Pianificazione

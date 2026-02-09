@@ -166,7 +166,7 @@ done
 4. [ ] Fix Cms module
 5. [ ] Fix Geo module
 6. [ ] Fix Notify module
-7. [ ] Fix TechPlanner module
+7. [ ] Fix Meetup module
 8. [ ] Fix User module
 9. [ ] Fix UI module
 10. [ ] Fix rimanenti moduli

@@ -42,7 +42,7 @@ il component `<x-page>` (probabilmente in Modules/Cms) carica i content blocks d
                 "slug": "hero-section",
                 "data": {
                     "view": "pub_theme::components.blocks.hero.main",
-                    "title": "Benvenuto in TechPlanner",
+                    "title": "Benvenuto in Meetup",
                     ...
                 }
             },

@@ -88,7 +88,7 @@ Questa documentazione si applica a tutti i moduli che utilizzano Filament per il
 * [README.md](../../../Cms/project_docs/content/README.md)
 * [README.md](../../../Cms/project_docs/frontoffice/README.md)
 * [README.md](../../../Cms/project_docs/components/README.md)
-* [README.md](../../../../Themes/Two/project_docs/README.md)
+* [README.md](../../../../Themes/Meetup/project_docs/README.md)
 * [README.md](../../../../Themes/One/project_docs/README.md)
 
 ## Regola sulle closure void nelle azioni custom Filament

@@ -81,8 +81,8 @@ Questo è intenzionale: UI è un **consumer** di Xot, non un base layer.
 Ogni componente è progettato per essere riutilizzato in più moduli senza duplicazione:
 
 ```php
-// InlineDatePicker - Usato in TechPlanner, Employee, Cms
-// LocationSelector - Usato in TechPlanner, Employee, Geo
+// InlineDatePicker - Usato in Meetup, Employee, Cms
+// LocationSelector - Usato in Meetup, Employee, Geo
 // IconStateColumn - Usato in tutti i moduli con Spatie ModelStates
 // RadioCollection - Usato per selezioni complesse multimodulo
 ```
@@ -393,7 +393,7 @@ namespace Modules\UI\...;
 Altri moduli consumano componenti UI:
 
 ```php
-// In TechPlanner/Filament/Resources/DeviceResource.php
+// In Meetup/Filament/Resources/DeviceResource.php
 use Modules\UI\Filament\Forms\Components\InlineDatePicker;
 use Modules\UI\Filament\Tables\Columns\IconStateColumn;
 

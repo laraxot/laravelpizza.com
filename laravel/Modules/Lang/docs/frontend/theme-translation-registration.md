@@ -93,7 +93,7 @@ Time: Ora
 
 ### Temi Implementati
 - [Themes/One/docs/pub_theme_namespace_registration.md](../../Themes/One/docs/pub_theme_namespace_registration.md)
-- [Themes/Two/docs/theme-translations.md](../../Themes/Two/docs/theme-translations.md)
+- [Themes/Meetup/docs/theme-translations.md](../../Themes/Meetup/docs/theme-translations.md)
 
 ### Documentazione Base
 - [Modules/Xot/docs/theme-service-provider-rules.md](../../Modules/Xot/docs/theme-service-provider-rules.md)

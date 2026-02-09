@@ -77,6 +77,7 @@ Replicare laravelpizza.com all'interno del framework Laraxot con frontend Tailwi
 
 ---
 ## Checklist Trasversale
+- [ ] **Strict Compliance**: No Controllers, No property_exists, Folio+Volt for Front, Filament+XotBase for Back.
 - [ ] Traduzioni (`lang/it/meetup.php`)
 - [ ] Logica multi-tenant (config `local/laravelpizza`)
 - [ ] Integrazione MCP (filesystem, memory, fetch, sequential-thinking, puppeteer)

@@ -1,7 +1,7 @@
 # Colonna Contatti Composite per Filament - Modulo Notify
 
 ## Panoramica
-Documentazione del pattern per implementare colonne contatti composite in Filament Tables, specificamente per il modulo Notify. Questo pattern è stato sviluppato inizialmente nel modulo TechPlanner e ora viene generalizzato per riutilizzo.
+Documentazione del pattern per implementare colonne contatti composite in Filament Tables, specificamente per il modulo Notify. Questo pattern è stato sviluppato inizialmente nel modulo Meetup e ora viene generalizzato per riutilizzo.
 
 ## Pattern Architetturale
 
@@ -197,7 +197,7 @@ TextColumn::make('pec'),
 ## Riutilizzo in Altri Moduli
 
 Questo pattern può essere applicato a:
-- **TechPlanner**: Clienti, fornitori, partner
+- **Meetup**: Clienti, fornitori, partner
 - **User**: Profili utente, contatti
 - **Cms**: Contatti pagine, form
 - **Qualsiasi modulo**: Con dati di contatto
@@ -215,14 +215,14 @@ Questo pattern può essere applicato a:
 - [UI/UX Standards](../../../docs/ui-ux-standards.md)
 
 ### Altri Moduli
-- [TechPlanner Contacts Column](../../TechPlanner/docs/contacts-column-implementation-complete.md)
+- [Meetup Contacts Column](../../Meetup/docs/contacts-column-implementation-complete.md)
 - [UI Components](../../UI/docs/components.md)
 
 ## Changelog
 
 ### 2025-08-01
 - **Creazione**: Documentazione iniziale del pattern
-- **Standardizzazione**: Pattern derivato da TechPlanner
+- **Standardizzazione**: Pattern derivato da Meetup
 - **Best Practices**: Definite regole architetturali
 
 ---

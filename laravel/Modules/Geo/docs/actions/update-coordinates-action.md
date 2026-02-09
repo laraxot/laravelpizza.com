@@ -26,7 +26,7 @@ The action is typically invoked by a Filament action (like `UpdateCoordinatesBul
 ```php
 use Illuminate\Database\Eloquent\Collection;
 use Modules\Geo\Actions\UpdateCoordinatesAction;
-use Modules\TechPlanner\Models\Client;
+use Modules\Meetup\Models\Client;
 
 // Example: Processing a collection of Clients
 $clientsToUpdate = Client::whereNull('latitude')->orWhereNull('longitude')->get();

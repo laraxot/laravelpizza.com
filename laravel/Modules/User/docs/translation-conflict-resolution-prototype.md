@@ -17,7 +17,7 @@ This document describes the prototype for resolving Git conflicts in Laravel tra
 - **Resolution Strategy**: Add missing keys from both versions
 
 ### Type 3: Duplicate Sections
-**Example**: `Modules/TechPlanner/lang/it/appointment.php`
+**Example**: `Modules/Meetup/lang/it/appointment.php`
 - Same sections appear twice without conflict markers
 - **Resolution Strategy**: Merge duplicate content, removing redundancy
 

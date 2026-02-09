@@ -40,7 +40,7 @@ We follow the **Doctrine of Single Responsibility**:
 
 1. **Neutrality**: The enum doesn't favor any specific country's addressing system
 2. **Inclusivity**: Accommodates various international formats
-3. **Collaboration**: Works harmoniously with other modules (TechPlanner, User, etc.)
+3. **Collaboration**: Works harmoniously with other modules (Meetup, User, etc.)
 4. **Sovereignty**: Each module can use only the address components it needs
 
 ## Implementation Details
@@ -224,7 +224,7 @@ Sono inoltre disponibili:
 - `AddressItemEnum::getColumnNames(bool $withLegacy = false): array` per ottenere la lista dei nomi colonna (utile per select dinamiche, validazioni, ecc.).
 
 ### Client Table Integration
-For the TechPlanner client table, the enum helps standardize address fields:
+For the Meetup client table, the enum helps standardize address fields:
 ```php
 // In migration
 $table->string('address')->nullable();              // Maps to ROUTE
@@ -329,7 +329,7 @@ This is not just an enum; it's a **comprehensive addressing philosophy** encoded
 
 - **Allineare gli esempi di integrazione client**
   L'esempio "Client Table Integration" usa ancora alias storici (`address`, `city`, `province`, `country`, `phone`, `latitude`, `longitude`).
-  Nel codice reale (TechPlanner) ora i campi sono direttamente `AddressItemEnum::ROUTE->value`, `ADMINISTRATIVE_AREA_LEVEL_3->value`, ecc.
+  Nel codice reale (Meetup) ora i campi sono direttamente `AddressItemEnum::ROUTE->value`, `ADMINISTRATIVE_AREA_LEVEL_3->value`, ecc.
   *Da fare*: aggiornare l'esempio per riflettere esattamente la migration `create_client_table` e distinguere chiaramente tra
   cache/denormalizzazione e fonte di verità (`addresses`).
 
@@ -350,4 +350,4 @@ This is not just an enum; it's a **comprehensive addressing philosophy** encoded
   La sezione "Future Considerations" elenca idee (validazione country-specific, autocomplete, tracking storico)
   ma non indica priorità né moduli impattati.
   *Da fare*: aggiungere una piccola roadmap (es. v1: CAP IT, v2: altri paesi, v3: autocomplete) collegata ai moduli
-  che useranno queste feature (Geo, TechPlanner, eventuali CRM).
+  che useranno queste feature (Geo, Meetup, eventuali CRM).

@@ -344,7 +344,7 @@ return new class extends XotBaseMigration
 
 return new class extends XotBaseMigration
 {
-    protected ?string $model_class = \Modules\TechPlanner\Models\Client::class;
+    protected ?string $model_class = \Modules\Meetup\Models\Client::class;
 
     public function up(): void
     {
