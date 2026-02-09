@@ -60,5 +60,9 @@ return [
             'placeholder' => 'analytics_consent',
             'label' => 'analytics_consent',
         ],
+        'profiling_consent' => [
+            'description' => 'profiling_consent',
+            'helper_text' => 'profiling_consent',
+        ],
     ],
 ];
