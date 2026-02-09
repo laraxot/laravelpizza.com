@@ -9,7 +9,9 @@
 
 ### Esempi di percorsi corretti:
 - `Modules/User/app/Actions/User/DeleteUserAction.php`
+- `Modules/User/app/Actions/User/CreateUserAction.php`
 - `Modules/User/app/Actions/Auth/LoginAction.php`
+- `Modules/User/app/Actions/Activity/LogRegistrationAction.php`
 
 ### Esempi di percorsi errati:
 - `Modules/User/Actions/User/DeleteUserAction.php` (manca la directory `app/`)

@@ -35,6 +35,9 @@ This guide establishes the strict rules for writing prompts for the Meetup theme
   - `XotBasePage` instead of `Page`
   - `XotBaseChartWidget` instead of `ChartWidget`
   - `XotBaseSection` instead of `Section`
+- ❌ NEVER use `->label()`, `->placeholder()`, `->tooltip()` on Filament components
+- ✅ Translations handled automatically by LangServiceProvider
+- ✅ Pattern: `{modulo}::{widget}.fields.{campo}.{tipo}`
 
 ### Model Rules
 - ❌ NEVER use `property_exists()` on Eloquent models (attributes are magical)
@@ -43,6 +46,7 @@ This guide establishes the strict rules for writing prompts for the Meetup theme
   - `$model->hasAttribute('attribute')`
   - `$model->isFillable('attribute')`
   - `SafeAttributeCastAction` for type safety
+- ✅ Always use `belongsToManyX()` for many-to-many relations, never `belongsToMany()`
 
 ### Frontoffice Rules
 - ❌ NO controllers for public pages
@@ -71,6 +75,19 @@ This guide establishes the strict rules for writing prompts for the Meetup theme
 - ✅ Study docs BEFORE making changes
 - ✅ Update docs AFTER making changes
 - ✅ Use lowercase filenames (except `README.md`, `CHANGELOG.md`)
+
+### File Modification Rules (NEW 2026-02-09)
+- ✅ Before modifying ANY file, create `.lock` file with same name
+- ✅ If `.lock` already exists, work on other files
+- ✅ After completing modification, delete the `.lock` file
+- ✅ This prevents concurrent modification conflicts
+
+### Translation Rules (NEW 2026-02-09)
+- ✅ Translation files MUST contain content in target language, NOT English
+- ✅ Italian files → Italian content, German files → German content, etc.
+- ✅ Only keep translations for ACTIVE enum fields
+- ✅ Remove translations for commented/deprecated enum cases
+- ✅ Check all 6 languages: it, en, de, fr, es, ru
 
 ## 3. Front-End Development (Folio + Volt + Filament)
 
@@ -111,6 +128,91 @@ This guide establishes the strict rules for writing prompts for the Meetup theme
 - Encourage learning and improvement
 
 ## 5. LaravelPizza Brand Guidelines
+
+### Content Rules
+- ❌ NEVER use content from other businesses
+- ❌ NEVER use "Marco Sottana", "Consulenza Sicurezza"
+- ❌ NEVER use medical/dental/veterinary content
+- ✅ ALWAYS use LaravelPizza brand
+- ✅ Focus on Laravel development, meetups, community
+- ✅ Topics: Events, workshops, networking, PHP, Laravel
+
+### Color Palette (verified from actual site screenshots Feb 2026)
+- Background Primary: #0f172a (Tailwind slate-900) — nav, hero, page bg
+- Background Darker: #0b1120 (~slate-950) — footer
+- Card Background: #1e293b (slate-800) — feature cards
+- Accent/CTA: #dc2626 (Tailwind red-600) — buttons, highlights, "Pizza. Community." text
+- Text Primary: #ffffff (white) — headings
+- Text Secondary: #9ca3af (gray-400) — body text
+- Text Muted: #6b7280 (gray-500) — copyright, subtle text
+- Border: #334155 (slate-700) — dividers on dark bg
+
+**WARNING**: Do NOT use these wrong colors from previous versions:
+- #0f2b46 (wrong navy), #ef4444 (wrong red), #f97316 (wrong orange), #06b6d4 (wrong cyan), #f8fafc (wrong light bg)
+
+### URL Structure
+- Target: Flat URLs (/{slug})
+- Local: Multilingual via Folio (`/{locale}/...`)
+- **ALWAYS** use `LaravelLocalization::localizeUrl('/path')` — never hardcode locale prefix
+- Language selector: `LaravelLocalization::getLocalizedURL($code, null, [], true)`
+- Current locale: `LaravelLocalization::getCurrentLocale()`
+
+### SVG Icons
+- **NO inline SVG** in Blade files
+- Create `.svg` files in `Modules/Meetup/resources/svg/`
+- Use: `<x-filament::icon icon="meetup-{filename}" class="..." />`
+- Prefix `meetup-` is registered by XotBaseServiceProvider
+
+### Many-to-Many Relations
+- **ALWAYS** `$this->belongsToManyX(Related::class)`, never `belongsToMany()`
+
+## 6. UI/UX & WCAG 2.1 AAA Standards (NEW 2026-02-09)
+
+### Layout & Spacing Best Practices
+- Form containers: minimum `max-w-3xl` (768px) for readability
+- Padding: `p-8 sm:p-12` for adequate whitespace
+- Spacing between sections: `space-y-8` for clear hierarchy
+- Input fields: `min-height: 48px` for touch targets
+- Checkbox containers: `min-height: 48px` for accessibility
+
+### WCAG 2.1 AAA Compliance Requirements
+- **Focus Indicators**: 3px thickness with 3:1 contrast ratio
+- **Text Contrast**: 7:1 for normal text (vs 4.5:1 AA)
+- **Large Text**: 4.5:1 contrast (18pt+ or 14pt+ bold)
+- **Touch Targets**: 48×48px minimum (AAA recommendation)
+- **Error Messages**: Clear, accessible with color and text
+- **Reduced Motion**: Support for `prefers-reduced-motion`
+
+### Focus Indicator Implementation
+```css
+:where(a, button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+    outline: 3px solid var(--color-blue-600);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+```
+
+### Color Contrast Verification
+- Test all color combinations with contrast checker
+- Ensure 7:1 for text, 3:1 for UI components
+- Verify in both light and dark modes
+- Test with color blindness simulators
+
+### Accessibility Testing Checklist
+- [ ] Keyboard navigation complete
+- [ ] Screen reader compatibility
+- [ ] Voice control compatibility
+- [ ] Magnification support (200%)
+- [ ] High contrast mode
+- [ ] Reduced motion preferences
+- [ ] Color blindness verification
+
+### Visual Hierarchy Principles
+- Section headers with gradient backgrounds
+- Border-left indicators for sections
+- Progressive disclosure for complex forms
+- Clear distinction between required and optional fields
+- Visual grouping with consistent spacing
 
 ### Content Rules
 - ❌ NEVER use content from other businesses

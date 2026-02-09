@@ -55,7 +55,7 @@ Before making any changes, apply **Advanced Prompt Engineering Protocol**:
 - **Architectural**: `laravel/Themes/Meetup/docs/replikate/main_replication_prompt.md`
 - **Technical**: `laravel/Modules/Xot/docs/`, `laravel/Modules/Cms/docs/`
 - **Domain**: Complete LaravelPizza project understanding (meetup platform, NOT e-commerce)
-- **Legal/Accessibility**: GDPR compliance + WCAG 2.1 AA standards
+- **Legal/Accessibility**: GDPR compliance + WCAG 2.1 AAA standards
 - **Advanced Patterns**: Chain-of-thought, few-shot learning, ReAct methodology
 
 ### **Quality Assurance Framework:**
@@ -64,6 +64,27 @@ Before making any changes, apply **Advanced Prompt Engineering Protocol**:
 - **Error Recovery**: <5% failure rate with graceful handling
 - **Documentation Consistency**: 95% adherence to established patterns
 - **Innovation Index**: +30% improvement over previous approaches
+
+### **NEW 2026-02-09: Translation & Localization Rules**
+- **CRITICAL**: Translation files MUST contain content in target language, NOT English
+- Italian files → Italian content, German files → German content, etc.
+- Only keep translations for ACTIVE enum fields - remove commented/deprecated ones
+- Use `LaravelLocalization::localizeUrl('/path')` for all URLs
+- Never hardcode locale prefixes in links
+- Check all 6 languages: it, en, de, fr, es, ru
+
+### **NEW 2026-02-09: Label & Translation System**
+- **NEVER use `->label()` on Filament components**
+- Translations handled automatically by LangServiceProvider
+- Pattern: `{modulo}::{widget}.fields.{campo}.{tipo}`
+- AutoLabelAction generates keys automatically
+- Examples: `user::register_widget.fields.first_name.label`
+
+### **NEW 2026-02-09: Lock File Protocol**
+- Before modifying ANY file, create `.lock` file with same name
+- If `.lock` exists, work on other files
+- After modification, delete the `.lock` file
+- This prevents concurrent modification conflicts
 
 ## Step-by-Step Implementation Plan
 

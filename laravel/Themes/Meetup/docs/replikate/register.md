@@ -353,3 +353,6 @@ npm run copy
 3. **Implement**: widget PHP → translations → Blade view → page view
 4. **Verify**: PHPStan level 10, keyboard navigation, screen reader, contrast
 5. **After changes**: update docs, commit and push
+
+
+ci sono molte funzioni dentro laravel/Modules/Gdpr/app/Filament/Widgets/Auth/RegisterWidget.php  che dovrebbero essere https://github.com/spatie/laravel-queueable-action qualcuna nel modulo user e qualcuna nel modulo gdpr e qualcuna in altri moduli , come sempre prima studi, aggiorni e migliori le cartelle docs dentro i moduli e dentro i temi poi implementi e poi controlli

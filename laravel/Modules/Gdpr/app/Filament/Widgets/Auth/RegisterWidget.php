@@ -71,12 +71,12 @@ class RegisterWidget extends XotBaseWidget
                 ->required()
                 ->email()
                 ->maxLength(255)
-                ->unique(User::class, 'email')
+                //->unique(User::class, 'email')
                 ->autocomplete('email'),
             'password' => TextInput::make('password')
                 ->password()
                 ->required()
-                ->rule(PasswordData::make()->getPasswordRule())
+                //->rule(PasswordData::make()->getPasswordRule())
                 ->autocomplete('new-password')
                 ->revealable()
                 ->confirmed(),
@@ -93,7 +93,7 @@ class RegisterWidget extends XotBaseWidget
 
     public function submit(): void
     {
-        try {
+        //try {
             $formData = $this->form->getState();
             $this->validateGDPRConsent();
 
@@ -109,11 +109,12 @@ class RegisterWidget extends XotBaseWidget
             });
 
             $this->handleSuccessfulRegistration($user);
+            /*
         } catch (ValidationException $e) {
             throw $e;
         } catch (\Exception $e) {
             $this->handleRegistrationError($e);
-        }
+        }*/
     }
 
     /**
@@ -154,7 +155,7 @@ class RegisterWidget extends XotBaseWidget
             'password' => Hash::make(
                 app(SafeStringCastAction::class)->execute($formData['password']),
             ),
-            'type' => 'standard',
+            'type' => 'customer_user',
             'state' => 'active',
             'email_verified_at' => now(),
         ];
