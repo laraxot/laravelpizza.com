@@ -2,7 +2,9 @@
     
     <x-section slug="header"/>
     
-    {{ $slot }}
+    <main id="main-content">
+        {{ $slot }}
+    </main>
    
     <x-section slug="footer"/>
    

@@ -52,9 +52,15 @@
    - Confronto struttura e contenuti; uso MCP o `npm run screenshots` / `npm run screenshots:footer` (Playwright)
    - Screenshot in [screenshots/grafica-confronto](screenshots/grafica-confronto/), [screenshots/footer-logo-confronto](screenshots/footer-logo-confronto/README.md)
 
+10. **[Accessibilità & WCAG](./wcag.md)**
+    - Checklist WCAG 2.2 Level AA
+    - Focus states, contrasto colore, navigazione tastiera
+    - Strumenti di verifica
+
+
 ### Riferimenti Cross-Module
 
-10. **[Regole Xot](../../Modules/Xot/docs/critical-rules-consolidated.md)**
+11. **[Regole Xot](../../Modules/Xot/docs/critical-rules-consolidated.md)**
     - Regole generali Laraxot
     - Filosofia Migrazioni
     - Estensioni Filament

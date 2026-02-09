@@ -64,7 +64,7 @@ Replicare laravelpizza.com all'interno del framework Laraxot con frontend Tailwi
 2. **Performance & Accessibilità**
    - [ ] Ottimizzazione immagini/assets
    - [ ] Lighthouse audit
-   - [ ] Accessibilità (focus, aria-labels)
+   - [ ] Accessibilità (WCAG 2.2 AA compliant, vedi `Themes/Meetup/docs/wcag.md`)
 3. **Deployment Ready**
    - [ ] Build Vite + versionamento
    - [ ] Configurare env per produzione (cache, queue)
@@ -78,6 +78,7 @@ Replicare laravelpizza.com all'interno del framework Laraxot con frontend Tailwi
 ---
 ## Checklist Trasversale
 - [ ] **Strict Compliance**: No Controllers, No property_exists, Folio+Volt for Front, Filament+XotBase for Back.
+- [ ] **Accessibility**: Rispettare WCAG 2.2 AA (vedi `Themes/Meetup/docs/wcag.md`)
 - [ ] Traduzioni (`lang/it/meetup.php`)
 - [ ] Logica multi-tenant (config `local/laravelpizza`)
 - [ ] Integrazione MCP (filesystem, memory, fetch, sequential-thinking, puppeteer)

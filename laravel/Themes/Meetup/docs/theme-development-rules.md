@@ -357,3 +357,17 @@ npm run build && npm run copy
 | Watch mode | `npm run dev` | Theme directory |
 | Clear cache | `php artisan view:clear && php artisan cache:clear` | Laravel root |
 | Test homepage | Browse to `http://127.0.0.1:8000/it` | - |
+
+## 9. Authentication Pages
+
+**Rule**: Authentication pages (Login, Register, Password Reset) MUST use Filament Widgets from the `User` module.
+**NEVER** implement raw forms or Volt components for authentication in the theme.
+
+See: [Modules/User/docs/auth-widget-rules.md](../../Modules/User/docs/auth-widget-rules.md) for detailed rules.
+
+```blade
+{{-- ✅ CORRECT: resources/views/pages/auth/register.blade.php --}}
+<x-layouts.app>
+    @livewire(\Modules\User\Filament\Widgets\Auth\RegisterWidget::class)
+</x-layouts.app>
+```

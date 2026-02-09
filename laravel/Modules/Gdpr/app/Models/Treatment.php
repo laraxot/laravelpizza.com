@@ -60,5 +60,23 @@ class Treatment extends BaseModel
     // protected $table = 'treatment';
     public $incrementing = false;
 
-    protected $fillable = [''];
+    protected $fillable = [
+        'id',
+        'active',
+        'required',
+        'name',
+        'description',
+        'documentVersion',
+        'documentUrl',
+        'weight',
+    ];
+
+    protected $casts = [
+        'active' => 'boolean',
+        'required' => 'boolean',
+        'weight' => 'integer',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+    ];
 }

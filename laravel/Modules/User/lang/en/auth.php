@@ -32,6 +32,58 @@ return [
         'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
         'unauthorized' => 'You are not authorized to access this resource.',
     ],
+    // Registration Widget - specific translations
+    'register' => [
+        'title' => 'Create a new account',
+        'subtitle' => 'Enter your details to register',
+        'name' => 'Full name',
+        'name_placeholder' => 'Mario Rossi',
+        'email' => 'Email address',
+        'email_placeholder' => 'example@email.com',
+        'password' => 'Password',
+        'password_placeholder' => '••••••••',
+        'password_confirmation' => 'Confirm password',
+        'password_confirmation_placeholder' => '••••••••',
+        'submit' => 'Register',
+        'success' => 'Registration completed successfully.',
+        'failed' => 'Unable to complete registration.',
+        'already_have_account' => 'Already have an account?',
+        'login' => 'Sign in',
+        'already_registered' => 'Already have an account?',
+        'error_occurred' => 'An error occurred during registration. Please try again.',
+        'name_structured' => [
+            'label' => 'Name',
+            'placeholder' => 'Enter your full name',
+        ],
+        'email_structured' => [
+            'label' => 'Email',
+            'placeholder' => 'Enter your email',
+        ],
+        'password_structured' => [
+            'label' => 'Password',
+            'placeholder' => 'Enter your password',
+        ],
+        'password_confirmation_structured' => [
+            'label' => 'Confirm Password',
+            'placeholder' => 'Confirm your password',
+        ],
+        'fields' => [
+            'first_name' => 'First name',
+            'last_name' => 'Last name',
+            'email' => 'Email address',
+            'password' => 'Password',
+            'password_confirmation' => 'Confirm password',
+        ],
+        'help' => [
+            'email' => 'Enter a valid email address',
+            'password' => 'Password must be at least 12 characters, include uppercase, lowercase, number and special character',
+        ],
+        'validation' => [
+            'password' => [
+                'complexity' => 'Password must be at least 12 characters, include uppercase, lowercase, number and special character',
+            ],
+        ],
+    ],
     // Password Reset Widget - specific translations
     'password_reset' => [
         'email_placeholder' => 'Enter your email address',

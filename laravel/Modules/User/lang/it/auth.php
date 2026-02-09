@@ -135,6 +135,8 @@ return [
         'failed' => 'Impossibile completare la registrazione.',
         'already_have_account' => 'Hai già un account?',
         'login' => 'Accedi',
+        'already_registered' => 'Hai già un account?',
+        'error_occurred' => 'Si è verificato un errore durante la registrazione. Riprova.',
         'name_structured' => [
             'label' => 'Nome',
             'placeholder' => 'Inserisci il tuo nome completo',
@@ -150,6 +152,22 @@ return [
         'password_confirmation_structured' => [
             'label' => 'Conferma Password',
             'placeholder' => 'Conferma la password',
+        ],
+        'fields' => [
+            'first_name' => 'Nome',
+            'last_name' => 'Cognome',
+            'email' => 'Indirizzo email',
+            'password' => 'Password',
+            'password_confirmation' => 'Conferma password',
+        ],
+        'help' => [
+            'email' => 'Inserisci un indirizzo email valido',
+            'password' => 'La password deve contenere almeno 12 caratteri, una maiuscola, una minuscola, un numero e un carattere speciale',
+        ],
+        'validation' => [
+            'password' => [
+                'complexity' => 'La password deve contenere almeno 12 caratteri, una lettera maiuscola, una minuscola, un numero e un carattere speciale',
+            ],
         ],
     ],
     'forgot_password' => [

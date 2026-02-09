@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets\Auth;
 
+use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Grid;
@@ -19,9 +20,17 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 class RegisterWidget extends XotBaseWidget
 {
-    protected string $view = 'user::widgets.auth.register-widget';
+    //protected string $view = 'pub_theme::filament.widgets.auth.register';
+    
+    /**
+     * Percorsi privacy per compliance GDPR e AGID.
+     */
+    private const PRIVACY_POLICY_URL = '/privacy';
+    private const TERMS_CONDITIONS_URL = '/terms';
+    private const COOKIE_POLICY_URL = '/cookies';
+    private const ACCESSIBILITY_STATEMENT = '/accessibility';
 
-    protected static ?int $sort = 2;
+    //protected static ?int $sort = 2;
 
     protected static ?string $maxHeight = '600px';
 
@@ -45,33 +54,25 @@ class RegisterWidget extends XotBaseWidget
         return [
             'user_info' => Section::make()->schema([
                 'first_name' => TextInput::make('first_name')
-                    ->label(__('user::auth.fields.first_name'))
                     ->required()
                     ->string()
                     ->minLength(2)
                     ->maxLength(255)
-                    ->autocomplete('given-name')
-                    ->validationAttribute(__('user::auth.fields.first_name')),
+                    ->autocomplete('given-name'),
                 'last_name' => TextInput::make('last_name')
-                    ->label(__('user::auth.fields.last_name'))
                     ->required()
                     ->string()
                     ->minLength(2)
                     ->maxLength(255)
-                    ->autocomplete('family-name')
-                    ->validationAttribute(__('user::auth.fields.last_name')),
+                    ->autocomplete('family-name'),
                 'email' => TextInput::make('email')
-                    ->label(__('user::auth.fields.email'))
                     ->required()
                     ->email()
                     ->maxLength(255)
                     ->unique(User::class, 'email')
-                    ->autocomplete('email')
-                    ->validationAttribute(__('user::auth.fields.email'))
-                    ->helperText(__('user::auth.help.email')),
+                    ->autocomplete('email'),
                 'password_grid' => Grid::make(2)->schema([
                     'password' => TextInput::make('password')
-                        ->label(__('user::auth.fields.password'))
                         ->password()
                         ->required()
                         ->string()
@@ -90,22 +91,31 @@ class RegisterWidget extends XotBaseWidget
                             'password.regex' => __('user::auth.validation.password.complexity'),
                         ])
                         ->autocomplete('new-password')
-                        ->validationAttribute(__('user::auth.fields.password'))
-                        ->helperText(__('user::auth.help.password'))
                         ->confirmed(),
                     'password_confirmation' => TextInput::make('password_confirmation')
-                        ->label(__('user::auth.fields.password_confirmation'))
                         ->password()
                         ->required()
                         ->string()
                         ->minLength(12)
                         ->maxLength(255)
                         ->autocomplete('new-password')
-                        ->validationAttribute(__('user::auth.fields.password_confirmation'))
                         ->dehydrated(false)
                         ->same('password'),
                 ]),
             ]),
+            'gdpr' => Section::make()->schema(function () {
+                $treatments = Treatment::where('active', true)->orderBy('weight')->get();
+                $schema = [];
+                foreach ($treatments as $treatment) {
+                    $fieldName = 'consent_' . $treatment->id;
+                    $schema[$fieldName] = Checkbox::make($fieldName)
+                        ->label(__($treatment->description))
+                        ->required($treatment->required)
+                        ->validationAttribute(__($treatment->description))
+                        ->accepted($treatment->required);
+                }
+                return $schema;
+            }),
         ];
     }
 
@@ -117,6 +127,22 @@ class RegisterWidget extends XotBaseWidget
 
             $user = DB::transaction(function () use ($validatedData) {
                 $user = $this->createUser($validatedData);
+                
+                // Save Consents
+                $formData = $this->form->getState();
+                $treatments = Treatment::where('active', true)->get();
+                foreach ($treatments as $treatment) {
+                    $fieldName = 'consent_' . $treatment->id;
+                    if (! empty($formData[$fieldName])) {
+                        Consent::create([
+                            'user_id' => $user->id,
+                            'subject_id' => $user->id,
+                            'treatment_id' => $treatment->id,
+                            'type' => $treatment->name,
+                        ]);
+                    }
+                }
+
                 $this->afterUserCreated($user);
 
                 return $user;

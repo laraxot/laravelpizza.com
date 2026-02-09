@@ -37,6 +37,16 @@ new class extends Component
 
 ?>
 
+@php
+// Check if this is an auth route and redirect to the appropriate auth page
+$authRoutes = ['login', 'register', 'password', 'verify'];
+if (in_array($slug, $authRoutes)) {
+    $authPage = 'auth.' . $slug;
+    echo view($authPage);
+    return;
+}
+@endphp
+
 <x-layouts.public>
     @volt('pages.view')
     <div>

@@ -1,81 +1,40 @@
 <?php
 
-use Themes\Sixteen\Models\User;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Auth\Events\Registered;
-use Livewire\Volt\Component;
-use Livewire\Attributes\Validate;
 use function Laravel\Folio\{middleware, name};
 
 middleware(['guest']);
 name('register');
 
-new class extends Component
-{
-    #[Validate('required')]
-    public $name = '';
-
-    #[Validate('required|email|unique:users')]
-    public $email = '';
-
-    #[Validate('required|min:8|same:passwordConfirmation')]
-    public $password = '';
-
-    #[Validate('required|min:8|same:password')]
-    public $passwordConfirmation = '';
-
-    public function register()
-    {
-        $this->validate();
-
-        $user = User::create([
-            'email' => $this->email,
-            'name' => $this->name,
-            'password' => Hash::make($this->password),
-        ]);
-
-        event(new Registered($user));
-
-        Auth::login($user, true);
-
-        return redirect()->intended('/');
-    }
-};
-
 ?>
 
-<x-layouts.marketing>
+<x-layouts.app>
+    <x-slot name="title">
+        {{ __('Registrazione') }}
+    </x-slot>
 
-    <div class="flex flex-col items-stretch justify-center w-screen min-h-screen py-10 sm:items-center">
-
-        <div class="sm:mx-auto sm:w-full sm:max-w-md">
-            <x-ui.link href="{{ route('home') }}">
-                <x-ui.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
-                <x-ui.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
-            </x-ui.link>
-            <h2 class="mt-5 text-2xl font-extrabold leading-9 text-center text-gray-800 dark:text-gray-200">Create a new
-                account</h2>
-            <div class="text-sm leading-5 text-center text-gray-600 dark:text-gray-400 space-x-0.5">
-                <span>Or</span>
-                <x-ui.text-link href="{{ route('login') }}">sign in to your account</x-ui.text-link>
+    <!-- Refactored Register Section matching Login style -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-md">
+            
+            {{-- Register Widget Filament 4 --}}
+            <div class="bg-white dark:bg-gray-800 shadow-xl rounded-lg overflow-hidden">
+                @livewire(\Modules\User\Filament\Widgets\Auth\RegisterWidget::class)
             </div>
-        </div>
 
-        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-            <div class="px-10 py-0 sm:py-8 sm:shadow-sm sm:bg-white dark:sm:bg-gray-950/50 dark:border-gray-200/10 sm:border sm:rounded-lg border-gray-200/60">
-                @volt('auth.register')
-                <form wire:submit="register" class="space-y-6">
-                    <x-ui.input label="Name" type="text" id="name" name="name" wire:model="name" />
-                    <x-ui.input label="Email address" type="email" id="email" name="email" wire:model="email" />
-                    <x-ui.input label="Password" type="password" id="password" name="password" wire:model="password" />
-                    <x-ui.input label="Confirm Password" type="password" id="password_confirmation" name="password_confirmation" wire:model="passwordConfirmation" />
-                    <x-ui.button type="primary" rounded="md" submit="true">Register</x-ui.button>
-                </form>
-                @endvolt
+            <!-- Login CTA -->
+            <div class="mt-8 text-center fade-in-up">
+                <p class="text-gray-700 dark:text-gray-300 mb-4 font-medium">
+                    {{ __('Hai già un account?') }}
+                </p>
+                <a href="{{ route('login') }}" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary-600 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:text-primary-400 dark:hover:bg-gray-700 shadow-sm transition duration-150 ease-in-out">
+                    {{ __('Accedi al tuo account') }}
+                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14"></path>
+                    </svg>
+                </a>
             </div>
+
         </div>
+    </section>
 
-    </div>
-
-</x-layouts.marketing>
+</x-layouts.app>
