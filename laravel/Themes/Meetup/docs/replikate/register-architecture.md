@@ -57,9 +57,10 @@ Le regole di validazione includono:
 - Simboli (opzionale)
 - Controllo compromissione (opzionale)
 
-### 3. GDPR Compliance
+### 3. GDPR Compliance (Event/Listener Pattern)
 
-Il widget include la gestione completa dei consensi GDPR:
+Il widget include la gestione completa dei consensi GDPR, implementata tramite pattern Event/Listener per mantenere il disaccoppiamento tra moduli:
+
 - Privacy Policy (obbligatorio)
 - Termini e Condizioni (obbligatorio)
 - Trattamento dati (obbligatorio)
@@ -68,7 +69,34 @@ Il widget include la gestione completa dei consensi GDPR:
 - Analytics (opzionale)
 - Terze parti (opzionale)
 
-I consensi vengono salvati nel modulo Gdpr tramite le entità `Treatment` e `Consent`.
+**Architettura Decoupled:**
+
+```php
+// User module (core) - dispatches event
+UserRegistered::dispatch(
+    user: $user,
+    formData: $formData,
+    ipAddress: request()->ip(),
+    userAgent: request()->userAgent(),
+);
+
+// Gdpr module (optional) - listens and saves consents
+class SaveGdprConsents {
+    public function handle(UserRegistered $event): void {
+        // Saves to Treatment/Consent entities
+    }
+}
+```
+
+Questo pattern garantisce che:
+- Il modulo User funzioni indipendentemente dal modulo Gdpr
+- Il modulo Gdpr estenda il comportamento di registrazione senza dipendenze inverse
+- Altri moduli possano hookare l'evento `UserRegistered` per azioni aggiuntive
+
+**File correlati:**
+- Event: `Modules/User/app/Events/UserRegistered.php`
+- Listener: `Modules/Gdpr/app/Listeners/SaveGdprConsents.php`
+- Documentazione: `Modules/User/docs/architecture/user-gdpr-decoupling.md`
 
 ### 4. Struttura View
 
@@ -86,4 +114,4 @@ Il tema Meetup utilizza:
 
 ## Ultimo Aggiornamento
 
-2026-02-09 - Rimosse tutte le chiamate `->label()` e integrata validazione password via PasswordData.
+2026-02-09 - Implementato pattern Event/Listener per disaccoppiare User da Gdpr (UserRegistered event + SaveGdprConsents listener).

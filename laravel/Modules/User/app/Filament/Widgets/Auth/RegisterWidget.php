@@ -48,85 +48,106 @@ class RegisterWidget extends XotBaseWidget
     public function getFormSchema(): array
     {
         return [
-            'user_info' => Section::make()->schema([
-                'first_name' => TextInput::make('first_name')
-                    ->required()
-                    ->string()
-                    ->minLength(2)
-                    ->maxLength(255)
-                    ->autocomplete('given-name'),
-                'last_name' => TextInput::make('last_name')
-                    ->required()
-                    ->string()
-                    ->minLength(2)
-                    ->maxLength(255)
-                    ->autocomplete('family-name'),
-                'email' => TextInput::make('email')
-                    ->required()
-                    ->email()
-                    ->maxLength(255)
-                    ->unique(User::class, 'email')
-                    ->autocomplete('email'),
-                'password_grid' => Grid::make(2)->schema([
-                    'password' => TextInput::make('password')
-                        ->password()
+            'user_info' => Section::make('Informazioni personali')
+                ->description('Inserisci i tuoi dati per creare il tuo account')
+                ->icon('heroicon-o-user')
+                ->schema([
+                    'name_grid' => Grid::make(2)->schema([
+                        'first_name' => TextInput::make('first_name')
+                            ->required()
+                            ->string()
+                            ->minLength(2)
+                            ->maxLength(255)
+                            ->autocomplete('given-name')
+                            ->extraInputAttributes(['class' => 'text-lg']),
+                        'last_name' => TextInput::make('last_name')
+                            ->required()
+                            ->string()
+                            ->minLength(2)
+                            ->maxLength(255)
+                            ->autocomplete('family-name')
+                            ->extraInputAttributes(['class' => 'text-lg']),
+                    ]),
+                    'email' => TextInput::make('email')
                         ->required()
-                        ->rule(PasswordData::make()->getPasswordRule())
-                        ->validationMessages([
-                            'password.regex' => __('user::auth.validation.password.complexity'),
-                        ])
-                        ->helperText(PasswordData::make()->getHelperText())
-                        ->autocomplete('new-password')
-                        ->confirmed(),
-                    'password_confirmation' => TextInput::make('password_confirmation')
-                        ->password()
-                        ->required()
-                        ->string()
-                        //->minLength(12)
-                        //->maxLength(255)
-                        ->autocomplete('new-password')
-                        ->dehydrated(false)
-                        ->same('password'),
+                        ->email()
+                        ->maxLength(255)
+                        ->unique(User::class, 'email')
+                        ->autocomplete('email')
+                        ->extraInputAttributes(['class' => 'text-lg']),
+                    'password_section' => Section::make('Sicurezza')
+                        ->description('Crea una password sicura per il tuo account')
+                        ->schema([
+                            'password_grid' => Grid::make(2)->schema([
+                                'password' => TextInput::make('password')
+                                    ->password()
+                                    ->required()
+                                    ->rule(PasswordData::make()->getPasswordRule())
+                                    ->validationMessages([
+                                        'password.regex' => __('user::auth.validation.password.complexity'),
+                                    ])
+                                    ->autocomplete('new-password')
+                                    ->confirmed()
+                                    ->extraInputAttributes(['class' => 'text-lg', 'minlength' => '8']),
+                                'password_confirmation' => TextInput::make('password_confirmation')
+                                    ->password()
+                                    ->required()
+                                    ->string()
+                                    ->autocomplete('new-password')
+                                    ->dehydrated(false)
+                                    ->same('password')
+                                    ->extraInputAttributes(['class' => 'text-lg']),
+                            ]),
+                        ]),
                 ]),
-            ]),
-            'gdpr' => Section::make()->schema([
-                'privacy_policy_accepted' => Checkbox::make('privacy_policy_accepted')
-                    ->accepted()
-                    ->required()
-                    ->validationMessages([
-                        'accepted' => __('user::auth.gdpr.privacy_policy_required'),
-                    ])
-                    ->helperText(__('user::auth.gdpr.privacy_policy_hint'))
-                    ->default(false),
-                'terms_accepted' => Checkbox::make('terms_accepted')
-                    ->accepted()
-                    ->required()
-                    ->validationMessages([
-                        'accepted' => __('user::auth.gdpr.terms_required'),
-                    ])
-                    ->helperText(__('user::auth.gdpr.terms_hint'))
-                    ->default(false),
-                'data_processing_accepted' => Checkbox::make('data_processing_accepted')
-                    ->accepted()
-                    ->required()
-                    ->validationMessages([
-                        'accepted' => __('user::auth.gdpr.data_processing_required'),
-                    ])
-                    ->helperText(__('user::auth.gdpr.data_processing_hint'))
-                    ->default(false),
-                'marketing_consent' => Checkbox::make('marketing_consent')
-                    ->helperText(__('user::auth.gdpr.marketing_hint'))
-                    ->default(false),
-                'profiling_consent' => Checkbox::make('profiling_consent')
-                    ->helperText(__('user::auth.gdpr.profiling_hint'))
-                    ->default(false),
-                'analytics_consent' => Checkbox::make('analytics_consent')
-                    ->helperText(__('user::auth.gdpr.analytics_hint'))
-                    ->default(false),
-                'third_party_consent' => Checkbox::make('third_party_consent')
-                    ->helperText(__('user::auth.gdpr.third_party_hint'))
-                    ->default(false),
-            ]),
+            'gdpr' => Section::make('Consensi e Privacy')
+                ->description('Per proseguire, devi accettare i termini obbligatori. I consensi opzionali sono personalizzabili.')
+                ->icon('heroicon-o-shield-check')
+                ->collapsible()
+                ->persistCollapsed()
+                ->schema([
+                    'mandatory_consents' => Section::make('Consensi Obbligatori')
+                        ->description('Devi accettare questi termini per proseguire')
+                        ->icon('heroicon-o-exclamation-circle')
+                        ->schema([
+                            'privacy_policy_accepted' => Checkbox::make('privacy_policy_accepted')
+                                ->accepted()
+                                ->required()
+                                ->validationMessages([
+                                    'accepted' => __('user::auth.gdpr.privacy_policy_required'),
+                                ])
+                                ->default(false),
+                            'terms_accepted' => Checkbox::make('terms_accepted')
+                                ->accepted()
+                                ->required()
+                                ->validationMessages([
+                                    'accepted' => __('user::auth.gdpr.terms_required'),
+                                ])
+                                ->default(false),
+                            'data_processing_accepted' => Checkbox::make('data_processing_accepted')
+                                ->accepted()
+                                ->required()
+                                ->validationMessages([
+                                    'accepted' => __('user::auth.gdpr.data_processing_required'),
+                                ])
+                                ->default(false),
+                        ]),
+                    'optional_consents' => Section::make('Consensi Opzionali')
+                        ->description('Puoi personalizzare queste preferenze in qualsiasi momento dal tuo profilo')
+                        ->icon('heroicon-o-cog')
+                        ->collapsible()
+                        ->collapsed()
+                        ->schema([
+                            'marketing_consent' => Checkbox::make('marketing_consent')
+                                ->default(false),
+                            'profiling_consent' => Checkbox::make('profiling_consent')
+                                ->default(false),
+                            'analytics_consent' => Checkbox::make('analytics_consent')
+                                ->default(false),
+                            'third_party_consent' => Checkbox::make('third_party_consent')
+                                ->default(false),
+                        ]),
+                ]),
         ];
     }
 

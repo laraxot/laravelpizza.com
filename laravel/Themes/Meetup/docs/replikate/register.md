@@ -31,3 +31,9 @@ se avessi studiato a fondo come ti ho chiesto piu' volte il codice e le cartelle
 
 
 http://127.0.0.1:8001/it/auth/register  migliorala controllala bene ! e dato che user non dipendete da gdpr ma gdpr dipende da user probabilmente era meglio non @livewire(\Modules\User\Filament\Widgets\Auth\RegisterWidget::class)  ma @livewire(\Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget::class)  , ragiona a fondo 
+
+
+aumenta al massimo la ui/ux e wcag di http://127.0.0.1:8001/it/auth/register  , non puoi mettere un form cosi' stretto in mezzo alla pagina cosi' a cazzo , studia in internet anche come aumentare ui/ux e wcag poi aggiorni le cartelle docs dentro i moduli e dentro i temi e poi ragioni poi implementa e poi controlla
+
+
+in http://127.0.0.1:8001/en/auth/register hai messo sia i checkbox che "By continuing, you confirm that you have read and accepted the privacy policy and the terms and conditions ."  hai messo 2 volte Already have an account? user::auth.login.submit  e cmq mancano anche le traduzioni per le altre lingue 

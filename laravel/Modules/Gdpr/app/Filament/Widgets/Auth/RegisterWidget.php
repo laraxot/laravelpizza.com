@@ -113,14 +113,7 @@ class RegisterWidget extends XotBaseWidget
                         ])
                         ->helperText(__('gdpr::register.consents.privacy_policy_hint'))
                         ->default(false),
-                    'terms_accepted' => Checkbox::make('terms_accepted')
-                        ->accepted()
-                        ->required()
-                        ->validationMessages([
-                            'accepted' => __('gdpr::register.consents.terms_required'),
-                        ])
-                        ->helperText(__('gdpr::register.consents.terms_hint'))
-                        ->default(false),
+
                     'data_processing_accepted' => Checkbox::make('data_processing_accepted')
                         ->accepted()
                         ->required()
