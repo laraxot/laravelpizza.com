@@ -10,6 +10,7 @@
 - [Theme Development Rules](theme-development-rules.md) - Development guidelines
 - [Architecture Folio Volt Filament](architecture-folio-volt-filament.md) - Architecture patterns
 - [Filament 5 – riferimento tema](filament-5-theme-reference.md) - Filament 5 requirements, nostro setup, CSS nel tema
+- [PasswordData Integration](passworddata-integration.md) - Enterprise-grade password configuration for registration forms
 - [Grafica vs laravelpizza.com](grafica-confronto-laravelpizza.md) - Confronto grafica e uso MCP per screenshot
 - [Differenze grafica e miglioramenti](differenze-grafica-e-miglioramenti.md) - Differenze dettagliate (header, hero, features, CTA, footer) e priorità miglioramenti; screenshot in screenshots/grafica-confronto
 - [Differenze grafica approfondimento](differenze-grafica-approfondimento.md) - Mappatura file, codice (logo, hero SVG, nav/footer URL), checklist tecnica

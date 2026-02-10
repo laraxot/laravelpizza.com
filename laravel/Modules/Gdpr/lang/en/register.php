@@ -13,11 +13,31 @@ return [
 
     // === FIELDS ===
     'fields' => [
-        'first_name' => 'First Name',
-        'last_name' => 'Last Name',
-        'email' => 'Your Best Email',
-        'password' => 'Secure Password',
-        'password_confirmation' => 'Confirm Password',
+        'first_name' => [
+            'label' => 'First Name',
+            'placeholder' => 'John',
+            'helper_text' => 'Your first name for the community',
+        ],
+        'last_name' => [
+            'label' => 'Last Name',
+            'placeholder' => 'Doe',
+            'helper_text' => 'Your last name for the community',
+        ],
+        'email' => [
+            'label' => 'Your Best Email',
+            'placeholder' => 'john@example.com',
+            'helper_text' => 'No spam, just Laravel content 🚀',
+        ],
+        'password' => [
+            'label' => 'Secure Password',
+            'placeholder' => 'Something super secret...',
+            'helper_text' => 'Minimum 8 characters',
+        ],
+        'password_confirmation' => [
+            'label' => 'Confirm Password',
+            'placeholder' => 'Repeat your password',
+            'helper_text' => 'Make sure it matches',
+        ],
     ],
 
     // === SECTIONS ===

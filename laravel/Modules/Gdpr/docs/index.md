@@ -131,6 +131,9 @@ $gdprService->deleteUserAccount($user);
 - [Notify Module](../Notify/docs/index.md) - Notification system
 - [Xot Module](../Xot/docs/index.md) - Core base classes
 
+## Integration Documentation
+- [PasswordData Integration](./passworddata-integration.md) - Enterprise-grade password configuration with GDPR compliance
+
 ## Troubleshooting
 Common issues and solutions:
 - Consent tracking inconsistencies

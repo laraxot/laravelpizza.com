@@ -39,6 +39,18 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  */
 class RegisterWidget extends XotBaseWidget
 {
+    public string $first_name = '';
+
+    public string $last_name = '';
+
+    public string $email = '';
+
+    public string $password = '';
+
+    public string $password_confirmation = '';
+
+    public bool $show_password = false;
+
     #[Validate('accepted', message: '')]
     public bool $privacy_accepted = false;
 
@@ -54,75 +66,34 @@ class RegisterWidget extends XotBaseWidget
 
     public function mount(): void
     {
-        $this->form->fill([]);
+        // Non usare form->fill() perché usiamo proprietà pubbliche dirette
     }
 
-    #[\Override]
-    public function getFormSchema(): array
+    public function rules(): array
     {
         return [
-            'name_grid' => Grid::make(2)->schema([
-                'first_name' => TextInput::make('first_name')
-                    ->required()
-                    ->string()
-                    ->minLength(2)
-                    ->maxLength(255)
-                    ->autocomplete('given-name')
-                    ->placeholder(__('gdpr::register.fields.first_name.placeholder'))
-                    ->helperText(__('gdpr::register.fields.first_name.helper_text')),
-                'last_name' => TextInput::make('last_name')
-                    ->required()
-                    ->string()
-                    ->minLength(2)
-                    ->maxLength(255)
-                    ->autocomplete('family-name')
-                    ->placeholder(__('gdpr::register.fields.last_name.placeholder'))
-                    ->helperText(__('gdpr::register.fields.last_name.helper_text')),
-            ]),
-            'email' => TextInput::make('email')
-                ->required()
-                ->email()
-                ->maxLength(255)
-                //->unique(User::class, 'email')
-                ->autocomplete('email')
-                ->placeholder(__('gdpr::register.fields.email.placeholder'))
-                ->helperText(__('gdpr::register.fields.email.helper_text')),
-            'password' => TextInput::make('password')
-                ->password()
-                ->required()
-                ->rule(PasswordData::make()->getPasswordRule())
-                ->autocomplete('new-password')
-                ->revealable()
-                ->confirmed()
-                ->placeholder(__('gdpr::register.fields.password.placeholder'))
-                ->helperText(__('gdpr::register.fields.password.helper_text')),
-            'password_confirmation' => TextInput::make('password_confirmation')
-                ->password()
-                ->required()
-                ->string()
-                ->autocomplete('new-password')
-                ->revealable()
-                ->dehydrated(false)
-                ->same('password')
-                ->placeholder(__('gdpr::register.fields.password_confirmation.placeholder'))
-                ->helperText(__('gdpr::register.fields.password_confirmation.helper_text')),
+            'first_name' => 'required|string|min:2|max:255',
+            'last_name' => 'required|string|min:2|max:255',
+            'email' => 'required|email|max:255|unique:users,email',
+            'password' => 'required|string|min:8|confirmed',
         ];
     }
 
     public function submit(): void
     {
         try {
-            $formData = $this->form->getState();
+            $validatedData = $this->validate();
+
             app(ValidateGdprConsentAction::class)->execute(
                 $this->privacy_accepted,
                 $this->terms_accepted
             );
 
-            $validatedData = app(ValidateUserDataAction::class)->execute($formData);
+            $formData = app(ValidateUserDataAction::class)->execute($validatedData);
             $this->logRegistrationAttempt($formData);
 
-            $user = DB::transaction(function () use ($validatedData) {
-                $user = app(CreateUserAction::class)->execute($validatedData);
+            $user = DB::transaction(function () use ($formData) {
+                $user = app(CreateUserAction::class)->execute($formData);
                 app(SaveGdprConsentsAction::class)->execute($user, app(CollectGdprConsentsAction::class)->execute($this->privacy_accepted, $this->terms_accepted, $this->marketing_consent));
                 app(LogRegistrationAction::class)->execute($user, [
                     'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($this->privacy_accepted, $this->terms_accepted, $this->marketing_consent),
@@ -156,8 +127,4 @@ class RegisterWidget extends XotBaseWidget
             'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($this->privacy_accepted, $this->terms_accepted, $this->marketing_consent),
         ]);
     }
-
-
-
-
 }

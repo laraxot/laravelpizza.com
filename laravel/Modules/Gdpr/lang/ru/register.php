@@ -13,11 +13,31 @@ return [
 
     // === FIELDS ===
     'fields' => [
-        'first_name' => 'Имя',
-        'last_name' => 'Фамилия',
-        'email' => 'Ваш лучший email',
-        'password' => 'Безопасный пароль',
-        'password_confirmation' => 'Подтвердить пароль',
+        'first_name' => [
+            'label' => 'Имя',
+            'placeholder' => 'Иван',
+            'helper_text' => 'Ваше имя для сообщества',
+        ],
+        'last_name' => [
+            'label' => 'Фамилия',
+            'placeholder' => 'Иванов',
+            'helper_text' => 'Ваша фамилия для сообщества',
+        ],
+        'email' => [
+            'label' => 'Ваш лучший email',
+            'placeholder' => 'ivan@primer.ru',
+            'helper_text' => 'Без спама, только контент Laravel 🚀',
+        ],
+        'password' => [
+            'label' => 'Безопасный пароль',
+            'placeholder' => 'Что-то супер секретное...',
+            'helper_text' => 'Минимум 8 символов',
+        ],
+        'password_confirmation' => [
+            'label' => 'Подтвердить пароль',
+            'placeholder' => 'Повторите ваш пароль',
+            'helper_text' => 'Убедитесь, что он совпадает',
+        ],
     ],
 
     // === SECTIONS ===
