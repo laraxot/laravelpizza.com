@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Actions;
 
 use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\Factory as ValidationFactory;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\User\Models\User;
@@ -17,21 +18,32 @@ use Spatie\QueueableAction\QueueableAction;
  */
 class LogRegistrationAction extends QueueableAction
 {
+    private ValidationFactory $validator;
+    
+    public function __construct(ValidationFactory $validator = null)
+    {
+        $this->validator = $validator ?? app(ValidationFactory::class);
+    }
+
     /**
      * Log registration attempt.
      *
      * @param User $user
-     * @param array<string, mixed> $formData
+     * @param array<string> $formData
      * @return void
      */
     public function execute(User $user, array $formData): void
     {
-        Log::info('User registered', [
+        Log::info('User registration attempt', [
             'user_id' => $user->id,
-            'user_email' => $user->email,
+            'email' => $user->email,
             'ip' => request()->ip(),
             'user_agent' => request()->userAgent(),
-            'registration_data_keys' => array_keys($formData),
+            'form_data_keys' => array_keys($formData),
+            'has_gdpr_consent' => !empty(array_filter($formData, function ($key) {
+                return str_starts_with($key, 'gdpr_');
+            })),
+            'registration_source' => 'gdpr_register_widget',
         ]);
     }
 
@@ -62,6 +74,6 @@ class LogRegistrationAction extends QueueableAction
      */
     public function description(): string
     {
-        return 'Logs user registration attempts with security details.';
+        return 'Logs user registration attempts with security details and GDPR consent tracking.';
     }
 }

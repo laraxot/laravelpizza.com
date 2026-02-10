@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Actions;
 
 use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\Factory as ValidationFactory;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\User\Models\User;
@@ -14,9 +15,19 @@ use Spatie\QueueableAction\QueueableAction;
  * Action per il salvataggio dei consensi GDPR.
  * 
  * Estende QueueableAction per separazione responsabilità.
+ * Usa il container Laravel per risolvere le dipendenze correttamente.
  */
 class SaveGdprConsentsAction extends QueueableAction
 {
+    private ValidationFactory $validator;
+    private \Psr\Log\LoggerInterface $logger;
+
+    public function __construct(ValidationFactory $validator, \Psr\Log\LoggerInterface $logger)
+    {
+        $this->validator = $validator;
+        $this->logger = $logger;
+    }
+
     /**
      * Save GDPR consents for a user.
      *
@@ -26,13 +37,11 @@ class SaveGdprConsentsAction extends QueueableAction
      */
     public function execute(User $user, array $consentTypes): void
     {
-        $treatments = Treatment::whereIn('name', $consentTypes)->get();
-        
         foreach ($consentTypes as $consentType) {
-            $treatment = $treatments->firstWhere('name', $consentType);
+            $treatment = Treatment::where('name', $consentType)->first();
             
             if (!$treatment) {
-                Log::warning("Treatment '{$consentType}' not found for user {$user->id}");
+                $this->logger->warning("GDPR treatment '{$consentType}' not found for user {$user->id}");
                 continue;
             }
             
@@ -49,10 +58,10 @@ class SaveGdprConsentsAction extends QueueableAction
             ]);
         }
         
-        Log::info('GDPR consents saved', [
+        $this->logger->info('GDPR consents saved', [
             'user_id' => $user->id,
             'user_email' => $user->email,
-            'consents' => $consentTypes,
+            'consent_types' => $consentTypes,
             'ip' => request()->ip(),
         ]);
     }
@@ -84,6 +93,6 @@ class SaveGdprConsentsAction extends QueueableAction
      */
     public function description(): string
     {
-        return 'Saves GDPR consents for a user with audit trail.';
+        return 'Saves GDPR consents with proper audit trail and logging.';
     }
 }
