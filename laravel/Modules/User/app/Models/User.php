@@ -142,9 +142,6 @@ class User extends BaseUser
     public $connection = 'user';
 
     /** @var array<string, class-string> */
-use Modules\User\Models\User;
-
-// ...
 
     protected $childTypes = [
         'master_admin' => User::class,

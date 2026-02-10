@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 use Livewire\Attributes\Validate;
+use Modules\Gdpr\Actions\Registration\HandleRegistrationErrorAction;
+use Modules\Gdpr\Actions\Registration\HandleSuccessfulRegistrationAction;
+use Modules\Gdpr\Actions\Consent\CollectGdprConsentsAction;
+use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
+use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;
 use Modules\Gdpr\Actions\SaveGdprConsentsAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
@@ -108,84 +113,37 @@ class RegisterWidget extends XotBaseWidget
     {
         try {
             $formData = $this->form->getState();
-            $this->validateGDPRConsent();
+            app(ValidateGdprConsentAction::class)->execute(
+                $this->privacy_accepted,
+                $this->terms_accepted
+            );
 
-            $validatedData = $this->validateUserData($formData);
+            $validatedData = app(ValidateUserDataAction::class)->execute($formData);
             $this->logRegistrationAttempt($formData);
 
             $user = DB::transaction(function () use ($validatedData) {
                 $user = app(CreateUserAction::class)->execute($validatedData);
-                app(SaveGdprConsentsAction::class)->execute($user, $this->collectGdprConsents());
+                app(SaveGdprConsentsAction::class)->execute($user, app(CollectGdprConsentsAction::class)->execute($this->privacy_accepted, $this->terms_accepted, $this->marketing_consent));
                 app(LogRegistrationAction::class)->execute($user, [
-                    'gdpr_consents' => $this->collectGdprConsents(),
+                    'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($this->privacy_accepted, $this->terms_accepted, $this->marketing_consent),
                 ]);
 
                 return $user;
             });
 
-            $this->handleSuccessfulRegistration($user);
+            app(HandleSuccessfulRegistrationAction::class)->execute($user, $this);
         } catch (ValidationException $e) {
             throw $e;
         } catch (\Exception $e) {
-            $this->handleRegistrationError($e);
+            app(HandleRegistrationErrorAction::class)->execute($e, $this);
         }
     }
 
-    /**
-     * @throws ValidationException
-     */
-    protected function validateGDPRConsent(): void
-    {
-        $validator = validator(
-            [
-                'privacy_accepted' => $this->privacy_accepted,
-                'terms_accepted' => $this->terms_accepted,
-            ],
-            [
-                'privacy_accepted' => 'accepted',
-                'terms_accepted' => 'accepted',
-            ],
-            [
-                'privacy_accepted.accepted' => __('gdpr::register.consents.privacy_policy_required'),
-                'terms_accepted.accepted' => __('gdpr::register.consents.terms_required'),
-            ]
-        );
 
-        if ($validator->fails()) {
-            throw new ValidationException($validator);
-        }
-    }
 
-    /**
-     * @param array<string, mixed> $formData
-     * @return array<string, mixed>
-     */
-    protected function validateUserData(array $formData): array
-    {
-        return [
-            'first_name' => app(SafeStringCastAction::class)->execute($formData['first_name']),
-            'last_name' => app(SafeStringCastAction::class)->execute($formData['last_name']),
-            'email' => app(SafeStringCastAction::class)->execute($formData['email']),
-            'password' => Hash::make(
-                app(SafeStringCastAction::class)->execute($formData['password']),
-            ),
-            'type' => 'customer_user',
-            'state' => 'active',
-            'email_verified_at' => now(),
-        ];
-    }
 
-    /**
-     * @return array<string, bool>
-     */
-    protected function collectGdprConsents(): array
-    {
-        return [
-            'privacy_accepted' => $this->privacy_accepted,
-            'terms_accepted' => $this->terms_accepted,
-            'marketing_consent' => $this->marketing_consent,
-        ];
-    }
+
+
 
     protected function logRegistrationAttempt(array $formData): void
     {
@@ -195,36 +153,11 @@ class RegisterWidget extends XotBaseWidget
             'email_hash' => hash('sha256', $email),
             'ip' => request()->ip(),
             'user_agent' => request()->userAgent(),
-            'gdpr_consents' => $this->collectGdprConsents(),
+            'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($this->privacy_accepted, $this->terms_accepted, $this->marketing_consent),
         ]);
     }
 
-    protected function handleSuccessfulRegistration(User $user): void
-    {
-        Auth::login($user);
 
-        Notification::make()
-            ->title(__('gdpr::register.success'))
-            ->body(__('gdpr::register.success_message'))
-            ->success()
-            ->send();
 
-        $this->redirect(route('dashboard'));
-    }
 
-    protected function handleRegistrationError(\Exception $e): void
-    {
-        Log::error('Registration failed: '.$e->getMessage(), [
-            'exception' => $e,
-            'trace' => $e->getTraceAsString(),
-            'ip' => request()->ip(),
-            'user_agent' => request()->userAgent(),
-        ]);
-
-        Notification::make()
-            ->title(__('gdpr::register.error'))
-            ->body(__('gdpr::register.error_message'))
-            ->danger()
-            ->send();
-    }
 }

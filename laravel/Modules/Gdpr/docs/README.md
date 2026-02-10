@@ -145,4 +145,7 @@ php artisan test --filter=PrivacyTest
 - [Laravel Privacy Package](https://github.com/spatie/laravel-permission)
 - [Filament GDPR Resources](https://filamentphp.com/plugins/filament-gdpr)
 
+## UI/UX e WCAG/GDPR Best Practices per la Registrazione
+- [Best Practices per le Pagine di Registrazione](../../../Themes/Meetup/docs/registration-ui-ux-wcag-gdpr.md)
+
 *Ultimo aggiornamento: Sistema di documentazione automatica*

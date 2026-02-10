@@ -4,49 +4,82 @@ declare(strict_types=1);
 
 uses(Modules\Gdpr\Tests\TestCase::class);
 
-use Modules\Gdpr\Models\GdprConsent;
+use Modules\Gdpr\Models\Consent;
+use Modules\Gdpr\Models\Treatment;
 use Modules\User\Models\User;
 
-test('gdpr consent can be created', function () {
+test('consent can be created with subject and treatment', function () {
     $user = User::factory()->create();
+    $treatment = Treatment::firstOrCreate(
+        ['name' => 'privacy_policy'],
+        ['description' => 'Privacy Policy', 'weight' => 1, 'active' => true, 'required' => true]
+    );
 
-    $consent = createGdprConsent([
+    $consent = Consent::create([
+        'subject_id' => $user->id,
+        'treatment_id' => $treatment->id,
         'user_id' => $user->id,
-        'consent_type' => 'privacy_policy',
-        'consented_at' => now(),
-        'ip_address' => '192.168.1.1',
+        'user_type' => get_class($user),
+        'type' => 'privacy_policy',
+        'accepted_at' => now(),
     ]);
 
     expect($consent)
-        ->toBeGdprConsent()
-        ->and($consent->consent_type)
+        ->toBeConsent()
+        ->and($consent->type)
         ->toBe('privacy_policy')
-        ->and($consent->ip_address)
-        ->toBe('192.168.1.1')
-        ->and($consent->consented_at)
+        ->and($consent->accepted_at)
         ->not->toBeNull();
 });
 
-test('gdpr consent belongs to user', function () {
+test('consent belongs to treatment', function () {
     $user = User::factory()->create();
-    $consent = createGdprConsent(['user_id' => $user->id]);
+    $treatment = Treatment::firstOrCreate(
+        ['name' => 'terms_conditions'],
+        ['description' => 'Terms and Conditions', 'weight' => 2, 'active' => true, 'required' => true]
+    );
 
-    expect($consent->user)->toBeInstanceOf(User::class)->and($consent->user->id)->toBe($user->id);
+    $consent = Consent::create([
+        'subject_id' => $user->id,
+        'treatment_id' => $treatment->id,
+        'type' => 'terms_conditions',
+    ]);
+
+    expect($consent->treatment)->toBeInstanceOf(Treatment::class);
+    expect($consent->treatment->id)->toBe($treatment->id);
 });
 
-test('gdpr consent can be withdrawn', function () {
-    $consent = createGdprConsent(['withdrawn_at' => null]);
+test('consent can be created without accepted_at (declined)', function () {
+    $user = User::factory()->create();
 
-    $consent->withdraw();
+    $consent = Consent::create([
+        'subject_id' => $user->id,
+        'type' => 'marketing_consent',
+        'accepted_at' => null,
+    ]);
 
-    expect($consent->fresh()->withdrawn_at)->not->toBeNull();
+    expect($consent->accepted_at)->toBeNull();
 });
 
-test('gdpr consent scope active works', function () {
-    createGdprConsent(['withdrawn_at' => null]); // Active
-    createGdprConsent(['withdrawn_at' => now()]); // Withdrawn
+test('consent has uuid primary key', function () {
+    $user = User::factory()->create();
 
-    $activeCount = GdprConsent::active()->count();
+    $consent = Consent::create([
+        'subject_id' => $user->id,
+        'type' => 'privacy_policy',
+    ]);
 
-    expect($activeCount)->toBe(1);
+    expect($consent->id)->toBeString();
+    expect(strlen($consent->id))->toBe(36);
+});
+
+test('consent fillable fields are correct', function () {
+    $consent = new Consent();
+
+    expect($consent->getFillable())->toContain('subject_id');
+    expect($consent->getFillable())->toContain('treatment_id');
+    expect($consent->getFillable())->toContain('user_id');
+    expect($consent->getFillable())->toContain('user_type');
+    expect($consent->getFillable())->toContain('type');
+    expect($consent->getFillable())->toContain('accepted_at');
 });

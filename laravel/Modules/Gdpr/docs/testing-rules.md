@@ -1,103 +1,104 @@
-# Testing Rules Summary
+# Testing Rules - GDPR Module
 
-## Regole Fondamentali dei Test
+## Fundamental Rules
 
-### 1. **Pest Testing Mandatory**
-- **MAI** usare PHPUnit class-based (`class Test extends TestCase`)
-- **SEMPRE** usare Pest functional syntax (`test()`, `it()`)
-- I test devono essere scritti in formato Pest, non PHPUnit
+### 1. Pest Testing Mandatory
+- **NEVER** use PHPUnit class-based (`class Test extends TestCase`)
+- **ALWAYS** use Pest functional syntax (`test()`, `it()`, `describe()`)
 
-### 2. **NO RefreshDatabase - MAI**
-- **MAI** usare `use RefreshDatabase` nei test
-- **MAI** usare `RefreshDatabase` trait
-- Utilizzare `.env.testing` con SQLite in-memory
-- Usare `DatabaseTransactions` se necessario (raro)
+### 2. MySQL Only — NEVER SQLite
+- **NEVER** use SQLite in-memory for tests
+- **ALWAYS** use MySQL via `.env.testing`
+- The project uses multiple named DB connections (user, gdpr, xot, tenant, etc.)
+- SQLite cannot replicate this multi-connection topology
+- MySQL guarantees the same engine, charset, collation, and foreign-key behaviour as production
 
-### 3. **Configurazione Testing**
-- Tutti i test devono leggere `.env.testing`
-- PHPStan usa configurazione da `phpstan.neon` (non passare livello come parametro)
-- Script di conversione vanno in `bashscripts/`, non nella root di Laravel
+### 3. DatabaseTransactions — NEVER RefreshDatabase
+- **NEVER** use `RefreshDatabase` trait
+- **ALWAYS** use `DatabaseTransactions`
+- RefreshDatabase drops and recreates every table on each test class — extremely slow on MySQL and destroys seed data
+- DatabaseTransactions wraps each test in a transaction and rolls back at the end — near-zero overhead
 
-### 4. **XotBase/LangBase Extension**
-- **MAI** estendere classi Filament direttamente
-- **SEMPRE** estendere `XotBase*` o `LangBase*` a seconda del modulo
-- Controllare se il modulo è multilingue prima di scegliere
+### 4. Generic `php artisan migrate` — No Flags
+- **NEVER** use `--force` flag
+- **NEVER** use `--database` to specify a single connection
+- **ALWAYS** run generic `php artisan migrate`
+- Laraxot auto-discovers migrations from ALL modules via their ServiceProviders
+- A generic migrate runs them in the correct dependency order (Xot -> User -> Gdpr ...)
+- Specifying `--database` per module would miss cross-module tables
+- `--force` is unnecessary because APP_ENV=testing is not "production"
 
-### 5. **property_exists() Prohibition**
-- **MAI** usare `property_exists()` con modelli Eloquent
-- Usare `isset()` per proprietà magiche
+### 5. XotBase Extension
+- **NEVER** extend Filament classes directly in tests
+- **ALWAYS** extend `XotBase*` abstracts
 
-## Struttura dei Test
+### 6. `isset()` not `property_exists()`
+- **NEVER** use `property_exists()` with Eloquent models
+- **ALWAYS** use `isset()` for magic properties
 
-### File di Configurazione
-- `.env.testing` - configurazione ottimizzata per test veloci
-- `phpunit.xml` - configurazione principale
-- `phpstan.neon` - configurazione PHPStan (livello già impostato)
+## TestCase Structure
 
-### Directory dei Test
+```php
+abstract class TestCase extends BaseTestCase
+{
+    use CreatesApplication;
+    use DatabaseTransactions;
+
+    protected static bool $migrated = false;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        if (! self::$migrated) {
+            $this->artisan('migrate');  // Generic, no flags
+            self::$migrated = true;
+        }
+    }
+}
 ```
-laravel/tests/              # Test principali
-laravel/Modules/*/tests/    # Test dei moduli
-laravel/Themes/*/tests/     # Test dei temi
+
+**Why `static $migrated`?** Migrations only run once per test suite (not per test), since DatabaseTransactions rolls back data changes but doesn't drop tables.
+
+## Test File Organization
+
+```
+Modules/Gdpr/tests/
+├── Pest.php                              # Helpers, expectations, TestCase binding
+├── TestCase.php                          # Base test case (MySQL + DatabaseTransactions)
+├── Feature/
+│   ├── RegisterWidgetTest.php            # Action-level tests for register pipeline
+│   ├── RegistrationTest.php              # Integration tests for full registration flow
+│   ├── GdprBusinessLogicTest.php         # CRUD tests for Consent, Treatment, Event
+│   └── ConflictResolutionTest.php        # Model instantiation and property tests
+└── Unit/
+    └── Models/
+        ├── BaseModelTest.php             # Base model properties (connection, timestamps)
+        └── GdprConsentTest.php           # Consent model tests
+        └── GdprConsentBusinessLogicTest.php # Consent business logic tests
 ```
 
-### File Pest
-Ogni modulo può avere il proprio `Pest.php` con:
-- Estensioni personalizzate
-- Helper functions
-- Custom expectations
+## Running Tests
 
-## Comandi Importanti
-
-### PHPStan
 ```bash
-# ❌ ERRATO - Non passare il livello
-./vendor/bin/phpstan analyse --level=8 Modules
+# From laravel/ directory
+php artisan test --filter=Gdpr
 
-# ✅ CORRETTO - Usa configurazione da phpstan.neon
-./vendor/bin/phpstan analyse Modules --memory-limit=-1
+# Or directly with Pest
+cd Modules/Gdpr && ../../vendor/bin/pest
+
+# Single test file
+php artisan test Modules/Gdpr/tests/Feature/RegisterWidgetTest.php
 ```
 
-### Testing
-```bash
-# Run all tests
-composer test
+## Common Mistakes to Avoid
 
-# Run Pest tests
-./vendor/bin/pest
-
-# Test specific module
-cd Modules/ModuleName && ./vendor/bin/pest
-```
-
-### Conversione PHPUnit → Pest
-```bash
-# Script di conversione (in bashscripts/)
-php bashscripts/test_conversion/convert_phpunit_to_pest.php
-```
-
-## Errori Comuni da Evitare
-
-### ❌ Errori Gravi
-1. Usare `RefreshDatabase` in qualsiasi test
-2. Scrivere test PHPUnit class-based invece di Pest
-3. Passare livello a PHPStan come parametro
-4. Mettere script nella root di Laravel invece che in `bashscripts/`
-5. Estendere classi Filament direttamente invece di XotBase/LangBase
-
-### ✅ Best Practices
-1. Usare `.env.testing` con SQLite in-memory
-2. Scrivere test in formato Pest functional
-3. Usare `DatabaseTransactions` invece di `RefreshDatabase`
-4. Seguire la struttura esistente dei test
-5. Documentare le regole nei file `docs/` dei moduli
-
-## Documentazione
-
-Ogni modulo e tema deve documentare:
-1. Regole specifiche del modulo
-2. Configurazione testing
-3. Esempi di test corretti
-4. Errori comuni da evitare
-
-I file di documentazione vanno nelle cartelle `docs/` dentro ogni modulo/tema.
+| Mistake | Why it's wrong | Correct approach |
+|---------|---------------|------------------|
+| `RefreshDatabase` | Drops all tables per class, extremely slow | `DatabaseTransactions` |
+| SQLite in-memory | Can't handle multi-connection topology | MySQL from `.env.testing` |
+| `--database=gdpr` | Only migrates one connection | Generic `php artisan migrate` |
+| `--force` | Unnecessary for APP_ENV=testing | Omit it |
+| `assertDatabaseCount('users', 0)` | Fragile with pre-existing data | Use unique identifiers, query by specific attributes |
+| HTTP POST to Livewire routes | Registration is Livewire, not a POST route | Test the Action pipeline directly |
+| Referencing non-existent models | `GdprConsent` doesn't exist | Use `Consent`, `Treatment`, `Event`, `Profile` |

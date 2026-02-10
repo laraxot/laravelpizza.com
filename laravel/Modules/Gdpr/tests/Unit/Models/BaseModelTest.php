@@ -6,30 +6,41 @@ uses(Modules\Gdpr\Tests\TestCase::class);
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\BaseModel;
-
-beforeEach(function () {
-    $this->baseModel = new class extends BaseModel {
-        protected $table = 'test_gdpr_table';
-    };
-});
+use Modules\Gdpr\Models\Consent;
+use Modules\Gdpr\Models\Treatment;
 
 test('base model extends eloquent model', function () {
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    $consent = new Consent();
+    expect($consent)->toBeInstanceOf(Model::class);
+    expect($consent)->toBeInstanceOf(BaseModel::class);
 });
 
-test('base model has correct table name', function () {
-    expect($this->baseModel->getTable())->toBe('test_gdpr_table');
+test('consent model uses gdpr connection', function () {
+    $consent = new Consent();
+    expect($consent->getConnectionName())->toBe('gdpr');
 });
 
-test('base model can be instantiated', function () {
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+test('treatment model uses gdpr connection', function () {
+    $treatment = new Treatment();
+    expect($treatment->getConnectionName())->toBe('gdpr');
 });
 
-test('base model has proper inheritance chain', function () {
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+test('consent model has timestamps enabled', function () {
+    $consent = new Consent();
+    expect($consent->usesTimestamps())->toBeTrue();
 });
 
-test('base model has timestamps enabled', function () {
-    expect($this->baseModel)->usesTimestamps()->toBeTrue();
+test('treatment model has timestamps enabled', function () {
+    $treatment = new Treatment();
+    expect($treatment->usesTimestamps())->toBeTrue();
+});
+
+test('consent model is not incrementing', function () {
+    $consent = new Consent();
+    expect($consent->getIncrementing())->toBeFalse();
+});
+
+test('treatment model is not incrementing', function () {
+    $treatment = new Treatment();
+    expect($treatment->getIncrementing())->toBeFalse();
 });

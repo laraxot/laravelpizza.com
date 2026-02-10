@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Model;
 use Modules\Gdpr\Models\Consent;
 
 /**
@@ -25,6 +24,27 @@ class ConsentFactory extends Factory
      */
     public function definition(): array
     {
-        return [];
+        return [
+            'subject_id' => null,
+            'treatment_id' => null,
+            'user_id' => null,
+            'user_type' => 'Modules\\User\\Models\\User',
+            'type' => $this->faker->randomElement(['privacy_policy', 'terms_conditions', 'marketing_consent']),
+            'accepted_at' => $this->faker->optional(0.7)->dateTimeBetween('-1 year', 'now'),
+        ];
+    }
+
+    public function accepted(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'accepted_at' => now(),
+        ]);
+    }
+
+    public function declined(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'accepted_at' => null,
+        ]);
     }
 }
