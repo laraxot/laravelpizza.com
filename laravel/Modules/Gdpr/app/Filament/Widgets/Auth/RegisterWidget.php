@@ -22,7 +22,7 @@ use Modules\Gdpr\Actions\SaveGdprConsentsAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\User\Actions\Activity\LogRegistrationAction;
-use Modules\User\Actions\User\CreateUserAction;
+use Modules\User\Actions\CreateUserAction;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
