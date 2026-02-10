@@ -48,16 +48,13 @@ class UserRegistered implements ShouldBroadcast
     /**
      * Create a new event instance.
      *
-     * @param User $user
      * @param array<string, mixed> $formData
-     * @param string $ipAddress
-     * @param string $userAgent
      */
     public function __construct(
         User $user,
         array $formData,
         string $ipAddress,
-        string $userAgent
+        string $userAgent,
     ) {
         $this->user = $user;
         $this->formData = $formData;

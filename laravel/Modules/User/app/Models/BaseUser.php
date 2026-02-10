@@ -27,6 +27,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Laravel\Passport\Contracts\OAuthenticatable;
 use Laravel\Passport\HasApiTokens;
+use Modules\User\Actions\User\AssignModuleRoleAction;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\Traits\HasAuthenticationLogTrait;
 use Modules\User\Models\Traits\HasModules;
@@ -298,9 +299,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function assignModule(string $module): void
     {
-        $role_name = $module.'::admin';
-        $role = Role::firstOrCreate(['name' => $role_name]);
-        $this->assignRole($role);
+        app(AssignModuleRoleAction::class)->execute($this, $module);
     }
 
     public function canAccessPanel(Panel $panel): bool

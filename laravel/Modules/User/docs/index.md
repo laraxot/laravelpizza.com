@@ -51,6 +51,7 @@ This document serves as the central index for the User module, providing guidanc
 - [Profile Management](./PROFILE_MANAGEMENT.md)
 - [Routing Best Practices](./ROUTING_BEST_PRACTICES.md)
 - [Session Management](./SESSION_MANAGEMENT.md)
+- [PasswordData Integration](./passworddata-integration.md) - Enterprise-grade password configuration and DRY principles
 
 ## Sottocartelle
 

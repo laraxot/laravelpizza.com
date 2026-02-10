@@ -111,6 +111,19 @@ class RegisterWidget extends XotBaseWidget
     }
 
 
+    /**
+     * Get the form schema.
+     * Returns empty array as form is rendered in Blade view.
+     *
+     * @return array<int, FilamentFormsComponent>
+     */
+    #[Override]
+    public function getFormSchema(): array
+    {
+        return [];
+    }
+
+
 
 
 

@@ -4,15 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets\Auth;
 
+use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Section;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
-use Livewire\Attributes\Validate;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Events\UserRegistered;
 use Modules\User\Models\User;
@@ -21,13 +22,13 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
 class RegisterWidget extends XotBaseWidget
 {
-    #[Validate('accepted', message: '')]
-    public bool $privacy_accepted = false;
+    // protected string $view = 'pub_theme::filament.widgets.auth.register';
 
-    #[Validate('accepted', message: '')]
-    public bool $terms_accepted = false;
+    // protected static ?int $sort = 2;
 
-    public bool $marketing_consent = false;
+    // protected static ?int $sort = 2;
+
+    protected static ?string $maxHeight = '600px';
 
     public static function canView(): bool
     {
@@ -37,45 +38,99 @@ class RegisterWidget extends XotBaseWidget
     public function mount(): void
     {
         $this->form->fill([]);
+        Log::debug('Registration form initialized', [
+            'ip' => request()->ip(),
+            'user_agent' => request()->userAgent(),
+        ]);
     }
 
     #[\Override]
     public function getFormSchema(): array
     {
         return [
-            'name_grid' => Grid::make(2)->schema([
-                'first_name' => TextInput::make('first_name')
-                    ->required()
-                    ->string()
-                    ->minLength(2)
-                    ->maxLength(255)
-                    ->autocomplete('given-name'),
-                'last_name' => TextInput::make('last_name')
-                    ->required()
-                    ->string()
-                    ->minLength(2)
-                    ->maxLength(255)
-                    ->autocomplete('family-name'),
-            ]),
-            'email' => TextInput::make('email')
-                ->required()
-                ->email()
-                ->maxLength(255)
-                ->unique(User::class, 'email')
-                ->autocomplete('email'),
-            'password' => TextInput::make('password')
-                ->password()
-                ->required()
-                ->rule(PasswordData::make()->getPasswordRule())
-                ->autocomplete('new-password')
-                ->confirmed(),
-            'password_confirmation' => TextInput::make('password_confirmation')
-                ->password()
-                ->required()
-                ->string()
-                ->autocomplete('new-password')
-                ->dehydrated(false)
-                ->same('password'),
+            'user_info' => Section::make('Informazioni personali')
+                ->description('Inserisci i tuoi dati per creare il tuo account')
+                ->icon('heroicon-o-user')
+                ->schema([
+                    'name_grid' => Grid::make(2)->schema([
+                        'first_name' => TextInput::make('first_name')
+                            ->required()
+                            ->string()
+                            ->minLength(2)
+                            ->maxLength(255)
+                            ->autocomplete('given-name')
+                            ->extraInputAttributes(['class' => 'text-lg']),
+                        'last_name' => TextInput::make('last_name')
+                            ->required()
+                            ->string()
+                            ->minLength(2)
+                            ->maxLength(255)
+                            ->autocomplete('family-name')
+                            ->extraInputAttributes(['class' => 'text-lg']),
+                    ]),
+                    'email' => TextInput::make('email')
+                        ->required()
+                        ->email()
+                        ->maxLength(255)
+                        ->unique(User::class, 'email')
+                        ->autocomplete('email')
+                        ->extraInputAttributes(['class' => 'text-lg']),
+                    'password_section' => Section::make('Sicurezza')
+                        ->description('Crea una password sicura per il tuo account')
+                        ->schema([
+                            'password_grid' => Grid::make(2)->schema(
+                                PasswordData::make()->getPasswordFormComponents('password')
+                            ),
+                        ]),
+                ]),
+            'gdpr' => Section::make('Consensi e Privacy')
+                ->description('Per proseguire, devi accettare i termini obbligatori. I consensi opzionali sono personalizzabili.')
+                ->icon('heroicon-o-shield-check')
+                ->collapsible()
+                ->persistCollapsed()
+                ->schema([
+                    'mandatory_consents' => Section::make('Consensi Obbligatori')
+                        ->description('Devi accettare questi termini per proseguire')
+                        ->icon('heroicon-o-exclamation-circle')
+                        ->schema([
+                            'privacy_policy_accepted' => Checkbox::make('privacy_policy_accepted')
+                                ->accepted()
+                                ->required()
+                                ->validationMessages([
+                                    'accepted' => __('user::auth.gdpr.privacy_policy_required'),
+                                ])
+                                ->default(false),
+                            'terms_accepted' => Checkbox::make('terms_accepted')
+                                ->accepted()
+                                ->required()
+                                ->validationMessages([
+                                    'accepted' => __('user::auth.gdpr.terms_required'),
+                                ])
+                                ->default(false),
+                            'data_processing_accepted' => Checkbox::make('data_processing_accepted')
+                                ->accepted()
+                                ->required()
+                                ->validationMessages([
+                                    'accepted' => __('user::auth.gdpr.data_processing_required'),
+                                ])
+                                ->default(false),
+                        ]),
+                    'optional_consents' => Section::make('Consensi Opzionali')
+                        ->description('Puoi personalizzare queste preferenze in qualsiasi momento dal tuo profilo')
+                        ->icon('heroicon-o-cog')
+                        ->collapsible()
+                        ->collapsed()
+                        ->schema([
+                            'marketing_consent' => Checkbox::make('marketing_consent')
+                                ->default(false),
+                            'profiling_consent' => Checkbox::make('profiling_consent')
+                                ->default(false),
+                            'analytics_consent' => Checkbox::make('analytics_consent')
+                                ->default(false),
+                            'third_party_consent' => Checkbox::make('third_party_consent')
+                                ->default(false),
+                        ]),
+                ]),
         ];
     }
 
@@ -83,18 +138,19 @@ class RegisterWidget extends XotBaseWidget
     {
         try {
             $formData = $this->form->getState();
-            $this->validateGDPRConsent();
+            $this->validateGDPRConsent($formData);
 
             $validatedData = $this->validateForm($formData);
             $this->logRegistrationAttempt($formData);
 
-            $user = DB::transaction(function () use ($validatedData) {
+            $user = DB::transaction(function () use ($validatedData, $formData) {
                 $user = $this->createUser($validatedData);
-                $this->afterUserCreated($user);
+                $this->afterUserCreated($user, $formData);
 
+                // Dispatch event for GDPR and other listeners
                 UserRegistered::dispatch(
                     user: $user,
-                    formData: $this->collectGdprConsents(),
+                    formData: $formData,
                     ipAddress: request()->ip(),
                     userAgent: request()->userAgent(),
                 );
@@ -111,24 +167,23 @@ class RegisterWidget extends XotBaseWidget
     }
 
     /**
+     * Validate GDPR consent requirements.
+     *
+     * @param array<string, mixed> $formData
+     *
      * @throws ValidationException
      */
-    protected function validateGDPRConsent(): void
+    protected function validateGDPRConsent(array $formData): void
     {
-        $validator = validator(
-            [
-                'privacy_accepted' => $this->privacy_accepted,
-                'terms_accepted' => $this->terms_accepted,
-            ],
-            [
-                'privacy_accepted' => 'accepted',
-                'terms_accepted' => 'accepted',
-            ],
-            [
-                'privacy_accepted.accepted' => __('user::auth.gdpr.privacy_policy_required'),
-                'terms_accepted.accepted' => __('user::auth.gdpr.terms_required'),
-            ]
-        );
+        $validator = validator($formData, [
+            'privacy_policy_accepted' => 'accepted',
+            'terms_accepted' => 'accepted',
+            'data_processing_accepted' => 'accepted',
+        ], [
+            'privacy_policy_accepted.accepted' => __('user::auth.gdpr.privacy_policy_required'),
+            'terms_accepted.accepted' => __('user::auth.gdpr.terms_required'),
+            'data_processing_accepted.accepted' => __('user::auth.gdpr.data_processing_required'),
+        ]);
 
         if ($validator->fails()) {
             throw new ValidationException($validator);
@@ -137,6 +192,7 @@ class RegisterWidget extends XotBaseWidget
 
     /**
      * @param array<string, mixed> $formData
+     *
      * @return array<string, mixed>
      */
     protected function validateForm(array $formData): array
@@ -155,18 +211,6 @@ class RegisterWidget extends XotBaseWidget
     }
 
     /**
-     * @return array<string, bool>
-     */
-    protected function collectGdprConsents(): array
-    {
-        return [
-            'privacy_accepted' => $this->privacy_accepted,
-            'terms_accepted' => $this->terms_accepted,
-            'marketing_consent' => $this->marketing_consent,
-        ];
-    }
-
-    /**
      * @param array<string, mixed> $formData
      */
     protected function logRegistrationAttempt(array $formData): void
@@ -176,7 +220,15 @@ class RegisterWidget extends XotBaseWidget
             'email_hash' => hash('sha256', $email),
             'ip' => request()->ip(),
             'user_agent' => request()->userAgent(),
-            'gdpr_consents' => $this->collectGdprConsents(),
+            'gdpr_consents' => [
+                'privacy_policy_accepted' => $formData['privacy_policy_accepted'] ?? false,
+                'terms_accepted' => $formData['terms_accepted'] ?? false,
+                'data_processing_accepted' => $formData['data_processing_accepted'] ?? false,
+                'marketing_consent' => $formData['marketing_consent'] ?? false,
+                'profiling_consent' => $formData['profiling_consent'] ?? false,
+                'analytics_consent' => $formData['analytics_consent'] ?? false,
+                'third_party_consent' => $formData['third_party_consent'] ?? false,
+            ],
         ]);
     }
 
@@ -188,7 +240,10 @@ class RegisterWidget extends XotBaseWidget
         return User::create($data);
     }
 
-    protected function afterUserCreated(User $user): void
+    /**
+     * @param array<string, mixed> $formData
+     */
+    protected function afterUserCreated(User $user, array $formData): void
     {
         activity()
             ->causedBy($user)
@@ -197,7 +252,15 @@ class RegisterWidget extends XotBaseWidget
                 'type' => $user->type,
                 'ip_address' => request()->ip(),
                 'user_agent' => request()->userAgent(),
-                'gdpr_consents' => $this->collectGdprConsents(),
+                'gdpr_consents' => [
+                    'privacy_policy_accepted' => $formData['privacy_policy_accepted'] ?? false,
+                    'terms_accepted' => $formData['terms_accepted'] ?? false,
+                    'data_processing_accepted' => $formData['data_processing_accepted'] ?? false,
+                    'marketing_consent' => $formData['marketing_consent'] ?? false,
+                    'profiling_consent' => $formData['profiling_consent'] ?? false,
+                    'analytics_consent' => $formData['analytics_consent'] ?? false,
+                    'third_party_consent' => $formData['third_party_consent'] ?? false,
+                ],
             ])
             ->log('User registered via RegisterWidget with GDPR consents');
     }

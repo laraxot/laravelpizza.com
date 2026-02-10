@@ -26,7 +26,7 @@ use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
-use Modules\User\Actions\User\CreateUserAction;
+use Modules\User\Actions\CreateUserAction;
 use Modules\User\Models\User;
 
 uses(TestCase::class);

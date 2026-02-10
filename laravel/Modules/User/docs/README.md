@@ -1137,6 +1137,9 @@ test('user can switch teams', function () {
 - [Login Component Troubleshooting](./troubleshooting-login-component.md) - Login widget issues
 - [FAQ](./troubleshooting/faq.md) - Frequently asked questions
 
+### Registration Best Practices
+- [UI/UX, WCAG, and GDPR Best Practices for Registration](../../../Themes/Meetup/docs/registration-ui-ux-wcag-gdpr.md)
+
 ---
 
 ## 🔄 Recent Updates

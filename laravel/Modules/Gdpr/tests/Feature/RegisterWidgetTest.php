@@ -227,7 +227,7 @@ it('saves gdpr consents with marketing accepted', function (): void {
 // ---------------------------------------------------------------------------
 
 it('can create a user with customer_user type via CreateUserAction', function (): void {
-    $action = app(\Modules\User\Actions\User\CreateUserAction::class);
+    $action = app(Modules\User\Actions\CreateUserAction::class);
 
     $data = [
         'first_name' => 'Pest',
@@ -271,7 +271,7 @@ it('full registration pipeline works end to end', function (): void {
     expect($validatedData['type'])->toBe('customer_user');
 
     // 3. Create user
-    $user = app(\Modules\User\Actions\User\CreateUserAction::class)->execute($validatedData);
+    $user = app(Modules\User\Actions\CreateUserAction::class)->execute($validatedData);
     expect($user)->toBeInstanceOf(User::class);
 
     // 4. Collect consents

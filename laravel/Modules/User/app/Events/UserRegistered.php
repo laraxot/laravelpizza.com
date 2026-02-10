@@ -11,7 +11,7 @@ use Modules\User\Models\User;
 /**
  * Event fired when a new user is registered.
  * Listeners can hook into this to perform additional actions
- * (e.g., GDPR consent saving, welcome emails, etc.)
+ * (e.g., GDPR consent saving, welcome emails, etc.).
  */
 class UserRegistered
 {
@@ -21,10 +21,10 @@ class UserRegistered
     /**
      * Create a new event instance.
      *
-     * @param User $user The newly created user
-     * @param array<string, mixed> $formData Raw form data from registration
-     * @param string|null $ipAddress IP address of the registrant
-     * @param string|null $userAgent User agent of the registrant
+     * @param User                 $user      The newly created user
+     * @param array<string, mixed> $formData  Raw form data from registration
+     * @param string|null          $ipAddress IP address of the registrant
+     * @param string|null          $userAgent User agent of the registrant
      */
     public function __construct(
         public User $user,
