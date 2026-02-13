@@ -48,7 +48,7 @@ class RegisterWidget extends XotBaseWidget
     #[Validate('required|string|min:2|max:255')]
     public string $last_name = '';
 
-    #[Validate('required|email|max:255|unique:users,email')]
+    #[Validate('required|email|max:255|unique:'.User::class.',email')]
     public string $email = '';
 
     #[Validate('required|string')]
@@ -99,7 +99,7 @@ class RegisterWidget extends XotBaseWidget
             $validatedData = app(ValidateUserDataAction::class)->execute($formData);
             $this->logRegistrationAttempt($formData);
 
-            $user = DB::transaction(function () use ($validatedData) {
+            $user = DB::connection('user')->transaction(function () use ($validatedData) {
                 $user = app(CreateUserAction::class)->execute($validatedData);
                 app(SaveGdprConsentsAction::class)->execute($user, app(CollectGdprConsentsAction::class)->execute($this->privacy_accepted, $this->terms_accepted, $this->marketing_consent));
                 app(LogRegistrationAction::class)->execute($user, [

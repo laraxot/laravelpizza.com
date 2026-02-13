@@ -24,10 +24,8 @@ class ValidateUserDataAction
         $email = app(SafeStringCastAction::class)->execute($formData['email']);
 
         // Prevent duplicate email before hitting DB unique constraint.
-        $userModel = new User();
-        
-        // Force check on 'user' connection
-        if ($userModel->on('user')->where('email', $email)->exists()) {
+        // User model already uses 'user' connection via $connection property
+        if (User::where('email', $email)->exists()) {
             throw ValidationException::withMessages([
                 'email' => [__('validation.unique', ['attribute' => 'email'])],
             ]);
