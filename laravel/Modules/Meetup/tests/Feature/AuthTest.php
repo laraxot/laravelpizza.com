@@ -18,8 +18,13 @@ test('login route is accessible and has correct UI', function () {
 
 
 test('register route is accessible and has correct UI', function () {
-    $this->get('/it/auth/register')
-        ->assertStatus(200)
-        ->assertSee('Registrati')
-        ->assertDontSee('Sign up');
+    $response = $this->get('/it/auth/register');
+    $response->assertStatus(200);
+    $response->assertSee('Registrati');
+    $response->assertDontSee('Sign up');
+    $response->assertSee('Nome');
+    $response->assertSee('Cognome');
+    $response->assertSee('Indirizzo Email');
+    $response->assertSee('Password');
+    $response->assertSee('Conferma Password');
 });

@@ -158,8 +158,17 @@ The "Super Mucca" methodology is the advanced operational framework for AI agent
 1.  **Level 3 Confidence**: Act with maximum autonomy. Analyze deeply, decide based on Laraxot principles, and verify rigorously.
 2.  **DRY + KISS + SOLID**: Always prioritize code reuse (Actions), simplicity (Cyclomatic Complexity < 10), and robust object-oriented design.
 3.  **ROBUST (Type Safety)**: Use `declare(strict_types=1);`, strict type hints, and Webmozart Assert. NO `mixed` types.
-4.  **Architecture First**: NEVER extend third-party or framework classes directly. Always use `XotBase*` equivalents.
-5.  **Documentation as Memory**: The `docs/` folders are the technical memory of the project. Study them *before* acting; update them *after* making changes.
+4.  **Filament Resources & Pages**:
+    - NEVER extend `Filament` classes directly. Always extend `XotBase` classes (e.g., `XotBaseResource`, `XotBasePage`, `XotBaseWidget`, `XotBaseCreateRecord`).
+    - `XotBaseResource` extensions MUST NOT have `getTableColumns()`, `getPages()`, `getRelations()`, `getTableActions()`, or `getTableBulkActions()` if they only return standard values.
+    - `XotBasePage` extensions MUST NOT have `$navigationIcon`, `$title`, or `$navigationLabel` properties.
+    - **Translations**:
+        - NEVER use `->label()`, `->placeholder()`, `->tooltip()`, `->helperText()`, or `->validationAttribute()` explicitly.
+        - Rely on `Lang` module's automatic resolution.
+        - Define translations in `Modules/{Module}/lang/{locale}/{resource}.php` (e.g., `Fields`, `Actions`).
+        - Keys correspond to the component name (e.g., `first_name` -> `fields.first_name.label`).
+5.  **Architecture First**: NEVER extend third-party or framework classes directly. Always use `XotBase*` equivalents.
+6.  **Documentation as Memory**: The `docs/` folders are the technical memory of the project. Study them *before* acting; update them *after* making changes.
 
 ### File Naming & Structural Rules
 - **Markdown**: All `.md` files must be lowercase, without dates or special characters (except README/CHANGELOG).

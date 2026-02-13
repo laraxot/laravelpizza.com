@@ -9,7 +9,7 @@
 I have successfully created the infrastructure for task file management across all 15 roadmaps (14 modules + 1 theme):
 
 ### 1. Directory Structure Created ✅
-All 15 modules/themes now have organized `tasks/` directories with category subdirectories:
+All {TOTAL_ROADMAPS} modules/themes now have organized `tasks/` directories with category subdirectories:
 - `features/` - New feature implementations
 - `fixes/` - Bug fixes
 - `refactoring/` - Code refactoring
@@ -17,10 +17,10 @@ All 15 modules/themes now have organized `tasks/` directories with category subd
 - `documentation/` - Documentation tasks
 
 ### 2. Example Task Files Created ✅
-Total: **38 task files** created as examples across 6 modules:
+Total: **{NUMBER} task files** created as examples across 6 modules:
 
-#### Activity Module (27 files)
-- **Features**: 15 task files
+#### Activity Module ({NUMBER} files)
+- **Features**: {NUMBER} task files
   - custom-events.md
   - event-groups.md
   - event-projection.md
@@ -37,17 +37,17 @@ Total: **38 task files** created as examples across 6 modules:
   - activity-filters.md
   - export-features.md
 
-- **Refactoring**: 2 task files
+- **Refactoring**: {NUMBER} task files
   - performance-optimization.md
   - batch-processing.md
 
-- **Testing**: 4 task files
+- **Testing**: {NUMBER} task files
   - integration-tests.md
   - performance-tests.md
   - security-tests.md
   - achieve-95-test-coverage.md
 
-- **Documentation**: 6 task files
+- **Documentation**: {NUMBER} task files
   - real-time-guide.md
   - security-guide.md
   - csv-export.md
@@ -55,30 +55,30 @@ Total: **38 task files** created as examples across 6 modules:
   - pdf-export.md
   - custom-exports.md
 
-#### Cms Module (6 files)
-- **Features**: 5 task files
+#### Cms Module ({NUMBER} files)
+- **Features**: {NUMBER} task files
   - content-versioning.md
   - content-scheduling.md
   - content-expiration.md
   - folio-pages-completion.md
   - volt-components-enhancement.md
 
-- **Testing**: 1 task file
+- **Testing**: {NUMBER} task files
   - achieve-90-test-coverage.md
 
-#### Gdpr Module (1 file)
-- **Features**: 1 task file
+#### Gdpr Module ({NUMBER} files)
+- **Features**: {NUMBER} task files
   - data-modification-requests.md
 
-#### Geo Module (1 file)
-- **Features**: 1 task file
+#### Geo Module ({NUMBER} files)
+- **Features**: {NUMBER} task files
   - address-validation.md
 
-#### User Module (1 file)
-- **Features**: 1 task file
+#### User Module ({NUMBER} files)
+- **Features**: {NUMBER} task files
   - two-factor-authentication.md
 
-#### Xot Module (1 file)
+#### Xot Module ({NUMBER} files)
 - **Features**: 1 task file
   - filament-v5-migration.md
 

@@ -1,6 +1,6 @@
 # 🚀 Guida Rapida - Getting Started
 
-**Ultimo aggiornamento**: 31 Gennaio 2026
+**Ultimo aggiornamento**:
 **Tempo richiesto**: 30-45 minuti
 **Livello**: Intermedio-Avanzato
 
@@ -52,7 +52,7 @@ touch database/database.sqlite
 
 # Configura .env per SQLite:
 # DB_CONNECTION=sqlite
-# DB_DATABASE=/var/www/_bases/base_laravelpizza/laravel/database/database.sqlite
+# DB_DATABASE={PROJECT_ROOT}/laravel/database/database.sqlite
 
 # Esegui migrations
 php artisan migrate
@@ -163,9 +163,9 @@ use Modules\User\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 User::create([
-    'email' => 'admin@laravelpizza.com',
+    'email' => 'admin@{PROJECT_DOMAIN}',
     'name' => 'Admin User',
-    'password' => Hash::make('password'),
+    'password' => Hash::make('<PASSWORD>'),
 ])->assignRole('super_admin');
 ```
 
@@ -256,7 +256,7 @@ npm run build && npm run copy
 ```php
 <?php
 
-// Modules/Meetup/app/Actions/CreateEventAction.php
+// Modules/{ModuleName}/app/Actions/CreateEventAction.php
 
 declare(strict_types=1);
 
@@ -394,7 +394,7 @@ if ($model->hasAttribute('attribute')) {
 ```php
 <?php
 
-// Modules/Meetup/tests/Feature/EventTest.php
+// Modules/{ModuleName}/tests/Feature/EventTest.php
 
 use Modules\Meetup\Models\Event;
 use Modules\User\Models\User;
