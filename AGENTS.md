@@ -172,6 +172,83 @@ protected function casts(): array
 
 ## 4. Critical Architecture Rules
 
+### Translation Management - AUTOMATIC ONLY!
+**CRITICAL RULE: NEVER use ->label(), ->placeholder(), ->helperText() manually!**
+
+The Laraxot framework handles all translations automatically via:
+- `LangServiceProvider` - Automatically configures all Filament components
+- `AutoLabelAction` - Generates translation keys automatically
+
+**Translation Key Pattern:**
+```
+{module}::{widget}.fields.{field}.{type}
+```
+Examples:
+- `gdpr::register.fields.first_name.label`
+- `gdpr::register.fields.first_name.placeholder`
+- `gdpr::register.fields.first_name.helper_text`
+
+**Translation File Structure:**
+```php
+// Modules/ModuleName/lang/{locale}/{widget}.php
+return [
+    'fields' => [
+        'field_name' => [
+            'label' => 'Field Label',
+            'placeholder' => 'Placeholder text',
+            'helper_text' => 'Helper text description',
+        ],
+    ],
+];
+```
+
+**VIOLATION EXAMPLES (NEVER DO THIS):**
+```php
+// ❌ WRONG - Manual label()
+TextInput::make('name')->label('Name')
+
+// ❌ WRONG - Manual placeholder()
+TextInput::make('email')->placeholder('Enter email')
+
+// ❌ WRONG - Manual helperText()
+TextInput::make('password')->helperText('Choose a strong password')
+
+// ❌ WRONG - Manual __() translation
+TextInput::make('name')->__('module::field.label')
+```
+
+**CORRECT PATTERN:**
+```php
+// ✅ CORRECT - No manual methods
+TextInput::make('name')
+TextInput::make('email')
+TextInput::make('password')
+```
+
+The `LangServiceProvider` automatically:
+1. Detects the component class from the backtrace
+2. Generates the correct translation key
+3. Applies the label, placeholder, and helper_text from translation files
+4. Falls back to field name if translation is missing
+
+**IMPORTANT: This applies to BOTH Filament Resources AND Livewire Components using Filament Forms!**
+
+When using Filament Form components in Livewire/Volt:
+```php
+// ✅ CORRECT - Let LangServiceProvider handle translations automatically
+TextInput::make('email')->required()
+
+// ❌ WRONG - Manual label/placeholder overrides automatic system
+TextInput::make('email')->label(__('Email'))->placeholder(__('Enter email'))
+```
+
+**Translation File Naming:**
+- For a component `Modules\User\Http\Livewire\Auth\Register`, create:
+  - `Modules/User/lang/it/register.php`
+  - `Modules/User/lang/en/register.php`
+
+The key generated will be `user::register.fields.email.label`.
+
 ### Frontend (Frontoffice) - NO Controllers!
 **ALWAYS use:**
 - Laravel Folio (file-based routing)

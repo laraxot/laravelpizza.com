@@ -52,27 +52,19 @@ class Register extends Component implements HasSchemas
             ->components([
                 TextInput::make('name')
                     ->required()
-                    ->label(__('Name'))
-                    ->placeholder(__('Enter your name'))
                     ->autofocus(),
                 TextInput::make('email')
                     ->email()
                     ->required()
-                    ->label(__('Email'))
-                    ->placeholder(__('Enter your email'))
                     ->unique('users', 'email'),
                 TextInput::make('password')
                     ->password()
                     ->required()
-                    ->label(__('Password'))
-                    ->placeholder(__('Enter your password'))
                     ->rules([PasswordRule::defaults()])
                     ->revealable(),
                 TextInput::make('password_confirmation')
                     ->password()
                     ->required()
-                    ->label(__('Confirm Password'))
-                    ->placeholder(__('Confirm your password'))
                     ->same('password')
                     ->revealable(),
             ])
