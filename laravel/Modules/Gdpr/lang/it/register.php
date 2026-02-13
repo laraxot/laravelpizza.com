@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     // === REGISTER PAGE ===
     'title' => 'Unisciti alla Pizza Revolution 🍕',
-    'subtitle' => 'Entra nella nostra growing community di developer e appassionati. Meetup esclusivi, tutorial e networking ti aspettano.',
+    'subtitle' => 'Entra nella nostra community di sviluppatori e appassionati. Meetup esclusivi, tutorial e networking ti aspettano.',
     'submit' => 'Crea il mio account gratis',
     'submitting' => 'Stiamo preparando il tuo account...',
 
@@ -33,7 +33,7 @@ return [
         'tutorials' => [
             'title' => 'Tutorial & Workshop Esclusivi',
             'description' => 'Accesso prioritario a contenuti premium e formazione',
-            'cta' => 'Valore €997/anno - Gratis per membri',
+            'cta' => 'Ottieni accesso esclusivo', // Changed from 'Valore €997/anno - Gratis per membri'
         ],
         'networking' => [
             'title' => 'Networking & Carriera',
