@@ -4,18 +4,16 @@ declare(strict_types=1);
 
 return [
     // === REGISTER PAGE ===
-    'register' => [
-        'title' => 'Start Your Pizza Journey 🍕',
-        'subtitle' => 'Join 5,000+ pizza lovers and developers. Get exclusive access to meetups and tutorials.',
-        'submit' => 'Join the Community Now',
-        'submitting' => 'Setting up your oven...',
-    ],
+    'title' => 'Start Your Pizza Journey 🍕',
+    'subtitle' => 'Join our growing community of pizza lovers and developers. Get exclusive access to meetups and tutorials.',
+    'submit' => 'Join the Community Now',
+    'submitting' => 'Setting up your oven...',
 
     // === STATS ===
     'stats' => [
-        'active_developers' => 'Active Developers',
-        'monthly_meetups' => 'Monthly Meetups',
-        'community_support' => 'Community Support',
+        'active_developers' => 'Growing Community',
+        'monthly_meetups' => 'Upcoming Events',
+        'community_support' => '24/7 Support',
     ],
 
     // === FORM ===
@@ -28,7 +26,7 @@ return [
     // === BENEFITS CTA ===
     'benefits' => [
         'community' => [
-            'title' => '5,000+ Developer Community',
+            'title' => 'Join Our Developer Community',
             'description' => 'Connect with Laravel professionals and enthusiasts worldwide',
             'cta' => 'FREE access immediately after signup',
         ],
@@ -45,7 +43,7 @@ return [
     ],
 
     // === SOCIAL PROOF ===
-    'social_proof' => 'Join 5,000+ developers worldwide',
+    'social_proof' => 'Join the LaravelPizza community',
 
     // === FIELDS ===
     'fields' => [
@@ -84,6 +82,9 @@ return [
         'required_consents_description' => 'To proceed with registration, you must accept the following conditions for processing your personal data',
         'optional_consents' => 'Optional Consent',
         'optional_consents_description' => 'These consents are optional and do not affect your registration. You can modify them at any time from your profile.',
+        'trust_badges' => 'Trust badges',
+        'registration_form' => 'Registration Form',
+        'benefits' => 'Benefits',
     ],
 
     // === CONSENTS ===
@@ -138,7 +139,7 @@ return [
 
     // === SEO KEYWORDS ===
     'seo' => [
-        'description' => 'Join 5,000+ Laravel developers for exclusive meetups, premium tutorials, and networking. Free access to workshops and community events.',
+        'description' => 'Join LaravelPizza community for exclusive meetups, premium tutorials, and networking. Free access to workshops and community events.',
         'laravel_meetup' => 'Laravel meetup',
         'laravel_community' => 'Laravel community',
         'php_developer_community' => 'PHP developer community',

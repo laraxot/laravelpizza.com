@@ -6,29 +6,46 @@ return [
     // === REGISTER PAGE ===
     'register' => [
         'title' => 'Beginnen Sie Ihre Pizza-Reise 🍕',
-        'subtitle' => 'Schließen Sie sich 5.000+ Pizza-Liebhabern und Entwicklern an. Exklusiver Zugang zu Meetups und Tutorials.',
+        'subtitle' => 'Schließen Sie sich unserer wachsenden Community von Pizza-Liebhabern und Entwicklern an. Exklusiver Zugang zu Meetups und Tutorials.',
         'submit' => 'Community jetzt beitreten',
         'submitting' => 'Wir bereiten Ihren Ofen vor...',
     ],
 
-    // === BENEFITS ===
+    // === STATS ===
+    'stats' => [
+        'active_developers' => 'Wachsende Community',
+        'monthly_meetups' => 'Kommende Events',
+        'community_support' => '24/7 Support',
+    ],
+
+    // === FORM ===
+    'form' => [
+        'cta_title' => 'Erstelle dein KOSTENLOSES Konto',
+        'cta_subtitle' => 'Keine Kreditkarte erforderlich - 100% KOSTENLOS!',
+        'terms_notice' => 'Mit der Registrierung akzeptierst du unsere AGB und Datenschutzerklärung',
+    ],
+
+    // === BENEFITS CTA ===
     'benefits' => [
         'community' => [
-            'title' => '5.000+ Entwickler-Community',
+            'title' => 'Entdecke die Entwickler-Community',
             'description' => 'Verbinden Sie sich mit Laravel-Professionals und -Enthusiasten weltweit',
+            'cta' => 'KOSTENLOSER Zugang sofort nach Anmeldung',
         ],
         'tutorials' => [
             'title' => 'Exklusive Tutorials & Workshops',
             'description' => 'Priorisierter Zugang zu Premium-Inhalten und Schulungen',
+            'cta' => 'Wert €997/Jahr - KOSTENLOS für Mitglieder',
         ],
         'networking' => [
             'title' => 'Networking & Karriere',
             'description' => 'Kollaborationsmöglichkeiten und professionelles Wachstum',
+            'cta' => 'Werde von Top-Laravel-Unternehmen eingestellt',
         ],
     ],
 
     // === SOCIAL PROOF ===
-    'social_proof' => 'Treten Sie 5.000+ Entwicklern weltweit bei',
+    'social_proof' => 'Werden Sie Teil der LaravelPizza Community',
 
     // === FIELDS ===
     'fields' => [
@@ -67,6 +84,9 @@ return [
         'required_consents_description' => 'Um mit der Registrierung fortzufahren, müssen Sie die folgenden Bedingungen für die Verarbeitung Ihrer persönlichen Daten akzeptieren',
         'optional_consents' => 'Optionale Zustimmung',
         'optional_consents_description' => 'Diese Zustimmungen sind optional und beeinflussen Ihre Registrierung nicht. Sie können diese jederzeit in Ihrem Profil ändern.',
+        'trust_badges' => 'Vertrauenssiegel',
+        'registration_form' => 'Registrierungsformular',
+        'benefits' => 'Vorteile',
     ],
 
     // === CONSENTS ===
@@ -104,4 +124,30 @@ return [
     'success_message' => 'Willkommen bei LaravelPizza Meetups! Ihre Registrierung ist abgeschlossen und alle Ihre Zustimmungen wurden korrekt erfasst.',
     'error' => 'Fehler bei der Registrierung',
     'error_message' => 'Bei der Registrierung ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut. Wenn das Problem besteht, kontaktieren Sie unseren Support.',
+
+    // === CLICKBAIT & MARKETING ===
+    'clickbait' => [
+        'active_developers' => 'Aktive Entwickler',
+        'monthly_meetups' => 'Monatliche Meetups',
+        'community_support' => 'Community-Support',
+        'free_access' => 'KOSTENLOSER Zugriff sofort nach der Registrierung',
+        'worth_free' => 'Wert €997/Jahr - KOSTENLOS für Mitglieder',
+        'get_hired' => 'Wirst du von den besten Laravel-Unternehmen eingestellt',
+        'join_now' => 'JETZT beitreten, bevor die Registrierung schließt!',
+        'create_account' => 'Erstelle dein KOSTENLOSES Konto',
+        'no_card_required' => 'Keine Kreditkarte erforderlich - 100% KOSTENLOS für immer!',
+        'by_registering' => 'Durch die Registrierung stimmen Sie unseren Geschäftsbedingungen und der Datenschutzerklärung zu',
+    ],
+
+    // === SEO KEYWORDS ===
+    'seo' => [
+        'description' => 'Werden Sie Teil der LaravelPizza Community für exklusive Meetups, Premium-Tutorials und Networking. Kostenloser Zugang zu Workshops und Community-Events.',
+        'laravel_meetup' => 'Laravel-Meetup',
+        'laravel_community' => 'Laravel-Community',
+        'php_developer_community' => 'PHP-Entwickler-Community',
+        'laravel_tutorials' => 'Laravel-Tutorials',
+        'laravel_workshops' => 'Laravel-Workshops',
+        'laravel_networking' => 'Laravel-Networking',
+        'laravelpizza' => 'LaravelPizza',
+    ],
 ];

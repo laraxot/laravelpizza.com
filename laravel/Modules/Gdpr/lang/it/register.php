@@ -4,18 +4,16 @@ declare(strict_types=1);
 
 return [
     // === REGISTER PAGE ===
-    'register' => [
-        'title' => 'Unisciti alla Pizza Revolution 🍕',
-        'subtitle' => 'Entra nella community di 5.000+ developer e appassionati. Meetup esclusivi, tutorial e networking ti aspettano.',
-        'submit' => 'Crea il mio account gratis',
-        'submitting' => 'Stiamo preparando il tuo account...',
-    ],
+    'title' => 'Unisciti alla Pizza Revolution 🍕',
+    'subtitle' => 'Entra nella nostra growing community di developer e appassionati. Meetup esclusivi, tutorial e networking ti aspettano.',
+    'submit' => 'Crea il mio account gratis',
+    'submitting' => 'Stiamo preparando il tuo account...',
 
     // === STATS ===
     'stats' => [
-        'active_developers' => 'Sviluppatori Attivi',
-        'monthly_meetups' => 'Meetup Mensili',
-        'community_support' => 'Supporto Community',
+        'active_developers' => 'Community in Crescita',
+        'monthly_meetups' => 'Prossimi Eventi',
+        'community_support' => 'Supporto 24/7',
     ],
 
     // === FORM ===
@@ -28,7 +26,7 @@ return [
     // === BENEFITS ===
     'benefits' => [
         'community' => [
-            'title' => 'Community di 5.000+ Sviluppatori',
+            'title' => 'Entra nella Community',
             'description' => 'Connettiti con professionisti e appassionati Laravel',
             'cta' => 'Accesso gratuito immediato',
         ],
@@ -45,7 +43,7 @@ return [
     ],
 
     // === SOCIAL PROOF ===
-    'social_proof' => 'Unisciti a 5.000+ sviluppatori',
+    'social_proof' => 'Unisciti alla community LaravelPizza',
 
     // === FIELDS ===
     'fields' => [
@@ -84,6 +82,9 @@ return [
         'required_consents_description' => 'Devi accettare le seguenti condizioni',
         'optional_consents' => 'Consensi Facoltativi',
         'optional_consents_description' => 'Puoi modificarli in qualsiasi momento',
+        'trust_badges' => 'Badge di fiducia',
+        'registration_form' => 'Form di registrazione',
+        'benefits' => 'Vantaggi',
     ],
 
     // === CONSENTS ===

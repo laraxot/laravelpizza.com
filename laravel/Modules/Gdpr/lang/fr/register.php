@@ -9,18 +9,37 @@ return [
         'submit' => 'Rejoindre la communauté',
         'submitting' => 'Nous préparons votre four...',
     ],
+
+    // === STATS ===
+    'stats' => [
+        'active_developers' => 'Développeurs Actifs',
+        'monthly_meetups' => 'Meetups Mensuels',
+        'community_support' => 'Support Communautaire',
+    ],
+
+    // === FORM ===
+    'form' => [
+        'cta_title' => 'Créez Votre Compte Gratuit',
+        'cta_subtitle' => 'Aucune carte requise - 100% gratuit pour toujours!',
+        'terms_notice' => 'En vous inscrivant, vous acceptez nos Conditions et Politique de Confidentialité',
+    ],
+
+    // === BENEFITS CTA ===
     'benefits' => [
         'community' => [
             'title' => '5,000+ Communauté de Développeurs',
             'description' => 'Connectez-vous avec des professionnels et passionnés de Laravel',
+            'cta' => 'Accès gratuit immédiat après inscription',
         ],
         'tutorials' => [
             'title' => 'Tutoriels & Ateliers Exclusifs',
             'description' => 'Accès prioritaire aux contenus premium et formations',
+            'cta' => 'Valeur 997€/an - Gratuit pour membres',
         ],
         'networking' => [
             'title' => 'Réseautage & Carrière',
             'description' => 'Opportunités de collaboration et croissance professionnelle',
+            'cta' => 'Recruté par les meilleures entreprises Laravel',
         ],
     ],
     'social_proof' => 'Rejoignez 5,000+ développeurs dans le monde',
@@ -58,6 +77,9 @@ return [
         'required_consents_description' => 'Pour procéder à l\'inscription, vous devez accepter les conditions suivantes pour le traitement de vos données personnelles',
         'optional_consents' => 'Consentement Optionnel',
         'optional_consents_description' => 'Ces consentements sont optionnels et n\'affectent pas votre inscription. Vous pouvez les modifier à tout moment depuis votre profil.',
+        'trust_badges' => 'Badges de confiance',
+        'registration_form' => 'Formulaire d\'inscription',
+        'benefits' => 'Avantages',
     ],
     'consents' => [
         'title' => 'Consentements Confidentialité',
@@ -86,4 +108,30 @@ return [
     'success_message' => 'Bienvenue dans LaravelPizza Meetups ! Votre inscription est complète et tous vos consentements ont été correctement enregistrés.',
     'error' => 'Erreur d\'inscription',
     'error_message' => 'Une erreur s\'est produite lors de l\'inscription. Veuillez réessayer plus tard. Si le problème persiste, contactez notre support.',
+
+    // === CLICKBAIT & MARKETING ===
+    'clickbait' => [
+        'active_developers' => 'Développeurs Actifs',
+        'monthly_meetups' => 'Meetups Mensuels',
+        'community_support' => 'Support Communautaire',
+        'free_access' => 'Accès GRATUIT immédiat après inscription',
+        'worth_free' => 'Valeur 997€/an - GRATUIT pour les membres',
+        'get_hired' => 'Soyez recruté par les meilleures entreprises Laravel',
+        'join_now' => 'Rejoignez MAINTENANT avant la fermeture de l\'inscription!',
+        'create_account' => 'Créez Votre Compte GRATUIT',
+        'no_card_required' => 'Aucune carte de crédit requise - 100% GRATUIT pour toujours!',
+        'by_registering' => 'En vous inscrivant, vous acceptez nos Conditions et Politique de Confidentialité',
+    ],
+
+    // === SEO KEYWORDS ===
+    'seo' => [
+        'description' => 'Rejoignez 5,000+ développeurs Laravel pour des meetups exclusifs, des tutoriels premium et du réseautage. Accès gratuit aux ateliers et aux événements communautaires.',
+        'laravel_meetup' => 'meetup Laravel',
+        'laravel_community' => 'communauté Laravel',
+        'php_developer_community' => 'communauté développeurs PHP',
+        'laravel_tutorials' => 'tutoriels Laravel',
+        'laravel_workshops' => 'ateliers Laravel',
+        'laravel_networking' => 'réseau Laravel',
+        'laravelpizza' => 'LaravelPizza',
+    ],
 ];
