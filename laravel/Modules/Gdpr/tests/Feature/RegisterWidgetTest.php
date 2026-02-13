@@ -253,7 +253,7 @@ it('can create a user with customer_user type via CreateUserAction', function ()
         'id' => $user->id,
         'email' => $data['email'],
         'type' => 'customer_user',
-    ]);
+    ], 'user');
 });
 
 it('full registration pipeline works end to end', function (): void {

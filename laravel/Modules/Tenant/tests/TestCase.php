@@ -2,14 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Modules\\$dir\\Tests;
+namespace Modules\Tenant\Tests;
 
-use Illuminate\\Foundation\\Testing\\DatabaseTransactions;
-use Illuminate\\Foundation\\Testing\\TestCase as BaseTestCase;
-use Modules\\Xot\\Tests\\CreatesApplication;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Modules\Tenant\Providers\TenantServiceProvider;
+use Modules\User\Providers\UserServiceProvider;
+use Modules\Xot\Providers\XotServiceProvider;
+use Modules\Xot\Tests\CreatesApplication;
 
 /**
- * Base test case for $dir module.
+ * Base test case for Tenant module.
  *
  * Uses MySQL from .env.testing.
  * All module connections are mapped by TenantServiceProvider.
@@ -24,8 +27,6 @@ abstract class TestCase extends BaseTestCase
         'user',
     ];
 
-    protected static bool \$migrated = false;
-
     protected function setUp(): void
     {
         parent::setUp();
@@ -33,14 +34,22 @@ abstract class TestCase extends BaseTestCase
         config(['xra.pub_theme' => 'Meetup']);
         config(['xra.main_module' => 'User']);
 
-        \\Modules\\Xot\\Datas\\XotData::make()->update([
+        \Modules\Xot\Datas\XotData::make()->update([
             'pub_theme' => 'Meetup',
             'main_module' => 'User',
         ]);
 
-        if (! self::\$migrated) {
-            \$this->artisan('module:migrate');
-            self::\$migrated = true;
-        }
+        // NOTE: Migrations are NOT run in setUp()
+        // They must be run ONCE externally: php artisan migrate --env=testing
+        // DatabaseTransactions trait handles rollback automatically between tests
+    }
+
+    protected function getPackageProviders($app): array
+    {
+        return [
+            XotServiceProvider::class,
+            UserServiceProvider::class,
+            TenantServiceProvider::class,
+        ];
     }
 }

@@ -41,10 +41,9 @@ abstract class TestCase extends BaseTestCase
             'register_pub_theme' => true,
         ]);
 
-        $this->artisan('module:migrate', [
-            '--all' => true,
-            '--no-interaction' => true,
-        ]);
+        // NOTE: Migrations are NOT run in setUp()
+        // They must be run ONCE externally: php artisan migrate --env=testing
+        // DatabaseTransactions trait handles rollback automatically between tests
     }
 
     protected function getPackageProviders($app): array

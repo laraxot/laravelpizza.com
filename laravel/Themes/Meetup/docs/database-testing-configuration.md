@@ -7,6 +7,7 @@
 1. **MAI forzare le connessioni** con `config()` in CreatesApplication
 2. **MAI inventare variabili environment** come `NOTIFY_DB_DATABASE`, `GDPR_DB_DATABASE`
 3. **MAI aggiungere connessioni hardcode** in `config/database.php`
+4. **MAI eseguire migrate in TestCase setUp()** - Vedi [TestCase Setup Rules](../../Modules/Xot/docs/testcase-setup-critical-rules.md)
 
 Vedi [Critical Rules](../../Modules/Xot/docs/database-configuration-critical-rules.md) per dettagli completi.
 
@@ -131,6 +132,38 @@ it('renders English registration page', function () {
 4. **Automatic Configuration**: Let TenantServiceProvider handle connection management
 5. **Single Test Database**: All modules share the same test database (suffixed with `_test`)
 6. **Environment Consistency**: Testing environment should mirror development as closely as possible
+7. **No Migrations in setUp()**: NEVER run migrations in `TestCase::setUp()` or use static `$migrated` flag. Migrations are run ONCE externally: `php artisan migrate --env=testing`. DatabaseTransactions trait handles rollback automatically.
+
+## TestCase Setup Rules
+
+**CRITICAL**: See [TestCase Setup Critical Rules](../../Modules/Xot/docs/testcase-setup-critical-rules.md) for complete details on test setup patterns.
+
+❌ **WRONG Pattern in TestCase.php:**
+```php
+protected static bool $migrated = false;
+
+protected function setUp(): void
+{
+    parent::setUp();
+    // ... config ...
+    if (! self::$migrated) {
+        $this->artisan('module:migrate');  // WRONG!
+        self::$migrated = true;             // WRONG!
+    }
+}
+```
+
+✅ **CORRECT Pattern in TestCase.php:**
+```php
+protected function setUp(): void
+{
+    parent::setUp();
+    // ... config ...
+    // NOTE: Migrations are NOT run in setUp()
+    // They are run ONCE externally: php artisan migrate --env=testing
+    // DatabaseTransactions trait handles rollback automatically
+}
+```
 
 ## Common Mistakes
 

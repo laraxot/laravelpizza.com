@@ -4,6 +4,14 @@
 
 ### 1. MAI Forzare le Connessioni in CreatesApplication
 
+⚠️ **Vedi anche [TestCase Setup Rules](./testcase-setup-critical-rules.md)**
+
+### 2. MAI Eseguire migrate in TestCase setUp()
+
+Vedi [TestCase Setup Rules](./testcase-setup-critical-rules.md) per dettagli completi.
+
+### 3. MAI Inventare Variabili Environment
+
 **❌ SBAGLIATO - NESSUNO MAI FARE QUESTO:**
 
 ```php
