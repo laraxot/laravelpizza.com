@@ -29,11 +29,11 @@ We will inject a dynamic, benefit-oriented tone into the `README.md`. The strate
 
 ## Affected File
 
-*   `/var/www/_bases/base_laravelpizza/README.md`
+*   `{PROJECT_ROOT}/README.md`
 
 ## Planned Next Steps
 
-1.  Read the current content of `/var/www/_bases/base_laravelpizza/README.md`.
+1.  Read the current content of `{PROJECT_ROOT}/README.md`.
 2.  Draft a new version of the `README.md` incorporating the above strategies.
-3.  Replace the old `README.md` with the newly drafted content.
+3.  Replace the old `{PROJECT_ROOT}/README.md` with the newly drafted content.
 4.  Inform the user of the successful update and await their feedback.

@@ -10,12 +10,12 @@ This document provides a comprehensive overview of the PasswordData integration 
 1. ✅ **DRY Compliance** - Eliminated duplicate password component code
 2. ✅ **Enterprise Security** - Implemented strong password policies (12+ chars, mixed case, numbers, symbols, uncompromised)
 3. ✅ **GDPR Compliance** - Automatic compliance with Articles 25, 32, 13/14, and 33
-4. ✅ **Multilingual Support** - Dynamic helper text in 6 languages (it, en, de, fr, es, ru)
+4. ✅ **Multilingual Support** - Dynamic helper text in {NUMBER} languages ({LANGUAGE_LIST})
 5. ✅ **Consistent UX** - Same password experience across all registration forms
 6. ✅ **Tenant-Aware** - Configuration per tenant via TenantService
 
 ### Secondary Benefits
-- Reduced code duplication by ~80%
+- Reduced code duplication by ~{PERCENTAGE}%
 - Centralized password rule management
 - Automatic HaveIBeenPwned integration
 - Improved audit trail capabilities
@@ -26,7 +26,7 @@ This document provides a comprehensive overview of the PasswordData integration 
 ### Files Modified
 
 #### 1. User Module RegisterWidget
-**Location:** `Modules/User/app/Filament/Widgets/Auth/RegisterWidget.php`
+**Location:** `Modules/{ModuleName}/app/Filament/Widgets/Auth/RegisterWidget.php`
 
 **Before:**
 ```php
@@ -51,7 +51,7 @@ This document provides a comprehensive overview of the PasswordData integration 
 ```
 
 #### 2. GDPR Module RegisterWidget
-**Location:** `Modules/Gdpr/app/Filament/Widgets/Auth/RegisterWidget.php`
+**Location:** `Modules/{ModuleName}/app/Filament/Widgets/Auth/RegisterWidget.php`
 
 **Before:**
 ```php
@@ -83,16 +83,16 @@ This document provides a comprehensive overview of the PasswordData integration 
 
 ### Documentation Created
 
-1. **User Module:** `Modules/User/docs/passworddata-integration.md`
-2. **GDPR Module:** `Modules/Gdpr/docs/passworddata-integration.md`
-3. **Meetup Theme:** `Themes/Meetup/docs/passworddata-integration.md`
+1. **User Module:** `Modules/{ModuleName}/docs/passworddata-integration.md`
+2. **GDPR Module:** `Modules/{ModuleName}/docs/passworddata-integration.md`
+3. **Meetup Theme:** `Themes/{ThemeName}/docs/passworddata-integration.md`
 4. **Project Summary:** `docs/passworddata-implementation-summary.md` (this file)
 
 ### Documentation Updated
 
-1. **User Module Index:** `Modules/User/docs/index.md` - Added PasswordData link
-2. **GDPR Module Index:** `Modules/Gdpr/docs/index.md` - Added PasswordData link
-3. **Meetup Theme Index:** `Themes/Meetup/docs/00-index.md` - Added PasswordData link
+1. **User Module Index:** `Modules/{ModuleName}/docs/index.md` - Added PasswordData link
+2. **GDPR Module Index:** `Modules/{ModuleName}/docs/index.md` - Added PasswordData link
+3. **Meetup Theme Index:** `Themes/{ThemeName}/docs/index.md` - Added PasswordData link
 
 ## 🎨 User Experience Improvements
 
@@ -122,7 +122,7 @@ This document provides a comprehensive overview of the PasswordData integration 
 
 All validation messages are now centralized in PasswordData:
 - Required field validation
-- Minimum length validation (12 characters)
+- Minimum length validation ({NUMBER} characters)
 - Password confirmation validation
 - Password compromise check (HaveIBeenPwned)
 - Complexity requirements (mixed case, numbers, symbols)
@@ -172,27 +172,27 @@ All validation messages are now centralized in PasswordData:
 **After:** Single instance per request, configuration loaded once
 
 **Performance Metrics:**
-- Configuration loaded: 1 time per request (vs 3+ times before)
-- Helper text generated: 1 time per request (vs 3+ times before)
+- Configuration loaded: {NUMBER} time per request (vs {NUMBER}+ times before)
+- Helper text generated: {NUMBER} time per request (vs {NUMBER}+ times before)
 - Validation rules cached: In memory for entire request
-- Database queries: Reduced by 67% (from 3 to 1 per registration)
+- Database queries: Reduced by {PERCENTAGE}% (from {NUMBER} to {NUMBER} per registration)
 
 ### Memory Optimization
 
-- Single PasswordData instance: ~1KB memory
-- Previous approach: 3+ instances (~3KB memory)
-- **Memory savings: ~67%**
+- Single PasswordData instance: ~{NUMBER}KB memory
+- Previous approach: {NUMBER}+ instances (~{NUMBER}KB memory)
+- **Memory savings**: ~{PERCENTAGE}%
 
 ## 🌍 Multilingual Support
 
 ### Supported Languages
 
-1. **Italian (it)** - Default language for Italian meetups
-2. **English (en)** - International meetups and conferences
-3. **German (de)** - German-speaking meetups
-4. **French (fr)** - French-speaking meetups
-5. **Spanish (es)** - Spanish-speaking meetups
-6. **Russian (ru)** - Russian-speaking meetups
+{NUMBER}. **{LANGUAGE_NAME} ({LANGUAGE_CODE})** - {DESCRIPTION}
+{NUMBER}. **{LANGUAGE_NAME} ({LANGUAGE_CODE})** - {DESCRIPTION}
+{NUMBER}. **{LANGUAGE_NAME} ({LANGUAGE_CODE})** - {DESCRIPTION}
+{NUMBER}. **{LANGUAGE_NAME} ({LANGUAGE_CODE})** - {DESCRIPTION}
+{NUMBER}. **{LANGUAGE_NAME} ({LANGUAGE_CODE})** - {DESCRIPTION}
+{NUMBER}. **{LANGUAGE_NAME} ({LANGUAGE_CODE})** - {DESCRIPTION}
 
 ### Translation Files
 
@@ -201,13 +201,13 @@ All validation messages are now centralized in PasswordData:
 - `Modules/User/lang/{locale}/validation.php` - Validation messages
 - `Modules/Gdpr/lang/{locale}/register.php` - Registration form translations
 
-**Coverage:** All 6 languages have complete translations for password-related messages.
+**Coverage:** All {NUMBER} languages have complete translations {FOR_TOPIC}.
 
 ## 🔗 Integration Points
 
 ### PasswordData Class
 
-**Location:** `Modules/User/app/Datas/PasswordData.php`
+**Location:** `Modules/{ModuleName}/app/Datas/PasswordData.php`
 
 **Key Methods:**
 ```php
@@ -269,7 +269,7 @@ $email = TextInput::make('email')->email()->required();
    - Test safe passwords accepted
 
 4. **Helper Text Generation**
-   - Test correct helper text in all 6 languages
+   - Test correct helper text in all {NUMBER} languages
    - Test dynamic updates based on configuration
 
 5. **Validation Messages**
@@ -284,7 +284,7 @@ $email = TextInput::make('email')->email()->required();
    - Test registration with compromised password
 
 2. **Multilingual Registration**
-   - Test registration in all 6 languages
+   - Test registration in all {NUMBER} languages
    - Verify helper text displays correctly
    - Verify validation messages are localized
 

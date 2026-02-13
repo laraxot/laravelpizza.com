@@ -6,7 +6,6 @@ php artisan make:filament-theme admin
 add resources/css/filament/admin/theme.css entry to vite.config.js
 
 in app/Providers/Filament/AdminPanelProvider.php
-add
 ->viteTheme('resources/css/filament/admin/theme.css')
 
 

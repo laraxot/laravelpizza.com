@@ -3,9 +3,6 @@
 declare(strict_types=1);
 
 use Modules\User\Models\User;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 it('has basic test infrastructure', function () {
     expect(true)->toBe(true);

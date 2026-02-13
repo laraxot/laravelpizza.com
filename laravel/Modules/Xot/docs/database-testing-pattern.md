@@ -14,16 +14,17 @@ Tests use **generic migration commands** instead of module-specific migrations b
 2. **Full schema required**: Tests need the complete database schema to function properly
 3. **Test isolation**: Using `DatabaseTransactions` provides isolation between tests while sharing the same migrated schema
 
-### What Runs
+### What Runs (Corrected)
+
+Tests should use a single `php artisan migrate` command to apply all migrations (app and modules).
 
 ```php
-// From TestCase::setUp()
-$this->artisan('migrate:fresh', ['--force' => true]);      // Main app migrations
-$this->artisan('module:migrate', ['--force' => true]);       // ALL module migrations
+// From TestCase::setUp() - CORRECTED
+$this->artisan('migrate');
 ```
 
-- `migrate:fresh` - Runs migrations from `database/migrations/`
-- `module:migrate` - Runs migrations from ALL modules (`Modules/*/database/migrations/`)
+- `migrate` - Runs migrations from `database/migrations/` and all registered module migrations.
+
 
 ## DatabaseTransactions vs RefreshDatabase
 
@@ -36,7 +37,7 @@ $this->artisan('module:migrate', ['--force' => true]);       // ALL module migra
 | Isolation | Drop & recreate | Transaction rollback |
 | Use case | Isolated tests | Related test suites |
 
-### Implementation
+### Implementation (Corrected)
 
 ```php
 // Modules/*/tests/TestCase.php
@@ -47,26 +48,26 @@ abstract class TestCase extends BaseTestCase
     use DatabaseTransactions;
     use CreatesApplication;
 
-    protected static bool $migrated = false;
+    // The $migrated flag is no longer needed
+    // protected static bool $migrated = false;
 
     protected function setUp(): void
     {
         parent::setUp();
 
-        if (! self::$migrated) {
-            $this->artisan('migrate:fresh', ['--force' => true]);
-            $this->artisan('module:migrate', ['--force' => true]);
-            self::$migrated = true;
-        }
+        // Migrations should run only once per test execution
+        // and Laravel's default 'migrate' command is sufficient.
+        $this->artisan('migrate');
     }
 }
 ```
 
-### Key Points
+### Key Points (Updated)
 
-1. **Static `$migrated` flag**: Ensures migrations run only once per test execution
-2. **Transaction rollback**: Each test runs in a transaction that rolls back automatically
-3. **Multi-connection support**: Tests can specify multiple connections to transaction:
+1.  **No Static `$migrated` flag**: The static `$migrated` flag is no longer used, ensuring `setUp()` method is clean.
+2.  **Single `migrate` command**: `php artisan migrate` is called once per test suite, applying all necessary migrations.
+3.  **Transaction rollback**: Each test runs in a transaction that rolls back automatically.
+4.  **Multi-connection support**: Tests can specify multiple connections to transaction (this part is still valid).
 
 ```php
 protected $connectionsToTransact = [
@@ -79,7 +80,11 @@ protected $connectionsToTransact = [
 
 ## Multi-Database Connections
 
-The project uses multiple database connections for different modules. Tests must include all connections:
+The project uses multiple logical connections which all resolve to the main `DB_DATABASE` (with `_test` suffix for testing). This is handled dynamically by `TenantServiceProvider`.
+
+**CRITICAL**: NEVER define separate database connections for each module (e.g., `NOTIFY_DB_DATABASE`, `GEO_DB_DATABASE`) in `config/database.php` or `.env.testing`. All modules share the same underlying database instance for tests.
+
+Tests must include all connections that utilize `DatabaseTransactions` to ensure proper rollback:
 
 ```php
 // From Modules/User/tests/TestCase.php

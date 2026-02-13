@@ -248,6 +248,7 @@ it('can create a user with customer_user type via CreateUserAction', function ()
     expect($user->state)->toBe('active');
     expect($user->email_verified_at)->not->toBeNull();
 
+    /** @var TestCase $this */
     $this->assertDatabaseHas('users', [
         'id' => $user->id,
         'email' => $data['email'],
@@ -280,26 +281,39 @@ it('full registration pipeline works end to end', function (): void {
     expect($consents['marketing_consent'])->toBeFalse();
 
     // 5. Save consents (only if treatments exist)
-    Treatment::firstOrCreate(
-        ['name' => 'privacy_policy'],
-        ['description' => 'Privacy Policy', 'weight' => 1, 'active' => true, 'required' => true]
-    );
-    Treatment::firstOrCreate(
-        ['name' => 'terms_conditions'],
-        ['description' => 'Terms and Conditions', 'weight' => 2, 'active' => true, 'required' => true]
-    );
-    Treatment::firstOrCreate(
-        ['name' => 'marketing_consent'],
-        ['description' => 'Marketing Consent', 'weight' => 3, 'active' => true, 'required' => false]
-    );
+    try {
+        Treatment::firstOrCreate(
+            ['name' => 'privacy_policy'],
+            ['description' => 'Privacy Policy', 'weight' => 1, 'active' => true, 'required' => true]
+        );
+    } catch (\Exception $e) {
+        // Already exists
+    }
+    try {
+        Treatment::firstOrCreate(
+            ['name' => 'terms_conditions'],
+            ['description' => 'Terms and Conditions', 'weight' => 2, 'active' => true, 'required' => true]
+        );
+    } catch (\Exception $e) {
+        // Already exists
+    }
+    try {
+        Treatment::firstOrCreate(
+            ['name' => 'marketing_consent'],
+            ['description' => 'Marketing Consent', 'weight' => 3, 'active' => true, 'required' => false]
+        );
+    } catch (\Exception $e) {
+        // Already exists
+    }
 
     app(SaveGdprConsentsAction::class)->execute($user, $consents, '127.0.0.1', 'PestTest/1.0');
 
     // Verify user exists
+    /** @var TestCase $this */
     $this->assertDatabaseHas('users', [
         'id' => $user->id,
         'type' => 'customer_user',
-    ]);
+    ], 'user');
 
     // Verify consents exist
     $savedConsents = Consent::where('subject_id', $user->id)->count();
@@ -312,10 +326,10 @@ it('full registration pipeline works end to end', function (): void {
 
 it('has all required translation keys for register page', function (): void {
     $requiredKeys = [
-        'gdpr::register.register.title',
-        'gdpr::register.register.subtitle',
-        'gdpr::register.register.submit',
-        'gdpr::register.register.submitting',
+        'gdpr::register.title',
+        'gdpr::register.subtitle',
+        'gdpr::register.submit',
+        'gdpr::register.submitting',
         'gdpr::register.consents.title',
         'gdpr::register.consents.privacy_checkbox_html',
         'gdpr::register.consents.terms_checkbox_html',

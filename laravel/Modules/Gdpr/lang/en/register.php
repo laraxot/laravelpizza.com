@@ -33,7 +33,7 @@ return [
         'tutorials' => [
             'title' => 'Exclusive Tutorials & Workshops',
             'description' => 'Priority access to premium content and training',
-            'cta' => 'Worth €997/year - FREE for members',
+            'cta' => 'Get exclusive access', // Changed from 'Worth €997/year - FREE for members'
         ],
         'networking' => [
             'title' => 'Networking & Career',
@@ -92,7 +92,6 @@ return [
         'title' => 'Privacy Consents',
         'privacy_policy_label' => 'I have read and understood the Privacy Policy and accept the processing of my personal data as described in the policy.',
         'privacy_policy_hint' => 'Full privacy notice pursuant to Articles 13 and 14 of Regulation (EU) 2016/679 (GDPR)',
-        'privacy_policy_required' => 'Please accept the privacy policy.',
         'privacy_checkbox_html' => 'I have read the <a href=":privacy_url" target="_blank" class="text-primary-600 dark:text-primary-400 underline font-semibold hover:text-primary-700">Privacy Policy</a>',
         'terms_label' => 'I have read and accept the Terms and Conditions',
         'terms_hint' => 'Service contract pursuant to Article 6(1)(b) of Regulation (EU) 2016/679 (GDPR)',
@@ -129,7 +128,7 @@ return [
         'monthly_meetups' => 'Monthly Meetups',
         'community_support' => 'Community Support',
         'free_access' => 'FREE access immediately after signup',
-        'worth_free' => 'Worth €997/year - FREE for members',
+        'worth_free' => 'Get exclusive access', // Changed from 'Worth €997/year - FREE for members'
         'get_hired' => 'Get hired by top Laravel companies',
         'join_now' => 'Join NOW before registration closes!',
         'create_account' => 'Create Your FREE Account',

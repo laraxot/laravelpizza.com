@@ -27,6 +27,9 @@ return [
     | An example configuration is provided for each database system which
     | is supported by Laravel. You're free to add / remove connections.
     |
+    | Module-specific connections are automatically added by TenantServiceProvider
+    | based on the mysql connection - no need to define them here.
+    |
     */
 
     'connections' => [
@@ -118,9 +121,29 @@ return [
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE_USER', 'laravelpizza_user_test'),
-            'username' => env('DB_USERNAME_USER', 'marco'),
-            'password' => env('DB_PASSWORD_USER', 'marco'),
+            'database' => env('DB_DATABASE_USER', 'laravelpizza_user'),
+            'username' => env('DB_USERNAME_USER', 'root'),
+            'password' => env('DB_PASSWORD_USER', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => env('DB_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                (PHP_VERSION_ID >= 80500 ? \Pdo\Mysql::ATTR_SSL_CA : \PDO::MYSQL_ATTR_SSL_CA) => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
+        'gdpr' => [
+            'driver' => 'mysql',
+            'url' => env('DB_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE_GDPR', 'laravelpizza_gdpr'),
+            'username' => env('DB_USERNAME_GDPR', 'root'),
+            'password' => env('DB_PASSWORD_GDPR', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => env('DB_CHARSET', 'utf8mb4'),
             'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),

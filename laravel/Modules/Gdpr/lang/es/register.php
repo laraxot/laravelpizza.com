@@ -3,12 +3,11 @@
 declare(strict_types=1);
 
 return [
-    'register' => [
-        'title' => 'Comienza tu viaje Pizza 🍕',
-        'subtitle' => 'Únete a nuestra comunidad creciente de amantes de la pizza y desarrolladores. Acceso exclusivo a meetups y tutoriales.',
-        'submit' => 'Unirse a la comunidad',
-        'submitting' => 'Estamos preparando tu horno...',
-    ],
+    // === REGISTER PAGE ===
+    'title' => 'Comienza tu viaje Pizza 🍕', // Moved from nested 'register' array
+    'subtitle' => 'Únete a nuestra comunidad creciente de amantes de la pizza y desarrolladores. Acceso exclusivo a meetups y tutoriales.', // Moved from nested 'register' array
+    'submit' => 'Unirse a la comunidad', // Moved from nested 'register' array
+    'submitting' => 'Estamos preparando tu horno...', // Moved from nested 'register' array
 
     // === STATS ===
     'stats' => [
@@ -34,7 +33,7 @@ return [
         'tutorials' => [
             'title' => 'Tutoriales y Talleres Exclusivos',
             'description' => 'Acceso prioritario a contenidos premium y formación',
-            'cta' => 'Valor €997/año - Gratuito para miembros',
+            'cta' => 'Acceso exclusivo', // Changed from 'Valor €997/año - Gratuito para miembros'
         ],
         'networking' => [
             'title' => 'Networking y Carrera',
@@ -116,7 +115,7 @@ return [
         'monthly_meetups' => 'Meetups Mensuales',
         'community_support' => 'Soporte de Comunidad',
         'free_access' => 'Acceso GRATUITO inmediato después del registro',
-        'worth_free' => 'Valor €997/año - GRATUITO para miembros',
+        'worth_free' => 'Acceso exclusivo', // Changed from 'Valor €997/año - GRATUITO para miembros'
         'get_hired' => 'Sé contratado por las mejores empresas de Laravel',
         'join_now' => '¡Únete AHORA antes de que cierre el registro!',
         'create_account' => 'Crea Tu Cuenta GRATUITA',

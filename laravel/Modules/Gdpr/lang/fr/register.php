@@ -3,18 +3,17 @@
 declare(strict_types=1);
 
 return [
-    'register' => [
-        'title' => 'Commencez votre voyage Pizza 🍕',
-        'subtitle' => 'Rejoignez 5.000+ amateurs de pizza et développeurs. Accès exclusif aux meetups et tutoriels.',
-        'submit' => 'Rejoindre la communauté',
-        'submitting' => 'Nous préparons votre four...',
-    ],
+    // === REGISTER PAGE ===
+    'title' => 'Commencez votre voyage Pizza 🍕', // Moved from nested 'register' array
+    'subtitle' => 'Rejoignez notre communauté croissante amateurs de pizza et développeurs. Accès exclusif aux meetups et tutoriels.', // Moved from nested 'register' array
+    'submit' => 'Rejoindre la communauté', // Moved from nested 'register' array
+    'submitting' => 'Nous préparons votre four...', // Moved from nested 'register' array
 
     // === STATS ===
     'stats' => [
-        'active_developers' => 'Développeurs Actifs',
-        'monthly_meetups' => 'Meetups Mensuels',
-        'community_support' => 'Support Communautaire',
+        'active_developers' => 'Communauté en Croissance',
+        'monthly_meetups' => 'Événements à Venir',
+        'community_support' => 'Support 24/7',
     ],
 
     // === FORM ===
@@ -27,14 +26,14 @@ return [
     // === BENEFITS CTA ===
     'benefits' => [
         'community' => [
-            'title' => '5,000+ Communauté de Développeurs',
+            'title' => 'Rejoignez la Communauté',
             'description' => 'Connectez-vous avec des professionnels et passionnés de Laravel',
             'cta' => 'Accès gratuit immédiat après inscription',
         ],
         'tutorials' => [
             'title' => 'Tutoriels & Ateliers Exclusifs',
             'description' => 'Accès prioritaire aux contenus premium et formations',
-            'cta' => 'Valeur 997€/an - Gratuit pour membres',
+            'cta' => 'Obtenez un accès exclusif', // Changed from 'Valeur 997€/an - Gratuit pour membres'
         ],
         'networking' => [
             'title' => 'Réseautage & Carrière',
@@ -42,7 +41,7 @@ return [
             'cta' => 'Recruté par les meilleures entreprises Laravel',
         ],
     ],
-    'social_proof' => 'Rejoignez 5,000+ développeurs dans le monde',
+    'social_proof' => 'Rejoignez la communauté LaravelPizza',
     'fields' => [
         'first_name' => [
             'label' => 'Prénom',
@@ -115,7 +114,7 @@ return [
         'monthly_meetups' => 'Meetups Mensuels',
         'community_support' => 'Support Communautaire',
         'free_access' => 'Accès GRATUIT immédiat après inscription',
-        'worth_free' => 'Valeur 997€/an - GRATUIT pour les membres',
+        'worth_free' => 'Obtenez un accès exclusif', // Changed from 'Valeur 997€/an - GRATUIT pour les membres'
         'get_hired' => 'Soyez recruté par les meilleures entreprises Laravel',
         'join_now' => 'Rejoignez MAINTENANT avant la fermeture de l\'inscription!',
         'create_account' => 'Créez Votre Compte GRATUIT',
@@ -125,7 +124,7 @@ return [
 
     // === SEO KEYWORDS ===
     'seo' => [
-        'description' => 'Rejoignez 5,000+ développeurs Laravel pour des meetups exclusifs, des tutoriels premium et du réseautage. Accès gratuit aux ateliers et aux événements communautaires.',
+        'description' => 'Rejoignez la communauté LaravelPizza pour des meetups exclusifs, des tutoriels premium et du réseautage. Accès gratuit aux ateliers et aux événements communautaires.',
         'laravel_meetup' => 'meetup Laravel',
         'laravel_community' => 'communauté Laravel',
         'php_developer_community' => 'communauté développeurs PHP',

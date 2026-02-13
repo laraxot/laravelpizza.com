@@ -1,7 +1,7 @@
 # GitHub Actions - Advanced Security & Artifact Attestations
 
-**Versione**:
-**Data**:
+**Version**: {VERSION_PLACEHOLDER}
+**Date**: {DATE_PLACEHOLDER}
 **Status**: ✅ Implementato
 **Standards**: SLSA v1.0 Build Level 3, NIST 800-218, CIS Controls
 
@@ -36,7 +36,7 @@
                    │
                    ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│  actions/attest-build-provenance@v2                           │
+│  actions/attest-build-provenance@{ATT_BUILD_PROV_VERSION}                           │
 │  ┌─────────────────────────────────────────────────────────┐   │
 │  │ 1. Generate OIDC Token                                  │   │
 │  │    - GitHub Actions → GitHub OIDC Provider             │   │
@@ -111,7 +111,7 @@ Response:
 ```
 
 **Certificate Properties**:
-- **Validity**: 10 minutes (short-lived)
+- **Validity**: {CERTIFICATE_VALIDITY_DURATION} (short-lived)
 - **Purpose**: Code signing
 - **Subject**: OIDC identity (workflow identity)
 - **Public Key**: Embedded in certificate
@@ -154,24 +154,24 @@ Entry Structure:
 #### 4. **In-Toto Statement Format**
 ```json
 {
-  "_type": "https://in-toto.io/Statement/v0.1",
+  "_type": "https://in-toto.io/Statement/{IN_TOTO_STATEMENT_VERSION}","
   "subject": [
     {
-      "name": "ghcr.io/laraxot/laravelpizza:latest",
+      "name": "ghcr.io/{ORG_NAME}/{REPO_NAME}:{TAG}",
       "digest": {
         "sha256": "abc123..."
       }
     }
   ],
-  "predicateType": "https://slsa.dev/provenance/v1",
+  "predicateType": "https://slsa.dev/provenance/{SLSA_PROVENANCE_VERSION}",
   "predicate": {
     "buildDefinition": {
-      "buildType": "https://github.com/definition-to-courier/definition@v0",
+      "buildType": "https://github.com/{ORG_NAME}/{REPO_NAME}/{DEFINITION_VERSION}",
       "externalParameters": {
         "workflow": {
           "name": "Deploy Advanced - LaravelPizza.com",
           "ref": "refs/heads/main",
-          "repository": "laraxot/laravelpizza"
+          "repository": "{ORG_NAME}/{REPO_NAME}"
         }
       },
       "internalParameters": {
@@ -188,13 +188,13 @@ Entry Structure:
         "id": "https://github.com/Attestations/GitHubActionsWorkflow@v1",
         "builderDependencies": [
           {
-            "uri": "pkg:githubactions/checkout@v4",
+            "uri": "pkg:githubactions/checkout@{CHECKOUT_ACTION_VERSION}",
             "digest": {"sha256": "..."}
           }
         ]
       },
       "metadata": {
-        "invocationId": "https://github.com/laraxot/laravelpizza/actions/runs/1234567890"
+        "invocationId": "https://github.com/{ORG_NAME}/{REPO_NAME}/actions/runs/1234567890"
       }
     }
   }
@@ -242,23 +242,12 @@ Entry Structure:
 **Certificate Structure**:
 ```
 -----BEGIN CERTIFICATE-----
-Version: 3
-Serial Number: ...
-Issuer: CN=sigstore-intermediate,O=sigstore.dev
-Subject: CN=sigstore,O=GitHub Actions
-Validity:
-  Not Before: YYYY-MM-DDTHH:MM:SSZ
-  Not After: YYYY-MM-DDTHH:MM:SSZ (10 minutes)
-X509v3 Subject Alternative Name:
-  Email: github-actions@github.com
-  URI: https://github.com/laraxot/laravelpizza/.github/workflows/deploy-advanced.yml@refs/heads/main
-X509v3 Extended Key Usage:
-  Code Signing
+(Example Certificate Content - Generalized)
 -----END CERTIFICATE-----
 ```
 
 **Security Guarantees**:
-- ✅ Short-lived certificates limit exposure
+- ✅ Short-lived certificates limit exposure ({CERTIFICATE_VALIDITY_DURATION})
 - ✅ No long-term key management required
 - ✅ Automated certificate issuance
 - ✅ Identity-based (no password/key pairs)
@@ -320,7 +309,7 @@ cosign sign laravelpizza.tar.gz \
 
 # Verify an artifact
 cosign verify laravelpizza.tar.gz \
-  --certificate-identity=https://github.com/laraxot/laravelpizza/.github/workflows/* \
+  --certificate-identity=https://github.com/{ORG_NAME}/{REPO_NAME}/.github/workflows/* \
   --certificate-oidc-issuer=https://token.actions.githubusercontent.com
 
 # Attach SBOM
@@ -387,7 +376,7 @@ cosign attach sbom laravelpizza.tar.gz \
 
 ```yaml
 - name: Generate multiple subject attestation
-  uses: actions/attest-build-provenance@v2
+  uses: actions/attest-build-provenance@{ATT_BUILD_PROV_VERSION}
   with:
     subject-path: |
       ./laravel/Themes/Meetup/public/build/**/*.css
@@ -547,7 +536,7 @@ build-hermetic:
 slsa-verifier verify-artifact \
   --artifact-url laravelpizza.tar.gz \
   --provenance-path attestation.intoto.jsonl \
-  --source-uri github.com/laraxot/laravelpizza \
+  --source-uri github.com/{ORG_NAME}/{REPO_NAME} \
   --source-tag v1.2.3
 
 # Expected output:
@@ -590,7 +579,7 @@ grype sbom:php-sbom-spdx.json --severity critical,high
 # Verify build provenance
 slsa-verifier verify-artifact \
   --artifact-url laravelpizza.tar.gz \
-  --source-uri github.com/laraxot/laravelpizza
+  --source-uri github.com/{ORG_NAME}/{REPO_NAME}
 ```
 
 #### 3. **Artifact Tampering**
@@ -608,7 +597,7 @@ slsa-verifier verify-artifact \
 - name: Verify attestation before deploy
   run: |
     gh attestation verify laravelpizza.tar.gz \
-      --repo laraxot/laravelpizza
+      --repo {ORG_NAME}/{REPO_NAME}
     if [ $? -ne 0 ]; then
       echo "::error::Attestation verification failed"
       exit 1
@@ -643,11 +632,11 @@ rekor-cli loginfo --verify
 ```json
 {
   "iss": "https://token.actions.githubusercontent.com",
-  "sub": "repo:laraxot/laravelpizza:ref:refs/heads/main",
+  "sub": "repo:{ORG_NAME}/{REPO_NAME}:ref:refs/heads/main",
   "aud": "sigstore",
   "exp": <TIMESTAMP>,
   "iat": <TIMESTAMP>,
-  "job_workflow_ref": "laraxot/laravelpizza/.github/workflows/deploy-advanced.yml@refs/heads/main"
+  "job_workflow_ref": "{ORG_NAME}/{REPO_NAME}/.github/workflows/deploy-advanced.yml@refs/heads/main"
 }
 ```
 
@@ -687,7 +676,7 @@ Layer 5: Verification at Deploy (last line of defense)
 # verify-deployment-pipeline.sh
 
 ARTIFACT=$1
-REPO="github.com/laraxot/laravelpizza"
+REPO="github.com/{ORG_NAME}/{REPO_NAME}"
 
 echo "🔍 Starting verification pipeline..."
 
@@ -773,7 +762,7 @@ metadata:
   name: laravelpizza-policy
 spec:
   images:
-    - glob: "ghcr.io/laraxot/laravelpizza:*"
+    - glob: "ghcr.io/{ORG_NAME}/{REPO_NAME}:*"
   authorities:
     - keyless:
         url: https://fulcio.sigstore.dev
@@ -862,7 +851,7 @@ deploy-all:
     - name: Deploy to ${{ matrix.environment }}
       run: |
         # Environment-specific attestation
-        actions/attest-build-provenance@v2
+        actions/attest-build-provenance@{ATT_BUILD_PROV_VERSION}
         with:
           subject-name: "laravelpizza-${{ matrix.environment }}"
 ```
@@ -872,7 +861,7 @@ deploy-all:
 ```yaml
 # In library repository
 - name: Attest library
-  uses: actions/attest-build-provenance@v2
+  uses: actions/attest-build-provenance@{ATT_BUILD_PROV_VERSION}
   with:
     subject-path: ./dist/library.tar.gz
     subject-name: 'ghcr.io/laraxot/library:latest'
@@ -891,7 +880,7 @@ deploy-all:
 cat > verification-policy.json << EOF
 {
   "allowedBuilders": [
-    "github.com/laraxot/laravelpizza/.github/workflows/*"
+    "github.com/{ORG_NAME}/{REPO_NAME}/.github/workflows/*"
   ],
   "allowedBranches": ["main", "develop"],
   "maxAge": "7d",
@@ -903,7 +892,7 @@ EOF
 
 # Apply policy
 gh attestation verify artifact.tar.gz \
-  --repo laraxot/laravelpizza \
+  --repo {ORG_NAME}/{REPO_NAME} \
   --policy verification-policy.json
 ```
 
@@ -955,7 +944,7 @@ jobs:
 ```yaml
 # Use subject-digest instead of subject-path for large artifacts
 - name: Create optimized attestation
-  uses: actions/attest-build-provenance@v2
+  uses: actions/attest-build-provenance@{ATT_BUILD_PROV_VERSION}
   with:
     subject-digest: ${{ steps.digest.outputs.sha256 }}
     subject-name: 'laravelpizza:latest'

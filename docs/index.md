@@ -222,8 +222,8 @@ Benvenuto nella documentazione di **LaravelPizza.com** - una piattaforma complet
 
 ### Development
 - [Getting Started](getting-started.md) - Setup rapido
-- [Filament v5 Study](filament-v5-study-summary.md) - Filament v5 vs v4
-- [MCP Servers Guide](../laravel/docs/mcp-servers-complete-guide.md) - Model Context Protocol
+- [Filament v5 Study](filament-v5-study-summary.md) - Filament v4 vs v5
+- [MCP Configuration](mcp-configuration.md) - Model Context Protocol setup for AI agents
 
 ### Deployment
 - [Deployment Guide](deployment.md) - *Coming Soon*

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/mcp.json",
+  "mcpServers": {
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/var/www/_bases/base_laravelpizza/laravel"
+      ],
+      "description": "Access to project files including .env, auth.json, and protected configs"
+    },
+    "database": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@bytebase/dbhub"
+      ],
+      "env": {
+        "DATABASE_URL": "sqlite:///var/www/_bases/base_laravelpizza/laravel/database/database.sqlite"
+      },
+      "description": "Direct SQLite database queries for analytics, schema inspection, and debugging"
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "description": "GitHub integration for PR reviews, issue management, and code automation"
+    },
+    "asana": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.asana.com/sse"
+      ],
+      "description": "Asana Work Graph integration for task management, project tracking, and team collaboration"
+    },
+    "clickup": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.clickup.com/mcp"
+      ],
+      "description": "ClickUp workspace integration for tasks, lists, folders, docs, and time tracking"
+    },
+    "puppeteer": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@hisma/server-puppeteer"
+      ],
+      "env": {
+        "MCP_PUPPETEER_HEADLESS": "true",
+        "MCP_PUPPETEER_DEFAULT_VIEWPORT": "1920x1080",
+        "MCP_PUPPETEER_DEFAULT_TIMEOUT": "30000"
+      },
+      "description": "Browser automation for screenshots, web scraping, and UI testing"
+    },
+    "fetch": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "description": "HTTP client for web requests and content fetching"
+    },
+    "everything": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-everything"
+      ],
+      "description": "Comprehensive MCP server with all protocol features"
+    }
+  }
+}

@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 return [
     // === REGISTER PAGE ===
-    'register' => [
-        'title' => 'Beginnen Sie Ihre Pizza-Reise 🍕',
-        'subtitle' => 'Schließen Sie sich unserer wachsenden Community von Pizza-Liebhabern und Entwicklern an. Exklusiver Zugang zu Meetups und Tutorials.',
-        'submit' => 'Community jetzt beitreten',
-        'submitting' => 'Wir bereiten Ihren Ofen vor...',
-    ],
+    'title' => 'Beginnen Sie Ihre Pizza-Reise 🍕', // Moved from nested 'register' array
+    'subtitle' => 'Schließen Sie sich unserer wachsenden Community von Pizza-Liebhabern und Entwicklern an. Exklusiver Zugang zu Meetups und Tutorials.', // Moved from nested 'register' array
+    'submit' => 'Community jetzt beitreten', // Moved from nested 'register' array
+    'submitting' => 'Wir bereiten Ihren Ofen vor...', // Moved from nested 'register' array
 
     // === STATS ===
     'stats' => [
@@ -35,7 +33,7 @@ return [
         'tutorials' => [
             'title' => 'Exklusive Tutorials & Workshops',
             'description' => 'Priorisierter Zugang zu Premium-Inhalten und Schulungen',
-            'cta' => 'Wert €997/Jahr - KOSTENLOS für Mitglieder',
+            'cta' => 'Exklusiven Zugang erhalten', // Changed from 'Wert €997/Jahr - KOSTENLOS für Mitglieder'
         ],
         'networking' => [
             'title' => 'Networking & Karriere',
@@ -131,7 +129,7 @@ return [
         'monthly_meetups' => 'Monatliche Meetups',
         'community_support' => 'Community-Support',
         'free_access' => 'KOSTENLOSER Zugriff sofort nach der Registrierung',
-        'worth_free' => 'Wert €997/Jahr - KOSTENLOS für Mitglieder',
+        'worth_free' => 'Exklusiven Zugang erhalten', // Changed from 'Wert €997/Jahr - KOSTENLOS für Mitglieder'
         'get_hired' => 'Wirst du von den besten Laravel-Unternehmen eingestellt',
         'join_now' => 'JETZT beitreten, bevor die Registrierung schließt!',
         'create_account' => 'Erstelle dein KOSTENLOSES Konto',

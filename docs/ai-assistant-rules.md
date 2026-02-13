@@ -1,6 +1,6 @@
 # AI Assistant - Regole Operative
 
-**Last Updated**: 2025-12-18
+**Last Updated**:
 **Status**: 🔒 CRITICAL - Always Follow
 
 ---
@@ -240,7 +240,7 @@ REGOLA: Esattamente 1 task in_progress per volta
 ```
 ✅ CORRETTO:
 - lowercase-with-hyphens.md
-- phpstan-analysis-2025.md
+- phpstan-analysis-YYYY.md
 - mcp-servers-guide.md
 - README.md (eccezione)
 - CHANGELOG.md (eccezione)
@@ -248,7 +248,7 @@ REGOLA: Esattamente 1 task in_progress per volta
 ❌ SBAGLIATO:
 - UPPERCASE-FILE.md
 - CamelCaseFile.md
-- 2025-12-18-filename.md (date prefixes)
+- YYYY-MM-DD-filename.md (date prefixes)
 - file_with_underscores.md
 ```
 
@@ -310,7 +310,7 @@ REGOLA: Esattamente 1 task in_progress per volta
 
 ```markdown
 ✅ CORRETTO - Link relativi:
-[Architecture Guide](../Xot/docs/architecture-complete-2025.md)
+[Architecture Guide](../Xot/docs/architecture-complete.md)
 [PHPStan Guide](./phpstan-code-quality-guide.md)
 
 ❌ SBAGLIATO - Link assoluti:
@@ -384,7 +384,7 @@ Document everything.
 
 ---
 
-**Versione**: 1.0
+**Versione**:
 **Maintained by**: AI Assistant (Self-Documented)
-**Last Updated**: 2025-12-18
+**Last Updated**:
 **Next Review**: Ogni sessione Super Mucca

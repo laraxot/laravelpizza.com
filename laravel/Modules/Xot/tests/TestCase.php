@@ -2,33 +2,45 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests;
+namespace Modules\\$dir\\Tests;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\\Foundation\\Testing\\DatabaseTransactions;
+use Illuminate\\Foundation\\Testing\\TestCase as BaseTestCase;
+use Modules\\Xot\\Tests\\CreatesApplication;
 
 /**
- * Base test case for Xot module.
+ * Base test case for $dir module.
  *
- * Uses MySQL from .env.testing (NOT SQLite).
+ * Uses MySQL from .env.testing.
+ * All module connections are mapped by TenantServiceProvider.
  */
 abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
     use DatabaseTransactions;
 
-    protected static bool $migrated = false;
+    protected $connectionsToTransact = [
+        'mysql',
+        'user',
+    ];
+
+    protected static bool \$migrated = false;
 
     protected function setUp(): void
     {
         parent::setUp();
 
-        if (! self::$migrated) {
-            $this->artisan('module:migrate', [
-                '--force' => true,
-            ]);
+        config(['xra.pub_theme' => 'Meetup']);
+        config(['xra.main_module' => 'User']);
 
-            self::$migrated = true;
+        \\Modules\\Xot\\Datas\\XotData::make()->update([
+            'pub_theme' => 'Meetup',
+            'main_module' => 'User',
+        ]);
+
+        if (! self::\$migrated) {
+            \$this->artisan('module:migrate');
+            self::\$migrated = true;
         }
     }
 }

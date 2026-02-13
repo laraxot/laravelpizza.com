@@ -44,6 +44,15 @@ Important:
 - `laravel/phpunit.xml` must NOT override `DB_CONNECTION` / `DB_DATABASE` if the project relies on `.env.testing`.
 - Do not use `Illuminate\Foundation\Testing\RefreshDatabase` in tests: this codebase is designed around persistent test databases.
 
+### CRITICAL RULES for Database & Migration in Testing
+
+- **NO Module-Specific Connections**: NEVER add module-specific database connections (e.g., `NOTIFY_DB_DATABASE`, `GEO_DB_DATABASE`) to `.env.testing` or `config/database.php`. All modules must share the main application database connection (`DB_DATABASE`) for testing.
+- **`DB_DATABASE` Naming**: The `DB_DATABASE` in `.env.testing` must be `your_main_db_name_test`. We only append `_test` to the existing main database name, without inventing new database connections.
+- **Single Migration Run**: The test migration strategy must involve a single `php artisan migrate` execution (no `migrate:fresh`).
+- **No `--force`**: The `--force` option must NEVER be used with `php artisan migrate` in tests.
+- **No `self::$migrated` Check**: Remove any `if (! self::$migrated)` conditional checks from `TestCase.php` files to ensure migrations are run reliably and once.
+
+
 ### Composer merge-plugin (Modules)
 
 This project uses `wikimedia/composer-merge-plugin` with:

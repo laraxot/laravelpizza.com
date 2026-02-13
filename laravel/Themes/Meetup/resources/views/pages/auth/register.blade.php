@@ -56,7 +56,7 @@ name('register');
 
         <div class="relative z-10 px-3 py-4 md:px-4 md:py-6 lg:py-8">
             <!-- Centered mobile-first layout -->
-            <div class="max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto space-y-4 md:space-y-6">
+            <div class="max-w-5xl md:max-w-6xl lg:max-w-7xl mx-auto space-y-4 md:space-y-6">
                 
                 <!-- Header Section (compact for mobile) -->
                 <header class="text-center py-2 md:py-4">

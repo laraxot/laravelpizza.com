@@ -391,3 +391,10 @@ se non compili il tema, magari delle classi di filament non vengono gestite.. ra
 il sito e' multilingua !! quello che hai fatto dentro laravel/Themes/Meetup/resources/views/pages/auth/register.blade.php  ... non serve che ti dica nulla... ma con un errore del genere tocca guardare tutto il tema se hai messo parole e frasi hardcoded .. e devi mettere le traduzioni .. e ripeto che devi migliorare la bellezza la ui/ux wcag seo adsense inbound marketing , clickbait , come sempre prima aggiorni e studi le cartelle docs dentro i moduli e dentro i temi che rappresentano la tua memoria e il punto di dialogo fra te e gli altri agenti ai 
 
 mancano le traduzioni gdpr::register.title gdpr::register.subtitle , ti ricordo che devi fare le traduzioni per tutte le lingue , http://127.0.0.1:8000/it/auth/register  preferivo il form che occupasse tutto lo spazio, anche perche' cosi' la scritta di sinistra per leggerla devo scendere con la scrollbar, e dobbiamo ricordare che il tutto deve essere otimizzato il piu' possibile per mobile e tablet, seo, inbound marketing , wcag, adsense , clickbait , percio' al massimo metti nello sfondo degli oggetti in movimento
+
+
+ i numeri che hai messo in http://127.0.0.1:8000/it/auth/register  non possono essere a cazzo ! devono essere veri ! e dato che il sito e' appena nato bisogna anche capire se mettere numeri bassi non sia
+   controproducente .. cmq la cosa che devi imparare e ricordare e' che non si mettono mai numeri a cazzo !
+
+
+adesso puoi creare i test in pest per http://127.0.0.1:8000/en/auth/register  dato che il form e' del modulo GDPR i test li puoi fare dentro laravel/Modules/Gdpr/tests  ti ricordo che nei tests noi utilizziamo la configurazione .env.testing che non utilizziamo sqlite ma utilizziamo mysql , per prima cosa nei test facciamo php artisan migrate , proprio per popolare i databases e le tabelle per i test non passiamo il modulo, facciamo migrate di tutto , i database han lo stesso nome di quelli di produzione concatenati a "_test"  , i nomi delle tabelle gli stessi, se hai domande falle prima di fare cazzate

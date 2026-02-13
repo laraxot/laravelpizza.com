@@ -1,23 +1,23 @@
 # Filament v5 Comprehensive Study Summary
 
-**Study Date:** January 31, 2026
-**Project Status:** Already using Filament v5.1.3
+**Study Date:**
+**Project Status:** Already using {FILAMENT_VERSION_NUMBER}
 **Documentation Source:** Official Filament v5 documentation and release notes
 
 ---
 
 ## Executive Summary
 
-Filament v5 was released on January 16, 2026, with a **singular primary purpose**: to provide support for Livewire v4. Unlike typical major version releases, Filament v5 introduces **NO functional breaking changes** to the Filament framework itself. All existing Filament v4 APIs, components, and patterns remain fully compatible.
+Filament {VERSION} was released on {DATE}, with a **singular primary purpose**: to provide support for Livewire v4. Unlike typical major version releases, Filament v5 introduces **NO functional breaking changes** to the Filament framework itself. All existing Filament {PREVIOUS_VERSION} APIs, components, and patterns remain fully compatible.
 
 ### Key Finding
-**Filament v5 = Filament v4 + Livewire v4 Support**
+**Filament {CURRENT_VERSION} = Filament {PREVIOUS_VERSION} + Livewire {LIVEWIRE_VERSION} Support**
 
 The upgrade is low-risk because:
 - No API changes in Filament itself
 - All breaking changes are confined to Livewire v4 migration
 - Existing code patterns remain valid
-- Features continue to be shipped to both v4 and v5
+- Features continue to be shipped to both {PREVIOUS_VERSION} and {CURRENT_VERSION}
 
 ---
 
@@ -32,12 +32,12 @@ The upgrade is low-risk because:
   - Provides exact component references with documentation links
   - Generates detailed implementation plans for form fields, table columns, and actions
   - Improves AI-generated code accuracy
-  - Works with both Filament v4 and v5 projects
+  - Works with both Filament {PREVIOUS_VERSION} and {CURRENT_VERSION} projects
 
 #### 1.2 Livewire v4 Integration
-- **Requirement**: Filament v5 requires Livewire v4.0+
+- **Requirement**: Filament {CURRENT_VERSION} requires Livewire {LIVEWIRE_VERSION}+
 - **Benefit**: Enables use of latest Livewire features and performance improvements
-- **Impact**: Only reason to upgrade from v4 to v5
+- **Impact**: Only reason to upgrade from {PREVIOUS_VERSION} to {CURRENT_VERSION}
 
 #### 1.3 Async Requests (Enhanced)
 - Improved performance through better async request handling
@@ -47,8 +47,8 @@ The upgrade is low-risk because:
 ### What CHANGED (Breaking Changes)
 
 #### Filament Framework: ZERO Breaking Changes
-- **Official Statement**: "Apart from Livewire v4 support, Filament v5 has no additional changes over v4"
-- **API Compatibility**: 100% backward compatible with v4
+- **Official Statement**: "Apart from Livewire {LIVEWIRE_VERSION} support, Filament {CURRENT_VERSION} has no additional changes over {PREVIOUS_VERSION}"
+- **API Compatibility**: 100% backward compatible with {PREVIOUS_VERSION}
 - **Code Migration**: No Filament-specific code changes required
 
 #### Livewire v4 Breaking Changes (Indirect Impact)
@@ -198,9 +198,9 @@ All Filament components work identically in v5:
 ### Official Type Safety Status
 **Finding**: No specific type safety improvements announced for Filament v5 itself.
 
-Since Filament v5 has no functional changes over v4, the type safety features in v5 are the same as those in v4:
+Since Filament {CURRENT_VERSION} has no functional changes over {PREVIOUS_VERSION}, the type safety features in {CURRENT_VERSION} are the same as those in {PREVIOUS_VERSION}:
 
-#### Existing Type Safety Features (Inherited from v4)
+#### Existing Type Safety Features (Inherited from {PREVIOUS_VERSION})
 
 1. **Strong Type Hints**
    - Most methods have proper return type declarations
@@ -212,16 +212,16 @@ Since Filament v5 has no functional changes over v4, the type safety features in
    - Array types specify key and value types
 
 3. **Static Analysis Support**
-   - Full PHPStan support
+   - Full PHPStan {PHPSTAN_VERSION} support
    - IDE autocomplete improvements
    - Type-safe API chaining
 
 4. **Enum Support**
-   - PHP 8.1+ enums fully supported
+   - PHP {PHP_VERSION}+ enums fully supported
    - UnitEnum and BackedEnum support
    - Type-safe enum usage in forms and tables
 
-#### Type Safety Best Practices (Already Valid in v4/v5)
+#### Type Safety Best Practices (Already Valid in {PREVIOUS_VERSION}/{CURRENT_VERSION})
 
 ```php
 // Use proper type hints
@@ -247,7 +247,7 @@ public function getStatus(): StatusEnum
 
 #### PHPStan Integration
 
-The project already uses PHPStan level 10+ with Filament v5:
+The project already uses PHPStan level {PHPSTAN_LEVEL}+ with Filament {CURRENT_VERSION}:
 
 ```php
 // Example of type-safe code pattern
@@ -535,47 +535,47 @@ public static function getInfolistSchema(Infolist $infolist): Infolist
 
 ---
 
-## 6. Migration Guide (From v4 to v5)
+## 6. Migration Guide (From {PREVIOUS_VERSION} to {CURRENT_VERSION})
 
 ### Current Project Status
-✅ **Already Using Filament v5.1.3**
+✅ **Already Using {FILAMENT_VERSION_NUMBER}**
 - No migration needed for this project
-- Already benefiting from Livewire v4 support
+- Already benefiting from Livewire {LIVEWIRE_VERSION} support
 - All best practices already implemented
 
-### For Projects Still on Filament v4
+### For Projects Still on Filament {PREVIOUS_VERSION}
 
 #### Step 1: Check Prerequisites
 ```bash
-# Check PHP version (need 8.2+)
+# Check PHP version (need {PHP_VERSION}+)
 php --version
 
-# Check Laravel version (need 11.28+)
+# Check Laravel version (need {LARAVEL_VERSION}+)
 php artisan --version
 
-# Check Livewire version (need v4)
+# Check Livewire version (need {LIVEWIRE_VERSION})
 composer show livewire/livewire
 ```
 
 #### Step 2: Update Dependencies
 ```bash
-# Update Filament to v5
-composer update filament/*:^5.0
+# Update Filament to {CURRENT_VERSION}
+composer update filament/*:^{CURRENT_MAJOR_VERSION}.0
 
-# Update Livewire to v4
-composer update livewire/livewire:^4.0
+# Update Livewire to {LIVEWIRE_VERSION}
+composer update livewire/livewire:^{LIVEWIRE_MAJOR_VERSION}.0
 ```
 
 #### Step 3: Run Upgrade Script
 ```bash
 # Install upgrade tool
-composer require filament/upgrade:^5.0 -W --dev
+composer require filament/upgrade:^{CURRENT_MAJOR_VERSION}.0 -W --dev
 
 # Run upgrade script
-vendor/bin/filament-v5
+vendor/bin/filament-{CURRENT_MAJOR_VERSION}
 ```
 
-#### Step 4: Handle Livewire v4 Changes
+#### Step 4: Handle Livewire {LIVEWIRE_VERSION} Changes
 ```bash
 # Publish Livewire config
 php artisan livewire:publish --config
@@ -618,9 +618,9 @@ php artisan serve
 ### Rules That Remain Valid (No Changes Needed)
 
 #### 1. Filament Version Reference
-**Current Memory**: "Admin Panel: Filament 4.x"
+**Current Memory**: "Admin Panel: Filament {PREVIOUS_MAJOR_VERSION}.x"
 **Update Needed**: YES
-**New Memory**: "Admin Panel: Filament 5.x"
+**New Memory**: "Admin Panel: Filament {CURRENT_MAJOR_VERSION}.x"
 
 #### 2. getInfolistSchema() Rule
 **Current Memory**: "CRITICAL RULE: getInfolistSchema() method in Filament resources MUST return array<string, Component> - keys must ALWAYS be strings, not integers"
@@ -645,21 +645,21 @@ php artisan serve
 ### New Rules to Add
 
 #### 7. Filament v5 + Livewire v4 Rule
-**New Memory**: "Filament v5 is functionally identical to v4 except for Livewire v4 support. No Filament-specific code changes are required when upgrading from v4 to v5. All existing Filament APIs remain compatible."
+**New Memory**: "Filament {CURRENT_VERSION} is functionally identical to {PREVIOUS_VERSION} except for Livewire {LIVEWIRE_VERSION} support. No Filament-specific code changes are required when upgrading from {PREVIOUS_VERSION} to {CURRENT_VERSION}. All existing Filament APIs remain compatible."
 
-#### 8. Livewire v4 Migration Rule
-**New Memory**: "When working with Filament v5 projects, ensure Livewire v4 best practices are followed: all component tags must be closed, use new wire:model patterns, and update configuration keys (layout → component_layout)."
+#### 8. Livewire {LIVEWIRE_VERSION} Migration Rule
+**New Memory**: "When working with Filament {CURRENT_VERSION} projects, ensure Livewire {LIVEWIRE_VERSION} best practices are followed: all component tags must be closed, use new wire:model patterns, and update configuration keys (layout → component_layout)."
 
 #### 9. Type Safety Rule
-**New Memory**: "Filament v5 maintains full PHPStan level 10+ compatibility. Always use proper type hints, return types, and ensure getInfolistSchema() returns array<string, Component> with string keys."
+**New Memory**: "Filament {CURRENT_VERSION} maintains full PHPStan level {PHPSTAN_LEVEL}+ compatibility. Always use proper type hints, return types, and ensure getInfolistSchema() returns array<string, Component> with string keys."
 
 ---
 
 ## 8. Key Differences Summary: Filament v4 vs v5
 
-| Aspect | Filament v4 | Filament v5 | Change |
+| Aspect | Filament {PREVIOUS_VERSION} | Filament {CURRENT_VERSION} | Change |
 |--------|-------------|-------------|--------|
-| **Primary Purpose** | Admin panel framework | Livewire v4 support | New |
+| **Primary Purpose** | Admin panel framework | Livewire {LIVEWIRE_VERSION} support | New |
 | **API Compatibility** | - | 100% backward compatible | No change |
 | **Resources** | Full support | Full support | No change |
 | **Widgets** | Full support | Full support | No change |
@@ -667,10 +667,10 @@ php artisan serve
 | **Tables** | Full support | Full support | No change |
 | **Actions** | Full support | Full support | No change |
 | **Type Safety** | PHPStan level 10+ | PHPStan level 10+ | No change |
-| **Livewire** | v3.x required | v4.0+ required | **BREAKING** |
-| **Laravel** | v11.x | v11.28+ required | **BREAKING** |
-| **PHP** | 8.2+ | 8.2+ required | No change |
-| **Tailwind** | v4.x | v4.1+ required | Minor |
+| **Livewire** | {LIVEWIRE_PREVIOUS_MAJOR_VERSION}.x required | {LIVEWIRE_MAJOR_VERSION}.0+ required | **BREAKING** |
+| **Laravel** | {LARAVEL_PREVIOUS_MAJOR_VERSION}.x | {LARAVEL_MAJOR_VERSION}.{LARAVEL_MINOR_VERSION}+ required | **BREAKING** |
+| **PHP** | {PHP_MAJOR_VERSION}.{PHP_MINOR_VERSION}+ | {PHP_MAJOR_VERSION}.{PHP_MINOR_VERSION}+ required | No change |
+| **Tailwind** | {TAILWIND_PREVIOUS_MAJOR_VERSION}.x | {TAILWIND_MAJOR_VERSION}.{TAILWIND_MINOR_VERSION}+ required | Minor |
 | **Blueprint** | Not available | Premium plugin | New |
 
 ---
@@ -678,21 +678,21 @@ php artisan serve
 ## 9. Recommendations for This Project
 
 ### Current State Analysis
-✅ **Excellent**: Project is already using Filament v5.1.3
+✅ **Excellent**: Project is already using {FILAMENT_VERSION_NUMBER}
 ✅ **Up-to-date**: Using latest stable version
 ✅ **Compatible**: All dependencies properly aligned
 
 ### Action Items
 
 #### 1. Update Documentation (Priority: Medium)
-**Action**: Update IFLOW.md to reflect Filament v5.1.3
+**Action**: Update IFLOW.md to reflect {FILAMENT_VERSION_NUMBER}
 
 **Changes Needed**:
-- Change "Filament 4.x" to "Filament 5.x"
+- Change "Filament {PREVIOUS_MAJOR_VERSION}.x" to "Filament {CURRENT_MAJOR_VERSION}.x"
 - Add note about Livewire v4 compatibility
 - Add note about Filament Blueprint tool
 
-**File**: `/var/www/_bases/base_laravelpizza/bashscripts/ai/IFLOW.md`
+**File**: `{PROJECT_ROOT}/bashscripts/ai/IFLOW.md`
 
 #### 2. Verify Livewire v4 Compliance (Priority: Low)
 **Action**: Ensure all Livewire components follow v4 best practices
@@ -743,7 +743,7 @@ php artisan serve
 
 **Check**:
 ```bash
-cat /var/www/_bases/base_laravelpizza/laravel/config/livewire.php
+cat {PROJECT_ROOT}/laravel/config/livewire.php
 ```
 
 **Action**: If file exists, check for:
@@ -756,7 +756,7 @@ cat /var/www/_bases/base_laravelpizza/laravel/config/livewire.php
 
 **Check**:
 ```bash
-grep -r "<livewire:" /var/www/_bases/base_laravelpizza/laravel/Modules/*/resources/views/
+grep -r "<livewire:" {PROJECT_ROOT}/laravel/Modules/*/resources/views/
 ```
 
 **Action**: Ensure all tags are properly closed:
@@ -791,11 +791,10 @@ grep -r "<livewire:" /var/www/_bases/base_laravelpizza/laravel/Modules/*/resourc
 
 ### Key Takeaways
 
-1. **Filament v5 = Filament v4 + Livewire v4**
+1. **Filament {CURRENT_VERSION} = Filament {PREVIOUS_VERSION} + Livewire {LIVEWIRE_VERSION}**
    - No functional changes to Filament itself
    - All existing code remains valid
-   - Only Livewire v4 migration required
-
+   - Only Livewire {LIVEWIRE_VERSION} migration required
 2. **Type Safety Unchanged**
    - PHPStan level 10+ support maintained
    - All type hints and return types work identically
@@ -812,16 +811,16 @@ grep -r "<livewire:" /var/www/_bases/base_laravelpizza/laravel/Modules/*/resourc
    - DRY + KISS principles still apply
 
 5. **This Project Status**
-   - ✅ Already using Filament v5.1.3
+   - ✅ Already using {FILAMENT_VERSION_NUMBER}
    - ✅ No migration needed
    - ✅ All best practices implemented
    - ⚠️ Only documentation needs updating
 
 ### Final Recommendations
 
-1. **Update IFLOW.md** to reflect Filament v5.1.3
+1. **Update IFLOW.md** to reflect {FILAMENT_VERSION_NUMBER}
 2. **Continue enforcing** PHPStan level 10+ compliance
-3. **Monitor** Filament v5.x releases for updates
+3. **Monitor** Filament {CURRENT_MAJOR_VERSION}.x releases for updates
 4. **Consider** Filament Blueprint for AI-assisted development
 5. **Stay informed** about Livewire v4 best practices
 
@@ -841,12 +840,12 @@ grep -r "<livewire:" /var/www/_bases/base_laravelpizza/laravel/Modules/*/resourc
 - Filament Discussions: https://github.com/filamentphp/filament/discussions
 
 ### Project Resources
-- Project IFLOW.md: /var/www/_bases/base_laravelpizza/bashscripts/ai/IFLOW.md
-- Filament v5 Upgrade Guide: /var/www/_bases/base_laravelpizza/laravel/docs/filament-v5-upgrade-guide.md
-- Modules Directory: /var/www/_bases/base_laravelpizza/laravel/Modules/
+- Project IFLOW.md: {PROJECT_ROOT}/bashscripts/ai/IFLOW.md
+- Filament {CURRENT_VERSION} Upgrade Guide: {PROJECT_ROOT}/laravel/docs/filament-v5-upgrade-guide.md
+- Modules Directory: {PROJECT_ROOT}/laravel/Modules/
 
 ---
 
-**Document Version:** 1.0
-**Last Updated:** January 31, 2026
-**Next Review:** After next Filament v5.x release
+**Document Version:**
+**Last Updated:**
+**Next Review:** After next Filament {CURRENT_MAJOR_VERSION}.x release

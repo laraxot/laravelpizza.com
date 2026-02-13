@@ -4,7 +4,7 @@
 
 ## Overview
 
-Improved the AI prompt system for the project based on Claude 2026 best practices for prompt engineering. The new system is project-agnostic, reusable, and follows contract-based principles.
+Improved the AI prompt system for the project based on Claude Best Practices for prompt engineering. The new system is project-agnostic, reusable, and follows contract-based principles.
 
 ---
 
@@ -88,9 +88,7 @@ Replaced vague instructions with concrete examples:
 
 #### Before
 ```markdown
-## Last Updated: February 2026
-## Version: 4.0
-## Created: 2026-01-15
+(Example of previous format with dates and version numbers)
 ```
 
 #### After
@@ -246,7 +244,7 @@ Use the new structured prompts:
 
 The new prompt system:
 
-- **Follows Claude 2026 best practices**
+- **Follows Claude Best Practices**
 - **Is project-agnostic and reusable**
 - **Uses contract-based structure**
 - **Emphasizes quality and type safety**

@@ -63,6 +63,34 @@ return [
             ]) : [],
         ],
 
+        'user' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE_USER', 'laravel_user'),
+            'username' => env('DB_USERNAME_USER', 'root'),
+            'password' => env('DB_PASSWORD_USER', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
+        'gdpr' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE_GDPR', 'laravel_gdpr'),
+            'username' => env('DB_USERNAME_GDPR', 'root'),
+            'password' => env('DB_PASSWORD_GDPR', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),

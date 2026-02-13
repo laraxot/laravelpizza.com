@@ -110,6 +110,7 @@
     "prefer-stable": true,
     "require-dev": {
         "filament/upgrade": "^5.0",
-        "nunomaduro/phpinsights": "^2.13"
+        "nunomaduro/phpinsights": "^2.13",
+        "pestphp/pest-plugin-laravel": "^4.0"
     }
 }

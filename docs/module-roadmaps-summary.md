@@ -198,20 +198,20 @@ Ogni roadmap include:
 
 | Modulo | Level | Status | Errors |
 |--------|-------|--------|--------|
-| Xot | 10 | ✅ | 0 |
-| User | 9 | ✅ | 0 |
-| Lang | 9 | ✅ | 0 |
-| UI | 9 | ✅ | 0 |
-| Activity | 9 | ✅ | 0 |
-| Cms | 9 | ✅ | 0 |
-| Geo | 9 | ✅ | 0 |
-| Job | 9 | ⚠️ | 2 (syntax errors) |
-| Media | 9 | ✅ | 0 |
-| Notify | 9 | ✅ | 0 |
-| Tenant | 9 | ✅ | 0 |
-| Meetup | N/A | ❌ | Not tested |
-| Gdpr | N/A | ❌ | Not tested |
-| Seo | N/A | ❌ | Not tested |
+| Xot | {NUMBER} | ✅ | {NUMBER} |
+| User | {NUMBER} | ✅ | {NUMBER} |
+| Lang | {NUMBER} | ✅ | {NUMBER} |
+| UI | {NUMBER} | ✅ | {NUMBER} |
+| Activity | {NUMBER} | ✅ | {NUMBER} |
+| Cms | {NUMBER} | ✅ | {NUMBER} |
+| Geo | {NUMBER} | ✅ | {NUMBER} |
+| Job | {NUMBER} | ⚠️ | {NUMBER} (syntax errors) |
+| Media | {NUMBER} | ✅ | {NUMBER} |
+| Notify | {NUMBER} | ✅ | {NUMBER} |
+| Tenant | {NUMBER} | ✅ | {NUMBER} |
+| Meetup | N/A | ❌ | {STATUS} |
+| Gdpr | N/A | ❌ | {STATUS} |
+| Seo | N/A | ❌ | {STATUS} |
 
 **Target**: PHPStan Level 10 per tutti i moduli
 
@@ -221,20 +221,20 @@ Ogni roadmap include:
 
 | Modulo | Coverage | Status |
 |--------|----------|--------|
-| Xot | 75% | 🔄 |
-| User | 96% | ✅ |
-| Lang | 97% | ✅ |
-| UI | 95% | ✅ |
-| Activity | 91% | ✅ |
-| Cms | 75% | 🔄 |
-| Geo | 94% | ✅ |
-| Job | 90% | ✅ |
-| Media | 95% | ✅ |
-| Notify | 92% | ✅ |
-| Tenant | 95% | ✅ |
-| Meetup | N/A | ❌ |
-| Gdpr | N/A | ❌ |
-| Seo | 0% | 🔴 CRITICAL |
+| Xot | {PERCENTAGE}% | 🔄 |
+| User | {PERCENTAGE}% | ✅ |
+| Lang | {PERCENTAGE}% | ✅ |
+| UI | {PERCENTAGE}% | ✅ |
+| Activity | {PERCENTAGE}% | ✅ |
+| Cms | {PERCENTAGE}% | 🔄 |
+| Geo | {PERCENTAGE}% | ✅ |
+| Job | {PERCENTAGE}% | ✅ |
+| Media | {PERCENTAGE}% | ✅ |
+| Notify | {PERCENTAGE}% | ✅ |
+| Tenant | {PERCENTAGE}% | ✅ |
+| Meetup | {PERCENTAGE}% | {STATUS} |
+| Gdpr | {PERCENTAGE}% | {STATUS} |
+| Seo | {PERCENTAGE}% | {STATUS} |
 
 **Target**: 90%+ coverage per tutti i moduli
 
@@ -244,17 +244,17 @@ Ogni roadmap include:
 
 ### PHPStan
 - **Target**: Level 10 per tutti i moduli
-- **Status**: 1 moduli a Level 10, 11 a Level 9, 3 non testati
+- **Status**: {NUMBER} moduli a Level {NUMBER}, {NUMBER} a Level {NUMBER}, {NUMBER} {STATUS}
 
 ### Testing
 - **Framework**: Pest
 - **Target**: 90%+ coverage
-- **Status**: 9 moduli sopra 90%, 2 a 75%, 3 non testati
+- **Status**: {NUMBER} moduli sopra {PERCENTAGE}%, {NUMBER} a {PERCENTAGE}%, {NUMBER} {STATUS}
 
 ### Filament
 - **Current Version**: Mix (v3 e v5)
 - **Target**: v5 per tutti i moduli
-- **Status**: Xot su v5, UI e Cms su v3, altri non specificati
+- **Status**: Xot su {VERSION}, UI e Cms su {VERSION}, altri {STATUS}
 
 ### Documentation
 - **Format**: Markdown (.md)
@@ -340,7 +340,7 @@ Ogni task include:
 
 ---
 
-**Created**: 2026-01-31
-**Last Updated**: 2026-01-31
-**Next Review**: 2026-02-28
+**Created**:
+**Last Updated**:
+**Next Review**: (Monthly)
 **Maintained By**: Dev Team
