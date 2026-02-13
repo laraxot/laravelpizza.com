@@ -21,8 +21,8 @@ name('register');
             <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
         </div>
 
-        <div class="w-full max-w-2xl mx-auto relative z-10">
-            <div class="bg-slate-800/80 backdrop-blur-xl shadow-2xl rounded-2xl p-8 sm:p-12 border border-slate-700/50">
+        <div class="w-full max-w-7xl mx-auto relative z-10">
+            <div class="bg-slate-800/80 backdrop-blur-xl shadow-2xl rounded-2xl p-8 sm:p-10 lg:p-12 border border-slate-700/50 w-full">
                 {{-- Header --}}
                 <div class="text-center mb-10">
                     <a href="{{ \LaravelLocalization::localizeUrl('/') }}" class="inline-block mb-6">
