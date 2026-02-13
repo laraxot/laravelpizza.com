@@ -26,7 +26,7 @@ Il file `MeetupDashboard.php` rappresenta il punto di accesso principale per l'a
 // Modules/Meetup/app/Filament/Pages/MeetupDashboard.php
 class MeetupDashboard extends XotBasePage
 {
-    protected string $view = 'meetup::filament.pages.meetup-dashboard';
+    protected string $view = 'pub_theme::filament.pages.meetup-dashboard';
     
     public function getWidgets(): array
     {
@@ -38,7 +38,7 @@ class MeetupDashboard extends XotBasePage
 ```
 
 ### Vista del Dashboard
-La vista `meetup::filament.pages.meetup-dashboard` è specificamente progettata per integrarsi con il tema Meetup:
+La vista `pub_theme::filament.pages.meetup-dashboard` è specificamente progettata per integrarsi con il tema Meetup:
 
 - Usa il layout coerente con il resto del sistema
 - Include componenti riutilizzabili del tema

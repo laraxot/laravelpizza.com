@@ -75,7 +75,7 @@ Themes/Meetup/
 </head>
 <body class="font-sans antialiased bg-gray-50">
     <!-- Header -->
-    @include('meetup::components.header')
+    @include('pub_theme::components.header')
 
     <!-- Main Content -->
     <main>
@@ -83,7 +83,7 @@ Themes/Meetup/
     </main>
 
     <!-- Footer -->
-    @include('meetup::components.footer')
+    @include('pub_theme::components.footer')
 
     <!-- Additional Scripts -->
     @yield('scripts')
@@ -94,7 +94,7 @@ Themes/Meetup/
 ### 2. **Homepage Blade Template (home.blade.php)**
 
 ```php
-@extends('meetup::layouts.app')
+@extends('pub_theme::layouts.app')
 
 @section('title', 'Laravel Pizza - Pizzeria Artigianale | Ordina Online')
 @section('description', 'Laravel Pizza - Le migliori pizze artigianali consegnate a casa tua. Ingredienti freschi, ricette tradizionali e consegna veloce.')
@@ -161,7 +161,7 @@ Themes/Meetup/
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 @foreach($featuredPizzas as $pizza)
-                    @include('meetup::components.pizza-card', ['pizza' => $pizza])
+                    @include('pub_theme::components.pizza-card', ['pizza' => $pizza])
                 @endforeach
             </div>
 
@@ -271,7 +271,7 @@ class MeetupThemeServiceProvider extends ServiceProvider
     public function boot()
     {
         // Condivide dati globali con le views
-        View::composer('meetup::*', function ($view) {
+        View::composer('pub_theme::*', function ($view) {
             $view->with([
                 'features' => [
                     [
@@ -333,7 +333,7 @@ class HomeController extends Controller
             // ... altre pizze
         ];
 
-        return view('meetup::pages.home', compact('featuredPizzas'));
+        return view('pub_theme::pages.home', compact('featuredPizzas'));
     }
 }
 ```

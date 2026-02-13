@@ -8,16 +8,18 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
+use function Pest\Laravel\get;
+use function Pest\Laravel\post;
 
 it('renders the registration page successfully', function () {
-    $response = $this->get('/en/auth/register');
-    $response->assertStatus(200);
-    $response->assertSee('Create Your FREE Account');
-    $response->assertSee('No credit card required - 100% FREE forever!');
+    get('/en/auth/register')
+        ->assertStatus(200)
+        ->assertSee('Create Your FREE Account')
+        ->assertSee('No credit card required - 100% FREE forever!');
 });
 
 it('displays all required form fields', function () {
-    $this->get('/en/auth/register')
+    get('/en/auth/register')
         ->assertStatus(200)
         ->assertSee('First Name')
         ->assertSee('Last Name')
@@ -29,20 +31,20 @@ it('displays all required form fields', function () {
 });
 
 it('displays all required consent checkboxes', function () {
-    $this->get('/en/auth/register')
+    get('/en/auth/register')
         ->assertStatus(200)
         ->assertSee('I have read and understood the Privacy Policy')
         ->assertSee('I have read and accept the Terms and Conditions');
 });
 
 it('displays optional marketing consent', function () {
-    $this->get('/en/auth/register')
+    get('/en/auth/register')
         ->assertStatus(200)
         ->assertSee('I want to receive pizza tips and meetup invitations (optional)');
 });
 
 it('requires first name to be filled', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'last_name' => 'Doe',
         'email' => 'john@example.com',
         'password' => 'Password123!',
@@ -55,7 +57,7 @@ it('requires first name to be filled', function () {
 });
 
 it('requires last name to be filled', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'email' => 'john@example.com',
         'password' => 'Password123!',
@@ -68,7 +70,7 @@ it('requires last name to be filled', function () {
 });
 
 it('requires email to be filled', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'password' => 'Password123!',
@@ -81,7 +83,7 @@ it('requires email to be filled', function () {
 });
 
 it('requires email to be valid format', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'invalid-email',
@@ -97,7 +99,7 @@ it('requires email to be valid format', function () {
 it('requires email to be unique', function () {
     User::factory()->create(['email' => 'john@example.com']);
 
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -111,7 +113,7 @@ it('requires email to be unique', function () {
 });
 
 it('requires password to be filled', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -124,7 +126,7 @@ it('requires password to be filled', function () {
 });
 
 it('requires password confirmation to match', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -138,7 +140,7 @@ it('requires password confirmation to match', function () {
 });
 
 it('requires password to be at least 12 characters', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -152,7 +154,7 @@ it('requires password to be at least 12 characters', function () {
 });
 
 it('requires password to contain uppercase letter', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -166,7 +168,7 @@ it('requires password to contain uppercase letter', function () {
 });
 
 it('requires password to contain lowercase letter', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -180,7 +182,7 @@ it('requires password to contain lowercase letter', function () {
 });
 
 it('requires password to contain number', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -194,7 +196,7 @@ it('requires password to contain number', function () {
 });
 
 it('requires password to contain special character', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -208,7 +210,7 @@ it('requires password to contain special character', function () {
 });
 
 it('requires privacy policy consent to be accepted', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -221,7 +223,7 @@ it('requires privacy policy consent to be accepted', function () {
 });
 
 it('requires terms consent to be accepted', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
@@ -234,7 +236,7 @@ it('requires terms consent to be accepted', function () {
 });
 
 it('allows registration with all required fields and consents', function () {
-    $response = $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john.doe@example.com',
@@ -243,16 +245,15 @@ it('allows registration with all required fields and consents', function () {
         'privacy_accepted' => '1',
         'terms_accepted' => '1',
         'marketing_consent' => '0',
-    ]);
-
-    $response->assertStatus(302);
+    ])
+        ->assertStatus(302);
 
     // Verify user was created
     expect(User::where('email', 'john.doe@example.com')->exists())->toBeTrue();
 });
 
 it('allows registration with optional marketing consent', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'Jane',
         'last_name' => 'Smith',
         'email' => 'jane.smith@example.com',
@@ -269,7 +270,7 @@ it('allows registration with optional marketing consent', function () {
 });
 
 it('stores user data correctly after successful registration', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'Alice',
         'last_name' => 'Johnson',
         'email' => 'alice@example.com',
@@ -292,7 +293,7 @@ it('stores user data correctly after successful registration', function () {
 it('hashes the password after registration', function () {
     $plainPassword = 'MySecurePassword123!';
     
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'Bob',
         'last_name' => 'Wilson',
         'email' => 'bob@example.com',
@@ -310,7 +311,7 @@ it('hashes the password after registration', function () {
 });
 
 it('redirects after successful registration', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'Charlie',
         'last_name' => 'Brown',
         'email' => 'charlie@example.com',
@@ -324,7 +325,7 @@ it('redirects after successful registration', function () {
 });
 
 it('trims whitespace from input fields', function () {
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => '  John  ',
         'last_name' => '  Doe  ',
         'email' => '  john@example.com  ',
@@ -345,15 +346,16 @@ it('trims whitespace from input fields', function () {
 it('prevents registration when already logged in', function () {
     $user = User::factory()->create();
     
-    $this->actingAs($user)
-        ->$this->get('/en/auth/register')
+    Auth::login($user);
+    
+    get('/en/auth/register')
         ->assertRedirect();
 });
 
 it('handles very long input names correctly', function () {
     $longName = Str::random(250);
     
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => $longName,
         'last_name' => 'Doe',
         'email' => 'longname@example.com',
@@ -369,7 +371,7 @@ it('handles very long input names correctly', function () {
 it('handles very long email correctly', function () {
     $longEmail = Str::random(200) . '@example.com';
     
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => $longEmail,
@@ -385,7 +387,7 @@ it('handles very long email correctly', function () {
 it('prevents SQL injection attempts in email', function () {
     $maliciousEmail = "john@example.com'; DROP TABLE users; --";
     
-    $this->post('/en/auth/register', [
+    post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => $maliciousEmail,
@@ -399,21 +401,21 @@ it('prevents SQL injection attempts in email', function () {
 });
 
 it('displays login link on registration page', function () {
-    $this->get('/en/auth/register')
+    get('/en/auth/register')
         ->assertStatus(200)
         ->assertSee('Already have an account?')
         ->assertSee('Login now');
 });
 
 it('contains proper SEO meta tags', function () {
-    $this->get('/en/auth/register')
+    get('/en/auth/register')
         ->assertStatus(200)
         ->assertSee('<title>', false)
         ->assertSee('LaravelPizza Community');
 });
 
 it('has proper accessibility attributes', function () {
-    $this->get('/en/auth/register')
+    get('/en/auth/register')
         ->assertStatus(200)
         ->assertSee('aria-label');
 });

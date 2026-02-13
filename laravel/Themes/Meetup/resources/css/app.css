@@ -597,4 +597,25 @@
     .nav-link:hover::after {
         width: 100%;
     }
+
+    /* Particle Canvas Background */
+    .particle-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.6;
+    }
+
+    /* Particles should be on pages but not interfere with interactions */
+    .has-particles {
+        position: relative;
+    }
+
+    .has-particles .particle-canvas {
+        pointer-events: auto;
+    }
 }

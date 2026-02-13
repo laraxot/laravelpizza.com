@@ -172,7 +172,7 @@ class HomeController extends Controller
         $cartItems = $cartService->getCartWithDetails();
         $cartCount = count($cartItems);
 
-        return view('meetup::home', [
+        return view('pub_theme::home', [
             'featuredPizzas' => $featuredPizzas,
             'cartCount' => $cartCount,
         ]);
@@ -182,17 +182,17 @@ class HomeController extends Controller
 
 ### Blade Template
 ```blade
-@extends('meetup::layouts.app')
+@extends('pub_theme::layouts.app')
 
 @section('content')
-    <x-meetup::hero
+    <x-pub_theme::hero
         title="La Pizza Artigianale che ami, a casa tua"
         subtitle="Ingredienti freschi, ricette tradizionali e consegna veloce"
         :ctaPrimary="['text' => 'Ordina Ora', 'url' => '/menu']"
         :ctaSecondary="['text' => 'Sfoglia il Menu', 'url' => '/menu']"
     />
 
-    <x-meetup::features-section />
+    <x-pub_theme::features-section />
 
     @if($featuredPizzas->count() > 0)
         <section class="py-20 bg-gray-800/50">
@@ -202,14 +202,14 @@ class HomeController extends Controller
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     @foreach($featuredPizzas as $pizza)
-                        <x-meetup::pizza-card :pizza="$pizza" />
+                        <x-pub_theme::pizza-card :pizza="$pizza" />
                     @endforeach
                 </div>
             </div>
         </section>
     @endif
 
-    <x-meetup::cta-section
+    <x-pub_theme::cta-section
         title="Pronto a Ordinare?"
         description="Ordina ora e ricevi la tua pizza preferita direttamente a casa tua"
         :buttons="[

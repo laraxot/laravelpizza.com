@@ -37,46 +37,86 @@
                 <x-ui.language-switcher />
             </div>
 
-            <!-- Auth Buttons -->
-            <!-- WCAG 2.1 AA: text-slate-100 on slate-800 = 9:1 contrast (4.5:1 required) -->
+            <!-- Auth Toggle -->
             <div class="hidden md:flex items-center space-x-4">
                 @guest
-                    <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" class="text-slate-100 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Accedi') }}</a>
-                    <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Registrati') }}</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" class="text-slate-300 hover:text-white font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900 px-3 py-2 rounded-lg hover:bg-slate-700/30">{{ __('Accedi') }}</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="relative group overflow-hidden bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-xl font-bold tracking-wide transition-all hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900 shadow-lg shadow-red-900/20">
+                        <span class="relative z-10">{{ __('Registrati') }}</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                    </a>
                 @else
-                    <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="text-slate-100 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Dashboard') }}</a>
+                    @livewire(\Modules\User\Filament\Widgets\UserDropdown::class)
                 @endguest
             </div>
 
             <!-- Mobile menu button -->
-            <button id="mobile-menu-button" class="md:hidden text-slate-100 hover:text-white p-2 rounded-lg hover:bg-slate-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" aria-expanded="false" aria-controls="mobile-menu" aria-label="{{ __('Toggle mobile menu') }}">
+            <button id="mobile-menu-button" 
+                    @click="mobileMenuOpen = !mobileMenuOpen"
+                    x-data="{ mobileMenuOpen: false }"
+                    class="md:hidden text-slate-100 hover:text-white p-2 rounded-lg hover:bg-slate-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" 
+                    aria-expanded="false" aria-controls="mobile-menu" aria-label="{{ __('Toggle mobile menu') }}">
                 <x-filament::icon icon="meetup-icon-menu" class="w-6 h-6" aria-hidden="true" />
             </button>
         </div>
 
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden pb-4">
-            <div class="flex flex-col space-y-3 pt-4 border-t border-slate-700/50">
-                <!-- WCAG 2.1 AA: text-slate-100 on slate-800 = 9:1 contrast (4.5:1 required) -->
-                <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-slate-100 hover:text-white px-4 py-2 hover:bg-slate-700/50 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>{{ __('Home') }}</a>
-                <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="text-slate-100 hover:text-white px-4 py-2 hover:bg-slate-700/50 rounded-lg transition-colors flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>
+        <div id="mobile-menu" class="hidden md:hidden pb-6">
+            <div class="flex flex-col space-y-2 pt-4 border-t border-slate-700/50">
+                <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium" data-nav-link>{{ __('Home') }}</a>
+                <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors flex items-center gap-3 font-medium" data-nav-link>
                     <x-filament::icon icon="meetup-icon-calendar" class="w-5 h-5 text-red-500" />
                     <span>{{ __('Events') }}</span>
                 </a>
-                <a href="#" class="text-slate-100 hover:text-white px-4 py-2 hover:bg-slate-700/50 rounded-lg transition-colors flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900" data-nav-link>
-                    <x-filament::icon icon="meetup-icon-chat" class="w-5 h-5 text-red-500" />
-                    <span>{{ __('Community Chat') }}</span>
-                </a>
-                <div class="px-4 py-2 border-t border-slate-700/50 mt-2">
+                
+                <div class="px-4 py-4 border-t border-slate-700/30 mt-2">
                     <x-ui.language-switcher mobile />
                 </div>
+
                 @guest
-                    <div class="grid grid-cols-2 gap-4 px-4 pt-4 border-t border-slate-700/50">
-                        <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" class="text-slate-100 hover:text-white py-2 text-center rounded-lg border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Accedi') }}</a>
-                        <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="bg-red-600 text-white py-2 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Registrati') }}</a>
+                    <div class="grid grid-cols-1 gap-3 px-4 pt-4 border-t border-slate-700/30">
+                        <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" class="text-slate-100 hover:text-white py-3 text-center rounded-xl border border-slate-700 bg-slate-800/50 font-medium">{{ __('Accedi') }}</a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="bg-red-600 text-white py-3 rounded-xl text-center font-bold shadow-lg shadow-red-900/20">{{ __('Registrati') }}</a>
                     </div>
                 @else
-                    <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="text-slate-100 hover:text-white px-4 py-2 hover:bg-slate-700/50 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900 block">{{ __('Dashboard') }}</a>
+                    <div class="px-4 py-2 space-y-1">
+                        <div class="flex items-center space-x-3 px-2 py-4 border-b border-slate-700/30 mb-4">
+                            @php
+                                $profile = Auth::user()->profile;
+                                $avatarUrl = $profile?->getAvatarUrl() ?? 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y';
+                            @endphp
+                            <img src="{{ $avatarUrl }}" class="h-12 w-12 rounded-full border-2 border-slate-700" alt="{{ Auth::user()->name }}">
+                            <div>
+                                <p class="text-white font-bold">{{ Auth::user()->name }}</p>
+                                <p class="text-xs text-slate-400 font-medium">{{ Auth::user()->email }}</p>
+                            </div>
+                        </div>
+                        <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
+                            <x-heroicon-o-squares-2x2 class="h-5 w-5 text-slate-500" />
+                            <span>{{ __('Dashboard') }}</span>
+                        </a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/events-my') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
+                            <x-heroicon-o-calendar class="h-5 w-5 text-slate-500" />
+                            <span>{{ __('I miei eventi') }}</span>
+                        </a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/events-near-me') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
+                            <x-heroicon-o-map-pin class="h-5 w-5 text-slate-500" />
+                            <span>{{ __('Eventi vicini') }}</span>
+                        </a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="flex items-center space-x-3 text-slate-300 hover:text-white px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors font-medium block">
+                            <x-heroicon-o-user class="h-5 w-5 text-slate-500" />
+                            <span>{{ __('Profilo') }}</span>
+                        </a>
+                        
+                        {{-- In Folio projects, we redirect to localized paths, not named routes --}}
+                        <form method="POST" action="/{{ app()->getLocale() }}" class="pt-4 mt-4 border-t border-slate-700/30">
+                            @csrf
+                            <button type="submit" class="flex w-full items-center space-x-3 text-red-400 hover:text-red-300 px-4 py-3 hover:bg-red-500/10 rounded-xl transition-colors font-bold block">
+                                <x-heroicon-o-arrow-right-start-on-rectangle class="h-5 w-5" />
+                                <span>{{ __('Esci') }}</span>
+                            </button>
+                        </form>
+                    </div>
                 @endguest
             </div>
         </div>

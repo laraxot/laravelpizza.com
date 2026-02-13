@@ -130,12 +130,12 @@ Creare JSON fixtures o seeder con almeno 5 eventi di esempio simili all'original
 
 ### Step 5: Traduzioni
 
-Le stringhe dell'UI devono usare `trans('meetup::events.*')`:
-- `meetup::events.upcoming` = "Prossimi Eventi" / "Upcoming Events"
-- `meetup::events.all` = "Tutti gli Eventi" / "All Events"
-- `meetup::events.past` = "Eventi Passati" / "Past Events"
-- `meetup::events.attendees` = "partecipanti" / "attendees"
-- `meetup::events.subtitle` = "Unisciti a noi per pizza e discussioni su Laravel"
+Le stringhe dell'UI devono usare `trans('pub_theme::events.*')`:
+- `pub_theme::events.upcoming` = "Prossimi Eventi" / "Upcoming Events"
+- `pub_theme::events.all` = "Tutti gli Eventi" / "All Events"
+- `pub_theme::events.past` = "Eventi Passati" / "Past Events"
+- `pub_theme::events.attendees` = "partecipanti" / "attendees"
+- `pub_theme::events.subtitle` = "Unisciti a noi per pizza e discussioni su Laravel"
 
 ### Step 6: Schema.org
 

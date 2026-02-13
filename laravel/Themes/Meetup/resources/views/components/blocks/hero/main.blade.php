@@ -82,18 +82,27 @@
 
             {{-- CTA Buttons --}}
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                @if(isset($cta_primary) && is_array($cta_primary))
+                @guest
+                    @if(isset($cta_primary) && is_array($cta_primary))
+                        <a
+                            href="{{ LaravelLocalization::localizeUrl($cta_primary['url'] ?? '/auth/register') }}"
+                            class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                        >
+                            {{ $cta_primary['label'] ?? 'Join the Community' }}
+                        </a>
+                    @endif
+                @else
                     <a
-                        href="{{ $cta_primary['url'] ?? '#' }}"
+                        href="{{ LaravelLocalization::localizeUrl('/events') }}"
                         class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                     >
-                        {{ $cta_primary['label'] ?? 'Join the Community' }}
+                        {{ __('Vedi Eventi') }}
                     </a>
-                @endif
+                @endguest
 
                 @if(isset($cta_secondary) && is_array($cta_secondary))
                     <a
-                        href="{{ $cta_secondary['url'] ?? '#' }}"
+                        href="{{ LaravelLocalization::localizeUrl($cta_secondary['url'] ?? '/events') }}"
                         class="border-2 border-slate-700 dark:border-white text-slate-800 dark:text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-800 dark:hover:bg-white hover:text-white dark:hover:text-red-600 transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                     >
                         {{ $cta_secondary['label'] ?? 'View Events' }}

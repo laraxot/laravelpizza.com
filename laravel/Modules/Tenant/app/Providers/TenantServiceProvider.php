@@ -77,6 +77,7 @@ class TenantServiceProvider extends XotBaseServiceProvider
         }
 
         $raw = TenantService::config('database');
+        
 
         /** @var array<string, array|float|int|string|null> $data */
         $data = is_array($raw) ? $raw : [];

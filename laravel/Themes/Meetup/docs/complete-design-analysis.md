@@ -385,7 +385,7 @@ class HomeController extends Controller
         $featuredPizzas = $this->pizzaService->getFeaturedPizzas(4);
         $cartCount = count($this->cartService->getCartWithDetails());
 
-        return view('meetup::home', [
+        return view('pub_theme::home', [
             'featuredPizzas' => $featuredPizzas,
             'cartCount' => $cartCount,
         ]);
@@ -398,7 +398,7 @@ class HomeController extends Controller
 ```blade
 {{-- In Blade Template --}}
 @foreach($featuredPizzas as $pizza)
-    <x-meetup::pizza-card :pizza="$pizza" :showCustomize="true" />
+    <x-pub_theme::pizza-card :pizza="$pizza" :showCustomize="true" />
 @endforeach
 ```
 

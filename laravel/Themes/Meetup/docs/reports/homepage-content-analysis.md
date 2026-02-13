@@ -14,8 +14,8 @@
 **Evidence**:
 ```html
 <!-- WRONG - Visualizzato come testo: -->
-{{ trans('meetup::home.title') }}
-{{ trans('meetup::home.hero.subtitle') }}
+{{ trans('pub_theme::home.title') }}
+{{ trans('pub_theme::home.hero.subtitle') }}
 
 <!-- DOVREBBE ESSERE: -->
 Sviluppatori Laravel. Pizza. Community.

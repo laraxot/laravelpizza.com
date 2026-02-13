@@ -86,4 +86,8 @@ return [
     ],
     'already_registered' => 'Don\'t have an account yet?',
     'register' => 'Register now',
+    'no_account' => 'Don\'t have an account yet?',
+    'register_now' => 'Register now',
+    'forgot_password_text' => 'Forgot your password?',
+    'reset_it' => 'Reset it here',
 ];

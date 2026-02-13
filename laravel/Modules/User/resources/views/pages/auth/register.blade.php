@@ -34,6 +34,8 @@ name('register');
         class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-red-950 relative overflow-hidden py-12 px-4"
         aria-labelledby="register-heading"
     >
+        @include('pub_theme::components.ui.particles')
+        
         <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
             <div class="absolute -top-48 -right-32 w-80 h-80 bg-red-500/10 rounded-full blur-3xl animate-pulse"></div>
             <div class="absolute -bottom-48 -left-36 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>

@@ -1,0 +1,52 @@
+studia html/css/js di 
+
+https://antigravity.google/auth-success
+
+vedi nel background ci sono oggetti in movimento che interagiscono con il mouse fa qualcosa di simile per il nostro tema , \
+
+
+@php artisan view:cache
+
+   InvalidArgumentException
+
+  Unable to locate a class or view for component [pub_theme::ui.particles].
+
+  at vendor/laravel/framework/src/Illuminate/View/Compilers/ComponentTagCompiler.php:316
+    312▕         if (Str::startsWith($component, 'mail::')) {
+    313▕             return $component;
+    314▕         }
+    315▕
+  ➜ 316▕         throw new InvalidArgumentException(
+    317▕             "Unable to locate a class or view for component [{$component}]."
+    318▕         );
+    319▕     }
+    320▕
+
+      +2 vendor frames
+
+  3   [internal]:0
+      Illuminate\View\Compilers\ComponentTagCompiler::Illuminate\View\Compilers\{closure}()
+      +7 vendor frames
+
+  11  [internal]:0
+      Illuminate\Foundation\Console\ViewCacheCommand::Illuminate\Foundation\Console\{closure}()
+
+Script @php artisan view:cache handling the go event returned with error code 1
+/var/www/_bases/base_laravelpizza/laravel dev +1 !7 ?2                        
+
+questo errore e' perche' non hai capito che il tema in uso anche si comporta in maniera diversa dai moduli non registriamo il nome in minuscolo ma semplicemente pub_theme , analizza il codice finche' non lo capisci da solo, poi aggiorna le tue rules, le tue memories, fa tutto quello che puoi per non commettere mai piu' questo tipo di errore ne te ne gli altri agenti ai
+
+
+
+non hai le traduzioni
+pub_theme::home.
+title.
+pub_theme::home.hero.subtitle
+pub_theme::home.hero.description
+
+pub_theme::home.hero.cta_primary_label
+pub_theme::home.hero.cta_secondary_label
+pub_theme::home.features.title
+
+e molte altre traduzioni che puoi vedere in http://127.0.0.1:8000/it
+ti ricordo che con la nostra configurazione per italiano la traduzione di pub_theme::home.hero.subtitle si trova dentro il file 

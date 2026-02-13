@@ -9,6 +9,12 @@ return [
     'submit' => 'Crea il mio account gratis',
     'submitting' => 'Stiamo preparando il tuo account...',
 
+    // Alias per accessi legacy (gdpr::register.register.submit)
+    'register' => [
+        'submit' => 'Crea il mio account gratis',
+        'submitting' => 'Stiamo preparando il tuo account...',
+    ],
+
     // === STATS ===
     'stats' => [
         'active_developers' => 'Community in Crescita',

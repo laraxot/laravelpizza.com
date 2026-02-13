@@ -1,6 +1,8 @@
 // Laravel Pizza - Main JavaScript
-// Laravel Pizza - Main JavaScript
 // import './components/AppHeader.js';
+
+// Import particle system
+import './particles.js';
 
 
 // Cart management with localStorage persistence

@@ -9,6 +9,12 @@ return [
     'submit' => 'Join the Community Now',
     'submitting' => 'Setting up your oven...',
 
+    // Alias for legacy nested access (gdpr::register.register.submit)
+    'register' => [
+        'submit' => 'Join the Community Now',
+        'submitting' => 'Setting up your oven...',
+    ],
+
     // === STATS ===
     'stats' => [
         'active_developers' => 'Growing Community',

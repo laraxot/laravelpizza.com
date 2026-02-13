@@ -10,7 +10,9 @@ pest()->extend(\Illuminate\Foundation\Testing\TestCase::class)
     ->in('Feature')
     ->in('Unit')
     ->in('tests/Feature')
-    ->in('tests/Unit');
+    ->in('tests/Unit')
+    ->in('Modules/*/tests/Feature')
+    ->in('Modules/*/tests/Unit');
 
 /*
 |--------------------------------------------------------------------------
@@ -21,14 +23,3 @@ pest()->extend(\Illuminate\Foundation\Testing\TestCase::class)
 expect()->extend('toBeOne', function () {
     return $this->toBe(1);
 });
-
-/*
-|--------------------------------------------------------------------------
-| Functions
-|--------------------------------------------------------------------------
-*/
-
-function something()
-{
-    // ..
-}

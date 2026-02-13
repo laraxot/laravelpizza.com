@@ -75,9 +75,9 @@ it('does not display duplicated phrases on the registration page', function () {
 
     // These are examples of duplicated phrases the user mentioned.
     // We need to check the actual translation files for the correct keys.
-    // For now, I'll assume they are not present as hardcoded text.
+    // For now, I will assume they are not present as hardcoded text.
     $response->assertDontSeeText('Informazioni Generali', false); // false for exact match
-    $response->assertDontSeeText('Hai gia' un account?', false); // false for exact match
+    $response->assertDontSeeText('Hai gia un account?', false); // false for exact match
 });
 
 it('uses correct English translations for benefits section', function () {

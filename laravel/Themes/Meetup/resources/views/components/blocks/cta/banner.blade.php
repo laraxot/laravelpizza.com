@@ -32,26 +32,38 @@
 
             {{-- CTA Buttons --}}
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                @if(isset($cta_primary) && is_array($cta_primary))
-                    @php
-                        $primaryClasses = match($cta_primary['style'] ?? 'primary') {
-                            'white' => 'bg-white text-red-600 hover:bg-gray-100',
-                            'outline-white' => 'border-2 border-white text-white hover:bg-white hover:text-red-600',
-                            default => 'bg-white text-red-600 hover:bg-gray-100'
-                        };
-                    @endphp
+                @guest
+                    @if(isset($cta_primary) && is_array($cta_primary))
+                        @php
+                            $primaryClasses = match($cta_primary['style'] ?? 'primary') {
+                                'white' => 'bg-white text-red-600 hover:bg-gray-100',
+                                'outline-white' => 'border-2 border-white text-white hover:bg-white hover:text-red-600',
+                                default => 'bg-white text-red-600 hover:bg-gray-100'
+                            };
+                        @endphp
+                        <a
+                            href="{{ LaravelLocalization::localizeUrl($cta_primary['url'] ?? '/auth/register') }}"
+                            class="{{ $primaryClasses }} px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-red-600"
+                        >
+                            {{ $cta_primary['label'] ?? 'Create Your Account' }}
+                            @if(isset($cta_primary['style']) && $cta_primary['style'] === 'white')
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                </svg>
+                            @endif
+                        </a>
+                    @endif
+                @else
                     <a
-                        href="{{ $cta_primary['url'] ?? '#' }}"
-                        class="{{ $primaryClasses }} px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-red-600"
+                        href="{{ LaravelLocalization::localizeUrl('/events') }}"
+                        class="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-red-600"
                     >
-                        {{ $cta_primary['label'] ?? 'Create Your Account' }}
-                        @if(isset($cta_primary['style']) && $cta_primary['style'] === 'white')
-                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                            </svg>
-                        @endif
+                        {{ __('Scopri gli eventi') }}
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
                     </a>
-                @endif
+                @endguest
 
                 @if(isset($cta_secondary) && is_array($cta_secondary))
                     @php
@@ -62,7 +74,7 @@
                         };
                     @endphp
                     <a
-                        href="{{ $cta_secondary['url'] ?? '#' }}"
+                        href="{{ LaravelLocalization::localizeUrl($cta_secondary['url'] ?? '/events') }}"
                         class="{{ $secondaryClasses }} px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-red-600"
                     >
                         {{ $cta_secondary['label'] ?? 'Browse Events' }}

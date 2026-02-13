@@ -13,17 +13,17 @@
                 "slug": "hero-section",
                 "data": {
                     "view": "pub_theme::components.blocks.hero.main",
-                    "title": "{{ trans('meetup::home.title') }}",
-                    "subtitle": "{{ trans('meetup::home.hero.subtitle') }}",
-                    "description": "{{ trans('meetup::home.hero.description') }}",
+                    "title": "{{ trans('pub_theme::home.title') }}",
+                    "subtitle": "{{ trans('pub_theme::home.hero.subtitle') }}",
+                    "description": "{{ trans('pub_theme::home.hero.description') }}",
                     "background_image": "/images/hero-bg.jpg",
                     "cta_primary": {
-                        "label": "{{ trans('meetup::home.hero.cta_primary_label') }}",
+                        "label": "{{ trans('pub_theme::home.hero.cta_primary_label') }}",
                         "url": "/auth/register",
                         "style": "primary"
                     },
                     "cta_secondary": {
-                        "label": "{{ trans('meetup::home.hero.cta_secondary_label') }}",
+                        "label": "{{ trans('pub_theme::home.hero.cta_secondary_label') }}",
                         "url": "/events",
                         "style": "secondary"
                     }
@@ -34,31 +34,31 @@
                 "slug": "features-grid",
                 "data": {
                     "view": "pub_theme::components.blocks.features.grid",
-                    "title": "{{ trans('meetup::home.features.title') }}",
-                    "description": "{{ trans('meetup::home.features.description') }}",
+                    "title": "{{ trans('pub_theme::home.features.title') }}",
+                    "description": "{{ trans('pub_theme::home.features.description') }}",
                     "features": [
                         {
                             "icon": "heroicon-o-calendar",
-                            "title": "{{ trans('meetup::home.features.regular_meetups_title') }}",
-                            "description": "{{ trans('meetup::home.features.regular_meetups_description') }}",
+                            "title": "{{ trans('pub_theme::home.features.regular_meetups_title') }}",
+                            "description": "{{ trans('pub_theme::home.features.regular_meetups_description') }}",
                             "color": "red"
                         },
                         {
                             "icon": "heroicon-o-users",
-                            "title": "{{ trans('meetup::home.features.growing_community_title') }}",
-                            "description": "{{ trans('meetup::home.features.growing_community_description') }}",
+                            "title": "{{ trans('pub_theme::home.features.growing_community_title') }}",
+                            "description": "{{ trans('pub_theme::home.features.growing_community_description') }}",
                             "color": "red"
                         },
                         {
                             "icon": "heroicon-o-map-pin",
-                            "title": "{{ trans('meetup::home.features.multiple_locations_title') }}",
-                            "description": "{{ trans('meetup::home.features.multiple_locations_description') }}",
+                            "title": "{{ trans('pub_theme::home.features.multiple_locations_title') }}",
+                            "description": "{{ trans('pub_theme::home.features.multiple_locations_description') }}",
                             "color": "red"
                         },
                         {
                             "icon": "heroicon-o-chat-bubble-left-right",
-                            "title": "{{ trans('meetup::home.features.realtime_chat_title') }}",
-                            "description": "{{ trans('meetup::home.features.realtime_chat_description') }}",
+                            "title": "{{ trans('pub_theme::home.features.realtime_chat_title') }}",
+                            "description": "{{ trans('pub_theme::home.features.realtime_chat_description') }}",
                             "color": "red"
                         }
                     ]
@@ -69,12 +69,12 @@
                 "slug": "final-cta",
                 "data": {
                     "view": "pub_theme::components.blocks.cta.banner",
-                    "title": "{{ trans('meetup::home.cta.title') }}",
-                    "description": "{{ trans('meetup::home.cta.description') }}",
+                    "title": "{{ trans('pub_theme::home.cta.title') }}",
+                    "description": "{{ trans('pub_theme::home.cta.description') }}",
                     "background_color": "bg-red-600",
                     "text_color": "text-white",
                     "cta_primary": {
-                        "label": "{{ trans('meetup::home.cta.cta_primary_label') }}",
+                        "label": "{{ trans('pub_theme::home.cta.cta_primary_label') }}",
                         "url": "/auth/register",
                         "style": "white"
                     }

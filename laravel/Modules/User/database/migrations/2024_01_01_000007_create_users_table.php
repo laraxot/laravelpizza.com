@@ -60,6 +60,14 @@ return new class extends XotBaseMigration {
                 $table->boolean('is_active')->default(true);
             }
 
+            if (! $this->hasColumn('type')) {
+                $table->string('type')->default('customer_user')->after('is_active');
+            }
+
+            if (! $this->hasColumn('state')) {
+                $table->string('state')->default('active')->after('type');
+            }
+
             if (! $this->hasColumn('is_otp')) {
                 $table->boolean('is_otp')->default(false);
             }

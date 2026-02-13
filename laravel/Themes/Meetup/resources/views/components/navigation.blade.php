@@ -83,13 +83,67 @@
                 </div>
             </div>
 
-            <!-- Auth Buttons -->
+            <!-- Auth Buttons / User Dropdown -->
             <div class="hidden md:flex items-center space-x-4">
                 @guest
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Login</a>
-                    <a href="#" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">Sign Up</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/login') }}" class="text-gray-300 hover:text-white transition-colors">Login</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/register') }}" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">Sign Up</a>
                 @else
-                    <a href="{{ route('dashboard') }}" class="text-gray-300 hover:text-white transition-colors">Dashboard</a>
+                    @php
+                        $user = Auth::user();
+                        $initials = collect(explode(' ', $user?->name ?? ''))
+                            ->filter()
+                            ->map(fn ($part) => mb_substr($part, 0, 1))
+                            ->join('');
+                    @endphp
+
+                    <div class="relative" x-data="{ open: false }" @click.away="open = false">
+                        <button @click="open = !open" class="flex items-center gap-2 text-gray-200 hover:text-white focus:outline-none">
+                            <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-red-600 text-white text-sm font-semibold">
+                                {{ $initials ?: 'U' }}
+                            </span>
+                            <span class="text-sm font-medium">{{ $user?->name }}</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <div x-show="open" x-transition class="absolute right-0 mt-2 w-56 bg-slate-900 border border-slate-700 rounded-lg shadow-xl z-50">
+                            <div class="py-2 text-sm text-gray-200">
+                                @can('access-dashboard')
+                                    <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
+                                        <x-heroicon-o-home class="w-4 h-4 mr-2" />
+                                        <span>Dashboard</span>
+                                    </a>
+                                @endcan
+
+                                <a href="{{ LaravelLocalization::localizeUrl('/events/mine') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
+                                    <x-heroicon-o-calendar-days class="w-4 h-4 mr-2" />
+                                    <span>I miei eventi</span>
+                                </a>
+
+                                <a href="{{ LaravelLocalization::localizeUrl('/events/nearby') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
+                                    <x-heroicon-o-map-pin class="w-4 h-4 mr-2" />
+                                    <span>Eventi vicini</span>
+                                </a>
+
+                                <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="flex items-center px-4 py-2 hover:bg-slate-800">
+                                    <x-heroicon-o-user class="w-4 h-4 mr-2" />
+                                    <span>Profilo</span>
+                                </a>
+                            </div>
+
+                            <div class="border-t border-slate-800"></div>
+
+                            <form method="POST" action="{{ route('logout') }}" class="py-1">
+                                @csrf
+                                <button type="submit" class="w-full text-left flex items-center px-4 py-2 text-sm text-red-300 hover:text-red-200 hover:bg-slate-800">
+                                    <x-heroicon-o-arrow-left-on-rectangle class="w-4 h-4 mr-2" />
+                                    <span>Logout</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 @endguest
             </div>
 
@@ -108,10 +162,37 @@
                 <a href="#" class="text-gray-300 hover:text-white" data-nav-link>Events</a>
                 <a href="#" class="text-gray-300 hover:text-white" data-nav-link>Community Chat</a>
                 @guest
-                    <a href="#" class="text-gray-300 hover:text-white">Login</a>
-                    <a href="#" class="bg-red-600 text-white px-4 py-2 rounded-lg text-center">Sign Up</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/login') }}" class="text-gray-300 hover:text-white">Login</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/register') }}" class="bg-red-600 text-white px-4 py-2 rounded-lg text-center">Sign Up</a>
                 @else
-                    <a href="{{ route('dashboard') }}" class="text-gray-300 hover:text-white">Dashboard</a>
+                    <div class="space-y-1">
+                        @can('access-dashboard')
+                            <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="text-gray-300 hover:text-white flex items-center">
+                                <x-heroicon-o-home class="w-4 h-4 mr-2" />
+                                Dashboard
+                            </a>
+                        @endcan
+                        <a href="{{ LaravelLocalization::localizeUrl('/events/mine') }}" class="text-gray-300 hover:text-white flex items-center">
+                            <x-heroicon-o-calendar-days class="w-4 h-4 mr-2" />
+                            I miei eventi
+                        </a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/events/nearby') }}" class="text-gray-300 hover:text-white flex items-center">
+                            <x-heroicon-o-map-pin class="w-4 h-4 mr-2" />
+                            Eventi vicini
+                        </a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/profile') }}" class="text-gray-300 hover:text-white flex items-center">
+                            <x-heroicon-o-user class="w-4 h-4 mr-2" />
+                            Profilo
+                        </a>
+
+                        <form method="POST" action="{{ route('logout') }}" class="pt-2">
+                            @csrf
+                            <button type="submit" class="text-red-300 hover:text-red-200 flex items-center">
+                                <x-heroicon-o-arrow-left-on-rectangle class="w-4 h-4 mr-2" />
+                                Logout
+                            </button>
+                        </form>
+                    </div>
                 @endguest
             </div>
         </div>

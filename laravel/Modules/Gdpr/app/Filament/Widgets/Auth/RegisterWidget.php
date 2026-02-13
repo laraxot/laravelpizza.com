@@ -48,7 +48,7 @@ class RegisterWidget extends XotBaseWidget
     #[Validate('required|string|min:2|max:255')]
     public string $last_name = '';
 
-    #[Validate('required|email|max:255')]
+    #[Validate('required|email|max:255|unique:users,email')]
     public string $email = '';
 
     #[Validate('required|string')]

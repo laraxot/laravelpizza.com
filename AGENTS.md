@@ -249,20 +249,68 @@ TextInput::make('email')->label(__('Email'))->placeholder(__('Enter email'))
 
 The key generated will be `user::register.fields.email.label`.
 
-### Frontend (Frontoffice) - NO Controllers!
+### Frontend (Frontoffice) - NO Controllers! NO Routes!
 **ALWAYS use:**
-- Laravel Folio (file-based routing)
-- Livewire Volt (single-file components)
-- CMS-Driven Pages (JSON files in `config/local/laravelpizza/database/content/pages/`)
+- ✅ **Laravel Folio** (file-based routing) - automatico da file in `resources/views/pages/`
+- ✅ **CMS-Driven Pages** (JSON files in `config/local/laravelpizza/database/content/pages/`)
+- ✅ **Volt in Folio** per componenti dinamici
 
 **NEVER use:**
-- Traditional controllers for public pages
-- Routes in web.php for dynamic content
-- Blade files for page templates (use JSON + components)
+- ❌ **Controllers** - Non esistono nel frontoffice!
+- ❌ **Route::** in web.php - Le pagine sono gestite da Folio/JSON
+- ❌ **Route::** in api.php - Solo API endpoints, non pagine web
+- ❌ **Named routes con route()** - Folio genera URL automaticamente
+
+**Come funziona Folio:**
+- Pagina in `resources/views/pages/about.blade.php` → URL `/about`
+- Pagina in `resources/views/pages/[slug].blade.php` → URL `/{slug}`
+- CMS page in `config/local/.../pages/home.json` → renderizzata dal componente
+
+**Per i link nel frontend:**
+```blade
+{{-- CORRETTO - Folio genera automaticamente --}}
+<a href="{{ url('/dashboard') }}">
+<a href="{{ LaravelLocalization::localizeUrl('/events') }}">
+
+{{-- SBAGLIATO - Non usare route() nel frontoffice! --}}
+<a href="{{ route('dashboard') }}">  {{-- NO! --}}
+```
 
 ### Backend (Admin) - Filament Only
 - All admin resources extend XotBase classes
 - NO raw Filament extensions
+
+### ⚠️ CRITICAL RULE: Always Use Filament Widgets, NOT Livewire Pure!
+
+For ANY dynamic component that needs server interaction (forms, dropdowns, modals, etc.):
+- **✅ ALWAYS use Filament Widgets** in `Modules/ModuleName/app/Filament/Widgets/`
+- **❌ NEVER use pure Livewire components** (except for Volt in Folio pages)
+
+### Registration Validation Rules
+When implementing user registration:
+- ALWAYS validate email uniqueness BEFORE hitting the database
+- Use Laravel Validator with `unique:table,column` rule
+- Throw `ValidationException` with clear error messages
+- Example:
+```php
+if ($userModel->on('user')->where('email', $email)->exists()) {
+    throw ValidationException::withMessages([
+        'email' => [__('validation.unique', ['attribute' => 'email'])],
+    ]);
+}
+```
+
+**When you need interactivity:**
+- Create a **Filament Widget** (extends XotBaseWidget)
+- NOT a Livewire component
+
+**Example - User Dropdown:**
+- ✅ CORRECT: `Modules/Meetup/app/Filament/Widgets/UserDropdownWidget.php`
+- ❌ WRONG: `Modules/Meetup/app/Http/Livewire/UserDropdown.php`
+
+**For Alpine.js only interactivity (no server calls):**
+- Plain Blade + Alpine.js is OK for UI-only interactions
+- But for anything needing data/auth, use Filament Widget
 
 ### Module Structure
 ```
@@ -317,8 +365,29 @@ url('/en/path')
 ### Database Config (Laravel 12 Standard)
 - Base config: `config/database.php`
 - Tenant config: `config/local/{tenant}/database.php`
-- NO per-module connections hardcoded
+- **NEVER add module connections manually** - TenantServiceProvider creates them automatically!
 - Module connections added dynamically via `TenantServiceProvider::registerDB()`
+
+### ⚠️ CRITICAL RULE: Never Add Database Connections Manually!
+
+**This is a GRAVE error:**
+```php
+// ❌ NEVER DO THIS in config/database.php!
+'gdpr' => [
+    'driver' => 'mysql',
+    'host' => env('DB_HOST', '127.0.0.1'),
+    // ...
+],
+```
+
+**WHY:**
+- `TenantServiceProvider::registerDB()` automatically creates ALL module connections
+- It reads from .env variables (DB_DATABASE_GDPR, etc.)
+- Adding manually duplicates and breaks the automatic system
+
+**CORRECT:**
+- Let TenantServiceProvider handle it
+- Only configure .env variables: `DB_DATABASE_GDPR=laravelpizza_gdpr`
 
 ### Testing Database Config - CRITICAL RULE
 **.env.testing must be a CARBON COPY of .env with only "_test" added to database names!**
@@ -371,6 +440,36 @@ DB_PASSWORD_USER=marco
 This ensures APP_URL and all other variables remain identical to .env.
 
 **CRITICAL RULE FOR TestCase:** NEVER duplicate database connection configuration in setUp() because CreatesApplication already handles it automatically.
+
+---
+
+## 5.1. Theme & pub_theme Namespace - CRITICAL RULE
+
+**ALWAYS use `pub_theme::` namespace for theme components, NOT the theme name!**
+
+The current active theme is configured via `config('xra.pub_theme')` which returns `'Meetup'`. However, the Blade namespace is ALWAYS `pub_theme::` - never use the theme name directly.
+
+**CORRECT:**
+```blade
+@include('pub_theme::components.ui.particles')
+<x-pub_theme::components.layouts.main>
+{{ view('pub_theme::path.to.view') }}
+```
+
+**WRONG:**
+```blade
+@include('meetup::components.ui.particles')   {{-- NEVER use theme name! --}}
+<x-Meetup::components.layouts.main>             {{-- WRONG! --}}
+```
+
+**Why:**
+- `pub_theme` is a dynamic namespace that points to the configured theme
+- The theme name could change (Meetup, One, etc.) but `pub_theme` always works
+- This ensures the code works regardless of which theme is active
+
+**How to find theme views:**
+- `pub_theme::components.ui.particles` → `Themes/Meetup/resources/views/components/ui/particles.blade.php`
+- Resolution: `pub_theme` → `config('xra.pub_theme')` → `Meetup` → `Themes/Meetup/`
 
 ### Migrations
 - One migration per table creation
@@ -555,3 +654,65 @@ Before committing:
 - `laravel/Modules/Cms/docs/content-blocks-system.md` - CMS blocks
 - `laravel/Modules/Lang/docs/laravel-localization-mcamara-reference.md` - i18n
 - `Themes/Meetup/docs/theme-improvement-roadmap.md` - Theme guide
+
+## 14. Theme Translations - CRITICAL RULE
+
+**ALWAYS use `pub_theme::` namespace for theme translations, NEVER the theme name!**
+
+The ThemeServiceProvider registers translations with the namespace `pub_theme`, which is the value of `config('xra.pub_theme')`. This is DIFFERENT from how modules work!
+
+**Translation File Locations:**
+- `pub_theme::home.hero.subtitle` → `Themes/Meetup/lang/it/home.php`
+- `pub_theme::home.hero.description` → `Themes/Meetup/lang/en/home.php`
+- `pub_theme::home.features.title` → `Themes/Meetup/lang/de/home.php`
+
+**ThemeServiceProvider Registration:**
+```php
+// In Themes/Meetup/app/Providers/ThemeServiceProvider.php
+$this->loadTranslationsFrom(__DIR__.'/../../lang', 'pub_theme');
+$this->loadViewsFrom(__DIR__.'/../../resources/views', 'pub_theme');
+```
+
+**Usage in Blade:**
+```blade
+{{-- CORRECT --}}
+{{ __('pub_theme::home.hero.subtitle') }}
+@include('pub_theme::components.ui.particles')
+<x-pub_theme::components.layouts.main>
+
+{{-- WRONG - NEVER use theme name! --}}
+{{ __('meetup::home.hero.subtitle') }}      {{-- WRONG! --}}
+@include('meetup::components.ui.particles')   {{-- WRONG! --}}
+<x-Meetup::components.layouts.main>           {{-- WRONG! --}}
+```
+
+**Key Differences from Modules:**
+- **Modules**: Use module name → `gdpr::register.title`
+- **Themes**: Use `pub_theme::` → `pub_theme::home.hero.subtitle`
+- **Theme Files**: Located in `Themes/Meetup/lang/{locale}/`, NOT `laravel/lang/{locale}/`
+
+**Why `pub_theme` instead of theme name:**
+- Dynamic namespace that works with any theme
+- Theme name can change (Meetup, One, etc.) but `pub_theme` always works
+- Ensures compatibility across different theme configurations
+
+**Translation Pattern:**
+```
+pub_theme::{file}.{key}.{subkey}
+```
+
+Examples:
+- `pub_theme::home.title`
+- `pub_theme::home.hero.subtitle`
+- `pub_theme::home.features.title`
+- `pub_theme::home.cta.cta_primary_label`
+
+**Available Translation Files:**
+- `Themes/Meetup/lang/it/home.php` - Italian
+- `Themes/Meetup/lang/en/home.php` - English
+- `Themes/Meetup/lang/de/home.php` - German
+- `Themes/Meetup/lang/fr/home.php` - French
+- `Themes/Meetup/lang/es/home.php` - Spanish
+- `Themes/Meetup/lang/ru/home.php` - Russian
+
+**NEVER use theme-specific namespace like 'meetup::' for translations! ALWAYS use 'pub_theme::'!**

@@ -42,7 +42,7 @@
 - Config: `laravel/config/local/laravelpizza/`
 
 ### **Issue 3: Translation Rendering Bug (CRITICAL - IDENTIFIED)**
-**Problem**: `{{ trans('meetup::home.title') }}` visualized as literal text
+**Problem**: `{{ trans('pub_theme::home.title') }}` visualized as literal text
 
 **Solution**: ✅ Documented in `homepage-content-analysis.md`
 - Root cause: Blade directives in JSON not processed

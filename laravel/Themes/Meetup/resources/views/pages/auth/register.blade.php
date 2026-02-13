@@ -36,6 +36,9 @@ name('register');
         role="main"
         aria-labelledby="main-heading"
     >
+        {{-- Interactive particles (theme include) --}}
+        @include('pub_theme::components.ui.particles')
+
         {{-- Animated Background Elements (GPU accelerated, optimized for mobile) --}}
         <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
             {{-- Animated gradient blobs --}}

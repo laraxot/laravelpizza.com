@@ -62,4 +62,8 @@ return [
     ],
     'already_registered' => 'Non hai ancora un account?',
     'register' => 'Registrati ora',
+    'no_account' => 'Non hai ancora un account?',
+    'register_now' => 'Registrati ora',
+    'forgot_password_text' => 'Hai dimenticato la tua password?',
+    'reset_it' => 'Reimpostala qui',
 ];

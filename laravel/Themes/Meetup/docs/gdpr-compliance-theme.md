@@ -35,24 +35,24 @@ Il banner cookie deve essere implementato secondo le seguenti specifiche:
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex-1">
                 <h2 id="cookie-title" class="text-lg font-semibold mb-2">
-                    {{ __('meetup::gdpr.cookie_banner_title') }}
+                    {{ __('pub_theme::gdpr.cookie_banner_title') }}
                 </h2>
                 <p class="text-sm text-gray-200">
-                    {{ __('meetup::gdpr.cookie_banner_text') }}
+                    {{ __('pub_theme::gdpr.cookie_banner_text') }}
                     <a href="{{ route('cookie-policy') }}" class="text-cyan-400 hover:text-cyan-300 underline" target="_blank" rel="noopener noreferrer">
-                        {{ __('meetup::gdpr.cookie_policy_link') }}
+                        {{ __('pub_theme::gdpr.cookie_policy_link') }}
                     </a>
                 </p>
             </div>
             <div class="flex flex-col sm:flex-row gap-2">
                 <button id="accept-all-cookies" class="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white font-medium transition-colors">
-                    {{ __('meetup::gdpr.accept_all') }}
+                    {{ __('pub_theme::gdpr.accept_all') }}
                 </button>
                 <button id="reject-all-cookies" class="px-6 py-2 bg-red-600 hover:bg-red-700 rounded-lg text-white font-medium transition-colors">
-                    {{ __('meetup::gdpr.reject_all') }}
+                    {{ __('pub_theme::gdpr.reject_all') }}
                 </button>
                 <button id="manage-cookies" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 rounded-lg text-white font-medium transition-colors">
-                    {{ __('meetup::gdpr.manage_preferences') }}
+                    {{ __('pub_theme::gdpr.manage_preferences') }}
                 </button>
             </div>
         </div>
@@ -66,7 +66,7 @@ Il banner cookie deve essere implementato secondo le seguenti specifiche:
             <div class="p-6">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
-                        {{ __('meetup::gdpr.cookie_preferences_title') }}
+                        {{ __('pub_theme::gdpr.cookie_preferences_title') }}
                     </h2>
                     <button id="close-cookie-modal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,10 +80,10 @@ Il banner cookie deve essere implementato secondo le seguenti specifiche:
                     <div class="flex items-center justify-between">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                                {{ __('meetup::gdpr.technical_cookies') }}
+                                {{ __('pub_theme::gdpr.technical_cookies') }}
                             </h3>
                             <p class="text-sm text-gray-600 dark:text-gray-400">
-                                {{ __('meetup::gdpr.technical_cookies_description') }}
+                                {{ __('pub_theme::gdpr.technical_cookies_description') }}
                             </p>
                         </div>
                         <div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
@@ -98,10 +98,10 @@ Il banner cookie deve essere implementato secondo le seguenti specifiche:
                     <div class="flex items-center justify-between">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                                {{ __('meetup::gdpr.analytics_cookies') }}
+                                {{ __('pub_theme::gdpr.analytics_cookies') }}
                             </h3>
                             <p class="text-sm text-gray-600 dark:text-gray-400">
-                                {{ __('meetup::gdpr.analytics_cookies_description') }}
+                                {{ __('pub_theme::gdpr.analytics_cookies_description') }}
                             </p>
                         </div>
                         <label class="relative inline-flex items-center cursor-pointer">
@@ -116,10 +116,10 @@ Il banner cookie deve essere implementato secondo le seguenti specifiche:
                     <div class="flex items-center justify-between">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                                {{ __('meetup::gdpr.marketing_cookies') }}
+                                {{ __('pub_theme::gdpr.marketing_cookies') }}
                             </h3>
                             <p class="text-sm text-gray-600 dark:text-gray-400">
-                                {{ __('meetup::gdpr.marketing_cookies_description') }}
+                                {{ __('pub_theme::gdpr.marketing_cookies_description') }}
                             </p>
                         </div>
                         <label class="relative inline-flex items-center cursor-pointer">
@@ -131,7 +131,7 @@ Il banner cookie deve essere implementato secondo le seguenti specifiche:
 
                 <div class="flex justify-end gap-3 mt-8">
                     <button id="save-cookie-preferences" class="px-6 py-2 bg-[#0f2b46] hover:bg-[#1a3f5e] rounded-lg text-white font-medium transition-colors">
-                        {{ __('meetup::gdpr.save_preferences') }}
+                        {{ __('pub_theme::gdpr.save_preferences') }}
                     </button>
                 </div>
             </div>
@@ -290,10 +290,10 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
             <div class="bg-white dark:bg-gray-800 shadow-xl rounded-lg overflow-hidden">
                 <div class="px-8 py-6">
                     <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                        {{ __('meetup::auth.register.title') }}
+                        {{ __('pub_theme::auth.register.title') }}
                     </h1>
                     <p class="text-gray-600 dark:text-gray-400 mb-6">
-                        {{ __('meetup::auth.register.subtitle') }}
+                        {{ __('pub_theme::auth.register.subtitle') }}
                     </p>
 
                     @livewire(\Modules\User\Filament\Widgets\Auth\RegisterWidget::class)
@@ -303,11 +303,11 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
             {{-- Login CTA --}}
             <div class="mt-8 text-center">
                 <p class="text-gray-700 dark:text-gray-300 mb-4 font-medium">
-                    {{ __('meetup::auth.register.already_have_account') }}
+                    {{ __('pub_theme::auth.register.already_have_account') }}
                 </p>
                 <a href="{{ route('login') }}" 
                    class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#0f2b46] hover:bg-[#1a3f5e] dark:bg-cyan-600 dark:hover:bg-cyan-700 shadow-sm transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
-                    {{ __('meetup::auth.register.login_button') }}
+                    {{ __('pub_theme::auth.register.login_button') }}
                     <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14"></path>
                     </svg>
@@ -338,22 +338,22 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
 ```blade
 <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
     <h3 class="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">
-        {{ __('meetup::auth.gdpr.notice_title') }}
+        {{ __('pub_theme::auth.gdpr.notice_title') }}
     </h3>
     <p class="text-sm text-blue-800 dark:text-blue-200">
-        {{ __('meetup::auth.gdpr.notice_text') }}
+        {{ __('pub_theme::auth.gdpr.notice_text') }}
         <a href="{{ route('privacy-policy') }}" 
            class="text-cyan-600 hover:text-cyan-700 underline font-medium"
            target="_blank" 
            rel="noopener noreferrer">
-            {{ __('meetup::auth.gdpr.privacy_policy_link') }}
+            {{ __('pub_theme::auth.gdpr.privacy_policy_link') }}
         </a>
-        {{ __('meetup::auth.gdpr.notice_and') }}
+        {{ __('pub_theme::auth.gdpr.notice_and') }}
         <a href="{{ route('terms-conditions') }}" 
            class="text-cyan-600 hover:text-cyan-700 underline font-medium"
            target="_blank" 
            rel="noopener noreferrer">
-            {{ __('meetup::auth.gdpr.terms_link') }}
+            {{ __('pub_theme::auth.gdpr.terms_link') }}
         </a>
     </p>
 </div>
@@ -372,26 +372,26 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
     <main class="max-w-4xl mx-auto px-4 py-12">
         <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8">
             <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                {{ __('meetup::privacy.title') }}
+                {{ __('pub_theme::privacy.title') }}
             </h1>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
-                {{ __('meetup::privacy.last_updated') }}: {{ $last_updated ?? '2024-01-15' }}
+                {{ __('pub_theme::privacy.last_updated') }}: {{ $last_updated ?? '2024-01-15' }}
             </p>
 
             {{-- Toc (Table of Contents) --}}
             <nav class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 mb-8" aria-label="Table of Contents">
                 <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                    {{ __('meetup::privacy.toc_title') }}
+                    {{ __('pub_theme::privacy.toc_title') }}
                 </h2>
                 <ul class="space-y-2">
-                    <li><a href="#data-controller" class="text-cyan-600 hover:text-cyan-700">{{ __('meetup::privacy.toc_controller') }}</a></li>
-                    <li><a href="#data-processing" class="text-cyan-600 hover:text-cyan-700">{{ __('meetup::privacy.toc_processing') }}</a></li>
-                    <li><a href="#legal-basis" class="text-cyan-600 hover:text-cyan-700">{{ __('meetup::privacy.toc_legal_basis') }}</a></li>
-                    <li><a href="#data-categories" class="text-cyan-600 hover:text-cyan-700">{{ __('meetup::privacy.toc_categories') }}</a></li>
-                    <li><a href="#recipients" class="text-cyan-600 hover:text-cyan-700">{{ __('meetup::privacy.toc_recipients') }}</a></li>
-                    <li><a href="#retention" class="text-cyan-600 hover:text-cyan-700">{{ __('meetup::privacy.toc_retention') }}</a></li>
-                    <li><a href="#rights" class="text-cyan-600 hover:text-cyan-700">{{ __('meetup::privacy.toc_rights') }}</a></li>
-                    <li><a href="#complaint" class="text-cyan-600 hover:text-cyan-700">{{ __('meetup::privacy.toc_complaint') }}</a></li>
+                    <li><a href="#data-controller" class="text-cyan-600 hover:text-cyan-700">{{ __('pub_theme::privacy.toc_controller') }}</a></li>
+                    <li><a href="#data-processing" class="text-cyan-600 hover:text-cyan-700">{{ __('pub_theme::privacy.toc_processing') }}</a></li>
+                    <li><a href="#legal-basis" class="text-cyan-600 hover:text-cyan-700">{{ __('pub_theme::privacy.toc_legal_basis') }}</a></li>
+                    <li><a href="#data-categories" class="text-cyan-600 hover:text-cyan-700">{{ __('pub_theme::privacy.toc_categories') }}</a></li>
+                    <li><a href="#recipients" class="text-cyan-600 hover:text-cyan-700">{{ __('pub_theme::privacy.toc_recipients') }}</a></li>
+                    <li><a href="#retention" class="text-cyan-600 hover:text-cyan-700">{{ __('pub_theme::privacy.toc_retention') }}</a></li>
+                    <li><a href="#rights" class="text-cyan-600 hover:text-cyan-700">{{ __('pub_theme::privacy.toc_rights') }}</a></li>
+                    <li><a href="#complaint" class="text-cyan-600 hover:text-cyan-700">{{ __('pub_theme::privacy.toc_complaint') }}</a></li>
                 </ul>
             </nav>
 
@@ -403,12 +403,12 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
             {{-- Contact Info --}}
             <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                    {{ __('meetup::privacy.contact_title') }}
+                    {{ __('pub_theme::privacy.contact_title') }}
                 </h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                            {{ __('meetup::privacy.privacy_title') }}
+                            {{ __('pub_theme::privacy.privacy_title') }}
                         </h3>
                         <p class="text-gray-700 dark:text-gray-300">
                             Email: <a href="mailto:privacy@laravelpizza.com" class="text-cyan-600 hover:text-cyan-700">privacy@laravelpizza.com</a>
@@ -416,7 +416,7 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
                     </div>
                     <div>
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                            {{ __('meetup::privacy.dpo_title') }}
+                            {{ __('pub_theme::privacy.dpo_title') }}
                         </h3>
                         <p class="text-gray-700 dark:text-gray-300">
                             Email: <a href="mailto:dpo@laravelpizza.com" class="text-cyan-600 hover:text-cyan-700">dpo@laravelpizza.com</a>
@@ -442,53 +442,53 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
     <main class="max-w-4xl mx-auto px-4 py-12">
         <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8">
             <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                {{ __('meetup::cookies.title') }}
+                {{ __('pub_theme::cookies.title') }}
             </h1>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
-                {{ __('meetup::cookies.last_updated') }}: {{ $last_updated ?? '2024-01-15' }}
+                {{ __('pub_theme::cookies.last_updated') }}: {{ $last_updated ?? '2024-01-15' }}
             </p>
 
             {{-- What are cookies --}}
             <section class="mb-8">
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                    {{ __('meetup::cookies.what_are_title') }}
+                    {{ __('pub_theme::cookies.what_are_title') }}
                 </h2>
                 <p class="text-gray-700 dark:text-gray-300">
-                    {{ __('meetup::cookies.what_are_text') }}
+                    {{ __('pub_theme::cookies.what_are_text') }}
                 </p>
             </section>
 
             {{-- Cookie Types --}}
             <section class="mb-8">
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                    {{ __('meetup::cookies.types_title') }}
+                    {{ __('pub_theme::cookies.types_title') }}
                 </h2>
                 
                 {{-- Technical Cookies --}}
                 <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 mb-4">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                        {{ __('meetup::cookies.technical_title') }}
+                        {{ __('pub_theme::cookies.technical_title') }}
                     </h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
-                        {{ __('meetup::cookies.technical_text') }}
+                        {{ __('pub_theme::cookies.technical_text') }}
                     </p>
                     <table class="w-full text-sm">
                         <thead>
                             <tr class="border-b border-gray-200 dark:border-gray-600">
-                                <th class="text-left py-2 text-gray-900 dark:text-white">{{ __('meetup::cookies.name') }}</th>
-                                <th class="text-left py-2 text-gray-900 dark:text-white">{{ __('meetup::cookies.purpose') }}</th>
-                                <th class="text-left py-2 text-gray-900 dark:text-white">{{ __('meetup::cookies.duration') }}</th>
+                                <th class="text-left py-2 text-gray-900 dark:text-white">{{ __('pub_theme::cookies.name') }}</th>
+                                <th class="text-left py-2 text-gray-900 dark:text-white">{{ __('pub_theme::cookies.purpose') }}</th>
+                                <th class="text-left py-2 text-gray-900 dark:text-white">{{ __('pub_theme::cookies.duration') }}</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="border-b border-gray-200 dark:border-gray-600">
                                 <td class="py-2 text-gray-700 dark:text-gray-300">laravel_session</td>
-                                <td class="py-2 text-gray-700 dark:text-gray-300">{{ __('meetup::cookies.session_purpose') }}</td>
+                                <td class="py-2 text-gray-700 dark:text-gray-300">{{ __('pub_theme::cookies.session_purpose') }}</td>
                                 <td class="py-2 text-gray-700 dark:text-gray-300">2 hours</td>
                             </tr>
                             <tr class="border-b border-gray-200 dark:border-gray-600">
                                 <td class="py-2 text-gray-700 dark:text-gray-300">XSRF-TOKEN</td>
-                                <td class="py-2 text-gray-700 dark:text-gray-300">{{ __('meetup::cookies.csrf_purpose') }}</td>
+                                <td class="py-2 text-gray-700 dark:text-gray-300">{{ __('pub_theme::cookies.csrf_purpose') }}</td>
                                 <td class="py-2 text-gray-700 dark:text-gray-300">Session</td>
                             </tr>
                         </tbody>
@@ -498,26 +498,26 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
                 {{-- Analytics Cookies --}}
                 <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 mb-4">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                        {{ __('meetup::cookies.analytics_title') }}
+                        {{ __('pub_theme::cookies.analytics_title') }}
                     </h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
-                        {{ __('meetup::cookies.analytics_text') }}
+                        {{ __('pub_theme::cookies.analytics_text') }}
                     </p>
                     <p class="text-sm text-gray-600 dark:text-gray-400">
-                        {{ __('meetup::cookies.analytics_consent_required') }}
+                        {{ __('pub_theme::cookies.analytics_consent_required') }}
                     </p>
                 </div>
 
                 {{-- Marketing Cookies --}}
                 <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                        {{ __('meetup::cookies.marketing_title') }}
+                        {{ __('pub_theme::cookies.marketing_title') }}
                     </h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
-                        {{ __('meetup::cookies.marketing_text') }}
+                        {{ __('pub_theme::cookies.marketing_text') }}
                     </p>
                     <p class="text-sm text-gray-600 dark:text-gray-400">
-                        {{ __('meetup::cookies.marketing_consent_required') }}
+                        {{ __('pub_theme::cookies.marketing_consent_required') }}
                     </p>
                 </div>
             </section>
@@ -525,29 +525,29 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
             {{-- Managing Cookies --}}
             <section class="mb-8">
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                    {{ __('meetup::cookies.manage_title') }}
+                    {{ __('pub_theme::cookies.manage_title') }}
                 </h2>
                 <p class="text-gray-700 dark:text-gray-300 mb-4">
-                    {{ __('meetup::cookies.manage_text') }}
+                    {{ __('pub_theme::cookies.manage_text') }}
                 </p>
                 <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-                    <li>{{ __('meetup::cookies.manage_browser') }}</li>
-                    <li>{{ __('meetup::cookies.manage_banner') }}</li>
-                    <li>{{ __('meetup::cookies.manage_withdrawal') }}</li>
+                    <li>{{ __('pub_theme::cookies.manage_browser') }}</li>
+                    <li>{{ __('pub_theme::cookies.manage_banner') }}</li>
+                    <li>{{ __('pub_theme::cookies.manage_withdrawal') }}</li>
                 </ul>
             </section>
 
             {{-- Links --}}
             <section class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
                 <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                    {{ __('meetup::cookies.links_title') }}
+                    {{ __('pub_theme::cookies.links_title') }}
                 </h2>
                 <div class="space-y-2">
                     <a href="{{ route('privacy-policy') }}" class="text-cyan-600 hover:text-cyan-700 block">
-                        {{ __('meetup::cookies.privacy_link') }}
+                        {{ __('pub_theme::cookies.privacy_link') }}
                     </a>
                     <a href="{{ route('terms-conditions') }}" class="text-cyan-600 hover:text-cyan-700 block">
-                        {{ __('meetup::cookies.terms_link') }}
+                        {{ __('pub_theme::cookies.terms_link') }}
                     </a>
                 </div>
             </section>
@@ -569,10 +569,10 @@ Per permettere agli utenti di esercitare i diritti GDPR (Articoli 15-22), implem
     <main class="max-w-6xl mx-auto px-4 py-12">
         <div class="mb-8">
             <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-                {{ __('meetup::privacy_dashboard.title') }}
+                {{ __('pub_theme::privacy_dashboard.title') }}
             </h1>
             <p class="text-gray-600 dark:text-gray-400">
-                {{ __('meetup::privacy_dashboard.subtitle') }}
+                {{ __('pub_theme::privacy_dashboard.subtitle') }}
             </p>
         </div>
 
@@ -586,15 +586,15 @@ Per permettere agli utenti di esercitare i diritti GDPR (Articoli 15-22), implem
                         </svg>
                     </div>
                     <h2 class="text-xl font-bold text-gray-900 dark:text-white ml-3">
-                        {{ __('meetup::privacy_dashboard.your_data') }}
+                        {{ __('pub_theme::privacy_dashboard.your_data') }}
                     </h2>
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">
-                    {{ __('meetup::privacy_dashboard.your_data_description') }}
+                    {{ __('pub_theme::privacy_dashboard.your_data_description') }}
                 </p>
                 <a href="{{ route('privacy.data-access') }}" 
                    class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
-                    {{ __('meetup::privacy_dashboard.access_data') }}
+                    {{ __('pub_theme::privacy_dashboard.access_data') }}
                     <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
@@ -610,15 +610,15 @@ Per permettere agli utenti di esercitare i diritti GDPR (Articoli 15-22), implem
                         </svg>
                     </div>
                     <h2 class="text-xl font-bold text-gray-900 dark:text-white ml-3">
-                        {{ __('meetup::privacy_dashboard.consents') }}
+                        {{ __('pub_theme::privacy_dashboard.consents') }}
                     </h2>
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">
-                    {{ __('meetup::privacy_dashboard.consents_description') }}
+                    {{ __('pub_theme::privacy_dashboard.consents_description') }}
                 </p>
                 <a href="{{ route('privacy.consents') }}" 
                    class="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors">
-                    {{ __('meetup::privacy_dashboard.manage_consents') }}
+                    {{ __('pub_theme::privacy_dashboard.manage_consents') }}
                     <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -635,15 +635,15 @@ Per permettere agli utenti di esercitare i diritti GDPR (Articoli 15-22), implem
                         </svg>
                     </div>
                     <h2 class="text-xl font-bold text-gray-900 dark:text-white ml-3">
-                        {{ __('meetup::privacy_dashboard.delete_account') }}
+                        {{ __('pub_theme::privacy_dashboard.delete_account') }}
                     </h2>
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">
-                    {{ __('meetup::privacy_dashboard.delete_account_description') }}
+                    {{ __('pub_theme::privacy_dashboard.delete_account_description') }}
                 </p>
                 <a href="{{ route('privacy.delete-account') }}" 
                    class="inline-flex items-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors">
-                    {{ __('meetup::privacy_dashboard.delete_account_button') }}
+                    {{ __('pub_theme::privacy_dashboard.delete_account_button') }}
                     <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
                     </svg>

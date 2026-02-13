@@ -14,5 +14,6 @@
             Skip to main content
         </a>
         {{ $slot }}
+
     </body>
 </html>
