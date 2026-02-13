@@ -131,6 +131,9 @@ $gdprService->deleteUserAccount($user);
 - [Notify Module](../Notify/docs/index.md) - Notification system
 - [Xot Module](../Xot/docs/index.md) - Core base classes
 
+## Recent Fixes
+- [RegisterWidget Fix (2026-02-13)](./register-widget-fix-2026-02-13.md) - Fixed registration form rendering and two-column layout
+
 ## Troubleshooting
 Common issues and solutions:
 - Consent tracking inconsistencies
