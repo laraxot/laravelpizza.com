@@ -1,6 +1,6 @@
 # Cursor MCP Configuration Guide
 
-**Last Updated**: 31 Gennaio 2026
+**Last Updated**:
 **Status**: ✅ Configured
 **Editor**: Cursor AI
 
@@ -24,7 +24,7 @@ Model Context Protocol (MCP) connects Cursor to external systems and data. Inste
 
 ### Primary Configuration File
 
-**Location**: `/var/www/_bases/base_laravelpizza/laravel/.cursor-mcp.json`
+**Location**: `{PROJECT_ROOT}/laravel/.cursor-mcp.json`
 
 ```json
 {
@@ -39,9 +39,8 @@ Model Context Protocol (MCP) connects Cursor to external systems and data. Inste
     },
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_laravelpizza/laravel"]
-    },
-    "database": {
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "{PROJECT_ROOT}/laravel"]
+    },    "database": {
       "command": "npx",
       "args": ["-y", "@bytebase/dbhub"],
       "env": {
@@ -166,7 +165,7 @@ cursor ask "Show me all tasks in Asana due this week"
   "command": "npx",
   "args": ["-y", "@bytebase/dbhub"],
   "env": {
-    "DATABASE_URL": "sqlite:///var/www/_bases/base_laravelpizza/laravel/database/database.sqlite"
+    "DATABASE_URL": "sqlite:///{PROJECT_ROOT}/laravel/database/database.sqlite"
   }
 }
 ```
@@ -305,7 +304,7 @@ ls -la /var/www/_bases/base_laravelpizza/laravel
 # - No typos in path
 
 # 3. Verify server path argument
-# - Should be: "/var/www/_bases/base_laravelpizza/laravel"
+# - Should be: "{PROJECT_ROOT}/laravel"
 # - Not: "./laravel" or relative paths
 ```
 
@@ -316,7 +315,7 @@ ls -la /var/www/_bases/base_laravelpizza/laravel
 **Solutions**:
 ```bash
 # 1. Verify database file exists
-ls -la /var/www/_bases/base_laravelpizza/laravel/database/database.sqlite
+ls -la {PROJECT_ROOT}/laravel/database/database.sqlite
 
 # 2. Check DATABASE_URL format
 # - SQLite: sqlite:///absolute/path/to/database.sqlite
@@ -324,7 +323,7 @@ ls -la /var/www/_bases/base_laravelpizza/laravel/database/database.sqlite
 # - MySQL: mysql://user:pass@host:port/dbname
 
 # 3. Test database connection directly
-sqlite3 /var/www/_bases/base_laravelpizza/laravel/database/database.sqlite ".tables"
+sqlite3 {PROJECT_ROOT}/laravel/database/database.sqlite ".tables"
 ```
 
 ---
@@ -383,7 +382,7 @@ Configure multiple database servers:
 
 ## 🔄 Updates
 
-- **2026-01-31**: Complete MCP configuration for Cursor
+- **Initial Configuration**: Complete MCP configuration for Cursor
 - **Servers Configured**: 4 (Asana, ClickUp, Filesystem, Database)
 - **Status**: Production Ready
 
@@ -391,4 +390,4 @@ Configure multiple database servers:
 
 **Editor**: Cursor AI
 **MCP Version**: 2.0.0
-**Last Review**: 31 Gennaio 2026
+**Last Review**:

@@ -80,4 +80,10 @@ return [
     'title' => 'Sign in to your account',
     'subtitle_start' => 'Or',
     'subtitle_link' => 'create a new account',
+    'page' => [
+        'title' => 'Welcome to LaravelPizza! 🍕',
+        'subtitle' => 'Join the community of developers and pizza lovers',
+    ],
+    'already_registered' => 'Don\'t have an account yet?',
+    'register' => 'Register now',
 ];

@@ -1,7 +1,7 @@
 # GitHub Actions - Artifact Attestations
 
-**Versione**: 1.0.0
-**Data**: 2026-01-31
+**Versione**:
+**Data**:
 **Status**: ✅ Implementato
 **Standards**: SLSA v1.0 Build Level 2
 
@@ -266,7 +266,7 @@ gh attestation verify ./laravel/Themes/Meetup/public/build \
   Run ID: 1234567890
   Commit: abc123def456
   Branch: main
-  Timestamp: 2026-01-31T10:00:00Z
+  Timestamp: YYYY-MM-DDTHH:MM:SSZ
 ```
 
 ### Verifica Automatizzata
@@ -511,7 +511,7 @@ Il progetto genera attestations per:
 
 ## 🔄 Changelog
 
-### v1.0.0 (2026-01-31)
+### Initial Release
 - ✅ Implementazione iniziale
 - ✅ CI workflow con attestation tema
 - ✅ Deploy workflow con attestation deployment
@@ -532,5 +532,5 @@ Per problemi o domande:
 
 **Status**: ✅ Production Ready
 **Maintained By**: DevOps Team
-**Last Updated**: 2026-01-31
-**Next Review**: 2026-04-30 (quarterly)
+**Last Updated**:
+**Next Review**: (Quarterly)

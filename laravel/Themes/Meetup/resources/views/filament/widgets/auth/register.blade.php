@@ -1,69 +1,69 @@
 <x-filament-widgets::widget>
-    <form wire:submit="submit" class="space-y-8">
+    <form wire:submit="submit" class="space-y-6">
 
         <!-- Personal Information Section -->
-        <div class="space-y-6">
-            <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
-                <h2 class="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="space-y-5">
+            <div class="pb-4">
+                <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
                     {{ __('gdpr::register.sections.user_info') }}
                 </h2>
-                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                <p class="mt-1 text-sm text-slate-400">
                     {{ __('gdpr::register.sections.user_info_description') }}
                 </p>
             </div>
 
             <!-- Name Fields Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-4">
                 <div class="space-y-2">
-                    <label for="first_name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                    <label for="first_name" class="block text-sm font-medium text-slate-300">
                         {{ __('gdpr::register.fields.first_name.label') }}
                     </label>
                     <input
                         type="text"
                         id="first_name"
                         wire:model="first_name"
-                        class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                        class="w-full px-4 py-3.5 rounded-xl border border-slate-600 bg-slate-700/50 text-white placeholder-slate-400 focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                         placeholder="{{ __('gdpr::register.fields.first_name.placeholder') }}"
                         required
                         autocomplete="given-name"
                     >
                     @error('first_name')
-                        <p class="mt-1 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
+                        <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                     @enderror
                 </div>
 
                 <div class="space-y-2">
-                    <label for="last_name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                    <label for="last_name" class="block text-sm font-medium text-slate-300">
                         {{ __('gdpr::register.fields.last_name.label') }}
                     </label>
                     <input
                         type="text"
                         id="last_name"
                         wire:model="last_name"
-                        class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                        class="w-full px-4 py-3.5 rounded-xl border border-slate-600 bg-slate-700/50 text-white placeholder-slate-400 focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                         placeholder="{{ __('gdpr::register.fields.last_name.placeholder') }}"
                         required
                         autocomplete="family-name"
                     >
                     @error('last_name')
-                        <p class="mt-1 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
+                        <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                     @enderror
                 </div>
             </div>
 
             <!-- Email Field -->
             <div class="space-y-2">
-                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                <label for="email" class="block text-sm font-medium text-slate-300">
                     {{ __('gdpr::register.fields.email.label') }}
                 </label>
                 <input
                     type="email"
                     id="email"
                     wire:model="email"
-                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                    class="w-full px-4 py-3.5 rounded-xl border border-slate-600 bg-slate-700/50 text-white placeholder-slate-400 focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                     placeholder="{{ __('gdpr::register.fields.email.placeholder') }}"
                     required
                     autocomplete="email"

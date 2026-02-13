@@ -56,4 +56,10 @@ return [
     'title' => 'Accedi al tuo account',
     'subtitle_start' => 'Oppure',
     'subtitle_link' => 'crea un nuovo account',
+    'page' => [
+        'title' => 'Benvenuto a LaravelPizza! 🍕',
+        'subtitle' => 'Accedi alla community di developer e pizza lovers',
+    ],
+    'already_registered' => 'Non hai ancora un account?',
+    'register' => 'Registrati ora',
 ];

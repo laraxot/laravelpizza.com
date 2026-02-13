@@ -1,7 +1,7 @@
 # MCP Complete Setup Guide - LaravelPizza Project
 
-**Versione**: 2.0.0
-**Data**: 2026-01-31
+**Versione**:
+**Data**:
 **Status**: ✅ Configurato
 
 ---

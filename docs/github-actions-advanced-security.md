@@ -1,7 +1,7 @@
 # GitHub Actions - Advanced Security & Artifact Attestations
 
-**Versione**: 2.0.0 - Production Grade
-**Data**: 2026-01-31
+**Versione**:
+**Data**:
 **Status**: ✅ Implementato
 **Standards**: SLSA v1.0 Build Level 3, NIST 800-218, CIS Controls
 
@@ -247,8 +247,8 @@ Serial Number: ...
 Issuer: CN=sigstore-intermediate,O=sigstore.dev
 Subject: CN=sigstore,O=GitHub Actions
 Validity:
-  Not Before: 2026-01-31T10:00:00Z
-  Not After: 2026-01-31T10:10:00Z (10 minutes)
+  Not Before: YYYY-MM-DDTHH:MM:SSZ
+  Not After: YYYY-MM-DDTHH:MM:SSZ (10 minutes)
 X509v3 Subject Alternative Name:
   Email: github-actions@github.com
   URI: https://github.com/laraxot/laravelpizza/.github/workflows/deploy-advanced.yml@refs/heads/main
@@ -645,8 +645,8 @@ rekor-cli loginfo --verify
   "iss": "https://token.actions.githubusercontent.com",
   "sub": "repo:laraxot/laravelpizza:ref:refs/heads/main",
   "aud": "sigstore",
-  "exp": 1706716800,
-  "iat": 1706716200,
+  "exp": <TIMESTAMP>,
+  "iat": <TIMESTAMP>,
   "job_workflow_ref": "laraxot/laravelpizza/.github/workflows/deploy-advanced.yml@refs/heads/main"
 }
 ```
@@ -1006,5 +1006,5 @@ jobs:
 
 **Status**: ✅ Production Ready
 **Maintained By**: Security & DevOps Team
-**Last Updated**: 2026-01-31
-**Next Review**: 2026-04-30 (quarterly)
+**Last Updated**:
+**Next Review**: (Quarterly)

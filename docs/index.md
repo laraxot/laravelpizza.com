@@ -1,6 +1,6 @@
 # 📚 Documentazione LaravelPizza.com
 
-**Ultimo aggiornamento**: 31 Gennaio 2026
+**Ultimo aggiornamento**:
 **Versione**: Laravel 12.x + Filament 5.x + Livewire 4.x
 
 ---
@@ -43,7 +43,7 @@ Benvenuto nella documentazione di **LaravelPizza.com** - una piattaforma complet
 
 ### 🔴 Per Sviluppatori Avanzati
 
-4. **[PHPStan Zero Errors Achievement](../laravel/docs/phpstan-zero-errors-achievement-2025-12-18.md)**
+4. **[PHPStan Zero Errors Achievement](phpstan-zero-errors-achievement.md)**
    - Come raggiungere Level 10
    - Pattern di correzione
    - Quality metrics
@@ -454,7 +454,7 @@ Documentazione Root:
 
 ---
 
-**Ultimo aggiornamento**: 31 Gennaio 2026
+**Ultimo aggiornamento**:
 **Versione**: Laravel 12.x + Filament 5.x + Livewire 4.x
 **PHPStan**: Level 10 (0 errori)
 **Status**: Production Ready
