@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Meetup\Tests\Feature;
 
 use Modules\Meetup\Tests\TestCase;
-use function Pest\Laravel\get;
 
 uses(TestCase::class);
 

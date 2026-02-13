@@ -373,3 +373,12 @@ viene gestito dal modulo Lang se hai dubbi studia e analizza sia il codice che l
 
 
 in http://127.0.0.1:8000/it/auth/register hai fatto un form in mezzo allo schermo tutto stretto .. fa abbastanza schifo , devi studiare meglio al ui/ux per renderlo piu' bello ! studia in internet , ragiona , aggiorna e studia le cartelle docs dentro i moduli e dentro i temi, implementa e controlla  
+
+
+
+se devi fare operazioni css/js ti ricordo che devi andare sulla cartella laravel/Themes/Meetup  fare composer update -W , npm install, npm run build , poi per vedere pubblicare le modifiche npm run copy , 
+non devi prendere per oro colato quello che ti dico, devi pensare che io sbaglio, devi verificare sempre e devi sempre analizzare a fondo e aggiornare le tue rules, le tue memories e tutto quello che puoi per migliorarti sempre ,
+se non compili il tema, magari delle classi di filament non vengono gestite.. ragiona .. 
+
+
+il sito e' multilingua !! quello che hai fatto dentro laravel/Themes/Meetup/resources/views/pages/auth/register.blade.php  ... non serve che ti dica nulla... ma con un errore del genere tocca guardare tutto il tema se hai messo parole e frasi hardcoded .. e devi mettere le traduzioni .. e ripeto che devi migliorare la bellezza la ui/ux wcag seo adsense inbound marketing , clickbait , come sempre prima aggiorni e studi le cartelle docs dentro i moduli e dentro i temi che rappresentano la tua memoria e il punto di dialogo fra te e gli altri agenti ai 

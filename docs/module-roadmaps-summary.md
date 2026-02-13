@@ -1,8 +1,8 @@
 # LaravelPizza.com - Module Roadmaps Summary
 
-**Data**: 2026-01-31
+**Data**:
 **Status**: ✅ Completato
-**Total Roadmaps Created**: 15 (14 Modules + 1 Theme)
+**Total Roadmaps Created**: {NUMBER} ({NUMBER} Modules + {NUMBER} Theme)
 
 ---
 
@@ -10,23 +10,23 @@
 
 | Modulo/Tema | Completamento | Priorità | Roadmap |
 |-------------|--------------|----------|---------|
-| **Xot** (Core) | 85% | Alta | ✅ Created |
-| **User** | 90% | Massima | ✅ Created |
-| **Lang** | 85% | Alta | ✅ Created |
-| **UI** | 80% | Alta | ✅ Created |
-| **Activity** | 90% | Alta | ✅ Created |
-| **Cms** | 75% | Alta | ✅ Created |
-| **Geo** | 90% | Alta | ✅ Created |
-| **Job** | 85% | Alta | ✅ Created |
-| **Media** | 75% | Alta | ✅ Created |
-| **Notify** | 88% | Alta | ✅ Created |
-| **Tenant** | 80% | Alta | ✅ Created |
-| **Meetup** (Module) | 75% | Alta | ✅ Created |
-| **Gdpr** | 70% | Alta | ✅ Created |
-| **Seo** | 65% | Massima | ✅ Created |
-| **Meetup** (Theme) | 80% | Alta | ✅ Created |
+| **Xot** (Core) | {PERCENTAGE}% | Alta | ✅ Created |
+| **User** | {PERCENTAGE}% | Massima | ✅ Created |
+| **Lang** | {PERCENTAGE}% | Alta | ✅ Created |
+| **UI** | {PERCENTAGE}% | Alta | ✅ Created |
+| **Activity** | {PERCENTAGE}% | Alta | ✅ Created |
+| **Cms** | {PERCENTAGE}% | Alta | ✅ Created |
+| **Geo** | {PERCENTAGE}% | Alta | ✅ Created |
+| **Job** | {PERCENTAGE}% | Alta | ✅ Created |
+| **Media** | {PERCENTAGE}% | Alta | ✅ Created |
+| **Notify** | {PERCENTAGE}% | Alta | ✅ Created |
+| **Tenant** | {PERCENTAGE}% | Alta | ✅ Created |
+| **Meetup** (Module) | {PERCENTAGE}% | Alta | ✅ Created |
+| **Gdpr** | {PERCENTAGE}% | Alta | ✅ Created |
+| **Seo** | {PERCENTAGE}% | Massima | ✅ Created |
+| **Meetup** (Theme) | {PERCENTAGE}% | Alta | ✅ Created |
 
-**Media Completamento**: **81.7%** (media di tutti i moduli e tema)
+**Media Completamento**: **{PERCENTAGE}%** (media di tutti i moduli e tema)
 
 ---
 
@@ -38,29 +38,29 @@
 │   └── module-roadmaps-summary.md (questo file)
 └── laravel/
     ├── Modules/
-    │   ├── Xot/docs/roadmap-2026-01-31.md
-    │   ├── User/docs/roadmap-2026-01-31.md
-    │   ├── Lang/docs/roadmap-2026-01-31.md
-    │   ├── UI/docs/roadmap-2026-01-31.md
-    │   ├── Activity/docs/roadmap-2026-01-31.md
-    │   ├── Cms/docs/roadmap-2026-01-31.md
-    │   ├── Geo/docs/roadmap-2026-01-31.md
-    │   ├── Job/docs/roadmap-2026-01-31.md
-    │   ├── Media/docs/roadmap-2026-01-31.md
-    │   ├── Notify/docs/roadmap-2026-01-31.md
-    │   ├── Tenant/docs/roadmap-2026-01-31.md
-    │   ├── Meetup/docs/roadmap-2026-01-31.md
-    │   ├── Gdpr/docs/roadmap-2026-01-31.md
-    │   └── Seo/docs/roadmap-2026-01-31.md
+    │   ├── Xot/docs/roadmap.md
+    │   ├── User/docs/roadmap.md
+    │   ├── Lang/docs/roadmap.md
+    │   ├── UI/docs/roadmap.md
+    │   ├── Activity/docs/roadmap.md
+    │   ├── Cms/docs/roadmap.md
+    │   ├── Geo/docs/roadmap.md
+    │   ├── Job/docs/roadmap.md
+    │   ├── Media/docs/roadmap.md
+    │   ├── Notify/docs/roadmap.md
+    │   ├── Tenant/docs/roadmap.md
+    │   ├── Meetup/docs/roadmap.md
+    │   ├── Gdpr/docs/roadmap.md
+    │   └── Seo/docs/roadmap.md
     └── Themes/
-        └── Meetup/docs/roadmap-2026-01-31.md
+        └── Meetup/docs/roadmap.md
 ```
 
 ---
 
 ## ⚠️ CRITICAL ISSUES (Fix Immediately)
 
-### 1. Job Module - Syntax Errors (CRITICAL - Fix Today)
+### 1. Job Module - Syntax Errors (CRITICAL - Fix {TIMEFRAME})
 **Files**:
 - `/var/www/_bases/base_laravelpizza/laravel/Modules/Job/resources/lang/es/jobs_waiting.php:31`
 - `/var/www/_bases/base_laravelpizza/laravel/Modules/Job/resources/lang/fr/jobs_waiting.php:34`
@@ -73,7 +73,7 @@
 
 ---
 
-### 2. Seo Module - Missing README.md (CRITICAL - Fix Today)
+### 2. Seo Module - Missing README.md (CRITICAL - Fix {TIMEFRAME})
 **File**: `/var/www/_bases/base_laravelpizza/laravel/Modules/Seo/README.md`
 
 **Issue**: README.md file completely missing
@@ -84,7 +84,7 @@
 
 ---
 
-### 3. Seo Module - No Test Suite (CRITICAL - Fix This Week)
+### 3. Seo Module - No Test Suite (CRITICAL - Fix {TIMEFRAME})
 **Location**: `/var/www/_bases/base_laravelpizza/laravel/Modules/Seo/tests/`
 
 **Issue**: Only .gitkeep files exist, 0% test coverage
@@ -95,7 +95,7 @@
 
 ---
 
-### 4. Meetup Module - Calendar Widget Disabled (CRITICAL - Fix This Week)
+### 4. Meetup Module - Calendar Widget Disabled (CRITICAL - Fix {TIMEFRAME})
 **Location**: `/var/www/_bases/base_laravelpizza/laravel/Modules/Meetup/`
 
 **Issue**: Calendar widget disabled due to Filament v4 incompatibility with saade/filament-fullcalendar
@@ -157,16 +157,16 @@ Ogni roadmap include:
 
 ## 🎯 Priorità di Lavoro
 
-### Week 1 (Immediate - Questa settimana)
+### {TIMEFRAME} (Immediate)
 
-1. **Seo Module**: Create README.md (2-3 ore)
-2. **Job Module**: Fix syntax errors (1 ora)
-3. **Seo Module**: Implement test suite (5-6 giorni)
-4. **Meetup Module**: Fix calendar widget (3-5 giorni)
-5. **Xot Module**: Documentation consolidation (2-3 giorni)
-6. **User Module**: Complete 2FA implementation (2-3 giorni)
+1. **Seo Module**: Create README.md ({TIME_ESTIMATE})
+2. **Job Module**: Fix syntax errors ({TIME_ESTIMATE})
+3. **Seo Module**: Implement test suite ({TIME_ESTIMATE})
+4. **Meetup Module**: Fix calendar widget ({TIME_ESTIMATE})
+5. **Xot Module**: Documentation consolidation ({TIME_ESTIMATE})
+6. **User Module**: Complete 2FA implementation ({TIME_ESTIMATE})
 
-### Week 2-3 (Prossime 2 settimane)
+### {TIMEFRAME}
 
 1. **Tutti i moduli**: PHPStan Level 10 implementation
 2. **Seo Module**: AI optimization + Keyword tracking
@@ -184,7 +184,7 @@ Ogni roadmap include:
 14. **Gdpr Module**: Data export + Consent management UI
 15. **Meetup Theme**: Blade conversion + API integration
 
-### Week 4 (Ultima settimana)
+### {TIMEFRAME}
 
 1. **Tutti i moduli**: Final testing e polish
 2. **Tutti i moduli**: Documentation updates

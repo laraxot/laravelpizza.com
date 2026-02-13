@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    // === SECTIONS ===
+    // === REGISTER PAGE ===
     'register' => [
         'title' => 'Beginnen Sie Ihre Pizza-Reise 🍕',
         'subtitle' => 'Schließen Sie sich 5.000+ Pizza-Liebhabern und Entwicklern an. Exklusiver Zugang zu Meetups und Tutorials.',
@@ -11,22 +11,41 @@ return [
         'submitting' => 'Wir bereiten Ihren Ofen vor...',
     ],
 
+    // === BENEFITS ===
+    'benefits' => [
+        'community' => [
+            'title' => '5.000+ Entwickler-Community',
+            'description' => 'Verbinden Sie sich mit Laravel-Professionals und -Enthusiasten weltweit',
+        ],
+        'tutorials' => [
+            'title' => 'Exklusive Tutorials & Workshops',
+            'description' => 'Priorisierter Zugang zu Premium-Inhalten und Schulungen',
+        ],
+        'networking' => [
+            'title' => 'Networking & Karriere',
+            'description' => 'Kollaborationsmöglichkeiten und professionelles Wachstum',
+        ],
+    ],
+
+    // === SOCIAL PROOF ===
+    'social_proof' => 'Treten Sie 5.000+ Entwicklern weltweit bei',
+
     // === FIELDS ===
     'fields' => [
         'first_name' => [
             'label' => 'Vorname',
-            'placeholder' => 'Hans',
+            'placeholder' => 'Mario',
             'helper_text' => 'Geben Sie Ihren Vornamen ein, um Ihr Profil zu vervollständigen',
         ],
         'last_name' => [
             'label' => 'Nachname',
-            'placeholder' => 'Müller',
+            'placeholder' => 'Rossi',
             'helper_text' => 'Geben Sie Ihren Nachnamen ein, um Ihr Profil zu vervollständigen',
         ],
         'email' => [
             'label' => 'Ihre beste E-Mail',
-            'placeholder' => 'hans.mueller@beispiel.de',
-            'helper_text' => 'Wir senden eine Bestätigungs-E-Mail an die angegebene Adresse',
+            'placeholder' => 'mario.rossi@beispiel.de',
+            'helper_text' => 'Wir senden eine Bestätigungs-E-Mail an diese Adresse',
         ],
         'password' => [
             'label' => 'Sicheres Passwort',
@@ -47,7 +66,7 @@ return [
         'required_consents' => 'Erforderliche Zustimmung',
         'required_consents_description' => 'Um mit der Registrierung fortzufahren, müssen Sie die folgenden Bedingungen für die Verarbeitung Ihrer persönlichen Daten akzeptieren',
         'optional_consents' => 'Optionale Zustimmung',
-        'optional_consents_description' => 'Diese Zustimmungen sind optional und beeinflussen Ihre Registrierung nicht. Sie können diese jederzeit in Ihrem Datenschutz-Dashboard ändern.',
+        'optional_consents_description' => 'Diese Zustimmungen sind optional und beeinflussen Ihre Registrierung nicht. Sie können diese jederzeit in Ihrem Profil ändern.',
     ],
 
     // === CONSENTS ===

@@ -102,6 +102,13 @@
 **Task da completare**:
 - [ ] Implementa waitlist functionality
 - [ ] Add registration form customization
+- [ ] **Auth UI/UX Overhaul & I18N**
+    - [x] Standardize "Sign up" -> "Register".
+    - [x] Create `auth-split` layout (Needs I18N fix).
+    - [ ] **CRITICAL**: Remove ALL hardcoded strings from themes and layouts. Use `Lang` module.
+    - [ ] **UI/UX**: Implement "Premium" aesthetics (Gradients, Glassmorphism) with responsiveness.
+    - [ ] **SEO/Marketing**: Enhance texts for engagement (Clickbait/Inbound principles) via translation files.
+    - [ ] Verify automatic label resolution in `RegisterWidget`.ta
 - [ ] Implementa registration limits
 - [ ] Add registration fees
 - [ ] Implementa registration confirmations

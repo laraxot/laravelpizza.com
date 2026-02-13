@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    // === SECTIONS ===
+    // === REGISTER PAGE ===
     'register' => [
         'title' => 'Start Your Pizza Journey 🍕',
         'subtitle' => 'Join 5,000+ pizza lovers and developers. Get exclusive access to meetups and tutorials.',
@@ -11,22 +11,41 @@ return [
         'submitting' => 'Setting up your oven...',
     ],
 
+    // === BENEFITS ===
+    'benefits' => [
+        'community' => [
+            'title' => '5,000+ Developer Community',
+            'description' => 'Connect with Laravel professionals and enthusiasts worldwide',
+        ],
+        'tutorials' => [
+            'title' => 'Exclusive Tutorials & Workshops',
+            'description' => 'Priority access to premium content and training',
+        ],
+        'networking' => [
+            'title' => 'Networking & Career',
+            'description' => 'Collaboration opportunities and professional growth',
+        ],
+    ],
+
+    // === SOCIAL PROOF ===
+    'social_proof' => 'Join 5,000+ developers worldwide',
+
     // === FIELDS ===
     'fields' => [
         'first_name' => [
             'label' => 'First Name',
-            'placeholder' => 'John',
+            'placeholder' => 'Mario',
             'helper_text' => 'Enter your first name to complete your profile',
         ],
         'last_name' => [
             'label' => 'Last Name',
-            'placeholder' => 'Doe',
+            'placeholder' => 'Rossi',
             'helper_text' => 'Enter your last name to complete your profile',
         ],
         'email' => [
             'label' => 'Your Best Email',
-            'placeholder' => 'john.doe@example.com',
-            'helper_text' => 'We will send a confirmation email to the provided address',
+            'placeholder' => 'mario.rossi@example.com',
+            'helper_text' => 'We\'ll send a confirmation email to this address',
         ],
         'password' => [
             'label' => 'Secure Password',

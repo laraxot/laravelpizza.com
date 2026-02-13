@@ -55,6 +55,7 @@ abstract class TestCase extends BaseTestCase
             ]);
 
             $this->artisan('module:migrate', [
+                '--all' => true,
                 '--force' => true,
             ]);
 

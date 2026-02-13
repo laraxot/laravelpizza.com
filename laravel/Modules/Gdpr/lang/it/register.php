@@ -11,6 +11,25 @@ return [
         'submitting' => 'Stiamo preparando il tuo account...',
     ],
 
+    // === BENEFITS ===
+    'benefits' => [
+        'community' => [
+            'title' => 'Community di 5.000+ Sviluppatori',
+            'description' => 'Connettiti con professionisti e appassionati Laravel',
+        ],
+        'tutorials' => [
+            'title' => 'Tutorial & Workshop Esclusivi',
+            'description' => 'Accesso prioritario a contenuti premium e formazione',
+        ],
+        'networking' => [
+            'title' => 'Networking & Carriera',
+            'description' => 'Opportunità di collaborazione e crescita professionale',
+        ],
+    ],
+
+    // === SOCIAL PROOF ===
+    'social_proof' => 'Unisciti a 5.000+ sviluppatori in tutto il mondo',
+
     // === FIELDS ===
     'fields' => [
         'first_name' => [
