@@ -1,6 +1,16 @@
 # Database Testing Configuration for GDPR Module
 
-## CRITICAL: .env.testing Configuration
+## CRITICAL: Database Configuration Rules
+
+**⚠️ LEGGI QUESTO PRIMA DI QUALSIASI MODIFICA ALLE CONFIGURAZIONI DATABASE:**
+
+1. **MAI forzare le connessioni** con `config()` in CreatesApplication
+2. **MAI inventare variabili environment** come `NOTIFY_DB_DATABASE`, `GDPR_DB_DATABASE`
+3. **MAI aggiungere connessioni hardcode** in `config/database.php`
+
+Vedi [Critical Rules](../Xot/docs/database-configuration-critical-rules.md) per dettagli completi.
+
+## .env.testing Configuration (CRITICAL)
 
 ### ❌ WRONG APPROACH (NEVER DO THIS)
 
@@ -21,18 +31,20 @@ GDPR_DB_DATABASE=laravelpizza_data_test
 
 ### ✅ CORRECT APPROACH
 
-The `.env.testing` file must be a **COPY CARBON** of `.env` with **ONLY "_test"** added to database names:
+The `.env.testing` file must be a **COPY CARBON** of `.env` where the `DB_DATABASE` value has **ONLY "_test" appended** to the main database name:
 
 ```bash
 # If .env has:
-DB_DATABASE=laravelpizza_data
-DB_DATABASE_USER=laravelpizza_user
+DB_DATABASE=your_main_db_name
 
 # Then .env.testing must have:
-DB_DATABASE=laravelpizza_data_test
-DB_DATABASE_USER=laravelpizza_user_test
+DB_DATABASE=your_main_db_name_test
 
-# EVERYTHING ELSE IS IDENTICAL!
+# For example, if your main database is `laravelpizza_data`:
+DB_DATABASE=laravelpizza_data_test
+
+# EVERYTHING ELSE IS IDENTICAL (excluding other DB_ values if they are related to the main DB,
+# e.g., DB_USERNAME=root, DB_PASSWORD=your_password should be the same as in .env)
 ```
 
 ## How It Works
@@ -48,12 +60,19 @@ DB_DATABASE_USER=laravelpizza_user_test
 
 ```php
 // WRONG - Forces all connections to mysql
-$defaultConfig = $app['config']->get('database.connections.mysql');
-$moduleConnections = ['user', 'notify', 'geo', 'media', ...];
-foreach ($moduleConnections as $connection) {
-    $app['config']->set("database.connections.{$connection}", $defaultConfig);
-}
+// This completely destroys the dynamic connection management
+config(['database.connections.notify' => config('database.connections.mysql')]);
+config(['database.connections.geo' => config('database.connections.mysql')]);
+config(['database.connections.media' => config('database.connections.mysql')]);
+config(['database.connections.job' => config('database.connections.mysql')]);
+config(['database.connections.activity' => config('database.connections.mysql')]);
+config(['database.connections.cms' => config('database.connections.mysql')]);
+config(['database.connections.lang' => config('database.connections.mysql')]);
+config(['database.connections.meetup' => config('database.connections.mysql')]);
+config(['database.connections.seo' => config('database.connections.mysql')]);
+config(['database.connections.tenant' => config('database.connections.mysql')]);
 ```
+
 
 **Why this is wrong:**
 1. Destroys dynamic configuration system
@@ -103,11 +122,13 @@ it('creates user', function () {
 
 ## Key Principles
 
-1. **Copy Carbon Principle**: `.env.testing` = `.env` + `"_test"` on database names
-2. **No Invented Variables**: Never create environment variables that don't exist in `.env`
-3. **No Forced Connections**: Never use `config()` to override database connections in tests
-4. **Automatic Configuration**: Let TenantServiceProvider handle connection management
-5. **Single Test Database**: All modules share the same test database (suffixed with `_test`)
+1.  **Copy Carbon Principle**: `.env.testing` = `.env` + `"_test"` on main `DB_DATABASE`
+2.  **No Invented Variables**: Never create environment variables that don't exist in `.env` (like `MODULE_DB_DATABASE`)
+3.  **No Forced Connections**: Never use `config()` to override database connections in tests (e.g., `config(['database.connections.notify' => ...])`)
+4.  **Automatic Configuration**: Let TenantServiceProvider handle connection management dynamically based on `DB_DATABASE`
+5.  **Single Test Database**: All modules share the same test database (suffixed with `_test`)
+6.  **Single Migration Run**: In `TestCase.php`, ensure `php artisan migrate` is run only once, without `--force`, and without conditional checks (`if (! self::$migrated)`).
+
 
 ## Related Documentation
 

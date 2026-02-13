@@ -1,6 +1,16 @@
 # Database Testing Configuration for Meetup Theme
 
-## CRITICAL: .env.testing Configuration
+## CRITICAL: Database Configuration Rules
+
+**⚠️ LEGGI QUESTO PRIMA DI QUALSIASI MODIFICA ALLE CONFIGURAZIONI DATABASE:**
+
+1. **MAI forzare le connessioni** con `config()` in CreatesApplication
+2. **MAI inventare variabili environment** come `NOTIFY_DB_DATABASE`, `GDPR_DB_DATABASE`
+3. **MAI aggiungere connessioni hardcode** in `config/database.php`
+
+Vedi [Critical Rules](../../Modules/Xot/docs/database-configuration-critical-rules.md) per dettagli completi.
+
+## .env.testing Configuration (CRITICAL)
 
 ### ❌ WRONG APPROACH (NEVER DO THIS)
 
