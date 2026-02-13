@@ -27,7 +27,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Laravel\Passport\Contracts\OAuthenticatable;
 use Laravel\Passport\HasApiTokens;
-use Modules\User\Actions\User\AssignModuleRoleAction;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\Traits\HasAuthenticationLogTrait;
 use Modules\User\Models\Traits\HasModules;
@@ -223,17 +222,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
             // Fallback in case database connection is not available (e.g., during testing)
             $this->fillable = array_values($this->getFillable());
             // Avoid calling parent constructor if database is not available
-
-            $stringKeyAttributes = [];
-
-            foreach ($attributes as $key => $value) {
-                if (is_string($key)) {
-                    $stringKeyAttributes[$key] = $value;
-                }
-            }
-
-            /* @var array<string, mixed> $stringKeyAttributes */
-            $this->attributes = $stringKeyAttributes;
+            $this->attributes = $attributes;
         }
     }
 
@@ -299,7 +288,9 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function assignModule(string $module): void
     {
-        app(AssignModuleRoleAction::class)->execute($this, $module);
+        $role_name = $module.'::admin';
+        $role = Role::firstOrCreate(['name' => $role_name]);
+        $this->assignRole($role);
     }
 
     public function canAccessPanel(Panel $panel): bool

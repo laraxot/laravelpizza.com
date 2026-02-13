@@ -1,6 +1,5 @@
 # Implementazione Pagine About e Contact - Documentazione Completa
 
-**Data**: 2025-01-22
 **Status**: ✅ Completato
 **Scopo**: Documentare il processo completo di implementazione delle pagine About e Contact seguendo la strategia JSON-driven
 

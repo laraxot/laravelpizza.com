@@ -549,5 +549,4 @@ $addToCalendar = protect(function($type = 'google') {
 
 ---
 
-**Version**: 1.0
-**Last Updated**: 2025-01-29
+

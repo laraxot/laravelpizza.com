@@ -1,6 +1,5 @@
 # Creazione Risorse Filament 5.x - Laravel Pizza Meetup
 
-**Data**: 2026-02-02  
 **Stato**: Documentazione per la creazione di risorse Filament
 
 ---

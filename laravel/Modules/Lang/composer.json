@@ -11,7 +11,7 @@
     ],
     "require": {
         "mcamara/laravel-localization": "*",
-        "lara-zeus/spatie-translatable": "dev-local",
+        "lara-zeus/spatie-translatable": "*",
         "rinvex/countries": "^9.1",
         "spatie/laravel-sluggable": "*"
     },
@@ -30,10 +30,18 @@
         {
             "type": "path",
             "url": "../UI"
-        },
+        }
+        
+    ],
+    "repositories-comment": [
         {
             "type": "path",
             "url": "./packages/lara-zeus/spatie-translatable"
+        },
+        {
+            "type": "composer",
+            "url": "https://packagist.org",
+            "canonical": false
         }
     ],
     "autoload": {

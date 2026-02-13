@@ -10,7 +10,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Class CreateTemporaryUploadsTable.
  */
-return new class extends XotBaseMigration
+return new class() extends XotBaseMigration
 {
     /**
      * Run the migrations.

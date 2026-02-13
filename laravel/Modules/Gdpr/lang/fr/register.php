@@ -13,31 +13,11 @@ return [
 
     // === FIELDS ===
     'fields' => [
-        'first_name' => [
-            'label' => 'Prénom',
-            'placeholder' => 'Jean',
-            'helper_text' => 'Votre prénom pour la communauté',
-        ],
-        'last_name' => [
-            'label' => 'Nom',
-            'placeholder' => 'Dupont',
-            'helper_text' => 'Votre nom pour la communauté',
-        ],
-        'email' => [
-            'label' => 'Votre meilleure email',
-            'placeholder' => 'jean@exemple.fr',
-            'helper_text' => 'Pas de spam, juste du contenu Laravel 🚀',
-        ],
-        'password' => [
-            'label' => 'Mot de passe sécurisé',
-            'placeholder' => 'Quelque chose de super secret...',
-            'helper_text' => 'Minimum 8 caractères',
-        ],
-        'password_confirmation' => [
-            'label' => 'Confirmer le mot de passe',
-            'placeholder' => 'Répétez votre mot de passe',
-            'helper_text' => 'Assurez-vous qu\'il correspond',
-        ],
+        'first_name' => 'Prénom',
+        'last_name' => 'Nom',
+        'email' => 'Votre meilleure email',
+        'password' => 'Mot de passe sécurisé',
+        'password_confirmation' => 'Confirmer le mot de passe',
     ],
 
     // === SECTIONS ===

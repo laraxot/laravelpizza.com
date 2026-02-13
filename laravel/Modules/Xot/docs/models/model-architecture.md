@@ -1,6 +1,5 @@
 # Model Architecture - Guida Completa
 
-**Data**: 2025-10-16
 **Modulo**: Xot (Base Module)
 **Autore**: Claude Code Analysis
 
@@ -803,7 +802,6 @@ A: Estendi comunque BaseModel, ma usa `setTable()` nel costruttore o in metodi f
 **Prossimo aggiornamento**: Dopo implementazione auto-discovery in XotBaseModel
 # Model Architecture - Guida Completa
 
-**Data**: 2025-10-16
 **Modulo**: Xot (Base Module)
 **Autore**: Claude Code Analysis
 

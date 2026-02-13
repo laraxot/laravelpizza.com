@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Auth;
 use Modules\User\Models\User;
 use Modules\Xot\Filament\Widgets\XotBaseWidget; // Use the base widget for type hinting
 use Spatie\QueueableAction\QueueableAction;
-use function __;
 
 class HandleSuccessfulRegistrationAction
 {
@@ -20,8 +19,8 @@ class HandleSuccessfulRegistrationAction
         Auth::login($user);
 
         Notification::make()
-            ->title(__('gdpr::register.success'))
-            ->body(__('gdpr::register.success_message'))
+            ->title(\__('gdpr::register.success'))
+            ->body(\__('gdpr::register.success_message'))
             ->success()
             ->send();
 

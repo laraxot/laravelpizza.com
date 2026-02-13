@@ -1,230 +1,55 @@
-# 🔧 PHPStan Fixes - Modulo User - Gennaio 2025
+# Correzioni PHPStan Livello 7 - Modulo User
 
-**Data**: 27 Gennaio 2025
-**Status**: ✅ COMPLETATO CON SUCCESSO
-**Errori Corretti**: 3 errori di sintassi method chaining e object instantiation
+Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo User e le relative soluzioni implementate.
 
-## 📋 Panoramica Correzioni
+## Errori Identificati
 
-### ✅ **Errori Risolti**
+### 1. Errori in Profile.php
 
-#### **1. Otp.php - Method Chaining**
-- **File**: `app/Notifications/Auth/Otp.php`
-- **Linea**: 53
-- **Problema**: Sintassi method chaining non riconosciuta da PHPStan
-- **Soluzione**: Convertito a sintassi esplicita con assegnazioni separate
+```
+Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::permission() return type contains unknown class Modules\User\Models\Builder.
+Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::role() return type contains unknown class Modules\User\Models\Builder.
+Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withExtraAttributes() return type contains unknown class Modules\User\Models\Builder.
+Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withoutPermission() return type contains unknown class Modules\User\Models\Builder.
+Line 49: PHPDoc tag @method for method Modules\User\Models\Profile::withoutRole() return type contains unknown class Modules\User\Models\Builder.
+```
 
-**Prima (ERRATO):**
+## Soluzioni Implementate
+
+### 1. Correzione in Profile.php
+
+Il problema è che i tag PHPDoc facevano riferimento a una classe `Builder` nel namespace `Modules\User\Models` che non esiste. Abbiamo corretto i riferimenti utilizzando il namespace completo per la classe Builder:
+
 ```php
-return new MailMessage()
-    ->template('user::notifications.email')
-    ->subject(__('user::otp.mail.subject'))
-    ->greeting(__('user::otp.mail.greeting'))
-    ->line(__('user::otp.mail.line1', ['code' => $this->code]))
-    ->line(__('user::otp.mail.line2', ['minutes' => $pwd->otp_expiration_minutes]))
-    ->line(__('user::otp.mail.line3'))
-    ->action('vai', url('/'))
+/**
+ * ...
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile permission($permissions, $without = false)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile role($roles, $guard = null, $without = false)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withExtraAttributes()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, $guard = null)
+ * ...
+ */
 ```
 
-**Dopo (CORRETTO):**
-```php
-$mailMessage = new MailMessage();
-$mailMessage = $mailMessage->template('user::notifications.email');
-$mailMessage = $mailMessage->subject(__('user::otp.mail.subject'));
-$mailMessage = $mailMessage->greeting(__('user::otp.mail.greeting'));
-$mailMessage = $mailMessage->line(__('user::otp.mail.line1', ['code' => $this->code]));
-$mailMessage = $mailMessage->line(__('user::otp.mail.line2', ['minutes' => $pwd->otp_expiration_minutes]));
-$mailMessage = $mailMessage->line(__('user::otp.mail.line3'));
-$mailMessage = $mailMessage->action('vai', url('/'));
+### Versione HEAD
 
-return $mailMessage
-    ->salutation(__('user::otp.mail.salutation', ['app_name' => $app_name]));
-```
+Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
+## Collegamenti tra versioni di phpstan_fixes.md
+* [phpstan_fixes.md](../../../Xot/project_docs/phpstan/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../Xot/project_docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../User/project_docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../UI/project_docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../Media/project_docs/phpstan_fixes.md)
 
-#### **2. ResetPassword.php - Method Chaining**
-- **File**: `app/Notifications/Auth/ResetPassword.php`
-- **Linea**: 34
-- **Problema**: Sintassi method chaining non riconosciuta da PHPStan
-- **Soluzione**: Convertito a sintassi esplicita
 
-**Prima (ERRATO):**
-```php
-return new MailMessage()
-    ->subject($subject)
-    ->line(Lang::get('user::email.password_cause_of_email'))
-    ->action($action, $url)
-    ->line(Lang::get('user::email.password_if_not_requested'));
-```
+### Versione Incoming
 
-**Dopo (CORRETTO):**
-```php
-$mailMessage = new MailMessage();
-$mailMessage = $mailMessage->subject($subject);
-$mailMessage = $mailMessage->line(Lang::get('user::email.password_cause_of_email'));
-$mailMessage = $mailMessage->action($action, $url);
-$mailMessage = $mailMessage->line(Lang::get('user::email.password_if_not_requested'));
+Questo garantisce che PHPStan possa risolvere correttamente il tipo `Builder` utilizzando il namespace completo `\Illuminate\Database\Eloquent\Builder`. 
 
-return $mailMessage;
-```
+### BaseTeamUser: tipizzazione relazioni user() e team()
 
-#### **3. UserModelTest.php - Object Instantiation**
-- **File**: `tests/Unit/UserModelTest.php`
-- **Linea**: 88
-- **Problema**: Chiamata metodo su istanza inline non riconosciuta da PHPStan
-- **Soluzione**: Separata creazione istanza da chiamata metodo
-
-**Prima (ERRATO):**
-```php
-$hidden = new User()->getHidden();
-```
-
-**Dopo (CORRETTO):**
-```php
-$user = new User();
-$hidden = $user->getHidden();
-```
-
-### 🎯 **Impatto delle Correzioni**
-
-#### **Performance**
-- ✅ **Nessun impatto negativo** sulle performance
-- ✅ **Compatibilità PHPStan** migliorata
-- ✅ **Type safety** mantenuta
-
-#### **Funzionalità**
-- ✅ **Notifiche OTP** funzionano correttamente
-- ✅ **Reset Password** funziona correttamente
-- ✅ **Test User Model** passano correttamente
-- ✅ **Autenticazione** mantenuta
-
-#### **Architettura**
-- ✅ **Pattern Notification** mantenuto
-- ✅ **Type hints** preservati
-- ✅ **Documentazione PHPDoc** migliorata
-
-## 🔍 **Analisi Tecnica**
-
-### **Problema Identificato**
-PHPStan aveva difficoltà nel riconoscere la sintassi method chaining e object instantiation inline in alcuni contesti, causando errori di parsing.
-
-### **Soluzione Implementata**
-- **Sintassi esplicita**: Separazione delle chiamate ai metodi
-- **Assegnazioni multiple**: Ogni chiamata metodo in riga separata
-- **Object instantiation**: Separazione creazione da utilizzo
-
-### **Benefici**
-- ✅ **PHPStan Level 9**: Compatibilità completa
-- ✅ **Leggibilità**: Codice più esplicito e chiaro
-- ✅ **Type Safety**: Mantenuta con type hints espliciti
-- ✅ **Debugging**: Più facile identificare problemi
-
-## 📊 **Metriche Post-Correzione**
-
-| Metrica | Prima | Dopo | Status |
-|---------|-------|------|--------|
-| **PHPStan Errors** | 3 | 0 | ✅ Risolto |
-| **Type Safety** | 90% | 100% | ✅ Migliorato |
-| **Performance** | 95/100 | 95/100 | ✅ Mantenuto |
-| **Test Coverage** | 85% | 85% | ✅ Mantenuto |
-
-## 🧪 **Test di Verifica**
-
-### **Test Eseguiti**
-```bash
-# Test PHPStan
-./vendor/bin/phpstan analyse Modules/User --level=9
-# ✅ Nessun errore
-
-# Test funzionali
-php artisan test --filter=User
-# ✅ Tutti i test passano
-
-# Test autenticazione
-php artisan user:test-auth
-# ✅ Autenticazione funziona correttamente
-```
-
-### **Verifica Funzionalità**
-- ✅ **OTP Notifications**: Invio OTP funziona correttamente
-- ✅ **Password Reset**: Reset password funziona correttamente
-- ✅ **User Model**: Test passano correttamente
-- ✅ **Authentication**: Sistema autenticazione funziona
-
-## 🎯 **Best Practices Applicate**
-
-### **1. Method Chaining Pattern**
-```php
-// ✅ CORRETTO - Sintassi esplicita e compatibile PHPStan
-$mailMessage = new MailMessage();
-$mailMessage = $mailMessage->subject($subject);
-$mailMessage = $mailMessage->line($message);
-
-// ❌ EVITARE - Method chaining può causare problemi PHPStan
-$mailMessage = new MailMessage()
-    ->subject($subject)
-    ->line($message);
-```
-
-### **2. Object Instantiation**
-```php
-// ✅ CORRETTO - Separazione creazione e utilizzo
-$user = new User();
-$hidden = $user->getHidden();
-
-// ❌ EVITARE - Chiamata metodo su istanza inline
-$hidden = new User()->getHidden();
-```
-
-### **3. Type Hints**
-```php
-// ✅ CORRETTO - Type hints espliciti
-public function toMail($notifiable): MailMessage
-{
-    $mailMessage = new MailMessage();
-    $mailMessage = $mailMessage->subject($subject);
-    return $mailMessage;
-}
-```
-
-### **4. Translation Usage**
-```php
-// ✅ CORRETTO - Uso corretto delle traduzioni
-$mailMessage = $mailMessage->subject(__('user::otp.mail.subject'));
-$mailMessage = $mailMessage->greeting(__('user::otp.mail.greeting'));
-
-// ✅ CORRETTO - Uso Lang::get per traduzioni
-$subject = Lang::get('user::email.password_reset_subject');
-```
-
-## 🔄 **Prossimi Passi**
-
-### **Monitoraggio**
-- [ ] **Verifica PHPStan**: Eseguire analisi settimanale
-- [ ] **Performance Monitoring**: Controllo metriche mensile
-- [ ] **Test Coverage**: Mantenere copertura >85%
-
-### **Miglioramenti Futuri**
-- [ ] **Authentication Security**: Miglioramenti sicurezza
-- [ ] **OTP Optimization**: Ottimizzazioni sistema OTP
-- [ ] **User Management**: Miglioramenti gestione utenti
-
-## 📚 **Riferimenti**
-
-### **Documentazione Correlata**
-- [README.md Modulo User](./README.md)
-- [Authentication Guide](./authentication.md)
-- [Best Practices](./best-practices.md)
-
-### **Risorse Esterne**
-- [Laravel Authentication](https://laravel.com/docs/authentication)
-- [PHPStan Method Chaining](https://phpstan.org/rules/phpstan/phpstan/rule/phpstan.rules.phpstan.method-chaining)
-- [Laravel Notifications](https://laravel.com/docs/notifications)
+Per il modello `BaseTeamUser` sono stati aggiunti i return type espliciti `BelongsTo` ai metodi `user()` e `team()` e completati i PHPDoc generici sulle relazioni verso `UserContract` e `TeamContract`, in modo che PHPStan possa inferire correttamente i tipi delle relazioni dinamiche.
 
 ---
-
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025
-**📦 Versione**: 1.0
-**🐛 PHPStan Level**: 9 ✅
-**🌐 Translation Standards**: IT/EN complete ✅
-**🚀 Performance**: 95/100 score
-**✨ Test Coverage**: 85% ✅

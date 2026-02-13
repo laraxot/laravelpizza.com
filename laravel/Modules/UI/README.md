@@ -1,244 +1,340 @@
-# 🎨 UI Module - Eleva la Tua Interfaccia al Livello Successivo! 🚀
+# UI Module
 
-![GitHub issues](https://img.shields.io/github/issues/laraxot/module_ui_fila3)
-![GitHub forks](https://img.shields.io/github/forks/laraxot/module_ui_fila3)
-![GitHub stars](https://img.shields.io/github/stars/laraxot/module_ui_fila3)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
+[![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)](https://filamentphp.com/)
+[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
+[![PHP 8.3+](https://img.shields.io/badge/PHP-8.3+-blue.svg)](https://php.net)
+[![Components 222+](https://img.shields.io/badge/Components-222+-purple.svg)](#componenti-blade)
+[![SVG Icons 365+](https://img.shields.io/badge/SVG%20Icons-365+-orange.svg)](#sistema-icone)
+[![Widgets 11](https://img.shields.io/badge/Widgets-11-blue.svg)](#widget-filament)
 
-Welcome to the **Fila3 UI Module**! This comprehensive user interface toolkit is designed to streamline the development of visually stunning and user-friendly applications. With a rich set of components and styles, you can create a polished and consistent look for your projects in no time!
+> **Design system condiviso per tutti i moduli Laraxot**: 222 componenti Blade, 365+ icone SVG, 11 widget Filament, page builder a blocchi, dark mode, layout responsive. La base visiva dell'intero ecosistema.
 
-## 📦 What’s Inside?
+---
 
-The Fila3 UI Module provides a wide array of features, including:
+## Cosa fa
 
-- **Pre-built UI Components**: A library of ready-to-use components such as buttons, modals, and forms.
-- **Responsive Design**: Ensure your application looks great on any device with a mobile-first approach.
-- **Customizable Themes**: Easily switch between light and dark themes or create your own to match your branding.
-- **Accessibility Support**: Built with accessibility in mind to cater to all users.
+Il modulo UI e il **design system centralizzato** di Laraxot. Ogni modulo (Quaeris, Limesurvey, Cms, etc.) usa i suoi componenti Blade, icone SVG e widget Filament per garantire coerenza visiva e ridurre la duplicazione.
 
-## 🌟 Key Features
-
-- **Component-Based Architecture**: Easily manage and reuse UI components across your application.
-- **State Management Integration**: Effortlessly connect UI components to your application's state management.
-- **Dynamic Layouts**: Create flexible layouts that adapt to different screen sizes and orientations.
-- **Animations & Transitions**: Enhance user experience with smooth animations and transitions.
-- **Form Validation**: Simplify user input handling with built-in form validation features.
-- **Localization Support**: Easily implement multiple languages and regional settings.
-- **🎨 Icon System**: Complete SVG icon system with automatic registration and Filament integration.
-
-## 🚀 Why Choose Fila3 UI?
-
-- **Fast & Efficient**: Built for performance, ensuring quick load times and smooth interactions.
-- **Developer-Friendly**: Intuitive APIs and documentation make integration a breeze.
-- **Community Driven**: Join a thriving community of developers for support and collaboration.
-
-## 🎨 Icon System
-
-The UI Module includes a comprehensive SVG icon system that integrates seamlessly with Blade Icons and Filament:
-
-### Quick Start
 ```blade
-{{-- Use any icon with the ui- prefix --}}
+{{-- Icone con prefisso ui- --}}
 @svg('ui-login')
 @svg('ui-user')
 @svg('ui-settings')
+
+{{-- Componenti layout --}}
+<x-ui::navbar />
+<x-ui::sidebar />
+<x-ui::dark-mode-switcher />
+
+{{-- Blocchi pre-costruiti per pagine --}}
+<x-ui::blocks.hero.centered />
+<x-ui::blocks.cta.stacked />
+<x-ui::blocks.features.grid />
 ```
-
-### In Filament Components
-```php
-// Form components
-Forms\Components\TextInput::make('email')
-    ->prefixIcon('ui-login')
-
-// Table columns
-Tables\Columns\TextColumn::make('name')
-    ->icon('ui-user')
-
-// Actions
-Actions\Action::make('delete')
-    ->icon('ui-trash')
-```
-
-### Available Icons
-- `ui-login` - Login/authentication icon
-- `ui-user` - User profile icon
-- `ui-settings` - Settings icon
-- `ui-trash` - Delete/trash icon
-- `ui-edit` - Edit icon
-- And many more...
-
-📚 **Full Documentation**: [Icon System Guide](docs/icon-system.md)
-
-## 🔧 Installation
-
-Getting started with the Fila3 UI Module is straightforward! Follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/laraxot/module_ui_fila3.git
-
-Navigate to the project directory:
-bash
-Copia codice
-cd module_ui_fila3
-Install dependencies:
-bash
-Copia codice
-npm install
-Import the UI components in your application:
-javascript
-Copia codice
-import { Button, Modal } from 'fila3-ui';
-Start your application and bring your UI to life!
-📜 Usage Examples
-Here are a few snippets to demonstrate how to use the Fila3 UI Module in your application:
-
-Creating a Button
-javascript
-Copia codice
-<Button onClick={() => alert("Button clicked!")}>
-  Click Me!
-</Button>
-Displaying a Modal
-javascript
-Copia codice
-<Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-  <h2>Modal Title</h2>
-  <p>Your content goes here.</p>
-  <Button onClick={() => setModalOpen(false)}>Close</Button>
-</Modal>
-🤝 Contributing
-We welcome contributions! If you have ideas, bug fixes, or enhancements, check out the contributing guidelines to get started.
-
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-👤 Author
-Marco Sottana
-Discover more of my work at marco76tv!
-
-### Versione HEAD
-
-### Versione Incoming
-
-# 🎨 UI Module - Componenti Interfaccia
-
-[![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
-[![Laravel Version](https://img.shields.io/badge/Laravel-11.x-orange.svg)](https://laravel.com)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](.codeclimate.yml)
-[![Test Coverage](https://img.shields.io/badge/coverage-95%25-success.svg)](phpunit.xml.dist)
-[![UI Components](https://img.shields.io/badge/components-50+-brightgreen.svg)](docs/module_ui.md)
-[![Filament Version](https://img.shields.io/badge/Filament-3.x-purple.svg)](https://filamentphp.com)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/laraxot/module_ui)
-[![Downloads](https://img.shields.io/badge/downloads-1k+-blue.svg)](https://packagist.org/packages/laraxot/module_ui)
-[![Stars](https://img.shields.io/badge/stars-100+-yellow.svg)](https://github.com/laraxot/module_ui)
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/laraxot/module_ui/main/docs/assets/ui-banner.png" alt="UI Module Banner" width="800">
-</div>
-
-## 🇮🇹 Italiano
-
-### 📝 Descrizione
-Il modulo UI fornisce un set completo di componenti di interfaccia utente riutilizzabili per applicazioni Laravel, basati su Filament e Blade.
-
-### ✨ Caratteristiche Principali
-- ✅ Componenti Blade riutilizzabili
-- ✅ Layouts predefiniti
-- ✅ Temi personalizzabili
-- ✅ Supporto multi-lingua
-- ✅ Componenti Filament
-- ✅ Widgets dashboard
-- ✅ Form personalizzati
-- ✅ InlineDatePicker con date selettive
-- ✅ Stili CSS moderni
-
-### 🚀 Installazione
-```bash
-composer require modules/ui
-php artisan module:enable UI
-php artisan ui:install
-```
-
-### 📚 Documentazione
-Consulta la [documentazione completa](docs/module_ui.md) per:
-- [Componenti](docs/components.md)
-- [Layouts](docs/layouts.md)
-- [Temi](docs/themes.md)
-
-## 🇬🇧 English
-
-### 📝 Description
-The UI module provides a complete set of reusable user interface components for Laravel applications, based on Filament and Blade.
-
-### ✨ Key Features
-- ✅ Reusable Blade components
-- ✅ Predefined layouts
-- ✅ Customizable themes
-- ✅ Multi-language support
-- ✅ Filament components
-- ✅ Dashboard widgets
-- ✅ Custom forms
-- ✅ InlineDatePicker with selective dates
-- ✅ Modern CSS styles
-
-### 🚀 Installation
-```bash
-composer require modules/ui
-php artisan module:enable UI
-php artisan ui:install
-```
-
-### 📚 Documentation
-Check out the [complete documentation](docs/module_ui.md) for:
-- [Components](docs/components.md)
-- [Layouts](docs/layouts.md)
-- [Themes](docs/themes.md)
-
-## 🇪🇸 Español
-
-### 📝 Descripción
-El módulo UI proporciona un conjunto completo de componentes de interfaz de usuario reutilizables para aplicaciones Laravel, basados en Filament y Blade.
-
-### ✨ Características Principales
-- ✅ Componentes Blade reutilizables
-- ✅ Layouts predefinidos
-- ✅ Temas personalizables
-- ✅ Soporte multi-idioma
-- ✅ Componentes Filament
-- ✅ Widgets de dashboard
-- ✅ Formularios personalizados
-- ✅ InlineDatePicker con fechas selectivas
-- ✅ Estilos CSS modernos
-
-### 🚀 Instalación
-```bash
-composer require modules/ui
-php artisan module:enable UI
-php artisan ui:install
-```
-
-### 📚 Documentación
-Consulta la [documentación completa](docs/module_ui.md) para:
-- [Componentes](docs/components.md)
-- [Layouts](docs/layouts.md)
-- [Temas](docs/themes.md)
-
-## 🤝 Contribuire / Contributing / Contribuir
-
-Siamo aperti a contribuzioni! Consulta le nostre [linee guida per i contributori](.github/CONTRIBUTING.md).
-
-We are open to contributions! Check out our [contributor guidelines](.github/CONTRIBUTING.md).
-
-¡Estamos abiertos a contribuciones! Consulta nuestras [pautas para contribuidores](.github/CONTRIBUTING.md).
-
-## 📄 Licenza / License / Licencia
-
-Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICENSE) per maggiori dettagli.
-
-This project is distributed under the MIT license. See the [LICENSE](LICENSE) file for more details.
-
-Este proyecto está distribuido bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
+
+## Architettura
+
+```
+UI Module (design system centralizzato)
+    |
+    +-- 222 Componenti Blade
+    |     +-- 11 Component class PHP (Svg, Logo, Navbar, Sidebar...)
+    |     +-- 211 Block templates (hero, CTA, features, blog, newsletter...)
+    |
+    +-- 365+ Icone SVG
+    |     +-- 100+ icone azione/UI
+    |     +-- 240+ bandiere paesi
+    |     +-- 20+ brand social media
+    |     +-- 4 avatar default
+    |
+    +-- 11 Widget Filament
+    |     +-- StatsOverview, Calendar, DarkMode, Chart...
+    |
+    +-- TableLayoutEnum (toggle lista/griglia)
+    +-- InlineDatePicker (date selettive)
+    +-- Theme system (dark/light, multi-tenant)
+    |
+    v
+Tutti i moduli Laraxot
+```
+
+---
+
+## Componenti Blade
+
+### Component Class (11 PHP)
+
+| Componente | Funzione |
+|------------|----------|
+| **Svg** | Rendering icone SVG con attributi dinamici |
+| **Logo** | Logo applicazione con varianti |
+| **Navbar** | Barra navigazione responsive |
+| **Sidebar** | Sidebar collassabile |
+| **Block** | Container blocco contenuto |
+| **DarkModeSwitcher** | Toggle tema chiaro/scuro |
+| **BreadLink** | Link breadcrumb |
+| **WithSidebar** | Layout con sidebar |
+| **Simple / Std** | Layout standard |
+
+### Blocchi Pre-costruiti (211 template)
+
+Libreria completa di blocchi riutilizzabili per costruire pagine:
+
+| Categoria | Varianti | Esempi |
+|-----------|----------|--------|
+| **Hero** | 13 | Centered, split, con immagine, dark, phone mockup, code example |
+| **Features** | 30+ | Grid, testimonials, screenshots, product showcase |
+| **CTA** | 15+ | Centered, stacked, justified, dark, branded |
+| **Blog** | 15+ | Single/multi colonna, con immagini, featured, archivio |
+| **Header** | 15+ | Centered, con stats, background image, dark |
+| **Newsletter** | 10+ | Side-by-side, stacked, su card, dark background |
+| **Altro** | 20+ | Appointment, documents, eligibility, gallery, paragraph |
+
+```blade
+{{-- Costruisci una pagina combinando blocchi --}}
+<x-ui::blocks.hero.centered
+    title="Dashboard Survey"
+    subtitle="Gestisci i tuoi questionari"
+/>
+
+<x-ui::blocks.features.grid :features="$features" />
+
+<x-ui::blocks.cta.branded
+    action-url="/surveys/create"
+    action-text="Crea Survey"
+/>
+```
+
+---
+
+## Sistema Icone
+
+365+ icone SVG registrate automaticamente con Blade Icons, prefisso `ui-`:
+
+### Icone Azione/UI (100+)
+
+```blade
+@svg('ui-edit')       {{-- Modifica --}}
+@svg('ui-delete')     {{-- Elimina --}}
+@svg('ui-create')     {{-- Crea --}}
+@svg('ui-export')     {{-- Esporta --}}
+@svg('ui-login')      {{-- Login --}}
+@svg('ui-user')       {{-- Utente --}}
+@svg('ui-settings')   {{-- Impostazioni --}}
+@svg('ui-archive')    {{-- Archivio --}}
+@svg('ui-ai')         {{-- Intelligenza artificiale --}}
+@svg('ui-brain')      {{-- Cervello/AI --}}
+```
+
+### In Filament
+
+```php
+// Form
+TextInput::make('email')->prefixIcon('ui-login');
+
+// Table
+TextColumn::make('name')->icon('ui-user');
+
+// Action
+Action::make('delete')->icon('ui-trash');
+
+// Navigation
+protected static ?string $navigationIcon = 'ui-settings';
+```
+
+### Bandiere Paesi (240+)
+
+```blade
+@svg('ui-flag-it')  {{-- Italia --}}
+@svg('ui-flag-de')  {{-- Germania --}}
+@svg('ui-flag-us')  {{-- USA --}}
+{{-- Tutte le bandiere ISO 3166-1 --}}
+```
+
+### Brand Social Media (20+)
+
+```blade
+@svg('ui-brand-twitter')
+@svg('ui-brand-linkedin')
+@svg('ui-brand-github')
+@svg('ui-brand-facebook')
+@svg('ui-brand-instagram')
+@svg('ui-brand-youtube')
+@svg('ui-brand-discord')
+@svg('ui-brand-slack')
+@svg('ui-brand-spotify')
+```
+
+---
+
+## Widget Filament
+
+11 widget che estendono XotBaseWidget:
+
+| Widget | Funzione |
+|--------|----------|
+| **StatsOverviewWidget** | Dashboard con metriche aggregate |
+| **StatWithIconWidget** | Statistica singola con icona |
+| **RowWidget** | Layout a riga per widget multipli |
+| **HeroWidget** | Sezione hero nel pannello admin |
+| **DarkModeSwitcherWidget** | Toggle tema nel pannello |
+| **UserCalendarWidget** | Calendario eventi con date picker |
+| **GroupWidget** | Container per raggruppare widget |
+| **OverlookWidget** | Overview/sommario rapido |
+| **RedirectWidget** | Redirect programmabile |
+| **TestChartWidget** | Chart di test/demo |
+| **TestWidget** | Widget di test/sviluppo |
+
+---
+
+## TableLayoutEnum
+
+Sistema toggle per passare da vista lista a vista griglia nelle tabelle Filament:
+
+```php
+use Modules\UI\Enums\TableLayoutEnum;
+
+// Nella resource Filament
+public function getTableLayout(): TableLayoutEnum
+{
+    return TableLayoutEnum::fromSession('posts', TableLayoutEnum::List);
+}
+
+// L'utente puo switchare tra List e Grid
+// La preferenza viene salvata in sessione
+```
+
+---
+
+## InlineDatePicker
+
+Date picker custom con selezione di date specifiche:
+
+```php
+use Modules\UI\Filament\Forms\Components\InlineDatePicker;
+
+InlineDatePicker::make('selected_dates')
+    ->selectableDates($availableDates)
+    ->multiple()
+    ->label('Seleziona le date');
+```
+
+---
+
+## Dark Mode e Theming
+
+```blade
+{{-- Toggle automatico --}}
+<x-ui::dark-mode-switcher />
+
+{{-- Il sistema supporta: --}}
+{{-- 1. Dark/Light mode con classe Tailwind dark: --}}
+{{-- 2. Theme per tenant (colori personalizzati) --}}
+{{-- 3. Persistenza preferenza utente --}}
+```
+
+---
+
+## Modelli
+
+| Modello | Funzione |
+|---------|----------|
+| **Category** | Categorie per organizzazione contenuti |
+| **Collection** | Collezioni/raggruppamenti |
+| **FieldOption** | Opzioni per campi form dinamici |
+
+---
+
+## Integrazione con altri moduli
+
+```
+UI ──> Xot        (XotBaseWidget, XotBaseResource)
+UI ──> Quaeris    (componenti dashboard, icone survey)
+UI ──> Cms        (blocchi pagina, layout)
+UI ──> Chart      (widget chart base)
+UI ──> User       (avatar, icone profilo)
+UI ──> Limesurvey (icone tipi domanda)
+UI ──> Notify     (template email, icone notifica)
+UI ──> Lang       (traduzioni IT/EN/DE)
+```
+
+Tutti i moduli importano componenti e icone dal modulo UI per coerenza visiva.
+
+---
+
+## Quick Start
+
+```bash
+# Il modulo e gia incluso nel monorepo
+php artisan module:enable UI
+
+# Le icone sono disponibili immediatamente
+# Usa il prefisso ui- in Blade o Filament
+
+# Verifica le icone disponibili
+ls laravel/Modules/UI/resources/svg/
+```
+
+### Usare un blocco in una pagina
+
+```blade
+{{-- resources/views/pages/landing.blade.php --}}
+@extends('ui::layouts.master')
+
+@section('content')
+    <x-ui::blocks.hero.split
+        title="Quaeris Survey Platform"
+        subtitle="Gestione survey professionale"
+        image="/images/dashboard-preview.png"
+    />
+
+    <x-ui::blocks.features.grid :features="[
+        ['title' => 'Survey', 'icon' => 'ui-survey'],
+        ['title' => 'Dashboard', 'icon' => 'ui-chart'],
+        ['title' => 'Report PDF', 'icon' => 'ui-export'],
+    ]" />
+@endsection
+```
+
+---
+
+## Metriche del modulo
+
+| Metrica | Valore |
+|---------|--------|
+| **Componenti Blade** | 222 (11 class + 211 block template) |
+| **Icone SVG** | 365+ (azioni, bandiere, brand) |
+| **Widget Filament** | 11 |
+| **Modelli** | 3 |
+| **Bandiere paesi** | 240+ (ISO 3166-1 completo) |
+| **Brand social** | 20+ |
+| **Categorie blocchi** | 7 (hero, CTA, features, blog, header, newsletter, misc) |
+| **Lingue** | 3 (IT/EN/DE) |
+| **Documentazione** | 498 file |
+| **PHPStan Level** | 10 |
+
+---
+
+## Documentazione
+
+| Guida | Link |
+|-------|------|
+| **Indice** | [docs/README.md](docs/README.md) |
+| **Filosofia design** | [docs/philosophy.md](docs/philosophy.md) |
+| **Sistema icone** | [docs/icon-system.md](docs/icon-system.md) |
+| **Componenti Blade** | [docs/blade-components.md](docs/blade-components.md) |
+| **TableLayoutEnum** | [docs/table-layout-enum-complete-guide.md](docs/table-layout-enum-complete-guide.md) |
+| **Componenti Filament** | [docs/filament-components-usage.md](docs/filament-components-usage.md) |
+| **Architettura** | [docs/architecture.md](docs/architecture.md) |
+
+---
+
+**Module Type**: Design System & UI Components
+**Critical Level**: Alto (usato da tutti i moduli per interfaccia)
+**Architecture**: Component-based, Blade + Filament, Tailwind CSS v4
+**Quality**: PHPStan Level 10, 365+ icone, 222 componenti testati
+
+*Il design system che unifica l'intero ecosistema Laraxot: componenti, icone e layout condivisi.*

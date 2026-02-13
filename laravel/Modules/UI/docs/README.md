@@ -553,12 +553,19 @@ protected TableLayoutEnum $layout = TableLayoutEnum::GRID;
 
 - [Documentazione Root](../../../docs/translation_standards_links.md)
 - [Regole Traduzioni](translation_rules.md)
+- [Claude Context (Laravel)](../../../CLAUDE.md)
+- [AI Agents Guide](../../../../AGENTS.md)
+- [Cursor Rules & Skills](../../../../.cursor/README.md)
+- [Skills di progetto](../../../../.cursor/skills/)
 - [Best Practices Filament](filament_best_practices.md)
 - [Componenti UI](components.md)
 - [TableLayoutEnum Analysis](table_layout_enum_analysis.md)
 - [TableLayoutEnum Usage](table-layout-enum-usage.md)
 - **[REGOLA CRITICA: MAI usare ->label()](never_use_label_rule.md)**
 - **[REGOLA CRITICA: SEMPRE usa transClass()](transclass_rule.md)**
+
+## 🔁 CI & Semantic Versioning
+Il modulo include un workflow locale in `.github/workflows/semantic-versioning.yml` per il versionamento semantico.
 
 *Ultimo aggiornamento: gennaio 2025*
 *Ultimo aggiornamento: gennaio 2025*

@@ -1,6 +1,5 @@
 # Schema.org Enhancement Proposal - Meetup Module
 
-**Data**: 2025-01-22
 **Filosofia**: DRY + KISS + SEO + Structured Data
 **Obiettivo**: Migliorare SEO e structured data seguendo schema.org
 

@@ -1,6 +1,5 @@
 # Refactoring RecordNotification Constructor - Slug Pattern
 
-**Data**: 19 Dicembre 2025  
 **Stato**: ✅ Implementato  
 **Motivazione**: Lazy Resolution, Consistency, DRY + KISS
 

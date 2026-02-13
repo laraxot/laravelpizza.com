@@ -1,6 +1,5 @@
 # Verifica Percorso Config Tenant - Reverse Domain Notation
 
-**Data**: 2025-01-22
 **Status**: ✅ Verificato e Documentato
 **Scopo**: Verificare e documentare il percorso corretto per i file di configurazione tenant
 

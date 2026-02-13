@@ -118,7 +118,7 @@ Oltre allo schema di form, il modulo Geo espone anche una colonna tabellare rius
 
 - **Filosofia**:
   - Geo è il modulo sorgente per tutte le primitive di indirizzo (migrazioni, enum, form schema, colonne tabellari).
-  - I moduli consumer (come Meetup) non definiscono varianti locali di AddressColumn ma la riusano, mantenendo un solo punto di verità e semplificando manutenzione e refactor.
+  - I moduli consumer (come TechPlanner) non definiscono varianti locali di AddressColumn ma la riusano, mantenendo un solo punto di verità e semplificando manutenzione e refactor.
 
 ## AddressItemEnum e icone dei campi contatto
 

@@ -146,6 +146,5 @@ $safeForm = $form;
 
 ---
 
-**Data**: Novembre 2025
 **PHPStan Level**: 10
 **Status**: ✅ COMPLETATO

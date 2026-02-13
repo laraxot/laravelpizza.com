@@ -39,8 +39,6 @@ class GdprRegistrationListener implements ShouldQueue
      * Handle the UserRegistered event.
      *
      * Saves all GDPR consents given during registration.
-     *
-     * @param UserRegistered $event
      */
     public function handle(UserRegistered $event): void
     {
@@ -75,8 +73,6 @@ class GdprRegistrationListener implements ShouldQueue
      * Save a single consent for the user.
      *
      * @param \Modules\User\Models\User $user
-     * @param string $consentType
-     * @param UserRegistered $event
      */
     private function saveConsent($user, string $consentType, UserRegistered $event): void
     {

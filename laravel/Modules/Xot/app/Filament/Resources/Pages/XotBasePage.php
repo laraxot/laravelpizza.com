@@ -67,6 +67,28 @@ abstract class XotBasePage extends FilamentPage implements HasForms
 
         return $view->toString();
     }
+    
+    public function getViewTest(): string
+    {
+        $class = __CLASS__;
+        $module = Str::between($class, 'Modules\\', '\Filament');
+
+        $after = explode('\\', Str::after($class, '\Filament\\'));
+        $after[1] = Str::before($after[1], 'Resource');
+        $after[3] = Str::before($after[3], $after[1]);
+
+        $after = collect($after)->map(function ($item) {
+            return Str::kebab($item);
+            // return Str::snake($item);
+        })->implode('.');
+        $view = Str::lower($module).'::filament.'.$after;
+        if (! view()->exists($view)) {
+            throw new \Exception('view ['.$view.'] not Exists  !!');
+        }
+
+        return $view;
+    }
+    
 
     /**
      * Get navigation label with automatic translation.
@@ -97,7 +119,24 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      */
     public function schema(Schema $schema): Schema
     {
-        return $schema->components($this->getFormSchema())->statePath('data');
+        return $schema->components($this->getFormSchema())
+            ->statePath('data')
+            ->columns(2);
+    }
+
+    public function getFormStatePath(): string
+    {
+        return 'data';
+    }
+
+    public function form(Schema $schema): Schema
+    {
+        return $schema
+            ->components($this->getFormSchema())
+            ->model($this->getFormModel())
+            ->statePath($this->getFormStatePath())
+            ->operation($this->getFormContext())
+            ->columns(2);
     }
 
     /**
@@ -119,6 +158,28 @@ abstract class XotBasePage extends FilamentPage implements HasForms
         $model = static::$model;
 
         return $model;
+    }
+
+    /**
+     * Get the form model for the page.
+     * Filament compatibility method.
+     *
+     * @return Model|string|null
+     */
+    public function getFormModel(): Model|string|null
+    {
+        return static::$model;
+    }
+
+    /**
+     * Get the form context for the page.
+     * Filament compatibility method.
+     *
+     * @return string|null
+     */
+    public function getFormContext(): ?string
+    {
+        return 'edit';
     }
 
     /**

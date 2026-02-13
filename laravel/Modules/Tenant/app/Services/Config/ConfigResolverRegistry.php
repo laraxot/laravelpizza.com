@@ -46,7 +46,7 @@ class ConfigResolverRegistry
         }
 
         // Fallback to standard resolver
-        return new StandardConfigResolver;
+        return new StandardConfigResolver();
     }
 
     /**
@@ -55,8 +55,8 @@ class ConfigResolverRegistry
      */
     private function registerDefaultResolvers(): void
     {
-        $this->register(new MorphMapConfigResolver)
-            ->register(new DatabaseConfigResolver)
-            ->register(new StandardConfigResolver);
+        $this->register(new MorphMapConfigResolver())
+            ->register(new DatabaseConfigResolver())
+            ->register(new StandardConfigResolver());
     }
 }

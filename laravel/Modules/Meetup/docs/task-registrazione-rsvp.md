@@ -3,7 +3,6 @@
 **Modulo**: Meetup
 **Priorita'**: Alta
 **Completamento**: 20%
-**Data**: 2026-01-30
 
 ---
 

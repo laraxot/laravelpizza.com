@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'group' => 'passport dashboard.navigation',
+        'label' => 'Passport / API',
+        'group' => 'Sistema',
+        'icon' => 'heroicon-o-key',
+        'sort' => 95,
     ],
 ];

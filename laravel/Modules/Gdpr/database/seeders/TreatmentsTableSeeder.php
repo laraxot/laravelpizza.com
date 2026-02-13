@@ -76,14 +76,14 @@ class TreatmentsTableSeeder extends Seeder
         ];
 
         foreach ($treatments as $treatment) {
-            Treatment::updateOrCreate(
+            Treatment::query()->updateOrCreate(
                 ['name' => $treatment['name']],
                 [
                     'description' => $treatment['description'],
                     'required' => $treatment['required'],
                     'active' => $treatment['active'],
                     'weight' => $treatment['weight'],
-                    'documentVersion' => $treatment['documentVersion'] ?? '1.0',
+                    'documentVersion' => '1.0',
                 ]
             );
         }

@@ -1,6 +1,5 @@
 # PHPStan Level 10 Errors Roadmap - UI Module
 
-**Data**: 2026-01-09  
 **Modulo**: UI  
 **Livello PHPStan**: 10  
 **Status**: 🧘 **IN ANALISI**

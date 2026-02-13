@@ -117,4 +117,4 @@ The component has been updated to comply with PHPStan level 9 requirements:
 - Correct parameter typing
 - Safe function usage
 
-*Last Updated: August 2025*
+*

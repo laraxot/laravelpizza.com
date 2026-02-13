@@ -53,7 +53,7 @@ npm run copy         # Copia in /public/
 
 ### Tema Two
 ```bash
-cd Themes/Meetup
+cd Themes/Two
 npm install
 npm run build
 npm run copy

@@ -35,11 +35,6 @@ abstract class XotBaseMigration extends LaravelMigration
         $this->model = $model;
     }
 
-    public function shouldRun(): bool
-    {
-        return true;
-    }
-
     /**
      * Get the model class based on the migration class name.
      */
@@ -367,6 +362,16 @@ abstract class XotBaseMigration extends LaravelMigration
     protected function driver(): string
     {
         return DB::connection($this->getConnection())->getDriverName();
+    }
+
+    /**
+     * Determine if the migration should run.
+     * This method provides a hook for conditional migration execution.
+     * Returns true by default to maintain backward compatibility.
+     */
+    protected function shouldRun(): bool
+    {
+        return true;
     }
 }
 

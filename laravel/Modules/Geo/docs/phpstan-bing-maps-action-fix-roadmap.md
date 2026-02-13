@@ -1,6 +1,5 @@
 # PHPStan Fix Roadmap - GetAddressFromBingMapsAction - Gennaio 2026
 
-**Data**: 2026-01-09  
 **File**: `Modules/Geo/app/Actions/Bing/GetAddressFromBingMapsAction.php`  
 **Errore**: Method should return `array<string, mixed>` but returns `array`  
 **Linea**: 178 (metodo `extractLocationFromResponse`)  

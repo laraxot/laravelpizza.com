@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Notify\Models\Contact;
 use Modules\Notify\Models\ContactGroup;
-use Tests\TestCase;
+use Modules\Notify\Tests\TestCase;
 
 class ContactManagementBusinessLogicTest extends TestCase
 {
-    use RefreshDatabase;
+    // DatabaseTransactions is already used in the module TestCase
 
     /** @test */
     public function it_can_create_contact_with_basic_information(): void

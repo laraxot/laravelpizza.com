@@ -220,7 +220,6 @@ curl http://127.0.0.1:8000/it
 ---
 
 **Status**: ✅ Completato
-**Data**: 2025-11-30
 **Tema**: Meetup
 **Versione CSS**: 23.6 KB compilato
 **Versione JS**: 2.68 KB compilato

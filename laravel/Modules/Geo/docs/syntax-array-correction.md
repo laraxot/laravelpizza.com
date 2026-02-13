@@ -1,6 +1,5 @@
 # Correzione Sintassi Obsoleta Array() - Modulo Geo
 
-**Data**: 6 Gennaio 2025
 **Priorità**: ALTA
 **Stato**: ✅ RISOLTO
 

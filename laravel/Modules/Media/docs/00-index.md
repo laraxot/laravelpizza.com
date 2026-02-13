@@ -1,1 +1,37 @@
-# Documentation Index
+# 📚 **Indice Documentazione Modulo Media**
+
+**Last Update**: 31 Gennaio 2026
+**Status**: ✅ PHPStan Level 10 Compliant
+**Module Version**: 2.3.0
+
+## 🎯 **Lettura Essenziale**
+1. [README.md](./README.md) - Panoramica completa, Upload e Processing.
+2. [roadmap.md](./roadmap.md) - Obiettivi di trasformazione e AI 2026.
+3. [philosophy.md](./philosophy.md) - "Il file come entità": la nostra visione del media.
+
+## 🎞️ **Video & Image Processing**
+- 🎥 **[FFmpeg Integration](./ffmpeg-integration.md)** - Guida alla gestione video e codec.
+- 🖼️ **[Image Optimization](./file-management-architecture.md)** - Architettura di trasformazione immagini.
+- 🔄 **[Auto Conversions](./conversione-media.md)** - Logic per preview e watermark.
+
+## ☁️ **Cloud & Storage**
+- ☁️ **[S3 Integration](./s3test-corrections.md)** - Guida alla configurazione AWS S3/Minio.
+- 📁 **[File Management](./file-management.md)** - Organizzazione directory e disk strategy.
+- 📄 **[Responsive Images](./webm.md)** - Gestione formati moderni (WebP, AVIF).
+
+## 🎨 **Filament & UI**
+- 🖼️ **[Media Library](./filament.md)** - La libreria media in Filament.
+- 🛠️ **[Table Actions](./filament-table-actions.md)** - Azioni di massa su file e directory.
+
+## 🧪 **Qualità e Sviluppo**
+- ✅ **[PHPStan Level 10](./phpstan-level10-fixes.md)** - Report di conformità totale.
+- 🔬 **[Testing Guidelines](./testing.md)** - Strategie per testare upload e stream.
+- 🧹 **[PHPMD Analysis](./cyclomatic-complexity-report.md)** - Pulizia degli algoritmi di conversione.
+
+## 🔗 **Moduli Correlati**
+- [Xot](../../Xot/docs/README.md) - Base framework e Trait `HasMedia`.
+- [CloudStorage](../../CloudStorage/docs/README.md) - Astrazione per provider cloud.
+- [Cms](../../Cms/docs/README.md) - Integrazione media nei blocchi di contenuto.
+
+---
+*Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

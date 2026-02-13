@@ -82,7 +82,7 @@ git status --porcelain | grep "^UU\|^AA\|^DD"
 
 ### Coerenza Architetturale
 
-**PRIMA**: Mix di `ProfileContract` e `Meetup\Models\Profile`
+**PRIMA**: Mix di `ProfileContract` e `TechPlanner\Models\Profile`
 **DOPO**: Solo `ProfileContract` (contratto standardizzato)
 
 **Benefici**:

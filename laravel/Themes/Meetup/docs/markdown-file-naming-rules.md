@@ -1,6 +1,5 @@
 # Markdown File Naming Rules
 
-**Data**: 29 Novembre 2024
 
 ---
 

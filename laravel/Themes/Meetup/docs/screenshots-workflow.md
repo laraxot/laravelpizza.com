@@ -1,6 +1,5 @@
 # Workflow Screenshot per Sviluppo e Documentazione
 
-**Data**: 2025-01-22
 **Scopo**: Documentare il processo di cattura e gestione screenshot durante lo sviluppo
 
 ---

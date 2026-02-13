@@ -42,6 +42,10 @@ use Webmozart\Assert\Assert;
  * Provides enhanced table functionality with translations and optimized structure.
  *
  * @property TableLayoutEnum $layoutView
+ *
+ * @SuppressWarnings("PHPMD.StaticAccess")
+ * @SuppressWarnings("PHPMD.CyclomaticComplexity")
+ * @SuppressWarnings("PHPMD.NPathComplexity")
  */
 trait HasXotTable
 {
@@ -247,35 +251,31 @@ trait HasXotTable
 
         $actions = [];
         $resource = $this;
-        /** @phpstan-ignore-next-line instanceof.alwaysFalse (TableWidget returns early; ListRecords/RelationManager reach here) */
+        /** @phpstan-ignore-next-line */
         if ($this instanceof ListRecords) {
             $resourceClass = $this->getResource();
-            /** @phpstan-ignore-next-line function.alreadyNarrowedType (getResource returns class-string in ListRecords) */
-            if (is_string($resourceClass)) {
-                $resource = app($resourceClass);
-            }
+            // @phpstan-ignore-next-line staticMethod.alreadyNarrowedType
+            Assert::string($resourceClass);
+            $resource = app($resourceClass);
         }
+        // @phpstan-ignore-next-line staticMethod.alreadyNarrowedType
+        Assert::object($resource);
 
-        /** @phpstan-ignore-next-line function.alreadyNarrowedType (TableWidget returns early; $resource is object here) */
-        if (! is_object($resource)) {
-            return $actions;
-        }
-
-        /** @phpstan-ignore-next-line function.alreadyNarrowedType (TableWidget returns early; resource is object with methods) */
+        // @phpstan-ignore-next-line function.alreadyNarrowedType
         if (method_exists($resource, 'canView')) {
             $actions['view'] = ViewAction::make()
                 ->iconButton()
                 ->visible(fn (Model $record): bool => (bool) $resource->canView($record));
         }
 
-        /** @phpstan-ignore-next-line function.alreadyNarrowedType */
+        // @phpstan-ignore-next-line function.alreadyNarrowedType
         if (method_exists($resource, 'canEdit')) {
             $actions['edit'] = EditAction::make()
                 ->iconButton()
                 ->visible(fn (Model $record): bool => (bool) $resource->canEdit($record));
         }
 
-        /** @phpstan-ignore-next-line function.alreadyNarrowedType */
+        // @phpstan-ignore-next-line function.alreadyNarrowedType
         if (method_exists($resource, 'canDelete')) {
             $actions['delete'] = DeleteAction::make()
                 ->iconButton()

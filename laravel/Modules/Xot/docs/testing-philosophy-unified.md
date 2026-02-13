@@ -244,6 +244,5 @@ JOB_DB_DATABASE=:memory:
 
 ---
 
-**Version**: 1.0
 **Date**: 2026-01-09
 **Status**: CANONICAL - This is the new standard

@@ -1,0 +1,60 @@
+name: Module Quality Check
+
+on:
+  push:
+    paths:
+      - 'Modules/Job/**'
+  pull_request:
+    paths:
+      - 'Modules/Job/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [8.3, 8.4]
+
+    name: P${{ matrix.php }} - Quality
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick, fileinfo
+          coverage: pcov
+
+      - name: Install dependencies
+        run: |
+          cd laravel
+          composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: PHPStan Analysis
+        run: |
+          cd laravel
+          ./vendor/bin/phpstan analyse Modules/Job --level=10 --error-format=github
+
+      - name: Pest Tests
+        run: |
+          cd laravel
+          ./vendor/bin/pest Modules/Job/tests --coverage-clover coverage.xml
+
+      - name: Pint Style Check
+        run: |
+          cd laravel
+          ./vendor/bin/pint --test Modules/Job
+
+      - name: XotBase Architecture Check
+        run: |
+          echo "🏗️ Checking XotBase compliance..."
+          VIOLATIONS=$(grep -r "extends.*Filament" laravel/Modules/Job --include="*.php" | grep -v "XotBase" | wc -l || true)
+          if [ "$VIOLATIONS" -gt 0 ]; then
+            echo "❌ Found $VIOLATIONS direct Filament extensions in Job:"
+            grep -r "extends.*Filament" laravel/Modules/Job --include="*.php" | grep -v "XotBase"
+            exit 1
+          fi

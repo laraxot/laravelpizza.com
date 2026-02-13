@@ -1,6 +1,5 @@
 # Meetup Module - Event Management Roadmap
 
-**Data**: 2026-01-31
 **Status**: 🟡 In Progress (75% Completato)
 **Priorità**: Alta
 **Obiettivo**: 100% completamento con calendar widget, registration e analytics
@@ -212,5 +211,4 @@
 ---
 
 **Responsabile**: TBD
-**Last Updated**: 2026-01-31
-**Next Review**: 2026-02-07
+

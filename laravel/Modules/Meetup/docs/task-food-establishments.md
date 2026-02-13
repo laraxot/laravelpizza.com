@@ -52,5 +52,4 @@ is_partner, partner_since
 
 ---
 
-**Created**: 2026-02-10
 **Reference**: [schema-org-research-comprehensive.md](./schema-org-research-comprehensive.md)

@@ -1,7 +1,6 @@
 # 📊 Xot Charts - Shared Actions & Utilities
 
 **Modulo**: Xot (Core)
-**Data**: 2025-12-09
 **Status**: ✅ Production Ready
 
 ---

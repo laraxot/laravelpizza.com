@@ -6,12 +6,10 @@ namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
+use Laravel\Passport\DeviceCode as PassportDeviceCode;
 
 /**
  * OAuth Device Code model.
- *
- * ⚠️ NOTE: Laravel\Passport\DeviceCode does not exist in this Passport version.
- * Extending BaseModel instead. This model is rarely used (OAuth2 device flow).
  *
  * @property string      $id
  * @property string|null $user_code
@@ -29,7 +27,7 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
-class OauthDeviceCode extends BaseModel
+class OauthDeviceCode extends PassportDeviceCode
 {
     /** @var string */
     protected $connection = 'user';

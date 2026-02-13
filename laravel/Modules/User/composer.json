@@ -1,94 +1,91 @@
 {
-    "name": "laraxot/module_user_fila3",
-    "description": "user module for user management",
-    "keywords": [
-        "laraxot",
-        "laravel",
-        "filament",
-        "module_user",
-        "Laravel",
-        "User module",
-        "Users",
-        "Users management",
-        "Xot"
+  "name": "laraxot/module_user_fila3",
+  "description": "user module for user management",
+  "keywords": [
+    "laraxot",
+    "laravel",
+    "filament",
+    "module_user",
+    "Laravel",
+    "User module",
+    "Users",
+    "Users management",
+    "Xot"
+  ],
+  "homepage": "https://github.com/laraxot/module_user_fila3",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marco Sottana",
+      "email": "marco.sottana@gmail.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Livewire\\LivewireServiceProvider",
+        "Modules\\User\\Providers\\UserServiceProvider",
+        "Modules\\User\\Providers\\Filament\\AdminPanelProvider",
+        "Modules\\User\\Providers\\PassportServiceProvider",
+        "Modules\\User\\Providers\\SocialiteServiceProvider"
+      ],
+      "aliases": {}
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Modules\\User\\": "app/",
+      "Modules\\User\\Database\\Factories\\": "database/factories/",
+      "Modules\\User\\Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\User\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "flowframe/laravel-trend": "*",
+    "jenssegers/agent": "*",
+    "laravel/passport": "*",
+    "socialiteproviders/auth0": "*",
+    "spatie/laravel-personal-data-export": "*"
+  },
+  "require-dev": {},
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../Xot"
+    },
+    {
+      "type": "path",
+      "url": "../Tenant"
+    },
+    {
+      "type": "path",
+      "url": "../UI"
+    }
+  ],
+  "scripts": {
+    "post-autoload-dump1": [
+      "@php vendor/bin/testbench package:discover --ansi"
     ],
-    "homepage": "https://github.com/laraxot/module_user_fila3",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Marco Sottana",
-            "email": "marco.sottana@gmail.com"
-        }
+    "post-update-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postUpdate"
     ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Livewire\\LivewireServiceProvider",
-                "Modules\\User\\Providers\\UserServiceProvider",
-                "Modules\\User\\Providers\\Filament\\AdminPanelProvider",
-                "Modules\\User\\Providers\\PassportServiceProvider",
-                "Modules\\User\\Providers\\SocialiteServiceProvider"
-
-            ],
-            "aliases": {}
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Modules\\User\\": "app/",
-            "Modules\\User\\Database\\Factories\\": "database/factories/",
-            "Modules\\User\\Database\\Seeders\\": "database/seeders/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Modules\\User\\Tests\\": "tests/"
-        }
-    },
-    "require": {
-        "flowframe/laravel-trend": "*",
-        "jenssegers/agent": "*",
-        "laravel/passport": "*",
-        "socialiteproviders/auth0": "*",
-        "spatie/laravel-personal-data-export": "*"
-    },
-    "require-dev": {
-        
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../Xot"
-        },
-        {
-            "type": "path",
-            "url": "../Tenant"
-        },
-        {
-            "type": "path",
-            "url": "../UI"
-        }
-    ],
-    "scripts": {
-        "post-autoload-dump1": [
-            "@php vendor/bin/testbench package:discover --ansi"
-        ],
-        "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
-        ],
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "./vendor/bin/pest --no-coverage",
-        "test-coverage": "vendor/bin/pest --coverage-html coverage",
-        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
-    },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "wikimedia/composer-merge-plugin": true
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "analyse": "vendor/bin/phpstan analyse",
+    "test": "./vendor/bin/pest --no-coverage",
+    "test-coverage": "vendor/bin/pest --coverage-html coverage",
+    "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "wikimedia/composer-merge-plugin": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

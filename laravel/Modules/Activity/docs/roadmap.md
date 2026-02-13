@@ -1,221 +1,64 @@
-# Activity Module - Event Tracking & Audit Roadmap
+# Roadmap Modulo Activity - Audit Trail & Intelligence
 
-**Data**: 2026-01-31
-**Status**: 🟢 In Progress (90% Completato)
-**Priorità**: Alta
-**Obiettivo**: 100% completamento con export system e analytics avanzati
+**Data Creazione**: 2026-01-31
+**Status**: 📋 IN LAVORAZIONE
+**Versione**: 2.3.0
 
----
+## 🎯 Obiettivo
+
+Evolvere il sistema di logging verso un'analisi proattiva (AI-driven) e una visualizzazione dei dati sempre più granulare ed efficiente, mantenendo la compliance nativa a PHPStan Level 10.
 
 ## 📊 Stato Attuale
 
-### Completamento Globale: **90%**
+### Metriche
+- **PHPStan Level 10**: ✅ Compliance Nativa (Modulo di Riferimento)
+- **Copertura Test**: ~94% (Eccellente)
+- **Documentazione**: ~140 file (Necessaria pulizia file duplicati).
 
-| Componente | Completamento | Stato |
-|-----------|--------------|-------|
-| 100+ Predefined Events | 100% | ✅ |
-| Event Sourcing | 100% | ✅ |
-| Real-time Monitoring | 100% | ✅ |
-| Security Violation Detection | 100% | ✅ |
-| Audit Trail | 100% | ✅ |
-| Activity Analytics Dashboard | 100% | ✅ |
-| Snapshot System | 100% | ✅ |
-| Filament Integration | 100% | ✅ |
-| Advanced Analytics | 70% | 🔄 |
-| Performance Optimizations | 60% | 🔄 |
-| Export System | 0% | ❌ |
-| Custom Event Builder | 0% | ❌ |
-| PHPStan Level 10 | 95% | ✅ |
-| Test Coverage | 91% | ✅ |
+## 🚨 TODO e Miglioramenti Identificati
 
----
+### 1. Cleanup Documentazione (140+ file)
+**Problema**: Presenza di molti file duplicati con suffissi `-duplicate.md` e file di log/coverage test inutili.
+**Priorità**: 🔴 Alta
+**Link**: [docs/tasks/cleanup-activity-docs.md](./tasks/cleanup-activity-docs.md)
 
-## ✅ Funzionalità Completate
+### 2. Allineamento Filament v5 (Clusters)
+**Problema**: Organizzare i logs e i widgets in una struttura a Cluster per una navigazione premium.
+**Priorità**: 🔴 Alta
+**Link**: [docs/tasks/activity-filament-v5.md](./tasks/activity-filament-v5.md)
 
-### 1. 100+ Predefined Events (100%)
-- ✅ Login/logout events
-- ✅ CRUD operations tracking
-- ✅ Permission changes
-- ✅ Role assignments
-- ✅ Data modifications
-- ✅ System events
-- ✅ Custom event support
+### 3. AI-Driven Anomaly Detection
+**Problema**: I log sono molti, ma l'identificazione di pattern anomali è manuale.
+**Priorità**: 🟡 Media
+**Link**: [docs/tasks/activity-ai-detection.md](./tasks/activity-ai-detection.md)
 
-### 2. Event Sourcing (100%)
-- ✅ Spatie Laravel Event Sourcing integration
-- ✅ Stored events
-- ✅ Event replay
-- ✅ Event aggregation
-- ✅ Event projections
+## 📋 Roadmap Dettagliata
 
-### 3. Real-time Monitoring (100%)
-- ✅ WebSocket integration (Pusher)
-- ✅ Live activity feed
-- ✅ Real-time alerts
-- ✅ Event notifications
-- ✅ Activity stream
+### Fase 1: Qualità e Pulizia (Completed)
+- [x] PHPStan Level 10 Compliance Nativa.
+- [x] Rimozione sistematica dei file obsoleti e standardizzazione nomi.
+- [x] GitHub Action automation for Quality Check and Releases.
 
-### 4. Security Violation Detection (100%)
-- ✅ Brute force detection
-- ✅ Unusual login patterns
-- ✅ Permission escalation attempts
-- ✅ Data access violations
-- ✅ Anomaly detection
+### Fase 2: Enterprise UI (In Progress)
+- [ ] Implementazione del **Cluster "Observability"**:
+- [ ] Consolidamento della guida agli eventi di dominio.
+- [ ] Verifica compatibilità Laravel 12.
+    - **Activity logs** Resource.
+    - **Performance** Dashboard.
+    - **Security Audit** Page.
 
-### 5. Audit Trail Complete (100%)
-- ✅ Complete activity log
-- ✅ User attribution
-- ✅ IP address tracking
-- ✅ Timestamp accuracy
-- ✅ Data change tracking
+### Fase 3: Analytics Evolute (Mese 1)
+- [ ] Integrazione con strumenti di analisi pattern per identificare accessi sospetti o operazioni non autorizzate.
 
-### 6. Activity Analytics Dashboard (100%)
-- ✅ Activity volume metrics
-- ✅ User activity rankings
-- ✅ Event type breakdown
-- ✅ Time-based analytics
-- ✅ Export capabilities
+## 🎯 Priorità immediate
+1. **Cleanup**: Eliminare i duplicati per chiarezza.
+2. **Clusters**: Migliorare l'organizzazione Filament.
 
-### 7. Snapshot System (100%)
-- ✅ State snapshots
-- ✅ Snapshot restoration
-- ✅ Version history
-- ✅ Diff comparison
+## 📁 Lista task (file .md separati)
 
----
+Ogni task è documentato in un file nella cartella `docs/tasks/`. Indice: **[tasks-index](./tasks/tasks-index.md)**.
 
-## 🔄 Funzionalità in Corso
-
-### 1. Advanced Analytics Algorithms (70%)
-**Status**: Basic analytics implemented
-**Priorità**: Alta
-**File interessati**: `app/Services/ActivityAnalyticsService.php`
-
-**Task da completare**:
-- [ ] Implementa trend detection algorithms
-- [ ] Add pattern recognition
-- [ ] Implementa anomaly scoring
-- [ ] Add predictive analytics
-- [ ] Create custom report builder
-- [ ] Add data visualization improvements
-- [ ] Test suite completa
-- [ ] Documentation
-
-**Stima tempo**: 4-5 giorni
-**Assegnao a**: TBD
-
-### 2. Performance Optimizations (60%)
-**Status**: Basic optimizations implemented
-**Priorità**: Alta
-**File interessati**: `app/Services/ActivityPerformanceService.php`
-
-**Task da completare**:
-- [ ] Implementa database indexing optimization
-- [ ] Add query optimization
-- [ ] Implementa caching strategies
-- [ ] Add batch processing for high-volume
-- [ ] Optimize event storage
-- [ ] Implementa lazy loading
-- [ ] Performance benchmarking
-- [ ] Test suite completa
-
-**Stima tempo**: 3-4 giorni
-**Assegnao a**: TBD
-
----
-
-## 📋 Task da Fare
-
-### Priorità ALTA (Questa settimana)
-
-#### 1.1 Implementa Export System
-- [ ] **Task**: Crea export system per CSV, PDF, JSON
-- [ ] **File**: `app/Actions/ExportActivityAction.php`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 3-4 giorni
-- [ ] **Percentuale**: 0% → 100%
-- [ ] **Output**: Export system con scheduling
-
-#### 1.2 Ottimizza Performance per High-Volume
-- [ ] **Task**: Ottimizza per milioni di eventi
-- [ ] **File**: `app/Services/ActivityPerformanceService.php`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 3-4 giorni
-- [ ] **Percentuale**: 60% → 100%
-- [ ] **Output**: Performance migliorata del 50%+
-
-### Priorità MEDIA (Prossime 2 settimane)
-
-#### 1.3 Crea Custom Event Builder UI
-- [ ] **Task**: Implementa UI per creare custom events
-- [ ] **File**: `app/Filament/Pages/CustomEventBuilder.php`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 4-5 giorni
-- [ ] **Percentuale**: 0% → 100%
-- [ ] **Output**: Event builder con validation
-
-#### 1.4 Completa Advanced Analytics
-- [ ] **Task**: Implementa advanced analytics algorithms
-- [ ] **File**: `app/Services/ActivityAnalyticsService.php`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 4-5 giorni
-- [ ] **Percentuale**: 70% → 100%
-- [ ] **Output**: Analytics avanzati con predictions
-
-### Priorità BASSA (Prossimo mese)
-
-#### 1.5 Implementa Event Replay Console Command
-- [ ] **Task**: Crea command per replay events
-- [ ] **File**: `app/Console/Commands/ActivityReplayCommand.php`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 2-3 giorni
-- [ ] **Percentuale**: Nuovo (0%)
-- [ ] **Output**: Replay command con dry-run
-
-#### 1.6 Aggiungi Machine Learning for Anomaly Detection
-- [ ] **Task**: Implementa ML per anomaly detection
-- [ ] **File**: `app/Services/ActivityMLService.php`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 5-6 giorni
-- [ ] **Percentuale**: Nuovo (0%)
-- [ ] **Output**: ML-based anomaly detection
-
----
-
-## 📊 Metriche di Progresso
-
-### Completamento Totale: 90%
-
-| Area | Corrente | Target | Gap | Azione |
-|------|---------|--------|-----|--------|
-| Event System | 100% | 100% | 0% | ✅ Completo |
-| Real-time | 100% | 100% | 0% | ✅ Completo |
-| Security | 100% | 100% | 0% | ✅ Completo |
-| Analytics | 70% | 100% | 30% | Complete analytics |
-| Performance | 60% | 100% | 40% | Optimize |
-| Export System | 0% | 100% | 100% | Implement export |
-| Custom Builder | 0% | 100% | 100% | Create builder |
-
----
-
-## 🎯 Prossimi Passi
-
-1. **Settimana 1**: Export system + Performance optimization
-2. **Settimana 2**: Custom event builder + Advanced analytics
-3. **Settimana 3**: Event replay command + ML anomaly detection
-4. **Settimana 4**: Testing e polish
-
----
-
-## 📝 Note Importanti
-
-- **PHPStan Level 10**: Mantenere standard attuale (95%)
-- **Test Coverage**: Mantenere sopra 90%
-- **Performance**: Ottimizzare per milioni di eventi
-- **Security**: Mantenere detection accuracy sopra 95%
-
----
-
-**Responsabile**: TBD
-**Last Updated**: 2026-01-31
-**Next Review**: 2026-02-07
+## 🔗 Collegamenti
+- [README](./README.md)
+- [00-index](./00-index.md)
+- [Testing Strategy](./testing-strategy-implementation.md)

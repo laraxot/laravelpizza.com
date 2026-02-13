@@ -579,6 +579,6 @@ test('user registration saves gdpr consents', function () {
 ---
 
 **Document Version**: 1.0.0  
-**Last Updated**: 2026-02-09  
+
 **Responsible**: GDPR Compliance Team  
 **Approved by**: Legal Department

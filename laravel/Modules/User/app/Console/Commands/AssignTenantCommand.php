@@ -71,13 +71,13 @@ class AssignTenantCommand extends Command
         $this->info(implode(', ', $rows).' assigned to '.$email);
     }
 
-    /**
+    /*
      * Get the console command options.
      */
-    protected function getOptions(): array
-    {
-        return [
-            ['example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null],
-        ];
-    }
+    // protected function getOptions(): array
+    // {
+    //   return [
+    //     ['example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null],
+    //    ];
+    // }
 }

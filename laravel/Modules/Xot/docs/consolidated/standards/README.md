@@ -87,7 +87,7 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 * [README.md](../../../Cms/project_docs/content/README.md)
 * [README.md](../../../Cms/project_docs/frontoffice/README.md)
 * [README.md](../../../Cms/project_docs/components/README.md)
-* [README.md](../../../../Themes/Meetup/project_docs/README.md)
+* [README.md](../../../../Themes/Two/project_docs/README.md)
 * [README.md](../../../../Themes/One/project_docs/README.md)
 
 # Standard Xot: Ereditarietà dei Modelli

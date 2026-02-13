@@ -7,6 +7,7 @@
 ## Regola Fondamentale
 
 Tutti i metodi `getTable*()` nel trait `HasXotTable` sono dichiarati come `protected` per allinearsi a Filament 5 ed evitare conflitti di visibilità con il trait `InteractsWithTable`. Le classi (pagine/widget) che sovrascrivono questi metodi possono continuare a usare `public` per permettere l'accesso cross-component (widening), ma nel trait devono rimanere `protected`.
+Tutti i metodi `getTable*()` in `HasXotTable` sono dichiarati come `public` perché vengono chiamati da Filament/Livewire dall'esterno della classe. I widget che sovrascrivono questi metodi **DEVONO** mantenere la stessa visibilità `public`.
 
 ## Metodi che Devono Essere Public
 
@@ -94,3 +95,4 @@ must be public (as in class HasXotTable)
 - [Widget Table Configuration](../../../Modules/Xot/docs/filament/widget-table-configuration.md)
 
 *Ultimo aggiornamento: 2026-01-27*
+*Ultimo aggiornamento: 2025-01-27*

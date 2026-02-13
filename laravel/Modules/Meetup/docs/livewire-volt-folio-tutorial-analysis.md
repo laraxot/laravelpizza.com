@@ -8,7 +8,6 @@ Questo documento analizza il tutorial pratico "Learn Livewire 3, Volt, and Folio
 
 **Articolo**: [Learn Livewire 3, Volt, and Folio by building a podcast player](https://laravel-news.com/livewire-volt-and-folio)
 **Autore**: Jason Beggs
-**Data**: July 27th, 2023
 **Repository**: [jasonlbeggs/laravel-news-volt-folio-example](https://github.com/jasonlbeggs/laravel-news-volt-folio-example)
 
 ---

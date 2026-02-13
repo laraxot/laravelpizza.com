@@ -3,31 +3,12 @@
 declare(strict_types=1);
 
 use Illuminate\Database\QueryException;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Xot\Models\Module;
 use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
-uses(DatabaseTransactions::class);
-
-/**
- * Create a Module via factory (typed for PHPStan).
- *
- * @param  array<string, mixed>  $attributes
- */
-function createModule(array $attributes = []): Module
-{
-    /** @var \Illuminate\Database\Eloquent\Factories\Factory<Module> $factory */
-    $factory = Module::factory();
-    /** @var array<string, mixed> $attributes */
-    $module = $factory->create($attributes);
-    assert($module instanceof Module);
-
-    return $module;
-}
 
 it('can create module', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $moduleData = [
         'name' => 'TestModule',
@@ -38,18 +19,16 @@ it('can create module', function () {
     ];
 
     // Act
-    /** @var Module $module */
     $module = Module::create($moduleData);
 
     // Assert
-    /** @phpstan-ignore-next-line method.protected (Laravel TestCase trait provides public assertDatabaseHas) */
     $this->assertDatabaseHas('modules', [
         'id' => $module->id,
         'name' => 'TestModule',
         'slug' => 'test-module',
         'version' => '1.0.0',
         'enabled' => true,
-    ]);
+    ], 'sushi');
 
     $this->assertEquals('TestModule', $module->name);
     $this->assertEquals('test-module', $module->slug);
@@ -58,50 +37,40 @@ it('can create module', function () {
 });
 
 it('can enable and disable module', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
-    $module = createModule(['enabled' => false]);
+    $module = Module::factory()->create(['enabled' => false]);
 
     // Act - Enable module
     $module->update(['enabled' => true]);
 
     // Assert
-    /** @var Module $freshModule */
-    $freshModule = $module->fresh();
-    $this->assertTrue($freshModule->enabled);
+    $this->assertTrue($module->fresh()->enabled);
 
     // Act - Disable module
     $module->update(['enabled' => false]);
 
     // Assert
-    /** @var Module $freshModule2 */
-    $freshModule2 = $module->fresh();
-    $this->assertFalse($freshModule2->enabled);
+    $this->assertFalse($module->fresh()->enabled);
 });
 
 it('can update module version', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
-    $module = createModule(['version' => '1.0.0']);
+    $module = Module::factory()->create(['version' => '1.0.0']);
 
     // Act
     $module->update(['version' => '2.0.0']);
 
     // Assert
-    /** @var Module $freshModule */
-    $freshModule = $module->fresh();
-    $this->assertEquals('2.0.0', $freshModule->version);
-    /** @phpstan-ignore-next-line method.protected */
+    $this->assertEquals('2.0.0', $module->fresh()->version);
     $this->assertDatabaseHas('modules', [
         'id' => $module->id,
         'version' => '2.0.0',
-    ]);
+    ], 'sushi');
 });
 
 it('can manage module dependencies', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
-    $module = createModule([
+    $module = Module::factory()->create([
         'dependencies' => ['user', 'auth'],
     ]);
 
@@ -116,14 +85,13 @@ it('can manage module dependencies', function () {
 });
 
 it('can validate module slug uniqueness', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
-    createModule(['slug' => 'unique-module']);
+    Module::factory()->create(['slug' => 'unique-module']);
 
     // Act & Assert - Try to create module with same slug
-    /** @phpstan-ignore-next-line method.protected (Laravel TestCase provides expectException) */
     $this->expectException(QueryException::class);
-    \Modules\Xot\Models\Module::create([
+
+    Module::create([
         'name' => 'Another Module',
         'slug' => 'unique-module', // Same slug
         'version' => '1.0.0',
@@ -132,7 +100,6 @@ it('can validate module slug uniqueness', function () {
 });
 
 it('can manage module configuration', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $config = [
         'setting1' => 'value1',
@@ -142,7 +109,7 @@ it('can manage module configuration', function () {
         ],
     ];
 
-    $module = createModule(['config' => $config]);
+    $module = Module::factory()->create(['config' => $config]);
 
     // Act
     $moduleConfig = $module->config;
@@ -151,16 +118,13 @@ it('can manage module configuration', function () {
     $this->assertIsArray($moduleConfig);
     $this->assertEquals('value1', $moduleConfig['setting1']);
     $this->assertEquals('value2', $moduleConfig['setting2']);
-    /** @var array<string, mixed> $moduleConfig */
-    $nested = $moduleConfig['nested'] ?? [];
-    $this->assertEquals('value', is_array($nested) ? ($nested['key'] ?? null) : null);
+    $this->assertEquals('value', $moduleConfig['nested']['key']);
 });
 
 it('can check module status', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
-    $enabledModule = createModule(['enabled' => true]);
-    $disabledModule = createModule(['enabled' => false]);
+    $enabledModule = Module::factory()->create(['enabled' => true]);
+    $disabledModule = Module::factory()->create(['enabled' => false]);
 
     // Act & Assert
     $this->assertTrue($enabledModule->isEnabled());
@@ -170,7 +134,6 @@ it('can check module status', function () {
 });
 
 it('can manage module metadata', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $metadata = [
         'author' => 'Test Author',
@@ -179,7 +142,7 @@ it('can manage module metadata', function () {
         'tags' => ['test', 'example'],
     ];
 
-    $module = createModule(['metadata' => $metadata]);
+    $module = Module::factory()->create(['metadata' => $metadata]);
 
     // Act
     $moduleMetadata = $module->metadata;
@@ -189,38 +152,31 @@ it('can manage module metadata', function () {
     $this->assertEquals('Test Author', $moduleMetadata['author']);
     $this->assertEquals('https://example.com', $moduleMetadata['website']);
     $this->assertEquals('MIT', $moduleMetadata['license']);
-    /** @var array<int, string> $tags */
-    $tags = $moduleMetadata['tags'];
-    $this->assertContains('test', $tags);
-    $this->assertContains('example', $tags);
+    $this->assertContains('test', $moduleMetadata['tags']);
+    $this->assertContains('example', $moduleMetadata['tags']);
 });
 
 it('can validate module version format', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $validVersions = ['1.0.0', '2.1.3', '10.5.2', '0.1.0'];
 
     foreach ($validVersions as $version) {
         // Act
-        $module = createModule(['version' => $version]);
+        $module = Module::factory()->create(['version' => $version]);
 
         // Assert
-        /** @var Module $freshModule */
-        $freshModule = $module->fresh();
-        $this->assertEquals($version, $freshModule->version);
-        /** @phpstan-ignore-next-line method.protected */
+        $this->assertEquals($version, $module->version);
         $this->assertDatabaseHas('modules', [
             'id' => $module->id,
             'version' => $version,
-        ]);
+        ], 'sushi');
     }
 });
 
 it('can manage module installation date', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $installationDate = now()->subDays(30);
-    $module = createModule([
+    $module = Module::factory()->create([
         'installed_at' => $installationDate,
     ]);
 
@@ -229,15 +185,13 @@ it('can manage module installation date', function () {
 
     // Assert
     $this->assertEquals($installationDate, $moduleInstalledAt);
-    /** @phpstan-ignore-next-line method.protected */
     $this->assertDatabaseHas('modules', [
         'id' => $module->id,
         'installed_at' => $installationDate,
-    ]);
+    ], 'sushi');
 });
 
 it('can manage module update history', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $updateHistory = [
         [
@@ -252,7 +206,7 @@ it('can manage module update history', function () {
         ],
     ];
 
-    $module = createModule(['update_history' => $updateHistory]);
+    $module = Module::factory()->create(['update_history' => $updateHistory]);
 
     // Act
     $moduleUpdateHistory = $module->update_history;
@@ -260,20 +214,15 @@ it('can manage module update history', function () {
     // Assert
     $this->assertIsArray($moduleUpdateHistory);
     $this->assertCount(2, $moduleUpdateHistory);
-    /** @var array<string, mixed> $first */
-    $first = $moduleUpdateHistory[0];
-    /** @var array<string, mixed> $second */
-    $second = $moduleUpdateHistory[1];
-    $this->assertEquals('1.0.0', $first['version']);
-    $this->assertEquals('Initial release', $first['changes']);
-    $this->assertEquals('1.1.0', $second['version']);
-    $this->assertEquals('Bug fixes and improvements', $second['changes']);
+    $this->assertEquals('1.0.0', $moduleUpdateHistory[0]['version']);
+    $this->assertEquals('Initial release', $moduleUpdateHistory[0]['changes']);
+    $this->assertEquals('1.1.0', $moduleUpdateHistory[1]['version']);
+    $this->assertEquals('Bug fixes and improvements', $moduleUpdateHistory[1]['changes']);
 });
 
 it('can check module compatibility', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
-    $module = createModule([
+    $module = Module::factory()->create([
         'laravel_version' => '^10.0',
         'php_version' => '^8.1',
     ]);
@@ -288,7 +237,6 @@ it('can check module compatibility', function () {
 });
 
 it('can manage module permissions', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $permissions = [
         'module.read',
@@ -296,30 +244,27 @@ it('can manage module permissions', function () {
         'module.delete',
     ];
 
-    $module = createModule(['permissions' => $permissions]);
+    $module = Module::factory()->create(['permissions' => $permissions]);
 
     // Act
     $modulePermissions = $module->permissions;
 
     // Assert
     $this->assertIsArray($modulePermissions);
-    /** @var array<int, string> $perms */
-    $perms = $modulePermissions;
-    $this->assertContains('module.read', $perms);
-    $this->assertContains('module.write', $perms);
-    $this->assertContains('module.delete', $perms);
+    $this->assertContains('module.read', $modulePermissions);
+    $this->assertContains('module.write', $modulePermissions);
+    $this->assertContains('module.delete', $modulePermissions);
     $this->assertCount(3, $modulePermissions);
 });
 
 it('can manage module routes', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $routes = [
         'web' => ['prefix' => 'module', 'middleware' => ['web']],
         'api' => ['prefix' => 'api/module', 'middleware' => ['api']],
     ];
 
-    $module = createModule(['routes' => $routes]);
+    $module = Module::factory()->create(['routes' => $routes]);
 
     // Act
     $moduleRoutes = $module->routes;
@@ -328,13 +273,11 @@ it('can manage module routes', function () {
     $this->assertIsArray($moduleRoutes);
     $this->assertArrayHasKey('web', $moduleRoutes);
     $this->assertArrayHasKey('api', $moduleRoutes);
-    /** @var array<string, array<string, mixed>> $moduleRoutes */
-    $this->assertEquals('module', $moduleRoutes['web']['prefix'] ?? null);
-    $this->assertEquals('api/module', $moduleRoutes['api']['prefix'] ?? null);
+    $this->assertEquals('module', $moduleRoutes['web']['prefix']);
+    $this->assertEquals('api/module', $moduleRoutes['api']['prefix']);
 });
 
 it('can manage module assets', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $assets = [
         'css' => ['app.css', 'vendor.css'],
@@ -342,7 +285,7 @@ it('can manage module assets', function () {
         'images' => ['logo.png', 'icon.svg'],
     ];
 
-    $module = createModule(['assets' => $assets]);
+    $module = Module::factory()->create(['assets' => $assets]);
 
     // Act
     $moduleAssets = $module->assets;
@@ -352,14 +295,12 @@ it('can manage module assets', function () {
     $this->assertArrayHasKey('css', $moduleAssets);
     $this->assertArrayHasKey('js', $moduleAssets);
     $this->assertArrayHasKey('images', $moduleAssets);
-    /** @var array<string, array<int, string>> $moduleAssets */
     $this->assertContains('app.css', $moduleAssets['css']);
     $this->assertContains('app.js', $moduleAssets['js']);
     $this->assertContains('logo.png', $moduleAssets['images']);
 });
 
 it('can manage module settings', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $settings = [
         'debug' => false,
@@ -368,7 +309,7 @@ it('can manage module settings', function () {
         'features' => ['feature1', 'feature2'],
     ];
 
-    $module = createModule(['settings' => $settings]);
+    $module = Module::factory()->create(['settings' => $settings]);
 
     // Act
     $moduleSettings = $module->settings;
@@ -378,14 +319,11 @@ it('can manage module settings', function () {
     $this->assertFalse($moduleSettings['debug']);
     $this->assertTrue($moduleSettings['cache']);
     $this->assertEquals(30, $moduleSettings['timeout']);
-    /** @var array<int, string> $features */
-    $features = $moduleSettings['features'];
-    $this->assertContains('feature1', $features);
-    $this->assertContains('feature2', $features);
+    $this->assertContains('feature1', $moduleSettings['features']);
+    $this->assertContains('feature2', $moduleSettings['features']);
 });
 
 it('can validate module required fields', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $requiredFields = ['name', 'slug', 'version'];
 
@@ -402,8 +340,7 @@ it('can validate module required fields', function () {
 
         // Act & Assert
         try {
-            /** @var Module $created */
-            $created = Module::create($moduleData);
+            Module::create($moduleData);
             $this->fail("Expected QueryException for missing field: $field");
         } catch (QueryException $e) {
             $this->assertTrue(true);
@@ -412,9 +349,8 @@ it('can validate module required fields', function () {
 });
 
 it('can manage module activation workflow', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
-    $module = createModule([
+    $module = Module::factory()->create([
         'enabled' => false,
         'activation_date' => null,
     ]);
@@ -426,10 +362,8 @@ it('can manage module activation workflow', function () {
     ]);
 
     // Assert
-    /** @var Module $freshModule */
-    $freshModule = $module->fresh();
-    $this->assertTrue($freshModule->enabled);
-    $this->assertNotNull($freshModule->activation_date);
+    $this->assertTrue($module->fresh()->enabled);
+    $this->assertNotNull($module->fresh()->activation_date);
 
     // Act - Deactivate module
     $module->update([
@@ -438,14 +372,11 @@ it('can manage module activation workflow', function () {
     ]);
 
     // Assert
-    /** @var Module $freshModule2 */
-    $freshModule2 = $module->fresh();
-    $this->assertFalse($freshModule2->enabled);
-    $this->assertNotNull($freshModule2->deactivation_date);
+    $this->assertFalse($module->fresh()->enabled);
+    $this->assertNotNull($module->fresh()->deactivation_date);
 });
 
 it('can track module usage statistics', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $usageStats = [
         'total_requests' => 1000,
@@ -454,7 +385,7 @@ it('can track module usage statistics', function () {
         'popular_features' => ['feature1', 'feature2'],
     ];
 
-    $module = createModule(['usage_statistics' => $usageStats]);
+    $module = Module::factory()->create(['usage_statistics' => $usageStats]);
 
     // Act
     $usage_statistics = $module->usage_statistics;
@@ -464,14 +395,11 @@ it('can track module usage statistics', function () {
     $this->assertEquals(1000, $usage_statistics['total_requests']);
     $this->assertEquals(150, $usage_statistics['unique_users']);
     $this->assertNotNull($usage_statistics['last_used']);
-    /** @var array<int, string> $popularFeatures */
-    $popularFeatures = $usage_statistics['popular_features'];
-    $this->assertContains('feature1', $popularFeatures);
-    $this->assertContains('feature2', $popularFeatures);
+    $this->assertContains('feature1', $usage_statistics['popular_features']);
+    $this->assertContains('feature2', $usage_statistics['popular_features']);
 });
 
 it('can manage module error logging', function () {
-    /** @var \Modules\Xot\Tests\TestCase $this */
     // Arrange
     $errorLog = [
         [
@@ -482,7 +410,7 @@ it('can manage module error logging', function () {
         ],
     ];
 
-    $module = createModule(['error_log' => $errorLog]);
+    $module = Module::factory()->create(['error_log' => $errorLog]);
 
     // Act
     $module_error_log = $module->error_log;
@@ -490,12 +418,8 @@ it('can manage module error logging', function () {
     // Assert
     $this->assertIsArray($module_error_log);
     $this->assertCount(1, $module_error_log);
-    /** @var array<int, array<string, mixed>> $module_error_log */
-    $firstEntry = $module_error_log[0];
-    $this->assertEquals('error', $firstEntry['level'] ?? null);
-    $this->assertEquals('Test error message', $firstEntry['message'] ?? null);
-    /** @var array<string, mixed> $context */
-    $context = $firstEntry['context'] ?? [];
-    $this->assertEquals('test.php', isset($context['file']) ? (string) $context['file'] : null);
-    $this->assertEquals(42, isset($context['line']) ? (int) $context['line'] : null);
+    $this->assertEquals('error', $module_error_log[0]['level']);
+    $this->assertEquals('Test error message', $module_error_log[0]['message']);
+    $this->assertEquals('test.php', $module_error_log[0]['context']['file']);
+    $this->assertEquals(42, $module_error_log[0]['context']['line']);
 });

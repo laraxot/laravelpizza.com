@@ -61,14 +61,7 @@ class Consent extends BaseModel
 
     public $incrementing = false;
 
-    public $fillable = [
-        'subject_id',
-        'treatment_id',
-        'user_id',
-        'user_type',
-        'type',
-        'accepted_at',
-    ];
+    public $fillable = ['subject_id', 'treatment_id'];
 
     public function treatment(): BelongsTo
     {

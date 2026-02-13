@@ -221,6 +221,5 @@ public function getLocalKeyName(): string
 
 ---
 
-**Data**: 2025-01-18
 **Autore**: AI Assistant
 **Status**: ✅ Completato e verificato

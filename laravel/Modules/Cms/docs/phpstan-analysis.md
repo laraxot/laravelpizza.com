@@ -1,6 +1,5 @@
 # PHPStan Analysis - Cms Module
 
-**Data**: 2025-10-10T12:40:18+02:00
 **Livello**: MAX (9)
 **Errori Totali**: 767
 

@@ -31,19 +31,19 @@ it('validates gdpr consent fails when privacy not accepted', function (): void {
     $action = app(ValidateGdprConsentAction::class);
 
     $action->execute(false, true);
-})->throws(\Illuminate\Validation\ValidationException::class);
+})->throws(Illuminate\Validation\ValidationException::class);
 
 it('validates gdpr consent fails when terms not accepted', function (): void {
     $action = app(ValidateGdprConsentAction::class);
 
     $action->execute(true, false);
-})->throws(\Illuminate\Validation\ValidationException::class);
+})->throws(Illuminate\Validation\ValidationException::class);
 
 it('validates gdpr consent fails when both not accepted', function (): void {
     $action = app(ValidateGdprConsentAction::class);
 
     $action->execute(false, false);
-})->throws(\Illuminate\Validation\ValidationException::class);
+})->throws(Illuminate\Validation\ValidationException::class);
 
 // ---------------------------------------------------------------------------
 // CollectGdprConsentsAction
@@ -227,12 +227,12 @@ it('saves gdpr consents with marketing accepted', function (): void {
 // ---------------------------------------------------------------------------
 
 it('can create a user with customer_user type via CreateUserAction', function (): void {
-    $action = app(Modules\User\Actions\CreateUserAction::class);
+    $action = app(Modules\User\Actions\User\CreateUserAction::class);
 
     $data = [
         'first_name' => 'Pest',
         'last_name' => 'Tester',
-        'email' => 'pest-register-' . uniqid() . '@example.com',
+        'email' => 'pest-register-'.uniqid().'@example.com',
         'password' => Hash::make('TestP@ssw0rd!'),
         'type' => 'customer_user',
         'state' => 'active',
@@ -263,7 +263,7 @@ it('full registration pipeline works end to end', function (): void {
     $formData = [
         'first_name' => 'Integration',
         'last_name' => 'Test',
-        'email' => 'integration-' . uniqid() . '@example.com',
+        'email' => 'integration-'.uniqid().'@example.com',
         'password' => 'Str0ngP@ssword!',
     ];
     $validatedData = app(ValidateUserDataAction::class)->execute($formData);
@@ -271,7 +271,7 @@ it('full registration pipeline works end to end', function (): void {
     expect($validatedData['type'])->toBe('customer_user');
 
     // 3. Create user
-    $user = app(Modules\User\Actions\CreateUserAction::class)->execute($validatedData);
+    $user = app(Modules\User\Actions\User\CreateUserAction::class)->execute($validatedData);
     expect($user)->toBeInstanceOf(User::class);
 
     // 4. Collect consents

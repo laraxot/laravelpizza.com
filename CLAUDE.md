@@ -591,7 +591,6 @@ The project uses PHPStan level 10 (maximum strictness):
 
 ---
 
-**Last Updated:** 2025-12-16
 **Laravel Version:** 11.x
 **PHP Version:** 8.2+
 **Filament Version:** 4.x

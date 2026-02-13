@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
-        'label' => 'socialite.navigation',
-        'group' => 'socialite.navigation',
-        'icon' => 'socialite.navigation',
+        'label' => 'Accesso con social',
+        'group' => 'Autenticazione',
+        'icon' => 'heroicon-o-key',
         'sort' => 90,
     ],
 ];

@@ -15,21 +15,24 @@ return new class extends XotBaseMigration {
      */
     public function up(): void
     {
-        // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
-            $table->id();
-            $table->string('name');
-            $table->string('scope');
-            $table->text('value');
+        if (!$this->tableExists()) {
+            $this->tableCreate(static function (Blueprint $table): void {
+                $table->id();
+                $table->string('name');
+                $table->string('scope');
+                $table->text('value');
 
-            $table->unique(['name', 'scope']);
-        });
-        // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            $this->updateTimestamps(
-                table: $table,
-                hasSoftDeletes: true,
-            );
-        });
+                $table->unique(['name', 'scope']);
+            });
+        }
+
+        if ($this->tableExists() && !$this->hasColumn('created_at')) {
+            $this->tableUpdate(function (Blueprint $table): void {
+                $this->updateTimestamps(
+                    table: $table,
+                    hasSoftDeletes: true,
+                );
+            });
+        }
     }
 };

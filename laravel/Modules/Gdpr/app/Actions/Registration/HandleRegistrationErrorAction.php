@@ -8,7 +8,6 @@ use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Log;
 use Modules\Xot\Filament\Widgets\XotBaseWidget; // Use the base widget for type hinting
 use Spatie\QueueableAction\QueueableAction;
-use function __;
 
 class HandleRegistrationErrorAction
 {
@@ -24,8 +23,8 @@ class HandleRegistrationErrorAction
         ]);
 
         Notification::make()
-            ->title(__('gdpr::register.error'))
-            ->body(__('gdpr::register.error_message'))
+            ->title(\__('gdpr::register.error'))
+            ->body(\__('gdpr::register.error_message'))
             ->danger()
             ->send();
     }

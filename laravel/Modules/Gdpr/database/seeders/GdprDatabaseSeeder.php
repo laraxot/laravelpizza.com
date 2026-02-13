@@ -16,6 +16,6 @@ class GdprDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $this->call(TreatmentsTableSeeder::class);
+        // $this->call("OthersTableSeeder");
     }
 }

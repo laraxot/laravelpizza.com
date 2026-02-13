@@ -301,5 +301,4 @@ Replace all `primary-*` with `red-*` in HTML files.
 ---
 
 **Author:** AI Assistant
-**Date:** 2024-11-28
 **Purpose:** Document critical error to prevent future AI instances from making same mistake

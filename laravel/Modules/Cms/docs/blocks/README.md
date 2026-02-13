@@ -330,5 +330,5 @@ class BlockApiTest extends TestCase
 * [README.md](laravel/Modules/Cms/docs/content/README.md)
 * [README.md](laravel/Modules/Cms/docs/frontoffice/README.md)
 * [README.md](laravel/Modules/Cms/docs/components/README.md)
-* [README.md](laravel/Themes/Meetup/docs/README.md)
+* [README.md](laravel/Themes/Two/docs/README.md)
 * [README.md](laravel/Themes/One/docs/README.md)

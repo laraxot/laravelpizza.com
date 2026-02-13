@@ -1,6 +1,5 @@
 # 🍕 Laravel Pizza - Scopo del Progetto
 
-**Data**: 28 Novembre 2024
 **Tema**: Meetup
 **Tipo**: Dual-Purpose Platform
 

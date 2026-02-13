@@ -9,8 +9,8 @@ return [
             'helper_text' => 'Enter the phone number in international format (e.g. +393401234567).',
         ],
         'to' => [
-             'label' => 'Recipient',
-             'helper_text' => 'Enter the phone number in international format (e.g. +393401234567).',
+            'label' => 'Recipient',
+            'helper_text' => 'Enter the phone number in international format (e.g. +393401234567).',
         ],
         'message' => [
             'label' => 'Message',

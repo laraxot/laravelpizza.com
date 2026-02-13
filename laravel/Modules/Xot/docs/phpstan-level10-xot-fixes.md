@@ -2,7 +2,6 @@
 
 ## 📋 Riepilogo Intervento
 
-**Data**: 17 Novembre 2025
 **Modulo**: Xot
 **Esito**: ✅ **0 ERRORI** - PHPStan Level 10 completato con successo
 

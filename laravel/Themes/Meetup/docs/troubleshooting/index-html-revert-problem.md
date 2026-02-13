@@ -1,6 +1,5 @@
 # Problema: index.html Continua a Essere Ripristinato
 
-**Data**: 28 Novembre 2024
 **Problema**: Le modifiche a `index.html` vengono perse/ripristinate
 **Status**: RISOLTO
 

@@ -36,7 +36,7 @@ class CreateTableIndexByModelClassColumnsAction
         }
 
         /** @var Model $modelInstance */
-        $modelInstance = new $modelClass;
+        $modelInstance = new $modelClass();
 
         $tableName = $modelInstance->getTable();
         $connectionName = $modelInstance->getConnectionName() ?? config('database.default');

@@ -141,7 +141,7 @@ User Module
 
 ### Technology Stack
 - **Laravel**: 12.x
-- **Filament**: 5.x (for admin UI)
+- **Filament**: 4.x (for admin UI)
 - **Spatie Laravel Permission**: 6.x
 - **Laravel Sanctum**: API authentication
 - **Laravel Socialite**: OAuth providers
@@ -1137,16 +1137,13 @@ test('user can switch teams', function () {
 - [Login Component Troubleshooting](./troubleshooting-login-component.md) - Login widget issues
 - [FAQ](./troubleshooting/faq.md) - Frequently asked questions
 
-### Registration Best Practices
-- [UI/UX, WCAG, and GDPR Best Practices for Registration](../../../Themes/Meetup/docs/registration-ui-ux-wcag-gdpr.md)
-
 ---
 
 ## 🔄 Recent Updates
 
 ### v2.5.0 - 2025-12-05
 - **Added**: Laravel 12 compatibility
-- **Added**: Filament 5 support
+- **Added**: Filament 4 support
 - **Fixed**: Merge conflicts in EditProfile and PasswordResetConfirmWidget
 - **Improved**: PHPStan Level 10 compliance
 
@@ -1188,20 +1185,25 @@ See [ROADMAP.md](./ROADMAP.md) for details.
 
 ### Project Documentation
 - [CLAUDE.md](../../../CLAUDE.md) - Project architecture
+- [AI Agents Guide](../../../../AGENTS.md)
+- [Cursor Rules & Skills](../../../../.cursor/README.md)
+- [Skills di progetto](../../../../.cursor/skills/)
 - [Security Guidelines](../../../docs/security.md)
+
+### CI & Semantic Versioning
+Workflow locale del modulo in `.github/workflows/semantic-versioning.yml`.
 
 ### External Resources
 - [Laravel Authentication](https://laravel.com/docs/12.x/authentication)
 - [Laravel Authorization](https://laravel.com/docs/12.x/authorization)
 - [Spatie Permission](https://spatie.be/docs/laravel-permission)
 - [Laravel Sanctum](https://laravel.com/docs/12.x/sanctum)
-- [Filament Authentication](https://filamentphp.com/docs/5.x/panels/users)
+- [Filament Authentication](https://filamentphp.com/docs/4.x/panels/users)
 
 ---
 
 **Module**: User (Authentication & Authorization)
-**Version**: 2.5.0
-**Framework**: Laravel 12 + Filament 5
+**Framework**: Laravel 12 + Filament 4
 **PHPStan**: Level 10 ✅
 **Test Coverage**: 88%+ ✅
 **Security**: OWASP Compliant ✅

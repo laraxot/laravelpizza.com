@@ -1,6 +1,5 @@
 # Correzioni COMPLETION_PLAN.md - Folio + Volt Architecture
 
-**Data**: 29 Novembre 2024
 
 ---
 

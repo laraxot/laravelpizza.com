@@ -170,5 +170,4 @@ $this->assertTrue($user->belongsToTeam($team));
 ---
 
 **Autore**: AI Assistant  
-**Data**: Gennaio 2025  
 **Versione**: 1.0  

@@ -26,7 +26,7 @@ use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
 use Modules\Gdpr\Models\Consent;
 use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
-use Modules\User\Actions\CreateUserAction;
+use Modules\User\Actions\User\CreateUserAction;
 use Modules\User\Models\User;
 
 uses(TestCase::class);
@@ -43,7 +43,7 @@ it('completes full registration with privacy and terms accepted', function (): v
     $formData = [
         'first_name' => 'Mario',
         'last_name' => 'Rossi',
-        'email' => 'mario-reg-' . uniqid() . '@example.com',
+        'email' => 'mario-reg-'.uniqid().'@example.com',
         'password' => 'SecureP@ssw0rd!',
     ];
     $validatedData = app(ValidateUserDataAction::class)->execute($formData);
@@ -107,7 +107,7 @@ it('completes registration with all consents including marketing', function (): 
     $formData = [
         'first_name' => 'Giulia',
         'last_name' => 'Bianchi',
-        'email' => 'giulia-reg-' . uniqid() . '@example.com',
+        'email' => 'giulia-reg-'.uniqid().'@example.com',
         'password' => 'Str0ngP@ssword!',
     ];
 
@@ -247,7 +247,7 @@ it('does not create consents when treatments do not exist', function (): void {
 // ---------------------------------------------------------------------------
 
 it('prevents duplicate user registration with same email', function (): void {
-    $email = 'duplicate-' . uniqid() . '@example.com';
+    $email = 'duplicate-'.uniqid().'@example.com';
 
     // First user
     $formData1 = [
@@ -269,5 +269,5 @@ it('prevents duplicate user registration with same email', function (): void {
     $validatedData2 = app(ValidateUserDataAction::class)->execute($formData2);
 
     expect(fn () => app(CreateUserAction::class)->execute($validatedData2))
-        ->toThrow(\Exception::class);
+        ->toThrow(Exception::class);
 });

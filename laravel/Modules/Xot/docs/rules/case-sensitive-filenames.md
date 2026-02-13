@@ -1,6 +1,5 @@
 # 📋 **Regola: Nomi File Case-Sensitive**
 
-**Data**: 11 Novembre 2025
 **Categoria**: Convenzioni di Codice
 **Priorità**: CRITICA ⚠️
 

@@ -1,6 +1,6 @@
 # Asana MCP Server Configuration
 
-**Last Updated**: 31 Gennaio 2026
+
 **Status**: ✅ Configured
 **MCP Server URL**: `https://mcp.asana.com/sse`
 

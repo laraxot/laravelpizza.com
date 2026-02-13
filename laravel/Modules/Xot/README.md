@@ -1,11 +1,29 @@
 # Modulo Xot - Framework Base
 
+[![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
+[![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)](https://filamentphp.com/)
+[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
+[![PHP 8.3+](https://img.shields.io/badge/PHP-8.3+-blue.svg)](https://php.net)
+
+> **Version**: 3.0 - DRY + KISS Documentation Refactor  
+> **Status**: ✅ Core Framework Module  
 > **Version**: 3.0 - DRY + KISS Documentation Refactor
 > **Status**: ✅ Core Framework Module
-> **Last Updated**: December 2025
+> 
 
 ## 📋 Overview
 
+Il modulo **Xot** è il cuore del framework Laraxot: nessun altro modulo funziona senza di lui. Fornisce le classi base (XotBaseResource, XotBaseModel, XotBaseServiceProvider, ecc.), i service provider e le convenzioni che abilitano tutti i moduli del sistema.
+
+> **🔴 Obbligatorio:** tutti i moduli Laraxot estendono le classi Xot, mai quelle di Filament o Laravel direttamente. **[Perché →](docs/README.md)** · **[Base classes →](docs/filament/README.md)**
+
+### ⚡ Estendi in 2 minuti
+
+```bash
+php artisan module:list | grep Xot   # Verifica che sia attivo
+```
+
+Poi nelle tue classi: `extends XotBaseResource`, `extends XotBaseModel`, `extends XotBaseServiceProvider`. **[Guida estensione →](docs/development/README.md)**
 Il modulo **Xot** è il cuore del framework Laraxot, fornendo le classi base, i service provider e le funzionalità fondamentali che abilitano tutti gli altri moduli del sistema.
 
 ## 🏗️ Architecture
@@ -78,6 +96,10 @@ php artisan xot:status
 - **Technical Issues**: Consulta la documentazione specifica
 - **Architecture Questions**: Riferimento a [architecture/base-classes.md](architecture/base-classes.md)
 - **Extension Guide**: Leggi [development/extensions.md](development/extensions.md)
+
+---
+
+**📖 [Docs](docs/README.md)** · **🏗️ [Architettura](docs/conventions/README.md)** · **✅ [PHPStan](docs/standards/README.md)** · **🤝 Contribuisci seguendo le [best practices](docs/best-practices/README.md)**
 
 ---
 

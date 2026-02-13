@@ -1,6 +1,5 @@
 # Code Coverage: Meetup
 
-**Date:** 2026-01-17
 **Lines Coverage:** N/A (Meetup event management module)
 
 ## Summary

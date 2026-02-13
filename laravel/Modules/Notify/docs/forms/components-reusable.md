@@ -1,6 +1,5 @@
 # Componenti Form Riutilizzabili - Notify Module
 
-**Data**: 19 Dicembre 2025  
 **Stato**: ✅ Implementato  
 **Motivazione**: DRY, Riutilizzabilità, Manutenibilità
 

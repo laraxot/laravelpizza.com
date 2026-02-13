@@ -1,6 +1,5 @@
 # Code Coverage: Seo
 
-**Date:** 2026-01-17
 **Lines Coverage:** N/A (Search engine optimization module)
 
 ## Summary

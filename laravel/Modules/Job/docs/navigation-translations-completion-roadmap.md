@@ -1,6 +1,5 @@
 # Navigation Translations Completion Roadmap - Job Module
 
-**Data**: 2026-01-09  
 **Modulo**: Job  
 **Status**: 📝 **ROADMAP CREATA**
 

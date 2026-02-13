@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Support\Carbon;
-use Modules\Gdpr\Models\Traits\HasGdpr;
+use Illuminate\Support\Facades\DB;
 use Modules\Media\Models\Media;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\Xot\Contracts\ProfileContract;
@@ -136,19 +136,16 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  */
 class User extends BaseUser
 {
-    use HasGdpr;
-
     /** @var string */
     public $connection = 'user';
 
     /** @var array<string, class-string> */
-
     protected $childTypes = [
-        'master_admin' => User::class,
-        'backoffice_user' => User::class,
-        'customer_user' => User::class,
-        'system' => User::class,
-        'technician' => User::class,
+        'master_admin' => self::class,
+        'backoffice_user' => self::class,
+        'customer_user' => self::class,
+        'system' => self::class,
+        'technician' => self::class,
     ];
 
     #[\Override]
@@ -156,5 +153,26 @@ class User extends BaseUser
     {
         // return $this->role_id === Role::ROLE_ADMINISTRATOR;
         return true;
+    }
+
+    /**
+     * Give consent for a specific consent type.
+     *
+     * @param array<string, mixed> $metadata
+     */
+    public function giveConsent(string $consentType, array $metadata = []): void
+    {
+        // Create consent record
+        $consentData = [
+            'user_id' => $this->id,
+            'user_type' => static::class,
+            'type' => $consentType,
+            'accepted_at' => date('Y-m-d H:i:s'),
+            'created_by' => $this->id,
+            'updated_by' => $this->id,
+        ];
+
+        // Use DB to insert directly
+        DB::table('consents')->insert($consentData);
     }
 }

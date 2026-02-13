@@ -1,6 +1,5 @@
 # Architettura Separazione Tema - Laravel Pizza Meetup
 
-**Data**: 2026-02-02  
 **Stato**: Documentazione fondamentale per il progetto
 
 ---

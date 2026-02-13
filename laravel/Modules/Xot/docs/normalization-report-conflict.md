@@ -108,6 +108,5 @@
 
 ---
 
-**Data**: Gennaio 2025
 **Stato**: In corso
 **Prossima Revisione**: Dopo normalizzazione batch successivo

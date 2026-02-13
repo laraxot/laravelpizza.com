@@ -285,7 +285,6 @@ expect($schema)->toHaveCount(3)
 
 ---
 
-**Created**: Gennaio 2025
 **Status**: ✅ PRODUCTION READY
 **Test Coverage**: 🎯 100% Login Functionality
 **Maintainer**: Modulo Cms Testing Team

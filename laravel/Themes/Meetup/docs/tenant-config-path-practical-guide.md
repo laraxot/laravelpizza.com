@@ -1,6 +1,5 @@
 # Tenant Config Path - Practical Guide
 
-**Data**: 2026-01-08
 **Status**: ✅ Guida Pratica Completa
 **Scopo**: Guida pratica per sviluppatori su come usare correttamente i path tenant config
 
@@ -323,6 +322,4 @@ Prima di committare modifiche config tenant:
 
 ---
 
-**Last Updated**: 2026-01-08
-**Version**: 1.0.0
 **Status**: ✅ Production Guide

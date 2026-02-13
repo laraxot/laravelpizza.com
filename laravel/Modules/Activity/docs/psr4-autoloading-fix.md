@@ -306,7 +306,6 @@ Questa regola DEVE essere rispettata al 100% per tutti i file, inclusi i test.
 ---
 
 **Autore**: Claude Code
-**Data**: 21 Gennaio 2025
 **PHPStan Level**: 10
 **PSR-4 Compliance**: 100%
 **Status**: ✅ Completato e Verificato

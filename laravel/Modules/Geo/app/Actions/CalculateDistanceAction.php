@@ -6,7 +6,7 @@ namespace Modules\Geo\Actions;
 
 use Illuminate\Support\Collection;
 use Modules\Geo\Actions\GoogleMaps\CalculateDistanceMatrixAction;
-use Modules\Geo\Contracts\CalculateDistanceActionContract as DistanceActionContract;
+use Modules\Geo\Contracts\CalculateDistanceActionContract;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\DistanceCalculationException;
 
@@ -19,14 +19,16 @@ use Modules\Geo\Exceptions\DistanceCalculationException;
  * - Lo stato della richiesta
  *
  * @see https://developers.google.com/maps/documentation/distance-matrix
+ *
+ * @SuppressWarnings("PHPMD.StaticAccess")
  */
-class CalculateDistanceAction implements DistanceActionContract
+final class CalculateDistanceAction implements CalculateDistanceActionContract
 {
     /**
      * @param CalculateDistanceMatrixAction $distanceMatrixAction Servizio per il calcolo delle distanze
      */
     public function __construct(
-        private CalculateDistanceMatrixAction $distanceMatrixAction,
+        private readonly CalculateDistanceMatrixAction $distanceMatrixAction,
     ) {
     }
 
@@ -51,11 +53,18 @@ class CalculateDistanceAction implements DistanceActionContract
         $this->validateCoordinates($destination);
 
         try {
-            $response = $this->distanceMatrixAction->execute(new Collection([$origin]), new Collection([$destination]));
+            $response = $this->distanceMatrixAction->execute(
+                new Collection([$origin]),
+                new Collection([$destination])
+            );
 
-            if (empty($response) || empty($response[0]) || empty($response[0][0])) {
+            if (! isset($response[0][0])) {
                 throw DistanceCalculationException::invalidResponse();
             }
+
+            // PHPStan needs assurance or the structure implies it?
+            // The previous check was: empty($response) || empty($response[0]) || empty($response[0][0])
+            // isset checks definition and null.
 
             return $response[0][0];
         } catch (\Throwable $e) {

@@ -6,7 +6,7 @@ use Modules\Job\Actions\GetTaskFrequenciesAction;
 
 describe('GetTaskFrequenciesAction', function () {
     beforeEach(function () {
-        $this->action = new GetTaskFrequenciesAction;
+        $this->action = new GetTaskFrequenciesAction();
     });
 
     it('can be instantiated', function () {

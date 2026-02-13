@@ -126,7 +126,7 @@ class ScheduleResource extends XotBaseResource
                     ->reorderable(false),
                 TextInput::make('expression')
                     ->placeholder('* * * * *')
-                    ->rules([new Corn])
+                    ->rules([new Corn()])
                     ->required(),
                 TagsInput::make('environments')->placeholder(null),
                 TextInput::make('log_filename')->helperText(static::trans('messages.help-log-filename')),

@@ -20,6 +20,9 @@ use Webmozart\Assert\Assert;
  *
  * Configura Laravel Passport per l'autenticazione OAuth2.
  * Utilizza la configurazione centralizzata da config/user/passport.php.
+ *
+ * @SuppressWarnings("PHPMD.StaticAccess")
+ * @SuppressWarnings("PHPMD.CouplingBetweenObjects")
  */
 class PassportServiceProvider extends ServiceProvider
 {
@@ -85,6 +88,9 @@ class PassportServiceProvider extends ServiceProvider
     /**
      * Configura i modelli personalizzati.
      */
+    /**
+     * Configura i modelli personalizzati.
+     */
     protected function configureModels(): void
     {
         $models = config('user.passport.models', []);
@@ -92,45 +98,30 @@ class PassportServiceProvider extends ServiceProvider
 
         $tokenModel = $models['token'] ?? OauthToken::class;
         Assert::stringNotEmpty($tokenModel);
-        if (! is_subclass_of($tokenModel, \Laravel\Passport\Token::class)) {
-            $tokenModel = OauthToken::class;
-        }
+        Assert::subclassOf($tokenModel, \Laravel\Passport\Token::class);
 
         $refreshTokenModel = $models['refresh_token'] ?? OauthRefreshToken::class;
         Assert::stringNotEmpty($refreshTokenModel);
-        if (! is_subclass_of($refreshTokenModel, \Laravel\Passport\RefreshToken::class)) {
-            $refreshTokenModel = OauthRefreshToken::class;
-        }
+        Assert::subclassOf($refreshTokenModel, \Laravel\Passport\RefreshToken::class);
 
         $authCodeModel = $models['auth_code'] ?? OauthAuthCode::class;
         Assert::stringNotEmpty($authCodeModel);
-        if (! is_subclass_of($authCodeModel, \Laravel\Passport\AuthCode::class)) {
-            $authCodeModel = OauthAuthCode::class;
-        }
+        Assert::subclassOf($authCodeModel, \Laravel\Passport\AuthCode::class);
 
         $clientModel = config('user.passport.client_model', OauthClient::class);
         Assert::stringNotEmpty($clientModel);
-        if (! is_subclass_of($clientModel, \Laravel\Passport\Client::class)) {
-            $clientModel = OauthClient::class;
-        }
+        Assert::subclassOf($clientModel, \Laravel\Passport\Client::class);
 
-        /* @var class-string<\Laravel\Passport\Token> $tokenModel */
         Passport::useTokenModel($tokenModel);
-        /* @var class-string<\Laravel\Passport\RefreshToken> $refreshTokenModel */
         Passport::useRefreshTokenModel($refreshTokenModel);
-        /* @var class-string<\Laravel\Passport\AuthCode> $authCodeModel */
         Passport::useAuthCodeModel($authCodeModel);
-        /* @var class-string<\Laravel\Passport\Client> $clientModel */
         Passport::useClientModel($clientModel);
 
         // @phpstan-ignore-next-line - method_exists check kept for backward compatibility with older Passport versions
         if (method_exists(Passport::class, 'useDeviceCodeModel')) {
             $deviceCodeModel = $models['device_code'] ?? OauthDeviceCode::class;
             Assert::stringNotEmpty($deviceCodeModel);
-            if (! is_subclass_of($deviceCodeModel, \Laravel\Passport\DeviceCode::class)) {
-                $deviceCodeModel = OauthDeviceCode::class;
-            }
-            /* @var class-string<\Laravel\Passport\DeviceCode> $deviceCodeModel */
+            Assert::subclassOf($deviceCodeModel, \Laravel\Passport\DeviceCode::class);
             Passport::useDeviceCodeModel($deviceCodeModel);
         }
     }

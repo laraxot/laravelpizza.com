@@ -1,6 +1,5 @@
 # Errore Critico: Rimozione Sezione "fields" dalle Traduzioni
 
-**Data**: 2026-01-09  
 **Modulo**: Job  
 **Status**: 🔴 **ERRORE IDENTIFICATO E CORRETTO**
 

@@ -1,6 +1,5 @@
 # Regole di Ereditarietà dei Modelli - Modulo User
 
-**Data**: 2025-10-15
 **Contesto**: Refactoring per garantire la corretta gerarchia di ereditarietà dei modelli
 
 ## Regola Fondamentale

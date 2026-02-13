@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\Notify\Console\Commands;
 
 use Illuminate\Console\Command;
-use Modules\Notify\Models\NotificationLog;
 use Modules\Notify\Enums\NotificationLogStatusEnum;
+use Modules\Notify\Models\NotificationLog;
 
 class CleanupNotificationLogsCommand extends Command
 {

@@ -27,39 +27,34 @@ jobs:
         with:
           php-version: '8.4'
 
-      - name: Add Flux Credentials Loaded From ENV
+      - name: Add Flux Credentials
         run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
+        working-directory: laravel
 
       - name: Install Dependencies
-        run: |
-          cd laravel
-          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        working-directory: laravel
 
       - name: Run PHPStan
+        run: ./vendor/bin/phpstan analyse Themes/Meetup --level=10 --memory-limit=-1
         working-directory: laravel
-        run: |
-          ./vendor/bin/phpstan analyse Themes/Meetup --level=10 --memory-limit=-1 || true
 
       - name: Run PHPMD
-        working-directory: laravel
         run: |
           if [ -f phpmd.phar ]; then
-            php phpmd.phar Themes/Meetup text cleancode,codesize,design,naming,unusedcode || true
+            php phpmd.phar Themes/Meetup text cleancode,codesize,design,naming,unusedcode
           else
-            echo "PHPMD not found, skipping..."
+            ./vendor/bin/phpmd Themes/Meetup text cleancode,codesize,design,naming,unusedcode
           fi
+        working-directory: laravel
 
       - name: Run Pint
+        run: ./vendor/bin/pint Themes/Meetup
         working-directory: laravel
-        run: |
-          ./vendor/bin/pint Themes/Meetup || true
 
       - name: Run PHPInsights
-        working-directory: laravel
         run: |
           if [ -f vendor/bin/phpinsights ]; then
-            ./vendor/bin/phpinsights analyse Themes/Meetup --format=table --no-interaction --min-quality=70 || true
-          else
-            echo "PHPInsights not found, skipping..."
+            ./vendor/bin/phpinsights analyse Themes/Meetup --format=table --no-interaction --min-quality=70
           fi
-
+        working-directory: laravel

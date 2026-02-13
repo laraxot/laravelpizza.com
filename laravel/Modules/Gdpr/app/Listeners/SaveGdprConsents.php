@@ -11,30 +11,27 @@ use Modules\User\Events\UserRegistered;
 
 /**
  * Listener per salvare i consensi GDPR quando un utente si registra.
- * 
+ *
  * Questo listener implementa il pattern Event/Listener per decoupling
  * tra il modulo User (core) e il modulo Gdpr (opzionale).
- * 
+ *
  * Il modulo User non dipende più direttamente dal modulo Gdpr.
  * Quando un utente viene registrato, l'evento UserRegistered viene dispatchato
  * e questo listener (presente solo se il modulo Gdpr è attivo) salva i consensi.
- * 
- * @see \Modules\User\Events\UserRegistered
+ *
+ * @see UserRegistered
  * @see \Modules\User\Filament\Widgets\Auth\RegisterWidget
  */
 class SaveGdprConsents
 {
     /**
      * Handle the UserRegistered event.
-     *
-     * @param UserRegistered $event
-     * @return void
      */
     public function handle(UserRegistered $event): void
     {
         $user = $event->user;
         $formData = $event->formData;
-        
+
         // Get or create treatments
         $treatments = Treatment::whereIn('name', [
             'privacy_policy',
@@ -59,7 +56,7 @@ class SaveGdprConsents
 
         // Create consent records
         foreach ($consentMapping as $formField => $treatmentName) {
-            if (!isset($formData[$formField])) {
+            if (! isset($formData[$formField])) {
                 continue;
             }
 

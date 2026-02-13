@@ -1,7 +1,6 @@
 # REGOLA CRITICA: MySQL Only per Testing - Nessun SQLite
 
 **Status**: ✅ REGOLA ASSOLUTA - NESSUNA ECCEZIONE  
-**Data**: 2026-01-21  
 **Priorità**: MASSIMA
 
 ## 🚨 Principio Fondamentale

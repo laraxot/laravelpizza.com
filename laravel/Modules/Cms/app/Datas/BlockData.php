@@ -19,13 +19,16 @@ class BlockData extends Data implements Wireable
 
     public string $type;
 
+    public ?string $slug = null;
+
     public array $data;
 
     public string $view;
 
-    public function __construct(string $type, array $data)
+    public function __construct(string $type, array $data, ?string $slug = null)
     {
         $this->type = $type;
+        $this->slug = $slug;
         $this->data = $data;
         Assert::string($view = Arr::get($data, 'view', 'ui::empty'), '['.__LINE__.']['.__FILE__.']');
 

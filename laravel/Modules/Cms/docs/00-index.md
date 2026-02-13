@@ -1,42 +1,126 @@
-# Cms Module Documentation Index
+# Cms Module Documentation
 
-## Core Concepts
-- [Project Purpose](../Meetup/docs/project-purpose.md) - Purpose of the CMS system
-- [Business Logic](../Meetup/docs/business-logic.md) - Core business requirements
-- [Architecture Overview](../Meetup/docs/architecture-overview.md) - Module architecture patterns
+## Overview
 
-## Development Guides
-- [Implementation Plan](../Meetup/docs/implementation-plan.md) - Development roadmap
-- [Services Guide](../Meetup/docs/services-guide.md) - Service layer documentation
+The Cms module handles content management, page rendering, and multi-language support through a flexible block-based system.
 
-## Code Quality
-- [Common PHPStan Errors](common-phpstan-errors.md) - Documentation about common PHPStan issues and their solutions
+## Key Components
 
-## Frontend Assets
-- [Development Workflow CSS/JS Changes](../Meetup/docs/development-workflow-css-js-changes.md) - Asset management
-- [Build and Copy Workflow](../Meetup/docs/build-and-copy-workflow.md) - Build process
+### Page Model
+- **Location**: `app/Models/Page.php`
+- **Purpose**: Manages page content with multi-language JSON fields
+- **Fields**: `title`, `content_blocks`, `sidebar_blocks`, `footer_blocks`
 
-## Missing Features & Gaps
-- [Missing Features](../Meetup/docs/missing-features.md) - Identified missing functionality
-- [Gap Analysis](../Meetup/docs/gap-analysis.md) - Gap analysis between current and desired state
-# Cms Module Documentation Index
+### Page Component
+- **Location**: `app/View/Components/Page.php`
+- **Purpose**: Renders pages using block-based architecture
+- **Features**: Multi-language support, block processing, component resolution
 
-## Core Concepts
-- [Project Purpose](../Meetup/docs/project-purpose.md) - Purpose of the CMS system
-- [Business Logic](../Meetup/docs/business-logic.md) - Core business requirements
-- [Architecture Overview](../Meetup/docs/architecture-overview.md) - Module architecture patterns
+### BlockData System
+- **Location**: `app/Datas/BlockData.php`
+- **Purpose**: Manages individual block data and view resolution
+- **Features**: Type safety, view existence validation, data merging
 
-## Development Guides
-- [Implementation Plan](../Meetup/docs/implementation-plan.md) - Development roadmap
-- [Services Guide](../Meetup/docs/services-guide.md) - Service layer documentation
+## Multi-Language Support
 
-## Code Quality
-- [Common PHPStan Errors](common-phpstan-errors.md) - Documentation about common PHPStan issues and their solutions
+### Language Detection Logic
+```php
+// In Page component
+$current_lang = app()->getLocale();
+if (in_array($current_lang, $locales)) {
+    $blocks = $blocks[$current_lang];
+} elseif (in_array('it', $locales)) {
+    $blocks = $blocks['it']; // Fallback to Italian
+}
+```
 
-## Frontend Assets
-- [Development Workflow CSS/JS Changes](../Meetup/docs/development-workflow-css-js-changes.md) - Asset management
-- [Build and Copy Workflow](../Meetup/docs/build-and-copy-workflow.md) - Build process
+### Content Structure
+```json
+{
+  "title": {
+    "it": "Titolo Italiano",
+    "en": "English Title"
+  },
+  "content_blocks": {
+    "it": [...],
+    "en": [...]
+  }
+}
+```
 
-## Missing Features & Gaps
-- [Missing Features](../Meetup/docs/missing-features.md) - Identified missing functionality
-- [Gap Analysis](../Meetup/docs/gap-analysis.md) - Gap analysis between current and desired state
+## Block System Architecture
+
+### Block Types
+- **Hero**: Page header sections
+- **Services**: Service listings and grids
+- **Content**: General content sections
+- **Forms**: Contact and interaction forms
+- **Testimonials**: Customer reviews
+- **Resources**: Downloads and guides
+
+### Component Resolution
+Blocks use view paths like:
+- `pub_theme::components.blocks.hero.simple`
+- `pub_theme::components.blocks.services.grid`
+- `pub_theme::components.blocks.newsletter.simple`
+
+## Important Notes
+
+### Critical Issues Identified (2026-02-08)
+1. **Missing Component**: `hero.fullscreen.blade.php` referenced but non-existent
+2. **Content Disparity**: Italian version has 9 blocks vs English 3 blocks
+3. **Component Duplication**: 32+ hero variants across themes
+
+### Recommendations
+1. **Audit Component References**: Ensure all referenced views exist
+2. **Standardize Content**: Maintain parity between language versions
+3. **Consolidate Components**: Reduce redundant hero component variants
+
+## File Structure
+
+```
+Modules/Cms/
+├── app/
+│   ├── Models/Page.php
+│   ├── View/Components/
+│   │   ├── Page.php
+│   │   └── PageContent.php
+│   └── Datas/BlockData.php
+├── resources/views/
+│   └── components/
+│       ├── page.blade.php
+│       └── page-content.blade.php
+└── docs/
+    ├── 00-index.md (this file)
+    ├── page-translation-strategy.md
+    ├── block-component-guidelines.md
+    └── multi-language-content-management.md
+```
+
+## Dependencies
+
+- **Xot Module**: Base functionality and data structures
+- **Lang Module**: Multi-language support (if available)
+- **Themes**: Component rendering (active: "Two")
+
+## Best Practices
+
+1. **Always verify component existence** before referencing in page data
+2. **Maintain content parity** across all supported languages
+3. **Use consistent data structures** for similar block types
+4. **Test multi-language functionality** thoroughly
+5. **Document custom block types** and their required data structure
+
+## Testing
+
+- Use Pest testing framework
+- Test multi-language scenarios
+- Verify component rendering
+- Test data validation and fallbacks
+
+## Recent Changes
+
+### 2026-02-08
+- Identified critical missing component issue
+- Documented content disparity between languages
+- Created comprehensive duplicate content analysis

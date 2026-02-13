@@ -19,12 +19,12 @@ class ModuleFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->word(),
-            'slug' => $this->faker->slug(),
-            'version' => $this->faker->semver(),
-            'description' => $this->faker->sentence(),
-            'is_active' => $this->faker->boolean(80),
-            'priority' => $this->faker->numberBetween(1, 100),
+            'name' => fake()->word(),
+            'slug' => fake()->slug(),
+            'version' => fake()->semver(),
+            'description' => fake()->sentence(),
+            'is_active' => fake()->boolean(80),
+            'priority' => fake()->numberBetween(1, 100),
         ];
     }
 

@@ -13,7 +13,7 @@ uses(\Modules\Activity\Tests\TestCase::class)->group('activity', 'base-model');
 
 describe('BaseModel Business Logic', function () {
     test('it can create base model instance', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
 
@@ -26,7 +26,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it has correct connection setting', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -35,7 +35,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it has correct primary key setting', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -46,7 +46,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it has correct timestamps setting', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -56,7 +56,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it has correct per page setting', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -65,7 +65,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it has correct snake attributes setting', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -74,7 +74,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it has correct casts configuration', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -102,7 +102,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can use factory', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
 
@@ -115,7 +115,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it has updater trait', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -131,7 +131,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it has has factory trait', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -141,7 +141,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can handle uuid generation', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
 
@@ -158,7 +158,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can handle timestamps', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
 
@@ -175,7 +175,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can handle soft deletes', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
 
@@ -190,7 +190,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can handle published at timestamp', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
 
@@ -205,7 +205,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can handle user tracking fields', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
 
@@ -223,7 +223,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it has correct hidden attributes', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -235,7 +235,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can use connection methods', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -245,7 +245,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can use table methods', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -254,7 +254,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can use key methods', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -265,7 +265,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can use timestamp methods', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -277,7 +277,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can use per page methods', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -289,7 +289,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can use snake attributes methods', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -304,7 +304,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can use casts methods', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
         };
@@ -317,7 +317,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can use fillable methods', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
 
@@ -336,7 +336,7 @@ describe('BaseModel Business Logic', function () {
     });
 
     test('it can use hidden methods', function () {
-        $concreteModel = new class extends BaseModel
+        $concreteModel = new class() extends BaseModel
         {
             protected $table = 'test_models';
 

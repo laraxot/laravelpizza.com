@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Tests\TestCase;
 use Illuminate\Support\Facades\File;
+use Modules\Notify\Tests\TestCase;
 
 uses(TestCase::class);
 

@@ -175,10 +175,10 @@ class DeviceVerificationsRelationManager extends RelationManager
 
 **File incriminati:**
 
-1. `Meetup/app/Filament/Resources/RelationManagers/DeviceVerificationsRelationManager.php`
-2. `Meetup/app/Filament/Resources/DeviceResource/RelationManagers/DeviceVerificationsRelationManager.php`
-3. `Meetup/app/Filament/Resources/ClientResource/RelationManagers/LegalRepresentativesRelationManager.php`
-4. `Meetup/app/Filament/Resources/ClientResource/RelationManagers/MedicalDirectorsRelationManager.php`
+1. `TechPlanner/app/Filament/Resources/RelationManagers/DeviceVerificationsRelationManager.php`
+2. `TechPlanner/app/Filament/Resources/DeviceResource/RelationManagers/DeviceVerificationsRelationManager.php`
+3. `TechPlanner/app/Filament/Resources/ClientResource/RelationManagers/LegalRepresentativesRelationManager.php`
+4. `TechPlanner/app/Filament/Resources/ClientResource/RelationManagers/MedicalDirectorsRelationManager.php`
 
 **Perché sono problematici:**
 

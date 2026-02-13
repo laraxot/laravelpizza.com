@@ -1270,7 +1270,6 @@ L'interfaccia di registrazione è stata completamente riprogettata per fornire u
 ---
 
 **Document Version**: 1.2.0 (Aggiornata con UI/UX e WCAG AAA compliance)  
-**Last Updated**: 2026-02-09  
-**Next Review**: 2026-08-09  
+
 **Responsible**: GDPR & UX Compliance Team  
 **Approved by**: Legal & Design Department

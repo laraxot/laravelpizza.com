@@ -3,7 +3,6 @@
 **Tema**: Meetup
 **Priorita'**: Media
 **Completamento**: 10%
-**Data**: 2026-01-30
 
 ---
 

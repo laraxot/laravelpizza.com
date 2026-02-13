@@ -60,6 +60,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
  *
  * @mixin \Eloquent
  */
+// @see Modules/Xot/docs/spatie-schemaless-attributes.md
 abstract class BaseProfile extends BaseModel implements ProfileContract
 {
     use HasChildren;

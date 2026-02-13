@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Models\Treatment;
+use Modules\Gdpr\Models\GdprConsent;
+use Modules\Gdpr\Models\GdprRequest;
 use Modules\Gdpr\Tests\TestCase;
 
 /*
@@ -30,9 +30,9 @@ pest()->extend(TestCase::class)->in('Feature', 'Unit');
  * |
  */
 
-expect()->extend('toBeConsent', fn () => $this->toBeInstanceOf(Consent::class));
+expect()->extend('toBeGdprConsent', fn () => $this->toBeInstanceOf(GdprConsent::class));
 
-expect()->extend('toBeTreatment', fn () => $this->toBeInstanceOf(Treatment::class));
+expect()->extend('toBeGdprRequest', fn () => $this->toBeInstanceOf(GdprRequest::class));
 
 /*
  * |--------------------------------------------------------------------------
@@ -45,22 +45,22 @@ expect()->extend('toBeTreatment', fn () => $this->toBeInstanceOf(Treatment::clas
  * |
  */
 
-function createConsent(array $attributes = []): Consent
+function createGdprConsent(array $attributes = []): GdprConsent
 {
-    return Consent::factory()->create($attributes);
+    return GdprConsent::factory()->create($attributes);
 }
 
-function makeConsent(array $attributes = []): Consent
+function makeGdprConsent(array $attributes = []): GdprConsent
 {
-    return Consent::factory()->make($attributes);
+    return GdprConsent::factory()->make($attributes);
 }
 
-function createTreatment(array $attributes = []): Treatment
+function createGdprRequest(array $attributes = []): GdprRequest
 {
-    return Treatment::factory()->create($attributes);
+    return GdprRequest::factory()->create($attributes);
 }
 
-function makeTreatment(array $attributes = []): Treatment
+function makeGdprRequest(array $attributes = []): GdprRequest
 {
-    return Treatment::factory()->make($attributes);
+    return GdprRequest::factory()->make($attributes);
 }

@@ -30,7 +30,7 @@ test('action is configured correctly', function (): void {
 test('action generates correct URL for activity log page', function (): void {
     $action = ListLogActivitiesAction::make();
 
-    $resource = new class
+    $resource = new class()
     {
         public static function getUrl(string $name, array $parameters = []): string
         {

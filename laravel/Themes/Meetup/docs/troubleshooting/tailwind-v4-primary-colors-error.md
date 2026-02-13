@@ -1,6 +1,5 @@
 # Tailwind CSS v4 - Errore Primary Colors
 
-**Data**: 28 Novembre 2024
 **Autore**: Claude Code
 **Problema**: `Cannot apply unknown utility class 'focus:ring-primary-500'` e `text-primary-600`
 

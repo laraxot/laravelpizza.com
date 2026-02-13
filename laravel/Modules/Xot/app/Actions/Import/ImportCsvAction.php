@@ -78,11 +78,9 @@ class ImportCsvAction
     {
         $columns = $conn->getColumnListing($tbl);
         $excludedColumns = ['id'];
-        /** @var list<string> $columnNames */
-        $columnNames = array_values(array_diff($columns, $excludedColumns));
 
         return array_map(
-            function (string $column) use ($conn, $tbl): ColumnData {
+            function (string $column) use ($conn, $tbl) {
                 $type = $conn->getColumnType($tbl, $column);
 
                 return new ColumnData(
@@ -90,7 +88,7 @@ class ImportCsvAction
                     type: $type,
                 );
             },
-            $columnNames,
+            array_diff($columns, $excludedColumns),
         );
     }
 

@@ -86,7 +86,6 @@ php artisan tinker
 
 ---
 
-**Data**: 22 Ottobre 2025  
 **Stato**: ✅ RISOLTO  
 **Modulo**: User  
 **File Modificati**: `Modules/User/app/Models/BasePivot.php`

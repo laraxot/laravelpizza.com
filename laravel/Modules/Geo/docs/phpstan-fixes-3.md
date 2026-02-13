@@ -1,6 +1,5 @@
 # Correzioni PHPStan Modulo Geo - 2025-01-27
 
-**Data**: 2025-01-27
 **Versione PHPStan**: 1.12.x
 **Livello**: 10
 **Status**: ✅ COMPLETATO

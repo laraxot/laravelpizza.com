@@ -3,7 +3,6 @@
 **Tema**: Meetup
 **Priorita'**: Critica
 **Completamento**: 40%
-**Data**: 2026-01-30
 
 ---
 

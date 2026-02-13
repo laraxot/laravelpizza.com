@@ -26,6 +26,7 @@ class PersonalAccessToken extends Model
     use HasXotFactory;
 
     protected $connection = 'user';
+
     protected $table = 'personal_access_tokens';
 
     protected $fillable = [

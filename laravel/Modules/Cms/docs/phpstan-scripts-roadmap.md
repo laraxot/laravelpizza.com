@@ -1,6 +1,5 @@
 # PHPStan Level 10 - Scripts Utility Roadmap
 
-**Data**: 2026-01-09  
 **Modulo**: Cms  
 **Livello PHPStan**: 10  
 **Errori Totali**: 32  

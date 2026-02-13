@@ -18,7 +18,7 @@ uses(TestCase::class);
  */
 beforeEach(function (): void {
     // Configura il modello di test
-    $this->model = new TestSushiModel;
+    $this->model = new TestSushiModel();
 
     // Configura percorsi di test
     $this->testDirectory = storage_path('tests/sushi-json');
@@ -213,7 +213,7 @@ describe('SushiToJson Trait', function (): void {
             'description' => 'New Description',
         ];
 
-        $model = new TestSushiModel;
+        $model = new TestSushiModel();
         /** @phpstan-ignore-next-line method.nonObject */
         $model->fill($testData);
 
@@ -233,7 +233,7 @@ describe('SushiToJson Trait', function (): void {
         /** @phpstan-ignore-next-line property.notFound */
         File::put($this->testJsonPath, json_encode($testData, JSON_PRETTY_PRINT));
 
-        $model = new TestSushiModel;
+        $model = new TestSushiModel();
         $model->id = 1;
         /** @phpstan-ignore-next-line method.nonObject */
         $model->fill(['name' => 'Updated Name']);
@@ -254,7 +254,7 @@ describe('SushiToJson Trait', function (): void {
         /** @phpstan-ignore-next-line property.notFound */
         File::put($this->testJsonPath, json_encode($testData, JSON_PRETTY_PRINT));
 
-        $model = new TestSushiModel;
+        $model = new TestSushiModel();
         $model->id = 1;
 
         // Test che il modello può essere configurato per la cancellazione

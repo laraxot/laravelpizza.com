@@ -17,10 +17,7 @@ class SaveGdprConsentsAction
     /**
      * Save all GDPR consents for a user.
      *
-     * @param User                 $user
      * @param array<string, bool> $consents Associative array of consent properties (privacy_accepted, terms_accepted, etc.)
-     * @param string|null          $ipAddress
-     * @param string|null          $userAgent
      */
     public function execute(User $user, array $consents, ?string $ipAddress = null, ?string $userAgent = null): void
     {

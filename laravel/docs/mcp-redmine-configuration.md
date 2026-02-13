@@ -1,6 +1,6 @@
 # Redmine MCP Server Configuration
 
-**Last Updated**: 31 Gennaio 2026
+
 **Status**: 🔄 Planned (Requires Self-Hosted Redmine)
 **MCP Server**: Community/Custom Implementation Required
 

@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Notify\Models\MailTemplateLog;
-use Tests\TestCase;
+use Modules\Notify\Tests\TestCase;
 
 class MailTemplateLogTest extends TestCase
 {
-    use RefreshDatabase;
+    // DatabaseTransactions is already used in the module TestCase
 
     protected function setUp(): void
     {
@@ -56,7 +55,7 @@ class MailTemplateLogTest extends TestCase
     /** @test */
     public function it_has_correct_fillable_fields(): void
     {
-        $log = new MailTemplateLog;
+        $log = new MailTemplateLog();
 
         $expectedFillable = [
             'template_id',
@@ -79,7 +78,7 @@ class MailTemplateLogTest extends TestCase
     /** @test */
     public function it_has_correct_casts(): void
     {
-        $log = new MailTemplateLog;
+        $log = new MailTemplateLog();
 
         $expectedCasts = [
             'id' => 'string',

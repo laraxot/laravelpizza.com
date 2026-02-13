@@ -16,8 +16,7 @@ use Spatie\EventSourcing\StoredEvents\Repositories\EloquentStoredEventRepository
 /**
  * Base test case for Activity module.
  *
- * Uses MySQL from .env.testing (NOT SQLite). Single source of truth: .env.testing.
- * Runs full migrate first, then module migrations.
+ * Uses MySQL from .env.testing.
  */
 abstract class TestCase extends BaseTestCase
 {
@@ -35,19 +34,18 @@ abstract class TestCase extends BaseTestCase
         });
 
         if (! self::$migrated) {
-            $this->artisan('migrate', ['--force' => true]);
+            $this->artisan('migrate:fresh', [
+                '--force' => true,
+            ]);
+
+            $this->artisan('module:migrate', [
+                '--force' => true,
+            ]);
+
             self::$migrated = true;
         }
-
-        $this->artisan('module:migrate', ['module' => 'Xot', '--force' => true]);
-        $this->artisan('module:migrate', ['module' => 'User', '--force' => true]);
-        $this->artisan('module:migrate', ['module' => 'Activity', '--force' => true]);
     }
 
-    /**
-     * @param  \Illuminate\Foundation\Application  $app
-     * @return array<int, class-string>
-     */
     protected function getPackageProviders($app): array
     {
         return [

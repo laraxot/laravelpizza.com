@@ -117,6 +117,5 @@ Verificare che User abbia le stesse 6 lingue per i file `.navigation` (passport.
 
 ---
 
-**Data**: 2026-01-09  
 **Autore**: Cascade AI  
 **Status**: 🟡 In Progress

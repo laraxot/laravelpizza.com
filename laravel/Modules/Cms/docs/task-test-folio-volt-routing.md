@@ -3,7 +3,6 @@
 **Modulo**: Cms
 **Priorita'**: Media
 **Completamento**: 40%
-**Data**: 2026-01-30
 
 ---
 

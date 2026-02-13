@@ -1,6 +1,5 @@
 # Screenshot Documentation
 
-**Data**: 2025-01-22
 **Scopo**: Cartella per screenshot di riferimento durante lo sviluppo e l'allineamento del tema
 
 ---

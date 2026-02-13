@@ -73,14 +73,14 @@ Il componente `Section` del modulo CMS:
 
 ### Namespace pub_theme
 - `pub_theme::` è un alias dinamico che punta al tema attualmente attivo
-- Configurato in `config/local/laravelpizza/xra.php` con `'pub_theme' => 'Sixteen'`
+- Configurato in `config/local/techplanner/xra.php` con `'pub_theme' => 'Sixteen'`
 - Deve essere registrato dal ServiceProvider del tema
 
 ## 🔗 Riferimenti
 
 - [Documentazione Completa](../../../../docs/pub_theme-view-not-found-error.md)
 - [Componente Section](../../app/View/Components/Section.php)
-- [Configurazione Tema](../../../../config/local/laravelpizza/xra.php)
+- [Configurazione Tema](../../../../config/local/techplanner/xra.php)
 - [ServiceProvider Tema Sixteen](../../../../Themes/Sixteen/app/Providers/ThemeServiceProvider.php)
 
 ---
@@ -161,14 +161,14 @@ Il componente `Section` del modulo CMS:
 
 ### Namespace pub_theme
 - `pub_theme::` è un alias dinamico che punta al tema attualmente attivo
-- Configurato in `config/local/laravelpizza/xra.php` con `'pub_theme' => 'Sixteen'`
+- Configurato in `config/local/techplanner/xra.php` con `'pub_theme' => 'Sixteen'`
 - Deve essere registrato dal ServiceProvider del tema
 
 ## 🔗 Riferimenti
 
 - [Documentazione Completa](../../../../docs/pub_theme-view-not-found-error.md)
 - [Componente Section](../../app/View/Components/Section.php)
-- [Configurazione Tema](../../../../config/local/laravelpizza/xra.php)
+- [Configurazione Tema](../../../../config/local/techplanner/xra.php)
 - [ServiceProvider Tema Sixteen](../../../../Themes/Sixteen/app/Providers/ThemeServiceProvider.php)
 
 ---

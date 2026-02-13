@@ -59,7 +59,7 @@ Durante l'audit delle traduzioni del progetto <nome progetto>, sono state identi
 - **Pattern**: `'required' => 'Dieses Feld ist erforderlich'` (DE)
 
 #### ✅ Temi
-- **Themes/Meetup**: 2 file corretti
+- **Themes/Two**: 2 file corretti
 - **Pattern**: `'required' => 'Pflichtfeld'` (DE) / `'required' => 'Required field'` (EN)
 
 ## Statistiche Finali
@@ -243,7 +243,7 @@ Durante l'audit delle traduzioni del progetto <nome progetto>, sono state identi
 - **Pattern**: `'required' => 'Dieses Feld ist erforderlich'` (DE)
 
 #### ✅ Temi
-- **Themes/Meetup**: 2 file corretti
+- **Themes/Two**: 2 file corretti
 - **Pattern**: `'required' => 'Pflichtfeld'` (DE) / `'required' => 'Required field'` (EN)
 
 ## Statistiche Finali

@@ -2,7 +2,6 @@
 
 ## Problema Risolto
 
-**Data**: 26 Settembre 2025
 **Errore**: `SQLSTATE[HY000]: General error: 1 no such table: <nome progetto>_data.customer_user`
 
 ## Causa Radice
@@ -91,7 +90,6 @@ echo $tenants->count(); // ✅ Output: 1
 
 ## Problema Risolto
 
-**Data**: 26 Settembre 2025
 **Errore**: `SQLSTATE[HY000]: General error: 1 no such table: quaeris_data.customer_user`
 
 ## Causa Radice

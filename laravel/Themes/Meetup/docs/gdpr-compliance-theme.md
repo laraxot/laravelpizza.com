@@ -772,7 +772,5 @@ async function getUserIP() {
 ---
 
 **Document Version**: 1.0.0  
-**Last Updated**: 2026-02-09  
-**Next Review**: 2026-08-09  
 **Responsible**: Meetup Theme Team  
 **Approved by**: GDPR Compliance Team

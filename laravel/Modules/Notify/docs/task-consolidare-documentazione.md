@@ -3,7 +3,6 @@
 **Modulo**: Notify
 **Priorita'**: Alta
 **Completamento**: 10%
-**Data**: 2026-01-30
 
 ---
 

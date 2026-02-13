@@ -9,8 +9,8 @@ return [
             'helper_text' => 'Inserisci il numero di telefono nel formato internazionale (es. +393401234567).',
         ],
         'to' => [
-             'label' => 'Destinatario', // Fallback for old code
-             'helper_text' => 'Inserisci il numero di telefono nel formato internazionale (es. +393401234567).',
+            'label' => 'Destinatario', // Fallback for old code
+            'helper_text' => 'Inserisci il numero di telefono nel formato internazionale (es. +393401234567).',
         ],
         'message' => [
             'label' => 'Messaggio',

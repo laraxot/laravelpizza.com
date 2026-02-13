@@ -1,6 +1,5 @@
 # Laravel Pizza - Architecture: Folio + Volt + Filament
 
-**Data**: 29 Novembre 2024
 **Versione**: 1.0
 **Principi**: DRY + KISS + SOLID + ROBUST + LARAXOT
 

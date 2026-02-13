@@ -195,7 +195,7 @@ Always run `php artisan optimize:clear && ./vendor/bin/phpstan analyse` after ma
 
 ---
 
-*Last Updated: 2025-08-27*
+*
 *Architecture Version: XotBase 2.0*
 # Regole di Estensione XotBase - Guida di Riferimento
 
@@ -587,7 +587,7 @@ Always run `php artisan optimize:clear && ./vendor/bin/phpstan analyse` after ma
 
 ---
 
-*Last Updated: 2025-08-27*
+*
 *Architecture Version: XotBase 2.0*
-*Last Updated: 2025-08-27*  
+*
 *Architecture Version: XotBase 2.0*

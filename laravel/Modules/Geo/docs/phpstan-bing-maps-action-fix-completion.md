@@ -1,6 +1,5 @@
 # PHPStan Fix Completion - GetAddressFromBingMapsAction - Gennaio 2026
 
-**Data**: 2026-01-09  
 **Stato**: ✅ COMPLETATO CON SUCCESSO  
 **File**: `Modules/Geo/app/Actions/Bing/GetAddressFromBingMapsAction.php`
 

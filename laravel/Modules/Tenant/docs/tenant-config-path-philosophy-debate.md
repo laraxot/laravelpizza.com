@@ -1,6 +1,5 @@
 # Tenant Config Path Philosophy - THE FURIOUS DEBATE
 
-**Data**: 2026-01-08
 **Status**: 🔥 FURIOUS INTERNAL DEBATE
 **Issue**: Quale è la struttura path CORRETTA per i config tenant?
 **Filosofia**: DRY + KISS + SOLID + Domain-Driven Design

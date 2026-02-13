@@ -5,7 +5,6 @@
 Questa guida pratica fornisce istruzioni step-by-step per implementare pagine e componenti utilizzando Laravel Folio e Livewire Volt nel progetto Laravel Pizza Meetups.
 
 **Versione**: 1.0
-**Data**: 2025-01-27
 
 ---
 

@@ -293,7 +293,6 @@ unset($translations['existing_key']); // MAI!
 
 ## Ultimo Aggiornamento
 
-**Data**: 2025-08-01
 **Versione**: 2.0
 **Compatibilità**: Laraxot <nome progetto>, PHP 8.2+, Laravel 11+
 

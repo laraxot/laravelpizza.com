@@ -15,7 +15,7 @@ To provide a convenient and reusable interface within Filament admin panels for 
 To add this bulk action to a Filament `ListRecords` page (e.g., `ClientResource`):
 
 ```php
-// In a ListRecords page (e.g., Modules\Meetup\Filament\Resources\ClientResource\Pages\ListClients.php)
+// In a ListRecords page (e.g., Modules\TechPlanner\Filament\Resources\ClientResource\Pages\ListClients.php)
 use Modules\Geo\Filament\Actions\UpdateCoordinatesBulkAction;
 
 public function getTableBulkActions(): array

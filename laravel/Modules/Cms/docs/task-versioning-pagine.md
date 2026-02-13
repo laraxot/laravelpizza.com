@@ -3,7 +3,6 @@
 **Modulo**: Cms
 **Priorita'**: Bassa
 **Completamento**: 0%
-**Data**: 2026-01-30
 
 ---
 

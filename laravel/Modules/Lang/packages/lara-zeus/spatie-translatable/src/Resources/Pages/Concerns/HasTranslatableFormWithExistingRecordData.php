@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace LaraZeus\SpatieTranslatable\Resources\Pages\Concerns;
 
 use Livewire\Attributes\Locked;
@@ -36,7 +34,7 @@ trait HasTranslatableFormWithExistingRecordData
                 continue;
             }
 
-            /* @internal Read the DocBlock above the following method. */
+            /** @internal Read the DocBlock above the following method. */
             $this->fillFormWithDataAndCallHooks($record, $translatedData);
         }
     }

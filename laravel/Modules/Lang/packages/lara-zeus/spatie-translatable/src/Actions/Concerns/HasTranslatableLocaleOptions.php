@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace LaraZeus\SpatieTranslatable\Actions\Concerns;
 
 use LaraZeus\SpatieTranslatable\SpatieTranslatablePlugin;
@@ -11,6 +9,7 @@ trait HasTranslatableLocaleOptions
     public function setTranslatableLocaleOptions(): static
     {
         $this->options(function (): array {
+
             /** @var object $livewire */
             $livewire = $this->getLivewire();
 

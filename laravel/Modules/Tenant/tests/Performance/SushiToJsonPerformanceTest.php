@@ -9,7 +9,7 @@ use Modules\Tenant\Services\TenantService;
 
 uses(Tests\TestCase::class, DatabaseTransactions::class)->beforeEach(function () {
     // Configura il modello di test
-    $this->model = new TestSushiModel;
+    $this->model = new TestSushiModel();
 
     // Configura percorsi di test
     $this->testDirectory = storage_path('tests/sushi-json-performance');

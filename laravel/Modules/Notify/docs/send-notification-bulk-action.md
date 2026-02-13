@@ -1,6 +1,5 @@
 # SendNotificationBulkAction - Implementazione Completa
 
-**Data**: 2025-01-18  
 **Status**: ✅ Implementazione completata e PHPStan Level 10 compliant  
 **Module**: Notify
 
@@ -242,9 +241,9 @@ Tutti gli errori vengono raccolti e mostrati all'utente tramite notifica Filamen
 - Ogni componente ha una responsabilità ben definita
 - Facile da testare e mantenere
 
-## Integrazione in Meetup
+## Integrazione in TechPlanner
 
-**File**: `Modules/Meetup/app/Filament/Resources/ClientResource/Pages/ListClients.php`
+**File**: `Modules/TechPlanner/app/Filament/Resources/ClientResource/Pages/ListClients.php`
 
 ```php
 public function getTableBulkActions(): array
@@ -317,7 +316,7 @@ Vedi: [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md)
 - [Notification System Architecture](./notification-implementation.md)
 - [MailTemplate Model](./models.md#mailtemplate)
 - [RecordNotification Class](../../app/Notifications/RecordNotification.php)
-- [Meetup Client Management](../Meetup/docs/README.md#client-management)
+- [TechPlanner Client Management](../TechPlanner/docs/README.md#client-management)
 - [Geo Module Reusable Components Philosophy](../Geo/docs/reusable-components-philosophy.md)
 - [Xot Filament Class Extension Rules](../Xot/docs/filament-class-extension-rules.md)
 

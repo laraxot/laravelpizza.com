@@ -20,10 +20,7 @@ class SafeArrayByModelCastAction
     public function execute(Model $model): array
     {
         try {
-            /** @var array<string, mixed> $result */
-            $result = $model->attributesToArray();
-
-            return $result;
+            return $model->attributesToArray();
         } catch (ValueError|Error|Exception $e) {
             return $this->safeExecute($model);
         }

@@ -76,7 +76,6 @@ lang/
 Per le traduzioni di base di Laravel:
 
 ```bash
-
 # Installazione
 composer require laravel-lang/common --dev
 
@@ -109,7 +108,6 @@ Traduci in italiano mantenendo la struttura JSON:
 ### 1. Branch di Traduzione
 
 ```bash
-
 # Creare un branch dedicato
 git checkout -b feature/italian-translations
 

@@ -2,12 +2,12 @@
 
 **Date**: 18 Dicembre 2025
 **Status**: ✅ Completed
-**Module**: Meetup → Geo
+**Module**: TechPlanner → Geo
 **Refactoring Type**: Clean Code Architecture Improvement
 
 ## Problem Identified
 
-The `ListClients` page in the Meetup module had an inline bulk action `updateCoordinates` that violated clean code principles:
+The `ListClients` page in the TechPlanner module had an inline bulk action `updateCoordinates` that violated clean code principles:
 
 1. **Tight Coupling**: Business logic was embedded directly in the UI layer
 2. **No Reusability**: The action could not be reused across different resources
@@ -32,7 +32,7 @@ Applied the proper Laraxot architecture pattern using:
    - Calls the QueueableAction for business logic
    - Handles user notifications and feedback
 
-3. **Refactored Resource**: `Modules\Meetup\app\Filament\Resources\ClientResource\Pages\ListClients.php`
+3. **Refactored Resource**: `Modules\TechPlanner\app\Filament\Resources\ClientResource\Pages\ListClients.php`
    - Replaced inline bulk action with reusable Filament action
    - Maintains the same user experience
    - Follows clean code principles
@@ -94,7 +94,7 @@ public function getTableBulkActions(): array
 - `Modules/Geo/docs/bulk-coordinate-updates.md` - Architecture documentation
 
 ### Modified:
-- `Modules/Meetup/app/Filament/Resources/ClientResource/Pages/ListClients.php` - Refactored to use new action
+- `Modules/TechPlanner/app/Filament/Resources/ClientResource/Pages/ListClients.php` - Refactored to use new action
 - `Modules/Geo/docs/00-index.md` - Updated documentation index
 
 ## Architecture Compliance

@@ -1,6 +1,5 @@
 # Fix: Media TestCase - Database Connection Configuration
 
-**Data**: 2025-01-22
 **Problema**: Test Media falliscono con QueryException per database connection 'media'
 **Principio**: Il sito funziona, quindi il test deve riflettere il comportamento reale
 

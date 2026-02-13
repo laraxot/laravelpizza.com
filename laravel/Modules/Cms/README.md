@@ -1,151 +1,123 @@
-# 🌐 Cms - Il SISTEMA di GESTIONE CONTENUTI più AVANZATO! 📝
+# CMS Module
 
-<!-- Dynamic validation badges -->
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
-[![Filament 4.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
-[![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
-[![Translation Ready](https://img.shields.io/badge/Translation-IT%20%7C%20EN%20%7C%20DE-green.svg)](https://laravel.com/docs/localization)
-[![Folio Routes](https://img.shields.io/badge/Folio-File%20Routes-purple.svg)](https://laravel.com/docs/folio)
-[![Volt Components](https://img.shields.io/badge/Volt-Single%20File%20Components-orange.svg)](https://laravel.com/docs/volt)
-[![Pest Tests](https://img.shields.io/badge/Pest%20Tests-✅%20Passing-brightgreen.svg)](tests/)
-[![PHP Version](https://img.shields.io/badge/PHP-8.3+-blue.svg)](https://php.net)
+[![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)](https://filamentphp.com/)
+[![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
+[![PHP 8.3+](https://img.shields.io/badge/PHP-8.3+-blue.svg)](https://php.net)
+[![Resources 5](https://img.shields.io/badge/Resources-5-purple.svg)](#filament)
 
-Un modulo CMS modulare, estensibile e riutilizzabile per Laravel, con supporto per Filament, Volt e Folio.
+> **Content management a blocchi**: pagine dinamiche con sezioni componibili, menu gerarchici, rendering frontend con Folio/Volt, SEO multi-tenant. Gestione contenuti completa da Filament.
 
-## Caratteristiche
+---
 
-- Gestione pagine e contenuti
-- Blocchi di contenuto personalizzabili
-- Menu e navigazione
-- Gestione media
-- Layout e temi
-- API RESTful e GraphQL
-- Pannello amministrativo con Filament
-- Componenti reattivi con Volt
-- Routing basato su file con Folio
+## Cosa fa
 
-## Requisiti
-
-- PHP 8.2+
-- Laravel 11.x
-- Filament 4.x
-- Laravel Volt
-- Laravel Folio
-- Composer
-
-## Installazione
-
-```bash
-composer require modules/cms
-```
-
-Pubblicare le risorse:
-
-```bash
-php artisan vendor:publish --provider="Modules\Cms\Providers\CmsServiceProvider"
-```
-
-Eseguire le migrazioni:
-
-```bash
-php artisan module:migrate cms
-```
-
-## Configurazione
-
-Il modulo può essere configurato tramite il file `config/cms.php`:
+Il modulo CMS gestisce contenuti strutturati: pagine composte da sezioni (blocchi riutilizzabili dal modulo UI), menu di navigazione gerarchici, allegati e configurazioni. Il rendering frontend avviene tramite Laravel Folio e Livewire Volt per interattivita.
 
 ```php
-return [
-    'prefix' => 'cms',
-    'middleware' => ['web', 'auth'],
-    'cache' => [
-        'enabled' => true,
-        'ttl' => 3600
-    ],
-    'media' => [
-        'disk' => 'public',
-        'path' => 'media'
-    ]
-];
-```
+// Pagina composta da sezioni
+$page = Page::with('sections.attachments')->find(1);
 
-## Utilizzo
-
-### Creazione Pagina
-
-```php
-use Modules\Cms\Actions\CreatePageAction;
-
-$page = app(CreatePageAction::class)->execute([
-    'title' => 'La mia pagina',
-    'slug' => 'la-mia-pagina',
-    'content' => 'Contenuto della pagina'
-]);
-```
-
-### Aggiunta Blocco
-
-```php
-use Modules\Cms\Actions\AddBlockAction;
-
-$block = app(AddBlockAction::class)->execute($page, [
-    'type' => 'text',
-    'content' => 'Contenuto del blocco'
-]);
-```
-
-### Componente Volt
-
-```php
-use Livewire\Volt\Component;
-
-class PageEditor extends Component
-{
-    public Page $page;
-
-    public function save(): void
-    {
-        $this->page->save();
-    }
+// Ogni sezione ha un tipo che determina il rendering
+// (hero, features, cta, blog, newsletter...)
+foreach ($page->sections as $section) {
+    // Renderizza il blocco UI corrispondente
+    echo view("ui::blocks.{$section->type}", $section->data);
 }
 ```
 
-### Pagina Folio
+---
 
-```php
-use Illuminate\View\View;
+## Modelli (7)
 
-class Show
-{
-    public function __invoke(Page $page): View
-    {
-        return view('cms::pages.show', [
-            'page' => $page
-        ]);
-    }
-}
+| Modello | Funzione |
+|---------|----------|
+| **Page** | Pagina con slug, SEO, stato (draft/published) |
+| **Section** | Sezione/blocco di contenuto con tipo e dati |
+| **Menu** | Menu di navigazione gerarchico |
+| **Module** | Modulo CMS configurabile |
+| **Attachment** | File allegato a pagina/sezione |
+| **PageContent** | Contenuto pagina per lingua |
+| **Conf** | Configurazioni CMS |
+
+---
+
+## Azioni (4)
+
+| Action | Funzione |
+|--------|----------|
+| **SaveFooterAction** | Salva configurazione footer |
+| **SaveHeadernavAction** | Salva navigazione header |
+| **GetViewThemeAction** | Risolve tema vista per tenant |
+| **GetStyleClassAction** | Risolve classi CSS per componente |
+
+---
+
+## Filament Integration (5 Resource)
+
+| Resource | Funzione |
+|----------|----------|
+| **PageResource** | CRUD pagine con editor visuale |
+| **SectionResource** | CRUD sezioni/blocchi |
+| **MenuResource** | Gestione menu gerarchici |
+| **AttachmentResource** | Gestione allegati |
+| **PageContentResource** | Contenuto multilingua |
+
+---
+
+## Rendering Frontend
+
+```
+Page (CMS Module)
+    |
+    +-- Sections (blocchi ordinati)
+    |     +-- type: "hero.centered" → x-ui::blocks.hero.centered
+    |     +-- type: "features.grid" → x-ui::blocks.features.grid
+    |     +-- type: "cta.branded"   → x-ui::blocks.cta.branded
+    |
+    v
+Laravel Folio (file-based routing)
+    +-- Livewire Volt (interattivita)
+    +-- Tailwind CSS v4 (styling)
 ```
 
-## Documentazione
+---
 
-- [Architettura](docs/architecture.md)
-- [Tecnologie](docs/technologies.md)
-- [Frontend](docs/frontoffice/README.md)
-- [API](docs/api/README.md)
-- [Sviluppo](docs/developer/README.md)
-- [Utente](docs/user/README.md)
+## Integrazione con altri moduli
 
-## Testing
+```
+Cms ──> UI         (211 blocchi pre-costruiti per sezioni)
+Cms ──> Media      (allegati immagini/documenti)
+Cms ──> Seo        (meta tag per pagine)
+Cms ──> Lang       (contenuto multilingua IT/EN/DE)
+Cms ──> Tenant     (pagine per tenant)
+Cms ──> Activity   (audit trail modifiche contenuto)
+```
+
+---
+
+## Quick Start
 
 ```bash
-composer test
+php artisan module:enable Cms
+php artisan migrate
 ```
 
-## Contribuire
+---
 
-Le pull request sono benvenute. Per modifiche importanti, aprire prima una issue per discutere la modifica proposta.
+## Metriche
 
-## Licenza
+| Metrica | Valore |
+|---------|--------|
+| **Modelli** | 7 |
+| **Azioni** | 4 |
+| **Resource Filament** | 5 |
+| **PHPStan Level** | 10 |
 
-MIT
+---
+
+**Module Type**: Content Management
+**Architecture**: Block-based pages, Folio routing, Volt interactivity
+**Quality**: PHPStan Level 10
+
+*Contenuti strutturati a blocchi: pagine, sezioni, menu e allegati gestiti da Filament, renderizzati con Folio/Volt.*

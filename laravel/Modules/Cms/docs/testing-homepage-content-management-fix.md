@@ -1,6 +1,5 @@
 # Fix: HomepageContentManagementTest - Redirect Behavior
 
-**Data**: 2025-01-22
 **Problema**: Test fallisce con "Expected status code [200] but received 302"
 **Principio**: Il sito funziona, quindi il test deve essere corretto per riflettere il comportamento reale
 

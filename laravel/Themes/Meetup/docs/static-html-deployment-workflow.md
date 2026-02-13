@@ -344,7 +344,5 @@ npm run build      # Uses ROOT vite.config.js
 
 ---
 
-**Version**: 1.1
-**Last Updated**: 2025-11-30
 **Theme**: Meetup
 **Changes**: Corrected build output path from `resources/html/dist/` to `public/`

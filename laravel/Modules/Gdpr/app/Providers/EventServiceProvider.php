@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Providers;
 
-use Modules\Gdpr\Listeners\SaveGdprConsents;
-use Modules\User\Events\UserRegistered;
 use Modules\Xot\Providers\XotBaseEventServiceProvider;
 
 class EventServiceProvider extends XotBaseEventServiceProvider
@@ -15,11 +13,7 @@ class EventServiceProvider extends XotBaseEventServiceProvider
      *
      * @var array<string, array<int, string>>
      */
-    protected $listen = [
-        UserRegistered::class => [
-            SaveGdprConsents::class,
-        ],
-    ];
+    protected $listen = [];
 
     /**
      * Indicates if events should be discovered.

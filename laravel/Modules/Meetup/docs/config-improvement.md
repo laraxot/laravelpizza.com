@@ -1,6 +1,5 @@
 # Miglioramento Config Module Meetup
 
-**Data**: 2025-01-22
 **File**: `config/config.php`
 **Metodologia**: Super Mucca - Studio Pattern Altri Moduli
 

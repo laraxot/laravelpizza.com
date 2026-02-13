@@ -1,6 +1,5 @@
 # UpdateCoordinatesBulkAction - Azione Riutilizzabile per Aggiornamento Coordinate
 
-**Data**: 2025-01-27
 **Modulo**: Geo
 **Status**: ✅ **IMPLEMENTATO**
 
@@ -84,7 +83,7 @@ public function execute(Model $model): bool
 ### In ListRecords Page
 
 ```php
-namespace Modules\Meetup\Filament\Resources\ClientResource\Pages;
+namespace Modules\TechPlanner\Filament\Resources\ClientResource\Pages;
 
 use Modules\Geo\Filament\Actions\UpdateCoordinatesBulkAction;
 
@@ -117,7 +116,7 @@ class ListClients extends XotBaseListRecords
 - ✅ Separazione UI (Filament) da Business Logic (Actions)
 - ✅ Supporto per qualsiasi modello con `full_address`
 
-## Migrazione da Meetup
+## Migrazione da TechPlanner
 
 **Prima** (violazione Clean Code):
 ```php

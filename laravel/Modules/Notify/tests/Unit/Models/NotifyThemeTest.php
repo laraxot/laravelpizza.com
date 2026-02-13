@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Notify\Tests\Unit\Models;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Notify\Models\NotifyTheme;
-use Tests\TestCase;
+use Modules\Notify\Tests\TestCase;
 
 class NotifyThemeTest extends TestCase
 {
-    use RefreshDatabase;
+    // DatabaseTransactions is already used in the module TestCase
 
     protected function setUp(): void
     {
@@ -70,7 +69,7 @@ class NotifyThemeTest extends TestCase
     /** @test */
     public function it_has_correct_fillable_fields(): void
     {
-        $theme = new NotifyTheme;
+        $theme = new NotifyTheme();
 
         $expectedFillable = [
             'id',
@@ -96,7 +95,7 @@ class NotifyThemeTest extends TestCase
     /** @test */
     public function it_has_correct_casts(): void
     {
-        $theme = new NotifyTheme;
+        $theme = new NotifyTheme();
 
         $expectedCasts = [
             'id' => 'string',
@@ -116,7 +115,7 @@ class NotifyThemeTest extends TestCase
     /** @test */
     public function it_has_logo_appended_attribute(): void
     {
-        $theme = new NotifyTheme;
+        $theme = new NotifyTheme();
 
         $expectedAppends = ['logo'];
 

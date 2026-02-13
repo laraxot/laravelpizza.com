@@ -1,6 +1,5 @@
 # PHPStan Level 10 - Scripts Utility Fixes
 
-**Data**: 2026-01-09  
 **Modulo**: Cms  
 **Livello PHPStan**: 10  
 **Status**: 🔄 **IN PROGRESSO** (65.6% completato)

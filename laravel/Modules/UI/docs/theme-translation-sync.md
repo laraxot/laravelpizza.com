@@ -17,7 +17,7 @@ Questo documento descrive il processo di sincronizzazione delle traduzioni per i
 - **File di traduzione**: 12 file per lingua (aggiornato)
 
 ### Tema Two
-- **Percorso**: `/laravel/Themes/Meetup/lang/`
+- **Percorso**: `/laravel/Themes/Two/lang/`
 - **Lingue supportate**: `it/`, `en/`, `de/`
 - **File di traduzione**: 12 file per lingua (aggiornato)
 

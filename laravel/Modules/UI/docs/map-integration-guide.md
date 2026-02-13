@@ -1,7 +1,6 @@
 # 🗺️ GUIDA INTEGRAZIONE MAPPA INTERATTIVA
 
 **Modulo**: UI (User Interface)
-**Data**: 2025-01-27
 **Versione**: 1.0
 **Stato**: 🚧 IN SVILUPPO
 
@@ -592,8 +591,7 @@ class GeocodingService
 
 ---
 
-**Last Updated**: 2025-01-27
-**Next Review**: 2025-02-27
+
 **Status**: 🚧 IN SVILUPPO
 **Confidence Level**: 90%
 

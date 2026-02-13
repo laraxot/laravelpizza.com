@@ -193,6 +193,67 @@ Componente avanzato per la visualizzazione dettagliata di uno studio (per liste,
 - Azioni personalizzabili
 - Orari di apertura
 
+### ServiceCard (AGID/PA Compliant)
+
+Componente per la visualizzazione di servizi comunali/aziendali con colori categoria AGID-compliant.
+
+#### Utilizzo
+```blade
+<x-ui.service-card
+    title="Certificati Anagrafici"
+    description="Richiedi e scarica certificati online"
+    icon="heroicon-o-document-text"
+    url="/servizi/anagrafe/certificati"
+    category="anagrafe"
+    status="active"
+    :requiresAuth="true"
+    badge="Nuovo"
+/>
+```
+
+#### Props
+| Prop | Tipo | Default | Descrizione |
+|------|------|---------|-------------|
+| `title` | string | '' | Titolo del servizio |
+| `description` | string | '' | Descrizione del servizio |
+| `icon` | string | 'heroicon-o-document' | Icona Heroicon |
+| `url` | string | '#' | URL del servizio |
+| `category` | string | 'default' | Categoria: anagrafe, tributi, urbanistica, sociale, ambiente |
+| `status` | string | 'active' | Stato: active, inactive, maintenance |
+| `requiresAuth` | bool | false | Mostra badge autenticazione |
+| `badge` | string\|null | null | Badge opzionale (es: "Nuovo") |
+
+#### Mappatura Colori Categoria (AGID)
+- **anagrafe**: Blue (#3B82F6)
+- **tributi**: Green (#22C55E)
+- **urbanistica**: Orange (#F97316)
+- **sociale**: Purple (#A855F7)
+- **ambiente**: Emerald (#10B981)
+
+### ServicesGrid
+
+Componente wrapper per griglia responsiva di ServiceCard.
+
+#### Utilizzo
+```blade
+<x-ui.services-grid 
+    :services="[
+        ['title' => 'Servizio 1', 'category' => 'anagrafe', 'status' => 'active'],
+        ['title' => 'Servizio 2', 'category' => 'tributi', 'status' => 'active'],
+    ]"
+    :columns="3"
+    gap="md"
+/>
+```
+
+#### Props
+| Prop | Tipo | Default | Descrizione |
+|------|------|---------|-------------|
+| `services` | array | [] | Array di servizi |
+| `columns` | int | 3 | Numero colonne (1-4) |
+| `gap` | string | 'md' | Gap: sm, md, lg |
+
+
 ## Componenti SVG
 
 ### Bandiere (Flags)

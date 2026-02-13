@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace LaraZeus\SpatieTranslatable\Resources\Concerns;
 
 use Filament\Support\Contracts\TranslatableContentDriver;
@@ -30,7 +28,7 @@ trait HasActiveLocaleSwitcher
     }
 
     /**
-     * @return class-string<TranslatableContentDriver>|null
+     * @return class-string<TranslatableContentDriver> | null
      */
     public function getFilamentTranslatableContentDriver(): ?string
     {

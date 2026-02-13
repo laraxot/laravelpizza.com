@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Actions\Validation;
 
-use Spatie\QueueableAction\QueueableAction;
 use Illuminate\Validation\ValidationException;
-use function __;
+use Spatie\QueueableAction\QueueableAction;
 
 class ValidateGdprConsentAction
 {
@@ -27,8 +26,8 @@ class ValidateGdprConsentAction
                 'terms_accepted' => 'accepted',
             ],
             [
-                'privacy_accepted.accepted' => __('gdpr::register.consents.privacy_policy_required'),
-                'terms_accepted.accepted' => __('gdpr::register.consents.terms_required'),
+                'privacy_accepted.accepted' => \__('gdpr::register.consents.privacy_policy_required'),
+                'terms_accepted.accepted' => \__('gdpr::register.consents.terms_required'),
             ]
         );
 

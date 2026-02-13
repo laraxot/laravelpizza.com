@@ -6,7 +6,6 @@ Il modulo Notify implementa un sistema avanzato di gestione delle email template
 
 ## 🚨 Errore Critico Identificato
 
-**Data**: 26 Giugno 2025  
 **Errore**: `MissingMailTemplate` durante registrazione pazienti  
 **Status**: CRITICO - Sistema registrazione bloccato  
 

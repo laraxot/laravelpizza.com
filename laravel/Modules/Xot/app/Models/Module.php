@@ -15,33 +15,14 @@ use Sushi\Sushi;
 use function Safe\json_encode;
 
 /**
- * @property string $id
- * @property string $name
- * @property string|null $slug
+ * @property int $id
+ * @property string|null $name
  * @property string|null $description
- * @property string|null $version
- * @property bool $status
- * @property bool $enabled
- * @property bool $is_active
- * @property int $priority
+ * @property bool|null $status
+ * @property int|null $priority
  * @property string|null $path
  * @property string|null $icon
  * @property array<array-key, mixed>|null $colors
- * @property array<array-key, mixed>|null $dependencies
- * @property array<array-key, mixed>|null $config
- * @property array<array-key, mixed>|null $metadata
- * @property array<array-key, mixed>|null $update_history
- * @property string|null $laravel_version
- * @property string|null $php_version
- * @property array<array-key, mixed>|null $permissions
- * @property array<array-key, mixed>|null $routes
- * @property array<array-key, mixed>|null $assets
- * @property array<array-key, mixed>|null $settings
- * @property \Illuminate\Support\Carbon|null $installed_at
- * @property \Illuminate\Support\Carbon|null $activation_date
- * @property \Illuminate\Support\Carbon|null $deactivation_date
- * @property array<array-key, mixed>|null $error_log
- * @property array<array-key, mixed>|null $usage_statistics
  *
  * @method static Builder<static>|Module newModelQuery()
  * @method static Builder<static>|Module newQuery()
@@ -69,62 +50,19 @@ final class Module extends BaseModel
 
     protected $fillable = [
         'name',
-        'slug',
-        'description',
-        'version',
+        // 'alias',
+        // 'description',
         'status',
-        'enabled',
-        'is_active',
         'priority',
         'path',
         'icon',
         'colors',
-        'dependencies',
-        'config',
-        'metadata',
-        'update_history',
-        'laravel_version',
-        'php_version',
-        'permissions',
-        'routes',
-        'assets',
-        'settings',
-        'installed_at',
-        'activation_date',
-        'deactivation_date',
-        'error_log',
-        'usage_statistics',
     ];
 
-    /** @var array<string, string> */
-    protected $schema = [
-        'name' => 'string',
-        'slug' => 'string',
-        'description' => 'string',
-        'version' => 'string',
-        'status' => 'boolean',
-        'enabled' => 'boolean',
-        'is_active' => 'boolean',
-        'priority' => 'integer',
-        'path' => 'string',
-        'icon' => 'string',
-        'colors' => 'json',
-        'dependencies' => 'json',
-        'config' => 'json',
-        'metadata' => 'json',
-        'update_history' => 'json',
-        'laravel_version' => 'string',
-        'php_version' => 'string',
-        'permissions' => 'json',
-        'routes' => 'json',
-        'assets' => 'json',
-        'settings' => 'json',
-        'installed_at' => 'datetime',
-        'activation_date' => 'datetime',
-        'deactivation_date' => 'datetime',
-        'error_log' => 'json',
-        'usage_statistics' => 'json',
-    ];
+    /**
+     * @var string
+     */
+    protected $connection = 'xot';
 
     /**
      * @return array<int, array<string, mixed>>
@@ -141,31 +79,13 @@ final class Module extends BaseModel
 
             return [
                 'name' => $module->getName(),
-                'slug' => $module->getLowerName(), // Use getLowerName as slug/alias
+                // 'alias' => $module->getAlias(),
                 'description' => $module->getDescription(),
-                'version' => '1.0.0', // Placeholder
                 'status' => $module->isEnabled(),
-                'enabled' => $module->isEnabled(),
-                'is_active' => $module->isEnabled(),
-                'priority' => (int) $module->get('priority'),
+                'priority' => $module->get('priority'),
                 'path' => $module->getPath(),
-                'icon' => (string) Arr::get($config, 'icon', 'heroicon-o-question-mark-circle'),
+                'icon' => Arr::get($config, 'icon', 'heroicon-o-question-mark-circle'),
                 'colors' => json_encode($colors),
-                'dependencies' => json_encode([]),
-                'config' => json_encode([]),
-                'metadata' => json_encode([]),
-                'update_history' => json_encode([]),
-                'laravel_version' => null,
-                'php_version' => null,
-                'permissions' => json_encode([]),
-                'routes' => json_encode([]),
-                'assets' => json_encode([]),
-                'settings' => json_encode([]),
-                'installed_at' => null,
-                'activation_date' => null,
-                'deactivation_date' => null,
-                'error_log' => json_encode([]),
-                'usage_statistics' => json_encode([]),
             ];
         });
 
@@ -173,45 +93,16 @@ final class Module extends BaseModel
         return array_values($modules);
     }
 
-    public function isEnabled(): bool
-    {
-        return (bool) $this->enabled;
-    }
-
-    public function isDisabled(): bool
-    {
-        return ! $this->isEnabled();
-    }
-
     protected function casts(): array
     {
         return [
             'name' => 'string',
-            'slug' => 'string',
             'description' => 'string',
-            'version' => 'string',
             'status' => 'boolean',
-            'enabled' => 'boolean',
-            'is_active' => 'boolean',
             'priority' => 'integer',
             'path' => 'string',
             'icon' => 'string',
             'colors' => 'array',
-            'dependencies' => 'array',
-            'config' => 'array',
-            'metadata' => 'array',
-            'update_history' => 'array',
-            'laravel_version' => 'string',
-            'php_version' => 'string',
-            'permissions' => 'array',
-            'routes' => 'array',
-            'assets' => 'array',
-            'settings' => 'array',
-            'installed_at' => 'datetime',
-            'activation_date' => 'datetime',
-            'deactivation_date' => 'datetime',
-            'error_log' => 'array',
-            'usage_statistics' => 'array',
         ];
     }
 }

@@ -38,59 +38,6 @@ Nel pannello di amministrazione di il progetto:
 2. I form devono implementare sempre controlli di autorizzazione basati su ruoli
 3. Le azioni di massa devono essere limitate agli utenti amministratori
 
-### Regole di Traduzione Filament (CRITICHE)
-
-> ⚠️ **REGOLA CRITICA**: Non utilizzare MAI i metodi di etichettatura diretti nei componenti Filament.
-
-Il progetto utilizza `LangServiceProvider` per gestire automaticamente le traduzioni basandosi sui nomi dei campi. Questo significa:
-
-**VIETATO (❌):**
-```php
-TextInput::make('first_name')
-    ->label(__('module::resource.fields.first_name'))  // ❌ MAI!
-    
-Checkbox::make('privacy_policy')
-    ->label('Accetta Privacy Policy')  // ❌ MAI!
-```
-
-**CORRETTO (✅):**
-```php
-TextInput::make('first_name')
-    ->required()  // ✅ Nessun ->label()
-    
-Checkbox::make('privacy_policy')
-    ->required()  // ✅ LangServiceProvider gestisce automaticamente
-```
-
-**Metodi VIETATI in Filament:**
-- `->label()` 
-- `->placeholder()` (per testo diretto)
-- `->tooltip()` (per testo diretto)
-
-**Le traduzioni vengono gestite automaticamente tramite file in:**
-```
-Modules/{ModuleName}/lang/{locale}/{resource}.php
-```
-
-**Struttura obbligatoria del file di traduzione:**
-```php
-return [
-    'navigation' => 'Label navigazione',
-    'label' => 'Label singolare',
-    'plural_label' => 'Label plurale',
-    'fields' => [
-        'first_name' => 'Nome',
-        'last_name' => 'Cognome',
-        // ...
-    ],
-    'actions' => [
-        'create' => 'Crea',
-        'edit' => 'Modifica',
-        // ...
-    ],
-];
-```
-
 ### Internazionalizzazione
 
 il progetto richiede supporto multilingua per:

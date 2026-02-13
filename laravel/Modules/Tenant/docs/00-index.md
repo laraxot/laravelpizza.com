@@ -1,142 +1,35 @@
-# Tenant Module Documentation Index
+# 📚 **Indice Documentazione Modulo Tenant**
 
-**Last Update**: 18 Dicembre 2025
+**Last Update**: 31 Gennaio 2026
 **Status**: ✅ PHPStan Level 10 Compliant
-**Module Version**: 1.0
+**Module Version**: 1.8.0
 
-## 📚 Quick Navigation
+## 🎯 **Lettura Essenziale**
+1. [README.md](./README.md) - Panoramica del sistema Multi-tenancy.
+2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Dinamismo estremo e performance.
+3. [philosophy.md](./philosophy.md) - "Ognuno nel suo spazio": filosofia dell'isolamento.
 
-### 🎯 Essential Reading
-1. [README.md](./README.md) - Overview completo del modulo
-2. [quality-analysis.md](./quality-analysis.md) - Quality metrics and analysis
+## 🏗️ **Architettura & Logica**
+- 🏛️ **[Modular Monolith](./modular-monolith-architecture.md)** - Come il Tenant abilita la modularità.
+- ⚙️ **[Configuration Logic](./configuration-logic-analysis.md)** - Risoluzione gerarchica della configurazione.
+- 📂 **[Database Population](./database-population.md)** - Strategie per il seeding e la migrazione dei Tenant.
 
-### 🏗️ Architecture & Patterns
-- [Multi-tenancy Implementation](./multi-tenancy-implementation.md) - Pattern multi-tenancy
-- [Tenant Model Structure](./tenant-model-structure.md) - Struttura modelli Tenant
-- [Database Isolation](./database-isolation.md) - Isolamento dati tra tenant
+## 🛠️ **Implementazione Tecnica**
+- 🧬 **[Tenant Config Path](./tenant-config-path-philosophy-debate.md)** - Filosofia della gestione dei path configurazione.
+- 🐚 **[Console Integration](./resolve-tenant-config-console-debate.md)** - Risoluzione del tenant nei comandi CLI.
+- 🍣 **[Sushi to JSON](./sushi-traits-phpstan-fixes.md)** - Gestione dei dati statici e semi-statici dei Tenant.
 
-### 🧩 Core Components
-- [Tenant Model](../../app/Models/Tenant.php) - Modello principale Tenant
-- [Tenant Domain](../../app/Models/TenantDomain.php) - Modello dominio tenant
-- [Tenant Setting](../../app/Models/TenantSetting.php) - Modello impostazioni tenant
-- [Tenant Subscription](../../app/Models/TenantSubscription.php) - Modello abbonamenti tenant
+## 🧪 **Qualità e Sviluppo**
+- ✅ **[PHPStan Analysis](./phpstan-level10-fixes.md)** - Report di conformità Level 10.
+- 🔬 **[Testing Guidelines](./testing.md)** - Verifica dell'isolamento dei dati tra tenant.
+- 🧹 **[PHPMD Fixes](./cyclomatic-complexity-report.md)** - Analisi della complessità della logica di routing.
 
-### 🔧 Implementation Guides
-- [Tenant Creation Process](./tenant-creation-process.md) - Processo creazione nuovo tenant
-- [Tenant Switching](./tenant-switching.md) - Gestione cambio contesto tenant
-- [Tenant Configuration](./tenant-configuration.md) - Configurazione tenant-specific
+## 🧹 **Manutenzione**
+- 🗑️ **[Cleanup Plan](./duplicate-files-to-remove.md)** - Eliminazione dei file duplicati e obsoleti.
 
-### 🧪 Testing
-- [Test Suite](../../tests/) - Suite di test per il modulo Tenant
-- [Feature Tests](../../tests/Feature/) - Test funzionali
-- [Integration Tests](../../tests/Integration/) - Test di integrazione
-- [Unit Tests](../../tests/Unit/) - Test unitari
-
-### 🐛 Troubleshooting & Fixes
-- [Common Issues](./common-issues.md) - Problemi comuni e soluzioni
-- [Debugging Multi-tenancy](./debugging-multi-tenancy.md) - Debugging strategie
-- [RunningInConsole Check Removal](./runninginconsole-check-removal-summary.md) - Rimozione check console
-- [RunningInConsole Check Decision](./runninginconsole-check-decision.md) - Processo decisionale
-
-### 📊 Code Quality
-- [phpstan/](./phpstan/) - PHPStan analysis reports
-- [Quality Analysis](./quality-analysis.md) - Metriche di qualità
-
-### 🚀 Deployment
-- [Multi-tenant Deployment](./deployment.md) - Linee guida per deploy
-- [Environment Configuration](./environment-config.md) - Configurazione ambiente
-
-## 📈 Module Statistics
-
-- **Total Docs**: 5 files
-- **PHPStan Compliance**: ✅ Level 10
-- **Architecture**: XotBase compliant
-- **Type Safety**: 100%
-
-## 🔗 Related Modules
-
-- [Xot](../../Xot/docs/README.md) - Core framework
-- [User](../../User/docs/README.md) - Authentication
-- [Geo](../../Geo/docs/README.md) - Geographic components
-
-## 🎯 Quick Start
-
-1. Leggi [README.md](./README.md) per overview
-2. Studia [multi-tenancy-implementation.md](./multi-tenancy-implementation.md)
-3. Consulta [tenant-model-structure.md](./tenant-model-structure.md)
-4. Verifica [quality-analysis.md](./quality-analysis.md)
+## 🔗 **Moduli Correlati**
+- [Xot](../../Xot/docs/README.md) - Base framework per i Service Provider.
+- [User](../../User/docs/README.md) - Associazione Utente-Tenant e permessi.
 
 ---
-
-*Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
-# Tenant Module Documentation Index
-
-**Last Update**: 18 Dicembre 2025
-**Status**: ✅ PHPStan Level 10 Compliant
-**Module Version**: 1.0
-
-## 📚 Quick Navigation
-
-### 🎯 Essential Reading
-1. [README.md](./README.md) - Overview completo del modulo
-2. [quality-analysis.md](./quality-analysis.md) - Quality metrics and analysis
-
-### 🏗️ Architecture & Patterns
-- [Multi-tenancy Implementation](./multi-tenancy-implementation.md) - Pattern multi-tenancy
-- [Tenant Model Structure](./tenant-model-structure.md) - Struttura modelli Tenant
-- [Database Isolation](./database-isolation.md) - Isolamento dati tra tenant
-
-### 🧩 Core Components
-- [Tenant Model](../../app/Models/Tenant.php) - Modello principale Tenant
-- [Tenant Domain](../../app/Models/TenantDomain.php) - Modello dominio tenant
-- [Tenant Setting](../../app/Models/TenantSetting.php) - Modello impostazioni tenant
-- [Tenant Subscription](../../app/Models/TenantSubscription.php) - Modello abbonamenti tenant
-
-### 🔧 Implementation Guides
-- [Tenant Creation Process](./tenant-creation-process.md) - Processo creazione nuovo tenant
-- [Tenant Switching](./tenant-switching.md) - Gestione cambio contesto tenant
-- [Tenant Configuration](./tenant-configuration.md) - Configurazione tenant-specific
-
-### 🧪 Testing
-- [Test Suite](../../tests/) - Suite di test per il modulo Tenant
-- [Feature Tests](../../tests/Feature/) - Test funzionali
-- [Integration Tests](../../tests/Integration/) - Test di integrazione
-- [Unit Tests](../../tests/Unit/) - Test unitari
-
-### 🐛 Troubleshooting & Fixes
-- [Common Issues](./common-issues.md) - Problemi comuni e soluzioni
-- [Debugging Multi-tenancy](./debugging-multi-tenancy.md) - Debugging strategie
-- [RunningInConsole Check Removal](./runninginconsole-check-removal-summary.md) - Rimozione check console
-- [RunningInConsole Check Decision](./runninginconsole-check-decision.md) - Processo decisionale
-
-### 📊 Code Quality
-- [phpstan/](./phpstan/) - PHPStan analysis reports
-- [Quality Analysis](./quality-analysis.md) - Metriche di qualità
-
-### 🚀 Deployment
-- [Multi-tenant Deployment](./deployment.md) - Linee guida per deploy
-- [Environment Configuration](./environment-config.md) - Configurazione ambiente
-
-## 📈 Module Statistics
-
-- **Total Docs**: 5 files
-- **PHPStan Compliance**: ✅ Level 10
-- **Architecture**: XotBase compliant
-- **Type Safety**: 100%
-
-## 🔗 Related Modules
-
-- [Xot](../../Xot/docs/README.md) - Core framework
-- [User](../../User/docs/README.md) - Authentication
-- [Geo](../../Geo/docs/README.md) - Geographic components
-
-## 🎯 Quick Start
-
-1. Leggi [README.md](./README.md) per overview
-2. Studia [multi-tenancy-implementation.md](./multi-tenancy-implementation.md)
-3. Consulta [tenant-model-structure.md](./tenant-model-structure.md)
-4. Verifica [quality-analysis.md](./quality-analysis.md)
-
----
-
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

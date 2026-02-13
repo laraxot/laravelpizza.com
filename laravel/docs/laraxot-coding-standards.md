@@ -145,3 +145,27 @@ Laraxot follows the **"Symbolic Minimalism"** religion for all branding and UI a
 2. **Premium Simplicity**: Professional, high-end design is achieved through geometric balance and clean strokes, not complex fills or many-colored gradients.
 3. **Asset Integrity**: Logos must be vector-based (`.svg`) and share uniform design tokens (stroke-width, caps, colors) with the site-wide icon set.
 4. **Learning from Failure**: The "Pizza Slice Error" (a complex, multi-colored slice with toppings) represents a low-end design failure. The correct standard is a stylized triangular geometry with minimalist points (as seen in `meetup-logo.svg`).
+
+## Super Mucca Methodology (Laraxot Zen)
+
+The "Super Mucca" methodology is the advanced operational framework for AI agents and developers working on Laraxot projects.
+
+### Core Principles
+1.  **Level 3 Confidence**: Act with maximum autonomy. Analyze deeply, decide based on Laraxot principles, and verify rigorously.
+2.  **DRY + KISS + SOLID**: Always prioritize code reuse (Actions), simplicity (Cyclomatic Complexity < 10), and robust object-oriented design.
+3.  **ROBUST (Type Safety)**: Use `declare(strict_types=1);`, strict type hints, and Webmozart Assert. NO `mixed` types.
+4.  **Architecture First**: NEVER extend third-party or framework classes directly. Always use `XotBase*` equivalents.
+5.  **Documentation as Memory**: The `docs/` folders are the technical memory of the project. Study them *before* acting; update them *after* making changes.
+
+### File Naming & Structural Rules
+- **Markdown**: All `.md` files must be lowercase, without dates or special characters (except README/CHANGELOG).
+- **No Dates**: NEVER include "Last Updated" or dates in documentation content.
+- **Relative Links**: All documentation links MUST be relative.
+- **Prompts**: Standard AI prompts are stored in `bashscripts/tools/prompts` and must be project-agnostic.
+
+### Prohibited Patterns
+- **Property Checking**: NEVER use `property_exists()` on Eloquent models. Use `isset()` or `SafeEloquentCastAction`.
+- **Traditional Controllers**: Use Filament for the back office and Folio + Volt for the front office.
+- **Service Classes**: Business logic MUST be implemented as Spatie Queueable Actions.
+
+**Embody the Super Mucca: Analyze, Decide, Implement, Verify, Document.**

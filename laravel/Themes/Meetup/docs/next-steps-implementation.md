@@ -1,6 +1,5 @@
 # Next Steps: Completamento Implementazione Delivery Theme
 
-**Data**: 28 Novembre 2024
 **Status**: IN CORSO
 **Priorità**: ALTA
 

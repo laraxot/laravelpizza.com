@@ -68,11 +68,11 @@ Updated to be PHPStan level 10 compliant:
 - Explicit foreach loop instead of Arr::map
 - Clear variable typing
 
-## Meetup Module Additions
+## TechPlanner Module Additions
 
 ### AddressColumn Trait
 
-Created `Modules/Meetup/app/Traits/AddressColumn.php` with:
+Created `Modules/TechPlanner/app/Traits/AddressColumn.php` with:
 
 ```php
 AddressColumn::add($table, $migration);           // Standard columns
@@ -83,7 +83,7 @@ AddressColumn::drop($table);                      // Rollback
 
 ### ContactColumn Trait
 
-Created `Modules/Meetup/app/Traits/ContactColumn.php` with:
+Created `Modules/TechPlanner/app/Traits/ContactColumn.php` with:
 
 ```php
 ContactColumn::add($table, $migration);    // Add contact columns

@@ -6,14 +6,15 @@ namespace Modules\Geo\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Modules\Geo\Providers\GeoServiceProvider;
+use Modules\User\Providers\UserServiceProvider;
+use Modules\Xot\Providers\XotServiceProvider;
 use Modules\Xot\Tests\CreatesApplication;
 
 /**
  * Base test case for Geo module.
  *
- * Uses MySQL from .env.testing (NOT SQLite).
- * Database names must have "_test" suffix (es: quaeris_data_test).
- * The .env.testing file is the single source of truth - NEVER override database configuration.
+ * Uses MySQL from .env.testing.
  */
 abstract class TestCase extends BaseTestCase
 {
@@ -26,15 +27,25 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        $this->app['config']->set('cache.default', 'array');
-
         if (! self::$migrated) {
-            $this->artisan('migrate', ['--force' => true]);
+            $this->artisan('migrate:fresh', [
+                '--force' => true,
+            ]);
+
+            $this->artisan('module:migrate', [
+                '--force' => true,
+            ]);
+
             self::$migrated = true;
         }
+    }
 
-        $this->artisan('module:migrate', ['module' => 'Xot', '--force' => true]);
-        $this->artisan('module:migrate', ['module' => 'User', '--force' => true]);
-        $this->artisan('module:migrate', ['module' => 'Geo', '--force' => true]);
+    protected function getPackageProviders($app): array
+    {
+        return [
+            GeoServiceProvider::class,
+            UserServiceProvider::class,
+            XotServiceProvider::class,
+        ];
     }
 }

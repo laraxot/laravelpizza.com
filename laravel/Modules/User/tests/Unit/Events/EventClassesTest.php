@@ -27,7 +27,7 @@ test('RecoveryCodesGenerated event can be instantiated', function () {
 
 test('TeamMemberAdded event can be instantiated', function () {
     $team = $this->getMockBuilder(Modules\User\Contracts\TeamContract::class)
-                 ->getMock();
+        ->getMock();
     $user = User::factory()->make();
     $event = new TeamMemberAdded($team, $user);
 
@@ -36,7 +36,7 @@ test('TeamMemberAdded event can be instantiated', function () {
 
 test('TeamMemberRemoved event can be instantiated', function () {
     $team = $this->getMockBuilder(Modules\User\Contracts\TeamContract::class)
-                 ->getMock();
+        ->getMock();
     $user = User::factory()->make();
     $event = new TeamMemberRemoved($team, $user);
 
@@ -70,7 +70,7 @@ test('RecoveryCodeReplaced event can be instantiated', function () {
 
 test('TeamMemberUpdated event can be instantiated', function () {
     $team = $this->getMockBuilder(Modules\User\Contracts\TeamContract::class)
-                 ->getMock();
+        ->getMock();
     $user = User::factory()->make();
     $event = new TeamMemberUpdated($team, $user);
 
@@ -87,7 +87,7 @@ test('AddingTeam event can be instantiated', function () {
 
 test('AddingTeamMember event can be instantiated', function () {
     $team = $this->getMockBuilder(Modules\User\Contracts\TeamContract::class)
-                 ->getMock();
+        ->getMock();
     $user = User::factory()->make();
     $event = new AddingTeamMember($team, $user);
 
@@ -96,7 +96,7 @@ test('AddingTeamMember event can be instantiated', function () {
 
 test('TeamSwitched event can be instantiated', function () {
     $team = $this->getMockBuilder(Modules\User\Contracts\TeamContract::class)
-                 ->getMock();
+        ->getMock();
     $user = User::factory()->make();
     $event = new TeamSwitched($team, $user);
 

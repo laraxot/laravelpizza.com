@@ -1,6 +1,5 @@
 # PHPStan Syntax Fixes - Modulo User
 
-**Data**: 2025-01-11  
 **Versione PHPStan**: 1.12.x  
 **Livello**: max  
 **Status**: ✅ NAMESPACE ORDERING FIXATO

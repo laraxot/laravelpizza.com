@@ -1,129 +1,372 @@
-# Testing Documentation — GDPR Module
+# Testing Documentation
 
-## Three Fundamental Rules
+## Overview
 
-### 1. MySQL only — NEVER SQLite
-
-The project uses **multiple named database connections** (`user`, `gdpr`, `xot`, `tenant`, etc.).
-SQLite cannot replicate this multi-connection topology. MySQL from `.env.testing` guarantees
-the same engine, charset, collation, and foreign-key behaviour as production, avoiding
-false positives/negatives that SQLite would introduce (e.g. missing `ENUM` support, different
-`GROUP BY` semantics, no real foreign-key enforcement by default).
-
-### 2. DatabaseTransactions — NEVER RefreshDatabase
-
-`RefreshDatabase` drops and recreates every table on each test class. On MySQL with dozens
-of module migrations this is **extremely slow** and **destroys seed data** that other modules
-may rely on. `DatabaseTransactions` wraps each test in a transaction and rolls back at the
-end, giving perfect isolation with near-zero overhead.
-
-### 3. Generic `php artisan migrate` — no `--force`, no `--database`
-
-Laraxot auto-discovers migrations from **all modules** via their ServiceProviders.
-A generic `php artisan migrate` runs them in the correct dependency order
-(Xot → Tenant → User → Gdpr → …). This is critical because:
-
-- **Cross-module dependencies**: Gdpr tables reference `users` (from User module).
-  Running `--database=gdpr` alone would miss the `users` table creation.
-- **No `--force`**: `APP_ENV=testing` is not `"production"`, so Laravel allows
-  migrations without `--force`. Using `--force` is unnecessary and masks environment
-  misconfiguration.
-- **Single source of truth**: the framework's migration discovery is the canonical
-  ordering. Manually specifying modules duplicates logic and breaks when new modules
-  are added.
+This document provides testing guidelines and examples for the GDPR module in Laraxot.
 
 ## Test Structure
+
+### Directory Structure
 
 ```
 Modules/Gdpr/tests/
 ├── Feature/
-│   ├── RegisterWidgetTest.php     # Registration flow + Action classes
-│   ├── GdprBusinessLogicTest.php  # Consent/Treatment/Event CRUD
-│   └── ConflictResolutionTest.php # Conflict resolution logic
+│   ├── (feature tests)
 ├── Unit/
-│   └── Models/                    # Model unit tests
-├── TestCase.php                   # Base test case (see rules above)
-└── Pest.php                       # Pest config and custom expectations
+│   └── (unit tests)
+├── TestCase.php
+└── Pest.php
 ```
 
-## TestCase Configuration
+### Test Files
+
+- **TestCase.php** - Base test case with database configuration
+- **Pest.php** - Pest configuration and extensions
+- **Feature/** - Feature tests for GDPR functionality
+- **Unit/** - Unit tests for GDPR components
+
+## Testing Configuration
+
+### TestCase Configuration
+
+The GDPR TestCase extends the base testing configuration and provides:
+- Database connection setup
+- Module-specific configuration
+- Test environment setup
+
+### Database Configuration
+
+GDPR module uses the following database connections:
+- `gdpr` - Main GDPR module connection
+- `mysql` - Default connection
+- All connections configured to use test database
+
+## Testing Best Practices
+
+### 1. Database Transactions
+
+Use database transactions for test isolation:
 
 ```php
-abstract class TestCase extends BaseTestCase
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+```
+
+### 2. Test Isolation
+
+Each test should be independent:
+
+```php
+protected function tearDown(): void
 {
-    use CreatesApplication;
-    use DatabaseTransactions;  // NOT RefreshDatabase
-
-    protected static bool $migrated = false;
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        if (! self::$migrated) {
-            $this->artisan('migrate');  // Generic, no --force, no --database
-            self::$migrated = true;
-        }
-    }
+    parent::tearDown();
+    // Clean up test data
 }
 ```
 
-The `$migrated` static flag ensures migrations run only once per test suite execution,
-not once per test class.
+### 3. Module Configuration
 
-## Running Tests
+Configure GDPR-specific settings:
+
+```php
+protected function setUp(): void
+{
+    parent::setUp();
+    
+    // Configure GDPR module
+    config(['gdpr.default_retention_days' => 30]);
+    config(['gdpr.anonymization_enabled' => true]);
+}
+```
+
+## Test Examples
+
+### Basic GDPR Test
+
+```php
+test('gdpr request can be created', function () {
+    $request = \Modules\Gdpr\Models\GdprRequest::create([
+        'type' => 'data_deletion',
+        'email' => 'test@example.com',
+        'status' => 'pending',
+        'data' => ['key' => 'value'],
+    ]);
+    
+    expect($request)->toBeInstanceOf(\Modules\Gdpr\Models\GdprRequest::class);
+    expect($request->type)->toBe('data_deletion');
+});
+```
+
+### Configuration Test
+
+```php
+test('gdpr configuration is loaded', function () {
+    $gdprConfig = config('gdpr');
+    
+    expect($gdprConfig['default_retention_days'])->toBe(30);
+    expect($gdprConfig['anonymization_enabled'])->toBe(true);
+});
+```
+
+### Service Provider Test
+
+```php
+test('gdpr service provider is registered', function () {
+    $app = app();
+    
+    expect($app->bound(\Modules\Gdpr\Providers\GdprServiceProvider::class))->toBeTrue();
+});
+```
+
+## Testing Commands
+
+### Running Tests
 
 ```bash
-# From the laravel/ directory:
-
 # Run all GDPR module tests
 ./vendor/bin/pest Modules/Gdpr/tests
 
-# Run only the registration tests
-./vendor/bin/pest Modules/Gdpr/tests/Feature/RegisterWidgetTest.php
+# Run tests with coverage
+./vendor/bin/pest Modules/Gdpr/tests --coverage
 
-# Run with verbose output
+# Run tests with verbose output
 ./vendor/bin/pest Modules/Gdpr/tests --verbose
-
-# Run via artisan (uses phpunit.xml which includes Modules testsuite)
-php artisan test --testsuite=Modules
 ```
 
-## What RegisterWidgetTest Covers
-
-| Test | What it verifies |
-| ---- | ---------------- |
-| ValidateGdprConsentAction passes | Both privacy + terms accepted → no exception |
-| ValidateGdprConsentAction fails (privacy) | Missing privacy → ValidationException |
-| ValidateGdprConsentAction fails (terms) | Missing terms → ValidationException |
-| CollectGdprConsentsAction | Returns correct bool map |
-| ValidateUserDataAction | Hashes password, sets `customer_user` type |
-| SaveGdprConsentsAction | Creates Consent rows linked to Treatment records |
-| Full pipeline | Validate → Create user → Collect → Save consents |
-| Translation keys | All keys used in Blade views resolve (not raw key) |
-
-## Writing New Tests
-
-1. Use **Pest functional syntax** (`it()`, `test()`), never PHPUnit class-based
-2. Add `uses(TestCase::class)` at the top of each test file
-3. Use `User::factory()->create()` for test users
-4. Use `Treatment::firstOrCreate()` for treatments (idempotent)
-5. Use `uniqid()` in emails to avoid unique constraint collisions
-6. Never call `->label()`, `->placeholder()`, `->helperText()` in Filament components
-
-## Quality Checks
+### Quality Checks
 
 ```bash
-# PHPStan (use config from phpstan.neon, never pass --level)
-./vendor/bin/phpstan analyse Modules/Gdpr --memory-limit=-1
+# Run PHPStan on GDPR module
+./vendor/bin/phpstan analyze Modules/Gdpr
 
-# Pest with coverage
-./vendor/bin/pest Modules/Gdpr/tests --coverage
+# Run PHPMD on GDPR module
+./vendor/bin/phpmd Modules/Gdpr/src
+
+# Run PHPInsights on GDPR module
+./vendor/bin/phpinsights analyse Modules/Gdpr
 ```
 
-## Backlinks
+## Testing Issues and Solutions
 
-- [testing-rules.md](testing-rules.md) — Project-wide testing rules
-- [testcase-sqlite-to-mysql-fix.md](testcase-sqlite-to-mysql-fix.md) — Migration from SQLite to MySQL
-- [Themes/Meetup/docs/replikate/register.md](../../../Themes/Meetup/docs/replikate/register.md) — Register page design docs
+### 1. Configuration Issues
 
+**Problem**: GDPR configuration not loaded
+
+**Solution**: Ensure proper configuration in TestCase:
+
+```php
+protected function setUp(): void
+{
+    parent::setUp();
+    
+    config(['gdpr.default_retention_days' => 30]);
+    config(['gdpr.anonymization_enabled' => true]);
+}
+```
+
+### 2. Database Issues
+
+**Problem**: Database connection issues
+
+**Solution**: Configure database connections properly:
+
+```php
+protected function createApplication()
+{
+    $app = parent::createApplication();
+    
+    $app['config']->set([
+        'database.connections.gdpr.database' => 'quaeris_data_test',
+    ]);
+    
+    return $app;
+}
+```
+
+## Testing Goals
+
+### Coverage Requirements
+
+- Aim for 100% code coverage
+- Test all public methods
+- Test all edge cases
+- Test all error scenarios
+
+### Performance Requirements
+
+- Tests should run in <200ms each
+- Use database transactions for isolation
+- Optimize database queries
+- Minimize test data
+
+### Quality Requirements
+
+- All tests must pass PHPStan level 9+
+- All tests must follow DRY, KISS, SOLID principles
+- All tests must be maintainable
+- All tests must be robust
+
+## Testing Workflow
+
+### 1. Setup Phase
+
+1. Configure testing environment
+2. Set up database connections
+3. Install testing dependencies
+4. Verify configuration
+
+### 2. Development Phase
+
+1. Write tests for new features
+2. Update existing tests
+3. Add regression tests
+4. Maintain test coverage
+
+### 3. Quality Assurance
+
+1. Run tests
+2. Run quality checks
+3. Fix any issues
+4. Update documentation
+
+### 4. Deployment Phase
+
+1. Ensure all tests pass
+2. Verify coverage requirements
+3. Update documentation
+4. Commit changes
+
+## Testing Documentation
+
+### Module Documentation
+
+- Update this file when adding new tests
+- Document any special testing requirements
+- Add examples for new test types
+- Keep documentation current
+
+### Root Documentation
+
+- Update root documentation when module testing changes
+- Add backlinks to this file
+- Keep documentation consistent
+- Update troubleshooting guides
+
+## Testing Resources
+
+### External Resources
+
+- [Laravel 12.x Testing Documentation](https://laravel.com/docs/12.x/testing)
+- [Pest Installation Guide](https://pestphp.com/docs/installation)
+- [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
+
+### Internal Resources
+
+- [Testing Setup Guide](../../docs/testing-setup.md)
+- [Testing Best Practices](../../docs/testing-best-practices.md)
+- [Troubleshooting Guide](../../docs/troubleshooting.md)
+
+## Testing Examples
+
+### Model Tests
+
+```php
+test('gdpr request can be created', function () {
+    $request = \Modules\Gdpr\Models\GdprRequest::create([
+        'type' => 'data_deletion',
+        'email' => 'test@example.com',
+        'status' => 'pending',
+        'data' => ['key' => 'value', 'request_id' => 'test123'],
+        'ip_address' => '127.0.0.1',
+        'user_agent' => 'Test Agent',
+        'created_at' => now(),
+    ]);
+    
+    expect($request)->toBeInstanceOf(\Modules\Gdpr\Models\GdprRequest::class);
+    expect($request->type)->toBe('data_deletion');
+    expect($request->email)->toBe('test@example.com');
+    expect($request->status)->toBe('pending');
+    expect($request->data)->toBe(['key' => 'value', 'request_id' => 'test123']);
+    expect($request->ip_address)->toBe('127.0.0.1');
+    expect($request->user_agent)->toBe('Test Agent');
+});
+```
+
+### Service Tests
+
+```php
+test('gdpr service can process data deletion request', function () {
+    $service = new \Modules\Gdpr\Services\GdprService();
+    
+    $request = $service->processDataDeletion([
+        'email' => 'test@example.com',
+        'data' => ['key' => 'value'],
+    ]);
+    
+    expect($request)->toBeInstanceOf(\Modules\dpr\Models\GdprRequest::class);
+    expect($request->type)->toBe('data_deletion');
+    expect($request->status)->toBe('processed');
+});
+```
+
+### API Tests
+
+```php
+test('gdpr api can create data deletion request', function () {
+    $requestData = [
+        'email' => 'test@example.com',
+        'data' => ['key' => 'value'],
+    ];
+    
+    $response = $this->post('/api/gdpr/data-deletion', $requestData);
+    $response->assertStatus(201);
+    $response->assertJson([
+        'type' => 'data_deletion',
+        'email' => 'test@example.com',
+        'status' => 'pending',
+    ]);
+});
+```
+
+## Testing Checklist
+
+### Before Writing Tests
+
+- [ ] Understand the feature to test
+- [ ] Review existing tests
+- [ ] Plan test scenarios
+- [ ] Prepare test data
+
+### While Writing Tests
+
+- [ ] Use descriptive test names
+- [ ] Use proper assertions
+- [ ] Clean up test data
+- [ ] Document tests
+
+### After Writing Tests
+
+- [ ] Run tests
+- [ ] Check coverage
+- [ ] Run quality checks
+- [ ] Update documentation
+
+### Before Committing
+
+- [ ] All tests pass
+- [ ] Coverage requirements met
+- [ ] Quality checks pass
+- [ ] Documentation updated
+
+## Testing Conclusion
+
+Following these guidelines will ensure your GDPR module tests are:
+- Fast and reliable
+- Maintainable and scalable
+- Comprehensive and thorough
+- Consistent and robust
+
+Remember: Good tests are the foundation of reliable software development.
+
+---
+
+*

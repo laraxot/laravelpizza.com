@@ -1,6 +1,5 @@
 # Homepage Alignment Completato - Locale vs Produzione
 
-**Data**: 2025-01-22
 **Status**: ✅ Completato
 **Scopo**: Documentare le correzioni applicate per allineare la homepage locale a quella di produzione
 

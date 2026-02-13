@@ -276,5 +276,5 @@ new class extends Component {
 
 ---
 
-**Last Updated**: November 28, 2025
+
 **Focus**: Front office implementation using Folio + Volt (no traditional controllers/routes)

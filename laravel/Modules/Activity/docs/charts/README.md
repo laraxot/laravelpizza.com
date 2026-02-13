@@ -1,7 +1,6 @@
 # 📊 Activity Charts - Filament Widget Integration
 
 **Modulo**: Activity
-**Data**: 2025-12-09
 **Versione Filament**: 4.x
 **Status**: ✅ Production Ready
 

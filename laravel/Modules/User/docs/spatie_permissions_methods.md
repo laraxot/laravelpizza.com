@@ -485,5 +485,4 @@ $user->assignRole(Role::findByName('admin', 'web'));
 ---
 
 **Autore**: Claude Code
-**Data**: 2025-10-15
 **Versione**: 1.0.0

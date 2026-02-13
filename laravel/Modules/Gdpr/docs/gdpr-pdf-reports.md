@@ -831,7 +831,7 @@ public function generateWithErrorHandling(array $options = []): string
 
 ---
 
-**Last Updated:** 2025-12-09
+**
 **Version:** 1.0.0
 **HTML2PDF Version:** 5.2.x
 **PHPStan Level:** 10 ✅

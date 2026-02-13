@@ -1,6 +1,5 @@
 # AddressSection - Filosofia del Componente Riutilizzabile
 
-**Data**: 2025-12-12
 **Modulo**: Geo
 **Status**: 📚 **DOCUMENTAZIONE**
 

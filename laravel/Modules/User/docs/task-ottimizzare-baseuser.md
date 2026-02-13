@@ -3,7 +3,6 @@
 **Modulo**: User
 **Priorita'**: Bassa
 **Completamento**: 60%
-**Data**: 2026-01-30
 
 ---
 

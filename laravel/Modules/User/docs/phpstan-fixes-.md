@@ -43,7 +43,6 @@
 
 ### 2. BaseUser.php - Aggiunta Metodi Teams e Tenants
 
-**Data**: 1 Ottobre 2025 (sera)
 **Autore**: Utente
 
 Aggiunti metodi per gestione Teams e Tenants:

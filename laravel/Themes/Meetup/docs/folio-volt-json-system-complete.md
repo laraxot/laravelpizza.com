@@ -1,6 +1,5 @@
 # Sistema Completo Folio + Volt + JSON
 
-**Data**: 2025-01-22
 **Status**: ✅ Documentazione Critica Completa
 **Scopo**: Documentazione completa del sistema Folio + Volt + JSON per pagine dinamiche
 

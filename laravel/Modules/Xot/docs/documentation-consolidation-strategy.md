@@ -189,7 +189,7 @@ mv Modules/Xot/docs/archive/merge-conflict-resolution-2025-11-04.md \
 ### 4. Cross-Module References
 ```markdown
 <!-- ❌ WRONG -->
-See /var/www/.../Modules/Xot/docs/xotbase-rules.md
+See Modules/Xot/docs/xotbase-rules.md
 
 <!-- ✅ CORRECT -->
 See [XotBase Rules](../../Xot/docs/xotbase-rules.md)

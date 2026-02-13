@@ -43,6 +43,20 @@
 - Rimuovere `getPages()` se contiene solo route standard
 - `getFormSchema()` deve restituire array associativo con chiavi stringhe
 
+## Composer autoload-dev per moduli (OBBLIGATORIO)
+
+Ogni modulo deve avere nel proprio `composer.json`, **subito dopo il nodo `autoload`**, il nodo `autoload-dev`:
+
+```json
+"autoload-dev": {
+    "psr-4": {
+        "Modules\\<Modulo>\\Tests\\": "tests/"
+    }
+},
+```
+
+Perché: le classi di test devono essere autoloadabili con namespace `Modules\<Modulo>\Tests\*`. Senza questo nodo PHPUnit/Pest non risolvono le classi. `autoload-dev` viene caricato solo in dev.
+
 ## XotBaseListRecords
 - Rimuovere `Actions()` se restituisce solo `createAction`
 - `getTableColumns()` deve restituire array associativo con chiavi stringhe

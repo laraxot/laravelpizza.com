@@ -34,6 +34,7 @@ class BelongsToAction
          */
 
         if (! Arr::isAssoc($relationDTO->data) && \count($relationDTO->data) === 1) {
+            /** @phpstan-ignore-next-line argument.unresolvableType */
             $related_id = Arr::first($relationDTO->data);
             if ($related_id === null) {
                 return;

@@ -238,5 +238,4 @@ public function toPersonSchemaWithOrganization(): array
 
 ---
 
-**Created**: 2026-02-10
 **Updated**: 2026-02-10 (Enhanced with comprehensive research)

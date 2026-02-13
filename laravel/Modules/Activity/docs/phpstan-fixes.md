@@ -222,7 +222,6 @@ Il modulo utilizza Filament per fornire interfacce amministrative per:
 - [Filament Resources Documentation](./filament-resources.md)
 # PHPStan Analysis Report for Activity Module
 
-**Date:** December 23, 2025
 
 **Outcome:**
 The `Activity` module has been analyzed with PHPStan (as part of a full `Modules` directory scan), and **no errors were found**. This indicates that the module currently adheres to the project's PHPStan configuration and coding standards.

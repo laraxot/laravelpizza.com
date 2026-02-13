@@ -1,6 +1,5 @@
 # Fix view:cache - Errore pub_theme::ui.logo
 
-**Data**: 2025-01-22
 **Status**: ✅ Risolto
 **Comando**: `php artisan view:cache`
 

@@ -1,6 +1,5 @@
 # Compatibilità Filament 4.x - Modulo Xot
 
-**Data**: 2025-01-27
 **Status**: ✅ IN CORSO
 **Versione Filament**: 4.0.17
 

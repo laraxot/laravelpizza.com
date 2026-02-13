@@ -1,6 +1,5 @@
 # BaseUser Refactoring - Completato
 
-**Data**: 15 Ottobre 2025  
 **File**: `Modules/User/app/Models/BaseUser.php`  
 **Stato**: ✅ COMPLETATO
 

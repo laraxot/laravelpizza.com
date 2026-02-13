@@ -1,6 +1,5 @@
 # Completamento Dashboard.php - Modulo Meetup
 
-**Data**: 2026-01-09  
 **Status**: ✅ **COMPLETATO**
 
 ---

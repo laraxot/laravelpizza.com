@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace LaraZeus\SpatieTranslatable\Resources\Pages\ViewRecord\Concerns;
 
 use Filament\Resources\Pages\ViewRecord;
@@ -9,6 +7,8 @@ use Illuminate\Support\Arr;
 use LaraZeus\SpatieTranslatable\Resources\Concerns\HasActiveLocaleSwitcher;
 use LaraZeus\SpatieTranslatable\Resources\Pages\Concerns\HasTranslatableFormWithExistingRecordData;
 use LaraZeus\SpatieTranslatable\Resources\Pages\Concerns\HasTranslatableRecord;
+use RuntimeException;
+use Throwable;
 
 trait Translatable
 {
@@ -17,13 +17,13 @@ trait Translatable
     use HasTranslatableRecord;
 
     /**
-     * @throws \Throwable
+     * @throws Throwable
      */
     public function bootTranslatable(): void
     {
         throw_unless(
             is_subclass_of(static::class, ViewRecord::class),
-            new \RuntimeException('dont use the trait "'.Translatable::class.'" with "'.static::class.'"')
+            new RuntimeException('dont use the trait "' . Translatable::class . '" with "' . static::class . '"')
         );
 
         $this->activeLocale = $this->getStoredActiveLocale()

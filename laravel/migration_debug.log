@@ -8,3 +8,9 @@ MIGRATING profiles | CONN: user | DB: laravelpizza_user_test | EXISTS: YES
 MIGRATING tenant_user | CONN: user | DB: laravelpizza_user_test | EXISTS: YES
 MIGRATING profiles | CONN: user | DB: laravelpizza_data | EXISTS: YES
 MIGRATING tenant_user | CONN: user | DB: laravelpizza_data | EXISTS: NO
+MIGRATING profiles | CONN: user | DB: laravelpizza_data | EXISTS: YES
+MIGRATING tenant_user | CONN: user | DB: laravelpizza_data | EXISTS: YES
+MIGRATING profiles | CONN: user | DB: laravelpizza_data | EXISTS: YES
+MIGRATING tenant_user | CONN: user | DB: laravelpizza_data | EXISTS: YES
+MIGRATING profiles | CONN: user | DB: laravelpizza_data | EXISTS: YES
+MIGRATING tenant_user | CONN: user | DB: laravelpizza_data | EXISTS: YES

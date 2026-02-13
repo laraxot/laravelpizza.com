@@ -203,5 +203,4 @@ class ExamplePage extends XotBasePage
 ---
 
 **Versione**: 1.0
-**Data**: 2025-08-07
 **Applicabilità**: Tutti i file Filament del modulo Media

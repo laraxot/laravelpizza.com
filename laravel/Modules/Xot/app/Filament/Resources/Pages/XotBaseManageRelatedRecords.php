@@ -12,5 +12,5 @@ use Modules\Xot\Filament\Traits\HasXotTable;
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
-    //use HasXotTable;
+    // use HasXotTable;
 }

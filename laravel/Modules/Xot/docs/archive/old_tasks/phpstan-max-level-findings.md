@@ -1,6 +1,5 @@
 # PHPStan MAX Level Findings - Xot Module
 
-**Data**: 2025-10-10  
 **Livello**: MAX (9)  
 **Modulo**: Xot
 

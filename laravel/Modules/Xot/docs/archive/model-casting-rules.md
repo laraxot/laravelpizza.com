@@ -122,9 +122,9 @@ protected function casts(): array
 
 ### File con Errori Trovati: 20
 
-1. `/Themes/Meetup/Main_files/filament-peek-demo/app/Models/Post.php`
-2. `/Themes/Meetup/Main_files/filament-peek-demo/app/Models/User.php`
-3. `/Themes/Meetup/Main_files/filament-peek-demo/app/Models/Menu.php`
+1. `/Themes/Two/Main_files/filament-peek-demo/app/Models/Post.php`
+2. `/Themes/Two/Main_files/filament-peek-demo/app/Models/User.php`
+3. `/Themes/Two/Main_files/filament-peek-demo/app/Models/Menu.php`
 4. `/Modules/Notify/app/Models/NotificationTemplate.php`
 5. `/Modules/Notify/app/Models/MailTemplateVersion.php`
 6. `/Modules/Notify/app/Models/MailTemplateLog.php`
@@ -158,7 +158,7 @@ protected function casts(): array
 - [ ] `Modules/Geo/app/Models/BaseMorphPivot.php`
 
 ### Fase 2: Modelli Core (ALTO)
-- [ ] `Themes/Meetup/Main_files/filament-peek-demo/app/Models/User.php`
+- [ ] `Themes/Two/Main_files/filament-peek-demo/app/Models/User.php`
 - [ ] `Modules/Notify/app/Models/NotificationTemplate.php`
 - [ ] `Modules/Xot/app/Models/InformationSchemaTable.php`
 

@@ -26,12 +26,12 @@ jobs:
         with:
           node-version: '22'
           cache: 'npm'
+          cache-dependency-path: laravel/Themes/Meetup/package-lock.json
 
-      - name: Install Node Dependencies
+      - name: Install Dependencies
         working-directory: laravel/Themes/Meetup
-        run: npm install
+        run: npm ci
 
       - name: Build Assets
         working-directory: laravel/Themes/Meetup
         run: npm run build && npm run copy
-

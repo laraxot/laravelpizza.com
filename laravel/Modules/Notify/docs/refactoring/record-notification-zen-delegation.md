@@ -1,6 +1,5 @@
 # Refactoring RecordNotification - Zen Delegation Pattern
 
-**Data**: 19 Dicembre 2025  
 **Stato**: ✅ Implementato  
 **Motivazione**: Zen Delegation, DRY assoluto, SRP
 

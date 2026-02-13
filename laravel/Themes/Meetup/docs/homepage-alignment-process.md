@@ -1,6 +1,5 @@
 # Processo di Allineamento Homepage - Documentazione Completa
 
-**Data**: 2025-01-22
 **Status**: ✅ Completato
 **Scopo**: Documentare il processo completo di allineamento della homepage locale con quella di produzione, inclusi screenshot e spiegazioni dettagliate
 

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
-use Tests\TestCase;
+use Modules\Notify\Tests\TestCase;
 
 uses(TestCase::class);
 
