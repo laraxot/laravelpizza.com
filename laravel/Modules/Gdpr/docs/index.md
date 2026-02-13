@@ -131,8 +131,162 @@ $gdprService->deleteUserAccount($user);
 - [Notify Module](../Notify/docs/index.md) - Notification system
 - [Xot Module](../Xot/docs/index.md) - Core base classes
 
+## Database Testing Configuration
+
+**CRITICAL: .env.testing Configuration Rules**
+
+The `.env.testing` file must be a **COPY CARBON** of `.env` with **ONLY "_test"** added to database names.
+
+❌ **NEVER invent new environment variables like**:
+```bash
+NOTIFY_DB_DATABASE=laravelpizza_data_test  # WRONG!
+GDPR_DB_DATABASE=laravelpizza_data_test    # WRONG!
+```
+
+✅ **CORRECT approach**:
+```bash
+# If .env has:
+DB_DATABASE=laravelpizza_data
+
+# Then .env.testing has:
+DB_DATABASE=laravelpizza_data_test  # Only add "_test"!
+```
+
+See [Database Testing Configuration](./database-testing-configuration.md) for complete details.
+
+## Testing Guidelines
+
+### CRITICAL: NEVER Force Database Connections in Tests
+
+**❌ WRONG PATTERN** (NEVER DO THIS):
+```php
+// This is COMPLETELY WRONG - it destroys the dynamic configuration system
+config(['database.connections.notify' => config('database.connections.mysql')]);
+config(['database.connections.geo' => config('database.connections.mysql')]);
+config(['database.connections.media' => config('database.connections.mysql')]);
+// ... etc for all modules
+```
+
+**Why it's wrong:**
+1. Destroys the dynamic configuration managed by `TenantServiceProvider`
+2. Ignores environment-specific configurations (.env.testing)
+3. Violates Laraxot architecture principles
+4. Breaks module isolation and multi-database support
+
+**✅ CORRECT PATTERN:**
+```php
+// Just use Pest's HTTP helpers - let TenantServiceProvider manage connections
+it('renders the registration page', function () {
+    get('/en/auth/register')
+        ->assertStatus(200)
+        ->assertSee('Create Your FREE Account');
+});
+
+it('allows user registration', function () {
+    post('/en/auth/register', [
+        'first_name' => 'John',
+        'email' => 'john@example.com',
+        'password' => 'Password123!',
+        'password_confirmation' => 'Password123!',
+        'privacy_accepted' => '1',
+        'terms_accepted' => '1',
+    ])
+        ->assertStatus(302);
+});
+```
+
+**Key Points:**
+- Use Pest's `get()` and `post()` helpers directly
+- Never call `config()` to modify database connections in tests
+- Database connections are managed automatically by TenantServiceProvider
+- Test database names are configured in `.env.testing` (suffixed with `_test`)
+- All modules use `php artisan migrate` for test setup - no per-module migrations
+
+**Environment Configuration (.env.testing):**
+- `.env.testing` is a COPY of `.env` with ONLY `_test` suffix added to database names
+- DO NOT invent new database variables (NOTIFY_DB, GEO_DB, etc.) - they don't exist in .env
+- Only databases defined in .env get `_test` suffix (e.g., `DB_DATABASE` → `DB_DATABASE_test`)
+- Module connections (notify, geo, media, etc.) are created automatically by TenantServiceProvider
+
+### CRITICAL: TestCase setUp() MUST NOT Duplicate Database Configuration
+
+**❌ WRONG PATTERN** (NEVER DO THIS in TestCase setUp()):
+```php
+protected function setUp(): void
+{
+    parent::setUp();
+
+    // ❌ COMPLETAMENTE SBAGLIATO!
+    // CreatesApplication::createApplication() lo fa già!
+    config(['database.connections.notify' => config('database.connections.mysql')]);
+    config(['database.connections.geo' => config('database.connections.mysql')]);
+    config(['database.connections.media' => config('database.connections.mysql')]);
+    // ... ecc per tutti i moduli
+
+    // ❌ Anche questo è ridondante!
+    \Illuminate\Support\Facades\DB::purge('notify');
+    \Illuminate\Support\Facades\DB::purge('mysql');
+
+    if (! self::$migrated) {
+        $this->artisan('migrate:fresh', ['--force' => true]);
+        $this->artisan('module:migrate', ['--force' => true]);
+        self::$migrated = true;
+    }
+}
+```
+
+**✅ CORRECT PATTERN** (TestCase setUp() clean and simple):
+```php
+protected function setUp(): void
+{
+    parent::setUp();
+
+    config(['xra.pub_theme' => 'Meetup']);
+    config(['xra.main_module' => 'User']);
+
+    \Modules\Xot\Datas\XotData::make()->update([
+        'pub_theme' => 'Meetup',
+        'main_module' => 'User',
+    ]);
+
+    if (! self::$migrated) {
+        $this->artisan('migrate:fresh', ['--force' => true]);
+        $this->artisan('module:migrate', ['--force' => true]);
+        self::$migrated = true;
+    }
+}
+```
+
+**Why this is critical:**
+1. `CreatesApplication` trait already configures ALL module connections automatically
+2. Duplicating causes conflicts and initialization problems
+3. Can cause errors like "Call to a member function connection() on null"
+4. Violates DRY principle
+
+**What CreatesApplication does automatically:**
+```php
+// In Modules/Xot/tests/CreatesApplication.php
+$moduleConnections = [
+    'user', 'notify', 'geo', 'media', 'job', 'xot',
+    'activity', 'cms', 'gdpr', 'lang', 'meetup', 'seo', 'tenant',
+];
+
+foreach ($moduleConnections as $connection) {
+    $app['config']->set("database.connections.{$connection}", $defaultConfig);
+}
+```
+
+All module connections are automatically mapped to the test MySQL connection defined in `.env.testing`.
+
 ## Recent Fixes
 - [RegisterWidget Fix (2026-02-13)](./register-widget-fix-2026-02-13.md) - Fixed registration form rendering and two-column layout
+- [Register Page UI/UX Improvements (2026-02-13)](../Themes/Meetup/docs/register-page-improvements.md) - Complete overhaul with enhanced UI/UX, WCAG 2.2 AAA, SEO, and clickbait marketing
+
+## Translation & Localization
+- [Multi-Language Translation Guidelines](./multi-language-translation-guidelines.md) - Comprehensive guide for implementing and maintaining multi-language translations
+
+## Marketing & Conversion
+- [Clickbait Marketing Best Practices](../Themes/Meetup/docs/clickbait-marketing-best-practices.md) - Ethical clickbait techniques for conversion optimization
 
 ## Troubleshooting
 Common issues and solutions:
@@ -140,3 +294,5 @@ Common issues and solutions:
 - Data export format issues
 - Account deletion complications
 - Privacy policy version management
+- Hardcoded strings in multilingual sites
+- Translation key inconsistencies

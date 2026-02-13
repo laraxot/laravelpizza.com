@@ -126,6 +126,28 @@ npm run copy   # Copy assets to public_html
 3. Run `npm run copy` to publish to `public_html/themes/Meetup/`
 4. **IMPORTANT**: Without `npm run build` and `npm run copy`, changes are NOT visible!
 
+### Database Testing Configuration (CRITICAL)
+
+**NEVER invent environment variables in `.env.testing`!**
+
+The `.env.testing` file must be a **COPY CARBON** of `.env` with **ONLY "_test"** added to database names.
+
+❌ **WRONG**:
+```bash
+GDPR_DB_DATABASE=laravelpizza_gdpr_test  # Do NOT invent variables!
+```
+
+✅ **CORRECT**:
+```bash
+# If .env has:
+DB_DATABASE=laravelpizza_data
+
+# Then .env.testing has:
+DB_DATABASE=laravelpizza_data_test  # Only add "_test"!
+```
+
+See [Database Testing Configuration](./database-testing-configuration.md) for complete details.
+
 ### Configuration
 ```javascript
 // vite.config.js
