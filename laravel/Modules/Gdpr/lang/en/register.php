@@ -11,19 +11,36 @@ return [
         'submitting' => 'Setting up your oven...',
     ],
 
-    // === BENEFITS ===
+    // === STATS ===
+    'stats' => [
+        'active_developers' => 'Active Developers',
+        'monthly_meetups' => 'Monthly Meetups',
+        'community_support' => 'Community Support',
+    ],
+
+    // === FORM ===
+    'form' => [
+        'cta_title' => 'Create Your FREE Account',
+        'cta_subtitle' => 'No credit card required - 100% FREE forever!',
+        'terms_notice' => 'By registering you agree to our Terms and Privacy Policy',
+    ],
+
+    // === BENEFITS CTA ===
     'benefits' => [
         'community' => [
             'title' => '5,000+ Developer Community',
             'description' => 'Connect with Laravel professionals and enthusiasts worldwide',
+            'cta' => 'FREE access immediately after signup',
         ],
         'tutorials' => [
             'title' => 'Exclusive Tutorials & Workshops',
             'description' => 'Priority access to premium content and training',
+            'cta' => 'Worth €997/year - FREE for members',
         ],
         'networking' => [
             'title' => 'Networking & Career',
             'description' => 'Collaboration opportunities and professional growth',
+            'cta' => 'Get hired by top Laravel companies',
         ],
     ],
 
@@ -99,8 +116,35 @@ return [
     // === MESSAGES ===
     'already_registered' => 'Already have an account?',
     'login' => 'Sign in',
-    'success' => 'Registration completed successfully! Your account has been created in compliance with GDPR.',
-    'success_message' => 'Welcome to LaravelPizza Meetups! Your registration is complete and all your consents have been properly recorded.',
+    'required_consent_missing' => 'You must accept all required consents to proceed.',
+    'success' => 'Registration completed successfully! Your account has been created GDPR compliant.',
+    'success_message' => 'Welcome to LaravelPizza Meetups! Your registration is complete and all your consents have been correctly recorded.',
     'error' => 'Registration error',
     'error_message' => 'An error occurred during registration. Please try again later. If the problem persists, contact our support.',
+
+    // === CLICKBAIT & MARKETING ===
+    'clickbait' => [
+        'active_developers' => 'Active Developers',
+        'monthly_meetups' => 'Monthly Meetups',
+        'community_support' => 'Community Support',
+        'free_access' => 'FREE access immediately after signup',
+        'worth_free' => 'Worth €997/year - FREE for members',
+        'get_hired' => 'Get hired by top Laravel companies',
+        'join_now' => 'Join NOW before registration closes!',
+        'create_account' => 'Create Your FREE Account',
+        'no_card_required' => 'No credit card required - 100% FREE forever!',
+        'by_registering' => 'By registering you agree to our Terms and Privacy Policy',
+    ],
+
+    // === SEO KEYWORDS ===
+    'seo' => [
+        'description' => 'Join 5,000+ Laravel developers for exclusive meetups, premium tutorials, and networking. Free access to workshops and community events.',
+        'laravel_meetup' => 'Laravel meetup',
+        'laravel_community' => 'Laravel community',
+        'php_developer_community' => 'PHP developer community',
+        'laravel_tutorials' => 'Laravel tutorials',
+        'laravel_workshops' => 'Laravel workshops',
+        'laravel_networking' => 'Laravel networking',
+        'laravelpizza' => 'LaravelPizza',
+    ],
 ];

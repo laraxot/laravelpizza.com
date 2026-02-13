@@ -1,20 +1,6 @@
 <x-filament-widgets::widget>
     <x-filament::section>
         <form wire:submit="submit" class="space-y-6">
-            
-            <!-- Personal Information Section -->
-            <div class="space-y-5">
-                <div>
-                    <h2 class="text-lg font-bold text-white flex items-center gap-2">
-                        <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                        {{ __('gdpr::register.sections.user_info') }}
-                    </h2>
-                    <p class="mt-1 text-sm text-slate-400">
-                        {{ __('gdpr::register.sections.user_info_description') }}
-                    </p>
-                </div>
 
             <!-- Personal Information Section -->
             <div class="space-y-5">
@@ -319,15 +305,6 @@
                     </span>
                     <span wire:loading wire:target="submit">{{ __('gdpr::register.register.submitting') }}</span>
                 </button>
-
-                <!-- Login Link -->
-                <p class="text-center text-sm text-gray-600 dark:text-gray-400">
-                    {{ __('gdpr::register.already_registered') }}
-                    <a href="{{ route('login') }}" 
-                       class="font-semibold text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 rounded px-1">
-                        {{ __('gdpr::register.login') }}
-                    </a>
-                </p>
             </div>
 
         </form>
