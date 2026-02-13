@@ -39,6 +39,7 @@ class ValidateUserDataAction
                 app(SafeStringCastAction::class)->execute($formData['password']),
             ),
             'type' => 'customer_user',
+            'lang' => app()->getLocale(),
             'email_verified_at' => now(),
         ];
     }

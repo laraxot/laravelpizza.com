@@ -16,8 +16,8 @@ return new class() extends XotBaseMigration
             $table->bigIncrements('id');
             $table->string('log_name')->nullable();
             $table->text('description');
-            $table->nullableMorphs('subject', 'subject');
-            $table->nullableMorphs('causer', 'causer');
+            $table->nullableUuidMorphs('subject', 'subject');
+            $table->nullableUuidMorphs('causer', 'causer');
             $table->json('properties')->nullable();
             $table->index('log_name');
             $table->uuid('batch_uuid')->nullable();
@@ -27,7 +27,7 @@ return new class() extends XotBaseMigration
         $this->tableUpdate(function (Blueprint $table): void {
             // Ensure causer columns are nullable to allow console operations without an authenticated user
             if ($this->hasColumn('causer_id')) {
-                $table->unsignedBigInteger('causer_id')->nullable()->change();
+                $table->string('causer_id', 36)->nullable()->change()->index();
             }
             if ($this->hasColumn('causer_type')) {
                 $table->string('causer_type')->nullable()->change();
