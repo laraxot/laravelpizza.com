@@ -41,66 +41,60 @@ class RegisterWidget extends XotBaseWidget
 
     public bool $marketing_consent = false;
 
+    // Form fields for custom Blade view
+    #[Validate('required|string|min:2|max:255')]
+    public string $first_name = '';
+
+    #[Validate('required|string|min:2|max:255')]
+    public string $last_name = '';
+
+    #[Validate('required|email|max:255')]
+    public string $email = '';
+
+    #[Validate('required|string')]
+    public string $password = '';
+
+    #[Validate('required|string|same:password')]
+    public string $password_confirmation = '';
+
+    public bool $show_password = false;
+
     public static function canView(): bool
     {
         return ! Auth::check();
     }
 
-    public function mount(): void
+    protected function getView(): string
     {
-        $this->form->fill([]);
+        return 'filament.widgets.auth.register';
     }
 
-    #[\Override]
     public function getFormSchema(): array
     {
-        return [
-            'name_grid' => Grid::make(2)->schema([
-                'first_name' => TextInput::make('first_name')
-                    ->required()
-                    ->string()
-                    ->minLength(2)
-                    ->maxLength(255)
-                    ->autocomplete('given-name'),
-                'last_name' => TextInput::make('last_name')
-                    ->required()
-                    ->string()
-                    ->minLength(2)
-                    ->maxLength(255)
-                    ->autocomplete('family-name'),
-            ]),
-            'email' => TextInput::make('email')
-                ->required()
-                ->email()
-                ->maxLength(255)
-                // ->unique(User::class, 'email')
-                ->autocomplete('email'),
-            'password' => TextInput::make('password')
-                ->password()
-                ->required()
-                ->rule(PasswordData::make()->getPasswordRule())
-                ->autocomplete('new-password')
-                ->revealable()
-                ->confirmed(),
-            'password_confirmation' => TextInput::make('password_confirmation')
-                ->password()
-                ->required()
-                ->string()
-                ->autocomplete('new-password')
-                ->revealable()
-                ->dehydrated(false)
-                ->same('password'),
-        ];
+        // Not used - custom Blade view handles form rendering
+        return [];
     }
 
     public function submit(): void
     {
         try {
-            $formData = $this->form->getState();
+            // Validate form data using Livewire attributes
+            $this->validate();
+
+            // Validate GDPR consents
             app(ValidateGdprConsentAction::class)->execute(
                 $this->privacy_accepted,
                 $this->terms_accepted
             );
+
+            // Prepare form data
+            $formData = [
+                'first_name' => $this->first_name,
+                'last_name' => $this->last_name,
+                'email' => $this->email,
+                'password' => $this->password,
+                'password_confirmation' => $this->password_confirmation,
+            ];
 
             $validatedData = app(ValidateUserDataAction::class)->execute($formData);
             $this->logRegistrationAttempt($formData);
