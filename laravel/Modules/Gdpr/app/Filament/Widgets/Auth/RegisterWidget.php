@@ -48,7 +48,7 @@ class RegisterWidget extends XotBaseWidget
     #[Validate('required|string|min:2|max:255')]
     public string $last_name = '';
 
-    #[Validate('required|email|max:255|unique:'.User::class.',email')]
+    #[Validate('required|email|max:255|unique:user.users,email')]
     public string $email = '';
 
     #[Validate('required|string')]
@@ -77,44 +77,38 @@ class RegisterWidget extends XotBaseWidget
 
     public function submit(): void
     {
-        try {
-            // Validate form data using Livewire attributes
-            $this->validate();
+        // Validate form data using Livewire attributes
+        $this->validate();
 
-            // Validate GDPR consents
-            app(ValidateGdprConsentAction::class)->execute(
-                $this->privacy_accepted,
-                $this->terms_accepted
-            );
+        // Validate GDPR consents
+        app(ValidateGdprConsentAction::class)->execute(
+            $this->privacy_accepted,
+            $this->terms_accepted
+        );
 
-            // Prepare form data
-            $formData = [
-                'first_name' => $this->first_name,
-                'last_name' => $this->last_name,
-                'email' => $this->email,
-                'password' => $this->password,
-                'password_confirmation' => $this->password_confirmation,
-            ];
+        // Prepare form data
+        $formData = [
+            'first_name' => $this->first_name,
+            'last_name' => $this->last_name,
+            'email' => $this->email,
+            'password' => $this->password,
+            'password_confirmation' => $this->password_confirmation,
+        ];
 
-            $validatedData = app(ValidateUserDataAction::class)->execute($formData);
-            $this->logRegistrationAttempt($formData);
+        $validatedData = app(ValidateUserDataAction::class)->execute($formData);
+        $this->logRegistrationAttempt($formData);
 
-            $user = DB::connection('user')->transaction(function () use ($validatedData) {
-                $user = app(CreateUserAction::class)->execute($validatedData);
-                app(SaveGdprConsentsAction::class)->execute($user, app(CollectGdprConsentsAction::class)->execute($this->privacy_accepted, $this->terms_accepted, $this->marketing_consent));
-                app(LogRegistrationAction::class)->execute($user, [
-                    'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($this->privacy_accepted, $this->terms_accepted, $this->marketing_consent),
-                ]);
+        $user = DB::connection('user')->transaction(function () use ($validatedData) {
+            $user = app(CreateUserAction::class)->execute($validatedData);
+            app(SaveGdprConsentsAction::class)->execute($user, app(CollectGdprConsentsAction::class)->execute($this->privacy_accepted, $this->terms_accepted, $this->marketing_consent));
+            app(LogRegistrationAction::class)->execute($user, [
+                'gdpr_consents' => app(CollectGdprConsentsAction::class)->execute($this->privacy_accepted, $this->terms_accepted, $this->marketing_consent),
+            ]);
 
-                return $user;
-            });
+            return $user;
+        });
 
-            app(HandleSuccessfulRegistrationAction::class)->execute($user, $this);
-        } catch (ValidationException $e) {
-            throw $e;
-        } catch (\Exception $e) {
-            app(HandleRegistrationErrorAction::class)->execute($e, $this);
-        }
+        app(HandleSuccessfulRegistrationAction::class)->execute($user, $this);
     }
 
     protected function logRegistrationAttempt(array $formData): void

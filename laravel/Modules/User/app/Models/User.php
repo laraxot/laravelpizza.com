@@ -155,24 +155,4 @@ class User extends BaseUser
         return true;
     }
 
-    /**
-     * Give consent for a specific consent type.
-     *
-     * @param array<string, mixed> $metadata
-     */
-    public function giveConsent(string $consentType, array $metadata = []): void
-    {
-        // Create consent record
-        $consentData = [
-            'user_id' => $this->id,
-            'user_type' => static::class,
-            'type' => $consentType,
-            'accepted_at' => date('Y-m-d H:i:s'),
-            'created_by' => $this->id,
-            'updated_by' => $this->id,
-        ];
-
-        // Use DB to insert directly
-        DB::table('consents')->insert($consentData);
-    }
 }

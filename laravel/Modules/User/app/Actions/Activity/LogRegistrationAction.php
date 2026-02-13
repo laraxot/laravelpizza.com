@@ -19,8 +19,6 @@ class LogRegistrationAction
     public function execute(User $user, array $properties = []): void
     {
         activity()
-            ->causedBy($user)
-            ->performedOn($user)
             ->withProperties(array_merge([
                 'type' => $user->type,
                 'ip_address' => request()->ip(),
