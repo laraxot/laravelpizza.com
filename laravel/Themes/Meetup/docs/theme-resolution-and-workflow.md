@@ -25,14 +25,29 @@ Implementazione: `Modules\Tenant\Actions\GetTenantNameAction` (nome tenant da `c
 
 Dalla cartella **`laravel/Themes/Meetup`**:
 
-| Comando | Scopo |
-|--------|--------|
-| `composer update -W` | Aggiorna dipendenze PHP del tema |
-| `npm install` | Installa dipendenze Node |
-| `npm run build` | Genera CSS e JS (Vite/Tailwind) |
-| `npm run copy` | Pubblica asset in `public_html/themes/Meetup/` |
+### Per modifiche CSS/JS standard (99% dei casi)
+```bash
+npm run build && npm run copy
+```
 
-Dopo modifiche a CSS/JS o dipendenze frontend: eseguire **`npm run build`** e **`npm run copy`** prima di verificare in browser o in deploy.
+### Per setup iniziale o modifiche PHP nel tema
+```bash
+composer update -W
+npm install
+npm run build
+npm run copy
+```
+
+### Tabella comandi
+
+| Comando | Scopo | Quando usarlo |
+|--------|--------|---------------|
+| `composer update -W` | Aggiorna dipendenze PHP del tema | Setup iniziale o modifiche PHP in `app/` |
+| `npm install` | Installa dipendenze Node | Setup iniziale o modifiche a `package.json` |
+| `npm run build` | Genera CSS e JS (Vite/Tailwind) | **SEMPRE** dopo modifiche CSS/JS |
+| `npm run copy` | Pubblica asset in `public_html/themes/Meetup/` | **SEMPRE** dopo `npm run build` |
+
+**NOTA CRITICA**: Per semplici modifiche a `resources/css/app.css` o `resources/js/app.js`, è sufficiente solo `npm run build && npm run copy`. Il workflow completo (composer + npm install) è ridondante e spreca tempo.
 
 ## Approccio critico
 

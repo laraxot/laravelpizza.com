@@ -40,7 +40,8 @@
 
 7. **[Risoluzione tema e workflow](./theme-resolution-and-workflow.md)**
    - Catena: APP_URL → config tenant → xra.php → pub_theme → Themes/Meetup
-   - Workflow: composer update -W, npm install, npm run build, npm run copy
+   - **Per modifiche CSS/JS standard**: `npm run build && npm run copy`
+   - **Per setup iniziale o modifiche PHP**: `composer update -W`, `npm install`, `npm run build`, `npm run copy`
    - Regola agenti: `.cursor/rules/theme-resolution-critical.md`
 
 8. **[Filament 5 – riferimento tema](./filament-5-theme-reference.md)**
