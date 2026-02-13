@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Enums;
 
+use Modules\Xot\Traits\EnumTrait;
+
 /**
  * Schema.org EventStatusType enumeration.
  *
@@ -13,6 +15,8 @@ namespace Modules\Meetup\Enums;
  */
 enum EventStatus: string
 {
+    use EnumTrait;
+
     case SCHEDULED = 'EventScheduled';
     case CANCELLED = 'EventCancelled';
     case POSTPONED = 'EventPostponed';

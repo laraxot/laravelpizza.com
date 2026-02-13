@@ -58,4 +58,9 @@ return [
             'tooltip' => 'logout',
         ],
     ],
+    'fields' => [
+        'event_status' => [
+            'label' => 'event_status',
+        ],
+    ],
 ];

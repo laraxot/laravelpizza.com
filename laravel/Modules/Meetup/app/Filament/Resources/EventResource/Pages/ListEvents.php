@@ -56,16 +56,16 @@ class ListEvents extends XotBaseListRecords
                 ]),
             'event_status' => BadgeColumn::make('event_status')
                 ->colors([
-                    'success' => EventStatus::CONFIRMED->value,
-                    'warning' => EventStatus::SCHEDULED->value,
-                    'danger' => EventStatus::CANCELLED->value,
-                    'gray' => EventStatus::DRAFT->value,
+                    'success' => 'EventScheduled',
+                    'warning' => 'EventPostponed',
+                    'danger' => 'EventCancelled',
+                    'info' => 'EventRescheduled',
                 ]),
             'event_attendance_mode' => BadgeColumn::make('event_attendance_mode')
                 ->colors([
-                    'primary' => EventAttendanceMode::OFFLINE->value,
-                    'info' => EventAttendanceMode::ONLINE->value,
-                    'purple' => EventAttendanceMode::MIXED->value,
+                    'primary' => 'offline',
+                    'info' => 'online',
+                    'purple' => 'mixed',
                 ]),
             'attendees_count' => TextColumn::make('attendees_count')
                 ->numeric()
@@ -107,19 +107,20 @@ class ListEvents extends XotBaseListRecords
             SelectFilter::make('event_status')
                 ->label((string) __('meetup::event.event.filters.event_status.label'))
                 ->options([
-                    'confirmed' => __('meetup::event.event.filters.event_status.confirmed'),
-                    'scheduled' => __('meetup::event.event.filters.event_status.scheduled'),
-                    'cancelled' => __('meetup::event.event.filters.event_status.cancelled'),
-                    'postponed' => __('meetup::event.event.filters.event_status.postponed'),
+                    EventStatus::SCHEDULED->value => __('meetup::event.event.filters.event_status.scheduled'),
+                    EventStatus::CANCELLED->value => __('meetup::event.event.filters.event_status.cancelled'),
+                    EventStatus::POSTPONED->value => __('meetup::event.event.filters.event_status.postponed'),
+                    EventStatus::RESCHEDULED->value => __('meetup::event.event.filters.event_status.rescheduled'),
+                    EventStatus::MOVED_ONLINE->value => __('meetup::event.event.filters.event_status.moved_online'),
                 ])
                 ->multiple(),
 
             SelectFilter::make('event_attendance_mode')
                 ->label((string) __('meetup::event.event.filters.attendance_mode.label'))
                 ->options([
-                    'offline' => __('meetup::event.event.filters.attendance_mode.offline'),
-                    'online' => __('meetup::event.event.filters.attendance_mode.online'),
-                    'mixed' => __('meetup::event.event.filters.attendance_mode.mixed'),
+                    EventAttendanceMode::OFFLINE->value => __('meetup::event.event.filters.attendance_mode.offline'),
+                    EventAttendanceMode::ONLINE->value => __('meetup::event.event.filters.attendance_mode.online'),
+                    EventAttendanceMode::MIXED->value => __('meetup::event.event.filters.attendance_mode.mixed'),
                 ]),
 
             TernaryFilter::make('has_capacity')

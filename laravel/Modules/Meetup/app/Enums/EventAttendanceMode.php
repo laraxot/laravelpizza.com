@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Enums;
 
+use Modules\Xot\Traits\EnumTrait;
+
 /**
  * Schema.org EventAttendanceModeEnumeration.
  *
@@ -13,6 +15,8 @@ namespace Modules\Meetup\Enums;
  */
 enum EventAttendanceMode: string
 {
+    use EnumTrait;
+
     case OFFLINE = 'OfflineEventAttendanceMode';
     case ONLINE = 'OnlineEventAttendanceMode';
     case MIXED = 'MixedEventAttendanceMode';
