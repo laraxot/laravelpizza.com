@@ -62,7 +62,7 @@ name('register');
 
         <div class="relative z-10 px-3 py-6 md:px-4 md:py-8 lg:py-10">
             {{-- Centered single column layout --}}
-            <div class="max-w-2xl mx-auto space-y-6 md:space-y-8">
+            <div class="max-w-7xl mx-auto space-y-6 md:space-y-8">
                 
                 {{-- Header Section --}}
                 <header class="text-center">
@@ -82,25 +82,25 @@ name('register');
                     </p>
                 </header>
 
-                {{-- Trust Badges (no vanity numbers) --}}
+                {{-- Trust Badges (key value propositions) --}}
                 <section class="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4" aria-label="{{ __('gdpr::register.sections.trust_badges') }}">
                     <div class="flex items-center gap-3 bg-slate-800/60 border border-slate-700/40 rounded-xl p-3">
-                        <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-300" aria-hidden="true">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                        </div>
-                        <p class="text-sm text-slate-200 leading-snug">{{ __('gdpr::register.form.cta_title') }}</p>
-                    </div>
-                    <div class="flex items-center gap-3 bg-slate-800/60 border border-slate-700/40 rounded-xl p-3">
-                        <div class="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-300" aria-hidden="true">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.5 6.5a5.5 5.5 0 019 0L12 21l-4.5-9.5z" /></svg>
-                        </div>
-                        <p class="text-sm text-slate-200 leading-snug">{{ __('gdpr::register.form.cta_subtitle') }}</p>
-                    </div>
-                    <div class="flex items-center gap-3 bg-slate-800/60 border border-slate-700/40 rounded-xl p-3">
                         <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-300" aria-hidden="true">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.1 0-2 .9-2 2 0 1.5 2 4 2 4s2-2.5 2-4c0-1.1-.9-2-2-2zm0 6h0m-6 2h12a2 2 0 002-2V8a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" /></svg>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                         </div>
-                        <p class="text-sm text-slate-200 leading-snug">{{ __('gdpr::register.form.terms_notice') }}</p>
+                        <p class="text-sm text-slate-200 leading-snug">{{ __('gdpr::register.stats.active_developers') }}</p>
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-800/60 border border-slate-700/40 rounded-xl p-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-300" aria-hidden="true">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        </div>
+                        <p class="text-sm text-slate-200 leading-snug">{{ __('gdpr::register.stats.monthly_meetups') }}</p>
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-800/60 border border-slate-700/40 rounded-xl p-3">
+                        <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-300" aria-hidden="true">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>
+                        </div>
+                        <p class="text-sm text-slate-200 leading-snug">{{ __('gdpr::register.stats.community_support') }}</p>
                     </div>
                 </section>
 
