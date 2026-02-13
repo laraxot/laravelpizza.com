@@ -365,14 +365,14 @@ url('/en/path')
 ### Database Config (Laravel 12 Standard)
 - Base config: `config/database.php`
 - Tenant config: `config/local/{tenant}/database.php`
-- **NEVER add module connections manually** - TenantServiceProvider creates them automatically!
+- **NEVER add module connections to tenant configs** - TenantServiceProvider creates them automatically!
 - Module connections added dynamically via `TenantServiceProvider::registerDB()`
 
-### ⚠️ CRITICAL RULE: Never Add Database Connections Manually!
+### ⚠️ CRITICAL RULE: Never Add Database Connections to Tenant Configs!
 
 **This is a GRAVE error:**
 ```php
-// ❌ NEVER DO THIS in config/database.php!
+// ❌ NEVER DO THIS in config/local/laravelpizza/database.php!
 'gdpr' => [
     'driver' => 'mysql',
     'host' => env('DB_HOST', '127.0.0.1'),
@@ -380,14 +380,18 @@ url('/en/path')
 ],
 ```
 
-**WHY:**
-- `TenantServiceProvider::registerDB()` automatically creates ALL module connections
-- It reads from .env variables (DB_DATABASE_GDPR, etc.)
-- Adding manually duplicates and breaks the automatic system
-
 **CORRECT:**
-- Let TenantServiceProvider handle it
-- Only configure .env variables: `DB_DATABASE_GDPR=laravelpizza_gdpr`
+- Module connections (gdpr, notify, geo, etc.) → `config/database.php` (main)
+- Tenant-specific configs → `config/local/{tenant}/database.php` should ONLY have:
+  - `mysql` (default)
+  - `user` (tenant users)
+  - `sqlite` (optional)
+- TenantServiceProvider dynamically adds module connections based on .env variables (DB_DATABASE_GDPR, etc.)
+
+**WHY:**
+- TenantServiceProvider reads .env and registers connections automatically
+- Adding manually to tenant configs causes conflicts and breaks the system
+- Only the main config/database.php should have module connections
 
 ### Testing Database Config - CRITICAL RULE
 **.env.testing must be a CARBON COPY of .env with only "_test" added to database names!**
