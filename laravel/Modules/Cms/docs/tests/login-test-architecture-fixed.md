@@ -140,5 +140,4 @@ test('any user type can login successfully', function (): void {
 
 **Status**: ✅ COMPLETATO
 **Priorità**: 🚨 P0 - CRITICO (ora risolto)
-**Ultimo Aggiornamento**: 2025-01-16
 **Validato**: Test in passing ✅

@@ -546,4 +546,3 @@ pages/events/event.blade.php
 ---
 
 **Versione**: 1.0
-**Ultimo Aggiornamento**: 2025-01-27

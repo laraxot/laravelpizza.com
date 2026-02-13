@@ -330,6 +330,5 @@ $crossTenantRole = RoleService::getGlobalRole('super_admin');
 
 ---
 
-**Ultimo Aggiornamento**: 2026-01-23  
 **Versione**: v3.0.0-beta  
 **Stato**: Production Ready with Enterprise Roadmap

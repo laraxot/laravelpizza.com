@@ -363,6 +363,5 @@ class CreateYourTable extends XotBaseMigration
 
 ---
 
-**Ultimo Aggiornamento**: 2026-01-23  
 **Versione**: v4.0.0-core  
 **Stato**: Production Framework - Foundation of All Modules

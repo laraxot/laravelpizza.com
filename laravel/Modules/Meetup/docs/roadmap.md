@@ -136,6 +136,17 @@
 - [ ] **Percentuale**: 70% → 100%
 - [ ] **Output**: Registration system completo con payments
 
+#### 1.3 Auth UI/UX Overhaul (High Priority)
+- [x] **Task**: Modernize Login/Register UI (Glassmorphism, Clean)
+- [x] **Task**: Standardize "Register" terminology (No "Sign up")
+- [x] **Task**: Ensure /it/auth/* routes work
+- [ ] **Task**: Add Pest tests in Modules/Meetup/tests
+- [ ] **File**: `Modules/User/resources/views/pages/auth/*.blade.php`
+- [ ] **Responsabile**: TBD
+- [ ] **Stima**: 1-2 giorni
+- [ ] **Percentuale**: 90%
+- [ ] **Output**: Top UI/UX Auth pages consistent with branding
+
 ### Priorità MEDIA (Prossime 2 settimane)
 
 #### 1.3 Implementa Event Reminders

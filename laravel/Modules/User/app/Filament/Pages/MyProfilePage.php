@@ -211,6 +211,7 @@ class MyProfilePage extends XotBasePage
 
     protected function fillForms(): void
     {
+        /** @var array<string, mixed> $data */
         $data = $this->getUser()->attributesToArray();
 
         $this->editProfileForm->fill($data);

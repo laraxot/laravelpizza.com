@@ -382,4 +382,3 @@ Hai ora imparato a creare risorse Filament 5.x complete con form, tabelle, relaz
 ---
 
 **Documentazione**: `laravel/Themes/Meetup/docs/03-development/02-filament-5-resource-creation.md`  
-**Ultimo Aggiornamento**: 2026-02-02

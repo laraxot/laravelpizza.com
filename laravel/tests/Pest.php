@@ -14,6 +14,9 @@
 pest()->extend(Tests\TestCase::class)
     ->in('Feature');
 
+pest()->extend(Modules\Meetup\Tests\TestCase::class)
+    ->in('Modules/Meetup/tests/Feature');
+
 /*
 |--------------------------------------------------------------------------
 | Expectations

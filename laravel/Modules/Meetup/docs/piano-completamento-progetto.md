@@ -1101,7 +1101,6 @@ Completare la piattaforma Laravel Pizza Meetups con:
 ---
 
 **Versione Documento**: 2.0
-**Ultimo Aggiornamento**: 2025-01-27
 **Autore**: AI Assistant (Auto)
 
 ## 🔴 REGOLA ARCHITETTURALE CRITICA

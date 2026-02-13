@@ -3,6 +3,63 @@
 declare(strict_types=1);
 
 return [
+    'register' => [
+        'title' => 'Crea il tuo account',
+        'subtitle' => 'Unisciti alla community di sviluppatori Laravel più golosa d\'Italia!',
+        'submit' => 'Crea il mio account gratis',
+        'submitting' => 'Creazione in corso...',
+        'already_have_account' => 'Hai già un account?',
+        'already_registered' => 'Hai già un account?',
+        'login' => 'Accedi subito',
+        'sections' => [
+            'user_info' => 'Informazioni Personali',
+            'user_info_description' => 'Inserisci i tuoi dati per creare l\'account',
+            'required_consents' => 'Consensi Obbligatori',
+            'required_consents_description' => 'Per procedere con la registrazione, devi accettare le seguenti condizioni per il trattamento dei tuoi dati personali',
+            'optional_consents' => 'Consensi Facoltativi',
+            'optional_consents_description' => 'Questi consensi sono facoltativi e non influenzano la tua registrazione. Puoi modificarli in qualsiasi momento dal tuo profilo.',
+        ],
+        'fields' => [
+            'first_name' => [
+                'label' => 'Nome',
+                'placeholder' => 'Inserisci il tuo nome',
+            ],
+            'last_name' => [
+                'label' => 'Cognome',
+                'placeholder' => 'Inserisci il tuo cognome',
+            ],
+            'email' => [
+                'label' => 'Email',
+                'placeholder' => 'Inserisci la tua email',
+            ],
+            'password' => [
+                'label' => 'Password',
+                'placeholder' => 'Crea una password sicura',
+            ],
+            'password_confirmation' => [
+                'label' => 'Conferma Password',
+                'placeholder' => 'Ripeti la password',
+            ],
+        ],
+        'consents' => [
+            'title' => 'Consensi',
+            'privacy_policy_label' => 'Informativa Privacy',
+            'privacy_policy_hint' => 'Ho letto e compreso l\'Informativa Privacy e accetto il trattamento dei miei dati personali come descritto nell\'informativa',
+            'terms_label' => 'Termini e Condizioni',
+            'terms_hint' => 'Ho letto e accetto i Termini e Condizioni',
+            'marketing_label' => 'Consenso Marketing',
+            'marketing_hint' => 'Voglio ricevere consigli sulla pizza e inviti ai meetup',
+            'privacy_complete' => 'Informativa completa ai sensi degli articoli 13 e 14 del Regolamento (UE) 2016/679 (GDPR)',
+            'terms_complete' => 'Contratto di servizio ai sensi dell\'articolo 6(1)(b) del Regolamento (UE) 2016/679 (GDPR)',
+        ],
+        'actions' => [
+            'read_privacy_policy' => 'Leggi informativa privacy',
+            'read_terms' => 'Leggi termini e condizioni',
+        ],
+        'links' => [
+            'and' => 'e',
+        ],
+    ],
     'navigation' => [
         'name' => 'GDPR',
         'plural' => 'GDPR',

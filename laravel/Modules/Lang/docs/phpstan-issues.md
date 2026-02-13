@@ -543,7 +543,6 @@ php -d memory_limit=2G ./vendor/bin/phpstan analyse Modules/Lang --level=10 2>&1
 
 ---
 
-**Ultimo Aggiornamento**: 2026-02-10  
 **Priority**: CRITICAL  
 **Deadline**: 2026-02-15  
 **Assigned To**: TBD  

@@ -508,7 +508,6 @@ class MyPage extends XotBaseViewRecord
 
 **Autore**: Claude Code
 **Versione**: 1.0
-**Ultimo Aggiornamento**: 2025-09-29
 
 ## 📎 Riferimenti
 

@@ -548,4 +548,3 @@ class EventController {
 ```
 
 **Versione**: 1.1
-**Ultimo Aggiornamento**: 2025-11-29

@@ -270,4 +270,3 @@ Should add:
 
 ---
 
-**Next Review**: After implementing About and Contact pages

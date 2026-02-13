@@ -276,5 +276,4 @@ Nessuna funzionalità critica - il modulo Cms funziona bene con relation manager
 
 ---
 
-**Ultimo Aggiornamento**: 2026-01-22  
 **Prossima Revisione**: 2026-02-22

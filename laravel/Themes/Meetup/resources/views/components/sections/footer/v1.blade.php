@@ -22,7 +22,7 @@
                     <li><a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('Events') }}</a></li>
                     <li><a href="{{ LaravelLocalization::localizeUrl('/chat') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('Community Chat') }}</a></li>
                     <li><a href="#" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('Code of Conduct') }}</a></li>
-                    <li><a href="{{ LaravelLocalization::localizeUrl('/register') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('Join Us') }}</a></li>
+                    <li><a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="hover:text-white transition-colors focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded">{{ __('Registrati') }}</a></li>
                 </ul>
             </nav>
 

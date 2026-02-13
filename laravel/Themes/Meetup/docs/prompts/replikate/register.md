@@ -360,3 +360,13 @@ ci sono molte funzioni dentro laravel/Modules/Gdpr/app/Filament/Widgets/Auth/Reg
 
 per controllare che il register del modulo gdpr funzioni.. devi creare anche i pest test dentro il modulo gdpr , ti ricordo che utilizziamo la configurazione .env.testing non utilizziamo sqlite per i test ma mysql non utilizziamo MAI
   refreshdatabase, e nei test partiano da php artisan migrate , generico senza force senza specificare il modulo , capisci da solo il perche' e documentala nelle cartelle docs dentro i moduli
+
+
+  refreshdatabase, e nei test partiano da php artisan migrate , generico senza force senza specificare il modulo , capisci da solo il perche' e documentala nelle cartelle docs dentro i moduli
+
+
+
+in http://127.0.0.1:8000/it/auth/register  mancano le traduzioni ti ricordo che la traduzione gdpr::register.fields.email.label per italiano corrisponde al file 
+laravel/Modules/Gdpr/lang/it/register.php
+viene gestito dal modulo Lang se hai dubbi studia e analizza sia il codice che la documentazione del modulo Lang, capirai anche che non utilizziamo mai ->label( e ->placeholder(
+    perche' facciamo tutto in automatico con i files di traduzione , poi ragiona, poi aggiorna le tue rules,le tue memories, migliorati al piu' possibile fa lo stesso anche per gli altri agenti ai, ti ricordo che te e gli altri agenti ai siete un agent teams, poi implementa, poi controlla, poi git commit e git push 

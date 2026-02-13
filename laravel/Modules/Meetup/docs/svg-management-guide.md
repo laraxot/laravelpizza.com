@@ -206,6 +206,5 @@ php artisan view:clear
 
 ---
 
-**Ultimo Aggiornamento**: 2026-02-02  
 **Versione**: 1.0  
 **Stato**: ✅ Guida SVG Management Definita

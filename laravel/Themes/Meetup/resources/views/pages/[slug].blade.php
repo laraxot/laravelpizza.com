@@ -38,6 +38,14 @@ new class extends Component
 ?>
 
 @php
+// Check if slug is a locale - redirect to home with that locale
+$locales = array_keys(config('laravellocalization.supportedLocales', ['it' => []]));
+if (in_array($slug, $locales, true)) {
+    // This is a locale, redirect to home page with this locale
+    // Actually, just render the home page instead
+    $slug = 'home';
+}
+
 // Check if this is an auth route and redirect to the appropriate auth page
 $authRoutes = ['login', 'register', 'password', 'verify'];
 if (in_array($slug, $authRoutes)) {

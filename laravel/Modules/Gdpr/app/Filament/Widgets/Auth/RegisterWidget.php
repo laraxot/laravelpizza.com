@@ -61,35 +61,27 @@ class RegisterWidget extends XotBaseWidget
                     ->string()
                     ->minLength(2)
                     ->maxLength(255)
-                    ->autocomplete('given-name')
-                    ->placeholder(__('gdpr::register.fields.first_name.placeholder'))
-                    ->helperText(__('gdpr::register.fields.first_name.helper_text')),
+                    ->autocomplete('given-name'),
                 'last_name' => TextInput::make('last_name')
                     ->required()
                     ->string()
                     ->minLength(2)
                     ->maxLength(255)
-                    ->autocomplete('family-name')
-                    ->placeholder(__('gdpr::register.fields.last_name.placeholder'))
-                    ->helperText(__('gdpr::register.fields.last_name.helper_text')),
+                    ->autocomplete('family-name'),
             ]),
             'email' => TextInput::make('email')
                 ->required()
                 ->email()
                 ->maxLength(255)
                 // ->unique(User::class, 'email')
-                ->autocomplete('email')
-                ->placeholder(__('gdpr::register.fields.email.placeholder'))
-                ->helperText(__('gdpr::register.fields.email.helper_text')),
+                ->autocomplete('email'),
             'password' => TextInput::make('password')
                 ->password()
                 ->required()
                 ->rule(PasswordData::make()->getPasswordRule())
                 ->autocomplete('new-password')
                 ->revealable()
-                ->confirmed()
-                ->placeholder(__('gdpr::register.fields.password.placeholder'))
-                ->helperText(__('gdpr::register.fields.password.helper_text')),
+                ->confirmed(),
             'password_confirmation' => TextInput::make('password_confirmation')
                 ->password()
                 ->required()
@@ -97,9 +89,7 @@ class RegisterWidget extends XotBaseWidget
                 ->autocomplete('new-password')
                 ->revealable()
                 ->dehydrated(false)
-                ->same('password')
-                ->placeholder(__('gdpr::register.fields.password_confirmation.placeholder'))
-                ->helperText(__('gdpr::register.fields.password_confirmation.helper_text')),
+                ->same('password'),
         ];
     }
 

@@ -189,4 +189,3 @@ Il modulo Meetup e il tema sono strettamente interconnessi. La separazione perme
 ---
 
 **Documentazione**: `laravel/Modules/Meetup/docs/02-architecture/02-theme-separation-architecture.md`  
-**Ultimo Aggiornamento**: 2026-02-02

@@ -168,5 +168,4 @@ docs/
 
 ---
 
-**Ultimo Aggiornamento**: 29 Novembre 2025
 **Stato**: ✅ Regole Verificate e Applicabili

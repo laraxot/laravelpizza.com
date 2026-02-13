@@ -27,7 +27,7 @@ return [
 
     'cta' => [
         'title' => 'Ready to Join?',
-        'description' => 'Sign up today and start connecting with Laravel developers in your area. The next pizza meetup is just around the corner!',
+        'description' => 'Register today and start connecting with Laravel developers in your area. The next pizza meetup is just around the corner!',
         'cta_primary_label' => 'Create Your Account',
     ],
 ];

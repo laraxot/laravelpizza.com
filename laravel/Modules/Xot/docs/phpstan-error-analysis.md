@@ -1,6 +1,5 @@
 # Analisi Errori PHPStan - Modulo Xot
 
-**Ultimo Aggiornamento**: Tutti gli errori corretti
 **Modulo**: Xot
 **Livello PHPStan**: max
 

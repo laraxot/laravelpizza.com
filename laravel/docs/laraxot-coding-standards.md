@@ -127,10 +127,14 @@ Laraxot uses `mcamara/laravel-localization` as the exclusive solution for multi-
 ### Helpers vs. App Locale
 - **Preferred Helper**: Always use `LaravelLocalization::getCurrentLocale()` instead of `app()->getLocale()`.
 - **Supported Locales**: Use `LaravelLocalization::getSupportedLocales()` to iterate over active languages.
+- **Supported Keys**: Use `LaravelLocalization::getSupportedLanguagesKeys()` to get the array of locale codes (e.g., `['it', 'en']`). **NEVER** use `getSupportedLocalesKeys()` as it does not exist.
 
 ### URL Localization
 - For all internal links, use `LaravelLocalization::localizeUrl($url)` to ensure the current locale is preserved.
 - Example: `<a href="{{ LaravelLocalization::localizeUrl('/events') }}">`
+
+### Configuration Access
+- **Facade First**: Access configuration via `LaravelLocalization` Facade methods whenever possible, rather than `config('laravellocalization...')`.
 
 ### Flags & UI
 - Integrate with the Icon Management standard: use `x-filament::icon` with the `ui-flags.` prefix.

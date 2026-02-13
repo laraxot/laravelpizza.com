@@ -1,0 +1,64 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Meetup\Tests;
+
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Modules\Xot\Tests\CreatesApplication;
+
+/**
+ * Base test case for Meetup module.
+ *
+ * Uses MySQL from .env.testing.
+ */
+abstract class TestCase extends BaseTestCase
+{
+    use CreatesApplication;
+    use DatabaseTransactions;
+
+    protected static bool $migrated = false;
+
+    protected $connectionsToTransact = [
+        'mysql',
+        'user',
+        'notify',
+        'geo',
+        'media',
+        'job',
+        'xot',
+        'activity',
+        'cms',
+        'gdpr',
+        'lang',
+        'meetup',
+        'seo',
+        'tenant',
+    ];
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        config(['xra.pub_theme' => 'Meetup']);
+        config(['xra.main_module' => 'Meetup']);
+
+        \Modules\Xot\Datas\XotData::make()->update([
+            'pub_theme' => 'Meetup',
+            'main_module' => 'Meetup',
+        ]);
+
+        if (! self::$migrated) {
+            $this->artisan('migrate:fresh', [
+                '--force' => true,
+            ]);
+
+            $this->artisan('module:migrate', [
+                '--force' => true,
+            ]);
+
+            self::$migrated = true;
+        }
+    }
+}

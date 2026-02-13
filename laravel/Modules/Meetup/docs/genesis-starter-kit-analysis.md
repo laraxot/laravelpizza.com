@@ -389,4 +389,3 @@ npm upgrade
 ---
 
 **Versione**: 1.0
-**Ultimo Aggiornamento**: 2025-01-27

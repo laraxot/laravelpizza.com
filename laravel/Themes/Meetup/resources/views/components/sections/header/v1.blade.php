@@ -41,8 +41,8 @@
             <!-- WCAG 2.1 AA: text-slate-100 on slate-800 = 9:1 contrast (4.5:1 required) -->
             <div class="hidden md:flex items-center space-x-4">
                 @guest
-                    <a href="{{ LaravelLocalization::localizeUrl('/login') }}" class="text-slate-100 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Login') }}</a>
-                    <a href="{{ LaravelLocalization::localizeUrl('/register') }}" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Sign Up') }}</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" class="text-slate-100 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Accedi') }}</a>
+                    <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Registrati') }}</a>
                 @else
                     <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="text-slate-100 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Dashboard') }}</a>
                 @endguest
@@ -72,8 +72,8 @@
                 </div>
                 @guest
                     <div class="grid grid-cols-2 gap-4 px-4 pt-4 border-t border-slate-700/50">
-                        <a href="{{ LaravelLocalization::localizeUrl('/login') }}" class="text-slate-100 hover:text-white py-2 text-center rounded-lg border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Login') }}</a>
-                        <a href="{{ LaravelLocalization::localizeUrl('/register') }}" class="bg-red-600 text-white py-2 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Sign Up') }}</a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/auth/login') }}" class="text-slate-100 hover:text-white py-2 text-center rounded-lg border border-slate-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Accedi') }}</a>
+                        <a href="{{ LaravelLocalization::localizeUrl('/auth/register') }}" class="bg-red-600 text-white py-2 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900">{{ __('Registrati') }}</a>
                     </div>
                 @else
                     <a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="text-slate-100 hover:text-white px-4 py-2 hover:bg-slate-700/50 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-slate-900 block">{{ __('Dashboard') }}</a>

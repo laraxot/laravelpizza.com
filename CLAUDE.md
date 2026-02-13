@@ -590,7 +590,3 @@ The project uses PHPStan level 10 (maximum strictness):
 5. ✅ Test changed functionality
 
 ---
-
-**Laravel Version:** 11.x
-**PHP Version:** 8.2+
-**Filament Version:** 4.x

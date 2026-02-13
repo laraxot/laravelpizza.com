@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Carbon;
 use Modules\Cms\Database\Factories\PageFactory;
+use Modules\Cms\Models\Traits\HasBlocks;
 use Modules\Tenant\Models\Traits\SushiToJsons;
 use Modules\Xot\Contracts\ProfileContract;
 
@@ -187,12 +188,14 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class Page extends BaseModelLang
 {
+    use HasBlocks;
     use SushiToJsons;
 
     /** @var array<int, string> */
     public $translatable = [
         'title',
         // 'description',
+        'blocks',
         'content_blocks',
         'sidebar_blocks',
         'footer_blocks',
@@ -204,6 +207,7 @@ class Page extends BaseModelLang
         'slug',
         'title',
         'middleware',
+        'blocks',
         'content_blocks',
         'sidebar_blocks',
         'footer_blocks',
@@ -216,6 +220,7 @@ class Page extends BaseModelLang
         'middleware' => 'json',
         'content' => 'string',
         'description' => 'string',
+        'blocks' => 'json',
         'content_blocks' => 'json',
         'sidebar_blocks' => 'json',
         'footer_blocks' => 'json',

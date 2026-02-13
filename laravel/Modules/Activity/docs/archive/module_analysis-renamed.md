@@ -316,6 +316,5 @@ activity()->withProperties([
 
 ---
 
-**Ultimo Aggiornamento**: 2026-01-23  
 **Versione**: v2.5.0-beta  
 **Stato**: Production Ready with Compliance Enhancement

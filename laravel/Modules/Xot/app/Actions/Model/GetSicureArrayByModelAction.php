@@ -18,7 +18,10 @@ class GetSicureArrayByModelAction
     public function execute(Model $model): array
     {
         try {
-            return $model->attributesToArray(); // "" is not a valid backing value for enum Modules\<main module>\Enums\OccurrenceFrequencyEnum
+            /** @var array<string, mixed> $res */
+            $res = $model->attributesToArray(); // "" is not a valid backing value for enum Modules\<main module>\Enums\OccurrenceFrequencyEnum
+
+            return $res;
         } catch (ValueError $e) {
             $data = [];
             foreach ($model->getAttributes() as $key => $value) {

@@ -269,6 +269,7 @@ abstract class XotBaseMigration extends LaravelMigration
         $xot = XotData::make();
         $userClass = $xot->getUserClass();
 
+        // Check and add each timestamp column only if it doesn't exist
         if (! $this->hasColumn('created_at')) {
             $table->timestamp('created_at')->nullable();
         }
@@ -277,6 +278,7 @@ abstract class XotBaseMigration extends LaravelMigration
             $table->timestamp('updated_at')->nullable();
         }
 
+        // Check and add foreign key columns only if they don't exist
         if (! $this->hasColumn('updated_by')) {
             $table->foreignIdFor($userClass, 'updated_by')->nullable();
         }
@@ -285,15 +287,19 @@ abstract class XotBaseMigration extends LaravelMigration
             $table->foreignIdFor($userClass, 'created_by')->nullable();
         }
 
-        if ($hasSoftDeletes && ! $this->hasColumn('deleted_at')) {
-            $table->softDeletes();
+        // Handle soft deletes
+        if ($hasSoftDeletes) {
+            if (! $this->hasColumn('deleted_at')) {
+                $table->softDeletes();
+            }
             if (! $this->hasColumn('deleted_by')) {
                 $table->foreignIdFor($userClass, 'deleted_by')->nullable();
             }
-        }
-
-        if ($this->hasColumn('deleted_at') && ! $this->hasColumn('deleted_by')) {
-            $table->foreignIdFor($userClass, 'deleted_by')->nullable();
+        } else {
+            // If soft deletes are not requested but deleted_at exists, add deleted_by
+            if ($this->hasColumn('deleted_at') && ! $this->hasColumn('deleted_by')) {
+                $table->foreignIdFor($userClass, 'deleted_by')->nullable();
+            }
         }
     }
 

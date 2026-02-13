@@ -13,11 +13,31 @@ return [
 
     // === FIELDS ===
     'fields' => [
-        'first_name' => 'Nombre',
-        'last_name' => 'Apellidos',
-        'email' => 'Tu mejor correo electrónico',
-        'password' => 'Contraseña segura',
-        'password_confirmation' => 'Confirmar contraseña',
+        'first_name' => [
+            'label' => 'Nombre',
+            'placeholder' => 'Carlos',
+            'helper_text' => 'Introduce tu nombre para completar tu perfil',
+        ],
+        'last_name' => [
+            'label' => 'Apellidos',
+            'placeholder' => 'García',
+            'helper_text' => 'Introduce tus apellidos para completar tu perfil',
+        ],
+        'email' => [
+            'label' => 'Tu mejor correo electrónico',
+            'placeholder' => 'carlos.garcia@ejemplo.es',
+            'helper_text' => 'Te enviaremos un correo de confirmación a la dirección proporcionada',
+        ],
+        'password' => [
+            'label' => 'Contraseña segura',
+            'placeholder' => '••••••••••••',
+            'helper_text' => 'Debe contener al menos 12 caracteres, mayúscula, minúscula, número y símbolo',
+        ],
+        'password_confirmation' => [
+            'label' => 'Confirmar contraseña',
+            'placeholder' => '••••••••••••',
+            'helper_text' => 'Repite la contraseña para confirmar',
+        ],
     ],
 
     // === SECTIONS ===

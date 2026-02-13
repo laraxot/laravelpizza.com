@@ -13,11 +13,31 @@ return [
 
     // === FIELDS ===
     'fields' => [
-        'first_name' => 'Имя',
-        'last_name' => 'Фамилия',
-        'email' => 'Ваш лучший email',
-        'password' => 'Безопасный пароль',
-        'password_confirmation' => 'Подтвердить пароль',
+        'first_name' => [
+            'label' => 'Имя',
+            'placeholder' => 'Александр',
+            'helper_text' => 'Введите ваше имя для завершения профиля',
+        ],
+        'last_name' => [
+            'label' => 'Фамилия',
+            'placeholder' => 'Петров',
+            'helper_text' => 'Введите вашу фамилию для завершения профиля',
+        ],
+        'email' => [
+            'label' => 'Ваш лучший email',
+            'placeholder' => 'alexandr.petrov@primer.ru',
+            'helper_text' => 'Мы отправим письмо с подтверждением на указанный адрес',
+        ],
+        'password' => [
+            'label' => 'Безопасный пароль',
+            'placeholder' => '••••••••••••',
+            'helper_text' => 'Должен содержать минимум 12 символов, заглавную, строчную букву, цифру и символ',
+        ],
+        'password_confirmation' => [
+            'label' => 'Подтвердить пароль',
+            'placeholder' => '••••••••••••',
+            'helper_text' => 'Повторите пароль для подтверждения',
+        ],
     ],
 
     // === SECTIONS ===

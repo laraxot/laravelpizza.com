@@ -390,7 +390,6 @@ La cartella `docs/` è ben organizzata con:
 ---
 
 **Versione**: 1.0.0
-**Ultimo Aggiornamento**: 2025-01-01
 **Maintainer**: CMS Team
 **Status**: 🚧 In Development (65% completo)
 **Prossima Revisione**: 2025-02-01

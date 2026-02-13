@@ -69,4 +69,3 @@ Chart.register(ChartDataLabels);  // ❌ NON funziona
 
 ---
 
-**Ultimo Aggiornamento**: 2026-01-30

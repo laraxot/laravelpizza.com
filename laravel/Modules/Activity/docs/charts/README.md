@@ -764,4 +764,3 @@ it('exports chart to SVG', function () {
 ---
 
 **Autore**: PTVX Development Team
-**Ultimo Aggiornamento**: 2025-12-09

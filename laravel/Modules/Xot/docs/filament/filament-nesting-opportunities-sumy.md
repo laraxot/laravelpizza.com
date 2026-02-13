@@ -214,5 +214,4 @@ php artisan make:filament-relation-manager SurveyPdfResource contacts email
 
 ---
 
-**Ultimo Aggiornamento**: 2026-01-22  
 **Prossima Revisione**: 2026-02-22

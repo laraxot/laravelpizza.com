@@ -38,12 +38,12 @@ return [
     ],
     'actions' => [
         'login' => [
-            'label' => 'Sign in',
+            'label' => 'Login',
             'success' => 'Successfully logged in',
             'error' => 'Invalid credentials',
         ],
         'register' => [
-            'label' => 'Sign up',
+            'label' => 'Register',
             'success' => 'Registration completed successfully',
             'error' => 'Unable to complete registration',
         ],
@@ -77,4 +77,7 @@ return [
         'general_error' => 'An error occurred. Please try again later.',
         'unauthorized' => 'You do not have the necessary permissions for this operation.',
     ],
+    'title' => 'Sign in to your account',
+    'subtitle_start' => 'Or',
+    'subtitle_link' => 'create a new account',
 ];

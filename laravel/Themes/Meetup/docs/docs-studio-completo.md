@@ -195,7 +195,6 @@ laravel/Themes/Meetup/docs/
 
 ---
 
-**Ultimo Aggiornamento**: 2026-02-02
 **Analista**: iFlow CLI
 **Versione**: 1.0
 **Stato**: ✅ Studio Cartelle Docs Concluso

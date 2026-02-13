@@ -43,6 +43,7 @@ class GdprRegistrationListener implements ShouldQueue
     public function handle(UserRegistered $event): void
     {
         try {
+            /** @var array<string, bool> $gdprConsents */
             $gdprConsents = $event->getGdprConsents();
             $user = $event->user;
 

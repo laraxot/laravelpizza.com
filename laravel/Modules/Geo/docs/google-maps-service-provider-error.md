@@ -4,7 +4,6 @@
 Errore: `Class "Cheesegrits\FilamentGoogleMaps\FilamentGoogleMapsServiceProvider" not found`
 
 ## Contesto
-- **Data**: 2025-01-06
 - **Ambiente**: Produzione (sottana.com)
 - **PHP**: 8.4.8
 - **Laravel**: 12.30.1

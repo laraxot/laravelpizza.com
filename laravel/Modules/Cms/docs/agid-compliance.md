@@ -526,5 +526,4 @@ class Page extends BaseModel
 ---
 
 
-**Next Review**: Bi-weekly
 **Owner**: Cms Module Team

@@ -984,4 +984,3 @@ it('renders button with ghost variant', function () {
 ---
 
 **Versione**: 2.0
-**Ultimo Aggiornamento**: 2025-01-29

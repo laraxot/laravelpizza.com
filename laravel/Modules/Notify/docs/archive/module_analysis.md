@@ -332,6 +332,5 @@ NotificationService::broadcast(new SystemMaintenance(
 
 ---
 
-**Ultimo Aggiornamento**: 2026-01-23  
 **Versione**: v2.3.0-beta  
 **Stato**: Production Ready with AI Enhancement Roadmap

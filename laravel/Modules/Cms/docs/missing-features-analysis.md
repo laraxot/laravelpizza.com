@@ -162,5 +162,4 @@ Nessuna funzionalità critica mancante - il modulo Cms è ben implementato
 
 ---
 
-**Ultimo Aggiornamento**: 2026-01-22  
 **Prossima Revisione**: 2026-02-22

@@ -340,6 +340,5 @@ $reports = CrossTenantService::aggregateData([
 
 ---
 
-**Ultimo Aggiornamento**: 2026-01-23  
 **Versione**: v2.2.0-beta  
 **Stato**: Production Ready with Enterprise Scaling

@@ -21,17 +21,10 @@ return new class extends XotBaseMigration {
                 $table->string('name');
                 $table->string('scope');
                 $table->text('value');
-
                 $table->unique(['name', 'scope']);
-            });
-        }
+                $table->timestamps(); // Add timestamps here
+                $table->softDeletes(); // Add soft deletes here, as hasSoftDeletes was true
 
-        if ($this->tableExists() && !$this->hasColumn('created_at')) {
-            $this->tableUpdate(function (Blueprint $table): void {
-                $this->updateTimestamps(
-                    table: $table,
-                    hasSoftDeletes: true,
-                );
             });
         }
     }
