@@ -127,7 +127,7 @@ LaravelPizza project has comprehensive MCP (Model Context Protocol) configuratio
 
 ✅ **Already Configured**
 
-**Configuration File**: `/var/www/_bases/base_laravelpizza/laravel/.mcp.json`
+**Configuration File**: `{PROJECT_ROOT}/laravel/.mcp.json`
 
 ```json
 {
@@ -143,7 +143,7 @@ LaravelPizza project has comprehensive MCP (Model Context Protocol) configuratio
 
 ### 2. Cursor Editor
 
-✅ **Configuration File**: `/var/www/_bases/base_laravelpizza/laravel/.cursor-mcp.json`
+✅ **Configuration File**: `{PROJECT_ROOT}/laravel/.cursor-mcp.json`
 
 ```json
 {
@@ -174,7 +174,7 @@ rm -rf ~/.mcp-auth
 
 ### 3. Windsurf Editor
 
-✅ **Configuration File**: `/var/www/_bases/base_laravelpizza/laravel/.windsurf-mcp.json`
+✅ **Configuration File**: `{PROJECT_ROOT}/laravel/.windsurf-mcp.json`
 
 ```json
 {
@@ -200,7 +200,7 @@ rm -rf ~/.mcp-auth
 
 ### 4. Antigravity AI Agent
 
-✅ **Configuration File**: `/var/www/_bases/base_laravelpizza/laravel/.antigravity-mcp.json`
+✅ **Configuration File**: `{PROJECT_ROOT}/laravel/.antigravity-mcp.json`
 
 ```json
 {
@@ -545,7 +545,7 @@ with high priority, assigned to TBD, due in 3-4 days"
 - Name: Implement SafeIntCastAction
 - Priority: High
 - Assignee: TBD
-- Due date: 2026-02-03
+- Due date: <DATE>
 - Description: Implement safe integer casting with full type safety"
 
 ❌ Bad:
@@ -745,6 +745,6 @@ PHPStan Level 10 compliant, 95% test coverage'"
 ---
 
 **Status**: ✅ Fully Configured
-**Last Updated**: 2026-01-31
-**Next Review**: 2026-02-28
+**Last Updated**:
+**Next Review**: (Monthly)
 **Maintained By**: Dev Team
