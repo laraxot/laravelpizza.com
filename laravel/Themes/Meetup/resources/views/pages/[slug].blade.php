@@ -55,10 +55,10 @@ if (in_array($slug, $authRoutes)) {
 }
 @endphp
 
-<x-layouts.public>
+<x-layouts.app>
     @volt('pages.view')
     <div>
         <x-page side="content" :slug="$slug" />
     </div>
     @endvolt
-</x-layouts.public>
+</x-layouts.app>
