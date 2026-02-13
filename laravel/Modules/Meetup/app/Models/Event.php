@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Modules\Activity\Traits\HasEvents;
@@ -79,7 +78,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  *
  * @see https://schema.org/Event
  */
-class Event extends Model
+class Event extends BaseModel
 {
     use HasEvents;
     use HasSnapshots;

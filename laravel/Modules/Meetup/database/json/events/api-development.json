@@ -1,0 +1,25 @@
+{
+    "id": "6",
+    "title": "Laravel API Development Pizza Session",
+    "description": "Build robust APIs with Laravel! Discuss REST, GraphQL, authentication, and best practices. Perfect for developers working on API projects.",
+    "start_date": "2026-01-19T18:00:00+01:00",
+    "end_date": "2026-01-19T21:00:00+01:00",
+    "location": "API Workspace, 888 Backend Road",
+    "status": "upcoming",
+    "event_status": "confirmed",
+    "event_attendance_mode": "offline",
+    "attendees_count": 2,
+    "max_attendees": 30,
+    "in_language": "it",
+    "organizer": {
+        "name": "Laravel Pizza Meetups",
+        "email": "info@laravelpizza.it"
+    },
+    "offers": {
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+    },
+    "image": "/images/events/laravel-api.jpg",
+    "url": "/it/events/6"
+}

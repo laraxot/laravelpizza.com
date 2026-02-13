@@ -108,6 +108,22 @@ class EventResource extends XotBaseResource
                         'draft' => 'Draft',
                         'published' => 'Published',
                         'cancelled' => 'Cancelled',
+                        'upcoming' => 'Upcoming',
+                        'past' => 'Past',
+                    ]),
+                Tables\Filters\Filter::make('start_date')
+                    ->form([
+                        \Filament\Forms\Components\DatePicker::make('from'),
+                        \Filament\Forms\Components\DatePicker::make('until'),
+                    ])
+                    ->query(fn ($query, array $data) => $query
+                        ->when($data['from'], fn ($q, $date) => $q->whereDate('start_date', '>=', $date))
+                        ->when($data['until'], fn ($q, $date) => $q->whereDate('start_date', '<=', $date))),
+                Tables\Filters\SelectFilter::make('event_attendance_mode')
+                    ->options([
+                        'OfflineEventAttendanceMode' => 'In Presence',
+                        'OnlineEventAttendanceMode' => 'Online',
+                        'MixedEventAttendanceMode' => 'Mixed',
                     ]),
             ])
             ->actions([

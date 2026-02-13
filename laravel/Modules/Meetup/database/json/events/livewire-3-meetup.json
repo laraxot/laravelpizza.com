@@ -1,0 +1,25 @@
+{
+    "id": "3",
+    "title": "Livewire 3 Pizza Meetup",
+    "description": "Explore the power of Livewire 3 with the community! Share your projects, learn new techniques, and network with other developers. Pizza and drinks provided!",
+    "start_date": "2026-01-05T18:30:00+01:00",
+    "end_date": "2026-01-05T21:00:00+01:00",
+    "location": "Startup Lounge, 789 Innovation Blvd",
+    "status": "upcoming",
+    "event_status": "confirmed",
+    "event_attendance_mode": "offline",
+    "attendees_count": 2,
+    "max_attendees": 35,
+    "in_language": "it",
+    "organizer": {
+        "name": "Laravel Pizza Meetups",
+        "email": "info@laravelpizza.it"
+    },
+    "offers": {
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+    },
+    "image": "/images/events/livewire-3.jpg",
+    "url": "/it/events/3"
+}

@@ -1,0 +1,25 @@
+{
+    "id": "4",
+    "title": "Laravel Beginner's Pizza Night",
+    "description": "New to Laravel? Join us for a beginner-friendly evening! We'll cover the basics, answer questions, and help you get started with your first Laravel project.",
+    "start_date": "2025-11-20T18:00:00+01:00",
+    "end_date": "2025-11-20T20:30:00+01:00",
+    "location": "Community Center, 321 Learning Lane",
+    "status": "completed",
+    "event_status": "completed",
+    "event_attendance_mode": "offline",
+    "attendees_count": 2,
+    "max_attendees": 20,
+    "in_language": "it",
+    "organizer": {
+        "name": "Laravel Pizza Meetups",
+        "email": "info@laravelpizza.it"
+    },
+    "offers": {
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/SoldOut"
+    },
+    "image": "/images/events/laravel-beginners.jpg",
+    "url": "/it/events/4"
+}

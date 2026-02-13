@@ -1,0 +1,25 @@
+{
+    "id": "5",
+    "title": "Laravel Testing Best Practices",
+    "description": "Master Laravel testing while enjoying pizza! Learn about PHPUnit, Pest, and testing strategies. Share your testing experiences and learn from others.",
+    "start_date": "2026-01-12T19:00:00+01:00",
+    "end_date": "2026-01-12T21:30:00+01:00",
+    "location": "Developer Hub, 555 Code Street",
+    "status": "upcoming",
+    "event_status": "confirmed",
+    "event_attendance_mode": "offline",
+    "attendees_count": 2,
+    "max_attendees": 28,
+    "in_language": "it",
+    "organizer": {
+        "name": "Laravel Pizza Meetups",
+        "email": "info@laravelpizza.it"
+    },
+    "offers": {
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+    },
+    "image": "/images/events/laravel-testing.jpg",
+    "url": "/it/events/5"
+}

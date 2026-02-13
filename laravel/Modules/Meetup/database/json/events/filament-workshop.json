@@ -1,0 +1,25 @@
+{
+    "id": "2",
+    "title": "Filament Admin Panel Workshop",
+    "description": "Deep dive into Filament admin panels while enjoying pizza! Learn best practices, tips and tricks, and build a complete admin panel from scratch. Bring your laptop and questions!",
+    "start_date": "2025-12-22T17:30:00+01:00",
+    "end_date": "2025-12-22T20:30:00+01:00",
+    "location": "Innovation Center, 456 Tech Ave",
+    "status": "upcoming",
+    "event_status": "confirmed",
+    "event_attendance_mode": "offline",
+    "attendees_count": 3,
+    "max_attendees": 25,
+    "in_language": "it",
+    "organizer": {
+        "name": "Laravel Pizza Meetups",
+        "email": "info@laravelpizza.it"
+    },
+    "offers": {
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+    },
+    "image": "/images/events/filament-workshop.jpg",
+    "url": "/it/events/2"
+}

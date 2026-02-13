@@ -1,0 +1,68 @@
+[
+    {
+        "status": "upcoming",
+        "title": "Laravel 11 Release Pizza Party",
+        "description": "Celebrate the release of Laravel 11 with fellow developers! We'll discuss new features, share experiences, and enjoy delicious pizza together. Perfect for both beginners and experienced Laravel developers.",
+        "date": "December 15, 2025",
+        "time": "6:00 PM - 9:00 PM",
+        "location": "Tech Hub Downtown, 123 Main St",
+        "attendees_current": 5,
+        "attendees_max": 30,
+        "url": "/it/events/1"
+    },
+    {
+        "status": "upcoming",
+        "title": "Filament Admin Panel Workshop",
+        "description": "Deep dive into Filament admin panels while enjoying pizza! Learn best practices, tips and tricks, and build a complete admin panel from scratch. Bring your laptop and questions!",
+        "date": "December 22, 2025",
+        "time": "5:30 PM - 8:30 PM",
+        "location": "Innovation Center, 456 Tech Ave",
+        "attendees_current": 3,
+        "attendees_max": 25,
+        "url": "/it/events/2"
+    },
+    {
+        "status": "upcoming",
+        "title": "Livewire 3 Pizza Meetup",
+        "description": "Explore the power of Livewire 3 with the community! Share your projects, learn new techniques, and network with other developers. Pizza and drinks provided!",
+        "date": "January 5, 2026",
+        "time": "6:30 PM - 9:00 PM",
+        "location": "Startup Lounge, 789 Innovation Blvd",
+        "attendees_current": 2,
+        "attendees_max": 35,
+        "url": "/it/events/3"
+    },
+    {
+        "status": "past",
+        "title": "Laravel Beginner's Pizza Night",
+        "description": "New to Laravel? Join us for a beginner-friendly evening! We'll cover the basics, answer questions, and help you get started with your first Laravel project.",
+        "date": "November 20, 2025",
+        "time": "6:00 PM - 8:30 PM",
+        "location": "Community Center, 321 Learning Lane",
+        "attendees_current": 2,
+        "attendees_max": 20,
+        "url": "/it/events/4"
+    },
+    {
+        "status": "upcoming",
+        "title": "Laravel Testing Best Practices",
+        "description": "Master Laravel testing while enjoying pizza! Learn about PHPUnit, Pest, and testing strategies. Share your testing experiences and learn from others.",
+        "date": "January 12, 2026",
+        "time": "7:00 PM - 9:30 PM",
+        "location": "Developer Hub, 555 Code Street",
+        "attendees_current": 2,
+        "attendees_max": 28,
+        "url": "/it/events/5"
+    },
+    {
+        "status": "upcoming",
+        "title": "Laravel API Development Pizza Session",
+        "description": "Build robust APIs with Laravel! Discuss REST, GraphQL, authentication, and best practices. Perfect for developers working on API projects.",
+        "date": "January 19, 2026",
+        "time": "6:00 PM - 9:00 PM",
+        "location": "API Workspace, 888 Backend Road",
+        "attendees_current": 2,
+        "attendees_max": 30,
+        "url": "/it/events/6"
+    }
+]

@@ -64,7 +64,7 @@ class Event extends BaseModel
 {
     use HasUuids;
 
-    // protected $table = 'event';
+    protected $table = 'gdpr_events';
 
     public $fillable = [
         'id',

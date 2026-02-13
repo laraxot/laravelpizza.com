@@ -30,7 +30,7 @@ test('header renders avatar dropdown for authenticated users', function () {
         ->assertSee('I miei eventi')
         ->assertSee('Eventi vicini')
         ->assertSee('Profilo')
-        ->assertSee('Logout')
+        ->assertSee('Esci')
         ->assertDontSee('Accedi')
         ->assertDontSee('Registrati');
 });
