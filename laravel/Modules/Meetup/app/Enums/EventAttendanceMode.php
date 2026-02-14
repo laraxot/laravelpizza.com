@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Enums;
 
+use Filament\Support\Contracts\HasColor;
+use Filament\Support\Contracts\HasIcon;
+use Filament\Support\Contracts\HasLabel;
 use Modules\Xot\Traits\EnumTrait;
 
 /**
@@ -13,7 +16,7 @@ use Modules\Xot\Traits\EnumTrait;
  *
  * @see https://schema.org/EventAttendanceModeEnumeration
  */
-enum EventAttendanceMode: string
+enum EventAttendanceMode: string implements HasColor, HasIcon, HasLabel
 {
     use EnumTrait;
 
@@ -34,42 +37,10 @@ enum EventAttendanceMode: string
     }
 
     /**
-     * Get translated label for the attendance mode.
-     */
-    public function trans(): string
-    {
-        return trans('meetup::event.event_attendance_mode.'.$this->value);
-    }
-
-    /**
      * Get full Schema.org URI for the attendance mode.
      */
     public function toSchemaOrgUri(): string
     {
         return 'https://schema.org/'.$this->value;
-    }
-
-    /**
-     * Get icon for UI display.
-     */
-    public function icon(): string
-    {
-        return match ($this) {
-            self::OFFLINE => 'heroicon-o-map-pin',
-            self::ONLINE => 'heroicon-o-computer-desktop',
-            self::MIXED => 'heroicon-o-arrows-right-left',
-        };
-    }
-
-    /**
-     * Get CSS color class for UI display.
-     */
-    public function color(): string
-    {
-        return match ($this) {
-            self::OFFLINE => 'primary',
-            self::ONLINE => 'success',
-            self::MIXED => 'warning',
-        };
     }
 }

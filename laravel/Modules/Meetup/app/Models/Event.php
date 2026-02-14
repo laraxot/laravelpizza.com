@@ -106,16 +106,22 @@ class Event extends BaseModel
         'organizer_id',
     ];
 
-    protected $casts = [
-        'start_date' => 'datetime',
-        'end_date' => 'datetime',
-        'meta_data' => 'array',
-        'offers' => 'array',
-        'attendees_count' => 'integer',
-        'max_attendees' => 'integer',
-        'event_status' => EventStatus::class,
-        'event_attendance_mode' => EventAttendanceMode::class,
-    ];
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'start_date' => 'datetime',
+            'end_date' => 'datetime',
+            'meta_data' => 'array',
+            'offers' => 'array',
+            'attendees_count' => 'integer',
+            'max_attendees' => 'integer',
+            'event_status' => EventStatus::class,
+            'event_attendance_mode' => EventAttendanceMode::class,
+        ];
+    }
 
     protected $attributes = [
         'attendees_count' => 0,

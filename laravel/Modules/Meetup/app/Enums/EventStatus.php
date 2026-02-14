@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Enums;
 
+use Filament\Support\Contracts\HasColor;
+use Filament\Support\Contracts\HasLabel;
 use Modules\Xot\Traits\EnumTrait;
 
 /**
@@ -13,23 +15,28 @@ use Modules\Xot\Traits\EnumTrait;
  *
  * @see https://schema.org/EventStatusType
  */
-enum EventStatus: string
+enum EventStatus: string implements HasColor, HasLabel
 {
     use EnumTrait;
 
+    case DRAFT = 'draft';
     case SCHEDULED = 'EventScheduled';
+    case CONFIRMED = 'EventScheduled_confirmed'; // Alias or specific confirmed state if needed, often mapped to Scheduled
     case CANCELLED = 'EventCancelled';
     case POSTPONED = 'EventPostponed';
     case RESCHEDULED = 'EventRescheduled';
     case MOVED_ONLINE = 'EventMovedOnline';
+    case COMPLETED = 'completed';
 
     /**
      * Get human-readable label for the status.
+     * This is a fallback, getLabel() from EnumTrait uses translations.
      */
     public function label(): string
     {
         return match ($this) {
-            self::SCHEDULED => 'Scheduled',
+            self::DRAFT => 'Draft',
+            self::SCHEDULED, self::CONFIRMED => 'Scheduled',
             self::CANCELLED => 'Cancelled',
             self::POSTPONED => 'Postponed',
             self::RESCHEDULED => 'Rescheduled',
@@ -38,32 +45,19 @@ enum EventStatus: string
     }
 
     /**
-     * Get translated label for the status.
-     */
-    public function trans(): string
-    {
-        return trans('meetup::event.event_status.'.$this->value);
-    }
-
-    /**
      * Get full Schema.org URI for the status.
      */
     public function toSchemaOrgUri(): string
     {
-        return 'https://schema.org/'.$this->value;
-    }
+        if ($this === self::DRAFT) {
+            return 'https://schema.org/EventScheduled'; // Draft is still scheduled but not public
+        }
 
-    /**
-     * Get CSS color class for UI display.
-     */
-    public function color(): string
-    {
-        return match ($this) {
-            self::SCHEDULED => 'success',
-            self::CANCELLED => 'danger',
-            self::POSTPONED => 'warning',
-            self::RESCHEDULED => 'info',
-            self::MOVED_ONLINE => 'primary',
-        };
+        $value = $this->value;
+        if ($this === self::CONFIRMED) {
+            $value = 'EventScheduled';
+        }
+
+        return 'https://schema.org/'.$value;
     }
 }

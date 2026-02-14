@@ -280,6 +280,43 @@ The key generated will be `user::register.fields.email.label`.
 - All admin resources extend XotBase classes
 - NO raw Filament extensions
 
+### XotBaseListRecords - CRITICAL RULE
+
+When creating List pages that extend XotBaseListRecords:
+
+**✅ REQUIRED: Implement getTableColumns()**
+```php
+class ListEvents extends XotBaseListRecords
+{
+    protected static string $resource = EventResource::class;
+
+    // ✅ REQUIRED - Must be public with #[Override]
+    #[Override]
+    public function getTableColumns(): array
+    {
+        return [
+            'title' => TextColumn::make('title')->searchable(),
+            // ... more columns
+        ];
+    }
+}
+```
+
+**❌ WRONG - Missing getTableColumns()**
+```php
+class ListEvents extends XotBaseListRecords
+{
+    // ❌ WRONG - Will fail without getTableColumns()
+}
+```
+
+**Other common methods:**
+- `getTableFilters()` - Use #[Override] attribute (must be public)
+- `getHeaderActions()` - Use #[Override] attribute (must be public)
+- `getHeaderWidgets()` - Add stats/chart widgets
+- `getDefaultTableSortColumn()` - Default sort column
+- `getDefaultTableSortDirection()` - Default sort direction (asc/desc)
+
 ### ⚠️ CRITICAL RULE: Always Use Filament Widgets, NOT Livewire Pure!
 
 For ANY dynamic component that needs server interaction (forms, dropdowns, modals, etc.):

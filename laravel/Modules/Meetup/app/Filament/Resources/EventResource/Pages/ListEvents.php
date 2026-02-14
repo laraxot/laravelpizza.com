@@ -6,10 +6,9 @@ namespace Modules\Meetup\Filament\Resources\EventResource\Pages;
 
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\BadgeColumn;
 use Modules\Meetup\Actions\Event\ImportEventsFromJsonAction;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
@@ -47,37 +46,32 @@ class ListEvents extends XotBaseListRecords
                 ->searchable()
                 ->limit(30)
                 ->toggleable(),
-            'status' => BadgeColumn::make('status')
-                ->colors([
-                    'success' => 'upcoming',
-                    'warning' => 'draft',
-                    'danger' => 'cancelled',
-                    'info' => 'completed',
-                ]),
-            'event_status' => BadgeColumn::make('event_status')
-                ->colors([
-                    'success' => 'EventScheduled',
-                    'warning' => 'EventPostponed',
-                    'danger' => 'EventCancelled',
-                    'info' => 'EventRescheduled',
-                ]),
-            'event_attendance_mode' => BadgeColumn::make('event_attendance_mode')
-                ->colors([
-                    'primary' => 'offline',
-                    'info' => 'online',
-                    'purple' => 'mixed',
-                ]),
+            'status' => TextColumn::make('status')
+                ->badge()
+                ->color(fn (string $state): string => match ($state) {
+                    'upcoming' => 'success',
+                    'draft' => 'warning',
+                    'cancelled' => 'danger',
+                    'completed' => 'info',
+                    default => 'gray',
+                }),
+            'event_status' => TextColumn::make('event_status')
+                ->badge(),
+            'event_attendance_mode' => TextColumn::make('event_attendance_mode')
+                ->badge(),
             'attendees_count' => TextColumn::make('attendees_count')
                 ->numeric()
                 ->sortable(),
             'max_attendees' => TextColumn::make('max_attendees')
                 ->numeric()
                 ->toggleable(),
-            'in_language' => BadgeColumn::make('in_language')
-                ->colors([
-                    'primary' => 'it',
-                    'info' => 'en',
-                ]),
+            'in_language' => TextColumn::make('in_language')
+                ->badge()
+                ->color(fn (string $state): string => match ($state) {
+                    'it' => 'primary',
+                    'en' => 'info',
+                    default => 'gray',
+                }),
             'created_at' => TextColumn::make('created_at')
                 ->dateTime('d/m/Y')
                 ->sortable()
@@ -106,22 +100,12 @@ class ListEvents extends XotBaseListRecords
 
             SelectFilter::make('event_status')
                 ->label((string) __('meetup::event.event.filters.event_status.label'))
-                ->options([
-                    EventStatus::SCHEDULED->value => __('meetup::event.event.filters.event_status.scheduled'),
-                    EventStatus::CANCELLED->value => __('meetup::event.event.filters.event_status.cancelled'),
-                    EventStatus::POSTPONED->value => __('meetup::event.event.filters.event_status.postponed'),
-                    EventStatus::RESCHEDULED->value => __('meetup::event.event.filters.event_status.rescheduled'),
-                    EventStatus::MOVED_ONLINE->value => __('meetup::event.event.filters.event_status.moved_online'),
-                ])
+                ->options(EventStatus::class)
                 ->multiple(),
 
             SelectFilter::make('event_attendance_mode')
                 ->label((string) __('meetup::event.event.filters.attendance_mode.label'))
-                ->options([
-                    EventAttendanceMode::OFFLINE->value => __('meetup::event.event.filters.attendance_mode.offline'),
-                    EventAttendanceMode::ONLINE->value => __('meetup::event.event.filters.attendance_mode.online'),
-                    EventAttendanceMode::MIXED->value => __('meetup::event.event.filters.attendance_mode.mixed'),
-                ]),
+                ->options(EventAttendanceMode::class),
 
             TernaryFilter::make('has_capacity')
                 ->label((string) __('meetup::event.event.filters.has_capacity.label'))
@@ -146,6 +130,7 @@ class ListEvents extends XotBaseListRecords
             'import_events' => Action::make('import_events')
                 ->label((string) __('meetup::event.event.actions.seed_events.label'))
                 ->icon('heroicon-o-arrow-down-tray')
+                ->badge(fn() => \Modules\Meetup\Models\Event::count())
                 ->action(function () {
                     $count = app(ImportEventsFromJsonAction::class)->execute();
 
@@ -169,6 +154,7 @@ class ListEvents extends XotBaseListRecords
     protected function getHeaderWidgets(): array
     {
         return [
+            EventStatsOverviewWidget::class,
             EventsStats::class,
             EventsTimelineChart::class,
             RecentEventsWidget::class,
