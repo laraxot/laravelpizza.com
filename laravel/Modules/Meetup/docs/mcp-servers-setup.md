@@ -291,7 +291,7 @@ claude mcp reset-project-choices
 
 ## Version History
 
-- **v1.0** (2025-12-09): Initial setup with filesystem, database (SQLite), and GitHub servers
+- **v1.0** ([DATE]): Initial setup with filesystem, database (SQLite), and GitHub servers
 
 ---
 

@@ -174,7 +174,7 @@ LimeSurvey specific rules:
 
 ---
 
-**Ultimo aggiornamento**: 2026-01-22  
+**Ultimo aggiornamento**: [DATE]  
 **MySQL Testing**: ✅ OBBLIGATORIO  
 **Race Conditions**: ✅ Pattern first() + try/catch  
 **PHPStan Level**: ✅ 10 obbligatorio  

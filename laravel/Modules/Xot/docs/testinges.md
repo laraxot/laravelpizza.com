@@ -131,5 +131,5 @@ $currentTeam = $user->currentTeam;
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22
+**Ultimo aggiornamento**: [DATE]
 **Prossimo step**: Correggere ArtisanServiceTest.php

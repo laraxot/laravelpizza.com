@@ -335,7 +335,7 @@ php artisan lang:benchmark         # Test performance
 ```php
 // Metadati versione
 'version' => '2.0.0',
-'last_updated' => '2025-01-27',
+'last_updated' => '[DATE]',
 'compatibility' => [
     'laravel' => '^12.0',
     'filament' => '^3.0',

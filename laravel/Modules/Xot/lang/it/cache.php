@@ -2,52 +2,75 @@
 
 declare(strict_types=1);
 
-return [
-    'navigation' => [
-        'name' => 'cache',
-        'plural' => 'cache',
-        'group' => [
-            'name' => 'Admin',
-        ],
-    ],
-    'pages' => [
-        'health_check_results' => [
-            'buttons' => [
-                'refresh' => 'Refresh',
-            ],
-            'heading' => 'Application Health',
-            'navigation' => [
-                'group' => 'Settings',
-                'label' => 'Application Health',
-            ],
-            'notifications' => [
-                'check_results' => 'Check results from',
-            ],
-        ],
-    ],
-    'label' => 'Cache',
-    'plural_label' => 'Cache (Plurale)',
-    'fields' => [
-        'id' => [
-            'label' => 'Identificativo',
-            'tooltip' => 'Identificativo univoco del record',
-        ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-        ],
-        'updated_at' => [
-            'label' => 'Ultima Modifica',
-        ],
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Cache',
-        ],
-        'edit' => [
-            'label' => 'Modifica Cache',
-        ],
-        'delete' => [
-            'label' => 'Elimina Cache',
-        ],
-    ],
-];
+return array (
+  'navigation' => 
+  array (
+    'name' => 'cache',
+    'plural' => 'cache',
+    'group' => 
+    array (
+      'name' => 'Admin',
+    ),
+  ),
+  'pages' => 
+  array (
+    'health_check_results' => 
+    array (
+      'buttons' => 
+      array (
+        'refresh' => 'Refresh',
+      ),
+      'heading' => 'Application Health',
+      'navigation' => 
+      array (
+        'group' => 'Settings',
+        'label' => 'Application Health',
+      ),
+      'notifications' => 
+      array (
+        'check_results' => 'Check results from',
+      ),
+    ),
+  ),
+  'label' => 'Cache',
+  'plural_label' => 'Cache (Plurale)',
+  'fields' => 
+  array (
+    'id' => 
+    array (
+      'label' => 'Identificativo',
+      'tooltip' => 'Identificativo univoco del record',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'Data Creazione',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'updated_at' => 
+    array (
+      'label' => 'Ultima Modifica',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'Crea Cache',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica Cache',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina Cache',
+    ),
+  ),
+);

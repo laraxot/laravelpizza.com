@@ -1,6 +1,6 @@
 # Logo e Branding Guidelines - Laravel Pizza Meetups
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## 🎯 Overview
 

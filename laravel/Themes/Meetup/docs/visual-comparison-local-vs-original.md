@@ -1,6 +1,6 @@
 # Confronto Visivo: Sito Locale vs laravelpizza.com
 
-**Data analisi**: 2026-02-02
+**Data analisi**: [DATE]
 **URL locale**: `http://127.0.0.1:8000/it`
 **URL originale**: `https://laravelpizza.com`
 **Screenshot**: `docs/screenshots/local/` e `docs/screenshots/original/`

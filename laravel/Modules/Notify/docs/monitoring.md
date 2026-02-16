@@ -40,7 +40,7 @@
     'channels' => ['mail'],
     'status' => 'success',
     'execution_time' => 0.5,
-    'timestamp' => '2024-03-20 10:00:00',
+    'timestamp' => '[DATE] 10:00:00',
     'metadata' => [
         'queue' => 'notifications',
         'attempt' => 1,

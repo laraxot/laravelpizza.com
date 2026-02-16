@@ -1,4 +1,4 @@
-# Workflow Improvements - 2026-02-08
+# Workflow Improvements - [DATE]
 
 **Modulo**: CMS
 **Tipo**: Process Improvement
@@ -198,11 +198,11 @@ graph TD
 
 1. `/docs/critical-frontend-rules.md` - Regole fondamentali frontend
 2. `/docs/continuous-improvement-lessons.md` - Lezioni apprese e miglioramenti
-3. `/laravel/Modules/Cms/docs/2026-02-08-workflow-improvements.md` - Questo file
+3. `/laravel/Modules/Cms/docs/[DATE]-workflow-improvements.md` - Questo file
 
 ### Updated Files
 
-1. `/laravel/Modules/Cms/docs/footer-error-resolution-2026-02-08.md` - Error resolution
+1. `/laravel/Modules/Cms/docs/footer-error-resolution-[DATE].md` - Error resolution
 2. `/laravel/Modules/Xot/docs/critical-architecture-rules.md` - Architecture rules
 3. `/laravel/Modules/Cms/docs/themes/folio-routing-system.md` - Folio routing
 

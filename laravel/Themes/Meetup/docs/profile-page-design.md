@@ -1,6 +1,6 @@
 # Profile Page Design - Laravel Pizza Meetups
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## 🎯 Overview
 
@@ -48,7 +48,7 @@ Ogni card ha:
 - Background: slate-800 con border slate-700
 
 **Cards:**
-1. **Member Since**: 2025-11-28 (icona calendario)
+1. **Member Since**: [DATE] (icona calendario)
 2. **Events Attended**: 12 Events (icona persona)
 
 #### 6. Bio Section

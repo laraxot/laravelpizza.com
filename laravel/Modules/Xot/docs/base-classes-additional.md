@@ -125,7 +125,7 @@ XotBaseModel (Xot) - Base standard
 ## 🔗 Collegamenti
 
 - [Model Inheritance Complete Fix](../../docs/MODEL_INHERITANCE_COMPLETE_FIX.md)
-- [DRY/KISS Analysis](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
+- [DRY/KISS Analysis](../../docs/DRY_KISS_ANALYSIS_[DATE].md)
 
 ---
 

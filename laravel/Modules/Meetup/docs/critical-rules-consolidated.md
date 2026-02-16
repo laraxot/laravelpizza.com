@@ -1,7 +1,7 @@
 # Regole Critiche Consolidate - Modulo Meetup
 
 ## Data
-2025-11-30
+[DATE]
 
 ## ⚠️ REGOLE CRITICHE OBBLIGATORIE
 
@@ -90,6 +90,6 @@ Request → Folio (routing) → Blade Page → Volt Component → Action → Ser
 
 ## Aggiornamenti Recenti
 
-- **2025-11-30**: Aggiunta regola Frontend Asset Management
-- **2025-11-30**: Aggiunta regola Componenti Blade Anonimi
-- **2025-11-30**: Consolidata Architettura Frontoffice
+- **[DATE]**: Aggiunta regola Frontend Asset Management
+- **[DATE]**: Aggiunta regola Componenti Blade Anonimi
+- **[DATE]**: Consolidata Architettura Frontoffice

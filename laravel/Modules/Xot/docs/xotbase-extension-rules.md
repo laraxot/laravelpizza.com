@@ -188,7 +188,7 @@ jobs:
 
 ---
 
-*Documento aggiornato: 2025-07-30*
+*Documento aggiornato: [DATE]*
 *Priorità: CRITICA*
 *Stato: OBBLIGATORIO per tutti i moduli*
 

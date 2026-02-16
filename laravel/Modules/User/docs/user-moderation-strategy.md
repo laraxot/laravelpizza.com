@@ -162,4 +162,4 @@ As noted, moderation for certain user types might be more labor-intensive. To ha
 ## Conclusion
 Integrating a unified moderation strategy within the `User` module aligns with the principle of a centralized user management system applicable across various projects. By leveraging configurable workflows, Filament for admin interfaces, an event-driven approach, and proper state management with `spatie/laravel-model-states`, we can manage the moderation of all user types efficiently while accommodating varying levels of complexity. This approach ensures consistency with the unified registration wizard, maintains project-agnostic code, and supports scalability with an estimated effort distribution as outlined above.
 
-**Documented on**: 2025-05-16
+**Documented on**: [DATE]

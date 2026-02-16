@@ -51,7 +51,7 @@ Laravel usa le convenzioni lowercase per directory:
 
 ## Update Log
 
-- **2025-11-04**: Major cleanup
+- **[DATE]**: Major cleanup
   - Removed `database/Factories/` uppercase directory
   - Removed `Tests/` uppercase directory
   - Removed `domaintest.php` lowercase test file

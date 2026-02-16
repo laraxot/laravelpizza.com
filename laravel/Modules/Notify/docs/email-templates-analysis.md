@@ -123,4 +123,4 @@ Sono state analizzate le principali soluzioni open source, best practice e patte
 
 ---
 
-_Analisi aggiornata al 2025-05-05. Per dettagli e approfondimenti, consultare i README specifici delle soluzioni nella cartella email-templates._
+_Analisi aggiornata al [DATE]. Per dettagli e approfondimenti, consultare i README specifici delle soluzioni nella cartella email-templates._

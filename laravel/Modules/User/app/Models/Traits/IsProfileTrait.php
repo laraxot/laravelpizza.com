@@ -20,6 +20,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Traits;
 
+use Exception;
 use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
@@ -187,7 +188,7 @@ trait IsProfileTrait
     {
         $user = $this->user;
         if ($user === null) {
-            throw new \Exception('['.__LINE__.']['.class_basename($this).']');
+            throw new Exception('['.__LINE__.']['.class_basename($this).']');
         }
         Assert::isInstanceOf($user, User::class);
         $to_assign = 'super-admin';

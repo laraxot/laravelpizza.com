@@ -326,7 +326,7 @@ Se l'unificazione viene implementata correttamente:
 
 | Data | Versione | Modifiche |
 |------|----------|-----------|
-| 2025-10-15 | 1.0 | Creazione documento iniziale |
+| [DATE] | 1.0 | Creazione documento iniziale |
 
 ---
 

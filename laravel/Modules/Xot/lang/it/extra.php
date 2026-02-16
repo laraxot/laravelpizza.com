@@ -2,52 +2,75 @@
 
 declare(strict_types=1);
 
-return [
-    'navigation' => [
-        'name' => 'extra',
-        'plural' => 'estras',
-        'group' => [
-            'name' => 'Admin',
-        ],
-    ],
-    'pages' => [
-        'health_check_results' => [
-            'buttons' => [
-                'refresh' => 'Refresh',
-            ],
-            'heading' => 'Application Health',
-            'navigation' => [
-                'group' => 'Settings',
-                'label' => 'Application Health',
-            ],
-            'notifications' => [
-                'check_results' => 'Check results from',
-            ],
-        ],
-    ],
-    'label' => 'Extra',
-    'plural_label' => 'Extra (Plurale)',
-    'fields' => [
-        'id' => [
-            'label' => 'Identificativo',
-            'tooltip' => 'Identificativo univoco del record',
-        ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-        ],
-        'updated_at' => [
-            'label' => 'Ultima Modifica',
-        ],
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Extra',
-        ],
-        'edit' => [
-            'label' => 'Modifica Extra',
-        ],
-        'delete' => [
-            'label' => 'Elimina Extra',
-        ],
-    ],
-];
+return array (
+  'navigation' => 
+  array (
+    'name' => 'extra',
+    'plural' => 'estras',
+    'group' => 
+    array (
+      'name' => 'Admin',
+    ),
+  ),
+  'pages' => 
+  array (
+    'health_check_results' => 
+    array (
+      'buttons' => 
+      array (
+        'refresh' => 'Refresh',
+      ),
+      'heading' => 'Application Health',
+      'navigation' => 
+      array (
+        'group' => 'Settings',
+        'label' => 'Application Health',
+      ),
+      'notifications' => 
+      array (
+        'check_results' => 'Check results from',
+      ),
+    ),
+  ),
+  'label' => 'Extra',
+  'plural_label' => 'Extra (Plurale)',
+  'fields' => 
+  array (
+    'id' => 
+    array (
+      'label' => 'Identificativo',
+      'tooltip' => 'Identificativo univoco del record',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'Data Creazione',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'updated_at' => 
+    array (
+      'label' => 'Ultima Modifica',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'Crea Extra',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica Extra',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina Extra',
+    ),
+  ),
+);

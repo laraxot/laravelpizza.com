@@ -1,4 +1,4 @@
-# Riepilogo Rimozione Violazioni XotBaseResource - 2026-01-21
+# Riepilogo Rimozione Violazioni XotBaseResource - [DATE]
 
 **Status**: ✅ Completato  
 

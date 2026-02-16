@@ -1,7 +1,7 @@
 # events page differences analysis
 
 ## data
-2025-11-30
+[DATE]
 
 ## obiettivo
 allineare la pagina `/it/events` (folio + volt + blocchi cms) al design di `https://laravelpizza.com/events`, utilizzando:

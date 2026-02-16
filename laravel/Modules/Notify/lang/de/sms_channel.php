@@ -2,10 +2,26 @@
 
 declare(strict_types=1);
 
-return [
-    'title' => 'SMS-Kanal',
-    'name' => 'Name',
-    'description' => 'Beschreibung',
-    'configure' => 'Konfigurieren',
-    'settings' => 'Einstellungen',
-];
+return array (
+  'title' => 'SMS-Kanal',
+  'name' => 'Name',
+  'description' => 'Beschreibung',
+  'configure' => 'Konfigurieren',
+  'settings' => 'Einstellungen',
+  'navigation' => 
+  array (
+    'label' => 'Missing Navigation Label',
+    'plural_label' => 'Missing Navigation Plural Label',
+    'group' => 'Missing Group',
+    'icon' => 'heroicon-o-puzzle-piece',
+    'sort' => 100,
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'fields' => 
+  array (
+  ),
+  'actions' => 
+  array (
+  ),
+);

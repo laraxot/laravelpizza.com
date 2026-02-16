@@ -206,5 +206,5 @@ protected function casts(): array
 
 ---
 
-**Data:** 2025-10-15
+**Data:** [DATE]
 **Status:** 📋 Draft per Review

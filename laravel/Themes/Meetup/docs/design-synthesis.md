@@ -1,6 +1,6 @@
 # Sintesi Design - Laravel Pizza
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## 🎯 Obiettivo Finale
 Creare un sistema di ordinazione pizze con design elegante ispirato a laravelpizza.com (community meetup), adattando contenuti e funzionalità per la business logic di ordinazione.

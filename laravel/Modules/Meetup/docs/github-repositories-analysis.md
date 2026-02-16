@@ -4,7 +4,7 @@
 
 analisi di 22 repository github reali che implementano Laravel Folio + Volt per estrarre pattern comuni, best practices e architetture consolidate.
 
-**data analisi:** 2025-01-29
+**data analisi:** [DATE]
 **repository studiati:** 22
 **pattern identificati:** 15+
 

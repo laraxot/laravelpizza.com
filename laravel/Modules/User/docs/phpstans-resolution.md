@@ -155,7 +155,7 @@ public function clients();
 
 ## 📝 Progresso Correzioni
 
-### Correzioni Implementate (2025-01-27)
+### Correzioni Implementate ([DATE])
 
 1. **PassportServiceProvider.php**:
    - Aggiunto `Assert::classExists()` per verificare classi
@@ -188,4 +188,4 @@ Tutti gli errori sono stati corretti:
 3. ✅ **HasTeams.php linee 473 e 476**: Corretto PHPDoc return type da `Pivot` a `TeamUser` per riflettere `->using(TeamUser::class)`
 4. ✅ **PassportServiceProvider.php linea 158**: Aggiunto cast esplicito `@var array<string, string>` per `Passport::tokensCan()`
 
-*Ultimo aggiornamento: 2025-01-27*
+*Ultimo aggiornamento: [DATE]*

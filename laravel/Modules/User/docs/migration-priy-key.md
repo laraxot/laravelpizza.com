@@ -1,7 +1,7 @@
 # Fix Primary Key Constraint - team_user Table
 
 ## Data
-2025-01-15
+[DATE]
 
 ## Problema Identificato
 
@@ -124,4 +124,4 @@ $this->tableCreate(static function (Blueprint $table): void {
 ✅ **Migrazione funzionante**
 ✅ **Documentazione aggiornata**
 
-*Ultimo aggiornamento: 2025-01-15*
+*Ultimo aggiornamento: [DATE]*

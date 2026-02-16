@@ -41,7 +41,7 @@ Until this issue is resolved, Folio routing cannot be properly configured or tes
 3. Determine if there are configuration values that are being incorrectly processed as class names
 4. Implement a fix that allows proper configuration loading without triggering service container resolution issues
 
-### Tentativi di Risoluzione (2025-11-29)
+### Tentativi di Risoluzione ([DATE])
 1. ✅ Creato file `config/local/laravelpizza/middleware.php` con struttura corretta
 2. ✅ Aggiunto try-catch in `FolioVoltServiceProvider` per gestire errori di configurazione
 3. ✅ Disabilitato temporaneamente `FolioVoltServiceProvider` nel `module.json` del modulo Cms
@@ -65,4 +65,4 @@ Questo suggerisce che il problema potrebbe essere nella risoluzione delle dipend
 - Laravel's service container (vendor code)
 
 ### Date
-2025-11-29
+[DATE]

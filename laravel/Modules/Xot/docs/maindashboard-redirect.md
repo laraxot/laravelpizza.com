@@ -161,14 +161,14 @@ performance::admin
 
 ## Aggiornamenti
 
-### 2025-01-27 - Fix Implementato
+### [DATE] - Fix Implementato
 - ✅ **Controllo Path Corrente**: Aggiunto controllo per evitare redirect loop
 - ✅ **Import Auth**: Corretto import per Auth facade
 - ✅ **Documentazione**: Documentazione completa del fix
 - ✅ **Test**: Procedure di test per verificare la correzione
 - ✅ **Prevenzione**: Linee guida per prevenire problemi futuri
 
-### 2025-01-27 - Verifica Compatibilità
+### [DATE] - Verifica Compatibilità
 - ✅ **Backward Compatible**: Nessun breaking change
 - ✅ **Multi-Ruolo**: Supporto mantenuto
 - ✅ **Performance**: Nessun impatto negativo
@@ -335,14 +335,14 @@ performance::admin
 
 ## Aggiornamenti
 
-### 2025-01-27 - Fix Implementato
+### [DATE] - Fix Implementato
 - ✅ **Controllo Path Corrente**: Aggiunto controllo per evitare redirect loop
 - ✅ **Import Auth**: Corretto import per Auth facade
 - ✅ **Documentazione**: Documentazione completa del fix
 - ✅ **Test**: Procedure di test per verificare la correzione
 - ✅ **Prevenzione**: Linee guida per prevenire problemi futuri
 
-### 2025-01-27 - Verifica Compatibilità
+### [DATE] - Verifica Compatibilità
 - ✅ **Backward Compatible**: Nessun breaking change
 - ✅ **Multi-Ruolo**: Supporto mantenuto
 - ✅ **Performance**: Nessun impatto negativo

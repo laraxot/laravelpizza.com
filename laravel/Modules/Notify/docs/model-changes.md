@@ -1,6 +1,6 @@
 # Modifiche al Modello MailTemplate
 
-## Modifiche Implementate (2024-03-20)
+## Modifiche Implementate ([DATE])
 
 ### 1. Aggiunta Campo Slug
 ```php

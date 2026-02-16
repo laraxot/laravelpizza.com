@@ -19,12 +19,16 @@ class LogoutUserAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly Assert $assert,
+    ) {}
+
     /**
      * Execute the action.
      */
     public function execute(UserContract $user): void
     {
-        Assert::notNull($accessToken = $user->token(), '['.__FILE__.']['.__LINE__.']');
+        $this->assert->notNull($accessToken = $user->token(), '['.__FILE__.']['.__LINE__.']');
         /*
          * DB::table('oauth_refresh_tokens')
          * ->where('access_token_id', $accessToken->)

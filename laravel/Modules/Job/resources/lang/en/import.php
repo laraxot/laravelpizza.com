@@ -2,47 +2,81 @@
 
 declare(strict_types=1);
 
-return [
-    'navigation' => [
-        'label' => 'Import',
-        'group' => 'Imports',
-        'icon' => 'heroicon-o-arrow-up-tray',
-        'sort' => 26,
-    ],
+return array (
+  'navigation' => 
+  array (
     'label' => 'Import',
-    'plural_label' => 'Imports',
-    'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'job_id' => [
-            'label' => 'Job ID',
-        ],
-        'importable_type' => [
-            'label' => 'Importable Type',
-        ],
-        'file_path' => [
-            'label' => 'File Path',
-        ],
-        'status' => [
-            'label' => 'Status',
-        ],
-        'created_at' => [
-            'label' => 'Created At',
-        ],
-        'completed_at' => [
-            'label' => 'Completed At',
-        ],
-    ],
-    'actions' => [
-        'import' => [
-            'label' => 'Import',
-        ],
-        'upload' => [
-            'label' => 'Upload',
-        ],
-        'create' => [
-            'label' => 'Create',
-        ],
-    ],
-];
+    'group' => 'Imports',
+    'icon' => 'heroicon-o-arrow-up-tray',
+    'sort' => 26,
+  ),
+  'label' => 'Import',
+  'plural_label' => 'Imports',
+  'fields' => 
+  array (
+    'id' => 
+    array (
+      'label' => 'ID',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'job_id' => 
+    array (
+      'label' => 'Job ID',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'importable_type' => 
+    array (
+      'label' => 'Importable Type',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'file_path' => 
+    array (
+      'label' => 'File Path',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'status' => 
+    array (
+      'label' => 'Status',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'Created At',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'completed_at' => 
+    array (
+      'label' => 'Completed At',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'import' => 
+    array (
+      'label' => 'Import',
+    ),
+    'upload' => 
+    array (
+      'label' => 'Upload',
+    ),
+    'create' => 
+    array (
+      'label' => 'Create',
+    ),
+  ),
+);

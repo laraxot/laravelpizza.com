@@ -168,7 +168,7 @@ rules:
 - SEMPRE testare le traduzioni prima del commit
 # REGOLA CRITICA: MAI usare ->label()
 
-## Data: 2025-01-06
+## Data: [DATE]
 
 ## ❌ ERRORE CRITICO - NON FARE MAI QUESTO
 
@@ -351,4 +351,4 @@ rules:
 
 - SEMPRE testare le traduzioni prima del commit
 
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*

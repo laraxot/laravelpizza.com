@@ -2189,7 +2189,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\Au…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, 2026-01-17 17:58:02, 2026-01-17 17:58:02))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:02, [DATE] 17:58:02))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -2207,7 +2207,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\Au…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, 2026-01-17 17:58:03, 2026-01-17 17:58:03))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:03, [DATE] 17:58:03))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -2225,7 +2225,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\Au…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, 2026-01-17 17:58:03, 2026-01-17 17:58:03))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:03, [DATE] 17:58:03))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -2243,7 +2243,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\Au…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, 2026-01-17 17:58:03, 2026-01-17 17:58:03))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'edit posts-web' for key 'permissions.permissions_name_guard_name_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `permissions` (`name`, `guard_name`, `updated_at`, `created_at`) values (edit posts, web, [DATE] 17:58:03, [DATE] 17:58:03))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -2461,7 +2461,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\Fi…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test4300@mail.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `type`, `id`, `updated_at`, `created_at`) values (1, Antonio, Russo, Giuseppe Bianchi, test4300@mail.com, 2026-01-17 17:58:18, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, UHHUcJpAfX, de, 0, 2026-06-06 17:58:18, master_admin, 019bcce4-b04c-7166-a8a4-a96175a7258d, 2026-01-17 17:58:18, 2026-01-17 17:58:18))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test4300@mail.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `type`, `id`, `updated_at`, `created_at`) values (1, Antonio, Russo, Giuseppe Bianchi, test4300@mail.com, [DATE] 17:58:18, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, UHHUcJpAfX, de, 0, [DATE] 17:58:18, master_admin, 019bcce4-b04c-7166-a8a4-a96175a7258d, [DATE] 17:58:18, [DATE] 17:58:18))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -3436,7 +3436,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\TenantScopeConsoleTest…  QueryException   
-  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Bianchi, Tenant 1 User, test3265@mail.com, 2026-01-17 17:58:49, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 1PnJXVEEXb, it, 0, 2026-09-25 17:58:49, f155f975-d42e-380a-9585-db9a377cdf64, 019bcce5-2cb9-724b-aea3-38e8064d0b55, 2026-01-17 17:58:49, 2026-01-17 17:58:49))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Bianchi, Tenant 1 User, test3265@mail.com, [DATE] 17:58:49, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 1PnJXVEEXb, it, 0, [DATE] 17:58:49, f155f975-d42e-380a-9585-db9a377cdf64, 019bcce5-2cb9-724b-aea3-38e8064d0b55, [DATE] 17:58:49, [DATE] 17:58:49))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -3454,7 +3454,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\TenantScopeConsoleTest…  QueryException   
-  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Antonio, Verdi, Tenant 1 User Only, tenant1-only@example.com, 2026-01-17 17:58:50, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, Lf1zQzoOS9, it, 0, 2026-11-06 17:58:50, 1c1b4150-dbf4-3c1d-9501-94d513d1661e, 019bcce5-2f22-736d-92cd-e4bca2c7ae52, 2026-01-17 17:58:50, 2026-01-17 17:58:50))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Antonio, Verdi, Tenant 1 User Only, tenant1-only@example.com, [DATE] 17:58:50, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, Lf1zQzoOS9, it, 0, [DATE] 17:58:50, 1c1b4150-dbf4-3c1d-9501-94d513d1661e, 019bcce5-2f22-736d-92cd-e4bca2c7ae52, [DATE] 17:58:50, [DATE] 17:58:50))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -3489,7 +3489,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Feature\TenantScopeConsoleTest…  QueryException   
-  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Marco, Ferrari, Antonio Russo, test9838@mail.com, 2026-01-17 17:58:51, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, SLhugy5yyz, de, 0, ?, a8354996-2df0-3272-9403-7ccec040e6c9, 019bcce5-341e-731a-8e7b-bffbb6d51790, 2026-01-17 17:58:51, 2026-01-17 17:58:51))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tenant_id' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `tenant_id`, `id`, `updated_at`, `created_at`) values (1, Marco, Ferrari, Antonio Russo, test9838@mail.com, [DATE] 17:58:51, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, SLhugy5yyz, de, 0, ?, a8354996-2df0-3272-9403-7ccec040e6c9, 019bcce5-341e-731a-8e7b-bffbb6d51790, [DATE] 17:58:51, [DATE] 17:58:51))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -5309,7 +5309,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Mario, Esposito, Test User, test@example.com, 2026-01-17 17:59:19, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, tHO8AKhFZ2, en, 0, 2026-04-17 17:59:19, 019bcce5-a145-7045-8605-8842a49f8843, 2026-01-17 17:59:19, 2026-01-17 17:59:19))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Mario, Esposito, Test User, test@example.com, [DATE] 17:59:19, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, tHO8AKhFZ2, en, 0, [DATE] 17:59:19, 019bcce5-a145-7045-8605-8842a49f8843, [DATE] 17:59:19, [DATE] 17:59:19))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5327,7 +5327,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `current_team_id`, `id`, `updated_at`, `created_at`) values (1, Francesco, Verdi, Test User, test@example.com, 2026-01-17 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, sDIEheCJak, en, 0, 2026-02-17 17:59:20, ?, 019bcce5-a2eb-71b0-9f98-263293ad011a, 2026-01-17 17:59:20, 2026-01-17 17:59:20))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `current_team_id`, `id`, `updated_at`, `created_at`) values (1, Francesco, Verdi, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, sDIEheCJak, en, 0, [DATE] 17:59:20, ?, 019bcce5-a2eb-71b0-9f98-263293ad011a, [DATE] 17:59:20, [DATE] 17:59:20))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5345,7 +5345,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Marco, Esposito, Test User, test@example.com, 2026-01-17 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, lK9eSR9rRi, en, 0, 2026-08-04 17:59:20, 019bcce5-a3e9-70f8-a476-6b489a1d3b70, 2026-01-17 17:59:20, 2026-01-17 17:59:20))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Marco, Esposito, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, lK9eSR9rRi, en, 0, [DATE] 17:59:20, 019bcce5-a3e9-70f8-a476-6b489a1d3b70, [DATE] 17:59:20, [DATE] 17:59:20))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5363,7 +5363,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Esposito, Test User, test@example.com, 2026-01-17 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 197iwHzcQ0, en, 0, ?, 019bcce5-a4d7-7282-a045-a3166c5d5b84, 2026-01-17 17:59:20, 2026-01-17 17:59:20))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Esposito, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 197iwHzcQ0, en, 0, ?, 019bcce5-a4d7-7282-a045-a3166c5d5b84, [DATE] 17:59:20, [DATE] 17:59:20))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5381,7 +5381,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Luigi, Verdi, Test User, test@example.com, 2026-01-17 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, eG0coFuldH, de, 0, 2026-09-12 17:59:20, 019bcce5-a5c1-71fd-bbff-b034a72026bf, 2026-01-17 17:59:20, 2026-01-17 17:59:20))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Luigi, Verdi, Test User, test@example.com, [DATE] 17:59:20, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, eG0coFuldH, de, 0, [DATE] 17:59:20, 019bcce5-a5c1-71fd-bbff-b034a72026bf, [DATE] 17:59:20, [DATE] 17:59:20))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5399,7 +5399,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Mario, Verdi, Test User, test@example.com, 2026-01-17 17:59:21, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, EjRr2WlkUu, it, 0, ?, 019bcce5-a6be-717d-98f3-63faa77b28d9, 2026-01-17 17:59:21, 2026-01-17 17:59:21))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Mario, Verdi, Test User, test@example.com, [DATE] 17:59:21, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, EjRr2WlkUu, it, 0, ?, 019bcce5-a6be-717d-98f3-63faa77b28d9, [DATE] 17:59:21, [DATE] 17:59:21))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5540,7 +5540,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'user5628@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Ferrari, Giuseppe Bianchi, user5628@example.com, 2026-01-17 17:59:25, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 27dKGLooLd, de, 0, 2026-02-09 17:59:25, 019bcce5-b5e2-73cd-aacb-430670e5d517, 2026-01-17 17:59:25, 2026-01-17 17:59:25))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'user5628@example.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Giuseppe, Ferrari, Giuseppe Bianchi, user5628@example.com, [DATE] 17:59:25, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, 27dKGLooLd, de, 0, [DATE] 17:59:25, 019bcce5-b5e2-73cd-aacb-430670e5d517, [DATE] 17:59:25, [DATE] 17:59:25))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -5627,7 +5627,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\HasTe…  UniqueConstraintViolationException   
-  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test6586@mail.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Antonio, Bianchi, Luigi Verdi, test6586@mail.com, 2026-01-17 17:59:28, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, LZdItmpkhS, en, 0, 2026-08-25 17:59:28, 019bcce5-c2ed-7191-9238-df255da041e4, 2026-01-17 17:59:28, 2026-01-17 17:59:28))
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test6586@mail.com' for key 'users.users_email_unique' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `users` (`is_active`, `first_name`, `last_name`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `lang`, `is_otp`, `password_expires_at`, `id`, `updated_at`, `created_at`) values (1, Antonio, Bianchi, Luigi Verdi, test6586@mail.com, [DATE] 17:59:28, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, LZdItmpkhS, en, 0, [DATE] 17:59:28, 019bcce5-c2ed-7191-9238-df255da041e4, [DATE] 17:59:28, [DATE] 17:59:28))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:53
      49▕             $this->bindValues($statement, $this->prepareBindings($bindings));
@@ -6250,7 +6250,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can cre…  QueryException   
-  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `roles` (`name`, `guard_name`, `team_id`, `uuid`, `updated_at`, `created_at`) values (Full Role, web, 1692, 550e8400-e29b-41d4-a716-446655440000, 2026-01-17 17:59:52, 2026-01-17 17:59:52))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `roles` (`name`, `guard_name`, `team_id`, `uuid`, `updated_at`, `created_at`) values (Full Role, web, 1692, 550e8400-e29b-41d4-a716-446655440000, [DATE] 17:59:52, [DATE] 17:59:52))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -6356,7 +6356,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can fin…  QueryException   
-  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `roles` (`name`, `guard_name`, `uuid`, `updated_at`, `created_at`) values (contributor, web, 550e8400-e29b-41d4-a716-446655440000, 2026-01-17 17:59:54, 2026-01-17 17:59:54))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `roles` (`name`, `guard_name`, `uuid`, `updated_at`, `created_at`) values (contributor, web, 550e8400-e29b-41d4-a716-446655440000, [DATE] 17:59:54, [DATE] 17:59:54))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -6410,7 +6410,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\RoleTest > can han…  QueryException   
-  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `roles` (`name`, `guard_name`, `team_id`, `uuid`, `updated_at`, `created_at`) values (Test Role, web, ?, ?, 2026-01-17 17:59:55, 2026-01-17 17:59:55))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uuid' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `roles` (`name`, `guard_name`, `team_id`, `uuid`, `updated_at`, `created_at`) values (Test Role, web, ?, ?, [DATE] 17:59:55, [DATE] 17:59:55))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -6603,7 +6603,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\TenantTest > it ca…  QueryException   
-  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'settings' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `slug`, `settings`, `trial_ends_at`, `updated_at`, `created_at`) values (e636089a-9a19-38b2-b3e9-6d316cb60920, Full Tenant, fulltenant.com, fulltenant_db, 1, full-tenant, ?, 2026-02-16 18:00:00, 2026-01-17 18:00:00, 2026-01-17 18:00:00))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'settings' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `slug`, `settings`, `trial_ends_at`, `updated_at`, `created_at`) values (e636089a-9a19-38b2-b3e9-6d316cb60920, Full Tenant, fulltenant.com, fulltenant_db, 1, full-tenant, ?, [DATE] 18:00:00, [DATE] 18:00:00, [DATE] 18:00:00))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -6823,7 +6823,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\TenantTest > it ca…  QueryException   
-  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'trial_ends_at' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `trial_ends_at`, `slug`, `updated_at`, `created_at`) values (a1c99ef4-046d-3122-b725-fed77e663d53, Vitali SPA, longo.it, in, 1, 2026-02-16 18:00:04, vitali-spa, 2026-01-17 18:00:04, 2026-01-17 18:00:04))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'trial_ends_at' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `trial_ends_at`, `slug`, `updated_at`, `created_at`) values (a1c99ef4-046d-3122-b725-fed77e663d53, Vitali SPA, longo.it, in, 1, [DATE] 18:00:04, vitali-spa, [DATE] 18:00:04, [DATE] 18:00:04))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {
@@ -6841,7 +6841,7 @@ Database connection [quaeris] not configured.
 
   ────────────────────────────────────────────────────────────────────────────  
    FAILED  Modules\User\tests\Unit\Models\TenantTest > it ca…  QueryException   
-  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'settings' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `settings`, `slug`, `updated_at`, `created_at`) values (ff4d2720-9c20-3347-bb1e-ec2d28f97bb1, Fabbri, Amato e Romano Group, neri.net, atque, 0, ?, fabbri-amato-e-romano-group, 2026-01-17 18:00:04, 2026-01-17 18:00:04))
+  SQLSTATE[42S22]: Column not found: 1054 Unknown column 'settings' in 'field list' (Connection: user, Host: 127.0.0.1, Port: 3306, Database: quaeris_user_test, SQL: insert into `tenants` (`id`, `name`, `domain`, `database`, `is_active`, `settings`, `slug`, `updated_at`, `created_at`) values (ff4d2720-9c20-3347-bb1e-ec2d28f97bb1, Fabbri, Amato e Romano Group, neri.net, atque, 0, ?, fabbri-amato-e-romano-group, [DATE] 18:00:04, [DATE] 18:00:04))
 
   at vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:47
      43▕             if ($this->pretending()) {

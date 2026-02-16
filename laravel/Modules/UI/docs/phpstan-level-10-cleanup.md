@@ -1,9 +1,9 @@
-# PHPStan Level 10 Cleanup Session - 2025-11-06
+# PHPStan Level 10 Cleanup Session - [DATE]
 
 ## Executive Summary
 
-- Session precedente (2025-11-06): ✅ zero errori PHPStan Level 10.
-- Nuova esecuzione (2025-11-15): ⚠️ rilevato 1 parse error in `UI/app/Filament/Blocks/Title.php` (`unexpected EOF`).
+- Session precedente ([DATE]): ✅ zero errori PHPStan Level 10.
+- Nuova esecuzione ([DATE]): ⚠️ rilevato 1 parse error in `UI/app/Filament/Blocks/Title.php` (`unexpected EOF`).
 - Obiettivo attuale: ripristinare il blocco Title seguendo le specifiche documentate in `./index.md` e `./core/architecture.md`, quindi rilanciare `phpstan`.
 
 **Metriche aggiornate**:

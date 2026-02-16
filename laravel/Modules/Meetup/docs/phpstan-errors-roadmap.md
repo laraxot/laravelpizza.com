@@ -155,4 +155,4 @@ return $result;
 
 **Status**: 🧘 **IN ANALISI**
 
-**Ultimo aggiornamento**: 2026-01-09
+**Ultimo aggiornamento**: [DATE]

@@ -1,7 +1,7 @@
 # Folio + Volt Structure - Meetup Module
 
 ## Data
-2026-01-08
+[DATE]
 
 ## Architettura Frontoffice
 

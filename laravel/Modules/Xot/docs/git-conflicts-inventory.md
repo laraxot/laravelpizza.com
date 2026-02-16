@@ -55,5 +55,5 @@
 
 ## Stato
 - ❌ Conflitti da risolvere
-- 📅 Data rilevamento: 2025-11-12
+- 📅 Data rilevamento: [DATE]
 - 🔄 Priorità: ALTA - File critici del core framework

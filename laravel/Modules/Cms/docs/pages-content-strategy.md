@@ -102,4 +102,4 @@ La pagina servizi deve comunicare:
 - [Theme Blocks](../../Themes/One/project_docs/blocks.md)
 - [User Experience](../../../project_docs/frontend/ux-guidelines.md)
 
-*Ultimo aggiornamento: 2025-01-15* 
+*Ultimo aggiornamento: [DATE]* 

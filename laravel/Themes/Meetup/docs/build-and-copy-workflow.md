@@ -1,7 +1,7 @@
 # Build e Copy Workflow - Tema Meetup
 
 ## Data
-2025-11-29
+[DATE]
 
 ## Panoramica
 

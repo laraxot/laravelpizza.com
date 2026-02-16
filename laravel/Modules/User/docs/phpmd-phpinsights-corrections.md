@@ -1,4 +1,4 @@
-# PHPMD e PHP Insights Corrections - 2025-01-22
+# PHPMD e PHP Insights Corrections - [DATE]
 
 ## Obiettivo
 Correggere warning PHPMD e PHP Insights nel modulo User, mantenendo PHPStan a 0 errori.
@@ -98,6 +98,6 @@ I seguenti warning sono accettabili e non richiedono correzione immediata:
 
 ## Collegamenti
 
-- [Resources Corrections Summary](./resources-corrections-summary-2025-01-22.md)
+- [Resources Corrections Summary](./resources-corrections-summary-[DATE].md)
 - [Quality Tools Report](./quality-tools-report.md)
 - [PHPStan Complete Success](./phpstan-complete-success.md)

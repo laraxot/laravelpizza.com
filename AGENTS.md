@@ -152,6 +152,7 @@ public function setConfig(array $config): void
 - Use `casts()` method (NOT `$casts` property)
 - Use `HasUuids`, `SoftDeletes`, `HasFactory` traits
 - Define `$fillable` as typed array
+- **ALWAYS use short array syntax `[]` instead of `array()`**
 ```php
 protected function casts(): array
 {

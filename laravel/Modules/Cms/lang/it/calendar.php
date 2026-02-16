@@ -2,90 +2,117 @@
 
 declare(strict_types=1);
 
-return [
-    'calendar' => [
-        'title' => 'Calendario',
-        'description' => 'Gestisci i tuoi appuntamenti',
-        'types' => [
-            'patient' => 'Calendario Paziente',
-            'doctor' => 'Calendario Medico',
-            'admin' => 'Calendario Amministratore',
-        ],
-        'events' => [
-            'title' => 'Appuntamento',
-            'start' => 'Inizio',
-            'end' => 'Fine',
-            'patient' => 'Paziente',
-            'doctor' => 'Medico',
-            'status' => 'Stato',
-            'type' => 'Tipo',
-        ],
-        'actions' => [
-            'create' => 'Nuovo Appuntamento',
-            'edit' => 'Modifica Appuntamento',
-            'delete' => 'Elimina Appuntamento',
-            'view' => 'Visualizza Dettagli',
-        ],
-        'messages' => [
-            'created' => 'Appuntamento creato con successo',
-            'updated' => 'Appuntamento aggiornato con successo',
-            'deleted' => 'Appuntamento eliminato con successo',
-        ],
-    ],
-    'buttons' => [
-        'today' => 'Oggi',
-        'month' => 'Mese',
-        'week' => 'Settimana',
-        'day' => 'Giorno',
-    ],
-    'labels' => [
-        'all_day' => 'Tutto il giorno',
-        'no_events' => 'Nessun evento',
-    ],
-    'errors' => [
-        'load_failed' => 'Impossibile caricare gli eventi',
-        'save_failed' => 'Impossibile salvare l\'evento',
-        'delete_failed' => 'Impossibile eliminare l\'evento',
-    ],
-    'success' => [
-        'event_created' => 'Evento creato con successo',
-        'event_updated' => 'Evento aggiornato con successo',
-        'event_deleted' => 'Evento eliminato con successo',
-    ],
+return array (
+  'calendar' => 
+  array (
+    'title' => 'Calendario',
+    'description' => 'Gestisci i tuoi appuntamenti',
+    'types' => 
+    array (
+      'patient' => 'Calendario Paziente',
+      'doctor' => 'Calendario Medico',
+      'admin' => 'Calendario Amministratore',
+    ),
+    'events' => 
+    array (
+      'title' => 'Appuntamento',
+      'start' => 'Inizio',
+      'end' => 'Fine',
+      'patient' => 'Paziente',
+      'doctor' => 'Medico',
+      'status' => 'Stato',
+      'type' => 'Tipo',
+    ),
+    'actions' => 
+    array (
+      'create' => 'Nuovo Appuntamento',
+      'edit' => 'Modifica Appuntamento',
+      'delete' => 'Elimina Appuntamento',
+      'view' => 'Visualizza Dettagli',
+    ),
+    'messages' => 
+    array (
+      'created' => 'Appuntamento creato con successo',
+      'updated' => 'Appuntamento aggiornato con successo',
+      'deleted' => 'Appuntamento eliminato con successo',
+    ),
+  ),
+  'buttons' => 
+  array (
+    'today' => 'Oggi',
+    'month' => 'Mese',
+    'week' => 'Settimana',
+    'day' => 'Giorno',
+  ),
+  'labels' => 
+  array (
+    'all_day' => 'Tutto il giorno',
+    'no_events' => 'Nessun evento',
+  ),
+  'errors' => 
+  array (
+    'load_failed' => 'Impossibile caricare gli eventi',
+    'save_failed' => 'Impossibile salvare l\'evento',
+    'delete_failed' => 'Impossibile eliminare l\'evento',
+  ),
+  'success' => 
+  array (
+    'event_created' => 'Evento creato con successo',
+    'event_updated' => 'Evento aggiornato con successo',
+    'event_deleted' => 'Evento eliminato con successo',
+  ),
+  'label' => 'Calendar',
+  'plural_label' => 'Calendar (Plurale)',
+  'navigation' => 
+  array (
+    'name' => 'Calendar',
+    'plural' => 'Calendar',
+    'group' => 
+    array (
+      'name' => 'General',
+      'description' => 'General Settings',
+    ),
     'label' => 'Calendar',
-    'plural_label' => 'Calendar (Plurale)',
-    'navigation' => [
-        'name' => 'Calendar',
-        'plural' => 'Calendar',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Calendar',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
-    'fields' => [
-        'id' => [
-            'label' => 'Identificativo',
-            'tooltip' => 'Identificativo univoco del record',
-        ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-        ],
-        'updated_at' => [
-            'label' => 'Ultima Modifica',
-        ],
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Calendar',
-        ],
-        'edit' => [
-            'label' => 'Modifica Calendar',
-        ],
-        'delete' => [
-            'label' => 'Elimina Calendar',
-        ],
-    ],
-];
+    'sort' => 1,
+    'icon' => 'heroicon-o-collection',
+  ),
+  'fields' => 
+  array (
+    'id' => 
+    array (
+      'label' => 'Identificativo',
+      'tooltip' => 'Identificativo univoco del record',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'Data Creazione',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'updated_at' => 
+    array (
+      'label' => 'Ultima Modifica',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'Crea Calendar',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica Calendar',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina Calendar',
+    ),
+  ),
+);

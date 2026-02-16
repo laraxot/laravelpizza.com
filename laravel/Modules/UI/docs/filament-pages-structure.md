@@ -180,4 +180,4 @@ class S3Test extends XotBasePage
 - [UI Module README](./README.md)
 - [Blade Components](./blade-components.md)
 
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*

@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Pages;
 
+use Exception;
 use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\TextInput;
@@ -109,7 +110,7 @@ class MyProfilePage extends XotBasePage
         $user = Filament::auth()->user();
 
         if (! $user instanceof Model) {
-            throw new \Exception('The authenticated user object must be an Eloquent model to allow the profile page to update it.');
+            throw new Exception('The authenticated user object must be an Eloquent model to allow the profile page to update it.');
         }
 
         return $user;

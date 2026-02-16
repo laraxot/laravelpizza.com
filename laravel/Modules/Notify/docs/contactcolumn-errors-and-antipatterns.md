@@ -2,7 +2,7 @@
 
 ## 🚨 **AUDIT CRITICO - ERRORI GRAVI IDENTIFICATI**
 
-### **Data Audit**: 2025-08-01
+### **Data Audit**: [DATE]
 ### **File**: `/Modules/Notify/app/Filament/Tables/Columns/ContactColumn.php`
 ### **Gravità**: CRITICA - REFACTOR COMPLETO RICHIESTO
 
@@ -217,7 +217,7 @@ Implementare ContactColumn che:
 
 ---
 
-*Audit completato: 2025-08-01*  
+*Audit completato: [DATE]*  
 *Gravità: CRITICA*  
 *Stato: REFACTOR RICHIESTO*  
 *Responsabile: Laraxot Team*

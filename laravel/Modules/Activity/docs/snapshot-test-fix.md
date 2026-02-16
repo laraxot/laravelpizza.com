@@ -144,7 +144,7 @@ Questo fix applica lo STESSO pattern di:
 
 ---
 
-**Data:** 2026-01-10
+**Data:** [DATE]
 **Stato:** Pronto per implementazione
 **Pattern:** Reflection + Documentation Verification ✅
-**Riferimenti:** `stored-event-test-fix.md`, `test-failure-patterns-2026-01-10.md`
+**Riferimenti:** `stored-event-test-fix.md`, `test-failure-patterns-[DATE].md`

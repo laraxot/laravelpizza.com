@@ -222,4 +222,4 @@ if ($user instanceof UserContract) {
 
 ---
 
-*Ultimo aggiornamento: 2025-01-10*
+*Ultimo aggiornamento: [DATE]*

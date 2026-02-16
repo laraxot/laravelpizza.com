@@ -285,8 +285,8 @@ test('can login user via SSO', function () {
 
 | Data | Versione | Descrizione |
 |------|----------|-------------|
-| 2025-10-15 | 1.0.0 | Creazione iniziale tabella `sso_providers` |
-| 2025-10-15 | 1.0.0 | Aggiunta foreign key in tabella `users` |
+| [DATE] | 1.0.0 | Creazione iniziale tabella `sso_providers` |
+| [DATE] | 1.0.0 | Aggiunta foreign key in tabella `users` |
 
 ## Roadmap
 

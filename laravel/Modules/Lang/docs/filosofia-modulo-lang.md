@@ -1,6 +1,6 @@
 # Analisi Approfondita del Modulo Lang
 
-> **Generato**: 2025-12-24
+> **Generato**: [DATE]
 > **Scopo**: Documentare la filosofia, logica e architettura del modulo Lang
 
 ---

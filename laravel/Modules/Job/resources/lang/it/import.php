@@ -2,44 +2,77 @@
 
 declare(strict_types=1);
 
-return [
-    'navigation' => [
-        'label' => 'Importazione',
-        'group' => 'Importazioni',
-        'icon' => 'heroicon-o-arrow-up-tray',
-        'sort' => 26,
-    ],
+return array (
+  'navigation' => 
+  array (
     'label' => 'Importazione',
-    'plural_label' => 'Importazioni',
-    'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'job_id' => [
-            'label' => 'ID lavoro',
-        ],
-        'importable_type' => [
-            'label' => 'Tipo importabile',
-        ],
-        'file_path' => [
-            'label' => 'Percorso file',
-        ],
-        'status' => [
-            'label' => 'Stato',
-        ],
-        'created_at' => [
-            'label' => 'Creato il',
-        ],
-        'completed_at' => [
-            'label' => 'Completato il',
-        ],
-    ],
-    'actions' => [
-        'import' => [
-            'label' => 'Importa',
-        ],
-        'upload' => [
-            'label' => 'Carica',
-        ],
-    ],
-];
+    'group' => 'Importazioni',
+    'icon' => 'heroicon-o-arrow-up-tray',
+    'sort' => 26,
+  ),
+  'label' => 'Importazione',
+  'plural_label' => 'Importazioni',
+  'fields' => 
+  array (
+    'id' => 
+    array (
+      'label' => 'ID',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'job_id' => 
+    array (
+      'label' => 'ID lavoro',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'importable_type' => 
+    array (
+      'label' => 'Tipo importabile',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'file_path' => 
+    array (
+      'label' => 'Percorso file',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'status' => 
+    array (
+      'label' => 'Stato',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'Creato il',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'completed_at' => 
+    array (
+      'label' => 'Completato il',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'import' => 
+    array (
+      'label' => 'Importa',
+    ),
+    'upload' => 
+    array (
+      'label' => 'Carica',
+    ),
+  ),
+);

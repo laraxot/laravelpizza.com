@@ -1,7 +1,7 @@
 # Analisi Errore Namespace Componente pub_theme
 
 ## Data
-2025-11-30
+[DATE]
 
 ## Problema Identificato
 

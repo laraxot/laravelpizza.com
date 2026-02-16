@@ -1,6 +1,6 @@
 # Analisi Completa TableLayoutEnum
 
-## Data: 2025-01-06
+## Data: [DATE]
 
 ## Panoramica
 
@@ -333,10 +333,10 @@ class TableLayoutEnumTest extends TestCase
 - [Translation Standards](../../../docs/translation_standards.md)
 - [Filament Best Practices](../../../docs/filament_best_practices.md)
 
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*
 # Analisi Completa TableLayoutEnum
 
-## Data: 2025-01-06
+## Data: [DATE]
 
 ## Panoramica
 
@@ -669,4 +669,4 @@ class TableLayoutEnumTest extends TestCase
 - [Translation Standards](../../../docs/translation_standards.md)
 - [Filament Best Practices](../../../docs/filament_best_practices.md)
 
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*

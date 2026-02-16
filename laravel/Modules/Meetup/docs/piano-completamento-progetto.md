@@ -1,6 +1,6 @@
 # Piano di Completamento Progetto - Laravel Pizza Meetups
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## 📊 Stato Attuale
 

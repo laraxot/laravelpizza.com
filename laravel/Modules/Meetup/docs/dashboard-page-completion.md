@@ -126,4 +126,4 @@ class Dashboard extends XotBaseDashboard
 
 **Status**: ✅ **COMPLETATO E VERIFICATO**
 
-**Ultimo aggiornamento**: 2026-01-09
+**Ultimo aggiornamento**: [DATE]

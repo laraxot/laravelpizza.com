@@ -2,49 +2,164 @@
 
 declare(strict_types=1);
 
-return [
-    'fields' => [
-        'name' => 'Nome',
-        'name.placeholder' => 'Inserisci il nome del provider',
-        'name.helper_text' => 'Il nome del provider social (es. Facebook, Google]',
-        'scopes' => 'Ambiti',
-        'scopes.placeholder' => 'Inserisci gli ambiti di accesso',
-        'scopes.helper_text' => 'Gli ambiti di accesso richiesti dal provider',
-        'parameters' => 'Parametri',
-        'parameters.placeholder' => 'Inserisci i parametri aggiuntivi',
-        'parameters.helper_text' => 'Parametri aggiuntivi per la configurazione',
-        'stateless' => 'Senza stato',
-        'stateless.helper_text' => 'Se il provider non mantiene lo stato della sessione',
-        'active' => 'Attivo',
-        'active.helper_text' => 'Se il provider è attualmente attivo',
-        'socialite' => 'Socialite',
-        'socialite.helper_text' => 'Se il provider usa Laravel Socialite',
-        'svg' => 'SVG',
-        'svg.placeholder' => 'Inserisci il codice SVG dell\'icona',
-        'svg.helper_text' => 'L\'icona SVG del provider social',
-    ],
-    'navigation' => [
-        'name' => 'Social Providers',
-        'plural' => 'Social Providers',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Social Providers',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
+return array (
+  'fields' => 
+  array (
+    'name' => 
+    array (
+      'label' => 'Nome',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'name.placeholder' => 
+    array (
+      'label' => 'Inserisci il nome del provider',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'name.helper_text' => 
+    array (
+      'label' => 'Il nome del provider social (es. Facebook, Google]',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'scopes' => 
+    array (
+      'label' => 'Ambiti',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'scopes.placeholder' => 
+    array (
+      'label' => 'Inserisci gli ambiti di accesso',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'scopes.helper_text' => 
+    array (
+      'label' => 'Gli ambiti di accesso richiesti dal provider',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'parameters' => 
+    array (
+      'label' => 'Parametri',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'parameters.placeholder' => 
+    array (
+      'label' => 'Inserisci i parametri aggiuntivi',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'parameters.helper_text' => 
+    array (
+      'label' => 'Parametri aggiuntivi per la configurazione',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'stateless' => 
+    array (
+      'label' => 'Senza stato',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'stateless.helper_text' => 
+    array (
+      'label' => 'Se il provider non mantiene lo stato della sessione',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'active' => 
+    array (
+      'label' => 'Attivo',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'active.helper_text' => 
+    array (
+      'label' => 'Se il provider è attualmente attivo',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'socialite' => 
+    array (
+      'label' => 'Socialite',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'socialite.helper_text' => 
+    array (
+      'label' => 'Se il provider usa Laravel Socialite',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'svg' => 
+    array (
+      'label' => 'SVG',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'svg.placeholder' => 
+    array (
+      'label' => 'Inserisci il codice SVG dell\'icona',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'svg.helper_text' => 
+    array (
+      'label' => 'L\'icona SVG del provider social',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'navigation' => 
+  array (
+    'name' => 'Social Providers',
+    'plural' => 'Social Providers',
+    'group' => 
+    array (
+      'name' => 'General',
+      'description' => 'General Settings',
+    ),
     'label' => 'Social Providers',
-    'plural_label' => 'Social Providers (Plurale)',
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Social Providers',
-        ],
-        'edit' => [
-            'label' => 'Modifica Social Providers',
-        ],
-        'delete' => [
-            'label' => 'Elimina Social Providers',
-        ],
-    ],
-];
+    'sort' => 1,
+    'icon' => 'heroicon-o-collection',
+  ),
+  'label' => 'Social Providers',
+  'plural_label' => 'Social Providers (Plurale)',
+  'actions' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'Crea Social Providers',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica Social Providers',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina Social Providers',
+    ),
+  ),
+);

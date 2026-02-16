@@ -13,14 +13,21 @@ use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Events\Registered;
 use Modules\User\Models\SocialiteUser;
 use Spatie\QueueableAction\QueueableAction;
+use Illuminate\Database\DatabaseManager;
+use Illuminate\Contracts\Events\Dispatcher;
 
 class RegisterOauthUserAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly DatabaseManager $dbManager,
+        private readonly Dispatcher $eventDispatcher,
+    ) {}
+
     public function execute(string $provider, SocialiteUserContract $oauthUser): SocialiteUser
     {
-        $socialiteUser = DB::transaction(static function () use ($provider, $oauthUser) {
+        $socialiteUser = $this->dbManager->transaction(static function () use ($provider, $oauthUser) {
             // Create a user
             $user = app(CreateUserAction::class)->execute(
                 provider: $provider,
@@ -35,7 +42,7 @@ class RegisterOauthUserAction
             );
         });
         // Dispatch the registered event
-        Registered::dispatch($socialiteUser);
+        $this->eventDispatcher->dispatch(new Registered($socialiteUser->user));
 
         // Login the user
         // return app(LoginUserAction::class)->execute($socialiteUser);

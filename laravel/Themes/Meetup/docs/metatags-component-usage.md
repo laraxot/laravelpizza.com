@@ -1,7 +1,7 @@
 # Uso Componente Metatags - Regola Critica
 
 ## Data
-2025-11-29
+[DATE]
 
 ## ⚠️ REGOLA CRITICA
 

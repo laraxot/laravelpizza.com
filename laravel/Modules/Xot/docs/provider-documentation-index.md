@@ -41,7 +41,7 @@
 
 1. **[Meetup Module - Provider Errors Lessons Learned](../../Meetup/docs/provider-errors-lessons-learned.md)**
    - **Status**: ✅ Real-World Case Study
-   - **Purpose**: Actual errors made and corrected in Meetup module (2025-12-16)
+   - **Purpose**: Actual errors made and corrected in Meetup module ([DATE])
    - **When to read**: To see real before/after examples
    - **Key Topics**:
      - 5 specific errors committed
@@ -239,10 +239,10 @@ When reviewing provider code:
 
 | Document | Last Updated | Status | Priority |
 |----------|-------------|--------|----------|
-| serviceprovider-minimal-structure.md | 2025-01-10 | ✅ Current | Critical |
-| provider-common-mistakes.md | 2025-12-16 | ✅ Current | Critical |
-| xotbase-extension-rules.md | 2025-08-27 | ✅ Current | High |
-| Meetup/provider-errors-lessons-learned.md | 2025-12-16 | ✅ Current | High |
+| serviceprovider-minimal-structure.md | [DATE] | ✅ Current | Critical |
+| provider-common-mistakes.md | [DATE] | ✅ Current | Critical |
+| xotbase-extension-rules.md | [DATE] | ✅ Current | High |
+| Meetup/provider-errors-lessons-learned.md | [DATE] | ✅ Current | High |
 
 ## 🔗 External References
 

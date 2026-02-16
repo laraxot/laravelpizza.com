@@ -1,7 +1,7 @@
 # Correzioni Traduzioni Navigation - Modulo Geo
 
 ## Data Intervento
-**2025-08-07** - Sistemazione traduzioni secondo regole DRY + KISS
+**[DATE]** - Sistemazione traduzioni secondo regole DRY + KISS
 
 ## Problema Critico Identificato
 
@@ -92,5 +92,5 @@
 - Validare contenuto traduzioni prima del commit
 - Utilizzare linting per file PHP malformati
 
-*Intervento completato il: 2025-08-07*
+*Intervento completato il: [DATE]*
 *Conforme alle regole DRY + KISS*

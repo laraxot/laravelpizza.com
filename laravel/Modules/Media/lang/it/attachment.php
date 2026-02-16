@@ -2,64 +2,159 @@
 
 declare(strict_types=1);
 
-return [
-    'pages' => 'Pagine',
-    'widgets' => 'Widgets',
-    'navigation' => [
-        'name' => 'Media',
-        'plural' => 'Media',
-        'group' => [
-            'name' => '',
-        ],
-    ],
-    'fields' => [
-        'file' => 'file',
-        'file_hint' => 'Carica un allegato',
-        'name' => [
-            'label' => 'Nome',
-        ],
-        'guard_name' => 'Guard',
-        'collection_name' => [
-            'label' => 'Collezione',
-        ],
-        'filename' => 'Nome File',
-        'mime_type' => 'Tipo',
-        'human_readable_size' => [
-            'label' => 'Dimensione',
-        ],
-        'permissions' => 'Permessi',
-        'updated_at' => 'Aggiornato il',
-        'first_name' => 'Nome',
-        'last_name' => 'Cognome',
-        'select_all' => [
-            'name' => 'Seleziona Tutti',
-            'message' => '',
-        ],
-        'creator' => [
-            'name' => 'Creatore',
-            'full_name' => [
-                'label' => 'Creatore',
-            ],
-        ],
-        'uploaded_at' => 'Aggiornato il',
-        'created_at' => [
-            'label' => 'Caricato il',
-        ],
-    ],
-    'actions' => [
-        'import' => [
-            'fields' => [
-                'import_file' => 'Seleziona un file XLS o CSV da caricare',
-            ],
-        ],
-        'export' => [
-            'filename_prefix' => 'Aree al',
-            'columns' => [
-                'name' => 'Nome area',
-                'parent_name' => 'Nome area livello superiore',
-            ],
-        ],
-    ],
-    'label' => 'Attachment',
-    'plural_label' => 'Attachment (Plurale)',
-];
+return array (
+  'pages' => 'Pagine',
+  'widgets' => 'Widgets',
+  'navigation' => 
+  array (
+    'name' => 'Media',
+    'plural' => 'Media',
+    'group' => 
+    array (
+      'name' => '',
+    ),
+  ),
+  'fields' => 
+  array (
+    'file' => 
+    array (
+      'label' => 'file',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'file_hint' => 
+    array (
+      'label' => 'Carica un allegato',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'name' => 
+    array (
+      'label' => 'Nome',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'guard_name' => 
+    array (
+      'label' => 'Guard',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'collection_name' => 
+    array (
+      'label' => 'Collezione',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'filename' => 
+    array (
+      'label' => 'Nome File',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'mime_type' => 
+    array (
+      'label' => 'Tipo',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'human_readable_size' => 
+    array (
+      'label' => 'Dimensione',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'permissions' => 
+    array (
+      'label' => 'Permessi',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'updated_at' => 
+    array (
+      'label' => 'Aggiornato il',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'first_name' => 
+    array (
+      'label' => 'Nome',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'last_name' => 
+    array (
+      'label' => 'Cognome',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'select_all' => 
+    array (
+      'name' => 'Seleziona Tutti',
+      'message' => '',
+      'label' => '',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'creator' => 
+    array (
+      'name' => 'Creatore',
+      'full_name' => 
+      array (
+        'label' => 'Creatore',
+      ),
+      'label' => '',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'uploaded_at' => 
+    array (
+      'label' => 'Aggiornato il',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'Caricato il',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'import' => 
+    array (
+      'fields' => 
+      array (
+        'import_file' => 'Seleziona un file XLS o CSV da caricare',
+      ),
+    ),
+    'export' => 
+    array (
+      'filename_prefix' => 'Aree al',
+      'columns' => 
+      array (
+        'name' => 'Nome area',
+        'parent_name' => 'Nome area livello superiore',
+      ),
+    ),
+  ),
+  'label' => 'Attachment',
+  'plural_label' => 'Attachment (Plurale)',
+);

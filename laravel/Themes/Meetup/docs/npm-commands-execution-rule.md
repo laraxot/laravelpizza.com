@@ -1,7 +1,7 @@
 # Regola Generale: Esecuzione Comandi NPM in Temi e Moduli
 
 ## Data
-2025-11-29
+[DATE]
 
 ## ⚠️ REGOLA CRITICA
 

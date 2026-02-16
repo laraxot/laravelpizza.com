@@ -1,7 +1,7 @@
 # Block Component Props Pattern - Critical Rule
 
 ## Data
-2025-12-01
+[DATE]
 
 ## Problema Risolto
 

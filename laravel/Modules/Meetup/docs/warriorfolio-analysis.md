@@ -1,6 +1,6 @@
 # WarriorFolio - Analisi Architettura Avanzata
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## Panoramica
 

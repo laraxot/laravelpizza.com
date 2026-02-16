@@ -113,6 +113,6 @@ class DeviceProfileFactory extends DeviceUserFactory
 
 **QUESTO ERRORE NON DEVE MAI PIÙ RIPETERSI!**
 
-*Creato: 2025-01-06*
+*Creato: [DATE]*
 *Modulo: User - 16/16 factory completate*
 *Status: ✅ ERRORE GRAVISSIMO RISOLTO*

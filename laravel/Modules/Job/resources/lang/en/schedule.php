@@ -2,11 +2,20 @@
 
 declare(strict_types=1);
 
-return [
-    'navigation' => [
-        'label' => 'Schedule',
-        'group' => 'System',
-        'icon' => 'heroicon-o-calendar',
-        'sort' => 98,
-    ],
-];
+return array (
+  'navigation' => 
+  array (
+    'label' => 'Schedule',
+    'group' => 'System',
+    'icon' => 'heroicon-o-calendar',
+    'sort' => 98,
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'fields' => 
+  array (
+  ),
+  'actions' => 
+  array (
+  ),
+);

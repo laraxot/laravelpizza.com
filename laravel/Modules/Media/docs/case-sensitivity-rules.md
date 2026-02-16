@@ -24,4 +24,4 @@ I seguenti file sono stati eliminati perché violavano le regole:
 
 ## Update Log
 
-- **2025-11-04**: Removed `mediaconvertresourcetest.php` duplicate
+- **[DATE]**: Removed `mediaconvertresourcetest.php` duplicate

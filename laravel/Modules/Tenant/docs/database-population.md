@@ -1,6 +1,6 @@
 # Popolamento Database - Modulo Tenant
 
-## Aggiornamento 2025-11-11 – Test Sushi Seeder
+## Aggiornamento [DATE] – Test Sushi Seeder
 
 - Rafforzata la type safety del seeder `TestSushiSeeder` utilizzando `Webmozart\Assert` per evitare errori PHPStan (`method.nonObject`) su `create()` e `count()`.
 - Ogni invocazione di `TestSushiModel::factory()` viene validata con `Assert::isInstanceOf` prima di usare i metodi fluenti.

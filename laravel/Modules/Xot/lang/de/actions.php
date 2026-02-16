@@ -2,6 +2,22 @@
 
 declare(strict_types=1);
 
-return [
-    'export_xls' => 'Esporta Dati',
-];
+return array (
+  'export_xls' => 'Esporta Dati',
+  'navigation' => 
+  array (
+    'label' => 'Missing Navigation Label',
+    'plural_label' => 'Missing Navigation Plural Label',
+    'group' => 'Missing Group',
+    'icon' => 'heroicon-o-puzzle-piece',
+    'sort' => 100,
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'fields' => 
+  array (
+  ),
+  'actions' => 
+  array (
+  ),
+);

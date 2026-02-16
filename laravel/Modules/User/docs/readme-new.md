@@ -1,6 +1,6 @@
 # User Module - Authentication & Authorization
 
-**Last Update**: 2025-12-05
+**Last Update**: [DATE]
 **Status**: ✅ Production Ready
 **PHPStan Level**: 10
 **Maintainers**: Laraxot Team
@@ -955,13 +955,13 @@ test('user can switch teams', function () {
 
 ## 🔄 Recent Updates
 
-### v2.5.0 - 2025-12-05
+### v2.5.0 - [DATE]
 - **Added**: Laravel 12 compatibility
 - **Added**: Filament 4 support
 - **Fixed**: Merge conflicts in EditProfile and PasswordResetConfirmWidget
 - **Improved**: PHPStan Level 10 compliance
 
-### v2.4.0 - 2025-11-04
+### v2.4.0 - [DATE]
 - **Added**: Device management features
 - **Added**: Enhanced authentication logging
 - **Fixed**: File locking pattern implementation

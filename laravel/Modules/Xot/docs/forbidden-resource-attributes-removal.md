@@ -1,6 +1,6 @@
 # Rimozione Proprietà Vietate da XotBaseResource - Analisi e Implementazione
 
-**Status**: ✅ **VERIFICA COMPLETATA** (Vedi `forbidden-resource-attributes-verification-2026-01-09.md`)
+**Status**: ✅ **VERIFICA COMPLETATA** (Vedi `forbidden-resource-attributes-verification-[DATE].md`)
 
 ---
 
@@ -171,6 +171,6 @@ return [
 
 **Status**: ✅ **VERIFICA COMPLETATA**
 
-**Ultimo aggiornamento**: 2026-01-09
+**Ultimo aggiornamento**: [DATE]
 
-**Report Completo**: Vedi `forbidden-resource-attributes-verification-2026-01-09.md`
+**Report Completo**: Vedi `forbidden-resource-attributes-verification-[DATE].md`

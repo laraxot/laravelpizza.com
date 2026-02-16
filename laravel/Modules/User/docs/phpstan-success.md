@@ -49,7 +49,7 @@ Tutte le correzioni seguono rigorosamente:
 
 ## Data Completamento
 
-2025-01-22
+[DATE]
 
 ## Riferimenti
 

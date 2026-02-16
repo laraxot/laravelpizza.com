@@ -193,7 +193,7 @@ class ExampleResource extends XotBaseResource
 
 ---
 
-*Ultimo aggiornamento: 2025-08-04*
+*Ultimo aggiornamento: [DATE]*
 *Modulo: Xot*
 *Categoria: Filament*
 *Status: ✅ Correzioni Implementate*

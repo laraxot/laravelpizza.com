@@ -1,6 +1,6 @@
 # Analisi Tutorial: Livewire 3, Volt e Folio - Podcast Player
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## Panoramica
 
@@ -72,7 +72,7 @@ class Episode extends Model
             'audio' => 'https://media.transistor.fm/...',
             'image' => 'https://images.transistor.fm/...',
             'duration_in_seconds' => 2579,
-            'released_at' => '2023-07-06 10:00:00',
+            'released_at' => '[DATE] 10:00:00',
         ],
         // ... altri episodi
     ];

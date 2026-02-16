@@ -1,6 +1,6 @@
 # Regola Critica: NO Services - Solo Spatie QueueableActions
 
-**Data Creazione**: 2025-01-18
+**Data Creazione**: [DATE]
 **Status**: Regola Fondamentale Laraxot
 **Priorità**: CRITICA - Mai Violare
 

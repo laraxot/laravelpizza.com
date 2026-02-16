@@ -1,7 +1,7 @@
 # Miglioramenti Qualità Codice - Modulo Notify
 
 ## Data
-2025-01-06
+[DATE]
 
 ## Obiettivo
 Migliorare sistematicamente la qualità del codice del modulo Notify utilizzando strumenti di analisi statica e refactoring automatico.
@@ -168,4 +168,4 @@ Tutti i pattern di correzione sono documentati in:
 - [Migration Fixes Summary](./migration-fixes-summary.md)
 - [Index](./index.md)
 
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*

@@ -1,6 +1,6 @@
 # Filament 3 to 4 Migration - Component Fixes
 
-**Date**: 2025-12-04
+**Date**: [DATE]
 **Module**: Notify
 **Issue**: `php artisan optimize` failing with error: `Unable to locate a class or view for component [filament-panels::form.actions]`
 

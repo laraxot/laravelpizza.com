@@ -131,6 +131,6 @@ I file JSON per le pagine About e Contact sono stati creati nel percorso **CORRE
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Verificato e Documentato

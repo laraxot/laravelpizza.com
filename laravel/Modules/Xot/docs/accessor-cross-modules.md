@@ -178,7 +178,7 @@ Ogni modulo deve avere:
 
 ---
 
-**Creato**: 2025-01-29
+**Creato**: [DATE]
 **Status**: 📊 Audit Framework Pronto
 **Prossimo**: Audit IndennitaCondizioniLavoro
 **Timeline**: 3 settimane per audit completo

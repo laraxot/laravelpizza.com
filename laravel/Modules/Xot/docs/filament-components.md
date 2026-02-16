@@ -82,7 +82,7 @@ DatePicker::make('field_name')
     ->label('Label')
     ->format('Y-m-d')
     ->displayFormat('d/m/Y')
-    ->minDate('2020-01-01')
+    ->minDate('[DATE]')
     ->maxDate('today')
 ```
 

@@ -135,6 +135,6 @@ protected function shouldDiscoverClusters(): bool
 
 **REFACTORING COMPLETATO CON SUCCESSO** ✅
 
-*Data: 2025-09-18*
+*Data: [DATE]*
 *Principi applicati: DRY, KISS, SOLID, ROBUST*
 *Risultato: Codice pulito, manutenibile e robusto*

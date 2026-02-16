@@ -2,45 +2,56 @@
 
 declare(strict_types=1);
 
-return [
-    'fields' => [
-        'state' => [
-            'label' => 'Stato',
-            'placeholder' => 'Seleziona uno stato',
-            'help' => 'Stato attuale della selezione',
-            'description' => 'Stato selezionabile',
-            'helper_text' => '',
-        ],
-        'message' => [
-            'label' => 'Messaggio',
-            'placeholder' => 'Inserisci un messaggio',
-            'help' => 'Messaggio informativo per la selezione',
-            'description' => 'Testo del messaggio',
-            'helper_text' => '',
-        ],
-    ],
+return array (
+  'fields' => 
+  array (
+    'state' => 
+    array (
+      'label' => 'Stato',
+      'placeholder' => 'Seleziona uno stato',
+      'help' => 'Stato attuale della selezione',
+      'description' => 'Stato selezionabile',
+      'helper_text' => '',
+      'tooltip' => '',
+    ),
+    'message' => 
+    array (
+      'label' => 'Messaggio',
+      'placeholder' => 'Inserisci un messaggio',
+      'help' => 'Messaggio informativo per la selezione',
+      'description' => 'Testo del messaggio',
+      'helper_text' => '',
+      'tooltip' => '',
+    ),
+  ),
+  'label' => 'Select State',
+  'plural_label' => 'Select State (Plurale)',
+  'navigation' => 
+  array (
+    'name' => 'Select State',
+    'plural' => 'Select State',
+    'group' => 
+    array (
+      'name' => 'General',
+      'description' => 'General Settings',
+    ),
     'label' => 'Select State',
-    'plural_label' => 'Select State (Plurale)',
-    'navigation' => [
-        'name' => 'Select State',
-        'plural' => 'Select State',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Select State',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Select State',
-        ],
-        'edit' => [
-            'label' => 'Modifica Select State',
-        ],
-        'delete' => [
-            'label' => 'Elimina Select State',
-        ],
-    ],
-];
+    'sort' => 1,
+    'icon' => 'heroicon-o-collection',
+  ),
+  'actions' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'Crea Select State',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica Select State',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina Select State',
+    ),
+  ),
+);

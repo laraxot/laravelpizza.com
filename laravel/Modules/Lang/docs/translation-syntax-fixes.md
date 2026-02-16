@@ -159,7 +159,7 @@ return [
 - [UI Module Documentation](../../laravel/Modules/UI/project_docs/)
 
 ## Ultimo Aggiornamento
-2025-01-06 - Correzione completa errori sintassi file traduzione ✅ COMPLETATO
+[DATE] - Correzione completa errori sintassi file traduzione ✅ COMPLETATO
 # Correzione Errori di Sintassi nei File di Traduzione
 
 ## Riepilogo Intervento
@@ -321,4 +321,4 @@ return [
 - [UI Module Documentation](../../laravel/Modules/UI/docs/)
 
 ## Ultimo Aggiornamento
-2025-01-06 - Correzione completa errori sintassi file traduzione ✅ COMPLETATO
+[DATE] - Correzione completa errori sintassi file traduzione ✅ COMPLETATO

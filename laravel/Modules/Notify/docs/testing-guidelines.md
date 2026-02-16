@@ -42,7 +42,7 @@ describe('Notification Management', function () {
             'user_id' => $this->user->id,
             'notification_type_id' => $this->notificationType->id,
             'template_id' => $template->id,
-            'data' => json_encode(['date' => '2024-01-15 10:00']),
+            'data' => json_encode(['date' => '[DATE] 10:00']),
             'scheduled_at' => now()->addHour(),
         ]);
 
@@ -142,12 +142,12 @@ describe('Email Template System', function () {
         $data = [
             'patient_name' => 'John Doe',
             'doctor_name' => 'Smith',
-            'date' => '2024-01-15',
+            'date' => '[DATE]',
         ];
 
         $rendered = $template->render($data);
 
-        expect($rendered)->toBe('Hello John Doe, your appointment with Dr. Smith is on 2024-01-15');
+        expect($rendered)->toBe('Hello John Doe, your appointment with Dr. Smith is on [DATE]');
     });
 });
 ```

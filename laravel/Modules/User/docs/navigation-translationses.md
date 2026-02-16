@@ -1,7 +1,7 @@
 # Correzioni Traduzioni Navigation - Modulo User
 
 ## Data Intervento
-**2025-08-07** - Sistemazione traduzioni secondo regole DRY + KISS
+**[DATE]** - Sistemazione traduzioni secondo regole DRY + KISS
 
 ## Problemi Identificati
 
@@ -87,5 +87,5 @@
 - Rispettato il `declare(strict_types=1);`
 - Icone scelte per semantica appropriata
 
-*Intervento completato il: 2025-08-07*
+*Intervento completato il: [DATE]*
 *Conforme alle regole DRY + KISS*

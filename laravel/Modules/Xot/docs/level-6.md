@@ -1,6 +1,6 @@
 # Rapporto PHPStan Livello 6 per il modulo Xot
 
-Data analisi: 2025-04-15 21:54:44
+Data analisi: [DATE] 21:54:44
 
 ## Riepilogo
 
@@ -71,7 +71,7 @@ aurmich/dev
 * [level_6.md](laravel/Modules/Cms/project_docs/phpstan/level_6.md)
 # Rapporto PHPStan Livello 6 per il modulo Xot
 
-Data analisi: 2025-04-15 21:54:44
+Data analisi: [DATE] 21:54:44
 
 ## Riepilogo
 

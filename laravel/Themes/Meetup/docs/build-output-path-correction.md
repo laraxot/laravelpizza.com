@@ -1,7 +1,7 @@
 # Build Output Path Correction
 
 ## Date
-2025-11-30
+[DATE]
 
 ## Context
 

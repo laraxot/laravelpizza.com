@@ -215,4 +215,4 @@ return [
 - [Translation Management](translation-management.md)
 
 ## Ultimo Aggiornamento
-2025-01-27 - Implementazione completa regola critica enum translation pattern
+[DATE] - Implementazione completa regola critica enum translation pattern

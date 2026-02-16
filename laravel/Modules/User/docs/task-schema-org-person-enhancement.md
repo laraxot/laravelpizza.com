@@ -1,4 +1,4 @@
-# Task: Schema.org Person Enhancement - 2026-02-10
+# Task: Schema.org Person Enhancement - [DATE]
 
 **Module**: User  
 **Status**: Pending  

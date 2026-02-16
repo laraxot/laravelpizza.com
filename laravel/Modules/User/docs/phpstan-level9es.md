@@ -1,6 +1,6 @@
 # Correzione conflitto e miglioramento PHPStan livello 9 in Filament/Resources/UserResource.php
 
-**Data:** 2025-04-16
+**Data:** [DATE]
 
 ## Problema
 Sono stati rilevati conflitti Git non risolti nel file `app/Filament/Resources/UserResource.php` del modulo User. Il conflitto riguardava principalmente:

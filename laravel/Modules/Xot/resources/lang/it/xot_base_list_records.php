@@ -2,13 +2,35 @@
 
 declare(strict_types=1);
 
-return [
-    'fields' => [
-        'create' => [
-            'label' => 'create',
-        ],
-        'layout' => [
-            'label' => 'layout',
-        ],
-    ],
-];
+return array (
+  'fields' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'create',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'layout' => 
+    array (
+      'label' => 'layout',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'navigation' => 
+  array (
+    'label' => 'Missing Navigation Label',
+    'plural_label' => 'Missing Navigation Plural Label',
+    'group' => 'Missing Group',
+    'icon' => 'heroicon-o-puzzle-piece',
+    'sort' => 100,
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'actions' => 
+  array (
+  ),
+);

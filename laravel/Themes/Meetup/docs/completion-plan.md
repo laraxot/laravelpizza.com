@@ -2543,8 +2543,8 @@ composer require scoutapp/scout-apm-laravel
   "@context": "https://schema.org",
   "@type": "Event",
   "name": "Laravel 11 Release Pizza Party",
-  "startDate": "2024-12-15T18:00",
-  "endDate": "2024-12-15T22:00",
+  "startDate": "[DATE]T18:00",
+  "endDate": "[DATE]T22:00",
   "location": {
     "@type": "Place",
     "name": "Laravel Pizza - Milano",

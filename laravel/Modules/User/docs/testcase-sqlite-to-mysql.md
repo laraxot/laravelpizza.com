@@ -183,7 +183,7 @@ Sostituire il contenuto con il pattern corretto.
 
 ---
 
-**Data:** 2026-01-09
+**Data:** [DATE]
 **Stato:** Pronto per implementazione
 **Righe:** 102 → ~35 (-66%)
 **Funzioni Custom:** Non più necessarie con MySQL ✅

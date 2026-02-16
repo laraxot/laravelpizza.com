@@ -129,12 +129,12 @@ php artisan view:cache
 
 ## 🔗 Link Correlati
 
-- [Notify Module PHPStan Fixes](../../Modules/Notify/docs/phpstan-syntax-errors-fix-2026-01-09.md)
-- [Xot Module PHPStan Fixes](../../Modules/Xot/docs/phpstan-syntax-errors-fix-2026-01-09.md)
-- [Cms Module PHPStan Roadmap](../../Modules/Cms/docs/phpstan-scripts-roadmap-2026-01-09.md)
+- [Notify Module PHPStan Fixes](../../Modules/Notify/docs/phpstan-syntax-errors-fix-[DATE].md)
+- [Xot Module PHPStan Fixes](../../Modules/Xot/docs/phpstan-syntax-errors-fix-[DATE].md)
+- [Cms Module PHPStan Roadmap](../../Modules/Cms/docs/phpstan-scripts-roadmap-[DATE].md)
 
 ---
 
 **Status**: ✅ **DOCUMENTAZIONE AGGIORNATA**
 
-**Ultimo aggiornamento**: 2026-01-09
+**Ultimo aggiornamento**: [DATE]

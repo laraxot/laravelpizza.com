@@ -2,92 +2,126 @@
 
 declare(strict_types=1);
 
-return [
-    'fields' => [
-        'email' => [
-            'label' => 'Email',
-            'placeholder' => 'Enter your email',
-            'help' => 'Enter your email address to log in',
-            'description' => 'email',
-            'helper_text' => '',
-        ],
-        'password' => [
-            'label' => 'Password',
-            'placeholder' => 'Enter your password',
-            'help' => 'Enter your account password',
-            'description' => 'password',
-            'helper_text' => '',
-        ],
-        'remember' => [
-            'label' => 'Remember me',
-            'placeholder' => '',
-            'help' => 'Keep me logged in on this device',
-            'description' => 'remember',
-            'helper_text' => '',
-        ],
-        'name' => [
-            'label' => 'Full name',
-            'placeholder' => 'Enter your full name',
-            'help' => 'Your complete name for registration',
-        ],
-        'password_confirmation' => [
-            'label' => 'Confirm password',
-            'placeholder' => 'Repeat your password',
-            'help' => 'Repeat the password for confirmation',
-        ],
-    ],
-    'actions' => [
-        'login' => [
-            'label' => 'Login',
-            'success' => 'Successfully logged in',
-            'error' => 'Invalid credentials',
-        ],
-        'register' => [
-            'label' => 'Register',
-            'success' => 'Registration completed successfully',
-            'error' => 'Unable to complete registration',
-        ],
-        'forgot_password' => [
-            'label' => 'Forgot password?',
-            'success' => 'Reset instructions sent to your email',
-            'error' => 'Unable to send reset instructions',
-        ],
-        'reset_password' => [
-            'label' => 'Reset password',
-            'success' => 'Password reset successfully',
-            'error' => 'Unable to reset password',
-        ],
-        'showPassword' => [
-            'label' => 'showPassword',
-            'icon' => 'showPassword',
-            'tooltip' => 'showPassword',
-        ],
-        'hidePassword' => [
-            'label' => 'hidePassword',
-            'icon' => 'hidePassword',
-            'tooltip' => 'hidePassword',
-        ],
-    ],
-    'messages' => [
-        'logout_success' => 'Successfully logged out',
-        'logout_error' => 'An error occurred during logout',
-        'user_not_allowed' => 'Your email is not authorized',
-        'registration_not_enabled' => 'User registration is not allowed',
-        'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-        'general_error' => 'An error occurred. Please try again later.',
-        'unauthorized' => 'You do not have the necessary permissions for this operation.',
-    ],
-    'title' => 'Sign in to your account',
-    'subtitle_start' => 'Or',
-    'subtitle_link' => 'create a new account',
-    'page' => [
-        'title' => 'Welcome to LaravelPizza! 🍕',
-        'subtitle' => 'Join the community of developers and pizza lovers',
-    ],
-    'already_registered' => 'Don\'t have an account yet?',
-    'register' => 'Register now',
-    'no_account' => 'Don\'t have an account yet?',
-    'register_now' => 'Register now',
-    'forgot_password_text' => 'Forgot your password?',
-    'reset_it' => 'Reset it here',
-];
+return array (
+  'fields' => 
+  array (
+    'email' => 
+    array (
+      'label' => 'Email',
+      'placeholder' => 'Enter your email',
+      'help' => 'Enter your email address to log in',
+      'description' => 'email',
+      'helper_text' => '',
+      'tooltip' => '',
+    ),
+    'password' => 
+    array (
+      'label' => 'Password',
+      'placeholder' => 'Enter your password',
+      'help' => 'Enter your account password',
+      'description' => 'password',
+      'helper_text' => '',
+      'tooltip' => '',
+    ),
+    'remember' => 
+    array (
+      'label' => 'Remember me',
+      'placeholder' => '',
+      'help' => 'Keep me logged in on this device',
+      'description' => 'remember',
+      'helper_text' => '',
+      'tooltip' => '',
+    ),
+    'name' => 
+    array (
+      'label' => 'Full name',
+      'placeholder' => 'Enter your full name',
+      'help' => 'Your complete name for registration',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'password_confirmation' => 
+    array (
+      'label' => 'Confirm password',
+      'placeholder' => 'Repeat your password',
+      'help' => 'Repeat the password for confirmation',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'login' => 
+    array (
+      'label' => 'Login',
+      'success' => 'Successfully logged in',
+      'error' => 'Invalid credentials',
+    ),
+    'register' => 
+    array (
+      'label' => 'Register',
+      'success' => 'Registration completed successfully',
+      'error' => 'Unable to complete registration',
+    ),
+    'forgot_password' => 
+    array (
+      'label' => 'Forgot password?',
+      'success' => 'Reset instructions sent to your email',
+      'error' => 'Unable to send reset instructions',
+    ),
+    'reset_password' => 
+    array (
+      'label' => 'Reset password',
+      'success' => 'Password reset successfully',
+      'error' => 'Unable to reset password',
+    ),
+    'showPassword' => 
+    array (
+      'label' => 'showPassword',
+      'icon' => 'showPassword',
+      'tooltip' => 'showPassword',
+    ),
+    'hidePassword' => 
+    array (
+      'label' => 'hidePassword',
+      'icon' => 'hidePassword',
+      'tooltip' => 'hidePassword',
+    ),
+  ),
+  'messages' => 
+  array (
+    'logout_success' => 'Successfully logged out',
+    'logout_error' => 'An error occurred during logout',
+    'user_not_allowed' => 'Your email is not authorized',
+    'registration_not_enabled' => 'User registration is not allowed',
+    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'general_error' => 'An error occurred. Please try again later.',
+    'unauthorized' => 'You do not have the necessary permissions for this operation.',
+  ),
+  'title' => 'Sign in to your account',
+  'subtitle_start' => 'Or',
+  'subtitle_link' => 'create a new account',
+  'page' => 
+  array (
+    'title' => 'Welcome to LaravelPizza! 🍕',
+    'subtitle' => 'Join the community of developers and pizza lovers',
+  ),
+  'already_registered' => 'Don\'t have an account yet?',
+  'register' => 'Register now',
+  'no_account' => 'Don\'t have an account yet?',
+  'register_now' => 'Register now',
+  'forgot_password_text' => 'Forgot your password?',
+  'reset_it' => 'Reset it here',
+  'navigation' => 
+  array (
+    'label' => 'Missing Navigation Label',
+    'plural_label' => 'Missing Navigation Plural Label',
+    'group' => 'Missing Group',
+    'icon' => 'heroicon-o-puzzle-piece',
+    'sort' => 100,
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+);

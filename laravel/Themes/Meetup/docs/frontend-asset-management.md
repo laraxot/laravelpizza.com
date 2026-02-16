@@ -1,7 +1,7 @@
 # Frontend Asset Management in Themes
 
 ## Data
-2025-11-29 (Aggiornato)
+[DATE] (Aggiornato)
 
 ## Objective
 

@@ -6,6 +6,7 @@ namespace Modules\User\Http\Controllers\Api;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use InvalidArgumentException;
 use Modules\User\Actions\Socialite\LogoutUserAction;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\JsonResponseData;
@@ -34,7 +35,7 @@ class LogoutController extends XotBaseController
 
         // Verificare che l'utente implementi l'interfaccia UserContract
         if (! $user instanceof UserContract) {
-            throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
+            throw new InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
 
         app(LogoutUserAction::class)->execute($user);

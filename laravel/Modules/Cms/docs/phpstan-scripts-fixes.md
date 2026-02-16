@@ -232,4 +232,4 @@ php -l Modules/Cms/populate_database_comprehensive.php
 
 **Status**: 🔄 **IN PROGRESSO** (65.6% completato)
 
-**Ultimo aggiornamento**: 2026-01-09
+**Ultimo aggiornamento**: [DATE]

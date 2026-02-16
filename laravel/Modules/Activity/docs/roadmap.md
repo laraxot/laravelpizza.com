@@ -1,6 +1,6 @@
 # Roadmap Modulo Activity - Audit Trail & Intelligence
 
-**Data Creazione**: 2026-01-31
+**Data Creazione**: [DATE]
 **Status**: 📋 IN LAVORAZIONE
 **Versione**: 2.3.0
 

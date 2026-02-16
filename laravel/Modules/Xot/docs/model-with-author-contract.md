@@ -2,7 +2,7 @@
 
 Il `ModelWithAuthorContract` è un'interfaccia che estende `ModelContract` e definisce il contratto per i modelli che necessitano di tracciare l'autore e l'editor delle modifiche.
 
-## Firma aggiornata (2025-04-16)
+## Firma aggiornata ([DATE])
 
 ```php
 interface ModelWithAuthorContract extends ModelContract
@@ -22,7 +22,7 @@ interface ModelWithAuthorContract extends ModelContract
 - Implementare la logica di tracciamento utente in ogni modello che estende questo contract.
 
 ## Fix/Modifiche recenti
-- [2025-04-16] Correzione conflitti git, uniformazione tipizzazione, aggiunta firme metodi autore/editor, aggiornamento PHPDoc e struttura secondo convenzioni Laraxot/<nome progetto>.
+- [[DATE]] Correzione conflitti git, uniformazione tipizzazione, aggiunta firme metodi autore/editor, aggiornamento PHPDoc e struttura secondo convenzioni Laraxot/<nome progetto>.
 - Link bidirezionale: [Vai a PHPSTAN-FIXES-SUMMARY.md](../../../docs/PHPSTAN-FIXES-SUMMARY.md)
 
 ## Collegamenti

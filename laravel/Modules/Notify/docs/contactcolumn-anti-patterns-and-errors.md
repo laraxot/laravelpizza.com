@@ -134,5 +134,5 @@ private function formatContacts(Client $record): string
 **PRIORITÀ**: Immediata - Correggere subito  
 **LEZIONE**: SEMPRE studiare docs/memories prima di implementare  
 
-*Ultimo aggiornamento: 2025-08-01*  
+*Ultimo aggiornamento: [DATE]*  
 *Errori identificati e documentati per prevenzione futura*

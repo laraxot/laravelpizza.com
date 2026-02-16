@@ -272,7 +272,7 @@ ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" o
 ❌ {{ $data['title'] }}  # Fails because $data doesn't exist
 ```
 
-**Reference**: `Themes/Meetup/docs/2025-12-01-block-component-props-pattern.md`
+**Reference**: `Themes/Meetup/docs/[DATE]-block-component-props-pattern.md`
 
 ### 8. Tailwind CSS 4 Syntax
 

@@ -1,6 +1,6 @@
 # Geo Actions Architecture
 
-**Date**: 2025-12-18
+**Date**: [DATE]
 
 ## Overview
 This document describes the reusable actions available in the Geo module.

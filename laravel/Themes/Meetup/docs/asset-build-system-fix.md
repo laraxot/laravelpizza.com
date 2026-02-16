@@ -218,7 +218,7 @@ php artisan optimize:clear
    - Common issues and solutions
    - Quick reference guide
 
-3. **`2025-11-30-asset-build-system-fix.md`** (this file)
+3. **`[DATE]-asset-build-system-fix.md`** (this file)
    - Problem summary
    - Root cause analysis
    - Solutions implemented
@@ -378,7 +378,7 @@ The asset build system is now correctly configured:
 
 ---
 
-**Date**: 2025-11-30
+**Date**: [DATE]
 **Author**: Claude (AI Assistant)
 **Session**: Asset Build System Fix
 **Files Modified**: 5

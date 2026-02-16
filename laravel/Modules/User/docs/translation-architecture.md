@@ -1,6 +1,6 @@
 # Translation Architecture - Filament Navigation Best Practices
 
-> **Generated**: 2026-01-07
+> **Generated**: [DATE]
 > **Philosophy**: Direct Translation vs Translation Keys
 > **Scope**: All Modules Translations
 

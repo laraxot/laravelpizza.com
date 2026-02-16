@@ -1,7 +1,7 @@
 # Risoluzione Conflitti Git e Correzione Errori PHPStan - Modulo Notify
 
 ## Data
-2025-11-24
+[DATE]
 
 ## Riepilogo Esecutivo
  **Tutti i 147 errori PHPStan nel modulo Notify sono stati risolti con successo**

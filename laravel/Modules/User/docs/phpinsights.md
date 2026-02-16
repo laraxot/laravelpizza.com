@@ -1,6 +1,6 @@
 # phpinsights report
 
-## stato 2025-11-12 (sessione corrente)
+## stato [DATE] (sessione corrente)
 - **scope analizzato**: `Modules/User/app`
 - **esecuzione**: `./vendor/bin/phpinsights analyse Modules/User/app --no-interaction --format=json`
 - **esito generale**: punteggi qualità/architettura/stile sotto soglia a causa di

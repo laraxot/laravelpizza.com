@@ -1,6 +1,6 @@
 # Analisi Comando `php artisan serve`
 
-## Data: 2025-11-29
+## Data: [DATE]
 
 ## Obiettivo
 Eseguire `php artisan serve` dalla cartella `laravel` e risolvere eventuali problemi che si presentano.
@@ -115,7 +115,7 @@ Il problema richiede un'analisi più approfondita del bootstrap di Laravel e del
 3. Considerare di disabilitare temporaneamente alcuni service provider per isolare il problema
 4. Verificare se il problema è specifico di una versione di Laravel o di un pacchetto
 
-### Stato aggiornato (2025-11-29)
+### Stato aggiornato ([DATE])
 - `FolioVoltServiceProvider` è stato aggiornato per evitare di chiamare `TenantService::config('middleware')` quando l'app gira in console (`app()->runningInConsole()`).
 - Nonostante ciò, l'errore **"Target class [env] does not exist"** persiste anche con `php artisan serve`, indicando che la causa è più a monte nel bootstrap di Laravel.
 - Prossimo passo tecnico: eseguire `php artisan serve -vvv` (o `php artisan --version -vvv`) per ottenere lo stack trace completo e individuare il service provider o file di configurazione che tenta di risolvere `env` come binding di container.

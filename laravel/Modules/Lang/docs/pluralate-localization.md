@@ -106,7 +106,7 @@ $formatted = $date->translatedFormat('j F Y');
 
 ```php
 // Differenza in formato leggibile
-$postDate = Carbon::parse('2023-01-15');
+$postDate = Carbon::parse('[DATE]');
 $diff = $postDate->diffForHumans();
 // Output: "2 mesi fa"
 
@@ -414,7 +414,7 @@ $formatted = $date->translatedFormat('j F Y');
 
 ```php
 // Differenza in formato leggibile
-$postDate = Carbon::parse('2023-01-15');
+$postDate = Carbon::parse('[DATE]');
 $diff = $postDate->diffForHumans();
 // Output: "2 mesi fa"
 

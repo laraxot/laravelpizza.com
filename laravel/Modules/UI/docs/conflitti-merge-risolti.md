@@ -1,6 +1,6 @@
 # Conflitti di Merge Risolti nel Modulo UI
 
-## Conflitti Risolti (2025-05-13)
+## Conflitti Risolti ([DATE])
 
 ### 1. UIServiceProvider.php
 
@@ -64,7 +64,7 @@ Questa documentazione integra le informazioni sui conflitti risolti, fornendo de
 - [Vedi anche: Comment/docs/README.md](../../Comment/docs/README.md)
 # Conflitti di Merge Risolti nel Modulo UI
 
-## Conflitti Risolti (2025-05-13)
+## Conflitti Risolti ([DATE])
 
 ### 1. UIServiceProvider.php
 

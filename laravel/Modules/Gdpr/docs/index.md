@@ -279,8 +279,8 @@ foreach ($moduleConnections as $connection) {
 All module connections are automatically mapped to the test MySQL connection defined in `.env.testing`.
 
 ## Recent Fixes
-- [RegisterWidget Fix (2026-02-13)](./register-widget-fix-2026-02-13.md) - Fixed registration form rendering and two-column layout
-- [Register Page UI/UX Improvements (2026-02-13)](../Themes/Meetup/docs/register-page-improvements.md) - Complete overhaul with enhanced UI/UX, WCAG 2.2 AAA, SEO, and clickbait marketing
+- [RegisterWidget Fix ([DATE])](./register-widget-fix-[DATE].md) - Fixed registration form rendering and two-column layout
+- [Register Page UI/UX Improvements ([DATE])](../Themes/Meetup/docs/register-page-improvements.md) - Complete overhaul with enhanced UI/UX, WCAG 2.2 AAA, SEO, and clickbait marketing
 
 ## Translation & Localization
 - [Multi-Language Translation Guidelines](./multi-language-translation-guidelines.md) - Comprehensive guide for implementing and maintaining multi-language translations

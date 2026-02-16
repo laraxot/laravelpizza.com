@@ -148,6 +148,6 @@ Il sistema <nome progetto> ha una **copertura factory del 100%** per tutti i mod
 - 🔄 Completamento analisi User/Xot
 
 ---
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*
 *Analisi completa sistema: 12/14 moduli (86% completato)*
 *Analizzato da: Sistema di analisi automatica moduli*

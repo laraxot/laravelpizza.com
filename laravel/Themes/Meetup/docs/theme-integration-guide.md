@@ -453,6 +453,6 @@ return new class extends Migration
 - [Laraxot Architecture Documentation](../Modules/Xot/docs/)
 
 ---
-**Ultimo aggiornamento**: 2025-11-28
+**Ultimo aggiornamento**: [DATE]
 **Status**: 🟡 In Progress
 **Priorità**: ALTA

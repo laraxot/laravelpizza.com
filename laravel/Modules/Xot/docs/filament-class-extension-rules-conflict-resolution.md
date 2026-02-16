@@ -1,7 +1,7 @@
 # Risoluzione Conflitti Git - Filament Class Extension Rules
 
 ## Data Risoluzione
-2026-01-02
+[DATE]
 
 ## Problema Identificato
 

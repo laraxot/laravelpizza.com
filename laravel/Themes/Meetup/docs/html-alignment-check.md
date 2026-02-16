@@ -1,6 +1,6 @@
 # Verifica Allineamento HTML con Business Logic
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## Contesto
 L'HTML statico in `resources/html/` deve essere allineato con:

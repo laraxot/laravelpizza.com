@@ -1,7 +1,7 @@
 # Missing Pages Analysis - Laravel Pizza Meetups
 
 ## Data
-2025-12-01
+[DATE]
 
 ## Obiettivo
 

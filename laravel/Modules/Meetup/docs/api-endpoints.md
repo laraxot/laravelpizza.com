@@ -126,8 +126,8 @@
         }
       ],
       "available": true,
-      "created_at": "2023-01-01T00:00:00.000000Z",
-      "updated_at": "2023-01-01T00:00:00.000000Z"
+      "created_at": "[DATE]T00:00:00.000000Z",
+      "updated_at": "[DATE]T00:00:00.000000Z"
     }
     ```
 
@@ -153,7 +153,7 @@
         "zip_code": "20100",
         "country": "IT"
       },
-      "delivery_time": "2023-01-01T19:30:00",
+      "delivery_time": "[DATE]T19:30:00",
       "payment_method": "card"
     }
     ```
@@ -179,10 +179,10 @@
         "zip_code": "20100",
         "country": "IT"
       },
-      "delivery_time": "2023-01-01T19:30:00.000000Z",
-      "estimated_delivery": "2023-01-01T19:45:00.000000Z",
+      "delivery_time": "[DATE]T19:30:00.000000Z",
+      "estimated_delivery": "[DATE]T19:45:00.000000Z",
       "payment_method": "card",
-      "created_at": "2023-01-01T00:00:00.000000Z"
+      "created_at": "[DATE]T00:00:00.000000Z"
     }
     ```
 
@@ -204,8 +204,8 @@
           "status": "delivered",
           "total_amount": 17.00,
           "items_count": 2,
-          "created_at": "2023-01-01T00:00:00.000000Z",
-          "delivery_time": "2023-01-01T19:30:00.000000Z"
+          "created_at": "[DATE]T00:00:00.000000Z",
+          "delivery_time": "[DATE]T19:30:00.000000Z"
         }
       ],
       "links": {...},
@@ -239,13 +239,13 @@
         "zip_code": "20100",
         "country": "IT"
       },
-      "delivery_time": "2023-01-01T19:30:00.000000Z",
-      "estimated_delivery": "2023-01-01T19:45:00.000000Z",
-      "actual_delivery": "2023-01-01T19:42:00.000000Z",
+      "delivery_time": "[DATE]T19:30:00.000000Z",
+      "estimated_delivery": "[DATE]T19:45:00.000000Z",
+      "actual_delivery": "[DATE]T19:42:00.000000Z",
       "payment_method": "card",
       "payment_status": "paid",
-      "created_at": "2023-01-01T00:00:00.000000Z",
-      "updated_at": "2023-01-01T00:00:00.000000Z"
+      "created_at": "[DATE]T00:00:00.000000Z",
+      "updated_at": "[DATE]T00:00:00.000000Z"
     }
     ```
 
@@ -273,8 +273,8 @@
         }
       ],
       "loyalty_points": 150,
-      "created_at": "2023-01-01T00:00:00.000000Z",
-      "updated_at": "2023-01-01T00:00:00.000000Z"
+      "created_at": "[DATE]T00:00:00.000000Z",
+      "updated_at": "[DATE]T00:00:00.000000Z"
     }
     ```
 
@@ -296,7 +296,7 @@
       "name": "John Doe Updated",
       "email": "user@example.com",
       "phone": "+39 0987654321",
-      "updated_at": "2023-01-01T00:00:00.000000Z"
+      "updated_at": "[DATE]T00:00:00.000000Z"
     }
     ```
 
@@ -348,7 +348,7 @@
       "country": "IT",
       "label": "Ufficio",
       "is_default": false,
-      "created_at": "2023-01-01T00:00:00.000000Z"
+      "created_at": "[DATE]T00:00:00.000000Z"
     }
     ```
 
@@ -376,7 +376,7 @@
       "rating": 5,
       "comment": "Ottima pizza, come sempre!",
       "order_id": 1,
-      "created_at": "2023-01-01T00:00:00.000000Z"
+      "created_at": "[DATE]T00:00:00.000000Z"
     }
     ```
 
@@ -396,7 +396,7 @@
           },
           "rating": 5,
           "comment": "Ottima pizza, come sempre!",
-          "created_at": "2023-01-01T00:00:00.000000Z"
+          "created_at": "[DATE]T00:00:00.000000Z"
         }
       ],
       "average_rating": 4.5,
@@ -459,7 +459,7 @@
       "order_id": 1,
       "status": "on_delivery",
       "status_text": "In consegna",
-      "estimated_delivery": "2023-01-01T19:45:00.000000Z",
+      "estimated_delivery": "[DATE]T19:45:00.000000Z",
       "delivery_person": {
         "name": "Mario Rossi",
         "phone": "+39 1122334455",
@@ -468,7 +468,7 @@
       "coordinates": {
         "lat": 45.4642,
         "lng": 9.1900,
-        "last_update": "2023-01-01T19:40:00.000000Z"
+        "last_update": "[DATE]T19:40:00.000000Z"
       }
     }
     ```

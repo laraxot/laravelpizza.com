@@ -327,4 +327,4 @@ Per **LaravelPizza** la separazione attuale ha senso perché:
 ---
 
 *Documento generato per LaravelPizza - Analisi User vs Profile Pattern*
-*Data: 2026-02-13*
+*Data: [DATE]*

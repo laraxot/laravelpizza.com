@@ -1,6 +1,6 @@
 # Analisi Approfondita del Modulo UI
 
-> **Generato**: 2025-12-24
+> **Generato**: [DATE]
 > **Scopo**: Documentare la filosofia, logica, business logic e architettura del modulo UI
 
 ---

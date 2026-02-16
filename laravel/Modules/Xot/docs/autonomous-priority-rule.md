@@ -1,6 +1,6 @@
 # Autonomous Priority Rule
 
-**Date**: 2025-12-18
+**Date**: [DATE]
 **Context**: "Super Mucca" Mode
 
 ## The Rule

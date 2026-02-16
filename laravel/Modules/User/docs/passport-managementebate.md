@@ -1,6 +1,6 @@
 # Passport Complete Management - Internal Debate & Decision
 
-> **Data**: 2026-01-27  
+> **Data**: [DATE]  
 > **Scopo**: Documentare il dibattito interno e la decisione finale per una gestione completa di Passport
 
 ---

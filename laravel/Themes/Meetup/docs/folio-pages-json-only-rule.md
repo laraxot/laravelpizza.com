@@ -1,7 +1,7 @@
 # Regola Critica: Pagine Folio = Solo JSON, NO Blade Files
 
 ## Data
-2025-12-01
+[DATE]
 
 ## ⚠️ REGOLA CRITICA OBBLIGATORIA
 
@@ -96,6 +96,6 @@ name('contact');
 
 ---
 
-**Ultimo aggiornamento**: 2025-12-01
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0
 **Compatibilità**: LaravelPizza.com base_laravelpizza

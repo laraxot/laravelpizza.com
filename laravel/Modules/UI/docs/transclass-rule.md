@@ -1,6 +1,6 @@
 # REGOLA CRITICA: Usa SEMPRE transClass() negli Enum
 
-## Data: 2025-01-06
+## Data: [DATE]
 
 ## ✅ CORRETTO - Implementazione Enum con TransTrait
 
@@ -295,10 +295,10 @@ rules:
 - SEMPRE struttura espansa nelle traduzioni
 - SEMPRE sincronizzazione IT/EN/DE
 
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*
 # REGOLA CRITICA: Usa SEMPRE transClass() negli Enum
 
-## Data: 2025-01-06
+## Data: [DATE]
 
 ## ✅ CORRETTO - Implementazione Enum con TransTrait
 
@@ -593,4 +593,4 @@ rules:
 - SEMPRE struttura espansa nelle traduzioni
 - SEMPRE sincronizzazione IT/EN/DE
 
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*

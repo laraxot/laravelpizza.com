@@ -4,14 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\User;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\User;
 use Spatie\QueueableAction\QueueableAction;
+use Illuminate\Contracts\Hashing\Hasher;
+use Illuminate\Contracts\Auth\Guard;
 
 class DeleteUserAction
 {
     use QueueableAction;
+
+    public function __construct(
+        private readonly Hasher $hasher,
+        private readonly Guard $authGuard,
+    ) {}
 
     /**
      * Elimina l'utente dopo aver verificato la password.
@@ -22,7 +27,7 @@ class DeleteUserAction
      */
     public function execute(User $user, string $confirmPassword): array
     {
-        if (! Hash::check($confirmPassword, $user->password)) {
+        if (! $this->hasher->check($confirmPassword, $user->password)) {
             return [
                 'success' => false,
                 'message' => 'La password inserita non è corretta',
@@ -30,7 +35,7 @@ class DeleteUserAction
         }
 
         try {
-            Auth::logout();
+            $this->authGuard->logout();
             $user->delete();
 
             return [

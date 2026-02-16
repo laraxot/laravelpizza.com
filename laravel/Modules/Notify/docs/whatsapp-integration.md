@@ -197,7 +197,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
 
     private string $accountSid;
     private string $authToken;
-    private string $baseUrl = 'https://api.twilio.com/2010-04-01';
+    private string $baseUrl = 'https://api.twilio.com/[DATE]';
     private array $vars = [];
     protected bool $debug;
     protected int $timeout;
@@ -536,4 +536,4 @@ Seguendo questa architettura, l'integrazione WhatsApp si inserisce perfettamente
 
 ---
 
-*Ultimo aggiornamento: 2023-05-12*
+*Ultimo aggiornamento: [DATE]*

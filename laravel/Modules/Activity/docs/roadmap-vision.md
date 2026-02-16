@@ -411,22 +411,22 @@ class Activity extends SpatieActivity
 ## 📝 **DECISION LOG**
 
 ### **Snapshot Strategy Decision**
-**Date**: 2026-01-02
+**Date**: [DATE]
 **Decision**: Create snapshots every 50 events automatically
 **Rationale**: Balance memory usage with snapshot storage overhead
 
 ### **Tenant Isolation Decision**
-**Date**: 2026-01-02
+**Date**: [DATE]
 **Decision**: Use global scopes with automatic tenant_id injection
 **Rationale**: Transparent isolation without code changes in existing modules
 
 ### **Performance Optimization Decision**
-**Date**: 2026-01-02
+**Date**: [DATE]
 **Decision**: Partition activities by month, index by causer/subject
 **Rationale**: Optimize for most common query patterns
 
 ### **Event Sourcing Integration Decision**
-**Date**: 2026-01-02
+**Date**: [DATE]
 **Decision**: Keep Spatie ActivityLog and Event Sourcing separate but complementary
 **Rationale**: Different use cases - ActivityLog for audit, Event Sourcing for state
 

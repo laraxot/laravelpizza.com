@@ -1,6 +1,6 @@
 # Errore Design Pagina Register - Analisi e Correzione
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## 🔴 Problema Identificato
 

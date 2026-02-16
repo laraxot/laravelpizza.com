@@ -2,21 +2,40 @@
 
 declare(strict_types=1);
 
-return [
-    'backend' => [
-        'roles' => [
-            'created' => '.لقد تم إضافة الدور الجديد بنجاح',
-            'deleted' => 'لقد تم مسح الدور بنجاح.',
-            'updated' => 'تم تعديل الدور بنجاح.',
-        ],
-        'users' => [
-            'confirmation_email' => 'لقد تم إرسال رسالة تأكيد جديدة إلى عنوان البريد الألكتروني الموجود في الملف الشخصي.',
-            'created' => 'لقد تم إنشاء المستخدم الجديد بنجاح.',
-            'deleted' => 'لقد تم إزالة المستخدم بنجاح.',
-            'deleted_permanently' => 'لقد تم حذف المستخدم نهائيا بنجاح.',
-            'restored' => 'لقد تمت استعادة المستخدم بنجاح.',
-            'updated' => 'لقد تم تعديل المستخدم بنجاح.',
-            'updated_password' => 'لقد تم تعديل كلمة مرور المستخدم بنجاح.',
-        ],
-    ],
-];
+return array (
+  'backend' => 
+  array (
+    'roles' => 
+    array (
+      'created' => '.لقد تم إضافة الدور الجديد بنجاح',
+      'deleted' => 'لقد تم مسح الدور بنجاح.',
+      'updated' => 'تم تعديل الدور بنجاح.',
+    ),
+    'users' => 
+    array (
+      'confirmation_email' => 'لقد تم إرسال رسالة تأكيد جديدة إلى عنوان البريد الألكتروني الموجود في الملف الشخصي.',
+      'created' => 'لقد تم إنشاء المستخدم الجديد بنجاح.',
+      'deleted' => 'لقد تم إزالة المستخدم بنجاح.',
+      'deleted_permanently' => 'لقد تم حذف المستخدم نهائيا بنجاح.',
+      'restored' => 'لقد تمت استعادة المستخدم بنجاح.',
+      'updated' => 'لقد تم تعديل المستخدم بنجاح.',
+      'updated_password' => 'لقد تم تعديل كلمة مرور المستخدم بنجاح.',
+    ),
+  ),
+  'navigation' => 
+  array (
+    'label' => 'Missing Navigation Label',
+    'plural_label' => 'Missing Navigation Plural Label',
+    'group' => 'Missing Group',
+    'icon' => 'heroicon-o-puzzle-piece',
+    'sort' => 100,
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'fields' => 
+  array (
+  ),
+  'actions' => 
+  array (
+  ),
+);

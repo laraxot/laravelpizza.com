@@ -76,7 +76,7 @@ Risolti sistematicamente 9 errori PHPStan critici attraverso l'analisi del codic
 
 ## Collegamenti Tecnici
 
-- [Correzioni Dettagliate](../laravel/Modules/Xot/docs/phpstan-fixes-2025-01-06.md)
+- [Correzioni Dettagliate](../laravel/Modules/Xot/docs/phpstan-fixes-[DATE].md)
 - [Regole PHPStan Critiche](../laravel/Modules/Xot/docs/phpstan-critical-rules.md)
 - [Linee Guida Livello 10](../laravel/Modules/Xot/docs/phpstan-level10-guidelines.md)
 - [Chart Model Fixes](../laravel/Modules/Chart/docs/phpstan/chart-model-fixes.md)

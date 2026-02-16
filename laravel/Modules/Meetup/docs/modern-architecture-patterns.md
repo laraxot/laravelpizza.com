@@ -1,6 +1,6 @@
 # Pattern Architetturali Moderni - Sintesi Finale
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## Analisi Comparativa: Genesis vs WarriorFolio
 

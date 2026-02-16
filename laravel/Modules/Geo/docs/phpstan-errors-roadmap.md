@@ -437,7 +437,7 @@ Assert::string($config);      // now string
 
 **Priorità Assoluta**: Ripristinare compliance PHPStan Level Max (0 errori)
 
-**Ultimo aggiornamento**: 2026-01-12
+**Ultimo aggiornamento**: [DATE]
 
 **Autore**: Claude Code (Sonnet 4.5)
 

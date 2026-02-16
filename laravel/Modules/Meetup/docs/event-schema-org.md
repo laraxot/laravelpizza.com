@@ -103,8 +103,8 @@ $schema = $event->toSchemaOrg();
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Laravel 11 Release Pizza Party",
-    "startDate": "2025-12-15T18:00:00+01:00",
-    "endDate": "2025-12-15T21:00:00+01:00",
+    "startDate": "[DATE]T18:00:00+01:00",
+    "endDate": "[DATE]T21:00:00+01:00",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "location": {

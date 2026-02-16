@@ -56,6 +56,6 @@ Note: Using configuration file phpstan.neon.
 - Nessun warning o errore di tipo rimanente
 
 ---
-**Documento creato**: 2025-01-27
+**Documento creato**: [DATE]
 **Stato**: ✅ COMPLETATO
 **Prossima revisione**: Con necessità

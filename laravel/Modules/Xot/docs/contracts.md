@@ -11,7 +11,7 @@ Il modulo Xot definisce vari contratti (interfacce) che standardizzano il compor
 ### Scopo
 Definisce l'interfaccia per tutti i modelli User nel sistema, includendo autenticazione, autorizzazione, ruoli, permessi e media.
 
-### Problema Critico Identificato (2025-01-06)
+### Problema Critico Identificato ([DATE])
 
 **ERRORE PHPSTAN**: Il metodo `hasPermissionTo()` è utilizzato in tutte le policy ma non è definito nel contratto `UserContract`.
 
@@ -91,4 +91,4 @@ Contratto per modelli che hanno profili.
 - [Root PHPStan Errors](../../project_docs/troubleshooting/phpstan-errors.md)
 - [Spatie Permission Documentation](https://spatie.be/project_docs/laravel-permission)
 
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*

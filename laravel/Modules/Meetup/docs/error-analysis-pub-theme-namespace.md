@@ -258,5 +258,5 @@ ma questo è **anti-pattern** e va evitato.
 
 ---
 
-**analisi eseguita:** 2025-01-29
+**analisi eseguita:** [DATE]
 **prossimi step:** clear caches → test → debug se necessario

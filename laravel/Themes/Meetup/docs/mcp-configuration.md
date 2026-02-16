@@ -233,7 +233,7 @@ Map Meetup theme roadmap tasks to Asana:
 - [Asana MCP Configuration](../../docs/mcp-asana-configuration.md)
 - [ClickUp MCP Configuration](../../docs/mcp-clickup-configuration.md)
 - [Redmine MCP Configuration](../../docs/mcp-redmine-configuration.md)
-- [Meetup Theme Roadmap](./roadmap-2026-01-31.md)
+- [Meetup Theme Roadmap](./roadmap-[DATE].md)
 
 ---
 

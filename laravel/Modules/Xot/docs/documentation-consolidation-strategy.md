@@ -4,7 +4,7 @@
 
 **RIDURRE** il numero di file documentation da **migliaia** a **~10 file focalizzati per modulo**, seguendo i principi **KISS** e **DRY**.
 
-## 📊 Stato Attuale (2025-11-04)
+## 📊 Stato Attuale ([DATE])
 
 | Modulo | File .md Attuali | Target | Riduzione Necessaria |
 |--------|------------------|--------|---------------------|
@@ -33,9 +33,9 @@ model-inheritance-audit.md
 ### 2. File con Date (vietato)
 ```bash
 # ❌ Date nel nome
-merge-conflict-resolution-2025-11-04.md
-lessons-learned-2025-11-04-merge-conflicts.md
-phpstan-analysis-2025-08-18.md
+merge-conflict-resolution-[DATE].md
+lessons-learned-[DATE]-merge-conflicts.md
+phpstan-analysis-[DATE].md
 
 # ✅ Usare CHANGELOG.md invece
 # Oppure nomi generici aggiornati:
@@ -145,7 +145,7 @@ mv Modules/Xot/docs/*-2024-*.md Modules/Xot/docs/archive/
 mv Modules/Xot/docs/*-2025-*.md Modules/Xot/docs/archive/
 
 # Mantenere solo l'ultimo se rilevante
-mv Modules/Xot/docs/archive/merge-conflict-resolution-2025-11-04.md \
+mv Modules/Xot/docs/archive/merge-conflict-resolution-[DATE].md \
    Modules/Xot/docs/merge-conflict-resolution.md
 ```
 
@@ -153,13 +153,13 @@ mv Modules/Xot/docs/archive/merge-conflict-resolution-2025-11-04.md \
 ```markdown
 # Changelog - Modulo Xot
 
-## 2025-11-04 - Merge Conflicts Resolution
+## [DATE] - Merge Conflicts Resolution
 - Corretti 18 file con merge conflicts massivi
 - Implementato File Locking Pattern
 - Fix PSR-4 namespace violations
 - Server Laravel ora funzionante
 
-## 2025-10-29 - PHPStan Level 10 Achievement
+## [DATE] - PHPStan Level 10 Achievement
 - Raggiunto PHPStan Level 10 su tutto il modulo
 - Corretti 500+ type hints
 - Documentazione aggiornata
@@ -172,7 +172,7 @@ mv Modules/Xot/docs/archive/merge-conflict-resolution-2025-11-04.md \
 ### 1. File Naming (CRITICO)
 - ✅ **kebab-case lowercase**: `my-document.md`
 - ❌ **NO UPPERCASE**: ~~`MY_DOCUMENT.md`~~
-- ❌ **NO dates**: ~~`analysis-2025-11-04.md`~~
+- ❌ **NO dates**: ~~`analysis-[DATE].md`~~
 - ❌ **NO underscores**: ~~`my_document.md`~~
 - ✅ **Exception**: `README.md`, `CHANGELOG.md`
 
@@ -353,6 +353,6 @@ Prima di considerare un modulo "consolidato":
 
 ---
 
-**Created:** 2025-11-04
+**Created:** [DATE]
 **Purpose:** Strategic plan per ridurre documentation bloat
 **Target:** ~350 total files across all modules (da ~5,267)

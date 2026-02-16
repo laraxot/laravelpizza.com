@@ -897,6 +897,6 @@ php artisan view:clear
 
 ---
 
-*Ultimo aggiornamento: 2025-08-04*
+*Ultimo aggiornamento: [DATE]*
 *Modulo: Xot*
 *Categoria: Best Practices*

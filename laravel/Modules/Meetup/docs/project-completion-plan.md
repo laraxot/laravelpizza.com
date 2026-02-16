@@ -200,7 +200,7 @@ Complete the Laravel Pizza Meetups community platform that connects Laravel deve
    - Challenge: Ensuring compliance with GDPR and other privacy regulations in page-based architecture
    - Solution: Implement privacy-by-design in Folio pages and Volt components, provide clear data usage policies, and user data control features
 
-## Updated completion plan - 2025-11-28 (Meetup module + HTML theme)
+## Updated completion plan - [DATE] (Meetup module + HTML theme)
 
 Questa sezione aggiorna il piano di completamento in base allo **scopo reale del progetto** descritto in `scopo-progetto.md`:
 
@@ -274,7 +274,7 @@ Per evitare scope creep, questi elementi restano **esplicitamente fuori** dalla 
 
  Questi punti restano validi come **fase successiva** se il progetto verrà evoluto oltre la versione dimostrativa attuale.
 
- ### Suggerimenti, dubbi e come affrontarli (2025-11-28)
+ ### Suggerimenti, dubbi e come affrontarli ([DATE])
 
  #### Suggerimenti pratici
 

@@ -2,50 +2,59 @@
 
 declare(strict_types=1);
 
-return [
-    'backend' => [
-        'access' => [
-            'users' => [
-                'delete_user_confirm' => 'Sei sicuro di voler eliminare definitivamente questo utente? Ovunque ci sia un riferimento a questo utente all\'interno dell\'applicazione si vedrà un errore. Procedi a tuo rischio e pericolo, non si potrà annullare questa operazione.',
-                'if_confirmed_off' => '(Se non è confermato]',
-                'restore_user_confirm' => 'Ripristinare l\'utente al suo stato originario?',
-            ],
-        ],
-        'dashboard' => [
-            'title' => 'Dashboard Amministrazione',
-            'welcome' => 'Benvenuto',
-        ],
-        'general' => [
-            'all_rights_reserved' => 'Tutti i diritti riservati.',
-            'are_you_sure' => 'Sei sicuro?',
-            'boilerplate_link' => 'Laravel 5 Boilerplate',
-            'continue' => 'Continua',
-            'member_since' => 'Membro dal',
-            'minutes' => ' minutes',
-            'search_placeholder' => 'Cerca...',
-            'timeout' => 'You were automatically logged out for security reasons since you had no activity in ',
-            'see_all' => [
-                'messages' => 'Visualizza tutti i messaggi',
-                'notifications' => 'Visualizza tutte',
-                'tasks' => 'Visualizza tutti i compiti',
-            ],
-            'status' => [
-                'online' => 'Online',
-                'offline' => 'Offline',
-            ],
-            'you_have' => [
-                'messages' => '{0} Non hai messaggi|{1} Hai un messaggio|[2,Inf] Hai :number messaggi',
-                'notifications' => '{0} Non hai notifiche|{1} Hai una notifica|[2,Inf] Hai :number notifiche',
-                'tasks' => '{0} Non hai compiti|{1} Hai un compito|[2,Inf] Hai :number compiti',
-            ],
-        ],
-        'search' => [
-            'empty' => 'Please enter a search term.',
-            'incomplete' => 'You must write your own search logic for this system.',
-            'title' => 'Search Results',
-            'results' => 'Search Results for :query',
-        ],
-        'welcome' => '<p>Quello che vedi è il tema AdminLTE sviluppato da <a href="https://almsaeedstudio.com/" target="_blank">https://almsaeedstudio.com/</a>.
+return array (
+  'backend' => 
+  array (
+    'access' => 
+    array (
+      'users' => 
+      array (
+        'delete_user_confirm' => 'Sei sicuro di voler eliminare definitivamente questo utente? Ovunque ci sia un riferimento a questo utente all\'interno dell\'applicazione si vedrà un errore. Procedi a tuo rischio e pericolo, non si potrà annullare questa operazione.',
+        'if_confirmed_off' => '(Se non è confermato]',
+        'restore_user_confirm' => 'Ripristinare l\'utente al suo stato originario?',
+      ),
+    ),
+    'dashboard' => 
+    array (
+      'title' => 'Dashboard Amministrazione',
+      'welcome' => 'Benvenuto',
+    ),
+    'general' => 
+    array (
+      'all_rights_reserved' => 'Tutti i diritti riservati.',
+      'are_you_sure' => 'Sei sicuro?',
+      'boilerplate_link' => 'Laravel 5 Boilerplate',
+      'continue' => 'Continua',
+      'member_since' => 'Membro dal',
+      'minutes' => ' minutes',
+      'search_placeholder' => 'Cerca...',
+      'timeout' => 'You were automatically logged out for security reasons since you had no activity in ',
+      'see_all' => 
+      array (
+        'messages' => 'Visualizza tutti i messaggi',
+        'notifications' => 'Visualizza tutte',
+        'tasks' => 'Visualizza tutti i compiti',
+      ),
+      'status' => 
+      array (
+        'online' => 'Online',
+        'offline' => 'Offline',
+      ),
+      'you_have' => 
+      array (
+        'messages' => '{0} Non hai messaggi|{1} Hai un messaggio|[2,Inf] Hai :number messaggi',
+        'notifications' => '{0} Non hai notifiche|{1} Hai una notifica|[2,Inf] Hai :number notifiche',
+        'tasks' => '{0} Non hai compiti|{1} Hai un compito|[2,Inf] Hai :number compiti',
+      ),
+    ),
+    'search' => 
+    array (
+      'empty' => 'Please enter a search term.',
+      'incomplete' => 'You must write your own search logic for this system.',
+      'title' => 'Search Results',
+      'results' => 'Search Results for :query',
+    ),
+    'welcome' => '<p>Quello che vedi è il tema AdminLTE sviluppato da <a href="https://almsaeedstudio.com/" target="_blank">https://almsaeedstudio.com/</a>.
     Si tratta di una versione ridotta al minimo che include solo gli stili e gli script necessari per il funzionamento.
     Scarica la versione completa per aggiungere componenti alla dashboard.</p>
 <p>Tutte le funzioni che vedi sono simulate, ad eccezione della <strong>Gestione utenti</strong> sulla sinistra.
@@ -57,84 +66,109 @@ return [
     per ulteriori informazioni e per segnalare qualsiasi <a href="https://github.com/rappasoft/Laravel-5-Boilerplate/issues" target="_blank">problema</a>.</p>
 <p><strong>This project is very demanding to keep up with given the rate at which the master Laravel branch changes, so any help is appreciated.</strong></p>
 <p>- Anthony Rappa</p>',
-    ],
-    'emails' => [
-        'auth' => [
-            'error' => 'Ops!',
-            'greeting' => 'Ciao!',
-            'regards' => 'Saluti,',
-            'trouble_clicking_button' => 'Se hai problemi a cliccare il pulsante ":actionText", copia e incolla l\'URL qui sotto nel tuo browser:',
-            'thank_you_for_using_app' => 'Grazie per aver utilizzato la nostra applicazione!',
-            'password_reset_subject' => 'Il tuo link per il reset della password',
-            'password_cause_of_email' => 'Hai ricevuto questa email perché abbiamo ricevuto una richiesta di reset della password per il tuo account.',
-            'password_if_not_requested' => 'Se non hai richiesto un reset della password, non è necessaria alcuna azione.',
-            'reset_password' => 'Clicca qui per reimpostare la tua password',
-            'click_to_confirm' => 'Clicca qui per confermare il tuo account:',
-        ],
-    ],
-    'frontend' => [
-        'test' => 'Test',
-        'tests' => [
-            'based_on' => [
-                'permission' => 'Basato su permessi - ',
-                'role' => 'Basato su ruoli - ',
-            ],
-            'js_injected_from_controller' => 'Javascript iniettato da un controller',
-            'using_blade_extensions' => 'Usando estensioni Blade',
-            'using_access_helper' => [
-                'array_permissions' => 'Si sta usando l\'Access Helper con un array di nomi o ID di permessi, l\'utente li deve possedere tutti.',
-                'array_permissions_not' => 'Si sta usando l\'Access Helper con un array di nomi o ID di permessi, l\'utente non li deve possedere tutti.',
-                'array_roles' => 'Si sta usando l\'Access Helper con un array di nomi o ID di ruoli, l\'utente li deve possedere tutti.',
-                'array_roles_not' => 'Si sta usando l\'Access Helper con un array di nomi o ID di ruoli, l\'utente non li deve possedere tutti.',
-                'permission_id' => 'Si sta usando l\'Access Helper con un ID di permesso',
-                'permission_name' => 'Si sta usando l\'Access Helper con un nome di permesso',
-                'role_id' => 'Si sta usando l\'Access Helper con un ID di ruolo',
-                'role_name' => 'Si sta usando l\'Access Helper con un nome di ruolo',
-            ],
-            'view_console_it_works' => 'Apri la console Javascript del browser, dovresti vedere \'it works!\' generato da FrontendController@index',
-            'you_can_see_because' => 'Puoi vedere questo perché il tuo ruolo è \':role\'!',
-            'you_can_see_because_permission' => 'Puoi vedere questo perché hai il permesso \':permission\'!',
-        ],
-        'user' => [
-            'profile_updated' => 'Profilo aggiornato con successo.',
-            'password_updated' => 'Password aggiornata con successo.',
-        ],
-        'welcome_to' => 'Benvenuto su :place',
-    ],
+  ),
+  'emails' => 
+  array (
+    'auth' => 
+    array (
+      'error' => 'Ops!',
+      'greeting' => 'Ciao!',
+      'regards' => 'Saluti,',
+      'trouble_clicking_button' => 'Se hai problemi a cliccare il pulsante ":actionText", copia e incolla l\'URL qui sotto nel tuo browser:',
+      'thank_you_for_using_app' => 'Grazie per aver utilizzato la nostra applicazione!',
+      'password_reset_subject' => 'Il tuo link per il reset della password',
+      'password_cause_of_email' => 'Hai ricevuto questa email perché abbiamo ricevuto una richiesta di reset della password per il tuo account.',
+      'password_if_not_requested' => 'Se non hai richiesto un reset della password, non è necessaria alcuna azione.',
+      'reset_password' => 'Clicca qui per reimpostare la tua password',
+      'click_to_confirm' => 'Clicca qui per confermare il tuo account:',
+    ),
+  ),
+  'frontend' => 
+  array (
+    'test' => 'Test',
+    'tests' => 
+    array (
+      'based_on' => 
+      array (
+        'permission' => 'Basato su permessi - ',
+        'role' => 'Basato su ruoli - ',
+      ),
+      'js_injected_from_controller' => 'Javascript iniettato da un controller',
+      'using_blade_extensions' => 'Usando estensioni Blade',
+      'using_access_helper' => 
+      array (
+        'array_permissions' => 'Si sta usando l\'Access Helper con un array di nomi o ID di permessi, l\'utente li deve possedere tutti.',
+        'array_permissions_not' => 'Si sta usando l\'Access Helper con un array di nomi o ID di permessi, l\'utente non li deve possedere tutti.',
+        'array_roles' => 'Si sta usando l\'Access Helper con un array di nomi o ID di ruoli, l\'utente li deve possedere tutti.',
+        'array_roles_not' => 'Si sta usando l\'Access Helper con un array di nomi o ID di ruoli, l\'utente non li deve possedere tutti.',
+        'permission_id' => 'Si sta usando l\'Access Helper con un ID di permesso',
+        'permission_name' => 'Si sta usando l\'Access Helper con un nome di permesso',
+        'role_id' => 'Si sta usando l\'Access Helper con un ID di ruolo',
+        'role_name' => 'Si sta usando l\'Access Helper con un nome di ruolo',
+      ),
+      'view_console_it_works' => 'Apri la console Javascript del browser, dovresti vedere \'it works!\' generato da FrontendController@index',
+      'you_can_see_because' => 'Puoi vedere questo perché il tuo ruolo è \':role\'!',
+      'you_can_see_because_permission' => 'Puoi vedere questo perché hai il permesso \':permission\'!',
+    ),
+    'user' => 
+    array (
+      'profile_updated' => 'Profilo aggiornato con successo.',
+      'password_updated' => 'Password aggiornata con successo.',
+    ),
+    'welcome_to' => 'Benvenuto su :place',
+  ),
+  'label' => 'Strings',
+  'plural_label' => 'Strings (Plurale)',
+  'navigation' => 
+  array (
+    'name' => 'Strings',
+    'plural' => 'Strings',
+    'group' => 
+    array (
+      'name' => 'General',
+      'description' => 'General Settings',
+    ),
     'label' => 'Strings',
-    'plural_label' => 'Strings (Plurale)',
-    'navigation' => [
-        'name' => 'Strings',
-        'plural' => 'Strings',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Strings',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
-    'fields' => [
-        'id' => [
-            'label' => 'Identificativo',
-            'tooltip' => 'Identificativo univoco del record',
-        ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-        ],
-        'updated_at' => [
-            'label' => 'Ultima Modifica',
-        ],
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Strings',
-        ],
-        'edit' => [
-            'label' => 'Modifica Strings',
-        ],
-        'delete' => [
-            'label' => 'Elimina Strings',
-        ],
-    ],
-];
+    'sort' => 1,
+    'icon' => 'heroicon-o-collection',
+  ),
+  'fields' => 
+  array (
+    'id' => 
+    array (
+      'label' => 'Identificativo',
+      'tooltip' => 'Identificativo univoco del record',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'Data Creazione',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'updated_at' => 
+    array (
+      'label' => 'Ultima Modifica',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'Crea Strings',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica Strings',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina Strings',
+    ),
+  ),
+);

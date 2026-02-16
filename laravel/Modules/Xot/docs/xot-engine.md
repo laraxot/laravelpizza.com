@@ -502,5 +502,5 @@ Xot rappresenta l'evoluzione naturale di Laravel:
 ---
 
 *Documentazione Xot v1.0*
-*Creato: 2025-11-17*
+*Creato: [DATE]*
 *Autore: AI Assistant con analisi approfondita*

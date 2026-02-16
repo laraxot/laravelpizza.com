@@ -1,6 +1,6 @@
-# ListLogActivities UI/UX Improvements - 2025-12-04
+# ListLogActivities UI/UX Improvements - [DATE]
 
-## Data Intervento: 2025-12-04
+## Data Intervento: [DATE]
 
 ## Obiettivo
 

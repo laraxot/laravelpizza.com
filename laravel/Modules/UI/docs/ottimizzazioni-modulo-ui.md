@@ -358,7 +358,7 @@ echo "✅ Consolidamento completato!"
 
 ---
 
-**Ultimo aggiornamento:** 2025-01-06
+**Ultimo aggiornamento:** [DATE]
 **Stato:** In implementazione
 **Responsabile:** Team Sviluppo UI
 **Priorità:** ALTA (duplicazioni massive identificate)

@@ -4,12 +4,12 @@
 
 Analisi dettagliata di progetti reali che utilizzano Folio + Volt, con focus su pattern UI/UX, componenti e implementazioni frontend applicabili al tema Meetup.
 
-**Data Analisi**: 2025-01-27
+**Data Analisi**: [DATE]
 **Versione**: 1.0
 
 ---
 
-## 📚 Repository Analizzati (2025-11-29)
+## 📚 Repository Analizzati ([DATE])
 
 ### Repository Principali Studiati
 

@@ -1,4 +1,4 @@
-# Logo and Component Refactor - 2025-11-28
+# Logo and Component Refactor - [DATE]
 
 This document details the refactoring process for the site logo and the componentization of shared elements like the navigation and footer.
 

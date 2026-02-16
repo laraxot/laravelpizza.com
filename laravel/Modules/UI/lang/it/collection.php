@@ -2,46 +2,79 @@
 
 declare(strict_types=1);
 
-return [
-    'actions' => [
-        'create' => [
-            'label' => 'create',
-        ],
-    ],
-    'fields' => [
-        'openFilters' => [
-            'label' => 'openFilters',
-        ],
-        'applyFilters' => [
-            'label' => 'applyFilters',
-        ],
-        'resetFilters' => [
-            'label' => 'resetFilters',
-        ],
-        'reorderRecords' => [
-            'label' => 'reorderRecords',
-        ],
-        'toggleColumns' => [
-            'label' => 'toggleColumns',
-        ],
-        'name' => [
-            'label' => 'name',
-        ],
-        'values-list' => [
-            'label' => 'values-list',
-        ],
-    ],
+return array (
+  'actions' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'create',
+    ),
+  ),
+  'fields' => 
+  array (
+    'openFilters' => 
+    array (
+      'label' => 'openFilters',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'applyFilters' => 
+    array (
+      'label' => 'applyFilters',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'resetFilters' => 
+    array (
+      'label' => 'resetFilters',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'reorderRecords' => 
+    array (
+      'label' => 'reorderRecords',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'toggleColumns' => 
+    array (
+      'label' => 'toggleColumns',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'name' => 
+    array (
+      'label' => 'name',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'values-list' => 
+    array (
+      'label' => 'values-list',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'label' => 'Collection',
+  'plural_label' => 'Collection (Plurale)',
+  'navigation' => 
+  array (
+    'name' => 'Collection',
+    'plural' => 'Collection',
+    'group' => 
+    array (
+      'name' => 'General',
+      'description' => 'General Settings',
+    ),
     'label' => 'Collection',
-    'plural_label' => 'Collection (Plurale)',
-    'navigation' => [
-        'name' => 'Collection',
-        'plural' => 'Collection',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Collection',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
-];
+    'sort' => 1,
+    'icon' => 'heroicon-o-collection',
+  ),
+);

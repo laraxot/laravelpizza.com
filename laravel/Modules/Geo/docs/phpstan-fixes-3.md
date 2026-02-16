@@ -1,4 +1,4 @@
-# Correzioni PHPStan Modulo Geo - 2025-01-27
+# Correzioni PHPStan Modulo Geo - [DATE]
 
 **Versione PHPStan**: 1.12.x
 **Livello**: 10
@@ -88,4 +88,4 @@ Il widget fa parte del piano di migrazione a Filament 4.x documentato in:
 - [Documentazione Widget Disabilitati](./widgets/disabled_widgets.md)
 - [Piano Migrazione Filament](../../docs/filament_4x_migration_plan.md)
 
-*Ultimo aggiornamento: 2025-01-27*
+*Ultimo aggiornamento: [DATE]*

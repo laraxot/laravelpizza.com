@@ -1,4 +1,4 @@
-# Summary Sessione - 2025-01-22
+# Summary Sessione - [DATE]
 
 **Status**: ✅ Lavoro Completato
 **Scopo**: Riepilogo completo del lavoro svolto seguendo le raccomandazioni degli altri agenti AI
@@ -76,8 +76,8 @@
 8. `homepage-alignment-process.md`
 9. `screenshots-workflow.md`
 10. `git-merge-conflicts-resolution.md`
-11. `workflow-summary-2025-01-22.md`
-12. `session-summary-2025-01-22.md` (questo)
+11. `workflow-summary-[DATE].md`
+12. `session-summary-[DATE].md` (questo)
 
 **2 documenti aggiornati**:
 1. `visual-parity-progress.md`
@@ -157,10 +157,10 @@
 - [Agent AI Workflow Complete Summary](./agent-ai-workflow-complete-summary.md)
 - [Agent Recommendations Consolidated](./agent-recommendations-consolidated.md)
 - [Agent Workflow Best Practices](./agent-workflow-best-practices.md)
-- [Workflow Summary 2025-01-22](./workflow-summary-2025-01-22.md)
+- [Workflow Summary [DATE]](./workflow-summary-[DATE].md)
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Lavoro Completato, Documentazione Consolidata

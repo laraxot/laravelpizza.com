@@ -8,7 +8,7 @@ Un componente avanzato per la selezione di date che mostra un calendario inline 
 ```php
 use Modules\UI\Filament\Forms\Components\InlineDatePicker;
 InlineDatePicker::make('appointment_date')
-    ->enabledDates(['2025-06-05', '2025-06-21', '2025-06-25'])
+    ->enabledDates(['[DATE]', '[DATE]', '[DATE]'])
     ->calendarConfig([
         'locale' => 'it',
         'firstDayOfWeek' => 1, // Lunedì come primo giorno della settimana
@@ -60,7 +60,7 @@ Lo stile del componente può essere personalizzato sovrascrivendo le classi CSS 
 // Ottenere le date abilitate
 $enabledDates = $datePicker->getEnabledDates();
 // Verificare se una data è abilitata
-$isEnabled = $datePicker->isDateEnabled('2025-06-15');
+$isEnabled = $datePicker->isDateEnabled('[DATE]');
 // Generare la griglia di un mese specifico
 $monthGrid = $datePicker->generateMonthGrid(2025, 6);
 #### Best Practice
@@ -227,7 +227,7 @@ Un componente avanzato per la selezione di date che mostra un calendario inline 
 use Modules\UI\Filament\Forms\Components\InlineDatePicker;
 
 InlineDatePicker::make('appointment_date')
-    ->enabledDates(['2025-06-05', '2025-06-21', '2025-06-25'])
+    ->enabledDates(['[DATE]', '[DATE]', '[DATE]'])
     ->calendarConfig([
         'locale' => 'it',
         'firstDayOfWeek' => 1, // Lunedì come primo giorno della settimana
@@ -300,7 +300,7 @@ InlineDatePicker::make('appointment_date')
 $enabledDates = $datePicker->getEnabledDates();
 
 // Verificare se una data è abilitata
-$isEnabled = $datePicker->isDateEnabled('2025-06-15');
+$isEnabled = $datePicker->isDateEnabled('[DATE]');
 
 // Generare la griglia di un mese specifico
 $monthGrid = $datePicker->generateMonthGrid(2025, 6);

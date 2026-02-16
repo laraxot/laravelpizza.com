@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\Socialite;
 
+use InvalidArgumentException;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Actions\Socialite\Utils\UserNameFieldsResolver;
+use RuntimeException;
 use Spatie\QueueableAction\QueueableAction;
 
 class GetUserModelAttributesFromSocialiteAction
@@ -14,9 +16,9 @@ class GetUserModelAttributesFromSocialiteAction
 
     public readonly string $name;
 
-    public readonly string $first_name;
+    public readonly string $firstName;
 
-    public readonly string $last_name;
+    public readonly string $lastName;
 
     public readonly string $email;
 
@@ -25,28 +27,28 @@ class GetUserModelAttributesFromSocialiteAction
         private readonly SocialiteUserContract $oauthUser,
     ) {
         if (empty($provider)) {
-            throw new \InvalidArgumentException('Il provider non può essere vuoto');
+            throw new InvalidArgumentException('Il provider non può essere vuoto');
         }
 
         $nameFieldsResolver = app(UserNameFieldsResolver::class, ['user' => $this->oauthUser]);
         if ($nameFieldsResolver === null) {
-            throw new \RuntimeException('Impossibile istanziare UserNameFieldsResolver');
+            throw new RuntimeException('Impossibile istanziare UserNameFieldsResolver');
         }
 
         if (! is_string($nameFieldsResolver->name)) {
-            throw new \RuntimeException('Il nome deve essere una stringa');
+            throw new RuntimeException('Il nome deve essere una stringa');
         }
         if (! is_string($nameFieldsResolver->last_name)) {
-            throw new \RuntimeException('Il cognome deve essere una stringa');
+            throw new RuntimeException('Il cognome deve essere una stringa');
         }
 
         $this->name = $nameFieldsResolver->name;
-        $this->first_name = $nameFieldsResolver->name;
-        $this->last_name = $nameFieldsResolver->last_name;
+        $this->firstName = $nameFieldsResolver->name;
+        $this->lastName = $nameFieldsResolver->last_name;
 
         $email = $this->oauthUser->getEmail();
         if (! is_string($email) || empty($email)) {
-            throw new \RuntimeException('L\'email deve essere una stringa non vuota');
+            throw new RuntimeException('L\'email deve essere una stringa non vuota');
         }
         $this->email = $email;
     }

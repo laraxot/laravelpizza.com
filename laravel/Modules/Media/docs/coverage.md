@@ -2,7 +2,7 @@
 
 ## Coverage Results
 
-**Date**: 2026-01-18  
+**Date**: [DATE]  
 **Module**: Media  
 **Status**: Tests pass but 0.00% per-module code coverage
 

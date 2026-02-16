@@ -1,6 +1,6 @@
 # Risoluzione Conflitti Traduzioni Tema Two - Modulo User
 
-## Data: 2025-01-06
+## Data: [DATE]
 
 ## Contesto
 I file di traduzione del tema Two presentavano conflitti Git che coinvolgevano stati di utenti (doctor_states.php e patient_states.php) in tutte e tre le lingue (IT, EN, DE).
@@ -173,7 +173,7 @@ return [
 ```bash
 # Risoluzione Conflitti Traduzioni Tema Two - Modulo User
 
-## Data: 2025-01-06
+## Data: [DATE]
 
 ## Contesto
 I file di traduzione del tema Two presentavano conflitti Git che coinvolgevano stati di utenti (doctor_states.php e patient_states.php) in tutte e tre le lingue (IT, EN, DE).
@@ -430,5 +430,5 @@ php artisan lang:missing --locale=it,en,de
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-06
+**Ultimo aggiornamento**: [DATE]
 **Autore**: Sistema di correzione automatica

@@ -133,7 +133,7 @@ Tutte queste devono essere migrate prima dei test nel setUp() come fatto sopra.
 
 ---
 
-**Data:** 2026-01-09
+**Data:** [DATE]
 **Stato:** Pronto per implementazione
 **Righe:** 100 → ~40 (-60%)
 **Filosofia:** MySQL Production = MySQL Tests ✅

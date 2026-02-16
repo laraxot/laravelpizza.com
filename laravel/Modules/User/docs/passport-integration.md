@@ -1,6 +1,6 @@
 # Laravel Passport Integration - Architettura Completa
 
-> **Generato**: 2026-01-07
+> **Generato**: [DATE]
 > **Filosofia**: L'Architetto Laraxot (Vincitore del Dibattito Interno)
 > **PHPStan Status**: ✅ Level MAX Compliant (Zero Errori)
 

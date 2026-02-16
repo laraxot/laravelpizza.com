@@ -1,6 +1,6 @@
 # Filament - Guida Completa Consolidata
 
-**Ultimo aggiornamento**: 2025-01-06
+**Ultimo aggiornamento**: [DATE]
 **Principi**: DRY + KISS
 **Status**: ✅ CONSOLIDATO
 

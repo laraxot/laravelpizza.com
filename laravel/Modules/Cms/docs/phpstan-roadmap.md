@@ -1,7 +1,7 @@
 # PHPStan Roadmap - Cms Module
 
-> **Created**: 2026-01-21  
-> **Updated**: 2026-01-21
+> **Created**: [DATE]  
+> **Updated**: [DATE]
 > **Status**: 🔴 High Priority  
 > **Errors**: 23+  
 > **Priority**: 8 (Complex Refactoring)

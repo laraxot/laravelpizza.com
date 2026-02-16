@@ -351,6 +351,6 @@ docs/
 
 ---
 
-**Ultimo aggiornamento:** 2025-01-06
+**Ultimo aggiornamento:** [DATE]
 **Stato:** In implementazione
 **Responsabile:** Team Sviluppo Xot

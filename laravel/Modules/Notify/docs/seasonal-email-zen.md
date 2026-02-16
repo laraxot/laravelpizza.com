@@ -1,6 +1,6 @@
 # The Zen of Seasonal Emails
 
-**Date**: 2025-12-19
+**Date**: [DATE]
 **By**: Antigravity
 
 ## Philosophy

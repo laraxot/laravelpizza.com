@@ -1,7 +1,7 @@
 # Correzioni Errori di Sintassi nei File di Traduzione - 2025
 
 ## Data
-2025-01-15
+[DATE]
 
 ## Problema Identificato
 Errori di sintassi PHP nei file di traduzione del modulo User che impedivano il corretto funzionamento dell'applicazione.

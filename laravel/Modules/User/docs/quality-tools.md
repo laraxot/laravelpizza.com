@@ -1,6 +1,6 @@
 # Quality Tools Report - PHPStan, PHPMD, PHP Insights
 
-## Data: 2025-01-02
+## Data: [DATE]
 
 ## Riepilogo Risultati
 
@@ -160,4 +160,4 @@ cd laravel
 - [PHPStan Corrections Summary](./phpstan-corrections-summary-2025.md)
 - [Filament Class Extension Rules](../../Xot/docs/filament-class-extension-rules.md)
 
-*Ultimo aggiornamento: 2025-01-02*
+*Ultimo aggiornamento: [DATE]*

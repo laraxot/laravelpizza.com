@@ -1,4 +1,4 @@
-# Fix Race Condition firstOrCreate con UUID - 2026-01-22
+# Fix Race Condition firstOrCreate con UUID - [DATE]
 
 **Status**: ✅ Completato  
 
@@ -167,5 +167,5 @@ expect($profileA->id)->toBe($profileB->id);
 - [Query Safety Principle](../../../docs/operational-rules/query-safety-principle.md)
 
 **Versione**: 1.0  
-**Ultimo aggiornamento**: 2026-01-22  
+**Ultimo aggiornamento**: [DATE]  
 **Status**: ✅ Completato

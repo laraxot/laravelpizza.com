@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\User;
 
+use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -29,7 +30,7 @@ class UpdateUserAction
      * @param  array<string, mixed>  $data  I dati da aggiornare
      * @return Model L'utente aggiornato
      *
-     * @throws \Exception Se l'aggiornamento fallisce
+     * @throws Exception Se l'aggiornamento fallisce
      */
     public function execute(Model $user, array $data): Model
     {
@@ -58,11 +59,11 @@ class UpdateUserAction
 
             $updatedUser = $user->fresh();
             if (! $updatedUser instanceof Model) {
-                throw new \Exception('Failed to refresh user model after update');
+                throw new Exception('Failed to refresh user model after update');
             }
 
             return $updatedUser;
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             DB::rollBack();
 
             Log::error("Errore nell'aggiornamento utente", [

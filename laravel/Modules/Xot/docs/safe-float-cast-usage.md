@@ -444,4 +444,4 @@ class Product extends BaseModel
 
 ---
 
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*

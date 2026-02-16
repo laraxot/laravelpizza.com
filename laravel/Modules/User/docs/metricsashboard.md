@@ -2,7 +2,7 @@
 
 ## Overview
 - **Completamento Modulo**: 85%
-- **Ultimo Aggiornamento**: 2024-04-01
+- **Ultimo Aggiornamento**: [DATE]
 - **PHPStan Level**: 7 (Target)
 - **Coverage Target**: 95%
 
@@ -50,12 +50,12 @@ gantt
     title User Module KPI Progress
     dateFormat  YYYY-MM-DD
     section Core
-    Gestione Utenti    :a1, 2024-01-01, 2024-04-01
-    Autenticazione     :a2, 2024-01-15, 2024-04-01
-    Autorizzazione     :a3, 2024-02-01, 2024-04-01
+    Gestione Utenti    :a1, [DATE], [DATE]
+    Autenticazione     :a2, [DATE], [DATE]
+    Autorizzazione     :a3, [DATE], [DATE]
     section High Priority
-    Security Enhancements :b1, 2024-03-01, 2024-06-30
-    PHPStan Compliance    :b2, 2024-03-15, 2024-06-30
+    Security Enhancements :b1, [DATE], [DATE]
+    PHPStan Compliance    :b2, [DATE], [DATE]
 ```
 
 ## Risk Assessment
@@ -74,7 +74,7 @@ gantt
 
 ## Overview
 - **Completamento Modulo**: 85%
-- **Ultimo Aggiornamento**: 2024-04-01
+- **Ultimo Aggiornamento**: [DATE]
 - **PHPStan Level**: 7 (Target)
 - **Coverage Target**: 95%
 
@@ -122,12 +122,12 @@ gantt
     title User Module KPI Progress
     dateFormat  YYYY-MM-DD
     section Core
-    Gestione Utenti    :a1, 2024-01-01, 2024-04-01
-    Autenticazione     :a2, 2024-01-15, 2024-04-01
-    Autorizzazione     :a3, 2024-02-01, 2024-04-01
+    Gestione Utenti    :a1, [DATE], [DATE]
+    Autenticazione     :a2, [DATE], [DATE]
+    Autorizzazione     :a3, [DATE], [DATE]
     section High Priority
-    Security Enhancements :b1, 2024-03-01, 2024-06-30
-    PHPStan Compliance    :b2, 2024-03-15, 2024-06-30
+    Security Enhancements :b1, [DATE], [DATE]
+    PHPStan Compliance    :b2, [DATE], [DATE]
 ```
 
 ## Risk Assessment

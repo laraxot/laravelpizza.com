@@ -2,44 +2,77 @@
 
 declare(strict_types=1);
 
-return [
-    'navigation' => [
-        'label' => 'Token de Acceso OAuth',
-        'group' => '',
-        'icon' => 'heroicon-o-key',
-        'sort' => 33,
-    ],
+return array (
+  'navigation' => 
+  array (
     'label' => 'Token de Acceso OAuth',
-    'plural_label' => 'Tokens de Acceso OAuth',
-    'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'user_id' => [
-            'label' => 'Usuario',
-        ],
-        'client_id' => [
-            'label' => 'Cliente',
-        ],
-        'name' => [
-            'label' => 'Nombre',
-        ],
-        'scopes' => [
-            'label' => 'Ámbitos',
-        ],
-        'revoked' => [
-            'label' => 'Revocado',
-        ],
-        'expires_at' => [
-            'label' => 'Expira En',
-        ],
-    ],
-    'actions' => [
-        'revoke' => [
-            'label' => 'Revocar',
-        ],
-        'refresh' => [
-            'label' => 'Actualizar',
-        ],
-    ],
-];
+    'group' => '',
+    'icon' => 'heroicon-o-key',
+    'sort' => 33,
+  ),
+  'label' => 'Token de Acceso OAuth',
+  'plural_label' => 'Tokens de Acceso OAuth',
+  'fields' => 
+  array (
+    'id' => 
+    array (
+      'label' => 'ID',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'user_id' => 
+    array (
+      'label' => 'Usuario',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'client_id' => 
+    array (
+      'label' => 'Cliente',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'name' => 
+    array (
+      'label' => 'Nombre',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'scopes' => 
+    array (
+      'label' => 'Ámbitos',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'revoked' => 
+    array (
+      'label' => 'Revocado',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'expires_at' => 
+    array (
+      'label' => 'Expira En',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'revoke' => 
+    array (
+      'label' => 'Revocar',
+    ),
+    'refresh' => 
+    array (
+      'label' => 'Actualizar',
+    ),
+  ),
+);

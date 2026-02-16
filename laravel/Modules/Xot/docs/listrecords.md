@@ -46,7 +46,7 @@
 > Questa policy è stata aggiornata e propagata anche in [<nome progetto>/docs/resources/studio-resource.md](../../<nome progetto>/docs/resources/studio-resource.md) e [<nome progetto>/docs/README.md](../../<nome progetto>/docs/README.md). Vedi esempi di implementazione e note di propagazione.
 # List Records in Filament
 
-> **AGGIORNAMENTO 2025-05-28:**
+> **AGGIORNAMENTO [DATE]:**
 > Questa policy è stata aggiornata e propagata anche in [<nome progetto>/docs/resources/studio-resource.md](../../<nome progetto>/docs/resources/studio-resource.md) e [<nome progetto>/docs/README.md](../../<nome progetto>/docs/README.md). Vedi esempi di implementazione e note di propagazione.
 > Questa policy è stata aggiornata e propagata anche in [<nome progetto>/project_docs/resources/studio-resource.md](../../<nome progetto>/project_docs/resources/studio-resource.md) e [<nome progetto>/project_docs/README.md](../../<nome progetto>/project_docs/README.md). Vedi esempi di implementazione e note di propagazione.
 > Questa policy è stata aggiornata e propagata anche in [<nome progetto>/project_docs/resources/studio-resource.md](../../<nome progetto>/project_docs/resources/studio-resource.md) e [<nome progetto>/project_docs/README.md](../../<nome progetto>/project_docs/README.md). Vedi esempi di implementazione e note di propagazione.
@@ -57,8 +57,8 @@
 # List Records in Filament
 # List Records in Filament
 
-> **AGGIORNAMENTO 2025-05-28:**
-> **AGGIORNAMENTO 2025-05-28:**
+> **AGGIORNAMENTO [DATE]:**
+> **AGGIORNAMENTO [DATE]:**
 > Questa policy è stata aggiornata e propagata anche in [<nome progetto>/docs/resources/studio-resource.md](../../<nome progetto>/docs/resources/studio-resource.md) e [<nome progetto>/docs/README.md](../../<nome progetto>/docs/README.md). Vedi esempi di implementazione e note di propagazione.
 > Questa policy è stata aggiornata e propagata anche in [<nome progetto>/project_docs/resources/studio-resource.md](../../<nome progetto>/project_docs/resources/studio-resource.md) e [<nome progetto>/project_docs/README.md](../../<nome progetto>/project_docs/README.md). Vedi esempi di implementazione e note di propagazione.
 > Questa policy è stata aggiornata e propagata anche in [<nome progetto>/project_docs/resources/studio-resource.md](../../<nome progetto>/project_docs/resources/studio-resource.md) e [<nome progetto>/project_docs/README.md](../../<nome progetto>/project_docs/README.md). Vedi esempi di implementazione e note di propagazione.
@@ -204,7 +204,7 @@ Quando si estende `XotBaseListRecords`, è necessario implementare i seguenti me
 
 3. Mantenere la coerenza in tutto il progetto usando sempre XotBaseListRecords
 
-> **AVVISO IMPORTANTE (2025-05-13):**
+> **AVVISO IMPORTANTE ([DATE]):**
 > Il metodo standard per la definizione delle colonne della tabella è ora `getTableColumns`. Il vecchio `getListTableColumns` è deprecato: aggiorna tutte le implementazioni e la documentazione. Questa scelta garantisce allineamento con Filament e coerenza tra tutti i moduli Laraxot.
 
 ## Esempio di Refactoring
@@ -229,7 +229,7 @@ public function getTableColumns(): array
 }
 ```
 
-## PROPAGAZIONE (2025-05-28):
+## PROPAGAZIONE ([DATE]):
 La pagina ListStudios del modulo  implementa ora correttamente il metodo getTableColumns() secondo questa policy, con array associativo e chiavi stringa. Vedi esempio e dettagli in [<nome modulo>/docs/resources/studio-resource.md](../../<nome modulo>/docs/resources/studio-resource.md).
 La pagina ListStudios del modulo <nome progetto> implementa ora correttamente il metodo getTableColumns() secondo questa policy, con array associativo e chiavi stringa. Vedi esempio e dettagli in [<nome progetto>/docs/resources/studio-resource.md](../../<nome progetto>/docs/resources/studio-resource.md).
 La pagina ListStudios del modulo <nome progetto> implementa ora correttamente il metodo getTableColumns() secondo questa policy, con array associativo e chiavi stringa. Vedi esempio e dettagli in [<nome progetto>/docs/resources/studio-resource.md](../../<nome progetto>/docs/resources/studio-resource.md).

@@ -175,4 +175,4 @@ done
 ---
 
 **Mantenuto da**: Claude Sonnet 4.5
-**Ultimo aggiornamento**: 2025-12-12
+**Ultimo aggiornamento**: [DATE]

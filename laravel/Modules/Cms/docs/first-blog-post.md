@@ -3,7 +3,7 @@ extends: _layouts.post
 section: postContent
 title: My First Post
 author: Keith Damiani
-date: 2017-04-12
+date: [DATE]
 description: This will be your meta description, make sure it isn't too long
 categories: [writting]
 lang: it

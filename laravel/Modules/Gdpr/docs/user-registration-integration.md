@@ -327,13 +327,13 @@ INSERT INTO consents (
     '550e8400-e29b-41d4-a716-446655440000',
     'Modules\User\Models\User',
     'privacy_policy',
-    '{"registration_source":"register_widget","ip_address":"192.168.1.1","user_agent":"Mozilla/5.0...","registered_at":"2026-02-09T10:30:00.000000Z"}',
+    '{"registration_source":"register_widget","ip_address":"192.168.1.1","user_agent":"Mozilla/5.0...","registered_at":"[DATE]T10:30:00.000000Z"}',
     '192.168.1.1',
     'Mozilla/5.0...',
-    '2026-02-09 10:30:00',
+    '[DATE] 10:30:00',
     NULL,
-    '2026-02-09 10:30:00',
-    '2026-02-09 10:30:00'
+    '[DATE] 10:30:00',
+    '[DATE] 10:30:00'
 );
 ```
 
@@ -399,9 +399,9 @@ ORDER BY created_at;
 
 -- Output atteso:
 -- id | user_id | user_type | type | accepted_at | revoked_at
--- ... | ... | ... | privacy_policy | 2026-02-09 10:30:00 | NULL
--- ... | ... | ... | terms_and_conditions | 2026-02-09 10:30:00 | NULL
--- ... | ... | ... | personalization | 2026-02-09 10:30:00 | NULL
+-- ... | ... | ... | privacy_policy | [DATE] 10:30:00 | NULL
+-- ... | ... | ... | terms_and_conditions | [DATE] 10:30:00 | NULL
+-- ... | ... | ... | personalization | [DATE] 10:30:00 | NULL
 ```
 
 ### 3. Verifica nel Codice
@@ -432,7 +432,7 @@ foreach ($consents as $consent) {
 tail -f storage/logs/laravel.log | grep "GDPR consents saved"
 
 # Output atteso:
-# [2026-02-09 10:30:00] local.INFO: GDPR consents saved for user {"user_id":"550e8400-e29b-41d4-a716-446655440000","consents":["privacy_policy_accepted","terms_accepted","data_processing_accepted"]}
+# [[DATE] 10:30:00] local.INFO: GDPR consents saved for user {"user_id":"550e8400-e29b-41d4-a716-446655440000","consents":["privacy_policy_accepted","terms_accepted","data_processing_accepted"]}
 ```
 
 ## Vantaggi dell'Integrazione

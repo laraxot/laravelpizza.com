@@ -144,4 +144,4 @@ $percentage = SafeFloatCastAction::castAsPercentage($mixedValue);
 - [Azioni Cast Xot](../../laravel/Modules/Xot/app/Actions/Cast/)
 
 ---
-Ultimo aggiornamento: 2025-01-06
+Ultimo aggiornamento: [DATE]

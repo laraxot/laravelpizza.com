@@ -303,7 +303,7 @@ test('accessor salva se model ha PK', function () {
 
 ---
 
-**Creato**: 2025-01-29
+**Creato**: [DATE]
 **Tipo**: Regola Architettutale Globale
 **Applicazione**: Tutti i moduli
 **Severità**: 🔴 CRITICA

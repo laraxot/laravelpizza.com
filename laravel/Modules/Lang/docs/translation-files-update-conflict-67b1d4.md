@@ -1,7 +1,7 @@
 # Aggiornamento File di Traduzione - Gennaio 2025
 
 ## Data Aggiornamento
-2025-01-27
+[DATE]
 
 ## File Modificati
 

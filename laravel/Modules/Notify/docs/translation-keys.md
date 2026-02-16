@@ -1,6 +1,6 @@
 ---
 
-## [2024-07-07] Aggiornamento regole e best practice traduzioni modulo Notify
+## [[DATE]] Aggiornamento regole e best practice traduzioni modulo Notify
 
 ### Errori riscontrati
 - Chiavi di traduzione non strutturate gerarchicamente

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
+use Exception;
 use Filament\Models\Contracts\HasName;
 use Filament\Models\Contracts\HasTenants;
 use Filament\Panel;
@@ -39,6 +40,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 use Parental\HasChildren;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Throwable;
 
 /**
  * Base User Model.
@@ -218,7 +220,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         try {
             $this->fillable = array_values(array_merge(parent::getFillable(), $this->getFillable()));
             parent::__construct($attributes);
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             // Fallback in case database connection is not available (e.g., during testing)
             $this->fillable = array_values($this->getFillable());
             // Avoid calling parent constructor if database is not available
@@ -371,7 +373,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     {
         $socialiteUser = $this->socialiteUsers()->firstWhere(['provider' => $provider]);
         if ($socialiteUser === null) {
-            throw new \Exception('SocialiteUser not found');
+            throw new Exception('SocialiteUser not found');
         }
 
         $res = $socialiteUser->{$field};

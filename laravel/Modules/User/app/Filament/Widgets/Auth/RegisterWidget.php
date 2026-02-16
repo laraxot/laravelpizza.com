@@ -16,6 +16,7 @@ use Illuminate\Validation\ValidationException;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use RuntimeException;
 
 class RegisterWidget extends XotBaseWidget
 {
@@ -197,6 +198,6 @@ class RegisterWidget extends XotBaseWidget
             'user_agent' => request()->userAgent(),
         ]);
 
-        throw new \RuntimeException(__('user::auth.registration.error_occurred'));
+        throw new RuntimeException(__('user::auth.registration.error_occurred'));
     }
 }

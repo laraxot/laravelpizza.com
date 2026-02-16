@@ -42,9 +42,9 @@ README.md
 
 **Prima**:
 ```
-phpstan-fixes-2025-01-06.md
-lessons-learned-2025-08-25.md
-git-conflicts-resolution-2025-01-06.md
+phpstan-fixes-[DATE].md
+lessons-learned-[DATE].md
+git-conflicts-resolution-[DATE].md
 ```
 
 **Dopo**:

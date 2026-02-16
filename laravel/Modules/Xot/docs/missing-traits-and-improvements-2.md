@@ -618,7 +618,7 @@ class AlertWidget extends BaseTableWidget
 
 ---
 
-**Data Creazione**: 2025-01-06
+**Data Creazione**: [DATE]
 **Priorità**: CRITICA
 **Effort Stimato**: 20-30 ore
 **Benefici**: ALTI

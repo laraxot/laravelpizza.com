@@ -1,4 +1,4 @@
-# Cms Module Cleanup - 2025-12-18
+# Cms Module Cleanup - [DATE]
 
 ## Removed Files
 The following files were identified as broken standalone scripts (incorrect paths to autoload.php) and were moved/archived to cleaner locations outside the source tree or into bashscripts:

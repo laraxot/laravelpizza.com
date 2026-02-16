@@ -18,6 +18,10 @@ class RedirectToLoginAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly Assert $assert,
+    ) {}
+
     /**
      * Execute the action.
      */
@@ -25,8 +29,8 @@ class RedirectToLoginAction
     {
         // Assert::string($route_name = config('filament-socialite.login_page_route', 'filament.admin.auth.login'));
         // Route [filament.auth.login] not defined.
-        $route_name = 'login';
-        Assert::string($message = __('user::'.$message));
+        $routeName = 'login';
+        $this->assert->string($message = __('user::'.$message));
         Notification::make()
             ->title($message)
             ->danger()
@@ -35,7 +39,7 @@ class RedirectToLoginAction
 
         // Redirect back to the login route with an error message attached
         return redirect()
-            ->route($route_name)
+            ->route($routeName)
             ->withErrors([
                 'email' => [
                     __($message),

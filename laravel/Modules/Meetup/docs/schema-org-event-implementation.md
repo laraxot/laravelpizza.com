@@ -141,8 +141,8 @@ Defines repeat patterns for events using `eventSchedule`:
   "@type": "Event",
   "name": "Laravel Meetup Milano",
   "description": "Monthly gathering for Laravel developers",
-  "startDate": "2026-02-15T19:00:00+01:00",
-  "endDate": "2026-02-15T21:00:00+01:00",
+  "startDate": "[DATE]T19:00:00+01:00",
+  "endDate": "[DATE]T21:00:00+01:00",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {
@@ -180,8 +180,8 @@ Defines repeat patterns for events using `eventSchedule`:
   "description": "Weekly Laravel developer gatherings",
   "eventSchedule": {
     "@type": "Schedule",
-    "startDate": "2026-01-01",
-    "endDate": "2026-12-31",
+    "startDate": "[DATE]",
+    "endDate": "[DATE]",
     "repeatFrequency": "P1W",
     "byDay": "https://schema.org/Thursday",
     "startTime": "19:00:00",
@@ -358,8 +358,8 @@ CREATE TABLE event_schedules (
 ## Best Practices and Guidelines
 
 ### 1. Always Use Valid ISO 8601 Formats
-- Dates: `2026-02-15`
-- DateTimes: `2026-02-15T19:00:00+01:00`
+- Dates: `[DATE]`
+- DateTimes: `[DATE]T19:00:00+01:00`
 - Durations: `PT2H` (2 hours), `P1W` (1 week)
 
 ### 2. Use Proper Schema.org URLs

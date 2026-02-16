@@ -1,0 +1,78 @@
+name: Quality Checks
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - '**.php'
+      - 'phpstan.neon'
+      - 'pint.json'
+      - 'composer.json'
+      - '.github/workflows/quality.yml'
+  pull_request:
+    paths:
+      - '**.php'
+      - 'phpstan.neon'
+      - 'pint.json'
+      - 'composer.json'
+
+jobs:
+  phpstan:
+    name: PHPStan Level 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@latest
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Install composer dependencies
+        uses: ramsey/composer-install@latest
+        working-directory: laravel
+
+      - name: Run PHPStan
+        working-directory: laravel
+        run: ./vendor/bin/phpstan analyse --error-format=github
+
+  pint:
+    name: Laravel Pint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@latest
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Install composer dependencies
+        uses: ramsey/composer-install@latest
+        working-directory: laravel
+
+      - name: Run Pint
+        working-directory: laravel
+        run: ./vendor/bin/pint --test
+
+  phpinsights:
+    name: PHP Insights
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@latest
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Install composer dependencies
+        uses: ramsey/composer-install@latest
+        working-directory: laravel
+
+      - name: Run PHP Insights
+        working-directory: laravel
+        run: ./vendor/bin/phpinsights analyse --no-interaction --format=github

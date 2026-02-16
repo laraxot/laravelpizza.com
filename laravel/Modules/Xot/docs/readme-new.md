@@ -1,6 +1,6 @@
 # Xot Module - Core Foundation
 
-**Last Update**: 2025-12-05
+**Last Update**: [DATE]
 **Status**: ✅ Production Ready
 **PHPStan Level**: 10
 **Maintainers**: Laraxot Team
@@ -651,7 +651,7 @@ Located in `bashscripts/`:
 
 ## 🔄 Recent Updates
 
-### v3.0.0 - 2025-12-05
+### v3.0.0 - [DATE]
 - **Added**: Laravel 12 support
 - **Added**: Filament 4 support
 - **Added**: PHP 8.3 support
@@ -659,7 +659,7 @@ Located in `bashscripts/`:
 - **Changed**: Improved XotData caching mechanism
 - **Fixed**: Git merge conflict resolution improvements
 
-### v2.9.0 - 2025-11-18
+### v2.9.0 - [DATE]
 - **Added**: New XotBaseChartWidget
 - **Fixed**: HasXotTable duplicate if statements
 - **Fixed**: Mass syntax errors across modules

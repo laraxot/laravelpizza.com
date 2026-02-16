@@ -1,4 +1,4 @@
-# Quality Tools Final Report - 2025-01-22
+# Quality Tools Final Report - [DATE]
 
 ## Obiettivo
 Completare la correzione di tutti gli errori PHPStan, PHPMD e PHP Insights nel modulo User, seguendo rigorosamente le regole Laraxot e la filosofia DRY + KISS.
@@ -127,9 +127,9 @@ $user_class = XotData::make()->getUserClass();
 
 1. ✅ `xotbase-resource-getpages-automatic.md`: Filosofia DRY per `getPages()` automatico
 2. ✅ `resources-array-keys-philosophy.md`: Filosofia per chiavi stringhe sempre
-3. ✅ `resources-corrections-summary-2025-01-22.md`: Riepilogo correzioni Resources
-4. ✅ `phpmd-phpinsights-corrections-2025-01-22.md`: Riepilogo correzioni PHPMD e PHP Insights
-5. ✅ `quality-tools-final-report-2025-01-22.md`: Questo documento
+3. ✅ `resources-corrections-summary-[DATE].md`: Riepilogo correzioni Resources
+4. ✅ `phpmd-phpinsights-corrections-[DATE].md`: Riepilogo correzioni PHPMD e PHP Insights
+5. ✅ `quality-tools-final-report-[DATE].md`: Questo documento
 
 ## Lezioni Apprese
 
@@ -153,8 +153,8 @@ $user_class = XotData::make()->getUserClass();
 
 - [XotBaseResource getPages() Automatic](./xotbase-resource-getpages-automatic.md)
 - [Resources Array Keys Philosophy](./resources-array-keys-philosophy.md)
-- [Resources Corrections Summary](./resources-corrections-summary-2025-01-22.md)
-- [PHPMD PHP Insights Corrections](./phpmd-phpinsights-corrections-2025-01-22.md)
+- [Resources Corrections Summary](./resources-corrections-summary-[DATE].md)
+- [PHPMD PHP Insights Corrections](./phpmd-phpinsights-corrections-[DATE].md)
 - [Quality Tools Report](./quality-tools-report.md)
 - [PHPStan Complete Success](./phpstan-complete-success.md)
 

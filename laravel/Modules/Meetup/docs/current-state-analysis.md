@@ -1,6 +1,6 @@
 # Analisi Stato Attuale del Progetto
 
-## Data: 2025-11-29
+## Data: [DATE]
 
 ## Problemi Rilevati
 

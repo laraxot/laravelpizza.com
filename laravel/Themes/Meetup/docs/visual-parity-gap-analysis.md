@@ -11,13 +11,13 @@
 Screenshots salvati in: `/var/www/_bases/base_laravelpizza/laravel/Themes/Meetup/docs/screenshots/`
 
 ### Local (127.0.0.1:8002/it)
-- `screenshot_127_0_0_1_2026-01-08T21-06-05-138Z_frame1.png`
-- `screenshot_127_0_0_1_2026-01-08T21-06-05-139Z_frame2.png`
-- `screenshot_127_0_0_1_2026-01-08T21-06-05-141Z_frame3.png`
+- `screenshot_127_0_0_1_[DATE]T21-06-05-138Z_frame1.png`
+- `screenshot_127_0_0_1_[DATE]T21-06-05-139Z_frame2.png`
+- `screenshot_127_0_0_1_[DATE]T21-06-05-141Z_frame3.png`
 
 ### Production (laravelpizza.com)
-- `screenshot_laravelpizza_com_2026-01-08T21-06-05-094Z_frame1.png`
-- `screenshot_laravelpizza_com_2026-01-08T21-06-05-096Z_frame2.png`
+- `screenshot_laravelpizza_com_[DATE]T21-06-05-094Z_frame1.png`
+- `screenshot_laravelpizza_com_[DATE]T21-06-05-096Z_frame2.png`
 
 ---
 

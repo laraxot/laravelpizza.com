@@ -6,10 +6,15 @@ namespace Modules\User\Actions\User;
 
 use Modules\User\Models\User;
 use Spatie\QueueableAction\QueueableAction;
+use Illuminate\Contracts\Hashing\Hasher;
 
 class CreateUserAction
 {
     use QueueableAction;
+
+    public function __construct(
+        private readonly User $userModel,
+    ) {}
 
     /**
      * Create a new user.
@@ -18,6 +23,6 @@ class CreateUserAction
      */
     public function execute(array $data): User
     {
-        return User::create($data);
+        return $this->userModel->create($data);
     }
 }

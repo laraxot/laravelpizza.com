@@ -1,7 +1,7 @@
 # events page differences analysis - tema meetup
 
 ## data
-2025-11-30
+[DATE]
 
 ## obiettivo
 allineare la resa visuale di `/it/events` al design di `https://laravelpizza.com/events`, partendo dalla versione statica:

@@ -18,6 +18,10 @@ class CreateClientAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly Str $stringHelper,
+    ) {}
+
     /**
      * Crea un nuovo client OAuth2.
      *
@@ -29,12 +33,36 @@ class CreateClientAction
      * @param  string|null  $provider  Provider di autenticazione (default: 'users')
      * @return OauthClient Il client creato
      */
-    public function execute(
+    public function createPersonalAccessClient(string $name, string $redirect, ?UserContract $user = null): OauthClient
+    {
+        return $this->execute($name, $redirect, true, false, $user, null);
+    }
+
+    /**
+     * Crea un nuovo client OAuth2 di tipo "password client".
+     */
+    public function createPasswordClient(string $name, string $redirect, ?string $provider = null): OauthClient
+    {
+        return $this->execute($name, $redirect, false, true, null, $provider);
+    }
+
+    /**
+     * Crea un nuovo client OAuth2.
+     *
+     * @param  string  $name  Nome del client
+     * @param  string  $redirect  URL di redirect dopo autenticazione
+     * @param  bool  $personalAccess  Indica se è un personal access client
+     * @param  bool  $password  Indica se è un password client
+     * @param  UserContract|null  $user  Utente proprietario del client (opzionale)
+     * @param  string|null  $provider  Provider di autenticazione (default: 'users')
+     * @return OauthClient Il client creato
+     */
+    private function execute(
         string $name,
         string $redirect,
+        bool $personalAccess,
+        bool $password,
         ?UserContract $user = null,
-        bool $personalAccess = false,
-        bool $password = false,
         ?string $provider = null,
     ): OauthClient {
         $client = new OauthClient;
@@ -50,8 +78,8 @@ class CreateClientAction
         }
 
         // Genera ID e secret se non forniti
-        $client->id = (string) Str::uuid();
-        $client->secret = Str::random(40);
+        $client->id = (string) $this->stringHelper->uuid();
+        $client->secret = $this->stringHelper->random(40);
 
         $client->save();
 

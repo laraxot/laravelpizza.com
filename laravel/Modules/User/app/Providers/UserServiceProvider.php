@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rules\Password;
+use InvalidArgumentException;
 use Modules\Notify\Emails\SpatieEmail;
 use Modules\User\Datas\PasswordData;
 use Modules\Xot\Contracts\UserContract;
@@ -75,13 +76,17 @@ class UserServiceProvider extends XotBaseServiceProvider
             // ✅ FIX CRITICO: Imposta il destinatario dell'email con metodo Laravel standard
             if (method_exists($notifiable, 'getEmailForPasswordReset')) {
                 $emailAddress = $notifiable->getEmailForPasswordReset();
-                if (is_string($emailAddress) || is_array($emailAddress) || is_object($emailAddress)) {
+                if (is_string($emailAddress)) {
                     $email->to($emailAddress);
+                } else {
+                    throw new InvalidArgumentException('Email address must be a string.');
                 }
             } elseif (isset($notifiable->email)) {
                 $emailAddress = $notifiable->email;
-                if (is_string($emailAddress) || is_array($emailAddress) || is_object($emailAddress)) {
+                if (is_string($emailAddress)) {
                     $email->to($emailAddress);
+                } else {
+                    throw new InvalidArgumentException('Email address must be a string.');
                 }
             } else {
                 // Fallback per debug
@@ -115,13 +120,17 @@ class UserServiceProvider extends XotBaseServiceProvider
             ]);
             if (method_exists($notifiable, 'getEmailForPasswordReset')) {
                 $emailAddress = $notifiable->getEmailForPasswordReset();
-                if (is_string($emailAddress) || is_array($emailAddress) || is_object($emailAddress)) {
+                if (is_string($emailAddress)) {
                     $email->to($emailAddress);
+                } else {
+                    throw new InvalidArgumentException('Email address must be a string.');
                 }
             } elseif (isset($notifiable->email)) {
                 $emailAddress = $notifiable->email;
-                if (is_string($emailAddress) || is_array($emailAddress) || is_object($emailAddress)) {
+                if (is_string($emailAddress)) {
                     $email->to($emailAddress);
+                } else {
+                    throw new InvalidArgumentException('Email address must be a string.');
                 }
             }
 

@@ -1,6 +1,6 @@
 # Analisi Design LaravelPizza.com
 
-## Data Analisi: 2025-01-27
+## Data Analisi: [DATE]
 
 ## 🎯 Scopo
 Analizzare il design di laravelpizza.com (sito community meetup) per adattarlo al nostro sistema di ordinazione pizze.

@@ -15,12 +15,16 @@ class IsRegistrationEnabledAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly Assert $assert,
+    ) {}
+
     /**
      * Execute the action.
      */
     public function execute(): bool
     {
-        Assert::boolean($res = config('filament-socialite.registration'));
+        $this->assert->boolean($res = config('filament-socialite.registration'));
 
         return $res;
     }

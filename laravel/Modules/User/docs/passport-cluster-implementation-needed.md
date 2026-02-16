@@ -193,6 +193,6 @@ class ListOauthClients extends XotBaseListRecords
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: 🔴 DA IMPLEMENTARE

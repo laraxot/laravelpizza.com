@@ -1,4 +1,4 @@
-# Task: Schema.org Research and Implementation - 2026-02-10
+# Task: Schema.org Research and Implementation - [DATE]
 
 **Module**: Meetup  
 **Status**: Pending  

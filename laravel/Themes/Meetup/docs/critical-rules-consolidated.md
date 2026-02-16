@@ -2,7 +2,7 @@
 
 ## Data
 
-2025-11-30
+[DATE]
 
 ## ⚠️ REGOLE CRITICHE OBBLIGATORIE
 
@@ -276,7 +276,7 @@ Nel nostro progetto, queste inclusioni devono passare dal pattern del tema:
 
 ## Aggiornamenti Recenti
 
-- **2025-11-30**: Aggiunta regola Frontend Asset Management
-- **2025-11-30**: Aggiunta regola Componenti Blade Anonimi
-- **2025-11-30**: Consolidata Vite Configuration
-- **2025-11-30**: Consolidata Metatags Component
+- **[DATE]**: Aggiunta regola Frontend Asset Management
+- **[DATE]**: Aggiunta regola Componenti Blade Anonimi
+- **[DATE]**: Consolidata Vite Configuration
+- **[DATE]**: Consolidata Metatags Component

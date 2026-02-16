@@ -1,6 +1,6 @@
 # Resources Array Keys Philosophy: String Keys Always
 
-## Data: 2025-01-22
+## Data: [DATE]
 
 ## Il Dibattito Feroce
 

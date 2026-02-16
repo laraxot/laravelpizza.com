@@ -15,6 +15,10 @@ class ValidateProviderAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly ProviderNotConfigured $providerNotConfiguredException,
+    ) {}
+
     /**
      * Execute the action.
      */
@@ -22,7 +26,7 @@ class ValidateProviderAction
     {
         $res = config()->has('services.'.$provider);
         if (! $res) {
-            throw ProviderNotConfigured::make($provider);
+            throw $this->providerNotConfiguredException->make($provider);
         }
     }
 }

@@ -504,4 +504,4 @@ Themes/Meetup/docs/
 - Documentazione Admin (Filament) assente - critica per gestione sistema
 
 **Maintainer:** Claude Code
-**Last Update:** 2025-11-27
+**Last Update:** [DATE]

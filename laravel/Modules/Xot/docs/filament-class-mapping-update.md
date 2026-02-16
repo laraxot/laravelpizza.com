@@ -1,4 +1,4 @@
-# Aggiornamento Mapping Classi Filament - 2025-12-23
+# Aggiornamento Mapping Classi Filament - [DATE]
 
 **Obiettivo**: Verificare e correggere mapping classi nel file `filament_class.txt`
 

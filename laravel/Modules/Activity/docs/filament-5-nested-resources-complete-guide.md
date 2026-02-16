@@ -487,6 +487,6 @@ class NestedResourceGenerator
 
 ---
 
-**Ultimo Aggiornamento:** 2024-01-27  
+**Ultimo Aggiornamento:** [DATE]  
 **Versione Filament:** 5.x  
 **Stato:** 📚 Completamente Analizzato e Documentato

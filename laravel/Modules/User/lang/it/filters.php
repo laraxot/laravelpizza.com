@@ -2,234 +2,266 @@
 
 declare(strict_types=1);
 
-return [
-    'navigation' => [
-        'label' => 'Filtro',
-        'plural_label' => 'Filtri',
-        'group' => 'User',
-        'icon' => 'heroicon-o-filter',
-        'sort' => 20,
-    ],
+return array (
+  'navigation' => 
+  array (
     'label' => 'Filtro',
     'plural_label' => 'Filtri',
-    'fields' => [
-        'name' => [
-            'label' => 'Nome',
-            'tooltip' => 'Nome identificativo del filtro',
-            'placeholder' => 'Inserisci il nome del filtro',
-            'helper_text' => 'Nome identificativo del filtro',
-            'description' => 'Nome univoco per identificare il filtro',
-        ],
-        'type' => [
-            'label' => 'Tipo',
-            'tooltip' => 'Tipo di filtro da applicare',
-            'placeholder' => 'Seleziona il tipo di filtro',
-            'helper_text' => 'Tipo di filtro da applicare',
-            'description' => 'Tipologia di filtro (testo, numero, data, ecc.)',
-        ],
-        'field' => [
-            'label' => 'Campo',
-            'tooltip' => 'Campo del database da filtrare',
-            'placeholder' => 'Seleziona il campo da filtrare',
-            'helper_text' => 'Campo del database da filtrare',
-            'description' => 'Nome del campo su cui applicare il filtro',
-        ],
-        'operator' => [
-            'label' => 'Operatore',
-            'tooltip' => 'Operatore di confronto per il filtro',
-            'placeholder' => 'Seleziona l\'operatore',
-            'helper_text' => 'Operatore di confronto per il filtro',
-            'description' => 'Operatore logico per il confronto',
-        ],
-        'value' => [
-            'label' => 'Valore',
-            'tooltip' => 'Valore per il confronto del filtro',
-            'placeholder' => 'Inserisci il valore del filtro',
-            'helper_text' => 'Valore per il confronto del filtro',
-            'description' => 'Valore da confrontare con il campo',
-        ],
-        'is_active' => [
-            'label' => 'Attivo',
-            'tooltip' => 'Indica se il filtro è attivo',
-            'helper_text' => 'Indica se il filtro è attivo',
-            'description' => 'Stato di attivazione del filtro',
-        ],
-        'priority' => [
-            'label' => 'Priorità',
-            'tooltip' => 'Priorità di applicazione del filtro',
-            'placeholder' => 'Inserisci la priorità del filtro',
-            'helper_text' => 'Priorità di applicazione del filtro',
-            'description' => 'Ordine di priorità nell\'applicazione',
-        ],
-        'description' => [
-            'label' => 'Descrizione',
-            'tooltip' => 'Descrizione del filtro',
-            'placeholder' => 'Inserisci una descrizione',
-            'helper_text' => 'Descrizione del filtro',
-            'description' => 'Testo descrittivo del filtro',
-        ],
-    ],
-    'actions' => [
-        'reset' => [
-            'label' => 'Reimposta',
-            'tooltip' => 'Reimposta i filtri',
-            'helper_text' => 'Reimposta tutti i filtri ai valori predefiniti',
-            'description' => 'Azione per reimpostare i filtri',
-        ],
-        'apply' => [
-            'label' => 'Applica',
-            'tooltip' => 'Applica i filtri',
-            'helper_text' => 'Applica i filtri selezionati',
-            'description' => 'Azione per applicare i filtri',
-        ],
-        'clear' => [
-            'label' => 'Pulisci',
-            'tooltip' => 'Pulisci tutti i filtri',
-            'helper_text' => 'Rimuovi tutti i filtri attivi',
-            'description' => 'Azione per pulire i filtri',
-        ],
-        'export' => [
-            'label' => 'Esporta',
-            'tooltip' => 'Esporta i dati filtrati',
-            'helper_text' => 'Esporta i dati filtrati in formato CSV/Excel',
-            'description' => 'Azione per esportare i dati',
-        ],
-        'import' => [
-            'label' => 'Importa',
-            'tooltip' => 'Importa filtri',
-            'helper_text' => 'Importa filtri da file esterno',
-            'description' => 'Azione per importare filtri',
-        ],
-        'create' => [
-            'label' => 'Crea Filtro',
-            'tooltip' => 'Crea un nuovo filtro',
-            'helper_text' => 'Crea un nuovo filtro personalizzato',
-            'description' => 'Azione per creare un filtro',
-        ],
-        'edit' => [
-            'label' => 'Modifica Filtro',
-            'tooltip' => 'Modifica il filtro selezionato',
-            'helper_text' => 'Modifica le impostazioni del filtro',
-            'description' => 'Azione per modificare un filtro',
-        ],
-        'delete' => [
-            'label' => 'Elimina Filtro',
-            'tooltip' => 'Elimina il filtro selezionato',
-            'helper_text' => 'Elimina definitivamente il filtro',
-            'description' => 'Azione per eliminare un filtro',
-        ],
-    ],
-    'validation' => [
-        'name_required' => 'Il nome è obbligatorio',
-        'name_min_length' => 'Il nome deve essere di almeno 3 caratteri',
-        'name_max_length' => 'Il nome non può superare 255 caratteri',
-        'type_required' => 'Il tipo è obbligatorio',
-        'type_invalid' => 'Il tipo non è valido',
-        'field_required' => 'Il campo è obbligatorio',
-        'field_invalid' => 'Il campo non è valido',
-        'operator_required' => 'L\'operatore è obbligatorio',
-        'operator_invalid' => 'L\'operatore non è valido',
-        'value_required' => 'Il valore è obbligatorio',
-        'value_invalid' => 'Il valore non è valido',
-        'priority_numeric' => 'La priorità deve essere numerica',
-        'priority_min' => 'La priorità deve essere almeno 1',
-        'priority_max' => 'La priorità non può superare 100',
-        'description_max_length' => 'La descrizione non può superare 1000 caratteri',
-    ],
-    'messages' => [
-        'filter_created' => 'Filtro creato con successo',
-        'filter_updated' => 'Filtro aggiornato con successo',
-        'filter_deleted' => 'Filtro eliminato con successo',
-        'filter_activated' => 'Filtro attivato con successo',
-        'filter_deactivated' => 'Filtro disattivato con successo',
-        'filter_applied' => 'Filtro applicato con successo',
-        'filter_removed' => 'Filtro rimosso con successo',
-        'filters_cleared' => 'Filtri svuotati con successo',
-        'filters_saved' => 'Filtri salvati con successo',
-        'filters_loaded' => 'Filtri caricati con successo',
-    ],
-    'errors' => [
-        'filter_creation_failed' => 'Impossibile creare il filtro',
-        'filter_update_failed' => 'Impossibile aggiornare il filtro',
-        'filter_deletion_failed' => 'Impossibile eliminare il filtro',
-        'filter_activation_failed' => 'Impossibile attivare il filtro',
-        'filter_deactivation_failed' => 'Impossibile disattivare il filtro',
-        'filter_application_failed' => 'Impossibile applicare il filtro',
-        'filter_removal_failed' => 'Impossibile rimuovere il filtro',
-        'filters_clear_failed' => 'Impossibile svuotare i filtri',
-        'filters_save_failed' => 'Impossibile salvare i filtri',
-        'filters_load_failed' => 'Impossibile caricare i filtri',
-        'field_not_found' => 'Campo non trovato',
-        'operator_not_supported' => 'Operatore non supportato',
-        'value_type_mismatch' => 'Tipo di valore non corrispondente',
-    ],
-    'filter_types' => [
-        'text' => 'Testo',
-        'number' => 'Numero',
-        'date' => 'Data',
-        'boolean' => 'Booleano',
-        'select' => 'Selezione',
-        'range' => 'Range',
-        'email' => 'Email',
-        'phone' => 'Telefono',
-    ],
-    'filter_operators' => [
-        'equals' => 'Uguale a',
-        'not_equals' => 'Diverso da',
-        'contains' => 'Contiene',
-        'not_contains' => 'Non contiene',
-        'starts_with' => 'Inizia con',
-        'ends_with' => 'Finisce con',
-        'greater_than' => 'Maggiore di',
-        'greater_than_or_equal' => 'Maggiore o uguale a',
-        'less_than' => 'Minore di',
-        'less_than_or_equal' => 'Minore o uguale a',
-        'between' => 'Tra',
-        'not_between' => 'Non tra',
-        'in' => 'In',
-        'not_in' => 'Non in',
-        'is_null' => 'È nullo',
-        'is_not_null' => 'Non è nullo',
-        'is_empty' => 'È vuoto',
-        'is_not_empty' => 'Non è vuoto',
-    ],
-    'filter_fields' => [
-        'name' => 'Nome',
-        'email' => 'Email',
-        'first_name' => 'Nome',
-        'last_name' => 'Cognome',
-        'description' => 'Descrizione',
-        'type' => 'Tipo',
-        'status' => 'Stato',
-        'created_at' => 'Data creazione',
-        'updated_at' => 'Data aggiornamento',
-        'last_login_at' => 'Ultimo accesso',
-        'is_active' => 'Attivo',
-    ],
-    'filters' => [
-        'status' => [
-            'label' => 'Stato',
-            'options' => [
-                'active' => 'Attivo',
-                'inactive' => 'Inattivo',
-                'pending' => 'In attesa',
-            ],
-        ],
-        'role' => [
-            'label' => 'Ruolo',
-            'options' => [
-                'admin' => 'Amministratore',
-                'user' => 'Utente',
-                'guest' => 'Ospite',
-            ],
-        ],
-        'date_range' => [
-            'label' => 'Periodo',
-            'placeholder' => 'Seleziona il periodo',
-        ],
-        'search' => [
-            'label' => 'Ricerca',
-            'placeholder' => 'Cerca...',
-        ],
-    ],
-];
+    'group' => 'User',
+    'icon' => 'heroicon-o-filter',
+    'sort' => 20,
+  ),
+  'label' => 'Filtro',
+  'plural_label' => 'Filtri',
+  'fields' => 
+  array (
+    'name' => 
+    array (
+      'label' => 'Nome',
+      'tooltip' => 'Nome identificativo del filtro',
+      'placeholder' => 'Inserisci il nome del filtro',
+      'helper_text' => 'Nome identificativo del filtro',
+      'description' => 'Nome univoco per identificare il filtro',
+    ),
+    'type' => 
+    array (
+      'label' => 'Tipo',
+      'tooltip' => 'Tipo di filtro da applicare',
+      'placeholder' => 'Seleziona il tipo di filtro',
+      'helper_text' => 'Tipo di filtro da applicare',
+      'description' => 'Tipologia di filtro (testo, numero, data, ecc.)',
+    ),
+    'field' => 
+    array (
+      'label' => 'Campo',
+      'tooltip' => 'Campo del database da filtrare',
+      'placeholder' => 'Seleziona il campo da filtrare',
+      'helper_text' => 'Campo del database da filtrare',
+      'description' => 'Nome del campo su cui applicare il filtro',
+    ),
+    'operator' => 
+    array (
+      'label' => 'Operatore',
+      'tooltip' => 'Operatore di confronto per il filtro',
+      'placeholder' => 'Seleziona l\'operatore',
+      'helper_text' => 'Operatore di confronto per il filtro',
+      'description' => 'Operatore logico per il confronto',
+    ),
+    'value' => 
+    array (
+      'label' => 'Valore',
+      'tooltip' => 'Valore per il confronto del filtro',
+      'placeholder' => 'Inserisci il valore del filtro',
+      'helper_text' => 'Valore per il confronto del filtro',
+      'description' => 'Valore da confrontare con il campo',
+    ),
+    'is_active' => 
+    array (
+      'label' => 'Attivo',
+      'tooltip' => 'Indica se il filtro è attivo',
+      'helper_text' => 'Indica se il filtro è attivo',
+      'description' => 'Stato di attivazione del filtro',
+    ),
+    'priority' => 
+    array (
+      'label' => 'Priorità',
+      'tooltip' => 'Priorità di applicazione del filtro',
+      'placeholder' => 'Inserisci la priorità del filtro',
+      'helper_text' => 'Priorità di applicazione del filtro',
+      'description' => 'Ordine di priorità nell\'applicazione',
+    ),
+    'description' => 
+    array (
+      'label' => 'Descrizione',
+      'tooltip' => 'Descrizione del filtro',
+      'placeholder' => 'Inserisci una descrizione',
+      'helper_text' => 'Descrizione del filtro',
+      'description' => 'Testo descrittivo del filtro',
+    ),
+  ),
+  'actions' => 
+  array (
+    'reset' => 
+    array (
+      'label' => 'Reimposta',
+      'tooltip' => 'Reimposta i filtri',
+      'helper_text' => 'Reimposta tutti i filtri ai valori predefiniti',
+      'description' => 'Azione per reimpostare i filtri',
+    ),
+    'apply' => 
+    array (
+      'label' => 'Applica',
+      'tooltip' => 'Applica i filtri',
+      'helper_text' => 'Applica i filtri selezionati',
+      'description' => 'Azione per applicare i filtri',
+    ),
+    'clear' => 
+    array (
+      'label' => 'Pulisci',
+      'tooltip' => 'Pulisci tutti i filtri',
+      'helper_text' => 'Rimuovi tutti i filtri attivi',
+      'description' => 'Azione per pulire i filtri',
+    ),
+    'export' => 
+    array (
+      'label' => 'Esporta',
+      'tooltip' => 'Esporta i dati filtrati',
+      'helper_text' => 'Esporta i dati filtrati in formato CSV/Excel',
+      'description' => 'Azione per esportare i dati',
+    ),
+    'import' => 
+    array (
+      'label' => 'Importa',
+      'tooltip' => 'Importa filtri',
+      'helper_text' => 'Importa filtri da file esterno',
+      'description' => 'Azione per importare filtri',
+    ),
+    'create' => 
+    array (
+      'label' => 'Crea Filtro',
+      'tooltip' => 'Crea un nuovo filtro',
+      'helper_text' => 'Crea un nuovo filtro personalizzato',
+      'description' => 'Azione per creare un filtro',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica Filtro',
+      'tooltip' => 'Modifica il filtro selezionato',
+      'helper_text' => 'Modifica le impostazioni del filtro',
+      'description' => 'Azione per modificare un filtro',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina Filtro',
+      'tooltip' => 'Elimina il filtro selezionato',
+      'helper_text' => 'Elimina definitivamente il filtro',
+      'description' => 'Azione per eliminare un filtro',
+    ),
+  ),
+  'validation' => 
+  array (
+    'name_required' => 'Il nome è obbligatorio',
+    'name_min_length' => 'Il nome deve essere di almeno 3 caratteri',
+    'name_max_length' => 'Il nome non può superare 255 caratteri',
+    'type_required' => 'Il tipo è obbligatorio',
+    'type_invalid' => 'Il tipo non è valido',
+    'field_required' => 'Il campo è obbligatorio',
+    'field_invalid' => 'Il campo non è valido',
+    'operator_required' => 'L\'operatore è obbligatorio',
+    'operator_invalid' => 'L\'operatore non è valido',
+    'value_required' => 'Il valore è obbligatorio',
+    'value_invalid' => 'Il valore non è valido',
+    'priority_numeric' => 'La priorità deve essere numerica',
+    'priority_min' => 'La priorità deve essere almeno 1',
+    'priority_max' => 'La priorità non può superare 100',
+    'description_max_length' => 'La descrizione non può superare 1000 caratteri',
+  ),
+  'messages' => 
+  array (
+    'filter_created' => 'Filtro creato con successo',
+    'filter_updated' => 'Filtro aggiornato con successo',
+    'filter_deleted' => 'Filtro eliminato con successo',
+    'filter_activated' => 'Filtro attivato con successo',
+    'filter_deactivated' => 'Filtro disattivato con successo',
+    'filter_applied' => 'Filtro applicato con successo',
+    'filter_removed' => 'Filtro rimosso con successo',
+    'filters_cleared' => 'Filtri svuotati con successo',
+    'filters_saved' => 'Filtri salvati con successo',
+    'filters_loaded' => 'Filtri caricati con successo',
+  ),
+  'errors' => 
+  array (
+    'filter_creation_failed' => 'Impossibile creare il filtro',
+    'filter_update_failed' => 'Impossibile aggiornare il filtro',
+    'filter_deletion_failed' => 'Impossibile eliminare il filtro',
+    'filter_activation_failed' => 'Impossibile attivare il filtro',
+    'filter_deactivation_failed' => 'Impossibile disattivare il filtro',
+    'filter_application_failed' => 'Impossibile applicare il filtro',
+    'filter_removal_failed' => 'Impossibile rimuovere il filtro',
+    'filters_clear_failed' => 'Impossibile svuotare i filtri',
+    'filters_save_failed' => 'Impossibile salvare i filtri',
+    'filters_load_failed' => 'Impossibile caricare i filtri',
+    'field_not_found' => 'Campo non trovato',
+    'operator_not_supported' => 'Operatore non supportato',
+    'value_type_mismatch' => 'Tipo di valore non corrispondente',
+  ),
+  'filter_types' => 
+  array (
+    'text' => 'Testo',
+    'number' => 'Numero',
+    'date' => 'Data',
+    'boolean' => 'Booleano',
+    'select' => 'Selezione',
+    'range' => 'Range',
+    'email' => 'Email',
+    'phone' => 'Telefono',
+  ),
+  'filter_operators' => 
+  array (
+    'equals' => 'Uguale a',
+    'not_equals' => 'Diverso da',
+    'contains' => 'Contiene',
+    'not_contains' => 'Non contiene',
+    'starts_with' => 'Inizia con',
+    'ends_with' => 'Finisce con',
+    'greater_than' => 'Maggiore di',
+    'greater_than_or_equal' => 'Maggiore o uguale a',
+    'less_than' => 'Minore di',
+    'less_than_or_equal' => 'Minore o uguale a',
+    'between' => 'Tra',
+    'not_between' => 'Non tra',
+    'in' => 'In',
+    'not_in' => 'Non in',
+    'is_null' => 'È nullo',
+    'is_not_null' => 'Non è nullo',
+    'is_empty' => 'È vuoto',
+    'is_not_empty' => 'Non è vuoto',
+  ),
+  'filter_fields' => 
+  array (
+    'name' => 'Nome',
+    'email' => 'Email',
+    'first_name' => 'Nome',
+    'last_name' => 'Cognome',
+    'description' => 'Descrizione',
+    'type' => 'Tipo',
+    'status' => 'Stato',
+    'created_at' => 'Data creazione',
+    'updated_at' => 'Data aggiornamento',
+    'last_login_at' => 'Ultimo accesso',
+    'is_active' => 'Attivo',
+  ),
+  'filters' => 
+  array (
+    'status' => 
+    array (
+      'label' => 'Stato',
+      'options' => 
+      array (
+        'active' => 'Attivo',
+        'inactive' => 'Inattivo',
+        'pending' => 'In attesa',
+      ),
+    ),
+    'role' => 
+    array (
+      'label' => 'Ruolo',
+      'options' => 
+      array (
+        'admin' => 'Amministratore',
+        'user' => 'Utente',
+        'guest' => 'Ospite',
+      ),
+    ),
+    'date_range' => 
+    array (
+      'label' => 'Periodo',
+      'placeholder' => 'Seleziona il periodo',
+    ),
+    'search' => 
+    array (
+      'label' => 'Ricerca',
+      'placeholder' => 'Cerca...',
+    ),
+  ),
+);

@@ -192,6 +192,6 @@ Il codice usa già `Arr::first()` invece di `collect()->first()`, che è:
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Completato con successo

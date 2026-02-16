@@ -1,6 +1,6 @@
 # Scopo del Progetto - Laravel Pizza Meetups
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## 🎯 Scopo Principale
 
@@ -183,9 +183,9 @@ meetup_events:
 - ⏳ Sistema di recensioni eventi
 - ⏳ Integrazione calendario esterno
 
-## Aggiornamento 2025-11-28 - Scopo pratico del progetto
+## Aggiornamento [DATE] - Scopo pratico del progetto
 
-Alla data del 2025-11-28 lo scopo pratico del progetto **Laravel Pizza Meetups** è:
+Alla data del [DATE] lo scopo pratico del progetto **Laravel Pizza Meetups** è:
 
 - **Dimostrare un modulo Laravel moderno** (`Meetup`) con architettura modulare, eventi, dashboard e integrazioni Filament/Livewire.
 - **Fornire un tema HTML completo** (`Themes/Meetup`) con dark theme, navigation e footer riutilizzabili, pagine statiche (`index`, `events`, `login`, `register`, `dashboard`, `profile`, `chat`) servite da Vite.

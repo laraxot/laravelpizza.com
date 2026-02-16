@@ -238,4 +238,4 @@ public function toPersonSchemaWithOrganization(): array
 
 ---
 
-**Updated**: 2026-02-10 (Enhanced with comprehensive research)
+**Updated**: [DATE] (Enhanced with comprehensive research)

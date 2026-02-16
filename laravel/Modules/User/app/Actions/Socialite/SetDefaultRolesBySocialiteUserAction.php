@@ -23,12 +23,14 @@ class SetDefaultRolesBySocialiteUserAction
 
     public function __construct(
         private readonly string $provider,
+        private readonly Guard $permissionGuard,
+        private readonly XotData $xotData,
     ) {
         $this->domainAnalyzer = app(EmailDomainAnalyzer::class, [
             'ssoProvider' => $this->provider,
         ]);
 
-        $this->defaultUserGuard = Guard::getDefaultName(XotData::make()->getUserClass());
+        $this->defaultUserGuard = $this->permissionGuard->getDefaultName($this->xotData->getUserClass());
     }
 
     public function execute(UserContract $userModel, SocialiteUserContract $oauthUser): void

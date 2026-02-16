@@ -13,8 +13,8 @@ File attesi:
 
 File raw (generati da Chromium headless, tenuti per tracciabilità):
 
-- `screenshot_127_0_0_1_2026-01-08T21-06-05-138Z_frame1.png`
-- `screenshot_laravelpizza_com_2026-01-08T21-06-05-094Z_frame1.png`
+- `screenshot_127_0_0_1_[DATE]T21-06-05-138Z_frame1.png`
+- `screenshot_laravelpizza_com_[DATE]T21-06-05-094Z_frame1.png`
 
 ## Current State (WRONG - Image 01c.png)
 

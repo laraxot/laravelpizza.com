@@ -4,7 +4,7 @@
 > Vedi [membership-autoincrement-fix.md](./membership-autoincrement-fix.md) per la soluzione corretta.
 
 ## Data Intervento
-**2025-01-22** - Correzione gestione UUID nella tabella pivot team_user (SOLUZIONE DEPRECATA)
+**[DATE]** - Correzione gestione UUID nella tabella pivot team_user (SOLUZIONE DEPRECATA)
 
 ## Problema Identificato
 

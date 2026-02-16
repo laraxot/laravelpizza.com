@@ -64,5 +64,5 @@ Tutte le funzioni `safeStringCast()` private sono state rimosse dai file, elimin
 - [SafeStringCastAction](../../Xot/app/Actions/String/SafeStringCastAction.php)
 - [Documentazione Actions](../../Xot/docs/actions.md)
 - [Documentazione Actions](../../Xot/project_docs/actions.md)
-*Data correzione: 2025-01-06*
+*Data correzione: [DATE]*
 *Stato: ✅ Completato*

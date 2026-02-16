@@ -200,12 +200,12 @@ class ScheduleParserService
   "@type": "EventSeries",
   "name": "Laravel Weekly Meetups",
   "description": "Weekly gatherings for Laravel developers to share knowledge and network",
-  "startDate": "2026-01-01",
-  "endDate": "2026-12-31",
+  "startDate": "[DATE]",
+  "endDate": "[DATE]",
   "eventSchedule": {
     "@type": "Schedule",
-    "startDate": "2026-01-01",
-    "endDate": "2026-12-31",
+    "startDate": "[DATE]",
+    "endDate": "[DATE]",
     "repeatFrequency": "P1W",
     "byDay": "https://schema.org/Thursday",
     "startTime": "19:00:00",
@@ -232,8 +232,8 @@ class ScheduleParserService
     {
       "@type": "Event",
       "name": "Laravel Meetup - February 2026",
-      "startDate": "2026-02-05T19:00:00+01:00",
-      "endDate": "2026-02-05T21:00:00+01:00"
+      "startDate": "[DATE]T19:00:00+01:00",
+      "endDate": "[DATE]T21:00:00+01:00"
     }
   ]
 }
@@ -250,8 +250,8 @@ class ScheduleParserService
   "eventSchedule": [
     {
       "@type": "Schedule",
-      "startDate": "2026-01-15",
-      "endDate": "2026-06-15",
+      "startDate": "[DATE]",
+      "endDate": "[DATE]",
       "repeatFrequency": "P1M",
       "byMonthDay": [15],
       "startTime": "18:30:00",
@@ -260,8 +260,8 @@ class ScheduleParserService
     },
     {
       "@type": "Schedule",
-      "startDate": "2026-07-01",
-      "endDate": "2026-12-31",
+      "startDate": "[DATE]",
+      "endDate": "[DATE]",
       "repeatFrequency": "P1M",
       "byDay": "2TU",
       "startTime": "19:00:00", 
@@ -273,8 +273,8 @@ class ScheduleParserService
     {
       "@type": "EducationEvent",
       "name": "Advanced Laravel Performance Optimization",
-      "startDate": "2026-01-15T18:30:00+01:00",
-      "endDate": "2026-01-15T20:30:00+01:00",
+      "startDate": "[DATE]T18:30:00+01:00",
+      "endDate": "[DATE]T20:30:00+01:00",
       "teaches": "Laravel performance optimization techniques"
     }
   ]
@@ -448,8 +448,8 @@ public function test_weekly_schedule_generation()
     ]);
     
     $occurrences = $series->generateOccurrences(
-        Carbon::parse('2026-02-01'),
-        Carbon::parse('2026-02-28')
+        Carbon::parse('[DATE]'),
+        Carbon::parse('[DATE]')
     );
     
     $this->assertCount(4, $occurrences); // 4 Thursdays in February 2026

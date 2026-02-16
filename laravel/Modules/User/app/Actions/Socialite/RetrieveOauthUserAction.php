@@ -14,10 +14,15 @@ use Laravel\Socialite\Facades\Socialite;
 use Laravel\Socialite\Two\InvalidStateException;
 use Modules\User\Events\InvalidState;
 use Spatie\QueueableAction\QueueableAction;
+use Illuminate\Contracts\Events\Dispatcher;
 
 class RetrieveOauthUserAction
 {
     use QueueableAction;
+
+    public function __construct(
+        private readonly Dispatcher $eventDispatcher,
+    ) {}
 
     /**
      * Execute the action.
@@ -28,11 +33,16 @@ class RetrieveOauthUserAction
             return Socialite::driver($provider)->user();
 
             // SocialiteProviders\Manager\OAuth2\User
-        } catch (InvalidStateException $invalidStateException) {
-            InvalidState::dispatch($invalidStateException);
+        } catch (InvalidStateException $e) {
+            $this->handleInvalidStateException($e);
         }
 
         return null;
+    }
+
+    private function handleInvalidStateException(InvalidStateException $exception): void
+    {
+        $this->eventDispatcher->dispatch(new InvalidState($exception));
     }
 }
 

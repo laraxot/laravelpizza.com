@@ -1,4 +1,4 @@
-# Aggiornamento File di Traduzione Lang Service - 2025-01-06
+# Aggiornamento File di Traduzione Lang Service - [DATE]
 
 ## Panoramica
 Aggiornamento completo dei file di traduzione per il servizio lingue del modulo Lang, applicando la regola critica per `helper_text` e implementando la struttura espansa completa.
@@ -147,7 +147,7 @@ La gestione delle traduzioni deve essere:
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-06
+**Ultimo aggiornamento**: [DATE]
 **Autore**: Sistema di gestione traduzioni Laraxot
 **Versione**: 1.0
 **Stato**: Implementato e testato

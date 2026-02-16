@@ -1,6 +1,6 @@
 # Development Workflow Rules - UI Module
 
-**Date**: 2025-12-15
+**Date**: [DATE]
 **Status**: Active
 **Purpose**: Document the mandatory development workflow for UI module
 

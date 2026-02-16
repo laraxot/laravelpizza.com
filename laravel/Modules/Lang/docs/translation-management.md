@@ -92,4 +92,4 @@ Prima di ogni commit, verificare:
 - [Enum Standards](enum_standards.md)
 
 ## Ultimo Aggiornamento
-2025-01-27 - Regola critica per evitare ->label()
+[DATE] - Regola critica per evitare ->label()

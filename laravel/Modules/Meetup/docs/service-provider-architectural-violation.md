@@ -1,7 +1,7 @@
 # Violazione Architetturale: MeetupServiceProvider
 
 ## Data
-2025-12-16
+[DATE]
 
 ## ❌ Problema Identificato
 

@@ -2,35 +2,55 @@
 
 declare(strict_types=1);
 
-return [
-    'attributes' => [
-        'external-link' => 'Внешняя ссылка',
-        'url' => 'URL',
-        'target' => 'Открыть в',
-        'name' => 'Название',
-        'items' => 'Элементы',
-        'handle' => 'Идентификатор',
-        'created_at' => 'Создано в',
-        'updated_at' => 'Изменено в',
-    ],
-    'select-options' => [
-        'same-tab' => 'Этой вкладке',
-        'new-tab' => 'Новой вкладке',
-    ],
-    'items' => [
-        'empty' => 'Нет элементов',
-        'add-item' => 'Добавить элемент',
-        'add-child' => 'Добавить дочерний',
-        'move-up' => 'Переместить выше',
-        'move-down' => 'Переместить ниже',
-        'indent' => 'Indent',
-        'dedent' => 'Dedent',
-        'remove' => 'Удалить',
-    ],
-    'items-modal' => [
-        'title' => 'Элемент',
-        'label' => 'Название',
-        'type' => 'Тип',
-        'btn' => 'Сохранить',
-    ],
-];
+return array (
+  'attributes' => 
+  array (
+    'external-link' => 'Внешняя ссылка',
+    'url' => 'URL',
+    'target' => 'Открыть в',
+    'name' => 'Название',
+    'items' => 'Элементы',
+    'handle' => 'Идентификатор',
+    'created_at' => 'Создано в',
+    'updated_at' => 'Изменено в',
+  ),
+  'select-options' => 
+  array (
+    'same-tab' => 'Этой вкладке',
+    'new-tab' => 'Новой вкладке',
+  ),
+  'items' => 
+  array (
+    'empty' => 'Нет элементов',
+    'add-item' => 'Добавить элемент',
+    'add-child' => 'Добавить дочерний',
+    'move-up' => 'Переместить выше',
+    'move-down' => 'Переместить ниже',
+    'indent' => 'Indent',
+    'dedent' => 'Dedent',
+    'remove' => 'Удалить',
+  ),
+  'items-modal' => 
+  array (
+    'title' => 'Элемент',
+    'label' => 'Название',
+    'type' => 'Тип',
+    'btn' => 'Сохранить',
+  ),
+  'navigation' => 
+  array (
+    'label' => 'Missing Navigation Label',
+    'plural_label' => 'Missing Navigation Plural Label',
+    'group' => 'Missing Group',
+    'icon' => 'heroicon-o-puzzle-piece',
+    'sort' => 100,
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'fields' => 
+  array (
+  ),
+  'actions' => 
+  array (
+  ),
+);

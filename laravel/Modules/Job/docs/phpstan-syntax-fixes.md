@@ -214,7 +214,7 @@ $traits = class_uses($obj);    // ❌ Può ritornare false!
 
 ---
 
-**Fix Completato**: 2025-01-11
+**Fix Completato**: [DATE]
 **Priority**: ALTA
 **Impact**: BASSO (Solo 1 test file)
 **Type Safety**: MIGLIORATA ✅

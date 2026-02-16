@@ -1,6 +1,6 @@
 # Comprensione Corretta del Progetto
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## 🎯 Scopo del Progetto
 

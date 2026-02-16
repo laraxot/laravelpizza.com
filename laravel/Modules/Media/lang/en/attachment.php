@@ -2,62 +2,159 @@
 
 declare(strict_types=1);
 
-return [
-    'pages' => 'Pages',
-    'widgets' => 'Widgets',
-    'navigation' => [
-        'name' => 'Media',
-        'plural' => 'Media',
-        'group' => [
-            'name' => '',
-        ],
-    ],
-    'fields' => [
-        'file' => 'file',
-        'file_hint' => 'Upload an attachment',
-        'name' => [
-            'label' => 'Name',
-        ],
-        'guard_name' => 'Guard',
-        'collection_name' => [
-            'label' => 'Collection',
-        ],
-        'filename' => 'Filename',
-        'mime_type' => 'Type',
-        'human_readable_size' => [
-            'label' => 'Size',
-        ],
-        'permissions' => 'Permissions',
-        'updated_at' => 'Updated at',
-        'first_name' => 'First Name',
-        'last_name' => 'Last Name',
-        'select_all' => [
-            'name' => 'Select All',
-            'message' => '',
-        ],
-        'creator' => [
-            'name' => 'Creator',
-            'full_name' => [
-                'label' => 'Creator',
-            ],
-        ],
-        'uploaded_at' => 'Updated at',
-        'created_at' => [
-            'label' => 'Uploaded at',
-        ],
-    ],
-    'actions' => [
-        'import' => [
-            'fields' => [
-                'import_file' => 'Select an XLS or CSV file to upload',
-            ],
-        ],
-        'export' => [
-            'filename_prefix' => 'Areas at',
-            'columns' => [
-                'name' => 'Area name',
-                'parent_name' => 'Parent area name',
-            ],
-        ],
-    ],
-];
+return array (
+  'pages' => 'Pages',
+  'widgets' => 'Widgets',
+  'navigation' => 
+  array (
+    'name' => 'Media',
+    'plural' => 'Media',
+    'group' => 
+    array (
+      'name' => '',
+    ),
+  ),
+  'fields' => 
+  array (
+    'file' => 
+    array (
+      'label' => 'file',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'file_hint' => 
+    array (
+      'label' => 'Upload an attachment',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'name' => 
+    array (
+      'label' => 'Name',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'guard_name' => 
+    array (
+      'label' => 'Guard',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'collection_name' => 
+    array (
+      'label' => 'Collection',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'filename' => 
+    array (
+      'label' => 'Filename',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'mime_type' => 
+    array (
+      'label' => 'Type',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'human_readable_size' => 
+    array (
+      'label' => 'Size',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'permissions' => 
+    array (
+      'label' => 'Permissions',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'updated_at' => 
+    array (
+      'label' => 'Updated at',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'first_name' => 
+    array (
+      'label' => 'First Name',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'last_name' => 
+    array (
+      'label' => 'Last Name',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'select_all' => 
+    array (
+      'name' => 'Select All',
+      'message' => '',
+      'label' => '',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'creator' => 
+    array (
+      'name' => 'Creator',
+      'full_name' => 
+      array (
+        'label' => 'Creator',
+      ),
+      'label' => '',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'uploaded_at' => 
+    array (
+      'label' => 'Updated at',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'Uploaded at',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'import' => 
+    array (
+      'fields' => 
+      array (
+        'import_file' => 'Select an XLS or CSV file to upload',
+      ),
+    ),
+    'export' => 
+    array (
+      'filename_prefix' => 'Areas at',
+      'columns' => 
+      array (
+        'name' => 'Area name',
+        'parent_name' => 'Parent area name',
+      ),
+    ),
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+);

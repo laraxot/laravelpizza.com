@@ -201,7 +201,7 @@ Le seguenti sottocartelle esistevano già e contengono script specifici:
 
 ## Implementazione
 
-La riorganizzazione è stata completata il **2025-01-29** seguendo questi passaggi:
+La riorganizzazione è stata completata il **[DATE]** seguendo questi passaggi:
 
 1. **Creazione sottocartelle tematiche**
 2. **Categorizzazione e spostamento file**
@@ -226,5 +226,5 @@ Per mantenere questa organizzazione:
 
 ---
 
-*Ultimo aggiornamento: 2025-01-29*
+*Ultimo aggiornamento: [DATE]*
 *Responsabile: Sistema di Automazione Laraxot*

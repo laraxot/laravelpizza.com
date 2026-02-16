@@ -35,8 +35,8 @@
       "@context": "https://schema.org",
       "@type": "Event",
       "name": "Monthly Laravel Meetup",
-      "startDate": "2024-03-20T18:00:00+01:00",
-      "endDate": "2024-03-20T20:00:00+01:00",
+      "startDate": "[DATE]T18:00:00+01:00",
+      "endDate": "[DATE]T20:00:00+01:00",
       "location": {
         "@type": "Place",
         "name": "Tech Hub",

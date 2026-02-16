@@ -1,6 +1,6 @@
 # Analisi Qualità - Modulo Tenant
 
-**Ultimo aggiornamento**: 2025-01-27
+**Ultimo aggiornamento**: [DATE]
 **Tool utilizzati**: PHPStan (Level 9), PHPMD, PHPInsights, Pint
 
 ---
@@ -58,6 +58,6 @@
 
 ## 🔗 Collegamenti
 
-- [PHPStan Analysis](../../Xot/docs/phpstan-analysis-2025-01-27.md)
+- [PHPStan Analysis](../../Xot/docs/phpstan-analysis-[DATE].md)
 - [Quality Guide](../../Xot/docs/php-quality-guide.md)
 - [CI/CD Workflow](../.github/workflows/quality.yml)

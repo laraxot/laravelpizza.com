@@ -29,7 +29,7 @@ Il modulo UI è l'esempio **perfetto** di come dovrebbe essere un BaseModel quan
 - ✅ Connection automatica da XotBaseModel
 
 ## 🔗 Collegamenti
-[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
+[DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_[DATE].md)
 
 ---
 

@@ -58,8 +58,8 @@ I have conducted a comprehensive analysis of Schema.org specifications for event
   "@type": "Event",
   "eventSchedule": {
     "@type": "Schedule",
-    "startDate": "2026-01-01",
-    "endDate": "2026-12-31",
+    "startDate": "[DATE]",
+    "endDate": "[DATE]",
     "repeatFrequency": "P1W",
     "byDay": "https://schema.org/Thursday",
     "startTime": "19:00:00",
@@ -186,7 +186,7 @@ I have conducted a comprehensive analysis of Schema.org specifications for event
     "name": "Mario Rossi"
   },
   "reservationStatus": "https://schema.org/ReservationConfirmed",
-  "bookingTime": "2026-02-01T10:30:00+01:00",
+  "bookingTime": "[DATE]T10:30:00+01:00",
   "totalPrice": "299.00",
   "priceCurrency": "EUR",
   "reservedTicket": {

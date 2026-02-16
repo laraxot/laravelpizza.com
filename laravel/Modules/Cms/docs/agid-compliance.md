@@ -1,7 +1,7 @@
 # 🏛️ AGID Compliance - CMS Module
 
 **Module**: Cms
-**Date**: 2025-10-02
+**Date**: [DATE]
 **Reference**: [design-comuni-pagine-statiche v2.4.0](https://github.com/italia/design-comuni-pagine-statiche)
 **Compliance Status**: **80%** ✅
 

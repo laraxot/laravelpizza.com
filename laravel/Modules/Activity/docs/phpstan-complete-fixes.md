@@ -89,6 +89,6 @@ Note: Using configuration file phpstan.neon.
 - Le relazioni Eloquent sono verificate prima dell'uso
 
 ---
-**Documento creato**: 2025-01-27
+**Documento creato**: [DATE]
 **Stato**: ✅ COMPLETATO
 **Prossima revisione**: Con necessità

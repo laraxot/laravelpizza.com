@@ -1,7 +1,7 @@
 # Vite Asset Loading per Temi - Guida Completa
 
 ## Data
-2025-11-29
+[DATE]
 
 ## Problema Identificato
 

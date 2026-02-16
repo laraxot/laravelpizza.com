@@ -66,7 +66,7 @@ Blocks use view paths like:
 
 ## Important Notes
 
-### Critical Issues Identified (2026-02-08)
+### Critical Issues Identified ([DATE])
 1. **Missing Component**: `hero.fullscreen.blade.php` referenced but non-existent
 2. **Content Disparity**: Italian version has 9 blocks vs English 3 blocks
 3. **Component Duplication**: 32+ hero variants across themes
@@ -120,7 +120,7 @@ Modules/Cms/
 
 ## Recent Changes
 
-### 2026-02-08
+### [DATE]
 - Identified critical missing component issue
 - Documented content disparity between languages
 - Created comprehensive duplicate content analysis

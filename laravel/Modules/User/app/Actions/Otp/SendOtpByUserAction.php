@@ -23,13 +23,11 @@ class SendOtpByUserAction
 {
     use QueueableAction;
 
-    private PasswordData $passwordData;
-
-    public function __construct()
-    {
-        // Initialize PasswordData instance, relying on dependency injection if required.
-        $this->passwordData = PasswordData::make();
-    }
+    public function __construct(
+        private readonly PasswordData $passwordData,
+        private readonly Str $stringHelper,
+        private readonly Hasher $hasher,
+    ) {}
 
     /**
      * Execute the action: Generate and send an OTP to the specified user.
@@ -53,7 +51,7 @@ class SendOtpByUserAction
      */
     private function generateTemporaryPassword(): string
     {
-        return Str::random(12);
+        return $this->stringHelper->random(12);
     }
 
     /**
@@ -76,7 +74,7 @@ class SendOtpByUserAction
     private function updateUserWithOtp(UserContract $user, string $temporaryPassword, Carbon $expirationTime): void
     {
         $user->update([
-            'password' => Hash::make($temporaryPassword),
+            'password' => $this->hasher->make($temporaryPassword),
             'is_otp' => true,
             'password_expires_at' => $expirationTime,
         ]);

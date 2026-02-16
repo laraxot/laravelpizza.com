@@ -115,6 +115,6 @@ public function milano(): static
 
 **MODULO GEO COMPLETAMENTE RIPRISTINATO!**
 
-*Creato: 2025-01-06*
+*Creato: [DATE]*
 *Modulo: Geo - 8/8 factory necessarie completate*
 *Status: ✅ ERRORE GRAVISSIMO RISOLTO*

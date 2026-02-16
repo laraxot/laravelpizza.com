@@ -1,7 +1,7 @@
 # Vite Asset Loading - Best Practices per Temi
 
 ## Data
-2025-11-29
+[DATE]
 
 ## Panoramica
 

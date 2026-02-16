@@ -40,7 +40,7 @@ test('doctor can create appointment for patient', function () {
     $this->actingAs($doctor)
         ->post('/appointments', [
             'patient_id' => $patient->id,
-            'date' => '2024-01-15',
+            'date' => '[DATE]',
             'time' => '10:00',
             'type' => 'consultation',
         ]);
@@ -159,6 +159,6 @@ test('patient inherits user functionality', function () {
 - [Testing Guidelines](../laravel/.ai/guidelines/testing-guidelines.md)
 
 ---
-**Ultima modifica**: 2025-01-06
+**Ultima modifica**: [DATE]
 **Priorità**: CRITICA
 **Applicazione**: SEMPRE, TUTTI I TEST

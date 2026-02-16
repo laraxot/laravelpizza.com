@@ -2,37 +2,48 @@
 
 declare(strict_types=1);
 
-return [
-
-    'title' => 'Laravel Pizza Meetups - Home',
-
-    'hero' => [
-        'subtitle' => 'Присоединяйтесь к нашей сообществу разработчиков Laravel',
-        'description' => 'Принимайте участие в регулярных мероприятиях, изучайте новые технологии и общайтесь с другими разработчиками в вашем регионе.',
-        'cta_primary_label' => 'Зарегистрироваться',
-        'cta_secondary_label' => 'Посмотреть события',
-    ],
-
-    'features' => [
-        'title' => 'Почему выбрать наши мероприятия?',
-        'description' => 'Откройте для себя особенности, которые делают наши мероприятия уникальными и увлекательными',
-
-        'regular_meetups_title' => 'Регулярные Мероприятия',
-        'regular_meetups_description' => 'Посещайте еженедельные встречи с техническими презентациями и обсуждениями',
-
-        'growing_community_title' => 'Растущее Сообщество',
-        'growing_community_description' => 'Соединяйтесь с экспертными разработчиками и учениками по всему миру',
-
-        'multiple_locations_title' => 'Множественные Местоположения',
-        'multiple_locations_description' => 'Будьте в курсе событий в ваших местных городах',
-
-        'realtime_chat_title' => 'Чат в Реальном Времени',
-        'realtime_chat_description' => 'Принимайте участие в совместных обсуждениях во время мероприятий',
-    ],
-
-    'cta' => [
-        'title' => 'Готовы начать?',
-        'description' => 'Присоединяйтесь к нашему сообществу и начните свое приключение Laravel уже сегодня',
-        'cta_primary_label' => 'Создайте свой аккаунт',
-    ],
-];
+return array (
+  'title' => 'Laravel Pizza Meetups - Home',
+  'hero' => 
+  array (
+    'subtitle' => 'Присоединяйтесь к нашей сообществу разработчиков Laravel',
+    'description' => 'Принимайте участие в регулярных мероприятиях, изучайте новые технологии и общайтесь с другими разработчиками в вашем регионе.',
+    'cta_primary_label' => 'Зарегистрироваться',
+    'cta_secondary_label' => 'Посмотреть события',
+  ),
+  'features' => 
+  array (
+    'title' => 'Почему выбрать наши мероприятия?',
+    'description' => 'Откройте для себя особенности, которые делают наши мероприятия уникальными и увлекательными',
+    'regular_meetups_title' => 'Регулярные Мероприятия',
+    'regular_meetups_description' => 'Посещайте еженедельные встречи с техническими презентациями и обсуждениями',
+    'growing_community_title' => 'Растущее Сообщество',
+    'growing_community_description' => 'Соединяйтесь с экспертными разработчиками и учениками по всему миру',
+    'multiple_locations_title' => 'Множественные Местоположения',
+    'multiple_locations_description' => 'Будьте в курсе событий в ваших местных городах',
+    'realtime_chat_title' => 'Чат в Реальном Времени',
+    'realtime_chat_description' => 'Принимайте участие в совместных обсуждениях во время мероприятий',
+  ),
+  'cta' => 
+  array (
+    'title' => 'Готовы начать?',
+    'description' => 'Присоединяйтесь к нашему сообществу и начните свое приключение Laravel уже сегодня',
+    'cta_primary_label' => 'Создайте свой аккаунт',
+  ),
+  'navigation' => 
+  array (
+    'label' => 'Missing Navigation Label',
+    'plural_label' => 'Missing Navigation Plural Label',
+    'group' => 'Missing Group',
+    'icon' => 'heroicon-o-puzzle-piece',
+    'sort' => 100,
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'fields' => 
+  array (
+  ),
+  'actions' => 
+  array (
+  ),
+);

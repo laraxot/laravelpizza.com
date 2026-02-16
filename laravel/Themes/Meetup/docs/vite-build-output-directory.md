@@ -1,7 +1,7 @@
 # Vite Build Output Directory - Tema Meetup
 
 ## Data
-2025-11-30
+[DATE]
 
 ## ⚠️ IMPORTANTE - Configurazione Vite
 

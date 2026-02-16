@@ -86,7 +86,7 @@ Tutti i file di documentazione sono stati aggiornati per riflettere questa decis
 - `seasonal-email-system-implementation-report.md` - Completamente riscritto
 - `seasonal-email-system-recommendations.md` - Aggiornato con nuove best practices
 - `get-seasonal-email-layout-action.md` - RIMOSSO
-- `dry-violation-analysis-2025-12-19.md` - Aggiornato con nuovo approccio
+- `dry-violation-analysis-[DATE].md` - Aggiornato con nuovo approccio
 
 ## Impatto
 

@@ -2,9 +2,18 @@
 
 declare(strict_types=1);
 
-return [
-    'navigation' => [
-        'label' => 'Slack Notification',
-        'group' => 'Notifiche',
-    ],
-];
+return array (
+  'navigation' => 
+  array (
+    'label' => 'Slack Notification',
+    'group' => 'Notifiche',
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'fields' => 
+  array (
+  ),
+  'actions' => 
+  array (
+  ),
+);

@@ -1,6 +1,6 @@
 # Fix Errore Sintassi TransArrayAction
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## Problema Identificato
 

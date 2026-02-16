@@ -1,4 +1,4 @@
-# PHPStan Action Plan - 2025-11-18
+# PHPStan Action Plan - [DATE]
 
 ## Executive Summary
 

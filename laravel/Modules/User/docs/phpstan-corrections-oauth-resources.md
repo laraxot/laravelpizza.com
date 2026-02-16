@@ -107,4 +107,4 @@ TextColumn::make('name')
 
 ---
 
-*Ultimo aggiornamento: 2025-01-22*
+*Ultimo aggiornamento: [DATE]*

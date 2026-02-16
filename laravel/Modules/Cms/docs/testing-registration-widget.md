@@ -224,4 +224,4 @@ After implementare le migliorie descritte sopra, tutti i test passano con succes
 5. **Test Isolation** - Consider restructuring tests to increase isolation and reduce interdependence between test cases.
 
 ---
-Last update: 2025-07-06
+Last update: [DATE]

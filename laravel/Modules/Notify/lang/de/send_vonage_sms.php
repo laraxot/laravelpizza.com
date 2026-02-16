@@ -2,12 +2,28 @@
 
 declare(strict_types=1);
 
-return [
-    'title' => 'Vonage SMS senden',
-    'message' => 'Nachricht',
-    'send' => 'Senden',
-    'sent' => 'SMS erfolgreich gesendet',
-    'failed' => 'Fehler beim Senden der SMS',
-    'recipient' => 'Empfänger',
-    'phone' => 'Telefonnummer',
-];
+return array (
+  'title' => 'Vonage SMS senden',
+  'message' => 'Nachricht',
+  'send' => 'Senden',
+  'sent' => 'SMS erfolgreich gesendet',
+  'failed' => 'Fehler beim Senden der SMS',
+  'recipient' => 'Empfänger',
+  'phone' => 'Telefonnummer',
+  'navigation' => 
+  array (
+    'label' => 'Missing Navigation Label',
+    'plural_label' => 'Missing Navigation Plural Label',
+    'group' => 'Missing Group',
+    'icon' => 'heroicon-o-puzzle-piece',
+    'sort' => 100,
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'fields' => 
+  array (
+  ),
+  'actions' => 
+  array (
+  ),
+);

@@ -96,5 +96,5 @@ Schema::create('addresses', function (Blueprint $table) {
 
 ---
 
-**Ultimo aggiornamento:** 2025-05-29
+**Ultimo aggiornamento:** [DATE]
 Responsabile: Cascade AI 

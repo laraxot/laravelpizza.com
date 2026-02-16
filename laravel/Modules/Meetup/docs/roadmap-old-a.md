@@ -1,4 +1,4 @@
-# Roadmap Modulo Meetup - 2026-01-30
+# Roadmap Modulo Meetup - [DATE]
 
 **Modulo**: Meetup (Core Business Logic)
 **Scopo**: Core business logic per piattaforma meetup LaravelPizza - gestione eventi, registrazioni RSVP, calendario, profili speaker, community.

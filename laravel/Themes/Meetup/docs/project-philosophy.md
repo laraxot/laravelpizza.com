@@ -1,7 +1,7 @@
 # Filosofia del Progetto LaravelPizza.com - Tema Meetup
 
 ## Data
-2025-12-01
+[DATE]
 
 ## Obiettivo del Tema
 
@@ -136,6 +136,6 @@ Il tema Meetup deve replicare **pixel-perfect** il design di `laravelpizza.com`:
 
 ---
 
-**Ultimo aggiornamento**: 2025-12-01
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0
 **Compatibilità**: LaravelPizza.com base_laravelpizza

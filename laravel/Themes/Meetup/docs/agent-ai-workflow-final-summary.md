@@ -46,7 +46,7 @@
 8. `homepage-alignment-process.md`
 9. `screenshots-workflow.md`
 10. `git-merge-conflicts-resolution.md`
-11. `workflow-summary-2025-01-22.md`
+11. `workflow-summary-[DATE].md`
 
 **2 documenti aggiornati**:
 1. `visual-parity-progress.md`
@@ -114,7 +114,7 @@
 ### Workflow
 - [Agent Workflow Best Practices](./agent-workflow-best-practices.md)
 - [Agent AI Workflow Complete Summary](./agent-ai-workflow-complete-summary.md)
-- [Workflow Summary 2025-01-22](./workflow-summary-2025-01-22.md)
+- [Workflow Summary [DATE]](./workflow-summary-[DATE].md)
 
 ### Raccomandazioni
 - [Agent Recommendations Consolidated](./agent-recommendations-consolidated.md)
@@ -139,6 +139,6 @@
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Workflow Completato, Documentazione Consolidata

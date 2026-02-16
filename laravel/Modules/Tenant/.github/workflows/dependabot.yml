@@ -1,0 +1,30 @@
+name: Dependabot
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  dependabot:
+    name: dependabot
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@latest
+        with:
+          php-version: '8.3'
+
+      - name: Install composer dependencies
+        uses: ramsey/composer-install@latest
+        with:
+          composer-options: '--prefer-dist --optimize-autoloader'
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      - name: Check for security advisories
+        run: composer audit --format=json | jq '.advisories | length' | xargs -I {} sh -c 'if [ {} -gt 0 ]; then echo "Security advisories found!"; exit 1; else echo "No security advisories"; fi'

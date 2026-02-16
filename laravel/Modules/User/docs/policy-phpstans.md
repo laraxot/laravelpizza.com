@@ -1,6 +1,6 @@
 # Errori PHPStan nelle Policy del Modulo User
 
-## Problema Identificato (2025-01-06)
+## Problema Identificato ([DATE])
 
 **ERRORE CRITICO**: Tutte le policy del modulo User presentano errori PHPStan relativi al metodo `hasPermissionTo()` non definito nel contratto `UserContract`.
 
@@ -97,4 +97,4 @@ Definire il comportamento tramite trait che implementa il metodo.
 - [Contratti Xot](../../Xot/project_docs/contracts.md)
 - [Spatie Permission Documentation](https://spatie.be/project_docs/laravel-permission)
 
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*

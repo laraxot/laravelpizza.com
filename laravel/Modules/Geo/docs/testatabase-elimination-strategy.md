@@ -122,5 +122,5 @@ $appointment = (object) [
 4. Dipendenze da `config()` nei Unit test
 5. Richieste HTTP reali nei test logic
 
-*Documento creato: 2025-01-06*
+*Documento creato: [DATE]*
 *Status: In implementazione attiva*

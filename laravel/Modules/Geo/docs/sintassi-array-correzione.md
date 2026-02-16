@@ -112,7 +112,7 @@ php -l laravel/Modules/Geo/lang/it/address.php
 
 ## 📚 Collegamenti
 
-- [Address Translation Fixes](address-translation-fixes-2025-01-27.md) - Correzioni traduzioni address
+- [Address Translation Fixes](address-translation-fixes-[DATE].md) - Correzioni traduzioni address
 - [README Modulo Geo](README.md) - Documentazione principale
 - [Translation Standards](../../Lang/docs/translation-helper-text-standards.md) - Standard traduzioni
 

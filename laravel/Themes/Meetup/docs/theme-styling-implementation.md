@@ -1,7 +1,7 @@
 # Theme Styling Implementation - Laravel Pizza Meetups
 
 ## Data
-2025-11-30
+[DATE]
 
 ## Obiettivo
 
@@ -97,16 +97,16 @@ Copiato a:  ../../../public_html/themes/Meetup/
    - Enfatizzato che ENTRAMBI i comandi sono necessari
    - Aggiornato Key Takeaway #2
 
-2. **2025-11-30-build-output-path-correction.md**
+2. **[DATE]-build-output-path-correction.md**
    - Documentato perché `./public/*` è corretto
    - Spiegato il flusso SOURCE → BUILD → DEPLOY
 
-3. **2025-11-30-build-copy-workflow-reminder.md** (NUOVO)
+3. **[DATE]-build-copy-workflow-reminder.md** (NUOVO)
    - Reminder critico del workflow
    - Checklist pre-test
    - Errori comuni
 
-4. **2025-11-30-theme-styling-implementation.md** (QUESTO FILE)
+4. **[DATE]-theme-styling-implementation.md** (QUESTO FILE)
    - Riepilogo del lavoro svolto
 
 ## Correzioni dall'Utente

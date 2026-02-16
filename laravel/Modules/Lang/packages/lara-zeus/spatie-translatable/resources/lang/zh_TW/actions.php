@@ -1,9 +1,26 @@
 <?php
 
-return [
+declare(strict_types=1);
 
-    'active_locale' => [
-        'label' => '語系',
-    ],
-
-];
+return array (
+  'active_locale' => 
+  array (
+    'label' => '語系',
+  ),
+  'navigation' => 
+  array (
+    'label' => 'Missing Navigation Label',
+    'plural_label' => 'Missing Navigation Plural Label',
+    'group' => 'Missing Group',
+    'icon' => 'heroicon-o-puzzle-piece',
+    'sort' => 100,
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'fields' => 
+  array (
+  ),
+  'actions' => 
+  array (
+  ),
+);

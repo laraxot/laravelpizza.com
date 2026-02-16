@@ -1,6 +1,6 @@
 # Filament Resources: Furious Philosophical Debate
 
-## Data: 2025-01-02
+## Data: [DATE]
 
 ## Il Dibattito Feroce
 

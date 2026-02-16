@@ -1,6 +1,6 @@
 # Activity Log UI/UX Improvements - Implementation Summary
 
-**Date**: 2025-12-04
+**Date**: [DATE]
 **Module**: Activity
 **Files Modified**:
 - `Modules/Activity/resources/views/filament/pages/list-log-activities.blade.php`
@@ -92,7 +92,7 @@ Following DRY+KISS principles, using Filament components:
 ### Before
 ```
 [Avatar] John Doe
-updated 2025-01-22 10:30
+updated [DATE] 10:30
 
 [Changes Table]
 Field | Old | New
@@ -106,7 +106,7 @@ Found 15 activities total
 
 [Activity Card]
 [Avatar] John Doe [updated badge]
-2025-01-22 10:30
+[DATE] 10:30
 
 [Description Box - Blue Highlighted]
 "Email scheda valutazione inviata con successo"

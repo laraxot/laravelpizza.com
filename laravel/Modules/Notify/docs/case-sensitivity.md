@@ -101,7 +101,7 @@ Questa convenzione migliora la leggibilità e mantiene la coerenza con le conven
 
 ## Update Log
 
-- **2025-11-04**: Major cleanup
+- **[DATE]**: Major cleanup
   - Removed 14 duplicate blade templates (ark, minty, sunny, widgets)
   - Removed 2 duplicate test files
   - Removed Config/ directory and duplicate config files

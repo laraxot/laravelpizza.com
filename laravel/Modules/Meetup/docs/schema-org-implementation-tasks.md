@@ -1,6 +1,6 @@
 # Schema.org Implementation Tasks - Complete Roadmap
 
-**Updated**: 2026-02-10  
+**Updated**: [DATE]  
 **Status**: 🚀 Implementation Ready
 
 ---
@@ -331,7 +331,7 @@ public function test_event_json_ld_structure()
 {
     $event = Event::factory()->create([
         'name' => 'Laravel Meetup',
-        'startDate' => '2026-02-15T19:00:00+01:00'
+        'startDate' => '[DATE]T19:00:00+01:00'
     ]);
     
     $jsonLd = $event->toSchemaOrg();

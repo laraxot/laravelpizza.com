@@ -210,7 +210,7 @@ php artisan lang:sync
 
 Seguire queste regole per le chiavi di traduzione è fondamentale per garantire la coerenza, la manutenibilità e l'internazionalizzazione dell'applicazione . L'utilizzo di chiavi standardizzate e strutturate gerarchicamente facilita la gestione delle traduzioni e migliora la qualità complessiva del codice.
 
-## [2024-07-07] Nota storica: correzione massiva Notify
+## [[DATE]] Nota storica: correzione massiva Notify
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.
@@ -427,7 +427,7 @@ php artisan lang:sync
 
 Seguire queste regole per le chiavi di traduzione è fondamentale per garantire la coerenza, la manutenibilità e l'internazionalizzazione dell'applicazione <nome progetto>. L'utilizzo di chiavi standardizzate e strutturate gerarchicamente facilita la gestione delle traduzioni e migliora la qualità complessiva del codice.
 
-## [2024-07-07] Nota storica: correzione massiva Notify
+## [[DATE]] Nota storica: correzione massiva Notify
 
 - Sono state applicate correzioni strutturali alle traduzioni del modulo Notify per allineamento a queste regole.
 - Vedi anche: [TRANSLATION_KEYS_RULES.md](../../../Notify/docs/TRANSLATION_KEYS_RULES.md) per dettagli, esempi e best practice specifiche.

@@ -15,12 +15,17 @@ use Modules\User\Events\SocialiteUserConnected;
 use Modules\User\Models\SocialiteUser;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
+use Illuminate\Contracts\Events\Dispatcher;
 
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
 
 class RegisterSocialiteUserAction
 {
     use QueueableAction;
+
+    public function __construct(
+        private readonly Dispatcher $eventDispatcher,
+    ) {}
 
     /**
      * Execute the action.
@@ -42,7 +47,7 @@ class RegisterSocialiteUserAction
             oauthUser: $oauthUser,
         );
         // Dispatch the socialite user connected event
-        SocialiteUserConnected::dispatch($socialiteUser);
+        $this->eventDispatcher->dispatch(new SocialiteUserConnected($socialiteUser));
 
         // Login the user
         // return app(LoginUserAction::class)->execute($socialiteUser);

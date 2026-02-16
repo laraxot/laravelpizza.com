@@ -122,7 +122,7 @@ Search Engine Optimization guidelines for the Laravel Pizza Meetup theme to maxi
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Laravel Rome Meetup",
-    "startDate": "2026-02-20T19:00",
+    "startDate": "[DATE]T19:00",
     "location": {
         "@type": "Place",
         "name": "Tech Hub Rome",
@@ -295,7 +295,7 @@ Search Engine Optimization guidelines for the Laravel Pizza Meetup theme to maxi
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://laravelpizza.com/it/auth/register</loc>
-        <lastmod>2026-02-13</lastmod>
+        <lastmod>[DATE]</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

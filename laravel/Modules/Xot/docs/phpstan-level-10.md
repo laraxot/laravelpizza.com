@@ -1,7 +1,7 @@
 # PHPStan Livello 10 (MAX) - Report Qualità Codice
 
 ## Data Analisi
-2025-10-22
+[DATE]
 
 ## Comando Eseguito
 ```bash

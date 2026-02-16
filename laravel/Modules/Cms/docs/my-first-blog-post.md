@@ -2,7 +2,7 @@
 extends: _layouts.post
 section: content
 title: My First Blog Post
-date: 2022-06-21
+date: [DATE]
 description: This will be your meta description, make sure it isn't too long
 categories: [writting]
 ---

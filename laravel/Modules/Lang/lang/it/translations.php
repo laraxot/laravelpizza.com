@@ -2,46 +2,65 @@
 
 declare(strict_types=1);
 
-return [
-    'tab' => [
-        'index' => 'Indice',
-        'create' => 'Crea',
-        'edit' => 'Modifica',
-    ],
+return array (
+  'tab' => 
+  array (
+    'index' => 'Indice',
+    'create' => 'Crea',
+    'edit' => 'Modifica',
+  ),
+  'label' => 'Translations',
+  'plural_label' => 'Translations (Plurale)',
+  'navigation' => 
+  array (
+    'name' => 'Translations',
+    'plural' => 'Translations',
+    'group' => 
+    array (
+      'name' => 'General',
+      'description' => 'General Settings',
+    ),
     'label' => 'Translations',
-    'plural_label' => 'Translations (Plurale)',
-    'navigation' => [
-        'name' => 'Translations',
-        'plural' => 'Translations',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Translations',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
-    'fields' => [
-        'id' => [
-            'label' => 'Identificativo',
-            'tooltip' => 'Identificativo univoco del record',
-        ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-        ],
-        'updated_at' => [
-            'label' => 'Ultima Modifica',
-        ],
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Translations',
-        ],
-        'edit' => [
-            'label' => 'Modifica Translations',
-        ],
-        'delete' => [
-            'label' => 'Elimina Translations',
-        ],
-    ],
-];
+    'sort' => 1,
+    'icon' => 'heroicon-o-collection',
+  ),
+  'fields' => 
+  array (
+    'id' => 
+    array (
+      'label' => 'Identificativo',
+      'tooltip' => 'Identificativo univoco del record',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'Data Creazione',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'updated_at' => 
+    array (
+      'label' => 'Ultima Modifica',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'Crea Translations',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica Translations',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina Translations',
+    ),
+  ),
+);

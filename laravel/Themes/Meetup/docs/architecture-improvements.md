@@ -433,6 +433,6 @@ export default defineConfig({
 - [Tailwind CSS v4 Documentation](https://tailwindcss.com/docs)
 
 ---
-**Ultimo aggiornamento**: 2025-11-28
+**Ultimo aggiornamento**: [DATE]
 **Status**: 🟡 In Progress
 **Priorità**: ALTA

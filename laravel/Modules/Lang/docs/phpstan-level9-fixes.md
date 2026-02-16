@@ -1,6 +1,6 @@
 # Correzione conflitto e miglioramento PHPStan livello 9 in Models/Post.php
 
-**Data:** 2025-04-16
+**Data:** [DATE]
 
 ## Problema
 Durante un controllo di routine sono stati rilevati diversi conflitti Git non risolti nel file `app/Models/Post.php` del modulo Lang. In particolare, il conflitto riguardava la gestione dei tipi per le proprietà `post_type` e `post_id` nei metodi `getTitleAttribute` e `getGuidAttribute`.

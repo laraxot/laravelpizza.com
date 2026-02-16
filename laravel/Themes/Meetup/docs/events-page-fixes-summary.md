@@ -1,7 +1,7 @@
 # Events Page Fixes - Implementation Summary
 
 ## Data
-2025-12-01
+[DATE]
 
 ## Issues Fixed
 
@@ -127,7 +127,7 @@ All block components must handle BOTH variable formats:
 
 This ensures compatibility with the page rendering system.
 
-See: `/Themes/Meetup/docs/2025-12-01-block-component-props-pattern.md`
+See: `/Themes/Meetup/docs/[DATE]-block-component-props-pattern.md`
 
 ## Layout Clarification
 

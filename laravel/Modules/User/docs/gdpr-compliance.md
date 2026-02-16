@@ -377,21 +377,21 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
     "first_name": "Mario",
     "last_name": "Rossi",
     "email": "mario.rossi@example.com",
-    "created_at": "2024-01-15T10:30:00Z",
-    "updated_at": "2024-01-20T14:45:00Z"
+    "created_at": "[DATE]T10:30:00Z",
+    "updated_at": "[DATE]T14:45:00Z"
   },
   "consents": [
     {
       "type": "privacy_policy",
       "given": true,
-      "date": "2024-01-15T10:30:00Z",
+      "date": "[DATE]T10:30:00Z",
       "version": "1.0",
       "document_url": "/privacy/policy/v1.0"
     },
     {
       "type": "marketing",
       "given": true,
-      "date": "2024-01-15T10:30:00Z",
+      "date": "[DATE]T10:30:00Z",
       "withdrawn": null
     }
   ],
@@ -457,7 +457,7 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
 **Response Format**:
 ```json
 {
-  "export_date": "2024-01-20T10:00:00Z",
+  "export_date": "[DATE]T10:00:00Z",
   "format": "json",
   "data": {
     "personal_data": { ... },

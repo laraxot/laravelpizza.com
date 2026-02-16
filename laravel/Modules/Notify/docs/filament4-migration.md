@@ -1,6 +1,6 @@
 # Filament v4 Migration Complete - Notify Module
 
-**Date**: 2025-12-12
+**Date**: [DATE]
 **Module**: Notify
 **Status**: ✅ **COMPLETED**
 

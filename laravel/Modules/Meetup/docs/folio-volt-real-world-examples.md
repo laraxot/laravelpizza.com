@@ -748,7 +748,7 @@ class Episode extends Model
             'title' => 'Laravel Updates',
             'description' => 'Latest Laravel updates and news',
             'duration_in_seconds' => 2579,
-            'released_at' => '2023-07-06 10:00:00',
+            'released_at' => '[DATE] 10:00:00',
         ],
         // ... more episodes
     ];

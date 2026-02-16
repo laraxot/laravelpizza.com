@@ -1,7 +1,7 @@
 # Analisi Metodi Duplicati in BaseUser.php
 
 ## Data Analisi
-2025-10-15
+[DATE]
 
 ## Problema
 Il file `Modules/User/app/Models/BaseUser.php` contiene metodi che sono già forniti dai trait Spatie Permission:

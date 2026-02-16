@@ -375,7 +375,7 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
                 {{ __('pub_theme::privacy.title') }}
             </h1>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
-                {{ __('pub_theme::privacy.last_updated') }}: {{ $last_updated ?? '2024-01-15' }}
+                {{ __('pub_theme::privacy.last_updated') }}: {{ $last_updated ?? '[DATE]' }}
             </p>
 
             {{-- Toc (Table of Contents) --}}
@@ -445,7 +445,7 @@ Il form di registrazione deve seguire questi principi UX/GDPR:
                 {{ __('pub_theme::cookies.title') }}
             </h1>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
-                {{ __('pub_theme::cookies.last_updated') }}: {{ $last_updated ?? '2024-01-15' }}
+                {{ __('pub_theme::cookies.last_updated') }}: {{ $last_updated ?? '[DATE]' }}
             </p>
 
             {{-- What are cookies --}}

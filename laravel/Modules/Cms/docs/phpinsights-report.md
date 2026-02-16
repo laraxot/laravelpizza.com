@@ -1,6 +1,6 @@
 # PHP Insights Report (CMS)
 
-## sintesi esecuzione 2025-11-12
+## sintesi esecuzione [DATE]
 - Comando: `./vendor/bin/phpinsights analyse Modules/Cms --config-path=phpinsights.php --composer=laravel/composer.lock --no-interaction`
 - Score ottenuti: `Code 83.7% · Complexity 97.2% · Architecture 76.5% · Style 84.3%`
 - Blocco principale: **Style score < 90%** dovuto a conflitti irrisolti e violazioni PSR / naming.

@@ -1,4 +1,4 @@
-# Roadmap Modulo Cms - 2026-01-30
+# Roadmap Modulo Cms - [DATE]
 
 **Modulo**: Cms (Content Management System)
 **Scopo**: Gestione contenuti dinamici con sistema blocks, pagine multi-lingua, menu gerarchici e integrazione Folio/Volt.

@@ -177,4 +177,4 @@ Prima di modificare la configurazione SMS, verificare che:
 
 ---
 
-*Ultimo aggiornamento: 2025-05-12*
+*Ultimo aggiornamento: [DATE]*

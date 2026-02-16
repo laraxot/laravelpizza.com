@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Exception;
 
 /**
  * Logout widget for user session termination.
@@ -50,7 +51,7 @@ class LogoutWidget extends XotBaseWidget
         $view = 'filament.widgets.auth.logout-message';
         // @phpstan-ignore-next-line
         if (! view()->exists($view)) {
-            throw new \Exception('View '.$view.' not found');
+            throw new Exception('View '.$view.' not found');
         }
 
         return [

@@ -1,6 +1,6 @@
 # Quality Improvements Summary - PHPStan, PHPMD, PHP Insights
 
-## Data: 2025-01-02
+## Data: [DATE]
 
 ## Riepilogo Risultati
 

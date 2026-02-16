@@ -162,7 +162,7 @@ find  --include="*.php" | grep -v "static" | grep -v "::"
 
 ---
 
-**DATA EFFETTIVA**: 2025-08-20
+**DATA EFFETTIVA**: [DATE]
 **PRIORITÀ**: CRITICA
 **RESPONSABILE**: Tutto il team sviluppo
 

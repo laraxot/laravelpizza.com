@@ -548,4 +548,4 @@ sqlite> SELECT * FROM meetup_pizzas LIMIT 5;
 
 Tempo stimato per completare questo quickstart: **5-10 minuti**
 
-*Ultima revisione: 2025-11-27*
+*Ultima revisione: [DATE]*

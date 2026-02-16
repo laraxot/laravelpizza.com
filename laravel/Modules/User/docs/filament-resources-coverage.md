@@ -1,6 +1,6 @@
 # Filament Resources Coverage Analysis - Modulo User
 
-## Data: 2025-01-02
+## Data: [DATE]
 
 ## Scopo
 Analizzare la copertura completa delle Filament Resources per tutti i modelli del modulo User, identificare cosa manca e decidere cosa implementare seguendo la filosofia DRY + KISS.

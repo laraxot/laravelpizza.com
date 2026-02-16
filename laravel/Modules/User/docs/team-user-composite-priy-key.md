@@ -2,7 +2,7 @@
 
 ## Data Intervento
 
-**2025-11-19** - Implementazione chiave primaria composita per tabella pivot team_user
+**[DATE]** - Implementazione chiave primaria composita per tabella pivot team_user
 
 ## Problema Identificato
 

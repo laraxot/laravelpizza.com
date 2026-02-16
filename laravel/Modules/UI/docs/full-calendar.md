@@ -160,4 +160,4 @@ public function eventDidMount(): string
 - [Regole .mdc](../.cursor/rules/cursor.mdc), [../.windsurf/rules/windsurf.mdc]
 
 ## Ultimo aggiornamento
-2025-06-04
+[DATE]

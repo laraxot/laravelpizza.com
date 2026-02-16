@@ -5,12 +5,14 @@ declare(strict_types=1);
 namespace Modules\User\Providers\Traits;
 
 use Carbon\CarbonInterval;
+use Exception;
 use Illuminate\Support\Facades\Config;
 use Laravel\Passport\Passport;
 use Modules\User\Models\OauthAccessToken;
 use Modules\User\Models\OauthAuthCode;
 use Modules\User\Models\OauthClient;
 use Modules\User\Models\OauthRefreshToken;
+use RuntimeException;
 use Webmozart\Assert\Assert;
 
 trait HasPassportConfiguration
@@ -18,7 +20,7 @@ trait HasPassportConfiguration
     /**
      * Configurazione completa di Passport.
      *
-     * @throws \RuntimeException Se la configurazione fallisce
+     * @throws RuntimeException Se la configurazione fallisce
      */
     protected function configurePassport(): void
     {
@@ -27,8 +29,8 @@ trait HasPassportConfiguration
             $this->configureTokens();
             $this->configureScopes();
             $this->configureRoutes();
-        } catch (\Exception $e) {
-            throw new \RuntimeException("Failed to configure Passport: {$e->getMessage()}", 0, $e);
+        } catch (Exception $e) {
+            throw new RuntimeException("Failed to configure Passport: {$e->getMessage()}", 0, $e);
         }
     }
 

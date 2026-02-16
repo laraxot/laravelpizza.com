@@ -166,7 +166,7 @@ https://www.php-fig.org/psr/psr-12/
 ```json
 {
   "decision": "ModuleBaseModel Pattern",
-  "date": "2026-01-10",
+  "date": "[DATE]",
   "context": "Need module-specific base classes",
   "resolution": "Each module extends ModuleBaseModel which extends XotBaseModel",
   "rationale": "Maintains Laraxot philosophy while allowing module customization",
@@ -463,6 +463,6 @@ WHERE active = true;
 
 ---
 
-**Ultimo aggiornamento**: 2026-02-05  
+**Ultimo aggiornamento**: [DATE]  
 **Module**: Xot  
 **Versione**: 1.0.0

@@ -504,7 +504,7 @@ class PricingService
   "itemOffered": {
     "@type": "Event",
     "name": "Laravel Meetup Milano",
-    "startDate": "2026-02-15T19:00:00+01:00",
+    "startDate": "[DATE]T19:00:00+01:00",
     "url": "https://laravelpizza.it/events/laravel-meetup-milano"
   },
   "offeredBy": {
@@ -512,8 +512,8 @@ class PricingService
     "name": "Laravel Italy Community",
     "url": "https://laravel-italia.it"
   },
-  "validFrom": "2026-02-01T00:00:00+01:00",
-  "validThrough": "2026-02-14T23:59:59+01:00",
+  "validFrom": "[DATE]T00:00:00+01:00",
+  "validThrough": "[DATE]T23:59:59+01:00",
   "url": "https://laravelpizza.it/events/laravel-meetup-milano/tickets"
 }
 ```
@@ -550,7 +550,7 @@ class PricingService
       "price": "199.00",
       "priceCurrency": "EUR",
       "discountPercentage": 10,
-      "validFrom": "2026-01-01T00:00:00+01:00",
+      "validFrom": "[DATE]T00:00:00+01:00",
       "availability": "https://schema.org/InStock"
     },
     {
@@ -560,7 +560,7 @@ class PricingService
       "price": "99.00",
       "priceCurrency": "EUR",
       "discountPercentage": 5,
-      "validFrom": "2026-02-01T00:00:00+01:00",
+      "validFrom": "[DATE]T00:00:00+01:00",
       "availability": "https://schema.org/PreOrder"
     }
   ],
@@ -578,7 +578,7 @@ class PricingService
 {
   "@context": "https://schema.org",
   "@type": "EventReservation",
-  "reservationId": "LRM-2026-02-15-001",
+  "reservationId": "LRM-[DATE]-001",
   "reservationStatus": "https://schema.org/ReservationConfirmed",
   "underName": {
     "@type": "Person",
@@ -588,7 +588,7 @@ class PricingService
   "reservationFor": {
     "@type": "Event",
     "name": "Laravel Advanced Workshop",
-    "startDate": "2026-02-15T09:00:00+01:00",
+    "startDate": "[DATE]T09:00:00+01:00",
     "location": {
       "@type": "Place",
       "name": "TechHub Milano",
@@ -601,7 +601,7 @@ class PricingService
       }
     }
   },
-  "bookingTime": "2026-02-01T10:30:00+01:00",
+  "bookingTime": "[DATE]T10:30:00+01:00",
   "totalPrice": "150.00",
   "priceCurrency": "EUR",
   "reservedTicket": {
@@ -615,7 +615,7 @@ class PricingService
       "seatSection": "101"
     }
   },
-  "modifiedTime": "2026-02-05T14:20:00+01:00"
+  "modifiedTime": "[DATE]T14:20:00+01:00"
 }
 ```
 

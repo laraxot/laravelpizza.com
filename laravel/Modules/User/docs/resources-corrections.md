@@ -1,4 +1,4 @@
-# Resources Corrections Summary - 2025-01-22
+# Resources Corrections Summary - [DATE]
 
 ## Obiettivo
 Correggere errori PHPStan livello 10, PHPMD e PHP Insights nelle Resources Filament del modulo User, seguendo rigorosamente le regole Laraxot e la filosofia DRY + KISS.
@@ -139,7 +139,7 @@ use Filament\Tables\Actions\ViewAction; // Namespace sbagliato
 
 1. ✅ `xotbase-resource-getpages-automatic.md`: Filosofia DRY per `getPages()` automatico
 2. ✅ `resources-array-keys-philosophy.md`: Filosofia per chiavi stringhe sempre
-3. ✅ `resources-corrections-summary-2025-01-22.md`: Questo documento
+3. ✅ `resources-corrections-summary-[DATE].md`: Questo documento
 
 ## Lezioni Apprese
 

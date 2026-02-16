@@ -50,7 +50,7 @@ userfactory.php              → ELIMINA
 - `Pest.php` - Uppercase per convenzione Pest framework
 - `CHANGELOG.md`, `LICENSE`, `CONTRIBUTING.md` - Uppercase per visibilità
 
-## 🗑️ Cleanup Effettuato (2025-11-04)
+## 🗑️ Cleanup Effettuato ([DATE])
 
 ### Modulo Xot (6 file)
 ```bash
@@ -336,6 +336,6 @@ Questa non è solo una regola tecnica, è una **filosofia di sviluppo**:
 
 ---
 
-**Ultimo aggiornamento**: 2025-11-04
+**Ultimo aggiornamento**: [DATE]
 **Status**: ✅ Cleanup completato, enforcement attivo
 **Revisione**: Trimestrale (ogni 3 mesi)

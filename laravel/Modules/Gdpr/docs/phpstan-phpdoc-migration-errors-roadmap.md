@@ -419,7 +419,7 @@ Prima di committare le modifiche, verificare:
 
 | Data | Autore | Modifiche |
 |------|--------|-----------|
-| 2026-01-13 | Claude Sonnet 4.5 | Creazione roadmap iniziale con analisi approfondita |
+| [DATE] | Claude Sonnet 4.5 | Creazione roadmap iniziale con analisi approfondita |
 
 ---
 

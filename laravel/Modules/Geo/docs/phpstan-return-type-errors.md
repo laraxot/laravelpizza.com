@@ -256,4 +256,4 @@ grep -n "Attribute.*string" Modules/*/Models/*.php | grep -v "SafeStringCastActi
 - [Geo Module Structure](./structure.md)
 - [Class Not Found Errors](./class_not_found_errors.md)
 
-*Ultimo aggiornamento: 2025-07-31*
+*Ultimo aggiornamento: [DATE]*

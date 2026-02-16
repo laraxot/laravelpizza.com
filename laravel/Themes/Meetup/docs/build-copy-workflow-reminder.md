@@ -1,7 +1,7 @@
 # Build & Copy Workflow - Reminder Critico
 
 ## Data
-2025-11-30
+[DATE]
 
 ## Correzione Importante dall'Utente
 

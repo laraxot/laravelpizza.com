@@ -506,7 +506,7 @@ $email = new SpatieEmail($user, 'welcome-user');
 
 $email->mergeData([
     'activation_code' => '123456',
-    'expires_at' => '2025-10-30 12:00',
+    'expires_at' => '[DATE] 12:00',
 ]);
 
 Mail::to($user->email)->send($email);

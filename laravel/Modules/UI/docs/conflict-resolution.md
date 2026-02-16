@@ -1,7 +1,7 @@
 # Git Conflict Resolution Audit
 
 ## Data
-- 2025-01-06
+- [DATE]
 
 ## File Coinvolti
 
@@ -38,4 +38,4 @@
 Tutte le verifiche hanno avuto esito positivo.
 
 ---
-Ultimo aggiornamento: 2025-01-06
+Ultimo aggiornamento: [DATE]

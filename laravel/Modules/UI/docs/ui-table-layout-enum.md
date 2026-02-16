@@ -165,4 +165,4 @@ Seleziona le colonne appropriate in base al layout corrente.
 - [Filament Best Practices](filament-widget-best-practices.md)
 
 ## Ultimo Aggiornamento
-2025-01-27 - Documentazione TableLayoutEnum nella root docs
+[DATE] - Documentazione TableLayoutEnum nella root docs

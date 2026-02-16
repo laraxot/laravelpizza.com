@@ -1,7 +1,7 @@
 # Fix: Duplicate Entry Error in team_user Table - Conversione UUID a Autoincrement
 
 ## Data Intervento
-**2025-01-22** - Conversione PRIMARY KEY da UUID a autoincrement nella tabella pivot team_user
+**[DATE]** - Conversione PRIMARY KEY da UUID a autoincrement nella tabella pivot team_user
 
 ## Problema Identificato
 

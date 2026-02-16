@@ -2,79 +2,125 @@
 
 declare(strict_types=1);
 
-return [
-    'fields' => [
-        'name' => [
-            'label' => 'Nome',
-            'placeholder' => 'Nome del tenant',
-            'helper_text' => 'Inserisci il nome del tenant',
-        ],
-        'slug' => [
-            'label' => 'Slug',
-            'placeholder' => 'Slug del tenant',
-            'helper_text' => 'Lo slug verrà generato automaticamente dal nome',
-        ],
-        'domain' => [
-            'label' => 'Dominio',
-            'placeholder' => 'dominio',
-            'helper_text' => 'Il dominio del tenant',
-        ],
-        'email' => [
-            'label' => 'Email',
-            'placeholder' => 'email@example.com',
-            'helper_text' => 'Indirizzo email del tenant',
-        ],
-        'phone' => [
-            'label' => 'Telefono',
-            'placeholder' => 'Telefono',
-            'helper_text' => 'Numero di telefono del tenant',
-        ],
-        'mobile' => [
-            'label' => 'Cellulare',
-            'placeholder' => 'Cellulare',
-            'helper_text' => 'Numero di cellulare del tenant',
-        ],
-        'address' => [
-            'label' => 'Indirizzo',
-            'placeholder' => 'Indirizzo',
-            'helper_text' => 'Indirizzo del tenant',
-        ],
-        'primary_color' => [
-            'label' => 'primary_color',
-            'helper_text' => 'Colore primario del tenant',
-        ],
-        'secondary_color' => [
-            'label' => 'Colore Secondario',
-            'helper_text' => 'Colore secondario del tenant',
-        ],
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Tenant',
-            'icon' => 'heroicon-o-plus',
-            'color' => 'primary',
-        ],
-        'edit' => [
-            'label' => 'Modifica Tenant',
-            'icon' => 'heroicon-o-pencil',
-            'color' => 'warning',
-        ],
-        'delete' => [
-            'label' => 'Elimina Tenant',
-            'icon' => 'heroicon-o-trash',
-            'color' => 'danger',
-        ],
-        'reorderRecords' => [
-            'tooltip' => 'reorderRecords',
-        ],
-        'cancel' => [
-            'tooltip' => 'cancel',
-        ],
-        'logout' => [
-            'tooltip' => 'logout',
-        ],
-        'detach' => [
-            'tooltip' => 'detach',
-        ],
-    ],
-];
+return array (
+  'fields' => 
+  array (
+    'name' => 
+    array (
+      'label' => 'Nome',
+      'placeholder' => 'Nome del tenant',
+      'helper_text' => 'Inserisci il nome del tenant',
+      'tooltip' => '',
+      'description' => '',
+    ),
+    'slug' => 
+    array (
+      'label' => 'Slug',
+      'placeholder' => 'Slug del tenant',
+      'helper_text' => 'Lo slug verrà generato automaticamente dal nome',
+      'tooltip' => '',
+      'description' => '',
+    ),
+    'domain' => 
+    array (
+      'label' => 'Dominio',
+      'placeholder' => 'dominio',
+      'helper_text' => 'Il dominio del tenant',
+      'tooltip' => '',
+      'description' => '',
+    ),
+    'email' => 
+    array (
+      'label' => 'Email',
+      'placeholder' => 'email@example.com',
+      'helper_text' => 'Indirizzo email del tenant',
+      'tooltip' => '',
+      'description' => '',
+    ),
+    'phone' => 
+    array (
+      'label' => 'Telefono',
+      'placeholder' => 'Telefono',
+      'helper_text' => 'Numero di telefono del tenant',
+      'tooltip' => '',
+      'description' => '',
+    ),
+    'mobile' => 
+    array (
+      'label' => 'Cellulare',
+      'placeholder' => 'Cellulare',
+      'helper_text' => 'Numero di cellulare del tenant',
+      'tooltip' => '',
+      'description' => '',
+    ),
+    'address' => 
+    array (
+      'label' => 'Indirizzo',
+      'placeholder' => 'Indirizzo',
+      'helper_text' => 'Indirizzo del tenant',
+      'tooltip' => '',
+      'description' => '',
+    ),
+    'primary_color' => 
+    array (
+      'label' => 'primary_color',
+      'helper_text' => 'Colore primario del tenant',
+      'tooltip' => '',
+      'description' => '',
+    ),
+    'secondary_color' => 
+    array (
+      'label' => 'Colore Secondario',
+      'helper_text' => 'Colore secondario del tenant',
+      'tooltip' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'Crea Tenant',
+      'icon' => 'heroicon-o-plus',
+      'color' => 'primary',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica Tenant',
+      'icon' => 'heroicon-o-pencil',
+      'color' => 'warning',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina Tenant',
+      'icon' => 'heroicon-o-trash',
+      'color' => 'danger',
+    ),
+    'reorderRecords' => 
+    array (
+      'tooltip' => 'reorderRecords',
+    ),
+    'cancel' => 
+    array (
+      'tooltip' => 'cancel',
+    ),
+    'logout' => 
+    array (
+      'tooltip' => 'logout',
+    ),
+    'detach' => 
+    array (
+      'tooltip' => 'detach',
+    ),
+  ),
+  'navigation' => 
+  array (
+    'label' => 'Missing Navigation Label',
+    'plural_label' => 'Missing Navigation Plural Label',
+    'group' => 'Missing Group',
+    'icon' => 'heroicon-o-puzzle-piece',
+    'sort' => 100,
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+);

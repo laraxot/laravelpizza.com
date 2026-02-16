@@ -2,43 +2,60 @@
 
 declare(strict_types=1);
 
-return [
-    'fields' => [
-        'method' => [
-            'label' => 'method',
-            'description' => 'method',
-            'helper_text' => 'method',
-            'placeholder' => 'method',
-        ],
-        '_tpl' => [
-            'label' => '_tpl',
-        ],
-        'view' => [
-            'label' => 'view',
-        ],
-    ],
+return array (
+  'fields' => 
+  array (
+    'method' => 
+    array (
+      'label' => 'method',
+      'description' => 'method',
+      'helper_text' => 'method',
+      'placeholder' => 'method',
+      'tooltip' => '',
+    ),
+    '_tpl' => 
+    array (
+      'label' => '_tpl',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'view' => 
+    array (
+      'label' => 'view',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'label' => 'Slider',
+  'plural_label' => 'Slider (Plurale)',
+  'navigation' => 
+  array (
+    'name' => 'Slider',
+    'plural' => 'Slider',
+    'group' => 
+    array (
+      'name' => 'General',
+      'description' => 'General Settings',
+    ),
     'label' => 'Slider',
-    'plural_label' => 'Slider (Plurale)',
-    'navigation' => [
-        'name' => 'Slider',
-        'plural' => 'Slider',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Slider',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Slider',
-        ],
-        'edit' => [
-            'label' => 'Modifica Slider',
-        ],
-        'delete' => [
-            'label' => 'Elimina Slider',
-        ],
-    ],
-];
+    'sort' => 1,
+    'icon' => 'heroicon-o-collection',
+  ),
+  'actions' => 
+  array (
+    'create' => 
+    array (
+      'label' => 'Crea Slider',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica Slider',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina Slider',
+    ),
+  ),
+);

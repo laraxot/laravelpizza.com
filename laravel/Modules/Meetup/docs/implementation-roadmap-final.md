@@ -1,6 +1,6 @@
 # Roadmap Implementazione Finale - Laravel Pizza Meetups
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## Panoramica Architettura Finale
 

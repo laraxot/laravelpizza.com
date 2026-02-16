@@ -11,6 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Collection;
 use Illuminate\View\View;
+use InvalidArgumentException;
 use Livewire\Component;
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Events\TeamSwitched;

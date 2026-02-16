@@ -42,7 +42,7 @@ Il `RouteServiceProvider` gestisce:
 
 # Analisi Dettagliata del Modulo Job
 
-Data: 2025-04-23 19:09:55
+Data: [DATE] 19:09:55
 
 ## Informazioni generali
 

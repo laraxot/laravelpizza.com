@@ -149,4 +149,4 @@ __('<nome progetto>::widgets.doctor_appointments.empty.description')
 - [File inglese aggiornato](../laravel/Modules/<nome progetto>/lang/en/widgets.php)
 - [Widget DoctorAppointments](../laravel/Modules/<nome progetto>/app/Filament/Widgets/DoctorAppointmentsWidget.php)
 
-*Risoluzione completata: 2025-01-21*
+*Risoluzione completata: [DATE]*

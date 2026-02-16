@@ -1,7 +1,7 @@
-# Risultati Analisi Modulo Lang - 2025-01-06
+# Risultati Analisi Modulo Lang - [DATE]
 
 ## Data
-2025-01-06
+[DATE]
 
 ## Strumenti Utilizzati
 - PHPStan Livello 10
@@ -89,8 +89,8 @@
 
 ## Collegamenti
 
-- [Quality Improvements](./quality-improvements-2025-01-06.md)
+- [Quality Improvements](./quality-improvements-[DATE].md)
 - [Index Documentation](./index.md)
 - [Best Practices](./BEST_PRACTICES.md)
 
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*

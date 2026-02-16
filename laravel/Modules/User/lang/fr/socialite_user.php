@@ -2,49 +2,104 @@
 
 declare(strict_types=1);
 
-return [
-    'fields' => [
-        'provider' => [
-            'label' => 'Fournisseur',
-        ],
-        'provider_id' => [
-            'label' => 'ID du Fournisseur',
-        ],
-        'name' => [
-            'label' => 'Nom',
-        ],
-        'email' => [
-            'label' => 'Email',
-        ],
-        'avatar' => [
-            'label' => 'Avatar',
-        ],
-        'create' => [
-            'label' => 'Créer',
-        ],
-        'attach' => [
-            'label' => 'Attacher',
-        ],
-        'layout' => [
-            'label' => 'Mise en Page',
-        ],
-        'view' => [
-            'label' => 'Voir',
-        ],
-        'edit' => [
-            'label' => 'Modifier',
-        ],
-        'detach' => [
-            'label' => 'Détacher',
-        ],
-        'toggleColumns' => [
-            'label' => 'Basculer les Colonnes',
-        ],
-    ],
-    'navigation' => [
-        'sort' => 89,
-        'icon' => 'heroicon-o-user-circle',
-        'group' => 'Authentification',
-        'label' => 'Utilisateurs Socialite',
-    ],
-];
+return array (
+  'fields' => 
+  array (
+    'provider' => 
+    array (
+      'label' => 'Fournisseur',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'provider_id' => 
+    array (
+      'label' => 'ID du Fournisseur',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'name' => 
+    array (
+      'label' => 'Nom',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'email' => 
+    array (
+      'label' => 'Email',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'avatar' => 
+    array (
+      'label' => 'Avatar',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'create' => 
+    array (
+      'label' => 'Créer',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'attach' => 
+    array (
+      'label' => 'Attacher',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'layout' => 
+    array (
+      'label' => 'Mise en Page',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'view' => 
+    array (
+      'label' => 'Voir',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifier',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'detach' => 
+    array (
+      'label' => 'Détacher',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'toggleColumns' => 
+    array (
+      'label' => 'Basculer les Colonnes',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'navigation' => 
+  array (
+    'sort' => 89,
+    'icon' => 'heroicon-o-user-circle',
+    'group' => 'Authentification',
+    'label' => 'Utilisateurs Socialite',
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'actions' => 
+  array (
+  ),
+);

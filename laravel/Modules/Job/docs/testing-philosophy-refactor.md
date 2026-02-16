@@ -251,6 +251,6 @@ This is the way.
 
 ---
 
-**Date**: 2026-01-09
+**Date**: [DATE]
 **Author**: Claude Sonnet 4.5
 **Status**: Implementation Ready

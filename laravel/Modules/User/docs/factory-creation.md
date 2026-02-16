@@ -109,5 +109,5 @@ Questo errore è **GRAVISSIMO** perché:
 4. ⏳ Aggiornare seeder per utilizzare le nuove factory
 5. ⏳ Documentare pattern e best practice
 
-*Creato: 2025-01-06*
-*Ultimo aggiornamento: 2025-01-06*
+*Creato: [DATE]*
+*Ultimo aggiornamento: [DATE]*

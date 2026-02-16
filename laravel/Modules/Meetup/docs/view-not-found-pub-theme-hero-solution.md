@@ -1,7 +1,7 @@
 # Soluzione: view not found: pub_theme::components.blocks.hero.main
 
 ## Data
-2025-11-29
+[DATE]
 
 ## Problema Risolto
 

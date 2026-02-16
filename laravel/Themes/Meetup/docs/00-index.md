@@ -34,7 +34,7 @@
   - [Footer Improvement](replikate/footer_improvement_prompt.md) - Specific footer UI/UX task
   - [Home Content Review](replikate/home_content_review_prompt.md) - Homepage content analysis task
   - [Prompt Writing Guide](replikate/prompt-writing-guide.md) - Standards for writing prompts
-  - [Corrections Summary](replikate/corrections-summary-2026-02-09.md) - History of prompt corrections (Feb 2026)
+  - [Corrections Summary](replikate/corrections-summary-[DATE].md) - History of prompt corrections (Feb 2026)
   - [Legacy Footer](replikate/replikate_footer.txt) - Deprecated prompt (kept for reference)
 
 ## Filament 5.x Upgrade

@@ -67,8 +67,8 @@ public function getScheduleSchemaOrg(): array
   "name": "Laravel Pizza Monthly Meetup",
   "eventSchedule": {
     "@type": "Schedule",
-    "startDate": "2026-01-01",
-    "endDate": "2026-12-31",
+    "startDate": "[DATE]",
+    "endDate": "[DATE]",
     "startTime": "19:00:00",
     "endTime": "22:00:00",
     "repeatFrequency": "P1M",

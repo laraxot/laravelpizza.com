@@ -1,6 +1,6 @@
 # Fix PHPStan Modelli - Generics e Tipizzazione Completa
 
-## Data: 2025-01-27
+## Data: [DATE]
 
 ## Problema Identificato
 

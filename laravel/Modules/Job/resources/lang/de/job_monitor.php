@@ -2,16 +2,24 @@
 
 declare(strict_types=1);
 
-return [
-    'navigation' => [
-        'icon' => 'heroicon-o-eye',
-        'group' => 'System',
-        'label' => 'Auftragsmonitor',
-        'sort' => 88,
-    ],
-    'actions' => [
-        'logout' => [
-            'tooltip' => 'Abmelden',
-        ],
-    ],
-];
+return array (
+  'navigation' => 
+  array (
+    'icon' => 'heroicon-o-eye',
+    'group' => 'System',
+    'label' => 'Auftragsmonitor',
+    'sort' => 88,
+  ),
+  'actions' => 
+  array (
+    'logout' => 
+    array (
+      'tooltip' => 'Abmelden',
+    ),
+  ),
+  'label' => 'Missing Label',
+  'plural_label' => 'Missing Plural label',
+  'fields' => 
+  array (
+  ),
+);

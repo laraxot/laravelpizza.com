@@ -2,38 +2,55 @@
 
 declare(strict_types=1);
 
-return [
-    'actions' => [
-        'view' => [
-            'label' => 'view',
-        ],
-        'delete' => [
-            'label' => 'delete',
-        ],
-    ],
-    'navigation' => [
-        'name' => 'Edit Team',
-        'plural' => 'Edit Team',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Edit Team',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
+return array (
+  'actions' => 
+  array (
+    'view' => 
+    array (
+      'label' => 'view',
+    ),
+    'delete' => 
+    array (
+      'label' => 'delete',
+    ),
+  ),
+  'navigation' => 
+  array (
+    'name' => 'Edit Team',
+    'plural' => 'Edit Team',
+    'group' => 
+    array (
+      'name' => 'General',
+      'description' => 'General Settings',
+    ),
     'label' => 'Edit Team',
-    'plural_label' => 'Edit Team (Plurale)',
-    'fields' => [
-        'id' => [
-            'label' => 'Identificativo',
-            'tooltip' => 'Identificativo univoco del record',
-        ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-        ],
-        'updated_at' => [
-            'label' => 'Ultima Modifica',
-        ],
-    ],
-];
+    'sort' => 1,
+    'icon' => 'heroicon-o-collection',
+  ),
+  'label' => 'Edit Team',
+  'plural_label' => 'Edit Team (Plurale)',
+  'fields' => 
+  array (
+    'id' => 
+    array (
+      'label' => 'Identificativo',
+      'tooltip' => 'Identificativo univoco del record',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'Data Creazione',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'updated_at' => 
+    array (
+      'label' => 'Ultima Modifica',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+);

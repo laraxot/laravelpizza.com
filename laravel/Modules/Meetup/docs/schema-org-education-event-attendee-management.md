@@ -366,8 +366,8 @@ class CertificateService
   "@type": "EducationEvent",
   "name": "Laravel Advanced Eloquent Workshop",
   "description": "Deep dive into advanced Eloquent relationships, query optimization, and performance tuning",
-  "startDate": "2026-02-20T09:00:00+01:00",
-  "endDate": "2026-02-20T17:00:00+01:00",
+  "startDate": "[DATE]T09:00:00+01:00",
+  "endDate": "[DATE]T17:00:00+01:00",
   "location": {
     "@type": "Place",
     "name": "TechHub Milano",
@@ -419,8 +419,8 @@ class CertificateService
   "description": "Complete Laravel learning track from beginner to expert level",
   "eventSchedule": {
     "@type": "Schedule",
-    "startDate": "2026-01-01",
-    "endDate": "2026-12-31",
+    "startDate": "[DATE]",
+    "endDate": "[DATE]",
     "repeatFrequency": "P1M",
     "startTime": "09:00:00",
     "endTime": "17:00:00",
@@ -432,14 +432,14 @@ class CertificateService
       "name": "Laravel Basics for Beginners",
       "educationalLevel": "https://schema.org/Beginner",
       "teaches": ["Laravel installation", "Routing basics", "Blade fundamentals"],
-      "startDate": "2026-01-15T09:00:00+01:00"
+      "startDate": "[DATE]T09:00:00+01:00"
     },
     {
       "@type": "EducationEvent", 
       "name": "Advanced Laravel Patterns",
       "educationalLevel": "https://schema.org/Advanced",
       "teaches": ["Design patterns", "Architecture", "Performance optimization"],
-      "startDate": "2026-03-15T09:00:00+01:00"
+      "startDate": "[DATE]T09:00:00+01:00"
     }
   ]
 }
@@ -464,7 +464,7 @@ class CertificateService
     "name": "Maria Bianchi",
     "identifier": "user_456"
   },
-  "bookingTime": "2026-02-01T10:30:00+01:00",
+  "bookingTime": "[DATE]T10:30:00+01:00",
   "reservationStatus": "https://schema.org/ReservationConfirmed",
   "reservedTicket": {
     "@type": "Ticket",

@@ -17,12 +17,16 @@ class GetGuardAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly Assert $assert,
+    ) {}
+
     /**
      * Execute the action.
      */
     public function execute(): StatefulGuard|Guard
     {
-        Assert::string($guard = config('filament.auth.guard'));
+        $this->assert->string($guard = config('filament.auth.guard'));
 
         return auth()->guard($guard);
     }

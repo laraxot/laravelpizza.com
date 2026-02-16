@@ -414,7 +414,7 @@ class PatientTest extends TestCase
     /** @test */
     public function it_calculates_age_correctly(): void
     {
-        $birthDate = new DateTimeImmutable('1990-01-01');
+        $birthDate = new DateTimeImmutable('[DATE]');
         $patient = new Patient(['birth_date' => $birthDate]);
 
         $this->assertEquals(33, $patient->getAge());
@@ -443,7 +443,7 @@ class PatientRegistrationTest extends TestCase
             'first_name' => 'Mario',
             'last_name' => 'Rossi',
             'tax_code' => 'RSSMRA90A01H501R',
-            'birth_date' => '1990-01-01',
+            'birth_date' => '[DATE]',
             'gender' => 'M',
         ]);
 

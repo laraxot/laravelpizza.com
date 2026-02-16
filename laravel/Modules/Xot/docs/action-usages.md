@@ -102,7 +102,7 @@ Aggiungere regole PHPStan per identificare automaticamente questi pattern.
 ---
 
 **PRIORITÀ**: CRITICA - Da seguire SEMPRE senza eccezioni
-**AGGIORNATO**: 2025-01-30
+**AGGIORNATO**: [DATE]
 **AUTORE**: Sistema di Qualità Laraxot
 # Action Usage Patterns - Regole Fondamentali
 
@@ -208,5 +208,5 @@ Aggiungere regole PHPStan per identificare automaticamente questi pattern.
 ---
 
 **PRIORITÀ**: CRITICA - Da seguire SEMPRE senza eccezioni
-**AGGIORNATO**: 2025-01-30
+**AGGIORNATO**: [DATE]
 **AUTORE**: Sistema di Qualità Laraxot

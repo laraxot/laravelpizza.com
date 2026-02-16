@@ -360,4 +360,4 @@ dd($this->layout->getTableContentGrid());
 - [Enum Standards](../../../docs/enum_standards.md)
 
 ## Ultimo Aggiornamento
-2025-01-27 - Documentazione completa TableLayoutEnum
+[DATE] - Documentazione completa TableLayoutEnum

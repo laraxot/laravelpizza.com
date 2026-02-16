@@ -1,7 +1,7 @@
-# Risoluzione Conflitti Git - Modulo User (2025-01-27)
+# Risoluzione Conflitti Git - Modulo User ([DATE])
 
 ## Data
-2025-01-27
+[DATE]
 
 ## Riepilogo
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
@@ -278,7 +278,7 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 5. Implementare test automatizzati
 5. Implementare test automatizzati
 
-## 🔥 **NUOVI CONFLITTI IDENTIFICATI - 2025-01-27 15:30**
+## 🔥 **NUOVI CONFLITTI IDENTIFICATI - [DATE] 15:30**
 
 ### **File con Conflitti Attivi:**
 1. `resources/views/pages/profile/edit.blade.php` - View profilo utente

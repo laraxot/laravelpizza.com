@@ -1,7 +1,7 @@
 # Implementazione Styling Tema Meetup
 
 ## Data
-2025-11-30
+[DATE]
 
 ## Obiettivo
 

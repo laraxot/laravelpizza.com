@@ -2,7 +2,7 @@
 
 ## Situazione Critica Identificata
 
-**Data audit**: 2025-01-06  
+**Data audit**: [DATE]  
 **Gravità**: CRITICA - 17 factory mancanti su 33 models
 
 ## Models senza Factory
@@ -139,4 +139,4 @@
 
 ---
 **Errore gravissimo da non ripetere mai più**  
-*Ultimo aggiornamento: 2025-01-06*
+*Ultimo aggiornamento: [DATE]*

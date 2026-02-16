@@ -14,6 +14,10 @@ class RevokeRefreshTokenAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly OauthRefreshToken $refreshTokenModel,
+    ) {}
+
     /**
      * Revoca un refresh token OAuth2.
      *
@@ -23,7 +27,7 @@ class RevokeRefreshTokenAction
     public function execute(OauthRefreshToken|string $token): bool
     {
         if (is_string($token)) {
-            $token = OauthRefreshToken::find($token);
+            $token = $this->refreshTokenModel->find($token);
         }
 
         if (! $token instanceof OauthRefreshToken) {

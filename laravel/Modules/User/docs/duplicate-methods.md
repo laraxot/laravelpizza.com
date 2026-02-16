@@ -409,7 +409,7 @@ public function members(): BelongsToMany
 public static function factory(): PermissionFactory
 ```
 
-##### ✅ Stato aggiornato (2025-11-17)
+##### ✅ Stato aggiornato ([DATE])
 - `Permission` e gli altri modelli usano ora `protected static function newFactory(): PermissionFactory`
   mantenendo la firma compatibile con `HasFactory::factory($count = null, $state = [])` ed evitando collisioni.
 

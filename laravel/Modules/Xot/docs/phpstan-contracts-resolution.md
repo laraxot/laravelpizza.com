@@ -1,4 +1,4 @@
-- **2025-11-17 – UserContract Property Map**
+- **[DATE] – UserContract Property Map**
   - Aggiunti i metadata `@property` su `Modules\Xot\Contracts\UserContract` per `name`, `currentTeam`, `roles`, `teams`, `tenants`. PHPStan livello 10 richiede che i contract descrivano le magic properties utilizzate nei moduli esterni (policy, comandi, widget).
   - Quando una proprietà proviene da una relazione Eloquent (es. `currentTeam`), documentarla come `@property TeamContract|null $currentTeam` e ricordare che i consumer dovrebbero comunque utilizzare `getRelationValue()` o i metodi della relazione per evitare accessi diretti.
 

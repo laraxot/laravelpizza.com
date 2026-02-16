@@ -1,6 +1,6 @@
 # Errore "Target class [env] does not exist" - Analisi Completa
 
-## Data: 2025-11-29
+## Data: [DATE]
 
 ## Problema
 L'errore "Target class [env] does not exist" si verifica quando si esegue qualsiasi comando artisan, impedendo l'esecuzione di `php artisan serve` e altri comandi.

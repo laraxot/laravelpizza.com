@@ -88,7 +88,7 @@ test('meetup event can be created', function () {
         'title' => 'Test Event',
         'description' => 'Test event description',
         'location' => 'Test Location',
-        'date' => '2025-01-01',
+        'date' => '[DATE]',
         'time' => '10:00:00',
         'capacity' => 100,
         'status' => 'active',
@@ -278,7 +278,7 @@ test('meetup event can be created', function () {
         'title' => 'Test Event',
         'description' => 'Test event description',
         'location' => 'Test Location',
-        'date' => '2025-01-01',
+        'date' => '[DATE]',
         'time' => '10:00:00',
         'capacity' => 100,
         'status' => 'active',
@@ -290,7 +290,7 @@ test('meetup event can be created', function () {
     expect($event->title)->toBe('Test Event');
     expect($event->description)->toBe('Test event description');
     expect($event->location)->toBe('Test Location');
-    expect($event->date)->toBe('2025-01-01');
+    expect($event->date)->toBe('[DATE]');
     expect($event->time)->toBe('10:00:00');
     expect($event->capacity)->toBe(100);
     expect($event->status)->toBe('active');
@@ -308,7 +308,7 @@ test('meetup service can create event', function () {
         'title' => 'Test Event',
         'description' => 'Test event description',
         'location' => 'Test Location',
-        'date' => '2025-01-01',
+        'date' => '[DATE]',
         'time' => '10:00:00',
         'capacity' => 100,
     ]);
@@ -326,7 +326,7 @@ test('meetup api can create event', function () {
         'title' => 'Test Event',
         'description' => 'Test event description',
         'location' => 'Test Location',
-        'date' => '2025-01-01',
+        'date' => '[DATE]',
         'time' => '10:00:00',
         'capacity' => 100,
     ];
@@ -337,7 +337,7 @@ test('meetup api can create event', function () {
         'title' => 'Test Event',
         'description' => 'Test event description',
         'location' => 'Test Location',
-        'date' => '2025-01-01',
+        'date' => '[DATE]',
         'time' => '10:00:00',
         'capacity' => 100,
         'status' => 'active',

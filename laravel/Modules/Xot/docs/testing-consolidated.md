@@ -665,6 +665,6 @@ php artisan test --stop-on-failure
 
 ---
 
-*Ultimo aggiornamento: 2025-08-04*
+*Ultimo aggiornamento: [DATE]*
 *Modulo: Xot*
 *Categoria: Testing*

@@ -225,7 +225,7 @@ The components can be customized per theme if needed, but the core functionality
 
 ## 🔄 Version History
 
-- **2026-02-10** - Initial PasswordData integration in Meetup theme
+- **[DATE]** - Initial PasswordData integration in Meetup theme
   - User Module RegisterWidget updated
   - GDPR Module RegisterWidget updated
   - Complete documentation created

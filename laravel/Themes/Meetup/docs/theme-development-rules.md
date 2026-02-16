@@ -340,7 +340,7 @@ npm run build && npm run copy
 
 ## References
 
-- **Implementation Log**: `docs/2025-11-30-implementation-log.md`
+- **Implementation Log**: `docs/[DATE]-implementation-log.md`
 - **Build System**: `docs/theme-build-system.md`
 - **Static Prototype**: `resources/html/` (working reference implementation)
 - **Vite Config**: `vite.config.ts`

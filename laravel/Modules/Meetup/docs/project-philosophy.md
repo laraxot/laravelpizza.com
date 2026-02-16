@@ -1,7 +1,7 @@
 # Filosofia del Progetto LaravelPizza.com
 
 ## Data
-2025-12-01
+[DATE]
 
 ## Obiettivo Dichiarato
 
@@ -140,6 +140,6 @@ Questo repo è il passo successivo:
 
 ---
 
-**Ultimo aggiornamento**: 2025-12-01
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0
 **Compatibilità**: LaravelPizza.com base_laravelpizza

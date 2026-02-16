@@ -39,14 +39,14 @@ L'utente ha segnalato:
 │       └── database/
 │           └── content/
 │               └── pages/
-│                   ├── home.json       # Timestamp: 2026-01-08 22:13
+│                   ├── home.json       # Timestamp: [DATE] 22:13
 │                   ├── contact.json
 │                   └── events.json
 └── laravelpizza.local/                 # ❌ COPIA/BACKUP
     └── database/
         └── content/
             └── pages/
-                └── home.json           # Timestamp: 2026-01-08 22:09 (più vecchio)
+                └── home.json           # Timestamp: [DATE] 22:09 (più vecchio)
 ```
 
 **Conclusione**: L'app usa **SOLO** `config/local/laravelpizza/`
@@ -133,7 +133,7 @@ $config_file = $this->buildConfigPath($parts);
 
 ### 3. Session Summary
 
-**File**: `Themes/Meetup/docs/session-summary-tenant-config-path-2026-01-08.md` (questo file)
+**File**: `Themes/Meetup/docs/session-summary-tenant-config-path-[DATE].md` (questo file)
 - Riepilogo completo sessione
 - Files creati e loro scopo
 - Lessons learned
@@ -145,7 +145,7 @@ $config_file = $this->buildConfigPath($parts);
 ### Naming Convention ✅
 - `tenant-config-path-philosophy-debate.md` - lowercase-with-hyphens ✅
 - `tenant-config-path-practical-guide.md` - lowercase-with-hyphens ✅
-- `session-summary-tenant-config-path-2026-01-08.md` - lowercase-with-hyphens ✅
+- `session-summary-tenant-config-path-[DATE].md` - lowercase-with-hyphens ✅
 
 ### DRY + KISS ✅
 - No commenti ovvi
@@ -267,7 +267,7 @@ Se stai leggendo questo perché hai dubbi sul path config tenant:
 
 ---
 
-**Session Completed**: 2026-01-08 09:00 UTC
+**Session Completed**: [DATE] 09:00 UTC
 **Duration**: ~30 minutes
 **Status**: ✅ **PRODUCTION READY - Full Documentation**
 **Next Steps**: None - documentazione completa per sviluppatori

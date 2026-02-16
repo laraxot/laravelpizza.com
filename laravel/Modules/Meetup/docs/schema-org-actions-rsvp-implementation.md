@@ -372,10 +372,10 @@ class EventReservation extends Model
   "event": {
     "@type": "Event",
     "name": "Laravel Meetup Milano",
-    "startDate": "2026-02-15T19:00:00+01:00",
+    "startDate": "[DATE]T19:00:00+01:00",
     "identifier": "event_456"
   },
-  "startTime": "2026-02-01T10:30:00+01:00",
+  "startTime": "[DATE]T10:30:00+01:00",
   "actionStatus": "https://schema.org/CompletedActionStatus"
 }
 ```
@@ -396,7 +396,7 @@ class EventReservation extends Model
     "name": "Laravel Meetup Milano",
     "identifier": "event_456"
   },
-  "startTime": "2026-02-05T14:20:00+01:00",
+  "startTime": "[DATE]T14:20:00+01:00",
   "actionStatus": "https://schema.org/CompletedActionStatus"
 }
 ```
@@ -407,7 +407,7 @@ class EventReservation extends Model
 {
   "@context": "https://schema.org",
   "@type": "EventReservation",
-  "reservationId": "LRM-2026-02-15-001",
+  "reservationId": "LRM-[DATE]-001",
   "reservationStatus": "https://schema.org/ReservationConfirmed",
   "underName": {
     "@type": "Person",
@@ -416,8 +416,8 @@ class EventReservation extends Model
   "reservationFor": {
     "@type": "Event",
     "name": "Laravel Workshop: Advanced Eloquent",
-    "startDate": "2026-02-15T09:00:00+01:00",
-    "endDate": "2026-02-15T17:00:00+01:00",
+    "startDate": "[DATE]T09:00:00+01:00",
+    "endDate": "[DATE]T17:00:00+01:00",
     "location": {
       "@type": "Place",
       "name": "TechHub Training Center",
@@ -430,7 +430,7 @@ class EventReservation extends Model
       }
     }
   },
-  "bookingTime": "2026-02-01T10:30:00+01:00",
+  "bookingTime": "[DATE]T10:30:00+01:00",
   "totalPrice": "50.00",
   "priceCurrency": "EUR",
   "reservedTicket": {

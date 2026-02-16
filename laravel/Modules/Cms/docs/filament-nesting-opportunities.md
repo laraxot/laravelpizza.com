@@ -1,6 +1,6 @@
 # Filament 5.x Nested Resources - Opportunità di Applicazione
 
-**Data Analisi**: 2026-01-22  
+**Data Analisi**: [DATE]  
 **Versione Filament**: 5.x  
 **Documentazione Upstream**: https://filamentphp.com/docs/5.x/resources/nesting
 
@@ -276,4 +276,4 @@ Nessuna funzionalità critica - il modulo Cms funziona bene con relation manager
 
 ---
 
-**Prossima Revisione**: 2026-02-22
+**Prossima Revisione**: [DATE]

@@ -366,7 +366,7 @@ class="transition-all duration-200 motion-reduce:transition-none"
     </thead>
     <tbody>
         <tr>
-            <td>2026-02-20</td>
+            <td>[DATE]</td>
             <td>Rome</td>
         </tr>
     </tbody>

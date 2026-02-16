@@ -2,47 +2,81 @@
 
 declare(strict_types=1);
 
-return [
-    'navigation' => [
-        'label' => 'Import',
-        'group' => 'Importe',
-        'icon' => 'heroicon-o-arrow-up-tray',
-        'sort' => 26,
-    ],
+return array (
+  'navigation' => 
+  array (
     'label' => 'Import',
-    'plural_label' => 'Importe',
-    'fields' => [
-        'id' => [
-            'label' => 'ID',
-        ],
-        'job_id' => [
-            'label' => 'Auftrags-ID',
-        ],
-        'importable_type' => [
-            'label' => 'Importierbarer Typ',
-        ],
-        'file_path' => [
-            'label' => 'Dateipfad',
-        ],
-        'status' => [
-            'label' => 'Status',
-        ],
-        'created_at' => [
-            'label' => 'Erstellt Am',
-        ],
-        'completed_at' => [
-            'label' => 'Abgeschlossen Am',
-        ],
-    ],
-    'actions' => [
-        'import' => [
-            'label' => 'Importieren',
-        ],
-        'upload' => [
-            'label' => 'Hochladen',
-        ],
-        'create' => [
-            'label' => 'Erstellen',
-        ],
-    ],
-];
+    'group' => 'Importe',
+    'icon' => 'heroicon-o-arrow-up-tray',
+    'sort' => 26,
+  ),
+  'label' => 'Import',
+  'plural_label' => 'Importe',
+  'fields' => 
+  array (
+    'id' => 
+    array (
+      'label' => 'ID',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'job_id' => 
+    array (
+      'label' => 'Auftrags-ID',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'importable_type' => 
+    array (
+      'label' => 'Importierbarer Typ',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'file_path' => 
+    array (
+      'label' => 'Dateipfad',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'status' => 
+    array (
+      'label' => 'Status',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'created_at' => 
+    array (
+      'label' => 'Erstellt Am',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+    'completed_at' => 
+    array (
+      'label' => 'Abgeschlossen Am',
+      'tooltip' => '',
+      'helper_text' => '',
+      'description' => '',
+    ),
+  ),
+  'actions' => 
+  array (
+    'import' => 
+    array (
+      'label' => 'Importieren',
+    ),
+    'upload' => 
+    array (
+      'label' => 'Hochladen',
+    ),
+    'create' => 
+    array (
+      'label' => 'Erstellen',
+    ),
+  ),
+);

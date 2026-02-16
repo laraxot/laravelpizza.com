@@ -2,7 +2,7 @@
 
 **File**: `database/migrations/2023_01_01_000008_create_tenants_table.php`
 **Module**: User
-**Date**: 2025-01-02
+**Date**: [DATE]
 **Status**: ✅ FIX READY
 
 ---

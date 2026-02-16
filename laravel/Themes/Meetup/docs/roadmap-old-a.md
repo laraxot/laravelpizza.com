@@ -1,4 +1,4 @@
-# Roadmap Tema Meetup - 2026-01-30
+# Roadmap Tema Meetup - [DATE]
 
 **Tema**: Meetup (Frontend Premium LaravelPizza)
 **Scopo**: Tema frontend premium per conversione laravelpizza.com - Folio routing, Volt components, Tailwind CSS, Alpine.js. Design moderno, engaging, clickbait-worthy.
