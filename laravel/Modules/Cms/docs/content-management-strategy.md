@@ -6,7 +6,7 @@ Seguendo i principi **zen** e **minimalista** di Laraxot, la gestione dei conten
 
 ### 🧘 **Principi Zen del Contenuto**
 - **Semplicità**: Informazioni chiare e immediate
-- **Trasparenza**: Conformità normativa GDPR per dati sanitari
+- **Trasparenza**: Conformità normativa GDPR per dati sanitari  
 - **Accessibilità**: Contenuti comprensibili a tutti gli utenti
 - **Fiducia**: Linguaggio professionale e rassicurante
 - **Etica**: Rispetto della privacy e dei diritti del paziente
@@ -16,7 +16,7 @@ Le pagine istituzionali devono:
 - Trasmettere **competenza medica** e **affidabilità**
 - Garantire **compliance normativa** (GDPR, Codice Privacy)
 - Facilitare l'**accessibilità** per tutti i pazienti
-- Riflettere la **missione** di promozione della <slogan>
+- Riflettere la **missione** di promozione della salute orale
 
 ## Struttura delle Pagine Istituzionali
 
@@ -29,7 +29,7 @@ Le pagine istituzionali devono:
 - Team medico con competenze certificate
 - Certificazioni e riconoscimenti
 
-### 🔒 **Pagina 14: Privacy Policy**
+### 🔒 **Pagina 14: Privacy Policy**  
 **Filosofia**: Trasparenza totale nella gestione dati sanitari
 **Compliance**: GDPR, Codice Privacy, normative sanitarie
 **Componenti strutturati**:
@@ -93,10 +93,10 @@ Le pagine istituzionali devono:
 
 Questa strategia integra:
 - [Gestione Homepage](/var/www/html/_bases/<directory progetto>/project_docs/gestione-homepage.md)
-- [Best Practice UX](/var/www/html/_bases/<directory progetto>/project_docs/ux-design-principles.md)
+- [Best Practice UX](/var/www/html/_bases/<directory progetto>/project_docs/ux-design-principles.md)  
 - [Compliance GDPR](/var/www/html/_bases/<directory progetto>/project_docs/privacy-compliance.md)
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025
-**Revisione**: Conforme regole Laraxot olistica e filosofia zen del contenuto sanitario
+**Ultimo aggiornamento**: Gennaio 2025  
+**Revisione**: Conforme regole Laraxot olistica e filosofia zen del contenuto sanitario 

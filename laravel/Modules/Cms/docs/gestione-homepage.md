@@ -34,7 +34,7 @@ Il file `1.json` contiene la struttura completa della homepage:
 {
     "id": "1",
     "title": {
-        "it": "il progetto - Promozione della <slogan> per le gestanti"
+        "it": "il progetto - Promozione della salute orale per le gestanti"
     },
     "slug": "home",
     "content_blocks": {

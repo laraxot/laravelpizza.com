@@ -6,7 +6,7 @@
 
 ## 🎯 **Lettura Essenziale**
 1. [README.md](./README.md) - Panoramica completa, Multi-API e Comuni Italiani.
-2. [ROADMAP.md](./ROADMAP.md) - Obiettivi 2026 e miglioramenti geocoding.
+2. [roadmap.md](./roadmap.md) - Obiettivi 2026 e miglioramenti geocoding.
 3. [philosophy.md](./philosophy.md) - Visione architetturale dei dati geografici.
 
 ## 🏗️ **Geocoding & Indirizzi**

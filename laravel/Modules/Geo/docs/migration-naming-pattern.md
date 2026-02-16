@@ -79,5 +79,5 @@ $this->tableUpdate(
 ## Riferimenti
 
 - [XotBaseMigration](../../../Xot/database/migrations/XotBaseMigration.php)
-- [Documentazione Laravel sulle Migrazioni](https://laravel.com/docs/migrations)
-- [Xot Module Documentation Standards](../../../Xot/docs/documentation-standards.md)
+- [Documentazione Laravel sulle Migrazioni](https://laravel.com/project_docs/migrations)
+- [Xot Module Documentation Standards](../../../Xot/project_docs/documentation-standards.md)

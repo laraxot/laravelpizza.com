@@ -116,3 +116,4 @@ return [
 * [filament-resources.md](laravel/Modules/Gdpr/project_docs/filament-resources.md)
 * [filament-resources.md](laravel/Modules/Xot/project_docs/filament-resources.md)
 * [filament-resources.md](laravel/Modules/Cms/project_docs/filament-resources.md)
+

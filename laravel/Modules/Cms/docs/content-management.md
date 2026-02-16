@@ -107,9 +107,10 @@ Questa documentazione è parte del sistema di documentazione di il progetto. Per
 - [Modulo Theme](../Theme/project_docs/README.md) - Gestione temi
 - [Modulo Xot](../Xot/project_docs/README.md) - Classi base e utilities
 - [Documentazione Filament](https://filamentphp.com/docs) - Documentazione ufficiale
-- [Best Practices Laravel](https://laravel.com/project_docs/11.x/best-practices) - Best practices
-Questa documentazione è parte del sistema di documentazione di <main module>. Per dettagli specifici sui singoli componenti, consultare la documentazione dei rispettivi moduli.
+- [Best Practices Laravel](https://laravel.com/project_docs/11.x/best-practices) - Best practices 
+Questa documentazione è parte del sistema di documentazione di <main module>. Per dettagli specifici sui singoli componenti, consultare la documentazione dei rispettivi moduli. 
 
 ## Collegamenti tra versioni di content-management.md
 * [content-management.md](laravel/Modules/Cms/project_docs/content-management.md)
 * [content-management.md](laravel/Modules/Cms/project_docs/roadmap/features/content-management.md)
+

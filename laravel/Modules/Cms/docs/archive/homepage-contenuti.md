@@ -5,7 +5,7 @@
 Il testo seguente deve essere mostrato nella homepage del portale il progetto:
 
 ```
-Benvenuta su <slogan>,
+Benvenuta su Salute Orale,
 
 il portale che vuole garantire alle pazienti vulnerabili in
 stato di gravidanza la possibilità di accedere a servizi
@@ -31,7 +31,7 @@ La homepage deve includere:
 ## Riferimento visivo
 
 L'implementazione deve seguire il design mostrato nell'immagine di riferimento:
-![Riferimento homepage](/var/www/html/_bases/<directory progetto>/docs/images/2.png)
+![Riferimento homepage](/var/www/html/<directory progetto>/project_docs/images/2.png)
 
 ## Note implementative
 
@@ -45,5 +45,5 @@ L'implementazione deve seguire il design mostrato nell'immagine di riferimento:
 Se il contenuto della homepage deve essere modificato, è necessario:
 
 1. Aggiornare questo documento
-2. Aggiornare il file JSON corrispondente in `/var/www/html/_bases/<directory progetto>/laravel/config/local/<directory progetto>/database/content/pages/1.json`
+2. Aggiornare il file JSON corrispondente in `/var/www/html/<directory progetto>/laravel/config/local/<directory progetto>/database/content/pages/1.json`
 3. Verificare che le modifiche siano correttamente visualizzate in tutte le versioni (mobile, tablet, desktop)

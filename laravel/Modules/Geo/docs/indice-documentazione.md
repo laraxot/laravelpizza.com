@@ -88,6 +88,14 @@ Documenti che descrivono l'integrazione del modulo Geo con altri componenti del 
 - [autocomplete.md](autocomplete.md) - Funzionalità di autocompletamento
 - [location-select.md](location-select.md) - Selezione della posizione
 
+### AddressResource
+
+Documenti specifici per l'analisi e il miglioramento dell'AddressResource.
+
+- [addressresource_analysis.md](addressresource_analysis.md) - Analisi tecnica dettagliata dell'AddressResource
+- [addressresource_improvements.md](addressresource_improvements.md) - Miglioramenti proposti per l'AddressResource
+- [addressresource_summary.md](addressresource_summary.md) - Sintesi completa dell'analisi AddressResource
+
 ## Servizi Esterni
 
 Documenti relativi all'integrazione con servizi geografici esterni.
@@ -139,6 +147,6 @@ Alcuni documenti potrebbero avere nomi simili ma contenuti diversi, in particola
 
 ---
 
-*Documento creato il: 28/05/2025*
-*Ultimo aggiornamento: 28/05/2025*
+*Documento creato il: 28/05/2025*  
+*Ultimo aggiornamento: 28/05/2025*  
 *Autore: Team <main module>*

@@ -8,6 +8,7 @@ use Modules\Meetup\Models\Event;
 use Modules\Xot\Filament\Widgets\XotBaseStatsOverviewWidget as StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class EventStatsOverviewWidget extends StatsOverviewWidget
 {

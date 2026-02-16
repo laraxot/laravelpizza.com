@@ -95,4 +95,4 @@ Le considerazioni di accessibilità spesso vengono trascurate nella frenesia di 
 
 L'accuratezza dei contenuti dell'homepage è fondamentale per la riuscita del progetto il progetto. Evitando questi errori comuni, possiamo garantire un'esperienza utente coerente e accessibile, rispettando al contempo gli accordi con i partner e comunicando correttamente i criteri di ammissibilità alle potenziali beneficiarie.
 
-Questo documento dovrebbe essere consultato regolarmente dal team di sviluppo e di contenuti per assicurare l'aderenza alle specifiche ufficiali del progetto.
+Questo documento dovrebbe essere consultato regolarmente dal team di sviluppo e di contenuti per assicurare l'aderenza alle specifiche ufficiali del progetto. 

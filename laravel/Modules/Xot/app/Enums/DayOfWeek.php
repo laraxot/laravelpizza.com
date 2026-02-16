@@ -10,6 +10,7 @@ use Filament\Support\Contracts\HasDescription;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
 use Illuminate\Support\Collection;
+use Modules\Xot\Traits\EnumTrait;
 
 /**
  * Enum per la gestione dei giorni della settimana.
@@ -23,6 +24,8 @@ use Illuminate\Support\Collection;
  */
 enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
 {
+    use EnumTrait;
+
     case MONDAY = 1;
     case TUESDAY = 2;
     case WEDNESDAY = 3;
@@ -30,69 +33,6 @@ enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
     case FRIDAY = 5;
     case SATURDAY = 6;
     case SUNDAY = 7;
-
-    /**
-     * Restituisce l'etichetta localizzata per questo giorno della settimana.
-     * Implementazione dell'interfaccia HasLabel di Filament.
-     */
-    public function getLabel(): string
-    {
-        $carbon = Carbon::now()->startOfWeek()->addDays($this->value - 1);
-        $carbon->locale('it');
-
-        return (string) $carbon->isoFormat('dddd');
-    }
-
-    /**
-     * Restituisce il colore associato a questo giorno della settimana.
-     * Implementazione dell'interfaccia HasColor di Filament.
-     */
-    public function getColor(): string
-    {
-        return match ($this) {
-            self::MONDAY => 'primary',
-            self::TUESDAY => 'success',
-            self::WEDNESDAY => 'warning',
-            self::THURSDAY => 'danger',
-            self::FRIDAY => 'info',
-            self::SATURDAY => 'gray',
-            self::SUNDAY => 'gray',
-        };
-    }
-
-    /**
-     * Restituisce l'icona associata a questo giorno della settimana.
-     * Implementazione dell'interfaccia HasIcon di Filament.
-     */
-    public function getIcon(): string
-    {
-        return match ($this) {
-            self::MONDAY => 'heroicon-o-calendar',
-            self::TUESDAY => 'heroicon-o-calendar',
-            self::WEDNESDAY => 'heroicon-o-calendar',
-            self::THURSDAY => 'heroicon-o-calendar',
-            self::FRIDAY => 'heroicon-o-calendar',
-            self::SATURDAY => 'heroicon-o-calendar',
-            self::SUNDAY => 'heroicon-o-calendar',
-        };
-    }
-
-    /**
-     * Restituisce la descrizione dettagliata di questo giorno della settimana.
-     * Implementazione dell'interfaccia HasDescription di Filament.
-     */
-    public function getDescription(): string
-    {
-        return match ($this) {
-            self::MONDAY => 'Lunedì - Inizio della settimana lavorativa',
-            self::TUESDAY => 'Martedì - Secondo giorno lavorativo',
-            self::WEDNESDAY => 'Mercoledì - Metà settimana',
-            self::THURSDAY => 'Giovedì - Penultimo giorno lavorativo',
-            self::FRIDAY => 'Venerdì - Ultimo giorno lavorativo',
-            self::SATURDAY => 'Sabato - Primo giorno del weekend',
-            self::SUNDAY => 'Domenica - Giorno di riposo',
-        };
-    }
 
     /**
      * Restituisce l'etichetta abbreviata per questo giorno della settimana.
@@ -103,21 +43,6 @@ enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
         $carbon->locale('it');
 
         return (string) $carbon->isoFormat('ddd');
-    }
-
-    /**
-     * Converte tutti i casi dell'enum in un array associativo per l'uso nei componenti select.
-     *
-     * @return array<int, string>
-     */
-    public static function toArray(): array
-    {
-        $result = [];
-        foreach (self::cases() as $case) {
-            $result[$case->value] = $case->getLabel();
-        }
-
-        return $result;
     }
 
     /**

@@ -1,17 +1,17 @@
 # Utilizzo dei Componenti Filament in il progetto
 > **Collegamenti correlati**
-> - [FILAMENT_COMPONENTS.md tema One](../../../../Themes/One/docs/FILAMENT_COMPONENTS.md)
+> - [FILAMENT_COMPONENTS.md tema One](../../../../Themes/One/project_docs/FILAMENT_COMPONENTS.md)
 
-# Utilizzo dei Componenti Filament
+# Utilizzo dei Componenti Filament 
 
 ## Regola Fondamentale
 
 In il progetto, **privilegiare sempre i componenti Blade nativi di Filament** rispetto a componenti UI personalizzati.
 
 > ⚠️ **Collegamenti alla documentazione correlata**:
-> - [Indice generale dei collegamenti](../../../../docs/collegamenti-documentazione.md)
-> - [Documentazione principale](../../../../docs/rules/filament-components.md)
-> - [Documentazione nel tema](../../../../Themes/One/docs/FILAMENT_COMPONENTS.md)
+> - [Indice generale dei collegamenti](../../../../project_docs/collegamenti-documentazione.md)
+> - [Documentazione principale](../../../../project_docs/rules/filament-components.md)
+> - [Documentazione nel tema](../../../../Themes/One/project_docs/FILAMENT_COMPONENTS.md)
 
 ## Motivazione
 
@@ -53,7 +53,7 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
     Pulsante Base
 </x-filament::button>
 
-<x-filament::button
+<x-filament::button 
     color="success"           {{-- primary, secondary, success, warning, danger --}}
     size="md"                {{-- xs, sm, md, lg, xl --}}
     icon="heroicon-o-plus"   {{-- qualsiasi icona Heroicon --}}
@@ -73,7 +73,7 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
     Base
 </x-filament::badge>
 
-<x-filament::badge
+<x-filament::badge 
     color="success"         {{-- primary, secondary, success, warning, danger --}}
     size="md"              {{-- xs, sm, md, lg --}}
     icon="heroicon-o-check" {{-- qualsiasi icona Heroicon --}}
@@ -102,10 +102,10 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 
 ```blade
 <x-filament::input.wrapper>
-    <x-filament::input
-        type="text"
-        wire:model="name"
-        placeholder="Nome"
+    <x-filament::input 
+        type="text" 
+        wire:model="name" 
+        placeholder="Nome" 
     />
 </x-filament::input.wrapper>
 
@@ -120,13 +120,13 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 ## Best Practices
 
 1. **Mai Sovrascrivere gli Stili Base**: Estendere i componenti Filament aggiungendo classi CSS, non sovrascrivendo quelle esistenti
-2. **Utilizzare Props Documentate**: Consultare la [documentazione ufficiale](https://filamentphp.com/docs/3.x/support/blade-components/overview) per le props disponibili
+2. **Utilizzare Props Documentate**: Consultare la [documentazione ufficiale](https://filamentphp.com/project_docs/3.x/support/blade-components/overview) per le props disponibili
 3. **Dark Mode**: Utilizzare le funzionalità native di dark mode invece di implementazioni personalizzate
 4. **Estensibilità**: Sfruttare gli slot per personalizzare sezioni specifiche dei componenti
 
 ## Riferimenti
 
-- [Documentazione ufficiale Filament](https://filamentphp.com/docs/3.x/support/blade-components/overview)
+- [Documentazione ufficiale Filament](https://filamentphp.com/project_docs/3.x/support/blade-components/overview)
 - [Demo dei componenti](https://demo.filamentphp.com/)
 
 ## Collegamenti Bidirezionali
@@ -139,13 +139,14 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 - [Blade Components](filament-blade-components.md) - Componenti Blade personalizzati
 
 ## Vedi Anche
-- [Modulo UI](../UI/docs/README.md) - Componenti UI riutilizzabili
-- [Modulo Xot](../Xot/docs/README.md) - Classi base Filament personalizzate
-- [Modulo Theme](../Theme/docs/README.md) - Personalizzazione temi Filament
+- [Modulo UI](../UI/project_docs/README.md) - Componenti UI riutilizzabili
+- [Modulo Xot](../Xot/project_docs/README.md) - Classi base Filament personalizzate
+- [Modulo Theme](../Theme/project_docs/README.md) - Personalizzazione temi Filament
 - [Convenzioni Namespace](convenzioni-namespace-filament.md) - Convenzioni di namespace
 - [Documentazione Filament](https://filamentphp.com/docs) - Documentazione ufficiale
 ## Collegamenti tra versioni di filament-components.md
-* [filament-components.md](laravel/Modules/User/docs/best-practices/filament-components.md)
-* [filament-components.md](laravel/Modules/Cms/docs/best-practices/filament-components.md)
-* [filament-components.md](laravel/Modules/Cms/docs/filament-components.md)
-* [filament-components.md](laravel/docs/rules/filament-components.md)
+* [filament-components.md](laravel/Modules/User/project_docs/best-practices/filament-components.md)
+* [filament-components.md](laravel/Modules/Cms/project_docs/best-practices/filament-components.md)
+* [filament-components.md](laravel/Modules/Cms/project_docs/filament-components.md)
+* [filament-components.md](laravel/project_docs/rules/filament-components.md)
+

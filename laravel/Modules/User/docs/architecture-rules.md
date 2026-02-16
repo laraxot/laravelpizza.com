@@ -1,15 +1,23 @@
-# Architectural Rules & Guidelines
+# Laraxot Architecture Rules
 
-This module adheres to the **Laraxot Architecture** and **Super Cow Methodology**.
+## Core Principles
 
-For strict coding standards, Filament extension rules, and PHPStan guidelines, please refer to the central documentation in the **Xot Module**:
+### 1. Service Provider Registration
+- Service providers are registered via `module.json` and `composer.json`, NOT manually in code
+- The module system handles provider registration automatically
+- Example: `PassportServiceProvider` is registered in both `module.json` and `composer.json` under "extra.laravel.providers"
 
--   [Super Cow Methodology](../../Xot/docs/super_cow_methodology.md)
--   [PHP Quality Guide](../../Xot/docs/php_quality_guide.md)
--   [Filament Extension Rules](../../Xot/docs/filament_extension_rules.md)
+### 2. Trait Redundancy Rule
+- Never use traits that are already included in the parent class
+- Example: If extending `XotBaseRelationManager`, don't also use `HasXotTable` trait since it's already included in the parent
+- Always check parent classes before adding traits to avoid redundancy
 
-**Key Principles:**
-1.  **DRY & KISS**: Don't repeat yourself, keep it simple.
-2.  **Zero Errors**: PHPStan Level 10 compliance is mandatory.
-3.  **XotBase**: Always extend `XotBase` classes, never Filament classes directly.
-4.  **Translations**: Use `LangServiceProvider` for automatic label resolution.
+### 3. Separation of Concerns
+- Keep Passport configuration in `PassportServiceProvider`, not in `UserServiceProvider`
+- Each service provider should have a single responsibility
+- Follow the modular architecture where each module handles its own concerns
+
+### 4. DRY + KISS Principles
+- Avoid duplicate functionality across files
+- Keep implementations simple and straightforward
+- Follow established patterns rather than creating new ones

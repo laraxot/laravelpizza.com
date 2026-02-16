@@ -26,7 +26,7 @@ Per il progetto, un'applicazione in ambito sanitario, è particolarmente importa
 - **Interattività significativa**: Interazioni con il mouse che creano un'esperienza coinvolgente
 - **Semplicità nella complessità**: Uso di soli 3 caratteri tipografici e 2 colori per creare un'esperienza coerente
 
-**Applicazione in il progetto**:
+**Applicazione in il progetto**: 
 L'approccio minimalista potrebbe essere adattato per ridurre il carico cognitivo nelle interfacce cliniche complesse, utilizzando elementi visivi semplici ma distintivi.
 
 ### Wayoo
@@ -129,7 +129,7 @@ Dall'analisi dei siti sopra citati, emergono alcuni principi fondamentali applic
     <h1 class="text-3xl font-bold text-primary mb-2">Dashboard Paziente</h1>
     <p class="text-neutral text-lg">Benvenuto nel tuo spazio personale, Mario Rossi</p>
   </header>
-
+  
   <!-- Card principali con design minimalista -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
     <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow">
@@ -143,10 +143,10 @@ Dall'analisi dei siti sopra citati, emergono alcuni principi fondamentali applic
         </div>
       </div>
     </div>
-
+    
     <!-- Altre card con lo stesso stile coerente -->
   </div>
-
+  
   <!-- Sezione interattiva con elementi di parallax controllato -->
   <div class="card bg-base-100 shadow-lg my-8 overflow-hidden">
     <div class="relative h-40 bg-accent">
@@ -180,7 +180,7 @@ Dall'analisi dei siti sopra citati, emergono alcuni principi fondamentali applic
     <h1 class="text-3xl font-bold text-primary mb-3">Unisciti a il progetto</h1>
     <p class="text-neutral text-lg max-w-md mx-auto">Completa la registrazione per accedere a tutti i servizi e gestire la tua salute in modo semplice.</p>
   </header>
-
+  
   <!-- Form con design minimalista ed elementi interattivi -->
   <div class="card bg-base-100 shadow-xl">
     <div class="card-body">
@@ -191,7 +191,7 @@ Dall'analisi dei siti sopra citati, emergono alcuni principi fondamentali applic
         <li class="step">Salute</li>
         <li class="step">Privacy</li>
       </ul>
-
+      
       <form>
         <!-- Campi form con spazio generoso e feedback immediato -->
         <div class="form-control w-full mb-4">
@@ -200,14 +200,14 @@ Dall'analisi dei siti sopra citati, emergono alcuni principi fondamentali applic
           </label>
           <input type="text" class="input input-bordered w-full" />
         </div>
-
+        
         <div class="form-control w-full mb-4">
           <label class="label">
             <span class="label-text text-base">Cognome</span>
           </label>
           <input type="text" class="input input-bordered w-full" />
         </div>
-
+        
         <div class="form-control w-full mb-4">
           <label class="label">
             <span class="label-text text-base">Codice Fiscale</span>
@@ -218,7 +218,7 @@ Dall'analisi dei siti sopra citati, emergono alcuni principi fondamentali applic
             <span class="label-text-alt text-info">Il codice fiscale verrà verificato automaticamente</span>
           </label>
         </div>
-
+        
         <div class="form-control w-full mb-6">
           <label class="label">
             <span class="label-text text-base">Data di Nascita</span>
@@ -226,7 +226,7 @@ Dall'analisi dei siti sopra citati, emergono alcuni principi fondamentali applic
           <!-- Calendario interattivo ispirato a Doctolib -->
           <input type="date" class="input input-bordered w-full" />
         </div>
-
+        
         <!-- Navigazione del form con pulsanti chiari -->
         <div class="flex justify-end space-x-2 mt-6">
           <button type="button" class="btn btn-ghost">Annulla</button>
@@ -235,7 +235,7 @@ Dall'analisi dei siti sopra citati, emergono alcuni principi fondamentali applic
       </form>
     </div>
   </div>
-
+  
   <!-- Note informative con design minimalista -->
   <div class="mt-8 text-center text-sm text-neutral-500">
     <p>La tua privacy è importante per noi. Leggi la nostra <a href="#" class="link link-primary">Informativa sulla Privacy</a>.</p>
@@ -259,4 +259,4 @@ La vera sfida sarà bilanciare gli elementi innovativi del design moderno con le
 
 ---
 
-*Documento basato su analisi di [Ingigni.com](https://www.ingigni.com/blog/siti-belli/) e integrato con le linee guida di il progetto.*
+*Documento basato su analisi di [Ingigni.com](https://www.ingigni.com/blog/siti-belli/) e integrato con le linee guida di il progetto.* 

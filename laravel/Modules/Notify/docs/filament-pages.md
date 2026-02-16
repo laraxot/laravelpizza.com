@@ -75,13 +75,6 @@ class EditNotificationTemplate extends XotBaseEditRecord
 - [XotBaseListRecords](../../Xot/project_docs/filament-pages.md#XotBaseListRecords)
 - [XotBaseCreateRecord](../../Xot/project_docs/filament-pages.md#XotBaseCreateRecord)
 - [XotBaseEditRecord](../../Xot/project_docs/filament-pages.md#XotBaseEditRecord)
-- [Architettura Filament](../../../../docs/architecture/filament.md)
-- [Gestione Pagine](../../../../docs/architecture/pages.md)
-
-### Collegamenti ai Moduli
-- [XotBaseListRecords](../../Xot/docs/filament-pages.md#XotBaseListRecords)
-- [XotBaseCreateRecord](../../Xot/docs/filament-pages.md#XotBaseCreateRecord)
-- [XotBaseEditRecord](../../Xot/docs/filament-pages.md#XotBaseEditRecord)
 - [NotificationTemplateResource](./filament-resources.md)
 
 ## Note Importanti

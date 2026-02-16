@@ -103,7 +103,7 @@ Per maggiori dettagli sulla struttura dei blocchi di contenuto, consulta la [doc
                 "data": {
                     "view": "ui::components.blocks.hero.simple",
                     "title": "Benvenuti",
-                    "subtitle": "Piattaforma per la <slogan>"
+                    "subtitle": "Piattaforma per la salute orale"
                 }
             },
             // Altri blocchi...

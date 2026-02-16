@@ -165,10 +165,11 @@ class CounterTest extends TestCase
 ## Riferimenti
 
 - [Annuncio Ufficiale Laravel Volt](https://blog.laravel.com/introducing-volt-an-elegantly-crafted-functional-api-for-livewire)
-- [Documentazione Volt](https://livewire.laravel.com/docs/volt)
+- [Documentazione Volt](https://livewire.laravel.com/project_docs/volt)
 - [Documentazione Livewire](https://livewire.laravel.com)
-- [Laravel Folio](https://github.com/laravel/folio)
+- [Laravel Folio](https://github.com/laravel/folio) 
 
 ## Collegamenti tra versioni di volt-introduction.md
-* [volt-introduction.md](laravel/Modules/Cms/docs/volt-introduction.md)
-* [volt-introduction.md](laravel/Modules/Cms/docs/components/volt-introduction.md)
+* [volt-introduction.md](laravel/Modules/Cms/project_docs/volt-introduction.md)
+* [volt-introduction.md](laravel/Modules/Cms/project_docs/components/volt-introduction.md)
+

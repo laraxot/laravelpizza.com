@@ -146,9 +146,10 @@ public function test_filament_components_rendering()
 - [Documentazione Filament](https://filamentphp.com/docs) - Documentazione ufficiale
 - [Best Practices](https://filamentphp.com/project_docs/3.x/best-practices) - Best practices Filament
 - [Componenti Blade](https://filamentphp.com/project_docs/3.x/support/blade-components) - Componenti Blade
-- [Testing](../testing.md)
+- [Testing](../testing.md) 
 
 ## Collegamenti tra versioni di filament-integration.md
 * [filament-integration.md](laravel/Modules/Xot/project_docs/laraxot/filament-integration.md)
 * [filament-integration.md](laravel/Modules/Cms/project_docs/roadmap/features/filament-integration.md)
 * [filament-integration.md](laravel/Modules/Cms/project_docs/filament-integration.md)
+

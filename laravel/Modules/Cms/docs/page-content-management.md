@@ -14,4 +14,4 @@ Questo documento fornisce una panoramica del sistema di gestione dei contenuti d
 - [Documentazione Lang](../laravel/Modules/Lang/project_docs/README.md)
 
 ## Note
-Questa documentazione contiene solo una panoramica generale. Per i dettagli completi, consultare la documentazione del modulo Cms.
+Questa documentazione contiene solo una panoramica generale. Per i dettagli completi, consultare la documentazione del modulo Cms. 

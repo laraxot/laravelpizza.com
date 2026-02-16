@@ -59,7 +59,7 @@ https://github.com/nonfu/roastapp
 
 
 //---- mappa stile 3 con aereoplanini, treni e macchine che si muovono --
-https://www.wrld3d.com/wrld.js/latest/docs/examples/adding-a-leaflet-marker-with-popup/
+https://www.wrld3d.com/wrld.js/latest/project_docs/examples/adding-a-leaflet-marker-with-popup/
 
 
 

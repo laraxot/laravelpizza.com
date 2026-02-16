@@ -344,7 +344,6 @@ class MailTemplateSecurityTest extends TestCase
 ## Comandi per i Test
 
 ```bash
-
 # Esegui tutti i test
 php artisan test --filter=MailTemplate
 

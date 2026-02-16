@@ -1,6 +1,6 @@
 # Meetup Module - Event Management Roadmap
 
-**Status**: 🟡 In Progress (75% Completato)
+**Status**: 🟡 In Progress (80% Completato)
 **Priorità**: Alta
 **Obiettivo**: 100% completamento con calendar widget, registration e analytics
 
@@ -8,7 +8,7 @@
 
 ## 📊 Stato Attuale
 
-### Completamento Globale: **75%**
+### Completamento Globale: **80%**
 
 | Componente | Completamento | Stato |
 |-----------|--------------|-------|
@@ -19,214 +19,108 @@
 | Event Metadata Support | 100% | ✅ |
 | Event Sourcing Capabilities | 100% | ✅ |
 | Filament Integration | 100% | ✅ |
+| EnumTrait Standardization | 100% | ✅ |
+| Event Stats Widgets | 100% | ✅ |
 | Event Registration System | 70% | 🔄 |
 | Calendar Widget | 0% | ❌ |
 | Event Reminders | 0% | ❌ |
 | Event Analytics | 0% | ❌ |
-| PHPStan Level 10 | N/A | 🟡 |
+| PHPStan Level 10 | 🟡 | In Progress |
 | Test Coverage | N/A | ❌ |
-
----
-
-## ⚠️ CRITICAL ISSUE
-
-### Calendar Widget Disabled (CRITICAL - Fix Immediately)
-
-**Issue**: Calendar widget disabled due to Filament v4 incompatibility with saade/filament-fullcalendar
-
-**Location**: `/var/www/_bases/base_laravelpizza/laravel/Modules/Meetup/`
-
-**Impact**: 
-- Users cannot view events in calendar format
-- Poor UX for event management
-- Missing core feature
-
-**Action Required**: 
-- Option A: Wait for Filament v5 fullcalendar package update
-- Option B: Find alternative calendar package compatible with Filament v4
-- Option C: Build custom calendar widget using Filament v4 APIs
 
 ---
 
 ## ✅ Funzionalità Completate
 
-### 1. Event Creation & Management (100%)
-- ✅ Create events
-- ✅ Edit events
-- ✅ Delete events
-- ✅ Event details
-- ✅ Event images
-- ✅ Event categories
+### Event CRUD & Management (100%)
+- ✅ Create, Edit, Delete events con Filament Resource
+- ✅ Immagini eventi e categorie
+- ✅ Schema.org compliance (EventStatusType, EventAttendanceMode)
 
-### 2. Event Status Tracking (100%)
-- ✅ Draft status
-- ✅ Published status
-- ✅ Cancelled status
-- ✅ Completed status
-- ✅ Status transitions
+### Event Status & Enums (100%)
+- ✅ `EventStatus` con `EnumTrait` (Draft, Scheduled, Confirmed, Cancelled, Postponed, Rescheduled, MovedOnline, Completed)
+- ✅ `EventAttendanceMode` con `EnumTrait` (Offline, Online, Mixed)
+- ✅ `RepeatFrequency` con `EnumTrait` (Daily, Weekly, Biweekly, Monthly, Yearly)
+- ✅ Traduzioni centralizzate in `lang/it/`
 
-### 3. Attendee Management (100%)
-- ✅ Attendee registration
-- ✅ Attendee list
-- ✅ Attendee check-in
-- ✅ Attendee status
-- ✅ Attendee notifications
+### Attendee & Location (100%)
+- ✅ Registrazione partecipanti, lista, check-in, stato, notifiche
+- ✅ Localizzazione fisica e virtuale con mappe e indicazioni
 
-### 4. Location Tracking (100%)
-- ✅ Physical location
-- ✅ Virtual location
-- ✅ Location maps
-- ✅ Location directions
-
-### 5. Event Metadata (100%)
-- ✅ Event tags
-- ✅ Event organizers
-- ✅ Event sponsors
-- ✅ Event pricing
-
-### 6. Event Sourcing (100%)
-- ✅ Event history
-- ✅ Event replay
-- ✅ Event snapshots
-- ✅ Event audit trail
+### Filament Dashboard Widgets (100%)
+- ✅ `EventStatsOverviewWidget` - Metriche chiave (totale, futuri, partecipazioni)
+- ✅ `EventsStats` - Statistiche aggregate
+- ✅ `EventsTimelineChart` - Timeline eventi
+- ✅ `RecentEventsWidget` - Eventi recenti
 
 ---
 
 ## 🔄 Funzionalità in Corso
 
-### 1. Event Registration System (70%)
-**Status**: Basic registration implemented
+### Event Registration System (70%)
 **Priorità**: Alta
-**File interessati**: `app/Services/EventRegistrationService.php`
 
-**Task da completare**:
-- [ ] Implementa waitlist functionality
-- [ ] Add registration form customization
-- [ ] **Auth UI/UX Overhaul & I18N**
-    - [x] Standardize "Sign up" -> "Register".
-    - [x] Create `auth-split` layout (Needs I18N fix).
-    - [ ] **CRITICAL**: Remove ALL hardcoded strings from themes and layouts. Use `Lang` module.
-    - [ ] **UI/UX**: Implement "Premium" aesthetics (Gradients, Glassmorphism) with responsiveness.
-    - [ ] **SEO/Marketing**: Enhance texts for engagement (Clickbait/Inbound principles) via translation files.
-    - [ ] Verify automatic label resolution in `RegisterWidget`.ta
-- [ ] Implementa registration limits
-- [ ] Add registration fees
-- [ ] Implementa registration confirmations
-- [ ] Add registration cancellations
-- [ ] Test suite completa
-- [ ] Documentation
+**Completato**:
+- [x] Registrazione base partecipanti
+- [x] Auth UI modernizzata (Glassmorphism, i18n)
+- [x] Standardizzazione "Register" terminology
 
-**Stima tempo**: 4-5 giorni
-**Assegnao a**: TBD
+**Da completare**:
+- [ ] Waitlist functionality
+- [ ] Registration form customization
+- [ ] Registration limits e fees
+- [ ] Conferme e cancellazioni
+- [ ] Implementare tramite **Actions** (NO Services - regola Laraxot)
+
+> [!IMPORTANT]
+> La logica di registrazione deve usare Spatie Queueable Actions, NON Services.
+> Esempio: `RegisterAttendeeAction`, `CancelRegistrationAction`.
 
 ---
 
-## 📋 Task da Fare
+## 📋 Task Prioritizzati
 
-### Priorità CRITICA (Questa settimana)
+### Priorità CRITICA
 
-#### 1.1 Fix Calendar Widget
-- [ ] **Task**: Restore calendar widget con Filament v4 compatibility
-- [ ] **File**: `app/Filament/Widgets/CalendarWidget.php`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 3-5 giorni
-- [ ] **Percentuale**: 0% → 100%
-- [ ] **Output**: Calendar widget funzionante con Filament v4
+#### Calendar Widget
+- [ ] Ripristinare calendar widget con Filament v4 compatibility
+- [ ] Alternativa: widget calendario custom con Filament v4 APIs
+- **Stima**: 3-5 giorni
 
-### Priorità ALTA (Questa settimana)
+### Priorità ALTA
 
-#### 1.2 Completa Event Registration System
-- [ ] **Task**: Completa registration con waitlist e fees
-- [ ] **File**: `app/Services/EventRegistrationService.php`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 4-5 giorni
-- [ ] **Percentuale**: 70% → 100%
-- [ ] **Output**: Registration system completo con payments
+#### Completamento Registration System
+- [ ] Implementare `RegisterAttendeeAction` (Spatie Queueable Action)
+- [ ] Implementare `CancelRegistrationAction`
+- [ ] Waitlist e fees via Actions dedicate
+- **Stima**: 4-5 giorni
 
-#### 1.3 Auth UI/UX Overhaul (High Priority)
-- [x] **Task**: Modernize Login/Register UI (Glassmorphism, Clean)
-- [x] **Task**: Standardize "Register" terminology (No "Sign up")
-- [x] **Task**: Ensure /it/auth/* routes work
-- [ ] **Task**: Add Pest tests in Modules/Meetup/tests
-- [ ] **File**: `Modules/User/resources/views/pages/auth/*.blade.php`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 1-2 giorni
-- [ ] **Percentuale**: 90%
-- [ ] **Output**: Top UI/UX Auth pages consistent with branding
+### Priorità MEDIA
 
-### Priorità MEDIA (Prossime 2 settimane)
+#### Event Reminders
+- [ ] Implementare `SendEventReminderAction` (email/SMS/push)
+- **Stima**: 3-4 giorni
 
-#### 1.3 Implementa Event Reminders
-- [ ] **Task**: Crea reminder system per events
-- [ ] **File**: `app/Services/EventReminderService.php`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 3-4 giorni
-- [ ] **Percentuale**: 0% → 100%
-- [ ] **Output**: Reminders con email/SMS/notifications
+#### Event Analytics Dashboard
+- [ ] Implementare `EventAnalyticsDashboard` (extends `XotBaseDashboard`)
+- [ ] Metriche: attendance rate, conversion, trend temporali
+- **Stima**: 4-5 giorni
 
-#### 1.4 Crea Event Analytics Dashboard
-- [ ] **Task**: Implementa analytics per events
-- [ ] **File**: `app/Filament/Pages/EventAnalytics.php`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 4-5 giorni
-- [ ] **Percentuale**: 0% → 100%
-- [ ] **Output**: Analytics con attendance metrics
+### Priorità BASSA
 
-### Priorità BASSA (Prossimo mese)
-
-#### 1.5 Implementa PHPStan Level 10
-- [ ] **Task**: Fix code per PHPStan Level 10 compliance
-- [ ] **File**: All PHP files in module
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 5-6 giorni
-- [ ] **Percentuale**: Nuovo (0%)
-- [ ] **Output**: PHPStan Level 10 con zero errors
-
-#### 1.6 Crea Test Suite Completa
-- [ ] **Task**: Implementa comprehensive test suite
-- [ ] **File**: `tests/`
-- [ ] **Responsabile**: TBD
-- [ ] **Stima**: 6-7 giorni
-- [ ] **Percentuale**: Nuovo (0%)
-- [ ] **Output**: Test coverage 90%+
-
----
-
-## 📊 Metriche di Progresso
-
-### Completamento Totale: 75%
-
-| Area | Corrente | Target | Gap | Azione |
-|------|---------|--------|-----|--------|
-| Event Management | 100% | 100% | 0% | ✅ Completo |
-| Attendee Management | 100% | 100% | 0% | ✅ Completo |
-| Location Tracking | 100% | 100% | 0% | ✅ Completo |
-| Calendar Widget | 0% | 100% | 100% | Fix compatibility |
-| Registration System | 70% | 100% | 30% | Complete system |
-| Event Reminders | 0% | 100% | 100% | Implement reminders |
-| Event Analytics | 0% | 100% | 100% | Implement analytics |
-| PHPStan | 0% | 100% | 100% | Implement Level 10 |
-| Test Coverage | 0% | 90% | 90% | Implement tests |
+#### PHPStan Level 10 & Test Coverage
+- [ ] Fix code per PHPStan Level 10 compliance su tutto il modulo
+- [ ] Test suite Pest con coverage 90%+
+- **Stima**: 5-7 giorni
 
 ---
 
 ## 🎯 Prossimi Passi
 
-1. **Settimana 1**: Fix calendar widget + Complete registration
+1. **Settimana 1**: Fix calendar widget + Complete registration Actions
 2. **Settimana 2**: Event reminders + Event analytics
-3. **Settimana 3**: PHPStan Level 10 implementation
+3. **Settimana 3**: PHPStan Level 10 full module compliance
 4. **Settimana 4**: Test suite creation + Polish
 
 ---
-
-## 📝 Note Importanti
-
-- **Critical Issue**: Calendar widget disabled - fix priority highest
-- **PHPStan Level 10**: Implement per type safety
-- **Test Coverage**: Implement comprehensive test suite
-- **Filament v4**: Calendar package compatibility issue needs resolution
-
----
-
-**Responsabile**: TBD
-
+*Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

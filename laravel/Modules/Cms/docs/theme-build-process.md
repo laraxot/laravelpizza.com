@@ -44,4 +44,4 @@ Per ulteriori dettagli su come funziona l'integrazione, consultare la [documenta
 - [Sviluppo Frontend in il progetto](./frontend-overview.md)
 - [Personalizzazione del Tema](./theme-customization.md)
 - [Struttura dei Componenti](./theme-components.md)
-- [Integrazione con Filament](./filament-integration.md)
+- [Integrazione con Filament](./filament-integration.md) 

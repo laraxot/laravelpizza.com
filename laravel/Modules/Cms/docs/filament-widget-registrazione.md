@@ -63,14 +63,14 @@ class RegistrationWidget extends Widget
     use InteractsWithForms;
 
     protected static string $view = 'user::filament.widgets.registration-widget';
-
+    
     public ?array $data = [];
-
+    
     public function mount(): void
     {
         $this->form->fill();
     }
-
+    
     public function form(Form $form): Form
     {
         return $form
@@ -84,12 +84,12 @@ class RegistrationWidget extends Widget
                                 ->label('Nome')
                                 ->required()
                                 ->maxLength(255),
-
+                                
                             TextInput::make('surname')
                                 ->label('Cognome')
                                 ->required()
                                 ->maxLength(255),
-
+                                
                             TextInput::make('email')
                                 ->label('Email')
                                 ->email()
@@ -97,7 +97,7 @@ class RegistrationWidget extends Widget
                                 ->unique('users')
                                 ->maxLength(255),
                         ]),
-
+                        
                     Step::make('Credenziali')
                         ->icon('heroicon-o-key')
                         ->description('Crea le tue credenziali di accesso')
@@ -108,14 +108,14 @@ class RegistrationWidget extends Widget
                                 ->required()
                                 ->minLength(8)
                                 ->same('password_confirmation'),
-
+                                
                             TextInput::make('password_confirmation')
                                 ->label('Conferma Password')
                                 ->password()
                                 ->required()
                                 ->minLength(8),
                         ]),
-
+                        
                     Step::make('Privacy')
                         ->icon('heroicon-o-lock-closed')
                         ->description('Informativa sulla privacy')
@@ -123,7 +123,7 @@ class RegistrationWidget extends Widget
                             Checkbox::make('terms')
                                 ->label(new HtmlString('Accetto i <a href="#" class="text-primary-600 hover:underline">Termini di Servizio</a> e l\'<a href="#" class="text-primary-600 hover:underline">Informativa sulla Privacy</a>'))
                                 ->required(),
-
+                                
                             Checkbox::make('newsletter')
                                 ->label('Desidero ricevere aggiornamenti via email sul progetto il progetto'),
                         ]),
@@ -133,21 +133,21 @@ class RegistrationWidget extends Widget
             ])
             ->statePath('data');
     }
-
+    
     public function register()
     {
         $state = $this->form->getState();
-
+        
         $user = User::create([
             'name' => $state['name'],
             'email' => $state['email'],
             'password' => Hash::make($state['password']),
         ]);
-
+        
         event(new Registered($user));
-
+        
         Auth::login($user, true);
-
+        
         return redirect()->intended('/');
     }
 }
@@ -160,7 +160,7 @@ class RegistrationWidget extends Widget
     <form wire:submit.prevent="register">
         {{ $this->form }}
     </form>
-
+    
     <div class="text-sm text-center text-gray-600 mt-6">
         Hai già un account? <a href="{{ route('login') }}" class="text-blue-800 hover:underline">Accedi</a>
     </div>
@@ -182,7 +182,7 @@ use Modules\User\Filament\Widgets\RegistrationWidget;
 public function boot()
 {
     // ... altro codice
-
+    
     Filament::registerWidgets([
         RegistrationWidget::class,
     ]);
@@ -207,7 +207,7 @@ name('register');
     <div class="bg-blue-900 text-white p-4 flex justify-between items-center mb-8">
         <div class="text-3xl font-light">
             <a href="{{ route('home') }}" class="text-white no-underline">
-                <slogan>
+                <span class="font-normal">SALUTE</span> ORA<span class="italic font-light text-2xl">le</span>
             </a>
         </div>
         <button class="text-white" aria-label="Menu">
@@ -220,7 +220,7 @@ name('register');
     <div class="max-w-3xl mx-auto p-6">
         <h1 class="text-2xl font-medium text-blue-900 mb-2">Registrazione</h1>
         <p class="text-gray-600 mb-8">Compila i seguenti passaggi per creare il tuo account su il progetto</p>
-
+        
         <div class="bg-white rounded-lg shadow-sm p-6">
             <livewire:user::filament.widgets.registration-widget />
         </div>
@@ -262,20 +262,20 @@ TextInput::make('password')
 public function register()
 {
     $state = $this->form->getState();
-
+    
     $user = User::create([
         'name' => $state['name'],
         'email' => $state['email'],
         'password' => Hash::make($state['password']),
     ]);
-
+    
     event(new Registered($user));
-
+    
     // Invia notifica di benvenuto
     $user->notify(new WelcomeNotification());
-
+    
     Auth::login($user, true);
-
+    
     return redirect()->intended('/')->with('success', 'Registrazione completata con successo!');
 }
 ```

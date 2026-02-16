@@ -184,4 +184,4 @@ L'implementazione attuale fornisce una base solida per i miglioramenti proposti,
 *Sintesi completata il: $(date)*
 *Modulo: Geo*
 *Classe: AddressResource*
-*Versione: 1.0*
+*Versione: 1.0* 

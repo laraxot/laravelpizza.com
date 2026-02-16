@@ -1,6 +1,6 @@
 # Suggerimenti di Miglioramento per AddressResource.php
 
-**File**: `/laravel/Modules/Geo/app/Filament/Resources/AddressResource.php`
+**File**: `/laravel/Modules/Geo/app/Filament/Resources/AddressResource.php`  
 **Priorità**: Alta (per performance e manutenibilità)
 
 ## 🎯 Obiettivi di Miglioramento
@@ -97,7 +97,7 @@ protected static function getCachedProvinces(int $regionId): array
 class GeoDataService
 {
     public function getRegionOptions(): array
-    public function getProvinceOptions(int $regionId): array
+    public function getProvinceOptions(int $regionId): array  
     public function getLocalityOptions(int $regionId, int $provinceId): array
     public function getPostalCodeOptions(int $regionId, int $provinceId, ?int $localityId = null): array
 }
@@ -106,7 +106,7 @@ class GeoDataService
 public static function getFormSchema(): array
 {
     $geoService = app(GeoDataService::class);
-
+    
     return [
         // Utilizzo del service per le opzioni
         'administrative_area_level_1' => Select::make('administrative_area_level_1')
@@ -194,7 +194,7 @@ public static function getSearchStep(): array
 - [ ] Pulizia codice e formattazione
 - [ ] Aggiungere loading states
 
-### Fase 2 (Settimana 3-4): UX e Validazioni
+### Fase 2 (Settimana 3-4): UX e Validazioni  
 - [ ] Integrazione Google Maps nel form
 - [ ] Implementare validazioni geografiche
 - [ ] Aggiungere feedback utente migliorato
@@ -230,7 +230,7 @@ public static function getSearchStep(): array
 - Validation rules personalizzate
 - Cache mechanisms
 
-### Integration Tests
+### Integration Tests  
 - Form submission completa
 - Cascade updates tra Select
 - Google Maps integration

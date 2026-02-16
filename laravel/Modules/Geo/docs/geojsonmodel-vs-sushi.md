@@ -70,7 +70,7 @@ class Region extends Model
         ['codice' => 'LAZ', 'nome' => 'Lazio'],
         // ...
     ];
-
+    
     // Oppure con caricamento da file JSON
     protected function getRows()
     {

@@ -1,38 +1,23 @@
-# Lang Module Documentation
+# Module Documentation
 
-## Overview
+This directory contains the documentation for the Lang module.
 
-The Lang module handles internationalization (i18n) and localization for the LaravelPizza project.
+## Purpose
+
+The purpose of this documentation is to provide comprehensive information about the Lang's functionality, architecture, and usage. It aims to:
+- Explain key features and their implementation details.
+- Guide developers on how to use, extend, and maintain the module.
+- Ensure consistency with Laraxot architectural principles and coding standards.
 
 ## Structure
 
-- `docs/` - Module documentation
-- `package.json` - NPM dependencies (if any)
-- `composer.json` - PHP dependencies
-- `resources/lang/` - Translation files
+- `README.md`: This overview file.
+- Other Markdown files will detail specific aspects of the module, such as:
+    - `installation.md`
+    - `usage.md`
+    - `architecture.md`
+    - `troubleshooting.md`
 
-## Key Documentation
+## Contribution
 
-- [laravel-localization-reference](./laravel-localization-reference.md) - Complete reference for mcamara/laravel-localization
-- [translation-strategies](./translation-strategies.md) - Translation approach
-- [multilingual-setup](./multilingual-setup.md) - Setup for 6 languages
-
-## Dependencies
-
-- `mcamara/laravel-localization` - URL-based localization
-- `spatie/laravel-translatable` - Model translations
-
-## Quick Reference
-
-```bash
-# Clear translation cache
-php artisan translation:clear
-
-# Show missing translations
-php artisan translation:show
-```
-
-## Related Modules
-
-- [Cms](../Cms/docs/) - Content blocks with translations
-- [User](../User/docs/) - User-facing translations
+Developers are encouraged to contribute to this documentation to keep it accurate and up-to-date.

@@ -46,7 +46,7 @@ Creare un nuovo componente per il selettore di lingua:
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
         </svg>
     </button>
-
+    
     <div
         x-show="open"
         x-transition:enter="transition ease-out duration-100"
@@ -120,7 +120,7 @@ Creare un nuovo componente per l'avatar utente con dropdown:
                 @endif
             </button>
         </div>
-
+        
         <div
             x-show="open"
             x-transition:enter="transition ease-out duration-100"
@@ -135,15 +135,15 @@ Creare un nuovo componente per l'avatar utente con dropdown:
                 <div class="font-medium">{{ $user->first_name }} {{ $user->last_name }}</div>
                 <div class="text-gray-500 truncate">{{ $user->email }}</div>
             </div>
-
+            
             <a href="{{ '/' . app()->getLocale() . '/profile' }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                 {{ __('user.profile.link') }}
             </a>
-
+            
             <a href="{{ '/' . app()->getLocale() . '/dashboard' }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                 {{ __('user.dashboard.link') }}
             </a>
-
+            
             <form action="{{ '/' . app()->getLocale() . '/auth/logout' }}" method="post" class="border-t">
                 @csrf
                 <button type="submit" class="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100">

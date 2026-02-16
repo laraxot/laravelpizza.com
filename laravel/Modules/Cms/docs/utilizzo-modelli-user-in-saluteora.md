@@ -54,7 +54,7 @@ class MioServizio
         protected UserContract $user
     ) {
     }
-
+    
     public function eseguiOperazione(): void
     {
         // Utilizzo dell'interfaccia UserContract
@@ -80,12 +80,12 @@ use Illuminate\Support\Facades\Hash;
 public function register(array $data): UserContract
 {
     $user = app(UserContract::class);
-
+    
     $user->name = $data['name'];
     $user->email = $data['email'];
     $user->password = Hash::make($data['password']);
     $user->save();
-
+    
     return $user;
 }
 ```

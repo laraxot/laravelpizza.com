@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Resources\EventResource\Pages;
 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Carbon;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Tables\Columns\TextColumn;
@@ -13,6 +15,7 @@ use Modules\Meetup\Actions\Event\ImportEventsFromJsonAction;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Filament\Resources\EventResource;
+use Modules\Meetup\Filament\Widgets\EventStatsOverviewWidget;
 use Modules\Meetup\Filament\Widgets\EventsStats;
 use Modules\Meetup\Filament\Widgets\EventsTimelineChart;
 use Modules\Meetup\Filament\Widgets\RecentEventsWidget;
@@ -112,8 +115,8 @@ class ListEvents extends XotBaseListRecords
                 ->trueLabel((string) __('meetup::event.event.filters.has_capacity.yes'))
                 ->falseLabel((string) __('meetup::event.event.filters.has_capacity.no'))
                 ->queries(
-                    true: fn ($query) => $query->whereColumn('attendees_count', '<', 'max_attendees'),
-                    false: fn ($query) => $query->whereColumn('attendees_count', '>=', 'max_attendees'),
+                    true: fn (\Illuminate\Database\Eloquent\Builder $query) => $query->whereColumn('attendees_count', '<', 'max_attendees'),
+                    false: fn (\Illuminate\Database\Eloquent\Builder $query) => $query->whereColumn('attendees_count', '>=', 'max_attendees'),
                 ),
         ];
     }

@@ -40,7 +40,7 @@ Questo documento analizza l'applicabilità del trait `SushiToJsons` al modello `
 class Comune extends Model
 {
     use SushiToJsons;
-
+    
     protected $schema = [
         'id' => 'string',
         'nome' => 'string',
@@ -51,7 +51,7 @@ class Comune extends Model
         'cap' => 'json',
         'popolazione' => 'integer'
     ];
-
+    
     protected $casts = [
         'regione' => 'array',
         'provincia' => 'array',
@@ -192,12 +192,12 @@ use Modules\Tenant\Models\Traits\SushiToJsons;
 class Comune extends Model
 {
     use SushiToJsons;
-
+    
     /**
      * Indica a Sushi di non utilizzare timestamps
      */
     public $timestamps = false;
-
+    
     /**
      * Definizione dello schema per i campi
      */
@@ -210,7 +210,7 @@ class Comune extends Model
         'codiceCatastale' => 'string',
         'popolazione' => 'integer'
     ];
-
+    
     /**
      * Cast per le colonne JSON
      */
@@ -219,7 +219,7 @@ class Comune extends Model
         'provincia' => 'array',
         'cap' => 'array',
     ];
-
+    
     /**
      * Recupera le regioni
      */
@@ -228,9 +228,9 @@ class Comune extends Model
         return $query->where('regione->codice', $regionCode)
                      ->orderBy('nome');
     }
-
+    
     // Implementazione di altri metodi e scope...
-
+    
     /**
      * Prepopola i file JSON dai dati esistenti (da eseguire una tantum)
      */
@@ -238,13 +238,13 @@ class Comune extends Model
     {
         $path = module_path('Geo', 'resources/json/comuni.json');
         $comuni = json_decode(file_get_contents($path), true);
-
+        
         $basePath = TenantService::filePath('database/content/comuni');
-
+        
         if (!File::exists($basePath)) {
             File::makeDirectory($basePath, 0755, true, true);
         }
-
+        
         foreach ($comuni as $index => $comune) {
             $id = $index + 1;
             $comune['id'] = $id;
@@ -289,29 +289,29 @@ use Illuminate\Support\Facades\Cache;
 trait GeoSushi
 {
     use \Sushi\Sushi;
-
+    
     protected const CACHE_TTL = 604800; // 1 settimana
-
+    
     public function getRows()
     {
         $path = module_path('Geo', 'resources/json/comuni.json');
         $cacheKey = 'geo_comuni_json_' . md5($path);
-
+        
         return Cache::rememberForever($cacheKey, function () use ($path) {
             return json_decode(file_get_contents($path), true);
         });
     }
-
+    
     protected function sushiShouldCache()
     {
         return true;
     }
-
+    
     protected function sushiCacheReferencePath()
     {
         return module_path('Geo', 'resources/json/comuni.json');
     }
-
+    
     /**
      * Metodo per aggiornare il file JSON principale
      * Implementa la logica di persistenza solo quando necessaria
@@ -320,23 +320,23 @@ trait GeoSushi
     {
         $path = module_path('Geo', 'resources/json/comuni.json');
         $data = json_decode(file_get_contents($path), true);
-
+        
         foreach ($updates as $update) {
             $index = array_search($update['codice'], array_column($data, 'codice'));
             if ($index !== false) {
                 $data[$index] = array_merge($data[$index], $update);
             }
         }
-
+        
         $result = file_put_contents($path, json_encode($data, JSON_PRETTY_PRINT));
-
+        
         if ($result) {
             // Invalida la cache
             static::clearSushiCache();
             Cache::forget('geo_comuni_json_' . md5($path));
             return true;
         }
-
+        
         return false;
     }
 }
@@ -375,5 +375,5 @@ Questo approccio offre il miglior equilibrio tra performance, flessibilità e ma
 
 ---
 
-*Documento creato il: 28/05/2025*
+*Documento creato il: 28/05/2025*  
 *Autore: Team <main module>*

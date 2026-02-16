@@ -2,12 +2,12 @@
 
 ## Introduzione
 
-Questo documento descrive in dettaglio la struttura e il contenuto corretto che **deve** essere mostrato nell'homepage del portale il progetto, basato sulle specifiche ufficiali del progetto contenute nel file `/var/www/html/_bases/<directory progetto>/docs/images/2.md`.
+Questo documento descrive in dettaglio la struttura e il contenuto corretto che **deve** essere mostrato nell'homepage del portale il progetto, basato sulle specifiche ufficiali del progetto contenute nel file `/var/www/html/<directory progetto>/project_docs/images/2.md`.
 
 ## Contenuto Testuale Ufficiale
 
 ### Titolo Principale
-"Benvenuta su <slogan>,"
+"Benvenuta su Salute Orale,"
 
 ### Testo Principale
 Il testo principale da mostrare è:
@@ -23,7 +23,7 @@ Il pulsante deve contenere il testo: "INIZIA ORA"
 ## Elementi Visivi Richiesti
 
 1. **Intestazione**:
-   - Logo "<slogan>" (con la "O" stilizzata)
+   - Logo "Salute Orale" (con la "O" stilizzata) 
    - Selettore lingua (IT/EN)
 
 2. **Sezione Centrale**:
@@ -52,7 +52,7 @@ Il layout dell'homepage deve essere strutturato in modo chiaro e accessibile:
 
 ## Implementazione nel File JSON
 
-Il contenuto sopra descritto deve essere correttamente implementato nel file `/var/www/html/_bases/<directory progetto>/laravel/config/local/<directory progetto>/database/content/pages/1.json` attraverso i blocchi di tipo "hero" e "paragraph", mantenendo la fedeltà assoluta al testo specificato.
+Il contenuto sopra descritto deve essere correttamente implementato nel file `/var/www/html/<directory progetto>/laravel/config/local/<directory progetto>/database/content/pages/1.json` attraverso i blocchi di tipo "hero" e "paragraph", mantenendo la fedeltà assoluta al testo specificato.
 
 ## Verifica dell'Implementazione
 
@@ -72,4 +72,4 @@ Per verificare che l'implementazione sia corretta:
 3. Compromettere l'efficacia comunicativa del portale
 4. Non rispettare gli accordi con i partner del progetto
 
-Questo documento serve come riferimento definitivo per il contenuto dell'homepage e deve essere consultato prima di qualsiasi modifica all'interfaccia utente del portale il progetto.
+Questo documento serve come riferimento definitivo per il contenuto dell'homepage e deve essere consultato prima di qualsiasi modifica all'interfaccia utente del portale il progetto. 

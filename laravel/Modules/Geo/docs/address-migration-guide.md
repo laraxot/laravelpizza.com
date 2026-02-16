@@ -7,44 +7,39 @@ Quando progettiamo la tabella per il modello `Address`, è importante considerar
 ### Migrazione Proposta
 
 ```php
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-use Modules\Geo\Enums\AddressItemEnum;
-
 public function up(): void
 {
-    Schema::create('addresses', function (Blueprint $table): void {
+    Schema::create('addresses', function (Blueprint $table) {
         $table->id();
         $table->nullableMorphs('addressable'); // Relazione polimorfica
         $table->string('name')->nullable()->comment('Nome identificativo dell\'indirizzo');
         $table->text('description')->nullable()->comment('Descrizione dell\'indirizzo');
         $table->string('type', 20)->nullable()->comment('Tipo di indirizzo (casa, lavoro, ecc.)');
         $table->boolean('is_primary')->default(false)->comment('Indica se è l\'indirizzo principale');
-
-        // Tutti i componenti dell'indirizzo definiti da AddressItemEnum (route, locality, ...)
-        AddressItemEnum::columns($table);
-
+        
+        // Componenti dell'indirizzo
+        $table->string('street_number', 20)->nullable()->comment('Numero civico');
+        $table->string('route', 100)->nullable()->comment('Via/Strada');
+        $table->string('locality', 100)->nullable()->comment('Località/Città');
+        $table->string('administrative_area_level_3', 50)->nullable()->comment('Provincia');
+        $table->string('administrative_area_level_2', 50)->nullable()->comment('Regione');
+        $table->string('administrative_area_level_1', 50)->nullable()->comment('Paese/Stato');
+        $table->string('country', 2)->nullable()->comment('Codice paese ISO 3166-1 alpha-2');
+        $table->string('postal_code', 20)->nullable()->comment('Codice postale');
+        
+        // Dati di geolocalizzazione
+        $table->string('formatted_address')->nullable()->comment('Indirizzo formattato completo');
+        $table->string('place_id')->nullable()->comment('ID del luogo (es. Google Place ID)');
+        $table->decimal('latitude', 10, 8)->nullable()->comment('Latitudine');
+        $table->decimal('longitude', 11, 8)->nullable()->comment('Longitudine');
+        
         // Dati aggiuntivi
         $table->json('extra_data')->nullable()->comment('Dati aggiuntivi in formato JSON');
-
+        
         // Timestamp standard
         $table->timestamps();
     });
 }
-```
-
-Per rollback o refactor, è possibile usare:
-
-```php
-Schema::table('addresses', function (Blueprint $table): void {
-    AddressItemEnum::dropColumns($table);
-});
-```
-
-e ottenere la lista delle colonne standard (utile per select dinamiche, validazioni, DTO, ecc.) con:
-
-```php
-$columns = AddressItemEnum::getColumnNames();
 ```
 
 ## Convenzioni di Naming
@@ -57,7 +52,7 @@ Nella tua domanda hai giustamente notato:
 > $table->string('address_region', 100)->nullable()->comment('Regione/Provincia');
 > $table->string('postal_code', 20)->nullable()->comment('Codice postale');
 > $table->string('address_country', 2)->nullable()->comment('Codice paese ISO 3166-1 alpha-2');`
->
+> 
 > ripetere "address" quando siamo già nella tabella address?
 
 Hai perfettamente ragione. Esistono diverse considerazioni riguardo alle convenzioni di naming:

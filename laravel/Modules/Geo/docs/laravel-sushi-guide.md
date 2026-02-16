@@ -97,17 +97,17 @@ I modelli Sushi possono avere relazioni con altri modelli Eloquent standard:
 class Province extends Model
 {
     use Sushi;
-
+    
     protected $rows = [
         ['id' => 1, 'code' => 'MI', 'name' => 'Milano', 'region_id' => 1],
         ['id' => 2, 'code' => 'RM', 'name' => 'Roma', 'region_id' => 2],
     ];
-
+    
     public function region()
     {
         return $this->belongsTo(Region::class);
     }
-
+    
     public function comuni()
     {
         return $this->hasMany(Comune::class);

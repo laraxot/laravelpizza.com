@@ -59,7 +59,7 @@ name('page_slug.view');
 render(function (View $view, string $slug) {
     $locale = app()->getLocale();
     $page = Page::firstWhere(['slug' => $slug]);
-
+    
     return $view->with('page', $page);
 });
 ?>
@@ -204,8 +204,9 @@ Per creare una nuova pagina statica nel tema One:
 2. Utilizzare il layout appropriato (es. `<x-layouts.marketing>`)
 3. Aggiungere il contenuto della pagina
 
-Per le pagine dinamiche, utilizzare l'interfaccia amministrativa Filament per creare e gestire le pagine attraverso il modulo CMS.
+Per le pagine dinamiche, utilizzare l'interfaccia amministrativa Filament per creare e gestire le pagine attraverso il modulo CMS. 
 ## Collegamenti tra versioni di folio-pages.md
 * [folio-pages.md](laravel/Modules/User/resources/views/project_docs/folio-pages.md)
 * [folio-pages.md](laravel/Modules/Cms/project_docs/folio-pages.md)
 * [folio-pages.md](laravel/Themes/One/project_docs/folio-pages.md)
+

@@ -256,4 +256,4 @@ $capsMilano = Comune::byCity('Milano')->pluck('cap');
 - **Un unico modello Comune** semplifica la manutenzione, riduce la duplicazione, migliora la coerenza e la performance per il 90% dei casi d'uso reali.
 - **La struttura flat e ricca del json** rende naturale questa scelta.
 - **La documentazione e i metodi statici** garantiscono comunque chiarezza e facilità d'uso.
-- **Se in futuro servono modelli separati, si possono reintrodurre facilmente come wrapper.**
+- **Se in futuro servono modelli separati, si possono reintrodurre facilmente come wrapper.** 

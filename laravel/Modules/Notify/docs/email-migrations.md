@@ -760,6 +760,3 @@ class MailMigrationDebugger
 - [Laravel Migrations](https://laravel.com/project_docs/migrations)
 - [Laravel Schema](https://laravel.com/project_docs/schema)
 - [Laravel Commands](https://laravel.com/project_docs/artisan) 
-- [Laravel Migrations](https://laravel.com/docs/migrations)
-- [Laravel Schema](https://laravel.com/docs/schema)
-- [Laravel Commands](https://laravel.com/docs/artisan) 

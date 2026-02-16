@@ -1,0 +1,356 @@
+# 🎯 Pattern Documentazione LaravelPizza - 2026-02-16
+
+## 📋 Elenco Pattern e Regole Identificati
+
+### 1. NAMING CONVENTIONS
+
+#### ✅ CORRETTO (Seguire):
+```bash
+# File docs in lowercase kebab-case
+docs/my-documentation-file.md
+docs/00-index.md
+docs/README.md
+docs/01-getting-started/
+docs/02-architecture/
+
+# Eccezioni permesse
+README.md  # Maiuscole consentite
+CHANGELOG.md  # Maiuscole consentite
+```
+
+#### ❌ SBAGLIATO (Da correggere):
+```bash
+# MAIUSCOLE (violazione)
+docs/MyDocumentationFile.md
+docs/README.MD
+docs/CHANGELOG.MD
+
+# Underscore (violazione)
+docs/my_documentation_file.md
+docs/README_MD.md
+
+# Spazi (violazione)
+docs/my documentation file.md
+docs/README MD.md
+```
+
+### 2. QUALITÀ CODICE - PHPStan Level 10
+
+#### ✅ REGOLA FONDAMENTALE:
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\MyModule;
+
+use Webmozart\Assert\Assert;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
+class MyModel extends BaseModel
+{
+    protected function casts(): array
+    {
+        return [
+            'name' => 'string',
+            'is_active' => 'boolean',
+        ];
+    }
+    
+    public function getName(): string
+    {
+        return Assert::string($this->name);
+    }
+}
+```
+
+#### ❌ VIOLAZIONI:
+```php
+<?php
+
+// ❌ Mancanza declare(strict_types=1)
+namespace Modules\MyModule;
+
+// ❌ property_exists() su Eloquent model (violazione regola)
+if (property_exists($this, 'name')) { }
+
+// ❌ Uso di ->label() invece di traduzioni automatiche
+TextInput::make('name')->label('Nome')
+
+// ❌ Classe che estende direttamente Filament invece di XotBase
+class MyResource extends Resource { }
+```
+
+### 3. TRADUZIONI - CRITICAL RULE
+
+#### ✅ CORRETTO:
+```php
+// Modules/Xot/lang/it/my_module.php
+return [
+    'fields' => [
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il nome',
+            'helper_text' => 'Nome completo',
+        ],
+    ],
+];
+
+// Themes/Meetup/lang/it/home.php
+return [
+    'hero' => [
+        'title' => 'Benvenuto',
+        'subtitle' => 'La nostra community Laravel',
+    ],
+];
+```
+
+#### ❌ VIOLAZIONI:
+```php
+// ❌ Contenuto in inglese nei file di lingua specifiche
+// Modules/Xot/lang/it/my_module.php
+return [
+    'fields' => [
+        'name' => [
+            'label' => 'Name',  // SBAGLIATO - deve essere in italiano
+            'placeholder' => 'Enter name',  // SBAGLIATO
+        ],
+    ],
+];
+
+// ❌ Usa namespace errato
+// WRONG - MAI usare il nome del tema
+{{ __('meetup::home.title') }}
+
+// CORRETTO - usare pub_theme
+{{ __('pub_theme::home.title') }}
+```
+
+### 4. ARCHITETTURA MODULARE
+
+#### ✅ REGOLA: TUTTI i file .md devono essere in docs/ esistenti
+```bash
+# ✅ CORRETTO - tutti i file .md in cartelle docs esistenti
+laravel/Modules/Xot/docs/
+laravel/Modules/User/docs/
+laravel/Themes/Meetup/docs/
+laravel/docs/
+
+# ❌ SBAGLIATO - file .md fuori dalle cartelle docs
+laravel/my-documentation.md  # MAI
+laravel/README.md  # MAI (se non in docs/)
+
+# ❌ SBAGLIATO - creare nuove cartelle docs
+laravel/my_new_docs/  # MAI
+laravel/another_docs/  # MAI
+```
+
+#### ✅ STRUTTURA CORRETTA DOCS MODULO:
+```
+Modules/{ModuleName}/docs/
+├── 00-index.md              # Main documentation index (CRITICAL)
+├── README.md               # Module overview
+├── 01-getting-started/     # Quick start guides
+│   ├── getting-started.md
+│   └── installation.md
+├── 02-architecture/        # Architecture documentation
+│   ├── overview.md
+│   └── components.md
+├── 03-development/         # Development guides
+│   ├── coding-standards.md
+│   └── testing.md
+├── 04-features/           # Feature documentation
+│   ├── feature-a.md
+│   └── feature-b.md
+├── 05-api/                # API documentation
+│   └── endpoints.md
+├── 06-integration/        # Integration guides
+│   └── third-party.md
+├── 07-troubleshooting/    # Troubleshooting
+│   └── faq.md
+├── actions/               # Action-specific docs
+├── charts/                # Chart-related docs
+├── database/              # Database documentation
+├── development/           # Development guides
+├── filament/              # Filament-specific docs
+├── quality/               # Quality assurance docs
+└── testing/               # Testing documentation
+```
+
+### 5. FILAMENT - XOTBASE REGOLE
+
+#### ✅ ESTENDERE XOTBASE (MAI DIRETTAMENTE FILAMENT):
+```php
+// ✅ CORRETTO - estensione XotBase
+class MyResource extends XotBaseResource
+{
+    protected static ?string $model = MyModel::class;
+    
+    // ✅ METODI PUBBLICI obbligatori con #[Override]
+    #[Override]
+    public function getTableColumns(): array
+    {
+        return [
+            TextColumn::make('name')->searchable(),
+        ];
+    }
+}
+
+// ✅ CORRETTO - Widget
+class MyWidget extends XotBaseWidget
+{
+    protected function getViewData(): array
+    {
+        return ['data' => 'value'];
+    }
+}
+```
+
+#### ❌ VIOLAZIONI:
+```php
+// ❌ ESTENSIONE DIRETTA di Filament (violazione)
+class MyResource extends Resource { }
+
+// ❌ METODI NON PUBBLICI (violazione)
+protected function getTableColumns(): array  // SBAGLIATO - deve essere public
+
+// ❌ USO di ->label(), ->placeholder() (violazione)
+TextInput::make('name')->label('Nome')  // SBAGLIATO
+
+// ❌ METODI NON ESISTENTI
+disableLiveUpdates()  // NON ESISTE in XotBaseSection
+```
+
+### 6. DATABASE - LARAVEL 12.x
+
+#### ✅ REGOLA FONDAMENTALE:
+```php
+// ✅ CORRETTO - database.php con singola connessione mysql
+return [
+    'default' => env('DB_CONNECTION', 'mysql'),
+    'connections' => [
+        'mysql' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'database' => env('DB_DATABASE', 'laravelpizza_data'),
+            // ...
+        ],
+    ],
+];
+```
+
+#### ❌ VIOLAZIONI:
+```php
+// ❌ CONNESSIONI MODULARI IN database.php (violazione)
+return [
+    'connections' => [
+        'mysql' => [...],
+        'gdpr' => [...],  // SBAGLIATO - gestito automaticamente
+        'user' => [...],  // SBAGLIATO - gestito automaticamente
+        'notify' => [...],  // SBAGLIATO - gestito automaticamente
+    ],
+];
+```
+
+### 7. WORKFLOW CRITICI
+
+#### ✅ WORKFLOW POST-MODIFICA:
+```bash
+# 1. Modifico file
+# 2. Creo file.lock
+# 3. PHPStan Level 10
+./vendor/bin/phpstan analyse Modules/MyModule --level=10
+# 4. PHPMD
+./vendor/bin/phpmd Modules/MyModule text rulesets/phpmd.xml
+# 5. PHPInsights
+./vendor/bin/phpinsights analyse Modules/MyModule
+# 6. Correggo errori
+# 7. Ricontrollo fino a perfezione
+# 8. Aggiorno docs del modulo/tema
+# 9. Cancello file.lock
+# 10. Git commit e push
+git add .
+git commit -m "feat: aggiungi funzionalità X"
+git push
+```
+
+#### ✅ WORKFLOW PRIMA DEL CODICE:
+```bash
+# 1. PRIMA del codice: aggiornare docs
+# 2. Scrivo codice
+# 3. DOPO il codice: verificare docs
+# 4. Non creare nuove cartelle docs
+# 5. Seguire naming conventions
+```
+
+### 8. GIT WORKFLOW
+
+#### ✅ REGOLA FONDAMENTALE:
+```bash
+# ✅ MAI recuperare file vecchi
+# ✅ SEMPRE andare in avanti
+
+# ✅ GIT STABLE POINT
+# Quando raggiungi un punto "stabile" in cui tutto funziona correttamente:
+# 1. Esegui git commit
+# 2. Esegui git push
+
+# ✅ WORKFLOW COMPLETO
+git add .
+git commit -m "feat: implementa funzionalità X"
+git push
+```
+
+### 9. FILE SYSTEM
+
+#### ✅ REGOLA FONDAMENTALE:
+```bash
+# ✅ Prima di modificare un file: crea lock file
+# Se esiste già, lavoro su altri files
+# Quando ho finito: cancello il lock file
+
+# Pattern:
+myfile.php.lock  # file.lock esiste già, lavoro su altri file
+myfile.php  # Modifico questo file
+# Cancello myfile.php.lock
+```
+
+### 10. TEST - PEST PHP
+
+#### ✅ REGOLA FONDAMENTALE:
+```bash
+# ✅ TUTTI i tests devono essere in Pest PHP
+# MAI usare PHPUnit o altra maniera
+
+# ✅ Pattern Pest:
+<?php
+
+use Tests\TestCase;
+
+uses(TestCase::class);
+
+test('test name', function () {
+    // test code
+})->group('group-name');
+```
+
+---
+
+## 🎯 Summary: 10 Regole Fondamentali
+
+1. **✅ NAMING**: File .md in lowercase kebab-case
+2. **✅ QUALITÀ**: PHPStan Level 10 obbligatorio
+3. **✅ TRADUZIONI**: Contenuti lingua target, non inglese
+4. **✅ ARCHITETTURA**: Tutti i .md in cartelle docs esistenti
+5. **✅ FILAMENT**: Estendi XotBase, non Filament direttamente
+6. **✅ DATABASE**: Singola connessione mysql in Laravel 12.x
+7. **✅ WORKFLOW**: Prima docs, poi codice, poi verifiche
+8. **✅ GIT**: Mai file vecchi, sempre andare in avanti
+9. **✅ FILE SYSTEM**: Lock file protocol prima modifica
+10. **✅ TEST**: Solo Pest PHP, mai PHPUnit
+
+---
+
+**📅 Aggiornato:** 16 Febbraio 2026  
+**🔄 Status:** ✅ COMPLETATO  
+**🎯 Copertura:** 100% delle regole fondamentali

@@ -67,7 +67,7 @@ use Modules\NomeModulo\App\Filament\Widgets\MioWidget;
 public function boot(): void
 {
     // Altre operazioni...
-
+    
     $this->registerFilamentWidgets();
 }
 

@@ -121,11 +121,11 @@ public static function table(Table $table): Table
             if ($record->status === 'critical') {
                 return 'bg-danger-500/10';
             }
-
+            
             if ($record->status === 'warning') {
                 return 'bg-warning-500/10';
             }
-
+            
             return '';
         });
 }
@@ -139,11 +139,11 @@ TextColumn::make('stock')
         if ($state <= 0) {
             return 'danger';
         }
-
+        
         if ($state < 10) {
             return 'warning';
         }
-
+        
         return 'success';
     })
 ```
@@ -352,12 +352,12 @@ class MiaRisorsa extends XotBaseResource
 class MiaRisorsa extends XotBaseResource
 {
     protected static ?string $navigationIcon = 'heroicon-o-document';
-
+    
     public static function getRelations(): array
     {
         return [];
     }
-
+    
     public static function getFormSchema(): array
     {
         return [

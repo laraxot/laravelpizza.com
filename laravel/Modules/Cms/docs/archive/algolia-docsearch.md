@@ -71,8 +71,9 @@ If you'd like to customize the styling of the search results, Algolia exposes cu
 For more details, visit the [official Algolia DocSearch documentation.](https://community.algolia.com/docsearch/what-is-docsearch.html)
 
 ## Collegamenti tra versioni di algolia-docsearch.md
-* [algolia-docsearch.md](laravel/Modules/Chart/docs/algolia-docsearch.md)
-* [algolia-docsearch.md](laravel/Modules/Gdpr/docs/algolia-docsearch.md)
-* [algolia-docsearch.md](laravel/Modules/Xot/docs/algolia-docsearch.md)
-* [algolia-docsearch.md](laravel/Modules/UI/docs/algolia-docsearch.md)
-* [algolia-docsearch.md](laravel/Modules/Cms/docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/Modules/Chart/project_docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/Modules/Gdpr/project_docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/Modules/Xot/project_docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/Modules/UI/project_docs/algolia-docsearch.md)
+* [algolia-docsearch.md](laravel/Modules/Cms/project_docs/algolia-docsearch.md)
+

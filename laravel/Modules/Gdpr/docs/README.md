@@ -1,52 +1,23 @@
-# 🛡️ **Gdpr Module** - Privacy, Compliance & Data Sovereignty
+# Module Documentation
 
-[![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
-[![PHPStan level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
-[![Compliance](https://img.shields.io/badge/GDPR-Fully%20Compliant-blue.svg)](https://gdpr-info.eu/)
+This directory contains the documentation for the Gdpr module.
 
-> **🚀 Modulo Gdpr**: L'armatura legale ed etica dell'applicazione. Fornisce un framework robusto per la gestione dei trattamenti dati, la registrazione dei consensi e la produzione di audit trail immutabili in conformità con il Regolamento (UE) 2016/679.
+## Purpose
 
-## 📋 **Panoramica**
+The purpose of this documentation is to provide comprehensive information about the Gdpr's functionality, architecture, and usage. It aims to:
+- Explain key features and their implementation details.
+- Guide developers on how to use, extend, and maintain the module.
+- Ensure consistency with Laraxot architectural principles and coding standards.
 
-Il modulo **Gdpr** integra la "Privacy by Design" nel cuore dell'architettura Laraxot.
+## Structure
 
-- 📜 **Trattamenti Granulari**: Definizione di finalità, basi giuridiche e periodi di conservazione.
-- 🗳️ **Consenso Esplicito**: Tracciamento UUID-based dei consensi prestati dagli utenti (o profili anonimi).
-- 🕒 **Audit Immutabile**: Registrazione di ogni evento di privacy (accesso, rettifica, opposizione).
-- 📄 **Compliance Reporting**: Export automatico di report PDF per dimostrare la conformità ai sensi dell'Art. 30 GDPR.
-- 🍪 **Cookie Sovereignty**: Sistema di gestione cookie integrato con controllo dinamico degli script.
+- `README.md`: This overview file.
+- Other Markdown files will detail specific aspects of the module, such as:
+    - `installation.md`
+    - `usage.md`
+    - `architecture.md`
+    - `troubleshooting.md`
 
-## ⚡ **Funzionalità Core**
+## Contribution
 
-### 🧩 **UUID-First Privacy**
-Ogni record relativo alla privacy utilizza UUID per evitare l'esposizione di ID sequenziali e garantire l'anonimizzazione in fase di analisi.
-
-### 🧘 **Philosophical Design**
-Il dato appartiene all'individuo. Il sistema ne è solo il custode temporaneo per finalità specifiche e documentate.
-
-## 🚀 **Quick Start**
-
-### 📦 **Verifica Consenso**
-```php
-if ($user->hasGivenConsent('marketing')) {
-    // Invia comunicazioni promozionali
-}
-```
-
-### ⚙️ **Registrazione Evento Privacy**
-```php
-app(LogPrivacyEventAction::class)->execute($user, 'data_access', 'Visualizzazione cartella clinica');
-```
-
-## 📚 **Documentazione Centrale**
-
-- 📖 **[Indice Documentazione](./00-index.md)** - Mappa di navigazione completa.
-- 🙏 **[Filosofia Privacy](./philosophy.md)** - I comandamenti della sovranità digitale.
-- 🗺️ **[Compliance Roadmap](./gdpr-compliance-roadmap.md)** - Evoluzione normativa del modulo.
-- 🔬 **[Testing Guidelines](./testing.md)** - Come verifichiamo la tenuta legale dei log.
-
----
-
-**🔄 Ultimo aggiornamento**: 31 Gennaio 2026
-**📦 Versione**: 2.3.0
-**✅ PHPStan level 10**: Compliance nativa garantita
+Developers are encouraged to contribute to this documentation to keep it accurate and up-to-date.

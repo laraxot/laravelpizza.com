@@ -15,4 +15,4 @@ $action = new GetCoordinatesAction();
 $coordinates = $action->execute('1600 Amphitheatre Parkway, Mountain View, CA');
 ```
 
-Questa modifica è stata applicata anche in `UpdateCoordinatesAction`, dove ora utilizziamo `GetCoordinatesAction` per aggiornare le coordinate di un luogo.
+Questa modifica è stata applicata anche in `UpdateCoordinatesAction`, dove ora utilizziamo `GetCoordinatesAction` per aggiornare le coordinate di un luogo. 

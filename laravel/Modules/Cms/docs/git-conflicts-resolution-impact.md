@@ -40,7 +40,7 @@ Il modulo Cms è stato coinvolto indirettamente nella risoluzione di conflitti G
 
 ### 1. Gestione Dipendenze
 **Problema**: Conflitti in moduli correlati possono impattare Cms
-**Soluzione**:
+**Soluzione**: 
 - Monitorare sempre i moduli correlati (Geo, User)
 - Testare integrazioni dopo risoluzioni
 - Documentare dipendenze cross-modulo

@@ -24,7 +24,7 @@ Il layout `main.blade.php` è il layout principale che fornisce la struttura HTM
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        
         <!-- Script per il dark mode -->
         <script>
             if (typeof(Storage) !== "undefined") {
@@ -64,7 +64,7 @@ Il layout `app.blade.php` estende il layout principale e aggiunge elementi speci
 <!-- /Themes/One/resources/views/components/layouts/app.blade.php -->
 <x-layouts.main>
     <x-ui.marketing.header />
-
+    
     <!-- Page Heading -->
     @if (isset($header))
         <header class="mb-5 bg-white border-b border-gray-200/80 dark:border-gray-200/10 dark:bg-gray-900/40">
@@ -73,7 +73,7 @@ Il layout `app.blade.php` estende il layout principale e aggiunge elementi speci
             </div>
         </header>
     @endif
-
+    
     <div class="mx-auto mt-5 max-w-7xl">
         <div class="sm:px-6 lg:px-8">
             {{ $slot }}
@@ -137,14 +137,14 @@ L'header di marketing (`<x-ui.marketing.header />`) è utilizzato nelle pagine p
 <header class="w-full">
     <div class="relative z-20 flex items-center justify-between w-full h-20 max-w-6xl px-6 mx-auto">
         <div x-data="{ mobileMenuOpen: false }" class="relative flex items-center md:space-x-2 text-neutral-800">
-
+            
             <div class="relative z-50 flex items-center w-auto h-full">
                 <a href="{{ route('home') }}" class="flex items-center mr-0 md:mr-5 shrink-0">
                     <x-ui.logo class="block w-auto text-gray-800 fill-current h-7 dark:text-gray-200" />
                 </a>
                 <!-- Toggle menu mobile -->
             </div>
-
+            
             <!-- Menu di navigazione -->
             <nav class="flex flex-col w-full p-6 space-y-2 bg-white md:p-0 md:flex-row md:space-x-2 md:space-y-0 md:w-auto md:bg-transparent md:flex">
                 <x-ui.nav-link href="/">Home</x-ui.nav-link>
@@ -155,7 +155,7 @@ L'header di marketing (`<x-ui.marketing.header />`) è utilizzato nelle pagine p
                 <x-ui.nav-link href="/genesis/power-ups">Power-ups</x-ui.nav-link>
             </nav>
         </div>
-
+        
         <!-- Switch tema chiaro/scuro e pulsanti di autenticazione -->
     </div>
 </header>
@@ -300,6 +300,7 @@ Livewire only supports one HTML element per component. Multiple root elements de
 Questa regola garantisce compatibilità con Livewire, Blade e le best practice frontend di il progetto. Consultare la sezione "Troubleshooting" per altri errori comuni e relative soluzioni.
 
 [Approfondisci: Livewire Troubleshooting](./frontoffice/auth-blades.md#troubleshooting)
+
 
 ### 1. Struttura a Cascata dei Layout
 

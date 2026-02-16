@@ -49,8 +49,8 @@ Ecco un'implementazione migliorata del selettore di lingua che utilizza le bandi
     >
         {{-- Mostra la bandiera della lingua corrente --}}
         <span class="flex items-center">
-            <x-dynamic-component
-                :component="'ui-flags.' . $currentLocale"
+            <x-dynamic-component 
+                :component="'ui-flags.' . $currentLocale" 
                 class="w-6 h-6 rounded-full shadow-sm border border-gray-200"
                 aria-hidden="true"
             />
@@ -60,7 +60,7 @@ Ecco un'implementazione migliorata del selettore di lingua che utilizza le bandi
             </svg>
         </span>
     </button>
-
+    
     <div
         x-show="open"
         x-transition:enter="transition ease-out duration-100"
@@ -77,8 +77,8 @@ Ecco un'implementazione migliorata del selettore di lingua che utilizza le bandi
                     href="{{ '/' . $locale . request()->getPathInfo() }}"
                     class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 {{ $currentLocale === $locale ? 'bg-gray-100' : '' }}"
                 >
-                    <x-dynamic-component
-                        :component="'ui-flags.' . $locale"
+                    <x-dynamic-component 
+                        :component="'ui-flags.' . $locale" 
                         class="w-5 h-5 rounded-full mr-3"
                         aria-hidden="true"
                     />

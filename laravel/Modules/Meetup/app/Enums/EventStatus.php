@@ -28,21 +28,6 @@ enum EventStatus: string implements HasColor, HasLabel
     case MOVED_ONLINE = 'EventMovedOnline';
     case COMPLETED = 'completed';
 
-    /**
-     * Get human-readable label for the status.
-     * This is a fallback, getLabel() from EnumTrait uses translations.
-     */
-    public function label(): string
-    {
-        return match ($this) {
-            self::DRAFT => 'Draft',
-            self::SCHEDULED, self::CONFIRMED => 'Scheduled',
-            self::CANCELLED => 'Cancelled',
-            self::POSTPONED => 'Postponed',
-            self::RESCHEDULED => 'Rescheduled',
-            self::MOVED_ONLINE => 'Moved Online',
-        };
-    }
 
     /**
      * Get full Schema.org URI for the status.

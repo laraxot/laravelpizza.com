@@ -57,7 +57,7 @@ Builder::make('content_blocks')
     ->blocks([
         Builder\Block::make('hero')
             ->schema([/* campi specifici */]),
-        Builder\Block::make('feature_sections')
+        Builder\Block::make('feature_sections')  
             ->schema([/* campi specifici */]),
         // Altri blocchi...
     ])

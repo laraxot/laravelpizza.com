@@ -10,6 +10,7 @@ We have successfully implemented the seasonal email templates as requested.
 ### Created Files
 - `Themes/Sixteen/resources/mail-layouts/christmas.html`: Classic Christmas theme (Red/Green/Gold) with falling snow animation.
 
+
 ### Documentation Updated
 - `Modules/Notify/docs/seasonal-email-templates.md`: Updated to include the new templates and usage instructions.
 - `Themes/Sixteen/resources/mail-layouts/README.md`: Synced with the main documentation.

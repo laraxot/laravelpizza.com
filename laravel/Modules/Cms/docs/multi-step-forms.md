@@ -263,7 +263,7 @@ $saveAndContinue = function () {
     $this->validate();
 
     $applicant = Applicant::findOrFail(session('applicant_id'));
-
+    
     $applicant->educations()->create([
         'institution' => $this->institution,
         'degree' => $this->degree,
@@ -399,8 +399,9 @@ class PersonalInfoTest extends TestCase
 
 - [Documentazione Laravel Volt](https://livewire.laravel.com/project_docs/volt)
 - [Documentazione Laravel Folio](https://github.com/laravel/folio)
-- [Documentazione Laravel](https://laravel.com/docs)
+- [Documentazione Laravel](https://laravel.com/docs) 
 
 ## Collegamenti tra versioni di multi-step-forms.md
 * [multi-step-forms.md](laravel/Modules/Cms/project_docs/multi-step-forms.md)
 * [multi-step-forms.md](laravel/Modules/Cms/project_docs/components/multi-step-forms.md)
+

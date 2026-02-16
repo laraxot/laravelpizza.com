@@ -68,5 +68,7 @@ laravel/Themes/Meetup/resources/views/profile/partials/delete-user-form.blade.ph
 laravel/Themes/Meetup/resources/views/profile/partials/update-password-form.blade.php:Zone.Identifier
 laravel/Themes/Meetup/resources/views/profile/partials/update-profile-information-form.blade.php:Zone.Identifier
 *:Zone.Identifier
+*.*Zone.Identifier
 _backups/
 laravel/Modules/*/_docs/
+*.*backup*

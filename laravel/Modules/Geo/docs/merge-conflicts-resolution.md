@@ -9,7 +9,7 @@ Strategia: DRY, KISS, analisi contestuale
 
 ### Modelli (8 file)
 - `app/Models/Address.php`
-- `app/Models/County.php`
+- `app/Models/County.php` 
 - `app/Models/GeoNamesCap.php`
 - `app/Models/Location.php`
 - `app/Models/Place.php`
@@ -69,7 +69,7 @@ Strategia: DRY, KISS, analisi contestuale
 
 ## Status Risoluzione
 - [ ] Modelli (3/8) - ✅ Address.php, County.php, GeographicalScopes.php risolti
-- [ ] Actions (0/12)
+- [ ] Actions (0/12) 
 - [ ] Filament (0/5)
 - [ ] Data Objects (0/2)
 - [ ] Services (0/2)
@@ -90,7 +90,7 @@ Strategia: DRY, KISS, analisi contestuale
 ### GeographicalScopes.php ✅
 - **Conflitto**: Già risolto correttamente
 - **Stato**: Utilizza correttamente `GetDistanceExpressionAction` centralizzata
-- **Implementazione**:
+- **Implementazione**: 
   - Scope `scopeWithDistance` per calcolo distanza
   - Scope `scopeOrderByDistance` per ordinamento geografico
   - Metodo `getDistanceExpression` che delega all'action

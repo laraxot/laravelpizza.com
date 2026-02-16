@@ -61,7 +61,7 @@ $mount = function ($initialName = '') {
 // Metodi
 $save = function () {
     $this->validate();
-
+    
     // Logica di salvataggio
 };
 ?>
@@ -104,10 +104,10 @@ $save = function () {
 state([
     // Stato primitivo
     'counter' => 0,
-
+    
     // Array
     'items' => [],
-
+    
     // Oggetti
     'user' => [
         'name' => '',
@@ -173,11 +173,11 @@ rules([
 
 $save = function () {
     $validated = $this->validate();
-
+    
     $post = Post::create($validated['form']);
-
+    
     session()->flash('message', 'Post creato con successo!');
-
+    
     return redirect()->route('posts.show', $post);
 };
 ?>
@@ -298,8 +298,8 @@ $getFilteredUsers = function () {
 
 ```php
 // Input con debounce
-<input
-    type="text"
+<input 
+    type="text" 
     wire:model.live.debounce.300ms="search"
     placeholder="Cerca..."
 >
@@ -307,7 +307,7 @@ $getFilteredUsers = function () {
 // Lazy loading di relazioni
 $users = computed(function () {
     return User::with('profile', 'posts')
-        ->when($this->search, fn($query) =>
+        ->when($this->search, fn($query) => 
             $query->where('name', 'like', "%{$this->search}%")
         )
         ->paginate(10);
@@ -375,7 +375,7 @@ class UserFormTest extends TestCase
 
 ## Riferimenti
 
-- [Laravel Volt Documentation](https://livewire.laravel.com/docs/volt)
+- [Laravel Volt Documentation](https://livewire.laravel.com/project_docs/volt)
 - [Livewire Documentation](https://livewire.laravel.com)
 - [Laravel Documentation](https://laravel.com/docs)
-- [Articolo Originale di Moinuddin Chowdhury](https://medium.com/@moinuddinchowdhury/how-to-create-web-application-using-laravel-volt-the-magical-way-2145071046b2)
+- [Articolo Originale di Moinuddin Chowdhury](https://medium.com/@moinuddinchowdhury/how-to-create-web-application-using-laravel-volt-the-magical-way-2145071046b2) 

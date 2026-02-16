@@ -7,7 +7,7 @@ Questo documento elenca e analizza gli errori più comuni che possono verificars
 ## Errore #1: Confondere le Fonti dei Contenuti
 
 ### Problema
-Uno degli errori più comuni è cercare le specifiche dei contenuti dell'homepage nei documenti di progetto generali, invece di consultare il file dedicato `/var/www/html/_bases/<directory progetto>/docs/images/2.md` che contiene le specifiche esatte dell'interfaccia.
+Uno degli errori più comuni è cercare le specifiche dei contenuti dell'homepage nei documenti di progetto generali, invece di consultare il file dedicato `/var/www/html/<directory progetto>/project_docs/images/2.md` che contiene le specifiche esatte dell'interfaccia.
 
 ### Impatto
 - Contenuti incoerenti rispetto al design approvato
@@ -95,4 +95,4 @@ Le considerazioni di accessibilità spesso vengono trascurate nella frenesia di 
 
 L'accuratezza dei contenuti dell'homepage è fondamentale per la riuscita del progetto il progetto. Evitando questi errori comuni, possiamo garantire un'esperienza utente coerente e accessibile, rispettando al contempo gli accordi con i partner e comunicando correttamente i criteri di ammissibilità alle potenziali beneficiarie.
 
-Questo documento dovrebbe essere consultato regolarmente dal team di sviluppo e di contenuti per assicurare l'aderenza alle specifiche ufficiali del progetto.
+Questo documento dovrebbe essere consultato regolarmente dal team di sviluppo e di contenuti per assicurare l'aderenza alle specifiche ufficiali del progetto. 
