@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b378bafa5c2fda23455c2dd10bdadd77",
+    "content-hash": "fc9ebc89d31f3a3f4124accb5ed34e0b",
     "packages": [
         {
             "name": "aaronfrancis/fast-paginate",
@@ -23864,5 +23864,5 @@
         "php": "^8.2"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

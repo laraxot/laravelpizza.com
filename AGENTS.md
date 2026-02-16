@@ -450,7 +450,7 @@ if ($userModel->on('user')->where('email', $email)->exists()) {
 ```
 Modules/{ModuleName}/
 ├── app/
-│   ├── Actions/       # Spatie QueueableAction
+│   ├── Actions/       # Spatie QueueableAction (NO constructor DI!)
 │   ├── Datas/         # Spatie Data DTOs
 │   ├── Filament/      # Admin resources (extend XotBase)
 │   ├── Models/        # Eloquent models (extend BaseModel)
@@ -459,6 +459,23 @@ Modules/{ModuleName}/
 ├── docs/
 ├── tests/
 └── composer.json
+```
+
+**⚠️ IMPORTANT: Actions - NO constructor DI!**
+```php
+// ❌ WRONG - Don't use constructor DI
+public function __construct(
+    private readonly SomeAction $someAction,
+) {}
+
+// ✅ CORRECT - Use app() to resolve actions
+app(SomeAction::class)->execute($data);
+
+// ❌ WRONG - Don't call custom methods
+app(CreateClientAction::class)->createPersonalAccessClient();
+
+// ✅ CORRECT - Always call execute() directly
+app(CreateClientAction::class)->execute($data);
 ```
 
 ### Service Provider Pattern (MINIMAL!)

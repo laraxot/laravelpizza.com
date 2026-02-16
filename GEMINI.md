@@ -190,6 +190,96 @@ Un'esperienza recente ha dimostrato come la rimozione involontaria o lo svuotame
 - Evita di "sporcare" il file principale del progetto.
 - Segue l'architettura modulare di `nWidart/laravel-modules`.
 
+## 🎬 7. Action Execution Rules (Spatie Queueable Actions)
+
+**Regola Critica**: Le Actions sono il cuore della business logic in Laraxot. Devono seguire queste regole INVIOLABILI:
+
+### Regola 1: Il metodo pubblico è SEMPRE `execute()`
+
+❌ **SBAGLIATO:**
+```php
+app(CreateClientAction::class)->createPersonalAccessClient($data);
+```
+
+✅ **CORRETTO:**
+```php
+app(CreatePersonalAccessClientAction::class)->execute($data);
+```
+
+**Perché?**
+- Spatie Queueable Actions impone un unico entry point: `execute()`.
+- Un'Action = Una Responsabilità = Un `execute()`.
+- Se serve un comportamento diverso, crea una Action DIVERSA (es. `CreatePersonalAccessClientAction`), non un metodo diverso sulla stessa classe.
+- API prevedibile e uniforme in tutto il codebase.
+
+### Regola 2: MAI usare Dependency Injection pesante nel costruttore
+
+❌ **SBAGLIATO:**
+```php
+public function __construct(
+    private readonly DatabaseManager $dbManager,
+    private readonly LoggerInterface $logger,
+    private readonly Hasher $hasher,
+    private readonly SafeStringCastAction $safeStringCastAction,
+) {}
+```
+
+✅ **CORRETTO:**
+```php
+class CreatePersonalAccessClientAction
+{
+    use QueueableAction;
+
+    public function execute(ClientData $data): OauthClient
+    {
+        // Le dipendenze si risolvono inline via app() se servono
+        // oppure si iniettano SOLO quelle strettamente necessarie
+        // (max 1-2 nel costruttore, MAI 4-5)
+    }
+}
+
+// Invocazione:
+app(CreatePersonalAccessClientAction::class)->execute($data);
+```
+
+**Perché?**
+- **KISS**: Il container di Laravel (`app()`) risolve automaticamente tutte le dipendenze. Specificarle manualmente nel costruttore è boilerplate ridondante.
+- **DRY**: Il container sa già come risolvere tutto; riscrivere le dipendenze è duplicazione.
+- **Disaccoppiamento**: Il chiamante NON deve conoscere le dipendenze interne dell'Action.
+- **Spatie Design**: `app(Action::class)->execute()` è il pattern per cui Spatie Queueable Actions è stato progettato.
+- **Leggibilità**: Meno codice = meno complessità = meno bug.
+
+### Pattern Corretto Completo
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\{ModuleName}\Actions;
+
+use Spatie\QueueableAction\QueueableAction;
+
+class DoSomethingAction
+{
+    use QueueableAction;
+
+    /**
+     * Se serve una dipendenza, max 1-2 e solo se strettamente necessarie.
+     * Preferire app() inline per dipendenze occasionali.
+     */
+    public function execute(SomeData $data): SomeResult
+    {
+        // Business logic qui
+        // Per dipendenze occasionali: app(OtherAction::class)->execute(...)
+    }
+}
+
+// Invocazione SEMPRE così:
+app(DoSomethingAction::class)->execute($data);
+```
+
+---
+
 ## ✅ Checklist "Super Mucca"
 - [ ] Ho studiato docs root e modulo?
 - [ ] Ho valutato approcci alternativi?

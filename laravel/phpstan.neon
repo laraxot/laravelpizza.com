@@ -38,6 +38,7 @@ parameters:
         - ./*/rector.php
         - ./*/*.blade.php
         - ./Modules/*/packages/*
+        - ./Modules/Xot/*
 
     bootstrapFiles:
         # - ./phpstan_bootstrap.php

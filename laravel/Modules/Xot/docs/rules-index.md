@@ -38,6 +38,21 @@ This file documents the rules and standards specific to the Xot core module.
 - Test via Actions (business logic)
 - Use contracts for dependency injection
 
+### Actions (Spatie QueueableAction)
+- **ALWAYS** use `use QueueableAction` trait (NOT `extends`)
+- **ALWAYS** call `execute()` method directly
+- **NEVER** use constructor DI - resolve via `app()` inside execute()
+- **NEVER** call custom methods that internally call execute()
+```php
+// ✅ CORRECT
+app(CreateUserAction::class)->execute($data);
+
+// ❌ WRONG
+app(CreateClientAction::class)->createPersonalAccessClient(); // calls execute() internally
+```
+
+See: [Action Execution and DI Rules](./actions/action-execution-and-di-rules.md)
+
 ## Related Documentation
 - [README](./README.md)
 - [phpstan](./phpstan.md)

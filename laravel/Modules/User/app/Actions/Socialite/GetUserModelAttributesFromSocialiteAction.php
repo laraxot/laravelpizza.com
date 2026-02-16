@@ -38,13 +38,13 @@ class GetUserModelAttributesFromSocialiteAction
         if (! is_string($nameFieldsResolver->name)) {
             throw new RuntimeException('Il nome deve essere una stringa');
         }
-        if (! is_string($nameFieldsResolver->last_name)) {
+        if (! is_string($nameFieldsResolver->lastName)) {
             throw new RuntimeException('Il cognome deve essere una stringa');
         }
 
         $this->name = $nameFieldsResolver->name;
         $this->firstName = $nameFieldsResolver->name;
-        $this->lastName = $nameFieldsResolver->last_name;
+        $this->lastName = $nameFieldsResolver->lastName;
 
         $email = $this->oauthUser->getEmail();
         if (! is_string($email) || empty($email)) {

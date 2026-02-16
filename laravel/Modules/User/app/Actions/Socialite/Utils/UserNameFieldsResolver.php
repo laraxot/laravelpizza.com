@@ -26,16 +26,19 @@ final readonly class UserNameFieldsResolver
 
     public ?string $lastName;
 
+    public ?string $last_name; // Alias for backward compatibility
+
     public function __construct(User $user, private readonly Str $stringHelper)
     {
         $this->name = $this->resolveName($user);
         $this->firstName = $this->resolveName($user);
         $this->lastName = $this->resolveSurname($user);
+        $this->last_name = $this->lastName; // Backward compatibility alias
     }
 
     public static function make(User $user): self
     {
-        return new self($user);
+        return new self($user, new Str());
     }
 
     private function resolveName(User $idpUser): string
@@ -101,12 +104,17 @@ final readonly class UserNameFieldsResolver
             return $this->stringHelper->of('');
         }
 
-        return $this->stringHelper->of($email)
+        $emailPart = $this->stringHelper->of($email)
             ->trim()
-            ->before('@')
-            ->$searchMethod('.') // If no point is available, the whole string should be returned
-            ->trim()
-            ->title();
+            ->before('@');
+
+        // Use conditional logic instead of dynamic method call for type safety
+        if ($searchMethod === self::NAME_SEARCH) {
+            return $emailPart->before('.')->trim()->title();
+        }
+
+        // self::SURNAME_SEARCH
+        return $emailPart->after('.')->trim()->title();
     }
 
     private function getRawUserData(User $idpUser): array

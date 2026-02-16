@@ -7,7 +7,10 @@ namespace Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\
 use Filament\Actions\Action;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
-use Modules\User\Actions\Passport\CreateClientAction;
+use Illuminate\Support\Str;
+use Modules\User\Actions\Passport\CreatePersonalAccessClientAction;
+use Modules\User\Actions\Passport\CreatePasswordClientAction;
+use Modules\User\Actions\Passport\CreateGenericClientAction;
 use Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 
@@ -31,10 +34,11 @@ class ListOauthClients extends XotBaseListRecords
                         ->maxLength(255),
                 ])
                 ->action(function (array $data) {
-                    app(CreateClientAction::class)->execute(
+                    app(CreatePersonalAccessClientAction::class)->execute(
                         name: (string) $data['name'],
                         redirect: (string) config('app.url'),
-                        personalAccess: true,
+                        user: null,
+                        provider: null,
                     );
                     Notification::make()
                         ->title(static::trans('actions.create_personal.success'))
@@ -56,10 +60,10 @@ class ListOauthClients extends XotBaseListRecords
                         ->maxLength(255),
                 ])
                 ->action(function (array $data) {
-                    app(CreateClientAction::class)->execute(
+                    app(CreatePasswordClientAction::class)->execute(
                         name: (string) $data['name'],
                         redirect: (string) config('app.url'),
-                        password: true,
+                        user: null,
                         provider: (string) $data['provider'],
                     );
                     Notification::make()
@@ -78,9 +82,13 @@ class ListOauthClients extends XotBaseListRecords
                         ->maxLength(255),
                 ])
                 ->action(function (array $data) {
-                    app(CreateClientAction::class)->execute(
+                    app(CreateGenericClientAction::class)->execute(
                         name: (string) $data['name'],
                         redirect: (string) config('app.url'),
+                        personalAccess: false,
+                        password: false,
+                        user: null,
+                        provider: 'users',
                     );
                     Notification::make()
                         ->title(static::trans('actions.create_client_credentials.success'))

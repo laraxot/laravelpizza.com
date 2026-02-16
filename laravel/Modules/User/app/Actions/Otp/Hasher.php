@@ -4,22 +4,25 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\Otp;
 
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Contracts\Hashing\Hasher as BaseHasher;
 
 class Hasher
 {
+    public function __construct(
+        private readonly BaseHasher $hasher,
+    ) {}
     public function make(string $value): string
     {
-        return Hash::make($value);
+        return $this->hasher->make($value);
     }
 
     public function check(string $value, string $hashedValue): bool
     {
-        return Hash::check($value, $hashedValue);
+        return $this->hasher->check($value, $hashedValue);
     }
 
     public function needsRehash(string $hashedValue): bool
     {
-        return Hash::needsRehash($hashedValue);
+        return $this->hasher->needsRehash($hashedValue);
     }
 }

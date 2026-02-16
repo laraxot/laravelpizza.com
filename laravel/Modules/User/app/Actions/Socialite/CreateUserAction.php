@@ -48,7 +48,7 @@ class CreateUserAction
         $newlyCreatedUser = $userClass::create([
             'name' => $userAttributes->name,
             'first_name' => $userAttributes->name,
-            'last_name' => $userAttributes->last_name,
+            'last_name' => $userAttributes->lastName,
             'email' => $userAttributes->email,
         ]);
 

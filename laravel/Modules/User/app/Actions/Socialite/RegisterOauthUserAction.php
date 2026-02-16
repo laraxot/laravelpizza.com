@@ -42,7 +42,7 @@ class RegisterOauthUserAction
             );
         });
         // Dispatch the registered event
-        $this->eventDispatcher->dispatch(new Registered($socialiteUser->user));
+        $this->eventDispatcher->dispatch(new Registered($socialiteUser));
 
         // Login the user
         // return app(LoginUserAction::class)->execute($socialiteUser);
