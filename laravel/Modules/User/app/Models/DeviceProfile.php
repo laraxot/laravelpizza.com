@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Modules\User\Database\Factories\DeviceProfileFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -27,8 +26,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @mixin IdeHelperDeviceProfile
  *
  * @property ProfileContract|null $deleter
- *
- * @method static DeviceProfileFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

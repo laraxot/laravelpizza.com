@@ -44,7 +44,7 @@ return [
             'label' => 'Crea Personal Access Client',
             'tooltip' => 'Crea un nuovo personal access client',
             'helper_text' => 'Crea un nuovo personal access client',
-            'description' => 'Azione per creare',,
+            'description' => 'Azione per creare',
             'success' => 'Personal Access Client creato con successo',
             'error' => 'Errore durante la creazione del Personal Access Client',
         ],

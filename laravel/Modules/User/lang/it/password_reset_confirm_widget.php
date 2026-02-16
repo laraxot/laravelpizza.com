@@ -3,48 +3,48 @@
 declare(strict_types=1);
 
 return [
-  'fields' => [
-    'email' => [
-      'label' => 'email',
-      'placeholder' => 'email',
-      'helper_text' => '',
-      'description' => 'email',
+    'navigation' => [
+        'label' => 'Conferma Reset Password',
+        'plural_label' => 'Conferma Reset Password',
+        'group' => 'Autenticazione',
+        'icon' => 'heroicon-o-lock-closed',
+        'sort' => 8,
     ],
-    'password' => [
-      'label' => 'password',
-      'placeholder' => 'password',
-      'helper_text' => '',
-      'description' => 'password',
+    'label' => 'Conferma Reset Password',
+    'plural_label' => 'Conferma Reset Password',
+    'fields' => [
+        'email' => [
+            'label' => 'Email',
+            'tooltip' => 'Indirizzo email',
+            'placeholder' => 'Inserisci la tua email',
+            'helper_text' => 'Inserisci il tuo indirizzo email',
+            'description' => 'Email dell\'utente',
+        ],
+        'password' => [
+            'label' => 'Password',
+            'tooltip' => 'Nuova password',
+            'placeholder' => 'Inserisci la nuova password',
+            'helper_text' => 'Inserisci la nuova password',
+            'description' => 'Nuova password',
+        ],
+        'password_confirmation' => [
+            'label' => 'Conferma Password',
+            'tooltip' => 'Conferma la password',
+            'placeholder' => 'Conferma la nuova password',
+            'helper_text' => 'Ripeti la nuova password per conferma',
+            'description' => 'Conferma della nuova password',
+        ],
     ],
-    'password_confirmation' => [
-      'label' => 'password_confirmation',
-      'placeholder' => 'password_confirmation',
-      'helper_text' => '',
-      'description' => 'password_confirmation',
+    'actions' => [
+        'create' => [
+            'label' => 'Conferma Reset',
+            'tooltip' => 'Conferma il reset della password',
+            'helper_text' => 'Conferma il reset della password',
+            'description' => 'Azione per confermare',
+        ],
     ],
-  ],
-  'navigation' => [
-    'name' => 'Password Reset Confirm Widget',
-    'plural' => 'Password Reset Confirm Widget',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'messages' => [
+        'success' => 'Password reimpostata con successo',
+        'error' => 'Si è verificato un errore',
     ],
-    'label' => 'Password Reset Confirm Widget',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'label' => 'Password Reset Confirm Widget',
-  'plural_label' => 'Password Reset Confirm Widget (Plurale)',
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Password Reset Confirm Widget',
-    ],
-    'edit' => [
-      'label' => 'Modifica Password Reset Confirm Widget',
-    ],
-    'delete' => [
-      'label' => 'Elimina Password Reset Confirm Widget',
-    ],
-  ],
 ];
