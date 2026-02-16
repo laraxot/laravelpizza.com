@@ -174,6 +174,22 @@ Un'esperienza recente ha dimostrato come la rimozione involontaria o lo svuotame
 
 ---
 
+---
+
+## 📦 6. Gestione Dipendenze (Composer & Modules)
+
+**Regola Critica**: Il `composer.json` nella root (`laravel/composer.json`) **NON DEVE ESSERE MODIFICATO** per aggiungere dipendenze specifiche di un modulo.
+
+### Workflow Corretto:
+1.  Aggiungi il pacchetto nel `composer.json` del **MODULO specifico** (es: `Modules/Meetup/composer.json`).
+2.  Esegui `composer run go` dalla cartella `laravel/`.
+    - Questo script esegue `composer update -W` che, grazie al plugin `wikimedia/composer-merge-plugin`, fonde le dipendenze dei moduli nel progetto principale.
+
+**Perché?**
+- Mantiene i moduli portabili e auto-contenuti.
+- Evita di "sporcare" il file principale del progetto.
+- Segue l'architettura modulare di `nWidart/laravel-modules`.
+
 ## ✅ Checklist "Super Mucca"
 - [ ] Ho studiato docs root e modulo?
 - [ ] Ho valutato approcci alternativi?

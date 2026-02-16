@@ -83,6 +83,16 @@ php artisan serve
 npm run dev
 ```
 
+### Composer & Modules (IMPORTANT!)
+```bash
+# From laravel/ directory - MUST run after adding new packages
+composer go
+
+# This merges all Modules/*/composer.json dependencies
+# NEVER add dependencies to laravel/composer.json directly!
+# Always add to the specific module's composer.json
+```
+
 ### Theme Development
 ```bash
 cd laravel/Themes/Meetup

@@ -17,10 +17,6 @@ class GetNewPasswordAction
         private readonly Hasher $hasher,
     ) {}
 
-class GetNewPasswordAction
-{
-    use QueueableAction;
-
     public function execute(UserContract $record): string
     {
         // $user = XotData::make()->getUserByEmail($record->email);

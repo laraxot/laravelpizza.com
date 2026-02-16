@@ -17,7 +17,9 @@
             "role": "Developer"
         }
     ],
-    "require": {},
+    "require": {
+        "saade/filament-fullcalendar": "^4.0@beta"
+    },
     "require-dev": {},
     "autoload": {
         "psr-4": {

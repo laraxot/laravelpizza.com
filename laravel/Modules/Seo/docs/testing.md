@@ -307,20 +307,21 @@ test('seo metadata can be created', function () {
 ### Service Tests
 
 ```php
-test('seo service can generate metadata', function () {
-    $service = new \Modules\Seo\Services\SeoService();
-    
-    $metadata = $service->generateMetadata([
-        'url' => '/test-page',
-        'title' => 'Test Page',
-        'description' => 'Test description',
-        'keywords' => 'test,seo',
-    ]);
-    
-    expect($metadata)->toBeInstanceOf(\Modules\Seo\Models\SeoMetadata::class);
-    expect($metadata->title)->toBe('Test Page');
+use Modules\Seo\Services\MetatagService;
+
+it('can set title', function () {
+    $service = new MetatagService();
+    $service->setTitle('Test Title');
+    expect($service->get()->getTitle())->toBe('Test Title');
+});
+
+it('can set description', function () {
+    $service = new MetatagService();
+    $service->setDescription('Test Description');
+    expect($service->get()->getDescription())->toBe('Test Description');
 });
 ```
+
 
 ### API Tests
 
