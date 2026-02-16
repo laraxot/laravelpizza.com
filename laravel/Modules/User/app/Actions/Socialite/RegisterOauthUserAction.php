@@ -8,13 +8,12 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\Socialite;
 
-use Illuminate\Support\Facades\DB;
+use Illuminate\Contracts\Events\Dispatcher;
+use Illuminate\Database\DatabaseManager;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Events\Registered;
 use Modules\User\Models\SocialiteUser;
 use Spatie\QueueableAction\QueueableAction;
-use Illuminate\Database\DatabaseManager;
-use Illuminate\Contracts\Events\Dispatcher;
 
 class RegisterOauthUserAction
 {
@@ -27,7 +26,8 @@ class RegisterOauthUserAction
 
     public function execute(string $provider, SocialiteUserContract $oauthUser): SocialiteUser
     {
-        $socialiteUser = $this->dbManager->transaction(static function () use ($provider, $oauthUser) {
+        /** @var SocialiteUser $socialiteUser */
+        $socialiteUser = $this->dbManager->transaction(static function () use ($provider, $oauthUser): SocialiteUser {
             // Create a user
             $user = app(CreateUserAction::class)->execute(
                 provider: $provider,

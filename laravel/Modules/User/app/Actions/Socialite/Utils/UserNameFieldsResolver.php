@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\Socialite\Utils;
 
-use InvalidArgumentException;
 use Illuminate\Support\Str;
 use Illuminate\Support\Stringable;
+use InvalidArgumentException;
 use Laravel\Socialite\Contracts\User;
 use ReflectionClass;
 use ReflectionException;
@@ -26,19 +26,16 @@ final readonly class UserNameFieldsResolver
 
     public ?string $lastName;
 
-    public ?string $last_name; // Alias for backward compatibility
-
-    public function __construct(User $user, private readonly Str $stringHelper)
+    public function __construct(User $user)
     {
         $this->name = $this->resolveName($user);
         $this->firstName = $this->resolveName($user);
         $this->lastName = $this->resolveSurname($user);
-        $this->last_name = $this->lastName; // Backward compatibility alias
     }
 
     public static function make(User $user): self
     {
-        return new self($user, new Str());
+        return new self($user);
     }
 
     private function resolveName(User $idpUser): string
@@ -101,10 +98,10 @@ final readonly class UserNameFieldsResolver
     {
         $email = $idpUser->getEmail();
         if (! is_string($email) || empty($email)) {
-            return $this->stringHelper->of('');
+            return Str::of('');
         }
 
-        $emailPart = $this->stringHelper->of($email)
+        $emailPart = Str::of($email)
             ->trim()
             ->before('@');
 
@@ -147,14 +144,14 @@ final readonly class UserNameFieldsResolver
     private function resolveNameFieldByNameAttributeAnalysis(string $nameField, string $searchMethod): Stringable
     {
         if (empty($nameField)) {
-            return $this->stringHelper->of('');
+            return Str::of('');
         }
 
         if (! in_array($searchMethod, [self::NAME_SEARCH, self::SURNAME_SEARCH], strict: true)) {
             throw new InvalidArgumentException('Metodo di ricerca non valido');
         }
 
-        return $this->stringHelper->of($nameField)
+        return Str::of($nameField)
             ->trim()
             ->$searchMethod(' ')
             ->trim();

@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\User\Console\Commands;
 
-use Nwidart\Modules\Contracts\RepositoryInterface;
 use Illuminate\Console\Command;
 use Modules\User\Models\Role;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
+use Nwidart\Modules\Contracts\RepositoryInterface;
 
 use function Laravel\Prompts\multiselect;
 use function Laravel\Prompts\text;
@@ -57,13 +57,14 @@ class AssignModuleCommand extends Command
         // Get all available modules
         /** @var array<string, mixed> $allModules */
         $allModules = $this->moduleRepository->all();
-        
+
         // Ensure $allModules is an array for PHPStan
         if (! is_array($allModules)) {
             $this->error('Unable to retrieve modules.');
+
             return;
         }
-        
+
         $moduleKeys = array_map('strval', array_keys($allModules));
         /** @var array<int|string, string> $modulesOpts */
         $modulesOpts = array_combine($moduleKeys, $moduleKeys);
