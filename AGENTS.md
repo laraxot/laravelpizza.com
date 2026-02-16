@@ -192,6 +192,13 @@ Examples:
 ```php
 // Modules/ModuleName/lang/{locale}/{widget}.php
 return [
+    'navigation' => [
+        'label' => 'Label',
+        'plural_label' => 'Labels',
+        'group' => 'ModuleName',
+        'icon' => 'heroicon-o-icon',
+        'sort' => 10,
+    ],
     'fields' => [
         'field_name' => [
             'label' => 'Field Label',
@@ -199,7 +206,86 @@ return [
             'helper_text' => 'Helper text description',
         ],
     ],
+    'actions' => [...],
+    'validation' => [...],
+    'messages' => [...],
 ];
+```
+
+**⚠️ CRITICAL: NEVER replace structured translations with flat keys!**
+
+❌ WRONG - Flat keys only:
+```php
+return [
+    'name' => 'Nome',
+    'description' => 'Descrizione',
+    'title' => 'Titolo',
+    // ... hundreds of flat keys
+];
+```
+
+✅ CORRECT - Full structure:
+```php
+return [
+    'navigation' => [...],
+    'fields' => [
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il nome',
+            'help' => 'Nome identificativo',
+        ],
+    ],
+    // ... full structure
+];
+```
+
+**🔴 HOW TO DETECT THE PROBLEM:**
+
+Look for these warning signs in translation files:
+- Comment: `// Chiavi di base - da completare`
+- Missing `navigation` array at top level
+- Missing `fields` as multidimensional array
+- Only single-level flat keys at top level
+
+**TO FIX:** Rewrite the file with the complete structure template above.
+
+**🔴 CRITICAL: NEVER LEAVE MANDATORY NODES EMPTY!**
+
+The following top-level keys MUST NEVER be empty or missing:
+- `navigation` → MUST contain label, plural_label, group, icon, sort
+- `label` → MUST contain a value (e.g., 'User', 'Profile')
+- `plural_label` → MUST contain a value (e.g., 'Users', 'Profiles')
+- `fields` → MUST contain field definitions (not empty array)
+- `actions` → MUST contain action definitions (not empty array)
+
+**PROHIBITED:**
+```php
+// ❌ WRONG - Empty nodes
+'navigation' => []           // EMPTY!
+'label' => ''                // EMPTY!
+'plural_label' => ''         // EMPTY!
+'fields' => []               // EMPTY!
+'actions' => []              // EMPTY!
+```
+
+**REQUIRED:**
+```php
+// ✅ CORRECT - All nodes filled
+'navigation' => [
+    'label' => 'User',
+    'plural_label' => 'Users',
+    'group' => 'Management',
+    'icon' => 'heroicon-o-user',
+    'sort' => 1,
+],
+'label' => 'User',
+'plural_label' => 'Users',
+'fields' => [
+    'name' => ['label' => 'Name'],
+],
+'actions' => [
+    'create' => ['label' => 'Create'],
+],
 ```
 
 **VIOLATION EXAMPLES (NEVER DO THIS):**

@@ -3,42 +3,52 @@
 declare(strict_types=1);
 
 return [
-    'fields' => [
-        'name' => [
-            'label' => 'Nome',
-            'placeholder' => 'Inserisci il nome del permesso',
-            'help' => 'Nome univoco del permesso',
-        ],
-        'guard_name' => [
-            'label' => 'Guard Name',
-            'placeholder' => 'Inserisci il nome del guard',
-            'help' => 'Nome del guard per il permesso',
-        ],
-        'active' => [
-            'label' => 'Attivo',
-            'placeholder' => 'Seleziona lo stato',
-            'help' => 'Indica se il permesso è attivo',
-        ],
-        'created_at' => [
-            'label' => 'Data Creazione',
-            'placeholder' => 'Data di creazione',
-            'help' => 'Data di creazione del permesso',
-        ],
-        'applyFilters' => [
-            'label' => 'applyFilters',
-        ],
+  'fields' => [
+    'name' => [
+      'label' => 'Nome',
+      'placeholder' => 'Inserisci il nome del permesso',
+      'help' => 'Nome univoco del permesso',
     ],
-    'common' => [
-        'yes' => 'Sì',
-        'no' => 'No',
+    'guard_name' => [
+      'label' => 'Guard Name',
+      'placeholder' => 'Inserisci il nome del guard',
+      'help' => 'Nome del guard per il permesso',
     ],
-    'navigation' => [
-        'sort' => 80,
-        'label' => 'Permessi',
-        'group' => 'Sicurezza',
-        'icon' => 'heroicon-o-shield-check',
+    'active' => [
+      'label' => 'Attivo',
+      'placeholder' => 'Seleziona lo stato',
+      'help' => 'Indica se il permesso è attivo',
     ],
-    'label' => '',
-    'plural_label' => '',
-    'actions' => [],
+    'created_at' => [
+      'label' => 'Data Creazione',
+      'placeholder' => 'Data di creazione',
+      'help' => 'Data di creazione del permesso',
+    ],
+    'applyFilters' => [
+      'label' => 'applyFilters',
+    ],
+  ],
+  'common' => [
+    'yes' => 'Sì',
+    'no' => 'No',
+  ],
+  'navigation' => [
+    'sort' => 80,
+    'label' => 'Permessi',
+    'group' => 'Sicurezza',
+    'icon' => 'heroicon-o-shield-check',
+  ],
+  'label' => 'Permission',
+  'plural_label' => 'Permission (Plurale)',
+  'actions' => [
+    'create' => [
+      'label' => 'Crea Permission',
+    ],
+    'edit' => [
+      'label' => 'Modifica Permission',
+    ],
+    'delete' => [
+      'label' => 'Elimina Permission',
+    ],
+  ],
 ];

@@ -3,16 +3,41 @@
 declare(strict_types=1);
 
 return [
-    'navigation' => [
-        'group' => '',
+  'navigation' => [
+    'group' => '',
+  ],
+  'no_results' => 'Nessun risultato del test ancora disponibile',
+  'test_s3_connection' => 'Test Connessione S3',
+  'test_s3_permissions' => 'Test Permessi S3',
+  'test_file_operations' => 'Test Operazioni File',
+  'test_cloudfront_config' => 'Test Configurazione CloudFront',
+  'test_signed_urls' => 'Test URL Firmati',
+  'test_iam_credentials' => 'Test Credenziali IAM',
+  'test_iam_policies' => 'Test Policy IAM',
+  'run_full_diagnostic' => 'Esegui Diagnostica Completa',
+  'label' => 'Aws Test',
+  'plural_label' => 'Aws Test (Plurale)',
+  'fields' => [
+    'id' => [
+      'label' => 'Identificativo',
+      'tooltip' => 'Identificativo univoco del record',
     ],
-    'no_results' => 'Nessun risultato del test ancora disponibile',
-    'test_s3_connection' => 'Test Connessione S3',
-    'test_s3_permissions' => 'Test Permessi S3',
-    'test_file_operations' => 'Test Operazioni File',
-    'test_cloudfront_config' => 'Test Configurazione CloudFront',
-    'test_signed_urls' => 'Test URL Firmati',
-    'test_iam_credentials' => 'Test Credenziali IAM',
-    'test_iam_policies' => 'Test Policy IAM',
-    'run_full_diagnostic' => 'Esegui Diagnostica Completa',
+    'created_at' => [
+      'label' => 'Data Creazione',
+    ],
+    'updated_at' => [
+      'label' => 'Ultima Modifica',
+    ],
+  ],
+  'actions' => [
+    'create' => [
+      'label' => 'Crea Aws Test',
+    ],
+    'edit' => [
+      'label' => 'Modifica Aws Test',
+    ],
+    'delete' => [
+      'label' => 'Elimina Aws Test',
+    ],
+  ],
 ];

@@ -82,4 +82,9 @@ interface ProfileContract extends HasMedia
      * --.
      */
     public function isSuperAdmin(): bool;
+
+    /**
+     * Get the URL of the user's avatar.
+     */
+    public function getAvatarUrl(): ?string;
 }

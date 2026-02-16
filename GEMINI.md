@@ -155,6 +155,23 @@ Modules/{ModuleName}/
 └── tests/                 # Pest/PHPUnit tests
 ```
 
+### 📄 5. Gestione File di Traduzione (Localizzazione)
+
+**Regola Critica**: Tutti i file di traduzione per i moduli Laraxot (`Modules/{ModuleName}/lang/{locale}/{resource}.php`) DEVONO contenere le seguenti chiavi di primo livello, in particolare per le risorse Filament:
+
+-   `navigation` (con sotto-chiavi come `label`, `plural_label`, `group`, `icon`, `sort`)
+-   `label`
+-   `plural_label`
+-   `fields` (con chiavi per ogni campo tradotto)
+-   `actions` (con chiavi per ogni azione tradotta)
+
+Queste chiavi sono fondamentali per il corretto funzionamento e la consistenza delle traduzioni nell'interfaccia utente, specialmente in Filament. La loro assenza o modifica non autorizzata può causare errori e incoerenze.
+
+**Esempio (Laravel/Modules/User/lang/it/filters.php - Caso di Studio):**
+Un'esperienza recente ha dimostrato come la rimozione involontaria o lo svuotamento di queste chiavi possa compromettere la funzionalità. Assicurati sempre che questi elementi strutturali siano presenti, correttamente definiti e **MAI VUOTI**. Si è verificato un caso specifico in cui il file `laravel/Modules/User/lang/it/filters.php` è stato trovato in uno stato "vuoto" dopo una mia precedente lettura, evidenziando la necessità di una verifica rigorosa del contenuto prima di ogni operazione.
+
+**Nota sull'uso della skill 'laraxot-translation-files':** A causa delle attuali limitazioni di accesso ai file di skill, quando si utilizza la skill `laraxot-translation-files`, è FONDAMENTALE fare riferimento incrociato a questa sezione di `GEMINI.md` per assicurarsi che tutte le regole relative alla struttura delle chiavi di traduzione siano rispettate.
+
 ---
 
 ## ✅ Checklist "Super Mucca"

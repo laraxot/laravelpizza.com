@@ -3,6 +3,22 @@
 declare(strict_types=1);
 
 return [
+    'actions' => [
+        'create' => [
+            'label' => 'Crea',
+            'icon' => 'heroicon-o-plus',
+            'tooltip' => 'Crea nuovo record',
+        ],
+    ],
+    'fields' => [
+        'label' => 'Label',
+        'placeholder' => 'Placeholder',
+        'help' => 'Help',
+    ],
+    'navigation' => [
+        'label' => 'Label',
+        'plural_label' => 'Plural Label',
+    ],
 
     'title' => 'Laravel Pizza Meetups - Home',
     

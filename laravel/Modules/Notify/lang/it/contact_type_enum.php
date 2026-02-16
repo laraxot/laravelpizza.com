@@ -3,53 +3,89 @@
 declare(strict_types=1);
 
 return [
-    'phone' => [
-        'label' => 'Telefono',
-        'icon' => 'heroicon-o-phone',
-        'color' => 'text-green-600',
-        'hex_color' => '#16a34a',
-        'description' => 'Numero di telefono fisso',
+  'phone' => [
+    'label' => 'Telefono',
+    'icon' => 'heroicon-o-phone',
+    'color' => 'text-green-600',
+    'hex_color' => '#16a34a',
+    'description' => 'Numero di telefono fisso',
+  ],
+  'mobile' => [
+    'label' => 'Cellulare',
+    'icon' => 'heroicon-o-device-phone-mobile',
+    'color' => 'text-purple-600',
+    'hex_color' => '#9333ea',
+    'description' => 'Numero di telefono mobile',
+  ],
+  'email' => [
+    'label' => 'Email',
+    'icon' => 'heroicon-o-envelope',
+    'color' => 'text-blue-600',
+    'hex_color' => '#2563eb',
+    'description' => 'Indirizzo email',
+  ],
+  'pec' => [
+    'label' => 'PEC',
+    'icon' => 'heroicon-o-shield-check',
+    'color' => 'text-orange-600',
+    'hex_color' => '#ea580c',
+    'description' => 'Posta Elettronica Certificata',
+  ],
+  'whatsapp' => [
+    'label' => 'WhatsApp',
+    'icon' => 'heroicon-o-chat-bubble-bottom-center-text',
+    'color' => 'text-green-600',
+    'hex_color' => '#25d366',
+    'description' => 'Numero WhatsApp',
+  ],
+  'fax' => [
+    'label' => 'Fax',
+    'icon' => 'heroicon-o-printer',
+    'color' => 'text-gray-600',
+    'hex_color' => '#6b7280',
+    'description' => 'Numero fax',
+  ],
+  'notes' => [
+    'label' => 'Note',
+    'icon' => 'heroicon-o-document-text',
+    'color' => 'text-gray-600',
+    'hex_color' => '#6b7280',
+    'description' => 'Note di contatto',
+  ],
+  'label' => 'Contact Type Enum',
+  'plural_label' => 'Contact Type Enum (Plurale)',
+  'navigation' => [
+    'name' => 'Contact Type Enum',
+    'plural' => 'Contact Type Enum',
+    'group' => [
+      'name' => 'General',
+      'description' => 'General Settings',
     ],
-    'mobile' => [
-        'label' => 'Cellulare',
-        'icon' => 'heroicon-o-device-phone-mobile',
-        'color' => 'text-purple-600',
-        'hex_color' => '#9333ea',
-        'description' => 'Numero di telefono mobile',
+    'label' => 'Contact Type Enum',
+    'sort' => 1,
+    'icon' => 'heroicon-o-collection',
+  ],
+  'fields' => [
+    'id' => [
+      'label' => 'Identificativo',
+      'tooltip' => 'Identificativo univoco del record',
     ],
-    'email' => [
-        'label' => 'Email',
-        'icon' => 'heroicon-o-envelope',
-        'color' => 'text-blue-600',
-        'hex_color' => '#2563eb',
-        'description' => 'Indirizzo email',
+    'created_at' => [
+      'label' => 'Data Creazione',
     ],
-    'pec' => [
-        'label' => 'PEC',
-        'icon' => 'heroicon-o-shield-check',
-        'color' => 'text-orange-600',
-        'hex_color' => '#ea580c',
-        'description' => 'Posta Elettronica Certificata',
+    'updated_at' => [
+      'label' => 'Ultima Modifica',
     ],
-    'whatsapp' => [
-        'label' => 'WhatsApp',
-        'icon' => 'heroicon-o-chat-bubble-bottom-center-text',
-        'color' => 'text-green-600',
-        'hex_color' => '#25d366',
-        'description' => 'Numero WhatsApp',
+  ],
+  'actions' => [
+    'create' => [
+      'label' => 'Crea Contact Type Enum',
     ],
-    'fax' => [
-        'label' => 'Fax',
-        'icon' => 'heroicon-o-printer',
-        'color' => 'text-gray-600',
-        'hex_color' => '#6b7280',
-        'description' => 'Numero fax',
+    'edit' => [
+      'label' => 'Modifica Contact Type Enum',
     ],
-    'notes' => [
-        'label' => 'Note',
-        'icon' => 'heroicon-o-document-text',
-        'color' => 'text-gray-600',
-        'hex_color' => '#6b7280',
-        'description' => 'Note di contatto',
+    'delete' => [
+      'label' => 'Elimina Contact Type Enum',
     ],
+  ],
 ];

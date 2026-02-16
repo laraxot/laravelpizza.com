@@ -3,36 +3,72 @@
 declare(strict_types=1);
 
 return [
-    'draft' => [
-        'label' => 'Bozza',
-        'color' => 'gray',
+  'draft' => [
+    'label' => 'Bozza',
+    'color' => 'gray',
+  ],
+  'EventScheduled' => [
+    'label' => 'Programmato',
+    'color' => 'success',
+  ],
+  'EventScheduled_confirmed' => [
+    'label' => 'Confermato',
+    'color' => 'success',
+  ],
+  'EventCancelled' => [
+    'label' => 'Cancellato',
+    'color' => 'danger',
+  ],
+  'EventPostponed' => [
+    'label' => 'Rinviato',
+    'color' => 'warning',
+  ],
+  'EventRescheduled' => [
+    'label' => 'Riprogrammato',
+    'color' => 'info',
+  ],
+  'EventMovedOnline' => [
+    'label' => 'Spostato Online',
+    'color' => 'primary',
+  ],
+  'completed' => [
+    'label' => 'Completato',
+    'color' => 'success',
+  ],
+  'label' => 'Event Status',
+  'plural_label' => 'Event Status (Plurale)',
+  'navigation' => [
+    'name' => 'Event Status',
+    'plural' => 'Event Status',
+    'group' => [
+      'name' => 'General',
+      'description' => 'General Settings',
     ],
-    'EventScheduled' => [
-        'label' => 'Programmato',
-        'color' => 'success',
+    'label' => 'Event Status',
+    'sort' => 1,
+    'icon' => 'heroicon-o-collection',
+  ],
+  'fields' => [
+    'id' => [
+      'label' => 'Identificativo',
+      'tooltip' => 'Identificativo univoco del record',
     ],
-    'EventScheduled_confirmed' => [
-        'label' => 'Confermato',
-        'color' => 'success',
+    'created_at' => [
+      'label' => 'Data Creazione',
     ],
-    'EventCancelled' => [
-        'label' => 'Cancellato',
-        'color' => 'danger',
+    'updated_at' => [
+      'label' => 'Ultima Modifica',
     ],
-    'EventPostponed' => [
-        'label' => 'Rinviato',
-        'color' => 'warning',
+  ],
+  'actions' => [
+    'create' => [
+      'label' => 'Crea Event Status',
     ],
-    'EventRescheduled' => [
-        'label' => 'Riprogrammato',
-        'color' => 'info',
+    'edit' => [
+      'label' => 'Modifica Event Status',
     ],
-    'EventMovedOnline' => [
-        'label' => 'Spostato Online',
-        'color' => 'primary',
+    'delete' => [
+      'label' => 'Elimina Event Status',
     ],
-    'completed' => [
-        'label' => 'Completato',
-        'color' => 'success',
-    ],
+  ],
 ];

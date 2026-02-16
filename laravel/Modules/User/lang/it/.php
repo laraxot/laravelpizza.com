@@ -3,24 +3,30 @@
 declare(strict_types=1);
 
 return [
+    'navigation' => [
+        'label' => '',
+        'plural_label' => '',
+    ],
+    'label' => '',
+    'plural_label' => '',
     'fields' => [
         'startDate' => [
-            'label' => 'startDate2',
-            'description' => 'startDate',
-            'helper_text' => 'startDate',
-            'placeholder' => 'startDate',
+            'label' => 'Data Inizio',
+            'description' => 'Data di inizio',
+            'helper_text' => 'Data di inizio',
+            'placeholder' => 'Seleziona data inizio',
         ],
         'endDate' => [
-            'label' => 'endDate',
-            'description' => 'endDate',
-            'helper_text' => 'endDate1',
-            'placeholder' => 'endDate',
+            'label' => 'Data Fine',
+            'description' => 'Data di fine',
+            'helper_text' => 'Data di fine',
+            'placeholder' => 'Seleziona data fine',
         ],
     ],
     'sections' => [
         'empty' => [
-            'heading' => '',
-            'label' => 'empty',
+            'heading' => 'Nessun Dato',
+            'label' => 'Vuoto',
         ],
     ],
     'actions' => [

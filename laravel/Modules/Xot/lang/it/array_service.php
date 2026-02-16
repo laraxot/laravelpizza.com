@@ -3,7 +3,43 @@
 declare(strict_types=1);
 
 return [
-    'gg_in_sede_no_asz' => 'gg_in_sede_no_asz',
-    'eta' => 'eta',
-    'gg_cateco_posfun' => 'gg_cateco_posfun',
+  'gg_in_sede_no_asz' => 'gg_in_sede_no_asz',
+  'eta' => 'eta',
+  'gg_cateco_posfun' => 'gg_cateco_posfun',
+  'label' => 'Array Service',
+  'plural_label' => 'Array Service (Plurale)',
+  'navigation' => [
+    'name' => 'Array Service',
+    'plural' => 'Array Service',
+    'group' => [
+      'name' => 'General',
+      'description' => 'General Settings',
+    ],
+    'label' => 'Array Service',
+    'sort' => 1,
+    'icon' => 'heroicon-o-collection',
+  ],
+  'fields' => [
+    'id' => [
+      'label' => 'Identificativo',
+      'tooltip' => 'Identificativo univoco del record',
+    ],
+    'created_at' => [
+      'label' => 'Data Creazione',
+    ],
+    'updated_at' => [
+      'label' => 'Ultima Modifica',
+    ],
+  ],
+  'actions' => [
+    'create' => [
+      'label' => 'Crea Array Service',
+    ],
+    'edit' => [
+      'label' => 'Modifica Array Service',
+    ],
+    'delete' => [
+      'label' => 'Elimina Array Service',
+    ],
+  ],
 ];
