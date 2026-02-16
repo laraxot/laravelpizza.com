@@ -22,9 +22,7 @@ class CreateUserAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly Assert $assert,
-    ) {}
+
 
     /**
      * Execute the action to create a new user from socialite authentication.
@@ -36,10 +34,7 @@ class CreateUserAction
     public function execute(string $provider, SocialiteUserContract $oauthUser): UserContract
     {
         // Resolve user attributes from the identity provider
-        $userAttributes = app(GetUserModelAttributesFromSocialiteAction::class, [
-            'provider' => $provider,
-            'oauthUser' => $oauthUser,
-        ]);
+        $userAttributes = app(GetUserModelAttributesFromSocialiteAction::class)->execute($provider, $oauthUser);
 
         // Get the user class from Xot configuration
         $userClass = XotData::make()->getUserClass();
@@ -53,14 +48,12 @@ class CreateUserAction
         ]);
 
         // Ensure the created user implements UserContract
-        $this->assert->isInstanceOf($newlyCreatedUser, Model::class);
-        $this->assert->isInstanceOf($newlyCreatedUser, UserContract::class);
+        Assert::isInstanceOf($newlyCreatedUser, Model::class);
+        Assert::isInstanceOf($newlyCreatedUser, UserContract::class);
 
         // Assign default roles to the new user
-        app(SetDefaultRolesBySocialiteUserAction::class, [
-            'provider' => $provider,
-            'userModel' => $newlyCreatedUser,
-        ])->execute(
+        app(SetDefaultRolesBySocialiteUserAction::class)->execute(
+            provider: $provider,
             userModel: $newlyCreatedUser,
             oauthUser: $oauthUser,
         );

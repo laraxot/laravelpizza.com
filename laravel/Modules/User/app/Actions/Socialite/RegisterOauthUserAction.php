@@ -19,15 +19,12 @@ class RegisterOauthUserAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly DatabaseManager $dbManager,
-        private readonly Dispatcher $eventDispatcher,
-    ) {}
+
 
     public function execute(string $provider, SocialiteUserContract $oauthUser): SocialiteUser
     {
         /** @var SocialiteUser $socialiteUser */
-        $socialiteUser = $this->dbManager->transaction(static function () use ($provider, $oauthUser): SocialiteUser {
+        $socialiteUser = app(DatabaseManager::class)->transaction(static function () use ($provider, $oauthUser): SocialiteUser {
             // Create a user
             $user = app(CreateUserAction::class)->execute(
                 provider: $provider,
@@ -42,7 +39,7 @@ class RegisterOauthUserAction
             );
         });
         // Dispatch the registered event
-        $this->eventDispatcher->dispatch(new Registered($socialiteUser));
+        app(Dispatcher::class)->dispatch(new Registered($socialiteUser));
 
         // Login the user
         // return app(LoginUserAction::class)->execute($socialiteUser);

@@ -12,10 +12,6 @@ class CreateUserAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly User $userModel,
-    ) {}
-
     /**
      * Create a new user.
      *
@@ -23,6 +19,7 @@ class CreateUserAction
      */
     public function execute(array $data): User
     {
-        return $this->userModel->create($data);
+        // Use app() to resolve the User model instance
+        return app(User::class)->create($data);
     }
 }

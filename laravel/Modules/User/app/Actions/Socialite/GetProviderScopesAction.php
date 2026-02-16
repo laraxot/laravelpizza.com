@@ -15,9 +15,7 @@ class GetProviderScopesAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly Arr $arrHelper,
-    ) {}
+
 
     /**
      * Execute the action.
@@ -28,7 +26,7 @@ class GetProviderScopesAction
          * @var array|\ArrayAccess
          */
         $services = config('services');
-        $scopes = $this->arrHelper->get($services, $provider.'.scopes');
+        $scopes = Arr::get($services, $provider.'.scopes');
         if (! \is_array($scopes)) {
             return [];
         }

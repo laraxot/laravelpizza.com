@@ -23,9 +23,7 @@ class RegisterSocialiteUserAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly Dispatcher $eventDispatcher,
-    ) {}
+
 
     /**
      * Execute the action.
@@ -39,15 +37,13 @@ class RegisterSocialiteUserAction
             user: $user,
         );
         // Assign default roles to user, if needed
-        app(SetDefaultRolesBySocialiteUserAction::class, [
-            'provider' => $provider,
-            'userModel' => $user,
-        ])->execute(
+        app(SetDefaultRolesBySocialiteUserAction::class)->execute(
+            provider: $provider,
             userModel: $user,
             oauthUser: $oauthUser,
         );
         // Dispatch the socialite user connected event
-        $this->eventDispatcher->dispatch(new SocialiteUserConnected($socialiteUser));
+        app(Dispatcher::class)->dispatch(new SocialiteUserConnected($socialiteUser));
 
         // Login the user
         // return app(LoginUserAction::class)->execute($socialiteUser);

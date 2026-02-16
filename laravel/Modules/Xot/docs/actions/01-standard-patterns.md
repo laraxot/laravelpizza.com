@@ -149,3 +149,27 @@ app(CreateUserAction::class)->onQueue('high')->execute($data);
 *   [Spatie Queueable Actions GitHub Repository](https://github.com/spatie/laravel-queueable-action)
 *   [Xot Module Philosophy](../filosofia-modulo-xot.md)
 *   [Actions Pattern](./actions-pattern.md)
+
+## Validation & Enforcement
+
+Run these commands to verify compliance with Action rules:
+
+### 1. Detect Static Method Calls (Forbidden)
+```bash
+grep -r "Action::" Modules/ --include="*.php" | grep -v "use\|namespace"
+```
+
+### 2. Detect Direct Instantiation (Forbidden)
+```bash
+grep -r "new.*Action" Modules/ --include="*.php"
+```
+
+### 3. Detect Static Method Definitions (Forbidden)
+```bash
+grep -r "public static function" Modules/ --include="*.php" | grep "Action"
+```
+
+### 4. Detect Constructor Injection (Forbidden)
+```bash
+grep -r "__construct" Modules/*/app/Actions/ --include="*.php"
+```

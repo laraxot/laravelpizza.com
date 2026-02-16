@@ -23,17 +23,14 @@ class LoginUserAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly Assert $assert,
-        private readonly Dispatcher $eventDispatcher,
-    ) {}
+
 
     /**
      * Execute the action.
      */
     public function execute(SocialiteUser $socialiteUser): RedirectResponse
     {
-        $this->assert->notNull($user = $socialiteUser->user, '['.__FILE__.']['.__LINE__.']');
+        Assert::notNull($user = $socialiteUser->user, '['.__FILE__.']['.__LINE__.']');
 
         if (! $user instanceof Authenticatable) {
             throw new LogicException('User instance must implement Authenticatable.');
@@ -43,7 +40,7 @@ class LoginUserAction
         /** @var Authenticatable $authenticatableUser */
         $authenticatableUser = $user;
         Filament::auth()->login($authenticatableUser);
-        $this->eventDispatcher->dispatch(new SocialiteUserConnected($socialiteUser));
+        app(Dispatcher::class)->dispatch(new SocialiteUserConnected($socialiteUser));
         // session()->regenerate();
 
         // return redirect()->intended(Filament::getUrl());
