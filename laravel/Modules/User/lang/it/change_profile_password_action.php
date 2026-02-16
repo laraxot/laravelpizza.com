@@ -3,39 +3,42 @@
 declare(strict_types=1);
 
 return [
-  'fields' => [
-    'new_password_confirmation' => [
-      'label' => 'Conferma nuova password',
-      'placeholder' => 'Reinserisci la nuova password',
-      'helper_text' => '',
-      'description' => 'Digita nuovamente la nuova password per conferma',
-      'tooltip' => 'Ripeti la nuova password per sicurezza',
-      'icon' => 'heroicon-o-lock-closed',
-      'color' => 'warning',
+    'navigation' => [
+        'label' => 'Azione Cambia Password',
+        'plural_label' => 'Azione Cambia Password',
+        'group' => 'Profilo',
+        'icon' => 'heroicon-o-lock-closed',
+        'sort' => 13,
     ],
-  ],
-  'navigation' => [
-    'name' => 'Change Profile Password Action',
-    'plural' => 'Change Profile Password Action',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'label' => 'Azione Cambia Password',
+    'plural_label' => 'Azione Cambia Password',
+    'fields' => [
+        'new_password_confirmation' => [
+            'label' => 'Conferma Nuova Password',
+            'tooltip' => 'Ripeti la nuova password per sicurezza',
+            'placeholder' => 'Reinserisci la nuova password',
+            'helper_text' => 'Devi inserire la stessa password per conferma',
+            'description' => 'Digita nuovamente la nuova password per conferma',
+            'icon' => 'heroicon-o-lock-closed',
+            'color' => 'warning',
+        ],
     ],
-    'label' => 'Change Profile Password Action',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'label' => 'Change Profile Password Action',
-  'plural_label' => 'Change Profile Password Action (Plurale)',
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Change Profile Password Action',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Azione',
+            'tooltip' => 'Crea una nuova azione',
+            'helper_text' => 'Crea una nuova azione di cambio password',
+            'description' => 'Azione per creare',
+        ],
+        'execute' => [
+            'label' => 'Esegui',
+            'tooltip' => 'Esegui il cambio password',
+            'helper_text' => 'Esegui l\'azione di cambio password',
+            'description' => 'Azione per eseguire',
+        ],
     ],
-    'edit' => [
-      'label' => 'Modifica Change Profile Password Action',
+    'messages' => [
+        'executed' => 'Password cambiata con successo',
+        'error' => 'Si è verificato un errore',
     ],
-    'delete' => [
-      'label' => 'Elimina Change Profile Password Action',
-    ],
-  ],
 ];
