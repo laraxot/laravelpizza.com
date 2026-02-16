@@ -3,39 +3,57 @@
 declare(strict_types=1);
 
 return [
-  'fields' => [
-    'new_password_confirmation' => [
-      'label' => 'Conferma nuova password',
-      'placeholder' => 'Conferma la tua nuova password',
-      'helper_text' => '',
-      'description' => 'Inserisci nuovamente la nuova password per confermarla',
-      'tooltip' => 'Ripeti la nuova password per sicurezza',
-      'icon' => 'heroicon-o-lock-closed',
-      'color' => 'warning',
+    'navigation' => [
+        'label' => 'Password Profilo',
+        'plural_label' => 'Password Profilo',
+        'group' => 'Profilo',
+        'icon' => 'heroicon-o-lock-closed',
+        'sort' => 12,
     ],
-  ],
-  'navigation' => [
-    'name' => 'Change Profile Password',
-    'plural' => 'Change Profile Password',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'label' => 'Password Profilo',
+    'plural_label' => 'Password Profilo',
+    'fields' => [
+        'current_password' => [
+            'label' => 'Password Attuale',
+            'tooltip' => 'Inserisci la password attuale',
+            'placeholder' => 'Inserisci la password attuale',
+            'helper_text' => 'La tua password attuale per verificare l\'identità',
+            'description' => 'Password corrente dell\'utente',
+        ],
+        'new_password' => [
+            'label' => 'Nuova Password',
+            'tooltip' => 'Inserisci la nuova password',
+            'placeholder' => 'Inserisci la nuova password',
+            'helper_text' => 'Minimo 8 caratteri con lettere e numeri',
+            'description' => 'Nuova password da impostare',
+        ],
+        'new_password_confirmation' => [
+            'label' => 'Conferma Nuova Password',
+            'tooltip' => 'Ripeti la nuova password per sicurezza',
+            'placeholder' => 'Conferma la tua nuova password',
+            'helper_text' => 'Devi inserire la stessa password per conferma',
+            'description' => 'Inserisci nuovamente la nuova password per confermarla',
+            'icon' => 'heroicon-o-lock-closed',
+            'color' => 'warning',
+        ],
     ],
-    'label' => 'Change Profile Password',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'label' => 'Change Profile Password',
-  'plural_label' => 'Change Profile Password (Plurale)',
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Change Profile Password',
+    'actions' => [
+        'save' => [
+            'label' => 'Salva Password',
+            'tooltip' => 'Salva la nuova password',
+            'helper_text' => 'Aggiorna la password del profilo',
+            'description' => 'Azione per salvare',
+        ],
+        'cancel' => [
+            'label' => 'Annulla',
+            'tooltip' => 'Annulla l\'operazione',
+            'helper_text' => 'Torna indietro senza salvare',
+            'description' => 'Azione per annullare',
+        ],
     ],
-    'edit' => [
-      'label' => 'Modifica Change Profile Password',
+    'messages' => [
+        'password_changed' => 'Password del profilo cambiata con successo',
+        'password_mismatch' => 'Le password non coincidono',
+        'error' => 'Si è verificato un errore',
     ],
-    'delete' => [
-      'label' => 'Elimina Change Profile Password',
-    ],
-  ],
 ];
