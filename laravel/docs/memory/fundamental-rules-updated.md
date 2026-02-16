@@ -1,6 +1,6 @@
 # 🔧 MEMORIES AGGIORNATE
 
-**Date**: 2026-02-10  
+**Date**: 2026-02-16  
 **Type**: MEMORY UPDATE
 
 ---
@@ -109,6 +109,28 @@
 **MAI FARE**: Commit senza test completi
 
 **SEMPRE**: PHPStan + Pint + Feature test prima di ogni commit
+
+---
+
+## 🚨 REGOLA #10: PHPSTAN PATTERNS COMUNI
+
+**FACTORY NON ESISTONO**:
+- MAI usare trait `HasXotFactory` se la factory non esiste
+- Rimuovere riferimenti `@method static Factory` dai docblock
+- Rimuovere import della factory
+
+**TYPE CASTING ARRAY**:
+- Per dati JSON, usare `@var array<array<string, mixed>>`
+- Usare `array_merge([], $data)` per forzare il tipo
+
+**FILTER DATEPICKER**:
+- MAI usare `when()` con date, usare `if (!empty())` invece
+
+**TYPO FILAMENT**:
+- `Tablecolumn` → SEMPRE `TextColumn`
+
+**NULLSAFE CON ??**:
+- `$user?->name ?? 'User'` → `$user ? $user->name : 'User'`
 
 ---
 

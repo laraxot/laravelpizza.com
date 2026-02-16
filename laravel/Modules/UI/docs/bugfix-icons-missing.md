@@ -98,7 +98,7 @@ php artisan config:clear
 
 ---
 
-**Modulo**: UI
-**Tipo**: Bug Fix
-**Priorità**: Alta
+**Modulo**: UI  
+**Tipo**: Bug Fix  
+**Priorità**: Alta  
 **Stato**: ✅ Risolto

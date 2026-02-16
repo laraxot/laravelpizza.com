@@ -252,6 +252,7 @@ class TreatmentComplete extends Mailable
 ## Comandi Artisan
 
 ```bash
+
 # Gestione template
 php artisan notify:mail-template:list
 php artisan notify:mail-template:create

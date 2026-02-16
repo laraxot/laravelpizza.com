@@ -315,7 +315,7 @@ it('prevents duplicate email registration', function (): void {
         'password_confirmation' => 'SecureP@ss2!',
     ];
 
-    $this->expectException(\Illuminate\Database\QueryException::class);
+    $this->expectException(Illuminate\Database\QueryException::class);
     app(ValidateUserDataAction::class)->execute($formData2);
 });
 

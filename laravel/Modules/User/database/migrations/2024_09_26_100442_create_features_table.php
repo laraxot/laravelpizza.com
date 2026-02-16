@@ -25,7 +25,6 @@ return new class extends XotBaseMigration
                 $table->unique(['name', 'scope']);
                 $table->timestamps(); // Add timestamps here
                 $table->softDeletes(); // Add soft deletes here, as hasSoftDeletes was true
-
             });
         }
     }

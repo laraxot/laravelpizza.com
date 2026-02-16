@@ -248,7 +248,7 @@ it('can create a user with customer_user type via CreateUserAction', function ()
     expect($user->state)->toBe('active');
     expect($user->email_verified_at)->not->toBeNull();
 
-    /** @var TestCase $this */
+    /* @var TestCase $this */
     $this->assertDatabaseHas('users', [
         'id' => $user->id,
         'email' => $data['email'],
@@ -286,7 +286,7 @@ it('full registration pipeline works end to end', function (): void {
             ['name' => 'privacy_policy'],
             ['description' => 'Privacy Policy', 'weight' => 1, 'active' => true, 'required' => true]
         );
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
         // Already exists
     }
     try {
@@ -294,7 +294,7 @@ it('full registration pipeline works end to end', function (): void {
             ['name' => 'terms_conditions'],
             ['description' => 'Terms and Conditions', 'weight' => 2, 'active' => true, 'required' => true]
         );
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
         // Already exists
     }
     try {
@@ -302,14 +302,14 @@ it('full registration pipeline works end to end', function (): void {
             ['name' => 'marketing_consent'],
             ['description' => 'Marketing Consent', 'weight' => 3, 'active' => true, 'required' => false]
         );
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
         // Already exists
     }
 
     app(SaveGdprConsentsAction::class)->execute($user, $consents, '127.0.0.1', 'PestTest/1.0');
 
     // Verify user exists
-    /** @var TestCase $this */
+    /* @var TestCase $this */
     $this->assertDatabaseHas('users', [
         'id' => $user->id,
         'type' => 'customer_user',

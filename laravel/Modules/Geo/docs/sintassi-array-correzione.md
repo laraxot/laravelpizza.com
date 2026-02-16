@@ -1,6 +1,6 @@
 # Correzione Sintassi Obsoleta Array() - Modulo Geo
 
-**Priorità**: ALTA
+**Priorità**: ALTA  
 **Stato**: ✅ RISOLTO
 
 ## 🚨 Problema Identificato
@@ -131,5 +131,5 @@ php -l laravel/Modules/Geo/lang/it/address.php
 
 ---
 
-**Ultimo aggiornamento**: 6 Gennaio 2025
-**Autore**: AI Assistant
+**Ultimo aggiornamento**: 6 Gennaio 2025  
+**Autore**: AI Assistant  

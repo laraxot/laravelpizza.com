@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Http\Middleware;
 
-use Closure;
 use Illuminate\Http\Request;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -18,7 +17,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
  */
 class SetFolioLocale
 {
-    public function handle(Request $request, Closure $next): mixed
+    public function handle(Request $request, \Closure $next): mixed
     {
         // Priority 1: If user is logged in and has a saved language, use that
         if ($request->user() && $request->user()->lang) {

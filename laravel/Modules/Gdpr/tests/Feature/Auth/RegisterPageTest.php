@@ -14,7 +14,7 @@ use Modules\User\Models\User;
 
 beforeEach(function () {
     // Set up the environment for English locale
-    \Mcamara\LaravelLocalization\Facades\LaravelLocalization::setLocale('en');
+    Mcamara\LaravelLocalization\Facades\LaravelLocalization::setLocale('en');
     app()->setLocale('en');
     config(['app.locale' => 'en']);
 });

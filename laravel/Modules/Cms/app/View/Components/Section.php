@@ -66,7 +66,7 @@ class Section extends Component
             'blocks' => $this->blocks,
         ];
 
-        /** @phpstan-ignore argument.type */
+        /* @phpstan-ignore argument.type */
         return view($view, $view_params);
     }
 }

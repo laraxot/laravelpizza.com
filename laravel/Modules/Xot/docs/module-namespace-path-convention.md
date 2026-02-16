@@ -60,5 +60,5 @@ questo è **errato** perché omette la directory `app/` nel percorso fisico.
 
 ## linkback
 
-- [convenzioni di codice](docs/conventions.md)
-- [struttura progetto](docs/project-structure.md)
+- [convenzioni di codice](project_docs/conventions.md)
+- [struttura progetto](project_docs/project-structure.md)

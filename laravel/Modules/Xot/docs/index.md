@@ -46,12 +46,6 @@
 ### 🛠️ Bash Scripts & Automation
 - [BashScripts Organization](bashscripts/bashscripts-organization.md)
 
-### 🤖 AI & Development Tools
-- [Claude Context (Laravel)](../../../CLAUDE.md)
-- [AI Agents Guide](../../../../AGENTS.md)
-- [Cursor Rules & Skills](../../../../.cursor/README.md)
-- [Skills di progetto](../../../../.cursor/skills/)
-
 ### 🚨 Troubleshooting
 - [**CCR DeepSeek Fix**](troubleshooting/ccr-deepseek-fix.md) - Resolve 400 API error
 - [General Troubleshooting](troubleshooting.md)

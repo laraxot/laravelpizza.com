@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'Active Developers' => 'Développeurs Actifs',
     'Monthly Meetups' => 'Meetups Mensuels',

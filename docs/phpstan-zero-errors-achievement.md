@@ -459,6 +459,92 @@ composer install
 
 ---
 
+## 🔧 Common Fix Patterns (2026-02)
+
+### JSON Decode Results
+```php
+// WRONG - PHPStan: json_decode returns mixed
+$data = json_decode($json, true);
+
+// CORRECT - Use JSON_THROW_ON_ERROR and validate
+$data = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
+if (! is_array($data)) {
+    return [];
+}
+```
+
+### Filter Query with DatePicker
+```php
+// WRONG - Arrow function causes mixed type errors
+->query(fn ($query, $data) => $query->when($data['from'], fn ($q, $date) => $q->whereDate(...)))
+
+// CORRECT - Explicit function body
+->query(function (Builder $query, array $data) {
+    $from = $data['from'] ?? null;
+    if (! empty($from) && is_string($from)) {
+        $query->whereDate('start_date', '>=', $from);
+    }
+    return $query;
+})
+```
+
+### Collection Mapping (selectRaw)
+```php
+// WRONG - $item->month fails when item is array
+$labels = $data->map(fn ($item) => Carbon::parse($item->month))
+
+// CORRECT - Handle both array and stdClass
+$labels = $data->map(function ($item) {
+    $itemArray = is_array($item) ? $item : (array) $item;
+    $monthValue = $itemArray['month'] ?? '';
+    return $monthValue ? Carbon::parse($monthValue) : null;
+})
+```
+
+### Nullsafe with ?? Operator
+```php
+// WRONG - PHPStan: unnecessary nullsafe on left side of ??
+'name' => $user?->name ?? 'User'
+
+// CORRECT - Remove nullsafe when using ??
+'name' => $user->name ?? 'User'
+```
+
+### Factory @method PHPDoc (When Factory Doesn't Exist)
+```php
+// WRONG - Causes "class.notFound" error if factory doesn't exist
+use Modules\User\Database\Factories\UserFactory;
+/**
+ * @method static UserFactory factory($count = null, $state = [])
+ */
+
+// CORRECT - Remove factory reference entirely if factory class doesn't exist
+// Just remove both the import and the @method line
+```
+
+### Enum Return Types
+```php
+// WRONG - Mismatch with EnumTrait::getFormSchema() return type
+/**
+ * @return array<string, TextInput>
+ */
+protected function getFormSchema(): array
+{
+    return ContactTypeEnum::getFormSchema(); // Returns array<int|string, TextInput>
+}
+
+// CORRECT - Match the trait return type
+/**
+ * @return array<int|string, TextInput>
+ */
+protected function getFormSchema(): array
+{
+    return ContactTypeEnum::getFormSchema();
+}
+```
+
+---
+
 **Filosofia**: Fix, Don't Ignore. Quality > Speed. Type Safety = Robustness.
 
 **Mantra**: DRY + KISS + SOLID + Robust + Laravel 12 + Filament 4 + PHP 8.3 + Laraxot = **ZERO PHPSTAN ERRORS**
