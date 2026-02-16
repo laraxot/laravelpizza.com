@@ -127,8 +127,8 @@ function auditItalianTextInNonItalianFiles(string $basePath): array
         foreach ($italianPatterns as $pattern) {
             $lineNumber = 0;
             foreach ($lines as $line) {
-                ++$lineNumber;
-                if (false !== stripos($line, $pattern)) {
+                $lineNumber++;
+                if (stripos($line, $pattern) !== false) {
                     $fileIssues[] = [
                         'pattern' => $pattern,
                         'line' => $lineNumber,
@@ -186,7 +186,7 @@ function generateItalianTextReport(array $issues): string
         }
     }
 
-    if (0 === $totalFiles) {
+    if ($totalFiles === 0) {
         $report .= "✅ **Nessun problema trovato!** Tutti i file di traduzione non italiani sono puliti.\n\n";
     }
 

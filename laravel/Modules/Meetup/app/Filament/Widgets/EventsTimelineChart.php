@@ -39,7 +39,15 @@ class EventsTimelineChart extends XotBaseChartWidget
                     'pointBorderColor' => '#fff',
                 ],
             ],
-            'labels' => $data->map(fn ($item) => Carbon::parse($item->month)->translatedFormat('M Y'))->toArray(),
+            'labels' => $data->map(function (Event $item) {
+                /** @var mixed $monthValue */
+                $monthValue = $item->getAttribute('month');
+                if (! is_string($monthValue) || empty($monthValue)) {
+                    return '';
+                }
+
+                return Carbon::parse($monthValue)->translatedFormat('M Y');
+            })->toArray(),
         ];
     }
 

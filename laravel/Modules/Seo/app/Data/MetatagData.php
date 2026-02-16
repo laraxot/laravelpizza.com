@@ -27,7 +27,6 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
      * Create a new metatag data instance.
      *
      * @param  array<string, mixed>  $data
-     *
      * @return void
      */
     public function __construct(array $data = [])
@@ -39,7 +38,6 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
      * Handle dynamic method calls.
      *
      * @param  array<int, mixed>  $parameters
-     *
      * @return mixed
      */
     public function __call(string $method, array $parameters)
@@ -235,7 +233,6 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
      * Get extra metadata.
      *
      * @param  mixed  $default
-     *
      * @return mixed
      */
     public function get(string $key, $default = null)

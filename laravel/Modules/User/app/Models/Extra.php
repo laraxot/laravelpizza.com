@@ -6,7 +6,6 @@ namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
-use Modules\User\Database\Factories\ExtraFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\BaseExtra;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
@@ -19,9 +18,9 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder|Extra query()
  * @method static Builder|Extra withExtraAttributes()
  *
- * @property int         $id
- * @property string      $model_type
- * @property string      $model_id
+ * @property int $id
+ * @property string $model_type
+ * @property string $model_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
@@ -42,8 +41,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
- * @method static ExtraFactory factory($count = null, $state = [])
  *
  * @mixin IdeHelperExtra
  *

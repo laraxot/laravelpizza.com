@@ -17,8 +17,7 @@ class Message extends Component
      */
     public function __construct(
         // public string $message
-    ) {
-    }
+    ) {}
 
     /**
      * Get the view / contents that represent the component.

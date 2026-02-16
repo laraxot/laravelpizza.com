@@ -25,10 +25,10 @@ class SetFolioLocale
             $userLocale = $request->user()->lang;
             app()->setLocale($userLocale);
             LaravelLocalization::setLocale($userLocale);
-            
+
             return $next($request);
         }
-        
+
         // Get the first segment from the URL
         $segments = $request->segments();
         $firstSegment = $segments[0] ?? '';
@@ -40,7 +40,7 @@ class SetFolioLocale
         } catch (\Exception $e) {
             $supportedLocales = ['it', 'en'];
         }
-        
+
         /** @var string $defaultLocale */
         $defaultLocale = config('app.locale', 'it');
 

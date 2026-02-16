@@ -9,7 +9,7 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 test('domain model can be instantiated', function (): void {
-    $domain = new Domain();
+    $domain = new Domain;
 
     expect($domain)->toBeInstanceOf(Domain::class);
 });
@@ -26,7 +26,7 @@ test('get rows method works correctly', function (): void {
             ]);
     });
 
-    $domain = new Domain();
+    $domain = new Domain;
     $rows = $domain->getRows();
 
     expect($rows)->toBeArray();

@@ -17,8 +17,8 @@ use Override;
 
 class EventCalendarWidget extends XotBaseWidget
 {
-
     public string $type = 'event';
+
     protected string $view = 'meetup::filament.widgets.event-calendar';
 
     /**
@@ -41,7 +41,6 @@ class EventCalendarWidget extends XotBaseWidget
 
     /**
      * @param  array<string, mixed>  $fetchInfo
-     *
      * @return array<int, array<string, mixed>>
      */
     public function fetchEvents(array $fetchInfo): array

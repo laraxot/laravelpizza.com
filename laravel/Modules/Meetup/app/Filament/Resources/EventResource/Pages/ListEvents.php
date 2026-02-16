@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Resources\EventResource\Pages;
 
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Carbon;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Tables\Columns\TextColumn;
@@ -15,8 +13,8 @@ use Modules\Meetup\Actions\Event\ImportEventsFromJsonAction;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Filament\Resources\EventResource;
-use Modules\Meetup\Filament\Widgets\EventStatsOverviewWidget;
 use Modules\Meetup\Filament\Widgets\EventsStats;
+use Modules\Meetup\Filament\Widgets\EventStatsOverviewWidget;
 use Modules\Meetup\Filament\Widgets\EventsTimelineChart;
 use Modules\Meetup\Filament\Widgets\RecentEventsWidget;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -133,7 +131,7 @@ class ListEvents extends XotBaseListRecords
             'import_events' => Action::make('import_events')
                 ->label((string) __('meetup::event.event.actions.seed_events.label'))
                 ->icon('heroicon-o-arrow-down-tray')
-                ->badge(fn() => \Modules\Meetup\Models\Event::count())
+                ->badge(fn () => \Modules\Meetup\Models\Event::count())
                 ->action(function () {
                     $count = app(ImportEventsFromJsonAction::class)->execute();
 

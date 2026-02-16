@@ -8,10 +8,9 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Modules\Geo\Datas\LocationData;
+use Webmozart\Assert\Assert;
 
 use function Safe\json_decode;
-
-use Webmozart\Assert\Assert;
 
 /**
  * Action per ottenere l'indirizzo da coordinate tramite Google Maps.
@@ -25,8 +24,7 @@ readonly class GetAddressByLatLngFromGoogleMapsAction
 
     public function __construct(
         private Client $client,
-    ) {
-    }
+    ) {}
 
     /**
      * Ottiene l'indirizzo dalle coordinate.
@@ -102,7 +100,7 @@ readonly class GetAddressByLatLngFromGoogleMapsAction
          * } $data */
         $data = json_decode($response, true);
 
-        if ('OK' !== $data['status'] || empty($data['results'][0])) {
+        if ($data['status'] !== 'OK' || empty($data['results'][0])) {
             throw new \RuntimeException('No address found for coordinates');
         }
 

@@ -6,7 +6,6 @@ namespace Modules\Gdpr\Providers;
 
 use Illuminate\Routing\Router;
 use Modules\Gdpr\Datas\GdprData;
-use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use Statikbe\CookieConsent\CookieConsentMiddleware;
 

@@ -15,10 +15,7 @@ declare(strict_types=1);
  * - Form submission scenarios
  */
 
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 use Modules\Gdpr\Models\Consent;
-use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
 use Modules\User\Models\User;
 
@@ -60,10 +57,10 @@ it('returns 200 for Russian registration page', function (): void {
 
 it('redirects authenticated users away from registration', function (): void {
     $user = User::factory()->create(['type' => 'customer_user']);
-    
+
     $this->actingAs($user);
     $response = $this->get('/en/auth/register');
-    
+
     // Should redirect or return 302
     expect($response->status())->toBeIn([302, 403]);
 });
@@ -259,7 +256,7 @@ it('has form labels for accessibility', function (): void {
 
 it('has all required English translation keys', function (): void {
     app()->setLocale('en');
-    
+
     $requiredKeys = [
         'gdpr::register.title',
         'gdpr::register.subtitle',
@@ -302,7 +299,7 @@ it('has all required English translation keys', function (): void {
 
 it('has all required Italian translation keys', function (): void {
     app()->setLocale('it');
-    
+
     $requiredKeys = [
         'gdpr::register.title',
         'gdpr::register.subtitle',
@@ -334,14 +331,14 @@ it('has all required Italian translation keys', function (): void {
 
 it('widget is not visible to authenticated users', function (): void {
     $user = User::factory()->create(['type' => 'customer_user']);
-    
+
     $this->actingAs($user);
-    
-    $widget = new \Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget();
+
+    $widget = new \Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
     expect($widget->canView())->toBeFalse();
 });
 
 it('widget is visible to guest users', function (): void {
-    $widget = new \Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget();
+    $widget = new \Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
     expect($widget->canView())->toBeTrue();
 });

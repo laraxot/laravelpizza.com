@@ -6,7 +6,6 @@ namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
-use Modules\User\Database\Factories\TenantUserFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\Traits\HasXotFactory;
 
@@ -17,7 +16,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder|TeamUser newQuery()
  * @method static Builder|TeamUser query()
  *
- * @property int         $id
+ * @property int $id
  * @property string|null $tenant_id
  * @property string|null $user_id
  * @property Carbon|null $created_at
@@ -46,8 +45,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
- *
- * @method static TenantUserFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

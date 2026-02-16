@@ -20,7 +20,7 @@ trait Translatable
         $model = static::getModel();
 
         if (! method_exists($model, 'getTranslatableAttributes')) {
-            throw new RuntimeException("Model [{$model}] must use trait [" . HasTranslations::class . '].');
+            throw new RuntimeException("Model [{$model}] must use trait [".HasTranslations::class.'].');
         }
 
         $attributes = app($model)->getTranslatableAttributes();

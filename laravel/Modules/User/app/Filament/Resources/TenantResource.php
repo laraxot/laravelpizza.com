@@ -64,7 +64,7 @@ class TenantResource extends XotBaseResource
                         ->helperText('Inserisci il nome del tenant'),
                     TextInput::make('slug')
                         ->required()
-                        ->disabled(fn ($context) => 'create' !== $context)
+                        ->disabled(fn ($context) => $context !== 'create')
                         ->unique(
                             table: 'tenants',
                             ignoreRecord: true,
@@ -72,7 +72,7 @@ class TenantResource extends XotBaseResource
                         ->helperText('Lo slug verrà generato automaticamente dal nome'),
                     TextInput::make('domain')
                         ->required()
-                        ->visible(fn ($context) => 'create' === $context)
+                        ->visible(fn ($context) => $context === 'create')
                         ->unique(
                             table: 'domains',
                             ignoreRecord: true,

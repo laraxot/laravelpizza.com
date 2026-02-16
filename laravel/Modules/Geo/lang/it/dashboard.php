@@ -3,51 +3,51 @@
 declare(strict_types=1);
 
 return [
-  'navigation' => [
-    'name' => 'Dashboard Geo',
-    'plural' => 'Dashboard Geo',
-    'group' => [
-      'name' => 'Geo',
-      'description' => 'Panoramica delle informazioni geografiche',
+    'navigation' => [
+        'name' => 'Dashboard Geo',
+        'plural' => 'Dashboard Geo',
+        'group' => [
+            'name' => 'Geo',
+            'description' => 'Panoramica delle informazioni geografiche',
+        ],
+        'label' => 'Dashboard',
+        'sort' => 30,
+        'icon' => 'ui-dashboard',
+    ],
+    'widgets' => [
+        'total_locations' => 'Totale Località',
+        'total_places' => 'Totale Luoghi',
+        'recent_activity' => 'Attività Recente',
+        'popular_places' => 'Luoghi Popolari',
+    ],
+    'charts' => [
+        'locations_by_type' => 'Località per Tipo',
+        'places_by_category' => 'Luoghi per Categoria',
+        'activity_timeline' => 'Timeline Attività',
     ],
     'label' => 'Dashboard',
-    'sort' => 30,
-    'icon' => 'ui-dashboard',
-  ],
-  'widgets' => [
-    'total_locations' => 'Totale Località',
-    'total_places' => 'Totale Luoghi',
-    'recent_activity' => 'Attività Recente',
-    'popular_places' => 'Luoghi Popolari',
-  ],
-  'charts' => [
-    'locations_by_type' => 'Località per Tipo',
-    'places_by_category' => 'Luoghi per Categoria',
-    'activity_timeline' => 'Timeline Attività',
-  ],
-  'label' => 'Dashboard',
-  'plural_label' => 'Dashboard (Plurale)',
-  'fields' => [
-    'id' => [
-      'label' => 'Identificativo',
-      'tooltip' => 'Identificativo univoco del record',
+    'plural_label' => 'Dashboard (Plurale)',
+    'fields' => [
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+        ],
     ],
-    'created_at' => [
-      'label' => 'Data Creazione',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Dashboard',
+        ],
+        'edit' => [
+            'label' => 'Modifica Dashboard',
+        ],
+        'delete' => [
+            'label' => 'Elimina Dashboard',
+        ],
     ],
-    'updated_at' => [
-      'label' => 'Ultima Modifica',
-    ],
-  ],
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Dashboard',
-    ],
-    'edit' => [
-      'label' => 'Modifica Dashboard',
-    ],
-    'delete' => [
-      'label' => 'Elimina Dashboard',
-    ],
-  ],
 ];

@@ -1,79 +1,84 @@
-# Best Practices per Risorse Filament nel Modulo User
+---
+description:
+globs:
+alwaysApply: false
+---
+---
+description: >
+  Regola per l'estensione di XotBaseResource nelle Filament Resource: vietato dichiarare le proprietà statiche $navigationGroup, $navigationLabel e il metodo statico table(Table $table): Table. Garantisce coerenza, DRY e compatibilità con l'architettura XotBaseResource.
+globs:
+  - '*/Filament/Resources/*.php'
+alwaysApply: true
 
-Questo documento descrive le best practices da seguire quando si creano o modificano risorse Filament nel modulo User.
+# Regola: Estensione di XotBaseResource
 
-## Rimozione del metodo `getPages()`
+## When
+- Stai creando o modificando una Filament Resource che estende XotBaseResource
 
-Quando una risorsa estende `XotBaseResource`, il metodo `getPages()` può essere completamente rimosso se:
-- Definisce solo le tre pagine standard (index, create, edit)
-- Utilizza gli stessi pattern di route standard ('/', '/create', '/{record}/edit')
+## Then
+- **NON** dichiarare mai:
+  - `protected static ?string $navigationGroup`  
+  - `protected static ?string $navigationLabel`  
+  - `public static function table(Table $table): Table`
+- Tutta la logica di navigazione e tabella deve essere gestita tramite i metodi e le convenzioni fornite da XotBaseResource e dai trait associati.
+- Se hai bisogno di personalizzare la navigazione o la tabella, utilizza i metodi previsti da XotBaseResource o crea un trait/wrapper dedicato, MAI ridefinire queste proprietà/metodi direttamente nella Resource.
 
-### Motivazione
+## Because
+- La ridefinizione di queste proprietà/metodi rompe la coerenza e la centralizzazione della logica fornita da XotBaseResource.
+- Evita bug, override indesiderati e comportamenti incoerenti tra moduli.
+- Garantisce che tutte le risorse seguano lo stesso flusso di configurazione e siano facilmente aggiornabili.
+- Permette di applicare patch e miglioramenti globali senza dover modificare ogni Resource manualmente.
 
-La classe base `XotBaseResource` fornisce già un'implementazione predefinita del metodo `getPages()` che definisce queste tre pagine con le stesse route. Rimuovere il metodo nelle classi figlie:
-- Riduce la ridondanza del codice
-- Semplifica la manutenzione
-- Migliora la coerenza del codice
-- Segue il principio DRY (Don't Repeat Yourself)
+## Common Pitfalls
+- **Errore:** Dichiarare `$navigationGroup` o `$navigationLabel` in una Resource che estende XotBaseResource
+  - **Soluzione:** Rimuovere la dichiarazione, usare la configurazione centralizzata
+- **Errore:** Ridefinire il metodo statico `table(Table $table): Table`
+  - **Soluzione:** Usare i metodi previsti da XotBaseResource o i trait
+- **Errore:** Copiare esempi da documentazione Filament standard senza adattarli all'architettura XotBaseResource
+  - **Soluzione:** Seguire sempre le regole del progetto e la documentazione custom
 
-### Esempio: Prima
-
+## Esempio ERRATO
 ```php
-public static function getPages(): array
-{
-    return [
-        'index' => Pages\ListUsers::route('/'),
-        'create' => Pages\CreateUser::route('/create'),
-        'edit' => Pages\EditUser::route('/{record}/edit'),
-    ];
+class UserResource extends XotBaseResource {
+    protected static ?string $navigationGroup = 'Utenti'; // VIETATO
+    public static function table(Table $table): Table { ... } // VIETATO
 }
 ```
 
-### Esempio: Dopo
-
-Il metodo viene completamente rimosso, lasciando che sia la classe base a fornire l'implementazione predefinita.
-
-### Quando NON rimuovere il metodo `getPages()`
-
-Il metodo `getPages()` deve essere mantenuto nei seguenti casi:
-- Quando si definisce un set diverso di pagine (ad esempio, solo 'index')
-- Quando si aggiungono pagine personalizzate (ad esempio, 'board', 'view')
-- Quando si utilizzano pattern di route non standard
-
-## Utilizzo di array associativi in `getFormSchema()`
-
-Le risorse Filament richiedono che il metodo `getFormSchema()` restituisca un array associativo con chiavi di tipo stringa: `array<string, Component>`.
-
-### Esempio corretto:
-
+## Esempio CORRETTO
 ```php
-public static function getFormSchema(): array
-{
-    return [
-        'name' => TextInput::make('name')->required(),
-        'email' => TextInput::make('email')->email()->required(),
-    ];
+class UserResource extends XotBaseResource {
+    // Nessuna dichiarazione di navigationGroup, navigationLabel o table
+    // Personalizzazioni solo tramite metodi/trait previsti
 }
 ```
 
-### Esempio errato:
+# Regola: Filament Pages che estendono XotBasePage
 
+## When
+- Stai creando o modificando una Filament Page che estende `Modules\Xot\Filament\Pages\XotBasePage`
+
+## Then
+- **NON** aggiungere `implements HasForms` alla classe figlia
+- **NON** importare/usare `InteractsWithForms` nella classe figlia
+
+## Because
+- `XotBasePage` implementa già `HasForms` e include già `InteractsWithForms`, quindi la ripetizione è ridondante e aumenta il rumore/risks di incoerenza.
+
+## Esempio ERRATO
 ```php
-public static function getFormSchema(): array
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Forms\Contracts\HasForms;
+
+class PasswordExpired extends XotBasePage implements HasForms
 {
-    return [
-        TextInput::make('name')->required(),
-        TextInput::make('email')->email()->required(),
-    ];
+    use InteractsWithForms;
 }
 ```
 
-## Integrazione con PHPStan
-
-Questa best practice risolve anche errori PHPStan di livello 9 e superiore relativi al tipo di ritorno del metodo `getFormSchema()`:
-
+## Esempio CORRETTO
+```php
+class PasswordExpired extends XotBasePage
+{
+}
 ```
-Method Resource::getFormSchema() should return array<string, Filament\Forms\Components\Component> but returns array<int, Component>
-```
-
-Seguendo queste best practices si assicura che il codice passi i controlli statici di PHPStan e sia più facile da mantenere. 

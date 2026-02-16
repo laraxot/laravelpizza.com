@@ -33,7 +33,7 @@ describe('MailTemplate Business Logic', function () {
     });
 
     test('mail template can store template content', function () {
-        $mailTemplate = new MailTemplate();
+        $mailTemplate = new MailTemplate;
         $mailTemplate->name = 'Welcome Email';
         $mailTemplate->subject = 'Welcome to our platform';
         $mailTemplate->html_template = '<h1>Welcome!</h1>';
@@ -44,21 +44,21 @@ describe('MailTemplate Business Logic', function () {
     });
 
     test('mail template can link to mailable class', function () {
-        $mailTemplate = new MailTemplate();
+        $mailTemplate = new MailTemplate;
         $mailTemplate->mailable = 'App\\Mail\\WelcomeMail';
 
         expect($mailTemplate->mailable)->toBe('App\\Mail\\WelcomeMail');
     });
 
     test('mail template has version tracking', function () {
-        $mailTemplate = new MailTemplate();
+        $mailTemplate = new MailTemplate;
         $mailTemplate->version = 2;
 
         expect($mailTemplate->version)->toBe(2);
     });
 
     test('mail template can store optional text template', function () {
-        $mailTemplate = new MailTemplate();
+        $mailTemplate = new MailTemplate;
         $mailTemplate->text_template = 'Welcome! This is plain text.';
 
         expect($mailTemplate->text_template)->toBe('Welcome! This is plain text.');
@@ -72,7 +72,7 @@ describe('MailTemplate Business Logic', function () {
     });
 
     test('mail template has creator and updater tracking', function () {
-        $mailTemplate = new MailTemplate();
+        $mailTemplate = new MailTemplate;
         $mailTemplate->created_by = 'user-1';
         $mailTemplate->updated_by = 'user-2';
 

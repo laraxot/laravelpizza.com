@@ -6,7 +6,6 @@ namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Modules\User\Database\Factories\TeamPermissionFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -14,14 +13,14 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * Represents a permission assigned to a user within a team context.
  *
- * @property string         $id
- * @property string         $team_id
- * @property string         $user_id
- * @property string         $permission
+ * @property string $id
+ * @property string $team_id
+ * @property string $user_id
+ * @property string $permission
  * @property \DateTime|null $created_at
  * @property \DateTime|null $updated_at
- * @property Team           $team
- * @property User           $user
+ * @property Team $team
+ * @property User $user
  *
  * @method static Builder<static>|TeamPermission newModelQuery()
  * @method static Builder<static>|TeamPermission newQuery()
@@ -32,8 +31,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
- *
- * @method static TeamPermissionFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

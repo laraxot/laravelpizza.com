@@ -6,9 +6,8 @@ namespace Modules\Cms\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Str;
-use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-
+use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
 class RouteServiceProvider extends XotBaseRouteServiceProvider
 {

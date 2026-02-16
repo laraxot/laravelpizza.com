@@ -34,6 +34,8 @@ abstract class XotBasePage extends FilamentPage implements HasForms
 
     /**
      * The model class associated with this page, if any.
+     *
+     * @var class-string<Model>|null
      */
     public static ?string $model = null;
 
@@ -67,7 +69,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
 
         return $view->toString();
     }
-    
+
     public function getViewTest(): string
     {
         $class = __CLASS__;
@@ -88,7 +90,6 @@ abstract class XotBasePage extends FilamentPage implements HasForms
 
         return $view;
     }
-    
 
     /**
      * Get navigation label with automatic translation.
@@ -164,9 +165,9 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      * Get the form model for the page.
      * Filament compatibility method.
      *
-     * @return Model|string|null
+     * @return class-string<Model>|null
      */
-    public function getFormModel(): Model|string|null
+    public function getFormModel(): ?string
     {
         return static::$model;
     }
@@ -174,8 +175,6 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     /**
      * Get the form context for the page.
      * Filament compatibility method.
-     *
-     * @return string|null
      */
     public function getFormContext(): ?string
     {

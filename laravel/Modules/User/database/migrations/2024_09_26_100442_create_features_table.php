@@ -9,13 +9,14 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        if (!$this->tableExists()) {
+        if (! $this->tableExists()) {
             $this->tableCreate(static function (Blueprint $table): void {
                 $table->id();
                 $table->string('name');

@@ -18,7 +18,7 @@ trait Translatable
     {
         throw_unless(
             is_subclass_of(static::class, ListRecords::class),
-            new RuntimeException('dont use the trait "' . Translatable::class . '" with "' . static::class . '"')
+            new RuntimeException('dont use the trait "'.Translatable::class.'" with "'.static::class.'"')
         );
     }
 

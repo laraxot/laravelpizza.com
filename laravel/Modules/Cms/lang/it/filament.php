@@ -3,120 +3,120 @@
 declare(strict_types=1);
 
 return [
-  'resources' => [
-    'section' => [
-      'label' => 'Sezione',
-      'plural' => 'Sezioni',
-      'navigation' => [
-        'label' => 'Sezioni',
-        'icon' => 'heroicon-o-rectangle-stack',
-      ],
-    ],
-  ],
-  'blocks' => [
-    'footer' => [
-      'label' => 'Footer',
-      'info' => [
-        'label' => 'Info Footer',
-        'fields' => [
-          'logo' => 'Logo Footer',
-          'company_name' => 'Nome Azienda',
-          'description' => 'Descrizione',
-          'email' => 'Email',
-          'phone' => 'Telefono',
-          'address' => 'Indirizzo',
-        ],
-      ],
-      'links' => [
-        'label' => 'Link Footer',
-        'fields' => [
-          'title' => 'Titolo Sezione',
-          'links' => [
-            'label' => 'Link',
-            'fields' => [
-              'label' => 'Etichetta Link',
-              'url' => 'URL',
-              'icon' => 'Icona (opzionale]',
+    'resources' => [
+        'section' => [
+            'label' => 'Sezione',
+            'plural' => 'Sezioni',
+            'navigation' => [
+                'label' => 'Sezioni',
+                'icon' => 'heroicon-o-rectangle-stack',
             ],
-          ],
         ],
-      ],
-      'social' => [
-        'label' => 'Social Footer',
-        'fields' => [
-          'title' => 'Titolo Sezione',
-          'social_links' => 'Link Social',
-          'platform' => 'Piattaforma Social',
-          'url' => 'URL Profilo',
-        ],
-      ],
-      'contact' => [
-        'label' => 'Contatti Footer',
-        'fields' => [
-          'title' => 'Titolo Sezione',
-          'address' => 'Indirizzo',
-          'phone' => 'Telefono',
-          'email' => 'Email',
-        ],
-      ],
-      'newsletter' => [
-        'label' => 'Newsletter Footer',
-        'fields' => [
-          'title' => 'Titolo Sezione',
-          'description' => 'Descrizione',
-          'button_text' => 'Testo Pulsante',
-        ],
-      ],
-      'quick_links' => [
-        'label' => 'Link Rapidi Footer',
-        'fields' => [
-          'title' => 'Titolo',
-          'links' => [
-            'label' => 'Link Rapidi',
-            'fields' => [
-              'label' => 'Etichetta',
-              'url' => 'URL',
-              'target' => 'Target',
-            ],
-          ],
-        ],
-      ],
     ],
-  ],
-  'label' => 'Filament',
-  'plural_label' => 'Filament (Plurale)',
-  'navigation' => [
-    'name' => 'Filament',
-    'plural' => 'Filament',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'blocks' => [
+        'footer' => [
+            'label' => 'Footer',
+            'info' => [
+                'label' => 'Info Footer',
+                'fields' => [
+                    'logo' => 'Logo Footer',
+                    'company_name' => 'Nome Azienda',
+                    'description' => 'Descrizione',
+                    'email' => 'Email',
+                    'phone' => 'Telefono',
+                    'address' => 'Indirizzo',
+                ],
+            ],
+            'links' => [
+                'label' => 'Link Footer',
+                'fields' => [
+                    'title' => 'Titolo Sezione',
+                    'links' => [
+                        'label' => 'Link',
+                        'fields' => [
+                            'label' => 'Etichetta Link',
+                            'url' => 'URL',
+                            'icon' => 'Icona (opzionale]',
+                        ],
+                    ],
+                ],
+            ],
+            'social' => [
+                'label' => 'Social Footer',
+                'fields' => [
+                    'title' => 'Titolo Sezione',
+                    'social_links' => 'Link Social',
+                    'platform' => 'Piattaforma Social',
+                    'url' => 'URL Profilo',
+                ],
+            ],
+            'contact' => [
+                'label' => 'Contatti Footer',
+                'fields' => [
+                    'title' => 'Titolo Sezione',
+                    'address' => 'Indirizzo',
+                    'phone' => 'Telefono',
+                    'email' => 'Email',
+                ],
+            ],
+            'newsletter' => [
+                'label' => 'Newsletter Footer',
+                'fields' => [
+                    'title' => 'Titolo Sezione',
+                    'description' => 'Descrizione',
+                    'button_text' => 'Testo Pulsante',
+                ],
+            ],
+            'quick_links' => [
+                'label' => 'Link Rapidi Footer',
+                'fields' => [
+                    'title' => 'Titolo',
+                    'links' => [
+                        'label' => 'Link Rapidi',
+                        'fields' => [
+                            'label' => 'Etichetta',
+                            'url' => 'URL',
+                            'target' => 'Target',
+                        ],
+                    ],
+                ],
+            ],
+        ],
     ],
     'label' => 'Filament',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'fields' => [
-    'id' => [
-      'label' => 'Identificativo',
-      'tooltip' => 'Identificativo univoco del record',
+    'plural_label' => 'Filament (Plurale)',
+    'navigation' => [
+        'name' => 'Filament',
+        'plural' => 'Filament',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Filament',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
     ],
-    'created_at' => [
-      'label' => 'Data Creazione',
+    'fields' => [
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+        ],
     ],
-    'updated_at' => [
-      'label' => 'Ultima Modifica',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Filament',
+        ],
+        'edit' => [
+            'label' => 'Modifica Filament',
+        ],
+        'delete' => [
+            'label' => 'Elimina Filament',
+        ],
     ],
-  ],
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Filament',
-    ],
-    'edit' => [
-      'label' => 'Modifica Filament',
-    ],
-    'delete' => [
-      'label' => 'Elimina Filament',
-    ],
-  ],
 ];

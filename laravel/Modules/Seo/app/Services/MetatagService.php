@@ -21,7 +21,7 @@ class MetatagService
      */
     public function __construct()
     {
-        $this->metatagData = new MetatagData();
+        $this->metatagData = new MetatagData;
     }
 
     /**

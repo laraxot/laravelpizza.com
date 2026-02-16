@@ -8,7 +8,7 @@ use Modules\Geo\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->action = new ValidateCoordinatesAction();
+    $this->action = new ValidateCoordinatesAction;
 });
 
 it('validates valid coordinates correctly', function (): void {

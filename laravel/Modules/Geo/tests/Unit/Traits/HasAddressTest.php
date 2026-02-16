@@ -42,7 +42,7 @@ class HasAddressTest extends BaseModel
 
 beforeEach(function () {
     // Crea un modello di test
-    $this->model = new HasAddressTest();
+    $this->model = new HasAddressTest;
     $this->model->name = 'Test Model';
     $this->model->save();
 });
@@ -161,7 +161,7 @@ it('can get formatted address', function () {
 
 it('can filter models by city', function () {
     // Crea due modelli con indirizzi in città diverse
-    $model1 = new HasAddressTest();
+    $model1 = new HasAddressTest;
     $model1->name = 'Model 1';
     $model1->save();
 
@@ -174,7 +174,7 @@ it('can filter models by city', function () {
             'postal_code' => '20100',
         ]);
 
-    $model2 = new HasAddressTest();
+    $model2 = new HasAddressTest;
     $model2->name = 'Model 2';
     $model2->save();
 

@@ -17,25 +17,25 @@ use Modules\Xot\Contracts\ProfileContract;
  * regioni, province, città, CAP, codici ISTAT, ecc.
  * Tutti i dati sono estratti da file JSON e gestiti tramite Sushi.
  *
- * @property string|null                  $nome
- * @property float|null                   $codice
+ * @property string|null $nome
+ * @property float|null $codice
  * @property array<array-key, mixed>|null $zona
  * @property array<array-key, mixed>|null $regione
  * @property array<array-key, mixed>|null $provincia
- * @property string|null                  $sigla
- * @property string|null                  $codiceCatastale
+ * @property string|null $sigla
+ * @property string|null $codiceCatastale
  * @property array<array-key, mixed>|null $cap
- * @property int|null                     $popolazione
- * @property int|null                     $id
- * @property string|null                  $title
- * @property string|null                  $slug
- * @property string|null                  $content
- * @property string|null                  $created_at
- * @property string|null                  $updated_at
- * @property string|null                  $created_by
- * @property string|null                  $updated_by
- * @property ProfileContract|null         $creator
- * @property ProfileContract|null         $updater
+ * @property int|null $popolazione
+ * @property int|null $id
+ * @property string|null $title
+ * @property string|null $slug
+ * @property string|null $content
+ * @property string|null $created_at
+ * @property string|null $updated_at
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
  *
  * @method static Builder<static>|Comune newModelQuery()
  * @method static Builder<static>|Comune newQuery()
@@ -160,8 +160,7 @@ class Comune extends BaseModel
     /**
      * Find a comune by name (case insensitive).
      *
-     * @param string $nome The name of the comune to find (case insensitive)
-     *
+     * @param  string  $nome  The name of the comune to find (case insensitive)
      * @return static|null The found comune or null if not found
      */
     public static function findByNome(string $nome): ?self
@@ -174,8 +173,7 @@ class Comune extends BaseModel
     /**
      * Find comuni by CAP code (partial match supported).
      *
-     * @param string $cap The CAP code to search for
-     *
+     * @param  string  $cap  The CAP code to search for
      * @return Collection<static> Collection of matching comuni
      */
     public static function findByCap(string $cap): Collection

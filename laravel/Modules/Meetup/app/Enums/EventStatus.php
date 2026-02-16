@@ -28,7 +28,6 @@ enum EventStatus: string implements HasColor, HasLabel
     case MOVED_ONLINE = 'EventMovedOnline';
     case COMPLETED = 'completed';
 
-
     /**
      * Get full Schema.org URI for the status.
      */

@@ -18,8 +18,7 @@ class RegenerateClientSecretAction
     /**
      * Rigenera il secret di un client OAuth2.
      *
-     * @param OauthClient|string $client Il client di cui rigenerare il secret
-     *
+     * @param  OauthClient|string  $client  Il client di cui rigenerare il secret
      * @return string Il nuovo secret (in chiaro)
      */
     public function execute(OauthClient|string $client): string

@@ -8,7 +8,7 @@ use Modules\Geo\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->service = new HereService();
+    $this->service = new HereService;
 });
 
 it('has correct base URL', function (): void {

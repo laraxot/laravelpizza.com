@@ -20,8 +20,7 @@ class RevokeTokenAction
     /**
      * Revoca un token OAuth2.
      *
-     * @param OauthToken|string $token Il token da revocare (istanza o ID)
-     *
+     * @param  OauthToken|string  $token  Il token da revocare (istanza o ID)
      * @return bool True se il token è stato revocato con successo
      */
     public function execute(OauthToken|string $token): bool

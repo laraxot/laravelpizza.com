@@ -14,6 +14,8 @@ use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
 use Spatie\QueueableAction\QueueableAction;
 
+use function Safe\preg_split;
+
 class ImportEventsFromJsonAction
 {
     use QueueableAction;
@@ -57,12 +59,15 @@ class ImportEventsFromJsonAction
      */
     protected function importFromSingleFile(string $path, string $locale): int
     {
+        /** @var array<string, mixed> $payload */
         $payload = json_decode(File::get($path), true, 512, JSON_THROW_ON_ERROR);
-        $events = Arr::get($payload, 'events');
+        $events = Arr::get($payload, 'events', []);
+
         if (! is_array($events)) {
-            $events = is_array($payload) ? $payload : [];
+            $events = $payload;
         }
 
+        /** @var array<array<string, mixed>> $events */
         return $this->processEvents($events, $locale);
     }
 
@@ -80,6 +85,7 @@ class ImportEventsFromJsonAction
             }
 
             try {
+                /** @var array<string, mixed> $data */
                 $data = json_decode(File::get($file->getPathname()), true, 512, JSON_THROW_ON_ERROR);
                 $this->processSingleEvent($data, $locale);
                 $count++;
@@ -96,13 +102,18 @@ class ImportEventsFromJsonAction
 
     /**
      * Process multiple events.
+     *
+     * @param  array<array<string, mixed>>  $events
      */
     protected function processEvents(array $events, string $locale): int
     {
         $count = 0;
         foreach ($events as $item) {
-            $this->processSingleEvent($item, $locale);
-            $count++;
+            if (is_array($item)) {
+                /** @var array<string, mixed> $item */
+                $this->processSingleEvent($item, $locale);
+                $count++;
+            }
         }
 
         return $count;
@@ -110,8 +121,6 @@ class ImportEventsFromJsonAction
 
     /**
      * Process a single event from array data.
-     *
-     * @param array<string, mixed> $item
      */
     protected function processSingleEvent(array $item, string $locale): Event
     {
@@ -128,11 +137,13 @@ class ImportEventsFromJsonAction
         };
 
         // Handle Schema.org format (start_date as ISO 8601)
-        if (! empty($item['start_date'])) {
-            $start = $this->parseIsoDate($item['start_date']);
+        $startDateVal = $item['start_date'] ?? null;
+        if (! empty($startDateVal) && is_string($startDateVal)) {
+            $start = $this->parseIsoDate($startDateVal);
         }
-        if (! empty($item['end_date'])) {
-            $end = $this->parseIsoDate($item['end_date']);
+        $endDateVal = $item['end_date'] ?? null;
+        if (! empty($endDateVal) && is_string($endDateVal)) {
+            $end = $this->parseIsoDate($endDateVal);
         }
 
         return Event::updateOrCreate(
@@ -148,14 +159,14 @@ class ImportEventsFromJsonAction
                 'duration' => $this->duration($start, $end),
                 'status' => $status,
                 'event_status' => $eventStatus,
-                'event_attendance_mode' => $this->parseAttendanceMode(Arr::get($item, 'event_attendance_mode')),
+                'event_attendance_mode' => $this->parseAttendanceMode(is_string($item['event_attendance_mode'] ?? null) ? $item['event_attendance_mode'] : null),
                 'attendees_count' => (int) Arr::get($item, 'attendees_count', Arr::get($item, 'attendees_current', 0)),
                 'max_attendees' => (int) Arr::get($item, 'max_attendees', Arr::get($item, 'attendees_max', 0)) ?: 30,
                 'url' => Arr::get($item, 'url'),
                 'cover_image' => Arr::get($item, 'image'),
-                'offers' => $this->parseOffers(Arr::get($item, 'offers')),
+                'offers' => $this->parseOffers($this->normalizeOffers($item['offers'] ?? null)),
                 'meta_data' => [
-                    'slug' => Str::slug(Arr::get($item, 'title', 'event')),
+                    'slug' => Str::slug(is_string($item['title'] ?? null) ? $item['title'] : 'event'),
                     'organizer' => Arr::get($item, 'organizer'),
                     'schema_original' => $item,
                 ],
@@ -169,14 +180,17 @@ class ImportEventsFromJsonAction
     private function parseStart(array $item): Carbon
     {
         // ISO 8601 format (Schema.org)
-        if (! empty($item['start_date'])) {
-            return $this->parseIsoDate($item['start_date']);
+        $startDateVal = $item['start_date'] ?? null;
+        if (! empty($startDateVal) && is_string($startDateVal)) {
+            return $this->parseIsoDate($startDateVal);
         }
 
         // Legacy format: separate date and time
         $date = (string) Arr::get($item, 'date', date('Y-m-d'));
         $timeRange = (string) Arr::get($item, 'time', '00:00');
-        [$startTime] = array_pad(preg_split('/\s*-\s*/', $timeRange), 1, '00:00');
+        $splitParts = preg_split('/\s*-\s*/', $timeRange);
+        [$startTime] = array_pad($splitParts, 1, '00:00');
+        $startTime = is_string($startTime) ? $startTime : '00:00';
 
         return Carbon::parse(trim($date.' '.$startTime));
     }
@@ -187,8 +201,9 @@ class ImportEventsFromJsonAction
     private function parseEnd(array $item, Carbon $start): Carbon
     {
         // ISO 8601 format (Schema.org)
-        if (! empty($item['end_date'])) {
-            return $this->parseIsoDate($item['end_date']);
+        $endDateVal = $item['end_date'] ?? null;
+        if (! empty($endDateVal) && is_string($endDateVal)) {
+            return $this->parseIsoDate($endDateVal);
         }
 
         // Legacy format: separate date and time
@@ -196,6 +211,7 @@ class ImportEventsFromJsonAction
         $timeRange = (string) Arr::get($item, 'time', '');
         $parts = preg_split('/\s*-\s*/', $timeRange);
         $endTime = $parts[1] ?? null;
+        $endTime = is_string($endTime) ? $endTime : null;
 
         return $endTime ? Carbon::parse(trim($date.' '.$endTime)) : $start;
     }
@@ -239,10 +255,25 @@ class ImportEventsFromJsonAction
     }
 
     /**
+     * Normalize offers from mixed to array.
+     *
+     *
+     * @return array<string, mixed>|null
+     */
+    private function normalizeOffers(mixed $offers): ?array
+    {
+        if (! is_array($offers)) {
+            return null;
+        }
+
+        /** @var array<string, mixed> $offers */
+        return $offers;
+    }
+
+    /**
      * Parse offers array for Schema.org Event.
      *
-     * @param array<string, mixed>|null $offers
-     *
+     * @param  array<string, mixed>|null  $offers
      * @return array<string, mixed>|null
      */
     private function parseOffers(?array $offers): ?array

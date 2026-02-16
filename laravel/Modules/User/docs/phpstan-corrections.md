@@ -1,333 +1,113 @@
-# Correzioni PHPStan - Modulo User
+# Riepilogo Correzioni PHPStan - Modulo User
 
-## Panoramica
-Questo documento descrive le correzioni PHPStan applicate al modulo User per raggiungere il livello massimo di type safety.
+**Status**: In Progress
+**Errori Iniziali**: 221
+**Errori Corretti**: ~15
+**Errori Rimanenti**: ~206
 
-## File Corretti
+## ✅ Correzioni Completate
 
-### 1. ChangeTypeCommand.php
-**Problema**: Cast di Htmlable|string|null in string encapsed
-**Soluzione**: Verifica tipo prima del cast
+### 1. TeamsRelationManager
 
+**Problemi**:
+- Namespace errato: `Filament\Tables\Actions\*` invece di `Filament\Actions\*`
+- Type hint `$livewire` mancante
+- Return types PHPDoc errati
+
+**Correzioni**:
 ```php
-// PRIMA
-$message = "User type changed to: {$typeLabel}";
+// Prima
+use Filament\Tables\Actions\DetachBulkAction;
+->getStateUsing(function (Model $record, $livewire): bool {
+    $user = $livewire->getOwnerRecord();
+});
 
-// DOPO
-$typeLabelString = is_string($typeLabel) ? $typeLabel : 
-    (method_exists($typeLabel, 'toHtml') ? $typeLabel->toHtml() : 'Unknown');
-$message = "User type changed to: {$typeLabelString}";
+// Dopo
+use Filament\Actions\DetachBulkAction;
+->getStateUsing(function (Model $record, self $livewire): bool {
+    /** @var User $user */
+    $user = $livewire->getOwnerRecord();
+});
 ```
 
-### 2. DeviceData.php
-**Problema**: Accesso a proprietà su mixed
-**Soluzione**: Null coalescing e verifica tipo
+**Risultato**: ✅ Zero errori PHPStan Level 10
 
+### 2. OauthClient
+
+**Problemi**:
+- Parameter type `iterable` invece di `iterable<string>`
+
+**Correzioni**:
 ```php
-// PRIMA
-$synchronizationId = $synchronization->id;
+// Prima
+/* @var iterable<string> $ability */
+return $this->hasAnyPermission($ability);
 
-// DOPO
-$synchronizationId = $synchronization->id ?? null;
-if (is_string($synchronizationId)) {
-    // uso sicuro
-}
+// Dopo
+/** @var iterable<string> $ability */
+$permissions = $ability;
+return $this->hasAnyPermission($permissions);
 ```
 
-### 3. Actions (ChangePasswordAction, ChangePasswordHeaderAction, ChangeProfilePasswordAction)
-**Problema**: Hash::make() con mixed e invocazione callable su mixed
-**Soluzione**: Verifica stringa e callable
+**Risultato**: ✅ Zero errori PHPStan Level 10
 
-```php
-// PRIMA
-$hashedPassword = Hash::make($newPassword);
-$callback($hashedPassword);
+## ⚠️ Errori da Risolvere
 
-// DOPO
-if (is_string($newPassword) && $newPassword !== '') {
-    $hashedPassword = Hash::make($newPassword);
-    if (is_callable($callback)) {
-        $callback($hashedPassword);
-    }
-}
-```
+### 1. View Pages - getInfolistSchema Return Type
 
-### 4. MyProfilePage.php
-**Problema**: update() con array non tipizzato
-**Soluzione**: Creazione array con chiavi string
+**Problema**: Molti View pages restituiscono `array<int, Component>` invece di `array<string, Component>`
 
-```php
-// PRIMA
-$record->update($data);
+**File Affetti**:
+- `ViewLocation` (Geo)
+- `ViewOauthAuthCode` (User)
+- `ViewOauthRefreshToken` (User)
+- `ViewPasswordReset` (User)
+- `ViewSocialiteUser` (User)
 
-// DOPO
-$dataArray = [];
-foreach ($data as $key => $value) {
-    if (is_string($key)) {
-        $dataArray[$key] = $value;
-    }
-}
-$record->update($dataArray);
-```
+**Soluzione**: Aggiungere chiavi stringhe agli array
 
-### 5. RegisterTenant.php
-**Problema**: components() con array non tipizzato e attach() su mixed
-**Soluzione**: Verifica tipi e metodi
+### 2. OauthPersonalAccessClient
 
-```php
-// PRIMA
-$this->components($formSchema);
-$tenant->users()->attach($user);
+**Problema**: Estende classe sconosciuta `Laravel\Passport\PersonalAccessClient`
 
-// DOPO
-if (is_array($formSchema)) {
-    $this->components($formSchema);
-}
-if ($user && method_exists($tenant, 'users')) {
-    $tenant->users()->attach($user);
-}
-```
+**Soluzione**: Verificare se la classe esiste o se è stata rimossa in una versione più recente
 
-### 6. CreateProfile.php
-**Problema**: create() con array non tipizzato
-**Soluzione**: Creazione array con chiavi string
+### 3. Passport\Client
 
-```php
-// PRIMA
-$user = $this->getUserClass()::create($user_data);
+**Problema**: Return type mismatch in `initializeHasUniqueStringIds()`
 
-// DOPO
-$userDataArray = [];
-foreach ($user_data as $key => $value) {
-    if (is_string($key)) {
-        $userDataArray[$key] = $value;
-    }
-}
-$user = $this->getUserClass()::create($userDataArray);
-```
+**Soluzione**: Allineare return type con classe base
 
-### 7. ListProfiles.php
-**Problema**: Accesso a proprietà su mixed e metodi su mixed
-**Soluzione**: Verifica esistenza metodi e proprietà
+### 4. Migration Cache
 
-```php
-// PRIMA
-$user->email;
-$user->update($userData);
-$user->toArray();
+**Problema**: Parameter types per `Cache::forget()` e `Cache::store()`
 
-// DOPO
-if (is_string($email) && method_exists($user, 'getKey')) {
-    $user->update($userDataArray);
-    if (method_exists($user, 'toArray')) {
-        $userArray = $user->toArray();
-    }
-}
-```
+**Soluzione**: Aggiungere type hints espliciti
 
-### 8. BaseUserResource.php
-**Problema**: Hash::make() con mixed e accesso a proprietà date su mixed
-**Soluzione**: Verifica stringa e metodi
+## 📊 Statistiche
 
-```php
-// PRIMA
-$hashedPassword = Hash::make($state);
-$createdAt->diffForHumans();
+| Categoria | Errori | Corretti | Rimanenti |
+|-----------|--------|----------|-----------|
+| Namespace | ~50 | 3 | ~47 |
+| Type Hints | ~80 | 2 | ~78 |
+| PHPDoc | ~60 | 10 | ~50 |
+| Return Types | ~30 | 0 | ~30 |
+| **Totale** | **221** | **15** | **206** |
 
-// DOPO
-if (is_string($state)) {
-    $hashedPassword = Hash::make($state);
-}
-if (method_exists($createdAt, 'diffForHumans')) {
-    $createdAt->diffForHumans();
-}
-```
+## 🎯 Prossimi Passi
 
-### 9. ListPermissions.php
-**Problema**: sync() e pluck() su mixed
-**Soluzione**: Verifica esistenza metodi
+1. Correggere tutti i View pages per usare chiavi stringhe
+2. Verificare e correggere OauthPersonalAccessClient
+3. Allineare return types in Passport\Client
+4. Correggere type hints nelle migrations
+5. Verificare namespace in tutti i RelationManagers
 
-```php
-// PRIMA
-$record->roles()->sync($roles);
-$query->pluck('name');
+## 📚 Riferimenti
 
-// DOPO
-if (method_exists($record, 'roles') && method_exists($roles, 'sync')) {
-    $record->roles()->sync($roles);
-}
-if (method_exists($query, 'pluck')) {
-    $query->pluck('name');
-}
-```
+- [PHPStan Errors Philosophy](./phpstan-errors-philosophy.md)
+- [Filament 4 Actions Namespace](./filament-4-actions-namespace.md)
+- [Migration Consolidation Philosophy](./migration-consolidation-philosophy.md)
 
-### 10. CreateRole.php e EditRole.php
-**Problema**: Return type array non tipizzato
-**Soluzione**: Creazione array con chiavi string
+---
 
-```php
-// PRIMA
-return $res;
-
-// DOPO
-$result = [];
-foreach ($res as $key => $value) {
-    if (is_string($key)) {
-        $result[$key] = $value;
-    }
-}
-return $result;
-```
-
-### 11. UsersRelationManager.php
-**Problema**: whereDate() con mixed
-**Soluzione**: Verifica stringa
-
-```php
-// PRIMA
-$query->whereDate('created_at', $date);
-
-// DOPO
-if (is_string($date)) {
-    $query->whereDate('created_at', $date);
-}
-```
-
-### 12. TenantResource.php
-**Problema**: Str::slug() con mixed
-**Soluzione**: Verifica stringa
-
-```php
-// PRIMA
-Str::slug($state);
-
-// DOPO
-if (is_string($state)) {
-    Str::slug($state);
-}
-```
-
-### 13. CreateTenant.php
-**Problema**: handleRecordCreation() con array non tipizzato
-**Soluzione**: Creazione array con chiavi string
-
-```php
-// PRIMA
-$this->handleRecordCreation($filteredData);
-
-// DOPO
-$dataArray = [];
-foreach ($filteredData as $key => $value) {
-    if (is_string($key)) {
-        $dataArray[$key] = $value;
-    }
-}
-$this->handleRecordCreation($dataArray);
-```
-
-### 14. ListTenants.php
-**Problema**: Metodi su mixed e accesso a proprietà su mixed
-**Soluzione**: Verifica esistenza metodi e proprietà
-
-```php
-// PRIMA
-$record->generateSlug();
-$record->name;
-$record->save();
-
-// DOPO
-if (method_exists($record, 'generateSlug')) {
-    $record->generateSlug();
-}
-if (is_string($name) && property_exists($record, 'slug')) {
-    // uso sicuro
-}
-if (method_exists($record, 'save')) {
-    $record->save();
-}
-```
-
-### 15. DomainsRelationManager.php
-**Problema**: Str::of() con mixed
-**Soluzione**: Cast esplicito
-
-```php
-// PRIMA
-Str::of($domain)->slug();
-
-// DOPO
-Str::of((string) $domain)->slug();
-```
-
-### 16. UserResource.php
-**Problema**: Hash::make() con mixed e accesso a proprietà date su mixed
-**Soluzione**: Verifica stringa e metodi
-
-```php
-// PRIMA
-$hashedPassword = Hash::make($state);
-$createdAt->diffForHumans();
-
-// DOPO
-if (is_string($state)) {
-    $hashedPassword = Hash::make($state);
-}
-if (method_exists($createdAt, 'diffForHumans')) {
-    $createdAt->diffForHumans();
-}
-```
-
-## Pattern di Correzione Applicati
-
-### 1. Type Safety per Password Hashing
-- Verifica che la password sia stringa non vuota prima di hashing
-- Gestione sicura dei callback per password
-
-### 2. Array Type Safety
-- Creazione di array con chiavi string esplicite
-- Verifica tipo prima di operazioni su array
-
-### 3. Method Existence Checks
-- Verifica `method_exists()` prima di chiamare metodi
-- Verifica `property_exists()` prima di accedere a proprietà
-
-### 4. String Operations Safety
-- Cast espliciti per operazioni string
-- Verifica tipo prima di operazioni string
-
-### 5. Database Operations Safety
-- Verifica esistenza metodi per operazioni database
-- Gestione sicura di relazioni e query
-
-## Impatto Architetturale
-
-### Benefici
-- **Type Safety**: Eliminazione completa di errori PHPStan
-- **Robustezza**: Codice più resistente agli errori runtime
-- **Manutenibilità**: Codice più facile da comprendere e modificare
-- **Sicurezza**: Gestione sicura di password e dati sensibili
-
-### Compatibilità
-- **Backward Compatibility**: Mantenuta al 100%
-- **API**: Nessuna modifica alle interfacce pubbliche
-- **Comportamento**: Identico al comportamento precedente
-
-## Best Practices Implementate
-
-1. **Password Security**: Verifica stringa prima di hashing
-2. **Array Safety**: Chiavi string esplicite per tutti gli array
-3. **Method Safety**: Verifica esistenza prima di chiamare metodi
-4. **Property Safety**: Verifica esistenza prima di accedere a proprietà
-5. **String Safety**: Cast espliciti per operazioni string
-
-## Collegamenti Correlati
-- [Architettura Modulo User](../architecture.md)
-- [Guida PHPStan](../../../docs/phpstan-guide.md)
-- [Best Practices Laraxot](../../../docs/laraxot-best-practices.md)
-
-
-
-
-
-
-
+*Progresso: 6.8% completato (15/221 errori corretti)*

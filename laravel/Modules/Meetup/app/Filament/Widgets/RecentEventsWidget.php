@@ -11,7 +11,7 @@ use Modules\Meetup\Models\Event;
 
 class RecentEventsWidget extends BaseWidget
 {
-    protected int | string | array $columnSpan = 'full';
+    protected int|string|array $columnSpan = 'full';
 
     public function table(Table $table): Table
     {

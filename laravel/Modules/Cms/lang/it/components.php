@@ -3,133 +3,133 @@
 declare(strict_types=1);
 
 return [
-  'alert' => [
-    'title' => 'Avviso',
-    'types' => [
-      'info' => 'Informazione',
-      'success' => 'Successo',
-      'warning' => 'Attenzione',
-      'error' => 'Errore',
+    'alert' => [
+        'title' => 'Avviso',
+        'types' => [
+            'info' => 'Informazione',
+            'success' => 'Successo',
+            'warning' => 'Attenzione',
+            'error' => 'Errore',
+        ],
+        'actions' => [
+            'dismiss' => 'Chiudi',
+        ],
     ],
-    'actions' => [
-      'dismiss' => 'Chiudi',
+    'button' => [
+        'types' => [
+            'primary' => 'Primario',
+            'secondary' => 'Secondario',
+            'danger' => 'Pericolo',
+            'warning' => 'Attenzione',
+            'info' => 'Info',
+            'success' => 'Successo',
+        ],
+        'sizes' => [
+            'xs' => 'Extra piccolo',
+            'sm' => 'Piccolo',
+            'md' => 'Medio',
+            'lg' => 'Grande',
+            'xl' => 'Extra grande',
+        ],
     ],
-  ],
-  'button' => [
-    'types' => [
-      'primary' => 'Primario',
-      'secondary' => 'Secondario',
-      'danger' => 'Pericolo',
-      'warning' => 'Attenzione',
-      'info' => 'Info',
-      'success' => 'Successo',
+    'card' => [
+        'actions' => [
+            'expand' => 'Espandi',
+            'collapse' => 'Comprimi',
+            'close' => 'Chiudi',
+        ],
     ],
-    'sizes' => [
-      'xs' => 'Extra piccolo',
-      'sm' => 'Piccolo',
-      'md' => 'Medio',
-      'lg' => 'Grande',
-      'xl' => 'Extra grande',
+    'modal' => [
+        'actions' => [
+            'close' => 'Chiudi',
+            'confirm' => 'Conferma',
+            'cancel' => 'Annulla',
+        ],
     ],
-  ],
-  'card' => [
-    'actions' => [
-      'expand' => 'Espandi',
-      'collapse' => 'Comprimi',
-      'close' => 'Chiudi',
+    'form' => [
+        'fields' => [
+            'required' => 'Campo obbligatorio',
+            'optional' => 'Opzionale',
+        ],
+        'validation' => [
+            'required' => 'Questo campo è obbligatorio',
+            'email' => 'Inserisci un indirizzo email valido',
+            'min' => 'Inserisci almeno :min caratteri',
+            'max' => 'Inserisci al massimo :max caratteri',
+        ],
+        'actions' => [
+            'submit' => 'Invia',
+            'reset' => 'Reimposta',
+            'cancel' => 'Annulla',
+        ],
     ],
-  ],
-  'modal' => [
-    'actions' => [
-      'close' => 'Chiudi',
-      'confirm' => 'Conferma',
-      'cancel' => 'Annulla',
+    'table' => [
+        'actions' => [
+            'edit' => 'Modifica',
+            'delete' => 'Elimina',
+            'view' => 'Visualizza',
+        ],
+        'empty' => 'Nessun dato disponibile',
+        'pagination' => [
+            'previous' => 'Precedente',
+            'next' => 'Successivo',
+            'showing' => 'Visualizzazione',
+            'to' => 'a',
+            'of' => 'di',
+            'results' => 'risultati',
+        ],
     ],
-  ],
-  'form' => [
-    'fields' => [
-      'required' => 'Campo obbligatorio',
-      'optional' => 'Opzionale',
+    'tabs' => [
+        'actions' => [
+            'previous' => 'Precedente',
+            'next' => 'Successivo',
+        ],
     ],
-    'validation' => [
-      'required' => 'Questo campo è obbligatorio',
-      'email' => 'Inserisci un indirizzo email valido',
-      'min' => 'Inserisci almeno :min caratteri',
-      'max' => 'Inserisci al massimo :max caratteri',
+    'loading' => [
+        'text' => 'Caricamento in corso...',
     ],
-    'actions' => [
-      'submit' => 'Invia',
-      'reset' => 'Reimposta',
-      'cancel' => 'Annulla',
-    ],
-  ],
-  'table' => [
-    'actions' => [
-      'edit' => 'Modifica',
-      'delete' => 'Elimina',
-      'view' => 'Visualizza',
-    ],
-    'empty' => 'Nessun dato disponibile',
-    'pagination' => [
-      'previous' => 'Precedente',
-      'next' => 'Successivo',
-      'showing' => 'Visualizzazione',
-      'to' => 'a',
-      'of' => 'di',
-      'results' => 'risultati',
-    ],
-  ],
-  'tabs' => [
-    'actions' => [
-      'previous' => 'Precedente',
-      'next' => 'Successivo',
-    ],
-  ],
-  'loading' => [
-    'text' => 'Caricamento in corso...',
-  ],
-  'error' => [
-    'title' => 'Errore',
-    'description' => 'Si è verificato un errore',
-    'actions' => [
-      'retry' => 'Riprova',
-      'back' => 'Indietro',
-    ],
-  ],
-  'label' => 'Components',
-  'plural_label' => 'Components (Plurale)',
-  'navigation' => [
-    'name' => 'Components',
-    'plural' => 'Components',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'error' => [
+        'title' => 'Errore',
+        'description' => 'Si è verificato un errore',
+        'actions' => [
+            'retry' => 'Riprova',
+            'back' => 'Indietro',
+        ],
     ],
     'label' => 'Components',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'fields' => [
-    'id' => [
-      'label' => 'Identificativo',
-      'tooltip' => 'Identificativo univoco del record',
+    'plural_label' => 'Components (Plurale)',
+    'navigation' => [
+        'name' => 'Components',
+        'plural' => 'Components',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Components',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
     ],
-    'created_at' => [
-      'label' => 'Data Creazione',
+    'fields' => [
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+        ],
     ],
-    'updated_at' => [
-      'label' => 'Ultima Modifica',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Components',
+        ],
+        'edit' => [
+            'label' => 'Modifica Components',
+        ],
+        'delete' => [
+            'label' => 'Elimina Components',
+        ],
     ],
-  ],
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Components',
-    ],
-    'edit' => [
-      'label' => 'Modifica Components',
-    ],
-    'delete' => [
-      'label' => 'Elimina Components',
-    ],
-  ],
 ];

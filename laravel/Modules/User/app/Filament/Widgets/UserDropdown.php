@@ -49,7 +49,7 @@ class UserDropdown extends XotBaseWidget
         return [
             'user' => $user,
             'avatarUrl' => $profile?->getAvatarUrl() ?? 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y',
-            'name' => $user?->name ?? 'User',
+            'name' => $user->name ?? 'User',
         ];
     }
 }

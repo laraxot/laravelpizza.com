@@ -6,6 +6,4 @@ namespace App\Providers\Filament;
 
 use Modules\Xot\Providers\Filament\XotBaseMainPanelProvider;
 
-class AdminPanelProvider extends XotBaseMainPanelProvider
-{
-}
+class AdminPanelProvider extends XotBaseMainPanelProvider {}

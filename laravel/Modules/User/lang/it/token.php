@@ -3,43 +3,43 @@
 declare(strict_types=1);
 
 return [
-  'navigation' => [
-    'name' => 'Token',
-    'plural' => 'Tokens',
-    'group' => [
-      'name' => 'Gestione Utenti',
-      'description' => 'Gestione dei token di accesso',
+    'navigation' => [
+        'name' => 'Token',
+        'plural' => 'Tokens',
+        'group' => [
+            'name' => 'Gestione Utenti',
+            'description' => 'Gestione dei token di accesso',
+        ],
+        'label' => 'token',
+        'sort' => 29,
+        'icon' => 'user-user-token',
     ],
-    'label' => 'token',
-    'sort' => 29,
-    'icon' => 'user-user-token',
-  ],
-  'fields' => [
-    'name' => [
-      'label' => 'name',
+    'fields' => [
+        'name' => [
+            'label' => 'name',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+        'toggleColumns' => [
+            'label' => 'toggleColumns',
+        ],
+        'reorderRecords' => [
+            'label' => 'reorderRecords',
+        ],
     ],
-    'create' => [
-      'label' => 'create',
+    'actions' => [
+        'reorderRecords' => [
+            'tooltip' => 'reorderRecords',
+            'icon' => 'reorderRecords',
+        ],
     ],
-    'edit' => [
-      'label' => 'edit',
-    ],
-    'delete' => [
-      'label' => 'delete',
-    ],
-    'toggleColumns' => [
-      'label' => 'toggleColumns',
-    ],
-    'reorderRecords' => [
-      'label' => 'reorderRecords',
-    ],
-  ],
-  'actions' => [
-    'reorderRecords' => [
-      'tooltip' => 'reorderRecords',
-      'icon' => 'reorderRecords',
-    ],
-  ],
-  'label' => 'Token',
-  'plural_label' => 'Token (Plurale)',
+    'label' => 'Token',
+    'plural_label' => 'Token (Plurale)',
 ];

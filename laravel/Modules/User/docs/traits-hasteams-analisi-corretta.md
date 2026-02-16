@@ -530,4 +530,3 @@ trait HasTeams
 - [docs/phpstan_fixes.md](../../../docs/phpstan_fixes.md)
 - [Modules/Xot/docs/RELATION_X.md](../../Xot/docs/RELATION_X.md)
 
-*Ultimo aggiornamento: gennaio 2025* 

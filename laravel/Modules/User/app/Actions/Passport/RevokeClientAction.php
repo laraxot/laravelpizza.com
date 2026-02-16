@@ -21,9 +21,8 @@ class RevokeClientAction
     /**
      * Revoca un client OAuth2 e tutti i suoi token.
      *
-     * @param OauthClient|string $client       Il client da revocare (istanza o ID)
-     * @param bool               $revokeTokens Se true, revoca anche tutti i token associati
-     *
+     * @param  OauthClient|string  $client  Il client da revocare (istanza o ID)
+     * @param  bool  $revokeTokens  Se true, revoca anche tutti i token associati
      * @return bool True se il client è stato revocato con successo
      */
     public function execute(OauthClient|string $client, bool $revokeTokens = true): bool

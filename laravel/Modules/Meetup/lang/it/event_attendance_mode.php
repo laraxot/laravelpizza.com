@@ -3,55 +3,55 @@
 declare(strict_types=1);
 
 return [
-  'OfflineEventAttendanceMode' => [
-    'label' => 'In Presenza',
-    'color' => 'primary',
-    'icon' => 'heroicon-o-map-pin',
-  ],
-  'OnlineEventAttendanceMode' => [
-    'label' => 'Online',
-    'color' => 'success',
-    'icon' => 'heroicon-o-computer-desktop',
-  ],
-  'MixedEventAttendanceMode' => [
-    'label' => 'Mista',
-    'color' => 'warning',
-    'icon' => 'heroicon-o-arrows-right-left',
-  ],
-  'label' => 'Event Attendance Mode',
-  'plural_label' => 'Event Attendance Mode (Plurale)',
-  'navigation' => [
-    'name' => 'Event Attendance Mode',
-    'plural' => 'Event Attendance Mode',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'OfflineEventAttendanceMode' => [
+        'label' => 'In Presenza',
+        'color' => 'primary',
+        'icon' => 'heroicon-o-map-pin',
+    ],
+    'OnlineEventAttendanceMode' => [
+        'label' => 'Online',
+        'color' => 'success',
+        'icon' => 'heroicon-o-computer-desktop',
+    ],
+    'MixedEventAttendanceMode' => [
+        'label' => 'Mista',
+        'color' => 'warning',
+        'icon' => 'heroicon-o-arrows-right-left',
     ],
     'label' => 'Event Attendance Mode',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'fields' => [
-    'id' => [
-      'label' => 'Identificativo',
-      'tooltip' => 'Identificativo univoco del record',
+    'plural_label' => 'Event Attendance Mode (Plurale)',
+    'navigation' => [
+        'name' => 'Event Attendance Mode',
+        'plural' => 'Event Attendance Mode',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Event Attendance Mode',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
     ],
-    'created_at' => [
-      'label' => 'Data Creazione',
+    'fields' => [
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+        ],
     ],
-    'updated_at' => [
-      'label' => 'Ultima Modifica',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Event Attendance Mode',
+        ],
+        'edit' => [
+            'label' => 'Modifica Event Attendance Mode',
+        ],
+        'delete' => [
+            'label' => 'Elimina Event Attendance Mode',
+        ],
     ],
-  ],
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Event Attendance Mode',
-    ],
-    'edit' => [
-      'label' => 'Modifica Event Attendance Mode',
-    ],
-    'delete' => [
-      'label' => 'Elimina Event Attendance Mode',
-    ],
-  ],
 ];

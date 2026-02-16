@@ -9,7 +9,7 @@ use Modules\Activity\Actions\LogModelUpdatedAction;
 use Modules\User\Models\User;
 
 test('LogModelUpdatedAction can be instantiated', function () {
-    $model = new class() extends Model
+    $model = new class extends Model
     {
         protected $table = 'test_models';
 

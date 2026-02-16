@@ -4,23 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Filament\Widgets\Auth;
 
-use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Components\Grid;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Validation\ValidationException;
 use Livewire\Attributes\Validate;
 use Modules\Gdpr\Actions\Consent\CollectGdprConsentsAction;
-use Modules\Gdpr\Actions\Registration\HandleRegistrationErrorAction;
 use Modules\Gdpr\Actions\Registration\HandleSuccessfulRegistrationAction;
 use Modules\Gdpr\Actions\SaveGdprConsentsAction;
 use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;
 use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
 use Modules\User\Actions\Activity\LogRegistrationAction;
 use Modules\User\Actions\User\CreateUserAction;
-use Modules\User\Datas\PasswordData;
-use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 

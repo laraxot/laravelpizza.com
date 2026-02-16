@@ -15,7 +15,6 @@ test('login route is accessible and has correct UI', function () {
         ->assertSee('Oppure');
 });
 
-
 test('register route is accessible and has correct UI', function () {
     $response = $this->get('/it/auth/register');
     $response->assertStatus(200);

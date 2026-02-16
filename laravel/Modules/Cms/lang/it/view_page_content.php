@@ -3,102 +3,102 @@
 declare(strict_types=1);
 
 return [
-  'fields' => [
-    'name' => [
-      'label' => 'name',
+    'fields' => [
+        'name' => [
+            'label' => 'name',
+        ],
+        'slug' => [
+            'label' => 'slug',
+        ],
+        'content' => [
+            'label' => 'content',
+        ],
+        'level' => [
+            'label' => 'level',
+        ],
+        'title' => [
+            'label' => 'title',
+        ],
+        'text' => [
+            'label' => 'text',
+        ],
+        'background' => [
+            'label' => 'background',
+        ],
+        'buttons' => [
+            'label' => 'buttons',
+        ],
+        'label' => [
+            'label' => 'label',
+        ],
+        'class' => [
+            'label' => 'class',
+        ],
+        'link' => [
+            'label' => 'link',
+        ],
+        'image' => [
+            'label' => 'image',
+        ],
+        'url' => [
+            'label' => 'url',
+        ],
+        'ratio' => [
+            'label' => 'ratio',
+        ],
+        'alt' => [
+            'label' => 'alt',
+        ],
+        'caption' => [
+            'label' => 'caption',
+        ],
+        'img_uuid' => [
+            'label' => 'img_uuid',
+        ],
+        'gallery' => [
+            'label' => 'gallery',
+        ],
+        'subtitle' => [
+            'label' => 'subtitle',
+        ],
+        'version' => [
+            'label' => 'version',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'method' => [
+            'label' => 'method',
+        ],
+        'video' => [
+            'label' => 'video',
+        ],
+        'blocks' => [
+            'label' => 'blocks',
+        ],
+        'items' => [
+            'label' => 'items',
+        ],
     ],
-    'slug' => [
-      'label' => 'slug',
-    ],
-    'content' => [
-      'label' => 'content',
-    ],
-    'level' => [
-      'label' => 'level',
-    ],
-    'title' => [
-      'label' => 'title',
-    ],
-    'text' => [
-      'label' => 'text',
-    ],
-    'background' => [
-      'label' => 'background',
-    ],
-    'buttons' => [
-      'label' => 'buttons',
-    ],
-    'label' => [
-      'label' => 'label',
-    ],
-    'class' => [
-      'label' => 'class',
-    ],
-    'link' => [
-      'label' => 'link',
-    ],
-    'image' => [
-      'label' => 'image',
-    ],
-    'url' => [
-      'label' => 'url',
-    ],
-    'ratio' => [
-      'label' => 'ratio',
-    ],
-    'alt' => [
-      'label' => 'alt',
-    ],
-    'caption' => [
-      'label' => 'caption',
-    ],
-    'img_uuid' => [
-      'label' => 'img_uuid',
-    ],
-    'gallery' => [
-      'label' => 'gallery',
-    ],
-    'subtitle' => [
-      'label' => 'subtitle',
-    ],
-    'version' => [
-      'label' => 'version',
-    ],
-    'view' => [
-      'label' => 'view',
-    ],
-    'method' => [
-      'label' => 'method',
-    ],
-    'video' => [
-      'label' => 'video',
-    ],
-    'blocks' => [
-      'label' => 'blocks',
-    ],
-    'items' => [
-      'label' => 'items',
-    ],
-  ],
-  'actions' => [
-    'edit' => [
-      'label' => 'edit',
-    ],
-    'activeLocale' => [
-      'label' => 'activeLocale',
-    ],
-  ],
-  'label' => 'View Page Content',
-  'plural_label' => 'View Page Content (Plurale)',
-  'navigation' => [
-    'name' => 'View Page Content',
-    'plural' => 'View Page Content',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'actions' => [
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'activeLocale' => [
+            'label' => 'activeLocale',
+        ],
     ],
     'label' => 'View Page Content',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
+    'plural_label' => 'View Page Content (Plurale)',
+    'navigation' => [
+        'name' => 'View Page Content',
+        'plural' => 'View Page Content',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'View Page Content',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
 ];

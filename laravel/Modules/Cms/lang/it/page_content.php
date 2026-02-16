@@ -3,107 +3,107 @@
 declare(strict_types=1);
 
 return [
-  'navigation' => [
-    'name' => 'Contenuti Pagina',
-    'plural' => 'Contenuti Pagina',
-    'group' => [
-      'name' => 'Gestione Contenuti',
-      'description' => 'Gestione dei contenuti delle pagine del sito',
+    'navigation' => [
+        'name' => 'Contenuti Pagina',
+        'plural' => 'Contenuti Pagina',
+        'group' => [
+            'name' => 'Gestione Contenuti',
+            'description' => 'Gestione dei contenuti delle pagine del sito',
+        ],
+        'label' => 'Contenuti Pagina',
+        'sort' => 87,
+        'icon' => 'heroicon-o-document-text',
     ],
-    'label' => 'Contenuti Pagina',
-    'sort' => 87,
-    'icon' => 'heroicon-o-document-text',
-  ],
-  'fields' => [
-    'id' => [
-      'label' => 'ID',
-      'placeholder' => 'ID del contenuto pagina',
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+            'placeholder' => 'ID del contenuto pagina',
+        ],
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Nome del contenuto',
+            'helper_text' => 'name',
+            'description' => 'name',
+        ],
+        'slug' => [
+            'label' => 'Slug',
+            'placeholder' => 'Slug del contenuto pagina',
+            'description' => 'slug',
+            'helper_text' => 'slug',
+        ],
+        'blocks' => [
+            'label' => 'Blocchi',
+            'placeholder' => 'Blocchi di contenuto',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+        ],
+        'created_by' => [
+            'label' => 'Creato da',
+            'placeholder' => 'Creato da',
+        ],
+        'updated_by' => [
+            'label' => 'Aggiornato da',
+            'placeholder' => 'Aggiornato da',
+        ],
+        'toggleColumns' => [
+            'label' => 'toggleColumns',
+        ],
+        'reorderRecords' => [
+            'label' => 'reorderRecords',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+        ],
+        'openFilters' => [
+            'label' => 'openFilters',
+        ],
+        'delete' => [
+            'label' => 'delete',
+        ],
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
     ],
-    'name' => [
-      'label' => 'Nome',
-      'placeholder' => 'Nome del contenuto',
-      'helper_text' => 'name',
-      'description' => 'name',
+    'actions' => [
+        'view' => 'Visualizza Contenuto',
+        'create' => [
+            'label' => 'create',
+        ],
+        'edit' => 'Modifica Contenuto',
+        'delete' => 'Elimina Contenuto',
+        'activeLocale' => [
+            'label' => 'activeLocale',
+        ],
     ],
-    'slug' => [
-      'label' => 'Slug',
-      'placeholder' => 'Slug del contenuto pagina',
-      'description' => 'slug',
-      'helper_text' => 'slug',
+    'messages' => [
+        'created' => 'Contenuto creato con successo',
+        'updated' => 'Contenuto aggiornato con successo',
+        'deleted' => 'Contenuto eliminato con successo',
     ],
-    'blocks' => [
-      'label' => 'Blocchi',
-      'placeholder' => 'Blocchi di contenuto',
+    'validation' => [
+        'name_required' => 'Il nome è obbligatorio',
+        'slug_unique' => 'Lo slug deve essere unico',
+        'blocks_required' => 'I blocchi di contenuto sono obbligatori',
     ],
-    'created_at' => [
-      'label' => 'Data Creazione',
+    'model' => [
+        'label' => 'page content.model',
     ],
-    'updated_at' => [
-      'label' => 'Ultima Modifica',
+    'sections' => [
+        'Content' => [
+            'label' => 'Content',
+            'heading' => 'Content',
+        ],
     ],
-    'created_by' => [
-      'label' => 'Creato da',
-      'placeholder' => 'Creato da',
-    ],
-    'updated_by' => [
-      'label' => 'Aggiornato da',
-      'placeholder' => 'Aggiornato da',
-    ],
-    'toggleColumns' => [
-      'label' => 'toggleColumns',
-    ],
-    'reorderRecords' => [
-      'label' => 'reorderRecords',
-    ],
-    'resetFilters' => [
-      'label' => 'resetFilters',
-    ],
-    'applyFilters' => [
-      'label' => 'applyFilters',
-    ],
-    'openFilters' => [
-      'label' => 'openFilters',
-    ],
-    'delete' => [
-      'label' => 'delete',
-    ],
-    'edit' => [
-      'label' => 'edit',
-    ],
-    'view' => [
-      'label' => 'view',
-    ],
-  ],
-  'actions' => [
-    'view' => 'Visualizza Contenuto',
-    'create' => [
-      'label' => 'create',
-    ],
-    'edit' => 'Modifica Contenuto',
-    'delete' => 'Elimina Contenuto',
-    'activeLocale' => [
-      'label' => 'activeLocale',
-    ],
-  ],
-  'messages' => [
-    'created' => 'Contenuto creato con successo',
-    'updated' => 'Contenuto aggiornato con successo',
-    'deleted' => 'Contenuto eliminato con successo',
-  ],
-  'validation' => [
-    'name_required' => 'Il nome è obbligatorio',
-    'slug_unique' => 'Lo slug deve essere unico',
-    'blocks_required' => 'I blocchi di contenuto sono obbligatori',
-  ],
-  'model' => [
-    'label' => 'page content.model',
-  ],
-  'sections' => [
-    'Content' => [
-      'label' => 'Content',
-      'heading' => 'Content',
-    ],
-  ],
-  'label' => 'Page Content',
-  'plural_label' => 'Page Content (Plurale)',
+    'label' => 'Page Content',
+    'plural_label' => 'Page Content (Plurale)',
 ];

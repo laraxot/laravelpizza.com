@@ -17,6 +17,7 @@ use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 use Modules\Meetup\Models\Event;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Override;
@@ -116,9 +117,19 @@ class EventResource extends XotBaseResource
                         \Filament\Forms\Components\DatePicker::make('from'),
                         \Filament\Forms\Components\DatePicker::make('until'),
                     ])
-                    ->query(fn ($query, array $data) => $query
-                        ->when($data['from'], fn ($q, $date) => $q->whereDate('start_date', '>=', $date))
-                        ->when($data['until'], fn ($q, $date) => $q->whereDate('start_date', '<=', $date))),
+                    ->query(function (Builder $query, array $data) {
+                        if (! empty($data['from'])) {
+                            /** @var string $from */
+                            $from = $data['from'];
+                            $query->whereDate('start_date', '>=', $from);
+                        }
+
+                        if (! empty($data['until'])) {
+                            /** @var string $until */
+                            $until = $data['until'];
+                            $query->whereDate('start_date', '<=', $until);
+                        }
+                    }),
                 Tables\Filters\SelectFilter::make('event_attendance_mode')
                     ->options([
                         'OfflineEventAttendanceMode' => 'In Presence',

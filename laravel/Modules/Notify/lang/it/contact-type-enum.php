@@ -3,76 +3,76 @@
 declare(strict_types=1);
 
 return [
-  'phone' => [
-    'label' => 'Telefono',
-    'icon' => 'heroicon-o-phone',
-    'color' => 'text-blue-600 hover:text-blue-800',
-    'description' => 'Numero di telefono fisso',
-  ],
-  'mobile' => [
-    'label' => 'Cellulare',
-    'icon' => 'heroicon-o-device-phone-mobile',
-    'color' => 'text-blue-500 hover:text-blue-700',
-    'description' => 'Numero di telefono mobile',
-  ],
-  'email' => [
-    'label' => 'Email',
-    'icon' => 'heroicon-o-envelope',
-    'color' => 'text-green-600 hover:text-green-800',
-    'description' => 'Indirizzo email',
-  ],
-  'pec' => [
-    'label' => 'PEC',
-    'icon' => 'heroicon-o-shield-check',
-    'color' => 'text-purple-600 hover:text-purple-800',
-    'description' => 'Posta Elettronica Certificata',
-  ],
-  'whatsapp' => [
-    'label' => 'WhatsApp',
-    'icon' => 'heroicon-o-chat-bubble-left-right',
-    'color' => 'text-green-500 hover:text-green-700',
-    'description' => 'Numero WhatsApp',
-  ],
-  'fax' => [
-    'label' => 'Fax',
-    'icon' => 'heroicon-o-printer',
-    'color' => 'text-gray-600',
-    'description' => 'Numero fax',
-  ],
-  'label' => 'Contact Type Enum',
-  'plural_label' => 'Contact Type Enum (Plurale)',
-  'navigation' => [
-    'name' => 'Contact Type Enum',
-    'plural' => 'Contact Type Enum',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'phone' => [
+        'label' => 'Telefono',
+        'icon' => 'heroicon-o-phone',
+        'color' => 'text-blue-600 hover:text-blue-800',
+        'description' => 'Numero di telefono fisso',
+    ],
+    'mobile' => [
+        'label' => 'Cellulare',
+        'icon' => 'heroicon-o-device-phone-mobile',
+        'color' => 'text-blue-500 hover:text-blue-700',
+        'description' => 'Numero di telefono mobile',
+    ],
+    'email' => [
+        'label' => 'Email',
+        'icon' => 'heroicon-o-envelope',
+        'color' => 'text-green-600 hover:text-green-800',
+        'description' => 'Indirizzo email',
+    ],
+    'pec' => [
+        'label' => 'PEC',
+        'icon' => 'heroicon-o-shield-check',
+        'color' => 'text-purple-600 hover:text-purple-800',
+        'description' => 'Posta Elettronica Certificata',
+    ],
+    'whatsapp' => [
+        'label' => 'WhatsApp',
+        'icon' => 'heroicon-o-chat-bubble-left-right',
+        'color' => 'text-green-500 hover:text-green-700',
+        'description' => 'Numero WhatsApp',
+    ],
+    'fax' => [
+        'label' => 'Fax',
+        'icon' => 'heroicon-o-printer',
+        'color' => 'text-gray-600',
+        'description' => 'Numero fax',
     ],
     'label' => 'Contact Type Enum',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'fields' => [
-    'id' => [
-      'label' => 'Identificativo',
-      'tooltip' => 'Identificativo univoco del record',
+    'plural_label' => 'Contact Type Enum (Plurale)',
+    'navigation' => [
+        'name' => 'Contact Type Enum',
+        'plural' => 'Contact Type Enum',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Contact Type Enum',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
     ],
-    'created_at' => [
-      'label' => 'Data Creazione',
+    'fields' => [
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+        ],
     ],
-    'updated_at' => [
-      'label' => 'Ultima Modifica',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Contact Type Enum',
+        ],
+        'edit' => [
+            'label' => 'Modifica Contact Type Enum',
+        ],
+        'delete' => [
+            'label' => 'Elimina Contact Type Enum',
+        ],
     ],
-  ],
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Contact Type Enum',
-    ],
-    'edit' => [
-      'label' => 'Modifica Contact Type Enum',
-    ],
-    'delete' => [
-      'label' => 'Elimina Contact Type Enum',
-    ],
-  ],
 ];

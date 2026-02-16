@@ -24,7 +24,7 @@ uses(TestCase::class);
 
 it('has all required keys in Italian locale', function (): void {
     app()->setLocale('it');
-    
+
     $requiredKeys = [
         'gdpr::register.title',
         'gdpr::register.subtitle',
@@ -58,7 +58,7 @@ it('has all required keys in Italian locale', function (): void {
 
 it('has all required keys in English locale', function (): void {
     app()->setLocale('en');
-    
+
     $requiredKeys = [
         'gdpr::register.title',
         'gdpr::register.subtitle',
@@ -92,7 +92,7 @@ it('has all required keys in English locale', function (): void {
 
 it('has all required keys in Spanish locale', function (): void {
     app()->setLocale('es');
-    
+
     $requiredKeys = [
         'gdpr::register.title',
         'gdpr::register.subtitle',
@@ -113,7 +113,7 @@ it('has all required keys in Spanish locale', function (): void {
 
 it('has all required keys in German locale', function (): void {
     app()->setLocale('de');
-    
+
     $requiredKeys = [
         'gdpr::register.title',
         'gdpr::register.subtitle',
@@ -134,7 +134,7 @@ it('has all required keys in German locale', function (): void {
 
 it('has all required keys in French locale', function (): void {
     app()->setLocale('fr');
-    
+
     $requiredKeys = [
         'gdpr::register.title',
         'gdpr::register.subtitle',
@@ -155,7 +155,7 @@ it('has all required keys in French locale', function (): void {
 
 it('has all required keys in Russian locale', function (): void {
     app()->setLocale('ru');
-    
+
     $requiredKeys = [
         'gdpr::register.title',
         'gdpr::register.subtitle',

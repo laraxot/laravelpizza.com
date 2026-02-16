@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Feature;
 
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
-use Modules\User\Database\Factories\UserFactory;
+use Illuminate\Support\Str;
 use Modules\User\Models\User;
+
 use function Pest\Laravel\get;
 use function Pest\Laravel\post;
 
@@ -282,7 +282,7 @@ it('stores user data correctly after successful registration', function () {
         ->assertStatus(302);
 
     $user = User::where('email', 'alice@example.com')->first();
-    
+
     expect($user)->not->toBeNull();
     expect($user->first_name)->toBe('Alice');
     expect($user->last_name)->toBe('Johnson');
@@ -292,7 +292,7 @@ it('stores user data correctly after successful registration', function () {
 
 it('hashes the password after registration', function () {
     $plainPassword = 'MySecurePassword123!';
-    
+
     post('/en/auth/register', [
         'first_name' => 'Bob',
         'last_name' => 'Wilson',
@@ -305,7 +305,7 @@ it('hashes the password after registration', function () {
         ->assertStatus(302);
 
     $user = User::where('email', 'bob@example.com')->first();
-    
+
     expect($user->password)->not->toBe($plainPassword);
     expect($user->password)->not->toBeEmpty();
 });
@@ -337,7 +337,7 @@ it('trims whitespace from input fields', function () {
         ->assertStatus(302);
 
     $user = User::where('email', 'john@example.com')->first();
-    
+
     expect($user->first_name)->toBe('John');
     expect($user->last_name)->toBe('Doe');
     expect($user->email)->toBe('john@example.com');
@@ -345,16 +345,16 @@ it('trims whitespace from input fields', function () {
 
 it('prevents registration when already logged in', function () {
     $user = User::factory()->create();
-    
+
     Auth::login($user);
-    
+
     get('/en/auth/register')
         ->assertRedirect();
 });
 
 it('handles very long input names correctly', function () {
     $longName = Str::random(250);
-    
+
     post('/en/auth/register', [
         'first_name' => $longName,
         'last_name' => 'Doe',
@@ -369,8 +369,8 @@ it('handles very long input names correctly', function () {
 });
 
 it('handles very long email correctly', function () {
-    $longEmail = Str::random(200) . '@example.com';
-    
+    $longEmail = Str::random(200).'@example.com';
+
     post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',
@@ -386,7 +386,7 @@ it('handles very long email correctly', function () {
 
 it('prevents SQL injection attempts in email', function () {
     $maliciousEmail = "john@example.com'; DROP TABLE users; --";
-    
+
     post('/en/auth/register', [
         'first_name' => 'John',
         'last_name' => 'Doe',

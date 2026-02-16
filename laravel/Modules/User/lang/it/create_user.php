@@ -3,43 +3,43 @@
 declare(strict_types=1);
 
 return [
-  'fields' => [
-    'name' => [
-      'label' => 'name',
+    'fields' => [
+        'name' => [
+            'label' => 'name',
+        ],
+        'email' => [
+            'label' => 'email',
+        ],
+        'password' => [
+            'label' => 'password',
+        ],
     ],
-    'email' => [
-      'label' => 'email',
+    'actions' => [
+        'create' => [
+            'label' => 'create',
+        ],
+        'createAnother' => [
+            'label' => 'createAnother',
+        ],
+        'cancel' => [
+            'label' => 'cancel',
+            'icon' => 'cancel',
+        ],
+        'logout' => [
+            'icon' => 'logout',
+        ],
     ],
-    'password' => [
-      'label' => 'password',
-    ],
-  ],
-  'actions' => [
-    'create' => [
-      'label' => 'create',
-    ],
-    'createAnother' => [
-      'label' => 'createAnother',
-    ],
-    'cancel' => [
-      'label' => 'cancel',
-      'icon' => 'cancel',
-    ],
-    'logout' => [
-      'icon' => 'logout',
-    ],
-  ],
-  'navigation' => [
-    'name' => 'Create User',
-    'plural' => 'Create User',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'navigation' => [
+        'name' => 'Create User',
+        'plural' => 'Create User',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Create User',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
     ],
     'label' => 'Create User',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'label' => 'Create User',
-  'plural_label' => 'Create User (Plurale)',
+    'plural_label' => 'Create User (Plurale)',
 ];

@@ -3,56 +3,56 @@
 declare(strict_types=1);
 
 return [
-  'actions' => [
-    'create' => [
-      'label' => 'create',
+    'actions' => [
+        'create' => [
+            'label' => 'create',
+        ],
     ],
-  ],
-  'fields' => [
-    'collection_name' => [
-      'label' => 'collection_name',
-    ],
-    'name' => [
-      'label' => 'name',
-    ],
-    'mime_type' => [
-      'label' => 'mime_type',
-    ],
-    'preview' => [
-      'label' => 'preview',
-    ],
-    'human_readable_size' => [
-      'label' => 'human_readable_size',
-    ],
-    'creator' => [
-      'name' => [
-        'label' => 'creator.name',
-      ],
-    ],
-    'created_at' => [
-      'label' => 'created_at',
-    ],
-    'applyFilters' => [
-      'label' => 'applyFilters',
-    ],
-    'toggleColumns' => [
-      'label' => 'toggleColumns',
-    ],
-    'reorderRecords' => [
-      'label' => 'reorderRecords',
-    ],
-  ],
-  'label' => 'Medium',
-  'plural_label' => 'Medium (Plurale)',
-  'navigation' => [
-    'name' => 'Medium',
-    'plural' => 'Medium',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'fields' => [
+        'collection_name' => [
+            'label' => 'collection_name',
+        ],
+        'name' => [
+            'label' => 'name',
+        ],
+        'mime_type' => [
+            'label' => 'mime_type',
+        ],
+        'preview' => [
+            'label' => 'preview',
+        ],
+        'human_readable_size' => [
+            'label' => 'human_readable_size',
+        ],
+        'creator' => [
+            'name' => [
+                'label' => 'creator.name',
+            ],
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+        ],
+        'toggleColumns' => [
+            'label' => 'toggleColumns',
+        ],
+        'reorderRecords' => [
+            'label' => 'reorderRecords',
+        ],
     ],
     'label' => 'Medium',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
+    'plural_label' => 'Medium (Plurale)',
+    'navigation' => [
+        'name' => 'Medium',
+        'plural' => 'Medium',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Medium',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
 ];

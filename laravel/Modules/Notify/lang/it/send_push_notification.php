@@ -3,53 +3,53 @@
 declare(strict_types=1);
 
 return [
-  'resource' => [
-    'name' => 'Invio Notifica Push',
-  ],
-  'navigation' => [
-    'name' => 'Invio Notifica Push',
-    'plural' => 'Invio Notifiche Push',
-    'group' => [
-      'name' => 'Sistema',
-      'description' => 'Funzionalità per l\'invio di notifiche push tramite Firebase',
+    'resource' => [
+        'name' => 'Invio Notifica Push',
     ],
-    'label' => 'Invio Notifiche Push',
-    'icon' => 'notify-push-animated',
-    'sort' => 51,
-  ],
-  'fields' => [
-    'device_token' => [
-      'label' => 'Token Dispositivo',
+    'navigation' => [
+        'name' => 'Invio Notifica Push',
+        'plural' => 'Invio Notifiche Push',
+        'group' => [
+            'name' => 'Sistema',
+            'description' => 'Funzionalità per l\'invio di notifiche push tramite Firebase',
+        ],
+        'label' => 'Invio Notifiche Push',
+        'icon' => 'notify-push-animated',
+        'sort' => 51,
     ],
-    'type' => [
-      'label' => 'Tipo',
-      'options' => [
-        'notification' => 'Notifica',
-        'data' => 'Dati',
-        'both' => 'Entrambi',
-      ],
+    'fields' => [
+        'device_token' => [
+            'label' => 'Token Dispositivo',
+        ],
+        'type' => [
+            'label' => 'Tipo',
+            'options' => [
+                'notification' => 'Notifica',
+                'data' => 'Dati',
+                'both' => 'Entrambi',
+            ],
+        ],
+        'title' => [
+            'label' => 'Titolo',
+        ],
+        'body' => [
+            'label' => 'Contenuto',
+        ],
+        'data' => [
+            'label' => 'Dati Aggiuntivi',
+            'description' => 'Dati in formato JSON da inviare con la notifica',
+        ],
     ],
-    'title' => [
-      'label' => 'Titolo',
+    'actions' => [
+        'send' => [
+            'label' => 'Invia Notifica',
+            'success' => 'Notifica push inviata con successo',
+            'error' => 'Errore durante l\'invio della notifica push',
+        ],
+        'preview' => [
+            'label' => 'Anteprima',
+        ],
     ],
-    'body' => [
-      'label' => 'Contenuto',
-    ],
-    'data' => [
-      'label' => 'Dati Aggiuntivi',
-      'description' => 'Dati in formato JSON da inviare con la notifica',
-    ],
-  ],
-  'actions' => [
-    'send' => [
-      'label' => 'Invia Notifica',
-      'success' => 'Notifica push inviata con successo',
-      'error' => 'Errore durante l\'invio della notifica push',
-    ],
-    'preview' => [
-      'label' => 'Anteprima',
-    ],
-  ],
-  'label' => 'Send Push Notification',
-  'plural_label' => 'Send Push Notification (Plurale)',
+    'label' => 'Send Push Notification',
+    'plural_label' => 'Send Push Notification (Plurale)',
 ];

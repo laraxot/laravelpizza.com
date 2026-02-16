@@ -123,7 +123,7 @@ describe('Homepage Content Management', function () {
         $response = get('/'.$locale);
 
         $status = $response->getStatusCode();
-        if (200 !== $status) {
+        if ($status !== 200) {
             $this->assertTrue(in_array($status, [301, 302, 303, 307, 308, 404], true));
 
             return;
@@ -140,7 +140,7 @@ describe('Homepage Content Management', function () {
         $response = get('/'.$locale);
 
         $status = $response->getStatusCode();
-        if (200 !== $status) {
+        if ($status !== 200) {
             $this->assertTrue(in_array($status, [301, 302, 303, 307, 308, 404], true));
 
             return;

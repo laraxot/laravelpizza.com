@@ -16,9 +16,7 @@ declare(strict_types=1);
 use Illuminate\Validation\ValidationException;
 use Modules\Gdpr\Actions\Validation\ValidateGdprConsentAction;
 use Modules\Gdpr\Actions\Validation\ValidateUserDataAction;
-use Modules\Gdpr\Models\Treatment;
 use Modules\Gdpr\Tests\TestCase;
-use Modules\User\Actions\User\CreateUserAction;
 use Modules\User\Models\User;
 
 uses(TestCase::class);
@@ -296,7 +294,7 @@ it('sets email_verified_at on registration', function (): void {
 
 it('prevents duplicate email registration', function (): void {
     $email = 'duplicate-'.Str::random(8).'@example.com';
-    
+
     // First registration
     $formData1 = [
         'first_name' => 'First',
@@ -305,9 +303,9 @@ it('prevents duplicate email registration', function (): void {
         'password' => 'SecureP@ss1!',
         'password_confirmation' => 'SecureP@ss1!',
     ];
-    
+
     app(ValidateUserDataAction::class)->execute($formData1);
-    
+
     // Second registration with same email should fail
     $formData2 = [
         'first_name' => 'Second',
@@ -316,7 +314,7 @@ it('prevents duplicate email registration', function (): void {
         'password' => 'SecureP@ss2!',
         'password_confirmation' => 'SecureP@ss2!',
     ];
-    
+
     $this->expectException(\Illuminate\Database\QueryException::class);
     app(ValidateUserDataAction::class)->execute($formData2);
 });

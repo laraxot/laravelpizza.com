@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Widgets;
 
-use Modules\Meetup\Models\Event;
-use Modules\Xot\Filament\Widgets\XotBaseStatsOverviewWidget as StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\DB;
+use Modules\Meetup\Models\Event;
+use Modules\Xot\Filament\Widgets\XotBaseStatsOverviewWidget as StatsOverviewWidget;
 
 class EventStatsOverviewWidget extends StatsOverviewWidget
 {

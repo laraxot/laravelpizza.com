@@ -3,64 +3,64 @@
 declare(strict_types=1);
 
 return [
-  'title' => 'Laravel Installer',
-  'next' => 'Passo successivo',
-  'finish' => 'Installa',
-  'welcome' => [
-    'title' => 'Benvenuto al programma di installazione',
-    'message' => 'Benvenuto alla configurazione guidata.',
-  ],
-  'requirements' => [
-    'title' => 'Requisiti',
-  ],
-  'permissions' => [
-    'title' => 'Permessi',
-  ],
-  'environment' => [
-    'title' => 'Configurazione ambiente',
-    'save' => 'Salva .env',
-    'success' => 'La configurazione del file .env &egrave; stata salvata correttamente.',
-    'errors' => 'Impossibile salvare il file .env, per favore crealo manualmente.',
-  ],
-  'final' => [
-    'title' => 'Finito',
-    'finished' => 'L\'applicazione è stata configurata correttamente.',
-    'exit' => 'Clicca qui per uscire',
-  ],
-  'label' => 'Messages',
-  'plural_label' => 'Messages (Plurale)',
-  'navigation' => [
-    'name' => 'Messages',
-    'plural' => 'Messages',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'title' => 'Laravel Installer',
+    'next' => 'Passo successivo',
+    'finish' => 'Installa',
+    'welcome' => [
+        'title' => 'Benvenuto al programma di installazione',
+        'message' => 'Benvenuto alla configurazione guidata.',
+    ],
+    'requirements' => [
+        'title' => 'Requisiti',
+    ],
+    'permissions' => [
+        'title' => 'Permessi',
+    ],
+    'environment' => [
+        'title' => 'Configurazione ambiente',
+        'save' => 'Salva .env',
+        'success' => 'La configurazione del file .env &egrave; stata salvata correttamente.',
+        'errors' => 'Impossibile salvare il file .env, per favore crealo manualmente.',
+    ],
+    'final' => [
+        'title' => 'Finito',
+        'finished' => 'L\'applicazione è stata configurata correttamente.',
+        'exit' => 'Clicca qui per uscire',
     ],
     'label' => 'Messages',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'fields' => [
-    'id' => [
-      'label' => 'Identificativo',
-      'tooltip' => 'Identificativo univoco del record',
+    'plural_label' => 'Messages (Plurale)',
+    'navigation' => [
+        'name' => 'Messages',
+        'plural' => 'Messages',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Messages',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
     ],
-    'created_at' => [
-      'label' => 'Data Creazione',
+    'fields' => [
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+        ],
     ],
-    'updated_at' => [
-      'label' => 'Ultima Modifica',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Messages',
+        ],
+        'edit' => [
+            'label' => 'Modifica Messages',
+        ],
+        'delete' => [
+            'label' => 'Elimina Messages',
+        ],
     ],
-  ],
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Messages',
-    ],
-    'edit' => [
-      'label' => 'Modifica Messages',
-    ],
-    'delete' => [
-      'label' => 'Elimina Messages',
-    ],
-  ],
 ];

@@ -8,7 +8,7 @@ use Modules\Job\Actions\GetTaskFrequenciesAction;
 
 describe('TaskFrequencies Integration', function () {
     beforeEach(function () {
-        $this->action = new GetTaskFrequenciesAction();
+        $this->action = new GetTaskFrequenciesAction;
     });
 
     it('integrates with Laravel config system', function () {
@@ -197,7 +197,7 @@ describe('TaskFrequencies Integration', function () {
             true,
             false,
             null,
-            new stdClass(),
+            new stdClass,
         ];
 
         foreach ($invalidConfigs as $invalidConfig) {

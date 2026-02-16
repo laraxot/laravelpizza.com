@@ -12,7 +12,6 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
-use Modules\User\Database\Factories\SocialiteUserFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
@@ -20,18 +19,18 @@ use Modules\Xot\Datas\XotData;
 /**
  * Modules\User\Models\SocialiteUser.
  *
- * @property int               $id
- * @property string            $user_id
- * @property string            $provider
- * @property string            $provider_id
- * @property string|null       $token
- * @property string|null       $name
- * @property string|null       $email
- * @property string|null       $avatar
- * @property Carbon|null       $created_at
- * @property Carbon|null       $updated_at
- * @property string|null       $updated_by
- * @property string|null       $created_by
+ * @property int $id
+ * @property string $user_id
+ * @property string $provider
+ * @property string $provider_id
+ * @property string|null $token
+ * @property string|null $name
+ * @property string|null $email
+ * @property string|null $avatar
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
  * @property UserContract|null $user
  *
  * @method static Builder|SocialiteUser newModelQuery()
@@ -56,8 +55,6 @@ use Modules\Xot\Datas\XotData;
  *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
- * @method static SocialiteUserFactory factory($count = null, $state = [])
  *
  * @mixin IdeHelperSocialiteUser
  *

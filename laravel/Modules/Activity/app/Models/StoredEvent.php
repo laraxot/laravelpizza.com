@@ -77,6 +77,7 @@ class StoredEvent extends SpatieStoredEvent
         'updated_by',
         'created_by',
     ];
+
     /**
      * Get the attributes that should be cast.
      *

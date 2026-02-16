@@ -6,12 +6,12 @@ use Illuminate\Support\Str;
 
 /**
  * Database Configuration for laravelpizza tenant (Laravel 12.x)
- * 
+ *
  * Filosofia Laravel 12.x:
  * - Singola connessione database principale
  * - Multi-tenant tramite database/schema separati
  * - Modular connections gestite automaticamente da TenantServiceProvider
- * 
+ *
  * @see Modules/Tenant/docs/database-config-standard.md
  * @see Modules/Tenant/app/Providers/TenantServiceProvider.php
  * @see https://laravel.com/docs/12.x/database

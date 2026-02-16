@@ -38,11 +38,11 @@ trait EnumTrait
      */
     public static function getSearchable(): array
     {
-        return array_map(fn ($item) => $item->value, static::cases());
+        return array_map(fn ($item) => (string) $item->value, static::cases());
     }
 
     /**
-     * @return array<string, TextInput>
+     * @return array<int|string, TextInput>
      */
     public static function getFormSchema(): array
     {
@@ -51,7 +51,8 @@ trait EnumTrait
         /** @var array<string, TextInput> $result */
         $result = [];
         foreach ($cases as $item) {
-            $result[$item->value] = TextInput::make($item->value)->prefixIcon($item->getIcon());
+            $name = (string) $item->value;
+            $result[$name] = TextInput::make($name)->prefixIcon($item->getIcon());
         }
 
         return $result;
@@ -138,7 +139,7 @@ trait EnumTrait
      */
     public static function getColumnNames(): array
     {
-        return array_map(fn ($case) => $case->value, static::cases());
+        return array_map(fn ($case) => (string) $case->value, static::cases());
     }
 
     /**

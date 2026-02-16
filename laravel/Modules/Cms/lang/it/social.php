@@ -3,54 +3,54 @@
 declare(strict_types=1);
 
 return [
-  'fields' => [
-    'title' => [
-      'label' => 'title',
-      'placeholder' => 'title',
-      'helper_text' => 'title',
-      'description' => 'title',
-    ],
-    'social_links' => [
-      'label' => 'social_links',
-      'placeholder' => 'social_links',
-      'helper_text' => 'social_links',
-      'description' => 'social_links',
-    ],
-    'platform' => [
-      'label' => 'platform',
-      'placeholder' => 'platform',
-      'helper_text' => 'platform',
-      'description' => 'platform',
-    ],
-    'url' => [
-      'label' => 'url',
-      'placeholder' => 'url',
-      'helper_text' => 'url',
-      'description' => 'url',
-    ],
-  ],
-  'label' => 'Social',
-  'plural_label' => 'Social (Plurale)',
-  'navigation' => [
-    'name' => 'Social',
-    'plural' => 'Social',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'fields' => [
+        'title' => [
+            'label' => 'title',
+            'placeholder' => 'title',
+            'helper_text' => 'title',
+            'description' => 'title',
+        ],
+        'social_links' => [
+            'label' => 'social_links',
+            'placeholder' => 'social_links',
+            'helper_text' => 'social_links',
+            'description' => 'social_links',
+        ],
+        'platform' => [
+            'label' => 'platform',
+            'placeholder' => 'platform',
+            'helper_text' => 'platform',
+            'description' => 'platform',
+        ],
+        'url' => [
+            'label' => 'url',
+            'placeholder' => 'url',
+            'helper_text' => 'url',
+            'description' => 'url',
+        ],
     ],
     'label' => 'Social',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Social',
+    'plural_label' => 'Social (Plurale)',
+    'navigation' => [
+        'name' => 'Social',
+        'plural' => 'Social',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Social',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
     ],
-    'edit' => [
-      'label' => 'Modifica Social',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Social',
+        ],
+        'edit' => [
+            'label' => 'Modifica Social',
+        ],
+        'delete' => [
+            'label' => 'Elimina Social',
+        ],
     ],
-    'delete' => [
-      'label' => 'Elimina Social',
-    ],
-  ],
 ];

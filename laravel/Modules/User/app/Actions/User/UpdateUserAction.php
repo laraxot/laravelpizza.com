@@ -25,12 +25,11 @@ class UpdateUserAction
     /**
      * Esegue l'aggiornamento dell'utente.
      *
-     * @param Model                $user L'utente da aggiornare
-     * @param array<string, mixed> $data I dati da aggiornare
+     * @param  Model  $user  L'utente da aggiornare
+     * @param  array<string, mixed>  $data  I dati da aggiornare
+     * @return Model L'utente aggiornato
      *
      * @throws \Exception Se l'aggiornamento fallisce
-     *
-     * @return Model L'utente aggiornato
      */
     public function execute(Model $user, array $data): Model
     {
@@ -79,8 +78,7 @@ class UpdateUserAction
     /**
      * Prepara i dati per l'aggiornamento rimuovendo campi non aggiornabili.
      *
-     * @param array<string, mixed> $data
-     *
+     * @param  array<string, mixed>  $data
      * @return array<string, mixed>
      */
     protected function prepareUpdateData(array $data): array
@@ -119,7 +117,7 @@ class UpdateUserAction
     /**
      * Valida i dati di aggiornamento.
      *
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      *
      * @throws ValidationException
      */
@@ -146,7 +144,7 @@ class UpdateUserAction
      * Operazioni da eseguire dopo l'aggiornamento.
      * Può essere sovrascritto dalle classi che estendono questa action.
      *
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     protected function afterUpdate(Model $user, array $data): void
     {

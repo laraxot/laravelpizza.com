@@ -8,7 +8,6 @@ use Modules\User\Models\User;
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\get;
 
-
 describe('Auth Components Tests', function (): void {
     test('auth components exist and work correctly', function (): void {
         // Test existing auth components

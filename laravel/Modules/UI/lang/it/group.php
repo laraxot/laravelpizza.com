@@ -3,54 +3,54 @@
 declare(strict_types=1);
 
 return [
-  'fields' => [
-    'lavoratore' => [
-      'label' => 'lavoratore',
-    ],
-    'qua' => [
-      'label' => 'qua',
-    ],
-    'rep' => [
-      'label' => 'rep',
-    ],
-    'periodo' => [
-      'label' => 'periodo',
-    ],
-    'info' => [
-      'label' => 'info',
-    ],
-    'diritto' => [
-      'label' => 'diritto',
-    ],
-    'motivo/invio email' => [
-      'label' => 'motivo/invio email',
-    ],
-    'motivo/invio_email' => [
-      'label' => 'motivo/invio_email',
-    ],
-  ],
-  'label' => 'Group',
-  'plural_label' => 'Group (Plurale)',
-  'navigation' => [
-    'name' => 'Group',
-    'plural' => 'Group',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'fields' => [
+        'lavoratore' => [
+            'label' => 'lavoratore',
+        ],
+        'qua' => [
+            'label' => 'qua',
+        ],
+        'rep' => [
+            'label' => 'rep',
+        ],
+        'periodo' => [
+            'label' => 'periodo',
+        ],
+        'info' => [
+            'label' => 'info',
+        ],
+        'diritto' => [
+            'label' => 'diritto',
+        ],
+        'motivo/invio email' => [
+            'label' => 'motivo/invio email',
+        ],
+        'motivo/invio_email' => [
+            'label' => 'motivo/invio_email',
+        ],
     ],
     'label' => 'Group',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Group',
+    'plural_label' => 'Group (Plurale)',
+    'navigation' => [
+        'name' => 'Group',
+        'plural' => 'Group',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Group',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
     ],
-    'edit' => [
-      'label' => 'Modifica Group',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Group',
+        ],
+        'edit' => [
+            'label' => 'Modifica Group',
+        ],
+        'delete' => [
+            'label' => 'Elimina Group',
+        ],
     ],
-    'delete' => [
-      'label' => 'Elimina Group',
-    ],
-  ],
 ];

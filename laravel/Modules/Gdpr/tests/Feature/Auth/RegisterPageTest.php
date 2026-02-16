@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 use Illuminate\Foundation\Testing\RefreshDatabase; // NOTE: User has explicitly forbidden RefreshDatabase. This is a placeholder.
 use Livewire\Livewire;
-use Modules\User\Models\User;
 use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
+use Modules\User\Models\User;
 
 // NOTE: This test is written assuming that the TestCase.php migration strategy
 // (single 'php artisan migrate' without --force, no $migrated flag)
@@ -41,7 +41,7 @@ it('can register a new user', function () {
     // We need to ensure migrations are run for this to work
     // Since TestCase.php is not yet fixed, this might fail without proper setup
     $this->artisan('migrate'); // Explicitly run migrate for this test
-    
+
     Livewire::test(RegisterWidget::class)
         ->set('data.email', 'test@example.com')
         ->set('data.password', 'password123')

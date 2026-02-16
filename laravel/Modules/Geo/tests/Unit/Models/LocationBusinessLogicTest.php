@@ -25,7 +25,7 @@ describe('Location Business Logic', function () {
     });
 
     test('location has geographic coordinate properties', function () {
-        $location = new Location();
+        $location = new Location;
         $location->lat = 45.4642;
         $location->lng = 9.1900;
 
@@ -34,7 +34,7 @@ describe('Location Business Logic', function () {
     });
 
     test('location can store address components', function () {
-        $location = new Location();
+        $location = new Location;
         $location->street = 'Via Roma 123';
         $location->city = 'Milano';
         $location->state = 'Lombardia';
@@ -47,14 +47,14 @@ describe('Location Business Logic', function () {
     });
 
     test('location has processing status tracking', function () {
-        $location = new Location();
+        $location = new Location;
         $location->processed = true;
 
         expect($location->processed)->toBe(true);
     });
 
     test('location can store formatted address', function () {
-        $location = new Location();
+        $location = new Location;
         $location->formatted_address = 'Via Roma 123, 20121 Milano MI, Italy';
 
         expect($location->formatted_address)->toBe('Via Roma 123, 20121 Milano MI, Italy');

@@ -118,7 +118,7 @@ describe('Job Business Logic', function () {
     });
 
     it('model has correct fillable attributes', function () {
-        $job = new Job();
+        $job = new Job;
         $fillable = $job->getFillable();
 
         expect($fillable)->toContain('queue')

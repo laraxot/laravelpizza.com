@@ -16,6 +16,5 @@ final class UserData extends Data
         public ?string $role,
         public array $permissions,
         public array $settings,
-    ) {
-    }
+    ) {}
 }

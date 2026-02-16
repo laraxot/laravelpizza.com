@@ -370,7 +370,7 @@ describe('Authentication Business Logic', function () {
             $device = (object) $this->deviceData;
 
             // Business Logic: Mobile devices should have push tokens
-            if ('mobile' === $device->device_type) {
+            if ($device->device_type === 'mobile') {
                 expect($device->push_token)->toBeString();
                 expect(strlen($device->push_token))->toBeGreaterThan(20);
             }

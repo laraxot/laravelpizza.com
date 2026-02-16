@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Modules\User\Contracts\TenantContract;
-use Modules\User\Database\Factories\TenantFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
@@ -27,9 +26,9 @@ use Spatie\Sluggable\SlugOptions;
  * @method static Builder|Tenant query()
  *
  * @property EloquentCollection<int, Model&UserContract> $members
- * @property int|null                                    $members_count
- * @property ProfileContract|null                        $creator
- * @property ProfileContract|null                        $updater
+ * @property int|null $members_count
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
  *
  * @mixin \Eloquent
  */

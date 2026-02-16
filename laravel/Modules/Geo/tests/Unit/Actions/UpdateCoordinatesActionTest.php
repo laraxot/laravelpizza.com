@@ -32,7 +32,7 @@ beforeEach(function () {
         ], 200),
     ]);
 
-    $this->getCoordinatesAction = new GetCoordinatesAction();
+    $this->getCoordinatesAction = new GetCoordinatesAction;
     $this->action = new UpdateCoordinatesAction($this->getCoordinatesAction);
 });
 

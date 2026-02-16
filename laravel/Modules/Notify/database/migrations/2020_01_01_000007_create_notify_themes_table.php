@@ -9,7 +9,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Class CreateThemesTable.
  */
-return new class() extends XotBaseMigration
+return new class extends XotBaseMigration
 {
     // use XotBaseMigrationTrait;
     /**
