@@ -3,39 +3,49 @@
 declare(strict_types=1);
 
 return [
-  'fields' => [
-    'new_password_confirmation' => [
-      'label' => 'Conferma nuova password',
-      'placeholder' => 'Conferma la tua nuova password',
-      'helper_text' => '',
-      'description' => 'Inserisci nuovamente la nuova password per confermarla',
-      'tooltip' => 'Ripeti la nuova password per sicurezza',
-      'icon' => 'heroicon-o-lock-closed',
-      'color' => 'warning',
+    'navigation' => [
+        'label' => 'Header Password',
+        'plural_label' => 'Header Password',
+        'group' => 'Impostazioni',
+        'icon' => 'heroicon-o-lock-closed',
+        'sort' => 11,
     ],
-  ],
-  'navigation' => [
-    'name' => 'Change Password Header',
-    'plural' => 'Change Password Header',
-    'group' => [
-      'name' => 'General',
-      'description' => 'General Settings',
+    'label' => 'Header Password',
+    'plural_label' => 'Header Password',
+    'fields' => [
+        'new_password_confirmation' => [
+            'label' => 'Conferma Nuova Password',
+            'tooltip' => 'Ripeti la nuova password per sicurezza',
+            'placeholder' => 'Conferma la tua nuova password',
+            'helper_text' => 'Devi inserire la stessa password per conferma',
+            'description' => 'Inserisci nuovamente la nuova password per confermarla',
+            'icon' => 'heroicon-o-lock-closed',
+            'color' => 'warning',
+        ],
     ],
-    'label' => 'Change Password Header',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ],
-  'label' => 'Change Password Header',
-  'plural_label' => 'Change Password Header (Plurale)',
-  'actions' => [
-    'create' => [
-      'label' => 'Crea Change Password Header',
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Header',
+            'tooltip' => 'Crea un nuovo header per la password',
+            'helper_text' => 'Crea un nuovo header',
+            'description' => 'Azione per creare',
+        ],
+        'edit' => [
+            'label' => 'Modifica Header',
+            'tooltip' => 'Modifica il header',
+            'helper_text' => 'Modifica il header esistente',
+            'description' => 'Azione per modificare',
+        ],
+        'delete' => [
+            'label' => 'Elimina Header',
+            'tooltip' => 'Elimina il header',
+            'helper_text' => 'Elimina il header',
+            'description' => 'Azione per eliminare',
+        ],
     ],
-    'edit' => [
-      'label' => 'Modifica Change Password Header',
+    'messages' => [
+        'created' => 'Header creato con successo',
+        'updated' => 'Header aggiornato con successo',
+        'deleted' => 'Header eliminato con successo',
     ],
-    'delete' => [
-      'label' => 'Elimina Change Password Header',
-    ],
-  ],
 ];

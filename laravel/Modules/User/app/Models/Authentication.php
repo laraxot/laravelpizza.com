@@ -48,8 +48,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  *
  * @mixin IdeHelperAuthentication
  *
- * @method static AuthenticationFactory factory($count = null, $state = [])
- *
  * @property Model|\Eloquent      $authenticatable
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
