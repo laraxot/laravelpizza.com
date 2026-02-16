@@ -1,130 +1,77 @@
 <?php
+
+declare(strict_types=1);
+
 return [
-    // Chiavi di base - da completare con traduzioni appropriate
-    'name' => 'Nombre',
-    'description' => 'Descripción',
-    'title' => 'Título',
-    'content' => 'Contenido',
-    'button' => 'Botón',
-    'label' => 'Etiqueta',
-    'message' => 'Mensaje',
-    'success' => 'Éxito',
-    'error' => 'Error',
-    'warning' => 'Advertencia',
-    'info' => 'Información',
-    'cancel' => 'Cancelar',
-    'save' => 'Guardar',
-    'delete' => 'Eliminar',
-    'edit' => 'Editar',
-    'create' => 'Crear',
-    'update' => 'Actualizar',
-    'submit' => 'Enviar',
-    'search' => 'Buscar',
-    'filter' => 'Filtrar',
-    'sort' => 'Ordenar',
-    'reset' => 'Reiniciar',
-    'next' => 'Siguiente',
-    'previous' => 'Anterior',
-    'first' => 'Primero',
-    'last' => 'Último',
-    'loading' => 'Cargando',
-    'processing' => 'Procesando',
-    'confirm' => 'Confirmar',
-    'close' => 'Cerrar',
-    'open' => 'Abrir',
-    'select' => 'Seleccionar',
-    'deselect' => 'Deseleccionar',
-    'all' => 'Todos',
-    'none' => 'Ninguno',
-    'yes' => 'Sí',
-    'no' => 'No',
-    'on' => 'Activado',
-    'off' => 'Desactivado',
-    'enabled' => 'Habilitado',
-    'disabled' => 'Deshabilitado',
-    'active' => 'Activo',
-    'inactive' => 'Inactivo',
-    'visible' => 'Visible',
-    'hidden' => 'Oculto',
-    'public' => 'Público',
-    'private' => 'Privado',
-    'draft' => 'Borrador',
-    'published' => 'Publicado',
-    'archived' => 'Archivado',
-    'trashed' => 'Eliminado',
-    'deleted' => 'Eliminado',
-    'restored' => 'Restaurado',
-    'updated' => 'Actualizado',
-    'created' => 'Creado',
-    'modified' => 'Modificado',
-    'changed' => 'Cambiado',
-    'modified_by' => 'Modificado por',
-    'created_by' => 'Creado por',
-    'updated_by' => 'Actualizado por',
-    'last_modified' => 'Última modificación',
-    'last_updated' => 'Última actualización',
-    'last_created' => 'Última creación',
-    'last_login' => 'Último inicio de sesión',
-    'last_activity' => 'Última actividad',
-    'last_seen' => 'Visto por última vez',
-    'last_used' => 'Usado por última vez',
-    'last_accessed' => 'Accedido por última vez',
-    'last_modified_at' => 'Modificado a las',
-    'last_updated_at' => 'Actualizado a las',
-    'last_created_at' => 'Creado a las',
-    'last_login_at' => 'Iniciado sesión a las',
-    'last_activity_at' => 'Actividad a las',
-    'last_seen_at' => 'Visto a las',
-    'last_used_at' => 'Usado a las',
-    'last_accessed_at' => 'Accedido a las',
-    'created_at' => 'Creado el',
-    'updated_at' => 'Actualizado el',
-    'modified_at' => 'Modificado el',
-    'changed_at' => 'Cambiado el',
-    'deleted_at' => 'Eliminado el',
-    'restored_at' => 'Restaurado el',
-    'published_at' => 'Publicado el',
-    'archived_at' => 'Archivado el',
-    'trashed_at' => 'Eliminado el',
-    'draft_at' => 'Borrador el',
-    'private_at' => 'Privado el',
-    'public_at' => 'Público el',
-    'active_at' => 'Activo el',
-    'inactive_at' => 'Inactivo el',
-    'visible_at' => 'Visible el',
-    'hidden_at' => 'Oculto el',
-    'enabled_at' => 'Habilitado el',
-    'disabled_at' => 'Deshabilitado el',
-    'on_at' => 'Activado el',
-    'off_at' => 'Desactivado el',
-    'yes_at' => 'Sí el',
-    'no_at' => 'No el',
-    'all_at' => 'Todos el',
-    'none_at' => 'Ninguno el',
-    'next_at' => 'Siguiente el',
-    'previous_at' => 'Anterior el',
-    'first_at' => 'Primero el',
-    'last_at' => 'Último el',
-    'loading_at' => 'Cargando el',
-    'processing_at' => 'Procesando el',
-    'confirm_at' => 'Confirmar el',
-    'close_at' => 'Cerrar el',
-    'open_at' => 'Abrir el',
-    'select_at' => 'Seleccionar el',
-    'deselect_at' => 'Deseleccionar el',
-    'success_at' => 'Éxito el',
-    'error_at' => 'Error el',
-    'warning_at' => 'Advertencia el',
-    'info_at' => 'Información el',
-    'cancel_at' => 'Cancelar el',
-    'save_at' => 'Guardar el',
-    'delete_at' => 'Eliminar el',
-    'edit_at' => 'Editar el',
-    'create_at' => 'Crear el',
-    'update_at' => 'Actualizar el',
-    'submit_at' => 'Enviar el',
-    'search_at' => 'Buscar el',
-    'filter_at' => 'Filtrar el',
-    'sort_at' => 'Ordenar el',
-    'reset_at' => 'Reiniciar el',
+    /*
+     * |--------------------------------------------------------------------------
+     * | Table Columns
+     * |--------------------------------------------------------------------------
+     */
+
+    'column.name' => 'Nombre',
+    'column.guard_name' => 'Guard',
+    'column.roles' => 'Roles',
+    'column.permissions' => 'Permisos',
+    'column.updated_at' => 'Actualizado el',
+    /*
+     * |--------------------------------------------------------------------------
+     * | Form Fields
+     * |--------------------------------------------------------------------------
+     */
+
+    'field.name' => 'Nombre',
+    'field.guard_name' => 'Guard',
+    'field.permissions' => 'Permisos',
+    'field.select_all.name' => 'Seleccionar todos',
+    'field.select_all.message' => 'Habilitar todos los permisos actualmente <span class="text-primary font-medium">habilitados</span> para este rol',
+    /*
+     * |--------------------------------------------------------------------------
+     * | Navigation & Resource
+     * |--------------------------------------------------------------------------
+     */
+
+    'nav.group' => 'Filament Shield',
+    'nav.role.label' => 'Roles',
+    'nav.role.icon' => 'heroicon-o-shield-check',
+    'resource.label.role' => 'Rol',
+    'resource.label.roles' => 'Roles',
+    /*
+     * |--------------------------------------------------------------------------
+     * | Section & Tabs
+     * |--------------------------------------------------------------------------
+     */
+
+    'section' => 'Entidades',
+    'resources' => 'Recursos',
+    'widgets' => 'Widgets',
+    'pages' => 'Páginas',
+    'custom' => 'Permisos personalizados',
+    /*
+     * |--------------------------------------------------------------------------
+     * | Messages
+     * |--------------------------------------------------------------------------
+     */
+
+    'forbidden' => 'Usted no tiene permiso de acceso',
+    /*
+     * |--------------------------------------------------------------------------
+     * | Resource Permissions' Labels
+     * |--------------------------------------------------------------------------
+     */
+
+    'resource_permission_prefixes_labels' => [
+        'view' => 'Ver un registro en particular',
+        'view_any' => 'Ver el listado de registros',
+        'create' => 'Crear',
+        'update' => 'Actualizar',
+        'delete' => 'Eliminar un registro en particular',
+        'delete_any' => 'Eliminar varios registros a la vez',
+        'force_delete' => 'Forzar elminación de un registro en particular',
+        'force_delete_any' => 'Forzar eliminación de varios registros',
+        'restore' => 'Restaurar un registro en particular',
+        'reorder' => 'Reordenar',
+        'restore_any' => 'Restaurar varios registros',
+        'replicate' => 'Replicar',
+    ],
 ];
