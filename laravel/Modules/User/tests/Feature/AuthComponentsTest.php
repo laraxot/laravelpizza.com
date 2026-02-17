@@ -100,7 +100,7 @@ describe('User Profile Components Tests', function (): void {
             return 'Authenticated User: '.(string) auth()->id();
         });
 
-        /** @var \Illuminate\Contracts\Auth\Authenticatable $user */
+        /** @var Illuminate\Contracts\Auth\Authenticatable $user */
         $response = actingAs($user, 'web')->get('/it/profile/edit');
 
         $response->assertStatus(200);

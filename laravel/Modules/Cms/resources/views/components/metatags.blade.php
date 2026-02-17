@@ -14,7 +14,6 @@
         connect-src 'self' https://www.google-analytics.com;
         media-src 'self';
         object-src 'none';
-        frame-ancestors 'self';
         form-action 'self';
         base-uri 'self';
         manifest-src 'self';

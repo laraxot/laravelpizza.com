@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Widgets;
 
+use Carbon\Carbon;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -13,7 +14,6 @@ use Illuminate\Support\Str;
 use Modules\Meetup\Models\Event;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
-use Carbon\Carbon;
 use Override;
 
 class EventCalendarWidget extends XotBaseWidget

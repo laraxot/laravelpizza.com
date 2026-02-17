@@ -7,7 +7,6 @@ namespace Modules\Meetup\Actions\Event;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Modules\Meetup\Enums\EventAttendanceMode;
-use Psr\Log\LoggerInterface;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
 use Spatie\QueueableAction\QueueableAction;

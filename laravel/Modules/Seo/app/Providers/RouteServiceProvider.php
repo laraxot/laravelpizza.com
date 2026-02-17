@@ -8,8 +8,6 @@ use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
 class RouteServiceProvider extends XotBaseRouteServiceProvider
 {
-    public string $name = 'Seo';
-
     /**
      * The module namespace to assume when generating URLs to actions.
      */
@@ -18,4 +16,6 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
     protected string $module_dir = __DIR__;
 
     protected string $module_ns = __NAMESPACE__;
+
+    public string $name = 'Seo';
 }

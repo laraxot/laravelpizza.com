@@ -55,6 +55,10 @@ class Province extends BaseModel
             ->orderBy('provincia->nome')
             ->get();
 
+<<<<<<< HEAD
+=======
+        /* @var array<int, array<string, mixed>> */
+>>>>>>> 65bf1208 (.)
         return $rows->toArray();
     }
 

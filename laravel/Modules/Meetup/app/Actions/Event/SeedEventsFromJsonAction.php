@@ -8,7 +8,6 @@ use Illuminate\Support\Carbon;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
-use Psr\Log\LoggerInterface;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 

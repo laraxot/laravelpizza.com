@@ -7,6 +7,7 @@ namespace Modules\Meetup\Filament\Widgets;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Illuminate\Support\Carbon;
 use Modules\Meetup\Models\Event;
+use Modules\Meetup\Models\EventUser;
 use Modules\Xot\Filament\Widgets\XotBaseStatsOverviewWidget as StatsOverviewWidget;
 
 class EventStatsOverviewWidget extends StatsOverviewWidget
@@ -22,7 +23,7 @@ class EventStatsOverviewWidget extends StatsOverviewWidget
                 ->description('Eventi in programma')
                 ->descriptionIcon('heroicon-m-forward')
                 ->color('success'),
-            Stat::make('Partecipazioni Totali', \DB::table('event_user')->count())
+            Stat::make('Partecipazioni Totali', (string) EventUser::count())
                 ->description('Iscritti totali agli eventi')
                 ->descriptionIcon('heroicon-m-users')
                 ->color('warning'),

@@ -66,6 +66,52 @@ return [
             'description' => '',
         ],
     ],
-    'label' => 'Event',
-    'plural_label' => 'Event (Plurale)',
+    'label' => 'Evento',
+    'plural_label' => 'Eventi',
+    'about_this_event' => [
+        'label' => 'Informazioni sull\'evento',
+        'color' => 'blue',
+    ],
+    'back_to_events' => [
+        'label' => 'Torna agli eventi',
+    ],
+    'event_location' => [
+        'label' => 'Luogo dell\'evento',
+    ],
+    'map_loading' => [
+        'label' => 'Caricamento mappa...',
+    ],
+    'click_to_view' => [
+        'label' => 'Clicca per visualizzare sulla mappa',
+    ],
+    'attendees' => [
+        'label' => 'Partecipanti',
+    ],
+    'people_joined' => [
+        'label' => ':count persone si sono già iscritte',
+    ],
+    'join_event' => [
+        'label' => 'Partecipa all\'evento',
+    ],
+    'available_spots' => [
+        'label' => 'Posti disponibili',
+    ],
+    'book_your_spot' => [
+        'label' => 'Prenota il tuo posto',
+    ],
+    'spots_filling_fast' => [
+        'label' => 'I posti si stanno esaurendo velocemente!',
+    ],
+    'share_event' => [
+        'label' => 'Condividi l\'evento',
+    ],
+    'date' => [
+        'label' => 'Data',
+    ],
+    'time' => [
+        'label' => 'Ora',
+    ],
+    'location' => [
+        'label' => 'Luogo',
+    ],
 ];

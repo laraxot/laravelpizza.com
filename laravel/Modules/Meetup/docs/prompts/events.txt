@@ -15,3 +15,6 @@ controlla te stesso cosa vedi in http://127.0.0.1:8000/it/events, fa screenshots
 
 
 questa pagina http://127.0.0.1:8000/it/events/laravel-11-release-pizza-party  dovrebbe essere come https://laravelpizza.com/events/1 fa screenshots mettili in sottocartelle delle cartelle docs dentro i moduli e dentro dentro i temi, aggiorna le tue rules, le tue skills e le tue memories.
+
+
+le traduzioni non sono mai meetup::events.about_this_event  ma sempre meetup::events.about_this_event.label meetup::events.about_this_event.color etc , capisci la regola, aggiorna studia e migliora le tue cartelle docs dentro i moduli e dentro i temi, le tue rules, le tue memories, le tue skills, poi implementi, poi controlli con phpstan, phpmd e phpinisghts

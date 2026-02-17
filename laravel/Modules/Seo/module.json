@@ -1,8 +1,8 @@
 {
     "name": "Seo",
     "alias": "seo",
-    "description": "Ottimizzazione SEO avanzata per migliorare visibilità sui motori di ricerca e gestione meta tags",
-    "keywords": ["seo", "meta", "search", "optimization", "analytics"],
+    "description": "",
+    "keywords": [],
     "priority": 0,
     "providers": [
         "Modules\\Seo\\Providers\\SeoServiceProvider"

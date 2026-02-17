@@ -1,8 +1,8 @@
 {{--
 /**
- * Event detail page - SEO optimized with slug URLs
- * Displays full event information with structured data for SEO.
- * Uses LaravelLocalization for all URLs and model's toSchemaOrg() for JSON-LD.
+ * Event detail page - Pixel Parity implementation
+ * Full layout with 2-column design, sidebar CTA, About, Location, Attendees sections
+ * SEO optimized with slug URLs and Schema.org structured data
  */
 --}}
 
@@ -15,133 +15,258 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Meetup\Models\Event;
 use Illuminate\Support\Carbon;
 
+$eventData = [];
 if ($event instanceof Event) {
     $startDate = $event->start_date ?? Carbon::now();
     $endDate = $event->end_date ?? $startDate;
     $status = $startDate->isFuture() ? 'upcoming' : 'past';
+    $statusLabel = $status === 'upcoming' ? 'Upcoming' : 'Past Event';
+    
+    $eventData = [
+        'title' => $event->title,
+        'slug' => $event->slug,
+        'status' => $status,
+        'status_label' => $statusLabel,
+        'description' => $event->description,
+        'date' => $startDate->format('l, F j, Y'),
+        'time' => $startDate->format('g:i A') . ' - ' . $endDate->format('g:i A'),
+        'location' => $event->location ?? 'Location TBA',
+        'attendees_current' => $event->attendees_count ?? 0,
+        'attendees_max' => $event->max_attendees ?? 100,
+        'cover_image' => $event->cover_image,
+        'available_spots' => ($event->max_attendees ?? 100) - ($event->attendees_count ?? 0),
+    ];
 } else {
-    $startDate = Carbon::now();
-    $endDate = Carbon::now();
-    $status = 'upcoming';
+    $eventData = [
+        'title' => 'Event Title',
+        'slug' => '',
+        'status' => 'upcoming',
+        'status_label' => 'Upcoming',
+        'description' => null,
+        'date' => Carbon::now()->format('l, F j, Y'),
+        'time' => '',
+        'location' => 'Location TBA',
+        'attendees_current' => 0,
+        'attendees_max' => 100,
+        'cover_image' => null,
+        'available_spots' => 100,
+    ];
 }
 
 $eventsUrl = LaravelLocalization::localizeUrl('/events');
+$badgeClass = $eventData['status'] === 'upcoming' ? 'bg-green-600' : 'bg-slate-500';
 @endphp
 
-<section class="py-12 md:py-16 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white transition-colors">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {{-- Breadcrumb --}}
-        <nav class="mb-8 text-sm" aria-label="Breadcrumb">
-            <ol class="flex items-center space-x-2">
-                <li><a href="{{ $eventsUrl }}" class="text-red-600 hover:text-red-700 dark:text-red-400">Events</a></li>
-                <li class="text-slate-500 dark:text-gray-400">/</li>
-                <li class="text-slate-500 dark:text-gray-400">{{ $event->title ?? 'Event' }}</li>
-            </ol>
-        </nav>
-
-        {{-- Event Header --}}
-        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden">
-            {{-- Cover Image --}}
-            <div class="aspect-video bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
-                @if(!empty($event->cover_image))
-                    <img src="{{ $event->cover_image }}" alt="{{ $event->title }}" class="w-full h-full object-cover">
-                @else
-                    <div class="text-center text-slate-500 dark:text-gray-400">
-                        <svg class="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        <p class="text-lg">Event</p>
-                    </div>
-                @endif
+<div class="min-h-screen bg-slate-50 dark:bg-slate-900 overflow-x-hidden">
+    {{-- Hero Section with Cover Image --}}
+    <div class="relative bg-slate-900 h-[400px] md:h-[500px]">
+        @if(!empty($eventData['cover_image']))
+            <img src="{{ $eventData['cover_image'] }}" alt="{{ $eventData['title'] }}" class="w-full h-full object-cover opacity-70">
+        @else
+            <div class="w-full h-full bg-gradient-to-br from-red-600 via-red-700 to-slate-900 flex items-center justify-center">
+                <svg class="w-32 h-32 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
             </div>
-
-            {{-- Status Badge --}}
-            <div class="relative px-6 py-4">
-                @if($status === 'upcoming')
-                    <span class="absolute top-4 right-4 bg-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Upcoming</span>
-                @else
-                    <span class="absolute top-4 right-4 bg-slate-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Past Event</span>
-                @endif
-
+        @endif
+        
+        {{-- Overlay with Title --}}
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12">
+                {{-- Back Link --}}
+                <a href="{{ $eventsUrl }}" class="inline-flex items-center text-white/80 hover:text-white mb-4 transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    {{ __('pub_theme::events.back_to_events.label') }}
+                </a>
+                
+                {{-- Badge --}}
+                <span class="inline-block {{ $badgeClass }} text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
+                    {{ $eventData['status_label'] }}
+                </span>
+                
                 {{-- Title --}}
-                <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-                    {{ $event->title ?? 'Event Title' }}
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+                    {{ $eventData['title'] }}
                 </h1>
-
-                {{-- Event Details --}}
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <div class="space-y-3">
-                        <div class="flex items-center text-slate-600 dark:text-gray-300">
-                            <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            <span>{{ $startDate->format('l, F j, Y') }}</span>
-                        </div>
-                        <div class="flex items-center text-slate-600 dark:text-gray-300">
-                            <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span>{{ $startDate->format('g:i A') }} - {{ $endDate->format('g:i A') }}</span>
-                        </div>
-                        <div class="flex items-center text-slate-600 dark:text-gray-300">
-                            <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            <span>{{ $event->location ?? 'Location TBA' }}</span>
-                        </div>
-                    </div>
-                    <div class="space-y-3">
-                        @if($event instanceof Event && $event->in_language)
-                        <div class="flex items-center text-slate-600 dark:text-gray-300">
-                            <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                            </svg>
-                            <span>Language: {{ strtoupper($event->in_language) }}</span>
-                        </div>
-                        @endif
-                        @if($event instanceof Event && $event->max_attendees > 0)
-                        <div class="flex items-center text-slate-600 dark:text-gray-300">
-                            <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            <span>{{ $event->attendees_count }} / {{ $event->max_attendees }} spots filled</span>
-                        </div>
-                        @endif
-                    </div>
-                </div>
-
-                {{-- Description --}}
-                @if($event instanceof Event && $event->description)
-                <div class="mb-6">
-                    <h2 class="text-xl font-semibold mb-3">About this event</h2>
-                    <div class="prose prose-slate dark:prose-invert max-w-none">
-                        {!! nl2br(e($event->description)) !!}
-                    </div>
-                </div>
-                @endif
-
-                {{-- CTA Button --}}
-                @if($status === 'upcoming' && $event instanceof Event && $event->url)
-                <div class="mt-6">
-                    <a href="{{ $event->url }}"
-                       rel="noopener noreferrer"
-                       class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
-                        Register Now
-                    </a>
-                </div>
-                @endif
             </div>
-        </div>
-
-        {{-- Back to Events --}}
-        <div class="mt-8 text-center">
-            <a href="{{ $eventsUrl }}" class="text-red-600 hover:text-red-700 dark:text-red-400 font-medium">
-                &larr; Back to all events
-            </a>
         </div>
     </div>
-</section>
+
+    {{-- Main Content --}}
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid lg:grid-cols-3 gap-8">
+            {{-- Left Column: Event Details --}}
+            <div class="lg:col-span-2 space-y-8">
+                {{-- Quick Info Bar --}}
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6 border border-slate-200 dark:border-slate-700">
+                    <div class="grid md:grid-cols-3 gap-6">
+                        {{-- Date --}}
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::events.date.label') }}</p>
+                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $eventData['date'] }}</p>
+                            </div>
+                        </div>
+                        
+                        {{-- Time --}}
+                        @if($eventData['time'])
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::events.time.label') }}</p>
+                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $eventData['time'] }}</p>
+                            </div>
+                        </div>
+                        @endif
+                        
+                        {{-- Location --}}
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::events.location.label') }}</p>
+                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $eventData['location'] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- About Section --}}
+                @if($eventData['description'])
+                <section class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-8 border border-slate-200 dark:border-slate-700">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                        {{ __('pub_theme::events.about_this_event.label') }}
+                    </h2>
+                    <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 leading-relaxed">
+                        {!! nl2br(e($eventData['description'])) !!}
+                    </div>
+                </section>
+                @endif
+
+                {{-- Location Section with Map --}}
+                <section class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-8 border border-slate-200 dark:border-slate-700">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                        {{ __('pub_theme::events.event_location.label') }}
+                    </h2>
+                    <div class="space-y-4">
+                        <p class="text-lg text-slate-700 dark:text-slate-300">
+                            {{ $eventData['location'] }}
+                        </p>
+                        {{-- Map Placeholder --}}
+                        <div class="aspect-video bg-slate-100 dark:bg-slate-700 rounded-lg flex items-center justify-center border-2 border-dashed border-slate-300 dark:border-slate-600">
+                            <div class="text-center text-slate-500 dark:text-slate-400">
+                                <svg class="w-16 h-16 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0121 18.382V7.618a1 1 0 01-.553-.894L15 4m0 13V4m0 0L9 7" />
+                                </svg>
+                                <p class="text-sm font-medium">{{ __('pub_theme::events.map_loading.label') }}</p>
+                                <p class="text-xs mt-1">{{ __('pub_theme::events.click_to_view.label') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {{-- Attendees Section --}}
+                <section class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-8 border border-slate-200 dark:border-slate-700">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
+                            {{ __('pub_theme::events.attendees.label') }}
+                        </h2>
+                        <span class="text-lg font-medium text-slate-600 dark:text-slate-400">
+                            {{ $eventData['attendees_current'] }} / {{ $eventData['attendees_max'] }}
+                        </span>
+                    </div>
+                    
+                    {{-- Attendee Avatars --}}
+                    <div class="flex items-center">
+                        <div class="flex -space-x-3">
+                            @php
+                            $maxDisplay = min($eventData['attendees_current'], 8);
+                            @endphp
+                            @for($i = 0; $i < $maxDisplay; $i++)
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-red-600 border-3 border-white dark:border-slate-800 flex items-center justify-center text-white font-semibold text-sm shadow-md" title="Attendee {{ $i + 1 }}">
+                                    {{ chr(65 + ($i % 26)) }}
+                                </div>
+                            @endfor
+                            @if($eventData['attendees_current'] > 8)
+                                <div class="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-600 border-3 border-white dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 font-semibold text-xs shadow-md">
+                                    +{{ $eventData['attendees_current'] - 8 }}
+                                </div>
+                            @endif
+                        </div>
+                        @if($eventData['attendees_current'] > 0)
+                        <span class="ml-4 text-sm text-slate-500 dark:text-slate-400">
+                            {{ __('pub_theme::events.people_joined.label', ['count' => $eventData['attendees_current']]) }}
+                        </span>
+                        @endif
+                    </div>
+                </section>
+            </div>
+
+            {{-- Right Column: Sidebar --}}
+            <div class="lg:col-span-1">
+                <div class="sticky top-8 space-y-6">
+                    {{-- Registration Card --}}
+                    @if($eventData['status'] === 'upcoming')
+                    <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 border border-slate-200 dark:border-slate-700">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                            {{ __('pub_theme::events.join_event.label') }}
+                        </h3>
+                        
+                        <div class="mb-6">
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-1">
+                                {{ __('pub_theme::events.available_spots.label') }}
+                            </p>
+                            <p class="text-4xl font-bold text-red-600 dark:text-red-400">
+                                {{ $eventData['available_spots'] }}
+                            </p>
+                        </div>
+                        
+                        <button type="button" class="w-full bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-300 text-white font-bold py-3.5 px-6 rounded-lg transition-all shadow-md hover:shadow-lg">
+                            {{ __('pub_theme::events.book_your_spot.label') }}
+                        </button>
+                        
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-4 text-center">
+                            {{ __('pub_theme::events.spots_filling_fast.label') }}
+                        </p>
+                    </div>
+                    @endif
+
+                    {{-- Share Card --}}
+                    <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-6 border border-slate-200 dark:border-slate-700">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">
+                            {{ __('pub_theme::events.share_event.label') }}
+                        </h3>
+                        <div class="flex gap-3">
+                            <button type="button" class="flex-1 bg-sky-500 hover:bg-sky-600 text-white py-2.5 px-4 rounded-lg transition-colors font-medium text-sm flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                                Twitter
+                            </button>
+                            <button type="button" class="flex-1 bg-blue-700 hover:bg-blue-800 text-white py-2.5 px-4 rounded-lg transition-colors font-medium text-sm flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.14-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {{-- SEO Structured Data using model's toSchemaOrg() --}}
 @push('meta')

@@ -32,6 +32,20 @@ Il modulo Meetup segue lo standard di localizzazione basato su **mcamara/laravel
 
 - Tutte le stringhe statiche devono usare **`__()`** o **`@lang`**.
 - Domini chiave: `meetup::events`, `meetup::community`, `meetup::common`.
+- **Standard Laraxot**: Tutte le chiavi di traduzione devono essere strutturate come array contenenti almeno la chiave `label`. Altre chiavi comuni includono `color`, `tooltip`, `helper_text`, `description`.
+
+```php
+// Modules/Meetup/lang/it/event.php
+'about_this_event' => [
+    'label' => 'Informazioni sull\'evento',
+    'color' => 'blue',
+],
+```
+
+Uso nel Blade:
+```blade
+{{ __('meetup::event.about_this_event.label') }}
+```
 
 ## Icone e bandiere
 

@@ -35,6 +35,8 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
     }
 
     /**
+<<<<<<< HEAD
+=======
      * Handle dynamic method calls.
      *
      * @param  array<int, mixed>  $parameters
@@ -56,6 +58,7 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
     }
 
     /**
+>>>>>>> 013c0d2 (.)
      * Get the title.
      */
     public function getTitle(): string
@@ -113,7 +116,7 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
             $result[$strKey] = $strValue;
         }
 
-        return $result ? $result : $default;
+        return $result ?: $default;
     }
 
     /**
@@ -246,6 +249,25 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
     public function has(string $key): bool
     {
         return Arr::has($this->data, $key);
+    }
+
+    /**
+     * Handle dynamic method calls.
+     *
+     * @param  array<int, mixed>  $parameters
+     * @return mixed
+     */
+    public function __call(string $method, array $parameters)
+    {
+        if (strpos($method, 'get') === 0) {
+            $key = lcfirst(substr($method, 3));
+
+            return $this->get($key, $parameters[0] ?? null);
+        }
+
+        throw new BadMethodCallException(sprintf(
+            'Method %s::%s does not exist.', static::class, $method
+        ));
     }
 
     /**

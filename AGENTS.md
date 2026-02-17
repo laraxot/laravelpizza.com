@@ -346,6 +346,46 @@ TextInput::make('email')->label(__('Email'))->placeholder(__('Enter email'))
 
 The key generated will be `user::register.fields.email.label`.
 
+### Theme Translations - pub_theme Namespace (CRITICAL!)
+
+**Theme translations use `pub_theme::` namespace and MUST follow this pattern:**
+
+```blade
+{{-- ALWAYS use .label suffix --}}
+{{ __('pub_theme::event.back_to_events.label') }}
+{{ __('pub_theme::event.date.label') }}
+{{ __('pub_theme::event.about_this_event.label') }}
+```
+
+**Translation File Structure (Themes):**
+```php
+// Themes/Meetup/lang/{locale}/event.php
+return [
+    'navigation' => [...],
+    'back_to_events' => [
+        'label' => 'Back to Events',
+    ],
+    'date' => [
+        'label' => 'Date',
+    ],
+    'about_this_event' => [
+        'label' => 'About this event',
+    ],
+    // ...
+];
+```
+
+**NEVER use flat keys:**
+```php
+// ❌ WRONG
+'back_to_events' => 'Back to Events',
+
+// ✅ CORRECT
+'back_to_events' => [
+    'label' => 'Back to Events',
+],
+```
+
 ### Frontend (Frontoffice) - NO Controllers! NO Routes!
 **ALWAYS use:**
 - ✅ **Laravel Folio** (file-based routing) - automatico da file in `resources/views/pages/`
