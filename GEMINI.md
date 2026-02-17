@@ -280,6 +280,23 @@ app(DoSomethingAction::class)->execute($data);
 
 ---
 
+## 🎬 8. Dynamic Event Loading and SEO-Friendly URLs
+
+**Principio**: Gli eventi sul frontend (es. `/it/events`) sono caricati dinamicamente dal database utilizzando il modello `Modules\Meetup\Models\Event` e configurazioni specificate in file JSON (es. `config/local/laravelpizza/database/content/pages/events.json`).
+
+### Workflow Dettagliato:
+
+1.  **Configurazione JSON**: File come `events.json` definiscono un `content_block` di tipo `events` che include una chiave `query`. Questa `query` specifica il `model` (es. `Modules\Meetup\Models\Event`), `scope`, `orderBy`, `direction` e `limit`.
+2.  **Folio Page (`[slug].blade.php`)**: La pagina Folio generica (es. `Themes/Meetup/resources/views/pages/[slug].blade.php`) utilizza il componente `<x-page />` per renderizzare il contenuto basato sul JSON.
+3.  **Componente `<x-page />`**: Questo componente (`Modules/Cms/resources/views/components/page.blade.php`) itera sui `content_blocks` definiti nel JSON e include la vista specificata in `block->view`, passando `block->data` (inclusa la `query`) come props.
+4.  **Componente `events.list`**: Il componente Blade `pub_theme::components.blocks.events.list` (es. `Themes/Meetup/resources/views/components/blocks/events/list.blade.php`) riceve la `query` configurata. Se non sono passati eventi hardcoded, costruisce una query Eloquent dinamica usando il `model`, `scope`, `orderBy`, `direction` e `limit` per recuperare gli eventi dal database.
+5.  **`toBlockArray()`**: Il metodo `toBlockArray()` del modello `Modules\Meetup\Models\Event` trasforma l'istanza del modello in un array formattato per il Blade, includendo la generazione dell'URL dell'evento utilizzando l'attributo `slug` (es. `'/it/events/' . $this->slug`), garantendo URL SEO-friendly.
+6.  **Dettaglio Evento (SEO)**: La stessa pagina Folio `[slug].blade.php` gestisce anche le pagine di dettaglio degli eventi. Se lo slug nel percorso della URL corrisponde allo `slug` di un evento esistente (`Modules\Meetup\Models\Event::where('slug', $eventSlug)->first()`), renderizza il componente `pub_theme::components.blocks.events.detail` con i dati dell'evento, garantendo URL di dettaglio SEO-friendly.
+
+**Conclusione**: Il sistema è progettato per caricare dinamicamente gli eventi e generare URL basate sullo slug, aderendo ai principi Laraxot di configurazione basata sui dati e URL pulite. La "hardcoding" di eventi non dovrebbe essere necessaria se il `slug` è correttamente popolato nel modello `Event`.
+
+---
+
 ## ✅ Checklist "Super Mucca"
 - [ ] Ho studiato docs root e modulo?
 - [ ] Ho valutato approcci alternativi?

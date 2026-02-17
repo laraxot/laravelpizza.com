@@ -40,9 +40,10 @@ Il sistema utilizza un'architettura moderna con Laravel Folio + Volt per il fron
 
 ## Stato Attuale `/it/events` (Gap rispetto al design target)
 
-- **Rendering corrente**
-  - La route locale `/it/events` usa il template Folio `Themes/Meetup/resources/views/pages/[slug].blade.php` con `<x-page side="content" :slug="$slug" />`.
-  - Il file `config/local/laravelpizza/database/content/pages/events.json` è, al momento, una copia di `home.json` (hero meetup, features, stats, CTA) e non contiene alcuna lista di eventi.
+- **Implementation Details**: See `events-page-implementation.md` for details on the dynamic data loading and configuration.
+- **Rendering corrente**:
+  - La route `/it/events` carica la configurazione da `events.json`.
+  - Il componente `pub_theme::components.blocks.events.list` recupera i dati dinamicamente usando il modello `Event`.
 - **Design target**
   - Il design di riferimento (statico `Themes/Meetup/resources/html/events.html` / laravelpizza.com/events) mostra:
     - Header "Upcoming Events" + sottotitolo.
@@ -63,25 +64,63 @@ To display events in a CMS page, configure the block in the page JSON:
 ```json
 {
     "type": "events",
+    "slug": "events-list",
     "data": {
         "view": "pub_theme::components.blocks.events.list",
+        "title": "Upcoming Events",
+        "description": "Join us for pizza and Laravel discussions",
         "query": {
             "model": "Modules\\Meetup\\Models\\Event",
-            "wrap_in": "events",
+            "scope": "upcoming",
             "orderBy": "start_date",
-            "direction": "asc"
+            "direction": "asc",
+            "limit": 50
         }
     }
 }
 ```
 
+### Query Parameters
+
+The `query` object supports the following parameters:
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `model` | string | Yes | Fully qualified model class name |
+| `scope` | string | No | Model scope to apply (`upcoming`, `past`, `filter`, etc.) |
+| `orderBy` | string | No | Column to order by (`start_date`, `end_date`, `title`, `created_at`) |
+| `direction` | string | No | Sort direction (`asc` or `desc`) |
+| `limit` | integer | No | Maximum number of events to retrieve |
+
 ### Model Support
 
 The `Event` model provides the following features for CMS integration:
 
-- **Scopes**: `upcoming()` and `past()` for easy filtering based on logic rather than hardcoded dates.
+- **Scopes**: `upcoming()`, `past()`, `filter()`, `orderBy()`, `limit()` for easy filtering.
+- **Ordering**: `orderByStartDate()`, `orderByTitle()`, `orderByEndDate()`.
+- **Retrieval**: `getBySlug()`, `getUpcomingOrderedByStartDate()`, `getWithOrderingAndLimit()`.
 - **Formatting**: `toBlockArray()` transforms the model into a structure compatible with `Themes/Meetup/resources/views/components/blocks/events/list.blade.php`.
-- **Note on Ordering**: When explicitly ordering event queries, use standard Eloquent methods like `orderBy('column', 'direction')`. The `ordered()` method is not a valid scope or method on the `Event` model.
+- **Dynamic Configuration**: The `events.json` file in `config/local/laravelpizza/database/content/pages/` defines the query parameters (model, scope, order, limit) which are passed to the component.
+
+### SEO-Friendly URLs
+
+The system uses **slugs** instead of IDs for event detail URLs:
+
+- Event model has `getRouteKeyName()` returning `'slug'`
+- Detail page at `/events/{slug}` is handled by `[slug].blade.php`
+- The `toBlockArray()` method generates URLs using: `/it/events/{slug}`
+
+Example:
+```php
+// In Event.php
+public function toBlockArray(): array
+{
+    return [
+        // ...
+        'url' => $this->url ?? "/it/events/".(string) $this->slug,
+    ];
+}
+```
 
 ### Customizing Display
 
@@ -89,6 +128,7 @@ The `toBlockArray()` method in `Modules\Meetup\Models\Event` controls what data 
 - `status`: 'upcoming' or 'past' (used by Alpine.js filters).
 - `date` & `time`: Pre-formatted strings for display.
 - `attendees_current` & `attendees_max`: For capacity visualization.
+- `url`: SEO-friendly URL with slug.
 
 ## 🛠️ Implementazione Volt per il Sistema Eventi
 

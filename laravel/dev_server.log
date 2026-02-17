@@ -1,0 +1,33 @@
+> Composer\Config::disableProcessTimeout
+> npx concurrently -c "#93c5fd,#c4b5fd,#fb7185,#fdba74" "php artisan serve" "php artisan queue:listen --tries=1" "php artisan pail --timeout=0" "npm run dev" --names=server,queue,logs,vite --kill-others
+[vite] 
+[vite] > dev
+[vite] > vite
+[vite] 
+[queue] 
+[queue]    INFO  Processing jobs from the [default] queue.  
+[queue] 
+[logs] 
+[logs]    INFO  Tailing application logs.                        Press Ctrl+C to exit  
+[logs]                                                Use -v|-vv to show more details  
+[vite] 
+[vite]   VITE v7.0.6  ready in 586 ms
+[vite] 
+[vite]   ➜  Local:   http://localhost:5173/
+[vite]   ➜  Network: http://10.255.255.254:5173/
+[vite]   ➜  Network: http://172.27.87.136:5173/
+[vite] 
+[vite]   LARAVEL v11.48.0  plugin v2.0.0
+[vite] 
+[vite]   ➜  APP_URL: http://laravelpizza.local
+[server] 
+[server]    INFO  Server running on [http://127.0.0.1:8000].  
+[server] 
+[server]   Press Ctrl+C to stop the server
+[server] 
+[logs] ┌ 18:13:42 Illuminate\View\ViewException ────── Modules/Meetup/.../Event.php:710 ┐
+[logs] │ Call to a member function isFuture() on null (View: /var/www/_bases/base_la... │
+[logs] └────────── HEAD: /it/events/laravel-11-release-pizza-party-1 • Auth ID: guest ┘
+[server]   2026-02-17 18:13:41 /it/events/laravel-11-release-pizza-party-1 .. ~ 1 sec.
+[server] php artisan serve exited with code SIGTERM
+Script npx concurrently -c "#93c5fd,#c4b5fd,#fb7185,#fdba74" "php artisan serve" "php artisan queue:listen --tries=1" "php artisan pail --timeout=0" "npm run dev" --names=server,queue,logs,vite --kill-others handling the dev event returned with error code 143

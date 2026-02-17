@@ -19,8 +19,8 @@ class Page extends Component
 
     public string $slug;
 
-    /** @var DataCollection<BlockData> */
-    public DataCollection $blocks;
+    /** @var DataCollection<BlockData>|array */
+    public DataCollection|array $blocks;
 
     public array $data = [];
 

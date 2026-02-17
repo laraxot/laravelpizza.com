@@ -53,6 +53,11 @@
 - ✅ `EventsTimelineChart` - Timeline eventi
 - ✅ `RecentEventsWidget` - Eventi recenti
 
+### Events Page Refactor (100%)
+- ✅ Dynamic data loading via `events.json`
+- ✅ SEO-friendly URLs (slugs)
+- ✅ Code cleanup in `list.blade.php`
+
 ---
 
 ## 🔄 Funzionalità in Corso

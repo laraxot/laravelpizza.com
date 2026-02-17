@@ -71,7 +71,7 @@ class BlockData extends Data implements Wireable
         $this->view = $view;
     }
 
-    public static function collection(EloquentCollection|Collection|array $data): DataCollection
+    public static function collection(EloquentCollection|Collection|array $data): DataCollection|array
     {
         return self::collect($data, DataCollection::class);
     }

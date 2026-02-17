@@ -17,10 +17,10 @@
                     "description": "Join us for pizza and Laravel discussions",
                     "query": {
                         "model": "Modules\\Meetup\\Models\\Event",
-                        "scope": "upcoming",
                         "orderBy": "start_date",
                         "direction": "asc",
-                        "limit": 50
+                        "limit": 50,
+                        "wrap_in": "events"
                     }
                 }
             }

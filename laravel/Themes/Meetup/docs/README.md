@@ -21,3 +21,17 @@ The purpose of this documentation is to provide comprehensive information about 
 ## Contribution
 
 Developers are encouraged to contribute to this documentation to keep it accurate and up-to-date.
+
+### Pages Structure & Data Loading
+
+#### Events Page (`/events`)
+- **Route**: Handles `/events` and other CMS pages via `Modules\Cms\Http\Controllers\PageController` (or Folio equivalent).
+- **View**: `resources/views/pages/[slug].blade.php` acting as a wrapper.
+- **Data Source**: Custom `BlockData` resolution.
+    - **Configuration**: `config/local/laravelpizza/database/content/pages/events.json` defines the `query` parameters.
+    - **Resolution**: `Modules\Cms\Datas\BlockData` constructor uses `ResolveBlockQueryAction` to fetch dynamic data (e.g., upcoming events) and merges it into the block's data.
+    - **Strict Typing Note**: `HasBlocks::getBlocks` returns a standard `array` of `BlockData` objects to preserve this resolved data, bypassing `DataCollection` re-hydration which can cause data loss.
+- **Component**: `resources/views/components/blocks/events/list.blade.php`.
+    - **Props**: Receives `$eventsData` (array of `BlockData` objects).
+    - **Visuals**: Uses Tailwind CSS grid layout.
+

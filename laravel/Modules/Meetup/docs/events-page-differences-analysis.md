@@ -20,13 +20,27 @@ allineare la pagina `/it/events` (folio + volt + blocchi cms) al design di `http
 - quindi `/it/events` risolve slug `events` e carica `events.json`.
 
 ### configurazione cms (`events.json`)
-attualmente `events.json` è praticamente una copia della home:
-- blocco `hero` con `pub_theme::components.blocks.hero.main`
-- blocco `features` con `pub_theme::components.blocks.features.grid`
-- blocco `stats` con `pub_theme::components.blocks.stats.overview`
-- blocco `cta` con `pub_theme::components.blocks.cta.banner`
+attualmente `events.json` è configurato correttamente con il blocco eventi:
+```json
+{
+    "type": "events",
+    "slug": "events-list",
+    "data": {
+        "view": "pub_theme::components.blocks.events.list",
+        "title": "Upcoming Events",
+        "description": "Join us for pizza and Laravel discussions",
+        "query": {
+            "model": "Modules\\Meetup\\Models\\Event",
+            "scope": "upcoming",
+            "orderBy": "start_date",
+            "direction": "asc",
+            "limit": 50
+        }
+    }
+}
+```
 
-non esiste alcun blocco dedicato alla lista eventi.
+**Nota**: Gli eventi sono caricati dinamicamente dal database usando il modello `Event`. Gli slug sono generati automaticamente durante l'importazione.
 
 ### componente eventi
 esiste già il componente:

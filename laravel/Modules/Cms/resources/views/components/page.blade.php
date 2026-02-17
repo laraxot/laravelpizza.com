@@ -14,7 +14,7 @@ declare(strict_types=1);
 @if(!empty($blocks))
     <div class="page-{{ $side }}-content" data-slug="{{ $slug }}" data-side="{{ $side }}">
         @foreach($blocks as $block)
-            {{-- BlockData ha già gestito tutto: vista, dati, fallback --}}
+            {{-- BlockData è già gestito --}}
             @include($block->view, $block->data)
         @endforeach
     </div>

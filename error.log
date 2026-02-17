@@ -1,0 +1,3 @@
+[Tue Feb 17 18:31:15.795531 2026] [ssl:warn] [pid 518] AH01909: laravelpizza.local:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 18:35:02.559735 2026] [ssl:warn] [pid 16556] AH01909: laravelpizza.local:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 18:35:03.521600 2026] [ssl:warn] [pid 16559] AH01909: laravelpizza.local:443:0 server certificate does NOT include an ID which matches the server name

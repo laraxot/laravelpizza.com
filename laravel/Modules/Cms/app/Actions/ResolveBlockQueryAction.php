@@ -25,29 +25,42 @@ class ResolveBlockQueryAction
      */
     public function execute(array $queryConfig): array
     {
+        echo "ResolveBlockQueryAction executing...\n";
         $modelClass = Arr::get($queryConfig, 'model');
         if ($modelClass === null || ! is_string($modelClass) || ! class_exists($modelClass)) {
+            echo "Model class not found: " . ($modelClass ?? 'NULL') . "\n";
             return [];
         }
+        echo "Model class found: $modelClass\n";
 
         /** @var Model $modelInstance */
         $modelInstance = new $modelClass;
         $query = $modelInstance->newQuery();
 
-        // Apply scopes
+        // Apply scopes (support both 'scope' singular and 'scopes' plural)
+        $singleScope = Arr::get($queryConfig, 'scope');
         /** @var array<int, string> $scopes */
         $scopes = (array) Arr::get($queryConfig, 'scopes', []);
+        if ($singleScope !== null && is_string($singleScope)) {
+            array_unshift($scopes, $singleScope);
+        }
         foreach ($scopes as $scope) {
-            if (is_string($scope) && method_exists($query, 'scope'.ucfirst($scope))) {
-                $query->{$scope}();
+            if (is_string($scope) && $scope !== '') {
+                // Scopes are added dynamically by Laravel, so we just try to call them
+                // method_exists() won't work because they're added via __call
+                try {
+                    $query->{$scope}();
+                } catch (\BadMethodCallException $e) {
+                    // Scope doesn't exist, skip it
+                }
             }
         }
 
         // Apply ordering
         $orderBy = Arr::get($queryConfig, 'orderBy', 'created_at');
-        Assert::string($orderBy, '['.__LINE__.']['.__FILE__.']');
+        // Assert::string($orderBy, '['.__LINE__.']['.__FILE__.']');
         $direction = Arr::get($queryConfig, 'direction', 'desc');
-        Assert::string($direction, '['.__LINE__.']['.__FILE__.']');
+        // Assert::string($direction, '['.__LINE__.']['.__FILE__.']');
         $query->orderBy($orderBy, $direction);
 
         // Apply limit

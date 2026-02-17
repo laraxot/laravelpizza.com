@@ -13,6 +13,7 @@ use Illuminate\Support\Str;
 use Modules\Meetup\Models\Event;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
+use Carbon\Carbon;
 use Override;
 
 class EventCalendarWidget extends XotBaseWidget
@@ -53,8 +54,8 @@ class EventCalendarWidget extends XotBaseWidget
                 return [
                     'id' => $event->id,
                     'title' => $event->title,
-                    'start' => $event->start_date->toISOString(),
-                    'end' => $event->end_date->toISOString(),
+                    'start' => ($event->start_date ?? Carbon::now())->toISOString(),
+                    'end' => ($event->end_date ?? Carbon::now())->toISOString(),
                     'backgroundColor' => '#DC2626',
                     'borderColor' => '#DC2626',
                     'textColor' => '#FFFFFF',

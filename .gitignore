@@ -74,3 +74,4 @@ laravel/Modules/*/_docs/
 *.*backup*
 .clinerules/
 .cursorrules/
+.venv/

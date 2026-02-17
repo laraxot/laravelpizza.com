@@ -4,7 +4,7 @@ CMS blocks support dynamic data resolution from Eloquent models. This allows tem
 
 ## How it works
 
-The `BlockData` object detects a `query` configuration within its `data` property. When present, it uses `ResolveBlockQueryAction` to execute the query and merge the result into the block's data.
+The block component (e.g., `pub_theme::components.blocks.events.list`) detects a `query` configuration within its `data` property. When present, it executes the query and transforms the results using the model's `toBlockArray()` method.
 
 ### Configuration Structure
 
@@ -15,13 +15,14 @@ To enable dynamic data, add a `query` key to your block data in the page JSON:
   "type": "events",
   "data": {
     "view": "pub_theme::components.blocks.events.list",
+    "title": "Upcoming Events",
+    "description": "Join us for pizza and Laravel discussions",
     "query": {
       "model": "Modules\\Meetup\\Models\\Event",
-      "wrap_in": "events",
-      "scopes": ["upcoming"],
+      "scope": "upcoming",
       "orderBy": "start_date",
       "direction": "asc",
-      "limit": 10
+      "limit": 50
     }
   }
 }
@@ -29,9 +30,8 @@ To enable dynamic data, add a `query` key to your block data in the page JSON:
 
 ### Parameters
 
-- `model`: Fully qualified class name of the Eloquent model.
-- `wrap_in`: (Optional) The key in which to wrap the resulting collection. If omitted, the results are merged directly.
-- `scopes`: (Optional) Array of scopes to apply to the query.
+- `model`: Fully qualified class name of the Eloquent model (required).
+- `scope`: (Optional) Scope method to apply to the query (e.g., `upcoming`, `past`).
 - `orderBy`: (Optional) Column to sort by (default: `created_at`).
 - `direction`: (Optional) Sort direction (`asc` or `desc`, default: `desc`).
 - `limit`: (Optional) Maximum number of records to fetch (default: 10).
@@ -46,12 +46,20 @@ The resolver automatically detects if a model has a `toBlockArray()` method. If 
 public function toBlockArray(): array
 {
     return [
+        'status' => $this->start_date->isFuture() ? 'upcoming' : 'past',
         'title' => $this->title,
+        'description' => $this->description,
         'date' => $this->start_date->format('F j, Y'),
-        'url' => route('events.show', $this),
+        'time' => $this->start_date->format('g:i A').' - '.$this->end_date->format('g:i A'),
+        'location' => $this->location,
+        'attendees_current' => $this->attendees_count,
+        'attendees_max' => $this->max_attendees,
+        'url' => $this->url ?? "/it/events/".(string) $this->slug,
     ];
 }
 ```
+
+**Note**: For SEO-friendly URLs, the model should use its `slug` attribute instead of `id`.
 
 ## Related
 - [Block Rendering](rendering.md)

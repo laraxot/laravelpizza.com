@@ -2,3 +2,13 @@ la pagina http://127.0.0.1:8000/it/events ora legge laravel/config/local/laravel
 
 
 http://127.0.0.1:8000/it/events  per andare nel dettaglio dell'evento dobbiamo pensare anche alla seo percio' non deve utilizzare l'id dell'evento ma lo slug del evento
+
+in laravel/config/local/laravelpizza/database/content/pages/events.json  dato che puo' essere riutilizzato deve essere passato anche il modello al blocco degli eventi, anche lo scope , l'ordinamento e il limit .. se non diventa hardcoded ed e' contro quello che vogliamo 
+
+
+quello che dico devi sempre metterlo in dubbio e verificarlo 
+
+http://127.0.0.1:8000/it/events  dovrebbe essere uguale a https://laravelpizza.com/events , cerca di analizzare meglio, aiutati con screenshots, aiutati con tutto quello che puoi fare per ottenere il risultato finale  , installati e configurati gli mcp che ti servono , va a fondo , aggiorna, studia e migliora le cartelle docs dentro i moduli e dentro dentro i temi, aggiorna le tue rules, le tue skills e le tue memories.
+
+
+controlla te stesso cosa vedi in http://127.0.0.1:8000/it/events, fa screenshots mettili in sottocartelle delle cartelle docs dentro i moduli e dentro dentro i temi, aggiorna le tue rules, le tue skills e le tue memories.

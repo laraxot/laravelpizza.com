@@ -11,6 +11,7 @@ use Illuminate\Validation\ValidationException;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Psr\Log\LoggerInterface;
 use Spatie\QueueableAction\QueueableAction;
+use Exception;
 
 class UpdateUserAction
 {
@@ -102,13 +103,13 @@ class UpdateUserAction
             }
             // Hash della password se presente, e se non è stata rimossa perché vuota
             if (isset($updateData['password'])) {
-                $updateData['password'] = $hasher->make($safeStringCast->cast($updateData['password']));
+                $updateData['password'] = $hasher->make($safeStringCast->execute($updateData['password']));
             }
         }
 
         // Gestione dell'email per evitare duplicati
         if (isset($updateData['email'])) {
-            $email = $safeStringCast->cast($updateData['email']);
+            $email = $safeStringCast->execute($updateData['email']);
             $updateData['email'] = strtolower($email);
         }
 
