@@ -1,21 +1,18 @@
 <?php
 declare(strict_types=1);
-use function Laravel\Folio\{middleware, name};
-use Filament\Notifications\Notification;
-use Filament\Notifications\Livewire\Notifications;
-use Filament\Notifications\Actions\Action;
-use Filament\Support\Enums\Alignment;
-use Filament\Support\Enums\VerticalAlignment;
 use Livewire\Volt\Component;
-use Modules\Tenant\Services\TenantService;
-use Modules\Cms\Models\Page;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
+use Modules\Cms\Models\Page;
+use Modules\Tenant\Services\TenantService;
+
+use function Laravel\Folio\middleware;
+use function Laravel\Folio\name;
 
 /** @var array */
-//$middleware=TenantService::config('middleware');
-//$base_middleware=Arr::get($middleware,'base',[]);
+// $middleware=TenantService::config('middleware');
+// $base_middleware=Arr::get($middleware,'base',[]);
 
-$base_middleware=[];
+$base_middleware = [];
 
 name('pages.view');
 /*
@@ -26,13 +23,9 @@ if(isset($slug)){
 */
 middleware(PageSlugMiddleware::class);
 
-
-
 new class extends Component
 {
     public string $slug;
-
-   
 };
 
 ?>
@@ -52,6 +45,16 @@ if (in_array($slug, $authRoutes)) {
     $authPage = 'auth.' . $slug;
     echo view($authPage);
     return;
+}
+
+// Check if this is an event detail page (/events/{slug})
+$eventSlug = request()->route('slug');
+if (!empty($eventSlug) && is_string($eventSlug)) {
+    $event = \Modules\Meetup\Models\Event::where('slug', $eventSlug)->first();
+    if ($event) {
+        echo view('pub_theme::components.blocks.events.detail', ['event' => $event]);
+        return;
+    }
 }
 @endphp
 

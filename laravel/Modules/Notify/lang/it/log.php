@@ -2,101 +2,85 @@
 
 declare(strict_types=1);
 
-return array (
-  'fields' => 
-  array (
-    'recipient' => 
-    array (
-      'label' => 'recipient',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'subject' => 
-    array (
-      'label' => 'subject',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'status' => 
-    array (
-      'label' => 'status',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'sent_at' => 
-    array (
-      'label' => 'sent_at',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'created_at' => 
-    array (
-      'label' => 'created_at',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'view' => 
-    array (
-      'label' => 'view',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'openFilters' => 
-    array (
-      'label' => 'openFilters',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'applyFilters' => 
-    array (
-      'label' => 'applyFilters',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'resetFilters' => 
-    array (
-      'label' => 'resetFilters',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-  ),
-  'label' => 'Log',
-  'plural_label' => 'Log (Plurale)',
-  'navigation' => 
-  array (
-    'name' => 'Log',
-    'plural' => 'Log',
-    'group' => 
-    array (
-      'name' => 'General',
-      'description' => 'General Settings',
-    ),
+return [
+    'fields' => [
+        'recipient' => [
+            'label' => 'recipient',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'subject' => [
+            'label' => 'subject',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'status' => [
+            'label' => 'status',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'sent_at' => [
+            'label' => 'sent_at',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'view' => [
+            'label' => 'view',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'openFilters' => [
+            'label' => 'openFilters',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
     'label' => 'Log',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ),
-  'actions' => 
-  array (
-    'create' => 
-    array (
-      'label' => 'Crea Log',
-    ),
-    'edit' => 
-    array (
-      'label' => 'Modifica Log',
-    ),
-    'delete' => 
-    array (
-      'label' => 'Elimina Log',
-    ),
-  ),
-);
+    'plural_label' => 'Log (Plurale)',
+    'navigation' => [
+        'name' => 'Log',
+        'plural' => 'Log',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Log',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Log',
+        ],
+        'edit' => [
+            'label' => 'Modifica Log',
+        ],
+        'delete' => [
+            'label' => 'Elimina Log',
+        ],
+    ],
+];

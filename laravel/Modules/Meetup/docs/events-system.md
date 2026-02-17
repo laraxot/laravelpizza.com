@@ -52,6 +52,44 @@ Il sistema utilizza un'architettura moderna con Laravel Folio + Volt per il fron
   - A livello UX, la pagina `/it/events` oggi si comporta come una seconda homepage e non come indice eventi.
   - La prima milestone è introdurre un blocco dedicato alla lista eventi (header + filtri + grid), mappato in `events.json` verso una view tipo `pub_theme::components.blocks.events.index`, per poi in un secondo momento collegarlo ai modelli `Event`/`EventRegistration` descritti in questo documento.
 
+## CMS Integration
+
+Events can be dynamically displayed in CMS pages using the `events` block type. This integration leverages the `Event` model's custom scopes and formatting methods.
+
+### Dynamic Block Configuration
+
+To display events in a CMS page, configure the block in the page JSON:
+
+```json
+{
+    "type": "events",
+    "data": {
+        "view": "pub_theme::components.blocks.events.list",
+        "query": {
+            "model": "Modules\\Meetup\\Models\\Event",
+            "wrap_in": "events",
+            "orderBy": "start_date",
+            "direction": "asc"
+        }
+    }
+}
+```
+
+### Model Support
+
+The `Event` model provides the following features for CMS integration:
+
+- **Scopes**: `upcoming()` and `past()` for easy filtering based on logic rather than hardcoded dates.
+- **Formatting**: `toBlockArray()` transforms the model into a structure compatible with `Themes/Meetup/resources/views/components/blocks/events/list.blade.php`.
+- **Note on Ordering**: When explicitly ordering event queries, use standard Eloquent methods like `orderBy('column', 'direction')`. The `ordered()` method is not a valid scope or method on the `Event` model.
+
+### Customizing Display
+
+The `toBlockArray()` method in `Modules\Meetup\Models\Event` controls what data is passed to the view. Key fields include:
+- `status`: 'upcoming' or 'past' (used by Alpine.js filters).
+- `date` & `time`: Pre-formatted strings for display.
+- `attendees_current` & `attendees_max`: For capacity visualization.
+
 ## 🛠️ Implementazione Volt per il Sistema Eventi
 
 ### Componente Registrazione Evento

@@ -1,8 +1,6 @@
 # Logo e Branding Guidelines - Laravel Pizza Meetups
 
-## Data: [DATE]
-
-## 🎯 Overview
+## Overview
 
 Questo documento definisce le linee guida per l'uso del logo e degli elementi di branding per Laravel Pizza Meetups.
 
@@ -49,8 +47,8 @@ Il logo è uno **spicchio di pizza stilizzato** estratto direttamente da `larave
 
 ### Colori
 
-- **Primary**: `text-red-500` (#ef4444)
-- **Hover**: `text-red-400` (#f87171)
+- **Primary**: `text-red-600` (#dc2626)
+- **Hover**: `text-red-500` (#ef4444)
 - **Dark Background**: `text-white` (quando su sfondo scuro)
 
 ### Uso Corretto

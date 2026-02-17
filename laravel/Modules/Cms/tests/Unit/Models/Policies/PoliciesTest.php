@@ -9,19 +9,19 @@ use Modules\Cms\Models\Policies\PagePolicy;
 use Modules\Cms\Models\Policies\SectionPolicy;
 
 test('PagePolicy can be instantiated', function () {
-    $policy = new PagePolicy();
+    $policy = new PagePolicy;
 
     expect($policy)->toBeInstanceOf(PagePolicy::class);
 });
 
 test('MenuPolicy can be instantiated', function () {
-    $policy = new MenuPolicy();
+    $policy = new MenuPolicy;
 
     expect($policy)->toBeInstanceOf(MenuPolicy::class);
 });
 
 test('SectionPolicy can be instantiated', function () {
-    $policy = new SectionPolicy();
+    $policy = new SectionPolicy;
 
     expect($policy)->toBeInstanceOf(SectionPolicy::class);
 });

@@ -49,8 +49,7 @@ class UpdateCoordinatesFromAddressAction
     /**
      * Esegue l'aggiornamento delle coordinate per un modello.
      *
-     * @param Model $model Il modello da aggiornare (deve avere full_address, latitude, longitude)
-     *
+     * @param  Model  $model  Il modello da aggiornare (deve avere full_address, latitude, longitude)
      * @return bool True se l'aggiornamento è riuscito, false altrimenti
      */
     public function execute(Model $model): bool
@@ -70,7 +69,7 @@ class UpdateCoordinatesFromAddressAction
         // Esegui geocoding per ottenere i dati dell'indirizzo
         $addressData = $this->getAddressDataAction->execute($fullAddress);
 
-        if (null === $addressData) {
+        if ($addressData === null) {
             // Raccogli errori dal servizio di geocoding
             $geocodingErrors = $this->getAddressDataAction->getErrors();
             if ($geocodingErrors->isNotEmpty()) {

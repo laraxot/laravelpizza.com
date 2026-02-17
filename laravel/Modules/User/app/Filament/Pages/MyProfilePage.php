@@ -32,6 +32,7 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 class MyProfilePage extends XotBasePage implements HasSchemas
 {
     use InteractsWithSchemas;
+
     public ?array $profileData = [];
 
     public ?array $passwordData = [];
@@ -262,7 +263,7 @@ class MyProfilePage extends XotBasePage implements HasSchemas
     // ...
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     protected function handleRecordUpdate(Model $record, array $data): Model
     {

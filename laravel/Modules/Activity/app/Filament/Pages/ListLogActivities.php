@@ -6,7 +6,6 @@ namespace Modules\Activity\Filament\Pages;
 
 use Exception;
 use Filament\Forms\Components\Field;
-use Filament\Forms\Contracts\HasForms;
 use Filament\Notifications\Notification;
 use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Resources\Pages\Concerns\InteractsWithRecord;

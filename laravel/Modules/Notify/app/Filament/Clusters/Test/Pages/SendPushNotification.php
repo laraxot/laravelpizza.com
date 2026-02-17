@@ -31,7 +31,6 @@ use function Safe\json_encode;
  */
 class SendPushNotification extends XotBasePage
 {
-
     // use NavigationLabelTrait;
 
     public ?array $notificationData = [];

@@ -13,8 +13,8 @@ use Sushi\Sushi;
 /**
  * Modules\Cms\Models\Module.
  *
- * @property string               $id
- * @property string|null          $name
+ * @property string $id
+ * @property string|null $name
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
@@ -23,7 +23,7 @@ use Sushi\Sushi;
  * @method static Builder<static>|Module query()
  * @method static Builder<static>|Module whereId($value)
  * @method static Builder<static>|Module whereName($value)
- * @method static int                    count()
+ * @method static int count()
  *
  * @property ProfileContract|null $deleter
  *

@@ -27,8 +27,8 @@ abstract class TestCase extends BaseTestCase
 
         config(['xra.pub_theme' => 'Meetup']);
         config(['xra.main_module' => 'Seo']);
-        
+
         // Ensure Seo config is loaded/set if needed for tests
-        // config(['seo.default_title' => 'Test Site']); 
+        // config(['seo.default_title' => 'Test Site']);
     }
 }

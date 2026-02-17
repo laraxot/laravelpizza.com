@@ -3,6 +3,14 @@
  * Events list block - allineato a laravelpizza.com/events
  * Riceve title, description, events da @include (block->data).
  * Filtri: All Events, Upcoming, Past (Alpine.js).
+ * 
+ * Supporto dinamico: se 'events' non è passato, carica dal database usando query config
+ * Parametri supportati in data:
+ *   - query.model: Model class (es. Modules\Meetup\Models\Event)
+ *   - query.scope: scope da applicare (upcoming, past, etc.)
+ *   - query.orderBy: colonna per ordinamento
+ *   - query.direction: asc o desc
+ *   - query.limit: numero massimo di eventi
  */
 --}}
 
@@ -14,9 +22,41 @@
 ])
 
 @php
+    use Illuminate\Support\Str;
+    
     $title = $title ?? ($data['title'] ?? 'Upcoming Events');
     $description = $description ?? ($data['description'] ?? 'Join us for pizza and Laravel discussions');
-    $events = $events ?? ($data['events'] ?? []);
+    $eventsData = $events ?? ($data['events'] ?? []);
+    
+    // Se non ci sono eventi hardcoded, carica dal database usando query config
+    if (empty($eventsData) && isset($data['query'])) {
+        $queryConfig = $data['query'];
+        $modelClass = $queryConfig['model'] ?? null;
+        $scope = $queryConfig['scope'] ?? null;
+        $orderBy = $queryConfig['orderBy'] ?? 'created_at';
+        $direction = $queryConfig['direction'] ?? 'desc';
+        $limit = (int) ($queryConfig['limit'] ?? 10);
+        
+        if ($modelClass && class_exists($modelClass)) {
+            $model = app($modelClass)::query();
+            
+            // Apply scope if exists
+            if ($scope && method_exists($model, 'scope'.ucfirst($scope))) {
+                $model->$scope();
+            }
+            
+            // Apply ordering
+            $model->orderBy($orderBy, $direction);
+            
+            // Get models and transform to block array
+            $eventsModels = $model->limit($limit)->get();
+            $eventsData = $eventsModels->map(fn ($item) => $item->toBlockArray())->toArray();
+        }
+    }
+    
+    $events = $eventsData;
+    
+    $filterMode = 'all';
 @endphp
 
 <section class="py-12 md:py-16 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white transition-colors" x-data="{ filter: 'all' }">
@@ -60,7 +100,23 @@
                     $attendeesMax = $event['attendees_max'] ?? 0;
                     $attendeesLabel = $attendeesMax > 0 ? $attendeesCurrent . ' / ' . $attendeesMax . ' attendees' : '';
                 @endphp
-                <a href="{{ $event['url'] ?? '#' }}"
+                @php
+                    // Determinare l'URL per il dettaglio evento
+                    $eventUrl = $event['url'] ?? '#';
+                    
+                    // Se l'evento è nel database, usare lo slug per il dettaglio
+                    if (isset($event['id']) && !empty($event['id'])) {
+                        // Se l'evento ha un meta_data con slug, usiamo quello
+                        if (isset($event['meta_data']['slug']) && !empty($event['meta_data']['slug'])) {
+                            $eventUrl = "/it/events/" . $event['meta_data']['slug'];
+                        } else {
+                            // Fallback: usare l'id
+                            $eventUrl = "/it/events/" . $event['id'];
+                        }
+                    }
+                @endphp
+                
+                <a href="{{ $eventUrl }}"
                     x-show="(filter === 'all') || (filter === '{{ $status }}')"
                     x-transition:enter="transition ease-out duration-200"
                     x-transition:enter-start="opacity-0"

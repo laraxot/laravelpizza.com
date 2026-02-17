@@ -22,8 +22,7 @@ class CreateUserAction
     public function __construct(
         private readonly Hasher $hasher,
         private readonly User $userModel,
-    ) {
-    }
+    ) {}
 
     public function execute(array $data): User
     {

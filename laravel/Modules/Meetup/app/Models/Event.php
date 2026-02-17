@@ -33,6 +33,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property int $attendees_count
  * @property int $max_attendees
  * @property string|null $cover_image
+ * @property string|null $slug
  * @property string|null $url
  * @property array<array-key, mixed>|null $offers
  * @property array<array-key, mixed>|null $meta_data
@@ -148,6 +149,587 @@ class Event extends BaseModel
     public function organizer(): BelongsTo
     {
         return $this->belongsTo(User::class, 'organizer_id', 'id');
+    }
+
+        /**
+
+         * Scope a query to only include upcoming events.
+
+         *
+
+         * @param \Illuminate\Database\Eloquent\Builder $query
+
+         * @return \Illuminate\Database\Eloquent\Builder
+
+         */
+
+        public function scopeUpcoming($query)
+
+        {
+
+            return $query->where('start_date', '>=', \Carbon\Carbon::now());
+
+        }
+
+    
+
+        /**
+
+         * Scope a query to only include past events.
+
+         *
+
+         * @param \Illuminate\Database\Eloquent\Builder $query
+
+         * @return \Illuminate\Database\Eloquent\Builder
+
+         */
+
+        public function scopePast($query)
+
+        {
+
+            return $query->where('start_date', '<', \Carbon\Carbon::now());
+
+        }
+
+    
+
+        /**
+
+         * Scope a query to filter events by status.
+
+         *
+
+         * @param \Illuminate\Database\Eloquent\Builder $query
+
+         * @param string $status
+
+         * @return \Illuminate\Database\Eloquent\Builder
+
+         */
+
+        public function scopeFilter($query, string $status)
+
+        {
+
+            switch ($status) {
+
+                case 'upcoming':
+
+                    return $this->scopeUpcoming($query);
+
+                case 'past':
+
+                    return $this->scopePast($query);
+
+                case 'all':
+
+                default:
+
+                    return $query;
+
+            }
+
+        }
+
+    
+
+        /**
+
+         * Scope a query to order events by a specific column.
+
+         *
+
+         * @param \Illuminate\Database\Eloquent\Builder $query
+
+         * @param string $column
+
+         * @param string $direction
+
+         * @return \Illuminate\Database\Eloquent\Builder
+
+         */
+
+        public function scopeOrderBy($query, string $column = 'start_date', string $direction = 'asc')
+
+        {
+
+            $allowedColumns = ['start_date', 'end_date', 'title', 'created_at', 'updated_at'];
+
+            $allowedDirections = ['asc', 'desc'];
+
+            
+
+            $column = in_array($column, $allowedColumns) ? $column : 'start_date';
+
+            $direction = in_array($direction, $allowedDirections) ? $direction : 'asc';
+
+            
+
+            return $query->orderBy($column, $direction);
+
+        }
+
+    
+
+        /**
+
+         * Scope a query to limit the number of events returned.
+
+         *
+
+         * @param \Illuminate\Database\Eloquent\Builder $query
+
+         * @param int $limit
+
+         * @return \Illuminate\Database\Eloquent\Builder
+
+         */
+
+        public function scopeLimit($query, int $limit = 10)
+
+        {
+
+            return $query->limit($limit);
+
+        }
+
+    
+
+        /**
+
+         * Scope a query to paginate events.
+
+         *
+
+         * @param \Illuminate\Database\Eloquent\Builder $query
+
+         * @param int $perPage
+
+         * @param int $page
+
+         * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+
+         */
+
+        public function scopePaginate($query, int $perPage = 10, int $page = 1)
+
+        {
+
+            return $query->paginate($perPage, ['*'], 'page', $page);
+
+        }
+
+    
+
+        /**
+
+         * Scope a query to order by start_date (default ordering).
+
+         *
+
+         * @param \Illuminate\Database\Eloquent\Builder $query
+
+         * @return \Illuminate\Database\Eloquent\Builder
+
+         */
+
+        public function scopeOrderByStartDate($query)
+
+        {
+
+            return $this->scopeOrderBy($query, 'start_date', 'asc');
+
+        }
+
+    
+
+        /**
+
+         * Scope a query to order by title.
+
+         *
+
+         * @param \Illuminate\Database\Eloquent\Builder $query
+
+         * @return \Illuminate\Database\Eloquent\Builder
+
+         */
+
+        public function scopeOrderByTitle($query)
+
+        {
+
+            return $this->scopeOrderBy($query, 'title', 'asc');
+
+        }
+
+    
+
+        /**
+
+         * Scope a query to order by end_date.
+
+         *
+
+         * @param \Illuminate\Database\Eloquent\Builder $query
+
+         * @return \Illuminate\Database\Eloquent\Builder
+
+         */
+
+        public function scopeOrderByEndDate($query)
+
+        {
+
+            return $this->scopeOrderBy($query, 'end_date', 'asc');
+
+        }
+
+    
+
+        /**
+
+         * Get a single event by slug.
+
+         *
+
+         * @param \Illuminate\Database\Eloquent\Builder $query
+
+         * @param string $slug
+
+         * @return \Illuminate\Database\Eloquent\Builder
+
+         */
+
+        public function scopeBySlug($query, string $slug)
+
+        {
+
+            return $query->whereHas('meta_data', function ($q) use ($slug) {
+
+                $q->where('slug', $slug);
+
+            });
+
+        }
+
+    
+
+        /**
+
+         * Get events for a specific date range.
+
+         *
+
+         * @param \Illuminate\Database\Eloquent\Builder $query
+
+         * @param \Carbon\Carbon $startDate
+
+         * @param \Carbon\Carbon $endDate
+
+         * @return \Illuminate\Database\Eloquent\Builder
+
+         */
+
+        public function scopeDateRange($query, \Carbon\Carbon $startDate, \Carbon\Carbon $endDate)
+
+        {
+
+            return $query->whereBetween('start_date', [$startDate, $endDate]);
+
+        }
+
+    
+
+        /**
+
+         * Get events with pagination.
+
+         *
+
+         * @param int $perPage
+
+         * @param int|null $page
+
+         * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+
+         */
+
+        public static function getWithPagination(int $perPage = 10, int $page = null)
+
+        {
+
+            $query = self::query();
+
+            return $query->paginate($perPage, ['*'], 'page', $page);
+
+        }
+
+    
+
+        /**
+
+         * Get upcoming events with pagination.
+
+         *
+
+         * @param int $perPage
+
+         * @param int|null $page
+
+         * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+
+         */
+
+        public static function getUpcomingWithPagination(int $perPage = 10, int $page = null)
+
+        {
+
+            $query = self::upcoming();
+
+            return $query->paginate($perPage, ['*'], 'page', $page);
+
+        }
+
+    
+
+        /**
+
+         * Get past events with pagination.
+
+         *
+
+         * @param int $perPage
+
+         * @param int|null $page
+
+         * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+
+         */
+
+        public static function getPastWithPagination(int $perPage = 10, int $page = null)
+
+        {
+
+            $query = self::past();
+
+            return $query->paginate($perPage, ['*'], 'page', $page);
+
+        }
+
+    
+
+        /**
+
+         * Get events ordered by start date.
+
+         *
+
+         * @param int $limit
+
+         * @return \Illuminate\Database\Eloquent\Collection
+
+         */
+
+        public static function getOrderedByStartDate(int $limit = 10)
+
+        {
+
+            $query = self::query();
+
+            return $query->orderBy('start_date', 'asc')->limit($limit)->get();
+
+        }
+
+    
+
+        /**
+
+         * Get upcoming events ordered by start date.
+
+         *
+
+         * @param int $limit
+
+         * @return \Illuminate\Database\Eloquent\Collection
+
+         */
+
+        public static function getUpcomingOrderedByStartDate(int $limit = 10)
+
+        {
+
+            $query = self::upcoming();
+
+            return $query->orderBy('start_date', 'asc')->limit($limit)->get();
+
+        }
+
+    
+
+        /**
+
+         * Get past events ordered by start date.
+
+         *
+
+         * @param int $limit
+
+         * @return \Illuminate\Database\Eloquent\Collection
+
+         */
+
+        public static function getPastOrderedByStartDate(int $limit = 10)
+
+        {
+
+            $query = self::past();
+
+            return $query->orderBy('start_date', 'desc')->limit($limit)->get();
+
+        }
+
+    
+
+        /**
+
+         * Get events by slug.
+
+         *
+
+    /**
+     * Get event by slug.
+     *
+     * @param  string  $slug
+     * @return \Modules\Meetup\Models\Event|null
+     */
+    public static function getBySlug(string $slug): ?self
+    {
+        return self::where('slug', $slug)->first();
+    }
+
+    
+
+        /**
+
+         * Get events with ordering and limiting.
+
+         *
+
+         * @param string $filter
+
+         * @param string $orderBy
+
+         * @param string $direction
+
+         * @param int $limit
+
+         * @return \Illuminate\Database\Eloquent\Collection
+
+         */
+
+        public static function getWithOrderingAndLimit(
+
+            string $filter = 'all',
+
+            string $orderBy = 'start_date',
+
+            string $direction = 'asc',
+
+            int $limit = 10
+
+        ) {
+
+            $query = self::query();
+
+            
+
+            // Apply filter
+
+            switch ($filter) {
+
+                case 'upcoming':
+
+                    $query = $query->upcoming();
+
+                    break;
+
+                case 'past':
+
+                    $query = $query->past();
+
+                    break;
+
+                case 'all':
+
+                default:
+
+                    break;
+
+            }
+
+            
+
+            // Apply ordering
+
+            $allowedColumns = ['start_date', 'end_date', 'title', 'created_at', 'updated_at'];
+
+            $allowedDirections = ['asc', 'desc'];
+
+            
+
+            $orderBy = in_array($orderBy, $allowedColumns) ? $orderBy : 'start_date';
+
+            $direction = in_array($direction, $allowedDirections) ? $direction : 'asc';
+
+            
+
+            $query = $query->orderBy($orderBy, $direction);
+
+            
+
+            // Apply limit
+
+            $query = $query->limit($limit);
+
+            
+
+            return $query->get();
+
+        }
+
+    /**
+     * Transform the event model into an array compatible with CMS blocks.
+     *
+     * @return array<string, mixed>
+     */
+    public function toBlockArray(): array
+    {
+        $status = $this->start_date->isFuture() ? 'upcoming' : 'past';
+
+        return [
+            'status' => $status,
+            'title' => $this->title,
+            'description' => $this->description,
+            'date' => $this->start_date->format('F j, Y'),
+            'time' => $this->start_date->format('g:i A').' - '.$this->end_date->format('g:i A'),
+            'location' => $this->location,
+            'attendees_current' => $this->attendees_count,
+            'attendees_max' => $this->max_attendees,
+            'url' => $this->url ?? "/it/events/".(string) $this->slug,
+        ];
+    }
+
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
     }
 
     /**

@@ -16,7 +16,6 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
 {
     use TransTrait;
 
-   
     public static function getNavigationLabel(): string
     {
         return static::transFunc(__FUNCTION__);

@@ -61,10 +61,15 @@ class ImportEventsFromJsonAction
     {
         /** @var array<string, mixed> $payload */
         $payload = json_decode(File::get($path), true, 512, JSON_THROW_ON_ERROR);
-        $events = Arr::get($payload, 'events', []);
 
-        if (! is_array($events)) {
+        // Handle both {"events": [...]} and [...] formats
+        if (isset($payload['events']) && is_array($payload['events'])) {
+            $events = $payload['events'];
+        } elseif (is_array($payload) && ! empty($payload)) {
+            // Plain array format: [{...}, {...}]
             $events = $payload;
+        } else {
+            $events = [];
         }
 
         /** @var array<array<string, mixed>> $events */
@@ -164,9 +169,9 @@ class ImportEventsFromJsonAction
                 'max_attendees' => (int) Arr::get($item, 'max_attendees', Arr::get($item, 'attendees_max', 0)) ?: 30,
                 'url' => Arr::get($item, 'url'),
                 'cover_image' => Arr::get($item, 'image'),
+                'slug' => $this->generateSlug((string) Arr::get($item, 'title', 'event')),
                 'offers' => $this->parseOffers($this->normalizeOffers($item['offers'] ?? null)),
                 'meta_data' => [
-                    'slug' => Str::slug(is_string($item['title'] ?? null) ? $item['title'] : 'event'),
                     'organizer' => Arr::get($item, 'organizer'),
                     'schema_original' => $item,
                 ],
@@ -287,5 +292,23 @@ class ImportEventsFromJsonAction
             'priceCurrency' => $offers['priceCurrency'] ?? 'EUR',
             'availability' => $offers['availability'] ?? null,
         ];
+    }
+
+    /**
+     * Generate a unique slug from title.
+     */
+    private function generateSlug(string $title): string
+    {
+        $slug = Str::slug($title);
+        $originalSlug = $slug;
+        $counter = 1;
+
+        // Ensure unique slug
+        while (Event::where('slug', $slug)->exists()) {
+            $slug = $originalSlug.'-'.$counter;
+            $counter++;
+        }
+
+        return $slug;
     }
 }

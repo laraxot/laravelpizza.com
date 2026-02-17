@@ -18,7 +18,7 @@ class SelectState extends XotBaseSelect
         //  $this->selectablePlaceholder(false);
         $this->options(function ((Model&HasStatesContract)|null $record): array {
             $name = $this->getName();
-            if (null === $record) {
+            if ($record === null) {
                 $model = $this->getModel();
                 if (\is_string($model) && class_exists($model)) {
                     $instance = app($model);

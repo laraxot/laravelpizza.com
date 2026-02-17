@@ -2,38 +2,35 @@
 
 declare(strict_types=1);
 
-return array (
-  'breadcrumb' => 'Monitor de Jobs En File',
-  'title' => 'Jobs',
-  'navigation_label' => 'Jobs',
-  'navigation_group' => 'Système',
-  'total_jobs' => 'Total Jobs Executé(s)',
-  'execution_time' => 'Temps Total d\'Execution',
-  'average_time' => 'Temps moyen d\'Execution',
-  'succeeded' => 'Succes',
-  'failed' => 'Echec',
-  'running' => 'En cours',
-  'status' => 'Statut',
-  'name' => 'Nom',
-  'queue' => 'File',
-  'progress' => 'Progression',
-  'started_at' => 'Débuté à',
-  'created_at' => 'Créé à',
-  'reserved_at' => 'Réservé à',
-  'navigation' => 
-  array (
-    'label' => 'Missing Navigation Label',
-    'plural_label' => 'Missing Navigation Plural Label',
-    'group' => 'Missing Group',
-    'icon' => 'heroicon-o-puzzle-piece',
-    'sort' => 100,
-  ),
-  'label' => 'Missing Label',
-  'plural_label' => 'Missing Plural label',
-  'fields' => 
-  array (
-  ),
-  'actions' => 
-  array (
-  ),
-);
+return [
+    'breadcrumb' => 'Monitor de Jobs En File',
+    'title' => 'Jobs',
+    'navigation_label' => 'Jobs',
+    'navigation_group' => 'Système',
+    'total_jobs' => 'Total Jobs Executé(s)',
+    'execution_time' => 'Temps Total d\'Execution',
+    'average_time' => 'Temps moyen d\'Execution',
+    'succeeded' => 'Succes',
+    'failed' => 'Echec',
+    'running' => 'En cours',
+    'status' => 'Statut',
+    'name' => 'Nom',
+    'queue' => 'File',
+    'progress' => 'Progression',
+    'started_at' => 'Débuté à',
+    'created_at' => 'Créé à',
+    'reserved_at' => 'Réservé à',
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+];

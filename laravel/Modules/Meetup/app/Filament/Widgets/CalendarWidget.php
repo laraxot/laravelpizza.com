@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Widgets;
 
-use Illuminate\Database\Eloquent\Model;
 use Modules\Meetup\Models\Event;
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
 

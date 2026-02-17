@@ -12,37 +12,37 @@ use Modules\Geo\Models\Policies\PlaceTypePolicy;
 use Modules\Geo\Models\Policies\StatePolicy;
 
 test('StatePolicy can be instantiated', function () {
-    $policy = new StatePolicy();
+    $policy = new StatePolicy;
 
     expect($policy)->toBeInstanceOf(StatePolicy::class);
 });
 
 test('CountyPolicy can be instantiated', function () {
-    $policy = new CountyPolicy();
+    $policy = new CountyPolicy;
 
     expect($policy)->toBeInstanceOf(CountyPolicy::class);
 });
 
 test('LocalityPolicy can be instantiated', function () {
-    $policy = new LocalityPolicy();
+    $policy = new LocalityPolicy;
 
     expect($policy)->toBeInstanceOf(LocalityPolicy::class);
 });
 
 test('PlacePolicy can be instantiated', function () {
-    $policy = new PlacePolicy();
+    $policy = new PlacePolicy;
 
     expect($policy)->toBeInstanceOf(PlacePolicy::class);
 });
 
 test('PlaceTypePolicy can be instantiated', function () {
-    $policy = new PlaceTypePolicy();
+    $policy = new PlaceTypePolicy;
 
     expect($policy)->toBeInstanceOf(PlaceTypePolicy::class);
 });
 
 test('GeoNamesCapPolicy can be instantiated', function () {
-    $policy = new GeoNamesCapPolicy();
+    $policy = new GeoNamesCapPolicy;
 
     expect($policy)->toBeInstanceOf(GeoNamesCapPolicy::class);
 });

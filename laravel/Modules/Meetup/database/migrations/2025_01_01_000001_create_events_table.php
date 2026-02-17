@@ -16,6 +16,7 @@ return new class extends XotBaseMigration
             $this->tableCreate(function (Blueprint $table) {
                 $table->id();
                 $table->string('title')->index();
+                $table->string('slug')->unique()->after('title');
                 $table->string('alternate_name')->nullable();
                 $table->text('description')->nullable();
                 $table->string('in_language', 10)->default('it');
@@ -59,6 +60,9 @@ return new class extends XotBaseMigration
             });
         } elseif ($this->hasColumn('title')) {
             $this->tableUpdate(function (Blueprint $table) {
+                if (! $this->hasColumn('slug')) {
+                    $table->string('slug')->unique()->after('title');
+                }
                 if (! $this->hasColumn('alternate_name')) {
                     $table->string('alternate_name')->nullable()->after('title');
                 }

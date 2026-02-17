@@ -2,99 +2,85 @@
 
 declare(strict_types=1);
 
-return array (
-  'resource' => 
-  array (
-    'name' => 'Invio SMS',
-    'plural' => 'Invio SMS',
-  ),
-  'navigation' => 
-  array (
-    'name' => 'Invio SMS',
-    'plural' => 'Invio SMS',
-    'group' => 
-    array (
-      'name' => 'Notifiche',
-      'description' => 'Gestione dell\'invio di notifiche SMS',
-    ),
-    'label' => 'Invio SMS',
-    'icon' => 'heroicon-o-chat-bubble-left-right',
-    'sort' => 15,
-  ),
-  'fields' => 
-  array (
-    'driver' => 
-    array (
-      'description' => 'Driver SMS',
-      'helper_text' => 'Seleziona il provider per l\'invio SMS',
-      'placeholder' => 'Seleziona un driver',
-      'label' => 'Driver',
-      'tooltip' => '',
-    ),
-    'message' => 
-    array (
-      'description' => 'Contenuto del messaggio',
-      'helper_text' => 'Testo del messaggio da inviare',
-      'placeholder' => 'Scrivi il messaggio',
-      'label' => 'Messaggio',
-      'tooltip' => '',
-    ),
-    'phone' => 
-    array (
-      'description' => 'Numero di telefono',
-      'helper_text' => 'Numero del destinatario',
-      'placeholder' => 'Inserisci il numero',
-      'label' => 'Numero telefono',
-      'tooltip' => '',
-    ),
-    'gateway' => 
-    array (
-      'description' => 'Gateway SMS',
-      'helper_text' => 'Gateway utilizzato per l\'invio',
-      'placeholder' => 'Gateway SMS',
-      'label' => 'Gateway',
-      'tooltip' => '',
-    ),
-    'to' => 
-    array (
-      'description' => 'to',
-      'helper_text' => 'to',
-      'placeholder' => 'to',
-      'label' => 'to',
-      'tooltip' => '',
-    ),
-    'template_slug' => 
-    array (
-      'description' => 'template_slug',
-      'helper_text' => 'template_slug',
-      'placeholder' => 'template_slug',
-      'label' => 'template_slug',
-      'tooltip' => '',
-    ),
-  ),
-  'actions' => 
-  array (
-    'send' => 
-    array (
-      'label' => 'Invia SMS',
-      'tooltip' => 'Invia un messaggio SMS al destinatario',
-      'success_message' => 'SMS inviato con successo',
-      'error_message' => 'Errore nell\'invio dell\'SMS',
-    ),
-    'test' => 
-    array (
-      'label' => 'Test connessione',
-      'tooltip' => 'Verifica la connessione con il provider',
-      'success_message' => 'Connessione verificata con successo',
-      'error_message' => 'Errore nella verifica della connessione',
-    ),
-  ),
-  'messages' => 
-  array (
-    'success' => 'SMS inviato con successo',
-    'error' => 'Si è verificato un errore durante l\'invio dell\'SMS',
-    'confirmation' => 'Sei sicuro di voler inviare questo SMS?',
-  ),
-  'label' => 'Send Sms',
-  'plural_label' => 'Send Sms (Plurale)',
-);
+return [
+    'resource' => [
+        'name' => 'Invio SMS',
+        'plural' => 'Invio SMS',
+    ],
+    'navigation' => [
+        'name' => 'Invio SMS',
+        'plural' => 'Invio SMS',
+        'group' => [
+            'name' => 'Notifiche',
+            'description' => 'Gestione dell\'invio di notifiche SMS',
+        ],
+        'label' => 'Invio SMS',
+        'icon' => 'heroicon-o-chat-bubble-left-right',
+        'sort' => 15,
+    ],
+    'fields' => [
+        'driver' => [
+            'description' => 'Driver SMS',
+            'helper_text' => 'Seleziona il provider per l\'invio SMS',
+            'placeholder' => 'Seleziona un driver',
+            'label' => 'Driver',
+            'tooltip' => '',
+        ],
+        'message' => [
+            'description' => 'Contenuto del messaggio',
+            'helper_text' => 'Testo del messaggio da inviare',
+            'placeholder' => 'Scrivi il messaggio',
+            'label' => 'Messaggio',
+            'tooltip' => '',
+        ],
+        'phone' => [
+            'description' => 'Numero di telefono',
+            'helper_text' => 'Numero del destinatario',
+            'placeholder' => 'Inserisci il numero',
+            'label' => 'Numero telefono',
+            'tooltip' => '',
+        ],
+        'gateway' => [
+            'description' => 'Gateway SMS',
+            'helper_text' => 'Gateway utilizzato per l\'invio',
+            'placeholder' => 'Gateway SMS',
+            'label' => 'Gateway',
+            'tooltip' => '',
+        ],
+        'to' => [
+            'description' => 'to',
+            'helper_text' => 'to',
+            'placeholder' => 'to',
+            'label' => 'to',
+            'tooltip' => '',
+        ],
+        'template_slug' => [
+            'description' => 'template_slug',
+            'helper_text' => 'template_slug',
+            'placeholder' => 'template_slug',
+            'label' => 'template_slug',
+            'tooltip' => '',
+        ],
+    ],
+    'actions' => [
+        'send' => [
+            'label' => 'Invia SMS',
+            'tooltip' => 'Invia un messaggio SMS al destinatario',
+            'success_message' => 'SMS inviato con successo',
+            'error_message' => 'Errore nell\'invio dell\'SMS',
+        ],
+        'test' => [
+            'label' => 'Test connessione',
+            'tooltip' => 'Verifica la connessione con il provider',
+            'success_message' => 'Connessione verificata con successo',
+            'error_message' => 'Errore nella verifica della connessione',
+        ],
+    ],
+    'messages' => [
+        'success' => 'SMS inviato con successo',
+        'error' => 'Si è verificato un errore durante l\'invio dell\'SMS',
+        'confirmation' => 'Sei sicuro di voler inviare questo SMS?',
+    ],
+    'label' => 'Send Sms',
+    'plural_label' => 'Send Sms (Plurale)',
+];

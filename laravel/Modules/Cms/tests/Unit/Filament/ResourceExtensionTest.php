@@ -120,11 +120,11 @@ test('page resource form schema contains expected fields', function () {
     // Check for basic field structure
     $hasTitleField = collect($schema)
         ->contains(
-            fn ($field) => is_object($field) && method_exists($field, 'getName') && 'title' === $field->getName(),
+            fn ($field) => is_object($field) && method_exists($field, 'getName') && $field->getName() === 'title',
         );
 
     $hasSlugField = collect($schema)
-        ->contains(fn ($field) => is_object($field) && method_exists($field, 'getName') && 'slug' === $field->getName());
+        ->contains(fn ($field) => is_object($field) && method_exists($field, 'getName') && $field->getName() === 'slug');
 
     expect($hasTitleField)->toBeTrue('PageResource should have title field');
     expect($hasSlugField)->toBeTrue('PageResource should have slug field');
@@ -138,12 +138,12 @@ test('menu resource form schema contains expected fields', function () {
     // Check for basic field structure
     $hasTitleField = collect($schema)
         ->contains(
-            fn ($field) => is_object($field) && method_exists($field, 'getName') && 'title' === $field->getName(),
+            fn ($field) => is_object($field) && method_exists($field, 'getName') && $field->getName() === 'title',
         );
 
     $hasItemsField = collect($schema)
         ->contains(
-            fn ($field) => is_object($field) && method_exists($field, 'getName') && 'items' === $field->getName(),
+            fn ($field) => is_object($field) && method_exists($field, 'getName') && $field->getName() === 'items',
         );
 
     expect($hasTitleField)->toBeTrue('MenuResource should have title field');

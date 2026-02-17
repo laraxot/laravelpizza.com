@@ -21,13 +21,13 @@ class FetchCoordinatesAction
 
     public function __construct()
     {
-        $this->client = new Client();
+        $this->client = new Client;
     }
 
     /**
      * Ottiene le coordinate geografiche da un indirizzo.
      *
-     * @param string $address Indirizzo da geocodificare
+     * @param  string  $address  Indirizzo da geocodificare
      *
      * @throws GuzzleException
      * @throws \RuntimeException

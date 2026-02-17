@@ -33,7 +33,6 @@ use Webmozart\Assert\Assert;
  */
 class SendTelegram extends XotBasePage
 {
-
     // use NavigationLabelTrait;
 
     public ?array $emailData = [];

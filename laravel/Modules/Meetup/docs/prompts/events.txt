@@ -1,0 +1,4 @@
+la pagina http://127.0.0.1:8000/it/events ora legge laravel/config/local/laravelpizza/database/content/pages/events.json  che gli eventi sono hardcoded, penso sia meglio passargli il model laravel/Modules/Meetup/app/Models/Event.php  uno scope , un ordinamento e un limit .. analizza se servono anche altri parametri , nel modello laravel/Modules/Meetup/app/Models/Event.php dovrebbe aver gia' caricato gli eventi tramite l'azione laravel/Modules/Meetup/app/Actions/Event/ImportEventsFromJsonAction.php , percio' ragiona sullo scopo di quello che vogliamo ottenere poi aggiorna le tue cartelle docs dentro i moduli e dentro i temi , le tue rules, le tue skills e le tue memories , poi implementa e poi controlla con tutto quello che puoi fare per ottenere il risultato finale
+
+
+http://127.0.0.1:8000/it/events  per andare nel dettaglio dell'evento dobbiamo pensare anche alla seo percio' non deve utilizzare l'id dell'evento ma lo slug del evento

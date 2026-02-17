@@ -18,15 +18,14 @@ class CheckOtpExpiredRule implements ValidationRule
 
     public function __construct(
         private User $user,
-    ) {
-    }
+    ) {}
 
     /**
      * Run the validation rule.
      */
     public function validate(string $_attribute, mixed $_value, \Closure $fail): void
     {
-        if (null === $this->user->updated_at) {
+        if ($this->user->updated_at === null) {
             $fail($this->message);
 
             return;

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Livewire\Wireable;
+use Modules\Cms\Actions\ResolveBlockQueryAction;
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 use Spatie\LaravelData\DataCollection;
@@ -29,6 +30,15 @@ class BlockData extends Data implements Wireable
     {
         $this->type = $type;
         $this->slug = $slug;
+
+        // Dynamic Query Resolution
+        /** @var array<string, mixed> $query */
+        $query = Arr::get($data, 'query');
+        if (is_array($query)) {
+            $dynamicData = app(ResolveBlockQueryAction::class)->execute($query);
+            $data = array_merge($data, $dynamicData);
+        }
+
         $this->data = $data;
         Assert::string($view = Arr::get($data, 'view', 'ui::empty'), '['.__LINE__.']['.__FILE__.']');
 

@@ -28,7 +28,6 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
  */
 class SendTelegramPage extends XotBasePage
 {
-
     // use NavigationLabelTrait;
 
     public ?array $telegramData = [];

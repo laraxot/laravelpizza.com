@@ -26,7 +26,6 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
  */
 class SendEmail extends XotBasePage
 {
-
     // use NavigationLabelTrait;
 
     public ?array $emailData = [];

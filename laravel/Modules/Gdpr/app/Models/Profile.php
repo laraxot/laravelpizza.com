@@ -24,48 +24,48 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
 /**
  * Modules\Gdpr\Models\Profile.
  *
- * @property string                                                    $id
- * @property string|null                                               $post_type
- * @property string|null                                               $bio
- * @property Carbon|null                                               $created_at
- * @property Carbon|null                                               $updated_at
- * @property string|null                                               $created_by
- * @property string|null                                               $updated_by
- * @property string|null                                               $deleted_by
- * @property string|null                                               $first_name
- * @property string|null                                               $surname
- * @property string|null                                               $email
- * @property string|null                                               $phone
- * @property string|null                                               $address
- * @property string|null                                               $user_id
- * @property string|null                                               $last_name
- * @property string|null                                               $tax_code
- * @property string|null                                               $vat_number
- * @property Carbon|null                                               $deleted_at
- * @property SchemalessAttributes                                      $extra
- * @property string                                                    $avatar
- * @property ProfileContract|null                                      $creator
- * @property Collection<int, DeviceUser>                               $deviceUsers
- * @property int|null                                                  $device_users_count
- * @property DeviceProfile|null                                        $pivot
- * @property Collection<int, Device>                                   $devices
- * @property int|null                                                  $devices_count
- * @property string|null                                               $full_name
- * @property MediaCollection<int, Media>                               $media
- * @property int|null                                                  $media_count
- * @property Collection<int, DeviceUser>                               $mobileDeviceUsers
- * @property int|null                                                  $mobile_device_users_count
- * @property Collection<int, Device>                                   $mobileDevices
- * @property int|null                                                  $mobile_devices_count
+ * @property string $id
+ * @property string|null $post_type
+ * @property string|null $bio
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property string|null $deleted_by
+ * @property string|null $first_name
+ * @property string|null $surname
+ * @property string|null $email
+ * @property string|null $phone
+ * @property string|null $address
+ * @property string|null $user_id
+ * @property string|null $last_name
+ * @property string|null $tax_code
+ * @property string|null $vat_number
+ * @property Carbon|null $deleted_at
+ * @property SchemalessAttributes $extra
+ * @property string $avatar
+ * @property ProfileContract|null $creator
+ * @property Collection<int, DeviceUser> $deviceUsers
+ * @property int|null $device_users_count
+ * @property DeviceProfile|null $pivot
+ * @property Collection<int, Device> $devices
+ * @property int|null $devices_count
+ * @property string|null $full_name
+ * @property MediaCollection<int, Media> $media
+ * @property int|null $media_count
+ * @property Collection<int, DeviceUser> $mobileDeviceUsers
+ * @property int|null $mobile_device_users_count
+ * @property Collection<int, Device> $mobileDevices
+ * @property int|null $mobile_devices_count
  * @property DatabaseNotificationCollection<int, DatabaseNotification> $notifications
- * @property int|null                                                  $notifications_count
- * @property Collection<int, Permission>                               $permissions
- * @property int|null                                                  $permissions_count
- * @property Collection<int, Role>                                     $roles
- * @property int|null                                                  $roles_count
- * @property ProfileContract|null                                      $updater
- * @property User|null                                                 $user
- * @property string|null                                               $user_name
+ * @property int|null $notifications_count
+ * @property Collection<int, Permission> $permissions
+ * @property int|null $permissions_count
+ * @property Collection<int, Role> $roles
+ * @property int|null $roles_count
+ * @property ProfileContract|null $updater
+ * @property User|null $user
+ * @property string|null $user_name
  *
  * @method static Builder<static>|Profile newModelQuery()
  * @method static Builder<static>|Profile newQuery()

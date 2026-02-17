@@ -28,7 +28,6 @@ use Webmozart\Assert\Assert;
  */
 class TestSmtpPage extends XotBasePage
 {
-
     public ?array $emailData = [];
 
     public ?string $error_message = null;

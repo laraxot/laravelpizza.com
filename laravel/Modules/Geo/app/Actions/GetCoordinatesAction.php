@@ -46,7 +46,7 @@ class GetCoordinatesAction
         /** @var array{status: string, results: array<int, array{geometry: array{location: array{lat: float, lng: float}}}>} $data */
         $data = json_decode($response->body(), true);
 
-        if ('OK' !== $data['status'] || empty($data['results'])) {
+        if ($data['status'] !== 'OK' || empty($data['results'])) {
             return null;
         }
 

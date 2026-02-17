@@ -2,94 +2,79 @@
 
 declare(strict_types=1);
 
-return array (
-  'fields' => 
-  array (
-    'title' => 
-    array (
-      'label' => 'title',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'start_date' => 
-    array (
-      'label' => 'start_date',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'status' => 
-    array (
-      'label' => 'status',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'organizer' => 
-    array (
-      'name' => 
-      array (
-        'label' => 'organizer.name',
-      ),
-      'label' => '',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-  ),
-  'actions' => 
-  array (
-    'applyFilters' => 
-    array (
-      'label' => 'applyFilters',
-      'icon' => 'applyFilters',
-      'tooltip' => 'applyFilters',
-    ),
-    'openFilters' => 
-    array (
-      'label' => 'openFilters',
-      'icon' => 'openFilters',
-      'tooltip' => 'openFilters',
-    ),
-    'resetFilters' => 
-    array (
-      'label' => 'resetFilters',
-      'icon' => 'resetFilters',
-      'tooltip' => 'resetFilters',
-    ),
-    'applyTableColumnManager' => 
-    array (
-      'label' => 'applyTableColumnManager',
-      'icon' => 'applyTableColumnManager',
-      'tooltip' => 'applyTableColumnManager',
-    ),
-    'openColumnManager' => 
-    array (
-      'label' => 'openColumnManager',
-      'icon' => 'openColumnManager',
-      'tooltip' => 'openColumnManager',
-    ),
-    'reorderRecords' => 
-    array (
-      'label' => 'reorderRecords',
-      'icon' => 'reorderRecords',
-      'tooltip' => 'reorderRecords',
-    ),
-  ),
-  'label' => 'Recent Events',
-  'plural_label' => 'Recent Events (Plurale)',
-  'navigation' => 
-  array (
-    'name' => 'Recent Events',
-    'plural' => 'Recent Events',
-    'group' => 
-    array (
-      'name' => 'General',
-      'description' => 'General Settings',
-    ),
+return [
+    'fields' => [
+        'title' => [
+            'label' => 'title',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'start_date' => [
+            'label' => 'start_date',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'status' => [
+            'label' => 'status',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'organizer' => [
+            'name' => [
+                'label' => 'organizer.name',
+            ],
+            'label' => '',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'actions' => [
+        'applyFilters' => [
+            'label' => 'applyFilters',
+            'icon' => 'applyFilters',
+            'tooltip' => 'applyFilters',
+        ],
+        'openFilters' => [
+            'label' => 'openFilters',
+            'icon' => 'openFilters',
+            'tooltip' => 'openFilters',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+            'icon' => 'resetFilters',
+            'tooltip' => 'resetFilters',
+        ],
+        'applyTableColumnManager' => [
+            'label' => 'applyTableColumnManager',
+            'icon' => 'applyTableColumnManager',
+            'tooltip' => 'applyTableColumnManager',
+        ],
+        'openColumnManager' => [
+            'label' => 'openColumnManager',
+            'icon' => 'openColumnManager',
+            'tooltip' => 'openColumnManager',
+        ],
+        'reorderRecords' => [
+            'label' => 'reorderRecords',
+            'icon' => 'reorderRecords',
+            'tooltip' => 'reorderRecords',
+        ],
+    ],
     'label' => 'Recent Events',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ),
-);
+    'plural_label' => 'Recent Events (Plurale)',
+    'navigation' => [
+        'name' => 'Recent Events',
+        'plural' => 'Recent Events',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Recent Events',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+];

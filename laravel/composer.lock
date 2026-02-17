@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc9ebc89d31f3a3f4124accb5ed34e0b",
+    "content-hash": "e2e12e95868c1e76fd8cf2f2f242d714",
     "packages": [
         {
             "name": "aaronfrancis/fast-paginate",
@@ -18850,7 +18850,7 @@
         },
         {
             "name": "illuminate/json-schema",
-            "version": "v12.51.0",
+            "version": "v12.52.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/json-schema.git",
@@ -19113,16 +19113,16 @@
         },
         {
             "name": "laravel/mcp",
-            "version": "v0.5.7",
+            "version": "v0.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/mcp.git",
-                "reference": "97fcdacbce93c572e3d25457cf30395dede67088"
+                "reference": "cf9b0ccaed2cec3c50595e3a21421c84a4ed99b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/mcp/zipball/97fcdacbce93c572e3d25457cf30395dede67088",
-                "reference": "97fcdacbce93c572e3d25457cf30395dede67088",
+                "url": "https://api.github.com/repos/laravel/mcp/zipball/cf9b0ccaed2cec3c50595e3a21421c84a4ed99b3",
+                "reference": "cf9b0ccaed2cec3c50595e3a21421c84a4ed99b3",
                 "shasum": ""
             },
             "require": {
@@ -19182,7 +19182,7 @@
                 "issues": "https://github.com/laravel/mcp/issues",
                 "source": "https://github.com/laravel/mcp"
             },
-            "time": "2026-02-13T14:08:37+00:00"
+            "time": "2026-02-16T18:48:41+00:00"
         },
         {
             "name": "laravel/pail",

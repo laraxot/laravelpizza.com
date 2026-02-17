@@ -12,21 +12,21 @@ use Modules\Xot\Contracts\UserContract;
 /**
  * Modules\User\Models\OauthAccessToken.
  *
- * @property string                 $id
- * @property string|null            $user_id
- * @property string                 $client_id
- * @property string|null            $name
- * @property array|null             $scopes
- * @property bool                   $revoked
- * @property Carbon|null            $created_at
- * @property Carbon|null            $updated_at
- * @property Carbon|null            $expires_at
- * @property string|null            $updated_by
- * @property string|null            $created_by
- * @property string|null            $deleted_at
- * @property string|null            $deleted_by
- * @property OauthClient|null       $client
- * @property UserContract|null      $user
+ * @property string $id
+ * @property string|null $user_id
+ * @property string $client_id
+ * @property string|null $name
+ * @property array|null $scopes
+ * @property bool $revoked
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property Carbon|null $expires_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property string|null $deleted_at
+ * @property string|null $deleted_by
+ * @property OauthClient|null $client
+ * @property UserContract|null $user
  * @property OauthRefreshToken|null $refreshToken
  *
  * @method static Builder|OauthAccessToken newModelQuery()

@@ -2,67 +2,55 @@
 
 declare(strict_types=1);
 
-return array (
-  'add_attachment' => 
-  array (
-    'title' => 'Allegati',
-    'label' => 'Carica allegato',
-    'fields' => 
-    array (
-    ),
-  ),
-  'label' => 'Actions',
-  'plural_label' => 'Actions (Plurale)',
-  'navigation' => 
-  array (
-    'name' => 'Actions',
-    'plural' => 'Actions',
-    'group' => 
-    array (
-      'name' => 'General',
-      'description' => 'General Settings',
-    ),
+return [
+    'add_attachment' => [
+        'title' => 'Allegati',
+        'label' => 'Carica allegato',
+        'fields' => [
+        ],
+    ],
     'label' => 'Actions',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ),
-  'fields' => 
-  array (
-    'id' => 
-    array (
-      'label' => 'Identificativo',
-      'tooltip' => 'Identificativo univoco del record',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'created_at' => 
-    array (
-      'label' => 'Data Creazione',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'updated_at' => 
-    array (
-      'label' => 'Ultima Modifica',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-  ),
-  'actions' => 
-  array (
-    'create' => 
-    array (
-      'label' => 'Crea Actions',
-    ),
-    'edit' => 
-    array (
-      'label' => 'Modifica Actions',
-    ),
-    'delete' => 
-    array (
-      'label' => 'Elimina Actions',
-    ),
-  ),
-);
+    'plural_label' => 'Actions (Plurale)',
+    'navigation' => [
+        'name' => 'Actions',
+        'plural' => 'Actions',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Actions',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'fields' => [
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Actions',
+        ],
+        'edit' => [
+            'label' => 'Modifica Actions',
+        ],
+        'delete' => [
+            'label' => 'Elimina Actions',
+        ],
+    ],
+];
