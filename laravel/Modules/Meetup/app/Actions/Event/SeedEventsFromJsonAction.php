@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace Modules\Meetup\Actions\Event;
 
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Log;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
+use Psr\Log\LoggerInterface;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
@@ -26,21 +25,24 @@ class SeedEventsFromJsonAction
      */
     public function execute(?string $filePath = null): void
     {
+        $files = app('files'); // Resolve the filesystem instance
+        $log = app('log'); // Resolve the logger instance
+
         if ($filePath === null) {
             $filePath = base_path('Modules/Meetup/database/json/events.json');
         }
 
-        if (! File::exists($filePath)) {
-            Log::error("Event seeding failed: File not found at {$filePath}");
+        if (! $files->exists($filePath)) {
+            $log->error("Event seeding failed: File not found at {$filePath}");
 
             return;
         }
 
-        $json = File::get($filePath);
+        $json = $files->get($filePath);
         $data = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
 
         if (! is_array($data)) {
-            Log::error("Event seeding failed: Invalid JSON format in {$filePath}");
+            $log->error("Event seeding failed: Invalid JSON format in {$filePath}");
 
             return;
         }
@@ -49,7 +51,7 @@ class SeedEventsFromJsonAction
             if (is_array($eventData)) {
                 /** @var array<string, mixed> $eventData */
                 $eventData = array_merge([], $eventData);
-                $this->createEvent($eventData);
+                $this->createEvent($eventData, $log);
             }
         }
     }
@@ -59,7 +61,7 @@ class SeedEventsFromJsonAction
      *
      * @param  array<string, mixed>  $data
      */
-    private function createEvent(array $data): void
+    private function createEvent(array $data, \Psr\Log\LoggerInterface $log): void
     {
         Assert::keyExists($data, 'title');
         Assert::keyExists($data, 'date');
@@ -78,7 +80,7 @@ class SeedEventsFromJsonAction
             $startDate = Carbon::parse($dateStr.' '.$startTimeStr);
             $endDate = Carbon::parse($dateStr.' '.$endTimeStr);
         } catch (\Exception $e) {
-            Log::warning("Skipping event '{$title}': Invalid date/time format. ".$e->getMessage());
+            $log->warning("Skipping event '{$title}': Invalid date/time format. ".$e->getMessage());
 
             return;
         }

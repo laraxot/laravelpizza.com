@@ -22,7 +22,7 @@ abstract class TestCase extends BaseTestCase
     use CreatesApplication;
     use DatabaseTransactions;
 
-    protected $connectionsToTransact = [
+    protected $connections = [
         'mysql',
         'user',
     ];
@@ -44,7 +44,7 @@ abstract class TestCase extends BaseTestCase
         // DatabaseTransactions trait handles rollback automatically between tests
     }
 
-    protected function getPackageProviders($app): array
+    protected function getPackageProviders(): array
     {
         return [
             XotServiceProvider::class,

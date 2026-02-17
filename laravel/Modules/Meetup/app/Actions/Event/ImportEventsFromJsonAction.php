@@ -5,11 +5,9 @@ declare(strict_types=1);
 namespace Modules\Meetup\Actions\Event;
 
 use Carbon\Carbon;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Modules\Meetup\Enums\EventAttendanceMode;
+use Psr\Log\LoggerInterface;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Models\Event;
 use Spatie\QueueableAction\QueueableAction;
@@ -37,16 +35,19 @@ class ImportEventsFromJsonAction
         $singleFile = $path ?? $modulePath.'/events.json';
         $directory = $modulePath.'/events';
 
+        $files = app('files'); // Resolve the filesystem instance
+        $log = app('log'); // Resolve the logger instance
+
         // Try single file first, then directory
-        if (File::exists($singleFile)) {
-            return $this->importFromSingleFile($singleFile, $locale);
+        if ($files->exists($singleFile)) {
+            return $this->importFromSingleFile($singleFile, $locale, $files);
         }
 
-        if (File::exists($directory)) {
-            return $this->importFromDirectory($directory, $locale);
+        if ($files->exists($directory)) {
+            return $this->importFromDirectory($directory, $locale, $files, $log);
         }
 
-        Log::warning('ImportEventsFromJsonAction: no events file found', [
+        $log->warning('ImportEventsFromJsonAction: no events file found', [
             'single_file' => $singleFile,
             'directory' => $directory,
         ]);
@@ -57,19 +58,19 @@ class ImportEventsFromJsonAction
     /**
      * Import from single events.json file.
      */
-    protected function importFromSingleFile(string $path, string $locale): int
+    protected function importFromSingleFile(string $path, string $locale, \Illuminate\Filesystem\Filesystem $files): int
     {
         /** @var array<string, mixed> $payload */
-        $payload = json_decode(File::get($path), true, 512, JSON_THROW_ON_ERROR);
+        $payload = json_decode($files->get($path), true, 512, JSON_THROW_ON_ERROR);
 
+        $events = [];
         // Handle both {"events": [...]} and [...] formats
         if (isset($payload['events']) && is_array($payload['events'])) {
             $events = $payload['events'];
-        } elseif (is_array($payload) && ! empty($payload)) {
+        }
+        if (empty($events) && is_array($payload) && ! empty($payload)) {
             // Plain array format: [{...}, {...}]
             $events = $payload;
-        } else {
-            $events = [];
         }
 
         /** @var array<array<string, mixed>> $events */
@@ -79,23 +80,23 @@ class ImportEventsFromJsonAction
     /**
      * Import from individual JSON files in events directory.
      */
-    protected function importFromDirectory(string $directory, string $locale): int
+    protected function importFromDirectory(string $directory, string $locale, \Illuminate\Filesystem\Filesystem $files, \Psr\Log\LoggerInterface $log): int
     {
-        $files = File::files($directory);
+        $filesList = $files->files($directory);
         $count = 0;
 
-        foreach ($files as $file) {
+        foreach ($filesList as $file) {
             if ($file->getExtension() !== 'json') {
                 continue;
             }
 
             try {
                 /** @var array<string, mixed> $data */
-                $data = json_decode(File::get($file->getPathname()), true, 512, JSON_THROW_ON_ERROR);
+                $data = json_decode($files->get($file->getPathname()), true, 512, JSON_THROW_ON_ERROR);
                 $this->processSingleEvent($data, $locale);
                 $count++;
             } catch (\Exception $e) {
-                Log::warning('ImportEventsFromJsonAction: failed to import file', [
+                $log->warning('ImportEventsFromJsonAction: failed to import file', [
                     'file' => $file->getFilename(),
                     'error' => $e->getMessage(),
                 ]);
@@ -132,7 +133,7 @@ class ImportEventsFromJsonAction
         $start = $this->parseStart($item);
         $end = $this->parseEnd($item, $start);
 
-        $status = strtolower((string) Arr::get($item, 'status', 'upcoming'));
+        $status = strtolower((string) ($item['status'] ?? 'upcoming'));
         $eventStatus = match ($status) {
             'completed' => EventStatus::COMPLETED,
             'cancelled' => EventStatus::CANCELLED,
@@ -153,26 +154,26 @@ class ImportEventsFromJsonAction
 
         return Event::updateOrCreate(
             [
-                'title' => Arr::get($item, 'title'),
+                'title' => $item['title'] ?? null,
                 'start_date' => $start,
-                'location' => Arr::get($item, 'location'),
+                'location' => $item['location'] ?? null,
             ],
             [
-                'description' => Arr::get($item, 'description'),
-                'in_language' => Arr::get($item, 'in_language', $locale),
+                'description' => $item['description'] ?? null,
+                'in_language' => $item['in_language'] ?? $locale,
                 'end_date' => $end,
                 'duration' => $this->duration($start, $end),
                 'status' => $status,
                 'event_status' => $eventStatus,
                 'event_attendance_mode' => $this->parseAttendanceMode(is_string($item['event_attendance_mode'] ?? null) ? $item['event_attendance_mode'] : null),
-                'attendees_count' => (int) Arr::get($item, 'attendees_count', Arr::get($item, 'attendees_current', 0)),
-                'max_attendees' => (int) Arr::get($item, 'max_attendees', Arr::get($item, 'attendees_max', 0)) ?: 30,
-                'url' => Arr::get($item, 'url'),
-                'cover_image' => Arr::get($item, 'image'),
-                'slug' => $this->generateSlug((string) Arr::get($item, 'title', 'event')),
+                'attendees_count' => (int) ($item['attendees_count'] ?? $item['attendees_current'] ?? 0),
+                'max_attendees' => (int) ($item['max_attendees'] ?? $item['attendees_max'] ?? 0) ?: 30,
+                'url' => $item['url'] ?? null,
+                'cover_image' => $item['image'] ?? null,
+                'slug' => $this->generateSlug((string) ($item['title'] ?? 'event')),
                 'offers' => $this->parseOffers($this->normalizeOffers($item['offers'] ?? null)),
                 'meta_data' => [
-                    'organizer' => Arr::get($item, 'organizer'),
+                    'organizer' => $item['organizer'] ?? null,
                     'schema_original' => $item,
                 ],
             ]
@@ -191,8 +192,8 @@ class ImportEventsFromJsonAction
         }
 
         // Legacy format: separate date and time
-        $date = (string) Arr::get($item, 'date', date('Y-m-d'));
-        $timeRange = (string) Arr::get($item, 'time', '00:00');
+        $date = (string) ($item['date'] ?? date('Y-m-d'));
+        $timeRange = (string) ($item['time'] ?? '00:00');
         $splitParts = preg_split('/\s*-\s*/', $timeRange);
         [$startTime] = array_pad($splitParts, 1, '00:00');
         $startTime = is_string($startTime) ? $startTime : '00:00';
@@ -212,8 +213,8 @@ class ImportEventsFromJsonAction
         }
 
         // Legacy format: separate date and time
-        $date = (string) Arr::get($item, 'date', date('Y-m-d'));
-        $timeRange = (string) Arr::get($item, 'time', '');
+        $date = (string) ($item['date'] ?? date('Y-m-d'));
+        $timeRange = (string) ($item['time'] ?? '');
         $parts = preg_split('/\s*-\s*/', $timeRange);
         $endTime = $parts[1] ?? null;
         $endTime = is_string($endTime) ? $endTime : null;

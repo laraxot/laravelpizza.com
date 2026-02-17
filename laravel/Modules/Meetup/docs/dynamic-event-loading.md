@@ -42,11 +42,22 @@ The system ensures that event detail pages use human-readable and SEO-friendly s
 
 1.  **`Event` Model (`Modules\Meetup\app\Models\Event.php`)**:
     *   The `Event` model includes a `slug` attribute, which stores a unique, URL-friendly identifier for each event.
-    *   The `toBlockArray()` method within the `Event` model is crucial for URL generation. It constructs the `url` key in the output array using the event's `slug`:
-        ```php
-        'url' => $this->url ?? '/it/events/'.(string) $this->slug,
-        ```
-    *   This ensures that any links generated from these transformed event arrays will contain the slug.
+    *   The `toBlockArray()` method within the `Event` model is crucial for transforming the event data into a format expected by the Blade components. It now includes the following keys:
+        *   `id`: The unique identifier of the event.
+        *   `slug`: The SEO-friendly slug of the event.
+        *   `status`: The event status (e.g., 'upcoming', 'past').
+        *   `status_label`: The human-readable label for the event status.
+        *   `title`: The title of the event.
+        *   `description`: The description of the event.
+        *   `date`: Formatted start date.
+        *   `date_string`: Formatted start date (same as `date`).
+        *   `time`: Formatted time range of the event.
+        *   `location`: The physical location of the event.
+        *   `attendees_current`: Current number of attendees.
+        *   `attendees_max`: Maximum number of attendees.
+        *   `image`: The URL to the event's cover image.
+        *   `url`: The localized, SEO-friendly URL to the event's detail page.
+
 
 2.  **Folio Page (`Themes/Meetup/resources/views/pages/[slug].blade.php`)**:
     *   This generic Folio page handles dynamic routes.

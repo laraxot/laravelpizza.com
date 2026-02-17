@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Actions\Event;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Modules\Meetup\Models\Event;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -18,9 +16,9 @@ class CreateEventAction
      */
     public function execute(array $data): Event
     {
-        $userId = Auth::id();
+        $userId = app('auth')->id();
 
-        return DB::transaction(function () use ($data, $userId): Event {
+        return app('db')->transaction(function () use ($data, $userId): Event {
             $event = new Event;
             $event->fill($data);
             if ($userId !== null) {

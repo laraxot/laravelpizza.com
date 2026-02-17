@@ -42,6 +42,8 @@
     $description = $description ?? ($data['description'] ?? 'Join us for pizza and Laravel discussions');
     
     $eventsJson = Js::from($eventsData);
+
+    $eventsBaseUrl = \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeUrl('/events');
 @endphp
 
 <section class="py-12 md:py-16 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white transition-colors" 
@@ -80,7 +82,7 @@
         {{-- Events Grid --}}
         <div class="grid md:grid-cols-3 gap-8">
             <template x-for="event in filteredEvents" :key="event.id">
-                <a :href="'{{ $eventsBaseUrl }}/' + event.slug"
+                <a :href="event.url"
                     class="block bg-white dark:bg-slate-800 border border-slate-200 dark:border-red-900/20 rounded-lg overflow-hidden hover:border-red-500/50 hover:shadow-lg transition-all group h-full">
                     <div class="relative">
                         <div class="aspect-video bg-slate-200 dark:bg-slate-700 flex items-center justify-center">

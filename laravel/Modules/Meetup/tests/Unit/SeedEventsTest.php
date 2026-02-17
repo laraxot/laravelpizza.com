@@ -13,7 +13,7 @@ class SeedEventsTest extends TestCase
     /**
      * Test that events can be seeded from JSON correctly.
      */
-    public function test_events_are_seeded_correctly_from_json(): void
+    public function testEventsAreSeededCorrectlyFromJson(): void
     {
         // 1. Arrange: Clear existing events
         Event::truncate();

@@ -373,6 +373,24 @@ The key generated will be `user::register.fields.email.label`.
 <a href="{{ route('dashboard') }}">  {{-- NO! --}}
 ```
 
+### URL Localization in Alpine.js Components (CRITICAL!)
+
+When using Alpine.js to render dynamic content (e.g., event lists), ALWAYS use the pre-computed localized URL from the data:
+
+```blade
+{{-- WRONG - Missing locale prefix --}}
+<a :href="'/events/' + event.slug">  {{-- Results in /events/slug! --}}
+
+{{-- CORRECT - Use pre-computed URL from model --}}
+<a :href="event.url">  {{-- event.url already contains /it/events/slug --}}
+```
+
+The `toBlockArray()` method in models should generate localized URLs:
+```php
+// In Event model
+'url' => LaravelLocalization::localizeUrl('/events/'.$this->slug),
+```
+
 ### Backend (Admin) - Filament Only
 - All admin resources extend XotBase classes
 - NO raw Filament extensions

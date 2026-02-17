@@ -297,6 +297,27 @@ app(DoSomethingAction::class)->execute($data);
 
 ---
 
+## 🎬 9. Pragmatic StaticAccess Decisions
+
+**Principio**: Mentre la metodologia "Super Mucca" e Laraxot incoraggiano la minimizzazione dell'accesso statico per migliorare testabilità e disaccoppiamento, alcune eccezioni sono considerate pragmatiche e accettabili nel contesto di questo progetto, data la natura di specifici framework e librerie.
+
+### Eccezioni Accettabili per StaticAccess:
+
+1.  **Filament Components e Actions**:
+    *   Le chiamate statiche a componenti e azioni di Filament (es. `DatePicker::make()`, `EditAction::make()`) sono intrinseche al design idiomatico di Filament per la costruzione di form, tabelle e azioni. Rifattorizzare queste chiamate a un approccio non statico comporterebbe una complessità ingiustificata e una deviazione significativa dalle best practice di Filament. Vengono quindi mantenute.
+2.  **Eloquent Model Queries in Test**:
+    *   L'accesso statico a metodi di query del modello Eloquent (es. `Event::count()`, `Event::where()`) all'interno dei test è considerato standard e non introduce problemi di testabilità significativi in questo contesto. Vengono mantenute.
+3.  **`Webmozart\Assert\Assert`**:
+    *   Questa libreria di asserzioni è progettata con un'API statica e il suo utilizzo in modo statico è il pattern d'uso previsto. Vengono mantenute.
+4.  **`Carbon` e `Illuminate\Support\Carbon`**:
+    *   Le chiamate statiche a `Carbon::now()`, `Carbon::parse()` (e i loro equivalenti in `Illuminate\Support\Carbon`) sono helper fondamentali e onnipresenti in Laravel per la manipolazione di date e orari. Sostituirle con dependency injection aggiunge complessità senza un chiaro beneficio pragmatico in molti contesti. Vengono mantenute.
+5.  **`LaravelLocalization::localizeURL()`**:
+    *   L'utilizzo del facade `LaravelLocalization` per la localizzazione degli URL è una funzionalità specifica e ben definita. Iniettare il servizio di localizzazione per ogni utilizzo aggiungerebbe boilerplate. Vengono mantenute.
+
+**Giustificazione**: In questi casi specifici, il costo in termini di complessità e deviazione dai pattern idiomatici supera i benefici teorici della completa eliminazione dell'accesso statico. La decisione è basata sulla pragmatica e sull'aderenza alle convenzioni dei framework utilizzati, bilanciando la rigorosità con l'efficienza di sviluppo e la leggibilità del codice.
+
+---
+
 ## ✅ Checklist "Super Mucca"
 - [ ] Ho studiato docs root e modulo?
 - [ ] Ho valutato approcci alternativi?

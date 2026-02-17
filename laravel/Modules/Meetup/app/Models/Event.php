@@ -212,7 +212,7 @@ class Event extends BaseModel
             'attendees_current' => $this->attendees_count,
             'attendees_max' => $this->max_attendees,
             'image' => $this->cover_image ? asset($this->cover_image) : null,
-            'url' => '/'.(request()->segment(1) ?? app()->getLocale()).'/events/'.$this->slug,
+            'url' => LaravelLocalization::localizeUrl('/events/'.$this->slug),
         ];
     }
 

@@ -14,9 +14,9 @@
             <div>
                 <h4 class="text-white font-semibold mb-4">Links</h4>
                 <ul class="space-y-2">
-                    <li><a href="/" class="text-gray-400 hover:text-white text-sm transition-colors">Home</a></li>
-                    <li><a href="/events" class="text-gray-400 hover:text-white text-sm transition-colors">Eventi</a></li>
-                    <li><a href="/dashboard" class="text-gray-400 hover:text-white text-sm transition-colors">Dashboard</a></li>
+                    <li><a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-gray-400 hover:text-white text-sm transition-colors">Home</a></li>
+                    <li><a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="text-gray-400 hover:text-white text-sm transition-colors">Eventi</a></li>
+                    <li><a href="{{ LaravelLocalization::localizeUrl('/dashboard') }}" class="text-gray-400 hover:text-white text-sm transition-colors">Dashboard</a></li>
                 </ul>
             </div>
 

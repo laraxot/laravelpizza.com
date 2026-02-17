@@ -12,3 +12,6 @@ http://127.0.0.1:8000/it/events  dovrebbe essere uguale a https://laravelpizza.c
 
 
 controlla te stesso cosa vedi in http://127.0.0.1:8000/it/events, fa screenshots mettili in sottocartelle delle cartelle docs dentro i moduli e dentro dentro i temi, aggiorna le tue rules, le tue skills e le tue memories.
+
+
+questa pagina http://127.0.0.1:8000/it/events/laravel-11-release-pizza-party  dovrebbe essere come https://laravelpizza.com/events/1 fa screenshots mettili in sottocartelle delle cartelle docs dentro i moduli e dentro dentro i temi, aggiorna le tue rules, le tue skills e le tue memories.
