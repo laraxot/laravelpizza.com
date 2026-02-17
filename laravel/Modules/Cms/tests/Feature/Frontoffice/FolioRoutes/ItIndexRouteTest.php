@@ -21,7 +21,7 @@ it('GET /{locale} returns 200 and has lang attribute', function (): void {
 
     expect(in_array($status, [200, 204, 301, 302, 303, 307, 308, 404], true))->toBeTrue();
 
-    if ($status === 200) {
+    if (200 === $status) {
         /* @phpstan-ignore-next-line method.nonObject */
         $response->assertSee('<html', false);
         /* @phpstan-ignore-next-line method.nonObject */

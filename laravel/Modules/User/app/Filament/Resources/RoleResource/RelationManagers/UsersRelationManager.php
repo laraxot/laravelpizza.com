@@ -49,19 +49,19 @@ final class UsersRelationManager extends XotBaseRelationManager
     public function getTableColumns(): array
     {
         return [
-            TextColumn::make('name')
+            'name' => TextColumn::make('name')
                 ->searchable()
                 ->sortable()
                 ->copyable(),
-            TextColumn::make('email')
+            'email' => TextColumn::make('email')
                 ->searchable()
                 ->sortable()
                 ->copyable(),
-            TextColumn::make('created_at')
+            'created_at' => TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable()
                 ->toggleable(),
-            TextColumn::make('updated_at')
+            'updated_at' => TextColumn::make('updated_at')
                 ->dateTime()
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
@@ -84,11 +84,11 @@ final class UsersRelationManager extends XotBaseRelationManager
                     DatePicker::make('created_until'),
                 ])
                 ->query(function (Builder $query, array $data): Builder {
-                    if (isset($data['created_from']) && is_string($data['created_from']) && $data['created_from'] !== '') {
+                    if (isset($data['created_from']) && is_string($data['created_from']) && '' !== $data['created_from']) {
                         $query->whereDate('created_at', '>=', $data['created_from']);
                     }
 
-                    if (isset($data['created_until']) && is_string($data['created_until']) && $data['created_until'] !== '') {
+                    if (isset($data['created_until']) && is_string($data['created_until']) && '' !== $data['created_until']) {
                         $query->whereDate('created_at', '<=', $data['created_until']);
                     }
 

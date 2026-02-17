@@ -104,14 +104,14 @@ describe('Geocoding Business Logic', function () {
             $address = $this->italianAddress;
 
             // Business Logic: Milano is in Lombardia region with MI province
-            if ($address['city'] === 'Milano') {
+            if ('Milano' === $address['city']) {
                 expect($address['region'])->toBe('Lombardia');
                 expect($address['province'])->toBe('MI');
             }
 
             // Regional consistency check
             $lombardyProvinces = ['MI', 'BG', 'BS', 'CO', 'CR', 'MN', 'PV', 'SO', 'VA'];
-            if ($address['region'] === 'Lombardia') {
+            if ('Lombardia' === $address['region']) {
                 expect($lombardyProvinces)->toContain($address['province']);
             }
         });
@@ -282,14 +282,14 @@ describe('Geocoding Business Logic', function () {
             $place = $this->place;
 
             // Business Logic: Cities should have population data
-            if ($place['type'] === 'city') {
+            if ('city' === $place['type']) {
                 expect($place)->toHaveKey('population');
                 expect($place['population'])->toBeInt();
                 expect($place['population'])->toBeGreaterThan(0);
             }
 
             // Milano population validation (approx)
-            if ($place['name'] === 'Milano') {
+            if ('Milano' === $place['name']) {
                 expect($place['population'])->toBeGreaterThan(1000000);
                 expect($place['population'])->toBeLessThan(2000000);
             }

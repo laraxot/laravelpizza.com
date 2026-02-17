@@ -16,10 +16,12 @@ uses(TestCase::class);
 
 beforeEach(function (): void {
     $this->app->register(AdminPanelProvider::class);
+    $this->app->register(\Filament\Schemas\SchemasServiceProvider::class);
     Filament::setCurrentPanel(Filament::getPanel('user::admin'));
 });
 
 test('can change profile password', function (): void {
+    /** @var User $user */
     $user = User::factory()->create([
         'password' => Hash::make('old_password'),
     ]);
@@ -27,11 +29,11 @@ test('can change profile password', function (): void {
     actingAs($user);
 
     Livewire::test(MyProfilePage::class)
-        ->fillForm([
-            'Current password' => 'old_password',
-            'new_password' => 'new_password',
-            'passwordConfirmation' => 'new_password',
-        ], 'editPasswordForm')
+        ->fill([
+            'passwordData.current_password' => 'old_password',
+            'passwordData.new_password' => 'new_password',
+            'passwordData.password_confirmation' => 'new_password',
+        ])
         ->call('updatePassword')
         ->assertHasNoFormErrors();
 
@@ -39,20 +41,24 @@ test('can change profile password', function (): void {
 });
 
 test('cannot change password with wrong current password', function (): void {
+    /** @var User $user */
     $user = User::factory()->create([
         'password' => Hash::make('old_password'),
     ]);
 
     actingAs($user);
 
-    Livewire::test(MyProfilePage::class)
-        ->fillForm([
-            'Current password' => 'wrong_password',
-            'new_password' => 'new_password',
-            'passwordConfirmation' => 'new_password',
-        ], 'editPasswordForm')
-        ->call('updatePassword')
-        ->assertHasFormErrors(['Current password' => 'current_password'], 'editPasswordForm');
+    $testable = Livewire::test(MyProfilePage::class)
+        ->fill([
+            'passwordData.current_password' => 'wrong_password',
+            'passwordData.new_password' => 'new_password',
+            'passwordData.password_confirmation' => 'new_password',
+        ])
+        ->call('updatePassword');
+
+    $testable->assertHasErrors();
+
+    expect(collect($testable->errors()->keys())->contains(fn ($key) => str_contains($key, 'current_password')))->toBeTrue();
 
     expect(Hash::check('old_password', $user->fresh()?->password))->toBeTrue();
 });

@@ -6,7 +6,6 @@ namespace Modules\User\Actions\User;
 
 use Modules\User\Models\User;
 use Spatie\QueueableAction\QueueableAction;
-use Illuminate\Contracts\Hashing\Hasher;
 
 class CreateUserAction
 {
@@ -15,7 +14,7 @@ class CreateUserAction
     /**
      * Create a new user.
      *
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function execute(array $data): User
     {

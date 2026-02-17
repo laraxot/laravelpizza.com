@@ -24,7 +24,7 @@ class Block extends Component
         public string $tpl = '',
     ) {
         $view = Arr::get($this->block, 'data.view', null);
-        if ($view === null) {
+        if (null === $view) {
             $view = 'ui::empty';
         }
         Assert::string($view, __FILE__.':'.__LINE__.' - '.class_basename(self::class));

@@ -75,7 +75,7 @@ class RegistrationWidget extends XotBaseWidget
 
         /** @var Model|null $user */
         $user = $this->model::firstWhere('email', $email);
-        if ($user === null) {
+        if (null === $user) {
             /** @var Model $model */
             $model = app($this->model);
 

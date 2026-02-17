@@ -11,7 +11,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Collection;
 use Illuminate\View\View;
-use InvalidArgumentException;
 use Livewire\Component;
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Events\TeamSwitched;
@@ -58,7 +57,7 @@ class Change extends Component
         if (! $this->user->switchTeam($team)) {
             abort(403);
         }
-        if ($team !== null) {
+        if (null !== $team) {
             // TeamSwitched::dispatch($team->fresh(), $this->user);
             TeamSwitched::dispatch($team, $this->user);
         }
@@ -80,7 +79,7 @@ class Change extends Component
         $view_params = [
             'view' => $view,
         ];
-        if ($this->teams === []) {
+        if ([] === $this->teams) {
             $view = 'ui::livewire.empty';
         }
 

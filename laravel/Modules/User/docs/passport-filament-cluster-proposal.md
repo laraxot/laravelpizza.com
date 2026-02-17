@@ -1,5 +1,6 @@
 # Passport Filament Cluster Proposal - User Module
 
+**Data**: 2025-01-22
 **Filosofia**: DRY + KISS + Organizzazione Logica
 **Obiettivo**: Raggruppare tutte le risorse Passport/OAuth in un cluster Filament
 
@@ -197,6 +198,6 @@ php artisan make:filament-cluster Passport --module=User
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**Ultimo aggiornamento**: 2025-01-22
 **Versione**: 1.0.0
 **Status**: Proposta - da implementare

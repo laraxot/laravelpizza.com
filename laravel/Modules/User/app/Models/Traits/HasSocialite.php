@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Traits;
 
-use Exception;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Modules\User\Models\SocialiteUser;
 
@@ -23,8 +22,8 @@ trait HasSocialite
     public function getProviderField(string $provider, string $field): string
     {
         $socialiteUser = $this->socialiteUsers()->firstWhere(['provider' => $provider]);
-        if ($socialiteUser === null) {
-            throw new Exception('SocialiteUser not found');
+        if (null === $socialiteUser) {
+            throw new \Exception('SocialiteUser not found');
         }
 
         $res = $socialiteUser->{$field};

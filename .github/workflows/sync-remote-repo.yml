@@ -1,0 +1,53 @@
+name: Sync Remote Repo
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run daily at midnight
+  workflow_dispatch:
+    inputs:
+      org:
+        description: 'Organization to rewrite URLs to (optional)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.BASHSCRIPTS_TOKEN }}
+          submodules: false
+
+      - name: Configure Git for Auth
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          # Convert SSH URLs to HTTPS and use the token for authentication
+          git config --global url."https://x-access-token:${{ secrets.BASHSCRIPTS_TOKEN }}@github.com/".insteadOf "git@github.com:"
+          git config --global url."https://x-access-token:${{ secrets.BASHSCRIPTS_TOKEN }}@github.com/".insteadOf "https://github.com/"
+
+      - name: Checkout bashscripts (private repo, develop)
+        uses: actions/checkout@v4
+        with:
+          repository: laraxot/bashscripts_fila4
+          ref: develop
+          token: ${{ secrets.BASHSCRIPTS_TOKEN }}
+          path: bashscripts
+          fetch-depth: 0
+
+      - name: Run Sync Script
+        run: |
+          chmod +x bashscripts/git/subtrees/sync_remote_repo.sh
+          ./bashscripts/git/subtrees/sync_remote_repo.sh "${{ inputs.org }}"
+        env:
+          BASHSCRIPTS_TOKEN: ${{ secrets.BASHSCRIPTS_TOKEN }}

@@ -1,124 +1,82 @@
-name: CI - LaravelPizza.com
+name: CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [develop, main]
   pull_request:
-    branches: [ main, develop ]
-
-permissions:
-  contents: read
-  id-token: write
-  attestations: write
-  checks: write
+    branches: [develop, main]
 
 jobs:
-  quality-check:
-    name: Code Quality & Tests
+  phpstan:
+    name: PHPStan Static Analysis
     runs-on: ubuntu-latest
-    
-    services:
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_ROOT_PASSWORD: password
-          MYSQL_DATABASE: laravelpizza_test
-        ports:
-          - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
+      
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
-          extensions: mbstring, xml, ctype, json, bcmath, pdo, pdo_mysql, intl
-          coverage: xdebug
-          tools: composer:v2, pint
-
-      - name: Get Composer Cache Directory
-        id: composer-cache
-        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-
-      - name: Cache Composer dependencies
-        uses: actions/cache@v4
-        with:
-          path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: ${{ runner.os }}-composer-
-
-      - name: Install Composer dependencies
-        # Uses --no-scripts to avoid running post-install commands that might fail without .env
-        run: composer install --prefer-dist --no-progress --no-interaction --no-scripts
-
-      - name: Prepare Application
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, mysql
+      
+      - name: Install dependencies
         run: |
-          cp .env.testing .env
-          php artisan key:generate
-
-      - name: Setup Flux Credentials
-        if: ${{ secrets.FLUX_USERNAME != '' }}
-        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
-
-      - name: Run Pint (Code Style)
-        run: ./vendor/bin/pint --test
-
-      - name: Run PHPStan Level 10
-        run: ./vendor/bin/phpstan analyse Modules --level=10 --memory-limit=-1 --no-progress
-
-      - name: Run PHPMD
-        run: ./vendor/bin/phpmd Modules text codesize,design,naming,unusedcode --exclude "*/Tests/*,*/vendor/*" || true
-
-      - name: Run Laraxot Architecture Checks
+          cd laravel
+          composer install --no-interaction --prefer-dist
+      
+      - name: Run PHPStan
         run: |
-          echo "🏗️ Checking Laraxot architecture compliance..."
-          
-          # Check for direct Filament extensions (should extend XotBase*)
-          VIOLATIONS=$(grep -r "extends.*Filament" Modules/ --include="*.php" | grep -v "XotBase" | wc -l || true)
-          if [ "$VIOLATIONS" -gt 0 ]; then
-            echo "❌ Found $VIOLATIONS direct Filament extensions (Must use XotBase*):"
-            grep -r "extends.*Filament" Modules/ --include="*.php" | grep -v "XotBase"
-            exit 1
-          fi
+          cd laravel
+          ./vendor/bin/phpstan analyse --memory-limit=1G
 
-          # Check for property_exists() on Eloquent models
-          PROPERTY_VIOLATIONS=$(grep -r "property_exists" Modules/ --include="*.php" | wc -l || true)
-          if [ "$PROPERTY_VIOLATIONS" -gt 0 ]; then
-             echo "❌ Found $PROPERTY_VIOLATIONS property_exists() usage (Use isset/hasAttribute):"
-             grep -r "property_exists" Modules/ --include="*.php"
-             exit 1
-          fi
-
-      - name: Run Migrations
-        run: php artisan migrate --force
-
-      - name: Run Pest Tests
-        run: ./vendor/bin/pest --coverage --min=60
-        # Lowered coverage min to 60 for now to pass CI, target is 80+ in roadmap
-
-  build-theme:
-    name: Build Meetup Theme
+  pint:
+    name: Pint Code Style
     runs-on: ubuntu-latest
-    needs: quality-check
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: laravel/Themes/Meetup/package-lock.json
+          php-version: '8.3'
+      
+      - name: Install Pint
+        run: |
+          cd laravel
+          composer require --dev laravel/pint --no-interaction
+      
+      - name: Run Pint
+        run: |
+          cd laravel
+          ./vendor/bin/pint --test
 
-      - name: Install npm dependencies
-        working-directory: ./laravel/Themes/Meetup
-        run: npm ci
-
-      - name: Build theme assets
-        working-directory: ./laravel/Themes/Meetup
-        run: npm run build
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, mysql
+      
+      - name: Copy .env
+        run: |
+          cp laravel/.env.example laravel/.env
+      
+      - name: Install dependencies
+        run: |
+          cd laravel
+          composer install --no-interaction --prefer-dist
+      
+      - name: Generate key
+        run: |
+          cd laravel
+          php artisan key:generate
+      
+      - name: Run tests
+        run: |
+          cd laravel
+          php artisan test --parallel

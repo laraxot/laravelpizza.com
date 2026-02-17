@@ -11,9 +11,9 @@ use PragmaRX\Google2FA\Google2FA;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->service = new TwoFactorService;
+    $this->service = new TwoFactorService();
     $this->user = User::factory()->create();
-    $this->google2fa = new Google2FA;
+    $this->google2fa = new Google2FA();
 });
 
 test('enable generates secret and qr code', function (): void {

@@ -12,7 +12,6 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
-use InvalidArgumentException;
 
 class VerifyEmailController extends Controller
 {
@@ -22,14 +21,14 @@ class VerifyEmailController extends Controller
     public function __invoke(EmailVerificationRequest $request): RedirectResponse
     {
         $user = Auth::user();
-        if ($user === null) {
+        if (null === $user) {
             return redirect()->route('filament.user.auth.login');
         }
 
         // Ottieni il valore hash in modo sicuro
         $routeHash = $request->route('hash');
-        if ($routeHash === null) {
-            throw new InvalidArgumentException('Hash di verifica mancante');
+        if (null === $routeHash) {
+            throw new \InvalidArgumentException('Hash di verifica mancante');
         }
 
         $stringRouteHash = is_string($routeHash) ? $routeHash : '';
@@ -40,7 +39,7 @@ class VerifyEmailController extends Controller
             : ($user->email ?? '');
 
         if (! hash_equals(sha1($userEmail), $stringRouteHash)) {
-            throw new AuthorizationException;
+            throw new AuthorizationException();
         }
 
         // Verifichiamo l'email solo se il metodo esiste
@@ -55,7 +54,7 @@ class VerifyEmailController extends Controller
 
         // Verificare che l'utente implementi l'interfaccia MustVerifyEmail
         if (! $user instanceof MustVerifyEmail) {
-            throw new InvalidArgumentException('L\'utente deve implementare l\'interfaccia MustVerifyEmail');
+            throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia MustVerifyEmail');
         }
 
         event(new Verified($user));

@@ -3,7 +3,7 @@
 ## Overview
 Questo documento traccia tutti gli interventi di manutenzione e audit delle traduzioni nel modulo User, seguendo i principi di refactoring costante e studio della documentazione come memoria del sistema.
 
-## [DATE]: LoginWidget Translation Audit
+## 2025-01-25: LoginWidget Translation Audit
 
 ### Problema Identificato
 Il `LoginWidget` utilizzava 4 chiavi di traduzione che non esistevano:

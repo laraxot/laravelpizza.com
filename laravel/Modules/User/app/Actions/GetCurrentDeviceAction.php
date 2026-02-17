@@ -9,10 +9,8 @@ declare(strict_types=1);
 namespace Modules\User\Actions;
 
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
-use InvalidArgumentException;
 use Jenssegers\Agent\Agent;
 use Modules\User\Models\Device;
-use RuntimeException;
 use Spatie\QueueableAction\QueueableAction;
 
 class GetCurrentDeviceAction
@@ -22,7 +20,8 @@ class GetCurrentDeviceAction
     public function __construct(
         private readonly Agent $agent,
         private readonly Device $deviceModel,
-    ) {}
+    ) {
+    }
 
     /**
      * Execute the action.
@@ -32,14 +31,14 @@ class GetCurrentDeviceAction
         $deviceInfo = $this->getDeviceInfo();
         $browserInfo = $this->getBrowserInfo();
 
-        if ($mobileId !== null) {
+        if (null !== $mobileId) {
             if (empty($mobileId)) {
-                throw new InvalidArgumentException('L\'ID mobile non può essere vuoto');
+                throw new \InvalidArgumentException('L\'ID mobile non può essere vuoto');
             }
 
             $device = $this->deviceModel->firstOrCreate(['mobile_id' => $mobileId]);
-            if ($device === null) {
-                throw new RuntimeException('Impossibile creare o trovare il dispositivo');
+            if (null === $device) {
+                throw new \RuntimeException('Impossibile creare o trovare il dispositivo');
             }
             $device->update([...$deviceInfo, ...$browserInfo]);
 
@@ -47,8 +46,8 @@ class GetCurrentDeviceAction
         }
 
         $device = $this->deviceModel->firstOrCreate($deviceInfo);
-        if ($device === null) {
-            throw new RuntimeException('Impossibile creare o trovare il dispositivo');
+        if (null === $device) {
+            throw new \RuntimeException('Impossibile creare o trovare il dispositivo');
         }
         $device->update($browserInfo);
 

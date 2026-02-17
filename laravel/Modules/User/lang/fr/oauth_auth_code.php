@@ -2,77 +2,65 @@
 
 declare(strict_types=1);
 
-return array (
-  'navigation' => 
-  array (
+return [
+    'navigation' => [
+        'label' => 'Code d\'Autorisation OAuth',
+        'group' => '',
+        'icon' => 'heroicon-o-key',
+        'sort' => 32,
+    ],
     'label' => 'Code d\'Autorisation OAuth',
-    'group' => '',
-    'icon' => 'heroicon-o-key',
-    'sort' => 32,
-  ),
-  'label' => 'Code d\'Autorisation OAuth',
-  'plural_label' => 'Codes d\'Autorisation OAuth',
-  'fields' => 
-  array (
-    'id' => 
-    array (
-      'label' => 'ID',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'user_id' => 
-    array (
-      'label' => 'Utilisateur',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'client_id' => 
-    array (
-      'label' => 'Client',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'name' => 
-    array (
-      'label' => 'Nom',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'scopes' => 
-    array (
-      'label' => 'Portées',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'revoked' => 
-    array (
-      'label' => 'Révoqué',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'expires_at' => 
-    array (
-      'label' => 'Expire À',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-  ),
-  'actions' => 
-  array (
-    'revoke' => 
-    array (
-      'label' => 'Révoquer',
-    ),
-    'view_scopes' => 
-    array (
-      'label' => 'Voir les Portées',
-    ),
-  ),
-);
+    'plural_label' => 'Codes d\'Autorisation OAuth',
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'user_id' => [
+            'label' => 'Utilisateur',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'client_id' => [
+            'label' => 'Client',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'name' => [
+            'label' => 'Nom',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'scopes' => [
+            'label' => 'Portées',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'revoked' => [
+            'label' => 'Révoqué',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'expires_at' => [
+            'label' => 'Expire À',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'actions' => [
+        'revoke' => [
+            'label' => 'Révoquer',
+        ],
+        'view_scopes' => [
+            'label' => 'Voir les Portées',
+        ],
+    ],
+];

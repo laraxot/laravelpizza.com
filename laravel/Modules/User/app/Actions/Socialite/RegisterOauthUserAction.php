@@ -19,8 +19,6 @@ class RegisterOauthUserAction
 {
     use QueueableAction;
 
-
-
     public function execute(string $provider, SocialiteUserContract $oauthUser): SocialiteUser
     {
         /** @var SocialiteUser $socialiteUser */

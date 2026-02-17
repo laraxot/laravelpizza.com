@@ -2,77 +2,65 @@
 
 declare(strict_types=1);
 
-return array (
-  'navigation' => 
-  array (
+return [
+    'navigation' => [
+        'label' => 'OAuth Access Token',
+        'group' => '',
+        'icon' => 'heroicon-o-key',
+        'sort' => 33,
+    ],
     'label' => 'OAuth Access Token',
-    'group' => '',
-    'icon' => 'heroicon-o-key',
-    'sort' => 33,
-  ),
-  'label' => 'OAuth Access Token',
-  'plural_label' => 'OAuth Access Tokens',
-  'fields' => 
-  array (
-    'id' => 
-    array (
-      'label' => 'ID',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'user_id' => 
-    array (
-      'label' => 'User',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'client_id' => 
-    array (
-      'label' => 'Client',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'name' => 
-    array (
-      'label' => 'Name',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'scopes' => 
-    array (
-      'label' => 'Scopes',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'revoked' => 
-    array (
-      'label' => 'Revoked',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'expires_at' => 
-    array (
-      'label' => 'Expires At',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-  ),
-  'actions' => 
-  array (
-    'revoke' => 
-    array (
-      'label' => 'Revoke',
-    ),
-    'refresh' => 
-    array (
-      'label' => 'Refresh',
-    ),
-  ),
-);
+    'plural_label' => 'OAuth Access Tokens',
+    'fields' => [
+        'id' => [
+            'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'user_id' => [
+            'label' => 'User',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'client_id' => [
+            'label' => 'Client',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'name' => [
+            'label' => 'Name',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'scopes' => [
+            'label' => 'Scopes',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'revoked' => [
+            'label' => 'Revoked',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'expires_at' => [
+            'label' => 'Expires At',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'actions' => [
+        'revoke' => [
+            'label' => 'Revoke',
+        ],
+        'refresh' => [
+            'label' => 'Refresh',
+        ],
+    ],
+];

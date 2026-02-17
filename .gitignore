@@ -72,3 +72,5 @@ laravel/Themes/Meetup/resources/views/profile/partials/update-profile-informatio
 _backups/
 laravel/Modules/*/_docs/
 *.*backup*
+.clinerules/
+.cursorrules/

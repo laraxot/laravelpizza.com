@@ -1,7 +1,7 @@
 # Teams Migration - Laraxot Compliance Fix
 
 ## Data
-[DATE]
+2025-12-01
 
 ## Problema Segnalato dall'Utente
 
@@ -211,7 +211,7 @@ Le violazioni delle convenzioni laraxot rendono:
 # Teams Migration - Laraxot Compliance Fix
 
 ## Data
-[DATE]
+2025-12-01
 
 ## Problema Segnalato dall'Utente
 

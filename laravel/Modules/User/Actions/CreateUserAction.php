@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\User\Actions;
 
 use Illuminate\Contracts\Hashing\Hasher;
-use Illuminate\Support\Facades\Hash;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
@@ -23,7 +22,9 @@ class CreateUserAction
     public function __construct(
         private readonly Hasher $hasher,
         private readonly User $userModel,
-    ) {}
+    ) {
+    }
+
     public function execute(array $data): User
     {
         // Preparazione dati sicuri

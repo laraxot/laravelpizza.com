@@ -23,10 +23,10 @@ final class RecentLoginsWidget extends BaseWidget
     public function getTableColumns(): array
     {
         return [
-            TextColumn::make('user'),
-            TextColumn::make('login_at'),
-            TextColumn::make('ip_address'),
-            TextColumn::make('user_agent'),
+            'user' => TextColumn::make('user'),
+            'login_at' => TextColumn::make('login_at'),
+            'ip_address' => TextColumn::make('ip_address'),
+            'user_agent' => TextColumn::make('user_agent'),
         ];
     }
 

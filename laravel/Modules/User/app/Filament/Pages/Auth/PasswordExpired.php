@@ -14,7 +14,6 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema as DatabaseSchema;
-use InvalidArgumentException;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Events\NewPasswordSet;
 use Modules\User\Http\Response\PasswordResetResponse;
@@ -65,12 +64,12 @@ class PasswordExpired extends XotBasePage
         Assert::string($currentPassword = Arr::get($data, 'current_password'));
         Assert::string($password = Arr::get($data, 'password'));
         $user = Auth::user();
-        if ($user === null) {
+        if (null === $user) {
             return null;
         }
 
         // check if current password is correct
-        if ($user->password === null || ! Hash::check($currentPassword, $user->password)) {
+        if (null === $user->password || ! Hash::check($currentPassword, $user->password)) {
             Notification::make()
                 ->title(__('user::otp.notifications.wrong_password.title'))
                 ->body(__('user::otp.notifications.wrong_password.body'))
@@ -111,7 +110,7 @@ class PasswordExpired extends XotBasePage
 
         // Verificare che l'utente esistante e che sia un modello Eloquent
         if (! $user instanceof Model) {
-            throw new InvalidArgumentException('L\'utente deve essere un modello Eloquent con il metodo update');
+            throw new \InvalidArgumentException('L\'utente deve essere un modello Eloquent con il metodo update');
         }
 
         // set password expiry date and time
@@ -123,7 +122,7 @@ class PasswordExpired extends XotBasePage
 
         // Verificare che l'utente implementi l'interfaccia UserContract prima di passarlo all'evento
         if (! $user instanceof UserContract) {
-            throw new InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
+            throw new \InvalidArgumentException('L\'utente deve implementare l\'interfaccia UserContract');
         }
 
         event(new NewPasswordSet($user));
@@ -133,7 +132,7 @@ class PasswordExpired extends XotBasePage
             ->success()
             ->send();
 
-        return new PasswordResetResponse;
+        return new PasswordResetResponse();
     }
 
     /**

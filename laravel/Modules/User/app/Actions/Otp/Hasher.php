@@ -10,7 +10,9 @@ class Hasher
 {
     public function __construct(
         private readonly BaseHasher $hasher,
-    ) {}
+    ) {
+    }
+
     public function make(string $value): string
     {
         return $this->hasher->make($value);

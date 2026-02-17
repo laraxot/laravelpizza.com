@@ -11,19 +11,16 @@ namespace Modules\User\Actions\Socialite;
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
 use Filament\Facades\Filament;
 use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Http\RedirectResponse;
-use LogicException;
 use Modules\User\Events\SocialiteUserConnected;
 use Modules\User\Models\SocialiteUser;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
-use Illuminate\Contracts\Events\Dispatcher;
 
 class LoginUserAction
 {
     use QueueableAction;
-
-
 
     /**
      * Execute the action.
@@ -33,7 +30,7 @@ class LoginUserAction
         Assert::notNull($user = $socialiteUser->user, '['.__FILE__.']['.__LINE__.']');
 
         if (! $user instanceof Authenticatable) {
-            throw new LogicException('User instance must implement Authenticatable.');
+            throw new \LogicException('User instance must implement Authenticatable.');
         }
 
         // PHPStan: assicuriamoci che l'utente sia Authenticatable per il login

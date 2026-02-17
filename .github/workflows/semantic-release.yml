@@ -1,0 +1,196 @@
+name: Semantic Release
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      manual_bump:
+        description: 'Version number to increase'
+        required: false
+        type: choice
+        options:
+          - major
+          - minor
+          - patch
+        default: patch
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: "${{ github.ref }}-${{ github.workflow }}"
+  cancel-in-progress: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.calculate-version.outputs.version-string }}
+      release_notes: ${{ steps.build-changelog.outputs.changelog }}
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install semantic-release
+        run: |
+          npm install -g semantic-release@^23.0.0
+          npm install -g @semantic-release/changelog@^6.0.0
+          npm install -g @semantic-release/git@^10.0.0
+          npm install -g @semantic-release/github@^9.0.0
+          npm install -g conventional-changelog-conventionalcommits@^7.0.0
+
+      - name: Calculate semantic version
+        id: calculate-version
+        uses: bitshifted/git-auto-semver@v2
+        with:
+          main_branch: ${{ github.ref_name }}
+          create_tag: true
+          initial_version: '1.0.0'
+          tag_prefix: 'v'
+          manual_bump: ${{ github.event.inputs.manual_bump }}
+
+      - name: Generate comprehensive changelog
+        id: build-changelog
+        run: |
+          # Get the range of commits since last tag
+          LAST_TAG=$(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || echo "")
+          if [ -z "$LAST_TAG" ]; then
+            COMMIT_RANGE="HEAD"
+          else
+            COMMIT_RANGE="${LAST_TAG}..HEAD"
+          fi
+          
+          # Generate detailed changelog
+          cat > CHANGELOG_BODY.md << 'EOF'
+          ## 🚀 Release v${{ steps.calculate-version.outputs.version-string }}
+          
+          ### 📋 Summary
+          This release includes important updates and improvements across the Quaeris Fila5 Mono platform.
+          
+          ### ✨ Features
+          EOF
+          
+          # Extract features
+          git log $COMMIT_RANGE --pretty=format:"%h %s" | grep -E "^.*feat.*:" | sed 's/^/ - /' >> CHANGELOG_BODY.md || echo " - No new features" >> CHANGELOG_BODY.md
+          
+          cat >> CHANGELOG_BODY.md << 'EOF'
+          
+          🐛 Bug Fixes
+          EOF
+          
+          # Extract fixes
+          git log $COMMIT_RANGE --pretty=format:"%h %s" | grep -E "^.*fix.*:" | sed 's/^/ - /' >> CHANGELOG_BODY.md || echo " - No bug fixes" >> CHANGELOG_BODY.md
+          
+          cat >> CHANGELOG_BODY.md << 'EOF'
+          
+          🔧 Maintenance
+          EOF
+          
+          # Extract maintenance
+          git log $COMMIT_RANGE --pretty=format:"%h %s" | grep -E "^.*chore.*:|^.*refactor.*:|^.*docs.*:" | sed 's/^/ - /' >> CHANGELOG_BODY.md || echo " - No maintenance updates" >> CHANGELOG_BODY.md
+          
+          cat >> CHANGELOG_BODY.md << 'EOF'
+          
+          ### 📊 Module Changes
+          EOF
+          
+          # Extract module-specific changes
+          for module in Activity Chart CloudStorage Cms DbForge Gdpr Geo Job Lang Limesurvey Media Notify Quaeris Tenant UI User Xot; do
+            MODULE_CHANGES=$(git log $COMMIT_RANGE --pretty=format:"%h %s" | grep -i "$module" | wc -l)
+            if [ "$MODULE_CHANGES" -gt 0 ]; then
+              echo " - **$module**: $MODULE_CHANGES changes" >> CHANGELOG_BODY.md
+            fi
+          done
+          
+          # Add contributors
+          cat >> CHANGELOG_BODY.md << 'EOF'
+          
+          ### 👥 Contributors
+          EOF
+          
+          git log $COMMIT_RANGE --pretty=format:"%an" | sort | uniq -c | sort -nr | sed 's/^/ - /' >> CHANGELOG_BODY.md
+          
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          cat CHANGELOG_BODY.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: "v${{ steps.calculate-version.outputs.version-string }}"
+          name: "Release v${{ steps.calculate-version.outputs.version-string }}"
+          body: ${{ steps.build-changelog.outputs.changelog }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          files: |
+            README.md
+            AGENTS.md
+            CLAUDE.md
+            docs/**/*.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update project version files
+        run: |
+          # Update version in package.json files if they exist
+          find . -name "package.json" -not -path "./node_modules/*" -not -path "./laravel/vendor/*" -exec sed -i 's/"version": "[^"]*"/"version": "${{ steps.calculate-version.outputs.version-string }}"/g' {} \;
+          
+          # Update version in composer.json files
+          find . -name "composer.json" -not -path "./vendor/*" -exec sed -i 's/"version": "[^"]*"/"version": "${{ steps.calculate-version.outputs.version-string }}"/g' {} \;
+          
+          # Create or update VERSION file
+          echo "${{ steps.calculate-version.outputs.version-string }}" > VERSION
+          
+          # Commit version updates back to repository
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "chore: update version to ${{ steps.calculate-version.outputs.version-string }} [skip ci]" || true
+          git push
+
+      - name: Notify teams
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          echo "🎉 Release v${{ steps.calculate-version.outputs.version-string }} has been successfully created!"
+          echo "📝 Release notes are available at: https://github.com/${{ github.repository }}/releases/tag/v${{ steps.calculate-version.outputs.version-string }}"
+
+  # Trigger module releases after main release
+  trigger-modules:
+    needs: release
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        module: [Activity, Chart, CloudStorage, Cms, DbForge, Gdpr, Geo, Job, Lang, Limesurvey, Media, Notify, Quaeris, Tenant, UI, User, Xot]
+      fail-fast: false
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Trigger module release
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          echo "Triggering release workflow for module: ${{ matrix.module }}"
+          # Check if module has changes
+          MODULE_PATH="laravel/Modules/${{ matrix.module }}"
+          if [ -d "$MODULE_PATH" ]; then
+            # This would trigger module-specific workflow if changes detected
+            echo "Module ${{ matrix.module }} found, checking for changes..."
+            # You can add logic here to trigger module-specific releases
+          fi

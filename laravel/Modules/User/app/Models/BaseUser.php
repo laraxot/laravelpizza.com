@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
-use Exception;
 use Filament\Models\Contracts\HasName;
 use Filament\Models\Contracts\HasTenants;
 use Filament\Panel;
@@ -40,7 +39,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 use Parental\HasChildren;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Throwable;
 
 /**
  * Base User Model.
@@ -49,52 +47,52 @@ use Throwable;
  * functionality for the application. It extends Laravel's Authenticatable class
  * and implements the required interfaces for Filament and multi-tenancy.
  *
- * @property Collection<int, OauthClient> $clients
- * @property int|null $clients_count
- * @property Team|null $currentTeam
- * @property Collection<int, Device> $devices
- * @property int|null $devices_count
- * @property string|null $full_name
+ * @property Collection<int, OauthClient>                              $clients
+ * @property int|null                                                  $clients_count
+ * @property Team|null                                                 $currentTeam
+ * @property Collection<int, Device>                                   $devices
+ * @property int|null                                                  $devices_count
+ * @property string|null                                               $full_name
  * @property DatabaseNotificationCollection<int, DatabaseNotification> $notifications
- * @property int|null $notifications_count
- * @property Collection<int, Team> $ownedTeams
- * @property int|null $owned_teams_count
- * @property Collection<int, Permission> $permissions
- * @property int|null $permissions_count
- * @property ProfileContract|null $profile
- * @property Collection<int, Role> $roles
- * @property int|null $roles_count
- * @property Collection<int, Team> $teams
- * @property int|null $teams_count
- * @property Collection<int, Tenant> $tenants
- * @property int|null $tenants_count
- * @property Collection<int, OauthAccessToken> $tokens
- * @property int|null $tokens_count
- * @property string $last_name
- * @property string|null $facebook_id
- * @property Collection<int, SocialiteUser> $socialiteUsers
- * @property int|null $socialite_users_count
- * @property string|null $name
- * @property string|null $first_name
- * @property string|null $last_name
- * @property string|null $email
- * @property string|null $password
- * @property string|null $lang
- * @property string|null $current_team_id
- * @property bool|null $is_active
- * @property bool|null $is_otp
- * @property string|null $type
- * @property \DateTime|null $password_expires_at
- * @property \DateTime|null $email_verified_at
- * @property string|null $remember_token
- * @property \DateTime|null $created_at
- * @property \DateTime|null $updated_at
- * @property \DateTime|null $deleted_at
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $deleted_by
- * @property string|null $profile_photo_path
- * @property Pivot|null $pivot
+ * @property int|null                                                  $notifications_count
+ * @property Collection<int, Team>                                     $ownedTeams
+ * @property int|null                                                  $owned_teams_count
+ * @property Collection<int, Permission>                               $permissions
+ * @property int|null                                                  $permissions_count
+ * @property ProfileContract|null                                      $profile
+ * @property Collection<int, Role>                                     $roles
+ * @property int|null                                                  $roles_count
+ * @property Collection<int, Team>                                     $teams
+ * @property int|null                                                  $teams_count
+ * @property Collection<int, Tenant>                                   $tenants
+ * @property int|null                                                  $tenants_count
+ * @property Collection<int, OauthAccessToken>                         $tokens
+ * @property int|null                                                  $tokens_count
+ * @property string                                                    $last_name
+ * @property string|null                                               $facebook_id
+ * @property Collection<int, SocialiteUser>                            $socialiteUsers
+ * @property int|null                                                  $socialite_users_count
+ * @property string|null                                               $name
+ * @property string|null                                               $first_name
+ * @property string|null                                               $last_name
+ * @property string|null                                               $email
+ * @property string|null                                               $password
+ * @property string|null                                               $lang
+ * @property string|null                                               $current_team_id
+ * @property bool|null                                                 $is_active
+ * @property bool|null                                                 $is_otp
+ * @property string|null                                               $type
+ * @property \DateTime|null                                            $password_expires_at
+ * @property \DateTime|null                                            $email_verified_at
+ * @property string|null                                               $remember_token
+ * @property \DateTime|null                                            $created_at
+ * @property \DateTime|null                                            $updated_at
+ * @property \DateTime|null                                            $deleted_at
+ * @property string|null                                               $created_by
+ * @property string|null                                               $updated_by
+ * @property string|null                                               $deleted_by
+ * @property string|null                                               $profile_photo_path
+ * @property Pivot|null                                                $pivot
  *
  * @method static Builder|User newModelQuery()
  * @method static Builder|User newQuery()
@@ -220,7 +218,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         try {
             $this->fillable = array_values(array_merge(parent::getFillable(), $this->getFillable()));
             parent::__construct($attributes);
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             // Fallback in case database connection is not available (e.g., during testing)
             $this->fillable = array_values($this->getFillable());
             // Avoid calling parent constructor if database is not available
@@ -300,7 +298,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     public function canAccessPanel(Panel $panel): bool
     {
         // $panel->default('admin');
-        if ($panel->getId() !== 'admin') {
+        if ('admin' !== $panel->getId()) {
             $role = $panel->getId();
             /*
              * $xot = XotData::make();
@@ -346,7 +344,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function treeSons(): Collection
     {
-        return $this->teams ?? new Collection;
+        return $this->teams ?? new Collection();
     }
 
     /**
@@ -372,8 +370,8 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     public function getProviderField(string $provider, string $field): string
     {
         $socialiteUser = $this->socialiteUsers()->firstWhere(['provider' => $provider]);
-        if ($socialiteUser === null) {
-            throw new Exception('SocialiteUser not found');
+        if (null === $socialiteUser) {
+            throw new \Exception('SocialiteUser not found');
         }
 
         $res = $socialiteUser->{$field};
@@ -405,22 +403,22 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
     public function getFullNameAttribute(?string $value): string
     {
-        if ($value !== null) {
+        if (null !== $value) {
             return $value;
         }
 
         $fullName = trim(($this->first_name ?? '').' '.($this->last_name ?? ''));
 
-        return $fullName !== '' ? $fullName : ($this->email ?? 'User');
+        return '' !== $fullName ? $fullName : ($this->email ?? 'User');
     }
 
     public function getNameAttribute(?string $value): string
     {
-        if ($value !== null) {
+        if (null !== $value) {
             return $value;
         }
 
-        if ($this->getKey() === null) {
+        if (null === $this->getKey()) {
             return $this->email ?? 'User';
         }
 
@@ -435,7 +433,7 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
                 return true;
             }
 
-            return \PHP_SAPI === 'cli' && (getenv('APP_ENV') === 'testing' || getenv('ENV') === 'testing');
+            return \PHP_SAPI === 'cli' && ('testing' === getenv('APP_ENV') || 'testing' === getenv('ENV'));
         })();
         if ($isTesting) {
             // Do not call update() here to avoid hitting the database.
@@ -446,8 +444,8 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
 
         try {
             $value = $candidate;
-            while (self::firstWhere(['name' => $value]) !== null) {
-                $i++;
+            while (null !== self::firstWhere(['name' => $value])) {
+                ++$i;
                 $value = $name.'-'.$i;
             }
             $this->update(['name' => $value]);

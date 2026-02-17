@@ -1,5 +1,26 @@
 # Guida all'utilizzo di GroupColumn e Colonne Custom
 
+> **REGOLA IMPORTANTE**: Quando esiste una colonna personalizzata come `WorkerColumn`, `ValutatoreColumn`, ecc., USARLA invece di creare TextColumns separati. Le colonne personalizzate encapsulano la logica e mantengono DRY.
+
+## Esempio: Usare WorkerColumn
+
+```php
+// ❌ SBAGLIATO - Non usare TextColumns separati
+TextColumn::make('matr')->searchable(),
+TextColumn::make('cognome')->searchable(),
+TextColumn::make('nome')->searchable(),
+
+// ✅ CORRETTO - Usare WorkerColumn quando disponibile
+WorkerColumn::make('lavoratore'),
+```
+
+Le colonne personalizzate come `WorkerColumn` sono pre-configurate con:
+- Schema dei campi (matr, cognome, nome, email)
+- Searchable a livello di gruppo
+- Styling consistente
+
+---
+
 Questo documento spiega le cause e le soluzioni per un problema comune riscontrato con il componente custom `GroupColumn`: la mancata visualizzazione di dati provenienti da relazioni Eloquent (campi con notazione "dot notation").
 
 **AGGIORNAMENTO**: Il componente `GroupColumn` è stato aggiornato per supportare nativamente la "dot notation". Le soluzioni manuali descritte di seguito sono ancora valide per scenari complessi ma non più necessarie per il caso d'uso standard. La corretta funzionalità è garantita da un test automatizzato.

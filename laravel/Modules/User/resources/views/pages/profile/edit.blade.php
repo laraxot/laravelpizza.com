@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+/**
+ * ---.
+ */
+
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,11 +21,15 @@ use Livewire\Volt\Component;
 use Modules\User\Models\User;
 use Webmozart\Assert\Assert;
 
+use function Livewire\Volt\layout;
 use function Laravel\Folio\middleware;
 use function Laravel\Folio\name;
 
 name('profile.edit');
+layout('x-layouts.app');
 middleware(['auth', 'verified']);
+// middleware(['web']); // redundant if auth is used, but safe to add if needed.
+// Actually, FolioVoltServiceProvider adds web to everything now.
 
 /**
  * Profile edit component for managing user profile, password updates, and account deletion.
@@ -62,10 +70,10 @@ $component = new class extends Component {
     /**
      * User ID (locked to prevent tampering).
      *
-     * @var int
+     * @var string
      */
     #[Locked]
-    public int $user_id = 0;
+    public string $user_id = '';
 
     /**
      * Current password for verification.
@@ -106,6 +114,7 @@ $component = new class extends Component {
     public function mount(): void
     {
         try {
+            /** @var User|null $user */
             $user = Auth::user();
             Assert::notNull($user, 'User must be authenticated');
             Assert::isInstanceOf($user, User::class, 'User must be an instance of User model');
@@ -114,12 +123,12 @@ $component = new class extends Component {
             $this->first_name = (string) ($user->first_name ?? '');
             $this->last_name = (string) ($user->last_name ?? '');
             $this->email = (string) ($user->email ?? '');
-            $this->user_id = (int) ($user->id ?? 0);
+            $this->user_id = (string) ($user->id ?? '');
 
             Assert::stringNotEmpty($this->first_name, 'User first name cannot be empty');
             Assert::stringNotEmpty($this->last_name, 'User last name cannot be empty');
             Assert::stringNotEmpty($this->email, 'User email cannot be empty');
-            Assert::greaterThan($this->user_id, 0, 'User ID must be positive');
+            Assert::stringNotEmpty($this->user_id, 'User ID cannot be empty');
 
             // Validate email format
             Assert::true(filter_var($this->email, FILTER_VALIDATE_EMAIL) !== false, 'User email must be valid');
@@ -173,7 +182,7 @@ $component = new class extends Component {
             $user = Auth::user();
             Assert::notNull($user, 'User must be authenticated for profile update');
             Assert::isInstanceOf($user, User::class, 'User must be an instance of User model');
-            Assert::same($this->user_id, (int) $user->id, 'User ID mismatch detected');
+            Assert::same($this->user_id, (string) $user->id, 'User ID mismatch detected');
 
             // Check if email has changed for additional validation
             $emailChanged = $user->email !== $validated['email'];
@@ -187,13 +196,15 @@ $component = new class extends Component {
             }
 
             // Update user data with type casting
+            /** @var User $user */
             $user->fill([
                 'first_name' => trim($validated['first_name']),
                 'last_name' => trim($validated['last_name']),
                 'email' => strtolower(trim($validated['email'])),
             ]);
 
-            // Reset email verification if email changed
+            // Reset email verification
+            /** @var User $user */
             if ($emailChanged && $user->hasVerifiedEmail()) {
                 $user->email_verified_at = null;
             }
@@ -212,13 +223,17 @@ $component = new class extends Component {
                 'user_agent' => request()->userAgent(),
             ]);
 
+            /** @var User $user */
             $success = $user->save();
             Assert::true($success, 'Failed to save user profile');
 
             // Log successful profile update for audit trail
-            Log::info('User profile updated successfully', [
+            /** @var array<string, mixed> $changes */
+            $changes = $user->getChanges();
+
+            Log::info('Profile updated', [
                 'user_id' => $user->id,
-                'changes' => $user->getChanges(),
+                'changes' => $changes,
                 'ip_address' => request()->ip(),
                 'user_agent' => request()->userAgent(),
             ]);
@@ -234,7 +249,7 @@ $component = new class extends Component {
             session()->flash('status', $message);
 
             // Send email verification if email changed
-            if ($emailChanged) {
+            if ($emailChanged && null === $user->email_verified_at && $user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail) {
                 $user->sendEmailVerificationNotification();
             }
         } catch (\Illuminate\Validation\ValidationException $e) {
@@ -282,10 +297,11 @@ $component = new class extends Component {
                 'password_confirmation' => ['required'],
             ]);
 
+            /** @var User $user */
             $user = Auth::user();
             Assert::notNull($user, 'User must be authenticated for password update');
             Assert::isInstanceOf($user, User::class, 'User must be an instance of User model');
-            Assert::same($this->user_id, (int) $user->id, 'User ID mismatch detected');
+            Assert::same($this->user_id, (string) $user->id, 'User ID mismatch detected');
 
             // Validate password strength and format
             Assert::stringNotEmpty($this->current_password, 'Current password cannot be empty');
@@ -375,7 +391,7 @@ $component = new class extends Component {
             $user = Auth::user();
             Assert::notNull($user, 'User must be authenticated for account deletion');
             Assert::isInstanceOf($user, User::class, 'User must be an instance of User model');
-            Assert::same($this->user_id, (int) $user->id, 'User ID mismatch detected');
+            Assert::same($this->user_id, (string) $user->id, 'User ID mismatch detected');
 
             // Validate deletion password
             Assert::stringNotEmpty($this->delete_password, 'Password cannot be empty for account deletion');
@@ -406,6 +422,7 @@ $component = new class extends Component {
             request()->session()->regenerateToken();
 
             // Delete the user account
+            /** @var User $user */
             $deleted = $user->delete();
             Assert::true($deleted, 'Failed to delete user account');
 

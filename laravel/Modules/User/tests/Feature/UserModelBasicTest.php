@@ -9,13 +9,13 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 test('user model can be created', function () {
-    $user = new User;
+    $user = new User();
 
     expect($user)->toBeInstanceOf(User::class);
 });
 
 test('user model can access connection', function () {
-    $user = new User;
+    $user = new User();
 
     expect($user->getConnectionName())->toBe('user');
 });

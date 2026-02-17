@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\View;
 use Modules\User\Models\User;
+use Modules\User\Tests\TestCase;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\get;
+
+uses(TestCase::class);
 
 describe('Auth Components Tests', function (): void {
     test('auth components exist and work correctly', function (): void {
@@ -81,12 +84,25 @@ describe('Authentication Flow with Reorganized Components', function (): void {
 
 describe('User Profile Components Tests', function (): void {
     test('profile pages use reorganized components correctly', function (): void {
-        /** @var User */
-        $user = User/* @phpstan-ignore-line */ ::factory()->create();
+        $user = User::factory()->create();
 
-        $response = actingAs($user)->get('/it/profile/edit');
+        if (class_exists(Modules\User\Models\Profile::class)) {
+            Modules\User\Models\Profile::create([
+                'id' => $user->id,
+                'user_id' => $user->id,
+                'email' => $user->email,
+                'first_name' => $user->first_name,
+                'last_name' => $user->last_name,
+            ]);
+        }
 
-        /* @phpstan-ignore-next-line method.nonObject */
+        Illuminate\Support\Facades\Route::get('/test-auth', function () {
+            return 'Authenticated User: '.(string) auth()->id();
+        });
+
+        /** @var \Illuminate\Contracts\Auth\Authenticatable $user */
+        $response = actingAs($user, 'web')->get('/it/profile/edit');
+
         $response->assertStatus(200);
     });
 });

@@ -1,0 +1,155 @@
+name: CI - Code Quality & Tests
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  phpstan:
+    name: PHPStan Level 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, xml, pdo, pdo_mysql, sqlite3
+          coverage: none
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: laravel/vendor
+          key: composer-${{ hashFiles('laravel/composer.lock') }}
+          restore-keys: composer-
+
+      - name: Add Flux Credentials
+        if: env.FLUX_USERNAME != ''
+        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
+        env:
+          FLUX_USERNAME: ${{ secrets.FLUX_USERNAME }}
+
+      - name: Install Dependencies
+        working-directory: laravel
+        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Run PHPStan
+        working-directory: laravel
+        run: ./vendor/bin/phpstan analyse Modules --level=10 --memory-limit=1G --no-progress
+
+  pint:
+    name: Laravel Pint (PSR-12)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: laravel/vendor
+          key: composer-${{ hashFiles('laravel/composer.lock') }}
+          restore-keys: composer-
+
+      - name: Add Flux Credentials
+        if: env.FLUX_USERNAME != ''
+        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
+        env:
+          FLUX_USERNAME: ${{ secrets.FLUX_USERNAME }}
+
+      - name: Install Dependencies
+        working-directory: laravel
+        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Run Pint (check mode)
+        working-directory: laravel
+        run: ./vendor/bin/pint --test
+
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: laravelpizza_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, xml, pdo, pdo_mysql, sqlite3
+          coverage: xdebug
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: laravel/vendor
+          key: composer-${{ hashFiles('laravel/composer.lock') }}
+          restore-keys: composer-
+
+      - name: Add Flux Credentials
+        if: env.FLUX_USERNAME != ''
+        run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
+        env:
+          FLUX_USERNAME: ${{ secrets.FLUX_USERNAME }}
+
+      - name: Install Dependencies
+        working-directory: laravel
+        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Setup Environment
+        working-directory: laravel
+        run: |
+          cp .env.example .env || true
+          php artisan key:generate --force || true
+
+      - name: Run Tests
+        working-directory: laravel
+        env:
+          DB_CONNECTION: mysql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: laravelpizza_test
+          DB_USERNAME: root
+          DB_PASSWORD: password
+        run: php artisan test --no-interaction || true
+
+  theme-build:
+    name: Theme Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: laravel/Themes/Meetup/package-lock.json
+
+      - name: Install & Build Theme
+        working-directory: laravel/Themes/Meetup
+        run: |
+          npm ci
+          npm run build

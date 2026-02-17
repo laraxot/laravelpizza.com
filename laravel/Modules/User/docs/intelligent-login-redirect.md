@@ -211,4 +211,4 @@ public function authenticate()
 - ✅ **Manutenibilità**: Codice documentato
 
 ## Ultimo aggiornamento
-[DATE] - Implementazione redirect intelligente basato sui ruoli utente
+2025-01-06 - Implementazione redirect intelligente basato sui ruoli utente

@@ -1,0 +1,201 @@
+name: Commit Lint
+
+on:
+  pull_request:
+    branches: [main, master]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install commitlint
+        run: |
+          npm install -g @commitlint/cli@^18.0.0
+          npm install -g @commitlint/config-conventional@^18.0.0
+
+      - name: Validate commit messages
+        run: |
+          # Get all commit messages in the PR
+          git fetch origin main
+          COMMITS=$(git rev-list HEAD ^origin/main)
+          
+          # Create commitlint config
+          cat > .commitlintrc.js << 'EOF'
+          module.exports = {
+            extends: ['@commitlint/config-conventional'],
+            rules: {
+              'type-enum': [
+                2,
+                'always',
+                [
+                  'feat',     // New feature
+                  'fix',      // Bug fix
+                  'docs',     // Documentation changes
+                  'style',    // Code style changes (formatting, etc)
+                  'refactor', // Code refactoring
+                  'perf',     // Performance improvements
+                  'test',     // Adding or updating tests
+                  'chore',    // Maintenance tasks
+                  'build',    // Build system changes
+                  'ci',       // CI configuration changes
+                  'revert',   // Reverting changes
+                  'release',  // Release operations
+                  'module'    // Module-specific changes (for this project)
+                ]
+              ],
+              'scope-enum': [
+                2,
+                'always',
+                [
+                  'Activity',
+                  'Chart', 
+                  'CloudStorage',
+                  'Cms',
+                  'DbForge',
+                  'Gdpr',
+                  'Geo',
+                  'Job',
+                  'Lang',
+                  'Limesurvey',
+                  'Media',
+                  'Notify',
+                  'Quaeris',
+                  'Tenant',
+                  'UI',
+                  'User',
+                  'Xot',
+                  'core',
+                  'deps',
+                  'config'
+                ]
+              ],
+              'subject-case': [2, 'never', ['start-case', 'pascal-case', 'upper-case']],
+              'subject-empty': [2, 'never'],
+              'subject-full-stop': [2, 'never', '.'],
+              'type-case': [2, 'always', 'lower-case'],
+              'type-empty': [2, 'never'],
+              'scope-case': [2, 'always', 'lower-case'],
+              'body-max-line-length': [2, 'always', 100],
+              'footer-max-line-length': [2, 'always', 100],
+              'header-max-length': [2, 'always', 100]
+            }
+          };
+          EOF
+
+          # Lint each commit
+          for commit in $COMMITS; do
+            echo "Checking commit: $commit"
+            git log --format=%B -n 1 $commit | npx commitlint --config .commitlintrc.js
+          done
+
+      - name: Comment PR with results
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `
+              ## 🔍 Commit Message Validation Failed
+              
+              Your pull request contains commit messages that don't follow the [Conventional Commits](https://www.conventionalcommits.org/) standard.
+              
+              ### Expected Format:
+              \`\`\`
+              <type>[optional scope]: <description>
+              
+              [optional body]
+              
+              [optional footer(s)]
+              \`\`\`
+              
+              ### Available Types:
+              - \`feat\`: New feature
+              - \`fix\`: Bug fix
+              - \`docs\`: Documentation changes
+              - \`style\`: Code style changes
+              - \`refactor\`: Code refactoring
+              - \`perf\`: Performance improvements
+              - \`test\`: Adding or updating tests
+              - \`chore\`: Maintenance tasks
+              - \`build\`: Build system changes
+              - \`ci\`: CI configuration changes
+              - \`revert\`: Reverting changes
+              - \`release\`: Release operations
+              - \`module\`: Module-specific changes
+              
+              ### Available Scopes:
+              \`Activity\`, \`Chart\`, \`CloudStorage\`, \`Cms\`, \`DbForge\`, \`Gdpr\`, \`Geo\`, \`Job\`, \`Lang\`, \`Limesurvey\`, \`Media\`, \`Notify\`, \`Quaeris\`, \`Tenant\`, \`UI\`, \`User\`, \`Xot\`, \`core\`, \`deps\`, \`config\`
+              
+              ### Examples:
+              - \`feat(User): add authentication API\`
+              - \`fix(Limesurvey): resolve import timeout issue\`
+              - \`docs: update installation guide\`
+              - \`chore: update dependencies\`
+              
+              Please fix your commit messages and push again.
+              `
+            });
+
+  pr-title-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR title
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = context.payload.pull_request.title;
+            
+            // Check if title follows conventional commit format
+            const conventionalCommitRegex = /^(feat|fix|docs|style|refactor|perf|test|chore|build|ci|revert|release|module)(\(.+\))?: .+$/;
+            
+            if (!conventionalCommitRegex.test(title)) {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: `
+                ## ⚠️ PR Title Format Issue
+                
+                Your PR title should follow the conventional commit format:
+                
+                \`\`\`
+                <type>[optional scope]: <description>
+                \`\`\`
+                
+                **Current title:** \`${title}\`
+                
+                **Suggested format examples:**
+                - \`feat(User): add authentication API\`
+                - \`fix(Limesurvey): resolve import timeout\`
+                - \`docs: update configuration guide\`
+                
+                Please update your PR title.
+                `
+              });
+              
+              // Add a label to indicate the issue
+              await github.rest.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: ['title-needs-format']
+              });
+            }

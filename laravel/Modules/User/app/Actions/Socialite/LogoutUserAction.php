@@ -19,8 +19,6 @@ class LogoutUserAction
 {
     use QueueableAction;
 
-
-
     /**
      * Execute the action.
      */

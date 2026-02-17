@@ -23,7 +23,8 @@ readonly class GetAddressFromBingMapsAction
 
     public function __construct(
         private Client $client,
-    ) {}
+    ) {
+    }
 
     /**
      * Ottiene i dettagli dell'indirizzo utilizzando Bing Maps.
@@ -111,7 +112,7 @@ readonly class GetAddressFromBingMapsAction
          * } $data */
         $data = json_decode($response, true);
 
-        if ($data['statusCode'] !== 200 || empty($data['resourceSets'][0]['resources'])) {
+        if (200 !== $data['statusCode'] || empty($data['resourceSets'][0]['resources'])) {
             return null;
         }
 

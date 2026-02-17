@@ -7,8 +7,7 @@ uses(Modules\User\Tests\TestCase::class);
 use Modules\User\Traits\PasswordValidationRules;
 
 test('PasswordValidationRules trait can be used', function () {
-    $testClass = new class
-    {
+    $testClass = new class {
         use PasswordValidationRules;
 
         public function getPasswordRules()
@@ -21,8 +20,7 @@ test('PasswordValidationRules trait can be used', function () {
 });
 
 test('PasswordValidationRules trait provides passwordRules method', function () {
-    $testClass = new class
-    {
+    $testClass = new class {
         use PasswordValidationRules;
 
         public function getPasswordRules()

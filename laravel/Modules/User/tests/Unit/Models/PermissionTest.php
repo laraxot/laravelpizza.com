@@ -36,19 +36,19 @@ test('can create permission with all fields', function (): void {
 });
 
 test('permission has connection attribute', function (): void {
-    $permission = new Permission;
+    $permission = new Permission();
 
     expect($permission->connection)->toBe('user');
 });
 
 test('permission has key type attribute', function (): void {
-    $permission = new Permission;
+    $permission = new Permission();
 
     expect($permission->keyType)->toBe('string');
 });
 
 test('permission has fillable attributes', function (): void {
-    $permission = new Permission;
+    $permission = new Permission();
 
     $fillable = $permission->getFillable();
 
@@ -58,7 +58,7 @@ test('permission has fillable attributes', function (): void {
 });
 
 test('permission has casts', function (): void {
-    $permission = new Permission;
+    $permission = new Permission();
 
     $casts = $permission->getCasts();
 
@@ -86,7 +86,7 @@ test('can find permission by guard name', function (): void {
     $webPermissions = Permission::where('guard_name', 'web')->get();
 
     expect($webPermissions->count())->toBeGreaterThanOrEqual(2);
-    expect($webPermissions->every(fn ($permission) => $permission->guard_name === 'web'))->toBeTrue();
+    expect($webPermissions->every(fn ($permission) => 'web' === $permission->guard_name))->toBeTrue();
 });
 
 test('can find permission by created by', function (): void {
@@ -156,7 +156,7 @@ test('can find permissions by multiple criteria', function (): void {
 
     expect($permissions->count())->toBeGreaterThanOrEqual(2);
     expect($permissions->every(
-        fn ($permission) => str_starts_with($permission->name, 'admin.user.') && $permission->created_by === 'admin',
+        fn ($permission) => str_starts_with($permission->name, 'admin.user.') && 'admin' === $permission->created_by,
     ))->toBeTrue();
 });
 
@@ -192,13 +192,13 @@ test('permission can use without role scopes', function (): void {
 });
 
 test('permission has factory method', function (): void {
-    $permission = new Permission;
+    $permission = new Permission();
 
     expect(method_exists($permission, 'newFactory'))->toBeTrue();
 });
 
 test('permission has get table method', function (): void {
-    $permission = new Permission;
+    $permission = new Permission();
 
     expect(method_exists($permission, 'getTable'))->toBeTrue();
 });

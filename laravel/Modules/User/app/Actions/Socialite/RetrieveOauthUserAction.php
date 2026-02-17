@@ -8,13 +8,13 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\Socialite;
 
+use Illuminate\Contracts\Events\Dispatcher;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
-use Laravel\Socialite\Facades\Socialite;
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
+use Laravel\Socialite\Facades\Socialite;
 use Laravel\Socialite\Two\InvalidStateException;
 use Modules\User\Events\InvalidState;
 use Spatie\QueueableAction\QueueableAction;
-use Illuminate\Contracts\Events\Dispatcher;
 
 class RetrieveOauthUserAction
 {
@@ -22,7 +22,8 @@ class RetrieveOauthUserAction
 
     public function __construct(
         private readonly Dispatcher $eventDispatcher,
-    ) {}
+    ) {
+    }
 
     /**
      * Execute the action.

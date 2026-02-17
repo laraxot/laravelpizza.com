@@ -11,7 +11,6 @@ namespace Modules\User\Filament\Resources\UserResource\Pages;
 
 use Filament\Actions\DeleteAction;
 use Illuminate\Support\Facades\Hash;
-use InvalidArgumentException;
 use Modules\User\Filament\Resources\UserResource;
 use Modules\User\Models\User;
 use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
@@ -41,7 +40,7 @@ class EditUser extends XotBaseEditRecord
         // Verifichiamo il tipo e convertiamo in modo sicuro
         if (! is_string($newPassword)) {
             if (! is_scalar($newPassword)) {
-                throw new InvalidArgumentException('La password deve essere una stringa');
+                throw new \InvalidArgumentException('La password deve essere una stringa');
             }
             $newPassword = (string) $newPassword;
         }

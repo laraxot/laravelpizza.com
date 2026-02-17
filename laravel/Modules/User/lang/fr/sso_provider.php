@@ -2,20 +2,17 @@
 
 declare(strict_types=1);
 
-return array (
-  'navigation' => 
-  array (
-    'label' => 'Fournisseurs SSO',
-    'group' => 'Authentification',
-    'icon' => 'heroicon-o-shield-check',
-    'sort' => 40,
-  ),
-  'label' => 'Missing Label',
-  'plural_label' => 'Missing Plural label',
-  'fields' => 
-  array (
-  ),
-  'actions' => 
-  array (
-  ),
-);
+return [
+    'navigation' => [
+        'label' => 'Fournisseurs SSO',
+        'group' => 'Authentification',
+        'icon' => 'heroicon-o-shield-check',
+        'sort' => 40,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+];

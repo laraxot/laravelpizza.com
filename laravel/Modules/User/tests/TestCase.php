@@ -22,6 +22,7 @@ abstract class TestCase extends BaseTestCase
     protected $connectionsToTransact = [
         'mysql',
         'user',
+        'media',
     ];
 
     protected function setUp(): void

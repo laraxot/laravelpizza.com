@@ -10,20 +10,18 @@ declare(strict_types=1);
 namespace Modules\User\Actions\Socialite;
 
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
+use Illuminate\Contracts\Events\Dispatcher;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Events\SocialiteUserConnected;
 use Modules\User\Models\SocialiteUser;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\QueueableAction\QueueableAction;
-use Illuminate\Contracts\Events\Dispatcher;
 
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
 
 class RegisterSocialiteUserAction
 {
     use QueueableAction;
-
-
 
     /**
      * Execute the action.

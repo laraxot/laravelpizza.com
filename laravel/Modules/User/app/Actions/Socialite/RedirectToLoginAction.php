@@ -18,7 +18,6 @@ class RedirectToLoginAction
 {
     use QueueableAction;
 
-
     public function execute(string $message): RedirectResponse
     {
         // Assert::string($route_name = config('filament-socialite.login_page_route', 'filament.admin.auth.login'));

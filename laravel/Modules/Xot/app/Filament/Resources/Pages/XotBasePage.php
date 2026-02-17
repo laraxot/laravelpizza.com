@@ -23,7 +23,7 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
  * following the architectural pattern of never extending Filament classes directly.
  *
  * @property ?string $model
- * @property ?array $data
+ * @property array<string, mixed> $data
  * @property Schema $form
  */
 abstract class XotBasePage extends FilamentPage implements HasForms
@@ -44,7 +44,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      *
      * @var array<string, mixed>
      */
-    public ?array $data = [];
+    public array $data = [];
 
     /**
      * Get the view that should be used for the page.
@@ -167,7 +167,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      *
      * @return class-string<Model>|null
      */
-    public function getFormModel(): ?string
+    protected function getFormModel(): Model|string|null
     {
         return static::$model;
     }
@@ -176,7 +176,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      * Get the form context for the page.
      * Filament compatibility method.
      */
-    public function getFormContext(): ?string
+    protected function getFormContext(): ?string
     {
         return 'edit';
     }

@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\Passport;
 
-use Illuminate\Support\Str;
 use Modules\User\Models\OauthClient;
 use Modules\Xot\Contracts\UserContract;
-use Modules\User\Actions\Passport\CreateGenericClientAction;
 use Spatie\QueueableAction\QueueableAction;
 
 /**

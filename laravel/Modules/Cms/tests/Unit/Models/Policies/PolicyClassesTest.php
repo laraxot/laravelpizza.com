@@ -19,43 +19,43 @@ test('CmsBasePolicy is an abstract class', function () {
 });
 
 test('PagePolicy can be instantiated', function () {
-    $policy = new PagePolicy;
+    $policy = new PagePolicy();
 
     expect($policy)->toBeInstanceOf(PagePolicy::class);
 });
 
 test('SectionPolicy can be instantiated', function () {
-    $policy = new SectionPolicy;
+    $policy = new SectionPolicy();
 
     expect($policy)->toBeInstanceOf(SectionPolicy::class);
 });
 
 test('PageContentPolicy can be instantiated', function () {
-    $policy = new PageContentPolicy;
+    $policy = new PageContentPolicy();
 
     expect($policy)->toBeInstanceOf(PageContentPolicy::class);
 });
 
 test('ConfPolicy can be instantiated', function () {
-    $policy = new ConfPolicy;
+    $policy = new ConfPolicy();
 
     expect($policy)->toBeInstanceOf(ConfPolicy::class);
 });
 
 test('MenuPolicy can be instantiated', function () {
-    $policy = new MenuPolicy;
+    $policy = new MenuPolicy();
 
     expect($policy)->toBeInstanceOf(MenuPolicy::class);
 });
 
 test('ModulePolicy can be instantiated', function () {
-    $policy = new ModulePolicy;
+    $policy = new ModulePolicy();
 
     expect($policy)->toBeInstanceOf(ModulePolicy::class);
 });
 
 test('PagePolicy has expected methods', function () {
-    $policy = new PagePolicy;
+    $policy = new PagePolicy();
 
     expect(method_exists($policy, 'viewAny'))->toBeTrue();
     expect(method_exists($policy, 'view'))->toBeTrue();

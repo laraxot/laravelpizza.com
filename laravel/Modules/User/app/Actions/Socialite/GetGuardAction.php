@@ -17,8 +17,6 @@ class GetGuardAction
 {
     use QueueableAction;
 
-
-
     /**
      * Execute the action.
      */

@@ -1,5 +1,6 @@
 # Passport Cluster - Implementazione Necessaria
 
+**Data**: 2025-01-22
 **Status**: 🔴 DA IMPLEMENTARE
 **Metodologia**: Super Mucca
 
@@ -193,6 +194,6 @@ class ListOauthClients extends XotBaseListRecords
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**Ultimo aggiornamento**: 2025-01-22
 **Versione**: 1.0.0
 **Status**: 🔴 DA IMPLEMENTARE

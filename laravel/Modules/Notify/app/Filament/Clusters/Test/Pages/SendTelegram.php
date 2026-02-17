@@ -14,8 +14,6 @@ use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Forms\Contracts\HasForms;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -33,9 +31,8 @@ use Webmozart\Assert\Assert;
 /**
  * @property \Filament\Schemas\Schema $emailForm
  */
-class SendTelegram extends XotBasePage implements HasForms
+class SendTelegram extends XotBasePage
 {
-    use InteractsWithForms;
 
     // use NavigationLabelTrait;
 

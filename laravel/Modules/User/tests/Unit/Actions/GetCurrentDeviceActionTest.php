@@ -14,7 +14,7 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->action = new GetCurrentDeviceAction;
+    $this->action = new GetCurrentDeviceAction();
 
     // Mock the Agent class
     $this->mockAgent = Mockery::mock(Agent::class);

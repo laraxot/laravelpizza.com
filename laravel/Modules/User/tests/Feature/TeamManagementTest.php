@@ -57,7 +57,7 @@ describe('Team Creation and Management', function () {
         $fresh = $this->team->fresh();
         expect($fresh)->name->toBe('Updated Team Name');
 
-        if ($fresh->getAttribute('description') !== null) {
+        if (null !== $fresh->getAttribute('description')) {
             expect($fresh)->description->toBe('Updated description');
         }
     });

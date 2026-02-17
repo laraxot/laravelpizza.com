@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\User;
 
-use Exception;
 use Illuminate\Contracts\Hashing\Hasher;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\Eloquent\Model;
@@ -20,11 +19,12 @@ class UpdateUserAction
     /**
      * Esegue l'aggiornamento dell'utente.
      *
-     * @param  Model  $user  L'utente da aggiornare
-     * @param  array<string, mixed>  $data  I dati da aggiornare
-     * @return Model L'utente aggiornato
+     * @param Model                $user L'utente da aggiornare
+     * @param array<string, mixed> $data I dati da aggiornare
      *
-     * @throws Exception Se l'aggiornamento fallisce
+     * @throws \Exception Se l'aggiornamento fallisce
+     *
+     * @return Model L'utente aggiornato
      */
     public function execute(Model $user, array $data): Model
     {
@@ -59,11 +59,11 @@ class UpdateUserAction
 
             $updatedUser = $user->fresh();
             if (! $updatedUser instanceof Model) {
-                throw new Exception('Failed to refresh user model after update');
+                throw new \Exception('Failed to refresh user model after update');
             }
 
             return $updatedUser;
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $dbManager->rollBack();
 
             $logger->error("Errore nell'aggiornamento utente", [
@@ -79,7 +79,8 @@ class UpdateUserAction
     /**
      * Prepara i dati per l'aggiornamento rimuovendo campi non aggiornabili.
      *
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
+     *
      * @return array<string, mixed>
      */
     protected function prepareUpdateData(array $data, Hasher $hasher, SafeStringCastAction $safeStringCast): array
@@ -119,7 +120,7 @@ class UpdateUserAction
     /**
      * Valida i dati di aggiornamento.
      *
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      *
      * @throws ValidationException
      */
@@ -146,7 +147,7 @@ class UpdateUserAction
      * Operazioni da eseguire dopo l'aggiornamento.
      * Può essere sovrascritto dalle classi che estendono questa action.
      *
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     protected function afterUpdate(Model $user, array $data): void
     {

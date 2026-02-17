@@ -39,7 +39,7 @@ describe('HasTeams Trait', function () {
     });
 
     it('can check if user belongs to a team by ID', function () {
-        $team = new Team;
+        $team = new Team();
         $team->id = 5;
 
         // Mock della relazione teams per simulare l'appartenenza
@@ -55,7 +55,7 @@ describe('HasTeams Trait', function () {
     });
 
     it('can check if user belongs to a team by Team model', function () {
-        $team = new Team;
+        $team = new Team();
         $team->id = 10;
 
         // Mock della relazione teams per simulare l'appartenenza
@@ -71,7 +71,7 @@ describe('HasTeams Trait', function () {
     });
 
     it('returns false when user does not belong to team', function () {
-        $team = new Team;
+        $team = new Team();
         $team->id = 999;
 
         // Mock della relazione teams per simulare la non appartenenza
@@ -87,7 +87,7 @@ describe('HasTeams Trait', function () {
     });
 
     it('handles Team model parameters', function () {
-        $team = new Team;
+        $team = new Team();
         $team->id = 15;
 
         // Mock della relazione teams per simulare l'appartenenza
@@ -122,11 +122,11 @@ describe('HasTeams Trait', function () {
     });
 
     it('can filter teams by specific criteria', function () {
-        $team1 = new Team;
+        $team1 = new Team();
         $team1->id = 1;
         $team1->name = 'Active Team 1';
         $team1->is_active = true;
-        $team2 = new Team;
+        $team2 = new Team();
         $team2->id = 2;
         $team2->name = 'Active Team 2';
         $team2->is_active = true;
@@ -145,11 +145,11 @@ describe('HasTeams Trait', function () {
             ->get();
 
         expect($activeUserTeams)->toHaveCount(2);
-        expect($activeUserTeams->every(fn ($team) => isset($team->is_active) && $team->is_active === true))->toBeTrue();
+        expect($activeUserTeams->every(fn ($team) => isset($team->is_active) && true === $team->is_active))->toBeTrue();
     });
 
     it('can check team membership with timestamps', function () {
-        $team = new Team;
+        $team = new Team();
         $team->id = 25;
 
         // Mock della relazione teams con timestamps
@@ -167,7 +167,7 @@ describe('HasTeams Trait', function () {
     it('can handle multiple team memberships', function () {
         $teams = [];
         foreach ([1, 2, 3, 4, 5] as $teamId) {
-            $team = new Team;
+            $team = new Team();
             $team->id = $teamId;
             $teams[] = $team;
         }
@@ -185,7 +185,7 @@ describe('HasTeams Trait', function () {
     });
 
     it('can handle non-existent team', function () {
-        $team = new Team;
+        $team = new Team();
         $team->id = 999;
 
         // Mock della relazione teams per simulare team non esistente
@@ -200,7 +200,7 @@ describe('HasTeams Trait', function () {
     });
 
     it('can work with team pivot table', function () {
-        $team = new Team;
+        $team = new Team();
         $team->id = 30;
 
         // Mock della relazione teams con pivot
@@ -267,15 +267,15 @@ describe('HasTeams Trait', function () {
 
 describe('HasTeams Trait Integration', function () {
     it('can be used with User model', function () {
-        $user = new User;
+        $user = new User();
 
         expect(method_exists($user, 'teams'))->toBeTrue();
         expect(method_exists($user, 'belongsToTeam'))->toBeTrue();
     });
 
     it('maintains trait functionality across different models', function () {
-        $user1 = new MockUserWithTeams;
-        $user2 = new MockUserWithTeams;
+        $user1 = new MockUserWithTeams();
+        $user2 = new MockUserWithTeams();
 
         expect(method_exists($user1, 'teams'))->toBeTrue();
         expect(method_exists($user1, 'belongsToTeam'))->toBeTrue();
@@ -284,11 +284,11 @@ describe('HasTeams Trait Integration', function () {
     });
 
     it('can handle concurrent team checks', function () {
-        $team10 = new Team;
+        $team10 = new Team();
         $team10->id = 10;
-        $team20 = new Team;
+        $team20 = new Team();
         $team20->id = 20;
-        $team30 = new Team;
+        $team30 = new Team();
         $team30->id = 30;
 
         // Mock per team 20 (multiplo di 20) - esiste
@@ -339,7 +339,7 @@ describe('HasTeams Trait Integration', function () {
 
 describe('HasTeams Trait Error Handling', function () {
     it('handles missing team gracefully', function () {
-        $team = new Team;
+        $team = new Team();
         $team->id = 99999;
 
         // Mock della relazione teams per simulare team non esistente
@@ -372,9 +372,9 @@ describe('HasTeams Trait Error Handling', function () {
 
 describe('HasTeams Trait Performance', function () {
     it('can handle large numbers of team checks efficiently', function () {
-        $team2 = new Team;
+        $team2 = new Team();
         $team2->id = 2;
-        $team3 = new Team;
+        $team3 = new Team();
         $team3->id = 3;
 
         // Mock per team con ID pari (esiste)

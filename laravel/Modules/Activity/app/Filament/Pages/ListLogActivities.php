@@ -40,7 +40,7 @@ use Webmozart\Assert\Assert;
  * @see XotBasePage
  * @see \Modules\Activity\docs\errori\route-method-does-not-exist.md
  */
-abstract class ListLogActivities extends XotBasePage implements HasForms
+abstract class ListLogActivities extends XotBasePage
 {
     use CanPaginate;
     use InteractsWithFormActions;

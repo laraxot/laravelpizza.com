@@ -19,7 +19,8 @@ readonly class FetchOpenElevationAction
 
     public function __construct(
         private Client $client,
-    ) {}
+    ) {
+    }
 
     /**
      * Ottiene l'elevazione per un punto.

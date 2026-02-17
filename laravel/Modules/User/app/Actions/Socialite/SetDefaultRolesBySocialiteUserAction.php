@@ -22,7 +22,7 @@ class SetDefaultRolesBySocialiteUserAction
         $domainAnalyzer = app(EmailDomainAnalyzer::class, [
             'ssoProvider' => $provider,
         ]);
-        /** @var \Spatie\Permission\Guard $permissionGuard */
+        /** @var Guard $permissionGuard */
         $permissionGuard = app(Guard::class);
         $xotData = XotData::make();
 

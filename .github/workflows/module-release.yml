@@ -1,0 +1,289 @@
+name: Module Semantic Release
+
+on:
+  workflow_call:
+    inputs:
+      module-name:
+        description: 'Name of the module'
+        required: true
+        type: string
+      module-path:
+        description: 'Path to the module'
+        required: false
+        type: string
+        default: 'laravel/Modules'
+      tag-prefix:
+        description: 'Tag prefix for module versions'
+        required: false
+        type: string
+        default: ''
+  push:
+    branches: [main, master]
+    paths:
+      - 'laravel/Modules/**'
+  pull_request:
+    branches: [main, master]
+    paths:
+      - 'laravel/Modules/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: "${{ github.ref }}-${{ github.workflow }}-${{ inputs.module-name }}"
+  cancel-in-progress: true
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.changes.outputs.changed }}
+      modules: ${{ steps.changes.outputs.modules }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Detect module changes
+        id: changes
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_call" ]; then
+            # Manual trigger via workflow_call
+            MODULE_PATH="${{ inputs.module-path }}/${{ inputs.module-name }}"
+            if [ -d "$MODULE_PATH" ]; then
+              echo "changed=true" >> $GITHUB_OUTPUT
+              echo "modules=${{ inputs.module-name }}" >> $GITHUB_OUTPUT
+            else
+              echo "changed=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            # Automatic trigger based on file changes
+            CHANGED_MODULES=$(git diff --name-only HEAD~1 HEAD | grep -E "^${{ inputs.module-path }}/" | cut -d'/' -f3 | sort -u | tr '\n' ' ')
+            if [ -n "$CHANGED_MODULES" ]; then
+              echo "changed=true" >> $GITHUB_OUTPUT
+              echo "modules=$CHANGED_MODULES" >> $GITHUB_OUTPUT
+            else
+              echo "changed=false" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+  release-module:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        module: ${{ fromJson(format('[{0}]', needs.detect-changes.outputs.modules)) }}
+      fail-fast: false
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Calculate module version
+        id: calculate-version
+        uses: bitshifted/git-auto-semver@v2
+        with:
+          main_branch: ${{ github.ref_name }}
+          create_tag: true
+          initial_version: '1.0.0'
+          tag_prefix: '${{ inputs.tag-prefix }}${{ matrix.module }}-'
+
+      - name: Generate module changelog
+        id: build-changelog
+        run: |
+          MODULE_PATH="${{ inputs.module-path }}/${{ matrix.module }}"
+          LAST_TAG=$(git describe --tags --abbrev=0 --match "${{ inputs.tag-prefix }}${{ matrix.module }}-*" HEAD~1 2>/dev/null || echo "")
+          
+          if [ -z "$LAST_TAG" ]; then
+            COMMIT_RANGE="HEAD"
+          else
+            COMMIT_RANGE="${LAST_TAG}..HEAD"
+          fi
+          
+          cat > MODULE_CHANGELOG.md << EOF
+          ## 🚀 ${{ matrix.module }} v${{ steps.calculate-version.outputs.version-string }}
+          
+          ### 📋 Changes in this release
+          EOF
+          
+          # Get changes specific to this module
+          git log $COMMIT_RANGE --pretty=format:"%h %s" -- "$MODULE_PATH" | while read -r commit; do
+            commit_hash=$(echo "$commit" | cut -d' ' -f1)
+            commit_msg=$(echo "$commit" | cut -d' ' -f2-)
+            
+            if echo "$commit_msg" | grep -q "^feat"; then
+              echo "✨ **$commit_msg**" >> MODULE_CHANGELOG.md
+            elif echo "$commit_msg" | grep -q "^fix"; then
+              echo "🐛 **$commit_msg**" >> MODULE_CHANGELOG.md
+            elif echo "$commit_msg" | grep -q "^BREAKING CHANGE"; then
+              echo "💥 **$commit_msg**" >> MODULE_CHANGELOG.md
+            else
+              echo "🔧 **$commit_msg**" >> MODULE_CHANGELOG.md
+            fi
+          done
+          
+          # Add module information
+          cat >> MODULE_CHANGELOG.md << EOF
+          
+          ### 📦 Module Information
+          - **Module**: ${{ matrix.module }}
+          - **Path**: $MODULE_PATH
+          - **Version Tag**: ${{ inputs.tag-prefix }}${{ matrix.module }}-${{ steps.calculate-version.outputs.version-string }}
+          
+          ### 🔗 Dependencies
+          EOF
+          
+          # Check for dependencies if composer.json exists
+          if [ -f "$MODULE_PATH/composer.json" ]; then
+            echo "```json" >> MODULE_CHANGELOG.md
+            cat "$MODULE_PATH/composer.json" | jq '.require // {}' >> MODULE_CHANGELOG.md 2>/dev/null || echo "{}" >> MODULE_CHANGELOG.md
+            echo "```" >> MODULE_CHANGELOG.md
+          fi
+          
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          cat MODULE_CHANGELOG.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create module release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: "${{ inputs.tag-prefix }}${{ matrix.module }}-${{ steps.calculate-version.outputs.version-string }}"
+          name: "${{ matrix.module }} v${{ steps.calculate-version.outputs.version-string }}"
+          body: ${{ steps.build-changelog.outputs.changelog }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+          files: |
+            ${{ inputs.module-path }}/${{ matrix.module }}/**/*
+            !${{ inputs.module-path }}/${{ matrix.module }}/tests/**
+            !${{ inputs.module-path }}/${{ matrix.module }}/node_modules/**
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update module version
+        run: |
+          MODULE_PATH="${{ inputs.module-path }}/${{ matrix.module }}"
+          VERSION="${{ steps.calculate-version.outputs.version-string }}"
+          
+          # Update module version in composer.json if it exists
+          if [ -f "$MODULE_PATH/composer.json" ]; then
+            # Update version field or add it
+            if grep -q '"version"' "$MODULE_PATH/composer.json"; then
+              sed -i "s/\"version\": \"[^\"]*\"/\"version\": \"$VERSION\"/g" "$MODULE_PATH/composer.json"
+            else
+              # Add version after the opening brace
+              sed -i "1a\    \"version\": \"$VERSION\"," "$MODULE_PATH/composer.json"
+            fi
+          fi
+          
+          # Create module VERSION file
+          echo "$VERSION" > "$MODULE_PATH/VERSION"
+          
+          # Commit changes
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add "$MODULE_PATH/composer.json" "$MODULE_PATH/VERSION" 2>/dev/null || true
+          git commit -m "chore(${{ matrix.module }}): update version to $VERSION [skip ci]" || true
+          git push
+
+      - name: Generate module roadmap
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          MODULE_PATH="${{ inputs.module-path }}/${{ matrix.module }}"
+          
+          # Create roadmap from issues and TODOs
+          cat > "$MODULE_PATH/ROADMAP.md" << EOF
+          # 🗺️ ${{ matrix.module }} Roadmap
+          
+          This roadmap outlines the planned development and improvements for the ${{ matrix.module }} module.
+          
+          ## 📊 Current Status
+          - **Current Version**: ${{ steps.calculate-version.outputs.version-string }}
+          - **Last Updated**: $(date +%Y-%m-%d)
+          - **Maintainer**: ${{ github.repository_owner }}
+          
+          ## 🎯 Upcoming Features
+          
+          ### Priority: High
+          - Feature improvements based on user feedback
+          - Performance optimizations
+          - Security enhancements
+          
+          ### Priority: Medium
+          - Documentation improvements
+          - Test coverage expansion
+          - Code quality enhancements
+          
+          ### Priority: Low
+          - Dependency updates
+          - Code refactoring
+          
+          ## 📝 Development Notes
+          - This module follows semantic versioning
+          - Breaking changes will increment major version
+          - New features will increment minor version
+          - Bug fixes will increment patch version
+          
+          ## 🤝 Contributing
+          Please see [CONTRIBUTING.md](../../CONTRIBUTING.md) for guidelines on contributing to this module.
+          
+          ---
+          *This roadmap is automatically updated on each release.*
+          EOF
+          
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add "$MODULE_PATH/ROADMAP.md"
+          git commit -m "docs(${{ matrix.module }}): update roadmap [skip ci]" || true
+          git push
+
+  update-global-changelog:
+    needs: [detect-changes, release-module]
+    if: needs.detect-changes.outputs.changed == 'true' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update global changelog
+        run: |
+          echo "Updating global changelog with module releases..."
+          
+          # Add to global CHANGELOG.md
+          cat >> CHANGELOG.md << EOF
+          
+          ## 📦 Module Releases - $(date +%Y-%m-%d)
+          
+          The following modules were updated in this release:
+          EOF
+          
+          # List all released modules
+          IFS=' ' read -ra MODULE_ARRAY <<< "${{ needs.detect-changes.outputs.modules }}"
+          for module in "${MODULE_ARRAY[@]}"; do
+            echo " - **$module**: Latest version released" >> CHANGELOG.md
+          done
+          
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add CHANGELOG.md
+          git commit -m "docs: update global changelog with module releases [skip ci]" || true
+          git push

@@ -15,14 +15,14 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 use Sushi\Sushi;
 
 /**
- * @property int|null $region_id
- * @property int $id
- * @property string|null $name
- * @property ProfileContract|null $creator
+ * @property int|null                  $region_id
+ * @property int                       $id
+ * @property string|null               $name
+ * @property ProfileContract|null      $creator
  * @property Collection<int, Locality> $localities
- * @property int|null $localities_count
- * @property Region|null $region
- * @property ProfileContract|null $updater
+ * @property int|null                  $localities_count
+ * @property Region|null               $region
+ * @property ProfileContract|null      $updater
  *
  * @method static Builder<static>|Province newModelQuery()
  * @method static Builder<static>|Province newQuery()

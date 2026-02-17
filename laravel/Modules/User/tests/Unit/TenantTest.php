@@ -17,7 +17,7 @@ uses(TestCase::class);
 beforeEach(function (): void {
     // Manually create the tenant to ensure incrementing = false is handled
     // since we can't easily change the model code.
-    $this->tenant = new Tenant;
+    $this->tenant = new Tenant();
     $this->tenant->incrementing = false;
     $this->tenant->setKeyType('string');
 

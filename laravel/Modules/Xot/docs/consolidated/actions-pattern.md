@@ -166,6 +166,37 @@ grep -r "public static function" Modules/ --include="*.php" | grep "Action"
 4. **Consistenza**: Pattern uniforme in tutto il progetto
 5. **Manutenibilità**: Codice più pulito e organizzato
 
+## Actions che generano Stream (PDF, Download)
+
+### Pattern per PDF Actions
+
+Quando un'Action genera uno stream (es. PDF), deve restituire `StreamedResponse`:
+
+```php
+// ✅ CORRETTO - Action che restituisce StreamedResponse
+->action(function (): \Illuminate\Http\StreamedResponse {
+    $params = is_array($this->tableFilters) ? $this->tableFilters : [];
+    return app(MakePdf::class)->execute($params);
+})
+
+// ❌ ERRATO - Wrappare parametri in array non necessario
+->action(function (): void {
+    $data = ['key' => $value];  // NON NECESSARIO
+    app(MakePdf::class)->execute($data);
+})
+
+// ❌ ERRATO - Non restituire StreamedResponse per PDF
+->action(function (): void {
+    app(MakePdf::class)->execute($params);  // Perde lo stream!
+})
+```
+
+### Regole Importanti
+
+1. **Parametri**: Passare direttamente i parametri senza wrappare in array `$data`
+2. **Return Type**: Specificare `->action(function (): \Illuminate\Http\StreamedResponse { ... })`
+3. **Return**: Restituire sempre il risultato dell'execute con `return`
+
 ## Esempi di Actions Disponibili
 
 ### Cast Actions

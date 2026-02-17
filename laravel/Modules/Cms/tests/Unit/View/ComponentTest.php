@@ -12,19 +12,19 @@ use Modules\Cms\View\Components\PageContent;
 use Modules\Cms\View\Components\Section;
 
 test('AppLayout can be instantiated', function () {
-    $component = new AppLayout;
+    $component = new AppLayout();
 
     expect($component)->toBeInstanceOf(AppLayout::class);
 });
 
 test('GuestLayout can be instantiated', function () {
-    $component = new GuestLayout;
+    $component = new GuestLayout();
 
     expect($component)->toBeInstanceOf(GuestLayout::class);
 });
 
 test('Metatags can be instantiated', function () {
-    $component = new Metatags;
+    $component = new Metatags();
 
     expect($component)->toBeInstanceOf(Metatags::class);
 });

@@ -9,8 +9,6 @@ use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Forms\Contracts\HasForms;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
@@ -28,9 +26,8 @@ use Webmozart\Assert\Assert;
 /**
  * @property \Filament\Schemas\Schema $emailForm
  */
-class TestSmtpPage extends XotBasePage implements HasForms
+class TestSmtpPage extends XotBasePage
 {
-    use InteractsWithForms;
 
     public ?array $emailData = [];
 

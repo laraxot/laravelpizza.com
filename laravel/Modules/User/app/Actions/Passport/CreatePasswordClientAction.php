@@ -6,7 +6,6 @@ namespace Modules\User\Actions\Passport;
 
 use Modules\User\Models\OauthClient;
 use Modules\Xot\Contracts\UserContract;
-use Modules\User\Actions\Passport\CreateGenericClientAction;
 use Spatie\QueueableAction\QueueableAction;
 
 class CreatePasswordClientAction

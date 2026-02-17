@@ -2,27 +2,23 @@
 
 declare(strict_types=1);
 
-return array (
-  'actions' => 
-  array (
-    'toggle' => 
-    array (
-      'label' => 'Cambiar diseño',
-      'tooltip' => 'Cambiar entre vista de lista y vista de cuadrícula',
-      'helper_text' => 'Cambiar el tipo de visualización',
-    ),
-  ),
-  'navigation' => 
-  array (
-    'label' => 'Missing Navigation Label',
-    'plural_label' => 'Missing Navigation Plural Label',
-    'group' => 'Missing Group',
-    'icon' => 'heroicon-o-puzzle-piece',
-    'sort' => 100,
-  ),
-  'label' => 'Missing Label',
-  'plural_label' => 'Missing Plural label',
-  'fields' => 
-  array (
-  ),
-);
+return [
+    'actions' => [
+        'toggle' => [
+            'label' => 'Cambiar diseño',
+            'tooltip' => 'Cambiar entre vista de lista y vista de cuadrícula',
+            'helper_text' => 'Cambiar el tipo de visualización',
+        ],
+    ],
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+];

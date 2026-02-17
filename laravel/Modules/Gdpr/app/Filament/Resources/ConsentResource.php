@@ -31,14 +31,14 @@ class ConsentResource extends XotBaseResource
     public function getTableColumns(): array
     {
         return [
-            TextColumn::make('id')->searchable(),
+            'id' => TextColumn::make('id')->searchable(),
             TextColumn::make('treatment.name')->searchable(),
-            TextColumn::make('subject_id')->searchable(),
-            TextColumn::make('created_at')
+            'subject_id' => TextColumn::make('subject_id')->searchable(),
+            'created_at' => TextColumn::make('created_at')
                 ->dateTime()
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),
-            TextColumn::make('updated_at')
+            'updated_at' => TextColumn::make('updated_at')
                 ->dateTime()
                 ->sortable()
                 ->toggleable(isToggledHiddenByDefault: true),

@@ -51,6 +51,7 @@ return [
 2. Modificare il sistema di gestione automatica delle connessioni
 3. Creare duplicati delle connessioni database
 4. Scrivere route() per le pagine nel front office (usare solo Folio)
+5. **Semplificare codice dominio-specifico** (vedi sotto)
 
 ### ✅ SEMPRE FARE SEMPRE:
 1. Lasciare `config/database.php` con solo la connessione base `mysql`
@@ -58,6 +59,57 @@ return [
 3. Usare `LaravelLocalization::localizeURL()` per le rotte localizzate
 4. Usare `route('logout')` solo per il logout (route di Laravel standard)
 5. MAI usare Livewire puro nel front office (solo widget di Filament)
+
+## 🔴 REGOLA DOMINIO: MAI SEMPLIFICARE
+
+### Custom Columns - Usare per DRY/KISS con chiavi stringa:
+```php
+// ❌ ERRATO - manca la chiave stringa
+WorkerColumn::make('lavoratore'),
+
+// ✅ CORRETTO - chiave stringa + WorkerColumn (DRY/KISS)
+'lavoratore' => WorkerColumn::make('lavoratore'),
+```
+
+**NOTA**: `WorkerColumn` NON è una relazione! È un `GroupColumn` che mostra campi raggruppati (matr, cognome, nome, email).
+
+### getTableColumns() - Array con chiavi stringa OBBLIGATORIO:
+```php
+// ❌ ERRATO - array senza chiavi
+return [
+    WorkerColumn::make('lavoratore'),
+    TextColumn::make('nome'),
+];
+
+// ✅ CORRETTO - array con chiavi stringa
+return [
+    'lavoratore' => WorkerColumn::make('lavoratore'),
+    'nome' => TextColumn::make('nome'),
+];
+```
+
+### Action Return Types - Actions che generano PDF/file devono restituire StreamedResponse:
+```php
+// ❌ ERRATO - return type void e senza return
+->action(function (): void {
+    $tableFilters = is_array($this->tableFilters) ? $this->tableFilters : [];
+    app(MakePdf::class)->execute($data);
+}),
+
+// ✅ CORRETTO - return type StreamedResponse e return
+->action(function (): StreamedResponse {
+    $tableFilters = is_array($this->tableFilters) ? $this->tableFilters : [];
+    return app(MakePdf::class)->execute($tableFilters);
+}),
+```
+
+### Options/Years - MAI rimuovere opzioni
+### Array Keys - MAI cambiare chiavi nominali in indici
+### Actions - MAI cancellare getHeaderActions()
+### Blade Includes - MAI sostituire @include con codice inline
+### Traits - MAI rimuovere traits dai modelli
+
+**REGOLA D'ORO**: In caso di dubbio, PRESERVARE il codice esistente. Chiedere prima di semplificare.
 6. MAI usare controller per le pagine pubbliche (solo Folio + Volt)
 
 ## 🔄 VERIFICA DELLA CONFIGURAZIONE

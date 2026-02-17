@@ -8,7 +8,8 @@ use Filament\Actions\Action;
 use Filament\Facades\Filament;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
-use Filament\Pages\Page as FilamentPage;
+use Filament\Pages\Page;
+// use Filament\Resources\Pages\Page;
 use Filament\Schemas\Schema;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -22,8 +23,8 @@ use RuntimeException;
 use UnitEnum;
 
 /**
- * Classe base astratta per tutte le pagine Filament non legate a risorse specifiche.
- * Fornisce funzionalità comuni e standardizzate per la gestione delle pagine.
+ * Classe base astratta per tutte le pagine Filament *standalone* (non legate a risorse specifiche).
+ * Fornisce funzionalità comuni e standardizzate per la gestione delle pagine personalizzate.
  *
  * Implementa:
  * - Sistema di traduzioni integrato
@@ -37,7 +38,7 @@ use UnitEnum;
  *
  * @see \Modules\Xot\docs\xotbasepage_implementation.md Documentazione completa
  */
-abstract class XotBasePage extends FilamentPage implements HasForms
+abstract class XotBasePage extends Page implements HasForms
 {
     use InteractsWithForms;
     use TransTrait;
