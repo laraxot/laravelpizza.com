@@ -47,15 +47,6 @@ if (in_array($slug, $authRoutes)) {
     return;
 }
 
-// Check if this is an event detail page (/events/{slug})
-$eventSlug = request()->route('slug');
-if (!empty($eventSlug) && is_string($eventSlug)) {
-    $event = \Modules\Meetup\Models\Event::where('slug', $eventSlug)->first();
-    if ($event) {
-        echo view('pub_theme::components.blocks.events.detail', ['event' => $event]);
-        return;
-    }
-}
 @endphp
 
 <x-layouts.app>
