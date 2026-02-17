@@ -2,196 +2,174 @@
 
 declare(strict_types=1);
 
-return array (
-  'fields' => 
-  array (
-    'key' => 
-    array (
-      'label' => 'Chiave',
-      'placeholder' => 'Inserisci la chiave della cache',
-      'help' => 'Chiave identificativa per i dati in cache',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'value' => 
-    array (
-      'label' => 'Valore',
-      'placeholder' => 'Inserisci il valore da memorizzare',
-      'help' => 'Valore da memorizzare in cache',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'ttl' => 
-    array (
-      'label' => 'TTL (Time To Live]',
-      'placeholder' => 'Inserisci il tempo di vita in secondi',
-      'help' => 'Tempo di vita dei dati in cache in secondi',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'tags' => 
-    array (
-      'label' => 'Tag',
-      'placeholder' => 'Inserisci i tag per la cache',
-      'help' => 'Tag per organizzare e invalidare la cache',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'driver' => 
-    array (
-      'label' => 'Driver',
-      'placeholder' => 'Seleziona il driver della cache',
-      'help' => 'Driver della cache da utilizzare',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'connection' => 
-    array (
-      'label' => 'Connessione',
-      'placeholder' => 'Seleziona la connessione',
-      'help' => 'Connessione per il driver della cache',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'prefix' => 
-    array (
-      'label' => 'Prefisso',
-      'placeholder' => 'Inserisci il prefisso per le chiavi',
-      'help' => 'Prefisso per le chiavi della cache',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'serializer' => 
-    array (
-      'label' => 'Serializzatore',
-      'placeholder' => 'Seleziona il serializzatore',
-      'help' => 'Serializzatore per i dati della cache',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-  ),
-  'validation' => 
-  array (
-    'key_required' => 'La chiave è obbligatoria',
-    'key_invalid' => 'La chiave non è valida',
-    'value_required' => 'Il valore è obbligatorio',
-    'ttl_numeric' => 'Il TTL deve essere numerico',
-    'ttl_min' => 'Il TTL deve essere almeno 0',
-    'ttl_max' => 'Il TTL non può superare 86400 (24 ore]',
-    'driver_required' => 'Il driver è obbligatorio',
-    'connection_required' => 'La connessione è obbligatoria',
-    'prefix_invalid' => 'Il prefisso non è valido',
-    'serializer_required' => 'Il serializzatore è obbligatorio',
-  ),
-  'messages' => 
-  array (
-    'cache_set' => 'Dati memorizzati in cache con successo',
-    'cache_get' => 'Dati recuperati dalla cache con successo',
-    'cache_delete' => 'Dati eliminati dalla cache con successo',
-    'cache_clear' => 'Cache svuotata con successo',
-    'cache_flush' => 'Cache svuotata con successo',
-    'cache_tags_added' => 'Tag aggiunti alla cache con successo',
-    'cache_tags_removed' => 'Tag rimossi dalla cache con successo',
-    'cache_invalidated' => 'Cache invalidata con successo',
-    'cache_warmed' => 'Cache riscaldata con successo',
-    'cache_optimized' => 'Cache ottimizzata con successo',
-  ),
-  'errors' => 
-  array (
-    'cache_set_failed' => 'Impossibile memorizzare i dati in cache',
-    'cache_get_failed' => 'Impossibile recuperare i dati dalla cache',
-    'cache_delete_failed' => 'Impossibile eliminare i dati dalla cache',
-    'cache_clear_failed' => 'Impossibile svuotare la cache',
-    'cache_flush_failed' => 'Impossibile svuotare la cache',
-    'cache_tags_failed' => 'Impossibile gestire i tag della cache',
-    'cache_invalidation_failed' => 'Impossibile invalidare la cache',
-    'cache_warming_failed' => 'Impossibile riscaldare la cache',
-    'cache_optimization_failed' => 'Impossibile ottimizzare la cache',
-    'key_not_found' => 'Chiave non trovata nella cache',
-    'value_expired' => 'Valore scaduto nella cache',
-    'serialization_failed' => 'Serializzazione fallita',
-    'deserialization_failed' => 'Deserializzazione fallita',
-  ),
-  'cache_drivers' => 
-  array (
-    'file' => 'File',
-    'redis' => 'Redis',
-    'memcached' => 'Memcached',
-    'database' => 'Database',
-    'array' => 'Array',
-    'null' => 'Null',
-  ),
-  'serializers' => 
-  array (
-    'php' => 'PHP',
-    'igbinary' => 'Igbinary',
-    'json' => 'JSON',
-    'msgpack' => 'MessagePack',
-  ),
-  'cache_operations' => 
-  array (
-    'get' => 'Recupera',
-    'set' => 'Memorizza',
-    'add' => 'Aggiungi',
-    'replace' => 'Sostituisci',
-    'increment' => 'Incrementa',
-    'decrement' => 'Decrementa',
-    'delete' => 'Elimina',
-    'clear' => 'Svuota',
-    'flush' => 'Svuota tutto',
-    'tags' => 'Gestisci tag',
-    'invalidate' => 'Invalida',
-    'warm' => 'Riscalda',
-    'optimize' => 'Ottimizza',
-  ),
-  'cache_statistics' => 
-  array (
-    'hits' => 'Hit',
-    'misses' => 'Miss',
-    'hit_rate' => 'Tasso di hit',
-    'miss_rate' => 'Tasso di miss',
-    'size' => 'Dimensione',
-    'keys' => 'Chiavi',
-    'memory_usage' => 'Uso memoria',
-    'disk_usage' => 'Uso disco',
-    'network_usage' => 'Uso rete',
-  ),
-  'label' => 'Cache',
-  'plural_label' => 'Cache (Plurale)',
-  'navigation' => 
-  array (
-    'name' => 'Cache',
-    'plural' => 'Cache',
-    'group' => 
-    array (
-      'name' => 'General',
-      'description' => 'General Settings',
-    ),
+return [
+    'fields' => [
+        'key' => [
+            'label' => 'Chiave',
+            'placeholder' => 'Inserisci la chiave della cache',
+            'help' => 'Chiave identificativa per i dati in cache',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'value' => [
+            'label' => 'Valore',
+            'placeholder' => 'Inserisci il valore da memorizzare',
+            'help' => 'Valore da memorizzare in cache',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'ttl' => [
+            'label' => 'TTL (Time To Live]',
+            'placeholder' => 'Inserisci il tempo di vita in secondi',
+            'help' => 'Tempo di vita dei dati in cache in secondi',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'tags' => [
+            'label' => 'Tag',
+            'placeholder' => 'Inserisci i tag per la cache',
+            'help' => 'Tag per organizzare e invalidare la cache',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'driver' => [
+            'label' => 'Driver',
+            'placeholder' => 'Seleziona il driver della cache',
+            'help' => 'Driver della cache da utilizzare',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'connection' => [
+            'label' => 'Connessione',
+            'placeholder' => 'Seleziona la connessione',
+            'help' => 'Connessione per il driver della cache',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'prefix' => [
+            'label' => 'Prefisso',
+            'placeholder' => 'Inserisci il prefisso per le chiavi',
+            'help' => 'Prefisso per le chiavi della cache',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'serializer' => [
+            'label' => 'Serializzatore',
+            'placeholder' => 'Seleziona il serializzatore',
+            'help' => 'Serializzatore per i dati della cache',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'validation' => [
+        'key_required' => 'La chiave è obbligatoria',
+        'key_invalid' => 'La chiave non è valida',
+        'value_required' => 'Il valore è obbligatorio',
+        'ttl_numeric' => 'Il TTL deve essere numerico',
+        'ttl_min' => 'Il TTL deve essere almeno 0',
+        'ttl_max' => 'Il TTL non può superare 86400 (24 ore]',
+        'driver_required' => 'Il driver è obbligatorio',
+        'connection_required' => 'La connessione è obbligatoria',
+        'prefix_invalid' => 'Il prefisso non è valido',
+        'serializer_required' => 'Il serializzatore è obbligatorio',
+    ],
+    'messages' => [
+        'cache_set' => 'Dati memorizzati in cache con successo',
+        'cache_get' => 'Dati recuperati dalla cache con successo',
+        'cache_delete' => 'Dati eliminati dalla cache con successo',
+        'cache_clear' => 'Cache svuotata con successo',
+        'cache_flush' => 'Cache svuotata con successo',
+        'cache_tags_added' => 'Tag aggiunti alla cache con successo',
+        'cache_tags_removed' => 'Tag rimossi dalla cache con successo',
+        'cache_invalidated' => 'Cache invalidata con successo',
+        'cache_warmed' => 'Cache riscaldata con successo',
+        'cache_optimized' => 'Cache ottimizzata con successo',
+    ],
+    'errors' => [
+        'cache_set_failed' => 'Impossibile memorizzare i dati in cache',
+        'cache_get_failed' => 'Impossibile recuperare i dati dalla cache',
+        'cache_delete_failed' => 'Impossibile eliminare i dati dalla cache',
+        'cache_clear_failed' => 'Impossibile svuotare la cache',
+        'cache_flush_failed' => 'Impossibile svuotare la cache',
+        'cache_tags_failed' => 'Impossibile gestire i tag della cache',
+        'cache_invalidation_failed' => 'Impossibile invalidare la cache',
+        'cache_warming_failed' => 'Impossibile riscaldare la cache',
+        'cache_optimization_failed' => 'Impossibile ottimizzare la cache',
+        'key_not_found' => 'Chiave non trovata nella cache',
+        'value_expired' => 'Valore scaduto nella cache',
+        'serialization_failed' => 'Serializzazione fallita',
+        'deserialization_failed' => 'Deserializzazione fallita',
+    ],
+    'cache_drivers' => [
+        'file' => 'File',
+        'redis' => 'Redis',
+        'memcached' => 'Memcached',
+        'database' => 'Database',
+        'array' => 'Array',
+        'null' => 'Null',
+    ],
+    'serializers' => [
+        'php' => 'PHP',
+        'igbinary' => 'Igbinary',
+        'json' => 'JSON',
+        'msgpack' => 'MessagePack',
+    ],
+    'cache_operations' => [
+        'get' => 'Recupera',
+        'set' => 'Memorizza',
+        'add' => 'Aggiungi',
+        'replace' => 'Sostituisci',
+        'increment' => 'Incrementa',
+        'decrement' => 'Decrementa',
+        'delete' => 'Elimina',
+        'clear' => 'Svuota',
+        'flush' => 'Svuota tutto',
+        'tags' => 'Gestisci tag',
+        'invalidate' => 'Invalida',
+        'warm' => 'Riscalda',
+        'optimize' => 'Ottimizza',
+    ],
+    'cache_statistics' => [
+        'hits' => 'Hit',
+        'misses' => 'Miss',
+        'hit_rate' => 'Tasso di hit',
+        'miss_rate' => 'Tasso di miss',
+        'size' => 'Dimensione',
+        'keys' => 'Chiavi',
+        'memory_usage' => 'Uso memoria',
+        'disk_usage' => 'Uso disco',
+        'network_usage' => 'Uso rete',
+    ],
     'label' => 'Cache',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ),
-  'actions' => 
-  array (
-    'create' => 
-    array (
-      'label' => 'Crea Cache',
-    ),
-    'edit' => 
-    array (
-      'label' => 'Modifica Cache',
-    ),
-    'delete' => 
-    array (
-      'label' => 'Elimina Cache',
-    ),
-  ),
-);
+    'plural_label' => 'Cache (Plurale)',
+    'navigation' => [
+        'name' => 'Cache',
+        'plural' => 'Cache',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Cache',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Cache',
+        ],
+        'edit' => [
+            'label' => 'Modifica Cache',
+        ],
+        'delete' => [
+            'label' => 'Elimina Cache',
+        ],
+    ],
+];

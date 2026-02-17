@@ -2,213 +2,188 @@
 
 declare(strict_types=1);
 
-return array (
-  'fields' => 
-  array (
-    'query' => 
-    array (
-      'label' => 'Ricerca',
-      'placeholder' => 'Inserisci il termine di ricerca',
-      'help' => 'Termine o frase da cercare',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'type' => 
-    array (
-      'label' => 'Tipo',
-      'placeholder' => 'Seleziona il tipo di ricerca',
-      'help' => 'Tipo di entità da cercare',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'location' => 
-    array (
-      'label' => 'Posizione',
-      'placeholder' => 'Inserisci la posizione',
-      'help' => 'Posizione per la ricerca geografica',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'radius' => 
-    array (
-      'label' => 'Raggio',
-      'placeholder' => 'Inserisci il raggio di ricerca',
-      'help' => 'Raggio di ricerca in chilometri',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'latitude' => 
-    array (
-      'label' => 'Latitudine',
-      'placeholder' => 'Inserisci la latitudine',
-      'help' => 'Latitudine per la ricerca geografica',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'longitude' => 
-    array (
-      'label' => 'Longitudine',
-      'placeholder' => 'Inserisci la longitudine',
-      'help' => 'Longitudine per la ricerca geografica',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'filters' => 
-    array (
-      'label' => 'Filtri',
-      'placeholder' => 'Configura i filtri di ricerca',
-      'help' => 'Filtri da applicare alla ricerca',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'sort_by' => 
-    array (
-      'label' => 'Ordina per',
-      'placeholder' => 'Seleziona il campo di ordinamento',
-      'help' => 'Campo per ordinare i risultati',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'sort_direction' => 
-    array (
-      'label' => 'Direzione ordinamento',
-      'placeholder' => 'Seleziona la direzione',
-      'help' => 'Direzione dell\'ordinamento',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'limit' => 
-    array (
-      'label' => 'Limite',
-      'placeholder' => 'Inserisci il numero massimo di risultati',
-      'help' => 'Numero massimo di risultati da restituire',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'page' => 
-    array (
-      'label' => 'Pagina',
-      'placeholder' => 'Inserisci il numero di pagina',
-      'help' => 'Numero di pagina per la paginazione',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-  ),
-  'validation' => 
-  array (
-    'query_required' => 'Il termine di ricerca è obbligatorio',
-    'query_min_length' => 'Il termine di ricerca deve essere di almeno 2 caratteri',
-    'radius_numeric' => 'Il raggio deve essere numerico',
-    'radius_min' => 'Il raggio deve essere almeno 0.1',
-    'radius_max' => 'Il raggio non può superare 1000 km',
-    'latitude_range' => 'La latitudine deve essere tra -90 e 90',
-    'longitude_range' => 'La longitudine deve essere tra -180 e 180',
-    'limit_numeric' => 'Il limite deve essere numerico',
-    'limit_min' => 'Il limite deve essere almeno 1',
-    'limit_max' => 'Il limite non può superare 1000',
-    'page_numeric' => 'La pagina deve essere numerica',
-    'page_min' => 'La pagina deve essere almeno 1',
-  ),
-  'messages' => 
-  array (
-    'search_started' => 'Ricerca avviata con successo',
-    'search_completed' => 'Ricerca completata con successo',
-    'search_failed' => 'Ricerca fallita',
-    'results_found' => ':count risultati trovati',
-    'no_results' => 'Nessun risultato trovato',
-    'search_suggestions' => 'Suggerimenti di ricerca disponibili',
-    'filters_applied' => 'Filtri applicati con successo',
-    'sorting_applied' => 'Ordinamento applicato con successo',
-    'pagination_applied' => 'Paginazione applicata con successo',
-  ),
-  'errors' => 
-  array (
-    'query_too_short' => 'Il termine di ricerca è troppo corto',
-    'query_too_long' => 'Il termine di ricerca è troppo lungo',
-    'location_invalid' => 'Posizione non valida',
-    'coordinates_invalid' => 'Coordinate geografiche non valide',
-    'radius_invalid' => 'Raggio di ricerca non valido',
-    'filters_invalid' => 'Filtri non validi',
-    'sorting_invalid' => 'Ordinamento non valido',
-    'pagination_invalid' => 'Paginazione non valida',
-    'service_unavailable' => 'Servizio di ricerca non disponibile',
-    'timeout' => 'Timeout della ricerca',
-  ),
-  'search_types' => 
-  array (
-    'all' => 'Tutto',
-    'addresses' => 'Indirizzi',
-    'cities' => 'Città',
-    'provinces' => 'Province',
-    'regions' => 'Regioni',
-    'countries' => 'Paesi',
-    'postal_codes' => 'CAP',
-    'boundaries' => 'Confini',
-    'areas' => 'Aree',
-    'markers' => 'Marcatori',
-    'routes' => 'Percorsi',
-  ),
-  'sort_fields' => 
-  array (
-    'relevance' => 'Rilevanza',
-    'name' => 'Nome',
-    'distance' => 'Distanza',
-    'created_at' => 'Data creazione',
-    'updated_at' => 'Data aggiornamento',
-    'population' => 'Popolazione',
-    'area' => 'Superficie',
-  ),
-  'sort_directions' => 
-  array (
-    'asc' => 'Crescente',
-    'desc' => 'Decrescente',
-  ),
-  'search_suggestions' => 
-  array (
-    'did_you_mean' => 'Intendevi: :suggestion',
-    'popular_searches' => 'Ricerche popolari',
-    'recent_searches' => 'Ricerche recenti',
-    'related_searches' => 'Ricerche correlate',
-  ),
-  'label' => 'Search',
-  'plural_label' => 'Search (Plurale)',
-  'navigation' => 
-  array (
-    'name' => 'Search',
-    'plural' => 'Search',
-    'group' => 
-    array (
-      'name' => 'General',
-      'description' => 'General Settings',
-    ),
+return [
+    'fields' => [
+        'query' => [
+            'label' => 'Ricerca',
+            'placeholder' => 'Inserisci il termine di ricerca',
+            'help' => 'Termine o frase da cercare',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'type' => [
+            'label' => 'Tipo',
+            'placeholder' => 'Seleziona il tipo di ricerca',
+            'help' => 'Tipo di entità da cercare',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'location' => [
+            'label' => 'Posizione',
+            'placeholder' => 'Inserisci la posizione',
+            'help' => 'Posizione per la ricerca geografica',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'radius' => [
+            'label' => 'Raggio',
+            'placeholder' => 'Inserisci il raggio di ricerca',
+            'help' => 'Raggio di ricerca in chilometri',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'latitude' => [
+            'label' => 'Latitudine',
+            'placeholder' => 'Inserisci la latitudine',
+            'help' => 'Latitudine per la ricerca geografica',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'longitude' => [
+            'label' => 'Longitudine',
+            'placeholder' => 'Inserisci la longitudine',
+            'help' => 'Longitudine per la ricerca geografica',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'filters' => [
+            'label' => 'Filtri',
+            'placeholder' => 'Configura i filtri di ricerca',
+            'help' => 'Filtri da applicare alla ricerca',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'sort_by' => [
+            'label' => 'Ordina per',
+            'placeholder' => 'Seleziona il campo di ordinamento',
+            'help' => 'Campo per ordinare i risultati',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'sort_direction' => [
+            'label' => 'Direzione ordinamento',
+            'placeholder' => 'Seleziona la direzione',
+            'help' => 'Direzione dell\'ordinamento',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'limit' => [
+            'label' => 'Limite',
+            'placeholder' => 'Inserisci il numero massimo di risultati',
+            'help' => 'Numero massimo di risultati da restituire',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'page' => [
+            'label' => 'Pagina',
+            'placeholder' => 'Inserisci il numero di pagina',
+            'help' => 'Numero di pagina per la paginazione',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'validation' => [
+        'query_required' => 'Il termine di ricerca è obbligatorio',
+        'query_min_length' => 'Il termine di ricerca deve essere di almeno 2 caratteri',
+        'radius_numeric' => 'Il raggio deve essere numerico',
+        'radius_min' => 'Il raggio deve essere almeno 0.1',
+        'radius_max' => 'Il raggio non può superare 1000 km',
+        'latitude_range' => 'La latitudine deve essere tra -90 e 90',
+        'longitude_range' => 'La longitudine deve essere tra -180 e 180',
+        'limit_numeric' => 'Il limite deve essere numerico',
+        'limit_min' => 'Il limite deve essere almeno 1',
+        'limit_max' => 'Il limite non può superare 1000',
+        'page_numeric' => 'La pagina deve essere numerica',
+        'page_min' => 'La pagina deve essere almeno 1',
+    ],
+    'messages' => [
+        'search_started' => 'Ricerca avviata con successo',
+        'search_completed' => 'Ricerca completata con successo',
+        'search_failed' => 'Ricerca fallita',
+        'results_found' => ':count risultati trovati',
+        'no_results' => 'Nessun risultato trovato',
+        'search_suggestions' => 'Suggerimenti di ricerca disponibili',
+        'filters_applied' => 'Filtri applicati con successo',
+        'sorting_applied' => 'Ordinamento applicato con successo',
+        'pagination_applied' => 'Paginazione applicata con successo',
+    ],
+    'errors' => [
+        'query_too_short' => 'Il termine di ricerca è troppo corto',
+        'query_too_long' => 'Il termine di ricerca è troppo lungo',
+        'location_invalid' => 'Posizione non valida',
+        'coordinates_invalid' => 'Coordinate geografiche non valide',
+        'radius_invalid' => 'Raggio di ricerca non valido',
+        'filters_invalid' => 'Filtri non validi',
+        'sorting_invalid' => 'Ordinamento non valido',
+        'pagination_invalid' => 'Paginazione non valida',
+        'service_unavailable' => 'Servizio di ricerca non disponibile',
+        'timeout' => 'Timeout della ricerca',
+    ],
+    'search_types' => [
+        'all' => 'Tutto',
+        'addresses' => 'Indirizzi',
+        'cities' => 'Città',
+        'provinces' => 'Province',
+        'regions' => 'Regioni',
+        'countries' => 'Paesi',
+        'postal_codes' => 'CAP',
+        'boundaries' => 'Confini',
+        'areas' => 'Aree',
+        'markers' => 'Marcatori',
+        'routes' => 'Percorsi',
+    ],
+    'sort_fields' => [
+        'relevance' => 'Rilevanza',
+        'name' => 'Nome',
+        'distance' => 'Distanza',
+        'created_at' => 'Data creazione',
+        'updated_at' => 'Data aggiornamento',
+        'population' => 'Popolazione',
+        'area' => 'Superficie',
+    ],
+    'sort_directions' => [
+        'asc' => 'Crescente',
+        'desc' => 'Decrescente',
+    ],
+    'search_suggestions' => [
+        'did_you_mean' => 'Intendevi: :suggestion',
+        'popular_searches' => 'Ricerche popolari',
+        'recent_searches' => 'Ricerche recenti',
+        'related_searches' => 'Ricerche correlate',
+    ],
     'label' => 'Search',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ),
-  'actions' => 
-  array (
-    'create' => 
-    array (
-      'label' => 'Crea Search',
-    ),
-    'edit' => 
-    array (
-      'label' => 'Modifica Search',
-    ),
-    'delete' => 
-    array (
-      'label' => 'Elimina Search',
-    ),
-  ),
-);
+    'plural_label' => 'Search (Plurale)',
+    'navigation' => [
+        'name' => 'Search',
+        'plural' => 'Search',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Search',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Search',
+        ],
+        'edit' => [
+            'label' => 'Modifica Search',
+        ],
+        'delete' => [
+            'label' => 'Elimina Search',
+        ],
+    ],
+];

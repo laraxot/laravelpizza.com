@@ -2,78 +2,66 @@
 
 declare(strict_types=1);
 
-return array (
-  'fields' => 
-  array (
-    'title' => 
-    array (
-      'label' => 'title',
-      'placeholder' => 'title',
-      'helper_text' => 'title',
-      'description' => 'title',
-      'tooltip' => '',
-    ),
-    'links' => 
-    array (
-      'label' => 'links',
-      'placeholder' => 'links',
-      'helper_text' => 'links',
-      'description' => 'links',
-      'tooltip' => '',
-    ),
-    'label' => 
-    array (
-      'label' => 'label',
-      'placeholder' => 'label',
-      'helper_text' => 'label',
-      'description' => 'label',
-      'tooltip' => '',
-    ),
-    'url' => 
-    array (
-      'label' => 'url',
-      'placeholder' => 'url',
-      'helper_text' => 'url',
-      'description' => 'url',
-      'tooltip' => '',
-    ),
-    'icon' => 
-    array (
-      'label' => 'icon',
-      'placeholder' => 'icon',
-      'helper_text' => 'icon',
-      'description' => 'icon',
-      'tooltip' => '',
-    ),
-  ),
-  'label' => 'Links',
-  'plural_label' => 'Links (Plurale)',
-  'navigation' => 
-  array (
-    'name' => 'Links',
-    'plural' => 'Links',
-    'group' => 
-    array (
-      'name' => 'General',
-      'description' => 'General Settings',
-    ),
+return [
+    'fields' => [
+        'title' => [
+            'label' => 'title',
+            'placeholder' => 'title',
+            'helper_text' => 'title',
+            'description' => 'title',
+            'tooltip' => '',
+        ],
+        'links' => [
+            'label' => 'links',
+            'placeholder' => 'links',
+            'helper_text' => 'links',
+            'description' => 'links',
+            'tooltip' => '',
+        ],
+        'label' => [
+            'label' => 'label',
+            'placeholder' => 'label',
+            'helper_text' => 'label',
+            'description' => 'label',
+            'tooltip' => '',
+        ],
+        'url' => [
+            'label' => 'url',
+            'placeholder' => 'url',
+            'helper_text' => 'url',
+            'description' => 'url',
+            'tooltip' => '',
+        ],
+        'icon' => [
+            'label' => 'icon',
+            'placeholder' => 'icon',
+            'helper_text' => 'icon',
+            'description' => 'icon',
+            'tooltip' => '',
+        ],
+    ],
     'label' => 'Links',
-    'sort' => 1,
-    'icon' => 'heroicon-o-collection',
-  ),
-  'actions' => 
-  array (
-    'create' => 
-    array (
-      'label' => 'Crea Links',
-    ),
-    'edit' => 
-    array (
-      'label' => 'Modifica Links',
-    ),
-    'delete' => 
-    array (
-      'label' => 'Elimina Links',
-    ),
-  ),
-);
+    'plural_label' => 'Links (Plurale)',
+    'navigation' => [
+        'name' => 'Links',
+        'plural' => 'Links',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Links',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Links',
+        ],
+        'edit' => [
+            'label' => 'Modifica Links',
+        ],
+        'delete' => [
+            'label' => 'Elimina Links',
+        ],
+    ],
+];

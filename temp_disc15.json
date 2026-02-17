@@ -1,0 +1,11 @@
+{
+  "query": "mutation CreateDiscussion($input: CreateDiscussionInput!) { createDiscussion(input: $input) { discussion { title url } } }",
+  "variables": {
+    "input": {
+      "repositoryId": "R_kgDOQp2whw",
+      "categoryId": "DIC_kwDOQp2wh84C2iyr",
+      "title": "Architecture Overview: LaravelPizza System Design",
+      "body": "## Architecture Overview\n\n### Tech Stack\n\n- **Laravel 12** - Framework PHP\n- **Filament 5** - Admin panel\n- **Livewire/Volt** - Interactivity\n- **Folio** - File-based routing\n- **Tailwind CSS** - Styling\n- **nwidart/modules** - Modular architecture\n\n### Frontend (Frontoffice)\n\n**NO Controllers, NO Routes in web.php**\n\n- CMS-Driven Pages (JSON)\n- Folio + Volt\n- Block Components\n\n### Backend (Admin)\n\n- Filament Resources\n- XotBase classes\n- Actions (Spatie QueueableAction)\n\n### Multi-Tenancy\n\n- Central Database\n- Tenant-specific databases\n- Dynamic module connections\n\n### Database\n\n- MySQL (tenant + user)\n- Module-specific connections\n- Migrations per module\n\n### Quality Gates\n\n- PHPStan Level 10\n- Laravel Pint\n- Pest Testing\n\n### Reference\n\n- CLAUDE.md: Architettura completa\n- Issue #77: PHPStan"
+    }
+  }
+}

@@ -2,79 +2,67 @@
 
 declare(strict_types=1);
 
-return array (
-  'calendar' => 
-  array (
-    'title' => 'Calendario',
-    'description' => 'Gestisci i tuoi appuntamenti',
-    'types' => 
-    array (
-      'patient' => 'Calendario Paziente',
-      'doctor' => 'Calendario Medico',
-      'admin' => 'Calendario Amministratore',
-    ),
-    'events' => 
-    array (
-      'title' => 'Appuntamento',
-      'start' => 'Inizio',
-      'end' => 'Fine',
-      'patient' => 'Paziente',
-      'doctor' => 'Medico',
-      'status' => 'Stato',
-      'type' => 'Tipo',
-    ),
-    'actions' => 
-    array (
-      'create' => 'Nuovo Appuntamento',
-      'edit' => 'Modifica Appuntamento',
-      'delete' => 'Elimina Appuntamento',
-      'view' => 'Visualizza Dettagli',
-    ),
-    'messages' => 
-    array (
-      'created' => 'Appuntamento creato con successo',
-      'updated' => 'Appuntamento aggiornato con successo',
-      'deleted' => 'Appuntamento eliminato con successo',
-    ),
-  ),
-  'buttons' => 
-  array (
-    'today' => 'Oggi',
-    'month' => 'Mese',
-    'week' => 'Settimana',
-    'day' => 'Giorno',
-  ),
-  'labels' => 
-  array (
-    'all_day' => 'Tutto il giorno',
-    'no_events' => 'Nessun evento',
-  ),
-  'errors' => 
-  array (
-    'load_failed' => 'Impossibile caricare gli eventi',
-    'save_failed' => 'Impossibile salvare l\'evento',
-    'delete_failed' => 'Impossibile eliminare l\'evento',
-  ),
-  'success' => 
-  array (
-    'event_created' => 'Evento creato con successo',
-    'event_updated' => 'Evento aggiornato con successo',
-    'event_deleted' => 'Evento eliminato con successo',
-  ),
-  'navigation' => 
-  array (
-    'label' => 'Missing Navigation Label',
-    'plural_label' => 'Missing Navigation Plural Label',
-    'group' => 'Missing Group',
-    'icon' => 'heroicon-o-puzzle-piece',
-    'sort' => 100,
-  ),
-  'label' => 'Missing Label',
-  'plural_label' => 'Missing Plural label',
-  'fields' => 
-  array (
-  ),
-  'actions' => 
-  array (
-  ),
-);
+return [
+    'calendar' => [
+        'title' => 'Calendario',
+        'description' => 'Gestisci i tuoi appuntamenti',
+        'types' => [
+            'patient' => 'Calendario Paziente',
+            'doctor' => 'Calendario Medico',
+            'admin' => 'Calendario Amministratore',
+        ],
+        'events' => [
+            'title' => 'Appuntamento',
+            'start' => 'Inizio',
+            'end' => 'Fine',
+            'patient' => 'Paziente',
+            'doctor' => 'Medico',
+            'status' => 'Stato',
+            'type' => 'Tipo',
+        ],
+        'actions' => [
+            'create' => 'Nuovo Appuntamento',
+            'edit' => 'Modifica Appuntamento',
+            'delete' => 'Elimina Appuntamento',
+            'view' => 'Visualizza Dettagli',
+        ],
+        'messages' => [
+            'created' => 'Appuntamento creato con successo',
+            'updated' => 'Appuntamento aggiornato con successo',
+            'deleted' => 'Appuntamento eliminato con successo',
+        ],
+    ],
+    'buttons' => [
+        'today' => 'Oggi',
+        'month' => 'Mese',
+        'week' => 'Settimana',
+        'day' => 'Giorno',
+    ],
+    'labels' => [
+        'all_day' => 'Tutto il giorno',
+        'no_events' => 'Nessun evento',
+    ],
+    'errors' => [
+        'load_failed' => 'Impossibile caricare gli eventi',
+        'save_failed' => 'Impossibile salvare l\'evento',
+        'delete_failed' => 'Impossibile eliminare l\'evento',
+    ],
+    'success' => [
+        'event_created' => 'Evento creato con successo',
+        'event_updated' => 'Evento aggiornato con successo',
+        'event_deleted' => 'Evento eliminato con successo',
+    ],
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+];

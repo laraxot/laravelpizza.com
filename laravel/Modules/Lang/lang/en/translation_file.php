@@ -2,115 +2,96 @@
 
 declare(strict_types=1);
 
-return array (
-  'model' => 
-  array (
-    'label' => 'translation file.model',
-  ),
-  'navigation' => 
-  array (
-    'label' => 'Navigation Label',
-    'group' => 'Lang',
-    'icon' => 'heroicon-o-cog',
-    'sort' => '23',
-  ),
-  'fields' => 
-  array (
-    'toggleColumns' => 
-    array (
-      'label' => 'toggleColumns',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'reorderRecords' => 
-    array (
-      'label' => 'reorderRecords',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'edit' => 
-    array (
-      'label' => 'edit',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'resetFilters' => 
-    array (
-      'label' => 'resetFilters',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'content' => 
-    array (
-      'description' => 'content',
-      'helper_text' => 'content',
-      'placeholder' => 'content',
-      'label' => '',
-      'tooltip' => '',
-    ),
-    'applyFilters' => 
-    array (
-      'label' => 'applyFilters',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'snapshots' => 
-    array (
-      'fields' => 
-      array (
-        'updated_at' => 
-        array (
-          'help' => 
-          array (
-            'description' => 'snapshots.fields.updated_at.help',
-            'helper_text' => 'snapshots.fields.updated_at.help',
-            'placeholder' => 'snapshots.fields.updated_at.help',
-            'label' => 'snapshots.fields.updated_at.help',
-          ),
-          'label' => 
-          array (
-            'description' => 'snapshots.fields.updated_at.label',
-            'helper_text' => 'snapshots.fields.updated_at.label',
-            'placeholder' => 'snapshots.fields.updated_at.label',
-          ),
-        ),
-      ),
-      'label' => '',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'openFilters' => 
-    array (
-      'label' => 'openFilters',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-    'key' => 
-    array (
-      'label' => 'key',
-      'tooltip' => '',
-      'helper_text' => '',
-      'description' => '',
-    ),
-  ),
-  'actions' => 
-  array (
-    'create' => 
-    array (
-      'label' => 'create',
-    ),
-    'lang' => 
-    array (
-      'label' => 'lang',
-    ),
-  ),
-  'label' => 'Missing Label',
-  'plural_label' => 'Missing Plural label',
-);
+return [
+    'model' => [
+        'label' => 'translation file.model',
+    ],
+    'navigation' => [
+        'label' => 'Navigation Label',
+        'group' => 'Lang',
+        'icon' => 'heroicon-o-cog',
+        'sort' => '23',
+    ],
+    'fields' => [
+        'toggleColumns' => [
+            'label' => 'toggleColumns',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'reorderRecords' => [
+            'label' => 'reorderRecords',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'edit' => [
+            'label' => 'edit',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'resetFilters' => [
+            'label' => 'resetFilters',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'content' => [
+            'description' => 'content',
+            'helper_text' => 'content',
+            'placeholder' => 'content',
+            'label' => '',
+            'tooltip' => '',
+        ],
+        'applyFilters' => [
+            'label' => 'applyFilters',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'snapshots' => [
+            'fields' => [
+                'updated_at' => [
+                    'help' => [
+                        'description' => 'snapshots.fields.updated_at.help',
+                        'helper_text' => 'snapshots.fields.updated_at.help',
+                        'placeholder' => 'snapshots.fields.updated_at.help',
+                        'label' => 'snapshots.fields.updated_at.help',
+                    ],
+                    'label' => [
+                        'description' => 'snapshots.fields.updated_at.label',
+                        'helper_text' => 'snapshots.fields.updated_at.label',
+                        'placeholder' => 'snapshots.fields.updated_at.label',
+                    ],
+                ],
+            ],
+            'label' => '',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'openFilters' => [
+            'label' => 'openFilters',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'key' => [
+            'label' => 'key',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'create',
+        ],
+        'lang' => [
+            'label' => 'lang',
+        ],
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+];
