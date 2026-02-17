@@ -19,6 +19,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Meetup\Models\Event;
+use Modules\Meetup\Filament\TableFilters\EventStartDateFilter;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Override;
 
@@ -112,24 +113,7 @@ class EventResource extends XotBaseResource
                         'upcoming' => 'Upcoming',
                         'past' => 'Past',
                     ]),
-                Tables\Filters\Filter::make('start_date')
-                    ->form([
-                        \Filament\Forms\Components\DatePicker::make('from'),
-                        \Filament\Forms\Components\DatePicker::make('until'),
-                    ])
-                    ->query(function (Builder $query, array $data) {
-                        if (! empty($data['from'])) {
-                            /** @var string $from */
-                            $from = $data['from'];
-                            $query->whereDate('start_date', '>=', $from);
-                        }
-
-                        if (! empty($data['until'])) {
-                            /** @var string $until */
-                            $until = $data['until'];
-                            $query->whereDate('start_date', '<=', $until);
-                        }
-                    }),
+                EventStartDateFilter::make(),
                 Tables\Filters\SelectFilter::make('event_attendance_mode')
                     ->options([
                         'OfflineEventAttendanceMode' => 'In Presence',

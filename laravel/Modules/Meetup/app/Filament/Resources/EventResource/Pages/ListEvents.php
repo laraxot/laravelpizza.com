@@ -4,14 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Resources\EventResource\Pages;
 
-use Filament\Actions\Action;
-use Filament\Notifications\Notification;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\SelectFilter;
-use Filament\Tables\Filters\TernaryFilter;
-use Modules\Meetup\Actions\Event\ImportEventsFromJsonAction;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
+use Modules\Meetup\Filament\Actions\ImportEventsAction;
 use Modules\Meetup\Filament\Resources\EventResource;
 use Modules\Meetup\Filament\Widgets\EventsStats;
 use Modules\Meetup\Filament\Widgets\EventStatsOverviewWidget;
@@ -128,21 +123,7 @@ class ListEvents extends XotBaseListRecords
     protected function getHeaderActions(): array
     {
         return array_merge(parent::getHeaderActions(), [
-            'import_events' => Action::make('import_events')
-                ->label((string) __('meetup::event.event.actions.seed_events.label'))
-                ->icon('heroicon-o-arrow-down-tray')
-                ->badge(fn () => \Modules\Meetup\Models\Event::count())
-                ->action(function () {
-                    $count = app(ImportEventsFromJsonAction::class)->execute();
-
-                    Notification::make()
-                        ->title((string) __('meetup::event.event.actions.seed_events.notification.title'))
-                        ->body(__('meetup::event.event.actions.seed_events.notification.body', ['count' => $count]))
-                        ->success()
-                        ->send();
-                })
-                ->requiresConfirmation()
-                ->color('info'),
+            ImportEventsAction::make(),
         ]);
     }
 
