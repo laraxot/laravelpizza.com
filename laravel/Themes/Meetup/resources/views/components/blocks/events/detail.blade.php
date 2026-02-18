@@ -3,11 +3,16 @@
  * Event detail page - Pixel Parity implementation
  * Full layout with 2-column design, sidebar CTA, About, Location, Attendees sections
  * SEO optimized with slug URLs and Schema.org structured data
+ * 
+ * Supports both 'event' (specific) and 'item' (generic/agnostic) props
  */
 --}}
 
 @props([
     'event' => null,
+    'item' => null,
+    'container0' => null,
+    'slug0' => null,
 ])
 
 @php
@@ -15,26 +20,34 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Meetup\Models\Event;
 use Illuminate\Support\Carbon;
 
+// Support both 'event' (specific) and 'item' (generic) props
+$eventModel = $event ?? $item;
+
+// If no event/item provided but slug0 is available, load the Event model
+if ($eventModel === null && !empty($slug0)) {
+    $eventModel = Event::where('slug', $slug0)->first();
+}
+
 $eventData = [];
-if ($event instanceof Event) {
-    $startDate = $event->start_date ?? Carbon::now();
-    $endDate = $event->end_date ?? $startDate;
+if ($eventModel instanceof Event) {
+    $startDate = $eventModel->start_date ?? Carbon::now();
+    $endDate = $eventModel->end_date ?? $startDate;
     $status = $startDate->isFuture() ? 'upcoming' : 'past';
     $statusLabel = $status === 'upcoming' ? 'Upcoming' : 'Past Event';
     
     $eventData = [
-        'title' => $event->title,
-        'slug' => $event->slug,
+        'title' => $eventModel->title,
+        'slug' => $eventModel->slug,
         'status' => $status,
         'status_label' => $statusLabel,
-        'description' => $event->description,
+        'description' => $eventModel->description,
         'date' => $startDate->format('l, F j, Y'),
         'time' => $startDate->format('g:i A') . ' - ' . $endDate->format('g:i A'),
-        'location' => $event->location ?? 'Location TBA',
-        'attendees_current' => $event->attendees_count ?? 0,
-        'attendees_max' => $event->max_attendees ?? 100,
-        'cover_image' => $event->cover_image,
-        'available_spots' => ($event->max_attendees ?? 100) - ($event->attendees_count ?? 0),
+        'location' => $eventModel->location ?? 'Location TBA',
+        'attendees_current' => $eventModel->attendees_count ?? 0,
+        'attendees_max' => $eventModel->max_attendees ?? 100,
+        'cover_image' => $eventModel->cover_image,
+        'available_spots' => ($eventModel->max_attendees ?? 100) - ($eventModel->attendees_count ?? 0),
     ];
 } else {
     $eventData = [
@@ -91,7 +104,7 @@ $badgeClass = $eventData['status'] === 'upcoming' ? 'bg-green-600' : 'bg-slate-5
                 
                 {{-- Title --}}
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-                    {{ $eventData['title'] }}
+                    {{ $eventData['title'] }} 
                 </h1>
             </div>
         </div>
@@ -273,9 +286,9 @@ $badgeClass = $eventData['status'] === 'upcoming' ? 'bg-green-600' : 'bg-slate-5
 
 {{-- SEO Structured Data using model's toSchemaOrg() --}}
 @push('meta')
-@if($event instanceof Event)
+@if($eventModel instanceof Event)
 <script type="application/ld+json">
-{!! json_encode($event->toSchemaOrg(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+{!! json_encode($eventModel->toSchemaOrg(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
 </script>
 @endif
 @endpush

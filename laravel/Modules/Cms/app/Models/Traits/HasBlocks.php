@@ -19,9 +19,9 @@ use Spatie\LaravelData\DataCollection;
 trait HasBlocks
 {
     /**
-     * @return DataCollection<BlockData>|array
+     * @return array<int, BlockData>
      */
-    public function getBlocks(?string $side = null)
+    public function getBlocks(?string $side = null): array
     {
         $field = 'blocks';
         if ($side) {
@@ -43,10 +43,11 @@ trait HasBlocks
         // Create BlockData instances manually to ensure constructor is called
         // This is necessary because Laravel Data's collect() doesn't call custom constructors
         // which is needed for dynamic query resolution
-        $blockDataInstances = array_map(function (array $block): BlockData {
-            $type = $block['type'] ?? 'unknown';
-            $data = $block['data'] ?? [];
-            $slug = $block['slug'] ?? null;
+        $blockDataInstances = array_map(function (mixed $block): BlockData {
+            /** @var array<string, mixed> $block */
+            $type = (string) ($block['type'] ?? 'unknown');
+            $data = (array) ($block['data'] ?? []);
+            $slug = isset($block['slug']) ? (string) $block['slug'] : null;
 
             return new BlockData($type, $data, $slug);
         }, $blocks);
@@ -83,9 +84,9 @@ trait HasBlocks
     /**
      * Get blocks for a record by slug.
      *
-     * @return DataCollection<BlockData>|array
+     * @return array<int, BlockData>
      */
-    public static function getBlocksBySlug(string $slug, ?string $side = null)
+    public static function getBlocksBySlug(string $slug, ?string $side = null): array
     {
         // This trait requires the class to extend Model (@phpstan-require-extends Model)
         // So we can safely use static methods
@@ -105,7 +106,7 @@ trait HasBlocks
             return [];
         }
 
-        /** @var DataCollection<BlockData>|array $blocks */
+        /** @var array<int, BlockData> $blocks */
         $blocks = $record->getBlocks($side);
 
         return $blocks;

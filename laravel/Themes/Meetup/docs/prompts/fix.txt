@@ -1,0 +1,68 @@
+laravel/Themes/Meetup/resources/views/pages/[container0]/[slug0]/index.blade.php
+
+il name non e' name('container0.slug0');
+ma e' 
+name('container0.view');
+
+capisci da solo il perche' poi aggiorna le cartelle docs dentro i moduli e dentro i temi, poi aggiorna le tue rules, le tue memories e le tue skills, poi implementa, poi controlla 
+
+
+
+qui finalmente laravel/Themes/Meetup/resources/views/components/blocks/events/detail.blade.php  arriva $slug0 percio' con volt e folio puoi renderizzare il modello che abbiamo passato con /var/www/_bases/base_laravelpizza/laravel/config/local/laravelpizza/database/content/pages/events_view.json 
+
+
+mettere in laravel/Themes/Meetup/resources/views/pages/[container0]/[slug0]/index.blade.php i metodi resolveContent, loadDynamicModel, e' completamente SBAGLIATO !
+
+
+fare
+ $this->container0 = $this->container0 ?? request()->route('container0') ?? '';
+        $this->slug0 = $this->slug0 ?? request()->route('slug0') ?? '';
+       
+e' sbagliato ! volt si arrangia da solo con quei 2 parametri
+
+
+ 
+
+
+ in laravel/Themes/Meetup/resources/views/pages/[container0]/[slug0]/index.blade.php
+ il componente di volt 
+ 
+new class extends Component {
+    public string $container0;
+    public string $slug0;
+    public array $data=[];
+
+e' indispensabile per far arrivare le variabili a volt ! 
+
+in laravel/Themes/Meetup/resources/views/pages/[container0]/[slug0]/index.blade.php 
+
+questa cosa
+ @php
+    // Volt ha già popolato $this->container0 e $this->slug0 automaticamente
+    $fullSlug = $this->container0 . '.' . $this->slug0;
+    
+    // Popolare $this->data per passare variabili ai componenti inclusi
+    // page-content.blade.php fa: array_merge($block->data, $this->data)
+    $this->data = [
+        'container0' => $this->container0,
+        'slug0' => $this->slug0,
+    ];
+    @endphp
+
+potevi farla meglio dentro il metodo mount()
+
+ed e' sbagliato 
+$fullSlug = $this->container0 . '.' . $this->slug0;
+quello corretto e' 
+$fullSlug = $this->container0 . '.view';
+
+questo e' lo slug che mi permette di prendere il json corretto per il dettaglio del container 
+
+
+non e'
+
+        <x-blocks.content-resolver :container0="$this->container0" :slug0="$this->slug0" />
+ma e' 
+<x-page side="content" :slug="$pageSlug" :data="$data" />
+
+capisci da solo il perche' poi aggiorna le cartelle docs dentro i moduli e dentro i temi, poi aggiorna le tue rules, le tue memories e le tue skills, poi implementa, poi controlla 

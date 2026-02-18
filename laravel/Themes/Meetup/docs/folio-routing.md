@@ -41,14 +41,27 @@ The model's `getRouteKeyName()` determines which column is used for binding.
 
 ## Common Issues
 
-### 1. Catch-all [container0] Intercepting Routes
+### 1. Pattern [container0] - Filosofia Architetturale
 
-**Problem:** Test directories like `[container0]/index.blade.php` intercept all Folio routes because nested directory parameters have higher priority than single-parameter catch-alls.
+**Approccio Corretto:** Il pattern `[container0]` è la **filosofia architetturale** di LaravelPizza per contenuti CMS-driven nested.
 
-**Solution:**
-- Remove any `[container0]` or similar test directories
-- Clear compiled views: `php artisan view:clear`
-- Clear route cache: `php artisan route:clear`
+**Struttura:**
+```
+pages/
+├── [slug].blade.php              → /{slug} (CMS catch-all)
+└── [container0]/
+    ├── index.blade.php           → /{container} (CMS: events.json)
+    └── [slug].blade.php          → /{container}/{slug} (CMS: events.{slug}.json)
+```
+
+**Vantaggi:**
+- ✅ DRY: Un solo file gestisce tutti i contenuti nested
+- ✅ Scalabilità: Nuovi contenuti senza modificare struttura file
+- ✅ CMS-Driven: Contenuti in JSON, non nella struttura directory
+
+**Importante:** Rimuovere `[container0]/[container1]/index.blade.php` se esiste (file di test) per dare precedenza a `[container0]/[slug].blade.php`.
+
+Vedi: [Container0 Pattern Philosophy](container0-pattern-philosophy.md)
 
 ### 2. CMS Catch-All vs Event Detail
 
@@ -70,14 +83,30 @@ Folio matches routes in this order:
 
 ## File Structure (LaravelPizza)
 
+### Pattern [container0] Generico (Consigliato)
+
 ```
 Themes/Meetup/resources/views/pages/
-├── [slug].blade.php             → /{slug} (CMS catch-all, loads from JSON via SushiToJsons)
-└── events/
-    └── [.Modules.Meetup.Models.Event].blade.php → /events/{slug} (model binding)
+├── index.blade.php                    → / (home)
+├── [slug].blade.php                   → /{slug} (CMS: home.json, about.json)
+└── [container0]/
+    ├── index.blade.php                → /{container} (CMS: events.json, articles.json)
+    └── [slug].blade.php               → /{container}/{slug} (CMS: events.{slug}.json)
 ```
 
-**Note:** There is NO `events/index.blade.php`. The events list at `/it/events` is CMS-driven via `config/local/laravelpizza/database/content/pages/events.json`.
+**Filosofia**: Pattern generico DRY + CMS-driven. Vedi [Container0 Pattern Philosophy](container0-pattern-philosophy.md)
+
+**Convenzione JSON**: 
+- `events.json` → `/it/events` (lista)
+- `events.laravel-beginners-pizza-night.json` → `/it/events/laravel-beginners-pizza-night` (dettaglio)
+
+### Pattern Directory Specifica (Solo Eccezioni)
+
+```
+pages/events/[.Modules.Meetup.Models.Event].blade.php → /events/{slug} (model binding)
+```
+
+**Usare SOLO** quando serve model binding Folio diretto o logica completamente specifica.
 
 ## Key Files in Meetup Theme
 

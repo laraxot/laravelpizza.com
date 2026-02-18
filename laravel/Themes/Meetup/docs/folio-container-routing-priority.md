@@ -4,135 +4,120 @@
 
 Per la URL `/it/events/laravel-beginners-pizza-night`, Folio usa `[container0]/[container1]/index.blade.php` invece di `[container0]/[slug].blade.php`.
 
-## Perché succede
+## Causa Tecnica: La Pipeline di Folio
 
-Folio risolve le route in questo ordine di priorità:
+Il file `vendor/laravel/folio/src/Router.php` (linee 55-81) esegue un ciclo `for` su ogni segmento URL. Per ogni segmento, passa lo stato attraverso una **Pipeline** con quest'ordine **fisso e non modificabile**:
 
-1. **File esatti** (`index.blade.php`, `about.blade.php`)
-2. **Route statiche** (`users.blade.php`)
-3. **Route annidate** (`users/profile.blade.php`)
-4. **Route con parametri** (`[slug].blade.php`, `[id].blade.php`)
+```
+Step 1: MatchRootIndex                               → /
+Step 2: MatchDirectoryIndexViews                      → dir/index.blade.php (dir letterale)
+Step 3: MatchWildcardViewsThatCaptureMultipleSegments → [...param].blade.php
+Step 4: MatchLiteralDirectories                       → events/ (cartella statica, ContinueIterating)
+Step 5: MatchWildcardDirectories                      → [param]/ (cartella parametrica)
+Step 6: MatchLiteralViews                             → about.blade.php (file letterale)
+Step 7: MatchWildcardViews                            → [slug].blade.php (file parametrico)
+```
 
-**Regola critica**: Quando due pattern matchano la stessa URL, Folio preferisce:
-- **`index.blade.php`** rispetto a **`[slug].blade.php`** nella stessa struttura di directory
-- Pattern con più segmenti specifici rispetto a pattern con meno segmenti
+**Il primo step che trova un match restituisce `MatchedView` e la pipeline si ferma.**
 
-### Esempio: `/it/events/laravel-beginners-pizza-night`
+### Il Codice Sorgente Chiave
 
-**Pattern disponibili:**
-- `pages/[container0]/[container1]/index.blade.php` → matcha: `container0 = 'events'`, `container1 = 'laravel-beginners-pizza-night'`
-- `pages/[container0]/[slug].blade.php` → matcha: `container0 = 'events'`, `slug = 'laravel-beginners-pizza-night'`
+**MatchWildcardDirectories.php** — Il colpevole:
+```php
+public function __invoke(State $state, Closure $next): mixed
+{
+    if ($directory = $this->findWildcardDirectory($state->currentDirectory())) {
+        $currentState = $state->withData(/* ... */)->replaceCurrentUriSegmentWith(/* ... */);
 
-**Risultato**: Folio sceglie `[container0]/[container1]/index.blade.php` perché:
-- `index.blade.php` ha priorità su `[slug].blade.php` quando entrambi matchano
-- Entrambi hanno 2 segmenti dinamici, ma `index.blade.php` è considerato più specifico
+        if (! $currentState->onLastUriSegment()) {
+            return new ContinueIterating($currentState);  // Non ultimo segmento → avanti
+        }
 
-## Verifica con `php artisan folio:list`
+        // Ultimo segmento + index.blade.php esiste → MATCH IMMEDIATO
+        if (file_exists($path = $currentState->currentUriSegmentDirectory().'/index.blade.php')) {
+            return new MatchedView($path, $currentState->data);
+        }
+    }
+    return $next($state);  // Solo se nessun match → passa a Step 6, 7
+}
+```
+
+`MatchWildcardDirectories` (Step 5) trova `[container1]/index.blade.php` e restituisce il match **prima** che `MatchWildcardViews` (Step 7) possa trovare `[slug].blade.php`.
+
+## Trace per `/events/laravel-beginners-pizza-night`
+
+### Iterazione 0 — Segmento `events`
+- Step 5 (`MatchWildcardDirectories`): trova `[container0]/` → non ultimo segmento → **ContinueIterating**
+
+### Iterazione 1 — Segmento `laravel-beginners-pizza-night`
+- Step 2 (`MatchDirectoryIndexViews`): `is_dir('pages/[container0]/laravel-beginners-pizza-night')`? NO → `$next()`
+- Step 5 (`MatchWildcardDirectories`): `findWildcardDirectory()` → trova `[container1]/`! Ultimo segmento + `index.blade.php` esiste → **MatchedView**
+- Step 7 (`MatchWildcardViews`): **MAI RAGGIUNTO** (troverebbe `[slug].blade.php`)
+
+## Regola Fondamentale
+
+Per l'ultimo segmento URL, la priorita' e':
+
+| Priorita' | Tipo | Pipeline Step |
+|-----------|------|--------------|
+| 1 (alta) | cartella letterale + `index.blade.php` | MatchDirectoryIndexViews (Step 2) |
+| 2 | cartella parametrica `[x]/` + `index.blade.php` | MatchWildcardDirectories (Step 5) |
+| 3 | file letterale `nome.blade.php` | MatchLiteralViews (Step 6) |
+| 4 (bassa) | file parametrico `[param].blade.php` | MatchWildcardViews (Step 7) |
+
+**`[container1]/index.blade.php` (tipo 2) vince SEMPRE su `[slug].blade.php` (tipo 4).**
+
+### Ordine di Precedenza Cartella Letterale vs Parametrica
+
+Quando esistono entrambe:
+- `pages/events/[slug].blade.php` → usa Step 4 (`MatchLiteralDirectories`) poi Step 7 → **vince**
+- `pages/[container0]/[slug].blade.php` → usa Step 5 (`MatchWildcardDirectories`) poi Step 7
+
+La cartella letterale `events/` (Step 4) ha priorita' su `[container0]/` (Step 5).
+
+## Soluzioni per Dare Priorita' a `[slug].blade.php`
+
+### Soluzione 1: Rimuovere `[container1]/index.blade.php` (Piu' semplice)
 
 ```bash
-php artisan folio:list | grep container
+rm "pages/[container0]/[container1]/index.blade.php"
+rmdir "pages/[container0]/[container1]/"
+php artisan view:clear && php artisan route:clear
 ```
 
-Output esempio:
-```
-GET  /it/{container0}/{container1}  → [container0]/[container1]/index.blade.php
-GET  /it/{container0}/{slug}        → [container0]/[slug].blade.php
-```
-
-Entrambi matchano `/it/events/laravel-beginners-pizza-night`, ma Folio usa il primo (index.blade.php).
-
-## Soluzioni
-
-### Soluzione 1: Rimuovere `[container0]/[container1]/index.blade.php` (consigliata)
-
-Se `[container0]/[container1]/index.blade.php` è solo un file di test e non serve:
-
-```bash
-# Rimuovere il file
-rm Themes/Meetup/resources/views/pages/[container0]/[container1]/index.blade.php
-
-# Pulire cache
-php artisan view:clear
-php artisan route:clear
-```
-
-**Risultato**: `/it/events/laravel-beginners-pizza-night` userà `[container0]/[slug].blade.php`.
-
-### Soluzione 2: Usare directory specifica invece di `[container0]`
-
-Invece di `[container0]/[slug].blade.php`, creare:
-
-```
-pages/events/[slug].blade.php
-```
-
-**Vantaggi**:
-- Più specifico: `/events/{slug}` ha priorità su pattern generici `/{container0}/{container1}`
-- Più chiaro: il nome della directory indica il contesto
-- Folio preferisce route specifiche rispetto a catch-all generici
-
-**Esempio**:
-```blade
-{{-- pages/events/[slug].blade.php --}}
-@php
-    $slug = $slug ?? request()->route('slug');
-@endphp
-
-<x-layouts.app>
-    @volt('events.detail')
-        <x-page side="content" :slug="$slug" />
-    @endvolt
-</x-layouts.app>
-```
-
-### Soluzione 3: Rinominare `[container0]/[slug].blade.php` in modo più specifico
-
-Se vuoi mantenere il pattern generico ma dare priorità, usa un nome più specifico:
-
-```
-pages/[container0]/[slug-detail].blade.php
-```
-
-Poi nel file:
-```blade
-@php
-    $slug = $slugDetail ?? request()->route('slug-detail');
-@endphp
-```
-
-**Nota**: Questa soluzione è meno chiara e non è consigliata.
-
-## Architettura consigliata per LaravelPizza
-
-### Pattern attuale (CMS-driven)
+### Soluzione 2: Usare Cartelle Letterali (Consigliata per LaravelPizza)
 
 ```
 pages/
-├── index.blade.php                    → / (home)
-├── [slug].blade.php                   → /{slug} (CMS catch-all: events, about, etc.)
+├── [slug].blade.php               → /{slug} (CMS catch-all)
 └── events/
-    └── [.Modules.Meetup.Models.Event].blade.php → /events/{slug} (model binding)
+    └── [slug].blade.php           → /events/{slug}
 ```
 
-**Perché funziona**:
-- `/it/events` → `[slug].blade.php` con `slug = 'events'` → carica `events.json`
-- `/it/events/laravel-11` → `events/[.Modules.Meetup.Models.Event].blade.php` → model binding
-
-### Pattern con container (se necessario)
-
-Se serve supportare percorsi generici tipo `/it/{container}/{slug}`, usa:
+### Soluzione 3: Folio Model Binding con FQCN (Attualmente usata)
 
 ```
 pages/
-├── [slug].blade.php                   → /{slug} (CMS)
-└── [container0]/
-    └── [slug].blade.php               → /{container}/{slug} (CMS nested)
+├── [slug].blade.php                                    → /{slug}
+└── events/
+    └── [.Modules.Meetup.Models.Event].blade.php        → /events/{slug}
 ```
 
-**NON usare** `[container0]/[container1]/index.blade.php` perché intercetta route che dovrebbero andare a `[container0]/[slug].blade.php`.
+## Pattern Consigliato per LaravelPizza
+
+```
+pages/
+├── index.blade.php                                    → / (home)
+├── [slug].blade.php                                   → /{slug} (CMS catch-all)
+├── auth/...
+└── events/
+    └── [.Modules.Meetup.Models.Event].blade.php       → /events/{slug} (model binding)
+```
+
+**✅ USARE `[container0]/` per contenuti CMS-driven nested** — Pattern generico DRY + scalabile. Vedi [Container0 Pattern Philosophy](container0-pattern-philosophy.md) per la filosofia completa.
 
 ## Riferimenti
 
-- [Folio Routing Documentation](folio-routing.md)
-- [Folio Official Docs](https://laravel.com/docs/folio)
-- [GitHub Laravel Folio](https://github.com/laravel/folio)
+- Documentazione completa con trace dettagliato: `Modules/Meetup/docs/folio-container-routing-priority.md`
+- Codice sorgente: `vendor/laravel/folio/src/Router.php`
+- [Folio Routing](folio-routing.md)

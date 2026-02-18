@@ -17,9 +17,8 @@ use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Modules\Meetup\Models\Event;
 use Modules\Meetup\Filament\TableFilters\EventStartDateFilter;
+use Modules\Meetup\Models\Event;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Override;
 
