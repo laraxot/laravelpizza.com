@@ -135,6 +135,25 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 - Registrazione automatica di componenti
 - Gestione centralizzata degli asset
 
+## 📦 **Gestione Dipendenze (composer.json)**
+
+Il file `composer.json` del modulo Xot è fondamentale per definire le sue dipendenze e configurazioni. Segue i principi di gestione delle dipendenze stabiliti per l'intero ecosistema Laraxot.
+
+### **1. Dipendenze Obbligatorie (`require`)**
+- **Vincoli di Versione**: Utilizzare sempre operatori di versione specifici (es. `^1.0` o `~1.2`) per garantire stabilità e prevedibilità negli aggiornamenti. Evitare l'uso di `"*"` per le dipendenze in produzione.
+- **Dipendenze Core**: Il modulo Xot elenca le dipendenze Laravel e Filament necessarie per il funzionamento base dell'intero framework.
+
+### **2. Dipendenze di Sviluppo (`require-dev`)**
+- Includono strumenti per testing (Pest), analisi statica (PHPStan) e formattazione del codice (PHP-CS-Fixer), essenziali per mantenere l'alta qualità del codice base.
+
+### **3. Repository di Percorso (`repositories`)**
+- **Monorepo**: Per facilitare lo sviluppo locale all'interno del monorepo Laraxot, il modulo Xot può definire `path` repositories che puntano ad altri moduli locali (es. `./../AnotherModule`). Questo permette a Composer di risolvere le dipendenze dei moduli localmente.
+- **Priorità**: Questi repository locali hanno la precedenza sui pacchetti Packagist, consentendo di testare le modifiche ai moduli dipendenti prima del rilascio.
+
+### **4. Script e Configurazione**
+- **Script di Qualità**: Include script standardizzati per `analyse`, `test`, `test-coverage` e `format`, promuovendo l'automazione del controllo qualità.
+- **Stabilità**: `minimum-stability: "dev"` e `prefer-stable: true` bilanciano la necessità di utilizzare versioni in sviluppo con la preferenza per versioni stabili.
+
 ## 🔄 **Flusso di Esecuzione**
 
 ### **1. Bootstrap Applicazione**

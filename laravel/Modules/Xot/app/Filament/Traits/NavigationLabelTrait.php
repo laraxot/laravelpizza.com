@@ -4,14 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Traits;
 
+use UnitEnum;
 use BackedEnum;
 use Modules\Lang\Actions\SaveTransAction;
+use Modules\Xot\Filament\Traits\TransTrait;
 use Modules\Xot\Actions\File\SvgExistsAction;
-use UnitEnum;
 
 trait NavigationLabelTrait
 {
-    use TransFuncTrait;
+    use TransTrait;
 
     // public function getModelLabel(): string
     // {

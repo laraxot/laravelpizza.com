@@ -16,14 +16,15 @@ Tests use **generic migration commands** instead of module-specific migrations b
 
 ### What Runs (Corrected)
 
-Tests should use a single `php artisan migrate` command to apply all migrations (app and modules).
+Migrations are run ONCE externally before running tests:
 
-```php
-// From TestCase::setUp() - CORRECTED
-$this->artisan('migrate');
+```bash
+php artisan migrate --env=testing
 ```
 
-- `migrate` - Runs migrations from `database/migrations/` and all registered module migrations.
+- This applies all migrations (app and modules) to the _test databases.
+- NEVER run migrations inside setUp() - it runs before EVERY test, making tests slow.
+- `DatabaseTransactions` handles rollback between tests automatically.
 
 
 ## DatabaseTransactions vs RefreshDatabase
@@ -48,33 +49,42 @@ abstract class TestCase extends BaseTestCase
     use DatabaseTransactions;
     use CreatesApplication;
 
-    // The $migrated flag is no longer needed
-    // protected static bool $migrated = false;
+    /**
+     * OBBLIGATORIO - $connectionsToTransact.
+     *
+     * ATTENZIONE: "stessa base dati" NON significa "stessa transazione".
+     * Laravel crea un handle PDO SEPARATO per ogni connessione nominata.
+     * BEGIN TRANSACTION su 'mysql' NON copre 'activity' o 'gdpr'.
+     * Senza elencare la connessione del modulo, i dati NON vengono rollbackati.
+     *
+     * Vedere: vendor/laravel/framework/src/Illuminate/Foundation/Testing/DatabaseTransactions.php
+     * Il metodo connectionsToTransact() ritorna [null] se non definito = solo default connection.
+     */
+    protected $connectionsToTransact = [
+        'mysql',
+        '{module_snake}',  // DEVE corrispondere a $connection nei Model del modulo
+        'user',
+    ];
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        // Migrations should run only once per test execution
-        // and Laravel's default 'migrate' command is sufficient.
-        $this->artisan('migrate');
-    }
+    // NO setUp() override - NON NECESSARIO
+    // Esegui manualmente: php artisan migrate --env=testing
 }
 ```
 
 ### Key Points (Updated)
 
-1.  **No Static `$migrated` flag**: The static `$migrated` flag is no longer used, ensuring `setUp()` method is clean.
-2.  **Single `migrate` command**: `php artisan migrate` is called once per test suite, applying all necessary migrations.
+1.  **No Static `$migrated` flag**: NEVER use - creates shared state between tests.
+2.  **No migrations in setUp()**: Run externally ONCE: `php artisan migrate --env=testing`.
 3.  **Transaction rollback**: Each test runs in a transaction that rolls back automatically.
-4.  **Multi-connection support**: Tests can specify multiple connections to transaction (this part is still valid).
+4.  **$connectionsToTransact is MANDATORY**: Must list the module's own connection. "Same database" does NOT mean "same PDO handle" - each named connection is a separate PDO with independent transactions.
+5.  **No config overrides**: No `config(['xra.pub_theme' => ...])`, no `XotData::make()->update()`.
 
 ```php
+// Example for Activity module:
 protected $connectionsToTransact = [
     'mysql',
+    'activity',  // Activity models use $connection = 'activity'
     'user',
-    'tenant',
-    // ... all module connections
 ];
 ```
 
@@ -84,19 +94,7 @@ The project uses multiple logical connections which all resolve to the main `DB_
 
 **CRITICAL**: NEVER define separate database connections for each module (e.g., `NOTIFY_DB_DATABASE`, `GEO_DB_DATABASE`) in `config/database.php` or `.env.testing`. All modules share the same underlying database instance for tests.
 
-Tests must include all connections that utilize `DatabaseTransactions` to ensure proper rollback:
-
-```php
-// From Modules/User/tests/TestCase.php
-protected $connectionsToTransact = [
-    'mysql',      // Main connection
-    'user',       // User module
-    'tenant',     // Tenant module
-    'activity',   // Activity module
-    'cms',        // CMS module
-    // ... all module connections
-];
-```
+**$connectionsToTransact is MANDATORY**: Even though all connections point to the same database, they are SEPARATE PDO handles. `DatabaseTransactions::connectionsToTransact()` returns `[null]` (only default connection) if the property is not set. Each module's TestCase MUST list `'mysql'`, the module's own connection, and `'user'` if User models are used in tests.
 
 ## Benefits of This Pattern
 

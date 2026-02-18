@@ -8,7 +8,7 @@ use Modules\Geo\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->action = new FilterCoordinatesAction;
+    $this->action = new FilterCoordinatesAction();
 });
 
 it('filters coordinates within radius correctly', function (): void {

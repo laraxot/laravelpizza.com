@@ -1,16 +1,15 @@
 {
   "name": "laraxot/module_media_fila3",
-  "description": "media module dedicated to image and video management",
+  "description": "Media management module for the Laraxot ecosystem: images, videos, FFmpeg, and Intervention Image.",
   "keywords": [
     "laraxot",
     "laravel",
     "filament",
     "module_media",
-    "Laravel",
-    "Media module",
-    "Media",
-    "Images",
-    "Videos"
+    "media",
+    "images",
+    "videos",
+    "ffmpeg"
   ],
   "homepage": "https://github.com/laraxot/module_media_fila3.git",
   "license": "MIT",

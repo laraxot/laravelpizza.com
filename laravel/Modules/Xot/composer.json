@@ -1,144 +1,111 @@
 {
-  "name": "laraxot/module_xot_fila3",
-  "description": "xot module, heart of the laraxot repository",
-  "keywords": [
-    "laraxot",
-    "laravel",
-    "nwidart",
-    "modules",
-    "module_xot",
-    "filament"
-  ],
-  "homepage": "https://github.com/laraxot/module_xot_fila3",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "marco sottana",
-      "email": "marco.sottana@gmail.com",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php": "^8.2",
-    "aaronfrancis/fast-paginate": "^2.0",
-    "calebporzio/sushi": "^2.5",
-    "coolsam/panel-modules": "*",
-    "doctrine/dbal": "*",
-    "fidum/laravel-eloquent-morph-to-one": "*",
-    "filament/filament": "^5.0",
-    "filament/spatie-laravel-media-library-plugin": "*",
-    "guzzlehttp/guzzle": "*",
-    "laravel/folio": "^1.1",
-    "laravel/framework": "*",
-    "laravel/pennant": "^1.11",
-    "laravel/pulse": "^1.2",
-    "laravel/tinker": "^2.10.1",
-    "livewire/livewire": "*",
-    "livewire/flux": "^2.1.1",
-    "livewire/volt": "^1.0",
-    "maatwebsite/excel": "^3.1",
-    "nwidart/laravel-modules": "*",
-    "predis/predis": "*",
-    "spatie/cpu-load-health-check": "^1.0",
-    "spatie/laravel-data": "^4.7",
-    "spatie/laravel-health": "^1.29",
-    "spatie/laravel-model-states": "^2.7",
-    "spatie/laravel-model-status": "*",
-    "spatie/laravel-package-tools": "*",
-    "spatie/laravel-permission": "*",
-    "spatie/laravel-queueable-action": "^2.16",
-    "spatie/laravel-responsecache": "^7.6",
-    "spatie/laravel-schemaless-attributes": "^2.5",
-    "spatie/laravel-sluggable": "^3.6",
-    "spatie/laravel-tags": "*",
-    "spipu/html2pdf": "^5.2",
-    "staudenmeir/eloquent-has-many-deep": "*",
-    "staudenmeir/laravel-adjacency-list": "^1.22",
-    "symfony/dom-crawler": "*",
-    "thecodingmachine/safe": "^3.0",
-    "tightenco/parental": "*"
-  },
-  "require_comment": {
-    "filament/spatie-laravel-translatable-plugin": "*"
-  },
-  "require-dev": {
-    "barryvdh/laravel-debugbar": "^3.14",
-    "barryvdh/laravel-ide-helper": "^3.2",
-    "fakerphp/faker": "^1.24",
-    "larastan/larastan": "*",
-    "laravel/boost": "^2.0",
-    "laravel/pint": "^1.18",
-    "laravel/sail": "^1.41",
-    "mockery/mockery": "^1.6",
-    "nunomaduro/collision": "^8.6",
-    "orchestra/testbench": "*",
-    "pestphp/pest": "*",
-    "pestphp/pest-plugin-type-coverage": "*",
-    "thecodingmachine/phpstan-safe-rule": "*",
-    "nunomaduro/phpinsights": "*"
-  },
-  "require-dev_comment": {
-    "pestphp/pest-plugin-laravel": "*",
-    "spatie/laravel-error-solutions": "*"
-  },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "../Tenant"
+    "name": "laraxot/module_xot_fila3",
+    "description": "Base and core module for the Laraxot ecosystem: Filament wrappers, traits, base models, and shared utilities.",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_xot",
+        "core",
+        "base",
+        "xot",
+        "admin-panel"
+    ],
+    "homepage": "https://github.com/laraxot/module_xot_fila3",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Sottana",
+            "email": "marco.sottana@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Xot\\Providers\\XotServiceProvider"
+            ],
+            "aliases": {
+                "Xot" : "Modules\\Xot\\Facades\\Xot"
+            }
+        }
     },
-    {
-      "type": "path",
-      "url": "./packages/coolsam/panel-modules"
+    "autoload": {
+        "psr-4": {
+            "Modules\\Xot\\": "app/",
+            "Modules\\Xot\\Database\\Factories\\": "database/factories/",
+            "Modules\\Xot\\Database\\Seeders\\": "database/seeders/"
+        }
     },
-    {
-      "type": "composer",
-      "url": "https://packagist.org",
-      "canonical": false
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "Modules\\Xot\\": "app/",
-      "Modules\\Xot\\Database\\Factories\\": "database/factories/",
-      "Modules\\Xot\\Database\\Seeders\\": "database/seeders/",
-      "Coolsam\\FilamentModules\\": "packages/coolsam/panel-modules/src/"
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Xot\\Tests\\": "tests/"
+        }
     },
-    "psr-4_comment": {
-      "Modules\\Xot\\Tests\\": "tests/"
+    "require": {
+        "artesaos/laravel-two-factor-authentication": "^1.0",
+        "awcodes/filament-badge-column": "^2.0",
+        "awcodes/filament-curator": "^3.0",
+        "awcodes/filament-form-with-sentry": "^3.0",
+        "awcodes/filament-tiptap-editor": "^3.0",
+        "barryvdh/laravel-debugbar": "^3.0",
+        "blade-ui-kit/blade-icons": "^1.0",
+        "bezhansalleh/filament-language-switch": "^3.0",
+        "codebar-ag/laravel-livewire-toggle": "^1.0",
+        "doctrine/dbal": "^3.0",
+        "filament/filament": "^3.0",
+        "filament/forms": "^3.0",
+        "filament/notifications": "^3.0",
+        "filament/tables": "^3.0",
+        "filament/widgets": "^3.0",
+        "flowbite/flowbite": "^1.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "ibex/filament-multilanguage-forms": "^1.0",
+        "laravel/framework": "^11.0",
+        "livewire/livewire": "^3.0",
+        "maatwebsite/excel": "^3.1",
+        "nwidart/laravel-modules": "^10.0",
+        "php": "^8.2",
+        "pxlrbt/filament-clean-form": "^1.0",
+        "ryangjchandler/filament-resource-views": "^1.0",
+        "sokeio/filament-multi-language": "^3.0",
+        "spatie/laravel-data": "^3.0",
+        "spatie/laravel-ignition": "^2.0",
+        "spatie/laravel-medialibrary": "^11.0",
+        "spatie/laravel-model-states": "^2.0",
+        "spatie/laravel-permission": "^6.0",
+        "spatie/laravel-schemaless-attributes": "^3.0",
+        "spatie/laravel-settings": "^3.0",
+        "spatie/laravel-translatable": "^6.0"
     },
-    "files": [
-      "Helpers/Helper.php"
-    ]
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Modules\\Xot\\Tests\\": "tests/"
-    }
-  },
-  "scripts": {
-    "analyse": "vendor/bin/phpstan analyse",
-    "test": "vendor/bin/pest",
-    "test-coverage": "vendor/bin/pest --coverage",
-    "format": "vendor/bin/pint"
-  },
-  "config": {
-    "sort-packages": true,
-    "allow-plugins": {
-      "pestphp/pest-plugin": true,
-      "phpstan/extension-installer": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true,
-      "wikimedia/composer-merge-plugin": true
-    }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Modules\\Xot\\Providers\\XotServiceProvider",
-        "Modules\\Xot\\Providers\\Filament\\AdminPanelProvider"
-      ],
-      "aliases": {}
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.0",
+        "larastan/larastan": "^2.0",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "phpstan/phpstan": "^1.0",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wikimedia/composer-merge-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

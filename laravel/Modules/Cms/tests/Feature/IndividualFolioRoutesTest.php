@@ -210,7 +210,7 @@ describe('CMS Individual Folio Routes Tests', function () {
         // Le pagine dinamiche potrebbero non esistere
         expect($response->status())->toBeIn([200, 404]);
 
-        if ($response->status() === 200) {
+        if (200 === $response->status()) {
             // Verifica che CMS carichi correttamente la pagina dinamica
             $response->assertSee('<!DOCTYPE html>');
             $response->assertSee('<html');

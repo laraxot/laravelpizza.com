@@ -375,7 +375,7 @@ abstract class XotBaseMigration extends LaravelMigration
      * This method provides a hook for conditional migration execution.
      * Returns true by default to maintain backward compatibility.
      */
-    protected function shouldRun(): bool
+    public function shouldRun(): bool
     {
         return true;
     }

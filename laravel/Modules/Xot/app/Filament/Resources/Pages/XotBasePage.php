@@ -130,7 +130,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
         return 'data';
     }
 
-    public function form(Schema $schema): Schema
+    final public function form(Schema $schema): Schema
     {
         return $schema
             ->components($this->getFormSchema())
@@ -197,7 +197,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     /**
      * Get the form schema for the page.
      *
-     * @return array<string, Component>
+     * @return array<int|string, Component>
      */
     protected function getFormSchema(): array
     {
@@ -222,6 +222,7 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     {
         return [
             'data' => $this->data,
+            'record' => $this->record ?? null,
         ];
     }
 }

@@ -149,33 +149,41 @@ use Modules\Xot\Tests\CreatesApplication;
 /**
  * Base test case for ModuleName module.
  *
- * Uses MySQL from .env.testing (NOT SQLite).
- * Database names must have "_test" suffix (es: laravelpizza_data_test).
- * The .env.testing file is the single source of truth - NEVER override database configuration.
+ * Uses MySQL from .env.testing.
+ * All module connections are mapped dynamically by TenantServiceProvider.
+ * Migrations must be run ONCE externally: php artisan migrate --env=testing
+ * DatabaseTransactions handles rollback between tests.
  */
 abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
     use DatabaseTransactions;
 
+    /**
+     * MUST include every connection used by this module's models.
+     * Even though module connections point to the same MySQL server,
+     * they are SEPARATE PDO handles with INDEPENDENT transaction scopes.
+     * Without listing the module's connection, writes are NEVER rolled back.
+     *
+     * @var array<int, string>
+     */
     protected $connectionsToTransact = [
         'mysql',
-        'user',
+        '{module_snake}',  // MUST match $connection in module's models
+        'user',            // Include if tests use User models
     ];
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        // Set cache driver to array for testing (required for Sushi models)
-        $this->app['config']->set('cache.default', 'array');
-
-        // ✅ CORRETTO: Rispetta .env.testing
-        // UNA sola chiamata a module:migrate - NO --force - NO migrate:fresh - NO if (!$migrated)
-        $this->artisan('module:migrate');
-    }
+    // NO setUp() with migrations - NOT NEEDED
+    // Run migrations manually BEFORE running tests:
+    // php artisan migrate --env=testing
 }
 ```
+
+> **NOTA**: Prima di lanciare i test, eseguire manualmente:
+> ```bash
+> php artisan migrate --env=testing
+> ```
+> Questo crea tutte le tabelle una volta sola. `DatabaseTransactions` gestisce il rollback tra i test.
 
 ## ❌ TestCase Pattern VIETATO
 
@@ -224,11 +232,13 @@ protected function setUp(): void
 - [ ] TestCase NON usa `migrate:fresh`
 - [ ] TestCase NON usa `--force`
 - [ ] TestCase NON usa `if (! self::$migrated)`
-- [ ] TestCase USA una sola chiamata `$this->artisan('module:migrate');`
+- [ ] TestCase NON usa `$this->artisan('module:migrate')` nel setUp()
+- [ ] TestCase usa `$connectionsToTransact` con la connessione del modulo (OBBLIGATORIO)
 - [ ] TestCase NON forza SQLite
 - [ ] TestCase NON sovrascrive configurazione database
 - [ ] TestCase rispetta `.env.testing`
-- [ ] `$connectionsToTransact` contiene solo `mysql` e `user`
+- [ ] TestCase ha solo `CreatesApplication` e `DatabaseTransactions` come trait
+- [ ] Migrazioni eseguite manualmente PRIMA di lanciare i test: `php artisan migrate --env=testing`
 
 ## Riferimenti
 

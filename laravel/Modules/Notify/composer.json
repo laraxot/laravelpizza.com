@@ -1,17 +1,18 @@
 {
   "name": "laraxot/module_notify_fila3",
-  "description": "notify module dedicated to managing notifications",
+  "description": "Notification management module for the Laraxot ecosystem: email, SMS, WhatsApp, Telegram, and FCM push.",
   "keywords": [
     "laraxot",
     "laravel",
     "filament",
     "module_notify",
-    "Laravel",
-    "Notify module",
-    "Notify",
-    "Emails",
-    "Smss",
-    "Whatsapp"
+    "notify",
+    "notifications",
+    "email",
+    "sms",
+    "whatsapp",
+    "telegram",
+    "fcm"
   ],
   "homepage": "https://github.com/laraxot/module_notify_fila3.git",
   "license": "MIT",

@@ -14,7 +14,7 @@ uses(TestCase::class);
 beforeEach(function (): void {
     /* @phpstan-ignore-next-line method.nonObject */
     $this->mockClient = $this->mock(Client::class);
-    $this->action = new LookupPlaceAction;
+    $this->action = new LookupPlaceAction();
 
     // Replace the client instance with our mock
     /** @phpstan-ignore-next-line property.notFound */
@@ -99,7 +99,7 @@ test('lookup place action uses correct user agent header', function (): void {
             /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
             return isset($options['headers']['User-Agent'])
                    /* @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
-                   && $options['headers']['User-Agent'] === '<main module>/1.0';
+                   && '<main module>/1.0' === $options['headers']['User-Agent'];
         })
         ->andReturn($mockResponse);
 

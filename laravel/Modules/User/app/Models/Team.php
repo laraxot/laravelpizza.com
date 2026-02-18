@@ -71,7 +71,7 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class Team extends BaseTeam
 {
-    use SoftDeletes;
+    // use SoftDeletes;
 
     protected $fillable = [
         'user_id',

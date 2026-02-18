@@ -71,7 +71,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
     use IsProfileTrait;
     use Notifiable;
     use SchemalessAttributesTrait;
-    use SoftDeletes;
+    // use SoftDeletes;
 
     /**
      * Undocumented variable.

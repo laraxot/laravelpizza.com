@@ -6,7 +6,6 @@ namespace Modules\Cms\View\Components;
 
 use Illuminate\Contracts\View\View as ViewContract;
 use Illuminate\View\Component;
-use Modules\Cms\Datas\BlockData;
 use Modules\Cms\Models\Section as SectionModel;
 use Spatie\LaravelData\DataCollection;
 
@@ -15,9 +14,9 @@ use Spatie\LaravelData\DataCollection;
  *
  * Renders a reusable section of the site using the Section model.
  *
- * @property string $slug The unique identifier for the section
+ * @property string      $slug The unique identifier for the section
  * @property string|null $view Custom view path for rendering
- * @property array $data Additional data to pass to the view
+ * @property array       $data Additional data to pass to the view
  */
 class Section extends Component
 {
@@ -36,9 +35,9 @@ class Section extends Component
     /**
      * Create a new component instance.
      *
-     * @param  string  $slug  Unique identifier for the section
-     * @param  string|null  $class  Additional CSS classes
-     * @param  string|null  $id  Custom ID for the section
+     * @param string      $slug  Unique identifier for the section
+     * @param string|null $class Additional CSS classes
+     * @param string|null $id    Custom ID for the section
      */
     public function __construct(
         string $slug,
@@ -55,6 +54,7 @@ class Section extends Component
         $blocksResult = SectionModel::getBlocksBySlug($this->slug);
         $this->blocks = $blocksResult;
     }
+
     /**
      * Get the view / contents that represent the component.
      */

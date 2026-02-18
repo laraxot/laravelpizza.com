@@ -20,29 +20,30 @@ class ResolveBlockQueryAction
     /**
      * Executes the query path specified in block data and returns the result.
      *
-     * @param  array<string, mixed>  $queryConfig  Configuration: [model, scopes, orderBy, limit, wrap_in]
+     * @param array<string, mixed> $queryConfig Configuration: [model, scopes, orderBy, limit, wrap_in]
+     *
      * @return array<string, mixed> The transformed data to be merged into block data
      */
     public function execute(array $queryConfig): array
     {
         $modelClass = Arr::get($queryConfig, 'model');
-        if ($modelClass === null || ! is_string($modelClass) || ! class_exists($modelClass)) {
+        if (null === $modelClass || ! is_string($modelClass) || ! class_exists($modelClass)) {
             return [];
         }
 
         /** @var Model $modelInstance */
-        $modelInstance = new $modelClass;
+        $modelInstance = new $modelClass();
         $query = $modelInstance->newQuery();
 
         // Apply scopes (support both 'scope' singular and 'scopes' plural)
         $singleScope = Arr::get($queryConfig, 'scope');
         /** @var array<int, string> $scopes */
         $scopes = (array) Arr::get($queryConfig, 'scopes', []);
-        if ($singleScope !== null && is_string($singleScope)) {
+        if (null !== $singleScope && is_string($singleScope)) {
             array_unshift($scopes, $singleScope);
         }
         foreach ($scopes as $scope) {
-            if (is_string($scope) && $scope !== '') {
+            if (is_string($scope) && '' !== $scope) {
                 // Scopes are added dynamically by Laravel, so we just try to call them
                 // method_exists() won't work because they're added via __call
                 try {

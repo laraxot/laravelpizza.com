@@ -7,9 +7,7 @@
 
 > **Version**: 3.0 - DRY + KISS Documentation Refactor  
 > **Status**: ✅ Core Framework Module  
-> **Version**: 3.0 - DRY + KISS Documentation Refactor
-> **Status**: ✅ Core Framework Module
-> 
+> **Last Updated**: December 2025
 
 ## 📋 Overview
 
@@ -24,7 +22,6 @@ php artisan module:list | grep Xot   # Verifica che sia attivo
 ```
 
 Poi nelle tue classi: `extends XotBaseResource`, `extends XotBaseModel`, `extends XotBaseServiceProvider`. **[Guida estensione →](docs/development/README.md)**
-Il modulo **Xot** è il cuore del framework Laraxot, fornendo le classi base, i service provider e le funzionalità fondamentali che abilitano tutti gli altri moduli del sistema.
 
 ## 🏗️ Architecture
 

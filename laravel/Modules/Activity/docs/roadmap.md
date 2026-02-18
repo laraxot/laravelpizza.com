@@ -1,6 +1,6 @@
 # Roadmap Modulo Activity - Audit Trail & Intelligence
 
-**Data Creazione**: [DATE]
+**Data Creazione**: 2026-01-31
 **Status**: 📋 IN LAVORAZIONE
 **Versione**: 2.3.0
 
@@ -30,19 +30,20 @@ Evolvere il sistema di logging verso un'analisi proattiva (AI-driven) e una visu
 ### 3. AI-Driven Anomaly Detection
 **Problema**: I log sono molti, ma l'identificazione di pattern anomali è manuale.
 **Priorità**: 🟡 Media
-**Link**: [docs/tasks/activity-ai-detection.md](./tasks/activity-ai-detection.md)
+**Link**: [docs/tasks/activity-ai-detection.md](./tasks/tasks/activity-ai-detection.md)
 
 ## 📋 Roadmap Dettagliata
 
-### Fase 1: Qualità e Pulizia (Completed)
+### Fase 1: Qualità e Pulizia (Completed/In Progress)
 - [x] PHPStan Level 10 Compliance Nativa.
 - [x] Rimozione sistematica dei file obsoleti e standardizzazione nomi.
 - [x] GitHub Action automation for Quality Check and Releases.
+- [ ] Rimozione sistematica dei file `.txt`, `.xml` di coverage e dei duplicati `.md`.
+- [ ] Consolidamento della guida agli eventi di dominio.
+- [ ] Verifica compatibilità Laravel 12.
 
 ### Fase 2: Enterprise UI (In Progress)
 - [ ] Implementazione del **Cluster "Observability"**:
-- [ ] Consolidamento della guida agli eventi di dominio.
-- [ ] Verifica compatibilità Laravel 12.
     - **Activity logs** Resource.
     - **Performance** Dashboard.
     - **Security Audit** Page.

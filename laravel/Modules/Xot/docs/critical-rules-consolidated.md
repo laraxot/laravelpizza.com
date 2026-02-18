@@ -103,6 +103,36 @@ return [
 }),
 ```
 
+### Infolists vs Disabled Forms - Usare Infolists per informazioni di sola lettura:
+```php
+// ❌ ERRATO - usare TextInput disabled per informazioni di sola lettura
+Section::make('Informazioni Generali')
+    ->schema([
+        TextInput::make('matr')->disabled(),
+        TextInput::make('cognome')->disabled(),
+    ])
+
+// ✅ CORRETTO - usare Infolist per informazioni di sola lettura
+public function infolist(Infolist $infolist): Infolist
+{
+    return $infolist
+        ->record($this->record)
+        ->schema([
+            Section::make('Informazioni Generali')
+                ->columns(4)
+                ->schema([
+                    TextEntry::make('matr')->label('Matricola'),
+                    TextEntry::make('cognome')->label('Cognome'),
+                ]),
+        ]);
+}
+```
+
+**PERCHÉ**: 
+- `TextInput disabled` è per campi di INPUT temporaneamente disabilitati
+- `Infolist/TextEntry` è per visualizzare INFORMAZIONI di sola lettura
+- Separazione netta tra edit e display
+
 ### Options/Years - MAI rimuovere opzioni
 ### Array Keys - MAI cambiare chiavi nominali in indici
 ### Actions - MAI cancellare getHeaderActions()

@@ -99,20 +99,23 @@ abstract class TestCase extends BaseTestCase
     use CreatesApplication;
     use DatabaseTransactions;  // TRAIT CHIAVE!
 
+    /**
+     * OBBLIGATORIO: elencare OGNI connessione usata dai Model del modulo.
+     * Anche se le connessioni puntano allo stesso server MySQL,
+     * sono handle PDO SEPARATI con scope transazionali INDIPENDENTI.
+     * Senza elencare la connessione del modulo, i dati NON vengono rollbackati.
+     *
+     * @var array<int, string>
+     */
     protected $connectionsToTransact = [
         'mysql',
-        'user',
+        '{module_snake}',  // DEVE corrispondere a $connection nei Model
+        'user',            // Se i test usano Model User
     ];
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        // Config setup (niente migrate!)
-
-        // NOTE: Migrations are NOT run in setUp()
-        // DatabaseTransactions trait handles rollback automatically
-    }
+    // NO setUp() con migrate - NON NECESSARIO
+    // Esegui: php artisan migrate --env=testing
+    // PRIMA di lanciare i test
 }
 ```
 

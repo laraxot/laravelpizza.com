@@ -1,6 +1,17 @@
 {
     "name": "laraxot/module_lang_fila3",
-    "description": "",
+    "description": "Internationalization and localization module for the Laraxot ecosystem: translations, languages, and locale management.",
+    "keywords": [
+        "laraxot",
+        "laravel",
+        "filament",
+        "module_lang",
+        "lang",
+        "i18n",
+        "l10n",
+        "translations",
+        "localization"
+    ],
     "license": "MIT",
     "homepage": "https://github.com/laraxot/module_lang_fila3.git",
     "authors": [

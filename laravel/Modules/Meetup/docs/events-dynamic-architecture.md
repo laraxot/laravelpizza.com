@@ -1,8 +1,5 @@
 # Architettura Eventi Dinamici - Modulo Meetup
 
-## Data
-2026-02-17
-
 ## Panoramica
 
 Il sistema eventi del modulo Meetup utilizza un'architettura **dinamica e configurabile via JSON** che permette di:
@@ -69,12 +66,13 @@ Event::getBySlug('mio-evento-2026');
                 "data": {
                     "view": "pub_theme::components.blocks.events.list",
                     "title": "Upcoming Events",
+                    "description": "Join us for pizza and Laravel discussions",
                     "query": {
                         "model": "Modules\\Meetup\\Models\\Event",
-                        "scope": "upcoming",
                         "orderBy": "start_date",
                         "direction": "asc",
-                        "limit": 50
+                        "limit": 50,
+                        "wrap_in": "events"
                     }
                 }
             }
@@ -83,12 +81,15 @@ Event::getBySlug('mio-evento-2026');
 }
 ```
 
+**Nota:** Non viene specificato `scope` perche' il filtraggio (All/Upcoming/Past) avviene client-side con Alpine.js. Se si specificasse `scope: "upcoming"`, il filtro "Past Events" non mostrerebbe risultati.
+
 **Parametri query supportati:**
-- `model` - Classe del modello Eloquent
-- `scope` - Nome dello scope da applicare (upcoming, past, etc.)
+- `model` - Classe del modello Eloquent (FQCN con doppio backslash)
+- `scope` - (opzionale) Nome dello scope da applicare (upcoming, past, etc.)
 - `orderBy` - Colonna per ordinamento (start_date, end_date, title, created_at)
 - `direction` - asc o desc
 - `limit` - Numero massimo di risultati
+- `wrap_in` - (opzionale) Nome della chiave wrapper per i dati passati alla view
 
 ### 3. Componente List (Themes/Meetup/resources/views/components/blocks/events/list.blade.php)
 
@@ -110,23 +111,15 @@ if (empty($eventsData) && isset($data['query'])) {
 }
 ```
 
-### 4. Pagina Dettaglio (Themes/Meetup/resources/views/pages/events/[slug].blade.php)
+### 4. Pagina Dettaglio (Themes/Meetup/resources/views/pages/events/[.Modules.Meetup.Models.Event].blade.php)
 
-Folio routing con dependency injection:
+Folio routing con model binding automatico:
 
 ```php
 <?php
+declare(strict_types=1);
+use function Laravel\Folio\name;
 name('events.show');
-
-new class extends Component
-{
-    public Event $event;
-
-    public function mount(Event $event): void
-    {
-        $this->event = $event;
-    }
-};
 ?>
 
 <x-layouts.app>
@@ -136,7 +129,9 @@ new class extends Component
 
 **Routing:**
 - URL: `/it/events/{slug}` (es. `/it/events/laravel-meetup-milano-2026`)
+- File: `[.Modules.Meetup.Models.Event].blade.php` — Folio model binding con FQCN (dots al posto di backslash)
 - Risoluzione automatica tramite `Event::getRouteKeyName()` → `'slug'`
+- La variabile `$event` e' iniettata automaticamente da Folio (no Volt mount necessario)
 - SEO-friendly, nessun ID numerico esposto
 
 ### 5. Importazione Dati (Modules/Meetup/app/Actions/Event/ImportEventsFromJsonAction.php)
@@ -169,23 +164,24 @@ private function generateSlug(string $title): string
 ```
 User → /it/events → Folio → [slug].blade.php → Page component
                                           ↓
-                              Legge events.json
+                              Legge events.json (SushiToJsons)
                                           ↓
                               content_blocks.events-list
                                           ↓
                               list.blade.php
                                           ↓
                               query.model = Event
-                              query.scope = upcoming
+                              (no scope = tutti gli eventi)
                                           ↓
-                              Event::upcoming()
-                                  ->orderBy('start_date')
+                              Event::query()
+                                  ->orderBy('start_date', 'asc')
                                   ->limit(50)
                                   ->get()
                                           ↓
                               toBlockArray() per ogni evento
+                              (include slug, url localizzato, status)
                                           ↓
-                              Render HTML con Alpine.js filters
+                              Js::from() → Alpine.js x-for + filtri client-side
 ```
 
 ### Visualizzazione Dettaglio Evento
@@ -193,15 +189,16 @@ User → /it/events → Folio → [slug].blade.php → Page component
 ```
 User → /it/events/laravel-meetup-milano → Folio
                                           ↓
-                              events/[slug].blade.php
+                              events/[.Modules.Meetup.Models.Event].blade.php
                                           ↓
-                              Route binding: Event where slug = ?
+                              Folio model binding: Event where slug = ?
+                              (getRouteKeyName() = 'slug')
                                           ↓
-                              mount(Event $event)
+                              $event iniettato automaticamente
                                           ↓
                               detail.blade.php
                                           ↓
-                              toBlockArray() + Schema.org JSON-LD
+                              Render completo + Schema.org JSON-LD
 ```
 
 ## Vantaggi dell'Architettura
@@ -232,108 +229,27 @@ User → /it/events/laravel-meetup-milano → Folio
 2. Controllare scope in JSON: `upcoming` richiede date future
 3. Verificare limit: troppo basso potrebbe nascondere eventi
 
-## Fix Critico: HasBlocks.php (2026-02-17)
+## Fix Noti
 
-### Problema
-Gli eventi non venivano caricati dal database anche se la query era configurata correttamente nel JSON. Il blocco mostrava "No events found".
+### HasBlocks.php - BlockData::collect non eseguiva query
+`BlockData::collect($blocks)` non chiamava il costruttore personalizzato. Risolto creando manualmente le istanze prima della collection.
 
-### Causa
-In `Modules/Cms/app/Models/Traits/HasBlocks.php`, il metodo `getBlocks()` usava `BlockData::collect($blocks)` che non chiama il costruttore personalizzato di `BlockData`. Il costruttore di `BlockData` è responsabile dell'esecuzione della query dinamica tramite `ResolveBlockQueryAction`.
+### URL Localizzati - toBlockArray()
+URL eventi ora generati con `LaravelLocalization::localizeUrl('/events/'.$this->slug)` — aggiunge automaticamente il prefisso locale (`/it/`, `/en/`).
 
-### Soluzione
-Modificato il metodo per creare manualmente le istanze di `BlockData` prima di passarle alla collection:
+### Null Safety - start_date
+`toBlockArray()` e `toSchemaOrg()` ora usano `$this->start_date ?? Carbon::now()` per gestire eventi con date nulle.
 
-```php
-// PRIMA (sbagliato)
-return BlockData::collect($blocks);
+### Scope "upcoming" rimosso da events.json
+Lo scope filtrava solo eventi futuri server-side, rendendo inutile il filtro "Past Events" client-side di Alpine.js. Rimosso per caricare tutti gli eventi.
 
-// DOPO (corretto)
-$blockDataInstances = array_map(function (array $block): BlockData {
-    $type = $block['type'] ?? 'unknown';
-    $data = $block['data'] ?? [];
-    $slug = $block['slug'] ?? null;
-    return new BlockData($type, $data, $slug);  // Costruttore chiama ResolveBlockQueryAction!
-}, $blocks);
+## Stato Funzionante
 
-return BlockData::collection($blockDataInstances);
-```
-
-### File Modificato
-- `Modules/Cms/app/Models/Traits/HasBlocks.php` - Metodo `getBlocks()`
-
-### Verifica
-Dopo il fix, gli eventi vengono caricati correttamente:
-```bash
-curl -s http://127.0.0.1:8000/it/events | grep "Laravel 11 Release Pizza Party"
-# Output: Laravel 11 Release Pizza Party
-```
-
-### Screenshot
-Vedi: `screenshots/local_events_full.png` e `screenshots/local_events_mobile.png`
-
-### Fix URL Localizzati (2026-02-17)
-
-### Problema
-Gli URL degli eventi generavano `/events/<slug>` invece di `/it/events/<slug>`.
-
-### Causa
-In `Modules/Meetup/app/Models/Event.php`, il metodo `toBlockArray()` usava una path senza locale.
-
-### Soluzione
-Verificato che `LaravelLocalization::localizeURL()` aggiunge correttamente il locale:
-```php
-'url' => LaravelLocalization::localizeURL('/events/'.$this->slug)
-```
-L'URL generato è ora: `http://laravelpizza.local/it/events/laravel-11-release-pizza-party`
-
-### File Modificato
-- `Modules/Meetup/app/Models/Event.php` - Metodo `toBlockArray()` - Linea 215
-
-### Verifica
-```bash
-curl -s http://127.0.0.1:8000/it/events/laravel-11-release-pizza-party | head -20
-# Output: HTML pagina dettaglio evento
-```
-
-## Riepilogo Implementazione (2026-02-17)
-
-### Cosa Funziona
-- ✅ Lista eventi: `/it/events` - Carica eventi dal database con scope, orderBy, limit configurabili
-- ✅ Dettaglio evento: `/it/events/{slug}` - URL SEO-friendly basato su slug
-- ✅ Query dinamica: `ResolveBlockQueryAction` esegue query configurate nel JSON
-- ✅ Localizzazione: URL automatici con locale (`/it/events/`, `/en/events/`)
-- ✅ Fallback: Se database vuoto, usa eventi hardcoded dal JSON
-
-### URL SEO-Friendly
-Il sistema usa slug invece di ID per migliorare la SEO:
-- ❌ Prima: `/it/events/1` (ID numerico)
-- ✅ Dopo: `/it/events/laravel-11-release-pizza-party` (slug descrittivo)
-
-### Pagine Verificate
-- `/it/events` - 200 OK
-- `/it/events/laravel-11-release-pizza-party` - 200 OK
-- `/it/events/filament-admin-panel-workshop` - 200 OK
-- `/it/events/livewire-3-pizza-meetup` - 200 OK
-
-### Screenshots
-Vedi: `docs/screenshots/local_event_detail_full.png`
-
-### Slug duplicati
-L'ImportEventsFromJsonAction aggiunge counter automaticamente, ma verificare:
-```sql
-SELECT slug, COUNT(*) FROM meetup_events GROUP BY slug HAVING COUNT(*) > 1;
-```
-
-### Performance
-Per liste grandi (>100 eventi), considerare:
-```json
-{
-    "query": {
-        "limit": 20,
-        "orderBy": "start_date"
-    }
-}
-```
+- `/it/events` - Lista eventi dal database con filtri Alpine.js (All/Upcoming/Past)
+- `/it/events/{slug}` - Dettaglio evento con Folio model binding
+- URL SEO-friendly con slug (non ID numerici)
+- Localizzazione automatica URL
+- Schema.org JSON-LD per SEO
 
 ## Riferimenti
 
@@ -341,11 +257,4 @@ Per liste grandi (>100 eventi), considerare:
 - [Schema.org Event Implementation](./schema-org-event-implementation.md)
 - [Model Event](./../../app/Models/Event.php)
 - [Import Action](./../../app/Actions/Event/ImportEventsFromJsonAction.php)
-- [Folio Page](../../resources/views/pages/events/[slug].blade.php)
-
----
-
-**Ultimo aggiornamento**: 2026-02-17
-**Versione**: 1.0
-**Autore**: AI Agent
-**Stato**: Implementato e funzionante
+- [Folio Page](../../resources/views/pages/events/[.Modules.Meetup.Models.Event].blade.php)

@@ -12,5 +12,6 @@ class MarkerData extends Data
         public PositionData $position,
         public ?string $title = null,
         public ?IconData $icon = null,
-    ) {}
+    ) {
+    }
 }

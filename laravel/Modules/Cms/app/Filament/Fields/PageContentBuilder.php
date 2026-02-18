@@ -27,7 +27,8 @@ class PageContentBuilder
     }
 
     /**
-     * @param  DataCollection<int, ComponentFileData>  $blocks
+     * @param DataCollection<int, ComponentFileData> $blocks
+     *
      * @return list<Block>
      */
     private static function buildBlockList(DataCollection $blocks, string $context): array

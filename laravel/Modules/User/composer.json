@@ -1,16 +1,17 @@
 {
   "name": "laraxot/module_user_fila3",
-  "description": "user module for user management",
+  "description": "User management module for the Laraxot ecosystem: authentication, roles, teams, tenants, and OAuth.",
   "keywords": [
     "laraxot",
     "laravel",
     "filament",
     "module_user",
-    "Laravel",
-    "User module",
-    "Users",
-    "Users management",
-    "Xot"
+    "user",
+    "authentication",
+    "roles",
+    "teams",
+    "passport",
+    "oauth"
   ],
   "homepage": "https://github.com/laraxot/module_user_fila3",
   "license": "MIT",

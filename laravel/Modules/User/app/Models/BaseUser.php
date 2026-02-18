@@ -138,7 +138,8 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     use HasXotFactory;
     use InteractsWithMedia;
     use Notifiable;
-    use SoftDeletes;
+
+    // use SoftDeletes;
     use Traits\HasTenants;
     use XotTraits\RelationX;
 
@@ -163,6 +164,8 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     /** @var list<string> */
     protected $fillable = [
         'id',
+        // 'ente',
+        // 'matr',
         'name',
         'first_name',
         'last_name',

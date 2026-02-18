@@ -8,7 +8,7 @@ use Modules\Geo\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->action = new GetAddressDataFromFullAddressAction;
+    $this->action = new GetAddressDataFromFullAddressAction();
 });
 
 it('returns AddressData when first service succeeds', function (): void {
@@ -20,7 +20,7 @@ it('returns AddressData when first service succeeds', function (): void {
 });
 
 it('initializes with empty errors collection', function (): void {
-    $action = new GetAddressDataFromFullAddressAction;
+    $action = new GetAddressDataFromFullAddressAction();
 
     expect($action->getErrors())->toBeInstanceOf(Illuminate\Support\Collection::class);
     expect($action->getErrors()->count())->toBe(0);
@@ -29,7 +29,7 @@ it('initializes with empty errors collection', function (): void {
 it('executes without throwing error for basic call', function (): void {
     // This tests that the action can be instantiated and executed without critical errors
     // Since it depends on external services, we can't easily test the full functionality
-    $action = new GetAddressDataFromFullAddressAction;
+    $action = new GetAddressDataFromFullAddressAction();
 
     // The execute method should handle missing services gracefully
     $result = $action->execute('Test Address');

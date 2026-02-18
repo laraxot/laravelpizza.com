@@ -18,25 +18,25 @@ Il sistema utilizza un'architettura moderna con Laravel Folio + Volt per il fron
 - **Filament**: Pannello admin e componenti UI per il back office
 - **Principi**: DRY, KISS, SOLID, robust, Laraxot
 
-## 📁 Struttura File per Front Office
+## Struttura File per Front Office
 
 ```
-/resources/views/
+Themes/Meetup/resources/views/
 ├── pages/                      # Pagine gestite da Laravel Folio
-│   ├── events/                 # Gestione eventi
-│   │   ├── index.blade.php     # Lista eventi - /events
-│   │   ├── [event].blade.php   # Dettaglio evento - /events/{event}
-│   │   └── create.blade.php    # Creazione evento - /events/create
-│   ├── profile/
-│   │   └── [user].blade.php    # Profilo utente - /profile/{user}
-│   └── dashboard.blade.php     # Dashboard utente - /dashboard
-├── components/                 # Componenti riutilizzabili
-│   ├── event-card.blade.php    # Card evento
-│   ├── event-calendar.blade.php # Calendario eventi
-│   └── registration-form.blade.php # Form registrazione
-    └── layouts/                    # Layout template
-    └── app.blade.php
+│   ├── [slug].blade.php        # CMS catch-all (carica da JSON)
+│   └── events/
+│       └── [.Modules.Meetup.Models.Event].blade.php  # Dettaglio evento (model binding by slug)
+├── components/
+│   └── blocks/
+│       └── events/
+│           ├── list.blade.php   # Lista eventi (Alpine.js filters)
+│           └── detail.blade.php # Dettaglio evento completo
+└── layouts/
+    ├── main.blade.php           # Base HTML shell
+    └── app.blade.php            # Full layout con nav + footer
 ```
+
+**Nota:** La lista eventi (`/it/events`) e' una pagina CMS-driven definita in `events.json`, renderizzata dal catch-all `[slug].blade.php`. Non esiste un `events/index.blade.php`.
 
 ## Stato Attuale `/it/events` (Gap rispetto al design target)
 
@@ -71,14 +71,16 @@ To display events in a CMS page, configure the block in the page JSON:
         "description": "Join us for pizza and Laravel discussions",
         "query": {
             "model": "Modules\\Meetup\\Models\\Event",
-            "scope": "upcoming",
             "orderBy": "start_date",
             "direction": "asc",
-            "limit": 50
+            "limit": 50,
+            "wrap_in": "events"
         }
     }
 }
 ```
+
+**Note:** No `scope` is specified because client-side Alpine.js filtering handles All/Upcoming/Past. Adding `scope: "upcoming"` would prevent the "Past Events" filter from showing results.
 
 ### Query Parameters
 
@@ -107,8 +109,8 @@ The `Event` model provides the following features for CMS integration:
 The system uses **slugs** instead of IDs for event detail URLs:
 
 - Event model has `getRouteKeyName()` returning `'slug'`
-- Detail page at `/events/{slug}` is handled by `[slug].blade.php`
-- The `toBlockArray()` method generates URLs using: `/it/events/{slug}`
+- Detail page uses Folio model binding: `events/[.Modules.Meetup.Models.Event].blade.php`
+- The `toBlockArray()` method generates localized URLs using `LaravelLocalization::localizeUrl()`
 
 Example:
 ```php
@@ -117,7 +119,7 @@ public function toBlockArray(): array
 {
     return [
         // ...
-        'url' => $this->url ?? "/it/events/".(string) $this->slug,
+        'url' => LaravelLocalization::localizeUrl('/events/'.$this->slug),
     ];
 }
 ```
@@ -1014,6 +1016,4 @@ Usa i colori delle categorie per i badge e accenti, ma mantieni:
 
 ---
 
-**Versione:** 1.0
-**Data:** 27 Novembre 2025
-**Status:** 📝 Planning - Ready for Implementation
+**Status:** Implementato e funzionante

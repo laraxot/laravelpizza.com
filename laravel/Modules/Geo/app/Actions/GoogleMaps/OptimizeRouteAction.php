@@ -167,12 +167,8 @@ class OptimizeRouteAction
                     ));
                 }
 
-<<<<<<< HEAD
-=======
                 /** @var Collection<int, LocationData> $typedWaypoints */
                 $typedWaypoints = $waypoints;
-
->>>>>>> 65bf1208 (.)
                 return new RouteData(
                     waypoints: $waypoints,
                     originalWaypoints: $originalLocations,

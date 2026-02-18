@@ -156,4 +156,4 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{{ __('pub_theme::event.check_back_later.label') }}</p>
         </div>
     </div>
-</div>
+</section>

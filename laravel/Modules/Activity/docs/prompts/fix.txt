@@ -1,0 +1,16 @@
+in laravel/Modules/Activity/tests/TestCase.php  ci sono collisioni git, ma entrambe fan schifo , non dobbiamo usare migrated , perche' sempre facciamo la migrazione senza force completa ovvero php artisan migrate , senza specificare modulo, la vogliamo completa, tanto i test devono usare la configurazione .env.testing che deve essere la copia carbone di .env tranne che i nomi dei database son concatenati a _test , tutto questo lo trovi gia' nelle cartelle docs, nelle tue rules, nelle tue memories , se non trovi aggiorna, non dobbiamo neppure fare
+config(['xra.pub_theme' => 'Meetup']);
+        config(['xra.main_module' => 'User']);
+ancora piu' sbagliato fare 
+ \Modules\Xot\Datas\XotData::make()->update([
+            'pub_theme' => 'Meetup',
+            'main_module' => 'User',
+        ]);
+
+sbagliato anche 
+protected $connectionsToTransact = [
+        'mysql',
+        'user',
+    ];
+cercati da solo il perche' , 
+hai fatto un sacco di errori, devi cercare di andare molto a fondo con la tua analisi e fare il possibile per migliorarti , dai tuoi errori cerca sempre di imparare , e costantemente devi aumentare il tuo livello di confidenza, ti ricordo che devi sempre costantemente aggiornare, studiare e migliorare le cartelle docs che sono sia la tua memoria che la memoria degli altri agenti ai percio' trovi anche le analisi degli altri agenti ai, nel caso aggiorna e migliora anche le tue rules le tue memories e le tue skills

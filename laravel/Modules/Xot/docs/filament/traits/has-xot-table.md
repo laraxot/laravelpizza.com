@@ -44,14 +44,40 @@ public function getTableHeaderActions(): array
 ```php
 public function getListTableColumns(): array
 {
-    // Definisce le colonne per il layout lista
+    return [
+        // Esempio di colonna standard
+        Tables\Columns\TextColumn::make('name')
+            ->label('Nome')
+            ->sortable()
+            ->searchable(),
+            
+        // Esempio di colonna domain-specific come WorkerColumn
+        // È FONDAMENTALE PRESERVARE COLONNE CUSTOM COME QUESTA
+        WorkerColumn::make('worker_data')
+            ->label('Dati Lavoratore')
+            ->view('filament.tables.columns.worker-data'), // Esempio di vista custom
+    ];
 }
 
 public function getGridTableColumns(): array
 {
-    // Definisce le colonne per il layout griglia
+    return [
+        // Le colonne in griglia devono anch'esse essere array associativi
+        'name' => Tables\Columns\TextColumn::make('name')
+            ->label('Nome'),
+        'worker_info' => WorkerColumn::make('worker_info')
+            ->label('Info Lavoratore'),
+    ];
 }
 ```
+
+#### Regola Critica: Array Associativi per le Colonne
+- I metodi che definiscono le colonne (es. `getListTableColumns()`, `getGridTableColumns()`, o `getTableColumns()` quando overrideati in RelationManagers o Pagine) **DEVONO** restituire un array associativo.
+- Ogni chiave dell'array deve essere una stringa che rappresenta l'identificatore univoco della colonna.
+- Il valore associato deve essere la definizione della colonna (es. `TextColumn::make(...)` o `WorkerColumn::make(...)`).
+- **❌ ERRATO**: Array con indici numerici diretti.
+- **✅ CORRETTO**: `return ['column_key' => TextColumn::make('column_name'), ...];`
+
 
 ### Filtri
 ```php

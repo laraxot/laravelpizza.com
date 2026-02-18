@@ -27,7 +27,7 @@ class SushiSeeder extends Seeder
 
         $data = json_decode(File::get($path), true);
 
-        if (json_last_error() !== JSON_ERROR_NONE) {
+        if (JSON_ERROR_NONE !== json_last_error()) {
             $this->command->error('Errore nel parsing del file JSON: '.json_last_error_msg());
 
             return;
@@ -62,7 +62,7 @@ class SushiSeeder extends Seeder
     /**
      * Valida la struttura dati di un comune.
      *
-     * @param  array<string, mixed>  $comune
+     * @param array<string, mixed> $comune
      */
     private function isValidComuneData(array $comune): bool
     {

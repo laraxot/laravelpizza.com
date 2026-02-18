@@ -328,6 +328,18 @@ return [
             'label' => 'startDate',
             'tooltip' => '',
         ],
+        'matr' => [
+            'description' => 'matr',
+            'label' => 'matr',
+            'placeholder' => 'matr',
+            'helper_text' => 'matr',
+        ],
+        'ente' => [
+            'label' => 'ente',
+            'placeholder' => 'ente',
+            'helper_text' => 'ente',
+            'description' => 'ente',
+        ],
     ],
     'actions' => [
         'create' => [
@@ -475,6 +487,8 @@ return [
         ],
         'createAnother' => [
             'tooltip' => 'createAnother',
+            'icon' => 'createAnother',
+            'label' => 'createAnother',
         ],
     ],
     'messages' => [
@@ -724,6 +738,10 @@ return [
         'empty' => [
             'heading' => 'empty',
             'label' => 'empty',
+        ],
+        'worker' => [
+            'label' => 'worker',
+            'heading' => 'worker',
         ],
     ],
     'plural_label' => 'User (Plurale)',

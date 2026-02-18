@@ -26,6 +26,8 @@ I prompt condivisi devono essere **project-agnostic**:
 - [regole documentazione](./documentation-rules.md)
 - [prompts consolidati](./prompts.md)
 - [indice documentazione](../00-index.md)
+<<<<<<< .merge_file_Rtwk8X
+=======
 # Regole per i Prompt
 
 ## Regola universale
@@ -82,3 +84,4 @@ I prompt condivisi devono essere **project-agnostic**:
 - [regole documentazione](./documentation-rules.md)
 - [prompts consolidati](./prompts.md)
 - [indice documentazione](../00-index.md)
+>>>>>>> .merge_file_65GP59
