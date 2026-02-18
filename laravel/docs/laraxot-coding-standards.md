@@ -158,11 +158,23 @@ The "Super Mucca" methodology is the advanced operational framework for AI agent
 1.  **Level 3 Confidence**: Act with maximum autonomy. Analyze deeply, decide based on Laraxot principles, and verify rigorously.
 2.  **DRY + KISS + SOLID**: Always prioritize code reuse (Actions), simplicity (Cyclomatic Complexity < 10), and robust object-oriented design.
 3.  **ROBUST (Type Safety)**: Use `declare(strict_types=1);` in all PHP classes (Models, Actions, Providers). However, **AVOID** it in Blade files that are `@included` as content blocks to prevent fatal errors.
-4.  **UI Preservation**: When refactoring logic, never touch the HTML "dress" (CSS, layouts, icons) unless explicitly asked. The UI must remain identical while the "engine" is modernized.
-5.  **CMS Block Rendering**: The CMS system (`x-page`) now supports both standard Blade blocks and Volt/Livewire blocks. 
-    - If a block file contains a Volt class (`new class extends Component`), it is automatically rendered via `@livewire`.
-    - This ensures the block has its own component instance and property scope, avoiding errors like `PropertyNotFoundException`.
-    - Data from the parent Folio page (like `container0`, `slug0`) is automatically passed to the block's `mount()`.
+4.  **Plain Blade with Strict Logic (The Sacred Pattern)**: 
+    - **Rule**: Content blocks like `detail.blade.php` should remain **Plain Blade Components**, not necessarily Volt, especially when the user explicitly requests a `@php` block structure.
+    - **Strict Types**: Always use `<?php declare(strict_types=1);` at the top, followed by a detailed docblock.
+    - **Local Resolution**: Use `Request::segment()` or local variables in the `@php` block to resolve models (e.g., `Event::where('slug', $slugToUse)->first()`).
+    - **Logic Preservation**: Even when `@included` in a CMS system, these files are treated as standalone tactical logic units.
+5.  **The Dress vs The Engine**: This is a core Laraxot philosophy for refactoring. 
+    - **The Dress**: The HTML structure, CSS classes, Tailwind utilities, and SVG icons.
+    - **The Engine**: The PHP logic, Model resolution, public properties, and Actions.
+    - **Rule**: When refactoring a component from Blade to Volt, or modernizing logic, **NEVER** change "The Dress". The visual output must remain identical.
+6.  **Agent Teams**: Specialized roles for AI collaboration.
+    - **UI Architect**: Owns "The Dress" and visual parity.
+    - **Logic Specialist**: Owns "The Engine" and robustness.
+    - **Quality Guardian**: Owns PHPStan Level 10 and testing.
+    - **Historian**: Owns documentation and roadmap.
+7.  **CMS Block Rendering**: The CMS system (`x-page`) automatically detect Volt/Livewire blocks. 
+    - Blocks containing a Volt class are rendered via `@livewire`.
+    - This provides scope isolation for properties (avoiding scope-bleed logic errors).
 5.  **Filament Resources & Pages**:
     - NEVER extend `Filament` classes directly. Always extend `XotBase` classes (e.g., `XotBaseResource`, `XotBasePage`, `XotBaseWidget`, `XotBaseCreateRecord`).
     - `XotBaseResource` extensions MUST NOT have `getTableColumns()`, `getPages()`, `getRelations()`, `getTableActions()`, or `getTableBulkActions()` if they only return standard values.

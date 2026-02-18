@@ -18,7 +18,7 @@ use Modules\Xot\Datas\XotData;
 trait HasBlocks
 {
     /**
-     * @return array<int, BlockData>
+     * @return array<string, BlockData>
      */
     public function getBlocks(?string $side = null): array
     {
@@ -42,14 +42,17 @@ trait HasBlocks
         // Create BlockData instances manually to ensure constructor is called
         // This is necessary because Laravel Data's collect() doesn't call custom constructors
         // which is needed for dynamic query resolution
-        $blockDataInstances = array_map(function (mixed $block): BlockData {
+        $blockDataInstances = [];
+        foreach ($blocks as $key => $block) {
             /** @var array<string, mixed> $block */
             $type = (string) ($block['type'] ?? 'unknown');
             $data = (array) ($block['data'] ?? []);
             $slug = isset($block['slug']) ? (string) $block['slug'] : null;
 
-            return new BlockData($type, $data, $slug);
-        }, $blocks);
+            $blockDataInstances[(string) $key] = new BlockData($type, $data, $slug);
+        }
+
+        /** @var array<string, BlockData> $blockDataInstances */
 
         // Return array directly to ensure BlockData constructor is called for dynamic query resolution
         return $blockDataInstances;
@@ -83,7 +86,7 @@ trait HasBlocks
     /**
      * Get blocks for a record by slug.
      *
-     * @return array<int, BlockData>
+     * @return array<string, BlockData>
      */
     public static function getBlocksBySlug(string $slug, ?string $side = null): array
     {
@@ -105,7 +108,7 @@ trait HasBlocks
             return [];
         }
 
-        /** @var array<int, BlockData> $blocks */
+        /** @var array<string, BlockData> $blocks */
         $blocks = $record->getBlocks($side);
 
         return $blocks;

@@ -1,5 +1,4 @@
 <?php
-declare(strict_types=1);
 use Livewire\Volt\Component;
 use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 use Modules\Cms\Models\Page;

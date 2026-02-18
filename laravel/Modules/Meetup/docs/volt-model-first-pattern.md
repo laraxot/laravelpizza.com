@@ -57,3 +57,15 @@ In the Blade portion of the file, access properties and methods directly from th
 2. **KISS**: The component remains small and easy to read.
 3. **Robust**: Any changes to the Model are automatically reflected in the component without updates.
 4. **Type Safety**: Properties are natively typed via the Eloquent model.
+
+## Plain Blade with Strict Logic (The Sacred Pattern)
+
+Content blocks like `detail.blade.php` MUST remain **Plain Blade Components** (not Volt) when they require standalone tactical logic.
+
+### Rules
+1.  **Always** use `<?php declare(strict_types=1);` at the top.
+2.  **Always** follow with a descriptive docblock.
+3.  **Local Model Resolution**: Use `Request::segment()` or pass variables from the container.
+4.  **UI Preservation**: Never change the "Dress" (HTML/CSS) when modernizing the "Engine".
+
+This pattern ensures robustness while maintaining full control over the template's logic and structure.

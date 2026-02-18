@@ -1,23 +1,73 @@
-# Events Detail Component - Volt Class Pattern
+# Events Detail Component - Plain Blade Pattern
 
-## 🎯 Principio: unica fonte di verità = Event
+## 🎯 Principio: Componente Blade Puro
 
-Il componente `events/detail.blade.php` è un **Volt component** quando il blocco ha `"livewire": "events.detail"`. La logica: **il modello Event è l’unica fonte di verità**. In `mount()` si risolve l’istanza (da `event ?? item ?? slug0`) e si **popolano proprietà pubbliche** per la vista (title, date, location, status, badgeClass, eventsUrl, ecc.). La vista usa solo `$this->title`, `$this->date`, ecc. — **niente** array `eventData[]` o computed che ricalcolano dall’Event.
+Il componente `events/detail.blade.php` è un **Plain Blade Component** (NON Volt, NON Livewire). 
+Carica l'evento direttamente dallo slug nell'URL.
 
-Vedi: [Volt Components Usage](volt-components-usage.md) — regola "unica fonte di verità = modello".
+## ✅ Pattern Corretto (Blade Puro)
 
-## ⚠️ Quando usare Volt vs Filament Widget
+```php
+<?php
 
-Per **presentazione** (dettaglio evento, lista): Volt con mount() e proprietà pubbliche. Per **interattività** (form, submit, azioni server-side): **Filament Widgets** (extends XotBaseWidget).
+declare(strict_types=1);
 
-Vedi: [Filament Widgets NOT Livewire Critical Rule](filament-widgets-not-livewire-critical-rule.md)
+/**
+ * Event Detail - Plain Blade Component
+ * Carica l'evento dallo slug nell'URL
+ */
 
-## Pattern Volt (events.detail)
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Request;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Modules\Meetup\Models\Event;
 
-- **Classe**: solo `event`, `item`, `container0`, `slug0`. `mount()` risolve `$this->event` da slug0 (o item) se non passato.
-- **Template**: sotto la classe c’è sempre il Blade completo (hero, colonne, sidebar, Schema.org). **Non togliere mai il template** quando si refactora la classe.
-- **Helper in vista**: un blocco `@php` subito sotto la classe può calcolare da `$this->event` le variabili per il template (`$eventModel`, `$startDate`, `$isUpcoming`, `$badgeClass`, `$eventsUrl`, ecc.) con default quando `$this->event` è null. La vista usa quelle variabili.
-- Unica fonte di verità = `$this->event`; niente duplicazione in decine di proprietà pubbliche.
+// Carica l'evento dallo slug
+$slug0 = $slug0 ?? '';
+$slugToUse = $slug0;
+if (empty($slugToUse)) {
+    $slugToUse = Request::segment(3);
+}
+$event = null;
+if (!empty($slugToUse)) {
+    $event = Event::where('slug', $slugToUse)->first();
+}
+
+$eventsUrl = LaravelLocalization::localizeUrl('/events');
+$isUpcoming = $event?->start_date?->isFuture() ?? true;
+$statusLabel = $isUpcoming ? 'Upcoming' : 'Past Event';
+$badgeClass = $isUpcoming ? 'bg-green-600' : 'bg-slate-500';
+$availableSpots = ($event?->max_attendees ?? 100) - ($event?->attendees_count ?? 0);
+$currentAttendees = $event?->attendees_count ?? 0;
+?>
+
+<div>
+    ... rendering con $event, $eventsUrl, etc.
+</div>
+```
+
+## 📜 Flusso Completo
+
+1. **URL**: `/it/events/laravel-beginners-pizza-night`
+2. **Folio Route**: `[container0]/[slug0]/index.blade.php`
+3. **JSON Lookup**: `events_view.json` (slug: `events.view`)
+4. **Block**: `{type: "events", view: "pub_theme::components.blocks.events.detail"}`
+5. **Component**: `events/detail.blade.php` - carica Event da slug
+6. **Render**: Visualizza i dati dell'evento
+
+## 🔴 MAI USARE
+
+❌ **NON usare Volt/Livewire** nei block components
+❌ **NON usare `@volt()`** nel block component
+❌ **NON usare `wire:` directives** nei block components
+
+## ✅ Quando Usare Cosa
+
+| Tipo | Uso | Esempio |
+|------|-----|---------|
+| **Blade Puro** | Rendering statico | Block components, liste, dettagli |
+| **Filament Widget** | Interattività server | Form, azioni, modali |
+| **Volt** | Solo nella routing page | `[container0]/[slug0]/index.blade.php` |
 
 ## Riferimenti
 

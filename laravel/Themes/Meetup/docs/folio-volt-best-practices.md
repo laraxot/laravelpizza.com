@@ -25,8 +25,8 @@ Volt automatically injects route parameters into public properties. NEVER use `r
 // ❌ SBAGLIATO - Ridondante!
 public function mount(): void
 {
-    $this->container0 = request()->route('container0') ?? '';  // NO!
-    $this->slug0 = request()->route('slug0') ?? '';  // NO!
+    $this->container0 = request()->route('container0') ?? '';  // ❌ SBAGLIATO - Volt gestisce automaticamente i parametri
+    $this->slug0 = request()->route('slug0') ?? '';  // ❌ SBAGLIATO - Volt gestisce automaticamente i parametri
 }
 
 // ✅ CORRETTO - Volt inietta automaticamente!

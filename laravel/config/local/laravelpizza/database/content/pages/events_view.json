@@ -11,6 +11,7 @@
             {
                 "type": "events",
                 "slug": "event-detail",
+                "livewire": "events.detail",
                 "data": {
                     "view": "pub_theme::components.blocks.events.detail",
                     "title": "Event Details"

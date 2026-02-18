@@ -12,7 +12,12 @@ use Modules\Cms\Actions\ResolveBlockQueryAction;
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 use Spatie\LaravelData\DataCollection;
+use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
+
+use function Safe\fclose;
+use function Safe\fopen;
+use function Safe\fread;
 
 class BlockData extends Data implements Wireable
 {
@@ -97,9 +102,6 @@ class BlockData extends Data implements Wireable
         // Verifica se è un componente Volt (class-based o functional)
         // Leggiamo solo l'inizio del file per performance
         $handle = fopen($path, 'r');
-        if (! $handle) {
-            return false;
-        }
         $header = (string) fread($handle, 1024);
         fclose($handle);
 
@@ -117,7 +119,7 @@ class BlockData extends Data implements Wireable
 
         // Se inizia ancora con un namespace, teniamo solo la parte dopo ::
         if (str_contains($name, '::')) {
-            $name = (string) str_after($name, '::');
+            $name = (string) Str::after($name, '::');
         }
 
         return $name;

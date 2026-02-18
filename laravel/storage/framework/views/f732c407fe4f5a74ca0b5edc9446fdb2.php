@@ -16,26 +16,28 @@ use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 <?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
-    <?php if (isset($component)) { $__componentOriginale383d99482cddb063ee71e37bf1cd6b8 = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginale383d99482cddb063ee71e37bf1cd6b8 = $attributes; } ?>
-<?php $component = Modules\Cms\View\Components\Page::resolve(['side' => 'content','slug' => $pageSlug,'data' => $data] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
-<?php $component->withName('page'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
-<?php $attributes = $attributes->except(\Modules\Cms\View\Components\Page::ignoredParameterNames()); ?>
-<?php endif; ?>
-<?php $component->withAttributes([]); ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginale383d99482cddb063ee71e37bf1cd6b8)): ?>
-<?php $attributes = $__attributesOriginale383d99482cddb063ee71e37bf1cd6b8; ?>
-<?php unset($__attributesOriginale383d99482cddb063ee71e37bf1cd6b8); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginale383d99482cddb063ee71e37bf1cd6b8)): ?>
-<?php $component = $__componentOriginale383d99482cddb063ee71e37bf1cd6b8; ?>
-<?php unset($__componentOriginale383d99482cddb063ee71e37bf1cd6b8); ?>
-<?php endif; ?>
+    <?php
+$__split = function ($name, $params = []) {
+    return [$name, $params];
+};
+[$__name, $__params] = $__split("volt-anonymous-fragment-eyJuYW1lIjoiY29udGFpbmVyMC52aWV3IiwicGF0aCI6IlRoZW1lc1wvTWVldHVwXC9yZXNvdXJjZXNcL3ZpZXdzXC9wYWdlc1wvW2NvbnRhaW5lcjBdXC9bc2x1ZzBdXC9pbmRleC5ibGFkZS5waHAifQ==", Livewire\Volt\Precompilers\ExtractFragments::componentArguments([...get_defined_vars(), ...array (
+)]));
+
+$key = null;
+$__componentSlots = [];
+
+$key ??= \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::generateKey('lw-3976640286-0', $key);
+
+$__html = app('livewire')->mount($__name, $__params, $key, $__componentSlots);
+
+echo $__html;
+
+unset($__html);
+unset($__name);
+unset($__params);
+unset($__componentSlots);
+unset($__split);
+?>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal5863877a5171c196453bfa0bd807e410)): ?>

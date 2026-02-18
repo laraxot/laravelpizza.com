@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Meetup\Filament\Resources\EventResource\Pages;
 
+use Filament\Actions\Action;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\TernaryFilter;
 use Modules\Meetup\Enums\EventAttendanceMode;
 use Modules\Meetup\Enums\EventStatus;
 use Modules\Meetup\Filament\Actions\ImportEventsAction;
@@ -78,13 +82,13 @@ class ListEvents extends XotBaseListRecords
     /**
      * Get the table filters.
      *
-     * @return array<int, \Filament\Tables\Filters\Filter|\Filament\Tables\Filters\SelectFilter|\Filament\Tables\Filters\TernaryFilter>
+     * @return array<string, \Filament\Tables\Filters\Filter|\Filament\Tables\Filters\SelectFilter|\Filament\Tables\Filters\TernaryFilter>
      */
     #[Override]
     public function getTableFilters(): array
     {
         return [
-            SelectFilter::make('status')
+            'status' => SelectFilter::make('status')
                 ->label((string) __('meetup::event.event.filters.status.label'))
                 ->options([
                     'upcoming' => __('meetup::event.event.filters.status.upcoming'),
@@ -94,16 +98,16 @@ class ListEvents extends XotBaseListRecords
                 ])
                 ->multiple(),
 
-            SelectFilter::make('event_status')
+            'event_status' => SelectFilter::make('event_status')
                 ->label((string) __('meetup::event.event.filters.event_status.label'))
                 ->options(EventStatus::class)
                 ->multiple(),
 
-            SelectFilter::make('event_attendance_mode')
+            'event_attendance_mode' => SelectFilter::make('event_attendance_mode')
                 ->label((string) __('meetup::event.event.filters.attendance_mode.label'))
                 ->options(EventAttendanceMode::class),
 
-            TernaryFilter::make('has_capacity')
+            'has_capacity' => TernaryFilter::make('has_capacity')
                 ->label((string) __('meetup::event.event.filters.has_capacity.label'))
                 ->trueLabel((string) __('meetup::event.event.filters.has_capacity.yes'))
                 ->falseLabel((string) __('meetup::event.event.filters.has_capacity.no'))
@@ -115,16 +119,17 @@ class ListEvents extends XotBaseListRecords
     }
 
     /**
-     * Get the header actions for the page.
+     * Get the header actions.
      *
-     * @return array<string, Action>
+     * @return array<string, Action|\Filament\Actions\ActionGroup>
+     * @phpstan-ignore method.childReturnType
      */
-    #[Override]
     protected function getHeaderActions(): array
     {
-        return array_merge(parent::getHeaderActions(), [
-            ImportEventsAction::make(),
-        ]);
+        return [
+            'create' => \Filament\Actions\CreateAction::make()->icon('heroicon-o-plus'),
+            'import_events' => ImportEventsAction::make(),
+        ];
     }
 
     /**

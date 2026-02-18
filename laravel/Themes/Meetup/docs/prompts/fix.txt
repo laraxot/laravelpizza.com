@@ -159,3 +159,121 @@ new class extends Component {
         
     }
 }; ?>
+
+
+//-------------------------------------------------
+fare 
+<?php
+declare(strict_types=1);
+
+use function Laravel\Folio\{middleware, name};
+use Modules\Cms\Http\Middleware\PageSlugMiddleware;
+
+name('container0.view');
+middleware(PageSlugMiddleware::class);
+
+// ✅ Ottieni i parametri della route direttamente
+$container0 = request()->route()->parameter('container0', '');
+$slug0 = request()->route()->parameter('slug0', '');
+
+// Prepara i dati per il componente page
+$pageSlug = $container0 . '.view';
+$data = [
+    'container0' => $container0,
+    'slug0' => $slug0,
+];
+?>
+
+<x-layouts.app>
+    <x-page 
+        side="content" 
+        :slug="$pageSlug" 
+        :data="$data"
+        :container0="$container0"
+        :slug0="$slug0"
+    />
+</x-layouts.app>
+
+non e' solo sbagliato ma e' una merda! e hai modificato una cosa che funzionava BENE !
+
+la versione corretta e' 
+<?php
+declare(strict_types=1);
+
+use function Laravel\Folio\{middleware, name};
+use Livewire\Volt\Component;
+use Modules\Cms\Http\Middleware\PageSlugMiddleware;
+
+name('container0.view');
+middleware(PageSlugMiddleware::class);
+
+new class extends Component {
+    public string $container0 = '';
+    public string $slug0 = '';
+    public string $pageSlug = '';
+    public array $data = [];
+
+    public function mount(): void
+    {
+        $this->pageSlug = $this->container0 . '.view';
+        $this->data = [
+            'container0' => $this->container0,
+            'slug0' => $this->slug0,
+        ];
+    }
+};
+?>
+
+<x-layouts.app>
+    @volt('container0.view')
+        <x-page 
+            side="content" 
+            :slug="$pageSlug" 
+            :data="$data"
+        />
+    @endvolt
+</x-layouts.app>
+
+
+
+//--------------------
+in laravel/Themes/Meetup/resources/views/components/blocks/events/detail.blade.php
+
+fare <?php
+
+declare(strict_types=1);
+
+/**
+ * Event Detail - Plain Blade Component
+ * Carica l'evento dallo slug nell'URL
+ */
+
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Request;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Modules\Meetup\Models\Event;
+
+// Carica l'evento dallo slug
+$slug0 = $slug0 ?? '';
+$slugToUse = $slug0;
+if (empty($slugToUse)) {
+    $slugToUse = Request::segment(3);
+}
+$event = null;
+if (!empty($slugToUse)) {
+    $event = Event::where('slug', $slugToUse)->first();
+}
+
+$eventsUrl = LaravelLocalization::localizeUrl('/events');
+$isUpcoming = $event?->start_date?->isFuture() ?? true;
+$statusLabel = $isUpcoming ? 'Upcoming' : 'Past Event';
+$badgeClass = $isUpcoming ? 'bg-green-600' : 'bg-slate-500';
+$availableSpots = ($event?->max_attendees ?? 100) - ($event?->attendees_count ?? 0);
+$currentAttendees = $event?->attendees_count ?? 0;
+?>
+...
+
+
+vuol dire che non hai capito una merda ! aggiorna le tue cartelle docs, le tue memories, le tue rules e le tue skills
+
+//------------------------------

@@ -52,6 +52,7 @@
 - [Gestione Contenuti](./content-management.md) - Gestione dei contenuti
 - [Storage Contenuti](./content-storage.md) - Archiviazione dei contenuti
 - [Mappatura JSON Contenuti](./content_json_mapping.md) - Mappatura dei contenuti JSON
+- [CMS-Driven Pages](./cms-driven-pages-system.md) - Sistema pagine JSON con container0/slug0
 
 ### Volt e Folio
 - [Introduzione Volt](./volt-introduction.md) - Introduzione a Laravel Volt

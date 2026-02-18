@@ -11,7 +11,7 @@ use Modules\Meetup\Models\Event;
 
 class ImportEventsAction extends Action
 {
-    public static function make(string $name = 'import_events'): static
+    public static function make(?string $name = 'import_events'): static
     {
         return parent::make($name)
             ->label((string) __('meetup::event.event.actions.seed_events.label'))

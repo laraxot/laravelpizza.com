@@ -117,4 +117,4 @@
 
 <div class="lcc-backdrop js-lcc-backdrop" style="display: none"></div>
 <script type="text/javascript" src="<?php echo e(asset('vendor/cookie-consent/js/cookie-consent.js')); ?>"></script>
-<?php /**PATH /var/www/_bases/base_laravelpizza/laravel/vendor/statikbe/laravel-cookie-consent/src/../resources/views/index.blade.php ENDPATH**/ ?>
+<?php /**PATH /var/www/_bases/base_laravelpizza/laravel/resources/views/vendor/cookie-consent/index.blade.php ENDPATH**/ ?>

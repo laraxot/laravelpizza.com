@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Builder;
 
 class EventStartDateFilter extends Filter
 {
-    public static function make(string $name = 'start_date'): static
+    public static function make(?string $name = 'start_date'): static
     {
         return parent::make($name)
             ->form([

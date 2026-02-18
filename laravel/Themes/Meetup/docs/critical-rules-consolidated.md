@@ -267,16 +267,41 @@ Nel nostro progetto, queste inclusioni devono passare dal pattern del tema:
 
 ---
 
+### 6. NO `declare(strict_types=1);` nei File Blade
+
+**REGOLA**: È assolutamente vietato usare `declare(strict_types=1);` all'interno di file `.blade.php`, inclusi i componenti Volt.
+
+**❌ ERRATO**:
+```blade
+<?php
+declare(strict_types=1); // ❌ ERRORE: FatalError nel file compilato
+```
+
+**✅ CORRETTO**:
+Rimuovere la dichiarazione o spostare la logica in una classe PHP separata (`app/Helpers/`, `app/Actions/`, ecc.) dove `strict_types` è consentito.
+
+**Perché**:
+- Il compilatore Blade prepende codice al file PHP generato.
+- PHP richiede che `declare(strict_types=1);` sia la primissima istruzione assoluta nel file.
+- La presenza di codice prepensato da Blade causa un errore fatale.
+
+**Riferimenti**:
+- `Themes/Meetup/docs/blade-files-no-strict-types.md`
+
+---
+
 ## Checklist Regole Critiche
 
 - [x] Frontend Asset Management (build e copy)
 - [x] Componenti Blade Anonimi (sintassi corretta)
 - [x] Vite Configuration (path tema)
 - [x] Metatags Component (sempre usare)
+- [x] NO strict_types in Blade
 
 ## Aggiornamenti Recenti
 
-- **[DATE]**: Aggiunta regola Frontend Asset Management
-- **[DATE]**: Aggiunta regola Componenti Blade Anonimi
-- **[DATE]**: Consolidata Vite Configuration
-- **[DATE]**: Consolidata Metatags Component
+- **2026-02-18**: Aggiunta regola NO strict_types in Blade
+- **2026-02-14**: Aggiunta regola Frontend Asset Management
+- **2026-02-14**: Aggiunta regola Componenti Blade Anonimi
+- **2026-02-14**: Consolidata Vite Configuration
+- **2026-02-14**: Consolidata Metatags Component
