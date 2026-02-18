@@ -46,7 +46,7 @@ class Welcome extends XotBasePage
     public function getViewData(): array
     {
         $data = [];
-        if ([] !== $this->containers) {
+        if ($this->containers !== []) {
             $container_last = last($this->containers);
             Assert::string($container_last, '['.__LINE__.']['.__FILE__.']');
             $item_last = last($this->items);
@@ -70,7 +70,7 @@ class Welcome extends XotBasePage
 
             $data[$container_last_singular] = $row;
 
-            if (null === $row) {
+            if ($row === null) {
                 abort(404);
             }
         }
@@ -90,7 +90,7 @@ class Welcome extends XotBasePage
         if (\count($containers) > \count($items)) {
             $view = 'index';
         }
-        if ([] === $containers) {
+        if ($containers === []) {
             $view = 'home';
         }
 
@@ -98,7 +98,7 @@ class Welcome extends XotBasePage
 
         $views = [];
 
-        if ([] !== $containers) {
+        if ($containers !== []) {
             $views[] = 'pub_theme::'.implode('.', $containers).'.'.$view;
 
             $firstContainer = $containers[0] ?? null;
@@ -118,7 +118,7 @@ class Welcome extends XotBasePage
 
         $view_work = Arr::first($views, view()->exists(...));
 
-        if (null === $view_work) {
+        if ($view_work === null) {
             dddx($views);
         }
         Assert::string($view_work, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
@@ -132,7 +132,7 @@ class Welcome extends XotBasePage
         $parameters['lang'] = app()->getLocale();
         $record = $parameters['record'] ?? $this->instanceModel;
         // dddx($record);
-        if ($record && is_object($record) && 'show' === $name) {
+        if ($record && is_object($record) && $name === 'show') {
             $container0 = class_basename($record);
             $container0 = Str::plural($container0);
             $container0 = Str::snake($container0);
@@ -141,7 +141,7 @@ class Welcome extends XotBasePage
 
             return route('test', $parameters);
         }
-        if ($record && is_object($record) && 'index' === $name) {
+        if ($record && is_object($record) && $name === 'index') {
             $container0 = class_basename($record);
             $container0 = Str::plural($container0);
             $container0 = Str::snake($container0);

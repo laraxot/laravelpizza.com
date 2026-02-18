@@ -7,43 +7,43 @@ uses(Modules\Cms\Tests\TestCase::class);
 use Modules\Cms\Datas\FooterData;
 
 test('FooterData can be instantiated', function (): void {
-    $footerData = new FooterData();
+    $footerData = new FooterData;
 
     expect($footerData)->toBeInstanceOf(FooterData::class);
 });
 
 test('FooterData extends Spatie Data', function (): void {
-    $footerData = new FooterData();
+    $footerData = new FooterData;
 
     expect($footerData)->toBeInstanceOf(Spatie\LaravelData\Data::class);
 });
 
 test('FooterData implements Wireable interface', function (): void {
-    $footerData = new FooterData();
+    $footerData = new FooterData;
 
     expect($footerData)->toBeInstanceOf(Livewire\Wireable::class);
 });
 
 test('FooterData has default view path', function (): void {
-    $footerData = new FooterData();
+    $footerData = new FooterData;
 
     expect($footerData->view)->toBe('cms::components.footer');
 });
 
 test('FooterData has nullable background_color property', function (): void {
-    $footerData = new FooterData();
+    $footerData = new FooterData;
 
     expect($footerData->background_color)->toBeNull();
 });
 
 test('FooterData has nullable background property', function (): void {
-    $footerData = new FooterData();
+    $footerData = new FooterData;
 
     expect($footerData->background)->toBeNull();
 });
 
 test('FooterData has nullable overlay_color property', function (): void {
-    $footerData = new FooterData();
+    $footerData = new FooterData;
 
     expect($footerData->overlay_color)->toBeNull();
 });

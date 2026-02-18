@@ -66,3 +66,96 @@ ma e'
 <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
 
 capisci da solo il perche' poi aggiorna le cartelle docs dentro i moduli e dentro i temi, poi aggiorna le tue rules, le tue memories e le tue skills, poi implementa, poi controlla 
+
+
+
+///////////////
+e' sbagliato fare
+new class extends Component {
+    public ?Event $event = null;
+
+    public ?Event $item = null;
+
+    public string $container0 = '';
+
+    public string $slug0 = '';
+
+    public string $title = 'Event Title';
+
+    public string $slug = '';
+
+    public string $status = 'upcoming';
+
+    public string $statusLabel = 'Upcoming';
+
+    public ?string $description = null;
+
+    public string $date = '';
+
+    public string $time = '';
+
+    public string $location = 'Location TBA';
+
+    public int $attendeesCurrent = 0;
+
+    public int $attendeesMax = 100;
+
+    public ?string $coverImage = null;
+
+    public int $availableSpots = 100;
+
+    public string $eventsUrl = '';
+
+    public string $badgeClass = 'bg-green-600';
+
+    /** @var Event|null Solo per Schema.org in @push('meta') */
+    public $eventModel = null;
+
+    public function mount(): void
+    {
+        $eventModel = $this->event ?? $this->item;
+
+        if ($eventModel === null && $this->slug0 !== '') {
+            $eventModel = Event::where('slug', $this->slug0)->first();
+        }
+
+        $this->eventModel = $eventModel;
+
+        if ($eventModel instanceof Event) {
+            $startDate = $eventModel->start_date ?? Carbon::now();
+            $endDate = $eventModel->end_date ?? $startDate;
+
+            $this->title = $eventModel->title;
+            $this->slug = $eventModel->slug;
+            $this->description = $eventModel->description;
+            $this->date = $startDate->format('l, F j, Y');
+            $this->time = $startDate->format('g:i A').' - '.$endDate->format('g:i A');
+            $this->location = $eventModel->location ?? 'Location TBA';
+            $this->attendeesCurrent = $eventModel->attendees_count ?? 0;
+            $this->attendeesMax = $eventModel->max_attendees ?? 100;
+            $this->coverImage = $eventModel->cover_image;
+            $this->availableSpots = ($eventModel->max_attendees ?? 100) - ($eventModel->attendees_count ?? 0);
+
+            $this->status = $startDate->isFuture() ? 'upcoming' : 'past';
+            $this->statusLabel = $this->status === 'upcoming' ? 'Upcoming' : 'Past Event';
+            $this->badgeClass = $this->status === 'upcoming' ? 'bg-green-600' : 'bg-slate-500';
+        }
+
+        $this->eventsUrl = LaravelLocalization::localizeUrl('/events');
+    }
+}; ?>
+
+
+era corretto fare
+
+new class extends Component {
+    public ?Event $event = null;
+    public string $container0 = '';
+    public string $slug0 = '';
+
+    public function mount(): void
+    {
+        $this->event = Event::where('slug', $this->slug0)->first();
+        
+    }
+}; ?>

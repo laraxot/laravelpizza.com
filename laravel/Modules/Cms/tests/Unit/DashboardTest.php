@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use function Pest\Laravel\get;
-
 use Tests\TestCase;
+
+use function Pest\Laravel\get;
 
 uses(TestCase::class);
 

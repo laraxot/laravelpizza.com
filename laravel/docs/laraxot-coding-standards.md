@@ -180,5 +180,7 @@ The "Super Mucca" methodology is the advanced operational framework for AI agent
 - **Property Checking**: NEVER use `property_exists()` on Eloquent models. Use `isset()` or `SafeEloquentCastAction`.
 - **Traditional Controllers**: Use Filament for the back office and Folio + Volt for the front office.
 - **Service Classes**: Business logic MUST be implemented as Spatie Queueable Actions.
+- **Livewire Usage**: DO NOT use Livewire directly in the back office; use **Filament Widgets** instead.
+- **Volt Patterns (Front Office)**: Follow the **Model-First** pattern. NEVER explode model attributes into separate public properties. Keep the model instance as a single public property (e.g., `public ?Event $event`) and access attributes in Blade via `$this->event->attribute`.
 
 **Embody the Super Mucca: Analyze, Decide, Implement, Verify, Document.**

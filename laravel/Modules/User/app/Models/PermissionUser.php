@@ -21,6 +21,4 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @mixin \Eloquent
  */
-class PermissionUser extends ModelHasPermission
-{
-}
+class PermissionUser extends ModelHasPermission {}

@@ -88,16 +88,20 @@ Nel JSON della pagina, nel `data` del blocco aggiungere la chiave `livewire`:
 }
 ```
 
-Se `livewire` è presente, `page-content.blade.php` (modulo Cms) usa `@livewire($name, $merged)` invece di `@include($block->view, ...)`. Stesso pattern di presentazione di `[container0]/[slug0]/index`: `mount()`, proprietà pubbliche, computed (`#[Computed]`).
+Se `livewire` è presente, `page-content.blade.php` (modulo Cms) usa `@livewire($name, $merged)` invece di `@include($block->view, ...)`.
+
+### Regola: unica fonte di verità = modello (Event)
+
+**Non duplicare i dati in array/computed.** Il modello (es. `Event`) è l’unica fonte di verità. In `mount()` si risolve l’istanza (da `event ?? item ?? slug0`) e si **popolano proprietà pubbliche** per la vista (title, date, location, status, badgeClass, eventsUrl, ecc.). La vista usa solo `$this->title`, `$this->date`, ecc. — niente `eventData[]` o computed che ricalcolano dall’Event.
 
 ### Esempio: Event Detail Volt (single-file)
 
 **Location**: `Themes/Meetup/resources/views/components/blocks/events/detail.blade.php` — nome componente **`events.detail`**
 
-- Classe: `new class extends Component` con `mount()`, proprietà pubbliche, `#[Computed]` (stesso standard di `[container0]/[slug0]/index`)
-- Proprietà: `container0`, `slug0`, `event`, `item`, `eventModel` (impostato in `mount()`)
-- Computed: `eventData()`, `eventsUrl()`, `badgeClass()`
-- Usato per **presentazione**; per form/azioni server-side si usano Filament Widgets (vedi [filament-widgets-not-livewire-critical-rule](filament-widgets-not-livewire-critical-rule.md))
+- Input: `event`, `item`, `container0`, `slug0` (da Livewire)
+- In `mount()`: risolvi `Event` da `event ?? item ?? Event::where('slug', $slug0)->first()`; se c’è l’istanza, assegna a proprietà pubbliche: `title`, `slug`, `description`, `date`, `time`, `location`, `attendeesCurrent`, `attendeesMax`, `coverImage`, `availableSpots`, `status`, `statusLabel`, `badgeClass`; imposta `eventsUrl`. Valori di default già nelle proprietà per il caso senza Event.
+- `eventModel` si tiene solo se serve (es. Schema.org in `@push('meta')`).
+- Usato per **presentazione**; per form/azioni server-side si usano Filament Widgets (vedi [filament-widgets-not-livewire-critical-rule](filament-widgets-not-livewire-critical-rule.md)).
 
 ## Vantaggi del Pattern
 

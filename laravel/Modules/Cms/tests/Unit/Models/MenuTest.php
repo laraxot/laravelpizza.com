@@ -7,13 +7,13 @@ uses(Modules\Cms\Tests\TestCase::class);
 use Modules\Cms\Models\Menu;
 
 test('Menu model can be instantiated', function () {
-    $menu = new Menu();
+    $menu = new Menu;
 
     expect($menu)->toBeInstanceOf(Menu::class);
 });
 
 test('Menu model has expected fillable fields', function () {
-    $menu = new Menu();
+    $menu = new Menu;
 
     $fillable = $menu->getFillable();
 

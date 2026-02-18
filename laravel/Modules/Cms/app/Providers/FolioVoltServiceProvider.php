@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Providers;
 
-use function Safe\realpath;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
@@ -18,14 +17,14 @@ use Modules\Xot\Datas\XotData;
 use Nwidart\Modules\Facades\Module;
 use Webmozart\Assert\Assert;
 
+use function Safe\realpath;
+
 class FolioVoltServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
      */
-    public function register(): void
-    {
-    }
+    public function register(): void {}
 
     /**
      * Bootstrap services.

@@ -102,7 +102,7 @@ class TestDataGenerator
             }
 
             // Create factory instance and generate records
-            $factory = new $factoryClass();
+            $factory = new $factoryClass;
 
             // Check if the factory has the count method (Laravel Factory pattern)
             if (method_exists($factory, 'count')) {
@@ -110,7 +110,7 @@ class TestDataGenerator
             } else {
                 // Fallback for custom factories
                 $records = [];
-                for ($i = 0; $i < 100; ++$i) {
+                for ($i = 0; $i < 100; $i++) {
                     if (method_exists($factory, 'create')) {
                         $records[] = $factory->create();
                     } else {
@@ -155,16 +155,16 @@ class TestDataGenerator
             echo "Module: {$module}\n";
 
             foreach ($models as $modelName => $result) {
-                $status = 'success' === $result['status'] ? '✅' : '❌';
+                $status = $result['status'] === 'success' ? '✅' : '❌';
                 echo "  {$status} {$modelName}";
 
-                if ('success' === $result['status']) {
+                if ($result['status'] === 'success') {
                     echo " - {$result['count']} records";
-                    ++$totalSuccess;
+                    $totalSuccess++;
                     $totalRecords += $result['count'];
                 } else {
                     echo " - Failed: {$result['reason']}";
-                    ++$totalFailed;
+                    $totalFailed++;
                 }
                 echo "\n";
             }
@@ -200,7 +200,7 @@ class TestDataGenerator
 
 // Execute the generator
 try {
-    $generator = new TestDataGenerator();
+    $generator = new TestDataGenerator;
     $generator->generateTestData();
     $generator->generateTinkerCommands();
 } catch (Exception $e) {

@@ -13,7 +13,8 @@
 - Model binding by slug (SEO-friendly URLs)
 
 ### Component
-- File: `Themes/Meetup/resources/views/components/blocks/events/detail.blade.php`
+- File: `Themes/Meetup/resources/views/components/blocks/events/detail.blade.php` (Volt: nome `events.detail` quando il blocco ha `"livewire": "events.detail"`).
+- **Pattern**: unica fonte di verità = `Event`; in `mount()` si popolano proprietà pubbliche per la vista (title, date, location, status, ecc.). Vedi tema: `volt-components-usage.md`, `events-detail-volt-class-pattern.md`.
 - Displays full event information:
   - Breadcrumb navigation
   - Cover image / placeholder

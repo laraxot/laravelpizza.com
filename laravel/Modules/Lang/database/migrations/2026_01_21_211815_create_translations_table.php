@@ -6,7 +6,8 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Lang\Models\Translation;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     protected ?string $model_class = Translation::class;
 
     public function up(): void

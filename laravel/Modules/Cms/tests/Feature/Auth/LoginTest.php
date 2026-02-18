@@ -25,7 +25,7 @@ function cmsGenerateUniqueEmail(): string
 }
 
 /**
- * @param array<string, mixed> $overrides
+ * @param  array<string, mixed>  $overrides
  */
 function cmsCreateTestUser(array $overrides = []): \Illuminate\Database\Eloquent\Model
 {
@@ -168,7 +168,7 @@ describe('Frontend Login Security', function () {
         ]);
 
         // Multiple failed attempts
-        for ($i = 0; $i < 5; ++$i) {
+        for ($i = 0; $i < 5; $i++) {
             LivewireVolt::test('auth.login')
                 ->set('email', $email)
                 ->set('password', 'wrong_password')

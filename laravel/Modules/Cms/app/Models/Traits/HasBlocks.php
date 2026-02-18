@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Str;
 use Modules\Cms\Datas\BlockData;
 use Modules\Xot\Datas\XotData;
-use Spatie\LaravelData\DataCollection;
 
 /**
  * Trait for Models that have blocks.

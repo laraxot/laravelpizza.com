@@ -17,8 +17,7 @@ class GetDomainAllowListAction
 
     public function __construct(
         private readonly Arr $arrHelper,
-    ) {
-    }
+    ) {}
 
     /**
      * Execute the action.

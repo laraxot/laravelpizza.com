@@ -15,10 +15,10 @@ class ThemeServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__.'/../../lang', 'pub_theme');
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'pub_theme');
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'meetup');
-        
+
         $this->registerRoutes();
     }
-    
+
     private function registerRoutes(): void
     {
         Route::post('/events/{slug}/book', [EventBookingController::class, 'book'])

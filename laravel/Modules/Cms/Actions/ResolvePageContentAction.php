@@ -15,8 +15,8 @@ class ResolvePageContentAction
     /**
      * Resolves page content based on container and slug.
      *
-     * @param string $container0 The container identifier (e.g., 'events').
-     * @param string $slug0 The content slug (e.g., 'laravel-beginners-pizza-night').
+     * @param  string  $container0  The container identifier (e.g., 'events').
+     * @param  string  $slug0  The content slug (e.g., 'laravel-beginners-pizza-night').
      * @return array{content: mixed, contentType: ?string, view: ?string, pageSlug: string}
      */
     public function execute(string $container0, string $slug0): array
@@ -26,21 +26,21 @@ class ResolvePageContentAction
         $view = null;
         $pageSlug = '';
 
-        $fullSlug = $container0 . '.' . $slug0;
+        $fullSlug = $container0.'.'.$slug0;
 
         // Priority 1: Try to load dynamic model (specific item)
         $knownMappings = [
             'events' => Event::class,
         ];
 
-        if (isset($knownMappings[$container0]) && !empty($slug0)) {
+        if (isset($knownMappings[$container0]) && ! empty($slug0)) {
             $modelClass = $knownMappings[$container0];
             $item = $modelClass::where('slug', $slug0)->first();
 
             if ($item !== null) {
                 $content = $item;
                 $contentType = $container0;
-                $view = 'blocks.' . $container0 . '.detail';
+                $view = 'blocks.'.$container0.'.detail';
             }
         }
 
@@ -55,7 +55,7 @@ class ResolvePageContentAction
 
         // Priority 3: Fallback to container.view (e.g., events.view)
         if ($content === null && $pageSlug === '') {
-            $viewSlug = $container0 . '.view';
+            $viewSlug = $container0.'.view';
             $viewPage = PageModel::firstWhere('slug', $viewSlug);
 
             if ($viewPage !== null) {

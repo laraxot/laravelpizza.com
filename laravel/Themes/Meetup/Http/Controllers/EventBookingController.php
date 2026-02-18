@@ -27,7 +27,7 @@ class EventBookingController
 
         $event = Event::where('slug', $slug)->first();
 
-        if (!$event) {
+        if (! $event) {
             return response()->json([
                 'success' => false,
                 'message' => 'Event not found',

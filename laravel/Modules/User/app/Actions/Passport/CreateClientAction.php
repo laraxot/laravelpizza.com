@@ -21,13 +21,12 @@ class CreateClientAction
     /**
      * Crea un nuovo client OAuth2.
      *
-     * @param string            $name           Nome del client
-     * @param string            $redirect       URL di redirect dopo autenticazione
-     * @param UserContract|null $user           Utente proprietario del client (opzionale)
-     * @param bool              $personalAccess Indica se è un personal access client
-     * @param bool              $password       Indica se è un password client
-     * @param string|null       $provider       Provider di autenticazione (default: 'users')
-     *
+     * @param  string  $name  Nome del client
+     * @param  string  $redirect  URL di redirect dopo autenticazione
+     * @param  UserContract|null  $user  Utente proprietario del client (opzionale)
+     * @param  bool  $personalAccess  Indica se è un personal access client
+     * @param  bool  $password  Indica se è un password client
+     * @param  string|null  $provider  Provider di autenticazione (default: 'users')
      * @return OauthClient Il client creato
      */
     public function execute(
@@ -38,7 +37,7 @@ class CreateClientAction
         bool $password = false,
         ?string $provider = null,
     ): OauthClient {
-        $client = new OauthClient();
+        $client = new OauthClient;
         $client->name = $name;
         $client->redirect = $redirect;
         $client->personal_access_client = $personalAccess;
@@ -46,7 +45,7 @@ class CreateClientAction
         $client->provider = $provider ?? 'users';
         $client->revoked = false;
 
-        if (null !== $user) {
+        if ($user !== null) {
             $client->user_id = $user->id;
         }
 

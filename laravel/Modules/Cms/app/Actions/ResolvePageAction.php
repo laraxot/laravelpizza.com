@@ -35,7 +35,7 @@ class ResolvePageAction
         }
 
         // 2. Verifica se esiste una pagina CMS con slug esatto
-        $fullSlug = $container0 . '.' . $slug0;
+        $fullSlug = $container0.'.'.$slug0;
         if (PageModel::where('slug', $fullSlug)->exists()) {
             return new ResolvePageData(
                 renderMode: 'cms',
@@ -45,7 +45,7 @@ class ResolvePageAction
         }
 
         // 3. Fallback a container.view
-        $viewSlug = $container0 . '.view';
+        $viewSlug = $container0.'.view';
         if (PageModel::where('slug', $viewSlug)->exists()) {
             return new ResolvePageData(
                 renderMode: 'cms',
@@ -71,6 +71,7 @@ class ResolvePageAction
 
         if (isset($knownMappings[$container0])) {
             $modelClass = $knownMappings[$container0];
+
             return $this->queryModel($modelClass, $slug0);
         }
 
@@ -86,8 +87,8 @@ class ResolvePageAction
         // Convenzioni (Priority 3)
         $singular = rtrim($container0, 's');
         $possibleModels = [
-            'Modules\\' . ucfirst($container0) . '\\Models\\' . ucfirst($singular),
-            'App\\Models\\' . ucfirst($singular),
+            'Modules\\'.ucfirst($container0).'\\Models\\'.ucfirst($singular),
+            'App\\Models\\'.ucfirst($singular),
         ];
 
         foreach ($possibleModels as $modelClass) {
@@ -105,6 +106,7 @@ class ResolvePageAction
         if (class_exists($modelClass) && method_exists($modelClass, 'where')) {
             /** @var \Illuminate\Database\Eloquent\Builder $query */
             $query = $modelClass::where('slug', $slug);
+
             return $query->first();
         }
 

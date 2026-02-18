@@ -20,6 +20,5 @@ class Login
      */
     public function __construct(
         public SocialiteUser $socialiteUser,
-    ) {
-    }
+    ) {}
 }

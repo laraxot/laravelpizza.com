@@ -5,12 +5,9 @@ declare(strict_types=1);
 namespace Modules\Cms\View\Components;
 
 use Illuminate\Contracts\View\View as ViewContract;
-use Illuminate\Support\Arr;
 use Illuminate\View\Component;
 use Modules\Cms\Datas\BlockData;
 use Modules\Cms\Models\Page as PageModel;
-use Modules\Xot\Datas\MetatagData;
-use Modules\Xot\Datas\XotData;
 use Spatie\LaravelData\DataCollection;
 
 class Page extends Component
@@ -32,7 +29,7 @@ class Page extends Component
     {
         $this->data = $data;
         $this->side = $side;
-        if (null !== $type) {
+        if ($type !== null) {
             $slug = $type.'-'.$slug;
         }
         $this->slug = $slug;
@@ -40,8 +37,6 @@ class Page extends Component
         $this->slug0 = $slug0;
         $this->blocks = PageModel::getBlocksBySlug($slug, $side);
     }
-
-    
 
     /**
      * Get the view / contents that represents the component.

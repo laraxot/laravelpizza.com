@@ -20,8 +20,7 @@ class IsUserAllowedAction
     public function __construct(
         private readonly Assert $assert,
         private readonly Str $stringHelper,
-    ) {
-    }
+    ) {}
 
     /**
      * Execute the action.

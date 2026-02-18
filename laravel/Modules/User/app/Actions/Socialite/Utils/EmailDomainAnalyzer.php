@@ -47,7 +47,7 @@ final class EmailDomainAnalyzer
         }
 
         $domain = $this->firstPartyDomain();
-        if (null === $domain || empty($domain)) {
+        if ($domain === null || empty($domain)) {
             return false;
         }
 
@@ -69,7 +69,7 @@ final class EmailDomainAnalyzer
         }
 
         $clientEmailDomain = $this->clientDomain();
-        if (null === $clientEmailDomain || empty($clientEmailDomain)) {
+        if ($clientEmailDomain === null || empty($clientEmailDomain)) {
             return false;
         }
 
@@ -82,7 +82,7 @@ final class EmailDomainAnalyzer
     private function firstPartyDomain(): ?string
     {
         $res = config(sprintf('services.%s.email_domains.first_party.tld', $this->ssoProvider));
-        if (! is_string($res) && null !== $res) {
+        if (! is_string($res) && $res !== null) {
             return null;
         }
 
@@ -92,7 +92,7 @@ final class EmailDomainAnalyzer
     private function clientDomain(): ?string
     {
         $domain = config(sprintf('services.%s.email_domains.client.tld', $this->ssoProvider));
-        if (! is_string($domain) && null !== $domain) {
+        if (! is_string($domain) && $domain !== null) {
             return null;
         }
 

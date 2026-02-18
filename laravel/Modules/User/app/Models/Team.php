@@ -13,26 +13,26 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * Class Modules\User\Models\Team.
  *
- * @property string                          $id
- * @property string                          $user_id                (DC2Type:guid)
- * @property string                          $name
- * @property int                             $personal_team
- * @property Carbon|null                     $created_at
- * @property Carbon|null                     $updated_at
- * @property string|null                     $updated_by
- * @property string|null                     $created_by
- * @property Carbon|null                     $deleted_at
- * @property string|null                     $deleted_by
- * @property ProfileContract|null            $creator
- * @property TeamUser                        $pivot
- * @property Collection<int, User>           $members
- * @property int|null                        $members_count
- * @property User|null                       $owner
+ * @property string $id
+ * @property string $user_id (DC2Type:guid)
+ * @property string $name
+ * @property int $personal_team
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property Carbon|null $deleted_at
+ * @property string|null $deleted_by
+ * @property ProfileContract|null $creator
+ * @property TeamUser $pivot
+ * @property Collection<int, User> $members
+ * @property int|null $members_count
+ * @property User|null $owner
  * @property Collection<int, TeamInvitation> $teamInvitations
- * @property int|null                        $team_invitations_count
- * @property ProfileContract|null            $updater
- * @property Collection<int, User>           $users
- * @property int|null                        $users_count
+ * @property int|null $team_invitations_count
+ * @property ProfileContract|null $updater
+ * @property Collection<int, User> $users
+ * @property int|null $users_count
  *
  * @method static Builder|Team newModelQuery()
  * @method static Builder|Team newQuery()
@@ -59,9 +59,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $owner_id
  *
  * @method static Builder<static>|Team whereOwnerId($value)
- * @method static static               create(array $attributes = [])
- * @method static static               firstOrCreate(array $attributes, array $values = [])
- * @method static static               updateOrCreate(array $attributes, array $values = [])
+ * @method static static create(array $attributes = [])
+ * @method static static firstOrCreate(array $attributes, array $values = [])
+ * @method static static updateOrCreate(array $attributes, array $values = [])
  *
  * @mixin IdeHelperTeam
  *
