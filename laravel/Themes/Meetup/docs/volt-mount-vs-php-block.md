@@ -46,6 +46,7 @@ name('container0.view');
 middleware(PageSlugMiddleware::class);
 
 new class extends Component {
+    // Volt auto-inietta automaticamente questi parametri dalla route
     public string $container0;
     public string $slug0;
     public array $data = [];
@@ -61,6 +62,7 @@ new class extends Component {
         $this->pageSlug = $this->container0 . '.view';
         
         // Popolare $this->data per passare variabili ai componenti inclusi
+        // page-content.blade.php fa: array_merge($block->data, $this->data)
         $this->data = [
             'container0' => $this->container0,
             'slug0' => $this->slug0,

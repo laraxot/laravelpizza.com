@@ -17,8 +17,20 @@
 
 **NEL FRONTOFFICE USIAMO:**
 - ✅ **Laravel Folio** (Page-based routing)
-- ✅ **Livewire Volt** (Single-file components)
-- ✅ **Filament** (Form components, tables, widgets)
+- ✅ **Volt** (Solo per logica semplice in pagine Folio)
+- ✅ **Filament Widgets** (Per componenti dinamici con interazione server)
+
+### ⚠️ CRITICAL: Filament Widgets, NOT Livewire Pure!
+Per OGNI componente dinamico che necessita interazione server (form, dropdown, modali, ecc.):
+- ✅ **SEMPRE usare Filament Widgets** in `Modules/ModuleName/app/Filament/Widgets/`
+- ❌ **MAI usare componenti Livewire puri**
+
+**Esempi:**
+- ✅ `Modules/Meetup/app/Filament/Widgets/EventCalendarWidget.php`
+- ✅ `Modules/User/app/Filament/Widgets/LoginWidget.php`
+- ❌ `Modules/Meetup/app/Http/Livewire/EventForm.php`
+
+**Volt** si usa SOLO nelle pagine Folio per logica UI semplice. Per componenti complessi usare Filament Widgets.
 
 ---
 
