@@ -65,43 +65,38 @@ new class extends Component {
 ### Composizione
 
 I block components possono essere:
-1. **Statici**: Blade template semplici
-2. **Interattivi**: Componenti Livewire/Volt
+1. **Statici**: Blade template in `resources/views/components/blocks/` (inclusi con `@include`)
+2. **Volt (stesso pattern di [container0]/[slug0]/index)**: file in `resources/views/livewire/`; il CMS li renderizza con `@livewire` quando nel blocco è presente `"livewire": "nome.componente"`
 
-### Esempio: EventDetail Volt Component
+### Path montati da Volt
 
-**Location**: `Modules/Meetup/app/Livewire/EventDetail.php`
+- **Pagine Folio**: `Themes/Meetup/resources/views/pages` (e moduli `.../resources/views/pages`) — vedi `FolioVoltServiceProvider`
+- **Block Volt del tema**: `Themes/Meetup/resources/views/livewire` — montato nello stesso provider se la directory esiste
 
-```php
-<?php
-declare(strict_types=1);
+Nome componente = path relativo a `livewire/` con punti (es. `livewire/blocks/events/detail.blade.php` → `blocks.events.detail`).
 
-namespace Modules\Meetup\Livewire;
+### Attivazione da JSON pagina
 
-use Carbon\Carbon;
-use Illuminate\View\View;
-use Livewire\Volt\Component;
-use Modules\Meetup\Models\Event;
+Nel JSON della pagina, nel `data` del blocco aggiungere la chiave `livewire`:
 
-class EventDetail extends Component
-{
-    public ?Event $event = null;
-    public string $title = '';
-    public string $status = 'upcoming';
-    // ...
-
-    public function mount(?string $slug = null, ?Event $event = null): void
-    {
-        // Inizializzazione
-    }
-
-    public function render(): View
-    {
-        return view('pub_theme::components.blocks.events.detail-volt')
-            ->with([...]);
-    }
+```json
+"data": {
+    "view": "pub_theme::components.blocks.events.detail",
+    "livewire": "blocks.events.detail",
+    "title": "Upcoming Events",
+    ...
 }
 ```
+
+Se `livewire` è presente, `page-content.blade.php` (modulo Cms) usa `@livewire($name, $merged)` invece di `@include($block->view, ...)`. Stesso pattern di presentazione di `[container0]/[slug0]/index`: `mount()`, proprietà pubbliche, computed (`#[Computed]`).
+
+### Esempio: Event Detail Volt (single-file)
+
+**Location**: `Themes/Meetup/resources/views/livewire/blocks/events/detail.blade.php`
+
+- Proprietà: `container0`, `slug0`, `event`, `item`, `eventModel` (impostato in `mount()`)
+- Computed: `eventData()`, `eventsUrl()`, `badgeClass()`
+- Usato per **presentazione** (stesso standard della pagina index); per form/azioni server-side si usano Filament Widgets (vedi [filament-widgets-not-livewire-critical-rule](filament-widgets-not-livewire-critical-rule.md))
 
 ## Vantaggi del Pattern
 
