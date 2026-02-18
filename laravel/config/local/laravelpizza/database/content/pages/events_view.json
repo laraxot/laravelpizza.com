@@ -14,6 +14,7 @@
                 "livewire": true,
                 "data": {
                     "view": "pub_theme::components.blocks.events.detail",
+                    "livewire": "events.detail",
                     "title": "Upcoming Events",
                     "description": "Join us for pizza and Laravel discussions",
                     "query": {

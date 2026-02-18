@@ -71,9 +71,9 @@ I block components possono essere:
 ### Path montati da Volt
 
 - **Pagine Folio**: `Themes/Meetup/resources/views/pages` (e moduli `.../resources/views/pages`) — vedi `FolioVoltServiceProvider`
-- **Block Volt del tema**: `Themes/Meetup/resources/views/livewire` — montato nello stesso provider se la directory esiste
+- **Block Volt del tema**: `resources/views/livewire` (nome tipo `blocks.events.detail`) e `resources/views/components/blocks` (nome tipo `events.detail`) — montati nello stesso provider se le directory esistono.
 
-Nome componente = path relativo a `livewire/` con punti (es. `livewire/blocks/events/detail.blade.php` → `blocks.events.detail`).
+Esempio: `components/blocks/events/detail.blade.php` → nome componente **`events.detail`**.
 
 ### Attivazione da JSON pagina
 
@@ -82,7 +82,7 @@ Nel JSON della pagina, nel `data` del blocco aggiungere la chiave `livewire`:
 ```json
 "data": {
     "view": "pub_theme::components.blocks.events.detail",
-    "livewire": "blocks.events.detail",
+    "livewire": "events.detail",
     "title": "Upcoming Events",
     ...
 }
@@ -92,11 +92,12 @@ Se `livewire` è presente, `page-content.blade.php` (modulo Cms) usa `@livewire(
 
 ### Esempio: Event Detail Volt (single-file)
 
-**Location**: `Themes/Meetup/resources/views/livewire/blocks/events/detail.blade.php`
+**Location**: `Themes/Meetup/resources/views/components/blocks/events/detail.blade.php` — nome componente **`events.detail`**
 
+- Classe: `new class extends Component` con `mount()`, proprietà pubbliche, `#[Computed]` (stesso standard di `[container0]/[slug0]/index`)
 - Proprietà: `container0`, `slug0`, `event`, `item`, `eventModel` (impostato in `mount()`)
 - Computed: `eventData()`, `eventsUrl()`, `badgeClass()`
-- Usato per **presentazione** (stesso standard della pagina index); per form/azioni server-side si usano Filament Widgets (vedi [filament-widgets-not-livewire-critical-rule](filament-widgets-not-livewire-critical-rule.md))
+- Usato per **presentazione**; per form/azioni server-side si usano Filament Widgets (vedi [filament-widgets-not-livewire-critical-rule](filament-widgets-not-livewire-critical-rule.md))
 
 ## Vantaggi del Pattern
 
