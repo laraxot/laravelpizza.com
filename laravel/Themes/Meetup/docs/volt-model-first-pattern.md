@@ -4,7 +4,18 @@ In the Laraxot methodology, when building Livewire Volt components that represen
 
 ## 🎯 The Rule
 
-**DO NOT EXPLODE** the model attributes into separate public properties in the `new class extends Component` block.
+**DO NOT EXPLODE** the model attributes into separate public properties in the `new class extends Component` block. Keep the model instance as a single source of truth.
+
+## 👗 UI Preservation ("The Dress")
+
+When refactoring a Blade component to a Volt component, you MUST **preserve the HTML structure 1:1**. The goal is to modernize the logic, not to redesign the UI. 
+- Keep all CSS classes.
+- Keep all SVG icons.
+- Keep all structural tags.
+- Only update variable references (e.g., from `$eventData['title']` to `$this->event->title`).
+
+## 🚫 No `strict_types` in Includes
+Do NOT use `declare(strict_types=1);` in Blade files that are intended to be `@included` as blocks (like in `x-page` or `x-section`). This causes a fatal error if any output (even a single byte) has already been sent by the parent component.
 
 ### ❌ Anti-Pattern: Variable-Splitting
 Creating separate properties for every attribute makes the component brittle, non-DRY, and harder to maintain.

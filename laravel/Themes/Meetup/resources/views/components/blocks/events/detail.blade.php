@@ -93,7 +93,7 @@ new class extends Component {
                             </div>
                             <div class="ml-4">
                                 <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.date.label') }}</p>
-                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $startDate->format('l, F j, Y') }}</p>
+                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $this->event?->start_date?->format('l, F j, Y') ?? Carbon::now()->format('l, F j, Y') }}</p>
                             </div>
                         </div>
                         
@@ -106,7 +106,9 @@ new class extends Component {
                             </div>
                             <div class="ml-4">
                                 <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.time.label') }}</p>
-                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $startDate->format('g:i A') . ' - ' . $endDate->format('g:i A') }}</p>
+                                <p class="text-base font-semibold text-slate-900 dark:text-white">
+                                    {{ $this->event?->start_date?->format('g:i A') . ' - ' . $this->event?->end_date?->format('g:i A') }}
+                                </p>
                             </div>
                         </div>
                         
@@ -201,7 +203,7 @@ new class extends Component {
             <div class="lg:col-span-1">
                 <div class="sticky top-8 space-y-6">
                     {{-- Registration Card --}}
-                    @if($isUpcoming)
+                    @if($this->event?->start_date?->isFuture())
                     <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 border border-slate-200 dark:border-slate-700">
                         <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
                             {{ __('pub_theme::event.join_event.label') }}
@@ -212,7 +214,7 @@ new class extends Component {
                                 {{ __('pub_theme::event.available_spots.label') }}
                             </p>
                             <p class="text-4xl font-bold text-red-600 dark:text-red-400">
-                                {{ $availableSpots }}
+                                {{ ($this->event?->max_attendees ?? 100) - ($this->event?->attendees_count ?? 0) }}
                             </p>
                         </div>
                         
