@@ -33,7 +33,7 @@ Volt automaticamente inietta i parametri della route nelle proprietà pubbliche.
 // ❌ SBAGLIATO - Ridondante!
 public function mount(): void
 {
-    $this->container0 = request()->route('container0') ?? '';  // NO!
+    $this->container0 = request()->route('container0') ?? '';  // ❌ SBAGLIATO - Volt gestisce automaticamente i parametri
 }
 
 // ✅ CORRETTO - Volt inietta automaticamente!

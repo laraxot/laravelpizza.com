@@ -277,3 +277,5 @@ $currentAttendees = $event?->attendees_count ?? 0;
 vuol dire che non hai capito una merda ! aggiorna le tue cartelle docs, le tue memories, le tue rules e le tue skills
 
 //------------------------------
+
+fare come e' descritto in laravel/Themes/Meetup/docs/volt-flat-properties-pattern.md o in .windsurf/rules/volt-flat-properties.md  e' esattamente quello che non voglio ! va contro la dry la kiss , create un sacco di variabili inutili dato che tutto quello che ci serve e' dentro il modello .. una merda, ragiona, aggiorna le cartelle docs, aggiorna le tue rules, le tue memories e le tue skills 
