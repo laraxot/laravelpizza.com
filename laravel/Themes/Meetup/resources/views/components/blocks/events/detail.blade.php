@@ -1,10 +1,14 @@
 {{--
 /**
- * Event detail page - Pixel Parity implementation
+ * Event detail page - Volt Class-inspired implementation
  * Full layout with 2-column design, sidebar CTA, About, Location, Attendees sections
  * SEO optimized with slug URLs and Schema.org structured data
  * 
  * Supports both 'event' (specific) and 'item' (generic/agnostic) props
+ * Uses Volt Class-inspired pattern for better code organization
+ * 
+ * Note: This component is included via @include, so it uses a helper class
+ * instead of a full Livewire Volt component for compatibility.
  */
 --}}
 
@@ -15,60 +19,120 @@
     'slug0' => null,
 ])
 
-@php
+<?php
+declare(strict_types=1);
+
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Meetup\Models\Event;
 use Illuminate\Support\Carbon;
 
-// Support both 'event' (specific) and 'item' (generic) props
-$eventModel = $event ?? $item;
-
-// If no event/item provided but slug0 is available, load the Event model
-if ($eventModel === null && !empty($slug0)) {
-    $eventModel = Event::where('slug', $slug0)->first();
-}
-
-$eventData = [];
-if ($eventModel instanceof Event) {
-    $startDate = $eventModel->start_date ?? Carbon::now();
-    $endDate = $eventModel->end_date ?? $startDate;
-    $status = $startDate->isFuture() ? 'upcoming' : 'past';
-    $statusLabel = $status === 'upcoming' ? 'Upcoming' : 'Past Event';
+/**
+ * Event Detail Helper Class
+ * Inspired by Volt Class API pattern for better code organization
+ */
+class EventDetailHelper
+{
+    public function __construct(
+        public ?Event $event = null,
+        public mixed $item = null,
+        public ?string $container0 = null,
+        public ?string $slug0 = null,
+    ) {}
     
-    $eventData = [
-        'title' => $eventModel->title,
-        'slug' => $eventModel->slug,
-        'status' => $status,
-        'status_label' => $statusLabel,
-        'description' => $eventModel->description,
-        'date' => $startDate->format('l, F j, Y'),
-        'time' => $startDate->format('g:i A') . ' - ' . $endDate->format('g:i A'),
-        'location' => $eventModel->location ?? 'Location TBA',
-        'attendees_current' => $eventModel->attendees_count ?? 0,
-        'attendees_max' => $eventModel->max_attendees ?? 100,
-        'cover_image' => $eventModel->cover_image,
-        'available_spots' => ($eventModel->max_attendees ?? 100) - ($eventModel->attendees_count ?? 0),
-    ];
-} else {
-    $eventData = [
-        'title' => 'Event Title',
-        'slug' => '',
-        'status' => 'upcoming',
-        'status_label' => 'Upcoming',
-        'description' => null,
-        'date' => Carbon::now()->format('l, F j, Y'),
-        'time' => '',
-        'location' => 'Location TBA',
-        'attendees_current' => 0,
-        'attendees_max' => 100,
-        'cover_image' => null,
-        'available_spots' => 100,
-    ];
+    /**
+     * Get the Event model (loaded from slug0 if needed)
+     */
+    public function getEventModel(): ?Event
+    {
+        // Support both 'event' (specific) and 'item' (generic) props
+        $model = $this->event ?? $this->item;
+        
+        // If no event/item provided but slug0 is available, load the Event model
+        if ($model === null && !empty($this->slug0)) {
+            $model = Event::where('slug', $this->slug0)->first();
+        }
+        
+        return $model instanceof Event ? $model : null;
+    }
+    
+    /**
+     * Get event data array for rendering
+     */
+    public function getEventData(): array
+    {
+        $eventModel = $this->getEventModel();
+        
+        if ($eventModel instanceof Event) {
+            $startDate = $eventModel->start_date ?? Carbon::now();
+            $endDate = $eventModel->end_date ?? $startDate;
+            $status = $startDate->isFuture() ? 'upcoming' : 'past';
+            $statusLabel = $status === 'upcoming' ? 'Upcoming' : 'Past Event';
+            
+            return [
+                'title' => $eventModel->title,
+                'slug' => $eventModel->slug,
+                'status' => $status,
+                'status_label' => $statusLabel,
+                'description' => $eventModel->description,
+                'date' => $startDate->format('l, F j, Y'),
+                'time' => $startDate->format('g:i A') . ' - ' . $endDate->format('g:i A'),
+                'location' => $eventModel->location ?? 'Location TBA',
+                'attendees_current' => $eventModel->attendees_count ?? 0,
+                'attendees_max' => $eventModel->max_attendees ?? 100,
+                'cover_image' => $eventModel->cover_image,
+                'available_spots' => ($eventModel->max_attendees ?? 100) - ($eventModel->attendees_count ?? 0),
+            ];
+        }
+        
+        // Default/placeholder data
+        return [
+            'title' => 'Event Title',
+            'slug' => '',
+            'status' => 'upcoming',
+            'status_label' => 'Upcoming',
+            'description' => null,
+            'date' => Carbon::now()->format('l, F j, Y'),
+            'time' => '',
+            'location' => 'Location TBA',
+            'attendees_current' => 0,
+            'attendees_max' => 100,
+            'cover_image' => null,
+            'available_spots' => 100,
+        ];
+    }
+    
+    /**
+     * Get events URL for back link
+     */
+    public function getEventsUrl(): string
+    {
+        return LaravelLocalization::localizeUrl('/events');
+    }
+    
+    /**
+     * Get badge CSS class based on status
+     */
+    public function getBadgeClass(): string
+    {
+        $eventData = $this->getEventData();
+        return $eventData['status'] === 'upcoming' ? 'bg-green-600' : 'bg-slate-500';
+    }
 }
 
-$eventsUrl = LaravelLocalization::localizeUrl('/events');
-$badgeClass = $eventData['status'] === 'upcoming' ? 'bg-green-600' : 'bg-slate-500';
-@endphp
+// Initialize helper with props from Blade @props directive
+$helper = new EventDetailHelper(
+    event: $event instanceof Event ? $event : null,
+    item: $item,
+    container0: $container0,
+    slug0: $slug0,
+);
+
+// Get computed values
+$eventModel = $helper->getEventModel();
+$eventData = $helper->getEventData();
+$eventsUrl = $helper->getEventsUrl();
+$badgeClass = $helper->getBadgeClass();
+?>
 
 <div class="min-h-screen bg-slate-50 dark:bg-slate-900 overflow-x-hidden relative">
     {{-- Background Particles - using theme's Alpine.js component --}}

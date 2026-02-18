@@ -1,4 +1,9 @@
-# Sistema di Routing e Localizzazione con Laravel Folio
+# Sistema di Routing e Localizzazione con Laravel Folio + Volt
+
+## Risorse Ufficiali
+- [Laravel Folio Documentation](https://laravel.com/docs/12.x/folio)
+- [Livewire Volt Documentation](https://livewire.laravel.com/docs/volt)
+- [Volt Class-based API](https://laravel-news.com/livewire-volt-class-based-api)
 
 ## Collegamenti correlati
 - [Indice documentazione CMS](/laravel/Modules/Cms/project_docs/index.md)

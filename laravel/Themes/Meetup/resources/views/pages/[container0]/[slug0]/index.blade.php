@@ -20,8 +20,7 @@ new class extends Component {
     public function mount(): void
     {
         // Volt ha già popolato $this->container0 e $this->slug0 automaticamente
-        // Lo slug per il JSON è container0.view (es. events.view)
-        // Questo permette di caricare il JSON template per il dettaglio del container
+        // Usiamo questi parametri per costruire lo slug del template JSON
         $this->pageSlug = $this->container0 . '.view';
         
         // Popolare $this->data per passare variabili ai componenti inclusi
