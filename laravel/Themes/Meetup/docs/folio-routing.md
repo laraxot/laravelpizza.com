@@ -51,13 +51,57 @@ pages/
 ├── [slug].blade.php              → /{slug} (CMS catch-all)
 └── [container0]/
     ├── index.blade.php           → /{container} (CMS: events.json)
-    └── [slug].blade.php          → /{container}/{slug} (CMS: events.{slug}.json)
+    └── [slug0]/index.blade.php  → /{container}/{slug} (CMS: events.view)
 ```
 
 **Vantaggi:**
 - ✅ DRY: Un solo file gestisce tutti i contenuti nested
 - ✅ Scalabilità: Nuovi contenuti senza modificare struttura file
 - ✅ CMS-Driven: Contenuti in JSON, non nella struttura directory
+- ✅ Agnostic: Nessuna logica di business nel file routing
+
+**⚠️ CRITICAL: Volt Properties Injection**
+Il file `[container0]/[slug0]/index.blade.php` deve usare proprietà pubbliche per ricevere i parametri:
+
+```php
+// ✅ CORRETTO - Volt inietta automaticamente i parametri!
+name('container0.view');
+middleware(PageSlugMiddleware::class);
+
+new class extends Component {
+    public string $container0 = '';  // Volt popola dalla route!
+    public string $slug0 = '';        // Volt popola dalla route!
+    public array $data = [];         // Per passare dati
+    public string $pageSlug = '';    // Per il JSON lookup
+
+    public function mount(): void
+    {
+        $this->pageSlug = $this->container0 . '.view';
+        $this->data = [
+            'container0' => $this->container0,
+            'slug0' => $this->slug0,
+        ];
+    }
+};
+?>
+
+<x-layouts.app>
+    @volt('container0.view')
+    <div>
+        <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
+    </div>
+    @endvolt
+</x-layouts.app>
+```
+
+**⚠️ ANTI-PATTERN: MAI usare request()->route()**
+```php
+// ❌ SBAGLIATO
+public function mount(): void
+{
+    $this->container0 = request()->route('container0') ?? '';  // NO!
+}
+```
 
 **Importante:** Rimuovere `[container0]/[container1]/index.blade.php` se esiste (file di test) per dare precedenza a `[container0]/[slug].blade.php`.
 

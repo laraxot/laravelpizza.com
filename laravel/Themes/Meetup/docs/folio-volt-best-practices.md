@@ -18,6 +18,36 @@ Based on research of multiple Laravel Folio + Volt repositories and official doc
 - Components can also be standalone files in `resources/views/livewire/` or custom mounted directories
 - Single-file components combine PHP logic and Blade template
 
+**⚠️ CRITICAL: Volt Route Parameter Injection**
+Volt automatically injects route parameters into public properties. NEVER use `request()->route()`:
+
+```php
+// ❌ SBAGLIATO - Ridondante!
+public function mount(): void
+{
+    $this->container0 = request()->route('container0') ?? '';  // NO!
+    $this->slug0 = request()->route('slug0') ?? '';  // NO!
+}
+
+// ✅ CORRETTO - Volt inietta automaticamente!
+new class extends Component {
+    public string $container0 = '';  // Volt popola dalla route!
+    public string $slug0 = '';        // Volt popola dalla route!
+    public array $data = [];         // Per passare dati ai componenti
+    public string $pageSlug = '';    // Proprietà calcolata
+
+    public function mount(): void
+    {
+        // Solo logica di inizializzazione, non iniettare parametri!
+        $this->pageSlug = $this->container0 . '.view';
+        $this->data = [
+            'container0' => $this->container0,
+            'slug0' => $this->slug0,
+        ];
+    }
+};
+```
+
 Example of a Volt component in a Folio page:
 ```blade
 <?php
