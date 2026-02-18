@@ -113,3 +113,4 @@
 172.27.87.136 - - [18/Feb/2026:17:43:59 +0100] "GET /it/events HTTP/1.1" 200 233255 "-" "curl/8.5.0"
 172.27.87.136 - - [18/Feb/2026:17:46:10 +0100] "GET /it/events/laravel-beginners-pizza-night HTTP/1.1" 200 242520 "-" "curl/8.5.0"
 172.27.87.136 - - [18/Feb/2026:17:46:10 +0100] "GET /it/events HTTP/1.1" 200 233252 "-" "curl/8.5.0"
+172.27.87.136 - - [18/Feb/2026:18:02:20 +0100] "GET /it/events/laravel-beginners-pizza-night HTTP/1.1" 200 242500 "-" "curl/8.5.0"

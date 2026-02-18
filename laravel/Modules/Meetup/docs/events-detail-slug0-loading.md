@@ -164,6 +164,8 @@ Il componente renderizza usando i dati del modello Event caricato:
 
 ## 🎨 Implementazione Component
 
+Il componente ora usa una **Helper Class** ispirata al pattern Volt Class API per migliore organizzazione del codice. Vedi [Events Detail Volt Class Pattern](events-detail-volt-class-pattern.md) per dettagli.
+
 ```blade
 @props([
     'event' => null,
@@ -172,23 +174,18 @@ Il componente renderizza usando i dati del modello Event caricato:
     'slug0' => null,
 ])
 
-@php
-use Modules\Meetup\Models\Event;
+<?php
+// Initialize helper with props from Blade @props directive
+$helper = new EventDetailHelper(
+    event: $event instanceof Event ? $event : null,
+    item: $item,
+    container0: $container0,
+    slug0: $slug0,
+);
 
-// Support both 'event' (specific) and 'item' (generic) props
-$eventModel = $event ?? $item;
-
-// If no event/item provided but slug0 is available, load the Event model
-if ($eventModel === null && !empty($slug0)) {
-    $eventModel = Event::where('slug', $slug0)->first();
-}
-
-// Process event data...
-if ($eventModel instanceof Event) {
-    // Render with event data
-} else {
-    // Render placeholder/default data
-}
+// Get computed values (pattern simile a computed properties di Volt)
+$eventModel = $helper->getEventModel();
+$eventData = $helper->getEventData();
 @endphp
 ```
 
@@ -201,6 +198,7 @@ if ($eventModel instanceof Event) {
 
 ## 🔗 Riferimenti
 
+- [Events Detail Volt Class Pattern](events-detail-volt-class-pattern.md) - Pattern Helper Class ispirato a Volt
 - [Container0 Slug0 Agnostic Pattern](container0-slug0-agnostic-pattern.md)
 - [Container0 Pattern Philosophy](container0-pattern-philosophy.md)
 - [CMS JSON Content System](../Cms/docs/json-content-system-architecture.md)

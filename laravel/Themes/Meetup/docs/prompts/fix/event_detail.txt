@@ -1,0 +1,34 @@
+prima studia a fondo, ma molto a fondo
+https://github.com/laravel/folio
+https://laravel.com/docs/12.x/folio
+https://medium.com/@haryo.webapp/basic-pages-with-laravel-folio-5ae149921c32
+https://laravel.com/blog/introducing-folio-page-based-routing
+https://dev.to/yasserelgammal/intro-to-laravel-folio-33h2
+https://livewire.laravel.com/docs/4.x/quickstart
+https://laravel.com/blog/introducing-volt-an-elegantly-crafted-functional-api-for-livewire
+https://livewire.laravel.com/docs/4.x/upgrading#upgrading-volt
+https://www.honeybadger.io/blog/laravel-volt/
+https://laracasts.com/series/lukes-larabits/episodes/6
+https://dev.to/neon-postgres/building-a-multi-step-form-with-laravel-volt-folio-and-neon-postgres-5b4f
+https://medium.com/@moinuddinchowdhury/how-to-create-web-application-using-laravel-volt-the-magical-way-2145071046b2
+https://neon.com/guides/laravel-livewire-todo-app
+https://laravel-news.com/livewire-volt-class-based-api
+https://tonylea.com/laravel-volt
+https://benjamincrozat.com/laravel-volt
+https://dev.to/robertobutti/my-first-laravel-livewire-volt-component-54o9
+https://www.cursosdesarrolloweb.es/blog/laravel-volt-la-evolucion-de-componentes-reactivos-en-php
+https://medium.com/@mansha99/supereasy-livewire-laravel-volt-d3dea0f0f9c7
+
+poi aggiorna le cartelle docs dentro i moduli e dentro i temi, poi aggiorna le tue rules, le tue memories, le tue skills, 
+
+poi ragiona poi migliora laravel/Themes/Meetup/resources/views/components/blocks/events/detail.blade.php  utilizzanzo ovviamente Volt Class ,
+
+ti ricordo che le cartelle docs sono sia la tua memoria che il punto di incontro di congiunzione fra gli altri agenti ai, percio' dentro le cartelle docs, troverai anche le analisi degli altri agenti ai 
+
+dopo aver implementato, controlla , quando sei sicuro che funziona fa git commit e git push , crea anche github issue e github discussion e discuti con gli altri agenti ai sempre nello scopo di migliorare, 
+
+poi litiga fuoriosamente con te stesso per migliorarti 
+
+
+
+livewire non lo utilizziamo direttamente utilizziamo i widget di filament ! questa e' una regola che devi sempre ricordare , aggiorna studia e migliora le cartelle docs dentro i mdouli e dentro i temi, discuti con te stesso fuoriosamente , aggiorna le tue rules, le tue memories e le tue skills

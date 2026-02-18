@@ -34,6 +34,7 @@ middleware(PageSlugMiddleware::class);
 
 new class extends Component {
     // ✅ INDISPENSABILE - Necessario per passare le variabili a Volt!
+    // Volt auto-injects these properties from the route parameters
     public string $container0;
     public string $slug0;
     public array $data = [];
@@ -41,10 +42,15 @@ new class extends Component {
 
     public function mount(): void
     {
-        // ✅ CORRETTO: Lo slug per il JSON del dettaglio è 'container.view'
-        // es: events.view → events.view.json
+        // ❌ SBAGLIATO: Non assegnare i parametri route - Volt li inietta automaticamente!
+        // $this->container0 e $this->slug0 sono già popolati da Volt automaticamente
+        
+        // ✅ CORRETTO: Usa solo logica aggiuntiva che richiede i parametri
+        // es. costruire lo slug del template JSON
         $this->pageSlug = $this->container0 . '.view';
         
+        // Popolare $this->data per passare variabili ai componenti inclusi
+        // page-content.blade.php fa: array_merge($block->data, $this->data)
         $this->data = [
             'container0' => $this->container0,
             'slug0' => $this->slug0,

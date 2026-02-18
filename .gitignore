@@ -75,3 +75,4 @@ laravel/Modules/*/_docs/
 .clinerules/
 .cursorrules/
 .venv/
+access.log

@@ -4,6 +4,84 @@
 
 Questo documento descrive i pattern comuni utilizzati nel tema Meetup per implementare pagine con Folio e componenti Volt.
 
+## ⚡ CRITICAL: Volt Property Injection da Folio Route Parameters
+
+### Il problema
+
+In Volt + Folio, quando si usano route parameters come `[container0]/[slug0]/index.blade.php`, **le proprietà DEVONO essere dichiarate pubbliche nel Component class** per ricevere i valori dalla route.
+
+### Pattern Corretto
+
+```php
+<?php
+use function Laravel\Folio\{middleware, name};
+use Livewire\Volt\Component;
+
+name('container0.view');
+middleware(PageSlugMiddleware::class);
+
+new class extends Component {
+    // ✅ INDISPENSABILE: Dichiarare proprietà pubbliche!
+    // Volt le popola automaticamente dai parametri Folio [container0], [slug0]
+    public string $container0 = '';
+    public string $slug0 = '';
+    public array $data = [];
+    
+    public string $pageSlug = '';
+
+    public function mount(): void
+    {
+        // ✅ mount() viene chiamato DOPO che Volt ha popolato le proprietà
+        // Qui puoi inizializzare dati derivati
+        $this->pageSlug = $this->container0 . '.view';
+        
+        $this->data = [
+            'container0' => $this->container0,
+            'slug0' => $this->slug0,
+        ];
+    }
+};
+?>
+
+<x-layouts.app>
+    @volt('container0.view')
+    <div>
+        <x-page side="content" :slug="$pageSlug" :data="$data" />
+    </div>
+    @endvolt
+</x-layouts.app>
+```
+
+### Perché le proprietà pubbliche sono obbligatorie
+
+1. **Folio** estrae i parametri dalla URL (es. `/events/laravel-pizza` → `container0='events'`, `slug0='laravel-pizza'`)
+2. **Volt** popola automaticamente le proprietà pubbliche della classe con questi valori
+3. **Senza proprietà dichiarate**: I parametri NON sono disponibili nel template
+
+### Errori comuni
+
+❌ **SBAGLIATO** - Nessuna proprietà dichiarata:
+```php
+new class extends Component {
+    // ❌ ERRORE: Volt non può iniettare i parametri!
+};
+```
+
+❌ **SBAGLIATO** - Proprietà private:
+```php
+new class extends Component {
+    private string $container0;  // ❌ ERRORE: deve essere public!
+};
+```
+
+✅ **CORRETTO** - Proprietà pubbliche:
+```php
+new class extends Component {
+    public string $container0;
+    public string $slug0;
+};
+```
+
 ## Pattern Comuni
 
 ### Pattern 1: Lista con Filtri
