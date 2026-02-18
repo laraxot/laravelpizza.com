@@ -1,29 +1,47 @@
 {{--
 /**
- * Event detail page - Pure Blade Component
+ * Event detail page - Blade + Volt Hybrid Component
  * Full layout with 2-column design, sidebar CTA, About, Location, Attendees sections
  * SEO optimized with slug URLs and Schema.org structured data
  * 
  * Supports both 'event' (specific) and 'item' (generic/agnostic) props
- * 
- * IMPORTANT: This is a BLADE component - NO Livewire/Volt!
- * For interactivity, use Filament Widgets in Modules/Meetup/app/Filament/Widgets/
+ * Uses Volt class for automatic model loading from slug
  */
 --}}
+
+<?php
+declare(strict_types=1);
+
+use Livewire\Volt\Component;
+use Modules\Meetup\Models\Event;
+
+new class extends Component {
+    public ?Event $event = null;
+    public ?Event $item = null;
+    public string $container0 = '';
+    public string $slug0 = '';
+
+    public function mount(): void
+    {
+        if ($this->event === null && $this->item === null && !empty($this->slug0)) {
+            $this->event = Event::where('slug', $this->slug0)->first();
+        }
+    }
+};
+
+?>
 
 @props([
     'event' => null,
     'item' => null,
-    'container0' => null,
-    'slug0' => null,
+    'container0' => '',
+    'slug0' => '',
 ])
 
 @php
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-use Modules\Meetup\Models\Event;
 use Illuminate\Support\Carbon;
 
-// Support both 'event' (specific) and 'item' (generic) props
 $eventModel = $event ?? $item;
 
 // If no event/item provided but slug0 is available, load the Event model

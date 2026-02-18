@@ -6,6 +6,24 @@ Questo documento descrive i pattern comuni utilizzati nel tema Meetup per implem
 
 ## ⚡ CRITICAL: Volt Property Injection da Folio Route Parameters
 
+### REGOLA FONDAMENTALE: strict_types PRIMA DI TUTTO
+
+In un file Blade con Volt, `declare(strict_types=1)` **DEVE essere la prima istruzione**, PRIMA di qualsiasi commento o whitespace!
+
+```php
+<?php  // ✅ PRIMA riga - subito dopo l'apertura del PHP
+declare(strict_types=1);
+
+use Livewire\Volt\Component;
+// ...
+```
+
+```php
+{{-- ❌ SBAGLIATO - Commento prima di declare --}}
+<?php
+declare(strict_types=1);
+```
+
 ### Il problema
 
 In Volt + Folio, quando si usano route parameters come `[container0]/[slug0]/index.blade.php`, **le proprietà DEVONO essere dichiarate pubbliche nel Component class** per ricevere i valori dalla route.

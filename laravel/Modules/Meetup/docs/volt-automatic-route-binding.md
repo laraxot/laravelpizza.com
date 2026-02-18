@@ -16,7 +16,7 @@ new class extends Component {
 
     public function mount(): void
     {
-        // ❌ VIETATO: Estrazione manuale - Volt lo fa automaticamente!
+        // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
         $this->container0 = $this->container0 ?? request()->route('container0') ?? '';
         $this->slug0 = $this->slug0 ?? request()->route('slug0') ?? '';
     }
@@ -24,7 +24,7 @@ new class extends Component {
 ?>
 
 @php
-// ❌ VIETATO: Estrazione manuale - Volt lo fa automaticamente!
+// ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
 $container0 = $container0 ?? request()->route('container0') ?? '';
 $slug0 = $slug0 ?? request()->route('slug0') ?? '';
 @endphp
@@ -53,6 +53,7 @@ middleware(PageSlugMiddleware::class);
 
 new class extends Component {
     // ✅ CORRETTO: Volt popola automaticamente queste proprietà dalla route
+    // La definizione della classe del componente con le proprietà pubbliche è indispensabile per far arrivare le variabili a Volt
     public string $container0;
     public string $slug0;
     public array $data = [];
@@ -157,7 +158,7 @@ public function mount(): void
 
 1. **NON estrarre manualmente** i parametri nel `mount()`:
    ```php
-   // ❌ VIETATO
+   // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
    public function mount(): void
    {
        $this->container0 = request()->route('container0') ?? '';
@@ -166,7 +167,7 @@ public function mount(): void
 
 2. **NON estrarre manualmente** nei blocchi `@php`:
    ```php
-   // ❌ VIETATO
+   // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
    @php
    $container0 = request()->route('container0') ?? '';
    @endphp
@@ -174,7 +175,7 @@ public function mount(): void
 
 3. **NON usare `??` con `request()->route()`** quando Volt gestisce già:
    ```php
-   // ❌ VIETATO
+   // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
    $this->container0 = $this->container0 ?? request()->route('container0') ?? '';
    ```
 

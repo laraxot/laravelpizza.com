@@ -1,143 +1,102 @@
-# Block CMS per Event Detail - Frontend
+# Volt Component per Block CMS - Pattern Corretto
 
-## ⚠️ REGOLA FONDAMENTALE: NO Livewire/Volt per Frontend CMS-Driven!
+## ⚠️ REGOLA CRITICA: Volt Inline nei Block CMS
 
-**Il frontend pubblico utilizza ONLY Block CMS Blade statici. MAI Livewire/Volt!**
+**Il frontend CMS-driven usa componenti Volt inline, NON classi PHP separate!**
 
-## Architettura Corretta
+## Struttura File
 
-### Frontend (Pubblico) = Block CMS Blade
 ```
-Themes/Meetup/resources/views/components/blocks/events/
-├── detail.blade.php           # ✅ Block CMS per dettaglio evento
-└── list.blade.php             # ✅ Block CMS per lista eventi
+Themes/Meetup/resources/views/livewire/blocks/events/
+└── detail.blade.php    # ✅ Componente Volt inline
 ```
 
-### Admin = Filament Widget
-```
-Modules/Meetup/app/Filament/Widgets/
-├── EventStatsOverviewWidget.php   # ✅ Widget per admin
-└── CalendarWidget.php             # ✅ Widget per admin
-```
+## Pattern Corretto: Volt Inline
 
-## Block CMS per Frontend
+Il file DEVE iniziare con `<?php` - NULLUNO output (neanche commenti) prima!
 
-### Caratteristiche dei Block CMS
+```php
+<?php
+declare(strict_types=1);
 
-1. **Blade Template Puri**: Nessun Livewire/Volt
-2. **Ricevono Dati dal CMS**: `$data`, `$item`, `$container0`, `$slug0`
-3. **Caricamento Modello**: Se necessario, caricano il modello direttamente nel template
-4. **SEO**: Rendering server-side completo
-
-### Esempio: events/detail.blade.php
-
-```blade
-@props([
-    'event' => null,
-    'item' => null,
-    'container0' => null,
-    'slug0' => null,
-])
-
-@php
+use Illuminate\Support\Carbon;
+use Livewire\Attributes\Computed;
+use Livewire\Volt\Component;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Meetup\Models\Event;
 
-// Supporto sia 'event' che 'item' (pattern agnostico)
-$eventModel = $event ?? $item;
+new class extends Component {
+    // Proprietà pubbliche per i parametri dalla route/CMS
+    public ?string $container0 = null;
+    public ?string $slug0 = null;
+    public $event = null;
+    public $item = null;
+    public $eventModel = null;
 
-// Se non fornito ma abbiamo slug0, carichiamo il modello
-if ($eventModel === null && !empty($slug0)) {
-    $eventModel = Event::where('slug', $slug0)->first();
-}
+    // Mount - inizializzazione
+    public function mount(): void
+    {
+        $model = $this->event ?? $this->item;
+        if ($model === null && $this->slug0 !== null) {
+            $model = Event::where('slug', $this->slug0)->first();
+        }
+        $this->eventModel = $model;
+    }
 
-// Preparazione dati per la view
-if ($eventModel instanceof Event) {
-    $title = $eventModel->title;
-    // ...
-}
-@endphp
+    // Computed properties
+    #[Computed]
+    public function eventData(): array { ... }
+    
+    #[Computed]
+    public function eventsUrl(): string { ... }
+    
+    #[Computed]
+    public function badgeClass(): string { ... }
+}; ?>
 
-{{-- Rendering HTML --}}
+{{-- Blade template - inizia DOPO la classe PHP --}}
 <div>
-    <h1>{{ $title }}</h1>
+    {{ $this->eventData['title'] }}
 </div>
 ```
 
-## Perché NON usare Livewire/Volt per Frontend
+## ❌ SBAGLIATO
 
-| Motivo | Spiegazione |
-|--------|-------------|
-| **CMS-Driven** | I contenuti sono nel JSON, non nel componente |
-| **SEO** | Rendering server-side puro è migliore per SEO |
-| **Semplicità** | Meno complessità, meno JavaScript |
-| **Performance** | No hydration overhead |
-| **Architettura** | Folio + Blade + CMS è sufficiente |
+```blade
+{{-- Commento PRIMA del PHP - SBAGLIATO! --}}
+<?php
+// Questo causa errore "strict_types must be first"
+```
 
-## Quando USARE Filament Widget
+## Attivazione dal JSON
 
-I Filament Widget sono per l'**Admin Panel**:
-- Dashboard statistiche
-- Grafici e chart
-- Gestione dati tabular
-- Form complessi
+Nel JSON della pagina CMS:
 
-```php
-// ✅ CORRETTO - Widget per Admin
-class EventStatsOverviewWidget extends XotBaseStatsOverviewWidget
+```json
 {
-    protected function getStats(): array
-    {
-        return [
-            Stat::make('Eventi Totali', Event::count()),
-        ];
+    "type": "events",
+    "data": {
+        "livewire": "blocks.events.detail",
+        "slug0": "laravel-pizza-night"
     }
 }
 ```
 
-## Pattern Corretto: Block con Caricamento Modello
+## Differenza Admin vs Frontend
 
-### Block detail.events.blade.php
+| Contesto | Tipo Componente | Esempio |
+|----------|----------------|---------|
+| **Frontend CMS** | Volt inline in `livewire/` | `blocks.events.detail` |
+| **Admin Panel** | Filament Widget | `Modules/Meetup/app/Filament/Widgets/` |
 
-```blade
-@props(['slug0' => null])
-
-@php
-// Caricamento modello se non fornito
-$event = $event ?? Event::where('slug', $slug0)->first();
-@endphp
-
-@if($event)
-    <h1>{{ $event->title }}</h1>
-    <p>{{ $event->description }}</p>
-@else
-    <div>Evento non trovato</div>
-@endif
-```
-
-## ❌ MAI Fare
+## Utilizzo
 
 ```blade
-{{-- ❌ SBAGLIATO: Livewire nel frontend CMS-driven --}}
-@livewire(\Modules\Meetup\Livewire\EventDetail::class)
-
-{{-- ❌ SBAGLIATO: Volt nel frontend CMS-driven --}}
-@volt('event.detail')
-```
-
-## ✅ CORRETTO: Block CMS Blade
-
-```blade
-{{-- ✅ CORRETTO: Block CMS statico --}}
-<x-page side="content" :slug="$pageSlug" :data="$data" />
-
-{{-- Il block renderizza i dati dal CMS --}}
-@include('pub_theme::components.blocks.events.detail', [
-    'slug0' => $data['slug0'] ?? null,
-])
+@livewire('blocks.events.detail', ['slug0' => $slug0])
 ```
 
 ## Riferimenti
 
-- [Container0 Pattern](./container0-slug0-agnostic-pattern.md)
-- [Filament Widget Documentation](./filament-widget-usage.md)
-- [CMS Content Blocks](./content-blocks-system.md)
+- [Pattern container0/slug0](./container0-slug0-agnostic-pattern.md)
+- [Laravel Folio](https://laravel.com/docs/12.x/folio)
+- [Livewire Volt](https://livewire.laravel.com/docs/4.x/volt)

@@ -3,6 +3,7 @@
 ## Core Concepts
 
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup module
+- [Volt Automatic Route Parameter Binding](volt-automatic-route-binding.md) - Volt handles route parameters automatically, no manual extraction needed
 - [Project Purpose](project-purpose.md) - Why this module exists
 - [Business Logic](business-logic.md) - Core business requirements
 - [Dashboard Architecture](dashboard-architecture.md) - Architecture of the Meetup dashboard
