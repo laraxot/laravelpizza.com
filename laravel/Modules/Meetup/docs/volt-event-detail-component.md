@@ -1,94 +1,143 @@
-# Volt Component per Event Detail
+# Block CMS per Event Detail - Frontend
 
-## Panoramica
+## ⚠️ REGOLA FONDAMENTALE: NO Livewire/Volt per Frontend CMS-Driven!
 
-Questo documento descrive come implementare componenti Livewire/Volt per la visualizzazione di contenuti CMS-driven nel tema Meetup.
+**Il frontend pubblico utilizza ONLY Block CMS Blade statici. MAI Livewire/Volt!**
 
-## Pattern Volt + Folio
+## Architettura Corretta
 
-### Struttura del Componente Volt
-
-I componenti Volt per i block CMS si trovano in:
+### Frontend (Pubblico) = Block CMS Blade
 ```
-Modules/Meetup/app/Livewire/
-├── EventDetail.php              # Componente per il detail dell'evento
-└── ...
+Themes/Meetup/resources/views/components/blocks/events/
+├── detail.blade.php           # ✅ Block CMS per dettaglio evento
+└── list.blade.php             # ✅ Block CMS per lista eventi
 ```
 
-### Esempio: EventDetail.php
+### Admin = Filament Widget
+```
+Modules/Meetup/app/Filament/Widgets/
+├── EventStatsOverviewWidget.php   # ✅ Widget per admin
+└── CalendarWidget.php             # ✅ Widget per admin
+```
 
-```php
-<?php
+## Block CMS per Frontend
 
-declare(strict_types=1);
+### Caratteristiche dei Block CMS
 
-namespace Modules\Meetup\Livewire;
+1. **Blade Template Puri**: Nessun Livewire/Volt
+2. **Ricevono Dati dal CMS**: `$data`, `$item`, `$container0`, `$slug0`
+3. **Caricamento Modello**: Se necessario, caricano il modello direttamente nel template
+4. **SEO**: Rendering server-side completo
 
-use Carbon\Carbon;
-use Illuminate\View\View;
-use Livewire\Volt\Component;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+### Esempio: events/detail.blade.php
+
+```blade
+@props([
+    'event' => null,
+    'item' => null,
+    'container0' => null,
+    'slug0' => null,
+])
+
+@php
 use Modules\Meetup\Models\Event;
 
-class EventDetail extends Component
+// Supporto sia 'event' che 'item' (pattern agnostico)
+$eventModel = $event ?? $item;
+
+// Se non fornito ma abbiamo slug0, carichiamo il modello
+if ($eventModel === null && !empty($slug0)) {
+    $eventModel = Event::where('slug', $slug0)->first();
+}
+
+// Preparazione dati per la view
+if ($eventModel instanceof Event) {
+    $title = $eventModel->title;
+    // ...
+}
+@endphp
+
+{{-- Rendering HTML --}}
+<div>
+    <h1>{{ $title }}</h1>
+</div>
+```
+
+## Perché NON usare Livewire/Volt per Frontend
+
+| Motivo | Spiegazione |
+|--------|-------------|
+| **CMS-Driven** | I contenuti sono nel JSON, non nel componente |
+| **SEO** | Rendering server-side puro è migliore per SEO |
+| **Semplicità** | Meno complessità, meno JavaScript |
+| **Performance** | No hydration overhead |
+| **Architettura** | Folio + Blade + CMS è sufficiente |
+
+## Quando USARE Filament Widget
+
+I Filament Widget sono per l'**Admin Panel**:
+- Dashboard statistiche
+- Grafici e chart
+- Gestione dati tabular
+- Form complessi
+
+```php
+// ✅ CORRETTO - Widget per Admin
+class EventStatsOverviewWidget extends XotBaseStatsOverviewWidget
 {
-    public ?Event $event = null;
-
-    public string $title = '';
-    public string $slug = '';
-    public string $status = 'upcoming';
-    // ... altre proprietà
-
-    public function mount(?string $slug = null, ?Event $event = null): void
+    protected function getStats(): array
     {
-        // Logica di inizializzazione
-    }
-
-    public function render(): View
-    {
-        return view('pub_theme::components.blocks.events.detail-volt')
-            ->with([...]);
+        return [
+            Stat::make('Eventi Totali', Event::count()),
+        ];
     }
 }
 ```
 
-### Caratteristiche del Pattern
+## Pattern Corretto: Block con Caricamento Modello
 
-1. **Proprietà Pubbliche**: Dichiarate con type hint per PHPStan
-2. **Metodo mount()**: Per inizializzazione dei dati
-3. **Metodo render()**: Restituisce la view con i dati
-4. **Supporto per Model Binding**: Accetta sia il modello che lo slug
-
-### Utilizzo nel Template Blade
+### Block detail.events.blade.php
 
 ```blade
-<x-meetup::event-detail :slug="$slug0" />
+@props(['slug0' => null])
+
+@php
+// Caricamento modello se non fornito
+$event = $event ?? Event::where('slug', $slug0)->first();
+@endphp
+
+@if($event)
+    <h1>{{ $event->title }}</h1>
+    <p>{{ $event->description }}</p>
+@else
+    <div>Evento non trovato</div>
+@endif
 ```
 
-oppure
+## ❌ MAI Fare
 
 ```blade
-@livewire(\Modules\Meetup\Livewire\EventDetail::class, ['slug' => $slug0])
+{{-- ❌ SBAGLIATO: Livewire nel frontend CMS-driven --}}
+@livewire(\Modules\Meetup\Livewire\EventDetail::class)
+
+{{-- ❌ SBAGLIATO: Volt nel frontend CMS-driven --}}
+@volt('event.detail')
 ```
 
-## Differenza tra Block Statico e Volt
+## ✅ CORRETTO: Block CMS Blade
 
-| Aspetto | Block Statico | Componente Volt |
-|---------|---------------|-----------------|
-| Interattività | Nessuna | Possibile |
-| Data Fetching | Nel template | Nel componente |
-| State Management | Nessuno | Gestito da Livewire |
-| SEO | Server-side | Server-side |
+```blade
+{{-- ✅ CORRETTO: Block CMS statico --}}
+<x-page side="content" :slug="$pageSlug" :data="$data" />
 
-## Best Practices
-
-1. **Usare proprietà tipizzate**: `public string $title = ''`
-2. **Mount con default**: `mount(?string $slug = null, ?Event $event = null)`
-3. **View dedicata**: Template in `components/blocks/{type}-volt.blade.php`
-4. **Separazione logica**: Logica nel componente, rendering nel template
+{{-- Il block renderizza i dati dal CMS --}}
+@include('pub_theme::components.blocks.events.detail', [
+    'slug0' => $data['slug0'] ?? null,
+])
+```
 
 ## Riferimenti
 
-- [Laravel Folio](https://laravel.com/docs/12.x/folio)
-- [Livewire Volt](https://livewire.laravel.com/docs/4.x/volt)
-- [Documentazione Locale Folio](./folio-dynamic-routing.md)
+- [Container0 Pattern](./container0-slug0-agnostic-pattern.md)
+- [Filament Widget Documentation](./filament-widget-usage.md)
+- [CMS Content Blocks](./content-blocks-system.md)

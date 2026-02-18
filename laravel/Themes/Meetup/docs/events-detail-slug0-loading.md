@@ -166,7 +166,9 @@ Il componente renderizza usando i dati del modello Event caricato:
 
 ## 🎨 Implementazione Component
 
-Il componente ora usa una **Helper Class** ispirata al pattern Volt Class API per migliore organizzazione del codice. Vedi [Events Detail Volt Class Pattern](events-detail-volt-class-pattern.md) per dettagli.
+Il componente ora usa una **Helper Class PHP** per migliore organizzazione del codice. Vedi [Events Detail Helper Class Pattern](events-detail-volt-class-pattern.md) per dettagli.
+
+**⚠️ IMPORTANTE**: Questo componente è **statico** (Blade puro). Per interattività server-side, usa **Filament Widgets** (vedi [Filament Widgets NOT Livewire Critical Rule](filament-widgets-not-livewire-critical-rule.md)).
 
 ```blade
 @props([
@@ -185,7 +187,7 @@ $helper = new EventDetailHelper(
     slug0: $slug0,
 );
 
-// Get computed values (pattern simile a computed properties di Volt)
+// Get computed values (helper class methods)
 $eventModel = $helper->getEventModel();
 $eventData = $helper->getEventData();
 @endphp

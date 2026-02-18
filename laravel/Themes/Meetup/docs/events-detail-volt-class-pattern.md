@@ -1,19 +1,25 @@
-# Events Detail Component - Volt Class-Inspired Pattern
+# Events Detail Component - Helper Class Pattern
 
 ## 🎯 Principio: Organizzazione Codice con Helper Class
 
-Il componente `events/detail.blade.php` utilizza un pattern ispirato a Volt Class API per migliorare l'organizzazione del codice, la manutenibilità e la testabilità, mantenendo la compatibilità con il sistema CMS che include il componente tramite `@include`.
+Il componente `events/detail.blade.php` utilizza una **Helper Class PHP** per migliorare l'organizzazione del codice, la manutenibilità e la testabilità, mantenendo la compatibilità con il sistema CMS che include il componente tramite `@include`.
 
-## 📜 Pattern: Helper Class invece di Volt Class
+## ⚠️ REGOLA CRITICA: NON Usiamo Livewire/Volt Direttamente
 
-### Perché Helper Class invece di Volt Class?
+**IMPORTANTE**: Nel progetto **NON usiamo Livewire/Volt direttamente**. Per componenti dinamici/interattivi usiamo **Filament Widgets** (extends XotBaseWidget).
 
-Il componente viene incluso tramite `@include` da `page-content.blade.php`, quindi non è un componente Livewire standalone. Per questo motivo:
+Vedi: [Filament Widgets NOT Livewire Critical Rule](filament-widgets-not-livewire-critical-rule.md)
 
-- ❌ **NON possiamo usare Volt Class API direttamente** (richiede componente Livewire)
-- ✅ **Usiamo una Helper Class PHP** che segue lo stesso pattern organizzativo
+## 📜 Pattern: Helper Class per Logica Statica
+
+### Perché Helper Class?
+
+Il componente viene incluso tramite `@include` da `page-content.blade.php` e ha solo bisogno di organizzare codice statico (trasformazione dati, calcoli). Per questo motivo:
+
+- ✅ **Usiamo una Helper Class PHP** per organizzare la logica
 - ✅ **Mantiene compatibilità** con `@include` del sistema CMS
 - ✅ **Migliora organizzazione** del codice rispetto a blocchi `@php` inline
+- ✅ **NON richiede Livewire/Volt** (componente statico)
 
 ## 🏗️ Struttura Helper Class
 
@@ -203,16 +209,10 @@ $badgeClass = $helper->getBadgeClass();
 
 ## 🔄 Pattern Computed Properties
 
-La Helper Class implementa il pattern "computed properties" simile a Volt:
+La Helper Class implementa il pattern "computed properties" per calcoli lazy:
 
 ```php
-// Pattern Volt (non disponibile qui)
-public function getEventDataProperty(): array
-{
-    return [...];
-}
-
-// Pattern Helper Class (equivalente)
+// Pattern Helper Class
 public function getEventData(): array
 {
     return [...];
@@ -274,29 +274,33 @@ public function getEventModel(): mixed
 }
 ```
 
-## 🔗 Confronto con Volt Class API
+## 🔗 Quando Usare Helper Class vs Filament Widget
 
-| Volt Class API | Helper Class Pattern |
-|----------------|---------------------|
-| `new class extends Component` | `class EventDetailHelper` |
-| `public function getXProperty()` | `public function getX()` |
-| `$this->property` | `$this->property` |
-| Livewire reactivity | No reactivity (static) |
-| `@volt` directive | `@include` compatibility |
+| Helper Class | Filament Widget |
+|-------------|----------------|
+| Logica statica (trasformazione dati) | Interattività server-side |
+| Calcoli e formattazione | Form con validazione |
+| Preparazione dati per view | Componenti dinamici |
+| Nessuna dipendenza Livewire | Estende XotBaseWidget |
 
 **Quando usare Helper Class:**
 - ✅ Componenti inclusi via `@include`
-- ✅ Logica che non richiede reattività Livewire
+- ✅ Logica statica (trasformazione dati, calcoli)
 - ✅ Miglior organizzazione codice senza dipendenze Livewire
+- ✅ Rendering statico senza interattività
 
-**Quando usare Volt Class:**
-- ✅ Componenti standalone Livewire
-- ✅ Componenti che richiedono reattività
-- ✅ Componenti in pagine Folio con `@volt`
+**Quando usare Filament Widget:**
+- ✅ Componenti che richiedono interattività server-side
+- ✅ Form con validazione
+- ✅ Componenti dinamici con stato
+- ✅ Componenti che fanno chiamate AJAX
+
+**⚠️ IMPORTANTE**: Nel progetto NON usiamo Livewire/Volt direttamente. Per interattività usiamo sempre Filament Widgets!
 
 ## 🔗 Riferimenti
 
+- [Filament Widgets NOT Livewire Critical Rule](filament-widgets-not-livewire-critical-rule.md) - ⚠️ REGOLA CRITICA
 - [Events Detail Slug0 Loading](events-detail-slug0-loading.md)
-- [Volt Class API Documentation](https://livewire.laravel.com/docs/volt)
+- [Folio Filament Widgets Integration](folio-filament-widgets-integration.md)
 - [Container0 Slug0 Agnostic Pattern](container0-slug0-agnostic-pattern.md)
 - [CMS JSON Content System](../../Modules/Cms/docs/json-content-system-architecture.md)

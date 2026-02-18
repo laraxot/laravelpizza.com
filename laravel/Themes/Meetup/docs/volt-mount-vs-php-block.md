@@ -170,7 +170,7 @@ new class extends Component {
 ```
 1. URL: /it/events/laravel-beginners-pizza-night
    ↓
-2. Volt popola: $this->container0 = 'events', $this->slug0 = 'laravel-beginners-pizza-night'
+2. Volt auto-inietta: $this->container0 = 'events', $this->slug0 = 'laravel-beginners-pizza-night'
    ↓
 3. mount() calcola: $this->pageSlug = 'events.view'
    ↓
