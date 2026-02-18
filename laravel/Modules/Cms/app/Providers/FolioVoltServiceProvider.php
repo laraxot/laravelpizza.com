@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Cms\Providers;
 
+use function Safe\realpath;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
@@ -102,6 +103,12 @@ class FolioVoltServiceProvider extends ServiceProvider
                     ]);
             }
             $paths[] = $theme_path;
+        }
+
+        // Theme Livewire block components (e.g. blocks.events.detail)
+        $theme_livewire = \dirname($theme_path).\DIRECTORY_SEPARATOR.'livewire';
+        if (File::exists($theme_livewire) && File::isDirectory($theme_livewire)) {
+            $paths[] = realpath($theme_livewire);
         }
 
         foreach ($modules as $module) {

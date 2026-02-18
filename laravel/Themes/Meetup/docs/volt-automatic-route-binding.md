@@ -16,7 +16,7 @@ new class extends Component {
 
     public function mount(): void
     {
-        // ❌ VIETATO: Estrazione manuale - Volt lo fa automaticamente!
+        // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
         $this->container0 = $this->container0 ?? request()->route('container0') ?? '';
         $this->slug0 = $this->slug0 ?? request()->route('slug0') ?? '';
     }
@@ -24,7 +24,7 @@ new class extends Component {
 ?>
 
 @php
-// ❌ VIETATO: Estrazione manuale - Volt lo fa automaticamente!
+// ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
 $container0 = $container0 ?? request()->route('container0') ?? '';
 $slug0 = $slug0 ?? request()->route('slug0') ?? '';
 @endphp
@@ -39,7 +39,7 @@ $slug0 = $slug0 ?? request()->route('slug0') ?? '';
 
 ## ✅ CORRETTO: Volt Gestisce Automaticamente
 
-**Implementazione corretta:**
+**Implementazione corretta - La definizione della classe del componente con le proprietà pubbliche è indispensabile per far arrivare le variabili a Volt:**
 
 ```php
 <?php
@@ -52,7 +52,8 @@ name('container0.view');
 middleware(PageSlugMiddleware::class);
 
 new class extends Component {
-    // ✅ CORRETTO: Volt popola automaticamente queste proprietà dalla route
+    // ✅ CORRETTO: La classe del componente con proprietà pubbliche è indispensabile
+    // per far arrivare le variabili a Volt! Volt popola automaticamente queste proprietà dalla route
     public string $container0;
     public string $slug0;
     public array $data = [];
@@ -83,6 +84,8 @@ new class extends Component {
 
 ## 🔄 Come Funziona Volt Automatic Binding
 
+**La definizione della classe del componente con le proprietà pubbliche è indispensabile per far arrivare le variabili a Volt!**
+
 ### 1. Folio Estrae Parametri dalla Route
 
 Quando Folio matcha una route come `/it/events/laravel-beginners-pizza-night` con il file `[container0]/[slug0]/index.blade.php`:
@@ -97,14 +100,18 @@ Parametri estratti:
 
 ### 2. Volt Popola Automaticamente le Proprietà
 
-Volt/Livewire cerca proprietà pubbliche nel componente con lo stesso nome dei parametri della route e le popola automaticamente:
+**La definizione della classe del componente con le proprietà pubbliche è indispensabile per far arrivare le variabili a Volt!** Volt/Livewire cerca proprietà pubbliche nel componente con lo stesso nome dei parametri della route e le popola automaticamente:
 
 ```php
 new class extends Component {
     // Volt popola automaticamente $this->container0 = 'events'
+    // La classe del componente con proprietà pubbliche è indispensabile
+    // per far arrivare le variabili a Volt!
     public string $container0;
     
     // Volt popola automaticamente $this->slug0 = 'laravel-beginners-pizza-night'
+    // La classe del componente con proprietà pubbliche è indispensabile
+    // per far arrivare le variabili a Volt!
     public string $slug0;
 };
 ```
@@ -157,7 +164,7 @@ public function mount(): void
 
 1. **NON estrarre manualmente** i parametri nel `mount()`:
    ```php
-   // ❌ VIETATO
+   // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
    public function mount(): void
    {
        $this->container0 = request()->route('container0') ?? '';
@@ -166,7 +173,7 @@ public function mount(): void
 
 2. **NON estrarre manualmente** nei blocchi `@php`:
    ```php
-   // ❌ VIETATO
+   // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
    @php
    $container0 = request()->route('container0') ?? '';
    @endphp
@@ -174,7 +181,7 @@ public function mount(): void
 
 3. **NON usare `??` con `request()->route()`** quando Volt gestisce già:
    ```php
-   // ❌ VIETATO
+   // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
    $this->container0 = $this->container0 ?? request()->route('container0') ?? '';
    ```
 
@@ -200,7 +207,7 @@ new class extends Component {
 ## ✅ Best Practices
 
 1. **Fidati di Volt**: Volt gestisce automaticamente i parametri della route
-2. **Dichiarare proprietà pubbliche**: Con lo stesso nome dei parametri Folio
+2. **Dichiarare proprietà pubbliche**: Con lo stesso nome dei parametri Folio - la definizione della classe del componente con le proprietà pubbliche è indispensabile per far arrivare le variabili a Volt!
 3. **Usare direttamente `$this->property`**: Nel blocco `@volt()`
 4. **Evitare estrazione manuale**: Non è necessaria e aggiunge complessità
 5. **`mount()` solo per logica aggiuntiva**: Non per estrarre parametri

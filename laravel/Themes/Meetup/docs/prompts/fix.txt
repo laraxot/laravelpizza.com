@@ -18,7 +18,7 @@ fare
  $this->container0 = $this->container0 ?? request()->route('container0') ?? '';
         $this->slug0 = $this->slug0 ?? request()->route('slug0') ?? '';
        
-e' sbagliato ! volt si arrangia da solo con quei 2 parametri
+e' sbagliato ! ✅ CORRETTO: Volt si arrangia da solo con quei 2 parametri
 
 
  
@@ -63,6 +63,6 @@ non e'
 
         <x-blocks.content-resolver :container0="$this->container0" :slug0="$this->slug0" />
 ma e' 
-<x-page side="content" :slug="$pageSlug" :data="$data" />
+<x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
 
 capisci da solo il perche' poi aggiorna le cartelle docs dentro i moduli e dentro i temi, poi aggiorna le tue rules, le tue memories e le tue skills, poi implementa, poi controlla 

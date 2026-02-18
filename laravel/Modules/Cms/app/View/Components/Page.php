@@ -48,8 +48,15 @@ class Page extends Component
      */
     public function render(): ViewContract
     {
-        $view = 'cms::components.page-content';
-        $view_params = [];
+        $view = 'cms::components.page';
+        $view_params = [
+            'blocks' => $this->blocks,
+            'side' => $this->side,
+            'slug' => $this->slug,
+            'data' => $this->data,
+            'container0' => $this->container0,
+            'slug0' => $this->slug0,
+        ];
         // @phpstan-ignore-next-line
         if (! view()->exists($view)) {
             throw new \Exception('view not found: '.$view);

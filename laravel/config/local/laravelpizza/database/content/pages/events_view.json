@@ -11,6 +11,7 @@
             {
                 "type": "events",
                 "slug": "events-list",
+                "livewire": true,
                 "data": {
                     "view": "pub_theme::components.blocks.events.detail",
                     "title": "Upcoming Events",

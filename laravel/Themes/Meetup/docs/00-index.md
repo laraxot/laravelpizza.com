@@ -4,6 +4,7 @@
 
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup theme
 - [Critical Rules and Patterns](critical-rules-and-patterns.md) - Stack (Folio, Volt, Filament 5, Tailwind)
+- [Volt Automatic Route Parameter Binding](volt-automatic-route-binding.md) - Volt handles route parameters automatically, no manual extraction needed
 - [Project Purpose](project-purpose.md) - Why this theme exists
 - [Project Philosophy](project-philosophy.md) - Core philosophy of the theme
 - [Dashboard Integration](dashboard-integration.md) - Integration between Meetup dashboard and theme

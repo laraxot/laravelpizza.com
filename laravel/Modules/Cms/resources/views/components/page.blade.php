@@ -10,14 +10,15 @@ declare(strict_types=1);
     'slug' => '',
     'page' => null,
     'container0' => '',
-    'slug0' => ''
+    'slug0' => '',
+    'data' => []
 ])
 
 @if(!empty($blocks))
     <div class="page-{{ $side }}-content" data-slug="{{ $slug }}" data-side="{{ $side }}">
-        @foreach($blocks as $block)
-            {{-- BlockData è già gestito --}}
-            @include($block->view, array_merge($block->data, ['container0' => $container0, 'slug0' => $slug0]))
-        @endforeach
+        @include('cms::components.page-content', [
+            'blocks' => $blocks,
+            'data' => array_merge($data, ['container0' => $container0, 'slug0' => $slug0])
+        ])
     </div>
 @endif
