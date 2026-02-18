@@ -202,7 +202,8 @@ $eventData = $helper->getEventData();
 
 ## 🔗 Riferimenti
 
-- [Events Detail Volt Class Pattern](events-detail-volt-class-pattern.md) - Pattern Helper Class ispirato a Volt
+- [Filament Widgets NOT Livewire Critical Rule](filament-widgets-not-livewire-critical-rule.md) - ⚠️ REGOLA CRITICA
+- [Events Detail Helper Class Pattern](events-detail-volt-class-pattern.md) - Pattern Helper Class per organizzazione codice
 - [Container0 Slug0 Agnostic Pattern](container0-slug0-agnostic-pattern.md)
 - [Container0 Pattern Philosophy](container0-pattern-philosophy.md)
 - [CMS JSON Content System](../../Modules/Cms/docs/json-content-system-architecture.md)

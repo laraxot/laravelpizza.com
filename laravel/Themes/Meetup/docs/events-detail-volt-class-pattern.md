@@ -27,7 +27,8 @@ Il componente viene incluso tramite `@include` da `page-content.blade.php` e ha 
 
 ```php
 <?php
-declare(strict_types=1);
+// ⚠️ IMPORTANTE: declare(strict_types=1); va in file PHP separato, NON nel Blade!
+// Vedi: blade-files-no-strict-types.md
 
 use Modules\Meetup\Models\Event;
 use Illuminate\Support\Carbon;
