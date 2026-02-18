@@ -299,6 +299,7 @@ new class extends Component {
     {
         $this->container0 = request()->route('container0') ?? '';
         $this->slug0 = request()->route('slug0') ?? '';
+        // ❌ SBAGLIATO - Volt gestisce automaticamente l'iniezione dei parametri route grazie all'integrazione con Laravel Folio
         $this->resolveContent();  // ❌ VIOLA il principio agnostico
     }
     

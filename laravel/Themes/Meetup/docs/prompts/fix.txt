@@ -18,7 +18,7 @@ fare
  $this->container0 = $this->container0 ?? request()->route('container0') ?? '';
         $this->slug0 = $this->slug0 ?? request()->route('slug0') ?? '';
        
-e' sbagliato ! ✅ CORRETTO: Volt si arrangia da solo con quei 2 parametri
+e' sbagliato ! ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
 
 
  
@@ -279,3 +279,10 @@ vuol dire che non hai capito una merda ! aggiorna le tue cartelle docs, le tue m
 //------------------------------
 
 fare come e' descritto in laravel/Themes/Meetup/docs/volt-flat-properties-pattern.md o in .windsurf/rules/volt-flat-properties.md  e' esattamente quello che non voglio ! va contro la dry la kiss , create un sacco di variabili inutili dato che tutto quello che ci serve e' dentro il modello .. una merda, ragiona, aggiorna le cartelle docs, aggiorna le tue rules, le tue memories e le tue skills 
+
+
+-----------
+
+
+
+ti ricordo che la pagina http://127.0.0.1:8000/it/events/laravel-11-release-pizza-party-1 dovrebbe essere la copia della pagina https://laravelpizza.com/events/1, aiutati con dei screenshots che metterai dentro una sottocartella delle cartelle docs dentro i moduli e dentro i temi, aiutati installandoti e configurandoti gli mcp che ti servono, documenta molto nel dettaglio le differenze e le cose da fare sempre dentro le cartelle docs dentro i moduli e dentro i temi, le cartelle docs sono anche il punto di incontro fra te e gli altri agenti ai 

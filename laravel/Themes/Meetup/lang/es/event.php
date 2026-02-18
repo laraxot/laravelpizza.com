@@ -10,55 +10,51 @@ return [
         'icon' => 'heroicon-o-calendar',
         'sort' => 11,
     ],
+    'status' => [
+        'upcoming' => [
+            'label' => 'Próximo',
+        ],
+        'past' => [
+            'label' => 'Pasado',
+        ],
+    ],
+    'not_found' => [
+        'label' => 'Evento no encontrado',
+    ],
+    'not_found_description' => [
+        'label' => 'Lo sentimos, el evento que buscas no existe o ha sido eliminado.',
+    ],
     'back_to_events' => [
         'label' => 'Volver a eventos',
     ],
-    'date' => [
-        'label' => 'Fecha',
+    'home' => [
+        'label' => 'Inicio',
     ],
-    'time' => [
-        'label' => 'Hora',
+    'events' => [
+        'label' => 'Eventos',
     ],
-    'location' => [
-        'label' => 'Ubicación',
+    'topics' => [
+        'label' => 'Temas tratados',
     ],
-    'about_this_event' => [
-        'label' => 'Sobre este evento',
+    'view_map' => [
+        'label' => 'Ver en el mapa',
     ],
-    'event_location' => [
-        'label' => 'Ubicación del evento',
+    'spots_available' => [
+        'label' => 'Plazas disponibles',
     ],
-    'map_loading' => [
-        'label' => 'Cargando mapa...',
+    'of' => [
+        'label' => 'de',
     ],
-    'click_to_view' => [
-        'label' => 'Clic para ver en Google Maps',
+    'sign_in_to_rsvp' => [
+        'label' => 'Inicia sesión para confirmar',
     ],
-    'attendees' => [
-        'label' => 'Asistentes',
+    'rsvp_now' => [
+        'label' => 'Confirmar ahora',
     ],
-    'people_joined' => [
-        'label' => ':count personas se unieron',
+    'registration_closed' => [
+        'label' => 'Registro cerrado',
     ],
-    'join_event' => [
-        'label' => 'Unirse al evento',
-    ],
-    'available_spots' => [
-        'label' => 'Lugares disponibles',
-    ],
-    'book_your_spot' => [
-        'label' => 'Reserva tu lugar',
-    ],
-    'spots_filling_fast' => [
-        'label' => 'Los lugares se están agotando!',
-    ],
-    'share_event' => [
-        'label' => 'Compartir evento',
-    ],
-    'no_events_found' => [
-        'label' => 'No se encontraron eventos',
-    ],
-    'check_back_later' => [
-        'label' => 'Vuelve más tarde',
+    'free_entry' => [
+        'label' => 'Entrada gratuita',
     ],
 ];

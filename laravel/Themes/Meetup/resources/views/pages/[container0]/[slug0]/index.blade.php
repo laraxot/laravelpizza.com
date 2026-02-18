@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 use function Laravel\Folio\{middleware, name};
 use Livewire\Volt\Component;
@@ -8,8 +9,7 @@ name('container0.view');
 middleware(PageSlugMiddleware::class);
 
 new class extends Component {
-    // ✅ Volt automaticamente lega i parametri della route!
-    public string $container0;
+    public string $container0 = '';
     public string $slug0 = '';
     public string $pageSlug = '';
     public array $data = [];
@@ -27,12 +27,10 @@ new class extends Component {
 
 <x-layouts.app>
     @volt('container0.view')
-    <div>
         <x-page 
             side="content" 
             :slug="$pageSlug" 
             :data="$data"
         />
-    </div>
     @endvolt
 </x-layouts.app>

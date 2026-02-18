@@ -196,7 +196,7 @@ new class extends Component {
 ```php
 public function mount(): void
 {
-    $this->slug0 = request()->route('slug0'); // UNNECESSARY!
+    $this->slug0 = request()->route('slug0'); // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
 }
 ```
 

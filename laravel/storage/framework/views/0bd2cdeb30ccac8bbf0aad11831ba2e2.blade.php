@@ -7,11 +7,9 @@ use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 ?>
 
 
-    <div>
-        |---LINE:31---|<x-page 
+        <x-page 
             side="content" 
             :slug="$pageSlug" 
             :data="$data"
         />
-    </div>
-    |---LINE:37---|
+    

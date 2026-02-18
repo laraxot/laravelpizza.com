@@ -7,7 +7,6 @@ use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 ?>
 
 
-    <div>
         <?php if (isset($component)) { $__componentOriginale383d99482cddb063ee71e37bf1cd6b8 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginale383d99482cddb063ee71e37bf1cd6b8 = $attributes; } ?>
 <?php $component = Modules\Cms\View\Components\Page::resolve(['side' => 'content','slug' => $pageSlug,'data' => $data] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -28,5 +27,4 @@ use Modules\Cms\Http\Middleware\PageSlugMiddleware;
 <?php $component = $__componentOriginale383d99482cddb063ee71e37bf1cd6b8; ?>
 <?php unset($__componentOriginale383d99482cddb063ee71e37bf1cd6b8); ?>
 <?php endif; ?>
-    </div>
     <?php /**PATH /var/www/_bases/base_laravelpizza/laravel/storage/framework/views/0bd2cdeb30ccac8bbf0aad11831ba2e2.blade.php ENDPATH**/ ?>

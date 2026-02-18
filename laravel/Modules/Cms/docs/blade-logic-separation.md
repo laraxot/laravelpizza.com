@@ -130,7 +130,7 @@ $fullSlug = $this->container0 . '.' . $this->slug0; // Assumes slug0 is always p
 $this->pageSlug = $this->container0 . '.view'; // E.g., 'events.view' for the main events page
 ```
 
-### 4. Proper Use of `<x-page>` Component
+### 4. Proper Use of `<x-page>` Component and Data Flow to Plain Blade Blocks
 
 **Problem:** Using low-level content resolution components directly within Folio pages, bypassing the intended `<x-page>` architecture.
 ```blade
@@ -139,6 +139,12 @@ $this->pageSlug = $this->container0 . '.view'; // E.g., 'events.view' for the ma
 **Why it's an anti-pattern:** The `x-page` component is the standard for rendering content blocks based on a JSON configuration (referenced by a slug). It acts as the central orchestrator for data-driven page layouts. Direct use of a component like `<x-blocks.content-resolver />` (which encapsulates content resolution logic) violates the intended data flow and prevents `x-page` from correctly managing the overall page structure and data context.
 
 **Best Practice:** Always use the `<x-page>` component for rendering dynamic content based on a content slug. Pass necessary context via its `data` prop.
+
+When `x-page` renders a block component (e.g., `pub_theme::components.blocks.events.detail`), it does so via a plain Blade `@include`. This means:
+*   **The block component receives variables as plain PHP variables**, not as Volt component properties (`$this->...`).
+*   The `block->data` array passed from `x-page` (which is populated by `ResolvePageContentAction`) becomes available as individual variables in the included block.
+*   **Block components (e.g., `components/blocks/events/detail.blade.php`) MUST NOT be Volt components.** They are plain Blade files that process these simple PHP variables.
+
 ```blade
 <x-page 
     side="content" 
@@ -148,43 +154,4 @@ $this->pageSlug = $this->container0 . '.view'; // E.g., 'events.view' for the ma
     :slug0="$this->slug0"         // Pass explicit props if needed by sub-components
 />
 ```
-
-This ensures that the `x-page` component (which is designed for this purpose) handles the resolution and rendering of content based on the provided slug and data, maintaining architectural consistency.
-
-### 5. Data Flow in Nested Volt Components (via `x-page`)
-
-**Crucial Point:** When a Volt component (e.g., `<x-blocks.events.detail />`) is rendered by the `x-page` component, the data flow is not always automatic "model binding" in the same way Folio handles direct route parameters. The `x-page` component typically passes data via a generic `$data` array (or an `$item` prop if a model is resolved).
-
-**Problem:** Over-simplifying a child Volt component by removing all data fetching logic in `mount()` without ensuring the parent component (e.g., `x-page` or the Folio page itself) explicitly passes a fully resolved model instance as a prop named `$this->event` can lead to `PropertyNotFoundException`.
-
-**Best Practice:**
-*   **Child Volt components (like detail blocks) MUST have a robust `mount()` method** that can handle various scenarios:
-    *   Receiving a fully resolved model as a specific prop (e.g., `public ?Event $event = null;`).
-    *   Receiving a generic `$item` prop (e.g., `public ?object $item = null;`) that might need to be cast or re-resolved into the specific model type (`$this->event = $this->item;`).
-    *   Receiving route parameters like `slug0` or `id` (e.g., `public string $slug0 = '';`) from which the component must fetch its own model if not already provided. This is often necessary when the component is directly included or dynamically rendered and its context isn't a direct model binding.
-*   **The `mount()` method should prioritize specific props, then fall back to resolving from generic `item` or fetching from route parameters if necessary.**
-*   **Example (robust `mount()` in a child detail component):**
-    ```php
-    public function mount(): void
-    {
-        // Prioritize specific 'event' prop
-        if ($this->event === null && $this->item !== null) {
-            // Fallback to generic 'item' prop
-            $this->event = $this->item instanceof Event ? $this->item : null;
-        }
-
-        // If event is still null and slug0 is available, fetch it (if not fetched by parent)
-        if ($this->event === null && !empty($this->slug0)) {
-            $this->event = Event::where('slug', $this->slug0)->first();
-        }
-        
-        // After event is resolved, populate UI-specific state if needed
-        if ($this->event) {
-            $this->shareUrl = LaravelLocalization::localizeUrl('/events/' . $this->event->slug);
-            // ... other initializations based on $this->event
-        }
-    }
-    ```
-*   **Ensure parent components pass data correctly**: The Folio page or `x-page` component should strive to pass the most resolved data possible. If `ResolvePageContentAction` resolves an `Event` model, it should be passed as an `event` prop to the child component, not just as a generic `data` array.
-
-```
+This ensures that the `x-page` component (which is designed for this purpose) handles the resolution and rendering of content based on the provided slug and data, maintaining architectural consistency. Child block components then receive and process this data as standard Blade variables.

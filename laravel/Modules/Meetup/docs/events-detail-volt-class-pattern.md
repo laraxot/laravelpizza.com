@@ -1,55 +1,183 @@
-# Events Detail Component - Volt Class Pattern
+# Events Detail Component - Plain Blade Pattern
 
-## 🎯 Principio: Il modello Event è l'unica fonte di verità
+## Core Principle: CMS Block Components Are Always Plain Blade
 
-Il componente `events/detail.blade.php` utilizza il pattern Volt Class dove il **modello Event è l'unica fonte di verità**.
+CMS block components in `components/blocks/` are **plain Blade files** — not Volt, not Livewire.
+They use a PHP block at the top for variable setup and Alpine.js for client-side interactivity.
 
-## ✅ Pattern: Accesso Diretto al Modello
+The name of this file preserves historical continuity but documents the **correct** pattern,
+which is the opposite of what the filename implies: CMS blocks must NOT use Volt.
 
-### Volt Class
+---
+
+## Why Volt/Livewire Is Wrong for CMS Block Components
+
+The CMS block rendering system uses `@include` (or equivalent PHP `include`) to render blocks:
 
 ```php
-new class extends Component {
-    public ?Event $event = null;
-    public ?Event $item = null;
-    public string $container0 = '';
-    public string $slug0 = '';
+// Modules/Cms/resources/views/components/page-content.blade.php
+@include($block['view'], $block['data'] ?? [])
+```
 
-    public function mount(): void
-    {
-        if ($this->event === null && $this->item === null && $this->slug0 !== '') {
-            $this->event = Event::where('slug', $this->slug0)->first();
-        } elseif ($this->item !== null) {
-            $this->event = $this->item;
-        }
-    }
-}; 
+`@include` is a plain Blade include — it does NOT bootstrap a Livewire/Volt component scope.
+Using `@volt()` inside an `@include`'d file causes one of two outcomes:
+
+1. The `@volt` directive is silently ignored (no Livewire scope, broken `$this->` references)
+2. A fatal error if Livewire tries to mount a component outside its lifecycle
+
+**Conclusion**: `@volt` and `wire:` directives must never appear in `components/blocks/` files.
+
+---
+
+## When to Use @volt vs Plain Blade
+
+| Location | Pattern | Why |
+|---|---|---|
+| `pages/*.blade.php` (Folio route files) | `@volt('name')` / Volt class | Folio bootstraps Livewire scope |
+| `components/blocks/*.blade.php` (CMS blocks) | Plain Blade | Rendered via `@include`, no Livewire scope |
+| `components/sections/*.blade.php` (CMS sections) | Plain Blade | Same — rendered via `@include` |
+| `components/*.blade.php` (generic) | Plain Blade | Standard Laravel components |
+
+**Rule**: `@volt` appears ONLY in Folio page files under `pages/`. Never in `components/`.
+
+---
+
+## Correct Pattern: Plain Blade Block Component
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Modules\Meetup\Models\Event;
+
+// Resolve slug from injected variable or URL segment fallback
+$slug0 = $slug0 ?? request()->segment(3) ?? '';
+
+$event = $slug0 !== ''
+    ? Event::where('slug', $slug0)->first()
+    : null;
 
 $eventsUrl = LaravelLocalization::localizeUrl('/events');
+$isUpcoming = $event?->start_date?->isFuture() ?? true;
+$statusLabel = $isUpcoming ? 'Upcoming' : 'Past Event';
+$badgeClass  = $isUpcoming ? 'bg-green-600' : 'bg-slate-500';
 ?>
+
+<div x-data="{ showMap: false, showShareMenu: false }">
+
+    @if ($event)
+
+        {{-- Back link --}}
+        <a href="{{ $eventsUrl }}" class="text-sm text-red-400 hover:text-red-300">
+            &larr; Back to Events
+        </a>
+
+        {{-- Status badge --}}
+        <span class="inline-block px-2 py-1 text-xs font-semibold text-white rounded {{ $badgeClass }}">
+            {{ $statusLabel }}
+        </span>
+
+        {{-- Event title --}}
+        <h1 class="text-3xl font-bold text-white">
+            {{ $event->title ?? 'Event' }}
+        </h1>
+
+        {{-- Alpine.js interactivity --}}
+        <button @click="showMap = !showMap" class="text-sm text-red-400">
+            Toggle Map
+        </button>
+
+        <div x-show="showMap" x-transition>
+            {{-- map embed --}}
+        </div>
+
+    @else
+
+        <p class="text-gray-400">Event not found.</p>
+        <a href="{{ $eventsUrl }}" class="text-red-400 hover:text-red-300">
+            Back to Events
+        </a>
+
+    @endif
+
+</div>
 ```
 
-### Template Blade - Accesso Diretto
+---
 
-```blade
-{{-- Accesso diretto alle proprietà del modello --}}
-<h1>{{ $this->event?->title ?? 'Event Title' }}</h1>
-<p>{{ $this->event?->location ?? 'Location TBA' }}</p>
+## What Is Forbidden in Block Components
 
-{{-- Accesso con metodi del modello --}}
-<span class="{{ ($this->event?->start_date?->isFuture() ?? true) ? 'bg-green-600' : 'bg-slate-500' }}">
-    {{ ($this->event?->start_date?->isFuture() ?? true) ? 'Upcoming' : 'Past Event' }}
-</span>
+```php
+// WRONG — Volt class inside a CMS block
+@volt('events-detail')
+new class extends Component {
+    public ?Event $event = null;
 
-{{-- Variabili helper --}}
-<a href="{{ $eventsUrl }}">Back to Events</a>
+    public function mount(): void { ... }
+};
+?>
+<div>{{ $this->event?->title }}</div>
+@endvolt
+
+// WRONG — wire: directives
+<button wire:click="loadEvent">Load</button>
+
+// WRONG — $this-> references outside Volt scope
+{{ $this->event?->title }}
+
+// WRONG — Livewire component tag
+@livewire('events.detail', ['slug' => $slug0])
 ```
 
-## ⚠️ REGOLA: Unica Fonte di Verità = Event Model
+---
 
-Non creare computed come `eventData` - usa direttamente le proprietà del modello con `$this->event?->property`!
+## Data Flow: How Slug Reaches the Block
 
-## 🔗 Riferimenti
+```
+URL:         /it/events/laravel-beginners-pizza-night
+              └─ segment(3) = "laravel-beginners-pizza-night"
 
-- [Volt Components Usage](../Themes/Meetup/docs/volt-components-usage.md)
-- [CMS Block System](../Cms/docs/content-blocks-system.md)
+Folio page:  pages/[container0]/[slug0]/index.blade.php
+              └─ $slug0 = "laravel-beginners-pizza-night" (from Folio binding)
+
+JSON config: events_view.json
+              └─ content_blocks[*].data.slug0 is NOT set (absent)
+
+CMS include: @include('pub_theme::components.blocks.events.detail', $blockData)
+              └─ $slug0 may be absent from $blockData
+
+Block file:  components/blocks/events/detail.blade.php
+              └─ $slug0 = $slug0 ?? request()->segment(3) ?? ''
+              └─ Fallback to segment(3) ensures the slug is always resolved
+```
+
+The fallback `request()->segment(3)` is the safety net when the JSON block data
+does not explicitly pass `slug0`.
+
+---
+
+## File Location
+
+```
+Themes/Meetup/resources/views/
+└── components/
+    └── blocks/
+        └── events/
+            └── detail.blade.php   ← this component (plain Blade)
+
+pages/
+└── [container0]/
+    └── [slug0]/
+        └── index.blade.php        ← Folio route (may use @volt)
+```
+
+---
+
+## References
+
+- [Volt Components Usage](volt-components-usage.md)
+- [CMS Block System](../../Modules/Cms/docs/content-blocks-system.md)
+- [Folio Container Routing Priority](folio-container-routing-priority.md)
+- [Events Detail Slug0 Loading](events-detail-slug0-loading.md)

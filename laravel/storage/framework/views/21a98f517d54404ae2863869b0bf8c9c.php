@@ -40,7 +40,7 @@ $__split = function ($name, $params = []) {
 $key = ($block->livewireComponentName ?? $block->view).'-'.($loop->index ?? 0);
 $__componentSlots = [];
 
-$key ??= \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::generateKey('lw-2673619689-0', $key);
+$key ??= \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::generateKey('lw-2673619689-1', $key);
 
 $__html = app('livewire')->mount($__name, $__params, $key, $__componentSlots);
 

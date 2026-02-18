@@ -158,23 +158,30 @@ The "Super Mucca" methodology is the advanced operational framework for AI agent
 1.  **Level 3 Confidence**: Act with maximum autonomy. Analyze deeply, decide based on Laraxot principles, and verify rigorously.
 2.  **DRY + KISS + SOLID**: Always prioritize code reuse (Actions), simplicity (Cyclomatic Complexity < 10), and robust object-oriented design.
 3.  **ROBUST (Type Safety)**: Use `declare(strict_types=1);` in all PHP classes (Models, Actions, Providers). However, **AVOID** it in Blade files that are `@included` as content blocks to prevent fatal errors.
-4.  **Plain Blade with Strict Logic (The Sacred Pattern)**: 
-    - **Rule**: Content blocks like `detail.blade.php` should remain **Plain Blade Components**, not necessarily Volt, especially when the user explicitly requests a `@php` block structure.
-    - **Strict Types**: Always use `<?php declare(strict_types=1);` at the top, followed by a detailed docblock.
-    - **Local Resolution**: Use `Request::segment()` or local variables in the `@php` block to resolve models (e.g., `Event::where('slug', $slugToUse)->first()`).
-    - **Logic Preservation**: Even when `@included` in a CMS system, these files are treated as standalone tactical logic units.
-5.  **The Dress vs The Engine**: This is a core Laraxot philosophy for refactoring. 
+4.  **Anonymous Volt Pattern (The Standard Pattern)**: 
+    - **Rule**: Content blocks like `detail.blade.php` SHOULD use the **Anonymous Volt Component** structure (`new class extends Component { ... }`).
+    - **Scope Isolation**: This pattern is crucial because it provides clean scope isolation for properties and methods, preventing "logic bleed" when multiple blocks are rendered on the same page by the CMS.
+    - **Model Source of Truth**: Even within the Volt class, **NEVER** map model attributes to redundant public properties (e.g., NO `public string $title = ''`). Use the model object directly: `public ?Event $event = null;`.
+    - **Strict Types**: Always use `declare(strict_types=1);` INSIDE the `<?php ... ?>` block of the Volt class to ensure type safety without affecting the parent template's output.
+    - **Local Resolution**: **NEVER** use `Request::segment()` or manual route parameter extraction if Volt can handle it automatically. Resolve the model in the `mount()` method using injected parameters (e.g., `mount(?string $slug0 = null, ?Event $item = null)`).
+8.  **Multi-Language Mandate**: 
+    - **Rule**: Every Laraxot module and theme MUST support at least **Italian** and the **Top 5 World Languages** (English, Mandarin Chinese, Hindi, Spanish, French).
+    - **Completeness**: All translation files MUST be fully populated for these locales. No empty or missing nodes are allowed for critical UI components.
+    - **Namespacing**: Theme translations MUST follow the `pub_theme::{file}.{key}.label` pattern.
+9.  **The Dress vs The Engine**: This is a core Laraxot philosophy for refactoring. 
     - **The Dress**: The HTML structure, CSS classes, Tailwind utilities, and SVG icons.
-    - **The Engine**: The PHP logic, Model resolution, public properties, and Actions.
-    - **Rule**: When refactoring a component from Blade to Volt, or modernizing logic, **NEVER** change "The Dress". The visual output must remain identical.
+    - **The Engine**: The PHP logic, Model resolution, and Actions within the Volt class.
+    - **Rule**: When modernizing "The Engine", **NEVER** change "The Dress". The visual output must remain identical.
+    - **Logic Proximity**: Keep logic as close to the data as possible. If it's in the model, use it from the model.
 6.  **Agent Teams**: Specialized roles for AI collaboration.
     - **UI Architect**: Owns "The Dress" and visual parity.
     - **Logic Specialist**: Owns "The Engine" and robustness.
     - **Quality Guardian**: Owns PHPStan Level 10 and testing.
-    - **Historian**: Owns documentation and roadmap.
-7.  **CMS Block Rendering**: The CMS system (`x-page`) automatically detect Volt/Livewire blocks. 
+    - **Knowledge Historian**: Owns `docs/`, memories, and rules.
+7.  **CMS Block Rendering**: The CMS system (`x-page`) automatically detects Volt/Livewire blocks. 
     - Blocks containing a Volt class are rendered via `@livewire`.
-    - This provides scope isolation for properties (avoiding scope-bleed logic errors).
+    - Plain Blade blocks are `@included`.
+    - **Decision Matrix**: Only use Volt if true Livewire reactivity (e.g., dynamic polling, private state) is required. For display-logic-only components, use Plain Blade with the Sacred Pattern.
 5.  **Filament Resources & Pages**:
     - NEVER extend `Filament` classes directly. Always extend `XotBase` classes (e.g., `XotBaseResource`, `XotBasePage`, `XotBaseWidget`, `XotBaseCreateRecord`).
     - `XotBaseResource` extensions MUST NOT have `getTableColumns()`, `getPages()`, `getRelations()`, `getTableActions()`, or `getTableBulkActions()` if they only return standard values.
@@ -198,6 +205,6 @@ The "Super Mucca" methodology is the advanced operational framework for AI agent
 - **Traditional Controllers**: Use Filament for the back office and Folio + Volt for the front office.
 - **Service Classes**: Business logic MUST be implemented as Spatie Queueable Actions.
 - **Livewire Usage**: DO NOT use Livewire directly in the back office; use **Filament Widgets** instead.
-- **Volt Patterns (Front Office)**: Follow the **Model-First** pattern. NEVER explode model attributes into separate public properties. Keep the model instance as a single public property (e.g., `public ?Event $event`) and access attributes in Blade via `$this->event->attribute`.
+- **Volt Patterns (Front Office)**: Use the **Anonymous Volt Component** pattern. Carry the Model instance as a single source of truth. NO redundant property mapping.
 
 **Embody the Super Mucca: Analyze, Decide, Implement, Verify, Document.**

@@ -19,6 +19,7 @@ class EventBookingController
      */
     public function book(Request $request, string $slug): JsonResponse
     {
+        /** @var array{name: string, email: string, spots: int} $validated */
         $validated = $request->validate([
             'name' => 'required|string|min:2|max:100',
             'email' => 'required|email',
@@ -34,8 +35,8 @@ class EventBookingController
             ], 404);
         }
 
-        $currentAttendees = $event->attendees_count ?? 0;
-        $maxAttendees = $event->max_attendees ?? 100;
+        $currentAttendees = (int) ($event->attendees_count ?? 0);
+        $maxAttendees = (int) ($event->max_attendees ?? 100);
         $availableSpots = $maxAttendees - $currentAttendees;
 
         if ($validated['spots'] > $availableSpots) {

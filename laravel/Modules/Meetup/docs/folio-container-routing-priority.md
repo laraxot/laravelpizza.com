@@ -205,7 +205,8 @@ new class extends Component {
 <x-layouts.app>
     @volt('container0.view')
     <div>
-        <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
+        {{-- IMPORTANTE: dentro @volt usare $pageSlug e $data (plain vars), NON $this-> --}}
+        <x-page side="content" :slug="$pageSlug" :data="$data" />
     </div>
     @endvolt
 </x-layouts.app>
@@ -279,7 +280,7 @@ Il nome della route usa `name('container0.view')` - "view" indica che è una pag
 
 ```php
 // pages/[container0]/[slug0]/index.blade.php
-// AGONISTICO - Nome semantico per il tipo di pagina
+// AGNOSTICO - Nome semantico per il tipo di pagina
 name('container0.view');
 middleware(PageSlugMiddleware::class);
 
@@ -293,7 +294,7 @@ new class extends Component {
     {
         // Lo slug per il JSON del dettaglio è 'container0.view' (es. events.view)
         $this->pageSlug = $this->container0 . '.view';
-        
+
         // Passa container0 e slug0 ai componenti inclusi
         $this->data = [
             'container0' => $this->container0,
@@ -301,11 +302,13 @@ new class extends Component {
         ];
     }
 };
+?>
 
 <x-layouts.app>
     @volt('container0.view')
     <div>
-        <x-page side="content" :slug="$this->pageSlug" :data="$this->data" />
+        {{-- IMPORTANTE: dentro @volt usare $pageSlug e $data (plain vars), NON $this-> --}}
+        <x-page side="content" :slug="$pageSlug" :data="$data" />
     </div>
     @endvolt
 </x-layouts.app>
@@ -362,10 +365,6 @@ Il flusso corretto è:
 ```
 
 Il blocco include `pub_theme::components.blocks.events.detail` che gestisce il rendering del dettaglio.
-@else
-    <x-page side="content" :slug="$container0" />
-@endif
-```
 
 ### Route Generate
 

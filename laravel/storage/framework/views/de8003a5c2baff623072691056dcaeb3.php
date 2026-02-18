@@ -54,7 +54,7 @@ unset($__defined_vars, $__key, $__value); ?>
     <div class="page-<?php echo e($side); ?>-content" data-slug="<?php echo e($slug); ?>" data-side="<?php echo e($side); ?>">
         <?php echo $__env->make('cms::components.page-content', [
             'blocks' => $blocks,
-            'data' => array_merge($data, ['container0' => $container0, 'slug0' => $slug0])
+            'data' => array_merge(['container0' => $container0, 'slug0' => $slug0], $data)
         ], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
     </div>
 <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>

@@ -10,55 +10,51 @@ return [
         'icon' => 'heroicon-o-calendar',
         'sort' => 11,
     ],
+    'status' => [
+        'upcoming' => [
+            'label' => 'À venir',
+        ],
+        'past' => [
+            'label' => 'Passé',
+        ],
+    ],
+    'not_found' => [
+        'label' => 'Événement non trouvé',
+    ],
+    'not_found_description' => [
+        'label' => 'Désolé, l\'événement que vous recherchez n\'existe pas ou a été supprimé.',
+    ],
     'back_to_events' => [
         'label' => 'Retour aux événements',
     ],
-    'date' => [
-        'label' => 'Date',
+    'home' => [
+        'label' => 'Accueil',
     ],
-    'time' => [
-        'label' => 'Heure',
+    'events' => [
+        'label' => 'Événements',
     ],
-    'location' => [
-        'label' => 'Lieu',
+    'topics' => [
+        'label' => 'Sujets abordés',
     ],
-    'about_this_event' => [
-        'label' => 'À propos de cet événement',
+    'view_map' => [
+        'label' => 'Voir sur la carte',
     ],
-    'event_location' => [
-        'label' => 'Lieu de l\'événement',
+    'spots_available' => [
+        'label' => 'Places encore disponibles',
     ],
-    'map_loading' => [
-        'label' => 'Chargement de la carte...',
+    'of' => [
+        'label' => 'sur',
     ],
-    'click_to_view' => [
-        'label' => 'Cliquez pour voir sur Google Maps',
+    'sign_in_to_rsvp' => [
+        'label' => 'Connectez-vous pour participer',
     ],
-    'attendees' => [
-        'label' => 'Participants',
+    'rsvp_now' => [
+        'label' => 'Participer maintenant',
     ],
-    'people_joined' => [
-        'label' => ':count personnes ont rejoint',
+    'registration_closed' => [
+        'label' => 'Inscriptions closes',
     ],
-    'join_event' => [
-        'label' => 'Participer',
-    ],
-    'available_spots' => [
-        'label' => 'Places disponibles',
-    ],
-    'book_your_spot' => [
-        'label' => 'Réserver votre place',
-    ],
-    'spots_filling_fast' => [
-        'label' => 'Les places se remplissent vite!',
-    ],
-    'share_event' => [
-        'label' => 'Partager l\'événement',
-    ],
-    'no_events_found' => [
-        'label' => 'Aucun événement trouvé',
-    ],
-    'check_back_later' => [
-        'label' => 'Revenez plus tard',
+    'free_entry' => [
+        'label' => 'Entrée gratuite',
     ],
 ];

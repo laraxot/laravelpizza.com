@@ -103,21 +103,28 @@ $this->pageSlug = $this->container0 . '.view'; // E.g., 'events.view'
 *   Understand and follow the project's established content slug conventions. For general container overviews (e.g., the main "Events" page), the format is typically `[container_name].view`.
 *   Slugs like `[container_name].[item_slug]` are typically reserved for specific item detail pages.
 
-### 4. Rely on `<x-page>` for Content Rendering
+### 4. Rely on `<x-page>` for Content Rendering and Data Flow to Plain Blade Blocks
 
 **Crucial Point:** The `<x-page>` component is the central mechanism for rendering data-driven content in Laraxot.
+
+When `x-page` renders a block component (e.g., `pub_theme::components.blocks.events.detail`), it does so via a plain Blade `@include`. This has significant implications for how data is received by these block components:
+*   **Block components receive variables as plain PHP variables**, not as Volt component properties (`$this->...`).
+*   The `block->data` array passed from `x-page` (which is populated by `ResolvePageContentAction`) becomes available as individual PHP variables in the included block.
+*   **Block components (e.g., `components/blocks/events/detail.blade.php`) MUST NOT be Volt components.** They are plain Blade files that process these simple PHP variables.
+
 ```blade
 {{-- In your theme's Folio page, after setting up $this->pageSlug and $this->data in mount() --}}
 <x-page 
     side="content" 
     :slug="$this->pageSlug" 
     :data="$this->data"
-    :container0="$this->container0" // Pass explicit context if sub-components need it
+    :container0="$this->container0" // Pass explicit context if needed by sub-components
     :slug0="$this->slug0"         // Pass explicit context if sub-components need it
 />
 ```
 **Guidance:**
 *   Always use `<x-page>` to display content resolved from JSON configurations.
 *   Pass the computed `slug` (e.g., `$this->pageSlug`) and any necessary `$data` context to `<x-page>`. The `data` array will be merged with the data from the content block's JSON.
+*   Child block components (located in `components/blocks/`) should expect to receive these as plain PHP variables and use `@php` blocks for any necessary logic, including fallback data fetching.
 *   Avoid using custom, lower-level content resolution components directly within your Folio pages if `x-page` is designed to handle that. This ensures a consistent and predictable content rendering pipeline.
 ```

@@ -1,77 +1,52 @@
-# Events Detail Component - Plain Blade Pattern
+# Events Detail Component - Volt Class Pattern
 
-## 🎯 Principio: Componente Blade Puro
+## Core Principle: Unica fonte di verità = Event
 
-Il componente `events/detail.blade.php` è un **Plain Blade Component** (NON Volt, NON Livewire). 
-Carica l'evento direttamente dallo slug nell'URL.
+Il componente `events/detail.blade.php` è un **Volt component**. La logica deve seguire questi principi:
 
-## ✅ Pattern Corretto (Blade Puro)
+1. **Unica fonte di verità**: Il modello `Event` è l'unica fonte di verità. Non creare variabili ridondanti per proprietà che sono già presenti nel modello.
+2. **Proprietà Essential**: Le proprietà pubbliche devono essere limitate a quelle necessarie per lo stato o iniettate dall'esterno (`$event`, `$item`, `$container0`, `$slug0`).
+3. **Mount Logic**: In `mount()`, risolvi l'istanza dell'evento partendo da `$event ?? $item ?? $slug0`.
+4. **No Flat Properties**: Evita di mappare ogni campo del modello su una proprietà pubblica del componente (es. `$this->title = $event->title`). Usa direttamente `$this->event->title` nella vista.
+5. **Metodi Helper**: Usa metodi pubblici per logica di formattazione o calcolo (es. `getDate()`, `isUpcoming()`).
+
+---
+
+## Esempio Corretto
 
 ```php
-<?php
+new class extends Component {
+    public ?Event $event = null;
+    public string $container0 = '';
+    public string $slug0 = '';
 
-declare(strict_types=1);
-
-/**
- * Event Detail - Plain Blade Component
- * Carica l'evento dallo slug nell'URL
- */
-
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Request;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-use Modules\Meetup\Models\Event;
-
-// Carica l'evento dallo slug
-$slug0 = $slug0 ?? '';
-$slugToUse = $slug0;
-if (empty($slugToUse)) {
-    $slugToUse = Request::segment(3);
-}
-$event = null;
-if (!empty($slugToUse)) {
-    $event = Event::where('slug', $slugToUse)->first();
-}
-
-$eventsUrl = LaravelLocalization::localizeUrl('/events');
-$isUpcoming = $event?->start_date?->isFuture() ?? true;
-$statusLabel = $isUpcoming ? 'Upcoming' : 'Past Event';
-$badgeClass = $isUpcoming ? 'bg-green-600' : 'bg-slate-500';
-$availableSpots = ($event?->max_attendees ?? 100) - ($event?->attendees_count ?? 0);
-$currentAttendees = $event?->attendees_count ?? 0;
-?>
-
-<div>
-    ... rendering con $event, $eventsUrl, etc.
-</div>
+    public function mount(): void
+    {
+        if ($this->event === null && !empty($this->slug0)) {
+            $this->event = Event::where('slug', $this->slug0)->first();
+        }
+    }
+};
 ```
 
-## 📜 Flusso Completo
+## Vista (Blade)
 
-1. **URL**: `/it/events/laravel-beginners-pizza-night`
-2. **Folio Route**: `[container0]/[slug0]/index.blade.php`
-3. **JSON Lookup**: `events_view.json` (slug: `events.view`)
-4. **Block**: `{type: "events", view: "pub_theme::components.blocks.events.detail"}`
-5. **Component**: `events/detail.blade.php` - carica Event da slug
-6. **Render**: Visualizza i dati dell'evento
+Nella vista, accedi ai dati tramite l'oggetto modello:
 
-## 🔴 MAI USARE
+```blade
+<h1>{{ $this->event->title }}</h1>
+<p>{{ $this->getDate() }}</p>
+```
 
-❌ **NON usare Volt/Livewire** nei block components
-❌ **NON usare `@volt()`** nel block component
-❌ **NON usare `wire:` directives** nei block components
+---
 
-## ✅ Quando Usare Cosa
+## ⚠️ Regole Inviolabili
 
-| Tipo | Uso | Esempio |
-|------|-----|---------|
-| **Blade Puro** | Rendering statico | Block components, liste, dettagli |
-| **Filament Widget** | Interattività server | Form, azioni, modali |
-| **Volt** | Solo nella routing page | `[container0]/[slug0]/index.blade.php` |
+- **NO declare(strict_types=1)**: Mai nei file `.blade.php`.
+- **Volt in Pages e Blocks**: Le pagine Folio e i blocchi del CMS devono usare Volt quando è necessaria logica o reattività.
+- **KISS & DRY**: Non duplicare dati che risiedono già nel database/modello.
 
 ## Riferimenti
 
 - [Volt Components Usage](volt-components-usage.md)
-- [Filament Widgets NOT Livewire Critical Rule](filament-widgets-not-livewire-critical-rule.md)
-- [Events Detail Slug0 Loading](events-detail-slug0-loading.md)
-- [Container0 Slug0 Agnostic Pattern](container0-slug0-agnostic-pattern.md)
+- [Folio Routing System](folio_routing_system.md)

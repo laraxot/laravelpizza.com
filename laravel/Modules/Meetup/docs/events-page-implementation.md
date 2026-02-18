@@ -1,4 +1,4 @@
-# Events Page Implementation - February 2026
+# Events Page Implementation
 
 ## Status: ✅ WORKING
 
@@ -24,12 +24,13 @@ Added query configuration with `wrap_in: "events"`:
     "subtitle": "Join us for pizza and Laravel discussions",
     "query": {
       "model": "Modules\\Meetup\\Models\\Event",
-      "scope": "upcoming",
       "orderBy": "start_date",
       "direction": "asc",
       "limit": 50,
       "wrap_in": "events"
     }
+    // IMPORTANTE: NON usare "scope": "upcoming" — impedisce il filtro "Past Events" Alpine.js.
+    // Caricare TUTTI gli eventi e filtrare client-side.
   }
 }
 ```

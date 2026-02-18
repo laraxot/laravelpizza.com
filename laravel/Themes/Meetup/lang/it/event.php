@@ -10,55 +10,51 @@ return [
         'icon' => 'heroicon-o-calendar',
         'sort' => 11,
     ],
+    'status' => [
+        'upcoming' => [
+            'label' => 'In arrivo',
+        ],
+        'past' => [
+            'label' => 'Evento concluso',
+        ],
+    ],
+    'not_found' => [
+        'label' => 'Evento non trovato',
+    ],
+    'not_found_description' => [
+        'label' => 'Siamo spiacenti, l\'evento che stai cercando non esiste o è stato rimosso.',
+    ],
     'back_to_events' => [
         'label' => 'Torna agli eventi',
     ],
-    'date' => [
-        'label' => 'Data',
+    'home' => [
+        'label' => 'Home',
     ],
-    'time' => [
-        'label' => 'Orario',
+    'events' => [
+        'label' => 'Eventi',
     ],
-    'location' => [
-        'label' => 'Luogo',
+    'topics' => [
+        'label' => 'Argomenti trattati',
     ],
-    'about_this_event' => [
-        'label' => 'Informazioni sull\'evento',
+    'view_map' => [
+        'label' => 'Vedi sulla mappa',
     ],
-    'event_location' => [
-        'label' => 'Luogo dell\'evento',
+    'spots_available' => [
+        'label' => 'Posti ancora disponibili',
     ],
-    'map_loading' => [
-        'label' => 'Caricamento mappa...',
+    'of' => [
+        'label' => 'di',
     ],
-    'click_to_view' => [
-        'label' => 'Clicca per vedere su Google Maps',
+    'sign_in_to_rsvp' => [
+        'label' => 'Accedi per partecipare',
     ],
-    'attendees' => [
-        'label' => 'Partecipanti',
+    'rsvp_now' => [
+        'label' => 'Partecipa ora',
     ],
-    'people_joined' => [
-        'label' => ':count persone parteciperanno',
+    'registration_closed' => [
+        'label' => 'Iscrizioni chiuse',
     ],
-    'join_event' => [
-        'label' => 'Partecipa all\'evento',
-    ],
-    'available_spots' => [
-        'label' => 'Posti disponibili',
-    ],
-    'book_your_spot' => [
-        'label' => 'Prenota il tuo posto',
-    ],
-    'spots_filling_fast' => [
-        'label' => 'I posti si stanno esaurendo!',
-    ],
-    'share_event' => [
-        'label' => 'Condividi l\'evento',
-    ],
-    'no_events_found' => [
-        'label' => 'Nessun evento trovato',
-    ],
-    'check_back_later' => [
-        'label' => 'Torna a trovarci',
+    'free_entry' => [
+        'label' => 'Ingresso gratuito',
     ],
 ];

@@ -1,118 +1,113 @@
-# Implementazione BlockData
+# BlockData: Auto-Detection and Rendering
 
-## Panoramica
+## Overview
 
-`BlockData` è una classe fondamentale del sistema di gestione dei blocchi di contenuto. Fornisce type safety e gestione automatica delle viste per i blocchi di contenuto.
+`BlockData` (`Modules/Cms/app/Datas/BlockData.php`) is the central class for CMS block rendering. It resolves view paths, validates existence, and — critically — **auto-detects Volt/Livewire components**.
 
-## Garanzie Principali
+## Volt Auto-Detection (CRITICAL)
 
-1. **Type Safety**
-   - `$block->data` è SEMPRE un array valido
-   - `$block->view` è SEMPRE una vista esistente
-   - `$block->type` è SEMPRE una stringa valida
+`BlockData::detectLivewire()` reads the first 1024 bytes of the view file. If it contains any of:
+- `new class extends Component`
+- `Livewire\Volt\Component`
+- `volt(`
+- `state(`
 
-2. **Validazione Automatica**
-   - Verifica l'esistenza delle viste
-   - Fornisce fallback automatico a `ui::empty`
-   - Gestisce gli errori in modo elegante
+...then `$block->livewire = true` and `$block->livewireComponentName` is set.
 
-## Best Practices
-
-### ✅ Cosa Fare
+**This means: block views that use `new class extends Component` are automatically promoted to Livewire components.** `page-content.blade.php` then uses `@livewire()` instead of `@include()` to render them.
 
 ```php
-// Creazione di un singolo blocco
-try {
-    $block = new BlockData('hero', [
-        'title' => 'Titolo',
-        'view' => 'cms::blocks.hero'
-    ]);
-} catch (\Exception $e) {
-    Log::error($e->getMessage());
-}
-
-// Creazione multipla da array
-$blocks = BlockData::fromArray([
-    [
-        'type' => 'hero',
-        'data' => [
-            'title' => 'Titolo',
-            'view' => 'cms::blocks.hero'
-        ]
-    ]
-]);
-
-// In Blade
-@foreach($blocks as $block)
-    @include($block->view, $block->data)
-@endforeach
+// BlockData::detectLivewire() — reads first 1024 bytes
+$header = fread($handle, 1024);
+return str_contains($header, 'new class extends Component') ||
+       str_contains($header, 'Livewire\Volt\Component') || ...;
 ```
 
-### ❌ Cosa NON Fare
+### Component Name Normalization
+
+`normalizeComponentName()` strips known prefixes to produce the short Livewire name:
+
+```
+pub_theme::components.blocks.events.detail → events.detail
+pub_theme::components.blocks.hero.main     → hero.main
+cms::components.blocks.foo.bar             → foo.bar
+```
+
+## Rendering Chain
+
+```
+JSON block { view: "pub_theme::components.blocks.events.detail" }
+  ↓
+BlockData::__construct()
+  ↓
+detectLivewire() → reads first 1024 bytes of file
+  ↓ (if Volt detected)
+$block->livewire = true
+$block->livewireComponentName = "events.detail"
+  ↓
+page-content.blade.php:
+@livewire('events.detail', array_merge($block->data, $data), key(...))
+  ↓
+Volt component mount() receives: ['slug0' => '...', 'container0' => '...', ...]
+```
+
+## When to Use Volt vs Plain Blade
+
+| Use Case | Pattern |
+|----------|---------|
+| Block needs state, events, or model loading | `new class extends Component` → Volt |
+| Block is purely display/read-only | Plain Blade (no PHP class) |
+
+**Rule**: If a block needs to load a database model (e.g., Event by slug), it MUST be a Volt component so it gets `$slug0` passed via Livewire's prop injection.
+
+## Passing Route Parameters to Volt Blocks
+
+Route parameters (`container0`, `slug0`, etc.) are passed via the `$data` array:
+
+```
+[container0]/[slug0]/index.blade.php
+  → mount() builds $data = ['container0' => ..., 'slug0' => ...]
+  → <x-page :data="$data">
+  → page.blade.php merges $data into block data
+  → page-content.blade.php: @livewire('events.detail', array_merge($block->data, $data))
+  → events.detail Volt component: mount(?string $slug0 = null) receives slug0
+```
+
+**Merge order in `page.blade.php` is critical:**
 
 ```php
-// ❌ Controlli ridondanti
-if(isset($block->data) && is_array($block->data)) { ... }
+// CORRECT — $data wins over defaults:
+array_merge(['container0' => $container0, 'slug0' => $slug0], $data)
 
-// ❵ Type casting inutile
-$data = (array) $block->data;
-
-// ❵ Validazione ridondante
-if(view()->exists($block->view)) { ... }
-
-// ❵ Controllo null non necessario
-$data = $block->data ?? [];
+// WRONG — empty default strings override $data values:
+array_merge($data, ['container0' => $container0, 'slug0' => $slug0])
 ```
 
-## Integrazione con i Componenti
+## Scalable $data Pattern
 
-### Page Component
-
-```blade
-{{-- CORRETTO: Fiducia totale --}}
-@include($block->view, $block->data)
-
-{{-- ERRATO: Controlli ridondanti --}}
-@if($block->view && view()->exists($block->view))
-    @include($block->view, (array)($block->data ?? []))
-@endif
-```
-
-### Nei Controller
+The `$data` bag is designed to scale with nesting depth:
 
 ```php
-public function show($slug)
-{
-    $pageData = $this->getPageData($slug);
-    $blocks = BlockData::fromArray($pageData['blocks'] ?? []);
-    return view('page.show', compact('blocks'));
-}
+// Current depth:
+$data = ['container0' => 'events', 'slug0' => 'laravel-pizza'];
+
+// Future depth (container1, container2, ...):
+$data = ['container0' => 'events', 'slug0' => '2025', 'container1' => 'talk', 'slug1' => 'livewire-intro'];
 ```
 
-## Gestione Errori
+**Never pass `container0`/`slug0` as explicit props to `<x-page>` — always use `$data`.**
 
-1. **Livello Costruttore**
-   - Type hints PHP per `array $data`
-   - Validazione vista con eccezione
+## Guarantees
 
-2. **Livello fromArray**
-   - Gestione graceful degli errori
-   - Fallback a `ui::empty`
-   - Filtraggio automatico di blocchi non validi
+1. `$block->data` is always a valid array
+2. `$block->view` is always an existing view (or throws Exception)
+3. `$block->livewire` is `true` only for Volt components
+4. `$block->livewireComponentName` is the short name for `@livewire()`
 
-3. **Livello Rendering**
-   - Nessun controllo aggiuntivo necessario
-   - Codice Blade pulito e leggibile
+## Related Files
 
-## Vantaggi
-
-- **Performance**: Nessun controllo ridondante
-- **Manutenibilità**: Logica centralizzata
-- **Affidabilità**: Type safety garantita
-- **Flessibilità**: Facile da estendere
-
-## Collegamenti Correlati
-
-- [Documentazione BlockData](../data/blockdata.md)
-- [Guida ai Componenti](../components_guidelines.md)
-- [Best Practice Frontend](../frontend-best-practices.md)
+- `Modules/Cms/app/Datas/BlockData.php` — source
+- `Modules/Cms/resources/views/components/page-content.blade.php` — renders blocks
+- `Modules/Cms/resources/views/components/page.blade.php` — merges $data
+- `Themes/Meetup/resources/views/pages/[container0]/[slug0]/index.blade.php` — builds $data
+- `Modules/Meetup/docs/folio-container-routing-priority.md` — routing architecture

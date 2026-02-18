@@ -10,8 +10,52 @@ return [
         'icon' => 'heroicon-o-calendar',
         'sort' => 11,
     ],
+    'status' => [
+        'upcoming' => [
+            'label' => 'Bevorstehend',
+        ],
+        'past' => [
+            'label' => 'Vergangen',
+        ],
+    ],
+    'not_found' => [
+        'label' => 'Veranstaltung nicht gefunden',
+    ],
+    'not_found_description' => [
+        'label' => 'Leider existiert die gesuchte Veranstaltung nicht oder wurde entfernt.',
+    ],
     'back_to_events' => [
         'label' => 'Zurück zu Veranstaltungen',
+    ],
+    'home' => [
+        'label' => 'Startseite',
+    ],
+    'events' => [
+        'label' => 'Veranstaltungen',
+    ],
+    'topics' => [
+        'label' => 'Behandelte Themen',
+    ],
+    'view_map' => [
+        'label' => 'Auf der Karte anzeigen',
+    ],
+    'spots_available' => [
+        'label' => 'Noch freie Plätze',
+    ],
+    'of' => [
+        'label' => 'von',
+    ],
+    'sign_in_to_rsvp' => [
+        'label' => 'Anmelden um teilzunehmen',
+    ],
+    'rsvp_now' => [
+        'label' => 'Jetzt anmelden',
+    ],
+    'registration_closed' => [
+        'label' => 'Anmeldung geschlossen',
+    ],
+    'free_entry' => [
+        'label' => 'Kostenloser Eintritt',
     ],
     'date' => [
         'label' => 'Datum',

@@ -26,7 +26,7 @@ $__split = function ($name, $params = []) {
 $key = null;
 $__componentSlots = [];
 
-$key ??= \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::generateKey('lw-3976640286-0', $key);
+$key ??= \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::generateKey('lw-3976640286-3', $key);
 
 $__html = app('livewire')->mount($__name, $__params, $key, $__componentSlots);
 

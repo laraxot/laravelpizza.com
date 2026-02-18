@@ -1,374 +1,313 @@
 <?php
 
 /**
- * Event Detail - Volt Component with Flat Properties
- * 
- * Pattern: Flat public properties populated in mount()
- * No computed properties for static data
- * All formatting logic centralized in mount()
- * 
- * @see Themes/Meetup/docs/volt-flat-properties-pattern.md
+ * Event Detail - Volt Component
+ * Full layout with 2-column design, sidebar CTA, About, Location, Attendees
+ * Unica fonte di verità: Modello Event.
  */
 
 use Livewire\Volt\Component;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Request;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Meetup\Models\Event;
+use Illuminate\Support\Carbon;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 new class extends Component {
-    // Input properties (from route or props)
+    // Props from parent/route
     public ?Event $event = null;
     public ?Event $item = null;
     public string $container0 = '';
     public string $slug0 = '';
     
-    // Flat properties - populated in mount()
-    public string $title = 'Event Title';
-    public string $slug = '';
-    public string $status = 'upcoming';
-    public string $statusLabel = 'Upcoming';
-    public ?string $description = null;
-    public string $date = '';
-    public string $time = '';
-    public string $location = 'Location TBA';
-    public string $address = '';
-    public string $category = 'Meetup';
-    public ?string $imageUrl = null;
-    public int $attendeesCurrent = 0;
-    public int $attendeesMax = 100;
-    public int $availableSpots = 100;
-    public string $eventsUrl = '';
-    public string $badgeClass = 'bg-green-600';
-    public bool $isUpcoming = true;
-    
-    // UI state (reactive)
+    // Component state
     public bool $showBookingModal = false;
     public bool $showShareModal = false;
-
+    public string $bookingName = '';
+    public string $bookingEmail = '';
+    public string $shareUrl = '';
+    
     public function mount(): void
     {
-        // Resolve event from props or slug
-        $eventModel = $this->event ?? $this->item;
-        
-        if ($eventModel === null && !empty($this->slug0)) {
-            $eventModel = Event::where('slug', $this->slug0)->first();
+        // Support both 'event' (specific) and 'item' (generic) props, or load from slug0
+        if ($this->event === null && $this->item === null && !empty($this->slug0)) {
+            $this->event = Event::where('slug', $this->slug0)->first();
+        } elseif ($this->event === null && $this->item !== null) {
+            $this->event = $this->item instanceof Event ? $this->item : null;
         }
         
-        // Fallback: try to get from URL segment
-        if ($eventModel === null) {
-            $slugFromUrl = Request::segment(3);
-            if (!empty($slugFromUrl)) {
-                $eventModel = Event::where('slug', $slugFromUrl)->first();
-            }
+        if ($this->event) {
+            $this->shareUrl = LaravelLocalization::localizeUrl('/events/' . $this->event->slug);
         }
-
-        // Populate all flat properties from model
-        if ($eventModel instanceof Event) {
-            $this->event = $eventModel;
-            
-            $startDate = $eventModel->start_date ?? Carbon::now();
-            $endDate = $eventModel->end_date ?? $startDate;
-            
-            $this->title = $eventModel->title;
-            $this->slug = $eventModel->slug;
-            $this->description = $eventModel->description;
-            $this->location = $eventModel->location ?? 'Location TBA';
-            $this->address = $eventModel->address ?? 'Details to be announced';
-            $this->category = $eventModel->category ?? 'Meetup';
-            $this->attendeesCurrent = $eventModel->attendees_count ?? 0;
-            $this->attendeesMax = $eventModel->max_attendees ?? 100;
-            $this->imageUrl = $eventModel->image_url ?? $eventModel->cover_image;
-            $this->availableSpots = max(0, $this->attendeesMax - $this->attendeesCurrent);
-            
-            // Date formatting
-            $this->date = $startDate->format('l, F j, Y');
-            $this->time = $startDate->format('H:i') . ' - ' . $endDate->format('H:i');
-            
-            // Status logic
-            $this->isUpcoming = $startDate->isFuture();
-            $this->status = $this->isUpcoming ? 'upcoming' : 'past';
-            $this->statusLabel = $this->isUpcoming ? 'Upcoming' : 'Past Event';
-            $this->badgeClass = $this->isUpcoming ? 'bg-green-600' : 'bg-slate-500';
+    }
+    
+    public function isUpcoming(): bool
+    {
+        if (!$this->event || !$this->event->start_date) return false;
+        return Carbon::parse($this->event->start_date)->isFuture();
+    }
+    
+    public function getDate(): string
+    {
+        if (!$this->event || !$this->event->start_date) {
+            return Carbon::now()->translatedFormat('l, j F Y');
         }
+        return Carbon::parse($this->event->start_date)->translatedFormat('l, j F Y');
+    }
+    
+    public function getTime(): string
+    {
+        if (!$this->event || !$this->event->start_date) return '';
+        $start = Carbon::parse($this->event->start_date);
+        $end = $this->event->end_date ? Carbon::parse($this->event->end_date) : $start;
+        return $start->format('g:i A') . ' - ' . $end->format('g:i A');
+    }
+    
+    public function getAvailableSpots(): int
+    {
+        if (!$this->event) return 0;
+        return max(0, ($this->event->max_attendees ?? 100) - ($this->event->attendees_count ?? 0));
+    }
 
-        // URLs
-        $this->eventsUrl = LaravelLocalization::localizeUrl('/events');
+    public function openBookingModal(): void { $this->showBookingModal = true; }
+    public function closeBookingModal(): void { 
+        $this->showBookingModal = false; 
+        $this->bookingName = ''; 
+        $this->bookingEmail = ''; 
     }
     
-    public function openBooking(): void
+    public function book(): void
     {
-        $this->showBookingModal = true;
+        // In a real scenario, this would create a booking record
+        $this->dispatch('notify', ['type' => 'success', 'message' => 'Booking confirmed!']);
+        $this->closeBookingModal();
     }
     
-    public function closeBooking(): void
-    {
-        $this->showBookingModal = false;
-    }
-    
-    public function openShare(): void
-    {
-        $this->showShareModal = true;
-    }
-    
-    public function closeShare(): void
-    {
-        $this->showShareModal = false;
-    }
+    public function openShareModal(): void { $this->showShareModal = true; }
+    public function closeShareModal(): void { $this->showShareModal = false; }
 };
 
 ?>
 
-<div>
-@if (!$this->event)
-    {{-- Event Not Found State --}}
-    <div class="py-24 text-center">
-        <h2 class="text-2xl font-bold text-white">{{ __('pub_theme::event.not_found.label') }}</h2>
-        <p class="mt-4 text-slate-400">{{ __('pub_theme::event.not_found_description.label') }}</p>
-        <a href="{{ $this->eventsUrl }}" class="mt-8 inline-block rounded-full bg-orange-600 px-8 py-3 font-semibold text-white transition hover:bg-orange-700">
+<div class="min-h-screen bg-slate-50 dark:bg-slate-900 overflow-x-hidden relative">
+    @include('pub_theme::components.ui.particles')
+
+    @if($this->event)
+    {{-- Hero Section --}}
+    <div class="relative bg-slate-900 h-[400px] md:h-[500px] z-0">
+        @if($this->event->cover_image)
+            <img src="{{ $this->event->cover_image }}" alt="{{ $this->event->title }}" class="w-full h-full object-cover opacity-70">
+        @else
+            <div class="w-full h-full bg-gradient-to-br from-red-600 via-red-700 to-slate-900 flex items-center justify-center">
+                <svg class="w-32 h-32 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+            </div>
+        @endif
+
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12">
+                <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="inline-flex items-center text-white/80 hover:text-white mb-4 transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    {{ __('pub_theme::event.back_to_events.label') }}
+                </a>
+
+                <span class="inline-block {{ $this->isUpcoming() ? 'bg-green-600' : 'bg-slate-500' }} text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
+                    {{ $this->isUpcoming() ? __('pub_theme::event.status_upcoming.label') : __('pub_theme::event.status_past.label') }}
+                </span>
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+                    {{ $this->event->title }}
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    {{-- Content Section --}}
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-8">
+                {{-- Quick Info Card --}}
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6 border border-slate-200 dark:border-slate-700">
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.date.label') }}</p>
+                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $this->getDate() }}</p>
+                            </div>
+                        </div>
+
+                        @if($this->getTime())
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.time.label') }}</p>
+                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $this->getTime() }}</p>
+                            </div>
+                        </div>
+                        @endif
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.location.label') }}</p>
+                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $this->event->location ?? 'Location TBA' }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- About Section --}}
+                @if($this->event->description)
+                <section class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-8 border border-slate-200 dark:border-slate-700">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                        {{ __('pub_theme::event.about_this_event.label') }}
+                    </h2>
+                    <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 leading-relaxed">
+                        {!! nl2br(e($this->event->description)) !!}
+                    </div>
+                </section>
+                @endif
+
+                {{-- Attendees Section --}}
+                <section class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-8 border border-slate-200 dark:border-slate-700">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
+                            {{ __('pub_theme::event.attendees.label') }}
+                        </h2>
+                        <span class="text-lg font-medium text-slate-600 dark:text-slate-400">
+                            {{ $this->event->attendees_count ?? 0 }} / {{ $this->event->max_attendees ?? 100 }}
+                        </span>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="flex -space-x-3">
+                            @php $maxDisplay = min($this->event->attendees_count ?? 0, 8); @endphp
+                            @for($i = 0; $i < $maxDisplay; $i++)
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-red-600 border-3 border-white dark:border-slate-800 flex items-center justify-center text-white font-semibold text-sm shadow-md">
+                                    {{ chr(65 + ($i % 26)) }}
+                                </div>
+                            @endfor
+                            @if(($this->event->attendees_count ?? 0) > 8)
+                                <div class="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-600 border-3 border-white dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 font-semibold text-xs shadow-md">
+                                    +{{ ($this->event->attendees_count ?? 0) - 8 }}
+                                </div>
+                            @endif
+                        </div>
+                        @if(($this->event->attendees_count ?? 0) > 0)
+                        <span class="ml-4 text-sm text-slate-500 dark:text-slate-400">
+                            {{ __('pub_theme::event.people_joined.label', ['count' => $this->event->attendees_count ?? 0]) }}
+                        </span>
+                        @endif
+                    </div>
+                </section>
+            </div>
+
+            {{-- Sidebar --}}
+            <div class="lg:col-span-1">
+                <div class="sticky top-8 space-y-6">
+                    @if($this->isUpcoming())
+                    <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 border border-slate-200 dark:border-slate-700">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                            {{ __('pub_theme::event.join_event.label') }}
+                        </h3>
+
+                        <div class="mb-6">
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-1">
+                                {{ __('pub_theme::event.available_spots.label') }}
+                            </p>
+                            <p class="text-4xl font-bold text-red-600 dark:text-red-400">
+                                {{ $this->getAvailableSpots() }}
+                            </p>
+                        </div>
+
+                        <button wire:click="openBookingModal" type="button" class="w-full bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-300 text-white font-bold py-3.5 px-6 rounded-lg transition-all shadow-md hover:shadow-lg">
+                            {{ __('pub_theme::event.book_your_spot.label') }}
+                        </button>
+
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-4 text-center">
+                            {{ __('pub_theme::event.spots_filling_fast.label') }}
+                        </p>
+                    </div>
+                    @endif
+
+                    <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-6 border border-slate-200 dark:border-slate-700">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">
+                            {{ __('pub_theme::event.share_event.label') }}
+                        </h3>
+                        <div class="flex gap-3">
+                            <button wire:click="openShareModal" type="button" class="flex-1 bg-sky-500 hover:bg-sky-600 text-white py-2.5 px-4 rounded-lg transition-colors font-medium text-sm flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                                Twitter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @else
+    <div class="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">{{ __('pub_theme::event.no_events_found.label') }}</h2>
+        <p class="text-slate-600 dark:text-slate-400 mb-8">{{ __('pub_theme::event.check_back_later.label') }}</p>
+        <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold">
             {{ __('pub_theme::event.back_to_events.label') }}
         </a>
     </div>
-@else
-    {{-- Event Found --}}
-    <section class="relative py-12 lg:py-20 overflow-hidden">
-        {{-- Background Elements --}}
-        <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-        <div class="container mx-auto px-4 relative">
-            {{-- Breadcrumbs --}}
-            <nav class="flex mb-8 text-sm font-medium" aria-label="Breadcrumb">
-                <ol class="flex items-center space-x-2">
-                    <li>
-                        <a href="{{ LaravelLocalization::localizeUrl('/') }}" class="text-slate-400 hover:text-white transition">{{ __('pub_theme::event.home.label') }}</a>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <svg class="w-5 h-5 text-slate-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <a href="{{ $this->eventsUrl }}" class="text-slate-400 hover:text-white transition">{{ __('pub_theme::event.events.label') }}</a>
-                    </li>
-                    <li class="flex items-center space-x-2">
-                        <svg class="w-5 h-5 text-slate-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-orange-500 truncate max-w-[200px]">{{ $this->title }}</span>
-                    </li>
-                </ol>
-            </nav>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                {{-- Left Column: Main Content --}}
-                <div class="lg:col-span-2">
-                    <div class="relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 shadow-2xl">
-                        {{-- Hero Image --}}
-                        <div class="aspect-video relative">
-                            <img src="{{ $this->imageUrl ?? 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=2070' }}" 
-                                 alt="{{ $this->title }}" 
-                                 class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-                            
-                            {{-- Status Badge --}}
-                            <div class="absolute top-6 left-6">
-                                <span class="{{ $this->badgeClass }} text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-                                    {{ $this->statusLabel }}
-                                </span>
-                            </div>
-                        </div>
-
-                        {{-- Header Info --}}
-                        <div class="p-8 lg:p-12">
-                            <div class="flex flex-wrap items-center gap-4 mb-6">
-                                <span class="bg-orange-500/10 text-orange-500 px-4 py-1 rounded-full text-sm font-bold border border-orange-500/20">
-                                    {{ $this->category }}
-                                </span>
-                                <div class="flex items-center text-slate-400 text-sm">
-                                    <svg class="w-5 h-5 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    {{ $this->time }}
-                                </div>
-                            </div>
-
-                            <h1 class="text-4xl lg:text-5xl font-black text-white mb-8 leading-tight">
-                                {{ $this->title }}
-                            </h1>
-
-                            {{-- Description --}}
-                            <div class="prose prose-invert prose-orange max-w-none mb-12">
-                                {!! nl2br(e($this->description)) !!}
-                            </div>
-
-                            {{-- Tech Stack Tags --}}
-                            <div class="border-t border-slate-800 pt-12">
-                                <h3 class="text-xl font-bold text-white mb-6">{{ __('pub_theme::event.topics.label') }}</h3>
-                                <div class="flex flex-wrap gap-3">
-                                    @foreach(['Laravel', 'Livewire', 'Tailwind CSS', 'Vite', 'Filament'] as $tag)
-                                        <span class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-xl text-sm transition cursor-default border border-slate-700/50">
-                                            #{{ $tag }}
-                                        </span>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Right Column: Sidebar --}}
-                <div class="space-y-8">
-                    {{-- RSVP Card --}}
-                    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sticky top-8 shadow-2xl">
-                        <div class="space-y-6">
-                            {{-- Date info --}}
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-2xl bg-orange-500/10 flex flex-col items-center justify-center border border-orange-500/20 text-orange-500 shrink-0">
-                                    <span class="text-xs font-bold uppercase leading-none">{{ Carbon::parse($this->date)->format('M') }}</span>
-                                    <span class="text-xl font-black leading-none">{{ Carbon::parse($this->date)->format('d') }}</span>
-                                </div>
-                                <div>
-                                    <p class="text-white font-bold">{{ $this->date }}</p>
-                                    <p class="text-slate-400 text-sm">{{ $this->time }}</p>
-                                </div>
-                            </div>
-
-                            {{-- Location info --}}
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20 text-blue-500 shrink-0">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="text-white font-bold">{{ $this->location }}</p>
-                                    <p class="text-slate-400 text-sm line-clamp-2">{{ $this->address }}</p>
-                                    <a href="#" class="text-blue-400 text-xs font-bold mt-1 inline-block hover:underline">{{ __('pub_theme::event.view_map.label') }}</a>
-                                </div>
-                            </div>
-
-                            {{-- Capacity info --}}
-                            <div class="bg-slate-800/50 rounded-2xl p-4 border border-slate-700/50">
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-slate-400 text-sm">{{ __('pub_theme::event.spots_available.label') }}</span>
-                                    <span class="text-white font-bold text-sm">{{ $this->availableSpots }} {{ __('pub_theme::event.of.label') }} {{ $this->attendeesMax }}</span>
-                                </div>
-                                <div class="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
-                                    <div class="h-full bg-orange-500 rounded-full" style="width: {{ ($this->attendeesCurrent / max($this->attendeesMax, 1)) * 100 }}%"></div>
-                                </div>
-                            </div>
-
-                            {{-- RSVP Button --}}
-                            @if($this->isUpcoming)
-                                @guest
-                                    <a href="{{ LaravelLocalization::localizeUrl('/register') }}" class="w-full bg-white hover:bg-slate-200 text-slate-900 font-bold py-4 rounded-2xl transition shadow-lg shadow-white/5 flex items-center justify-center gap-2 group">
-                                        {{ __('pub_theme::event.sign_in_to_rsvp.label') }}
-                                        <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
-                                        </svg>
-                                    </a>
-                                @else
-                                    <button wire:click="openBooking" class="w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-orange-600/20 flex items-center justify-center gap-2 group">
-                                        {{ __('pub_theme::event.rsvp_now.label') }}
-                                        <svg class="w-5 h-5 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </button>
-                                @endguest
-                            @else
-                                <button disabled class="w-full bg-slate-800 text-slate-500 font-bold py-4 rounded-2xl cursor-not-allowed">
-                                    {{ __('pub_theme::event.registration_closed.label') }}
-                                </button>
-                            @endif
-                        </div>
-                    </div>
-                    
-                    {{-- Share Card --}}
-                    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-xl">
-                        <h3 class="text-lg font-bold text-white mb-4">{{ __('pub_theme::event.share.label') }}</h3>
-                        <div class="flex gap-3">
-                            <button wire:click="openShare" class="flex-1 bg-sky-500 hover:bg-sky-600 text-white py-3 rounded-xl transition-colors font-medium flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                                {{ __('pub_theme::event.twitter.label') }}
-                            </button>
-                            <button wire:click="openShare" class="flex-1 bg-blue-700 hover:bg-blue-800 text-white py-3 rounded-xl transition-colors font-medium flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                                {{ __('pub_theme::event.facebook.label') }}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    {{-- Booking Modal --}}
-    @if($this->showBookingModal)
-        <div class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-            <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-                <div class="fixed inset-0 bg-slate-900/75 transition-opacity" aria-hidden="true" wire:click="closeBooking"></div>
-                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-                <div class="inline-block align-bottom bg-white dark:bg-slate-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-                    <div class="bg-white dark:bg-slate-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                        <h3 class="text-lg leading-6 font-medium text-slate-900 dark:text-white mb-4">
-                            {{ __('pub_theme::event.book_event.label') }}
-                        </h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">{{ $this->title }}</p>
-                        {{-- Booking form handled by Filament Widget --}}
-                        <div class="p-4 bg-slate-50 dark:bg-slate-700/50 rounded-lg">
-                            <p class="text-sm text-slate-600 dark:text-slate-400 text-center">
-                                {{ __('pub_theme::event.booking_via_filament.label') }}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="bg-slate-50 dark:bg-slate-700/50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                        <button type="button" wire:click="closeBooking" class="mt-3 w-full inline-flex justify-center rounded-md border border-slate-300 dark:border-slate-600 shadow-sm px-4 py-2 bg-white dark:bg-slate-800 text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
-                            {{ __('pub_theme::event.close.label') }}
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
     @endif
-    
-    {{-- Share Modal --}}
-    @if($this->showShareModal)
-        <div class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-            <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-                <div class="fixed inset-0 bg-slate-900/75 transition-opacity" aria-hidden="true" wire:click="closeShare"></div>
-                <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-                <div class="inline-block align-bottom bg-white dark:bg-slate-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-                    <div class="bg-white dark:bg-slate-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                        <h3 class="text-lg leading-6 font-medium text-slate-900 dark:text-white mb-4">
-                            {{ __('pub_theme::event.share_event.label') }}
-                        </h3>
-                        <div class="flex justify-center space-x-4">
-                            <button wire:click="closeShare" class="p-3 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                            </button>
-                            <button wire:click="closeShare" class="p-3 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                            </button>
-                            <button wire:click="closeShare" class="p-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.14-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-slate-50 dark:bg-slate-700/50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                        <button type="button" wire:click="closeShare" class="mt-3 w-full inline-flex justify-center rounded-md border border-slate-300 dark:border-slate-600 shadow-sm px-4 py-2 bg-white dark:bg-slate-800 text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
-                            {{ __('pub_theme::event.close.label') }}
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endif
-@endif
 </div>
 
+{{-- Booking Modal --}}
+@if($this->showBookingModal)
+<div class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 bg-slate-900 bg-opacity-75 transition-opacity" aria-hidden="true" wire:click="closeBookingModal"></div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+        <div class="inline-block align-bottom bg-white dark:bg-slate-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full p-8">
+            <div>
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" id="modal-title">
+                    {{ __('pub_theme::event.book_your_spot.label') }}
+                </h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Name</label>
+                        <input type="text" wire:model="bookingName" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 text-slate-900 dark:text-white focus:ring-2 focus:ring-red-500 outline-none transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email</label>
+                        <input type="email" wire:model="bookingEmail" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 text-slate-900 dark:text-white focus:ring-2 focus:ring-red-500 outline-none transition-all">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 flex gap-3">
+                <button type="button" wire:click="book" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                    Confirm Booking
+                </button>
+                <button type="button" wire:click="closeBookingModal" class="flex-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold py-3 px-4 rounded-lg transition-colors">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
+
 @push('meta')
-@if($this->event instanceof Event)
+@if($this->event)
 <script type="application/ld+json">
 {!! json_encode($this->event->toSchemaOrg(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
 </script>

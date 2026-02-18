@@ -10,8 +10,52 @@ return [
         'icon' => 'heroicon-o-calendar',
         'sort' => 11,
     ],
+    'status' => [
+        'upcoming' => [
+            'label' => 'Предстоящее',
+        ],
+        'past' => [
+            'label' => 'Прошедшее',
+        ],
+    ],
+    'not_found' => [
+        'label' => 'Событие не найдено',
+    ],
+    'not_found_description' => [
+        'label' => 'К сожалению, событие, которое вы ищете, не существует или было удалено.',
+    ],
     'back_to_events' => [
         'label' => 'Назад к событиям',
+    ],
+    'home' => [
+        'label' => 'Главная',
+    ],
+    'events' => [
+        'label' => 'События',
+    ],
+    'topics' => [
+        'label' => 'Темы',
+    ],
+    'view_map' => [
+        'label' => 'Смотреть на карте',
+    ],
+    'spots_available' => [
+        'label' => 'Доступные места',
+    ],
+    'of' => [
+        'label' => 'из',
+    ],
+    'sign_in_to_rsvp' => [
+        'label' => 'Войти для регистрации',
+    ],
+    'rsvp_now' => [
+        'label' => 'Зарегистрироваться',
+    ],
+    'registration_closed' => [
+        'label' => 'Регистрация закрыта',
+    ],
+    'free_entry' => [
+        'label' => 'Бесплатный вход',
     ],
     'date' => [
         'label' => 'Дата',
