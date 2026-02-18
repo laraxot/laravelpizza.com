@@ -10,7 +10,8 @@ Quando un componente Blade viene incluso tramite `@include()` (non montato come 
 
 ```php
 <?php
-declare(strict_types=1);
+// ⚠️ ATTENZIONE: NON usare declare(strict_types=1); nei file .blade.php
+// Se serve strict_types, spostare la classe in un file .php separato in app/Helpers/
 
 // Nel file Blade, prima del markup
 

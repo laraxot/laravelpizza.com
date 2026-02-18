@@ -4,57 +4,50 @@
 
 Il componente `events/detail.blade.php` utilizza il pattern Volt Class dove il **modello Event è l'unica fonte di verità**.
 
-## ✅ Pattern: Volt Class + @php Helper
+## ✅ Pattern: Accesso Diretto al Modello
 
-### Volt Class (semplice)
+### Volt Class
 
 ```php
 new class extends Component {
     public ?Event $event = null;
+    public ?Event $item = null;
     public string $container0 = '';
     public string $slug0 = '';
 
     public function mount(): void
     {
-        if ($this->event === null && $this->slug0 !== '') {
+        if ($this->event === null && $this->item === null && $this->slug0 !== '') {
             $this->event = Event::where('slug', $this->slug0)->first();
+        } elseif ($this->item !== null) {
+            $this->event = $this->item;
         }
     }
-};
-```
+}; 
 
-### @php Block (variabili helper)
-
-```php
-@php
-$event = $this->event;
 $eventsUrl = LaravelLocalization::localizeUrl('/events');
-
-if ($event instanceof Event) {
-    $startDate = $event->start_date ?? Carbon::now();
-    $endDate = $event->end_date ?? $startDate;
-    $dateFormatted = $startDate->format('l, F j, Y');
-    $title = $event->title;
-    $description = $event->description;
-    // ... altre variabili
-} else {
-    $title = 'Event Title';
-    // ... valori default
-}
-@endphp
+?>
 ```
 
-### Template Blade
+### Template Blade - Accesso Diretto
 
 ```blade
-<h1>{{ $title }}</h1>
-<p>{{ $location }}</p>
-<span class="{{ $badgeClass }}">{{ $statusLabel }}</span>
+{{-- Accesso diretto alle proprietà del modello --}}
+<h1>{{ $this->event?->title ?? 'Event Title' }}</h1>
+<p>{{ $this->event?->location ?? 'Location TBA' }}</p>
+
+{{-- Accesso con metodi del modello --}}
+<span class="{{ ($this->event?->start_date?->isFuture() ?? true) ? 'bg-green-600' : 'bg-slate-500' }}">
+    {{ ($this->event?->start_date?->isFuture() ?? true) ? 'Upcoming' : 'Past Event' }}
+</span>
+
+{{-- Variabili helper --}}
+<a href="{{ $eventsUrl }}">Back to Events</a>
 ```
 
 ## ⚠️ REGOLA: Unica Fonte di Verità = Event Model
 
-Non creare computed come `eventData` - usa le variabili helper nel @php block!
+Non creare computed come `eventData` - usa direttamente le proprietà del modello con `$this->event?->property`!
 
 ## 🔗 Riferimenti
 

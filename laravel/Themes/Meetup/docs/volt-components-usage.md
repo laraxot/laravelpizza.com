@@ -4,40 +4,63 @@
 
 Il tema Meetup utilizza Laravel Folio per il routing e Livewire Volt per i componenti interattivi. Questo documento descrive come utilizzare correttamente i componenti Volt nel contesto del CMS-driven pages.
 
-## Pattern: Volt Class + @php Helper
+## Pattern: Volt Class + Accesso Diretto al Modello
 
-### ❌ SBAGLIATO: Troppe public properties
+### ❌ SBAGLIATO: Troppe public properties o variabili helper
 
 ```php
 // ❌ NO! Troppe proprietà da gestire
 public string $title = '';
 public string $status = '';
 // ... decine di proprietà
+
+// ❌ NO! Non usare variabili helper nel @php
+$title = $this->event->title;
 ```
 
-### ✅ CORRETTO: Volt Class semplice + @php block
+### ✅ CORRETTO: Volt Class semplice + accesso diretto
 
 ```php
 new class extends Component {
     public ?Event $event = null;
+    public ?Event $item = null;
     public string $container0 = '';
     public string $slug0 = '';
 
     public function mount(): void
     {
-        if ($this->event === null && $this->slug0 !== '') {
+        if ($this->event === null && $this->item === null && $this->slug0 !== '') {
             $this->event = Event::where('slug', $this->slug0)->first();
+        } elseif ($this->item !== null) {
+            $this->event = $this->item;
         }
     }
-};
+}; 
+
+$eventsUrl = LaravelLocalization::localizeUrl('/events');
 ?>
 
-@php
-// Variabili helper per il template
-$event = $this->event;
-$eventsUrl = LaravelLocalization::localizeUrl('/events');
+{{-- Template usa $this->event direttamente --}}
+<h1>{{ $this->event?->title ?? 'Event Title' }}</h1>
+<p>{{ $this->event?->location ?? 'Location TBA' }}</p>
+<span class="{{ ($this->event?->start_date?->isFuture() ?? true) ? 'bg-green-600' : 'bg-slate-500' }}">
+    {{ ($this->event?->start_date?->isFuture() ?? true) ? 'Upcoming' : 'Past Event' }}
+</span>
+```
 
-if ($event instanceof Event) {
+## Pattern Folio Page: [container0]/[slug0]/index.blade.php
+
+### ⚠️ REGOLA CRITICA: Non usare $this->pageSlug nel template!
+
+```php
+// ❌ SBAGLIATO - $this non funziona nel template Volt
+:x-page :slug="$this->pageSlug"
+
+<!-- ✅ CORRETTO - Volt espone le proprietà come variabili locali -->
+<x-page :slug="$pageSlug" :data="$data" />
+```
+
+Il componente Folio con Volt espone le proprietà pubbliche come variabili locali nel template - si accede senza `$this->`.
     $startDate = $event->start_date ?? Carbon::now();
     $title = $event->title;
     $status = $startDate->isFuture() ? 'upcoming' : 'past';
