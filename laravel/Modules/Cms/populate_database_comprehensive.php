@@ -237,12 +237,12 @@ class DatabasePopulator
 
             echo "{$status} {$name}";
 
-            if ($result['status'] === 'success') {
+            if ('success' === $result['status']) {
                 echo " - {$result['count']} records";
-                $successful++;
+                ++$successful;
             } else {
                 echo ' - Error';
-                $failed++;
+                ++$failed;
             }
             echo "\n";
         }
@@ -261,5 +261,5 @@ class DatabasePopulator
 }
 
 // Execute the population
-$populator = new DatabasePopulator;
+$populator = new DatabasePopulator();
 $populator->run();
