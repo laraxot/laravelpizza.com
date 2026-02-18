@@ -14,10 +14,10 @@ Vedi: [Filament Widgets NOT Livewire Critical Rule](filament-widgets-not-livewir
 
 ## Pattern Volt (events.detail)
 
-- Input: `event`, `item`, `container0`, `slug0`.
-- In `mount()`: `$eventModel = $this->event ?? $this->item ?? Event::where('slug', $this->slug0)->first()`. Se `$eventModel instanceof Event`, assegna a proprietà pubbliche: `title`, `slug`, `description`, `date`, `time`, `location`, `attendeesCurrent`, `attendeesMax`, `coverImage`, `availableSpots`, `status`, `statusLabel`, `badgeClass`; imposta `eventsUrl`. Valori di default nelle proprietà per il caso senza Event.
-- `eventModel` si tiene solo per Schema.org in `@push('meta')`.
-- Vista: usa solo `$this->title`, `$this->date`, ecc. — niente `eventData[]` o computed.
+- **Classe**: solo `event`, `item`, `container0`, `slug0`. `mount()` risolve `$this->event` da slug0 (o item) se non passato.
+- **Template**: sotto la classe c’è sempre il Blade completo (hero, colonne, sidebar, Schema.org). **Non togliere mai il template** quando si refactora la classe.
+- **Helper in vista**: un blocco `@php` subito sotto la classe può calcolare da `$this->event` le variabili per il template (`$eventModel`, `$startDate`, `$isUpcoming`, `$badgeClass`, `$eventsUrl`, ecc.) con default quando `$this->event` è null. La vista usa quelle variabili.
+- Unica fonte di verità = `$this->event`; niente duplicazione in decine di proprietà pubbliche.
 
 ## Riferimenti
 

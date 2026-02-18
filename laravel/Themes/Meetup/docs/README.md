@@ -12,6 +12,10 @@ The purpose of this documentation is to provide comprehensive information about 
 ## Structure
 
 - `README.md`: This overview file.
+- **Patterns & Architecture**:
+    - [`volt-flat-properties-pattern.md`](./volt-flat-properties-pattern.md) - Pattern Volt con flat public properties
+    - [`helper-class-pattern.md`](./helper-class-pattern.md) - Pattern Helper Class per componenti Blade
+    - [`agnostic-routing.md`](./agnostic-routing.md) - Routing agnostico con Laravel Folio
 - Other Markdown files will detail specific aspects of the theme, such as:
     - `installation.md`
     - `usage.md`

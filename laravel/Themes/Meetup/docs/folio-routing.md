@@ -99,7 +99,7 @@ new class extends Component {
 // ❌ SBAGLIATO
 public function mount(): void
 {
-    $this->container0 = request()->route('container0') ?? '';  // NO!
+    $this->container0 = request()->route('container0') ?? '';  // ❌ SBAGLIATO - Volt gestisce automaticamente i parametri
 }
 ```
 

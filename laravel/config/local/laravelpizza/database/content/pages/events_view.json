@@ -1,7 +1,7 @@
 {
     "id": "1",
     "title": {
-        "it": "Upcoming Events - Laravel Pizza Meetups"
+        "it": "Event Details - Laravel Pizza Meetups"
     },
     "slug": "events.view",
     "middleware": null,
@@ -10,19 +10,10 @@
         "it": [
             {
                 "type": "events",
-                "slug": "events-list",
-                "livewire": "events.detail",
+                "slug": "event-detail",
                 "data": {
                     "view": "pub_theme::components.blocks.events.detail",
-                    "title": "Upcoming Events",
-                    "description": "Join us for pizza and Laravel discussions",
-                    "query": {
-                        "model": "Modules\\Meetup\\Models\\Event",
-                        "orderBy": "start_date",
-                        "direction": "asc",
-                        "limit": 50,
-                        "wrap_in": "events"
-                    }
+                    "title": "Event Details"
                 }
             }
         ]

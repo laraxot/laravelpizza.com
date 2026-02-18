@@ -16,7 +16,7 @@ new class extends Component {
 
     public function mount(): void
     {
-        // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
+        // ❌ VIETATO: Estrazione manuale - Volt gestisce automaticamente i parametri route grazie all'integrazione con Laravel Folio!
         $this->container0 = $this->container0 ?? request()->route('container0') ?? '';
         $this->slug0 = $this->slug0 ?? request()->route('slug0') ?? '';
     }
@@ -24,7 +24,7 @@ new class extends Component {
 ?>
 
 @php
-// ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
+// ❌ VIETATO: Estrazione manuale - Volt gestisce automaticamente i parametri route grazie all'integrazione con Laravel Folio!
 $container0 = $container0 ?? request()->route('container0') ?? '';
 $slug0 = $slug0 ?? request()->route('slug0') ?? '';
 @endphp
@@ -164,7 +164,7 @@ public function mount(): void
 
 1. **NON estrarre manualmente** i parametri nel `mount()`:
    ```php
-   // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
+   // ❌ VIETATO: Estrazione manuale - Volt gestisce automaticamente i parametri route grazie all'integrazione con Laravel Folio!
    public function mount(): void
    {
        $this->container0 = request()->route('container0') ?? '';
@@ -173,7 +173,7 @@ public function mount(): void
 
 2. **NON estrarre manualmente** nei blocchi `@php`:
    ```php
-   // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
+   // ❌ VIETATO: Estrazione manuale - Volt gestisce automaticamente i parametri route grazie all'integrazione con Laravel Folio!
    @php
    $container0 = request()->route('container0') ?? '';
    @endphp
@@ -181,7 +181,7 @@ public function mount(): void
 
 3. **NON usare `??` con `request()->route()`** quando Volt gestisce già:
    ```php
-   // ❌ VIETATO: Estrazione manuale - Volt si arrangia da solo con quei parametri!
+   // ❌ VIETATO: Estrazione manuale - Volt gestisce automaticamente i parametri route grazie all'integrazione con Laravel Folio!
    $this->container0 = $this->container0 ?? request()->route('container0') ?? '';
    ```
 

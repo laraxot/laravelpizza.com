@@ -71,11 +71,11 @@ new class extends Component {
     public ?object $item = null;
     
     // ❌ mount() con request()->route() NON è necessario!
-    // ❌ Volt auto-inietta i parametri nelle proprietà pubbliche
+    // ✅ Volt gestisce automaticamente l'iniezione dei parametri route grazie all'integrazione con Laravel Folio
     public function mount(): void
     {
-        $this->container0 = request()->route('container0') ?? '';  // ❌ RIDONDANTE
-        $this->slug0 = request()->route('slug0') ?? '';  // ❌ RIDONDANTE
+        $this->container0 = request()->route('container0') ?? '';  // ❌ SBAGLIATO - Volt gestisce automaticamente i parametri
+        $this->slug0 = request()->route('slug0') ?? '';  // ❌ SBAGLIATO - Volt gestisce automaticamente i parametri
         $this->resolveContent();  // ❌ VIOLA il principio agnostico
     }
     

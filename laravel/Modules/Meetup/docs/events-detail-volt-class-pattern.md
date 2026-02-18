@@ -2,15 +2,14 @@
 
 ## 🎯 Principio: Il modello Event è l'unica fonte di verità
 
-Il componente `events/detail.blade.php` utilizza il pattern Volt Class dove il **modello Event è l'unica fonte di verità**. Non si duplicano i dati in array o computed - si accede direttamente alle proprietà del modello.
+Il componente `events/detail.blade.php` utilizza il pattern Volt Class dove il **modello Event è l'unica fonte di verità**.
 
-## ✅ Pattern Corretto: Accesso Diretto al Modello
+## ✅ Pattern: Volt Class + @php Helper
 
-### Volt Class
+### Volt Class (semplice)
 
 ```php
 new class extends Component {
-    // Props in input (da CMS/Livewire)
     public ?Event $event = null;
     public string $container0 = '';
     public string $slug0 = '';
@@ -21,46 +20,43 @@ new class extends Component {
             $this->event = Event::where('slug', $this->slug0)->first();
         }
     }
-
-    #[Computed]
-    public function eventsUrl(): string
-    {
-        return LaravelLocalization::localizeUrl('/events');
-    }
 };
 ```
 
-### Accesso nel Template
+### @php Block (variabili helper)
+
+```php
+@php
+$event = $this->event;
+$eventsUrl = LaravelLocalization::localizeUrl('/events');
+
+if ($event instanceof Event) {
+    $startDate = $event->start_date ?? Carbon::now();
+    $endDate = $event->end_date ?? $startDate;
+    $dateFormatted = $startDate->format('l, F j, Y');
+    $title = $event->title;
+    $description = $event->description;
+    // ... altre variabili
+} else {
+    $title = 'Event Title';
+    // ... valori default
+}
+@endphp
+```
+
+### Template Blade
 
 ```blade
-{{-- Accesso diretto alle proprietà del modello --}}
-<h1>{{ $this->event?->title }}</h1>
-<p>{{ $this->event?->description }}</p>
-<p>{{ $this->event?->location }}</p>
-
-{{-- Accesso con metodi --}}
-<span class="{{ $this->event?->start_date?->isFuture() ? 'bg-green-600' : 'bg-slate-500' }}">
-    {{ $this->event?->start_date?->isFuture() ? 'Upcoming' : 'Past Event' }}
-</span>
-
-{{-- Computed properties --}}
-<a href="{{ $this->eventsUrl }}">Back to Events</a>
+<h1>{{ $title }}</h1>
+<p>{{ $location }}</p>
+<span class="{{ $badgeClass }}">{{ $statusLabel }}</span>
 ```
 
 ## ⚠️ REGOLA: Unica Fonte di Verità = Event Model
 
-**NON creare computed come `eventData`** - usa direttamente le proprietà del modello!
-
-```blade
-<!-- ❌ SBAGLIATO -->
-{{ $this->eventData['title'] }}
-
-<!-- ✅ CORRETTO -->
-{{ $this->event?->title }}
-```
+Non creare computed come `eventData` - usa le variabili helper nel @php block!
 
 ## 🔗 Riferimenti
 
 - [Volt Components Usage](../Themes/Meetup/docs/volt-components-usage.md)
-- [Container0 Slug0 Pattern](../Themes/Meetup/docs/container0-slug0-agnostic-pattern.md)
 - [CMS Block System](../Cms/docs/content-blocks-system.md)
