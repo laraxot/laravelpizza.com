@@ -159,6 +159,10 @@ The "Super Mucca" methodology is the advanced operational framework for AI agent
 2.  **DRY + KISS + SOLID**: Always prioritize code reuse (Actions), simplicity (Cyclomatic Complexity < 10), and robust object-oriented design.
 3.  **ROBUST (Type Safety)**: Use `declare(strict_types=1);` in all PHP classes (Models, Actions, Providers). However, **AVOID** it in Blade files that are `@included` as content blocks to prevent fatal errors.
 4.  **UI Preservation**: When refactoring logic, never touch the HTML "dress" (CSS, layouts, icons) unless explicitly asked. The UI must remain identical while the "engine" is modernized.
+5.  **CMS Block Rendering**: The CMS system (`x-page`) now supports both standard Blade blocks and Volt/Livewire blocks. 
+    - If a block file contains a Volt class (`new class extends Component`), it is automatically rendered via `@livewire`.
+    - This ensures the block has its own component instance and property scope, avoiding errors like `PropertyNotFoundException`.
+    - Data from the parent Folio page (like `container0`, `slug0`) is automatically passed to the block's `mount()`.
 5.  **Filament Resources & Pages**:
     - NEVER extend `Filament` classes directly. Always extend `XotBase` classes (e.g., `XotBaseResource`, `XotBasePage`, `XotBaseWidget`, `XotBaseCreateRecord`).
     - `XotBaseResource` extensions MUST NOT have `getTableColumns()`, `getPages()`, `getRelations()`, `getTableActions()`, or `getTableBulkActions()` if they only return standard values.

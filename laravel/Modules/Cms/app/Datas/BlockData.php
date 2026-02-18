@@ -26,6 +26,10 @@ class BlockData extends Data implements Wireable
 
     public string $view;
 
+    public bool $livewire = false;
+
+    public string $livewireComponentName = '';
+
     public function __construct(string $type, array $data, ?string $slug = null)
     {
         $this->type = $type;
@@ -69,6 +73,54 @@ class BlockData extends Data implements Wireable
         }
 
         $this->view = $view;
+        $this->livewire = $this->detectLivewire($view);
+        if ($this->livewire) {
+            $this->livewireComponentName = $this->normalizeComponentName($view);
+        }
+    }
+
+    private function detectLivewire(string $view): bool
+    {
+        if (! view()->exists($view)) {
+            return false;
+        }
+
+        // Usa un approccio più performante per recuperare il path della view
+        /** @var \Illuminate\View\FileViewFinder $finder */
+        $finder = view()->getFinder();
+        $path = $finder->find($view);
+
+        if (! file_exists($path)) {
+            return false;
+        }
+
+        // Verifica se è un componente Volt (class-based o functional)
+        // Leggiamo solo l'inizio del file per performance
+        $handle = fopen($path, 'r');
+        if (! $handle) {
+            return false;
+        }
+        $header = (string) fread($handle, 1024);
+        fclose($handle);
+
+        return str_contains($header, 'new class extends Component') ||
+               str_contains($header, 'Livewire\Volt\Component') ||
+               str_contains($header, 'volt(') ||
+               str_contains($header, 'state(');
+    }
+
+    private function normalizeComponentName(string $view): string
+    {
+        // Rimuove i namespace comuni e i prefissi dei blocchi per Volt
+        // Esempio: 'pub_theme::components.blocks.events.detail' -> 'events.detail'
+        $name = str_replace(['pub_theme::components.blocks.', 'cms::components.blocks.', 'pub_theme::livewire.', 'cms::livewire.'], '', $view);
+
+        // Se inizia ancora con un namespace, teniamo solo la parte dopo ::
+        if (str_contains($name, '::')) {
+            $name = (string) str_after($name, '::');
+        }
+
+        return $name;
     }
 
     public static function collection(EloquentCollection|Collection|array $data): DataCollection|array
