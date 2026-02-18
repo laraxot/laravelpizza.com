@@ -263,7 +263,7 @@ class MyProfilePage extends XotBasePage implements HasSchemas
     // ...
 
     /**
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     protected function handleRecordUpdate(Model $record, array $data): Model
     {

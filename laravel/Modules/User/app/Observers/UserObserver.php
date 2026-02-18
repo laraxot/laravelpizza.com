@@ -32,7 +32,7 @@ class UserObserver
         }
 
         // Evita di creare team duplicati
-        if ($user->personalTeam() !== null) {
+        if (null !== $user->personalTeam()) {
             return;
         }
 

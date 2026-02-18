@@ -42,7 +42,7 @@ class AuthenticationLogResource extends XotBaseResource
 
                 TextColumn::make('authenticatable_type')
                     ->label('Authenticatable Type')
-                    ->formatStateUsing(fn (?string $state): string => $state !== null ? Str::afterLast($state, '\\') : '')
+                    ->formatStateUsing(fn (?string $state): string => null !== $state ? Str::afterLast($state, '\\') : '')
                     ->searchable()
                     ->sortable(),
 
@@ -52,7 +52,7 @@ class AuthenticationLogResource extends XotBaseResource
                     ->sortable()
                     ->url(function (AuthenticationLog $record): ?string {
                         $authenticatable = $record->authenticatable;
-                        if ($authenticatable !== null && $authenticatable->exists) {
+                        if (null !== $authenticatable && $authenticatable->exists) {
                             return UserResource::getUrl('view', ['record' => $authenticatable]);
                         }
 
@@ -139,7 +139,7 @@ class AuthenticationLogResource extends XotBaseResource
                     ->icon('heroicon-o-user')
                     ->url(function (AuthenticationLog $record): ?string {
                         $authenticatable = $record->authenticatable;
-                        if ($authenticatable !== null && $authenticatable->exists) {
+                        if (null !== $authenticatable && $authenticatable->exists) {
                             return UserResource::getUrl('view', ['record' => $authenticatable]);
                         }
 
@@ -148,7 +148,7 @@ class AuthenticationLogResource extends XotBaseResource
                     ->visible(function (AuthenticationLog $record): bool {
                         $authenticatable = $record->authenticatable;
 
-                        return $authenticatable !== null && $authenticatable->exists;
+                        return null !== $authenticatable && $authenticatable->exists;
                     }),
                 DeleteAction::make(),
             ])

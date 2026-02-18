@@ -64,12 +64,12 @@ class PasswordExpired extends XotBasePage
         Assert::string($currentPassword = Arr::get($data, 'current_password'));
         Assert::string($password = Arr::get($data, 'password'));
         $user = Auth::user();
-        if ($user === null) {
+        if (null === $user) {
             return null;
         }
 
         // check if current password is correct
-        if ($user->password === null || ! Hash::check($currentPassword, $user->password)) {
+        if (null === $user->password || ! Hash::check($currentPassword, $user->password)) {
             Notification::make()
                 ->title(__('user::otp.notifications.wrong_password.title'))
                 ->body(__('user::otp.notifications.wrong_password.body'))
@@ -132,7 +132,7 @@ class PasswordExpired extends XotBasePage
             ->success()
             ->send();
 
-        return new PasswordResetResponse;
+        return new PasswordResetResponse();
     }
 
     /**

@@ -22,7 +22,7 @@ class SendOtpAction extends Action
             ->action(function (User $record): void {
                 // User already implements UserContract, no need for assertion
                 $action = app(SendOtpByUserAction::class);
-                if ($action === null) {
+                if (null === $action) {
                     throw new \RuntimeException('Impossibile istanziare SendOtpByUserAction');
                 }
                 // PHPStan Level 10: User extends BaseUser which implements UserContract

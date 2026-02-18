@@ -201,7 +201,7 @@ test('it correctly manages team permissions', function () {
 
 test('it handles edge cases', function () {
     // Test: User without ID
-    $newUser = new User;
+    $newUser = new User();
     expect($newUser->belongsToTeams())->toBeFalse();
 
     // Test: Team without owner

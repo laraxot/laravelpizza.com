@@ -21,13 +21,13 @@ class VerifyEmailController extends Controller
     public function __invoke(EmailVerificationRequest $request): RedirectResponse
     {
         $user = Auth::user();
-        if ($user === null) {
+        if (null === $user) {
             return redirect()->route('filament.user.auth.login');
         }
 
         // Ottieni il valore hash in modo sicuro
         $routeHash = $request->route('hash');
-        if ($routeHash === null) {
+        if (null === $routeHash) {
             throw new \InvalidArgumentException('Hash di verifica mancante');
         }
 
@@ -39,7 +39,7 @@ class VerifyEmailController extends Controller
             : ($user->email ?? '');
 
         if (! hash_equals(sha1($userEmail), $stringRouteHash)) {
-            throw new AuthorizationException;
+            throw new AuthorizationException();
         }
 
         // Verifichiamo l'email solo se il metodo esiste

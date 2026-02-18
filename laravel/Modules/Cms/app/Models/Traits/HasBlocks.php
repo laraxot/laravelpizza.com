@@ -51,7 +51,8 @@ trait HasBlocks
             return new BlockData($type, $data, $slug);
         }, $blocks);
 
-        return BlockData::collection($blockDataInstances);
+        // Return array directly to ensure BlockData constructor is called for dynamic query resolution
+        return $blockDataInstances;
     }
 
     /**
@@ -91,17 +92,17 @@ trait HasBlocks
         $query = static::where('slug', $slug);
 
         if (! method_exists($query, 'first')) {
-            return BlockData::collection([]);
+            return [];
         }
 
         $record = $query->first();
         if (! $record instanceof Model) {
-            return BlockData::collection([]);
+            return [];
         }
 
         // Check if getBlocks method exists
         if (! method_exists($record, 'getBlocks')) {
-            return BlockData::collection([]);
+            return [];
         }
 
         /** @var DataCollection<BlockData>|array $blocks */

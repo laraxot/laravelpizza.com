@@ -18,7 +18,7 @@ class SelectStateColumn extends SelectColumn
         //  $this->selectablePlaceholder(false);
         $this->options(function (Model&HasStatesContract $record, mixed $state): array {
             $name = $this->getName();
-            if ($state === null) {
+            if (null === $state) {
                 // Record implements HasStatesContract which provides getDefaultStateFor()
                 $defaultStates = $record->getDefaultStateFor($name);
                 $states = Arr::wrap($defaultStates);
@@ -62,7 +62,7 @@ class SelectStateColumn extends SelectColumn
                     } catch (\ReflectionException) {
                         // Property non esiste, $stateNameProperty rimane null
                     }
-                    if ($stateNameProperty !== null) {
+                    if (null !== $stateNameProperty) {
                         $statesValues = array_values($states);
                         /** @var list<int|string> $statesValuesTyped */
                         $statesValuesTyped = $statesValues;

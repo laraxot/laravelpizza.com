@@ -65,13 +65,13 @@ test('can create profile with all fields', function (): void {
 });
 
 test('profile has schemaless attributes', function (): void {
-    $profile = new Profile;
+    $profile = new Profile();
     $expectedAttributes = ['extra'];
     expect($profile->getSchemalessAttributes())->toBe($expectedAttributes);
 });
 
 test('profile has table name', function (): void {
-    $profile = new Profile;
+    $profile = new Profile();
     expect($profile->getTable())->toBe('profiles');
 });
 

@@ -14,5 +14,6 @@ class SocialiteUserAttributesData extends Data
         public string $lastName,
         public string $email,
         public string $provider,
-    ) {}
+    ) {
+    }
 }

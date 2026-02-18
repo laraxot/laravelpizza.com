@@ -46,7 +46,7 @@ class SaveTransAction
         }
 
         $piece = implode('.', array_slice(explode('.', $key), 1));
-        if ($piece !== '') {
+        if ('' !== $piece) {
             Arr::set($cont, $piece, $data);
         } else {
             $cont = $data;

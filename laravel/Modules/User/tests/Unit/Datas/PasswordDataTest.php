@@ -40,7 +40,7 @@ test('password data can be created with custom parameters', function (): void {
 });
 
 test('password data has default values', function (): void {
-    $defaultPasswordData = new PasswordData;
+    $defaultPasswordData = new PasswordData();
 
     expect($defaultPasswordData->otp_expiration_minutes)->toBe(5);
     expect($defaultPasswordData->otp_length)->toBe(6);

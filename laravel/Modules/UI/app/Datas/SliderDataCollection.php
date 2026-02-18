@@ -14,5 +14,7 @@ final class SliderDataCollection extends Data
      */
     public DataCollection $slider_data;
 
-    public function __construct() {}
+    public function __construct()
+    {
+    }
 }

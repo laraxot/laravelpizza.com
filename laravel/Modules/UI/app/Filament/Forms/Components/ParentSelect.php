@@ -6,4 +6,6 @@ namespace Modules\UI\Filament\Forms\Components;
 
 use Modules\Xot\Filament\Forms\Components\XotBaseSelect;
 
-class ParentSelect extends XotBaseSelect {}
+class ParentSelect extends XotBaseSelect
+{
+}

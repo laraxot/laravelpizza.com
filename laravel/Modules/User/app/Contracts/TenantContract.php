@@ -11,9 +11,9 @@ use Modules\Xot\Contracts\UserContract;
 
 /**
  * @property Collection<int, Model&UserContract> $members
- * @property int|null $members_count
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $updater
+ * @property int|null                            $members_count
+ * @property ProfileContract|null                $creator
+ * @property ProfileContract|null                $updater
  *
  * @phpstan-require-extends Model
  */

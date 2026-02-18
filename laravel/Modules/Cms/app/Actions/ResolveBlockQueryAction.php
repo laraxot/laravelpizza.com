@@ -25,13 +25,10 @@ class ResolveBlockQueryAction
      */
     public function execute(array $queryConfig): array
     {
-        
         $modelClass = Arr::get($queryConfig, 'model');
         if ($modelClass === null || ! is_string($modelClass) || ! class_exists($modelClass)) {
-            
             return [];
         }
-        
 
         /** @var Model $modelInstance */
         $modelInstance = new $modelClass;

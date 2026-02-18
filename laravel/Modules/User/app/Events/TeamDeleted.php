@@ -4,4 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\User\Events;
 
-class TeamDeleted extends TeamEvent {}
+class TeamDeleted extends TeamEvent
+{
+}
