@@ -1,1 +1,0 @@
-[psalm](https://psalm.dev/)

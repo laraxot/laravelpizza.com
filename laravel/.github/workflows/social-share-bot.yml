@@ -21,30 +21,32 @@ jobs:
       - name: Respond
         if: steps.check.outputs.match == 'true'
         run: |
-          echo "body=## Bot Response
+          cat > body.txt << 'ENDBODY'
+          ## Bot Response
 
-Thanks for the great discussion on social sharing!
+          Thanks for the great discussion on social sharing!
 
-### Our Approach
+          ### Our Approach
 
-We use **pure PHP** - no Composer packages needed:
+          We use **pure PHP** - no Composer packages needed:
 
-```php
-\$url = urlencode(\$url);
-\$facebook = \"https://facebook.com/sharer/sharer.php?u={\$url}\";
-```
+          ```php
+          $url = urlencode($url);
+          $facebook = "https://facebook.com/sharer/sharer.php?u={$url}";
+          ```
 
-### Implementation
+          ### Implementation
 
-- Filament Widget (XotBaseWidget) in SEO module
-- Blade components in Theme
-- Tailwind CSS styling
+          - Filament Widget (XotBaseWidget) in SEO module
+          - Blade components in Theme  
+          - Tailwind CSS styling
 
-See docs: Modules/Seo/docs/social-share-component.md" >> $GITHUB_OUTPUT
+          See docs: Modules/Seo/docs/social-share-component.md
+          ENDBODY
 
       - name: Post comment
         if: steps.check.outputs.match == 'true'
         uses: peter-evans/create-or-update-comment@v5
         with:
           comment-id: ${{ github.event.comment.id }}
-          body: ${{ steps.respond.outputs.body }}
+          body-file: body.txt

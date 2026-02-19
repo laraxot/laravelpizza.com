@@ -1,6 +1,22 @@
 # Social Share Component
 
-## Principio fondamentale
+## Ricerca e Riferimenti
+
+### Fonti Studiati
+- [kudashevs/laravel-share-buttons](https://github.com/kudashevs/laravel-share-buttons) - 42 stelle, 1.1M installi
+- [jorenvanhocht/laravel-share](https://packagist.org/packages/jorenvanhocht/laravel-share) - 535 stelle
+- [Laravel News: Social Media Sharing](https://laravel-news.com/socialmedia-sharing)
+- [codeshotcut: Laravel 12 Social Share](https://codeshotcut.com/blog/laravel-12-social-share-integration-facebook-twitter-linkedin-whatsapp)
+
+### Argomenti Comuni Identificati
+
+1. **Social Share Buttons** - Pulsanti di condivisione
+2. **Open Graph & Twitter Cards** - Meta tags per preview social
+3. **RSS/Atom/JSON Feeds** - Distribuzione contenuti
+4. **Laravel Socialite** - OAuth autenticazione (DIVERSO da sharing!)
+5. **Auto-posting** - Notifiche automatiche
+
+### Soluzione: NO Pacchetti Composer!
 
 **NO pacchetti Composer per logica semplice.**
 
