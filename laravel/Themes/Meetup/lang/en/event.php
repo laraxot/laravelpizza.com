@@ -10,12 +10,144 @@ return [
         'icon' => 'heroicon-o-calendar',
         'sort' => 11,
     ],
+    'label' => 'Event',
+    'plural_label' => 'Events',
+    'fields' => [
+        'date' => [
+            'label' => 'Date',
+            'placeholder' => 'Select date',
+            'tooltip' => 'Date of the event',
+            'helper_text' => '',
+            'description' => 'The date when the event takes place',
+            'icon' => 'heroicon-o-calendar',
+            'color' => 'primary',
+        ],
+        'time' => [
+            'label' => 'Time',
+            'placeholder' => 'Enter time',
+            'tooltip' => 'Start and end time of the event',
+            'helper_text' => '',
+            'description' => 'The scheduled time slot for the event',
+            'icon' => 'heroicon-o-clock',
+            'color' => 'primary',
+        ],
+        'location' => [
+            'label' => 'Location',
+            'placeholder' => 'Search location',
+            'tooltip' => 'Address or venue of the event',
+            'helper_text' => '',
+            'description' => 'The physical or virtual location of the event',
+            'icon' => 'heroicon-o-map-pin',
+            'color' => 'primary',
+        ],
+        'about_this_event' => [
+            'label' => 'About this event',
+            'placeholder' => '',
+            'tooltip' => 'Details and description of the event',
+            'helper_text' => '',
+            'description' => 'Full descriptive section for event details',
+            'icon' => 'heroicon-o-information-circle',
+            'color' => 'info',
+        ],
+        'attendees' => [
+            'label' => 'Attendees',
+            'placeholder' => '',
+            'tooltip' => 'List of registered participants',
+            'helper_text' => '',
+            'description' => 'Visualization of the number and profiles of participants',
+            'icon' => 'heroicon-o-user-group',
+            'color' => 'primary',
+        ],
+        'people_joined' => [
+            'label' => 'People already joined',
+            'placeholder' => '',
+            'tooltip' => 'Total number of people who confirmed attendance',
+            'helper_text' => '',
+            'description' => 'Counter of registered users for the event',
+            'icon' => 'heroicon-o-check-circle',
+            'color' => 'success',
+        ],
+        'topics' => [
+            'label' => 'Topics covered',
+            'placeholder' => '',
+            'tooltip' => 'Main themes of the event',
+            'helper_text' => '',
+            'description' => 'List of topics or talks scheduled',
+            'icon' => 'heroicon-o-hashtag',
+            'color' => 'primary',
+        ],
+        'spots_available' => [
+            'label' => 'Spots still available',
+            'placeholder' => '',
+            'tooltip' => 'Number of free spots for registration',
+            'helper_text' => '',
+            'description' => 'Remaining capacity of the event',
+            'icon' => 'heroicon-o-user-plus',
+            'color' => 'warning',
+        ],
+        'free_entry' => [
+            'label' => 'Free Entry',
+            'placeholder' => '',
+            'tooltip' => 'Indicates if the event has no entry cost',
+            'helper_text' => '',
+            'description' => 'Information about the event being free of charge',
+            'icon' => 'heroicon-o-ticket',
+            'color' => 'success',
+        ],
+    ],
+    'actions' => [
+        'share_event' => [
+            'label' => 'Share event',
+            'placeholder' => 'Click to share',
+            'tooltip' => 'Share this event on social media or via link',
+            'helper_text' => '',
+            'description' => 'Starts the process of sharing the event',
+            'icon' => 'heroicon-o-share',
+            'color' => 'primary',
+        ],
+        'view_map' => [
+            'label' => 'View on map',
+            'placeholder' => '',
+            'tooltip' => 'Open the location on Google Maps',
+            'helper_text' => '',
+            'description' => 'Displays the event coordinates on the interactive map',
+            'icon' => 'heroicon-o-map',
+            'color' => 'primary',
+        ],
+        'rsvp_now' => [
+            'label' => 'Join now',
+            'placeholder' => '',
+            'tooltip' => 'Book your spot for the event',
+            'helper_text' => '',
+            'description' => 'Executes formal registration for the event',
+            'icon' => 'heroicon-o-hand-raised',
+            'color' => 'success',
+        ],
+        'sign_in_to_rsvp' => [
+            'label' => 'Sign in to join',
+            'placeholder' => '',
+            'tooltip' => 'Login to be able to book',
+            'helper_text' => '',
+            'description' => 'Redirects to the login page for RSVP registration',
+            'icon' => 'heroicon-o-arrow-right-on-rectangle',
+            'color' => 'primary',
+        ],
+        'back_to_events' => [
+            'label' => 'Back to events',
+            'placeholder' => '',
+            'tooltip' => 'Return to the full list of events',
+            'helper_text' => '',
+            'description' => 'Navigates back to the main meetups page',
+            'icon' => 'heroicon-o-arrow-left',
+            'color' => 'secondary',
+        ],
+    ],
     'status' => [
         'upcoming' => [
             'label' => 'Upcoming',
         ],
         'past' => [
-            'label' => 'Past',
+            'label' => 'Past event',
         ],
     ],
     'not_found' => [
@@ -24,37 +156,36 @@ return [
     'not_found_description' => [
         'label' => 'Sorry, the event you are looking for does not exist or has been removed.',
     ],
+    // Flat translations for template compatibility (Laraxot philosophy: expanded structure with direct access)
+    'date' => [
+        'label' => 'Date',
+        'help' => 'Date when the event will take place',
+    ],
+    'time' => [
+        'label' => 'Time',
+        'help' => 'Event start time',
+    ],
+    'location' => [
+        'label' => 'Location',
+        'help' => 'Address or venue of the event',
+    ],
+    'about_this_event' => [
+        'label' => 'About this event',
+        'help' => 'Details and description of the event',
+    ],
+    'attendees' => [
+        'label' => 'Attendees',
+        'help' => 'People who will attend the event',
+    ],
+    'people_joined' => [
+        'label' => 'people joined',
+        'help' => 'Number of confirmed attendees',
+    ],
+    'share_event' => [
+        'label' => 'Share event',
+        'help' => 'Share this event with your contacts',
+    ],
     'back_to_events' => [
         'label' => 'Back to events',
-    ],
-    'home' => [
-        'label' => 'Home',
-    ],
-    'events' => [
-        'label' => 'Events',
-    ],
-    'topics' => [
-        'label' => 'Topics covered',
-    ],
-    'view_map' => [
-        'label' => 'View on map',
-    ],
-    'spots_available' => [
-        'label' => 'Spots still available',
-    ],
-    'of' => [
-        'label' => 'of',
-    ],
-    'sign_in_to_rsvp' => [
-        'label' => 'Sign in to RSVP',
-    ],
-    'rsvp_now' => [
-        'label' => 'RSVP now',
-    ],
-    'registration_closed' => [
-        'label' => 'Registration closed',
-    ],
-    'free_entry' => [
-        'label' => 'Free entry',
     ],
 ];

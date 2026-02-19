@@ -27,6 +27,7 @@
 | Event Analytics | 0% | ❌ |
 | PHPStan Level 10 | 100% | ✅ |
 | Multi-Language Support | 100% | ✅ |
+| Event Detail Visual Parity | 20% | 🔄 |
 | Test Coverage | N/A | ❌ |
 
 ---

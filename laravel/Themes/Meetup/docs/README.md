@@ -17,6 +17,7 @@ The purpose of this documentation is to provide comprehensive information about 
     - [`volt-flat-properties-pattern.md`](./volt-flat-properties-pattern.md) - Pattern Volt con flat public properties (legacy)
     - [`helper-class-pattern.md`](./helper-class-pattern.md) - Pattern Helper Class per componenti Blade
     - [`agnostic-routing.md`](./agnostic-routing.md) - Routing agnostico con Laravel Folio
+    - [`translations.md`](./translations.md) - Gestione traduzioni nel tema (namespace `pub_theme::`)
 - Other Markdown files will detail specific aspects of the theme, such as:
     - `installation.md`
     - `usage.md`

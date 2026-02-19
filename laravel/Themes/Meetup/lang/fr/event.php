@@ -10,12 +10,144 @@ return [
         'icon' => 'heroicon-o-calendar',
         'sort' => 11,
     ],
+    'label' => 'Événement',
+    'plural_label' => 'Événements',
+    'fields' => [
+        'date' => [
+            'label' => 'Date',
+            'placeholder' => 'Sélectionner la date',
+            'tooltip' => 'Date de l\'événement',
+            'helper_text' => '',
+            'description' => 'La date à laquelle l\'événement aura lieu',
+            'icon' => 'heroicon-o-calendar',
+            'color' => 'primary',
+        ],
+        'time' => [
+            'label' => 'Heure',
+            'placeholder' => 'Saisir l\'heure',
+            'tooltip' => 'Heure de début et de fin de l\'événement',
+            'helper_text' => '',
+            'description' => 'L\'horaire prévu pour l\'événement',
+            'icon' => 'heroicon-o-clock',
+            'color' => 'primary',
+        ],
+        'location' => [
+            'label' => 'Lieu',
+            'placeholder' => 'Rechercher un lieu',
+            'tooltip' => 'Adresse ou lieu de l\'événement',
+            'helper_text' => '',
+            'description' => 'Le lieu physique ou virtuel de l\'événement',
+            'icon' => 'heroicon-o-map-pin',
+            'color' => 'primary',
+        ],
+        'about_this_event' => [
+            'label' => 'À propos de cet événement',
+            'placeholder' => '',
+            'tooltip' => 'Détails et description de l\'événement',
+            'helper_text' => '',
+            'description' => 'Section descriptive complète pour les détails de l\'événement',
+            'icon' => 'heroicon-o-information-circle',
+            'color' => 'info',
+        ],
+        'attendees' => [
+            'label' => 'Participants',
+            'placeholder' => '',
+            'tooltip' => 'Liste des inscrits à l\'événement',
+            'helper_text' => '',
+            'description' => 'Visualisation du nombre et des profils des participants',
+            'icon' => 'heroicon-o-user-group',
+            'color' => 'primary',
+        ],
+        'people_joined' => [
+            'label' => 'Personnes déjà inscrites',
+            'placeholder' => '',
+            'tooltip' => 'Nombre total de personnes ayant confirmé leur participation',
+            'helper_text' => '',
+            'description' => 'Compteur des utilisateurs inscrits à l\'événement',
+            'icon' => 'heroicon-o-check-circle',
+            'color' => 'success',
+        ],
+        'topics' => [
+            'label' => 'Sujets abordés',
+            'placeholder' => '',
+            'tooltip' => 'Thèmes principaux de l\'événement',
+            'helper_text' => '',
+            'description' => 'Liste des sujets ou conférences prévus',
+            'icon' => 'heroicon-o-hashtag',
+            'color' => 'primary',
+        ],
+        'spots_available' => [
+            'label' => 'Places encore disponibles',
+            'placeholder' => '',
+            'tooltip' => 'Nombre de places libres pour l\'inscription',
+            'helper_text' => '',
+            'description' => 'Capacité restante de l\'événement',
+            'icon' => 'heroicon-o-user-plus',
+            'color' => 'warning',
+        ],
+        'free_entry' => [
+            'label' => 'Entrée gratuite',
+            'placeholder' => '',
+            'tooltip' => 'Indique si l\'événement est gratuit',
+            'helper_text' => '',
+            'description' => 'Informations sur la gratuité de l\'événement',
+            'icon' => 'heroicon-o-ticket',
+            'color' => 'success',
+        ],
+    ],
+    'actions' => [
+        'share_event' => [
+            'label' => 'Partager l\'événement',
+            'placeholder' => 'Cliquez pour partager',
+            'tooltip' => 'Partagez cet événement sur les réseaux sociaux ou via un lien',
+            'helper_text' => '',
+            'description' => 'Lance le processus de partage de l\'événement',
+            'icon' => 'heroicon-o-share',
+            'color' => 'primary',
+        ],
+        'view_map' => [
+            'label' => 'Voir sur la carte',
+            'placeholder' => '',
+            'tooltip' => 'Ouvrir le lieu sur Google Maps',
+            'helper_text' => '',
+            'description' => 'Affiche les coordonnées de l\'événement sur la carte interactive',
+            'icon' => 'heroicon-o-map',
+            'color' => 'primary',
+        ],
+        'rsvp_now' => [
+            'label' => 'Participer maintenant',
+            'placeholder' => '',
+            'tooltip' => 'Réservez votre place per l\'événement',
+            'helper_text' => '',
+            'description' => 'Exécute l\'inscription formelle à l\'événement',
+            'icon' => 'heroicon-o-hand-raised',
+            'color' => 'success',
+        ],
+        'sign_in_to_rsvp' => [
+            'label' => 'Connectez-vous pour participer',
+            'placeholder' => '',
+            'tooltip' => 'Connectez-vous pour pouvoir réserver',
+            'helper_text' => '',
+            'description' => 'Redirige vers la page de connexion pour l\'inscription RSVP',
+            'icon' => 'heroicon-o-arrow-right-on-rectangle',
+            'color' => 'primary',
+        ],
+        'back_to_events' => [
+            'label' => 'Retour aux événements',
+            'placeholder' => '',
+            'tooltip' => 'Retourner à la liste complète des événements',
+            'helper_text' => '',
+            'description' => 'Navigue vers la page principale des meetups',
+            'icon' => 'heroicon-o-arrow-left',
+            'color' => 'secondary',
+        ],
+    ],
     'status' => [
         'upcoming' => [
             'label' => 'À venir',
         ],
         'past' => [
-            'label' => 'Passé',
+            'label' => 'Événement passé',
         ],
     ],
     'not_found' => [
@@ -24,37 +156,33 @@ return [
     'not_found_description' => [
         'label' => 'Désolé, l\'événement que vous recherchez n\'existe pas ou a été supprimé.',
     ],
-    'back_to_events' => [
-        'label' => 'Retour aux événements',
+    // Traductions plates pour compatibilité template (philosophie Laraxot: structure étendue avec accès direct)
+    'date' => [
+        'label' => 'Date',
+        'help' => 'Date à laquelle l\'événement aura lieu',
     ],
-    'home' => [
-        'label' => 'Accueil',
+    'time' => [
+        'label' => 'Heure',
+        'help' => 'Heure de début de l\'événement',
     ],
-    'events' => [
-        'label' => 'Événements',
+    'location' => [
+        'label' => 'Lieu',
+        'help' => 'Adresse ou lieu de l\'événement',
     ],
-    'topics' => [
-        'label' => 'Sujets abordés',
+    'about_this_event' => [
+        'label' => 'À propos de cet événement',
+        'help' => 'Détails et description de l\'événement',
     ],
-    'view_map' => [
-        'label' => 'Voir sur la carte',
+    'attendees' => [
+        'label' => 'Participants',
+        'help' => 'Personnes qui participeront à l\'événement',
     ],
-    'spots_available' => [
-        'label' => 'Places encore disponibles',
+    'people_joined' => [
+        'label' => 'personnes ont rejoint',
+        'help' => 'Nombre de participants confirmés',
     ],
-    'of' => [
-        'label' => 'sur',
-    ],
-    'sign_in_to_rsvp' => [
-        'label' => 'Connectez-vous pour participer',
-    ],
-    'rsvp_now' => [
-        'label' => 'Participer maintenant',
-    ],
-    'registration_closed' => [
-        'label' => 'Inscriptions closes',
-    ],
-    'free_entry' => [
-        'label' => 'Entrée gratuite',
+    'share_event' => [
+        'label' => 'Partager l\'événement',
+        'help' => 'Partagez cet événement avec vos contacts',
     ],
 ];

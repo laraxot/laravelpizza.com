@@ -6,23 +6,27 @@
 *   **Production**: `docs/screenshots/production_event_detail.png` (Pending Capture)
 *   **Local**: `docs/screenshots/local_event_detail.png` (Pending Capture)
 
-## 📊 Discrepancy Analysis
+## 📊 Discrepancy Analysis (High Fidelity)
 
-### 1. Header & Breadcrumbs
-- **Local**: Uses a custom simplified breadcrumb structure.
-- **Production**: To be verified (likely includes more context-specific navigation).
+### 1. Header & Typography
+- **Reference**: Large white bold title "Laravel 11 Release Pizza Party" on a dark/slate gradient background.
+- **Local**: Currently uses a more complex 2-column layout with a sidebar.
+- **Action**: Flatten the header and ensure the title is the focal point with proper alignment.
 
-### 2. Layout & Spacing
-- **Local**: Uses a 2-column grid (Content 2/3, Sidebar 1/3) with Glassmorphism styles.
-- **Production**: To be verified for exact grid ratios and alignment.
+### 2. Information Blocks (Date/Time/Location)
+- **Reference**: Three distinct blocks with rounded icons (light backgrounds) for Date, Time, and Location, arranged horizontally.
+- **Local**: Uses a sidebar sidebar for RSVP.
+- **Action**: Refactor the information display to match the horizontal block pattern with SVG icons.
 
-### 3. Interactive Elements (The Engine)
-- **Local**: Registration is partially implemented. RSVP button state depends on auth.
-- **Production**: Live RSVP flow, check if it uses modals or separate pages.
+### 3. Navigation & Badges
+- **Reference**: "< Torna agli eventi" breadcrumb and a vivid green "Upcoming" pill badge.
+- **Local**: Uses a custom breadcrumb with multiple levels.
+- **Action**: Simplify breadcrumbs and update badge styling to match the reference.
 
-### 4. Color Palette & Typography
-- **Local**: Uses Slate/Orange palette with Inter/Roboto.
-- **Production**: Confirm exact hex codes and font families.
+### 4. Background & Accents
+- **Reference**: Very dark slate background with subtle glow/gradient effects.
+- **Local**: Uses Glassmorphism with orange/blue blurs.
+- **Action**: Keep the premium blurs but ensure the primary background is deep enough to match the production theme.
 
 ## 🗺 Roadmap to 100% Parity
 

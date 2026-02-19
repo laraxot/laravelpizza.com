@@ -10,99 +10,150 @@ return [
         'icon' => 'heroicon-o-calendar',
         'sort' => 11,
     ],
+    'label' => 'Veranstaltung',
+    'plural_label' => 'Veranstaltungen',
+    'fields' => [
+        'date' => [
+            'label' => 'Datum',
+            'placeholder' => 'Datum auswählen',
+            'tooltip' => 'Datum der Veranstaltung',
+            'helper_text' => '',
+            'description' => 'Das Datum, an dem die Veranstaltung stattfindet',
+            'icon' => 'heroicon-o-calendar',
+            'color' => 'primary',
+        ],
+        'time' => [
+            'label' => 'Uhrzeit',
+            'placeholder' => 'Uhrzeit eingeben',
+            'tooltip' => 'Start- und Endzeit der Veranstaltung',
+            'helper_text' => '',
+            'description' => 'Das geplante Zeitfenster für die Veranstaltung',
+            'icon' => 'heroicon-o-clock',
+            'color' => 'primary',
+        ],
+        'location' => [
+            'label' => 'Ort',
+            'placeholder' => 'Ort suchen',
+            'tooltip' => 'Adresse oder Veranstaltungsort',
+            'helper_text' => '',
+            'description' => 'Der physische oder virtuelle Ort der Veranstaltung',
+            'icon' => 'heroicon-o-map-pin',
+            'color' => 'primary',
+        ],
+        'about_this_event' => [
+            'label' => 'Über diese Veranstaltung',
+            'placeholder' => '',
+            'tooltip' => 'Details und Beschreibung der Veranstaltung',
+            'helper_text' => '',
+            'description' => 'Vollständiger beschreibender Abschnitt für Veranstaltungsdetails',
+            'icon' => 'heroicon-o-information-circle',
+            'color' => 'info',
+        ],
+        'attendees' => [
+            'label' => 'Teilnehmer',
+            'placeholder' => '',
+            'tooltip' => 'Liste der registrierten Teilnehmer',
+            'helper_text' => '',
+            'description' => 'Visualisierung der Anzahl und Profile der Teilnehmer',
+            'icon' => 'heroicon-o-user-group',
+            'color' => 'primary',
+        ],
+        'people_joined' => [
+            'label' => 'Bereits beigetretene Personen',
+            'placeholder' => '',
+            'tooltip' => 'Gesamtzahl der Personen, die ihre Teilnahme bestätigt haben',
+            'helper_text' => '',
+            'description' => 'Zähler der registrierten Benutzer für die Veranstaltung',
+            'icon' => 'heroicon-o-check-circle',
+            'color' => 'success',
+        ],
+        'topics' => [
+            'label' => 'Behandelte Themen',
+            'placeholder' => '',
+            'tooltip' => 'Hauptthemen der Veranstaltung',
+            'helper_text' => '',
+            'description' => 'Liste der geplanten Themen oder Vorträge',
+            'icon' => 'heroicon-o-hashtag',
+            'color' => 'primary',
+        ],
+        'spots_available' => [
+            'label' => 'Noch verfügbare Plätze',
+            'placeholder' => '',
+            'tooltip' => 'Anzahl der freien Plätze für die Registrierung',
+            'helper_text' => '',
+            'description' => 'Verbleibende Kapazität der Veranstaltung',
+            'icon' => 'heroicon-o-user-plus',
+            'color' => 'warning',
+        ],
+        'free_entry' => [
+            'label' => 'Freier Eintritt',
+            'placeholder' => '',
+            'tooltip' => 'Gibt an, ob für die Veranstaltung kein Eintrittsgeld erhoben wird',
+            'helper_text' => '',
+            'description' => 'Informationen über die Kostenlosigkeit der Veranstaltung',
+            'icon' => 'heroicon-o-ticket',
+            'color' => 'success',
+        ],
+    ],
+    'actions' => [
+        'share_event' => [
+            'label' => 'Veranstaltung teilen',
+            'placeholder' => 'Zum Teilen klicken',
+            'tooltip' => 'Teilen Sie diese Veranstaltung in sozialen Medien oder über einen Link',
+            'helper_text' => '',
+            'description' => 'Startet den Prozess zum Teilen der Veranstaltung',
+            'icon' => 'heroicon-o-share',
+            'color' => 'primary',
+        ],
+        'view_map' => [
+            'label' => 'Auf der Karte ansehen',
+            'placeholder' => '',
+            'tooltip' => 'Den Standort in Google Maps öffnen',
+            'helper_text' => '',
+            'description' => 'Zeigt die Koordinaten der Veranstaltung auf der interaktiven Karte an',
+            'icon' => 'heroicon-o-map',
+            'color' => 'primary',
+        ],
+        'rsvp_now' => [
+            'label' => 'Jetzt beitreten',
+            'placeholder' => '',
+            'tooltip' => 'Buchen Sie Ihren Platz für die Veranstaltung',
+            'helper_text' => '',
+            'description' => 'Führt die formelle Registrierung für die Veranstaltung aus',
+            'icon' => 'heroicon-o-hand-raised',
+            'color' => 'success',
+        ],
+        'sign_in_to_rsvp' => [
+            'label' => 'Anmelden, um beizutreten',
+            'placeholder' => '',
+            'tooltip' => 'Anmelden, um buchen zu können',
+            'helper_text' => '',
+            'description' => 'Leitet zur Login-Seite für die RSVP-Registrierung weiter',
+            'icon' => 'heroicon-o-arrow-right-on-rectangle',
+            'color' => 'primary',
+        ],
+        'back_to_events' => [
+            'label' => 'Zurück zu den Veranstaltungen',
+            'placeholder' => '',
+            'tooltip' => 'Zurück zur vollständigen Liste der Veranstaltungen',
+            'helper_text' => '',
+            'description' => 'Navigiert zurück zur Haupt-Meetup-Seite',
+            'icon' => 'heroicon-o-arrow-left',
+            'color' => 'secondary',
+        ],
+    ],
     'status' => [
         'upcoming' => [
             'label' => 'Bevorstehend',
         ],
         'past' => [
-            'label' => 'Vergangen',
+            'label' => 'Vergangene Veranstaltung',
         ],
     ],
     'not_found' => [
         'label' => 'Veranstaltung nicht gefunden',
     ],
     'not_found_description' => [
-        'label' => 'Leider existiert die gesuchte Veranstaltung nicht oder wurde entfernt.',
-    ],
-    'back_to_events' => [
-        'label' => 'Zurück zu Veranstaltungen',
-    ],
-    'home' => [
-        'label' => 'Startseite',
-    ],
-    'events' => [
-        'label' => 'Veranstaltungen',
-    ],
-    'topics' => [
-        'label' => 'Behandelte Themen',
-    ],
-    'view_map' => [
-        'label' => 'Auf der Karte anzeigen',
-    ],
-    'spots_available' => [
-        'label' => 'Noch freie Plätze',
-    ],
-    'of' => [
-        'label' => 'von',
-    ],
-    'sign_in_to_rsvp' => [
-        'label' => 'Anmelden um teilzunehmen',
-    ],
-    'rsvp_now' => [
-        'label' => 'Jetzt anmelden',
-    ],
-    'registration_closed' => [
-        'label' => 'Anmeldung geschlossen',
-    ],
-    'free_entry' => [
-        'label' => 'Kostenloser Eintritt',
-    ],
-    'date' => [
-        'label' => 'Datum',
-    ],
-    'time' => [
-        'label' => 'Uhrzeit',
-    ],
-    'location' => [
-        'label' => 'Ort',
-    ],
-    'about_this_event' => [
-        'label' => 'Über diese Veranstaltung',
-    ],
-    'event_location' => [
-        'label' => 'Veranstaltungsort',
-    ],
-    'map_loading' => [
-        'label' => 'Karte wird geladen...',
-    ],
-    'click_to_view' => [
-        'label' => 'Klicken für Google Maps',
-    ],
-    'attendees' => [
-        'label' => 'Teilnehmer',
-    ],
-    'people_joined' => [
-        'label' => ':count Personen nehmen teil',
-    ],
-    'join_event' => [
-        'label' => 'Teilnehmen',
-    ],
-    'available_spots' => [
-        'label' => 'Freie Plätze',
-    ],
-    'book_your_spot' => [
-        'label' => 'Platz buchen',
-    ],
-    'spots_filling_fast' => [
-        'label' => 'Plätze werden schnell vergeben!',
-    ],
-    'share_event' => [
-        'label' => 'Veranstaltung teilen',
-    ],
-    'no_events_found' => [
-        'label' => 'Keine Veranstaltungen gefunden',
-    ],
-    'check_back_later' => [
-        'label' => 'Schauen Sie später vorbei',
+        'label' => 'Entschuldigung, die gesuchte Veranstaltung existiert nicht oder wurde entfernt.',
     ],
 ];
