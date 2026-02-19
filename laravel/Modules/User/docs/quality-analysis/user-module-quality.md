@@ -75,8 +75,8 @@
 
 - [Code Quality Analysis](./code_quality_analysis.md)
 - [Optimization Analysis](./optimization-analysis.md)
-- [Business Logic Deep Dive](./BUSINESS_LOGIC_DEEP_DIVE.md)
-- [Xot Quality Analysis](../Xot/docs/quality-analysis/current-status.md)
+- [Business Logic Deep Dive](./business_logic_deep_dive.md)
+- [Xot Quality Analysis](../xot/docs/quality-analysis/current-status.md)
 
 ## 📝 Note
 

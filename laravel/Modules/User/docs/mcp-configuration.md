@@ -213,7 +213,7 @@ Map User module roadmap tasks to Asana:
 - [Asana MCP Configuration](../../../docs/mcp-asana-configuration.md)
 - [ClickUp MCP Configuration](../../../docs/mcp-clickup-configuration.md)
 - [Redmine MCP Configuration](../../../docs/mcp-redmine-configuration.md)
-- [User Module Roadmap](./roadmap-[DATE].md)
+- [User Module Roadmap](./roadmap-[date].md)
 
 ---
 

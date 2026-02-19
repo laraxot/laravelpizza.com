@@ -31,13 +31,13 @@ Il modello `Team` accede direttamente a proprietà che potrebbero non essere dis
 3. Implementare controlli di tipo più robusti
 
 ### Collegamenti Bidirezionali
-- [Documentazione Generale PHPStan](/docs/phpstan/PHPSTAN_LEVEL10_LINEE_GUIDA.md)
+- [Documentazione Generale PHPStan](/docs/phpstan/phpstan_level10_linee_guida.md)
 - [Contratti del Modulo User](/docs/modules/user/contracts.md)
 - [Best Practices per i Modelli](/docs/modules/user/models.md)
 - [Interfacce e Contratti](/docs/modules/xot/contracts.md)
 
 ## Collegamenti tra versioni di phpstan_fixes.md
-* [phpstan_fixes.md](../../../Xot/docs/phpstan_fixes.md)
-* [phpstan_fixes.md](../../../User/docs/phpstan_fixes.md)
-* [phpstan_fixes.md](../../../User/docs/fixes/phpstan_fixes.md)
-* [phpstan_fixes.md](../../../Activity/docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../xot/docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../user/docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../user/docs/fixes/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../activity/docs/phpstan_fixes.md)

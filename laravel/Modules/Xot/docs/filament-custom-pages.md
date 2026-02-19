@@ -176,5 +176,5 @@ Modules/
 
 - [Filament 5 Upgrade Guide](../../../../../docs/filament-5-upgrade.md)
 - [Short Array Syntax Rule](../../../../../docs/coding-standards.md#array-syntax)
-- [Custom Pages - Pdnd Module](../../Pdnd/docs/filament-custom-pages.md)
-- [Custom Pages - Notify Module](../../Notify/docs/filament-custom-pages.md)
+- [Custom Pages - Pdnd Module](../../pdnd/docs/filament-custom-pages.md)
+- [Custom Pages - Notify Module](../../notify/docs/filament-custom-pages.md)

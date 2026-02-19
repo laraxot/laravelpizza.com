@@ -13,5 +13,5 @@ Il modulo "module_cms" è un pacchetto aggiuntivo per Laravel che fornisce funzi
 * [introduction.md](laravel/vendor/spatie/laravel-event-sourcing/docs/introduction.md)
 * [introduction.md](laravel/vendor/spatie/laravel-data/docs/introduction.md)
 * [introduction.md](laravel/vendor/spatie/laravel-data/docs/validation/introduction.md)
-* [introduction.md](laravel/Modules/Lang/docs/introduction.md)
-* [introduction.md](laravel/Modules/Cms/docs/introduction.md)
+* [introduction.md](laravel/modules/lang/docs/introduction.md)
+* [introduction.md](laravel/modules/cms/docs/introduction.md)

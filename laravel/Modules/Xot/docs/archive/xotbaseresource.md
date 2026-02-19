@@ -81,8 +81,8 @@ class NotificationResource extends XotBaseResource
 - [Regole XotBaseResource](../../../project_docs/regole/xotbaseresource-rules.md)
 
 ### Collegamenti ai Moduli
-- [Notify Resource](../../Notify/project_docs/filament-resources.md)
-- [User Resource](../../User/project_docs/filament-resources.md)
+- [Notify Resource](../../notify/project_docs/filament-resources.md)
+- [User Resource](../../user/project_docs/filament-resources.md)
 
 ## Note Importanti
 

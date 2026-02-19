@@ -167,6 +167,6 @@ class ChatMessageWrapper extends Component
 - Caching appropriato
 
 ## Collegamenti
-- [Documentazione UI](../ui/README.md)
+- [Documentazione UI](../ui/readme.md)
 - [Gestione Sezioni](../section-management.md)
-- [Componenti Base](../components/README.md)
+- [Componenti Base](../components/readme.md)

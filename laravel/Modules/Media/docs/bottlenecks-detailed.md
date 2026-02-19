@@ -351,9 +351,9 @@ final class Media extends Model
 
 ```
 ## Collegamenti tra versioni di bottlenecks_detailed.md
-* [bottlenecks_detailed.md](../../../Xot/docs/bottlenecks_detailed.md)
-* [bottlenecks_detailed.md](../../../Job/docs/bottlenecks_detailed.md)
-* [bottlenecks_detailed.md](../../../Media/docs/bottlenecks_detailed.md)
+* [bottlenecks_detailed.md](../../../xot/docs/bottlenecks_detailed.md)
+* [bottlenecks_detailed.md](../../../job/docs/bottlenecks_detailed.md)
+* [bottlenecks_detailed.md](../../../media/docs/bottlenecks_detailed.md)
 
 ### Versione Incoming
 

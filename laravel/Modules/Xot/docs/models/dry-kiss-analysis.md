@@ -327,7 +327,7 @@ Manutenibilità: +40%
 - [Laravel Model Connections](https://laravel.com/docs/12.x/eloquent#database-connections)
 - [XotBasePivot Implementation](../../app/Models/XotBasePivot.php) - Auto-discovery già implementato
 - [XotBaseMorphPivot Implementation](../../app/Models/XotBaseMorphPivot.php) - Auto-discovery già implementato
-- [CLAUDE.md](../../../CLAUDE.md) - Convenzioni architetturali
+- [CLAUDE.md](../../../claude.md) - Convenzioni architetturali
 
 ## 🎓 Lezioni Apprese
 
@@ -669,7 +669,7 @@ Manutenibilità: +40%
 - [Laravel Model Connections](https://laravel.com/docs/12.x/eloquent#database-connections)
 - [XotBasePivot Implementation](../../app/Models/XotBasePivot.php) - Auto-discovery già implementato
 - [XotBaseMorphPivot Implementation](../../app/Models/XotBaseMorphPivot.php) - Auto-discovery già implementato
-- [CLAUDE.md](../../../CLAUDE.md) - Convenzioni architetturali
+- [CLAUDE.md](../../../claude.md) - Convenzioni architetturali
 
 ## 🎓 Lezioni Apprese
 

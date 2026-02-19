@@ -227,13 +227,13 @@ MyTableWidget::make([
 **⚠️ IMPORTANTE**: Le proprietà `protected` o `private` **NON** vengono inizializzate da `make()`.
 
 Per documentazione completa, vedere:
-- [Widget Property Initialization Pattern](../../../Modules/Quaeris/docs/widget-property-initialization-pattern.md)
+- [Widget Property Initialization Pattern](../../../modules/quaeris/docs/widget-property-initialization-pattern.md)
 
 ## Riferimenti
 
-- [HasXotTable Trait](../../../Modules/Xot/docs/filament/xot-table.md)
-- [No Table Override Rule](../../../Modules/Xot/docs/filament/no-table-override.md)
-- [Widget Table Method Final Analysis](../../../Modules/Quaeris/docs/widget-table-method-final-analysis.md)
-- [Widget Property Initialization Pattern](../../../Modules/Quaeris/docs/widget-property-initialization-pattern.md)
+- [HasXotTable Trait](../../../modules/xot/docs/filament/xot-table.md)
+- [No Table Override Rule](../../../modules/xot/docs/filament/no-table-override.md)
+- [Widget Table Method Final Analysis](../../../modules/quaeris/docs/widget-table-method-final-analysis.md)
+- [Widget Property Initialization Pattern](../../../modules/quaeris/docs/widget-property-initialization-pattern.md)
 
 *Ultimo aggiornamento: 2025-01-27*

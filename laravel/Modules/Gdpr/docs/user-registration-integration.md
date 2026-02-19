@@ -566,15 +566,15 @@ test('user registration saves gdpr consents', function () {
 ## Collegamenti
 
 ### Documentazione Intera
-- [README Modulo Gdpr](./README.md)
+- [README Modulo Gdpr](./readme.md)
 - [Consent Management System](./consents.md)
 - [GDPR Compliance Guide](./gdpr-compliance.md)
 - [Testing Guidelines](./testing-guidelines.md)
 
 ### Documentazione Moduli Correlati
-- [User Module - GDPR Compliance](../../User/docs/gdpr-compliance-complete.md)
-- [User Module - Events](../../User/docs/events.md)
-- [Xot Module - Traits](../../Xot/docs/traits.md)
+- [User Module - GDPR Compliance](../../user/docs/gdpr-compliance-complete.md)
+- [User Module - Events](../../user/docs/events.md)
+- [Xot Module - Traits](../../xot/docs/traits.md)
 
 ---
 

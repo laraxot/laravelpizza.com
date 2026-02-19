@@ -138,9 +138,9 @@ return BlockData::collection([]);
 
 ## 🔗 Collegamenti
 
-- [Activity Module Docs](../../Activity/docs/README.md)
-- [Cms Module Docs](../../Cms/docs/README.md)
-- [Geo Module Docs](../../Geo/docs/README.md)
+- [Activity Module Docs](../../activity/docs/readme.md)
+- [Cms Module Docs](../../cms/docs/readme.md)
+- [Geo Module Docs](../../geo/docs/readme.md)
 
 ---
 

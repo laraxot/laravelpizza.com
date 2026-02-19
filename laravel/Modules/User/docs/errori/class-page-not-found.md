@@ -335,13 +335,13 @@ class MyPage extends XotBasePage
 ## Collegamenti
 
 ### Documentazione Correlata
-- [XotBase Architecture](../../Xot/docs/xotbase-architecture-complete.md)
-- [Mai Estendere Filament Direttamente](../../Xot/docs/errori-critici/mai-estendere-filament-direttamente.md)
-- [Standalone vs Resource Pages](../../Xot/docs/filament/standalone-vs-resource-pages.md)
+- [XotBase Architecture](../../xot/docs/xotbase-architecture-complete.md)
+- [Mai Estendere Filament Direttamente](../../xot/docs/errori-critici/mai-estendere-filament-direttamente.md)
+- [Standalone vs Resource Pages](../../xot/docs/filament/standalone-vs-resource-pages.md)
 
 ### Clusters in Xot
 - [XotBaseCluster](../../Xot/app/Filament/Clusters/XotBaseCluster.php)
-- [Cluster Best Practices](../../Xot/docs/filament/clusters.md)
+- [Cluster Best Practices](../../xot/docs/filament/clusters.md)
 
 ---
 

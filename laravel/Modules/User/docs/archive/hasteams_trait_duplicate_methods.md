@@ -72,11 +72,11 @@ Nel trait `HasTeams` sono presenti diversi metodi con lo stesso nome ma implemen
 - [ ] Verificare la compatibilità con i moduli che usano il trait
 
 ## Collegamenti correlati
-- [Indice documentazione User](./INDEX.md)
-- [Modello User](./Models/User.md)
+- [Indice documentazione User](./index.md)
+- [Modello User](./models/user.md)
 - [Best practices trait](./best-practices-traits.md)
 - [Refactor checklist](./refactor-checklist.md)
-- [XotData helper](../../Xot/docs/standards/README.md)
+- [XotData helper](../../xot/docs/standards/readme.md)
 
 ---
 

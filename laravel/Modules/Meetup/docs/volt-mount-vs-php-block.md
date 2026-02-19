@@ -192,7 +192,7 @@ new class extends Component {
 
 ## 🔗 Riferimenti
 
-- [Volt Data Property Indispensable](../Themes/Meetup/docs/volt-data-property-indispensable.md)
-- [Volt Automatic Route Binding](../Themes/Meetup/docs/volt-automatic-route-binding.md)
-- [Routing No Business Logic](../Themes/Meetup/docs/routing-no-business-logic.md)
+- [Volt Data Property Indispensable](../themes/meetup/docs/volt-data-property-indispensable.md)
+- [Volt Automatic Route Binding](../themes/meetup/docs/volt-automatic-route-binding.md)
+- [Routing No Business Logic](../themes/meetup/docs/routing-no-business-logic.md)
 - [Container0 Slug0 Agnostic Pattern](container0-slug0-agnostic-pattern.md)

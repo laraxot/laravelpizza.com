@@ -9,7 +9,7 @@ Il tema Meetup implementa lo standard di localizzazione Laraxot basato su **mcam
 - **mcamara/laravel-localization**: [README](https://github.com/mcamara/laravel-localization)
 - **Regola progetto**: [.cursor/rules/laravel-localization-mcamara.mdc](../../../.cursor/rules/laravel-localization-mcamara.mdc)
 - **Memoria**: [.cursor/memories/laravel-localization-mcamara.md](../../../.cursor/memories/laravel-localization-mcamara.md)
-- **Riferimento completo**: [Modules/Lang/docs/laravel-localization-mcamara-reference.md](../../Modules/Lang/docs/laravel-localization-mcamara-reference.md)
+- **Riferimento completo**: [Modules/Lang/docs/laravel-localization-mcamara-reference.md](../../modules/lang/docs/laravel-localization-mcamara-reference.md)
 
 ## Locale detection in Folio context (CRITICAL)
 
@@ -93,5 +93,5 @@ $currentLocale = (is_string($urlLocale) && in_array($urlLocale, $supportedKeys, 
 
 ## Riferimenti incrociati
 
-- [Modules/Meetup/docs/localization-standard.md](../../Modules/Meetup/docs/localization-standard.md)
-- [Modules/Cms/docs/folio-routing-locale.md](../../Modules/Cms/docs/folio-routing-locale.md)
+- [Modules/Meetup/docs/localization-standard.md](../../modules/meetup/docs/localization-standard.md)
+- [Modules/Cms/docs/folio-routing-locale.md](../../modules/cms/docs/folio-routing-locale.md)

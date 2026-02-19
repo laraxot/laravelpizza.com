@@ -212,7 +212,7 @@ grep -r "Filament\\\\Actions" laravel/Modules/*/app/
 
 ## 📚 Riferimenti
 
-- [Filament 4 Migration Guide](../../Xot/docs/filament-4-migration-guide.md)
+- [Filament 4 Migration Guide](../../xot/docs/filament-4-migration-guide.md)
 - [PHPStan Errors Philosophy](./phpstan-errors-philosophy.md)
 - [Filament 4 Documentation](https://filamentphp.com/docs/4.x)
 

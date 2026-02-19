@@ -412,7 +412,7 @@ return [
 - [XotBaseWidget](../app/Filament/Widgets/XotBaseWidget.php)
 
 ### Errori Simili Documentati
-- [No Hint Path Defined](../../Activity/docs/errori/no-hint-path-defined.md)
+- [No Hint Path Defined](../../activity/docs/errori/no-hint-path-defined.md)
 - [Service Provider Issues](./service-provider-issues.md)
 
 ---

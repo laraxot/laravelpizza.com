@@ -40,7 +40,7 @@ Il nesting in Filament 5.x permette di creare risorse figlie con pagine complete
 
 ### Modulo Quaeris
 
-**Documentazione**: [Modules/Quaeris/docs/filament-nesting-opportunities.md](../../Quaeris/docs/filament-nesting-opportunities.md)
+**Documentazione**: [Modules/Quaeris/docs/filament-nesting-opportunities.md](../../quaeris/docs/filament-nesting-opportunities.md)
 
 **Opportunità Identificate**:
 
@@ -59,7 +59,7 @@ Il nesting in Filament 5.x permette di creare risorse figlie con pagine complete
 
 ### Modulo Limesurvey
 
-**Documentazione**: [Modules/Limesurvey/docs/filament-nesting-opportunities.md](../../Limesurvey/docs/filament-nesting-opportunities.md)
+**Documentazione**: [Modules/Limesurvey/docs/filament-nesting-opportunities.md](../../limesurvey/docs/filament-nesting-opportunities.md)
 
 **Opportunità Identificate**:
 
@@ -84,7 +84,7 @@ Il nesting in Filament 5.x permette di creare risorse figlie con pagine complete
 
 ### Modulo Cms
 
-**Documentazione**: [Modules/Cms/docs/filament-nesting-opportunities.md](../../Cms/docs/filament-nesting-opportunities.md)
+**Documentazione**: [Modules/Cms/docs/filament-nesting-opportunities.md](../../cms/docs/filament-nesting-opportunities.md)
 
 **Opportunità Identificate**:
 
@@ -107,7 +107,7 @@ Il nesting in Filament 5.x permette di creare risorse figlie con pagine complete
 
 ### Modulo User
 
-**Documentazione**: [Modules/User/docs/filament-nesting-opportunities.md](../../User/docs/filament-nesting-opportunities.md)
+**Documentazione**: [Modules/User/docs/filament-nesting-opportunities.md](../../user/docs/filament-nesting-opportunities.md)
 
 **Opportunità Identificate**:
 
@@ -207,10 +207,10 @@ php artisan make:filament-relation-manager SurveyPdfResource contacts email
 
 - [Filament 5.x Nesting Documentation](https://filamentphp.com/docs/5.x/resources/nesting)
 - [Filament 5.x Nesting Migration Guide](./filament-5-nesting-migration.md)
-- [Quaeris Nesting Opportunities](../../Quaeris/docs/filament-nesting-opportunities.md)
-- [Limesurvey Nesting Opportunities](../../Limesurvey/docs/filament-nesting-opportunities.md)
-- [Cms Nesting Opportunities](../../Cms/docs/filament-nesting-opportunities.md)
-- [User Nesting Opportunities](../../User/docs/filament-nesting-opportunities.md)
+- [Quaeris Nesting Opportunities](../../quaeris/docs/filament-nesting-opportunities.md)
+- [Limesurvey Nesting Opportunities](../../limesurvey/docs/filament-nesting-opportunities.md)
+- [Cms Nesting Opportunities](../../cms/docs/filament-nesting-opportunities.md)
+- [User Nesting Opportunities](../../user/docs/filament-nesting-opportunities.md)
 
 ---
 

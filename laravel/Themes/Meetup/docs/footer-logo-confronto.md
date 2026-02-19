@@ -90,7 +90,7 @@ Conclusione (stato attuale): nel tema Meetup locale **header e footer sono già 
 ## 5. Riferimenti
 
 - Screenshot footer: [docs/screenshots/footer/](docs/screenshots/footer/).
-- Screenshot footer: [screenshots/footer-logo-confronto](screenshots/footer-logo-confronto/README.md).
+- Screenshot footer: [screenshots/footer-logo-confronto](screenshots/footer-logo-confronto/readme.md).
 - Approfondimento grafica (footer e logo): [differenze-grafica-approfondimento](differenze-grafica-approfondimento.md).
 - Differenze generali: [differenze-grafica-e-miglioramenti](differenze-grafica-e-miglioramenti.md).
 - Componente logo condiviso: `resources/views/components/ui/logo.blade.php`.

@@ -20,5 +20,5 @@
 
 ## Collegamenti
 - [docs root](../../../../docs/actions.md)
-- [docs Xot](../../../Xot/docs/MODULE_NAMESPACE_RULES.md)
+- [docs Xot](../../../xot/docs/module_namespace_rules.md)
 

@@ -146,8 +146,8 @@ The User module's LangServiceProvider automatically loads and manages widget tra
 4. Document any breaking changes
 ## Related Documentation
 - [User Module Widget Structure](../widgets_structure.md)
-- [Filament Widget Conventions](../../Xot/docs/filament-widgets.md)
-- [Translation System Overview](../../Xot/docs/translations.md)
-- [Filament Widget Conventions](../../Xot/project_docs/filament-widgets.md)
-- [Translation System Overview](../../Xot/project_docs/translations.md)
+- [Filament Widget Conventions](../../xot/docs/filament-widgets.md)
+- [Translation System Overview](../../xot/docs/translations.md)
+- [Filament Widget Conventions](../../xot/project_docs/filament-widgets.md)
+- [Translation System Overview](../../xot/project_docs/translations.md)
 - [EditUserWidget Documentation](./edit-user-widget.md)

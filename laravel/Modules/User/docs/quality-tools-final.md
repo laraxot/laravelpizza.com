@@ -153,8 +153,8 @@ $user_class = XotData::make()->getUserClass();
 
 - [XotBaseResource getPages() Automatic](./xotbase-resource-getpages-automatic.md)
 - [Resources Array Keys Philosophy](./resources-array-keys-philosophy.md)
-- [Resources Corrections Summary](./resources-corrections-summary-[DATE].md)
-- [PHPMD PHP Insights Corrections](./phpmd-phpinsights-corrections-[DATE].md)
+- [Resources Corrections Summary](./resources-corrections-summary-[date].md)
+- [PHPMD PHP Insights Corrections](./phpmd-phpinsights-corrections-[date].md)
 - [Quality Tools Report](./quality-tools-report.md)
 - [PHPStan Complete Success](./phpstan-complete-success.md)
 

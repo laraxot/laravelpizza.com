@@ -469,15 +469,15 @@ docker-compose restart app
 ## Collegamenti
 
 ### Documentazione Correlata
-- [Activity Module - README](../README.md)
-- [XotBaseServiceProvider Architecture](../../Xot/docs/service-provider-architecture.md)
-- [Xot Module - README](../../Xot/docs/README.md)
+- [Activity Module - README](../readme.md)
+- [XotBaseServiceProvider Architecture](../../xot/docs/service-provider-architecture.md)
+- [Xot Module - README](../../xot/docs/readme.md)
 
 ### Altri Moduli con Activity Log
-- [IndennitaResponsabilita - Activity Log Integration](../../IndennitaResponsabilita/docs/activity-log-integration.md)
+- [IndennitaResponsabilita - Activity Log Integration](../../indennitaresponsabilita/docs/activity-log-integration.md)
 
 ### Sistema Architecture
-- [Service Provider Architecture](../../Xot/docs/service-provider-architecture.md) - Architettura completa del sistema ServiceProvider
+- [Service Provider Architecture](../../xot/docs/service-provider-architecture.md) - Architettura completa del sistema ServiceProvider
 - [Laraxot Conventions](../../../docs/laraxot-conventions.md) - Convenzioni generali
 
 ---

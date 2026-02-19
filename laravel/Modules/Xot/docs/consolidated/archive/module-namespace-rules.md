@@ -20,6 +20,6 @@
 
 ## Collegamenti
 - [docs root](../../../../project_docs/actions.md)
-- [docs Lang](../../Lang/project_docs/filament-label.md)
+- [docs Lang](../../lang/project_docs/filament-label.md)
 
 Ultimo aggiornamento: maggio 2025.

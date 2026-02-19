@@ -52,7 +52,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 
 ## Documentazione Correlata
 
-- [Filament class extension rules (Xot)](../Xot/docs/filament-class-extension-rules.md)
+- [Filament class extension rules (Xot)](../xot/docs/filament-class-extension-rules.md)
 
 ## Best Practices
 1. **Namespace**
@@ -135,12 +135,12 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 ```
 
 ## Documentazione Correlata
-- [Documentazione CMS Module](../laravel/Modules/Cms/project_docs/filament-resources.md)
-- [Documentazione Xot Module](../laravel/Modules/Xot/project_docs/filament-resources.md)
-- [Documentazione CMS Module](../laravel/Modules/Cms/project_docs/filament-resources.md)
-- [Documentazione Xot Module](../laravel/Modules/Xot/project_docs/filament-resources.md)
-- [Documentazione CMS Module](../laravel/Modules/Cms/project_docs/filament-resources.md)
-- [Documentazione Xot Module](../laravel/Modules/Xot/project_docs/filament-resources.md)
+- [Documentazione CMS Module](../laravel/modules/cms/project_docs/filament-resources.md)
+- [Documentazione Xot Module](../laravel/modules/xot/project_docs/filament-resources.md)
+- [Documentazione CMS Module](../laravel/modules/cms/project_docs/filament-resources.md)
+- [Documentazione Xot Module](../laravel/modules/xot/project_docs/filament-resources.md)
+- [Documentazione CMS Module](../laravel/modules/cms/project_docs/filament-resources.md)
+- [Documentazione Xot Module](../laravel/modules/xot/project_docs/filament-resources.md)
 
 ## Best Practices
 1. **Namespace**

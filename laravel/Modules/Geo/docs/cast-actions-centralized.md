@@ -76,9 +76,9 @@ Ogni volta che si utilizzano queste azioni:
 4. Documentare l'uso specifico nel contesto
 
 ## Collegamenti
-- [<nome progetto> Cast Usage](../laravel/Modules/<nome progetto>/docs/cast-actions-usage.md)
-- [<nome progetto> Cast Usage](../laravel/Modules/<nome progetto>/docs/cast-actions-usage.md)
-- [Xot Cast Actions](../laravel/Modules/Xot/docs/actions/cast-actions.md)
+- [<nome progetto> Cast Usage](../laravel/modules/<nome progetto>/docs/cast-actions-usage.md)
+- [<nome progetto> Cast Usage](../laravel/modules/<nome progetto>/docs/cast-actions-usage.md)
+- [Xot Cast Actions](../laravel/modules/xot/docs/actions/cast-actions.md)
 - [PHPStan Best Practices](./phpstan-best-practices.md)
 
 *Ultimo aggiornamento: gennaio 2025*

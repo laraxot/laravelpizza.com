@@ -89,8 +89,8 @@ abstract class BaseModel extends XotBaseModel
 
 *Ultimo aggiornamento: maggio 2025*
 - [modules/xot/project_docs/model_base_rules.md](model_base_rules.md)
-- [docs/MODULE_NAMESPACE_RULES.md](../../project_docs/MODULE_NAMESPACE_RULES.md)
-- [modules/performance/project_docs/organizzativa-models.md](../Performance/project_docs/organizzativa-models.md)
+- [docs/MODULE_NAMESPACE_RULES.md](../../project_docs/module_namespace_rules.md)
+- [modules/performance/project_docs/organizzativa-models.md](../performance/project_docs/organizzativa-models.md)
 
 *Ultimo aggiornamento: maggio 2025*
 # Regole di Estensione dei Modelli Laraxot
@@ -183,7 +183,7 @@ abstract class BaseModel extends XotBaseModel
 ## Backlink e Riferimenti
 
 - [modules/xot/docs/model_base_rules.md](model_base_rules.md)
-- [docs/MODULE_NAMESPACE_RULES.md](../../docs/MODULE_NAMESPACE_RULES.md)
-- [modules/performance/docs/organizzativa-models.md](../Performance/docs/organizzativa-models.md)
+- [docs/MODULE_NAMESPACE_RULES.md](../../docs/module_namespace_rules.md)
+- [modules/performance/docs/organizzativa-models.md](../performance/docs/organizzativa-models.md)
 
 *Ultimo aggiornamento: maggio 2025*

@@ -37,7 +37,7 @@ class HandlerDecorator implements ExceptionHandlerContract
 - `renderForConsole`: Renderizza l'eccezione per l'output console
 
 ## Collegamenti
-- [Exception Handling Guidelines](../EXCEPTION-HANDLING-GUIDE.md)
-- [Logging Best Practices](../LOGGING-BEST-PRACTICES.md)
-- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
-- [Error Formatters](./formatters/README.md)
+- [Exception Handling Guidelines](../exception-handling-guide.md)
+- [Logging Best Practices](../logging-best-practices.md)
+- [PHPStan Level 9 Guide](../phpstan-level9-guide.md)
+- [Error Formatters](./formatters/readme.md)

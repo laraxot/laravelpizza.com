@@ -313,7 +313,7 @@ Ordinare risorse per frequenza uso:
 ## Collegamenti
 
 ### Documentazione Interna
-- [Progressioni MailTemplate Integration](../../Progressioni/docs/mailtemplate-resource-integration.md)
+- [Progressioni MailTemplate Integration](../../progressioni/docs/mailtemplate-resource-integration.md)
 - [TransTrait](./trans-trait.md)
 - [GetTransKeyAction](../actions/get-trans-key-action.md)
 

@@ -244,8 +244,8 @@ Estende: Modules\Xot\Filament\Widgets\XotBaseWidget
 
 ## Collegamenti contestuali
 
-- **[LOGIN_FILAMENT_WIDGET_ERROR.md](../../../Themes/TwentyOne/docs/LOGIN_FILAMENT_WIDGET_ERROR.md)** — Per conoscere gli errori più comuni e le soluzioni sbagliate da evitare nella progettazione dei widget Filament, consulta questo file: offre casi reali e motivazioni pratiche.
-- **[LOGIN_FILAMENT_WIDGET_PRO_CONS.md](../../../Themes/TwentyOne/docs/LOGIN_FILAMENT_WIDGET_PRO_CONS.md)** — Per un confronto ragionato tra approcci, vantaggi/svantaggi e best practice sull’implementazione del LoginWidget, consulta questo file: aiuta a scegliere il pattern più adatto e conforme alle regole Windsurf/Xot.
+- **[LOGIN_FILAMENT_WIDGET_ERROR.md](../../../themes/twentyone/docs/login_filament_widget_error.md)** — Per conoscere gli errori più comuni e le soluzioni sbagliate da evitare nella progettazione dei widget Filament, consulta questo file: offre casi reali e motivazioni pratiche.
+- **[LOGIN_FILAMENT_WIDGET_PRO_CONS.md](../../../themes/twentyone/docs/login_filament_widget_pro_cons.md)** — Per un confronto ragionato tra approcci, vantaggi/svantaggi e best practice sull’implementazione del LoginWidget, consulta questo file: aiuta a scegliere il pattern più adatto e conforme alle regole Windsurf/Xot.
 
 ---
 

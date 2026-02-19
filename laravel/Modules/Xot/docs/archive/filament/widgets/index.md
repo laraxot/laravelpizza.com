@@ -12,7 +12,7 @@ Il sistema di widget è organizzato attorno a classi base che forniscono funzion
 
 ### Widget Base
 
-- [XotBaseWidget](Modules/Xot/project_docs/filament/widgets/xotbasewidget.md) - Classe base per tutti i widget
+- [XotBaseWidget](modules/xot/project_docs/filament/widgets/xotbasewidget.md) - Classe base per tutti i widget
 
 ## Best Practices
 

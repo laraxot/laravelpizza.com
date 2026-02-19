@@ -183,7 +183,7 @@ Applicare pattern NO RefreshDatabase a tutti i test Activity:
 ### Documentazione
 - [No RefreshDatabase Policy](./testing/no-refresh-database-policy.md) - **Policy ufficiale**
 - [Snapshot Testing Patterns](./testing/snapshot-testing-patterns.md) - **Best practices**
-- [Xot Testing Strategy](../../Xot/docs/testing-strategy.md) - **Strategia globale**
+- [Xot Testing Strategy](../../xot/docs/testing-strategy.md) - **Strategia globale**
 
 ### Codice
 - [SnapshotBusinessLogicTest](../tests/Feature/SnapshotBusinessLogicTest.php) - **Implementazione**

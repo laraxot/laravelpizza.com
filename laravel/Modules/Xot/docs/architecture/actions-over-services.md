@@ -169,6 +169,6 @@ class SimpleChartWidget extends XotBaseChartWidget
 
 ### Riferimenti
 
-- [Chart Widget Best Practices (Quaeris)](../../../Quaeris/docs/chart-widget-best-practices.md)
+- [Chart Widget Best Practices (Quaeris)](../../../quaeris/docs/chart-widget-best-practices.md)
 - [Critical No Services Rule](../critical-no-services-rule.md)
 ```

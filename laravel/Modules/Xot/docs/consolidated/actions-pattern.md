@@ -212,6 +212,6 @@ Quando un'Action genera uno stream (es. PDF), deve restituire `StreamedResponse`
 
 ## Documentazione Correlata
 
-- [DRY Actions Rules](../.cursor/rules/DRY-actions-rules.md)
+- [DRY Actions Rules](../.cursor/rules/dry-actions-rules.md)
 - [Action Execution Pattern](../.cursor/rules/action-execution-pattern.md)
 - [Spatie QueueableAction Documentation](https://github.com/spatie/laravel-queueable-action)

@@ -501,8 +501,8 @@ try {
 ## 🔗 Collegamenti
 
 ### Documentazione Correlata
-- [Ptv - SendMailByRecord Complete Guide](../../../Ptv/docs/pdf-email-attachments-complete-guide.md)
-- [Notify - Email Attachments](../../../Notify/docs/email-sending/attachments_usage.md)
+- [Ptv - SendMailByRecord Complete Guide](../../../ptv/docs/pdf-email-attachments-complete-guide.md)
+- [Notify - Email Attachments](../../../notify/docs/email-sending/attachments_usage.md)
 - [Xot - View Conventions](../conventions/view-naming.md)
 
 ### File Correlati

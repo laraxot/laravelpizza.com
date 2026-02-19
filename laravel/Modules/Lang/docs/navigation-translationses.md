@@ -80,9 +80,9 @@ Il modulo Lang risulta **CONFORME** agli standard di traduzione:
 ## Collegamenti
 
 - [Audit Generale Traduzioni Navigation](../../docs/navigation-translations-audit.md)
-- [Documentazione Modulo Lang](README.md)
+- [Documentazione Modulo Lang](readme.md)
 - [Sistema Localizzazione](comprehensive_guide.md)
-- [Regole Traduzioni Laraxot](../Xot/docs/translation-rules.md)
+- [Regole Traduzioni Laraxot](../xot/docs/translation-rules.md)
 
 ## Note Tecniche
 

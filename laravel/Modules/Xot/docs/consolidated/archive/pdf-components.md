@@ -152,7 +152,7 @@ Il componente è stato estratto dal template `report_pdf.blade.php` del tema One
 
 - [Documentazione Componenti](../componenti_personalizzati.md)
 - [Best Practices Filament](../filament-best-practices.mdc)
-- [README Principale](../README.md)
+- [README Principale](../readme.md)
 
 ## Note di Sviluppo
 

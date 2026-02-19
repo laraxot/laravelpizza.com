@@ -200,7 +200,7 @@ protected function casts(): array
 ## Link Correlati
 
 - 📚 [Analisi Completa](../../../docs/analisi-metodi-duplicati.md)
-- 📖 [Modulo Xot - Classi Base](../../Xot/docs/analisi-metodi-duplicati.md)
+- 📖 [Modulo Xot - Classi Base](../../xot/docs/analisi-metodi-duplicati.md)
 - 📖 [Convenzioni Namespace Filament](./convenzioni-namespace-filament.md)
 - 📖 [Gestione Temi](./frontoffice/create-theme.md)
 

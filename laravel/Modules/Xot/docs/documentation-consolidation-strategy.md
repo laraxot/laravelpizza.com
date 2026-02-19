@@ -192,7 +192,7 @@ mv Modules/Xot/docs/archive/merge-conflict-resolution-[DATE].md \
 See /var/www/.../Modules/Xot/docs/xotbase-rules.md
 
 <!-- ✅ CORRECT -->
-See [XotBase Rules](../../Xot/docs/xotbase-rules.md)
+See [XotBase Rules](../../xot/docs/xotbase-rules.md)
 ```
 
 ## 📝 Template README.md Standard
@@ -240,7 +240,7 @@ Common issues e soluzioni.
 
 ## References
 - [Doc interna 1](./other-doc.md)
-- [Doc Xot](../../Xot/docs/core-doc.md)
+- [Doc Xot](../../xot/docs/core-doc.md)
 - [External](https://example.com)
 
 ---

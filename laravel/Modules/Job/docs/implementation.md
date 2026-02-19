@@ -296,9 +296,9 @@ class JobPageTest extends TestCase
 ### Versione HEAD
 
 ## Collegamenti tra versioni di implementation.md
-* [implementation.md](../../../Gdpr/docs/implementation.md)
-* [implementation.md](../../../Xot/docs/implementation.md)
-* [implementation.md](../../../Job/docs/implementation.md)
+* [implementation.md](../../../gdpr/docs/implementation.md)
+* [implementation.md](../../../xot/docs/implementation.md)
+* [implementation.md](../../../job/docs/implementation.md)
 
 ### Versione Incoming
 

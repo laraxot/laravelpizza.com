@@ -252,10 +252,10 @@ class HomeController extends Controller
 1. [Analisi Completa Design](./complete-design-analysis.md)
 2. [Piano Implementazione](./design-implementation-plan.md)
 3. [Analisi Design Originale](./laravelpizza-com-design-analysis.md)
-4. [Design System](./DESIGN-SYSTEM.md)
-5. [Business Logic](../../Modules/Meetup/docs/business-logic.md)
-6. [Architettura Modelli](../../Modules/Meetup/docs/models-architecture.md)
-7. [Guida Servizi](../../Modules/Meetup/docs/services-guide.md)
+4. [Design System](./design-system.md)
+5. [Business Logic](../../modules/meetup/docs/business-logic.md)
+6. [Architettura Modelli](../../modules/meetup/docs/models-architecture.md)
+7. [Guida Servizi](../../modules/meetup/docs/services-guide.md)
 
 ## 🎯 Prossimi Step
 

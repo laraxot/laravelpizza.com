@@ -170,6 +170,6 @@ La classe è progettata per essere compatibile con Filament v3+ e garantisce il 
 ## Collegamenti
 
 - [Documentazione di Filament](https://filamentphp.com/project_docs/3.x/panels/pages)
-- [Pattern di Estensione](Modules/Xot/project_docs/filament/filament_best_practices.md)
-- [Principi di Ereditarietà](Modules/Xot/project_docs/class_inheritance_principles.md)
-- [Architettura Filament-Xot](Modules/Xot/project_docs/filament_xot_architecture.md)
+- [Pattern di Estensione](modules/xot/project_docs/filament/filament_best_practices.md)
+- [Principi di Ereditarietà](modules/xot/project_docs/class_inheritance_principles.md)
+- [Architettura Filament-Xot](modules/xot/project_docs/filament_xot_architecture.md)

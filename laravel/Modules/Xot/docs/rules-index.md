@@ -54,5 +54,5 @@ app(CreateClientAction::class)->createPersonalAccessClient(); // calls execute()
 See: [Action Execution and DI Rules](./actions/action-execution-and-di-rules.md)
 
 ## Related Documentation
-- [README](./README.md)
+- [README](./readme.md)
 - [phpstan](./phpstan.md)

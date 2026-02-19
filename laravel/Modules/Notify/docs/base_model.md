@@ -66,7 +66,7 @@ class NotificationTemplate extends BaseModel
 - [Gestione Notifiche](../../../../project_docs/architecture/notifications.md)
 
 ### Collegamenti ai Moduli
-- [XotBaseModel](../../Xot/project_docs/XotBaseModel.md)
+- [XotBaseModel](../../xot/project_docs/xotbasemodel.md)
 - [Modelli Notify](./models.md)
 
 ## Note Importanti

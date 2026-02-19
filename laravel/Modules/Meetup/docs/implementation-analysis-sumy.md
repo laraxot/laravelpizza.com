@@ -70,33 +70,33 @@ Ho condotto un'analisi approfondita dell'architettura LaravelPizza e delle speci
 
 Ho prodotto 7 documenti principali di implementazione:
 
-1. **[schema-org-event-implementation.md](laravel/Modules/Meetup/docs/schema-org-event-implementation.md)**
+1. **[schema-org-event-implementation.md](laravel/modules/meetup/docs/schema-org-event-implementation.md)**
    - Implementazione completa tipo Event con tutte le proprietà Schema.org
    - JSON-LD, database schema, esempi pratici
 
-2. **[schema-org-event-series-scheduling.md](laravel/Modules/Meetup/docs/schema-org-event-series-scheduling.md)**
+2. **[schema-org-event-series-scheduling.md](laravel/modules/meetup/docs/schema-org-event-series-scheduling.md)**
    - Sistema completo per eventi ricorrenti
    - Pattern ISO 8601, gestione eccezioni
 
-3. **[schema-org-actions-rsvp-implementation.md](laravel/Modules/Meetup/docs/schema-org-actions-rsvp-implementation.md)**
+3. **[schema-org-actions-rsvp-implementation.md](laravel/modules/meetup/docs/schema-org-actions-rsvp-implementation.md)**
    - Sistema RSVP con JoinAction/LeaveAction
    - Tracciamento azioni utente, analisi conversioni
 
-4. **[schema-org-education-event-attendee-management.md](laravel/Modules/Meetup/docs/schema-org-education-event-attendee-management.md)**
+4. **[schema-org-education-event-attendee-management.md](laravel/modules/meetup/docs/schema-org-education-event-attendee-management.md)**
    - EducationEvent per workshop/corsi
    - Learning outcomes, assessment, certificati
    - Gestione presenze e competenze
 
-5. **[schema-org-offers-pricing-ticketing.md](laravel/Modules/Meetup/docs/schema-org-offers-pricing-ticketing.md)**
+5. **[schema-org-offers-pricing-ticketing.md](laravel/modules/meetup/docs/schema-org-offers-pricing-ticketing.md)**
    - Sistema biglietteria completo
    - Pricing dinamico, sconti, promozioni
    - QR code, PDF tickets
 
-6. **[schema-org-research-complete.md](laravel/Modules/Meetup/docs/schema-org-research-complete.md)**
+6. **[schema-org-research-complete.md](laravel/modules/meetup/docs/schema-org-research-complete.md)**
    - Riepilogo completo della ricerca Schema.org
    - Analisi comparata con specifiche LaravelPizza
 
-7. **[schema-org-implementation-tasks.md](laravel/Modules/Meetup/docs/schema-org-implementation-tasks.md)**
+7. **[schema-org-implementation-tasks.md](laravel/modules/meetup/docs/schema-org-implementation-tasks.md)**
    - Piano implementazione dettagliato con priorità
    - Checklist complete per ogni fase
    - Database schemas, QA procedure

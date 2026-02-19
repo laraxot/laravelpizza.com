@@ -47,11 +47,11 @@ This document outlines the structure and usage of the `BaseUser` model within a 
 - Update this document if significant changes are made to the `BaseUser` structure or functionality.
 
 ## Links to Related Documentation
-- [User Module Index](./INDEX.md)
-- [Authentication Pages Implementation](./AUTH_PAGES_IMPLEMENTATION.md)
-- [Profile Management](./PROFILE_MANAGEMENT.md)
-- [Routing Best Practices](./ROUTING_BEST_PRACTICES.md)
-- [Session Management](./SESSION_MANAGEMENT.md)
+- [User Module Index](./index.md)
+- [Authentication Pages Implementation](./auth_pages_implementation.md)
+- [Profile Management](./profile_management.md)
+- [Routing Best Practices](./routing_best_practices.md)
+- [Session Management](./session_management.md)
 - [[HasTeamsContract]]
 - [[UserContract]]
 - [[Team]]

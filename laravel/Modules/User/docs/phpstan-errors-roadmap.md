@@ -207,8 +207,8 @@
 
 ## 📚 Riferimenti
 
-- [Filament Class Extension Rules](../../Xot/docs/filament-class-extension-rules.md)
-- [PHPStan Code Quality Guide](../../Xot/docs/phpstan-code-quality-guide.md)
+- [Filament Class Extension Rules](../../xot/docs/filament-class-extension-rules.md)
+- [PHPStan Code Quality Guide](../../xot/docs/phpstan-code-quality-guide.md)
 - [Property Exists vs Isset](../../Xot/docs/phpstan-code-quality-guide.md#5-property-access-su-mixed-eloquent---regola-critica)
 
 ---

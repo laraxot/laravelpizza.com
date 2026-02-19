@@ -538,8 +538,8 @@ php -d memory_limit=2G ./vendor/bin/phpstan analyse Modules/Lang --level=10 2>&1
 
 - [PHPStan Documentation](https://phpstan.org/)
 - [Filament v5 Upgrade Guide](https://filamentphp.com/docs/2.x/admin/upgrade)
-- [Laraxot Architecture](../../Xot/docs/architecture.md)
-- [Type Safety Guide](../../Xot/docs/type_safety.md)
+- [Laraxot Architecture](../../xot/docs/architecture.md)
+- [Type Safety Guide](../../xot/docs/type_safety.md)
 
 ---
 

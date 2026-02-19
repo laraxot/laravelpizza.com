@@ -108,12 +108,12 @@ caratteristiche principali della pagina statica:
 
 2. **blocks/events/list.blade.php**: creato; header (titolo + descrizione), filtri Alpine.js (All Events, Upcoming, Past Events), grid md:grid-cols-3, card con badge Upcoming/Past, descrizione, date/time/location, X / Y attendees.
 
-3. **Confronto e screenshot**: [events-comparison/README.md](events-comparison/README.md) (differenze, come far funzionare tutto, istruzioni screenshot).
+3. **Confronto e screenshot**: [events-comparison/README.md](events-comparison/readme.md) (differenze, come far funzionare tutto, istruzioni screenshot).
 
 ## riferimenti
 
-- [events-comparison/README.md](events-comparison/README.md) – confronto locale vs laravelpizza.com, come far funzionare tutto
+- [events-comparison/README.md](events-comparison/readme.md) – confronto locale vs laravelpizza.com, come far funzionare tutto
 - `Themes/Meetup/resources/html/events.html`
 - `Themes/Meetup/resources/views/components/blocks/events/list.blade.php`
 - `config/local/laravelpizza/database/content/pages/events.json`
-- [Modules/Meetup/docs/events-page-differences-analysis.md](../../Modules/Meetup/docs/events-page-differences-analysis.md)
+- [Modules/Meetup/docs/events-page-differences-analysis.md](../../modules/meetup/docs/events-page-differences-analysis.md)

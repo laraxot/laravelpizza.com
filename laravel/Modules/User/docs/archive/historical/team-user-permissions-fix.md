@@ -102,7 +102,7 @@ php artisan optimize:clear
 
 - [`Modules/User/database/migrations/2026_01_12_120000_create_team_user_table.php`](file://Modules/User/database/migrations/2026_01_12_120000_create_team_user_table.php)
 - [`Modules/User/app/Models/Traits/HasTeams.php`](file://Modules/User/app/Models/Traits/HasTeams.php#L465-L469)
-- [`Modules/User/docs/laraxot-migration-philosophy.md`](file://Modules/User/docs/laraxot-migration-philosophy.md)
+- [`Modules/User/docs/laraxot-migration-philosophy.md`](file://modules/user/docs/laraxot-migration-philosophy.md)
 
 ## Updated Memory Rules
 

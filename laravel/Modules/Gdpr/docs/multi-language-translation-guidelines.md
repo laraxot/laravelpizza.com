@@ -386,7 +386,7 @@ php artisan trans:missing
 
 ## Related Documentation
 - [Laraxot Auto-Label System](/laravel/Modules/Xot/docs/)
-- [Register Page Improvements](/laravel/Themes/Meetup/docs/register-page-improvements.md)
+- [Register Page Improvements](/laravel/themes/meetup/docs/register-page-improvements.md)
 - [Laravel Localization](https://laravel.com/docs/localization)
 - [LaravelLocalization Package](https://github.com/mcamara/laravel-localization)
 

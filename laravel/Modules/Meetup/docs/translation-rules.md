@@ -237,8 +237,8 @@ cd /var/www/html/ptvx/laravel
 ## Collegamenti
 
 - [Documentazione Root Translations](../../../docs/translations-standards.md)
-- [Xot Translation Guidelines](../Xot/docs/translations.md)
-- [Meetup Module](../Meetup/README.md)
+- [Xot Translation Guidelines](../xot/docs/translations.md)
+- [Meetup Module](../meetup/readme.md)
 
 ## `messages.*` — messaggi UI (non campi, non azioni)
 

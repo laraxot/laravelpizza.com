@@ -142,15 +142,15 @@ Model structure requirements:
 ## 📚 Riferimenti Aggiuntivi
 
 ### Documentazione Principale
-- [AGENTS.md](../../../../AGENTS.md) - Guida completa sviluppatori AI
+- [AGENTS.md](../../../../agents.md) - Guida completa sviluppatori AI
 - [Database Testing Rules](../../../../docs/database-testing-rules.md) - Regole MySQL testing
-- [AI Coding Memory](../../../../AI_CODING_MEMORY.md) - Memoria completa regole
+- [AI Coding Memory](../../../../ai_coding_memory.md) - Memoria completa regole
 - [Critical Rules Index](../../../../docs/critical-rules-index.md) - Indice regole critiche
 
 ### Regole Specifiche
 - [Profile Duplicate Resolution](../../../../docs/profile-duplicate-issue-resolution.md) - Soluzione completa
 - [MySQL Testing Configuration](../../../../docs/mysql-testing-configuration.md) - Configurazione MySQL
-- [PHPStan Critical Rules](../Xot/docs/phpstan-critical-rules.md) - Regole PHPStan
+- [PHPStan Critical Rules](../xot/docs/phpstan-critical-rules.md) - Regole PHPStan
 
 ## 🔧 Integration Guidelines
 

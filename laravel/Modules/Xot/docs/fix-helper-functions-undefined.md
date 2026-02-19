@@ -357,7 +357,7 @@ echo 'User models count: ' . count(getModuleModels('User')) . PHP_EOL;
 - [nwidart/laravel-modules GitHub](https://github.com/nWidart/laravel-modules)
 - [wikimedia/composer-merge-plugin GitHub](https://github.com/wikimedia/composer-merge-plugin)
 - [Xot Helpers Documentation](./helpers.md)
-- [Tenant Helper Dependency](../../Tenant/docs/helper-functions-dependency.md)
+- [Tenant Helper Dependency](../../tenant/docs/helper-functions-dependency.md)
 - [RouteService Implementation](../app/Services/RouteService.php)
 - [GetAllModelsByModuleNameAction](../app/Actions/Model/GetAllModelsByModuleNameAction.php)
 

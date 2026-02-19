@@ -94,7 +94,7 @@ Quando creo un nuovo widget, chiedermi:
 
 ### Documentazione di Riferimento
 - [Widget View Namespaces](../frontend/widget-view-namespaces.md)
-- [Auth Widgets Namespaces](../../laravel/Modules/User/docs/auth-widgets-view-namespaces.md)
+- [Auth Widgets Namespaces](../../laravel/modules/user/docs/auth-widgets-view-namespaces.md)
 - [Struttura Temi](../tecnico/themes/theme-structure.md)
 
 ### Pattern di Controllo

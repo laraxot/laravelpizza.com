@@ -153,8 +153,8 @@ I file di traduzione non italiani (en, de) contengono testo italiano invece dell
 - [Principi DRY/KISS](/docs/dry-kiss-principles.md)
 
 ### Documentazione Moduli Correlati
-- [User Module Translations](/Modules/User/docs/translation-guidelines.md)
-- [<main module> Module Translations](/Modules/<main module>/docs/multilingual-support.md)
+- [User Module Translations](/modules/user/docs/translation-guidelines.md)
+- [<main module> Module Translations](/modules/<main module>/docs/multilingual-support.md)
 
 ### File di Implementazione
 - `lang/it/location.php` - Template italiano (riferimento)

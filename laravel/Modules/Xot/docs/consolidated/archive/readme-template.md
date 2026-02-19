@@ -256,11 +256,11 @@ php artisan test --filter=[NomeModulo]
 
 ## Changelog
 
-Consultare il [CHANGELOG](CHANGELOG.md) per informazioni sulle modifiche recenti.
+Consultare il [CHANGELOG](changelog.md) per informazioni sulle modifiche recenti.
 
 ## Licenza
 
-Questo modulo è rilasciato sotto la [MIT License](LICENSE.md).
+Questo modulo è rilasciato sotto la [MIT License](license.md).
 
 ## Autori e Contributori
 

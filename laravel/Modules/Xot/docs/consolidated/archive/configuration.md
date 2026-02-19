@@ -63,10 +63,10 @@ return [
    - Mantenere aggiornata la documentazione
 
 ## Collegamenti
-- [Gestione Domini](DOMAIN_CONFIGURATION.md)
-- [Struttura del Progetto](PROJECT_STRUCTURE.md)
-- [Documentazione Principale](../README.md)
+- [Gestione Domini](domain_configuration.md)
+- [Struttura del Progetto](project_structure.md)
+- [Documentazione Principale](../readme.md)
 ## Collegamenti tra versioni di configuration.md
 * [configuration.md](docs/configuration.md)
-* [configuration.md](../../../Xot/project_docs/configuration.md)
-* [configuration.md](../../../Cms/project_docs/configuration.md)
+* [configuration.md](../../../xot/project_docs/configuration.md)
+* [configuration.md](../../../cms/project_docs/configuration.md)

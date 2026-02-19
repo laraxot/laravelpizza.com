@@ -6,8 +6,8 @@ Il tema One è un pacchetto npm riutilizzabile che può essere installato in qua
 
 ### Documentazione Dettagliata
 
-- [Tema One - Riutilizzabilità](../../../Themes/One/docs/theme-reusability.md)
-- [Tema One - Gestione Assets](../../../Themes/One/docs/theme-assets.md)
+- [Tema One - Riutilizzabilità](../../../themes/one/docs/theme-reusability.md)
+- [Tema One - Gestione Assets](../../../themes/one/docs/theme-assets.md)
 
 ## Linee Guida per la Riutilizzabilità
 

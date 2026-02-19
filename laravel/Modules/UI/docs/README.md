@@ -93,9 +93,9 @@ enum TableLayoutEnum: string implements HasColor, HasIcon, HasLabel
 
 ## 🔗 Moduli Collegati
 
-- [Xot Module](../Xot/docs/README.md) - Framework core
-- [User Module](../User/docs/README.md) - Gestione utenti
-- [Lang Module](../Lang/docs/README.md) - Traduzioni
+- [Xot Module](../xot/docs/readme.md) - Framework core
+- [User Module](../user/docs/readme.md) - Gestione utenti
+- [Lang Module](../lang/docs/readme.md) - Traduzioni
 
 ---
 

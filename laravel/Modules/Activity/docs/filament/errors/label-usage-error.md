@@ -1,7 +1,7 @@
 # Non utilizzare `->label()` nei componenti Filament
 
 > **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo Activity.
-> La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/filament/label-translation-system.md).
+> La documentazione principale e completa si trova nel [modulo UI](../../../ui/docs/filament/label-translation-system.md).
 
 ## Regola fondamentale
 
@@ -66,5 +66,5 @@ Cercare e rimuovere tutte le chiamate a `->label()` nei seguenti file:
 
 ## Riferimenti
 
-- [Documentazione principale sul sistema di traduzione](../../../UI/docs/filament/label-translation-system.md)
-- [LangServiceProvider e AutoLabelAction](../../../Lang/docs/filament/autolabel-system.md)
+- [Documentazione principale sul sistema di traduzione](../../../ui/docs/filament/label-translation-system.md)
+- [LangServiceProvider e AutoLabelAction](../../../lang/docs/filament/autolabel-system.md)

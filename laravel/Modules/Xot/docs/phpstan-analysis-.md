@@ -413,9 +413,9 @@ jobs:
 
 ### Module-Specific Documentation
 
-- [Geo Module Errors](../../Geo/docs/phpstan-errors-2025-12-16.md)
-- [Cms Module Errors](../../Cms/docs/phpstan-errors-2025-12-16.md)
-- [Activity Module Errors](../../Activity/docs/phpstan-errors-2025-12-16.md)
+- [Geo Module Errors](../../geo/docs/phpstan-errors-2025-12-16.md)
+- [Cms Module Errors](../../cms/docs/phpstan-errors-2025-12-16.md)
+- [Activity Module Errors](../../activity/docs/phpstan-errors-2025-12-16.md)
 - [Xot Module TransTrait Errors](phpstan-transtrait-errors-2025-12-16.md)
 
 ### PHPStan Documentation

@@ -104,9 +104,9 @@ git status --porcelain | grep "^UU\|^AA\|^DD"
 
 ## 🔗 Collegamenti
 
-- [Priority Decision Rules](../../Xot/docs/priority-decision-rules.md)
-- [Super Mucca Workflow](../../Xot/docs/super-mucca-workflow.md)
-- [Git Conflict Resolution Guide](../../Xot/docs/git-conflict-resolution.md)
+- [Priority Decision Rules](../../xot/docs/priority-decision-rules.md)
+- [Super Mucca Workflow](../../xot/docs/super-mucca-workflow.md)
+- [Git Conflict Resolution Guide](../../xot/docs/git-conflict-resolution.md)
 
 ---
 

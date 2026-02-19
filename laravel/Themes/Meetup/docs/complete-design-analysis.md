@@ -431,12 +431,12 @@ class HomeController extends Controller
 
 ## 📚 Riferimenti
 
-- [Design System](./DESIGN-SYSTEM.md)
+- [Design System](./design-system.md)
 - [Analisi Design Originale](./laravelpizza-com-design-analysis.md)
 - [Piano Implementazione](./design-implementation-plan.md)
-- [Business Logic](../../Modules/Meetup/docs/business-logic.md)
-- [Architettura Modelli](../../Modules/Meetup/docs/models-architecture.md)
-- [Guida Servizi](../../Modules/Meetup/docs/services-guide.md)
+- [Business Logic](../../modules/meetup/docs/business-logic.md)
+- [Architettura Modelli](../../modules/meetup/docs/models-architecture.md)
+- [Guida Servizi](../../modules/meetup/docs/services-guide.md)
 
 ## 🎯 Prossimi Passi
 

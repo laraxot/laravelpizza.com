@@ -4,8 +4,8 @@
 
 L’installazione di JpGraph e l’uso dei namespace sono documentati nel **modulo Chart**. Nel progetto si usa il pacchetto **amenadiel/jpgraph** con namespace **Amenadiel\JpGraph\*** (non `JpGraph\*`).
 
-- [Chart: JpGraph Composer e namespace](../../Chart/docs/jpgraph-composer-and-namespaces.md)
-- [Chart: JpGraph Installation](../../Chart/docs/jpgraph-installation.md)
+- [Chart: JpGraph Composer e namespace](../../chart/docs/jpgraph-composer-and-namespaces.md)
+- [Chart: JpGraph Installation](../../chart/docs/jpgraph-installation.md)
 
 In sintesi: dalla root Laravel `cd laravel && composer require amenadiel/jpgraph` (o `composer update`); nelle classi usare `Amenadiel\JpGraph\Graph\Graph`, `Amenadiel\JpGraph\Plot\BarPlot`, ecc. Il modulo User non dichiara JpGraph in `composer.json`; usa le Actions del modulo Chart per la generazione grafici.
 

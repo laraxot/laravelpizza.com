@@ -940,7 +940,7 @@ class BlogPostsChartTest extends TestCase
 Per garantire un look "Premium" e la possibilità di esportare PDF perfetti in ambito Quaeris/PTVX:
 
 ### 1. Configurazione Professionale
-Consultare la guida **[LimeSurvey Professional Charts Guide](../../../Limesurvey/docs/professional-charts-and-pdfs.md)**.
+Consultare la guida **[LimeSurvey Professional Charts Guide](../../../limesurvey/docs/professional-charts-and-pdfs.md)**.
 - Font unificati (Inter/Roboto).
 - Legende posizionate correttamente.
 - Gridline minimali.
@@ -952,5 +952,5 @@ Pattern:
 2.  Iniettare gli stessi dati del Dashboard (usando Actions).
 3.  Impostare `animation: false` nelle opzioni Chart.js per la stampa.
 
-Vedi: **[Dashboard Best Practices](../../../Limesurvey/docs/dashboard-best-practices.md)**.
+Vedi: **[Dashboard Best Practices](../../../limesurvey/docs/dashboard-best-practices.md)**.
 

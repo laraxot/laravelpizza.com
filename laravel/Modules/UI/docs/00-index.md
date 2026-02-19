@@ -5,7 +5,7 @@
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
-1. [README.md](./README.md) - Design System e overview componenti.
+1. [README.md](./readme.md) - Design System e overview componenti.
 2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Tailwind v4 e Flux UI integration.
 3. [philosophy.md](./philosophy.md) - "La Bellezza è Funzionale": filosofia del design in Laraxot.
 
@@ -32,8 +32,8 @@
 - 🗑️ **[Cleanup Plan](./consolidation-plan.md)** - Strategia per ridurre i 280+ file di documentazione.
 
 ## 🔗 **Moduli Correlati**
-- [Xot](../../Xot/docs/README.md) - Base framework per i widget.
-- [Cms](../../Cms/docs/README.md) - Layout dei contenuti e blocchi.
+- [Xot](../../xot/docs/readme.md) - Base framework per i widget.
+- [Cms](../../cms/docs/readme.md) - Layout dei contenuti e blocchi.
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

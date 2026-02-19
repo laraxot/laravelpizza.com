@@ -89,7 +89,7 @@ Based on comprehensive research of Schema.org documentation, I've identified key
 ## Related Files
 
 - [tasks-schema-org-person.md](./tasks-schema-org-person.md) - Existing person tasks
-- [place-address-schemaorg.md](../Geo/docs/place-address-schemaorg.md) - Address documentation
+- [place-address-schemaorg.md](../geo/docs/place-address-schemaorg.md) - Address documentation
 - [architecture.md](./architecture.md) - User module architecture
 
 ## Implementation Details

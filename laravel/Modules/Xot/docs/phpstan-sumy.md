@@ -162,7 +162,7 @@ if (null !== $value) {
 ## 🔗 Collegamenti
 
 - [PHPStan Code Quality Guide](./phpstan-code-quality-guide.md)
-- [Activity Corrections](../Activity/docs/phpstan-corrections-january-2026.md)
-- [UI Corrections](../UI/docs/phpstan-corrections-january-2026.md)
-- [Quaeris Corrections](../Quaeris/docs/phpstan-corrections-january-2026.md)
-- [Geo Corrections](../Geo/docs/phpstan-corrections-january-2026.md)
+- [Activity Corrections](../activity/docs/phpstan-corrections-january-2026.md)
+- [UI Corrections](../ui/docs/phpstan-corrections-january-2026.md)
+- [Quaeris Corrections](../quaeris/docs/phpstan-corrections-january-2026.md)
+- [Geo Corrections](../geo/docs/phpstan-corrections-january-2026.md)

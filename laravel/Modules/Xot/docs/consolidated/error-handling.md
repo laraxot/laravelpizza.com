@@ -29,9 +29,9 @@
 - [ ] Test e validazione
 
 ## Collegamenti
-- [Patient Errori e Soluzioni](../../Patient/project_docs/models.md)
-- [Patient Workflow](../../Patient/project_docs/doctor-registration-workflow.md)
-- [README Xot](./README.md)
+- [Patient Errori e Soluzioni](../../patient/project_docs/models.md)
+- [Patient Workflow](../../patient/project_docs/doctor-registration-workflow.md)
+- [README Xot](./readme.md)
 
 # Errori di Validazione Custom (Laravel)
 
@@ -56,4 +56,4 @@ throw new \Illuminate\Validation\ValidationException(
 - Questo genera errori runtime e non è supportato.
 
 ## Approfondimenti
-- [Patient: errors/validation.md](../../Patient/project_docs/errors/validation.md)
+- [Patient: errors/validation.md](../../patient/project_docs/errors/validation.md)

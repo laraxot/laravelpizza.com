@@ -647,7 +647,7 @@ php artisan test --filter=SyncTest
 ## 📚 Documentazione COMPLETA
 
 ### 🎯 **Guide Principali**
-- [📖 Documentazione Completa](docs/README.md)
+- [📖 Documentazione Completa](docs/readme.md)
 - [🌍 Gestione Lingue](docs/languages.md)
 - [🤖 Auto-Translation](docs/auto-translate.md)
 - [📊 Analytics](docs/analytics.md)

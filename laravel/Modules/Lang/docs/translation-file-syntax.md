@@ -35,7 +35,7 @@ Questo errore indica generalmente che il parser PHP si aspettava di chiudere una
     -   Utilizzare sempre un IDE con linting PHP integrato per rilevare errori di sintassi in tempo reale.
     -   Prima di committare modifiche a file `.php`, specialmente quelli che restituiscono array complessi, validare la sintassi con il comando: `php -l nome_del_file.php`.
     -   Mantenere una formattazione chiara e indentata per gli array complessi.
-    -   Vedere anche le linee guida generali in [Gestione Best Practice per File di Configurazione PHP basati su Array](../../Xot/docs/php_array_configuration_best_practices.md).
+    -   Vedere anche le linee guida generali in [Gestione Best Practice per File di Configurazione PHP basati su Array](../../xot/docs/php_array_configuration_best_practices.md).
 
 -   **Anti-Pattern (Cattive Pratiche)**:
     -   Modificare file di configurazione/traduzione senza una successiva validazione sintattica.
@@ -84,7 +84,7 @@ Questo errore indica generalmente che il parser PHP si aspettava di chiudere una
     -   Utilizzare sempre un IDE con linting PHP integrato per rilevare errori di sintassi in tempo reale.
     -   Prima di committare modifiche a file `.php`, specialmente quelli che restituiscono array complessi, validare la sintassi con il comando: `php -l nome_del_file.php`.
     -   Mantenere una formattazione chiara e indentata per gli array complessi.
-    -   Vedere anche le linee guida generali in [Gestione Best Practice per File di Configurazione PHP basati su Array](../../Xot/docs/php_array_configuration_best_practices.md).
+    -   Vedere anche le linee guida generali in [Gestione Best Practice per File di Configurazione PHP basati su Array](../../xot/docs/php_array_configuration_best_practices.md).
 
 -   **Anti-Pattern (Cattive Pratiche)**:
     -   Modificare file di configurazione/traduzione senza una successiva validazione sintattica.

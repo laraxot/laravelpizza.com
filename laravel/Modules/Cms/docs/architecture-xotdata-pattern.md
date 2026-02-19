@@ -150,15 +150,15 @@ function createTestUser(array $attributes = []): UserContract
 
 ### **Pattern XotData**
 - [docs/xotdata-architecture-critical-error-fix.md](../../../project_docs/xotdata-architecture-critical-error-fix.md)
-- [laravel/Modules/Xot/project_docs/architecture-violations-and-fixes.md](../../Xot/project_docs/architecture-violations-and-fixes.md)
+- [laravel/Modules/Xot/project_docs/architecture-violations-and-fixes.md](../../xot/project_docs/architecture-violations-and-fixes.md)
 
 ### **Struttura Testing**
 - [laravel/Modules/User/tests/Feature/Filament/Widgets/LoginWidgetTest.php](../../User/tests/Feature/Filament/Widgets/LoginWidgetTest.php)
 - [laravel/Modules/Cms/tests/Feature/Auth/AuthenticationTest.php](../tests/Feature/Auth/AuthenticationTest.php)
 
 ### **Sistema Folio/Volt** 
-- [laravel/Themes/One/project_docs/folio-pages.md](../../../Themes/One/project_docs/folio-pages.md)
-- [laravel/Themes/One/project_docs/routing_with_folio_volt.md](../../../Themes/One/project_docs/routing_with_folio_volt.md)
+- [laravel/Themes/One/project_docs/folio-pages.md](../../../themes/one/project_docs/folio-pages.md)
+- [laravel/Themes/One/project_docs/routing_with_folio_volt.md](../../../themes/one/project_docs/routing_with_folio_volt.md)
 
 ## 🎯 **Obiettivo Finale**
 

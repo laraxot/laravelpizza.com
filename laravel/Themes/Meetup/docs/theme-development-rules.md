@@ -363,7 +363,7 @@ npm run build && npm run copy
 **Rule**: Authentication pages (Login, Register, Password Reset) MUST use Filament Widgets from the `User` module.
 **NEVER** implement raw forms or Volt components for authentication in the theme.
 
-See: [Modules/User/docs/auth-widget-rules.md](../../Modules/User/docs/auth-widget-rules.md) for detailed rules.
+See: [Modules/User/docs/auth-widget-rules.md](../../modules/user/docs/auth-widget-rules.md) for detailed rules.
 
 ```blade
 {{-- ✅ CORRECT: resources/views/pages/auth/register.blade.php --}}

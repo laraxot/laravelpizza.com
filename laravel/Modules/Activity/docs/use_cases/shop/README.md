@@ -68,8 +68,8 @@ php artisan activity:shop:checkout cart_12345_xxx
 - [Glossario Shop](./10_glossario.md)
 - [Confronto Approcci](./07_confronto_approcci.md)
 - [Build from Scratch](./build_from_scratch.md)
-- [README Prediction Market](../prediction_market/README.md)
-- [README Bank](../bank/README.md)
+- [README Prediction Market](../prediction_market/readme.md)
+- [README Bank](../bank/readme.md)
 
 ---
 **Questa documentazione è neutra e riutilizzabile, senza riferimenti a progetti specifici, e segue le regole di neutralità e modularità.**

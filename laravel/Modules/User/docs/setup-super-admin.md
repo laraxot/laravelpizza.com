@@ -380,7 +380,7 @@ php artisan view:cache
 ## Collegamenti
 
 ### Documentazione Locale
-- [User Module README](../README.md)
+- [User Module README](../readme.md)
 - [Roles & Permissions](./roles-permissions.md)
 - [Authentication](./authentication.md)
 

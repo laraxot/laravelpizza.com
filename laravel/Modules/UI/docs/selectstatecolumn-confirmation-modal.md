@@ -34,7 +34,7 @@ Questo documento descrive l'implementazione di una modale di conferma con textar
 - Verificare i permessi dell'utente prima di consentire la transizione
 
 ## Documentazione Correlata
-- [SelectStateColumn.md](./SelectStateColumn.md)
+- [SelectStateColumn.md](./selectstatecolumn.md)
 - [Filament Modals Documentation](https://filamentphp.com/docs/3.x/panels/modals)
 - [State Management](./state-management.md)
 
@@ -86,7 +86,7 @@ Questo documento descrive l'implementazione di una modale di conferma con textar
 - Verificare i permessi dell'utente prima di consentire la transizione
 
 ## Documentazione Correlata
-- [SelectStateColumn.md](./SelectStateColumn.md)
+- [SelectStateColumn.md](./selectstatecolumn.md)
 - [Filament Modals Documentation](https://filamentphp.com/project_docs/3.x/panels/modals)
 - [Filament Modals Documentation](https://filamentphp.com/project_docs/3.x/panels/modals)
 - [Filament Modals Documentation](https://filamentphp.com/project_docs/3.x/panels/modals)

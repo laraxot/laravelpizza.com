@@ -37,5 +37,5 @@ type = "graph"
 
 Per altre informazioni leggere documentazione [ChartJs](https://www.chartjs.org/docs/latest/).
 ## Collegamenti tra versioni di graph.md
-* [graph.md](laravel/Modules/Chart/docs/components/graph.md)
-* [graph.md](laravel/Modules/Cms/docs/components/graph.md)
+* [graph.md](laravel/modules/chart/docs/components/graph.md)
+* [graph.md](laravel/modules/cms/docs/components/graph.md)

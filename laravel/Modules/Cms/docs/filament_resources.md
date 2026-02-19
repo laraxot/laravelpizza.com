@@ -85,8 +85,8 @@ return [
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Best Practices Filament](https://filamentphp.com/project_docs/best-practices)
 - [Struttura Resources](https://filamentphp.com/project_docs/resources)
-- [Convenzioni Namespace](../Xot/project_docs/namespace_conventions.md)
-- [Best Practices Traduzioni](../Xot/project_docs/TRANSLATIONS-BEST-PRACTICES.md)
+- [Convenzioni Namespace](../xot/project_docs/namespace_conventions.md)
+- [Best Practices Traduzioni](../xot/project_docs/translations-best-practices.md)
 
 ## Note Importanti
 - Le classi base di Xot sono sempre nel namespace `Modules\Xot\Filament\Resources\Pages\`
@@ -95,7 +95,7 @@ return [
 - Usa sempre i file di traduzione invece dei label hardcoded
 
 ## Collegamenti Bidirezionali
-- [README](README.md) - Documentazione principale del modulo
+- [README](readme.md) - Documentazione principale del modulo
 - [Integrazione Filament](filament-integration.md) - Integrazione con Filament
 - [Componenti](filament-components.md) - Componenti Filament
 - [Form](filament-forms.md) - Sistema di form
@@ -104,16 +104,16 @@ return [
 - [Namespace](convenzioni-namespace-filament.md) - Convenzioni namespace
 
 ## Vedi Anche
-- [Modulo UI](../UI/project_docs/README.md) - Componenti di interfaccia
-- [Modulo Xot](../Xot/project_docs/README.md) - Classi base e utilities
-- [Modulo Theme](../Theme/project_docs/README.md) - Gestione temi
+- [Modulo UI](../ui/project_docs/readme.md) - Componenti di interfaccia
+- [Modulo Xot](../xot/project_docs/readme.md) - Classi base e utilities
+- [Modulo Theme](../theme/project_docs/readme.md) - Gestione temi
 - [Documentazione Filament](https://filamentphp.com/docs) - Documentazione ufficiale
 - [Resources](https://filamentphp.com/project_docs/3.x/resources) - Gestione risorse
 - [Best Practices](https://filamentphp.com/project_docs/3.x/resources/best-practices) - Best practices
 ## Collegamenti tra versioni di filament-resources.md
 * [filament-resources.md](docs/tecnico/filament/filament-resources.md)
 * [filament-resources.md](docs/regole/filament-resources.md)
-* [filament-resources.md](laravel/Modules/Gdpr/project_docs/filament-resources.md)
-* [filament-resources.md](laravel/Modules/Xot/project_docs/filament-resources.md)
-* [filament-resources.md](laravel/Modules/Cms/project_docs/filament-resources.md)
+* [filament-resources.md](laravel/modules/gdpr/project_docs/filament-resources.md)
+* [filament-resources.md](laravel/modules/xot/project_docs/filament-resources.md)
+* [filament-resources.md](laravel/modules/cms/project_docs/filament-resources.md)
 

@@ -824,8 +824,8 @@ public function generateWithErrorHandling(array $options = []): string
 
 ## 📚 References
 
-- [HTML2PDF Best Practices](../../Xot/docs/html2pdf-best-practices.md)
-- [GDPR Module README](./README.md)
+- [HTML2PDF Best Practices](../../xot/docs/html2pdf-best-practices.md)
+- [GDPR Module README](./readme.md)
 - [Filament Actions Documentation](https://filamentphp.com/docs/3.x/actions/overview)
 - [GDPR Regulation](https://gdpr.eu/)
 

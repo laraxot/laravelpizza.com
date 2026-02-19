@@ -296,19 +296,19 @@ python3 -m http.server 8080
 ## 🔗 Links Utili
 
 ### Documentazione Progetto
-- [CLAUDE.md](/var/www/_bases/base_laravelpizza/laravel/CLAUDE.md)
-- [MCP Setup Summary](/var/www/_bases/base_laravelpizza/MCP_SETUP_SUMMARY.md)
-- [UI/UX MCP Guide](/var/www/_bases/base_laravelpizza/.cursor/UI_UX_MCP_GUIDE.md)
+- [CLAUDE.md](/var/www/_bases/base_laravelpizza/laravel/claude.md)
+- [MCP Setup Summary](/var/www/_bases/base_laravelpizza/mcp_setup_summary.md)
+- [UI/UX MCP Guide](/var/www/_bases/base_laravelpizza/.cursor/ui_ux_mcp_guide.md)
 
 ### Documentazione Modulo Meetup
-- [README](/var/www/_bases/base_laravelpizza/laravel/Modules/Meetup/docs/README.md)
-- [Installation](/var/www/_bases/base_laravelpizza/laravel/Modules/Meetup/docs/INSTALLATION.md)
-- [Development](/var/www/_bases/base_laravelpizza/laravel/Modules/Meetup/docs/DEVELOPMENT.md)
-- [Architecture](/var/www/_bases/base_laravelpizza/laravel/Modules/Meetup/docs/architecture.md)
-- [Business Logic](/var/www/_bases/base_laravelpizza/laravel/Modules/Meetup/docs/business-logic.md)
+- [README](/var/www/_bases/base_laravelpizza/laravel/modules/meetup/docs/readme.md)
+- [Installation](/var/www/_bases/base_laravelpizza/laravel/modules/meetup/docs/installation.md)
+- [Development](/var/www/_bases/base_laravelpizza/laravel/modules/meetup/docs/development.md)
+- [Architecture](/var/www/_bases/base_laravelpizza/laravel/modules/meetup/docs/architecture.md)
+- [Business Logic](/var/www/_bases/base_laravelpizza/laravel/modules/meetup/docs/business-logic.md)
 
 ### Documentazione Tema
-- [Tema README](/var/www/_bases/base_laravelpizza/laravel/Themes/Meetup/README.md)
+- [Tema README](/var/www/_bases/base_laravelpizza/laravel/themes/meetup/readme.md)
 
 ### External Resources
 - [TailwindCSS v4 Docs](https://tailwindcss.com/docs)

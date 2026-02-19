@@ -65,7 +65,7 @@ Verificare che:
 - Le traduzioni includano le chiavi per `sms_template`
 
 ## Collegamenti
-- [Notify Module Documentation](README.md)
+- [Notify Module Documentation](readme.md)
 - [SMS Implementation Guide](sms_implementation.md)
 - [Mail Templates Structure](mail_templates_structure.md)
 - [Translation Standards](translation_standards.md)
@@ -139,7 +139,7 @@ Verificare che:
 - Le traduzioni includano le chiavi per `sms_template`
 
 ## Collegamenti
-- [Notify Module Documentation](README.md)
+- [Notify Module Documentation](readme.md)
 - [SMS Implementation Guide](sms_implementation.md)
 - [Mail Templates Structure](mail_templates_structure.md)
 - [Translation Standards](translation_standards.md)

@@ -227,7 +227,7 @@ When creating new models in User module:
 ## Related Documentation
 
 - [Model Inheritance Rules](./model-inheritance-rules.md)
-- [PHPStan Level 10 Full Analysis (Xot Module)](../../Xot/docs/phpstan-level-10-dry-kiss-analysis-[DATE].md)
+- [PHPStan Level 10 Full Analysis (Xot Module)](../../xot/docs/phpstan-level-10-dry-kiss-analysis-[date].md)
 - [DRY/KISS Model Refactoring [DATE]](../../Xot/docs/dry-kiss-model-refactoring-[DATE].md)
 
 ---

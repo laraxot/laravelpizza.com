@@ -114,7 +114,7 @@ The UI module's MCP configuration enables AI assistants to interact with:
 - [Asana MCP Configuration](../../../docs/mcp-asana-configuration.md)
 - [ClickUp MCP Configuration](../../../docs/mcp-clickup-configuration.md)
 - [Redmine MCP Configuration](../../../docs/mcp-redmine-configuration.md)
-- [UI Module Roadmap](./roadmap-[DATE].md)
+- [UI Module Roadmap](./roadmap-[date].md)
 
 ---
 

@@ -860,8 +860,8 @@ Completare la piattaforma Laravel Pizza Meetups con:
 **Obiettivo**: Implementare strategia SEO e marketing per crescita community
 
 **Riferimenti**: Vedi documenti dettagliati:
-- [SEO & Marketing Plan](./SEO-MARKETING-PLAN.md)
-- [Monetization Strategy](./MONETIZATION-STRATEGY.md)
+- [SEO & Marketing Plan](./seo-marketing-plan.md)
+- [Monetization Strategy](./monetization-strategy.md)
 
 #### 11.1 SEO On-Page
 - [ ] **Integrazione Modulo SEO**
@@ -932,7 +932,7 @@ Completare la piattaforma Laravel Pizza Meetups con:
 
 **Obiettivo**: Implementare modelli di monetizzazione sostenibili
 
-**Riferimenti**: Vedi documento dettagliato [Monetization Strategy](./MONETIZATION-STRATEGY.md)
+**Riferimenti**: Vedi documento dettagliato [Monetization Strategy](./monetization-strategy.md)
 
 #### 12.1 Eventi a Pagamento
 - [ ] **Sistema Pagamenti**
@@ -1000,7 +1000,7 @@ Completare la piattaforma Laravel Pizza Meetups con:
 
 **Obiettivo**: Documentare miglioramenti, rischi e soluzioni
 
-**Riferimenti**: Vedi documento dettagliato [Suggestions, Doubts & Solutions](./SUGGESTIONS-DOUBTS-SOLUTIONS.md)
+**Riferimenti**: Vedi documento dettagliato [Suggestions, Doubts & Solutions](./suggestions-doubts-solutions.md)
 
 #### 13.1 Suggerimenti Architetturali
 - [ ] **Event Series Functionality**

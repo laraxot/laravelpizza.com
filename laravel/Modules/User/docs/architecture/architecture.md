@@ -4,9 +4,9 @@ This module adheres to the **Laraxot Architecture** and **Super Cow Methodology*
 
 For strict coding standards, Filament extension rules, and PHPStan guidelines, please refer to the central documentation in the **Xot Module**:
 
-- [Super Cow Methodology](../../Xot/docs/super-cow-methodology.md)
-- [PHP Quality Guide](../../Xot/docs/php-quality-guide.md)
-- [Filament Extension Rules](../../Xot/docs/filament-extension-rules.md)
+- [Super Cow Methodology](../../xot/docs/super-cow-methodology.md)
+- [PHP Quality Guide](../../xot/docs/php-quality-guide.md)
+- [Filament Extension Rules](../../xot/docs/filament-extension-rules.md)
 
 **Key Principles:**
 1.  **DRY & KISS**: Don't repeat yourself, keep it simple.

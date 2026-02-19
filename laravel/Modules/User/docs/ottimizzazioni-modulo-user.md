@@ -335,7 +335,7 @@ echo "✅ Consolidamento completato!"
 ## Collegamenti Bidirezionali
 
 ### Documentazione Correlata
-- [README](../README.md) - Panoramica modulo User
+- [README](../readme.md) - Panoramica modulo User
 - [Architettura](./core/architecture.md) - Architettura modulo
 - [Convenzioni](./core/conventions.md) - Convenzioni unificate
 
@@ -344,8 +344,8 @@ echo "✅ Consolidamento completato!"
 - [docs/architettura-moduli.md](../../../docs/architettura-moduli.md) - Architettura moduli
 
 ### Documentazione Moduli Correlati
-- [Xot/docs/ottimizzazioni-modulo-xot.md](../../Xot/docs/ottimizzazioni-modulo-xot.md) - Ottimizzazioni modulo Xot
-- [UI/docs/ottimizzazioni-modulo-ui.md](../../UI/docs/ottimizzazioni-modulo-ui.md) - Ottimizzazioni modulo UI
+- [Xot/docs/ottimizzazioni-modulo-xot.md](../../xot/docs/ottimizzazioni-modulo-xot.md) - Ottimizzazioni modulo Xot
+- [UI/docs/ottimizzazioni-modulo-ui.md](../../ui/docs/ottimizzazioni-modulo-ui.md) - Ottimizzazioni modulo UI
 
 ---
 

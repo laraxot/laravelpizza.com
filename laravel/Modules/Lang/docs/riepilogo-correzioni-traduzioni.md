@@ -127,7 +127,7 @@ php artisan tinker
 - [Traduzioni Navigation 2025](traduzioni_navigation_2025.md)
 
 ### Documentazione Tema:
-- [Traduzioni Mancanti Appointment 2025](../../../Themes/One/docs/traduzioni_mancanti_appointment_2025.md)
-- [Translation Updates 2024](../../../Themes/One/docs/translation_updates_20240721.md)
+- [Traduzioni Mancanti Appointment 2025](../../../themes/one/docs/traduzioni_mancanti_appointment_2025.md)
+- [Translation Updates 2024](../../../themes/one/docs/translation_updates_20240721.md)
 
 *Ultimo aggiornamento: 6 Gennaio 2025 - TUTTI I PROBLEMI RISOLTI*

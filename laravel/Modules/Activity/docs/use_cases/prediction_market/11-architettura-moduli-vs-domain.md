@@ -74,7 +74,7 @@ app/Domain/PredictionMarket/
 - [CQRS e DDD](https://martinfowler.com/bliki/CQRS.html)
 - [Best practice modularità](https://laravelmodules.com/docs/12/basic-usage/creating-a-module)
 - [Esempi di modularizzazione](https://github.com/nWidart/laravel-modules)
-- [Indice prediction_market](./README.md)
+- [Indice prediction_market](./readme.md)
 - [Architettura prediction_market](./02_architettura.md)
 - [Best practice prediction_market](./04_best_practice.md)
 - [API prediction_market](./06_api.md)

@@ -130,8 +130,8 @@ return [
 ### Versione HEAD
 
 ## Collegamenti tra versioni di event-sourcing.md
-* [event-sourcing.md](../../../Xot/docs/activity/event-sourcing.md)
-* [event-sourcing.md](../../../Tenant/docs/it/config/event-sourcing.md)
+* [event-sourcing.md](../../../xot/docs/activity/event-sourcing.md)
+* [event-sourcing.md](../../../tenant/docs/it/config/event-sourcing.md)
 
 ### Versione Incoming
 

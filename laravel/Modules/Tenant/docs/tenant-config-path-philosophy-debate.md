@@ -336,7 +336,7 @@ L'app usa SOLO `config/local/laravelpizza/`.
 
 ### 2. Documentazione
 - ✅ Questo file documenta la filosofia
-- ✅ [Tenant Config Path Verification](../../Themes/Meetup/docs/tenant-config-path-verification.md) - Verifica e guida pratica
+- ✅ [Tenant Config Path Verification](../../themes/meetup/docs/tenant-config-path-verification.md) - Verifica e guida pratica
 - ✅ Aggiornati tutti i doc con path corretto ([DATE])
 
 ### 3. Correzione File Doc Esistenti

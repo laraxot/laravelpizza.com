@@ -246,13 +246,13 @@ EOF
 Ogni modulo interessato ha documentazione dettagliata:
 
 - [Xot Module](./case-sensitivity-rules.md)
-- [Gdpr Module](../../Gdpr/docs/case-sensitivity-rules.md)
-- [Lang Module](../../Lang/docs/case-sensitivity-rules.md)
-- [Media Module](../../Media/docs/case-sensitivity-rules.md)
-- [Notify Module](../../Notify/docs/case-sensitivity-rules.md)
-- [Rating Module](../../Rating/docs/case-sensitivity-rules.md)
-- [Tenant Module](../../Tenant/docs/case-sensitivity-rules.md)
-- [User Module](../../User/docs/case-sensitivity-rules.md)
+- [Gdpr Module](../../gdpr/docs/case-sensitivity-rules.md)
+- [Lang Module](../../lang/docs/case-sensitivity-rules.md)
+- [Media Module](../../media/docs/case-sensitivity-rules.md)
+- [Notify Module](../../notify/docs/case-sensitivity-rules.md)
+- [Rating Module](../../rating/docs/case-sensitivity-rules.md)
+- [Tenant Module](../../tenant/docs/case-sensitivity-rules.md)
+- [User Module](../../user/docs/case-sensitivity-rules.md)
 
 ## 🔧 Prevenzione
 
@@ -310,7 +310,7 @@ python3 /path/to/check_duplicates.py
 ### Internal Documentation
 - [Modulo Xot Architecture](./architecture.md)
 - [Bashscripts Location Policy](./bashscripts-location-policy.md)
-- [CLAUDE.md - Project Guidelines](CLAUDE.md)
+- [CLAUDE.md - Project Guidelines](claude.md)
 
 ## 🎯 Conclusioni
 

@@ -4,7 +4,7 @@
 **Module Version**: 1.0.0
 
 ## 🎯 Lettura Essenziale
-1. [README.md](./README.md) - Panoramica del modulo SEO.
+1. [README.md](./readme.md) - Panoramica del modulo SEO.
 2. [roadmap.md](./roadmap.md) - Evoluzione 2026: AI Content Optimization & Schema.org.
 
 ## 🏗️ Core Features
@@ -16,17 +16,17 @@
 
 ## 🔗 Integration Cross-Module
 - **[Schema.org Event Tasks](./task-schema-org-eventi.md)** - Task per implementazione Schema.org per eventi.
-- **[Meetup: Event Series Actions](../../Meetup/docs/tasks-schema-org-event-series-actions.md)** - Schema.org EventSeries.
-- **[Geo: Place & GeoCircle](../../Geo/docs/tasks-schema-org-place-geocircle.md)** - Schema.org Place.
+- **[Meetup: Event Series Actions](../../meetup/docs/tasks-schema-org-event-series-actions.md)** - Schema.org EventSeries.
+- **[Geo: Place & GeoCircle](../../geo/docs/tasks-schema-org-place-geocircle.md)** - Schema.org Place.
 
 ## 🧪 Qualità e Testing
 - ⚠️ Test suite da implementare (Pest)
 - ⚠️ PHPStan Level 10 da completare
 
 ## 🔗 Moduli Correlati
-- [Xot](../../Xot/docs/README.md) - Core framework e base classes.
-- [Meetup](../../Meetup/docs/README.md) - Schema.org Event integration.
-- [Geo](../../Geo/docs/README.md) - Schema.org Place integration.
+- [Xot](../../xot/docs/readme.md) - Core framework e base classes.
+- [Meetup](../../meetup/docs/readme.md) - Schema.org Event integration.
+- [Geo](../../geo/docs/readme.md) - Schema.org Place integration.
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

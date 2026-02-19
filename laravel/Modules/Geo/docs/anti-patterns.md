@@ -49,7 +49,7 @@ if (app(SafeObjectCastAction::class)->hasProperty($object, 'value')) {
 
 ### Collegamenti
 
-- [Documentazione Azioni Cast](../../laravel/Modules/Xot/docs/cast-actions.md)
+- [Documentazione Azioni Cast](../../laravel/modules/xot/docs/cast-actions.md)
 - [SafeEloquentCastAction](../../laravel/Modules/Xot/app/Actions/Cast/SafeEloquentCastAction.php)
 - [SafeObjectCastAction](../../laravel/Modules/Xot/app/Actions/Cast/SafeObjectCastAction.php)
 

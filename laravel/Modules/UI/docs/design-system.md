@@ -124,14 +124,14 @@ Il design system definisce gli standard visivi e di interazione per garantire co
    - Layout fluido
 
 ## Collegamenti Bidirezionali
-- [README](README.md)
+- [README](readme.md)
 - [Componenti](components.md)
 - [Layout](layouts-and-themes.md)
 
 ## Vedi Anche
 - [Tailwind Config](../config/tailwind.config.js)
 - [Theme Config](../config/theme.php)
-- [Filament UI](../../Cms/docs/filament-components.md)
+- [Filament UI](../../cms/docs/filament-components.md)
 # Design System
 
 ## Panoramica
@@ -258,13 +258,13 @@ Il design system definisce gli standard visivi e di interazione per garantire co
    - Layout fluido
 
 ## Collegamenti Bidirezionali
-- [README](README.md)
+- [README](readme.md)
 - [Componenti](components.md)
 - [Layout](layouts-and-themes.md)
 
 ## Vedi Anche
 - [Tailwind Config](../config/tailwind.config.js)
 - [Theme Config](../config/theme.php)
-- [Filament UI](../../Cms/project_docs/filament-components.md)
-- [Filament UI](../../Cms/project_docs/filament-components.md)
-- [Filament UI](../../Cms/project_docs/filament-components.md)
+- [Filament UI](../../cms/project_docs/filament-components.md)
+- [Filament UI](../../cms/project_docs/filament-components.md)
+- [Filament UI](../../cms/project_docs/filament-components.md)

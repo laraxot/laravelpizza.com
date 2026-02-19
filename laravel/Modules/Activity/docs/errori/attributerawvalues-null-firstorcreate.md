@@ -220,7 +220,7 @@ IndennitaResponsabilita::withoutEvents(function (): void {
 
 ## Collegamenti
 
-- [BaseScheda Activity Log Configuration](../../Ptv/docs/models/base-scheda-activity-log.md)
+- [BaseScheda Activity Log Configuration](../../ptv/docs/models/base-scheda-activity-log.md)
 - [Activity Log Troubleshooting](../troubleshooting/properties-vuote-activity-log.md)
 - [PopulateByYearAction](../../Ptv/app/Actions/PopulateByYearAction.php)
 

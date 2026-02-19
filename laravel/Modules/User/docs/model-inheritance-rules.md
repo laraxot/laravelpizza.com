@@ -200,8 +200,8 @@ Prima di creare un nuovo modello, verifica:
 
 ## Link Correlati
 
-- [Documentazione Xot BaseModel](../../Xot/docs/model-inheritance-rules.md)
-- [Documentazione Geo Model Pattern](../../Geo/docs/model-inheritance-pattern.md)
+- [Documentazione Xot BaseModel](../../xot/docs/model-inheritance-rules.md)
+- [Documentazione Geo Model Pattern](../../geo/docs/model-inheritance-pattern.md)
 - [Laravel Eloquent Documentation](https://laravel.com/docs/eloquent)
 
 ## Note Tecniche

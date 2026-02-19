@@ -196,7 +196,7 @@ TextInput::make('full_name')
 ## Collegamenti
 - [Form Components](form-components.md)
 - [Naming Conventions](naming-conventions.md)
-- [Translation System](../../Lang/docs/translation-system.md)
+- [Translation System](../../lang/docs/translation-system.md)
 
 ## Vedi Anche
 - [VSCode PHP Setup](vscode-php-setup.md)

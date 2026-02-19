@@ -251,4 +251,4 @@ $event = Event::where('slug', $slug0)->first();
 
 - [Laravel Folio Documentation](https://laravel.com/docs/12.x/folio)
 - [Filament Widgets Documentation](https://filamentphp.com/docs/3.x/widgets)
-- [XotBaseWidget](Modules/Xot/docs/xotbase-extension-rules.md)
+- [XotBaseWidget](modules/xot/docs/xotbase-extension-rules.md)

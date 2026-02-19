@@ -260,11 +260,11 @@ Durante lo sviluppo sono stati configurati i seguenti MCP servers in `.cursor/mc
 
 ## 📚 Documentazione Correlata
 
-- 📄 [README.md](../../Themes/Meetup/resources/html/README.md) - Guida completa HTML
-- 📄 [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) - Sistema design completo
-- 📄 [FEATURES.md](./FEATURES.md) - Requirements funzionali
-- 📄 [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) - Schema database
-- 📄 [INSTALLATION.md](./INSTALLATION.md) - Installazione modulo
+- 📄 [README.md](../../themes/meetup/resources/html/readme.md) - Guida completa HTML
+- 📄 [DESIGN_SYSTEM.md](./design_system.md) - Sistema design completo
+- 📄 [FEATURES.md](./features.md) - Requirements funzionali
+- 📄 [DATABASE_SCHEMA.md](./database_schema.md) - Schema database
+- 📄 [INSTALLATION.md](./installation.md) - Installazione modulo
 
 ## 🎨 Design Decisions
 

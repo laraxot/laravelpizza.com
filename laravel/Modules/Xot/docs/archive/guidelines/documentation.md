@@ -103,7 +103,7 @@ Breve descrizione...
 [Configurazione](configuration.md)
 
 ## Utilizzo
-[Guide all'uso](usage/README.md)
+[Guide all'uso](usage/readme.md)
 ```
 
 ## Manutenzione
@@ -159,13 +159,13 @@ php artisan api:generate
 
 ## Collegamenti
 
-- [Convenzioni di Codice](../conventions/README.md)
-- [Architettura](../architecture/README.md)
-- [Best Practices](../best-practices/README.md)
+- [Convenzioni di Codice](../conventions/readme.md)
+- [Architettura](../architecture/readme.md)
+- [Best Practices](../best-practices/readme.md)
 - [Markdown Guide](https://www.markdownguide.org)
 
 ## Collegamenti tra versioni di documentation.md
 * [documentation.md](docs/rules/documentation.md)
-* [documentation.md](../../../Xot/project_docs/documentation.md)
-* [documentation.md](../../../Xot/project_docs/guidelines/documentation.md)
-* [documentation.md](../../../Cms/project_docs/roadmap/features/documentation.md)
+* [documentation.md](../../../xot/project_docs/documentation.md)
+* [documentation.md](../../../xot/project_docs/guidelines/documentation.md)
+* [documentation.md](../../../cms/project_docs/roadmap/features/documentation.md)

@@ -50,6 +50,6 @@ class MeetupServiceProvider extends XotBaseServiceProvider
 
 ## Riferimenti
 
-- [XotBaseServiceProvider](../../Xot/docs/development-workflow-detailed.md)
-- [Filosofia Laraxot](../../Xot/docs/critical-rules-consolidated.md)
-- [Pattern Service Provider](../../Xot/docs/service-provider-patterns.md)
+- [XotBaseServiceProvider](../../xot/docs/development-workflow-detailed.md)
+- [Filosofia Laraxot](../../xot/docs/critical-rules-consolidated.md)
+- [Pattern Service Provider](../../xot/docs/service-provider-patterns.md)

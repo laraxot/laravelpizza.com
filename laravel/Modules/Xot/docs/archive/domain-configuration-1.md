@@ -76,27 +76,27 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
 ```
 
 ## Collegamenti
-- [Configurazione Generale](CONFIGURATION.md)
-- [Risoluzione dei Loghi](LOGO_RESOLUTION.md) - **IMPORTANTE**: Processo dettagliato di risoluzione dei loghi
+- [Configurazione Generale](configuration.md)
+- [Risoluzione dei Loghi](logo_resolution.md) - **IMPORTANTE**: Processo dettagliato di risoluzione dei loghi
 - [Gestione Asset](assets.md)
 - [Struttura Temi](themes.md)
 - [Linee Guida per i Loghi](../../../docs/standards/logo_guidelines.md)
-- [Documentazione Principale](../../../docs/README.md)
-- [Standard di Progetto](../../../docs/standards/README.md)
-- [Gestione Media](../../Media/docs/README.md)
-- [Gestione UI](../../UI/docs/README.md)
-- [Gestione Temi](../../Cms/docs/themes.md)
+- [Documentazione Principale](../../../docs/readme.md)
+- [Standard di Progetto](../../../docs/standards/readme.md)
+- [Gestione Media](../../media/docs/readme.md)
+- [Gestione UI](../../ui/docs/readme.md)
+- [Gestione Temi](../../cms/docs/themes.md)
 
 ## Collegamenti Correlati
-- [Configurazione Moduli](MODULE_CONFIGURATION.md)
-- [Gestione Risorse](ASSETS.md)
-- [Linee Guida Sviluppo](DEVELOPMENT_GUIDELINES.md)
-- [Troubleshooting](TROUBLESHOOTING.md)
+- [Configurazione Moduli](module_configuration.md)
+- [Gestione Risorse](assets.md)
+- [Linee Guida Sviluppo](development_guidelines.md)
+- [Troubleshooting](troubleshooting.md)
 
 ## Vedi Anche
-- [Documentazione UI](../../UI/docs/configuration.md)
-- [Documentazione Media](../../Media/docs/assets.md)
-- [Documentazione Temi](../../Cms/docs/theming.md)
+- [Documentazione UI](../../ui/docs/configuration.md)
+- [Documentazione Media](../../media/docs/assets.md)
+- [Documentazione Temi](../../cms/docs/theming.md)
 - [Standard Interfaccia](../../../docs/standards/interface_guidelines.md)
 - [Best Practices](../../../docs/standards/best_practices.md)
 
@@ -169,6 +169,6 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
    - Assicurarsi che tutte le versioni necessarie del logo siano presenti
 
 ## Collegamenti
-- [Configurazione Generale](CONFIGURATION.md)
+- [Configurazione Generale](configuration.md)
 - [Gestione Asset](assets.md)
 - [Struttura Temi](themes.md)

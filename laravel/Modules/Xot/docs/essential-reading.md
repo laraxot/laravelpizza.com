@@ -4,7 +4,7 @@
 
 ## 🎯 Per Iniziare (3 docs)
 
-### 1. [README.md](./README.md) ⭐⭐⭐
+### 1. [README.md](./readme.md) ⭐⭐⭐
 **Cosa:** Entry point, panoramica generale, correzioni recenti
 **Perché:** Primo documento da leggere sempre
 **Tempo:** 5 minuti

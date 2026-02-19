@@ -186,4 +186,4 @@ Per tutto il resto: **Plain Blade**!
 ## See Also
 - [Componenti Blocchi Contenuto](./componenti-blocchi-contenuto.md)
 - [Content Management](./content-management.md)
-- [Folio Volt Architecture](../Meetup/docs/folio-volt-filament-architecture.md)
+- [Folio Volt Architecture](../meetup/docs/folio-volt-filament-architecture.md)

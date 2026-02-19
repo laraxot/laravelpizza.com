@@ -201,4 +201,4 @@ $eventData = $helper->getEventData();
 - [Events Detail Volt Class Pattern](events-detail-volt-class-pattern.md) - Pattern Helper Class ispirato a Volt
 - [Container0 Slug0 Agnostic Pattern](container0-slug0-agnostic-pattern.md)
 - [Container0 Pattern Philosophy](container0-pattern-philosophy.md)
-- [CMS JSON Content System](../Cms/docs/json-content-system-architecture.md)
+- [CMS JSON Content System](../cms/docs/json-content-system-architecture.md)

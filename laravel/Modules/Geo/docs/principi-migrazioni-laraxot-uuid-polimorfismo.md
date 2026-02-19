@@ -221,9 +221,9 @@ $table->index(['morphable_id', 'morphable_type']); // Performance
 ## 🔗 **Collegamenti e Risorse**
 
 ### **Documentazione Correlata**
-- [Regole Migrazioni Base](../../Xot/docs/migration_rules.md)
-- [UUID Implementation](../../User/docs/uuid_implementation.md)
-- [Polymorphic Relationships](../../Xot/docs/polymorphic_relationships.md)
+- [Regole Migrazioni Base](../../xot/docs/migration_rules.md)
+- [UUID Implementation](../../user/docs/uuid_implementation.md)
+- [Polymorphic Relationships](../../xot/docs/polymorphic_relationships.md)
 - [System Architecture](../system_architecture.md)
 
 ### **Esempi Pratici**

@@ -428,7 +428,7 @@ Per problemi o domande:
 ## Prossimi Passi
 
 Dopo l'installazione:
-1. Leggi [DEVELOPMENT.md](./DEVELOPMENT.md) per iniziare lo sviluppo
+1. Leggi [DEVELOPMENT.md](./development.md) per iniziare lo sviluppo
 2. Consulta [architecture.md](./architecture.md) per comprendere l'architettura
 3. Vedi [business-logic.md](./business-logic.md) per la logica di business
 4. Consulta [todo.md](./todo.md) per le feature da implementare

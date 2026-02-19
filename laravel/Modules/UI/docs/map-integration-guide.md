@@ -584,7 +584,7 @@ class GeocodingService
 - [Livewire Components](https://laravel-livewire.com/docs/2.x/quickstart)
 
 ### 📖 Documentazione Correlata
-- [Farmshops.eu Analysis](../Geo/docs/farmshops-analysis.md)
+- [Farmshops.eu Analysis](../geo/docs/farmshops-analysis.md)
 - [Geo Module Documentation](../Geo/docs/)
 - [UI Component API](component-api.md)
 - [Styling Guide](styling-guide.md)

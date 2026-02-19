@@ -17,7 +17,7 @@ Nel tema Meetup **non** usare SVG inline nelle Blade. Usare sempre file `.svg` n
 
 ## Logo
 
-Il logo ufficiale è il contenuto attuale di `Modules/Meetup/resources/svg/logo.svg`. Non sovrascrivere questo file con altre interpretazioni a meno che non sia esplicitamente richiesto dal committente. Vedi [logo-branding-guidelines.md](../../Modules/Meetup/docs/logo-branding-guidelines.md).
+Il logo ufficiale è il contenuto attuale di `Modules/Meetup/resources/svg/logo.svg`. Non sovrascrivere questo file con altre interpretazioni a meno che non sia esplicitamente richiesto dal committente. Vedi [logo-branding-guidelines.md](../../modules/meetup/docs/logo-branding-guidelines.md).
 
 ## Esempio (header / footer)
 
@@ -39,4 +39,4 @@ Il logo ufficiale è il contenuto attuale di `Modules/Meetup/resources/svg/logo.
 ## Riferimenti
 
 - Regola: [.cursor/rules/svg-no-hardcoded-blade-icons-meetup.mdc](../../../.cursor/rules/svg-no-hardcoded-blade-icons-meetup.mdc)
-- Modulo: [Modules/Meetup/docs/svg-icons-no-hardcoded-blade.md](../../Modules/Meetup/docs/svg-icons-no-hardcoded-blade.md)
+- Modulo: [Modules/Meetup/docs/svg-icons-no-hardcoded-blade.md](../../modules/meetup/docs/svg-icons-no-hardcoded-blade.md)

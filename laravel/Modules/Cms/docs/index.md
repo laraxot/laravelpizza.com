@@ -1,18 +1,18 @@
 # Indice della Documentazione - Modulo Cms
 
 ## Collegamenti Correlati
-- [Documentazione Generale <nome progetto>](../../../../docs/README.md)
+- [Documentazione Generale <nome progetto>](../../../../docs/readme.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
-- [Modulo Xot](../../Xot/docs/README.md)
-- [Modulo User](../../User/docs/README.md)
-- [Modulo UI](../../UI/docs/README.md)
-- [Tema One](../../../Themes/One/docs/README.md)
+- [Standard di Documentazione](../../../../docs/documentation_standards.md)
+- [Modulo Xot](../../xot/docs/readme.md)
+- [Modulo User](../../user/docs/readme.md)
+- [Modulo UI](../../ui/docs/readme.md)
+- [Tema One](../../../themes/one/docs/readme.md)
 
 ## Categorie Principali
 
 ### Architettura e Struttura
-- [README](./README.md) - Panoramica generale del modulo
+- [README](./readme.md) - Panoramica generale del modulo
 - [Architettura](./architecture.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Struttura Cartelle](./folder-structure.md) - Organizzazione delle cartelle
@@ -80,18 +80,18 @@
 ## Sottocartelle
 
 ### Blocchi
-- [Index](./blocks/INDEX.md) - Indice della documentazione sui blocchi
+- [Index](./blocks/index.md) - Indice della documentazione sui blocchi
 
 ### Sezioni
-- [Index](./sections/INDEX.md) - Indice della documentazione sulle sezioni
-- [Header](./sections/HEADER_LANGUAGE_USER_DROPDOWN.md) - Documentazione sul dropdown utente e lingua nell'header
-- [Header: Implementazione](./sections/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md) - Implementazione del selettore lingua e avatar
+- [Index](./sections/index.md) - Indice della documentazione sulle sezioni
+- [Header](./sections/header_language_user_dropdown.md) - Documentazione sul dropdown utente e lingua nell'header
+- [Header: Implementazione](./sections/header_language_avatar_implementation.md) - Implementazione del selettore lingua e avatar
 
 ### Componenti
-- [Index](./components/INDEX.md) - Indice della documentazione sui componenti
+- [Index](./components/index.md) - Indice della documentazione sui componenti
 
 ### Frontoffice
-- [Index](./frontoffice/INDEX.md) - Indice della documentazione sul frontoffice
+- [Index](./frontoffice/index.md) - Indice della documentazione sul frontoffice
 
 ## PHPStan e Qualità del Codice
 - [PHPStan](./phpstan.md) - Utilizzo di PHPStan

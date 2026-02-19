@@ -207,7 +207,7 @@ screens: {
 - [ ] Performance (Lighthouse > 90)
 
 ## 🔗 Riferimenti
-- [Design System completo](./DESIGN-SYSTEM.md)
+- [Design System completo](./design-system.md)
 - [Analisi sito originale](./laravelpizza-com-design-analysis.md)
 - [Best practices](./best-practices-analysis.md)
 - [Roadmap tema](./roadmap.md)

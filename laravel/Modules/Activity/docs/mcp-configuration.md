@@ -114,7 +114,7 @@ The Activity module's MCP configuration enables AI assistants to interact with:
 - [Asana MCP Configuration](../../../docs/mcp-asana-configuration.md)
 - [ClickUp MCP Configuration](../../../docs/mcp-clickup-configuration.md)
 - [Redmine MCP Configuration](../../../docs/mcp-redmine-configuration.md)
-- [Activity Module Roadmap](./roadmap-[DATE].md)
+- [Activity Module Roadmap](./roadmap-[date].md)
 
 ---
 

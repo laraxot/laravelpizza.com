@@ -180,7 +180,7 @@ class SafeFloatCastActionTest extends TestCase
 ## Collegamenti
 
 - [SafeStringCastAction](../actions/cast/safe-string-cast-action.md)
-- [Xot Actions Documentation](../actions/README.md)
+- [Xot Actions Documentation](../actions/readme.md)
 - [DRY Principle](../../project_docs/dry-principle.md)
 - [KISS Principle](../../project_docs/kiss-principle.md)
 

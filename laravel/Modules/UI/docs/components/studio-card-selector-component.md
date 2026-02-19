@@ -487,7 +487,7 @@ class StudioCardSelectorTest extends DuskTestCase
 ## 📖 **Collegamenti Documentazione**
 
 ### Modulo UI
-- [Components Overview](./README.md)
+- [Components Overview](./readme.md)
 - [Form Components Guide](../form-components.md)
 - [Accessibility Guidelines](../accessibility.md)
 

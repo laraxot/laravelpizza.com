@@ -6,7 +6,7 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
 ## Casi Risolti Recentemente
 
 ### 1. Namespace e Convenzioni
-- [Convenzioni Namespace](NAMESPACE-CONVENTIONS.md)
+- [Convenzioni Namespace](namespace-conventions.md)
 - Risoluzione conflitti nelle convenzioni di namespace
 - Mantenimento della compatibilità con PHPStan
 
@@ -22,8 +22,8 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
   - Documentazione delle decisioni prese
 
 ### 3. Autenticazione e UI
-- [Componenti Filament](../../Themes/One/project_docs/FILAMENT_COMPONENTS.md)
-- [Registrazione Utenti](../../Themes/One/project_docs/AUTH.md)
+- [Componenti Filament](../../themes/one/project_docs/filament_components.md)
+- [Registrazione Utenti](../../themes/one/project_docs/auth.md)
   - Implementazione completa sistema registrazione
   - Gestione tipi utente dinamica
   - UI moderna con Filament
@@ -223,13 +223,13 @@ La risoluzione dei conflitti rimanenti dovrebbe seguire questi principi:
 
 ## Collegamenti tra versioni di risoluzione_conflitti.md
 
-* [risoluzione_conflitti.md](../../../Xot/project_docs/risoluzione_conflitti.md)
-* [risoluzione_conflitti.md](../../../Tenant/project_docs/risoluzione_conflitti.md)
+* [risoluzione_conflitti.md](../../../xot/project_docs/risoluzione_conflitti.md)
+* [risoluzione_conflitti.md](../../../tenant/project_docs/risoluzione_conflitti.md)
 
 aurmich/dev
 5693302 (.)
 b6f667c (.)
-* [Risoluzione Conflitti Xot](../../../Xot/project_docs/risoluzione_conflitti.md)
-* [Risoluzione Conflitti Tenant](../../../Tenant/project_docs/risoluzione_conflitti.md)
+* [Risoluzione Conflitti Xot](../../../xot/project_docs/risoluzione_conflitti.md)
+* [Risoluzione Conflitti Tenant](../../../tenant/project_docs/risoluzione_conflitti.md)
 * [Linee Guida Principali Risoluzione Conflitti](../../../../project_docs/conflict_resolution.md)
 fc83074 (.)

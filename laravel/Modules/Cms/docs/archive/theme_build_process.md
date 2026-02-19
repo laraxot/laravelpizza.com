@@ -1,6 +1,6 @@
 # Processo di Build del Tema in il progetto
 
-Questo documento fornisce una panoramica del processo di build e pubblicazione del tema principale di il progetto. Per una documentazione più dettagliata, consultare il [documento completo nel modulo CMS](../../laravel/Modules/Cms/project_docs/theme-build-process.md).
+Questo documento fornisce una panoramica del processo di build e pubblicazione del tema principale di il progetto. Per una documentazione più dettagliata, consultare il [documento completo nel modulo CMS](../../laravel/modules/cms/project_docs/theme-build-process.md).
 
 ## Comandi Principali
 
@@ -37,7 +37,7 @@ Il tema è strettamente integrato con il modulo CMS di il progetto, che fornisce
 - Configurazione dei template
 - Definizione dei blocchi di contenuto
 
-Per ulteriori dettagli su come funziona l'integrazione, consultare la [documentazione del modulo CMS](../../laravel/Modules/Cms/project_docs/theme-cms-integration.md).
+Per ulteriori dettagli su come funziona l'integrazione, consultare la [documentazione del modulo CMS](../../laravel/modules/cms/project_docs/theme-cms-integration.md).
 
 ## Risorse Aggiuntive
 

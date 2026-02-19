@@ -76,27 +76,27 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
 ```
 
 ## Collegamenti
-- [Configurazione Generale](CONFIGURATION.md)
-- [Risoluzione dei Loghi](LOGO_RESOLUTION.md) - **IMPORTANTE**: Processo dettagliato di risoluzione dei loghi
+- [Configurazione Generale](configuration.md)
+- [Risoluzione dei Loghi](logo_resolution.md) - **IMPORTANTE**: Processo dettagliato di risoluzione dei loghi
 - [Gestione Asset](assets.md)
 - [Struttura Temi](themes.md)
 - [Linee Guida per i Loghi](../../../project_docs/standards/logo_guidelines.md)
-- [Documentazione Principale](../../../project_docs/README.md)
-- [Standard di Progetto](../../../project_docs/standards/README.md)
-- [Gestione Media](../../Media/project_docs/README.md)
-- [Gestione UI](../../UI/project_docs/README.md)
-- [Gestione Temi](../../Cms/project_docs/themes.md)
+- [Documentazione Principale](../../../project_docs/readme.md)
+- [Standard di Progetto](../../../project_docs/standards/readme.md)
+- [Gestione Media](../../media/project_docs/readme.md)
+- [Gestione UI](../../ui/project_docs/readme.md)
+- [Gestione Temi](../../cms/project_docs/themes.md)
 
 ## Collegamenti Correlati
-- [Configurazione Moduli](MODULE_CONFIGURATION.md)
-- [Gestione Risorse](ASSETS.md)
-- [Linee Guida Sviluppo](DEVELOPMENT_GUIDELINES.md)
-- [Troubleshooting](TROUBLESHOOTING.md)
+- [Configurazione Moduli](module_configuration.md)
+- [Gestione Risorse](assets.md)
+- [Linee Guida Sviluppo](development_guidelines.md)
+- [Troubleshooting](troubleshooting.md)
 
 ## Vedi Anche
-- [Documentazione UI](../../UI/project_docs/configuration.md)
-- [Documentazione Media](../../Media/project_docs/assets.md)
-- [Documentazione Temi](../../Cms/project_docs/theming.md)
+- [Documentazione UI](../../ui/project_docs/configuration.md)
+- [Documentazione Media](../../media/project_docs/assets.md)
+- [Documentazione Temi](../../cms/project_docs/theming.md)
 - [Standard Interfaccia](../../../project_docs/standards/interface_guidelines.md)
 - [Best Practices](../../../project_docs/standards/best_practices.md)
 
@@ -169,6 +169,6 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
    - Assicurarsi che tutte le versioni necessarie del logo siano presenti
 
 ## Collegamenti
-- [Configurazione Generale](CONFIGURATION.md)
+- [Configurazione Generale](configuration.md)
 - [Gestione Asset](assets.md)
 - [Struttura Temi](themes.md)

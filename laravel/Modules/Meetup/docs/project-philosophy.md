@@ -23,7 +23,7 @@ Questo progetto non è un "esempio giocattolo", ma la base per **meetup veri, pa
 - **Evoluzione Organica**: La migrazione "cresce" nel tempo
 - **Anti-Frammentazione**: Evita esplosione di micro-migrazioni
 
-Vedi: [Laraxot Migration Philosophy](../../User/docs/laraxot-migration-philosophy.md)
+Vedi: [Laraxot Migration Philosophy](../../user/docs/laraxot-migration-philosophy.md)
 
 ### Frontoffice = Folio + Volt
 
@@ -52,7 +52,7 @@ Vedi: [Architettura Frontoffice](./architecture-reference.md)
 - **`x-layouts.app`** → layout completo con header nav + footer (pagina pubblica frontoffice)
 - **`x-layouts.guest`** → layout per login/registrazione/password (auth frontoffice)
 
-Vedi: [Layout System Analysis](../../../Themes/Meetup/docs/layout-system-analysis.md)
+Vedi: [Layout System Analysis](../../../themes/meetup/docs/layout-system-analysis.md)
 
 ### Qualità Maniacale
 
@@ -133,10 +133,10 @@ Questo repo è il passo successivo:
 
 ## Riferimenti
 
-- [README Principale](../../../../README.md)
+- [README Principale](../../../../readme.md)
 - [Regole Critiche Consolidate](./critical-rules-consolidated.md)
 - [Architettura Frontoffice](./architecture-reference.md)
-- [Layout System](../../../Themes/Meetup/docs/layout-system-analysis.md)
+- [Layout System](../../../themes/meetup/docs/layout-system-analysis.md)
 
 ---
 

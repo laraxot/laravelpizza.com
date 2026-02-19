@@ -236,8 +236,8 @@ Ogni sezione `navigation` deve includere:
 
 - [Errori Comuni Traduzione](errori-comuni-traduzione.md)
 - [Traduzioni Navigation Audit](traduzioni-navigation-2025.md)
-- [Best Practices Traduzioni](../../Xot/docs/translation-standards.md)
-- [NavigationLabelTrait Explained](../../Xot/docs/filament/navigation-label-trait-explained.md)
+- [Best Practices Traduzioni](../../xot/docs/translation-standards.md)
+- [NavigationLabelTrait Explained](../../xot/docs/filament/navigation-label-trait-explained.md)
 
 ## Note Tecniche
 

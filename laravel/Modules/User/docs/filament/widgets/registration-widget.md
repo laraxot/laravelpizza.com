@@ -29,11 +29,11 @@ Queste Action devono occuparsi di:
 - [RegistrationWidget.php](../../app/Filament/Widgets/RegistrationWidget.php)
 - [EditUserWidget.php](../../app/Filament/Widgets/EditUserWidget.php) - Widget per modifica dati utente
 - [Documentazione EditUserWidget](./edit-user-widget.md) - Documentazione completa dell'EditUserWidget
-- [Documentazione Xot sulla proprietà $data](../../../Xot/docs/filament/widgets/data-property.md)
+- [Documentazione Xot sulla proprietà $data](../../../xot/docs/filament/widgets/data-property.md)
 - [Esempio di Action di registrazione Doctor](../../../../Patient/app/Actions/Doctor/RegisterAction.php)
 - [Esempio di Action di registrazione Patient](../../../../Patient/app/Actions/Patient/RegisterAction.php)
 - [Documentazione generale: Registrazione Odontoiatra](../../../../../docs/doctor-registration.md)
-- [Documentazione Xot sulla proprietà $data](../../../Xot/project_docs/filament/widgets/data-property.md)
+- [Documentazione Xot sulla proprietà $data](../../../xot/project_docs/filament/widgets/data-property.md)
 - [Documentazione generale: Registrazione Odontoiatra](../../../../../project_docs/doctor-registration.md)
 ---
 **Nota:**
@@ -91,10 +91,10 @@ public function register()
 3. **Validare i dati prima dell'uso** - Utilizzare i metodi di validazione di Livewire
 4. **Utilizzare `$this->form->fill()`** nel metodo `mount()` per inizializzare il form
 5. **Evitare binding diretti** come `wire:model="first_name"` che non usano la struttura `data.*`
-- [Documentazione sulla proprietà `$data` in XotBaseWidget](../../../Xot/docs/filament/widgets/data-property.md)
+- [Documentazione sulla proprietà `$data` in XotBaseWidget](../../../xot/docs/filament/widgets/data-property.md)
 - [Filament Forms Documentation](https://filamentphp.com/docs/3.x/forms/installation)
 - [Livewire Data Binding](https://livewire.laravel.com/docs/properties)
-- [Documentazione sulla proprietà `$data` in XotBaseWidget](../../../Xot/project_docs/filament/widgets/data-property.md)
+- [Documentazione sulla proprietà `$data` in XotBaseWidget](../../../xot/project_docs/filament/widgets/data-property.md)
 - [Filament Forms Documentation](https://filamentphp.com/project_docs/3.x/forms/installation)
 - [Livewire Data Binding](https://livewire.laravel.com/project_docs/properties)
 ## Gestione dinamica del salvataggio e delle azioni

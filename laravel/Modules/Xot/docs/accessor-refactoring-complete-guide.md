@@ -303,12 +303,12 @@ Moduli con logica inline complessa:
 ## Collegamenti Documentazione
 
 ### Guide Filosofiche
-- [Accessor Refactoring Philosophy](../../Sigma/docs/accessor-refactoring-philosophy.md)
+- [Accessor Refactoring Philosophy](../../sigma/docs/accessor-refactoring-philosophy.md)
 - [Philosophy Guide PTVX](../../../docs/philosophy-guide.md)
 
 ### Guide Operative
-- [Accessor Refactoring Roadmap](../../Sigma/docs/accessor-refactoring-roadmap.md)
-- [Progress Tracker](../../Sigma/docs/refactoring-progress-tracker.md)
+- [Accessor Refactoring Roadmap](../../sigma/docs/accessor-refactoring-roadmap.md)
+- [Progress Tracker](../../sigma/docs/refactoring-progress-tracker.md)
 - [File Locking Pattern](./file-locking-pattern.md)
 
 ### Guide Tecniche
@@ -316,8 +316,8 @@ Moduli con logica inline complessa:
 - [Accessor Audit Cross-Modules](./accessor-audit-cross-modules.md)
 
 ### Implementazioni Modulo
-- [Sigma - SchedaTrait](../../Sigma/docs/session-complete-summary.md)
-- [IndennitaCondizioniLavoro - Audit](../../IndennitaCondizioniLavoro/docs/accessor-guard-audit.md)
+- [Sigma - SchedaTrait](../../sigma/docs/session-complete-summary.md)
+- [IndennitaCondizioniLavoro - Audit](../../indennitacondizionilavoro/docs/accessor-guard-audit.md)
 
 ---
 

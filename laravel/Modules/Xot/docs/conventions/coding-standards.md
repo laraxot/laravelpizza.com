@@ -216,8 +216,8 @@ public function store(Request $request): Response
 - [PHP-FIG PSRs](https://www.php-fig.org/psr/)
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 - [Laravel Best Practices](https://laravel.com/docs/master/best-practices)
-- [Security Best Practices](../security/README.md)
+- [Security Best Practices](../security/readme.md)
 
 ## Collegamenti tra versioni di coding-standards.md
-* [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
-* [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
+* [coding-standards.md](../../../xot/docs/standards/coding-standards.md)
+* [coding-standards.md](../../../xot/docs/conventions/coding-standards.md)

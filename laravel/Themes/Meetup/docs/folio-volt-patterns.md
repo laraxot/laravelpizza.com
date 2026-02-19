@@ -1075,7 +1075,7 @@ it('renders button with ghost variant', function () {
 - [Genesis Starter Kit](https://github.com/thedevdojo/genesis) - UI component patterns
 - [Tailwind CSS Dark Mode](https://tailwindcss.com/docs/dark-mode)
 - [Alpine.js Documentation](https://alpinejs.dev)
-- [Folio + Volt Best Practices](../Modules/Meetup/docs/folio-volt-best-practices.md)
+- [Folio + Volt Best Practices](../modules/meetup/docs/folio-volt-best-practices.md)
 
 ---
 

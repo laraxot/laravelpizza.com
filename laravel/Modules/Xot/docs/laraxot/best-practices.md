@@ -106,9 +106,9 @@ class MyResource extends XotBaseResource
 
 ## Collegamenti tra versioni di best-practices.md
 * [best-practices.md](docs/tecnico/filament/best-practices.md)
-* [best-practices.md](../../../Xot/docs/laraxot/best-practices.md)
-* [best-practices.md](../../../UI/docs/best-practices.md)
-* [best-practices.md](../../../../Themes/One/docs/best-practices.md)
+* [best-practices.md](../../../xot/docs/laraxot/best-practices.md)
+* [best-practices.md](../../../ui/docs/best-practices.md)
+* [best-practices.md](../../../../themes/one/docs/best-practices.md)
 
 ### Versione Incoming
 

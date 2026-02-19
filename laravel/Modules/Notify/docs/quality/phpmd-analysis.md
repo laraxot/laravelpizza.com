@@ -215,7 +215,7 @@ Avoid unused parameters such as '$cid'.
 
 - [PHPMD Rules](https://phpmd.org/rules/index.html)
 - [PSR-12 Coding Standard](https://www.php-fig.org/psr/psr-12/)
-- [Xot - Code Quality Standards](../../../Xot/docs/CODE_QUALITY_STANDARDS.md)
+- [Xot - Code Quality Standards](../../../xot/docs/code_quality_standards.md)
 
 ---
 

@@ -339,7 +339,7 @@ All share buttons follow WCAG 2.1 guidelines:
 
 ## References
 
-- [Seo Module Social Share](../Modules/Seo/docs/social-share-component.md)
+- [Seo Module Social Share](../modules/seo/docs/social-share-component.md)
 - [Volt Component Pattern](./volt-component-pattern.md)
 - [Translation Guidelines](./translations.md)
 
@@ -347,7 +347,7 @@ All share buttons follow WCAG 2.1 guidelines:
 
 ## Backlinks
 
-- [Meetup Theme README](./README.md)
+- [Meetup Theme README](./readme.md)
 - [Roadmap](./roadmap.md)
 
 ---

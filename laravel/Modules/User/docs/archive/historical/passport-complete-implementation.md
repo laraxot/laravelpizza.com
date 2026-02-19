@@ -308,8 +308,8 @@ Le Policy garantiscono che:
 
 - [passport.md](./passport.md) - Documentazione completa Passport
 - [passport-complete-management-debate.md](./passport-complete-management-debate.md) - Dibattito interno e decisioni
-- [FILOSOFIA_MODULO_USER.md](./FILOSOFIA_MODULO_USER.md) - Filosofia modulo User
-- [BUSINESS_LOGIC_DEEP_DIVE.md](./BUSINESS_LOGIC_DEEP_DIVE.md) - Business logic approfondita
+- [FILOSOFIA_MODULO_USER.md](./filosofia_modulo_user.md) - Filosofia modulo User
+- [BUSINESS_LOGIC_DEEP_DIVE.md](./business_logic_deep_dive.md) - Business logic approfondita
 
 ---
 

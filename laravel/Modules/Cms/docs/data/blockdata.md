@@ -235,8 +235,8 @@ Questa architettura garantisce:
 
 ## Collegamenti correlati
 
-- [Architettura CMS](/laravel/Modules/Cms/docs/architecture.md)
-- [Blocks Documentation](/laravel/Modules/Cms/docs/blocks.md)
-- [Page Component](/laravel/Modules/Cms/docs/components/page.md)
+- [Architettura CMS](/laravel/modules/cms/docs/architecture.md)
+- [Blocks Documentation](/laravel/modules/cms/docs/blocks.md)
+- [Page Component](/laravel/modules/cms/docs/components/page.md)
 - [Best Practices](/laravel/Modules/Cms/docs/best-practices/)
-- [Blade Components Rules](/laravel/Modules/Cms/docs/best-practices/blade-components.md)
+- [Blade Components Rules](/laravel/modules/cms/docs/best-practices/blade-components.md)

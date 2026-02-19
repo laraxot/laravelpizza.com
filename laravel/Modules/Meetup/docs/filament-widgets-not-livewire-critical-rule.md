@@ -6,7 +6,7 @@
 
 Questa è una regola **ASSOLUTA** e **CRITICA** che deve essere sempre rispettata.
 
-Vedi anche: [Themes/Meetup/docs/filament-widgets-not-livewire-critical-rule.md](../../Themes/Meetup/docs/filament-widgets-not-livewire-critical-rule.md)
+Vedi anche: [Themes/Meetup/docs/filament-widgets-not-livewire-critical-rule.md](../../themes/meetup/docs/filament-widgets-not-livewire-critical-rule.md)
 
 ## ❌ VIETATO ASSOLUTO
 
@@ -64,7 +64,7 @@ class EventDetailWidget extends XotBaseWidget
 
 ## 🔗 Riferimenti
 
-- [Filament Widgets NOT Livewire Critical Rule](../../Themes/Meetup/docs/filament-widgets-not-livewire-critical-rule.md)
-- [Livewire to Filament Widget Migration](../User/docs/livewire-to-filament-widget-migration.md)
-- [Auth Widget Rules](../User/docs/auth-widget-rules.md)
-- [AGENTS.md](../../../AGENTS.md) - Sezione "CRITICAL RULE: Always Use Filament Widgets"
+- [Filament Widgets NOT Livewire Critical Rule](../../themes/meetup/docs/filament-widgets-not-livewire-critical-rule.md)
+- [Livewire to Filament Widget Migration](../user/docs/livewire-to-filament-widget-migration.md)
+- [Auth Widget Rules](../user/docs/auth-widget-rules.md)
+- [AGENTS.md](../../../agents.md) - Sezione "CRITICAL RULE: Always Use Filament Widgets"

@@ -217,7 +217,7 @@ Il modulo utilizza Filament per fornire interfacce amministrative per:
 - Monitoraggio degli eventi memorizzati
 
 ## Collegamenti
-- [README.md](./README.md)
+- [README.md](./readme.md)
 - [Activity Logging Documentation](./activity-logging.md)
 - [Filament Resources Documentation](./filament-resources.md)
 # PHPStan Analysis Report for Activity Module

@@ -119,7 +119,7 @@ return [
 
 ## Documentazione Aggiornata
 
-- [Chart Module - Translation Syntax Errors](../../laravel/Modules/Chart/project_docs/translation_syntax_errors.md)
+- [Chart Module - Translation Syntax Errors](../../laravel/modules/chart/project_docs/translation_syntax_errors.md)
 - [Translation Best Practices](translation-best-practices.md)
 - [PHPStan Configuration](phpstan-configuration.md)
 
@@ -151,7 +151,7 @@ return [
 
 ## Collegamenti
 
-- [Chart Module Documentation](../../laravel/Modules/Chart/project_docs/translation_syntax_errors.md)
+- [Chart Module Documentation](../../laravel/modules/chart/project_docs/translation_syntax_errors.md)
 - [FormBuilder Module Documentation](../../laravel/Modules/FormBuilder/project_docs/)
 - [Job Module Documentation](../../laravel/Modules/Job/project_docs/)
 - [Lang Module Documentation](../../laravel/Modules/Lang/project_docs/)
@@ -281,7 +281,7 @@ return [
 
 ## Documentazione Aggiornata
 
-- [Chart Module - Translation Syntax Errors](../../laravel/Modules/Chart/docs/translation_syntax_errors.md)
+- [Chart Module - Translation Syntax Errors](../../laravel/modules/chart/docs/translation_syntax_errors.md)
 - [Translation Best Practices](translation-best-practices.md)
 - [PHPStan Configuration](phpstan-configuration.md)
 
@@ -313,7 +313,7 @@ return [
 
 ## Collegamenti
 
-- [Chart Module Documentation](../../laravel/Modules/Chart/docs/translation_syntax_errors.md)
+- [Chart Module Documentation](../../laravel/modules/chart/docs/translation_syntax_errors.md)
 - [FormBuilder Module Documentation](../../laravel/Modules/FormBuilder/docs/)
 - [Job Module Documentation](../../laravel/Modules/Job/docs/)
 - [Lang Module Documentation](../../laravel/Modules/Lang/docs/)

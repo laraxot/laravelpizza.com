@@ -127,8 +127,8 @@ These fixes impact **ALL modules** that depend on Xot:
 
 ## 🔗 Related Documentation
 
-- [Passport Integration Guide](../../../User/docs/passport.md)
-- [Passport Configuration](../../../Tenant/docs/it/config/passport.md)
+- [Passport Integration Guide](../../../user/docs/passport.md)
+- [Passport Configuration](../../../tenant/docs/it/config/passport.md)
 - [Previous PHPStan Roadmap](./phpstan-errors-resolution-roadmap.md)
 
 ## ✅ Verification

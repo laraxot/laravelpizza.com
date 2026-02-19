@@ -178,6 +178,6 @@ pages/
 ## References
 
 - [Volt Components Usage](volt-components-usage.md)
-- [CMS Block System](../../Modules/Cms/docs/content-blocks-system.md)
+- [CMS Block System](../../modules/cms/docs/content-blocks-system.md)
 - [Folio Container Routing Priority](folio-container-routing-priority.md)
 - [Events Detail Slug0 Loading](events-detail-slug0-loading.md)

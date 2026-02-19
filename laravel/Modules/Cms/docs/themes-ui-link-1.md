@@ -11,9 +11,9 @@ Secondo le regole di organizzazione della documentazione:
 
 ## Collegamenti ai Temi nel Modulo UI
 
-- [Componenti UI](../../UI/docs/README.md) - Panoramica dei componenti UI disponibili
-- [Layout e Temi](../../UI/docs/layouts-and-themes.md) - Documentazione sui layout e temi
-- [Componenti Blade](../../UI/docs/blade-components.md) - Componenti Blade riutilizzabili
+- [Componenti UI](../../ui/docs/readme.md) - Panoramica dei componenti UI disponibili
+- [Layout e Temi](../../ui/docs/layouts-and-themes.md) - Documentazione sui layout e temi
+- [Componenti Blade](../../ui/docs/blade-components.md) - Componenti Blade riutilizzabili
 
 ## Collegamenti ai Temi nel Modulo Cms
 
@@ -28,6 +28,6 @@ Secondo le regole di organizzazione della documentazione:
 
 ## Collegamento Bidirezionale
 
-Questo documento è collegato bidirezionalmente con [cms-themes-link.md](../../UI/docs/cms-themes-link.md) nel modulo UI.
+Questo documento è collegato bidirezionalmente con [cms-themes-link.md](../../ui/docs/cms-themes-link.md) nel modulo UI.
 
 > Aggiorna entrambi i riferimenti se modifichi la documentazione dei temi o aggiungi nuove sezioni.

@@ -49,9 +49,9 @@ QueueableActionFake::assertPushed(ApproveUserAction::class);
 ```
 
 ## Collegamenti correlati
-- [README User](mdc:README.md)
+- [README User](mdc:readme.md)
 - [Best Practices](mdc:best-practices.md)
 - [Filament Best Practices](mdc:filament-best-practices.md)
 - [Testing](mdc:testing.md)
-- [Documentazione centrale](mdc:../../../../docs/INDEX.md)
+- [Documentazione centrale](mdc:../../../../docs/index.md)
 

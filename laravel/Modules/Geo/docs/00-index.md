@@ -5,7 +5,7 @@
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
-1. [README.md](./README.md) - Panoramica completa, Multi-API e Comuni Italiani.
+1. [README.md](./readme.md) - Panoramica completa, Multi-API e Comuni Italiani.
 2. [roadmap.md](./roadmap.md) - Obiettivi 2026 e miglioramenti geocoding.
 3. [philosophy.md](./philosophy.md) - Visione architetturale dei dati geografici.
 
@@ -28,8 +28,8 @@
 - 🧹 **[PHPMD & Complexity](./cyclomatic-complexity-report.md)** - Analisi della pulizia del codice.
 
 ## 🔗 **Moduli Correlati**
-- [Xot](../../Xot/docs/README.md) - Core framework e Base Models.
-- [UI](../../UI/docs/README.md) - Componenti grafici e widget mappa.
+- [Xot](../../xot/docs/readme.md) - Core framework e Base Models.
+- [UI](../../ui/docs/readme.md) - Componenti grafici e widget mappa.
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

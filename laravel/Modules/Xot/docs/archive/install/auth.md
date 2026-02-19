@@ -111,9 +111,9 @@ return [
 ### Versione HEAD
 
 ## Collegamenti tra versioni di auth.md
-* [auth.md](../../../Xot/project_docs/install/auth.md)
-* [auth.md](../../../User/project_docs/lang/en/auth.md)
-* [auth.md](../../../Tenant/project_docs/it/config/auth.md)
+* [auth.md](../../../xot/project_docs/install/auth.md)
+* [auth.md](../../../user/project_docs/lang/en/auth.md)
+* [auth.md](../../../tenant/project_docs/it/config/auth.md)
 
 ### Versione Incoming
 

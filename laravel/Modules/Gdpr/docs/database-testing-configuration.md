@@ -7,9 +7,9 @@
 1. **MAI forzare le connessioni** con `config()` in CreatesApplication
 2. **MAI inventare variabili environment** come `NOTIFY_DB_DATABASE`, `GDPR_DB_DATABASE`
 3. **MAI aggiungere connessioni hardcode** in `config/database.php`
-4. **MAI eseguire migrate in TestCase setUp()** - Vedi [TestCase Setup Rules](../Xot/docs/testcase-setup-critical-rules.md)
+4. **MAI eseguire migrate in TestCase setUp()** - Vedi [TestCase Setup Rules](../xot/docs/testcase-setup-critical-rules.md)
 
-Vedi [Critical Rules](../Xot/docs/database-configuration-critical-rules.md) per dettagli completi.
+Vedi [Critical Rules](../xot/docs/database-configuration-critical-rules.md) per dettagli completi.
 
 ## .env.testing Configuration (CRITICAL)
 
@@ -132,7 +132,7 @@ it('creates user', function () {
 
 ## TestCase Setup Rules
 
-**CRITICAL**: See [TestCase Setup Critical Rules](../Xot/docs/testcase-setup-critical-rules.md) for complete details on test setup patterns.
+**CRITICAL**: See [TestCase Setup Critical Rules](../xot/docs/testcase-setup-critical-rules.md) for complete details on test setup patterns.
 
 ❌ **WRONG Pattern in TestCase.php:**
 ```php

@@ -42,9 +42,9 @@ protected function getConfirmationRoute(): string
 ```
 ## References
 - [Namespace Issues](../../../project_docs/references/namespace-issues.md)
-- [Filament Resource Guidelines](../../../Modules/Xot/project_docs/rules/filament-resource-guidelines.md)
+- [Filament Resource Guidelines](../../../modules/xot/project_docs/rules/filament-resource-guidelines.md)
 - [Namespace Issues](../../../docs/references/namespace-issues.md)
-- [Filament Resource Guidelines](../../../Modules/Xot/docs/rules/filament-resource-guidelines.md)
+- [Filament Resource Guidelines](../../../modules/xot/docs/rules/filament-resource-guidelines.md)
 # Registration Widget Documentation
 
 ## Overview
@@ -109,4 +109,4 @@ protected function getConfirmationRoute(): string
 ## References
 
 - [Namespace Issues](../../../docs/references/namespace-issues.md)
-- [Filament Resource Guidelines](../../../Modules/Xot/docs/rules/filament-resource-guidelines.md)
+- [Filament Resource Guidelines](../../../modules/xot/docs/rules/filament-resource-guidelines.md)

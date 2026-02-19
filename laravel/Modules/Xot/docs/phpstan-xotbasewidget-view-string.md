@@ -77,7 +77,7 @@ private function resolveView(): void
 ## 🔗 Riferimenti
 
 - [Property Type Fixes](./consolidated/archive/property-type-fixes.md) - Documentazione esistente
-- [View-String Type Fixes (User Module)](../User/docs/type-safety-improvements.md) - Pattern simile risolto
+- [View-String Type Fixes (User Module)](../user/docs/type-safety-improvements.md) - Pattern simile risolto
 - [Path Resolution Fixes](./consolidated/archive/path-resolution-fixes.md) - Soluzione simile
 
 ---

@@ -171,8 +171,8 @@ Il logo si adatta automaticamente alle dimensioni del container:
 
 - **Sito Originale**: https://laravelpizza.com
 - **File Componente**: `laravel/Themes/Meetup/resources/html/components/navigation.html`
-- **Documentazione Errore**: [Logo Implementation Error](../Themes/Meetup/docs/logo-implementation-error.md)
-- **Design System**: [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md)
+- **Documentazione Errore**: [Logo Implementation Error](../themes/meetup/docs/logo-implementation-error.md)
+- **Design System**: [DESIGN-SYSTEM.md](./design-system.md)
 
 ## ✅ Checklist Implementazione
 

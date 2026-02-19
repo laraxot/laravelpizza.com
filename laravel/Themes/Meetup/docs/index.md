@@ -247,10 +247,10 @@ export default defineConfig({
 - [Clickbait Marketing Best Practices](./clickbait-marketing-best-practices.md) - Ethical clickbait techniques
 
 ### Related Module Documentation
-- [GDPR Module](../../Modules/Gdpr/docs/index.md) - GDPR compliance tools
-- [User Module](../../Modules/User/docs/index.md) - User authentication and management
-- [Lang Module](../../Modules/Lang/docs/index.md) - Multi-language support
-- [Xot Module](../../Modules/Xot/docs/index.md) - Core base classes
+- [GDPR Module](../../modules/gdpr/docs/index.md) - GDPR compliance tools
+- [User Module](../../modules/user/docs/index.md) - User authentication and management
+- [Lang Module](../../modules/lang/docs/index.md) - Multi-language support
+- [Xot Module](../../modules/xot/docs/index.md) - Core base classes
 
 ## Best Practices
 

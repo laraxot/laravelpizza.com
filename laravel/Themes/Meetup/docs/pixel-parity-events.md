@@ -142,7 +142,7 @@ Schema::create('event_attendee', function (Blueprint $table) {
 
 ## Collegamenti
 
-- [Documentazione Tecnica](../../Modules/Meetup/docs/event-detail-technical.md)
+- [Documentazione Tecnica](../../modules/meetup/docs/event-detail-technical.md)
 - [Prompt Originale](../../Modules/Meetup/docs/prompts/events.txt)
 - Modulo: `Modules/Meetup/`
 - Tema: `Themes/Meetup/`

@@ -207,7 +207,7 @@ return [
 
 ## 📚 Riferimenti
 
-- [Module Configuration Best Practices](../../Xot/docs/module-configuration-best-practices.md)
+- [Module Configuration Best Practices](../../xot/docs/module-configuration-best-practices.md)
 - [User Module Config](../User/config/config.php)
 - [Xot Module Config](../Xot/config/config.php)
 - [Tenant Module Config](../Tenant/config/config.php)

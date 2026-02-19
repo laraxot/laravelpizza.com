@@ -121,7 +121,7 @@ Gli assets compilati verranno salvati in `resources/html/dist/`.
 - Calcolo totale automatico
 - Checkout button
 
-Vedi [README HTML](./resources/html/README.md) per dettagli completi.
+Vedi [README HTML](./resources/html/readme.md) per dettagli completi.
 
 ## 🔧 Configurazione
 
@@ -146,7 +146,7 @@ Il tema è configurato per utilizzare i server MCP:
 - **filesystem**: Per gestione file assets
 - **memory**: Per memorizzare decisioni design
 
-Vedi [Configurazione MCP UI/UX](../../Modules/Meetup/docs/ui-ux-mcp-configuration.md).
+Vedi [Configurazione MCP UI/UX](../../modules/meetup/docs/ui-ux-mcp-configuration.md).
 
 ## 📚 Best Practices
 
@@ -156,14 +156,14 @@ Vedi [Configurazione MCP UI/UX](../../Modules/Meetup/docs/ui-ux-mcp-configuratio
 - Documenta componenti custom
 - Segui pattern mobile-first
 
-Vedi [Best Practices Tailwind](../../Modules/Meetup/docs/tailwind-best-practices.md).
+Vedi [Best Practices Tailwind](../../modules/meetup/docs/tailwind-best-practices.md).
 
 ## 🔗 Collegamenti
 
-- [Documentazione Modulo Meetup](../../Modules/Meetup/docs/README.md)
-- [Configurazione UI/UX MCP](../../Modules/Meetup/docs/ui-ux-mcp-configuration.md)
-- [Best Practices Tailwind](../../Modules/Meetup/docs/tailwind-best-practices.md)
-- [README HTML](./resources/html/README.md)
+- [Documentazione Modulo Meetup](../../modules/meetup/docs/readme.md)
+- [Configurazione UI/UX MCP](../../modules/meetup/docs/ui-ux-mcp-configuration.md)
+- [Best Practices Tailwind](../../modules/meetup/docs/tailwind-best-practices.md)
+- [README HTML](./resources/html/readme.md)
 
 ## 📝 Note
 

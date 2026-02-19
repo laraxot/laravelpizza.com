@@ -210,6 +210,6 @@ config(['database.connections.notify' => config('database.connections.mysql')]);
 ## References
 
 - [CreatesApplication Trait](../../Modules/Xot/tests/CreatesApplication.php)
-- [Environment Development vs Testing Rules](../../Modules/Xot/docs/environment-development-vs-testing-rules.md)
+- [Environment Development vs Testing Rules](../../modules/xot/docs/environment-development-vs-testing-rules.md)
 - [Database Testing Configuration](./database-testing-configuration.md)
 - [Testing Best Practices](./testing-best-practices.md)

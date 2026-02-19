@@ -271,7 +271,7 @@ RadioCardSelector::make('item')
 
 ## 🔗 **Collegamenti**
 
-- [Widget FindDoctorAndAppointment](../../../../Modules/<nome progetto>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
+- [Widget FindDoctorAndAppointment](../../../../modules/<nome progetto>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
 - [Componenti UI Overview](../components.md)
 - [Best Practices Filament](../../../../docs/filament-best-practices.md)
 

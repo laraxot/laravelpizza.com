@@ -170,5 +170,5 @@ pub_theme::event.book_your_spot.label
 | `Themes/Meetup/lang/en/event.php` | English translations |
 
 ## See Also
-- [CMS-Driven Pages System](../Cms/docs/cms-driven-pages-system.md)
+- [CMS-Driven Pages System](../cms/docs/cms-driven-pages-system.md)
 - [Folio Volt Architecture](./folio-volt-filament-architecture.md)

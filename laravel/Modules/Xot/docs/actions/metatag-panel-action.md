@@ -29,8 +29,8 @@ L'azione accetta un'istanza di `Panel` come parametro di riferimento e applica l
 
 ## Collegamenti
 - [Filament Best Practices](../filament-best-practices.md)
-- [PHPStan Guidelines](../PHPSTAN-LEVEL9-GUIDE.md)
-- [Spatie QueueableAction Documentation](../DATA-QUEABLEACTIONS.md)
+- [PHPStan Guidelines](../phpstan-level9-guide.md)
+- [Spatie QueueableAction Documentation](../data-queableactions.md)
 
 ## Modifiche e Miglioramenti
 - Risoluzione dei conflitti di merge

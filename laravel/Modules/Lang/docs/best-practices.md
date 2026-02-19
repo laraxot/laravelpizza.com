@@ -416,7 +416,7 @@ return [
 
 ## 🔗 **Riferimenti e Collegamenti**
 
-- [README.md](README.md) - Documentazione principale modulo
+- [README.md](readme.md) - Documentazione principale modulo
 - [config/lang.php](../config/lang.php) - Configurazione centralizzata
 - [Laraxot Framework](https://github.com/laraxot/laraxot) - Framework principale
 - [Laravel Localization](https://laravel.com/project_docs/localization) - Documentazione ufficiale

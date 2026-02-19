@@ -155,9 +155,9 @@ Nessuna funzionalità critica mancante - il modulo User è ben implementato
 
 ## Collegamenti
 
-- [Modulo Quaeris](../Quaeris/docs/README.md)
-- [Modulo Limesurvey](../Limesurvey/docs/README.md)
-- [User README](./README.md)
+- [Modulo Quaeris](../quaeris/docs/readme.md)
+- [Modulo Limesurvey](../limesurvey/docs/readme.md)
+- [User README](./readme.md)
 
 ---
 

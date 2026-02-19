@@ -103,5 +103,5 @@ grep -r "public static function" Modules/ --include="*.php" | grep "Action"
 ## Backlink e Riferimenti
 
 - [Action Execution Pattern](../.cursor/rules/action-execution-pattern.md)
-- [DRY Actions Rules](../.cursor/rules/DRY-actions-rules.md)
+- [DRY Actions Rules](../.cursor/rules/dry-actions-rules.md)
 - [Spatie QueueableAction Documentation](https://github.com/spatie/laravel-queueable-action)

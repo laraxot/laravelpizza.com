@@ -1,8 +1,8 @@
 # Incompatibilità tra metodi statici e di istanza in Filament
 
 > **NOTA IMPORTANTE**: Questo documento è un riferimento specifico per il modulo User.
-> La documentazione principale e completa si trova nel [modulo UI](../../../UI/docs/filament/errors/static-instance-method-incompatibility.md).
-> La documentazione principale e completa si trova nel [modulo UI](../../../UI/project_docs/filament/errors/static-instance-method-incompatibility.md).
+> La documentazione principale e completa si trova nel [modulo UI](../../../ui/docs/filament/errors/static-instance-method-incompatibility.md).
+> La documentazione principale e completa si trova nel [modulo UI](../../../ui/project_docs/filament/errors/static-instance-method-incompatibility.md).
 ## Errori incontrati
 ### Errore 1: Metodo statico in RelationManager
 Nel file `Modules/User/app/Filament/Resources/UserResource/RelationManagers/TeamsRelationManager.php` è stato rilevato il seguente errore:
@@ -55,7 +55,7 @@ In questo caso, la soluzione è implementare il metodo concreto nella classe der
 }
 abstract public function getListTableColumns(): array;
 ## Riferimenti
-- [Documentazione principale sui metodi statici/di istanza](../../../UI/docs/filament/errors/static-instance-method-incompatibility.md)
-- [Regole per le etichette dei componenti Filament](../../../UI/docs/filament/label-translation-system.md)
-- [Documentazione principale sui metodi statici/di istanza](../../../UI/project_docs/filament/errors/static-instance-method-incompatibility.md)
-- [Regole per le etichette dei componenti Filament](../../../UI/project_docs/filament/label-translation-system.md)
+- [Documentazione principale sui metodi statici/di istanza](../../../ui/docs/filament/errors/static-instance-method-incompatibility.md)
+- [Regole per le etichette dei componenti Filament](../../../ui/docs/filament/label-translation-system.md)
+- [Documentazione principale sui metodi statici/di istanza](../../../ui/project_docs/filament/errors/static-instance-method-incompatibility.md)
+- [Regole per le etichette dei componenti Filament](../../../ui/project_docs/filament/label-translation-system.md)

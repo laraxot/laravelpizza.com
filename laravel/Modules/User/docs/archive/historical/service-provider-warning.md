@@ -133,8 +133,8 @@ Le modifiche ai ServiceProvider possono sembrare una soluzione rapida per proble
 **Ricorda**: È sempre meglio adattarsi all'architettura esistente piuttosto che forzare l'architettura ad adattarsi alle proprie esigenze immediate.
 
 ## Collegamenti
-- [XotBaseServiceProvider.md](Modules/Xot/docs/providers/xotbaseserviceprovider.md)
-- [SERVICE-PROVIDER-BEST-PRACTICES.md](Modules/Xot/docs/SERVICE-PROVIDER-BEST-PRACTICES.md)
+- [XotBaseServiceProvider.md](modules/xot/docs/providers/xotbaseserviceprovider.md)
+- [SERVICE-PROVIDER-BEST-PRACTICES.md](modules/xot/docs/service-provider-best-practices.md)
 # AVVERTENZA: Modifiche ai ServiceProvider Base
 
 ## Introduzione
@@ -270,5 +270,5 @@ Le modifiche ai ServiceProvider possono sembrare una soluzione rapida per proble
 **Ricorda**: È sempre meglio adattarsi all'architettura esistente piuttosto che forzare l'architettura ad adattarsi alle proprie esigenze immediate.
 
 ## Collegamenti
-- [XotBaseServiceProvider.md](Modules/Xot/docs/providers/xotbaseserviceprovider.md)
-- [SERVICE-PROVIDER-BEST-PRACTICES.md](Modules/Xot/docs/SERVICE-PROVIDER-BEST-PRACTICES.md)
+- [XotBaseServiceProvider.md](modules/xot/docs/providers/xotbaseserviceprovider.md)
+- [SERVICE-PROVIDER-BEST-PRACTICES.md](modules/xot/docs/service-provider-best-practices.md)

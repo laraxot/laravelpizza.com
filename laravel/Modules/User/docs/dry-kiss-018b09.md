@@ -112,9 +112,9 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 ## 🔗 Collegamenti
 
 - [Base Classes Hierarchy](./models/base-classes-hierarchy.md)
-- [Base Classes Corrections](./fixes/base-classes-corrections-[DATE].md)
+- [Base Classes Corrections](./fixes/base-classes-corrections-[date].md)
 - [Architecture](./core/architecture.md)
-- [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_[DATE].md)
+- [DRY/KISS Global](../../docs/dry_kiss_analysis_[date].md)
 
 ---
 

@@ -198,7 +198,7 @@ php artisan config:cache  # Solo in produzione
 
 ## Collegamenti
 
-- [Modulo User README](../README.md)
+- [Modulo User README](../readme.md)
 - [Modulo Xot Service Provider Architecture](../xot/docs/service-provider-architecture.md)
 - [Filament Filters and Widgets](./filament-filters-and-widgets.md)
 

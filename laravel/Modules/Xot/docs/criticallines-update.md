@@ -30,8 +30,8 @@ find translations.md)
 
 **DOPO (CORRETTO):**
 ```markdown
-- [Traduzioni](../../Xot/docs/translations.md)
-- [Standard Traduzioni](../../Xot/docs/translation-standards.md)
+- [Traduzioni](../../xot/docs/translations.md)
+- [Standard Traduzioni](../../xot/docs/translation-standards.md)
 ```
 
 #### C. Struttura Documentazione Corretta

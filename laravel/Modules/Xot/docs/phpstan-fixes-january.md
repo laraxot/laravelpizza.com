@@ -191,7 +191,7 @@ public function getModels(): array
 ## 📚 **Riferimenti**
 
 ### **Documentazione Correlata**
-- [README.md Modulo Xot](./README.md)
+- [README.md Modulo Xot](./readme.md)
 - [Service Architecture](./service-architecture.md)
 - [Best Practices](./best-practices.md)
 
@@ -587,7 +587,7 @@ public function getModels(): array
 ## 📚 **Riferimenti**
 
 ### **Documentazione Correlata**
-- [README.md Modulo Xot](./README.md)
+- [README.md Modulo Xot](./readme.md)
 - [Service Architecture](./service-architecture.md)
 - [Best Practices](./best-practices.md)
 
@@ -977,7 +977,7 @@ public function getModels(): array
 ## 📚 **Riferimenti**
 
 ### **Documentazione Correlata**
-- [README.md Modulo Xot](./README.md)
+- [README.md Modulo Xot](./readme.md)
 - [Service Architecture](./service-architecture.md)
 - [Best Practices](./best-practices.md)
 

@@ -14,9 +14,9 @@ Senza di esso tutta l'organizzazione della struttura della base su cui si lavora
 
 E' la libreria di estensione di tutte le altre librerie.
 ## Collegamenti tra versioni di about.md
-* [about.md](../../../Xot/project_docs/about.md)
-* [about.md](../../../Tenant/project_docs/en/about.md)
-* [about.md](../../../Tenant/project_docs/it/about.md)
+* [about.md](../../../xot/project_docs/about.md)
+* [about.md](../../../tenant/project_docs/en/about.md)
+* [about.md](../../../tenant/project_docs/it/about.md)
 
 ### Versione Incoming
 

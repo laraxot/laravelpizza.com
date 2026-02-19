@@ -341,7 +341,7 @@ docs/
 ## Collegamenti Bidirezionali
 
 ### Documentazione Correlata
-- [README](../README.md) - Panoramica modulo Xot
+- [README](../readme.md) - Panoramica modulo Xot
 - [Convenzioni](./core/conventions.md) - Convenzioni unificate
 - [Best Practices](./core/best-practices.md) - Best practices consolidate
 

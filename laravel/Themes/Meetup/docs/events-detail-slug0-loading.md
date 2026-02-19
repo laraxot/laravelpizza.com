@@ -121,4 +121,4 @@ Il JSON content block referenzia solo la view, SENZA logica:
 - [Filament Widgets NOT Livewire Critical Rule](filament-widgets-not-livewire-critical-rule.md)
 - [Events Detail Volt Class Pattern](events-detail-volt-class-pattern.md)
 - [Container0 Slug0 Agnostic Pattern](container0-slug0-agnostic-pattern.md)
-- [CMS JSON Content System](../../Modules/Cms/docs/json-content-system-architecture.md)
+- [CMS JSON Content System](../../modules/cms/docs/json-content-system-architecture.md)

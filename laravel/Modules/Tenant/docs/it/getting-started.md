@@ -21,11 +21,11 @@ Per utilizzare il modulo, è necessario prima configurare l'applicazione per sup
 ### Versione HEAD
 
 ## Collegamenti tra versioni di getting-started.md
-* [getting-started.md](../../../Gdpr/docs/getting-started.md)
-* [getting-started.md](../../../Xot/docs/getting-started.md)
-* [getting-started.md](../../../UI/docs/getting-started.md)
-* [getting-started.md](../../../Tenant/docs/it/getting-started.md)
-* [getting-started.md](../../../Cms/docs/getting-started.md)
+* [getting-started.md](../../../gdpr/docs/getting-started.md)
+* [getting-started.md](../../../xot/docs/getting-started.md)
+* [getting-started.md](../../../ui/docs/getting-started.md)
+* [getting-started.md](../../../tenant/docs/it/getting-started.md)
+* [getting-started.md](../../../cms/docs/getting-started.md)
 
 ### Versione Incoming
 

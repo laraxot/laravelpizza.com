@@ -127,6 +127,6 @@ php artisan route:trans:list it # List routes for locale
 
 ## Related Docs
 
-- [Skill: laravel-localization](../../../../.agent/skills/laravel-localization/SKILL.md)
+- [Skill: laravel-localization](../../../../.agent/skills/laravel-localization/skill.md)
 - [Filament Integration](./filament-integration.md)
 - [Philosophy](./philosophy.md)

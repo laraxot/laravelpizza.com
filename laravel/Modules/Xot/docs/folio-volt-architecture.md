@@ -6,16 +6,16 @@ Questo documento descrive l'architettura frontend basata su Folio, Volt e Filame
 ## Collegamenti
 
 ### Documentazione Correlata
-- [README](../README.md) - Panoramica del modulo Xot
-- [Struttura dei Moduli](./MODULE_STRUCTURE.md) - Convenzioni di struttura dei moduli
+- [README](../readme.md) - Panoramica del modulo Xot
+- [Struttura dei Moduli](./module_structure.md) - Convenzioni di struttura dei moduli
 - [Convenzioni di Naming](../../../docs/convenzioni-naming-campi.md) - Convenzioni per i nomi dei campi
 - [Flusso di Registrazione](../../../docs/flusso-registrazione.md) - Implementazione del wizard multi-step
 
 ### Moduli Collegati
-- [UI](../../UI/docs/README.md) - Componenti di interfaccia
-- [Cms](../../Cms/docs/README.md) - Gestione contenuti
-- [Lang](../../Lang/docs/README.md) - Traduzioni
-- [Patient](../../Patient/docs/README.md) - Gestione pazienti
+- [UI](../../ui/docs/readme.md) - Componenti di interfaccia
+- [Cms](../../cms/docs/readme.md) - Gestione contenuti
+- [Lang](../../lang/docs/readme.md) - Traduzioni
+- [Patient](../../patient/docs/readme.md) - Gestione pazienti
 
 ## Regole Fondamentali
 
@@ -218,68 +218,68 @@ new class extends Component {
 ## Collegamenti Moduli
 
 ### Modulo UI
-- [Componenti Volt](../UI/docs/components/volt.md)
-- [Layout](../UI/docs/layouts.md)
-- [Temi](../UI/docs/themes.md)
-- [Best Practices](../UI/docs/best-practices.md)
+- [Componenti Volt](../ui/docs/components/volt.md)
+- [Layout](../ui/docs/layouts.md)
+- [Temi](../ui/docs/themes.md)
+- [Best Practices](../ui/docs/best-practices.md)
 
 ### Modulo Cms
-- [Frontend](../Cms/docs/frontend.md)
-- [Temi](../Cms/docs/themes.md)
-- [Contenuti](../Cms/docs/content.md)
-- [Convenzioni Filament](../Cms/docs/convenzioni-namespace-filament.md)
+- [Frontend](../cms/docs/frontend.md)
+- [Temi](../cms/docs/themes.md)
+- [Contenuti](../cms/docs/content.md)
+- [Convenzioni Filament](../cms/docs/convenzioni-namespace-filament.md)
 
 ### Modulo Lang
-- [Traduzioni](../Lang/docs/translations.md)
-- [Localizzazione](../Lang/docs/localization.md)
-- [API Traduzioni](../Lang/docs/api.md)
+- [Traduzioni](../lang/docs/translations.md)
+- [Localizzazione](../lang/docs/localization.md)
+- [API Traduzioni](../lang/docs/api.md)
 
 ### Modulo User
-- [Autenticazione](../User/docs/auth.md)
-- [Permessi](../User/docs/permissions.md)
-- [Profilo](../User/docs/profile.md)
+- [Autenticazione](../user/docs/auth.md)
+- [Permessi](../user/docs/permissions.md)
+- [Profilo](../user/docs/profile.md)
 
 ### Modulo Patient
-- [Gestione Pazienti](../Patient/docs/patients.md)
-- [Cartelle Cliniche](../Patient/docs/records.md)
-- [Appuntamenti](../Patient/docs/appointments.md)
+- [Gestione Pazienti](../patient/docs/patients.md)
+- [Cartelle Cliniche](../patient/docs/records.md)
+- [Appuntamenti](../patient/docs/appointments.md)
 
 ### Modulo Dental
-- [Trattamenti](../Dental/docs/treatments.md)
-- [Pianificazione](../Dental/docs/planning.md)
-- [Documenti](../Dental/docs/documents.md)
+- [Trattamenti](../dental/docs/treatments.md)
+- [Pianificazione](../dental/docs/planning.md)
+- [Documenti](../dental/docs/documents.md)
 
 ### Modulo Tenant
-- [Multi-tenant](../Tenant/docs/multi-tenant.md)
-- [Configurazione](../Tenant/docs/configuration.md)
-- [Migrazione](../Tenant/docs/migration.md)
+- [Multi-tenant](../tenant/docs/multi-tenant.md)
+- [Configurazione](../tenant/docs/configuration.md)
+- [Migrazione](../tenant/docs/migration.md)
 
 ### Modulo Media
-- [Gestione File](../Media/docs/files.md)
-- [Upload](../Media/docs/upload.md)
-- [Storage](../Media/docs/storage.md)
+- [Gestione File](../media/docs/files.md)
+- [Upload](../media/docs/upload.md)
+- [Storage](../media/docs/storage.md)
 
 ### Modulo Notify
-- [Notifiche](../Notify/docs/notifications.md)
-- [Email](../Notify/docs/email.md)
-- [SMS](../Notify/docs/sms.md)
+- [Notifiche](../notify/docs/notifications.md)
+- [Email](../notify/docs/email.md)
+- [SMS](../notify/docs/sms.md)
 
 ### Modulo Reporting
-- [Report](../Reporting/docs/reports.md)
-- [Esportazione](../Reporting/docs/export.md)
-- [Analytics](../Reporting/docs/analytics.md)
+- [Report](../reporting/docs/reports.md)
+- [Esportazione](../reporting/docs/export.md)
+- [Analytics](../reporting/docs/analytics.md)
 
 ### Modulo Gdpr
-- [Privacy](../Gdpr/docs/privacy.md)
-- [Consensi](../Gdpr/docs/consents.md)
-- [Sicurezza](../Gdpr/docs/security.md)
+- [Privacy](../gdpr/docs/privacy.md)
+- [Consensi](../gdpr/docs/consents.md)
+- [Sicurezza](../gdpr/docs/security.md)
 
 ### Modulo Job
-- [Jobs](../Job/docs/jobs.md)
-- [Queue](../Job/docs/queue.md)
-- [Scheduling](../Job/docs/scheduling.md)
+- [Jobs](../job/docs/jobs.md)
+- [Queue](../job/docs/queue.md)
+- [Scheduling](../job/docs/scheduling.md)
 
 ### Modulo Chart
-- [Grafici](../Chart/docs/charts.md)
-- [Dashboard](../Chart/docs/dashboard.md)
-- [Visualizzazione](../Chart/docs/visualization.md)
+- [Grafici](../chart/docs/charts.md)
+- [Dashboard](../chart/docs/dashboard.md)
+- [Visualizzazione](../chart/docs/visualization.md)

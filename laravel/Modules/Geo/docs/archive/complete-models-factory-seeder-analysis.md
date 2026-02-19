@@ -277,13 +277,13 @@ Tutti i modelli BaseModel, BasePivot, BaseUser, etc. sono classi astratte utiliz
 ## Collegamenti Documentazione
 
 ### Documentazione Moduli
-- [<nome progetto> Analysis](../laravel/Modules/<nome progetto>/docs/modelli_factory_seeder_analisi.md)
-- [User Analysis](../laravel/Modules/User/docs/modelli_factory_seeder_analisi.md)
-- [Geo Analysis](../laravel/Modules/Geo/docs/modelli_factory_seeder_analisi.md)
-- [Media Analysis](../laravel/Modules/Media/docs/modelli_factory_seeder_analisi.md)
-- [Notify Analysis](../laravel/Modules/Notify/docs/modelli_factory_seeder_analisi.md)
-- [Job Analysis](../laravel/Modules/Job/docs/modelli_factory_seeder_analisi.md)
-- [Altri Moduli Analysis](../laravel/Modules/Activity/docs/modelli_factory_seeder_analisi.md)
+- [<nome progetto> Analysis](../laravel/modules/<nome progetto>/docs/modelli_factory_seeder_analisi.md)
+- [User Analysis](../laravel/modules/user/docs/modelli_factory_seeder_analisi.md)
+- [Geo Analysis](../laravel/modules/geo/docs/modelli_factory_seeder_analisi.md)
+- [Media Analysis](../laravel/modules/media/docs/modelli_factory_seeder_analisi.md)
+- [Notify Analysis](../laravel/modules/notify/docs/modelli_factory_seeder_analisi.md)
+- [Job Analysis](../laravel/modules/job/docs/modelli_factory_seeder_analisi.md)
+- [Altri Moduli Analysis](../laravel/modules/activity/docs/modelli_factory_seeder_analisi.md)
 
 ### Documentazione Tecnica
 - [Factory Patterns](./factory_patterns.md)

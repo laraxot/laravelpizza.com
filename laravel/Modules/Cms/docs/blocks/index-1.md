@@ -1,12 +1,12 @@
 # Indice della Documentazione - Blocchi CMS
 
 ## Collegamenti Correlati
-- [Indice CMS](../INDEX.md)
-- [README CMS](../README.md)
+- [Indice CMS](../index.md)
+- [README CMS](../readme.md)
 - [Blocchi](../blocks.md)
 - [Componenti Blocchi Contenuto](../componenti-blocchi-contenuto.md)
 - [Namespace Componenti Blocchi](../namespace-componenti-blocchi.md)
-- [Documentazione Generale](../../../../../docs/README.md)
+- [Documentazione Generale](../../../../../docs/readme.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 
 ## Panoramica
@@ -15,32 +15,32 @@ I blocchi sono componenti riutilizzabili che compongono le sezioni del sito. Ogn
 ## Blocchi Disponibili
 
 ### Navigazione e Layout
-- [Header](./HEADER.md) - Blocco header con logo, navigazione e dropdown utente
-- [Footer](./FOOTER.md) - Blocco footer con copyright, link e contatti
-- [Navigation](./NAVIGATION.md) - Blocco di navigazione personalizzabile
-- [Container](./CONTAINER.md) - Blocco container per strutturare il layout
+- [Header](./header.md) - Blocco header con logo, navigazione e dropdown utente
+- [Footer](./footer.md) - Blocco footer con copyright, link e contatti
+- [Navigation](./navigation.md) - Blocco di navigazione personalizzabile
+- [Container](./container.md) - Blocco container per strutturare il layout
 
 ### Contenuti
-- [Hero](./HERO.md) - Blocco hero per sezioni in evidenza
-- [Text](./TEXT.md) - Blocco testo per contenuti testuali
-- [CTA](./CTA.md) - Blocco call-to-action per conversioni
-- [Features](./FEATURES.md) - Blocco per elencare caratteristiche/servizi
-- [Testimonials](./TESTIMONIALS.md) - Blocco per testimonianze
-- [Team](./TEAM.md) - Blocco per presentare il team
-- [FAQ](./FAQ.md) - Blocco per domande frequenti
-- [Pricing](./PRICING.md) - Blocco per piani tariffari
+- [Hero](./hero.md) - Blocco hero per sezioni in evidenza
+- [Text](./text.md) - Blocco testo per contenuti testuali
+- [CTA](./cta.md) - Blocco call-to-action per conversioni
+- [Features](./features.md) - Blocco per elencare caratteristiche/servizi
+- [Testimonials](./testimonials.md) - Blocco per testimonianze
+- [Team](./team.md) - Blocco per presentare il team
+- [FAQ](./faq.md) - Blocco per domande frequenti
+- [Pricing](./pricing.md) - Blocco per piani tariffari
 
 ### Media
-- [Image](./IMAGE.md) - Blocco per immagini singole
-- [Gallery](./GALLERY.md) - Blocco per gallerie di immagini
-- [Video](./VIDEO.md) - Blocco per contenuti video
-- [Slider](./SLIDER.md) - Blocco per carousel/slider
+- [Image](./image.md) - Blocco per immagini singole
+- [Gallery](./gallery.md) - Blocco per gallerie di immagini
+- [Video](./video.md) - Blocco per contenuti video
+- [Slider](./slider.md) - Blocco per carousel/slider
 
 ### Interattivi
-- [Form](./FORM.md) - Blocco per form di contatto
-- [Map](./MAP.md) - Blocco per mappe
-- [Social](./SOCIAL.md) - Blocco per link social
-- [Search](./SEARCH.md) - Blocco per ricerca
+- [Form](./form.md) - Blocco per form di contatto
+- [Map](./map.md) - Blocco per mappe
+- [Social](./social.md) - Blocco per link social
+- [Search](./search.md) - Blocco per ricerca
 
 ## Struttura dei Blocchi
 

@@ -203,7 +203,7 @@ public function mount(): void
 
 ## 🔗 Riferimenti
 
-- [Volt Automatic Route Binding](../Themes/Meetup/docs/volt-automatic-route-binding.md)
-- [Routing No Business Logic](../Themes/Meetup/docs/routing-no-business-logic.md)
+- [Volt Automatic Route Binding](../themes/meetup/docs/volt-automatic-route-binding.md)
+- [Routing No Business Logic](../themes/meetup/docs/routing-no-business-logic.md)
 - [Container0 Slug0 Agnostic Pattern](container0-slug0-agnostic-pattern.md)
 - [Page Content Component](../../Cms/resources/views/components/page-content.blade.php)

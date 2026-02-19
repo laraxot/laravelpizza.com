@@ -192,9 +192,9 @@ public function someComplexMethod() { ... }
 
 Per una comprensione più completa delle correzioni necessarie, consultare:
 
-1. [NAMESPACE-RULES.md](./NAMESPACE-RULES.md) - Per le regole sui namespace
-2. [PHPSTAN-LEVEL9-GUIDE.md](./PHPSTAN-LEVEL9-GUIDE.md) - Per dettagli su come gestire errori livello 9
-3. [FILAMENT-TABLES.md](./FILAMENT-TABLES.md) - Per problemi specifici di Filament
+1. [NAMESPACE-RULES.md](./namespace-rules.md) - Per le regole sui namespace
+2. [PHPSTAN-LEVEL9-GUIDE.md](./phpstan-level9-guide.md) - Per dettagli su come gestire errori livello 9
+3. [FILAMENT-TABLES.md](./filament-tables.md) - Per problemi specifici di Filament
 # Riassunto delle Correzioni per PHPStan Livello 9
 
 Questo documento riassume i problemi comuni riscontrati con PHPStan livello 9 e le relative soluzioni, basato su un'analisi dettagliata del codice.
@@ -389,6 +389,6 @@ public function someComplexMethod() { ... }
 
 Per una comprensione più completa delle correzioni necessarie, consultare:
 
-1. [NAMESPACE-RULES.md](./NAMESPACE-RULES.md) - Per le regole sui namespace
-2. [PHPSTAN-LEVEL9-GUIDE.md](./PHPSTAN-LEVEL9-GUIDE.md) - Per dettagli su come gestire errori livello 9
-3. [FILAMENT-TABLES.md](./FILAMENT-TABLES.md) - Per problemi specifici di Filament
+1. [NAMESPACE-RULES.md](./namespace-rules.md) - Per le regole sui namespace
+2. [PHPSTAN-LEVEL9-GUIDE.md](./phpstan-level9-guide.md) - Per dettagli su come gestire errori livello 9
+3. [FILAMENT-TABLES.md](./filament-tables.md) - Per problemi specifici di Filament

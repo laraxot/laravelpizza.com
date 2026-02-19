@@ -137,4 +137,4 @@ class UserStats extends Component
 - [Componenti Form](./form-components.md)
 - [Componenti Table](./table-components.md)
 - [Componenti Layout](./layout-components.md)
-- [Documentazione Frontend](../Cms/docs/frontend-architecture.md)
+- [Documentazione Frontend](../cms/docs/frontend-architecture.md)

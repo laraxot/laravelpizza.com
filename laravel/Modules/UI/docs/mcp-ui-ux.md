@@ -35,7 +35,7 @@ Il modulo UI fornisce componenti Blade condivisi in `resources/views/components/
 
 ## Collegamenti
 
-- [MCP UI/UX Tema Two](../../Themes/Two/docs/mcp-ui-ux.md)
+- [MCP UI/UX Tema Two](../../themes/two/docs/mcp-ui-ux.md)
 - [Status MCP Progetto](../../../docs/mcp-servers-status.md)
 - [Skill MCP UI/UX](../../../.windsurf/skills/mcp-ui-ux/skill.md)
 - [Workflow MCP UI/UX](../../../.windsurf/workflows/mcp-ui-ux.md)

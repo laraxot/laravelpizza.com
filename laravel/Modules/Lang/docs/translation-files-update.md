@@ -119,9 +119,9 @@ return [
 
 ## Collegamenti
 
-- [Translation Rules](../Xot/docs/translation_rules.md)
+- [Translation Rules](../xot/docs/translation_rules.md)
 - [Translation Standards](./translation-standards.md)
-- [Best Practices](../Xot/docs/translations-best-practices.md)
+- [Best Practices](../xot/docs/translations-best-practices.md)
 
 ## Prossimi Passi
 

@@ -7,11 +7,11 @@ Questo documento fornisce una panoramica del sistema di gestione dei contenuti d
 ## Collegamenti
 
 ### Documentazione Completa
-- [Documentazione Modulo Cms](../laravel/Modules/Cms/project_docs/page-content-management.md)
+- [Documentazione Modulo Cms](../laravel/modules/cms/project_docs/page-content-management.md)
 
 ### Moduli Correlati
-- [Documentazione UI](../laravel/Modules/UI/project_docs/README.md)
-- [Documentazione Lang](../laravel/Modules/Lang/project_docs/README.md)
+- [Documentazione UI](../laravel/modules/ui/project_docs/readme.md)
+- [Documentazione Lang](../laravel/modules/lang/project_docs/readme.md)
 
 ## Note
 Questa documentazione contiene solo una panoramica generale. Per i dettagli completi, consultare la documentazione del modulo Cms. 

@@ -230,7 +230,7 @@ app(LogActivityAction::class)->execute([
 
 | Guida | Link |
 |-------|------|
-| **Indice** | [docs/README.md](docs/README.md) |
+| **Indice** | [docs/README.md](docs/readme.md) |
 | **Business Logic** | [docs/business-logic-overview.md](docs/business-logic-overview.md) |
 | **Event Sourcing** | [docs/event-sourcing.md](docs/event-sourcing.md) |
 | **Filosofia** | [docs/philosophy.md](docs/philosophy.md) |

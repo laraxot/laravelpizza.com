@@ -358,7 +358,7 @@ nano Modules/{ModuleName}/docs/{pattern-name}.md
 ## 🔗 Collegamenti
 
 - [Doc correlata 1](./related-doc.md)
-- [Doc correlata 2](../../OtherModule/docs/related.md)
+- [Doc correlata 2](../../othermodule/docs/related.md)
 
 ---
 

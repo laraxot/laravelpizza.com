@@ -207,5 +207,5 @@ return [
 
 ## Collegamenti
 - [Mailpace Templates](https://github.com/mailpace/templates)
-- [Email Best Practices](./EMAIL_BEST_PRACTICES.md)
+- [Email Best Practices](./email_best_practices.md)
 - [Template Management](./template-management.md) 

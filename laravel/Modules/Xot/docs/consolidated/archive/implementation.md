@@ -295,9 +295,9 @@ class XotPageTest extends TestCase
 ### Versione HEAD
 
 ## Collegamenti tra versioni di implementation.md
-* [implementation.md](../../../Gdpr/project_docs/implementation.md)
-* [implementation.md](../../../Xot/project_docs/implementation.md)
-* [implementation.md](../../../Job/project_docs/implementation.md)
+* [implementation.md](../../../gdpr/project_docs/implementation.md)
+* [implementation.md](../../../xot/project_docs/implementation.md)
+* [implementation.md](../../../job/project_docs/implementation.md)
 
 ### Versione Incoming
 

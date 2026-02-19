@@ -322,7 +322,7 @@ ls laravel/Modules/UI/resources/svg/
 
 | Guida | Link |
 |-------|------|
-| **Indice** | [docs/README.md](docs/README.md) |
+| **Indice** | [docs/README.md](docs/readme.md) |
 | **Filosofia design** | [docs/philosophy.md](docs/philosophy.md) |
 | **Sistema icone** | [docs/icon-system.md](docs/icon-system.md) |
 | **Componenti Blade** | [docs/blade-components.md](docs/blade-components.md) |

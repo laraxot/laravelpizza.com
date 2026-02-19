@@ -68,8 +68,8 @@ Secondo la documentazione in `pub-theme-component-namespace-error-analysis.md`:
 ## 📚 Riferimenti
 
 - [Pub Theme Component Namespace Error Analysis](./pub-theme-component-namespace-error-analysis.md)
-- [Blade Anonymous Components Rule](../../Modules/Xot/docs/blade-anonymous-components-namespace-rule.md)
-- [View Cache Execution Decision](../../Modules/Xot/docs/view-cache-execution-decision.md)
+- [Blade Anonymous Components Rule](../../modules/xot/docs/blade-anonymous-components-namespace-rule.md)
+- [View Cache Execution Decision](../../modules/xot/docs/view-cache-execution-decision.md)
 
 ---
 

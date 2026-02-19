@@ -210,5 +210,5 @@ new class extends Component {
 
 - [Laravel Volt Documentation](https://livewire.laravel.com/docs/volt)
 - [Laravel Folio Documentation](https://laravel.com/docs/folio)
-- [Routing No Business Logic](../Themes/Meetup/docs/routing-no-business-logic.md)
+- [Routing No Business Logic](../themes/meetup/docs/routing-no-business-logic.md)
 - [Container0 Slug0 Agnostic Pattern](container0-slug0-agnostic-pattern.md)

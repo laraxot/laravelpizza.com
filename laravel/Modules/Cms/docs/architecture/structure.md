@@ -88,29 +88,29 @@ Modules/Cms/
 6. Aggiornare i riferimenti nelle routes
 
 ## Collegamenti Bidirezionali
-- [README](README.md) - Documentazione principale del modulo
+- [README](readme.md) - Documentazione principale del modulo
 - [Architettura](architecture.md) - Architettura del sistema CMS
 - [Struttura Moduli Laravel](struttura-moduli-laravel.md) - Struttura standard dei moduli Laravel
 - [Namespace Moduli](namespace-moduli-laravel-<nome progetto>.md) - Convenzioni di namespace
 - [Struttura Route e Viste](struttura-route-e-viste.md) - Organizzazione di route e viste
 
 ## Vedi Anche
-- [Modulo Xot](../Xot/docs/README.md) - Struttura base dei moduli
+- [Modulo Xot](../xot/docs/readme.md) - Struttura base dei moduli
 - [Documentazione Laravel](https://laravel.com/docs/structure.html) - Struttura standard Laravel
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)
-* [structure.md](laravel/Modules/Gdpr/docs/structure.md)
-* [structure.md](laravel/Modules/Notify/docs/structure.md)
-* [structure.md](laravel/Modules/Xot/docs/structure.md)
-* [structure.md](laravel/Modules/Xot/docs/base/structure.md)
-* [structure.md](laravel/Modules/Xot/docs/config/structure.md)
-* [structure.md](laravel/Modules/User/docs/structure.md)
-* [structure.md](laravel/Modules/UI/docs/structure.md)
-* [structure.md](laravel/Modules/Lang/docs/structure.md)
-* [structure.md](laravel/Modules/Job/docs/structure.md)
-* [structure.md](laravel/Modules/Media/docs/structure.md)
-* [structure.md](laravel/Modules/Tenant/docs/structure.md)
-* [structure.md](laravel/Modules/Activity/docs/structure.md)
-* [structure.md](laravel/Modules/Cms/docs/structure.md)
-* [structure.md](laravel/Modules/Cms/docs/themes/structure.md)
-* [structure.md](laravel/Modules/Cms/docs/components/structure.md)
+* [structure.md](laravel/modules/gdpr/docs/structure.md)
+* [structure.md](laravel/modules/notify/docs/structure.md)
+* [structure.md](laravel/modules/xot/docs/structure.md)
+* [structure.md](laravel/modules/xot/docs/base/structure.md)
+* [structure.md](laravel/modules/xot/docs/config/structure.md)
+* [structure.md](laravel/modules/user/docs/structure.md)
+* [structure.md](laravel/modules/ui/docs/structure.md)
+* [structure.md](laravel/modules/lang/docs/structure.md)
+* [structure.md](laravel/modules/job/docs/structure.md)
+* [structure.md](laravel/modules/media/docs/structure.md)
+* [structure.md](laravel/modules/tenant/docs/structure.md)
+* [structure.md](laravel/modules/activity/docs/structure.md)
+* [structure.md](laravel/modules/cms/docs/structure.md)
+* [structure.md](laravel/modules/cms/docs/themes/structure.md)
+* [structure.md](laravel/modules/cms/docs/components/structure.md)

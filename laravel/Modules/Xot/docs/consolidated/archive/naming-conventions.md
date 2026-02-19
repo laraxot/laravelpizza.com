@@ -130,5 +130,5 @@ Schema::create('patients', function (Blueprint $table) {
 
 - [Convenzioni](../../../project_docs/conventions.md)
 - [Naming Conventions](../../../project_docs/naming-conventions.md)
-- [Documentazione Xot](../CODE-STANDARDS.md)
+- [Documentazione Xot](../code-standards.md)
 - [Collegamenti Documentazione](../../../../project_docs/collegamenti-documentazione.md)

@@ -820,8 +820,8 @@ protected array $listeners = [
 L'aggiunta dell'annotazione `@phpstan-var` fornisce a PHPStan un'informazione più specifica sul tipo della proprietà, permettendogli di verificare correttamente che tutti gli elementi dell'array siano stringhe. Questo è particolarmente utile quando si lavora con Livewire, dove i listener sono definiti come un array associativo di eventi e metodi da chiamare.
 
 ## Collegamenti tra versioni di phpstan_fixes.md
-* [phpstan_fixes.md](../../../Xot/project_docs/phpstan/phpstan_fixes.md)
-* [phpstan_fixes.md](../../../Xot/project_docs/phpstan_fixes.md)
-* [phpstan_fixes.md](../../../User/project_docs/phpstan_fixes.md)
-* [phpstan_fixes.md](../../../UI/project_docs/phpstan_fixes.md)
-* [phpstan_fixes.md](../../../Media/project_docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../xot/project_docs/phpstan/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../xot/project_docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../user/project_docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../ui/project_docs/phpstan_fixes.md)
+* [phpstan_fixes.md](../../../media/project_docs/phpstan_fixes.md)

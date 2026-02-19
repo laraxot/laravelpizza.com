@@ -4,7 +4,7 @@
 Questa guida fornisce istruzioni dettagliate su come implementare e utilizzare icone personalizzate nel sistema Xot.
 
 ## Prerequisiti
-Prima di procedere, assicurarsi di aver compreso il [processo di registrazione delle icone](registerBladeIcons.md).
+Prima di procedere, assicurarsi di aver compreso il [processo di registrazione delle icone](registerbladeicons.md).
 
 ## Processo di Implementazione
 
@@ -47,8 +47,8 @@ public function register(): void
 ```
 
 ## Troubleshooting
-Per problemi comuni e soluzioni, consultare la [documentazione di registerBladeIcons](registerBladeIcons.md).
+Per problemi comuni e soluzioni, consultare la [documentazione di registerBladeIcons](registerbladeicons.md).
 
 ## Risorse Aggiuntive
 - [Panoramica delle Blade Icons](blade-icons-overview.md)
-- [Documentazione dettagliata di registerBladeIcons](registerBladeIcons.md)
+- [Documentazione dettagliata di registerBladeIcons](registerbladeicons.md)

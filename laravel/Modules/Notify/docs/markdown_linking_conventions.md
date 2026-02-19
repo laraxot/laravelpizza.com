@@ -9,24 +9,24 @@
 ### ❌ ERRATO: Percorsi Assoluti
 
 ```markdown
-[Convenzioni di Naming per le Interfacce](/var/www/html/saluteora/laravel/Modules/Notify/docs/INTERFACE_NAMING_CONVENTION.md)
-[Chiarimento sulla Struttura delle Interfacce](/var/www/html/saluteora/laravel/Modules/Notify/docs/INTERFACE_STRUCTURE_CLARIFICATION.md)
-[Architettura dei Contratti](/var/www/html/saluteora/laravel/Modules/Notify/docs/CONTRACTS_ARCHITECTURE.md)
+[Convenzioni di Naming per le Interfacce](/var/www/html/saluteora/laravel/modules/notify/docs/interface_naming_convention.md)
+[Chiarimento sulla Struttura delle Interfacce](/var/www/html/saluteora/laravel/modules/notify/docs/interface_structure_clarification.md)
+[Architettura dei Contratti](/var/www/html/saluteora/laravel/modules/notify/docs/contracts_architecture.md)
 ```
 
 ### ✅ CORRETTO: Percorsi Relativi
 
 ```markdown
-[Convenzioni di Naming per le Interfacce](./INTERFACE_NAMING_CONVENTION.md)
-[Chiarimento sulla Struttura delle Interfacce](./INTERFACE_STRUCTURE_CLARIFICATION.md)
-[Architettura dei Contratti](./CONTRACTS_ARCHITECTURE.md)
+[Convenzioni di Naming per le Interfacce](./interface_naming_convention.md)
+[Chiarimento sulla Struttura delle Interfacce](./interface_structure_clarification.md)
+[Architettura dei Contratti](./contracts_architecture.md)
 ```
 
 Per collegamenti a documenti in altre directory:
 
 ```markdown
-[Regole Generali per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
-[Best Practices per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+[Regole Generali per le Chiavi di Traduzione](../../lang/docs/translation_keys_rules.md)
+[Best Practices per le Chiavi di Traduzione](../../lang/docs/translation_keys_best_practices.md)
 ```
 
 ## Motivazione

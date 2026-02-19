@@ -91,6 +91,6 @@ Come generare gli screenshot (es. da terminale con Puppeteer/Playwright o da bro
 ## Riferimenti
 
 - [events-page-differences-analysis.md](../events-page-differences-analysis.md) (tema)
-- [events-page-differences-analysis.md](../../../Modules/Meetup/docs/events-page-differences-analysis.md) (modulo Meetup)
-- [events-system.md](../../../Modules/Meetup/docs/events-system.md)
+- [events-page-differences-analysis.md](../../../modules/meetup/docs/events-page-differences-analysis.md) (modulo Meetup)
+- [events-system.md](../../../modules/meetup/docs/events-system.md)
 - HTML di riferimento: `Themes/Meetup/resources/html/events.html`

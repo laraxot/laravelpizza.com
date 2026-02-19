@@ -138,5 +138,5 @@ Modules/Notify/resources/views/filament/pages/
 ## Collegamenti
 
 - [Filament 5 Clusters](../../../../../docs/filament-5-clusters.md)
-- [XotBasePage Documentation](../../Xot/docs/filament/xotbasepage.md)
+- [XotBasePage Documentation](../../xot/docs/filament/xotbasepage.md)
 - [Telegram Notifications](../docs/telegram-setup.md)

@@ -84,7 +84,7 @@ Se si verificano errori "Class not found" o problemi di autoloading:
 
 - [Convenzioni](../../../docs/conventions.md)
 - [Naming Conventions](../../../docs/naming-conventions.md)
-- [Documentazione Xot](../CODE-STANDARDS.md)
+- [Documentazione Xot](../code-standards.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 
 Ultima modifica: 31/03/2025

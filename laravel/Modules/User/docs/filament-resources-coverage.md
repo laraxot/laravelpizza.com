@@ -207,4 +207,4 @@ Questi modelli sono pivot tables e NON devono avere Resources standalone:
 
 - [Filament Resources Organization](./filament-resources-organization.md)
 - [Filament Best Practices](./filament-best-practices.md)
-- [Filosofia Modulo User](./FILOSOFIA_MODULO_USER.md)
+- [Filosofia Modulo User](./filosofia_modulo_user.md)

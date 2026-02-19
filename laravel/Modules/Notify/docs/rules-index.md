@@ -28,5 +28,5 @@ This file documents the rules and standards specific to the Notify module.
 - Mock external services in unit tests
 
 ## Related Documentation
-- [README](./README.md)
+- [README](./readme.md)
 - [phpstan](./phpstan.md)

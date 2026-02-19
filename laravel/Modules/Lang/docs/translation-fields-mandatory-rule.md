@@ -106,8 +106,8 @@ return [
 
 ## 📚 Documentazione Correlata
 
-- [Translation Standards](../../Xot/docs/translation-standards.md)
-- [Job Module Error Documentation](../../Job/docs/translation-fields-critical-error-[DATE].md)
+- [Translation Standards](../../xot/docs/translation-standards.md)
+- [Job Module Error Documentation](../../job/docs/translation-fields-critical-error-[date].md)
 
 ---
 

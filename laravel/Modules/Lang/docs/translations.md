@@ -806,8 +806,8 @@ public function generateWithErrorHandling(array $options = []): string
 
 ## 📚 References
 
-- [HTML2PDF Best Practices](../Xot/docs/html2pdf-best-practices.md)
-- [Lang Module README](./README.md)
+- [HTML2PDF Best Practices](../xot/docs/html2pdf-best-practices.md)
+- [Lang Module README](./readme.md)
 - [Spatie Translatable Documentation](https://github.com/spatie/laravel-translatable)
 - [Laravel Localization](https://laravel.com/docs/localization)
 

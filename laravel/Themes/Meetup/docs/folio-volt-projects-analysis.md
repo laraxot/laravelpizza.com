@@ -16,7 +16,7 @@ Analisi dettagliata di progetti reali che utilizzano Folio + Volt, con focus su 
 1. **jasonlbeggs/laravel-news-volt-folio-example** - Esempio tutorial Laravel News
 2. **benjamincrozat/dummy-store** - Demo e-commerce per Laracasts
 3. **mfugissecruz/podcast-player** - Tutorial completo Folio + Volt
-4. **Altri 17 repository** - Vedi [Analisi Completa Repository](../../../Modules/Meetup/docs/folio-volt-repositories-analysis.md)
+4. **Altri 17 repository** - Vedi [Analisi Completa Repository](../../../modules/meetup/docs/folio-volt-repositories-analysis.md)
 
 ### Pattern Comuni Identificati
 

@@ -101,7 +101,7 @@ class XotBaseEditRecord
    - Seguire le convenzioni PSR-4
 
 ## Collegamenti Bidirezionali
-- [README](README.md)
+- [README](readme.md)
 - [Struttura Moduli](module-structure.md)
 - [Convenzioni Namespace](namespace-conventions.md)
 
@@ -287,8 +287,8 @@ class PolizzaConvenzioneController extends XotBaseController
 
    - Documentare le modifiche significative
 ## Collegamenti tra versioni di base-classes.md
-* [base-classes.md](../../../Xot/project_docs/base-classes.md)
-* [base-classes.md](../../../Xot/project_docs/roadmap/base-classes.md)
+* [base-classes.md](../../../xot/project_docs/base-classes.md)
+* [base-classes.md](../../../xot/project_docs/roadmap/base-classes.md)
 
 ### Versione Incoming
 

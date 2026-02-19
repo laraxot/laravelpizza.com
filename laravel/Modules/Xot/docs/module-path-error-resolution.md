@@ -130,7 +130,7 @@ try {
 
 - [Module Path Generation Philosophy](./module-path-generation-philosophy.md)
 - [Xot Philosophy](./philosophy.md)
-- [Activity Philosophy](../Activity/docs/philosophy.md)
+- [Activity Philosophy](../activity/docs/philosophy.md)
 
 ---
 

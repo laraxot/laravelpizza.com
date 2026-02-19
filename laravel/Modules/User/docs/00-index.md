@@ -5,7 +5,7 @@
 **Module Version**: 2.5.0
 
 ## 🎯 **Lettura Essenziale**
-1. [README.md](./README.md) - Panoramica completa del sistema di identità.
+1. [README.md](./readme.md) - Panoramica completa del sistema di identità.
 2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Biometric Auth & AI Moderation.
 3. [philosophy.md](./philosophy.md) - "Essere Unici": la gestione dell'identità digitale.
 
@@ -34,8 +34,8 @@
 - 🗑️ **[Cleanup Plan](./todo.md)** - Strategia per gestire i 550+ documenti accumulati.
 
 ## 🔗 **Moduli Correlati**
-- [Xot](../../Xot/docs/README.md) - Core per la gestione dei trait `HasTeams`.
-- [Tenant](../../Tenant/docs/README.md) - Risoluzione del Tenant corrente per l'utente.
+- [Xot](../../xot/docs/readme.md) - Core per la gestione dei trait `HasTeams`.
+- [Tenant](../../tenant/docs/readme.md) - Risoluzione del Tenant corrente per l'utente.
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

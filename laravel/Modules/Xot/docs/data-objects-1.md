@@ -77,6 +77,6 @@
 
 ## Collegamenti
 
-- [Data Objects Patient](../Patient/docs/data-objects.md)
+- [Data Objects Patient](../patient/docs/data-objects.md)
 - [Best Practices](./best-practices.md)
 - [Convenzioni di Codice](./coding-standards.md)

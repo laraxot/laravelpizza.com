@@ -62,5 +62,5 @@ La homepage del sito è costruita utilizzando un sistema di componenti modulare 
 3. Verificare la struttura JSON
 
 ## Collegamenti
-- [Componenti UI](../UI/docs/components.md)
-- [Documentazione Core](../Xot/docs/documentation.md)
+- [Componenti UI](../ui/docs/components.md)
+- [Documentazione Core](../xot/docs/documentation.md)

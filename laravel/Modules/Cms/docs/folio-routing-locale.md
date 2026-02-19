@@ -29,6 +29,6 @@
 ## Riferimenti
 
 - [Regola laravel-localization-mcamara](../../../../.cursor/rules/laravel-localization-mcamara.mdc)
-- [Lang: laravel-localization reference](../Lang/docs/laravel-localization-mcamara-reference.md)
-- [Meetup localization standard](../Meetup/docs/localization-standard.md)
+- [Lang: laravel-localization reference](../lang/docs/laravel-localization-mcamara-reference.md)
+- [Meetup localization standard](../meetup/docs/localization-standard.md)
 - [mcamara/laravel-localization README](https://github.com/mcamara/laravel-localization)

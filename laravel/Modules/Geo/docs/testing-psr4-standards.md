@@ -258,8 +258,8 @@ Prima di committare file di test:
 
 ## Collegamenti ai Moduli
 
-- [Testing PSR-4 Compliance - Modulo Xot](../Modules/Xot/docs/testing-psr4-compliance.md)
-- [Testing Guide - Modulo <nome modulo>](../Modules/<nome modulo>/docs/testing.md)
+- [Testing PSR-4 Compliance - Modulo Xot](../modules/xot/docs/testing-psr4-compliance.md)
+- [Testing Guide - Modulo <nome modulo>](../modules/<nome modulo>/docs/testing.md)
 
 ---
 

@@ -1,8 +1,8 @@
 # Utilizzo dei Componenti Filament Dropdown e Avatar
 
 ## Collegamenti correlati
-- [README modulo UI](/laravel/Modules/UI/docs/README.md)
-- [Utilizzo Componenti Filament](/laravel/Modules/UI/docs/FILAMENT_COMPONENTS_USAGE.md)
+- [README modulo UI](/laravel/modules/ui/docs/readme.md)
+- [Utilizzo Componenti Filament](/laravel/modules/ui/docs/filament_components_usage.md)
 - [Architettura Modulare](/docs/architettura-modulare.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 

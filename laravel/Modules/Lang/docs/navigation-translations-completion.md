@@ -157,9 +157,9 @@ Per ogni risorsa, le traduzioni navigation seguono questo pattern:
 
 ## 📚 Documentazione Correlata
 
-- [Job Module Roadmap](../../Job/docs/navigation-translations-completion-roadmap-[DATE].md)
-- [User Module Roadmap](../../User/docs/navigation-translations-completion-roadmap-[DATE].md)
-- [Translation Standards](../../Xot/docs/translation-standards.md)
+- [Job Module Roadmap](../../job/docs/navigation-translations-completion-roadmap-[date].md)
+- [User Module Roadmap](../../user/docs/navigation-translations-completion-roadmap-[date].md)
+- [Translation Standards](../../xot/docs/translation-standards.md)
 - [Navigation Translations Fixes](./navigation-translations-fixes.md)
 
 ---

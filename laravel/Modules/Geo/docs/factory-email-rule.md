@@ -158,7 +158,7 @@ public function definition(): array
 ## Collegamenti
 
 - [Regola Cursor](../../.cursor/rules/factory-email-rule.mdc)
-- [Regola <nome progetto>](../laravel/Modules/<nome progetto>/docs/factory-email-rule.md)
+- [Regola <nome progetto>](../laravel/modules/<nome progetto>/docs/factory-email-rule.md)
 - [Regola Windsurf](../../.windsurf/rules/factory-email-rule.mdc)
 - [Best Practices](best-practices.md)
 - [Factory Guidelines](factory-guidelines.md)

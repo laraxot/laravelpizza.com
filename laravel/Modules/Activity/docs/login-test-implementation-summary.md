@@ -174,14 +174,14 @@ Pattern avanzato per testare widget Filament Livewire con form, validazione, not
 
 ### **Project Documentation**
 - [LoginTest.php](../laravel/Modules/Cms/tests/Feature/Auth/LoginTest.php) - Main test file
-- [Implementation Guide](../laravel/Modules/Cms/docs/tests/login-test-implementation.md) - Complete documentation
+- [Implementation Guide](../laravel/modules/cms/docs/tests/login-test-implementation.md) - Complete documentation
 - [LoginWidget](../laravel/Modules/User/app/Filament/Widgets/LoginWidget.php) - Widget under test
 - [Login Page](../laravel/Themes/One/resources/views/pages/auth/login.blade.php) - UI page
 
 ### **Related Components**
-- [UserFactory Implementation](../laravel/Modules/<main module>/docs/factories/UserFactory-implementation-final.md) - Enterprise factory
-- [STI Architecture](../laravel/Modules/<main module>/docs/models/sti-architecture.md) - User type system
-- [Authentication Flow](../laravel/Modules/User/docs/authentication-flow.md) - Login process
+- [UserFactory Implementation](../laravel/modules/<main module>/docs/factories/userfactory-implementation-final.md) - Enterprise factory
+- [STI Architecture](../laravel/modules/<main module>/docs/models/sti-architecture.md) - User type system
+- [Authentication Flow](../laravel/modules/user/docs/authentication-flow.md) - Login process
 
 ### **Testing Framework**
 - [Pest PHP](https://pestphp.com/) - Modern testing framework
@@ -385,14 +385,14 @@ Pattern avanzato per testare widget Filament Livewire con form, validazione, not
 
 ### **Project Documentation**
 - [LoginTest.php](../laravel/Modules/Cms/tests/Feature/Auth/LoginTest.php) - Main test file
-- [Implementation Guide](../laravel/Modules/Cms/docs/tests/login-test-implementation.md) - Complete documentation
+- [Implementation Guide](../laravel/modules/cms/docs/tests/login-test-implementation.md) - Complete documentation
 - [LoginWidget](../laravel/Modules/User/app/Filament/Widgets/LoginWidget.php) - Widget under test
 - [Login Page](../laravel/Themes/One/resources/views/pages/auth/login.blade.php) - UI page
 
 ### **Related Components**
-- [UserFactory Implementation](../laravel/Modules/<nome progetto>/docs/factories/UserFactory-implementation-final.md) - Enterprise factory
-- [STI Architecture](../laravel/Modules/<nome progetto>/docs/models/sti-architecture.md) - User type system
-- [Authentication Flow](../laravel/Modules/User/docs/authentication-flow.md) - Login process
+- [UserFactory Implementation](../laravel/modules/<nome progetto>/docs/factories/userfactory-implementation-final.md) - Enterprise factory
+- [STI Architecture](../laravel/modules/<nome progetto>/docs/models/sti-architecture.md) - User type system
+- [Authentication Flow](../laravel/modules/user/docs/authentication-flow.md) - Login process
 
 ### **Testing Framework**
 - [Pest PHP](https://pestphp.com/) - Modern testing framework

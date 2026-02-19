@@ -11,7 +11,7 @@ Illuminate\Foundation\ViteException
 Unable to locate file in Vite manifest: resources/css/app.css.
 ```
 
-Questo errore è uno dei più comuni nella gestione dei temi. Per la risoluzione dettagliata, consultare la [documentazione principale sulla risoluzione problemi Vite](/docs/VITE_ASSETS_TROUBLESHOOTING.md).
+Questo errore è uno dei più comuni nella gestione dei temi. Per la risoluzione dettagliata, consultare la [documentazione principale sulla risoluzione problemi Vite](/docs/vite_assets_troubleshooting.md).
 
 ## Perché documentare qui?
 
@@ -23,7 +23,7 @@ Questo errore è uno dei più comuni nella gestione dei temi. Per la risoluzione
 
 - [Processo di Build dei Temi](theme-build-process.md)
 - [Compilazione dei Temi](theme_compilation.md)
-- [Documentazione Principale Vite](/docs/VITE_ASSETS_TROUBLESHOOTING.md)
+- [Documentazione Principale Vite](/docs/vite_assets_troubleshooting.md)
 
 ## Comandi Utili
 
@@ -53,4 +53,4 @@ Per maggiori dettagli sul funzionamento interno, consultare:
    - In sviluppo: utilizzare `npm run dev`
    - In produzione: utilizzare `npm run copy`
 
-Per una guida completa sulla risoluzione dei problemi, consultare la [documentazione principale](/docs/VITE_ASSETS_TROUBLESHOOTING.md).
+Per una guida completa sulla risoluzione dei problemi, consultare la [documentazione principale](/docs/vite_assets_troubleshooting.md).

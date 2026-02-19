@@ -5,7 +5,7 @@
 **Target:** XotBaseChartWidget  
 **Livello:** Guida di riferimento rapido
 
-> **⚠️ IMPORTANTE:** Per la guida completa dettagliata, vedere: [Guida Completa Chart Module](../../Chart/docs/chartjs-datalabels-multiple-labels-complete-guide.md)
+> **⚠️ IMPORTANTE:** Per la guida completa dettagliata, vedere: [Guida Completa Chart Module](../../chart/docs/chartjs-datalabels-multiple-labels-complete-guide.md)
 
 ---
 
@@ -106,9 +106,9 @@ protected function getOptions(): array
 
 ## Collegamenti
 
-- [Guida Completa Chart Module](../../Chart/docs/chartjs-datalabels-multiple-labels-complete-guide.md) (include riferimento ufficiale [Doughnut sample](https://github.com/chartjs/chartjs-plugin-datalabels/blob/master/docs/samples/charts/doughnut.md))
-- [Simple08ChartWidget Doughnut (Quaeris)](../../Quaeris/docs/simple08chartwidget-doughnut-distribution.md)
-- [XotBaseChartWidget Documentation](../README.md)
+- [Guida Completa Chart Module](../../chart/docs/chartjs-datalabels-multiple-labels-complete-guide.md) (include riferimento ufficiale [Doughnut sample](https://github.com/chartjs/chartjs-plugin-datalabels/blob/master/docs/samples/charts/doughnut.md))
+- [Simple08ChartWidget Doughnut (Quaeris)](../../quaeris/docs/simple08chartwidget-doughnut-distribution.md)
+- [XotBaseChartWidget Documentation](../readme.md)
 
 ---
 

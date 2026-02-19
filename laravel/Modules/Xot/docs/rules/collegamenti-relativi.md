@@ -34,7 +34,7 @@ Nella documentazione di il progetto, **tutti i collegamenti devono essere relati
 #### Per Documenti in Altre Parti del Progetto
 
 ```markdown
-[Documento in altro modulo](../../laravel/Modules/User/docs/documento.md)
+[Documento in altro modulo](../../laravel/modules/user/docs/documento.md)
 ```
 
 ### Formati Errati da Evitare
@@ -72,4 +72,4 @@ Questa regola si integra con il sistema di documentazione centralizzato descritt
 
 ## Collegamenti tra versioni di collegamenti-relativi.md
 * [collegamenti-relativi.md](docs/regole/collegamenti-relativi.md)
-* [collegamenti-relativi.md](../../../Xot/docs/rules/collegamenti-relativi.md)
+* [collegamenti-relativi.md](../../../xot/docs/rules/collegamenti-relativi.md)

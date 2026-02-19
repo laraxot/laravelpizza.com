@@ -198,9 +198,9 @@ done
 
 ### Laraxot Rules
 
-- [Migration Rules](../../Xot/docs/migration-rules.md)
-- [XotBaseMigration Guide](../../Xot/docs/xotbasemigration-guide.md)
-- [Database Best Practices](../../Xot/docs/database-best-practices.md)
+- [Migration Rules](../../xot/docs/migration-rules.md)
+- [XotBaseMigration Guide](../../xot/docs/xotbasemigration-guide.md)
+- [Database Best Practices](../../xot/docs/database-best-practices.md)
 
 ### Root Documentation
 
@@ -210,7 +210,7 @@ done
 ### This Analysis
 
 - [Migration Violations](./migration-violations-tenants.md) - Detailed analysis
-- [User Module README](./README.md)
+- [User Module README](./readme.md)
 
 ---
 

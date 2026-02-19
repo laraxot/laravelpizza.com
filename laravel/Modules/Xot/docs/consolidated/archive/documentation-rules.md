@@ -4,34 +4,34 @@ Questo documento serve come indice centrale per tutta la documentazione del prog
 
 ## Linee Guida Generali
 Le linee guida complete per la documentazione sono disponibili in:
-- [Linee Guida per la Documentazione](../../../Xot/project_docs/guidelines/documentation.md)
+- [Linee Guida per la Documentazione](../../../xot/project_docs/guidelines/documentation.md)
 
 ## Documentazione per Modulo
 
 ### Core
-- [Xot Module](../../../Xot/project_docs/README.md)
-- [UI Module](../../../UI/project_docs/README.md)
-- [CMS Module](../../../Cms/project_docs/README.md)
+- [Xot Module](../../../xot/project_docs/readme.md)
+- [UI Module](../../../ui/project_docs/readme.md)
+- [CMS Module](../../../cms/project_docs/readme.md)
 
 ### Business
-- [Patient Module](../../../Patient/project_docs/README.md)
-- [Dental Module](../../../Dental/project_docs/README.md)
+- [Patient Module](../../../patient/project_docs/readme.md)
+- [Dental Module](../../../dental/project_docs/readme.md)
 
 ### Supporto
-- [Reporting Module](../../../Reporting/project_docs/README.md)
-- [User Module](../../../User/project_docs/README.md)
+- [Reporting Module](../../../reporting/project_docs/readme.md)
+- [User Module](../../../user/project_docs/readme.md)
 
 ## Documentazione Tecnica
-- [Architettura](../../../Xot/project_docs/architecture/README.md)
-- [API Documentation](../../../Xot/project_docs/api/README.md)
-- [Testing](../../../Xot/project_docs/testing/README.md)
+- [Architettura](../../../xot/project_docs/architecture/readme.md)
+- [API Documentation](../../../xot/project_docs/api/readme.md)
+- [Testing](../../../xot/project_docs/testing/readme.md)
 
 ## Guide e Tutorial
-- [Guida all'Installazione](../../../Xot/project_docs/installation.md)
-- [Guida allo Sviluppo](../../../Xot/project_docs/development/README.md)
-- [Troubleshooting](../../../Xot/project_docs/troubleshooting/README.md)
+- [Guida all'Installazione](../../../xot/project_docs/installation.md)
+- [Guida allo Sviluppo](../../../xot/project_docs/development/readme.md)
+- [Troubleshooting](../../../xot/project_docs/troubleshooting/readme.md)
 
 ## Risorse Aggiuntive
-- [Changelog](../../../Xot/project_docs/changelog/README.md)
-- [Contributing](../../../Xot/project_docs/contributing.md)
-- [Security](../../../Xot/project_docs/security.md)
+- [Changelog](../../../xot/project_docs/changelog/readme.md)
+- [Contributing](../../../xot/project_docs/contributing.md)
+- [Security](../../../xot/project_docs/security.md)

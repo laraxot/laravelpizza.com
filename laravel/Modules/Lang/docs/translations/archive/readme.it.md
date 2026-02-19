@@ -64,10 +64,10 @@
 
 ## 📚 Documentazione
 
-- [Indice del Progetto](../INDEX.md)
-- [Workflow PHPStan](../PHPSTAN_WORKFLOW.md)
-- [Panoramica dei Moduli](../MODULES.md)
-- [Architettura](../ARCHITECTURE.md)
+- [Indice del Progetto](../index.md)
+- [Workflow PHPStan](../phpstan_workflow.md)
+- [Panoramica dei Moduli](../modules.md)
+- [Architettura](../architecture.md)
 
 ---
 

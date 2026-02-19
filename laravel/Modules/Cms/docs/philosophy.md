@@ -127,9 +127,9 @@ Questo componente incarna lo zen dell'auto-scoperta, creando automaticamente la 
 ## 📚 Riferimenti Interni
 
 - [Documentazione Master del Progetto](../../../docs/project-master-analysis.md)
-- [Filosofia Completa Laraxot](../../Xot/docs/philosophy-complete.md)
-- [Regole Critiche di Architettura](../../Xot/docs/critical-architecture-rules.md)
-- [Relazioni Ricorsive (Contratto)](../../Xot/docs/recursive-relationships-contract.md)
+- [Filosofia Completa Laraxot](../../xot/docs/philosophy-complete.md)
+- [Regole Critiche di Architettura](../../xot/docs/critical-architecture-rules.md)
+- [Relazioni Ricorsive (Contratto)](../../xot/docs/recursive-relationships-contract.md)
 - [Documentazione Cms Blocks System](./content-blocks-system.md)
 - [Documentazione Cms Architecture](./architecture/)
 

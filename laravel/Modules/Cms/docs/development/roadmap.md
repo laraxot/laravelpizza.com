@@ -286,7 +286,7 @@
 
 ### Collegamenti Interni
 - [Bottlenecks](bottlenecks.md)
-- [Best Practices](BEST-PRACTICES.md)
+- [Best Practices](best-practices.md)
 ## Note
 - Le percentuali sono aggiornate mensilmente
 - I dettagli specifici sono disponibili nelle sottocartelle
@@ -295,17 +295,17 @@
 ## Collegamenti tra versioni di roadmap.md
 - [roadmap.md](bashscripts/docs/roadmap.md)
 - [roadmap.md](docs/roadmap.md)
-- [roadmap.md](laravel/Modules/Gdpr/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/Notify/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/Xot/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/Dental/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/User/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/UI/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/Lang/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/Job/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/Media/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/Tenant/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/Activity/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/Patient/docs/roadmap.md)
-- [roadmap.md](laravel/Modules/Cms/docs/roadmap.md)
-- [roadmap.md](laravel/Themes/One/docs/roadmap.md)
+- [roadmap.md](laravel/modules/gdpr/docs/roadmap.md)
+- [roadmap.md](laravel/modules/notify/docs/roadmap.md)
+- [roadmap.md](laravel/modules/xot/docs/roadmap.md)
+- [roadmap.md](laravel/modules/dental/docs/roadmap.md)
+- [roadmap.md](laravel/modules/user/docs/roadmap.md)
+- [roadmap.md](laravel/modules/ui/docs/roadmap.md)
+- [roadmap.md](laravel/modules/lang/docs/roadmap.md)
+- [roadmap.md](laravel/modules/job/docs/roadmap.md)
+- [roadmap.md](laravel/modules/media/docs/roadmap.md)
+- [roadmap.md](laravel/modules/tenant/docs/roadmap.md)
+- [roadmap.md](laravel/modules/activity/docs/roadmap.md)
+- [roadmap.md](laravel/modules/patient/docs/roadmap.md)
+- [roadmap.md](laravel/modules/cms/docs/roadmap.md)
+- [roadmap.md](laravel/themes/one/docs/roadmap.md)

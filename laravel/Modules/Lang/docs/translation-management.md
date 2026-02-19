@@ -87,7 +87,7 @@ Prima di ogni commit, verificare:
 
 ## Collegamenti
 
-- [Regole Traduzioni](../../laravel/Modules/Xot/docs/translation-standards.md)
+- [Regole Traduzioni](../../laravel/modules/xot/docs/translation-standards.md)
 - [Best Practices Filament](filament-widget-best-practices.md)
 - [Enum Standards](enum_standards.md)
 

@@ -63,4 +63,4 @@ curl http://127.0.0.1:8000/en/auth/register | grep "Pizza"
 
 ## Related Docs
 - [Translation Standards](./translation-rules.md)
-- [Localization Best Practices](../Lang/docs/laravel-localization-best-practices.md)
+- [Localization Best Practices](../lang/docs/laravel-localization-best-practices.md)

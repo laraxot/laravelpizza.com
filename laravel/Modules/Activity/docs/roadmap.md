@@ -60,6 +60,6 @@ Evolvere il sistema di logging verso un'analisi proattiva (AI-driven) e una visu
 Ogni task è documentato in un file nella cartella `docs/tasks/`. Indice: **[tasks-index](./tasks/tasks-index.md)**.
 
 ## 🔗 Collegamenti
-- [README](./README.md)
+- [README](./readme.md)
 - [00-index](./00-index.md)
 - [Testing Strategy](./testing-strategy-implementation.md)

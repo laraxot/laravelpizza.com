@@ -67,9 +67,9 @@
 ### Versione HEAD
 
 ## Collegamenti tra versioni di integration.md
-* [integration.md](../../../Gdpr/project_docs/integration.md)
-* [integration.md](../../../Xot/project_docs/integration.md)
-* [integration.md](../../../Job/project_docs/integration.md)
+* [integration.md](../../../gdpr/project_docs/integration.md)
+* [integration.md](../../../xot/project_docs/integration.md)
+* [integration.md](../../../job/project_docs/integration.md)
 
 ### Versione Incoming
 

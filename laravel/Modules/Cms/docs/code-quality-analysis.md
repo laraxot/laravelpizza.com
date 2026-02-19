@@ -138,7 +138,7 @@
 
 - [PHPMD Report](./phpmd-report.md) - Analisi precedente PHPMD
 - [Filament Integration](./filament_integration.md) - Integrazione Filament
-- [Testing Guidelines](./TESTING.md) - Linee guida testing
+- [Testing Guidelines](./testing.md) - Linee guida testing
 - [Optimization Analysis](./optimization-analysis.md) - Analisi ottimizzazioni
 
 ---

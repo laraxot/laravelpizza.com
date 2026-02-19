@@ -5,7 +5,7 @@
 **Module Version**: 3.0.0
 
 ## 🎯 **Lettura Essenziale
-1. [README.md](./README.md) - Panoramica del framework Laraxot.
+1. [README.md](./readme.md) - Panoramica del framework Laraxot.
 2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Laravel 12 & Stability.
 3. [super-mucca-methodology.md](./super-mucca-methodology.md) - La filosofia di sviluppo del progetto.
 

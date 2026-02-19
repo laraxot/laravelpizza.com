@@ -134,8 +134,8 @@ Questo pattern può essere riutilizzato in altri widget che:
 - [XotBaseResource.php](../../../Xot/app/Filament/Resources/XotBaseResource.php) - Schema attachments migliorato
 - [PatientResource.php](../../../<nome modulo>/app/Filament/Resources/PatientResource.php) - Risorsa paziente
 - [PatientResource.php](../../../<nome progetto>/app/Filament/Resources/PatientResource.php) - Risorsa paziente
-- [Widget Error Troubleshooting](../../../Xot/docs/troubleshooting/widget-errors.md) - Guide generali
-- [Widget Error Troubleshooting](../../../Xot/project_docs/troubleshooting/widget-errors.md) - Guide generali
+- [Widget Error Troubleshooting](../../../xot/docs/troubleshooting/widget-errors.md) - Guide generali
+- [Widget Error Troubleshooting](../../../xot/project_docs/troubleshooting/widget-errors.md) - Guide generali
 ---
 **Creato**: 2025-01-07
 **Aggiornato**: 2025-01-07

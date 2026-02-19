@@ -205,4 +205,4 @@ Vedi: [Container0 Slug0 Agnostic Pattern](container0-slug0-agnostic-pattern.md)
 
 - [Folio Container Routing Priority](folio-container-routing-priority.md)
 - [Folio Routing](folio-routing.md)
-- [CMS JSON Content System](../Cms/docs/json-content-system-architecture.md)
+- [CMS JSON Content System](../cms/docs/json-content-system-architecture.md)

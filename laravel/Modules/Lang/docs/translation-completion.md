@@ -134,8 +134,8 @@ Durante l'audit delle traduzioni del progetto <nome progetto>, sono state identi
 
 ### Collegamenti Bidirezionali Creati
 - [Root Docs: Translation Standards](translation_standards.md)
-- [Lang Module: Translation Best Practices](../laravel/Modules/Lang/docs/translation_best_practices.md)
-- [<nome progetto> Module: Translation Guidelines](../laravel/Modules/<nome progetto>/docs/translation_guidelines.md)
+- [Lang Module: Translation Best Practices](../laravel/modules/lang/docs/translation_best_practices.md)
+- [<nome progetto> Module: Translation Guidelines](../laravel/modules/<nome progetto>/docs/translation_guidelines.md)
 
 ## Prevenzione Errori Futuri
 

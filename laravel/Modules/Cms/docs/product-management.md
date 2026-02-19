@@ -376,6 +376,6 @@ class ProductTest extends TestCase
 - [Filament Documentation](https://filamentphp.com) 
 
 ## Collegamenti tra versioni di product-management.md
-* [product-management.md](laravel/Modules/Cms/project_docs/product-management.md)
-* [product-management.md](laravel/Modules/Cms/project_docs/components/product-management.md)
+* [product-management.md](laravel/modules/cms/project_docs/product-management.md)
+* [product-management.md](laravel/modules/cms/project_docs/components/product-management.md)
 

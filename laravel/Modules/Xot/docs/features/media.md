@@ -27,8 +27,8 @@ ${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/upload.txt}
 ### Versione HEAD
 
 ## Collegamenti tra versioni di media.md
-* [media.md](../../../Xot/docs/features/media.md)
-* [media.md](../../../Xot/docs/roadmap/bottlenecks/media.md)
+* [media.md](../../../xot/docs/features/media.md)
+* [media.md](../../../xot/docs/roadmap/bottlenecks/media.md)
 
 ### Versione Incoming
 

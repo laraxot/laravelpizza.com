@@ -228,9 +228,9 @@ Nessuna funzionalità critica mancante - il modulo Notify è ben implementato
 
 ## Collegamenti
 
-- [Modulo Quaeris](../Quaeris/docs/README.md)
-- [Modulo Limesurvey](../Limesurvey/docs/README.md)
-- [Notify README](./README.md)
+- [Modulo Quaeris](../quaeris/docs/readme.md)
+- [Modulo Limesurvey](../limesurvey/docs/readme.md)
+- [Notify README](./readme.md)
 
 ---
 

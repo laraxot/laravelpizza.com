@@ -234,8 +234,8 @@ class <nome progetto>SpecificService
 
 ## Collegamenti e Riferimenti
 
-- [Modules/Notify/docs/reusability_guidelines.md](../laravel/Modules/Notify/docs/reusability_guidelines.md)
-- [Modules/Xot/docs/xotdata_usage.md](../laravel/Modules/Xot/docs/xotdata_usage.md)
+- [Modules/Notify/docs/reusability_guidelines.md](../laravel/modules/notify/docs/reusability_guidelines.md)
+- [Modules/Xot/docs/xotdata_usage.md](../laravel/modules/xot/docs/xotdata_usage.md)
 - [docs/laraxot_conventions.md](laraxot_conventions.md)
 - [docs/module_architecture.md](module_architecture.md)
 

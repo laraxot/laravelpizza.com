@@ -285,9 +285,9 @@ dump($variable);
 
 ## Collegamenti
 
-- [README Modulo User](../README.md)
+- [README Modulo User](../readme.md)
 - [Best Practices Testing](../../../project_docs/testing-best-practices.md)
-- [Architettura Modulo User](../architecture/README.md)
+- [Architettura Modulo User](../architecture/readme.md)
 - [Factory e Seeder](../models/factory-seeder-status.md)
 
 ---

@@ -154,7 +154,7 @@ public function getTableBulkActions(): array
 ## Collegamenti
 
 - [Filosofia Componenti Riutilizzabili](./reusable-components-philosophy.md)
-- [Pattern QueueableActions](../../Xot/docs/queueable-actions-pattern.md)
+- [Pattern QueueableActions](../../xot/docs/queueable-actions-pattern.md)
 - [GetAddressDataFromFullAddressAction](./../app/Actions/GetAddressDataFromFullAddressAction.php)
 
 ---

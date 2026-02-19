@@ -57,14 +57,14 @@ Potrebbero esserci altri modelli nel modulo Notify che utilizzano ancora la sint
 
 ## Risorse di Riferimento
 
-1. [Documentazione Laravel Translatable](../Lang/docs/translatable/index.md)
-2. [Gestione Traduzioni Mancanti](../Lang/docs/translatable/gestione-traduzioni-mancanti.md)
-3. [Implementazione nel Progetto](../Lang/docs/translatable/implementazione-nel-progetto.md)
-4. [Best Practices](../Lang/docs/translatable/best-practices.md)
-1. [Documentazione Laravel Translatable](Modules/Lang/docs/translatable/index.md)
-2. [Gestione Traduzioni Mancanti](Modules/Lang/docs/translatable/gestione-traduzioni-mancanti.md)
-3. [Implementazione nel Progetto](Modules/Lang/docs/translatable/implementazione-nel-progetto.md)
-4. [Best Practices](Modules/Lang/docs/translatable/best-practices.md)
+1. [Documentazione Laravel Translatable](../lang/docs/translatable/index.md)
+2. [Gestione Traduzioni Mancanti](../lang/docs/translatable/gestione-traduzioni-mancanti.md)
+3. [Implementazione nel Progetto](../lang/docs/translatable/implementazione-nel-progetto.md)
+4. [Best Practices](../lang/docs/translatable/best-practices.md)
+1. [Documentazione Laravel Translatable](modules/lang/docs/translatable/index.md)
+2. [Gestione Traduzioni Mancanti](modules/lang/docs/translatable/gestione-traduzioni-mancanti.md)
+3. [Implementazione nel Progetto](modules/lang/docs/translatable/implementazione-nel-progetto.md)
+4. [Best Practices](modules/lang/docs/translatable/best-practices.md)
 
 ## Timeline
 

@@ -153,7 +153,7 @@ cd laravel
 - [S3Test Method Duplication Fix](s3test-method-duplication-bugfix.md)
 - [S3Test Null ErrorCode Handling](s3test-bugfix-null-errorcode.md)
 - [AwsTest Undefined Variable Fix](awstest-bugfix-undefined-variable.md)
-- [Media Module PHPStan Fixes](../Media/project_docs/phpstan_level10_fixes.md)
+- [Media Module PHPStan Fixes](../media/project_docs/phpstan_level10_fixes.md)
 
 ## Aggiornamento Continuo
 

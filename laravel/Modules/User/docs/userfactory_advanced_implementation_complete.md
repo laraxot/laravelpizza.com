@@ -287,13 +287,13 @@ $gdprTests = [
 ## 📎 Key Documentation Links
 
 ### Primary Documentation
-- [SaluteOra Factory Implementation](../laravel/Modules/SaluteOra/docs/factories/UserFactory-implementation-final.md)
-- [User Module Integration](../laravel/Modules/User/docs/user_factory_advanced_integration.md)
-- [Advanced Analysis](../laravel/Modules/SaluteOra/docs/factories/UserFactory-advanced-improvements-analysis.md)
+- [SaluteOra Factory Implementation](../laravel/modules/saluteora/docs/factories/userfactory-implementation-final.md)
+- [User Module Integration](../laravel/modules/user/docs/user_factory_advanced_integration.md)
+- [Advanced Analysis](../laravel/modules/saluteora/docs/factories/userfactory-advanced-improvements-analysis.md)
 
 ### Technical References
-- [Model Architecture](../laravel/Modules/SaluteOra/docs/models/single-table-inheritance.md)
-- [State Management](../laravel/Modules/SaluteOra/docs/models/states.md)
-- [Cross-Module Relations](../laravel/Modules/SaluteOra/docs/models/doctor-studio-relationship.md)
+- [Model Architecture](../laravel/modules/saluteora/docs/models/single-table-inheritance.md)
+- [State Management](../laravel/modules/saluteora/docs/models/states.md)
+- [Cross-Module Relations](../laravel/modules/saluteora/docs/models/doctor-studio-relationship.md)
 
 **🎉 MISSION ACCOMPLISHED - UserFactory Advanced Implementation Complete! 🎉** 

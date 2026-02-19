@@ -49,6 +49,6 @@
 
 ## 📚 Riferimenti
 
-- [Filosofia Laraxot](../../Xot/docs/critical-rules-consolidated.md)
-- [Pattern Service Provider](../../Xot/docs/development-workflow-detailed.md)
-- [Regole Filament](../../Xot/docs/errori-critici/mai-estendere-filament-direttamente.md)
+- [Filosofia Laraxot](../../xot/docs/critical-rules-consolidated.md)
+- [Pattern Service Provider](../../xot/docs/development-workflow-detailed.md)
+- [Regole Filament](../../xot/docs/errori-critici/mai-estendere-filament-direttamente.md)

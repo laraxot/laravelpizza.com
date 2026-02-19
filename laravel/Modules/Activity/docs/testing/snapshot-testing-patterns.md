@@ -246,7 +246,7 @@ test('can reconstruct aggregate from snapshots', function () {
 ## Collegamenti
 
 ### Documentazione
-- [Testing Strategy](../../Xot/docs/testing-strategy.md) - **Policy ufficiale**
+- [Testing Strategy](../../xot/docs/testing-strategy.md) - **Policy ufficiale**
 - [No RefreshDatabase Policy](./no-refresh-database-policy.md)
 - [Event Sourcing Introduction](../event-sourcing-introduction.md)
 - [Snapshot Model](../models/snapshot-model.md)

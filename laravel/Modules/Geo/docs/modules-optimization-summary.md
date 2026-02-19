@@ -195,20 +195,20 @@ php artisan docs:validate
 ## 🔗 Collegamenti Documentazione
 
 ### Moduli Principali
-- [<nome progetto> - Core Business](../Modules/<nome progetto>/docs/optimization-analysis.md)
-- [<nome progetto> - Core Business](../Modules/<nome progetto>/docs/optimization-analysis.md)
-- [User - Authentication](../Modules/User/docs/optimization-analysis.md)
-- [Xot - Framework Base](../Modules/Xot/docs/optimization-analysis.md)
-- [UI - Interface Components](../Modules/UI/docs/optimization-analysis.md)
-- [Tenant - Multi-Tenancy](../Modules/Tenant/docs/optimization-analysis.md)
+- [<nome progetto> - Core Business](../modules/<nome progetto>/docs/optimization-analysis.md)
+- [<nome progetto> - Core Business](../modules/<nome progetto>/docs/optimization-analysis.md)
+- [User - Authentication](../modules/user/docs/optimization-analysis.md)
+- [Xot - Framework Base](../modules/xot/docs/optimization-analysis.md)
+- [UI - Interface Components](../modules/ui/docs/optimization-analysis.md)
+- [Tenant - Multi-Tenancy](../modules/tenant/docs/optimization-analysis.md)
 
 ### Moduli di Supporto
-- [Activity - Logging](../Modules/Activity/docs/optimization-analysis.md)
-- [Geo - Geolocation](../Modules/Geo/docs/optimization-analysis.md)
-- [Gdpr - Privacy](../Modules/Gdpr/docs/optimization-analysis.md)
-- [Media - File Management](../Modules/Media/docs/optimization-analysis.md)
-- [Lang - Translations](../Modules/Lang/docs/optimization-analysis.md)
-- [Notify - Notifications](../Modules/Notify/docs/optimization-analysis.md)
+- [Activity - Logging](../modules/activity/docs/optimization-analysis.md)
+- [Geo - Geolocation](../modules/geo/docs/optimization-analysis.md)
+- [Gdpr - Privacy](../modules/gdpr/docs/optimization-analysis.md)
+- [Media - File Management](../modules/media/docs/optimization-analysis.md)
+- [Lang - Translations](../modules/lang/docs/optimization-analysis.md)
+- [Notify - Notifications](../modules/notify/docs/optimization-analysis.md)
 
 ### Documentazione Generale
 - [SOLID Principles](./solid-principles.md)

@@ -125,11 +125,11 @@ Ogni volta che pensi di aggiungere una rotta in `web.php`, chiediti:
 
 ## Collegamenti
 
-- [Filosofia dei Getter](../Xot/docs/philosophy/getter_zen.md)
-- [Filosofia Zen Avanzata](../Xot/docs/philosophy/getter_zen_advanced.md)
-- [La Via del Brand](../Xot/docs/brand/brand_way.md)
-- [Il Tao del Codice](../Xot/docs/tao/code_tao.md)
-- [Best Practices Filament](./FILAMENT_BEST_PRACTICES.md) 
+- [Filosofia dei Getter](../xot/docs/philosophy/getter_zen.md)
+- [Filosofia Zen Avanzata](../xot/docs/philosophy/getter_zen_advanced.md)
+- [La Via del Brand](../xot/docs/brand/brand_way.md)
+- [Il Tao del Codice](../xot/docs/tao/code_tao.md)
+- [Best Practices Filament](./filament_best_practices.md) 
 
 ## Principi Fondamentali
 
@@ -464,6 +464,6 @@ public function logout()
 
 ## Collegamenti
 
-- [Documentazione Volt](./VOLT_LOGOUT.md)
-- [Struttura Directory](./DIRECTORY_STRUCTURE_CHECKLIST.md)
-- [Gestione Errori](./ERROR_HANDLING.md) 
+- [Documentazione Volt](./volt_logout.md)
+- [Struttura Directory](./directory_structure_checklist.md)
+- [Gestione Errori](./error_handling.md) 

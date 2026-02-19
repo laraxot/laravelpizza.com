@@ -296,7 +296,7 @@ private function generateRealisticDomain(string $tenantName, string $sector): st
 
 ## Collegamenti
 
-- [README Modulo Tenant](./README.md)
+- [README Modulo Tenant](./readme.md)
 - [Multi-Tenancy Architecture](./multi-tenancy.md)
 - [Database Schema](./database-schema.md)
 - [Testing Guidelines](./testing.md)

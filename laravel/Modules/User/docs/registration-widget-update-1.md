@@ -16,6 +16,6 @@ Ho aggiornato ulteriormente la documentazione per riflettere un cambiamento nell
 - **Coerenza Traduzioni**: Questo cambiamento garantisce che le traduzioni siano applicate correttamente nel widget di registrazione, mantenendo la coerenza con il resto del sistema.
 
 **Collegamenti correlati**:
-- [Documentazione DoctorResource](../Modules/Patient/docs/doctor-resource-update.md)
+- [Documentazione DoctorResource](../modules/patient/docs/doctor-resource-update.md)
 - [Documentazione principale](../docs/roadmap_frontoffice/08-registrazione-odontoiatra.md)
-- [Documentazione Doctor Model](../Modules/Patient/docs/doctor-model-update.md)
+- [Documentazione Doctor Model](../modules/patient/docs/doctor-model-update.md)

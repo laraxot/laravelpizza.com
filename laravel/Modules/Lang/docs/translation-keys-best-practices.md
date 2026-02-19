@@ -1,10 +1,10 @@
 # Best Practices per le Chiavi di Traduzione
 
 ## Collegamenti correlati
-- [README modulo Lang](./README.md)
-- [Convenzioni Path](./PATH_CONVENTIONS.md)
+- [README modulo Lang](./readme.md)
+- [Convenzioni Path](./path_conventions.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Header](/laravel/Modules/User/docs/HEADER_LANGUAGE_AVATAR_IMPLEMENTATION.md)
+- [Implementazione Header](/laravel/modules/user/docs/header_language_avatar_implementation.md)
 
 ## Panoramica
 

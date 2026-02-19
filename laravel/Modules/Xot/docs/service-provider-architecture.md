@@ -534,7 +534,7 @@ Il sistema `nwidart/laravel-modules` scansiona e registra automaticamente i modu
 ## Collegamenti
 
 ### Documentazione Correlata
-- [Activity Module - Errore No Hint Path](../../Activity/docs/errori/no-hint-path-defined.md)
+- [Activity Module - Errore No Hint Path](../../activity/docs/errori/no-hint-path-defined.md)
 - [View Namespace Resolution System](./view-namespace-resolution.md)
 - [Module Discovery Process](./module-discovery.md)
 

@@ -103,22 +103,22 @@ use Filament\Widgets\Concerns\CanPoll;
         return User::where('last_active_at', '>', now()->subMinutes(5))->count();
 ## Collegamenti Bidirezionali
 ### Modulo Xot (Core)
-- [README.md](../../../Xot/docs/README.md) - Indice principale della documentazione
-- [Widget Filament](../../../Xot/docs/filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget
-- [Polling nei Widget](../../../Xot/docs/filament/widgets/FILAMENT_WIDGETS_POLLING.md) - Implementazione del polling
+- [README.md](../../../xot/docs/readme.md) - Indice principale della documentazione
+- [Widget Filament](../../../xot/docs/filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget
+- [Polling nei Widget](../../../xot/docs/filament/widgets/filament_widgets_polling.md) - Implementazione del polling
 ### Moduli Correlati
-- [Cms - Convenzioni Namespace Filament](../../../Cms/docs/convenzioni-namespace-filament.md) - Convenzioni per i namespace Filament
-- [Lang - Filament Translations](../../../Lang/docs/filament-translations.md) - Traduzioni in Filament
-- [UI - Form Filament Widgets](../../../UI/docs/form_filament_widgets.md) - Widget per form Filament
-- [README.md](../../../Xot/project_docs/README.md) - Indice principale della documentazione
-- [Widget Filament](../../../Xot/project_docs/filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget
-- [Polling nei Widget](../../../Xot/project_docs/filament/widgets/FILAMENT_WIDGETS_POLLING.md) - Implementazione del polling
-- [Cms - Convenzioni Namespace Filament](../../../Cms/project_docs/convenzioni-namespace-filament.md) - Convenzioni per i namespace Filament
-- [Lang - Filament Translations](../../../Lang/project_docs/filament-translations.md) - Traduzioni in Filament
-- [UI - Form Filament Widgets](../../../UI/project_docs/form_filament_widgets.md) - Widget per form Filament
+- [Cms - Convenzioni Namespace Filament](../../../cms/docs/convenzioni-namespace-filament.md) - Convenzioni per i namespace Filament
+- [Lang - Filament Translations](../../../lang/docs/filament-translations.md) - Traduzioni in Filament
+- [UI - Form Filament Widgets](../../../ui/docs/form_filament_widgets.md) - Widget per form Filament
+- [README.md](../../../xot/project_docs/readme.md) - Indice principale della documentazione
+- [Widget Filament](../../../xot/project_docs/filament/widgets/xot-base-widget.md) - Documentazione su XotBaseWidget
+- [Polling nei Widget](../../../xot/project_docs/filament/widgets/filament_widgets_polling.md) - Implementazione del polling
+- [Cms - Convenzioni Namespace Filament](../../../cms/project_docs/convenzioni-namespace-filament.md) - Convenzioni per i namespace Filament
+- [Lang - Filament Translations](../../../lang/project_docs/filament-translations.md) - Traduzioni in Filament
+- [UI - Form Filament Widgets](../../../ui/project_docs/form_filament_widgets.md) - Widget per form Filament
 ### Documentazione Interna
-- [README del modulo User](../README.md) - Indice principale del modulo User
-- [Filament Best Practices](../FILAMENT_BEST_PRACTICES.md) - Best practices generali per Filament
+- [README del modulo User](../readme.md) - Indice principale del modulo User
+- [Filament Best Practices](../filament_best_practices.md) - Best practices generali per Filament
 ## Risorse Utili
 - [Documentazione Filament](https://filamentphp.com/docs)
 - [Laravel Blade](https://laravel.com/docs/blade)

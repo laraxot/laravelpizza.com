@@ -10,8 +10,8 @@ section: content
 # Model Queuable Actions
 
 ## Collegamenti tra versioni di model.md
-* [model.md](../../../Xot/project_docs/model.md)
-* [model.md](../../../Xot/project_docs/service/model.md)
+* [model.md](../../../xot/project_docs/model.md)
+* [model.md](../../../xot/project_docs/service/model.md)
 
 ### Versione Incoming
 

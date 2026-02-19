@@ -1,9 +1,9 @@
 # Utilizzo dei Componenti Filament
 
 ## Collegamenti correlati
-- [README modulo UI](/laravel/Modules/UI/docs/README.md)
+- [README modulo UI](/laravel/modules/ui/docs/readme.md)
 - [Architettura Modulare](/docs/architettura-modulare.md)
-- [Percorsi e Asset](/laravel/Modules/UI/docs/PATHS_AND_ASSETS.md)
+- [Percorsi e Asset](/laravel/modules/ui/docs/paths_and_assets.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica

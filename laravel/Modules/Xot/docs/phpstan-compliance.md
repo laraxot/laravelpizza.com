@@ -3,9 +3,9 @@
 ## 📚 Documentazione Correlata
 
 - [Pattern Comuni Progetto](../../../../docs/phpstan/pattern-comuni.md)
-- [Lezioni Apprese](../../../../docs/phpstan/lezioni-apprese-[DATE].md)
-- [Activity Best Practices](../../Activity/docs/phpstan/best-practices.md)
-- [Blog Best Practices](../../Blog/docs/phpstan/best-practices.md)
+- [Lezioni Apprese](../../../../docs/phpstan/lezioni-apprese-[date].md)
+- [Activity Best Practices](../../activity/docs/phpstan/best-practices.md)
+- [Blog Best Practices](../../blog/docs/phpstan/best-practices.md)
 
 ---
 

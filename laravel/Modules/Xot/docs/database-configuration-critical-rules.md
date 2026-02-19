@@ -225,7 +225,7 @@ TenantServiceProvider non è stato caricato. Assicurati che il ServiceProvider s
 
 ## Documentazione Correlata
 
-- [Database Testing Configuration](../Gdpr/docs/database-testing-configuration.md)
+- [Database Testing Configuration](../gdpr/docs/database-testing-configuration.md)
 - [TenantServiceProvider](../Tenant/app/Providers/TenantServiceProvider.php)
 - [Environment Development vs Testing](./environment-development-vs-testing-rules.md)
 

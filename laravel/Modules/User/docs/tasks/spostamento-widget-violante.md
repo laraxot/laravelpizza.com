@@ -27,4 +27,4 @@ Nessuna.
 
 - [Roadmap User](../roadmap.md)
 - [Indice task User](tasks-index.md)
-- [Modular Architecture Dependency Rules](../../Cms/docs/modular-architecture-dependency-rules.md)
+- [Modular Architecture Dependency Rules](../../cms/docs/modular-architecture-dependency-rules.md)

@@ -232,12 +232,12 @@ $user->hasRole('admin', 'api'); // ✅ Ora funziona correttamente
 
 ### Analisi Pre-Refactoring
 - [DRY Violation Analysis](./baseuser-dry-violation-analysis.md) - Analisi completa del problema
-- [Refactoring Plan](../../docs/baseuser-dry-violation-[DATE].md) - Piano esecutivo
+- [Refactoring Plan](../../docs/baseuser-dry-violation-[date].md) - Piano esecutivo
 
 ### Modulo User
 - [BaseUser Model](./models/baseuser.md)
 - [Roles & Permissions](./roles-permissions.md)
-- [User Module README](./README.md)
+- [User Module README](./readme.md)
 
 ### Root Progetto
 - [Code Quality](../../docs/code-quality-analysis.md)

@@ -222,8 +222,8 @@ $eventData = $helper->getEventData();
 
 ## 🔗 Riferimenti
 
-- [Filament Widgets Frontend](../Modules/UI/docs/filament-widgets-frontend.md)
-- [Livewire to Filament Widget Migration](../Modules/User/docs/livewire-to-filament-widget-migration.md)
-- [Auth Widget Rules](../Modules/User/docs/auth-widget-rules.md)
+- [Filament Widgets Frontend](../modules/ui/docs/filament-widgets-frontend.md)
+- [Livewire to Filament Widget Migration](../modules/user/docs/livewire-to-filament-widget-migration.md)
+- [Auth Widget Rules](../modules/user/docs/auth-widget-rules.md)
 - [Folio Filament Widgets Integration](folio-filament-widgets-integration.md)
-- [AGENTS.md](../../AGENTS.md) - Sezione "CRITICAL RULE: Always Use Filament Widgets"
+- [AGENTS.md](../../agents.md) - Sezione "CRITICAL RULE: Always Use Filament Widgets"

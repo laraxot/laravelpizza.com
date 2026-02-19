@@ -57,11 +57,11 @@ Questa documentazione integra le informazioni sui conflitti risolti, fornendo de
 
 ## Backlink
 - [Torna a docs/links.md](../../../../docs/links.md)
-- [Vedi anche: UI/docs/README.md](./README.md)
-- [Vedi anche: Xot/docs/README.md](../../Xot/docs/README.md)
-- [Vedi anche: Blog/docs/README.md](../../Blog/docs/README.md)
-- [Vedi anche: Cms/docs/README.md](../../Cms/docs/README.md)
-- [Vedi anche: Comment/docs/README.md](../../Comment/docs/README.md)
+- [Vedi anche: UI/docs/README.md](./readme.md)
+- [Vedi anche: Xot/docs/README.md](../../xot/docs/readme.md)
+- [Vedi anche: Blog/docs/README.md](../../blog/docs/readme.md)
+- [Vedi anche: Cms/docs/README.md](../../cms/docs/readme.md)
+- [Vedi anche: Comment/docs/README.md](../../comment/docs/readme.md)
 # Conflitti di Merge Risolti nel Modulo UI
 
 ## Conflitti Risolti ([DATE])
@@ -121,8 +121,8 @@ Questa documentazione integra le informazioni sui conflitti risolti, fornendo de
 
 ## Backlink
 - [Torna a docs/links.md](../../../../docs/links.md)
-- [Vedi anche: UI/docs/README.md](./README.md)
-- [Vedi anche: Xot/docs/README.md](../../Xot/docs/README.md)
-- [Vedi anche: Blog/docs/README.md](../../Blog/docs/README.md)
-- [Vedi anche: Cms/docs/README.md](../../Cms/docs/README.md)
-- [Vedi anche: Comment/docs/README.md](../../Comment/docs/README.md)
+- [Vedi anche: UI/docs/README.md](./readme.md)
+- [Vedi anche: Xot/docs/README.md](../../xot/docs/readme.md)
+- [Vedi anche: Blog/docs/README.md](../../blog/docs/readme.md)
+- [Vedi anche: Cms/docs/README.md](../../cms/docs/readme.md)
+- [Vedi anche: Comment/docs/README.md](../../comment/docs/readme.md)

@@ -1,7 +1,7 @@
 # List Records in Filament
 
 > **AGGIORNAMENTO 2025-05-28:**
-> Questa policy è stata aggiornata e propagata anche in [<nome progetto>/docs/resources/studio-resource.md](../../<nome progetto>/docs/resources/studio-resource.md) e [<nome progetto>/docs/README.md](../../<nome progetto>/docs/README.md). Vedi esempi di implementazione e note di propagazione.
+> Questa policy è stata aggiornata e propagata anche in [<nome progetto>/docs/resources/studio-resource.md](../../<nome progetto>/docs/resources/studio-resource.md) e [<nome progetto>/docs/README.md](../../<nome progetto>/docs/readme.md). Vedi esempi di implementazione e note di propagazione.
 
 ## Estensione Corretta
 

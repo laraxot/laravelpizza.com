@@ -27,9 +27,9 @@ Questo documento descrive il processo per determinare il logo di un'applicazione
 - **Riutilizzabilità**: L'uso di namespace per i percorsi degli asset consente ai moduli di essere riutilizzabili in più progetti.
 
 ## Collegamenti Bidirezionali
-- Per ulteriori dettagli sul progetto specifico, consultare la documentazione nella root del progetto: [INDEX.md](../../../project_docs/INDEX.md).
+- Per ulteriori dettagli sul progetto specifico, consultare la documentazione nella root del progetto: [INDEX.md](../../../project_docs/index.md).
 - Linee guida generali per i loghi: [Linee Guida per i Loghi](../../../project_docs/standards/logo_guidelines.md).
-- Convenzioni sui namespace e Filament: [Convenzioni Namespace Filament](../Cms/project_docs/convenzioni-namespace-filament.md).
+- Convenzioni sui namespace e Filament: [Convenzioni Namespace Filament](../cms/project_docs/convenzioni-namespace-filament.md).
 # Determinazione del Logo Basata sul Dominio
 
 ## Introduzione
@@ -59,6 +59,6 @@ Questo documento descrive il processo per determinare il logo di un'applicazione
 - **Riutilizzabilità**: L'uso di namespace per i percorsi degli asset consente ai moduli di essere riutilizzabili in più progetti.
 
 ## Collegamenti Bidirezionali
-- Per ulteriori dettagli sul progetto specifico, consultare la documentazione nella root del progetto: [INDEX.md](../../../docs/INDEX.md).
+- Per ulteriori dettagli sul progetto specifico, consultare la documentazione nella root del progetto: [INDEX.md](../../../docs/index.md).
 - Linee guida generali per i loghi: [Linee Guida per i Loghi](../../../docs/standards/logo_guidelines.md).
-- Convenzioni sui namespace e Filament: [Convenzioni Namespace Filament](../Cms/docs/convenzioni-namespace-filament.md).
+- Convenzioni sui namespace e Filament: [Convenzioni Namespace Filament](../cms/docs/convenzioni-namespace-filament.md).

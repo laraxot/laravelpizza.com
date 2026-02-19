@@ -28,8 +28,8 @@ if (! $this->hasColumn('state')) {
 - [ ] Aggiornare tutte le vecchie migrazioni
 
 ## Collegamenti correlati
-- [README User](mdc:README.md)
+- [README User](mdc:readme.md)
 - [Best Practices](mdc:best-practices.mdc)
 - [Linee guida Actions](mdc:actions.mdc)
 - [Linee guida Activitylog](mdc:activitylog.mdc)
-- [Documentazione centrale](mdc:../../../../docs/INDEX.md)
+- [Documentazione centrale](mdc:../../../../docs/index.md)

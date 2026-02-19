@@ -35,12 +35,12 @@ $page->navigation
 ### Versione HEAD
 
 ## Collegamenti tra versioni di navigation.md
-* [navigation.md](../../../Gdpr/project_docs/navigation.md)
-* [navigation.md](../../../Xot/project_docs/navigation.md)
-* [navigation.md](../../../UI/project_docs/navigation.md)
-* [navigation.md](../../../Cms/project_docs/blocks/navigation.md)
-* [navigation.md](../../../Cms/project_docs/navigation.md)
-* [navigation.md](../../../Cms/project_docs/components/navigation.md)
+* [navigation.md](../../../gdpr/project_docs/navigation.md)
+* [navigation.md](../../../xot/project_docs/navigation.md)
+* [navigation.md](../../../ui/project_docs/navigation.md)
+* [navigation.md](../../../cms/project_docs/blocks/navigation.md)
+* [navigation.md](../../../cms/project_docs/navigation.md)
+* [navigation.md](../../../cms/project_docs/components/navigation.md)
 
 ### Versione Incoming
 

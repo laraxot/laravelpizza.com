@@ -17,4 +17,4 @@ Sfoltire l'enorme documentazione del modulo Geo (370+ file), eliminando duplicat
 - [ ] Aggiornare `00-index.md` rimuovendo riferimenti a path inesistenti.
 
 ## 🔗 Riferimenti
-- [ROADMAP Geo](../ROADMAP.md)
+- [ROADMAP Geo](../roadmap.md)

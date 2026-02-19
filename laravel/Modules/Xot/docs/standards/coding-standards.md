@@ -2,7 +2,7 @@
 
 > **Nota**: Questo documento è correlato a [Convenzioni](../../../docs/conventions.md) e [Naming Conventions](../../../docs/naming-conventions.md). Per una panoramica completa, consulta tutti i documenti correlati.
 
-Questo documento contiene gli standard di codice specifici per il progetto il progetto. Per le linee guida generali sulla scrittura del codice, consultare la [documentazione del modulo Xot](../CODE-STANDARDS.md).
+Questo documento contiene gli standard di codice specifici per il progetto il progetto. Per le linee guida generali sulla scrittura del codice, consultare la [documentazione del modulo Xot](../code-standards.md).
 
 ## Principi Fondamentali in il progetto
 
@@ -78,7 +78,7 @@ Il codice del progetto il progetto **deve** aderire ai seguenti principi fondame
 
 > **Nota**: Questo documento è correlato a [Convenzioni](../../../docs/conventions.md) e [Naming Conventions](../../../docs/naming-conventions.md). Per una panoramica completa, consulta tutti i documenti correlati.
 
-Questo documento contiene gli standard di codice specifici per il progetto il progetto. Per le linee guida generali sulla scrittura del codice, consultare la [documentazione del modulo Xot](../CODE-STANDARDS.md).
+Questo documento contiene gli standard di codice specifici per il progetto il progetto. Per le linee guida generali sulla scrittura del codice, consultare la [documentazione del modulo Xot](../code-standards.md).
 
 ## Principi Fondamentali in il progetto
 
@@ -347,7 +347,7 @@ class StorePatientRequest extends FormRequest
 
 - [Convenzioni](../../../docs/conventions.md)
 - [Naming Conventions](../../../docs/naming-conventions.md)
-- [Documentazione Xot](../CODE-STANDARDS.md)
+- [Documentazione Xot](../code-standards.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)## Documentazione del Codice
 
 ### PHPDoc
@@ -602,12 +602,12 @@ git commit -m "fix: correzione calcolo età paziente"
 - Alert su errori
 
 ## Collegamenti tra versioni di coding-standards.md
-* [coding-standards.md](../../../Xot/docs/standards/coding-standards.md)
-* [coding-standards.md](../../../Xot/docs/conventions/coding-standards.md)
+* [coding-standards.md](../../../xot/docs/standards/coding-standards.md)
+* [coding-standards.md](../../../xot/docs/conventions/coding-standards.md)
 
 ## Collegamenti Correlati
 
 - [Convenzioni](../../../docs/conventions.md)
 - [Naming Conventions](../../../docs/naming-conventions.md)
-- [Documentazione Xot](../CODE-STANDARDS.md)
+- [Documentazione Xot](../code-standards.md)
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)

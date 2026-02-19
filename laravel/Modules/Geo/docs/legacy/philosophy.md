@@ -189,7 +189,7 @@ Questo approccio incarna lo zen della semplicità, nascondendo la complessità d
 ## 📚 Riferimenti Interni
 
 - [Documentazione Master del Progetto](../../../docs/project-master-analysis.md)
-- [Filosofia Completa Laraxot](../../Xot/docs/philosophy-complete.md)
-- [Regole Critiche di Architettura](../../Xot/docs/critical-architecture-rules.md)
-- [Documentazione Geo README](./README.md)
+- [Filosofia Completa Laraxot](../../xot/docs/philosophy-complete.md)
+- [Regole Critiche di Architettura](../../xot/docs/critical-architecture-rules.md)
+- [Documentazione Geo README](./readme.md)
 

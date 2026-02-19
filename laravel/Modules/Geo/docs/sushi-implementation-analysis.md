@@ -286,5 +286,5 @@ Basandoci sull'analisi, raccomandiamo l'adozione di Laravel Sushi per il modello
 ## Link Correlati
 - [Documentazione Ufficiale Sushi](https://github.com/calebporzio/sushi)
 - [Guida alla Migrazione](migration-guide.md)
-- [Benchmark Dettagliati](benchmarks/README.md)
+- [Benchmark Dettagliati](benchmarks/readme.md)
 - [Documentazione GeoJsonModel](geo-json-model.md)

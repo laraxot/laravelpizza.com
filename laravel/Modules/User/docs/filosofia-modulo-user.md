@@ -473,5 +473,5 @@ BaseUser implements:
 
 - [Spatie Permission Documentation](https://spatie.be/docs/laravel-permission)
 - [Laravel Passport Documentation](https://laravel.com/docs/passport)
-- [BUSINESS_LOGIC_DEEP_DIVE.md](./BUSINESS_LOGIC_DEEP_DIVE.md)
+- [BUSINESS_LOGIC_DEEP_DIVE.md](./business_logic_deep_dive.md)
 - [docs/_integration/spatie-permissions.md](./_integration/spatie-permissions.md)

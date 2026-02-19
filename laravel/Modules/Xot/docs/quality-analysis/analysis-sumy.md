@@ -109,7 +109,7 @@ $user->authentications()
 - [Module-by-Module Analysis Plan](./module-by-module-analysis-plan.md)
 - [Module Analysis Workflow](./module-analysis-workflow.md)
 - [Current Status](./current-status.md)
-- [User Module Quality Report](../User/docs/quality-analysis/user-module-quality-report.md)
+- [User Module Quality Report](../user/docs/quality-analysis/user-module-quality-report.md)
 - [Xot Progress Summary](./progress-summary.md)
 
 ## 📝 Note Operative

@@ -59,4 +59,4 @@ Il modulo Meetup contiene la logica business richiesta per replicare laravelpizz
 - [`models-architecture.md`](./models-architecture.md)
 - [`services-guide.md`](./services-guide.md)
 - [`tailwind-best-practices.md`](./tailwind-best-practices.md)
-- [`resources/html/README.md`](../../../Themes/Meetup/resources/html/README.md)
+- [`resources/html/README.md`](../../../themes/meetup/resources/html/readme.md)

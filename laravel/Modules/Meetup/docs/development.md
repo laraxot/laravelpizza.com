@@ -7,7 +7,7 @@ Questa guida descrive il workflow di sviluppo completo per il modulo Meetup, dal
 ## Setup Ambiente di Sviluppo
 
 ### Prerequisiti
-Assicurati di aver completato l'[installazione](./INSTALLATION.md) prima di procedere.
+Assicurati di aver completato l'[installazione](./installation.md) prima di procedere.
 
 ### Comandi di Sviluppo
 
@@ -696,9 +696,9 @@ Prima di ogni commit, verifica:
 - [Architecture](./architecture.md)
 - [Business Logic](./business-logic.md)
 - [API Endpoints](./api_endpoints.md)
-- [Installation](./INSTALLATION.md)
+- [Installation](./installation.md)
 - [MCP Configuration](./mcp_configuration.md)
-- [UI/UX MCP Guide](../../../.cursor/UI_UX_MCP_GUIDE.md)
+- [UI/UX MCP Guide](../../../.cursor/ui_ux_mcp_guide.md)
 - [Todo List](./todo.md)
 
 ## Supporto

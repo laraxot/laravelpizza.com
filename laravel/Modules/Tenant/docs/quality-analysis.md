@@ -58,6 +58,6 @@
 
 ## 🔗 Collegamenti
 
-- [PHPStan Analysis](../../Xot/docs/phpstan-analysis-[DATE].md)
-- [Quality Guide](../../Xot/docs/php-quality-guide.md)
+- [PHPStan Analysis](../../xot/docs/phpstan-analysis-[date].md)
+- [Quality Guide](../../xot/docs/php-quality-guide.md)
 - [CI/CD Workflow](../.github/workflows/quality.yml)

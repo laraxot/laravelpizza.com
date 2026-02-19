@@ -356,9 +356,9 @@ public function it_logs_activity_when_sending_email(): void
 
 ## 🔗 Collegamenti
 
-- [Ptv - Analisi Filosofica](../../../Ptv/docs/activity-log-email-tracking-philosophical-analysis.md)
-- [Ptv - Implementation Guide](../../../Ptv/docs/activity-log-email-tracking-implementation.md)
-- [Activity - README](../../README.md)
+- [Ptv - Analisi Filosofica](../../../ptv/docs/activity-log-email-tracking-philosophical-analysis.md)
+- [Ptv - Implementation Guide](../../../ptv/docs/activity-log-email-tracking-implementation.md)
+- [Activity - README](../../readme.md)
 - [Activity - LogActivityAction](../../app/Actions/LogActivityAction.php)
 
 ---

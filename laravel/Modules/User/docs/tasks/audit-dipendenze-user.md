@@ -25,4 +25,4 @@ Task spostamento widget violante completato.
 
 - [Roadmap User](../roadmap.md)
 - [Indice task User](tasks-index.md)
-- [ARCHITECTURAL_VIOLATION_FIX_PLAN](../../Cms/docs/ARCHITECTURAL_VIOLATION_FIX_PLAN.md)
+- [ARCHITECTURAL_VIOLATION_FIX_PLAN](../../cms/docs/architectural_violation_fix_plan.md)

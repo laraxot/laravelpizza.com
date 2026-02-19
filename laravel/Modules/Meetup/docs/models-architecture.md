@@ -525,4 +525,4 @@ public function getImageUrlAttribute(): ?string
 
 - [Schema Database](./database-schema.md)
 - [Business Logic](./business-logic.md)
-- [Documentazione Xot Base](../../Xot/docs/models/model_architecture.md)
+- [Documentazione Xot Base](../../xot/docs/models/model_architecture.md)

@@ -216,15 +216,15 @@ Aggiornamento massivo documentazione progetto con:
 
 ### Documentazione Moduli
 
-- [Xot Module](./README.md) - Questo file
-- [Tenant Module](../../Tenant/docs/README.md)
-- [IndennitaResponsabilita Module](../../IndennitaResponsabilita/docs/README.md)
-- [Sigma Module](../../Sigma/docs/README.md)
-- [Rating Module](../../Rating/docs/README.md)
+- [Xot Module](./readme.md) - Questo file
+- [Tenant Module](../../tenant/docs/readme.md)
+- [IndennitaResponsabilita Module](../../indennitaresponsabilita/docs/readme.md)
+- [Sigma Module](../../sigma/docs/readme.md)
+- [Rating Module](../../rating/docs/readme.md)
 
 ### bashscripts
 
-- [bashscripts README](../../../bashscripts/README.md)
+- [bashscripts README](../../../bashscripts/readme.md)
 - [Script Documentation](../../../bashscripts/docs/)
 
 ### External

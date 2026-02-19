@@ -231,8 +231,8 @@ public function getTableBulkActions()
 ## 📚 Riferimenti
 
 - [PHPStan Documentation](https://phpstan.org/)
-- [Filament 4 Migration Guide](../../Xot/docs/filament-4-migration-guide.md)
-- [Type Safety Best Practices](../../Xot/docs/type-safety-best-practices.md)
+- [Filament 4 Migration Guide](../../xot/docs/filament-4-migration-guide.md)
+- [Type Safety Best Practices](../../xot/docs/type-safety-best-practices.md)
 
 ---
 

@@ -70,11 +70,11 @@ return $response; // Scarica il file Excel
 
 > **Nota:** Anche la action `ExportXlsByView` segue le stesse regole di tipizzazione e best practice di questa action. In particolare, il mapping dei campi da esportare è stato corretto per rispettare le regole Laraxot/<nome progetto> e PHPStan livello 9, utilizzando controllo esplicito del tipo invece di cast diretto.
 
-- Link bidirezionale: [Vai a PHPSTAN-FIXES-SUMMARY.md](../../../../project_docs/PHPSTAN-FIXES-SUMMARY.md)
+- Link bidirezionale: [Vai a PHPSTAN-FIXES-SUMMARY.md](../../../../project_docs/phpstan-fixes-summary.md)
 
 ## Collegamenti
 - [Laravel Excel Documentation](https://docs.laravel-excel.com)
-- [Spatie Queueable Action](../traits/QUEUEABLE-ACTION.md)
-- [Performance Guidelines](../PERFORMANCE-GUIDELINES.md)
-- [Actions Overview](./README.md)
-- [PHPStan Fixes Summary](../../../../project_docs/PHPSTAN-FIXES-SUMMARY.md)
+- [Spatie Queueable Action](../traits/queueable-action.md)
+- [Performance Guidelines](../performance-guidelines.md)
+- [Actions Overview](./readme.md)
+- [PHPStan Fixes Summary](../../../../project_docs/phpstan-fixes-summary.md)

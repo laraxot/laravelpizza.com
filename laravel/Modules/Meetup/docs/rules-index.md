@@ -31,12 +31,12 @@
 
 ### Riferimenti Cross-Module
 
-5. **[Regole Xot](../../Xot/docs/critical-rules-consolidated.md)**
+5. **[Regole Xot](../../xot/docs/critical-rules-consolidated.md)**
    - Regole generali Laraxot
    - Filosofia Migrazioni
    - Estensioni Filament
 
-6. **[Regole Tema Meetup](../../../Themes/Meetup/docs/critical-rules-consolidated.md)**
+6. **[Regole Tema Meetup](../../../themes/meetup/docs/critical-rules-consolidated.md)**
    - Frontend Asset Management
    - Vite Configuration
    - Metatags Component

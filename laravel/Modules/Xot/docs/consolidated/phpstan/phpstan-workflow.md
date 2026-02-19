@@ -1,6 +1,6 @@
 # Workflow Analisi PHPStan
 
-> **Nota**: Per una panoramica completa sulla gestione della documentazione e delle regole, consultare [DOCUMENTATION_MANAGEMENT.md](DOCUMENTATION_MANAGEMENT.md)
+> **Nota**: Per una panoramica completa sulla gestione della documentazione e delle regole, consultare [DOCUMENTATION_MANAGEMENT.md](documentation_management.md)
 
 ## REGOLE FONDAMENTALI
 - ⚠️ **NON INTERROMPERE MAI L'ANALISI** finché non si raggiunge il livello 7
@@ -186,8 +186,8 @@ Il progetto utilizza un'architettura modulare con Laravel Modules:
      - .windsurfrules per Windsurf
    - Mantenere coerenza tra le diverse documentazioni
 ## Collegamenti tra versioni di PHPSTAN_WORKFLOW.md
-* [PHPSTAN_WORKFLOW.md](../../../Xot/project_docs/phpstan/PHPSTAN_WORKFLOW.md)
-* [PHPSTAN_WORKFLOW.md](../../../Xot/project_docs/PHPSTAN_WORKFLOW.md)
+* [PHPSTAN_WORKFLOW.md](../../../xot/project_docs/phpstan/phpstan_workflow.md)
+* [PHPSTAN_WORKFLOW.md](../../../xot/project_docs/phpstan_workflow.md)
 
 ## Collegamenti tra versioni di phpstan_workflow.md
 ### Versione HEAD
@@ -205,7 +205,7 @@ Il progetto utilizza un'architettura modulare con Laravel Modules:
    - Mantenere coerenza tra le diverse documentazioni
 # Workflow Analisi PHPStan
 
-> **Nota**: Per una panoramica completa sulla gestione della documentazione e delle regole, consultare [DOCUMENTATION_MANAGEMENT.md](DOCUMENTATION_MANAGEMENT.md)
+> **Nota**: Per una panoramica completa sulla gestione della documentazione e delle regole, consultare [DOCUMENTATION_MANAGEMENT.md](documentation_management.md)
 
 ## REGOLE FONDAMENTALI
 - ⚠️ **NON INTERROMPERE MAI L'ANALISI** finché non si raggiunge il livello 7
@@ -372,8 +372,8 @@ class MyModel extends BaseModel
      - .windsurfrules per Windsurf
    - Mantenere coerenza tra le diverse documentazioni
 ## Collegamenti tra versioni di PHPSTAN_WORKFLOW.md
-* [PHPSTAN_WORKFLOW.md](../../../Xot/project_docs/phpstan/PHPSTAN_WORKFLOW.md)
-* [PHPSTAN_WORKFLOW.md](../../../Xot/project_docs/PHPSTAN_WORKFLOW.md)
+* [PHPSTAN_WORKFLOW.md](../../../xot/project_docs/phpstan/phpstan_workflow.md)
+* [PHPSTAN_WORKFLOW.md](../../../xot/project_docs/phpstan_workflow.md)
 
 ## Collegamenti tra versioni di phpstan_workflow.md
 ### Versione HEAD

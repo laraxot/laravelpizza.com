@@ -41,7 +41,7 @@ public static function getConfigNames(): array
 ## 📚 Riferimenti
 
 - [Tenant Configuration Documentation](./configuration.md)
-- [Service Locator Pattern](../../Xot/docs/service-locator-pattern.md)
+- [Service Locator Pattern](../../xot/docs/service-locator-pattern.md)
 
 ---
 

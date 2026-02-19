@@ -234,8 +234,8 @@ return [
 
    - Testare i casi limite
 ## Collegamenti tra versioni di services.md
-* [services.md](../../../Xot/project_docs/services.md)
-* [services.md](../../../Tenant/project_docs/it/config/services.md)
+* [services.md](../../../xot/project_docs/services.md)
+* [services.md](../../../tenant/project_docs/it/config/services.md)
 
 ### Versione Incoming
 

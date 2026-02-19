@@ -240,7 +240,7 @@ Media::registerMediaConversions(function ($media) {
 
 - [File Management Architecture](./file-management-architecture.md)
 - [Business Logic Overview](./business-logic-overview.md)
-- [Xot Module Foundation](../../Xot/docs/philosophy-complete.md)
+- [Xot Module Foundation](../../xot/docs/philosophy-complete.md)
 
 ---
 

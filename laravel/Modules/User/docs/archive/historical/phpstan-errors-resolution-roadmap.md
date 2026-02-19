@@ -141,10 +141,10 @@ public function clients();
 
 ## 📚 Riferimenti
 
-- [Filament Class Extension Rules](../../Xot/docs/filament-class-extension-rules.md)
-- [PHPStan Code Quality Guide](../../Xot/docs/phpstan-code-quality-guide.md)
-- [Passport Integration](../../User/docs/passport-integration.md)
-- [Vendor Contract Patterns](../../Xot/docs/development/vendor-contract-patterns.md)
+- [Filament Class Extension Rules](../../xot/docs/filament-class-extension-rules.md)
+- [PHPStan Code Quality Guide](../../xot/docs/phpstan-code-quality-guide.md)
+- [Passport Integration](../../user/docs/passport-integration.md)
+- [Vendor Contract Patterns](../../xot/docs/development/vendor-contract-patterns.md)
 
 ---
 

@@ -26,5 +26,5 @@ Questo documento descrive le migrazioni del database per il modulo Activity. Ogn
 - Docblock e type hint già presenti
 
 ## Collegamenti tra versioni di migrations.md
-* [migrations.md](../../../Gdpr/docs/migrations.md)
-* [migrations.md](../../../Notify/docs/migrations.md)
+* [migrations.md](../../../gdpr/docs/migrations.md)
+* [migrations.md](../../../notify/docs/migrations.md)

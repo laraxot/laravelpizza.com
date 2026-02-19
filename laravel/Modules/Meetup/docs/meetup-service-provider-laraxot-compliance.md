@@ -110,9 +110,9 @@ $result = app(CreateEventAction::class)->execute($data);
 
 ## Collegamenti
 
-- [XotBaseServiceProvider Architecture](../../Xot/docs/service-provider-architecture.md)
-- [Service Provider Best Practices](../../Xot/docs/service-provider-best-practices.md)
-- [Action Pattern Architecture](../../Xot/docs/action-service-provider-architecture.md)
+- [XotBaseServiceProvider Architecture](../../xot/docs/service-provider-architecture.md)
+- [Service Provider Best Practices](../../xot/docs/service-provider-best-practices.md)
+- [Action Pattern Architecture](../../xot/docs/action-service-provider-architecture.md)
 - [Project Philosophy](./project-philosophy.md)
 
 ---

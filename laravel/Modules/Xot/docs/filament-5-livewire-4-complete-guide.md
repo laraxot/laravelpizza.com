@@ -680,7 +680,7 @@ Qualsiasi nota importante o problema riscontrato
 Aggiungi link nel documento locale:
 
 ```markdown
-Vedi anche: [Guida Completa Xot](../Xot/docs/filament-5-livewire-4-complete-guide.md)
+Vedi anche: [Guida Completa Xot](../xot/docs/filament-5-livewire-4-complete-guide.md)
 ```
 
 ---

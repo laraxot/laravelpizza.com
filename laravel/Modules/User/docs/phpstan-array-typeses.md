@@ -223,8 +223,8 @@ array<string, mixed> $attributes
 
 ## Collegamenti
 
-- [Xot - PHPStan Missing Array Types](../Xot/docs/phpstan-missing-array-types-fixes.md)
-- [Xot - PHPStan Critical Rules](../Xot/docs/phpstan-critical-rules.md)
+- [Xot - PHPStan Missing Array Types](../xot/docs/phpstan-missing-array-types-fixes.md)
+- [Xot - PHPStan Critical Rules](../xot/docs/phpstan-critical-rules.md)
 - [docs_project - PHPStan Intouchable Rule](../../../docs_project/phpstan-intouchable-rule.md)
 
 ---

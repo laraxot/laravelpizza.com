@@ -222,9 +222,9 @@ class ClientObserver
 
 ## 🔗 Collegamenti
 
-- [Business Logic Overview](./README.md)
+- [Business Logic Overview](./readme.md)
 - [Business Logic Analysis](./business-logic-analysis.md)
-- [Xot Module Foundation](../../Xot/docs/philosophy-complete.md)
+- [Xot Module Foundation](../../xot/docs/philosophy-complete.md)
 
 ---
 

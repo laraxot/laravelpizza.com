@@ -9,7 +9,7 @@ Il modulo Meetup segue lo standard di localizzazione basato su **mcamara/laravel
 - **mcamara/laravel-localization**: [README](https://github.com/mcamara/laravel-localization)
 - **Regola progetto**: [.cursor/rules/laravel-localization-mcamara.mdc](../../../../.cursor/rules/laravel-localization-mcamara.mdc)
 - **Memoria**: [.cursor/memories/laravel-localization-mcamara.md](../../../../.cursor/memories/laravel-localization-mcamara.md)
-- **Riferimento completo**: [Lang/docs/laravel-localization-mcamara-reference.md](../Lang/docs/laravel-localization-mcamara-reference.md)
+- **Riferimento completo**: [Lang/docs/laravel-localization-mcamara-reference.md](../lang/docs/laravel-localization-mcamara-reference.md)
 
 ## URL e link
 
@@ -77,5 +77,5 @@ Uso nel Blade:
 
 ## Riferimenti incrociati
 
-- [Themes/Meetup/docs/localization-standard.md](../../../Themes/Meetup/docs/localization-standard.md)
-- [Cms/docs/folio-routing-locale.md](../Cms/docs/folio-routing-locale.md)
+- [Themes/Meetup/docs/localization-standard.md](../../../themes/meetup/docs/localization-standard.md)
+- [Cms/docs/folio-routing-locale.md](../cms/docs/folio-routing-locale.md)

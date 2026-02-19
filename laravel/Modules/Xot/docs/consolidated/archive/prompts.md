@@ -3,7 +3,7 @@
 I prompt sono file di testo che contengono istruzioni per l'AI. Devono seguire queste regole:
 
 1. **Regola Fondamentale**:
-   - Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompts), vedi [Regola prompt condivisi](./PROMPT_RULES.md)
+   - Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompts), vedi [Regola prompt condivisi](./prompt_rules.md)
 
 2. **Contenuto**:
    - Devono essere chiari e concisi
@@ -48,7 +48,7 @@ I prompt sono file di testo che contengono istruzioni per l'AI. Devono seguire q
 
 Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompts), vedi:
 
-- [Regola Universale per i Prompt](./PROMPT_RULES.md)
+- [Regola Universale per i Prompt](./prompt_rules.md)
 
 ## Collegamenti
 - [Documentazione Generale](./documentation.md)
@@ -61,7 +61,7 @@ Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompt
 
 ## Collegamenti tra versioni di prompts.md
 * [prompts.md](docs/prompts.md)
-* [prompts.md](../../../Xot/project_docs/prompts.md)
+* [prompts.md](../../../xot/project_docs/prompts.md)
 
 ## Modifiche al Prompt docs.txt
 
@@ -78,8 +78,8 @@ Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompt
 4. Verifica dei collegamenti bidirezionali
 
 ### Collegamenti Correlati
-- [Regole Universali](./PROMPT_RULES.md)
-- [Gestione Documentazione](./DOCUMENTATION_MANAGEMENT.md)
+- [Regole Universali](./prompt_rules.md)
+- [Gestione Documentazione](./documentation_management.md)
 - [Struttura Moduli](./module-structure.md)
 
 ## Errori Comuni da Evitare

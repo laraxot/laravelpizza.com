@@ -225,26 +225,26 @@ class ModuleMetricsService
 ## 🔗 Collegamenti Documentazione
 
 ### Moduli Base
-- [Xot - Core Framework](../laravel/Modules/Xot/docs/ottimizzazioni-e-miglioramenti.md)
-- [User - Authentication](../laravel/Modules/User/docs/ottimizzazioni-e-miglioramenti.md)
-- [Geo - Geographic Data](../laravel/Modules/Geo/docs/ottimizzazioni-e-miglioramenti.md)
-- [UI - Shared Components](../laravel/Modules/UI/docs/ottimizzazioni-e-miglioramenti.md)
+- [Xot - Core Framework](../laravel/modules/xot/docs/ottimizzazioni-e-miglioramenti.md)
+- [User - Authentication](../laravel/modules/user/docs/ottimizzazioni-e-miglioramenti.md)
+- [Geo - Geographic Data](../laravel/modules/geo/docs/ottimizzazioni-e-miglioramenti.md)
+- [UI - Shared Components](../laravel/modules/ui/docs/ottimizzazioni-e-miglioramenti.md)
 
 ### Moduli Funzionali
-- [Activity - Audit Trail](../laravel/Modules/Activity/docs/ottimizzazioni-e-miglioramenti.md)
-- [Cms - Content Management](../laravel/Modules/Cms/docs/ottimizzazioni-e-miglioramenti.md)
-- [Gdpr - Privacy Compliance](../laravel/Modules/Gdpr/docs/ottimizzazioni-e-miglioramenti.md)
-- [Lang - Localization](../laravel/Modules/Lang/docs/ottimizzazioni-e-miglioramenti.md)
-- [Media - File Management](../laravel/Modules/Media/docs/ottimizzazioni-e-miglioramenti.md)
-- [Notify - Notifications](../laravel/Modules/Notify/docs/ottimizzazioni-e-miglioramenti.md)
-- [Job - Queue Management](../laravel/Modules/Job/docs/ottimizzazioni-e-miglioramenti.md)
-- [Tenant - Multi-Tenancy](../laravel/Modules/Tenant/docs/ottimizzazioni-e-miglioramenti.md)
+- [Activity - Audit Trail](../laravel/modules/activity/docs/ottimizzazioni-e-miglioramenti.md)
+- [Cms - Content Management](../laravel/modules/cms/docs/ottimizzazioni-e-miglioramenti.md)
+- [Gdpr - Privacy Compliance](../laravel/modules/gdpr/docs/ottimizzazioni-e-miglioramenti.md)
+- [Lang - Localization](../laravel/modules/lang/docs/ottimizzazioni-e-miglioramenti.md)
+- [Media - File Management](../laravel/modules/media/docs/ottimizzazioni-e-miglioramenti.md)
+- [Notify - Notifications](../laravel/modules/notify/docs/ottimizzazioni-e-miglioramenti.md)
+- [Job - Queue Management](../laravel/modules/job/docs/ottimizzazioni-e-miglioramenti.md)
+- [Tenant - Multi-Tenancy](../laravel/modules/tenant/docs/ottimizzazioni-e-miglioramenti.md)
 
 ### Moduli Specifici
-- [<nome progetto> - Main Healthcare](../laravel/Modules/<nome progetto>/docs/ottimizzazioni-e-miglioramenti.md)
-- [<nome modulo> - Mobile Features](../laravel/Modules/<nome modulo>/docs/ottimizzazioni-e-miglioramenti.md)
-- [<nome progetto> - Main Healthcare](../laravel/Modules/<nome progetto>/docs/ottimizzazioni-e-miglioramenti.md)
-- [<nome progetto> - Mobile Features](../laravel/Modules/<nome progetto>/docs/ottimizzazioni-e-miglioramenti.md)
+- [<nome progetto> - Main Healthcare](../laravel/modules/<nome progetto>/docs/ottimizzazioni-e-miglioramenti.md)
+- [<nome modulo> - Mobile Features](../laravel/modules/<nome modulo>/docs/ottimizzazioni-e-miglioramenti.md)
+- [<nome progetto> - Main Healthcare](../laravel/modules/<nome progetto>/docs/ottimizzazioni-e-miglioramenti.md)
+- [<nome progetto> - Mobile Features](../laravel/modules/<nome progetto>/docs/ottimizzazioni-e-miglioramenti.md)
 
 ## 🎯 Conclusioni
 

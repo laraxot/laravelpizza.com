@@ -322,9 +322,9 @@ Clickbait can be ethical when:
 - **Grammarly:** Check grammar and tone
 
 ## Related Documentation
-- [Register Page Improvements](/laravel/Themes/Meetup/docs/register-page-improvements.md)
-- [Multi-Language Translation Guidelines](/laravel/Modules/Gdpr/docs/multi-language-translation-guidelines.md)
-- [WCAG 2.2 Compliance](/laravel/Themes/Meetup/docs/wcag-compliance.md)
+- [Register Page Improvements](/laravel/themes/meetup/docs/register-page-improvements.md)
+- [Multi-Language Translation Guidelines](/laravel/modules/gdpr/docs/multi-language-translation-guidelines.md)
+- [WCAG 2.2 Compliance](/laravel/themes/meetup/docs/wcag-compliance.md)
 - [Conversion Rate Optimization](https://conversionxl.com/)
 
 ## Credits

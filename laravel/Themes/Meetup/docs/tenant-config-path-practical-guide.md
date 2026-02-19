@@ -281,7 +281,7 @@ mv config/laravelpizza.local config/laravelpizza.local.backup
 
 ## 📚 Perché Questa Struttura?
 
-**Brevemente** (per dettagli vedi [tenant-config-path-philosophy-debate.md](../../Modules/Tenant/docs/tenant-config-path-philosophy-debate.md)):
+**Brevemente** (per dettagli vedi [tenant-config-path-philosophy-debate.md](../../modules/tenant/docs/tenant-config-path-philosophy-debate.md)):
 
 1. **Reverse Domain Pattern**: Standard industry (Java, Android, iOS)
    - `laravelpizza.local` → split su `.` → reverse → `["local", "laravelpizza"]`
@@ -315,7 +315,7 @@ Prima di committare modifiche config tenant:
 
 ## 🔗 References
 
-- [Tenant Config Path Philosophy](../../Modules/Tenant/docs/tenant-config-path-philosophy-debate.md) - Debate completo
+- [Tenant Config Path Philosophy](../../modules/tenant/docs/tenant-config-path-philosophy-debate.md) - Debate completo
 - [GetTenantNameAction Source](../../Modules/Tenant/app/Actions/GetTenantNameAction.php) - Codice sorgente
 - [System Architecture](./system-architecture-complete.md) - Architettura completa
 - [Folio JSON System](./folio-volt-json-system-complete.md) - Sistema JSON pagine

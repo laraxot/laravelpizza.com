@@ -125,13 +125,13 @@ php artisan lang:check
 ## Documentazione Aggiornata
 
 ### Modulo Geo
-- [Conflict Resolution](laravel/Modules/Geo/docs/conflict-resolution.md)
+- [Conflict Resolution](laravel/modules/geo/docs/conflict-resolution.md)
 
 ### Modulo User
-- [Theme Translation Conflicts](laravel/Modules/User/docs/theme-translation-conflicts-resolution.md)
+- [Theme Translation Conflicts](laravel/modules/user/docs/theme-translation-conflicts-resolution.md)
 
 ### Modulo Xot
-- [Git Conflicts Resolution](laravel/Modules/Xot/docs/git-conflicts-resolution-[DATE].md)
+- [Git Conflicts Resolution](laravel/modules/xot/docs/git-conflicts-resolution-[date].md)
 
 ## Best Practices Applicate
 
@@ -186,8 +186,8 @@ php artisan lang:check
 ## Collegamenti Correlati
 
 ### Documentazione Moduli
-- [Geo Conflict Resolution](laravel/Modules/Geo/docs/conflict-resolution.md)
-- [User Theme Conflicts](laravel/Modules/User/docs/theme-translation-conflicts-resolution.md)
+- [Geo Conflict Resolution](laravel/modules/geo/docs/conflict-resolution.md)
+- [User Theme Conflicts](laravel/modules/user/docs/theme-translation-conflicts-resolution.md)
 
 ### Documentazione Generale
 - [Translation Standards](../../docs/translation-standards.md)

@@ -229,7 +229,7 @@ find Modules/User/app/Filament/Clusters/Passport/Resources -name "*.php" -type f
 
 - [PSR-4 Autoloading Standard](https://www.php-fig.org/psr/psr-4/)
 - [Composer Autoload Documentation](https://getcomposer.org/doc/04-schema.md#psr-4)
-- [Laraxot Module Structure](../../Xot/docs/module-structure.md)
+- [Laraxot Module Structure](../../xot/docs/module-structure.md)
 - [Previous Implementation Doc](./passport-cluster-implementation-status.md)
 
 ---

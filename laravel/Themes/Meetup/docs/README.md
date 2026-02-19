@@ -18,6 +18,8 @@ The purpose of this documentation is to provide comprehensive information about 
     - [`agnostic-routing.md`](./agnostic-routing.md) - Routing agnostico con Laravel Folio
     - [`translations.md`](./translations.md) - Gestione traduzioni nel tema (namespace `pub_theme::`)
     - [`social-share.md`](./social-share.md) - Componente social share con Tailwind CSS
+- **DevOps & Automation**:
+    - [`github-bot-integration.md`](../../../.windsurf/rules/github-bot-integration.md) - GitHub Actions bot per commenti automatici
 - Other Markdown files will detail specific aspects of the theme, such as:
     - `installation.md`
     - `usage.md`

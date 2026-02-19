@@ -126,10 +126,10 @@ $gdprService->deleteUserAccount($user);
 5. **Breach Response Plan**: Have a plan for data breaches
 
 ## Related Modules
-- [User Module](../User/docs/README.md) - User authentication and management
-- [Activity Module](../Activity/docs/index.md) - Activity logging
-- [Notify Module](../Notify/docs/index.md) - Notification system
-- [Xot Module](../Xot/docs/index.md) - Core base classes
+- [User Module](../user/docs/readme.md) - User authentication and management
+- [Activity Module](../activity/docs/index.md) - Activity logging
+- [Notify Module](../notify/docs/index.md) - Notification system
+- [Xot Module](../xot/docs/index.md) - Core base classes
 
 ## Database Testing Configuration
 
@@ -286,7 +286,7 @@ All module connections are automatically mapped to the test MySQL connection def
 - [Multi-Language Translation Guidelines](./multi-language-translation-guidelines.md) - Comprehensive guide for implementing and maintaining multi-language translations
 
 ## Marketing & Conversion
-- [Clickbait Marketing Best Practices](../Themes/Meetup/docs/clickbait-marketing-best-practices.md) - Ethical clickbait techniques for conversion optimization
+- [Clickbait Marketing Best Practices](../themes/meetup/docs/clickbait-marketing-best-practices.md) - Ethical clickbait techniques for conversion optimization
 
 ## Troubleshooting
 Common issues and solutions:

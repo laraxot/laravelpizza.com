@@ -250,7 +250,7 @@ Nessuna funzionalità critica - il modulo User funziona bene con relation manage
 ## Collegamenti
 
 - [Filament 5.x Nesting Documentation](https://filamentphp.com/docs/5.x/resources/nesting)
-- [User Module README](./README.md)
+- [User Module README](./readme.md)
 - [Team System](./architecture/teams.md)
 - [Authentication Guide](./auth/authentication-flow.md)
 

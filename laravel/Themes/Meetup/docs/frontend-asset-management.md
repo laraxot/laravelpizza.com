@@ -100,7 +100,7 @@ ls -la node_modules
 
 - [Regola Esecuzione Comandi NPM](./npm-commands-execution-rule.md) - Regola generale dettagliata
 - [Vite Asset Loading Best Practices](./vite-asset-loading-best-practices.md) - Best practices per Vite
-- [README Theme](./../README.md) - Documentazione generale tema
+- [README Theme](./../readme.md) - Documentazione generale tema
 
 ## Checklist
 

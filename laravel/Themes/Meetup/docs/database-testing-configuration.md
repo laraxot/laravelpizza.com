@@ -7,9 +7,9 @@
 1. **MAI forzare le connessioni** con `config()` in CreatesApplication
 2. **MAI inventare variabili environment** come `NOTIFY_DB_DATABASE`, `GDPR_DB_DATABASE`
 3. **MAI aggiungere connessioni hardcode** in `config/database.php`
-4. **MAI eseguire migrate in TestCase setUp()** - Vedi [TestCase Setup Rules](../../Modules/Xot/docs/testcase-setup-critical-rules.md)
+4. **MAI eseguire migrate in TestCase setUp()** - Vedi [TestCase Setup Rules](../../modules/xot/docs/testcase-setup-critical-rules.md)
 
-Vedi [Critical Rules](../../Modules/Xot/docs/database-configuration-critical-rules.md) per dettagli completi.
+Vedi [Critical Rules](../../modules/xot/docs/database-configuration-critical-rules.md) per dettagli completi.
 
 ## .env.testing Configuration (CRITICAL)
 
@@ -136,7 +136,7 @@ it('renders English registration page', function () {
 
 ## TestCase Setup Rules
 
-**CRITICAL**: See [TestCase Setup Critical Rules](../../Modules/Xot/docs/testcase-setup-critical-rules.md) for complete details on test setup patterns.
+**CRITICAL**: See [TestCase Setup Critical Rules](../../modules/xot/docs/testcase-setup-critical-rules.md) for complete details on test setup patterns.
 
 ❌ **WRONG Pattern in TestCase.php:**
 ```php
@@ -200,9 +200,9 @@ php artisan migrate --env=testing
 
 ## Related Documentation
 
-- [Testing Guidelines](../Gdpr/docs/testing-guidelines.md)
+- [Testing Guidelines](../gdpr/docs/testing-guidelines.md)
 - [Multi-Language Translation Guidelines](./multi-language-translation-guidelines.md)
-- [Register Page Testing](../Gdpr/docs/register-page-testing.md)
+- [Register Page Testing](../gdpr/docs/register-page-testing.md)
 
 ## Troubleshooting
 

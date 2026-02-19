@@ -54,9 +54,9 @@
 **REGOLE OBBLIGATORIE:**
 
 1. **SEMPRE link relativi, MAI assoluti**
-   - ✅ CORRETTO: `[Documentazione](../Xot/docs/architecture.md)`
+   - ✅ CORRETTO: `[Documentazione](../xot/docs/architecture.md)`
    - ✅ CORRETTO: `[Esempio](./examples/example.md)`
-   - ❌ SBAGLIATO: `[Doc](/var/www/laravel/Modules/Xot/docs/architecture.md)`
+   - ❌ SBAGLIATO: `[Doc](/var/www/laravel/modules/xot/docs/architecture.md)`
 
 2. **Portabilità totale**
    - I link devono funzionare ovunque il progetto venga clonato

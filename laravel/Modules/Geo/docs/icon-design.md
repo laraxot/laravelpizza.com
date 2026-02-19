@@ -42,6 +42,6 @@ FilamentIcon::register([
 
 ## Collegamenti
 - [Design System Globale](../../../../docs/module-icons-design-system.md)
-- [Geo Module Documentation](./README.md)
+- [Geo Module Documentation](./readme.md)
 
 *Creato: Agosto 2025*

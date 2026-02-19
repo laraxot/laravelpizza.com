@@ -6,7 +6,7 @@ Le Blade Icons sono un componente fondamentale del sistema di interfaccia utente
 ## Componenti Principali
 
 ### Registrazione delle Icons
-Per una comprensione dettagliata del processo di registrazione delle icone, consultare la [documentazione completa del metodo registerBladeIcons](registerBladeIcons.md).
+Per una comprensione dettagliata del processo di registrazione delle icone, consultare la [documentazione completa del metodo registerBladeIcons](registerbladeicons.md).
 
 ### Struttura delle Directory
 ```
@@ -28,5 +28,5 @@ Modules/
 ```
 
 ## Risorse Aggiuntive
-- [Documentazione dettagliata di registerBladeIcons](registerBladeIcons.md)
+- [Documentazione dettagliata di registerBladeIcons](registerbladeicons.md)
 - [Guida all'implementazione delle icone personalizzate](custom-icons-implementation.md)

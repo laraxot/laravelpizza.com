@@ -35,7 +35,7 @@
 
 - [ ] Se il luogo dell’evento è esplicitamente un locale food (pizzeria, ristorante): valutare di tipizzare la **Place** come **FoodEstablishment** in JSON-LD quando `place.type` o flag lo indicano.
 - [ ] Aggiungere in Place/Geo eventuale campo o enum per "food establishment" e documentare il mapping verso Schema.org.
-- [ ] Collegare a [tasks-schema-org-place-geocircle](../../Geo/docs/tasks-schema-org-place-geocircle.md) nel modulo Geo per coerenza Place/address.
+- [ ] Collegare a [tasks-schema-org-place-geocircle](../../geo/docs/tasks-schema-org-place-geocircle.md) nel modulo Geo per coerenza Place/address.
 
 ---
 
@@ -51,5 +51,5 @@
 
 - [schema-org-enhancement-recommendations](schema-org-enhancement-recommendations.md)
 - [event-schema-org-implementation](event-schema-org-implementation.md)
-- [tasks-schema-org-place-geocircle](../../Geo/docs/tasks-schema-org-place-geocircle.md) (Geo)
+- [tasks-schema-org-place-geocircle](../../geo/docs/tasks-schema-org-place-geocircle.md) (Geo)
 - [database-schema](database-schema.md)

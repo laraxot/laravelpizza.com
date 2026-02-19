@@ -1,6 +1,6 @@
 # User Dropdown Block
 
-> **NOTA IMPORTANTE**: Per informazioni dettagliate sull'integrazione di componenti Filament in questo blocco, vedere la [documentazione nel modulo UI](../../../UI/docs/blocks/filament-component-integration.md).
+> **NOTA IMPORTANTE**: Per informazioni dettagliate sull'integrazione di componenti Filament in questo blocco, vedere la [documentazione nel modulo UI](../../../ui/docs/blocks/filament-component-integration.md).
 
 ## Indice
 1. [Introduzione](#introduzione)
@@ -200,6 +200,6 @@ Questa soluzione sfrutta il componente dropdown di Filament, mantiene la coerenz
 - [Documentazione Filament Blade Components](./filament-blade-components.md)
 - [Best Practices UI/UX](./guida-implementazione-ux.md)
 - [Documentazione Accessibilità](./accessibility.md)
-- [Modulo UI - Filament Blade Components](/var/www/html/<directory progetto>/laravel/Modules/UI/docs/filament/resources.md)
+- [Modulo UI - Filament Blade Components](/var/www/html/<directory progetto>/laravel/modules/ui/docs/filament/resources.md)
 - [Documentazione Blocchi Navigation](./navigation.md)
-- [Modulo UI - Filament Blade Components](../UI/docs/filament/resources.md)
+- [Modulo UI - Filament Blade Components](../ui/docs/filament/resources.md)

@@ -286,8 +286,8 @@ PASS: 2 files formattati correttamente
 
 ## Collegamenti
 
-- [Activity Module README](./README.md)
-- [Laraxot UI/UX Guidelines](../../Xot/docs/ui-ux-best-practices.md)
+- [Activity Module README](./readme.md)
+- [Laraxot UI/UX Guidelines](../../xot/docs/ui-ux-best-practices.md)
 - [Heroicon Reference](https://heroicons.com/)
 
 ---

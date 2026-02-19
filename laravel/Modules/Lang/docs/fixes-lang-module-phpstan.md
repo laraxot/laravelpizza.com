@@ -84,5 +84,5 @@
 18 settembre 2025
 
 ## Backlinks
-- [Lang Module Overview](../README.md)
+- [Lang Module Overview](../readme.md)
 - [Translation System Documentation](./translation-system.md)

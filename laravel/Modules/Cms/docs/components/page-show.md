@@ -78,4 +78,4 @@ Per visualizzare informazioni di debug sul caricamento della pagina, è possibil
 
 ## Collegamenti
 - [Documentazione Livewire](https://laravel-livewire.com/docs)
-- [Gestione Pagine CMS](/Modules/Cms/docs/content.md)
+- [Gestione Pagine CMS](/modules/cms/docs/content.md)

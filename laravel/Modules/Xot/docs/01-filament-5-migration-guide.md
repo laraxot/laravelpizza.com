@@ -18,7 +18,7 @@ This guide outlines the mandatory steps for upgrading Laraxot modules to Filamen
 ### 2. Asset Management (Tailwind v4)
 - Install `@tailwindcss/vite` and update `vite.config.js`.
 - Use the new `@import "tailwindcss";` syntax in your CSS files.
-- Refer to the [Meetup Theme Guide](../../../Themes/Meetup/docs/03-development/01-filament-5-installation-guide.md) for detailed asset instructions.
+- Refer to the [Meetup Theme Guide](../../../themes/meetup/docs/03-development/01-filament-5-installation-guide.md) for detailed asset instructions.
 
 ### 3. Translation Keys
 Ensure all resources have the following keys in their language files:

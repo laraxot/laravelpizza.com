@@ -89,9 +89,9 @@ return [
    - Segui le convenzioni di naming
 
 ## Collegamenti
-- [Translation System](../../Lang/docs/translation-system.md)
-- [Form Components](../../Patient/docs/filament-form-components.md)
-- [Best Practices](../../Xot/docs/filament-best-practices.md)
+- [Translation System](../../lang/docs/translation-system.md)
+- [Form Components](../../patient/docs/filament-form-components.md)
+- [Best Practices](../../xot/docs/filament-best-practices.md)
 
 ## Vedi Anche
 - [Filament File Upload](https://filamentphp.com/docs/forms/fields/file-upload)

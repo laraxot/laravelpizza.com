@@ -255,7 +255,7 @@ protected static ?string $relatedResource = ContactResource::class;
 
 ### Modulo Quaeris
 
-Vedi: [Modules/Quaeris/docs/filament-nesting-opportunities.md](../../Quaeris/docs/filament-nesting-opportunities.md)
+Vedi: [Modules/Quaeris/docs/filament-nesting-opportunities.md](../../quaeris/docs/filament-nesting-opportunities.md)
 
 **Opportunità**:
 - Contact → Nested di SurveyPdf
@@ -264,7 +264,7 @@ Vedi: [Modules/Quaeris/docs/filament-nesting-opportunities.md](../../Quaeris/doc
 
 ### Modulo Limesurvey
 
-Vedi: [Modules/Limesurvey/docs/filament-nesting-opportunities.md](../../Limesurvey/docs/filament-nesting-opportunities.md)
+Vedi: [Modules/Limesurvey/docs/filament-nesting-opportunities.md](../../limesurvey/docs/filament-nesting-opportunities.md)
 
 **Opportunità**:
 - LimeGroup → Nested di LimeSurvey
@@ -273,7 +273,7 @@ Vedi: [Modules/Limesurvey/docs/filament-nesting-opportunities.md](../../Limesurv
 
 ### Modulo Cms
 
-Vedi: [Modules/Cms/docs/filament-nesting-opportunities.md](../../Cms/docs/filament-nesting-opportunities.md)
+Vedi: [Modules/Cms/docs/filament-nesting-opportunities.md](../../cms/docs/filament-nesting-opportunities.md)
 
 **Opportunità**:
 - Block → Nested di Page
@@ -282,7 +282,7 @@ Vedi: [Modules/Cms/docs/filament-nesting-opportunities.md](../../Cms/docs/filame
 
 ### Modulo User
 
-Vedi: [Modules/User/docs/filament-nesting-opportunities.md](../../User/docs/filament-nesting-opportunities.md)
+Vedi: [Modules/User/docs/filament-nesting-opportunities.md](../../user/docs/filament-nesting-opportunities.md)
 
 **Opportunità**:
 - TeamInvitation → Nested di Team
@@ -363,10 +363,10 @@ Filament 5.x gestisce automaticamente i breadcrumbs per nested resources. Non se
 ## Collegamenti
 
 - [Filament 5.x Nesting Documentation](https://filamentphp.com/docs/5.x/resources/nesting)
-- [Quaeris Nesting Opportunities](../../Quaeris/docs/filament-nesting-opportunities.md)
-- [Limesurvey Nesting Opportunities](../../Limesurvey/docs/filament-nesting-opportunities.md)
-- [Cms Nesting Opportunities](../../Cms/docs/filament-nesting-opportunities.md)
-- [User Nesting Opportunities](../../User/docs/filament-nesting-opportunities.md)
+- [Quaeris Nesting Opportunities](../../quaeris/docs/filament-nesting-opportunities.md)
+- [Limesurvey Nesting Opportunities](../../limesurvey/docs/filament-nesting-opportunities.md)
+- [Cms Nesting Opportunities](../../cms/docs/filament-nesting-opportunities.md)
+- [User Nesting Opportunities](../../user/docs/filament-nesting-opportunities.md)
 
 ---
 

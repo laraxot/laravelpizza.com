@@ -187,7 +187,7 @@ Tutte le migliorie sono **retrocompatibili**:
 
 ## 📚 Documentazione Correlata
 
-- [Filament Spatie Database Mail Templates Analysis](./filament-spatie-database-mail-templates-analysis-[DATE].md)
+- [Filament Spatie Database Mail Templates Analysis](./filament-spatie-database-mail-templates-analysis-[date].md)
 - [Database Mail System](./database-mail-system.md)
 - [Mail Template Improvements](./database-mail-templates-improvements.md)
 

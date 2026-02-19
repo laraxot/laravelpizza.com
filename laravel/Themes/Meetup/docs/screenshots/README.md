@@ -70,7 +70,7 @@ browser_take_screenshot({
 
 ### grafica-confronto
 
-Confronto con laravelpizza.com: [grafica-confronto](grafica-confronto/README.md). Contiene screenshot produzione (`laravelpizza-com-home.png`) e, quando generati, locale (`nostra-home.png`). Screenshot “nostra” home (light/dark, 1440px) sono anche in [2026-02-02](2026-02-02/): `local-home-light-1440.png`, `local-home-dark-1440.png`. Generazione: `npm run screenshots` dalla cartella del tema, o MCP cursor-browser-extension. Doc differenze: [differenze-grafica-e-miglioramenti](../differenze-grafica-e-miglioramenti.md).
+Confronto con laravelpizza.com: [grafica-confronto](grafica-confronto/readme.md). Contiene screenshot produzione (`laravelpizza-com-home.png`) e, quando generati, locale (`nostra-home.png`). Screenshot “nostra” home (light/dark, 1440px) sono anche in [2026-02-02](2026-02-02/): `local-home-light-1440.png`, `local-home-dark-1440.png`. Generazione: `npm run screenshots` dalla cartella del tema, o MCP cursor-browser-extension. Doc differenze: [differenze-grafica-e-miglioramenti](../differenze-grafica-e-miglioramenti.md).
 
 ### 2026-02-02
 

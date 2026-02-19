@@ -239,7 +239,7 @@ mv old-file.md _archive/[DATE]-old-file.md
 ✅ CORRETTO:
 [Link](./same-folder/file.md)
 [Link](../parent-folder/file.md)
-[Link](../../Modules/Other/docs/file.md)
+[Link](../../modules/other/docs/file.md)
 
 ❌ SBAGLIATO:
 [Link](/absolute/path/file.md)

@@ -214,6 +214,6 @@ L'implementazione dovrebbe seguire le convenzioni del progetto, con particolare 
 
 - [Repository GitHub del Pacchetto](https://github.com/camya/filament-title-with-slug)
 - [Documentazione Filament](https://filamentphp.com/docs)
-- [Implementazione Modello con Slug](./MODEL_SLUG_IMPLEMENTATION.md)
-- [Implementazione Risorsa con Slug](./RESOURCE_SLUG_IMPLEMENTATION.md)
-- [Miglioramenti UI/UX](./UI_UX_ENHANCEMENTS.md)
+- [Implementazione Modello con Slug](./model_slug_implementation.md)
+- [Implementazione Risorsa con Slug](./resource_slug_implementation.md)
+- [Miglioramenti UI/UX](./ui_ux_enhancements.md)

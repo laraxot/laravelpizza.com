@@ -3,12 +3,12 @@
 ## 🎯 **Quick Start**
 
 ### **Per Sviluppatori**
-- [**README.md**](README.md) - Inizia qui per una panoramica completa
+- [**README.md**](readme.md) - Inizia qui per una panoramica completa
 - [**Architettura**](architecture.md) - Comprendi l'architettura del modulo
 - [**Best Practices**](best-practices.md) - Segui le linee guida di sviluppo
 
 ### **Per Amministratori**
-- [**README.md**](README.md) - Panoramica del sistema
+- [**README.md**](readme.md) - Panoramica del sistema
 - [**Troubleshooting**](troubleshooting.md) - Risoluzione problemi comuni
 
 ### **Per Integratori**
@@ -19,12 +19,12 @@
 
 ### **🏗️ Architettura e Design**
 - [**Architettura**](architecture.md) - Struttura e componenti del modulo
-- [**README.md**](README.md) - Panoramica architetturale completa
+- [**README.md**](readme.md) - Panoramica architetturale completa
 
 ### **🔧 Implementazione e Sviluppo**
 - [**Best Practices**](best-practices.md) - Linee guida per lo sviluppo
 - [**Esempi**](examples.md) - Esempi pratici e casi d'uso
-- [**README.md**](README.md) - Guida all'implementazione
+- [**README.md**](readme.md) - Guida all'implementazione
 
 ### **🎨 Filament e UI**
 - [**Best Practices**](best-practices.md) - Sezione Filament Resources
@@ -49,7 +49,7 @@
 ## 📊 **Livelli di Competenza**
 
 ### **🟢 Principiante**
-- [**README.md**](README.md) - Inizia con la panoramica
+- [**README.md**](readme.md) - Inizia con la panoramica
 - [**Esempi**](examples.md) - Studia i casi base
 - [**Best Practices**](best-practices.md) - Sezioni fondamentali
 

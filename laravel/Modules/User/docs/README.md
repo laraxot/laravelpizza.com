@@ -84,7 +84,7 @@ public function getMobileDeviceTokens(): Collection
 
 ### Documentazione Correlata
 - [PHPStan Level 10 Success](../../../docs/phpstan-level-10-success.md) - Achievement generale progetto
-- [Xot PHPStan Patterns](../../Xot/docs/phpstan-patterns-dec-2025.md) - Pattern comuni
+- [Xot PHPStan Patterns](../../xot/docs/phpstan-patterns-dec-2025.md) - Pattern comuni
 
 ---
 
@@ -560,9 +560,9 @@ return [
     'profile_model' => \Modules\User\Models\Profile::class,
 
 #### Architettura e Filosofia
-- [Filosofia Modulo User](./FILOSOFIA_MODULO_USER.md) - Logica, politica, business logic, filosofia, zen
-- [Service Provider Architecture](./SERVICE_PROVIDER_ARCHITECTURE.md) - Module Pattern, DRY, Separation of Concerns
-- [Passport Integration](./PASSPORT_INTEGRATION.md) - Laravel Passport integrazione completa, filosofia, best practices
+- [Filosofia Modulo User](./filosofia_modulo_user.md) - Logica, politica, business logic, filosofia, zen
+- [Service Provider Architecture](./service_provider_architecture.md) - Module Pattern, DRY, Separation of Concerns
+- [Passport Integration](./passport_integration.md) - Laravel Passport integrazione completa, filosofia, best practices
 
 #### Guide Tecniche
 - [Troubleshooting Login Component](./troubleshooting-login-component.md)
@@ -1068,7 +1068,7 @@ test('user can switch teams', function () {
 - **Fixed**: File locking pattern implementation
 - **Improved**: Security alert widgets
 
-See [CHANGELOG.md](./CHANGELOG.md) for full history.
+See [CHANGELOG.md](./changelog.md) for full history.
 
 ---
 
@@ -1086,22 +1086,22 @@ See [CHANGELOG.md](./CHANGELOG.md) for full history.
 - Social login enhancements
 - Advanced audit reporting
 
-See [ROADMAP.md](./ROADMAP.md) for details.
+See [ROADMAP.md](./roadmap.md) for details.
 
 ---
 
 ## 📖 Related Documentation
 
 ### Internal Modules
-- [Xot Module](../Xot/docs/README.md) - Core foundation
-- [Activity Module](../Activity/docs/README.md) - Activity tracking
-- [Lang Module](../Lang/docs/README.md) - Translations
-- [Tenant Module](../Tenant/docs/README.md) - Enhanced tenancy
+- [Xot Module](../xot/docs/readme.md) - Core foundation
+- [Activity Module](../activity/docs/readme.md) - Activity tracking
+- [Lang Module](../lang/docs/readme.md) - Translations
+- [Tenant Module](../tenant/docs/readme.md) - Enhanced tenancy
 
 ### Project Documentation
-- [CLAUDE.md](../../../CLAUDE.md) - Project architecture
-- [AI Agents Guide](../../../../AGENTS.md)
-- [Cursor Rules & Skills](../../../../.cursor/README.md)
+- [CLAUDE.md](../../../claude.md) - Project architecture
+- [AI Agents Guide](../../../../agents.md)
+- [Cursor Rules & Skills](../../../../.cursor/readme.md)
 - [Skills di progetto](../../../../.cursor/skills/)
 - [Security Guidelines](../../../docs/security.md)
 

@@ -150,10 +150,10 @@ class StoreOrderRequest extends FormRequest
 ## 9. Collegamenti correlati
 
 - [translations-faq.md](./translations-faq.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](./TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](./translation_keys_best_practices.md)
 - [translations-storage.md](./translations-storage.md)
 - [translation-process.md](./translation-process.md)
-- [README.md](./README.md)
+- [README.md](./readme.md)
 # Gestione delle Traduzioni dei Messaggi di Validazione
 
 ## Obiettivo
@@ -306,7 +306,7 @@ class StoreOrderRequest extends FormRequest
 ## 9. Collegamenti correlati
 
 - [translations-faq.md](./translations-faq.md)
-- [TRANSLATION_KEYS_BEST_PRACTICES.md](./TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [TRANSLATION_KEYS_BEST_PRACTICES.md](./translation_keys_best_practices.md)
 - [translations-storage.md](./translations-storage.md)
 - [translation-process.md](./translation-process.md)
-- [README.md](./README.md)
+- [README.md](./readme.md)

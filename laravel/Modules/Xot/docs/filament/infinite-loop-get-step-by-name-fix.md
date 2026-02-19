@@ -115,7 +115,7 @@ $prop = property_exists($class, 'property') ? $class::$property : [];
 - [DoctorResource.php](../../../Modules/<main module>/app/Filament/Resources/DoctorResource.php) - Utilizzo step
 
 ### **Documentazione Correlata**
-- [Wizard Step Implementation](../../../Modules/<main module>/docs/wizard-step-implementation.md)
+- [Wizard Step Implementation](../../../modules/<main module>/docs/wizard-step-implementation.md)
 - [Infinite Loop Prevention](../critical-fixes/infinite-loop-prevention.md)
 
 ---

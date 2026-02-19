@@ -103,4 +103,4 @@ Dopo l'installazione iniziale, procedere con:
 ## Collegamenti tra versioni di installazione-iniziale.md
 * [installazione-iniziale.md](docs/installazione-iniziale.md)
 * [installazione-iniziale.md](docs/tecnico/installazione-iniziale.md)
-* [installazione-iniziale.md](../../../Xot/docs/implementation/installazione-iniziale.md)
+* [installazione-iniziale.md](../../../xot/docs/implementation/installazione-iniziale.md)

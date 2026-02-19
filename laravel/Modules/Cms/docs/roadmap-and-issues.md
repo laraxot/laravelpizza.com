@@ -51,7 +51,7 @@
 
 ## 🔗 Collegamenti
 
-- [← Cms Module README](../README.md)
+- [← Cms Module README](../readme.md)
 - [← Root Documentation](../../../docs/index.md)
 
 ---

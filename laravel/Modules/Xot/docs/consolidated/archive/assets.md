@@ -249,6 +249,6 @@ document.addEventListener('alpine:init', () => {
      class="h-8 w-auto">
 ```
 ## Collegamenti tra versioni di assets.md
-* [assets.md](../../../Xot/project_docs/assets.md)
-* [assets.md](../../../Cms/project_docs/themes/assets.md)
-* [assets.md](../../../../Themes/One/project_docs/assets.md)
+* [assets.md](../../../xot/project_docs/assets.md)
+* [assets.md](../../../cms/project_docs/themes/assets.md)
+* [assets.md](../../../../themes/one/project_docs/assets.md)

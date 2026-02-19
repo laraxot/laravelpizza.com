@@ -101,9 +101,9 @@ Ogni blocco deve seguire questa struttura:
 8. **Codice**: Mantieni il codice pulito e documentato
 
 ## Collegamenti tra versioni di blocks.md
-* [blocks.md](../../../Xot/project_docs/blocks.md)
-* [blocks.md](../../../User/project_docs/blocks.md)
-* [blocks.md](../../../UI/project_docs/blocks.md)
-* [blocks.md](../../../Cms/project_docs/blocks.md)
-* [blocks.md](../../../../Themes/One/project_docs/blocks.md)
-* [blocks.md](../../../../Themes/One/project_docs/components/blocks.md)
+* [blocks.md](../../../xot/project_docs/blocks.md)
+* [blocks.md](../../../user/project_docs/blocks.md)
+* [blocks.md](../../../ui/project_docs/blocks.md)
+* [blocks.md](../../../cms/project_docs/blocks.md)
+* [blocks.md](../../../../themes/one/project_docs/blocks.md)
+* [blocks.md](../../../../themes/one/project_docs/components/blocks.md)

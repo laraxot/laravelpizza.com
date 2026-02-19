@@ -129,9 +129,9 @@ Il tema Meetup deve replicare **pixel-perfect** il design di `laravelpizza.com`:
 
 ## Riferimenti
 
-- [README Principale](../../../../README.md)
+- [README Principale](../../../../readme.md)
 - [Regole Critiche Consolidate](./critical-rules-consolidated.md)
-- [Project Philosophy - Module](../../../Meetup/docs/project-philosophy.md)
+- [Project Philosophy - Module](../../../meetup/docs/project-philosophy.md)
 - [Layout System Analysis](./layout-system-analysis.md)
 
 ---

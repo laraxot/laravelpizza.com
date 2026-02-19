@@ -148,7 +148,7 @@ use function Safe\json_encode;
 ## 🔗 Collegamenti
 
 - [Analisi Generale PHPStan](../../../project_docs/quality/phpstan-analysis.md)
-- [PHPStan Quality Rules](./PHPSTAN_QUALITY_RULES.md)
+- [PHPStan Quality Rules](./phpstan_quality_rules.md)
 - [PHPStan Fixes Activity (Completo)](./phpstan_fixes_activity.md)
 
 ## 📝 Note

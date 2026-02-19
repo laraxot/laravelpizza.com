@@ -191,7 +191,7 @@ php artisan tinker
 
 | Guida | Link |
 |-------|------|
-| **Indice** | [docs/README.md](docs/README.md) |
+| **Indice** | [docs/README.md](docs/readme.md) |
 
 ---
 

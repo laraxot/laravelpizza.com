@@ -270,13 +270,13 @@ Per migrare le rotte esistenti:
 
 ## Collegamenti Bidirezionali
 
-- [Architettura Folio + Volt + Filament](./FOLIO_VOLT_ARCHITECTURE.md)
-- [Struttura dei Moduli](./MODULE_STRUCTURE.md)
+- [Architettura Folio + Volt + Filament](./folio_volt_architecture.md)
+- [Struttura dei Moduli](./module_structure.md)
 - [Documentazione Generale](./documentation.md)
 - [Regole del Progetto](./rules.md)
-- [Collegamenti al Modulo Cms](../../Cms/project_docs/frontoffice/routing.md)
-- [Collegamenti al Modulo Lang](../../Lang/project_docs/packages/localization.md)
+- [Collegamenti al Modulo Cms](../../cms/project_docs/frontoffice/routing.md)
+- [Collegamenti al Modulo Lang](../../lang/project_docs/packages/localization.md)
 - [Collegamenti alla Root](../../../project_docs/routing.md)
 ## Collegamenti tra versioni di routing.md
 * [routing.md](../../../../project_docs/routing.md)
-* [routing.md](../../Cms/project_docs/frontoffice/routing.md)
+* [routing.md](../../cms/project_docs/frontoffice/routing.md)

@@ -13,7 +13,7 @@
 
 Il modulo **Xot** è il cuore del framework Laraxot: nessun altro modulo funziona senza di lui. Fornisce le classi base (XotBaseResource, XotBaseModel, XotBaseServiceProvider, ecc.), i service provider e le convenzioni che abilitano tutti i moduli del sistema.
 
-> **🔴 Obbligatorio:** tutti i moduli Laraxot estendono le classi Xot, mai quelle di Filament o Laravel direttamente. **[Perché →](docs/README.md)** · **[Base classes →](docs/filament/README.md)**
+> **🔴 Obbligatorio:** tutti i moduli Laraxot estendono le classi Xot, mai quelle di Filament o Laravel direttamente. **[Perché →](docs/readme.md)** · **[Base classes →](docs/filament/readme.md)**
 
 ### ⚡ Estendi in 2 minuti
 
@@ -21,7 +21,7 @@ Il modulo **Xot** è il cuore del framework Laraxot: nessun altro modulo funzion
 php artisan module:list | grep Xot   # Verifica che sia attivo
 ```
 
-Poi nelle tue classi: `extends XotBaseResource`, `extends XotBaseModel`, `extends XotBaseServiceProvider`. **[Guida estensione →](docs/development/README.md)**
+Poi nelle tue classi: `extends XotBaseResource`, `extends XotBaseModel`, `extends XotBaseServiceProvider`. **[Guida estensione →](docs/development/readme.md)**
 
 ## 🏗️ Architecture
 
@@ -84,7 +84,7 @@ php artisan xot:status
 
 ## 🔗 Related Documentation
 
-- [Laraxot Main Docs](../../docs/AI-GUIDELINES.md) - Documentazione generale
+- [Laraxot Main Docs](../../docs/ai-guidelines.md) - Documentazione generale
 - [Architecture Rules](../../docs/fundamentals/architecture-rules.md) - Regole critiche
 - [Module Structure](../../docs/fundamentals/module-structure.md) - Come strutturare moduli
 
@@ -96,7 +96,7 @@ php artisan xot:status
 
 ---
 
-**📖 [Docs](docs/README.md)** · **🏗️ [Architettura](docs/conventions/README.md)** · **✅ [PHPStan](docs/standards/README.md)** · **🤝 Contribuisci seguendo le [best practices](docs/best-practices/README.md)**
+**📖 [Docs](docs/readme.md)** · **🏗️ [Architettura](docs/conventions/readme.md)** · **✅ [PHPStan](docs/standards/readme.md)** · **🤝 Contribuisci seguendo le [best practices](docs/best-practices/readme.md)**
 
 ---
 
@@ -395,7 +395,7 @@ php artisan test --filter=XotBaseResourceTest
 ## 📚 Documentazione COMPLETA
 
 ### 🎯 **Guide Principali**
-- [📖 Documentazione Completa](docs/README.md)
+- [📖 Documentazione Completa](docs/readme.md)
 - [🏗️ Base Classes](docs/base-classes.md)
 - [🔧 Service Providers](docs/service-providers.md)
 - [🎨 Filament Integration](docs/filament-integration.md)

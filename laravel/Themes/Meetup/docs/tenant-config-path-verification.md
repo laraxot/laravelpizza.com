@@ -117,9 +117,9 @@ I file JSON per le pagine About e Contact sono stati creati nel percorso **CORRE
 
 ## 📚 Riferimenti
 
-- [Tenant Config Path Philosophy Debate](../../Modules/Tenant/docs/tenant-config-path-philosophy-debate.md) - Dibattito completo sulla filosofia
-- [Tenant Configuration](../../Modules/Tenant/docs/configuration.md) - Documentazione ufficiale
-- [Configuration Logic Analysis](../../Modules/Tenant/docs/configuration-logic-analysis.md) - Analisi logica completa
+- [Tenant Config Path Philosophy Debate](../../modules/tenant/docs/tenant-config-path-philosophy-debate.md) - Dibattito completo sulla filosofia
+- [Tenant Configuration](../../modules/tenant/docs/configuration.md) - Documentazione ufficiale
+- [Configuration Logic Analysis](../../modules/tenant/docs/configuration-logic-analysis.md) - Analisi logica completa
 
 ---
 

@@ -33,7 +33,7 @@ I prompt definiscono regole operative riutilizzabili tra progetti. Devono essere
 
 ## Collegamenti tra versioni di prompts.md
 * [prompts.md](docs/prompts.md)
-* [prompts.md](../../../Xot/project_docs/prompts.md)
+* [prompts.md](../../../xot/project_docs/prompts.md)
 
 ## Modifiche al Prompt docs.txt
 
@@ -50,8 +50,8 @@ I prompt definiscono regole operative riutilizzabili tra progetti. Devono essere
 4. Verifica dei collegamenti bidirezionali
 
 ### Collegamenti Correlati
-- [Regole Universali](./PROMPT_RULES.md)
-- [Gestione Documentazione](./DOCUMENTATION_MANAGEMENT.md)
+- [Regole Universali](./prompt_rules.md)
+- [Gestione Documentazione](./documentation_management.md)
 - [Struttura Moduli](./module-structure.md)
 
 ## Errori Comuni da Evitare

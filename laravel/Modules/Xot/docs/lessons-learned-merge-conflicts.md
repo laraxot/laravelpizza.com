@@ -313,7 +313,7 @@ Al processo sistematico di **comprensione → studio → dibattito → implement
 
 ## 📚 References
 
-- [Merge Conflict Resolution Report](./merge-conflict-resolution-[DATE].md)
+- [Merge Conflict Resolution Report](./merge-conflict-resolution-[date].md)
 - [File Locking Pattern](./file-locking-pattern.md)
 - [Service Providers](./service-providers.md)
 - [Laraxot Architecture Rules](./laraxot-architecture-rules.md)
@@ -641,7 +641,7 @@ Al processo sistematico di **comprensione → studio → dibattito → implement
 
 ## 📚 References
 
-- [Merge Conflict Resolution Report](./merge-conflict-resolution-[DATE].md)
+- [Merge Conflict Resolution Report](./merge-conflict-resolution-[date].md)
 - [File Locking Pattern](./file-locking-pattern.md)
 - [Service Providers](./service-providers.md)
 - [Laraxot Architecture Rules](./laraxot-architecture-rules.md)

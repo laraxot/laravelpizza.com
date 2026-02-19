@@ -172,8 +172,8 @@ class DashboardSettingsPolicy
 - wizard personalizzati
 
 ## collegamento ad altre documentazioni
-- [pattern di estensione filament](Modules/Xot/project_docs/filament_extension_pattern.md)
-- [best practices filament](Modules/<nome progetto>/project_docs/filament-best-practices.md)
+- [pattern di estensione filament](modules/xot/project_docs/filament_extension_pattern.md)
+- [best practices filament](modules/<nome progetto>/project_docs/filament-best-practices.md)
 
 ## ATTENZIONE: errori critici da evitare
 - NON dichiarare mai abstract getFormSchema() in XotBasePage: la classe base Filament lo implementa già. Fornire sempre una implementazione di default (array vuoto).

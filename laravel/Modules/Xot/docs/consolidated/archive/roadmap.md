@@ -236,13 +236,13 @@
 ## Collegamenti Bidirezionali
 
 ### Collegamenti ad Altri Moduli
-- [Roadmap Modulo User](../User/project_docs/roadmap.md)
-- [Roadmap Modulo Lang](../Lang/project_docs/roadmap.md)
-- [Roadmap Modulo UI](../UI/project_docs/roadmap.md)
+- [Roadmap Modulo User](../user/project_docs/roadmap.md)
+- [Roadmap Modulo Lang](../lang/project_docs/roadmap.md)
+- [Roadmap Modulo UI](../ui/project_docs/roadmap.md)
 
 ### Collegamenti Interni
 - [Architettura](./structure.md)
-- [Best Practices](./BEST-PRACTICES.md)
+- [Best Practices](./best-practices.md)
 - [Testing](./testing-best-practices.md)
 
 ## Prossimi Passi
@@ -419,7 +419,7 @@
 
 ### Collegamenti Interni
 - [Bottlenecks](bottlenecks.md)
-- [Best Practices](BEST-PRACTICES.md)
+- [Best Practices](best-practices.md)
 - [Testing](testing.md)
 
 ### Versione HEAD
@@ -429,20 +429,20 @@
 ## Collegamenti tra versioni di roadmap.md
 * [roadmap.md](bashscripts/project_docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
-* [roadmap.md](../../../Gdpr/project_docs/roadmap.md)
-* [roadmap.md](../../../Notify/project_docs/roadmap.md)
-* [roadmap.md](../../../Xot/project_docs/roadmap.md)
-* [roadmap.md](../../../Dental/project_docs/roadmap.md)
-* [roadmap.md](../../../User/project_docs/roadmap.md)
-* [roadmap.md](../../../UI/project_docs/roadmap.md)
-* [roadmap.md](../../../Lang/project_docs/roadmap.md)
-* [roadmap.md](../../../Job/project_docs/roadmap.md)
-* [roadmap.md](../../../Media/project_docs/roadmap.md)
-* [roadmap.md](../../../Tenant/project_docs/roadmap.md)
-* [roadmap.md](../../../Activity/project_docs/roadmap.md)
-* [roadmap.md](../../../Patient/project_docs/roadmap.md)
-* [roadmap.md](../../../Cms/project_docs/roadmap.md)
-* [roadmap.md](../../../../Themes/One/project_docs/roadmap.md)
+* [roadmap.md](../../../gdpr/project_docs/roadmap.md)
+* [roadmap.md](../../../notify/project_docs/roadmap.md)
+* [roadmap.md](../../../xot/project_docs/roadmap.md)
+* [roadmap.md](../../../dental/project_docs/roadmap.md)
+* [roadmap.md](../../../user/project_docs/roadmap.md)
+* [roadmap.md](../../../ui/project_docs/roadmap.md)
+* [roadmap.md](../../../lang/project_docs/roadmap.md)
+* [roadmap.md](../../../job/project_docs/roadmap.md)
+* [roadmap.md](../../../media/project_docs/roadmap.md)
+* [roadmap.md](../../../tenant/project_docs/roadmap.md)
+* [roadmap.md](../../../activity/project_docs/roadmap.md)
+* [roadmap.md](../../../patient/project_docs/roadmap.md)
+* [roadmap.md](../../../cms/project_docs/roadmap.md)
+* [roadmap.md](../../../../themes/one/project_docs/roadmap.md)
 
 ---
 

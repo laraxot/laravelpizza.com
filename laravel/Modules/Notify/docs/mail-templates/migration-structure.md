@@ -212,6 +212,6 @@ public function tableUpdate(\Closure $next, ?string $table = null): void
    - Gestione degli errori
 
 ## Collegamenti
-- [Documentazione XotBaseMigration](../Xot/docs/XotBaseMigration.md)
-- [Best Practices Migrazioni](./MIGRATION_BEST_PRACTICES.md)
-- [Gestione Errori](./ERROR_HANDLING.md)
+- [Documentazione XotBaseMigration](../xot/docs/xotbasemigration.md)
+- [Best Practices Migrazioni](./migration_best_practices.md)
+- [Gestione Errori](./error_handling.md)

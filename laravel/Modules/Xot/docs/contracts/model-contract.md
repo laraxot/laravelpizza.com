@@ -43,7 +43,7 @@ interface ModelContract
 5. Integrazione con Laravel Eloquent
 
 ## Collegamenti
-- [Model Guidelines](../models/README.md)
-- [Database Guidelines](../DATABASE-GUIDELINES.md)
-- [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
-- [Contracts Overview](./README.md)
+- [Model Guidelines](../models/readme.md)
+- [Database Guidelines](../database-guidelines.md)
+- [PHPStan Level 9 Guide](../phpstan-level9-guide.md)
+- [Contracts Overview](./readme.md)

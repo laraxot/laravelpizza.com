@@ -319,7 +319,7 @@ npm run dev  # Hot reload automatico (NON serve copy)
 
 - [Folio Pages JSON Only Rule](./folio-pages-json-only-rule.md)
 - [Development Workflow CSS/JS](./development-workflow-css-js-changes.md)
-- [Content Blocks Architecture](../../Modules/Cms/docs/content-blocks-architecture.md)
+- [Content Blocks Architecture](../../modules/cms/docs/content-blocks-architecture.md)
 - [Filament Forms Builder](https://filamentphp.com/docs/4.x/forms/builder)
 
 ---

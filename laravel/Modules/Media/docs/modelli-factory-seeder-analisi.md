@@ -197,9 +197,9 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Moduli Collegati
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Documenti medici
-- [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
-- [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
-- [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
+- [User Module](../../user/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
+- [Cms Module](../../cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
+- [Notify Module](../../notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
 
 ### Librerie e Servizi
 - [Intervention Image](http://image.intervention.io/) - Image processing

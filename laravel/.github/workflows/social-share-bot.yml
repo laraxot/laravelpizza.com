@@ -1,0 +1,50 @@
+name: Social Share Bot
+
+on:
+  discussion_comment:
+    types: [created]
+
+jobs:
+  respond:
+    runs-on: ubuntu-latest
+    permissions:
+      discussions: write
+    steps:
+      - name: Check content
+        id: check
+        run: |
+          BODY="${{ github.event.comment.body }}"
+          if echo "$BODY" | grep -qiE "(social|share|twitter|facebook|linkedin)"; then
+            echo "match=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Respond
+        if: steps.check.outputs.match == 'true'
+        run: |
+          echo "body=## Bot Response
+
+Thanks for the great discussion on social sharing!
+
+### Our Approach
+
+We use **pure PHP** - no Composer packages needed:
+
+```php
+\$url = urlencode(\$url);
+\$facebook = \"https://facebook.com/sharer/sharer.php?u={\$url}\";
+```
+
+### Implementation
+
+- Filament Widget (XotBaseWidget) in SEO module
+- Blade components in Theme
+- Tailwind CSS styling
+
+See docs: Modules/Seo/docs/social-share-component.md" >> $GITHUB_OUTPUT
+
+      - name: Post comment
+        if: steps.check.outputs.match == 'true'
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          comment-id: ${{ github.event.comment.id }}
+          body: ${{ steps.respond.outputs.body }}

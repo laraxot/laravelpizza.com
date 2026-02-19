@@ -32,6 +32,6 @@ Il modulo Cms gestisce il rendering dei temi frontend (pub_theme) e la registraz
 ## Collegamenti
 
 - [CmsServiceProvider](../app/Providers/CmsServiceProvider.php)
-- [MCP UI/UX Tema Two](../../Themes/Two/docs/mcp-ui-ux.md)
-- [MCP UI/UX Modulo UI](../../../laravel/Modules/UI/docs/mcp-ui-ux.md)
+- [MCP UI/UX Tema Two](../../themes/two/docs/mcp-ui-ux.md)
+- [MCP UI/UX Modulo UI](../../../laravel/modules/ui/docs/mcp-ui-ux.md)
 - [Status MCP Progetto](../../../docs/mcp-servers-status.md)

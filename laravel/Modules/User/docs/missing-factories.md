@@ -133,9 +133,9 @@
 
 ## Collegamenti
 
-- [README Modulo User](./README.md)
+- [README Modulo User](./readme.md)
 - [Factory Audit Root](../../../project_docs/factory-audit-2025.md)
-- [Models Documentation](./models/README.md)
+- [Models Documentation](./models/readme.md)
 
 ---
 **Errore gravissimo da non ripetere mai più**  

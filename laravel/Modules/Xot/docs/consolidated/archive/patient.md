@@ -228,4 +228,4 @@
 ## Collegamenti tra versioni di patient.md
 * [patient.md](docs/moduli/patient.md)
 * [patient.md](docs/roadmap/moduli/patient.md)
-* [patient.md](../../../Xot/project_docs/roadmap/bottlenecks/patient.md)
+* [patient.md](../../../xot/project_docs/roadmap/bottlenecks/patient.md)

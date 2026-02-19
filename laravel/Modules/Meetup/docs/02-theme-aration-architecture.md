@@ -170,9 +170,9 @@ php artisan config:clear
 
 ## 📚 **Documentazione Correlata**
 
-- [theme-separation-architecture.md](../../Themes/Meetup/docs/02-architecture/01-theme-separation-architecture.md)
-- [folio-volt-json-system-complete.md](../../Themes/Meetup/docs/folio-volt-json-system-complete.md)
-- [laravelpizza-com-conversion-architecture.md](../../Themes/Meetup/docs/laravelpizza-com-conversion-architecture.md)
+- [theme-separation-architecture.md](../../themes/meetup/docs/02-architecture/01-theme-separation-architecture.md)
+- [folio-volt-json-system-complete.md](../../themes/meetup/docs/folio-volt-json-system-complete.md)
+- [laravelpizza-com-conversion-architecture.md](../../themes/meetup/docs/laravelpizza-com-conversion-architecture.md)
 
 ---
 

@@ -17,8 +17,8 @@ Il metodo `icon()` **NON esiste** sul componente `Filament\Forms\Components\File
 - Seguire la tabella di compatibilità dei metodi nei componenti Filament (vedi doc di modulo Patient e Xot).
 
 ## Collegamenti
-- [Errore e best practice modulo Patient](../../Patient/docs/filament-error-fileupload-icon.md)
+- [Errore e best practice modulo Patient](../../patient/docs/filament-error-fileupload-icon.md)
 - [Tabella metodi supportati](filament-component-methods.md)
 
 ## Collegamenti tra versioni di filament-error-fileupload-icon.md
-* [filament-error-fileupload-icon.md](../../Patient/docs/filament-error-fileupload-icon.md)
+* [filament-error-fileupload-icon.md](../../patient/docs/filament-error-fileupload-icon.md)

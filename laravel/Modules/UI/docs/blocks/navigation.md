@@ -108,6 +108,6 @@ The navigation component supports different item types:
 
 ## Related Documentation
 
-- [Block Components Overview](./README.md)
+- [Block Components Overview](./readme.md)
 - [Data Handling in Blade Components](../blade-data-handling.md)
-- [Section Architecture](../sections/README.md)
+- [Section Architecture](../sections/readme.md)

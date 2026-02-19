@@ -2,7 +2,7 @@
 
 ## Collegamenti
 - [Documentazione Root](../../../../project_docs/collegamenti-documentazione.md) - Indice centrale dei collegamenti
-- [Documentazione in Themes/One](../../../../Themes/One/project_docs/filament-blade-components.md) - Contesto del tema principale
+- [Documentazione in Themes/One](../../../../themes/one/project_docs/filament-blade-components.md) - Contesto del tema principale
 
 Per le best practice di **Filament** (https://filamentphp.com/project_docs/3.x/support/blade-components/overview), utilizziamo sempre i componenti Blade di Filament per elementi interattivi e di navigazione.
 
@@ -30,6 +30,6 @@ Per le best practice di **Filament** (https://filamentphp.com/project_docs/3.x/s
 ```
 
 ## Collegamenti tra versioni di filament-blade-components.md
-* [filament-blade-components.md](laravel/Modules/Cms/project_docs/filament-blade-components.md)
-* [filament-blade-components.md](laravel/Themes/One/project_docs/filament-blade-components.md)
+* [filament-blade-components.md](laravel/modules/cms/project_docs/filament-blade-components.md)
+* [filament-blade-components.md](laravel/themes/one/project_docs/filament-blade-components.md)
 

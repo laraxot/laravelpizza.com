@@ -2,10 +2,10 @@
 
 - Le azioni che operano su una chiave specifica devono utilizzare la forma `By<Key>` (es. `UpdateRestiPondByValutatoreIdAction`).
 - Il namespace corretto per Filament è sempre `Modules\<nome modulo>\Filament`, anche se i file risiedono in `app/Filament`.
-- Esempio pratico: vedi la correzione e il ragionamento in [Azioni Organizzativa (Performance)](../../Performance/project_docs/azioni_organizzativa.md).
+- Esempio pratico: vedi la correzione e il ragionamento in [Azioni Organizzativa (Performance)](../../performance/project_docs/azioni_organizzativa.md).
 
 ### Collegamenti
-- [Azioni Organizzativa (Performance)](../../Performance/project_docs/azioni_organizzativa.md)
+- [Azioni Organizzativa (Performance)](../../performance/project_docs/azioni_organizzativa.md)
 
 ## Regole sui Model
 - Nei moduli, i model devono **sempre** estendere `BaseModel` e **mai** direttamente `Model`.
@@ -38,15 +38,15 @@
 - [ ] Validazione phpstan e test di regressione
 
 ### Esempio e motivazione
-- Vedi [Performance/project_docs/organizzativa-migration-errors.md](../../Performance/project_docs/organizzativa-migration-errors.md) per esempio pratico, motivazione e memoria storica.
+- Vedi [Performance/project_docs/organizzativa-migration-errors.md](../../performance/project_docs/organizzativa-migration-errors.md) per esempio pratico, motivazione e memoria storica.
 - Queste regole sono obbligatorie per tutti i moduli che implementano action custom Filament.
 
 ### Collegamenti
-- [Performance: pattern e anti-pattern Action Filament](../../Performance/project_docs/organizzativa-migration-errors.md)
+- [Performance: pattern e anti-pattern Action Filament](../../performance/project_docs/organizzativa-migration-errors.md)
 - [Indice e collegamenti root](../../../project_docs/links.md)
 
 ## Regole sulle colonne delle tabelle Filament
 - Le colonne delle tabelle Filament devono corrispondere esattamente a quelle del modello e della migrazione.
 - Non inventare mai colonne (es. name, field_name, op, value) se non esistono realmente.
 - Usare sempre i file di traduzione per le label.
-- Vedi [Performance/project_docs/organizzativa_cat_coeffs.md](../../Performance/project_docs/organizzativa_cat_coeffs.md) per esempio pratico, motivazione, correzione e checklist.
+- Vedi [Performance/project_docs/organizzativa_cat_coeffs.md](../../performance/project_docs/organizzativa_cat_coeffs.md) per esempio pratico, motivazione, correzione e checklist.

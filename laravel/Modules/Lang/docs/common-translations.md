@@ -123,7 +123,7 @@ Per evitare errori nei file di traduzione:
 
 ## Collegamenti alla documentazione correlata
 
-- [Regole generali per i file di traduzione](/laravel/Modules/Xot/docs/translation_rules.md)
+- [Regole generali per i file di traduzione](/laravel/modules/xot/docs/translation_rules.md)
 - [Documentazione principale sulle traduzioni](/docs/translation_rules.md)
 
 *Ultimo aggiornamento: 3 Giugno 2025*

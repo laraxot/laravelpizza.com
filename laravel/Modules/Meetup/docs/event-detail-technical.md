@@ -166,4 +166,4 @@ class GetEventDetailAction
 
 - [Event Architecture](events-dynamic-architecture.md)
 - [Folio Pages](folio-pages-json-only-rule.md)
-- [Tema Meetup Docs](../../Themes/Meetup/docs/event-detail-parity.md)
+- [Tema Meetup Docs](../../themes/meetup/docs/event-detail-parity.md)

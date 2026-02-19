@@ -335,7 +335,7 @@ class SystemTestWidget extends UIBaseTestWidget
 
 ## 🔗 Collegamenti Correlati
 
-- [XotBase Patterns](../../Xot/docs/optimization_opportunities.md)
+- [XotBase Patterns](../../xot/docs/optimization_opportunities.md)
 - [UI Components](components.md)
 - [Development Guidelines](development-guidelines.md)
 - [Testing Strategy](testing-strategy.md)

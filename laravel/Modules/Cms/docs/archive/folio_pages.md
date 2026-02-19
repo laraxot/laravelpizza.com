@@ -206,7 +206,7 @@ Per creare una nuova pagina statica nel tema One:
 
 Per le pagine dinamiche, utilizzare l'interfaccia amministrativa Filament per creare e gestire le pagine attraverso il modulo CMS. 
 ## Collegamenti tra versioni di folio-pages.md
-* [folio-pages.md](laravel/Modules/User/resources/views/project_docs/folio-pages.md)
-* [folio-pages.md](laravel/Modules/Cms/project_docs/folio-pages.md)
-* [folio-pages.md](laravel/Themes/One/project_docs/folio-pages.md)
+* [folio-pages.md](laravel/modules/user/resources/views/project_docs/folio-pages.md)
+* [folio-pages.md](laravel/modules/cms/project_docs/folio-pages.md)
+* [folio-pages.md](laravel/themes/one/project_docs/folio-pages.md)
 

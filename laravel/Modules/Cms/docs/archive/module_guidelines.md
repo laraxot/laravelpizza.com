@@ -84,7 +84,7 @@ I dati dell'header (titolo, link, logo, ecc.) sono recuperati da:
 Modifica il file `header.blade.php` in questa posizione per personalizzare l'header del FrontOffice.
 
 ## Collegamenti Bidirezionali
-- [README](README.md) - Documentazione principale del modulo
+- [README](readme.md) - Documentazione principale del modulo
 - [Architettura](architecture.md) - Architettura del modulo
 - [Struttura](structure.md) - Struttura del modulo
 - [Namespace](namespace-moduli-laravel-<nome progetto>.md) - Convenzioni namespace
@@ -93,9 +93,9 @@ Modifica il file `header.blade.php` in questa posizione per personalizzare l'hea
 - [Componenti](components.md) - Componenti disponibili
 
 ## Vedi Anche
-- [Modulo Xot](../Xot/project_docs/README.md) - Linee guida generali
-- [Modulo UI](../UI/project_docs/README.md) - Componenti di interfaccia
-- [Modulo Theme](../Theme/project_docs/README.md) - Gestione temi
+- [Modulo Xot](../xot/project_docs/readme.md) - Linee guida generali
+- [Modulo UI](../ui/project_docs/readme.md) - Componenti di interfaccia
+- [Modulo Theme](../theme/project_docs/readme.md) - Gestione temi
 - [Convenzioni Naming](../../../project_docs/standards/file_naming_conventions.md) - Standard naming
 - [Documentazione Laravel](https://laravel.com/docs) - Documentazione ufficiale
 - [Best Practices](https://laravel.com/project_docs/11.x/best-practices) - Best practices Laravel

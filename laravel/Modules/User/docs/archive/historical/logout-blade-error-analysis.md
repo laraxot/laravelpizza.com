@@ -1,13 +1,13 @@
 # Analisi Approfondita dell'Errore nell'Implementazione del Logout
 
 ## Collegamenti correlati
-- [Documentazione centrale](/docs/README.md)
+- [Documentazione centrale](/docs/readme.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Auth Pages](AUTH_PAGES_IMPLEMENTATION.md)
-- [Implementazione Logout](LOGOUT_BLADE_IMPLEMENTATION.md)
-- [Analisi Logout](LOGOUT_BLADE_ANALYSIS.md)
-- [Conclusioni Logout](LOGOUT_BLADE_CONCLUSIONS.md)
-- [Documentazione Auth Tema One](/laravel/Themes/One/docs/AUTH.md)
+- [Implementazione Auth Pages](auth_pages_implementation.md)
+- [Implementazione Logout](logout_blade_implementation.md)
+- [Analisi Logout](logout_blade_analysis.md)
+- [Conclusioni Logout](logout_blade_conclusions.md)
+- [Documentazione Auth Tema One](/laravel/themes/one/docs/auth.md)
 
 ## Errore Fondamentale Identificato
 
@@ -113,13 +113,13 @@ Questi errori evidenziano l'importanza di:
 # Analisi Approfondita dell'Errore nell'Implementazione del Logout
 
 ## Collegamenti correlati
-- [Documentazione centrale](/docs/README.md)
+- [Documentazione centrale](/docs/readme.md)
 - [Collegamenti documentazione](/docs/collegamenti-documentazione.md)
-- [Implementazione Auth Pages](AUTH_PAGES_IMPLEMENTATION.md)
-- [Implementazione Logout](LOGOUT_BLADE_IMPLEMENTATION.md)
-- [Analisi Logout](LOGOUT_BLADE_ANALYSIS.md)
-- [Conclusioni Logout](LOGOUT_BLADE_CONCLUSIONS.md)
-- [Documentazione Auth Tema One](/laravel/Themes/One/docs/AUTH.md)
+- [Implementazione Auth Pages](auth_pages_implementation.md)
+- [Implementazione Logout](logout_blade_implementation.md)
+- [Analisi Logout](logout_blade_analysis.md)
+- [Conclusioni Logout](logout_blade_conclusions.md)
+- [Documentazione Auth Tema One](/laravel/themes/one/docs/auth.md)
 
 ## Errore Fondamentale Identificato
 

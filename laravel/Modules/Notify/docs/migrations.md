@@ -222,7 +222,7 @@ public function template(): BelongsTo
 ### Versione Incoming
 
 ## Collegamenti tra versioni di migrations.md
-* [migrations.md](../../Gdpr/docs/migrations.md)
-* [migrations.md](../../Activity/docs/database/migrations.md)
+* [migrations.md](../../gdpr/docs/migrations.md)
+* [migrations.md](../../activity/docs/database/migrations.md)
 
 ---

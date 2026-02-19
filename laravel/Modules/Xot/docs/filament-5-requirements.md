@@ -65,7 +65,7 @@ Chart.register(ChartDataLabels);  // ❌ NON funziona
 ## Collegamenti
 
 - [Filament 5.x Installation](https://filamentphp.com/docs/5.x/introduction/installation)
-- [Chart Installation Guide](../../Chart/docs/filament-5-installation-guide.md)
+- [Chart Installation Guide](../../chart/docs/filament-5-installation-guide.md)
 
 ---
 

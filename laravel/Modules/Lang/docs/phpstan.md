@@ -37,8 +37,8 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Lang. Questo è
 
    - Verificare il comportamento con lingue diverse
 ## Collegamenti tra versioni di phpstan_report.md
-* [phpstan_report.md](../../../Lang/project_docs/phpstan_report.md)
-* [phpstan_report.md](../../../Media/project_docs/phpstan_report.md)
+* [phpstan_report.md](../../../lang/project_docs/phpstan_report.md)
+* [phpstan_report.md](../../../media/project_docs/phpstan_report.md)
 
 ### Versione Incoming
 

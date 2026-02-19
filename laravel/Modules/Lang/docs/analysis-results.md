@@ -89,8 +89,8 @@
 
 ## Collegamenti
 
-- [Quality Improvements](./quality-improvements-[DATE].md)
+- [Quality Improvements](./quality-improvements-[date].md)
 - [Index Documentation](./index.md)
-- [Best Practices](./BEST_PRACTICES.md)
+- [Best Practices](./best_practices.md)
 
 *Ultimo aggiornamento: [DATE]*

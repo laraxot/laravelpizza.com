@@ -11,16 +11,16 @@ section: content
 ### Versione HEAD
 
 ## Collegamenti tra versioni di links.md
-* [links.md](../../../Gdpr/docs/links.md)
-* [links.md](../../../Notify/docs/links.md)
-* [links.md](../../../Xot/docs/ci/links.md)
-* [links.md](../../../Xot/docs/open_sources/links.md)
-* [links.md](../../../User/docs/links.md)
-* [links.md](../../../Lang/docs/links.md)
-* [links.md](../../../Job/docs/links.md)
-* [links.md](../../../Tenant/docs/it/links/links.md)
-* [links.md](../../../Cms/docs/links.md)
-* [links.md](../../../../Themes/One/docs/links.md)
+* [links.md](../../../gdpr/docs/links.md)
+* [links.md](../../../notify/docs/links.md)
+* [links.md](../../../xot/docs/ci/links.md)
+* [links.md](../../../xot/docs/open_sources/links.md)
+* [links.md](../../../user/docs/links.md)
+* [links.md](../../../lang/docs/links.md)
+* [links.md](../../../job/docs/links.md)
+* [links.md](../../../tenant/docs/it/links/links.md)
+* [links.md](../../../cms/docs/links.md)
+* [links.md](../../../../themes/one/docs/links.md)
 
 ### Versione Incoming
 

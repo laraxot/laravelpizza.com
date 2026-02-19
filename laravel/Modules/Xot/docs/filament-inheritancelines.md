@@ -93,5 +93,5 @@ public function getNavigationLabel(): string // Non static!
 ## Collegamenti
 
 - [Documentazione di Filament](https://filamentphp.com/project_docs/3.x/panels/pages)
-- [Principi di Ereditarietà](Modules/Xot/project_docs/class_inheritance_principles.md)
-- [XotBasePage](Modules/Xot/project_docs/filament/pages/xotbasepage.md)
+- [Principi di Ereditarietà](modules/xot/project_docs/class_inheritance_principles.md)
+- [XotBasePage](modules/xot/project_docs/filament/pages/xotbasepage.md)

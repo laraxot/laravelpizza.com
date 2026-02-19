@@ -14,8 +14,8 @@ Implement Schema.org **Person** type for user profiles, speakers, and attendees 
 **Reference Links:**
 - [schema-org-enhancements](schema-org-enhancements.md)
 - [Schema.org Person](https://schema.org/Person)
-- [Meetup schema-org-enhancement-recommendations](../../Meetup/docs/schema-org-enhancement-recommendations.md)
-- [Meetup schema-org-research-comprehensive](../../Meetup/docs/schema-org-research-comprehensive.md)
+- [Meetup schema-org-enhancement-recommendations](../../meetup/docs/schema-org-enhancement-recommendations.md)
+- [Meetup schema-org-research-comprehensive](../../meetup/docs/schema-org-research-comprehensive.md)
 
 ---
 
@@ -233,8 +233,8 @@ public function toPersonSchemaWithOrganization(): array
 
 - [schema-org-enhancements](schema-org-enhancements.md)
 - [profile-management](profile-management.md)
-- [Meetup schema-org-research-comprehensive](../../Meetup/docs/schema-org-research-comprehensive.md)
-- [Meetup task-rsvp-actions](../../Meetup/docs/task-rsvp-actions.md)
+- [Meetup schema-org-research-comprehensive](../../meetup/docs/schema-org-research-comprehensive.md)
+- [Meetup task-rsvp-actions](../../meetup/docs/task-rsvp-actions.md)
 
 ---
 

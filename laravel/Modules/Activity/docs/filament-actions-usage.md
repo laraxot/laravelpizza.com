@@ -343,18 +343,18 @@ class ListMyModelActivities extends ListLogActivities
 ## Collegamenti
 
 ### Documentazione Interna
-- [README Activity Module](../README.md)
+- [README Activity Module](../readme.md)
 - [ListLogActivitiesAction Details](./actions/list-log-activities-action.md)
 - [ListLogActivities Page](./pages/list-log-activities.md)
 
 ### Regole e Convenzioni
 - [Filament Custom Actions Rules](../../../.cursor/rules/filament-custom-actions.mdc)
-- [Translation Best Practices](../../Xot/docs/translation-best-practices.md)
-- [Service Provider Architecture](../../Xot/docs/service-provider-architecture.md)
+- [Translation Best Practices](../../xot/docs/translation-best-practices.md)
+- [Service Provider Architecture](../../xot/docs/service-provider-architecture.md)
 
 ### Moduli Correlati
-- [IndennitaResponsabilita - Activity Log Integration](../../IndennitaResponsabilita/docs/activity-log-integration.md)
-- [Xot - Filament Base Components](../../Xot/docs/filament/README.md)
+- [IndennitaResponsabilita - Activity Log Integration](../../indennitaresponsabilita/docs/activity-log-integration.md)
+- [Xot - Filament Base Components](../../xot/docs/filament/readme.md)
 
 ---
 

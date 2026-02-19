@@ -266,7 +266,7 @@ Rimuovi le chiamate `artisan('migrate')` da setUp()
 ## Documentazione Correlata
 
 - [Database Configuration Critical Rules](./database-configuration-critical-rules.md)
-- [Database Testing Configuration](../Gdpr/docs/database-testing-configuration.md)
+- [Database Testing Configuration](../gdpr/docs/database-testing-configuration.md)
 - [Laraxot Testing Guidelines](./laraxot-testing-guidelines.md)
 
 ## Regole d'Oro per TestCase

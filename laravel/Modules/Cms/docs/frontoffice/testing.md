@@ -146,7 +146,7 @@ it('should demonstrate this matcher`s usage', async () => {
    - Documentare i problemi
 
 ## Collegamenti tra versioni di testing.md
-* [testing.md](laravel/Modules/Xot/docs/packages/testing.md)
-* [testing.md](laravel/Modules/Xot/docs/development/testing.md)
-* [testing.md](laravel/Modules/Cms/docs/frontoffice/testing.md)
-* [testing.md](laravel/Themes/One/docs/testing.md)
+* [testing.md](laravel/modules/xot/docs/packages/testing.md)
+* [testing.md](laravel/modules/xot/docs/development/testing.md)
+* [testing.md](laravel/modules/cms/docs/frontoffice/testing.md)
+* [testing.md](laravel/themes/one/docs/testing.md)

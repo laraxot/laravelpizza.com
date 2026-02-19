@@ -350,7 +350,7 @@ Aggiungere al pipeline CI:
 - [HasXotFactory Documentation](../traits/hasxotfactory.md)
 - [GetFactoryAction](../actions/get-factory-action.md)
 - [BaseModel](../models/basemodel.md)
-- [BasePivot Documentation](../../User/docs/models/basepivot.md)
+- [BasePivot Documentation](../../user/docs/models/basepivot.md)
 
 ### Commit Rilevanti
 

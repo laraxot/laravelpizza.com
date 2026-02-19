@@ -108,6 +108,6 @@ find laravel -type f -name "*.php" -exec sed -i 's|Themes|Themes|g' {} \;
 
 ## Riferimenti correlati
 
-- [Struttura del progetto](Modules/Xot/project_docs/architecture/struttura-progetto.md)
-- [Regole di namespace](Modules/Xot/project_docs/standards/namespace-conventions.md)
-- [Autoloading](Modules/Xot/project_docs/standards/psr4-compliance.md)
+- [Struttura del progetto](modules/xot/project_docs/architecture/struttura-progetto.md)
+- [Regole di namespace](modules/xot/project_docs/standards/namespace-conventions.md)
+- [Autoloading](modules/xot/project_docs/standards/psr4-compliance.md)

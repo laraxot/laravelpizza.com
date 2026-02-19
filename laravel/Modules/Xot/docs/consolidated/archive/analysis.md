@@ -61,19 +61,19 @@ Modules/Xot/
 ### Versione HEAD
 
 ## Collegamenti tra versioni di analysis.md
-* [analysis.md](../../../Notify/project_docs/analysis.md)
-* [analysis.md](../../../Notify/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../Xot/project_docs/analysis.md)
-* [analysis.md](../../../Xot/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../User/project_docs/analysis.md)
-* [analysis.md](../../../User/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../UI/project_docs/analysis.md)
-* [analysis.md](../../../UI/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../Job/project_docs/analysis.md)
-* [analysis.md](../../../Job/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../Media/project_docs/analysis.md)
-* [analysis.md](../../../Media/project_docs/phpstan/analysis.md)
-* [analysis.md](../../../../Themes/One/project_docs/analysis.md)
+* [analysis.md](../../../notify/project_docs/analysis.md)
+* [analysis.md](../../../notify/project_docs/phpstan/analysis.md)
+* [analysis.md](../../../xot/project_docs/analysis.md)
+* [analysis.md](../../../xot/project_docs/phpstan/analysis.md)
+* [analysis.md](../../../user/project_docs/analysis.md)
+* [analysis.md](../../../user/project_docs/phpstan/analysis.md)
+* [analysis.md](../../../ui/project_docs/analysis.md)
+* [analysis.md](../../../ui/project_docs/phpstan/analysis.md)
+* [analysis.md](../../../job/project_docs/analysis.md)
+* [analysis.md](../../../job/project_docs/phpstan/analysis.md)
+* [analysis.md](../../../media/project_docs/analysis.md)
+* [analysis.md](../../../media/project_docs/phpstan/analysis.md)
+* [analysis.md](../../../../themes/one/project_docs/analysis.md)
 
 ### Versione Incoming
 

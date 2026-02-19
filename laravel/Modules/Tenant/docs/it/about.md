@@ -89,9 +89,9 @@ Una classe TenantScope per facilmente applicare il tenant corrente come scopo gl
 
 Per ulteriori informazioni su come utilizzare il modulo, consulta la documentazione ufficiale sul sito web del suo autore o sulla pagina GitHub del progetto.
 ## Collegamenti tra versioni di about.md
-* [about.md](../../../Xot/docs/about.md)
-* [about.md](../../../Tenant/docs/en/about.md)
-* [about.md](../../../Tenant/docs/it/about.md)
+* [about.md](../../../xot/docs/about.md)
+* [about.md](../../../tenant/docs/en/about.md)
+* [about.md](../../../tenant/docs/it/about.md)
 
 ### Versione Incoming
 

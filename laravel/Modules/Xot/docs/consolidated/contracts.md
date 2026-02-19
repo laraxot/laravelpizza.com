@@ -87,7 +87,7 @@ Contratto per modelli che hanno profili.
 **ALTA PRIORITÀ**: Risolvere il problema `hasPermissionTo()` per eliminare 350+ errori PHPStan.
 
 ## Collegamenti
-- [Policy PHPStan Errors](../User/project_docs/policy-phpstan-errors.md)
+- [Policy PHPStan Errors](../user/project_docs/policy-phpstan-errors.md)
 - [Root PHPStan Errors](../../project_docs/troubleshooting/phpstan-errors.md)
 - [Spatie Permission Documentation](https://spatie.be/project_docs/laravel-permission)
 

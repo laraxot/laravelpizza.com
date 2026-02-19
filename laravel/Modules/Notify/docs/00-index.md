@@ -5,7 +5,7 @@
 **Module Version**: 2.1.0
 
 ## 🎯 **Lettura Essenziale**
-1. [README.md](./README.md) - Panoramica completa e Quick Start.
+1. [README.md](./readme.md) - Panoramica completa e Quick Start.
 2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Multi-channel API e AI Templates.
 3. [philosophy.md](./philosophy.md) - "Essere Connessi": filosofia delle notifiche in tempo reale.
 
@@ -29,8 +29,8 @@
 - 🛡️ **[Security Analysis](./security-analysis.md)** - Protezione dei webhook dei provider (es. WhatsApp).
 
 ## 🔗 **Moduli Correlati**
-- [Xot](../../Xot/docs/README.md) - Dispatcher centrale.
-- [User](../../User/docs/README.md) - Definizione dei destinatari e preferenze.
+- [Xot](../../xot/docs/readme.md) - Dispatcher centrale.
+- [User](../../user/docs/readme.md) - Definizione dei destinatari e preferenze.
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

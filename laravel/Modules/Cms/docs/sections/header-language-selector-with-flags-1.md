@@ -1,10 +1,10 @@
 # Implementazione del Selettore di Lingua con Bandiere SVG
 
 ## Collegamenti correlati
-- [README modulo Cms](../README.md)
-- [Documentazione User](/laravel/Modules/User/docs/HEADER_LANGUAGE_SELECTOR_WITH_FLAGS.md)
-- [Documentazione Sezioni](./SECTIONS_STRUCTURE.md)
-- [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
+- [README modulo Cms](../readme.md)
+- [Documentazione User](/laravel/modules/user/docs/header_language_selector_with_flags.md)
+- [Documentazione Sezioni](./sections_structure.md)
+- [Best Practices Chiavi di Traduzione](/laravel/modules/lang/docs/translation_keys_best_practices.md)
 - [Collegamenti Documentazione](/docs/collegamenti-documentazione.md)
 
 ## Panoramica

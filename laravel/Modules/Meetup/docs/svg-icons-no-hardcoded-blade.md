@@ -47,5 +47,5 @@ Se aggiungi una nuova sezione/componente con icone, crea il file in `Modules/Mee
 
 - Regola: [.cursor/rules/svg-no-hardcoded-blade-icons-meetup.mdc](../../../../.cursor/rules/svg-no-hardcoded-blade-icons-meetup.mdc)
 - Memoria: [.cursor/memories/svg-icons-meetup-blade.md](../../../../.cursor/memories/svg-icons-meetup-blade.md)
-- Tema: [Themes/Meetup/docs/svg-icons-no-hardcoded-blade.md](../../../Themes/Meetup/docs/svg-icons-no-hardcoded-blade.md)
+- Tema: [Themes/Meetup/docs/svg-icons-no-hardcoded-blade.md](../../../themes/meetup/docs/svg-icons-no-hardcoded-blade.md)
 - Logo: [logo-branding-guidelines.md](logo-branding-guidelines.md)

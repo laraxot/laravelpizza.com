@@ -51,15 +51,15 @@ public function addMember(Team $team, User $user)
 - [ ] Tutti i type hint su TeamContract
 
 **Vedi anche:**
-- [README User](mdc:README.md)
+- [README User](mdc:readme.md)
 - [TeamContract](mdc:../app/Contracts/TeamContract.php)
 
 ## Collegamenti correlati
-- [README User](mdc:README.md)
+- [README User](mdc:readme.md)
 - [Linee guida Actions](mdc:actions.mdc)
 - [Linee guida Activitylog](mdc:activitylog.mdc)
 - [Testing](mdc:testing.md)
-- [Documentazione centrale](mdc:../../../../docs/INDEX.md)
+- [Documentazione centrale](mdc:../../../../docs/index.md)
 
 ## Migration modulari: path corretto obbligatorio
 
@@ -78,10 +78,10 @@ public function addMember(Team $team, User $user)
 - [ ] Tutte le migration modulari sono nella cartella del modulo
 
 **Vedi anche:**
-- [README User](mdc:README.md)
+- [README User](mdc:readme.md)
 
 ## Regola fondamentale sulle migration
 
 - Tutte le migration devono essere nella cartella `database/migrations` del modulo di riferimento.
 - Mai mettere migration custom in `laravel/database/migrations`.
-- Vedi motivazione e checklist in [PATH_CONVENTIONS.md](./PATH_CONVENTIONS.md).
+- Vedi motivazione e checklist in [PATH_CONVENTIONS.md](./path_conventions.md).

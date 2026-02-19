@@ -166,7 +166,7 @@ class TranslationMissing
 - Fallback rate: < 5%
 
 ## Collegamenti
-- [Documentazione Traduzioni](../README.md)
+- [Documentazione Traduzioni](../readme.md)
 - [Guida Implementazione](./implementation-guide.md)
 - [Best Practices](./best-practices.md)
 

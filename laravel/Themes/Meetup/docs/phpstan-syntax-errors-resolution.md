@@ -129,9 +129,9 @@ php artisan view:cache
 
 ## 🔗 Link Correlati
 
-- [Notify Module PHPStan Fixes](../../Modules/Notify/docs/phpstan-syntax-errors-fix-[DATE].md)
-- [Xot Module PHPStan Fixes](../../Modules/Xot/docs/phpstan-syntax-errors-fix-[DATE].md)
-- [Cms Module PHPStan Roadmap](../../Modules/Cms/docs/phpstan-scripts-roadmap-[DATE].md)
+- [Notify Module PHPStan Fixes](../../modules/notify/docs/phpstan-syntax-errors-fix-[date].md)
+- [Xot Module PHPStan Fixes](../../modules/xot/docs/phpstan-syntax-errors-fix-[date].md)
+- [Cms Module PHPStan Roadmap](../../modules/cms/docs/phpstan-scripts-roadmap-[date].md)
 
 ---
 

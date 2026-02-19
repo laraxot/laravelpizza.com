@@ -147,7 +147,7 @@ done
 
 - [Factory Audit Root](../../../project_docs/factory-audit-2025.md)
 - [Missing Factories Audit](./missing-factories-audit.md)
-- [Geo Factory Audit](../../Geo/project_docs/missing-factories-audit.md)
+- [Geo Factory Audit](../../geo/project_docs/missing-factories-audit.md)
 - [Laravel Factory Best Practices](../../../project_docs/laravel-factory-best-practices.md)
 
 ---

@@ -125,7 +125,7 @@ Con `content-resolver`:
 
 ## 🔗 Riferimenti
 
-- [Routing No Business Logic](../Themes/Meetup/docs/routing-no-business-logic.md)
+- [Routing No Business Logic](../themes/meetup/docs/routing-no-business-logic.md)
 - [Container0 Slug0 Agnostic Pattern](container0-slug0-agnostic-pattern.md)
 - [Volt Mount vs PHP Block](volt-mount-vs-php-block.md)
-- [Volt Data Property Indispensable](../Themes/Meetup/docs/volt-data-property-indispensable.md)
+- [Volt Data Property Indispensable](../themes/meetup/docs/volt-data-property-indispensable.md)

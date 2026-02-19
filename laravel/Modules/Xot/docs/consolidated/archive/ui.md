@@ -169,5 +169,5 @@
 - [Accessibility Standards](../../accessibility/standards.md)
 - [Testing Protocols](../../testing/protocols.md)
 ## Collegamenti tra versioni di ui.md
-* [ui.md](../../../Xot/project_docs/roadmap/bottlenecks/ui.md)
-* [ui.md](../../../UI/project_docs/ui.md)
+* [ui.md](../../../xot/project_docs/roadmap/bottlenecks/ui.md)
+* [ui.md](../../../ui/project_docs/ui.md)

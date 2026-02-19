@@ -98,6 +98,6 @@ I seguenti warning sono accettabili e non richiedono correzione immediata:
 
 ## Collegamenti
 
-- [Resources Corrections Summary](./resources-corrections-summary-[DATE].md)
+- [Resources Corrections Summary](./resources-corrections-summary-[date].md)
 - [Quality Tools Report](./quality-tools-report.md)
 - [PHPStan Complete Success](./phpstan-complete-success.md)

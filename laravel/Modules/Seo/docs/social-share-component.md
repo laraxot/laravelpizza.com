@@ -158,9 +158,9 @@ Struttura corretta in `Themes/Meetup/lang/{locale}/event.php`:
 
 ## Riferimenti
 
-- [LaravelLocalization](../../../Modules/Lang/docs/laravel-localization-mcamara.md)
-- [XotBaseWidget](../../../Modules/Xot/docs/xotbase-extension-rules.md)
-- [SVG Icons](../../../Modules/Meetup/docs/svg-icons-no-hardcoded-blade.md)
+- [LaravelLocalization](../../../modules/lang/docs/laravel-localization-mcamara.md)
+- [XotBaseWidget](../../../modules/xot/docs/xotbase-extension-rules.md)
+- [SVG Icons](../../../modules/meetup/docs/svg-icons-no-hardcoded-blade.md)
 
 ---
 

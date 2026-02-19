@@ -1,7 +1,7 @@
 # 📚 Index of Xot Module Documentation
 
 ## 🎯 Quick Start
-- [**README.md**](README.md) - General overview
+- [**README.md**](readme.md) - General overview
 - [**Architecture**](architecture/architecture.md) - System architecture
 - [**Best Practices**](best-practices/best-practices.md) - Development guidelines
 
@@ -47,9 +47,9 @@
 - [BashScripts Organization](bashscripts/bashscripts-organization.md)
 
 ### 🤖 AI & Development Tools
-- [Claude Context (Laravel)](../../../CLAUDE.md)
-- [AI Agents Guide](../../../../AGENTS.md)
-- [Cursor Rules & Skills](../../../../.cursor/README.md)
+- [Claude Context (Laravel)](../../../claude.md)
+- [AI Agents Guide](../../../../agents.md)
+- [Cursor Rules & Skills](../../../../.cursor/readme.md)
 - [Skills di progetto](../../../../.cursor/skills/)
 
 ### 🚨 Troubleshooting

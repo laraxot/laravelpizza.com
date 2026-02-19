@@ -208,7 +208,7 @@ Prima di completare un task con screenshot:
 - [Processo Allineamento Homepage](../homepage-alignment-process.md)
 - [Analisi Differenze Visive](../homepage-visual-alignment-analysis.md)
 - [Correzioni Completate](../homepage-alignment-completed.md)
-- [README Screenshots](./README.md)
+- [README Screenshots](./readme.md)
 
 ---
 

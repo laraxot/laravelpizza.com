@@ -102,12 +102,12 @@ Per la versione dark:
 ## Collegamenti Bidirezionali
 
 ### Collegamenti ad Altri Moduli
-- [Gestione Domini e Configurazioni](DOMAIN_CONFIGURATION.md)
-- [Configurazione Generale](CONFIGURATION.md)
-- [Struttura dei Moduli](MODULE_STRUCTURE.md)
-- [Architettura Folio + Volt](FOLIO_VOLT_ARCHITECTURE.md)
-- [Regole per la Case Sensitivity](DIRECTORY-CASE-SENSITIVITY.md)
-- [Regole per i Namespace](NAMESPACE-RULES.md)
+- [Gestione Domini e Configurazioni](domain_configuration.md)
+- [Configurazione Generale](configuration.md)
+- [Struttura dei Moduli](module_structure.md)
+- [Architettura Folio + Volt](folio_volt_architecture.md)
+- [Regole per la Case Sensitivity](directory-case-sensitivity.md)
+- [Regole per i Namespace](namespace-rules.md)
 - [Convenzioni di Naming](naming-conventions.md)
 
 ### Collegamenti alla Root del Progetto
@@ -224,12 +224,12 @@ Per la versione dark:
 ## Collegamenti Bidirezionali
 
 ### Collegamenti ad Altri Moduli
-- [Gestione Domini e Configurazioni](DOMAIN_CONFIGURATION.md)
-- [Configurazione Generale](CONFIGURATION.md)
-- [Struttura dei Moduli](MODULE_STRUCTURE.md)
-- [Architettura Folio + Volt](FOLIO_VOLT_ARCHITECTURE.md)
-- [Regole per la Case Sensitivity](DIRECTORY-CASE-SENSITIVITY.md)
-- [Regole per i Namespace](NAMESPACE-RULES.md)
+- [Gestione Domini e Configurazioni](domain_configuration.md)
+- [Configurazione Generale](configuration.md)
+- [Struttura dei Moduli](module_structure.md)
+- [Architettura Folio + Volt](folio_volt_architecture.md)
+- [Regole per la Case Sensitivity](directory-case-sensitivity.md)
+- [Regole per i Namespace](namespace-rules.md)
 - [Convenzioni di Naming](naming-conventions.md)
 
 ### Collegamenti alla Root del Progetto

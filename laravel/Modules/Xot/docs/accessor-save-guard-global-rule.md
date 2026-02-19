@@ -289,13 +289,13 @@ test('accessor salva se model ha PK', function () {
 ## Collegamenti
 
 ### Implementazioni Modulo-Specifiche
-- [Sigma - SchedaTrait Fix](../../Sigma/docs/fix-duplicate-entry-error-summary.md)
-- [Performance - MutatorTrait](../../Performance/docs/mutator-guard-fix.md) (da creare)
-- [IndennitaCondizioniLavoro - MutatorTrait](../../IndennitaCondizioniLavoro/docs/accessor-guard.md) (da creare)
+- [Sigma - SchedaTrait Fix](../../sigma/docs/fix-duplicate-entry-error-summary.md)
+- [Performance - MutatorTrait](../../performance/docs/mutator-guard-fix.md) (da creare)
+- [IndennitaCondizioniLavoro - MutatorTrait](../../indennitacondizionilavoro/docs/accessor-guard.md) (da creare)
 
 ### Documentazione Pattern
-- [Accessor Pattern](../../Sigma/docs/scheda-trait-accessor-pattern.md)
-- [Refactoring Philosophy](../../Sigma/docs/accessor-refactoring-philosophy.md)
+- [Accessor Pattern](../../sigma/docs/scheda-trait-accessor-pattern.md)
+- [Refactoring Philosophy](../../sigma/docs/accessor-refactoring-philosophy.md)
 
 ### Regole Globali
 - [.cursor/rules/accessor-save-guard.mdc](../../../.cursor/rules/accessor-save-guard.mdc) (da creare)

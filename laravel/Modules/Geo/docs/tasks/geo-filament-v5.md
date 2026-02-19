@@ -19,4 +19,4 @@ Organizzare le risorse geografiche in un Cluster dedicato per migliorare l'ammin
 - [ ] Ottimizzazione del caricamento dei layer GeoJSON nelle mappe widget.
 
 ## 🔗 Riferimenti
-- [ROADMAP Geo](../ROADMAP.md)
+- [ROADMAP Geo](../roadmap.md)

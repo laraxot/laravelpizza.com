@@ -258,8 +258,8 @@ public function test_event_storage(): void
 - [Spatie Laravel EventSourcing](https://spatie.be/docs/laravel-event-sourcing/v1/introduction)
 
 ### Laraxot Philosophy
-- [Third-Party Model Inheritance](../Xot/docs/third-party-model-inheritance-philosophy.md)
-- [Event Sourcing Patterns](../Xot/docs/event-sourcing-patterns.md)
+- [Third-Party Model Inheritance](../xot/docs/third-party-model-inheritance-philosophy.md)
+- [Event Sourcing Patterns](../xot/docs/event-sourcing-patterns.md)
 
 ---
 

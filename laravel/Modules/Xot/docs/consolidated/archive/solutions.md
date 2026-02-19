@@ -249,9 +249,9 @@ class CacheTest extends TestCase {
 
 5. Mantenere compatibilità con le versioni precedenti
 ## Collegamenti tra versioni di solutions.md
-* [solutions.md](../../../Gdpr/project_docs/solutions.md)
-* [solutions.md](../../../Xot/project_docs/solutions.md)
-* [solutions.md](../../../Job/project_docs/solutions.md)
+* [solutions.md](../../../gdpr/project_docs/solutions.md)
+* [solutions.md](../../../xot/project_docs/solutions.md)
+* [solutions.md](../../../job/project_docs/solutions.md)
 
 ### Versione Incoming
 

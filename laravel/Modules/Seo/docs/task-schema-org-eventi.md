@@ -81,5 +81,5 @@ Alcune pagine di ricerca Schema.org (es. `https://schema.org/docs/search_results
 
 ## Collegamenti
 
-- [Meetup: tasks-schema-org-event-series-actions](../../Meetup/docs/tasks-schema-org-event-series-actions.md)
-- [Geo: tasks-schema-org-place-geocircle](../../Geo/docs/tasks-schema-org-place-geocircle.md)
+- [Meetup: tasks-schema-org-event-series-actions](../../meetup/docs/tasks-schema-org-event-series-actions.md)
+- [Geo: tasks-schema-org-place-geocircle](../../geo/docs/tasks-schema-org-place-geocircle.md)

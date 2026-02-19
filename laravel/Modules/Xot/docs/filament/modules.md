@@ -45,8 +45,8 @@ class AdminPanelProvider extends XotBasePanelProvider
 ## Collegamenti tra versioni di modules.md
 * [modules.md](docs/tecnico/laraxot/modules.md)
 * [modules.md](docs/architecture/modules.md)
-* [modules.md](../../../Xot/docs/filament/modules.md)
-* [modules.md](../../../Xot/docs/config/modules.md)
+* [modules.md](../../../xot/docs/filament/modules.md)
+* [modules.md](../../../xot/docs/config/modules.md)
 
 ### Versione Incoming
 

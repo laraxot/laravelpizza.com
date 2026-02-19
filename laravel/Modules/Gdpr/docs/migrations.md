@@ -244,15 +244,15 @@ class DataExportFactory extends Factory
 ## Collegamenti Bidirezionali
 
 ### Collegamenti ad Altri Moduli
-- [Migrazioni User](../User/docs/migrations.md)
-- [Migrazioni Activity](../Activity/docs/migrations.md)
-- [Migrazioni Xot](../Xot/docs/migrations.md)
+- [Migrazioni User](../user/docs/migrations.md)
+- [Migrazioni Activity](../activity/docs/migrations.md)
+- [Migrazioni Xot](../xot/docs/migrations.md)
 
 ### Collegamenti Interni
-- [README Principale](./README.md)
+- [README Principale](./readme.md)
 - [Implementazione](./implementation.md)
 - [Configurazione](./configuration.md)
 - [Testing](./testing.md)
 ## Collegamenti tra versioni di migrations.md
-* [migrations.md](../../Notify/docs/migrations.md)
-* [migrations.md](../../Activity/docs/database/migrations.md)
+* [migrations.md](../../notify/docs/migrations.md)
+* [migrations.md](../../activity/docs/database/migrations.md)

@@ -143,7 +143,7 @@ Tutti i widget Filament che estendono `XotBaseWidget` e usano `statePath('data')
 
 ## Riferimenti
 
-- [XotBaseWidget Documentation](../../Xot/docs/README.md)
+- [XotBaseWidget Documentation](../../xot/docs/readme.md)
 - [Filament Form State Management](https://filamentphp.com/docs/3.x/forms/fields#state-management)
 - [RegisterWidget Implementation](../app/Filament/Widgets/Auth/RegisterWidget.php) - Esempio corretto
 

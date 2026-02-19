@@ -139,7 +139,7 @@ Ma anche queste possono essere gestite via JSON se la logica è semplice.
 
 ## Riferimenti
 
-- [Content Blocks System](../../Cms/docs/content-blocks-system.md)
+- [Content Blocks System](../../cms/docs/content-blocks-system.md)
 - [Folio Routing Plan](./folio-routing-plan.md)
 - [Architettura Frontoffice](./architecture-reference.md)
 - [Page Component](../../Cms/app/View/Components/Page.php)

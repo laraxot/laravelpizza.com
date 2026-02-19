@@ -211,5 +211,5 @@ vs
 ## Collegamenti
 
 - [Filament Resources Coverage Analysis](./filament-resources-coverage-analysis.md)
-- [Filosofia Modulo User](./FILOSOFIA_MODULO_USER.md)
+- [Filosofia Modulo User](./filosofia_modulo_user.md)
 - [Filament Best Practices](./filament-best-practices.md)

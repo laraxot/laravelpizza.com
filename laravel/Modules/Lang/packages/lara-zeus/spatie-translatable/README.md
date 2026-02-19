@@ -62,7 +62,7 @@ You can also create your own custom fields. Please refer to the following exampl
 
 ## Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on recent changes.
+Please see [CHANGELOG](changelog.md) for more information on recent changes.
 
 ## Support
 available support channels:
@@ -71,7 +71,7 @@ available support channels:
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](contributing.md) for details.
 
 ## Security
 
@@ -86,4 +86,4 @@ If you find any security-related issues, please email info@larazeus.com instead 
 
 ## License
 
-The MIT License (MIT). Please have a look at [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please have a look at [License File](license.md) for more information.

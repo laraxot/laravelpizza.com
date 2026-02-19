@@ -84,11 +84,11 @@
 
 ### Documentazione Moduli
 {nome-progetto}
-- [**User**](../Modules/User/docs/README.md) - Documentazione modulo gestione utenti
-- [**Geo**](../Modules/Geo/docs/README.md) - Documentazione modulo dati geografici
-- [**Media**](../Modules/Media/docs/README.md) - Documentazione modulo gestione media
-- [**UI**](../Modules/UI/docs/README.md) - Documentazione modulo componenti UI
-- [**Xot**](../Modules/Xot/docs/README.md) - Documentazione modulo base
+- [**User**](../modules/user/docs/readme.md) - Documentazione modulo gestione utenti
+- [**Geo**](../modules/geo/docs/readme.md) - Documentazione modulo dati geografici
+- [**Media**](../modules/media/docs/readme.md) - Documentazione modulo gestione media
+- [**UI**](../modules/ui/docs/readme.md) - Documentazione modulo componenti UI
+- [**Xot**](../modules/xot/docs/readme.md) - Documentazione modulo base
 
 ## 📋 Convenzioni e Standard
 
