@@ -14,7 +14,7 @@ class LogRegistrationAction
     /**
      * Log a successful user registration activity.
      *
-     * @param  array<string, mixed>  $properties  Extra properties to log
+     * @param array<string, mixed> $properties Extra properties to log
      */
     public function execute(User $user, array $properties = []): void
     {

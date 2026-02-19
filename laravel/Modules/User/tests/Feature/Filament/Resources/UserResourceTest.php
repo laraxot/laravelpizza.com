@@ -50,17 +50,17 @@ test('user resource has correct form schema', function (): void {
     expect($section01Schema)->toHaveCount(3);
 
     // Check if name field exists
-    $nameField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'name');
+    $nameField = collect($section01Schema)->first(fn ($c) => 'name' === $c->getName());
     expect($nameField)->not->toBeNull();
     expect($nameField)->toBeInstanceOf(TextInput::class);
 
     // Check if email field exists
-    $emailField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'email');
+    $emailField = collect($section01Schema)->first(fn ($c) => 'email' === $c->getName());
     expect($emailField)->not->toBeNull();
     expect($emailField)->toBeInstanceOf(TextInput::class);
 
     // Check if password field exists
-    $passwordField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'password');
+    $passwordField = collect($section01Schema)->first(fn ($c) => 'password' === $c->getName());
     expect($passwordField)->not->toBeNull();
     expect($passwordField)->toBeInstanceOf(TextInput::class);
 
@@ -72,19 +72,19 @@ test('user resource has correct form schema', function (): void {
     expect($section02Schema)->toHaveCount(1);
 
     // Check if created_at field exists
-    $createdAtField = collect($section02Schema)->first(fn ($c) => $c->getName() === 'created_at');
+    $createdAtField = collect($section02Schema)->first(fn ($c) => 'created_at' === $c->getName());
     expect($createdAtField)->not->toBeNull();
     expect($createdAtField)->toBeInstanceOf(Placeholder::class);
 });
 
 test('user resource has combined relation manager tabs', function (): void {
-    $resource = new UserResource;
+    $resource = new UserResource();
 
     expect($resource->hasCombinedRelationManagerTabsWithContent())->toBeTrue();
 });
 
 test('user resource extends correct base class', function (): void {
-    $resource = new UserResource;
+    $resource = new UserResource();
 
     expect($resource)->toBeInstanceOf(XotBaseResource::class);
 });
@@ -104,7 +104,7 @@ test('user resource name field is required', function (): void {
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
 
-    $nameField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'name');
+    $nameField = collect($section01Schema)->first(fn ($c) => 'name' === $c->getName());
 
     expect($nameField->isRequired())->toBeTrue();
 });
@@ -114,7 +114,7 @@ test('user resource email field is required', function (): void {
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
 
-    $emailField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'email');
+    $emailField = collect($section01Schema)->first(fn ($c) => 'email' === $c->getName());
 
     expect($emailField->isRequired())->toBeTrue();
 });
@@ -124,12 +124,12 @@ test('user resource password field is required only on create', function (): voi
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
 
-    $passwordField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'password');
+    $passwordField = collect($section01Schema)->first(fn ($c) => 'password' === $c->getName());
 
     expect($passwordField->isRequired($createUserPage))->toBeTrue();
 
     // Test with EditUser page
-    $editUserPage = new EditUser;
+    $editUserPage = new EditUser();
     expect($passwordField->isRequired($editUserPage))->toBeFalse();
 });
 
@@ -138,7 +138,7 @@ test('user resource password field has correct type', function (): void {
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
 
-    $passwordField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'password');
+    $passwordField = collect($section01Schema)->first(fn ($c) => 'password' === $c->getName());
 
     expect($passwordField->getType())->toBe('password');
 });
@@ -148,7 +148,7 @@ test('user resource email field has unique validation', function (): void {
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
 
-    $emailField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'email');
+    $emailField = collect($section01Schema)->first(fn ($c) => 'email' === $c->getName());
 
     // Check if the field has unique validation
     $validationRules = $emailField->getValidationRules();
@@ -160,7 +160,7 @@ test('user resource created_at field shows diff for humans', function (): void {
     $section02 = $form['section02'];
     $section02Schema = $section02->getDefaultChildComponents();
 
-    $createdAtField = collect($section02Schema)->first(fn ($c) => $c->getName() === 'created_at');
+    $createdAtField = collect($section02Schema)->first(fn ($c) => 'created_at' === $c->getName());
 
     // Test with a record
     $content = $createdAtField->getContent($this->user);
@@ -173,14 +173,14 @@ test('user resource created_at field shows diff for humans', function (): void {
 });
 
 test('user resource can be instantiated', function (): void {
-    $resource = new UserResource;
+    $resource = new UserResource();
 
     expect($resource)->toBeInstanceOf(UserResource::class);
 });
 
 test('user resource has correct model', function (): void {
     // Since the model is commented out, we'll test the default behavior
-    $resource = new UserResource;
+    $resource = new UserResource();
 
     // The resource should work with the default model resolution
     expect($resource)->toBeInstanceOf(UserResource::class);

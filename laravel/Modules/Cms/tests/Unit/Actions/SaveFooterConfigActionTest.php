@@ -8,13 +8,13 @@ use Modules\Cms\Actions\SaveFooterConfigAction;
 use Modules\Cms\Datas\FooterData;
 
 test('SaveFooterConfigAction can be executed', function () {
-    $action = new SaveFooterConfigAction;
+    $action = new SaveFooterConfigAction();
 
     expect($action)->toBeInstanceOf(SaveFooterConfigAction::class);
 });
 
 test('SaveFooterConfigAction can execute with FooterData', function () {
-    $action = new SaveFooterConfigAction;
+    $action = new SaveFooterConfigAction();
 
     // Create FooterData using the from method with valid properties
     $footerData = FooterData::from([

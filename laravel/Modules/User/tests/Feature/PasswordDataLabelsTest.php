@@ -42,9 +42,9 @@ test('login form labels are translated', function (): void {
     $components = $form->getComponents();
 
     // Find components
-    $email = collect($components)->first(fn ($c) => $c->getName() === 'email');
-    $password = collect($components)->first(fn ($c) => $c->getName() === 'password');
-    $remember = collect($components)->first(fn ($c) => $c->getName() === 'remember');
+    $email = collect($components)->first(fn ($c) => 'email' === $c->getName());
+    $password = collect($components)->first(fn ($c) => 'password' === $c->getName());
+    $remember = collect($components)->first(fn ($c) => 'remember' === $c->getName());
 
     // Assert
     expect($email)->not->toBeNull();

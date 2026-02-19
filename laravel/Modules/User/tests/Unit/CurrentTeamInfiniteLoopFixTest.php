@@ -237,7 +237,7 @@ test('user creation does not trigger infinite loop', function (): void {
 test('multiple users can be created without issues', function (): void {
     // Arrange & Act: Crea più utenti in sequenza
     $users = [];
-    for ($i = 1; $i <= 5; $i++) {
+    for ($i = 1; $i <= 5; ++$i) {
         $users[] = User::create([
             'name' => "User {$i}",
             'email' => "user{$i}@example.com",

@@ -15,8 +15,9 @@ class ResolvePageContentAction
     /**
      * Resolves page content based on container and slug.
      *
-     * @param  string  $container0  The container identifier (e.g., 'events').
-     * @param  string  $slug0  The content slug (e.g., 'laravel-beginners-pizza-night').
+     * @param string $container0 The container identifier (e.g., 'events').
+     * @param string $slug0      The content slug (e.g., 'laravel-beginners-pizza-night').
+     *
      * @return array{content: mixed, contentType: ?string, view: ?string, pageSlug: string}
      */
     public function execute(string $container0, string $slug0): array
@@ -37,7 +38,7 @@ class ResolvePageContentAction
             $modelClass = $knownMappings[$container0];
             $item = $modelClass::where('slug', $slug0)->first();
 
-            if ($item !== null) {
+            if (null !== $item) {
                 $content = $item;
                 $contentType = $container0;
                 $view = 'blocks.'.$container0.'.detail';
@@ -45,26 +46,26 @@ class ResolvePageContentAction
         }
 
         // Priority 2: Check if exact CMS page exists (e.g., events.laravel-beginners-pizza-night)
-        if ($content === null) {
+        if (null === $content) {
             $page = PageModel::firstWhere('slug', $fullSlug);
 
-            if ($page !== null) {
+            if (null !== $page) {
                 $pageSlug = $fullSlug;
             }
         }
 
         // Priority 3: Fallback to container.view (e.g., events.view)
-        if ($content === null && $pageSlug === '') {
+        if (null === $content && '' === $pageSlug) {
             $viewSlug = $container0.'.view';
             $viewPage = PageModel::firstWhere('slug', $viewSlug);
 
-            if ($viewPage !== null) {
+            if (null !== $viewPage) {
                 $pageSlug = $viewSlug;
             }
         }
 
         // Priority 4: Last resort - use exact slug (will show 404 or placeholder)
-        if ($content === null && $pageSlug === '') {
+        if (null === $content && '' === $pageSlug) {
             $pageSlug = $fullSlug;
         }
 

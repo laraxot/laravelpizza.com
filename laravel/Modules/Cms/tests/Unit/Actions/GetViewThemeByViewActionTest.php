@@ -7,13 +7,13 @@ uses(Modules\Cms\Tests\TestCase::class);
 use Modules\Cms\Actions\GetViewThemeByViewAction;
 
 test('GetViewThemeByViewAction can be executed', function () {
-    $action = new GetViewThemeByViewAction;
+    $action = new GetViewThemeByViewAction();
 
     expect($action)->toBeInstanceOf(GetViewThemeByViewAction::class);
 });
 
 test('GetViewThemeByViewAction returns string when executed with empty view', function () {
-    $action = new GetViewThemeByViewAction;
+    $action = new GetViewThemeByViewAction();
 
     $result = $action->execute();
 
@@ -21,7 +21,7 @@ test('GetViewThemeByViewAction returns string when executed with empty view', fu
 });
 
 test('GetViewThemeByViewAction returns string when executed with view', function () {
-    $action = new GetViewThemeByViewAction;
+    $action = new GetViewThemeByViewAction();
 
     $result = $action->execute('test::view');
 
@@ -29,7 +29,7 @@ test('GetViewThemeByViewAction returns string when executed with view', function
 });
 
 test('GetViewThemeByViewAction returns original view when view does not exist', function () {
-    $action = new GetViewThemeByViewAction;
+    $action = new GetViewThemeByViewAction();
 
     $view = 'nonexistent::view';
     $result = $action->execute($view);

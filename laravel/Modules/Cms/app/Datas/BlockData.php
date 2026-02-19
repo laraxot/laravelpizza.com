@@ -7,17 +7,18 @@ namespace Modules\Cms\Datas;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use Livewire\Wireable;
 use Modules\Cms\Actions\ResolveBlockQueryAction;
-use Spatie\LaravelData\Concerns\WireableData;
-use Spatie\LaravelData\Data;
-use Spatie\LaravelData\DataCollection;
-use Illuminate\Support\Str;
-use Webmozart\Assert\Assert;
 
 use function Safe\fclose;
 use function Safe\fopen;
 use function Safe\fread;
+
+use Spatie\LaravelData\Concerns\WireableData;
+use Spatie\LaravelData\Data;
+use Spatie\LaravelData\DataCollection;
+use Webmozart\Assert\Assert;
 
 class BlockData extends Data implements Wireable
 {
@@ -105,10 +106,10 @@ class BlockData extends Data implements Wireable
         $header = (string) fread($handle, 1024);
         fclose($handle);
 
-        return str_contains($header, 'new class extends Component') ||
-               str_contains($header, 'Livewire\Volt\Component') ||
-               str_contains($header, 'volt(') ||
-               str_contains($header, 'state(');
+        return str_contains($header, 'new class extends Component')
+               || str_contains($header, 'Livewire\Volt\Component')
+               || str_contains($header, 'volt(')
+               || str_contains($header, 'state(');
     }
 
     private function normalizeComponentName(string $view): string

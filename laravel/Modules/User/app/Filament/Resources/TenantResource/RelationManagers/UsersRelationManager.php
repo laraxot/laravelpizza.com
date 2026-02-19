@@ -33,14 +33,14 @@ class UsersRelationManager extends XotBaseRelationManager
             DateTimePicker::make('email_verified_at')->nullable(),
             TextInput::make('password')
                 ->password()
-                ->required(fn ($context) => $context === 'create')
+                ->required(fn ($context) => 'create' === $context)
                 ->minLength(8)
                 ->same('password_confirmation')
                 ->dehydrated(filled(...))
                 ->dehydrateStateUsing(bcrypt(...)),
             TextInput::make('password_confirmation')
                 ->password()
-                ->required(fn ($context) => $context === 'create')
+                ->required(fn ($context) => 'create' === $context)
                 ->minLength(8),
         ];
     }

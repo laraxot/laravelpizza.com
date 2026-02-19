@@ -16,7 +16,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder|TeamUser newQuery()
  * @method static Builder|TeamUser query()
  *
- * @property int $id
+ * @property int         $id
  * @property string|null $tenant_id
  * @property string|null $user_id
  * @property Carbon|null $created_at

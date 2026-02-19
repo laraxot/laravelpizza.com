@@ -9,7 +9,7 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->widget = new StatsOverviewWidget;
+    $this->widget = new StatsOverviewWidget();
 });
 
 test('stats overview widget extends correct base class', function (): void {
@@ -79,7 +79,7 @@ test('stats overview widget getStats method has correct return type', function (
     $getStatsMethod = $reflection->getMethod('getStats');
 
     $returnType = $getStatsMethod->getReturnType();
-    if ($returnType !== null) {
+    if (null !== $returnType) {
         expect($returnType->getName())->toBe('array');
     }
 });

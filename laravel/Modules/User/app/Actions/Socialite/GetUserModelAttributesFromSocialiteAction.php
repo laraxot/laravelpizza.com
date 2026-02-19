@@ -20,7 +20,7 @@ class GetUserModelAttributesFromSocialiteAction
         }
 
         $nameFieldsResolver = app(UserNameFieldsResolver::class, ['user' => $oauthUser]);
-        if ($nameFieldsResolver === null) {
+        if (null === $nameFieldsResolver) {
             throw new \RuntimeException('Impossibile istanziare UserNameFieldsResolver');
         }
 

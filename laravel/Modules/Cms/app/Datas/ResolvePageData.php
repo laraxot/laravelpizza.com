@@ -22,7 +22,7 @@ class ResolvePageData extends Data
     public function __construct(
         string $renderMode,
         ?object $item,
-        string $pageSlug
+        string $pageSlug,
     ) {
         $this->renderMode = $renderMode;
         $this->item = $item;

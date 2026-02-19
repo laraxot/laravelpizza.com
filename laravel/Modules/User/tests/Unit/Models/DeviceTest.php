@@ -294,7 +294,7 @@ test('device has factory', function (): void {
 });
 
 test('device has fillable attributes', function (): void {
-    $device = new Device;
+    $device = new Device();
     $expectedFillable = [
         'id',
         'uuid',
@@ -315,7 +315,7 @@ test('device has fillable attributes', function (): void {
 });
 
 test('device has casts', function (): void {
-    $device = new Device;
+    $device = new Device();
     $expectedCasts = [
         'id' => 'string',
         'uuid' => 'string',

@@ -18,21 +18,21 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 /**
  * ---.
  *
- * @property string $id
+ * @property string                       $id
  * @property array<array-key, mixed>|null $title
  * @property array<array-key, mixed>|null $description
- * @property string|null $slug
- * @property string|null $disk
+ * @property string|null                  $slug
+ * @property string|null                  $disk
  * @property array<array-key, mixed>|null $attachment
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property ProfileContract|null $creator
- * @property MediaCollection<int, Media> $media
- * @property int|null $media_count
- * @property mixed $translations
- * @property ProfileContract|null $updater
+ * @property Carbon|null                  $created_at
+ * @property Carbon|null                  $updated_at
+ * @property string|null                  $created_by
+ * @property string|null                  $updated_by
+ * @property ProfileContract|null         $creator
+ * @property MediaCollection<int, Media>  $media
+ * @property int|null                     $media_count
+ * @property mixed                        $translations
+ * @property ProfileContract|null         $updater
  *
  * @method static Builder<static>|Attachment newModelQuery()
  * @method static Builder<static>|Attachment newQuery()
@@ -51,7 +51,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @method static Builder<static>|Attachment whereTitle($value)
  * @method static Builder<static>|Attachment whereUpdatedAt($value)
  * @method static Builder<static>|Attachment whereUpdatedBy($value)
- * @method static static|null firstWhere(string $column, mixed $operator = null, mixed $value = null)
+ * @method static static|null                firstWhere(string $column, mixed $operator = null, mixed $value = null)
  *
  * @property ProfileContract|null $deleter
  *

@@ -11,12 +11,12 @@ use Illuminate\Support\Carbon;
 /**
  * Modules\User\Contracts\TeamInvitationContract.
  *
- * @property int $id
- * @property int $team_id
- * @property string $email
- * @property string|null $role
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
+ * @property int          $id
+ * @property int          $team_id
+ * @property string       $email
+ * @property string|null  $role
+ * @property Carbon|null  $created_at
+ * @property Carbon|null  $updated_at
  * @property TeamContract $team
  *
  * @method static Builder|TeamInvitationContract newModelQuery()

@@ -51,7 +51,7 @@ abstract class TestHelper extends BaseTestCase
         return $role_names = $user
             ->getRoleNames()
             ->map(function ($item) {
-                if ($item !== 'super-admin') {
+                if ('super-admin' !== $item) {
                     return '/'.mb_substr($item, 0, -7).'/admin';
                 }
             })

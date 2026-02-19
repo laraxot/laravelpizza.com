@@ -15,16 +15,19 @@ use Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Datas\XotData;
 use Nwidart\Modules\Facades\Module;
-use Webmozart\Assert\Assert;
 
 use function Safe\realpath;
+
+use Webmozart\Assert\Assert;
 
 class FolioVoltServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
      */
-    public function register(): void {}
+    public function register(): void
+    {
+    }
 
     /**
      * Bootstrap services.

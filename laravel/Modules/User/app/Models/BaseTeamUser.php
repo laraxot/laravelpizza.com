@@ -22,8 +22,8 @@ use Parental\HasChildren;
  * @method static Builder|TeamUser newQuery()
  * @method static Builder|TeamUser query()
  *
- * @property int $id
- * @property string $uuid
+ * @property int         $id
+ * @property string      $uuid
  * @property string|null $team_id
  * @property string|null $user_id
  * @property string|null $role

@@ -39,13 +39,13 @@ test('can create role with all fields', function (): void {
 });
 
 test('role has connection attribute', function (): void {
-    $role = new Role;
+    $role = new Role();
 
     expect($role->connection)->toBe('user');
 });
 
 test('role has key type attribute', function (): void {
-    $role = new Role;
+    $role = new Role();
 
     expect($role->keyType)->toBe('string');
 });
@@ -73,7 +73,7 @@ test('can find role by guard name', function (): void {
     $webRoles = Role::where('guard_name', 'web')->get();
 
     expect($webRoles->count())->toBeGreaterThanOrEqual(2);
-    expect($webRoles->every(fn ($role) => $role->guard_name === 'web'))->toBeTrue();
+    expect($webRoles->every(fn ($role) => 'web' === $role->guard_name))->toBeTrue();
 });
 
 test('can find role by team id', function (): void {

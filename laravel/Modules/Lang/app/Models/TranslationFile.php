@@ -14,20 +14,21 @@ use Illuminate\Support\Facades\File;
 use Modules\Lang\Actions\GetAllTranslationAction;
 use Modules\Lang\Database\Factories\TranslationFileFactory;
 use Modules\Xot\Contracts\ProfileContract;
-use Sushi\Sushi;
 
 use function Safe\json_encode;
 
+use Sushi\Sushi;
+
 /**
- * @property string|null $key
- * @property string|null $path
- * @property string|null $id
- * @property string|null $name
+ * @property string|null                  $key
+ * @property string|null                  $path
+ * @property string|null                  $id
+ * @property string|null                  $name
  * @property array<array-key, mixed>|null $content
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $updater
+ * @property ProfileContract|null         $creator
+ * @property ProfileContract|null         $updater
  *
- * @method static TranslationFileFactory factory($count = null, $state = [])
+ * @method static TranslationFileFactory          factory($count = null, $state = [])
  * @method static Builder<static>|TranslationFile newModelQuery()
  * @method static Builder<static>|TranslationFile newQuery()
  * @method static Builder<static>|TranslationFile query()

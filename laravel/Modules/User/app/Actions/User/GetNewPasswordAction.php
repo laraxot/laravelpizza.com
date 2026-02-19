@@ -17,7 +17,7 @@ class GetNewPasswordAction
         $user = $record;
 
         $password = once(function () use ($user) {
-            $generator = new GetPronounceablePasswordAction;
+            $generator = new GetPronounceablePasswordAction();
             $plainPassword = $generator->execute();
             $hasher = app(\Illuminate\Contracts\Hashing\Hasher::class);
             $hashedPassword = $hasher->make($plainPassword);
