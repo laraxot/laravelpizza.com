@@ -140,6 +140,35 @@ Laraxot uses `mcamara/laravel-localization` as the exclusive solution for multi-
 - Integrate with the Icon Management standard: use `x-filament::icon` with the `ui-flags.` prefix.
 - Note: Use `gb` for the English flag if the locale is `en`.
 
+### The "Sacred Pattern" (Nested Keys)
+Every localized field or action in a Laraxot module or theme MUST follow the **Sacred Pattern**. Flat translation keys are strictly forbidden for UI elements.
+
+**Mandatory Structure:**
+```php
+'fields' => [
+    'field_name' => [
+        'label' => '...',       // Mandatory
+        'placeholder' => '...', // Mandatory
+        'tooltip' => '...',     // Mandatory
+        'helper_text' => '...', // Mandatory
+        'description' => '...', // Mandatory
+        'icon' => '...',        // Mandatory
+        'color' => '...',       // Mandatory
+    ],
+],
+'actions' => [
+    'action_name' => [
+        // Same 7 mandatory keys as fields
+    ],
+],
+```
+
+**Usage in Blade:**
+- Standard: `{{ __('pub_theme::resource.fields.attribute.label') }}`
+- Action: `{{ __('pub_theme::resource.actions.submit.label') }}`
+
+This structure ensures that every component (Filament or Volt) has access to a complete set of metadata for rendering consistent UI elements.
+
 ## Design & Branding Standards
 
 Laraxot follows the **"Symbolic Minimalism"** religion for all branding and UI assets.

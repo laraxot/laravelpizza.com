@@ -29,12 +29,12 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
-                    <?php echo e(__('pub_theme::event.back_to_events.label')); ?>
+                    <?php echo e(__('pub_theme::event.actions.back_to_events.label')); ?>
 
                 </a>
 
                 <span class="inline-block <?php echo e($this->isUpcoming() ? 'bg-green-600' : 'bg-slate-500'); ?> text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
-                    <?php echo e($this->isUpcoming() ? __('pub_theme::event.status_upcoming.label') : __('pub_theme::event.status_past.label')); ?>
+                    <?php echo e($this->isUpcoming() ? __('pub_theme::event.status.upcoming.label') : __('pub_theme::event.status.past.label')); ?>
 
                 </span>
 
@@ -60,7 +60,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                                 </svg>
                             </div>
                             <div class="ml-4">
-                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400"><?php echo e(__('pub_theme::event.date.label')); ?></p>
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400"><?php echo e(__('pub_theme::event.fields.date.label')); ?></p>
                                 <p class="text-base font-semibold text-slate-900 dark:text-white"><?php echo e($this->getDate()); ?></p>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                                 </svg>
                             </div>
                             <div class="ml-4">
-                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400"><?php echo e(__('pub_theme::event.time.label')); ?></p>
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400"><?php echo e(__('pub_theme::event.fields.time.label')); ?></p>
                                 <p class="text-base font-semibold text-slate-900 dark:text-white"><?php echo e($this->getTime()); ?></p>
                             </div>
                         </div>
@@ -87,7 +87,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                                 </svg>
                             </div>
                             <div class="ml-4">
-                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400"><?php echo e(__('pub_theme::event.location.label')); ?></p>
+                                <p class="text-sm font-medium text-slate-500 dark:text-slate-400"><?php echo e(__('pub_theme::event.fields.location.label')); ?></p>
                                 <p class="text-base font-semibold text-slate-900 dark:text-white"><?php echo e($this->event->location ?? 'Location TBA'); ?></p>
                             </div>
                         </div>
@@ -98,7 +98,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                 <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($this->event->description): ?>
                 <section class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-8 border border-slate-200 dark:border-slate-700">
                     <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-                        <?php echo e(__('pub_theme::event.about_this_event.label')); ?>
+                        <?php echo e(__('pub_theme::event.fields.about_this_event.label')); ?>
 
                     </h2>
                     <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -112,7 +112,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                 <section class="bg-white dark:bg-slate-800 rounded-lg shadow-sm p-8 border border-slate-200 dark:border-slate-700">
                     <div class="flex items-center justify-between mb-6">
                         <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
-                            <?php echo e(__('pub_theme::event.attendees.label')); ?>
+                            <?php echo e(__('pub_theme::event.fields.attendees.label')); ?>
 
                         </h2>
                         <span class="text-lg font-medium text-slate-600 dark:text-slate-400">
@@ -139,7 +139,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                         </div>
                         <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(($this->event->attendees_count ?? 0) > 0): ?>
                         <span class="ml-4 text-sm text-slate-500 dark:text-slate-400">
-                            <?php echo e(__('pub_theme::event.people_joined.label', ['count' => $this->event->attendees_count ?? 0])); ?>
+                            <?php echo e(__('pub_theme::event.fields.people_joined.label', ['count' => $this->event->attendees_count ?? 0])); ?>
 
                         </span>
                         <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
@@ -153,13 +153,13 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                     <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($this->isUpcoming()): ?>
                     <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 border border-slate-200 dark:border-slate-700">
                         <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                            <?php echo e(__('pub_theme::event.join_event.label')); ?>
+                            <?php echo e(__('pub_theme::event.actions.rsvp_now.label')); ?>
 
                         </h3>
 
                         <div class="mb-6">
                             <p class="text-sm text-slate-600 dark:text-slate-400 mb-1">
-                                <?php echo e(__('pub_theme::event.available_spots.label')); ?>
+                                <?php echo e(__('pub_theme::event.fields.spots_available.label')); ?>
 
                             </p>
                             <p class="text-4xl font-bold text-red-600 dark:text-red-400">
@@ -169,7 +169,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
                         </div>
 
                         <button wire:click="openBookingModal" type="button" class="w-full bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-300 text-white font-bold py-3.5 px-6 rounded-lg transition-all shadow-md hover:shadow-lg">
-                            <?php echo e(__('pub_theme::event.book_your_spot.label')); ?>
+                            <?php echo e(__('pub_theme::event.actions.rsvp_now.label')); ?>
 
                         </button>
 
@@ -182,7 +182,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
                     <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-6 border border-slate-200 dark:border-slate-700">
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">
-                            <?php echo e(__('pub_theme::event.share_event.label')); ?>
+                            <?php echo e(__('pub_theme::event.actions.share_event.label')); ?>
 
                         </h3>
                         <div class="flex gap-3">
@@ -217,7 +217,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
         <div class="inline-block align-bottom bg-white dark:bg-slate-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full p-8">
             <div>
                 <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4" id="modal-title">
-                    <?php echo e(__('pub_theme::event.book_your_spot.label')); ?>
+                    <?php echo e(__('pub_theme::event.actions.rsvp_now.label')); ?>
 
                 </h3>
                 <div class="space-y-4">

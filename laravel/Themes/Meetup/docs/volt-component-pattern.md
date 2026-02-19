@@ -1,4 +1,104 @@
-# Volt Component Pattern in Themes
+# Volt Component Pattern - Meetup Theme
+
+## 🚫 ANTI-PATTERN: BLADE con PHP INLINE (VIETATO)
+
+```php
+<?php
+// ❌❌❌ MAI FARE QUESTO - COMPLETAMENTE SBAGLIATO ❌❌❌
+declare(strict_types=1);
+
+use Modules\Meetup\Models\Event;
+
+// Carica l'evento dallo slug - LOGICA INLINE VIETATA!
+$slug0 = $slug0 ?? '';
+$slugToUse = $slug0;
+if (empty($slugToUse)) {
+    $slugToUse = Request::segment(3);
+}
+$event = null;
+if (!empty($slugToUse)) {
+    $event = Event::where('slug', $slugToUse)->first();
+}
+$eventsUrl = LaravelLocalization::localizeUrl('/events');
+$isUpcoming = $event?->start_date?->isFuture() ?? true;
+?>
+
+<div>
+    @if($event)
+        <p>{{ $event->title }}</p>
+    @endif
+</div>
+```
+
+**Perché è SBAGLIATO:**
+- ❌ Non reattivo (no Livewire)
+- ❌ Logica sparsa nel template
+- ❌ Difficile da testare
+- ❌ Non type-safe
+- ❌ Non segue filosofia Laraxot
+- ❌ Mix di PHP e Blade senza struttura
+
+**⚠️ MAI tornare a questo pattern. È un errore architetturale grave.**
+
+---
+
+## ✅ PATTERN CORRETTO: VOLT COMPONENT
+
+Il **Volt Component Pattern** è l'unico pattern approvato per componenti interattivi.
+
+### Esempio Corretto
+
+```php
+<?php
+
+/**
+ * Event Detail - Volt Component
+ * Unica fonte di verità: Modello Event.
+ */
+
+use Livewire\Volt\Component;
+use Modules\Meetup\Models\Event;
+use Illuminate\Support\Carbon;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+
+new class extends Component {
+    // Props from parent/route
+    public ?Event $event = null;
+    public ?Event $item = null;
+    public string $container0 = '';
+    public string $slug0 = '';
+    
+    // Component state
+    public bool $showBookingModal = false;
+    public string $bookingName = '';
+    public string $bookingEmail = '';
+    public string $shareUrl = '';
+    
+    public function mount(): void
+    {
+        if ($this->event === null && $this->item === null && !empty($this->slug0)) {
+            $this->event = Event::where('slug', $this->slug0)->first();
+        }
+        
+        if ($this->event) {
+            $this->shareUrl = LaravelLocalization::localizeUrl('/events/' . $this->event->slug);
+        }
+    }
+    
+    public function isUpcoming(): bool
+    {
+        return $this->event?->start_date?->isFuture() ?? false;
+    }
+};
+?>
+
+<div>
+    @if($this->event)
+        <h1>{{ $this->event->title }}</h1>
+        <p>{{ $this->isUpcoming() ? 'Upcoming' : 'Past' }}</p>
+    @endif
+</div>
+```
 
 ## Overview
 
