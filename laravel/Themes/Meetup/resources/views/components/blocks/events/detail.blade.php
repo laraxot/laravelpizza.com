@@ -165,7 +165,7 @@ new class extends Component {
                             </div>
                             <div class="ml-4">
                                 <p class="text-sm font-medium text-slate-500 dark:text-slate-400">{{ __('pub_theme::event.fields.location.label') }}</p>
-                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $this->event->location ?? 'Location TBA' }}</p>
+                                <p class="text-base font-semibold text-slate-900 dark:text-white">{{ $this->event->location ?? __('pub_theme::event.messages.location_tba.label') }}</p>
                             </div>
                         </div>
                     </div>
@@ -240,7 +240,7 @@ new class extends Component {
                         </button>
 
                         <p class="text-xs text-slate-500 dark:text-slate-400 mt-4 text-center">
-                            {{ __('pub_theme::event.spots_filling_fast.label') }}
+                            {{ __('pub_theme::event.messages.spots_filling_fast.label') }}
                         </p>
                     </div>
                     @endif
@@ -249,11 +249,8 @@ new class extends Component {
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">
                             {{ __('pub_theme::event.actions.share_event.label') }}
                         </h3>
-                        <div class="flex gap-3">
-                            <button wire:click="openShareModal" type="button" class="flex-1 bg-sky-500 hover:bg-sky-600 text-white py-2.5 px-4 rounded-lg transition-colors font-medium text-sm flex items-center justify-center gap-2">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                                Twitter
-                            </button>
+                        <div class="flex flex-col gap-4">
+                            <x-seo::social-share :data="$this->event->getSocialShareData()" />
                         </div>
                     </div>
                 </div>
@@ -262,10 +259,10 @@ new class extends Component {
     </div>
     @else
     <div class="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
-        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">{{ __('pub_theme::event.no_events_found.label') }}</h2>
-        <p class="text-slate-600 dark:text-slate-400 mb-8">{{ __('pub_theme::event.check_back_later.label') }}</p>
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">{{ __('pub_theme::event.messages.no_events_found.label') }}</h2>
+        <p class="text-slate-600 dark:text-slate-400 mb-8">{{ __('pub_theme::event.messages.check_back_later.label') }}</p>
         <a href="{{ LaravelLocalization::localizeUrl('/events') }}" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold">
-            {{ __('pub_theme::event.back_to_events.label') }}
+            {{ __('pub_theme::event.actions.back_to_events.label') }}
         </a>
     </div>
     @endif
@@ -284,21 +281,21 @@ new class extends Component {
                 </h3>
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Name</label>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">{{ __('pub_theme::event.fields.name.label') }}</label>
                         <input type="text" wire:model="bookingName" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 text-slate-900 dark:text-white focus:ring-2 focus:ring-red-500 outline-none transition-all">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email</label>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">{{ __('pub_theme::event.fields.email.label') }}</label>
                         <input type="email" wire:model="bookingEmail" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 text-slate-900 dark:text-white focus:ring-2 focus:ring-red-500 outline-none transition-all">
                     </div>
                 </div>
             </div>
             <div class="mt-8 flex gap-3">
                 <button type="button" wire:click="book" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition-colors">
-                    Confirm Booking
+                    {{ __('pub_theme::event.actions.confirm_booking.label') }}
                 </button>
                 <button type="button" wire:click="closeBookingModal" class="flex-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold py-3 px-4 rounded-lg transition-colors">
-                    Cancel
+                    {{ __('pub_theme::event.actions.cancel.label') }}
                 </button>
             </div>
         </div>

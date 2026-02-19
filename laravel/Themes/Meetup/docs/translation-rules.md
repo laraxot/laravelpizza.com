@@ -1,120 +1,132 @@
-# Translation Rules - Meetup Theme
+# Regole per le Traduzioni — Meetup Theme (pub_theme)
 
-## Regola Fondamentale: Struttura Espansa delle Traduzioni
+## Struttura obbligatoria
 
-> **ATTENZIONE:** Questa è una copia mirror della documentazione nel modulo.  
-> **Source of truth:** `Modules/Meetup/docs/translation-rules.md`
+Le traduzioni del tema pubblico usano il namespace `pub_theme::` che mappa a `Themes/Meetup/lang/{locale}/`.
 
-### La Regola d'Oro
+**MAI chiavi flat. SEMPRE struttura espansa con sotto-chiavi.**
 
-**MAI usare chiavi di traduzione "flat". Tutte le traduzioni DEVONO seguire la struttura espansa con sotto-chiavi.**
+## Gerarchia dei file
 
-❌ **ERRATO (Flat Keys):**
-```php
-'about_this_event' => 'About This Event'
-// Genera: meetup::events.about_this_event ❌
+```
+Themes/Meetup/lang/{locale}/
+├── event.php       # Evento singolo (detail page)
+├── events.php      # Lista eventi
+├── home.php        # Home page
+└── navigation.php  # Navigazione
 ```
 
-✅ **CORRETTO (Expanded Structure):**
-```php
-'about_this_event' => [
-    'label' => 'About This Event',
-    'color' => 'blue',
-    'icon' => 'heroicon-o-information-circle',
-]
-// Genera: meetup::events.about_this_event.label ✅
-//         meetup::events.about_this_event.color ✅
-```
-
-## Struttura Standard
+## Struttura standard per `event.php`
 
 ```php
 return [
-    'navigation' => [...],
-    'label' => 'Singolare',
-    'plural_label' => 'Plurale',
-    'fields' => [
+    'navigation' => [           // Metadati risorsa Filament
+        'label' => '...',
+        'plural_label' => '...',
+        'group' => 'Meetup',
+        'icon' => 'heroicon-o-calendar',
+        'sort' => 11,
+    ],
+    'label' => '...',           // Singolare
+    'plural_label' => '...',    // Plurale
+
+    'fields' => [               // Campi form/tabella
         'field_name' => [
-            'label' => 'Label',
-            'placeholder' => 'Placeholder',
-            'help' => 'Help text',
+            'label'       => '...',
+            'placeholder' => '...',
+            'tooltip'     => '...',
+            'helper_text' => '',
+            'description' => '...',
+            'icon'        => 'heroicon-o-...',
+            'color'       => 'primary',
         ],
     ],
-    'actions' => [
+
+    'actions' => [              // Azioni/bottoni
         'action_name' => [
-            'label' => 'Label',
-            'modal_heading' => 'Heading',
-            'success' => 'Messaggio successo',
+            'label'       => '...',
+            'placeholder' => '',
+            'tooltip'     => '...',
+            'helper_text' => '',
+            'description' => '...',
+            'icon'        => 'heroicon-o-...',
+            'color'       => 'primary',
         ],
     ],
-    'sections' => [
-        'section_name' => [
-            'label' => 'Label',
-            'heading' => 'Heading',
-            'color' => 'blue',
-            'icon' => 'heroicon-o-icon',
+
+    'status' => [               // Stati/badge
+        'upcoming' => ['label' => '...'],
+        'past'     => ['label' => '...'],
+    ],
+
+    'not_found' => [            // Errore 404 Filament
+        'label' => '...',
+    ],
+    'not_found_description' => [
+        'label' => '...',
+    ],
+
+    'messages' => [             // Messaggi UI (non campi, non azioni)
+        'message_key' => [
+            'label'       => '...',
+            'description' => '...',
         ],
     ],
 ];
 ```
 
-## Esempio per Event Detail Page
+## Chiavi attualmente implementate (event.php)
 
-```php
-// File: Modules/Meetup/lang/it/event_detail.php
+### `fields.*`
+- `date`, `time`, `location`, `about_this_event`
+- `attendees`, `people_joined` (usa `:count` come parametro)
+- `topics`, `spots_available`, `free_entry`
+- `name`, `email` (modal prenotazione)
 
-'sections' => [
-    'about_this_event' => [
-        'label' => 'Informazioni sull\'evento',
-        'heading' => 'About This Event',
-        'color' => 'blue',
-        'icon' => 'heroicon-o-information-circle',
-    ],
-    'event_location' => [
-        'label' => 'Luogo dell\'evento',
-        'heading' => 'Event Location',
-        'color' => 'green',
-        'icon' => 'heroicon-o-map-pin',
-    ],
-    'attendees' => [
-        'label' => 'Partecipanti',
-        'heading' => 'Attendees',
-        'color' => 'purple',
-        'icon' => 'heroicon-o-users',
-    ],
-],
+### `actions.*`
+- `share_event`, `view_map`, `rsvp_now`, `sign_in_to_rsvp`
+- `back_to_events`, `confirm_booking`, `cancel`
 
-'actions' => [
-    'book_spot' => [
-        'label' => 'Prenota il tuo posto',
-        'tooltip' => 'Clicca per registrarti',
-        'modal_heading' => 'Conferma iscrizione',
-        'success' => 'Iscrizione completata!',
-    ],
-],
-```
+### `messages.*`
+- `spots_filling_fast`, `no_events_found`, `check_back_later`, `location_tba`
 
-## Utilizzo nei Componenti Blade
+## Utilizzo nei Blade
 
 ```blade
-{{-- CORRETTO --}}
-<h2>{{ __('meetup::event_detail.sections.about_this_event.heading') }}</h2>
+{{-- ✅ CORRETTO: struttura fields --}}
+{{ __('pub_theme::event.fields.date.label') }}
+{{ __('pub_theme::event.fields.people_joined.label', ['count' => $count]) }}
 
-<span class="text-{{ __('meetup::event_detail.sections.about_this_event.color') }}-600">
-    {{ __('meetup::event_detail.sections.about_this_event.label') }}
-</span>
+{{-- ✅ CORRETTO: struttura actions --}}
+{{ __('pub_theme::event.actions.back_to_events.label') }}
+{{ __('pub_theme::event.actions.share_event.label') }}
 
-<x-heroicon-o-information-circle 
-    class="w-6 h-6 text-blue-500" 
-    aria-label="{{ __('meetup::event_detail.sections.about_this_event.label') }}"
-/>
+{{-- ✅ CORRETTO: struttura messages --}}
+{{ __('pub_theme::event.messages.spots_filling_fast.label') }}
+{{ __('pub_theme::event.messages.no_events_found.label') }}
+
+{{-- ✅ CORRETTO: struttura status --}}
+{{ __('pub_theme::event.status.upcoming.label') }}
+
+{{-- ❌ ERRATO: chiave flat (rimossa) --}}
+{{ __('pub_theme::event.date.label') }}
+{{ __('pub_theme::event.share_event.label') }}
 ```
 
-## Collegamenti
+## Regole anti-flat
 
-- **Documentazione Completa:** `Modules/Meetup/docs/translation-rules.md`
-- **Modulo Meetup:** `Modules/Meetup/`
-- **Tema Meetup:** `Themes/Meetup/`
+Le chiavi "piatte" (ex: `pub_theme::event.date.label`) sono **vietate** perché:
+1. Duplicano `fields.date.label` — violano DRY
+2. Non portano `tooltip`, `placeholder`, `description` — non estendibili
+3. Il blade non le usa più — sono dead code
 
----
-**Data:** Febbraio 2026
+Se serve accedere a un campo nelle view, si usa sempre `fields.{name}.label`.
+
+## Lingue supportate
+
+`it` (primaria) · `en` · `es` · `de` · `fr` · `ru` · `hi` · `zh`
+
+## Riferimenti
+
+- Filosofia Laraxot: `Modules/Xot/docs/best-practices/translations-best-practices.md`
+- Localizzazione URL: `Modules/Lang/docs/laravel-localization-mcamara.md`

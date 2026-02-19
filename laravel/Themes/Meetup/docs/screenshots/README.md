@@ -6,6 +6,11 @@
 
 ## 📸 Screenshot Disponibili
 
+### Event Detail Alignment
+
+- **`laravelpizza-events-1-prod`** - Event detail produzione https://laravelpizza.com/events/1
+- **`laravelpizza-events-local`** - Event detail locale http://127.0.0.1:8000/it/events/laravel-11-release-pizza-party-1
+
 ### Homepage Alignment
 
 - **`homepage-locale-after-fixes.png`** - Homepage locale dopo le correzioni di allineamento

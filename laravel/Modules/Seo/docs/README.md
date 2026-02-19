@@ -1,17 +1,11 @@
 # Seo Module
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
 [![Filament 4.x](https://img.shields.io/badge/Filament-4.x-blue.svg)](https://filamentphp.com/)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 [![Translation Ready](https://img.shields.io/badge/Translation-IT%20%7C%20EN-green.svg)](https://laravel.com/docs/localization)
-=======
-This directory contains the documentation for the Seo module.
->>>>>>> 013c0d2 (.)
-=======
+
 The **Seo Module** provides a comprehensive search engine optimization toolkit for Laravel applications, integrating advanced metadata management, sitemaps, structured data, and AI-powered content analysis.
->>>>>>> b33919b (.)
 
 ## 🚀 Features
 

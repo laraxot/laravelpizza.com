@@ -59,7 +59,7 @@ return [
             'color' => 'primary',
         ],
         'people_joined' => [
-            'label' => 'Bereits beigetretene Personen',
+            'label' => ':count Personen beigetreten',
             'placeholder' => '',
             'tooltip' => 'Gesamtzahl der Personen, die ihre Teilnahme bestätigt haben',
             'helper_text' => '',
@@ -93,6 +93,24 @@ return [
             'description' => 'Informationen über die Kostenlosigkeit der Veranstaltung',
             'icon' => 'heroicon-o-ticket',
             'color' => 'success',
+        ],
+        'name' => [
+            'label' => 'Name',
+            'placeholder' => 'Ihr vollständiger Name',
+            'tooltip' => 'Geben Sie Ihren vollständigen Namen ein',
+            'helper_text' => '',
+            'description' => 'Name des Teilnehmers der Veranstaltung',
+            'icon' => 'heroicon-o-user',
+            'color' => 'primary',
+        ],
+        'email' => [
+            'label' => 'E-Mail',
+            'placeholder' => 'ihre@email.de',
+            'tooltip' => 'Geben Sie Ihre E-Mail-Adresse ein',
+            'helper_text' => '',
+            'description' => 'Kontakt-E-Mail für die Buchungsbestätigung',
+            'icon' => 'heroicon-o-envelope',
+            'color' => 'primary',
         ],
     ],
     'actions' => [
@@ -141,6 +159,24 @@ return [
             'icon' => 'heroicon-o-arrow-left',
             'color' => 'secondary',
         ],
+        'confirm_booking' => [
+            'label' => 'Buchung bestätigen',
+            'placeholder' => '',
+            'tooltip' => 'Bestätigen Sie Ihren Platz bei der Veranstaltung',
+            'helper_text' => '',
+            'description' => 'Schließt die Buchung der Veranstaltung ab',
+            'icon' => 'heroicon-o-check',
+            'color' => 'success',
+        ],
+        'cancel' => [
+            'label' => 'Abbrechen',
+            'placeholder' => '',
+            'tooltip' => 'Abbrechen und diesen Dialog schließen',
+            'helper_text' => '',
+            'description' => 'Bricht den aktuellen Vorgang ab',
+            'icon' => 'heroicon-o-x-mark',
+            'color' => 'secondary',
+        ],
     ],
     'status' => [
         'upcoming' => [
@@ -155,5 +191,23 @@ return [
     ],
     'not_found_description' => [
         'label' => 'Entschuldigung, die gesuchte Veranstaltung existiert nicht oder wurde entfernt.',
+    ],
+    'messages' => [
+        'spots_filling_fast' => [
+            'label' => 'Plätze werden schnell belegt!',
+            'description' => 'Warnung wenn die Kapazität der Veranstaltung fast erreicht ist',
+        ],
+        'no_events_found' => [
+            'label' => 'Keine Veranstaltungen gefunden',
+            'description' => 'Wird angezeigt wenn keine Veranstaltungen verfügbar sind',
+        ],
+        'check_back_later' => [
+            'label' => 'Schauen Sie später für kommende Veranstaltungen vorbei.',
+            'description' => 'Einladung zurückzukehren wenn mehr Veranstaltungen verfügbar sind',
+        ],
+        'location_tba' => [
+            'label' => 'Ort noch nicht bekannt',
+            'description' => 'Wird angezeigt wenn der Ort der Veranstaltung noch nicht bekannt ist',
+        ],
     ],
 ];

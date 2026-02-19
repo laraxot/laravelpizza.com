@@ -281,4 +281,16 @@ class Event extends BaseModel
 
         return $data;
     }
+    /**
+     * Get social share data for this event.
+     */
+    public function getSocialShareData(): \Modules\Seo\Data\SocialShareData
+    {
+        return \Modules\Seo\Data\SocialShareData::from([
+            'url' => LaravelLocalization::localizeUrl('/events/'.$this->slug),
+            'title' => $this->title,
+            'text' => \Illuminate\Support\Str::limit($this->description ?? '', 160),
+            'image' => $this->cover_image ? asset($this->cover_image) : null,
+        ]);
+    }
 }

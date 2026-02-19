@@ -59,7 +59,7 @@ return [
             'color' => 'primary',
         ],
         'people_joined' => [
-            'label' => '已加入人数',
+            'label' => ':count 人已加入',
             'placeholder' => '',
             'tooltip' => '确认参加的总人数',
             'helper_text' => '',
@@ -93,6 +93,24 @@ return [
             'description' => '关于活动免费的信息',
             'icon' => 'heroicon-o-ticket',
             'color' => 'success',
+        ],
+        'name' => [
+            'label' => '姓名',
+            'placeholder' => '您的全名',
+            'tooltip' => '输入您的全名',
+            'helper_text' => '',
+            'description' => '活动参与者的姓名',
+            'icon' => 'heroicon-o-user',
+            'color' => 'primary',
+        ],
+        'email' => [
+            'label' => '邮箱',
+            'placeholder' => 'your@email.com',
+            'tooltip' => '输入您的邮箱地址',
+            'helper_text' => '',
+            'description' => '预订确认的联系邮箱',
+            'icon' => 'heroicon-o-envelope',
+            'color' => 'primary',
         ],
     ],
     'actions' => [
@@ -141,6 +159,24 @@ return [
             'icon' => 'heroicon-o-arrow-left',
             'color' => 'secondary',
         ],
+        'confirm_booking' => [
+            'label' => '确认预订',
+            'placeholder' => '',
+            'tooltip' => '确认您在活动中的名额',
+            'helper_text' => '',
+            'description' => '完成活动预订',
+            'icon' => 'heroicon-o-check',
+            'color' => 'success',
+        ],
+        'cancel' => [
+            'label' => '取消',
+            'placeholder' => '',
+            'tooltip' => '取消并关闭此对话框',
+            'helper_text' => '',
+            'description' => '取消当前操作',
+            'icon' => 'heroicon-o-x-mark',
+            'color' => 'secondary',
+        ],
     ],
     'status' => [
         'upcoming' => [
@@ -155,5 +191,23 @@ return [
     ],
     'not_found_description' => [
         'label' => '抱歉，您查找的活动不存在或已被移除。',
+    ],
+    'messages' => [
+        'spots_filling_fast' => [
+            'label' => '名额正在快速填满！',
+            'description' => '当活动容量几乎达到上限时的警告',
+        ],
+        'no_events_found' => [
+            'label' => '未找到活动',
+            'description' => '当没有可用活动时显示',
+        ],
+        'check_back_later' => [
+            'label' => '请稍后查看即将举行的活动。',
+            'description' => '当有更多活动可用时邀请返回',
+        ],
+        'location_tba' => [
+            'label' => '地点待定',
+            'description' => '当活动地点尚未宣布时显示',
+        ],
     ],
 ];

@@ -59,7 +59,7 @@ return [
             'color' => 'primary',
         ],
         'people_joined' => [
-            'label' => 'Personas ya inscritas',
+            'label' => ':count personas inscritas',
             'placeholder' => '',
             'tooltip' => 'Número total de personas que han confirmado su asistencia',
             'helper_text' => '',
@@ -93,6 +93,24 @@ return [
             'description' => 'Información sobre la gratuidad del evento',
             'icon' => 'heroicon-o-ticket',
             'color' => 'success',
+        ],
+        'name' => [
+            'label' => 'Nombre',
+            'placeholder' => 'Tu nombre completo',
+            'tooltip' => 'Ingresa tu nombre completo',
+            'helper_text' => '',
+            'description' => 'Nombre del asistente al evento',
+            'icon' => 'heroicon-o-user',
+            'color' => 'primary',
+        ],
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'tu@email.com',
+            'tooltip' => 'Ingresa tu dirección de correo',
+            'helper_text' => '',
+            'description' => 'Correo de contacto para la confirmación de la reserva',
+            'icon' => 'heroicon-o-envelope',
+            'color' => 'primary',
         ],
     ],
     'actions' => [
@@ -141,6 +159,24 @@ return [
             'icon' => 'heroicon-o-arrow-left',
             'color' => 'secondary',
         ],
+        'confirm_booking' => [
+            'label' => 'Confirmar reserva',
+            'placeholder' => '',
+            'tooltip' => 'Confirma tu plaza en el evento',
+            'helper_text' => '',
+            'description' => 'Finaliza la reserva del evento',
+            'icon' => 'heroicon-o-check',
+            'color' => 'success',
+        ],
+        'cancel' => [
+            'label' => 'Cancelar',
+            'placeholder' => '',
+            'tooltip' => 'Cancelar y cerrar este diálogo',
+            'helper_text' => '',
+            'description' => 'Cancela la operación actual',
+            'icon' => 'heroicon-o-x-mark',
+            'color' => 'secondary',
+        ],
     ],
     'status' => [
         'upcoming' => [
@@ -156,36 +192,22 @@ return [
     'not_found_description' => [
         'label' => 'Lo sentimos, el evento que buscas no existe o ha sido eliminado.',
     ],
-    // Traducciones planas para compatibilidad con plantilla (filosofía Laraxot: estructura expandida con acceso directo)
-    'date' => [
-        'label' => 'Fecha',
-        'help' => 'Fecha en la que se celebrará el evento',
-    ],
-    'time' => [
-        'label' => 'Hora',
-        'help' => 'Hora de inicio del evento',
-    ],
-    'location' => [
-        'label' => 'Ubicación',
-        'help' => 'Dirección o lugar del evento',
-    ],
-    'about_this_event' => [
-        'label' => 'Acerca de este evento',
-        'help' => 'Detalles y descripción del evento',
-    ],
-    'attendees' => [
-        'label' => 'Asistentes',
-        'help' => 'Personas que asistirán al evento',
-    ],
-    'people_joined' => [
-        'label' => 'personas se han unido',
-        'help' => 'Número de asistentes confirmados',
-    ],
-    'share_event' => [
-        'label' => 'Compartir evento',
-        'help' => 'Comparte este evento con tus contactos',
-    ],
-    'back_to_events' => [
-        'label' => 'Volver a eventos',
+    'messages' => [
+        'spots_filling_fast' => [
+            'label' => '¡Plazas agotándose!',
+            'description' => 'Aviso cuando la capacidad del evento está casi agotada',
+        ],
+        'no_events_found' => [
+            'label' => 'No se encontraron eventos',
+            'description' => 'Se muestra cuando no hay eventos disponibles',
+        ],
+        'check_back_later' => [
+            'label' => 'Vuelve más tarde para próximos eventos.',
+            'description' => 'Invitación a regresar cuando haya más eventos disponibles',
+        ],
+        'location_tba' => [
+            'label' => 'Ubicación por confirmar',
+            'description' => 'Se muestra cuando la ubicación del evento no ha sido anunciada',
+        ],
     ],
 ];

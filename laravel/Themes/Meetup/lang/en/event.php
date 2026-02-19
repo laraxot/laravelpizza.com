@@ -59,7 +59,7 @@ return [
             'color' => 'primary',
         ],
         'people_joined' => [
-            'label' => 'People already joined',
+            'label' => ':count people joined',
             'placeholder' => '',
             'tooltip' => 'Total number of people who confirmed attendance',
             'helper_text' => '',
@@ -93,6 +93,24 @@ return [
             'description' => 'Information about the event being free of charge',
             'icon' => 'heroicon-o-ticket',
             'color' => 'success',
+        ],
+        'name' => [
+            'label' => 'Name',
+            'placeholder' => 'Your full name',
+            'tooltip' => 'Enter your full name',
+            'helper_text' => '',
+            'description' => 'Name of the event attendee',
+            'icon' => 'heroicon-o-user',
+            'color' => 'primary',
+        ],
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'your@email.com',
+            'tooltip' => 'Enter your email address',
+            'helper_text' => '',
+            'description' => 'Contact email for the booking confirmation',
+            'icon' => 'heroicon-o-envelope',
+            'color' => 'primary',
         ],
     ],
     'actions' => [
@@ -141,6 +159,24 @@ return [
             'icon' => 'heroicon-o-arrow-left',
             'color' => 'secondary',
         ],
+        'confirm_booking' => [
+            'label' => 'Confirm Booking',
+            'placeholder' => '',
+            'tooltip' => 'Confirm your spot at the event',
+            'helper_text' => '',
+            'description' => 'Finalizes the event booking',
+            'icon' => 'heroicon-o-check',
+            'color' => 'success',
+        ],
+        'cancel' => [
+            'label' => 'Cancel',
+            'placeholder' => '',
+            'tooltip' => 'Cancel and close this dialog',
+            'helper_text' => '',
+            'description' => 'Cancels the current operation',
+            'icon' => 'heroicon-o-x-mark',
+            'color' => 'secondary',
+        ],
     ],
     'status' => [
         'upcoming' => [
@@ -156,36 +192,22 @@ return [
     'not_found_description' => [
         'label' => 'Sorry, the event you are looking for does not exist or has been removed.',
     ],
-    // Flat translations for template compatibility (Laraxot philosophy: expanded structure with direct access)
-    'date' => [
-        'label' => 'Date',
-        'help' => 'Date when the event will take place',
-    ],
-    'time' => [
-        'label' => 'Time',
-        'help' => 'Event start time',
-    ],
-    'location' => [
-        'label' => 'Location',
-        'help' => 'Address or venue of the event',
-    ],
-    'about_this_event' => [
-        'label' => 'About this event',
-        'help' => 'Details and description of the event',
-    ],
-    'attendees' => [
-        'label' => 'Attendees',
-        'help' => 'People who will attend the event',
-    ],
-    'people_joined' => [
-        'label' => 'people joined',
-        'help' => 'Number of confirmed attendees',
-    ],
-    'share_event' => [
-        'label' => 'Share event',
-        'help' => 'Share this event with your contacts',
-    ],
-    'back_to_events' => [
-        'label' => 'Back to events',
+    'messages' => [
+        'spots_filling_fast' => [
+            'label' => 'Spots filling fast!',
+            'description' => 'Warning when event capacity is almost reached',
+        ],
+        'no_events_found' => [
+            'label' => 'No events found',
+            'description' => 'Displayed when no events are available',
+        ],
+        'check_back_later' => [
+            'label' => 'Check back later for upcoming events.',
+            'description' => 'Invitation to return when more events are available',
+        ],
+        'location_tba' => [
+            'label' => 'Location TBA',
+            'description' => 'Displayed when event location has not been announced yet',
+        ],
     ],
 ];

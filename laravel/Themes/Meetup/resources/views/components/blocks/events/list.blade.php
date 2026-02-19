@@ -38,8 +38,8 @@
         }
     }
 
-    $title = $title ?? ($data['title'] ?? 'Upcoming Events');
-    $description = $description ?? ($data['description'] ?? 'Join us for pizza and Laravel discussions');
+    $title = $title ?? ($data['title'] ?? null);
+    $description = $description ?? ($data['description'] ?? null);
     
     $eventsJson = Js::from($eventsData);
 
@@ -50,12 +50,16 @@
          x-data="{ filter: 'all', events: {{ $eventsJson }}, get filteredEvents() { if (this.filter === 'all') return this.events; return this.events.filter(event => event.status === this.filter); } }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {{-- Header --}}
+        @if($title)
         <h1 class="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
             {{ $title }}
         </h1>
+        @endif
+        @if($description)
         <p class="text-xl text-slate-600 dark:text-gray-400 mb-8">
             {{ $description }}
         </p>
+        @endif
 
         {{-- Filter Buttons --}}
         <div class="flex flex-wrap gap-4 pb-8">
@@ -63,19 +67,19 @@
                 @click="filter = 'all'"
                 :class="filter === 'all' ? 'bg-red-600 text-white hover:bg-red-700' : 'border border-red-500 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20'"
                 class="px-6 py-2 rounded-lg font-medium transition-colors">
-                All Events
+                {{ __('pub_theme::events.status.all.label') }}
             </button>
             <button type="button"
                 @click="filter = 'upcoming'"
                 :class="filter === 'upcoming' ? 'bg-red-600 text-white hover:bg-red-700' : 'border border-red-500 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20'"
                 class="px-6 py-2 rounded-lg font-medium transition-colors">
-                Upcoming
+                {{ __('pub_theme::events.status.upcoming.label') }}
             </button>
             <button type="button"
                 @click="filter = 'past'"
                 :class="filter === 'past' ? 'bg-red-600 text-white hover:bg-red-700' : 'border border-red-500 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20'"
                 class="px-6 py-2 rounded-lg font-medium transition-colors">
-                Past Events
+                {{ __('pub_theme::events.status.past.label') }}
             </button>
         </div>
 
@@ -90,7 +94,6 @@
                                 <svg class="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
-                                <p class="text-sm">Event</p>
                             </div>
                         </div>
                         <template x-if="event.status === 'upcoming'">

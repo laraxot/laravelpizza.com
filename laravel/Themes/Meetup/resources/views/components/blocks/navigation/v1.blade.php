@@ -12,7 +12,7 @@
     }
 @endphp
 
-<header class="bg-[#0f2b46] text-white p-4 sticky top-0 z-50 shadow-lg backdrop-blur-md" x-data="{ mobileOpen: false }">
+<header class="bg-slate-900 text-white p-4 sticky top-0 z-50 shadow-lg backdrop-blur-md" x-data="{ mobileOpen: false }">
     <div class="container mx-auto flex justify-between items-center">
         <!-- Left: Brand with Logo -->
         <a href="{{ LaravelLocalization::localizeURL($data['home_url']) }}" class="flex items-center space-x-2">
@@ -37,7 +37,7 @@
             @guest
                 @if($ctaButton)
                     <a href="{{ $ctaButton['url'] }}"
-                       class="bg-[#ef4444] hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
+                       class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
                         {{ $ctaButton['label'] }}
                     </a>
                 @endif

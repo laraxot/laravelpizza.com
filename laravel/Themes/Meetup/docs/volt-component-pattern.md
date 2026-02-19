@@ -42,9 +42,65 @@ $isUpcoming = $event?->start_date?->isFuture() ?? true;
 
 ---
 
-## ✅ PATTERN CORRETTO: VOLT COMPONENT
+## 🚫 ANTI-PATTERN: FLAT PROPERTIES (VIETATO - Violazione DRY/KISS)
 
-Il **Volt Component Pattern** è l'unico pattern approvato per componenti interattivi.
+```php
+<?php
+// ❌❌❌ MAI FARE QUESTO - VIOLA DRY E KISS ❌❌❌
+
+new class extends Component {
+    public ?Event $event = null;
+    
+    // ❌ Proprietà duplicate dal modello - INUTILE!
+    public string $title = '';
+    public string $slug = '';
+    public string $description = '';
+    public string $date = '';
+    public string $time = '';
+    public string $location = '';
+    public int $attendeesCount = 0;
+    public int $maxAttendees = 100;
+    
+    public function mount(): void
+    {
+        // ❌ Duplicazione dati dal modello - SPRECO!
+        $this->title = $this->event->title;
+        $this->slug = $this->event->slug;
+        $this->description = $this->event->description;
+        $this->date = $this->event->start_date->format('Y-m-d');
+        $this->time = $this->event->start_date->format('H:i');
+        $this->location = $this->event->location;
+        $this->attendeesCount = $this->event->attendees_count;
+        $this->maxAttendees = $this->event->max_attendees;
+    }
+};
+?>
+
+<div>
+    <!-- ❌ Accesso a proprietà duplicate invece del modello -->
+    <h1>{{ $this->title }}</h1>
+    <p>{{ $this->date }} - {{ $this->time }}</p>
+    <p>{{ $this->location }}</p>
+</div>
+```
+
+**Perché è SBAGLIATO:**
+- ❌ **Violazione DRY**: Duplica dati già presenti nel modello
+- ❌ **Violazione KISS**: Complica inutilmente il codice
+- ❌ **Sincronizzazione**: Se il modello cambia, le proprietà sono obsolete
+- ❌ **Memoria**: Occupazione RAM inutile
+- ❌ **Manutenzione**: Più codice = più bug
+- ❌ **Type Safety**: Perdi i type hints del modello
+
+**⚠️ MAI appiattire le proprietà del modello. Accedi sempre direttamente al modello.**
+
+---
+
+## ✅ PATTERN CORRETTO: MODELLO come UNICA FONTE DI VERITÀ
+
+Il **Volt Component Pattern** corretto segue i principi DRY e KISS:
+
+> **Il modello è l'unica fonte di verità. Non duplicare mai i dati del modello in proprietà separate.**
 
 ### Esempio Corretto
 

@@ -240,6 +240,41 @@ cd /var/www/html/ptvx/laravel
 - [Xot Translation Guidelines](../Xot/docs/translations.md)
 - [Meetup Module](../Meetup/README.md)
 
----
-**Ultimo aggiornamento:** Febbraio 2026
-**Priorità:** CRITICAL - Tutte le traduzioni devono seguire questa struttura
+## `messages.*` — messaggi UI (non campi, non azioni)
+
+Per testi UI che non sono né campi form né azioni (es. "Nessun evento trovato", "Posti in esaurimento"):
+
+```php
+'messages' => [
+    'spots_filling_fast' => [
+        'label'       => 'Posti in esaurimento!',
+        'description' => 'Avviso capacità quasi esaurita',
+    ],
+    'no_events_found' => [
+        'label'       => 'Nessun evento trovato',
+        'description' => 'Visualizzato quando non ci sono eventi',
+    ],
+    'check_back_later' => [
+        'label'       => 'Torna a trovarci per i prossimi eventi.',
+        'description' => 'Invito a tornare',
+    ],
+    'location_tba' => [
+        'label'       => 'Luogo da definire',
+        'description' => 'Luogo non ancora annunciato',
+    ],
+],
+```
+
+## Namespace corretto per il tema pubblico
+
+Il tema pubblico usa `pub_theme::` — MAI `meetup::` per le view front-office:
+
+```blade
+{{-- ✅ CORRETTO per Themes/Meetup --}}
+{{ __('pub_theme::event.fields.date.label') }}
+{{ __('pub_theme::event.actions.back_to_events.label') }}
+{{ __('pub_theme::event.messages.no_events_found.label') }}
+
+{{-- ✅ CORRETTO per Modules/Meetup (admin Filament) --}}
+{{ __('meetup::event.fields.date.label') }}
+```

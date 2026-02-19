@@ -59,7 +59,7 @@ return [
             'color' => 'primary',
         ],
         'people_joined' => [
-            'label' => 'लोग पहले ही जुड़ चुके हैं',
+            'label' => ':count लोग जुड़ चुके हैं',
             'placeholder' => '',
             'tooltip' => 'उपस्थिति की पुष्टि करने वाले लोगों की कुल संख्या',
             'helper_text' => '',
@@ -93,6 +93,24 @@ return [
             'description' => 'ईवेंट के निःशुल्क होने के बारे में जानकारी',
             'icon' => 'heroicon-o-ticket',
             'color' => 'success',
+        ],
+        'name' => [
+            'label' => 'नाम',
+            'placeholder' => 'आपका पूरा नाम',
+            'tooltip' => 'अपना पूरा नाम दर्ज करें',
+            'helper_text' => '',
+            'description' => 'ईवेंट प्रतिभागी का नाम',
+            'icon' => 'heroicon-o-user',
+            'color' => 'primary',
+        ],
+        'email' => [
+            'label' => 'ईमेल',
+            'placeholder' => 'aapka@email.com',
+            'tooltip' => 'अपना ईमेल पता दर्ज करें',
+            'helper_text' => '',
+            'description' => 'बुकिंग पुष्टि के लिए संपर्क ईमेल',
+            'icon' => 'heroicon-o-envelope',
+            'color' => 'primary',
         ],
     ],
     'actions' => [
@@ -141,6 +159,24 @@ return [
             'icon' => 'heroicon-o-arrow-left',
             'color' => 'secondary',
         ],
+        'confirm_booking' => [
+            'label' => 'बुकिंग की पुष्टि करें',
+            'placeholder' => '',
+            'tooltip' => 'ईवेंट में अपनी जगह की पुष्टि करें',
+            'helper_text' => '',
+            'description' => 'ईवेंट बुकिंग को अंतिम रूप देता है',
+            'icon' => 'heroicon-o-check',
+            'color' => 'success',
+        ],
+        'cancel' => [
+            'label' => 'रद्द करें',
+            'placeholder' => '',
+            'tooltip' => 'रद्द करें और यह डायलॉग बंद करें',
+            'helper_text' => '',
+            'description' => 'वर्तमान ऑपरेशन रद्द करता है',
+            'icon' => 'heroicon-o-x-mark',
+            'color' => 'secondary',
+        ],
     ],
     'status' => [
         'upcoming' => [
@@ -155,5 +191,23 @@ return [
     ],
     'not_found_description' => [
         'label' => 'क्षमा करें, आप जिस ईवेंट की तलाश कर रहे हैं वह मौजूद नहीं है या हटा दिया गया है।',
+    ],
+    'messages' => [
+        'spots_filling_fast' => [
+            'label' => 'जगह तेजी से भर रही है!',
+            'description' => 'जब ईवेंट की क्षमता लगभग पूरी हो जाए तब चेतावनी',
+        ],
+        'no_events_found' => [
+            'label' => 'कोई ईवेंट नहीं मिला',
+            'description' => 'जब कोई ईवेंट उपलब्ध नहीं होता तब प्रदर्शित होता है',
+        ],
+        'check_back_later' => [
+            'label' => 'आगामी ईवेंट के लिए बाद में वापस आएं।',
+            'description' => 'जब अधिक ईवेंट उपलब्ध हों तब वापस आने का निमंत्रण',
+        ],
+        'location_tba' => [
+            'label' => 'स्थान बाद में बताया जाएगा',
+            'description' => 'जब ईवेंट का स्थान अभी तक घोषित नहीं किया गया हो',
+        ],
     ],
 ];

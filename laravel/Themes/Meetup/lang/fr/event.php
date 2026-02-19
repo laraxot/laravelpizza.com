@@ -59,7 +59,7 @@ return [
             'color' => 'primary',
         ],
         'people_joined' => [
-            'label' => 'Personnes déjà inscrites',
+            'label' => ':count personnes inscrites',
             'placeholder' => '',
             'tooltip' => 'Nombre total de personnes ayant confirmé leur participation',
             'helper_text' => '',
@@ -93,6 +93,24 @@ return [
             'description' => 'Informations sur la gratuité de l\'événement',
             'icon' => 'heroicon-o-ticket',
             'color' => 'success',
+        ],
+        'name' => [
+            'label' => 'Nom',
+            'placeholder' => 'Votre nom complet',
+            'tooltip' => 'Saisissez votre nom complet',
+            'helper_text' => '',
+            'description' => 'Nom du participant à l\'événement',
+            'icon' => 'heroicon-o-user',
+            'color' => 'primary',
+        ],
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'votre@email.fr',
+            'tooltip' => 'Saisissez votre adresse email',
+            'helper_text' => '',
+            'description' => 'Email de contact pour la confirmation de réservation',
+            'icon' => 'heroicon-o-envelope',
+            'color' => 'primary',
         ],
     ],
     'actions' => [
@@ -141,6 +159,24 @@ return [
             'icon' => 'heroicon-o-arrow-left',
             'color' => 'secondary',
         ],
+        'confirm_booking' => [
+            'label' => 'Confirmer la réservation',
+            'placeholder' => '',
+            'tooltip' => 'Confirmez votre place à l\'événement',
+            'helper_text' => '',
+            'description' => 'Finalise la réservation à l\'événement',
+            'icon' => 'heroicon-o-check',
+            'color' => 'success',
+        ],
+        'cancel' => [
+            'label' => 'Annuler',
+            'placeholder' => '',
+            'tooltip' => 'Annuler et fermer cette boîte de dialogue',
+            'helper_text' => '',
+            'description' => 'Annule l\'opération en cours',
+            'icon' => 'heroicon-o-x-mark',
+            'color' => 'secondary',
+        ],
     ],
     'status' => [
         'upcoming' => [
@@ -156,33 +192,22 @@ return [
     'not_found_description' => [
         'label' => 'Désolé, l\'événement que vous recherchez n\'existe pas ou a été supprimé.',
     ],
-    // Traductions plates pour compatibilité template (philosophie Laraxot: structure étendue avec accès direct)
-    'date' => [
-        'label' => 'Date',
-        'help' => 'Date à laquelle l\'événement aura lieu',
-    ],
-    'time' => [
-        'label' => 'Heure',
-        'help' => 'Heure de début de l\'événement',
-    ],
-    'location' => [
-        'label' => 'Lieu',
-        'help' => 'Adresse ou lieu de l\'événement',
-    ],
-    'about_this_event' => [
-        'label' => 'À propos de cet événement',
-        'help' => 'Détails et description de l\'événement',
-    ],
-    'attendees' => [
-        'label' => 'Participants',
-        'help' => 'Personnes qui participeront à l\'événement',
-    ],
-    'people_joined' => [
-        'label' => 'personnes ont rejoint',
-        'help' => 'Nombre de participants confirmés',
-    ],
-    'share_event' => [
-        'label' => 'Partager l\'événement',
-        'help' => 'Partagez cet événement avec vos contacts',
+    'messages' => [
+        'spots_filling_fast' => [
+            'label' => 'Places se remplissent vite !',
+            'description' => 'Avertissement quand la capacité de l\'événement est presque atteinte',
+        ],
+        'no_events_found' => [
+            'label' => 'Aucun événement trouvé',
+            'description' => 'Affiché quand aucun événement n\'est disponible',
+        ],
+        'check_back_later' => [
+            'label' => 'Revenez plus tard pour les prochains événements.',
+            'description' => 'Invitation à revenir quand de nouveaux événements seront disponibles',
+        ],
+        'location_tba' => [
+            'label' => 'Lieu à confirmer',
+            'description' => 'Affiché quand le lieu de l\'événement n\'a pas encore été annoncé',
+        ],
     ],
 ];

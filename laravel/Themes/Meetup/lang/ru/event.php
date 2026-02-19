@@ -10,6 +10,174 @@ return [
         'icon' => 'heroicon-o-calendar',
         'sort' => 11,
     ],
+    'label' => 'Событие',
+    'plural_label' => 'События',
+    'fields' => [
+        'date' => [
+            'label' => 'Дата',
+            'placeholder' => 'Выберите дату',
+            'tooltip' => 'Дата проведения события',
+            'helper_text' => '',
+            'description' => 'Дата, когда состоится событие',
+            'icon' => 'heroicon-o-calendar',
+            'color' => 'primary',
+        ],
+        'time' => [
+            'label' => 'Время',
+            'placeholder' => 'Введите время',
+            'tooltip' => 'Время начала и окончания события',
+            'helper_text' => '',
+            'description' => 'Запланированное временное окно для события',
+            'icon' => 'heroicon-o-clock',
+            'color' => 'primary',
+        ],
+        'location' => [
+            'label' => 'Место',
+            'placeholder' => 'Найти место',
+            'tooltip' => 'Адрес или место проведения события',
+            'helper_text' => '',
+            'description' => 'Физическое или виртуальное место проведения события',
+            'icon' => 'heroicon-o-map-pin',
+            'color' => 'primary',
+        ],
+        'about_this_event' => [
+            'label' => 'Об этом событии',
+            'placeholder' => '',
+            'tooltip' => 'Подробности и описание события',
+            'helper_text' => '',
+            'description' => 'Полный описательный раздел с деталями события',
+            'icon' => 'heroicon-o-information-circle',
+            'color' => 'info',
+        ],
+        'attendees' => [
+            'label' => 'Участники',
+            'placeholder' => '',
+            'tooltip' => 'Список зарегистрированных участников',
+            'helper_text' => '',
+            'description' => 'Визуализация количества и профилей участников',
+            'icon' => 'heroicon-o-user-group',
+            'color' => 'primary',
+        ],
+        'people_joined' => [
+            'label' => ':count человек присоединилось',
+            'placeholder' => '',
+            'tooltip' => 'Общее количество людей, подтвердивших участие',
+            'helper_text' => '',
+            'description' => 'Счётчик пользователей, зарегистрированных на событие',
+            'icon' => 'heroicon-o-check-circle',
+            'color' => 'success',
+        ],
+        'topics' => [
+            'label' => 'Темы',
+            'placeholder' => '',
+            'tooltip' => 'Основные темы события',
+            'helper_text' => '',
+            'description' => 'Список запланированных тем или докладов',
+            'icon' => 'heroicon-o-hashtag',
+            'color' => 'primary',
+        ],
+        'spots_available' => [
+            'label' => 'Доступные места',
+            'placeholder' => '',
+            'tooltip' => 'Количество свободных мест для регистрации',
+            'helper_text' => '',
+            'description' => 'Оставшаяся вместимость события',
+            'icon' => 'heroicon-o-user-plus',
+            'color' => 'warning',
+        ],
+        'free_entry' => [
+            'label' => 'Бесплатный вход',
+            'placeholder' => '',
+            'tooltip' => 'Указывает, что событие без входной платы',
+            'helper_text' => '',
+            'description' => 'Информация о бесплатности события',
+            'icon' => 'heroicon-o-ticket',
+            'color' => 'success',
+        ],
+        'name' => [
+            'label' => 'Имя',
+            'placeholder' => 'Ваше полное имя',
+            'tooltip' => 'Введите ваше полное имя',
+            'helper_text' => '',
+            'description' => 'Имя участника события',
+            'icon' => 'heroicon-o-user',
+            'color' => 'primary',
+        ],
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'ваш@email.ru',
+            'tooltip' => 'Введите ваш адрес электронной почты',
+            'helper_text' => '',
+            'description' => 'Контактный email для подтверждения бронирования',
+            'icon' => 'heroicon-o-envelope',
+            'color' => 'primary',
+        ],
+    ],
+    'actions' => [
+        'share_event' => [
+            'label' => 'Поделиться событием',
+            'placeholder' => 'Нажмите, чтобы поделиться',
+            'tooltip' => 'Поделитесь этим событием в социальных сетях или по ссылке',
+            'helper_text' => '',
+            'description' => 'Запускает процесс распространения события',
+            'icon' => 'heroicon-o-share',
+            'color' => 'primary',
+        ],
+        'view_map' => [
+            'label' => 'Смотреть на карте',
+            'placeholder' => '',
+            'tooltip' => 'Открыть место на Google Maps',
+            'helper_text' => '',
+            'description' => 'Отображает координаты события на интерактивной карте',
+            'icon' => 'heroicon-o-map',
+            'color' => 'primary',
+        ],
+        'rsvp_now' => [
+            'label' => 'Зарегистрироваться',
+            'placeholder' => '',
+            'tooltip' => 'Забронируйте место на событие',
+            'helper_text' => '',
+            'description' => 'Выполняет официальную регистрацию на событие',
+            'icon' => 'heroicon-o-hand-raised',
+            'color' => 'success',
+        ],
+        'sign_in_to_rsvp' => [
+            'label' => 'Войти для регистрации',
+            'placeholder' => '',
+            'tooltip' => 'Войдите, чтобы забронировать место',
+            'helper_text' => '',
+            'description' => 'Перенаправляет на страницу входа для RSVP',
+            'icon' => 'heroicon-o-arrow-right-on-rectangle',
+            'color' => 'primary',
+        ],
+        'back_to_events' => [
+            'label' => 'Назад к событиям',
+            'placeholder' => '',
+            'tooltip' => 'Вернуться к полному списку событий',
+            'helper_text' => '',
+            'description' => 'Переход назад на главную страницу митапов',
+            'icon' => 'heroicon-o-arrow-left',
+            'color' => 'secondary',
+        ],
+        'confirm_booking' => [
+            'label' => 'Подтвердить бронирование',
+            'placeholder' => '',
+            'tooltip' => 'Подтвердите ваше место на событии',
+            'helper_text' => '',
+            'description' => 'Завершает бронирование события',
+            'icon' => 'heroicon-o-check',
+            'color' => 'success',
+        ],
+        'cancel' => [
+            'label' => 'Отмена',
+            'placeholder' => '',
+            'tooltip' => 'Отмена и закрытие диалога',
+            'helper_text' => '',
+            'description' => 'Отменяет текущую операцию',
+            'icon' => 'heroicon-o-x-mark',
+            'color' => 'secondary',
+        ],
+    ],
     'status' => [
         'upcoming' => [
             'label' => 'Предстоящее',
@@ -24,85 +192,22 @@ return [
     'not_found_description' => [
         'label' => 'К сожалению, событие, которое вы ищете, не существует или было удалено.',
     ],
-    'back_to_events' => [
-        'label' => 'Назад к событиям',
-    ],
-    'home' => [
-        'label' => 'Главная',
-    ],
-    'events' => [
-        'label' => 'События',
-    ],
-    'topics' => [
-        'label' => 'Темы',
-    ],
-    'view_map' => [
-        'label' => 'Смотреть на карте',
-    ],
-    'spots_available' => [
-        'label' => 'Доступные места',
-    ],
-    'of' => [
-        'label' => 'из',
-    ],
-    'sign_in_to_rsvp' => [
-        'label' => 'Войти для регистрации',
-    ],
-    'rsvp_now' => [
-        'label' => 'Зарегистрироваться',
-    ],
-    'registration_closed' => [
-        'label' => 'Регистрация закрыта',
-    ],
-    'free_entry' => [
-        'label' => 'Бесплатный вход',
-    ],
-    'date' => [
-        'label' => 'Дата',
-    ],
-    'time' => [
-        'label' => 'Время',
-    ],
-    'location' => [
-        'label' => 'Место',
-    ],
-    'about_this_event' => [
-        'label' => 'О этом событии',
-    ],
-    'event_location' => [
-        'label' => 'Место проведения',
-    ],
-    'map_loading' => [
-        'label' => 'Загрузка карты...',
-    ],
-    'click_to_view' => [
-        'label' => 'Нажмите для просмотра на Google Maps',
-    ],
-    'attendees' => [
-        'label' => 'Участники',
-    ],
-    'people_joined' => [
-        'label' => ':count человек присоединилось',
-    ],
-    'join_event' => [
-        'label' => 'Присоединиться',
-    ],
-    'available_spots' => [
-        'label' => 'Свободные места',
-    ],
-    'book_your_spot' => [
-        'label' => 'Забронировать место',
-    ],
-    'spots_filling_fast' => [
-        'label' => 'Места быстро заканчиваются!',
-    ],
-    'share_event' => [
-        'label' => 'Поделиться событием',
-    ],
-    'no_events_found' => [
-        'label' => 'События не найдены',
-    ],
-    'check_back_later' => [
-        'label' => 'Загляните позже',
+    'messages' => [
+        'spots_filling_fast' => [
+            'label' => 'Места быстро заканчиваются!',
+            'description' => 'Предупреждение когда вместимость события почти заполнена',
+        ],
+        'no_events_found' => [
+            'label' => 'События не найдены',
+            'description' => 'Отображается когда нет доступных событий',
+        ],
+        'check_back_later' => [
+            'label' => 'Загляните позже для предстоящих событий.',
+            'description' => 'Приглашение вернуться когда появятся новые события',
+        ],
+        'location_tba' => [
+            'label' => 'Место уточняется',
+            'description' => 'Отображается когда место проведения ещё не объявлено',
+        ],
     ],
 ];
