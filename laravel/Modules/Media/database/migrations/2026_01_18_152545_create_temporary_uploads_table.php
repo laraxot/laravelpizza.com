@@ -27,7 +27,7 @@ return new class extends XotBaseMigration
      */
     public function up(): void
     {
-        $this->tableUpdate(function (Blueprint $table) {
+        $this->tableUpdate(function (Blueprint $table): void {
             if (! $this->hasColumn('user_id')) {
                 $table->uuid('user_id')->nullable();
             }
@@ -42,35 +42,6 @@ return new class extends XotBaseMigration
             }
             if (! $this->hasColumn('status')) {
                 $table->string('status')->default('uploading');
-            }
-        });
-    }
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        $this->tableUpdate(function (Blueprint $table) {
-            $columnsToDrop = [];
-            if ($this->hasColumn('user_id')) {
-                $columnsToDrop[] = 'user_id';
-            }
-            if ($this->hasColumn('file_name')) {
-                $columnsToDrop[] = 'file_name';
-            }
-            if ($this->hasColumn('file_size')) {
-                $columnsToDrop[] = 'file_size';
-            }
-            if ($this->hasColumn('mime_type')) {
-                $columnsToDrop[] = 'mime_type';
-            }
-            if ($this->hasColumn('status')) {
-                $columnsToDrop[] = 'status';
-            }
-
-            if (! empty($columnsToDrop)) {
-                $table->dropColumn($columnsToDrop);
             }
         });
     }

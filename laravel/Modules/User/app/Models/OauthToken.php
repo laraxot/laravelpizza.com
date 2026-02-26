@@ -28,7 +28,6 @@ use Modules\Xot\Contracts\UserContract;
  * @property OauthClient|null       $client
  * @property UserContract|null      $user
  * @property OauthRefreshToken|null $refreshToken
- *
  * @method static Builder|OauthAccessToken newModelQuery()
  * @method static Builder|OauthAccessToken newQuery()
  * @method static Builder|OauthAccessToken query()
@@ -45,7 +44,7 @@ use Modules\Xot\Contracts\UserContract;
  * @method static Builder|OauthAccessToken whereDeletedAt($value)
  * @method static Builder|OauthAccessToken whereDeletedBy($value)
  * @method static Builder|OauthAccessToken whereUpdatedBy($value)
- *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthToken existsIn(array $haystack)
  * @mixin \Eloquent
  */
 class OauthToken extends PassportToken

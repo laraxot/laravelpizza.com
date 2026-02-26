@@ -31,7 +31,6 @@ use Modules\Xot\Models\BaseModel;
  * @property int                  $sort_order
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @method static CategoryFactory          factory($count = null, $state = [])
  * @method static Builder<static>|Category newModelQuery()
  * @method static Builder<static>|Category newQuery()
@@ -50,9 +49,7 @@ use Modules\Xot\Models\BaseModel;
  * @method static Builder<static>|Category whereTitle($value)
  * @method static Builder<static>|Category whereUpdatedAt($value)
  * @method static Builder<static>|Category whereUpdatedBy($value)
- *
  * @property ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class Category extends BaseModel

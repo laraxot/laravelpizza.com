@@ -30,4 +30,3 @@ Fornire un sistema universale e performante per la gestione, trasformazione e ot
 - [ ] Copertura Test (Pest) > 85%.
 - [ ] Performance di caricamento e trasformazione ottimizzate.
 - [ ] Traduzioni dei campi media in tutte le lingue supportate.
-- [x] Migrazioni allineate a XotBaseMigration (vedi [standard migrazioni](../Xot/docs/migrations-consolidated.md)).

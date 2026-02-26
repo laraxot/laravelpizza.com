@@ -24,7 +24,6 @@ use Modules\Xot\Datas\XotData;
  * @property Carbon|null       $updated_at
  * @property Team|null         $team
  * @property TeamContract|null $team
- *
  * @method static Builder|TeamInvitation newModelQuery()
  * @method static Builder|TeamInvitation newQuery()
  * @method static Builder|TeamInvitation query()
@@ -34,26 +33,27 @@ use Modules\Xot\Datas\XotData;
  * @method static Builder|TeamInvitation whereRole($value)
  * @method static Builder|TeamInvitation whereTeamId($value)
  * @method static Builder|TeamInvitation whereUpdatedAt($value)
- *
  * @property string      $uuid
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- *
  * @method static Builder|TeamInvitation whereCreatedBy($value)
  * @method static Builder|TeamInvitation whereDeletedAt($value)
  * @method static Builder|TeamInvitation whereDeletedBy($value)
  * @method static Builder|TeamInvitation whereUpdatedBy($value)
  * @method static Builder|TeamInvitation whereUuid($value)
- *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @mixin IdeHelperTeamInvitation
- *
  * @property ProfileContract|null $deleter
- *
+ * @property Carbon|null $accepted_at
+ * @property Carbon|null $declined_at
+ * @property string|null $user_id
+ * @method static \Modules\User\Database\Factories\TeamInvitationFactory factory($count = null, $state = [])
+ * @method static Builder<static>|TeamInvitation whereAcceptedAt($value)
+ * @method static Builder<static>|TeamInvitation whereDeclinedAt($value)
+ * @method static Builder<static>|TeamInvitation whereUserId($value)
  * @mixin \Eloquent
  */
 class TeamInvitation extends BaseModel

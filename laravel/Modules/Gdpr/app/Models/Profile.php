@@ -66,7 +66,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property ProfileContract|null                                      $updater
  * @property User|null                                                 $user
  * @property string|null                                               $user_name
- *
  * @method static Builder<static>|Profile newModelQuery()
  * @method static Builder<static>|Profile newQuery()
  * @method static Builder<static>|Profile permission($permissions, $without = false)
@@ -93,9 +92,14 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder<static>|Profile withExtraAttributes()
  * @method static Builder<static>|Profile withoutPermission($permissions)
  * @method static Builder<static>|Profile withoutRole($roles, $guard = null)
- *
  * @property ProfileContract|null $deleter
- *
+ * @property string|null $fiscal_code
+ * @property string|null $notes
+ * @method static Builder<static>|Profile childrenWith(array $relations)
+ * @method static Builder<static>|Profile childrenWithCount(array $relations)
+ * @method static \Modules\Gdpr\Database\Factories\ProfileFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Profile whereFiscalCode($value)
+ * @method static Builder<static>|Profile whereNotes($value)
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile

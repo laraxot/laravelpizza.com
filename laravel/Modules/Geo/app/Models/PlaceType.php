@@ -12,15 +12,11 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 /**
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @method static Builder<static>|PlaceType newModelQuery()
  * @method static Builder<static>|PlaceType newQuery()
  * @method static Builder<static>|PlaceType query()
- *
  * @property ProfileContract|null $deleter
- *
  * @method static PlaceTypeFactory factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
 class PlaceType extends BaseModel

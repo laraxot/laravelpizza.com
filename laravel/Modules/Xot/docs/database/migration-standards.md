@@ -2,35 +2,28 @@
 
 ## Convenzioni di Nomenclatura
 
-### CREATE - Creazione tabelle
+### REGOLA UNIVERSALE
+
+**TUTTE** le migrazioni DEVONO seguire il pattern:
+
 ```
 {YYYY_MM_DD}_{HHMMSS}_create_{table_name}_table.php
 ```
-Esempi:
+
+Indipendentemente dal tipo di operazione (CREATE, ADD, CHANGE, FIX), il nome del file deve sempre essere `create_{table_name}_table.php`.
+
+- La logica di creazione va in `tableCreate()`
+- La logica di modifica va in `tableUpdate()`
+- Il nome file rimane sempre `create_{table_name}_table.php`
+
+### Esempi Corretti
 - `2026_01_01_000000_create_users_table.php`
 - `2026_01_01_000001_create_profiles_table.php`
 
-### ADD - Aggiunta colonne
-```
-{YYYY_MM_DD}_{HHMMSS}_add_{column}_to_{table_name}_table.php
-```
-Esempi:
-- `2026_02_13_172135_add_lang_to_users_table.php`
-- `2026_02_17_180908_add_slug_to_events_table.php`
-
-### CHANGE - Modifica colonne
-```
-{YYYY_MM_DD}_{HHMMSS}_change_{column}_in_{table_name}_table.php
-```
-Esempi:
-- `2026_02_13_163329_change_profiles_id_to_uuid_table.php`
-
-### FIX - Correzione colonne
-```
-{YYYY_MM_DD}_{HHMMSS}_fix_{column}_in_{table_name}_table.php
-```
-Esempi:
-- `2026_02_13_171410_fix_causer_id_to_uuid_table.php`
+### Anti-Pattern (NON usare)
+- ❌ `2026_02_13_172135_add_lang_to_users_table.php`
+- ❌ `2026_02_13_163329_change_profiles_id_to_uuid.php`
+- ❌ `2026_02_13_171410_fix_causer_id_to_uuid.php`
 
 ---
 

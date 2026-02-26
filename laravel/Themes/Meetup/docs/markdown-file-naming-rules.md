@@ -23,7 +23,7 @@
 
 ### Regola Fondamentale
 
-**TUTTI i file .md devono essere nelle cartelle `docs/` ESISTENTI**
+**TUTTI i file .md devono essere nelle cartelle `docs/` ESISTENTI, e tutte le cartelle tecniche seguono naming minuscolo coerente (es. `tests/`, non `Tests/`)**
 
 - ✅ `Themes/Meetup/docs/my-document.md`
 - ✅ `Modules/Pizza/docs/api-guide.md`

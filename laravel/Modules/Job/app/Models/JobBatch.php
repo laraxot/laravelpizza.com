@@ -33,7 +33,6 @@ use Override;
  * @property Carbon|null $finished_at
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
- *
  * @method static JobBatchFactory factory($count = null, $state = [])
  * @method static Builder<static>|JobBatch newModelQuery()
  * @method static Builder<static>|JobBatch newQuery()
@@ -48,9 +47,7 @@ use Override;
  * @method static Builder<static>|JobBatch whereOptions($value)
  * @method static Builder<static>|JobBatch wherePendingJobs($value)
  * @method static Builder<static>|JobBatch whereTotalJobs($value)
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class JobBatch extends BaseModel

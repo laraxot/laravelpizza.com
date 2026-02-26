@@ -32,7 +32,6 @@ use Override;
  * @property string|null $deleted_by
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
- *
  * @method static ScheduleHistoryFactory factory($count = null, $state = [])
  * @method static Builder<static>|ScheduleHistory newModelQuery()
  * @method static Builder<static>|ScheduleHistory newQuery()
@@ -49,9 +48,7 @@ use Override;
  * @method static Builder<static>|ScheduleHistory whereScheduleId($value)
  * @method static Builder<static>|ScheduleHistory whereUpdatedAt($value)
  * @method static Builder<static>|ScheduleHistory whereUpdatedBy($value)
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class ScheduleHistory extends BaseModel

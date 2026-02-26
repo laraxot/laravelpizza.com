@@ -9,7 +9,7 @@ use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * DeviceProfile Model.
- *
+ * 
  * Represents the relationship between a device and a user profile.
  * Extends the base DeviceUser model to add specific functionality.
  *
@@ -18,15 +18,12 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $profile
  * @property ProfileContract|null $updater
  * @property User|null            $user
- *
  * @method static Builder<static>|DeviceProfile newModelQuery()
  * @method static Builder<static>|DeviceProfile newQuery()
  * @method static Builder<static>|DeviceProfile query()
- *
  * @mixin IdeHelperDeviceProfile
- *
  * @property ProfileContract|null $deleter
- *
+ * @method static \Modules\User\Database\Factories\DeviceProfileFactory factory($count = null, $state = [])
  * @mixin \Eloquent
  */
 class DeviceProfile extends DeviceUser

@@ -23,7 +23,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- *
  * @method static ExtraFactory factory($count = null, $state = [])
  * @method static Builder<static>|Extra newModelQuery()
  * @method static Builder<static>|Extra newQuery()
@@ -39,11 +38,9 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder<static>|Extra whereUpdatedAt($value)
  * @method static Builder<static>|Extra whereUpdatedBy($value)
  * @method static Builder<static>|Extra withExtraAttributes()
- *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $deleter
  * @property-read ProfileContract|null $updater
- *
  * @mixin \Eloquent
  */
 final class Extra extends BaseExtra {}

@@ -11,15 +11,11 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @method static Builder<static>|State newModelQuery()
  * @method static Builder<static>|State newQuery()
  * @method static Builder<static>|State query()
- *
  * @property ProfileContract|null $deleter
- *
  * @method static StateFactory factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
 class State extends BaseModel

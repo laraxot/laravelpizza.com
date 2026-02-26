@@ -142,7 +142,7 @@ return [
     */
 
     'model_locations' => [
-        'app',
+        'Modules/*/app/Models',
     ],
 
     /*
@@ -156,6 +156,19 @@ return [
 
     'ignored_models' => [
         // App\MyModel::class,
+        // OAuth models (extend Laravel Passport tokens)
+        Modules\User\Models\OauthAccessToken::class,
+        Modules\User\Models\OauthToken::class,
+        Modules\User\Models\OauthAuthCode::class,
+        Modules\User\Models\OauthRefreshToken::class,
+        Modules\User\Models\OauthClient::class,
+        Modules\User\Models\OauthPersonalAccessClient::class,
+        Modules\User\Models\OauthDeviceCode::class,
+        // Sushi models (cause issues with ide-helper due to in-memory SQLite)
+        Modules\Geo\Models\Comune::class,
+        Modules\Geo\Models\Locality::class,
+        Modules\Geo\Models\Province::class,
+        Modules\Geo\Models\Region::class,
     ],
 
     /*

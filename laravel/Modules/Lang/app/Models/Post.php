@@ -56,7 +56,6 @@ use Spatie\Sluggable\SlugOptions;
  * @property ProfileContract|null         $creator
  * @property Model|\Eloquent|null         $linkable
  * @property ProfileContract|null         $updater
- *
  * @method static Builder<static>|Post newModelQuery()
  * @method static Builder<static>|Post newQuery()
  * @method static Builder<static>|Post query()
@@ -91,11 +90,22 @@ use Spatie\Sluggable\SlugOptions;
  * @method static Builder<static>|Post whereUrlLang($value)
  * @method static Builder<static>|Post whereUserId($value)
  * @method static Builder<static>|Post whereViewsCount($value)
- *
  * @property ProfileContract|null $deleter
- *
  * @method static PostFactory factory($count = null, $state = [])
- *
+ * @property string|null $excerpt
+ * @property string|null $slug
+ * @property string|null $status
+ * @property Carbon|null $published_at
+ * @property string|null $locale
+ * @property string|null $category
+ * @property string|null $meta_title
+ * @method static Builder<static>|Post whereCategory($value)
+ * @method static Builder<static>|Post whereExcerpt($value)
+ * @method static Builder<static>|Post whereLocale($value)
+ * @method static Builder<static>|Post whereMetaTitle($value)
+ * @method static Builder<static>|Post wherePublishedAt($value)
+ * @method static Builder<static>|Post whereSlug($value)
+ * @method static Builder<static>|Post whereStatus($value)
  * @mixin Eloquent
  */
 class Post extends BaseModel

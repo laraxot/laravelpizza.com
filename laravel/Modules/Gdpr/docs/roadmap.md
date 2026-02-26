@@ -7,7 +7,6 @@ Fornire un sistema completo e conforme per la gestione dei dati personali, il co
 
 ### Fase 1: Consolidamento e Standard (In Corso)
 - [x] PHPStan Level 10 Compliance.
-- [x] Correzione dei problemi PHPMD (LongVariable, UnusedParameters).
 - [ ] Refactoring del sistema di consenso per evitare violazioni SRP.
 - [ ] Standardizzazione dei file `.env.testing`.
 

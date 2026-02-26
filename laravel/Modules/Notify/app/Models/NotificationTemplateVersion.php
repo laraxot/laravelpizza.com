@@ -22,16 +22,12 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property-read int|null $media_count
  * @property-read NotificationTemplate|null $template
  * @property-read Profile|null $updater
- *
  * @method static NotificationTemplateVersionFactory factory($count = null, $state = [])
  * @method static Builder<static>|NotificationTemplateVersion newModelQuery()
  * @method static Builder<static>|NotificationTemplateVersion newQuery()
  * @method static Builder<static>|NotificationTemplateVersion query()
- *
  * @mixin IdeHelperNotificationTemplateVersion
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class NotificationTemplateVersion extends BaseModel

@@ -23,7 +23,8 @@
     "require-dev": {},
     "autoload": {
         "psr-4": {
-            "Modules\\Meetup\\": "app/"
+            "Modules\\Meetup\\": "app/",
+            "Modules\\Meetup\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {

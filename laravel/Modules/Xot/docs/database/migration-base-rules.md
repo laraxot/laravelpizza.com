@@ -12,18 +12,56 @@
 
 ## Convenzioni di Nomenclatura
 
+**REGOLA UNIVERSALE**: Tutte le migrazioni DEVONO seguire il pattern `create`:
+
+```
+{YYYY_MM_DD}_{HHMMSS}_create_{table}_table.php
+```
+
 | Tipo | Pattern | Esempio |
 |------|---------|---------|
 | CREATE | `{YYYY_MM_DD}_{HHMMSS}_create_{table}_table.php` | `2026_01_01_000000_create_users_table.php` |
-| ADD | `{YYYY_MM_DD}_{HHMMSS}_add_{column}_to_{table}_table.php` | `2026_02_13_172135_add_lang_to_users_table.php` |
-| CHANGE | `{YYYY_MM_DD}_{HHMMSS}_change_{column}_in_{table}_table.php` | `2026_02_13_163329_change_profiles_id_to_uuid_table.php` |
-| FIX | `{YYYY_MM_DD}_{HHMMSS}_fix_{column}_in_{table}_table.php` | `2026_02_13_171410_fix_causer_id_to_uuid_table.php` |
+| ADD (colonna) | `{YYYY_MM_DD}_{HHMMSS}_create_{table}_table.php` (stesso pattern!) | `2026_02_13_172135_create_users_table.php` |
+| CHANGE (colonna) | `{YYYY_MM_DD}_{HHMMSS}_create_{table}_table.php` (stesso pattern!) | `2026_02_13_163329_create_profiles_table.php` |
+| FIX (colonna) | `{YYYY_MM_DD}_{HHMMSS}_create_{table}_table.php` (stesso pattern!) | `2026_02_13_171410_create_activity_log_table.php` |
 
-## Motivazione
-- Prevenire conflitti di nomi
-- Garantire rollback sicuro
-- Compliance PHPStan livello 10
-- Facilitare troubleshooting e ripresa lavoro
+### Motivazione
+- **Coerenza**: Tutte le migrazioni seguono lo stesso pattern
+- **Auto-discovery**: XotBaseMigration estrae il nome del modello dal nome file
+- **Manutenibilità**: Facile identificare quale tabella viene gestita
+- **DRY**: Una sola convenzione per tutti i tipi di modifica
+- La logica di creazione va in `tableCreate()`
+- La logica di modifica va in `tableUpdate()`
+- Il nome file rimane sempre `create_{table}_table.php`
+
+### Esempi Pratici
+
+```php
+// Per aggiungere una colonna a una tabella esistente:
+// File: 2026_02_13_172135_create_users_table.php
+
+return new class extends XotBaseMigration
+{
+    protected ?string $model_class = User::class;
+
+    public function up(): void
+    {
+        // CREATE - solo se tabella non esiste (ma in questo caso esiste già)
+        $this->tableCreate(function (Blueprint $table): void {
+            // Definizione completa della tabella
+            $table->uuid('id')->primary();
+            $table->string('name');
+        });
+
+        // UPDATE - aggiunge/modifica colonne mancanti
+        $this->tableUpdate(function (Blueprint $table): void {
+            if (! $this->hasColumn('lang')) {
+                $table->string('lang', 5)->default('it')->after('name');
+            }
+        });
+    }
+};
+```
 
 ## Checklist rapida
 - [ ] Anonymous class

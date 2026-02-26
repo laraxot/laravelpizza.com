@@ -126,10 +126,10 @@ YYYY_MM_DD_HHMMSS_create_{table_name}_table.php
 ### ❌ Naming NON Conforme
 
 ```
-❌ 2026_01_18_152545_add_columns_to_temporary_uploads_table.php
-❌ 2026_02_13_163329_change_profiles_id_to_uuid.php
-❌ 2026_02_13_171410_fix_causer_id_to_uuid.php
-❌ 2026_02_13_172135_add_lang_column.php
+❌ 2026_01_18_152545_add_columns_to_temporary_uploads_table.php  (CORRETTO: 2026_01_18_152545_create_temporary_uploads_table.php)
+❌ 2026_02_13_163329_change_profiles_id_to_uuid.php              (già corretto)
+❌ 2026_02_13_171410_fix_causer_id_to_uuid.php                   (già corretto)
+❌ 2026_02_13_172135_add_lang_column.php                         (già corretto)
 ```
 
 ### Motivazione

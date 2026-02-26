@@ -17,7 +17,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
  * Modules\Meetup\Models\Event.
- *
+ * 
  * Schema.org Event implementation with structured data support.
  *
  * @property int $id
@@ -49,7 +49,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property-read User|null $updater
  * @property-read User|null $owner
  * @property-read User|null $organizer
- *
  * @method static Builder<Event> newModelQuery()
  * @method static Builder<Event> newQuery()
  * @method static Builder<Event> query()
@@ -57,8 +56,70 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<Event> past()
  * @method static Builder<Event> bySlug(string $slug)
  * @method static Builder<Event> dateRange(Carbon $startDate, Carbon $endDate)
- *
  * @see https://schema.org/Event
+ * @property string|null $alternate_name
+ * @property string|null $door_time
+ * @property int $is_accessible_for_free
+ * @property string|null $keywords
+ * @property string|null $typical_age_range
+ * @property string|null $audience
+ * @property string|null $previous_start_date
+ * @property string|null $registration_opens_at
+ * @property string|null $registration_url
+ * @property string|null $repeat_frequency
+ * @property string|null $repeat_days
+ * @property int|null $repeat_count
+ * @property string|null $schedule_end_date
+ * @property string|null $except_dates
+ * @property string $schedule_timezone
+ * @property int|null $super_event_id
+ * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Activity\Models\Snapshot> $snapshots
+ * @property-read int|null $snapshots_count
+ * @property-read \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection<int, \Modules\Activity\Models\StoredEvent> $storedEvents
+ * @property-read int|null $stored_events_count
+ * @method static \Modules\Meetup\Database\Factories\EventFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Event whereAlternateName($value)
+ * @method static Builder<static>|Event whereAttendeesCount($value)
+ * @method static Builder<static>|Event whereAudience($value)
+ * @method static Builder<static>|Event whereCoverImage($value)
+ * @method static Builder<static>|Event whereCreatedAt($value)
+ * @method static Builder<static>|Event whereCreatedBy($value)
+ * @method static Builder<static>|Event whereDescription($value)
+ * @method static Builder<static>|Event whereDoorTime($value)
+ * @method static Builder<static>|Event whereDuration($value)
+ * @method static Builder<static>|Event whereEndDate($value)
+ * @method static Builder<static>|Event whereEventAttendanceMode($value)
+ * @method static Builder<static>|Event whereEventStatus($value)
+ * @method static Builder<static>|Event whereExceptDates($value)
+ * @method static Builder<static>|Event whereId($value)
+ * @method static Builder<static>|Event whereInLanguage($value)
+ * @method static Builder<static>|Event whereIsAccessibleForFree($value)
+ * @method static Builder<static>|Event whereKeywords($value)
+ * @method static Builder<static>|Event whereLocation($value)
+ * @method static Builder<static>|Event whereLocationId($value)
+ * @method static Builder<static>|Event whereMaxAttendees($value)
+ * @method static Builder<static>|Event whereMetaData($value)
+ * @method static Builder<static>|Event whereOffers($value)
+ * @method static Builder<static>|Event wherePreviousStartDate($value)
+ * @method static Builder<static>|Event whereRegistrationOpensAt($value)
+ * @method static Builder<static>|Event whereRegistrationUrl($value)
+ * @method static Builder<static>|Event whereRepeatCount($value)
+ * @method static Builder<static>|Event whereRepeatDays($value)
+ * @method static Builder<static>|Event whereRepeatFrequency($value)
+ * @method static Builder<static>|Event whereScheduleEndDate($value)
+ * @method static Builder<static>|Event whereScheduleTimezone($value)
+ * @method static Builder<static>|Event whereSlug($value)
+ * @method static Builder<static>|Event whereStartDate($value)
+ * @method static Builder<static>|Event whereStatus($value)
+ * @method static Builder<static>|Event whereSuperEventId($value)
+ * @method static Builder<static>|Event whereTitle($value)
+ * @method static Builder<static>|Event whereTypicalAgeRange($value)
+ * @method static Builder<static>|Event whereUpdatedAt($value)
+ * @method static Builder<static>|Event whereUpdatedBy($value)
+ * @method static Builder<static>|Event whereUrl($value)
+ * @method static Builder<static>|Event whereUserId($value)
+ * @mixin \Eloquent
  */
 class Event extends BaseModel
 {

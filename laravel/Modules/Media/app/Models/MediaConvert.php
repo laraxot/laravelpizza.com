@@ -40,7 +40,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $disk
  * @property string|null $file
  * @property Media|null $media
- *
  * @method static MediaConvertFactory factory($count = null, $state = [])
  * @method static Builder|MediaConvert newModelQuery()
  * @method static Builder|MediaConvert newQuery()
@@ -66,14 +65,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|MediaConvert whereUpdatedAt($value)
  * @method static Builder|MediaConvert whereUpdatedBy($value)
  * @method static Builder|MediaConvert whereWidth($value)
- *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
- *
  * @mixin IdeHelperMediaConvert
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class MediaConvert extends BaseModel

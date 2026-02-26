@@ -18,7 +18,6 @@ use Modules\Xot\Database\Factories\PulseAggregateFactory;
  * @property string $aggregate
  * @property string $value
  * @property int|null $count
- *
  * @method static PulseAggregateFactory factory($count = null, $state = [])
  * @method static Builder<static>|PulseAggregate newModelQuery()
  * @method static Builder<static>|PulseAggregate newQuery()
@@ -32,11 +31,9 @@ use Modules\Xot\Database\Factories\PulseAggregateFactory;
  * @method static Builder<static>|PulseAggregate wherePeriod($value)
  * @method static Builder<static>|PulseAggregate whereType($value)
  * @method static Builder<static>|PulseAggregate whereValue($value)
- *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $deleter
  * @property-read ProfileContract|null $updater
- *
  * @mixin \Eloquent
  */
 class PulseAggregate extends BaseModel
