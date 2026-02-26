@@ -1,5 +1,6 @@
 # Pattern DRY: Composizione Actions Bulk → Single
 
+**Data**: 2025-01-18  
 **Modulo**: Notify  
 **Status**: ✅ Pattern consolidato
 
@@ -198,7 +199,7 @@ Prima di creare una bulk action:
 
 - [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md) - Pattern per chiamare Actions con `app()`
 - [SendNotificationBulkAction](./send-notification-bulk-action.md) - Implementazione completa
-- [Geo Module Architectural Philosophy](../geo/docs/architectural-philosophy.md) - Filosofia architetturale modulare
+- [Geo Module Architectural Philosophy](../Geo/docs/architectural-philosophy.md) - Filosofia architetturale modulare
 
 ---
 

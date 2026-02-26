@@ -8,11 +8,19 @@ Le interfacce **DEVONO** essere posizionate nella directory `app/Contracts/`, **
 
 ```
 ✅ CORRETTO:
-/var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SmsProviderActionInterface.php
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/app/Contracts/SmsProviderActionInterface.php
 
 ❌ ERRATO:
-/var/www/html/saluteora/laravel/Modules/Notify/app/Actions/SMS/SmsActionInterface.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
+/var/www/html/ptvx/laravel/Modules/Notify/app/Actions/SMS/SmsActionInterface.php
+/var/www/html/ptvx/laravel/Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Contracts/SmsProviderActionInterface.php
+
+❌ ERRATO:
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Actions/SMS/SmsActionInterface.php
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Contracts/SMS/SmsActionInterface.php (sottocartella non corretta)
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ### 2. Namespace Unificati per le Interfacce
@@ -53,7 +61,11 @@ SendSmsInterface
 ## Struttura di Directory Corretta
 
 ```
-/var/www/html/saluteora/laravel/Modules/Notify/
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ├── app/
 │   ├── Actions/
 │   │   ├── Email/

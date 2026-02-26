@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\File;
-use Modules\Notify\Tests\TestCase;
+use Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -27,18 +27,12 @@ test('components json is valid and contains expected components', function (): v
     expect($json)->toHaveCount(2, 'Il file _components.json non contiene i 2 componenti attesi');
 
     // Verifico che ci sono i componenti SendMailCommand e TelegramWebhook
-    /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     expect($json[0])->toHaveKey('name', 'Il primo componente non ha una chiave "name"');
-    /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     expect($json[0])->toHaveKey('class', 'Il primo componente non ha una chiave "class"');
-    /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     expect($json[0])->toHaveKey('ns', 'Il primo componente non ha una chiave "ns"');
 
-    /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     expect($json[1])->toHaveKey('name', 'Il secondo componente non ha una chiave "name"');
-    /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     expect($json[1])->toHaveKey('class', 'Il secondo componente non ha una chiave "class"');
-    /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
     expect($json[1])->toHaveKey('ns', 'Il secondo componente non ha una chiave "ns"');
 
     // Verifico i nomi specifici dei componenti

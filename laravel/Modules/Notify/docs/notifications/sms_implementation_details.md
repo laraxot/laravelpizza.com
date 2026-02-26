@@ -281,7 +281,11 @@ return [
         'username' => env('SMSHOSTING_USERNAME'),
         'password' => env('SMSHOSTING_PASSWORD'),
         'sender' => env('SMSHOSTING_SENDER', '<nome progetto>'),
-        'sender' => env('SMSHOSTING_SENDER', 'SaluteOra'),
+<<<<<<< HEAD
+        'sender' => env('SMSHOSTING_SENDER', 'Laraxot'),
+=======
+        'sender' => env('SMSHOSTING_SENDER', 'healthcare_app'),
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
     ],
 ];
 ```
@@ -737,8 +741,13 @@ public function toTwilio($notifiable)
     return (new TwilioSmsMessage())
         ->content("<nome progetto>: Promemoria appuntamento {$this->appointment->formatted_date}. 
         Per annullare rispondere NO. Per info: <nome progetto>.it/privacy");
-        ->content("SaluteOra: Promemoria appuntamento {$this->appointment->formatted_date}. 
-        Per annullare rispondere NO. Per info: saluteora.it/privacy");
+<<<<<<< HEAD
+        ->content("Laraxot: Promemoria appuntamento {$this->appointment->formatted_date}. 
+        Per annullare rispondere NO. Per info: ptvx.it/privacy");
+=======
+        ->content("healthcare_app: Promemoria appuntamento {$this->appointment->formatted_date}. 
+        Per annullare rispondere NO. Per info: healthcare_app.it/privacy");
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 }
 ```
 
@@ -788,7 +797,7 @@ class ConsentLog extends Model
 
 ## Collegamenti alla Documentazione Correlata
 
-- [MULTI_CHANNEL_NOTIFICATIONS.md](./multi_channel_notifications.md)
-- [SMS_PROVIDER_CONFIGURATION.md](./sms_provider_configuration.md)
-- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./notifications_implementation_guide.md)
-- [TELEGRAM_NOTIFICATIONS_GUIDE.md](./telegram_notifications_guide.md)
+- [MULTI_CHANNEL_NOTIFICATIONS.md](./MULTI_CHANNEL_NOTIFICATIONS.md)
+- [SMS_PROVIDER_CONFIGURATION.md](./SMS_PROVIDER_CONFIGURATION.md)
+- [NOTIFICATIONS_IMPLEMENTATION_GUIDE.md](./NOTIFICATIONS_IMPLEMENTATION_GUIDE.md)
+- [TELEGRAM_NOTIFICATIONS_GUIDE.md](./TELEGRAM_NOTIFICATIONS_GUIDE.md)

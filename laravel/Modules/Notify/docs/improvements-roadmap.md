@@ -1,5 +1,6 @@
 # Notify Module - Improvements Roadmap
 
+**Data**: 2026-01-09  
 **Modulo**: Notify  
 **Status**: 📝 **ROADMAP CREATA**
 
@@ -187,7 +188,7 @@ Tutte le migliorie sono **retrocompatibili**:
 
 ## 📚 Documentazione Correlata
 
-- [Filament Spatie Database Mail Templates Analysis](./filament-spatie-database-mail-templates-analysis-[date].md)
+- [Filament Spatie Database Mail Templates Analysis](./filament-spatie-database-mail-templates-analysis-2026-01-09.md)
 - [Database Mail System](./database-mail-system.md)
 - [Mail Template Improvements](./database-mail-templates-improvements.md)
 
@@ -195,4 +196,4 @@ Tutte le migliorie sono **retrocompatibili**:
 
 **Status**: 📝 **ROADMAP CREATA**
 
-**Ultimo aggiornamento**: [DATE]
+**Ultimo aggiornamento**: 2026-01-09

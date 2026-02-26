@@ -77,7 +77,7 @@
 ### 1. Struttura Log
 ```json
 {
-    "timestamp": "[DATE] 10:00:00",
+    "timestamp": "2024-03-20 10:00:00",
     "level": "error",
     "message": "SMS sending failed",
     "context": {

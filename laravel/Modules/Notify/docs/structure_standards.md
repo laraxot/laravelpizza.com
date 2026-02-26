@@ -16,10 +16,17 @@
 Questo è lo standard stabilito nel modulo Notify per tutti i DTOs:
 
 ```
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsData.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsRequestData.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/NetfunSmsResponseData.php
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/SmsData.php
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/app/Datas/NetfunSmsData.php
+/var/www/html/ptvx/laravel/Modules/Notify/app/Datas/NetfunSmsRequestData.php
+/var/www/html/ptvx/laravel/Modules/Notify/app/Datas/NetfunSmsResponseData.php
+/var/www/html/ptvx/laravel/Modules/Notify/app/Datas/SmsData.php
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Datas/NetfunSmsData.php
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Datas/NetfunSmsRequestData.php
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Datas/NetfunSmsResponseData.php
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Datas/SmsData.php
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ### ❌ ERRATO: ALTERNATIVE COMUNI MA ERRATE
@@ -43,13 +50,22 @@ Questo è lo standard stabilito nel modulo Notify per tutti i DTOs:
 ### Verificare Sempre le Directory Esistenti
 
 ```bash
-find /var/www/html/saluteora/laravel/Modules/Notify/app -type d -name "Data*"
+<<<<<<< HEAD
+find /var/www/html/ptvx/laravel/Modules/Notify/app -type d -name "Data*"
+=======
+find /var/www/html/healthcare_app/laravel/Modules/Notify/app -type d -name "Data*"
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 Questo restituirà:
 ```
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas
-/var/www/html/saluteora/laravel/Modules/Notify/app/Datas/SMS
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/app/Datas
+/var/www/html/ptvx/laravel/Modules/Notify/app/Datas/SMS
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Datas
+/var/www/html/healthcare_app/laravel/Modules/Notify/app/Datas/SMS
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## Esempi di Importazioni Corrette

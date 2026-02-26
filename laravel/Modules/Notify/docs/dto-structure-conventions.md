@@ -160,4 +160,4 @@ Prima di creare un nuovo DTO, verificare che:
 
 ---
 
-*Ultimo aggiornamento: [DATE]*
+*Ultimo aggiornamento: 2025-05-12*

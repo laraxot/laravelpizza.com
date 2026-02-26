@@ -253,7 +253,11 @@ return [
 ### 1. Controllo Sintassi PHP
 ```bash
 cd /var/www/html/_bases/base_<nome progetto>/laravel
-cd /var/www/html/_bases/base_saluteora/laravel
+<<<<<<< HEAD
+cd /var/www/html/_bases/base_ptvx/laravel
+=======
+cd /var/www/html/_bases/base_healthcare_app/laravel
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 php -l Modules/Notify/lang/it/send_email.php
 
@@ -279,11 +283,11 @@ php -l Modules/Notify/lang/it/send_email.php
 
 ### Documentazione Correlata
 - [Regole Traduzioni Laraxot](../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../docs/filament-best-practices.md)
+- [Best Practice Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)
 - [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
-- [Best Practice Filament](../../../docs/filament-best-practices.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
-- [Best Practice Filament](../../../project_docs/filament-best-practices.md)
-- [Struttura Modulo Notify](./readme.md)
+- [Best Practice Filament](../../../docs/FILAMENT-BEST-PRACTICES.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
+- [Best Practice Filament](../../../project_docs/FILAMENT-BEST-PRACTICES.md)
+- [Struttura Modulo Notify](./README.md)
 
 ### File Modificati
 - `laravel/Modules/Notify/lang/it/send_email.php` - File principale migliorato

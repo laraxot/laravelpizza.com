@@ -191,7 +191,15 @@ app(SendEmailAction::class)->execute(
 ## Integrazione con altri moduli
 
 ```
-Notify <── Quaeris    (inviti survey, report PDF via email)
+<<<<<<< .merge_file_M18npd
+Notify <── healthcare_app    (inviti survey, report PDF via email)
+=======
+<<<<<<< HEAD
+Notify <── ExternalProject    (inviti survey, report PDF via email)
+=======
+Notify <── ModuloEsempio    (inviti survey, report PDF via email)
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_dhasRq
 Notify <── Meetup     (inviti eventi, reminder, conferme)
 Notify <── User       (welcome email, reset password)
 Notify <── Activity   (notifiche su eventi tracciati)

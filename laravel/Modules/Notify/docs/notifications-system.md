@@ -135,7 +135,7 @@ return [
 ## Collegamenti
 - [Documentazione API](./api.md)
 - [Template Email](./templates.md)
-- [Guida Contribuzione](./contributing.md)
+- [Guida Contribuzione](./CONTRIBUTING.md)
 
 ## Note
 - Testare le notifiche in ambiente di sviluppo

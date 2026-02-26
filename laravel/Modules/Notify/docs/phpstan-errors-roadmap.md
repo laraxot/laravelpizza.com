@@ -1,5 +1,6 @@
 # PHPStan Level 10 Errors Roadmap - Notify Module
 
+**Data**: 2026-01-09  
 **Modulo**: Notify  
 **Livello PHPStan**: 10  
 **Status**: 🧘 **IN ANALISI**
@@ -162,4 +163,4 @@ return $instance;
 
 **Status**: 🧘 **IN ANALISI**
 
-**Ultimo aggiornamento**: [DATE]
+**Ultimo aggiornamento**: 2026-01-09

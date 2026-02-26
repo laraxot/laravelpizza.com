@@ -144,9 +144,9 @@ if ($validRecords !== $totalRecords) {
 
 ## Collegamenti Correlati
 
-- [Documentazione Migrazioni](./migration_rules.md)
-- [Best Practices JSON](./json_best_practices.md)
-- [Gestione Errori](./error_handling.md)
+- [Documentazione Migrazioni](./MIGRATION_RULES.md)
+- [Best Practices JSON](./JSON_BEST_PRACTICES.md)
+- [Gestione Errori](./ERROR_HANDLING.md)
 
 ## Note Importanti
 

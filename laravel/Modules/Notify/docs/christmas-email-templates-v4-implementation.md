@@ -1,5 +1,6 @@
 # Christmas Email Templates v4.0 - Implementation Report
 
+**Data**: 2025-12-19
 **Versione**: v4.0 - Luxury, Winter Wonderland & Elephant Mascot
 **Status**: ✅ Completato
 
@@ -473,7 +474,7 @@ Gli errori PHPStan sono in file PHP esistenti:
 
 ## 📝 Changelog
 
-### v4.0 - [DATE]
+### v4.0 - 2025-12-19
 
 **Added**:
 - ✨ 3 nuovi template natalizi professionali
@@ -497,7 +498,7 @@ Gli errori PHPStan sono in file PHP esistenti:
 
 **Design & Implementation**: Claude Sonnet 4.5
 **Project**: Sottana Service Christmas Email Templates v4.0
-**Date**: [DATE]
+**Date**: 2025-12-19
 **Framework**: Laravel + Spatie Mail Templates + Mustache
 **Theme**: Sixteen (Filament 4)
 

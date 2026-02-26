@@ -251,4 +251,4 @@ Seguire questo pattern garantisce:
 
 ---
 
-*Ultimo aggiornamento: [DATE]*
+*Ultimo aggiornamento: 2023-05-12*

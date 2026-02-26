@@ -15,7 +15,15 @@ Il modulo **Notify** è il motore di comunicazione dell'applicazione, fornendo:
 - Code asincrone per invio massivo
 - Sistema template modulare e riutilizzabile
 
-**Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da Quaeris per distribuzione survey.
+<<<<<<< .merge_file_STJUTR
+**Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da healthcare_app per distribuzione survey.
+=======
+<<<<<<< HEAD
+**Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da ExternalProject per distribuzione survey.
+=======
+**Architettura**: Modulo infrastrutturale per comunicazioni; utilizzato da ModuloEsempio per distribuzione survey.
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_guGzX6
 
 ## Stato Attuale Implementazione
 
@@ -228,7 +236,15 @@ Nessuna funzionalità critica mancante - il modulo Notify è ben implementato
 
 ## Collegamenti
 
-- [Modulo Quaeris](../quaeris/docs/readme.md)
+<<<<<<< .merge_file_STJUTR
+- [Modulo healthcare_app](../healthcare_app/docs/readme.md)
+=======
+<<<<<<< HEAD
+- [Modulo ExternalProject](../quaeris/docs/readme.md)
+=======
+- [Modulo ModuloEsempio](../ptvx/docs/readme.md)
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_guGzX6
 - [Modulo Limesurvey](../limesurvey/docs/readme.md)
 - [Notify README](./readme.md)
 

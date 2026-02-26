@@ -58,15 +58,6 @@ final class Send360dialogWhatsAppAction
      */
     public function execute(WhatsAppData $whatsAppData): array
     {
-        // Log di debug se abilitato
-        if ($this->debug) {
-            Log::debug('Invio WhatsApp 360dialog', [
-                'to' => $whatsAppData->recipient,
-                'message_length' => strlen($whatsAppData->body),
-                'type' => $whatsAppData->type,
-            ]);
-        }
-
         $client = new Client([
             'timeout' => $this->timeout,
             'headers' => [

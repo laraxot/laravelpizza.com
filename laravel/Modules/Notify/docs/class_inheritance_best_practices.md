@@ -1,6 +1,10 @@
 # Best Practices per l'Ereditarietà delle Classi
 
-Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema SaluteOra, con particolare attenzione alle classi che estendono `XotBasePage`.
+<<<<<<< HEAD
+Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema Laraxot, con particolare attenzione alle classi che estendono `XotBasePage`.
+=======
+Questo documento definisce le best practices per l'ereditarietà delle classi nel sistema healthcare_app, con particolare attenzione alle classi che estendono `XotBasePage`.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Analisi dell'Ereditarietà di XotBasePage
 

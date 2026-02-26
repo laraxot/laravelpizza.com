@@ -2,7 +2,7 @@
 
 Tutte le modifiche significative al modulo Notify saranno documentate in questo file.
 
-## [2025-06-04] - Fix PSR-4 Autoloading
+## [[DATE]] - Fix PSR-4 Autoloading
 
 ### Fixed
 - **SendScheduledPushNotification.php**: Corretto import con namespace errato
@@ -21,4 +21,3 @@ Tutte le modifiche significative al modulo Notify saranno documentate in questo 
 - Namespace modulo: `Modules\Notify\{Subdirectory}`
 - NO: `Modules\Notify\App\{Subdirectory}`
 - Cartella `app/` è organizzativa, non parte del namespace
-

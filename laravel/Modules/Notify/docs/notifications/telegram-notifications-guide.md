@@ -1,6 +1,10 @@
 # Notifiche Telegram 
 
-Questa documentazione descrive come implementare notifiche Telegram nel modulo Notify di SaluteOra.
+<<<<<<< HEAD
+Questa documentazione descrive come implementare notifiche Telegram nel modulo Notify di Laraxot.
+=======
+Questa documentazione descrive come implementare notifiche Telegram nel modulo Notify di healthcare_app.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Indice
 
@@ -15,7 +19,11 @@ Questa documentazione descrive come implementare notifiche Telegram nel modulo N
 
 ## Introduzione
 
-Telegram offre un'ottima piattaforma per notifiche istantanee grazie alla sua API per bot. SaluteOra integra Telegram per inviare notifiche relative ad appuntamenti, promemoria e altre comunicazioni importanti.
+<<<<<<< HEAD
+Telegram offre un'ottima piattaforma per notifiche istantanee grazie alla sua API per bot. Laraxot integra Telegram per inviare notifiche relative ad appuntamenti, promemoria e altre comunicazioni importanti.
+=======
+Telegram offre un'ottima piattaforma per notifiche istantanee grazie alla sua API per bot. healthcare_app integra Telegram per inviare notifiche relative ad appuntamenti, promemoria e altre comunicazioni importanti.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Setup del Bot Telegram
 
@@ -28,17 +36,28 @@ Telegram offre un'ottima piattaforma per notifiche istantanee grazie alla sua AP
 
 ### Funzionalità del Bot
 
-Il bot di SaluteOra deve avere:
+<<<<<<< HEAD
+Il bot di Laraxot deve avere:
 - Privacy Mode disattivata (per leggere messaggi nei gruppi)
 - Comandi personalizzati configurati
-- Immagine del profilo con logo SaluteOra
+- Immagine del profilo con logo Laraxot
+=======
+Il bot di healthcare_app deve avere:
+- Privacy Mode disattivata (per leggere messaggi nei gruppi)
+- Comandi personalizzati configurati
+- Immagine del profilo con logo healthcare_app
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ### Comandi Consigliati
 
 Configura i seguenti comandi per il tuo bot:
 ```
 start - Inizia l'interazione con il bot
-register - Collega il tuo account Telegram a SaluteOra
+<<<<<<< HEAD
+register - Collega il tuo account Telegram a Laraxot
+=======
+register - Collega il tuo account Telegram a healthcare_app
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 unregister - Scollega il tuo account Telegram
 settings - Gestisci le tue preferenze di notifica
 help - Ottieni assistenza
@@ -159,10 +178,17 @@ public function toTelegram($notifiable)
 
 ### Collegamento Account Telegram
 
-Per collegare un account Telegram a un utente SaluteOra:
+<<<<<<< HEAD
+Per collegare un account Telegram a un utente Laraxot:
 
 1. Implementa un comando `/register` nel bot che generi un token univoco.
-2. L'utente inserisce questo token nel proprio profilo nell'app SaluteOra.
+2. L'utente inserisce questo token nel proprio profilo nell'app Laraxot.
+=======
+Per collegare un account Telegram a un utente healthcare_app:
+
+1. Implementa un comando `/register` nel bot che generi un token univoco.
+2. L'utente inserisce questo token nel proprio profilo nell'app healthcare_app.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 3. Salva il `chat_id` Telegram dell'utente nel database.
 
 ```php
@@ -175,7 +201,11 @@ use Modules\Notify\Models\TelegramToken;
 class RegisterCommand extends Command
 {
     protected $name = 'register';
-    protected $description = 'Collega il tuo account Telegram a SaluteOra';
+<<<<<<< HEAD
+    protected $description = 'Collega il tuo account Telegram a Laraxot';
+=======
+    protected $description = 'Collega il tuo account Telegram a healthcare_app';
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
     
     public function handle()
     {
@@ -190,7 +220,11 @@ class RegisterCommand extends Command
         ]);
         
         $this->replyWithMessage([
-            'text' => "Il tuo codice di collegamento è: {$token}\n\nInseriscilo nel tuo profilo SaluteOra per completare il collegamento."
+<<<<<<< HEAD
+            'text' => "Il tuo codice di collegamento è: {$token}\n\nInseriscilo nel tuo profilo Laraxot per completare il collegamento."
+=======
+            'text' => "Il tuo codice di collegamento è: {$token}\n\nInseriscilo nel tuo profilo healthcare_app per completare il collegamento."
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
         ]);
     }
 }

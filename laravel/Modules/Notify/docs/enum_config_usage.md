@@ -1,6 +1,10 @@
 # Utilizzo di Enum e Config 
 
-Questo documento definisce le best practices per l'utilizzo di Enum e file di configurazione nel sistema SaluteOra, con particolare attenzione alla gestione delle opzioni nei componenti Filament.
+<<<<<<< HEAD
+Questo documento definisce le best practices per l'utilizzo di Enum e file di configurazione nel sistema Laraxot, con particolare attenzione alla gestione delle opzioni nei componenti Filament.
+=======
+Questo documento definisce le best practices per l'utilizzo di Enum e file di configurazione nel sistema healthcare_app, con particolare attenzione alla gestione delle opzioni nei componenti Filament.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Problema: Hardcoding delle Opzioni
 
@@ -146,4 +150,8 @@ Per standardizzare l'approccio , si raccomanda di:
 
 ## Conclusione
 
-L'utilizzo di Enum e file di configurazione migliora significativamente la manutenibilità, la flessibilità e la coerenza del codice. Adottare queste pratiche in tutto il sistema SaluteOra garantirà un codice più robusto e facile da mantenere.
+<<<<<<< HEAD
+L'utilizzo di Enum e file di configurazione migliora significativamente la manutenibilità, la flessibilità e la coerenza del codice. Adottare queste pratiche in tutto il sistema Laraxot garantirà un codice più robusto e facile da mantenere.
+=======
+L'utilizzo di Enum e file di configurazione migliora significativamente la manutenibilità, la flessibilità e la coerenza del codice. Adottare queste pratiche in tutto il sistema healthcare_app garantirà un codice più robusto e facile da mantenere.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)

@@ -45,7 +45,11 @@ class RecordNotification extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Notifica da SaluteOra')
+<<<<<<< HEAD
+            ->subject('Notifica da Laraxot')
+=======
+            ->subject('Notifica da healthcare_app')
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
             ->greeting('Ciao ' . $this->record->name)
             ->line('Contenuto della notifica...')
             ->action('Visualizza', url('/'))
@@ -158,6 +162,6 @@ public function toMail(object $notifiable): \Illuminate\Mail\Mailable
 
 ## Collegamenti alla Documentazione Correlata
 
-- [ATTACHMENTS_USAGE.md](../email-sending/attachments_usage.md)
-- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/email_layouts_best_practices.md)
-- [EMAIL_TROUBLESHOOTING.md](../email-sending/email_troubleshooting.md)
+- [ATTACHMENTS_USAGE.md](../email-sending/ATTACHMENTS_USAGE.md)
+- [EMAIL_LAYOUTS_BEST_PRACTICES.md](../mail-templates/EMAIL_LAYOUTS_BEST_PRACTICES.md)
+- [EMAIL_TROUBLESHOOTING.md](../email-sending/EMAIL_TROUBLESHOOTING.md)

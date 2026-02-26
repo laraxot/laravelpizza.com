@@ -2,7 +2,11 @@
 
 ## Panoramica
 
-Questo documento descrive l'integrazione dei template email [mailpace/templates](https://github.com/mailpace/templates) nel modulo Notify di SaluteOra. Questi template offrono un design moderno basato su TailwindCSS con supporto nativo per la modalità scura.
+<<<<<<< HEAD
+Questo documento descrive l'integrazione dei template email [mailpace/templates](https://github.com/mailpace/templates) nel modulo Notify di Laraxot. Questi template offrono un design moderno basato su TailwindCSS con supporto nativo per la modalità scura.
+=======
+Questo documento descrive l'integrazione dei template email [mailpace/templates](https://github.com/mailpace/templates) nel modulo Notify di healthcare_app. Questi template offrono un design moderno basato su TailwindCSS con supporto nativo per la modalità scura.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Template Disponibili
 
@@ -28,7 +32,11 @@ MailPace offre i seguenti template transazionali:
 ### Struttura della Directory
 
 ```
-/var/www/html/saluteora/laravel/Modules/Notify/resources/mail-layouts/
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/resources/mail-layouts/
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/resources/mail-layouts/
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ├── default.html       # Layout base per la maggior parte delle email
 ├── main.html          # Alternativa semplificata
 ├── marketing.html     # Layout ottimizzato per email marketing
@@ -89,7 +97,11 @@ $mailTemplate->send($user->email, [
 1. **Mantieni la Struttura Base** - Non modificare la struttura HTML base per garantire compatibilità
 2. **Usa Variabili** - Utilizza variabili Blade per contenuti dinamici
 3. **Test Cross-Client** - Testa i template su diversi client email
-4. **Segui le Convenzioni di Branding** - Usa i colori e font definiti per SaluteOra
+<<<<<<< HEAD
+4. **Segui le Convenzioni di Branding** - Usa i colori e font definiti per Laraxot
+=======
+4. **Segui le Convenzioni di Branding** - Usa i colori e font definiti per healthcare_app
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Riferimenti
 

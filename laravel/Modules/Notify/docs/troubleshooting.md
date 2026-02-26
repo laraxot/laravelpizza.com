@@ -42,8 +42,8 @@ This document provides guidance on diagnosing and resolving common issues encoun
 - Update this document if new issues or resolution strategies are identified.
 
 ## Links to Related Documentation
-- [Notify Module Index](./index.md)
-- [Architecture Overview](./architecture.md)
-- [Notification Channels Implementation](./notification_channels_implementation.md)
-- [Email Templates](./email_templates.md)
-- [SMS Implementation](./sms_implementation.md)
+- [Notify Module Index](./INDEX.md)
+- [Architecture Overview](./ARCHITECTURE.md)
+- [Notification Channels Implementation](./NOTIFICATION_CHANNELS_IMPLEMENTATION.md)
+- [Email Templates](./EMAIL_TEMPLATES.md)
+- [SMS Implementation](./SMS_IMPLEMENTATION.md)

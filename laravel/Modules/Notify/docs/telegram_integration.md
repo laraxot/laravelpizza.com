@@ -1,6 +1,10 @@
 # Integrazione Telegram 
 
-Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto SaluteOra, seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
+<<<<<<< HEAD
+Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto Laraxot, seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
+=======
+Questo documento descrive l'architettura e l'implementazione dell'integrazione Telegram nel progetto healthcare_app, seguendo gli stessi pattern di design utilizzati per SMS, Email e WhatsApp.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Architettura
 

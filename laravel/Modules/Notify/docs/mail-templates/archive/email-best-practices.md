@@ -15,7 +15,11 @@ Questo documento descrive le best practices per la creazione e gestione di email
 
 ### 2. Branding Coerente
 
-- **Elementi visuali**: Utilizzare logo, colori e font SaluteOra
+<<<<<<< HEAD
+- **Elementi visuali**: Utilizzare logo, colori e font Laraxot
+=======
+- **Elementi visuali**: Utilizzare logo, colori e font healthcare_app
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - **Voce e tono**: Mantenere un tono professionale ma amichevole
 - **Firma coerente**: Includere sempre lo stesso formato di firma e disclaimer
 
@@ -61,7 +65,11 @@ I template di [mailpace/templates](https://github.com/mailpace/templates) integr
 
 ### Directory `mail-layouts`
 
-La directory `/var/www/html/saluteora/laravel/Modules/Notify/resources/mail-layouts/` contiene:
+<<<<<<< HEAD
+La directory `/var/www/html/ptvx/laravel/Modules/Notify/resources/mail-layouts/` contiene:
+=======
+La directory `/var/www/html/healthcare_app/laravel/Modules/Notify/resources/mail-layouts/` contiene:
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 - **default.html**: Template base per la maggior parte delle comunicazioni
 - **main.html**: Alternativa minimalista
@@ -70,7 +78,11 @@ La directory `/var/www/html/saluteora/laravel/Modules/Notify/resources/mail-layo
 
 ### Integrazione con Spatie Mail Templates
 
-Seguendo le regole di progetto SaluteOra, ricordare di:
+<<<<<<< HEAD
+Seguendo le regole di progetto Laraxot, ricordare di:
+=======
+Seguendo le regole di progetto healthcare_app, ricordare di:
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 - NON creare controller personalizzati per gestire l'invio di email
 - Utilizzare il package `spatie/laravel-mail-templates`

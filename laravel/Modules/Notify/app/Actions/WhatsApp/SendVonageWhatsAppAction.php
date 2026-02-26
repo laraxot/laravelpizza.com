@@ -69,15 +69,6 @@ final class SendVonageWhatsAppAction
     {
         $from = $whatsAppData->from ?? $this->defaultSender;
 
-        // Log di debug se abilitato
-        if ($this->debug) {
-            Log::debug('Invio WhatsApp Vonage', [
-                'to' => $whatsAppData->recipient,
-                'from' => $from,
-                'message_length' => strlen($whatsAppData->body),
-            ]);
-        }
-
         $client = new Client([
             'timeout' => $this->timeout,
             'headers' => [

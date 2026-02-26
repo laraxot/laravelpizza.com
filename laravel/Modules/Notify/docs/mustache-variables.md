@@ -1,6 +1,6 @@
 # Mustache Variables - SpatieEmail Template System
 
-**Date**: [DATE]  
+**Date**: 2025-12-19  
 **Module**: Notify  
 **Status**: ✅ Documentazione Completa
 
@@ -111,7 +111,7 @@ $user = User::find(1);
 | `{{ last_name }}` | string | Cognome | `"Rossi"` |
 | `{{ email }}` | string | Email | `"mario@example.com"` |
 | `{{ phone }}` | string | Telefono (se presente) | `"+39 123 456 7890"` |
-| `{{ created_at }}` | datetime | Data di creazione | `"[DATE] 10:30:00"` |
+| `{{ created_at }}` | datetime | Data di creazione | `"2025-01-15 10:30:00"` |
 
 **Nota**: Le variabili disponibili dipendono dal modello specifico passato. Verifica il modello per vedere tutte le proprietà accessibili.
 
@@ -135,7 +135,7 @@ $email->mergeData([
     'discount_percentage' => 20,
     'gift_card_value' => 50,
     'offer_url' => route('christmas-offer'),
-    'expiration_date' => '[DATE]',
+    'expiration_date' => '2025-12-31',
     'promo_code' => 'NATALE2025',
 ]);
 
@@ -303,7 +303,7 @@ $email = new SpatieEmail($client, 'christmas-newsletter');
 $email->mergeData([
     'discount' => 25,
     'promo_code' => 'NATALE25',
-    'expires' => '[DATE]',
+    'expires' => '2025-12-31',
 ]);
 ```
 
@@ -348,4 +348,4 @@ $email->mergeData([
 ---
 
 **Creato per facilitare lo sviluppo di template email professionali**  
-*Ultimo aggiornamento: [DATE]*
+*Ultimo aggiornamento: 2025-12-19*

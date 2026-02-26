@@ -44,7 +44,11 @@ Dopo un'analisi approfondita, è stato determinato che:
    - L'uso della chiave `navigation` è intenzionale e necessario per il funzionamento del modulo Notify
 
 2. **Eccezioni alle convenzioni generali**
-   - Il modulo Notify rappresenta un'eccezione alle convenzioni generali di SaluteOra
+<<<<<<< HEAD
+   - Il modulo Notify rappresenta un'eccezione alle convenzioni generali di Laraxot
+=======
+   - Il modulo Notify rappresenta un'eccezione alle convenzioni generali di healthcare_app
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
    - Questa eccezione è documentata e intenzionale
 
 ## Convenzioni Corrette per il Modulo Notify
@@ -81,10 +85,14 @@ return [
 
 ## Conclusione
 
-Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono correttamente le convenzioni specifiche del modulo. Non è necessario modificare questi file per conformarsi alle convenzioni generali di SaluteOra, poiché rappresentano un'eccezione documentata.
+<<<<<<< HEAD
+Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono correttamente le convenzioni specifiche del modulo. Non è necessario modificare questi file per conformarsi alle convenzioni generali di Laraxot, poiché rappresentano un'eccezione documentata.
+=======
+Il file `send_whats_app.php` e altri file simili nel modulo Notify seguono correttamente le convenzioni specifiche del modulo. Non è necessario modificare questi file per conformarsi alle convenzioni generali di healthcare_app, poiché rappresentano un'eccezione documentata.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Riferimenti
 
-- [Convenzioni Generali di Traduzione](../../lang/docs/translation_keys_rules.md)
-- [Convenzioni Specifiche del Modulo Notify](./translation_conventions.md)
-- [Regole per le Chiavi di Traduzione](../../lang/docs/translation_keys_best_practices.md)
+- [Convenzioni Generali di Traduzione](../../Lang/docs/TRANSLATION_KEYS_RULES.md)
+- [Convenzioni Specifiche del Modulo Notify](./TRANSLATION_CONVENTIONS.md)
+- [Regole per le Chiavi di Traduzione](../../Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)

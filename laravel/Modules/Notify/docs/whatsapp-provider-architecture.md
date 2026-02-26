@@ -212,7 +212,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
 
         // Crea il client Twilio
         $client = new Client([
-            'base_uri' => "https://api.{$this->edge}.twilio.com/[DATE]/",
+            'base_uri' => "https://api.{$this->edge}.twilio.com/2010-04-01/",
             'auth' => [$this->accountSid, $this->authToken],
             'timeout' => $this->timeout,
             'http_errors' => false,
@@ -483,7 +483,7 @@ Per integrare con Twilio:
 1. Creare un account su [Twilio](https://www.twilio.com/)
 2. Acquisire un numero WhatsApp Business o configurare un Sandbox
 3. Configurare Account SID e Auth Token
-4. Utilizzare l'endpoint REST `/[DATE]/Accounts/{AccountSid}/Messages.json`
+4. Utilizzare l'endpoint REST `/2010-04-01/Accounts/{AccountSid}/Messages.json`
 
 ### Vonage API per WhatsApp
 
@@ -759,7 +759,7 @@ final class SendTwilioWhatsAppAction implements WhatsAppProviderActionInterface
 
         // Crea il client Twilio
         $client = new Client([
-            'base_uri' => "https://api.{$this->edge}.twilio.com/[DATE]/",
+            'base_uri' => "https://api.{$this->edge}.twilio.com/2010-04-01/",
             'auth' => [$this->accountSid, $this->authToken],
             'timeout' => $this->timeout,
             'http_errors' => false,
@@ -1030,7 +1030,7 @@ Per integrare con Twilio:
 1. Creare un account su [Twilio](https://www.twilio.com/)
 2. Acquisire un numero WhatsApp Business o configurare un Sandbox
 3. Configurare Account SID e Auth Token
-4. Utilizzare l'endpoint REST `/[DATE]/Accounts/{AccountSid}/Messages.json`
+4. Utilizzare l'endpoint REST `/2010-04-01/Accounts/{AccountSid}/Messages.json`
 
 ### Vonage API per WhatsApp
 

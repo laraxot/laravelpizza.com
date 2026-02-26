@@ -405,7 +405,7 @@ class TestData
         return [
             'appointment' => [
                 'name' => 'John Doe',
-                'date' => '[DATE]',
+                'date' => '2024-03-20',
             ],
             'payment' => [
                 'name' => 'John Doe',

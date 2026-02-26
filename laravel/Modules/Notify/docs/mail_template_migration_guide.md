@@ -8,7 +8,11 @@ Questo documento descrive l'implementazione del campo `slug` nella tabella `mail
 
 Il file di migrazione principale per la tabella `mail_templates` è:
 ```
-/var/www/html/saluteora/laravel/Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php
+<<<<<<< HEAD
+/var/www/html/ptvx/laravel/Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php
+=======
+/var/www/html/healthcare_app/laravel/Modules/Notify/database/migrations/2018_10_10_000002_create_mail_templates_table.php
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 Questo file è implementato usando `XotBaseMigration`, che utilizza un pattern evolutivo che differisce dalle migrazioni standard di Laravel.
@@ -125,9 +129,9 @@ if (!$this->hasColumn('nuovo_campo')) {
 
 Per una comprensione completa, consultare anche:
 
-- [Struttura della Migrazione](./mail-templates/migration_structure.md) - Dettagli sulla struttura di migrazione
-- [Implementazione del Campo Slug](./mail-templates/slug_field_implementation.md) - Guida completa all'implementazione e utilizzo del campo slug
-- [Spatie Email Usage Guide](./spatie_email_usage_guide.md) - Come utilizzare SpatieEmail con i template
+- [Struttura della Migrazione](./mail-templates/MIGRATION_STRUCTURE.md) - Dettagli sulla struttura di migrazione
+- [Implementazione del Campo Slug](./mail-templates/SLUG_FIELD_IMPLEMENTATION.md) - Guida completa all'implementazione e utilizzo del campo slug
+- [Spatie Email Usage Guide](./SPATIE_EMAIL_USAGE_GUIDE.md) - Come utilizzare SpatieEmail con i template
 
 ## Vantaggi del Pattern XotBaseMigration
 

@@ -1,5 +1,9 @@
 # Principi di Ereditarietà nelle Classi <nome progetto>
-# Principi di Ereditarietà nelle Classi SaluteOra
+<<<<<<< HEAD
+# Principi di Ereditarietà nelle Classi Laraxot
+=======
+# Principi di Ereditarietà nelle Classi healthcare_app
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Regola Fondamentale: No Duplicate Declarations
 
@@ -76,7 +80,11 @@ Per identificare dichiarazioni duplicate, usare:
 
 # Trova classi che estendono XotBasePage e implementano HasForms
 grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/<nome progetto>/laravel/Modules/
-grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/saluteora/laravel/Modules/
+<<<<<<< HEAD
+grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/ptvx/laravel/Modules/
+=======
+grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/healthcare_app/laravel/Modules/
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 grep -r --include="*.php" "extends XotBasePage implements HasForms" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/
 ```
 

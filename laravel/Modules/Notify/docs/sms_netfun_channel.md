@@ -3,7 +3,7 @@
 ## Introduzione
 Questa guida spiega come integrare il provider Netfun come canale custom per l'invio di SMS in Laravel, seguendo le best practice del framework e sfruttando il pacchetto [`spatie/laravel-queueable-action`](https://github.com/spatie/laravel-queueable-action) per la gestione asincrona.
 
-> **IMPORTANTE**: Prima di procedere, assicurati che la [configurazione richiesta per Netfun](./netfun_config_requirements.md) sia stata completata correttamente nel file `config/sms.php` del modulo Notify.
+> **IMPORTANTE**: Prima di procedere, assicurati che la [configurazione richiesta per Netfun](./NETFUN_CONFIG_REQUIREMENTS.md) sia stata completata correttamente nel file `config/sms.php` del modulo Notify.
 
 ---
 
@@ -97,7 +97,7 @@ $response = Http::post($endpoint, $payload);
 
 ### 1.2. Configurazione
 
-**IMPORTANTE**: Il modulo Notify attualmente utilizza l'autenticazione username/password per Netfun, non l'autenticazione API key descritta qui. Per dettagli sui metodi di autenticazione supportati, consultare la [documentazione sui metodi di autenticazione Netfun](./netfun_authentication_methods.md).
+**IMPORTANTE**: Il modulo Notify attualmente utilizza l'autenticazione username/password per Netfun, non l'autenticazione API key descritta qui. Per dettagli sui metodi di autenticazione supportati, consultare la [documentazione sui metodi di autenticazione Netfun](./NETFUN_AUTHENTICATION_METHODS.md).
 
 Configurazione con API key in `config/sms.php` (documentata ma non implementata nel modulo):
 
@@ -115,7 +115,11 @@ Configurazione attuale con username/password nel modulo Notify:
 'netfun' => [
     'username' => env('NETFUN_USERNAME'),
     'password' => env('NETFUN_PASSWORD'),
-    'sender' => env('NETFUN_SENDER', 'SaluteOra'),
+<<<<<<< HEAD
+    'sender' => env('NETFUN_SENDER', 'Laraxot'),
+=======
+    'sender' => env('NETFUN_SENDER', 'healthcare_app'),
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
     'api_url' => env('NETFUN_API_URL', 'https://v2.smsviainternet.it/api/rest/v1/sms-batch.json'),
     // Parametri avanzati...
 ],

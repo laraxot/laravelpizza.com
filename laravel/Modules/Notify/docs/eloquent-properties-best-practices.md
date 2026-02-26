@@ -159,7 +159,7 @@ Prima di ogni commit nel modulo Notify, verificare:
 
 - [Regola Cursor](../.cursor/rules/eloquent-properties.md)
 - [Memoria Cursor](../.cursor/memories)
-- [Linee Guida AI](../../.ai/guidelines/core.md)
+- [Linee Guida AI](../../.ai/guidelines/CORE.md)
 - [File Corretto](../app/Notifications/GenericNotification.php)
 
 ## Esempi di Utilizzo nel Modulo

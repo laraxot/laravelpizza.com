@@ -2,7 +2,11 @@
 
 ## Panoramica delle Modifiche
 
-Il modello `MailTemplate` (`/var/www/html/saluteora/laravel/Modules/Notify/app/Models/MailTemplate.php`) è stato aggiornato per supportare l'identificazione dei template tramite slug. Questa implementazione segue le migliori pratiche di Laravel e migliora l'usabilità del sistema di template email.
+<<<<<<< HEAD
+Il modello `MailTemplate` (`/var/www/html/ptvx/laravel/Modules/Notify/app/Models/MailTemplate.php`) è stato aggiornato per supportare l'identificazione dei template tramite slug. Questa implementazione segue le migliori pratiche di Laravel e migliora l'usabilità del sistema di template email.
+=======
+Il modello `MailTemplate` (`/var/www/html/healthcare_app/laravel/Modules/Notify/app/Models/MailTemplate.php`) è stato aggiornato per supportare l'identificazione dei template tramite slug. Questa implementazione segue le migliori pratiche di Laravel e migliora l'usabilità del sistema di template email.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Modifiche Effettuate
 
@@ -171,7 +175,7 @@ echo $uniqueSlug;
 
 ## Riferimenti
 
-- [Struttura della Migrazione](./migration_structure.md)
-- [Implementazione Campo Slug nella Migrazione](./slug_field_implementation.md)
-- [Guida alla Migrazione MailTemplate](../mail_template_migration_guide.md)
+- [Struttura della Migrazione](./MIGRATION_STRUCTURE.md)
+- [Implementazione Campo Slug nella Migrazione](./SLUG_FIELD_IMPLEMENTATION.md)
+- [Guida alla Migrazione MailTemplate](../MAIL_TEMPLATE_MIGRATION_GUIDE.md)
 - [Documentazione Spatie Sluggable](https://github.com/spatie/laravel-sluggable)

@@ -89,7 +89,6 @@ Stesso pattern di Chart: usare `Assert::string()` per type narrowing dopo `preg_
 - [PHPStan Usage](../../xot/docs/phpstan-usage.md)
 - [Code Quality Standards](../../xot/docs/code-quality-standards.md)
 
-*Ultimo aggiornamento: 2025-01-22*
 # PHPStan Level 10 Fixes - Session 2026-01-05
 
 ## Module: Notify (2 errors)
