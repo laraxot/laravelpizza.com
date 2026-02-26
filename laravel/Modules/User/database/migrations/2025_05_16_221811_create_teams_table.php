@@ -1,70 +1,31 @@
 <?php
 
-/**
- * ---.
- */
-
 declare(strict_types=1);
 
-use Illuminate\Database\Schema\Blueprint;
-use Modules\Xot\Database\Migrations\XotBaseMigration;
+namespace Modules\User\Database\Migrations;
 
-return new class extends XotBaseMigration {
-    /**
-     * Esegue la migrazione.
-     */
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration {
     public function up(): void
     {
-        // -- CREATE --
-        $this->tableCreate(static function (Blueprint $table): void {
-            $table->id();
-            $table->uuid('uuid')->nullable()->index();
-            $table->string('user_id', 36)->nullable()->index();
-            // $table->foreignIdFor(\Modules\Xot\Datas\XotData::make()->getUserClass());
-            $table->string('name');
-            $table->boolean('personal_team')->default(false);
-            $table->softDeletes();
-            $table->timestamps();
-        });
-        // -- UPDATE --
-        $this->tableUpdate(function (Blueprint $table): void {
-            // MySqlConnection::getDoctrineSchemaManager does not exist.
-            // MySqlConnection::getSchemaGrammar() ?
-            // if ($this->hasIndexName('team_invitations_team_id_foreign')) {
-            //    $table->dropForeign('team_invitations_team_id_foreign');
-            // }
-            if ($this->hasColumn('uuid')) {
-                $table->uuid('uuid')->nullable()->change();
-            }
-            if ($this->hasColumn('personal_team')) {
-                $table->boolean('personal_team')->default(false)->change();
-            }
-
-            if (! $this->hasColumn('code')) {
-                $table->string('code', 36)->nullable()->index();
-            }
-
-            if (! $this->hasColumn('owner_id')) {
+        Schema::connection('user')->table('teams', function (Blueprint $table): void {
+            if (! Schema::connection('user')->hasColumn('teams', 'owner_id')) {
                 $table->uuid('owner_id')->nullable()->after('id');
-            }
 
-            if (! $this->hasColumn('slug')) {
-                $table->string('slug')->nullable()->unique();
+                // opzionale: $table->foreign('owner_id')->references('id')->on('users')->nullOnDelete();
             }
+        });
+    }
 
-            if (! $this->hasColumn('description')) {
-                $table->text('description')->nullable();
+    public function down(): void
+    {
+        Schema::connection('user')->table('teams', function (Blueprint $table): void {
+            if (Schema::connection('user')->hasColumn('teams', 'owner_id')) {
+                $table->dropColumn('owner_id');
             }
-
-            if (! $this->hasColumn('avatar_path')) {
-                $table->string('avatar_path')->nullable();
-            }
-
-            if (! $this->hasColumn('settings')) {
-                $table->json('settings')->nullable();
-            }
-
-            $this->updateTimestamps($table, true);
         });
     }
 };

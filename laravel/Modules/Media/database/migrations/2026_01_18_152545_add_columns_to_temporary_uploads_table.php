@@ -1,30 +1,46 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+declare(strict_types=1);
 
-return new class extends Migration
+use Illuminate\Database\Schema\Blueprint;
+use Modules\Media\Models\TemporaryUpload;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+/**
+ * Migrazione per aggiungere colonne alla tabella temporary_uploads.
+ *
+ * Colonne aggiunte:
+ * - user_id: UUID dell'utente che ha fatto l'upload
+ * - file_name: nome del file
+ * - file_size: dimensione in byte
+ * - mime_type: tipo MIME del file
+ * - status: stato dell'upload (uploading, completed, failed)
+ *
+ * @see docs/database/migrations.md
+ */
+return new class extends XotBaseMigration
 {
+    protected ?string $model_class = TemporaryUpload::class;
+
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::table('temporary_uploads', function (Blueprint $table) {
-            if (! Schema::hasColumn('temporary_uploads', 'user_id')) {
+        $this->tableUpdate(function (Blueprint $table) {
+            if (! $this->hasColumn('user_id')) {
                 $table->uuid('user_id')->nullable();
             }
-            if (! Schema::hasColumn('temporary_uploads', 'file_name')) {
+            if (! $this->hasColumn('file_name')) {
                 $table->string('file_name')->nullable();
             }
-            if (! Schema::hasColumn('temporary_uploads', 'file_size')) {
+            if (! $this->hasColumn('file_size')) {
                 $table->integer('file_size')->nullable();
             }
-            if (! Schema::hasColumn('temporary_uploads', 'mime_type')) {
+            if (! $this->hasColumn('mime_type')) {
                 $table->string('mime_type')->nullable();
             }
-            if (! Schema::hasColumn('temporary_uploads', 'status')) {
+            if (! $this->hasColumn('status')) {
                 $table->string('status')->default('uploading');
             }
         });
@@ -35,21 +51,21 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('temporary_uploads', function (Blueprint $table) {
+        $this->tableUpdate(function (Blueprint $table) {
             $columnsToDrop = [];
-            if (Schema::hasColumn('temporary_uploads', 'user_id')) {
+            if ($this->hasColumn('user_id')) {
                 $columnsToDrop[] = 'user_id';
             }
-            if (Schema::hasColumn('temporary_uploads', 'file_name')) {
+            if ($this->hasColumn('file_name')) {
                 $columnsToDrop[] = 'file_name';
             }
-            if (Schema::hasColumn('temporary_uploads', 'file_size')) {
+            if ($this->hasColumn('file_size')) {
                 $columnsToDrop[] = 'file_size';
             }
-            if (Schema::hasColumn('temporary_uploads', 'mime_type')) {
+            if ($this->hasColumn('mime_type')) {
                 $columnsToDrop[] = 'mime_type';
             }
-            if (Schema::hasColumn('temporary_uploads', 'status')) {
+            if ($this->hasColumn('status')) {
                 $columnsToDrop[] = 'status';
             }
 

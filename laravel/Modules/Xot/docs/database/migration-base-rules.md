@@ -2,11 +2,22 @@
 
 ## Regola universale
 - Usa sempre anonymous class: `return new class extends XotBaseMigration { ... }`
-- Non implementare mai il metodo `down` se estendi XotBaseMigration
+- Usa sempre `$model_class` invece di `$table` e `$connection`
+- NON implementare il metodo `down()` (XotBaseMigration lo gestisce automaticamente)
+- Il nome del file DEVE terminare con `_table.php`
 - Per aggiungere colonne a tabelle esistenti:
   - Copia la migrazione originale, aggiorna il timestamp
   - Aggiungi la colonna in `tableUpdate` solo se non esiste (`if (! $this->hasColumn(...))`)
   - Aggiorna sempre questa doc, la root docs e la doc del modulo
+
+## Convenzioni di Nomenclatura
+
+| Tipo | Pattern | Esempio |
+|------|---------|---------|
+| CREATE | `{YYYY_MM_DD}_{HHMMSS}_create_{table}_table.php` | `2026_01_01_000000_create_users_table.php` |
+| ADD | `{YYYY_MM_DD}_{HHMMSS}_add_{column}_to_{table}_table.php` | `2026_02_13_172135_add_lang_to_users_table.php` |
+| CHANGE | `{YYYY_MM_DD}_{HHMMSS}_change_{column}_in_{table}_table.php` | `2026_02_13_163329_change_profiles_id_to_uuid_table.php` |
+| FIX | `{YYYY_MM_DD}_{HHMMSS}_fix_{column}_in_{table}_table.php` | `2026_02_13_171410_fix_causer_id_to_uuid_table.php` |
 
 ## Motivazione
 - Prevenire conflitti di nomi

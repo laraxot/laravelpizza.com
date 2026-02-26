@@ -1,46 +1,28 @@
-## Configuration Standards
-- [x] `.env.testing` is a carbon copy of `.env` with `_test` suffix for database names. No module-specific variables (`NOTIFY_DB_*`) unless they exist in `.env`.
-- [x] `TestCase.php` simplified: single `module:migrate` call, no `migrate:fresh`, no force, no static `$migrated` guards.
+# Roadmap Modulo Gdpr
 
-## PHPMD Issues
-...
+## 🎯 Visione
+Fornire un sistema completo e conforme per la gestione dei dati personali, il consenso dei cookie e il diritto alla privacy, integrato nativamente in ogni parte dell'applicazione.
 
-### LongVariable
-- [x] `app/Datas/GdprData.php:53`: Avoid excessively long variable names like `$cookie_banner_enabled`. Keep variable name length under 20. (Renamed to `$cookie_banner_on`)
-- [x] `app/Filament/Pages/EditProfile.php:11`: Avoid excessively long variable names like `$shouldRegisterNavigation`. Keep variable name length under 20. (Renamed to `$registerNavigation`)
+## 🏗️ Fasi di Sviluppo
 
-### UnusedFormalParameter
-- [x] `app/Models/Policies/ConsentPolicy.php:23`: Avoid unused parameters such as '$_consent'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/ConsentPolicy.php:39`: Avoid unused parameters such as '$_consent'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/ConsentPolicy.php:47`: Avoid unused parameters such as '$_consent'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/ConsentPolicy.php:55`: Avoid unused parameters such as '$_consent'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/ConsentPolicy.php:63`: Avoid unused parameters such as '$consent'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/EventPolicy.php:23`: Avoid unused parameters such as '$_event'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/EventPolicy.php:39`: Avoid unused parameters such as '$_event'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/EventPolicy.php:47`: Avoid unused parameters such as '$_event'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/EventPolicy.php:55`: Avoid unused parameters such as '$_event'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/EventPolicy.php:63`: Avoid unused parameters such as '$event'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/GdprBasePolicy.php:15`: Avoid unused parameters such as '$_ability'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/ProfilePolicy.php:23`: Avoid unused parameters such as '$_profile'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/ProfilePolicy.php:39`: Avoid unused parameters such as '$_profile'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/ProfilePolicy.php:47`: Avoid unused parameters such as '$_profile'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/ProfilePolicy.php:55`: Avoid unused parameters such as '$_profile'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/ProfilePolicy.php:63`: Avoid unused parameters such as '$profile'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/TreatmentPolicy.php:23`: Avoid unused parameters such as '$_treatment'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/TreatmentPolicy.php:39`: Avoid unused parameters such as '$_treatment'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/TreatmentPolicy.php:47`: Avoid unused parameters such as '$_treatment'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/TreatmentPolicy.php:55`: Avoid unused parameters such as '$_treatment'. (Added @SuppressWarnings)
-- [x] `app/Models/Policies/TreatmentPolicy.php:63`: Avoid unused parameters such as '$treatment'. (Added @SuppressWarnings)
-- [x] `tests/TestCase.php:37`: Avoid unused parameters such as '$app'. (Ignored - test file)
+### Fase 1: Consolidamento e Standard (In Corso)
+- [x] PHPStan Level 10 Compliance.
+- [x] Correzione dei problemi PHPMD (LongVariable, UnusedParameters).
+- [ ] Refactoring del sistema di consenso per evitare violazioni SRP.
+- [ ] Standardizzazione dei file `.env.testing`.
 
-### UnusedLocalVariable
-- [x] `app/Models/Policies/GdprBasePolicy.php:17`: Avoid unused local variables such as '$xotData'. (Refactored)
+### Fase 2: Enterprise UI (Pianificato)
+- [ ] Miglioramento del cookie banner personalizzabile tramite configurazione.
+- [ ] Dashboard di gestione consensi per l'utente finale.
+- [ ] Integrazione con il modulo User per l'esportazione e cancellazione dei dati (Diritto all'Oblio).
 
-### BooleanArgumentFlag
-- [x] `app/Models/Traits/HasGdpr.php:63`: The method `hasGivenConsent` has a boolean flag argument `$cached`, which is a certain sign of a Single Responsibility Principle violation. (Refactored into two methods)
+### Fase 3: Ottimizzazione e AI (Futuro)
+- [ ] Monitoraggio automatico della compliance GDPR.
+- [ ] Suggerimenti AI per le politiche sulla privacy basate sulle funzionalità attivate.
+- [ ] Generazione automatica di report di conformità.
 
-## PHPStan Issues
-- [x] No errors found.
-
-## PHPInsights Issues
-- [ ] Unable to run due to missing composer.lock file.
+## ✅ Checklist Qualità
+- [x] PHPStan Level 10.
+- [ ] Rispetto rigido degli standard di naming per variabili e parametri.
+- [ ] Test di integrazione per il flusso di consenso al 100%.
+- [ ] Traduzioni legali complete in almeno due lingue.

@@ -1,0 +1,10 @@
+le migrazioni 
+2026_01_18_152545_add_columns_to_temporary_uploads_table
+2026_02_13_163329_change_profiles_id_to_uuid
+2026_02_13_171410_fix_causer_id_to_uuid
+2026_02_13_172135_add_lang_column
+
+non sono a norma con i nostri prototipi, analizza il codice, studia le cartelle docs, aggiorna studia e migliora le cartelle docs dentro i moduli e dentro i temi, ragiona ancora, aggiorna le tue memories, le tue rules, le tue skills, poi implementa poi controlla
+, ti ricordo che non facciamo mai database refresh o migrate fresh ! non dobbiamo mai perdere i dati , se hai domande falle ! non devi inventarti nulla 
+
+per esempio la migrazione 2026_02_13_172135_add_lang_column  ha anche il nome sbagliato in quanto tutte le nostre migrazioni dopo la data hanno la stringa "create" poi il nome della tabella e poi la stringa "table" , come sempre devi dubitare di quello che ti dico e devi verificare, poi aggiorna studia e migliora le cartelle docs dentro i moduli e dentro i temi , poi aggiorna le tue rules, le tue memories e le tue skills , poi implementa poi controlla 
