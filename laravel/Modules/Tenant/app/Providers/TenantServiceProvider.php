@@ -108,14 +108,15 @@ class TenantServiceProvider extends XotBaseServiceProvider
             if (isset($connections[$default]) && ! isset($connections[$name])) {
                 /** @var array<string, mixed> $moduleConfig */
                 $moduleConfig = $connections[$default];
-                /* da errore se usiamo sqlite 
-                // Override with module-specific env variables if they exist
-                $moduleConfig['database'] = env("DB_DATABASE_{$upperName}", $moduleConfig['database']);
-                $moduleConfig['username'] = env("DB_USERNAME_{$upperName}", $moduleConfig['username']);
-                $moduleConfig['password'] = env("DB_PASSWORD_{$upperName}", $moduleConfig['password']);
-                $moduleConfig['host'] = env("DB_HOST_{$upperName}", $moduleConfig['host'] ?? '127.0.0.1');
-                $moduleConfig['port'] = env("DB_PORT_{$upperName}", $moduleConfig['port'] ?? '3306');
-                */
+                
+                // Note: Module-specific env variables disabled for SQLite compatibility
+                // If needed, uncomment and adjust for your database driver:
+                // $moduleConfig['database'] = env("DB_DATABASE_{$upperName}", $moduleConfig['database']);
+                // $moduleConfig['username'] = env("DB_USERNAME_{$upperName}", $moduleConfig['username']);
+                // $moduleConfig['password'] = env("DB_PASSWORD_{$upperName}", $moduleConfig['password']);
+                // $moduleConfig['host'] = env("DB_HOST_{$upperName}", $moduleConfig['host'] ?? '127.0.0.1');
+                // $moduleConfig['port'] = env("DB_PORT_{$upperName}", $moduleConfig['port'] ?? '3306');
+                
                 $connections[$name] = $moduleConfig;
             }
         }

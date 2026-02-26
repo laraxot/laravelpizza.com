@@ -123,12 +123,21 @@ readonly class CalculateTravelTimeAction
             return TravelTimeData::error($element['status'] ?? 'NO_ROUTE');
         }
 
+        /** @var int $durationSeconds */
+        $durationSeconds = $element['duration']['value'];
+
+        /** @var int $distanceMeters */
+        $distanceMeters = $element['distance']['value'];
+
+        /** @var int $durationInTraffic */
+        $durationInTraffic = isset($element['duration_in_traffic'])
+            ? $element['duration_in_traffic']['value']
+            : $durationSeconds;
+
         return new TravelTimeData(
-            duration_seconds: (int) $element['duration']['value'],
-            duration_in_traffic_seconds: isset($element['duration_in_traffic'])
-                ? (int) $element['duration_in_traffic']['value']
-                : (int) $element['duration']['value'],
-            distance_meters: (int) $element['distance']['value'],
+            duration_seconds: $durationSeconds,
+            duration_in_traffic_seconds: $durationInTraffic,
+            distance_meters: $distanceMeters,
             formatted_duration: $element['duration']['text'],
             formatted_distance: $element['distance']['text'],
             status: $data['status'],
