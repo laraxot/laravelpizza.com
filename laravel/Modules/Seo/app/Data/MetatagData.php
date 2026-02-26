@@ -35,30 +35,6 @@ class MetatagData extends Data implements MetatagDataInterface, Wireable
     }
 
     /**
-<<<<<<< HEAD
-=======
-     * Handle dynamic method calls.
-     *
-     * @param  array<int, mixed>  $parameters
-     * @return mixed
-     */
-    public function __call(string $method, array $parameters)
-    {
-        if (strpos($method, 'get') === 0) {
-            $key = lcfirst(substr($method, 3));
-
-            return $this->get($key, $parameters[0] ?? null);
-        }
-
-        throw new BadMethodCallException(sprintf(
-            'Method %s::%s does not exist.',
-            static::class,
-            $method
-        ));
-    }
-
-    /**
->>>>>>> 013c0d2 (.)
      * Get the title.
      */
     public function getTitle(): string

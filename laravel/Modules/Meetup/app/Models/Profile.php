@@ -46,14 +46,14 @@ use Modules\User\Models\BaseProfile;
  * @property-read Profile|null $updater
  * @property-read \Modules\User\Models\User|null $user
  * @property-read string|null $user_name
- * @method static Builder<static>|Profile childrenWith(array $relations)
- * @method static Builder<static>|Profile childrenWithCount(array $relations)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWith(array $relations)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWithCount(array $relations)
  * @method static \Modules\Meetup\Database\Factories\ProfileFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile newQuery()
- * @method static Builder<static>|Profile permission($permissions, bool $without = false)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile permission($permissions, bool $without = false)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile query()
- * @method static Builder<static>|Profile role($roles, ?string $guard = null, bool $without = false)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile role($roles, ?string $guard = null, bool $without = false)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereDeletedAt($value)
@@ -68,8 +68,8 @@ use Modules\User\Models\BaseProfile;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereUserId($value)
- * @method static Builder<static>|Profile withoutPermission($permissions)
- * @method static Builder<static>|Profile withoutRole($roles, ?string $guard = null)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, ?string $guard = null)
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile

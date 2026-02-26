@@ -76,7 +76,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property-read \Modules\Meetup\Models\Profile|null $deleter
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Activity\Models\Snapshot> $snapshots
  * @property-read int|null $snapshots_count
- * @property-read \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection<int, \Modules\Activity\Models\StoredEvent> $storedEvents
+ * @property-read \Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEventCollection<\Modules\Activity\Models\StoredEvent> $storedEvents
  * @property-read int|null $stored_events_count
  * @method static \Modules\Meetup\Database\Factories\EventFactory factory($count = null, $state = [])
  * @method static Builder<static>|Event whereAlternateName($value)
