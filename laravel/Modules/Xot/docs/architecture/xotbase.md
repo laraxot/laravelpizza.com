@@ -42,4 +42,3 @@ grep -r "extends Filament\\" Modules/[YourModule] | grep -v "XotBase"
 L'output deve essere vuoto.
 
 ---
-*Ultimo aggiornamento: Febbraio 2026*

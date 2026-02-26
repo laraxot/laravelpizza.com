@@ -169,4 +169,3 @@ performance::admin
 - ✅ **Multi-Ruolo**: Supporto mantenuto
 - ✅ **Performance**: Nessun impatto negativo
 
-*Ultimo aggiornamento: 2025-01-27*

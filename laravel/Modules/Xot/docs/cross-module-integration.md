@@ -223,4 +223,3 @@ Il modulo Progressioni integra il modello `Integparam` del modulo Sigma per gest
 - [Filament Resources Best Practices](/docs/filament-best-practices.md)
 - [Translation Standards](/docs/translation-standards.md)
 
-*Ultimo aggiornamento: 5 giugno 2025*

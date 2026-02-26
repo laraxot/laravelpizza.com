@@ -30,7 +30,6 @@
 - [Regole update migrazioni Performance](../../performance/project_docs/migration_update_rules.md) ← questa doc è sempre aggiornata
 - [Ripresa lavoro migrazioni in root](../../../project_docs/module_namespace_rules.md)
 
-Ultimo aggiornamento: [DATE]
 
 ---
 

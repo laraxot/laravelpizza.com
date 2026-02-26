@@ -68,7 +68,11 @@ find Modules -type f -name "*.php" -exec sed -i 's/Modules\\Fixcity\\Models\\Pro
 
 #### Problema 2: ⚠️ Type hints mancanti in Contact model
 
-**File**: `Modules/Quaeris/app/Models/Contact.php` (809 righe!)
+<<<<<<< .merge_file_Rvx2nR
+**File**: `Modules/healthcare_app/app/Models/Contact.php` (809 righe!)
+=======
+**File**: `Modules/ModuloEsempio/app/Models/Contact.php` (809 righe!)
+>>>>>>> .merge_file_oG1Lep
 
 **Errori PHPStan Level 10**:
 ```
@@ -106,7 +110,11 @@ if ($body_html === null) { ... }
 |--------|--------------|-----------------|--------|
 | User | 16 | 0 | ✅ |
 | Xot | 16 | 0 | ✅ |
-| Quaeris | 21+ | 21 | ⚠️ Necessita refactoring Contact |
+<<<<<<< .merge_file_Rvx2nR
+| healthcare_app | 21+ | 21 | ⚠️ Necessita refactoring Contact |
+=======
+| ModuloEsempio | 21+ | 21 | ⚠️ Necessita refactoring Contact |
+>>>>>>> .merge_file_oG1Lep
 | Gdpr | 6 | 0 | ✅ |
 | Notify | 8 | 0 | ✅ |
 
@@ -149,7 +157,11 @@ class Notification extends BaseModel // Eredita $connection = 'user'
 
 **Fix applicato**:
 - User module: 7 file (Notification, SocialiteUser, OauthAccessToken, AuthenticationLog, BaseTeamUser, Membership, TenantUser)
-- Quaeris module: 5 file (Contact, ContactSimple, PdfStyle, QuestionChart, SurveyPdf)
+<<<<<<< .merge_file_Rvx2nR
+- healthcare_app module: 5 file (Contact, ContactSimple, PdfStyle, QuestionChart, SurveyPdf)
+=======
+- ModuloEsempio module: 5 file (Contact, ContactSimple, PdfStyle, QuestionChart, SurveyPdf)
+>>>>>>> .merge_file_oG1Lep
 - Altri moduli: ~51 file
 
 **Comando usato**:
@@ -289,7 +301,11 @@ protected function casts(): array
 
 ### Violazione KISS #1: ❌ Contact.php - Complessità elevata (CRITICA)
 
-**File**: `Modules/Quaeris/app/Models/Contact.php`
+<<<<<<< .merge_file_Rvx2nR
+**File**: `Modules/healthcare_app/app/Models/Contact.php`
+=======
+**File**: `Modules/ModuloEsempio/app/Models/Contact.php`
+>>>>>>> .merge_file_oG1Lep
 **Righe**: 809 (!!!)
 **Metodi**: 40+
 
@@ -350,7 +366,11 @@ Contact.php (809 lines) →
 
 ### Violazione KISS #2: ❌ QuestionChart.php - Complessità alta
 
-**File**: `Modules/Quaeris/app/Models/QuestionChart.php`
+<<<<<<< .merge_file_Rvx2nR
+**File**: `Modules/healthcare_app/app/Models/QuestionChart.php`
+=======
+**File**: `Modules/ModuloEsempio/app/Models/QuestionChart.php`
+>>>>>>> .merge_file_oG1Lep
 **Righe**: 882 (!)
 
 **Stesso problema di Contact.php**
@@ -432,13 +452,21 @@ find Modules -type f -name "*.php" -exec sed -i 's/Modules\\Fixcity\\Models\\Pro
 
 **Moduli fixati**:
 - **User**: 7 modelli
-- **Quaeris**: 5 modelli
+<<<<<<< .merge_file_Rvx2nR
+- **healthcare_app**: 5 modelli
+=======
+- **ModuloEsempio**: 5 modelli
+>>>>>>> .merge_file_oG1Lep
 - **Notify**: ~8 modelli
 - **Altri**: ~43 modelli
 
 **Esempio comando**:
 ```bash
-cd Modules/Quaeris/app/Models
+<<<<<<< .merge_file_Rvx2nR
+cd Modules/healthcare_app/app/Models
+=======
+cd Modules/ModuloEsempio/app/Models
+>>>>>>> .merge_file_oG1Lep
 for f in *.php; do
   if grep -q "extends BaseModel" "$f"; then
     sed -i '/^[[:space:]]*protected \$connection = /d' "$f"
@@ -457,7 +485,11 @@ done
 
 **Comando**:
 ```bash
-vendor/bin/pint Modules/User/app/Models Modules/Quaeris/app/Models --quiet
+<<<<<<< .merge_file_Rvx2nR
+vendor/bin/pint Modules/User/app/Models Modules/healthcare_app/app/Models --quiet
+=======
+vendor/bin/pint Modules/User/app/Models Modules/ModuloEsempio/app/Models --quiet
+>>>>>>> .merge_file_oG1Lep
 ```
 
 **Risultato**:
@@ -869,13 +901,21 @@ $activeUsers = User::active()->get(); // ✅ Works!
 ```bash
 ./vendor/bin/phpstan analyse Modules/User/app/Models --level=10
 ./vendor/bin/phpstan analyse Modules/Xot/app/Models --level=10
-./vendor/bin/phpstan analyse Modules/Quaeris/app/Models --level=10
+<<<<<<< .merge_file_Rvx2nR
+./vendor/bin/phpstan analyse Modules/healthcare_app/app/Models --level=10
+=======
+./vendor/bin/phpstan analyse Modules/ModuloEsempio/app/Models --level=10
+>>>>>>> .merge_file_oG1Lep
 ```
 
 **Results**:
 - User: ✅ 0 errors (dopo fix)
 - Xot: ✅ 0 errors (dopo fix)
-- Quaeris: ⚠️ 21 errors (Contact.php - needs refactoring)
+<<<<<<< .merge_file_Rvx2nR
+- healthcare_app: ⚠️ 21 errors (Contact.php - needs refactoring)
+=======
+- ModuloEsempio: ⚠️ 21 errors (Contact.php - needs refactoring)
+>>>>>>> .merge_file_oG1Lep
 
 ### Manual Code Review
 

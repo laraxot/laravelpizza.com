@@ -455,7 +455,6 @@ private function getPasswordLegacy(): string
 - ✅ **Testing Strategy**: Test unitari, integrazione e performance
 - ✅ **Maintenance Policy**: Versioning, changelog e deprecation
 
-*Ultimo aggiornamento: 2025-01-27*
 
 
 

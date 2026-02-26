@@ -243,4 +243,3 @@ Modules/User/
 - [ ] Logging strutturato
 - [ ] Metriche di utilizzo
 
-*Ultimo aggiornamento: 2025-01-27*

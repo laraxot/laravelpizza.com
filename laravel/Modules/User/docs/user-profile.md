@@ -39,8 +39,9 @@ User (connection: user)
 ├── timestamps
 └── SoftDeletes
 
-Profile (connection: meetup)
-├── id (UUID)
+Profile (connection: user)
+├── id (bigint autoincrement)
+├── uuid (char 36 unique, per Android/Postgres/API)
 ├── user_id (UUID)
 ├── first_name
 ├── last_name

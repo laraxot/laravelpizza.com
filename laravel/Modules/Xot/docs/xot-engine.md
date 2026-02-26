@@ -269,7 +269,11 @@ abstract class XotBaseResource extends Resource
 ```php
 // Ogni modulo DEVE avere il proprio BaseModel
 abstract class BaseModel extends XotBaseModel {
-    protected $connection = 'quaeris';  // Connection specifica
+<<<<<<< .merge_file_PEt3TO
+    protected $connection = 'healthcare_app';  // Connection specifica
+=======
+    protected $connection = 'ptvx';  // Connection specifica
+>>>>>>> .merge_file_pyQAyS
 
     // Solo funzionalità SPECIFICHE del modulo
     // MAI duplicare ciò che XotBaseModel già fornisce

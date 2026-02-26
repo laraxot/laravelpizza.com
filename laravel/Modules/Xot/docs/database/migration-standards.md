@@ -1,40 +1,16 @@
-# Standard per le Migrazioni in LaravelPizza
+# Standard per le Migrazioni in <nome progetto>
 
-## Convenzioni di Nomenclatura
+## Introduzione
 
-### REGOLA UNIVERSALE
-
-**TUTTE** le migrazioni DEVONO seguire il pattern:
-
-```
-{YYYY_MM_DD}_{HHMMSS}_create_{table_name}_table.php
-```
-
-Indipendentemente dal tipo di operazione (CREATE, ADD, CHANGE, FIX), il nome del file deve sempre essere `create_{table_name}_table.php`.
-
-- La logica di creazione va in `tableCreate()`
-- La logica di modifica va in `tableUpdate()`
-- Il nome file rimane sempre `create_{table_name}_table.php`
-
-### Esempi Corretti
-- `2026_01_01_000000_create_users_table.php`
-- `2026_01_01_000001_create_profiles_table.php`
-
-### Anti-Pattern (NON usare)
-- ❌ `2026_02_13_172135_add_lang_to_users_table.php`
-- ❌ `2026_02_13_163329_change_profiles_id_to_uuid.php`
-- ❌ `2026_02_13_171410_fix_causer_id_to_uuid.php`
-
----
+Questo documento definisce gli standard e le best practices da seguire per tutte le migrazioni nei moduli di <nome progetto>. Questi standard sono fondamentali per garantire la coerenza e la correttezza delle migrazioni in tutto il progetto.
 
 ## Principi Fondamentali
 
 1. **Estensione della classe base**: Tutte le migrazioni devono estendere `XotBaseMigration`
-2. **Proprietà obbligatorie**: Ogni migrazione deve definire `$model_class`
-3. **Documentazione completa**: Ogni migrazione deve includere un docblock che descriva lo scopo
+2. **Proprietà obbligatorie**: Ogni migrazione deve definire le proprietà `$table` e `$connection`
+3. **Documentazione completa**: Ogni migrazione deve includere una documentazione che descriva lo scopo della tabella
 4. **Verifica delle tabelle correlate**: Prima di creare foreign keys, verificare sempre l'esistenza della tabella correlata
 5. **Gestione dei timestamp**: Utilizzare sempre `$this->updateTimestamps()` per gestire i timestamp
-6. **Nome file**: Il file DEVE terminare con `_table.php`
 
 ## Struttura Standard delle Migrazioni
 
@@ -44,35 +20,53 @@ Indipendentemente dal tipo di operazione (CREATE, ADD, CHANGE, FIX), il nome del
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-use Modules\NomeModello\Models\NomeModello;
+use Illuminate\Support\Facades\Schema;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
  * Migrazione per [scopo della migrazione].
  *
- * @see docs/database/migrations.md
+ * @see docs/standards/migrations.md
  */
 return new class extends XotBaseMigration
 {
-    protected ?string $model_class = NomeModello::class;
+    /**
+     * Nome della tabella.
+     *
+     * @var string
+     */
+    protected string $table = 'nome_tabella';
+
+    /**
+     * Connessione al database.
+     *
+     * @var string
+     */
+    protected ?string $connection = 'mysql'; // o altra connessione appropriata
 
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        // Per creare una nuova tabella
         $this->tableCreate(function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->string('nome_campo');
-            $this->updateTimestamps($table, true); // true per soft deletes
-        });
+            $table->id(); // o altro tipo di chiave primaria
 
-        // Per modificare una tabella esistente
-        $this->tableUpdate(function (Blueprint $table) {
-            if (! $this->hasColumn('nome_colonna')) {
-                $table->string('nome_colonna')->nullable();
+            // Definizione dei campi
+
+            // Utilizziamo updateTimestamps per gestire created_at, updated_at e deleted_at
+            $this->updateTimestamps($table, true); // true per includere soft delete
+
+            // Verifica se le tabelle correlate esistono prima di creare foreign keys
+            if (Schema::connection($this->getConnection())->hasTable('tabella_correlata')) {
+                $table->foreign('campo_id')
+                    ->references('id')
+                    ->on('tabella_correlata')
+                    ->onDelete('cascade');
             }
+
+            // Indici
+            $table->index('campo_id');
         });
     }
 };

@@ -103,7 +103,15 @@ SELECT
     REFERENCED_TABLE_NAME,
     REFERENCED_COLUMN_NAME
 FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
-WHERE TABLE_SCHEMA = 'quaeris_data'
+<<<<<<< .merge_file_mjAL3L
+WHERE TABLE_SCHEMA = 'healthcare_app_data'
+=======
+<<<<<<< HEAD
+WHERE TABLE_SCHEMA = 'app_data'
+=======
+WHERE TABLE_SCHEMA = 'ptvx_data'
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_ydlJ4t
   AND REFERENCED_TABLE_NAME IS NOT NULL;
 
 -- Analizza tenant isolation
@@ -111,7 +119,15 @@ SELECT
     TABLE_NAME,
     COUNT(*) as columns
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA LIKE 'quaeris_%'
+<<<<<<< .merge_file_mjAL3L
+WHERE TABLE_SCHEMA LIKE 'healthcare_app_%'
+=======
+<<<<<<< HEAD
+WHERE TABLE_SCHEMA LIKE 'app_%'
+=======
+WHERE TABLE_SCHEMA LIKE 'ptvx_%'
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_ydlJ4t
   AND COLUMN_NAME LIKE '%tenant%'
 GROUP BY TABLE_NAME;
 
@@ -120,7 +136,15 @@ SELECT
     TABLE_NAME,
     COLUMN_NAME
 FROM INFORMATION_SCHEMA.STATISTICS
-WHERE TABLE_SCHEMA = 'quaeris_data'
+<<<<<<< .merge_file_mjAL3L
+WHERE TABLE_SCHEMA = 'healthcare_app_data'
+=======
+<<<<<<< HEAD
+WHERE TABLE_SCHEMA = 'app_data'
+=======
+WHERE TABLE_SCHEMA = 'ptvx_data'
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_ydlJ4t
   AND SEQ_IN_INDEX = 1
 GROUP BY TABLE_NAME, COLUMN_NAME
 HAVING COUNT(*) < 3;
@@ -173,7 +197,15 @@ https://www.php-fig.org/psr/psr-12/
   "enforcement": "Architecture tests prevent direct XotBaseModel extension",
   "files": [
     "Modules/User/app/Models/BaseModel.php",
-    "Modules/Quaeris/app/Models/BaseModel.php",
+<<<<<<< .merge_file_mjAL3L
+    "Modules/healthcare_app/app/Models/BaseModel.php",
+=======
+<<<<<<< HEAD
+    "Modules/ExternalProject/app/Models/BaseModel.php",
+=======
+    "Modules/ModuloEsempio/app/Models/BaseModel.php",
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_ydlJ4t
     "Modules/Xot/Tests/Architecture/BaseModelTest.php"
   ]
 }
@@ -264,9 +296,21 @@ File: `Modules/Xot/.mcp.json`
   "mcpServers": {
     "filesystem-xot": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_quaeris_fila5_mono/laravel/Modules/Xot"],
+<<<<<<< .merge_file_mjAL3L
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/Xot"],
       "env": {
-        "ALLOWED_DIRECTORIES": "/var/www/_bases/base_quaeris_fila5_mono/laravel/Modules/Xot"
+        "ALLOWED_DIRECTORIES": "/var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/Xot"
+=======
+<<<<<<< HEAD
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot"],
+      "env": {
+        "ALLOWED_DIRECTORIES": "/var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot"
+=======
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Xot"],
+      "env": {
+        "ALLOWED_DIRECTORIES": "/var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Xot"
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_ydlJ4t
       },
       "trust": false,
       "includeTools": [
@@ -278,8 +322,18 @@ File: `Modules/Xot/.mcp.json`
     },
     "git-xot": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "/var/www/_bases/base_quaeris_fila5_mono"],
-      "cwd": "/var/www/_bases/base_quaeris_fila5_mono/laravel/Modules/Xot",
+<<<<<<< .merge_file_mjAL3L
+      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "/var/www/_bases/base_healthcare_app_fila5_mono"],
+      "cwd": "/var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/Xot",
+=======
+<<<<<<< HEAD
+      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "/var/www/_bases/base_app_fila5_mono"],
+      "cwd": "/var/www/_bases/base_app_fila5_mono/laravel/Modules/Xot",
+=======
+      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "/var/www/_bases/base_ptvx_fila5_mono"],
+      "cwd": "/var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/Xot",
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_ydlJ4t
       "trust": false
     },
     "sequential-thinking-xot": {
@@ -334,7 +388,15 @@ File: `Modules/Xot/.mcp.json`
   "implementation": "Model → ModuleBaseModel → XotBaseModel → Eloquent",
   "files": [
     "Modules/User/app/Models/BaseModel.php",
-    "Modules/Quaeris/app/Models/BaseModel.php",
+<<<<<<< .merge_file_mjAL3L
+    "Modules/healthcare_app/app/Models/BaseModel.php",
+=======
+<<<<<<< HEAD
+    "Modules/ExternalProject/app/Models/BaseModel.php",
+=======
+    "Modules/ModuloEsempio/app/Models/BaseModel.php",
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_ydlJ4t
     "Modules/Xot/Models/XotBaseModel.php"
   ],
   "rationale": "Module sovereignty and Laraxot philosophy",

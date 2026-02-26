@@ -5,7 +5,11 @@
 The system utilizes three main database connections:
 
 ### 1. Limesurvey Database (`limesurvey` connection)
-- **Schema**: `txaesfry_quaeris_survey` 
+<<<<<<< .merge_file_ZrHDXJ
+- **Schema**: `txaesfry_healthcare_app_survey` 
+=======
+- **Schema**: `txaesfry_ptvx_survey` 
+>>>>>>> .merge_file_QSWMb6
 - **Purpose**: Main Limesurvey installation with surveys, questions, and responses
 - **Key tables**: 
   - `lime_questions` - Question structure and metadata
@@ -15,10 +19,17 @@ The system utilizes three main database connections:
   - `lime_answers` - Possible answer options
   - `lime_answer_l10ns` - Answer translations
 
-### 2. Quaeris Database (`quaeris` connection) 
+<<<<<<< .merge_file_ZrHDXJ
+### 2. healthcare_app Database (`healthcare_app` connection) 
 - **Purpose**: Application-specific data including survey mappings
 - **Key tables**:
-  - `survey_pdfs` - Links Limesurvey surveys to Quaeris functionality
+  - `survey_pdfs` - Links Limesurvey surveys to healthcare_app functionality
+=======
+### 2. ModuloEsempio Database (`ptvx` connection) 
+- **Purpose**: Application-specific data including survey mappings
+- **Key tables**:
+  - `survey_pdfs` - Links Limesurvey surveys to ModuloEsempio functionality
+>>>>>>> .merge_file_QSWMb6
   - `question_charts` - Custom chart configurations for survey data
   - `charts` - Chart visualization settings
   - `contacts` - Participant contact and communication tracking
@@ -94,7 +105,11 @@ The system utilizes three main database connections:
 
 ## Integration Points
 
-### Quaeris-Specific Features
+<<<<<<< .merge_file_ZrHDXJ
+### healthcare_app-Specific Features
+=======
+### ModuloEsempio-Specific Features
+>>>>>>> .merge_file_QSWMb6
 - Links Limesurvey data to `survey_pdfs` table via survey_id mapping
 - Custom chart configurations in `question_charts` table
 - Participant tracking through `contacts` table

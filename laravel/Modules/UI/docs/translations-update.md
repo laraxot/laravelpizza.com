@@ -1,7 +1,7 @@
 # Aggiornamento Traduzioni Modulo UI - Gennaio 2026
 
 ## Data Intervento
-**[DATE]** - Sistemazione traduzioni secondo regole DRY + KISS
+**2026-01-22** - Sistemazione traduzioni secondo regole DRY + KISS
 
 ## Traduzioni Aggiunte
 
@@ -144,5 +144,5 @@ Tutte le traduzioni seguono la struttura espansa:
 - [Translation Standards](../../xot/docs/translation-standards.md)
 - [UI Module Documentation](../readme.md)
 
-*Intervento completato il: [DATE]*
+*Intervento completato il: 2026-01-22*
 *Conforme alle regole DRY + KISS*

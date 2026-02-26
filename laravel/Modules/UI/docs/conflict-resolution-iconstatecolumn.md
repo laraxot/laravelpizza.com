@@ -70,7 +70,6 @@ Il file `Modules/UI/app/Filament/Tables/Columns/IconStateColumn.php` presenta co
 - [table-components.md](table-components.md)
 - [Modules/UI/docs/](../docs/)
 
-*Ultimo aggiornamento: 29 luglio 2025*
 # Risoluzione Conflitto IconStateColumn.php
 
 ## Problema Identificato
@@ -145,4 +144,3 @@ Il file `Modules/UI/app/Filament/Tables/Columns/IconStateColumn.php` presenta co
 - [Modules/UI/project_docs/](../project_docs/)
 - [Modules/UI/project_docs/](../project_docs/)
 
-*Ultimo aggiornamento: 29 luglio 2025*

@@ -16,7 +16,15 @@ Fixed all instances of `property_exists()` usage in Eloquent models across the c
 ### ✅ Xot Module
 - **FilamentOptimizationServiceProvider.php:67,76-79** - Fixed multiple `property_exists($query, 'time')` → `isset($query->time)`
 
-### ✅ Quaeris Module
+<<<<<<< .merge_file_Gto580
+### ✅ healthcare_app Module
+=======
+<<<<<<< HEAD
+### ✅ ExternalProject Module
+=======
+### ✅ ModuloEsempio Module
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_sPUeNX
 - **ViewQuestionChartVisualizationWidget.php:185** - Fixed `property_exists($this, 'livewire')` → `isset($this->livewire)`
 
 ### ✅ Chart Module

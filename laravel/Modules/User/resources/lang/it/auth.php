@@ -3,7 +3,26 @@
 declare(strict_types=1);
 
 return [
-    'login' => 'Accedi',
+    'login' => [
+        'title' => 'Accedi al tuo account',
+        'welcome_back' => 'Bentornato',
+        'welcome_message' => 'Inserisci le tue credenziali per accedere.',
+        'google' => 'Google',
+        'github' => 'GitHub',
+        'with_google' => 'Continua con Google',
+        'with_github' => 'Continua con GitHub',
+        'or_continue_with' => 'oppure continua con email e password',
+        'email' => 'Email',
+        'email_placeholder' => 'esempio@email.com',
+        'password' => 'Password',
+        'password_placeholder' => '••••••••',
+        'remember_me' => 'Ricordami',
+        'forgot_password' => 'Password dimenticata?',
+        'submit' => 'Accedi',
+        'logging_in' => 'Accesso in corso…',
+        'no_account' => 'Non hai un account?',
+        'create_account' => 'Crea account',
+    ],
     'register' => 'Registrati',
     'logout' => 'Esci',
     'logout_success' => 'Logout effettuato con successo',

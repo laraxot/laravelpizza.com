@@ -186,4 +186,3 @@ class SafeFloatCastActionTest extends TestCase
 
 ---
 
-*Ultimo aggiornamento: 2025-01-06*

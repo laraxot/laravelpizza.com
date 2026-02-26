@@ -200,4 +200,3 @@ Per garantire la compatibilità con PHPStan livello 9, assicurarsi di:
 - [HasXotTable Trait](/laravel/modules/xot/docs/filament/xot_table.md)
 - [Regole di Traduzione](/laravel/modules/xot/docs/translation_rules.md)
 
-*Ultimo aggiornamento: 3 Giugno 2025*

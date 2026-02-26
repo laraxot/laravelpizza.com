@@ -70,11 +70,6 @@ userfactory.php              → ELIMINA
 ✗ database/Migrations/
 ```
 
-### Modulo Tenant (1 directory)
-```bash
-✗ Tests/ → tests (eliminata, duplicato di tests/)
-```
-
 ### Modulo Media (1 file)
 ```bash
 ✗ tests/Filament/Resources/mediaconvertresourcetest.php

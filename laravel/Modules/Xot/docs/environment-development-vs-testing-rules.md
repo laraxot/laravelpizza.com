@@ -98,7 +98,11 @@ Le connessioni per i moduli (notify, geo, media, etc.) vengono create **automati
 
 ### Database
 - `DB_CONNECTION=mysql`: Usa MySQL per i test
-- Database con suffisso "_test" (es. `quaeris_data_test`, `quaeris_user_test`)
+<<<<<<< .merge_file_JYAAts
+- Database con suffisso "_test" (es. `healthcare_app_data_test`, `healthcare_app_user_test`)
+=======
+- Database con suffisso "_test" (es. `ptvx_data_test`, `ptvx_user_test`)
+>>>>>>> .merge_file_x6oDr5
 - **MAI** usare SQLite per i test, nemmeno per convenienza
 
 ### Motivazione
@@ -198,7 +202,11 @@ protected function setUp(): void
 $moduleConnections = [
     'user', 'notify', 'geo', 'media', 'job', 'xot',
     'activity', 'cms', 'gdpr', 'lang', 'meetup', 'seo', 'tenant',
-    'quaeris', 'limesurvey',
+<<<<<<< .merge_file_JYAAts
+    'healthcare_app', 'limesurvey',
+=======
+    'ptvx', 'limesurvey',
+>>>>>>> .merge_file_x6oDr5
 ];
 
 foreach ($moduleConnections as $connection) {

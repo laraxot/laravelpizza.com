@@ -184,4 +184,8 @@ return [
     ],
     'actions' => [
     ],
+    'users_chart' => [
+        'heading' => 'Authentication Log',
+        'label' => 'Number of logins executed',
+    ],
 ];

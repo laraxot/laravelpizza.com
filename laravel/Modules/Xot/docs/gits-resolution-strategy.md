@@ -232,7 +232,6 @@ I conflitti sono stati causati da:
 
 ## Stato Corrente
 
-**Ultimo aggiornamento:** [DATE]
 
 ### Completati ✅
 - [x] Analisi complessiva (586 file identificati)

@@ -2,11 +2,16 @@
 
 declare(strict_types=1);
 
-uses(Modules\User\Tests\TestCase::class);
+namespace Modules\User\Tests\Unit\Traits;
+
+uses(\Modules\User\Tests\TestCase::class);
 
 use Modules\User\Traits\PasswordValidationRules;
 
-// Create test class that uses the trait
+/**
+ * Helper class per test del trait PasswordValidationRules.
+ * Namespace richiesto per PSR-4: Modules\User\Tests\ => tests/.
+ */
 class TestClassWithPasswordValidationRules
 {
     use PasswordValidationRules;
@@ -21,7 +26,7 @@ test('PasswordValidationRules trait can be used', function () {
         };
         // Check if the trait methods exist
         expect(method_exists($testClass, 'passwordRules'))->toBeTrue();
-    } catch (Exception $e) {
+    } catch (\Exception $e) {
         expect(true)->toBeTrue(); // Pass if trait exists
     }
 });

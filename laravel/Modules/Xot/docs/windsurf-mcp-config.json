@@ -26,10 +26,10 @@
       }
     },
     "laravel-boost": {
-      "command": "/var/www/_bases/base_quaeris_fila5_mono/bashscripts/mcp/laravel-boost-wrapper.sh",
+      "command": "./bashscripts/mcp/laravel-boost-wrapper.sh",
       "args": [],
       "env": {
-        "LARAVEL_PROJECT_ROOT": "/var/www/_bases/base_quaeris_fila5_mono/laravel"
+        "LARAVEL_PROJECT_ROOT": "./laravel"
       }
     },
     "fetch": {

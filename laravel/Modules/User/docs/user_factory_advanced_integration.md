@@ -1,4 +1,8 @@
-# UserFactory Advanced Integration - Modulo User & SaluteOra
+<<<<<<< HEAD
+# UserFactory Advanced Integration - Modulo User & ModuloEsempio
+=======
+# UserFactory Advanced Integration - Modulo User & healthcare_app
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Post Deep-Study Analysis 
 
@@ -9,7 +13,11 @@ Dopo uno studio approfondito dei modelli User, Patient, Doctor e Admin, l'integr
 ### Hierarchy Mapping
 ```
 BaseUser (User Module)
-├── User (SaluteOra) - STI Base + Business Logic  
+<<<<<<< HEAD
+├── User (ModuloEsempio) - STI Base + Business Logic  
+=======
+├── User (healthcare_app) - STI Base + Business Logic  
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
     ├── Patient (HasParent) - Healthcare Consumer
     ├── Doctor (HasParent) - Healthcare Provider  
     └── Admin (HasParent) - System Administrator
@@ -17,7 +25,11 @@ BaseUser (User Module)
 
 ### Cross-Module Compatibility Matrix
 
-| BaseUser Field | SaluteOra User | Business Logic | Factory Support |
+<<<<<<< HEAD
+| BaseUser Field | ModuloEsempio User | Business Logic | Factory Support |
+=======
+| BaseUser Field | healthcare_app User | Business Logic | Factory Support |
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 |----------------|----------------|----------------|-----------------|
 | `name` | `name` | Full name concat | ✅ Complete |
 | `email` | `email` | Authentication | ✅ Complete |
@@ -84,7 +96,11 @@ User::factory()->gdprCompliant()->create();
 // BaseUser (User Module) 
 protected $connection = 'user';
 
-// SaluteOra User (Healthcare Domain)
+<<<<<<< HEAD
+// ModuloEsempio User (Healthcare Domain)
+=======
+// healthcare_app User (Healthcare Domain)
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 protected $connection = 'salute_ora';
 
 // Factory automatically handles connection switching
@@ -115,7 +131,11 @@ public function test_cross_module_compatibility()
     expect($user)->toHaveProperty('password'); 
     expect($user->email_verified_at)->toBeInstanceOf(Carbon::class);
     
-    // SaluteOra domain contracts
+<<<<<<< HEAD
+    // ModuloEsempio domain contracts
+=======
+    // healthcare_app domain contracts
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
     expect($user->type)->toBeInstanceOf(UserTypeEnum::class);
     expect($user->state)->toBeInstanceOf(UserState::class);
 }
@@ -261,7 +281,11 @@ public function run(): void
 - **Reusability**: Base authentication contracts preserved
 - **Testability**: Comprehensive user scenario testing
 
-### For SaluteOra Module  
+<<<<<<< HEAD
+### For ModuloEsempio Module  
+=======
+### For healthcare_app Module  
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - **Domain Focus**: Healthcare-specific data generation
 - **Business Logic**: Real-world scenario testing
 - **Compliance**: GDPR and healthcare regulation support
@@ -280,10 +304,17 @@ public function run(): void
 
 ## Link Documentazione
 
-### SaluteOra Module
-- [Advanced Improvements Analysis](../../saluteora/docs/factories/userfactory-advanced-improvements-analysis.md)
-- [Implementation Completed](../../saluteora/docs/factories/userfactory_implementation_completed.md)
-- [Model States](../../saluteora/docs/models/states.md)
+<<<<<<< HEAD
+### ModuloEsempio Module
+- [Advanced Improvements Analysis](../../modulo/docs/factories/userfactory-advanced-improvements-analysis.md)
+- [Implementation Completed](../../modulo/docs/factories/userfactory_implementation_completed.md)
+- [Model States](../../modulo/docs/models/states.md)
+=======
+### healthcare_app Module
+- [Advanced Improvements Analysis](../../healthcare_app/docs/factories/userfactory-advanced-improvements-analysis.md)
+- [Implementation Completed](../../healthcare_app/docs/factories/userfactory_implementation_completed.md)
+- [Model States](../../healthcare_app/docs/models/states.md)
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ### User Module
 - [User Factory Integration](./user_factory_integration.md)
@@ -291,5 +322,9 @@ public function run(): void
 - [BaseUser Architecture](./parental_inheritance.md)
 
 ### Root Documentation  
-- [UserFactory SaluteOra Integration](../../../../docs/userfactory_saluteora_integration.md)
+<<<<<<< HEAD
+- [UserFactory ModuloEsempio Integration](../../../../docs/userfactory_modulo_integration.md)
+=======
+- [UserFactory healthcare_app Integration](../../../../docs/userfactory_healthcare_app_integration.md)
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - [Testing Standards](../../../../docs/testing_standards.md) 

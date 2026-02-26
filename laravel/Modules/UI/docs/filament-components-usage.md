@@ -154,7 +154,11 @@ Filament fornisce un componente `x-filament::dropdown` che può essere utilizzat
 ## Errori Comuni
 
 1. **Utilizzo del prefisso errato**: Utilizzare `x-ui-icon` invece di `x-filament::icon`
-2. **Percorso errato del provider**: Utilizzare `/var/www/html/saluteora/laravel/Modules/UI/Providers/UIServiceProvider.php` invece di `/var/www/html/saluteora/laravel/Modules/UI/app/Providers/UIServiceProvider.php`
+<<<<<<< HEAD
+2. **Percorso errato del provider**: Utilizzare `/var/www/html/ptvx/laravel/Modules/UI/Providers/UIServiceProvider.php` invece di `/var/www/html/ptvx/laravel/Modules/UI/app/Providers/UIServiceProvider.php`
+=======
+2. **Percorso errato del provider**: Utilizzare `/var/www/html/healthcare_app/laravel/Modules/UI/Providers/UIServiceProvider.php` invece di `/var/www/html/healthcare_app/laravel/Modules/UI/app/Providers/UIServiceProvider.php`
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 3. **Creazione di componenti duplicati**: Creare componenti personalizzati che duplicano funzionalità già fornite da Filament
 4. **Mancata verifica dei componenti esistenti**: Non controllare se un componente è già disponibile in Filament prima di crearne uno personalizzato
 

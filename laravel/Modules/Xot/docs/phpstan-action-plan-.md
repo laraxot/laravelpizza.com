@@ -3,14 +3,22 @@
 ## Executive Summary
 
 **Total Issues Identified:** 744 PHPStan errors
-**Critical Modules:** Chart, Quaeris
+<<<<<<< .merge_file_uNKxPo
+**Critical Modules:** Chart, healthcare_app
+=======
+**Critical Modules:** Chart, ModuloEsempio
+>>>>>>> .merge_file_4qDaec
 **Status:** 🔴 **Requires Immediate Action**
 
 ## Quick Start Guide
 
 ### Immediate Actions (Today)
 1. **Add Safe function imports** to all problematic files
-2. **Comment out quantum code** in Quaeris module
+<<<<<<< .merge_file_uNKxPo
+2. **Comment out quantum code** in healthcare_app module
+=======
+2. **Comment out quantum code** in ModuloEsempio module
+>>>>>>> .merge_file_4qDaec
 3. **Run PHPStan again** to verify progress
 
 ### Week 1 Goals
@@ -32,7 +40,11 @@
 Modules/Chart/app/Actions/ChartJs/ExportToSvgAction.php
 Modules/Chart/app/Actions/ExportChartToPngAction.php
 Modules/Chart/app/Actions/ExportChartToSvgAction.php
-Modules/Quaeris/app/Actions/Charts/Export/Concerns/HandlesChartWidgetData.php
+<<<<<<< .merge_file_uNKxPo
+Modules/healthcare_app/app/Actions/Charts/Export/Concerns/HandlesChartWidgetData.php
+=======
+Modules/ModuloEsempio/app/Actions/Charts/Export/Concerns/HandlesChartWidgetData.php
+>>>>>>> .merge_file_4qDaec
 # ... and others identified in analysis
 ```
 
@@ -50,7 +62,11 @@ use function Safe\htmlspecialchars;
 #### Task 1.2: Quantum Code Stabilization
 **Priority:** 🔴 CRITICAL
 **Estimated Time:** 1-2 hours
-**Files:** Quaeris quantum actions
+<<<<<<< .merge_file_uNKxPo
+**Files:** healthcare_app quantum actions
+=======
+**Files:** ModuloEsempio quantum actions
+>>>>>>> .merge_file_4qDaec
 
 **Options:**
 1. **Comment out** quantum features temporarily
@@ -225,7 +241,11 @@ class ChartDataValidator
 - [Safe Library Documentation](https://github.com/thecodingmachine/safe)
 - [PHPStan Configuration](../phpstan.neon)
 - [Chart Module Documentation](../Chart/docs/)
-- [Quaeris Module Documentation](../Quaeris/docs/)
+<<<<<<< .merge_file_uNKxPo
+- [healthcare_app Module Documentation](../healthcare_app/docs/)
+=======
+- [ModuloEsempio Module Documentation](../ModuloEsempio/docs/)
+>>>>>>> .merge_file_4qDaec
 
 ## Emergency Procedures
 

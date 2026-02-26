@@ -145,7 +145,11 @@ class CustomMiddleware
 }
 
 // Non hardcodare percorsi delle risorse
-<img src="/var/www/html/saluteora/laravel/public/images/avatar.png">
+<<<<<<< HEAD
+<img src="/var/www/html/ptvx/laravel/public/images/avatar.png">
+=======
+<img src="/var/www/html/healthcare_app/laravel/public/images/avatar.png">
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 // Non duplicare la registrazione dei componenti
 Blade::component('ui::components.icon', 'ui.icon');

@@ -105,7 +105,6 @@ Per ogni nuovo widget di autenticazione:
 - [Documentazione Root: Widget View Namespaces](../../../docs/frontend/widget-view-namespaces.md)
 - [Struttura Temi](../../../docs/tecnico/themes/theme-structure.md)
 - [Implementazione Auth Pages](auth-pages-implementation.md)
-*Ultimo aggiornamento: Dicembre 2024*
 # Widget di Autenticazione: Namespace delle View
 
 ## ⚠️ **Regola Critica**

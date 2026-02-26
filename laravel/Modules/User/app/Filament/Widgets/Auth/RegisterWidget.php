@@ -11,7 +11,6 @@ use Filament\Schemas\Components\Section;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
@@ -33,10 +32,6 @@ class RegisterWidget extends XotBaseWidget
     public function mount(): void
     {
         $this->form->fill([]);
-        Log::debug('Registration form initialized', [
-            'ip' => request()->ip(),
-            'user_agent' => request()->userAgent(),
-        ]);
     }
 
     #[\Override]

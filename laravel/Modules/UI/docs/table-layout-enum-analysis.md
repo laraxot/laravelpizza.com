@@ -333,7 +333,6 @@ class TableLayoutEnumTest extends TestCase
 - [Translation Standards](../../../docs/translation_standards.md)
 - [Filament Best Practices](../../../docs/filament_best_practices.md)
 
-*Ultimo aggiornamento: [DATE]*
 # Analisi Completa TableLayoutEnum
 
 ## Data: [DATE]
@@ -669,4 +668,3 @@ class TableLayoutEnumTest extends TestCase
 - [Translation Standards](../../../docs/translation_standards.md)
 - [Filament Best Practices](../../../docs/filament_best_practices.md)
 
-*Ultimo aggiornamento: [DATE]*

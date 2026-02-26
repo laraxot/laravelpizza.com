@@ -226,5 +226,4 @@ Per mantenere questa organizzazione:
 
 ---
 
-*Ultimo aggiornamento: 2025-01-29*
 *Responsabile: Sistema di Automazione Laraxot*

@@ -39,9 +39,34 @@ return [
             'label' => 'Revoca',
             'tooltip' => 'Revoca l\'accesso',
         ],
+        'install' => [
+            'label' => 'Installa Passport',
+            'modal_description' => 'Questo comando installerà Passport e creerà le chiavi di crittografia necessarie.',
+        ],
+        'generate_keys' => [
+            'label' => 'Genera Chiavi',
+        ],
+        'purge_tokens' => [
+            'label' => 'Pulisci Token',
+            'modal_description' => 'Elimina tutti i token scaduti o revocati.',
+        ],
+        'hash_secrets' => [
+            'label' => 'Hash Secret',
+            'modal_description' => 'Applica l\'hashing a tutti i client secret esistenti.',
+        ],
+    ],
+    'status' => [
+        'public_key' => 'Chiave Pubblica',
+        'private_key' => 'Chiave Privata',
+        'present' => 'Presente',
+        'missing' => 'Mancante',
     ],
     'messages' => [
         'client_created' => 'Client creato con successo',
         'client_revoked' => 'Client revocato con successo',
+        'command_started' => 'Comando avviato...',
+        'command_completed' => 'Comando completato con successo',
+        'command_failed' => 'Esecuzione comando fallita',
+        'command_error' => 'Errore durante l\'esecuzione del comando',
     ],
 ];

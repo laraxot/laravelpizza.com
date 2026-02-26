@@ -314,7 +314,6 @@ public function it_sends_email_with_generated_pdf(): void
 
 ---
 
-**Ultimo aggiornamento:** 2025-01-22
 **Versione:** 1.0.0
 **Stato:** ✅ Production Ready
 **PHPStan Level:** 10

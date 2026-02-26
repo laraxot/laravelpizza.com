@@ -15,7 +15,15 @@ This guide provides a comprehensive overview of chart generation and PDF integra
 
 ### Key Components
 - **Chart Module**: Contains chart generation and styling logic
-- **Quaeris Module**: Handles survey data and PDF generation
+<<<<<<< .merge_file_sCuY6W
+- **healthcare_app Module**: Handles survey data and PDF generation
+=======
+<<<<<<< HEAD
+- **ExternalProject Module**: Handles survey data and PDF generation
+=======
+- **ModuloEsempio Module**: Handles survey data and PDF generation
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_LxvdoW
 - **Xot Module**: Provides core services including HTML to PDF conversion
 - **JpGraph Library**: Server-side chart generation
 - **Chart.js**: Client-side chart visualization
@@ -509,7 +517,11 @@ class HtmlService
 PDFs support multi-page layouts with proper headers and footers:
 
 ```blade
-@include('quaeris::pdf.css')
+<<<<<<< .merge_file_sCuY6W
+@include('healthcare_app::pdf.css')
+=======
+@include('ptvx::pdf.css')
+>>>>>>> .merge_file_LxvdoW
 
 <page backtop="{{ $pdf->backtop }}mm" backbottom="{{ $pdf->backbottom }}mm">
     <page_header>

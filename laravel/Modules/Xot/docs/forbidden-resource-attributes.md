@@ -1,6 +1,5 @@
 # Forbidden Attributes in XotBaseResource Classes
 
-## Date: [DATE]
 
 ## Overview
 

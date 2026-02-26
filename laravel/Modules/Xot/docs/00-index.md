@@ -1,67 +1,58 @@
-# 📚 **Indice Documentazione Modulo Xot (Core Engine)**
+# Xot Module Documentation Index
 
-**Last Update**: 31 Gennaio 2026
-**Status**: ✅ PHPStan Level 10 Compliant
-**Module Version**: 3.0.0
+> **Core Framework Module** - Provides base classes and shared functionality for all modules
 
-## 🎯 **Lettura Essenziale
-1. [README.md](./readme.md) - Panoramica del framework Laraxot.
-2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Laravel 12 & Stability.
-3. [super-mucca-methodology.md](./super-mucca-methodology.md) - La filosofia di sviluppo del progetto.
+## 📚 Documentation Sections
 
-3. [super-mucca-methodology.md](./super-mucca-methodology.md) - La filosofia di sviluppo del progetto.
+### Core Architecture
+- [XotBase Classes & Inheritance Patterns](./xotbase-inheritance-patterns.md)
+- [Service Provider Architecture](./service-provider-architecture.md)
+- [Module Dependency Management](./composer-module-dependency-management.md)
+- [Database Connection Configuration](./database-connection-configuration.md)
 
-## 🏛️ **Architettura Core**
-- 📐 **[Architecture Complete Guide](./architecture-complete.md)** - Deep dive nel sistema modulare.
-- 🧬 **[Base Classes (XotBase)](./xot-base-classes.md)** - Regole per estendere Resource, Page e Widget.
-- ⚙️ **[Action Architecture](./action-service-provider-architecture.md)** - Pattern per Actions atomiche e testabili.
-- 🧩 **[Service Providers](./service-provider-architecture.md)** - Ciclo di vita e boot dei moduli.
+### Development Standards
+- [PHPStan Level 10 Compliance Guide](./phpstan-level10-compliance.md)
+- [Code Quality Workflow](./code-quality-workflow.md)
+- [TDD Laravel Pest Complete Guide](./tdd-laravel-pestd-complete-guide.md) ⭐ NEW
+- [Testing Best Practices](./testing-best-practices.md)
 
-## 🏷️ **Naming & Quality Standards**
-- 📜 **[PHPStan Code Quality Guide](./phpstan-code-quality-guide.md)** - La bibbia del Livello 10.
-- 🚫 **[No Services Rule](./critical-no-services-rule.md)** - Perché usiamo Actions invece dei Service.
-- 🗂️ **[Filament Class Extension Rules](./filament-class-extension-rules.md)** - Regole obbligatorie per Filament.
+### Memory & Performance
+- [Filament Memory Optimization](./memory-optimization-filament.md)
+- [Optimize Filament Memory Command](./optimize-filament-memory-command.md)
+- [Performance Analysis Guide](./performance-analysis-guide.md)
 
-## 🛠️ **Utility & Trait**
-- 🧬 **[Trait Patterns](./traits-complete-guide.md)** - HasTeams, HasXotTable e altri trait core.
-- 🐚 **[Bashscripts Organization](./bashscripts-organization.md)** - Strumenti CLI per la manutenzione.
-- 🚀 **[Safe Casting Actions](./safe-casting-actions.md)** - Gestione type-safe dei dati.
+### Error Prevention & Fixes
+- [Common PHPStan Errors & Solutions](./common-phpstan-errors.md)
+- [Model Casting Migration Guide](./model-casting-migration.md)
+- [Git Conflict Resolution Workflow](./git-conflict-resolution-workflow.md)
 
-## 🧪 **Qualità e Testing**
-- ✅ **[PHPStan Level 10 Status](./phpstan-level10-xot-fixes.md)** - Conformità e report.
-- 🔬 **[Pest Testing Philosophy](./testing-philosophy-unified.md)** - Approccio al testing del core.
+### Utilities & Helpers
+- [Safe Cast Actions](./safe-cast-actions.md)
+- [Webmozart Assert Usage](./webmozart-assert-usage.md)
+- [Translation Management](./translation-management.md)
 
-## 🧹 **Manutenzione**
-- 🗑️ **[Cleanup Plan](./cleanup-action-plan.md)** - Strategia per gestire i 780+ documenti accumulati.
+## 🚀 Quick Start
 
-## 🔗 **Moduli Dipendenti**
-=======
-## 🏛️ Architettura Core
-- 📐 [Architecture Complete Guide](./architecture-complete.md) - Deep dive nel sistema modulare.
-- 🧬 [Base Classes (XotBase)](./xot-base-classes.md) - Regole per estendere Resource, Page e Widget.
-- ⚙️ [Action Architecture](./action-service-provider-architecture.md) - Pattern per Actions atomiche e testabili.
-- 🧩 [Service Providers](./service-provider-architecture.md) - Ciclo di vita e boot dei moduli.
-- 🔢 [EnumTrait Pattern](./enum-trait-pattern.md) - Standard per Enums con traduzioni e UI Filament.
+1. **Understand XotBase Pattern**: All modules must extend XotBase classes
+2. **Follow TDD**: Use Red-Green-Refactor cycle with Pest (see TDD guide)
+3. **Maintain Quality**: Run PHPStan Level 10 after every change
+4. **Document Everything**: Update docs before and after implementation
 
-## 🏷️ Naming & Quality Standards
-- 📜 [PHPStan Code Quality Guide](./phpstan-code-quality-guide.md) - La bibbia del Livello 10.
-- 🚫 [No Services Rule](./critical-no-services-rule.md) - Perché usiamo Actions invece dei Service.
-- 🗂️ [Filament Class Extension Rules](./filament-class-extension-rules.md) - Regole obbligatorie per Filament.
+## 📖 Recently Updated
 
-## 🛠️ Utility & Trait
-- 🧬 [Trait Patterns](./traits-complete-guide.md) - HasTeams, HasXotTable e altri trait core.
-- 🐚 [Bashscripts Organization](./bashscripts-organization.md) - Strumenti CLI per la manutenzione.
-- 🚀 [Safe Casting Actions](./safe-casting-actions.md) - Gestione type-safe dei dati.
+- ✅ **2026-02-23**: Added complete TDD guide with Pest integration
+- ✅ **2026-02-23**: Updated OAuth testing patterns
+- ✅ **2026-02-23**: Added QueueableAction testing standards
 
-## 🧪 Qualità e Testing
-- ✅ [PHPStan Level 10 Status](./phpstan-level10-xot-fixes.md) - Conformità e report.
-- 🔬 [Pest Testing Philosophy](./testing-philosophy-unified.md) - Approccio al testing del core.
+## 🔗 Related Modules
 
-## 🧹 Manutenzione
-- 🗑️ [Cleanup Plan](./cleanup-action-plan.md) - Strategia per consolidare documenti accumulati.
-
-## 🔗 Moduli Dipendenti
-- Tutti i moduli del sistema dipendono da **Xot**.
+- [User Module](../User/docs/00-index.md) - Authentication & Authorization
+- [Activity Module](../Activity/docs/00-index.md) - Event logging & tracking
+- [Tenant Module](../Tenant/docs/00-index.md) - Multi-tenant isolation
 
 ---
-*Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
+
+**Module Version**: 1.0  
+**Laravel Version**: 12.x  
+**PHP Version**: 8.2+  
+**Last Updated**: 2026-02-23

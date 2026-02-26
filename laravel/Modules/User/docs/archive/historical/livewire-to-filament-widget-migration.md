@@ -135,4 +135,3 @@ class LoginWidget extends XotBaseWidget
 - [../../Themes/Sixteen/project_docs/login-agid-correct-implementation.md](../../themes/sixteen/project_docs/login-agid-correct-implementation.md)
 ---
 **QUESTA È UNA REGOLA ASSOLUTA E INVIOLABILE**
-*Ultimo aggiornamento: agosto 2025*

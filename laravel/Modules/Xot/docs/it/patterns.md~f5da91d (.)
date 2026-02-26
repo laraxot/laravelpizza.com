@@ -1,0 +1,1 @@
+../../Lang/docs/it/architecture/patterns.md

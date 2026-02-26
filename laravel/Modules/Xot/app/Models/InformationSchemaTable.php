@@ -25,6 +25,7 @@ use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $deleter
  * @property-read ProfileContract|null $updater
+ *
  * @method static InformationSchemaTableFactory factory($count = null, $state = [])
  * @method static Builder<static>|InformationSchemaTable newModelQuery()
  * @method static Builder<static>|InformationSchemaTable newQuery()
@@ -38,6 +39,7 @@ use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
  * @method static Builder<static>|InformationSchemaTable whereTableSchema($value)
  * @method static Builder<static>|InformationSchemaTable whereUpdatedAt($value)
  * @method static Builder<static>|InformationSchemaTable whereUpdatedBy($value)
+ *
  * @mixin \Eloquent
  */
 class InformationSchemaTable extends BaseModel

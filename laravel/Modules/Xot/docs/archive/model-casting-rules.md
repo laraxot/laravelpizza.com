@@ -235,4 +235,3 @@ class User extends BaseModel
 - [../../project_docs/phpstan-cast-fixes-guide.md](../../project_docs/phpstan-cast-fixes-guide.md)
 - [Laravel 11 Model Casts Documentation](https://laravel.com/project_docs/11.x/eloquent-mutators#attribute-casting)
 
-*Ultimo aggiornamento: agosto 2025*

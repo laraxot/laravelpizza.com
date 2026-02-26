@@ -52,4 +52,3 @@
 
 ---
 
-*Ultimo aggiornamento: [DATE]*

@@ -9,11 +9,19 @@
 
 ## Panoramica
 
-Questo documento descrive come migliorare il selettore di lingua nell'header di SaluteOra utilizzando le bandiere SVG disponibili nel modulo UI, rendendo il componente più visibile e accattivante.
+<<<<<<< HEAD
+Questo documento descrive come migliorare il selettore di lingua nell'header di Laraxot utilizzando le bandiere SVG disponibili nel modulo UI, rendendo il componente più visibile e accattivante.
 
 ## Utilizzo delle Bandiere SVG
 
-Le bandiere SVG sono disponibili in `/var/www/html/saluteora/laravel/Modules/UI/resources/svg/flags` e sono autoregistrate come componenti Blade tramite il sistema di registrazione delle icone di Blade. Questo avviene grazie al metodo `registerBladeIcons()` nel `XotBaseServiceProvider`.
+Le bandiere SVG sono disponibili in `/var/www/html/ptvx/laravel/Modules/UI/resources/svg/flags` e sono autoregistrate come componenti Blade tramite il sistema di registrazione delle icone di Blade. Questo avviene grazie al metodo `registerBladeIcons()` nel `XotBaseServiceProvider`.
+=======
+Questo documento descrive come migliorare il selettore di lingua nell'header di healthcare_app utilizzando le bandiere SVG disponibili nel modulo UI, rendendo il componente più visibile e accattivante.
+
+## Utilizzo delle Bandiere SVG
+
+Le bandiere SVG sono disponibili in `/var/www/html/healthcare_app/laravel/Modules/UI/resources/svg/flags` e sono autoregistrate come componenti Blade tramite il sistema di registrazione delle icone di Blade. Questo avviene grazie al metodo `registerBladeIcons()` nel `XotBaseServiceProvider`.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ### Come Funziona la Registrazione
 

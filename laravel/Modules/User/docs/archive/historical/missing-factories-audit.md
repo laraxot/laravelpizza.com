@@ -139,4 +139,3 @@
 
 ---
 **Errore gravissimo da non ripetere mai più**  
-*Ultimo aggiornamento: 2025-01-06*

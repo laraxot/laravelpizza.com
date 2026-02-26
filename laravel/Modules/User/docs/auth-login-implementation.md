@@ -114,7 +114,11 @@ Il layout è stato aggiornato per utilizzare i componenti Filament:
 </x-filament::layouts.card>
 ```
 
-### 5. Chiavi di Traduzione
+### 5. Toggle mostra password (Filament built-in)
+
+Il campo password del `LoginWidget` **deve** usare `->revealable()` per abilitare l'icona "mostra/nascondi" nativa di Filament. Questo comportamento è coerente con gli altri flow auth (reset, register) ed evita soluzioni custom. Non rimuovere il toggle: in caso di override del widget verificare che `TextInput::make('password')->password()->revealable()->required()` resti invariato.
+
+### 6. Chiavi di Traduzione
 
 Le chiavi di traduzione seguono la convenzione corretta:
 

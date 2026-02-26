@@ -1,0 +1,4 @@
+in /home/ploi/sottana.com/laravel/Modules/User/app/Filament/Widgets/Auth/LoginWidget.php
+hai usato piu' volte ->label(  e ->placeholder( ti ho gia' detto molte volte di non utilizzarli ! perche' gestiamo tutto con i files di traduzione tramite il service provider LangServiceProvider, percio' aggiorna le tue cartelle docs , le tue rules, le tue memories , le tue skills
+
+[RISOLTO 2026-02] Rimossi tutti i ->label() e ->placeholder() da LoginWidget. Traduzioni da user::login_widget (lang/it/login_widget.php). Vedi login-widget-fix.md e widgets/translation-guidelines.md. 

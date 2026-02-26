@@ -26,6 +26,7 @@ use Modules\Xot\Database\Factories\SessionFactory;
  * @property string|null $deleted_by
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
+ *
  * @method static SessionFactory factory($count = null, $state = [])
  * @method static Builder<static>|Session newModelQuery()
  * @method static Builder<static>|Session newQuery()
@@ -42,7 +43,9 @@ use Modules\Xot\Database\Factories\SessionFactory;
  * @method static Builder<static>|Session whereUpdatedBy($value)
  * @method static Builder<static>|Session whereUserAgent($value)
  * @method static Builder<static>|Session whereUserId($value)
+ *
  * @property-read ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
 class Session extends BaseModel

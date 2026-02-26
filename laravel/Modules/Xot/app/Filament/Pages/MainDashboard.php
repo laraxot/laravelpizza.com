@@ -40,6 +40,7 @@ class MainDashboard extends XotBaseDashboard
         Assert::notNull($user, '['.__LINE__.']['.class_basename($this).']');
         // Usa roles() come metodo invece della magic property per type safety
         $modules = $user->getModules();
+        
 
         if (count($modules) === 0) {
             $url = '/'.app()->getLocale();

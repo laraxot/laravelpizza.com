@@ -379,6 +379,161 @@ abstract class XotBaseMigration extends LaravelMigration
     {
         return true;
     }
+
+    /**
+     * Convert table id from UUID to bigint, adding uuid column.
+     * Use when migrating legacy installations with uuid primary keys.
+     *
+     * @param  Closure(Blueprint): void  $createNewTableSchema  Schema for the new table (id bigint + uuid + data columns)
+     * @param  list<string>  $dataColumns  Column names to copy (excluding id, uuid)
+     * @param  array{pivot_table?: string, pivot_fk?: string, pivot_post_update?: Closure}  $options  Optional pivot table config
+     */
+    protected function convertIdFromUuidToBigintIfNeeded(
+        Closure $createNewTableSchema,
+        array $dataColumns,
+        array $options = []
+    ): void {
+        $table = $this->getTable();
+
+        if (! $this->tableExists()) {
+            return;
+        }
+
+        $idType = $this->getColumnType('id');
+        if (! $this->isUuidColumnType($idType)) {
+            $this->backfillUuidColumnIfNeeded();
+
+            return;
+        }
+
+        $this->performUuidToBigintConversion($table, $createNewTableSchema, $dataColumns, $options);
+    }
+
+    protected function isUuidColumnType(string $type): bool
+    {
+        return in_array(strtolower($type), ['char', 'varchar'], true);
+    }
+
+    protected function backfillUuidColumnIfNeeded(): void
+    {
+        if (! $this->hasColumn('uuid')) {
+            return;
+        }
+
+        $table = $this->getTable();
+        $conn = DB::connection($this->model->getConnectionName());
+
+        $conn->table($table)->orderBy('id')->chunk(100, function ($rows) use ($table, $conn): void {
+            foreach ($rows as $row) {
+                $row = (object) $row;
+                if (! empty($row->uuid)) {
+                    continue;
+                }
+                $conn->table($table)->where('id', $row->id)->update(['uuid' => (string) Str::uuid()]);
+            }
+        });
+    }
+
+    /** @var array<string, int> */
+    protected array $uuidToBigintIdMapping = [];
+
+    /**
+     * @param  Closure(Blueprint): void  $createNewTableSchema
+     * @param  list<string>  $dataColumns
+     * @param  array{pivot_table?: string, pivot_fk?: string, pivot_post_update?: Closure}  $options
+     */
+    protected function performUuidToBigintConversion(
+        string $table,
+        Closure $createNewTableSchema,
+        array $dataColumns,
+        array $options
+    ): void {
+        $conn = DB::connection($this->model->getConnectionName());
+
+        if (! $this->hasColumn('uuid')) {
+            $this->tableUpdate(function (Blueprint $blueprint): void {
+                $blueprint->uuid('uuid')->nullable()->after('id');
+            }, $table);
+            $conn->table($table)->update(['uuid' => DB::raw('id')]);
+            if ($conn->getDriverName() === 'mysql') {
+                $conn->statement('ALTER TABLE '.$table.' MODIFY uuid CHAR(36) NOT NULL');
+            }
+        }
+
+        $tmpTable = $table.'_new';
+        $this->getConn()->create($tmpTable, $createNewTableSchema);
+        $this->copyDataWithUuidToBigintMapping($table, $tmpTable, $dataColumns);
+
+        $pivotTable = $options['pivot_table'] ?? null;
+        $pivotFk = $options['pivot_fk'] ?? null;
+        if ($pivotTable !== null && $pivotFk !== null && $this->hasTable($pivotTable)) {
+            $this->updatePivotTableFkFromUuidToBigint($table, $pivotTable, $pivotFk);
+            $postUpdate = $options['pivot_post_update'] ?? null;
+            if ($postUpdate instanceof Closure) {
+                $postUpdate($conn);
+            }
+        }
+
+        $this->dropTableIfExists($table);
+        $this->renameTable($tmpTable, $table);
+    }
+
+    /**
+     * @param  list<string>  $dataColumns
+     */
+    protected function copyDataWithUuidToBigintMapping(string $oldTable, string $newTable, array $dataColumns): void
+    {
+        $conn = DB::connection($this->model->getConnectionName());
+        $rows = $conn->table($oldTable)->orderBy('id')->get();
+        $newId = 1;
+        $this->uuidToBigintIdMapping = [];
+
+        foreach ($rows as $row) {
+            $row = (object) $row;
+            $data = ['id' => $newId, 'uuid' => $row->uuid ?? (string) Str::uuid()];
+            foreach ($dataColumns as $c) {
+                if (isset($row->{$c})) {
+                    $data[$c] = $row->{$c};
+                }
+            }
+            $this->uuidToBigintIdMapping[(string) $row->id] = $newId;
+            $conn->table($newTable)->insert($data);
+            $newId++;
+        }
+    }
+
+    protected function updatePivotTableFkFromUuidToBigint(string $sourceTable, string $pivotTable, string $fkColumn): void
+    {
+        $conn = DB::connection($this->model->getConnectionName());
+        $rows = $conn->table($sourceTable)->get(['id', 'uuid']);
+
+        foreach ($rows as $p) {
+            $p = (object) $p;
+            $newId = $this->uuidToBigintIdMapping[(string) $p->id] ?? null;
+            if ($newId !== null) {
+                $conn->table($pivotTable)
+                    ->where($fkColumn, $p->id)
+                    ->update([$fkColumn => (string) $newId]);
+            }
+        }
+
+        if ($conn->getDriverName() === 'mysql') {
+            $db = $conn->getDatabaseName();
+            $constraint = $conn->selectOne(
+                "SELECT CONSTRAINT_NAME FROM information_schema.TABLE_CONSTRAINTS 
+                 WHERE TABLE_SCHEMA = ? AND TABLE_NAME = ? 
+                 AND CONSTRAINT_TYPE = 'UNIQUE' AND CONSTRAINT_NAME LIKE ? LIMIT 1",
+                [$db, $pivotTable, '%'.$fkColumn.'%']
+            );
+            $constraintName = is_object($constraint) && isset($constraint->CONSTRAINT_NAME)
+                ? (string) $constraint->CONSTRAINT_NAME
+                : null;
+            if ($constraintName !== null) {
+                $conn->statement('ALTER TABLE '.$pivotTable.' DROP INDEX '.$constraintName);
+            }
+            $conn->statement('ALTER TABLE '.$pivotTable.' MODIFY '.$fkColumn.' BIGINT UNSIGNED NULL');
+        }
+    }
 }
 
 // end XotBaseMigration

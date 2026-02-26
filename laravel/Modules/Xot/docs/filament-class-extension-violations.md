@@ -43,7 +43,11 @@ Rimuovere tutte le proprietà e metodi vietati dalle classi che estendono `XotBa
 4. OauthPersonalAccessClientResource - 5 violazioni rimosse
 5. PersonalAccessTokenResource - 1 violazione rimossa
 
-### Modulo Quaeris (5 Resources + 7 Pages)
+<<<<<<< .merge_file_coH1St
+### Modulo healthcare_app (5 Resources + 7 Pages)
+=======
+### Modulo ModuloEsempio (5 Resources + 7 Pages)
+>>>>>>> .merge_file_rtaDOy
 6. ContactResource - 1 violazione rimossa
 7. CustomerResource - 2 violazioni rimosse
 8. QuestionChartResource - 1 violazione rimossa

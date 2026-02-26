@@ -12,12 +12,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  */
 return new class extends XotBaseMigration {
     /**
-     * Nome della tabella gestita dalla migrazione.
-     */
-    protected string $table_name = 'permissions';
-
-    /**
-     * Esegue la migrazione.
+     * Run the migrations.
      */
     public function up(): void
     {

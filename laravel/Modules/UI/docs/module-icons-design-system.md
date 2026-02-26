@@ -144,4 +144,3 @@ return [
 - [Filament Icon Registration](../laravel/modules/xot/docs/filament-assets.md)
 - [Accessibility Guidelines](../docs/accessibility-standards.md)
 
-*Ultimo aggiornamento: Agosto 2025*

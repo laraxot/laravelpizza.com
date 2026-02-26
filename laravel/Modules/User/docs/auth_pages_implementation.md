@@ -11,7 +11,11 @@
 
 ## Introduzione
 
-Questo documento descrive l'implementazione corretta delle pagine di autenticazione nel tema One di SaluteOra, utilizzando Laravel Folio, Livewire Volt e seguendo le convenzioni del progetto.
+<<<<<<< HEAD
+Questo documento descrive l'implementazione corretta delle pagine di autenticazione nel tema One di Laraxot, utilizzando Laravel Folio, Livewire Volt e seguendo le convenzioni del progetto.
+=======
+Questo documento descrive l'implementazione corretta delle pagine di autenticazione nel tema One di healthcare_app, utilizzando Laravel Folio, Livewire Volt e seguendo le convenzioni del progetto.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Struttura delle Directory
 

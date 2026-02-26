@@ -226,5 +226,4 @@ Per mantenere questa organizzazione:
 
 ---
 
-*Ultimo aggiornamento: [DATE]*
 *Responsabile: Sistema di Automazione Laraxot*

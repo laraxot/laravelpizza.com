@@ -11,14 +11,22 @@ Questo documento descrive l'implementazione degli avatar utente , con particolar
 
 ## Struttura degli Avatar SVG
 
-Gli avatar SVG sono posizionati nella directory `/laravel/Modules/UI/resources/svg/avatars/` seguendo le convenzioni di SaluteOra per i componenti SVG. Sono stati creati quattro avatar predefiniti con design simpatici e colorati:
+<<<<<<< HEAD
+Gli avatar SVG sono posizionati nella directory `/laravel/Modules/UI/resources/svg/avatars/` seguendo le convenzioni di Laraxot per i componenti SVG. Sono stati creati quattro avatar predefiniti con design simpatici e colorati:
+=======
+Gli avatar SVG sono posizionati nella directory `/laravel/Modules/UI/resources/svg/avatars/` seguendo le convenzioni di healthcare_app per i componenti SVG. Sono stati creati quattro avatar predefiniti con design simpatici e colorati:
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 1. **default-1.svg**: Avatar con sfondo viola e silhouette semplice
 2. **default-2.svg**: Avatar con sfondo verde e volto sorridente
 3. **default-3.svg**: Avatar con sfondo rosa e espressione vivace
 4. **default-4.svg**: Avatar con sfondo arancione e espressione sorpresa
 
-Questi avatar vengono registrati automaticamente come componenti Blade con il prefisso `ui-avatars` grazie al sistema di registrazione delle icone di SaluteOra.
+<<<<<<< HEAD
+Questi avatar vengono registrati automaticamente come componenti Blade con il prefisso `ui-avatars` grazie al sistema di registrazione delle icone di Laraxot.
+=======
+Questi avatar vengono registrati automaticamente come componenti Blade con il prefisso `ui-avatars` grazie al sistema di registrazione delle icone di healthcare_app.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Componente Avatar
 
@@ -117,4 +125,8 @@ Il sistema di avatar può essere esteso in futuro per includere:
 
 - [Documentazione SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
 - [Blade Components Documentation](https://laravel.com/docs/10.x/blade#components)
-- [Architettura Modulare SaluteOra](/docs/architettura-modulare.md)
+<<<<<<< HEAD
+- [Architettura Modulare Laraxot](/docs/architettura-modulare.md)
+=======
+- [Architettura Modulare healthcare_app](/docs/architettura-modulare.md)
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)

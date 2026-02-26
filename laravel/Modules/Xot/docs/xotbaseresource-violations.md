@@ -307,4 +307,3 @@ return [
 - [Architettura Modulare](modular-architecture.md)
 
 *Documento creato: agosto 2025*
-*Ultimo aggiornamento: agosto 2025*

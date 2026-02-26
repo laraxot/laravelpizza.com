@@ -14,7 +14,7 @@ return [
                 'label' => 'Saúde da aplicação',
             ],
             'notifications' => [
-                'check_results' => 'Ver resultados de verificação',
+                'check_results' => 'Verificar resultados de',
             ],
         ],
     ],

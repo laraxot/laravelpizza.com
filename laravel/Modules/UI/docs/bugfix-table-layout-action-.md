@@ -140,7 +140,11 @@ php -l Modules/UI/app/Filament/Actions/Table/TableLayoutToggleTableAction.php
 php artisan tinker --execute="TableLayoutToggleTableAction::make('test');"
 
 # Testare l'URL che causava l'errore
-curl -I http://127.0.0.1:8001/quaeris/admin/gaia/survey-pdfs
+<<<<<<< .merge_file_eNL3T1
+curl -I http://127.0.0.1:8001/healthcare_app/admin/gaia/survey-pdfs
+=======
+curl -I http://127.0.0.1:8001/ptvx/admin/gaia/survey-pdfs
+>>>>>>> .merge_file_4xvMIU
 ```
 
 ### Risultati Test

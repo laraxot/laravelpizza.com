@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Actions\Filament;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use ReflectionClass;
 use Spatie\QueueableAction\QueueableAction;
@@ -90,12 +89,6 @@ class GenerateFormByFileAction
 
         // Otteniamo i metodi della classe risorsa
         $resourceMethods = get_class_methods($resourceInstance);
-
-        Log::debug('GenerateFormByFileAction', [
-            'line' => __LINE__,
-            'method' => __METHOD__,
-            'fillable' => $fillable,
-        ]);
 
         // Contiamo gli input aggiunti
         $inputCount = 0;

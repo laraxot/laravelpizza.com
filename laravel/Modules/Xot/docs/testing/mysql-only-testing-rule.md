@@ -97,7 +97,11 @@ $dbName = 'file:memdb_test_'.Str::random(10).'?mode=memory&cache=shared';
 // ✅ CORRETTO - Usa sempre MySQL da .env.testing
 // Il file .env.testing definisce:
 // DB_CONNECTION=mysql
-// DB_DATABASE=quaeris_data_test  (suffisso "_test" obbligatorio)
+<<<<<<< .merge_file_5rb7Qb
+// DB_DATABASE=healthcare_app_data_test  (suffisso "_test" obbligatorio)
+=======
+// DB_DATABASE=ptvx_data_test  (suffisso "_test" obbligatorio)
+>>>>>>> .merge_file_3atUlv
 // DB_HOST=127.0.0.1
 // DB_PORT=3306
 
@@ -108,9 +112,15 @@ $dbName = 'file:memdb_test_'.Str::random(10).'?mode=memory&cache=shared';
 ### 3. Pattern Database Test
 ```bash
 # Schema: {nome_database_produzione}_test
-PRODUZIONE: quaeris_data    → TEST: quaeris_data_test
-PRODUZIONE: quaeris_user    → TEST: quaeris_user_test  
-PRODUZIONE: quaeris_survey  → TEST: quaeris_survey_test
+<<<<<<< .merge_file_5rb7Qb
+PRODUZIONE: healthcare_app_data    → TEST: healthcare_app_data_test
+PRODUZIONE: healthcare_app_user    → TEST: healthcare_app_user_test  
+PRODUZIONE: healthcare_app_survey  → TEST: healthcare_app_survey_test
+=======
+PRODUZIONE: ptvx_data    → TEST: ptvx_data_test
+PRODUZIONE: ptvx_user    → TEST: ptvx_user_test  
+PRODUZIONE: ptvx_survey  → TEST: ptvx_survey_test
+>>>>>>> .merge_file_3atUlv
 
 # Pattern: {nome}_test - SEMPRE e SOLO _test
 ```
@@ -124,7 +134,11 @@ APP_DEBUG=true
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=quaeris_data_test          # Suffisso "_test" obbligatorio
+<<<<<<< .merge_file_5rb7Qb
+DB_DATABASE=healthcare_app_data_test          # Suffisso "_test" obbligatorio
+=======
+DB_DATABASE=ptvx_data_test          # Suffisso "_test" obbligatorio
+>>>>>>> .merge_file_3atUlv
 DB_USERNAME=marco
 DB_PASSWORD=marco
 

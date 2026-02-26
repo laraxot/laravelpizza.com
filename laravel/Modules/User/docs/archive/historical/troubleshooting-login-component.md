@@ -205,4 +205,3 @@ php artisan config:cache  # Solo in produzione
 ## Risolto Da
 Autore: Sistema di documentazione automatica
 
-*Ultimo aggiornamento: Sistema di documentazione automatica*

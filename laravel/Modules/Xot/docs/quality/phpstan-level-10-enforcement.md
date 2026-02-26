@@ -8,7 +8,11 @@
 
 | Module | Errors | Priority |
 |--------|--------|----------|
-| Quaeris | 527 | HIGH (86% of total) |
+<<<<<<< .merge_file_tJGdvu
+| healthcare_app | 527 | HIGH (86% of total) |
+=======
+| ModuloEsempio | 527 | HIGH (86% of total) |
+>>>>>>> .merge_file_qeuxeY
 | User | 30 | MEDIUM |
 | Xot | 24 | MEDIUM |
 | Media | 20 | LOW |
@@ -44,7 +48,11 @@
 4. **User** (30 errors) - Authentication and authorization
 
 ### Phase 2: Large Module
-5. **Quaeris** (527 errors) - Survey management core - requires systematic approach
+<<<<<<< .merge_file_tJGdvu
+5. **healthcare_app** (527 errors) - Survey management core - requires systematic approach
+=======
+5. **ModuloEsempio** (527 errors) - Survey management core - requires systematic approach
+>>>>>>> .merge_file_qeuxeY
 
 ## Common Patterns & Solutions
 
@@ -198,7 +206,11 @@ Check if Notification API changed in Filament v4:
   - Should extend `Filament\Widgets\Widget` or module-specific base widget
   - Fix namespace imports
 
-### Quaeris Module
+<<<<<<< .merge_file_tJGdvu
+### healthcare_app Module
+=======
+### ModuloEsempio Module
+>>>>>>> .merge_file_qeuxeY
 - **Largest Error Source**: 527 errors require systematic approach
   - Many errors in Actions classes
   - Query builder type issues
@@ -220,7 +232,11 @@ Check if Notification API changed in Filament v4:
 - [x] Phase 1.2: Notify module (0 errors - already compliant!)
 - [x] Phase 1.3: Xot module (12 → 0 errors - COMPLETED!)
 - [🔄] Phase 1.4: User module (21 errors remaining)
-- [ ] Phase 2: Quaeris module (~444 errors remaining)
+<<<<<<< .merge_file_tJGdvu
+- [ ] Phase 2: healthcare_app module (~444 errors remaining)
+=======
+- [ ] Phase 2: ModuloEsempio module (~444 errors remaining)
+>>>>>>> .merge_file_qeuxeY
 - [ ] Phase 3: Media recheck (7 new errors detected)
 - [ ] Final: Run Pint formatting
 - [ ] Final: Verify zero errors

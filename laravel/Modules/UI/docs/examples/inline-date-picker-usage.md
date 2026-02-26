@@ -132,8 +132,6 @@ class AdvancedBookingForm
                     return $this->availabilityService->getAvailableDates(
                         serviceId: $serviceId,
                         locationId: $locationId,
-                        startDate: Carbon::today(),
-                        endDate: Carbon::today()->addMonths(3)
                     );
                 })
                 ->calendarConfig([
@@ -289,7 +287,6 @@ class CustomCalendarForm
             InlineDatePicker::make('special_date')
                 ->enabledDates(function () {
                     // Date con stati speciali
-                    return SpecialDate::query()
                         ->where('is_active', true)
                         ->where('date', '>=', now())
                         ->get()
@@ -315,7 +312,6 @@ class CustomCalendarForm
                 ])
                 ->afterStateUpdated(function ($state) {
                     // Carica metadati per la data selezionata
-                    $specialDate = SpecialDate::whereDate('date', $state)->first();
 
                     if ($specialDate) {
                         $this->selectedDateMetadata = $specialDate->metadata;
@@ -328,21 +324,18 @@ class CustomCalendarForm
 
     private function isHoliday(string $date): bool
     {
-        return SpecialDate::whereDate('date', $date)
             ->where('type', 'holiday')
             ->exists();
     }
 
     private function isHighDemand(string $date): bool
     {
-        return SpecialDate::whereDate('date', $date)
             ->where('priority', 'high')
             ->exists();
     }
 
     private function isPremiumOnly(string $date): bool
     {
-        return SpecialDate::whereDate('date', $date)
             ->where('type', 'premium_only')
             ->exists();
     }

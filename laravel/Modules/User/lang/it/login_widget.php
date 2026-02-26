@@ -34,6 +34,14 @@ return [
             'label' => 'Accedi',
             'tooltip' => 'Clicca per accedere al tuo account',
         ],
+        'hidePassword' => [
+            'tooltip' => 'hidePassword',
+            'icon' => 'hidePassword',
+            'label' => 'hidePassword',
+        ],
+        'showPassword' => [
+            'tooltip' => 'showPassword',
+        ],
     ],
     'messages' => [
         'login_success' => 'Accesso effettuato con successo',

@@ -349,7 +349,6 @@ echo "✅ Consolidamento completato!"
 
 ---
 
-**Ultimo aggiornamento:** 2025-01-06
 **Stato:** In implementazione
 **Responsabile:** Team Sviluppo User
 **Priorità:** ALTA (duplicazioni massive identificate)

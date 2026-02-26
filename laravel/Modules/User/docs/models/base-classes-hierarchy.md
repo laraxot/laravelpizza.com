@@ -370,7 +370,6 @@ Quando crei un nuovo modello nel modulo User:
 
 ---
 
-**Ultimo aggiornamento:** 15 Ottobre 2025  
 **Autore:** AI Assistant + Team Laraxot  
 **Versione:** 2.0 - Correzione gerarchia modelli  
 **Status:** ✅ Production Ready

@@ -2,38 +2,67 @@
 
 ## Base Models
 ```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/_models.txt}
+<<<<<<< .merge_file_6rZN3y
+${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/_models.txt}
+=======
+${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/_models.txt}
+>>>>>>> .merge_file_7tT89h
 ```
 
 ## Relationships
 ```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/relationship.txt}
+<<<<<<< .merge_file_6rZN3y
+${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/relationship.txt}
+=======
+${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/relationship.txt}
+>>>>>>> .merge_file_7tT89h
 ```
 
 ## Pivot Tables
 ```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/_pivot.txt}
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/pivot.txt}
+<<<<<<< .merge_file_6rZN3y
+${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/_pivot.txt}
+${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/pivot.txt}
+=======
+${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/_pivot.txt}
+${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/pivot.txt}
+>>>>>>> .merge_file_7tT89h
 ```
 
 ## Custom Casts
 ```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/custom_casts.txt}
+<<<<<<< .merge_file_6rZN3y
+${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/custom_casts.txt}
+=======
+${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/custom_casts.txt}
+>>>>>>> .merge_file_7tT89h
 ```
 
 ## View Models
 ```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/view_models.txt}
+<<<<<<< .merge_file_6rZN3y
+${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/view_models.txt}
+=======
+${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/view_models.txt}
+>>>>>>> .merge_file_7tT89h
 ```
 
 ## Type Hinting
 ```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/type_hinting.txt}
+<<<<<<< .merge_file_6rZN3y
+${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/type_hinting.txt}
+=======
+${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/type_hinting.txt}
+>>>>>>> .merge_file_7tT89h
 ```
 
 ## Scopes
 ```txt
-${cat /mnt/f/var/www/quaeris/laravel/Modules/Xot/_docs/scope.txt}
+<<<<<<< .merge_file_6rZN3y
+${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/scope.txt}
+=======
+${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/scope.txt}
+>>>>>>> .merge_file_7tT89h
 ```
 ### Versione HEAD
 

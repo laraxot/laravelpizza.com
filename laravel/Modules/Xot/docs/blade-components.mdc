@@ -1,0 +1,28 @@
+# Blade Components: Regola di Autoregistrazione tramite XotBaseServiceProvider
+
+## Regola Fondamentale
+
+Tutti i Blade Components dei moduli sono autoregistrati tramite l'estensione di `XotBaseServiceProvider`.
+
+**Non è mai necessario (né corretto) aggiungere manualmente la registrazione dei componenti nei ServiceProvider dei singoli moduli.**
+
+## Come funziona
+- Ogni modulo deve semplicemente estendere `XotBaseServiceProvider`.
+- La logica di autoregistrazione è centralizzata nel modulo Xot.
+- Qualsiasi tentativo di registrazione manuale è da considerarsi errore di design.
+
+## Errori Comuni
+- Aggiornare il `PredictServiceProvider` (o altri) con la registrazione di nuovi componenti.
+- Copiare codice da documentazione Laravel standard senza adattarlo all’architettura Xot.
+
+## Esempio Corretto
+```php
+class PredictServiceProvider extends XotBaseServiceProvider
+{
+    // Non inserire qui la registrazione dei componenti Blade!
+}
+```
+
+## Collegamenti
+- [../Predict/docs/errore-serviceprovider-componenti.mdc](./errore-serviceprovider-componenti.mdc)
+- [../../Xot/docs/blade-components.mdc](../../Xot/docs/blade-components.mdc)

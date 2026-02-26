@@ -412,4 +412,3 @@ test('all models extend base model', function () {
 
 ---
 
-*Ultimo aggiornamento: giugno 2025 - Versione 2.0.0*

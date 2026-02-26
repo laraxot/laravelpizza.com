@@ -36,7 +36,15 @@
 5. **PersonalAccessTokenResource**
    - ❌ Rimosso: `protected static ?string $recordTitleAttribute = 'name'`
 
-### Modulo Quaeris
+<<<<<<< .merge_file_wsOK5y
+### Modulo healthcare_app
+=======
+<<<<<<< HEAD
+### Modulo ExternalProject
+=======
+### Modulo ModuloEsempio
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_Mzumd0
 
 6. **ContactResource**
    - ❌ Rimosso: `protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-user-circle'`

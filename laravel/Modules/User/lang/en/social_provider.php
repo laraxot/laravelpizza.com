@@ -3,94 +3,63 @@
 declare(strict_types=1);
 
 return [
-    'resources' => 'Risorse',
-    'pages' => 'Pagine',
-    'widgets' => 'Widgets',
     'navigation' => [
-        'name' => 'Social Provider',
-        'plural' => 'Social Providers',
-        'group' => [
-            'name' => 'Gestione Utenti',
-            'description' => 'Gestione dei provider social',
-        ],
-        'label' => 'social provider',
-        'sort' => '93',
-        'icon' => 'user-user-social',
+        'label' => 'Social Providers',
+        'plural_label' => 'Social Providers',
+        'group' => 'User Management',
+        'icon' => 'heroicon-o-share',
+        'sort' => 93,
     ],
+    'label' => 'Social Provider',
+    'plural_label' => 'Social Providers',
     'fields' => [
         'name' => [
-            'label' => 'Nome',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
+            'label' => 'Name',
+            'placeholder' => 'Enter provider name',
+            'helper_text' => 'Identifying name for the social provider',
         ],
-        'guard_name' => [
-            'label' => 'Guard',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
+        'client_id' => [
+            'label' => 'Client ID',
+            'placeholder' => 'Enter client ID',
         ],
-        'permissions' => [
-            'label' => 'Permessi',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
+        'client_secret' => [
+            'label' => 'Client Secret',
+            'placeholder' => 'Enter client secret',
         ],
-        'updated_at' => [
-            'label' => 'Aggiornato il',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
+        'redirect' => [
+            'label' => 'Redirect URL',
+            'placeholder' => 'Enter redirect URL',
         ],
-        'first_name' => [
-            'label' => 'Nome',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
+        'scopes' => [
+            'label' => 'Scopes',
+            'helper_text' => 'OAuth scopes',
         ],
-        'last_name' => [
-            'label' => 'Cognome',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
+        'parameters' => [
+            'label' => 'Parameters',
+            'helper_text' => 'Additional URL parameters',
         ],
-        'select_all' => [
-            'name' => 'Seleziona Tutti',
-            'message' => '',
-            'label' => '',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
+        'stateless' => [
+            'label' => 'Stateless',
         ],
-        'applyFilters' => [
-            'label' => 'applyFilters',
-            'tooltip' => '',
-            'helper_text' => '',
-            'description' => '',
+        'active' => [
+            'label' => 'Active',
+        ],
+        'socialite' => [
+            'label' => 'Socialite',
+        ],
+        'svg' => [
+            'label' => 'Icon SVG',
+            'placeholder' => '<svg>...</svg>',
         ],
     ],
     'actions' => [
-        'import' => [
-            'fields' => [
-                'import_file' => 'Seleziona un file XLS o CSV da caricare',
-            ],
-        ],
-        'export' => [
-            'filename_prefix' => 'Aree al',
-            'columns' => [
-                'name' => 'Nome area',
-                'parent_name' => 'Nome area livello superiore',
-            ],
-        ],
         'create' => [
-            'label' => 'create',
+            'label' => 'Create',
         ],
     ],
-    'plural' => [
-        'model' => [
-            'label' => 'social provider.plural.model',
-        ],
+    'messages' => [
+        'created' => 'Provider created successfully',
+        'updated' => 'Provider updated successfully',
+        'deleted' => 'Provider deleted successfully',
     ],
-    'label' => 'Missing Label',
-    'plural_label' => 'Missing Plural label',
 ];

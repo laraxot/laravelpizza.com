@@ -414,4 +414,3 @@ class Doctor extends BaseModel
 
 ---
 
-*Ultimo aggiornamento: Dicembre 2024*

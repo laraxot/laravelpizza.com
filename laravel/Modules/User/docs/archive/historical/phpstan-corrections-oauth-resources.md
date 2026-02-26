@@ -107,4 +107,3 @@ TextColumn::make('name')
 
 ---
 
-*Ultimo aggiornamento: [DATE]*

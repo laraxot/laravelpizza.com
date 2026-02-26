@@ -15,9 +15,15 @@
 ## 🔧 Correzioni Principali
 
 ### 1. Conflitti Git Risolti (4 file)
-- `Modules/Quaeris/app/Filament/Pages/DashboardV2.php`
-- `Modules/Quaeris/app/Datas/AlertDashboardFilterData.php`
-- `Modules/Quaeris/app/Datas/DashboardFilterData.php`
+<<<<<<< .merge_file_ILGZ3f
+- `Modules/healthcare_app/app/Filament/Pages/DashboardV2.php`
+- `Modules/healthcare_app/app/Datas/AlertDashboardFilterData.php`
+- `Modules/healthcare_app/app/Datas/DashboardFilterData.php`
+=======
+- `Modules/ModuloEsempio/app/Filament/Pages/DashboardV2.php`
+- `Modules/ModuloEsempio/app/Datas/AlertDashboardFilterData.php`
+- `Modules/ModuloEsempio/app/Datas/DashboardFilterData.php`
+>>>>>>> .merge_file_lTzGpR
 
 **Pattern**: Risoluzione manuale sempre scegliendo la versione HEAD con codice funzionante.
 

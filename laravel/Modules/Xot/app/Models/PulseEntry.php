@@ -17,6 +17,7 @@ use Modules\Xot\Database\Factories\PulseEntryFactory;
  * @property int|null $value
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
+ *
  * @method static PulseEntryFactory factory($count = null, $state = [])
  * @method static Builder<static>|PulseEntry newModelQuery()
  * @method static Builder<static>|PulseEntry newQuery()
@@ -27,7 +28,9 @@ use Modules\Xot\Database\Factories\PulseEntryFactory;
  * @method static Builder<static>|PulseEntry whereTimestamp($value)
  * @method static Builder<static>|PulseEntry whereType($value)
  * @method static Builder<static>|PulseEntry whereValue($value)
+ *
  * @property-read ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
 class PulseEntry extends BaseModel

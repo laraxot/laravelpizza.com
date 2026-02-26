@@ -196,6 +196,7 @@ Filament 5 introduce cambi a livello di API e di ecosistema. Dal punto di vista 
 3. **Actions, Notifications, Widgets**
    - Azioni custom Filament continuano a seguire le regole Laraxot esistenti (override `setUp()`, niente stringhe hardcoded, traduzioni centralizzate, ecc.).
    - I widget devono continuare ad estendere le classi base Xot/UI, non direttamente widget Filament.
+   - **Inclusione nei Blade View**: Per includere un widget Filament (che è un componente Livewire) all'interno di una vista Blade o di una pagina Folio, **non** usare la sintassi del tag `<livewire:module::widget-name />` a meno che non sia esplicitamente registrato. La sintassi corretta e sicura per Filament 5.x è l'uso diretto della classe: `@livewire(\Modules\User\Filament\Widgets\Auth\LoginWidget::class)`. Questo evita errori di `ComponentNotFoundException` nelle architetture modulari.
    - Ogni breaking change v5 su actions/widgets va documentato qui e nei moduli che li usano in modo intensivo (`UI`, `User`, `Notify`, `Cms`, `Job`, …).
 
 4. **Panel configuration / AdminPanelProvider**

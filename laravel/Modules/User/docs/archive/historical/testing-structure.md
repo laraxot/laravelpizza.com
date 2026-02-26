@@ -292,7 +292,6 @@ dump($variable);
 
 ---
 
-*Ultimo aggiornamento: [DATE]*
 
 
 

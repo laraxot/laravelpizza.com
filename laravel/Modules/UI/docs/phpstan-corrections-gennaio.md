@@ -61,9 +61,15 @@ Pagine Resource estendevano direttamente classi Filament invece di XotBase.
 - **`CreateQuestionChart` (<nome progetto>)**:
   - Cambiato da `CreateRecord` a `XotBaseCreateRecord`
 - **`EditQuestionChart` (<nome progetto>)**:
-- **`CreateQuestionChart` (Quaeris)**:
+<<<<<<< .merge_file_mPhBKa
+- **`CreateQuestionChart` (healthcare_app)**:
   - Cambiato da `CreateRecord` a `XotBaseCreateRecord`
-- **`EditQuestionChart` (Quaeris)**:
+- **`EditQuestionChart` (healthcare_app)**:
+=======
+- **`CreateQuestionChart` (ModuloEsempio)**:
+  - Cambiato da `CreateRecord` a `XotBaseCreateRecord`
+- **`EditQuestionChart` (ModuloEsempio)**:
+>>>>>>> .merge_file_YOkb3j
   - Cambiato da `EditRecord` a `XotBaseEditRecord`
 - **`ViewPageContent` (Cms)**:
   - Cambiato da `ViewRecord` a `XotBaseViewRecord`
@@ -207,7 +213,11 @@ class ViewLocation extends XotBaseViewRecord
 - `app/Filament/Forms/Components/LocationSelector.php`
 
 ### Modulo <nome progetto>
-### Modulo Quaeris
+<<<<<<< .merge_file_mPhBKa
+### Modulo healthcare_app
+=======
+### Modulo ModuloEsempio
+>>>>>>> .merge_file_YOkb3j
 - `app/Filament/Resources/QuestionChartResource.php`
 - `app/Filament/Resources/SurveyPdfResource/Resources/QuestionCharts/Pages/CreateQuestionChart.php`
 - `app/Filament/Resources/SurveyPdfResource/Resources/QuestionCharts/Pages/EditQuestionChart.php`

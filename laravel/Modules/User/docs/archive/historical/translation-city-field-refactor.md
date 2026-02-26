@@ -2,7 +2,11 @@
 
 ## Riepilogo Intervento
 
-Sono stati identificati e corretti tutti i file di traduzione non italiani contenenti "Città" nel modulo User, applicando la struttura completa a 7 elementi secondo gli standard Laraxot SaluteOra.
+<<<<<<< HEAD
+Sono stati identificati e corretti tutti i file di traduzione non italiani contenenti "Città" nel modulo User, applicando la struttura completa a 7 elementi secondo gli standard Laraxot Laraxot.
+=======
+Sono stati identificati e corretti tutti i file di traduzione non italiani contenenti "Città" nel modulo User, applicando la struttura completa a 7 elementi secondo gli standard Laraxot healthcare_app.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## File Corretti
 
@@ -158,7 +162,11 @@ Tutti i file corretti mantengono:
 ## Collegamenti Bidirezionali
 
 - [Struttura Completa Campi Traduzione](../../../docs/translation-field-structure-complete.md)
-- [SaluteOra Translation Audit](../../saluteora/docs/translation_audit_city_fields.md)
+<<<<<<< HEAD
+- [Laraxot Translation Audit](../../ptvx/docs/translation_audit_city_fields.md)
+=======
+- [healthcare_app Translation Audit](../../healthcare_app/docs/translation_audit_city_fields.md)
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - [Translation Syntax Fixes](../../../docs/translation_syntax_fixes.md)
 - [User Module Widget Translation Rules](widget-translation-rules.md)
 
@@ -177,6 +185,10 @@ grep -A 10 -B 2 "label.*City\|label.*Stadt" laravel/Modules/*/lang/
 Utilizzare la documentazione centrale [`translation-field-structure-complete.md`](../../../docs/translation-field-structure-complete.md) come template per tutti i nuovi campi di traduzione.
 
 ## Ultimo Aggiornamento
-[DATE] - Refactor completo campi "Città" modulo User ✅ COMPLETATO
+2025-08-08 - Refactor completo campi "Città" modulo User ✅ COMPLETATO
 
-*Intervento eseguito seguendo rigorosamente i principi DRY + KISS e gli standard Laraxot SaluteOra*
+<<<<<<< HEAD
+*Intervento eseguito seguendo rigorosamente i principi DRY + KISS e gli standard Laraxot Laraxot*
+=======
+*Intervento eseguito seguendo rigorosamente i principi DRY + KISS e gli standard Laraxot healthcare_app*
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)

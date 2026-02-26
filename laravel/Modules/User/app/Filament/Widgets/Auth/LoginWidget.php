@@ -8,7 +8,6 @@ use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\ValidationException;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 
@@ -18,9 +17,18 @@ use Modules\Xot\Filament\Widgets\XotBaseWidget;
  * - Usa solo componenti Filament importati
  * - Validazione e sicurezza integrate
  * - Facilmente estendibile (2FA, captcha, login social).
+ *
+ * VIETATO: ->label(), ->placeholder(), ->helperText(). Le traduzioni sono gestite
+ * automaticamente da LangServiceProvider tramite i file in Modules/User/lang/.
+ * Vedi .cursor/rules/no-filament-labels.mdc
+ * Traduzioni: LangServiceProvider risolve automaticamente da user::login_widget
+ * (lang/it/login_widget.php). MAI usare ->label(), ->placeholder(), ->helperText().
  */
 class LoginWidget extends XotBaseWidget
 {
+    /** Vista del widget (evita lookup da GetViewByClassAction che cerca login-widget). */
+    protected string $view = 'user::filament.widgets.auth.login';
+
     /**
      * @return array<string, Field>
      */
@@ -34,6 +42,7 @@ class LoginWidget extends XotBaseWidget
                 ->autofocus(),
             'password' => TextInput::make('password')
                 ->password()
+                ->revealable()
                 ->required(),
             'remember' => Checkbox::make('remember'),
         ];
@@ -70,5 +79,13 @@ class LoginWidget extends XotBaseWidget
         // La validazione Filament gestisce automaticamente gli errori
         // throw $e;
         // }
+    }
+
+    /**
+     * Invocato dal form della view (wire:submit.prevent="save"); delega a login().
+     */
+    public function save(): void
+    {
+        $this->login();
     }
 }

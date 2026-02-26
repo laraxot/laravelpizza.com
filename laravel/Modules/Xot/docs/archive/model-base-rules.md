@@ -87,12 +87,10 @@ abstract class BaseModel extends XotBaseModel
 
 ## Backlink e Riferimenti
 
-*Ultimo aggiornamento: maggio 2025*
 - [modules/xot/project_docs/model_base_rules.md](model_base_rules.md)
 - [docs/MODULE_NAMESPACE_RULES.md](../../project_docs/module_namespace_rules.md)
 - [modules/performance/project_docs/organizzativa-models.md](../performance/project_docs/organizzativa-models.md)
 
-*Ultimo aggiornamento: maggio 2025*
 # Regole di Estensione dei Modelli Laraxot
 
 ## Regola Fondamentale di Ereditarietà
@@ -186,4 +184,3 @@ abstract class BaseModel extends XotBaseModel
 - [docs/MODULE_NAMESPACE_RULES.md](../../docs/module_namespace_rules.md)
 - [modules/performance/docs/organizzativa-models.md](../performance/docs/organizzativa-models.md)
 
-*Ultimo aggiornamento: maggio 2025*

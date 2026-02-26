@@ -107,7 +107,15 @@ Il modulo **User** fornisce:
    - Mapping permessi
 
 2. **LimeParticipant** - Partecipanti survey
-   - Integrazione con Contact model Quaeris
+<<<<<<< .merge_file_xjrved
+   - Integrazione con Contact model healthcare_app
+=======
+<<<<<<< HEAD
+   - Integrazione con Contact model ExternalProject
+=======
+   - Integrazione con Contact model ModuloEsempio
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_x8sE7o
    - Gestione partecipanti centralizzata
    - Attributi personalizzati
 
@@ -155,7 +163,15 @@ Nessuna funzionalità critica mancante - il modulo User è ben implementato
 
 ## Collegamenti
 
-- [Modulo Quaeris](../quaeris/docs/readme.md)
+<<<<<<< .merge_file_xjrved
+- [Modulo healthcare_app](../healthcare_app/docs/readme.md)
+=======
+<<<<<<< HEAD
+- [Modulo ExternalProject](../quaeris/docs/readme.md)
+=======
+- [Modulo ModuloEsempio](../ptvx/docs/readme.md)
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_x8sE7o
 - [Modulo Limesurvey](../limesurvey/docs/readme.md)
 - [User README](./readme.md)
 

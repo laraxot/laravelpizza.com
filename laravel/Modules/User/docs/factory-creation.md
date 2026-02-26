@@ -110,4 +110,3 @@ Questo errore è **GRAVISSIMO** perché:
 5. ⏳ Documentare pattern e best practice
 
 *Creato: [DATE]*
-*Ultimo aggiornamento: [DATE]*

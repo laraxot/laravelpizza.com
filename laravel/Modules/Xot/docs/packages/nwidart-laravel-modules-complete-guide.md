@@ -546,6 +546,5 @@ Modules/{ModuleName}/docs/
 
 ---
 
-**Ultimo aggiornamento:** Gennaio 2026  
 **Versione Package:** 12.0+  
 **Compatibilità:** Laravel 12.x, PHP 8.2+

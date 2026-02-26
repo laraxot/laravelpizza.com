@@ -20,6 +20,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Modules\User\Filament\Resources\AuthenticationLogResource\Pages\ListAuthenticationLogs;
 use Modules\User\Filament\Resources\AuthenticationLogResource\Pages\ViewAuthenticationLog;
@@ -36,23 +37,20 @@ class AuthenticationLogResource extends XotBaseResource
         return $table
             ->columns([
                 TextColumn::make('id')
-                    ->label('ID')
                     ->searchable()
                     ->sortable(),
 
                 TextColumn::make('authenticatable_type')
-                    ->label('Authenticatable Type')
                     ->formatStateUsing(fn (?string $state): string => null !== $state ? Str::afterLast($state, '\\') : '')
                     ->searchable()
                     ->sortable(),
 
                 TextColumn::make('authenticatable.name')
-                    ->label('User')
                     ->searchable()
                     ->sortable()
                     ->url(function (AuthenticationLog $record): ?string {
                         $authenticatable = $record->authenticatable;
-                        if (null !== $authenticatable && $authenticatable->exists) {
+                        if ($authenticatable instanceof Model) {
                             return UserResource::getUrl('view', ['record' => $authenticatable]);
                         }
 
@@ -60,36 +58,27 @@ class AuthenticationLogResource extends XotBaseResource
                     }, shouldOpenInNewTab: true),
 
                 TextColumn::make('ip_address')
-                    ->label('IP Address')
                     ->searchable()
                     ->sortable()
-                    ->copyable()
-                    ->copyMessage('IP address copied')
-                    ->copyMessageDuration(2000),
+                    ->copyable(),
 
                 TextColumn::make('user_agent')
-                    ->label('User Agent')
                     ->limit(50)
-                    ->tooltip(fn (AuthenticationLog $record): ?string => $record->user_agent)
                     ->searchable(isIndividual: true),
 
                 IconColumn::make('login_successful')
-                    ->label('Success')
                     ->boolean()
                     ->sortable(),
 
                 TextColumn::make('login_at')
-                    ->label('Login Time')
                     ->dateTime()
                     ->sortable(),
 
                 TextColumn::make('logout_at')
-                    ->label('Logout Time')
                     ->dateTime()
                     ->sortable(),
 
                 IconColumn::make('cleared_by_user')
-                    ->label('Cleared by User')
                     ->boolean()
                     ->sortable(),
             ])
@@ -101,10 +90,8 @@ class AuthenticationLogResource extends XotBaseResource
                 // Filter by date range
                 Filter::make('login_date')
                     ->schema([
-                        DatePicker::make('login_from')
-                            ->label('Login From'),
-                        DatePicker::make('login_until')
-                            ->label('Login Until'),
+                        DatePicker::make('login_from'),
+                        DatePicker::make('login_until'),
                     ])
                     ->query(function (Builder $query, array $data): Builder {
                         $loginFrom = $data['login_from'] ?? null;
@@ -135,11 +122,10 @@ class AuthenticationLogResource extends XotBaseResource
             ])
             ->recordActions([
                 Action::make('view_user')
-                    ->label('View User')
                     ->icon('heroicon-o-user')
                     ->url(function (AuthenticationLog $record): ?string {
                         $authenticatable = $record->authenticatable;
-                        if (null !== $authenticatable && $authenticatable->exists) {
+                        if ($authenticatable instanceof Model) {
                             return UserResource::getUrl('view', ['record' => $authenticatable]);
                         }
 
@@ -148,7 +134,7 @@ class AuthenticationLogResource extends XotBaseResource
                     ->visible(function (AuthenticationLog $record): bool {
                         $authenticatable = $record->authenticatable;
 
-                        return null !== $authenticatable && $authenticatable->exists;
+                        return $authenticatable instanceof Model;
                     }),
                 DeleteAction::make(),
             ])
@@ -179,7 +165,6 @@ class AuthenticationLogResource extends XotBaseResource
                     Grid::make(2)
                         ->schema([
                             Select::make('authenticatable_type')
-                                ->label('Authenticatable Type')
                                 ->options([
                                     User::class => 'User',
                                     // Add other authenticatable types as needed
@@ -188,7 +173,6 @@ class AuthenticationLogResource extends XotBaseResource
                                 ->searchable(),
 
                             TextInput::make('authenticatable_id')
-                                ->label('Authenticatable ID')
                                 ->required()
                                 ->numeric(),
                         ]),
@@ -196,33 +180,23 @@ class AuthenticationLogResource extends XotBaseResource
                     Grid::make(2)
                         ->schema([
                             TextInput::make('ip_address')
-                                ->label('IP Address')
-                                ->maxLength(45)
-                                ->placeholder('e.g., 192.168.1.1'),
+                                ->maxLength(45),
 
                             TextInput::make('user_agent')
-                                ->label('User Agent')
-                                ->maxLength(500)
-                                ->placeholder('User agent string'),
+                                ->maxLength(500),
                         ]),
 
                     Grid::make(3)
                         ->schema([
                             Toggle::make('login_successful')
-                                ->label('Login Successful')
                                 ->inline(false),
 
-                            TextInput::make('login_at')
-                                ->label('Login Time')
-                                ->placeholder('YYYY-MM-DD HH:MM:SS'),
+                            TextInput::make('login_at'),
 
-                            TextInput::make('logout_at')
-                                ->label('Logout Time')
-                                ->placeholder('YYYY-MM-DD HH:MM:SS'),
+                            TextInput::make('logout_at'),
                         ]),
 
                     Toggle::make('cleared_by_user')
-                        ->label('Cleared by User')
                         ->inline(false),
                 ]),
         ];

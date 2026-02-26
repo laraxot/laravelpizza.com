@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\Pages;
 
+use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
+use Modules\Xot\Filament\Traits\HasXotTable;
 use Filament\Actions\Action;
 use Filament\Actions\CreateAction;
 use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Override;
 
@@ -114,51 +114,8 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
         ];
     }
 
-    /**
-     * Definisce le azioni per ogni riga della tabella.
-     * Questo metodo può essere sovrascritto nelle classi figlie.
-     *
-     * @return array<string, Action>
-     */
-    public function getTableActions(): array
+    public static function getNavigationLabel(): string
     {
-        // Preferisci la risorsa correlata per i record nested; altrimenti usa la risorsa della pagina.
-        $resource = static::$relatedResource ?? static::getResource();
-        // Mostra "view" solo se la risorsa correlata espone quella pagina.
-        $hasView = $resource::hasPage('view');
-
-        return [
-            'view' => Action::make('view')
-                ->label('Visualizza')
-                ->icon('heroicon-o-eye')
-                ->visible(static fn (): bool => (bool) $hasView)
-                ->url(function (Model $record) use ($resource): string {
-                    // Prova il guessing degli URL nested di Filament (funziona con nesting multi-livello in richieste normali).
-                    $url = $resource::getUrl('view', ['record' => $record], shouldGuessMissingParameters: true);
-                    // Fallback per contesti senza dati di request (es. test Livewire).
-                    if ($url === '') {
-                        $url = $resource::getUrl('view', ['record' => $record], shouldGuessMissingParameters: false);
-                    }
-
-                    return is_string($url) ? $url : (string) $url;
-                }),
-            'edit' => Action::make('edit')
-                ->label('Modifica')
-                ->icon('heroicon-o-pencil')
-                ->url(function (Model $record) use ($resource): string {
-                    // Prova il guessing degli URL nested di Filament (funziona con nesting multi-livello in richieste normali).
-                    $url = $resource::getUrl('edit', ['record' => $record], shouldGuessMissingParameters: true);
-                    // Fallback per contesti senza dati di request (es. test Livewire).
-                    if ($url === '') {
-                        $url = $resource::getUrl('edit', ['record' => $record], shouldGuessMissingParameters: false);
-                    }
-
-                    return is_string($url) ? $url : (string) $url;
-                }),
-            // 'view' => Action::make('view')
-            //     ->label('Visualizza')
-            //     ->icon('heroicon-o-eye')
-            //     ->url(fn (Model $record): string => static::getResource()::getUrl('view', ['record' => $record])),
-        ];
+        return static::transFunc(__FUNCTION__);
     }
 }

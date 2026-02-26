@@ -215,4 +215,3 @@ Quando si crea un modello pivot che usa autoincrement come PRIMARY KEY:
 - [HasTeams Trait](../../app/Models/Traits/HasTeams.php)
 - [Migration Rules](../../../xot/docs/migrations-consolidated.md)
 
-*Ultimo aggiornamento: gennaio 2025*

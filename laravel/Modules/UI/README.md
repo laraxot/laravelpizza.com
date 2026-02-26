@@ -14,7 +14,11 @@
 
 ## Cosa fa
 
-Il modulo UI e il **design system centralizzato** di Laraxot. Ogni modulo (Quaeris, Limesurvey, Cms, etc.) usa i suoi componenti Blade, icone SVG e widget Filament per garantire coerenza visiva e ridurre la duplicazione.
+<<<<<<< .merge_file_woR8FC
+Il modulo UI e il **design system centralizzato** di Laraxot. Ogni modulo (healthcare_app, Limesurvey, Cms, etc.) usa i suoi componenti Blade, icone SVG e widget Filament per garantire coerenza visiva e ridurre la duplicazione.
+=======
+Il modulo UI e il **design system centralizzato** di Laraxot. Ogni modulo (ModuloEsempio, Limesurvey, Cms, etc.) usa i suoi componenti Blade, icone SVG e widget Filament per garantire coerenza visiva e ridurre la duplicazione.
+>>>>>>> .merge_file_xgAPWs
 
 ```blade
 {{-- Icone con prefisso ui- --}}
@@ -252,7 +256,11 @@ InlineDatePicker::make('selected_dates')
 
 ```
 UI ──> Xot        (XotBaseWidget, XotBaseResource)
-UI ──> Quaeris    (componenti dashboard, icone survey)
+<<<<<<< .merge_file_woR8FC
+UI ──> healthcare_app    (componenti dashboard, icone survey)
+=======
+UI ──> ModuloEsempio    (componenti dashboard, icone survey)
+>>>>>>> .merge_file_xgAPWs
 UI ──> Cms        (blocchi pagina, layout)
 UI ──> Chart      (widget chart base)
 UI ──> User       (avatar, icone profilo)
@@ -286,7 +294,11 @@ ls laravel/Modules/UI/resources/svg/
 
 @section('content')
     <x-ui::blocks.hero.split
-        title="Quaeris Survey Platform"
+<<<<<<< .merge_file_woR8FC
+        title="healthcare_app Survey Platform"
+=======
+        title="ModuloEsempio Survey Platform"
+>>>>>>> .merge_file_xgAPWs
         subtitle="Gestione survey professionale"
         image="/images/dashboard-preview.png"
     />

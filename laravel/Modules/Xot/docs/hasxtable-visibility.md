@@ -64,8 +64,17 @@ protected function getTableEmptyStateActions(): array
    - Aggiunta sezione "Errore InteractsWithTable"
    - Aggiornata data ultimo aggiornamento
 
-3. **`Modules/Quaeris/docs/question-chart-implementation-guide.md`**
+<<<<<<< .merge_file_2UKLCZ
+3. **`Modules/healthcare_app/docs/question-chart-implementation-guide.md`**
+=======
+<<<<<<< HEAD
+3. **Moduli che implementano nested resources con HasXotTable**
+   - Nota critica sulla visibilità dei metodi `getTable*()`
+=======
+3. **`Modules/ExternalProject/docs/question-chart-implementation-guide.md`**
+>>>>>>> .merge_file_0hpKGV
    - Aggiunta nota critica sulla visibilità dei metodi `getTable*()`
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ## Pattern Corretto
 
@@ -119,7 +128,11 @@ Dopo la correzione, l'errore non dovrebbe più verificarsi:
 
 ```bash
 # Test accesso pagina
-curl http://quaeris.local/quaeris/admin/ats/survey-pdfs/16/question-charts/226
+<<<<<<< .merge_file_2UKLCZ
+curl http://healthcare_app.local/healthcare_app/admin/ats/survey-pdfs/16/question-charts/226
+=======
+curl http://app.local/admin/your-resource/16/related/226
+>>>>>>> .merge_file_0hpKGV
 # ✅ Dovrebbe funzionare senza errori
 ```
 
@@ -135,4 +148,3 @@ curl http://quaeris.local/quaeris/admin/ats/survey-pdfs/16/question-charts/226
 2. **Compatibilità Filament**: I trait di Filament (`InteractsWithTable`) hanno requisiti specifici di visibilità
 3. **Documentazione**: La documentazione esistente (`widget-method-visibility-rules.md`) era corretta ma non era stata applicata al trait base
 
-*Ultimo aggiornamento: [DATE]*

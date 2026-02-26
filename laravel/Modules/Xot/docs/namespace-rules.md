@@ -26,6 +26,5 @@
 
 ---
 
-**Ultimo aggiornamento:** [DATE]
 
 **Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.

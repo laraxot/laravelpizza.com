@@ -1,0 +1,10 @@
+# Best Practices Routing (Xot)
+
+## Regola generale
+- Non inserire MAI rotte frontoffice in routes/web.php.
+- Tutte le rotte pubbliche devono essere gestite tramite Folio (filesystem routing) e Volt (componenti dichiarativi).
+- Il file routes/web.php deve rimanere vuoto o con solo commenti di avviso.
+- Aggiornare la documentazione ogni volta che si modifica la gestione del routing.
+
+## Collegamenti
+- Questa regola è richiamata anche in ../Cms/docs/routing-frontoffice.mdc e ../Predict/docs/routing-frontoffice.mdc.

@@ -526,4 +526,8 @@ iflow
 
 ## Licenza
 
-Questa documentazione è parte del progetto **base_quaeris_fila4_mono** ed è soggetta alla stessa licenza del progetto principale.
+<<<<<<< .merge_file_dEbBqU
+Questa documentazione è parte del progetto **base_healthcare_app_fila4_mono** ed è soggetta alla stessa licenza del progetto principale.
+=======
+Questa documentazione è parte del progetto **base_ptvx_fila4_mono** ed è soggetta alla stessa licenza del progetto principale.
+>>>>>>> .merge_file_qgiGPI

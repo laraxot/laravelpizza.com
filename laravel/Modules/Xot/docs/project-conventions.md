@@ -136,7 +136,6 @@ bashscripts/
 # Script Name: describe-what-this-does.sh
 # Description: Brief description of what this script does
 # Author: [Author Name]
-# Date: [Creation Date]
 # Usage: ./script-name.sh [arguments]
 #
 

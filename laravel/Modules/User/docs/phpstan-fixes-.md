@@ -617,7 +617,6 @@ public string $currentState = 'default';
 - [PHPStan Usage](../../xot/docs/phpstan-usage.md)
 - [XotBaseResource Documentation](../../xot/docs/filament/xot-base-resource.md)
 
-*Ultimo aggiornamento: 2025-01-22*
 # PHPStan Fixes - Modulo User
 
 ## OauthClientResource.php

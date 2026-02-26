@@ -280,4 +280,3 @@ Eseguire PHPStan su tutti i moduli, comprendere logica, politica, business logic
 
 ---
 
-*Ultimo aggiornamento: [DATE]*

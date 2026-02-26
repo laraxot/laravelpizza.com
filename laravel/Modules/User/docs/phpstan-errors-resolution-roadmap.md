@@ -197,4 +197,3 @@ Tutti gli errori sono stati corretti:
 3. **PHPMD**:
     - Aggiunto `@SuppressWarnings` per `StaticAccess` e `CouplingBetweenObjects` in `PassportServiceProvider`.
 
-*Ultimo aggiornamento: 2026-02-02*

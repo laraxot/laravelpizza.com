@@ -52,7 +52,11 @@ Themes/[ThemeName]/
 │   │   ├── components/
 │   │   ├── layouts/
 │   │   └── pages/
-├── _quaeris_fila4_mono.code-workspace
+<<<<<<< .merge_file_jyGVlO
+├── _healthcare_app_fila4_mono.code-workspace
+=======
+├── _ptvx_fila4_mono.code-workspace
+>>>>>>> .merge_file_Y2wPxU
 ├── package.json
 ├── postcss.config.js
 ├── tailwind.config.js

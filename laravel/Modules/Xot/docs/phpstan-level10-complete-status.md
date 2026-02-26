@@ -107,4 +107,3 @@ Moduli che richiedono questa configurazione:
 
 ---
 
-*Ultimo aggiornamento: gennaio 2026*

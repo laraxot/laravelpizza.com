@@ -1,28 +1,32 @@
-# Roadmap Modulo UI
+# UI Module Roadmap
+
+"L'interfaccia è l'essenza: rendere l'esperienza indimenticabile."
 
 ## 🎯 Visione
-Creare un ecosistema UI "Headless-first" che permetta la personalizzazione radicale dell'esperienza utente tramite configurazioni dinamiche, sfruttando le potenzialità di Tailwind CSS v4 e componenti interattivi moderni.
+Creare un ecosistema UI "Headless-first" che permetta di cambiare radicalmente il look-and-feel di un tenant tramite semplici configurazioni JSON, sfruttando la potenza di Tailwind CSS v4 e le animazioni native del browser.
 
 ## 🏗️ Fasi di Sviluppo
 
-### Fase 1: Modernizzazione (In Corso)
+### Fase 1: Modernization (In Progress)
 - [x] PHPStan Level 10 Compliance.
-- [ ] Completamento della migrazione a **Tailwind CSS v4**.
-- [ ] Implementazione di componenti interattivi basati su standard moderni.
-- [ ] Rimozione sistematica dei file obsoleti e ridondanti.
+- [ ] Completamento migrazione a **Tailwind CSS v4**.
+- [ ] Implementazione di **Flux UI** per i componenti interattivi di base.
+- [ ] Rimozione definitiva dei 280+ file obsoleti.
 
-### Fase 2: Component Studio (Pianificato)
-- [ ] Creazione di una galleria live per il testing isolato dei componenti UI.
-- [ ] Sistema di **Design Tokens** centralizzato ed esportabile.
-- [ ] Sviluppo di componenti avanzati per la visualizzazione dei dati (Charts).
+### Fase 2: Component Studio (Planned)
+- [ ] Creazione di una "Gallery" live per testare i componenti UI isolati.
+- [ ] Sistema di **Design Tokens** centralizzato esportabile in vari formati.
+- [ ] Nuovi componenti avanzati per **Data Visualization** (integrazione Chart).
 
-### Fase 3: AI Design e Ottimizzazione (Futuro)
-- [ ] **AI Theme Generator**: Generazione automatica di palette colori accessibili basate sul brand.
-- [ ] **Dynamic Layout Optimization**: Suggerimenti di layout basati sull'analisi del contenuto visualizzato.
-- [ ] **Predictive Prefetching**: Caricamento anticipato delle risorse UI basato sui pattern di navigazione.
+### Fase 3: AI Design (Future)
+- [ ] **AI Theme Generator**: Generazione automatica di palette colori accessibili da un'immagine di brand.
+- [ ] **Dynamic Layout Optimization**: L'AI suggerisce layout migliori in base al tipo di contenuto visualizzato.
+- [ ] **Predictive Prefetching**: Caricamento anticipato delle risorse UI in base ai pattern di navigazione.
 
 ## ✅ Checklist Qualità
 - [x] PHPStan Level 10.
-- [ ] Accessibilità WCAG 2.1 (AA) verificata sui componenti core.
-- [ ] Performance Lighthouse > 90 nelle pagine con alta densità di UI.
-- [ ] Documentazione dei componenti aggiornata in `docs/`.
+- [ ] Accessibilità WCAG 2.1 (AA) verificata su tutti i componenti core.
+- [ ] Performance Lighthouse > 90 su pagine UI intensive.
+
+---
+**Ultimo aggiornamento**: Febbraio 2026

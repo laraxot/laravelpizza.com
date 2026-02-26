@@ -27,4 +27,3 @@
 Il modulo UI non dovrebbe avere modelli - è dedicato a componenti di interfaccia.
 
 ---
-*Ultimo aggiornamento: [DATE]*

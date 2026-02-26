@@ -88,7 +88,11 @@ Se il modulo UI ha un **panel Filament separato**, devi:
 
 1. **Installa il plugin:**
    ```bash
-   cd /var/www/_bases/base_quaeris_fila5_mono/laravel/Modules/UI
+<<<<<<< .merge_file_HRpsYw
+   cd /var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/UI
+=======
+   cd /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/UI
+>>>>>>> .merge_file_7N3tl0
    npm install chartjs-plugin-datalabels --save-dev
    ```
 
@@ -580,7 +584,11 @@ protected function getOptions(): array
 
 - [Guida Completa Chart Module](../../chart/docs/chartjs-datalabels-multiple-labels-complete-guide.md)
 - [Filament 5.x Installation Guide](../../chart/docs/filament-5-installation-guide.md)
-- [SimpleChartWidget con Sfondi](../../quaeris/docs/simplechartwidget-labels-backgrounds.md) - ⭐ Esempio completo con sfondi ottimizzati per UI/UX
+<<<<<<< .merge_file_HRpsYw
+- [SimpleChartWidget con Sfondi](../../healthcare_app/docs/simplechartwidget-labels-backgrounds.md) - ⭐ Esempio completo con sfondi ottimizzati per UI/UX
+=======
+- [SimpleChartWidget con Sfondi](../../ptvx/docs/simplechartwidget-labels-backgrounds.md) - ⭐ Esempio completo con sfondi ottimizzati per UI/UX
+>>>>>>> .merge_file_7N3tl0
 
 ### Documentazione Ufficiale
 
@@ -591,4 +599,8 @@ protected function getOptions(): array
 
 **Versione:** 1.0  
 **Ultimo Aggiornamento:** Gennaio 2026  
-**Mantenuto da:** Quaeris Development Team
+<<<<<<< .merge_file_HRpsYw
+**Mantenuto da:** healthcare_app Development Team
+=======
+**Mantenuto da:** ModuloEsempio Development Team
+>>>>>>> .merge_file_7N3tl0

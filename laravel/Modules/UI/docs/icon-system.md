@@ -183,6 +183,11 @@ class StatsWidget extends Widget
 2. **Usa un nome descrittivo** (es. `user-profile.svg`)
 3. **L'icona sarà disponibile** come `ui-user-profile`
 
+### Sottocartelle (es. brands)
+
+- `brands/github.svg` → `ui-brands.github` (punto = separatore path)
+- **Vietato** SVG inline nelle Blade: vedi [no-svg-hardcoded-in-blade.md](no-svg-hardcoded-in-blade.md)
+
 ### Esempio di Icona SVG
 
 ```svg

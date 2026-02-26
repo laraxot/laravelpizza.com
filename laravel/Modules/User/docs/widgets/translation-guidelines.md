@@ -92,11 +92,16 @@ return [
         'required' => 'This field is required',
 ],
 ## Widget Implementation Rules
-### Never Use Direct Labels
-// ❌ WRONG - Never use ->label() in widgets
-TextInput::make('name')->label('Name')
+### Never Use ->label(), ->placeholder(), ->helperText()
+
+**Regola critica**: Mai usare `->label()`, `->placeholder()` o `->helperText()` nei componenti Filament. Il LangServiceProvider risolve automaticamente da `modulo::risorsa.fields.campo.*` (es. `user::login_widget.fields.email.label`).
+
+```php
+// ❌ WRONG - Never use ->label(), ->placeholder(), ->helperText()
+TextInput::make('name')->label('Name')->placeholder('Enter name')
 // ✅ CORRECT - Let LangServiceProvider handle translations
 TextInput::make('name')
+```
 ### Translation Key Usage
 // ✅ CORRECT - Use translation keys for options
 Select::make('lang')

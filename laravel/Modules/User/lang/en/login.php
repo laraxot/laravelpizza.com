@@ -108,4 +108,13 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'login-via' => 'Or continue with',
+    'google' => 'Google',
+    'microsoft' => 'Microsoft',
+    'social' => [
+        'title' => 'Or continue with',
+        'google' => 'Sign in with Google',
+        'microsoft' => 'Sign in with Microsoft',
+        'github' => 'Sign in with GitHub',
+    ],
 ];

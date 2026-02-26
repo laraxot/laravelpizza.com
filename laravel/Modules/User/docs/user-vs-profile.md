@@ -518,4 +518,3 @@ class User extends Authenticatable
 ---
 
 *Documento generato per LaravelPizza - Progetto Community Laravel*
-*Ultimo aggiornamento: Febbraio 2026*

@@ -146,4 +146,3 @@ $userClass = XotData::make()->getUserClass();
 
 ---
 
-*Ultimo aggiornamento: [DATE]*

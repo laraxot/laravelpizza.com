@@ -124,4 +124,3 @@ $this->tableCreate(static function (Blueprint $table): void {
 ✅ **Migrazione funzionante**
 ✅ **Documentazione aggiornata**
 
-*Ultimo aggiornamento: 2025-01-15*

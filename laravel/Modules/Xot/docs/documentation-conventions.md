@@ -105,4 +105,3 @@ Utilizzare script nella cartella `bashscripts` per automatizzare le verifiche e 
 - [Regole per ServiceProvider](../../indennitacondizionilavoro/docs/service_provider.md)
 - [Regole per file di traduzione](../../../.cursor/rules/translation_files_rules.mdc)
 
-*Ultimo aggiornamento: Giugno 2025*

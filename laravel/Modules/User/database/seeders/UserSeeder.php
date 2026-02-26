@@ -5,13 +5,11 @@ declare(strict_types=1);
 namespace Modules\User\Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Modules\User\Models\Permission;
 use Modules\User\Models\Role;
 use Modules\User\Models\Team;
-use Webmozart\Assert\Assert;
 
 /**
  * Seeder per il modulo User.
@@ -105,25 +103,21 @@ class UserSeeder extends Seeder
         }
 
         // Ruoli di sistema
-        /** @var Role $superAdminRole */
         $superAdminRole = Role::firstOrCreate([
             'name' => 'super-admin',
             'guard_name' => 'web',
         ]);
 
-        /** @var Role $systemAdminRole */
         $systemAdminRole = Role::firstOrCreate([
             'name' => 'system-admin',
             'guard_name' => 'web',
         ]);
 
-        /** @var Role $moderatorRole */
         $moderatorRole = Role::firstOrCreate([
             'name' => 'moderator',
             'guard_name' => 'web',
         ]);
 
-        /** @var Role $userRole */
         $userRole = Role::firstOrCreate([
             'name' => 'user',
             'guard_name' => 'web',
@@ -174,60 +168,24 @@ class UserSeeder extends Seeder
     {
         $this->command->info('👥 Creazione team di sistema...');
 
-        // Team di amministrazione
-        /** @var Factory<Team> $adminFactory */
-        $adminFactory = Team::factory();
-        Assert::isInstanceOf($adminFactory, Factory::class);
-        /** @phpstan-ignore-next-line - Factory method returns proper object */
-        $adminTeam = $adminFactory->create([
-            'name' => 'Amministratori',
-            'personal_team' => false,
-        ]);
-        Assert::isInstanceOf($adminTeam, Team::class);
-
-        // Team di sviluppo
-        /** @var Factory<Team> $devFactory */
-        $devFactory = Team::factory();
-        Assert::isInstanceOf($devFactory, Factory::class);
-        /** @phpstan-ignore-next-line - Factory method returns proper object */
-        $devTeam = $devFactory->create([
-            'name' => 'Sviluppatori',
-            'personal_team' => false,
-        ]);
-        Assert::isInstanceOf($devTeam, Team::class);
-
-        // Team di supporto
-        /** @var Factory<Team> $supportFactory */
-        $supportFactory = Team::factory();
-        Assert::isInstanceOf($supportFactory, Factory::class);
-        /** @phpstan-ignore-next-line - Factory method returns proper object */
-        $supportTeam = $supportFactory->create([
-            'name' => 'Supporto Clienti',
-            'personal_team' => false,
-        ]);
-
-        // Team di marketing
-        /** @var Factory<Team> $marketingFactory */
-        $marketingFactory = Team::factory();
-        Assert::isInstanceOf($marketingFactory, Factory::class);
-        /** @phpstan-ignore-next-line - Factory method returns proper object */
-        $marketingTeam = $marketingFactory->create([
-            'name' => 'Marketing',
-            'personal_team' => false,
-        ]);
-        Assert::isInstanceOf($marketingTeam, Team::class);
-
-        // Team generale
-        /** @var Factory<Team> $generalFactory */
-        $generalFactory = Team::factory();
-        Assert::isInstanceOf($generalFactory, Factory::class);
-        /** @phpstan-ignore-next-line - Factory method returns proper object */
-        $generalTeam = $generalFactory->create([
-            'name' => 'Team Generale',
-            'personal_team' => false,
-        ]);
-        Assert::isInstanceOf($generalTeam, Team::class);
+        $adminTeam = $this->createTeam('Amministratori');
+        $devTeam = $this->createTeam('Sviluppatori');
+        $supportTeam = $this->createTeam('Supporto Clienti');
+        $marketingTeam = $this->createTeam('Marketing');
+        $generalTeam = $this->createTeam('Team Generale');
 
         $this->command->info('   ✓ Creati 5 team di sistema');
+    }
+
+    private function createTeam(string $name): Team
+    {
+        $factory = \Modules\User\Database\Factories\TeamFactory::new();
+        /** @var Team $team */
+        $team = $factory->create([
+            'name' => $name,
+            'personal_team' => false,
+        ]);
+
+        return $team;
     }
 }

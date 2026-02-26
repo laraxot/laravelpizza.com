@@ -203,7 +203,6 @@ echo "✅ Validazione completata!"
 echo "🔄 Aggiornamento documentazione modulo Xot..."
 
 # Aggiorna timestamp
-find docs/ -name "*.md" -exec sed -i 's/Ultimo aggiornamento:.*/Ultimo aggiornamento: '$(date +%Y-%m-%d)'/' {} \;
 
 # Aggiorna versioni
 find docs/ -name "*.md" -exec sed -i 's/Laravel [0-9]\+/Laravel 11/' {} \;
@@ -351,6 +350,5 @@ docs/
 
 ---
 
-**Ultimo aggiornamento:** [DATE]
 **Stato:** In implementazione
 **Responsabile:** Team Sviluppo Xot

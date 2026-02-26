@@ -135,4 +135,3 @@ $this->info("Current user type: " . $typeLabelString);
 - [Guida Ufficiale Filament 4.x](https://filamentphp.com/docs/4.x/upgrade-guide)
 - [Documentazione Autenticazione](https://filamentphp.com/docs/panels/authentication)
 
-*Ultimo aggiornamento: 2025-01-27*

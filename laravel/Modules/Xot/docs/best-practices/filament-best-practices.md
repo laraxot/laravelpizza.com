@@ -535,7 +535,6 @@ Prima di considerare completa una risorsa Filament, verificare:
 - `CreateAppointment.php` - Estende `XotBaseCreateRecord`
 - `EditAppointment.php` - Estende `XotBaseEditRecord`
 
-*Ultimo aggiornamento: gennaio 2025 - Correzioni per campi reali e rimozione label hardcoded*
 1. **ESATTA SEQUENZA** di campi da mantenere:
    - **Dati anagrafici**: titolo_id, nome, cognome, sesso, data_nascita, etc.
    - **Classificazione professionale**: tipologia_cliente_id, stato_id, etc.

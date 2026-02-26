@@ -112,4 +112,3 @@ Prima di considerare completo un Panel Provider, verificare:
 
 ---
 
-*Ultimo aggiornamento: Dicembre 2024*

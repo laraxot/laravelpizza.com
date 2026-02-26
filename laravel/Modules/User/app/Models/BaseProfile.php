@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
-// use Illuminate\Database\Eloquent\Relations\HasOne;
+// // use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 use Modules\Media\Models\Media;
 use Modules\User\Models\Traits\IsProfileTrait;
 use Modules\Xot\Contracts\ProfileContract;
@@ -24,6 +24,8 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
 use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
 
 /**
+ * @property int                                                       $id
+ * @property string                                                    $uuid
  * @property \Spatie\SchemalessAttributes\SchemalessAttributes         $extra
  * @property string                                                    $avatar
  * @property Collection<int, DeviceUser>                               $deviceUsers
@@ -54,6 +56,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
  * @method static Builder|ProfileContract permission($permissions, $without = false)
  * @method static Builder|ProfileContract query()
  * @method static Builder|ProfileContract role($roles, $guard = null, $without = false)
+ * @method static Builder|ProfileContract byUuid(string $uuid)
  * @method static Builder|BaseProfile     withExtraAttributes()
  * @method static Builder|ProfileContract withoutPermission($permissions)
  * @method static Builder|ProfileContract withoutRole($roles, $guard = null)
@@ -74,6 +77,26 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
     // use SoftDeletes;
 
     /**
+     * The "booted" method of the model.
+     */
+    protected static function booted(): void
+    {
+        static::creating(static function (self $model): void {
+            if (empty($model->uuid)) {
+                $model->uuid = (string) Str::uuid();
+            }
+        });
+    }
+
+    /**
+     * Scope per lookup da API/Android/Postgres (usa uuid, non id).
+     */
+    public function scopeByUuid(Builder $query, string $uuid): Builder
+    {
+        return $query->where('uuid', $uuid);
+    }
+
+    /**
      * Undocumented variable.
      * Property Modules\Xot\Models\Profile::$guard_name is never read, only written.
      */
@@ -81,7 +104,6 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
 
     /** @var list<string> */
     protected $fillable = [
-        'id',
         'uuid',
         'user_id',
         'type',
@@ -179,7 +201,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
     protected function casts(): array
     {
         return [
-            // 'id' => 'string',
+            'id' => 'integer',
             'uuid' => 'string',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',

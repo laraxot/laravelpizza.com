@@ -53,4 +53,3 @@ Da identificare e correggere sistematicamente.
 
 ---
 
-*Ultimo aggiornamento: 2025-01-22*

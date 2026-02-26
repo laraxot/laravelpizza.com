@@ -93,4 +93,18 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+    'social' => [
+        'title' => 'Or continue with',
+        'google' => 'Sign in with Google',
+        'microsoft' => 'Sign in with Microsoft',
+        'github' => 'Sign in with GitHub',
+        'facebook' => 'Sign in with Facebook',
+    ],
+    'auth_button' => [
+        'login' => 'Sign in',
+        'logout' => 'Sign out',
+        'profile' => 'My profile',
+        'dashboard' => 'Dashboard',
+        'personal_area' => 'Access personal area',
+    ],
 ];

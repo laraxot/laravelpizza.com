@@ -342,5 +342,4 @@ class SystemTestWidget extends UIBaseTestWidget
 
 ---
 
-*Ultimo aggiornamento: Giugno 2025*
 *Autore: Analisi Automatica del Progetto*

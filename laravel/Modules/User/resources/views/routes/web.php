@@ -8,7 +8,7 @@ declare(strict_types=1);
  *
  * Route::middleware(['web'])
  * ->group(function () {
- * Route::get('/it/pages/about', [PagesController::class, 'about'])
+ * Route::get('/it/about', [PagesController::class, 'about'])
  * ->name('one.pages.about');
  * });
  */

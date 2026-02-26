@@ -9,10 +9,10 @@ Per una guida completa e dettagliata su tutti i breaking changes e le procedure 
 
 ## Requisiti Filament v5
 
-- PHP 8.2+ ✅ (Il progetto ha 8.3.6)
-- Laravel v11.28+ ⚠️ (Da verificare)
-- Livewire v4.0+ ⚠️ (Attualmente 3.7.6)
-- Tailwind CSS v4.0+ ⚠️ (Da verificare)
+- PHP 8.2+ ✅ (Il progetto ha 8.3.29)
+- Laravel v11.28+ ✅ (Laravel 12)
+- Livewire v4.0+ ⚠️ (Upgrade da v3 in corso)
+- Tailwind CSS v4.1+ ⚠️ (Da verificare)
 
 ## 🔑 Punto Fondamentale
 

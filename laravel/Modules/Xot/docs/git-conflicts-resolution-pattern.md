@@ -91,4 +91,3 @@ After resolving conflicts:
   - `Resources/views/*` - Blade templates
   - `tests/*.php` - Test files
 
-## Date: February 2026

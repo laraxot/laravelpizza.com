@@ -5,6 +5,10 @@ declare(strict_types=1);
 ?>
 @props(['user' => auth()->user()])
 
+@php
+    $localeProfileUrl = \Mcamara\LaravelLocalization\Facades\LaravelLocalization::localizeURL('/profile');
+@endphp
+
 <div class="relative">
     <x-filament::dropdown>
         <x-slot name="trigger">
@@ -28,7 +32,7 @@ declare(strict_types=1);
         </x-slot>
 
         @auth
-            <x-filament::dropdown.list.item tag="a" :href="route('profile')" icon="heroicon-o-user">
+            <x-filament::dropdown.list.item tag="a" :href="$localeProfileUrl" icon="heroicon-o-user">
                 {{ __('ui::navigation.profile') }}
             </x-filament::dropdown.list.item>
 

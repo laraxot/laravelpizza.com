@@ -211,4 +211,3 @@ assert($action->executeWithRange(-10.0, 0.0, 100.0) === 0.0);
 
 ---
 
-*Ultimo aggiornamento: 31 luglio 2025*

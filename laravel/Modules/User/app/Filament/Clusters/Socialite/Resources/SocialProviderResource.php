@@ -36,39 +36,25 @@ class SocialProviderResource extends XotBaseResource
         return [
             'name' => TextInput::make('name')
                 ->required()
-                ->maxLength(255)
-                ->placeholder(__('fields.name.placeholder'))
-                ->helperText(__('fields.name.helper_text')),
-            'scopes' => KeyValue::make('scopes')
-                // ->placeholder(static::trans('fields.scopes.placeholder'))
-                ->helperText(__('fields.scopes.helper_text')),
+                ->maxLength(255),
+            'scopes' => KeyValue::make('scopes'),
             'client_id' => TextInput::make('client_id')
                 ->required()
-                ->maxLength(255)
-                ->placeholder(__('fields.client_id.placeholder'))
-                ->helperText(__('fields.client_id.helper_text')),
+                ->maxLength(255),
             'client_secret' => TextInput::make('client_secret')
                 ->required()
-                ->maxLength(1024)
-                ->placeholder(__('fields.client_secret.placeholder'))
-                ->helperText(__('fields.client_secret.helper_text')),
+                ->maxLength(1024),
             'redirect' => TextInput::make('redirect')
                 ->required()
-                ->maxLength(255)
-                ->placeholder(__('fields.redirect.placeholder'))
-                ->helperText(__('fields.redirect.helper_text')),
-            'parameters' => KeyValue::make('parameters')
-                // ->placeholder(static::trans('fields.parameters.placeholder'))
-                ->helperText(__('fields.parameters.helper_text')),
+                ->maxLength(255),
+            'parameters' => KeyValue::make('parameters'),
             'additional_params' => Textarea::make('additional_params'),
-            'stateless' => Toggle::make('stateless')->helperText(__('fields.stateless.helper_text')),
-            'active' => Toggle::make('active')->helperText(__('fields.active.helper_text')),
-            'socialite' => Toggle::make('socialite')->helperText(__('fields.socialite.helper_text')),
+            'stateless' => Toggle::make('stateless'),
+            'active' => Toggle::make('active'),
+            'socialite' => Toggle::make('socialite'),
             'enabled' => Toggle::make('enabled'),
             'svg' => Textarea::make('svg')
-                ->columnSpanFull()
-                ->placeholder(__('fields.svg.placeholder'))
-                ->helperText(__('fields.svg.helper_text')),
+                ->columnSpanFull(),
         ];
     }
 

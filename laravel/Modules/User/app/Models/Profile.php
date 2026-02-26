@@ -21,7 +21,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttrib
 
 /**
  * User Profile Model.
- * 
+ *
  * Represents a user profile with relationships to devices, teams, and roles.
  *
  * @property int                                                       $id
@@ -64,6 +64,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttrib
  * @property ProfileContract|null                                      $updater
  * @property UserContract|null                                         $user
  * @property string|null                                               $user_name
+ *
  * @method static Builder<static>|Profile newModelQuery()
  * @method static Builder<static>|Profile newQuery()
  * @method static Builder<static>|Profile permission($permissions, $without = false)
@@ -72,7 +73,9 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttrib
  * @method static Builder<static>|Profile withExtraAttributes()
  * @method static Builder<static>|Profile withoutPermission($permissions)
  * @method static Builder<static>|Profile withoutRole($roles, $guard = null)
+ *
  * @mixin IdeHelperProfile
+ *
  * @property string|null          $user_id
  * @property Carbon|null          $created_at
  * @property Carbon|null          $updated_at
@@ -81,39 +84,22 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait as HasSchemalessAttrib
  * @property Carbon|null          $deleted_at
  * @property string|null          $deleted_by
  * @property ProfileContract|null $deleter
- * @method static Builder<static>|Profile whereBio($value)
- * @method static Builder<static>|Profile whereCreatedAt($value)
- * @method static Builder<static>|Profile whereCreatedBy($value)
- * @method static Builder<static>|Profile whereDeletedAt($value)
- * @method static Builder<static>|Profile whereDeletedBy($value)
- * @method static Builder<static>|Profile whereEmail($value)
- * @method static Builder<static>|Profile whereFirstName($value)
- * @method static Builder<static>|Profile whereId($value)
- * @method static Builder<static>|Profile whereLastName($value)
- * @method static Builder<static>|Profile wherePhone($value)
- * @method static Builder<static>|Profile whereUpdatedAt($value)
- * @method static Builder<static>|Profile whereUpdatedBy($value)
- * @method static Builder<static>|Profile whereUserId($value)
- * @property string|null $type
- * @property string|null $address
- * @property string|null $birth_date
- * @property string|null $gender
- * @property bool $is_active
- * @method static Builder<static>|Profile childrenWith(array $relations)
- * @method static Builder<static>|Profile childrenWithCount(array $relations)
+ *
+ * @method static Builder<static>|Profile                         whereBio($value)
+ * @method static Builder<static>|Profile                         whereCreatedAt($value)
+ * @method static Builder<static>|Profile                         whereCreatedBy($value)
+ * @method static Builder<static>|Profile                         whereDeletedAt($value)
+ * @method static Builder<static>|Profile                         whereDeletedBy($value)
+ * @method static Builder<static>|Profile                         whereEmail($value)
+ * @method static Builder<static>|Profile                         whereFirstName($value)
+ * @method static Builder<static>|Profile                         whereId($value)
+ * @method static Builder<static>|Profile                         whereLastName($value)
+ * @method static Builder<static>|Profile                         wherePhone($value)
+ * @method static Builder<static>|Profile                         whereUpdatedAt($value)
+ * @method static Builder<static>|Profile                         whereUpdatedBy($value)
+ * @method static Builder<static>|Profile                         whereUserId($value)
  * @method static \Modules\User\Database\Factories\ProfileFactory factory($count = null, $state = [])
- * @method static Builder<static>|Profile whereAddress($value)
- * @method static Builder<static>|Profile whereAvatar($value)
- * @method static Builder<static>|Profile whereBirthDate($value)
- * @method static Builder<static>|Profile whereExtra($value)
- * @method static Builder<static>|Profile whereGender($value)
- * @method static Builder<static>|Profile whereIsActive($value)
- * @method static Builder<static>|Profile whereLocale($value)
- * @method static Builder<static>|Profile wherePreferences($value)
- * @method static Builder<static>|Profile whereStatus($value)
- * @method static Builder<static>|Profile whereTimezone($value)
- * @method static Builder<static>|Profile whereType($value)
- * @method static Builder<static>|Profile whereUserName($value)
+ *
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile implements HasMedia

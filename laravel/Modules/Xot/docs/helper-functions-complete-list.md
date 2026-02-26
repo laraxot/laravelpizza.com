@@ -65,7 +65,7 @@ $json = dddx(['key' => 'value']);
 ```
 
 **Caratteristiche**:
-- Logga sempre via `Log::debug()`
+- Solo sviluppo: non usare in produzione (policy no-log-debug)
 - Usa `Safe\json_encode()` per type safety
 - Ritorna string (non void)
 

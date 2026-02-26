@@ -412,7 +412,6 @@ TextColumn::make('name')
 - [Filament Best Practices](../../../docs/filament_best_practices.md)
 - [Enum Translation Pattern](../../../docs/enum-translation-pattern.md)
 
-*Ultimo aggiornamento: [DATE]*
 # Esempio Implementazione TableLayoutEnum
 
 ## Data: [DATE]
@@ -827,4 +826,3 @@ TextColumn::make('name')
 - [Filament Best Practices](../../../docs/filament_best_practices.md)
 - [Enum Translation Pattern](../../../docs/enum-translation-pattern.md)
 
-*Ultimo aggiornamento: [DATE]*

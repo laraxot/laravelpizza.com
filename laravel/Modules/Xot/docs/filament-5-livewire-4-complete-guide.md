@@ -1,6 +1,5 @@
 # Guida Completa: Upgrade Filament 5 + Livewire 4 - Modulo Xot
 
-**Ultimo aggiornamento:** [DATE]
 
 ## 📋 Sommario
 
@@ -896,5 +895,4 @@ Se incontri problemi:
 ---
 
 *Documento mantenuto da: Marco Sottana*
-*Ultimo aggiornamento: [DATE]*
 *Progetto: Laraxot / base_laravelpizza*

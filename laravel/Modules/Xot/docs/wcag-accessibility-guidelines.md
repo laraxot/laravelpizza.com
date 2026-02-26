@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines WCAG 2.2 AA compliance standards for LaravelPizza Meetups.
+This document outlines WCAG 2.2 AA compliance standards. For technique-by-technique resolution (H44, F78, G195, H30, C8, C38, G18, H98, ARIA6) see [W3C Techniques](https://www.w3.org/WAI/WCAG21/Techniques/) and theme-specific plan in `laravel/Themes/Two/docs/wcag-techniques-resolution.md`.
 
 ## Critical Requirements
 

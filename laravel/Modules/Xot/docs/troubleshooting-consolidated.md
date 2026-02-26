@@ -592,6 +592,5 @@ php artisan view:clear
 
 ---
 
-*Ultimo aggiornamento: [DATE]*
 *Modulo: Xot*
 *Categoria: Troubleshooting*

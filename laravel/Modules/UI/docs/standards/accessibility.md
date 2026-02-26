@@ -112,6 +112,21 @@
 >
 ```
 
+## Tecniche W3C di riferimento
+
+Per implementazioni dettagliate (label, focus, link, contrasto, autocomplete, aria-label, reflow):
+
+- [H44](https://www.w3.org/WAI/WCAG21/Techniques/html/H44) – Label associati ai form controls
+- [F78](https://www.w3.org/WAI/WCAG21/Techniques/failures/F78) / [G195](https://www.w3.org/WAI/WCAG21/Techniques/general/G195) – Focus visibile
+- [H30](https://www.w3.org/WAI/WCAG21/Techniques/html/H30) – Scopo del link
+- [C8](https://www.w3.org/WAI/WCAG21/Techniques/css/C8) – Letter-spacing
+- [C38](https://www.w3.org/WAI/WCAG21/Techniques/css/C38) – Reflow (label/input)
+- [G18](https://www.w3.org/WAI/WCAG21/Techniques/general/G18) – Contrasto 4.5:1
+- [H98](https://www.w3.org/WAI/WCAG21/Techniques/html/H98) – Autocomplete
+- [ARIA6](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA6) – aria-label
+
+Piano di risoluzione per il tema Two: `laravel/Themes/Two/docs/wcag-techniques-resolution.md`.
+
 ## 🔗 Collegamenti
 - [Performance](./performance.md)
 - [UI Standards](./ui-standards.md)
