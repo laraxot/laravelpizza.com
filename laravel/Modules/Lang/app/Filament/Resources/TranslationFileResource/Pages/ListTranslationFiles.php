@@ -24,7 +24,7 @@ class ListTranslationFiles extends XotBaseListRecords
     }
 
     /**
-     * @return array<string, Action>
+     * @return array<string, Action|ActionGroup>
      */
     #[\Override]
     protected function getHeaderActions(): array

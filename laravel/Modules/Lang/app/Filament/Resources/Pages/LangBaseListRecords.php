@@ -17,7 +17,7 @@ abstract class LangBaseListRecords extends XotBaseListRecords
     protected static string $resource; // = SectionResource::class;
 
     /**
-     * @return array<string, Action>
+     * @return array<string, Action|ActionGroup>
      */
     #[\Override]
     protected function getHeaderActions(): array
