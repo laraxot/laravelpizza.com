@@ -4,6 +4,8 @@
 
 I test in Laraxot seguono le best practices di Laravel e Pest PHP. Ogni modulo dovrebbe avere una propria struttura di test organizzata in unit e feature test.
 
+> **Regola critica di naming**: la cartella dei test di ogni modulo deve chiamarsi **`tests/` minuscolo**. Qualsiasi variante come `Tests/` (con la T maiuscola) è considerata errore architetturale e va eliminata per evitare problemi di autoload, PSR-4 e incoerenze tra filesystem case-sensitive e case-insensitive.
+
 ## Configurazione dell'Ambiente di Test
 
 ### File `.env.testing`

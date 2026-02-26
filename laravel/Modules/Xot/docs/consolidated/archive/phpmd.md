@@ -1,2 +1,0 @@
-[phpmd](https://phpmd.org/)
-
