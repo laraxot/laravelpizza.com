@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Lang\Filament\Resources\Pages;
 
 use Filament\Actions\Action;
+use Filament\Actions\ActionGroup;
 use LaraZeus\SpatieTranslatable\Actions\LocaleSwitcher;
 use LaraZeus\SpatieTranslatable\Resources\Pages\ListRecords\Concerns\Translatable;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -20,14 +21,21 @@ abstract class LangBaseListRecords extends XotBaseListRecords
     {
         $parentActions = parent::getHeaderActions();
 
-        // Assicurarsi che tutte le azioni abbiano chiavi stringa
+        /** @var array<string, Action> $actions */
         $actions = [
             'locale_switcher' => LocaleSwitcher::make(),
         ];
 
-        // Aggiungere le azioni parent con chiavi stringa
         foreach ($parentActions as $key => $action) {
-            $actions['parent_'.(is_string($key) ? $key : ((string) $key))] = $action;
+            // Filtriamo eventuali ActionGroup per mantenere il contratto di ritorno
+            if ($action instanceof ActionGroup) {
+                foreach ($action->getActions() as $index => $groupedAction) {
+                    $actions['parent_'.$key.'_'.$index] = $groupedAction;
+                }
+                continue;
+            }
+
+            $actions['parent_'.(is_string($key) ? $key : (string) $key)] = $action;
         }
 
         return $actions;
