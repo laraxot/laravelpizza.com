@@ -124,23 +124,23 @@ readonly class CalculateTravelTimeAction
         }
 
         /** @var int $durationSeconds */
-        $durationSeconds = $element['duration']['value'];
+        $durationSeconds = (int) $element['duration']['value'];
 
         /** @var int $distanceMeters */
-        $distanceMeters = $element['distance']['value'];
+        $distanceMeters = (int) $element['distance']['value'];
 
         /** @var int $durationInTraffic */
         $durationInTraffic = isset($element['duration_in_traffic'])
-            ? $element['duration_in_traffic']['value']
+            ? (int) $element['duration_in_traffic']['value']
             : $durationSeconds;
 
         return new TravelTimeData(
             duration_seconds: $durationSeconds,
             duration_in_traffic_seconds: $durationInTraffic,
             distance_meters: $distanceMeters,
-            formatted_duration: $element['duration']['text'],
-            formatted_distance: $element['distance']['text'],
-            status: $data['status'],
+            formatted_duration: (string) $element['duration']['text'],
+            formatted_distance: (string) $element['distance']['text'],
+            status: (string) $data['status'],
         );
     }
 }

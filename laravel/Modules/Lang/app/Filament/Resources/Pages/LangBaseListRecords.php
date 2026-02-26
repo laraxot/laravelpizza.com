@@ -16,6 +16,9 @@ abstract class LangBaseListRecords extends XotBaseListRecords
 
     protected static string $resource; // = SectionResource::class;
 
+    /**
+     * @return array<string, Action>
+     */
     #[\Override]
     protected function getHeaderActions(): array
     {
@@ -27,7 +30,7 @@ abstract class LangBaseListRecords extends XotBaseListRecords
         ];
 
         foreach ($parentActions as $key => $action) {
-            // Filtriamo eventuali ActionGroup per mantenere il contratto di ritorno
+            // Espandiamo eventuali ActionGroup per mantenere il contratto di ritorno
             if ($action instanceof ActionGroup) {
                 foreach ($action->getActions() as $index => $groupedAction) {
                     $actions['parent_'.$key.'_'.$index] = $groupedAction;

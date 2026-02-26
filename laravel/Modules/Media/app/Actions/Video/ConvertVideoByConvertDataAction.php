@@ -40,7 +40,6 @@ class ConvertVideoByConvertDataAction
         // Instanziamo il formato prima di usarlo
         $formatInstance = new $format;
 
-        // @phpstan-ignore-next-line method.notFound
         FFMpeg::fromDisk($data->disk)
             ->open($data->file)
             ->export()
@@ -53,7 +52,7 @@ class ConvertVideoByConvertDataAction
             })
             ->addFilter('-preset', 'ultrafast')
             // Utilizziamo il formato istanziato come parametro
-            ->save($file_new, $formatInstance);
+            ->save($file_new, $formatInstance); // @phpstan-ignore method.notFound
 
         // Restituisci il percorso del file senza usare il metodo url()
         return $file_new;
