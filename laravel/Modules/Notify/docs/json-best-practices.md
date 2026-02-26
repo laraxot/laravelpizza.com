@@ -206,9 +206,9 @@ protected function rollback(): void
 
 ## Collegamenti Correlati
 
-- [Documentazione Migrazioni](./MIGRATION_RULES.md)
-- [Gestione Errori](./ERROR_HANDLING.md)
-- [Best Practices Database](./DATABASE_BEST_PRACTICES.md)
+- [Documentazione Migrazioni](./migration_rules.md)
+- [Gestione Errori](./error_handling.md)
+- [Best Practices Database](./database_best_practices.md)
 
 ## Note Importanti
 

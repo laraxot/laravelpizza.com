@@ -2,9 +2,9 @@
 
 ## Collegamenti correlati
 
-- [README del modulo Notify](./README.md)
-- [Guida all'utilizzo di SpatieEmail](./SPATIE_EMAIL_USAGE_GUIDE.md)
-- [Documentazione Template Email](./EMAIL_TEMPLATES.md)
+- [README del modulo Notify](./readme.md)
+- [Guida all'utilizzo di SpatieEmail](./spatie_email_usage_guide.md)
+- [Documentazione Template Email](./email_templates.md)
 - [Documentazione Root](../../../../docs/collegamenti-documentazione.md)
 
 ## Panoramica

@@ -302,7 +302,7 @@ php artisan notify:mail-template:test
    - Monitorare tempi
 
 ## Collegamenti
-- [Notify Module](../README.md)
+- [Notify Module](../readme.md)
 - [Email Templates](email-templates.md)
 - [Mail Queue](mail-queue.md)
 

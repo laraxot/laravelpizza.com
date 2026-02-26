@@ -111,4 +111,4 @@ Tutte le operazioni asincrone (invio email, anteprima, azioni Filament) utilizza
 Vedi [Queueable Actions con Spatie](queueable-actions.md) per definizione delle azioni, dispatch sincrono/asincrono e testing.
 
 ---
-*Documento generato il 2025-05-05T21:45:20+02:00*
+*Documento generato il [DATE]T21:45:20+02:00*

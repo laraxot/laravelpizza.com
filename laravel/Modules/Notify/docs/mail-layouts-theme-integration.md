@@ -75,7 +75,7 @@ Il tema **Zero** implementa un layout email basato sul **Design System Italiano*
 - ✅ TailwindCSS-inspired spacing e colori
 - ✅ Integrazione completa con spatie/laravel-database-mail-templates
 
-**Documentazione**: [Themes/Zero/docs/mail-layouts.md](../../../../Themes/Zero/docs/mail-layouts.md)
+**Documentazione**: [Themes/Zero/docs/mail-layouts.md](../../../../themes/zero/docs/mail-layouts.md)
 
 ## Implementazione getHtmlLayout()
 
@@ -341,7 +341,7 @@ class EmailLayoutResource extends XotBaseResource
 
 ### Documentazione Interna
 - [Spatie Database Mail Templates Deep Dive](./spatie-database-mail-templates-deep-dive.md)
-- [Mail Layouts README](../resources/mail-layouts/README.md)
+- [Mail Layouts README](../resources/mail-layouts/readme.md)
 - [SpatieEmail Class](../app/Emails/SpatieEmail.php)
 
 ### Esempi Layout

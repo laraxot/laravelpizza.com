@@ -54,7 +54,7 @@ Quando si estende `XotBaseResource`, è importante seguire queste regole per evi
 Queste proprietà e metodi sono già configurati in `XotBaseResource` per garantire coerenza e centralizzazione della logica. Ridefinirli può portare a comportamenti imprevisti e aumentare la complessità del codice.
 
 **Collegamenti correlati**:
-- [Linee Guida XotBaseResource](../Modules/Patient/docs/xot-base-resource-guidelines.md)
+- [Linee Guida XotBaseResource](../modules/patient/docs/xot-base-resource-guidelines.md)
 
 ## Esempio di Implementazione Corretta
 

@@ -49,7 +49,6 @@ use Spatie\Translatable\HasTranslations;
  * @property-read mixed $translations
  * @property-read ProfileContract|null $updater
  * @property-read int|null $versions_count
- *
  * @method static Builder<static>|NotificationTemplate active()
  * @method static NotificationTemplateFactory factory($count = null, $state = [])
  * @method static Builder<static>|NotificationTemplate forCategory(string $category)
@@ -61,11 +60,8 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|NotificationTemplate whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
  * @method static Builder<static>|NotificationTemplate whereLocale(string $column, string $locale)
  * @method static Builder<static>|NotificationTemplate whereLocales(string $column, array $locales)
- *
  * @mixin IdeHelperNotificationTemplate
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class NotificationTemplate extends BaseModel implements HasMedia

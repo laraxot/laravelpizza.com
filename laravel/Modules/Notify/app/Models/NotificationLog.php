@@ -43,7 +43,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property-read int|null $media_count
  * @property-read Model|\Eloquent $notifiable
  * @property-read ProfileContract|null $updater
- *
  * @method static NotificationLogFactory factory($count = null, $state = [])
  * @method static Builder<static>|NotificationLog forNotifiable(Model $notifiable)
  * @method static Builder<static>|NotificationLog forTemplate(int $templateId)
@@ -63,7 +62,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|NotificationLog whereTitle($value)
  * @method static Builder<static>|NotificationLog whereUpdatedAt($value)
  * @method static Builder<static>|NotificationLog withStatus(NotificationLogStatusEnum $status)
- *
  * @mixin \Eloquent
  */
 final class NotificationLog extends BaseModel

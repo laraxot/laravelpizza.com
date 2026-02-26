@@ -116,7 +116,7 @@ composer format        # Formatta il codice
 Le modifiche vengono tracciate nel repository GitHub. 
 ## Collegamenti tra versioni di module_notify.md
 * [module_notify.md](docs/module_notify.md)
-* [module_notify.md](../../../Notify/docs/module_notify.md)
+* [module_notify.md](../../../notify/docs/module_notify.md)
 
 
 ### Versione Incoming

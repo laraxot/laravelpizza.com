@@ -215,18 +215,18 @@ Questo pattern può essere applicato a:
 - [UI/UX Standards](../../../docs/ui-ux-standards.md)
 
 ### Altri Moduli
-- [TechPlanner Contacts Column](../../TechPlanner/docs/contacts-column-implementation-complete.md)
-- [UI Components](../../UI/docs/components.md)
+- [TechPlanner Contacts Column](../../techplanner/docs/contacts-column-implementation-complete.md)
+- [UI Components](../../ui/docs/components.md)
 
 ## Changelog
 
-### 2025-08-01
+### [DATE]
 - **Creazione**: Documentazione iniziale del pattern
 - **Standardizzazione**: Pattern derivato da TechPlanner
 - **Best Practices**: Definite regole architetturali
 
 ---
 
-*Ultimo aggiornamento: 2025-08-01*  
+*Ultimo aggiornamento: [DATE]*  
 *Autore: Sistema Laraxot*  
 *Versione: 1.0*
