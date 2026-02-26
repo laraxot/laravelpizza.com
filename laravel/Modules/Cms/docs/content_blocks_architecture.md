@@ -145,4 +145,3 @@ Builder::make('content_blocks')
 - [Configurazione Builder](../app/Filament/Resources/PageResource.php)
 - [Theme Components](../../../Themes/One/resources/views/components/blocks/)
 
-*Ultimo aggiornamento: gennaio 2025*

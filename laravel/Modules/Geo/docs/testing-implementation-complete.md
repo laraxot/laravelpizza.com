@@ -325,7 +325,6 @@ jobs:
 
 ---
 
-**Ultimo aggiornamento**: 28 Gennaio 2025
 **Stato**: ✅ Implementazione Completa
 **Responsabile**: Team Development
 **Review**: Richiesta per validazione e deployment

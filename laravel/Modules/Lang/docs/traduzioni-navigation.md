@@ -98,6 +98,6 @@ Molte traduzioni utilizzano ancora il pattern `.navigation` invece di traduzioni
 ## Collegamenti Correlati
 - [Errori Comuni Traduzione](../errori_comuni_traduzione.md)
 - [Correzioni Errori Sintassi 2025](../correzioni_errori_sintassi_2025.md)
-- [Best Practices Traduzioni](../../xot/docs/translation_rules.md)
+- [Best Practices Traduzioni](../../Xot/docs/TRANSLATION_RULES.md)
 
 *Ultimo aggiornamento: 6 Gennaio 2025*

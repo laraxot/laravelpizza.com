@@ -176,5 +176,3 @@ Ogni blocco supporta diversi contesti:
 - [Modulo UI](../ui/docs/blocks-system.md)
 - [Filament Builder](https://filamentphp.com/docs/3.x/forms/fields/builder)
 - [Laravel Folio](../../docs/folio-routing.md)
-
-*Ultimo aggiornamento: Dicembre 2024*

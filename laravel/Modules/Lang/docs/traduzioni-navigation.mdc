@@ -1,0 +1,9 @@
+# Regola sulle Chiavi di Traduzione `.navigation`
+
+**Mai utilizzare chiavi o valori che terminano con `.navigation` nei file di traduzione.**
+
+- Le chiavi di navigazione devono essere esplicite e localizzate (es: `'label' => 'Pazienti'` e non `'label' => 'patient.navigation'`).
+- Quando si trova `.navigation`, occorre sostituire con una chiave esplicita e un valore localizzato.
+- Aggiornare sempre la documentazione di progetto quando si introduce una nuova regola di traduzione.
+- Questa regola si applica a tutti i moduli, ma va documentata qui in Lang/docs e referenziata negli altri moduli coinvolti.
+

@@ -156,6 +156,5 @@ Quando sistemo un test esistente che non funziona:
 
 **Questa regola è SUPREMA e ha precedenza su qualsiasi altra considerazione di testing.**
 
-**Ultimo aggiornamento**: Gennaio 2025
 **Status**: REGOLA ASSOLUTA E NON NEGOZIABILE
 **Applicabilità**: UNIVERSALE - ogni test, ogni modulo, ogni scenario

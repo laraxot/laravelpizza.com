@@ -1,6 +1,6 @@
 # Convenzioni di Naming per Documentazione
 
-## Data: [DATE]
+## Data: 2025-01-27
 
 ## REGOLA CRITICA: SEMPRE MINUSCOLO IN DOCS
 
@@ -132,5 +132,5 @@ Components/ → components/
 
 ---
 
-*Ultimo aggiornamento: [DATE]*
+*Ultimo aggiornamento: 2025-01-27*
 *Stato: ATTIVO - REGOLA CRITICA*

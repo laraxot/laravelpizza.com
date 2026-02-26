@@ -8,17 +8,14 @@ declare(strict_types=1);
     'blocks' => [],
     'side' => 'content',
     'slug' => '',
-    'page' => null,
-    'container0' => '',
-    'slug0' => '',
-    'data' => []
+    'page' => null
 ])
 
 @if(!empty($blocks))
     <div class="page-{{ $side }}-content" data-slug="{{ $slug }}" data-side="{{ $side }}">
-        @include('cms::components.page-content', [
-            'blocks' => $blocks,
-            'data' => array_merge(['container0' => $container0, 'slug0' => $slug0], $data)
-        ])
+        @foreach($blocks as $block)
+            {{-- BlockData ha già gestito tutto: vista, dati, fallback --}}
+            @include($block->view, $block->data)
+        @endforeach
     </div>
 @endif

@@ -172,4 +172,3 @@ function createTestUser(array $attributes = []): UserContract
 3. **SEMPRE** usare pattern XotData
 4. **SEMPRE** approfondire prima di agire
 
-*Ultimo aggiornamento: Dicembre 2024 - Analisi completa struttura login*

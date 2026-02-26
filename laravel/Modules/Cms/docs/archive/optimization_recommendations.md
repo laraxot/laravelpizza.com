@@ -322,4 +322,3 @@ php artisan cms:seo-audit
 - [Content Management Guide](content-management/)
 - [SEO Best Practices](seo/)
 
-*Ultimo aggiornamento: gennaio 2025*

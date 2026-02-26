@@ -66,7 +66,6 @@ protected function getHeaderActions(): array
 - `docs/phpstan-level7-guide.md` – guida completa allineata al livello 7
 - `docs/phpstan/guida_filament_table_actions.md` – best practice sulle azioni Filament
 
-> Ultimo aggiornamento: Gennaio 2025 — Stato: ✅ Completato (0 errori)
 
 ---
 

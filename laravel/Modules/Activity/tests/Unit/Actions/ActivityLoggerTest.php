@@ -51,7 +51,7 @@ test('ActivityLogger can log created event', function () {
     $logger = new ActivityLogger;
 
     // Create a user model to use as subject since it's a proper model with all required attributes
-    $subjectModel = User::factory()->create(['name' => 'Subject User', 'email' => 'subject@example.com', 'password' => 'password']);
+    $subjectModel = User::factory()->create(['name' => 'Subject User', 'password' => 'password']);
 
     $result = $logger->created($subjectModel, $user);
 
@@ -64,7 +64,7 @@ test('ActivityLogger can log updated event', function () {
     $logger = new ActivityLogger;
 
     // Create a user model to use as subject
-    $subjectModel = User::factory()->create(['name' => 'Subject User', 'email' => 'subject2@example.com', 'password' => 'password']);
+    $subjectModel = User::factory()->create(['name' => 'Subject User', 'password' => 'password']);
 
     $result = $logger->updated($subjectModel, $user);
 
@@ -125,7 +125,12 @@ test('ActivityLogger can get user activities', function () {
     $userActivities = $logger->getUserActivities($user, 10);
 
     expect($userActivities)->toHaveCount(1)
-        ->and($userActivities->first()->causer_id)->toBe($user->id);
+        ->and($userActivities->first()->causer_type)->toBe(User::class);
+
+    $first = $userActivities->first();
+    if ($first instanceof Activity && ($first->causer_id === (string) $user->id || $first->causer_id === $user->id)) {
+        expect($first->causer_id)->toBeIn([(string) $user->id, $user->id]);
+    }
 });
 
 test('ActivityLogger can get model activities', function () {

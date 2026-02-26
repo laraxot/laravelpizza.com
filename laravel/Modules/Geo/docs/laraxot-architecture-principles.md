@@ -76,7 +76,6 @@ laravel/.ai/guidelines/
 - [Laraxot Framework](../../laravel/modules/xot/docs/laraxot-framework.md)
 
 ---
-**Ultimo aggiornamento**: Dicembre 2024
 **Versione**: 1.0
 **Compatibilità**: Laraxot <nome progetto>, Architecture Principles
 **Compatibilità**: Laraxot <nome progetto>, Architecture Principles

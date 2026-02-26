@@ -160,6 +160,5 @@ cp -r laravel/Modules/*/docs laravel/Modules-docs-backup-$(date +%Y%m%d)
 - [Report Sintesi](optimization_summary_report.md)
 - [Script Controlli](../bashscripts/check_module_reusability.sh)
 
-*Ultimo aggiornamento: gennaio 2025*
 *Metodologia: Analisi sistematica seguendo principi DRY+KISS*
 *Validazione: Script automatici + review manuale*

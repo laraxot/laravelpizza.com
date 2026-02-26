@@ -108,5 +108,4 @@ return [
 - Il loop `foreach` garantisce il tipo corretto senza problemi con `stdClass`
 - L'annotazione PHPDoc completa aiuta PHPStan
 
-*Ultimo aggiornamento: [DATE]*
 

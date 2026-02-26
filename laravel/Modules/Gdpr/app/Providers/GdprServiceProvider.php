@@ -7,6 +7,9 @@ namespace Modules\Gdpr\Providers;
 use Illuminate\Routing\Router;
 use Modules\Gdpr\Datas\GdprData;
 use Modules\Xot\Providers\XotBaseServiceProvider;
+
+use function Safe\realpath;
+
 use Statikbe\CookieConsent\CookieConsentMiddleware;
 
 class GdprServiceProvider extends XotBaseServiceProvider
@@ -23,7 +26,11 @@ class GdprServiceProvider extends XotBaseServiceProvider
         parent::boot();
 
         // Load translations for both cookie-consent and gdpr namespaces
-        $this->loadTranslationsFrom(__DIR__.'/../../lang', 'cookie-consent');
+        // Cookie-consent translations are in Modules/Gdpr/lang/cookie-consent/{locale}/texts.php
+        $cookieConsentLangPath = realpath(__DIR__.'/../../lang/cookie-consent');
+        if ($cookieConsentLangPath && is_dir($cookieConsentLangPath)) {
+            $this->loadTranslationsFrom($cookieConsentLangPath, 'cookie-consent');
+        }
         $this->loadTranslationsFrom(__DIR__.'/../../lang', 'gdpr');
 
         $router = app('router');

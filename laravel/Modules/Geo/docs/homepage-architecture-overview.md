@@ -166,4 +166,3 @@ GET / → Folio → index.blade.php
 - [Modulo UI](laravel/modules/ui/docs/blocks-system.md)
 - [Tema One](laravel/themes/one/docs/homepage-structure.md)
 
-*Ultimo aggiornamento: Dicembre 2024*

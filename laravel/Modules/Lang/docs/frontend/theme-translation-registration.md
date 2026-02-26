@@ -58,14 +58,12 @@ $this->loadTranslationsFrom($path, 'pub_theme');
 ### Comando di Test
 ```bash
 php artisan tinker --execute="
-echo 'Date: ' . trans('pub_theme::appointment.fields.date.label') . PHP_EOL;
 echo 'Time: ' . trans('pub_theme::appointment.fields.time.label') . PHP_EOL;
 "
 ```
 
 ### Output Atteso
 ```
-Date: Data
 Time: Ora
 ```
 
@@ -112,4 +110,3 @@ Time: Ora
 2. Verificare ServiceProvider registrato
 3. Pulire cache traduzioni: `php artisan config:clear`
 
-*Standard Laraxot - Ultimo aggiornamento: 2025-08-07*

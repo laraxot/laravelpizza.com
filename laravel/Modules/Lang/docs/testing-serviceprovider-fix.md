@@ -141,5 +141,6 @@ The module's functionality is already covered by:
 
 ---
 
+**Date:** 2026-01-09
 **Status:** Documented - Ready for deletion
-**Relates to:** Test failures analysis in `docs/test-failures-analysis-[DATE].md`
+**Relates to:** Test failures analysis in `docs/test-failures-analysis-2026-01-09.md`

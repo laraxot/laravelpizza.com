@@ -1,6 +1,5 @@
 # 📚 **Indice Documentazione Modulo Gdpr**
 
-**Last Update**: 31 Gennaio 2026
 **Status**: ✅ PHPStan Level 10 Compliant
 **Module Version**: 2.3.0
 

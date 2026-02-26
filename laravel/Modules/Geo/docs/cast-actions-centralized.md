@@ -81,4 +81,3 @@ Ogni volta che si utilizzano queste azioni:
 - [Xot Cast Actions](../laravel/modules/xot/docs/actions/cast-actions.md)
 - [PHPStan Best Practices](./phpstan-best-practices.md)
 
-*Ultimo aggiornamento: gennaio 2025*

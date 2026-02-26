@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Cms\Actions;
 
 use Modules\Cms\Models\Page as PageModel;
-use Modules\Meetup\Models\Event;
 use Spatie\QueueableAction\QueueableAction;
 
 class ResolvePageContentAction
@@ -22,57 +21,33 @@ class ResolvePageContentAction
      */
     public function execute(string $container0, string $slug0): array
     {
-        $content = null;
-        $contentType = null;
-        $view = null;
-        $pageSlug = '';
-
         $fullSlug = $container0.'.'.$slug0;
 
-        // Priority 1: Try to load dynamic model (specific item)
-        $knownMappings = [
-            'events' => Event::class,
-        ];
-
-        if (isset($knownMappings[$container0]) && ! empty($slug0)) {
-            $modelClass = $knownMappings[$container0];
-            $item = $modelClass::where('slug', $slug0)->first();
-
-            if (null !== $item) {
-                $content = $item;
-                $contentType = $container0;
-                $view = 'blocks.'.$container0.'.detail';
-            }
+        // Priority 1: Check if exact CMS page exists (e.g., events.laravel-beginners-pizza-night)
+        $pageSlug = '';
+        $page = PageModel::firstWhere('slug', $fullSlug);
+        if (null !== $page) {
+            $pageSlug = $fullSlug;
         }
 
-        // Priority 2: Check if exact CMS page exists (e.g., events.laravel-beginners-pizza-night)
-        if (null === $content) {
-            $page = PageModel::firstWhere('slug', $fullSlug);
-
-            if (null !== $page) {
-                $pageSlug = $fullSlug;
-            }
-        }
-
-        // Priority 3: Fallback to container.view (e.g., events.view)
-        if (null === $content && '' === $pageSlug) {
+        // Priority 2: Fallback to container.view (e.g., events.view)
+        if ('' === $pageSlug) {
             $viewSlug = $container0.'.view';
             $viewPage = PageModel::firstWhere('slug', $viewSlug);
-
             if (null !== $viewPage) {
                 $pageSlug = $viewSlug;
             }
         }
 
-        // Priority 4: Last resort - use exact slug (will show 404 or placeholder)
-        if (null === $content && '' === $pageSlug) {
+        // Priority 3: Last resort - use exact slug
+        if ('' === $pageSlug) {
             $pageSlug = $fullSlug;
         }
 
         return [
-            'content' => $content,
-            'contentType' => $contentType,
-            'view' => $view,
+            'content' => null,
+            'contentType' => null,
+            'view' => null,
             'pageSlug' => $pageSlug,
         ];
     }

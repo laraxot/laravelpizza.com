@@ -112,4 +112,4 @@ Questa regola si applica a:
 - [Standard Helper Text](translation-helper-text-standards.md)
 - [Convenzioni Filament](filament-best-practices.md)
 
-*Ultimo aggiornamento: [DATE]*
+*Ultimo aggiornamento: 2025-01-06*

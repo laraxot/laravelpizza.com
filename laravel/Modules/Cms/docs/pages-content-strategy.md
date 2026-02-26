@@ -101,5 +101,3 @@ La pagina servizi deve comunicare:
 - [UI Components](../ui/project_docs/components.md)
 - [Theme Blocks](../../themes/one/project_docs/blocks.md)
 - [User Experience](../../../project_docs/frontend/ux-guidelines.md)
-
-*Ultimo aggiornamento: [DATE]* 

@@ -253,7 +253,6 @@ Prima di considerare completata la risoluzione:
 ---
 
 *Roadmap creata il: Gennaio 2025*  
-*Ultimo aggiornamento: Gennaio 2025*  
 *⚠️ File critico: AddressItemEnum.php (67 errori)*
 
 ## ✅ Update Febbraio 2026

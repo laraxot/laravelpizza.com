@@ -144,8 +144,11 @@ class ActivityLogger
             throw new InvalidArgumentException('Limit must be positive');
         }
 
+        $userKey = $user->getKey();
+        $userKeyAsInt = (int) $userKey;
+
         return Activity::with('subject')
-            ->where('causer_id', $user->getKey())
+            ->whereIn('causer_id', [$userKey, (string) $userKey, $userKeyAsInt])
             ->where('causer_type', $user::class)
             ->latest()
             ->limit($limit)

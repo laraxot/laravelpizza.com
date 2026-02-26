@@ -271,6 +271,5 @@ expect()->extend('toHaveDynamicHeading', function (string $type) {
 3. **Database Seeding**: Seed data per test realistici
 4. **Monitoring**: Metriche test in CI/CD
 
-*Ultimo aggiornamento: Gennaio 2025*
 *Versione PestPHP: 2.x*
 *Compatibilità Laravel: 11.x*

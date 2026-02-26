@@ -368,6 +368,5 @@ class DatabaseHelper
 
 ---
 
-**Ultimo aggiornamento**: 28 Gennaio 2025
 **Stato**: 🚧 In implementazione
 **Responsabile**: Team Development

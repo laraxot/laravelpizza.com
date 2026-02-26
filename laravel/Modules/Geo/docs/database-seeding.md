@@ -231,7 +231,6 @@ php bashscripts/database/seeding/<nome progetto>-1000-records.php
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 2.0
 **Compatibilità**: Laravel 10+, Moduli <nome progetto>/<nome modulo>
 **Compatibilità**: Laravel 10+, Moduli <nome progetto>/<nome progetto>

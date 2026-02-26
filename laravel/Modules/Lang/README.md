@@ -22,7 +22,15 @@ TextInput::make('name');
 // -> Risolve automaticamente da: {locale}/{module}::field.name.label
 
 // Sincronizzazione traduzioni
-app(SyncTranslationsAction::class)->execute('Quaeris', ['it', 'en', 'de']);
+<<<<<<< .merge_file_dEjWrw
+app(SyncTranslationsAction::class)->execute('healthcare_app', ['it', 'en', 'de']);
+=======
+<<<<<<< HEAD
+app(SyncTranslationsAction::class)->execute('ExternalProject', ['it', 'en', 'de']);
+=======
+app(SyncTranslationsAction::class)->execute('ModuloEsempio', ['it', 'en', 'de']);
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_REzwt6
 
 // Modelli traducibili
 $survey->setTranslation('title', 'it', 'Questionario Soddisfazione');
@@ -127,7 +135,15 @@ Il modulo include un package locale (`Modules/Lang/packages/lara-zeus/spatie-tra
 
 ```
 Lang ──> Tutti i moduli (auto-risoluzione traduzioni)
-Lang ──> Quaeris    (titoli survey, etichette chart)
+<<<<<<< .merge_file_dEjWrw
+Lang ──> healthcare_app    (titoli survey, etichette chart)
+=======
+<<<<<<< HEAD
+Lang ──> ExternalProject    (titoli survey, etichette chart)
+=======
+Lang ──> ModuloEsempio    (titoli survey, etichette chart)
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_REzwt6
 Lang ──> Limesurvey (traduzioni domande/risposte)
 Lang ──> Cms        (contenuto pagine multilingua)
 Lang ──> Meetup     (eventi multilingua)

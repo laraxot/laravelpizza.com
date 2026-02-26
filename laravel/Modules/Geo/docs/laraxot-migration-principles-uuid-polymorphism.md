@@ -248,6 +248,5 @@ $table->index(['morphable_id', 'morphable_type']); // Performance
 
 **Questa lezione cambierà il mio approccio a tutte le future modifiche al sistema.**
 
-*Ultimo aggiornamento: Gennaio 2025*
 *Caso studio: Migration Activity Table con polimorfismo UUID*
 *Status: ✅ Lezione appresa e memorizzata permanentemente*

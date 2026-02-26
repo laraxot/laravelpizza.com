@@ -167,6 +167,5 @@ Schema::table('activity_log', function($table) { /* stessa logica */ });
 - [.cursor/rules/migration-morphs-polymorphic.md](../.cursor/rules/migration-morphs-polymorphic.md)
 - [.cursor/rules/migration-complete-rules.mdc](../.cursor/rules/migration-complete-rules.mdc)
 
-*Ultimo aggiornamento: [DATE]*
 *Autore: Sistema di AI Learning <nome progetto>*
 *Motivazione: Comprensione profonda architettura morphs polymorphic*

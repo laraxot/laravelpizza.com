@@ -249,6 +249,5 @@ vendor/bin/pest --filter="test_name" --verbose
 
 ---
 
-**Ultimo aggiornamento**: 18 Agosto 2025
 **Versione Pest**: 3.8
 **Versione PHPUnit**: 11.x

@@ -97,6 +97,10 @@ Modules/Cms/
     └── multi-language-content-management.md
 ```
 
+## Filament
+
+- **Compatibilità 5.x**: [filament-5x-compatibility.md](filament-5x-compatibility.md) — progetto su Filament 5.x; pattern e riferimenti per il modulo Cms.
+
 ## Dependencies
 
 - **Xot Module**: Base functionality and data structures

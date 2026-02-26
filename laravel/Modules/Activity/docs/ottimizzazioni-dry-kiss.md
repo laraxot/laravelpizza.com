@@ -365,7 +365,3 @@ protected function registerConfig(): void
 - [Template Standardizzato](../../docs/template-modulo-standardizzato.md)
 - [Ottimizzazioni Master](../../docs/ottimizzazioni-modulari-master.md)
 - [Modulo UI](../ui/docs/ottimizzazioni-dry-kiss.md)
-
----
-
-*Ultimo aggiornamento: Gennaio 2025 - Ottimizzazione DRY + KISS Activity Module*

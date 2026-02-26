@@ -297,6 +297,5 @@ Tutti i modelli BaseModel, BasePivot, BaseUser, etc. sono classi astratte utiliz
 - [Multi-Tenant Design](./multi_tenant_design.md)
 - [Medical Data Modeling](./medical_data_modeling.md)
 
-*Ultimo aggiornamento: Gennaio 2025*
 *Autore: Sistema di analisi automatizzata*
 *Scope: Completo sistema <nome progetto> (14 moduli, ~150 modelli)*

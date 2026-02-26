@@ -1,7 +1,7 @@
-# Miglioramenti Qualità Codice - Modulo Lang - [DATE]
+# Miglioramenti Qualità Codice - Modulo Lang - 2025-01-06
 
 ## Data
-[DATE]
+2025-01-06
 
 ## Obiettivo
 Migliorare la qualità del codice del modulo Lang utilizzando PHPStan livello 10, PHPMD, PHPInsights e Rector.
@@ -57,7 +57,7 @@ Migliorare la qualità del codice del modulo Lang utilizzando PHPStan livello 10
 ## Collegamenti
 
 - [Index Documentation](./index.md)
-- [Best Practices](./best_practices.md)
-- [Troubleshooting](./troubleshooting.md)
+- [Best Practices](./BEST_PRACTICES.md)
+- [Troubleshooting](./TROUBLESHOOTING.md)
 
-*Ultimo aggiornamento: [DATE]*
+*Ultimo aggiornamento: 2025-01-06*

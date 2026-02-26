@@ -131,7 +131,7 @@ if (!$region || !is_array($region) || !isset($region['provinces'])) {
 ## 📚 **Riferimenti**
 
 ### **Documentazione Correlata**
-- [README.md Modulo Geo](./readme.md)
+- [README.md Modulo Geo](./README.md)
 - [Architecture Overview](./architecture.md)
 - [Best Practices](./best-practices.md)
 

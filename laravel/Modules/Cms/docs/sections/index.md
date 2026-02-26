@@ -92,4 +92,3 @@ La struttura JSON tipica di una sezione include:
 - I riferimenti ai blocchi devono sempre utilizzare la notazione `cms::blocks.nome-blocco`
 - I valori tradotti devono essere organizzati per lingua come nell'esempio sopra
 
-Ultimo aggiornamento: 14 Maggio 2025

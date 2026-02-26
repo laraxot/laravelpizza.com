@@ -132,10 +132,10 @@ Quando si generano link, includere sempre la locale:
 
 ```php
 // CORRETTO
-<a href="{{ url('/' . app()->getLocale() . '/pages/' . $page->slug) }}">{{ $page->title }}</a>
+<a href="{{ url('/' . app()->getLocale() . '/' . $page->slug) }}">{{ $page->title }}</a>
 
 // ERRATO
-<a href="{{ url('/pages/' . $page->slug) }}">{{ $page->title }}</a>
+<a href="{{ url('/' . $page->slug) }}">{{ $page->title }}</a>
 ```
 
 ### 3. Nelle Pagine Folio
@@ -155,13 +155,13 @@ render(function (View $view) {
 
 ## Errori Comuni
 
-1. **URL senza prefisso lingua**: `/pages/chi-siamo` invece di `/it/pages/chi-siamo`
-2. **URL mal formati**: `it/pages/chi-siamo` (manca lo slash iniziale)
-3. **Link generati senza locale**: `url('/pages/' . $slug)` invece di `url('/' . $locale . '/pages/' . $slug)`
+1. **URL senza prefisso lingua**: `/chi-siamo` invece di `/it/chi-siamo`
+2. **URL mal formati**: `it/chi-siamo` (manca lo slash iniziale)
+3. **Link generati senza locale**: `url('/' . $slug)` invece di `url('/' . $locale . '/' . $slug)`
 
 ## Esempi Corretti
 
-- `/it/pages/chi-siamo`
+- `/it/chi-siamo`
 - `/en/services/cardiology`
 - `/it/doctors/rossi-mario`
 

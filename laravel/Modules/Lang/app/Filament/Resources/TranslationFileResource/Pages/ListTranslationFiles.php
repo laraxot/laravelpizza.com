@@ -31,20 +31,15 @@ class ListTranslationFiles extends XotBaseListRecords
     {
         $parentActions = parent::getHeaderActions();
 
-        /** @var array<string, Action> $actions */
+        // Assicurarsi che tutte le azioni abbiano chiavi stringa
+        /** @var array<string, Action|ActionGroup> $actions */
         $actions = [
             'locale_switcher' => LocaleSwitcherRefresh::make('lang'),
         ];
 
+        // Aggiungere le azioni parent con chiavi stringa
         foreach ($parentActions as $key => $action) {
-            if ($action instanceof ActionGroup) {
-                foreach ($action->getActions() as $index => $groupedAction) {
-                    $actions['parent_'.$key.'_'.$index] = $groupedAction;
-                }
-                continue;
-            }
-
-            $actions['parent_'.(is_string($key) ? $key : (string) $key)] = $action;
+            $actions['parent_'.(is_string($key) ? $key : ((string) $key))] = $action;
         }
 
         return $actions;

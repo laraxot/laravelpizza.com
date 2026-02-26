@@ -11,14 +11,14 @@ I collegamenti nei file di documentazione devono **sempre** utilizzare percorsi 
 
 ✅ **CORRETTO**:
 ```markdown
-[Regole Generali](../../xot/project_docs/translations.md)
-[Best Practices](../translation_keys_best_practices.md)
+[Regole Generali](../../Xot/project_docs/translations.md)
+[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
 ```
 
 ❌ **ERRATO**:
 ```markdown
-[Regole Generali](modules/xot/project_docs/translations.md)
-[Best Practices](modules/lang/project_docs/translation_keys_best_practices.md)
+[Regole Generali](Modules/Xot/project_docs/translations.md)
+[Best Practices](Modules/Lang/project_docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 ```
 
 ### 2. Navigazione Tra Cartelle
@@ -30,7 +30,7 @@ Per navigare nella struttura delle cartelle, utilizzare:
 
 Esempi:
 - Per collegare a un file nello stesso modulo: `[File](./altro_file.md)` o `[File](altro_file.md)`
-- Per collegare a un file in un altro modulo: `[File](../../altromodulo/project_docs/file.md)`
+- Per collegare a un file in un altro modulo: `[File](../../AltroModulo/project_docs/file.md)`
 
 ### 3. Struttura della Documentazione
 
@@ -55,7 +55,7 @@ Per collegare documenti tra moduli diversi:
 
 ```markdown
 <!-- Da Modules/ModuloA/project_docs/file.md a Modules/ModuloB/project_docs/file.md -->
-[Link a ModuloB](../../modulob/project_docs/file.md)
+[Link a ModuloB](../../ModuloB/project_docs/file.md)
 
 <!-- Da Modules/ModuloA/project_docs/file.md a docs/file.md nella root -->
 [Link a docs root](../../../project_docs/file.md)
@@ -72,17 +72,17 @@ Prima di fare commit dei documenti:
 
 ### Da Modules/Lang/project_docs/ a Modules/Notify/project_docs/
 ```markdown
-[Convenzioni Notify](../../notify/project_docs/translation_conventions.md)
+[Convenzioni Notify](../../Notify/project_docs/TRANSLATION_CONVENTIONS.md)
 ```
 
 ### Da Modules/Lang/project_docs/ a docs/ nella root
 ```markdown
-[Documentazione Principale](../../../project_docs/readme.md)
+[Documentazione Principale](../../../project_docs/README.md)
 ```
 
 ### Da Modules/Lang/project_docs/ a un altro file nella stessa cartella
 ```markdown
-[Best Practices](translation_keys_best_practices.md)
+[Best Practices](TRANSLATION_KEYS_BEST_PRACTICES.md)
 ```
 
 ## Vantaggi dei Percorsi Relativi
@@ -101,14 +101,14 @@ I collegamenti nei file di documentazione devono **sempre** utilizzare percorsi 
 
 ✅ **CORRETTO**:
 ```markdown
-[Regole Generali](../../xot/docs/translations.md)
-[Best Practices](../translation_keys_best_practices.md)
+[Regole Generali](../../Xot/docs/translations.md)
+[Best Practices](../TRANSLATION_KEYS_BEST_PRACTICES.md)
 ```
 
 ❌ **ERRATO**:
 ```markdown
-[Regole Generali](modules/xot/docs/translations.md)
-[Best Practices](modules/lang/docs/translation_keys_best_practices.md)
+[Regole Generali](Modules/Xot/docs/translations.md)
+[Best Practices](Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 ```
 
 ### 2. Navigazione Tra Cartelle
@@ -120,7 +120,7 @@ Per navigare nella struttura delle cartelle, utilizzare:
 
 Esempi:
 - Per collegare a un file nello stesso modulo: `[File](./altro_file.md)` o `[File](altro_file.md)`
-- Per collegare a un file in un altro modulo: `[File](../../altromodulo/docs/file.md)`
+- Per collegare a un file in un altro modulo: `[File](../../AltroModulo/docs/file.md)`
 
 ### 3. Struttura della Documentazione
 
@@ -145,7 +145,7 @@ Per collegare documenti tra moduli diversi:
 
 ```markdown
 <!-- Da Modules/ModuloA/docs/file.md a Modules/ModuloB/docs/file.md -->
-[Link a ModuloB](../../modulob/docs/file.md)
+[Link a ModuloB](../../ModuloB/docs/file.md)
 
 <!-- Da Modules/ModuloA/docs/file.md a docs/file.md nella root -->
 [Link a docs root](../../../docs/file.md)
@@ -162,17 +162,17 @@ Prima di fare commit dei documenti:
 
 ### Da Modules/Lang/docs/ a Modules/Notify/docs/
 ```markdown
-[Convenzioni Notify](../../notify/docs/translation_conventions.md)
+[Convenzioni Notify](../../Notify/docs/TRANSLATION_CONVENTIONS.md)
 ```
 
 ### Da Modules/Lang/docs/ a docs/ nella root
 ```markdown
-[Documentazione Principale](../../../docs/readme.md)
+[Documentazione Principale](../../../docs/README.md)
 ```
 
 ### Da Modules/Lang/docs/ a un altro file nella stessa cartella
 ```markdown
-[Best Practices](translation_keys_best_practices.md)
+[Best Practices](TRANSLATION_KEYS_BEST_PRACTICES.md)
 ```
 
 ## Vantaggi dei Percorsi Relativi

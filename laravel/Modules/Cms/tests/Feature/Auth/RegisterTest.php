@@ -6,6 +6,7 @@ namespace Modules\Cms\Tests\Feature\Auth;
 
 use Modules\Xot\Tests\TestCase;
 
+use function Pest\Laravel\actingAs;
 use function Pest\Laravel\get;
 
 uses(TestCase::class);
@@ -17,10 +18,14 @@ describe('Register Page', function () {
     test('register page renders for guest', function () {
         $locale = app()->getLocale();
         $response = get('/'.$locale.'/auth/register');
-        $this->assertSame(200, $response->status());
+        $response->assertStatus(200);
     });
 
     test('authenticated user is redirected away from register page', function () {
-        $this->assertTrue(true);
+        $user = $this->createTestUser();
+        actingAs($user);
+        $locale = app()->getLocale();
+        $response = get('/'.$locale.'/auth/register');
+        $response->assertRedirect('/');
     });
 });

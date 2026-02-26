@@ -159,4 +159,3 @@ public function getTableBulkActions(): array
 
 ---
 
-*Ultimo aggiornamento: [DATE]*

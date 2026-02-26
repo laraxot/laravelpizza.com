@@ -19,7 +19,7 @@ use Webmozart\Assert\Assert;
 /**
  * Summary of TokenComponent.
  *
- * @see https://github.com/thedevdojo/genesis/blob/main/stubs/class/resources/views/pages/auth/password/%5Btoken%5D.blade.php
+ * @see https://github.com/thedevdojo/genesis/blob/main/stubs/class/resources/views/auth/password/%5Btoken%5D.blade.php
  */
 class TokenComponent extends Component
 {

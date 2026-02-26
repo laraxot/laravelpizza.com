@@ -24,21 +24,15 @@ abstract class LangBaseListRecords extends XotBaseListRecords
     {
         $parentActions = parent::getHeaderActions();
 
-        /** @var array<string, Action> $actions */
+        // Assicurarsi che tutte le azioni abbiano chiavi stringa
+        /** @var array<string, Action|ActionGroup> $actions */
         $actions = [
             'locale_switcher' => LocaleSwitcher::make(),
         ];
 
+        // Aggiungere le azioni parent con chiavi stringa
         foreach ($parentActions as $key => $action) {
-            // Espandiamo eventuali ActionGroup per mantenere il contratto di ritorno
-            if ($action instanceof ActionGroup) {
-                foreach ($action->getActions() as $index => $groupedAction) {
-                    $actions['parent_'.$key.'_'.$index] = $groupedAction;
-                }
-                continue;
-            }
-
-            $actions['parent_'.(is_string($key) ? $key : (string) $key)] = $action;
+            $actions['parent_'.(is_string($key) ? $key : ((string) $key))] = $action;
         }
 
         return $actions;

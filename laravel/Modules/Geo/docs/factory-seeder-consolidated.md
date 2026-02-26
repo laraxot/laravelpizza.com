@@ -325,7 +325,6 @@ Ho creato uno script intelligente (`smart_populate_models.php`) che:
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 2.0
 **Autore**: AI Assistant
 **Stato**: Consolidata e Completa

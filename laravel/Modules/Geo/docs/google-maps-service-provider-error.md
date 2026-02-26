@@ -80,4 +80,3 @@ Il ServiceProvider deve essere registrato nel `composer.json` del modulo:
 - Testare funzionalità di mappe dopo installazione
 - Aggiornare documentazione se si cambia pacchetto
 
-*Ultimo aggiornamento: [DATE]*

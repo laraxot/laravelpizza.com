@@ -165,7 +165,6 @@ Questa lezione è ora memorizzata permanentemente per:
 - [ Models](../../<nome modulo>/docs/model_architecture.md)
 - [Activity Logging](./activity_logging_system.md)
 
-*Ultimo aggiornamento: Gennaio 2025*
 *Lezione appresa: Context-aware migrations con supporto UUID*
 # Lezioni Apprese: Errori Migrazione Activity Table
 
@@ -334,5 +333,4 @@ Questa lezione è ora memorizzata permanentemente per:
 - [<nome progetto> Models](../../<nome progetto>/docs/model_architecture.md)
 - [Activity Logging](./activity_logging_system.md)
 
-*Ultimo aggiornamento: Gennaio 2025*
 *Lezione appresa: Context-aware migrations con supporto UUID*

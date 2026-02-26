@@ -126,6 +126,5 @@ Dopo ogni correzione:
 - **Totale stimato**: 3-4 giorni
 
 ---
-**Ultimo aggiornamento**: 09/01/2026
 **Responsabile**: iFlow CLI
 **Status**: In pianificazione

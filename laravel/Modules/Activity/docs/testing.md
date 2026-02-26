@@ -177,7 +177,11 @@ protected function createApplication()
     $app = parent::createApplication();
     
     $app['config']->set([
-        'database.connections.activity.database' => 'quaeris_data_test',
+<<<<<<< .merge_file_UNxw7Q
+        'database.connections.activity.database' => 'healthcare_app_data_test',
+=======
+        'database.connections.activity.database' => 'ptvx_data_test',
+>>>>>>> .merge_file_4XPfM4
     ]);
     
     return $app;

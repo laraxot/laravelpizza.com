@@ -1,6 +1,5 @@
 # 📚 **Indice Documentazione Modulo Lang**
 
-**Last Update**: 31 Gennaio 2026
 **Status**: ✅ PHPStan Level 10 Compliant
 **Module Version**: 1.5.0
 

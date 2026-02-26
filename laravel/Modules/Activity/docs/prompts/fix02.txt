@@ -1,0 +1,38 @@
+# Fix: Rimuovere 'activity' da database.php
+
+## Azione
+
+Rimuovere la connessione `'activity'` da `laravel/config/database.php` (se presente).
+
+Blocco da rimuovere (variante con url e DB_*_ACTIVITY):
+```php
+'activity' => [
+    'driver' => 'mysql',
+    'url' => env('DB_URL'),
+    'host' => env('DB_HOST_ACTIVITY', env('DB_HOST', '127.0.0.1')),
+    ...
+],
+```
+
+## Perché
+
+TenantServiceProvider crea la connessione `'activity'` a runtime per ogni modulo attivo (getSnakeName = 'activity'). Avere la stessa connessione in database.php causa:
+- **Duplicazione (DRY)**: due fonti di verità per la stessa config
+- **Conflitti**: TenantServiceProvider sovrascrive/merge le connections - la entry statica in database.php può interferire
+- **Coerenza**: fix01 e database-connections stabiliscono che database.php NON deve contenere 'activity'
+
+## Regola
+
+database.php NON deve contenere la connessione 'activity'. I modelli Activity hanno `$connection = 'activity'` e usano la connessione creata da TenantServiceProvider.
+
+## Verifica
+
+```bash
+grep -n "activity" laravel/config/database.php
+# Nessun output atteso
+```
+
+## Collegamenti
+
+- [fix01](fix01.txt)
+- [database-connections](../database-connections.md)

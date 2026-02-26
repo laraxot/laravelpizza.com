@@ -45,17 +45,12 @@ describe('CMS Module', function (): void {
 uses(TestHelper::class);
 
 beforeEach(function (): void {
-    // Skip tests if roles don't exist in test database
-    try {
-        /* @var \Modules\User\Models\User */
-        /* @phpstan-ignore-next-line method.nonObject */
-        $this->super_admin_user = $this->getSuperAdminUser();
-        /* @var \Modules\User\Models\User */
-        /* @phpstan-ignore-next-line method.nonObject */
-        $this->no_super_admin_user = $this->getNoSuperAdminUser();
-    } catch (Spatie\Permission\Exceptions\RoleDoesNotExist $e) {
-        $this->markTestSkipped('Roles not seeded in test database');
-    }
+    /* @var \Modules\User\Models\User */
+    /* @phpstan-ignore-next-line method.nonObject */
+    $this->super_admin_user = $this->getSuperAdminUser();
+    /* @var \Modules\User\Models\User */
+    /* @phpstan-ignore-next-line method.nonObject */
+    $this->no_super_admin_user = $this->getNoSuperAdminUser();
 });
 
 it('user admin can view main dashboard', function (): void {

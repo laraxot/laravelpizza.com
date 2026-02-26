@@ -61,5 +61,4 @@
 
 ---
 
-**Ultimo aggiornamento:** {{date('Y-m-d')}}
 Responsabile: Cascade AI

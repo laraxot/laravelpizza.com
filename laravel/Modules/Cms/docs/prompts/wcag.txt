@@ -1,0 +1,21 @@
+studia a fondo
+https://www.w3.org/WAI/WCAG21/Techniques/html/H44
+https://www.w3.org/WAI/WCAG21/Techniques/failures/F78
+https://www.w3.org/WAI/WCAG21/Techniques/general/G195
+https://www.w3.org/WAI/WCAG21/Techniques/html/H30
+https://www.w3.org/WAI/WCAG21/Techniques/css/C8
+https://www.w3.org/WAI/WCAG21/Techniques/failures/F78
+https://www.w3.org/WAI/WCAG21/Techniques/general/G195
+https://www.w3.org/WAI/WCAG21/Techniques/css/C38
+https://www.w3.org/WAI/WCAG21/Techniques/general/G18
+https://www.w3.org/WAI/WCAG21/Techniques/html/H98
+https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA6
+https://www.w3.org/WAI/WCAG21/Techniques/html/H44
+
+poi aggiorna, studia e migliora le cartelle docs dentro i moduli e dentro i temi, poi aggiorna le tue rules, le tue memories e le tue skills 
+
+poi in questo progetto utilizziamo il tema Two 
+
+percio' dentro le cartelle laravel/Themes/Two/docs  devi scrivere come intendi risolvere i problemi di wcag del sito, poi devi creare una github issue e una github disccusion se esistono gia' interagisci con la github issue e la github discussion 
+
+ricordandoti che questo preciso prompt lo sto dando a piu' agenti ai , percio' ragiona 

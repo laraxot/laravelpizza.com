@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Activity\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 use Modules\Activity\Models\Activity;
 
 class ActivityFactory extends Factory
@@ -16,10 +17,10 @@ class ActivityFactory extends Factory
         return [
             'log_name' => $this->faker->randomElement(['default', 'auth', 'system']),
             'description' => $this->faker->sentence(),
-            'subject_type' => $this->faker->randomElement(['Modules\\User\\Models\\User', 'App\\Models\\Appointment']),
-            'subject_id' => $this->faker->randomNumber(),
-            'causer_type' => 'Modules\\User\\Models\\User',
-            'causer_id' => $this->faker->randomNumber(),
+            'subject_type' => $this->faker->randomElement(['Modules\User\Models\User', 'App\Models\Appointment']),
+            'subject_id' => Str::uuid()->toString(),
+            'causer_type' => 'Modules\User\Models\User',
+            'causer_id' => Str::uuid()->toString(),
             'properties' => ['key' => 'value'],
             'batch_uuid' => $this->faker->uuid(),
             'event' => $this->faker->randomElement(['created', 'updated', 'deleted']),

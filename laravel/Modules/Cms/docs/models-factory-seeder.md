@@ -104,5 +104,4 @@
 Il modulo CMS è ben strutturato con tutte le factory necessarie. Un modello (Module) potrebbe necessitare di revisione per verificarne l'effettivo utilizzo.
 
 ---
-*Ultimo aggiornamento: [DATE]*
 *Analizzato da: Sistema di analisi automatica moduli*

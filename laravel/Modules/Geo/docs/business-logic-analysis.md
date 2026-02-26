@@ -487,7 +487,6 @@ La documentazione deve essere mantenuta aggiornata in:
 
 ---
 
-**Ultimo aggiornamento**: Dicembre 2024
 **Versione**: 1.0.0
 **Status**: Production Ready
 **Business Logic**: Completa e documentata

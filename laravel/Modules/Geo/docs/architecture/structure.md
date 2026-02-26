@@ -1,6 +1,5 @@
 # Modulo Geo
 
-Data: 2025-04-23 19:09:55
 
 ## Informazioni generali
 

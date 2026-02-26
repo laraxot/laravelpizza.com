@@ -80,4 +80,3 @@ L'implementazione di un blocco richiede:
 - I blocchi devono supportare la localizzazione tramite le chiavi del file JSON
 - L'implementazione deve seguire le convenzioni di naming del progetto
 
-Ultimo aggiornamento: 14 Maggio 2025

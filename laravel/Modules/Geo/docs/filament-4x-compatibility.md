@@ -1,5 +1,6 @@
 # Compatibilità Filament 4.x - Modulo Geo
 
+**Data**: 2025-01-27  
 **Status**: ✅ COMPLETATO  
 **Versione Filament**: 4.0.17  
 
@@ -103,4 +104,4 @@ TextInput::make('lng')
 - [Guida Ufficiale Filament 4.x](https://filamentphp.com/docs/4.x/upgrade-guide)
 - [Pacchetto Google Maps](https://github.com/cheesegrits/filament-google-maps)
 
-*Ultimo aggiornamento: [DATE]*
+*Ultimo aggiornamento: 2025-01-27*

@@ -1,5 +1,7 @@
 # Filament nel Modulo CMS
 
+**Versione**: il progetto usa Filament 5.x. Compatibilità e riferimenti: [filament-5x-compatibility.md](filament-5x-compatibility.md).
+
 ## Risorse (Resources)
 
 Tutte le risorse Filament nel modulo CMS devono seguire queste convenzioni:

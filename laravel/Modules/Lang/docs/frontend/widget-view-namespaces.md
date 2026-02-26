@@ -159,4 +159,3 @@ protected static string $view = 'pub_theme::filament.widgets.doctor-appointments
 - [Widget Autenticazione](../../laravel/modules/user/docs/auth-widgets.md)
 - [Implementazione Temi](../frontend/theme-implementation.md)
 
-*Ultimo aggiornamento: Dicembre 2024*

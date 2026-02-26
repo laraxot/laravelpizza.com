@@ -330,6 +330,5 @@ php artisan tinker
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025
 **Versione**: 1.0
 **Autore**: Sistema Laraxot

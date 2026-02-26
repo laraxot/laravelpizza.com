@@ -373,7 +373,6 @@ Questo documento fornisce un'analisi completa dello stato attuale di factory, se
 
 ---
 
-**Ultimo aggiornamento**: Dicembre 2024
 **Versione**: 2.1
 **Stato**: 100% moduli completati (14/14) ✅
 **Copertura Media**: 85%
