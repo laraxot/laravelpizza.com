@@ -38,14 +38,18 @@
    - Recovery path per rendering eventi (`events`, `events.view`, `toBlockArray`)
    - Verifiche rapide su URL localizzati e fallback slug
 
+7. **[Package Dependency Chaos Map](./package-dependency-chaos-map.md)**
+   - Pacchetti a impatto runtime
+   - Rischi e check rapidi
+
 ### Riferimenti Cross-Module
 
-7. **[Regole Xot](../../Xot/docs/critical-rules-consolidated.md)**
+8. **[Regole Xot](../../Xot/docs/critical-rules-consolidated.md)**
    - Regole generali Laraxot
    - Filosofia Migrazioni
    - Estensioni Filament
 
-8. **[Regole Tema Meetup](../../../Themes/Meetup/docs/critical-rules-consolidated.md)**
+9. **[Regole Tema Meetup](../../../Themes/Meetup/docs/critical-rules-consolidated.md)**
    - Frontend Asset Management
    - Vite Configuration
    - Metatags Component
@@ -57,3 +61,4 @@
 - **2026-03-02**: Consolidata Architettura Frontoffice
 - **2026-03-02**: Aggiunta Chaos Monkey Readiness
 - **2026-03-02**: Aggiunto Chaos Monkey Event Rendering Playbook
+- **2026-03-02**: Aggiunto Package Dependency Chaos Map

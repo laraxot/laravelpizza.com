@@ -13,6 +13,7 @@
 - [Service Provider Architecture](./service-provider-architecture.md)
 - [Module Dependency Management](./composer-module-dependency-management.md)
 - [Composer Packages Reference](../../../docs/composer-packages-reference.md) - Mappatura pacchetti per modulo
+- [Composer Packages Deep Study (2026-03-02)](./composer-packages-deep-study-2026-03-02.md)
 - [Database Connection Configuration](./database-connection-configuration.md)
 
 ### Development Standards
@@ -62,3 +63,7 @@
 **Laravel Version**: 12.x  
 **PHP Version**: 8.2+  
 **Last Updated**: 2026-03-02
+
+## Dependency Intelligence
+
+- [Dependency intelligence](dependency-intelligence.md)

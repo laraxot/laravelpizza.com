@@ -30,6 +30,7 @@
 
 ## 📦 **Pacchetti Composer**
 - [Riferimento completo](../../../docs/composer-packages-reference.md) - Nessuna dipendenza diretta; usa Xot
+- [Package Dependency Chaos Map](./package-dependency-chaos-map.md)
 
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Base framework per i Service Provider.
@@ -37,3 +38,7 @@
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
+
+## Dependency Intelligence
+
+- [Dependency intelligence](dependency-intelligence.md)

@@ -33,6 +33,7 @@
 
 ## 📦 **Pacchetti Composer**
 - [Riferimento completo](../../../docs/composer-packages-reference.md)
+- [Package Dependency Chaos Map](./package-dependency-chaos-map.md)
 - `mcamara/laravel-localization` - URL localizzati
 - `lara-zeus/spatie-translatable` - Campi Filament tradotti
 - `rinvex/countries` - Dati paesi
@@ -45,3 +46,7 @@
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
 # Documentation Index
+
+## Dependency Intelligence
+
+- [Dependency intelligence](dependency-intelligence.md)

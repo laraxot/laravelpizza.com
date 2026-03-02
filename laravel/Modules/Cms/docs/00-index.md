@@ -13,6 +13,7 @@ The Cms module handles content management, page rendering, and multi-language su
 
 - [CMS Theme Template Runtime Architecture](cms-theme-template-runtime-architecture.md) - Verified runtime pipeline (Folio -> x-page -> JSON blocks -> pub_theme views), risks, and chaos targets.
 - [Template Theme CMS Reference](template-theme-cms-reference.md) - Runtime reference for providers, namespaces, JSON contracts, and fallback behavior.
+- [Package Dependency Chaos Map](package-dependency-chaos-map.md) - Dipendenze chiave (Folio/Volt/Sushi/Data) e superfici di fault.
 - [Chaos Monkey Deep Dive](chaos-monkey-deep-dive.md) - Analisi approfondita: tenant path, BlockData, wrap_in, container0/slug0, punti di rottura.
 - [Chaos Monkey Recovery Playbook](chaos-monkey-recovery-playbook.md) - Incident playbook to restore frontoffice rendering under randomized failures.
 
@@ -140,3 +141,7 @@ Modules/Cms/
 - Identified critical missing component issue
 - Documented content disparity between languages
 - Created comprehensive duplicate content analysis
+
+## Dependency Intelligence
+
+- [Dependency intelligence](dependency-intelligence.md)

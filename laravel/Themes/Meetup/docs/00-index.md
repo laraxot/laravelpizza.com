@@ -7,6 +7,7 @@
 ## Core Concepts
 
 - [Riferimento pacchetti Composer](../../../docs/composer-packages-reference.md) - Folio, Volt, Livewire, Filament, Tailwind (via root/moduli)
+- [Package Dependency Chaos Map](package-dependency-chaos-map.md) - Mappa pacchetti e rischio runtime lato tema.
 - [CMS Theme Runtime Memory](memories/cms-theme-runtime-memory.md) - Operational memory for fast diagnosis of theme/CMS runtime failures.
 - [Chaos Monkey Debug Skills](chaos-monkey-debug-skills.md) - Repeatable debugging skills and incident checklist for randomized breakage.
 - [Chaos Monkey Checklist](chaos-monkey-checklist.md) - Scenario -> symptom -> diagnosis -> fix playbook (theme side).
@@ -103,3 +104,7 @@
 - [Missing View Fix Plan](missing-view-fix-plan.md) - Missing view fixes
 - [Missing Layout Section Fix Plan](missing-layout-section-fix-plan.md) - Layout fixes
 - [Troubleshooting Directory](troubleshooting/) - Detailed troubleshooting guides
+
+## Dependency Intelligence
+
+- [Dependency intelligence](dependency-intelligence.md)

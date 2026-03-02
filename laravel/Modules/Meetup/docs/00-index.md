@@ -3,6 +3,7 @@
 ## Core Concepts
 
 - [Riferimento pacchetti Composer](../../../docs/composer-packages-reference.md) - `saade/filament-fullcalendar` per calendario eventi
+- [Package Dependency Chaos Map](package-dependency-chaos-map.md) - Mappa pacchetti critici e failure modes del modulo.
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup module
 - [Chaos Monkey Readiness](chaos-monkey-readiness.md) - Diagnosi e recovery rapida su rotture randomizzate del modulo.
 - [Volt Automatic Route Parameter Binding](volt-automatic-route-binding.md) - Volt handles route parameters automatically, no manual extraction needed
@@ -48,3 +49,7 @@
 - [Gap Analysis](gap-analysis.md) - Gap analysis between current and desired state
 - [Missing Documentation Analysis](missing-documentation-analysis.md) - Documentation gaps
 - [Implementation Log](implementation-log.md) - Implementation tracking
+
+## Dependency Intelligence
+
+- [Dependency intelligence](dependency-intelligence.md)
