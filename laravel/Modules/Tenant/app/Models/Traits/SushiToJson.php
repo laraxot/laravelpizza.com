@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace Modules\Tenant\Models\Traits;
 
 use Exception;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use InvalidArgumentException;
+use Modules\Tenant\Contracts\SushiToJsonContract;
 use Modules\Tenant\Services\TenantService;
 use Sushi\Sushi;
 use Throwable;
@@ -24,6 +26,15 @@ use function Safe\json_encode;
  * nella directory config/{tenant_name}/database/content/.
  *
  * @see https://github.com/calebporzio/sushi
+ *
+ * @phpstan-require-implements \Modules\Tenant\Contracts\SushiToJsonContract
+ *
+ * @method string getJsonFile() Ottiene il percorso del file JSON per il modello corrente
+ * @method array loadExistingData() Carica i dati esistenti dal file JSON
+ * @method string authId() Ottiene l'ID dell'utente autenticato
+ * @method void ensureDirectoryExists() Assicura che la directory esista
+ * @method void saveToJson() Salva i dati nel file JSON
+ * @method int findRowIndexById(int $id) Trova l'indice di una riga per ID
  */
 trait SushiToJson
 {
@@ -232,12 +243,18 @@ trait SushiToJson
     protected static function bootSushiToJson(): void
     {
         static::creating(function ($model): void {
-            /** @var static $modelWithTrait */
-            $modelWithTrait = $model;
-            $file = $modelWithTrait->getJsonFile();
+            if (! $model instanceof Model) {
+                throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
+            }
+            if (! $model instanceof SushiToJsonContract) {
+                throw new InvalidArgumentException('Model must implement '.SushiToJsonContract::class);
+            }
+            /** @var Model&SushiToJsonContract $model */
+            $file = $model->getJsonFile();
 
             // Load existing data and compute next ID
-            $existingData = $modelWithTrait->loadExistingData();
+            $existingData = $model->loadExistingData();
+            /** @var array<int, array<string, mixed>> $rows */
             $rows = $existingData;
             $maxIdFromFile = 0;
             foreach ($rows as $r) {
@@ -261,65 +278,78 @@ trait SushiToJson
             }
 
             $nextId = max($maxIdFromFile, $maxIdFromDb) + 1;
-            $modelWithTrait->setAttribute('id', $nextId);
-            $modelWithTrait->setAttribute('updated_at', now());
-            $modelWithTrait->setAttribute('created_at', now());
+            $model->setAttribute('id', $nextId);
+            $model->setAttribute('updated_at', now());
+            $model->setAttribute('created_at', now());
 
             // Set audit fields if available via helper
-            $authId = $modelWithTrait->authId();
+            $authId = $model->authId();
             if ($authId !== null) {
-                $modelWithTrait->setAttribute('updated_by', $authId);
-                $modelWithTrait->setAttribute('created_by', $authId);
+                $model->setAttribute('updated_by', $authId);
+                $model->setAttribute('created_by', $authId);
             }
 
             // Add new record to existing data
-            $existingData[] = $modelWithTrait->getAttributes();
+            $existingData[] = $model->getAttributes();
 
             // Ensure directory exists and save
-            $modelWithTrait->ensureDirectoryExists($file);
-            $modelWithTrait->saveToJson($existingData);
+            $model->ensureDirectoryExists($file);
+            $model->saveToJson($existingData);
         });
 
         static::updating(function ($model): void {
-            /** @var static $modelWithTrait */
-            $modelWithTrait = $model;
-            $modelWithTrait->setAttribute('updated_at', now());
+            if (! $model instanceof Model) {
+                throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
+            }
+            if (! $model instanceof SushiToJsonContract) {
+                throw new InvalidArgumentException('Model must implement '.SushiToJsonContract::class);
+            }
+            /** @var Model&SushiToJsonContract $model */
+            $model->setAttribute('updated_at', now());
 
             // Set audit fields if available via helper
-            $authId = $modelWithTrait->authId();
+            $authId = $model->authId();
             if ($authId !== null) {
-                $modelWithTrait->setAttribute('updated_by', $authId);
+                $model->setAttribute('updated_by', $authId);
             }
 
             // Update existing record
-            $existingData = $modelWithTrait->loadExistingData();
-            $id = (int) ($modelWithTrait->getAttribute('id') ?? 0);
+            /** @var array<int, array<string, mixed>> $existingData */
+            $existingData = $model->loadExistingData();
+            $id = (int) ($model->getAttribute('id') ?? 0);
 
             if ($id > 0) {
-                $index = $modelWithTrait->findRowIndexById($existingData, $id);
+                $index = $model->findRowIndexById($existingData, $id);
                 if ($index !== null) {
                     /** @var array<string, mixed> $modelArray */
-                    $modelArray = $modelWithTrait->toArray();
+                    $modelArray = $model->toArray();
                     $existingData[$index] = $modelArray;
 
-                    $modelWithTrait->saveToJson($existingData);
+                    $model->saveToJson($existingData);
                 }
             }
         });
 
         static::deleting(function ($model): void {
-            /** @var static $modelWithTrait */
-            $modelWithTrait = $model;
-            $id = (int) ($modelWithTrait->getAttribute('id') ?? 0);
+            if (! $model instanceof Model) {
+                throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
+            }
+            if (! $model instanceof SushiToJsonContract) {
+                throw new InvalidArgumentException('Model must implement '.SushiToJsonContract::class);
+            }
+            /** @var Model&SushiToJsonContract $model */
+            $id = (int) ($model->getAttribute('id') ?? 0);
 
             if ($id > 0) {
-                $existingData = $modelWithTrait->loadExistingData();
-                $index = $modelWithTrait->findRowIndexById($existingData, $id);
+                /** @var array<int, array<string, mixed>> $existingData */
+                $existingData = $model->loadExistingData();
+                $index = $model->findRowIndexById($existingData, $id);
 
                 if ($index !== null) {
                     unset($existingData[$index]);
-                    $existingData = array_values($existingData);
-                    $modelWithTrait->saveToJson($existingData);
+                    /** @var array<int, array<string, mixed>> $reindexed */
+                    $reindexed = array_values($existingData);
+                    $model->saveToJson($reindexed);
                 }
             }
         });
@@ -331,7 +361,7 @@ trait SushiToJson
      * @param  array<int, array<string, mixed>>  $rows
      * @return int|null Indice se trovato, altrimenti null
      */
-    protected function findRowIndexById(array $rows, int $id): ?int
+    public function findRowIndexById(array $rows, int $id): ?int
     {
         foreach ($rows as $index => $row) {
             if (is_array($row) && ((int) ($row['id'] ?? 0)) === $id) {
@@ -345,7 +375,7 @@ trait SushiToJson
     /**
      * Ottiene l'ID dell'utente autenticato per i campi di audit.
      */
-    protected function authId(): int|string|null
+    public function authId(): int|string|null
     {
         if (\function_exists('authId')) {
             return authId();
@@ -361,7 +391,7 @@ trait SushiToJson
     /**
      * Assicura che la directory per il file JSON esista.
      */
-    protected function ensureDirectoryExists(string $filePath): void
+    public function ensureDirectoryExists(string $filePath): void
     {
         $directory = dirname($filePath);
 

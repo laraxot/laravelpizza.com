@@ -1,7 +1,16 @@
 <?php
 
 /**
+ * Trait SushiToJsons.
+ *
+ * Questo trait permette ai modelli di utilizzare il pacchetto Sushi per leggere
+ * dati da file JSON con isolamento per tenant. Ogni tenant ha i propri file JSON
+ * nella directory config/{tenant_name}/database/content/.
+ *
  * @see https://dev.to/hasanmn/automatically-update-createdby-and-updatedby-in-laravel-using-bootable-traits-28g9.
+ *
+ * @method string getJsonFile() Ottiene il percorso del file JSON per il modello corrente
+ * @method array<int, array<string, mixed>> getSushiRows() Ottiene i dati dal file JSON per il modello Sushi
  */
 
 declare(strict_types=1);
@@ -9,6 +18,7 @@ declare(strict_types=1);
 namespace Modules\Tenant\Models\Traits;
 
 use Exception;
+use Modules\Tenant\Contracts\SushiToJsonsContract;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use InvalidArgumentException;
@@ -16,11 +26,28 @@ use Modules\Tenant\Services\TenantService;
 use Sushi\Sushi;
 
 use function Safe\json_encode;
+use function Safe\mkdir;
 use function Safe\unlink;
 
 trait SushiToJsons
 {
     use Sushi;
+
+    /**
+     * @return string
+     */
+    public function getJsonFile(): string
+    {
+        $tbl = $this->getTable();
+        $id = $this->getKey();
+
+        $stringId = is_string($id) || is_numeric($id) ? (string) $id : 'unknown';
+        $stringTbl = is_string($tbl) ? $tbl : 'unknown';
+
+        $filename = 'database/content/'.$stringTbl.'/'.$stringId.'.json';
+
+        return TenantService::filePath($filename);
+    }
 
     /**
      * @return array<int, array<string, mixed>>
@@ -62,19 +89,6 @@ trait SushiToJsons
         return $rows;
     }
 
-    public function getJsonFile(): string
-    {
-        $tbl = $this->getTable();
-        $id = $this->getKey();
-
-        $stringId = is_string($id) || is_numeric($id) ? (string) $id : 'unknown';
-        $stringTbl = is_string($tbl) ? $tbl : 'unknown';
-
-        $filename = 'database/content/'.$stringTbl.'/'.$stringId.'.json';
-
-        return TenantService::filePath($filename);
-    }
-
     /**
      * @return ?string
      */
@@ -93,10 +107,13 @@ trait SushiToJsons
          * need to have the updated_by field here as well.
          */
         static::creating(function ($model): void {
-            /** @var static $model */
             if (! $model instanceof Model) {
                 throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
+            if (! $model instanceof SushiToJsonsContract) {
+                throw new InvalidArgumentException('Model must implement '.SushiToJsonsContract::class);
+            }
+            /** @var Model&SushiToJsonsContract $model */
 
             // PHPStan Level 10: Type-safe max() call
             $maxId = $model->max('id');
@@ -128,34 +145,32 @@ trait SushiToJsons
             $content = json_encode($item, JSON_PRETTY_PRINT);
 
             $file = $model->getJsonFile();
-            if (is_string($file)) {
-                $dir = \dirname($file);
+            $dir = \dirname($file);
 
-                if (! File::exists($dir)) {
-                    File::makeDirectory($dir, 0o755, true, true);
-                }
-                File::put($file, $content);
+            if (! File::exists($dir)) {
+                File::makeDirectory($dir, 0o755, true, true);
             }
+            File::put($file, $content);
         });
         /*
          * updating.
          */
         static::updating(function ($model): void {
-            /** @var static $model */
             if (! $model instanceof Model) {
                 throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
+            if (! $model instanceof SushiToJsonsContract) {
+                throw new InvalidArgumentException('Model must implement '.SushiToJsonsContract::class);
+            }
+            /** @var Model&SushiToJsonsContract $model */
 
             $file = $model->getJsonFile();
-            if (is_string($file)) {
-                // PHPStan Level 10: Use setAttribute for type safety
-                $model->setAttribute('updated_at', now());
-                $model->setAttribute('updated_by', authId());
+            $model->setAttribute('updated_at', now());
+            $model->setAttribute('updated_by', authId());
 
-                $content = $model->toJson(JSON_PRETTY_PRINT);
+            $content = $model->toJson(JSON_PRETTY_PRINT);
 
-                File::put($file, $content);
-            }
+            File::put($file, $content);
         });
         // -------------------------------------------------------------------------------------
         /*
@@ -164,15 +179,16 @@ trait SushiToJsons
          */
 
         static::deleting(function ($model): void {
-            /** @var static $model */
             if (! $model instanceof Model) {
                 throw new InvalidArgumentException('Model must be an instance of Illuminate\Database\Eloquent\Model');
             }
+            if (! $model instanceof SushiToJsonsContract) {
+                throw new InvalidArgumentException('Model must implement '.SushiToJsonsContract::class);
+            }
+            /** @var Model&SushiToJsonsContract $model */
 
             $file = $model->getJsonFile();
-            if (is_string($file)) {
-                unlink($file);
-            }
+            unlink($file);
         });
 
         // ----------------------
