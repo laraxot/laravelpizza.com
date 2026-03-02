@@ -4,7 +4,6 @@
 [![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)](https://filamentphp.com/)
 [![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)](https://phpstan.org/)
 
-> **Version**: 4.1.0
 > **Status**: ✅ UI Components Module
 
 ## 📋 Panoramica

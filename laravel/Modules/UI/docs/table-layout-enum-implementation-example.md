@@ -408,9 +408,9 @@ TextColumn::make('name')
 
 - [Analisi TableLayoutEnum](table_layout_enum_analysis.md)
 - [Usage Guide](table-layout-enum-usage.md)
-- [Translation Standards](../../../../../../../../docs/translation_standards.md)
-- [Filament Best Practices](../../../../../../../../docs/filament_best_practices.md)
-- [Enum Translation Pattern](../../../../../../../../docs/enum-translation-pattern.md)
+- [Translation Standards](../../../docs/translation_standards.md)
+- [Filament Best Practices](../../../docs/filament_best_practices.md)
+- [Enum Translation Pattern](../../../docs/enum-translation-pattern.md)
 
 # Esempio Implementazione TableLayoutEnum
 
@@ -822,7 +822,7 @@ TextColumn::make('name')
 
 - [Analisi TableLayoutEnum](table_layout_enum_analysis.md)
 - [Usage Guide](table-layout-enum-usage.md)
-- [Translation Standards](../../../../../../../../docs/translation_standards.md)
-- [Filament Best Practices](../../../../../../../../docs/filament_best_practices.md)
-- [Enum Translation Pattern](../../../../../../../../docs/enum-translation-pattern.md)
+- [Translation Standards](../../../docs/translation_standards.md)
+- [Filament Best Practices](../../../docs/filament_best_practices.md)
+- [Enum Translation Pattern](../../../docs/enum-translation-pattern.md)
 

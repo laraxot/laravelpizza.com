@@ -282,8 +282,8 @@ rules:
 
 ## Collegamenti
 
-- [Translation Standards](../../../../../../../../docs/translation_standards.md)
-- [Filament Best Practices](../../../../../../../../docs/filament_best_practices.md)
+- [Translation Standards](../../../docs/translation_standards.md)
+- [Filament Best Practices](../../../docs/filament_best_practices.md)
 - [TransTrait Documentation](../../xot/docs/trans_trait_usage.md)
 
 ## Memoria Permanente
@@ -579,8 +579,8 @@ rules:
 
 ## Collegamenti
 
-- [Translation Standards](../../../../../../../../docs/translation_standards.md)
-- [Filament Best Practices](../../../../../../../../docs/filament_best_practices.md)
+- [Translation Standards](../../../docs/translation_standards.md)
+- [Filament Best Practices](../../../docs/filament_best_practices.md)
 - [TransTrait Documentation](../../xot/docs/trans_trait_usage.md)
 
 ## Memoria Permanente

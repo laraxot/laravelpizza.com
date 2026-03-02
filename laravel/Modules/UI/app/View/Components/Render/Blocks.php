@@ -21,14 +21,30 @@ use Modules\Xot\Actions\GetViewAction;
 
 final class Blocks extends Component
 {
+    public string $view;
+
+    /** @var array<int|string, mixed> */
+    public array $blocks;
+
+    public ?Model $model = null;
+
     /**
      * @param array<int|string, mixed> $blocks
+     * @param string|null              $tpl    Deprecated alias for $view (use view for new code)
      */
     public function __construct(
-        public string $view,
-        public array $blocks = [],
-        public ?Model $model = null,
+        string $view = '',
+        array $blocks = [],
+        ?Model $model = null,
+        ?string $tpl = null,
     ) {
+        $resolvedView = $tpl ?? $view;
+        if ('' === $resolvedView) {
+            throw new \InvalidArgumentException('Blocks component requires view or tpl parameter');
+        }
+        $this->view = $resolvedView;
+        $this->blocks = $blocks;
+        $this->model = $model;
     }
 
     public function render(): View

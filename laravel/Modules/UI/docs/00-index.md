@@ -30,17 +30,9 @@
 ## 🧹 **Manutenzione**
 - 🗑️ **[Cleanup Plan](./consolidation-plan.md)** - Strategia per ridurre i 280+ file di documentazione.
 
-## 📦 **Pacchetti Composer**
-- [Riferimento completo](../../../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../../../docs/architecture/composer-packages-full-inventory.md)
-- `owenvoke/blade-fontawesome` - Icone FontAwesome
-
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Base framework per i widget.
 - [Cms](../../cms/docs/readme.md) - Layout dei contenuti e blocchi.
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
-
-## Dependency Intelligence
-
-- [Dependency intelligence](dependency-intelligence.md)

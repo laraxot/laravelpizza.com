@@ -124,7 +124,7 @@ done
 
 ## Collegamenti
 
-- [Documentazione Root Traduzioni](../../../../../../../../../docs/translation_standards_links.md)
+- [Documentazione Root Traduzioni](../../../../docs/translation_standards_links.md)
 - [Regole Traduzioni UI](translation_rules.md)
 - [Best Practices Filament](filament_best_practices.md)
 
@@ -260,7 +260,7 @@ done
 
 ## Collegamenti
 
-- [Documentazione Root Traduzioni](../../../../../../../../../docs/translation_standards_links.md)
+- [Documentazione Root Traduzioni](../../../../docs/translation_standards_links.md)
 - [Regole Traduzioni UI](translation_rules.md)
 - [Best Practices Filament](filament_best_practices.md)
 

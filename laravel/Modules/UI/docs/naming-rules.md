@@ -43,8 +43,8 @@ I nomi specifici dell'applicazione devono apparire solo:
 - [Componenti](components.md)
 
 ## Vedi Anche
-- [Documentazione Principale](../../../../../../../../docs/readme.md)
-- [Standard di Codice](../../../../../../../../docs/standards/coding-standards.md)
+- [Documentazione Principale](../../../docs/readme.md)
+- [Standard di Codice](../../../docs/standards/coding-standards.md)
 # Regole di Naming nei Moduli
 
 ## Regola: No Nomi Specifici dell'Applicazione

@@ -66,10 +66,10 @@ app/
 **Impatto:** Riduzione da 30+ a 10-15 file
 
 **Guide da consolidare:**
-- **PHPStan:** Fare riferimento a `../../../../../../../docs/core/phpstan-guide.md`
-- **Filament:** Fare riferimento a `../../../../../../../docs/core/filament-best-practices.md`
-- **Testing:** Fare riferimento a `../../../../../../../docs/core/testing-guide.md`
-- **Code Quality:** Fare riferimento a `../../../../../../../docs/core/code-quality-guide.md`
+- **PHPStan:** Fare riferimento a `../../docs/core/phpstan-guide.md`
+- **Filament:** Fare riferimento a `../../docs/core/filament-best-practices.md`
+- **Testing:** Fare riferimento a `../../docs/core/testing-guide.md`
+- **Code Quality:** Fare riferimento a `../../docs/core/code-quality-guide.md`
 
 ### 2. Standardizzazione Naming File
 **Azione:** Rinominare tutti i file seguendo convenzioni corrette
@@ -276,11 +276,11 @@ php artisan test --testsuite=UI
 
 ## 🔗 Collegamenti Sistema
 
-- [**Documentazione Core Sistema**](../../../../../../../docs/core/)
-- [**PHPStan Guide**](../../../../../../../docs/core/phpstan-guide.md)
-- [**Filament Best Practices**](../../../../../../../docs/core/filament-best-practices.md)
-- [**Convenzioni Sistema**](../../../../../../../docs/core/conventions.md)
-- [**Template Moduli**](../../../../../../../docs/templates/)
+- [**Documentazione Core Sistema**](../../docs/core/)
+- [**PHPStan Guide**](../../docs/core/phpstan-guide.md)
+- [**Filament Best Practices**](../../docs/core/filament-best-practices.md)
+- [**Convenzioni Sistema**](../../docs/core/conventions.md)
+- [**Template Moduli**](../../docs/templates/)
 
 ---
 
