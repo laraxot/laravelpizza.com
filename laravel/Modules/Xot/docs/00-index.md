@@ -12,6 +12,7 @@
 - [XotBase Classes & Inheritance Patterns](./xotbase-inheritance-patterns.md)
 - [Service Provider Architecture](./service-provider-architecture.md)
 - [Module Dependency Management](./composer-module-dependency-management.md)
+- [Composer Packages Reference](../../../docs/composer-packages-reference.md) - Mappatura pacchetti per modulo
 - [Database Connection Configuration](./database-connection-configuration.md)
 
 ### Development Standards

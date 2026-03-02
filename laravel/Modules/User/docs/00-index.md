@@ -33,6 +33,14 @@
 ## 🧹 **Manutenzione**
 - 🗑️ **[Cleanup Plan](./todo.md)** - Strategia per gestire i 550+ documenti accumulati.
 
+## 📦 **Pacchetti Composer**
+- [Riferimento completo](../../../docs/composer-packages-reference.md)
+- `laravel/passport` - OAuth2 API
+- `socialiteproviders/microsoft`, `socialiteproviders/auth0` - OAuth
+- `flowframe/laravel-trend` - Statistiche
+- `jenssegers/agent` - User-Agent
+- `spatie/laravel-personal-data-export` - Export GDPR
+
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Core per la gestione dei trait `HasTeams`.
 - [Tenant](../../tenant/docs/readme.md) - Risoluzione del Tenant corrente per l'utente.

@@ -31,6 +31,13 @@
 ## 🧹 **Manutenzione**
 - 🗑️ **[Cleanup Plan](./docs-naming-convention-fix.md)** - Rimozione dei 260+ file obsoleti.
 
+## 📦 **Pacchetti Composer**
+- [Riferimento completo](../../../docs/composer-packages-reference.md)
+- `mcamara/laravel-localization` - URL localizzati
+- `lara-zeus/spatie-translatable` - Campi Filament tradotti
+- `rinvex/countries` - Dati paesi
+- `spatie/laravel-sluggable` - Slug multilingua
+
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Base framework e classi `XotBaseChartWidget`.
 - [UI](../../ui/docs/readme.md) - Componenti Blade e Filament che consumano le traduzioni.

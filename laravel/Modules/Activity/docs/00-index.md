@@ -23,6 +23,11 @@
 - 🔬 **[Testing Strategy](./testing-strategy-implementation.md)** - Approccio Pest/PHPUnit per il modulo.
 - 🧹 **[PHPMD Fixes](./phpmd-fixes.md)** - Risoluzione dei problemi di complessità cicromatica.
 
+## 📦 **Pacchetti Composer**
+- [Riferimento completo](../../../docs/composer-packages-reference.md)
+- `spatie/laravel-activitylog` - Audit trail
+- `spatie/laravel-event-sourcing` - Event sourcing, CQRS
+
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Core framework.
 - [Tenant](../../tenant/docs/readme.md) - Isolamento dati per tenant.
