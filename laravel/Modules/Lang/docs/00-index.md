@@ -32,7 +32,7 @@
 - 🗑️ **[Cleanup Plan](./docs-naming-convention-fix.md)** - Rimozione dei 260+ file obsoleti.
 
 ## 📦 **Pacchetti Composer**
-- [Riferimento completo](../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../docs/architecture/composer-packages-full-inventory.md)
+- [Riferimento completo](../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../docs/architecture/composer-packages-full-inventory.md)
 - [Package Dependency Chaos Map](./package-dependency-chaos-map.md)
 - `mcamara/laravel-localization` - URL localizzati
 - `lara-zeus/spatie-translatable` - Campi Filament tradotti

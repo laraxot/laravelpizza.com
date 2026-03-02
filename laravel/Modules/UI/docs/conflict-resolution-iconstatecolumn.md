@@ -68,7 +68,7 @@ Il file `Modules/UI/app/Filament/Tables/Columns/IconStateColumn.php` presenta co
 
 - [selectstatecolumn.md](selectstatecolumn.md)
 - [table-components.md](table-components.md)
-- [Modules/UI/docs/](../docs/)
+- [Modules/UI/docs/](../../docs/)
 
 # Risoluzione Conflitto IconStateColumn.php
 

@@ -1,6 +1,6 @@
 # Standard UI Components in il progetto
 
-> **Nota**: Questo documento è una copia sincronizzata di [/docs/implementazione/standard_ui_components.md](../../../../docs/implementazione/standard_ui_components.md)
+> **Nota**: Questo documento è una copia sincronizzata di [/docs/implementazione/standard_ui_components.md](../../../../../docs/implementazione/standard_ui_components.md)
 >
 > Per modifiche, aggiornare il file originale e sincronizzare le modifiche qui.
 

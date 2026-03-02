@@ -3,7 +3,7 @@
 ## Riferimento Principale
 
 Per la documentazione completa delle convenzioni di naming dei test, consultare:
-- [../../../../docs/testing/naming-conventions.md](../../../../docs/testing/naming-conventions.md)
+- [../../../../../docs/testing/naming-conventions.md](../../../../../docs/testing/naming-conventions.md)
 
 ## Applicazione al Modulo Cms
 
@@ -119,6 +119,6 @@ find tests -type f -name "*.php" | grep -E "(test\.php|test\.pest\.php)" | grep 
 
 ### Collegamenti Correlati
 
-- [../../../../docs/testing/naming-conventions.md](../../../../docs/testing/naming-conventions.md) - Documentazione completa
+- [../../../../../docs/testing/naming-conventions.md](../../../../../docs/testing/naming-conventions.md) - Documentazione completa
 - [../auth/testing-patterns.md](../auth/testing-patterns.md) - Pattern test autenticazione
 - [../phpstan_fixes_cms.md](../phpstan_fixes_cms.md) - Correzioni PHPStan modulo Cms

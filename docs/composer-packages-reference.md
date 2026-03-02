@@ -2,6 +2,12 @@
 
 Mappatura completa dei pacchetti Composer per modulo. Il progetto usa `wikimedia/composer-merge-plugin` per unire `laravel/composer.json` con `Modules/*/composer.json`.
 
+Inventario installato (source-of-truth, da `composer show -f json`):
+
+- [packages/index.md](./packages/index.md)
+
+Nota: `dependencies.md` è lock-based (da `composer.lock`) e può divergere dallo stato installato se c'è drift.
+
 ## Comando aggiornamento dipendenze
 
 ```bash

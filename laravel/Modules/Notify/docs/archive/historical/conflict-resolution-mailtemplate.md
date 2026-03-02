@@ -69,7 +69,7 @@ Verificare che:
 - [SMS Implementation Guide](sms_implementation.md)
 - [Mail Templates Structure](mail_templates_structure.md)
 - [Translation Standards](translation_standards.md)
-- [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
+- [Root Conflict Resolution Guidelines](../../../../../../docs/conflict-resolution-guidelines.md)
 
 # Risoluzione Conflitti MailTemplate.php
 

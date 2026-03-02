@@ -226,7 +226,7 @@ array<string, mixed> $attributes
 
 - [Xot - PHPStan Missing Array Types](../xot/docs/phpstan-missing-array-types-fixes.md)
 - [Xot - PHPStan Critical Rules](../xot/docs/phpstan-critical-rules.md)
-- [docs_project - PHPStan Intouchable Rule](../../../docs_project/phpstan-intouchable-rule.md)
+- [docs_project - PHPStan Intouchable Rule](../../../../docs_project/phpstan-intouchable-rule.md)
 
 ---
 

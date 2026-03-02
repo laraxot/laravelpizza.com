@@ -134,7 +134,7 @@ namespace Modules\Job\App\Filament\Resources;
 - [Report PHPStan](/docs/phpstan/)
 - [Documentazione Xot](laravel/modules/xot/docs/readme.md)
 - [Documentazione UI](laravel/modules/ui/docs/readme.md)
-- [Convenzioni dei Namespace](laravel/docs/module_namespace_rules.md)
+- [Convenzioni dei Namespace](docs/module_namespace_rules.md)
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/docs/structure.md)

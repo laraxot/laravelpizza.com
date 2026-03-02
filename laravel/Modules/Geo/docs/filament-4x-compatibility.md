@@ -100,7 +100,7 @@ TextInput::make('lng')
 
 ## 🔗 Collegamenti
 
-- [Rapporto Aggiornamento Filament 4.x](../../docs/filament_4x_upgrade_report.md)
+- [Rapporto Aggiornamento Filament 4.x](../../../../../docs/filament_4x_upgrade_report.md)
 - [Guida Ufficiale Filament 4.x](https://filamentphp.com/docs/4.x/upgrade-guide)
 - [Pacchetto Google Maps](https://github.com/cheesegrits/filament-google-maps)
 

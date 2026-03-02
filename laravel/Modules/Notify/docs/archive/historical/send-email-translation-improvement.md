@@ -278,10 +278,10 @@ php -l Modules/Notify/lang/it/send_email.php
 ## 🔗 Collegamenti
 
 ### Documentazione Correlata
-- [Regole Traduzioni Laraxot](../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../docs/filament-best-practices.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
+- [Regole Traduzioni Laraxot](../../../../../../docs/translation-standards.md)
+- [Best Practice Filament](../../../../../../docs/filament-best-practices.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
 - [Best Practice Filament](../../../project_docs/filament-best-practices.md)
-- [Best Practice Filament](../../../docs/filament-best-practices.md)
+- [Best Practice Filament](../../../../../../docs/filament-best-practices.md)
 - [Struttura Modulo Notify](./readme.md)
 
 ### File Modificati
@@ -562,11 +562,11 @@ php -l Modules/Notify/lang/it/send_email.php
 ## 🔗 Collegamenti
 
 ### Documentazione Correlata
-- [Regole Traduzioni Laraxot](../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../docs/filament-best-practices.md)
+- [Regole Traduzioni Laraxot](../../../../../../docs/translation-standards.md)
+- [Best Practice Filament](../../../../../../docs/filament-best-practices.md)
 - [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
 - [Best Practice Filament](../../../project_docs/filament-best-practices.md)
-- [Best Practice Filament](../../../docs/filament-best-practices.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
+- [Best Practice Filament](../../../../../../docs/filament-best-practices.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
 - [Struttura Modulo Notify](./readme.md)
 
 ### File Modificati

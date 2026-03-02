@@ -115,7 +115,7 @@ Ogni metodo di test implementa:
 - [AWS Test Page Class](../app/Filament/Clusters/Test/Pages/AwsTest.php)
 - [Test Results Component](../resources/views/filament/components/test-results.blade.php)
 - [AWS Test Translations](../lang/it/aws_test.php)
-- [Root Docs: AWS Testing](../../../docs_project/aws-testing.md)
+- [Root Docs: AWS Testing](../../../../docs_project/aws-testing.md)
 
 ## Best Practice Seguite
 

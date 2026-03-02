@@ -33,6 +33,6 @@ Vedi file: `Modules/Cms/app/Http/Livewire/Page/Show.php`
 ---
 
 ## Collegamenti
-- [Indice CMS](../../../../docs/modules/cms.md)
+- [Indice CMS](../../../../../docs/modules/cms.md)
 
 > Aggiornato da Windsurf AI il 17/04/2025

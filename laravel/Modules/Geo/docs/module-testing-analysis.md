@@ -369,7 +369,7 @@ Questo documento fornisce un'analisi completa dello stato attuale di factory, se
 
 ### Documentazione Root
 - [README Principale](../readme.md)
-- [Analisi Testing](../docs/module-testing-analysis.md)
+- [Analisi Testing](../../docs/module-testing-analysis.md)
 
 ---
 

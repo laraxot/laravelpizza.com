@@ -69,21 +69,21 @@ grep -r "interface.*Contract" --include="*.php" /var/www/html/_bases/base_techpl
 ## Riferimenti
 
 - [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
-- [PTVX Code Quality Guidelines](/var/www/html/_bases/base_ptvx_fila5_mono/laravel/docs/code-quality.md)
+- [PTVX Code Quality Guidelines](/var/www/html/_bases/base_ptvx_fila5_mono/docs/code-quality.md)
 - [Modulo Xot Contracts](/var/www/html/_bases/base_ptvx_fila5_mono/laravel/Modules/Xot/app/Contracts/)
 <<<<<<< HEAD
-- [Laraxot Code Quality Guidelines](/var/www/html/ptvx/laravel/docs/code-quality.md)
+- [Laraxot Code Quality Guidelines](/var/www/html/ptvx/docs/code-quality.md)
 - [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
 - [Laraxot Code Quality Guidelines](/var/www/html/ptvx/laravel/project_docs/code-quality.md)
 - [Modulo Xot Contracts](/var/www/html/ptvx/laravel/Modules/Xot/app/Contracts/)
-- [Laraxot Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [Laraxot Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
 - [Laraxot Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/project_docs/code-quality.md)
 =======
-- [healthcare_app Code Quality Guidelines](/var/www/html/healthcare_app/laravel/docs/code-quality.md)
+- [healthcare_app Code Quality Guidelines](/var/www/html/healthcare_app/docs/code-quality.md)
 - [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
 - [healthcare_app Code Quality Guidelines](/var/www/html/healthcare_app/laravel/project_docs/code-quality.md)
 - [Modulo Xot Contracts](/var/www/html/healthcare_app/laravel/Modules/Xot/app/Contracts/)
-- [healthcare_app Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
+- [healthcare_app Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/docs/code-quality.md)- [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)
 - [healthcare_app Code Quality Guidelines](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/project_docs/code-quality.md)
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - [Modulo Xot Contracts](/var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Xot/app/Contracts/)

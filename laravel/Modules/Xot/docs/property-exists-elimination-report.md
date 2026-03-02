@@ -624,8 +624,8 @@ Implementare:
 ## 🔗 Collegamenti
 
 **Documentazione Root**:
-- [../../../docs/code-quality/eloquent-magic-properties.md](../../../docs/code-quality/eloquent-magic-properties.md)
-- [../../../docs/phpstan/level-10-guide.md](../../../docs/phpstan/level-10-guide.md)
+- [../../../../../../docs/code-quality/eloquent-magic-properties.md](../../../../../../docs/code-quality/eloquent-magic-properties.md)
+- [../../../../../../docs/phpstan/level-10-guide.md](../../../../../../docs/phpstan/level-10-guide.md)
 
 **Documentazione Moduli**:
 - [User/docs/phpstan-level10-fixes.md](../../user/docs/phpstan-level10-fixes.md)

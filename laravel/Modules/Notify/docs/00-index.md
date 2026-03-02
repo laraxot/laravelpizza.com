@@ -16,7 +16,7 @@
 
 ## ⚙️ **Configurazione Avanzata**
 - 📦 **[Composer Dependencies](./composer-dependencies.md)** - Firebase, FCM, Telegram: package nel modulo Notify, mai nel root.
-- 📦 **[Riferimento pacchetti](../../../docs/composer-packages-reference.md)** | [Inventario 312 pacchetti](../../../docs/architecture/composer-packages-full-inventory.md) - AWS, Telegram, Postmark, Spatie mail templates
+- 📦 **[Riferimento pacchetti](../../../../../../docs/composer-packages-reference.md)** | [Inventario 312 pacchetti](../../../../../../docs/architecture/composer-packages-full-inventory.md) - AWS, Telegram, Postmark, Spatie mail templates
 - 🛠️ **[Channel Provider](./provider-actions-architecture.md)** - Come estendere il modulo con nuovi driver.
 - 🏷️ **[Acronym Naming](./acronym-naming-conventions.md)** - Standard per la denominazione dei driver e canali.
 - 🔄 **[Queue Management](./monitoring.md)** - Monitoraggio delle code e dei fallback.

@@ -142,5 +142,5 @@ return [
 ## Collegamenti
 - [UI Module Icons](../laravel/modules/ui/docs/icons.md)
 - [Filament Icon Registration](../laravel/modules/xot/docs/filament-assets.md)
-- [Accessibility Guidelines](../docs/accessibility-standards.md)
+- [Accessibility Guidelines](../../docs/accessibility-standards.md)
 

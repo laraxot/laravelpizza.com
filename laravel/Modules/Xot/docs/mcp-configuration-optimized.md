@@ -352,7 +352,7 @@ npm install -g @executeautomation/playwright-mcp-server
 
 - [MCP Servers Configuration](./mcp-servers-configuration.md) - Configurazione generale MCP
 - [MCP Servers Complete List](./mcp-servers.md) - Lista completa server disponibili
-- [Project Understanding Consolidated](../../../../docs/project-understanding-consolidated.md) - Panoramica progetto
+- [Project Understanding Consolidated](../../../../../../../docs/project-understanding-consolidated.md) - Panoramica progetto
 
 ### External Resources
 

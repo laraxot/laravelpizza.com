@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Gdpr\Tests\Feature;
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Gdpr\Models\Profile;
 use Modules\Gdpr\Models\Treatment;

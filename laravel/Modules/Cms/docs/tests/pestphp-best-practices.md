@@ -328,7 +328,7 @@ Applicando questi pattern abbiamo ottenuto:
 - [Registration Widget Test Strategy](./registration-widget-test-strategy.md)
 
 ### **Root Documentation**
-- [Testing Organization](../../../../docs/testing-organization.md)
+- [Testing Organization](../../../../../docs/testing-organization.md)
 - [<nome progetto> Testing Architecture](../../../<nome progetto>/docs/testing.md)
 
 ---

@@ -1,9 +1,9 @@
 # Indice della Documentazione - Modulo Cms
 
 ## Collegamenti Correlati
-- [Documentazione Generale <nome progetto>](../../../../docs/readme.md)
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/documentation_standards.md)
+- [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)
+- [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
+- [Standard di Documentazione](../../../../../docs/documentation_standards.md)
 - [Modulo Xot](../../xot/docs/readme.md)
 - [Modulo User](../../user/docs/readme.md)
 - [Modulo UI](../../ui/docs/readme.md)

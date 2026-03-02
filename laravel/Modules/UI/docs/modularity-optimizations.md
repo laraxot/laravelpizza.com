@@ -210,7 +210,7 @@ Dopo l'ottimizzazione completa, i comandi devono restituire **0 occorrenze**.
 
 ## Documentazione Correlata
 
-- [Root Docs: Modularity Hardcoded Names](../../../docs/modularity-hardcoded-names.md)
+- [Root Docs: Modularity Hardcoded Names](../../../../../../docs/modularity-hardcoded-names.md)
 - [Regole Cursor: Modularity Rules](../../../.cursor/rules/modularity-hardcoded-names.mdc)
 - [UI Architecture Overview](./architecture-overview.md)
 - [UI Best Practices](./best-practices/readme.md)

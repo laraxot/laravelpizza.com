@@ -276,8 +276,8 @@ php phpmd.phar Modules/UI/database/factories text cleancode,codesize,controversi
 
 - [← UI Module README](../readme.md)
 - [← Components Documentation](./components.md)
-- [← Project Roadmap](../../../docs/project-analysis-and-roadmap.md)
-- [← Root Documentation](../../../docs/index.md)
+- [← Project Roadmap](../../../../../../docs/project-analysis-and-roadmap.md)
+- [← Root Documentation](../../../../../../docs/index.md)
 
 ---
 

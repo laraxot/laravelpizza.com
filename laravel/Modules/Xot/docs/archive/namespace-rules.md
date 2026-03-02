@@ -91,7 +91,7 @@ Se incontri errori come `name is empty on [Modules\NomeModulo\Providers\RouteSer
   - [Notify Namespace Rules](../../notify/docs/namespace_rules.md)
 
 ## Collegamenti
-- [Regole Namespace Moduli - Root Docs](../../../docs/namespace-moduli.md)
+- [Regole Namespace Moduli - Root Docs](../../../../../../docs/namespace-moduli.md)
 
 ---
 

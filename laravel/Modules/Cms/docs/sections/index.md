@@ -5,9 +5,9 @@
 - [README CMS](../readme.md)
 - [Sezioni](../sections.md)
 - [Gestione Sezioni](../section-management.md)
-- [Documentazione Generale](../../../../../docs/readme.md)
-- [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)
-- [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
+- [Documentazione Generale](../../../../../../docs/readme.md)
+- [Documentazione Generale <nome progetto>](../../../../../../docs/readme.md)
+- [Collegamenti Documentazione](../../../../../../docs/collegamenti-documentazione.md)
 - [Implementazione nell'UI](../../../ui/docs/sections/index.md)
 - [Implementazione nel Tema One](../../../../themes/one/docs/sections/index.md)
 

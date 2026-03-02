@@ -273,7 +273,7 @@ RadioCardSelector::make('item')
 
 - [Widget FindDoctorAndAppointment](../../../../modules/<nome progetto>/docs/widgets/find-doctor-widget-studio-step-analysis.md)
 - [Componenti UI Overview](../components.md)
-- [Best Practices Filament](../../../../docs/filament-best-practices.md)
+- [Best Practices Filament](../../../../../../../docs/filament-best-practices.md)
 
 ---
 

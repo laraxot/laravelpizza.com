@@ -8,4 +8,4 @@ La **documentazione canonica** (aggiornata e senza duplicazioni) è in:
 
 Link diretto (relativo da questo file):
 
-- [Filament Extension Rules (Architecture)](../../../docs/architecture/filament-extension-rules.md)
+- [Filament Extension Rules (Architecture)](../../../../../../docs/architecture/filament-extension-rules.md)

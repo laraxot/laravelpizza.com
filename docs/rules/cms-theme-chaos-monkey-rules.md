@@ -21,7 +21,7 @@ Regole operative per debug e recovery del frontoffice quando il caos introduce r
 
 ## Riferimenti
 
-- [Modules/Cms/docs/cms-theme-template-runtime-architecture](../../Modules/Cms/docs/cms-theme-template-runtime-architecture.md)
-- [Modules/Cms/docs/chaos-monkey-recovery-playbook](../../Modules/Cms/docs/chaos-monkey-recovery-playbook.md)
-- [Themes/Meetup/docs/chaos-monkey-theme-recovery-playbook](../../Themes/Meetup/docs/chaos-monkey-theme-recovery-playbook.md)
-- [Modules/Meetup/docs/chaos-monkey-event-rendering-playbook](../../Modules/Meetup/docs/chaos-monkey-event-rendering-playbook.md)
+- [Modules/Cms/docs/cms-theme-template-runtime-architecture](../../laravel/Modules/Cms/docs/cms-theme-template-runtime-architecture.md)
+- [Modules/Cms/docs/chaos-monkey-recovery-playbook](../../laravel/Modules/Cms/docs/chaos-monkey-recovery-playbook.md)
+- [Themes/Meetup/docs/chaos-monkey-theme-recovery-playbook](../../laravel/Themes/Meetup/docs/chaos-monkey-theme-recovery-playbook.md)
+- [Modules/Meetup/docs/chaos-monkey-event-rendering-playbook](../../laravel/Modules/Meetup/docs/chaos-monkey-event-rendering-playbook.md)

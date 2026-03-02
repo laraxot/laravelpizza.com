@@ -20,7 +20,7 @@ Sono stati rilevati conflitti Git non risolti nel file `app/Filament/Resources/U
 - Validazione con PHPStan livello 9
 
 ## Collegamenti
-- [Documentazione globale correzioni](../../../docs/modules_analysis.md)
+- [Documentazione globale correzioni](../../../../../../docs/modules_analysis.md)
 
 ---
 

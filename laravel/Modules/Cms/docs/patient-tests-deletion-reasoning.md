@@ -119,7 +119,7 @@ Same applies here:
 ## References
 
 - `laravel/CLAUDE.md` - Project purpose and domain
-- `laravel/docs/testing-session-summary-[DATE].md` - Testing philosophy
+- `docs/testing-session-summary-[DATE].md` - Testing philosophy
 - `Modules/Job/docs/schedule-test-wrong-schema.md` - Precedent for deleting wrong tests
 - `Modules/Xot/docs/testing-philosophy-unified.md` - "Delete fiction" principle
 

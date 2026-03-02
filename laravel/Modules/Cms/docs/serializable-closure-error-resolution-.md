@@ -157,7 +157,7 @@ curl -I http://localhost:8000/en/contacts
 - [Laravel Folio Documentation](https://laravel.com/docs/folio)
 - [Serializable Closure Package](https://github.com/laravel/serializable-closure)
 - [Laravel Routing Middleware](https://laravel.com/docs/middleware)
-- [Multi-language Routing Best Practices](laravel/docs/multi-language-routing.md)
+- [Multi-language Routing Best Practices](docs/multi-language-routing.md)
 
 ## 🔄 Future Considerations
 

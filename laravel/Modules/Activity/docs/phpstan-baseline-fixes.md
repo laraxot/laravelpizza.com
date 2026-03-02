@@ -114,7 +114,7 @@ Ogni file modificato verificato con:
 
 ## Collegamenti
 
-- [Guida PHPStan Level 10](../../docs/phpstan-level10-achievement.md)
+- [Guida PHPStan Level 10](../../../../../docs/phpstan-level10-achievement.md)
 - [Activity Module Overview](./readme.md)
 
 ---

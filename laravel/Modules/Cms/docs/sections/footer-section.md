@@ -117,4 +117,4 @@ Per dettagli su configurazione e template, consulta: [Documentazione Sezione Foo
 ## Collegamenti
 - [Gestione Blocchi](../blocks/readme.md)
 - [Componenti UI](../components/readme.md)
-- [Documentazione Root](../../../../docs/sections.md)
+- [Documentazione Root](../../../../../docs/sections.md)

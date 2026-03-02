@@ -84,9 +84,9 @@ php artisan xot:status
 
 ## 🔗 Related Documentation
 
-- [Laraxot Main Docs](../../docs/ai-guidelines.md) - Documentazione generale
-- [Architecture Rules](../../docs/fundamentals/architecture-rules.md) - Regole critiche
-- [Module Structure](../../docs/fundamentals/module-structure.md) - Come strutturare moduli
+- [Laraxot Main Docs](../../../../../docs/ai-guidelines.md) - Documentazione generale
+- [Architecture Rules](../../../../../docs/fundamentals/architecture-rules.md) - Regole critiche
+- [Module Structure](../../../../../docs/fundamentals/module-structure.md) - Come strutturare moduli
 
 ## 📞 Support
 

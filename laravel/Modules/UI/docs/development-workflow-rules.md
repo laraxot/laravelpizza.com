@@ -148,8 +148,8 @@
 
 - [Xot Philosophy](../xot/docs/philosophy-complete.md)
 - [PSR-4 Autoloading Error Analysis](./psr4-autoloading-error-analysis.md)
-- [Development Guidelines](../../../docs/development/readme.md)
-- [Git Workflow](../../../docs/git-conflict-resolution/readme.md)
+- [Development Guidelines](../../../../../../docs/development/readme.md)
+- [Git Workflow](../../../../../../docs/git-conflict-resolution/readme.md)
 
 ## ⚠️ Consequences of Skipping Steps
 

@@ -5,7 +5,7 @@
 ### ❌ **Violazioni Critiche della `docs-location-policy`**
 
 1. **`/docs/` (Root Repository)**: 100+ file di documentazione
-2. **`/laravel/docs/`**: Cartella docs non conforme alle regole
+2. **`/docs/`**: Cartella docs non conforme alle regole
 
 ### 📊 **Analisi Dettagliata**
 
@@ -75,7 +75,7 @@
 ### **Fase 2: Consolidamento Laravel `/docs/`**
 
 #### 📁 **Modulo Xot** (Standard e Qualità)
-**Spostare da `/laravel/docs/`:**
+**Spostare da `/docs/`:**
 - `documentation-standards.md` → `Modules/Xot/docs/documentation-standards.md`
 - `documentation-quality-report.md` → `Modules/Xot/docs/quality-report.md`
 - `validation-report-20250910.md` → `Modules/Xot/docs/validation-report.md`

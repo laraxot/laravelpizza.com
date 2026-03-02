@@ -350,10 +350,10 @@ class User extends Model
 
 ## 🔗 Collegamenti
 
-- [Documentazione Core](../../../docs/core/)
-- [Best Practices Filament](../../../docs/core/filament-best-practices.md)
-- [Convenzioni Sistema](../../../docs/core/conventions.md)
-- [Template Modulo](../../../docs/templates/module-template.md)
+- [Documentazione Core](../../../../../../docs/core/)
+- [Best Practices Filament](../../../../../../docs/core/filament-best-practices.md)
+- [Convenzioni Sistema](../../../../../../docs/core/conventions.md)
+- [Template Modulo](../../../../../../docs/templates/module-template.md)
 
 ---
 

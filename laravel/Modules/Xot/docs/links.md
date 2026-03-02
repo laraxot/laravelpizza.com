@@ -168,9 +168,9 @@
 # Collegamenti Documentazione Modulo Xot
 
 ## Documentazione Generica
-- [README](../docs/readme.md) - Documentazione principale del progetto
-- [Roadmap](../docs/roadmap.md) - Piano di sviluppo
-- [Filosofia](../docs/filosofia.md) - Principi e filosofia del progetto
+- [README](../../docs/readme.md) - Documentazione principale del progetto
+- [Roadmap](../../docs/roadmap.md) - Piano di sviluppo
+- [Filosofia](../../docs/filosofia.md) - Principi e filosofia del progetto
 
 ## Documentazione Tecnica
 - [Regole di Progetto](./rules/prompt_rules.md)

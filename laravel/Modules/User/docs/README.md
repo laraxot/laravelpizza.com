@@ -83,7 +83,7 @@ public function getMobileDeviceTokens(): Collection
 4. **PHPDoc Precision**: Usare `non-empty-string` quando appropriato, non solo `string`
 
 ### Documentazione Correlata
-- [PHPStan Level 10 Success](../../../docs/phpstan-level-10-success.md) - Achievement generale progetto
+- [PHPStan Level 10 Success](../../../../../../docs/phpstan-level-10-success.md) - Achievement generale progetto
 - [Xot PHPStan Patterns](../../xot/docs/phpstan-patterns-dec-2025.md) - Pattern comuni
 
 ---
@@ -1103,7 +1103,7 @@ See [ROADMAP.md](./roadmap.md) for details.
 - [AI Agents Guide](../../../../agents.md)
 - [Cursor Rules & Skills](../../../../.cursor/readme.md)
 - [Skills di progetto](../../../../.cursor/skills/)
-- [Security Guidelines](../../../docs/security.md)
+- [Security Guidelines](../../../../../../docs/security.md)
 
 ### CI & Semantic Versioning
 Workflow locale del modulo in `.github/workflows/semantic-versioning.yml`.

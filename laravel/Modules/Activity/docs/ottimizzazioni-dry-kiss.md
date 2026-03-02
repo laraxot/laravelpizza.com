@@ -362,6 +362,6 @@ protected function registerConfig(): void
 - **Maintainability**: +60% codice più semplice
 
 ## Collegamenti
-- [Template Standardizzato](../../docs/template-modulo-standardizzato.md)
-- [Ottimizzazioni Master](../../docs/ottimizzazioni-modulari-master.md)
+- [Template Standardizzato](../../../../../docs/template-modulo-standardizzato.md)
+- [Ottimizzazioni Master](../../../../../docs/ottimizzazioni-modulari-master.md)
 - [Modulo UI](../ui/docs/ottimizzazioni-dry-kiss.md)

@@ -145,8 +145,8 @@ Per domande o problemi con i componenti Filament:
 
 ## Collegamenti correlati
 
-- [Regole per l'uso dei componenti Filament](../../../../docs/rules/filament-components.mdc)
-- [Documentazione Filament nel CMS](../../../../docs/filament/componenti-blade.md)
+- [Regole per l'uso dei componenti Filament](../../../../../docs/rules/filament-components.mdc)
+- [Documentazione Filament nel CMS](../../../../../docs/filament/componenti-blade.md)
 - [Convenzioni namespace Filament](../convenzioni-namespace-filament.md)
 - [Personalizzazioni avanzate Filament](../filament-personalizzazioni-avanzate.md)
 

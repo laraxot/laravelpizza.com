@@ -2,7 +2,7 @@
 
 ## Panoramica
 
-Questo report documenta il progresso del consolidamento della documentazione secondo la `docs-location-policy` che vieta le cartelle `docs/` nella root del repository e in `laravel/docs/`.
+Questo report documenta il progresso del consolidamento della documentazione secondo la `docs-location-policy` che vieta le cartelle `docs/` nella root del repository e in `docs/`.
 
 ## Stato Attuale
 
@@ -10,7 +10,7 @@ Questo report documenta il progresso del consolidamento della documentazione sec
 
 1. **Analisi Completa**
    - Identificate oltre 100 violazioni della policy in `/docs/` root
-   - Identificate violazioni in `/laravel/docs/`
+   - Identificate violazioni in `/docs/`
    - Audit completo della documentazione esistente nei moduli
 
 2. **Piano di Consolidamento**
@@ -137,7 +137,7 @@ laravel/
 
 ### 1. Docs Location Policy
 - ❌ VIETATO: `docs/` nella root del repository
-- ❌ VIETATO: `laravel/docs/`
+- ❌ VIETATO: `docs/`
 - ✅ CONSENTITO: `laravel/Modules/ModuleName/docs/`
 
 ### 2. Modulo Xot come Hub

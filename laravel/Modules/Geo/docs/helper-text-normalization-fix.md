@@ -87,9 +87,9 @@ php docs/helper-text-audit-script.php
 - ✅ Script di audit automatico creato per controlli futuri
 
 ### Collegamenti Bidirezionali
-- [Documentazione Centrale Traduzioni](../../../docs/translation-field-structure-complete.md)
-- [Script Audit Helper Text](../../../docs/helper-text-audit-script.php)
-- [Memoria Regola Critica](../../../docs/translation-refactor-complete-summary-[date].md)
+- [Documentazione Centrale Traduzioni](../../../../../../docs/translation-field-structure-complete.md)
+- [Script Audit Helper Text](../../../../../../docs/helper-text-audit-script.php)
+- [Memoria Regola Critica](../../../../../../docs/translation-refactor-complete-summary-[date].md)
 
 ## Validazione
 
@@ -232,9 +232,9 @@ php docs/helper-text-audit-script.php
 - ✅ Script di audit automatico creato per controlli futuri
 
 ### Collegamenti Bidirezionali
-- [Documentazione Centrale Traduzioni](../../../docs/translation-field-structure-complete.md)
-- [Script Audit Helper Text](../../../docs/helper-text-audit-script.php)
-- [Memoria Regola Critica](../../../docs/translation-refactor-complete-summary-2025-08-08.md)
+- [Documentazione Centrale Traduzioni](../../../../../../docs/translation-field-structure-complete.md)
+- [Script Audit Helper Text](../../../../../../docs/helper-text-audit-script.php)
+- [Memoria Regola Critica](../../../../../../docs/translation-refactor-complete-summary-2025-08-08.md)
 
 ## Validazione
 

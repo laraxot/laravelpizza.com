@@ -78,4 +78,4 @@ Per aggiungere un nuovo tipo di blocco:
 
 **Documentazione Correlata**
 
-- [Documentazione principale della homepage](../../../../docs/gestione-homepage.md)
+- [Documentazione principale della homepage](../../../../../docs/gestione-homepage.md)

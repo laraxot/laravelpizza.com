@@ -75,7 +75,7 @@
 
 ## Collegamenti
 
-- [Audit Generale Traduzioni Navigation](../../docs/navigation-translations-audit.md)
+- [Audit Generale Traduzioni Navigation](../../../../../docs/navigation-translations-audit.md)
 - [Regole Traduzioni Laraxot](../xot/docs/translation-rules.md)
 - [Standard Qualità Traduzioni](../<nome progetto>/docs/translation-quality-standards.md)
 - [Documentazione Modulo User](readme.md)

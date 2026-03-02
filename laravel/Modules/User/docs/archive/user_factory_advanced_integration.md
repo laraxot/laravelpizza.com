@@ -323,8 +323,8 @@ public function run(): void
 
 ### Root Documentation  
 <<<<<<< HEAD
-- [UserFactory Laraxot Integration](../../../../docs/userfactory_ptvx_integration.md)
+- [UserFactory Laraxot Integration](../../../../../../../docs/userfactory_ptvx_integration.md)
 =======
-- [UserFactory healthcare_app Integration](../../../../docs/userfactory_healthcare_app_integration.md)
+- [UserFactory healthcare_app Integration](../../../../../../../docs/userfactory_healthcare_app_integration.md)
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
-- [Testing Standards](../../../../docs/testing_standards.md) 
+- [Testing Standards](../../../../../../../docs/testing_standards.md) 

@@ -1,6 +1,6 @@
 # Xot Module - Filament v4 Upgrade Notes
 
-This document outlines specific considerations and changes for the `Xot` module, particularly concerning its foundational `XotBaseSection` component, during the Filament v4 upgrade process. For a comprehensive overview of the Filament v4 upgrade, refer to the main project documentation: [`docs/filament_v4_upgrade.md`](../../../docs/filament_v4_upgrade.md).
+This document outlines specific considerations and changes for the `Xot` module, particularly concerning its foundational `XotBaseSection` component, during the Filament v4 upgrade process. For a comprehensive overview of the Filament v4 upgrade, refer to the main project documentation: [`docs/filament_v4_upgrade.md`](../../../../../../docs/filament_v4_upgrade.md).
 
 ## **Key Changes and Action Items for `Xot` Module**
 

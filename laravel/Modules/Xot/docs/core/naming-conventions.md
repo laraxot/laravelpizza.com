@@ -314,8 +314,8 @@ parameters:
 ## 🔗 Collegamenti
 
 - [Architettura Modulo Xot](architecture.md)
-- [Best Practices Sistema](../../../docs/core/best-practices.md)
-- [Convenzioni Sistema](../../../docs/core/conventions.md)
+- [Best Practices Sistema](../../../../../../docs/core/best-practices.md)
+- [Convenzioni Sistema](../../../../../../docs/core/conventions.md)
 - [PHPStan Guide](../development/phpstan-guide.md)
 
 ---

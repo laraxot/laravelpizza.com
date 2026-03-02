@@ -216,4 +216,4 @@ it('renders filament icon buttons for social links', function () {
 * [filament-components.md](laravel/modules/user/docs/best-practices/filament-components.md)
 * [filament-components.md](laravel/modules/cms/docs/best-practices/filament-components.md)
 * [filament-components.md](laravel/modules/cms/docs/filament-components.md)
-* [filament-components.md](laravel/docs/rules/filament-components.md)
+* [filament-components.md](docs/rules/filament-components.md)
