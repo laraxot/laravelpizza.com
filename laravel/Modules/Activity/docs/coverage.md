@@ -1,31 +1,29 @@
-Activity Module - Code Coverage Report
-=====================================
+# Activity Module - Code Coverage
 
-Summary:
---------
-- Total Tests Passed: 171
-- Total Assertions: 864
-- Files Analyzed: 2,476
-- Lines of Code: 185,194
-- Classes: 2,041
-- Methods: 7,059
-- Covered Methods: 0
-- Covered Statements: 0
-- Coverage Rate: 0.00%
+## Percentuale coverage
 
-Detailed Coverage:
-------------------
-The tests for the Activity module are passing but show 0% code coverage. This indicates that while the tests verify structural and configuration aspects, they do not execute the actual application code paths during testing.
+**~5%** (stima su suite root: 2 test)
 
-Coverage by Category:
----------------------
-- Unit Tests: Executing but not covering application code
-- Feature Tests: Executing but not covering application code  
-- Integration Tests: Executing but not covering application code
-- Business Logic Tests: Executing but not covering application code
-- Event Sourcing Tests: Executing but not covering application code
-- Filament Resource Tests: Executing but not covering application code
-- Model Tests: Executing but not covering application code
-- Action Tests: Executing but not covering application code
+## Contesto misurazione
 
-Status: Tests passing but low code path coverage
+- **Suite eseguita**: `tests/Unit` + `tests/Feature` (root)
+- **Test moduli**: i test in `Modules/Activity/tests/` non sono inclusi nella suite PHPUnit
+- **File analizzati**: solo `Modules/Activity/app/` (config, database, resources esclusi)
+
+## Riflessioni
+
+1. **Test moduli isolati**: Activity ha test unit e feature propri; la suite root non li esegue, quindi il coverage globale sottostima il reale.
+2. **Punti coperti indirettamente**: `Activity`, `Snapshot`, `RouteServiceProvider`, pagine Create/Edit Filament risultano al 100% quando bootstrap/app carica i moduli.
+3. **Gap principali**: Actions (LogActivity, LogModel*, RestoreActivity), Listeners, Policies, trait HasEvents.
+4. **Priorità**: coprire `LogActivityAction`, `ActivityLogger` e listener login/logout; poi Policies e trait.
+
+## Comando verifica
+
+```bash
+cd laravel && php artisan test --coverage --min=0
+```
+
+## Collegamenti
+
+- [testing](../testing/)
+- [architecture-reference](../architecture-reference.md)

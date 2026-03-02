@@ -1,82 +1,28 @@
-# Code Coverage: Job
+# Job Module - Code Coverage
 
-**Lines Coverage:** N/A (Failed to parse)
-**Test Exit Code:** 2
+## Percentuale coverage
 
-## Output
+**~2%** (stima su suite root: 2 test)
 
-```text
-▕             }
-    1119▕         }
-    1120▕ 
-    1121▕         try {
-  ➜ 1122▕             $reflector = new ReflectionClass($concrete);
-    1123▕         } catch (ReflectionException $e) {
-    1124▕             throw new BindingResolutionException("Target class [$concrete] does not exist.", 0, $e);
-    1125▕         }
-    1126▕
+## Contesto misurazione
 
-      [2m+7 vendor frames [22m
-  8   Modules/Job/tests/Feature/TaskFrequenciesIntegrationTest.php:204
+- **Suite eseguita**: `tests/Unit` + `tests/Feature` (root)
+- **Test moduli**: i test in `Modules/Job/tests/` non sono inclusi nella suite PHPUnit
+- **File analizzati**: solo `Modules/Job/app/`
 
-  ──────────────────────────────────────────────────────────────────────────────────────  
-   FAILED  Modules\Job\tests\Feature\TaskFrequenciesIntegr…  BindingResolutionException   
-  Target class [config] does not exist.
+## Riflessioni
 
-  at vendor/laravel/framework/src/Illuminate/Container/Container.php:1122
-    1118▕             }
-    1119▕         }
-    1120▕ 
-    1121▕         try {
-  ➜ 1122▕             $reflector = new ReflectionClass($concrete);
-    1123▕         } catch (ReflectionException $e) {
-    1124▕             throw new BindingResolutionException("Target class [$concrete] does not exist.", 0, $e);
-    1125▕         }
-    1126▕
+1. **Modulo job/queue**: monitoraggio job, RouteServiceProvider, EventServiceProvider; coverage basso.
+2. **Punti coperti**: pagine Create/Edit Filament, RouteServiceProvider.
+3. **Gap principali**: JobServiceProvider, Actions, comandi, widget.
+4. **Priorit�**: coprire JobServiceProvider e logica core; poi comandi e widget.
 
-      [2m+7 vendor frames [22m
-  8   Modules/Job/tests/Feature/TaskFrequenciesIntegrationTest.php:211
+## Comando verifica
 
-  ──────────────────────────────────────────────────────────────────────────────────────  
-   FAILED  Modules\Job\tests\Feature\TaskFrequenciesIntegr…  BindingResolutionException   
-  Target class [config] does not exist.
-
-  at vendor/laravel/framework/src/Illuminate/Container/Container.php:1122
-    1118▕             }
-    1119▕         }
-    1120▕ 
-    1121▕         try {
-  ➜ 1122▕             $reflector = new ReflectionClass($concrete);
-    1123▕         } catch (ReflectionException $e) {
-    1124▕             throw new BindingResolutionException("Target class [$concrete] does not exist.", 0, $e);
-    1125▕         }
-    1126▕
-
-      [2m+7 vendor frames [22m
-  8   Modules/Job/tests/Feature/TaskFrequenciesIntegrationTest.php:229
-
-  ──────────────────────────────────────────────────────────────────────────────────────  
-   FAILED  Modules\Job\tests\Unit\Models\BaseModelTest > b…  BindingResolutionException   
-  Unresolvable dependency resolving [Parameter #0 [ <required> string $storedEventRepository ]] in class Spatie\EventSourcing\StoredEvents\EventSubscriber
-
-  at vendor/laravel/framework/src/Illuminate/Container/Container.php:1429
-    1425▕     protected function unresolvablePrimitive(ReflectionParameter $parameter)
-    1426▕     {
-    1427▕         $message = "Unresolvable dependency resolving [$parameter] in class {$parameter->getDeclaringClass()->getName()}";
-    1428▕ 
-  ➜ 1429▕         throw new BindingResolutionException($message);
-    1430▕     }
-    1431▕ 
-    1432▕     /**
-    1433▕      * Register a new before resolving callback for all types.
-
-      [2m+15 vendor frames [22m
-  16  Modules/Job/app/Models/BaseModel.php:72
-  17  Modules/Job/tests/Unit/Models/BaseModelTest.php:11
-
-
-  Tests:    26 failed, 11 warnings, 38 skipped, 20 passed (47 assertions)
-  Duration: 9.72s
-
-
+```bash
+cd laravel && php artisan test --coverage --min=0
 ```
+
+## Collegamenti
+
+- [job-overview](../job-overview.md)

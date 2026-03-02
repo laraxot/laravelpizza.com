@@ -1,24 +1,29 @@
-# Cms Module Test Coverage
+# Cms Module - Code Coverage
 
-## Overview
-This module has comprehensive test coverage with various test types implemented.
+## Percentuale coverage
 
-## Test Results
-- **Tests Passed**: 0
-- **Assertions**: 0
-- **Test Types**: Unit, Feature, Integration tests
+**~3%** (stima su suite root: 2 test)
 
-## Coverage Statistics
-- **Files**: 0
-- **Lines of Code**: 0
-- **Classes**: 0
-- **Methods**: 0
-- **Coverage Rate**: 0%
+## Contesto misurazione
 
-## Test Categories
-- Unit Tests
-- Feature Tests
-- Integration Tests
+- **Suite eseguita**: `tests/Unit` + `tests/Feature` (root)
+- **Test moduli**: i test in `Modules/Cms/tests/` non sono inclusi nella suite PHPUnit
+- **File analizzati**: solo `Modules/Cms/app/`
 
-## Status
-All tests are passing and coverage is being maintained.
+## Riflessioni
+
+1. **Modulo core**: Cms gestisce pagine, blocchi, Folio/Volt; il coverage basso riflette l'assenza dei test Cms nella suite globale.
+2. **Punti coperti**: `LinkData`, `NavbarMenuData`, `ThemeData`, `BaseController`, pagine Create/Edit Filament, `Appearance` cluster.
+3. **Gap principali**: Actions (ResolvePage, ResolveBlockQuery, GetCmsView), blocchi Filament, middleware, componenti Volt.
+4. **Priorità**: coprire `ResolvePageAction`, `ResolveBlockQueryAction`; poi blocchi e middleware Folio.
+
+## Comando verifica
+
+```bash
+cd laravel && php artisan test --coverage --min=0
+```
+
+## Collegamenti
+
+- [content-blocks-system](../content-blocks-system.md)
+- [folio-routing-locale](../folio-routing-locale.md)
