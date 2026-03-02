@@ -25,7 +25,7 @@ describe('XotBaseTransition', function () {
             }
 
             #[Override]
-            public function sendRecipientNotification(null|UserContract $recipient): void
+            public function sendRecipientNotification(?UserContract $recipient): void
             {
                 // Mock implementation
             }
@@ -53,7 +53,7 @@ describe('XotBaseTransition', function () {
                 return '';
             }
 
-            public function getRememberToken(): null|string
+            public function getRememberToken(): ?string
             {
                 return null;
             }
@@ -122,12 +122,12 @@ describe('XotBaseTransition', function () {
 
     it('can send notification to user contract', function () {
         // This should not throw an exception
-        expect(fn() => $this->transition->sendRecipientNotification($this->record))->not->toThrow(Exception::class);
+        expect(fn () => $this->transition->sendRecipientNotification($this->record))->not->toThrow(Exception::class);
     });
 
     it('can send notification to null recipient', function () {
         // This should not throw an exception
-        expect(fn() => $this->transition->sendRecipientNotification(null))->not->toThrow(Exception::class);
+        expect(fn () => $this->transition->sendRecipientNotification(null))->not->toThrow(Exception::class);
     });
 
     it('processes recipients correctly in sendNotifications', function () {
@@ -157,7 +157,7 @@ describe('XotBaseTransition', function () {
                             return '';
                         }
 
-                        public function getRememberToken(): null|string
+                        public function getRememberToken(): ?string
                         {
                             return null;
                         }
@@ -176,7 +176,7 @@ describe('XotBaseTransition', function () {
             }
 
             #[Override]
-            public function sendRecipientNotification(null|UserContract $recipient): void
+            public function sendRecipientNotification(?UserContract $recipient): void
             {
                 // Mock implementation
             }
@@ -213,7 +213,7 @@ describe('XotBaseTransition', function () {
         $recipients = $this->transition->getNotificationRecipients();
 
         foreach ($recipients as $recipient) {
-            if ($recipient !== null) {
+            if (null !== $recipient) {
                 expect($recipient instanceof UserContract || $recipient instanceof Model)->toBeTrue();
             }
         }

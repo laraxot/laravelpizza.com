@@ -17,10 +17,10 @@ use function Safe\preg_match;
  * Centralizes common Pivot configurations and behaviors.
  * The $connection is automatically set based on the child class namespace.
  *
- * @property string|int $id
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property Carbon|null $deleted_at
+ * @property string|int      $id
+ * @property Carbon|null     $created_at
+ * @property Carbon|null     $updated_at
+ * @property Carbon|null     $deleted_at
  * @property string|int|null $created_by
  * @property string|int|null $updated_by
  * @property string|int|null $deleted_by
@@ -63,14 +63,14 @@ abstract class XotBasePivot extends EloquentPivot
     public function getConnectionName(): ?string
     {
         if (isset($this->connection)) {
-            /** @var string */
+            /* @var string */
             return $this->connection;
         }
 
         // Extract module name from namespace: Modules\User\... → user
         $namespace = static::class;
         $matches = [];
-        if (preg_match('/Modules\\\\(\w+)\\\\/', $namespace, $matches) === 1 && isset($matches[1])) {
+        if (1 === preg_match('/Modules\\\\(\w+)\\\\/', $namespace, $matches) && isset($matches[1])) {
             return strtolower($matches[1]);
         }
 

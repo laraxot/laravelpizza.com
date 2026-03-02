@@ -2,10 +2,9 @@
 
 declare(strict_types=1);
 
-use Tests\TestCase;
 use Modules\Xot\Services\ModuleService;
-use Nwidart\Modules\Facades\Module as ModuleFacade;
 use Nwidart\Modules\Module;
+use Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -133,7 +132,7 @@ describe('ModuleService', function () {
         $reflection = new ReflectionClass($this->service);
         $methods = $reflection->getMethods();
 
-        $publicMethods = array_filter($methods, fn($method) => $method->isPublic());
+        $publicMethods = array_filter($methods, fn ($method) => $method->isPublic());
 
         expect(count($publicMethods))->toBeGreaterThan(0);
     });

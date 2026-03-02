@@ -12,12 +12,13 @@ use Modules\Xot\Database\Factories\FeedFactory;
 /**
  * Modules\Xot\Models\Feed.
  *
- * @property string $id
+ * @property string      $id
  * @property string|null $created_by
  * @property string|null $updated_by
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * @method static FeedFactory factory($count = null, $state = [])
+ *
+ * @method static FeedFactory          factory($count = null, $state = [])
  * @method static Builder<static>|Feed newModelQuery()
  * @method static Builder<static>|Feed newQuery()
  * @method static Builder<static>|Feed query()
@@ -26,9 +27,11 @@ use Modules\Xot\Database\Factories\FeedFactory;
  * @method static Builder<static>|Feed whereId($value)
  * @method static Builder<static>|Feed whereUpdatedAt($value)
  * @method static Builder<static>|Feed whereUpdatedBy($value)
- * @property-read ProfileContract|null $creator
- * @property-read ProfileContract|null $deleter
- * @property-read ProfileContract|null $updater
+ *
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $deleter
+ * @property ProfileContract|null $updater
+ *
  * @mixin \Eloquent
  */
 class Feed extends BaseModel

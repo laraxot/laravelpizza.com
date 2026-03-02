@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Traits;
 
-use BackedEnum;
-use UnitEnum;
-
 trait HasDynamicFillable
 {
     /**
@@ -31,7 +28,7 @@ trait HasDynamicFillable
         }
 
         foreach ($dynamicFillableEnums as $enumClass) {
-            if (! is_string($enumClass) || $enumClass === '') {
+            if (! is_string($enumClass) || '' === $enumClass) {
                 continue;
             }
 
@@ -43,8 +40,8 @@ trait HasDynamicFillable
             // Get enum cases' values and merge
             $enumCases = $enumClass::cases();
             $enumFields = array_map(
-                static function (UnitEnum $item): string {
-                    if ($item instanceof BackedEnum) {
+                static function (\UnitEnum $item): string {
+                    if ($item instanceof \BackedEnum) {
                         return (string) $item->value;
                     }
 

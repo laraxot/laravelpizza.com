@@ -184,18 +184,24 @@ abstract class TestCase extends BaseTestCase
 > ```
 > Questo crea tutte le tabelle una volta sola. `DatabaseTransactions` gestisce il rollback tra i test.
 
-## phpunit.xml - Variabili DB Obbligatorie
+## CreatesApplication - Caricamento .env.testing Obbligatorio
 
 **Problema**: Laravel può caricare `.env` invece di `.env.testing` a seconda dell'ordine di bootstrap. Se `env('DB_DATABASE')` restituisce il valore di produzione, `TenantServiceProvider` crea le connessioni modulo (activity, user, ecc.) puntando al DB di produzione. I test falliscono con `Table 'laravelpizza_data.activity_log' doesn't exist` perché cercano nel DB sbagliato.
 
-**Soluzione**: `phpunit.xml` DEVE includere `DB_DATABASE` e `DB_DATABASE_USER` esplicitamente. PHPUnit imposta queste variabili PRIMA del bootstrap dell'app, garantendo che tutte le connessioni usino il DB di test:
+**Soluzione**: Il trait `CreatesApplication` (Modules/Xot/tests/CreatesApplication.php) carica esplicitamente `.env.testing` PRIMA del bootstrap dell'app:
 
-```xml
-<env name="DB_DATABASE" value="laravelpizza_data_test"/>
-<env name="DB_DATABASE_USER" value="laravelpizza_user_test"/>
+```php
+// CRITICAL: Load .env.testing BEFORE app bootstrap
+$envTesting = $basePath.'/.env.testing';
+if (file_exists($envTesting)) {
+    $dotenv = \Dotenv\Dotenv::createImmutable($basePath, '.env.testing', true);
+    $dotenv->safeLoad();
+}
 ```
 
-Vedi [Activity docs: testing-database-wrong-db-error](laravel/Modules/Activity/docs/testing-database-wrong-db-error.md).
+**Backup**: `phpunit.xml` include anche `DB_DATABASE` e `DB_DATABASE_USER` come fallback.
+
+Vedi [memoria env-testing-creates-application](../../../../../.cursor/memories/env-testing-creates-application.md).
 
 ## ❌ TestCase Pattern VIETATO
 

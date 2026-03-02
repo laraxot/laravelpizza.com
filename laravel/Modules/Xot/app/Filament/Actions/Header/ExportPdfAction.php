@@ -26,14 +26,13 @@ class ExportPdfAction extends Action
             ->tooltip(__('xot::actions.export_pdf.tooltip'))
             ->icon('ui-files.pdf')
             ->action(static function (ListRecords $livewire) {
-                
                 $filename =
                     class_basename($livewire).
                     '-'.
                     collect($livewire->tableFilters)->flatten()->implode('-').
                     '.pdf';
                 $query = $livewire->getFilteredTableQuery();
-                if ($query === null) {
+                if (null === $query) {
                     throw new \Exception('Query is null');
                 }
                 $rows = $query->get();

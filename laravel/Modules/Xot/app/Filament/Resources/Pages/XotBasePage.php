@@ -13,7 +13,6 @@ use Filament\Schemas\Schema;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use LogicException;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 
 /**
@@ -22,9 +21,9 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
  * This class provides common functionality for custom pages,
  * following the architectural pattern of never extending Filament classes directly.
  *
- * @property ?string $model
+ * @property ?string              $model
  * @property array<string, mixed> $data
- * @property Schema $form
+ * @property Schema               $form
  */
 abstract class XotBasePage extends FilamentPage implements HasForms
 {
@@ -151,8 +150,8 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      */
     public function getModel(): string
     {
-        if (static::$model === null) {
-            throw new LogicException('Model class not set for page: '.static::class);
+        if (null === static::$model) {
+            throw new \LogicException('Model class not set for page: '.static::class);
         }
 
         /** @var class-string<Model> $model */

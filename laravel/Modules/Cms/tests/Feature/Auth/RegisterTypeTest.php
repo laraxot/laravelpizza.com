@@ -47,7 +47,6 @@ dataset('userTypes', [
         $response = get("/it/auth/{$type}/register");
         expect($response->status())->toBe(302);
     })->with('userTypes');
-});
 
     test(':type registration page contains expected elements', function (string $type): void {
         $response = get("/it/auth/{$type}/register");
@@ -70,7 +69,6 @@ dataset('userTypes', [
             ->toContain('<meta name="viewport"')
             ->toContain('width=device-width');
     })->with('userTypes');
-});
 
     test(':type registration page uses Italian localization', function (string $type): void {
         $response = get("/it/auth/{$type}/register");
@@ -80,7 +78,6 @@ dataset('userTypes', [
         $content = $response->getContent();
         expect($content)->toContain('Registrazione')->toContain('Crea il tuo account');
     })->with('userTypes');
-});
 
     // test('handles invalid user type gracefully', function (): void {
     //    $response = get('/it/auth/invalid-type/register');
@@ -102,4 +99,3 @@ dataset('userTypes', [
         expect($response->status())->toBe(200);
         expect($loadTime)->toBeLessThan(3.0); // Massimo 3 secondi per essere sicuri
     })->with('userTypes');
-});

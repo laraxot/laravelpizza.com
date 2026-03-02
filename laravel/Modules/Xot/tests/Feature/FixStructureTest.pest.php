@@ -2,18 +2,14 @@
 
 declare(strict_types=1);
 
-use Modules\Xot\Tests\TestCase;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
-
-use function Pest\Laravel\artisan;
-use function Pest\Laravel\assertDatabaseHas;
+use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
 
 beforeEach(function () {
     // Create a temporary directory for testing
-    $this->testDir = sys_get_temp_dir() . '/fix_structure_test_' . uniqid();
+    $this->testDir = sys_get_temp_dir().'/fix_structure_test_'.uniqid();
     mkdir($this->testDir, 0o755, true);
 
     // Set the working directory
@@ -31,11 +27,11 @@ function rrmdir($dir)
     if (is_dir($dir)) {
         $objects = scandir($dir);
         foreach ($objects as $object) {
-            if ($object !== '.' && $object !== '..') {
-                if (is_dir($dir . DIRECTORY_SEPARATOR . $object) && !is_link($dir . '/' . $object)) {
-                    rrmdir($dir . DIRECTORY_SEPARATOR . $object);
+            if ('.' !== $object && '..' !== $object) {
+                if (is_dir($dir.DIRECTORY_SEPARATOR.$object) && ! is_link($dir.'/'.$object)) {
+                    rrmdir($dir.DIRECTORY_SEPARATOR.$object);
                 } else {
-                    unlink($dir . DIRECTORY_SEPARATOR . $object);
+                    unlink($dir.DIRECTORY_SEPARATOR.$object);
                 }
             }
         }
@@ -65,7 +61,7 @@ test('creates necessary directories and files', function () {
     ];
 
     foreach ($directories as $directory) {
-        $this->assertDirectoryExists($this->testDir . '/' . $directory);
+        $this->assertDirectoryExists($this->testDir.'/'.$directory);
     }
 
     // Check if .gitkeep files were created in empty directories
@@ -79,14 +75,14 @@ test('creates necessary directories and files', function () {
     ];
 
     foreach ($gitkeepFiles as $file) {
-        $this->assertFileExists($this->testDir . '/' . $file);
+        $this->assertFileExists($this->testDir.'/'.$file);
     }
 });
 
 test('does not overwrite existing files', function () {
     // Create a test file that should not be overwritten
     $testContent = 'Test content';
-    $testFile = $this->testDir . '/routes/web.php';
+    $testFile = $this->testDir.'/routes/web.php';
     file_put_contents($testFile, $testContent);
 
     // Run the command
@@ -98,7 +94,7 @@ test('does not overwrite existing files', function () {
 
 test('handles errors gracefully', function () {
     // Make a directory non-writable to test error handling
-    $nonWritableDir = $this->testDir . '/app';
+    $nonWritableDir = $this->testDir.'/app';
     chmod($nonWritableDir, 0o555);
 
     // Run the command and expect an error

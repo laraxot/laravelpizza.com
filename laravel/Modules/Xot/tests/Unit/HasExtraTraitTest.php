@@ -4,14 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Exception;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Xot\Contracts\ExtraContract;
 use Modules\Xot\Models\Traits\HasExtraTrait;
-use ReflectionClass;
-use ReflectionMethod;
-use stdClass;
 
 describe('HasExtraTrait', function () {
     beforeEach(function () {
@@ -122,14 +118,14 @@ describe('HasExtraTrait', function () {
             public function __construct()
             {
                 $this->extra_attributes = collect([
-                    'invalid_value' => new stdClass(), // Object that's not allowed
+                    'invalid_value' => new \stdClass(), // Object that's not allowed
                 ]);
             }
         };
 
         $this->testModel->extra = $mockExtra;
 
-        expect(fn() => $this->testModel->getExtra('invalid_value'))->toThrow(Exception::class);
+        expect(fn () => $this->testModel->getExtra('invalid_value'))->toThrow(\Exception::class);
     });
 
     it('has setExtra method', function () {
@@ -137,7 +133,7 @@ describe('HasExtraTrait', function () {
     });
 
     it('validates method signatures', function () {
-        $reflection = new ReflectionClass($this->testModel);
+        $reflection = new \ReflectionClass($this->testModel);
 
         // Check getExtra method signature
         $getExtraMethod = $reflection->getMethod('getExtra');
@@ -165,7 +161,7 @@ describe('HasExtraTrait', function () {
     });
 
     it('has proper return type annotations', function () {
-        $reflection = new ReflectionClass($this->testModel);
+        $reflection = new \ReflectionClass($this->testModel);
         $method = $reflection->getMethod('getExtra');
 
         // Check that method has return type hint
@@ -174,7 +170,7 @@ describe('HasExtraTrait', function () {
     });
 
     it('handles extra relationship correctly', function () {
-        $extraMethod = new ReflectionMethod($this->testModel, 'extra');
+        $extraMethod = new \ReflectionMethod($this->testModel, 'extra');
 
         expect($extraMethod->isPublic())->toBeTrue();
     });
@@ -203,13 +199,13 @@ describe('HasExtraTrait', function () {
     it('validates extra class contract', function () {
         // Test that the extra class implements the required contract
         $extraClass = $this->testModel->getExtraClass();
-        $reflection = new ReflectionClass($extraClass);
+        $reflection = new \ReflectionClass($extraClass);
 
         expect($reflection->implementsInterface(ExtraContract::class))->toBeTrue();
     });
 
     it('has proper documentation', function () {
-        $reflection = new ReflectionClass(HasExtraTrait::class);
+        $reflection = new \ReflectionClass(HasExtraTrait::class);
         $getExtraMethod = $reflection->getMethod('getExtra');
 
         $docComment = $getExtraMethod->getDocComment();

@@ -63,7 +63,7 @@ protected function setUp(): void
 
 ### 1. CreatesApplication Already Handles It
 
-The `CreatesApplication` trait (located in `Modules/Xot/tests/CreatesApplication.php`) automatically configures ALL module connections:
+The `CreatesApplication` trait (located in `Modules/Xot/tests/CreatesApplication.php`) loads `.env.testing` PRIMA del bootstrap dell'app (Dotenv createImmutable + safeLoad), garantendo che tutte le variabili DB siano quelle di test. Poi automaticamente configura TUTTE le connessioni modulo:
 
 ```php
 $moduleConnections = [

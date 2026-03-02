@@ -13,13 +13,13 @@ uses(TestCase::class, RefreshDatabase::class);
 
 beforeEach(function () {
     $this->resource = new class extends XotBaseResource {
-        protected static null|string $model = null;
+        protected static ?string $model = null;
 
-        protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+        protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
-        protected static string | \UnitEnum | null $navigationGroup = 'Test Group';
+        protected static string|\UnitEnum|null $navigationGroup = 'Test Group';
 
-        protected static null|int $navigationSort = 1;
+        protected static ?int $navigationSort = 1;
     };
 });
 

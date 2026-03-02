@@ -8,13 +8,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Model;
 
-use Exception;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Nwidart\Modules\Facades\Module;
 use ReflectionClass;
 use Spatie\QueueableAction\QueueableAction;
-use stdClass;
 
 class GetAllModelsByModuleNameAction
 {
@@ -28,7 +26,7 @@ class GetAllModelsByModuleNameAction
     public function execute(string $moduleName): array
     {
         $mod = Module::find($moduleName);
-        if (! ($mod instanceof \Nwidart\Modules\Module)) {
+        if (! $mod instanceof \Nwidart\Modules\Module) {
             return [];
         }
 
@@ -45,7 +43,7 @@ class GetAllModelsByModuleNameAction
             $ext = '.php';
             // dddx(['ext' => $file->getExtension(), get_class_methods($file)]);
             if (Str::endsWith($filename, $ext)) {
-                $tmp = new stdClass;
+                $tmp = new \stdClass();
                 $name = mb_substr($filename, 0, -mb_strlen($ext));
                 // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
                 /**
@@ -59,11 +57,11 @@ class GetAllModelsByModuleNameAction
                 // }
                 // 434    Parameter #1 $argument of class ReflectionClass constructor expects class-string<T of object>|T of object, string given.
                 try {
-                    $reflection_class = new ReflectionClass($tmp->class);
+                    $reflection_class = new \ReflectionClass($tmp->class);
                     if (! $reflection_class->isAbstract()) {
                         $data[$tmp->name] = $tmp->class;
                     }
-                } catch (Exception) {
+                } catch (\Exception) {
                 }
             }
         }

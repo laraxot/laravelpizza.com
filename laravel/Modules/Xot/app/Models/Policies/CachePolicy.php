@@ -6,14 +6,13 @@ namespace Modules\Xot\Models\Policies;
 
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\Cache;
-use Override;
 
 class CachePolicy extends XotBasePolicy
 {
     /**
      * Determine whether the user can view any models.
      */
-    #[Override]
+    #[\Override]
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('cache.viewAny');

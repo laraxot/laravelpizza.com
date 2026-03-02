@@ -6,9 +6,7 @@ namespace Modules\Xot\Actions;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Process;
-use RuntimeException;
 use Spatie\QueueableAction\QueueableAction;
-use Throwable;
 use Webmozart\Assert\Assert;
 
 /**
@@ -41,22 +39,23 @@ class ExecuteArtisanCommandAction
     /**
      * Esegue un comando Artisan e restituisce i risultati.
      *
-     * @param  string  $command  Il comando Artisan da eseguire (senza "php artisan")
+     * @param string $command Il comando Artisan da eseguire (senza "php artisan")
+     *
+     * @throws \RuntimeException Se il comando non è consentito o si verifica un errore
+     *
      * @return array{
      *     command: string,
      *     output: array<int, string>,
      *     status: 'completed'|'failed',
      *     exitCode: int
      * } Array con informazioni sull'esecuzione del comando
-     *
-     * @throws RuntimeException Se il comando non è consentito o si verifica un errore
      */
     public function execute(string $command): array
     {
         Assert::stringNotEmpty($command, 'Il comando non può essere vuoto');
 
         if (! $this->isCommandAllowed($command)) {
-            throw new RuntimeException("Comando non consentito: {$command}");
+            throw new \RuntimeException("Comando non consentito: {$command}");
         }
 
         /** @var array<int, string> $output */
@@ -123,20 +122,17 @@ class ExecuteArtisanCommandAction
                 'status' => $status,
                 'exitCode' => $result->exitCode() ?? 0,
             ];
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             Event::dispatch('artisan-command.error', [$command, $e->getMessage()]);
-            throw new RuntimeException(
-                "Errore durante l'esecuzione del comando {$command}: {$e->getMessage()}",
-                (int) $e->getCode(),
-                $e,
-            );
+            throw new \RuntimeException("Errore durante l'esecuzione del comando {$command}: {$e->getMessage()}", (int) $e->getCode(), $e);
         }
     }
 
     /**
      * Verifica se un comando è presente nella lista dei comandi consentiti.
      *
-     * @param  string  $command  Il comando da verificare
+     * @param string $command Il comando da verificare
+     *
      * @return bool True se il comando è consentito, false altrimenti
      */
     private function isCommandAllowed(string $command): bool

@@ -10,19 +10,21 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\ModuleFactory;
 use Nwidart\Modules\Facades\Module as ModuleFacade;
 use Nwidart\Modules\Module as NModule;
-use Sushi\Sushi;
 
 use function Safe\json_encode;
 
+use Sushi\Sushi;
+
 /**
- * @property int $id
- * @property string|null $name
- * @property string|null $description
- * @property bool|null $status
- * @property int|null $priority
- * @property string|null $path
- * @property string|null $icon
+ * @property int                          $id
+ * @property string|null                  $name
+ * @property string|null                  $description
+ * @property bool|null                    $status
+ * @property int|null                     $priority
+ * @property string|null                  $path
+ * @property string|null                  $icon
  * @property array<array-key, mixed>|null $colors
+ *
  * @method static Builder<static>|Module newModelQuery()
  * @method static Builder<static>|Module newQuery()
  * @method static Builder<static>|Module query()
@@ -34,10 +36,13 @@ use function Safe\json_encode;
  * @method static Builder<static>|Module wherePath($value)
  * @method static Builder<static>|Module wherePriority($value)
  * @method static Builder<static>|Module whereStatus($value)
- * @property-read ProfileContract|null $creator
- * @property-read ProfileContract|null $deleter
- * @property-read ProfileContract|null $updater
+ *
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $deleter
+ * @property ProfileContract|null $updater
+ *
  * @method static ModuleFactory factory($count = null, $state = [])
+ *
  * @mixin \Eloquent
  */
 final class Module extends BaseModel
@@ -85,7 +90,7 @@ final class Module extends BaseModel
             ];
         });
 
-        /** @var array<int, array<string, mixed>> */
+        /* @var array<int, array<string, mixed>> */
         return array_values($modules);
     }
 

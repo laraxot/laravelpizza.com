@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Tables\Actions;
 
-use Closure;
 use Filament\Actions\Action;
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,7 +16,7 @@ abstract class XotBaseTableAction extends Action
 {
     public function getRecord(bool $withDefault = true): ?Model
     {
-        if ($this->record instanceof Closure) {
+        if ($this->record instanceof \Closure) {
             return null;
         }
 

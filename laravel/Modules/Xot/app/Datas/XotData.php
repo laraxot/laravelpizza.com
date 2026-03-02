@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Datas;
 
-use ArrayAccess;
-use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
@@ -16,12 +14,12 @@ use Modules\User\Contracts\TeamContract;
 use Modules\User\Contracts\TenantContract;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
-use RuntimeException;
+
+use function Safe\realpath;
+
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 use Webmozart\Assert\Assert;
-
-use function Safe\realpath;
 
 /**
  * Class Modules\Xot\Datas\XotData.
@@ -127,9 +125,9 @@ class XotData extends Data implements Wireable
     public function getUserByEmail(string $email): UserContract
     {
         $user_class = $this->getUserClass();
-        $userInstance = new $user_class;
+        $userInstance = new $user_class();
         if (! in_array('email', $userInstance->getFillable(), true)) {
-            throw new Exception("Attribute 'email' not found in model ".$userInstance::class);
+            throw new \Exception("Attribute 'email' not found in model ".$userInstance::class);
         }
         $user = $user_class::firstOrCreate(['email' => $email]);
         /*
@@ -236,7 +234,7 @@ class XotData extends Data implements Wireable
             '['.__LINE__.']['.class_basename($this).']['.$class.']',
         );
 
-        /** @var class-string<Model&ProfileContract> */
+        /* @var class-string<Model&ProfileContract> */
         return $class;
     }
 
@@ -255,7 +253,7 @@ class XotData extends Data implements Wireable
         Assert::isArray($profile->getFillable(), 'getFillable() must return array');
 
         if (! in_array('user_id', $profile->getFillable(), true)) {
-            throw new Exception('add user_id to fillable on class '.$profileClass);
+            throw new \Exception('add user_id to fillable on class '.$profileClass);
         }
 
         /** @var ProfileContract */
@@ -278,7 +276,7 @@ class XotData extends Data implements Wireable
     public function iAmSuperAdmin(): bool
     {
         $user = Auth::user();
-        if ($user === null) {
+        if (null === $user) {
             return false;
         }
 
@@ -289,12 +287,12 @@ class XotData extends Data implements Wireable
         // Utilizziamo un'asserzione per garantire che hasRole restituisca un booleano
         $result = $user->hasRole('super-admin');
 
-        return $result === true;
+        return true === $result;
     }
 
     public function getProfileModel(): ProfileContract
     {
-        if ($this->profile !== null) {
+        if (null !== $this->profile) {
             return $this->profile;
         }
 
@@ -312,7 +310,7 @@ class XotData extends Data implements Wireable
     /**
      * Update the XotData instance.
      *
-     * @param  array<string, mixed>  $data
+     * @param array<string, mixed> $data
      */
     public function update(array $data): self
     {
@@ -335,8 +333,8 @@ class XotData extends Data implements Wireable
 
         try {
             return realpath($path0);
-        } catch (Exception $e) {
-            throw new Exception('realpath not find dir['.$path0.']'.PHP_EOL.'['.$e->getMessage().']');
+        } catch (\Exception $e) {
+            throw new \Exception('realpath not find dir['.$path0.']'.PHP_EOL.'['.$e->getMessage().']');
         }
     }
 
@@ -364,16 +362,16 @@ class XotData extends Data implements Wireable
         $userInstance = app($user_class);
 
         if (! is_object($userInstance) || ! method_exists($userInstance, 'getChildTypes')) {
-            throw new Exception('getChildTypes method not found in class '.$user_class);
+            throw new \Exception('getChildTypes method not found in class '.$user_class);
         }
 
         $types = $userInstance->getChildTypes();
-        if (! is_array($types) && ! ($types instanceof ArrayAccess)) {
-            throw new Exception('getChildTypes must return array or ArrayAccess');
+        if (! is_array($types) && ! ($types instanceof \ArrayAccess)) {
+            throw new \Exception('getChildTypes must return array or ArrayAccess');
         }
         $class = Arr::get($types, $type);
         if (is_null($class)) {
-            throw new Exception('type '.$type.' not found in class '.$user_class);
+            throw new \Exception('type '.$type.' not found in class '.$user_class);
         }
 
         Assert::classExists($class, '['.__LINE__.']['.class_basename($this).']');
@@ -407,7 +405,7 @@ class XotData extends Data implements Wireable
         }
 
         if (! class_exists($resourceClass)) {
-            throw new RuntimeException("Resource class not found for type: {$type}. Tried: {$resourceClass}");
+            throw new \RuntimeException("Resource class not found for type: {$type}. Tried: {$resourceClass}");
         }
 
         return $resourceClass;
@@ -437,17 +435,17 @@ class XotData extends Data implements Wireable
         $user_instance = app($user_class);
 
         if (! is_object($user_instance) || ! method_exists($user_instance, 'getCasts')) {
-            throw new Exception('getCasts method not found in class '.$user_class);
+            throw new \Exception('getCasts method not found in class '.$user_class);
         }
 
         $castsResult = $user_instance->getCasts();
-        if (! is_array($castsResult) && ! ($castsResult instanceof ArrayAccess)) {
-            throw new Exception('getCasts must return array or ArrayAccess');
+        if (! is_array($castsResult) && ! ($castsResult instanceof \ArrayAccess)) {
+            throw new \Exception('getCasts must return array or ArrayAccess');
         }
 
         // $enum_class = Arr::get($user_class::casts(),'type',null);
         $enum_class = Arr::get($castsResult, 'type', null);
-        if ($enum_class === null) {
+        if (null === $enum_class) {
             $enum_class = Str::of($user_class)
                 ->replace('\\Models\\', '\\Enums\\')
                 ->append('TypeEnum')
@@ -474,14 +472,14 @@ class XotData extends Data implements Wireable
         if (! $this->force_ssl) {
             return false;
         }
-        if (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] === 'localhost') {
+        if (isset($_SERVER['SERVER_NAME']) && 'localhost' === $_SERVER['SERVER_NAME']) {
             return false;
         }
-        if (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] === '127.0.0.1') {
+        if (isset($_SERVER['SERVER_NAME']) && '127.0.0.1' === $_SERVER['SERVER_NAME']) {
             return false;
         }
         // AWS ELB
-        if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+        if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && 'https' === $_SERVER['HTTP_X_FORWARDED_PROTO']) {
             return true;
         }
 

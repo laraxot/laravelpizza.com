@@ -9,8 +9,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Class CreateExtraTable.
  */
-return new class extends XotBaseMigration
-{
+return new class extends XotBaseMigration {
     /**
      * Run the migrations.
      */
@@ -38,7 +37,7 @@ return new class extends XotBaseMigration
             //    $table->unique(['model_id', 'model_type'], 'morph_unique');
             // }
 
-            if ($this->hasColumn('model_id') && $this->getColumnType('model_id') === 'bigint') {
+            if ($this->hasColumn('model_id') && 'bigint' === $this->getColumnType('model_id')) {
                 $table->string('model_id', 36)->index()->change();
             }
         });

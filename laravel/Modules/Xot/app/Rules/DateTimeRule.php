@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Rules;
 
-use Exception;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Carbon;
 
@@ -16,8 +15,8 @@ class DateTimeRule implements Rule
     /**
      * Determine if the validation rule passes.
      *
-     * @param  string  $attribute  The attribute name being validated
-     * @param  mixed  $value  The value being validated
+     * @param string $attribute The attribute name being validated
+     * @param mixed  $value     The value being validated
      */
     public function passes($attribute, $value): bool
     {
@@ -32,7 +31,7 @@ class DateTimeRule implements Rule
         $format = 'd/m/Y H:i';
         try {
             $value_new = Carbon::createFromFormat($format, $value);
-        } catch (Exception) {
+        } catch (\Exception) {
             return false;
         }
 

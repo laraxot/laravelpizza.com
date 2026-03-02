@@ -9,8 +9,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
-use InvalidArgumentException;
-use RuntimeException;
 use Spatie\QueueableAction\QueueableAction;
 
 class FakeSeederAction
@@ -24,19 +22,19 @@ class FakeSeederAction
     /**
      * Execute the fake data seeding process.
      *
-     * @param  class-string<Model>  $modelClass  The fully qualified model class name
-     * @param  int<1, max>  $qty  Number of records to generate
+     * @param class-string<Model> $modelClass The fully qualified model class name
+     * @param int<1, max>         $qty        Number of records to generate
      *
-     * @throws InvalidArgumentException When model class is invalid
+     * @throws \InvalidArgumentException When model class is invalid
      */
     public function execute(string $modelClass, int $qty): void
     {
         if (
-            ! class_exists($modelClass) ||
-                ! is_subclass_of($modelClass, Model::class) ||
-                ! in_array(HasFactory::class, class_uses_recursive($modelClass), strict: true)
+            ! class_exists($modelClass)
+                || ! is_subclass_of($modelClass, Model::class)
+                || ! in_array(HasFactory::class, class_uses_recursive($modelClass), strict: true)
         ) {
-            throw new InvalidArgumentException("Invalid model class or missing HasFactory trait: {$modelClass}");
+            throw new \InvalidArgumentException("Invalid model class or missing HasFactory trait: {$modelClass}");
         }
 
         $qtyToDo = min($qty, self::MAX_RECORDS);
@@ -68,9 +66,9 @@ class FakeSeederAction
     /**
      * Get the model factory.
      *
-     * @param  class-string<Model>  $modelClass
+     * @param class-string<Model> $modelClass
      *
-     * @throws RuntimeException
+     * @throws \RuntimeException
      */
     private function getModelFactory(string $modelClass): Factory
     {
@@ -78,14 +76,14 @@ class FakeSeederAction
             return $modelClass::factory();
         }
 
-        throw new RuntimeException("Unable to create factory for model: {$modelClass}");
+        throw new \RuntimeException("Unable to create factory for model: {$modelClass}");
     }
 
     /**
      * Send a notification about the seeding completion.
      *
-     * @param  class-string<Model>  $modelClass
-     * @param  int<1, max>  $count
+     * @param class-string<Model> $modelClass
+     * @param int<1, max>         $count
      */
     private function sendNotification(string $modelClass, int $count): void
     {
@@ -99,8 +97,8 @@ class FakeSeederAction
     /**
      * Queue remaining records for processing.
      *
-     * @param  class-string<Model>  $modelClass
-     * @param  int<1, max>  $qty
+     * @param class-string<Model> $modelClass
+     * @param int<1, max>         $qty
      */
     private function queueRemainingRecords(string $modelClass, int $qty): void
     {

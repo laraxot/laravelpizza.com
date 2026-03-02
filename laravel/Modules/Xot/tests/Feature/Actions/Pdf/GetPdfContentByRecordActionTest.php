@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Feature\Actions\Pdf;
 
-use ReflectionClass;
-use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Pdf\GetPdfContentByRecordAction;
@@ -25,7 +23,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function it_generates_pdf_content_from_record(): void
+    public function itGeneratesPdfContentFromRecord(): void
     {
         // Arrange
         $user = User::factory()->create([
@@ -37,20 +35,20 @@ class GetPdfContentByRecordActionTest extends TestCase
         view()->addNamespace('user', resource_path('views'));
 
         // Act & Assert
-        $this->expectException(Exception::class);
+        $this->expectException(\Exception::class);
         $this->expectExceptionMessage("View 'user::user.show.pdf' not found");
 
         $this->action->execute($user);
     }
 
     /** @test */
-    public function it_generates_correct_view_name(): void
+    public function itGeneratesCorrectViewName(): void
     {
         // Arrange
         $user = User::factory()->create();
 
         // Use reflection to test protected method
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new \ReflectionClass($this->action);
         $method = $reflection->getMethod('generateViewName');
         $method->setAccessible(true);
 
@@ -62,13 +60,13 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function it_generates_correct_filename_for_basic_model(): void
+    public function itGeneratesCorrectFilenameForBasicModel(): void
     {
         // Arrange
         $user = User::factory()->create(['id' => 123, 'name' => 'Test User']);
 
         // Use reflection to test protected method
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new \ReflectionClass($this->action);
         $method = $reflection->getMethod('generateFilename');
         $method->setAccessible(true);
 
@@ -80,7 +78,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function it_generates_enhanced_filename_for_performance_models(): void
+    public function itGeneratesEnhancedFilenameForPerformanceModels(): void
     {
         // Arrange - Create a mock model with performance fields
         $record = new class extends Model {
@@ -98,7 +96,7 @@ class GetPdfContentByRecordActionTest extends TestCase
         $record->nome = 'Mario';
 
         // Use reflection to test protected method
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new \ReflectionClass($this->action);
         $method = $reflection->getMethod('generateFilename');
         $method->setAccessible(true);
 
@@ -110,13 +108,13 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function it_prepares_correct_view_parameters(): void
+    public function itPreparesCorrectViewParameters(): void
     {
         // Arrange
         $user = User::factory()->create(['name' => 'Test User']);
 
         // Use reflection to test protected method
-        $reflection = new ReflectionClass($this->action);
+        $reflection = new \ReflectionClass($this->action);
         $method = $reflection->getMethod('prepareViewParameters');
         $method->setAccessible(true);
 
@@ -134,20 +132,20 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_exception_for_missing_view(): void
+    public function itThrowsExceptionForMissingView(): void
     {
         // Arrange
         $user = User::factory()->create();
 
         // Act & Assert
-        $this->expectException(Exception::class);
+        $this->expectException(\Exception::class);
         $this->expectExceptionMessageMatches("/View 'user::user\.show\.pdf' not found/");
 
         $this->action->execute($user);
     }
 
     /** @test */
-    public function it_throws_exception_for_empty_html_content(): void
+    public function itThrowsExceptionForEmptyHtmlContent(): void
     {
         // This test would require mocking view rendering to return empty content
         // Implementation depends on testing infrastructure setup
@@ -155,34 +153,34 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function it_uses_custom_filename_when_provided(): void
+    public function itUsesCustomFilenameWhenProvided(): void
     {
         // Arrange
         $user = User::factory()->create();
         $customFilename = 'custom-report.pdf';
 
         // Act & Assert - Should use custom filename in error message
-        $this->expectException(Exception::class);
+        $this->expectException(\Exception::class);
 
         $this->action->execute($user, $customFilename);
     }
 
     /** @test */
-    public function it_handles_from_record_convenience_method(): void
+    public function itHandlesFromRecordConvenienceMethod(): void
     {
         // Arrange
         $user = User::factory()->create();
         $filename = 'convenience-test.pdf';
 
         // Act & Assert
-        $this->expectException(Exception::class);
+        $this->expectException(\Exception::class);
         $this->expectExceptionMessageMatches("/View 'user::user\.show\.pdf' not found/");
 
         $this->action->fromRecord($user, $filename);
     }
 
     /** @test */
-    public function it_logs_errors_when_pdf_generation_fails(): void
+    public function itLogsErrorsWhenPdfGenerationFails(): void
     {
         // This test would require mocking HTML2PDF to throw exceptions
         // Implementation depends on testing infrastructure setup
@@ -190,7 +188,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_valid_pdf_content_when_view_exists(): void
+    public function itReturnsValidPdfContentWhenViewExists(): void
     {
         // This test would require creating actual test views
         // Implementation depends on test view infrastructure

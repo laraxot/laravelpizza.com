@@ -27,7 +27,8 @@ class PathHelper
     /**
      * Ottiene il percorso completo di un modulo.
      *
-     * @param  string  $moduleName  Nome del modulo
+     * @param string $moduleName Nome del modulo
+     *
      * @return string Percorso completo del modulo
      */
     public static function modulePath(string $moduleName): string
@@ -38,7 +39,8 @@ class PathHelper
     /**
      * Ottiene il percorso dei modelli di un modulo.
      *
-     * @param  string  $moduleName  Nome del modulo
+     * @param string $moduleName Nome del modulo
+     *
      * @return string Percorso dei modelli
      */
     public static function modelsPath(string $moduleName): string
@@ -49,7 +51,8 @@ class PathHelper
     /**
      * Ottiene il percorso delle migrazioni di un modulo.
      *
-     * @param  string  $moduleName  Nome del modulo
+     * @param string $moduleName Nome del modulo
+     *
      * @return string Percorso delle migrazioni
      */
     public static function migrationsPath(string $moduleName): string
@@ -60,7 +63,8 @@ class PathHelper
     /**
      * Ottiene il percorso dei seeder di un modulo.
      *
-     * @param  string  $moduleName  Nome del modulo
+     * @param string $moduleName Nome del modulo
+     *
      * @return string Percorso dei seeder
      */
     public static function seedersPath(string $moduleName): string
@@ -71,7 +75,8 @@ class PathHelper
     /**
      * Ottiene il percorso dei controller di un modulo.
      *
-     * @param  string  $moduleName  Nome del modulo
+     * @param string $moduleName Nome del modulo
+     *
      * @return string Percorso dei controller
      */
     public static function controllersPath(string $moduleName): string
@@ -82,7 +87,8 @@ class PathHelper
     /**
      * Ottiene il percorso delle risorse Filament di un modulo.
      *
-     * @param  string  $moduleName  Nome del modulo
+     * @param string $moduleName Nome del modulo
+     *
      * @return string Percorso delle risorse Filament
      */
     public static function filamentResourcesPath(string $moduleName): string
@@ -93,7 +99,8 @@ class PathHelper
     /**
      * Ottiene il percorso dei provider di un modulo.
      *
-     * @param  string  $moduleName  Nome del modulo
+     * @param string $moduleName Nome del modulo
+     *
      * @return string Percorso dei provider
      */
     public static function providersPath(string $moduleName): string
@@ -104,7 +111,8 @@ class PathHelper
     /**
      * Ottiene il percorso delle viste di un modulo.
      *
-     * @param  string  $moduleName  Nome del modulo
+     * @param string $moduleName Nome del modulo
+     *
      * @return string Percorso delle viste
      */
     public static function viewsPath(string $moduleName): string
@@ -115,7 +123,8 @@ class PathHelper
     /**
      * Verifica se un percorso è corretto secondo le convenzioni del progetto.
      *
-     * @param  string  $path  Percorso da verificare
+     * @param string $path Percorso da verificare
+     *
      * @return bool True se il percorso è corretto, false altrimenti
      */
     public static function isValidPath(string $path): bool
@@ -131,7 +140,8 @@ class PathHelper
     /**
      * Corregge un percorso errato secondo le convenzioni del progetto.
      *
-     * @param  string  $path  Percorso da correggere
+     * @param string $path Percorso da correggere
+     *
      * @return string Percorso corretto
      */
     public static function correctPath(string $path): string
@@ -166,7 +176,8 @@ class PathHelper
     /**
      * Verifica se un modulo esiste.
      *
-     * @param  string  $moduleName  Nome del modulo
+     * @param string $moduleName Nome del modulo
+     *
      * @return bool True se il modulo esiste, false altrimenti
      */
     public static function moduleExists(string $moduleName): bool

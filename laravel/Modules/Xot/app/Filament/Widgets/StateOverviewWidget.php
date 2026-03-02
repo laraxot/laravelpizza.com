@@ -4,14 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Widgets;
 
-use Error;
 use Filament\Schemas\Components\Component;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 use Modules\Xot\Contracts\StateContract;
-use Override;
 use Webmozart\Assert\Assert;
 
 /**
@@ -51,7 +49,7 @@ class StateOverviewWidget extends XotBaseWidget
      *
      * @return array<int|string, Component>
      */
-    #[Override]
+    #[\Override]
     public function getFormSchema(): array
     {
         return [];
@@ -78,8 +76,8 @@ class StateOverviewWidget extends XotBaseWidget
             $this->cacheKey = $cacheKey;
 
             return $cacheKey;
-        } catch (Error $e) {
-            if ($this->cacheKey === '') {
+        } catch (\Error $e) {
+            if ('' === $this->cacheKey) {
                 $this->cacheKey = Str::uuid()->toString();
             }
 
@@ -98,7 +96,7 @@ class StateOverviewWidget extends XotBaseWidget
 
         Assert::isArray($res);
 
-        /** @var array<int, array<string, mixed>> $res */
+        /* @var array<int, array<string, mixed>> $res */
         return $res;
     }
 

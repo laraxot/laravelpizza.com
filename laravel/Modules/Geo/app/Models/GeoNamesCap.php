@@ -13,11 +13,15 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
+ *
  * @method static Builder<static>|GeoNamesCap newModelQuery()
  * @method static Builder<static>|GeoNamesCap newQuery()
  * @method static Builder<static>|GeoNamesCap query()
+ *
  * @property ProfileContract|null $deleter
+ *
  * @method static GeoNamesCapFactory factory($count = null, $state = [])
+ *
  * @mixin \Eloquent
  */
 class GeoNamesCap extends BaseModel

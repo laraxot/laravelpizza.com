@@ -2,10 +2,9 @@
 
 declare(strict_types=1);
 
-use Modules\Xot\Tests\TestCase;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
-use Modules\Xot\Console\Commands\GenerateDbDocumentationCommand;
+use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -14,7 +13,7 @@ beforeEach(function () {
     $this->testOutputDir = storage_path('tests/docs');
 
     // Create test directory if it doesn't exist
-    if (!File::exists(dirname($this->testSchemaPath))) {
+    if (! File::exists(dirname($this->testSchemaPath))) {
         File::makeDirectory(dirname($this->testSchemaPath), 0o755, true);
     }
 
@@ -82,9 +81,9 @@ test('it generates database documentation', function () {
     expect($exitCode)->toBe(0);
 
     // Check if output files were created
-    expect(File::exists($this->testOutputDir . '/database-documentation.md'))
+    expect(File::exists($this->testOutputDir.'/database-documentation.md'))
         ->toBeTrue()
-        ->and(File::exists($this->testOutputDir . '/tables/users.md'))
+        ->and(File::exists($this->testOutputDir.'/tables/users.md'))
         ->toBeTrue();
 });
 

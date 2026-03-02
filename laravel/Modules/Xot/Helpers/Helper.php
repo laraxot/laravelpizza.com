@@ -20,12 +20,13 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Services\ModuleService;
 use Nwidart\Modules\Facades\Module;
-use Webmozart\Assert\Assert;
 
 use function Safe\define;
 use function Safe\glob;
 use function Safe\json_decode;
 use function Safe\preg_match;
+
+use Webmozart\Assert\Assert;
 
 // ------------------------------------------------
 
@@ -127,14 +128,14 @@ if (! function_exists('hex2rgba')) {
         }
 
         // Sanitize $color if "#" is provided
-        if ($color[0] === '#') {
+        if ('#' === $color[0]) {
             $color = mb_substr($color, 1);
         }
 
         // Check if color has 6 or 3 characters and get values
-        if (mb_strlen($color) === 6) {
+        if (6 === mb_strlen($color)) {
             $hex = [$color[0].$color[1], $color[2].$color[3], $color[4].$color[5]];
-        } elseif (mb_strlen($color) === 3) {
+        } elseif (3 === mb_strlen($color)) {
             $hex = [$color[0].$color[0], $color[1].$color[1], $color[2].$color[2]];
         } else {
             return $default;
@@ -144,7 +145,7 @@ if (! function_exists('hex2rgba')) {
         $rgb = array_map('hexdec', $hex);
 
         // Check if opacity is set(rgba or rgb)
-        if ($opacity !== -1.0) {
+        if (-1.0 !== $opacity) {
             if ($opacity < 0 || $opacity > 1) {
                 $opacity = 1.0;
             }
@@ -187,8 +188,8 @@ if (! function_exists('dddx')) {
             // 'file_1' => $file, //da sistemare
         ];
         if (
-            File::exists($data['file']) &&
-                Str::startsWith(
+            File::exists($data['file'])
+                && Str::startsWith(
                     $data['file'],
                     app(FixPathAction::class)->execute(storage_path('framework/views')),
                 )
@@ -281,15 +282,15 @@ if (! function_exists('inAdmin')) {
          * return config()->get('in_admin');
          * }
          */
-        if (Request::segment(2) === 'admin') {
+        if ('admin' === Request::segment(2)) {
             return true;
         }
 
         $segments = Request::segments();
 
-        return (is_countable($segments) ? count($segments) : 0) > 0 &&
-            $segments[0] === 'livewire' &&
-            session('in_admin') === true;
+        return (is_countable($segments) ? count($segments) : 0) > 0
+            && 'livewire' === $segments[0]
+            && true === session('in_admin');
     }
 }
 
@@ -388,7 +389,7 @@ if (! function_exists('params2ContainerItem')) {
      */
     function params2ContainerItem(?array $params = null): array
     {
-        if ($params === null) {
+        if (null === $params) {
             // Call to static method current() on an unknown class Route.
             // $params = optional(\Route::current())->parameters();
             // Cannot call method parameters() on mixed.
@@ -407,10 +408,10 @@ if (! function_exists('params2ContainerItem')) {
             preg_match($pattern, $k, $matches);
 
             if (
-                ! empty($matches) &&
-                    isset($matches[1], $matches[2]) &&
-                    is_string($matches[1]) &&
-                    is_string($matches[2])
+                ! empty($matches)
+                    && isset($matches[1], $matches[2])
+                    && is_string($matches[1])
+                    && is_string($matches[2])
             ) {
                 $sk = $matches[1];
                 $sv = $matches[2];
@@ -457,7 +458,7 @@ if (! function_exists('getModelByName')) {
             return Str::snake($filename) === $name;
         });
 
-        if ($path === null) {
+        if (null === $path) {
             throw new Exception('['.$name.'] not in morph_map ['.__LINE__.']['.__FILE__.']');
         }
         Assert::string($path, __FILE__.':'.__LINE__.' - Helper');
@@ -559,9 +560,9 @@ if (! function_exists('getAllModulesModels')) {
     /**
      * Get all models from all enabled modules.
      *
-     * @return array<string, string>
-     *
      * @throws ReflectionException
+     *
+     * @return array<string, string>
      */
     function getAllModulesModels(): array
     {
@@ -571,12 +572,12 @@ if (! function_exists('getAllModulesModels')) {
         $modules = Module::all();
 
         foreach ($modules as $module) {
-            if (! ($module instanceof Nwidart\Modules\Laravel\Module)) {
+            if (! $module instanceof Nwidart\Modules\Laravel\Module) {
                 continue;
             }
 
             $moduleName = $module->getName();
-            if ($moduleName === '') {
+            if ('' === $moduleName) {
                 continue;
             }
 
@@ -594,7 +595,7 @@ if (! function_exists('getAllModulesModels')) {
             }
         }
 
-        /** @var array<string, string> */
+        /* @var array<string, string> */
         return $res;
     }
 }
@@ -670,7 +671,7 @@ if (! function_exists('dottedToBrackets')) {
     function dottedToBrackets(string $str, string $_quotation_marks = ''): string
     {
         return collect(explode('.', $str))
-            ->map(static fn (string $v, $k): string => $k === 0 ? $v : ('['.$v.']'))
+            ->map(static fn (string $v, $k): string => 0 === $k ? $v : ('['.$v.']'))
             ->implode('');
     }
 }
@@ -707,7 +708,7 @@ if (! function_exists('getRelationships')) {
         foreach ($methods as $method) {
             $reflection = new ReflectionMethod($model, $method);
             $args = $reflection->getParameters();
-            if ($args !== []) {
+            if ([] !== $args) {
                 continue;
             }
 
@@ -860,7 +861,7 @@ if (! function_exists('getRouteParameters')) {
     function getRouteParameters(): array
     {
         $route = request()->route();
-        if (! ($route instanceof Illuminate\Routing\Route)) {
+        if (! $route instanceof Illuminate\Routing\Route) {
             return [];
         }
 
@@ -876,7 +877,7 @@ if (! function_exists('getRouteName')) {
          * @var Illuminate\Routing\Route|null
          */
         $route = request()->route();
-        if (! ($route instanceof Illuminate\Routing\Route)) {
+        if (! $route instanceof Illuminate\Routing\Route) {
             return null;
         }
 
@@ -972,9 +973,9 @@ if (! function_exists('debugStack')) {
         }
 
         if (
-            function_exists('xdebug_set_filter') &&
-                defined('XDEBUG_FILTER_TRACING') &&
-                defined('XDEBUG_PATH_EXCLUDE')
+            function_exists('xdebug_set_filter')
+                && defined('XDEBUG_FILTER_TRACING')
+                && defined('XDEBUG_PATH_EXCLUDE')
         ) {
             xdebug_set_filter(constant('XDEBUG_FILTER_TRACING'), constant('XDEBUG_PATH_EXCLUDE'), [__DIR__.
                 '/../../vendor/',
@@ -1156,24 +1157,24 @@ if (! function_exists('authId')) {
                 $id = $filamentAuth->id();
             }
 
-            if ($id === null && auth()->guard()->check()) {
+            if (null === $id && auth()->guard()->check()) {
                 $id = auth()->guard()->id();
             }
 
-            return $id === null ? null : (is_string($id) ? $id : ((string) $id));
+            return null === $id ? null : (is_string($id) ? $id : ((string) $id));
         } catch (Exception|Error $e) {
             return null;
         }
     }
 }
 /**
- * Esegue un controllo sicuro su un oggetto e chiama un metodo se l'oggetto esiste
+ * Esegue un controllo sicuro su un oggetto e chiama un metodo se l'oggetto esiste.
  *
  * @template T
  *
- * @param  T|null  $object  L'oggetto da controllare
- * @param  string  $method  Il nome del metodo da chiamare
- * @param  mixed  ...$args  Gli argomenti da passare al metodo
+ * @param T|null $object  L'oggetto da controllare
+ * @param string $method  Il nome del metodo da chiamare
+ * @param mixed  ...$args Gli argomenti da passare al metodo
  */
 function safe_object_call($object, string $method, mixed ...$args): mixed
 {
@@ -1200,9 +1201,10 @@ if (! function_exists('trans_string')) {
      * - Returning the key itself if translation is array (missing translation case)
      * - Returning null if the result is null
      *
-     * @param  string  $key  Translation key
-     * @param  array<string, bool|float|int|string|null>  $replace  Replacement values
-     * @param  string|null  $locale  Specific locale to use
+     * @param string                                    $key     Translation key
+     * @param array<string, bool|float|int|string|null> $replace Replacement values
+     * @param string|null                               $locale  Specific locale to use
+     *
      * @return string|null The translated string or null
      *
      * @example trans_string('notify::contact.label') -> "Contact" (string)
@@ -1216,8 +1218,8 @@ if (! function_exists('trans_string')) {
             if (! is_string($k)) {
                 continue;
             }
-            if ($v === null || is_scalar($v)) {
-                /** @var bool|float|int|string|null $v */
+            if (null === $v || is_scalar($v)) {
+                /* @var bool|float|int|string|null $v */
                 $safeReplace[$k] = $v;
             } else {
                 $safeReplace[$k] = (string) $v;
@@ -1232,7 +1234,7 @@ if (! function_exists('trans_string')) {
         }
 
         // If it's null, return null
-        if ($result === null) {
+        if (null === $result) {
             return null;
         }
 

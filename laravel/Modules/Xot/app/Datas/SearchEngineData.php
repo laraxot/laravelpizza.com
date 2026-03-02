@@ -13,13 +13,13 @@ use Spatie\LaravelData\Data;
 class SearchEngineData extends Data
 {
     /**
-     * @param  string  $driver  Driver del motore di ricerca (algolia, meilisearch, ecc.)
-     * @param  string  $algolia_app_id  Algolia App ID
-     * @param  string  $algolia_secret  Chiave segreta Algolia
-     * @param  string  $meili_host  Host MeiliSearch
-     * @param  string  $meili_key  Chiave MeiliSearch
-     * @param  bool  $enable_local  Abilita la ricerca locale
-     * @param  array<int, class-string>  $searchable  Modelli cercabili
+     * @param string                   $driver         Driver del motore di ricerca (algolia, meilisearch, ecc.)
+     * @param string                   $algolia_app_id Algolia App ID
+     * @param string                   $algolia_secret Chiave segreta Algolia
+     * @param string                   $meili_host     Host MeiliSearch
+     * @param string                   $meili_key      Chiave MeiliSearch
+     * @param bool                     $enable_local   Abilita la ricerca locale
+     * @param array<int, class-string> $searchable     Modelli cercabili
      */
     public function __construct(
         public readonly string $driver = 'local',
@@ -29,13 +29,14 @@ class SearchEngineData extends Data
         public readonly string $meili_key = '',
         public readonly bool $enable_local = true,
         public readonly array $searchable = [],
-    ) {}
+    ) {
+    }
 
     /**
      * Create a new instance of SearchEngineData with default values.
      */
     public static function make(): static
     {
-        return new static;
+        return new static();
     }
 }

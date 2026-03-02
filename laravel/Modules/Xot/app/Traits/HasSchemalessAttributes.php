@@ -51,7 +51,7 @@ trait HasSchemalessAttributes
     public function setExtraAttribute(string $key, mixed $value): void
     {
         if (! $this->extra_attributes) {
-            $this->extra_attributes = new SchemalessAttributes;
+            $this->extra_attributes = new SchemalessAttributes();
         }
 
         $this->extra_attributes->set($key, $value);

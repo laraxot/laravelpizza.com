@@ -52,14 +52,15 @@ APP_ENV=testing       # Only APP_ENV changes
 
 ## How It Works
 
-1. **Environment Variable Reading**: TenantServiceProvider reads `DB_DATABASE` from `.env.testing`
-2. **Dynamic Connection Management**: Creates connections for each module automatically:
+1. **CreatesApplication loads .env.testing**: Il trait `Modules\Xot\Tests\CreatesApplication` carica `.env.testing` PRIMA del bootstrap (Dotenv createImmutable + safeLoad), garantendo che tutte le variabili DB siano quelle di test
+2. **Environment Variable Reading**: TenantServiceProvider reads `DB_DATABASE` from `.env.testing`
+3. **Dynamic Connection Management**: Creates connections for each module automatically:
    - `user` → `laravelpizza_data_test`
    - `gdpr` → `laravelpizza_data_test`
    - `meetup` → `laravelpizza_data_test`
    - All modules share the same test database
-3. **Automatic Migration**: `php artisan migrate` works on the test database
-4. **No Manual Configuration Required**: Everything works via env variables
+4. **Automatic Migration**: `php artisan migrate` works on the test database
+5. **No Manual Configuration Required**: Everything works via env variables
 
 ## Testing Workflow for Meetup Theme
 

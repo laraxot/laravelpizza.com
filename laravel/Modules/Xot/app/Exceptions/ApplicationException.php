@@ -8,11 +8,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Exceptions;
 
-use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-abstract class ApplicationException extends Exception
+abstract class ApplicationException extends \Exception
 {
     abstract public function status(): int;
 

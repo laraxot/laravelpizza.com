@@ -7,13 +7,14 @@ namespace Modules\Xot\Actions\Export;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
 use Illuminate\Support\Str;
-use Spatie\QueueableAction\QueueableAction;
-use Symfony\Component\HttpFoundation\StreamedResponse;
-use Webmozart\Assert\Assert;
 
 use function Safe\fclose;
 use function Safe\fopen;
 use function Safe\fputcsv;
+
+use Spatie\QueueableAction\QueueableAction;
+use Symfony\Component\HttpFoundation\StreamedResponse;
+use Webmozart\Assert\Assert;
 
 class ExportXlsStreamByLazyCollection
 {
@@ -22,10 +23,10 @@ class ExportXlsStreamByLazyCollection
     /**
      * Esporta una LazyCollection in un file CSV streamed.
      *
-     * @param  LazyCollection  $data  I dati da esportare
-     * @param  string  $filename  Nome del file CSV
-     * @param  string|null  $transKey  Chiave di traduzione per le intestazioni
-     * @param  array<string>|null  $_fields  Campi da includere nell'export (attualmente non utilizzato)
+     * @param LazyCollection     $data     I dati da esportare
+     * @param string             $filename Nome del file CSV
+     * @param string|null        $transKey Chiave di traduzione per le intestazioni
+     * @param array<string>|null $_fields  Campi da includere nell'export (attualmente non utilizzato)
      */
     public function execute(
         LazyCollection $data,
@@ -61,7 +62,7 @@ class ExportXlsStreamByLazyCollection
                     }
                     // Convertiamo tutti i valori in stringhe o null
                     $safeRowData = array_map(function ($item) {
-                        if ($item === null) {
+                        if (null === $item) {
                             return '';
                         }
 
@@ -87,8 +88,9 @@ class ExportXlsStreamByLazyCollection
     /**
      * Ottiene le intestazioni per l'export.
      *
-     * @param  LazyCollection  $data  I dati da cui estrarre le intestazioni
-     * @param  string|null  $transKey  Chiave di traduzione per le intestazioni
+     * @param LazyCollection $data     I dati da cui estrarre le intestazioni
+     * @param string|null    $transKey Chiave di traduzione per le intestazioni
+     *
      * @return array<string>
      */
     public function headings(LazyCollection $data, ?string $transKey = null): array
@@ -101,12 +103,12 @@ class ExportXlsStreamByLazyCollection
         $headArray = is_array($first) ? $first : $first->toArray();
 
         /**
-         * @var array<string, mixed> $headArray
+         * @var array<string, mixed>    $headArray
          * @var Collection<int, string> $headings
          */
         $headings = collect($headArray)->keys();
 
-        if ($transKey !== null) {
+        if (null !== $transKey) {
             $headings = $headings->map(static function (string $item) use ($transKey) {
                 $key = $transKey.'.fields.'.$item;
                 $trans = trans($key);
@@ -125,7 +127,7 @@ class ExportXlsStreamByLazyCollection
             });
         }
 
-        /** @var array<string> */
+        /* @var array<string> */
         return $headings->map(strval(...))->toArray();
     }
 }

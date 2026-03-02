@@ -55,7 +55,7 @@ class ExportTreeXlsAction extends Action
                     // PHPStan: $fields is array after array_map
                 }
 
-                /** @var array<int, string> $fields */
+                /* @var array<int, string> $fields */
                 return app(ExportXlsByCollection::class)->execute($rows, $filename, $transKey, $fields);
             });
     }

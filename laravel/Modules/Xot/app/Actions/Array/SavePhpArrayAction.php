@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Array;
 
-use Spatie\QueueableAction\QueueableAction;
-
 use function Safe\file_put_contents;
+
+use Spatie\QueueableAction\QueueableAction;
 
 class SavePhpArrayAction
 {
