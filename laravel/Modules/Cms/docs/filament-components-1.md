@@ -148,4 +148,4 @@ Filament offre una vasta gamma di componenti Blade riutilizzabili. Di seguito i 
 * [filament-components.md](laravel/modules/user/docs/best-practices/filament-components.md)
 * [filament-components.md](laravel/modules/cms/docs/best-practices/filament-components.md)
 * [filament-components.md](laravel/modules/cms/docs/filament-components.md)
-* [filament-components.md](docs/rules/filament-components.md)
+* [filament-components.md](laravel/docs/rules/filament-components.md)

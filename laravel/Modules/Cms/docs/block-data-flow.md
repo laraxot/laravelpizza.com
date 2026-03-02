@@ -6,7 +6,7 @@ This document describes how data flows from the JSON configuration to the final 
 
 1. **`Modules\Cms\View\Components\Section`**: The main entry point. It receives a `slug` (e.g., 'footer').
 2. **`Modules\Cms\Models\Section`**: The model representing a page section. It uses the `HasBlocks` trait.
-3. **`Modules\Cms\Models\Traits\HasBlocks`**: Provides the `getBlocksBySlug($slug)` method.
+3. **`Modules\Cms\Models\Traits\HasBlocks`**: Provides the `getBlocksBySlug($slug)` method. Il metodo sta nel trait (DRY), non nei modelli Page/Section. Vedi [TRAIT_METHOD_IMPLEMENTATION](it/TRAIT_METHOD_IMPLEMENTATION.md).
 4. **`Modules\Cms\Datas\BlockData`**: A DTO (Data Transfer Object) that wraps block information.
 
 ## Data Flow

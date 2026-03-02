@@ -22,13 +22,12 @@
 - 🛠️ **[Address Field](./address-field.md)** - Form field personalizzati per indirizzi.
 
 ## 🧪 **Qualità e Sviluppo**
-- ✅ **[PHPStan Level 10](./phpstan-fixes.md)** - Conformità e fix specifici per Geo.
-- 🍕 **[SushiToJson Contract](./phpstan-sushitojson-contract.md)** - Fix Comune + SushiToJsonContract.
+- ✅ **[PHPStan Level 10](./phpstan-level10-compliance.md)** - Conformità e fix specifici per Geo.
 - 🔬 **[Testing Guidelines](./testing-guidelines.md)** - Strategie di test geografico.
 - 🧹 **[PHPMD & Complexity](./cyclomatic-complexity-report.md)** - Analisi della pulizia del codice.
 
 ## 📦 **Pacchetti Composer**
-- [Riferimento](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - Nessuna dipendenza diretta; usa Xot, Sushi (via Xot)
+- [Riferimento](../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../docs/architecture/composer-packages-full-inventory.md) - Nessuna dipendenza diretta; usa Xot, Sushi (via Xot)
 
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Core framework e Base Models.

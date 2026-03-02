@@ -5,7 +5,7 @@ Questo documento è un riferimento al componente Footer implementato nel tema On
 ## Collegamenti alla Documentazione
 
 - [Documentazione Completa del Footer](/laravel/themes/one/docs/components/layouts/footer.md)
-- [Documentazione Root](/docs/themes/one/components/footer.md)
+- [Documentazione Root](/laravel/docs/themes/one/components/footer.md)
 
 ## Integrazione con il Modulo CMS
 

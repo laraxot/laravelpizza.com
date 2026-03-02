@@ -7,8 +7,15 @@ namespace Modules\Geo\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Modules\Geo\Database\Factories\ComuneFactory;
+use Modules\Tenant\Contracts\SushiToJsonContract;
 use Modules\Tenant\Models\Traits\SushiToJson;
 use Modules\Xot\Contracts\ProfileContract;
+
+use function Safe\file_get_contents;
+use function Safe\file_put_contents;
+use function Safe\json_decode;
+use function Safe\json_encode;
+use function Safe\mkdir;
 
 /**
  * Modello per i comuni italiani con Sushi.
@@ -17,25 +24,32 @@ use Modules\Xot\Contracts\ProfileContract;
  * regioni, province, città, CAP, codici ISTAT, ecc.
  * Tutti i dati sono estratti da file JSON e gestiti tramite Sushi.
  *
- * @property string|null $nome
- * @property float|null $codice
+ * @method string getJsonFile()
+ * @method array  loadExistingData()
+ * @method string authId()
+ * @method void   ensureDirectoryExists()
+ * @method void   saveToJson()
+ * @method int    findRowIndexById(int $id)
+ *
+ * @property string|null                  $nome
+ * @property float|null                   $codice
  * @property array<array-key, mixed>|null $zona
  * @property array<array-key, mixed>|null $regione
  * @property array<array-key, mixed>|null $provincia
- * @property string|null $sigla
- * @property string|null $codiceCatastale
+ * @property string|null                  $sigla
+ * @property string|null                  $codiceCatastale
  * @property array<array-key, mixed>|null $cap
- * @property int|null $popolazione
- * @property int|null $id
- * @property string|null $title
- * @property string|null $slug
- * @property string|null $content
- * @property string|null $created_at
- * @property string|null $updated_at
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $updater
+ * @property int|null                     $popolazione
+ * @property int|null                     $id
+ * @property string|null                  $title
+ * @property string|null                  $slug
+ * @property string|null                  $content
+ * @property string|null                  $created_at
+ * @property string|null                  $updated_at
+ * @property string|null                  $created_by
+ * @property string|null                  $updated_by
+ * @property ProfileContract|null         $creator
+ * @property ProfileContract|null         $updater
  *
  * @method static Builder<static>|Comune newModelQuery()
  * @method static Builder<static>|Comune newQuery()
@@ -62,12 +76,12 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @method static ComuneFactory factory($count = null, $state = [])
  *
- * @property int|null $altitudine
+ * @property int|null    $altitudine
  * @property string|null $codice_catastale
- * @property float|null $lat
- * @property float|null $lng
+ * @property float|null  $lat
+ * @property float|null  $lng
  * @property string|null $sigla_provincia
- * @property float|null $superficie
+ * @property float|null  $superficie
  * @property string|null $zona_altimetrica
  *
  * @method static Builder<static>|Comune whereAltitudine($value)
@@ -79,7 +93,7 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @mixin \Eloquent
  */
-class Comune extends BaseModel implements \Modules\Tenant\Contracts\SushiToJsonContract
+class Comune extends BaseModel implements SushiToJsonContract
 {
     use SushiToJson;
 
@@ -124,6 +138,64 @@ class Comune extends BaseModel implements \Modules\Tenant\Contracts\SushiToJsonC
     public function getJsonFile(): string
     {
         return module_path('Geo', 'resources/json/comuni.json');
+    }
+
+    /**
+     * @return array<int, array<string, mixed>>
+     */
+    public function loadExistingData(): array
+    {
+        $path = $this->getJsonFile();
+        if (! file_exists($path)) {
+            return [];
+        }
+        try {
+            $data = json_decode(file_get_contents($path), true);
+            if (! is_array($data)) {
+                return [];
+            }
+
+            /* @var array<int, array<string, mixed>> $data */
+            return $data;
+        } catch (\Throwable) {
+            return [];
+        }
+    }
+
+    public function saveToJson(array $data): bool
+    {
+        $file = $this->getJsonFile();
+        $directory = dirname($file);
+        if (! file_exists($directory)) {
+            mkdir($directory, 0o755, true);
+        }
+        file_put_contents($file, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+        return true;
+    }
+
+    public function authId(): string
+    {
+        return (string) (auth()->id() ?? 'system');
+    }
+
+    public function ensureDirectoryExists(string $filePath): void
+    {
+        $directory = dirname($filePath);
+        if (! file_exists($directory)) {
+            mkdir($directory, 0o755, true);
+        }
+    }
+
+    public function findRowIndexById(array $rows, int $id): ?int
+    {
+        foreach ($rows as $index => $row) {
+            if (is_array($row) && ((int) ($row['id'] ?? 0)) === $id) {
+                return (int) $index;
+            }
+        }
+
+        return null;
     }
 
     public function getRows(): array
@@ -175,7 +247,8 @@ class Comune extends BaseModel implements \Modules\Tenant\Contracts\SushiToJsonC
     /**
      * Find a comune by name (case insensitive).
      *
-     * @param  string  $nome  The name of the comune to find (case insensitive)
+     * @param string $nome The name of the comune to find (case insensitive)
+     *
      * @return static|null The found comune or null if not found
      */
     public static function findByNome(string $nome): ?self
@@ -188,7 +261,8 @@ class Comune extends BaseModel implements \Modules\Tenant\Contracts\SushiToJsonC
     /**
      * Find comuni by CAP code (partial match supported).
      *
-     * @param  string  $cap  The CAP code to search for
+     * @param string $cap The CAP code to search for
+     *
      * @return Collection<static> Collection of matching comuni
      */
     public static function findByCap(string $cap): Collection

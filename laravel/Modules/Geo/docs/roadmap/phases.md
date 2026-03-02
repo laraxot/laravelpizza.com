@@ -1,25 +1,28 @@
-# Fasi di sviluppo - Geo Module
+# Fasi di Sviluppo del Modulo Geo
 
-## Fase 1: Core Geo Services (Completata)
+## Fase 1 · Core Geo Services (completata)
 
-- [x] Modelli base (Location, Address) e gestione coordinate
-- [x] Servizio di geocoding e integrazione mappe di base
-- [x] Correzioni PHPStan Level 10
+- Modelli base per Location/Address e gestione coordinate.
+- Servizi di geocoding e mappe di base.
+- Correzioni per PHPStan Level 10 su tutto il modulo.
 
-## Fase 2: Advanced Features (Completata)
+## Fase 2 · Advanced Features (completata)
 
-- [x] Sistema di Geofencing e integrazione routing
-- [x] Supporto a più provider cartografici (Google, OpenStreetMap, ecc.)
-- [x] Sistema di caching per le richieste geografiche
+- Implementazione di geofencing e routing.
+- Supporto per più provider cartografici (es. Google, OpenStreetMap).
+- Sistema di caching per richieste geografiche ripetitive.
 
-## Fase 3: Analytics e Ottimizzazione (In Corso)
+## Fase 3 · Analytics e Ottimizzazione (in corso)
 
-- [ ] Implementazione di analytics geografiche per reporting
-- [ ] Ottimizzazione delle performance delle query GIS
-- [ ] Supporto real-time per aggiornamenti di posizione
+- Analytics geografiche per reporting (es. distribuzione utenti e servizi).
+- Ottimizzazione delle query GIS per ridurre tempi di risposta.
+- Supporto per aggiornamenti di posizione quasi real-time quando necessario.
 
-## Fase 4: AI e Enterprise (Pianificato)
+## Fase 4 · AI e scenari avanzati (pianificata)
 
-- [ ] AI-Powered Routing: suggerimenti predittivi basati sui dati storici
-- [ ] Stili di mappa customizzabili per Tenant
-- [ ] Supporto multitenant avanzato per isolamento dati geografici
+- Routing suggerito in base a dati storici e pattern di utilizzo.
+- Stili di mappa configurabili per tenant differenti.
+- Supporto multi-tenant avanzato con pieno isolamento dei dati geografici.
+
+Criteri di accettazione dettagliati: [acceptance-criteria.md](acceptance-criteria.md). Metriche: [metrics.md](metrics.md).
+

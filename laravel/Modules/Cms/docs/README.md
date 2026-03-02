@@ -34,8 +34,8 @@ Modules/Cms/
 - [Modulo <main module> - Homepage](../../<main module>/docs/homepage-architecture.md)
 
 ### Documentazione Root
-- [Architettura Generale](../../../../docs/architecture.md)
-- [Best Practices UX](../../../../docs/ux-design-principles.md)
+- [Architettura Generale](../../../docs/architecture.md)
+- [Best Practices UX](../../../docs/ux-design-principles.md)
 
 ## 🚨 Regole Critiche
 
@@ -43,7 +43,7 @@ Modules/Cms/
 **TUTTI i link .md DEVONO essere relativi**
 - ✅ `./file.md` (stesso modulo)
 - ✅ `../../Modulo/docs/file.md` (altro modulo)  
-- ✅ `../../../../docs/file.md` (root docs)
+- ✅ `../../../docs/file.md` (root docs)
 - ❌ `/var/www/html/...` (VIETATO)
 
 ### Convenzioni
@@ -182,7 +182,7 @@ Il modulo CMS gestisce i contenuti e i widget del sistema, fornendo un sistema f
    - Utilizzare i trait forniti dal modulo
 
 2. **Convenzioni**
-   - Seguire le [convenzioni di naming](../../../../docs/standards/file_naming_conventions.md)
+   - Seguire le [convenzioni di naming](../../../docs/standards/file_naming_conventions.md)
    - Documentare tutto il codice con PHPDoc
    - Mantenere la struttura dei file coerente
 
@@ -196,7 +196,7 @@ Il modulo CMS gestisce i contenuti e i widget del sistema, fornendo un sistema f
 - [Modulo Lang](../Lang/docs/README.md) - Gestione traduzioni
 - [Modulo UI](../UI/docs/README.md) - Componenti di interfaccia
 - [Modulo Xot](../Xot/docs/README.md) - Modulo base e linee guida
-- [Documentazione Principale](../../../../docs/README.md) - Documentazione generale
+- [Documentazione Principale](../../../docs/README.md) - Documentazione generale
 
 ## Roadmap e Sviluppo
 - [Roadmap](roadmap.md) - Piano di sviluppo futuro

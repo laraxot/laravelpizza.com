@@ -195,7 +195,7 @@ Activity dipende da User per `causedBy()`. Assicurarsi che:
 
 - Pattern di riferimento: `Modules/Job/tests/TestCase.php`
 - Filosofia: `Modules/Job/docs/testcase-philosophy-analysis.md`
-- Documentazione generale: `docs/test-corrections-complete-[DATE].md`
+- Documentazione generale: `laravel/docs/test-corrections-complete-[DATE].md`
 
 ---
 

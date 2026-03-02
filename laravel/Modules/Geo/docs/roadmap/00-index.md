@@ -7,7 +7,6 @@
 - [Visione](vision.md)
 - [Fasi di sviluppo](phases.md)
 - [Checklist qualità](quality.md)
-- [Chaos Readiness 2026-03-02](chaos-readiness-2026-03-02.md)
 
 ## Metriche rapide
 

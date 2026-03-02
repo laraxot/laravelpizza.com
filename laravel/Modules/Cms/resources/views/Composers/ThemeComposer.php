@@ -19,7 +19,7 @@ class ThemeComposer
     /**
      * Get menu items by name.
      *
-     * @return array<array-key, mixed>|null
+     * @return array<string, mixed>|null
      */
     public function getMenu(string $menu_name): ?array
     {
@@ -31,13 +31,18 @@ class ThemeComposer
             return null;
         }
 
-        /** @var array<array-key, mixed> $items */
-        return $items;
+        /** @var array<string, mixed> $normalized */
+        $normalized = [];
+        foreach ($items as $key => $value) {
+            $normalized[(string) $key] = $value;
+        }
+
+        return $normalized;
     }
 
     public function getMenuUrl(array $menu): string
     {
-        if ($menu === []) {
+        if ([] === $menu) {
             return '#';
         }
         $lang = app()->getLocale();
@@ -49,13 +54,13 @@ class ThemeComposer
             return '#';
         }
 
-        if ($type === 'internal') {
+        if ('internal' === $type) {
             return route('page_slug.view', ['lang' => $lang, 'slug' => $url]);
         }
-        if ($type === 'external') {
+        if ('external' === $type) {
             return $url;
         }
-        if ($type === 'route_name') {
+        if ('route_name' === $type) {
             return route($url, ['lang' => $lang]);
         }
 
@@ -75,7 +80,7 @@ class ThemeComposer
             $blocks = [];
         }
         $blocksComponent = new Blocks(
-            tpl: 'ui::components.render.blocks.v1',
+            view: 'ui::components.render.blocks.v1',
             blocks: $blocks,
             model: $page,
         );
@@ -97,7 +102,7 @@ class ThemeComposer
         }
 
         $blocksComponent = new Blocks(
-            tpl: 'ui::components.render.blocks.v1',
+            view: 'ui::components.render.blocks.v1',
             blocks: $blocks,
             model: $page,
         );
@@ -119,7 +124,7 @@ class ThemeComposer
         }
 
         $blocksComponent = new Blocks(
-            tpl: 'ui::components.render.blocks.v1',
+            view: 'ui::components.render.blocks.v1',
             blocks: $blocks,
             model: $page,
         );

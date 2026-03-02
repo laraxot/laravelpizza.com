@@ -56,7 +56,7 @@ $panel = Filament::getCurrentPanel(); // ❌ CLASSE NON ESISTENTE
 return $resource::getUrl('log-activity', ['record' => $record], panel: $panelId);
 ```
 
-Vedi [Filament 4 Important Notes](../../../../../docs/filament4-important.md) per dettagli completi.
+Vedi [Filament 4 Important Notes](../../../../../../docs/filament4-important.md) per dettagli completi.
 
 ### Metodi Principali
 

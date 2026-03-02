@@ -478,7 +478,7 @@ docker-compose restart app
 
 ### Sistema Architecture
 - [Service Provider Architecture](../../xot/docs/service-provider-architecture.md) - Architettura completa del sistema ServiceProvider
-- [Laraxot Conventions](../../../../../docs/laraxot-conventions.md) - Convenzioni generali
+- [Laraxot Conventions](../../../../docs/laraxot-conventions.md) - Convenzioni generali
 
 ---
 

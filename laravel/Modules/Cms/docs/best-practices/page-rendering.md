@@ -188,4 +188,4 @@ Per una documentazione più dettagliata sul sistema di gestione dei contenuti e 
 
 ---
 @see laravel/Themes/One/resources/views/pages/index.blade.php
-@see docs/cms/components.md
+@see laravel/docs/cms/components.md

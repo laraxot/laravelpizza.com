@@ -74,7 +74,7 @@
 
 ## Collegamenti
 
-- [Audit Generale Traduzioni Navigation](../../../../docs/navigation-translations-audit.md)
+- [Audit Generale Traduzioni Navigation](../../../../../docs/navigation-translations-audit.md)
 - [Documentazione Modulo Geo](readme.md)
 - [Struttura Geo](structure.md)
 - [Regole Traduzioni Laraxot](../xot/docs/translation-rules.md)
