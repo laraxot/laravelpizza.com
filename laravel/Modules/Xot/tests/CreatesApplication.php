@@ -26,6 +26,14 @@ trait CreatesApplication
         // Explicitly set the base path before requiring bootstrap/app.php
         $_ENV['APP_BASE_PATH'] = $basePath;
 
+        // CRITICAL: Load .env.testing BEFORE app bootstrap so TenantServiceProvider
+        // and all module connections (activity, user, etc.) use laravelpizza_data_test
+        $envTesting = $basePath.'/.env.testing';
+        if (file_exists($envTesting)) {
+            $dotenv = \Dotenv\Dotenv::createImmutable($basePath, '.env.testing', true);
+            $dotenv->safeLoad();
+        }
+
         $app = require $basePath.'/bootstrap/app.php';
 
         // Bind essential paths if they are not correctly resolved

@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Media\Models\Media;
-use Modules\Notify\Database\Factories\NotificationLogFactory;
 use Modules\Notify\Enums\NotificationLogStatusEnum;
 use Modules\Xot\Contracts\ProfileContract;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
@@ -43,7 +42,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property-read int|null $media_count
  * @property-read Model|\Eloquent $notifiable
  * @property-read ProfileContract|null $updater
- * @method static NotificationLogFactory factory($count = null, $state = [])
  * @method static Builder<static>|NotificationLog forNotifiable(Model $notifiable)
  * @method static Builder<static>|NotificationLog forTemplate(int $templateId)
  * @method static Builder<static>|NotificationLog newModelQuery()

@@ -50,9 +50,11 @@
              Without these, TenantServiceProvider uses laravelpizza_data (prod) for activity/user connections. -->
         <env name="DB_DATABASE" value="laravelpizza_data_test"/>
         <env name="DB_DATABASE_USER" value="laravelpizza_user_test"/>
+        <env name="DB_DATABASE_ACTIVITY" value="laravelpizza_data_test"/>
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
+        <env name="ACTIVITY_LOGGER_DB_CONNECTION" value="activity"/>
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="NIGHTWATCH_ENABLED" value="false"/>

@@ -1,9 +1,9 @@
 # Code Coverage: Tenant
 
-**Lines Coverage:** 0.0%
-**Methods Coverage:** 0.0%
-**Classes Coverage:** 0.0%
-**Functions Coverage:** 0.0%
+**Lines Coverage:** N/A
+**Methods Coverage:** N/A
+**Classes Coverage:** N/A
+**Functions Coverage:** N/A
 **Test Status:** ⚠️  OTHER ERROR
 
 ## Summary
