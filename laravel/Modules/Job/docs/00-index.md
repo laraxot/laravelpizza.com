@@ -24,7 +24,7 @@
 - 🧹 **[PHPMD & Complexity](./cyclomatic-complexity-report.md)** - Analisi della pulizia del codice.
 
 ## 📦 **Pacchetti Composer**
-- [Riferimento completo](../../../docs/composer-packages-reference.md) - Nessuna dipendenza diretta; usa Xot, spipu/html2pdf (via Xot)
+- [Riferimento](../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../docs/architecture/composer-packages-full-inventory.md) - Nessuna dipendenza diretta; usa Xot, spipu/html2pdf (via Xot)
 
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Base framework e Page classes.

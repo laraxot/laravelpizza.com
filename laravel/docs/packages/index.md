@@ -1,0 +1,320 @@
+# Packages (from composer show)
+
+This directory is generated from `composer show -f json` and documents the installed vendor state.
+
+- [Categories](categories.md)
+
+## Index
+
+- [aaronfrancis/fast-paginate](packages/aaronfrancis/fast-paginate.md) `v2.0.0` - Fast paginate for Laravel
+- [anourvalar/eloquent-serialize](packages/anourvalar/eloquent-serialize.md) `1.3.5` - Laravel Query Builder (Eloquent) serialization
+- [aws/aws-crt-php](packages/aws/aws-crt-php.md) `v1.2.7` - AWS Common Runtime for PHP
+- [aws/aws-sdk-php](packages/aws/aws-sdk-php.md) `3.369.37` - AWS SDK for PHP - Use Amazon Web Services in your PHP project
+- [barryvdh/laravel-debugbar](packages/barryvdh/laravel-debugbar.md) `v3.16.5` - PHP Debugbar integration for Laravel
+- [barryvdh/laravel-ide-helper](packages/barryvdh/laravel-ide-helper.md) `v3.6.1` - Laravel IDE Helper, generates correct PHPDocs for all Facade classes, to improve auto-completion.
+- [barryvdh/reflection-docblock](packages/barryvdh/reflection-docblock.md) `v2.4.0`
+- [blade-ui-kit/blade-heroicons](packages/blade-ui-kit/blade-heroicons.md) `2.6.0` - A package to easily make use of Heroicons in your Laravel Blade views.
+- [blade-ui-kit/blade-icons](packages/blade-ui-kit/blade-icons.md) `1.8.1` - A package to easily make use of icons in your Laravel Blade views.
+- [brianium/paratest](packages/brianium/paratest.md) `v7.19.0` - Parallel testing for PHP
+- [brick/math](packages/brick/math.md) `0.14.8` - Arbitrary-precision arithmetic library
+- [calebporzio/sushi](packages/calebporzio/sushi.md) `v2.5.3` - Eloquent's missing "array" driver.
+- [carbonphp/carbon-doctrine-types](packages/carbonphp/carbon-doctrine-types.md) `3.2.0` - Types to use Carbon in Doctrine
+- [chillerlan/php-qrcode](packages/chillerlan/php-qrcode.md) `5.0.5` - A QR Code generator and reader with a user-friendly API. PHP 7.4+
+- [chillerlan/php-settings-container](packages/chillerlan/php-settings-container.md) `3.2.1` - A container class for immutable settings objects. Not a DI container.
+- [clue/ndjson-react](packages/clue/ndjson-react.md) `v1.3.0` - Streaming newline-delimited JSON (NDJSON) parser and encoder for ReactPHP.
+- [cmgmyr/phploc](packages/cmgmyr/phploc.md) `8.0.6` - A tool for quickly measuring the size of a PHP project.
+- [composer/class-map-generator](packages/composer/class-map-generator.md) `1.7.1` - Utilities to scan PHP code and generate class maps.
+- [composer/pcre](packages/composer/pcre.md) `3.3.2` - PCRE wrapping library that offers type-safe preg_* replacements.
+- [composer/semver](packages/composer/semver.md) `3.4.4` - Semver library that offers utilities, version constraint parsing and validation.
+- [composer/xdebug-handler](packages/composer/xdebug-handler.md) `3.0.5` - Restarts a process without Xdebug.
+- [coolsam/panel-modules](packages/coolsam/panel-modules.md) `dev-dev` - Support for nwidart/laravel-modules in filamentphp
+- [danharrin/date-format-converter](packages/danharrin/date-format-converter.md) `v0.3.1` - Convert token-based date formats between standards.
+- [danharrin/livewire-rate-limiting](packages/danharrin/livewire-rate-limiting.md) `v2.1.0` - Apply rate limiters to Laravel Livewire actions.
+- [dealerdirect/phpcodesniffer-composer-installer](packages/dealerdirect/phpcodesniffer-composer-installer.md) `v1.2.0` - PHP_CodeSniffer Standards Composer Installer Plugin
+- [defuse/php-encryption](packages/defuse/php-encryption.md) `v2.4.0` - Secure PHP Encryption Library
+- [dflydev/dot-access-data](packages/dflydev/dot-access-data.md) `v3.0.3` - Given a deep data structure, access data by dot notation.
+- [doctrine/dbal](packages/doctrine/dbal.md) `4.4.1` - Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection and management.
+- [doctrine/deprecations](packages/doctrine/deprecations.md) `1.1.6` - A small layer on top of trigger_error(E_USER_DEPRECATED) or PSR-3 logging with options to disable all deprecations or selectively for packages.
+- [doctrine/inflector](packages/doctrine/inflector.md) `2.1.0` - PHP Doctrine Inflector is a small library that can perform string manipulations with regard to upper/lowercase and singular/plural forms of words.
+- [doctrine/lexer](packages/doctrine/lexer.md) `3.0.1` - PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.
+- [doctrine/sql-formatter](packages/doctrine/sql-formatter.md) `1.5.4` - a PHP SQL highlighting library
+- [dragonmantank/cron-expression](packages/dragonmantank/cron-expression.md) `v3.6.0` - CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due
+- [egulias/email-validator](packages/egulias/email-validator.md) `4.0.4` - A library for validating emails against several RFCs
+- [evenement/evenement](packages/evenement/evenement.md) `v3.0.2` - Événement is a very simple event dispatching library for PHP
+- [ezyang/htmlpurifier](packages/ezyang/htmlpurifier.md) `v4.19.0` - Standards compliant HTML filter written in PHP
+- [facade/ignition-contracts](packages/facade/ignition-contracts.md) `1.0.2` - Solution contracts for Ignition
+- [fakerphp/faker](packages/fakerphp/faker.md) `v1.24.1` - Faker is a PHP library that generates fake data for you.
+- [fidry/cpu-core-counter](packages/fidry/cpu-core-counter.md) `1.3.0` - Tiny utility to get the number of CPU cores.
+- [fidum/laravel-eloquent-morph-to-one](packages/fidum/laravel-eloquent-morph-to-one.md) `2.5.0` - Adds MorphToOne relation to Laravel eloquent
+- [filament/actions](packages/filament/actions.md) `v5.2.1` - Easily add beautiful action modals to any Livewire component.
+- [filament/filament](packages/filament/filament.md) `v5.2.1` - A collection of full-stack components for accelerated Laravel app development.
+- [filament/forms](packages/filament/forms.md) `v5.2.1` - Easily add beautiful forms to any Livewire component.
+- [filament/infolists](packages/filament/infolists.md) `v5.2.1` - Easily add beautiful read-only infolists to any Livewire component.
+- [filament/notifications](packages/filament/notifications.md) `v5.2.1` - Easily add beautiful notifications to any Livewire app.
+- [filament/query-builder](packages/filament/query-builder.md) `v5.2.1` - A powerful query builder component for Filament.
+- [filament/schemas](packages/filament/schemas.md) `v5.2.1` - Easily add beautiful UI to any Livewire component.
+- [filament/spatie-laravel-media-library-plugin](packages/filament/spatie-laravel-media-library-plugin.md) `v5.2.1` - Filament support for `spatie/laravel-medialibrary`.
+- [filament/support](packages/filament/support.md) `v5.2.1` - Core helper methods and foundation code for all Filament packages.
+- [filament/tables](packages/filament/tables.md) `v5.2.1` - Easily add beautiful tables to any Livewire component.
+- [filament/upgrade](packages/filament/upgrade.md) `v5.2.1` - Upgrade Filament v4 code to Filament v5.
+- [filament/widgets](packages/filament/widgets.md) `v5.2.1` - Easily add beautiful dashboard widgets to any Livewire component.
+- [filp/whoops](packages/filp/whoops.md) `2.18.4` - php error handling for cool kids
+- [firebase/php-jwt](packages/firebase/php-jwt.md) `v7.0.2` - A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.
+- [flowframe/laravel-trend](packages/flowframe/laravel-trend.md) `v0.4.0` - Easily generate model trends
+- [friendsofphp/php-cs-fixer](packages/friendsofphp/php-cs-fixer.md) `v3.94.1` - A tool to automatically fix PHP code style
+- [fruitcake/php-cors](packages/fruitcake/php-cors.md) `v1.4.0` - Cross-origin resource sharing library for the Symfony HttpFoundation
+- [graham-campbell/result-type](packages/graham-campbell/result-type.md) `v1.1.4` - An Implementation Of The Result Type
+- [guzzlehttp/guzzle](packages/guzzlehttp/guzzle.md) `7.10.0` - Guzzle is a PHP HTTP client library
+- [guzzlehttp/promises](packages/guzzlehttp/promises.md) `2.3.0` - Guzzle promises library
+- [guzzlehttp/psr7](packages/guzzlehttp/psr7.md) `2.8.0` - PSR-7 message implementation that also provides common utility methods
+- [guzzlehttp/uri-template](packages/guzzlehttp/uri-template.md) `v1.0.5` - A polyfill class for uri_template of PHP
+- [hamcrest/hamcrest-php](packages/hamcrest/hamcrest-php.md) `v2.1.1` - This is the PHP port of Hamcrest Matchers
+- [iamcal/sql-parser](packages/iamcal/sql-parser.md) `v0.7` - MySQL schema parser
+- [intervention/gif](packages/intervention/gif.md) `4.2.4` - Native PHP GIF Encoder/Decoder
+- [intervention/image](packages/intervention/image.md) `3.11.6` - PHP Image Processing
+- [irazasyed/telegram-bot-sdk](packages/irazasyed/telegram-bot-sdk.md) `v3.15.0` - The Unofficial Telegram Bot API PHP SDK
+- [jaybizzle/crawler-detect](packages/jaybizzle/crawler-detect.md) `v1.3.7` - CrawlerDetect is a PHP class for detecting bots/crawlers/spiders via the user agent
+- [jean85/pretty-package-versions](packages/jean85/pretty-package-versions.md) `2.1.1` - A library to get pretty versions strings of installed dependencies
+- [jenssegers/agent](packages/jenssegers/agent.md) `v2.6.4` - Desktop/mobile user agent parser with support for Laravel, based on Mobiledetect
+- [kirschbaum-development/eloquent-power-joins](packages/kirschbaum-development/eloquent-power-joins.md) `4.2.11` - The Laravel magic applied to joins.
+- [lara-zeus/spatie-translatable](packages/lara-zeus/spatie-translatable.md) `2.0.0` - Filament support for `spatie/laravel-translatable`.
+- [larastan/larastan](packages/larastan/larastan.md) `v3.9.2` - Larastan - Discover bugs in your code without running it. A phpstan/phpstan extension for Laravel
+- [laravel-notification-channels/telegram](packages/laravel-notification-channels/telegram.md) `6.0.0` - Telegram Notifications Channel for Laravel
+- [laravel/boost](packages/laravel/boost.md) `v2.1.7` - Laravel Boost accelerates AI-assisted development by providing the essential context and structure that AI needs to generate high-quality, Laravel-specific code.
+- [laravel/folio](packages/laravel/folio.md) `v1.1.12` - Page based routing for Laravel.
+- [laravel/framework](packages/laravel/framework.md) `v12.52.0` - The Laravel Framework.
+- [laravel/mcp](packages/laravel/mcp.md) `v0.5.9` - Rapidly build MCP servers for your Laravel applications.
+- [laravel/pail](packages/laravel/pail.md) `v1.2.6` - Easily delve into your Laravel application's log files directly from the command line.
+- [laravel/passport](packages/laravel/passport.md) `v13.4.4` - Laravel Passport provides OAuth2 server support to Laravel.
+- [laravel/pennant](packages/laravel/pennant.md) `v1.19.0` - A simple, lightweight library for managing feature flags.
+- [laravel/pint](packages/laravel/pint.md) `v1.27.1` - An opinionated code formatter for PHP.
+- [laravel/prompts](packages/laravel/prompts.md) `v0.3.13` - Add beautiful and user-friendly forms to your command-line applications.
+- [laravel/pulse](packages/laravel/pulse.md) `v1.5.0` - Laravel Pulse is a real-time application performance monitoring tool and dashboard for your Laravel application.
+- [laravel/roster](packages/laravel/roster.md) `v0.4.0` - Detect packages & approaches in use within a Laravel project
+- [laravel/sail](packages/laravel/sail.md) `v1.53.0` - Docker files for running a basic Laravel application.
+- [laravel/serializable-closure](packages/laravel/serializable-closure.md) `v2.0.9` - Laravel Serializable Closure provides an easy and secure way to serialize closures in PHP.
+- [laravel/socialite](packages/laravel/socialite.md) `v5.24.2` - Laravel wrapper around OAuth 1 & OAuth 2 libraries.
+- [laravel/tinker](packages/laravel/tinker.md) `v2.11.1` - Powerful REPL for the Laravel framework.
+- [lcobucci/clock](packages/lcobucci/clock.md) `3.5.0` - Yet another clock abstraction
+- [lcobucci/jwt](packages/lcobucci/jwt.md) `5.6.0` - A simple library to work with JSON Web Token and JSON Web Signature
+- [league/commonmark](packages/league/commonmark.md) `2.8.0` - Highly-extensible PHP Markdown parser which fully supports the CommonMark spec and GitHub-Flavored Markdown (GFM)
+- [league/config](packages/league/config.md) `v1.2.0` - Define configuration arrays with strict schemas and access values with dot notation
+- [league/container](packages/league/container.md) `5.1.0` - A fast and intuitive dependency injection container.
+- [league/csv](packages/league/csv.md) `9.28.0` - CSV data manipulation made easy in PHP
+- [league/event](packages/league/event.md) `3.0.3` - Event package
+- [league/flysystem](packages/league/flysystem.md) `3.31.0` - File storage abstraction for PHP
+- [league/flysystem-local](packages/league/flysystem-local.md) `3.31.0` - Local filesystem adapter for Flysystem.
+- [league/mime-type-detection](packages/league/mime-type-detection.md) `1.16.0` - Mime-type detection for Flysystem
+- [league/oauth1-client](packages/league/oauth1-client.md) `v1.11.0` - OAuth 1.0 Client Library
+- [league/oauth2-server](packages/league/oauth2-server.md) `9.3.0` - A lightweight and powerful OAuth 2.0 authorization and resource server library with support for all the core specification grants. This library will allow you to secure your API with OAuth and allow your applications users to approve apps that want to access their data from your API.
+- [league/uri](packages/league/uri.md) `7.8.0` - URI manipulation library
+- [league/uri-components](packages/league/uri-components.md) `7.8.0` - URI components manipulation library
+- [league/uri-interfaces](packages/league/uri-interfaces.md) `7.8.0` - Common tools for parsing and resolving RFC3987/RFC3986 URI
+- [livewire/flux](packages/livewire/flux.md) `v2.12.1` - The official UI component library for Livewire.
+- [livewire/livewire](packages/livewire/livewire.md) `v4.1.4` - A front-end framework for Laravel.
+- [livewire/volt](packages/livewire/volt.md) `v1.10.2` - An elegantly crafted functional API for Laravel Livewire.
+- [maatwebsite/excel](packages/maatwebsite/excel.md) `3.1.67` - Supercharged Excel exports and imports in Laravel
+- [maennchen/zipstream-php](packages/maennchen/zipstream-php.md) `3.2.1` - ZipStream is a library for dynamically streaming dynamic zip files from PHP without writing to the disk at all on the server.
+- [markbaker/complex](packages/markbaker/complex.md) `3.0.2` - PHP Class for working with complex numbers
+- [markbaker/matrix](packages/markbaker/matrix.md) `3.0.1` - PHP Class for working with matrices
+- [masterminds/html5](packages/masterminds/html5.md) `2.10.0` - An HTML5 parser and serializer.
+- [mcamara/laravel-localization](packages/mcamara/laravel-localization.md) `v2.3.0` - Easy localization for Laravel
+- [mobiledetect/mobiledetectlib](packages/mobiledetect/mobiledetectlib.md) `2.8.45` - Mobile_Detect is a lightweight PHP class for detecting mobile devices. It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.
+- [mockery/mockery](packages/mockery/mockery.md) `1.6.12` - Mockery is a simple yet flexible PHP mock object framework
+- [monolog/monolog](packages/monolog/monolog.md) `3.10.0` - Sends your logs to files, sockets, inboxes, databases and various web services
+- [mtdowling/jmespath.php](packages/mtdowling/jmespath-php.md) `2.8.0` - Declaratively specify how to extract elements from a JSON document
+- [mustache/mustache](packages/mustache/mustache.md) `v2.14.2` - A Mustache implementation in PHP.
+- [myclabs/deep-copy](packages/myclabs/deep-copy.md) `1.13.4` - Create deep copies (clones) of your objects
+- [nesbot/carbon](packages/nesbot/carbon.md) `3.11.1` - An API extension for DateTime that supports 281 different languages.
+- [nette/php-generator](packages/nette/php-generator.md) `v4.2.1` - 🐘 Nette PHP Generator: generates neat PHP code for you. Supports new PHP 8.5 features.
+- [nette/schema](packages/nette/schema.md) `v1.3.4` - 📐 Nette Schema: validating data structures against a given Schema.
+- [nette/utils](packages/nette/utils.md) `v4.1.3` - 🛠  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.
+- [nikic/php-parser](packages/nikic/php-parser.md) `v5.7.0` - A PHP parser written in PHP
+- [nunomaduro/collision](packages/nunomaduro/collision.md) `v8.9.1` - Cli error handling for console/command-line PHP applications.
+- [nunomaduro/phpinsights](packages/nunomaduro/phpinsights.md) `v2.13.3` - Instant PHP quality checks from your console.
+- [nunomaduro/pokio](packages/nunomaduro/pokio.md) `v0.1.2` - Pokio is a dead simple asynchronous API for PHP that just works
+- [nunomaduro/termwind](packages/nunomaduro/termwind.md) `v2.4.0` - It's like Tailwind CSS, but for the console.
+- [nwidart/laravel-modules](packages/nwidart/laravel-modules.md) `v12.0.4` - Laravel Module management
+- [openspout/openspout](packages/openspout/openspout.md) `v4.32.0` - PHP Library to read and write spreadsheet files (CSV, XLSX and ODS), in a fast and scalable way
+- [orchestra/canvas](packages/orchestra/canvas.md) `v10.1.1` - Code Generators for Laravel Applications and Packages
+- [orchestra/canvas-core](packages/orchestra/canvas-core.md) `v10.1.2` - Code Generators Builder for Laravel Applications and Packages
+- [orchestra/sidekick](packages/orchestra/sidekick.md) `v1.2.20` - Packages Toolkit Utilities and Helpers for Laravel
+- [orchestra/testbench](packages/orchestra/testbench.md) `v10.9.0` - Laravel Testing Helper for Packages Development
+- [orchestra/testbench-core](packages/orchestra/testbench-core.md) `v10.9.0` - Testing Helper for Laravel Development
+- [orchestra/workbench](packages/orchestra/workbench.md) `v10.0.8` - Workbench Companion for Laravel Packages Development
+- [owenvoke/blade-fontawesome](packages/owenvoke/blade-fontawesome.md) `v2.9.1` - A package to easily make use of Font Awesome in your Laravel Blade views
+- [paragonie/constant_time_encoding](packages/paragonie/constant-time-encoding.md) `v3.1.3` - Constant-time Implementations of RFC 4648 Encoding (Base-64, Base-32, Base-16)
+- [paragonie/random_compat](packages/paragonie/random-compat.md) `v9.99.100` - PHP 5.x polyfill for random_bytes() and random_int() from PHP 7
+- [pbmedia/laravel-ffmpeg](packages/pbmedia/laravel-ffmpeg.md) `8.7.1` - FFMpeg for Laravel
+- [pestphp/pest](packages/pestphp/pest.md) `v4.4.1` - The elegant PHP Testing Framework.
+- [pestphp/pest-plugin](packages/pestphp/pest-plugin.md) `v4.0.0` - The Pest plugin manager
+- [pestphp/pest-plugin-arch](packages/pestphp/pest-plugin-arch.md) `v4.0.0` - The Arch plugin for Pest PHP.
+- [pestphp/pest-plugin-laravel](packages/pestphp/pest-plugin-laravel.md) `v4.0.0` - The Pest Laravel Plugin
+- [pestphp/pest-plugin-mutate](packages/pestphp/pest-plugin-mutate.md) `v4.0.1` - Mutates your code to find untested cases
+- [pestphp/pest-plugin-profanity](packages/pestphp/pest-plugin-profanity.md) `v4.2.1` - The Pest Profanity Plugin
+- [pestphp/pest-plugin-type-coverage](packages/pestphp/pest-plugin-type-coverage.md) `v4.0.3` - The Type Coverage plugin for Pest PHP.
+- [phar-io/manifest](packages/phar-io/manifest.md) `2.0.4` - Component for reading phar.io manifest information from a PHP Archive (PHAR)
+- [phar-io/version](packages/phar-io/version.md) `3.2.1` - Library for handling version information and constraints
+- [php-debugbar/php-debugbar](packages/php-debugbar/php-debugbar.md) `v2.2.6` - Debug bar in the browser for php application
+- [php-ffmpeg/php-ffmpeg](packages/php-ffmpeg/php-ffmpeg.md) `v1.4.0` - FFMpeg PHP, an Object Oriented library to communicate with AVconv / ffmpeg
+- [php-http/discovery](packages/php-http/discovery.md) `1.20.0` - Finds and installs PSR-7, PSR-17, PSR-18 and HTTPlug implementations
+- [php-parallel-lint/php-parallel-lint](packages/php-parallel-lint/php-parallel-lint.md) `v1.4.0` - This tool checks the syntax of PHP files about 20x faster than serial check.
+- [phpdocumentor/reflection](packages/phpdocumentor/reflection.md) `6.4.4` - Reflection library to do Static Analysis for PHP Projects
+- [phpdocumentor/reflection-common](packages/phpdocumentor/reflection-common.md) `2.2.0` - Common reflection classes used by phpdocumentor to reflect the code structure
+- [phpdocumentor/reflection-docblock](packages/phpdocumentor/reflection-docblock.md) `5.6.6` - With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.
+- [phpdocumentor/type-resolver](packages/phpdocumentor/type-resolver.md) `1.12.0` - A PSR-5 based resolver of Class names, Types and Structural Element Names
+- [phpoffice/phpspreadsheet](packages/phpoffice/phpspreadsheet.md) `1.30.2` - PHPSpreadsheet - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine
+- [phpoption/phpoption](packages/phpoption/phpoption.md) `1.9.5` - Option Type for PHP
+- [phpseclib/phpseclib](packages/phpseclib/phpseclib.md) `3.0.49` - PHP Secure Communications Library - Pure-PHP implementations of RSA, AES, SSH2, SFTP, X.509 etc.
+- [phpstan/phpdoc-parser](packages/phpstan/phpdoc-parser.md) `2.3.2` - PHPDoc parser with support for nullable, intersection and generic types
+- [phpstan/phpstan](packages/phpstan/phpstan.md) `2.1.39` - PHPStan - PHP Static Analysis Tool
+- [phpunit/php-code-coverage](packages/phpunit/php-code-coverage.md) `12.5.3` - Library that provides collection, processing, and rendering functionality for PHP code coverage information.
+- [phpunit/php-file-iterator](packages/phpunit/php-file-iterator.md) `6.0.1` - FilterIterator implementation that filters files based on a list of suffixes.
+- [phpunit/php-invoker](packages/phpunit/php-invoker.md) `6.0.0` - Invoke callables with a timeout
+- [phpunit/php-text-template](packages/phpunit/php-text-template.md) `5.0.0` - Simple template engine.
+- [phpunit/php-timer](packages/phpunit/php-timer.md) `8.0.0` - Utility class for timing
+- [phpunit/phpunit](packages/phpunit/phpunit.md) `12.5.12` - The PHP Unit Testing framework.
+- [pragmarx/google2fa](packages/pragmarx/google2fa.md) `v9.0.0` - A One Time Password Authentication package, compatible with Google Authenticator.
+- [pragmarx/google2fa-qrcode](packages/pragmarx/google2fa-qrcode.md) `v3.0.0` - QR Code package for Google2FA
+- [predis/predis](packages/predis/predis.md) `v3.4.0` - A flexible and feature-complete Redis/Valkey client for PHP.
+- [psr/cache](packages/psr/cache.md) `3.0.0` - Common interface for caching libraries
+- [psr/clock](packages/psr/clock.md) `1.0.0` - Common interface for reading the clock.
+- [psr/container](packages/psr/container.md) `2.0.2` - Common Container Interface (PHP FIG PSR-11)
+- [psr/event-dispatcher](packages/psr/event-dispatcher.md) `1.0.0` - Standard interfaces for event handling.
+- [psr/http-client](packages/psr/http-client.md) `1.0.3` - Common interface for HTTP clients
+- [psr/http-factory](packages/psr/http-factory.md) `1.1.0` - PSR-17: Common interfaces for PSR-7 HTTP message factories
+- [psr/http-message](packages/psr/http-message.md) `2.0` - Common interface for HTTP messages
+- [psr/http-server-handler](packages/psr/http-server-handler.md) `1.0.2` - Common interface for HTTP server-side request handler
+- [psr/http-server-middleware](packages/psr/http-server-middleware.md) `1.0.2` - Common interface for HTTP server-side middleware
+- [psr/log](packages/psr/log.md) `3.0.2` - Common interface for logging libraries
+- [psr/simple-cache](packages/psr/simple-cache.md) `3.0.0` - Common interfaces for simple caching
+- [psy/psysh](packages/psy/psysh.md) `v0.12.20` - An interactive shell for modern PHP.
+- [ralouphie/getallheaders](packages/ralouphie/getallheaders.md) `3.0.3` - A polyfill for getallheaders.
+- [ramsey/collection](packages/ramsey/collection.md) `2.1.1` - A PHP library for representing and manipulating collections.
+- [ramsey/uuid](packages/ramsey/uuid.md) `4.9.2` - A PHP library for generating and working with universally unique identifiers (UUIDs).
+- [react/cache](packages/react/cache.md) `v1.2.0` - Async, Promise-based cache interface for ReactPHP
+- [react/child-process](packages/react/child-process.md) `v0.6.7` - Event-driven library for executing child processes with ReactPHP.
+- [react/dns](packages/react/dns.md) `v1.14.0` - Async DNS resolver for ReactPHP
+- [react/event-loop](packages/react/event-loop.md) `v1.6.0` - ReactPHP's core reactor event loop that libraries can use for evented I/O.
+- [react/promise](packages/react/promise.md) `v3.3.0` - A lightweight implementation of CommonJS Promises/A for PHP
+- [react/socket](packages/react/socket.md) `v1.17.0` - Async, streaming plaintext TCP/IP and secure TLS socket server and client connections for ReactPHP
+- [react/stream](packages/react/stream.md) `v1.4.0` - Event-driven readable and writable streams for non-blocking I/O in ReactPHP
+- [rector/rector](packages/rector/rector.md) `2.3.6` - Instant Upgrade and Automated Refactoring of any PHP code
+- [rinvex/countries](packages/rinvex/countries.md) `v9.1.0` - Rinvex Countries is a simple and lightweight package for retrieving country details with flexibility. A whole bunch of data including name, demonym, capital, iso codes, dialling codes, geo data, currencies, flags, emoji, and other attributes for all 250 countries worldwide at your fingertips.
+- [ryangjchandler/blade-capture-directive](packages/ryangjchandler/blade-capture-directive.md) `v1.1.0` - Create inline partials in your Blade templates with ease.
+- [saade/filament-fullcalendar](packages/saade/filament-fullcalendar.md) `v4.0.0-beta3` - The Most Popular JavaScript Calendar integrated with Filament 💛
+- [scrivo/highlight.php](packages/scrivo/highlight-php.md) `v9.18.1.10` - Server side syntax highlighter that supports 185 languages. It's a PHP port of highlight.js
+- [sebastian/cli-parser](packages/sebastian/cli-parser.md) `4.2.0` - Library for parsing CLI options
+- [sebastian/comparator](packages/sebastian/comparator.md) `7.1.4` - Provides the functionality to compare PHP values for equality
+- [sebastian/complexity](packages/sebastian/complexity.md) `5.0.0` - Library for calculating the complexity of PHP code units
+- [sebastian/diff](packages/sebastian/diff.md) `7.0.0` - Diff implementation
+- [sebastian/environment](packages/sebastian/environment.md) `8.0.3` - Provides functionality to handle HHVM/PHP environments
+- [sebastian/exporter](packages/sebastian/exporter.md) `7.0.2` - Provides the functionality to export PHP variables for visualization
+- [sebastian/global-state](packages/sebastian/global-state.md) `8.0.2` - Snapshotting of global state
+- [sebastian/lines-of-code](packages/sebastian/lines-of-code.md) `4.0.0` - Library for counting the lines of code in PHP source code
+- [sebastian/object-enumerator](packages/sebastian/object-enumerator.md) `7.0.0` - Traverses array structures and object graphs to enumerate all referenced objects
+- [sebastian/object-reflector](packages/sebastian/object-reflector.md) `5.0.0` - Allows reflection of object attributes, including inherited and non-public ones
+- [sebastian/recursion-context](packages/sebastian/recursion-context.md) `7.0.1` - Provides functionality to recursively process PHP variables
+- [sebastian/type](packages/sebastian/type.md) `6.0.3` - Collection of value objects that represent the types of the PHP type system
+- [sebastian/version](packages/sebastian/version.md) `6.0.0` - Library that helps with managing the version number of Git-hosted PHP projects
+- [slevomat/coding-standard](packages/slevomat/coding-standard.md) `8.22.1` - Slevomat Coding Standard for PHP_CodeSniffer complements Consistence Coding Standard by providing sniffs with additional checks.
+- [socialiteproviders/auth0](packages/socialiteproviders/auth0.md) `4.2.0` - Auth0 OAuth2 Provider for Laravel Socialite
+- [socialiteproviders/manager](packages/socialiteproviders/manager.md) `v4.8.1` - Easily add new or override built-in providers in Laravel Socialite.
+- [spatie/better-types](packages/spatie/better-types.md) `1.0.1` - Improved abstraction for dealing with union and named types.
+- [spatie/cpu-load-health-check](packages/spatie/cpu-load-health-check.md) `1.0.5` - A Laravel Health check to monitor CPU load
+- [spatie/eloquent-sortable](packages/spatie/eloquent-sortable.md) `5.0.0` - Sortable behaviour for eloquent models
+- [spatie/enum](packages/spatie/enum.md) `3.13.0` - PHP Enums
+- [spatie/image](packages/spatie/image.md) `3.9.1` - Manipulate images with an expressive API
+- [spatie/image-optimizer](packages/spatie/image-optimizer.md) `1.8.1` - Easily optimize images using PHP
+- [spatie/invade](packages/spatie/invade.md) `2.1.0` - A PHP function to work with private properties and methods
+- [spatie/laravel-activitylog](packages/spatie/laravel-activitylog.md) `4.11.0` - A very simple activity logger to monitor the users of your website or application
+- [spatie/laravel-data](packages/spatie/laravel-data.md) `4.19.1` - Create unified resources and data transfer objects
+- [spatie/laravel-database-mail-templates](packages/spatie/laravel-database-mail-templates.md) `3.7.1` - Render Laravel mailables using a template stored in the database.
+- [spatie/laravel-event-sourcing](packages/spatie/laravel-event-sourcing.md) `7.13.0` - The easiest way to get started with event sourcing in Laravel
+- [spatie/laravel-health](packages/spatie/laravel-health.md) `1.37.0` - Monitor the health of a Laravel application
+- [spatie/laravel-medialibrary](packages/spatie/laravel-medialibrary.md) `11.20.0` - Associate files with Eloquent models
+- [spatie/laravel-model-states](packages/spatie/laravel-model-states.md) `2.12.1` - State support for Eloquent models
+- [spatie/laravel-model-status](packages/spatie/laravel-model-status.md) `1.19.0` - A package to enable assigning statuses to Eloquent Models
+- [spatie/laravel-package-tools](packages/spatie/laravel-package-tools.md) `1.92.7` - Tools for creating Laravel packages
+- [spatie/laravel-permission](packages/spatie/laravel-permission.md) `7.2.0` - Permission handling for Laravel 12 and up
+- [spatie/laravel-personal-data-export](packages/spatie/laravel-personal-data-export.md) `4.3.1` - Create personal data downloads in a Laravel app
+- [spatie/laravel-queueable-action](packages/spatie/laravel-queueable-action.md) `2.16.2` - Queueable action support in Laravel
+- [spatie/laravel-responsecache](packages/spatie/laravel-responsecache.md) `7.7.2` - Speed up a Laravel application by caching the entire response
+- [spatie/laravel-schemaless-attributes](packages/spatie/laravel-schemaless-attributes.md) `2.5.2` - Add schemaless attributes to Eloquent models
+- [spatie/laravel-sluggable](packages/spatie/laravel-sluggable.md) `3.7.5` - Generate slugs when saving Eloquent models
+- [spatie/laravel-tags](packages/spatie/laravel-tags.md) `4.10.2` - Add tags and taggable behaviour to your Laravel app
+- [spatie/laravel-translatable](packages/spatie/laravel-translatable.md) `6.12.0` - A trait to make an Eloquent model hold translations
+- [spatie/php-structure-discoverer](packages/spatie/php-structure-discoverer.md) `2.3.3` - Automatically discover structures within your PHP application
+- [spatie/regex](packages/spatie/regex.md) `3.1.1` - A sane interface for php's built in preg_* functions
+- [spatie/shiki-php](packages/spatie/shiki-php.md) `2.3.3` - Highlight code using Shiki in PHP
+- [spatie/temporary-directory](packages/spatie/temporary-directory.md) `2.3.1` - Easily create, use and destroy temporary directories
+- [spipu/html2pdf](packages/spipu/html2pdf.md) `v5.3.3` - Html2Pdf is a HTML to PDF converter written in PHP - It uses TCPDF - OFFICIAL PACKAGE
+- [squizlabs/php_codesniffer](packages/squizlabs/php-codesniffer.md) `3.13.5` - PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.
+- [staabm/side-effects-detector](packages/staabm/side-effects-detector.md) `1.0.5` - A static analysis tool to detect side effects in PHP code
+- [statikbe/laravel-cookie-consent](packages/statikbe/laravel-cookie-consent.md) `1.11.4` - Cookie consent modal for EU
+- [staudenmeir/eloquent-has-many-deep](packages/staudenmeir/eloquent-has-many-deep.md) `v1.21.2` - Laravel Eloquent HasManyThrough relationships with unlimited levels
+- [staudenmeir/eloquent-has-many-deep-contracts](packages/staudenmeir/eloquent-has-many-deep-contracts.md) `v1.3` - Contracts for staudenmeir/eloquent-has-many-deep
+- [staudenmeir/laravel-adjacency-list](packages/staudenmeir/laravel-adjacency-list.md) `v1.25.2` - Recursive Laravel Eloquent relationships with CTEs
+- [staudenmeir/laravel-cte](packages/staudenmeir/laravel-cte.md) `v1.12.4` - Laravel queries with common table expressions
+- [symfony/cache](packages/symfony/cache.md) `v7.4.5` - Provides extended PSR-6, PSR-16 (and tags) implementations
+- [symfony/cache-contracts](packages/symfony/cache-contracts.md) `v3.6.0` - Generic abstractions related to caching
+- [symfony/clock](packages/symfony/clock.md) `v7.4.0` - Decouples applications from the system clock
+- [symfony/console](packages/symfony/console.md) `v7.4.4` - Eases the creation of beautiful and testable command line interfaces
+- [symfony/css-selector](packages/symfony/css-selector.md) `v7.4.0` - Converts CSS selectors to XPath expressions
+- [symfony/deprecation-contracts](packages/symfony/deprecation-contracts.md) `v3.6.0` - A generic function and convention to trigger deprecation notices
+- [symfony/dom-crawler](packages/symfony/dom-crawler.md) `v7.4.4` - Eases DOM navigation for HTML and XML documents
+- [symfony/error-handler](packages/symfony/error-handler.md) `v7.4.4` - Provides tools to manage errors and ease debugging PHP code
+- [symfony/event-dispatcher](packages/symfony/event-dispatcher.md) `v7.4.4` - Provides tools that allow your application components to communicate with each other by dispatching events and listening to them
+- [symfony/event-dispatcher-contracts](packages/symfony/event-dispatcher-contracts.md) `v3.6.0` - Generic abstractions related to dispatching event
+- [symfony/filesystem](packages/symfony/filesystem.md) `v7.4.0` - Provides basic utilities for the filesystem
+- [symfony/finder](packages/symfony/finder.md) `v7.4.5` - Finds files and directories via an intuitive fluent interface
+- [symfony/html-sanitizer](packages/symfony/html-sanitizer.md) `v7.4.0` - Provides an object-oriented API to sanitize untrusted HTML input for safe insertion into a document's DOM.
+- [symfony/http-client](packages/symfony/http-client.md) `v7.4.5` - Provides powerful methods to fetch HTTP resources synchronously or asynchronously
+- [symfony/http-client-contracts](packages/symfony/http-client-contracts.md) `v3.6.0` - Generic abstractions related to HTTP clients
+- [symfony/http-foundation](packages/symfony/http-foundation.md) `v7.4.5` - Defines an object-oriented layer for the HTTP specification
+- [symfony/http-kernel](packages/symfony/http-kernel.md) `v7.4.5` - Provides a structured process for converting a Request into a Response
+- [symfony/mailer](packages/symfony/mailer.md) `v7.4.4` - Helps sending emails
+- [symfony/mime](packages/symfony/mime.md) `v7.4.5` - Allows manipulating MIME messages
+- [symfony/options-resolver](packages/symfony/options-resolver.md) `v7.4.0` - Provides an improved replacement for the array_replace PHP function
+- [symfony/polyfill-ctype](packages/symfony/polyfill-ctype.md) `v1.33.0` - Symfony polyfill for ctype functions
+- [symfony/polyfill-intl-grapheme](packages/symfony/polyfill-intl-grapheme.md) `v1.33.0` - Symfony polyfill for intl's grapheme_* functions
+- [symfony/polyfill-intl-idn](packages/symfony/polyfill-intl-idn.md) `v1.33.0` - Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions
+- [symfony/polyfill-intl-normalizer](packages/symfony/polyfill-intl-normalizer.md) `v1.33.0` - Symfony polyfill for intl's Normalizer class and related functions
+- [symfony/polyfill-mbstring](packages/symfony/polyfill-mbstring.md) `v1.33.0` - Symfony polyfill for the Mbstring extension
+- [symfony/polyfill-php80](packages/symfony/polyfill-php80.md) `v1.33.0` - Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions
+- [symfony/polyfill-php81](packages/symfony/polyfill-php81.md) `v1.33.0` - Symfony polyfill backporting some PHP 8.1+ features to lower PHP versions
+- [symfony/polyfill-php82](packages/symfony/polyfill-php82.md) `v1.33.0` - Symfony polyfill backporting some PHP 8.2+ features to lower PHP versions
+- [symfony/polyfill-php83](packages/symfony/polyfill-php83.md) `v1.33.0` - Symfony polyfill backporting some PHP 8.3+ features to lower PHP versions
+- [symfony/polyfill-php84](packages/symfony/polyfill-php84.md) `v1.33.0` - Symfony polyfill backporting some PHP 8.4+ features to lower PHP versions
+- [symfony/polyfill-php85](packages/symfony/polyfill-php85.md) `v1.33.0` - Symfony polyfill backporting some PHP 8.5+ features to lower PHP versions
+- [symfony/polyfill-uuid](packages/symfony/polyfill-uuid.md) `v1.33.0` - Symfony polyfill for uuid functions
+- [symfony/postmark-mailer](packages/symfony/postmark-mailer.md) `v7.4.4` - Symfony Postmark Mailer Bridge
+- [symfony/process](packages/symfony/process.md) `v7.4.5` - Executes commands in sub-processes
+- [symfony/property-access](packages/symfony/property-access.md) `v7.4.4` - Provides functions to read and write from/to an object or array using a simple string notation
+- [symfony/property-info](packages/symfony/property-info.md) `v7.4.5` - Extracts information about PHP class' properties using metadata of popular sources
+- [symfony/psr-http-message-bridge](packages/symfony/psr-http-message-bridge.md) `v7.4.4` - PSR HTTP message bridge
+- [symfony/routing](packages/symfony/routing.md) `v7.4.4` - Maps an HTTP request to a set of configuration variables
+- [symfony/serializer](packages/symfony/serializer.md) `v7.4.5` - Handles serializing and deserializing data structures, including object graphs, into array structures or other formats like XML and JSON.
+- [symfony/service-contracts](packages/symfony/service-contracts.md) `v3.6.1` - Generic abstractions related to writing services
+- [symfony/stopwatch](packages/symfony/stopwatch.md) `v7.4.0` - Provides a way to profile code
+- [symfony/string](packages/symfony/string.md) `v7.4.4` - Provides an object-oriented API to strings and deals with bytes, UTF-8 code points and grapheme clusters in a unified way
+- [symfony/translation](packages/symfony/translation.md) `v7.4.4` - Provides tools to internationalize your application
+- [symfony/translation-contracts](packages/symfony/translation-contracts.md) `v3.6.1` - Generic abstractions related to translation
+- [symfony/type-info](packages/symfony/type-info.md) `v7.4.4` - Extracts PHP types information.
+- [symfony/uid](packages/symfony/uid.md) `v7.4.4` - Provides an object-oriented API to generate and represent UIDs
+- [symfony/var-dumper](packages/symfony/var-dumper.md) `v7.4.4` - Provides mechanisms for walking through any arbitrary PHP variable
+- [symfony/var-exporter](packages/symfony/var-exporter.md) `v7.4.0` - Allows exporting any serializable PHP data structure to plain PHP code
+- [symfony/yaml](packages/symfony/yaml.md) `v7.4.1` - Loads and dumps YAML files
+- [ta-tikoma/phpunit-architecture-test](packages/ta-tikoma/phpunit-architecture-test.md) `0.8.7` - Methods for testing application architecture
+- [tecnickcom/tcpdf](packages/tecnickcom/tcpdf.md) `6.10.1` - TCPDF is a PHP class for generating PDF documents and barcodes.
+- [thecodingmachine/phpstan-safe-rule](packages/thecodingmachine/phpstan-safe-rule.md) `v1.4.3` - A PHPStan rule to detect safety issues. Must be used in conjunction with thecodingmachine/safe
+- [thecodingmachine/safe](packages/thecodingmachine/safe.md) `v3.4.0` - PHP core functions that throw exceptions instead of returning FALSE on error
+- [theseer/tokenizer](packages/theseer/tokenizer.md) `2.0.1` - A small library for converting tokenized PHP source code into XML and potentially other formats
+- [tightenco/parental](packages/tightenco/parental.md) `v1.5.0` - A simple eloquent trait that allows relationships to be accessed through child models.
+- [tijsverkoyen/css-to-inline-styles](packages/tijsverkoyen/css-to-inline-styles.md) `v2.4.0` - CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.
+- [tomasvotruba/type-coverage](packages/tomasvotruba/type-coverage.md) `2.1.0` - Measure type coverage of your project
+- [ueberdosis/tiptap-php](packages/ueberdosis/tiptap-php.md) `2.1.0` - A PHP package to work with Tiptap output
+- [vlucas/phpdotenv](packages/vlucas/phpdotenv.md) `v5.6.3` - Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.
+- [voku/portable-ascii](packages/voku/portable-ascii.md) `2.0.3` - Portable ASCII library - performance optimized (ascii) string functions for php.
+- [webmozart/assert](packages/webmozart/assert.md) `1.12.1` - Assertions to validate method input/output with nice error messages.
+- [wikimedia/composer-merge-plugin](packages/wikimedia/composer-merge-plugin.md) `v2.1.0` - Composer plugin to merge multiple composer.json files

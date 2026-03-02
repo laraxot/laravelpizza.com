@@ -24,6 +24,30 @@ This document is generated from `composer.json` + `composer.lock` and is the sin
 - `php artisan route:list`
 - `php artisan view:clear && php artisan config:clear` (after fix)
 
+## Validation vs installed state
+
+This document is generated from `composer.lock`. A validation run against `composer show -f json` found **drift** between `composer.lock` and the installed vendor state.
+
+- **Lock packages**: 228
+- **Installed packages (composer show)**: 312
+- **Version mismatches**: 67
+
+Examples (lock -> installed):
+
+- `laravel/framework` `v12.53.0` -> `v12.52.0`
+- `livewire/livewire` `v4.2.0` -> `v4.1.4`
+- `filament/filament` `v5.2.3` -> `v5.2.1`
+
+Impact:
+
+- Docs that assume exact versions from `composer.lock` may not match runtime behavior.
+- Chaos/bug-injection failures may be non-reproducible if vendor differs from lock.
+
+Recovery guidance:
+
+- Prefer restoring a consistent state via `composer install` (and commit a correct `composer.lock` if it changed).
+- Avoid `composer update` during recovery unless explicitly required and documented.
+
 ## Direct requirements (composer.json)
 
 ### require

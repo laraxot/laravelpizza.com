@@ -6,6 +6,35 @@ Fonte: `composer show` eseguito il 2026-03-02.
 - Diretti: `62`
 - Transitivi: `250`
 
+## Mappatura Modulo (pacchetti diretti)
+
+| Modulo | Pacchetti |
+|--------|-----------|
+| Root | filament, folio, framework, passport, livewire, volt, nwidart |
+| Xot | fast-paginate, sushi, coolsam/panel-modules, doctrine/dbal, fidum/morph-to-one, filament/spatie-media, flowframe/trend, pennant, pulse, maatwebsite/excel, predis, spatie/*, spipu/html2pdf, staudenmeir/*, safe, parental, guzzle, symfony/dom-crawler |
+| Activity | spatie/activitylog, spatie/event-sourcing |
+| User | flowframe/trend, jenssegers/agent, passport, socialiteproviders/auth0, socialiteproviders/microsoft, spatie/personal-data-export |
+| Lang | mcamara/localization, lara-zeus/spatie-translatable, rinvex/countries, spatie/sluggable |
+| Media | pbmedia/laravel-ffmpeg, intervention/image |
+| Notify | aws-sdk-php, telegram-bot-sdk, laravel-notification-channels/telegram, spatie/database-mail-templates, symfony/postmark-mailer, symfony/http-client, phpdocumentor/type-resolver |
+| Gdpr | statikbe/laravel-cookie-consent |
+| Meetup | saade/filament-fullcalendar |
+| UI | owenvoke/blade-fontawesome |
+
+## Categorie Principali
+
+| Categoria | Pacchetti | Uso |
+|-----------|-----------|-----|
+| Framework | laravel/framework, folio, tinker, serializable-closure | Core Laravel |
+| Filament | filament/* (actions, forms, infolists, tables, widgets, schemas) | Admin panel |
+| Livewire | livewire, volt, flux | Frontend reattivo |
+| Spatie | laravel-data, activitylog, permission, medialibrary, translatable, ecc. | DTO, audit, permessi, media |
+| Testing | pest, phpunit, paratest, phpstan, larastan, rector | Quality e test |
+| Database | doctrine/dbal, eloquent-*, staudenmeir/* | DB, relazioni, CTE |
+| HTTP | guzzle, symfony/http-client | Client HTTP |
+| Excel/PDF | maatwebsite/excel, spipu/html2pdf, phpspreadsheet, tcpdf | Export |
+| OAuth | passport, socialite, socialiteproviders/* | Autenticazione |
+
 ## Inventory
 
 | Package | Version | Direct | Description |

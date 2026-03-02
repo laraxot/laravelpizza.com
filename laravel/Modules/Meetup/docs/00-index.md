@@ -2,7 +2,8 @@
 
 ## Core Concepts
 
-- [Riferimento pacchetti Composer](../../../docs/composer-packages-reference.md) - `saade/filament-fullcalendar` per calendario eventi
+- [Composer Packages Study](../../../docs/architecture/composer-packages-study.md) - Analisi completa pacchetti e blast radius runtime.
+- [Riferimento pacchetti](../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../docs/architecture/composer-packages-full-inventory.md) - `saade/filament-fullcalendar` per calendario eventi
 - [Package Dependency Chaos Map](package-dependency-chaos-map.md) - Mappa pacchetti critici e failure modes del modulo.
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup module
 - [Chaos Monkey Readiness](chaos-monkey-readiness.md) - Diagnosi e recovery rapida su rotture randomizzate del modulo.

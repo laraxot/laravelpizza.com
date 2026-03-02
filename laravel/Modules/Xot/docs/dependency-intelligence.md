@@ -86,3 +86,8 @@ Aggiornato da `composer show` il 2026-03-02.
 - Verificare breaking changes su dipendenze `admin-ui` (Filament/Livewire) prima di toccare pagine o widget.
 - Verificare coerenza tra package lock e vincoli modulo dopo merge di `Modules/*/composer.json`.
 - Se un modulo ha `require` vuoto, i rischi runtime arrivano soprattutto da dipendenze transitivamente fornite da Xot/app root.
+
+## Deep Study References
+
+- [Composer packages study](../../../docs/architecture/composer-packages-study.md)
+- [Composer packages full inventory](../../../docs/architecture/composer-packages-full-inventory.md)

@@ -1,5 +1,8 @@
 # Package Dependency Chaos Map (Meetup Theme)
 
+## Catalogo completo
+- [Composer Packages Full Catalog (2026-03-02)](../../../Modules/Xot/docs/composer-packages-full-catalog-2026-03-02.md)
+
 ## Pacchetti studiati rilevanti
 - `laravel/framework`
 - `laravel/folio`

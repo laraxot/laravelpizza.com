@@ -3,7 +3,7 @@
 ## Overview
 The Cms module handles content management, page rendering, and multi-language support through a flexible block-based system.
 
-**Pacchetti**: Nessuna dipendenza diretta; usa Xot, Tenant, UI. [Riferimento completo](../../../docs/composer-packages-reference.md)
+**Pacchetti**: Nessuna dipendenza diretta; usa Xot, Tenant, UI. [Riferimento](../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../docs/architecture/composer-packages-full-inventory.md)
 
 ## Roadmap
 
@@ -11,6 +11,7 @@ The Cms module handles content management, page rendering, and multi-language su
 
 ## Runtime Architecture
 
+- [Composer Packages Study](../../../docs/architecture/composer-packages-study.md) - Analisi globale pacchetto-per-pacchetto (composer show).
 - [CMS Theme Template Runtime Architecture](cms-theme-template-runtime-architecture.md) - Verified runtime pipeline (Folio -> x-page -> JSON blocks -> pub_theme views), risks, and chaos targets.
 - [Template Theme CMS Reference](template-theme-cms-reference.md) - Runtime reference for providers, namespaces, JSON contracts, and fallback behavior.
 - [Package Dependency Chaos Map](package-dependency-chaos-map.md) - Dipendenze chiave (Folio/Volt/Sushi/Data) e superfici di fault.

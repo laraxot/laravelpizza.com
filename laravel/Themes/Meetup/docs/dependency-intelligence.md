@@ -41,3 +41,8 @@ Aggiornato il 2026-03-02 da dipendenze `package.json` tema + runtime PHP da `com
 - Build break: `vite`/Tailwind toolchain mismatch.
 - Runtime break: Folio page resolves but block view namespace non valido (`pub_theme::` obbligatorio).
 - i18n break: URL localizzate non propagate in payload Alpine.
+
+## Deep Study References
+
+- [Composer packages study](../../../docs/architecture/composer-packages-study.md)
+- [Composer packages full inventory](../../../docs/architecture/composer-packages-full-inventory.md)

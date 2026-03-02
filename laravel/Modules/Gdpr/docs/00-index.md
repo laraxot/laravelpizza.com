@@ -23,7 +23,7 @@
 - 🧹 **[PHPMD Analysis](./phpmd-report.txt)** - Risoluzione della complessità nei modelli di privacy.
 
 ## 📦 **Pacchetti Composer**
-- [Riferimento completo](../../../docs/composer-packages-reference.md)
+- [Riferimento completo](../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../docs/architecture/composer-packages-full-inventory.md)
 - `statikbe/laravel-cookie-consent` - Banner cookie consent
 
 ## 🔗 **Moduli Correlati**

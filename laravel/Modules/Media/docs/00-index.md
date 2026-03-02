@@ -28,7 +28,7 @@
 - 🧹 **[PHPMD Analysis](./cyclomatic-complexity-report.md)** - Pulizia degli algoritmi di conversione.
 
 ## 📦 **Pacchetti Composer**
-- [Riferimento completo](../../../docs/composer-packages-reference.md)
+- [Riferimento completo](../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../docs/architecture/composer-packages-full-inventory.md)
 - `pbmedia/laravel-ffmpeg` - Elaborazione video
 - `intervention/image` - Elaborazione immagini
 

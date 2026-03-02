@@ -168,6 +168,10 @@ Dipendenze principali del framework interno. Tutti i moduli dipendono da Xot.
 
 ---
 
+## Inventario Completo (312 pacchetti)
+
+[composer-packages-full-inventory.md](architecture/composer-packages-full-inventory.md) - Tutti i pacchetti con versione, direct/transitive, descrizione
+
 ## Collegamenti
 
 - [AGENTS.md](../../AGENTS.md) - Guida sviluppo
