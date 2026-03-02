@@ -19,4 +19,4 @@ Guida completa consolidata per le migrazioni in Laraxot.
 - Documentation
 
 ## Links
-- [Original Files Backup](../../../../../docs-consolidation-backup-*/Xot-docs-original/)
+- [Original Files Backup](../../../../../../docs-consolidation-backup-*/Xot-docs-original/)

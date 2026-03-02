@@ -192,8 +192,8 @@ $averageTime = $count > 0 ? $totalTime / $count : 0.0;
 
 ## Collegamenti Correlati
 - [Architettura Modulo Xot](../architecture.md)
-- [Guida PHPStan](../../../../../../../docs/phpstan-guide.md)
-- [Best Practices Laraxot](../../../../../../../docs/laraxot-best-practices.md)
+- [Guida PHPStan](../../../../../../../../docs/phpstan-guide.md)
+- [Best Practices Laraxot](../../../../../../../../docs/laraxot-best-practices.md)
 
 
 

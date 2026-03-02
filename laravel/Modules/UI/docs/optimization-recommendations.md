@@ -255,7 +255,7 @@ php artisan ui:accessibility-check
 
 ## Collegamenti
 
-- [Analisi Moduli Globale](../../../../../../../docs/modules_analysis_and_optimization.md)
+- [Analisi Moduli Globale](../../../../../../../../docs/modules_analysis_and_optimization.md)
 - [Components Guide](components.md)
 - [TableLayoutEnum Guide](table-layout-enum-complete-guide.md)
 
@@ -507,7 +507,7 @@ php artisan ui:accessibility-check
 
 ## Collegamenti
 
-- [Analisi Moduli Globale](../../../../../../../docs/modules_analysis_and_optimization.md)
+- [Analisi Moduli Globale](../../../../../../../../docs/modules_analysis_and_optimization.md)
 - [Components Guide](components.md)
 - [TableLayoutEnum Guide](table-layout-enum-complete-guide.md)
 

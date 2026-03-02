@@ -322,8 +322,8 @@ if (method_exists($createdAt, 'diffForHumans')) {
 
 ## Collegamenti Correlati
 - [Architettura Modulo User](../architecture.md)
-- [Guida PHPStan](../../../../../../../docs/phpstan-guide.md)
-- [Best Practices Laraxot](../../../../../../../docs/laraxot-best-practices.md)
+- [Guida PHPStan](../../../../../../../../docs/phpstan-guide.md)
+- [Best Practices Laraxot](../../../../../../../../docs/laraxot-best-practices.md)
 
 
 

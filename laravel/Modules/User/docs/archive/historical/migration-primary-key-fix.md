@@ -116,7 +116,7 @@ $this->tableCreate(static function (Blueprint $table): void {
 
 - [Teams Migration Compliance](./teams-migration-laraxot-compliance.md)
 - [Migration Best Practices](../../xot/docs/migration-standards.md)
-- [Primary Key Rules](../../../../../../../docs/development/migration_fixes_summary.md)
+- [Primary Key Rules](../../../../../../../../docs/development/migration_fixes_summary.md)
 
 ## Status
 

@@ -291,7 +291,7 @@ php artisan user:benchmark  # Target: < 100ms
 
 ## Collegamenti
 
-- [Analisi Moduli Globale](../../../../../../../docs/modules_analysis_and_optimization.md)
-- [Linee Guida Riusabilità](../../../../../../../docs/module_reusability_guidelines.md)
+- [Analisi Moduli Globale](../../../../../../../../docs/modules_analysis_and_optimization.md)
+- [Linee Guida Riusabilità](../../../../../../../../docs/module_reusability_guidelines.md)
 - [Best Practices User](best-practices/)
 

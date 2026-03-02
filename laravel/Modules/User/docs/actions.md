@@ -53,5 +53,5 @@ QueueableActionFake::assertPushed(ApproveUserAction::class);
 - [Best Practices](mdc:best-practices.md)
 - [Filament Best Practices](mdc:filament-best-practices.md)
 - [Testing](mdc:testing.md)
-- [Documentazione centrale](mdc:../../../../../../../../docs/index.md)
+- [Documentazione centrale](mdc:../../../../../../../../../docs/index.md)
 

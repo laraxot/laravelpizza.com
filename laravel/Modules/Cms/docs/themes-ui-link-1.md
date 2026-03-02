@@ -23,8 +23,8 @@ Secondo le regole di organizzazione della documentazione:
 
 ## Collegamenti ai Temi nella Root
 
-- [Compilazione Temi](../../../../../../docs/compilazione_temi.md) - Collegamento nella root alla documentazione sulla compilazione dei temi
-- [Theme Links](../../../../../../docs/theme-links.md) - Collegamenti nella root alla documentazione sui temi
+- [Compilazione Temi](../../../../../../../docs/compilazione_temi.md) - Collegamento nella root alla documentazione sulla compilazione dei temi
+- [Theme Links](../../../../../../../docs/theme-links.md) - Collegamenti nella root alla documentazione sui temi
 
 ## Collegamento Bidirezionale
 

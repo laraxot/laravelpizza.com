@@ -137,7 +137,7 @@ TextInput::make('first_name')  // ✅ Il LangServiceProvider gestirà automatica
 
 ## Collegamenti Bidirezionali
 
-- [Documentazione Componenti Filament](../../../../../../../docs/filament/components.md)
+- [Documentazione Componenti Filament](../../../../../../../../docs/filament/components.md)
 - [Best Practices UI](../../best-practices.md)
 - [Errori Comuni UI](../../common-errors.md)
 - [Implementazione Corretta](../../examples/correct-implementation.md)

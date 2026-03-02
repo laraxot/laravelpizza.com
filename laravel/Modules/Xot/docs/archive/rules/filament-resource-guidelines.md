@@ -52,7 +52,7 @@
 
 ## Collegamenti Bidirezionali
 
-- [Documentazione Principale sui Problemi di Namespace](../../../../../../../../docs/references/namespace-issues.md)
+- [Documentazione Principale sui Problemi di Namespace](../../../../../../../../../docs/references/namespace-issues.md)
 - [Documentazione del Modulo Patient](../patient/docs/errors/undefined-type-pending.md)
 - [Riferimento alle Linee Guida nel Modulo Patient](../patient/docs/references/filament-guidelines-link.md)
 

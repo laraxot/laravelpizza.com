@@ -160,7 +160,7 @@ Questa lezione è ora memorizzata permanentemente per:
 ### Documentazione Aggiornata
 - [Regole Migrazioni Laraxot](../../xot/docs/migration_rules.md)
 - [Polimorfismo UUID](../../xot/docs/polymorphic_uuid_support.md)
-- [Principi Architetturali](../../../../../../../docs/architectural_principles.md)
+- [Principi Architetturali](../../../../../../../../docs/architectural_principles.md)
 
 ### Moduli Correlati
 - [User Module UUID](../../user/docs/uuid_implementation.md)

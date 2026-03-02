@@ -132,7 +132,7 @@ Applicare la stessa logica a tutti i file di traduzione con conflitti simili:
 
 ## Collegamenti Correlati
 
-- [Translation Standards](../../../../../../../docs/translation-standards.md)
+- [Translation Standards](../../../../../../../../docs/translation-standards.md)
 - [PHP Strict Types](./strict_types_implementation.md)
 - [UI Module Structure](./structure.md)
 - [Best Practices](./best-practices.md)

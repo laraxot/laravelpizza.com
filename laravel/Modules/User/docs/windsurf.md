@@ -32,4 +32,4 @@ if (! $this->hasColumn('state')) {
 - [Best Practices](mdc:best-practices.mdc)
 - [Linee guida Actions](mdc:actions.mdc)
 - [Linee guida Activitylog](mdc:activitylog.mdc)
-- [Documentazione centrale](mdc:../../../../../../../../docs/index.md)
+- [Documentazione centrale](mdc:../../../../../../../../../docs/index.md)

@@ -236,7 +236,7 @@ cd /var/www/html/ptvx/laravel
 
 ## Collegamenti
 
-- [Documentazione Root Translations](../../../../../../../docs/translations-standards.md)
+- [Documentazione Root Translations](../../../../../../../../docs/translations-standards.md)
 - [Xot Translation Guidelines](../xot/docs/translations.md)
 - [Meetup Module](../meetup/readme.md)
 
