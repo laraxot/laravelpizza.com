@@ -19,7 +19,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - MAI usare percorsi che iniziano con `documento.md)
 [Documento in Sottodirectory](./sottodirectory/documento.md)
 [Documento in Modulo Altro](../../altromodulo/docs/documento.md)
-[Documento in Root](../../../../../../../docs/documento.md)
+[Documento in Root](../../../../../../../../docs/documento.md)
 ```
 
 ### Formato Non Corretto
@@ -60,7 +60,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - MAI usare percorsi che iniziano con `documento.md)
 [Documento in Sottodirectory](./sottodirectory/documento.md)
 [Documento in Modulo Altro](../../altromodulo/docs/documento.md)
-[Documento in Root](../../../../../../../docs/documento.md)
+[Documento in Root](../../../../../../../../docs/documento.md)
 ```
 
 ### Formato Non Corretto
@@ -101,7 +101,7 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - MAI usare percorsi che iniziano con `documento.md)
 [Documento in Sottodirectory](./sottodirectory/documento.md)
 [Documento in Modulo Altro](../../altromodulo/docs/documento.md)
-[Documento in Root](../../../../../../../docs/documento.md)
+[Documento in Root](../../../../../../../../docs/documento.md)
 ```
 
 ### Formato Non Corretto

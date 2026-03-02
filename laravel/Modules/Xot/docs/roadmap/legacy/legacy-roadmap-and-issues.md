@@ -325,8 +325,8 @@ function xot_config(string $key): mixed
 - [← Xot Module README](./readme.md)
 - [← Best Practices](./best-practices.md)
 - [← Troubleshooting](./troubleshooting.md)
-- [← Project Roadmap](../../../../../../../docs/project-analysis-and-roadmap.md)
-- [← Root Documentation](../../../../../../../docs/index.md)
+- [← Project Roadmap](../../../../../../../../docs/project-analysis-and-roadmap.md)
+- [← Root Documentation](../../../../../../../../docs/index.md)
 
 ---
 

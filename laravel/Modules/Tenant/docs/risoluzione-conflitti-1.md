@@ -149,10 +149,10 @@ Questo errore indica che ci sono ancora conflitti git non risolti in altri modul
 
 **Motivazione**: L'aggregazione delle entità pazienti e appuntamenti in moduli dedicati favorisce la modularità, la riusabilità e la scalabilità del sistema multi-tenant. L'utilizzo di un modulo "macro" come <nome progetto> avrebbe introdotto una dipendenza non necessaria e ridotto la chiarezza delle responsabilità.
 
-**Backlink**: Consulta anche la [documentazione globale sulla risoluzione dei conflitti git](../../../../../../docs/risoluzione_conflitti_git.md) per la procedura e le linee guida generali.
+**Backlink**: Consulta anche la [documentazione globale sulla risoluzione dei conflitti git](../../../../../../../../docs/risoluzione_conflitti_git.md) per la procedura e le linee guida generali.
 
 ## Collegamenti Utili
 
 - [Documentazione Principale Tenant](module_tenant.md)
 - [Rapporti PHPStan](phpstan/)
-- [Panoramica della Risoluzione dei Conflitti](../../../../../../docs/risoluzione_conflitti_git.md)
+- [Panoramica della Risoluzione dei Conflitti](../../../../../../../../docs/risoluzione_conflitti_git.md)

@@ -52,7 +52,7 @@
 ## 🔗 Collegamenti
 
 - [← Cms Module README](../readme.md)
-- [← Root Documentation](../../../../../docs/index.md)
+- [← Root Documentation](../../../../../../docs/index.md)
 
 ---
 

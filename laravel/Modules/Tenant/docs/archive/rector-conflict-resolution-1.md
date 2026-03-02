@@ -15,4 +15,4 @@ Sono presenti marker di conflitto git nel file `rector.php` del modulo Tenant. L
 - Verrà verificata la sintassi e la coerenza dopo la correzione.
 
 ## Collegamenti
-- [Documentazione root risoluzione conflitti](../../../../../../docs/risoluzione_conflitti_git.md#tenant-rectorphp)
+- [Documentazione root risoluzione conflitti](../../../../../../../../docs/risoluzione_conflitti_git.md#tenant-rectorphp)

@@ -172,7 +172,7 @@ php artisan view:clear
 ## Collegamenti Correlati
 
 - [Documentazione Temi](../../temi.md)
-- [Gestione Conflitti Git](../../../../../docs/git-conflicts-management.md)
+- [Gestione Conflitti Git](../../../../../../docs/git-conflicts-management.md)
 - [Architettura CMS](../../architecture.md)
 - [Best Practices Sviluppo](../../best-practices.md)
 

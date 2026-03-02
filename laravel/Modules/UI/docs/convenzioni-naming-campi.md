@@ -101,10 +101,10 @@ TextInput::make('full_name')
 ## Collegamenti Correlati
 
 - [Documentazione Filament Forms](https://filamentphp.com/docs/3.x/forms/fields/text-input)
-- [Best Practices Database](../../../../../../docs/database/best-practices.md)
-- [Convenzioni API](../../../../../../docs/api/convenzioni.md)
+- [Best Practices Database](../../../../../../../docs/database/best-practices.md)
+- [Convenzioni API](../../../../../../../docs/api/convenzioni.md)
 ## Collegamenti tra versioni di convenzioni-naming-campi.md
-* [convenzioni-naming-campi.md](../../../../../../../docs/convenzioni-naming-campi.md)
+* [convenzioni-naming-campi.md](../../../../../../../../docs/convenzioni-naming-campi.md)
 # Convenzioni di Naming dei Campi
 
 ## Collegamenti Bidirezionali

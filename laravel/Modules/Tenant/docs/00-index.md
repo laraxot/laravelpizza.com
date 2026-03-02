@@ -29,7 +29,7 @@
 - 🗑️ **[Cleanup Plan](./duplicate-files-to-remove.md)** - Eliminazione dei file duplicati e obsoleti.
 
 ## 📦 **Pacchetti Composer**
-- [Riferimento](../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../docs/architecture/composer-packages-full-inventory.md) - Nessuna dipendenza diretta; usa Xot
+- [Riferimento](../../../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../../../docs/architecture/composer-packages-full-inventory.md) - Nessuna dipendenza diretta; usa Xot
 - [Package Dependency Chaos Map](./package-dependency-chaos-map.md)
 
 ## 🔗 **Moduli Correlati**

@@ -42,4 +42,4 @@ Questa guida risolve in modo definitivo ogni errore di permessi su file lingua g
 ---
 
 
-[Link diretto dalla root docs](../../../docs/lang_service_permessi.md)
+[Link diretto dalla root docs](../../../../../docs/lang_service_permessi.md)

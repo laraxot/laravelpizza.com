@@ -19,7 +19,7 @@ Durante un controllo di routine sono stati rilevati diversi conflitti Git non ri
 - Validato il file con PHPStan livello 9.
 
 ## Collegamenti
-- [Documentazione globale correzioni](../../../docs/actual_analysis.md)
+- [Documentazione globale correzioni](../../../../../docs/actual_analysis.md)
 
 ---
 

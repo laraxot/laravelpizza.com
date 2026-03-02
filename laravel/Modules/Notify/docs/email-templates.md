@@ -10,13 +10,13 @@ Il modulo Notify implementa un sistema avanzato di gestione delle email template
 **Status**: CRITICO - Sistema registrazione bloccato  
 
 ➡️ **Documentazione completa**: [<nome progetto>: Missing Mail Template Error](../../<nome progetto>/docs/errori/missing-mail-template-spatiemail.md)  
-➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../docs/errori_gravi/missing-mail-template-patterns.md)
+➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../../docs/errori_gravi/missing-mail-template-patterns.md)
 <<<<<<< HEAD
 ➡️ **Documentazione completa**: [Laraxot: Missing Mail Template Error](../../ptvx/docs/errori/missing-mail-template-spatiemail.md)  
-➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../docs/errori_gravi/missing-mail-template-patterns.md)➡️ **Documentazione completa**: [Laraxot: Missing Mail Template Error](../../ptvx/project_docs/errori/missing-mail-template-spatiemail.md)  
+➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../../docs/errori_gravi/missing-mail-template-patterns.md)➡️ **Documentazione completa**: [Laraxot: Missing Mail Template Error](../../ptvx/project_docs/errori/missing-mail-template-spatiemail.md)  
 =======
 ➡️ **Documentazione completa**: [healthcare_app: Missing Mail Template Error](../../healthcare_app/docs/errori/missing-mail-template-spatiemail.md)  
-➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../docs/errori_gravi/missing-mail-template-patterns.md)➡️ **Documentazione completa**: [healthcare_app: Missing Mail Template Error](../../healthcare_app/project_docs/errori/missing-mail-template-spatiemail.md)  
+➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../../docs/errori_gravi/missing-mail-template-patterns.md)➡️ **Documentazione completa**: [healthcare_app: Missing Mail Template Error](../../healthcare_app/project_docs/errori/missing-mail-template-spatiemail.md)  
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../project_docs/errori_gravi/missing-mail-template-patterns.md)
 
@@ -320,19 +320,19 @@ php artisan tinker
 =======
 - [healthcare_app: Missing Mail Template Error](../../healthcare_app/docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
-- [Missing Mail Template Patterns](../../../docs/errori_gravi/missing-mail-template-patterns.md) - Pattern globali
-- [Array to String Conversion](../../../docs/errori_gravi/array-to-string-conversion-patterns.md) - Errore correlato
+- [Missing Mail Template Patterns](../../../../docs/errori_gravi/missing-mail-template-patterns.md) - Pattern globali
+- [Array to String Conversion](../../../../docs/errori_gravi/array-to-string-conversion-patterns.md) - Errore correlato
 
 ### **Documentazione Tecnica**
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
 - [Gestione Traduzioni](../lang/docs/translation_keys_best_practices.md)
-- [Configurazione Email](../../../docs/email-configuration.md)
+- [Configurazione Email](../../../../docs/email-configuration.md)
 <<<<<<< HEAD
 - [Laraxot: Missing Mail Template Error](../../ptvx/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
-- [Configurazione Email](../../../docs/email-configuration.md)- [Laraxot: Missing Mail Template Error](../../ptvx/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
+- [Configurazione Email](../../../../docs/email-configuration.md)- [Laraxot: Missing Mail Template Error](../../ptvx/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 =======
 - [healthcare_app: Missing Mail Template Error](../../healthcare_app/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
-- [Configurazione Email](../../../docs/email-configuration.md)- [healthcare_app: Missing Mail Template Error](../../healthcare_app/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
+- [Configurazione Email](../../../../docs/email-configuration.md)- [healthcare_app: Missing Mail Template Error](../../healthcare_app/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 - [Missing Mail Template Patterns](../../../project_docs/errori_gravi/missing-mail-template-patterns.md) - Pattern globali
 - [Array to String Conversion](../../../project_docs/errori_gravi/array-to-string-conversion-patterns.md) - Errore correlato

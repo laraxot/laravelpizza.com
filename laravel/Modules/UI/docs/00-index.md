@@ -31,7 +31,7 @@
 - 🗑️ **[Cleanup Plan](./consolidation-plan.md)** - Strategia per ridurre i 280+ file di documentazione.
 
 ## 📦 **Pacchetti Composer**
-- [Riferimento completo](../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../docs/architecture/composer-packages-full-inventory.md)
+- [Riferimento completo](../../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../../docs/architecture/composer-packages-full-inventory.md)
 - `owenvoke/blade-fontawesome` - Icone FontAwesome
 
 ## 🔗 **Moduli Correlati**

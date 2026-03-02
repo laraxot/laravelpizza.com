@@ -98,7 +98,7 @@ find Modules/UI/ -name "*.php" -exec grep -l "->label(" {} \;
 **"Se vedi ->label() in qualsiasi componente del modulo UI, ELIMINALO IMMEDIATAMENTE."**
 
 ## Collegamenti
-- [../../../../../../docs/filament-no-label-rule.md](../../../../../../../docs/filament-no-label-rule.md)
+- [../../../../../../../docs/filament-no-label-rule.md](../../../../../../../../docs/filament-no-label-rule.md)
 - [automatic-translations.md](automatic-translations.md)
 - [label-translation-system.md](label-translation-system.md)
 - [best-practices.md](best-practices.md)

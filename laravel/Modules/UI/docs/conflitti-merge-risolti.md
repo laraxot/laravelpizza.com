@@ -56,7 +56,7 @@ La strategia adottata per la risoluzione dei conflitti si è basata sui seguenti
 Questa documentazione integra le informazioni sui conflitti risolti, fornendo dettagli sui problemi, le soluzioni adottate e le motivazioni, per mantenere la memoria storica delle scelte e facilitare la comprensione dell'evoluzione del sistema.
 
 ## Backlink
-- [Torna a docs/links.md](../../../../../../../docs/links.md)
+- [Torna a docs/links.md](../../../../../../../../docs/links.md)
 - [Vedi anche: UI/docs/README.md](./readme.md)
 - [Vedi anche: Xot/docs/README.md](../../xot/docs/readme.md)
 - [Vedi anche: Blog/docs/README.md](../../blog/docs/readme.md)
@@ -120,7 +120,7 @@ La strategia adottata per la risoluzione dei conflitti si è basata sui seguenti
 Questa documentazione integra le informazioni sui conflitti risolti, fornendo dettagli sui problemi, le soluzioni adottate e le motivazioni, per mantenere la memoria storica delle scelte e facilitare la comprensione dell'evoluzione del sistema.
 
 ## Backlink
-- [Torna a docs/links.md](../../../../../../../docs/links.md)
+- [Torna a docs/links.md](../../../../../../../../docs/links.md)
 - [Vedi anche: UI/docs/README.md](./readme.md)
 - [Vedi anche: Xot/docs/README.md](../../xot/docs/readme.md)
 - [Vedi anche: Blog/docs/README.md](../../blog/docs/readme.md)

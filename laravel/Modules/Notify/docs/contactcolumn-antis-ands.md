@@ -116,7 +116,7 @@ private function formatContacts(Client $record): string
 
 ### Pattern Corretti
 - [TechPlanner ContactsColumn](../../techplanner/docs/contacts-column-implementation-complete.md)
-- [Filament Best Practices](../../../docs/filament-best-practices.md)
+- [Filament Best Practices](../../../../docs/filament-best-practices.md)
 
 ## AZIONI CORRETTIVE
 

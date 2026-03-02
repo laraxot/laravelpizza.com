@@ -150,7 +150,7 @@ Modules/User/resources/views/pages/Auth/Logout.blade.php  # NO: maiuscole
 * [CONVENTIONS.md](../../../patient/docs/conventions.md)
 
 ## Collegamenti tra versioni di conventions.md
-* [conventions.md](../../../../../../../../docs/tecnico/filament/conventions.md)
-* [conventions.md](../../../../../../../../docs/conventions.md)
+* [conventions.md](../../../../../../../../../docs/tecnico/filament/conventions.md)
+* [conventions.md](../../../../../../../../../docs/conventions.md)
 * [conventions.md](../../dental/docs/conventions.md)
 * [conventions.md](../../patient/docs/conventions.md)

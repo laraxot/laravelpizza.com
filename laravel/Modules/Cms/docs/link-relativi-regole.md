@@ -14,7 +14,7 @@
 ```markdown
 [Link corretto](./file.md)
 [Link corretto](../altro-modulo/docs/file.md)
-[Link alla root](../../../../../docs/file.md)
+[Link alla root](../../../../../../docs/file.md)
 ```
 
 ## 🎯 **Motivazioni Filosofiche**
@@ -41,7 +41,7 @@
 
 ### **Dal modulo Cms alla root docs**
 ```
-Percorso: Modules/Cms/docs/ → ../../../../docs/
+Percorso: Modules/Cms/docs/ → ../../../../../docs/
 Logica:
   Modules/Cms/docs/ → ../ (torna a Modules/)
   Modules/ → ../ (torna a laravel/)
@@ -80,7 +80,7 @@ Link: ./components/
 [Gestione Homepage](/var/www/html/_bases/<directory progetto>/docs/gestione-homepage.md)
 
 <!-- DOPO (CORRETTO) -->
-[Gestione Homepage](../../../../../docs/gestione-homepage.md)
+[Gestione Homepage](../../../../../../docs/gestione-homepage.md)
 ```
 
 ### **Caso 2: Link ad altro modulo**

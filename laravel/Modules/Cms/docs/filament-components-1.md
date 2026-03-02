@@ -9,8 +9,8 @@
 In il progetto, **privilegiare sempre i componenti Blade nativi di Filament** rispetto a componenti UI personalizzati.
 
 > ⚠️ **Collegamenti alla documentazione correlata**:
-> - [Indice generale dei collegamenti](../../../../../docs/collegamenti-documentazione.md)
-> - [Documentazione principale](../../../../../docs/rules/filament-components.md)
+> - [Indice generale dei collegamenti](../../../../../../docs/collegamenti-documentazione.md)
+> - [Documentazione principale](../../../../../../docs/rules/filament-components.md)
 > - [Documentazione nel tema](../../../../themes/one/docs/filament_components.md)
 
 ## Motivazione

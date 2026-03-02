@@ -4,11 +4,11 @@
 - [Indice Documentazione Notify](../index.md)
 - [README Modulo Notify](../readme.md)
 <<<<<<< HEAD
-- [Documentazione Generale Laraxot](../../../../../../docs/readme.md)
+- [Documentazione Generale Laraxot](../../../../../docs/readme.md)
 =======
-- [Documentazione Generale healthcare_app](../../../../../../docs/readme.md)
+- [Documentazione Generale healthcare_app](../../../../../docs/readme.md)
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
-- [Collegamenti Documentazione](../../../../../../docs/collegamenti-documentazione.md)
+- [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 
 ## Guida Implementazione
 - [Guida Implementazione Notifiche](./notifications_implementation_guide.md) - Guida generale all'implementazione delle notifiche
