@@ -11,19 +11,22 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
+ *
  * @method static Builder|Feature newModelQuery()
  * @method static Builder|Feature newQuery()
  * @method static Builder|Feature query()
- * @property string      $id
- * @property string      $name
- * @property string      $scope
- * @property string      $value
+ *
+ * @property string $id
+ * @property string $name
+ * @property string $scope
+ * @property string $value
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @method static Builder|Feature whereCreatedAt($value)
  * @method static Builder|Feature whereCreatedBy($value)
  * @method static Builder|Feature whereDeletedAt($value)
@@ -34,17 +37,13 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|Feature whereUpdatedAt($value)
  * @method static Builder|Feature whereUpdatedBy($value)
  * @method static Builder|Feature whereValue($value)
+ *
  * @mixin IdeHelperFeature
+ *
  * @property ProfileContract|null $deleter
-<<<<<<< HEAD
  *
  * @method static \Modules\User\Database\Factories\FeatureFactory factory($count = null, $state = [])
  *
-||||||| parent of da38c10 (.)
- *
-=======
- * @method static \Modules\User\Database\Factories\FeatureFactory factory($count = null, $state = [])
->>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class Feature extends BaseModel

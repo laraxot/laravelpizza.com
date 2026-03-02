@@ -12,30 +12,31 @@ use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * Modello per i comuni italiani con Sushi.
- * 
+ *
  * Implementa il pattern Facade per fornire un'interfaccia unificata a tutti i dati geografici:
  * regioni, province, città, CAP, codici ISTAT, ecc.
  * Tutti i dati sono estratti da file JSON e gestiti tramite Sushi.
  *
- * @property string|null                  $nome
- * @property float|null                   $codice
+ * @property string|null $nome
+ * @property float|null $codice
  * @property array<array-key, mixed>|null $zona
  * @property array<array-key, mixed>|null $regione
  * @property array<array-key, mixed>|null $provincia
- * @property string|null                  $sigla
- * @property string|null                  $codiceCatastale
+ * @property string|null $sigla
+ * @property string|null $codiceCatastale
  * @property array<array-key, mixed>|null $cap
- * @property int|null                     $popolazione
- * @property int|null                     $id
- * @property string|null                  $title
- * @property string|null                  $slug
- * @property string|null                  $content
- * @property string|null                  $created_at
- * @property string|null                  $updated_at
- * @property string|null                  $created_by
- * @property string|null                  $updated_by
- * @property ProfileContract|null         $creator
- * @property ProfileContract|null         $updater
+ * @property int|null $popolazione
+ * @property int|null $id
+ * @property string|null $title
+ * @property string|null $slug
+ * @property string|null $content
+ * @property string|null $created_at
+ * @property string|null $updated_at
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
+ *
  * @method static Builder<static>|Comune newModelQuery()
  * @method static Builder<static>|Comune newQuery()
  * @method static Builder<static>|Comune query()
@@ -56,8 +57,11 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Comune whereUpdatedAt($value)
  * @method static Builder<static>|Comune whereUpdatedBy($value)
  * @method static Builder<static>|Comune whereZona($value)
+ *
  * @property ProfileContract|null $deleter
+ *
  * @method static ComuneFactory factory($count = null, $state = [])
+ *
  * @property int|null $altitudine
  * @property string|null $codice_catastale
  * @property float|null $lat
@@ -65,15 +69,17 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $sigla_provincia
  * @property float|null $superficie
  * @property string|null $zona_altimetrica
+ *
  * @method static Builder<static>|Comune whereAltitudine($value)
  * @method static Builder<static>|Comune whereLat($value)
  * @method static Builder<static>|Comune whereLng($value)
  * @method static Builder<static>|Comune whereSiglaProvincia($value)
  * @method static Builder<static>|Comune whereSuperficie($value)
  * @method static Builder<static>|Comune whereZonaAltimetrica($value)
+ *
  * @mixin \Eloquent
  */
-class Comune extends BaseModel
+class Comune extends BaseModel implements \Modules\Tenant\Contracts\SushiToJsonContract
 {
     use SushiToJson;
 
@@ -169,8 +175,7 @@ class Comune extends BaseModel
     /**
      * Find a comune by name (case insensitive).
      *
-     * @param string $nome The name of the comune to find (case insensitive)
-     *
+     * @param  string  $nome  The name of the comune to find (case insensitive)
      * @return static|null The found comune or null if not found
      */
     public static function findByNome(string $nome): ?self
@@ -183,8 +188,7 @@ class Comune extends BaseModel
     /**
      * Find comuni by CAP code (partial match supported).
      *
-     * @param string $cap The CAP code to search for
-     *
+     * @param  string  $cap  The CAP code to search for
      * @return Collection<static> Collection of matching comuni
      */
     public static function findByCap(string $cap): Collection

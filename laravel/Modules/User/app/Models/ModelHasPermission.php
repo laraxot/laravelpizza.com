@@ -11,10 +11,11 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * Modules\User\Models\ModelHasPermission.
  *
- * @property int    $id
- * @property int    $permission_id
+ * @property int $id
+ * @property int $permission_id
  * @property string $model_type
  * @property string $model_id
+ *
  * @method static Builder|ModelHasPermission newModelQuery()
  * @method static Builder|ModelHasPermission newQuery()
  * @method static Builder|ModelHasPermission query()
@@ -22,29 +23,29 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|ModelHasPermission whereModelId($value)
  * @method static Builder|ModelHasPermission whereModelType($value)
  * @method static Builder|ModelHasPermission wherePermissionId($value)
+ *
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
+ *
  * @method static Builder|ModelHasPermission whereCreatedAt($value)
  * @method static Builder|ModelHasPermission whereCreatedBy($value)
  * @method static Builder|ModelHasPermission whereUpdatedAt($value)
  * @method static Builder|ModelHasPermission whereUpdatedBy($value)
+ *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- * @property string|null          $team_id
+ * @property string|null $team_id
+ *
  * @method static Builder|ModelHasPermission whereTeamId($value)
+ *
  * @mixin IdeHelperModelHasPermission
+ *
  * @property ProfileContract|null $deleter
-<<<<<<< HEAD
  *
  * @method static \Modules\User\Database\Factories\ModelHasPermissionFactory factory($count = null, $state = [])
  *
-||||||| parent of da38c10 (.)
- *
-=======
- * @method static \Modules\User\Database\Factories\ModelHasPermissionFactory factory($count = null, $state = [])
->>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class ModelHasPermission extends BaseMorphPivot

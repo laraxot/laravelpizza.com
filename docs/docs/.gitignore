@@ -1,0 +1,10 @@
+/build_*/
+/node_modules/
+/vendor/
+/source/assets/build/
+.env
+npm-debug.log
+/cache
+-e 
+# PHPStan documentation
+docs/phpstan/

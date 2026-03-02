@@ -22,7 +22,8 @@
 - 🛠️ **[Address Field](./address-field.md)** - Form field personalizzati per indirizzi.
 
 ## 🧪 **Qualità e Sviluppo**
-- ✅ **[PHPStan Level 10](./phpstan-level10-compliance.md)** - Conformità e fix specifici per Geo.
+- ✅ **[PHPStan Level 10](./phpstan-fixes.md)** - Conformità e fix specifici per Geo.
+- 🍕 **[SushiToJson Contract](./phpstan-sushitojson-contract.md)** - Fix Comune + SushiToJsonContract.
 - 🔬 **[Testing Guidelines](./testing-guidelines.md)** - Strategie di test geografico.
 - 🧹 **[PHPMD & Complexity](./cyclomatic-complexity-report.md)** - Analisi della pulizia del codice.
 

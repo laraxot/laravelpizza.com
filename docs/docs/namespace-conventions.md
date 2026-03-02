@@ -1,0 +1,1049 @@
+# Convenzioni per i Namespace nei Moduli
+
+## Struttura Base
+I namespace nei moduli di OrisBroker Framework devono seguire una struttura precisa per mantenere la coerenza del codebase.
+
+### Regola Fondamentale
+Il namespace base di ogni modulo è `Modules\{ModuleName}`. È importante notare che **NON** si deve includere `app` nel namespace.
+
+### Esempi Corretti
+```php
+namespace Modules\Xot\Console\Commands;
+namespace Modules\Broker\Models;
+namespace Modules\User\Services;
+namespace Modules\Tenant\Repositories;
+```
+
+### Esempi Errati
+```php
+namespace Modules\Xot\app\Console\Commands;
+
+### Versione HEAD
+
+### Versione Incoming
+
+namespace Modules\Xot\Console\Commands;
+
+---
+
+namespace Modules\Broker\app\Models;
+namespace Modules\User\app\Services;
+namespace Modules\Tenant\app\Repositories;
+```
+
+## Struttura delle Directory
+Anche se i file possono essere fisicamente collocati in una directory `app/`, il namespace non deve riflettere questa struttura.
+
+### Esempio di Struttura Directory
+```
+Modules/
+  Xot/
+    app/
+      Console/
+        Commands/
+          ImportMdbToMySQL.php  // namespace Modules\Xot\Console\Commands;
+    Models/
+    Services/
+    Repositories/
+```
+
+## Motivazione
+Questa convenzione:
+
+# convenzioni per i namespace nei moduli
+
+## regola assoluta e inviolabile
+
+il namespace base di ogni modulo è **sempre e solo** `Modules\{ModuleName}` (dove ModuleName è il nome del modulo con la prima lettera maiuscola).
+
+### errore comune da evitare assolutamente
+
+**MAI** includere `App` o `app` nel namespace, anche se i file sono fisicamente nella cartella `app/`.
+
+Questo è l'errore più comune e grave nelle convenzioni di namespace:
+
+```php
+// GRAVEMENTE ERRATO
+namespace Modules\<nome modulo>\App\Controllers;
+
+// CORRETTO
+namespace Modules\<nome modulo>\Controllers;
+```
+
+## esempi corretti vs errati
+
+### corretti ✓
+```php
+namespace Modules\Xot\Console\Commands;
+namespace Modules\<nome modulo>\Models;
+namespace Modules\User\Services;
+namespace Modules\Tenant\Repositories;
+namespace Modules\<nome modulo>\Filament\Resources;
+```
+
+### errati ✗
+```php
+namespace Modules\Xot\app\Console\Commands;       // errato: 'app' nel namespace
+namespace Modules\<nome modulo>\App\Models;           // errato: 'App' nel namespace
+namespace Modules\User\App\Services;              // errato: 'App' nel namespace
+namespace Modules\Tenant\app\Repositories;        // errato: 'app' nel namespace
+namespace App\Modules\<nome modulo>\Controllers;      // errato: struttura completamente sbagliata
+```
+
+## struttura fisica vs namespace
+
+### importante: separazione tra percorso fisico e namespace
+
+Anche se i file sono fisicamente collocati in una directory `app/`, il namespace **non deve mai riflettere** questa struttura.
+
+```
+Percorso fisico:    /Modules/<nome modulo>/app/Models/Patient.php
+Namespace corretto: namespace Modules\<nome modulo>\Models;
+```
+
+### mappatura corretta percorso-namespace
+
+| percorso fisico | namespace corretto |
+|-----------------|--------------------|
+| `/Modules/<nome modulo>/app/Models/Patient.php` | `Modules\<nome modulo>\Models` |
+| `/Modules/<nome modulo>/app/Filament/Resources/PatientResource.php` | `Modules\<nome modulo>\Filament\Resources` |
+| `/Modules/Xot/app/Providers/XotServiceProvider.php` | `Modules\Xot\Providers` |
+
+### struttura directory completa
+
+```
+Modules/
+  /
+    app/                        // directory fisica
+      Console/
+        Commands/
+          ImportPatient.php     // namespace Modules\<nome modulo>\Console\Commands;
+      Models/
+        Patient.php            // namespace Modules\<nome modulo>\Models;
+      Filament/
+        Resources/
+          PatientResource.php  // namespace Modules\<nome modulo>\Filament\Resources;
+```
+
+## come verificare i namespace
+
+### verifica manuale
+
+Prima di committare un file, verifica sempre che:
+
+1. Il namespace **non** contenga `app` o `App`
+2. Il namespace inizi sempre con `Modules\NomeModulo\`
+3. Il resto del namespace rifletta la struttura logica delle classi
+
+### uso di phpstan
+
+Utilizza phpstan per verificare automaticamente i namespace:
+
+```bash
+php artisan phpstan:analyse --level=1 Modules/
+```
+
+## motivazione di questa convenzione
+- Mantiene i namespace puliti e coerenti
+- Evita confusione con la struttura delle directory
+- Facilita l'autoloading e la navigazione del codice
+- Segue le best practice di Laravel per i moduli
+
+## Note Importanti
+- Questa convenzione si applica a TUTTI i moduli del framework
+- Non ci sono eccezioni a questa regola
+- I file possono essere fisicamente in `app/` ma il namespace non deve rifletterlo
+- Questa convenzione è obbligatoria per mantenere la compatibilità con il framework
+
+## Errori Comuni
+
+### Pattern di Errore: Inclusione di `App` nel Namespace
+
+Un errore comune è includere `App` nel namespace:
+
+```php
+// ERRATO ❌
+namespace Modules\<nome modulo>\App\Console\Commands;
+
+// CORRETTO ✓
+namespace Modules\<nome modulo>\Console\Commands;
+```
+
+### Conseguenze dell'Errore
+- Class not found exceptions
+- Problemi con l'autoloading
+- Errori di binding resolution nel container Laravel
+- Failure nei comandi artisan
+- Errori di tipo "Target class does not exist"
+
+## Strumenti di Verifica e Prevenzione
+
+### Verifica Manuale
+Utilizzare grep per trovare tutti i file con namespace errato:
+
+```bash
+grep -r "namespace Modules\\\\.*\\\\App\\\\" Modules
+```
+
+### PHP Stan
+Configurare PHP Stan per verificare i namespace corretti:
+
+```yaml
+
+# phpstan.neon
+parameters:
+  checkMissingIterableValueType: false
+  checkGenericClassInNonGenericObjectType: false
+  checkAlwaysTrueInstanceof: false
+  rules:
+    - Modules\Xot\Rules\CorrectNamespaceRule
+```
+
+### IDE Configuration
+Configurare il tuo IDE (PhpStorm, VSCode) per applicare automaticamente le convenzioni di namespace quando si creano nuovi file.
+
+## Come Correggere
+
+1. Individuare tutti i file con namespace errato
+2. Correggere il namespace rimuovendo `App\` dal percorso
+3. Aggiornare eventuali riferimenti a queste classi in altri file
+4. Pulire la cache dell'applicazione dopo le modifiche
+
+```bash
+php artisan cache:clear
+php artisan config:clear
+php artisan view:clear
+```
+# Convenzioni dei Namespace nel Modulo Xot
+
+## Panoramica
+Questo documento definisce le convenzioni per l'organizzazione dei namespace nel modulo Xot.
+
+## Struttura Base
+- `Xot\App`: Classi principali dell'applicazione
+- `Xot\Services`: Servizi e logica di business
+- `Xot\Repositories`: Repository per l'accesso ai dati
+- `Xot\Models`: Modelli e relazioni
+- `Xot\Providers`: Service provider
+- `Xot\Console`: Comandi CLI
+- `Xot\Tests`: Test unitari e di integrazione
+
+## Regole Generali
+1. Ogni namespace deve iniziare con `Xot\`
+2. I namespace devono riflettere la struttura delle directory
+3. I nomi delle classi devono essere in PascalCase
+4. I namespace devono essere organizzati per funzionalità
+
+## Esempi
+```php
+namespace Xot\App\Http\Controllers;
+namespace Xot\Services\Notifications;
+namespace Xot\Repositories\Users;
+namespace Xot\Models;
+```
+
+## Best Practices
+- Mantenere i namespace il più brevi possibile
+- Evitare namespace troppo profondi
+- Utilizzare alias quando necessario
+- Documentare le eccezioni alle convenzioni
+
+## Collegamenti
+- [Documentazione Laravel](https://laravel.com/docs)
+- [PSR-4 Autoloading](https://www.php-fig.org/psr/psr-4/)
+
+# Convenzioni per i Namespace nei Moduli Laraxot
+
+Questo documento definisce le convenzioni per i namespace nei moduli del framework Laraxot PTVX, un aspetto fondamentale per garantire la compatibilità con PHPStan livello 9 e la coerenza del codice.
+
+## Regola Fondamentale: Omettere "app" nel Namespace
+
+Anche se i file sono fisicamente collocati nella directory `app` del modulo, il namespace **NON** deve includere questo segmento.
+
+### ✅ CORRETTO
+```php
+namespace Modules\Rating\Models;
+namespace Modules\Rating\Http\Controllers;
+namespace Modules\Rating\Providers;
+namespace Modules\Rating\Datas;
+namespace Modules\Rating\Actions;
+namespace Modules\Rating\Console\Commands;
+```
+
+### ❌ ERRATO
+```php
+namespace Modules\Rating\App\Models;
+namespace Modules\Rating\App\Http\Controllers;
+namespace Modules\Rating\App\Providers;
+namespace Modules\Rating\App\Datas;
+namespace Modules\Rating\App\Actions;
+namespace Modules\Rating\App\Console\Commands;
+```
+
+## Attenzione: Errore comune con il namespace delle Actions
+
+Un errore particolarmente frequente riguarda le Actions. La convenzione corretta è la seguente:
+
+- ✅ **CORRETTO**: `namespace Modules\Xot\Actions;`
+
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+
+- ❌ **ERRATO**: `namespace Modules\Xot\Actions;`
+
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+ bb08ed4 (.)
+
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+- ❌ **ERRATO**: `namespace Modules\Xot\app\Actions;`
+b6f667c (.)
+
+Anche se il file si trova nel percorso fisico `Modules/Xot/app/Actions/`, il namespace non deve mai includere il segmento `app`.
+
+Questo errore causa spesso problemi di PHPStan come:
+```
+
+Class 'Modules\Xot\Actions\MyAction' not found.
+
+Class 'Modules\Xot\Actions\MyAction' not found.
+
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+Class 'Modules\Xot\Actions\MyAction' not found.
+
+Class 'Modules\Xot\Actions\MyAction' not found.
+
+Class 'Modules\Xot\Actions\MyAction' not found.
+
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+ bb08ed4 (.)
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+b6f667c (.)
+
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+Class 'Modules\Xot\app\Actions\MyAction' not found.
+b6f667c (.)
+
+```
+
+La correzione è sempre la stessa: rimuovere il segmento `app` dal namespace.
+
+## Struttura Completa dei Namespace per Componenti Comuni
+
+### Modelli
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Rating\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Rating extends Model
+{
+    // Implementazione
+}
+```
+
+### Controller
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Rating\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+
+class RatingController extends Controller
+{
+    // Implementazione
+}
+```
+
+### Data Objects
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Rating\Datas;
+
+use Spatie\LaravelData\Data;
+
+class RatingData extends Data
+{
+    // Implementazione
+}
+
+ aurmich/dev
+ aurmich/dev
+
+# Convenzioni Namespace in <nome progetto>
+
+Questo documento descrive le convenzioni di namespace adottate nel progetto <nome progetto>, con particolare attenzione alla struttura modulare basata su Laravel.
+
+## Struttura Base
+
+La struttura dei namespace segue una convenzione ben definita basata sulla struttura fisica dei file e sulla loro funzione logica all'interno dell'applicazione.
+
+### Regola Generale
+
+```
+Modules\{ModuleName}\{Type}\{Subtype?}\{ClassName}
+```
+
+Dove:
+- `{ModuleName}`: Nome del modulo (es. User, Tenant, Cms)
+- `{Type}`: Tipo di componente (es. Models, Controllers, Actions)
+- `{Subtype}`: (Opzionale) Sottotipo o raggruppamento (es. File, Auth)
+- `{ClassName}`: Nome della classe
+
+### Esempi
+
+```php
+namespace Modules\User\Models;
+class User {}
+
+namespace Modules\Tenant\Actions\Domain;
+class GetDomainByIdAction {}
+
+namespace Modules\Cms\Http\Controllers\Api;
+class PageController {}
+```
+
+## Struttura delle Directory
+
+La struttura fisica delle directory deve corrispondere alla struttura dei namespace per garantire coerenza e facilità di navigazione nel codice.
+
+### Esempio di Struttura Directory
+
+```
+laravel/
+└── Modules/
+    ├── User/
+    │   ├── app/
+    │   │   ├── Models/
+    │   │   │   └── User.php
+    │   │   └── Http/
+    │   │       └── Controllers/
+    │   │           └── UserController.php
+    │   ├── database/
+    │   │   └── migrations/
+    │   └── routes/
+    │       └── web.php
+    └── Tenant/
+        ├── app/
+        │   ├── Models/
+        │   │   └── Domain.php
+        │   └── Actions/
+        │       └── Domain/
+        │           └── GetDomainByIdAction.php
+        └── ...
+```
+
+## Convenzioni Specifiche per Tipo
+
+### Models
+
+```
+Modules\{ModuleName}\Models\{ModelName}
+```
+
+Tutti i modelli devono estendere `Modules\Xot\Models\XotBaseModel` o altra classe base appropriata.
+
+### Controllers
+
+```
+Modules\{ModuleName}\Http\Controllers\{ControllerName}
+```
+
+I controllers API dovrebbero essere in:
+```
+Modules\{ModuleName}\Http\Controllers\Api\{ControllerName}
+
+ aurmich/dev
+ aurmich/dev
+ aurmich/dev
+```
+
+### Actions
+
+ aurmich/dev
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Rating\Actions;
+
+use Spatie\QueueableAction\QueueableAction;
+
+class CreateRatingAction
+{
+    use QueueableAction;
+
+    // Implementazione
+}
+```
+
+### Console Commands
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Rating\Console\Commands;
+
+use Illuminate\Console\Command;
+
+class RatingCommand extends Command
+{
+    protected $signature = 'rating:process';
+
+    // Implementazione
+}
+
+ aurmich/dev
+ aurmich/dev
+```
+Modules\{ModuleName}\Actions\{Subtype?}\{ActionName}
+```
+
+Le azioni seguono il pattern "Action" e sono classi con un metodo `execute()` che implementa una singola responsabilità.
+
+### Filament Resources
+
+```
+Modules\{ModuleName}\Filament\Resources\{ResourceName}Resource
+```
+
+Pages e RelationManagers associati:
+```
+Modules\{ModuleName}\Filament\Resources\{ResourceName}Resource\Pages\{PageName}
+Modules\{ModuleName}\Filament\Resources\{ResourceName}Resource\RelationManagers\{RelationName}RelationManager
+```
+
+### Listeners
+
+```
+Modules\{ModuleName}\Listeners\{ListenerName}
+
+ aurmich/dev
+ aurmich/dev
+ aurmich/dev
+```
+
+### Service Providers
+
+ aurmich/dev
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Rating\Providers;
+
+use Modules\Xot\Providers\XotBaseServiceProvider;
+
+class RatingServiceProvider extends XotBaseServiceProvider
+{
+    public string $name = 'Rating';
+    protected string $module_dir = __DIR__;
+    protected string $module_ns = __NAMESPACE__;
+
+    // Implementazione
+}
+```
+
+### Route Service Providers
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Rating\Providers;
+
+use Modules\Xot\Providers\XotBaseRouteServiceProvider;
+
+class RouteServiceProvider extends XotBaseRouteServiceProvider
+{
+    protected string $moduleNamespace = 'Modules\Rating\Http\Controllers';
+    protected string $module_dir = __DIR__;
+    protected string $module_ns = __NAMESPACE__;
+    public string $name = 'Rating';
+
+    // Implementazione
+}
+```
+
+## Corrispondenza tra Struttura delle Directory e Namespace
+
+| Directory fisica                             | Namespace corretto                   |
+|---------------------------------------------|-------------------------------------|
+| `Modules/Rating/app/Models/`                | `Modules\Rating\Models`             |
+| `Modules/Rating/app/Http/Controllers/`      | `Modules\Rating\Http\Controllers`   |
+| `Modules/Rating/app/Providers/`             | `Modules\Rating\Providers`          |
+| `Modules/Rating/app/Datas/`                 | `Modules\Rating\Datas`              |
+| `Modules/Rating/app/Actions/`               | `Modules\Rating\Actions`            |
+| `Modules/Rating/app/Console/Commands/`      | `Modules\Rating\Console\Commands`   |
+| `Modules/Rating/app/Filament/Resources/`    | `Modules\Rating\Filament\Resources` |
+| `Modules/Rating/app/Filament/Pages/`        | `Modules\Rating\Filament\Pages`     |
+
+## Namespace nei Moduli con Sottodirectory
+
+Per moduli con strutture più complesse che utilizzano sottodirectory, mantenere la coerenza dei namespace:
+
+```php
+// File fisico: Modules/Rating/app/Models/Concerns/HasRatings.php
+namespace Modules\Rating\Models\Concerns;
+
+// File fisico: Modules/Rating/app/Http/Controllers/Api/RatingController.php
+namespace Modules\Rating\Http\Controllers\Api;
+
+// File fisico: Modules/Rating/app/Console/Commands/Generators/MakeRatingCommand.php
+namespace Modules\Rating\Console\Commands\Generators;
+```
+
+## Import e Use Statements
+
+Utilizzare sempre import completi e qualificati per evitare ambiguità:
+
+```php
+// CORRETTO
+use Modules\Rating\Models\Rating;
+use Modules\User\Models\User;
+
+// EVITARE
+use Modules\Rating\Models\Rating as RatingModel;
+```
+
+## Namespace in composer.json
+
+Quando si definisce l'autoloading in `composer.json`, assicurarsi che la mappatura rifletta questa convenzione:
+
+ aurmich/dev
+ aurmich/dev
+```
+Modules\{ModuleName}\Providers\{ServiceName}ServiceProvider
+```
+
+## Compatibilità con l'Autoloading
+
+La configurazione dell'autoloading in `composer.json` deve riflettere questa struttura di namespace:
+
+ aurmich/dev
+ aurmich/dev
+ aurmich/dev
+
+```json
+"autoload": {
+    "psr-4": {
+
+        "Modules\\Rating\\": "Modules/Rating/app/"
+
+        "App\\": "app/",
+        "Modules\\": "Modules/"
+
+ aurmich/dev
+        "Modules\\Rating\\": "Modules/Rating/app/"
+
+        "App\\": "app/",
+        "Modules\\": "Modules/"
+ aurmich/dev
+
+ aurmich/dev
+ aurmich/dev
+    }
+}
+```
+
+ aurmich/dev
+
+## Risoluzione dei Problemi PHPStan con i Namespace
+
+I problemi PHPStan relativi ai namespace possono essere identificati da messaggi come:
+
+```
+Class Modules\Rating\App\Models\Rating not found.
+```
+
+La soluzione è sempre correggere il namespace rimuovendo il segmento `App`:
+
+```php
+// Da
+namespace Modules\Rating\App\Models;
+
+// A
+namespace Modules\Rating\Models;
+```
+
+Per i comandi console, un errore comune è:
+
+```
+Class Modules\Rating\App\Console\Commands\RatingCommand not found.
+```
+
+La correzione è:
+
+```php
+// Da
+namespace Modules\Rating\App\Console\Commands;
+
+// A
+namespace Modules\Rating\Console\Commands;
+```
+
+## Vantaggi di questa Convenzione
+
+1. **Coerenza**: Uniformità in tutto il codebase
+2. **Compatibilità PHPStan**: Evita errori di classe non trovata
+3. **Semplicità**: Namespace più brevi e leggibili
+4. **Riflettività**: Il namespace riflette la struttura logica del modulo, non la sua struttura fisica
+5. **Standard Laravel**: Allineato alle convenzioni di Laravel
+
+Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan.
+
+Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan.
+
+Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan.
+aurmich/dev
+ aurmich/dev
+
+ aurmich/dev
+ aurmich/dev
+
+## Casi Speciali
+
+### Traits
+
+I traits dovrebbero essere collocati in una sottocartella `Traits` all'interno del tipo principale a cui si applicano:
+
+```
+Modules\{ModuleName}\Models\Traits\{TraitName}
+```
+
+### Interfaces
+
+Le interfacce dovrebbero utilizzare il suffisso `Interface` e essere collocate in:
+
+```
+Modules\{ModuleName}\Contracts\{InterfaceName}Interface
+```
+
+### Enums
+
+Gli enum dovrebbero essere collocati in:
+
+```
+Modules\{ModuleName}\Enums\{EnumName}
+```
+
+## Best Practices
+
+1. **Mantenere la coerenza**: Seguire sempre la stessa struttura di namespace in tutti i moduli
+2. **Evitare namespace troppo profondi**: Limitare a un massimo di 4-5 livelli
+3. **Nomi significativi**: Utilizzare nomi che riflettono chiaramente lo scopo e la funzione
+4. **Allineamento con Laravel**: Mantenere compatibilità con le convenzioni Laravel dove possibile
+
+## Esempio Completo
+
+```php
+// Model
+namespace Modules\User\Models;
+class User extends \Modules\Xot\Models\XotBaseModel {}
+
+// Controller
+namespace Modules\User\Http\Controllers;
+class UserController extends \Modules\Xot\Http\Controllers\XotBaseController {}
+
+// Action
+namespace Modules\User\Actions\Auth;
+class LoginAction {
+    public function execute(string $username, string $password): bool {
+        // implementation
+    }
+}
+
+// Filament Resource
+namespace Modules\User\Filament\Resources;
+class UserResource extends \Modules\Xot\Filament\Resources\XotBaseResource {}
+
+// Service Provider
+namespace Modules\User\Providers;
+class UserServiceProvider extends \Modules\Xot\Providers\XotBaseServiceProvider {}
+```
+
+## Verifica di Conformità
+
+Per verificare che tutti i file rispettino queste convenzioni, sono disponibili script automatici nella cartella `scripts` che analizzano la struttura del progetto e segnalano eventuali anomalie.
+
+```bash
+php scripts/check-namespaces.php
+```
+
+## Riferimenti
+
+- [PSR-4: Autoloader Standard](https://www.php-fig.org/psr/psr-4/)
+- [Laravel Namespacing Conventions](https://laravel.com/docs/master/structure)
+- [Nwidart/Laravel-Modules Documentation](https://nwidart.com/laravel-modules/v6/introduction)
+
+ aurmich/dev
+ aurmich/dev
+ aurmich/dev
+Seguire queste convenzioni di namespace aiuterà a mantenere un codebase coerente e a evitare errori comuni durante l'analisi statica del codice con PHPStan.
+# Convenzioni per i Namespace nei Moduli
+
+## Struttura Base
+I namespace nei moduli di OrisBroker Framework devono seguire una struttura precisa per mantenere la coerenza del codebase.
+
+### Regola Fondamentale
+Il namespace base di ogni modulo è `Modules\{ModuleName}`. È importante notare che **NON** si deve includere `app` nel namespace.
+
+### Esempi Corretti
+```php
+namespace Modules\Xot\Console\Commands;
+namespace Modules\Broker\Models;
+namespace Modules\User\Services;
+namespace Modules\Tenant\Repositories;
+```
+
+### Esempi Errati
+```php
+namespace Modules\Xot\app\Console\Commands;
+
+### Versione HEAD
+
+### Versione Incoming
+
+namespace Modules\Xot\Console\Commands;
+
+---
+
+namespace Modules\Broker\app\Models;
+namespace Modules\User\app\Services;
+namespace Modules\Tenant\app\Repositories;
+```
+
+## Struttura delle Directory
+Anche se i file possono essere fisicamente collocati in una directory `app/`, il namespace non deve riflettere questa struttura.
+
+### Esempio di Struttura Directory
+```
+Modules/
+  Xot/
+    app/
+      Console/
+        Commands/
+          ImportMdbToMySQL.php  // namespace Modules\Xot\Console\Commands;
+    Models/
+    Services/
+    Repositories/
+```
+
+## Motivazione
+Questa convenzione:
+
+# convenzioni per i namespace nei moduli
+
+## regola assoluta e inviolabile
+
+il namespace base di ogni modulo è **sempre e solo** `Modules\{ModuleName}` (dove ModuleName è il nome del modulo con la prima lettera maiuscola).
+
+### errore comune da evitare assolutamente
+
+**MAI** includere `App` o `app` nel namespace, anche se i file sono fisicamente nella cartella `app/`.
+
+Questo è l'errore più comune e grave nelle convenzioni di namespace:
+
+```php
+// GRAVEMENTE ERRATO
+namespace Modules\<nome progetto>\App\Controllers;
+
+// CORRETTO
+namespace Modules\<nome progetto>\Controllers;
+namespace Modules\<nome progetto>\App\Controllers;
+
+// CORRETTO
+namespace Modules\<nome progetto>\Controllers;
+```
+
+## esempi corretti vs errati
+
+### corretti ✓
+```php
+namespace Modules\Xot\Console\Commands;
+namespace Modules\<nome progetto>\Models;
+namespace Modules\User\Services;
+namespace Modules\Tenant\Repositories;
+namespace Modules\<nome progetto>\Filament\Resources;
+namespace Modules\<nome progetto>\Models;
+namespace Modules\User\Services;
+namespace Modules\Tenant\Repositories;
+namespace Modules\<nome progetto>\Filament\Resources;
+```
+
+### errati ✗
+```php
+namespace Modules\Xot\app\Console\Commands;       // errato: 'app' nel namespace
+namespace Modules\<nome progetto>\App\Models;           // errato: 'App' nel namespace
+namespace Modules\User\App\Services;              // errato: 'App' nel namespace
+namespace Modules\Tenant\app\Repositories;        // errato: 'app' nel namespace
+namespace App\Modules\<nome progetto>\Controllers;      // errato: struttura completamente sbagliata
+namespace Modules\<nome progetto>\App\Models;           // errato: 'App' nel namespace
+namespace Modules\User\App\Services;              // errato: 'App' nel namespace
+namespace Modules\Tenant\app\Repositories;        // errato: 'app' nel namespace
+namespace App\Modules\<nome progetto>\Controllers;      // errato: struttura completamente sbagliata
+```
+
+## struttura fisica vs namespace
+
+### importante: separazione tra percorso fisico e namespace
+
+Anche se i file sono fisicamente collocati in una directory `app/`, il namespace **non deve mai riflettere** questa struttura.
+
+```
+Percorso fisico:    /Modules/<nome progetto>/app/Models/Patient.php
+Namespace corretto: namespace Modules\<nome progetto>\Models;
+```
+
+### mappatura corretta percorso-namespace
+
+| percorso fisico | namespace corretto |
+|-----------------|--------------------|
+| `/Modules/<nome progetto>/app/Models/Patient.php` | `Modules\<nome progetto>\Models` |
+| `/Modules/<nome progetto>/app/Filament/Resources/PatientResource.php` | `Modules\<nome progetto>\Filament\Resources` |
+| `/Modules/Xot/app/Providers/XotServiceProvider.php` | `Modules\Xot\Providers` |
+
+### struttura directory completa
+
+```
+Modules/
+  <nome progetto>/
+    app/                        // directory fisica
+      Console/
+        Commands/
+          ImportPatient.php     // namespace Modules\<nome progetto>\Console\Commands;
+      Models/
+        Patient.php            // namespace Modules\<nome progetto>\Models;
+      Filament/
+        Resources/
+          PatientResource.php  // namespace Modules\<nome progetto>\Filament\Resources;
+  <nome progetto>/
+    app/                        // directory fisica
+      Console/
+        Commands/
+          ImportPatient.php     // namespace Modules\<nome progetto>\Console\Commands;
+      Models/
+        Patient.php            // namespace Modules\<nome progetto>\Models;
+      Filament/
+        Resources/
+          PatientResource.php  // namespace Modules\<nome progetto>\Filament\Resources;
+```
+
+## come verificare i namespace
+
+### verifica manuale
+
+Prima di committare un file, verifica sempre che:
+
+1. Il namespace **non** contenga `app` o `App`
+2. Il namespace inizi sempre con `Modules\NomeModulo\`
+3. Il resto del namespace rifletta la struttura logica delle classi
+
+### uso di phpstan
+
+Utilizza phpstan per verificare automaticamente i namespace:
+
+```bash
+php artisan phpstan:analyse --level=1 Modules/<nome progetto>
+```
+
+## motivazione di questa convenzione
+- Mantiene i namespace puliti e coerenti
+- Evita confusione con la struttura delle directory
+- Facilita l'autoloading e la navigazione del codice
+- Segue le best practice di Laravel per i moduli
+
+## Note Importanti
+- Questa convenzione si applica a TUTTI i moduli del framework
+- Non ci sono eccezioni a questa regola
+- I file possono essere fisicamente in `app/` ma il namespace non deve rifletterlo
+- Questa convenzione è obbligatoria per mantenere la compatibilità con il framework
+
+## Errori Comuni
+
+### Pattern di Errore: Inclusione di `App` nel Namespace
+
+Un errore comune è includere `App` nel namespace:
+
+```php
+// ERRATO ❌
+namespace Modules\<nome progetto>\App\Console\Commands;
+
+// CORRETTO ✓
+namespace Modules\<nome progetto>\Console\Commands;
+namespace Modules\<nome progetto>\App\Console\Commands;
+
+// CORRETTO ✓
+namespace Modules\<nome progetto>\Console\Commands;
+```
+
+### Conseguenze dell'Errore
+- Class not found exceptions
+- Problemi con l'autoloading
+- Errori di binding resolution nel container Laravel
+- Failure nei comandi artisan
+- Errori di tipo "Target class does not exist"
+
+## Strumenti di Verifica e Prevenzione
+
+### Verifica Manuale
+Utilizzare grep per trovare tutti i file con namespace errato:
+
+```bash
+grep -r "namespace Modules\\\\.*\\\\App\\\\" Modules
+```
+
+### PHP Stan
+Configurare PHP Stan per verificare i namespace corretti:
+
+```yaml
+
+# phpstan.neon
+parameters:
+  checkMissingIterableValueType: false
+  checkGenericClassInNonGenericObjectType: false
+  checkAlwaysTrueInstanceof: false
+  rules:
+    - Modules\Xot\Rules\CorrectNamespaceRule
+```
+
+### IDE Configuration
+Configurare il tuo IDE (PhpStorm, VSCode) per applicare automaticamente le convenzioni di namespace quando si creano nuovi file.
+
+## Come Correggere
+
+1. Individuare tutti i file con namespace errato
+2. Correggere il namespace rimuovendo `App\` dal percorso
+3. Aggiornare eventuali riferimenti a queste classi in altri file
+4. Pulire la cache dell'applicazione dopo le modifiche
+
+```bash
+php artisan cache:clear
+php artisan config:clear
+php artisan view:clear
+```

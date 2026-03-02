@@ -1,0 +1,12 @@
+in http://127.0.0.1:8001/it non si vede l'headernav ti ricordo che l'headernav e' il componente <x-section slug="header" />  percio' poi devi studiare anche laravel/Modules/Cms/app/View/Components/Section.php  e da quello dovresti capire che il contenuto e' dentro laravel/config/local/laravelpizza/database/content/sections/header.json, per fare un buon lavoro devi anche controllarlo percio' impostati gli mcp che ti servono e fa anche screenshots per fare meglio il tuo lavoro , ti ricordo anche che il headernav dovrebbe vedersi come quello in https://laravelpizza.com/
+
+il login va in /it/auth/login , il register in /it/auth/register  e il register non puo' essere "sign up" dobbiamo sempre avere la ui/ux al top cercati in internet come aumentare la ui/ux la bellezza al top poi aggiornati le cartelle docs dentro i moduli e dentro i temi , poi ragioni , poi implementi , poi controlli, se serve fa anche i pest test, in questo caso i pest test vanno fatti dentro laravel/Modules/Meetup/tests che Meetup e' il main_module di questo progetto 
+
+
+nella headernav quando sono loggato non deve solo mostrare "Dashboard" ma mostriamo l'avatar con il dropdown e dentro il link a dashboard se ne ha i diritti , ma in questo caso deve avere anche "i miei eventi" , "eventi vicini" e cose simili, devi capire lo scopo del progetto per poter proporre soluzioni migliori , poi ragioni , poi implementi , poi controlli, se serve fa anche i pest test, in questo caso i pest test vanno fatti dentro laravel/Modules/Meetup/tests che Meetup e' il main_module di questo progetto, l'headernav e' il componente <x-section slug="header" />  percio' poi devi studiare anche laravel/Modules/Cms/app/View/Components/Section.php  e da quello dovresti capire che il contenuto e' dentro laravel/config/local/laravelpizza/database/content/sections/header.json 
+
+
+in questo progetto non usiamo livewire puro ma utilizziamo sempre i widget di filament, questa e' una regola che devi sempre sempre ricordare sia te che gli altri agenti ai, percio' fa il possibile per ricordartelo te e gli altri agenti ai 
+
+
+fare  route('it.pages.index')   vuol dire che non hai chiaro che per le rotte usiamo folio nel front office questa e' una regola che devi sempre sempre ricordare sia te che gli altri agenti ai, percio' fa il possibile per ricordartelo te e gli altri agenti ai  , non andiamo MAI a scrivere rotte ne utilizziamo controller !

@@ -11,6 +11,10 @@ The CMS module provides comprehensive content management capabilities with modul
 **Test Coverage**: 80%+  
 **Rendering Engine**: Blade + Livewire + Volt
 
+## 🔥 Chaos Readiness
+
+- [Chaos Readiness 2026-03-02](chaos-readiness-2026-03-02.md)
+
 ## 🗓️ Development Roadmap
 
 ### Phase 1: Core CMS Features (Q1 2026) ✅

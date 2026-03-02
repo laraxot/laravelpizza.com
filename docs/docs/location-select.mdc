@@ -1,0 +1,21 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Regola: Path LocationForm
+
+- La classe `LocationForm` deve essere sempre posizionata in `Modules/Geo/Filament/Forms/LocationForm.php`.
+- Non deve mai trovarsi in `Modules/Geo/App/Filament/Forms/LocationForm.php` o altre posizioni.
+- Tutti gli import devono essere:
+  ```php
+  use Modules\Geo\Filament\Forms\LocationForm;
+  ```
+- Aggiornare sempre la documentazione e i file .mdc windsurf/cursor in caso di modifica del path.
+- Esempio di utilizzo corretto:
+  ```php
+  $form = new LocationForm();
+  $schema = $form->getSchema();
+  ```
+
+> Prevenire errori di namespace è fondamentale per la stabilità e la manutenibilità del codice.

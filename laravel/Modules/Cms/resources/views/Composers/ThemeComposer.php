@@ -19,7 +19,7 @@ class ThemeComposer
     /**
      * Get menu items by name.
      *
-     * @return array<string, mixed>|null
+     * @return array<array-key, mixed>|null
      */
     public function getMenu(string $menu_name): ?array
     {
@@ -31,13 +31,13 @@ class ThemeComposer
             return null;
         }
 
-        /* @var array<string, mixed> $items */
+        /** @var array<array-key, mixed> $items */
         return $items;
     }
 
     public function getMenuUrl(array $menu): string
     {
-        if ([] === $menu) {
+        if ($menu === []) {
             return '#';
         }
         $lang = app()->getLocale();
@@ -49,13 +49,13 @@ class ThemeComposer
             return '#';
         }
 
-        if ('internal' === $type) {
+        if ($type === 'internal') {
             return route('page_slug.view', ['lang' => $lang, 'slug' => $url]);
         }
-        if ('external' === $type) {
+        if ($type === 'external') {
             return $url;
         }
-        if ('route_name' === $type) {
+        if ($type === 'route_name') {
             return route($url, ['lang' => $lang]);
         }
 

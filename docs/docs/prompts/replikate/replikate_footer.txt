@@ -1,0 +1,31 @@
+# LEGACY FILE - REPLIKATE FOOOTER
+
+⚠️ **ATTENZIONE**: Questo file è DEPRECATO e viene mantenuto solo per riferimento storico.
+
+**File attivo**: `footer_improvement_prompt.md`
+
+---
+
+## Perché questo file è deprecato?
+
+1. **Contenuto errato**: Contiene riferimenti a "Marco Sottana - Consulenza Sicurezza" invece di LaravelPizza
+2. **URL sbagliata**: Fa riferimento a /termini invece del fatto che il footer appare su TUTTE le pagine
+3. **Prompt vago**: Non specifica chiaramente i passaggi da seguire
+4. **Formato obsoleto**: Non segue il nuovo standard dei prompt nella cartella replikate
+
+## File correnti da usare
+
+Per il miglioramento del footer, usa:
+- ✅ `footer_improvement_prompt.md` - Prompt aggiornato e corretto
+- ✅ `replicate.md` - Documento di riferimento per design e struttura
+- ✅ `main_replication_prompt.md` - Prompt principale per l'allineamento del sito
+
+## Cronologia delle correzioni
+
+- **Febbraio 2026**: Creato file originale con contenuti errati (Marco Sottana)
+- **Febbraio 2026**: Identificato errore e creato `footer_improvement_prompt.md` con contenuti corretti (LaravelPizza)
+- **Febbraio 2026**: Questo file marcato come LEGACY
+
+---
+
+*Per qualsiasi nuovo lavoro sul footer, utilizzare `footer_improvement_prompt.md`.*

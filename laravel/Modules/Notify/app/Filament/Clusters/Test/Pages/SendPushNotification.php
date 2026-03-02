@@ -14,10 +14,6 @@ use Filament\Notifications\Notification;
 use Filament\Schemas\Schema;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Stringable;
-use Kreait\Firebase\Contract\Messaging;
-use Kreait\Firebase\Messaging\CloudMessage;
-use Kreait\Firebase\Messaging\MessageData;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\User\Models\DeviceUser;
 use Modules\Xot\Filament\Pages\XotBasePage;
@@ -123,6 +119,19 @@ class SendPushNotification extends XotBasePage
 
     public function sendNotification(): void
     {
+        if (
+            ! class_exists('Kreait\\Firebase\\Messaging\\CloudMessage')
+            || ! class_exists('Kreait\\Firebase\\Messaging\\MessageData')
+        ) {
+            Notification::make()
+                ->danger()
+                ->title('Firebase SDK non disponibile')
+                ->body('Installa le dipendenze Firebase per inviare push notification.')
+                ->send();
+
+            return;
+        }
+
         $data = $this->notificationForm->getState();
         $deviceToken = $data['deviceToken'] ?? '';
 
@@ -174,22 +183,36 @@ class SendPushNotification extends XotBasePage
                 $sanitizedData[$key] = (string) json_encode($value);
             }
         }
-        $messageData = MessageData::fromArray($sanitizedData);
+        $messageDataClass = 'Kreait\\Firebase\\Messaging\\MessageData';
+        /** @var object $messageData */
+        $messageData = $messageDataClass::fromArray($sanitizedData);
 
         // Verifichiamo che deviceToken sia una stringa non vuota (per soddisfare il tipo non-empty-string)
         Assert::stringNotEmpty($deviceToken, 'Il token del dispositivo non può essere vuoto');
 
-        $message = CloudMessage::new()
+        $cloudMessageClass = 'Kreait\\Firebase\\Messaging\\CloudMessage';
+        /** @var object $message */
+        $message = $cloudMessageClass::new();
+
+        if (
+            ! method_exists($message, 'withToken')
+            || ! method_exists($message, 'withHighestPossiblePriority')
+            || ! method_exists($message, 'withData')
+        ) {
+            throw new Exception('CloudMessage API non compatibile');
+        }
+
+        // @phpstan-ignore-next-line method.nonObject (CloudMessage from string class name)
+        $message = $message
             ->withToken($deviceToken)
             ->withHighestPossiblePriority()
             ->withData($messageData);
 
         try {
-            // Otteniamo l'istanza di messaging e verifichiamo che sia valida
-            /** @var Messaging $messaging */
             $messaging = app('firebase.messaging');
-            Assert::isInstanceOf($messaging, Messaging::class, 'Invalid messaging instance');
-
+            if (! is_object($messaging) || ! method_exists($messaging, 'send')) {
+                throw new Exception('Invalid messaging instance');
+            }
             $messaging->send($message);
         } catch (Exception $e) {
             dddx([

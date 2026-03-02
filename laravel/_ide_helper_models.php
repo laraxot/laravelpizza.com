@@ -961,8 +961,7 @@ namespace Modules\Geo\Models{
  * @method static Builder<static>|County                        newModelQuery()
  * @method static Builder<static>|County                        newQuery()
  * @method static Builder<static>|County                        query()
- *                                                                                                  >>>>>>> 65bf1208 (.)
- * @property-read \Modules\Meetup\Models\Profile|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @mixin \Eloquent
  */
 	class County extends \Eloquent {}

@@ -11,14 +11,15 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * Modules\User\Models\PasswordReset.
  *
- * @property int         $id
- * @property string      $email
- * @property string      $token
+ * @property int $id
+ * @property string $email
+ * @property string $token
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $user_id
  * @property string|null $updated_by
  * @property string|null $created_by
+ *
  * @method static Builder|PasswordReset newModelQuery()
  * @method static Builder|PasswordReset newQuery()
  * @method static Builder|PasswordReset query()
@@ -30,21 +31,19 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|PasswordReset whereUpdatedAt($value)
  * @method static Builder|PasswordReset whereUpdatedBy($value)
  * @method static Builder|PasswordReset whereUserId($value)
+ *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- * @property string|null          $uuid
+ * @property string|null $uuid
+ *
  * @method static Builder<static>|PasswordReset whereUuid($value)
+ *
  * @mixin IdeHelperPasswordReset
+ *
  * @property ProfileContract|null $deleter
-<<<<<<< HEAD
  *
  * @method static \Modules\User\Database\Factories\PasswordResetFactory factory($count = null, $state = [])
  *
-||||||| parent of da38c10 (.)
- *
-=======
- * @method static \Modules\User\Database\Factories\PasswordResetFactory factory($count = null, $state = [])
->>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class PasswordReset extends BaseModel

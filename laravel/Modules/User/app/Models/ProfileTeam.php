@@ -10,21 +10,22 @@ use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * ProfileTeam Model.
- * 
+ *
  * Represents the relationship between a profile and a team, including the user's role.
  *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- * @property string               $id
- * @property int                  $team_id
- * @property string|null          $user_id
- * @property string|null          $role
- * @property Carbon|null          $created_at
- * @property Carbon|null          $updated_at
- * @property string|null          $updated_by
- * @property string|null          $created_by
- * @property Carbon|null          $deleted_at
- * @property string|null          $deleted_by
+ * @property string $id
+ * @property int $team_id
+ * @property string|null $user_id
+ * @property string|null $role
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property Carbon|null $deleted_at
+ * @property string|null $deleted_by
+ *
  * @method static Builder<static>|ProfileTeam newModelQuery()
  * @method static Builder<static>|ProfileTeam newQuery()
  * @method static Builder<static>|ProfileTeam query()
@@ -38,39 +39,21 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|ProfileTeam whereUpdatedAt($value)
  * @method static Builder<static>|ProfileTeam whereUpdatedBy($value)
  * @method static Builder<static>|ProfileTeam whereUserId($value)
+ *
  * @mixin IdeHelperProfileTeam
-<<<<<<< HEAD
- *
- * @property ProfileContract|null         $deleter
- * @property Team|null                    $team
- * @property User|null                    $user
- * @property string|null                  $profile_id
- * @property array<array-key, mixed>|null $permissions
- *
- * @method static Builder<static>|ProfileTeam                         childrenWith(array $relations)
- * @method static Builder<static>|ProfileTeam                         childrenWithCount(array $relations)
- * @method static \Modules\User\Database\Factories\ProfileTeamFactory factory($count = null, $state = [])
- * @method static Builder<static>|ProfileTeam                         wherePermissions($value)
- * @method static Builder<static>|ProfileTeam                         whereProfileId($value)
- *
-||||||| parent of da38c10 (.)
  *
  * @property ProfileContract|null $deleter
- * @property Team|null            $team
- * @property User|null            $user
- *
-=======
- * @property ProfileContract|null $deleter
- * @property Team|null            $team
- * @property User|null            $user
+ * @property Team|null $team
+ * @property User|null $user
  * @property string|null $profile_id
  * @property array<array-key, mixed>|null $permissions
+ *
  * @method static Builder<static>|ProfileTeam childrenWith(array $relations)
  * @method static Builder<static>|ProfileTeam childrenWithCount(array $relations)
  * @method static \Modules\User\Database\Factories\ProfileTeamFactory factory($count = null, $state = [])
  * @method static Builder<static>|ProfileTeam wherePermissions($value)
  * @method static Builder<static>|ProfileTeam whereProfileId($value)
->>>>>>> da38c10 (.)
+ *
  * @mixin \Eloquent
  */
 class ProfileTeam extends TeamUser

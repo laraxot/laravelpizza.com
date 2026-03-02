@@ -47,6 +47,7 @@ parameters:
 
     scanFiles:
         - ./Modules/Xot/Helpers/Helper.php
+        - ./phpstan-stubs/firebase-notify.stub.php
 
     editorUrl: 'vscode://file/%%file%%:%%line%%'
     tmpDir: /tmp/phpstan

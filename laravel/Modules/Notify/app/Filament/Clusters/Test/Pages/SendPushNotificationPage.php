@@ -14,15 +14,10 @@ use Filament\Notifications\Notification;
 use Filament\Schemas\Schema;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Stringable;
-use Kreait\Firebase\Contract\Messaging;
-use Kreait\Firebase\Messaging\CloudMessage;
-use Kreait\Firebase\Messaging\MessageData;
 use Modules\Notify\Filament\Clusters\Test;
 use Modules\User\Models\DeviceUser;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-use Override;
 use Webmozart\Assert\Assert;
 
 use function Safe\json_encode;
@@ -36,7 +31,6 @@ class SendPushNotificationPage extends XotBasePage
 
     public ?array $notificationData = [];
 
-    // protected static ?string $navigationIcon = 'heroicon-o-envelope';
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-paper-airplane';
 
     protected string $view = 'notify::filament.pages.send-push-notification';
@@ -54,20 +48,15 @@ class SendPushNotificationPage extends XotBasePage
             ->where('push_notifications_token', '!=', null)
             ->where('push_notifications_token', '!=', 'unknown')
             ->where('push_notifications_enabled', 1)
-            // ->whereHas('profile') //db separato percio' da errore cosi'
             ->whereHas('device')
             ->get();
 
-        /**
-         * Callback per mappare i dispositivi in opzioni per il select.
-         */
         $callback = function ($item) {
             /** @var mixed $item */
             if (! is_object($item)) {
                 return [];
             }
 
-            // Relations & attributes (Laravel-safe)
             $profile = method_exists($item, 'getRelationValue') ? $item->getRelationValue('profile') : null;
             if (! is_object($profile)) {
                 return [];
@@ -84,16 +73,12 @@ class SendPushNotificationPage extends XotBasePage
             $robotVal = data_get($device, 'robot');
             $robot = is_string($robotVal) ? $robotVal : null;
 
-            // Creiamo la label con gli ultimi 5 caratteri del token
             $tokenSuffix = mb_substr($token, -5);
             $label = $fullName.' ('.($robot ?? '').') '.$tokenSuffix;
 
             return [$token => $label];
         };
 
-        /**
-         * Callback per filtrare i dispositivi.
-         */
         $filterCallback = function ($item): bool {
             if (! is_object($item)) {
                 return false;
@@ -118,16 +103,27 @@ class SendPushNotificationPage extends XotBasePage
                     TextInput::make('value')->required(),
                 ]),
             ])
-            // ->model($this->getUser())
             ->statePath('notificationData');
     }
 
     public function sendNotification(): void
     {
+        if (
+            ! class_exists('Kreait\\Firebase\\Messaging\\CloudMessage')
+            || ! class_exists('Kreait\\Firebase\\Messaging\\MessageData')
+        ) {
+            Notification::make()
+                ->danger()
+                ->title('Firebase SDK non disponibile')
+                ->body('Installa le dipendenze Firebase per inviare push notification.')
+                ->send();
+
+            return;
+        }
+
         $data = $this->notificationForm->getState();
         $deviceToken = $data['deviceToken'] ?? '';
 
-        // Verifichiamo che deviceToken sia una stringa non vuota
         if ($deviceToken === '') {
             Notification::make()
                 ->danger()
@@ -138,59 +134,61 @@ class SendPushNotificationPage extends XotBasePage
             return;
         }
 
-        // Verifichiamo che i dati siano del tipo corretto
         $type = $data['type'] ?? '';
         $title = $data['title'] ?? '';
         $body = $data['body'] ?? '';
         $jsonData = isset($data['data']) ? json_encode($data['data']) : '{}';
-
-        // Verifichiamo che jsonData sia una stringa
         $jsonData = $jsonData ?: '{}';
 
-        // Creiamo un array con chiavi non vuote e valori stringa che implementano Stringable
-        $pushDataTemp = [];
+        $pushDataTemp = [
+            'type' => $type,
+            'title' => $title,
+            'body' => $body,
+            'data' => $jsonData,
+        ];
 
-        // Aggiungiamo i valori all'array solo se non sono vuoti
-        // PHPStan sa che queste stringhe non possono essere vuote a questo punto
-        $pushDataTemp['type'] = $type;
-        $pushDataTemp['title'] = $title;
-        $pushDataTemp['body'] = $body;
-        // Adding data field (we know jsonData can't be empty due to fallback to '{}' earlier)
-        $pushDataTemp['data'] = $jsonData;
-
-        // Verifichiamo che l'array contenga almeno un elemento
         if (count($pushDataTemp) === 0) {
             $pushDataTemp['type'] = 'notification';
         }
 
-        // Creiamo un MessageData object
-        // Convertiamo tutti i valori in stringa come richiesto da MessageData
         $sanitizedData = [];
         foreach ($pushDataTemp as $key => $value) {
-            // All keys are non-empty strings by this point
             if (is_scalar($value) || is_null($value)) {
                 $sanitizedData[$key] = is_string($value) ? $value : ((string) $value);
             } else {
-                // Handle non-scalar values (arrays, objects) by converting to JSON
                 $sanitizedData[$key] = (string) json_encode($value);
             }
         }
-        $messageData = MessageData::fromArray($sanitizedData);
 
-        // Verifichiamo che deviceToken sia una stringa non vuota (per soddisfare il tipo non-empty-string)
-        Assert::stringNotEmpty($deviceToken, 'Il token del dispositivo non può essere vuoto');
+        $messageDataClass = 'Kreait\\Firebase\\Messaging\\MessageData';
+        /** @var object $messageData */
+        $messageData = $messageDataClass::fromArray($sanitizedData);
 
-        $message = CloudMessage::new()
+        Assert::stringNotEmpty($deviceToken, 'Il token del dispositivo non puo essere vuoto');
+
+        $cloudMessageClass = 'Kreait\\Firebase\\Messaging\\CloudMessage';
+        /** @var object $message */
+        $message = $cloudMessageClass::new();
+
+        if (
+            ! method_exists($message, 'withToken')
+            || ! method_exists($message, 'withHighestPossiblePriority')
+            || ! method_exists($message, 'withData')
+        ) {
+            throw new Exception('CloudMessage API non compatibile');
+        }
+
+        // @phpstan-ignore-next-line method.nonObject (CloudMessage from string class name)
+        $message = $message
             ->withToken($deviceToken)
             ->withHighestPossiblePriority()
             ->withData($messageData);
 
         try {
-            // Otteniamo l'istanza di messaging e verifichiamo che sia valida
-            /** @var Messaging $messaging */
             $messaging = app('firebase.messaging');
-            Assert::isInstanceOf($messaging, Messaging::class, 'Invalid messaging instance');
-
+            if (! is_object($messaging) || ! method_exists($messaging, 'send')) {
+                throw new Exception('Invalid messaging instance');
+            }
             $messaging->send($message);
         } catch (Exception $e) {
             dddx([
@@ -201,7 +199,6 @@ class SendPushNotificationPage extends XotBasePage
 
         Notification::make()
             ->success()
-            // ->title(__('filament-panels::pages/auth/edit-profile.notifications.saved.title'))
             ->title(__('check your client'))
             ->send();
     }
@@ -216,13 +213,10 @@ class SendPushNotificationPage extends XotBasePage
     protected function getNotificationFormActions(): array
     {
         return [
-            Action::make('notificationFormActions')
-
-                ->submit('notificationFormActions'),
+            Action::make('notificationFormActions')->submit('notificationFormActions'),
         ];
     }
 
-    #[Override]
     protected function getUser(): Authenticatable&Model
     {
         $user = Filament::auth()->user();
@@ -238,9 +232,6 @@ class SendPushNotificationPage extends XotBasePage
 
     protected function fillForms(): void
     {
-        // $data = $this->getUser()->attributesToArray();
-
-        // $this->editProfileForm->fill($data);
         $this->notificationForm->fill();
     }
 }

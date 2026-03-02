@@ -2,76 +2,61 @@
 
 declare(strict_types=1);
 
-/**
- * @see https://iftikhar-ahmed.medium.com/send-push-notifications-in-laravel-using-firebase-on-your-android-device-f585621db900
- */
-
 namespace Modules\Notify\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Stringable;
-use Kreait\Firebase\Messaging\AndroidConfig;
-use Kreait\Firebase\Messaging\CloudMessage;
-use Kreait\Firebase\Messaging\Message;
-use Kreait\Firebase\Messaging\Notification as FirebaseNotification;
 use Modules\Notify\Contracts\MobilePushNotification;
 use Modules\Notify\Datas\FirebaseNotificationData;
-use NotificationChannels\Fcm\FcmChannel;
-use Override;
 
 /**
  * Class for sending notifications via Firebase Cloud Messaging to Android devices.
- * Classe per inviare notifiche tramite Firebase Cloud Messaging ad Android.
  */
 class FirebaseAndroidNotification extends Notification implements MobilePushNotification
 {
     use Queueable;
 
-    /**
-     * Create a new notification instance.
-     *
-     * @param  FirebaseNotificationData  $data  The Firebase notification data (I dati della notifica Firebase)
-     */
     public function __construct(
         public FirebaseNotificationData $data,
     ) {}
 
     /**
-     * Get the notification's delivery channels.
-     *
-     * @param  object  $_notifiable  The entity to be notified (l'entità da notificare)
      * @return array<int, class-string>
      */
     public function via(object $_notifiable): array
     {
-        return [
-            FcmChannel::class,
-        ];
+        $fcmChannelClass = 'NotificationChannels\\Fcm\\FcmChannel';
+
+        if (! class_exists($fcmChannelClass)) {
+            return [];
+        }
+
+        return [$fcmChannelClass];
     }
 
-    /**
-     * Create the Firebase Cloud message for the notification.
-     * Crea il messaggio Firebase Cloud per la notifica.
-     *
-     * @param  object  $notifiable  The entity to be notified
-     */
-    public function toFirebase(object $notifiable): CloudMessage
+    public function toFirebase(object $_notifiable): object
     {
-        // Create a valid Android configuration (Creiamo una configurazione Android valida)
+        $androidConfigClass = 'Kreait\\Firebase\\Messaging\\AndroidConfig';
+        $cloudMessageClass = 'Kreait\\Firebase\\Messaging\\CloudMessage';
+        $firebaseNotificationClass = 'Kreait\\Firebase\\Messaging\\Notification';
+
+        if (
+            ! class_exists($androidConfigClass)
+            || ! class_exists($cloudMessageClass)
+            || ! class_exists($firebaseNotificationClass)
+        ) {
+            return (object) [];
+        }
+
         $androidConfig = [
             'ttl' => '3600s',
             'priority' => 'high',
         ];
 
-        // Add notification only if data is in a valid format (Aggiungiamo la notifica solo se i dati sono in un formato valido)
-        // Verify that $this->data->data is accessible (Verifichiamo che $this->data->data sia accessibile)
         $dataProperty = $this->data->data ?? null;
-        if ($dataProperty !== null) {
-            // Create a notification array conforming to AndroidConfig expectations (Creiamo un array di notifica conforme alle aspettative di AndroidConfig)
+        if (is_array($dataProperty)) {
             $notification = [];
-
-            // Add only supported fields with correct types (Aggiungiamo solo i campi supportati con i tipi corretti)
             $allowedKeys = ['title', 'body', 'icon', 'color', 'sound', 'click_action'];
 
             foreach ($allowedKeys as $key) {
@@ -80,53 +65,79 @@ class FirebaseAndroidNotification extends Notification implements MobilePushNoti
                 }
             }
 
-            // Add notification only if it contains valid data (Aggiungiamo la notifica solo se contiene dati validi)
-            if (! empty($notification)) {
+            if ($notification !== []) {
                 $androidConfig['notification'] = $notification;
             }
         }
 
-        return CloudMessage::new()
-            ->withNotification(FirebaseNotification::create($this->data->title, $this->data->body))
-            ->withAndroidConfig(AndroidConfig::fromArray($androidConfig));
+        /** @var object $message */
+        $message = $cloudMessageClass::new();
+
+        if (! method_exists($message, 'withNotification') || ! method_exists($message, 'withAndroidConfig')) {
+            return (object) [];
+        }
+
+        /** @var object $firebaseNotification */
+        $firebaseNotification = $firebaseNotificationClass::create($this->data->title, $this->data->body);
+        /** @var object $androidConfigObject */
+        $androidConfigObject = $androidConfigClass::fromArray($androidConfig);
+
+        /** @phpstan-ignore-next-line method.nonObject (Kreait CloudMessage from string class) */
+        $messageWithNotification = $message->withNotification($firebaseNotification);
+        if (! is_object($messageWithNotification) || ! method_exists($messageWithNotification, 'withAndroidConfig')) {
+            return (object) [];
+        }
+
+        /** @var callable(object): mixed $withAndroidConfig */
+        $withAndroidConfig = [$messageWithNotification, 'withAndroidConfig'];
+        $builtMessage = $withAndroidConfig($androidConfigObject);
+
+        return is_object($builtMessage) ? $builtMessage : (object) [];
     }
 
     /**
-     * Get the array representation of the notification.
-     *
-     * @param  object|null  $notifiable  The entity to be notified
      * @return array<string, mixed>
      */
-    #[Override]
-    public function toArray(?object $notifiable): array
+    public function toArray(?object $_notifiable): array
     {
-        // return $this->data->toArray();
         return [];
     }
 
-    /**
-     * Convert to a Firebase Cloud message (Converti in un messaggio Cloud Firebase).
-     */
-    #[Override]
-    public function toCloudMessage(): Message
+    public function toCloudMessage(): object
     {
+        $cloudMessageClass = 'Kreait\\Firebase\\Messaging\\CloudMessage';
+
+        if (! class_exists($cloudMessageClass)) {
+            return (object) [];
+        }
+
         $notificationData = $this->data->data;
 
-        /**
-         * @var array<non-empty-string, string> $data
-         */
+        /** @var array<non-empty-string, string> $data */
         $data = [];
-
-        // Ensure each key is a non-empty string and each value is string or Stringable (Assicuriamoci che ogni chiave sia una stringa non vuota e ogni valore sia string o Stringable)
         foreach ($notificationData as $key => $value) {
             if (is_string($key) && $key !== '' && (is_string($value) || $value instanceof Stringable)) {
                 $data[$key] = $value instanceof Stringable ? $value->toString() : $value;
             }
         }
 
-        /** @var CloudMessage $message */
-        $message = CloudMessage::new()->withHighestPossiblePriority()->withData($data);
+        /** @var object $message */
+        $message = $cloudMessageClass::new();
 
-        return $message;
+        if (! method_exists($message, 'withHighestPossiblePriority') || ! method_exists($message, 'withData')) {
+            return (object) [];
+        }
+
+        /** @phpstan-ignore-next-line method.nonObject (Kreait CloudMessage from string class) */
+        $messageWithPriority = $message->withHighestPossiblePriority();
+        if (! is_object($messageWithPriority) || ! method_exists($messageWithPriority, 'withData')) {
+            return (object) [];
+        }
+
+        /** @var callable(array<non-empty-string, string>): mixed $withData */
+        $withData = [$messageWithPriority, 'withData'];
+        $builtMessage = $withData($data);
+
+        return is_object($builtMessage) ? $builtMessage : (object) [];
     }
 }

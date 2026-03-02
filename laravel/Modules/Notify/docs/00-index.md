@@ -6,7 +6,8 @@
 ## 🎯 **Lettura Essenziale**
 1. [README.md](./readme.md) - Panoramica completa e Quick Start.
 2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Multi-channel API e AI Templates.
-3. [philosophy.md](./philosophy.md) - "Essere Connessi": filosofia delle notifiche in tempo reale.
+3. [chaos-readiness-2026-03-02.md](./chaos-readiness-2026-03-02.md) - Hardening dipendenze opzionali Firebase/FCM.
+4. [philosophy.md](./philosophy.md) - "Essere Connessi": filosofia delle notifiche in tempo reale.
 
 ## 🏗️ **Architettura & Canali**
 - 📧 **[Email System](./email-templates.md)** - Gestione template dinamici e stagionali (Spatie integration).

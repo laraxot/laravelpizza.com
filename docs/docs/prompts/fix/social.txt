@@ -1,0 +1,50 @@
+studia a fondo
+https://github.com/kudashevs/laravel-share-buttons
+https://codeshotcut.com/blog/laravel-11-social-share-links
+https://medium.com/geekculture/social-media-share-integration-in-laravel-e61675f761b9
+https://packagist.org/packages/jorenvanhocht/laravel-share
+https://stackoverflow.com/questions/28188352/laravel-social-media-share-buttons-with-custom-content
+https://purecode.ai/community/reactsocialmediaapp-tailwind-socialmedia
+https://dev.to/43081j/using-tailwind-at-run-time-with-web-components-47c
+https://www.tailawesome.com/?query=social+network
+https://github.com/tailwindlabs/tailwindcss/discussions/8402
+https://flyonui.com/
+https://sdorra.dev/posts/2023-01-05-share-button
+https://www.creative-tim.com/twcomponents/component/tailwind-css-blog-sharing-buttons-with-blog-details
+https://tailwindcss.com/plus
+https://pagedone.io/docs/social-media-icons
+https://purecode.ai/community/socialsharebar-tailwind-sharebar
+https://bbbootstrap.com/snippets/tailwind-css-social-media-share-button-58849798
+https://www.tailsharing.com/
+https://tw-elements.com/docs/standard/components/social-buttons/
+https://prebuiltui.com/components/social-media
+https://tailwindflex.com/@prajwal/social-share-buttons-box
+https://www.itsolutionstuff.com/post/how-to-add-social-media-share-buttons-in-laravelexample.html
+https://medium.com/@fzrtechnology/how-to-add-social-share-buttons-in-laravel-a5ba7db26b0f
+https://www.dot-book.org/articles/minimalist-book-collection-organization.html?psystem=PW&domain=pranabkalita.com&oref=https%3A%2F%2Fwww.google.com%2F
+https://github.com/jorenvh/laravel-share/issues
+https://www.webappfix.com/post/laravel-adding-social-media-share-buttons-advanced-tutorial-example.html
+https://laravel.com/docs/12.x/socialite
+https://shouts.dev/articles/laravel-how-to-display-social-media-share-icons
+https://laravel-news.com/socialmedia-sharing
+https://laravel-news.com/learn-to-create-an-rss-feeds-from-scratch-in-laravel
+https://feedpress.com/
+https://feed.laravel-news.com/
+https://laracasts.com/discuss/channels/laravel/share-project-to-social-media-in-laravel
+https://www.facebook.com/groups/web.devs.community/posts/3366895470228602/
+https://codeshotcut.com/blog/laravel-12-social-share-integration-facebook-twitter-linkedin-whatsapp
+https://codebrisk.com/blog/now-generate-social-share-links-quickly-with-laravel-share
+https://kudashevs.com/posts/2024/05/social-media-share-buttons-laravel
+https://github.com/enflow/laravel-social-share
+https://silvanhagen.com/writing/social-share-images-with-laravel/
+https://laravel-news.com/socialmedia-sharing
+https://laracasts.com/discuss/channels/guides/social-sharing
+https://www.laravelclick.com/post/laravel-10-social-media-share-buttons-integration-tutorial
+
+dopo aver studiato questi links dovresti aver individuato degli argomenti comuni ad esempio uno e' il condividere nei social media con dei tasti, questa cosa dovresti capire che e' una cosa che deve esser fatta dentro il modulo SEO, questa cosa e' una nuova issue, percio' crea una nuova github issue se non esiste gia' se esiste va a migliorare la github issues, devi creare anche la github discussions, se esiste gia' va a discutere molto animatamente quella discussione dicendo la tua e rispondendo alla discussione, poi aggiorna studia e migliora le cartelle docs dentro i moduli e dentro i temi (come avrai capito dovrai di sicuro aggiornare anche laravel/Modules/Seo/docs) documenta anche come vorresti fare il tuo componente di condivisione su social media sempre dentro le cartelle docs dentro i moduli e dentro i temi , poi dovresti aver capito che questo componente fatto e pensato per essere riutilizzabile sarebe utile dentro http://127.0.0.1:8000/it/events/filament-admin-panel-workshop-1, ti ricordo che non usiamo livewire direttamente ma utilizziamo filament widget, aumenta la tua conoscenza anche andando in internet, poi aggiorni studi e migliori le cartelle docs dentro i moduli e dentro i temi, poi aggiorni le tue rules le tue memories e le tue skills, ti ricordo che in quei links non c'e' solo un argomento ma piu' di uno 
+
+
+qui laravel/Modules/Seo/docs/social-share-component.md  hai scritto che per fare questo social share installare dei pacchetti via composer.. non dire cazzate per un componente cosi' semplice e che deve essere integrato nella nostra grafica non devi installare cose con composer,  si fa un bel filament widget e si utilizza ! capisci da solo il perche' poi aggiorna studia e migliora le cartelle docs dentro i moduli e dentro i temi, trova da solo la regola, aggiorna le tue rules, le tue memories, e le tue skills, poi aggiorna studia e migliora le cartelle docs dentro i moduli e dentro i temi
+
+
+su https://github.com/laraxot/laravelpizza.com/discussions/188  non potresti interagire come altro utente .. fa schifo che ci sia solo il mio nome 
