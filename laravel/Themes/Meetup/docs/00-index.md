@@ -30,24 +30,22 @@
 - [Footer logo confronto](footer-logo-confronto.md) - Logo footer vs laravelpizza.com, screenshot, roadmap
 - [Theme Resolution and Workflow](theme-resolution-and-workflow.md) - Risoluzione tema (APP_URL → pub_theme), build e copy
 - [MCP Configuration](mcp-configuration.md) - MCP per confronto grafica e task
-- [Laravel Localization Implementation](laravel-localization-implementation-complete.md) - Complete Laravel Localization setup and configuration
+- [Laravel Localization Implementation](folio-page-localization.md) - Complete Laravel Localization setup and configuration
 - [Localization Standard](localization-standard.md) - Standard localization practices and patterns
-- [UI/UX Language Switcher](../../modules/meetup/docs/ui-ux-language-switcher-standard.md) - Design standards for language selection
+- [UI/UX Language Switcher](../../../Modules/Meetup/docs/ui-ux-language-switcher-standard.md) - Design standards for language selection
 - [Events Page Comparison](events-page-comparison.md) - Comparison of events page with laravelpizza.com
 - [Events Comparison](events-comparison/) - Detailed events page comparison analysis
 - [Visual Comparison](visual-comparison/) - Visual comparison tools and analysis
 
 ## Replikate - LaravelPizza Replication
 
-- [Replikate Directory](replikate/) - Structured prompts for replicating laravelpizza.com
-  - [README](replikate/readme.md) - Guide to using replikate prompts
-  - [Replicate Analysis](replikate/replicate.md) - Detailed target site analysis and implementation plan
-  - [Main Replication Prompt](replikate/main_replication_prompt.md) - Master prompt for site alignment
-  - [Footer Improvement](replikate/footer_improvement_prompt.md) - Specific footer UI/UX task
-  - [Home Content Review](replikate/home_content_review_prompt.md) - Homepage content analysis task
-  - [Prompt Writing Guide](replikate/prompt-writing-guide.md) - Standards for writing prompts
-  - [Corrections Summary](replikate/corrections-summary-[date].md) - History of prompt corrections (Feb 2026)
-  - [Legacy Footer](replikate/replikate_footer.txt) - Deprecated prompt (kept for reference)
+- [Replikate Directory](prompts/replikate/) - Structured prompts for replicating laravelpizza.com
+  - [README](prompts/replikate/readme.md) - Guide to using replikate prompts
+  - [Replicate Analysis](prompts/replikate/replicate.md) - Detailed target site analysis and implementation plan
+  - [Main Replication Prompt](prompts/replikate/main_replication_prompt.md) - Master prompt for site alignment
+  - [Footer Improvement](prompts/replikate/footer_improvement_prompt.md) - Specific footer UI/UX task
+  - [Home Content Review](prompts/replikate/home_content_review_prompt.md) - Homepage content analysis task
+  - [Prompt Writing Guide](prompts/replikate/prompt-writing-guide.md) - Standards for writing prompts
 
 ## Filament 5.x Upgrade
 

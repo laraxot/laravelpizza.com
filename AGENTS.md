@@ -21,6 +21,7 @@ Questo file ora funge da indice rapido. La guida completa e modulare e' stata su
 - [Theme: pub_theme namespace](./.agents/docs/agents-guide/14-theme/pub-theme-namespace-critical-rule.md)
 - [Theme translations critical rule](./.agents/docs/agents-guide/14-theme/theme-translations-critical-rule.md)
 - [Chaos Monkey readiness](./.agents/docs/agents-guide/15-chaos-monkey/chaos-monkey-readiness.md)
+- [Bug Injection Recovery Playbook](./laravel/docs/bug-injection-recovery-playbook.md) - Quando bug/file infetti sono introdotti deliberatamente
 
 ## Nota operativa
 

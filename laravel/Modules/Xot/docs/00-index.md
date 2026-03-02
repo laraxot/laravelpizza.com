@@ -9,34 +9,33 @@
 ## 📚 Documentation Sections
 
 ### Core Architecture
-- [XotBase Classes & Inheritance Patterns](./xotbase-inheritance-patterns.md)
+- [XotBase Classes & Inheritance Patterns](./xotbase-extension.md)
 - [Service Provider Architecture](./service-provider-architecture.md)
 - [Module Dependency Management](./composer-module-dependency-management.md)
 - [Composer Packages Reference](../../../docs/composer-packages-reference.md) - Mappatura pacchetti per modulo
 - [Composer Packages Deep Study (2026-03-02)](./composer-packages-deep-study-2026-03-02.md)
-- [Database Connection Configuration](./database-connection-configuration.md)
+- [Database Connection Configuration](./database-configuration-critical-rules.md)
 
 ### Development Standards
-- [PHPStan Level 10 Compliance Guide](./phpstan-level10-compliance.md)
-- [Code Quality Workflow](./code-quality-workflow.md)
+- [PHPStan Level 10 Compliance Guide](./phpstan-level10.md)
+- [Code Quality Workflow](./code-quality-tools-guide.md)
 - [TDD Laravel Pest Complete Guide](./tdd-laravel-pestd-complete-guide.md) ⭐ NEW
 - [Testing Best Practices](./testing-best-practices.md)
 
 ### Memory & Performance
-- [Filament Memory Optimization](./memory-optimization-filament.md)
-- [Optimize Filament Memory Command](./optimize-filament-memory-command.md)
-- [Performance Analysis Guide](./performance-analysis-guide.md)
+- [Filament Memory Optimization](./memory-optimization.md)
+- [Optimize Filament Memory Command](./memory-optimization-dashboard-fixes.md)
+- [Performance Analysis Guide](./performance-guidelines.md)
 
 ### Error Prevention & Fixes
-- [Common PHPStan Errors & Solutions](./common-phpstan-errors.md)
-- [Model Casting Migration Guide](./model-casting-migration.md)
-- [Git Conflict Resolution Workflow](./git-conflict-resolution-workflow.md)
+- [Common PHPStan Errors & Solutions](./analisi-phpstan.md)
+- [Model Casting Migration Guide](./model-casting-rules.md)
+- [Git Conflict Resolution Workflow](./git-conflicts-resolution-strategy.md)
 - [Chaos Monkey Operability Rules](./chaos-monkey-operability-rules.md)
 
 ### Utilities & Helpers
-- [Safe Cast Actions](./safe-cast-actions.md)
-- [Webmozart Assert Usage](./webmozart-assert-usage.md)
-- [Translation Management](./translation-management.md)
+- [Safe Cast Actions](./safe-casting-actions.md)
+- [Translation Management](./translation-system-standardization.md)
 
 ## 🚀 Quick Start
 
@@ -53,9 +52,9 @@
 
 ## 🔗 Related Modules
 
-- [User Module](../User/docs/00-index.md) - Authentication & Authorization
-- [Activity Module](../Activity/docs/00-index.md) - Event logging & tracking
-- [Tenant Module](../Tenant/docs/00-index.md) - Multi-tenant isolation
+- [User Module](../../User/docs/00-index.md) - Authentication & Authorization
+- [Activity Module](../../Activity/docs/00-index.md) - Event logging & tracking
+- [Tenant Module](../../Tenant/docs/00-index.md) - Multi-tenant isolation
 
 ---
 

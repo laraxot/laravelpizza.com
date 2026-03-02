@@ -32,3 +32,4 @@ Indice centralizzato delle roadmap di moduli e temi.
 - [roadmap-progetto](../roadmap-progetto.md) - Stato globale, priorità, metriche
 - [roadmap-structure](../roadmap-structure.md) - Struttura obbligatoria docs/roadmap/
 - [composer-packages-reference](../composer-packages-reference.md) - Mappatura pacchetti Composer per modulo
+- [bug-injection-recovery-playbook](../bug-injection-recovery-playbook.md) - Recovery da bug/file infetti introdotti deliberatamente
