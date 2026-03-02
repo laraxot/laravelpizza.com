@@ -22,6 +22,10 @@
 - 🔬 **[Testing Strategy](./testing.md)** - Approccio Pest per la verifica della compliance.
 - 🧹 **[PHPMD Analysis](./phpmd-report.txt)** - Risoluzione della complessità nei modelli di privacy.
 
+## 📦 **Pacchetti Composer**
+- [Riferimento completo](../../../docs/composer-packages-reference.md)
+- `statikbe/laravel-cookie-consent` - Banner cookie consent
+
 ## 🔗 **Moduli Correlati**
 - [User](../../user/docs/readme.md) - Soggetti dei consensi.
 - [Activity](../../activity/docs/readme.md) - Log di sistema integrato.
