@@ -7,7 +7,7 @@ Data: 2025-04-23 19:09:56
 - **Namespace principale**: Modules\\Seo
 Modules\\Seo\\Database\\Factories
 Modules\\Seo\\Database\\Seeders
-- **Pacchetto Composer**: laraxot/module_seo_fila3
+- **Pacchetto Composer**: laraxot/module_seo_fila5
 marco sottana
 - **Dipendenze**: 
 - **Totale file PHP**: 9

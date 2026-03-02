@@ -1,10 +1,10 @@
 # Modulo Job
 
 ## Informazioni Generali
-- **Nome**: `laraxot/module_job_fila3`
+- **Nome**: `laraxot/module_job_fila5`
 - **Descrizione**: Modulo per l'esecuzione efficiente di task in background. Permette di delegare processi pesanti come l'invio di email o l'elaborazione dati, migliorando le performance dell'applicazione.
 - **Namespace**: `Modules\Job`
-- **Repository**: https://github.com/laraxot/module_job_fila3.git
+- **Repository**: https://github.com/laraxot/module_job_fila5.git
 
 ## Service Providers
 1. `Modules\Job\Providers\JobServiceProvider`

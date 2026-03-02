@@ -6,6 +6,17 @@ Tema frontend per Laravel Pizza utilizzando Tailwind CSS e Vite.
 
 Il tema Meetup è il tema pubblico per il sito Laravel Pizza, progettato per essere moderno, responsive e performante.
 
+## Runtime Note (2026-03-02)
+
+Per il runtime Laravel del progetto, la pipeline reale è:
+- Folio pages nel tema attivo (`resources/views/pages`)
+- layout `<x-layouts.app>`
+- renderer CMS `<x-page>`
+- blocchi JSON tenant (`config/local/{tenant}/database/content/pages/*.json`)
+- view tema con namespace `pub_theme::`
+
+Questa pipeline ha priorità rispetto ai flussi legacy di prototipazione HTML.
+
 ## 🎨 Caratteristiche
 
 - **Laravel Folio**: File-based routing per pagine pubbliche (NO controllers/routes in web.php/api.php)
@@ -79,7 +90,7 @@ cd /var/www/_bases/base_laravelpizza/laravel/Themes/Meetup
 npm run build
 ```
 
-Gli assets compilati verranno salvati in `resources/html/dist/`.
+Gli assets compilati per il tema vengono generati in `public/` (configurazione attuale), poi copiati nella destinazione deploy con `npm run copy`.
 
 ## 🎨 Palette Colori
 

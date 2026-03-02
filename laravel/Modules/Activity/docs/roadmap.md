@@ -1,29 +1,29 @@
-# Roadmap Modulo Activity
+# Roadmap (Module Activity)
 
-## 🎯 Visione
-Evolvere il sistema di audit trail e logging verso un'analisi proattiva (AI-driven) e una visualizzazione dei dati granulare ed efficiente, mantenendo la conformità nativa a PHPStan Level 10.
+## Current roadmap
 
-## 🏗️ Fasi di Sviluppo
+- [Overview](roadmap/00-overview.md)
+- [Now](roadmap/01-now.md)
+- [Next](roadmap/02-next.md)
+- [Later](roadmap/03-later.md)
+- [Risks and dependencies](roadmap/04-risks.md)
 
-### Fase 1: Qualità e Pulizia (In Corso)
-- [x] PHPStan Level 10 Compliance (Modulo di Riferimento).
-- [ ] Rimozione sistematica dei file duplicati e obsoleti.
-- [ ] Automazione delle GitHub Actions per il controllo qualità.
-- [ ] Consolidamento della guida agli eventi di dominio.
+## Legacy / existing roadmap docs
 
-### Fase 2: Enterprise UI (Pianificato)
-- [ ] Implementazione del **Cluster Observability** per Filament:
-    - Risorsa per gli Activity Logs.
-    - Dashboard di performance.
-    - Pagina di Security Audit.
-
-### Fase 3: Analytics Evolute e AI (Futuro)
-- [ ] **AI Anomaly Detection**: Identificazione automatica di pattern anomali o accessi sospetti.
-- [ ] Integrazione con strumenti di analisi per monitoraggio proattivo delle operazioni critiche.
-
-## ✅ Checklist Qualità
-- [x] PHPStan Level 10.
-- [ ] Copertura Test (Pest) > 90%.
-- [ ] Documentazione centralizzata in `docs/`.
-- [ ] Zero Static Access (dove possibile).
-- [x] Migrazioni activity_log allineate a XotBaseMigration (vedi [standard migrazioni](../Xot/docs/migrations-consolidated.md)).
+- [phpstan-override-fix-roadmap.md](phpstan-override-fix-roadmap.md)
+- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [roadmap-2025.md](roadmap-2025.md)
+- [roadmap-and-issues.md](roadmap-and-issues.md)
+- [roadmap-vision.md](roadmap-vision.md)
+- [roadmap/00-index.md](roadmap/00-index.md)
+- [roadmap/01-current-state.md](roadmap/01-current-state.md)
+- [roadmap/02-goals.md](roadmap/02-goals.md)
+- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
+- [roadmap/04-milestones.md](roadmap/04-milestones.md)
+- [roadmap/05-risks.md](roadmap/05-risks.md)
+- [roadmap/README.md](roadmap/README.md)
+- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
+- [roadmap/phases.md](roadmap/phases.md)
+- [roadmap/quality.md](roadmap/quality.md)
+- [roadmap/vision.md](roadmap/vision.md)
+- [stabilization-roadmap.md](stabilization-roadmap.md)

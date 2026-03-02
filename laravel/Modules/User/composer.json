@@ -1,5 +1,5 @@
 {
-  "name": "laraxot/module_user_fila3",
+  "name": "laraxot/module_user_fila5",
   "description": "User management module for the Laraxot ecosystem: authentication, roles, teams, tenants, and OAuth.",
   "keywords": [
     "laraxot",
@@ -13,7 +13,7 @@
     "passport",
     "oauth"
   ],
-  "homepage": "https://github.com/laraxot/module_user_fila3",
+  "homepage": "https://github.com/laraxot/module_user_fila5",
   "license": "MIT",
   "authors": [
     {

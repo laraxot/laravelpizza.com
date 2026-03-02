@@ -2,12 +2,12 @@
 
 ## Pacchetti Utilizzati
 ### Core
-- [laraxot/module_xot_fila3](../xot/docs/packages.md) - Modulo base per funzionalità comuni
+- [laraxot/module_xot_fila5](../xot/docs/packages.md) - Modulo base per funzionalità comuni
 - [laraxot/module_ui](../ui/docs/packages.md) - Componenti UI e temi
-- [laraxot/module_tenant_fila3](../tenant/docs/packages.md) - Gestione multi-tenant
-- [laraxot/module_xot_fila3](../xot/project_docs/packages.md) - Modulo base per funzionalità comuni
+- [laraxot/module_tenant_fila5](../tenant/docs/packages.md) - Gestione multi-tenant
+- [laraxot/module_xot_fila5](../xot/project_docs/packages.md) - Modulo base per funzionalità comuni
 - [laraxot/module_ui](../ui/project_docs/packages.md) - Componenti UI e temi
-- [laraxot/module_tenant_fila3](../tenant/project_docs/packages.md) - Gestione multi-tenant
+- [laraxot/module_tenant_fila5](../tenant/project_docs/packages.md) - Gestione multi-tenant
 ### Autenticazione
 - [laravel/fortify](https://github.com/laravel/fortify)
   - Autenticazione

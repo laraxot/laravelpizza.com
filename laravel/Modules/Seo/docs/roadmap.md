@@ -1,28 +1,25 @@
-# Roadmap Modulo Seo
+# Roadmap (Module Seo)
 
-## 🎯 Visione
-Garantire la massima visibilità sui motori di ricerca e sui social media tramite un sistema di gestione SEO automatizzato, performante e conforme ai più recenti standard di indicizzazione.
+## Current roadmap
 
-## 🏗️ Fasi di Sviluppo
+- [Overview](roadmap/00-overview.md)
+- [Now](roadmap/01-now.md)
+- [Next](roadmap/02-next.md)
+- [Later](roadmap/03-later.md)
+- [Risks and dependencies](roadmap/04-risks.md)
 
-### Fase 1: Funzionalità Core (In Corso)
-- [x] PHPStan Level 10 Compliance.
-- [x] Sistema di gestione Meta Tags e generazione Sitemap dinamica.
-- [x] Infrastruttura standardizzata per il Social Media Sharing.
-- [x] Pulizia della documentazione e standardizzazione dei nomi.
+## Legacy / existing roadmap docs
 
-### Fase 2: Analytics e Monitoring (Pianificato)
-- [ ] Integrazione avanzata con strumenti di analytics esterni.
-- [ ] Monitoraggio real-time dello stato SEO delle pagine.
-- [ ] Espansione dei test di integrazione per le interazioni social.
-
-### Fase 3: Ottimizzazione AI (Futuro)
-- [ ] **AI Content Optimization**: Suggerimenti in tempo reale per il miglioramento del contenuto in ottica SEO.
-- [ ] Generazione automatica di metadati basata sull'analisi semantica del contenuto.
-- [ ] Report automatizzati di analisi comparativa.
-
-## ✅ Checklist Qualità
-- [x] PHPStan Level 10.
-- [ ] Copertura Test (Pest) > 85%.
-- [ ] Generazione Sitemap scalabile anche per grandi volumi di dati.
-- [ ] Traduzioni SEO multilingue complete.
+- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [roadmap-2025.md](roadmap-2025.md)
+- [roadmap/00-index.md](roadmap/00-index.md)
+- [roadmap/01-current-state.md](roadmap/01-current-state.md)
+- [roadmap/02-goals.md](roadmap/02-goals.md)
+- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
+- [roadmap/04-milestones.md](roadmap/04-milestones.md)
+- [roadmap/05-risks.md](roadmap/05-risks.md)
+- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
+- [roadmap/phases.md](roadmap/phases.md)
+- [roadmap/quality.md](roadmap/quality.md)
+- [roadmap/vision.md](roadmap/vision.md)
+- [seo-optimization-roadmap.md](seo-optimization-roadmap.md)

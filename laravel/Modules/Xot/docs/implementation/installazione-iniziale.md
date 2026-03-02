@@ -70,7 +70,7 @@ Verificare che il file `composer.json` NON contenga la riga `"Modules\\": "Modul
 ### 7. Installazione BashScripts
 
 ```bash
-git subtree add -P bashscripts git@github.com:laraxot/bashscripts_fila3.git dev --squash
+git subtree add -P bashscripts git@github.com:laraxot/bashscripts_fila5.git dev --squash
 ```
 
 ## Correzione Installazione Errata

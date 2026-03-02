@@ -1,7 +1,16 @@
 # Meetup Theme Documentation Index
 
+## Roadmap
+
+- [Roadmap Meetup Theme](roadmap/00-index.md) - Visione, fasi, qualità
+
 ## Core Concepts
 
+- [CMS Theme Runtime Memory](memories/cms-theme-runtime-memory.md) - Operational memory for fast diagnosis of theme/CMS runtime failures.
+- [Chaos Monkey Debug Skills](chaos-monkey-debug-skills.md) - Repeatable debugging skills and incident checklist for randomized breakage.
+- [Chaos Monkey Checklist](chaos-monkey-checklist.md) - Scenario -> symptom -> diagnosis -> fix playbook (theme side).
+- [Chaos Monkey Incident Playbook](chaos-monkey-incident-playbook.md) - Protocollo operativo di recovery per rotture su tema/asset/traduzioni.
+- [Chaos Monkey Theme Recovery Playbook](chaos-monkey-theme-recovery-playbook.md) - Theme-specific recovery recipes for layout, sections, and block rendering.
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup theme
 - [Critical Rules and Patterns](critical-rules-and-patterns.md) - Stack (Folio, Volt, Filament 5, Tailwind)
 - [Volt Automatic Route Parameter Binding](volt-automatic-route-binding.md) - Volt handles route parameters automatically, no manual extraction needed

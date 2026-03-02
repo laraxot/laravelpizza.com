@@ -7,7 +7,7 @@ Data: [DATE] 19:09:55
 - **Namespace principale**: Modules\\Gdpr
 Modules\\Gdpr\\Database\\Factories
 Modules\\Gdpr\\Database\\Seeders
-- **Pacchetto Composer**: laraxot/module_gdpr_fila3
+- **Pacchetto Composer**: laraxot/module_gdpr_fila5
 Marco Sottana
 - **Dipendenze**: statikbe/laravel-cookie-consent * repositories type path url ../Xot type path url ../Tenant type path url ../UI scripts post-autoload-dump1 @php artisan vendor:publish --provider='Statikbe\\CookieConsent\\CookieConsentServiceProvider' --tag='cookie-public'
 - **Totale file PHP**: 68

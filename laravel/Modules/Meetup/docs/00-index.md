@@ -3,12 +3,14 @@
 ## Core Concepts
 
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup module
+- [Chaos Monkey Readiness](chaos-monkey-readiness.md) - Diagnosi e recovery rapida su rotture randomizzate del modulo.
 - [Volt Automatic Route Parameter Binding](volt-automatic-route-binding.md) - Volt handles route parameters automatically, no manual extraction needed
 - [Project Purpose](project-purpose.md) - Why this module exists
 - [Business Logic](business-logic.md) - Core business requirements
 - [Dashboard Architecture](dashboard-architecture.md) - Architecture of the Meetup dashboard
 - [Architecture Overview](architecture-overview.md) - Module architecture patterns
 - [Folio + Volt Best Practices](folio-volt-best-practices.md) - Frontend development patterns
+- [Chaos Monkey Event Rendering Playbook](chaos-monkey-event-rendering-playbook.md) - Incident recovery guide for events list/detail rendering path.
 
 ## Implementation Guides
 

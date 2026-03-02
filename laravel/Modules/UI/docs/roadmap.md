@@ -1,32 +1,34 @@
-# UI Module Roadmap
+# Roadmap (Module UI)
 
-"L'interfaccia è l'essenza: rendere l'esperienza indimenticabile."
+## Current roadmap
 
-## 🎯 Visione
-Creare un ecosistema UI "Headless-first" che permetta di cambiare radicalmente il look-and-feel di un tenant tramite semplici configurazioni JSON, sfruttando la potenza di Tailwind CSS v4 e le animazioni native del browser.
+- [Overview](roadmap/00-overview.md)
+- [Now](roadmap/01-now.md)
+- [Next](roadmap/02-next.md)
+- [Later](roadmap/03-later.md)
+- [Risks and dependencies](roadmap/04-risks.md)
 
-## 🏗️ Fasi di Sviluppo
+## Legacy / existing roadmap docs
 
-### Fase 1: Modernization (In Progress)
-- [x] PHPStan Level 10 Compliance.
-- [ ] Completamento migrazione a **Tailwind CSS v4**.
-- [ ] Implementazione di **Flux UI** per i componenti interattivi di base.
-- [ ] Rimozione definitiva dei 280+ file obsoleti.
-
-### Fase 2: Component Studio (Planned)
-- [ ] Creazione di una "Gallery" live per testare i componenti UI isolati.
-- [ ] Sistema di **Design Tokens** centralizzato esportabile in vari formati.
-- [ ] Nuovi componenti avanzati per **Data Visualization** (integrazione Chart).
-
-### Fase 3: AI Design (Future)
-- [ ] **AI Theme Generator**: Generazione automatica di palette colori accessibili da un'immagine di brand.
-- [ ] **Dynamic Layout Optimization**: L'AI suggerisce layout migliori in base al tipo di contenuto visualizzato.
-- [ ] **Predictive Prefetching**: Caricamento anticipato delle risorse UI in base ai pattern di navigazione.
-
-## ✅ Checklist Qualità
-- [x] PHPStan Level 10.
-- [ ] Accessibilità WCAG 2.1 (AA) verificata su tutti i componenti core.
-- [ ] Performance Lighthouse > 90 su pagine UI intensive.
-
----
-**Ultimo aggiornamento**: Febbraio 2026
+- [phpstan-errors-roadmap.md](phpstan-errors-roadmap.md)
+- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [roadmap-.md](roadmap-.md)
+- [roadmap-and-issues.md](roadmap-and-issues.md)
+- [roadmap-conflict.md](roadmap-conflict.md)
+- [roadmap/00-index.md](roadmap/00-index.md)
+- [roadmap/01-current-state.md](roadmap/01-current-state.md)
+- [roadmap/02-goals.md](roadmap/02-goals.md)
+- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
+- [roadmap/04-milestones.md](roadmap/04-milestones.md)
+- [roadmap/05-risks.md](roadmap/05-risks.md)
+- [roadmap/bottlenecks.md](roadmap/bottlenecks.md)
+- [roadmap/component-system.md](roadmap/component-system.md)
+- [roadmap/form-component.md](roadmap/form-component.md)
+- [roadmap/form-components.md](roadmap/form-components.md)
+- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
+- [roadmap/phases.md](roadmap/phases.md)
+- [roadmap/q4-roadmap.md](roadmap/q4-roadmap.md)
+- [roadmap/quality.md](roadmap/quality.md)
+- [roadmap/roadmap.md](roadmap/roadmap.md)
+- [roadmap/theme-system.md](roadmap/theme-system.md)
+- [roadmap/vision.md](roadmap/vision.md)

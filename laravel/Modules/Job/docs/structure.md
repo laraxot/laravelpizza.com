@@ -50,7 +50,7 @@ Data: [DATE] 19:09:55
 - **Namespaces secondari**:
   - Modules\\Job\\Database\\Factories
   - Modules\\Job\\Database\\Seeders
-- **Pacchetto Composer**: laraxot/module_job_fila3
+- **Pacchetto Composer**: laraxot/module_job_fila5
 - **Autore**: Marco Sottana
 - **Dipendenze**:
   - repositories_comment

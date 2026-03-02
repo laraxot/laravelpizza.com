@@ -1,32 +1,26 @@
-# Roadmap Tema Meetup
+# Roadmap (Theme Meetup)
 
-## 🎯 Visione
-Fornire un'esperienza frontend moderna, veloce e visivamente accattivante per la community dei meetup, ottimizzata per la SEO e costruita su tecnologie all'avanguardia come Folio e Volt.
+## Current roadmap
 
-## 🏗️ Fasi di Sviluppo
+- [Overview](roadmap/00-overview.md)
+- [Now](roadmap/01-now.md)
+- [Next](roadmap/02-next.md)
+- [Later](roadmap/03-later.md)
+- [Risks and dependencies](roadmap/04-risks.md)
 
-### Fase 1: Struttura e Design (In Corso)
-- [x] Definizione del layout base e dei componenti UI core.
-- [x] Integrazione dei blocchi CMS per la personalizzazione dinamica.
-- [x] Ottimizzazione per dispositivi mobile (Responsive first).
-- [ ] Pulizia della documentazione e allineamento agli standard di progetto.
+## Legacy / existing roadmap docs
 
-### Fase 2: Interattività e Funzionalità (Pianificato)
-- [ ] Implementazione dei componenti Volt per le interazioni real-time (registrazioni, filtri).
-- [ ] Miglioramento delle animazioni e delle transizioni tra le pagine.
-- [ ] Sistema di tematizzazione (Dark/Light mode) avanzato.
-
-### Fase 3: Performance e SEO (Pianificato)
-- [ ] Ottimizzazione estrema del Core Web Vitals.
-- [ ] Generazione automatica di Open Graph images dinamiche per gli eventi.
-- [ ] Implementazione di strategie di caching aggressive per il frontend.
-
-### Fase 4: Ottimizzazione AI (Futuro)
-- [ ] **AI-Driven Personalization**: Personalizzazione del layout basata sulle preferenze utente.
-- [ ] Test A/B automatizzati per l'ottimizzazione del tasso di conversione (registrazioni).
-
-## ✅ Checklist Qualità
-- [ ] Performance score Lighthouse > 90 in tutte le categorie.
-- [ ] Validità W3C e accessibilità di base garantita.
-- [ ] Piena compatibilità con le configurazioni JSON provenienti dal modulo CMS.
-- [ ] Documentazione dei componenti del tema in `docs/`.
+- [register-improvement-roadmap.md](register-improvement-roadmap.md)
+- [roadmap-old-a.md](roadmap-old-a.md)
+- [roadmap-old-b.md](roadmap-old-b.md)
+- [roadmap/00-index.md](roadmap/00-index.md)
+- [roadmap/01-current-state.md](roadmap/01-current-state.md)
+- [roadmap/02-goals.md](roadmap/02-goals.md)
+- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
+- [roadmap/04-milestones.md](roadmap/04-milestones.md)
+- [roadmap/05-risks.md](roadmap/05-risks.md)
+- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
+- [roadmap/phases.md](roadmap/phases.md)
+- [roadmap/quality.md](roadmap/quality.md)
+- [roadmap/vision.md](roadmap/vision.md)
+- [theme-improvement-roadmap.md](theme-improvement-roadmap.md)

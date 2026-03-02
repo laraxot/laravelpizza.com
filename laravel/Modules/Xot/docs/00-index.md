@@ -2,6 +2,10 @@
 
 > **Core Framework Module** - Provides base classes and shared functionality for all modules
 
+## Roadmap
+
+- [Roadmap Xot](roadmap/00-index.md) - Visione, fasi, qualità
+
 ## 📚 Documentation Sections
 
 ### Core Architecture
@@ -25,6 +29,7 @@
 - [Common PHPStan Errors & Solutions](./common-phpstan-errors.md)
 - [Model Casting Migration Guide](./model-casting-migration.md)
 - [Git Conflict Resolution Workflow](./git-conflict-resolution-workflow.md)
+- [Chaos Monkey Operability Rules](./chaos-monkey-operability-rules.md)
 
 ### Utilities & Helpers
 - [Safe Cast Actions](./safe-cast-actions.md)
@@ -55,4 +60,4 @@
 **Module Version**: 1.0  
 **Laravel Version**: 12.x  
 **PHP Version**: 8.2+  
-**Last Updated**: 2026-02-23
+**Last Updated**: 2026-03-02

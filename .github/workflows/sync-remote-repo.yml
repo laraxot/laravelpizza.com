@@ -39,7 +39,7 @@ jobs:
       - name: Checkout bashscripts (private repo, develop)
         uses: actions/checkout@v4
         with:
-          repository: laraxot/bashscripts_fila4
+          repository: laraxot/bashscripts_fila5
           ref: develop
           token: ${{ secrets.BASHSCRIPTS_TOKEN }}
           path: bashscripts

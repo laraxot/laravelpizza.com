@@ -1,4 +1,4 @@
-# Configurazione MCP per base_ptvx_fila4_mono
+# Configurazione MCP per base_ptvx_fila5_mono
 
 **Data Creazione**: [DATE]  
 **Status**: ✅ Configurazione Completa e Ottimizzata
@@ -7,7 +7,7 @@
 
 ## 🎯 Scopo del Documento
 
-Questo documento descrive la configurazione MCP ottimizzata per il progetto **base_ptvx_fila4_mono**, risultato di analisi approfondita delle necessità del progetto seguendo la metodologia Super Mucca.
+Questo documento descrive la configurazione MCP ottimizzata per il progetto **base_ptvx_fila5_mono**, risultato di analisi approfondita delle necessità del progetto seguendo la metodologia Super Mucca.
 
 ---
 
@@ -32,9 +32,9 @@ File: `laravel/.mcp.json`
             "args": [
                 "-y",
                 "@modelcontextprotocol/server-filesystem",
-                "/var/www/_bases/base_ptvx_fila4_mono/laravel",
-                "/var/www/_bases/base_ptvx_fila4_mono/docs",
-                "/var/www/_bases/base_ptvx_fila4_mono/bashscripts"
+                "/var/www/_bases/base_ptvx_fila5_mono/laravel",
+                "/var/www/_bases/base_ptvx_fila5_mono/docs",
+                "/var/www/_bases/base_ptvx_fila5_mono/bashscripts"
             ]
         },
         "memory": {
@@ -85,7 +85,7 @@ File: `laravel/.mcp.json`
                 "-y",
                 "@modelcontextprotocol/server-git",
                 "--repository",
-                "/var/www/_bases/base_ptvx_fila4_mono"
+                "/var/www/_bases/base_ptvx_fila5_mono"
             ]
         }
     }
@@ -104,9 +104,9 @@ File: `laravel/.mcp.json`
 ### 2. filesystem
 - **Scopo**: Gestione file e directory del progetto
 - **Path configurati**:
-  - `/var/www/_bases/base_ptvx_fila4_mono/laravel` - Codice Laravel
-  - `/var/www/_bases/base_ptvx_fila4_mono/docs` - Documentazione
-  - `/var/www/_bases/base_ptvx_fila4_mono/bashscripts` - Script e tool
+  - `/var/www/_bases/base_ptvx_fila5_mono/laravel` - Codice Laravel
+  - `/var/www/_bases/base_ptvx_fila5_mono/docs` - Documentazione
+  - `/var/www/_bases/base_ptvx_fila5_mono/bashscripts` - Script e tool
 - **Uso**: Fallback quando file sono bloccati o non accessibili con tool standard
 
 ### 3. memory
@@ -132,7 +132,7 @@ File: `laravel/.mcp.json`
 
 ### 8. git
 - **Scopo**: Operazioni Git sul repository
-- **Path**: `/var/www/_bases/base_ptvx_fila4_mono`
+- **Path**: `/var/www/_bases/base_ptvx_fila5_mono`
 - **Uso**: Operazioni Git, analisi commit, gestione branch
 
 ---

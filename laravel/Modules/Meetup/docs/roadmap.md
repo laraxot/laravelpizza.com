@@ -1,36 +1,29 @@
-# Roadmap Modulo Meetup
+# Roadmap (Module Meetup)
 
-## 🎯 Visione
-Creare una piattaforma d'eccellenza per la gestione di eventi e community, automatizzando i processi di creazione, registrazione e analisi tramite pattern moderni, scalabili e orientati alle performance.
+## Current roadmap
 
-## 🏗️ Fasi di Sviluppo
+- [Overview](roadmap/00-overview.md)
+- [Now](roadmap/01-now.md)
+- [Next](roadmap/02-next.md)
+- [Later](roadmap/03-later.md)
+- [Risks and dependencies](roadmap/04-risks.md)
 
-### Fase 1: Gestione Eventi Core (Completata)
-- [x] PHPStan Level 10 Compliance.
-- [x] CRUD eventi con integrazione Filament Resource.
-- [x] Gestione partecipanti, location e metadati.
-- [x] Integrazione widget per statistiche in dashboard.
-- [x] Refactoring delle pagine pubbliche con Folio/Volt e SEO slug-based.
+## Legacy / existing roadmap docs
 
-### Fase 2: Registrazione e Calendarizzazione (In Corso)
-- [ ] Ripristino del calendario eventi compatibile con Filament v4.
-- [ ] Implementazione del sistema di registrazione tramite **Actions** (Spatie Queueable).
-- [ ] Gestione Waitlist e limiti di partecipazione.
-- [ ] Automazione delle email di conferma e promemoria.
-
-### Fase 3: Analytics e Engagement (Pianificato)
-- [ ] Dashboard analitica avanzata per le metriche degli eventi.
-- [ ] Sistema di feedback post-evento automatizzato.
-- [ ] Integrazione di strumenti per analytics in tempo reale.
-
-### Fase 4: Ottimizzazione e AI (Futuro)
-- [ ] **AI-Powered Event Suggestions**: Raccomandazioni eventi basate sugli interessi degli utenti.
-- [ ] Ottimizzazione dei percorsi di registrazione tramite analisi comportamentale.
-- [ ] Generazione automatica di abstract per gli eventi tramite AI.
-
-## ✅ Checklist Qualità
-- [x] PHPStan Level 10.
-- [ ] Utilizzo rigoroso di Actions per la business logic (NO Services).
-- [ ] Copertura Test (Pest) > 90%.
-- [ ] Documentazione specifica in `docs/` conforme agli standard Laraxot.
-- [x] Migrazioni UUID e schema allineati a XotBaseMigration (vedi [standard migrazioni](../Xot/docs/migrations-consolidated.md)).
+- [complete-roadmap.md](complete-roadmap.md)
+- [event-management-roadmap.md](event-management-roadmap.md)
+- [implementation-roadmap-final.md](implementation-roadmap-final.md)
+- [implementation-roadmap.md](implementation-roadmap.md)
+- [phpstan-errors-roadmap.md](phpstan-errors-roadmap.md)
+- [roadmap-old-a.md](roadmap-old-a.md)
+- [roadmap-old-b.md](roadmap-old-b.md)
+- [roadmap/00-index.md](roadmap/00-index.md)
+- [roadmap/01-current-state.md](roadmap/01-current-state.md)
+- [roadmap/02-goals.md](roadmap/02-goals.md)
+- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
+- [roadmap/04-milestones.md](roadmap/04-milestones.md)
+- [roadmap/05-risks.md](roadmap/05-risks.md)
+- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
+- [roadmap/phases.md](roadmap/phases.md)
+- [roadmap/quality.md](roadmap/quality.md)
+- [roadmap/vision.md](roadmap/vision.md)

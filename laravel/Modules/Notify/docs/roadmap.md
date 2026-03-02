@@ -1,36 +1,35 @@
-# Notify Module Roadmap
+# Roadmap (Module Notify)
 
-## Visione
+## Current roadmap
 
-Modulo per il sistema di notifiche: email, in-app, SMS, push, template, scheduling e integrazione con servizi esterni (SendAppointmentNotificationAction, MailTemplateVersion).
+- [Overview](roadmap/00-overview.md)
+- [Now](roadmap/01-now.md)
+- [Next](roadmap/02-next.md)
+- [Later](roadmap/03-later.md)
+- [Risks and dependencies](roadmap/04-risks.md)
 
-## Fasi di Sviluppo
+## Legacy / existing roadmap docs
 
-### Fase 1: Stabilizzazione (In Progress)
-- [x] PHPStan Level 9+ Compliance
-- [ ] Upgrade PHPStan Level 10
-- [ ] Allineamento Filament v5
-- [ ] Test Coverage improvement
-
-### Fase 2: Canali Notifica (Planned)
-- [ ] Email notifications
-- [ ] In-app notifications
-- [ ] Template e MailLayout
-- [ ] Integrazione Pdnd/Servizi esterni
-
-### Fase 3: Integrazione (Future)
-- [ ] SMS/Push (se richiesto)
-- [ ] Analytics delivery
-- [ ] Traduzioni it/en complete
-- [ ] Documentazione completa
-
-## Checklist Qualità
-
-- [x] PHPStan Level 9
-- [ ] PHPStan Level 10
-- [ ] Test coverage
-- [ ] Documentazione in docs/
-
----
-
-**Ultimo aggiornamento**: Febbraio 2026
+- [improvements-roadmap.md](improvements-roadmap.md)
+- [phpstan-error-resolution-roadmap.md](phpstan-error-resolution-roadmap.md)
+- [phpstan-errors-resolution-roadmap.md](phpstan-errors-resolution-roadmap.md)
+- [phpstan-errors-roadmap.md](phpstan-errors-roadmap.md)
+- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [roadmap-.md](roadmap-.md)
+- [roadmap-1.md](roadmap-1.md)
+- [roadmap-2025.md](roadmap-2025.md)
+- [roadmap-and-issues.md](roadmap-and-issues.md)
+- [roadmap-ands.md](roadmap-ands.md)
+- [roadmap-conflict.md](roadmap-conflict.md)
+- [roadmap-root-symlink.md](roadmap-root-symlink.md)
+- [roadmap/00-index.md](roadmap/00-index.md)
+- [roadmap/01-current-state.md](roadmap/01-current-state.md)
+- [roadmap/02-goals.md](roadmap/02-goals.md)
+- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
+- [roadmap/04-milestones.md](roadmap/04-milestones.md)
+- [roadmap/05-risks.md](roadmap/05-risks.md)
+- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
+- [roadmap/phases.md](roadmap/phases.md)
+- [roadmap/quality.md](roadmap/quality.md)
+- [roadmap/vision.md](roadmap/vision.md)
+- [template-improvement-roadmap.md](template-improvement-roadmap.md)

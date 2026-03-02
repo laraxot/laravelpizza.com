@@ -159,6 +159,6 @@ Il sistema include diversi tipi di blocchi predefiniti:
 
 ## Riferimenti
 
-- [Documentazione BlockData](/var/www/html/_bases/base_predict_fila3_mono/laravel/modules/cms/docs/data/blockdata.md)
-- [Documentazione Page Component](/var/www/html/_bases/base_predict_fila3_mono/laravel/modules/cms/docs/components/page.md)
-- [Regole del Sistema di Rendering](/var/www/html/_bases/base_predict_fila3_mono/laravel/.windsurf/rules/block-rendering-system.mdc)
+- [Documentazione BlockData](/var/www/html/_bases/base_predict_fila5_mono/laravel/modules/cms/docs/data/blockdata.md)
+- [Documentazione Page Component](/var/www/html/_bases/base_predict_fila5_mono/laravel/modules/cms/docs/components/page.md)
+- [Regole del Sistema di Rendering](/var/www/html/_bases/base_predict_fila5_mono/laravel/.windsurf/rules/block-rendering-system.mdc)

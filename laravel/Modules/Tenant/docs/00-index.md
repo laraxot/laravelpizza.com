@@ -23,6 +23,7 @@
 - ✅ **[PHPStan Analysis](./phpstan-level10-fixes.md)** - Report di conformità Level 10.
 - 🔬 **[Testing Guidelines](./testing.md)** - Verifica dell'isolamento dei dati tra tenant.
 - 🧹 **[PHPMD Fixes](./cyclomatic-complexity-report.md)** - Analisi della complessità della logica di routing.
+- 🐒 **[Chaos Monkey Tenant Isolation Checklist](./chaos-monkey-tenant-isolation-checklist.md)** - Checklist operativa per fault su multi-tenant/database.
 
 ## 🧹 **Manutenzione**
 - 🗑️ **[Cleanup Plan](./duplicate-files-to-remove.md)** - Eliminazione dei file duplicati e obsoleti.

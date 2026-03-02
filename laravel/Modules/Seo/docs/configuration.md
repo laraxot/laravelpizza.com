@@ -8,9 +8,9 @@ Il modulo SEO fornisce funzionalità di ottimizzazione per i motori di ricerca, 
 ### 1. Composer.json
 ```json
 {
-    "name": "laraxot/module_seo_fila3",
+    "name": "laraxot/module_seo_fila5",
     "description": "Modulo SEO per l'ottimizzazione dei contenuti",
-    "homepage": "https://github.com/laraxot/module_seo_fila3",
+    "homepage": "https://github.com/laraxot/module_seo_fila5",
     "license": "MIT"
 }
 ```

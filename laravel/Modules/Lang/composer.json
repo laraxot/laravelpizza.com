@@ -1,5 +1,5 @@
 {
-    "name": "laraxot/module_lang_fila3",
+    "name": "laraxot/module_lang_fila5",
     "description": "Internationalization and localization module for the Laraxot ecosystem: translations, languages, and locale management.",
     "keywords": [
         "laraxot",
@@ -13,7 +13,7 @@
         "localization"
     ],
     "license": "MIT",
-    "homepage": "https://github.com/laraxot/module_lang_fila3.git",
+    "homepage": "https://github.com/laraxot/module_lang_fila5.git",
     "authors": [
         {
             "name": "Marco Sottana",

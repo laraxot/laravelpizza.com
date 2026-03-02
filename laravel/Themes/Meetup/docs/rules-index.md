@@ -66,9 +66,25 @@
     - Filosofia Migrazioni
     - Estensioni Filament
 
-11. **[Regole Modulo Meetup](../../modules/meetup/docs/critical-rules-consolidated.md)**
+12. **[Regole Modulo Meetup](../../modules/meetup/docs/critical-rules-consolidated.md)**
     - Architettura Frontoffice
     - Folio + Volt pattern
+
+13. **[CMS Theme Runtime Memory](./memories/cms-theme-runtime-memory.md)**
+   - Verità runtime persistenti per debug rapido
+   - Breakpoint ad alta probabilità sotto chaos
+
+14. **[Chaos Monkey Debug Skills](./chaos-monkey-debug-skills.md)**
+   - Skill operative per incident response su template/theme/CMS
+   - Checklist di recovery in 5 punti
+
+15. **[Chaos Monkey Incident Playbook](./chaos-monkey-incident-playbook.md)**
+   - Protocollo operativo ridotto per recovery rapido
+   - Guardrail per non introdurre regressioni durante fix urgenti
+
+16. **[Chaos Monkey Theme Recovery Playbook](./chaos-monkey-theme-recovery-playbook.md)**
+   - Runbook operativo per guasti su layout, section e blocchi tema
+   - Procedure di ripristino rapido senza rompere la pipeline CMS
 
 ## 🔄 Aggiornamenti Recenti
 
@@ -78,3 +94,5 @@
 - Consolidata Vite Configuration
 - Consolidata Metatags Component
 - Aggiunti Filament 5 theme reference e Grafica vs laravelpizza.com (MCP)
+- Aggiunto Chaos Monkey Incident Playbook
+- Aggiunto Chaos Monkey Theme Recovery Playbook

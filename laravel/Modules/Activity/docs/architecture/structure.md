@@ -10,7 +10,7 @@ Modules\\Activity\\Database\\Seeders
 Workbench\\App
 Workbench\\Database\\Factories
 Workbench\\Database\\Seeders
-- **Pacchetto Composer**: laraxot/module_activity_fila3
+- **Pacchetto Composer**: laraxot/module_activity_fila5
 Marco Sottana
 - **Dipendenze**: spatie/laravel-activitylog * spatie/laravel-event-sourcing * repositories type path url ../Xot type path url ../Tenant type path url ../UI scripts post-autoload-dump
 - **Totale file PHP**: 55

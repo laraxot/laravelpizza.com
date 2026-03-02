@@ -477,8 +477,8 @@ Update CLAUDE.md with:
 
 ## Related Files
 
-- **PHPStan Config**: `/var/www/_bases/base_quaeris_fila4_mono/laravel/phpstan.neon`
-- **Project Standards**: `/var/www/_bases/base_quaeris_fila4_mono/laravel/CLAUDE.md`
+- **PHPStan Config**: `/var/www/_bases/base_quaeris_fila5_mono/laravel/phpstan.neon`
+- **Project Standards**: `/var/www/_bases/base_quaeris_fila5_mono/laravel/CLAUDE.md`
 - **Base Model Architecture**: `Modules/Xot/docs/models/MODEL_ARCHITECTURE.md`
 
 ---

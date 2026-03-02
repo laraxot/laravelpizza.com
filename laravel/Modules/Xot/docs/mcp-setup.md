@@ -43,9 +43,9 @@ The MCP system is configured in the `mcp.json` file located in the Laravel root 
         "-y",
         "@modelcontextprotocol/server-filesystem",
 <<<<<<< .merge_file_PN5oKo
-        "/var/www/_bases/base_healthcare_app_fila4_mono/laravel"
+        "/var/www/_bases/base_healthcare_app_fila5_mono/laravel"
 =======
-        "/var/www/_bases/base_ptvx_fila4_mono/laravel"
+        "/var/www/_bases/base_ptvx_fila5_mono/laravel"
 >>>>>>> .merge_file_Y0j5yE
       ]
     },

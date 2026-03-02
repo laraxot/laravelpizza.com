@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configurazione
-MODULE_ROOT="/var/www/html/_bases/base_predict_fila3_mono/laravel/Modules"
+MODULE_ROOT="/var/www/html/_bases/base_predict_fila5_mono/laravel/Modules"
 LOG_FILE="./path_fix.log"
 
 # Logging

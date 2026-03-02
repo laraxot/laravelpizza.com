@@ -155,7 +155,7 @@ I risultati completi sono disponibili nella cartella [docs/phpstan](phpstan/).
 
 ### Obiettivi di Qualità
 
-Secondo le "Regole Windsurf per base_predict_fila3_mono", gli obiettivi per l'analisi PHPStan sono:
+Secondo le "Regole Windsurf per base_predict_fila5_mono", gli obiettivi per l'analisi PHPStan sono:
 
 - Iniziare dal livello 1 per i nuovi moduli
 - Assicurarsi che tutto il codice passi almeno il livello 5

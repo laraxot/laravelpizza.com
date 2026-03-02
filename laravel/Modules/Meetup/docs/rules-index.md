@@ -29,14 +29,23 @@
    - Repository analizzati
    - Best practices
 
+5. **[Chaos Monkey Readiness](./chaos-monkey-readiness.md)**
+   - Failure modes prioritari
+   - Checklist diagnostica
+   - Recovery pattern
+
+6. **[Chaos Monkey Event Rendering Playbook](./chaos-monkey-event-rendering-playbook.md)**
+   - Recovery path per rendering eventi (`events`, `events.view`, `toBlockArray`)
+   - Verifiche rapide su URL localizzati e fallback slug
+
 ### Riferimenti Cross-Module
 
-5. **[Regole Xot](../../xot/docs/critical-rules-consolidated.md)**
+7. **[Regole Xot](../../xot/docs/critical-rules-consolidated.md)**
    - Regole generali Laraxot
    - Filosofia Migrazioni
    - Estensioni Filament
 
-6. **[Regole Tema Meetup](../../../themes/meetup/docs/critical-rules-consolidated.md)**
+8. **[Regole Tema Meetup](../../../themes/meetup/docs/critical-rules-consolidated.md)**
    - Frontend Asset Management
    - Vite Configuration
    - Metatags Component
@@ -46,3 +55,5 @@
 - **[DATE]**: Aggiunta regola Frontend Asset Management
 - **[DATE]**: Aggiunta regola Componenti Blade Anonimi
 - **[DATE]**: Consolidata Architettura Frontoffice
+- **2026-03-02**: Aggiunta Chaos Monkey Readiness
+- **2026-03-02**: Aggiunto Chaos Monkey Event Rendering Playbook

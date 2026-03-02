@@ -108,7 +108,7 @@
 
 ## DOCUMENTATION
 - Always consult docs folders before taking action
-- Never include specific absolute paths (e.g., base_*_fila3)
+- Never include specific absolute paths (e.g., base_*_fila5)
 - Document model relationships and field purposes
 - Add PHPDoc blocks to all classes and methods
 

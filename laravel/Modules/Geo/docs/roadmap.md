@@ -1,32 +1,33 @@
-# Roadmap Modulo Geo
+# Roadmap (Module Geo)
 
-## 🎯 Visione
-Gestire tutta la geolocalizzazione del sistema, inclusi indirizzi, coordinate, mappe interattive e servizi di geocoding, fornendo un'interfaccia agnostica verso diversi provider cartografici.
+## Current roadmap
 
-## 🏗️ Fasi di Sviluppo
+- [Overview](roadmap/00-overview.md)
+- [Now](roadmap/01-now.md)
+- [Next](roadmap/02-next.md)
+- [Later](roadmap/03-later.md)
+- [Risks and dependencies](roadmap/04-risks.md)
 
-### Fase 1: Core Geo Services (Completata)
-- [x] Modelli base (Location, Address) e gestione coordinate.
-- [x] Servizio di geocoding e integrazione mappe di base.
-- [x] Correzioni PHPStan Level 10.
+## Legacy / existing roadmap docs
 
-### Fase 2: Advanced Features (Completata)
-- [x] Sistema di Geofencing e integrazione routing.
-- [x] Supporto a più provider cartografici (Google, OpenStreetMap, ecc.).
-- [x] Sistema di caching per le richieste geografiche.
-
-### Fase 3: Analytics e Ottimizzazione (In Corso)
-- [ ] Implementazione di analytics geografiche per reporting.
-- [ ] Ottimizzazione delle performance delle query GIS.
-- [ ] Supporto real-time per aggiornamenti di posizione.
-
-### Fase 4: AI e Enterprise (Pianificato)
-- [ ] **AI-Powered Routing**: Suggerimenti predittivi basati sui dati storici.
-- [ ] Stili di mappa customizzabili per Tenant.
-- [ ] Supporto multitenant avanzato per isolamento dati geografici.
-
-## ✅ Checklist Qualità
-- [x] PHPStan Level 10.
-- [ ] Performance di risposta per geocoding < 200ms (con cache).
-- [ ] Supporto GIS completo nel database.
-- [ ] Traduzioni delle entità geografiche.
+- [phpstan-bing-maps-action-fix-roadmap.md](phpstan-bing-maps-action-fix-roadmap.md)
+- [phpstan-error-resolution-roadmap.md](phpstan-error-resolution-roadmap.md)
+- [phpstan-errors-resolution-roadmap.md](phpstan-errors-resolution-roadmap.md)
+- [phpstan-errors-roadmap-2026-01-12.md](phpstan-errors-roadmap-2026-01-12.md)
+- [phpstan-errors-roadmap.md](phpstan-errors-roadmap.md)
+- [phpstan-fixes-roadmap.md](phpstan-fixes-roadmap.md)
+- [phpstan-roadmap-geo.md](phpstan-roadmap-geo.md)
+- [phpstan-roadmap.md](phpstan-roadmap.md)
+- [roadmap-and-issues.md](roadmap-and-issues.md)
+- [roadmap-vision.md](roadmap-vision.md)
+- [roadmap/00-index.md](roadmap/00-index.md)
+- [roadmap/01-current-state.md](roadmap/01-current-state.md)
+- [roadmap/02-goals.md](roadmap/02-goals.md)
+- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
+- [roadmap/04-milestones.md](roadmap/04-milestones.md)
+- [roadmap/05-risks.md](roadmap/05-risks.md)
+- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
+- [roadmap/phases.md](roadmap/phases.md)
+- [roadmap/quality.md](roadmap/quality.md)
+- [roadmap/vision.md](roadmap/vision.md)
+- [stabilization-roadmap.md](stabilization-roadmap.md)

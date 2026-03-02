@@ -1,5 +1,5 @@
 {
-    "name": "laraxot/module_activity_fila3",
+    "name": "laraxot/module_activity_fila5",
     "description": "Activity logging and event sourcing module for the Laraxot ecosystem: audit trail, user actions tracking, and CQRS event store.",
     "keywords": [
         "laraxot",
@@ -12,7 +12,7 @@
         "cqrs",
         "spatie-activitylog"
     ],
-    "homepage": "https://github.com/laraxot/module_activity_fila3",
+    "homepage": "https://github.com/laraxot/module_activity_fila5",
     "license": "MIT",
     "authors": [
         {

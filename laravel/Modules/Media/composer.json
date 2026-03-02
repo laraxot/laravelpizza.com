@@ -1,5 +1,5 @@
 {
-  "name": "laraxot/module_media_fila3",
+  "name": "laraxot/module_media_fila5",
   "description": "Media management module for the Laraxot ecosystem: images, videos, FFmpeg, and Intervention Image.",
   "keywords": [
     "laraxot",
@@ -11,7 +11,7 @@
     "videos",
     "ffmpeg"
   ],
-  "homepage": "https://github.com/laraxot/module_media_fila3.git",
+  "homepage": "https://github.com/laraxot/module_media_fila5.git",
   "license": "MIT",
   "authors": [
     {

@@ -1,10 +1,10 @@
 # Modulo Tenant
 
 ## Informazioni Generali
-- **Nome**: `laraxot/module_tenant_fila3`
+- **Nome**: `laraxot/module_tenant_fila5`
 - **Descrizione**: Modulo per l'architettura multi-tenant che permette a una singola istanza dell'applicazione di servire più tenant
 - **Namespace**: `Modules\Tenant`
-- **Repository**: https://github.com/laraxot/module_tenant_fila3
+- **Repository**: https://github.com/laraxot/module_tenant_fila5
 
 ## Service Providers
 1. `Modules\Tenant\Providers\TenantServiceProvider`
@@ -121,10 +121,10 @@ composer format        # Formatta il codice
 # Modulo Tenant
 
 ## Informazioni Generali
-- **Nome**: `laraxot/module_tenant_fila3`
+- **Nome**: `laraxot/module_tenant_fila5`
 - **Descrizione**: Modulo per l'architettura multi-tenant che permette a una singola istanza dell'applicazione di servire più tenant
 - **Namespace**: `Modules\Tenant`
-- **Repository**: https://github.com/laraxot/module_tenant_fila3
+- **Repository**: https://github.com/laraxot/module_tenant_fila5
 
 ## Service Providers
 1. `Modules\Tenant\Providers\TenantServiceProvider`

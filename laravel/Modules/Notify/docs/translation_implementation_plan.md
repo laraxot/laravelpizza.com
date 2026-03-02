@@ -99,13 +99,13 @@ rm -f /var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/send_a_w_s_ema
 rm -f /var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/send_whats_app.php
 rm -f /var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/send_netfun_s_m_s.php
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/.php
+rm -f /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify/lang/it/.php
 
 # Rimozione dei file con nomi errati dopo aver verificato che esistano le versioni corrette
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_s_m_s.php
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_a_w_s_email.php
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_whats_app.php
-rm -f /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/send_netfun_s_m_s.php
+rm -f /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify/lang/it/send_s_m_s.php
+rm -f /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify/lang/it/send_a_w_s_email.php
+rm -f /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify/lang/it/send_whats_app.php
+rm -f /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify/lang/it/send_netfun_s_m_s.php
 ```
 
 ### Template Standard per i File di Traduzione

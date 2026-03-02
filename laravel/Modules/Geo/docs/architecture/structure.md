@@ -6,7 +6,7 @@
 - **Namespace principale**: Modules\\Geo
 Modules\\Geo\\Database\\Factories
 Modules\\Geo\\Database\\Seeders
-- **Pacchetto Composer**: laraxot/module_geo_fila3
+- **Pacchetto Composer**: laraxot/module_geo_fila5
 Marco Sottana
 - **Dipendenze**: cheesegrits/filament-google-maps ^3.0 dotswan/filament-map-picker ^1.2 webbingbrasil/filament-maps ^3.0@beta repositories type path url ../Xot type path url ../Tenant type path url ../UI scripts post-autoload-dump_comment
 - **Totale file PHP**: 197

@@ -1,5 +1,5 @@
 {
-  "name": "laraxot/module_job_fila3",
+  "name": "laraxot/module_job_fila5",
   "description": "Background job execution module for the Laraxot ecosystem: queue management, task dispatching, and async processing.",
   "keywords": [
     "laraxot",
@@ -11,7 +11,7 @@
     "background-tasks",
     "async"
   ],
-  "homepage": "https://github.com/laraxot/module_job_fila3.git",
+  "homepage": "https://github.com/laraxot/module_job_fila5.git",
   "license": "MIT",
   "authors": [
     {

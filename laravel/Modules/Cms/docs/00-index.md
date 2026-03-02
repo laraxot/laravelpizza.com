@@ -1,8 +1,18 @@
 # Cms Module Documentation
 
 ## Overview
-
 The Cms module handles content management, page rendering, and multi-language support through a flexible block-based system.
+
+## Roadmap
+
+- [Roadmap Cms](roadmap/00-index.md) - Stato, tasks, fasi
+
+## Runtime Architecture
+
+- [CMS Theme Template Runtime Architecture](cms-theme-template-runtime-architecture.md) - Verified runtime pipeline (Folio -> x-page -> JSON blocks -> pub_theme views), risks, and chaos targets.
+- [Template Theme CMS Reference](template-theme-cms-reference.md) - Runtime reference for providers, namespaces, JSON contracts, and fallback behavior.
+- [Chaos Monkey Deep Dive](chaos-monkey-deep-dive.md) - Analisi approfondita: tenant path, BlockData, wrap_in, container0/slug0, punti di rottura.
+- [Chaos Monkey Recovery Playbook](chaos-monkey-recovery-playbook.md) - Incident playbook to restore frontoffice rendering under randomized failures.
 
 ## Key Components
 
