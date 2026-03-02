@@ -23,7 +23,15 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|DeviceProfile query()
  * @mixin IdeHelperDeviceProfile
  * @property ProfileContract|null $deleter
+<<<<<<< HEAD
+ *
  * @method static \Modules\User\Database\Factories\DeviceProfileFactory factory($count = null, $state = [])
+ *
+||||||| parent of da38c10 (.)
+ *
+=======
+ * @method static \Modules\User\Database\Factories\DeviceProfileFactory factory($count = null, $state = [])
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class DeviceProfile extends DeviceUser

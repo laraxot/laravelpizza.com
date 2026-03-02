@@ -43,7 +43,7 @@
 
 ### Collegamenti
 - [Performance: pattern e anti-pattern Action Filament](../../performance/docs/organizzativa-migration-errors.md)
-- [Indice e collegamenti root](../../../../../../../../docs/links.md)
+- [Indice e collegamenti root](../../../../docs/links.md)
 
 ## Regole sulle colonne delle tabelle Filament
 - Le colonne delle tabelle Filament devono corrispondere esattamente a quelle del modello e della migrazione.

@@ -36,7 +36,15 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|ModelHasPermission whereTeamId($value)
  * @mixin IdeHelperModelHasPermission
  * @property ProfileContract|null $deleter
+<<<<<<< HEAD
+ *
  * @method static \Modules\User\Database\Factories\ModelHasPermissionFactory factory($count = null, $state = [])
+ *
+||||||| parent of da38c10 (.)
+ *
+=======
+ * @method static \Modules\User\Database\Factories\ModelHasPermissionFactory factory($count = null, $state = [])
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class ModelHasPermission extends BaseMorphPivot

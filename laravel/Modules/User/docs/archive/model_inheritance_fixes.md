@@ -166,12 +166,23 @@ Per verificare che non ci siano più modelli che estendono direttamente `Model`:
 
 ```bash
 <<<<<<< .merge_file_QljUmi
+<<<<<<< HEAD
+cd /var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/User
+=======
+<<<<<<< HEAD
+cd /var/www/_bases/base_app_fila5_mono/laravel/Modules/User
+=======
+cd /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/User
+||||||| parent of da38c10 (.)
+cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+=======
 cd /var/www/_bases/base_healthcare_app_fila4_mono/laravel/Modules/User
 =======
 <<<<<<< HEAD
 cd /var/www/_bases/base_app_fila4_mono/laravel/Modules/User
 =======
 cd /var/www/_bases/base_ptvx_fila4_mono/laravel/Modules/User
+>>>>>>> da38c10 (.)
 >>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
 >>>>>>> .merge_file_V4bfKw
 grep -r "extends Model" app/Models/ --include="*.php" | grep -v "BaseModel\|BasePivot\|BaseMorphPivot"
@@ -183,12 +194,23 @@ Dopo le modifiche, eseguire:
 
 ```bash
 <<<<<<< .merge_file_QljUmi
+<<<<<<< HEAD
+cd /var/www/_bases/base_healthcare_app_fila5_mono/laravel/Modules/User
+=======
+<<<<<<< HEAD
+cd /var/www/_bases/base_app_fila5_mono/laravel/Modules/User
+=======
+cd /var/www/_bases/base_ptvx_fila5_mono/laravel/Modules/User
+||||||| parent of da38c10 (.)
+cd /var/www/_bases/base_quaeris_fila4_mono/laravel/Modules/User
+=======
 cd /var/www/_bases/base_healthcare_app_fila4_mono/laravel/Modules/User
 =======
 <<<<<<< HEAD
 cd /var/www/_bases/base_app_fila4_mono/laravel/Modules/User
 =======
 cd /var/www/_bases/base_ptvx_fila4_mono/laravel/Modules/User
+>>>>>>> da38c10 (.)
 >>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
 >>>>>>> .merge_file_V4bfKw
 ./vendor/bin/phpstan analyse --memory-limit=2G

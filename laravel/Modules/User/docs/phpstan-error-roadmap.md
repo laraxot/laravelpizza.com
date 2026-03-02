@@ -7,6 +7,7 @@ This document outlines the roadmap for resolving PHPStan errors in the User modu
 1. **Git Conflict Markers**: Multiple files in the User module contain unresolved Git conflict markers
 2. **Service Provider Registration**: The `PassportServiceProvider` had a Git conflict in the token expiration configuration
 3. **Bootstrapping Error**: Larastan cannot bootstrap the application due to parse errors from Git conflicts
+4. **UserContract Implementation Drift** (2026-03-02): `Modules\User\Models\User` non implementa tutti i metodi richiesti da `Modules\Xot\Contracts\UserContract` (es. `exists()`), causando un **Fatal error** durante `phpstan analyse Modules` prima ancora dell'analisi dei singoli file.
 
 ## Files with Git Conflict Markers
 - `app/Http/Resources/ClientResource.php`
@@ -27,8 +28,12 @@ This document outlines the roadmap for resolving PHPStan errors in the User modu
 1. Resolve Git conflicts in all affected files
 2. Maintain the most recent/functional code in each conflict
 3. Verify each resolution maintains application functionality
-4. Run PHPStan analysis after each batch of fixes
-5. Document decisions for each conflict resolution
+4. Allineare **UserContract** e implementazioni concrete:
+   - Verificare che tutti i metodi del contratto (incluso `exists()`) siano davvero parte della business logic attuale.
+   - Se sì, implementarli in `BaseUser` (o nella classe concreta `User`) con una semantica chiara e documentata (es. `exists()` come wrapper tipizzato di query Eloquent).
+   - Se no, valutare la rimozione/depcreazione del metodo dal contratto o la sua sostituzione con pattern più espressivi (Actions, query dedicate).
+5. Run PHPStan analysis after each batch of fixes
+6. Document decisions for each conflict resolution and for ogni cambiamento al contratto User.
 
 ## Priority Order
 1. **Service Providers** - Critical for application bootstrapping
@@ -48,5 +53,6 @@ This document outlines the roadmap for resolving PHPStan errors in the User modu
 ## Success Criteria
 - PHPStan Level 10 compliance
 - All Git conflict markers removed
+- `UserContract` e `User`/`BaseUser` perfettamente allineati (nessun Fatal error in fase di bootstrap o analisi)
 - Application functions properly
 - All tests pass

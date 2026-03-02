@@ -780,6 +780,5 @@ class TwoFactorEnabledNotification extends Notification
 
 ---
 
-**Last Updated**: 2025-10-01  
 **Status**: 60% Implemented  
 **Next Steps**: Complete UI, add SMS backup, implement policy enforcement  

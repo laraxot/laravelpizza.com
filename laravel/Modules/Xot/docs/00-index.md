@@ -12,8 +12,8 @@
 - [XotBase Classes & Inheritance Patterns](./xotbase-extension.md)
 - [Service Provider Architecture](./service-provider-architecture.md)
 - [Module Dependency Management](./composer-module-dependency-management.md)
-- [Composer Packages Reference](../../../../../docs/composer-packages-reference.md) - Mappatura pacchetti per modulo
-- [Inventario completo 312 pacchetti](../../../../../docs/architecture/composer-packages-full-inventory.md) - Tutti i pacchetti con versione e descrizione
+- [Composer Packages Reference](../../../../docs/composer-packages-reference.md) - Mappatura pacchetti per modulo
+- [Inventario completo 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - Tutti i pacchetti con versione e descrizione
 - [Composer Packages Deep Study (2026-03-02)](./composer-packages-deep-study-2026-03-02.md)
 - [Composer Packages Full Catalog (2026-03-02)](./composer-packages-full-catalog-2026-03-02.md) - Studio completo package-by-package da `composer show`
 - [Database Connection Configuration](./database-configuration-critical-rules.md)

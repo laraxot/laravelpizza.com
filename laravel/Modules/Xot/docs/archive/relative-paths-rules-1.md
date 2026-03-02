@@ -1,7 +1,7 @@
 # Regole per i Percorsi Relativi nella Documentazione
 
 > **Collegamenti correlati**
-> - [README.md documentazione generale](../../../../../../../../../docs/readme.md)
+> - [README.md documentazione generale](../../../../../docs/readme.md)
 > - [Struttura dei Prompt](./prompts.md)
 > - [Regole per i Prompt](./prompt_rules.md)
 > - [README.md toolkit bashscripts](../../../../bashscripts/docs/readme.md)
@@ -29,7 +29,7 @@ Questa regola è fondamentale per garantire la portabilità della documentazione
 ### Da un file in un modulo verso la root
 
 ```markdown
-[Documentazione Root](../../../../../../../../../docs/readme.md)
+[Documentazione Root](../../../../../docs/readme.md)
 ```
 
 ## Errori Comuni da Evitare
@@ -64,7 +64,7 @@ Questa regola è fondamentale per garantire la portabilità della documentazione
 | Posizione File Sorgente | Posizione File Destinazione | Percorso Relativo Corretto |
 |-------------------------|------------------------------|----------------------------|
 | `/docs/README.md` | `/laravel/Modules/Xot/docs/README.md` | `./laravel/Modules/Xot/docs/README.md` |
-| `/laravel/Modules/Xot/docs/README.md` | `/docs/README.md` | `../../../../../../../../../docs/README.md` |
+| `/laravel/Modules/Xot/docs/README.md` | `/docs/README.md` | `../../../../../docs/README.md` |
 | `/laravel/Modules/Xot/docs/README.md` | `/laravel/Modules/User/docs/README.md` | `../../../User/docs/README.md` |
 | `/laravel/Modules/Xot/docs/structure.md` | `/laravel/Modules/Xot/docs/README.md` | `./README.md` |
 

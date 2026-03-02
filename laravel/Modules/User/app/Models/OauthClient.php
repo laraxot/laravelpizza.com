@@ -55,6 +55,30 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static Builder|OauthClient whereUserId($value)
  * @method static Builder|OauthClient whereCreatedBy($value)
  * @method static Builder|OauthClient whereUpdatedBy($value)
+<<<<<<< HEAD
+ *
+ * @property string|null                 $owner_type
+ * @property string|null                 $owner_id
+ * @property array                       $redirect_uris
+ * @property Collection<int, Permission> $permissions
+ * @property int|null                    $permissions_count
+ * @property Collection<int, Role>       $roles
+ * @property int|null                    $roles_count
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthClient existsIn(array $haystack)
+ * @method static \Laravel\Passport\Database\Factories\ClientFactory        factory($count = null, $state = [])
+ * @method static Builder<static>|OauthClient                               permission($permissions, bool $without = false)
+ * @method static Builder<static>|OauthClient                               role($roles, ?string $guard = null, bool $without = false)
+ * @method static Builder<static>|OauthClient                               whereGrantTypes($value)
+ * @method static Builder<static>|OauthClient                               whereOwnerId($value)
+ * @method static Builder<static>|OauthClient                               whereOwnerType($value)
+ * @method static Builder<static>|OauthClient                               whereRedirectUris($value)
+ * @method static Builder<static>|OauthClient                               withoutPermission($permissions)
+ * @method static Builder<static>|OauthClient                               withoutRole($roles, ?string $guard = null)
+ *
+||||||| parent of da38c10 (.)
+ *
+=======
  * @property string|null $owner_type
  * @property string|null $owner_id
  * @property array $redirect_uris
@@ -72,6 +96,7 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static Builder<static>|OauthClient whereRedirectUris($value)
  * @method static Builder<static>|OauthClient withoutPermission($permissions)
  * @method static Builder<static>|OauthClient withoutRole($roles, ?string $guard = null)
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class OauthClient extends PassportClient implements AuthorizableContract

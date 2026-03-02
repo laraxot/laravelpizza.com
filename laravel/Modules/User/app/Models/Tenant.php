@@ -48,6 +48,34 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|Tenant whereName($value)
  * @method static Builder<static>|Tenant whereSlug($value)
  * @method static Builder<static>|Tenant whereUpdatedAt($value)
+<<<<<<< HEAD
+ *
+ * @property string|null $email_address
+ * @property string|null $phone
+ * @property string|null $mobile
+ * @property string|null $address
+ * @property string|null $primary_color
+ * @property string|null $secondary_color
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property string|null $deleted_by
+ * @property string|null $settings
+ *
+ * @method static \Modules\User\Database\Factories\TenantFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Tenant                         whereAddress($value)
+ * @method static Builder<static>|Tenant                         whereCreatedBy($value)
+ * @method static Builder<static>|Tenant                         whereDeletedBy($value)
+ * @method static Builder<static>|Tenant                         whereEmailAddress($value)
+ * @method static Builder<static>|Tenant                         whereMobile($value)
+ * @method static Builder<static>|Tenant                         wherePhone($value)
+ * @method static Builder<static>|Tenant                         wherePrimaryColor($value)
+ * @method static Builder<static>|Tenant                         whereSecondaryColor($value)
+ * @method static Builder<static>|Tenant                         whereSettings($value)
+ * @method static Builder<static>|Tenant                         whereUpdatedBy($value)
+ *
+||||||| parent of da38c10 (.)
+ *
+=======
  * @property string|null $email_address
  * @property string|null $phone
  * @property string|null $mobile
@@ -69,6 +97,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|Tenant whereSecondaryColor($value)
  * @method static Builder<static>|Tenant whereSettings($value)
  * @method static Builder<static>|Tenant whereUpdatedBy($value)
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class Tenant extends BaseTenant

@@ -40,7 +40,15 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
+<<<<<<< HEAD
+ *
  * @method static \Modules\User\Database\Factories\TenantUserFactory factory($count = null, $state = [])
+ *
+||||||| parent of da38c10 (.)
+ *
+=======
+ * @method static \Modules\User\Database\Factories\TenantUserFactory factory($count = null, $state = [])
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class TenantUser extends BasePivot

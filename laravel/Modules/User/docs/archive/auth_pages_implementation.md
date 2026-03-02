@@ -1,8 +1,8 @@
 # Implementazione Corretta delle Pagine Auth 
 
 ## Collegamenti correlati
-- [Documentazione centrale](../../../../../../../../docs/readme.md)
-- [Collegamenti documentazione](../../../../../../../../docs/collegamenti-documentazione.md)
+- [Documentazione centrale](../../../docs/readme.md)
+- [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
 - [README modulo User](./readme.md)
 - [Convenzioni Path](./path_conventions.md)
 - [Volt Errors](./volt_errors.md)

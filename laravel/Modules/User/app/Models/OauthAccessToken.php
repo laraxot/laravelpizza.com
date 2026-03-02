@@ -49,7 +49,14 @@ use Modules\Xot\Contracts\UserContract;
  * @method static static                           firstOrCreate(array $attributes, array $values = [])
  * @method static static                           updateOrCreate(array $attributes, array $values = [])
  * @mixin IdeHelperOauthAccessToken
+<<<<<<< HEAD
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
+ *
+||||||| parent of da38c10 (.)
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class OauthAccessToken extends PassportToken

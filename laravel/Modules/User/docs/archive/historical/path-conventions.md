@@ -1,10 +1,10 @@
 # Convenzioni Path nei Moduli Laravel
 
 ## Collegamenti correlati
-- [Documentazione centrale](../../../../../../../../docs/readme.md)
-- [Collegamenti documentazione](../../../../../../../../docs/collegamenti-documentazione.md)
+- [Documentazione centrale](../../../docs/readme.md)
+- [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
 - [README modulo User](./readme.md)
-- [Struttura moduli](../../../../../../../../docs/architecture/modules-structure.md)
+- [Struttura moduli](../../../docs/architecture/modules-structure.md)
 
 ## ✅ Path Corretti vs ❌ Path Errati
 

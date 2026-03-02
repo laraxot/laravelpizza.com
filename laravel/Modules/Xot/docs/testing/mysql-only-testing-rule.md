@@ -256,7 +256,7 @@ protected function setUp(): void
 
 ## Riferimenti
 
-- [Database Testing Consistency Rule](../../../../../../../../../docs/operational-rules/database-testing-consistency-rule.md)
+- [Database Testing Consistency Rule](../../../../../docs/operational-rules/database-testing-consistency-rule.md)
 - [Testing Strategy](./testing-strategy.md)
 - [MySQL Testing Only Rule](../../../../.cursor/rules/mysql-testing-only.mdc)
 

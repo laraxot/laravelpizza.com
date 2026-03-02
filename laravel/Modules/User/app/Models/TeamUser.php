@@ -41,6 +41,27 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  * @mixin IdeHelperTeamUser
+<<<<<<< HEAD
+ *
+ * @property ProfileContract|null         $deleter
+ * @property Team|null                    $team
+ * @property User|null                    $user
+ * @property array<array-key, mixed>|null $permissions
+ * @property string|null                  $joined_at
+ *
+ * @method static Builder<static>|TeamUser                         childrenWith(array $relations)
+ * @method static Builder<static>|TeamUser                         childrenWithCount(array $relations)
+ * @method static \Modules\User\Database\Factories\TeamUserFactory factory($count = null, $state = [])
+ * @method static Builder<static>|TeamUser                         whereJoinedAt($value)
+ * @method static Builder<static>|TeamUser                         wherePermissions($value)
+ *
+||||||| parent of da38c10 (.)
+ *
+ * @property ProfileContract|null $deleter
+ * @property Team|null            $team
+ * @property User|null            $user
+ *
+=======
  * @property ProfileContract|null $deleter
  * @property Team|null            $team
  * @property User|null            $user
@@ -51,6 +72,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Modules\User\Database\Factories\TeamUserFactory factory($count = null, $state = [])
  * @method static Builder<static>|TeamUser whereJoinedAt($value)
  * @method static Builder<static>|TeamUser wherePermissions($value)
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class TeamUser extends BaseTeamUser

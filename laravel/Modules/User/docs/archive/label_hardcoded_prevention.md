@@ -186,9 +186,9 @@ return [
 
 ## 🔗 **Collegamenti**
 
-- [Translation Standards](../../../../../../../docs/translation-standards.md)
-- [PHPStan Fixes](../../../../../../../docs/phpstan_level10_fixes.md)
-- [Best Practices](../../../../../../../docs/best-practices.md)
+- [Translation Standards](../../docs/translation-standards.md)
+- [PHPStan Fixes](../../docs/phpstan_level10_fixes.md)
+- [Best Practices](../../docs/best-practices.md)
 
 ---
 

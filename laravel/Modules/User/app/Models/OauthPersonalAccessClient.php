@@ -29,11 +29,24 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder|OauthPersonalAccessClient whereId($value)
  * @method static Builder|OauthPersonalAccessClient whereCreatedBy($value)
  * @method static Builder|OauthPersonalAccessClient whereUpdatedBy($value)
+<<<<<<< HEAD
+ *
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
+ * @method static \Modules\User\Database\Factories\OauthPersonalAccessClientFactory factory($count = null, $state = [])
+ * @method static Builder<static>|OauthPersonalAccessClient                         whereCreatedAt($value)
+ *
+||||||| parent of da38c10 (.)
+ *
+=======
  * @property-read \Modules\Meetup\Models\Profile|null $creator
  * @property-read \Modules\Meetup\Models\Profile|null $deleter
  * @property-read \Modules\Meetup\Models\Profile|null $updater
  * @method static \Modules\User\Database\Factories\OauthPersonalAccessClientFactory factory($count = null, $state = [])
  * @method static Builder<static>|OauthPersonalAccessClient whereCreatedAt($value)
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class OauthPersonalAccessClient extends BaseModel

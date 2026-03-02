@@ -24,7 +24,14 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static DatabaseNotificationCollection<int, static> all($columns = ['*'])
  * @method static DatabaseNotificationCollection<int, static> get($columns = ['*'])
  * @mixin IdeHelperNotification
+<<<<<<< HEAD
+ *
  * @method static \Modules\User\Database\Factories\NotificationFactory factory($count = null, $state = [])
+ *
+||||||| parent of da38c10 (.)
+=======
+ * @method static \Modules\User\Database\Factories\NotificationFactory factory($count = null, $state = [])
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class Notification extends BaseNotification

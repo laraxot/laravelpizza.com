@@ -273,8 +273,8 @@ class CreateTenantUserCommand extends Command
 
 ### Documentazione Root Progetto
 
-- [../../../../../../../../docs/modules/user/README.md](../../../../../../../../docs/modules/user/readme.md) - Panoramica modulo User
-- [../../../../../../../../docs/architecture/multi-tenancy.md](../../../../../../../../docs/architecture/multi-tenancy.md) - Architettura globale
+- [../../../docs/modules/user/README.md](../../../docs/modules/user/readme.md) - Panoramica modulo User
+- [../../../docs/architecture/multi-tenancy.md](../../../docs/architecture/multi-tenancy.md) - Architettura globale
 
 ## 🎓 Lezioni Apprese
 

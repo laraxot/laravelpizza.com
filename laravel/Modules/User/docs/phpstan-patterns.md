@@ -1,6 +1,5 @@
 # PHPStan Level 10 Patterns - User Module
 
-**Last Updated**: 2026-02-16  
 **Related Issue**: #77
 
 ---

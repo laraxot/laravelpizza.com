@@ -217,5 +217,5 @@ Per ogni file con conflitti, seguiremo questi passaggi:
 
 ## Collegamenti
 
-- [Documentazione Generale Risoluzione Conflitti](../../../../../../docs/conflict_resolution_summary.md)
+- [Documentazione Generale Risoluzione Conflitti](../../../../docs/conflict_resolution_summary.md)
 - [Documentazione Specifica del Modulo](../../docs/risoluzione_conflitti_git.md)

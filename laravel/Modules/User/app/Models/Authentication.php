@@ -48,6 +48,21 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
+<<<<<<< HEAD
+ * @property string|null          $updated_by
+ * @property string|null          $created_by
+ * @property string|null          $deleted_at
+ * @property string|null          $deleted_by
+ *
+ * @method static \Modules\User\Database\Factories\AuthenticationFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Authentication                         whereCreatedBy($value)
+ * @method static Builder<static>|Authentication                         whereDeletedAt($value)
+ * @method static Builder<static>|Authentication                         whereDeletedBy($value)
+ * @method static Builder<static>|Authentication                         whereUpdatedBy($value)
+ *
+||||||| parent of da38c10 (.)
+ *
+=======
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $deleted_at
@@ -57,6 +72,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<static>|Authentication whereDeletedAt($value)
  * @method static Builder<static>|Authentication whereDeletedBy($value)
  * @method static Builder<static>|Authentication whereUpdatedBy($value)
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class Authentication extends BaseModel

@@ -188,7 +188,7 @@ Questo documento riassume le migliori pratiche per la creazione e gestione delle
 * [FILAMENT_BEST_PRACTICES.md](../../../job/docs/filament_best_practices.md)
 
 ## Collegamenti tra versioni di filament_best_practices.md
-* [filament_best_practices.md](../../../../../../../../../../docs/rules/filament_best_practices.md)
+* [filament_best_practices.md](../../../../../../docs/rules/filament_best_practices.md)
 * [filament_best_practices.md](../filament_best_practices.md)
 * [filament_best_practices.md](../../../user/docs/filament_best_practices.md)
 * [filament_best_practices.md](../../../job/docs/filament_best_practices.md)

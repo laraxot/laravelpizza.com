@@ -40,10 +40,22 @@ use Modules\Xot\Contracts\ProfileContract;
  * @mixin IdeHelperMembership
  * @property ProfileContract|null $deleter
  * @method static Builder<static>|Membership whereId($value)
+<<<<<<< HEAD
+ *
+ * @property array<array-key, mixed>|null $permissions
+ * @property string|null                  $joined_at
+ *
+ * @method static Builder<static>|Membership whereJoinedAt($value)
+ * @method static Builder<static>|Membership wherePermissions($value)
+ *
+||||||| parent of da38c10 (.)
+ *
+=======
  * @property array<array-key, mixed>|null $permissions
  * @property string|null $joined_at
  * @method static Builder<static>|Membership whereJoinedAt($value)
  * @method static Builder<static>|Membership wherePermissions($value)
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class Membership extends BasePivot

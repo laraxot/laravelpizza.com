@@ -298,7 +298,6 @@ public function run(): void
 ---
 
 **Status**: ✅ **PRODUCTION READY**  
-**Last Updated**: Gennaio 2025  
 **Maintenance**: Active development  
 **Support**: Enterprise-grade
 
@@ -323,8 +322,8 @@ public function run(): void
 
 ### Root Documentation  
 <<<<<<< HEAD
-- [UserFactory ModuloEsempio Integration](../../../../../../../../../docs/userfactory_modulo_integration.md)
+- [UserFactory ModuloEsempio Integration](../../../../docs/userfactory_modulo_integration.md)
 =======
-- [UserFactory healthcare_app Integration](../../../../../../../../../docs/userfactory_healthcare_app_integration.md)
+- [UserFactory healthcare_app Integration](../../../../docs/userfactory_healthcare_app_integration.md)
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
-- [Testing Standards](../../../../../../../../../docs/testing_standards.md) 
+- [Testing Standards](../../../../docs/testing_standards.md) 

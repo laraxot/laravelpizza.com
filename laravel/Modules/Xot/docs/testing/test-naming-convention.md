@@ -75,7 +75,7 @@ Esempi:
 
 ## 📚 Documentazione Correlata
 
-- [Regola Critica Progetto](../../../../../../../../../docs/regole-critiche/test-naming-pascalcase.md)
+- [Regola Critica Progetto](../../../../../docs/regole-critiche/test-naming-pascalcase.md)
 - [Testing Best Practices](./testing-best-practices.md)
 - [PHPStan Compliance](../phpstan-compliance.md)
 

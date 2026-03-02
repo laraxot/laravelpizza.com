@@ -39,7 +39,15 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property ProfileContract|null $updater
  * @mixin IdeHelperExtra
  * @property ProfileContract|null $deleter
+<<<<<<< HEAD
+ *
  * @method static \Modules\User\Database\Factories\ExtraFactory factory($count = null, $state = [])
+ *
+||||||| parent of da38c10 (.)
+ *
+=======
+ * @method static \Modules\User\Database\Factories\ExtraFactory factory($count = null, $state = [])
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 final class Extra extends BaseExtra

@@ -160,7 +160,7 @@ Ogni modulo corretto è un traguardo.
 - [PHPStan Errors Philosophy](./phpstan-errors-philosophy.md)
 - [Filament 4 Actions Namespace](./filament-4-actions-namespace.md)
 - [PHPStan Corrections Summary](./phpstan-corrections-summary.md)
-- [DRY/KISS Principles](../../../../../../../../docs/architecture/dry-kiss-principles.md)
+- [DRY/KISS Principles](../../../docs/architecture/dry-kiss-principles.md)
 
 ---
 

@@ -258,7 +258,7 @@ $variabile = $oggetto->proprietaNonStandard;
 
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 - [Modules/Xot/docs/PHPSTAN_LIVELLO10_LINEE_GUIDA.md](phpstan_livello10_linee_guida.md)
-- [docs/PHPSTAN_LEVEL10_FIXES.md](../../../../../../../../docs/phpstan_level10_fixes.md)
+- [docs/PHPSTAN_LEVEL10_FIXES.md](../../../../../docs/phpstan_level10_fixes.md)
 
 ---
 

@@ -36,7 +36,15 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|Feature whereValue($value)
  * @mixin IdeHelperFeature
  * @property ProfileContract|null $deleter
+<<<<<<< HEAD
+ *
  * @method static \Modules\User\Database\Factories\FeatureFactory factory($count = null, $state = [])
+ *
+||||||| parent of da38c10 (.)
+ *
+=======
+ * @method static \Modules\User\Database\Factories\FeatureFactory factory($count = null, $state = [])
+>>>>>>> da38c10 (.)
  * @mixin \Eloquent
  */
 class Feature extends BaseModel
