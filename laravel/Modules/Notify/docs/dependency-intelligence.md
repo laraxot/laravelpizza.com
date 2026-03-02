@@ -8,8 +8,8 @@ Aggiornato da `composer show` il 2026-03-02.
 |---|---|---|---|
 | `aws/aws-sdk-php` | `*` | `3.369.37` | `cloud-aws` |
 | `filament/filament` | `^5.0` | `v5.2.1` | `admin-ui` |
-| `illuminate/contracts` | `*` | `not-installed` | `application-support` |
-| `illuminate/support` | `*` | `not-installed` | `application-support` |
+| `illuminate/contracts` | `*` | `provided-by-laravel/framework-v12.52.0` | `laravel-core` |
+| `illuminate/support` | `*` | `provided-by-laravel/framework-v12.52.0` | `laravel-core` |
 | `irazasyed/telegram-bot-sdk` | `*` | `v3.15.0` | `application-support` |
 | `kreait/laravel-firebase` | `^7.0` | `not-installed` | `application-support` |
 | `laravel-notification-channels/fcm` | `^6.0` | `not-installed` | `application-support` |

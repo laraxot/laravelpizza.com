@@ -86,6 +86,14 @@
    - Runbook operativo per guasti su layout, section e blocchi tema
    - Procedure di ripristino rapido senza rompere la pipeline CMS
 
+17. **[Dependency Intelligence](./dependency-intelligence.md)**
+   - Toolchain frontend del tema + runtime PHP critico per rendering
+   - Punto di controllo rapido in caso di regressioni da aggiornamento pacchetti
+
+17. **[Package Dependency Chaos Map](./package-dependency-chaos-map.md)**
+   - Pacchetti critici lato tema
+   - Failure mode e verifiche operative
+
 ## 🔄 Aggiornamenti Recenti
 
 - Aggiunta regola Risoluzione tema e workflow (APP_URL → config → pub_theme; build e copy)
@@ -96,3 +104,4 @@
 - Aggiunti Filament 5 theme reference e Grafica vs laravelpizza.com (MCP)
 - Aggiunto Chaos Monkey Incident Playbook
 - Aggiunto Chaos Monkey Theme Recovery Playbook
+- Aggiunto Package Dependency Chaos Map

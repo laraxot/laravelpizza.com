@@ -8,7 +8,7 @@ Aggiornato da `composer show` il 2026-03-02.
 |---|---|---|---|
 | `intervention/image` | `*` | `3.11.6` | `application-support` |
 | `pbmedia/laravel-ffmpeg` | `^8.5` | `8.7.1` | `application-support` |
-| `php` | `^8.2` | `not-installed` | `application-support` |
+| `php` | `^8.2` | `platform-php` | `platform` |
 
 ## Dev dependencies (`require-dev`)
 

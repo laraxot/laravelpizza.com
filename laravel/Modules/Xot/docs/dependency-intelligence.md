@@ -24,7 +24,7 @@ Aggiornato da `composer show` il 2026-03-02.
 | `livewire/volt` | `^1.0` | `v1.10.2` | `reactive-ui` |
 | `maatwebsite/excel` | `^3.1` | `3.1.67` | `application-support` |
 | `nwidart/laravel-modules` | `*` | `v12.0.4` | `modular-architecture` |
-| `php` | `^8.2` | `not-installed` | `application-support` |
+| `php` | `^8.2` | `platform-php` | `platform` |
 | `predis/predis` | `*` | `v3.4.0` | `application-support` |
 | `spatie/cpu-load-health-check` | `^1.0` | `1.0.5` | `spatie-ecosystem` |
 | `spatie/laravel-data` | `^4.7` | `4.19.1` | `spatie-ecosystem` |
