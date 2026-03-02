@@ -20,6 +20,7 @@ Questo file ora funge da indice rapido. La guida completa e modulare e' stata su
 - [Key documentation references](./.agents/docs/agents-guide/13-references/key-documentation-references.md)
 - [Theme: pub_theme namespace](./.agents/docs/agents-guide/14-theme/pub-theme-namespace-critical-rule.md)
 - [Theme translations critical rule](./.agents/docs/agents-guide/14-theme/theme-translations-critical-rule.md)
+- [Chaos Monkey readiness](./.agents/docs/agents-guide/15-chaos-monkey/chaos-monkey-readiness.md)
 
 ## Nota operativa
 

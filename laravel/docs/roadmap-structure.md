@@ -8,19 +8,21 @@ Ogni modulo e tema ha la roadmap spezzata in file piccoli dentro `docs/roadmap/`
 Modules/{Module}/docs/
 ├── roadmap.md              ← redirect a roadmap/00-index.md
 └── roadmap/
-    ├── 00-index.md        ← overview, indice, metriche
-    ├── vision.md          ← visione e obiettivi
-    ├── phases.md          ← fasi di sviluppo
-    └── quality.md         ← checklist qualità
+    ├── 00-index.md
+    ├── 01-current-state.md
+    ├── 02-goals.md
+    ├── 03-workstreams.md
+    ├── 04-milestones.md
+    └── 05-risks.md
 ```
 
 ## File opzionali
 
-- `status.md` - stato attuale (es. Cms)
-- `tasks.md` - tabella tasks (es. Cms)
-- `technical-debt.md` - debito tecnico (es. User)
-- `testing.md` - testing e TDD (es. User)
-- `quality-fixes-log.md` - storico correzioni (es. Gdpr)
+- `legacy-roadmap.md` - migrazione da roadmap storiche
+- `phases.md` - dettaglio fasi
+- `quality.md` - quality gates
+- `status.md` - stato operativo corrente
+- `tasks.md` - backlog operativo
 
 ## Indice centralizzato
 

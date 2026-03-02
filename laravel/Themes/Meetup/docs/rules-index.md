@@ -51,7 +51,7 @@
 
 9. **[Grafica vs laravelpizza.com](./grafica-confronto-laravelpizza.md)**, **[Differenze grafica e miglioramenti](./differenze-grafica-e-miglioramenti.md)**, **[Approfondimento tecnico](./differenze-grafica-approfondimento.md)** (file, codice, checklist), **[Footer logo confronto](./footer-logo-confronto.md)**
    - Confronto struttura e contenuti; uso MCP o `npm run screenshots` / `npm run screenshots:footer` (Playwright)
-   - Screenshot in [screenshots/grafica-confronto](screenshots/grafica-confronto/), [screenshots/footer-logo-confronto](screenshots/footer-logo-confronto/readme.md)
+   - Screenshot in [screenshots/grafica-confronto](screenshots/grafica-confronto/), [screenshots/footer-logo-confronto](screenshots/footer-logo-confronto/README.md)
 
 10. **[Accessibilità & WCAG](./wcag.md)**
     - Checklist WCAG 2.2 Level AA
@@ -61,12 +61,12 @@
 
 ### Riferimenti Cross-Module
 
-11. **[Regole Xot](../../modules/xot/docs/critical-rules-consolidated.md)**
+11. **[Regole Xot](../../../Modules/Xot/docs/critical-rules-consolidated.md)**
     - Regole generali Laraxot
     - Filosofia Migrazioni
     - Estensioni Filament
 
-12. **[Regole Modulo Meetup](../../modules/meetup/docs/critical-rules-consolidated.md)**
+12. **[Regole Modulo Meetup](../../../Modules/Meetup/docs/critical-rules-consolidated.md)**
     - Architettura Frontoffice
     - Folio + Volt pattern
 

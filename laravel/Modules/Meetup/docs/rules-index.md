@@ -1,7 +1,7 @@
 # Indice Regole Critiche - Modulo Meetup
 
 ## Data
-[DATE]
+2026-03-02
 
 ## 📚 Documentazione Regole Critiche
 
@@ -40,20 +40,20 @@
 
 ### Riferimenti Cross-Module
 
-7. **[Regole Xot](../../xot/docs/critical-rules-consolidated.md)**
+7. **[Regole Xot](../../Xot/docs/critical-rules-consolidated.md)**
    - Regole generali Laraxot
    - Filosofia Migrazioni
    - Estensioni Filament
 
-8. **[Regole Tema Meetup](../../../themes/meetup/docs/critical-rules-consolidated.md)**
+8. **[Regole Tema Meetup](../../../Themes/Meetup/docs/critical-rules-consolidated.md)**
    - Frontend Asset Management
    - Vite Configuration
    - Metatags Component
 
 ## 🔄 Aggiornamenti Recenti
 
-- **[DATE]**: Aggiunta regola Frontend Asset Management
-- **[DATE]**: Aggiunta regola Componenti Blade Anonimi
-- **[DATE]**: Consolidata Architettura Frontoffice
+- **2026-03-02**: Aggiunta regola Frontend Asset Management
+- **2026-03-02**: Aggiunta regola Componenti Blade Anonimi
+- **2026-03-02**: Consolidata Architettura Frontoffice
 - **2026-03-02**: Aggiunta Chaos Monkey Readiness
 - **2026-03-02**: Aggiunto Chaos Monkey Event Rendering Playbook
