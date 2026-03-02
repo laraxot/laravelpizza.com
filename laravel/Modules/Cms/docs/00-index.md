@@ -3,6 +3,8 @@
 ## Overview
 The Cms module handles content management, page rendering, and multi-language support through a flexible block-based system.
 
+**Pacchetti**: Nessuna dipendenza diretta; usa Xot, Tenant, UI. [Riferimento completo](../../../docs/composer-packages-reference.md)
+
 ## Roadmap
 
 - [Roadmap Cms](roadmap/00-index.md) - Stato, tasks, fasi

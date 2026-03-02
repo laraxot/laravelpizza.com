@@ -6,6 +6,7 @@
 
 ## Core Concepts
 
+- [Riferimento pacchetti Composer](../../../docs/composer-packages-reference.md) - Folio, Volt, Livewire, Filament, Tailwind (via root/moduli)
 - [CMS Theme Runtime Memory](memories/cms-theme-runtime-memory.md) - Operational memory for fast diagnosis of theme/CMS runtime failures.
 - [Chaos Monkey Debug Skills](chaos-monkey-debug-skills.md) - Repeatable debugging skills and incident checklist for randomized breakage.
 - [Chaos Monkey Checklist](chaos-monkey-checklist.md) - Scenario -> symptom -> diagnosis -> fix playbook (theme side).

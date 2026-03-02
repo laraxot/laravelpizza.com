@@ -23,6 +23,9 @@
 - ⚠️ Test suite da implementare (Pest)
 - ⚠️ PHPStan Level 10 da completare
 
+## 📦 Pacchetti Composer
+- [Riferimento completo](../../../docs/composer-packages-reference.md) - Nessuna dipendenza diretta; usa Xot
+
 ## 🔗 Moduli Correlati
 - [Xot](../../xot/docs/readme.md) - Core framework e base classes.
 - [Meetup](../../meetup/docs/readme.md) - Schema.org Event integration.

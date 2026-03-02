@@ -26,6 +26,9 @@
 - 🔬 **[Testing Guidelines](./testing-guidelines.md)** - Strategie di test geografico.
 - 🧹 **[PHPMD & Complexity](./cyclomatic-complexity-report.md)** - Analisi della pulizia del codice.
 
+## 📦 **Pacchetti Composer**
+- [Riferimento completo](../../../docs/composer-packages-reference.md) - Nessuna dipendenza diretta; usa Xot, Sushi (via Xot)
+
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Core framework e Base Models.
 - [UI](../../ui/docs/readme.md) - Componenti grafici e widget mappa.

@@ -28,6 +28,9 @@
 ## 🧹 **Manutenzione**
 - 🗑️ **[Cleanup Plan](./duplicate-files-to-remove.md)** - Eliminazione dei file duplicati e obsoleti.
 
+## 📦 **Pacchetti Composer**
+- [Riferimento completo](../../../docs/composer-packages-reference.md) - Nessuna dipendenza diretta; usa Xot
+
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Base framework per i Service Provider.
 - [User](../../user/docs/readme.md) - Associazione Utente-Tenant e permessi.
