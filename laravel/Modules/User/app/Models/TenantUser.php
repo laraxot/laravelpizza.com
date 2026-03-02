@@ -16,7 +16,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder|TeamUser newQuery()
  * @method static Builder|TeamUser query()
  *
- * @property int $id
+ * @property int         $id
  * @property string|null $tenant_id
  * @property string|null $user_id
  * @property Carbon|null $created_at
@@ -45,8 +45,15 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
+ *                                         <<<<<<< HEAD
  *
  * @method static \Modules\User\Database\Factories\TenantUserFactory factory($count = null, $state = [])
+ *
+ * ||||||| parent of da38c10 (.)
+ *
+ * =======
+ * @method static \Modules\User\Database\Factories\TenantUserFactory factory($count = null, $state = [])
+ *                                                                                                       >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

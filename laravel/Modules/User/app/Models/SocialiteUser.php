@@ -19,18 +19,18 @@ use Modules\Xot\Datas\XotData;
 /**
  * Modules\User\Models\SocialiteUser.
  *
- * @property int $id
- * @property string $user_id
- * @property string $provider
- * @property string $provider_id
- * @property string|null $token
- * @property string|null $name
- * @property string|null $email
- * @property string|null $avatar
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
+ * @property int               $id
+ * @property string            $user_id
+ * @property string            $provider
+ * @property string            $provider_id
+ * @property string|null       $token
+ * @property string|null       $name
+ * @property string|null       $email
+ * @property string|null       $avatar
+ * @property Carbon|null       $created_at
+ * @property Carbon|null       $updated_at
+ * @property string|null       $updated_by
+ * @property string|null       $created_by
  * @property UserContract|null $user
  *
  * @method static Builder|SocialiteUser newModelQuery()
@@ -59,8 +59,15 @@ use Modules\Xot\Datas\XotData;
  * @mixin IdeHelperSocialiteUser
  *
  * @property ProfileContract|null $deleter
+ *                                         <<<<<<< HEAD
  *
  * @method static \Modules\User\Database\Factories\SocialiteUserFactory factory($count = null, $state = [])
+ *
+ * ||||||| parent of da38c10 (.)
+ *
+ * =======
+ * @method static \Modules\User\Database\Factories\SocialiteUserFactory factory($count = null, $state = [])
+ *                                                                                                          >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

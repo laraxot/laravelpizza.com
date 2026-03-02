@@ -95,8 +95,8 @@ function dddx(mixed $params): string
 ## 📚 Documentazione
 
 ### Scripts Creati
-- `Xot/bashscripts/analyze-module-quality.sh` - Analisi singolo modulo
-- `Xot/bashscripts/analyze-all-modules.sh` - Analisi tutti i moduli
+- `bashscripts/analysis/analyze-module-quality.sh` - Analisi singolo modulo
+- `bashscripts/analysis/analyze-all-modules.sh` - Analisi tutti i moduli
 
 ### Documenti Aggiornati
 - `Xot/docs/code-quality-audit-2025-01.md` - Audit generale

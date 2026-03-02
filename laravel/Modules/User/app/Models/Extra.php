@@ -18,9 +18,9 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @method static Builder|Extra query()
  * @method static Builder|Extra withExtraAttributes()
  *
- * @property int $id
- * @property string $model_type
- * @property string $model_id
+ * @property int         $id
+ * @property string      $model_type
+ * @property string      $model_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
@@ -45,8 +45,15 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @mixin IdeHelperExtra
  *
  * @property ProfileContract|null $deleter
+ *                                         <<<<<<< HEAD
  *
  * @method static \Modules\User\Database\Factories\ExtraFactory factory($count = null, $state = [])
+ *
+ * ||||||| parent of da38c10 (.)
+ *
+ * =======
+ * @method static \Modules\User\Database\Factories\ExtraFactory factory($count = null, $state = [])
+ *                                                                                                  >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

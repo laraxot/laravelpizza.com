@@ -45,7 +45,11 @@
         <env name="BCRYPT_ROUNDS" value="4"/>
         <env name="BROADCAST_CONNECTION" value="null"/>
         <env name="CACHE_STORE" value="array"/>
-        <!-- DB_CONNECTION and DB_DATABASE removed to use .env.testing config -->
+        <!-- CRITICAL: Force test DB - PHPUnit sets these BEFORE app bootstrap.
+             Laravel may load .env instead of .env.testing depending on bootstrap order.
+             Without these, TenantServiceProvider uses laravelpizza_data (prod) for activity/user connections. -->
+        <env name="DB_DATABASE" value="laravelpizza_data_test"/>
+        <env name="DB_DATABASE_USER" value="laravelpizza_user_test"/>
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>

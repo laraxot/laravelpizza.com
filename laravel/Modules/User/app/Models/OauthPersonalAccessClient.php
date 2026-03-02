@@ -12,13 +12,13 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 /**
  * OAuth Personal Access Client model.
  *
- * @property string $uuid
- * @property string $client_id
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property int $id
+ * @property string           $uuid
+ * @property string           $client_id
+ * @property Carbon|null      $created_at
+ * @property Carbon|null      $updated_at
+ * @property string|null      $updated_by
+ * @property string|null      $created_by
+ * @property int              $id
  * @property OauthClient|null $client
  *
  * @method static Builder|OauthPersonalAccessClient newModelQuery()
@@ -30,13 +30,26 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder|OauthPersonalAccessClient whereId($value)
  * @method static Builder|OauthPersonalAccessClient whereCreatedBy($value)
  * @method static Builder|OauthPersonalAccessClient whereUpdatedBy($value)
+ *                                                                         <<<<<<< HEAD
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
  * @method static \Modules\User\Database\Factories\OauthPersonalAccessClientFactory factory($count = null, $state = [])
- * @method static Builder<static>|OauthPersonalAccessClient whereCreatedAt($value)
+ * @method static Builder<static>|OauthPersonalAccessClient                         whereCreatedAt($value)
+ *
+ * ||||||| parent of da38c10 (.)
+ *
+ * =======
+ *
+ * @property \Modules\Meetup\Models\Profile|null $creator
+ * @property \Modules\Meetup\Models\Profile|null $deleter
+ * @property \Modules\Meetup\Models\Profile|null $updater
+ *
+ * @method static \Modules\User\Database\Factories\OauthPersonalAccessClientFactory factory($count = null, $state = [])
+ * @method static Builder<static>|OauthPersonalAccessClient                         whereCreatedAt($value)
+ *                                                                                                                      >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

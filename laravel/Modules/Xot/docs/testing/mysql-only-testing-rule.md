@@ -97,11 +97,7 @@ $dbName = 'file:memdb_test_'.Str::random(10).'?mode=memory&cache=shared';
 // ✅ CORRETTO - Usa sempre MySQL da .env.testing
 // Il file .env.testing definisce:
 // DB_CONNECTION=mysql
-<<<<<<< .merge_file_5rb7Qb
-// DB_DATABASE=healthcare_app_data_test  (suffisso "_test" obbligatorio)
-=======
-// DB_DATABASE=ptvx_data_test  (suffisso "_test" obbligatorio)
->>>>>>> .merge_file_3atUlv
+// DB_DATABASE=laravelpizza_data_test  (suffisso "_test" obbligatorio)
 // DB_HOST=127.0.0.1
 // DB_PORT=3306
 
@@ -112,15 +108,8 @@ $dbName = 'file:memdb_test_'.Str::random(10).'?mode=memory&cache=shared';
 ### 3. Pattern Database Test
 ```bash
 # Schema: {nome_database_produzione}_test
-<<<<<<< .merge_file_5rb7Qb
-PRODUZIONE: healthcare_app_data    → TEST: healthcare_app_data_test
-PRODUZIONE: healthcare_app_user    → TEST: healthcare_app_user_test  
-PRODUZIONE: healthcare_app_survey  → TEST: healthcare_app_survey_test
-=======
-PRODUZIONE: ptvx_data    → TEST: ptvx_data_test
-PRODUZIONE: ptvx_user    → TEST: ptvx_user_test  
-PRODUZIONE: ptvx_survey  → TEST: ptvx_survey_test
->>>>>>> .merge_file_3atUlv
+PRODUZIONE: laravelpizza_data    → TEST: laravelpizza_data_test
+PRODUZIONE: laravelpizza_user    → TEST: laravelpizza_user_test
 
 # Pattern: {nome}_test - SEMPRE e SOLO _test
 ```
@@ -134,11 +123,7 @@ APP_DEBUG=true
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-<<<<<<< .merge_file_5rb7Qb
-DB_DATABASE=healthcare_app_data_test          # Suffisso "_test" obbligatorio
-=======
-DB_DATABASE=ptvx_data_test          # Suffisso "_test" obbligatorio
->>>>>>> .merge_file_3atUlv
+DB_DATABASE=laravelpizza_data_test          # Suffisso "_test" obbligatorio
 DB_USERNAME=marco
 DB_PASSWORD=marco
 
@@ -198,6 +183,19 @@ abstract class TestCase extends BaseTestCase
 > php artisan migrate --env=testing
 > ```
 > Questo crea tutte le tabelle una volta sola. `DatabaseTransactions` gestisce il rollback tra i test.
+
+## phpunit.xml - Variabili DB Obbligatorie
+
+**Problema**: Laravel può caricare `.env` invece di `.env.testing` a seconda dell'ordine di bootstrap. Se `env('DB_DATABASE')` restituisce il valore di produzione, `TenantServiceProvider` crea le connessioni modulo (activity, user, ecc.) puntando al DB di produzione. I test falliscono con `Table 'laravelpizza_data.activity_log' doesn't exist` perché cercano nel DB sbagliato.
+
+**Soluzione**: `phpunit.xml` DEVE includere `DB_DATABASE` e `DB_DATABASE_USER` esplicitamente. PHPUnit imposta queste variabili PRIMA del bootstrap dell'app, garantendo che tutte le connessioni usino il DB di test:
+
+```xml
+<env name="DB_DATABASE" value="laravelpizza_data_test"/>
+<env name="DB_DATABASE_USER" value="laravelpizza_user_test"/>
+```
+
+Vedi [Activity docs: testing-database-wrong-db-error](laravel/Modules/Activity/docs/testing-database-wrong-db-error.md).
 
 ## ❌ TestCase Pattern VIETATO
 

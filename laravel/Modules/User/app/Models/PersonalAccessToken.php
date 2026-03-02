@@ -10,18 +10,19 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 /**
  * Modules\User\Models\PersonalAccessToken.
  *
- * @property int $id
- * @property string $tokenable_type
- * @property int $tokenable_id
- * @property string $name
- * @property string $token
- * @property string|null $abilities
+ * @property int                             $id
+ * @property string                          $tokenable_type
+ * @property int                             $tokenable_id
+ * @property string                          $name
+ * @property string                          $token
+ * @property string|null                     $abilities
  * @property \Illuminate\Support\Carbon|null $last_used_at
  * @property \Illuminate\Support\Carbon|null $expires_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *                                                           <<<<<<< HEAD
  *
- * @method static \Modules\User\Database\Factories\PersonalAccessTokenFactory factory($count = null, $state = [])
+ * @method static \Modules\User\Database\Factories\PersonalAccessTokenFactory       factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken query()
@@ -33,6 +34,22 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken whereToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken whereTokenableId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken whereTokenableType($value)
+ *
+ * ||||||| parent of da38c10 (.)
+ * =======
+ * @method static \Modules\User\Database\Factories\PersonalAccessTokenFactory       factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken whereAbilities($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken whereExpiresAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken whereLastUsedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken whereToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken whereTokenableId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|PersonalAccessToken whereTokenableType($value)
+ *                                                                                                                      >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

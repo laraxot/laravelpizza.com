@@ -13,16 +13,16 @@ use Modules\Xot\Contracts\UserContract;
 /**
  * Modules\User\Models\OauthAccessToken.
  *
- * @property string $id
- * @property string|null $user_id
- * @property string $client_id
- * @property string|null $name
- * @property array|null $scopes
- * @property bool $revoked
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property Carbon|null $expires_at
- * @property OauthClient|null $client
+ * @property string            $id
+ * @property string|null       $user_id
+ * @property string            $client_id
+ * @property string|null       $name
+ * @property array|null        $scopes
+ * @property bool              $revoked
+ * @property Carbon|null       $created_at
+ * @property Carbon|null       $updated_at
+ * @property Carbon|null       $expires_at
+ * @property OauthClient|null  $client
  * @property UserContract|null $user
  *
  * @method static Builder|OauthAccessToken newModelQuery()
@@ -39,22 +39,28 @@ use Modules\Xot\Contracts\UserContract;
  * @method static Builder|OauthAccessToken whereUserId($value)
  *
  * @property OauthRefreshToken|null $refreshToken
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property string|null $deleted_at
- * @property string|null $deleted_by
+ * @property string|null            $updated_by
+ * @property string|null            $created_by
+ * @property string|null            $deleted_at
+ * @property string|null            $deleted_by
  *
  * @method static Builder<static>|OauthAccessToken whereCreatedBy($value)
  * @method static Builder<static>|OauthAccessToken whereDeletedAt($value)
  * @method static Builder<static>|OauthAccessToken whereDeletedBy($value)
  * @method static Builder<static>|OauthAccessToken whereUpdatedBy($value)
- * @method static static create(array $attributes = [])
- * @method static static firstOrCreate(array $attributes, array $values = [])
- * @method static static updateOrCreate(array $attributes, array $values = [])
+ * @method static static                           create(array $attributes = [])
+ * @method static static                           firstOrCreate(array $attributes, array $values = [])
+ * @method static static                           updateOrCreate(array $attributes, array $values = [])
  *
  * @mixin IdeHelperOauthAccessToken
+ * <<<<<<< HEAD
  *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
+ *
+ * ||||||| parent of da38c10 (.)
+ * =======
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
+ *                                                                                                         >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

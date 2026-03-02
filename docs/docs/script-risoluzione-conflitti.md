@@ -4,7 +4,7 @@
 ## SCRIPT CREATI
 
 ### 1. **resolve_merge_conflicts_incoming.sh** (Completo)
-**Percorso**: `Modules/Xot/bashscripts/git/resolve_merge_conflicts_incoming.sh`
+**Percorso**: `bashscripts/git/merge_conflicts/resolve_merge_conflicts_incoming.sh` (o equivalente in `bashscripts/git/`)
 
 **Caratteristiche**:
 - ✅ Interfaccia completa con colori e banner
@@ -17,20 +17,20 @@
 **Utilizzo**:
 ```bash
 # Modalità interattiva (raccomandato)
-./Modules/Xot/bashscripts/git/resolve_merge_conflicts_incoming.sh
+./bashscripts/git/merge_conflicts/resolve_merge_conflicts_incoming.sh
 
 # Solo mostra conflitti senza risolvere
-./Modules/Xot/bashscripts/git/resolve_merge_conflicts_incoming.sh --dry-run
+./bashscripts/git/merge_conflicts/resolve_merge_conflicts_incoming.sh --dry-run
 
 # Risolve automaticamente senza conferma
-./Modules/Xot/bashscripts/git/resolve_merge_conflicts_incoming.sh --auto
+./bashscripts/git/merge_conflicts/resolve_merge_conflicts_incoming.sh --auto
 
 # Mostra aiuto
-./Modules/Xot/bashscripts/git/resolve_merge_conflicts_incoming.sh --help
+./bashscripts/git/merge_conflicts/resolve_merge_conflicts_incoming.sh --help
 ```
 
 ### 2. **fix_conflicts_now.sh** (Veloce)
-**Percorso**: `Modules/Xot/bashscripts/git/fix_conflicts_now.sh`
+**Percorso**: `bashscripts/git/conflicts/fix_all_conflicts.sh` (o `bashscripts/git/merge_conflicts/`)
 
 **Caratteristiche**:
 - ⚡ Esecuzione immediata senza domande
@@ -41,7 +41,7 @@
 **Utilizzo**:
 ```bash
 # Risolve TUTTI i conflitti immediatamente
-./Modules/Xot/bashscripts/git/fix_conflicts_now.sh
+./bashscripts/git/conflicts/fix_all_conflicts.sh
 ```
 
 ## COME FUNZIONANO
@@ -141,7 +141,7 @@ git add . && git commit -m "Risolti conflitti merge con Super Mucca"
 ```bash
 git merge develop
 # CONFLICT (content): Merge conflict in file.php
-./Modules/Xot/bashscripts/git/fix_conflicts_now.sh
+./bashscripts/git/conflicts/fix_all_conflicts.sh
 git add .
 git commit -m "Merged develop"
 ```
@@ -150,7 +150,7 @@ git commit -m "Merged develop"
 ```bash
 git pull origin develop
 # CONFLICT (content): Merge conflict in file.php
-./Modules/Xot/bashscripts/git/resolve_merge_conflicts_incoming.sh --auto
+./bashscripts/git/merge_conflicts/resolve_merge_conflicts_incoming.sh --auto
 git add .
 git commit -m "Resolved conflicts from pull"
 ```
@@ -159,7 +159,7 @@ git commit -m "Resolved conflicts from pull"
 ```bash
 git rebase develop
 # CONFLICT (content): Merge conflict in file.php
-./Modules/Xot/bashscripts/git/fix_conflicts_now.sh
+./bashscripts/git/conflicts/fix_all_conflicts.sh
 git add .
 git rebase --continue
 ```
@@ -168,13 +168,13 @@ git rebase --continue
 
 ### ❌ **Problema**: Script non eseguibile
 ```bash
-chmod +x ./Modules/Xot/bashscripts/git/*.sh
+chmod +x ./bashscripts/git/conflicts/*.sh ./bashscripts/git/merge_conflicts/*.sh
 ```
 
 ### ❌ **Problema**: Conflitti non risolti
 ```bash
 # Esegui di nuovo lo script
-./Modules/Xot/bashscripts/git/fix_conflicts_now.sh
+./bashscripts/git/conflicts/fix_all_conflicts.sh
 ```
 
 ### ❌ **Problema**: File corrotto

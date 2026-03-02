@@ -1,21 +1,14 @@
-# Meetup Theme - Roadmap
+# Roadmap - Meetup Theme
 
-> Esperienza frontend moderna per community meetup. Folio, Volt, SEO.
+## Structure
+- [Overview](00-overview.md)
+- [Now (Current Sprint)](01-now.md)
+- [Next (Upcoming Features)](02-next.md)
+- [Later (Future Ideas)](03-later.md)
+- [Risks & Dependencies](04-risks.md)
 
-## Indice
-
-- [Visione](vision.md)
-- [Fasi di sviluppo](phases.md)
-- [Checklist qualità](quality.md)
+## Quality & Vision
+- [Vision](vision.md)
+- [Phases](phases.md)
+- [Quality Checklist](quality.md)
 - [Chaos Readiness 2026-03-02](chaos-readiness-2026-03-02.md)
-
-## Metriche rapide
-
-| Metrica | Valore |
-|---------|--------|
-| Performance Lighthouse | Target > 90 |
-
-## Collegamenti
-
-- [00-index tema](../00-index.md)
-- [chaos-monkey-debug-skills](../chaos-monkey-debug-skills.md)

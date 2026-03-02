@@ -1,6 +1,6 @@
 # Code Coverage: Lang
 
-**Lines Coverage:** N/A (Failed to parse)
+**Lines Coverage:** 0.0% (Failed to parse)
 **Test Exit Code:** 2
 
 ## Output

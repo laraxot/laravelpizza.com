@@ -1,28 +1,23 @@
-# Gdpr Module - Code Coverage
+# Code Coverage: Gdpr
 
-## Percentuale coverage
+**Lines Coverage:** N/A
+**Methods Coverage:** N/A
+**Classes Coverage:** N/A
+**Functions Coverage:** N/A
+**Test Status:** ⚠️  OTHER ERROR
 
-**~8%** (stima su suite root: 2 test)
+## Summary
 
-## Contesto misurazione
+This module contains Gdpr functionality for the application.
 
-- **Suite eseguita**: `tests/Unit` + `tests/Feature` (root)
-- **Test moduli**: i test in `Modules/Gdpr/tests/` non sono inclusi nella suite PHPUnit
-- **File analizzati**: solo `Modules/Gdpr/app/`
+## Coverage Reflections
 
-## Riflessioni
+- ⚠️  **Low Coverage**: The module has low test coverage, indicating potential risks in production
+- Tests are not fully executed
+- 🏗️  **Foundation Module**: Gdpr module is critical as it provides base functionality for all other modules
+- 📋 **Module Size**: Medium complexity with multiple components
 
-1. **Modello GDPR**: Profile, Consent, Event, Treatment; BaseModel/BasePivot/BaseMorphPivot e RouteServiceProvider risultano coperti.
-2. **Punti coperti**: pagine Create/Edit Filament per Consent, Event, Profile, Treatment.
-3. **Gap principali**: RegisterWidget, SaveGdprConsents listener, Policies, trait HasGdpr.
-4. **Priorit�**: coprire flusso registrazione con consensi; listener SaveGdprConsents; Policies.
+- 🔍 **Recommendations**: Focus on integration tests for complex workflows
+- 📋 **Module Size**: Medium complexity with multiple components
 
-## Comando verifica
-
-```bash
-cd laravel && php artisan test --coverage --min=0
-```
-
-## Collegamenti
-
-- [gdpr-overview](../gdpr-overview.md)
+- 🔍 **Recommendations**: Focus on integration tests for complex workflows

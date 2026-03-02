@@ -348,7 +348,14 @@ php artisan view:clear
 
 # Module list
 php artisan module:list
+
+# Coverage per tutti i moduli
+bash bashscripts/testing/generate-coverage.sh
 ```
+
+### Script Cross-Module
+
+- [Bashscripts](bashscripts/00-index.md) - Script in `bashscripts/` (testing, analysis, docs, git)
 
 ### File Chiave
 

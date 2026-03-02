@@ -1,29 +1,23 @@
-# Geo Module - Code Coverage
+# Code Coverage: Geo
 
-## Percentuale coverage
+**Lines Coverage:** N/A
+**Methods Coverage:** N/A
+**Classes Coverage:** N/A
+**Functions Coverage:** N/A
+**Test Status:** ⚠️  OTHER ERROR
 
-**~2%** (stima su suite root: 2 test)
+## Summary
 
-## Contesto misurazione
+This module contains Geo functionality for the application.
 
-- **Suite eseguita**: `tests/Unit` + `tests/Feature` (root)
-- **Test moduli**: i test in `Modules/Geo/tests/` non sono inclusi; alcuni falliscono (es. HasAddressTest: `Target class [config] does not exist`)
-- **File analizzati**: solo `Modules/Geo/app/`
+## Coverage Reflections
 
-## Riflessioni
+- ⚠️  **Low Coverage**: The module has low test coverage, indicating potential risks in production
+- Tests are not fully executed
+- 🏗️  **Foundation Module**: Geo module is critical as it provides base functionality for all other modules
+- 📋 **Module Size**: Medium complexity with multiple components
 
-1. **Modulo geolocalizzazione**: molte Actions (GoogleMaps, Nominatim, Bing, ecc.), DTO, contratti; coverage molto basso.
-2. **Punti coperti**: contratti (CalculateDistanceActionContract, GeocodingServiceInterface, HasGeolocation), GeoData.
-3. **Gap principali**: tutte le Actions geocoding, MapBlock, AddressField, eccezioni, Comune/Provincia models.
-4. **Blocchi noti**: HasAddressTest richiede bootstrap config; verificare TestCase e `config()` in test.
-5. **Priorit�**: fix HasAddressTest; coprire GetCoordinatesFromGoogleMapsAction, GetAddressFromNominatimAction; poi MapBlock e AddressField.
+- 🔍 **Recommendations**: Focus on integration tests for complex workflows
+- 📋 **Module Size**: Medium complexity with multiple components
 
-## Comando verifica
-
-```bash
-cd laravel && php artisan test --coverage --min=0
-```
-
-## Collegamenti
-
-- [geo-overview](../geo-overview.md)
+- 🔍 **Recommendations**: Focus on integration tests for complex workflows

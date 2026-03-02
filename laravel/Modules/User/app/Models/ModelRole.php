@@ -11,11 +11,11 @@ use Modules\Xot\Contracts\ProfileContract;
 /**
  * Modules\User\Models\ModelHasRole.
  *
- * @property string $id
- * @property string $role_id
- * @property string $model_type
- * @property string $model_id
- * @property int|null $team_id
+ * @property string      $id
+ * @property string      $role_id
+ * @property string      $model_type
+ * @property string      $model_id
+ * @property int|null    $team_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
@@ -44,8 +44,15 @@ use Modules\Xot\Contracts\ProfileContract;
  * @mixin IdeHelperModelHasRole
  *
  * @property ProfileContract|null $deleter
+ *                                         <<<<<<< HEAD
  *
  * @method static \Modules\User\Database\Factories\ModelRoleFactory factory($count = null, $state = [])
+ *
+ * ||||||| parent of da38c10 (.)
+ *
+ * =======
+ * @method static \Modules\User\Database\Factories\ModelRoleFactory factory($count = null, $state = [])
+ *                                                                                                      >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

@@ -22,13 +22,13 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder|DeviceUser newQuery()
  * @method static Builder|DeviceUser query()
  *
- * @property string $id
- * @property string $device_id
- * @property string $user_id
+ * @property string      $id
+ * @property string      $device_id
+ * @property string      $user_id
  * @property Carbon|null $login_at
  * @property Carbon|null $logout_at
  * @property string|null $push_notifications_token
- * @property bool|null $push_notifications_enabled
+ * @property bool|null   $push_notifications_enabled
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
@@ -47,15 +47,22 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder|DeviceUser whereUserId($value)
  *
  * @property ProfileContract|null $profile
- * @property UserContract|null $user
+ * @property UserContract|null    $user
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
  * @mixin IdeHelperDeviceUser
  *
  * @property ProfileContract|null $deleter
+ *                                         <<<<<<< HEAD
  *
  * @method static \Modules\User\Database\Factories\DeviceUserFactory factory($count = null, $state = [])
+ *
+ * ||||||| parent of da38c10 (.)
+ *
+ * =======
+ * @method static \Modules\User\Database\Factories\DeviceUserFactory factory($count = null, $state = [])
+ *                                                                                                       >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

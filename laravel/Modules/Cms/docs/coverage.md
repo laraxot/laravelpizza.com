@@ -1,29 +1,24 @@
-# Cms Module - Code Coverage
+# Code Coverage: Cms
 
-## Percentuale coverage
+**Lines Coverage:** N/A (Syntax Error)
+**Methods Coverage:** N/A (Syntax Error)
+**Classes Coverage:** N/A (Syntax Error)
+**Functions Coverage:** N/A (Syntax Error)
+**Test Status:** ❌ SYNTAX ERROR
 
-**~3%** (stima su suite root: 2 test)
+## Summary
 
-## Contesto misurazione
+This module contains Cms functionality for the application.
 
-- **Suite eseguita**: `tests/Unit` + `tests/Feature` (root)
-- **Test moduli**: i test in `Modules/Cms/tests/` non sono inclusi nella suite PHPUnit
-- **File analizzati**: solo `Modules/Cms/app/`
+## Coverage Reflections
 
-## Riflessioni
+- ⚠️  **Low Coverage**: The module has low test coverage, indicating potential risks in production
+- Tests are not fully executed
+- 🏗️  **Foundation Module**: Cms module is critical as it provides base functionality for all other modules
+- 📋 **Module Size**: Medium complexity with multiple components
 
-1. **Modulo core**: Cms gestisce pagine, blocchi, Folio/Volt; il coverage basso riflette l'assenza dei test Cms nella suite globale.
-2. **Punti coperti**: `LinkData`, `NavbarMenuData`, `ThemeData`, `BaseController`, pagine Create/Edit Filament, `Appearance` cluster.
-3. **Gap principali**: Actions (ResolvePage, ResolveBlockQuery, GetCmsView), blocchi Filament, middleware, componenti Volt.
-4. **Priorità**: coprire `ResolvePageAction`, `ResolveBlockQueryAction`; poi blocchi e middleware Folio.
+- 🔍 **Recommendations**: Focus on integration tests for complex workflows
+- 📝 **Content Management**: CMS functionality requires thorough testing of content rendering
+- 📋 **Module Size**: Medium complexity with multiple components
 
-## Comando verifica
-
-```bash
-cd laravel && php artisan test --coverage --min=0
-```
-
-## Collegamenti
-
-- [content-blocks-system](../content-blocks-system.md)
-- [folio-routing-locale](../folio-routing-locale.md)
+- 🔍 **Recommendations**: Focus on integration tests for complex workflows

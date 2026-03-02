@@ -214,3 +214,11 @@ MIGRATING profiles | CONN: user | DB: laravelpizza_user | EXISTS: YES
 MIGRATING tenant_user | CONN: user | DB: laravelpizza_user | EXISTS: YES
 MIGRATING profiles | CONN: user | DB: /var/www/_bases/base_laravelpizza/laravel/database/laravelpizza_user.sqlite | EXISTS: YES
 MIGRATING tenant_user | CONN: user | DB: /var/www/_bases/base_laravelpizza/laravel/database/laravelpizza_user.sqlite | EXISTS: YES
+MIGRATING profiles | CONN: user | DB: laravelpizza_user | EXISTS: YES
+MIGRATING tenant_user | CONN: user | DB: laravelpizza_user | EXISTS: YES
+MIGRATING profiles | CONN: user | DB: laravelpizza_user | EXISTS: YES
+MIGRATING tenant_user | CONN: user | DB: laravelpizza_user | EXISTS: YES
+MIGRATING profiles | CONN: user | DB: laravelpizza_user | EXISTS: YES
+MIGRATING tenant_user | CONN: user | DB: laravelpizza_user | EXISTS: YES
+MIGRATING profiles | CONN: user | DB: laravelpizza_user | EXISTS: YES
+MIGRATING tenant_user | CONN: user | DB: laravelpizza_user | EXISTS: YES

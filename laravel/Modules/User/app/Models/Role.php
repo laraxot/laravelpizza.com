@@ -24,23 +24,23 @@ use Webmozart\Assert\Assert;
 /**
  * Modules\User\Models\Role.
  *
- * @property int $id
- * @property string $uuid
- * @property string|null $team_id
- * @property string $name
- * @property string $guard_name
- * @property string|null $display_name
- * @property string|null $description
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Collection<int, Permission> $permissions
- * @property int|null $permissions_count
- * @property Team|null $team
+ * @property int                                                        $id
+ * @property string                                                     $uuid
+ * @property string|null                                                $team_id
+ * @property string                                                     $name
+ * @property string                                                     $guard_name
+ * @property string|null                                                $display_name
+ * @property string|null                                                $description
+ * @property Carbon|null                                                $created_at
+ * @property Carbon|null                                                $updated_at
+ * @property string|null                                                $updated_by
+ * @property string|null                                                $created_by
+ * @property Collection<int, Permission>                                $permissions
+ * @property int|null                                                   $permissions_count
+ * @property Team|null                                                  $team
  * @property Collection<int, Model&\Modules\Xot\Contracts\UserContract> $users
- * @property int|null $users_count
- * @property PermissionRole|null $pivot
+ * @property int|null                                                   $users_count
+ * @property PermissionRole|null                                        $pivot
  *
  * @method static Builder|Role newModelQuery()
  * @method static Builder|Role newQuery()
@@ -57,14 +57,26 @@ use Webmozart\Assert\Assert;
  * @method static Builder|Role withoutPermission($permissions)
  * @method static Builder|Role whereDescription($value)
  * @method static Builder|Role whereDisplayName($value)
- * @method static static firstOrCreate(array $attributes, array $values = [])
- * @method static static updateOrCreate(array $attributes, array $values = [])
+ * @method static static       firstOrCreate(array $attributes, array $values = [])
+ * @method static static       updateOrCreate(array $attributes, array $values = [])
+ *                                                                                   <<<<<<< HEAD
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
  * @method static \Modules\User\Database\Factories\RoleFactory factory($count = null, $state = [])
+ *
+ * ||||||| parent of da38c10 (.)
+ *
+ * =======
+ *
+ * @property \Modules\Meetup\Models\Profile|null $creator
+ * @property \Modules\Meetup\Models\Profile|null $deleter
+ * @property \Modules\Meetup\Models\Profile|null $updater
+ *
+ * @method static \Modules\User\Database\Factories\RoleFactory factory($count = null, $state = [])
+ *                                                                                                 >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */
