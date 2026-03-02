@@ -30,3 +30,4 @@ Indice centralizzato delle roadmap di moduli e temi.
 ## Panoramica progetto
 
 - [roadmap-progetto](../roadmap-progetto.md) - Stato globale, priorità, metriche
+- [roadmap-structure](../roadmap-structure.md) - Struttura obbligatoria docs/roadmap/
