@@ -180,5 +180,5 @@ return [
 
 - [Regole Traduzioni Xot](translation_rules.md)
 - [Best Practices Traduzioni](translations-best-practices.md)
-- [Documentazione Principale Traduzioni](../../../../../docs/translation_rules.md)
+- [Documentazione Principale Traduzioni](../../../docs/translation_rules.md)
 

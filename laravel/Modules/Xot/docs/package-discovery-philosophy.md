@@ -358,7 +358,7 @@ Each module uses this pattern:
 
 ```json
 {
-    "name": "laraxot/module_user_fila5",
+    "name": "laraxot/module_user_fila3",
     "extra": {
         "laravel": {
             "providers": [

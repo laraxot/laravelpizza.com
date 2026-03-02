@@ -5,7 +5,7 @@
 La documentazione del progetto è organizzata in modo gerarchico:
 
 ```
-base_predict_fila5_mono/
+base_predict_fila3_mono/
 ├── docs/                           # Documentazione globale del progetto
 │   ├── ARCHITECTURE.md            # Architettura generale
 │   ├── MODULES.md                 # Panoramica dei moduli
@@ -156,7 +156,7 @@ Quando si identifica una nuova regola o pattern importante:
 La documentazione del progetto è organizzata in modo gerarchico:
 
 ```
-base_predict_fila5_mono/
+base_predict_fila3_mono/
 ├── docs/                           # Documentazione globale del progetto
 │   ├── ARCHITECTURE.md            # Architettura generale
 │   ├── MODULES.md                 # Panoramica dei moduli

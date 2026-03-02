@@ -124,7 +124,7 @@ Codice pratico.
 
 ## Collegamenti
 - [Doc correlata](./relativa.md)
-- [Root docs](../../../../docs/correlata.md)
+- [Root docs](../../../docs/correlata.md)
 
 ```
 
@@ -195,7 +195,7 @@ DOPO:
 
 - [Template Standardizzato](./template-docs.md)
 - [Guida Refactoring](./refactoring-guide.md)
-- [Root Ottimizzazioni](../../../../docs/ottimizzazioni-modulari.md)
+- [Root Ottimizzazioni](../../../docs/ottimizzazioni-modulari.md)
 
 ## 🏷️ **Tag Ottimizzazione**
 

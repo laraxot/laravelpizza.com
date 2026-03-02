@@ -111,9 +111,9 @@ The Lang module's MCP configuration enables AI assistants to interact with:
 
 ## 📚 Related Documentation
 
-- [Asana MCP Configuration](../../../../../docs/mcp-asana-configuration.md)
-- [ClickUp MCP Configuration](../../../../../docs/mcp-clickup-configuration.md)
-- [Redmine MCP Configuration](../../../../../docs/mcp-redmine-configuration.md)
+- [Asana MCP Configuration](../../../../docs/mcp-asana-configuration.md)
+- [ClickUp MCP Configuration](../../../../docs/mcp-clickup-configuration.md)
+- [Redmine MCP Configuration](../../../../docs/mcp-redmine-configuration.md)
 - [Lang Module Roadmap](./roadmap-[date].md)
 
 ---

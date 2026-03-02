@@ -45,7 +45,7 @@ Tutti i file risolti rispettano:
 
 ## Collegamenti
 
-- [Documentazione Root Activity](../../../../../../../../docs/modules/activity.md)
+- [Documentazione Root Activity](../../../../docs/modules/activity.md)
 - [Event Sourcing Architecture](./event-sourcing.md)
 - [Prediction Market Use Cases](./use_cases/prediction_market/index.md)
 

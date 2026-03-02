@@ -167,7 +167,7 @@ Per le regole generali e condivise tra tutti i moduli, consulta anche:
 - [Regole Generali per i Namespace](/laravel/modules/xot/docs/namespace-rules.md)
 - [Convenzioni di Codice](/laravel/modules/xot/docs/code-conventions.md)
 - [Struttura dei Moduli](/laravel/modules/xot/docs/module-structure.md)
-- [Collegamento Bidirezionale: Documentazione Root](../../../../../docs/links.md)
+- [Collegamento Bidirezionale: Documentazione Root](../../../../docs/links.md)
 
 ### Esempio 5: Console Command
 

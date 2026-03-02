@@ -4,7 +4,7 @@
 
 set -e
 
-MODULES_DIR="/var/www/_bases/base_quaeris_fila5_mono/laravel/Modules"
+MODULES_DIR="/var/www/_bases/base_quaeris_fila4_mono/laravel/Modules"
 
 echo "🔍 Correzione Naming Conventions - Tutti i Moduli"
 echo "================================================"

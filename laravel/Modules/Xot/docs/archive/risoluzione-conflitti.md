@@ -105,8 +105,8 @@ Per le best practices complete, consultare il file [best_practices.md](conflicts
 
 ## Collegamenti Esterni
 
-- [Documentazione generale sulla risoluzione dei conflitti git](../../../../../docs/risoluzione_conflitti_git.md)
-- [Report completo di intervento](../../../../../docs/logs/conflict_resolution_report.md)
+- [Documentazione generale sulla risoluzione dei conflitti git](../../../docs/risoluzione_conflitti_git.md)
+- [Report completo di intervento](../../../docs/logs/conflict_resolution_report.md)
 - [Dettagli risoluzione ModelWithPosContract](./conflicts/model_with_pos_contract_resolution.md)
 
 ## XotBaseMainPanelProvider.php
@@ -231,5 +231,5 @@ aurmich/dev
 b6f667c (.)
 * [Risoluzione Conflitti Xot](../../../xot/docs/risoluzione_conflitti.md)
 * [Risoluzione Conflitti Tenant](../../../tenant/docs/risoluzione_conflitti.md)
-* [Linee Guida Principali Risoluzione Conflitti](../../../../../docs/conflict_resolution.md)
+* [Linee Guida Principali Risoluzione Conflitti](../../../../docs/conflict_resolution.md)
 fc83074 (.)

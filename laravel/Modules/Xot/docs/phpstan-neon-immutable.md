@@ -19,5 +19,5 @@ cd laravel
 
 ## Collegamenti
 
-- [phpstan-neon-immutable.mdc](../../../.cursor/rules/phpstan-neon-immutable.mdc)
-- [phpstan-no-level-parameter.md](../../../.cursor/rules/phpstan-no-level-parameter.md)
+- [PHPSTAN_RULES](../../../.cursor/rules/PHPSTAN_RULES.mdc)
+- [phpstan-level-10-rules](../../../docs/phpstan-level-10-rules.md)

@@ -157,4 +157,4 @@ class MyModel extends BaseModel
 
 - [Laravel 12 HasFactory Trait](https://github.com/laravel/framework/blob/12.x/src/Illuminate/Database/Eloquent/Factories/HasFactory.php)
 - [PHP 8.3 Method Signature Compatibility](https://www.php.net/manual/en/language.oop5.basic.php)
-- [Xot BaseModel Pattern](../../../../../docs/traits/hasxotfactory.md)
+- [Xot BaseModel Pattern](../../docs/traits/hasxotfactory.md)

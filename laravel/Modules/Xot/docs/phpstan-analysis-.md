@@ -791,7 +791,7 @@ test('it can create and manage tenants', function (): void {
 - ✅ **check-all-modules.sh** - Controllo batch tutti i moduli
 
 ### Path Corretti
-- ✅ **mysql-db-connector.js** - Path corretto a `base_techplanner_fila5_mono`
+- ✅ **mysql-db-connector.js** - Path corretto a `base_techplanner_fila4_mono`
 
 ---
 

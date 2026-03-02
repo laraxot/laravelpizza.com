@@ -20,7 +20,7 @@ To activate the fix, update your CCR configuration (usually `~/.claude-code-rout
 
 ```json
 {
-  "CUSTOM_ROUTER_PATH": "/var/www/_bases/base_ptvx_fila5_mono/bashscripts/ccr/custom-router.js"
+  "CUSTOM_ROUTER_PATH": "/var/www/_bases/base_ptvx_fila4_mono/bashscripts/ccr/custom-router.js"
 }
 ```
 

@@ -22,7 +22,7 @@
   - [Notify Namespace Rules](../../notify/docs/namespace_rules.md)
 
 ## Collegamenti
-- [Regole Namespace Moduli - Root Docs](../../../../../docs/namespace-moduli.md)
+- [Regole Namespace Moduli - Root Docs](../../../docs/namespace-moduli.md)
 
 ---
 

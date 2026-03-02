@@ -76,7 +76,7 @@ public function getTableColumns(): array
 
 ## Collegamenti
 - [Esempio e Applicazione - Modulo User](../../../user/docs/filament/filament_table_columns.md)
-- [Regola Globale - Root Docs](../../../../../docs/filament-table-columns.md)
+- [Regola Globale - Root Docs](../../../../docs/filament-table-columns.md)
 
 ## Nota storica: correzione XotBaseManageRelatedRecords
 

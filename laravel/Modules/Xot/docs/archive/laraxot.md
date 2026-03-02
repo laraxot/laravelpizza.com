@@ -1971,14 +1971,14 @@ A partire dal 10 Marzo 2025, tutti i moduli devono essere validati con PHPStan a
 Per validare tutti i moduli con PHPStan a livello 7:
 
 ```bash
-cd base_orisbroker_fila5/laravel
+cd base_orisbroker_fila3/laravel
 vendor/bin/phpstan analyse Modules --configuration=phpstan.neon
 ```
 
 Per validare un singolo modulo:
 
 ```bash
-cd base_orisbroker_fila5/laravel
+cd base_orisbroker_fila3/laravel
 vendor/bin/phpstan analyse Modules/NomeModulo --configuration=phpstan.neon
 ```
 
@@ -8016,7 +8016,7 @@ Le pagine di lista devono seguire questa struttura:
 La struttura base del progetto segue questo schema:
 ```
                    # Root del workspace
-└── base_orisbroker_fila5/          # Directory principale del progetto
+└── base_orisbroker_fila3/          # Directory principale del progetto
     └── laravel/                    # Applicazione Laravel
         └── Modules/               # Directory dei moduli
             └── [ModuleName]/     # Singolo modulo

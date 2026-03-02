@@ -293,8 +293,8 @@ Questo documento descrive l'architettura frontend basata su Folio, Volt e Filame
 ### Documentazione Correlata
 - [README](../readme.md) - Panoramica del modulo Xot
 - [Struttura dei Moduli](./module_structure.md) - Convenzioni di struttura dei moduli
-- [Convenzioni di Naming](../../../../../docs/convenzioni-naming-campi.md) - Convenzioni per i nomi dei campi
-- [Flusso di Registrazione](../../../../../docs/flusso-registrazione.md) - Implementazione del wizard multi-step
+- [Convenzioni di Naming](../../../docs/convenzioni-naming-campi.md) - Convenzioni per i nomi dei campi
+- [Flusso di Registrazione](../../../docs/flusso-registrazione.md) - Implementazione del wizard multi-step
 
 ### Moduli Collegati
 - [UI](../../ui/docs/readme.md) - Componenti di interfaccia

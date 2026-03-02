@@ -13,4 +13,4 @@ Sono presenti marker di conflitto git nel file `app/Filament/Actions/Table/Conve
 - Verrà verificata la sintassi e la coerenza dopo la correzione.
 
 ## Collegamenti
-- [Documentazione root risoluzione conflitti](../../../../../docs/risoluzione_conflitti_git.md#media-filament-actions-table-convertactionphp)
+- [Documentazione root risoluzione conflitti](../../../../docs/risoluzione_conflitti_git.md#media-filament-actions-table-convertactionphp)

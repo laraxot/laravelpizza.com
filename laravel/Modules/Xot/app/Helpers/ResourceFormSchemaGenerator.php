@@ -73,7 +73,7 @@ class ResourceFormSchemaGenerator
     public static function generateForAllResources(): array
     {
         $resourceFiles = glob(
-            '/var/www/html/base_orisbroker_fila5/laravel/Modules/*/app/Filament/Resources/*Resource.php',
+            '/var/www/html/base_orisbroker_fila3/laravel/Modules/*/app/Filament/Resources/*Resource.php',
         );
 
         $results = ['updated' => [], 'skipped' => []];

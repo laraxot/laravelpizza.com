@@ -1,5 +1,5 @@
 {
-  "name": "laraxot/module_xot_fila5",
+  "name": "laraxot/module_xot_fila3",
   "description": "xot module, heart of the laraxot repository",
   "keywords": [
     "laraxot",
@@ -9,7 +9,7 @@
     "module_xot",
     "filament"
   ],
-  "homepage": "https://github.com/laraxot/module_xot_fila5",
+  "homepage": "https://github.com/laraxot/module_xot_fila3",
   "license": "MIT",
   "authors": [
     {

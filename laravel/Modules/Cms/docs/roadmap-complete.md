@@ -376,7 +376,7 @@ La cartella `docs/` è ben organizzata con:
 ## 🔗 Collegamenti Utili
 
 ### Documentazione Correlata
-- [Roadmap Progetto](../../../../../../../docs/roadmap_project.md)
+- [Roadmap Progetto](../../../../docs/roadmap_project.md)
 - [Modulo User](../../user/docs/roadmap_complete.md)
 - [Modulo Media](../../media/docs/readme.md)
 - [Theme Sixteen](../../../themes/sixteen/docs/readme.md)

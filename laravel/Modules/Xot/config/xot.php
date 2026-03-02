@@ -13,10 +13,10 @@ return [
      * |
      */
     'paths' => [
-        'base' => '/var/www/html/exa/base_orisbroker_fila5',
-        'laravel' => '/var/www/html/exa/base_orisbroker_fila5/laravel',
-        'modules' => '/var/www/html/exa/base_orisbroker_fila5/laravel/Modules',
-        'docs' => '/var/www/html/exa/base_orisbroker_fila5/docs',
+        'base' => '/var/www/html/exa/base_orisbroker_fila3',
+        'laravel' => '/var/www/html/exa/base_orisbroker_fila3/laravel',
+        'modules' => '/var/www/html/exa/base_orisbroker_fila3/laravel/Modules',
+        'docs' => '/var/www/html/exa/base_orisbroker_fila3/docs',
     ],
     /*
      * |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return [
      * |
      */
     'module_paths' => [
-        'xot' => '/var/www/html/exa/base_orisbroker_fila5/laravel/Modules/Xot',
-        'broker' => '/var/www/html/exa/base_orisbroker_fila5/laravel/Modules/Broker',
+        'xot' => '/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot',
+        'broker' => '/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Broker',
     ],
 ];

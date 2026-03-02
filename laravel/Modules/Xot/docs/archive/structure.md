@@ -292,7 +292,7 @@ Data: 2025-04-23 19:09:56
 - **Namespace principale**: Modules\\Xot
 Modules\\Xot\\Database\\Factories
 Modules\\Xot\\Database\\Seeders
-- **Pacchetto Composer**: laraxot/module_xot_fila5
+- **Pacchetto Composer**: laraxot/module_xot_fila3
 marco sottana
 - **Dipendenze**: php ^8.2 calebporzio/sushi ^2.5 coolsam/panel-modules * doctrine/dbal * fidum/laravel-eloquent-morph-to-one * filament/filament ^3.3 filament/spatie-laravel-media-library-plugin ^3.2 filament/spatie-laravel-translatable-plugin ^3.2 aaronfrancis/fast-paginate * guzzlehttp/guzzle * laravel/folio ^1.1 laravel/framework * laravel/pennant ^1.11 laravel/pulse ^1.2 livewire/livewire * maatwebsite/excel ^3.1 nwidart/laravel-modules * predis/predis ^2.2 spatie/cpu-load-health-check ^1.0 spatie/laravel-data ^4.7
 - **Totale file PHP**: 968

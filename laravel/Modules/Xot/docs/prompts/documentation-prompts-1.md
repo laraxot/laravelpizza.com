@@ -55,7 +55,7 @@ Questo documento descrive le regole e le best practices per i prompt di document
 - MAI usare percorsi che iniziano con `documento.md)
 [Documento in Sottodirectory](./sottodirectory/documento.md)
 [Documento in Modulo Altro](../../altromodulo/docs/documento.md)
-[Documento in Root](../../../../../docs/documento.md)
+[Documento in Root](../../../docs/documento.md)
 ```
 
 ### Formato Non Corretto
