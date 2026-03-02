@@ -26,4 +26,4 @@ Le dipendenze specifiche per notifiche (Firebase, FCM, Telegram, ecc.) vanno in 
 ## Riferimenti
 
 - [Composer Module Dependency Management](../../Xot/docs/composer-module-dependency-management.md)
-- [composer-merge-plugin](../../../../../../docs/composer-merge-plugin.md)
+- [composer-merge-plugin](../../../../docs/composer-merge-plugin.md)

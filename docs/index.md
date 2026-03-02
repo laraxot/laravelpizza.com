@@ -217,8 +217,8 @@ Benvenuto nella documentazione di **LaravelPizza.com** - una piattaforma complet
 
 ### Quality & Testing
 - [PHPStan Code Quality Guide](../laravel/Modules/Xot/docs/phpstan-code-quality-guide.md) - Type safety
-- [Testing Strategy](../laravel/docs/testing-strategy.md) - Approccio ai test
-- [PHPStan Zero Errors](../laravel/docs/phpstan-zero-errors-achievement-2025-12-18.md) - Come raggiungere Level 10
+- [Testing Strategy](testing-strategy.md) - Approccio ai test
+- [PHPStan Zero Errors](phpstan-zero-errors-achievement-2025-12-18.md) - Come raggiungere Level 10
 
 ### Development
 - [Getting Started](getting-started.md) - Setup rapido

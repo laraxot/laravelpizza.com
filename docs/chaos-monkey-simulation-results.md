@@ -333,10 +333,10 @@ Overall readiness: 100%
 - `.agents/docs/agents-guide/15-chaos-monkey/chaos-monkey-readiness.md`
 
 ✅ Chaos Monkey Memory
-- `laravel/docs/memory/cms-theme-chaos-monkey-memory.md`
+- `docs/memory/cms-theme-chaos-monkey-memory.md`
 
 ✅ Chaos Monkey Skills
-- `laravel/docs/rules/cms-theme-chaos-monkey-skills.md`
+- `docs/rules/cms-theme-chaos-monkey-skills.md`
 
 ## Recommendations
 

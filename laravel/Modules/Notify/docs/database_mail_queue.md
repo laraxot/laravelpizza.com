@@ -404,7 +404,7 @@ php artisan queue:restart
 ## Collegamenti
 - [Database Mail System](database-mail-system.md)
 - [Mail Templates](database-mail-templates.md)
-- [Queue Configuration](../../../../../../docs/queue-configuration.md)
+- [Queue Configuration](../../../docs/queue-configuration.md)
 
 ## Vedi Anche
 - [Laravel Queues](https://laravel.com/docs/queues)

@@ -1,5 +1,5 @@
 {
-  "name": "laraxot/module_notify_fila5",
+  "name": "laraxot/module_notify_fila3",
   "description": "Notification management module for the Laraxot ecosystem: email, SMS, WhatsApp, Telegram, and FCM push.",
   "keywords": [
     "laraxot",
@@ -14,7 +14,7 @@
     "telegram",
     "fcm"
   ],
-  "homepage": "https://github.com/laraxot/module_notify_fila5.git",
+  "homepage": "https://github.com/laraxot/module_notify_fila3.git",
   "license": "MIT",
   "authors": [
     {

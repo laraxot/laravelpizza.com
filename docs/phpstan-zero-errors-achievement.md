@@ -362,7 +362,7 @@ quality:
 - `Modules/Xot/docs/phpstan-code-quality-guide.md` - Complete guide
 - `Modules/Xot/docs/php-quality-guide.md` - PHP best practices
 - `Modules/Cms/docs/phpstan-level-10-achievement.md` - Cms module achievement
-- `laravel/docs/mcp-servers-complete-guide.md` - MCP setup for quality tools
+- `docs/mcp-servers-complete-guide.md` - MCP setup for quality tools
 
 ### External Resources
 

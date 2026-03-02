@@ -255,9 +255,9 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
 - [Risoluzione dei Loghi](logo_resolution.md) - **IMPORTANTE**: Processo dettagliato di risoluzione dei loghi
 - [Gestione Asset](assets.md)
 - [Struttura Temi](themes.md)
-- [Linee Guida per i Loghi](../../../../../../docs/standards/logo_guidelines.md)
-- [Documentazione Principale](../../../../../../docs/readme.md)
-- [Standard di Progetto](../../../../../../docs/standards/readme.md)
+- [Linee Guida per i Loghi](../../../../../../../docs/standards/logo_guidelines.md)
+- [Documentazione Principale](../../../../../../../docs/readme.md)
+- [Standard di Progetto](../../../../../../../docs/standards/readme.md)
 - [Gestione Media](../../media/docs/readme.md)
 - [Gestione UI](../../ui/docs/readme.md)
 - [Gestione Temi](../../cms/docs/themes.md)
@@ -272,8 +272,8 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
 - [Documentazione UI](../../ui/docs/configuration.md)
 - [Documentazione Media](../../media/docs/assets.md)
 - [Documentazione Temi](../../cms/docs/theming.md)
-- [Standard Interfaccia](../../../../../../docs/standards/interface_guidelines.md)
-- [Best Practices](../../../../../../docs/standards/best_practices.md)
+- [Standard Interfaccia](../../../../../../../docs/standards/interface_guidelines.md)
+- [Best Practices](../../../../../../../docs/standards/best_practices.md)
 
 # Configurazione Basata sul Dominio
 

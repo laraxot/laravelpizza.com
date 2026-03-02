@@ -130,4 +130,4 @@ Tutte le chiamate a `trans()` devono usare la sintassi corretta:
 ---
 
 **File di riepilogo completo**:  
-`/var/www/_bases/base_laravelpizza/laravel/docs/translation-critical-rules.md`
+`/var/www/_bases/base_laravelpizza/docs/translation-critical-rules.md`

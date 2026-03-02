@@ -88,6 +88,6 @@ abstract class BaseModel extends XotBaseModel
 ## Backlink e Riferimenti
 
 - [modules/xot/docs/model_base_rules.md](model_base_rules.md)
-- [docs/MODULE_NAMESPACE_RULES.md](../../../../../docs/module_namespace_rules.md)
+- [docs/MODULE_NAMESPACE_RULES.md](../../../../../../docs/module_namespace_rules.md)
 - [modules/performance/docs/organizzativa-models.md](../performance/docs/organizzativa-models.md)
 

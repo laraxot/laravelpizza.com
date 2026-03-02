@@ -283,11 +283,11 @@ php artisan test --testsuite=Lang
 
 ## 🔗 Collegamenti Sistema
 
-- [**Documentazione Core Sistema**](../../../../../docs/core/)
-- [**PHPStan Guide**](../../../../../docs/core/phpstan-guide.md)
-- [**Filament Best Practices**](../../../../../docs/core/filament-best-practices.md)
-- [**Convenzioni Sistema**](../../../../../docs/core/conventions.md)
-- [**Template Moduli**](../../../../../docs/templates/)
+- [**Documentazione Core Sistema**](../../docs/core/)
+- [**PHPStan Guide**](../../docs/core/phpstan-guide.md)
+- [**Filament Best Practices**](../../docs/core/filament-best-practices.md)
+- [**Convenzioni Sistema**](../../docs/core/conventions.md)
+- [**Template Moduli**](../../docs/templates/)
 
 ---
 

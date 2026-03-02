@@ -246,8 +246,8 @@ public static function getTableActions(): array
 
 ### Collegamenti ai Moduli
 - [XotBaseResource](../../Xot/project_docs/XotBaseResource.md)
-- [Architettura Filament](../../../../../../../docs/architecture/filament.md)
-- [Gestione Notifiche](../../../../../../../docs/architecture/notifications.md)
+- [Architettura Filament](../../../../../docs/architecture/filament.md)
+- [Gestione Notifiche](../../../../../docs/architecture/notifications.md)
 
 ### Collegamenti ai Moduli
 - [XotBaseResource](../../Xot/docs/XotBaseResource.md)
@@ -275,8 +275,8 @@ public static function getTableActions(): array
 * [filament-resources.md](../../Xot/project_docs/filament-resources.md)
 * [filament-resources.md](../../Patient/project_docs/filament-resources.md)
 * [filament-resources.md](../../Cms/project_docs/filament-resources.md)
-* [filament-resources.md](../../../../../../../docs/tecnico/filament/filament-resources.md)
-* [filament-resources.md](../../../../../../../docs/regole/filament-resources.md)
+* [filament-resources.md](../../../../../docs/tecnico/filament/filament-resources.md)
+* [filament-resources.md](../../../../../docs/regole/filament-resources.md)
 * [filament-resources.md](../../Gdpr/docs/filament-resources.md)
 * [filament-resources.md](../../Xot/docs/filament-resources.md)
 * [filament-resources.md](../../Patient/docs/filament-resources.md)

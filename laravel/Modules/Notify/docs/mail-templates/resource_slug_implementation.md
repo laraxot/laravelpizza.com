@@ -174,5 +174,5 @@ return [
 - [Implementazione del Modello](./MODEL_SLUG_IMPLEMENTATION.md)
 - [Struttura della Migrazione](./MIGRATION_STRUCTURE.md)
 - [Guida alla Migrazione](../MAIL_TEMPLATE_MIGRATION_GUIDE.md)
-- [Convenzioni Filament](../../../../../../../docs/FILAMENT_CONVENTIONS.md)
-- [Regole per Filament](../../../../../../../docs/FILAMENT_RULES.md)
+- [Convenzioni Filament](../../../../../docs/FILAMENT_CONVENTIONS.md)
+- [Regole per Filament](../../../../../docs/FILAMENT_RULES.md)

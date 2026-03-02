@@ -13,10 +13,10 @@ Questa documentazione descrive la relazione many-to-many tra utenti e team nel m
 
 ## Soluzione
 - Creata la migrazione per la tabella `doctor_team` estendendo `XotBaseMigration`.
-- Seguite le best practice documentate in [docs/database-migrations.md](mdc:../../../../../../docs/database-migrations.md).
+- Seguite le best practice documentate in [docs/database-migrations.md](mdc:../../../../../../../docs/database-migrations.md).
 
 ## Collegamenti
-- [Documentazione generale sulle migrazioni](mdc:../../../../../../docs/database-migrations.md)
+- [Documentazione generale sulle migrazioni](mdc:../../../../../../../docs/database-migrations.md)
 - [Best practice XotBaseMigration](mdc:../../xot/docs/migrations.md)
 
 ---

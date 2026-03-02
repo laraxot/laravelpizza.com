@@ -131,6 +131,6 @@ public function getTableFiltersFormColumns(): int
 
 ## Link Correlati
 
-- [Documentazione Filament](../../../../../../docs/filament/index.md)
-- [Gestione Tabelle](../../../../../../docs/filament/tables.md)
-- [Azioni Personalizzate](../../../../../../docs/filament/actions.md)
+- [Documentazione Filament](../../../../../../../docs/filament/index.md)
+- [Gestione Tabelle](../../../../../../../docs/filament/tables.md)
+- [Azioni Personalizzate](../../../../../../../docs/filament/actions.md)

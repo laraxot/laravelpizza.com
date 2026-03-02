@@ -34,7 +34,7 @@
 - 🗑️ **[Cleanup Plan](./todo.md)** - Strategia per gestire i 550+ documenti accumulati.
 
 ## 📦 **Pacchetti Composer**
-- [Riferimento completo](../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../docs/architecture/composer-packages-full-inventory.md)
+- [Riferimento completo](../../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../../docs/architecture/composer-packages-full-inventory.md)
 - `laravel/passport` - OAuth2 API
 - `socialiteproviders/microsoft`, `socialiteproviders/auth0` - OAuth
 - `flowframe/laravel-trend` - Statistiche

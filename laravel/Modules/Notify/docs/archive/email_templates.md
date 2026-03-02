@@ -11,9 +11,9 @@ Il modulo Notify implementa un sistema avanzato di gestione delle email template
 **Status**: CRITICO - Sistema registrazione bloccato  
 
 ➡️ **Documentazione completa**: [<nome progetto>: Missing Mail Template Error](../../<nome progetto>/docs/errori/missing-mail-template-spatiemail.md)  
-➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../../../../docs/errori_gravi/missing-mail-template-patterns.md)
+➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../../docs/errori_gravi/missing-mail-template-patterns.md)
 ➡️ **Documentazione completa**: [SaluteOra: Missing Mail Template Error](../../saluteora/docs/errori/missing-mail-template-spatiemail.md)  
-➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../../../../docs/errori_gravi/missing-mail-template-patterns.md)➡️ **Documentazione completa**: [SaluteOra: Missing Mail Template Error](../../saluteora/project_docs/errori/missing-mail-template-spatiemail.md)  
+➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../../docs/errori_gravi/missing-mail-template-patterns.md)➡️ **Documentazione completa**: [SaluteOra: Missing Mail Template Error](../../saluteora/project_docs/errori/missing-mail-template-spatiemail.md)  
 ➡️ **Pattern globali**: [Missing Mail Template Patterns](../../../project_docs/errori_gravi/missing-mail-template-patterns.md)
 
 ### Fix Immediato
@@ -306,15 +306,15 @@ php artisan tinker
 ### **Errori Critici e Soluzioni**
 - [<nome progetto>: Missing Mail Template Error](../../<nome progetto>/docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 - [SaluteOra: Missing Mail Template Error](../../saluteora/docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
-- [Missing Mail Template Patterns](../../../../../../docs/errori_gravi/missing-mail-template-patterns.md) - Pattern globali
-- [Array to String Conversion](../../../../../../docs/errori_gravi/array-to-string-conversion-patterns.md) - Errore correlato
+- [Missing Mail Template Patterns](../../../../docs/errori_gravi/missing-mail-template-patterns.md) - Pattern globali
+- [Array to String Conversion](../../../../docs/errori_gravi/array-to-string-conversion-patterns.md) - Errore correlato
 
 ### **Documentazione Tecnica**
 - [Documentazione Spatie Mail Templates](https://github.com/spatie/laravel-database-mail-templates)
 - [Gestione Traduzioni](../lang/docs/translation_keys_best_practices.md)
-- [Configurazione Email](../../../../../../docs/email-configuration.md)
+- [Configurazione Email](../../../../docs/email-configuration.md)
 - [SaluteOra: Missing Mail Template Error](../../saluteora/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
-- [Configurazione Email](../../../../../../docs/email-configuration.md)- [SaluteOra: Missing Mail Template Error](../../saluteora/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
+- [Configurazione Email](../../../../docs/email-configuration.md)- [SaluteOra: Missing Mail Template Error](../../saluteora/project_docs/errori/missing-mail-template-spatiemail.md) - **URGENT**
 - [Missing Mail Template Patterns](../../../project_docs/errori_gravi/missing-mail-template-patterns.md) - Pattern globali
 - [Array to String Conversion](../../../project_docs/errori_gravi/array-to-string-conversion-patterns.md) - Errore correlato
 

@@ -304,7 +304,7 @@ Moduli con logica inline complessa:
 
 ### Guide Filosofiche
 - [Accessor Refactoring Philosophy](../../sigma/docs/accessor-refactoring-philosophy.md)
-- [Philosophy Guide PTVX](../../../../../../docs/philosophy-guide.md)
+- [Philosophy Guide PTVX](../../../../../../../docs/philosophy-guide.md)
 
 ### Guide Operative
 - [Accessor Refactoring Roadmap](../../sigma/docs/accessor-refactoring-roadmap.md)

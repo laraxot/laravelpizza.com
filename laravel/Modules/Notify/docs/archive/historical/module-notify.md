@@ -1,10 +1,10 @@
 # Modulo Notify
 
 ## Informazioni Generali
-- **Nome**: `laraxot/module_notify_fila5`
+- **Nome**: `laraxot/module_notify_fila3`
 - **Descrizione**: Modulo dedicato alla gestione delle notifiche
 - **Namespace**: `Modules\Notify`
-- **Repository**: https://github.com/laraxot/module_notify_fila5.git
+- **Repository**: https://github.com/laraxot/module_notify_fila3.git
 
 ## Service Providers
 1. `Modules\Notify\Providers\NotifyServiceProvider`

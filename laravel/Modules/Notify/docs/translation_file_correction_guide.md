@@ -29,7 +29,7 @@ touch /var/www/html/ptvx/laravel/Modules/Notify/lang/it/nome_corretto.php
 =======
 touch /var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/nome_corretto.php
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
-touch /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify/lang/it/nome_corretto.php
+touch /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/nome_corretto.php
 
 # 2. Copiare e correggere il contenuto
 
@@ -51,10 +51,10 @@ grep -r "nome_errato" /var/www/html/healthcare_app/laravel/Modules/Notify
 # 4. Rimuovere il file con naming errato
 rm /var/www/html/healthcare_app/laravel/Modules/Notify/lang/it/nome_errato.php
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
-grep -r "nome_errato" /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify
+grep -r "nome_errato" /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify
 
 # 4. Rimuovere il file con naming errato
-rm /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify/lang/it/nome_errato.php
+rm /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/it/nome_errato.php
 ```
 
 ## Passo 3: Correzione della Struttura del File
@@ -107,7 +107,7 @@ ls /var/www/html/ptvx/laravel/Modules/Notify/lang/en/nome_file.php
 =======
 ls /var/www/html/healthcare_app/laravel/Modules/Notify/lang/en/nome_file.php
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
-ls /var/www/html/_bases/base_techplanner_fila5_mono/laravel/Modules/Notify/lang/en/nome_file.php
+ls /var/www/html/_bases/base_techplanner_fila3_mono/laravel/Modules/Notify/lang/en/nome_file.php
 
 # 2. Se esiste, aggiornarlo con la stessa struttura
 

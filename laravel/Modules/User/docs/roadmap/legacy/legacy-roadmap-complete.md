@@ -404,7 +404,7 @@ La cartella `docs/` contiene ~300+ file con molti duplicati:
 ## 🔗 Collegamenti Utili
 
 ### Documentazione Correlata
-- [Roadmap Progetto](../../../../../../docs/roadmap_project.md)
+- [Roadmap Progetto](../../../../../../../docs/roadmap_project.md)
 - [Modulo Fixcity](../../fixcity/docs/roadmap.md)
 - [Modulo Tenant](../../tenant/docs/readme.md)
 - [Spatie Permissions](https://spatie.be/docs/laravel-permission)

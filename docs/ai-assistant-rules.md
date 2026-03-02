@@ -112,7 +112,7 @@ AI: "Vuoi che inizi con PHPStan o con i docs?"
    - Component structure
    - Styling guidelines
 
-3. Root: laravel/docs/
+3. Root: docs/
    - Cross-cutting concerns
    - Project-wide guidelines
    - Master documentation
@@ -258,7 +258,7 @@ REGOLA: Esattamente 1 task in_progress per volta
 ✅ USA cartelle esistenti:
 - Modules/{Module}/docs/
 - Themes/{Theme}/docs/
-- laravel/docs/
+- docs/
 
 ❌ NON creare:
 - Modules/{Module}/documentation/

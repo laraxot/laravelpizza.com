@@ -79,7 +79,7 @@
 
 **New Documentation**:
 ```
-laravel/docs/mcp-servers-complete-guide.md
+docs/mcp-servers-complete-guide.md
 ```
 
 **Content**:
@@ -118,7 +118,7 @@ laravel/docs/mcp-servers-complete-guide.md
 
 **New Documentation**:
 ```
-laravel/docs/phpstan-zero-errors-achievement-2025-12-18.md
+docs/phpstan-zero-errors-achievement-2025-12-18.md
 ```
 
 **Content**:
@@ -216,7 +216,7 @@ laravel/docs/phpstan-zero-errors-achievement-2025-12-18.md
 
 **New Documentation**:
 ```
-laravel/docs/ai-assistant-rules.md
+docs/ai-assistant-rules.md
 ```
 
 **Content** (8 Critical Rules):
@@ -253,17 +253,17 @@ laravel/docs/ai-assistant-rules.md
 ### Master Guides
 
 1. **MCP Servers Complete Guide**
-   - Path: `laravel/docs/mcp-servers-complete-guide.md`
+   - Path: `docs/mcp-servers-complete-guide.md`
    - Size: ~500 lines
    - Purpose: Centralized MCP configuration knowledge
 
 2. **PHPStan Zero Errors Achievement**
-   - Path: `laravel/docs/phpstan-zero-errors-achievement-2025-12-18.md`
+   - Path: `docs/phpstan-zero-errors-achievement-2025-12-18.md`
    - Size: ~600 lines
    - Purpose: Document quality milestone, maintenance strategy
 
 3. **AI Assistant Rules**
-   - Path: `laravel/docs/ai-assistant-rules.md`
+   - Path: `docs/ai-assistant-rules.md`
    - Size: ~400 lines
    - Purpose: Codify operational rules for AI assistant
 
@@ -328,7 +328,7 @@ laravel/docs/ai-assistant-rules.md
    - Impact: Better navigation, easier to find information
 
 5. **Create Master Documentation Index**
-   - Path: `laravel/docs/README.md` or `laravel/docs/index.md`
+   - Path: `docs/README.md` or `docs/index.md`
    - Content: Navigation guide to all major documentation
    - Links: Cross-references between modules, themes, guides
    - Impact: Easy entry point for new developers

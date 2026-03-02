@@ -228,4 +228,4 @@ public function getTableActions(): array
 
 ## Collegamenti alla Documentazione Specifica
 
-- [Standard di Codice nel Progetto](../../../../../../../docs/standard-codice.md)
+- [Standard di Codice nel Progetto](../../../../../../../../docs/standard-codice.md)

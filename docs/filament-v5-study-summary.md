@@ -841,7 +841,7 @@ grep -r "<livewire:" {PROJECT_ROOT}/laravel/Modules/*/resources/views/
 
 ### Project Resources
 - Project IFLOW.md: {PROJECT_ROOT}/bashscripts/ai/IFLOW.md
-- Filament {CURRENT_VERSION} Upgrade Guide: {PROJECT_ROOT}/laravel/docs/filament-v5-upgrade-guide.md
+- Filament {CURRENT_VERSION} Upgrade Guide: {PROJECT_ROOT}/docs/filament-v5-upgrade-guide.md
 - Modules Directory: {PROJECT_ROOT}/laravel/Modules/
 
 ---

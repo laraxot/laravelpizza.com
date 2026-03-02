@@ -58,7 +58,7 @@ grep -r "interface.*Contract" --include="*.php" Modules
 ## Riferimenti
 
 - [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
-- [PTVX Code Quality Guidelines](docs/code-quality.md)
+- [PTVX Code Quality Guidelines](laravel/docs/code-quality.md)
 - [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
 - [Modulo Xot Contracts](Modules/Xot/app/Contracts/)
@@ -124,7 +124,7 @@ grep -r "interface.*Contract" --include="*.php" Modules
 ## Riferimenti
 
 - [Laravel Contracts Documentation](https://laravel.com/docs/contracts)
-- [PTVX Code Quality Guidelines](docs/code-quality.md)
+- [PTVX Code Quality Guidelines](laravel/docs/code-quality.md)
 - [Modulo Xot Contracts](laravel/Modules/Xot/app/Contracts/)
 - [<nome progetto> Code Quality Guidelines](docs/code-quality.md)
 - [Laravel Contracts Documentation](https://laravel.com/project_docs/contracts)

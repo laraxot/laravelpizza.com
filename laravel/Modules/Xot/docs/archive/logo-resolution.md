@@ -233,10 +233,10 @@ Per la versione dark:
 - [Convenzioni di Naming](naming-conventions.md)
 
 ### Collegamenti alla Root del Progetto
-- [Linee Guida per i Loghi](../../../../../../docs/standards/logo_guidelines.md)
-- [Configurazione e Risoluzione dei Loghi](../../../../../../docs/configurazione-logo.md)
-- [Struttura dei Moduli in il progetto](../../../../../../docs/struttura-moduli.md)
-- [Architettura Folio + Volt in il progetto](../../../../../../docs/architettura-folio-volt.md)
+- [Linee Guida per i Loghi](../../../../../../../docs/standards/logo_guidelines.md)
+- [Configurazione e Risoluzione dei Loghi](../../../../../../../docs/configurazione-logo.md)
+- [Struttura dei Moduli in il progetto](../../../../../../../docs/struttura-moduli.md)
+- [Architettura Folio + Volt in il progetto](../../../../../../../docs/architettura-folio-volt.md)
 
 ---
 

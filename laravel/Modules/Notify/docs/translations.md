@@ -85,12 +85,12 @@ Notification::make()
 ## Collegamenti Bidirezionali
 
 ### Collegamenti nella Root
-- [Architettura delle Traduzioni](../../../../../../../docs/architecture/translations.md)
-- [Gestione Lingue](../../../../../../../docs/architecture/languages.md)
+- [Architettura delle Traduzioni](../../../../../docs/architecture/translations.md)
+- [Gestione Lingue](../../../../../docs/architecture/languages.md)
 
 ### Collegamenti ai Moduli
 - [LangServiceProvider](../../Lang/docs/service-provider.md)
-- [Regole Traduzioni](../../../../../../../docs/regole/traduzioni.md)
+- [Regole Traduzioni](../../../../../docs/regole/traduzioni.md)
 
 ## Note Importanti
 

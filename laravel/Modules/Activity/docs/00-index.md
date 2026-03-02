@@ -24,7 +24,7 @@
 - 🧹 **[PHPMD Fixes](./phpmd-fixes.md)** - Risoluzione dei problemi di complessità cicromatica.
 
 ## 📦 **Pacchetti Composer**
-- [Riferimento completo](../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../docs/architecture/composer-packages-full-inventory.md)
+- [Riferimento completo](../../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../../docs/architecture/composer-packages-full-inventory.md)
 - `spatie/laravel-activitylog` - Audit trail
 - `spatie/laravel-event-sourcing` - Event sourcing, CQRS
 

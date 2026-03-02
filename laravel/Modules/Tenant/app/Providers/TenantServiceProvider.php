@@ -56,11 +56,22 @@ class TenantServiceProvider extends XotBaseServiceProvider
         /** @var array<string, class-string<Model>> $typedMap */
         $typedMap = [];
         foreach ($map as $alias => $class) {
-            if (is_string($alias) && is_string($class) && class_exists($class)) {
-                /** @var class-string<Model> $modelClass */
-                $modelClass = $class;
-                $typedMap[$alias] = $modelClass;
+            if (! is_string($alias) || ! is_string($class)) {
+                continue;
             }
+
+            try {
+                if (! class_exists($class)) {
+                    continue;
+                }
+            } catch (\Throwable) {
+                // Skip invalid morph targets that cannot autoload cleanly.
+                continue;
+            }
+
+            /** @var class-string<Model> $modelClass */
+            $modelClass = $class;
+            $typedMap[$alias] = $modelClass;
         }
 
         /** @var array<string, class-string<Model>> $typedMap */

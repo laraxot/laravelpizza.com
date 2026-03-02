@@ -7,7 +7,7 @@ Data: [DATE] 19:09:56
 - **Namespace principale**: Modules\\Notify
 Modules\\Notify\\Database\\Factories
 Modules\\Notify\\Database\\Seeders
-- **Pacchetto Composer**: laraxot/module_notify_fila5
+- **Pacchetto Composer**: laraxot/module_notify_fila3
 Marco Sottana
 - **Dipendenze**: aws/aws-sdk-php * filament/filament * illuminate/contracts * illuminate/support * irazasyed/telegram-bot-sdk * kreait/laravel-firebase * laravel-notification-channels/fcm * laravel-notification-channels/telegram * phpdocumentor/type-resolver * symfony/http-client * symfony/postmark-mailer * repositories type path url ../Xot type path
 - **Totale file PHP**: 165

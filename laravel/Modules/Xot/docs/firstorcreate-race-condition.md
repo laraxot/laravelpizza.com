@@ -164,7 +164,7 @@ expect($profileA->id)->toBe($profileB->id);
 
 - [Activity Module: firstOrCreate Error Handling](../../activity/docs/errori/attributerawvalues-null-firstorcreate.md)
 - [User Profile Models: Transaction Patterns](../../user/docs/user-profile-models.md)
-- [Query Safety Principle](../../../../../../docs/operational-rules/query-safety-principle.md)
+- [Query Safety Principle](../../../../../../../docs/operational-rules/query-safety-principle.md)
 
 **Versione**: 1.0  
 **Ultimo aggiornamento**: [DATE]  

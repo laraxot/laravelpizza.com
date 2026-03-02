@@ -90,4 +90,4 @@ Ho creato e consolidato tutta la documentazione per l'implementazione completa d
 **LaravelPizza è pronta per diventare un leader nel settore!** 🚀✨
 
 **Riepilogo tecnico completo disponibile** - 1 file di riepilogo:  
-`/var/www/_bases/base_laravelpizza/laravel/docs/schema-org-implementation-final-summary.md`** 🎯
+`/var/www/_bases/base_laravelpizza/docs/schema-org-implementation-final-summary.md`** 🎯

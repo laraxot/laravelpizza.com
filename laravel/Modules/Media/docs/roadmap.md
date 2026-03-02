@@ -1,31 +1,32 @@
-# Roadmap (Module Media)
+# Roadmap Modulo Media
 
-## Current roadmap
+## 🎯 Visione
+Fornire un sistema universale e performante per la gestione, trasformazione e ottimizzazione dei file multimediali, integrato con i principali provider di storage e CDN.
 
-- [Overview](roadmap/00-overview.md)
-- [Now](roadmap/01-now.md)
-- [Next](roadmap/02-next.md)
-- [Later](roadmap/03-later.md)
-- [Risks and dependencies](roadmap/04-risks.md)
+## 🏗️ Fasi di Sviluppo
 
-## Legacy / existing roadmap docs
+### Fase 1: Infrastruttura Core (Completata)
+- [x] PHPStan Level 10 Compliance.
+- [x] Sistema di base per l'upload e la gestione dei file.
+- [x] Integrazione con lo storage di Laravel.
 
-- [phpstan-errors-resolution-roadmap.md](phpstan-errors-resolution-roadmap.md)
-- [phpstan-roadmap.md](phpstan-roadmap.md)
-- [roadmap/00-index.md](roadmap/00-index.md)
-- [roadmap/00-overview.md](roadmap/00-overview.md)
-- [roadmap/01-current-state.md](roadmap/01-current-state.md)
-- [roadmap/01-now.md](roadmap/01-now.md)
-- [roadmap/02-goals.md](roadmap/02-goals.md)
-- [roadmap/02-next.md](roadmap/02-next.md)
-- [roadmap/03-later.md](roadmap/03-later.md)
-- [roadmap/03-workstreams.md](roadmap/03-workstreams.md)
-- [roadmap/04-milestones.md](roadmap/04-milestones.md)
-- [roadmap/04-risks.md](roadmap/04-risks.md)
-- [roadmap/05-risks.md](roadmap/05-risks.md)
-- [roadmap/legacy-roadmap.md](roadmap/legacy-roadmap.md)
-- [roadmap/legacy/legacy-roadmap-root-symlink-1.md](roadmap/legacy/legacy-roadmap-root-symlink-1.md)
-- [roadmap/legacy/legacy-roadmap-root-symlink.md](roadmap/legacy/legacy-roadmap-root-symlink.md)
-- [roadmap/phases.md](roadmap/phases.md)
-- [roadmap/quality.md](roadmap/quality.md)
-- [roadmap/vision.md](roadmap/vision.md)
+### Fase 2: Media Library e Organizzazione (In Corso)
+- [ ] Implementazione della libreria media avanzata in Filament.
+- [ ] Sistema di tagging e categorizzazione dei file.
+- [ ] Operazioni massive sui file multimediali (Bulk operations).
+
+### Fase 3: Trasformazione e Ottimizzazione (Pianificato)
+- [ ] Sistema di elaborazione immagini (resizing, format conversion, compression).
+- [ ] Supporto per elaborazione video di base (thumbnail generation).
+- [ ] Integrazione trasparente con CDN.
+
+### Fase 4: Sicurezza e AI (Futuro)
+- [ ] Controllo accessi basato su permessi per ogni singolo asset.
+- [ ] **AI-Powered Tagging**: Riconoscimento automatico del contenuto delle immagini.
+- [ ] URL firmati e temporanei per la consegna sicura dei media.
+
+## ✅ Checklist Qualità
+- [x] PHPStan Level 10.
+- [ ] Copertura Test (Pest) > 85%.
+- [ ] Performance di caricamento e trasformazione ottimizzate.
+- [ ] Traduzioni dei campi media in tutte le lingue supportate.

@@ -43,6 +43,6 @@
 - Test che verifica la presenza di tutte le chiavi di traduzione.
 
 ## Collegamenti
-- [docs root](../../../../../../../docs/actions.md)
+- [docs root](../../../../../../../../docs/actions.md)
 - [docs Lang](../../lang/docs/filament-label.md)
 

@@ -1,6 +1,6 @@
 # Gestione Permessi e Errori Filesystem su File di Lingua (Lang)
 
-> **Backlink:** [Indice e collegamenti root](../../../../../../docs/links.md)
+> **Backlink:** [Indice e collegamenti root](../../../docs/links.md)
 
 ## Problema
 
@@ -52,8 +52,8 @@ sudo chmod 664 Modules/Lang/lang/it/lang_service.php
 ```
 
 ## Collegamenti
-- [Indice e collegamenti root](../../../../../../docs/links.md)
-- [Documentazione MCP e gestione errori](../../../../../../docs/mcp_errors_and_lessons.md)
+- [Indice e collegamenti root](../../../docs/links.md)
+- [Documentazione MCP e gestione errori](../../../docs/mcp_errors_and_lessons.md)
 
 ---
 
@@ -61,7 +61,7 @@ sudo chmod 664 Modules/Lang/lang/it/lang_service.php
 La root `docs/` deve contenere solo il link a questo file, non la guida completa.
 # Gestione Permessi e Errori Filesystem su File di Lingua (Lang)
 
-> **Backlink:** [Indice e collegamenti root](../../../../../../docs/links.md)
+> **Backlink:** [Indice e collegamenti root](../../../docs/links.md)
 
 ## Problema
 
@@ -113,8 +113,8 @@ sudo chmod 664 Modules/Lang/lang/it/lang_service.php
 ```
 
 ## Collegamenti
-- [Indice e collegamenti root](../../../../../../docs/links.md)
-- [Documentazione MCP e gestione errori](../../../../../../docs/mcp_errors_and_lessons.md)
+- [Indice e collegamenti root](../../../docs/links.md)
+- [Documentazione MCP e gestione errori](../../../docs/mcp_errors_and_lessons.md)
 
 ---
 

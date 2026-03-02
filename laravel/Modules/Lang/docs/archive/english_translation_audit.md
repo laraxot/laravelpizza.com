@@ -292,9 +292,9 @@ return array(
 
 ## Collegamenti
 
-- [Regole Traduzioni](../../../../../docs/translation-standards.md)
-- [Best Practices Filament](../../../../../docs/FILAMENT-BEST-PRACTICES.md)
-- [Convenzioni Laraxot](../../../../../docs/laraxot_conventions.md)
+- [Regole Traduzioni](../../docs/translation-standards.md)
+- [Best Practices Filament](../../docs/FILAMENT-BEST-PRACTICES.md)
+- [Convenzioni Laraxot](../../docs/laraxot_conventions.md)
 
 ---
 

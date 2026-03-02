@@ -254,7 +254,7 @@ return [
 ```bash
 cd /var/www/html/_bases/base_<nome progetto>/laravel
 cd /var/www/html/_bases/base_saluteora/laravel
-cd /var/www/html/_bases/base_techplanner_fila5_mono/laravel
+cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 php -l Modules/Notify/lang/it/send_email.php
 
 # Output: No syntax errors detected
@@ -278,10 +278,10 @@ php -l Modules/Notify/lang/it/send_email.php
 ## 🔗 Collegamenti
 
 ### Documentazione Correlata
-- [Regole Traduzioni Laraxot](../../../../../../docs/translation-standards.md)
-- [Best Practice Filament](../../../../../../docs/filament-best-practices.md)
+- [Regole Traduzioni Laraxot](../../../../docs/translation-standards.md)
+- [Best Practice Filament](../../../../docs/filament-best-practices.md)
 - [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
-- [Best Practice Filament](../../../../../../docs/filament-best-practices.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
+- [Best Practice Filament](../../../../docs/filament-best-practices.md)- [Regole Traduzioni Laraxot](../../../project_docs/translation-standards.md)
 - [Best Practice Filament](../../../project_docs/filament-best-practices.md)
 - [Struttura Modulo Notify](./readme.md)
 

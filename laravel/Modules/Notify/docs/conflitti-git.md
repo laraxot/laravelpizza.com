@@ -107,4 +107,4 @@ Mantenuta la versione con metodo `renderTemplate()`, assicurando separazione tra
 
 ## Collegamenti alla documentazione centrale
 
-Per una panoramica completa di tutti i conflitti risolti, vedere la [documentazione centrale sulla risoluzione dei conflitti git](../../../../../../../docs/risoluzione_conflitti_git.md). 
+Per una panoramica completa di tutti i conflitti risolti, vedere la [documentazione centrale sulla risoluzione dei conflitti git](../../../../docs/risoluzione_conflitti_git.md). 

@@ -125,11 +125,11 @@ Ogni campo ora ha la struttura espansa completa:
 
 ## Collegamenti
 
-- [Documentazione Root](../../docs/translation_standards_links.md)
-- [Regole Helper Text](../../docs/translation-helper-text-standards.md)
-- [Best Practices Filament](../../docs/filament_translation_best_practices.md)
+- [Documentazione Root](../docs/translation_standards_links.md)
+- [Regole Helper Text](../docs/translation-helper-text-standards.md)
+- [Best Practices Filament](../docs/filament_translation_best_practices.md)
 - [Documentazione Root](../project_docs/translation_standards_links.md)
-- [Best Practices Filament](../../docs/filament_translation_best_practices.md)- [Documentazione Root](../project_docs/translation_standards_links.md)
+- [Best Practices Filament](../docs/filament_translation_best_practices.md)- [Documentazione Root](../project_docs/translation_standards_links.md)
 - [Regole Helper Text](../project_docs/translation-helper-text-standards.md)
 - [Best Practices Filament](../project_docs/filament_translation_best_practices.md)
 

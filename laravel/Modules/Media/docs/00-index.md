@@ -27,11 +27,6 @@
 - 🔬 **[Testing Guidelines](./testing.md)** - Strategie per testare upload e stream.
 - 🧹 **[PHPMD Analysis](./cyclomatic-complexity-report.md)** - Pulizia degli algoritmi di conversione.
 
-## 📦 **Pacchetti Composer**
-- [Riferimento completo](../../../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../../../docs/architecture/composer-packages-full-inventory.md)
-- `pbmedia/laravel-ffmpeg` - Elaborazione video
-- `intervention/image` - Elaborazione immagini
-
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Base framework e Trait `HasMedia`.
 - [CloudStorage](../../cloudstorage/docs/readme.md) - Astrazione per provider cloud.
@@ -39,7 +34,3 @@
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
-
-## Dependency Intelligence
-
-- [Dependency intelligence](dependency-intelligence.md)
