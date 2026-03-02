@@ -15,7 +15,20 @@
     <source>
         <include>
             <directory>app</directory>
-            <directory>Modules</directory>
+            <directory>Modules/Activity/app</directory>
+            <directory>Modules/Cms/app</directory>
+            <directory>Modules/Gdpr/app</directory>
+            <directory>Modules/Geo/app</directory>
+            <directory>Modules/Job/app</directory>
+            <directory>Modules/Lang/app</directory>
+            <directory>Modules/Media/app</directory>
+            <directory>Modules/Meetup/app</directory>
+            <directory>Modules/Notify/app</directory>
+            <directory>Modules/Seo/app</directory>
+            <directory>Modules/Tenant/app</directory>
+            <directory>Modules/UI/app</directory>
+            <directory>Modules/User/app</directory>
+            <directory>Modules/Xot/app</directory>
         </include>
         <exclude>
             <directory suffix=".php">./Modules/*/config</directory>
@@ -23,6 +36,7 @@
             <directory suffix=".php">./Modules/*/resources</directory>
             <directory suffix=".php">./Modules/*/routes</directory>
             <directory suffix=".php">./Modules/*/tests</directory>
+            <directory suffix=".php">./Modules/*/.vscode</directory>
         </exclude>
     </source>
     <php>

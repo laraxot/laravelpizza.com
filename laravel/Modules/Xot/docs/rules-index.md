@@ -28,6 +28,10 @@ This file documents the rules and standards specific to the Xot core module.
 - Use Safe\ functions instead of unsafe PHP built-ins
 - Proper type declarations on all methods
 
+### PHPInsights (import order)
+- `use function Safe\*` prima di `use Webmozart\Assert\Assert` (ordine alfabetico)
+- Metodi protected alla fine di trait/class (dopo metodi pubblici)
+
 ### Model Conventions
 - Use `casts()` method NOT `$casts` property
 - Use `isset()` for magic properties, NEVER `property_exists()`
