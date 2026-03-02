@@ -65,7 +65,7 @@ Verificare che:
 - [Notify Module Documentation](readme.md)
 - [SMS Testing Guide](sms/testing.md)
 - [MailTemplate Integration](mail_templates_structure.md)
-- [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
+- [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
 
 # Risoluzione Conflitti SendSmsPage.php
 
