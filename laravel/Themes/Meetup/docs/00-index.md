@@ -40,11 +40,11 @@
 ## Replikate - LaravelPizza Replication
 
 - [Replikate Directory](prompts/replikate/) - Structured prompts for replicating laravelpizza.com
-  - [README](prompts/replikate/readme.md) - Guide to using replikate prompts
+  - [README](prompts/replikate/README.md) - Guide to using replikate prompts
   - [Replicate Analysis](prompts/replikate/replicate.md) - Detailed target site analysis and implementation plan
-  - [Main Replication Prompt](prompts/replikate/main_replication_prompt.md) - Master prompt for site alignment
-  - [Footer Improvement](prompts/replikate/footer_improvement_prompt.md) - Specific footer UI/UX task
-  - [Home Content Review](prompts/replikate/home_content_review_prompt.md) - Homepage content analysis task
+  - [Main Replication Prompt](prompts/replikate/main-replication-prompt.md) - Master prompt for site alignment
+  - [Footer Improvement](prompts/replikate/footer.md) - Specific footer UI/UX task
+  - [Home Content Review](prompts/replikate/home.md) - Homepage content analysis task
   - [Prompt Writing Guide](prompts/replikate/prompt-writing-guide.md) - Standards for writing prompts
 
 ## Filament 5.x Upgrade

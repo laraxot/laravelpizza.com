@@ -4,7 +4,7 @@
 **Module Version**: 1.5.0
 
 ## 🎯 **Lettura Essenziale**
-1. [README.md](./readme.md) - Panoramica del sistema di internazionalizzazione.
+1. [README.md](./README.md) - Panoramica del sistema di internazionalizzazione.
 2. [roadmap.md](./roadmap.md) - Evoluzione 2026: Traduzioni AI e centralizzazione.
 3. [philosophy.md](./philosophy.md) - La lingua come infrastruttura: filosofia Laraxot.
 
@@ -40,8 +40,8 @@
 - `spatie/laravel-sluggable` - Slug multilingua
 
 ## 🔗 **Moduli Correlati**
-- [Xot](../../xot/docs/readme.md) - Base framework e classi `XotBaseChartWidget`.
-- [UI](../../ui/docs/readme.md) - Componenti Blade e Filament che consumano le traduzioni.
+- [Xot](../../Xot/docs/README.md) - Base framework e classi `XotBaseChartWidget`.
+- [UI](../../UI/docs/README.md) - Componenti Blade e Filament che consumano le traduzioni.
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

@@ -6,6 +6,7 @@
 - [Package Dependency Chaos Map](package-dependency-chaos-map.md) - Mappa pacchetti critici e failure modes del modulo.
 - [Critical Rules Consolidated](critical-rules-consolidated.md) - Essential rules for Meetup module
 - [Chaos Monkey Readiness](chaos-monkey-readiness.md) - Diagnosi e recovery rapida su rotture randomizzate del modulo.
+- [Chaos Readiness Toolkit](chaos-readiness-toolkit.md) - Runner condiviso + focus specifico modulo eventi.
 - [Volt Automatic Route Parameter Binding](volt-automatic-route-binding.md) - Volt handles route parameters automatically, no manual extraction needed
 - [Project Purpose](project-purpose.md) - Why this module exists
 - [Business Logic](business-logic.md) - Core business requirements

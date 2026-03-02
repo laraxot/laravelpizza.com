@@ -16,6 +16,7 @@ The Cms module handles content management, page rendering, and multi-language su
 - [Package Dependency Chaos Map](package-dependency-chaos-map.md) - Dipendenze chiave (Folio/Volt/Sushi/Data) e superfici di fault.
 - [Chaos Monkey Deep Dive](chaos-monkey-deep-dive.md) - Analisi approfondita: tenant path, BlockData, wrap_in, container0/slug0, punti di rottura.
 - [Chaos Monkey Recovery Playbook](chaos-monkey-recovery-playbook.md) - Incident playbook to restore frontoffice rendering under randomized failures.
+- [Chaos Readiness Toolkit](chaos-readiness-toolkit.md) - Runner operativo e baseline di stabilita prima/dopo bug injection.
 
 ## Key Components
 
