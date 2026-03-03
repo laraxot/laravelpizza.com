@@ -10,18 +10,10 @@ use Modules\Notify\Datas\RecordNotificationData;
 describe('XotBaseTransition', function () {
     beforeEach(function () {
         // Create a test record
-        $this->record = new class extends Model implements UserContract {
-            protected $table = 'test_users';
-            protected $fillable = ['id', 'name', 'email'];
-            public $id = 1;
-
-            public function getAuthIdentifierName(): string { return 'id'; }
-            public function getAuthIdentifier(): mixed { return $this->id; }
-            public function getAuthPassword(): string { return ''; }
-            public function getRememberToken(): ?string { return null; }
-            public function setRememberToken($value): void {}
-            public function getRememberTokenName(): string { return 'remember_token'; }
-        };
+        $this->record = new \Modules\User\Models\User();
+        $this->record->id = '1';
+        $this->record->name = 'Test User';
+        $this->record->email = 'test@example.com';
 
         // Create a concrete test transition class
         $this->transition = new class($this->record) extends XotBaseTransition {
