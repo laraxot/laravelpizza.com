@@ -1,5 +1,5 @@
 {
-  "name": "laraxot/module_xot_fila3",
+  "name": "laraxot/module_xot_fila5",
   "description": "xot module, heart of the laraxot repository",
   "keywords": [
     "laraxot",
@@ -9,7 +9,7 @@
     "module_xot",
     "filament"
   ],
-  "homepage": "https://github.com/laraxot/module_xot_fila3",
+  "homepage": "https://github.com/laraxot/module_xot_fila5",
   "license": "MIT",
   "authors": [
     {
@@ -66,16 +66,16 @@
     "barryvdh/laravel-ide-helper": "^3.2",
     "fakerphp/faker": "^1.24",
     "larastan/larastan": "*",
-    "laravel/boost": "^2.0",
+    "laravel/boost": "^2.2",
     "laravel/pint": "^1.18",
     "laravel/sail": "^1.41",
     "mockery/mockery": "^1.6",
     "nunomaduro/collision": "^8.6",
+    "nunomaduro/phpinsights": "*",
     "orchestra/testbench": "*",
     "pestphp/pest": "*",
     "pestphp/pest-plugin-type-coverage": "*",
-    "thecodingmachine/phpstan-safe-rule": "*",
-    "nunomaduro/phpinsights": "*"
+    "thecodingmachine/phpstan-safe-rule": "*"
   },
   "require-dev_comment": {
     "pestphp/pest-plugin-laravel": "*",

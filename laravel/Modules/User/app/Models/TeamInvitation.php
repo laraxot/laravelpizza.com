@@ -53,7 +53,6 @@ use Modules\Xot\Datas\XotData;
  * @mixin IdeHelperTeamInvitation
  *
  * @property ProfileContract|null $deleter
- *                                             <<<<<<< HEAD
  * @property Carbon|null          $accepted_at
  * @property Carbon|null          $declined_at
  * @property string|null          $user_id
@@ -62,10 +61,6 @@ use Modules\Xot\Datas\XotData;
  * @method static Builder<static>|TeamInvitation                         whereAcceptedAt($value)
  * @method static Builder<static>|TeamInvitation                         whereDeclinedAt($value)
  * @method static Builder<static>|TeamInvitation                         whereUserId($value)
- *
- * ||||||| parent of da38c10 (.)
- *
- * =======
  *
  * @property Carbon|null $accepted_at
  * @property Carbon|null $declined_at

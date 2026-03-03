@@ -56,7 +56,6 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static Builder|OauthClient whereUserId($value)
  * @method static Builder|OauthClient whereCreatedBy($value)
  * @method static Builder|OauthClient whereUpdatedBy($value)
- *                                                                      <<<<<<< HEAD
  *
  * @property string|null                 $owner_type
  * @property string|null                 $owner_id
@@ -76,10 +75,6 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static Builder<static>|OauthClient                               whereRedirectUris($value)
  * @method static Builder<static>|OauthClient                               withoutPermission($permissions)
  * @method static Builder<static>|OauthClient                               withoutRole($roles, ?string $guard = null)
- *
- * ||||||| parent of da38c10 (.)
- *
- * =======
  *
  * @property string|null                 $owner_type
  * @property string|null                 $owner_id

@@ -41,7 +41,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|ProfileTeam whereUserId($value)
  *
  * @mixin IdeHelperProfileTeam
- * <<<<<<< HEAD
  *
  * @property ProfileContract|null         $deleter
  * @property Team|null                    $team
@@ -55,13 +54,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|ProfileTeam                         wherePermissions($value)
  * @method static Builder<static>|ProfileTeam                         whereProfileId($value)
  *
- * ||||||| parent of da38c10 (.)
- *
- * @property ProfileContract|null $deleter
- * @property Team|null            $team
- * @property User|null            $user
- *
- * =======
+ * @property ProfileContract|null         $deleter
+ * @property Team|null                    $team
+ * @property User|null                    $user
  * @property ProfileContract|null         $deleter
  * @property Team|null                    $team
  * @property User|null                    $user

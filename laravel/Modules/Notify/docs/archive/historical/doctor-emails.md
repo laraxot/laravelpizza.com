@@ -168,7 +168,7 @@ try {
 
 ## Collegamenti Correlati
 
-- [Documentazione Root](../../../../../../docs/readme.md)
+- [Documentazione Root](../../../../docs/readme.md)
 - [Documentazione Modulo Notify](./readme.md)
 - [Documentazione Template Email](./email_templates.md)
 - [Guida all'utilizzo di SpatieEmail](./spatie_email_usage_guide.md)

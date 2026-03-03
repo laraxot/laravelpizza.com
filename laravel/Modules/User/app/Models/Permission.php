@@ -43,17 +43,12 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
  * @method static Builder<static>|Permission withoutRole($roles, $guard = null)
  * @method static static                     firstOrCreate(array $attributes, array $values = [])
  * @method static static                     updateOrCreate(array $attributes, array $values = [])
- *                                                                                                 <<<<<<< HEAD
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
  * @method static \Modules\User\Database\Factories\PermissionFactory factory($count = null, $state = [])
- *
- * ||||||| parent of da38c10 (.)
- *
- * =======
  *
  * @property \Modules\Meetup\Models\Profile|null $creator
  * @property \Modules\Meetup\Models\Profile|null $deleter

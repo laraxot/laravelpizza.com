@@ -70,6 +70,12 @@ use Modules\Xot\Datas\XotData;
  *
  * @method static \Modules\User\Database\Factories\DeviceFactory factory($count = null, $state = [])
  *
+ * @property string|null $name
+ * @property string|null $type
+ *
+ * @method static Builder<static>|Device whereName($value)
+ * @method static Builder<static>|Device whereType($value)
+ *
  * @mixin \Eloquent
  */
 class Device extends BaseModel

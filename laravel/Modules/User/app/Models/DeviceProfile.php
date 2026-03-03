@@ -26,13 +26,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @mixin IdeHelperDeviceProfile
  *
  * @property ProfileContract|null $deleter
- *                                         <<<<<<< HEAD
  *
  * @method static \Modules\User\Database\Factories\DeviceProfileFactory factory($count = null, $state = [])
- *
- * ||||||| parent of da38c10 (.)
- *
- * =======
  * @method static \Modules\User\Database\Factories\DeviceProfileFactory factory($count = null, $state = [])
  *                                                                                                          >>>>>>> da38c10 (.)
  *

@@ -53,5 +53,5 @@ grep -r "\[.*\](/var" --include="*.md" /percorso/al/progetto
 
 ## Collegamenti Correlati
 
-- [Convenzioni di Documentazione](../../../../docs/documentation-conventions.md)
-- [Markdown Best Practices](../../../../docs/markdown-best-practices.md)
+- [Convenzioni di Documentazione](../../../docs/documentation-conventions.md)
+- [Markdown Best Practices](../../../docs/markdown-best-practices.md)

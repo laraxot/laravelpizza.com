@@ -1,6 +1,6 @@
 # Code Coverage: User
 
-**Lines Coverage:** 0.0% (Tests not executed due to configuration)
+**Lines Coverage:** N/A (Tests not executed due to configuration)
 
 ## Summary
 

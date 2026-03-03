@@ -52,7 +52,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|Tenant whereName($value)
  * @method static Builder<static>|Tenant whereSlug($value)
  * @method static Builder<static>|Tenant whereUpdatedAt($value)
- *                                                              <<<<<<< HEAD
  *
  * @property string|null $email_address
  * @property string|null $phone
@@ -76,10 +75,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|Tenant                         whereSecondaryColor($value)
  * @method static Builder<static>|Tenant                         whereSettings($value)
  * @method static Builder<static>|Tenant                         whereUpdatedBy($value)
- *
- * ||||||| parent of da38c10 (.)
- *
- * =======
  *
  * @property string|null $email_address
  * @property string|null $phone
@@ -104,6 +99,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|Tenant                         whereSettings($value)
  * @method static Builder<static>|Tenant                         whereUpdatedBy($value)
  *                                                                                                   >>>>>>> da38c10 (.)
+ *
+ * @property string|null $trial_ends_at
+ *
+ * @method static Builder<static>|Tenant whereTrialEndsAt($value)
  *
  * @mixin \Eloquent
  */

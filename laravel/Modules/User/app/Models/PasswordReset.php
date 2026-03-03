@@ -41,13 +41,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @mixin IdeHelperPasswordReset
  *
  * @property ProfileContract|null $deleter
- *                                         <<<<<<< HEAD
  *
  * @method static \Modules\User\Database\Factories\PasswordResetFactory factory($count = null, $state = [])
- *
- * ||||||| parent of da38c10 (.)
- *
- * =======
  * @method static \Modules\User\Database\Factories\PasswordResetFactory factory($count = null, $state = [])
  *                                                                                                          >>>>>>> da38c10 (.)
  *

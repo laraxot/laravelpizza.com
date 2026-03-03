@@ -59,7 +59,6 @@ use Webmozart\Assert\Assert;
  * @method static Builder|Role whereDisplayName($value)
  * @method static static       firstOrCreate(array $attributes, array $values = [])
  * @method static static       updateOrCreate(array $attributes, array $values = [])
- *                                                                                   <<<<<<< HEAD
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
@@ -67,16 +66,13 @@ use Webmozart\Assert\Assert;
  *
  * @method static \Modules\User\Database\Factories\RoleFactory factory($count = null, $state = [])
  *
- * ||||||| parent of da38c10 (.)
- *
- * =======
- *
  * @property \Modules\Meetup\Models\Profile|null $creator
  * @property \Modules\Meetup\Models\Profile|null $deleter
  * @property \Modules\Meetup\Models\Profile|null $updater
  *
  * @method static \Modules\User\Database\Factories\RoleFactory factory($count = null, $state = [])
  *                                                                                                 >>>>>>> da38c10 (.)
+ * @method static Builder<static>|Role                         whereUuid($value)
  *
  * @mixin \Eloquent
  */

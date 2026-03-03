@@ -1,6 +1,6 @@
 # Riutilizzabilità dei Temi
 
-## Tema One (`laraxot/theme_one_fila3`)
+## Tema One (`laraxot/theme_one_fila5`)
 
 Il tema One è un pacchetto npm riutilizzabile che può essere installato in qualsiasi progetto Laravel + Filament 3.
 
@@ -59,7 +59,7 @@ project/
 
 1. **Installazione**
 ```bash
-npm install laraxot/theme_one_fila3
+npm install laraxot/theme_one_fila5
 ```
 
 2. **Configurazione**
@@ -78,7 +78,7 @@ npm install laraxot/theme_one_fila3
 
 ## Integrazione con il CMS
 
-### Tema One (`laraxot/theme_one_fila3`)
+### Tema One (`laraxot/theme_one_fila5`)
 
 1. **Installazione**
    - Il tema è un pacchetto npm indipendente
@@ -103,7 +103,7 @@ npm install laraxot/theme_one_fila3
 return [
     'available' => [
         'one' => [
-            'name' => 'laraxot/theme_one_fila3',
+            'name' => 'laraxot/theme_one_fila5',
             'path' => 'themes/one',
             'assets' => 'themes/one'
         ]

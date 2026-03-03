@@ -210,9 +210,9 @@ Questo pattern può essere applicato a:
 - [Best Practices](best_practices.md)
 
 ### Root Documentation
-- [Filament Table Columns Best Practices](../../../../docs/filament-table-columns-best-practices.md)
-- [Composite Columns Pattern](../../../../docs/composite-columns-pattern.md)
-- [UI/UX Standards](../../../../docs/ui-ux-standards.md)
+- [Filament Table Columns Best Practices](../../../docs/filament-table-columns-best-practices.md)
+- [Composite Columns Pattern](../../../docs/composite-columns-pattern.md)
+- [UI/UX Standards](../../../docs/ui-ux-standards.md)
 
 ### Altri Moduli
 - [TechPlanner Contacts Column](../../techplanner/docs/contacts-column-implementation-complete.md)

@@ -46,8 +46,9 @@ Consolidare Xot come un framework "Zero-Config" per Laravel 12, dove ogni nuovo 
 - [x] GitHub Action automation for Quality Check and Releases.
 
 ### Fase 2: Developer Happiness (In Progress)
-- [ ] Refactoring di `XotBaseServiceProvider` per supportare il boot asincrono.
+- [ ] Refactoring di \`XotBaseServiceProvider\` per supportare il boot asincrono.
 - [ ] Piena compatibilità con **Filament v5 Plugins**.
+- [ ] **Master-Detail Evolution**: Refactor di \`XotBaseManageRelatedRecords\` per supportare Infolist header e form unificati (vedi [filament/xot-base-manage-related-records-evolution.md](filament/xot-base-manage-related-records-evolution.md)).
 - [ ] **Xot CLI**: Comandi Artisan per generare moduli conformi in 1 secondo (Super Mucca compliant).
 - [ ] **Trait Auditor**: Tool che rileva collisioni di nomi nei Trait a tempo di build.
 - [ ] Miglioramento della `XotBasePage` per supportare Folio + Volt in modo nativo.

@@ -9,8 +9,6 @@ use Laravel\Passport\Client as PassportClient;
 /**
  * Custom Passport Client model to fix compatibility issues with Laravel 12.
  *
- * <<<<<<< HEAD
- *
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\OauthAuthCode> $authCodes
  * @property int|null                                                                          $auth_codes_count
  * @property array                                                                             $grant_types
@@ -27,9 +25,6 @@ use Laravel\Passport\Client as PassportClient;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Client query()
- *
- * ||||||| parent of da38c10 (.)
- * =======
  *
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\OauthAuthCode> $authCodes
  * @property int|null                                                                          $auth_codes_count

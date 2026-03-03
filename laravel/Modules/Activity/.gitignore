@@ -160,3 +160,6 @@ test_activity_logs.sql
 *.fila2
 laravel
 public_html
+tests/coverage/
+tests/coverage.xml/
+activity_coverage.xml

@@ -135,18 +135,16 @@ rm actions_structure.md  # Keep actions-structure.md
 rm auth_pages.md         # Keep auth-pages.md
 ```
 
-### Fase 4: Archiviare File Obsoleti
+### Fase 4: Eliminare o Consolidare File Obsoleti (NO archive)
 ```bash
-# Creare cartella archive
-mkdir -p Modules/ModuleName/docs/archive
+# ❌ VIETATO: creare docs/archive (vedi .cursor/rules/no-docs-archive.mdc)
 
-# Spostare file obsoleti/datati
-mv Modules/Xot/docs/*-2024-*.md Modules/Xot/docs/archive/
-mv Modules/Xot/docs/*-2025-*.md Modules/Xot/docs/archive/
+# ✅ Consolidare contenuti utili in file attivi
+# Es: integrare merge-conflict-resolution-[DATE].md in merge-conflict-resolution.md
 
-# Mantenere solo l'ultimo se rilevante
-mv Modules/Xot/docs/archive/merge-conflict-resolution-[DATE].md \
-   Modules/Xot/docs/merge-conflict-resolution.md
+# ✅ Eliminare file obsoleti (Git conserva la storia)
+rm Modules/Xot/docs/*-2024-*.md
+rm Modules/Xot/docs/*-2025-*.md
 ```
 
 ### Fase 5: Creare CHANGELOG.md
@@ -292,20 +290,18 @@ find Modules/*/docs -maxdepth 1 -name "*.md" -type f | while read file; do
 done
 ```
 
-### Archivia File con Date
+### Elimina File con Date (NO archive)
 ```bash
 #!/bin/bash
-# archive_dated_docs.sh
+# remove_dated_docs.sh - Consolidare prima, poi eliminare
+
+# Per ogni file con data nel nome: valutare se consolidare in file attivo
+# Se obsoleto: eliminare (Git conserva la storia)
+# ❌ MAI creare docs/archive - vedi .cursor/rules/no-docs-archive.mdc
 
 find Modules/*/docs -maxdepth 1 -name "*-20[0-9][0-9]-*.md" -type f | while read file; do
-    dir=$(dirname "$file")
-    base=$(basename "$file")
-
-    # Crea archive se non esiste
-    mkdir -p "$dir/archive/historical"
-
-    echo "Archiving: $file"
-    mv "$file" "$dir/archive/historical/$base"
+    echo "Review and consolidate or delete: $file"
+    # Consolidare in file attivo se utile, altrimenti: rm "$file"
 done
 ```
 
@@ -320,11 +316,11 @@ done
 ### Priorità MEDIA (Prossimi step)
 5. Rinominare file UPPERCASE → kebab-case
 6. Rimuovere duplicati underscore/hyphen
-7. Archiviare file con date nei nomi
+7. Consolidare o eliminare file con date nei nomi (NO archive)
 8. Merge file "analisi-dettagliata-N" in comprehensive-analysis.md
 
 ### Priorità BASSA (Future)
-9. Consolidare cartelle `archive/`, `consolidated/`, `old/`
+9. **Eliminare** cartelle `archive/`, `consolidated/`, `old/` (consolidare contenuti utili, poi eliminare - NO archive)
 10. Creare CHANGELOG.md per ogni modulo
 11. Review e merge di file molto simili
 12. Eliminare file completamente obsoleti
@@ -339,9 +335,13 @@ Prima di considerare un modulo "consolidato":
 - [ ] Nessun file con date nel nome
 - [ ] CHANGELOG.md creato per storia modifiche
 - [ ] Nessun duplicato underscore/hyphen
-- [ ] File obsoleti in archive/
+- [ ] Nessuna cartella docs/archive (consolidare o eliminare)
 - [ ] Cross-references corretti (relative paths)
 - [ ] Business logic documentata (WHY non WHAT)
+
+## 🚫 NO docs/archive
+
+**Vietato** creare o mantenere cartelle `docs/archive`. Consolidare contenuti utili in docs attivi o eliminare. Vedi [no-docs-archive](../../.cursor/rules/no-docs-archive.mdc).
 
 ## 🔗 References
 

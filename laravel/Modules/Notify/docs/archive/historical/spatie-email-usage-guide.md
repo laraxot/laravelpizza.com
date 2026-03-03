@@ -10,7 +10,7 @@ Questa guida illustra come utilizzare la classe `SpatieEmail` per inviare email 
 - [Documentazione Email Templates](./email_templates.md)
 - [Email Specifiche per Dottori](./doctor_emails.md)
 - [Implementazione Database Mail](./database-mail.md)
-- [Documentazione Centrale](../../../../../../docs/collegamenti-documentazione.md)
+- [Documentazione Centrale](../../../../docs/collegamenti-documentazione.md)
 - [Modulo Xot](../../../xot/docs/readme.md)
 
 ## Implementazione attuale

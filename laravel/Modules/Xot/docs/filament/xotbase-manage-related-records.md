@@ -11,8 +11,6 @@ inline within a parent resource (replaces RelationManagers).
 FilamentManageRelatedRecords (vendor Filament)
   └── XotBaseManageRelatedRecords (Xot)
         uses HasXotTable         ← full table scaffolding (columns, actions, table())
-        uses InteractsWithForms  ← form handling
-        uses NavigationLabelTrait
           └── ManageCharts, ManageSurveyPdfQuestionCharts, etc.
 ```
 
@@ -21,12 +19,12 @@ FilamentManageRelatedRecords (vendor Filament)
 | Method | Default behaviour | Override to change |
 |--------|------------------|--------------------|
 | `table()` | Full table: columns, header actions, record actions, bulk actions, filters, layout toggle | Rarely needed |
-| `getTableColumns()` | `id`, `name`, `created_at` text columns | Always override |
-| `getTableHeaderActions()` | `create` + optionally `associate` (see below) | Override `shouldShowAssociateAction()` |
+| `getTableColumns()` | fallback `id`, `name`, `created_at` columns **senza label()** | Always override |
+| `getTableHeaderActions()` | `create` + associate/attach/layout toggle (dal trait `HasXotTable`) | Override `shouldShow*Action()` |
 | `getTableActions()` | `view`, `edit`, `delete` (based on resource can*) + optional `detach` | `array_merge(parent::getTableActions(), [...])` to extend |
 | `getTableBulkActions()` | `DeleteBulkAction` | Override to replace |
 | `getTableFilters()` | Empty | Override to add filters |
-| `getHeaderActions()` | `create` (page-level top button) | Return `[]` to suppress |
+| `getHeaderActions()` | `[]` (nessun bottone di pagina; creazione solo da tabella) | Override to add page-level actions |
 | `getTableHeading()` | Translation key lookup | Override for custom heading |
 | `getDefaultTableSortColumn()` | `<table>.id` | Override |
 | `getDefaultTableSortDirection()` | `desc` | Override |

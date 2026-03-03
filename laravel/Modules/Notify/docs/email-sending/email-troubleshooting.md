@@ -20,7 +20,7 @@ $attachments = [
 =======
         'path' => '/var/www/html/healthcare_app/public_html/images/avatars/default.svg',
 >>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
-        'path' => '/var/www/html/_bases/base_techplanner_fila3_mono/public_html/images/avatars/default.svg',
+        'path' => '/var/www/html/_bases/base_techplanner_fila5_mono/public_html/images/avatars/default.svg',
         'as' => 'logo.svg',
         'mime' => 'image/svg+xml',
     ],

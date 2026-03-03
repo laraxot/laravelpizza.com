@@ -30,7 +30,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder|OauthPersonalAccessClient whereId($value)
  * @method static Builder|OauthPersonalAccessClient whereCreatedBy($value)
  * @method static Builder|OauthPersonalAccessClient whereUpdatedBy($value)
- *                                                                         <<<<<<< HEAD
  *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $deleter
@@ -38,10 +37,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  *
  * @method static \Modules\User\Database\Factories\OauthPersonalAccessClientFactory factory($count = null, $state = [])
  * @method static Builder<static>|OauthPersonalAccessClient                         whereCreatedAt($value)
- *
- * ||||||| parent of da38c10 (.)
- *
- * =======
  *
  * @property \Modules\Meetup\Models\Profile|null $creator
  * @property \Modules\Meetup\Models\Profile|null $deleter
