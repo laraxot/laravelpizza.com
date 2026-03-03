@@ -25,7 +25,13 @@ return new class extends XotBaseMigration
         });
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
-            // Ensure causer columns are nullable to allow console operations without an authenticated user
+            // Convert subject/causer to string(36) for UUID support (User model uses UUID)
+            if ($this->hasColumn('subject_id')) {
+                $table->string('subject_id', 36)->nullable()->change()->index();
+            }
+            if ($this->hasColumn('subject_type')) {
+                $table->string('subject_type')->nullable()->change();
+            }
             if ($this->hasColumn('causer_id')) {
                 $table->string('causer_id', 36)->nullable()->change()->index();
             }

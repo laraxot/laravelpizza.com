@@ -1,5 +1,15 @@
 # Activity Module - Testing Guidelines
 
+## Pre-requisiti (CRITICO)
+
+**Prima di eseguire i test**, migrare il DB di test:
+
+```bash
+APP_ENV=testing DB_DATABASE=laravelpizza_data_test DB_DATABASE_USER=laravelpizza_user_test php artisan migrate:fresh --force
+```
+
+La tabella `activity_log` deve avere `subject_id` e `causer_id` come `string(36)` per supportare User UUID. Vedi [subject-id-causer-id-uuid-migration-fix](./errori/subject-id-causer-id-uuid-migration-fix.md).
+
 ## Testing Framework Requirements
 
 ### Environment Configuration

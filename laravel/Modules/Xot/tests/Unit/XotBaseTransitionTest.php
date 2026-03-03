@@ -3,11 +3,8 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\States\Transitions\XotBaseTransition;
-
-uses(RefreshDatabase::class);
 
 describe('XotBaseTransition', function () {
     beforeEach(function () {

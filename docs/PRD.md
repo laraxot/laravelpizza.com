@@ -1,409 +1,234 @@
-# Product Requirements Document (PRD) - LaravelPizza.com
-
-## 📋 Change History
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | 2026-03-03 | System | Initial PRD creation for LaravelPizza project |
-
-## 🎯 Overview
-
-**Product Name:** LaravelPizza.com - Modern Laravel Meetup Platform  
-**Project Type:** Web Application with Laravel 12.x + Filament + Folio + Volt  
-**Status:** Development Phase  
-**Target Release:** Q2 2026  
-
-### Why We're Building This Product
-
-LaravelPizza.com aims to elevate the original laravelpizza.com into a premium, engaging platform for the Laravel community. This is not just a replica - it's a modern, feature-rich meetup and community platform that showcases Laravel's best practices.
-
-### Key Objectives
-
-- ✨ **Elevate Experience**: Transform laravelpizza.com into a premium, engaging platform
-- 🚀 **Community Building**: Foster Laravel community connections and knowledge sharing
-- 💡 **Showcase Excellence**: Demonstrate modern Laravel architecture and best practices
-- 🎯 **User Engagement**: Create compelling content and interactions that drive community participation
-
-## 📊 Success Metrics
-
-### Business Metrics
-- **User Acquisition**: 1,000+ new users in first 3 months
-- **Community Growth**: 500+ active community members
-- **Event Participation**: 200+ event registrations per month
-- **Content Engagement**: 50+ page views per user per week
-
-### Technical Metrics
-- **Performance**: Page load time < 2 seconds
-- **Uptime**: 99.9% system availability
-- **Code Quality**: PHPStan Level 10 compliance
-- **Security**: Zero critical vulnerabilities
-
-### User Experience Metrics
-- **Satisfaction**: >4.5/5 user rating
-- **Retention**: 70% monthly active users
-- **Engagement**: 3+ actions per user session
-
-## 🎭 Messaging
-
-### Core Value Proposition
-"Where Laravel meets pizza - building community, sharing knowledge, and creating amazing experiences for developers worldwide."
-
-### Target Audience Messaging
-
-**Primary Persona: Laravel Developer**
-- "Level up your Laravel skills with real-world examples and community knowledge"
-- "Connect with fellow developers who share your passion for clean code"
-
-**Secondary Persona: Laravel Team Lead**
-- "Find the best talent and showcase your team's expertise"
-- "Build a community that attracts top-tier developers"
-
-**Tertiary Persona: Laravel Instructor/Consultant**
-- "Share your knowledge with a growing community of learners"
-- "Stay updated with the latest Laravel trends and best practices"
-
-## 📅 Timeline/Release Planning
-
-### Phase 1: Foundation (Weeks 1-4)
-- ✅ Core architecture setup
-- ✅ User authentication system
-- ✅ Basic frontend theme
-- ✅ Module scaffolding
-
-### Phase 2: Core Features (Weeks 5-8)
-- ✅ Event management system
-- ✅ Community features
-- ✅ Content management
-- ✅ Basic admin panel
-
-### Phase 3: Advanced Features (Weeks 9-12)
-- ✅ Advanced analytics
-- ✅ Mobile optimization
-- ✅ Performance optimization
-- ✅ Testing suite
-
-### Phase 4: Polish & Launch (Weeks 13-16)
-- ✅ Final bug fixes
-- ✅ Documentation
-- ✅ User onboarding
-- ✅ Official launch
-
-## 👥 Personas
-
-### Primary Persona: Laravel Developer (Alex)
-**Demographics:**
-- Age: 25-35
-- Experience: 2-5 years Laravel development
-- Location: Remote or local Laravel community
-- Technical: Intermediate to Advanced PHP skills
-
-**Goals:**
-- Learn best practices and patterns
-- Connect with other developers
-- Stay updated with Laravel trends
-- Improve coding skills
-
-**Pain Points:**
-- Lack of quality learning resources
-- Limited community interaction
-- Difficulty finding relevant events
-
-**User Scenarios:**
-1. **Learning Journey**: "I want to learn about Laravel best practices through real examples"
-2. **Community Connection**: "I need to connect with other Laravel developers in my area"
-3. **Skill Development**: "I want to showcase my projects and get feedback"
-
-### Secondary Persona: Laravel Team Lead (Sarah)
-**Demographics:**
-- Age: 30-45
-- Experience: 5+ years Laravel development
-- Role: Development team lead or tech lead
-- Company: Mid to large Laravel projects
-
-**Goals:**
-- Recruit top talent
-- Showcase team expertise
-- Build community reputation
-- Stay competitive
-
-**Pain Points:**
-- Finding qualified Laravel developers
-- Building team reputation
-- Staying current with trends
-
-**User Scenarios:**
-1. **Talent Acquisition**: "I need to find and attract the best Laravel talent"
-2. **Community Building**: "I want to build a strong Laravel community around our company"
-3. **Knowledge Sharing**: "I need to share our expertise with the broader community"
-
-### Tertiary Persona: Laravel Instructor (Marco)
-**Demographics:**
-- Age: 25-50
-- Experience: 1-10 years teaching or consulting
-- Role: Instructor, consultant, or content creator
-- Location: Remote or local teaching
-
-**Goals:**
-- Share knowledge with community
-- Build personal brand
-- Create engaging content
-- Generate income
-
-**Pain Points:**
-- Finding audience for content
-- Creating engaging materials
-- Building credibility
-
-**User Scenarios:**
-1. **Content Creation**: "I want to create high-quality Laravel tutorials and share them"
-2. **Audience Building**: "I need to build an audience for my Laravel content"
-3. **Professional Growth**: "I want to establish myself as a Laravel expert"
-
-## 📖 User Scenarios
-
-### Scenario 1: Event Discovery and Registration
-**Persona:** Laravel Developer (Alex)
-
-**Context:** Alex is looking for Laravel events in his area to attend and network.
-
-**Steps:**
-1. Alex visits laravelpizza.com
-2. Navigates to "Events" page
-3. Filters events by location and date
-4. Reads event details and speaker information
-5. Registers for the event
-6. Receives confirmation and calendar invite
-
-**Success Criteria:**
-- Alex finds relevant events within 2 minutes
-- Registration process takes < 30 seconds
-- Event details are comprehensive and accurate
-
-### Scenario 2: Content Learning and Engagement
-**Persona:** Laravel Developer (Alex)
-
-**Context:** Alex wants to learn about Laravel best practices through high-quality content.
-
-**Steps:**
-1. Alex browses to "Learning" or "Blog" section
-2. Selects a relevant article or tutorial
-3. Reads through the content
-4. Engages with the content (likes, comments)
-5. Shares interesting content with colleagues
-6. Saves articles for future reference
-
-**Success Criteria:**
-- Alex finds valuable content within 1 minute
-- Content is well-structured and easy to follow
-- Engagement features are intuitive
-
-### Scenario 3: Community Networking
-**Persona:** Laravel Team Lead (Sarah)
-
-**Context:** Sarah wants to connect with other Laravel developers and build her team's reputation.
-
-**Steps:**
-1. Sarah creates a team profile
-2. Posts about upcoming events or projects
-3. Engages with other community members
-4. Connects with potential talent
-5. Shares company expertise
-6. Tracks community growth metrics
-
-**Success Criteria:**
-- Sarah can easily showcase her team
-- Networking leads to tangible opportunities
-- Community metrics are visible and actionable
-
-## 🚀 Features/Requirements
-
-### Must-Have Features (Priority 1)
-
-#### 1. User Authentication & Profiles
-**Description:** Complete user registration, login, and profile management system
-**Why Important:** Foundation for all community features
-**Acceptance Criteria:**
-- Users can register with email and password
-- Social login options (Google, GitHub)
-- Profile customization (avatar, bio, skills)
-- Email verification
-- Password reset functionality
-
-#### 2. Event Management System
-**Description:** Create, manage, and register for Laravel events
-**Why Important:** Core community feature
-**Acceptance Criteria:**
-- Event creation with detailed information
-- Event registration and ticketing
-- Event calendar and scheduling
-- Location integration (Google Maps)
-- Email notifications
-
-#### 3. Content Management
-**Description:** Blog, tutorials, and educational content system
-**Why Important:** Knowledge sharing platform
-**Acceptance Criteria:**
-- Content creation and editing interface
-- Category and tag system
-- SEO optimization
-- Content scheduling
-- Comment and engagement features
-
-#### 4. Community Features
-**Description:** User interaction, messaging, and networking
-**Why Important:** Build community connections
-**Acceptance Criteria:**
-- User messaging system
-- Community groups and discussions
-- Activity feed
-- Notification system
-- Connection management
-
-#### 5. Admin Dashboard
-**Description:** Comprehensive admin panel for managing the platform
-**Why Important:** Platform management and monitoring
-**Acceptance Criteria:**
-- User management
-- Content moderation
-- Analytics and reporting
-- System configuration
-- Team management
-
-### Should-Have Features (Priority 2)
-
-#### 6. Mobile App
-**Description:** Native mobile application for iOS and Android
-**Why Important:** Reach users on mobile devices
-**Acceptance Criteria:**
-- Cross-platform compatibility
-- Push notifications
-- Offline content access
-- Mobile-optimized UI
-
-#### 7. Advanced Analytics
-**Description:** Detailed analytics and insights dashboard
-**Why Important:** Data-driven decision making
-**Acceptance Criteria:**
-- User behavior tracking
-- Content performance metrics
-- Community growth analytics
-- Custom reporting
-
-#### 8. Marketplace/Job Board
-**Description:** Job listings and service marketplace
-**Why Important:** Additional revenue stream and value
-**Acceptance Criteria:**
-- Job posting and management
-- Service marketplace
-- Review and rating system
-- Payment integration
-
-### Nice-to-Have Features (Priority 3)
-
-#### 9. AI Features
-**Description:** AI-powered content and recommendations
-**Why Important:** Enhanced user experience
-**Acceptance Criteria:**
-- AI-powered content suggestions
-- Smart event recommendations
-- Automated content moderation
-- Chatbot assistance
-
-#### 10. Advanced Integrations
-**Description:** Third-party integrations and APIs
-**Why Important:** Extended functionality
-**Acceptance Criteria:**
-- API for third-party developers
-- Integration with popular tools
-- Webhook support
-- Custom integration builder
-
-## ❌ Features Out
-
-### Planned for Future Releases
-- **Advanced AI Features**: Will be implemented after core features are stable
-- **Mobile App**: Priority 2 feature, to be developed after web platform is complete
-- **Marketplace**: To be introduced after community has sufficient users
-
-### Explicitly Not Included
-- **E-commerce Platform**: Focus is on community building, not sales
-- **Video Streaming**: Limited to educational content only
-- **Gamification**: No points, badges, or leaderboards
-- **Monetization**: Free platform with optional premium features
-
-## 🎨 Designs
-
-### Wireframes and Mockups
-- **Homepage**: Modern, responsive design with hero section and key features
-- **Event Page**: Event details, registration form, and speaker information
-- **Profile Page**: User profile, activity, and connections
-- **Admin Dashboard**: Comprehensive management interface
-
-### Design Principles
-- **Modern UI**: Clean, contemporary design language
-- **Mobile-First**: Responsive design for all devices
-- **Performance**: Optimized for fast loading
-- **Accessibility**: WCAG 2.1 AA compliance
-
-## ❓ Open Issues
-
-### Technical Questions
-- **Database Scaling**: How to handle large-scale event data?
-- **Real-time Features**: What real-time capabilities are needed?
-- **Third-party Integrations**: Which external services to integrate?
-
-### Business Questions
-- **Monetization Strategy**: How to generate revenue sustainably?
-- **User Acquisition**: What marketing channels to use?
-- **Community Growth**: How to maintain engagement over time?
-
-### Technical Considerations
-- **Performance Optimization**: How to handle high traffic events?
-- **Security**: What security measures are required?
-- **Compliance**: What regulations apply to this platform?
-
-## ❓ Q&A
-
-### Q: How will we measure success?
-A: We'll use a combination of quantitative metrics (user growth, engagement) and qualitative metrics (user satisfaction, community feedback).
-
-### Q: What's the timeline for this project?
-A: 16 weeks with 4 phases: Foundation, Core Features, Advanced Features, Polish & Launch.
-
-### Q: How will we handle user privacy?
-A: We'll implement GDPR compliance, data encryption, and transparent privacy policies.
-
-### Q: What's our monetization strategy?
-A: Free platform with optional premium features and sponsored content.
-
-## 📋 Other Considerations
-
-### Legal Requirements
-- **GDPR Compliance**: Data protection and privacy regulations
-- **Terms of Service**: Clear usage guidelines
-- **Privacy Policy**: Transparent data handling practices
-- **Accessibility**: WCAG 2.1 AA compliance
-
-### Technical Requirements
-- **Performance**: Page load < 2 seconds
-- **Scalability**: Handle 10,000+ concurrent users
-- **Security**: Regular security audits
-- **Backup**: Automated data backup and recovery
-
-### Team Considerations
-- **Roles**: Clear definition of responsibilities
-- **Communication**: Regular team meetings
-- **Documentation**: Comprehensive technical documentation
-- **Training**: Knowledge transfer and onboarding
-
-### Risk Management
-- **Technical Risks**: Performance, security, scalability
-- **Business Risks**: User acquisition, competition, monetization
-- **Mitigation Strategies**: Regular testing, monitoring, and contingency planning
-
----
-
-**Document Owner:** Product Management Team  
-**
-**Next Review:** 2026-03-17  
-**Status:** In Development
+# LaravelPizza - Product Requirements Document
+
+## Metadata
+
+| Field | Value |
+|-------|-------|
+| Status | In Development |
+| Owner | Engineering Lead |
+| Repository | base_laravelpizza |
+| Target Release | Q2 2026 |
+| Version | 2.0 |
+
+## Overview
+
+LaravelPizza is an improved, modernized conversion of laravelpizza.com — the Italian Laravel developer meetup platform. The goal is not a replica but an elevation: a more engaging, share-worthy, conversion-optimized community hub for Laravel developers, built on Laravel 12 with modular architecture, Folio + Volt for front office, Filament for admin, and strict architectural discipline.
+
+## Problem statement
+
+The original laravelpizza.com is a static, minimal site. It lacks:
+- Event discovery and registration flows
+- Community profile and attendance tracking
+- Multi-language support for Italian and international audiences
+- A CMS-driven content strategy that allows non-developer content updates
+- Modern, accessible design that encourages sharing and repeat visits
+
+The cost of inaction is a community platform that fails to grow, where events have low visibility and registration is handled externally.
+
+## Goals
+
+- Enable event creation, discovery, and registration entirely within the platform
+- Support Italian and English locales out of the box, extensible to others
+- Allow content managers to update pages without deploying code (CMS-driven JSON pages)
+- Achieve WCAG 2.1 AA accessibility across all public pages
+- Pass PHPStan level 10 with zero errors across all modules
+- Achieve 80%+ test coverage for business-critical logic
+
+## Non-goals (this release)
+
+- Paid ticket / e-commerce flows (Phase 2)
+- Live streaming integration
+- Mobile native apps
+- Real-time chat during events
+- A/B testing infrastructure
+- External OAuth for event providers (Eventbrite, Meetup.com)
+- CDN configuration (infrastructure concern, not product)
+
+## Target users
+
+| User | Role | Needs |
+|------|------|-------|
+| Attendee | Laravel developer discovering events | Browse events, register, receive confirmations |
+| Organizer | Creates and manages meetup events | Create events, manage registrations, view attendance |
+| Content manager | Updates site copy and pages | Edit page content without code deployments |
+| Admin | Platform operator | Full Filament admin access to all modules |
+| AI coding agent | Automated code generation | Predictable patterns, explicit constraints, strict types |
+
+## Modules
+
+| Module | Purpose |
+|--------|---------|
+| Meetup | Core domain: events, performers, sponsors, registrations |
+| Cms | CMS-driven page rendering via JSON content files |
+| User | Authentication, profiles, roles |
+| Tenant | Multi-tenancy configuration and per-tenant database routing |
+| Lang | Localization, locale switching, mcamara integration |
+| Activity | Audit trail, event sourcing, user action logging |
+| Notify | Email and notification dispatching |
+| Geo | Geographic data: comuni, province, regioni |
+| Media | File uploads and media library (spatie) |
+| Gdpr | Cookie consent, privacy settings, GDPR compliance |
+| Seo | Meta tags, structured data, sitemap generation |
+| Job | Background job monitoring and queue management |
+| UI | Shared UI components and Filament widget base classes |
+| Xot | Core Laraxot framework: base classes, conventions, utilities |
+
+## Architecture constraints (critical for AI agents)
+
+These constraints are non-negotiable. Any generated code that violates them must be rejected.
+
+### Front office (public pages)
+- Folio + Volt only. No traditional controllers.
+- No routes in `web.php` or `api.php` for public pages.
+- Pages are defined as JSON files in `config/local/laravelpizza/database/content/pages/`.
+- Block components live in `Themes/Meetup/resources/views/components/blocks/`.
+- Blade namespace for all theme views: `pub_theme::` (never the theme name directly).
+
+### Admin panel
+- Filament only, via XotBase abstracts.
+- Never extend `Filament\Resources\Resource` directly: always extend `XotBaseResource`.
+- Never extend `Filament\Pages\Page` directly: always extend `XotBasePage`.
+- No `->label()`, `->placeholder()`, `->helperText()` in Filament components; auto-labeling handles this.
+
+### Database and models
+- No per-module database connections in `config/database.php` or tenant config files.
+- `TenantServiceProvider::registerDB()` adds module connections dynamically.
+- Many-to-many: always `$this->belongsToManyX()`, never `$this->belongsToMany()`.
+- One table, one create migration. Schema changes use `add_{column}_to_{table}` migrations.
+- Use `XotBaseMigration` with `tableCreate()` and `tableUpdate()` methods.
+
+### Routing and URLs
+- All localized links: `LaravelLocalization::localizeUrl('/path')`.
+- Current locale: `LaravelLocalization::getCurrentLocale()`.
+- Language selector: `LaravelLocalization::getLocalizedURL($code, null, [], true)`.
+- Never build locale-prefixed URLs manually.
+
+### SVG icons
+- No inline SVG in Blade files.
+- Create `.svg` in `Modules/Meetup/resources/svg/`.
+- Reference with `<x-filament::icon icon="meetup-{name}" class="..." />`.
+
+### Code quality
+- Every PHP file: `declare(strict_types=1);` at the top.
+- PHPStan level 10: zero errors required before any commit.
+- Laravel Pint for formatting.
+- Return types on every method.
+
+### Packages
+- Module-specific packages go in the module's own `composer.json`, not `laravel/composer.json`.
+- Theme-specific packages go in the theme's `composer.json`.
+- Root `laravel/composer.json` uses `wikimedia/composer-merge-plugin` to aggregate.
+
+### Translations
+- Keys follow the structure: `{module}::{resource}.fields.{name}.label`.
+- Never flat top-level keys like `'date' => 'Data'`.
+- All strings go through the translation system; never hardcode UI strings.
+
+## Functional requirements
+
+| ID | Requirement |
+|----|-------------|
+| FR-001 | Admins must be able to create, edit, and delete events via Filament |
+| FR-002 | Visitors must be able to browse upcoming events without authentication |
+| FR-003 | Each event must have a public detail page: title, description, date, venue, speakers, sponsors |
+| FR-004 | Visitors must be able to register for an event with a valid email address |
+| FR-005 | All public pages must render in Italian and English via URL locale prefix |
+| FR-006 | All public pages must be rendered from JSON content files (no per-page Blade files) |
+| FR-007 | Cookie consent must be collected before analytics or marketing cookies are set |
+| FR-008 | All public pages must meet WCAG 2.1 AA requirements |
+| FR-009 | Each public page must have title, meta description, canonical URL, and JSON-LD structured data |
+| FR-010 | Admins must have a Filament dashboard showing event count, registration count, recent activity |
+
+## Non-functional requirements
+
+| Category | Requirement |
+|----------|-------------|
+| Performance | Public pages load in under 2 seconds on a 4G connection |
+| Security | HTTPS only, CSRF on all forms, input sanitization |
+| Accessibility | WCAG 2.1 AA on all public pages |
+| PHP version | PHP 8.2+ |
+| Laravel version | Laravel 12 |
+| Static analysis | PHPStan level 10, zero errors |
+| Code style | PSR-12 via Laravel Pint |
+| Test coverage | 80% minimum for business logic |
+| Localization | Italian and English at minimum |
+| Multi-tenancy | Single codebase, tenant-isolated data via Tenant module |
+
+## Data model overview
+
+| Entity | Module | Key fields |
+|--------|--------|------------|
+| Event | Meetup | id, slug, title, description, start_at, end_at, venue_id, published_at |
+| User | User | id, name, email, password, locale |
+| Profile | Meetup | id, user_id, bio, avatar, github_url |
+| Venue | Meetup | id, name, address, city, geo_comune_id |
+| Performer | Meetup | id, name, bio, role |
+| Sponsor | Meetup | id, name, logo, url |
+| EventUser | Meetup | event_id, user_id (pivot: registration) |
+| EventPerformer | Meetup | event_id, performer_id (pivot: speaker/organizer) |
+| EventSponsor | Meetup | event_id, sponsor_id (pivot: sponsorship) |
+| Page | Cms | id, slug, title, content_blocks (JSON) |
+
+## Success metrics
+
+| Metric | Target | Measurement window |
+|--------|--------|-------------------|
+| PHPStan errors | 0 | Per commit |
+| Test coverage | 80%+ | Per release |
+| Public page load time | < 2s | Monthly audit |
+| Accessibility score | 100 (Lighthouse) | Per release |
+| Event registration conversion | > 50% | 30 days post-launch |
+
+## Implementation phases
+
+| Phase | Scope |
+|-------|-------|
+| Phase 1 | Data layer: migrations, models, factories, seeders |
+| Phase 2 | Admin panel: Filament resources for all entities |
+| Phase 3 | Public front office: CMS JSON pages, Folio routing, Volt components |
+| Phase 4 | Localization and SEO: full `it`/`en` translations, meta tags, sitemap |
+| Phase 5 | Notifications and GDPR: confirmation emails, cookie consent |
+| Phase 6 | Quality gates: PHPStan zero errors, 80%+ coverage, WCAG AA audit |
+
+## Dependencies
+
+| Dependency | Type | Required by |
+|------------|------|-------------|
+| Xot module | Module | All modules (base classes) |
+| Tenant module | Module | All modules (DB routing, theme resolution) |
+| Lang module | Module | All modules (translations, locale) |
+| User module | Module | Meetup (registrations), Gdpr (consent records) |
+| Cms module | Module | Theme (page rendering) |
+| mcamara/laravel-localization | Package | Lang module |
+| spatie/laravel-medialibrary | Package | Media module |
+| spatie/laravel-activity-log | Package | Activity module |
+| spatie/laravel-data | Package | All modules (DTOs) |
+| spatie/queueable-action | Package | All modules (Actions) |
+
+## Risks
+
+| Risk | Probability | Impact | Mitigation |
+|------|-------------|--------|------------|
+| PHPStan level 10 failures in generated code | High | Medium | PHPStan in CI; fix before merge |
+| Duplicate migrations across modules | Medium | High | One-table-one-migration rule; code review |
+| Locale routing breaking form submissions | Medium | High | localizeUrl() on all form actions; feature tests |
+| AI agent violating architecture constraints | High | High | Architecture Constraints section in every PRD |
+| Tenant DB config drift | Low | High | database-config-standard rule; test per tenant |
+
+## Testing strategy
+
+- Unit tests: all Action classes (`execute()` method), all Data DTOs (validation)
+- Feature tests: Folio routes (`GET /it/events`, `GET /en/events/{slug}`), registration flow
+- Admin tests: Filament resource create/edit/delete for Event, User, Performer, Sponsor
+- PHPStan: runs in CI on every push; zero errors required
+- Pint: runs in pre-commit hook; zero formatting errors
+- Coverage: `php artisan test --coverage --min=80`
+
+## Open questions
+
+| Question | Owner | Status |
+|----------|-------|--------|
+| Which email driver for production (Mailgun vs SES vs Postmark)? | DevOps | Open |
+| Waitlist feature for sold-out events: Phase 2 or Phase 1? | PM | Open |
+| Social share preview images: generated or static? | Design | Open |
+| Should performers have their own public profile pages? | PM | Open |

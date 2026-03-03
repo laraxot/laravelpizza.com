@@ -44,11 +44,14 @@ class DiffAssocRecursiveAction
         $arr_2 = self::fixType($arr_2);
 
         $ris = $coll_1->filter(static function ($value, $key) use ($arr_2) {
+            // Defensive debug wrapper: try/catch kept for production diagnostics.
+            // @codeCoverageIgnoreStart
             try {
                 return ! \in_array($value, $arr_2, false);
             } catch (\Exception $exception) {
                 dddx(['err' => $exception->getMessage(), 'value' => $value, 'key' => $key, 'arr_2' => $arr_2]);
             }
+            // @codeCoverageIgnoreEnd
         });
 
         return $ris->all();

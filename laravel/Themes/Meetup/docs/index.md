@@ -126,6 +126,13 @@ npm run copy   # Copy assets to public_html
 3. Run `npm run copy` to publish to `public_html/themes/Meetup/`
 4. **IMPORTANT**: Without `npm run build` and `npm run copy`, changes are NOT visible!
 
+### Testing
+
+I temi non hanno `tests/` propri; vengono testati tramite moduli Cms e Meetup.
+
+- [Testing](./testing.md) — relazione tema/moduli, comandi Pest
+- [Database Testing Configuration](./database-testing-configuration.md) — **CRITICAL**: `.env.testing` copy carbon
+
 ### Database Testing Configuration (CRITICAL)
 
 **NEVER invent environment variables in `.env.testing`!**

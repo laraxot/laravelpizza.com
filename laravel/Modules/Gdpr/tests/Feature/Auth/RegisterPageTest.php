@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 uses(\Modules\Gdpr\Tests\TestCase::class);
 
-use Illuminate\Foundation\Testing\RefreshDatabase; // NOTE: User has explicitly forbidden RefreshDatabase. This is a placeholder.
 use Livewire\Livewire;
 use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
 use Modules\User\Models\User;
@@ -98,7 +97,5 @@ it('uses correct English translations for benefits section', function () {
 // in these tests as no such numbers were found hardcoded in register.blade.php.
 // Further investigation into RegisterWidget or translation files is needed if this issue persists.
 
-// NOTE: User's comment about "RefreshDatabase" trait:
-// The user has explicitly forbidden the use of `RefreshDatabase` trait.
-// This test relies on `DatabaseTransactions` which is a good alternative for test isolation.
+// This test relies on DatabaseTransactions for isolation.
 // The manual `artisan('migrate')` call is a temporary workaround until TestCase.php is fixed.

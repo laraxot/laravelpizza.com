@@ -68,11 +68,20 @@ it('casts boolean values', function (): void {
 it('casts arrays', function (): void {
     $result = $this->action->execute([1, 2, 3]);
     expect($result)->toBe(0.0)->toBeFloat();
+    expect($this->action->execute([5]))->toBe(5.0);
 });
 
 it('casts objects', function (): void {
     $result = $this->action->execute(new stdClass());
     expect($result)->toBe(0.0)->toBeFloat();
+    $stringable = new class
+    {
+        public function __toString(): string
+        {
+            return '9.25';
+        }
+    };
+    expect($this->action->execute($stringable))->toBe(9.25);
 });
 
 it('casts with range validation', function (): void {
@@ -101,6 +110,18 @@ it('has static cast method with default', function (): void {
 it('has static castWithRange method', function (): void {
     $result = SafeFloatCastAction::castWithRange('150.0', 0.0, 100.0);
     expect($result)->toBe(100.0)->toBeFloat();
+});
+
+it('casts with precision helpers', function (): void {
+    expect($this->action->executeWithPrecision('12.345', 2))->toBe(12.35);
+    expect(SafeFloatCastAction::castWithPrecision('12.345', 1))->toBe(12.3);
+});
+
+it('casts percentage and currency helpers', function (): void {
+    expect($this->action->executeAsPercentage('150'))->toBe(100.0);
+    expect(SafeFloatCastAction::castAsPercentage('-1'))->toBe(0.0);
+    expect($this->action->executeAsCurrency('-12.345'))->toBe(12.35);
+    expect(SafeFloatCastAction::castAsCurrency('10'))->toBe(10.0);
 });
 
 it('handles infinite values', function (): void {

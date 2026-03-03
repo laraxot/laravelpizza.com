@@ -1,24 +1,13 @@
-# Code Coverage: Xot
+# Xot Coverage Report
 
-**Lines Coverage:** N/A (Syntax Error)
-**Methods Coverage:** N/A (Syntax Error)
-**Classes Coverage:** N/A (Syntax Error)
-**Functions Coverage:** N/A (Syntax Error)
-**Test Status:** ❌ SYNTAX ERROR
+- Generated: 2026-03-03T16:05:25Z
+- Threshold: 100%
+- Exit code: 255
 
-## Summary
+```text
 
-This module contains Xot functionality for the application.
-
-## Coverage Reflections
-
-- ⚠️  **Low Coverage**: The module has low test coverage, indicating potential risks in production
-- Tests are not fully executed
-- 🏗️  **Foundation Module**: Xot module is critical as it provides base functionality for all other modules
-- 📋 **Module Size**: Medium complexity with multiple components
-
-- 🔍 **Recommendations**: Focus on integration tests for complex workflows
-- 🏗️  **Foundation Module**: Xot module is critical as it provides base functionality for all other modules
-- 📋 **Module Size**: Medium complexity with multiple components
-
-- 🔍 **Recommendations**: Focus on integration tests for complex workflows
+  ...........................................⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯..⨯⨯⨯⨯⨯⨯.
+  .⨯⨯⨯⨯.⨯.⨯⨯⨯.⨯⨯..................................................⨯⨯......⨯!!!
+  ...⨯.............................................................⨯⨯!⨯⨯⨯!!!!!
+  !!⨯⨯⨯.....⨯⨯⨯⨯⨯⨯⨯........⨯.......................⨯....PHP Fatal error:  Declaration of Modules\Xot\States\Transitions\XotBaseTransition@anonymous::sendRecipientNotification(?Modules\Xot\Contracts\UserContract $recipient): void must be compatible with Modules\Xot\States\Transitions\XotBaseTransition::sendRecipientNotification(Modules\Notify\Datas\RecordNotificationData $recipient, array $data): void in /var/www/_bases/base_laravelpizza/laravel/Modules/Xot/tests/Unit/XotBaseTransitionTest.php on line 25
+```

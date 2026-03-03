@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\File;
 use Modules\Geo\Models\Comune;
 use Tests\TestCase;
 
-uses(TestCase::class);
 
 beforeEach(function (): void {
     // Crea un file JSON di test

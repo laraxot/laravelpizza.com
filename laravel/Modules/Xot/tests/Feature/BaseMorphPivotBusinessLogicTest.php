@@ -5,14 +5,11 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Feature;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Xot\Models\BaseMorphPivot;
 use Tests\TestCase;
 
 class BaseMorphPivotBusinessLogicTest extends TestCase
 {
-    use RefreshDatabase;
-
     /** @test */
     public function itExtendsPivotClass(): void
     {

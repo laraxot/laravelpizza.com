@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-uses(Modules\Geo\Tests\TestCase::class);
 
 use Modules\Geo\Transformers\GeoJsonCollection;
 use Modules\Geo\Transformers\GeoJsonResource;

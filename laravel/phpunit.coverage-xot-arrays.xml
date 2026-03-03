@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="XotArrayActions">
+            <file>Modules/Xot/tests/Unit/Actions/ArrayArrActionsTest.php</file>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <file>Modules/Xot/app/Actions/Arr/DiffAssocRecursiveAction.php</file>
+            <file>Modules/Xot/app/Actions/Arr/RangeIntersectAction.php</file>
+            <file>Modules/Xot/app/Actions/Arr/SaveArrayAction.php</file>
+            <file>Modules/Xot/app/Actions/Arr/SaveJsonArrayAction.php</file>
+            <file>Modules/Xot/app/Actions/Arr/SavePhpArrayAction.php</file>
+            <file>Modules/Xot/app/Actions/Array/ArrayToRawJsAction.php</file>
+            <file>Modules/Xot/app/Actions/Array/DiffAssocRecursiveAction.php</file>
+            <file>Modules/Xot/app/Actions/Array/RangeIntersectAction.php</file>
+            <file>Modules/Xot/app/Actions/Array/SaveJsonArrayAction.php</file>
+            <file>Modules/Xot/app/Actions/Array/SavePhpArrayAction.php</file>
+        </include>
+    </source>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_STORE" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_CONNECTION" value="sync"/>
+    </php>
+</phpunit>
+

@@ -6,9 +6,10 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 use Modules\Geo\Actions\GetCoordinatesAction;
 use Modules\Geo\Datas\LocationData;
-use Modules\Geo\Tests\TestCase;
+use Modules\Geo\Tests\LightTestCase;
 
-uses(TestCase::class);
+uses(LightTestCase::class);
+
 
 beforeEach(function () {
     $this->action = new GetCoordinatesAction();

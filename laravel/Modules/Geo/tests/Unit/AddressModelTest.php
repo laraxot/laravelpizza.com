@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-uses(Modules\Geo\Tests\TestCase::class);
 
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Geo\Contracts\HasGeolocation;

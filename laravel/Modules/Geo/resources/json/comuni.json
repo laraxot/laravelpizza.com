@@ -87,5 +87,25 @@
         "created_at": "2026-03-02T20:52:24.754333Z",
         "updated_by": "system",
         "created_by": "system"
+    },
+    {
+        "nome": "Milano",
+        "codice": 8123,
+        "regione": "\"Lombardia\"",
+        "provincia": "\"Milano\"",
+        "sigla_provincia": "MI",
+        "cap": "\"20100\"",
+        "codice_catastale": "B843",
+        "popolazione": 263513,
+        "zona_altimetrica": "collina",
+        "altitudine": 678,
+        "superficie": 57.25,
+        "lat": 45.5074,
+        "lng": 9.2401,
+        "id": 5,
+        "updated_at": "2026-03-03T14:56:22.558330Z",
+        "created_at": "2026-03-03T14:56:22.558358Z",
+        "updated_by": "system",
+        "created_by": "system"
     }
 ]

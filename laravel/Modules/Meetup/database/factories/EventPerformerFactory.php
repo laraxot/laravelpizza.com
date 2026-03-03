@@ -10,18 +10,14 @@ use Modules\Meetup\Models\EventPerformer;
 use Modules\User\Models\User;
 
 /**
- * Factory for EventPerformer pivot model.
- * 
- * Represents speakers/presenters at an event.
- * 
- * @extends Factory<EventPerformer>
+ * @extends Factory<\Modules\Meetup\Models\EventPerformer>
  */
 class EventPerformerFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<EventPerformer>
+     * @var class-string<\Modules\Meetup\Models\EventPerformer>
      */
     protected $model = EventPerformer::class;
 
@@ -36,25 +32,5 @@ class EventPerformerFactory extends Factory
             'event_id' => Event::factory(),
             'user_id' => User::factory(),
         ];
-    }
-
-    /**
-     * State: attach to specific event.
-     */
-    public function forEvent(Event|int $event): static
-    {
-        return $this->state(fn (array $attributes) => [
-            'event_id' => $event instanceof Event ? $event->id : $event,
-        ]);
-    }
-
-    /**
-     * State: attach to specific performer/speaker.
-     */
-    public function forPerformer(User|string $user): static
-    {
-        return $this->state(fn (array $attributes) => [
-            'user_id' => $user instanceof User ? $user->id : $user,
-        ]);
     }
 }

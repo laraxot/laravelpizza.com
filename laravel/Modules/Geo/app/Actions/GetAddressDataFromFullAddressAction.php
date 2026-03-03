@@ -22,6 +22,11 @@ class GetAddressDataFromFullAddressAction
 {
     public Collection $errors;
 
+    public function __construct()
+    {
+        $this->errors = collect();
+    }
+
     /**
      * Ottiene i dati dell'indirizzo da un indirizzo completo.
      *

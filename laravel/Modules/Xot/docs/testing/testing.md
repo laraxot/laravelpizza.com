@@ -4,6 +4,8 @@
 
 Il modulo Xot utilizza **Pest** per testare il core framework, i trait condivisi, e i componenti base utilizzati da tutti gli altri moduli del sistema Laraxot.
 
+**Riferimento Laravel Modules**: [Tests](https://laravelmodules.com/docs/12/advanced/tests) | [laravel-modules-pest-guide](../../../../../docs/testing/laravel-modules-pest-guide.md)
+
 ### Focus del Modulo Xot
 
 - **Core Framework**: Testing di base system, configurazioni, provider

@@ -2,7 +2,9 @@
 
 ## 🎯 Overview
 
-Durante l'implementazione dei test per `RegisterTypeTest` e `RegisterTypeWidgetTest`, abbiamo identificato **pattern vincenti** e **anti-pattern critici** per PestPHP nel progetto <nome progetto>.
+Durante l'implementazione dei test per `RegisterTypeTest` e `RegisterTypeWidgetTest`, abbiamo identificato **pattern vincenti** e **anti-pattern critici** per PestPHP nel progetto LaravelPizza.
+
+**Riferimento**: [Laravel Modules Tests](https://laravelmodules.com/docs/12/advanced/tests) | [laravel-modules-pest-guide](../../../../../docs/testing/laravel-modules-pest-guide.md)
 
 ## ✅ Struttura File Corretta
 

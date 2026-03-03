@@ -5,7 +5,6 @@ declare(strict_types=1);
 use Modules\Geo\Actions\ValidateCoordinatesAction;
 use Modules\Geo\Tests\TestCase;
 
-uses(TestCase::class);
 
 beforeEach(function () {
     $this->action = new ValidateCoordinatesAction();

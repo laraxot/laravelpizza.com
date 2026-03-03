@@ -9,7 +9,6 @@ use Modules\Geo\Actions\UpdateCoordinatesAction;
 use Modules\Geo\Models\Place;
 use Modules\Geo\Tests\TestCase;
 
-uses(TestCase::class);
 
 beforeEach(function () {
     // Set up Google Maps API key for tests

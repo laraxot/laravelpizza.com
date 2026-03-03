@@ -46,6 +46,7 @@ use Modules\User\Models\BaseProfile;
  * @property-read Profile|null $updater
  * @property-read \Modules\User\Models\User|null $user
  * @property-read string|null $user_name
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWith(array $relations)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile childrenWithCount(array $relations)
  * @method static \Modules\Meetup\Database\Factories\ProfileFactory factory($count = null, $state = [])
@@ -71,6 +72,7 @@ use Modules\User\Models\BaseProfile;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, ?string $guard = null)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile byUuid(string $uuid)
+ *
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile

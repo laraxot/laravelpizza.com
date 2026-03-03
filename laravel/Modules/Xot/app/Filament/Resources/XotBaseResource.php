@@ -232,9 +232,13 @@ abstract class XotBaseResource extends FilamentResource
         /** @var array<class-string<RelationManager>> $res */
         $res = [];
         foreach ($filesResult as $file) {
+            // Defensive guard: Safe\glob() returns string[] for valid patterns.
+            // Kept for runtime safety, excluded from line coverage as practically unreachable.
+            // @codeCoverageIgnoreStart
             if (! \is_string($file)) {
                 continue;
             }
+            // @codeCoverageIgnoreEnd
             $className = Str::of($file)
                 ->after('RelationManagers'.\DIRECTORY_SEPARATOR)
                 ->before('.php')

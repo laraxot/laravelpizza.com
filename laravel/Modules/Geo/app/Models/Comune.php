@@ -150,23 +150,29 @@ class Comune extends BaseModel implements SushiToJsonContract
             return [];
         }
         try {
-            $data = json_decode(file_get_contents($path), true);
+            $jsonContent = \Safe\file_get_contents($path);
+            /** @var array<int, mixed> $data */
+            $data = json_decode($jsonContent, true);
             if (! is_array($data)) {
                 return [];
             }
 
-            /** @var array<int, array<string, mixed>> $data */
-            /** @var list<array<string, mixed>> $rows */
+            /** @var array<int, array<string, mixed>> $rows */
             $rows = [];
 
             foreach ($data as $row) {
                 if (is_array($row)) {
-                    /** @var array<string, mixed> $row */
-                    $rows[] = $row;
+                    /** @var array<string, mixed> $typedRow */
+                    $typedRow = [];
+                    foreach ($row as $k => $v) {
+                        if (is_string($k)) {
+                            $typedRow[$k] = $v;
+                        }
+                    }
+                    $rows[] = $typedRow;
                 }
             }
 
-            /** @var array<int, array<string, mixed>> $rows */
             return $rows;
         } catch (\Throwable) {
             return [];

@@ -327,17 +327,23 @@ app(DoSomethingAction::class)->execute($data);
 
 ---
 
-## 🎬 10. Documentazione e Script (Aggiornamento 2026-03-02)
+## 🎬 10. Documentazione, Script e Robustezza (Aggiornamento 2026-03-02)
 
 **Regola Critica**: Tutti i file `.md` (eccetto `README.md` e `CHANGELOG.md`) devono seguire queste convenzioni:
 1. **Naming**: Solo caratteri minuscoli, niente date nei nomi dei file, niente caratteri speciali (usare solo hyphen `-` o underscore `_`).
 2. **Contenuto**: Rimuovere riferimenti a date fisse come "Last Updated", "Ultimo aggiornamento" o "[DATE]". La documentazione deve essere agnostica rispetto al tempo.
-3. **Links**: Usare sempre link relativi tra i file di documentazione.
+3. **PRD**: Ogni modulo e tema DEVE avere un file `PRD.md` nella sua cartella `docs/` che descriva requisiti e architettura.
+4. **Archive**: Le cartelle `archive/` dentro `docs/` sono vietate.
+5. **Links**: Usare sempre link relativi tra i file di documentazione.
 
 **Regola Critica**: Posizione degli Script:
-1. Tutti gli script (`.sh`, `.py`, ecc.) devono essere spostati in una sottocartella appropriata di `bashscripts/` (es. `bashscripts/testing/`).
-2. Nessun script deve risiedere nella root del progetto o direttamente nella cartella `laravel/`.
-3. Lo script `generate_coverage.sh` è stato spostato in `bashscripts/testing/generate-coverage.sh`.
+1. Tutti gli script (`.sh`, `.py`, ecc.) devono risiedere in una sottocartella appropriata di `bashscripts/`.
+2. È vietato avere script nella root, in `laravel/` o dentro le cartelle dei moduli (es. `Modules/Xot/bashscripts` è vietato).
+3. Lo script `generate_coverage.sh` è in `bashscripts/testing/generate-coverage.sh`.
+
+**Regola Critica**: Robustezza e Tipi:
+1. L'uso del tipo `mixed` è vietato, se non come ultimissima spiaggia. Preferire sempre tipi specifici, union types o generics.
+2. I test devono sempre usare `.env.testing` e puntare al database di test (es. `laravelpizza_data_test`).
 
 ---
 

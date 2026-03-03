@@ -5,21 +5,39 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Feature\Filament;
 
 use Filament\Resources\Resource;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Filament\Schemas\Components\Wizard\Step;
+use Filament\Schemas\Schema;
+use Modules\Xot\Filament\Resources\CacheResource;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Modules\Xot\Tests\TestCase;
+use Tests\TestCase;
+ 
+uses(TestCase::class);
 
-uses(TestCase::class, RefreshDatabase::class);
+covers(XotBaseResource::class);
 
 beforeEach(function () {
     $this->resource = new class extends XotBaseResource {
         protected static ?string $model = null;
 
-        protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
+        public static function getFormSchema(): array
+        {
+            return [];
+        }
 
-        protected static string|\UnitEnum|null $navigationGroup = 'Test Group';
+        public static function getNavigationIcon(): \BackedEnum|string|null
+        {
+            return 'heroicon-o-rectangle-stack';
+        }
 
-        protected static ?int $navigationSort = 1;
+        public static function getNavigationGroup(): \UnitEnum|string|null
+        {
+            return 'Test Group';
+        }
+
+        public static function getNavigationSort(): ?int
+        {
+            return 1;
+        }
     };
 });
 
@@ -41,4 +59,209 @@ test('xot base resource has navigation sort', function () {
 
 test('xot base resource can be instantiated', function () {
     expect($this->resource)->toBeInstanceOf(XotBaseResource::class);
+});
+
+test('anonymous resource get form schema columns returns one', function () {
+    expect($this->resource::getFormSchemaColumns())->toBe(1);
+});
+
+test('anonymous resource form builds empty schema', function () {
+    $schema = $this->resource::form(Schema::make());
+    expect($schema)->toBeInstanceOf(Schema::class);
+});
+
+test('cache resource get model returns cache class', function () {
+    expect(CacheResource::getModel())->toBe(\Modules\Xot\Models\Cache::class);
+});
+
+test('cache resource get module name returns xot', function () {
+    expect(CacheResource::getModuleName())->toBe('Xot');
+});
+
+test('xot base resource get form schema columns returns one', function () {
+    expect(CacheResource::getFormSchemaColumns())->toBe(1);
+});
+
+test('xot base resource form builds schema with components', function () {
+    $schema = CacheResource::form(Schema::make());
+    expect($schema)->toBeInstanceOf(Schema::class);
+    expect($schema->getComponents())->toHaveCount(3);
+});
+
+test('xot base resource get infolist schema returns empty array', function () {
+    expect(CacheResource::getInfolistSchema())->toBe([]);
+});
+
+test('xot base resource infolist builds schema', function () {
+    $schema = CacheResource::infolist(Schema::make());
+    expect($schema)->toBeInstanceOf(Schema::class);
+});
+
+test('xot base resource extend table callback returns empty array', function () {
+    expect(CacheResource::extendTableCallback())->toBe([]);
+});
+
+test('xot base resource extend form callback returns empty array', function () {
+    expect(CacheResource::extendFormCallback())->toBe([]);
+});
+
+test('xot base resource has combined relation manager tabs with content', function () {
+    $resource = new CacheResource;
+    expect($resource->hasCombinedRelationManagerTabsWithContent())->toBeTrue();
+});
+
+test('xot base resource get relations returns empty for cache resource', function () {
+    expect(CacheResource::getRelations())->toBe([]);
+});
+
+test('xot base resource get pages returns index create edit', function () {
+    $pages = CacheResource::getPages();
+    expect($pages)->toHaveKeys(['index', 'create', 'edit']);
+});
+
+test('xot base resource get attachments schema returns empty for cache', function () {
+    expect(CacheResource::getAttachmentsSchema())->toBe([]);
+});
+
+test('xot base resource get navigation badge returns count or fallback', function () {
+    $mock = \Mockery::mock(\Modules\Xot\Actions\ModelClass\CountAction::class);
+    $mock->shouldReceive('execute')->andReturn(42);
+    app()->instance(\Modules\Xot\Actions\ModelClass\CountAction::class, $mock);
+    $badge = CacheResource::getNavigationBadge();
+    expect($badge)->toBe('42');
+});
+
+// --- Test dei branch mancanti ---
+
+test('xot base resource get navigation badge returns double dash on exception', function () {
+    $mock = \Mockery::mock(\Modules\Xot\Actions\ModelClass\CountAction::class);
+    $mock->shouldReceive('execute')->andThrow(new \Exception('DB error'));
+    app()->instance(\Modules\Xot\Actions\ModelClass\CountAction::class, $mock);
+    $badge = CacheResource::getNavigationBadge();
+    expect($badge)->toBe('--');
+});
+
+test('xot base resource trans returns string for known key', function () {
+    // Should return a string (translation or key itself)
+    $result = CacheResource::trans('navigation.label', false);
+    expect($result)->toBeString();
+});
+
+test('xot base resource trans with array translation returns first element', function () {
+    $result = CacheResource::trans('fields', false);
+    expect($result)->toBeString();
+});
+
+test('xot base resource trans exception when not found and flag true', function () {
+    expect(fn () => CacheResource::trans('absolutely_nonexistent_key_xyz_abc_123', true))
+        ->toThrow(\Exception::class);
+});
+
+test('xot base resource get model with explicit model set', function () {
+    // CacheResource has $model set explicitly - tests the first branch of getModel()
+    $model = CacheResource::getModel();
+    expect($model)->toBe(\Modules\Xot\Models\Cache::class);
+});
+
+test('xot base resource get relations via base uses glob', function () {
+    // XotBaseResource::getRelations() uses glob for RelationManager files
+    $resource = new class extends XotBaseResource {
+        protected static ?string $model = \Modules\Xot\Models\Cache::class;
+        public static function getFormSchema(): array { return []; }
+    };
+
+    $relations = $resource::getRelations();
+    expect($relations)->toBeArray();
+});
+
+test('xot base resource get relations via base with actual files', function () {
+    // We use the real file created in the background
+    $relations = \Modules\Xot\Tests\Feature\Filament\MockResourceWithRelations::getRelations();
+    
+    expect($relations)->toBeArray();
+    $hasRelation = false;
+    foreach ($relations as $rel) {
+        if (str_contains($rel, 'TestRelationManager')) {
+            $hasRelation = true;
+            break;
+        }
+    }
+    expect($hasRelation)->toBeTrue();
+});
+
+test('xot base resource get wizard submit action', function () {
+    $viewNamespace = 'pub_theme';
+    \Illuminate\Support\Facades\View::addNamespace($viewNamespace, __DIR__);
+    $viewDir = __DIR__ . '/filament/wizard';
+    if (!is_dir($viewDir)) {
+        mkdir($viewDir, 0777, true);
+    }
+    $viewPath = $viewDir . '/submit-button.blade.php';
+    file_put_contents($viewPath, '<button>Submit-Test</button>');
+
+    try {
+        $html = CacheResource::getWizardSubmitAction();
+        expect($html)->toBeInstanceOf(\Illuminate\Contracts\Support\Htmlable::class);
+        expect((string)$html)->toContain('Submit-Test');
+    } finally {
+        if (file_exists($viewPath)) {
+            unlink($viewPath);
+        }
+    }
+});
+
+test('xot base resource get model via auto-discovery', function () {
+    $className = 'Modules\Xot\Filament\Resources\TempDiscoveryResource';
+    if (!class_exists($className)) {
+        eval("namespace Modules\Xot\Filament\Resources; use Modules\Xot\Filament\Resources\XotBaseResource; class TempDiscoveryResource extends XotBaseResource { public static function getFormSchema(): array { return []; } }");
+    }
+    
+    // We need the model class to exist to pass Assert::classExists
+    $modelClass = 'Modules\Xot\Models\TempDiscovery';
+    if (!class_exists($modelClass)) {
+        eval("namespace Modules\Xot\Models; use Illuminate\Database\Eloquent\Model; class TempDiscovery extends Model {}");
+    }
+
+    $model = $className::getModel();
+    expect($model)->toBe($modelClass);
+});
+
+test('xot base resource get attachments schema with model having method', function () {
+    // Model must be a real class to handle static calls
+    $modelClass = 'Modules\Xot\Models\StaticMockModel';
+    if (!class_exists($modelClass)) {
+        eval("namespace Modules\Xot\Models; use Illuminate\Database\Eloquent\Model; class StaticMockModel extends Model { public static function getAttachments(): array { return ['file1.jpg']; } }");
+    }
+    
+    $resource = new class extends XotBaseResource {
+        public static string $mockModelClass;
+        public static function getModel(): string {
+            return self::$mockModelClass;
+        }
+        public static function getFormSchema(): array { return []; }
+    };
+    
+    $resource::$mockModelClass = $modelClass;
+    app()->instance($modelClass, new $modelClass);
+    
+    $schema = $resource::getAttachmentsSchema();
+    expect($schema)->toBeArray();
+});
+
+test('xot base resource get step by name returns correct step', function () {
+    $resource = new class extends XotBaseResource {
+        public static function getGeneralSchema(): array {
+            return [\Filament\Forms\Components\TextInput::make('test')];
+        }
+        public static function getFormSchema(): array { return []; }
+        
+        // We need it to be public for testing or use reflection
+        public static function callGetStepByName(string $name): Step {
+            return static::getStepByName($name);
+        }
+    };
+    
+    $step = $resource::callGetStepByName('General');
+    expect($step)->toBeInstanceOf(Step::class);
+    expect($step->getLabel())->toBe('General');
 });

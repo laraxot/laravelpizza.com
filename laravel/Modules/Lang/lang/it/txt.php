@@ -522,6 +522,14 @@ return [
             'helper_text' => 'receipt',
             'description' => 'receipt',
         ],
+        'file1' => [
+            'jpg' => [
+                'label' => 'file1.jpg',
+                'placeholder' => 'file1.jpg',
+                'helper_text' => 'file1.jpg',
+                'description' => 'file1.jpg',
+            ],
+        ],
     ],
     'actions' => [
         'authenticate' => [

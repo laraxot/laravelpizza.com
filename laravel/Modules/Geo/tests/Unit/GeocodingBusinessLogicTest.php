@@ -6,7 +6,6 @@ namespace Modules\Geo\Tests\Unit;
 
 use Tests\TestCase;
 
-uses(TestCase::class);
 
 describe('Geocoding Business Logic', function () {
     beforeEach(function () {

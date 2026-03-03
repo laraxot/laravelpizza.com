@@ -49,6 +49,12 @@
             "@php artisan config:clear --ansi",
             "@php artisan test"
         ],
+        "test:no-refreshdatabase": [
+            "bash bashscripts/testing/assert-no-refreshdatabase.sh"
+        ],
+        "test:coverage:modules": [
+            "bash bashscripts/testing/generate-coverage.sh"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
