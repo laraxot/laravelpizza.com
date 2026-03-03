@@ -7,24 +7,24 @@ namespace Modules\Xot\Tests\Unit\Actions;
 use Modules\Xot\Actions\GetModelByModelTypeAction;
 use Modules\Xot\Actions\GetModelClassByModelTypeAction;
 use Modules\Xot\Actions\GetModelTypeByModelAction;
-use Modules\Xot\Models\XotBaseModel;
+use Modules\User\Models\User;
 use Tests\TestCase;
 
 uses(TestCase::class);
 
 test('model type actions work', function () {
     config(['morph_map' => [
-        'test_model' => XotBaseModel::class,
+        'test_user' => User::class,
     ]]);
     
     $classAction = app(GetModelClassByModelTypeAction::class);
-    expect($classAction->execute('test_model'))->toBe(XotBaseModel::class);
+    expect($classAction->execute('test_user'))->toBe(User::class);
     
     $modelAction = app(GetModelByModelTypeAction::class);
-    $model = $modelAction->execute('test_model', null);
-    expect($model)->toBeInstanceOf(XotBaseModel::class);
+    $model = $modelAction->execute('test_user', null);
+    expect($model)->toBeInstanceOf(User::class);
     
     $typeAction = app(GetModelTypeByModelAction::class);
-    // XotBaseModel should become xot_base_model
-    expect($typeAction->execute($model))->toBe('xot_base_model');
+    // User should become user
+    expect($typeAction->execute($model))->toBe('user');
 });
