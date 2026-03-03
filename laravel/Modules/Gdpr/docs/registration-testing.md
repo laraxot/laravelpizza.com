@@ -40,6 +40,18 @@ Upon execution, these tests provide a comprehensive check of the registration fe
 - `laravel/Modules/Gdpr/tests/Feature/RegistrationTest.php`
 - `laravel/Modules/Gdpr/tests/Feature/RegisterPageTest.php`
 - `laravel/Modules/Gdpr/tests/Feature/RegisterWidgetTest.php`
+- `laravel/Modules/Gdpr/tests/Feature/RegisterFormValidationTest.php`
+
+## RegisterFormValidationTest: ValidateUserDataAction vs RegisterWidget
+
+`ValidateUserDataAction` valida **solo** l'email duplicata. Le regole required, formato email, password strength, first_name/last_name min/max, password confirmation sono gestite da **RegisterWidget** (Livewire).
+
+I test che richiedono validazioni non presenti nell'action sono **skipped** con messaggio esplicito. I test attivi verificano:
+
+- `accepts valid email format`, `accepts valid strong password`
+- `validates privacy/terms consent` (ValidateGdprConsentAction)
+- `always sets type to customer_user`, `sets email_verified_at`
+- `prevents duplicate email registration` (crea User, poi chiama action con stessa email)
 
 ## RegisterPageTest: Livewire vs POST
 

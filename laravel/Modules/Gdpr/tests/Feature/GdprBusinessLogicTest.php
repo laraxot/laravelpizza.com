@@ -10,6 +10,15 @@ use Modules\User\Models\User;
 
 uses(TestCase::class);
 
+beforeEach(function (): void {
+    // Skip if database not available
+    try {
+        \DB::connection()->getPdo();
+    } catch (\Exception $e) {
+        $this->markTestSkipped('Database not available: ' . $e->getMessage());
+    }
+});
+
 it('can create and manage gdpr consents', function (): void {
     // Arrange
     $user = User::factory()->create();

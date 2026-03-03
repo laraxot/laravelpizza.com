@@ -29,6 +29,14 @@ The Gdpr module ensures the PTVX platform complies with General Data Protection 
 - **Security:** Strict access control and audit trails for privacy actions.
 - **Reliability:** Reliable processing of data deletion and download requests.
 
-## 7. Release Criteria
+## 7. Testing & Coverage
+
+Il modulo Gdpr segue la **Metodologia "Super Mucca" (Laraxot Zen)**:
+- **XotBaseTestCase**: Tutti i test estendono `Modules\Xot\Tests\XotBaseTestCase`.
+- **MySQL Only**: Test eseguiti contro MySQL (.env.testing).
+- **No RefreshDatabase**: Utilizzo di `DatabaseTransactions`.
+- **Obiettivo**: 100% di coverage. Se un test fallisce, va sistemato o eliminato se il sito è funzionale.
+
+## 8. Release Criteria
 - PHPStan Level 10 compliance.
 - Verified privacy controls according to legal standards.

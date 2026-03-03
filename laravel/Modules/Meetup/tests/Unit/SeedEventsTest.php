@@ -6,36 +6,32 @@ namespace Modules\Meetup\Tests\Unit;
 
 use Modules\Meetup\Actions\Event\SeedEventsFromJsonAction;
 use Modules\Meetup\Models\Event;
-use Tests\TestCase;
+use Modules\Meetup\Tests\TestCase;
 
-class SeedEventsTest extends TestCase
-{
-    /**
-     * Test that events can be seeded from JSON correctly.
-     */
-    public function test_events_are_seeded_correctly_from_json(): void
-    {
-        // 1. Arrange: Clear existing events
-        Event::truncate();
+uses(TestCase::class);
 
-        // 2. Act: Run the seeding action
-        app(SeedEventsFromJsonAction::class)->execute();
+it('seeds events correctly from json', function (): void {
+    // 1. Arrange: Clear existing events
+    Event::truncate();
 
-        // 3. Assert: Verify counts
-        $this->assertEquals(6, Event::count());
+    // 2. Act: Run the seeding action
+    app(SeedEventsFromJsonAction::class)->execute();
 
-        // 4. Assert: Verify specific record data
-        $event = Event::where('title', 'Laravel 11 Release Pizza Party')->first();
-        $this->assertNotNull($event);
-        $this->assertEquals('Tech Hub Downtown, 123 Main St', $event->location);
-        $this->assertEquals(30, $event->max_attendees);
-        $this->assertEquals('2025-12-15 18:00:00', $event->start_date->format('Y-m-d H:i:s'));
+    // 3. Assert: Verify counts
+    expect(Event::count())->toBe(6);
 
-        // 5. Assert: Verify Schema.org output
-        $schema = $event->toSchemaOrg();
-        $this->assertEquals('https://schema.org', $schema['@context']);
-        $this->assertEquals('Event', $schema['@type']);
-        $this->assertEquals('Laravel 11 Release Pizza Party', $schema['name']);
-        $this->assertStringContainsString('2025-12-15T18:00:00', $schema['startDate']);
-    }
-}
+    // 4. Assert: Verify specific record data
+    /** @var Event $event */
+    $event = Event::where('title', 'Laravel 11 Release Pizza Party')->first();
+    expect($event)->not->toBeNull();
+    expect($event->location)->toBe('Tech Hub Downtown, 123 Main St');
+    expect($event->max_attendees)->toBe(30);
+    expect($event->start_date->format('Y-m-d H:i:s'))->toBe('2025-12-15 18:00:00');
+
+    // 5. Assert: Verify Schema.org output
+    $schema = $event->toSchemaOrg();
+    expect($schema['@context'])->toBe('https://schema.org');
+    expect($schema['@type'])->toBe('Event');
+    expect($schema['name'])->toBe('Laravel 11 Release Pizza Party');
+    expect($schema['startDate'])->toContain('2025-12-15T18:00:00');
+});

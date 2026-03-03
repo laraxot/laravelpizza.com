@@ -8,6 +8,15 @@ use Modules\Gdpr\Models\GdprConsent;
 use Modules\User\Models\User;
 
 describe('GDPR Consent Business Logic', function () {
+    beforeEach(function () {
+        // Skip if database not available
+        try {
+            \DB::connection()->getPdo();
+        } catch (\Exception $e) {
+            $this->markTestSkipped('Database not available: ' . $e->getMessage());
+        }
+    });
+
     it('records consent with required metadata', function () {
         $user = User::factory()->create();
 

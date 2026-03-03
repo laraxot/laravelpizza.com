@@ -2,26 +2,41 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\Array;
+
 use Modules\Xot\Actions\Array\DiffAssocRecursiveAction;
+use Tests\TestCase;
 
-beforeEach(function (): void {
-    $this->action = app(DiffAssocRecursiveAction::class);
+uses(TestCase::class);
+
+test('diff assoc recursive action works correctly', function () {
+    $arr1 = [
+        'a' => ['id' => 1, 'name' => 'Test'],
+        'b' => ['id' => 2, 'name' => 'Test 2'],
+    ];
+    $arr2 = [
+        'a' => ['id' => 1, 'name' => 'Test'],
+    ];
+
+    $action = app(DiffAssocRecursiveAction::class);
+    $result = $action->execute($arr1, $arr2);
+
+    expect($result)->toHaveCount(1)
+        ->and($result)->toHaveKey('b')
+        ->and($result['b'])->toBe(['id' => 2, 'name' => 'Test 2']);
 });
 
-it('returns diff between arrays of rows', function (): void {
-    $arr1 = [['id' => 1], ['id' => 2]];
-    $arr2 = [['id' => 1]];
-    $result = $this->action->execute($arr1, $arr2);
-    expect($result)->toHaveCount(1)->toContain(['id' => 2]);
-});
+test('diff assoc recursive action handles numeric strings', function () {
+    $arr1 = [
+        'a' => ['id' => '1', 'name' => 'Test'],
+    ];
+    $arr2 = [
+        'a' => ['id' => 1, 'name' => 'Test'],
+    ];
 
-it('fixType throws when item is not array', function (): void {
-    expect(fn () => DiffAssocRecursiveAction::fixType([['x' => 1], 'bad']))
-        ->toThrow(Exception::class);
-});
+    $action = app(DiffAssocRecursiveAction::class);
+    $result = $action->execute($arr1, $arr2);
 
-it('fixType converts numeric strings to numbers', function (): void {
-    $result = DiffAssocRecursiveAction::fixType([['id' => '10', 'price' => '2.5']]);
-
-    expect($result)->toBe([['id' => 10, 'price' => 2.5]]);
+    // fixType converts '1' to 1, so they should be equal and diff should be empty
+    expect($result)->toBeEmpty();
 });

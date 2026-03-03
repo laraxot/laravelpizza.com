@@ -2,11 +2,16 @@
 
 declare(strict_types=1);
 
+namespace Modules\Geo\Tests\Unit\Models;
+
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Geo\Models\BaseModel;
 use Modules\Geo\Models\Province;
+use Modules\Geo\Tests\TestCase;
 use Sushi\Sushi;
+
+uses(TestCase::class);
 
 describe('Province Business Logic', function () {
     test('province extends base model', function () {

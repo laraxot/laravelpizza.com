@@ -63,16 +63,6 @@ class StoredEvent extends SpatieStoredEvent
 
     protected $connection = 'activity';
 
-    protected $table = 'stored_events';
-
-    public function __construct(array $attributes = [])
-    {
-        parent::__construct($attributes);
-        if (app()->environment('testing')) {
-            $this->connection = 'mysql';
-        }
-    }
-
     protected $fillable = [
         'id',
         'aggregate_uuid',

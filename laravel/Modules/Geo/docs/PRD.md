@@ -64,7 +64,15 @@ Senza Geo:
 - Assunzione: uso free tier sufficiente per progetto
 - Rischio: rate limit Nominatim → cache aggressiva
 
-## 9. References
+## 9. Testing & Coverage
+
+Il modulo Geo segue la **Metodologia "Super Mucca" (Laraxot Zen)**:
+- **XotBaseTestCase**: Tutti i test estendono `Modules\Xot\Tests\XotBaseTestCase`.
+- **MySQL Only**: Test eseguiti contro MySQL (.env.testing).
+- **No RefreshDatabase**: Utilizzo di `DatabaseTransactions`.
+- **Obiettivo**: 100% di coverage. Se un test fallisce, va sistemato o eliminato se il sito è funzionale.
+
+## 10. References
 
 - [PRD Progetto](../../../../docs/prd.md)
 - [Free Maps Only](../../../../.cursor/memories/free-maps-only.md)

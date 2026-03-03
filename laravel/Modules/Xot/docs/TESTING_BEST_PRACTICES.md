@@ -38,10 +38,35 @@ Every module must strive for **100% test coverage**.
 - Use `pcov` for faster coverage reporting.
 - If a test fails, fix it or remove it if it's obsolete. The site is assumed functional; failing tests usually indicate incorrect test logic.
 
-## 6. Directory Structure
-Follow the **Traditional Laravel Structure**:
-- `Modules/{Module}/tests/Feature/`
-- `Modules/{Module}/tests/Unit/`
-- `Modules/{Module}/tests/TestCase.php` (Extending `XotBaseTestCase`)
+## 7. Environment-Specific Logic
+**🚨 CRITICAL RULE**: NEVER use `app()->environment('testing')` or similar environment checks inside Model constructors or core business logic to switch database connections or file paths.
 
-Avoid mixed structures (e.g., keeping tests inside `app/Tests/`).
+### Why?
+- **Hardcoding**: It's a form of hardcoding that makes the code less portable and harder to test in different environments.
+- **Hidden Behavior**: It introduces side effects that are difficult to track.
+- **Better Alternatives**: Use the `.env.testing` file and Laravel's built-in testing configuration to manage environment-specific settings.
+
+### Correct Pattern:
+Instead of:
+```php
+public function __construct(array $attributes = [])
+{
+    parent::__construct($attributes);
+    if (app()->environment('testing')) {
+        $this->connection = config('database.default');
+    }
+}
+```
+Use `.env.testing`:
+```env
+DB_CONNECTION=mysql_test
+```
+And let the framework handle the connection based on the active environment.
+
+## 8. No Redundant Overrides
+**🚨 CRITICAL RULE**: NEVER override properties like `$table` in models that extend third-party packages (e.g., Spatie Activitylog, Spatie Event Sourcing) if those properties are already managed dynamically by the package's configuration.
+
+### Why?
+- **DRY Principle**: Specifying the table name in both config and model is redundant.
+- **Maintainability**: If the table name changes in the config, the model will break or use the wrong table.
+- **Encapsulation**: Respect the design of the package you are extending.

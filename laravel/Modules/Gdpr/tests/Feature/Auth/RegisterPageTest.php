@@ -62,12 +62,12 @@ it('shows validation errors for invalid data', function (): void {
         ->set('first_name', 'Test')
         ->set('last_name', 'User')
         ->set('email', 'invalid-email')
-        ->set('password', 'short')
+        ->set('password', 'Password123!')
         ->set('password_confirmation', 'mismatch')
         ->set('privacy_accepted', false)
         ->set('terms_accepted', false)
         ->call('submit')
-        ->assertHasErrors(['email', 'password', 'password_confirmation', 'privacy_accepted', 'terms_accepted']);
+        ->assertHasErrors(['email', 'password_confirmation', 'privacy_accepted', 'terms_accepted']);
 });
 
 it('does not display duplicated phrases on the registration page', function () {

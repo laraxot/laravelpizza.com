@@ -71,7 +71,8 @@
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
-        <env name="ACTIVITY_LOGGER_DB_CONNECTION" value="activity"/>
+        <!-- Use mysql so activity_log (migrated on default) is available in tests -->
+        <env name="ACTIVITY_LOGGER_DB_CONNECTION" value="mysql"/>
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="NIGHTWATCH_ENABLED" value="false"/>

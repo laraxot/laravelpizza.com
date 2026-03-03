@@ -6,7 +6,6 @@ namespace Modules\Tenant\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\File;
 use InvalidArgumentException;
 use Modules\Tenant\Contracts\SushiToJsonContract;
 use Modules\Tenant\Database\Factories\TestSushiModelFactory;
@@ -94,16 +93,6 @@ class TestSushiModel extends BaseModel implements SushiToJsonContract
      */
     public function getJsonFile(): string
     {
-        if (app()->environment('testing')) {
-            $dir = storage_path('tests/sushi-json');
-            if (! File::exists($dir)) {
-                File::makeDirectory($dir, 0o755, true, true);
-            }
-
-            return $dir.'/test_sushi.json';
-        }
-
-        // fallback: usa il comportamento del trait (replicato qui)
         $tbl = $this->getTable();
         /** @var class-string $tenantService */
         $tenantService = TenantService::class;

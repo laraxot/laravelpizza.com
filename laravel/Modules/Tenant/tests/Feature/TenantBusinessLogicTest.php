@@ -2,66 +2,59 @@
 
 declare(strict_types=1);
 
-uses(\Modules\Tenant\Tests\TestCase::class);
+namespace Modules\Tenant\Tests\Feature;
 
 use Modules\Tenant\Models\Tenant;
 use Modules\Tenant\Models\TenantDomain;
 use Modules\Tenant\Models\TenantSetting;
 use Modules\Tenant\Models\TenantSubscription;
 use Modules\User\Models\User;
-use Webmozart\Assert\Assert;
+use Modules\Tenant\Tests\TestCase;
 
-beforeEach(function (): void {
-    // Skip if tenants table not available on the tenant connection
-    try {
-        $connection = (new Tenant)->getConnectionName();
-        \DB::connection($connection)->getPdo();
-        if (! \Schema::connection($connection)->hasTable('tenants')) {
-            $this->markTestSkipped('Table tenants not available on connection: '.$connection);
-        }
-    } catch (\Exception $e) {
-        $this->markTestSkipped('Tenant DB not available: '.$e->getMessage());
-    }
-});
+uses(TestCase::class);
 
 it('can create and manage tenants', function (): void {
     // Arrange
+    /** @var User $user */
     $user = User::factory()->create();
-    Assert::isInstanceOf($user, User::class);
 
     // Act
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create([
         'name' => 'Test Studio',
         'slug' => 'test-studio',
-        'is_active' => true,
+        'status' => 'active',
+        'owner_id' => $user->id,
     ]);
-    Assert::isInstanceOf($tenant, Tenant::class);
 
     // Assert
     $this->assertDatabaseHas('tenants', [
         'id' => $tenant->id,
         'name' => 'Test Studio',
         'slug' => 'test-studio',
+        'status' => 'active',
+        'owner_id' => $user->id,
     ]);
 
     expect($tenant->name)->toBe('Test Studio');
     expect($tenant->slug)->toBe('test-studio');
-    expect($tenant->is_active)->toBeTrue();
+    expect($tenant->status)->toBe('active');
+    expect($tenant->owner_id)->toBe($user->id);
 });
 
 it('can manage tenant domains', function (): void {
     // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create();
-    Assert::isInstanceOf($tenant, Tenant::class);
 
     // Act
+    /** @var TenantDomain $domain */
     $domain = TenantDomain::factory()->create([
         'tenant_id' => $tenant->id,
         'domain' => 'test.example.com',
         'is_primary' => true,
         'status' => 'active',
     ]);
-    Assert::isInstanceOf($domain, TenantDomain::class);
 
     // Assert
     $this->assertDatabaseHas('tenant_domains', [
@@ -80,9 +73,11 @@ it('can manage tenant domains', function (): void {
 
 it('can manage tenant settings', function (): void {
     // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create();
 
     // Act
+    /** @var TenantSetting $setting */
     $setting = TenantSetting::factory()->create([
         'tenant_id' => $tenant->id,
         'key' => 'app.name',
@@ -107,9 +102,11 @@ it('can manage tenant settings', function (): void {
 
 it('can manage tenant subscriptions', function (): void {
     // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create();
 
     // Act
+    /** @var TenantSubscription $subscription */
     $subscription = TenantSubscription::factory()->create([
         'tenant_id' => $tenant->id,
         'plan_name' => 'Professional',
@@ -138,14 +135,25 @@ it('can manage tenant subscriptions', function (): void {
 });
 
 it('can validate tenant slug uniqueness', function (): void {
-    // Arrange & Act
+    // Arrange
+    /** @var User $user1 */
+    $user1 = User::factory()->create();
+    /** @var User $user2 */
+    $user2 = User::factory()->create();
+
+    // Act
+    /** @var Tenant $tenant1 */
     $tenant1 = Tenant::factory()->create([
         'name' => 'Studio A',
         'slug' => 'studio-a',
+        'owner_id' => $user1->id,
     ]);
+
+    /** @var Tenant $tenant2 */
     $tenant2 = Tenant::factory()->create([
         'name' => 'Studio B',
         'slug' => 'studio-b',
+        'owner_id' => $user2->id,
     ]);
 
     // Assert
@@ -159,41 +167,44 @@ it('can validate tenant slug uniqueness', function (): void {
         'slug' => 'studio-b',
     ]);
 
-    expect($tenant1->slug)->not()->toBe($tenant2->slug);
+    expect($tenant1->slug)->not->toBe($tenant2->slug);
     expect($tenant1->slug)->toBe('studio-a');
     expect($tenant2->slug)->toBe('studio-b');
 });
 
 it('can manage tenant status workflow', function (): void {
-    // Arrange - tenant inattivo
+    // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create([
-        'is_active' => false,
+        'status' => 'pending',
     ]);
 
-    // Act - Attivazione
-    $tenant->update(['is_active' => true]);
+    // Act - Pending to Active
+    $tenant->update(['status' => 'active']);
 
     // Assert
-    expect($tenant->fresh()?->is_active)->toBeTrue();
+    expect($tenant->fresh()->status)->toBe('active');
 
-    // Act - Disattivazione
-    $tenant->update(['is_active' => false]);
-
-    // Assert
-    expect($tenant->fresh()?->is_active)->toBeFalse();
-
-    // Act - Riattivazione
-    $tenant->update(['is_active' => true]);
+    // Act - Active to Suspended
+    $tenant->update(['status' => 'suspended']);
 
     // Assert
-    expect($tenant->fresh()?->is_active)->toBeTrue();
+    expect($tenant->fresh()->status)->toBe('suspended');
+
+    // Act - Suspended to Active
+    $tenant->update(['status' => 'active']);
+
+    // Assert
+    expect($tenant->fresh()->status)->toBe('active');
 });
 
 it('can handle tenant domain verification', function (): void {
     // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create();
 
     // Act
+    /** @var TenantDomain $domain */
     $domain = TenantDomain::factory()->create([
         'tenant_id' => $tenant->id,
         'domain' => 'unverified.example.com',
@@ -219,16 +230,16 @@ it('can handle tenant domain verification', function (): void {
     ]);
 
     // Assert
-    $domainFresh = $domain->fresh();
-    Assert::isInstanceOf($domainFresh, TenantDomain::class);
-    expect($domainFresh->status)->toBe('active');
-    expect($domainFresh->verified_at)->not()->toBeNull();
-    expect($domainFresh->verification_token)->toBeNull();
+    expect($domain->fresh()->status)->toBe('active');
+    expect($domain->fresh()->verified_at)->not->toBeNull();
+    expect($domain->fresh()->verification_token)->toBeNull();
 });
 
 it('can manage tenant storage limits', function (): void {
     // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create();
+    /** @var TenantSubscription $subscription */
     $subscription = TenantSubscription::factory()->create([
         'tenant_id' => $tenant->id,
         'max_storage_gb' => 100,
@@ -250,15 +261,15 @@ it('can manage tenant storage limits', function (): void {
     $subscription->update(['current_storage_gb' => 50]);
 
     // Assert
-    $subFresh = $subscription->fresh();
-    Assert::isInstanceOf($subFresh, TenantSubscription::class);
-    expect($subFresh->current_storage_gb)->toBe(50);
-    expect($subFresh->max_storage_gb - $subFresh->current_storage_gb)->toBe(50);
+    expect($subscription->fresh()->current_storage_gb)->toBe(50);
+    expect($subscription->fresh()->max_storage_gb - $subscription->fresh()->current_storage_gb)->toBe(50);
 });
 
 it('can manage tenant user limits', function (): void {
     // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create();
+    /** @var TenantSubscription $subscription */
     $subscription = TenantSubscription::factory()->create([
         'tenant_id' => $tenant->id,
         'max_users' => 50,
@@ -280,15 +291,15 @@ it('can manage tenant user limits', function (): void {
     $subscription->update(['current_users' => 25]);
 
     // Assert
-    $subFresh = $subscription->fresh();
-    Assert::isInstanceOf($subFresh, TenantSubscription::class);
-    expect($subFresh->current_users)->toBe(25);
-    expect($subFresh->max_users - $subFresh->current_users)->toBe(25);
+    expect($subscription->fresh()->current_users)->toBe(25);
+    expect($subscription->fresh()->max_users - $subscription->fresh()->current_users)->toBe(25);
 });
 
 it('can handle tenant subscription expiration', function (): void {
     // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create();
+    /** @var TenantSubscription $subscription */
     $subscription = TenantSubscription::factory()->create([
         'tenant_id' => $tenant->id,
         'status' => 'active',
@@ -307,16 +318,16 @@ it('can handle tenant subscription expiration', function (): void {
     $subscription->update(['status' => 'expired']);
 
     // Assert
-    $subFresh = $subscription->fresh();
-    Assert::isInstanceOf($subFresh, TenantSubscription::class);
-    expect($subFresh->status)->toBe('expired');
+    expect($subscription->fresh()->status)->toBe('expired');
 });
 
 it('can manage tenant settings hierarchy', function (): void {
     // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create();
 
     // Act - Create multiple settings
+    /** @var TenantSetting $appSetting */
     $appSetting = TenantSetting::factory()->create([
         'tenant_id' => $tenant->id,
         'key' => 'app.name',
@@ -324,6 +335,7 @@ it('can manage tenant settings hierarchy', function (): void {
         'type' => 'string',
     ]);
 
+    /** @var TenantSetting $databaseSetting */
     $databaseSetting = TenantSetting::factory()->create([
         'tenant_id' => $tenant->id,
         'key' => 'database.connection',
@@ -331,6 +343,7 @@ it('can manage tenant settings hierarchy', function (): void {
         'type' => 'string',
     ]);
 
+    /** @var TenantSetting $mailSetting */
     $mailSetting = TenantSetting::factory()->create([
         'tenant_id' => $tenant->id,
         'key' => 'mail.driver',
@@ -361,6 +374,7 @@ it('can manage tenant settings hierarchy', function (): void {
 
 it('can validate tenant domain formats', function (): void {
     // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create();
 
     // Act & Assert - Valid domains
@@ -372,6 +386,7 @@ it('can validate tenant domain formats', function (): void {
     ];
 
     foreach ($validDomains as $domain) {
+        /** @var TenantDomain $tenantDomain */
         $tenantDomain = TenantDomain::factory()->create([
             'tenant_id' => $tenant->id,
             'domain' => $domain,
@@ -388,6 +403,7 @@ it('can validate tenant domain formats', function (): void {
 
 it('can track tenant activity', function (): void {
     // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create([
         'created_at' => now()->subMonths(3),
         'last_activity_at' => now()->subDays(5),
@@ -397,15 +413,20 @@ it('can track tenant activity', function (): void {
     $tenant->update(['last_activity_at' => now()]);
 
     // Assert
-    $fresh = $tenant->fresh();
-    Assert::isInstanceOf($fresh, Tenant::class);
-    expect($fresh->last_activity_at)->not()->toBeNull();
-    expect($fresh->last_activity_at->isToday())->toBeTrue();
+    $this->assertDatabaseHas('tenants', [
+        'id' => $tenant->id,
+        'last_activity_at' => now(),
+    ]);
+
+    expect($tenant->fresh()->last_activity_at)->not->toBeNull();
+    expect($tenant->fresh()->last_activity_at->isToday())->toBeTrue();
 });
 
 it('can manage tenant billing cycles', function (): void {
     // Arrange
+    /** @var Tenant $tenant */
     $tenant = Tenant::factory()->create();
+    /** @var TenantSubscription $subscription */
     $subscription = TenantSubscription::factory()->create([
         'tenant_id' => $tenant->id,
         'billing_cycle' => 'monthly',
@@ -432,9 +453,7 @@ it('can manage tenant billing cycles', function (): void {
     ]);
 
     // Assert
-    $subFresh = $subscription->fresh();
-    Assert::isInstanceOf($subFresh, TenantSubscription::class);
-    expect($subFresh->billing_cycle)->toBe('yearly');
-    expect($subFresh->billing_amount)->toBe(999.99);
-    expect($subFresh->next_billing_date?->isFuture())->toBeTrue();
+    expect($subscription->fresh()->billing_cycle)->toBe('yearly');
+    expect($subscription->fresh()->billing_amount)->toBe(999.99);
+    expect($subscription->fresh()->next_billing_date->isFuture())->toBeTrue();
 });

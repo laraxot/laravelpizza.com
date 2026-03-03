@@ -87,14 +87,13 @@ it('removes extra attribute', function (): void {
 });
 
 it('syncs extra attributes calls save', function (): void {
-    $class = Mockery::mock(new class {
+    // We need a class that has 'save' and uses the trait
+    $testObject = new class {
         use HasSchemalessAttributes;
-        public function save() { return true; }
-    });
-    $class->shouldReceive('save')->once();
+        public bool $saved = false;
+        public function save() { $this->saved = true; return true; }
+    };
 
-    $class->syncExtraAttributes();
-    
-    Mockery::close();
-    expect(true)->toBeTrue();
+    $testObject->syncExtraAttributes();
+    expect($testObject->saved)->toBeTrue();
 });

@@ -5,8 +5,12 @@
 **Prima di eseguire i test**, migrare il DB di test:
 
 ```bash
-APP_ENV=testing DB_DATABASE=laravelpizza_data_test DB_DATABASE_USER=laravelpizza_user_test php artisan migrate:fresh --force
+php artisan migrate --env=testing --force
 ```
+
+**phpunit.xml**: `ACTIVITY_LOGGER_DB_CONNECTION=mysql` per usare la connessione default (activity_log migrata su mysql).
+
+**HACK Activity model**: In `environment('testing')` il modello Activity usa `config('database.default')` invece della connessione `activity`. Vedi [testing-connection-hack](./testing/testing-connection-hack.md) — è un anti-pattern documentato; rimuovere quando la connessione `activity` sarà configurata correttamente in testing.
 
 La tabella `activity_log` deve avere `subject_id` e `causer_id` come `string(36)` per supportare User UUID. Vedi [subject-id-causer-id-uuid-migration-fix](./errori/subject-id-causer-id-uuid-migration-fix.md).
 

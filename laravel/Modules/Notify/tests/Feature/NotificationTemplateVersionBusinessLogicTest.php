@@ -9,305 +9,276 @@ use Modules\Notify\Models\NotificationTemplateVersion;
 use Modules\Notify\Tests\TestCase;
 use RuntimeException;
 
-class NotificationTemplateVersionBusinessLogicTest extends TestCase
-{
-    // DatabaseTransactions is already used in the module TestCase
+uses(TestCase::class);
 
-    /** @test */
-    public function it_can_create_template_version_with_basic_information(): void
-    {
-        $template = NotificationTemplate::factory()->create();
+it('can create template version with basic information', function (): void {
+    $template = NotificationTemplate::factory()->create();
 
-        $versionData = [
-            'template_id' => $template->id,
-            'subject' => 'Versione 2.0 - Conferma Appuntamento',
-            'body_html' => '<h1>Conferma Appuntamento</h1><p>Gentile {{patient_name}}, il suo appuntamento è confermato.</p>',
-            'body_text' => 'Conferma Appuntamento\n\nGentile {{patient_name}}, il suo appuntamento è confermato.',
-            'channels' => ['email', 'sms'],
-            'variables' => ['patient_name', 'appointment_date', 'doctor_name'],
-            'conditions' => ['is_confirmed' => true],
-            'version' => '2.0',
-            'change_notes' => 'Aggiornamento design e aggiunta variabile doctor_name',
-        ];
+    $versionData = [
+        'template_id' => $template->id,
+        'subject' => 'Versione 2.0 - Conferma Appuntamento',
+        'body_html' => '<h1>Conferma Appuntamento</h1><p>Gentile {{patient_name}}, il suo appuntamento è confermato.</p>',
+        'body_text' => 'Conferma Appuntamento\n\nGentile {{patient_name}}, il suo appuntamento è confermato.',
+        'channels' => ['email', 'sms'],
+        'variables' => ['patient_name', 'appointment_date', 'doctor_name'],
+        'conditions' => ['is_confirmed' => true],
+        'version' => '2.0',
+        'change_notes' => 'Aggiornamento design e aggiunta variabile doctor_name',
+    ];
 
-        $version = NotificationTemplateVersion::create($versionData);
+    $version = NotificationTemplateVersion::create($versionData);
 
-        $this->assertDatabaseHas('notification_template_versions', [
-            'id' => $version->id,
-            'template_id' => $template->id,
-            'subject' => 'Versione 2.0 - Conferma Appuntamento',
-            'version' => '2.0',
-            'change_notes' => 'Aggiornamento design e aggiunta variabile doctor_name',
-        ]);
+    $this->assertDatabaseHas('notification_template_versions', [
+        'id' => $version->id,
+        'template_id' => $template->id,
+        'subject' => 'Versione 2.0 - Conferma Appuntamento',
+        'version' => '2.0',
+        'change_notes' => 'Aggiornamento design e aggiunta variabile doctor_name',
+    ]);
 
-        $this->assertEquals('2.0', $version->version);
-        $this->assertEquals(['email', 'sms'], $version->channels);
-        $this->assertEquals(['patient_name', 'appointment_date', 'doctor_name'], $version->variables);
-        $this->assertEquals(['is_confirmed' => true], $version->conditions);
-    }
+    expect($version->version)->toBe('2.0');
+    expect($version->channels)->toBe(['email', 'sms']);
+    expect($version->variables)->toBe(['patient_name', 'appointment_date', 'doctor_name']);
+    expect($version->conditions)->toBe(['is_confirmed' => true]);
+});
 
-    /** @test */
-    public function it_can_manage_template_version_relationships(): void
-    {
-        $template = NotificationTemplate::factory()->create();
-        $version = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-        ]);
+it('can manage template version relationships', function (): void {
+    $template = NotificationTemplate::factory()->create();
+    $version = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+    ]);
 
-        $this->assertInstanceOf(NotificationTemplate::class, $version->template);
-        $this->assertEquals($template->id, $version->template->id);
-    }
+    expect($version->template)->toBeInstanceOf(NotificationTemplate::class);
+    expect($version->template->id)->toBe($template->id);
+});
 
-    /** @test */
-    public function it_can_restore_template_from_version(): void
-    {
-        $template = NotificationTemplate::factory()->create([
-            'subject' => 'Versione Originale',
-            'body_html' => '<p>Contenuto originale</p>',
-        ]);
+it('can restore template from version', function (): void {
+    $template = NotificationTemplate::factory()->create([
+        'subject' => 'Versione Originale',
+        'body_html' => '<p>Contenuto originale</p>',
+    ]);
 
-        $version = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-            'subject' => 'Versione Precedente',
-            'body_html' => '<p>Contenuto versione precedente</p>',
-            'body_text' => 'Contenuto versione precedente',
-            'channels' => ['email'],
-            'variables' => ['patient_name'],
-            'conditions' => ['is_active' => true],
-        ]);
+    $version = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+        'subject' => 'Versione Precedente',
+        'body_html' => '<p>Contenuto versione precedente</p>',
+        'body_text' => 'Contenuto versione precedente',
+        'channels' => ['email'],
+        'variables' => ['patient_name'],
+        'conditions' => ['is_active' => true],
+    ]);
 
-        // Aggiorna il template corrente
-        $template->update([
-            'subject' => 'Versione Corrente',
-            'body_html' => '<p>Contenuto corrente</p>',
-        ]);
+    // Aggiorna il template corrente
+    $template->update([
+        'subject' => 'Versione Corrente',
+        'body_html' => '<p>Contenuto corrente</p>',
+    ]);
 
-        // Restaura dalla versione
-        $restoredTemplate = $version->restore();
+    // Restaura dalla versione
+    $restoredTemplate = $version->restore();
 
-        $this->assertEquals('Versione Precedente', $restoredTemplate->subject);
-        $this->assertEquals('<p>Contenuto versione precedente</p>', $restoredTemplate->body_html);
-        $this->assertEquals('Contenuto versione precedente', $restoredTemplate->body_text);
-        $this->assertEquals(['email'], $restoredTemplate->channels);
-        $this->assertEquals(['patient_name'], $restoredTemplate->variables);
-        $this->assertEquals(['is_active' => true], $restoredTemplate->conditions);
-    }
+    expect($restoredTemplate->subject)->toBe('Versione Precedente');
+    expect($restoredTemplate->body_html)->toBe('<p>Contenuto versione precedente</p>');
+    expect($restoredTemplate->body_text)->toBe('Contenuto versione precedente');
+    expect($restoredTemplate->channels)->toBe(['email']);
+    expect($restoredTemplate->variables)->toBe(['patient_name']);
+    expect($restoredTemplate->conditions)->toBe(['is_active' => true]);
+});
 
-    /** @test */
-    public function it_throws_exception_when_restoring_without_template(): void
-    {
-        $version = NotificationTemplateVersion::factory()->create([
-            'template_id' => 99999, // Template inesistente
-        ]);
+it('throws exception when restoring without template', function (): void {
+    $version = NotificationTemplateVersion::factory()->create([
+        'template_id' => 99999, // Template inesistente
+    ]);
 
-        $this->expectException(RuntimeException::class);
-        $this->expectExceptionMessage('Template not found for version '.$version->id);
+    expect(fn () => $version->restore())
+        ->toThrow(RuntimeException::class, 'Template not found for version '.$version->id);
+});
 
-        $version->restore();
-    }
+it('can manage version metadata', function (): void {
+    $template = NotificationTemplate::factory()->create();
 
-    /** @test */
-    public function it_can_manage_version_metadata(): void
-    {
-        $template = NotificationTemplate::factory()->create();
+    $version = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+        'version' => '1.5',
+        'change_notes' => 'Correzione bug nella formattazione email',
+    ]);
 
-        $version = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-            'version' => '1.5',
-            'change_notes' => 'Correzione bug nella formattazione email',
-        ]);
+    expect($version->version)->toBe('1.5');
+    expect($version->change_notes)->toBe('Correzione bug nella formattazione email');
+});
 
-        $this->assertEquals('1.5', $version->version);
-        $this->assertEquals('Correzione bug nella formattazione email', $version->change_notes);
-    }
+it('can handle complex channel configurations', function (): void {
+    $template = NotificationTemplate::factory()->create();
 
-    /** @test */
-    public function it_can_handle_complex_channel_configurations(): void
-    {
-        $template = NotificationTemplate::factory()->create();
+    $complexChannels = [
+        'email' => [
+            'enabled' => true,
+            'priority' => 'high',
+            'template' => 'email.confirmation',
+        ],
+        'sms' => [
+            'enabled' => true,
+            'priority' => 'normal',
+            'max_length' => 160,
+        ],
+        'push' => [
+            'enabled' => false,
+            'priority' => 'low',
+        ],
+    ];
 
-        $complexChannels = [
-            'email' => [
-                'enabled' => true,
-                'priority' => 'high',
-                'template' => 'email.confirmation',
-            ],
-            'sms' => [
-                'enabled' => true,
-                'priority' => 'normal',
-                'max_length' => 160,
-            ],
-            'push' => [
-                'enabled' => false,
-                'priority' => 'low',
-            ],
-        ];
+    $version = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+        'channels' => $complexChannels,
+    ]);
 
-        $version = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-            'channels' => $complexChannels,
-        ]);
+    expect($version->channels)->toBe($complexChannels);
+    expect($version->channels['email']['enabled'])->toBeTrue();
+    expect($version->channels['push']['enabled'])->toBeFalse();
+});
 
-        $this->assertEquals($complexChannels, $version->channels);
-        $this->assertTrue($version->channels['email']['enabled']);
-        $this->assertFalse($version->channels['push']['enabled']);
-    }
+it('can manage conditional logic', function (): void {
+    $template = NotificationTemplate::factory()->create();
 
-    /** @test */
-    public function it_can_manage_conditional_logic(): void
-    {
-        $template = NotificationTemplate::factory()->create();
+    $conditions = [
+        'user_type' => ['patient', 'doctor'],
+        'appointment_status' => 'confirmed',
+        'notification_preference' => 'all',
+        'time_zone' => 'Europe/Rome',
+        'language' => ['it', 'en'],
+    ];
 
-        $conditions = [
-            'user_type' => ['patient', 'doctor'],
-            'appointment_status' => 'confirmed',
-            'notification_preference' => 'all',
-            'time_zone' => 'Europe/Rome',
-            'language' => ['it', 'en'],
-        ];
+    $version = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+        'conditions' => $conditions,
+    ]);
 
-        $version = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-            'conditions' => $conditions,
-        ]);
+    expect($version->conditions)->toBe($conditions);
+    expect($version->conditions['user_type'])->toContain('patient');
+    expect($version->conditions['appointment_status'])->toBe('confirmed');
+});
 
-        $this->assertEquals($conditions, $version->conditions);
-        $this->assertContains('patient', $version->conditions['user_type']);
-        $this->assertEquals('confirmed', $version->conditions['appointment_status']);
-    }
+it('can handle template variables validation', function (): void {
+    $template = NotificationTemplate::factory()->create();
 
-    /** @test */
-    public function it_can_handle_template_variables_validation(): void
-    {
-        $template = NotificationTemplate::factory()->create();
+    $variables = [
+        'required' => ['patient_name', 'appointment_date', 'doctor_name'],
+        'optional' => ['clinic_address', 'phone_number'],
+        'conditional' => ['emergency_contact', 'insurance_info'],
+        'formatting' => [
+            'date_format' => 'd/m/Y H:i',
+            'currency' => 'EUR',
+            'timezone' => 'Europe/Rome',
+        ],
+    ];
 
-        $variables = [
-            'required' => ['patient_name', 'appointment_date', 'doctor_name'],
-            'optional' => ['clinic_address', 'phone_number'],
-            'conditional' => ['emergency_contact', 'insurance_info'],
-            'formatting' => [
-                'date_format' => 'd/m/Y H:i',
-                'currency' => 'EUR',
-                'timezone' => 'Europe/Rome',
-            ],
-        ];
+    $version = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+        'variables' => $variables,
+    ]);
 
-        $version = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-            'variables' => $variables,
-        ]);
+    expect($version->variables)->toBe($variables);
+    expect($version->variables['required'])->toContain('patient_name');
+    expect($version->variables['formatting']['date_format'])->toBe('d/m/Y H:i');
+});
 
-        $this->assertEquals($variables, $version->variables);
-        $this->assertContains('patient_name', $version->variables['required']);
-        $this->assertEquals('d/m/Y H:i', $version->variables['formatting']['date_format']);
-    }
+it('can manage version history', function (): void {
+    $template = NotificationTemplate::factory()->create();
 
-    /** @test */
-    public function it_can_manage_version_history(): void
-    {
-        $template = NotificationTemplate::factory()->create();
+    // Crea multiple versioni
+    $version1 = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+        'version' => '1.0',
+        'change_notes' => 'Versione iniziale',
+    ]);
 
-        // Crea multiple versioni
-        $version1 = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-            'version' => '1.0',
-            'change_notes' => 'Versione iniziale',
-        ]);
+    $version2 = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+        'version' => '1.1',
+        'change_notes' => 'Aggiunta variabile clinic_address',
+    ]);
 
-        $version2 = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-            'version' => '1.1',
-            'change_notes' => 'Aggiunta variabile clinic_address',
-        ]);
+    $version3 = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+        'version' => '2.0',
+        'change_notes' => 'Rifattorizzazione completa del template',
+    ]);
 
-        $version3 = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-            'version' => '2.0',
-            'change_notes' => 'Rifattorizzazione completa del template',
-        ]);
+    expect($template->versions)->toHaveCount(3);
+    expect($version1->version)->toBe('1.0');
+    expect($version2->version)->toBe('1.1');
+    expect($version3->version)->toBe('2.0');
+});
 
-        $this->assertCount(3, $template->versions);
-        $this->assertEquals('1.0', $version1->version);
-        $this->assertEquals('1.1', $version2->version);
-        $this->assertEquals('2.0', $version3->version);
-    }
+it('can handle version rollback scenarios', function (): void {
+    $template = NotificationTemplate::factory()->create([
+        'subject' => 'Versione Corrente',
+        'body_html' => '<p>Contenuto corrente</p>',
+    ]);
 
-    /** @test */
-    public function it_can_handle_version_rollback_scenarios(): void
-    {
-        $template = NotificationTemplate::factory()->create([
-            'subject' => 'Versione Corrente',
-            'body_html' => '<p>Contenuto corrente</p>',
-        ]);
+    $stableVersion = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+        'version' => '1.0',
+        'subject' => 'Versione Stabile',
+        'body_html' => '<p>Contenuto stabile</p>',
+        'body_text' => 'Contenuto stabile',
+        'channels' => ['email'],
+        'variables' => ['patient_name'],
+        'conditions' => ['is_active' => true],
+    ]);
 
-        $stableVersion = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-            'version' => '1.0',
-            'subject' => 'Versione Stabile',
-            'body_html' => '<p>Contenuto stabile</p>',
-            'body_text' => 'Contenuto stabile',
-            'channels' => ['email'],
-            'variables' => ['patient_name'],
-            'conditions' => ['is_active' => true],
-        ]);
+    // Simula un aggiornamento problematico
+    $template->update([
+        'subject' => 'Versione Problematica',
+        'body_html' => '<p>Contenuto con bug</p>',
+    ]);
 
-        // Simula un aggiornamento problematico
-        $template->update([
-            'subject' => 'Versione Problematica',
-            'body_html' => '<p>Contenuto con bug</p>',
-        ]);
+    // Rollback alla versione stabile
+    $restoredTemplate = $stableVersion->restore();
 
-        // Rollback alla versione stabile
-        $restoredTemplate = $stableVersion->restore();
+    expect($restoredTemplate->subject)->toBe('Versione Stabile');
+    expect($restoredTemplate->body_html)->toBe('<p>Contenuto stabile</p>');
+    expect($restoredTemplate->body_text)->toBe('Contenuto stabile');
+    expect($restoredTemplate->channels)->toBe(['email']);
+    expect($restoredTemplate->variables)->toBe(['patient_name']);
+    expect($restoredTemplate->conditions)->toBe(['is_active' => true]);
+});
 
-        $this->assertEquals('Versione Stabile', $restoredTemplate->subject);
-        $this->assertEquals('<p>Contenuto stabile</p>', $restoredTemplate->body_html);
-        $this->assertEquals('Contenuto stabile', $restoredTemplate->body_text);
-        $this->assertEquals(['email'], $restoredTemplate->channels);
-        $this->assertEquals(['patient_name'], $restoredTemplate->variables);
-        $this->assertEquals(['is_active' => true], $restoredTemplate->conditions);
-    }
+it('can manage version metadata and tracking', function (): void {
+    $template = NotificationTemplate::factory()->create();
 
-    /** @test */
-    public function it_can_manage_version_metadata_and_tracking(): void
-    {
-        $template = NotificationTemplate::factory()->create();
+    $version = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+        'version' => '1.2.3',
+        'change_notes' => 'Hotfix per problema di formattazione SMS',
+    ]);
 
-        $version = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-            'version' => '1.2.3',
-            'change_notes' => 'Hotfix per problema di formattazione SMS',
-        ]);
+    // Verifica che i metadati siano preservati
+    expect($version->version)->toBe('1.2.3');
+    expect($version->change_notes)->toBe('Hotfix per problema di formattazione SMS');
+    expect($version->created_at)->not->toBeNull();
+    expect($version->updated_at)->not->toBeNull();
+});
 
-        // Verifica che i metadati siano preservati
-        $this->assertEquals('1.2.3', $version->version);
-        $this->assertEquals('Hotfix per problema di formattazione SMS', $version->change_notes);
-        $this->assertNotNull($version->created_at);
-        $this->assertNotNull($version->updated_at);
-    }
+it('can handle empty or null values gracefully', function (): void {
+    $template = NotificationTemplate::factory()->create();
 
-    /** @test */
-    public function it_can_handle_empty_or_null_values_gracefully(): void
-    {
-        $template = NotificationTemplate::factory()->create();
+    $version = NotificationTemplateVersion::factory()->create([
+        'template_id' => $template->id,
+        'subject' => null,
+        'body_html' => null,
+        'body_text' => null,
+        'channels' => null,
+        'variables' => null,
+        'conditions' => null,
+        'change_notes' => null,
+    ]);
 
-        $version = NotificationTemplateVersion::factory()->create([
-            'template_id' => $template->id,
-            'subject' => null,
-            'body_html' => null,
-            'body_text' => null,
-            'channels' => null,
-            'variables' => null,
-            'conditions' => null,
-            'change_notes' => null,
-        ]);
-
-        $this->assertNull($version->subject);
-        $this->assertNull($version->body_html);
-        $this->assertNull($version->body_text);
-        $this->assertNull($version->channels);
-        $this->assertNull($version->variables);
-        $this->assertNull($version->conditions);
-        $this->assertNull($version->change_notes);
-    }
-}
+    expect($version->subject)->toBeNull();
+    expect($version->body_html)->toBeNull();
+    expect($version->body_text)->toBeNull();
+    expect($version->channels)->toBeNull();
+    expect($version->variables)->toBeNull();
+    expect($version->conditions)->toBeNull();
+    expect($version->change_notes)->toBeNull();
+});

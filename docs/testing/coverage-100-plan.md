@@ -13,6 +13,9 @@ Obiettivo: portare il progetto LaravelPizza al **100% di coverage** dei test Pes
   - Script `bashscripts/testing/ensure-test-db.sh` per verifica DB pre-test
   - XotBaseTransitionTest: firma già corretta (report coverage obsoleto)
   - **Gdpr RegisterPageTest**: riscritto da POST a Livewire::test(RegisterWidget::class); skip condizionale se tabella `treatments` non migrata — vedi [Modules/Gdpr/docs/registration-testing.md](../laravel/Modules/Gdpr/docs/registration-testing.md)
+  - **Gdpr RegisterFormValidationTest**: skip per validazioni non presenti in ValidateUserDataAction (required, email format, password); email univoche per evitare conflitti; vedi [Modules/Gdpr/docs/registration-testing.md](../laravel/Modules/Gdpr/docs/registration-testing.md)
+  - **Gdpr RegisterWidgetTest**: rimosso assert su `state` (ValidateUserDataAction non lo restituisce); skip condizionale per SaveGdprConsentsAction se tabella `treatments` non migrata
+  - **Activity model**: hack in `__construct()` — in testing usa `config('database.default')` invece di `activity`. Anti-pattern documentato in [testing-connection-hack](../laravel/Modules/Activity/docs/testing/testing-connection-hack.md)
 
 ## Fasi
 

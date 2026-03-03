@@ -9,6 +9,7 @@ use Filament\Actions\BulkAction;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Traits\HasTableFunctionsTrait;
+use Mockery;
 
 uses(TestCase::class);
 
