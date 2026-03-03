@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Modules\Gdpr\Tests\Feature;
-
 beforeEach(function () {
     // Clean database before each test
     \Modules\User\Models\User::query()->delete();
