@@ -54,7 +54,7 @@ it('can register a new user', function (): void {
         ->set('terms_accepted', true)
         ->call('submit');
 
-    $this->assertDatabaseHas('users', ['email' => $email]);
+    $this->assertDatabaseHas('users', ['email' => $email], 'user');
 });
 
 it('shows validation errors for invalid data', function (): void {

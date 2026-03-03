@@ -9,7 +9,7 @@ use Modules\Geo\Models\Location;
 
 describe('Location Business Logic', function () {
     test('location extends base model', function () {
-        dd(get_class($this));
+        dd(get_parent_class($this));
         expect(Location::class)->toBeSubclassOf(BaseModel::class);
     });
 
