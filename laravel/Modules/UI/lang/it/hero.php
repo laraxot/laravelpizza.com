@@ -57,6 +57,7 @@ return [
             'description' => 'title',
             'helper_text' => 'title',
             'tooltip' => '',
+            'placeholder' => 'title',
         ],
         'view' => [
             'label' => 'view',

@@ -87,7 +87,6 @@ dataset('userTypes', [
     //    $response = get('/it/auth/register');
     //    expect($response->status())->toBeGreaterThanOrEqual(300);
     // });
-});
 
     test(':type registration page loads within acceptable time limits', function (string $type): void {
         $startTime = microtime(true);

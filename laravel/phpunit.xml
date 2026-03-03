@@ -12,20 +12,20 @@
             <directory>tests/Feature</directory>
         </testsuite>
         <testsuite name="Modules">
-            <directory suffix="Test.php">Modules/Activity/tests</directory>
-            <directory suffix="Test.php">Modules/Cms/tests</directory>
-            <directory suffix="Test.php">Modules/Gdpr/tests</directory>
-            <directory suffix="Test.php">Modules/Geo/tests</directory>
-            <directory suffix="Test.php">Modules/Job/tests</directory>
-            <directory suffix="Test.php">Modules/Lang/tests</directory>
-            <directory suffix="Test.php">Modules/Media/tests</directory>
-            <directory suffix="Test.php">Modules/Meetup/tests</directory>
-            <directory suffix="Test.php">Modules/Notify/tests</directory>
-            <directory suffix="Test.php">Modules/Seo/tests</directory>
-            <directory suffix="Test.php">Modules/Tenant/tests</directory>
-            <directory suffix="Test.php">Modules/UI/tests</directory>
-            <directory suffix="Test.php">Modules/User/tests</directory>
-            <directory suffix="Test.php">Modules/Xot/tests</directory>
+            <directory>Modules/Activity/tests</directory>
+            <directory>Modules/Cms/tests</directory>
+            <directory>Modules/Gdpr/tests</directory>
+            <directory>Modules/Geo/tests</directory>
+            <directory>Modules/Job/tests</directory>
+            <directory>Modules/Lang/tests</directory>
+            <directory>Modules/Media/tests</directory>
+            <directory>Modules/Meetup/tests</directory>
+            <directory>Modules/Notify/tests</directory>
+            <directory>Modules/Seo/tests</directory>
+            <directory>Modules/Tenant/tests</directory>
+            <directory>Modules/UI/tests</directory>
+            <directory>Modules/User/tests</directory>
+            <directory>Modules/Xot/tests</directory>
         </testsuite>
     </testsuites>
     <source>

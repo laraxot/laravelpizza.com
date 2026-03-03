@@ -13,7 +13,6 @@ test('activity model can be created', function () {
 });
 
 test('activity model can be saved and retrieved', function () {
-    // dd(DB::connection('activity')->getDatabaseName());
     $activity = Activity::factory()->create([
         'description' => 'Test action',
         'event' => 'test_event',

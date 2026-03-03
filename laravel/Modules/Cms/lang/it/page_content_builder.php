@@ -39,6 +39,12 @@ return [
             'description' => 'content',
             'tooltip' => '',
         ],
+        'view' => [
+            'label' => 'view',
+            'placeholder' => 'view',
+            'helper_text' => 'view',
+            'description' => 'view',
+        ],
     ],
     'label' => 'Page Content Builder',
     'plural_label' => 'Page Content Builder (Plurale)',

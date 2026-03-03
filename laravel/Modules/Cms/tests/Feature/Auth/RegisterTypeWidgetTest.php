@@ -7,41 +7,31 @@ namespace Modules\Cms\Tests\Feature\Auth;
 use Exception;
 use Livewire\Livewire;
 use Modules\User\Filament\Widgets\RegistrationWidget;
-use Modules\Xot\Datas\XotData;
 use Modules\Xot\Tests\TestCase;
 
-// Use Cms specific TestCase only for this file
 uses(TestCase::class);
 
-// Ensure XotData is mocked for every test
 beforeEach(function (): void {
-    // ✅ Utilizzo funzione centralizzata dal TestCase
     static::mockXotData();
 });
 
-// REGISTRATION WIDGET TESTS - Filament Component
-// ✅ Test del WIDGET Filament, non della pagina
-// ✅ Focus su: rendering, form interaction, basic validation
-// ✅ Architettura: Filament Widget + XotBaseWidget + dynamic resolution
-
-// WIDGET CORE TESTS
-
+test('registration widget renders for patient type', function (): void {
     Livewire::test(RegistrationWidget::class, ['type' => 'patient'])
         ->assertStatus(200)
         ->assertViewIs('pub_theme::filament.widgets.registration');
 });
 
+test('registration widget renders for doctor type', function (): void {
     Livewire::test(RegistrationWidget::class, ['type' => 'doctor'])
         ->assertStatus(200)
         ->assertViewIs('pub_theme::filament.widgets.registration');
 });
 
-        Livewire::test(RegistrationWidget::class);
-    })
-        ->toThrow(Exception::class);
-});
+test('registration widget without type throws exception', function (): void {
+    Livewire::test(RegistrationWidget::class);
+})->throws(Exception::class);
 
-    // ✅ Utilizzo funzione centralizzata dal TestCase
+test('registration widget accepts form data', function (): void {
     $email = static::generateUniqueEmail();
 
     $widget = Livewire::test(RegistrationWidget::class, ['type' => 'patient'])
@@ -53,9 +43,10 @@ beforeEach(function (): void {
     expect($widget->get('data.email'))->toBe($email);
 });
 
+test('registration widget stores multiple fields', function (): void {
     $testData = [
         'name' => 'Test Patient',
-        'email' => static::generateUniqueEmail(), // ✅ Utilizzo funzione centralizzata
+        'email' => static::generateUniqueEmail(),
         'password' => 'TestPassword123!',
     ];
 
@@ -70,31 +61,29 @@ beforeEach(function (): void {
     }
 });
 
+test('registration widget register call does not fatal', function (): void {
     $widget = Livewire::test(RegistrationWidget::class, ['type' => 'patient'])
-        ->set('data.email', static::generateUniqueEmail()) // ✅ Utilizzo funzione centralizzata
+        ->set('data.email', static::generateUniqueEmail())
         ->set('data.name', 'Test User')
         ->set('data.password', 'TestPassword123!');
 
-    // Chiamata a register - potrebbe fallire per action class mancante
-    // ma non dovrebbe generare errori fatali di sintassi
     try {
         $widget->call('register');
-        expect(true)->toBeTrue(); // Success path
+        expect(true)->toBeTrue();
     } catch (Exception $e) {
-        // Se fallisce per action class o validation, è normale in test
         expect($e)->toBeInstanceOf(Exception::class);
     }
 });
 
+test('registration widget is Livewire compatible', function (): void {
     $widget = Livewire::test(RegistrationWidget::class, ['type' => 'patient']);
-
-    // Verifica che il widget sia compatibile con Livewire testing
     expect($widget)->not()->toBeNull();
 });
 
+test('registration widget register call for both types', function (): void {
     foreach (['patient', 'doctor'] as $type) {
         $widget = Livewire::test(RegistrationWidget::class, ['type' => $type])
-            ->set('data.email', static::generateUniqueEmail()) // ✅ Utilizzo funzione centralizzata
+            ->set('data.email', static::generateUniqueEmail())
             ->set('data.name', "Test {$type}")
             ->set('data.password', 'TestPassword123!');
 
@@ -102,20 +91,19 @@ beforeEach(function (): void {
             $widget->call('register');
             expect(true)->toBeTrue();
         } catch (Exception $e) {
-            // Normale per environment di test
             expect($e)->toBeInstanceOf(Exception::class);
         }
     }
 });
 
+test('registration widget retains invalid data', function (): void {
     $email = 'invalid-email';
     $name = 'Test User';
 
-    $widget = Livewire::test(RegistrationWidget::class, ['type' => 'patient'])->set('data.email', $email)->set(
-        'data.name',
-        $name,
-    );
+    $widget = Livewire::test(RegistrationWidget::class, ['type' => 'patient'])
+        ->set('data.email', $email)
+        ->set('data.name', $name);
 
-    // Anche dopo errori, i dati dovrebbero rimanere
-    expect($widget->get('data.email'))->toBe($email)->and($widget->get('data.name'))->toBe($name);
+    expect($widget->get('data.email'))->toBe($email);
+    expect($widget->get('data.name'))->toBe($name);
 });

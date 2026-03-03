@@ -63,6 +63,18 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+        'text' => [
+            'label' => 'text',
+            'placeholder' => 'text',
+            'helper_text' => 'text',
+            'description' => 'text',
+        ],
+        '_tpl' => [
+            'label' => '_tpl',
+            'placeholder' => '_tpl',
+            'helper_text' => '_tpl',
+            'description' => '_tpl',
+        ],
     ],
     'map_types' => [
         'roadmap' => 'Stradale',

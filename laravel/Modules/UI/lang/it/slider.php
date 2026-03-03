@@ -22,6 +22,7 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'placeholder' => 'view',
         ],
     ],
     'label' => 'Slider',

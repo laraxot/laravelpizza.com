@@ -23,6 +23,7 @@ return [
             'description' => 'ratio',
             'tooltip' => '',
             'helper_text' => '',
+            'placeholder' => 'ratio',
         ],
         'url' => [
             'label' => 'url',

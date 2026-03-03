@@ -67,5 +67,25 @@
         "created_at": "2026-01-19T21:14:01.050577Z",
         "created_by": null,
         "updated_by": null
+    },
+    {
+        "nome": "Firenze",
+        "codice": 7876,
+        "regione": "\"Toscana\"",
+        "provincia": "\"Firenze\"",
+        "sigla_provincia": "FI",
+        "cap": "\"50100\"",
+        "codice_catastale": "S757",
+        "popolazione": 651741,
+        "zona_altimetrica": "montagna",
+        "altitudine": 1835,
+        "superficie": 428.85,
+        "lat": 43.6935,
+        "lng": 11.2455,
+        "id": 4,
+        "updated_at": "2026-03-02T20:52:24.754305Z",
+        "created_at": "2026-03-02T20:52:24.754333Z",
+        "updated_by": "system",
+        "created_by": "system"
     }
 ]
