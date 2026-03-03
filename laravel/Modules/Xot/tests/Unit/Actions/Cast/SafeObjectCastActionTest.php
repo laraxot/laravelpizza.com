@@ -32,6 +32,7 @@ it('checks property presence and values', function (): void {
         ->and($this->action->hasNonNullProperty($this->obj, 'name'))->toBeTrue()
         ->and($this->action->hasNonEmptyProperty($this->obj, 'name'))->toBeTrue()
         ->and($this->action->hasNonEmptyProperty($this->obj, 'empty'))->toBeFalse()
+        ->and($this->action->hasNonEmptyProperty($this->obj, 'missing'))->toBeFalse()
         ->and($this->action->hasPropertyValue($this->obj, 'name', 'Mario'))->toBeTrue();
 });
 
@@ -41,7 +42,11 @@ it('casts typed property getters', function (): void {
         ->and($this->action->getFloatProperty($this->obj, 'score'))->toBe(12.5)
         ->and($this->action->getBooleanProperty($this->obj, 'active'))->toBeTrue()
         ->and($this->action->getArrayProperty($this->obj, 'meta'))->toBe(['k' => 'v'])
-        ->and($this->action->getStringProperty($this->obj, 'missing', 'fallback'))->toBe('fallback');
+        ->and($this->action->getStringProperty($this->obj, 'missing', 'fallback'))->toBe('fallback')
+        ->and($this->action->getIntProperty($this->obj, 'missing', 9))->toBe(9)
+        ->and($this->action->getFloatProperty($this->obj, 'missing', 1.5))->toBe(1.5)
+        ->and($this->action->getBooleanProperty($this->obj, 'missing', true))->toBeTrue()
+        ->and($this->action->getArrayProperty($this->obj, 'missing', ['d']))->toBe(['d']);
 });
 
 it('casts generic typed getter and validated getter', function (): void {
@@ -61,6 +66,6 @@ it('checks methods and calls methods safely', function (): void {
     expect($this->action->hasMethod($this->obj, 'greet'))->toBeTrue()
         ->and($this->action->callMethodSafely($this->obj, 'greet', ['Luigi']))->toBe('Hi Luigi')
         ->and($this->action->callMethodSafely($this->obj, 'missing', [], 'default'))->toBe('default')
-        ->and($this->action->callMethodSafely($this->obj, 'fail', [], 'default'))->toBe('default');
+        ->and($this->action->callMethodSafely($this->obj, 'fail', [], 'default'))->toBe('default')
+        ->and($this->action->hasPropertyValue($this->obj, 'missing', 'x'))->toBeFalse();
 });
-
