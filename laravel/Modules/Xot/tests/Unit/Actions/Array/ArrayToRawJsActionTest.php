@@ -2,38 +2,43 @@
 
 declare(strict_types=1);
 
-use Filament\Support\RawJs;
+namespace Modules\Xot\Tests\Unit\Actions\Array;
+
 use Modules\Xot\Actions\Array\ArrayToRawJsAction;
+use Tests\TestCase;
+use Filament\Support\RawJs;
 
-beforeEach(function (): void {
-    $this->action = app(ArrayToRawJsAction::class);
-});
+uses(TestCase::class);
 
-it('converts simple array to RawJs', function (): void {
-    $result = $this->action->execute(['a' => 1, 'b' => 2]);
-    expect($result)->toBeInstanceOf(RawJs::class);
-    expect($result->toHtml())->toContain('a')->toContain('1');
-});
-
-it('converts boolean and null', function (): void {
-    $result = $this->action->execute(['flag' => true, 'n' => null]);
-    expect($result->toHtml())->toContain('true')->toContain('null');
-});
-
-it('preserves RawJs values', function (): void {
-    $raw = RawJs::make('function(){}');
-    $result = $this->action->execute(['fn' => $raw]);
-    expect($result->toHtml())->toContain('function');
-});
-
-it('handles nested arrays and escaped keys/strings', function (): void {
-    $result = $this->action->execute([
-        'not-valid-key' => "O'Reilly\\Books",
-        'nested' => ['child' => 7],
-    ]);
-
-    expect($result->toHtml())
-        ->toContain("'not-valid-key'")
-        ->toContain("O\\'Reilly\\\\Books")
-        ->toContain("nested: {child: 7}");
+test('array to raw js action converts various types correctly', function () {
+    $action = app(ArrayToRawJsAction::class);
+    
+    $data = [
+        'string' => 'hello',
+        'int' => 123,
+        'float' => 12.3,
+        'bool_true' => true,
+        'bool_false' => false,
+        'null_val' => null,
+        'special-key' => 'value',
+        'with\'quote' => 'o\'reilly',
+        'raw' => RawJs::make('function() { return 1; }'),
+        'nested' => [
+            'key' => 'val'
+        ]
+    ];
+    
+    $result = $action->execute($data);
+    $html = $result->toHtml();
+    
+    expect($html)->toContain('string: \'hello\'')
+        ->and($html)->toContain('int: 123')
+        ->and($html)->toContain('float: 12.3')
+        ->and($html)->toContain('bool_true: true')
+        ->and($html)->toContain('bool_false: false')
+        ->and($html)->toContain('null_val: null')
+        ->and($html)->toContain('\'special-key\': \'value\'')
+        ->and($html)->toContain('\'with\\\'quote\': \'o\\\'reilly\'')
+        ->and($html)->toContain('raw: function() { return 1; }')
+        ->and($html)->toContain('nested: {key: \'val\'}');
 });

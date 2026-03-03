@@ -8,19 +8,21 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 test('can create permission with minimal data', function (): void {
+    $name = 'test.permission.' . uniqid();
     $permission = Permission::factory()->create([
-        'name' => 'test.permission',
+        'name' => $name,
         'guard_name' => 'web',
     ]);
 
     expect($permission->id)->not->toBeNull();
-    expect($permission->name)->toBe('test.permission');
+    expect($permission->name)->toBe($name);
     expect($permission->guard_name)->toBe('web');
 });
 
 test('can create permission with all fields', function (): void {
+    $name = 'full.permission.' . uniqid();
     $permissionData = [
-        'name' => 'full.permission',
+        'name' => $name,
         'guard_name' => 'web',
         'created_by' => 'user123',
         'updated_by' => 'user456',
@@ -29,7 +31,7 @@ test('can create permission with all fields', function (): void {
     $permission = Permission::factory()->create($permissionData);
 
     expect($permission->id)->not->toBeNull();
-    expect($permission->name)->toBe('full.permission');
+    expect($permission->name)->toBe($name);
     expect($permission->guard_name)->toBe('web');
     expect($permission->created_by)->toBe('user123');
     expect($permission->updated_by)->toBe('user456');
@@ -70,66 +72,74 @@ test('permission has casts', function (): void {
 });
 
 test('can find permission by name', function (): void {
-    $permission = Permission::factory()->create(['name' => 'unique.permission']);
+    $name = 'unique.permission.' . uniqid();
+    $permission = Permission::factory()->create(['name' => $name]);
 
-    $foundPermission = Permission::where('name', 'unique.permission')->first();
+    $foundPermission = Permission::where('name', $name)->first();
 
     expect($foundPermission)->not->toBeNull();
     expect($foundPermission->id)->toBe($permission->id);
 });
 
 test('can find permission by guard name', function (): void {
-    Permission::factory()->create(['guard_name' => 'web']);
-    Permission::factory()->create(['guard_name' => 'api']);
-    Permission::factory()->create(['guard_name' => 'web']);
+    $suffix = uniqid();
+    Permission::factory()->create(['name' => 'guard.perm1.' . $suffix, 'guard_name' => 'web']);
+    Permission::factory()->create(['name' => 'guard.perm2.' . $suffix, 'guard_name' => 'api']);
+    Permission::factory()->create(['name' => 'guard.perm3.' . $suffix, 'guard_name' => 'web']);
 
-    $webPermissions = Permission::where('guard_name', 'web')->get();
+    $webPermissions = Permission::where('name', 'like', 'guard.perm%.'. $suffix)->where('guard_name', 'web')->get();
 
     expect($webPermissions->count())->toBeGreaterThanOrEqual(2);
     expect($webPermissions->every(fn ($permission) => 'web' === $permission->guard_name))->toBeTrue();
 });
 
 test('can find permission by created by', function (): void {
-    $permission = Permission::factory()->create(['created_by' => 'user123']);
+    $name = 'created-by.perm.' . uniqid();
+    $permission = Permission::factory()->create(['name' => $name, 'created_by' => 'user123']);
 
-    $foundPermission = Permission::where('created_by', 'user123')->first();
+    $foundPermission = Permission::where('name', $name)->where('created_by', 'user123')->first();
 
     expect($foundPermission)->not->toBeNull();
     expect($foundPermission->id)->toBe($permission->id);
 });
 
 test('can find permission by updated by', function (): void {
-    $permission = Permission::factory()->create(['updated_by' => 'user456']);
+    $name = 'updated-by.perm.' . uniqid();
+    $permission = Permission::factory()->create(['name' => $name, 'updated_by' => 'user456']);
 
-    $foundPermission = Permission::where('updated_by', 'user456')->first();
+    $foundPermission = Permission::where('name', $name)->where('updated_by', 'user456')->first();
 
     expect($foundPermission)->not->toBeNull();
     expect($foundPermission->id)->toBe($permission->id);
 });
 
 test('can find permissions by name pattern', function (): void {
-    Permission::factory()->create(['name' => 'user.create']);
-    Permission::factory()->create(['name' => 'user.update']);
-    Permission::factory()->create(['name' => 'user.delete']);
-    Permission::factory()->create(['name' => 'post.read']);
+    $suffix = uniqid();
+    Permission::factory()->create(['name' => 'user.create.' . $suffix]);
+    Permission::factory()->create(['name' => 'user.update.' . $suffix]);
+    Permission::factory()->create(['name' => 'user.delete.' . $suffix]);
+    Permission::factory()->create(['name' => 'post.read.' . $suffix]);
 
-    $userPermissions = Permission::where('name', 'like', 'user.%')->get();
+    $userPermissions = Permission::where('name', 'like', 'user.%.'. $suffix)->get();
 
     expect($userPermissions->count())->toBeGreaterThanOrEqual(3);
     expect($userPermissions->every(fn ($permission) => str_starts_with($permission->name, 'user.')))->toBeTrue();
 });
 
 test('can update permission', function (): void {
-    $permission = Permission::factory()->create(['name' => 'old.permission']);
+    $oldName = 'old.permission.' . uniqid();
+    $newName = 'new.permission.' . uniqid();
+    $permission = Permission::factory()->create(['name' => $oldName]);
 
-    $permission->update(['name' => 'new.permission']);
+    $permission->update(['name' => $newName]);
 
-    expect($permission->fresh()->name)->toBe('new.permission');
+    expect($permission->fresh()->name)->toBe($newName);
 });
 
 test('can handle null values', function (): void {
+    $name = 'null-test.perm.' . uniqid();
     $permission = Permission::factory()->create([
-        'name' => 'test.permission',
+        'name' => $name,
         'guard_name' => 'web',
         'created_by' => null,
         'updated_by' => null,
@@ -140,19 +150,20 @@ test('can handle null values', function (): void {
 });
 
 test('can find permissions by multiple criteria', function (): void {
+    $suffix = uniqid();
     Permission::factory()->create([
-        'name' => 'admin.user.create',
+        'name' => 'admin.user.create.' . $suffix,
         'guard_name' => 'web',
         'created_by' => 'admin',
     ]);
 
     Permission::factory()->create([
-        'name' => 'admin.user.update',
+        'name' => 'admin.user.update.' . $suffix,
         'guard_name' => 'api',
         'created_by' => 'admin',
     ]);
 
-    $permissions = Permission::where('name', 'like', 'admin.user.%')->where('created_by', 'admin')->get();
+    $permissions = Permission::where('name', 'like', 'admin.user.%.'. $suffix)->where('created_by', 'admin')->get();
 
     expect($permissions->count())->toBeGreaterThanOrEqual(2);
     expect($permissions->every(
@@ -161,32 +172,32 @@ test('can find permissions by multiple criteria', function (): void {
 });
 
 test('permission has roles relationship', function (): void {
-    $permission = Permission::factory()->create();
+    $permission = Permission::factory()->create(['name' => 'roles-rel.' . uniqid()]);
 
     expect(method_exists($permission, 'roles'))->toBeTrue();
 });
 
 test('permission has users relationship', function (): void {
-    $permission = Permission::factory()->create();
+    $permission = Permission::factory()->create(['name' => 'users-rel.' . uniqid()]);
 
     expect(method_exists($permission, 'users'))->toBeTrue();
 });
 
 test('permission can use role scopes', function (): void {
-    $permission = Permission::factory()->create();
+    $permission = Permission::factory()->create(['name' => 'role-scope.' . uniqid()]);
 
     expect(method_exists($permission, 'role'))->toBeTrue();
 });
 
 test('permission can use permission scopes', function (): void {
-    $permission = Permission::factory()->create();
+    $permission = Permission::factory()->create(['name' => 'perm-scope.' . uniqid()]);
 
     expect(method_exists($permission, 'permission'))->toBeTrue();
     expect(method_exists($permission, 'withoutPermission'))->toBeTrue();
 });
 
 test('permission can use without role scopes', function (): void {
-    $permission = Permission::factory()->create();
+    $permission = Permission::factory()->create(['name' => 'without-role.' . uniqid()]);
 
     expect(method_exists($permission, 'withoutRole'))->toBeTrue();
 });

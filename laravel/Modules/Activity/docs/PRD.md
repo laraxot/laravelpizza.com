@@ -32,5 +32,12 @@ The Activity module is responsible for tracking and logging all system actions, 
 
 ## 7. Release Criteria
 - 100% PHPStan Level 10 compliance.
-- Test coverage > 80% for logging logic.
+- 100% Test coverage (Pest) for all business logic and models.
 - API documentation completed.
+
+## 8. Testing Strategy (Laraxot Standard)
+- **Framework**: Pest PHP.
+- **Isolation**: Use `DatabaseTransactions` with `protected array $connectionsToTransact = ['mysql', 'activity', 'user'];`.
+- **Database**: Must use `.env.testing` pointing to `_test` suffixed databases.
+- **No Refresh**: `RefreshDatabase` is strictly forbidden to preserve shared test infrastructure.
+- **Migrations**: Run `php artisan migrate --env=testing` once before the test suite.

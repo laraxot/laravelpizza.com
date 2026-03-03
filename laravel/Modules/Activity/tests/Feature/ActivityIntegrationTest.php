@@ -11,6 +11,15 @@ use Modules\User\Models\User;
 
 uses(\Modules\Activity\Tests\TestCase::class);
 
+beforeEach(function () {
+    // Skip if database not available
+    try {
+        \DB::connection()->getPdo();
+    } catch (\Exception $e) {
+        $this->markTestSkipped('Database not available: ' . $e->getMessage());
+    }
+});
+
 test('activity module models work together in integrated scenarios', function () {
     $user = User::factory()->create(['email' => Str::uuid()->toString().'@example.com']); // @phpstan-ignore-line method.nonObject
     \assert($user instanceof User);

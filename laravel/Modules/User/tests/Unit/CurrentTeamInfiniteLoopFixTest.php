@@ -15,22 +15,19 @@ uses(TestCase::class, DatabaseTransactions::class);
  *
  * Questo test verifica che il metodo currentTeam() non causi più loop infiniti
  * quando viene creato un nuovo utente senza team.
- *
- * Bug Fix: 2025-01-14
- * Issue: make:filament-user crashava con loop infinito
  */
 test('currentTeam getter does not crash when user has no teams', function (): void {
     // Arrange: Crea un utente senza team
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'test-no-teams@example.com',
+        'email' => 'ctifix-no-teams-' . uniqid() . '@example.com',
         'current_team_id' => null,
     ]);
 
-    // Act: Accedi al getter currentTeam (non dovrebbe crashare)
-    $currentTeamRelation = $user->currentTeam;
+    // Act: Accedi al metodo currentTeam() come relazione (non come proprietà)
+    $currentTeamRelation = $user->currentTeam();
 
-    // Assert: La relazione dovrebbe esistere ma il team dovrebbe essere null
+    // Assert: La relazione dovrebbe essere BelongsTo e il risultato null
     expect($currentTeamRelation)->toBeInstanceOf(BelongsTo::class);
     expect($user->currentTeam()->first())->toBeNull();
 });
@@ -39,16 +36,16 @@ test('currentTeam getter is side-effect-free', function (): void {
     // Arrange: Crea un utente senza current_team_id
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'test-side-effect@example.com',
+        'email' => 'ctifix-side-effect-' . uniqid() . '@example.com',
         'current_team_id' => null,
     ]);
 
     $originalTeamId = $user->current_team_id;
 
-    // Act: Accedi al getter più volte
-    $relation1 = $user->currentTeam;
-    $relation2 = $user->currentTeam;
-    $relation3 = $user->currentTeam;
+    // Act: Accedi al getter come proprietà più volte
+    $prop1 = $user->currentTeam;
+    $prop2 = $user->currentTeam;
+    $prop3 = $user->currentTeam;
 
     // Assert: current_team_id non dovrebbe essere modificato
     $user->refresh();
@@ -60,7 +57,7 @@ test('currentTeam getter does not trigger save operations', function (): void {
     // Arrange: Crea un utente
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'test-no-save@example.com',
+        'email' => 'ctifix-no-save-' . uniqid() . '@example.com',
     ]);
 
     $updatedAtBefore = $user->updated_at;
@@ -77,7 +74,7 @@ test('initializeCurrentTeam sets personal team correctly', function (): void {
     // Arrange: Crea un utente con un personal team
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'test-init@example.com',
+        'email' => 'ctifix-init-' . uniqid() . '@example.com',
         'current_team_id' => null,
     ]);
 
@@ -99,7 +96,7 @@ test('initializeCurrentTeam does not override existing current_team_id', functio
     // Arrange: Crea un utente con un team già impostato
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'test-no-override@example.com',
+        'email' => 'ctifix-no-override-' . uniqid() . '@example.com',
     ]);
 
     $team1 = Team::factory()->create([
@@ -129,7 +126,7 @@ test('initializeCurrentTeam sets first available team if no personal team', func
     // Arrange: Crea un utente con un team non-personal
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'test-first-team@example.com',
+        'email' => 'ctifix-first-team-' . uniqid() . '@example.com',
         'current_team_id' => null,
     ]);
 
@@ -151,7 +148,7 @@ test('initializeCurrentTeam handles user without teams gracefully', function ():
     // Arrange: Crea un utente senza team
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'test-no-teams-init@example.com',
+        'email' => 'ctifix-no-teams-init-' . uniqid() . '@example.com',
         'current_team_id' => null,
     ]);
 
@@ -167,7 +164,7 @@ test('currentTeam getter does not cause N+1 queries', function (): void {
     // Arrange: Crea un utente con un team
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'test-n-plus-one@example.com',
+        'email' => 'ctifix-n1-' . uniqid() . '@example.com',
     ]);
 
     $team = Team::factory()->create([
@@ -179,11 +176,11 @@ test('currentTeam getter does not cause N+1 queries', function (): void {
     $user->current_team_id = $team->id;
     $user->save();
 
-    // Act: Accedi a currentTeam più volte
+    // Act: Accedi a currentTeam() come relazione più volte
     $user->refresh();
-    $relation1 = $user->currentTeam;
-    $relation2 = $user->currentTeam;
-    $relation3 = $user->currentTeam;
+    $relation1 = $user->currentTeam();
+    $relation2 = $user->currentTeam();
+    $relation3 = $user->currentTeam();
 
     // Assert: Tutti gli accessi dovrebbero funzionare
     expect($relation1)->toBeInstanceOf(BelongsTo::class);
@@ -195,7 +192,7 @@ test('currentTeam getter works correctly with existing team', function (): void 
     // Arrange: Crea un utente con un team
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'test-with-team@example.com',
+        'email' => 'ctifix-with-team-' . uniqid() . '@example.com',
     ]);
 
     $team = Team::factory()->create([
@@ -220,7 +217,7 @@ test('user creation does not trigger infinite loop', function (): void {
     // Arrange & Act: Crea un nuovo utente (simula make:filament-user)
     $user = User::create([
         'name' => 'New User',
-        'email' => 'new-user@example.com',
+        'email' => 'ctifix-new-user-' . uniqid() . '@example.com',
         'password' => bcrypt('password'),
     ]);
 
@@ -229,8 +226,8 @@ test('user creation does not trigger infinite loop', function (): void {
     expect($user->id)->not->toBeNull();
     expect($user->name)->toBe('New User');
 
-    // Accedi a currentTeam (non dovrebbe crashare)
-    $relation = $user->currentTeam;
+    // Accedi a currentTeam come relazione (non dovrebbe crashare)
+    $relation = $user->currentTeam();
     expect($relation)->toBeInstanceOf(BelongsTo::class);
 });
 
@@ -240,7 +237,7 @@ test('multiple users can be created without issues', function (): void {
     for ($i = 1; $i <= 5; ++$i) {
         $users[] = User::create([
             'name' => "User {$i}",
-            'email' => "user{$i}@example.com",
+            'email' => 'ctifix-multi-' . $i . '-' . uniqid() . '@example.com',
             'password' => bcrypt('password'),
         ]);
     }
@@ -252,8 +249,8 @@ test('multiple users can be created without issues', function (): void {
         expect($user)->toBeInstanceOf(User::class);
         expect($user->id)->not->toBeNull();
 
-        // Verifica che currentTeam non crashi
-        $relation = $user->currentTeam;
+        // Verifica che currentTeam come relazione non crashi
+        $relation = $user->currentTeam();
         expect($relation)->toBeInstanceOf(BelongsTo::class);
     }
 });

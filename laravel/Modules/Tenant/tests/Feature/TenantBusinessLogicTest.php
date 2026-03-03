@@ -11,6 +11,19 @@ use Modules\Tenant\Models\TenantSubscription;
 use Modules\User\Models\User;
 use Webmozart\Assert\Assert;
 
+beforeEach(function (): void {
+    // Skip if tenants table not available on the tenant connection
+    try {
+        $connection = (new Tenant)->getConnectionName();
+        \DB::connection($connection)->getPdo();
+        if (! \Schema::connection($connection)->hasTable('tenants')) {
+            $this->markTestSkipped('Table tenants not available on connection: '.$connection);
+        }
+    } catch (\Exception $e) {
+        $this->markTestSkipped('Tenant DB not available: '.$e->getMessage());
+    }
+});
+
 it('can create and manage tenants', function (): void {
     // Arrange
     $user = User::factory()->create();

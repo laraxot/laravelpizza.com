@@ -9,15 +9,26 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
+    // Use uniqid() suffix so each test run creates a unique name,
+    // avoiding UniqueConstraintViolationException when DatabaseTransactions
+    // does not roll back the 'user' connection between tests.
+    $suffix = uniqid('', true);
+    $this->roleName = 'test-role-'.$suffix;
     $this->role = Role::factory()->create([
-        'name' => 'test-role',
+        'name' => $this->roleName,
         'guard_name' => 'web',
     ]);
 });
 
+afterEach(function (): void {
+    // Flush Spatie Permission cache so stale cached data does not
+    // bleed between tests.
+    app(\Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
+});
+
 test('role can be created', function (): void {
     expect($this->role)->toBeInstanceOf(Role::class);
-    expect($this->role->name)->toBe('test-role');
+    expect($this->role->name)->toBe($this->roleName);
     expect($this->role->guard_name)->toBe('web');
 });
 
@@ -45,14 +56,15 @@ test('role has correct casts', function (): void {
 });
 
 test('role can be updated', function (): void {
+    $newName = 'updated-role-'.uniqid('', true);
     $this->role->update([
-        'name' => 'updated-role',
+        'name' => $newName,
         'guard_name' => 'api',
     ]);
 
     $this->role->refresh();
 
-    expect($this->role->name)->toBe('updated-role');
+    expect($this->role->name)->toBe($newName);
     expect($this->role->guard_name)->toBe('api');
 });
 
@@ -66,7 +78,7 @@ test('role can be deleted', function (): void {
 
 test('role can have permissions', function (): void {
     $permission = Permission::factory()->create([
-        'name' => 'test-permission',
+        'name' => 'test-permission-'.uniqid('', true),
         'guard_name' => 'web',
     ]);
 
@@ -77,8 +89,9 @@ test('role can have permissions', function (): void {
 });
 
 test('role can have multiple permissions', function (): void {
-    $permission1 = Permission::factory()->create(['name' => 'permission-1']);
-    $permission2 = Permission::factory()->create(['name' => 'permission-2']);
+    $suffix = uniqid('', true);
+    $permission1 = Permission::factory()->create(['name' => 'permission-1-'.$suffix]);
+    $permission2 = Permission::factory()->create(['name' => 'permission-2-'.$suffix]);
 
     $this->role->syncPermissions([$permission1, $permission2]);
 
@@ -88,7 +101,7 @@ test('role can have multiple permissions', function (): void {
 });
 
 test('role can revoke permissions', function (): void {
-    $permission = Permission::factory()->create(['name' => 'test-permission']);
+    $permission = Permission::factory()->create(['name' => 'test-permission-'.uniqid('', true)]);
 
     $this->role->givePermissionTo($permission);
     expect($this->role->hasPermissionTo($permission))->toBeTrue();
@@ -98,17 +111,21 @@ test('role can revoke permissions', function (): void {
 });
 
 test('role can be found by name', function (): void {
-    $foundRole = Role::where('name', 'test-role')->first();
+    $foundRole = Role::where('name', $this->roleName)->first();
 
     expect($foundRole)->toBeInstanceOf(Role::class);
     expect($foundRole->id)->toBe($this->role->id);
 });
 
 test('role can be found by guard', function (): void {
-    $webRoles = Role::where('guard_name', 'web')->get();
+    // Filter specifically by the role we created to avoid
+    // interference from pre-existing data in the test database.
+    $found = Role::where('guard_name', 'web')
+        ->where('name', $this->roleName)
+        ->first();
 
-    expect($webRoles)->toHaveCount(1);
-    expect($webRoles->first()->id)->toBe($this->role->id);
+    expect($found)->not->toBeNull();
+    expect($found->id)->toBe($this->role->id);
 });
 
 test('role has timestamps', function (): void {
@@ -125,27 +142,29 @@ test('role can be created with factory', function (): void {
 });
 
 test('role can be created with specific attributes', function (): void {
+    $name = 'custom-role-'.uniqid('', true);
     $role = Role::factory()->create([
-        'name' => 'custom-role',
+        'name' => $name,
         'guard_name' => 'custom-guard',
     ]);
 
-    expect($role->name)->toBe('custom-role');
+    expect($role->name)->toBe($name);
     expect($role->guard_name)->toBe('custom-guard');
 });
 
 test('role can check if it has any permissions', function (): void {
     expect($this->role->hasAnyPermission([]))->toBeFalse();
 
-    $permission = Permission::factory()->create(['name' => 'test-permission']);
+    $permission = Permission::factory()->create(['name' => 'test-permission-'.uniqid('', true)]);
     $this->role->givePermissionTo($permission);
 
     expect($this->role->hasAnyPermission([$permission]))->toBeTrue();
 });
 
 test('role can check if it has all permissions', function (): void {
-    $permission1 = Permission::factory()->create(['name' => 'permission-1']);
-    $permission2 = Permission::factory()->create(['name' => 'permission-2']);
+    $suffix = uniqid('', true);
+    $permission1 = Permission::factory()->create(['name' => 'permission-1-'.$suffix]);
+    $permission2 = Permission::factory()->create(['name' => 'permission-2-'.$suffix]);
 
     $this->role->syncPermissions([$permission1, $permission2]);
 

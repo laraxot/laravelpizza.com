@@ -1,13 +1,24 @@
-# Xot Coverage Report
+# Code Coverage: Xot
 
-- Generated: 2026-03-03T16:05:25Z
-- Threshold: 100%
-- Exit code: 255
+**Lines Coverage:** N/A
+**Methods Coverage:** N/A
+**Classes Coverage:** N/A
+**Functions Coverage:** N/A
+**Test Status:** ⚠️  OTHER ERROR
 
-```text
+## Summary
 
-  ...........................................⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯⨯..⨯⨯⨯⨯⨯⨯.
-  .⨯⨯⨯⨯.⨯.⨯⨯⨯.⨯⨯..................................................⨯⨯......⨯!!!
-  ...⨯.............................................................⨯⨯!⨯⨯⨯!!!!!
-  !!⨯⨯⨯.....⨯⨯⨯⨯⨯⨯⨯........⨯.......................⨯....PHP Fatal error:  Declaration of Modules\Xot\States\Transitions\XotBaseTransition@anonymous::sendRecipientNotification(?Modules\Xot\Contracts\UserContract $recipient): void must be compatible with Modules\Xot\States\Transitions\XotBaseTransition::sendRecipientNotification(Modules\Notify\Datas\RecordNotificationData $recipient, array $data): void in /var/www/_bases/base_laravelpizza/laravel/Modules/Xot/tests/Unit/XotBaseTransitionTest.php on line 25
-```
+This module contains Xot functionality for the application.
+
+## Coverage Reflections
+
+- ⚠️  **Low Coverage**: The module has low test coverage, indicating potential risks in production
+- Tests are not fully executed
+- 🏗️  **Foundation Module**: Xot module is critical as it provides base functionality for all other modules
+- 📋 **Module Size**: Medium complexity with multiple components
+
+- 🔍 **Recommendations**: Focus on integration tests for complex workflows
+- 🏗️  **Foundation Module**: Xot module is critical as it provides base functionality for all other modules
+- 📋 **Module Size**: Medium complexity with multiple components
+
+- 🔍 **Recommendations**: Focus on integration tests for complex workflows

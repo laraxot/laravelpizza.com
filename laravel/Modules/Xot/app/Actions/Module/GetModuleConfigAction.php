@@ -18,8 +18,11 @@ class GetModuleConfigAction
         if (! file_exists($configFile)) {
             throw new \Exception('Config file not found: '.$configFile);
         }
-        dddx(File::getRequire($configFile));
+        $content = File::getRequire($configFile);
+        if (! is_array($content)) {
+            throw new \Exception('Config file must return an array: '.$configFile);
+        }
 
-        return [];
+        return $content;
     }
 }

@@ -59,23 +59,19 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Modules\Gdpr\Providers\GdprServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
-use Modules\Xot\Providers\XotServiceProvider;
-use Modules\Xot\Tests\CreatesApplication;
+use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
  * Base test case for Gdpr module.
  *
+ * Extends XotBaseTestCase (DRY + KISS + Laraxot).
  * Uses MySQL from .env.testing.
- * All module connections are mapped dynamically by TenantServiceProvider.
  * Migrations must be run ONCE externally: php artisan migrate --env=testing
- * DatabaseTransactions handles rollback between tests.
  */
-abstract class TestCase extends BaseTestCase
+abstract class TestCase extends XotBaseTestCase
 {
-    use CreatesApplication;
     use DatabaseTransactions;
 
     /**

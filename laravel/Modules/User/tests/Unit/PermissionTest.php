@@ -9,15 +9,26 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function (): void {
+    // Use uniqid() suffix so each test run creates a unique name,
+    // avoiding UniqueConstraintViolationException when DatabaseTransactions
+    // does not roll back the 'user' connection between tests.
+    $suffix = uniqid('', true);
+    $this->permissionName = 'test-permission-'.$suffix;
     $this->permission = Permission::factory()->create([
-        'name' => 'test-permission',
+        'name' => $this->permissionName,
         'guard_name' => 'web',
     ]);
 });
 
+afterEach(function (): void {
+    // Flush Spatie Permission cache so stale cached data does not
+    // bleed between tests.
+    app(\Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
+});
+
 test('permission can be created', function (): void {
     expect($this->permission)->toBeInstanceOf(Permission::class);
-    expect($this->permission->name)->toBe('test-permission');
+    expect($this->permission->name)->toBe($this->permissionName);
     expect($this->permission->guard_name)->toBe('web');
 });
 
@@ -46,14 +57,15 @@ test('permission has correct casts', function (): void {
 });
 
 test('permission can be updated', function (): void {
+    $newName = 'updated-permission-'.uniqid('', true);
     $this->permission->update([
-        'name' => 'updated-permission',
+        'name' => $newName,
         'guard_name' => 'api',
     ]);
 
     $this->permission->refresh();
 
-    expect($this->permission->name)->toBe('updated-permission');
+    expect($this->permission->name)->toBe($newName);
     expect($this->permission->guard_name)->toBe('api');
 });
 
@@ -67,7 +79,7 @@ test('permission can be deleted', function (): void {
 
 test('permission can be assigned to roles', function (): void {
     $role = Role::factory()->create([
-        'name' => 'test-role',
+        'name' => 'test-role-'.uniqid('', true),
         'guard_name' => 'web',
     ]);
 
@@ -78,8 +90,9 @@ test('permission can be assigned to roles', function (): void {
 });
 
 test('permission can be assigned to multiple roles', function (): void {
-    $role1 = Role::factory()->create(['name' => 'role-1']);
-    $role2 = Role::factory()->create(['name' => 'role-2']);
+    $suffix = uniqid('', true);
+    $role1 = Role::factory()->create(['name' => 'role-1-'.$suffix]);
+    $role2 = Role::factory()->create(['name' => 'role-2-'.$suffix]);
 
     $this->permission->assignRole($role1);
     $this->permission->assignRole($role2);
@@ -90,17 +103,21 @@ test('permission can be assigned to multiple roles', function (): void {
 });
 
 test('permission can be found by name', function (): void {
-    $foundPermission = Permission::where('name', 'test-permission')->first();
+    $foundPermission = Permission::where('name', $this->permissionName)->first();
 
     expect($foundPermission)->toBeInstanceOf(Permission::class);
     expect($foundPermission->id)->toBe($this->permission->id);
 });
 
 test('permission can be found by guard', function (): void {
-    $webPermissions = Permission::where('guard_name', 'web')->get();
+    // Filter specifically by the permission we created to avoid
+    // interference from pre-existing data in the test database.
+    $found = Permission::where('guard_name', 'web')
+        ->where('name', $this->permissionName)
+        ->first();
 
-    expect($webPermissions)->toHaveCount(1);
-    expect($webPermissions->first()->id)->toBe($this->permission->id);
+    expect($found)->not->toBeNull();
+    expect($found->id)->toBe($this->permission->id);
 });
 
 test('permission has timestamps', function (): void {
@@ -109,7 +126,13 @@ test('permission has timestamps', function (): void {
 });
 
 test('permission can be created with factory', function (): void {
-    $permission = Permission::factory()->create();
+    // The factory uses fake()->unique()->word() which may collide with data
+    // leftover in the database from prior runs (DatabaseTransactions does not
+    // always clean up the 'user' connection). We override the name with a
+    // guaranteed-unique value to avoid UniqueConstraintViolationException.
+    $permission = Permission::factory()->create([
+        'name' => 'factory-perm-'.uniqid('', true),
+    ]);
 
     expect($permission)->toBeInstanceOf(Permission::class);
     expect($permission->name)->not->toBeEmpty();
@@ -117,17 +140,18 @@ test('permission can be created with factory', function (): void {
 });
 
 test('permission can be created with specific attributes', function (): void {
+    $name = 'custom-permission-'.uniqid('', true);
     $permission = Permission::factory()->create([
-        'name' => 'custom-permission',
+        'name' => $name,
         'guard_name' => 'custom-guard',
     ]);
 
-    expect($permission->name)->toBe('custom-permission');
+    expect($permission->name)->toBe($name);
     expect($permission->guard_name)->toBe('custom-guard');
 });
 
 test('permission can check if it has role', function (): void {
-    $role = Role::factory()->create(['name' => 'test-role']);
+    $role = Role::factory()->create(['name' => 'test-role-'.uniqid('', true)]);
 
     expect($this->permission->hasRole($role))->toBeFalse();
 
@@ -139,15 +163,16 @@ test('permission can check if it has role', function (): void {
 test('permission can check if it has any roles', function (): void {
     expect($this->permission->hasAnyRole([]))->toBeFalse();
 
-    $role = Role::factory()->create(['name' => 'test-role']);
+    $role = Role::factory()->create(['name' => 'test-role-'.uniqid('', true)]);
     $this->permission->assignRole($role);
 
     expect($this->permission->hasAnyRole([$role]))->toBeTrue();
 });
 
 test('permission can check if it has all roles', function (): void {
-    $role1 = Role::factory()->create(['name' => 'role-1']);
-    $role2 = Role::factory()->create(['name' => 'role-2']);
+    $suffix = uniqid('', true);
+    $role1 = Role::factory()->create(['name' => 'role-1-'.$suffix]);
+    $role2 = Role::factory()->create(['name' => 'role-2-'.$suffix]);
 
     $this->permission->syncRoles([$role1, $role2]);
 
@@ -157,7 +182,7 @@ test('permission can check if it has all roles', function (): void {
 });
 
 test('permission can be revoked from role', function (): void {
-    $role = Role::factory()->create(['name' => 'test-role']);
+    $role = Role::factory()->create(['name' => 'test-role-'.uniqid('', true)]);
 
     $this->permission->assignRole($role);
     expect($this->permission->hasRole($role))->toBeTrue();
@@ -167,9 +192,10 @@ test('permission can be revoked from role', function (): void {
 });
 
 test('permission can be synced with roles', function (): void {
-    $role1 = Role::factory()->create(['name' => 'role-1']);
-    $role2 = Role::factory()->create(['name' => 'role-2']);
-    $role3 = Role::factory()->create(['name' => 'role-3']);
+    $suffix = uniqid('', true);
+    $role1 = Role::factory()->create(['name' => 'role-1-'.$suffix]);
+    $role2 = Role::factory()->create(['name' => 'role-2-'.$suffix]);
+    $role3 = Role::factory()->create(['name' => 'role-3-'.$suffix]);
 
     // Initially assign role1 and role2
     $this->permission->syncRoles([$role1, $role2]);
@@ -184,21 +210,23 @@ test('permission can be synced with roles', function (): void {
 });
 
 test('permission can be filtered by created_by', function (): void {
-    Permission::withoutEvents(function (): void {
-        $this->permission->forceFill(['created_by' => 'user-123'])->save();
+    $createdBy = 'user-'.uniqid('', true);
+    Permission::withoutEvents(function () use ($createdBy): void {
+        $this->permission->forceFill(['created_by' => $createdBy])->save();
     });
 
-    $found = Permission::where('created_by', 'user-123')->first();
+    $found = Permission::where('created_by', $createdBy)->first();
     expect($found)->not->toBeNull();
     expect((int) $found->id)->toBe((int) $this->permission->id);
 });
 
 test('permission can be filtered by updated_by', function (): void {
-    Permission::withoutEvents(function (): void {
-        $this->permission->forceFill(['updated_by' => 'user-456'])->save();
+    $updatedBy = 'user-'.uniqid('', true);
+    Permission::withoutEvents(function () use ($updatedBy): void {
+        $this->permission->forceFill(['updated_by' => $updatedBy])->save();
     });
 
-    $found = Permission::where('updated_by', 'user-456')->first();
+    $found = Permission::where('updated_by', $updatedBy)->first();
     expect($found)->not->toBeNull();
     expect((int) $found->id)->toBe((int) $this->permission->id);
 });

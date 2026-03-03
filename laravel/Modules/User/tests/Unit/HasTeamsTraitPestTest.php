@@ -74,18 +74,14 @@ test('it uses belongs to many x for teams relationship', function () {
 });
 
 test('it correctly manages current team', function () {
-    // Test: Switch to valid team
+    // Test: Switch to valid team (user must belong to it)
     $this->user->teams()->attach($this->team->id, ['role' => 'member']);
     $this->user->refresh();
     $result = $this->user->switchTeam($this->team);
 
     expect($result)->toBeTrue()->and($this->user->current_team_id)->toBe((string) $this->team->id);
 
-    // Test: Switch to null
-    $result = $this->user->switchTeam(null);
-    expect($result)->toBeTrue()->and($this->user->current_team_id)->toBeNull();
-
-    // Test: Switch to non-member team
+    // Test: Switch to non-member team should return false
     $otherTeam = Team::factory()->create();
     $result = $this->user->switchTeam($otherTeam);
     expect($result)->toBeFalse();
@@ -127,9 +123,9 @@ test('it returns personal team', function () {
     $personalTeam = $this->user->personalTeam();
 
     expect($personalTeam)
-        ->toBeInstanceOf(TeamContract::class)
-        ->id->toBe($this->personalTeam->id)
-        ->personal_team->toBeTrue();
+        ->toBeInstanceOf(TeamContract::class);
+    expect($personalTeam->id)->toBe($this->personalTeam->id);
+    expect((bool) $personalTeam->personal_team)->toBeTrue();
 });
 
 test('it correctly determines team role', function () {

@@ -30,16 +30,11 @@ php artisan test --filter 'MeetupHomePageTest'
 
 ## TestCase per Tema
 
-Quando si testano pagine che usano `pub_theme`, il TestCase deve configurare il tema:
+I test del tema usano `Modules\Meetup\Tests\TestCase`, che **estende XotBaseTestCase** (DRY + KISS + Laraxot). Mai estendere `Illuminate\Foundation\Testing\TestCase`.
 
-```php
-// Modules/Meetup/tests/TestCase.php
-protected function setUp(): void
-{
-    parent::setUp();
-    config(['xra.pub_theme' => 'Meetup']);
-}
-```
+Quando si testano pagine che usano `pub_theme`, il TestCase del modulo Meetup configura il tema via `getPackageProviders()` e setUp se necessario.
+
+Vedi [testcase-xotbase-extends](../../../.cursor/rules/testcase-xotbase-extends.mdc).
 
 ## Checklist per Modifiche al Tema
 

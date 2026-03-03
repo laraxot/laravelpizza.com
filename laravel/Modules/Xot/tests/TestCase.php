@@ -4,27 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Modules\Xot\Providers\XotServiceProvider;
-
 /**
- * Base test case for Xot module.
+ * Class TestCase.
  *
- * Uses MySQL from .env.testing.
- * All module connections are mapped by TenantServiceProvider.
- * Migrations must be run ONCE externally: php artisan migrate --env=testing
- * DatabaseTransactions handles rollback between tests.
+ * Specific TestCase for Xot module, extending the generic XotBaseTestCase.
  */
-abstract class TestCase extends BaseTestCase
+abstract class TestCase extends XotBaseTestCase
 {
-    use CreatesApplication;
-    use DatabaseTransactions;
-
+    /**
+     * @return array<int, class-string>
+     */
     protected function getPackageProviders($app): array
     {
         return [
-            XotServiceProvider::class,
+            \Modules\Xot\Providers\XotServiceProvider::class,
         ];
     }
 }

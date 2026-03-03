@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Tests\TestCase;
+use Modules\Xot\Tests\TestCase;
 
 /*
  * |--------------------------------------------------------------------------

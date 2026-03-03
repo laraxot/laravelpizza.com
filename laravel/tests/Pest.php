@@ -6,7 +6,7 @@
 |--------------------------------------------------------------------------
 */
 
-pest()->extend(\Illuminate\Foundation\Testing\TestCase::class)
+pest()->extend(\Tests\TestCase::class)
     ->in('Feature')
     ->in('Unit')
     ->in('tests/Feature')

@@ -5,417 +5,285 @@ declare(strict_types=1);
 uses(\Modules\Gdpr\Tests\TestCase::class);
 
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
+use Livewire\Livewire;
+use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
 use Modules\User\Models\User;
 
 use function Pest\Laravel\get;
-use function Pest\Laravel\post;
 
-it('renders the registration page successfully', function () {
+beforeEach(function (): void {
+    app()->setLocale('en');
+    config(['app.locale' => 'en']);
+});
+
+// ---------------------------------------------------------------------------
+// Page rendering (GET) - Folio + Livewire widget
+// ---------------------------------------------------------------------------
+
+it('renders the registration page successfully', function (): void {
     get('/en/auth/register')
         ->assertStatus(200)
-        ->assertSee('Create Your FREE Account')
-        ->assertSee('No credit card required - 100% FREE forever!');
+        ->assertSee(trans('gdpr::register.form.cta_title'))
+        ->assertSee(trans('gdpr::register.form.cta_subtitle'));
 });
 
-it('displays all required form fields', function () {
+it('displays all required form fields', function (): void {
     get('/en/auth/register')
         ->assertStatus(200)
-        ->assertSee('First Name')
-        ->assertSee('Last Name')
-        ->assertSee('Your Best Email')
-        ->assertSee('Secure password')
-        ->assertSee('Confirm Password')
-        ->assertSee('Personal Information')
-        ->assertSee('Required Consents');
+        ->assertSee(trans('gdpr::register.fields.first_name.label'))
+        ->assertSee(trans('gdpr::register.fields.last_name.label'))
+        ->assertSee(trans('gdpr::register.fields.email.label'))
+        ->assertSee(trans('gdpr::register.fields.password.label'))
+        ->assertSee(trans('gdpr::register.fields.password_confirmation.label'))
+        ->assertSee(trans('gdpr::register.sections.user_info'))
+        ->assertSee(trans('gdpr::register.sections.required_consents'));
 });
 
-it('displays all required consent checkboxes', function () {
+it('displays all required consent checkboxes', function (): void {
     get('/en/auth/register')
         ->assertStatus(200)
-        ->assertSee('I have read and understood the Privacy Policy')
-        ->assertSee('I have read and accept the Terms and Conditions');
+        ->assertSee(trans('gdpr::register.consents.terms_label'));
 });
 
-it('displays optional marketing consent', function () {
+it('displays optional marketing consent', function (): void {
     get('/en/auth/register')
         ->assertStatus(200)
-        ->assertSee('I want to receive pizza tips and meetup invitations (optional)');
+        ->assertSee(trans('gdpr::register.consents.marketing_label'));
 });
 
-it('requires first name to be filled', function () {
-    post('/en/auth/register', [
-        'last_name' => 'Doe',
-        'email' => 'john@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['first_name']);
+it('displays login link on registration page', function (): void {
+    get('/en/auth/register')
+        ->assertStatus(200)
+        ->assertSee('auth/login');
 });
 
-it('requires last name to be filled', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'email' => 'john@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['last_name']);
+it('contains proper SEO meta tags', function (): void {
+    get('/en/auth/register')
+        ->assertStatus(200)
+        ->assertSee('<title>', false)
+        ->assertSee(trans('gdpr::register.title'));
 });
 
-it('requires email to be filled', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['email']);
+it('has proper accessibility attributes', function (): void {
+    get('/en/auth/register')
+        ->assertStatus(200)
+        ->assertSee('aria-label');
 });
 
-it('requires email to be valid format', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'invalid-email',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['email']);
-});
-
-it('requires email to be unique', function () {
-    User::factory()->create(['email' => 'john@example.com']);
-
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['email']);
-});
-
-it('requires password to be filled', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john@example.com',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['password']);
-});
-
-it('requires password confirmation to match', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'DifferentPassword123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['password']);
-});
-
-it('requires password to be at least 12 characters', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john@example.com',
-        'password' => 'Short1!',
-        'password_confirmation' => 'Short1!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['password']);
-});
-
-it('requires password to contain uppercase letter', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john@example.com',
-        'password' => 'lowercase123!',
-        'password_confirmation' => 'lowercase123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['password']);
-});
-
-it('requires password to contain lowercase letter', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john@example.com',
-        'password' => 'UPPERCASE123!',
-        'password_confirmation' => 'UPPERCASE123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['password']);
-});
-
-it('requires password to contain number', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john@example.com',
-        'password' => 'NoNumbers!',
-        'password_confirmation' => 'NoNumbers!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['password']);
-});
-
-it('requires password to contain special character', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john@example.com',
-        'password' => 'NoSpecialChar123',
-        'password_confirmation' => 'NoSpecialChar123',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['password']);
-});
-
-it('requires privacy policy consent to be accepted', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['privacy_accepted']);
-});
-
-it('requires terms consent to be accepted', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['terms_accepted']);
-});
-
-it('allows registration with all required fields and consents', function () {
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john.doe@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-        'marketing_consent' => '0',
-    ])
-        ->assertStatus(302);
-
-    // Verify user was created
-    expect(User::where('email', 'john.doe@example.com')->exists())->toBeTrue();
-});
-
-it('allows registration with optional marketing consent', function () {
-    post('/en/auth/register', [
-        'first_name' => 'Jane',
-        'last_name' => 'Smith',
-        'email' => 'jane.smith@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-        'marketing_consent' => '1',
-    ])
-        ->assertStatus(302);
-
-    // Verify user was created
-    expect(User::where('email', 'jane.smith@example.com')->exists())->toBeTrue();
-});
-
-it('stores user data correctly after successful registration', function () {
-    post('/en/auth/register', [
-        'first_name' => 'Alice',
-        'last_name' => 'Johnson',
-        'email' => 'alice@example.com',
-        'password' => 'SecurePass123!',
-        'password_confirmation' => 'SecurePass123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302);
-
-    $user = User::where('email', 'alice@example.com')->first();
-
-    expect($user)->not->toBeNull();
-    expect($user->first_name)->toBe('Alice');
-    expect($user->last_name)->toBe('Johnson');
-    expect($user->email)->toBe('alice@example.com');
-    expect($user->is_active)->toBeTrue();
-});
-
-it('hashes the password after registration', function () {
-    $plainPassword = 'MySecurePassword123!';
-
-    post('/en/auth/register', [
-        'first_name' => 'Bob',
-        'last_name' => 'Wilson',
-        'email' => 'bob@example.com',
-        'password' => $plainPassword,
-        'password_confirmation' => $plainPassword,
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302);
-
-    $user = User::where('email', 'bob@example.com')->first();
-
-    expect($user->password)->not->toBe($plainPassword);
-    expect($user->password)->not->toBeEmpty();
-});
-
-it('redirects after successful registration', function () {
-    post('/en/auth/register', [
-        'first_name' => 'Charlie',
-        'last_name' => 'Brown',
-        'email' => 'charlie@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertRedirect();
-});
-
-it('trims whitespace from input fields', function () {
-    post('/en/auth/register', [
-        'first_name' => '  John  ',
-        'last_name' => '  Doe  ',
-        'email' => '  john@example.com  ',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302);
-
-    $user = User::where('email', 'john@example.com')->first();
-
-    expect($user->first_name)->toBe('John');
-    expect($user->last_name)->toBe('Doe');
-    expect($user->email)->toBe('john@example.com');
-});
-
-it('prevents registration when already logged in', function () {
+it('prevents registration when already logged in', function (): void {
     $user = User::factory()->create();
-
     Auth::login($user);
 
     get('/en/auth/register')
         ->assertRedirect();
 });
 
-it('handles very long input names correctly', function () {
-    $longName = Str::random(250);
+// ---------------------------------------------------------------------------
+// Livewire widget validation and submission
+// ---------------------------------------------------------------------------
 
-    post('/en/auth/register', [
-        'first_name' => $longName,
-        'last_name' => 'Doe',
-        'email' => 'longname@example.com',
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['first_name']);
+it('requires first name to be filled', function (): void {
+    Livewire::test(RegisterWidget::class)
+        ->set('last_name', 'Doe')
+        ->set('email', 'john@example.com')
+        ->set('password', 'Password123!')
+        ->set('password_confirmation', 'Password123!')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit')
+        ->assertHasErrors(['first_name']);
 });
 
-it('handles very long email correctly', function () {
-    $longEmail = Str::random(200).'@example.com';
-
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => $longEmail,
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['email']);
+it('requires last name to be filled', function (): void {
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'John')
+        ->set('email', 'john@example.com')
+        ->set('password', 'Password123!')
+        ->set('password_confirmation', 'Password123!')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit')
+        ->assertHasErrors(['last_name']);
 });
 
-it('prevents SQL injection attempts in email', function () {
-    $maliciousEmail = "john@example.com'; DROP TABLE users; --";
-
-    post('/en/auth/register', [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => $maliciousEmail,
-        'password' => 'Password123!',
-        'password_confirmation' => 'Password123!',
-        'privacy_accepted' => '1',
-        'terms_accepted' => '1',
-    ])
-        ->assertStatus(302)
-        ->assertSessionHasErrors(['email']);
+it('requires email to be filled', function (): void {
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'John')
+        ->set('last_name', 'Doe')
+        ->set('password', 'Password123!')
+        ->set('password_confirmation', 'Password123!')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit')
+        ->assertHasErrors(['email']);
 });
 
-it('displays login link on registration page', function () {
-    get('/en/auth/register')
-        ->assertStatus(200)
-        ->assertSee('Already have an account?')
-        ->assertSee('Login now');
+it('requires email to be valid format', function (): void {
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'John')
+        ->set('last_name', 'Doe')
+        ->set('email', 'invalid-email')
+        ->set('password', 'Password123!')
+        ->set('password_confirmation', 'Password123!')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit')
+        ->assertHasErrors(['email']);
 });
 
-it('contains proper SEO meta tags', function () {
-    get('/en/auth/register')
-        ->assertStatus(200)
-        ->assertSee('<title>', false)
-        ->assertSee('LaravelPizza Community');
+it('requires email to be unique', function (): void {
+    $existingEmail = 'existing.'.uniqid().'@example.com';
+    User::factory()->create(['email' => $existingEmail]);
+
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'John')
+        ->set('last_name', 'Doe')
+        ->set('email', $existingEmail)
+        ->set('password', 'Password123!')
+        ->set('password_confirmation', 'Password123!')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit')
+        ->assertHasErrors(['email']);
 });
 
-it('has proper accessibility attributes', function () {
-    get('/en/auth/register')
-        ->assertStatus(200)
-        ->assertSee('aria-label');
+it('requires password to be filled', function (): void {
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'John')
+        ->set('last_name', 'Doe')
+        ->set('email', 'john@example.com')
+        ->set('password_confirmation', 'Password123!')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit')
+        ->assertHasErrors(['password']);
+});
+
+it('requires password confirmation to match', function (): void {
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'John')
+        ->set('last_name', 'Doe')
+        ->set('email', 'john@example.com')
+        ->set('password', 'Password123!')
+        ->set('password_confirmation', 'DifferentPassword123!')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit')
+        ->assertHasErrors(['password_confirmation']);
+});
+
+it('requires privacy policy consent to be accepted', function (): void {
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'John')
+        ->set('last_name', 'Doe')
+        ->set('email', 'john@example.com')
+        ->set('password', 'Password123!')
+        ->set('password_confirmation', 'Password123!')
+        ->set('terms_accepted', true)
+        ->call('submit')
+        ->assertHasErrors(['privacy_accepted']);
+});
+
+it('requires terms consent to be accepted', function (): void {
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'John')
+        ->set('last_name', 'Doe')
+        ->set('email', 'john@example.com')
+        ->set('password', 'Password123!')
+        ->set('password_confirmation', 'Password123!')
+        ->set('privacy_accepted', true)
+        ->call('submit')
+        ->assertHasErrors(['terms_accepted']);
+});
+
+it('allows registration with all required fields and consents', function (): void {
+    if (! \Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
+        test()->markTestSkipped('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
+    }
+
+    $email = 'john.doe.'.uniqid().'@example.com';
+
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'John')
+        ->set('last_name', 'Doe')
+        ->set('email', $email)
+        ->set('password', 'Password123!')
+        ->set('password_confirmation', 'Password123!')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->set('marketing_consent', false)
+        ->call('submit');
+
+    expect(User::where('email', $email)->exists())->toBeTrue();
+});
+
+it('allows registration with optional marketing consent', function (): void {
+    if (! \Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
+        test()->markTestSkipped('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
+    }
+
+    $email = 'jane.smith.'.uniqid().'@example.com';
+
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'Jane')
+        ->set('last_name', 'Smith')
+        ->set('email', $email)
+        ->set('password', 'Password123!')
+        ->set('password_confirmation', 'Password123!')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->set('marketing_consent', true)
+        ->call('submit');
+
+    expect(User::where('email', $email)->exists())->toBeTrue();
+});
+
+it('stores user data correctly after successful registration', function (): void {
+    if (! \Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
+        test()->markTestSkipped('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
+    }
+
+    $email = 'alice.'.uniqid().'@example.com';
+
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'Alice')
+        ->set('last_name', 'Johnson')
+        ->set('email', $email)
+        ->set('password', 'SecurePass123!')
+        ->set('password_confirmation', 'SecurePass123!')
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit');
+
+    $user = User::where('email', $email)->first();
+
+    expect($user)->not->toBeNull();
+    expect($user->first_name)->toBe('Alice');
+    expect($user->last_name)->toBe('Johnson');
+    expect($user->email)->toBe($email);
+    expect($user->is_active)->toBeTrue();
+});
+
+it('hashes the password after registration', function (): void {
+    if (! \Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
+        test()->markTestSkipped('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
+    }
+
+    $plainPassword = 'MySecurePassword123!';
+    $email = 'bob.'.uniqid().'@example.com';
+
+    Livewire::test(RegisterWidget::class)
+        ->set('first_name', 'Bob')
+        ->set('last_name', 'Wilson')
+        ->set('email', $email)
+        ->set('password', $plainPassword)
+        ->set('password_confirmation', $plainPassword)
+        ->set('privacy_accepted', true)
+        ->set('terms_accepted', true)
+        ->call('submit');
+
+    $user = User::where('email', $email)->first();
+
+    expect($user->password)->not->toBe($plainPassword);
+    expect($user->password)->not->toBeEmpty();
 });

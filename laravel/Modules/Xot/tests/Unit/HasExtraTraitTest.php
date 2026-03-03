@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Xot\Contracts\ExtraContract;
 use Modules\Xot\Models\Traits\HasExtraTrait;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
+use Tests\TestCase;
+
+uses(TestCase::class);
 
 // Real classes instead of anonymous to avoid HasExtraTrait's naming logic failures
 class TestModelHasExtra extends Model

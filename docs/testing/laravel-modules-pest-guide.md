@@ -30,19 +30,7 @@ Modules/<ModuleName>/
 
 ## Pest.php per Modulo
 
-Ogni modulo deve avere `tests/Pest.php` che registra il TestCase:
-
-```php
-<?php
-
-declare(strict_types=1);
-
-use Modules\Xot\Tests\TestCase;
-
-uses(TestCase::class)->in('Feature', 'Unit');
-```
-
-Per moduli con TestCase custom (es. Meetup):
+Ogni modulo deve avere `tests/Pest.php` che registra il TestCase **del modulo** (che estende XotBaseTestCase):
 
 ```php
 <?php
@@ -53,6 +41,8 @@ use Modules\Meetup\Tests\TestCase;
 
 uses(TestCase::class)->in('Feature', 'Unit');
 ```
+
+**Regola TestCase (DRY + KISS + Laraxot):** tutti i `Modules/*/tests/TestCase.php` estendono `Modules\Xot\Tests\XotBaseTestCase`, mai `Illuminate\Foundation\Testing\TestCase`. Vedi [testcase-xotbase-extends](../.cursor/rules/testcase-xotbase-extends.mdc).
 
 ## Regole Critiche
 
@@ -78,7 +68,11 @@ Usare `DatabaseTransactions` nel TestCase per isolamento senza ricreare schema. 
 APP_ENV=testing DB_DATABASE=laravelpizza_data_test DB_DATABASE_USER=laravelpizza_user_test php artisan migrate:fresh --force
 ```
 
-Moduli con connessioni dedicate (es. Activity) richiedono che il DB test sia migrato prima dei test.
+Moduli con connessioni dedicate (es. Activity) richiedono che il DB test sia migrato **una volta** prima dei test:
+
+```bash
+php artisan migrate --env=testing --force
+```
 
 ### 3. TestCase per modulo
 

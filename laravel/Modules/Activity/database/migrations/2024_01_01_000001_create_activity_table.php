@@ -8,7 +8,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 return new class extends XotBaseMigration
 {
-    // protected ?string $model_class = Activity::class;
+    protected ?string $model_class = Activity::class;
     public function up(): void
     {
         // -- CREATE --

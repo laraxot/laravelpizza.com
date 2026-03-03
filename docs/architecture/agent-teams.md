@@ -37,3 +37,11 @@ To achieve the "Super Mucca" status, this project uses specialized agent roles. 
 
 ## 🐄 Super Mucca Mode (Level 3)
 An agent reaches Level 3 when it can effectively play all four roles simultaneously, knowing when to switch focus without compromising the others.
+
+## Coverage 100% Task
+
+Per task di coverage e raggiungimento 100%:
+
+- **Assegnazione**: Quality Guardian + Testing/QA Agent
+- **Fasi**: 1) Fix fallimenti, 2) Coverage gap analysis, 3) Nuovi test
+- **Config**: [.cursor/rules/coverage-agent-teams.mdc](../../.cursor/rules/coverage-agent-teams.mdc)

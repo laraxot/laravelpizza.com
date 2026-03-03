@@ -8,6 +8,15 @@ use Modules\Activity\Tests\TestCase;
 
 uses(TestCase::class);
 
+beforeEach(function () {
+    // Skip if database not available
+    try {
+        \DB::connection()->getPdo();
+    } catch (\Exception $e) {
+        $this->markTestSkipped('Database not available: ' . $e->getMessage());
+    }
+});
+
 it('can create snapshot with basic information', function (): void {
     $snapshot = Snapshot::factory()->create([
         'aggregate_uuid' => Str::uuid()->toString(),

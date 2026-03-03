@@ -2,52 +2,47 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\Arr;
+
 use Modules\Xot\Actions\Arr\SaveArrayAction;
+use Tests\TestCase;
+use Illuminate\Support\Facades\File;
 
-beforeEach(function (): void {
-    $this->action = app(SaveArrayAction::class);
-    $this->tempDir = sys_get_temp_dir().'/xot_save_array_'.uniqid();
-    mkdir($this->tempDir, 0755, true);
-});
+uses(TestCase::class);
 
-afterEach(function (): void {
-    if (isset($this->tempDir) && is_dir($this->tempDir)) {
-        array_map('unlink', glob($this->tempDir.'/*') ?: []);
-        rmdir($this->tempDir);
-    }
-});
-
-it('saves array as json', function (): void {
-    $data = ['a' => 1, 'b' => 2];
-    $path = $this->tempDir.'/test.json';
-
-    $result = $this->action->execute($data, $path, 'json');
-
+test('save array action saves as php by default', function () {
+    $data = ['foo' => 'bar'];
+    $filename = tempnam(sys_get_temp_dir(), 'test_save_array_php') . '.php';
+    
+    $action = app(SaveArrayAction::class);
+    $result = $action->execute($data, $filename);
+    
     expect($result)->toBeTrue()
-        ->and(file_get_contents($path))->toContain('"a": 1');
+        ->and(File::exists($filename))->toBeTrue();
+        
+    $savedData = include $filename;
+    expect($savedData)->toBe($data);
+    
+    File::delete($filename);
 });
 
-it('saves array as php', function (): void {
-    $data = ['a' => 1, 'b' => 2];
-    $path = $this->tempDir.'/test.php';
-
-    $result = $this->action->execute($data, $path, 'php');
-
-    expect($result)->toBeTrue();
-    $loaded = require $path;
-    expect($loaded)->toBe($data);
-});
-
-it('uses php as default format', function (): void {
-    $data = ['d' => 3];
-    $path = $this->tempDir.'/default.php';
-
-    $result = $this->action->execute($data, $path);
-
+test('save array action saves as json', function () {
+    $data = ['foo' => 'bar'];
+    $filename = tempnam(sys_get_temp_dir(), 'test_save_array_json') . '.json';
+    
+    $action = app(SaveArrayAction::class);
+    $result = $action->execute($data, $filename, 'json');
+    
     expect($result)->toBeTrue()
-        ->and(require $path)->toBe($data);
+        ->and(File::exists($filename))->toBeTrue();
+        
+    $savedData = json_decode(File::get($filename), true);
+    expect($savedData)->toBe($data);
+    
+    File::delete($filename);
 });
 
-it('throws for unsupported format', function (): void {
-    $this->action->execute([], $this->tempDir.'/x.xml', 'xml');
-})->throws(InvalidArgumentException::class, 'Formato non supportato');
+test('save array action throws exception for unsupported format', function () {
+    $action = app(SaveArrayAction::class);
+    expect(fn() => $action->execute([], 'test.txt', 'txt'))->toThrow(\InvalidArgumentException::class);
+});

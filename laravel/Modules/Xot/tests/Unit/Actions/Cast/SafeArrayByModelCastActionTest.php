@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Actions\Cast\SafeArrayByModelCastAction;
+use Tests\TestCase;
+
+uses(TestCase::class);
 
 it('returns attributesToArray when model is healthy', function (): void {
     $model = new class extends Model
@@ -44,4 +47,3 @@ it('falls back to safeExecute when attributesToArray fails', function (): void {
 
     expect($action->execute($model))->toBe(['ok' => 'value']);
 });
-

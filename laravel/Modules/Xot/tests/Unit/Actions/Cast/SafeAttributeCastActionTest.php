@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Actions\Cast\SafeAttributeCastAction;
+use Tests\TestCase;
+
+uses(TestCase::class);
 
 beforeEach(function (): void {
     $this->action = app(SafeAttributeCastAction::class);

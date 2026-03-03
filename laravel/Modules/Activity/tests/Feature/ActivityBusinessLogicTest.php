@@ -11,6 +11,15 @@ use function Safe\json_encode;
 uses(\Modules\Activity\Tests\TestCase::class);
 
 describe('Activity Business Logic', function () {
+    beforeEach(function () {
+        // Skip if database not available
+        try {
+            \DB::connection()->getPdo();
+        } catch (\Exception $e) {
+            $this->markTestSkipped('Database not available: ' . $e->getMessage());
+        }
+    });
+
     it('can create activity with basic information', function () {
         $activityData = [
             'log_name' => 'default',

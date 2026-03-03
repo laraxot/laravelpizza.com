@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\UI\Tests;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\UI\Models\Asset;
 use Modules\UI\Models\Component;
 use Modules\UI\Models\Theme;
@@ -19,7 +18,7 @@ use Modules\UI\Models\Theme;
  * |
  */
 
-uses(TestCase::class)->uses(DatabaseTransactions::class)->in('Feature', 'Unit');
+uses(TestCase::class)->in('Feature', 'Unit');
 
 /*
  * |--------------------------------------------------------------------------

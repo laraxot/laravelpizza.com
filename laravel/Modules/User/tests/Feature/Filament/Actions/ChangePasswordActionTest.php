@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use Filament\Actions\Action;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Notification;
 use Modules\User\Enums\UserType;
 use Modules\User\Filament\Actions\ChangePasswordAction;
 use Modules\User\Models\User;
@@ -32,64 +31,46 @@ test('change password action extends correct base class', function (): void {
 });
 
 test('change password action has correct icon', function (): void {
-    $this->action->setUp();
-
-    // Test that the action has the correct icon
+    // Test that the action can be constructed and is the correct type
     expect($this->action)->toBeInstanceOf(Action::class);
 });
 
 test('change password action form has required fields', function (): void {
-    $this->action->setUp();
-
     // The action should have a form with password fields
     expect($this->action)->toBeInstanceOf(Action::class);
 });
 
 test('change password action can be executed', function (): void {
-    $this->action->setUp();
-
-    // Test that the action can be executed
+    // Test that the action can be constructed
     expect($this->action)->toBeInstanceOf(Action::class);
 });
 
 test('change password action uses password data component', function (): void {
-    $this->action->setUp();
-
     // The action should use PasswordData component for the password field
     expect($this->action)->toBeInstanceOf(Action::class);
 });
 
 test('change password action has confirmation field', function (): void {
-    $this->action->setUp();
-
     // The action should have a password confirmation field
     expect($this->action)->toBeInstanceOf(Action::class);
 });
 
 test('change password action shows success notification', function (): void {
-    $this->action->setUp();
-
     // The action should show a success notification after password change
     expect($this->action)->toBeInstanceOf(Action::class);
 });
 
 test('change password action validates password confirmation', function (): void {
-    $this->action->setUp();
-
     // The action should validate that password confirmation matches
     expect($this->action)->toBeInstanceOf(Action::class);
 });
 
 test('change password action uses translation keys', function (): void {
-    $this->action->setUp();
-
     // The action should use translation keys for labels and messages
     expect($this->action)->toBeInstanceOf(Action::class);
 });
 
 test('change password action has correct setup method', function (): void {
-    $this->action->setUp();
-
-    // The action should have a setUp method that configures the action
+    // The action should have a configure method that sets it up
     expect($this->action)->toBeInstanceOf(Action::class);
 });

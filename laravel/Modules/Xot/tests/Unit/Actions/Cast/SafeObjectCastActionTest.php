@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 use Modules\Xot\Actions\Cast\SafeObjectCastAction;
+use Tests\TestCase;
+
+uses(TestCase::class);
 
 beforeEach(function (): void {
     $this->action = app(SafeObjectCastAction::class);

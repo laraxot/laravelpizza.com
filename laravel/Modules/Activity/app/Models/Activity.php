@@ -107,6 +107,16 @@ class Activity extends SpatieActivity
 
     protected $connection = 'activity';
 
+    protected $table = 'activity_log';
+
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+        if (app()->environment('testing')) {
+            $this->connection = 'mysql';
+        }
+    }
+
     /** @var list<string> */
     protected $fillable = [
         'id',

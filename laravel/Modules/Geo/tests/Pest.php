@@ -18,7 +18,7 @@ use Modules\Geo\Tests\TestCase;
  * |
  */
 
-pest()->extend(TestCase::class)->in('Feature');
+uses(TestCase::class)->in(__DIR__);
 
 /*
  * |--------------------------------------------------------------------------
@@ -36,6 +36,10 @@ expect()->extend('toBeCountry', fn () => $this->toBeInstanceOf(Country::class));
 expect()->extend('toBeRegion', fn () => $this->toBeInstanceOf(Region::class));
 
 expect()->extend('toBeCity', fn () => $this->toBeInstanceOf(City::class));
+
+expect()->extend('toBeSubclassOf', function (string $base) {
+    return $this->toBeTrue(is_subclass_of($this->value, $base));
+});
 
 /*
  * |--------------------------------------------------------------------------

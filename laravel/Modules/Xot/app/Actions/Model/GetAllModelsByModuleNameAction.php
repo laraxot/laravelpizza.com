@@ -11,7 +11,7 @@ namespace Modules\Xot\Actions\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Nwidart\Modules\Facades\Module;
-use ReflectionClass;
+
 use Spatie\QueueableAction\QueueableAction;
 
 class GetAllModelsByModuleNameAction
@@ -31,7 +31,10 @@ class GetAllModelsByModuleNameAction
         }
 
         $mod_path = $mod->getPath().'/Models';
-        $mod_path = str_replace(['\\', '/'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $mod_path);
+        $mod_path = (string) realpath($mod_path);
+        if ('' === $mod_path || ! is_dir($mod_path)) {
+            return [];
+        }
 
         $files = File::files($mod_path);
         /** @var array<string, class-string> $data */

@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Volt\Volt as LivewireVolt;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Modules\Cms\Tests\TestCase;
 use Modules\Xot\Datas\XotData;
-use Modules\Xot\Tests\TestCase;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\assertAuthenticated;
@@ -62,9 +62,9 @@ describe('Frontend Login Page Localization', function () {
         $response = get('/it/auth/login');
         $response
             ->assertStatus(200)
-            ->assertSee('Hai dimenticato la password?')
-            ->assertSee(__('pub_theme::auth.login.title'))
-            ->assertSee(__('pub_theme::auth.login.or'));
+            ->assertSee(__('user::login.forgot_password_text'))
+            ->assertSee(__('user::auth.login.title'))
+            ->assertSee(__('user::auth.login.submit'));
     });
 });
 

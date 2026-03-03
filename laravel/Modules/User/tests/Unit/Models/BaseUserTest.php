@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Modules\User\Models\BaseUser;
 use Modules\User\Tests\TestCase;
@@ -36,8 +36,17 @@ test('base user has proper inheritance chain', function () {
 });
 
 test('base user has authentication traits', function () {
-    $traits = class_uses($this->baseUser);
+    // BaseUser extends Authenticatable (Illuminate\Foundation\Auth\User)
+    // which uses Notifiable. Use instanceof check instead of class_uses().
+    expect($this->baseUser)->toBeInstanceOf(Authenticatable::class);
 
-    expect($traits)->toContain(User::class);
-    expect($traits)->toContain(Notifiable::class);
+    // Verify Notifiable trait is present recursively
+    $allTraits = [];
+    $class = get_class($this->baseUser);
+    while ($class !== false) {
+        $allTraits = array_merge($allTraits, class_uses($class) ?: []);
+        $class = get_parent_class($class);
+    }
+
+    expect($allTraits)->toHaveKey(Notifiable::class);
 });

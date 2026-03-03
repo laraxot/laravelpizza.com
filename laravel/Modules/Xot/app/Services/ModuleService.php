@@ -16,7 +16,12 @@ use stdClass;
  */
 class ModuleService
 {
-    public string $name;
+    public string $name = '';
+
+    public function __construct(string $name = '')
+    {
+        $this->name = $name;
+    }
 
     private static ?self $_instance = null;
 
@@ -71,6 +76,10 @@ class ModuleService
 
         $mod_path = $mod->getPath().'/Models';
         $mod_path = str_replace(['\\', '/'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $mod_path);
+
+        if (! File::isDirectory($mod_path)) {
+            return [];
+        }
 
         $files = File::files($mod_path);
         $data = [];

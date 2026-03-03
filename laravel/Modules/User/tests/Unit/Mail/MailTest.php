@@ -8,34 +8,20 @@ use Modules\User\Mail\TeamInvitation;
 
 test('TeamInvitation mail can be instantiated', function () {
     expect(class_exists(TeamInvitation::class))->toBeTrue();
-
-    try {
-        // Create a basic invitation-like object
-        $invitation = [
-            'email' => 'test@example.com',
-            'team' => ['name' => 'Test Team'],
-            'inviter' => ['name' => 'Test Inviter', 'email' => 'inviter@example.com'],
-        ];
-
-        $mail = new TeamInvitation($invitation);
-        expect($mail)->toBeInstanceOf(TeamInvitation::class);
-    } catch (Exception $e) {
-        expect(true)->toBeTrue(); // Pass if class exists
-    }
+    // TeamInvitation requires a TeamInvitationModel - just verify the class exists
+    // and can be reflected upon without needing actual construction
+    $reflection = new ReflectionClass(TeamInvitation::class);
+    expect($reflection->isInstantiable())->toBeTrue();
 });
 
 test('TeamInvitation has expected methods', function () {
-    if (class_exists(TeamInvitation::class)) {
-        // Create a basic invitation-like object
-        $invitation = [
-            'email' => 'test@example.com',
-            'team' => ['name' => 'Test Team'],
-            'inviter' => ['name' => 'Test Inviter', 'email' => 'inviter@example.com'],
-        ];
+    // TeamInvitation extends Mailable; modern Laravel Mailables use content() or envelope()
+    // instead of build(). Verify it extends Mailable properly.
+    $reflection = new ReflectionClass(TeamInvitation::class);
 
-        $mail = new TeamInvitation($invitation);
-        expect(method_exists($mail, 'build'))->toBeTrue();
-    } else {
-        expect(true)->toBeTrue();
-    }
+    expect($reflection->getParentClass()->getName())->toBe(\Illuminate\Mail\Mailable::class);
+
+    // Mailable has 'send', 'queue', 'later' methods
+    expect(method_exists(TeamInvitation::class, 'send'))->toBeTrue();
+    expect(method_exists(TeamInvitation::class, 'queue'))->toBeTrue();
 });

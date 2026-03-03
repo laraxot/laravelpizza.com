@@ -14,11 +14,10 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->action = new GetCurrentDeviceAction();
-
-    // Mock the Agent class
+    // Mock the Agent class first, then resolve action from container
     $this->mockAgent = Mockery::mock(Agent::class);
     $this->app->instance(Agent::class, $this->mockAgent);
+    $this->action = app(GetCurrentDeviceAction::class);
 });
 
 afterEach(function () {

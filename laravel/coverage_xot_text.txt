@@ -1,0 +1,438 @@
+
+   PASS  Modules\Xot\tests\Feature\Filament\XotBaseResourceCoverageTest
+  ✓ it covers model resolution and model cache                           1.59s  
+  ✓ it covers default relation discovery with missing relation manager…  0.72s  
+  ✓ it covers default page discovery including optional view page        0.84s  
+  ✓ it covers translation helper key normalization                       0.79s  
+  ✓ it covers translation helper edit and widget normalization branches  0.89s  
+  ✓ it covers translation helper string path and missing key fallback    0.76s  
+  ✓ it covers translation helper array and fix fallback branches         0.77s  
+  ✓ it covers translation helper exception branch                        0.87s  
+  ✓ it covers navigation badge success and fallback                      0.88s  
+  ✓ it covers get attachments schema branches                            0.78s  
+  ✓ it covers wizard submit action success and failure paths             0.74s  
+  ✓ it covers step builder branches                                      0.87s  
+  ✓ it covers simple base helpers                                        0.70s  
+
+   PASS  Modules\Xot\tests\Feature\Filament\XotBaseResourceTest
+  ✓ xot base resource extends filament resource                          0.86s  
+  ✓ xot base resource has navigation icon                                0.88s  
+  ✓ xot base resource has navigation group                               0.90s  
+  ✓ xot base resource has navigation sort                                0.79s  
+  ✓ xot base resource can be instantiated                                0.78s  
+  ✓ anonymous resource get form schema columns returns one               0.82s  
+  ✓ anonymous resource form builds empty schema                          0.80s  
+  ✓ cache resource get model returns cache class                         0.84s  
+  ✓ cache resource get module name returns xot                           0.79s  
+  ✓ xot base resource get form schema columns returns one                0.81s  
+  ✓ xot base resource form builds schema with components                 0.74s  
+  ✓ xot base resource get infolist schema returns empty array            0.71s  
+  ✓ xot base resource infolist builds schema                             0.71s  
+  ✓ xot base resource extend table callback returns empty array          0.83s  
+  ✓ xot base resource extend form callback returns empty array           0.92s  
+  ✓ xot base resource has combined relation manager tabs with content    0.71s  
+  ✓ xot base resource get relations returns empty for cache resource     0.80s  
+  ✓ xot base resource get pages returns index create edit                0.81s  
+  ✓ xot base resource get attachments schema returns empty for cache     0.74s  
+  ✓ xot base resource get navigation badge returns count or fallback     0.81s  
+  ✓ xot base resource get navigation badge returns double dash on excep… 0.77s  
+  ✓ xot base resource trans returns string for known key                 0.83s  
+  ✓ xot base resource trans with array translation returns first elemen… 0.72s  
+  ✓ xot base resource trans exception when not found and flag true       0.67s  
+  ✓ xot base resource get model with explicit model set                  0.76s  
+  ✓ xot base resource get relations via base uses glob                   0.75s  
+  ✓ xot base resource get relations via base with actual files           0.78s  
+  ✓ xot base resource get wizard submit action                           0.72s  
+  ✓ xot base resource get model via auto-discovery                       0.69s  
+  ✓ xot base resource get attachments schema with model having method    0.81s  
+  ✓ xot base resource get step by name returns correct step              0.73s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Arr\DiffAssocRecursiveActionTest
+  ✓ diff assoc recursive action works correctly                          0.83s  
+  ✓ diff assoc recursive action handles numeric strings                  0.87s  
+  ✓ diff assoc recursive action throws exception for non-array item      0.74s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Arr\RangeIntersectActionTest
+  ✓ it returns intersection when a1 in [a0,b0] and b0 <= b1              0.02s  
+  ✓ it returns intersection when a0 in [a1,b0] and b0 <= b1
+  ✓ it returns intersection when a1 in [a0,b1] and b1 <= b0
+  ✓ it returns false when a0 < a1 and no overlap
+  ✓ it returns false when a0 > b1
+  ✓ it returns [a0,b0] when a0 in [a1,b0] and b0 <= b1
+  ✓ it returns false when b1 > b0 and no previous condition matches
+  ✓ it returns [a0, b1] when a0 >= a1 and b1 <= b0
+
+   PASS  Modules\Xot\tests\Unit\Actions\Arr\SaveArrayActionTest
+  ✓ it saves array as json                                               0.02s  
+  ✓ it saves array as php                                                0.01s  
+  ✓ it uses php as default format
+  ✓ it throws for unsupported format
+
+   PASS  Modules\Xot\tests\Unit\Actions\Arr\SaveJsonArrayActionTest
+  ✓ it saves array to json file                                          0.02s  
+  ✓ it saves empty array
+
+   PASS  Modules\Xot\tests\Unit\Actions\Arr\SavePhpArrayActionTest
+  ✓ it saves array to php file                                           0.77s  
+  ✓ it saved file has strict types                                       0.91s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\ArrayToRawJsActionTest
+  ✓ it converts simple array to RawJs                                    0.02s  
+  ✓ it converts boolean and null
+  ✓ it preserves RawJs values
+  ✓ it handles nested arrays and escaped keys/strings
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\DiffAssocRecursiveActionTest
+  ✓ it returns diff between arrays of rows                               0.02s  
+  ✓ it fixType throws when item is not array
+  ✓ it fixType converts numeric strings to numbers
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\RangeIntersectActionTest
+  ✓ it returns intersection when overlap                                 0.02s  
+  ✓ it returns false when no overlap
+  ✓ it returns [a0,b0] when a0 in [a1,b0] and b0 <= b1
+  ✓ it returns [a1,b1] when b1 <= b0 and a1 in range
+  ✓ it returns false when a0 > b1
+  ✓ it returns false when b1 > b0 and no previous condition matches
+  ✓ it returns [a0,b1] in fallback case
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\SaveArrayActionTest
+  ✓ it saves array in json format                                        0.03s  
+  ✓ it saves array in php format by default                              0.01s  
+  ✓ it throws for unsupported format
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\SaveJsonArrayActionTest
+  ✓ it saves array to json                                               0.02s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Array\SavePhpArrayActionTest
+  ✓ it saves array to php                                                0.01s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\ArrayArrActionsTest
+  ✓ it normalizes nested numeric strings in diff fixType for Arr namesp… 0.01s  
+  ✓ it throws when fixType receives a non-array item for Arr namespace
+  ✓ it returns recursive diff in Arr namespace
+  ✓ it normalizes nested numeric strings in diff fixType for Array namespace
+  ✓ it throws when fixType receives a non-array item for Array namespace
+  ✓ it returns recursive diff in Array namespace
+  ✓ it covers all branches of range intersect in Arr namespace
+  ✓ it covers all branches of range intersect in Array namespace
+  ✓ it writes JSON and PHP arrays via Arr actions
+  ✓ it writes JSON and PHP arrays via Array actions
+  ✓ it dispatches save strategy by format in SaveArrayAction
+  ✓ it throws on unsupported save format in SaveArrayAction
+  ✓ it converts mixed PHP arrays to RawJs correctly
+
+   PASS  Modules\Xot\tests\Unit\Actions\Blade\RegisterBladeComponentsActionTest
+  ✓ it returns early when no components are found                        0.89s  
+  ✓ it skips non component data items                                    0.81s  
+  ✓ it registers each valid component                                    0.74s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeArrayByModelCastActionTest
+  ✓ it returns attributesToArray when model is healthy                   0.72s  
+  ✓ it falls back to safeExecute when attributesToArray fails            0.72s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeArrayCastActionTest
+  ✓ it casts common input shapes to array                                0.02s  
+  ✓ it casts objects via toArray, __toArray and public props
+  ✓ it casts stdClass branch explicitly
+  ✓ it validates required keys and filters allowed keys
+  ✓ it casts values by requested value type                              0.01s  
+  ✓ it exposes canCast and static helper methods
+  ✓ it returns default for non-castable value types
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeAttributeCastActionTest
+  ✓ it checks attribute presence and emptiness                           0.75s  
+  ✓ it casts typed attribute getters                                     0.85s  
+  ✓ it returns defaults for missing attributes by type                   0.80s  
+  ✓ it casts generic typed getter and validated getter                   0.72s  
+  ✓ it exposes static helper methods                                     0.73s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeBooleanCastActionTest
+  ✓ it returns bool as-is                                                0.04s  
+  ✓ it casts null to default
+  ✓ it casts int to bool
+  ✓ it casts float to bool
+  ✓ it casts string to bool
+  ✓ it casts array to bool
+  ✓ it casts objects and empty string edge cases
+  ✓ it returns default for unsupported value types
+  ✓ it executeWithCustomValues uses custom true/false
+  ✓ it executeWithThreshold compares numeric
+  ✓ it canCast returns true for castable types
+  ✓ it has static cast method
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeEloquentCastActionTest
+  ✓ it checks attribute presence and emptiness                           0.87s  
+  ✓ it casts typed attribute getters                                     0.72s  
+  ✓ it returns defaults for missing attributes by type                   0.73s  
+  ✓ it casts generic typed getter and validation helpers                 0.91s  
+  ✓ it checks condition and fallback helpers                             0.78s  
+  ✓ it exposes static helper methods                                     0.77s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeFloatCastActionTest
+  ✓ it casts float values                                                0.04s  
+  ✓ it casts integer values
+  ✓ it casts null values
+  ✓ it casts null values with custom default
+  ✓ it casts numeric strings
+  ✓ it casts integer strings
+  ✓ it casts empty strings
+  ✓ it casts whitespace strings
+  ✓ it casts non-numeric strings
+  ✓ it casts non-numeric strings with default
+  ✓ it casts boolean values
+  ✓ it casts arrays
+  ✓ it casts objects
+  ✓ it casts with range validation
+  ✓ it casts with range and default
+  ✓ it has static cast method
+  ✓ it has static cast method with default
+  ✓ it has static castWithRange method
+  ✓ it casts with precision helpers
+  ✓ it casts percentage and currency helpers
+  ✓ it handles infinite values
+  ✓ it handles infinite values with default
+  ✓ it casts scientific notation
+  ✓ it handles decimal comma
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeIntCastActionTest
+  ✓ it returns int as-is                                                 0.04s  
+  ✓ it casts null to default
+  ✓ it casts float to int
+  ✓ it casts string to int
+  ✓ it casts bool to int
+  ✓ it casts single-value array and stringable object
+  ✓ it returns default for unsupported and empty-string edge cases
+  ✓ it executeWithRange clamps value
+  ✓ it executeAsId returns at least 1
+  ✓ it has static cast method
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeObjectCastActionTest
+  ✓ it checks property presence and values                               0.79s  
+  ✓ it casts typed property getters                                      0.81s  
+  ✓ it casts generic typed getter and validated getter                   0.73s  
+  ✓ it checks methods and calls methods safely                           0.66s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Cast\SafeStringCastActionTest
+  ✓ it returns string as-is                                              0.03s  
+  ✓ it casts null to empty string
+  ✓ it casts bool to 1 or 0
+  ✓ it casts scalar to string
+  ✓ it casts array to empty string
+  ✓ it has static cast method
+
+   PASS  Modules\Xot\tests\Unit\Actions\Class\GetFilenameByClassnameActionTest
+  ✓ it returns the source filename for an existing class                 0.80s  
+  ✓ it throws when class does not exist and no reflection error is rais… 0.79s  
+  ✓ it returns fallback path when autoload raises an exception           0.74s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Collection\TransCollectionActionTest
+  ✓ it casts values to strings when trans key is null                    0.74s  
+  ✓ it uses direct translation when key exists                           0.85s  
+  ✓ it uses underscore translation fallback when dotted key is missing   0.77s  
+  ✓ it returns original item when translation is not found               0.90s  
+  ✓ it returns empty item unchanged in trans method                      0.78s  
+  ✓ it returns item when trans key is null in trans method               0.77s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Config\GetTenantConfigArrayActionTest
+  ✓ it returns empty array when tenant config file does not exist        0.80s  
+  ✓ it returns config array when file exists and contains array          0.71s  
+  ✓ it returns empty array when required file does not return an array   0.63s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Config\GetTenantConfigPathActionTest
+  ✓ it delegates to tenant file path action with php filename            0.71s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Debug\MeasureActionTest
+  ✓ it returns closure result and stores notification with label         0.79s  
+  ✓ it uses unnamed label when empty label is provided                   0.77s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Dummy\GetProductsArrayDummyActionTest
+  ✓ it maps only expected keys for each product                          0.95s  
+  ✓ it returns empty item when product entry is not an array             0.79s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\AddStrictTypesDeclarationActionTest
+  ✓ it adds strict types declaration to php file                         0.76s  
+  ✓ it does not duplicate strict types if already present                0.82s  
+  ✓ it handles file with existing namespace                              0.85s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\CopyActionTest
+  ✓ it copies file from source to destination                            0.85s  
+  ✓ it creates destination directory if not exists                       0.80s  
+  ✓ it returns early when destination already exists                     0.86s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\CreateDirectoryForFilenameActionTest
+  ✓ it creates directory for filename                                    0.84s  
+  ✓ it does nothing when directory already exists                        0.73s  
+  ✓ it handles root level file                                           0.81s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\FixPathActionTest
+  ✓ it normalizes forward slashes to directory separator                 0.88s  
+  ✓ it normalizes back slashes to directory separator                    0.72s  
+  ✓ it handles mixed slash types                                         0.73s  
+  ✓ it returns empty string for empty input                              0.77s  
+  ✓ it handles already normalized paths                                  0.70s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\GetClassNameByPathActionTest
+  ✓ it extracts fully-qualified class name from file contents            0.77s  
+  ✓ it extracts class name when namespace is missing                     0.77s  
+  ✓ it throws when path does not exist                                   0.78s  
+  ✓ it handles nested namespaces                                         0.75s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\GetModulePathActionTest
+  ✓ it returns module path for existing module                           0.80s  
+  ✓ it handles lowercase module name                                     0.82s  
+  ✓ it returns fallback path for non-existent module                     0.73s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\File\ViewPathActionTest
+  ✓ it returns view path for module view                                 0.71s  
+  ✓ it handles different view formats                                    0.76s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\GetModelActionsTest
+  ✓ it gets model class by model type from morph map                     0.83s  
+  ✓ it throws when morph map config is not an array                      0.72s  
+  ✓ it throws when model type key is missing in morph map                0.63s  
+  ✓ it instantiates model by type when id is null                        0.69s  
+  ✓ it loads model by id when record exists                              0.71s  
+  ✓ it throws when model id is provided but record is missing            0.74s  
+  ✓ it returns snake model type from model contract instance             0.85s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\GetTransKeyActionTest
+  ✓ it builds key for action classes removing action suffix              0.83s  
+  ✓ it handles list prefix and singularizes resource names               0.85s  
+  ✓ it handles relation manager classes singularizing related name       0.85s  
+  ✓ it uses main module fallback for non-module class strings            0.90s  
+  ✓ it supports empty class parameter by reading class from backtrace    0.76s  
+  ✓ it uses module object from backtrace when non-module class is passe… 0.88s  
+  ✓ it handles form schema suffix cleanup                                0.77s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Model\DestroyActionTest
+  ✓ it deletes model and returns it                                      0.86s  
+  ✓ it flashes status message on successful delete                       0.63s  
+  ✓ it flashes failure message when delete returns false                 0.64s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Model\GetAllModelsActionTest
+  ✓ it returns array of model class strings                              0.70s  
+  ✓ it includes models from multiple modules                             0.70s  
+  ✓ it filters out non-string module names                               0.73s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Model\HasColumnActionTest
+  ✓ it executes without errors                                           0.79s  
+  ✓ it handles different tables                                          0.75s  
+  ✓ it returns boolean result                                            0.75s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Module\GetModuleConfigActionTest
+  ✓ it returns config array from module config file                      0.72s  
+  ✓ it throws when config file is missing                                0.75s  
+  ✓ it throws when config file does not return array                     0.66s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Module\GetModuleNameActionsTest
+  ✓ it extracts module name from class and model class                   0.69s  
+  ✓ it returns extracted fragment for non-module class signatures        0.86s  
+  ✓ it delegates model instance class to model class action              0.74s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Module\GetModulePathByGeneratorActionTest
+  ✓ it returns path using module_path helper in happy path               0.75s  
+  ✓ it returns module path for another existing generator directory      0.70s  
+
+   PASS  Modules\Xot\tests\Unit\Actions\Parse\ParsePrintPageStringActionTest
+  ✓ it parses single pages and ranges                                    0.02s  
+  ✓ it throws when no valid page number exists
+  ✓ it builds inclusive ranges from fromTo helper
+  ✓ it throws when fromTo end is lower than start
+
+   PASS  Modules\Xot\tests\Unit\Actions\String\GetPronounceablePasswordActionTest
+  ✓ it generates password with default length                            0.02s  
+  ✓ it generates password with custom length
+  ✓ it generates different passwords on multiple calls
+  ✓ it contains uppercase digit and special char
+  ✓ it covers fallback branch for very short requested length
+
+   PASS  Modules\Xot\tests\Unit\Actions\String\GetStrBetweenStartsWithActionTest
+  ✓ it extracts substring between start and balanced close               0.02s  
+  ✓ it throws when start not found
+
+   PASS  Modules\Xot\tests\Unit\Actions\String\NormalizeDriverNameActionTest
+  ✓ it normalizes driver name to lowercase                               0.01s  
+  ✓ it removes non-alphanumeric characters
+  ✓ it handles driver with special chars
+
+   PASS  Modules\Xot\tests\Unit\Actions\String\SanitizeActionTest
+  ✓ it strips html tags                                                  0.01s  
+  ✓ it decodes html entities
+  ✓ it trims whitespace
+
+   PASS  Modules\Xot\tests\Unit\Actions\View\GetViewByClassActionTest
+  ✓ it returns a view when explicit view name is provided                0.70s  
+  ✓ it builds default view name from class when view name is omitted     0.62s  
+  ✓ it resolves old style module view path                               0.76s  
+  ✓ it throws in executeOld when class is not in modules namespace       0.78s  
+
+   PASS  Modules\Xot\tests\Unit\HasExtraTraitTest
+  ✓ HasExtraTrait → it uses the trait correctly                          0.92s  
+  ✓ HasExtraTrait → it has extra relationship method                     0.73s  
+  ✓ HasExtraTrait → it returns null for non-existent extra               0.76s  
+  ✓ HasExtraTrait → it can get extra attributes                          0.74s  
+  ✓ HasExtraTrait → it has setExtra method                               0.68s  
+
+   PASS  Modules\Xot\tests\Unit\MetatagDataTest
+  ✓ MetatagData può essere istanziata                                    0.03s  
+  ✓ getFilamentColors restituisce i colori Filament corretti
+  ✓ getColors gestisce correttamente i colori personalizzati
+  ✓ getLogoHeight restituisce il valore corretto
+  ✓ Le proprietà hanno i valori di default corretti
+
+   PASS  Modules\Xot\tests\Unit\Models\BaseModelTest
+  ✓ base model extends eloquent model                                    0.74s  
+  ✓ base model has correct table name                                    0.77s  
+  ✓ base model has timestamps enabled                                    0.83s  
+  ✓ base model can be instantiated via subclass                          0.73s  
+
+   PASS  Modules\Xot\tests\Unit\Models\XotBaseModelBusinessLogicTest
+  ✓ XotBaseModel Business Logic → xot base model extends eloquent model  0.72s  
+  ✓ XotBaseModel Business Logic → xot base model can be instantiated vi… 0.77s  
+  ✓ XotBaseModel Business Logic → xot base model provides foundation fo… 0.68s  
+
+   PASS  Modules\Xot\tests\Unit\ModuleServiceTest
+  ✓ ModuleService → it can be instantiated                               0.75s  
+  ✓ ModuleService → it has correct module name property                  0.76s  
+  ✓ ModuleService → it can be instantiated with different module names   0.77s  
+  ✓ ModuleService → it has getModels method                              0.71s  
+  ✓ ModuleService → it returns array from getModels method               0.75s  
+  ✓ ModuleService → it getModels returns correct array structure         0.70s  
+  ✓ ModuleService → it filters abstract classes correctly                0.73s  
+  ✓ ModuleService → it handles reflection exceptions gracefully          0.62s  
+  ✓ ModuleService → it processes model names correctly                   0.68s  
+  ✓ ModuleService → it has proper return type annotation                 0.58s  
+  ✓ ModuleService → it validates method signature                        0.82s  
+  ✓ ModuleService → it handles empty module gracefully                   0.70s  
+  ✓ ModuleService → it uses correct namespace patterns                   0.62s  
+  ✓ ModuleService → it uses setName method for configuration             0.63s  
+  ✓ ModuleService → it validates class structure                         0.79s  
+  ✓ ModuleService → it has proper method visibility                      0.61s  
+  ✓ ModuleService → it handles module facade interactions                0.64s  
+  ✓ ModuleService → it processes file extensions correctly               0.67s  
+  ✓ ModuleService → it validates string utilities usage                  0.75s  
+  ✓ ModuleService → it handles reflection class instantiation            0.64s  
+  ✓ ModuleService → it has proper error handling                         0.67s  
+
+   PASS  Modules\Xot\tests\Unit\SendMailByRecordActionTest
+  ✓ it throws if record has no email                                     0.95s  
+
+   PASS  Modules\Xot\tests\Unit\Services\ArtisanServiceTest
+  ✓ artisan service act method returns empty string for unknown command… 0.70s  
+  ✓ artisan service act method handles migrate command                   0.72s  
+  ✓ artisan service act method handles module parameter                  0.78s  
+  ✓ artisan service handles non-string module parameter                  0.88s  
+
+   PASS  Modules\Xot\tests\Unit\XotBaseTransitionTest
+  ✓ XotBaseTransition → it can be instantiated                           0.67s  
+  ✓ XotBaseTransition → it has static name property                      0.62s  
+  ✓ XotBaseTransition → it can get record                                0.59s  
+  ✓ XotBaseTransition → it can send notifications without errors         0.75s  
+  ✓ XotBaseTransition → it returns correct notification recipients stru… 0.59s  
+  ✓ XotBaseTransition → it can send recipient notification               0.68s  
+  ✓ XotBaseTransition → it validates abstract class structure            0.75s  
+
+  Tests:    316 passed (628 assertions)
+  Duration: 146.56s
+

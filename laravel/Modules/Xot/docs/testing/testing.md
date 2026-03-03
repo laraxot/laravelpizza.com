@@ -175,40 +175,15 @@ trait CreatesApplication
 }
 ```
 
-## TestCase Base Framework
+## XotBaseTestCase (DRY + KISS + Laraxot)
 
-```php
-<?php
+**Tutti i TestCase dei moduli estendono `Modules\Xot\Tests\XotBaseTestCase`**, mai `Illuminate\Foundation\Testing\TestCase`.
 
-declare(strict_types=1);
+- **XotBaseTestCase**: Setup unificato (CreatesApplication, translator, xra config, helper user/email)
+- **TestCase** (Xot): Estende XotBaseTestCase
+- **TestCase** (altri moduli): Estendono XotBaseTestCase, aggiungono solo `getPackageProviders()`
 
-namespace Modules\Xot\Tests;
-
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-
-abstract class TestCase extends BaseTestCase
-{
-    use CreatesApplication;
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->setUpXotTestEnvironment();
-    }
-
-    /**
-     * Helper per mock di moduli in test.
-     */
-    protected function mockModule(string $moduleName, array $config = []): void
-    {
-        $moduleConfig = createTestModuleConfig($moduleName);
-        $moduleConfig = array_merge($moduleConfig, $config);
-
-        config(["modules.modules.{$moduleName}" => $moduleConfig]);
-    }
-}
-```
+Vedi [.cursor/rules/testcase-xotbase-extends.mdc](../../../../.cursor/rules/testcase-xotbase-extends.mdc).
 
 ## Test Core Framework
 

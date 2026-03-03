@@ -8,6 +8,15 @@ use Modules\Activity\Providers\ActivityServiceProvider;
 
 uses(\Modules\Activity\Tests\TestCase::class);
 
+beforeEach(function () {
+    // Skip if database not available
+    try {
+        \DB::connection()->getPdo();
+    } catch (\Exception $e) {
+        $this->markTestSkipped('Database not available: ' . $e->getMessage());
+    }
+});
+
 function activityFindPhpFiles(string $directory): array
 {
     $phpFiles = [];

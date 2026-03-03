@@ -4,11 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Activity\Tests;
 
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Modules\Activity\Providers\ActivityServiceProvider;
-use Modules\User\Providers\UserServiceProvider;
-use Modules\Xot\Providers\XotServiceProvider;
-use Modules\Xot\Tests\CreatesApplication;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
  * Base test case for Activity module.
@@ -18,9 +15,16 @@ use Modules\Xot\Tests\CreatesApplication;
  * Migrations must be run ONCE externally: php artisan migrate --env=testing
  * DB lifecycle is managed by dedicated integration tests/configuration.
  */
-abstract class TestCase extends BaseTestCase
+abstract class TestCase extends XotBaseTestCase
 {
-    use CreatesApplication;
+    use DatabaseTransactions;
+
+    /**
+     * The database connections that should have transactions rolled back.
+     *
+     * @var array<int, string>
+     */
+    protected array $connectionsToTransact = ['mysql', 'activity', 'user'];
 
     /**
      * @return array<int, class-string>
@@ -28,9 +32,9 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders($app): array
     {
         return [
-            XotServiceProvider::class,
-            UserServiceProvider::class,
-            ActivityServiceProvider::class,
+            \Modules\Xot\Providers\XotServiceProvider::class,
+            \Modules\User\Providers\UserServiceProvider::class,
+            \Modules\Activity\Providers\ActivityServiceProvider::class,
         ];
     }
 }

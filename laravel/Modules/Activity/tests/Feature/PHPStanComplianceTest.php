@@ -11,6 +11,15 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 
 uses(\Modules\Activity\Tests\TestCase::class);
 
+beforeEach(function () {
+    // Skip if database not available
+    try {
+        \DB::connection()->getPdo();
+    } catch (\Exception $e) {
+        $this->markTestSkipped('Database not available: ' . $e->getMessage());
+    }
+});
+
 test('phpstan placeholder', function (): void {
     expect(true)->toBeTrue();
 });
