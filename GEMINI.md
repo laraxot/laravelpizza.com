@@ -327,6 +327,20 @@ app(DoSomethingAction::class)->execute($data);
 
 ---
 
+## 🎬 10. Documentazione e Script (Aggiornamento 2026-03-02)
+
+**Regola Critica**: Tutti i file `.md` (eccetto `README.md` e `CHANGELOG.md`) devono seguire queste convenzioni:
+1. **Naming**: Solo caratteri minuscoli, niente date nei nomi dei file, niente caratteri speciali (usare solo hyphen `-` o underscore `_`).
+2. **Contenuto**: Rimuovere riferimenti a date fisse come "Last Updated", "Ultimo aggiornamento" o "[DATE]". La documentazione deve essere agnostica rispetto al tempo.
+3. **Links**: Usare sempre link relativi tra i file di documentazione.
+
+**Regola Critica**: Posizione degli Script:
+1. Tutti gli script (`.sh`, `.py`, ecc.) devono essere spostati in una sottocartella appropriata di `bashscripts/` (es. `bashscripts/testing/`).
+2. Nessun script deve risiedere nella root del progetto o direttamente nella cartella `laravel/`.
+3. Lo script `generate_coverage.sh` è stato spostato in `bashscripts/testing/generate-coverage.sh`.
+
+---
+
 > **Ricorda**: Tutti i prompt e la documentazione devono essere **project-agnostic**. Evita nomi specifici e usa placeholder o descrizioni architetturali universali.
 
 **Status**: Super Mucca Attivata 🐄✨

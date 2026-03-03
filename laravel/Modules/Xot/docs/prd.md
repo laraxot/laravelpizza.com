@@ -1,7 +1,6 @@
 # Xot - Product Requirements Document (PRD)
 
 > **Version**: 1.0.0
-> **
 > **Status**: Approved
 > **Owner**: Xot Core Team
 
@@ -148,6 +147,7 @@ Building modular Laravel applications requires a consistent foundation. Without 
 
 ## 13. References
 
+- [PRD Progetto](../../../../docs/prd.md)
 - [roadmap.md](roadmap.md)
 - [module.md](module.md)
 - [philosophy.md](philosophy.md)

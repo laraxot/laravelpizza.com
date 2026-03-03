@@ -32,7 +32,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property Model|\Eloquent      $authenticatable
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @method static Builder|AuthenticationLog newModelQuery()
  * @method static Builder|AuthenticationLog newQuery()
  * @method static Builder|AuthenticationLog query()
@@ -50,13 +49,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|AuthenticationLog whereUpdatedAt($value)
  * @method static Builder|AuthenticationLog whereUpdatedBy($value)
  * @method static Builder|AuthenticationLog whereUserAgent($value)
- *
  * @mixin IdeHelperAuthenticationLog
- *
  * @property ProfileContract|null $deleter
- *
  * @method static \Modules\User\Database\Factories\AuthenticationLogFactory factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
 class AuthenticationLog extends BaseModel

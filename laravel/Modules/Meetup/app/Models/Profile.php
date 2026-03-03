@@ -70,10 +70,40 @@ use Modules\User\Models\BaseProfile;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile withoutRole($roles, ?string $guard = null)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Profile byUuid(string $uuid)
  * @mixin \Eloquent
  */
 class Profile extends BaseProfile
 {
     /** @var string */
     protected $connection = 'meetup';
+
+    /**
+     * Fillable limitato allo schema Meetup (tabella profiles connessione meetup).
+     * BaseProfile ha fillable più ampio per lo schema User; qui solo colonne esistenti.
+     *
+     * @var list<string>
+     */
+    protected $fillable = [
+        'user_id',
+        'first_name',
+        'last_name',
+        'fiscal_code',
+        'phone',
+        'email',
+        'notes',
+    ];
+
+    /**
+     * Boot: la tabella Meetup non ha colonna uuid (solo id come UUID).
+     * Rimuove uuid dagli attributi prima del save per evitare SQL error.
+     */
+    protected static function booted(): void
+    {
+        parent::booted();
+
+        static::saving(static function (self $model): void {
+            $model->offsetUnset('uuid');
+        });
+    }
 }

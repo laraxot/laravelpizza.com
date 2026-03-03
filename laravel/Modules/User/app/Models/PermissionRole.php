@@ -12,11 +12,9 @@ use Webmozart\Assert\Assert;
 /**
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @method static Builder|PermissionRole newModelQuery()
  * @method static Builder|PermissionRole newQuery()
  * @method static Builder|PermissionRole query()
- *
  * @property string      $id
  * @property string|null $permission_id
  * @property string|null $role_id
@@ -24,7 +22,6 @@ use Webmozart\Assert\Assert;
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
- *
  * @method static Builder|PermissionRole whereCreatedAt($value)
  * @method static Builder|PermissionRole whereCreatedBy($value)
  * @method static Builder|PermissionRole whereId($value)
@@ -32,11 +29,8 @@ use Webmozart\Assert\Assert;
  * @method static Builder|PermissionRole whereRoleId($value)
  * @method static Builder|PermissionRole whereUpdatedAt($value)
  * @method static Builder|PermissionRole whereUpdatedBy($value)
- *
  * @mixin IdeHelperPermissionRole
- *
  * @property ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class PermissionRole extends BasePivot

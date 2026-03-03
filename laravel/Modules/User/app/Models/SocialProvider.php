@@ -25,7 +25,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null          $client_secret
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
- *
  * @method static Builder|SocialProvider newModelQuery()
  * @method static Builder|SocialProvider newQuery()
  * @method static Builder|SocialProvider query()
@@ -39,23 +38,17 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|SocialProvider whereSocialite($value)
  * @method static Builder|SocialProvider whereStateless($value)
  * @method static Builder|SocialProvider whereSvg($value)
- *
  * @property string|null $created_at
  * @property string|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
- *
  * @method static Builder|SocialProvider whereCreatedAt($value)
  * @method static Builder|SocialProvider whereCreatedBy($value)
  * @method static Builder|SocialProvider whereUpdatedAt($value)
  * @method static Builder|SocialProvider whereUpdatedBy($value)
- *
  * @mixin IdeHelperSocialProvider
- *
  * @property ProfileContract|null $deleter
- *
  * @method static \Modules\User\Database\Factories\SocialProviderFactory factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
 class SocialProvider extends BaseModel

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+uses(\Modules\Gdpr\Tests\TestCase::class);
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Modules\User\Models\User;

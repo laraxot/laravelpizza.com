@@ -10,7 +10,7 @@ use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * Team Permission Model.
- *
+ * 
  * Represents a permission assigned to a user within a team context.
  *
  * @property string         $id
@@ -21,13 +21,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property \DateTime|null $updated_at
  * @property Team           $team
  * @property User           $user
- *
  * @method static Builder<static>|TeamPermission newModelQuery()
  * @method static Builder<static>|TeamPermission newQuery()
  * @method static Builder<static>|TeamPermission query()
- *
  * @mixin IdeHelperTeamPermission
- *
  * @property ProfileContract|null            $creator
  * @property ProfileContract|null            $deleter
  * @property ProfileContract|null            $updater
@@ -36,7 +33,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null                     $created_by
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property string|null                     $deleted_by
- *
  * @method static \Modules\User\Database\Factories\TeamPermissionFactory factory($count = null, $state = [])
  * @method static Builder<static>|TeamPermission                         whereCreatedAt($value)
  * @method static Builder<static>|TeamPermission                         whereCreatedBy($value)
@@ -48,7 +44,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|TeamPermission                         whereTeamId($value)
  * @method static Builder<static>|TeamPermission                         whereUpdatedAt($value)
  * @method static Builder<static>|TeamPermission                         whereUpdatedBy($value)
- *
  * @property ProfileContract|null            $creator
  * @property ProfileContract|null            $deleter
  * @property ProfileContract|null            $updater
@@ -60,7 +55,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null                     $created_by
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property string|null                     $deleted_by
- *
  * @method static \Modules\User\Database\Factories\TeamPermissionFactory factory($count = null, $state = [])
  * @method static Builder<static>|TeamPermission                         whereCreatedAt($value)
  * @method static Builder<static>|TeamPermission                         whereCreatedBy($value)
@@ -73,7 +67,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|TeamPermission                         whereUpdatedAt($value)
  * @method static Builder<static>|TeamPermission                         whereUpdatedBy($value)
  *                                                                                                           >>>>>>> da38c10 (.)
- *
  * @mixin \Eloquent
  */
 class TeamPermission extends BaseModel

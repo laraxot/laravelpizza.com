@@ -18,7 +18,6 @@ use Sushi\Sushi;
  * @property string|null $id
  * @property string|null $name
  * @property int|null    $size
- *
  * @method static LogFactory          factory($count = null, $state = [])
  * @method static Builder<static>|Log newModelQuery()
  * @method static Builder<static>|Log newQuery()
@@ -26,12 +25,10 @@ use Sushi\Sushi;
  * @method static Builder<static>|Log whereId($value)
  * @method static Builder<static>|Log whereName($value)
  * @method static Builder<static>|Log whereSize($value)
- *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property string|null          $file_content
  * @property ProfileContract|null $updater
- *
  * @mixin \Eloquent
  */
 class Log extends BaseModel

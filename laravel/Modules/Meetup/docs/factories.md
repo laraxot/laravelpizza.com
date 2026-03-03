@@ -4,6 +4,30 @@ Documentazione completa delle factory per il modulo Meetup.
 
 ---
 
+## ProfileFactory
+
+Factory per profili nel contesto Meetup. Schema ridotto rispetto a BaseProfile (User): solo user_id, first_name, last_name, fiscal_code, phone, email, notes.
+
+### Utilizzo Base
+
+```php
+use Modules\Meetup\Models\Profile;
+
+$profile = Profile::factory()->create();
+$profile = Profile::factory()->withUser()->create();
+```
+
+### Stati Disponibili
+
+- **withUser()** - Associa a User::factory()
+- **withFiscalCode()** - Codice fiscale italiano valido
+- **organizer()** - Profilo organizzatore
+- **speaker()** - Profilo speaker/relatore
+
+Vedi [profile-factory.md](profile-factory.md) per dettagli completi.
+
+---
+
 ## EventFactory
 
 Factory principale per la creazione di eventi Laravel meetup con dati realistici.

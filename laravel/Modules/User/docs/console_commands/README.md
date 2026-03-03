@@ -243,4 +243,3 @@ Modules/User/
 - [ ] Logging strutturato
 - [ ] Metriche di utilizzo
 
-*
