@@ -192,7 +192,7 @@ return [
 
 ---
 
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
+**🔄 
 **📦 Versione**: 3.1.0  
 **🎯 Obiettivo**: Zero ->label() hardcoded  
 **✅ Status**: Prevenzione attiva e monitorata

@@ -3,7 +3,7 @@
 ## Stato
 - **Completamento**: 80%
 - **Priorità**: Bassa
-- **Ultimo Aggiornamento**: 30 Aprile 2024
+- **
 
 ## Task da Completare
 

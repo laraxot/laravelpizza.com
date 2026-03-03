@@ -87,4 +87,4 @@ File di traduzione incompleti spesso derivano da:
 
 **Status**: ✅ **COMPLETATO**
 
-**Ultimo aggiornamento**: [DATE]
+**

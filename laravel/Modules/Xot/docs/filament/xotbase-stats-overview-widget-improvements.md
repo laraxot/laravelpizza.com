@@ -306,7 +306,7 @@ La classe è ora uno strumento potente e flessibile per creare dashboard statist
 
 ---
 
-**Ultimo aggiornamento**: Dicembre 2024
+**
 **Versione**: 2.0
 **Stato**: ✅ Completato e Testato
 **Miglioramenti**: ✅ 15 nuovi metodi implementati

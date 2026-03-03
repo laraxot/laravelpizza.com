@@ -1,6 +1,6 @@
 # Regole Critiche di Architettura Laraxot
 
-**ULTIMO AGGIORNAMENTO**: 2025-01-XX
+**
 **STATUS**: ✅ REGOLE OBBLIGATORIE
 **PRIORITÀ**: CRITICA - MAI VIOLARE
 

@@ -347,6 +347,6 @@ $record->update(['stabi' => 999]);
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025
+**
 **Severità**: Media (funziona ma properties vuote)
 **Soluzione**: Aggiungere `->logAll()` o `->logOnly()` in getActivitylogOptions()

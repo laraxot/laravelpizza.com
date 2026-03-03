@@ -615,6 +615,6 @@ La classe `XotBaseStatsOverviewWidget` migliorata fornisce un set completo di st
 
 ---
 
-**Ultimo aggiornamento**: Dicembre 2024
+**
 **Versione**: 2.0
 **Stato**: ✅ Completato e Documentato

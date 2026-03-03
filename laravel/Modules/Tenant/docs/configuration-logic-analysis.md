@@ -1,6 +1,6 @@
 # Configuration System Architecture - Tenant Module
 
-## Data: [DATE]
+## 
 ## Metodologia: Super Mucca - La Litigata Interna
 ## File: `Modules/Tenant/app/Services/TenantService.php` e `app/Actions/Config/GetTenantFilePathAction.php`
 
@@ -224,6 +224,6 @@ I contenuti delle pagine sono memorizzati in JSON:
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0.0
 **Status**: ✅ Completato

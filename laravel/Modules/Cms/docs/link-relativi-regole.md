@@ -138,6 +138,6 @@ Aggiornare sempre le regole personali:
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025
+**
 **Versione**: 1.0
 **Conformità**: Regole Laraxot per documentazione modulare e portabile

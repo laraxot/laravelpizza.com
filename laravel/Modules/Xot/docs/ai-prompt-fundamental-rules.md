@@ -200,7 +200,7 @@ LimeSurvey specific rules:
 
 ---
 
-**Ultimo aggiornamento**: [DATE]  
+**
 **MySQL Testing**: ✅ OBBLIGATORIO  
 **Race Conditions**: ✅ Pattern first() + try/catch  
 **PHPStan Level**: ✅ 10 obbligatorio  

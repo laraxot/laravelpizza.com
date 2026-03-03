@@ -158,6 +158,6 @@ $mergeConf = collect($originalConf)->merge($extraConf)->all(); // ✅ Funziona s
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22
+**
 **Versione**: 1.0.0
 **Status**: ✅ Completato

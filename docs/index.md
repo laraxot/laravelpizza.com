@@ -1,6 +1,6 @@
 # 📚 Documentazione LaravelPizza.com
 
-**Ultimo aggiornamento**:
+**
 **Versione**: Laravel 12.x + Filament 5.x + Livewire 4.x
 
 ---
@@ -461,7 +461,7 @@ Documentazione Root:
 
 ---
 
-**Ultimo aggiornamento**:
+**
 **Versione**: Laravel 12.x + Filament 5.x + Livewire 4.x
 **PHPStan**: Level 10 (0 errori)
 **Status**: Production Ready

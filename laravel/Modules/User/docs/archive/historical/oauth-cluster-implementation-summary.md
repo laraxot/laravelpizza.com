@@ -168,6 +168,6 @@ Se in futuro serve centralizzare configurazione OAuth:
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22
+**
 **Versione**: 1.0.0
 **Status**: ✅ Implementazione completata e verificata

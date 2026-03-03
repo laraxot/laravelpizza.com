@@ -213,5 +213,5 @@
 ---
 
 **Responsabile**: TBD
-**Last Updated**: 2026-01-31
+**
 **Next Review**: 2026-02-07

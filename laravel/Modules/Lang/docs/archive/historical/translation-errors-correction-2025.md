@@ -251,6 +251,6 @@ Tutte le traduzioni problematiche sono state corrette seguendo i pattern standar
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025
+**
 **Autore**: Sistema di Correzione Automatica
 **Versione**: 1.0

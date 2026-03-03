@@ -847,5 +847,5 @@ grep -r "<livewire:" {PROJECT_ROOT}/laravel/Modules/*/resources/views/
 ---
 
 **Document Version:**
-**Last Updated:**
+**
 **Next Review:** After next Filament {CURRENT_MAJOR_VERSION}.x release

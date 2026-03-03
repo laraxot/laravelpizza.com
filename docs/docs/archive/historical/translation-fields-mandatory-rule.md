@@ -113,4 +113,4 @@ return [
 
 **Status**: 🔴 **REGOLA CRITICA - MAI VIOLARE**
 
-**Ultimo aggiornamento**: [DATE]
+**

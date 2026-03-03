@@ -1,6 +1,6 @@
 # REGOLA CRITICA: Usa SEMPRE transClass() negli Enum
 
-## Data: [DATE]
+## 
 
 ## ✅ CORRETTO - Implementazione Enum con TransTrait
 
@@ -297,7 +297,7 @@ rules:
 
 # REGOLA CRITICA: Usa SEMPRE transClass() negli Enum
 
-## Data: [DATE]
+## 
 
 ## ✅ CORRETTO - Implementazione Enum con TransTrait
 

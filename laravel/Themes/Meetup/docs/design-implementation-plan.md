@@ -1,6 +1,6 @@
 # Piano Implementazione Design - Laravel Pizza
 
-## Data: [DATE]
+## 
 
 ## 🎯 Obiettivo
 Adattare il design elegante di laravelpizza.com (community meetup) al nostro sistema di ordinazione pizze, mantenendo l'estetica moderna ma con contenuti e funzionalità appropriate.

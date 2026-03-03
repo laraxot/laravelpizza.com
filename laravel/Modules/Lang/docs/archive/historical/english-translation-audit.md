@@ -298,7 +298,7 @@ return array(
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Status**: In corso
 # Audit Traduzioni Inglesi - <nome progetto>
 
@@ -600,5 +600,5 @@ return array(
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Status**: In corso

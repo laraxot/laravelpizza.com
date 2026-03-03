@@ -75,5 +75,5 @@ public function registerTimezone(): void
 - [PHP date_default_timezone_set](https://www.php.net/manual/en/function.date-default-timezone-set.php)
 - [Root Bugfix Guidelines](../../../docs/bugfix-guidelines.md)
 
-*Ultimo aggiornamento: giugno 2025*
+*
 *Risolto da: Windsurf AI Assistant*

@@ -446,6 +446,6 @@ Prima di estrarre metodi:
 
 ---
 
-**Ultimo aggiornamento**: 19 Dicembre 2025  
+**
 **Filosofia**: *"Small methods, clear names, single responsibility - the path to maintainable code"*  
 **Pattern**: Extract Method (Clean Code Refactoring)

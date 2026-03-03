@@ -417,7 +417,7 @@ return [
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025
+**
 **Severità**: CRITICA
 **Categoria**: Violazione Architettura Fondamentale
 **Status**: ✅ CORRETTO e DOCUMENTATO

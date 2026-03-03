@@ -74,4 +74,4 @@ FFMpeg::fromDisk($data->disk)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
 - [Root Conflict Resolution Guidelines](../../../../../docs/conflict-resolution-guidelines.md)
 
-*Ultimo aggiornamento: giugno 2025*
+*

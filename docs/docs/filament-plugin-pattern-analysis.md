@@ -321,4 +321,4 @@ public static function getFormSchema(): array
 
 **Status**: 📝 **ANALISI COMPLETATA**
 
-**Ultimo aggiornamento**: [DATE]
+**

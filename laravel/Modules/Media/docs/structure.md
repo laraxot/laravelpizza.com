@@ -1,6 +1,6 @@
 # Modulo Media
 
-Data: [DATE] 19:09:56
+
 
 ## Informazioni generali
 

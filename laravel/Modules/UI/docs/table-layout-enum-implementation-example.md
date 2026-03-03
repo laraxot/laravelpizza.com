@@ -1,6 +1,6 @@
 # Esempio Implementazione TableLayoutEnum
 
-## Data: [DATE]
+## 
 
 ## Scenario
 Implementazione di una lista utenti con toggle tra layout lista e griglia utilizzando il `TableLayoutEnum`.
@@ -414,7 +414,7 @@ TextColumn::make('name')
 
 # Esempio Implementazione TableLayoutEnum
 
-## Data: [DATE]
+## 
 
 ## Scenario
 Implementazione di una lista utenti con toggle tra layout lista e griglia utilizzando il `TableLayoutEnum`.

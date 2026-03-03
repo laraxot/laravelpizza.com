@@ -267,7 +267,7 @@ Diventare un identity provider completo (IdP) che supporta standard moderni come
 
 ---
 
-**Ultimo aggiornamento**: Febbraio 2026
+**
 **Versione**: 1.0.0
 **Maintainer**: User Module Team
 **Status**: 🚧 In Development (70% completo)
@@ -276,5 +276,5 @@ Diventare un identity provider completo (IdP) che supporta standard moderni come
 
 ---
 
-**Ultimo aggiornamento**: 2026-02-24
+**
 >>>>>>> c76fdae73 (.)

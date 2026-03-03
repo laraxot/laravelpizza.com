@@ -111,4 +111,4 @@ Molte traduzioni utilizzano ancora il pattern `.navigation` invece di traduzioni
 - `rating::rating_morph.navigation.icon` → icona `heroicon-o-star`
 - `setting::database_connection.navigation.label` → `Connessioni database`
 
-*Ultimo aggiornamento: 19 Novembre 2025*
+*

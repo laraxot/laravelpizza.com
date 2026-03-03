@@ -196,4 +196,4 @@ Tutte le migliorie sono **retrocompatibili**:
 
 **Status**: 📝 **ROADMAP CREATA**
 
-**Ultimo aggiornamento**: 2026-01-09
+**

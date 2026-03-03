@@ -341,6 +341,6 @@ Ogni task include:
 ---
 
 **Created**:
-**Last Updated**:
+**
 **Next Review**: (Monthly)
 **Maintained By**: Dev Team

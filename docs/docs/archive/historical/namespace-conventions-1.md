@@ -194,4 +194,4 @@ Se l'override del tema non funziona:
 ---
 
 *Documento creato: Dicembre 2024*
-*Ultimo aggiornamento: Dicembre 2024*
+*

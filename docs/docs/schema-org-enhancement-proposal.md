@@ -227,6 +227,6 @@ class LocalBusiness extends Organization
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0.0
 **Status**: Proposta - da implementare

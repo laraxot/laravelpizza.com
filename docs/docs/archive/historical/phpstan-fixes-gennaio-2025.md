@@ -222,7 +222,7 @@ $subject = Lang::get('user::email.password_reset_subject');
 
 ---
 
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
+**🔄 
 **📦 Versione**: 1.0  
 **🐛 PHPStan Level**: 9 ✅  
 **🌐 Translation Standards**: IT/EN complete ✅  

@@ -1,6 +1,6 @@
 # AI Assistant - Regole Operative
 
-**Last Updated**:
+**
 **Status**: 🔒 CRITICAL - Always Follow
 
 ---
@@ -386,5 +386,5 @@ Document everything.
 
 **Versione**:
 **Maintained by**: AI Assistant (Self-Documented)
-**Last Updated**:
+**
 **Next Review**: Ogni sessione Super Mucca

@@ -332,6 +332,6 @@ Applicando questi pattern abbiamo ottenuto:
 - [<nome progetto> Testing Architecture](../../../<nome progetto>/docs/testing.md)
 
 ---
-**Ultimo aggiornamento**: Gennaio 2025
+**
 **Status**: ✅ PRODUCTION READY
 **Verified**: 9 test / 4.44s / 100% pass rate

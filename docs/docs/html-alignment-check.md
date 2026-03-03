@@ -1,6 +1,6 @@
 # Verifica Allineamento HTML con Business Logic
 
-## Data: [DATE]
+## 
 
 ## Contesto
 L'HTML statico in `resources/html/` deve essere allineato con:

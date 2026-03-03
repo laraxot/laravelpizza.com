@@ -278,7 +278,7 @@ Il modulo User è il cuore del sistema di autenticazione e gestione utenti di <n
 
 ---
 
-**Ultimo aggiornamento**: Dicembre 2024
+**
 **Versione**: 1.0
 **Stato**: In Progress
 **Responsabile**: Team Sviluppo <nome progetto>

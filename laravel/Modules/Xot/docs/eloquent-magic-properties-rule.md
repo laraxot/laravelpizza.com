@@ -320,6 +320,6 @@ Quando scrivi codice con Eloquent:
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **PHPStan Level**: 10
 **Status**: ✅ 0 Errors

@@ -237,7 +237,7 @@ cd /var/www/_bases/base_laravelpizza/laravel
 
 **Status**: 🔄 **IN IMPLEMENTAZIONE**
 
-**Ultimo aggiornamento**: [DATE]
+**
 
 ---
 
@@ -294,4 +294,4 @@ cd /var/www/_bases/base_laravelpizza/laravel
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**

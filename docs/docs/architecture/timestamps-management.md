@@ -53,7 +53,7 @@ L'uso di `updateTimestamps()` rappresenta l'adesione a un contratto sociale in c
 Il metodo `updateTimestamps($table, true)` non si limita ad aggiungere i campi `created_at` e `updated_at`, ma:
 
 1. Aggiunge `created_at` (timestamp di creazione)
-2. Aggiunge `updated_at` (timestamp di ultimo aggiornamento)
+2. Aggiunge `updated_at` (timestamp di 
 3. Se il secondo parametro è `true`, aggiunge anche `deleted_at` per il soft delete
 4. Applica coerentemente gli stessi tipi di dati e attributi in tutto il sistema
 

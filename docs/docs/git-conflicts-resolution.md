@@ -1,6 +1,6 @@
 # Risoluzione Conflitti Git - 6 Gennaio 2025
 
-## Data: [DATE]
+## 
 
 ## Contesto
 Sono stati identificati e risolti conflitti Git in diversi file del progetto <nome progetto>, coinvolgendo moduli Geo, User e tema Two.
@@ -96,7 +96,7 @@ $res=Locality::query()
 ```bash
 # Risoluzione Conflitti Git - 6 Gennaio 2025
 
-## Data: [DATE]
+## 
 
 ## Contesto
 Sono stati identificati e risolti conflitti Git in diversi file del progetto <nome progetto>, coinvolgendo moduli Geo, User e tema Two.
@@ -292,7 +292,7 @@ php artisan lang:check
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato
 

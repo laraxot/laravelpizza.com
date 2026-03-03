@@ -166,7 +166,7 @@ Blade::anonymousComponentNamespace(
 1. `/Themes/Meetup/docs/critical-rules-and-patterns.md`
    - Aggiunta sezione "Block Component Props Pattern"
    - Aggiornato Key Takeaways (#12, #13)
-   - Version 1.1
+   - 
 
 ---
 

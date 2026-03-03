@@ -929,7 +929,7 @@ test('welcome email is sent', function () {
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
+**
 **Versione Pacchetto**: spatie/laravel-database-mail-templates 3.7.1  
 **Compatibilità**: Laravel 12.x, PHP 8.3+
 

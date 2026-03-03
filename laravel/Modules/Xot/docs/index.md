@@ -57,4 +57,4 @@
 - [General Troubleshooting](troubleshooting.md)
 
 ---
-*Last update: January 2025*
+*

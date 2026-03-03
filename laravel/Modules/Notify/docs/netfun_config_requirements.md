@@ -90,7 +90,7 @@ Per problemi di configurazione o domande sull'integrazione con Netfun, consultar
 
 ---
 
-*Ultimo aggiornamento: 2025-05-12*
+*
 
 ## 2. Esempio di .env
 
@@ -143,4 +143,4 @@ NETFUN_ENDPOINT=https://v2.smsviainternet.it/api/rest/v1/sms-batch.json
 
 ---
 
-*Ultimo aggiornamento: 2025-05-12*
+*

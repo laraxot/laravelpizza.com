@@ -380,6 +380,6 @@ cd laravel
 
 ---
 
-**Ultimo aggiornamento**: 9 Gennaio 2026  
+**
 **Versione Pest**: 3.8.4  
 **Status**: ✅ Documentazione Completa

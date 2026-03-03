@@ -270,7 +270,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Twilio](https://www.twilio.com/) - SMS service
 - [Firebase](https://firebase.google.com/) - Push notifications
 
-*Ultimo aggiornamento: Gennaio 2025*
+*
 *Analisi completa di 10 modelli attivi, 4 file backup da rimuovere*
 *Sistema notifiche multi-canale completo*
 # Analisi Modelli, Factory e Seeder - Modulo Notify
@@ -547,6 +547,6 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Twilio](https://www.twilio.com/) - SMS service
 - [Firebase](https://firebase.google.com/) - Push notifications
 
-*Ultimo aggiornamento: Gennaio 2025*
+*
 *Analisi completa di 10 modelli attivi, 4 file backup da rimuovere*
 *Sistema notifiche multi-canale completo*

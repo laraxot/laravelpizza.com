@@ -159,5 +159,5 @@ public function eventDidMount(): string
 - [Modules/UI/docs/full-calendar.md](../modules/ui/docs/full-calendar.md)
 - [Regole .mdc](../.cursor/rules/cursor.mdc), [../.windsurf/rules/windsurf.mdc]
 
-## Ultimo aggiornamento
+## 
 [DATE]

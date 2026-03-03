@@ -302,5 +302,5 @@ Lo schema deve sempre avere chiavi string per conformità Filament:
 
 ---
 
-**Ultimo aggiornamento**: 19 Dicembre 2025  
+**
 **Filosofia**: *"Define once, reuse everywhere - DRY over duplication, simplicity over complexity"*

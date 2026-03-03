@@ -93,4 +93,4 @@
 - [Index Documentation](./index.md)
 - [Best Practices](./BEST_PRACTICES.md)
 
-*Ultimo aggiornamento: 2025-01-06*
+*

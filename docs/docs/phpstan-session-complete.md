@@ -160,4 +160,4 @@ Tutti i moduli principali sono ora conformi a PHPStan Level 10.
 
 ---
 
-**Ultimo aggiornamento**: [DATE] - Sessione completata
+**

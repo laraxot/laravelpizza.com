@@ -263,6 +263,6 @@ class DashboardTest extends TestCase
 
 ---
 
-**Ultimo aggiornamento**: Giugno 2025
+**
 **Stato**: Analisi completa completata, implementazione in corso
 **Moduli da implementare**: 13 moduli identificati

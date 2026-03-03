@@ -356,6 +356,6 @@ Il blocco `runningInConsole()` è stato rimosso. Il codice ora funziona corretta
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0.0
 **Status**: ✅ Completato con successo

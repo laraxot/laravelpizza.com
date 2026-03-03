@@ -346,6 +346,6 @@ $content = file_get_contents($path); // Lancia eccezione se fallisce
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0.0
 **Status**: In progress

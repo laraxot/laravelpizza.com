@@ -6,7 +6,7 @@
 |-------|--------|
 | **Version** | 1.0.0 |
 | **Status** | Approved |
-| **Last Updated** | 2026-03-03 |
+| **
 | **Owner** | Core Team |
 | **Module** | Job |
 | **Repository** | laraxot/module_job_fila5 |

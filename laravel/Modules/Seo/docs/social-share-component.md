@@ -647,5 +647,5 @@ class SocialShareWidget extends XotBaseWidget
 ---
 
 **Versione documento**: 2.0  
-**Ultimo aggiornamento**: 2026-02-19  
+**
 **Stato**: Produzione-ready

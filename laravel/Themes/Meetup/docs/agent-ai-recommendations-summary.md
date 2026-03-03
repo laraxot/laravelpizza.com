@@ -190,6 +190,6 @@ Dopo **qualsiasi** modifica a Blade/Views.
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0.0
 **Status**: ✅ Consolidamento Completo

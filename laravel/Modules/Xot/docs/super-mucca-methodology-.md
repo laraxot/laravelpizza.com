@@ -215,4 +215,4 @@ class MyResource extends XotBaseResource { }
 
 **Status**: ✅ **DOCUMENTAZIONE COMPLETA**
 
-**Ultimo aggiornamento**: 2026-01-09
+**

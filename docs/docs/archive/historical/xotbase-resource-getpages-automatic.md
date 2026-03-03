@@ -1,6 +1,6 @@
 # XotBaseResource getPages() Automatic: Filosofia DRY
 
-## Data: [DATE]
+## 
 
 ## Il Dibattito Feroce
 

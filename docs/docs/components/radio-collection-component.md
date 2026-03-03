@@ -265,7 +265,7 @@ wire:model.live="{{ $getStatePath() }}"
 - [JavaScript Phenomenology](./javascript-phenomenology.md)
 ---
 *"In ogni scelta si cela l'universo intero, e in ogni click si manifesta la volontà dell'essere digitale."*
-**Ultimo aggiornamento ontologico**: Dicembre 2024
+**
 **Versione dell'esistenza**: 1.0.0
 **Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+
 **Compatibilità karmica**: Filament 4.x, Livewire 3.x, Laravel 11+

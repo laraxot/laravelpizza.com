@@ -216,4 +216,4 @@ Le stesse correzioni sono state applicate a:
 
 ---
 
-**Ultimo aggiornamento**: 27 Gennaio 2025
+**

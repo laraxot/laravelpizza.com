@@ -1,6 +1,6 @@
 # 🚀 Guida Rapida - Getting Started
 
-**Ultimo aggiornamento**:
+**
 **Tempo richiesto**: 30-45 minuti
 **Livello**: Intermedio-Avanzato
 

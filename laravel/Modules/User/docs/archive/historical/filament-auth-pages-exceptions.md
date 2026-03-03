@@ -130,4 +130,4 @@ Estendere `Filament\Pages\Page` direttamente solo per:
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**

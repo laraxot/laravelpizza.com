@@ -117,4 +117,4 @@ protected function getOptions(): array
 ---
 
 **Versione:** 1.0  
-**Ultimo Aggiornamento:** Gennaio 2026
+**

@@ -273,7 +273,7 @@ unset($translations['existing_key']); // MAI!
 - [translations-best-practices.md](./translations-best-practices.md)
 - [namespace-conventions.md](./namespace-conventions.md)
 
-## Ultimo Aggiornamento
+## 
 
 **Data**: 2025-08-01
 **Versione**: 2.0

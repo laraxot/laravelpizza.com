@@ -1,6 +1,6 @@
 # 🔐 **Laravel Socialite + Microsoft OAuth Integration Guide**
 
-**Last Update**: 23 Febbraio 2026
+**
 **Status**: ✅ PHPStan Level 10 Compliant
 **Module**: User
 **Dependencies**: Laravel Socialite, Microsoft Azure AD
@@ -827,6 +827,6 @@ public function refreshMicrosoftToken(): void
 
 **Documentazione conforme agli standard Laraxot** - PHPStan Level 10 ✅ | DRY + KISS + SOLID ✅
 
-*Last Updated: 23 Febbraio 2026*
+*
 *Module: User*
-*Version: 2.6.0*
+*

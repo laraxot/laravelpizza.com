@@ -1,6 +1,6 @@
 # Quality Tools Report - PHPStan, PHPMD, PHP Insights
 
-## Data: [DATE]
+## 
 
 ## Riepilogo Risultati
 

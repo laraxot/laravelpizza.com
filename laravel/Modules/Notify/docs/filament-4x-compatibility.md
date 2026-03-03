@@ -83,4 +83,4 @@ UPDATE templates SET counter = ? WHERE id = ?
 - [Guida Ufficiale Filament 4.x](https://filamentphp.com/docs/4.x/upgrade-guide)
 - [Documentazione Eloquent](https://laravel.com/docs/eloquent)
 
-*Ultimo aggiornamento: 2025-01-27*
+*

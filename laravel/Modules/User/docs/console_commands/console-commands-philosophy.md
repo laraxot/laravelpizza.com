@@ -395,7 +395,7 @@ Mantenere **versioning chiaro** per ogni comando:
 /**
  * ChangePasswordCommand
  *
- * @version 2.0
+ * @
  * @since 2025-01-27
  * @author Laraxot Team
  */
@@ -429,7 +429,7 @@ Implementare **politica di deprecazione**:
 ```php
 // Metodo deprecato
 /**
- * @deprecated Since version 2.0, use getNewPassword() instead
+ * @deprecated Since 
  */
 private function getPasswordLegacy(): string
 {
@@ -852,7 +852,7 @@ Mantenere **versioning chiaro** per ogni comando:
 /**
  * ChangePasswordCommand
  *
- * @version 2.0
+ * @
  * @since 2025-01-27
  * @author Laraxot Team
  */
@@ -886,7 +886,7 @@ Implementare **politica di deprecazione**:
 ```php
 // Metodo deprecato
 /**
- * @deprecated Since version 2.0, use getNewPassword() instead
+ * @deprecated Since 
  */
 private function getPasswordLegacy(): string
 {

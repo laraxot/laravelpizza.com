@@ -106,4 +106,4 @@ return $value;
 
 **Status**: 🧘 **IN CORREZIONE**
 
-**Ultimo aggiornamento**: 2026-01-09
+**

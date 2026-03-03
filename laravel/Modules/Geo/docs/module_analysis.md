@@ -338,6 +338,6 @@ $contained = SpatialQueryService::withinPolygon($polygon);
 
 ---
 
-**Ultimo Aggiornamento**: 2026-01-23  
+**
 **Versione**: v1.8.0-beta  
 **Stato**: Production Ready with Real-time Enhancement

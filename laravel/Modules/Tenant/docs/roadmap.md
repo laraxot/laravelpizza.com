@@ -40,7 +40,7 @@ Rendere la scalabilità dell'isolamento dei dati un processo immediato e traspar
 - [ ] Documentazione agnostica aggiornata in `docs/`.
 
 ---
-**Ultimo aggiornamento**: 2 Marzo 2026
+**
 ||||||| parent of abc100e (.)
 =======
 - [ ] Isolamento dei dati verificato tramite test unitari e di integrazione.
@@ -83,7 +83,7 @@ Rendere la scalabilità dell'isolamento dei dati un processo immediato e traspar
 - [ ] Zero dipendenze circolari tra Tenant e altri moduli core.
 
 ---
-**Ultimo aggiornamento**: 31 Gennaio 2026
+**
 >>>>>>> aa416e4 (.)
 =======
 - [ ] Isolamento dei dati verificato tramite test unitari e di integrazione.

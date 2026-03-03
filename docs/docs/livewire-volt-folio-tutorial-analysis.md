@@ -1,6 +1,6 @@
 # Analisi Tutorial: Livewire 3, Volt e Folio - Podcast Player
 
-## Data: [DATE]
+## 
 
 ## Panoramica
 

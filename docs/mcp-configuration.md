@@ -232,6 +232,6 @@ For issues or questions about MCP configuration:
 
 ---
 
-**Last Updated**: 2026-02-13  
+**
 **Maintained By**: iFlow CLI  
 **Project**: LaravelPizza - Modular Laravel Framework

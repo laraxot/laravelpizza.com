@@ -76,4 +76,4 @@ Questa regola si applica a:
 
 ---
 
-*Ultimo aggiornamento: 2026-02-24*
+*

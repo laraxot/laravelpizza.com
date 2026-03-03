@@ -416,4 +416,4 @@ php artisan xot:test-framework
 - [PathHelper Current](../Helpers/PathHelper.php)
 - [XotData Current](../Datas/XotData.php)
 
-*Ultimo aggiornamento: gennaio 2025*
+*

@@ -197,6 +197,6 @@ php artisan make:filament-cluster Passport --module=User
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0.0
 **Status**: Proposta - da implementare

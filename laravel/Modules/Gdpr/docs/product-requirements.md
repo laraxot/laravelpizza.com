@@ -6,7 +6,7 @@
 |-------|--------|
 | **Version** | 1.0.0 |
 | **Status** | Approved |
-| **Last Updated** | 2026-03-03 |
+| **
 | **Owner** | Legal/Compliance Team |
 | **Module** | Gdpr |
 | **Repository** | laraxot/module_gdpr_fila5 |

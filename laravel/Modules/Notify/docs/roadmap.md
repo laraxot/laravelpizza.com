@@ -33,4 +33,4 @@ Modulo per il sistema di notifiche: email, in-app, SMS, push, template, scheduli
 
 ---
 
-**Ultimo aggiornamento**: Febbraio 2026
+**

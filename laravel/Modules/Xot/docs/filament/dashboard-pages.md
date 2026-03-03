@@ -201,4 +201,4 @@ Il modulo Xot è il modulo core e potrebbe non necessitare di una dashboard trad
 
 ---
 
-**Ultimo aggiornamento**: Giugno 2025
+**

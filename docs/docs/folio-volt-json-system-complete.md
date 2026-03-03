@@ -275,6 +275,6 @@ npm run copy       # Copia asset in public_html/themes/Meetup/
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0.0
 **Status**: ✅ Documentazione Critica Completa

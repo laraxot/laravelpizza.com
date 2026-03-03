@@ -54,7 +54,7 @@ return $action->execute($smsData);
 - [SMS Channel Architecture](sms_channel_action_resolution.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 
-*Ultimo aggiornamento: giugno 2025*
+*
 # Risoluzione Conflitti SmsChannel.php
 
 ## Contesto del Conflitto
@@ -111,4 +111,4 @@ return $action->execute($smsData);
 - [SMS Channel Architecture](sms_channel_action_resolution.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 
-*Ultimo aggiornamento: giugno 2025*
+*

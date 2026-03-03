@@ -359,5 +359,5 @@ dd($this->layout->getTableContentGrid());
 - [Translation Standards](../../xot/docs/translation-standards.md)
 - [Enum Standards](../../../docs/enum_standards.md)
 
-## Ultimo Aggiornamento
+## 
 [DATE] - Documentazione completa TableLayoutEnum

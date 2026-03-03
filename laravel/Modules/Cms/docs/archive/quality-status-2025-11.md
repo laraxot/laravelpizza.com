@@ -83,7 +83,7 @@ This informs PHPStan that the object has BOTH:
 
 ---
 
-*Last Updated: November 15, 2025*
+*
 *PHPStan: PASSED*
 *Status: PRODUCTION READY*
 

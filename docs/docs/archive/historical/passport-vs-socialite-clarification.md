@@ -93,6 +93,6 @@ find Modules/User/app/Filament/Resources -name "SocialProviderResource.php"
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0.0
 **Status**: ✅ Documentazione Critica

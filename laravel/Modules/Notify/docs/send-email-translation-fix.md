@@ -157,4 +157,4 @@ Ogni campo ora ha la struttura espansa completa:
 ],
 ```
 
-*Ultimo aggiornamento: [DATE]* 
+*

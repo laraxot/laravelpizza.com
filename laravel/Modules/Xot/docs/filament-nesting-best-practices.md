@@ -432,6 +432,6 @@ protected static bool $shouldRegisterNavigation = false; // ✅
 
 ---
 
-**Ultimo aggiornamento**: 23 Gennaio 2026  
+**
 **Stato**: Documentazione Best Practices  
 **Applicabile a**: Tutti i moduli Laraxot

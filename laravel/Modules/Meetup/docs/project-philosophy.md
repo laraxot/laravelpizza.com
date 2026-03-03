@@ -140,6 +140,6 @@ Questo repo è il passo successivo:
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0
 **Compatibilità**: LaravelPizza.com base_laravelpizza

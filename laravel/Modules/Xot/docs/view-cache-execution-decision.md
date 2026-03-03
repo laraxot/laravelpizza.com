@@ -211,6 +211,6 @@ Tutte le Blade templates sono state compilate correttamente e salvate in cache. 
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22
+**
 **Versione**: 1.0.0
 **Status**: ✅ Completato con successo

@@ -264,4 +264,4 @@ Applicare gli stessi pattern di type safety agli altri moduli:
 - [Reusability Guidelines](reusability_guidelines.md)
 - [PHPStan Best Practices](../../../../docs/phpstan-best-practices.md)
 
-*Ultimo aggiornamento: gennaio 2025*
+*

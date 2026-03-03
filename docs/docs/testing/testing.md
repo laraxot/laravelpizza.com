@@ -689,6 +689,6 @@ test('no memory leaks in repeated operations', function (): void {
 
 ---
 
-**Ultimo aggiornamento**: Dicembre 2024
+**
 **Framework**: Pest v2.x
 **Coverage Target**: 90%+ per core framework

@@ -153,7 +153,7 @@ grep -r "database.*<nome progetto>\|app.*<nome progetto>" Modules/Notify/
 - [../../Xot/docs/xotdata_usage.md](../../Xot/docs/xotdata_usage.md)
 - [testing_best_practices.md](testing_best_practices.md)
 
-*Ultimo aggiornamento: gennaio 2025*
+*
 # Linee Guida per la Riusabilità del Modulo Notify
 
 ## Principio Fondamentale
@@ -323,4 +323,4 @@ grep -r "database.*<nome progetto>\|app.*<nome progetto>" Modules/Notify/
 - [../../Xot/docs/xotdata_usage.md](../../Xot/docs/xotdata_usage.md)
 - [testing_best_practices.md](testing_best_practices.md)
 
-*Ultimo aggiornamento: gennaio 2025*
+*

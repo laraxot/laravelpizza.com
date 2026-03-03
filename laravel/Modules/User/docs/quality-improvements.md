@@ -1,6 +1,6 @@
 # Quality Improvements Summary - PHPStan, PHPMD, PHP Insights
 
-## Data: [DATE]
+## 
 
 ## Riepilogo Risultati
 

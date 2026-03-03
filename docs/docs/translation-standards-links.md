@@ -41,7 +41,7 @@
 - [Best Practices Filament](filament_best_practices.md)
 - [PHPStan Fixes](phpstan_fixes.md)
 
-*Ultimo aggiornamento: gennaio 2025*
+*
 # Collegamenti alla Documentazione sugli Standard di Traduzione
 
 ## Problemi Identificati e Correzioni in Corso

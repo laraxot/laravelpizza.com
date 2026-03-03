@@ -1,6 +1,6 @@
 # Analisi Genesis Starter Kit - TALL Stack con Folio + Volt
 
-## Data: [DATE]
+## 
 
 ## Panoramica
 

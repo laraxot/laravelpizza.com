@@ -62,7 +62,7 @@ protected function getTableEmptyStateActions(): array
 
 2. **`Modules/Xot/docs/filament/widget-method-visibility-rules.md`**
    - Aggiunta sezione "Errore InteractsWithTable"
-   - Aggiornata data ultimo aggiornamento
+   - Aggiornata data 
 
 <<<<<<< .merge_file_2UKLCZ
 3. **`Modules/healthcare_app/docs/question-chart-implementation-guide.md`**

@@ -1,4 +1,4 @@
-# Laravel Passport Configuration (Version 13.4.x)
+# Laravel Passport Configuration (
 
 ## Overview
 This file documents the configuration options for Laravel Passport in the Tenant module.

@@ -395,7 +395,7 @@ test('ListLogActivities has route method', function () {
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025
+**
 **Importanza**: CRITICA
 **Categoria**: Architettura Filament 4
 **Pattern**: DRY + KISS con type safety

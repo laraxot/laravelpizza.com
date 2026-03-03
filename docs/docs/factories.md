@@ -434,4 +434,4 @@ class EventRegistrationTest extends TestCase
 - [EventPerformer Model](../app/Models/EventPerformer.php)
 - [Laravel Factory Documentation](https://laravel.com/docs/11.x/eloquent-factories)
 
-*Ultimo aggiornamento: 2026-02-26*
+*

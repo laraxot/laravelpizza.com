@@ -598,7 +598,7 @@ protected function getOptions(): array
 ---
 
 **Versione:** 1.0  
-**Ultimo Aggiornamento:** Gennaio 2026  
+**
 <<<<<<< .merge_file_HRpsYw
 **Mantenuto da:** healthcare_app Development Team
 =======

@@ -187,4 +187,4 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
 - Vedi anche: [../../../../../../docs/README.md](../../../../../../docs/readme.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-*Ultimo aggiornamento: Gennaio 2025*
+*

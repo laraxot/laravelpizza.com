@@ -198,7 +198,7 @@ abstract class NotifyBaseResource extends XotBaseResource
                 ->color('success'),
                 
             TextColumn::make('updated_at')
-                ->label('Ultimo Aggiornamento')
+                ->label('
                 ->dateTime()
                 ->sortable(),
         ];

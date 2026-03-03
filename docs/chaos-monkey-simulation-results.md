@@ -1,6 +1,6 @@
 # Chaos Monkey Simulation Results
 
-## Simulation Date: 2026-03-02
+## Simulation 
 
 ## Executive Summary
 

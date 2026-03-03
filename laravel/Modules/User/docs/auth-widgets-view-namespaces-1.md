@@ -144,4 +144,4 @@ Per ogni nuovo widget di autenticazione:
 - [Struttura Temi](../../../docs/tecnico/themes/theme-structure.md)
 - [Implementazione Auth Pages](auth-pages-implementation.md)
 
-*Ultimo aggiornamento: Dicembre 2024*
+*

@@ -154,7 +154,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.3
+          php-
 
       - name: Install Dependencies
         run: composer install

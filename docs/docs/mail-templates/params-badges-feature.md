@@ -169,6 +169,6 @@ Badge: [user_name] [reset_link] [expiry_time]
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025  
+**
 **Versione**: 1.0  
 **Compatibilità**: Filament 3.x, Laravel 10+ 

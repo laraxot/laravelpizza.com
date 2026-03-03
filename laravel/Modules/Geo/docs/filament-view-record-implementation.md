@@ -175,7 +175,7 @@ class ViewLocation extends XotBaseViewRecord
 
 ### 5. Informazioni di Sistema
 - **Data Creazione**: Timestamp di creazione
-- **Data Aggiornamento**: Timestamp di ultimo aggiornamento
+- **Data Aggiornamento**: Timestamp di 
 - **Creato da**: Utente che ha creato il record
 - **Aggiornato da**: Utente che ha aggiornato il record
 
@@ -287,7 +287,7 @@ protected function getInfolistSchema()
 - **Motivazione**: Documentazione della risoluzione dell'errore FatalError in ViewLocation
 - **Autore**: AI Assistant
 - **Stato**: Completato e verificato
-- **Ultimo Aggiornamento**: [DATE]
+- **
 
 ---
 

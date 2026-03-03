@@ -164,5 +164,5 @@ Seleziona le colonne appropriate in base al layout corrente.
 - [Enum Standards](enum_standards.md)
 - [Filament Best Practices](filament-widget-best-practices.md)
 
-## Ultimo Aggiornamento
+## 
 [DATE] - Documentazione TableLayoutEnum nella root docs

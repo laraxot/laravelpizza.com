@@ -167,5 +167,5 @@ expect($profileA->id)->toBe($profileB->id);
 - [Query Safety Principle](../../../docs/operational-rules/query-safety-principle.md)
 
 **Versione**: 1.0  
-**Ultimo aggiornamento**: [DATE]  
+**
 **Status**: ✅ Completato

@@ -1,6 +1,6 @@
 # Analisi Completa TableLayoutEnum
 
-## Data: [DATE]
+## 
 
 ## Panoramica
 
@@ -335,7 +335,7 @@ class TableLayoutEnumTest extends TestCase
 
 # Analisi Completa TableLayoutEnum
 
-## Data: [DATE]
+## 
 
 ## Panoramica
 

@@ -221,4 +221,4 @@ Errore: Proprietà mancanti nel template
 - [Page Model](../app/Models/Page.php)
 - [Theme Components](../../../Themes/One/resources/views/components/blocks/)
 
-*Ultimo aggiornamento: gennaio 2025*
+*

@@ -2,7 +2,7 @@
 
 ## Overview
 - **Completamento Modulo**: 85%
-- **Ultimo Aggiornamento**: 2024-04-01
+- **
 - **PHPStan Level**: 7 (Target)
 - **Coverage Target**: 95%
 
@@ -74,7 +74,7 @@ gantt
 
 ## Overview
 - **Completamento Modulo**: 85%
-- **Ultimo Aggiornamento**: 2024-04-01
+- **
 - **PHPStan Level**: 7 (Target)
 - **Coverage Target**: 95%
 

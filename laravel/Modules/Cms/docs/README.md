@@ -52,7 +52,7 @@ Modules/Cms/
 - Filosofia: "Non avrai altro path all'infuori del relativo"
 
 ---
-**Ultimo aggiornamento**: Gennaio 2025
+**
 # 🗂️ CMS Module - Content Management System
 
 ## 📋 Quick Reference

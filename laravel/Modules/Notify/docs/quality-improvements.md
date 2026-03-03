@@ -168,4 +168,4 @@ Tutti i pattern di correzione sono documentati in:
 - [Migration Fixes Summary](./migration-fixes-summary.md)
 - [Index](./index.md)
 
-*Ultimo aggiornamento: 2025-01-06*
+*

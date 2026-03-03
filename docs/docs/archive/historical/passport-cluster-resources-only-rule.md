@@ -104,6 +104,6 @@ find Modules/User/app/Filament/Clusters/Passport/Resources -name "*Resource.php"
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0.0
 **Status**: ✅ Regola Critica OBBLIGATORIA

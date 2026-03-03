@@ -350,6 +350,6 @@ For issues and questions:
 
 ---
 
-**Last Updated**: [DATE]
+**
 **Version**: 1.0.0
 **Maintainer**: Laravel Pizza Team

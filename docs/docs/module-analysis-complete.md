@@ -246,7 +246,7 @@ Il modulo Xot è la base fondamentale del sistema <nome progetto>, fornendo clas
 
 ---
 
-**Ultimo aggiornamento**: Dicembre 2024
+**
 **Versione**: 1.0
 **Stato**: In Progress
 **Responsabile**: Team Sviluppo <nome progetto>

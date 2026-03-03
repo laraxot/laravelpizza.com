@@ -153,6 +153,6 @@ public function withCustomProperties(array $attributes): static
 
 ---
 
-*Last Updated: November 15, 2025*
+*
 *PHPStan Version: Latest*
 *PHPMD Version: Latest*

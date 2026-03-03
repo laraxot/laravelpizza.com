@@ -163,7 +163,7 @@ Testo e spiegazioni...
 
 ---
 
-**Ultimo aggiornamento**: YYYY-MM-DD
+**
 **Autore**: Nome
 **Status**: ✅ / ⚠️ / 🔄
 ```
@@ -358,7 +358,7 @@ echo "✅ Struttura creata per $MODULE"
 - [ ] Naming lowercase-with-dashes
 - [ ] Link relativi (no assoluti)
 - [ ] Esempi di codice presenti
-- [ ] Data ultimo aggiornamento
+- [ ] Data 
 - [ ] Status indicator (✅⚠️🔄)
 
 ### Per Ogni File
@@ -565,7 +565,7 @@ Per migliorare questa guida:
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0
 **Status**: ✅ Active
 **Maintainer**: Team Laraxot

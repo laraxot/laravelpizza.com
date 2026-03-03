@@ -1,6 +1,6 @@
 # Censimento File con Marker
 
-> **Ultimo aggiornamento**: Novembre 2025
+> **
 > **Scope**: Repository `docs/` → 63 file (documentazione storica)
   - `bashscripts/merge_conflicts/` → 9 file (backup datati)
   - `bashscripts/altro` → 5 file (conflicts, git-management, pdf, ecc.)

@@ -159,6 +159,6 @@ cd laravel
 
 Questo documento deve essere aggiornato ogni volta che vengono rilevati e corretti nuovi errori PHPStan level 9+.
 
-**Data Ultimo Aggiornamento**: [DATE]
+**Data 
 **PHPStan Version**: 1.12.x
 **Laravel Version**: 12.21.0

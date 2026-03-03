@@ -232,6 +232,6 @@ return [
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 2.2
 **Autore**: AI Assistant

@@ -29,4 +29,4 @@ Creare un ecosistema UI "Headless-first" che permetta di cambiare radicalmente i
 - [ ] Performance Lighthouse > 90 su pagine UI intensive.
 
 ---
-**Ultimo aggiornamento**: Febbraio 2026
+**

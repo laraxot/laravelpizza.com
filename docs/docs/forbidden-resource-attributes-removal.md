@@ -171,6 +171,6 @@ return [
 
 **Status**: ✅ **VERIFICA COMPLETATA**
 
-**Ultimo aggiornamento**: [DATE]
+**
 
 **Report Completo**: Vedi `forbidden-resource-attributes-verification-[DATE].md`

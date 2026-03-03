@@ -1,6 +1,6 @@
 # PHPStan - Guida Completa Consolidata
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Principi**: DRY + KISS
 **Status**: ✅ CONSOLIDATO
 

@@ -269,7 +269,7 @@ php artisan lang:debug [--log-missing] [--log-performance]
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025
+**
 **Versione**: 2.0.0
 **Autore**: Team Laraxot
 **Mantenuto da**: Community Laraxot

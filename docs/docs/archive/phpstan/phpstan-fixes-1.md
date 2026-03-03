@@ -107,4 +107,4 @@
 - [Array Types Fixes](./phpstan-array-types-fixes.md)
 - [PHPStan Level 10 Guidelines](./phpstan-level10-guidelines.md)
 
-*Ultimo aggiornamento: 6 Gennaio 2025*
+*

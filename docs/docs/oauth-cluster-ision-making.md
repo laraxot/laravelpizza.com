@@ -180,6 +180,6 @@ Se in futuro serve Settings page:
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0.0
 **Status**: Decisione consolidata - da implementare

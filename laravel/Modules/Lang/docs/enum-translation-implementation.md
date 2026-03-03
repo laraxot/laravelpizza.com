@@ -214,5 +214,5 @@ return [
 - [TableLayoutEnum Guide](../laravel/modules/ui/docs/table-layout-enum-complete-guide.md)
 - [Translation Management](translation-management.md)
 
-## Ultimo Aggiornamento
+## 
 [DATE] - Implementazione completa regola critica enum translation pattern 

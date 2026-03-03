@@ -196,7 +196,7 @@ php artisan lang:check
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-06
+**
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato
 # Risoluzione Conflitti Git - 6 Gennaio 2025
@@ -397,6 +397,6 @@ php artisan lang:check
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-06
+**
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato

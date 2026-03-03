@@ -118,4 +118,4 @@ function dddx(mixed $params): string
 - La documentazione viene aggiornata costantemente durante l'analisi
 - Le regole e best practices sono in `.cursor/rules/` e `.windsurf/rules/`
 
-*Ultimo aggiornamento: 2025-01-22*
+*

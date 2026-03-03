@@ -1,6 +1,6 @@
 # Fix PHPStan Modelli - Generics e Tipizzazione Completa
 
-## Data: [DATE]
+## 
 
 ## Problema Identificato
 

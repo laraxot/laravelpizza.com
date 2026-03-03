@@ -117,5 +117,5 @@ $result = app(CreateEventAction::class)->execute($data);
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Status**: ✅ Corretto per conformità Laraxot

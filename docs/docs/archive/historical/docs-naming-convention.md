@@ -1,6 +1,6 @@
 # Convenzioni di Naming per Documentazione
 
-## Data: [DATE]
+## 
 
 ## REGOLA CRITICA: SEMPRE MINUSCOLO IN DOCS
 

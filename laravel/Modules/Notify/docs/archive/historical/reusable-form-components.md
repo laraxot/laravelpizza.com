@@ -165,5 +165,5 @@ These components are used in `SendRecordsNotificationBulkAction` to replace the 
 - [Enums Documentation](../enums/)
 - [Filament Extension Rules](../filament_extension_rules.md)
 
-## Last Updated
+## 
 December 19, 2025

@@ -210,5 +210,5 @@ public function authenticate()
 - ✅ **Sicurezza**: Redirect controllati
 - ✅ **Manutenibilità**: Codice documentato
 
-## Ultimo aggiornamento
+## 
 2025-01-06 - Implementazione redirect intelligente basato sui ruoli utente

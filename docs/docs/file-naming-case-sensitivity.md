@@ -341,6 +341,6 @@ Questa non è solo una regola tecnica, è una **filosofia di sviluppo**:
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Status**: ✅ Cleanup completato, enforcement attivo
 **Revisione**: Trimestrale (ogni 3 mesi)

@@ -1,6 +1,6 @@
 # Log delle Correzioni Filament
 
-## Data: [DATE]
+## 
 
 ### **REGOLA CRITICA IDENTIFICATA: Trait Translatable**
 

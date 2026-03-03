@@ -345,7 +345,7 @@ class MyPage extends XotBasePage
 
 ---
 
-**Ultimo aggiornamento**: 27 Ottobre 2025  
+**
 **Severità**: Alta  
 **Tipo Errore**: Import classe inesistente + Violazione regola XotBase  
 **Files Affetti**: 3 Pages + 1 Cluster

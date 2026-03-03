@@ -87,4 +87,4 @@ protected $fillable = [...];
 
 **Status**: ✅ **COMPLETATO**
 
-**Ultimo aggiornamento**: [DATE]
+**

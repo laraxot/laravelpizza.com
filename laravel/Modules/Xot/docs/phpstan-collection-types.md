@@ -218,5 +218,5 @@ public function getThemeColors(): array
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025
+**
 **Errori risolti**: ExportXls*, Collection chain inference, Model property access, Array type mismatches

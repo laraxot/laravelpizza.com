@@ -89,4 +89,4 @@ Il widget fa parte del piano di migrazione a Filament 4.x documentato in:
 - [Documentazione Widget Disabilitati](./widgets/disabled_widgets.md)
 - [Piano Migrazione Filament](../../../../docs/filament_4x_migration_plan.md)
 
-*Ultimo aggiornamento: 2025-01-27*
+*

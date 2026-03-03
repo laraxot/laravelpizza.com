@@ -144,6 +144,6 @@ Prima di ogni commit, verificare:
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Versione**: 1.0.0
 **Status**: ✅ Regola Critica OBBLIGATORIA

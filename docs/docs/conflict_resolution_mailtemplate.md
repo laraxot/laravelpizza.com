@@ -71,4 +71,4 @@ Verificare che:
 - [Translation Standards](translation_standards.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 
-*Ultimo aggiornamento: giugno 2025*
+*

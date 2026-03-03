@@ -216,6 +216,6 @@ Before committing any SVG icon, verify:
 ---
 
 *
-*SVG Standards Version: 2.0*
+*SVG Standards 
 *Based on Heroicons Outline Style*
 

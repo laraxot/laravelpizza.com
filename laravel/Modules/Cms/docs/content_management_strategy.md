@@ -98,5 +98,5 @@ Questa strategia integra:
 
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025  
+**
 **Revisione**: Conforme regole Laraxot olistica e filosofia zen del contenuto sanitario 

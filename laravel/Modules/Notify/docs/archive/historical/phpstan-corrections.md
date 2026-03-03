@@ -2,7 +2,7 @@
 
 ## Status: ✅ COMPLETATO (0 errori)
 
-## Data: [DATE]
+## 
 
 ## Progresso
 ```

@@ -259,5 +259,5 @@ $client->notify($notification); // via() determina canali da routeNotificationFo
 
 ---
 
-**Ultimo aggiornamento**: 19 Dicembre 2025  
+**
 **Filosofia**: *"Delegation over duplication, bridge over God Object, simplicity over complexity"*

@@ -163,4 +163,4 @@ return $instance;
 
 **Status**: 🧘 **IN ANALISI**
 
-**Ultimo aggiornamento**: 2026-01-09
+**

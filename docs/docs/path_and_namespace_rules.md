@@ -194,4 +194,4 @@ namespace Modules\Notify\App\Console\Commands;
 
 ---
 
-*Ultimo aggiornamento: 2025-05-12*
+*

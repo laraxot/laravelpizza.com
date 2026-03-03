@@ -1,6 +1,6 @@
 # Best Practices per Proprietà Modelli Eloquent - Modulo Xot
 
-## ✅ STATO: property_exists() ELIMINATO (Data: [DATE])
+## ✅ STATO: property_exists() ELIMINATO (
 
 **Nel modulo Xot, `property_exists()` è stato completamente eliminato dal codice eseguibile.**
 

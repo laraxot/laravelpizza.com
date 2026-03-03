@@ -231,7 +231,7 @@ Il modulo UI è il sistema di componenti e interfacce utente condivisi di <nome 
 
 ---
 
-**Ultimo aggiornamento**: Dicembre 2024
+**
 **Versione**: 1.0
 **Stato**: In Progress
 **Responsabile**: Team Sviluppo

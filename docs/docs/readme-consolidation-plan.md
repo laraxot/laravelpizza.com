@@ -62,4 +62,4 @@
 
 **Status**: 🧘 **IN PIANIFICAZIONE**
 
-**Ultimo aggiornamento**: [DATE]
+**

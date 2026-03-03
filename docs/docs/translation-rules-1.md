@@ -144,4 +144,4 @@ return [
 - [Convenzioni di documentazione](/laravel/modules/xot/docs/documentation_conventions.md)
 - [Documentazione principale sulle traduzioni](/docs/translation_rules.md)
 
-*Ultimo aggiornamento: 3 Giugno 2025*
+*

@@ -227,6 +227,6 @@ Questo pattern può essere applicato a:
 
 ---
 
-*Ultimo aggiornamento: [DATE]*  
+*
 *Autore: Sistema Laraxot*  
 *Versione: 1.0*

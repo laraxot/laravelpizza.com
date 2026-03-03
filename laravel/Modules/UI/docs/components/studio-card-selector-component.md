@@ -466,19 +466,19 @@ class StudioCardSelectorTest extends DuskTestCase
 
 ## 🚀 **Roadmap & Enhancement**
 
-### Version 1.0 (Current)
+### 
 - ✅ Basic card selection
 - ✅ Responsive layout
 - ✅ Accessibility support
 - ✅ Multi-layout variants
 
-### Version 1.1 (Future)
+### 
 - 🔄 Map integration
 - 🔄 Advanced filters (distance, rating)
 - 🔄 Infinite scroll for large datasets
 - 🔄 Geolocation-based sorting
 
-### Version 1.2 (Future)
+### 
 - 🔄 Virtual scrolling for performance
 - 🔄 Advanced animations
 - 🔄 Integration with booking system

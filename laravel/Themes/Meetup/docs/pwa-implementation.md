@@ -1,6 +1,6 @@
 # PWA (Progressive Web App) Implementation
 
-## Date: [DATE]
+## 
 
 ## Implemented Features
 

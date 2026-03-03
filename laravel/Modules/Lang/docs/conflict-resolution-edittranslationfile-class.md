@@ -89,7 +89,7 @@ Il file `Modules/Lang/app/Filament/Resources/TranslationFileResource/Pages/EditT
 - [conflict-resolution-edit-translation-file.md](conflict-resolution-edit-translation-file.md)
 - [Modules/Lang/docs/](../docs/)
 
-*Ultimo aggiornamento: 29 luglio 2025*
+*
 # Risoluzione Conflitto EditTranslationFile.php (Classe)
 
 ## Problema Identificato
@@ -181,4 +181,4 @@ Il file `Modules/Lang/app/Filament/Resources/TranslationFileResource/Pages/EditT
 - [conflict-resolution-edit-translation-file.md](conflict-resolution-edit-translation-file.md)
 - [Modules/Lang/docs/](../docs/)
 
-*Ultimo aggiornamento: 29 luglio 2025*
+*

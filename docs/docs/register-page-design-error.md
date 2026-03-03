@@ -1,6 +1,6 @@
 # Errore Design Pagina Register - Analisi e Correzione
 
-## Data: [DATE]
+## 
 
 ## 🔴 Problema Identificato
 

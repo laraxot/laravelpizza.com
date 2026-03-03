@@ -123,4 +123,4 @@ return $result;
 
 ---
 
-**Ultimo aggiornamento**: [DATE] - Sessione in corso
+**

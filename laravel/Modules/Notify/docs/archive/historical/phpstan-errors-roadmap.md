@@ -162,4 +162,4 @@ return $instance;
 
 **Status**: 🧘 **IN ANALISI**
 
-**Ultimo aggiornamento**: [DATE]
+**

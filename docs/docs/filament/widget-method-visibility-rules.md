@@ -1,7 +1,7 @@
 # Regole Visibilità Metodi Widget - HasXotTable
 
 **Data Creazione**: 2025-01-27  
-**Ultimo Aggiornamento**: 2026-01-27  
+**
 **Status**: ✅ Critico
 
 ## Regola Fondamentale

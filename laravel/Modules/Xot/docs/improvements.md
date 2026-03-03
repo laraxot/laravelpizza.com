@@ -138,4 +138,4 @@ public function getUpcomingEvents(): Collection
 
 **Status**: ✅ **ANALISI COMPLETATA**
 
-**Ultimo aggiornamento**: [DATE]
+**

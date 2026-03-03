@@ -2,7 +2,7 @@
 
 **Principio Fondamentale**: Mai estendere classi Filament direttamente - sempre usare classi XotBase
 
-**Ultimo aggiornamento**: [DATE]
+**
 
 ---
 

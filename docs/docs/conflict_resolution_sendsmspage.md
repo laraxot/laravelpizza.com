@@ -67,4 +67,4 @@ Verificare che:
 - [MailTemplate Integration](mail_templates_structure.md)
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 
-*Ultimo aggiornamento: giugno 2025*
+*

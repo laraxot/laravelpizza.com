@@ -147,7 +147,7 @@ La gestione delle traduzioni deve essere:
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**
 **Autore**: Sistema di gestione traduzioni Laraxot
 **Versione**: 1.0
 **Stato**: Implementato e testato

@@ -176,7 +176,7 @@ grep -A 10 -B 2 "label.*City\|label.*Stadt" laravel/Modules/*/lang/
 ### Template di Riferimento
 Utilizzare la documentazione centrale [`translation-field-structure-complete.md`](../../../docs/translation-field-structure-complete.md) come template per tutti i nuovi campi di traduzione.
 
-## Ultimo Aggiornamento
+## 
 2025-08-08 - Refactor completo campi "Città" modulo User ✅ COMPLETATO
 
 *Intervento eseguito seguendo rigorosamente i principi DRY + KISS e gli standard Laraxot <nome progetto>*

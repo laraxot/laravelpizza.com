@@ -1,6 +1,6 @@
 # Modulo User
 
-Data: [DATE] 19:09:56
+
 ## Informazioni generali
 - **Namespace principale**: Modules\\User
 Modules\\User\\Database\\Factories

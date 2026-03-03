@@ -168,7 +168,7 @@ rules:
 - SEMPRE testare le traduzioni prima del commit
 # REGOLA CRITICA: MAI usare ->label()
 
-## Data: [DATE]
+## 
 
 ## ❌ ERRORE CRITICO - NON FARE MAI QUESTO
 

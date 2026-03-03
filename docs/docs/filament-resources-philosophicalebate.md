@@ -1,6 +1,6 @@
 # Filament Resources: Furious Philosophical Debate
 
-## Data: [DATE]
+## 
 
 ## Il Dibattito Feroce
 

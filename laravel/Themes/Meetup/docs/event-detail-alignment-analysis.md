@@ -268,6 +268,6 @@ public function organizer(): BelongsTo
 
 ---
 
-**Ultimo aggiornamento**: 2026-02-18  
+**
 **Prossima revisione**: Dopo Fase 1 completata  
 **Responsabile**: Cascade AI + Development Team

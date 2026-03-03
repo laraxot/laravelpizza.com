@@ -30,7 +30,7 @@ trait CreatesApplication
         // and all module connections (activity, user, etc.) use laravelpizza_data_test
         $envTesting = $basePath.'/.env.testing';
         if (file_exists($envTesting)) {
-            $dotenv = \Dotenv\Dotenv::createImmutable($basePath, '.env.testing', true);
+            $dotenv = \Dotenv\Dotenv::createMutable($basePath, '.env.testing');
             $dotenv->safeLoad();
         }
 

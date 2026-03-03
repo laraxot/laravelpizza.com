@@ -525,6 +525,6 @@ WHERE active = true;
 
 ---
 
-**Ultimo aggiornamento**: [DATE]  
+**
 **Module**: Xot  
 **Versione**: 1.0.0

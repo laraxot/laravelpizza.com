@@ -273,7 +273,7 @@ unset($translations['existing_key']); // MAI!
 - [translations-best-practices.md](./translations-best-practices.md)
 - [namespace-conventions.md](./namespace-conventions.md)
 
-## Ultimo Aggiornamento
+## 
 
 **Versione**: 2.0
 **Compatibilità**: Laraxot <nome progetto>, PHP 8.2+, Laravel 11+

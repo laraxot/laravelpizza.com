@@ -263,4 +263,4 @@ Per problemi o domande:
 
 ---
 
-**Ultimo aggiornamento**: [DATE]
+**

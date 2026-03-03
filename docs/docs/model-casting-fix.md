@@ -195,4 +195,4 @@ protected function casts(): array
 - [ ] **Notify**: Verificare altri modelli
 - [ ] **Altri moduli**: Ricerca globale
 
-## Ultimo aggiornamento
+## 

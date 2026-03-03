@@ -22,4 +22,4 @@
 - [docs root](../../../../docs/actions.md)
 - [docs Lang](../../lang/docs/filament-label.md)
 
-Ultimo aggiornamento: maggio 2025.
+

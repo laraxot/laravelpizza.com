@@ -261,5 +261,5 @@ protected function setUp(): void
 - [MySQL Testing Only Rule](../../../../.cursor/rules/mysql-testing-only.mdc)
 
 **Versione**: 1.0  
-**Ultimo aggiornamento**: 2026-01-21  
+**
 **Status**: REGOLA ASSOLUTA - NESSUNA ECCEZIONE

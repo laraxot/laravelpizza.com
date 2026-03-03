@@ -1,6 +1,6 @@
 # Media Module Documentation
 
-**Last Update**: Feb 2026
+**
 **Status**: Active Development
 
 ## Quick Start

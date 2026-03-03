@@ -322,6 +322,6 @@ Vedi: [Actions Calling Actions Pattern](./actions-calling-actions-pattern.md)
 
 ---
 
-**Ultimo aggiornamento**: [DATE]  
+**
 **PHPStan Level**: ✅ 10  
 **Quality**: ✅ PHPMD, PHPInsights compliant

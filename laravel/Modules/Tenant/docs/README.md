@@ -48,7 +48,7 @@ $tenant = app(TenantService::class)->getCurrent();
 
 ---
 
-**🔄 Ultimo aggiornamento**: 31 Gennaio 2026
+**🔄 
 **📦 Versione**: 1.2.0
 **✅ PHPStan level 10**: Compliance verificata (0 errori)
 

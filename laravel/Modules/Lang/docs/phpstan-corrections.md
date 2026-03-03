@@ -3,7 +3,7 @@
 ## Panoramica
 Questo documento registra le correzioni PHPStan implementate nel modulo Lang.
 
-**Ultimo aggiornamento**: 2025-01-27
+**
 **Status PHPStan Level 10**: ✅ **PASSED** - 0 errori
 
 ## Correzioni Implementate

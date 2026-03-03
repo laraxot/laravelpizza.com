@@ -139,4 +139,4 @@ php artisan config:cache
 - [xra.php](/laravel/config/localhost/xra.php)
 - [Documentazione Root](/docs/env-config-loading-issue.md)
 
-*Ultimo aggiornamento: 2025-01-06*
+*

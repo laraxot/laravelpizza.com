@@ -111,7 +111,7 @@ class SimpleCalendarWidget extends \Filament\Widgets\Widget
 - Widget base di Filament 4.x
 - Sistema di autenticazione e autorizzazione
 
-*Ultimo aggiornamento: [DATE]*
+*
 # Rapporto Aggiornamento Filament 4.x - Modulo UI
 
 **Status**: ✅ COMPLETATO
@@ -225,4 +225,4 @@ class SimpleCalendarWidget extends \Filament\Widgets\Widget
 - Widget base di Filament 4.x
 - Sistema di autenticazione e autorizzazione
 
-*Ultimo aggiornamento: [DATE]*
+*

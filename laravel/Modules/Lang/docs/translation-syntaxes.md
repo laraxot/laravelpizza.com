@@ -158,7 +158,7 @@ return [
 - [Notify Module Documentation](../../laravel/Modules/Notify/project_docs/)
 - [UI Module Documentation](../../laravel/Modules/UI/project_docs/)
 
-## Ultimo Aggiornamento
+## 
 [DATE] - Correzione completa errori sintassi file traduzione ✅ COMPLETATO
 # Correzione Errori di Sintassi nei File di Traduzione
 
@@ -320,5 +320,5 @@ return [
 - [Notify Module Documentation](../../laravel/Modules/Notify/docs/)
 - [UI Module Documentation](../../laravel/Modules/UI/docs/)
 
-## Ultimo Aggiornamento
+## 
 [DATE] - Correzione completa errori sintassi file traduzione ✅ COMPLETATO

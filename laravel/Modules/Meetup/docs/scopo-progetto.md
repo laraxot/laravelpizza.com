@@ -1,6 +1,6 @@
 # Scopo del Progetto - Laravel Pizza Meetups
 
-## Data: [DATE]
+## 
 
 ## 🎯 Scopo Principale
 

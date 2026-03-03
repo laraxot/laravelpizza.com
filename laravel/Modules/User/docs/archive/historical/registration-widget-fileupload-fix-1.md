@@ -219,4 +219,4 @@ Per evitare simili problemi in futuro:
 - [Correzione XotBaseResource: Modules/Xot/docs/fileupload-components.md](../../xot/docs/fileupload-components.md)
 - [Registration Widget base: registration-widget.md](./registration-widget.md)
 
-*Ultimo aggiornamento: 2025-01-03*
+*

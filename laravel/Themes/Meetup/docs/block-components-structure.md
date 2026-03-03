@@ -487,5 +487,5 @@ npm run dev
 ---
 
 **version:** 1.0
-**last updated:** [DATE]
+**
 **theme:** Meetup

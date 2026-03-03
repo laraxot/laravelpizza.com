@@ -181,6 +181,6 @@ Se in futuro serve Settings page:
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22
+**
 **Versione**: 1.0.0
 **Status**: Decisione consolidata - da implementare

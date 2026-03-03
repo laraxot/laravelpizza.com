@@ -207,6 +207,6 @@ php artisan tinker --execute="echo route('livewire.update');"
 
 ---
 
-**Ultimo aggiornamento**: 11 Novembre 2025
+**
 **Modulo**: Xot
 **Categoria**: Troubleshooting

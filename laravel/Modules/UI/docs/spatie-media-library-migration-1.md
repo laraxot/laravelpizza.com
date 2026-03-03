@@ -524,6 +524,6 @@ public function downloadDocument(Media $media): Response
 
 ---
 
-*Ultimo aggiornamento: Dicembre 2024*
+*
 *Versione: 1.0*
 *Compatibilità: Laraxot <nome progetto>, Spatie Media Library 11.x, Filament 3.x*

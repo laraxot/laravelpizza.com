@@ -91,5 +91,5 @@ Prima di ogni commit, verificare:
 - [Best Practices Filament](filament-widget-best-practices.md)
 - [Enum Standards](enum_standards.md)
 
-## Ultimo Aggiornamento
+## 
 [DATE] - Regola critica per evitare ->label()
