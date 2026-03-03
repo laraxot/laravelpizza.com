@@ -142,14 +142,25 @@ test('xot base resource get navigation badge returns double dash on exception', 
 });
 
 test('xot base resource trans returns string for known key', function () {
-    // Should return a string (translation or key itself)
-    $result = CacheResource::trans('navigation.label', false);
-    expect($result)->toBeString();
+    app()->instance(\Modules\Xot\Actions\GetTransKeyAction::class, new class {
+        public function execute(string $class = ''): string
+        {
+            return 'xot::cache';
+        }
+    });
+    $result = CacheResource::trans('label', false);
+    expect($result)->toBeString()->toBe('Cache');
 });
 
 test('xot base resource trans with array translation returns first element', function () {
-    $result = CacheResource::trans('fields', false);
-    expect($result)->toBeString();
+    app()->instance(\Modules\Xot\Actions\GetTransKeyAction::class, new class {
+        public function execute(string $class = ''): string
+        {
+            return 'xot::cache';
+        }
+    });
+    $result = CacheResource::trans('actions.create', false);
+    expect($result)->toBeString()->toBe('Crea Cache');
 });
 
 test('xot base resource trans exception when not found and flag true', function () {
@@ -190,22 +201,24 @@ test('xot base resource get relations via base with actual files', function () {
 });
 
 test('xot base resource get wizard submit action', function () {
-    $viewNamespace = 'pub_theme';
-    \Illuminate\Support\Facades\View::addNamespace($viewNamespace, __DIR__);
-    $viewDir = __DIR__ . '/filament/wizard';
-    if (!is_dir($viewDir)) {
-        mkdir($viewDir, 0777, true);
-    }
-    $viewPath = $viewDir . '/submit-button.blade.php';
-    file_put_contents($viewPath, '<button>Submit-Test</button>');
+    // Use temp dir and view() helper (not View facade) - same pattern as XotBaseResourceCoverageTest
+    $tmpViewDir = sys_get_temp_dir() . '/xot-resource-test-' . uniqid('', true);
+    $viewPath = $tmpViewDir . '/filament/wizard';
+    mkdir($viewPath, 0777, true);
+    file_put_contents($viewPath . '/submit-button.blade.php', '<button>Submit-Test</button>');
+
+    view()->addNamespace('pub_theme', $tmpViewDir);
 
     try {
         $html = CacheResource::getWizardSubmitAction();
         expect($html)->toBeInstanceOf(\Illuminate\Contracts\Support\Htmlable::class);
-        expect((string)$html)->toContain('Submit-Test');
+        expect((string) $html)->toContain('Submit-Test');
     } finally {
-        if (file_exists($viewPath)) {
-            unlink($viewPath);
+        if (is_dir($tmpViewDir)) {
+            array_map('unlink', glob($tmpViewDir . '/filament/wizard/*'));
+            rmdir($tmpViewDir . '/filament/wizard');
+            rmdir($tmpViewDir . '/filament');
+            rmdir($tmpViewDir);
         }
     }
 });

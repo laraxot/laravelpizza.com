@@ -27,5 +27,8 @@ yarn-error.log
 .Windsurf/
 .claude/
 .gemini/
-CLAUDE.md
-IFLOW.md
+#CLAUDE.md
+#IFLOW.md
+
+coverage_report_xotbase/
+coverage-xot/

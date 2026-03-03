@@ -19,6 +19,9 @@ class SaveTransAction
      */
     public function execute(string $key, int|string|array|Htmlable|null $data): void
     {
+        if (str_contains($key, "\0")) {
+            return;
+        }
         $cont = [];
 
         $filename = app(GetTransPathAction::class)->execute($key);

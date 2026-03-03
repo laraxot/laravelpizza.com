@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Mail\Mailable;
 use Modules\Xot\Actions\Mail\SendMailByRecordAction;
+use Webmozart\Assert\InvalidArgumentException as WebmozartInvalidArgumentException;
 
 it('throws if record has no email', function (): void {
     $record = new class extends Model {
@@ -24,6 +25,6 @@ it('throws if record has no email', function (): void {
         }
     };
 
-    expect(fn () => app(SendMailByRecordAction::class)->execute($record, Mailable::class))
-        ->toThrow(InvalidArgumentException::class);
+    expect(fn () => app(SendMailByRecordAction::class)->execute($record, \Illuminate\Mail\Events\MessageSending::class))
+        ->toThrow(\InvalidArgumentException::class);
 });

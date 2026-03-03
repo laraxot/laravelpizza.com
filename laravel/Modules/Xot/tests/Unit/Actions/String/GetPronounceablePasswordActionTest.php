@@ -38,3 +38,8 @@ it('contains uppercase digit and special char', function (): void {
         ->and($hasDigit)->toBeTrue()
         ->and($hasSpecial)->toBeTrue();
 });
+
+it('covers fallback branch for very short requested length', function (): void {
+    $result = $this->action->execute(0);
+    expect($result)->toBeString()->not->toBeEmpty();
+});

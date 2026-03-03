@@ -48,6 +48,13 @@ it('casts objects and empty string edge cases', function (): void {
         ->and($this->action->execute('   ', true))->toBeTrue();
 });
 
+it('returns default for unsupported value types', function (): void {
+    $resource = fopen('php://memory', 'rb');
+    expect(is_resource($resource))->toBeTrue()
+        ->and($this->action->execute($resource, true))->toBeTrue();
+    fclose($resource);
+});
+
 it('executeWithCustomValues uses custom true/false', function (): void {
     $r = $this->action->executeWithCustomValues('custom_yes', ['custom_yes'], ['custom_no']);
     expect($r)->toBeTrue();
