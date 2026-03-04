@@ -19,7 +19,8 @@
     </testsuites>
     <source>
         <include>
-            <file>app/Application.php</file>
+            <directory>app</directory>
+            <directory>Modules/*/app</directory>
         </include>
         <exclude>
             <directory>app/Resources</directory>
