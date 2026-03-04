@@ -107,5 +107,9 @@ class Profile extends BaseProfile
         static::saving(static function (self $model): void {
             $model->offsetUnset('uuid');
         });
+
+        static::creating(static function (self $model): void {
+            $model->offsetUnset('uuid');
+        });
     }
 }
