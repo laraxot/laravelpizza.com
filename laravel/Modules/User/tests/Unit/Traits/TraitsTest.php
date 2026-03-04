@@ -12,13 +12,13 @@ test('PasswordValidationRules trait can be used', function () {
     expect(trait_exists(PasswordValidationRules::class))->toBeTrue();
 
     try {
-        $testClass = new class {
+        $testClass = new class
+        {
             use PasswordValidationRules;
         };
-        // Check if the trait methods exist
         expect(method_exists($testClass, 'passwordRules'))->toBeTrue();
     } catch (\Exception $e) {
-        expect(true)->toBeTrue(); // Pass if trait exists
+        expect(true)->toBeTrue();
     }
 });
 
