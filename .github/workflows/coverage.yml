@@ -15,32 +15,77 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        php-versions: ['8.3'] # Updated to match Laraxot PHP 8.3 requirement
+        php-versions: ['8.3']
 
     name: P${{ matrix.php-versions }} - ${{ matrix.operating-system}}
 
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: laravelpizza_data_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Install PHP versions with PCOV
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
-          coverage: pcov # PCOV is highly recommended for fast coverage generation with Pest
+          extensions: mbstring, intl, pdo_mysql, pcov
+          coverage: pcov
 
-      - name: Check Directories
-        run: pwd && ls -la
+      - name: Create test databases
+        run: |
+          mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_data_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+          mysql -h 127.0.0.1 -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS laravelpizza_user_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 
       - name: Install Dependencies
         working-directory: ./laravel
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer update -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Setup Environment
+        working-directory: ./laravel
+        run: |
+          cp .env.testing .env
+          php artisan key:generate --force
+
+      - name: Run Migrations (NEVER migrate:fresh)
+        working-directory: ./laravel
+        env:
+          DB_CONNECTION: mysql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: laravelpizza_data_test
+          DB_USERNAME: root
+          DB_PASSWORD: password
+          DB_DATABASE_USER: laravelpizza_user_test
+          DB_USERNAME_USER: root
+          DB_PASSWORD_USER: password
+        run: php artisan migrate --env=testing --force
 
       - name: Execute tests and generate coverage via PestPHP
         working-directory: ./laravel
         env:
           SESSION_DRIVER: array
-          DB_CONNECTION: testing # ensure testing connection is used
-        run: ./vendor/bin/pest --coverage --coverage-clover ../clover.xml
+          DB_CONNECTION: mysql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_DATABASE: laravelpizza_data_test
+          DB_USERNAME: root
+          DB_PASSWORD: password
+          DB_DATABASE_USER: laravelpizza_user_test
+          DB_USERNAME_USER: root
+          DB_PASSWORD_USER: password
+        run: ./vendor/bin/pest --coverage --coverage-clover coverage.xml
 
       - name: Generate test coverage badge
         uses: timkrase/phpunit-coverage-badge@v1.2.0
@@ -48,4 +93,4 @@ jobs:
           coverage_badge_path: 'badge-coverage.svg'
           push_badge: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          report: clover.xml # The badge action will read the clover.xml generated in the root directory
+          report: laravel/coverage.xml

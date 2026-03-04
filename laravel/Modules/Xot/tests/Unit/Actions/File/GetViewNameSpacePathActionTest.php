@@ -15,18 +15,13 @@ it('gets view namespace path from registered hints correctly', function (): void
     $ns = 'test_ns';
     $path = '/some/view/path';
     
-    $viewFactory = Mockery::mock(\Illuminate\View\Factory::class);
     $finder = Mockery::mock(\Illuminate\View\ViewFinderInterface::class);
-    
-    View::swap($viewFactory);
-    
-    $viewFactory->shouldReceive('getViewFinder')->andReturn($finder);
     $finder->shouldReceive('getHints')->andReturn([$ns => [$path]]);
+
+    View::shouldReceive('getViewFinder')->andReturn($finder);
 
     $action = app(GetViewNameSpacePathAction::class);
     $result = $action->execute($ns);
 
     expect($result)->toBe($path);
-    
-    Mockery::close();
 });

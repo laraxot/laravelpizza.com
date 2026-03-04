@@ -36,7 +36,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: laravel
-        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer update --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Run PHPStan
         working-directory: laravel
@@ -70,7 +70,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: laravel
-        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer update --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Run Pint (check mode)
         working-directory: laravel
@@ -124,7 +124,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: laravel
-        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer update --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Setup Environment
         working-directory: laravel
@@ -181,7 +181,7 @@ jobs:
 
       - name: Install PHP Dependencies (required for vendor CSS)
         working-directory: laravel
-        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer update --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
