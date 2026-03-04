@@ -74,6 +74,12 @@ Il file `config/database.php` deve contenere SOLO la connessione base:
 3. Usare le variabili d'ambiente per la configurazione
 4. Verificare che le connessioni siano caricate correttamente
 
+## 🚨 NO CONNECTION HACKS IN MODELS
+**MAI** inserire logica di switch della connessione basata sull'environment (`app()->environment('testing')`) nel costruttore o nei metodi dei Model.
+- È una pratica pessima ("cagata") che rompe la separazione dei compiti.
+- La connessione deve essere gestita a livello di configurazione o dinamicamente dai Service Provider (es. `TenantServiceProvider`).
+- Se un modello necessita di una connessione specifica (es. `$connection = 'activity'`), questa deve essere definita come proprietà, lasciando che il framework la risolva tramite la configurazione caricata.
+
 ## 🔄 WORKFLOW CORRETTO
 
 ### 1. Configurazione ambiente:
