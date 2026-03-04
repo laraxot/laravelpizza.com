@@ -19,6 +19,23 @@ Estendere `XotBaseTestCase` significa abbracciare un setup unificato che:
 - **No RefreshDatabase**: Il trait `RefreshDatabase` è **ERETICO**. Usiamo `DatabaseTransactions` o migrazioni mirate nel `setUp()` per mantenere la velocità senza sacrificare l'integrità.
 - **Helper Comuni**: Accesso immediato a traduttori, configurazioni Xot e factory di utenti tramite `XotData`.
 
+## 🚨 Regola Assoluta: MAI `migrate:fresh` nei Test
+
+`migrate:fresh` **distrugge TUTTE le tabelle** del database condiviso, causando fallimenti a cascata in tutti i moduli. È **PROIBITO** nei test.
+
+```php
+// 🚫 ERESIA ASSOLUTA - distrugge il DB per tutti
+$this->artisan('migrate:fresh', ['--force' => true]);
+
+// ✅ CORRETTO - solo una volta esternamente, prima di eseguire la suite
+// php artisan migrate --env=testing --force
+```
+
+Se un test chiama `migrate:fresh`, marcalo immediatamente con:
+```php
+$this->markTestSkipped('migrate:fresh è distruttivo per il DB condiviso - eseguire migrazioni esternamente.');
+```
+
 ## ❌ L'Anti-pattern (L'Eresia)
 Evita di estendere direttamente le classi del framework:
 ```php

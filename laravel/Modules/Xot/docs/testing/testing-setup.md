@@ -140,6 +140,23 @@ abstract class TestCase extends BaseTestCase
 
 ## Important Rules
 
+### Never Use `migrate:fresh` in Tests (CRITICAL)
+
+`migrate:fresh` **drops ALL tables** in the target database. In a shared test database (like `laravelpizza_data_test`) this destroys data for ALL modules and causes cascading failures across the entire test suite.
+
+**Rule**: Never call `artisan('migrate:fresh', ...)` inside a test. If a test does this, mark it with `$this->markTestSkipped(...)`.
+
+**To set up test DB**: Run once externally before the suite:
+```bash
+php artisan migrate --env=testing --force
+```
+
+**If the DB is corrupted** (as a one-time emergency fix only):
+```bash
+php artisan migrate:fresh --env=testing --force
+```
+Then never repeat it again in the suite.
+
 ### Never Use RefreshDatabase
 
 The project uses `DatabaseTransactions` instead of `RefreshDatabase` because:

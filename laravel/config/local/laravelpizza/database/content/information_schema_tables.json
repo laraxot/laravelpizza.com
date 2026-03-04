@@ -1,0 +1,13 @@
+[
+    {
+        "table_schema": "laravelpizza_user_test",
+        "model_class": "Modules\\User\\Models\\User",
+        "table_name": "users",
+        "id": 1,
+        "updated_at": "2026-03-04T10:47:11.000000Z",
+        "created_at": "2026-03-04T10:47:11.000000Z",
+        "updated_by": "be9ef1da-2b40-471d-a20f-f20999274fa0",
+        "created_by": "be9ef1da-2b40-471d-a20f-f20999274fa0",
+        "table_rows": 748
+    }
+]
