@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests;
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Xot\Tests\XotBaseTestCase;
 
 /**

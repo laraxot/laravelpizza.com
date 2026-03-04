@@ -19,7 +19,7 @@ class ErrorCommandHandler implements CommandHandlerInterface
     {
         $command = $this->getCurrentCommand();
 
-        if ('error-clear' === $command) {
+        if ($command === 'error-clear') {
             return ArtisanService::errorClear();
         }
 

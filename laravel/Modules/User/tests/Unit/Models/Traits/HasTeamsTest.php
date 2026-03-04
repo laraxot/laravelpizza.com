@@ -173,7 +173,7 @@ describe('HasTeams Trait', function () {
 
 describe('HasTeams Trait Integration', function () {
     it('can be used with User model', function () {
-        $user = new User();
+        $user = new User;
 
         expect(method_exists($user, 'teams'))->toBeTrue();
         expect(method_exists($user, 'belongsToTeam'))->toBeTrue();

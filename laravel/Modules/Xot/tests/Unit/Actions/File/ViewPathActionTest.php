@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\File;
 
-use Modules\Xot\Actions\File\ViewPathAction;
-use Modules\Xot\Actions\File\GetViewNameSpacePathAction;
 use Modules\Xot\Actions\File\FixPathAction;
+use Modules\Xot\Actions\File\GetViewNameSpacePathAction;
+use Modules\Xot\Actions\File\ViewPathAction;
 use Modules\Xot\Tests\TestCase;
-use Mockery;
 
 uses(TestCase::class);
 

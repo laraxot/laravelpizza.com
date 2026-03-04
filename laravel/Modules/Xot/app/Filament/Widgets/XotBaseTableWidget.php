@@ -75,6 +75,6 @@ abstract class XotBaseTableWidget extends FilamentTableWidget
 
         $search = trim($search);
 
-        return '' !== $search ? $search : null;
+        return $search !== '' ? $search : null;
     }
 }

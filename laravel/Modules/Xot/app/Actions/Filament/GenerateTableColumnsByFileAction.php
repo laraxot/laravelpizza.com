@@ -32,7 +32,7 @@ class GenerateTableColumnsByFileAction
     /**
      * Genera colonne per tabelle e form Filament basate su un file di risorsa.
      *
-     * @param File $file Il file della risorsa Filament
+     * @param  File  $file  Il file della risorsa Filament
      */
     public function execute(File $file): void
     {
@@ -111,7 +111,7 @@ class GenerateTableColumnsByFileAction
     /**
      * Mostra informazioni di debug su un file.
      *
-     * @param File $file Il file da analizzare
+     * @param  File  $file  Il file da analizzare
      */
     public function ddFile(File $file): void
     {

@@ -12,11 +12,10 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Modules\Tenant\Services\TenantService;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
-
-use function Safe\json_encode;
-
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
+
+use function Safe\json_encode;
 
 /**
  * Classe per gestire gli elementi di navigazione per i moduli.
@@ -113,7 +112,7 @@ class GetModulesNavigationItems
                      * @var Authenticatable|null $user
                      */
                     $user = Auth::user();
-                    if (null === $user) {
+                    if ($user === null) {
                         return false;
                     }
 

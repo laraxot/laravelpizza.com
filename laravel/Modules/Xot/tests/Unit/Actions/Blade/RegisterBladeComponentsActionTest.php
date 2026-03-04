@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\Blade;
 
+use Illuminate\Support\Facades\Blade;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\File\GetComponentsAction;
 use Modules\Xot\Datas\ComponentFileData;
 use Modules\Xot\Tests\TestCase;
-use Illuminate\Support\Facades\Blade;
-use Mockery;
 
 uses(TestCase::class);
 

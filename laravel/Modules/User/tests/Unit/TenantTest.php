@@ -19,7 +19,7 @@ uses(TestCase::class);
  * Tenant uses $incrementing = false with UUID primary key, but the factory
  * definition() is empty so we create manually to avoid PRIMARY key duplicates.
  *
- * @param array<string, mixed> $overrides
+ * @param  array<string, mixed>  $overrides
  */
 function makeTenantData(array $overrides = []): array
 {
@@ -38,11 +38,11 @@ function makeTenantData(array $overrides = []): array
 /**
  * Create and save a Tenant with a proper UUID, bypassing factory empty definition.
  *
- * @param array<string, mixed> $overrides
+ * @param  array<string, mixed>  $overrides
  */
 function createTenant(array $overrides = []): Tenant
 {
-    $tenant = new Tenant();
+    $tenant = new Tenant;
     $tenant->incrementing = false;
     $tenant->setKeyType('string');
     $tenant->fill(makeTenantData($overrides));

@@ -7,7 +7,8 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 use function Safe\file_put_contents;
 
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     /**
      * Run the migrations.
      */

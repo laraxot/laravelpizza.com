@@ -13,11 +13,11 @@ use Spatie\LaravelData\Data;
 class OptionData extends Data
 {
     /**
-     * @param string $cache_driver Driver per la cache delle opzioni
-     * @param bool   $enable_cache Se abilitare la cache delle opzioni
-     * @param int    $cache_ttl    TTL cache in secondi
-     * @param string $prefix       Prefisso per le chiavi delle opzioni
-     * @param array  $autoload     Opzioni da caricare automaticamente
+     * @param  string  $cache_driver  Driver per la cache delle opzioni
+     * @param  bool  $enable_cache  Se abilitare la cache delle opzioni
+     * @param  int  $cache_ttl  TTL cache in secondi
+     * @param  string  $prefix  Prefisso per le chiavi delle opzioni
+     * @param  array  $autoload  Opzioni da caricare automaticamente
      */
     public function __construct(
         public readonly string $cache_driver = 'file',
@@ -25,14 +25,13 @@ class OptionData extends Data
         public readonly int $cache_ttl = 86400,
         public readonly string $prefix = 'options_',
         public readonly array $autoload = ['site_name', 'site_description', 'site_logo'],
-    ) {
-    }
+    ) {}
 
     /**
      * Create a new instance of OptionData with default values.
      */
     public static function make(): static
     {
-        return new static();
+        return new static;
     }
 }

@@ -10,7 +10,8 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Class CreatePermissionsTable.
  */
-return new class extends XotBaseMigration {
+return new class extends XotBaseMigration
+{
     /**
      * Run the migrations.
      */
@@ -23,7 +24,7 @@ return new class extends XotBaseMigration {
                 $cache_store = config('permission.cache.store');
                 $cache_key = config('permission.cache.key');
                 /** @var string|null $store */
-                $store = 'default' !== $cache_store ? $cache_store : null;
+                $store = $cache_store !== 'default' ? $cache_store : null;
                 /** @var string $cache_key */
                 if (is_string($cache_key)) {
                     $cache->store($store)->forget($cache_key);

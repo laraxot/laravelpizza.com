@@ -13,7 +13,8 @@ use Modules\User\Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->baseUser = new class extends BaseUser {
+    $this->baseUser = new class extends BaseUser
+    {
         protected $table = 'test_users';
     };
 });
@@ -43,7 +44,7 @@ test('base user has authentication traits', function () {
     // Verify Notifiable trait is present recursively
     $allTraits = [];
     $class = get_class($this->baseUser);
-    while (false !== $class) {
+    while ($class !== false) {
         $allTraits = array_merge($allTraits, class_uses($class) ?: []);
         $class = get_parent_class($class);
     }

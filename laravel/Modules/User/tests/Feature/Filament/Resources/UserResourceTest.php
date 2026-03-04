@@ -59,19 +59,19 @@ test('user resource has correct form schema', function (): void {
     expect(count($section02Schema))->toBeGreaterThanOrEqual(1);
 
     // Check if created_at field exists
-    $createdAtField = collect($section02Schema)->first(fn ($c) => 'created_at' === $c->getName());
+    $createdAtField = collect($section02Schema)->first(fn ($c) => $c->getName() === 'created_at');
     expect($createdAtField)->not->toBeNull();
     expect($createdAtField)->toBeInstanceOf(Placeholder::class);
 });
 
 test('user resource has combined relation manager tabs', function (): void {
-    $resource = new UserResource();
+    $resource = new UserResource;
 
     expect($resource->hasCombinedRelationManagerTabsWithContent())->toBeTrue();
 });
 
 test('user resource extends correct base class', function (): void {
-    $resource = new UserResource();
+    $resource = new UserResource;
 
     expect($resource)->toBeInstanceOf(XotBaseResource::class);
 });
@@ -92,9 +92,9 @@ test('user resource name field is required', function (): void {
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
 
-    $nameField = collect($section01Schema)->first(fn ($c) => 'name' === $c->getName());
+    $nameField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'name');
 
-    if (null === $nameField) {
+    if ($nameField === null) {
         $this->markTestSkipped('name field not found in section01 schema');
     }
 
@@ -106,9 +106,9 @@ test('user resource email field is required', function (): void {
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
 
-    $emailField = collect($section01Schema)->first(fn ($c) => 'email' === $c->getName());
+    $emailField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'email');
 
-    if (null === $emailField) {
+    if ($emailField === null) {
         $this->markTestSkipped('email field not found in section01 schema');
     }
 
@@ -120,9 +120,9 @@ test('user resource password field is required only on create', function (): voi
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
 
-    $passwordField = collect($section01Schema)->first(fn ($c) => 'password' === $c->getName());
+    $passwordField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'password');
 
-    if (null === $passwordField) {
+    if ($passwordField === null) {
         $this->markTestSkipped('password field not found in section01 schema');
     }
 
@@ -134,7 +134,7 @@ test('user resource password field has correct type', function (): void {
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
 
-    $passwordField = collect($section01Schema)->first(fn ($c) => 'password' === $c->getName());
+    $passwordField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'password');
 
     expect($passwordField->getType())->toBe('password');
 });
@@ -144,9 +144,9 @@ test('user resource email field has unique validation', function (): void {
     $section01 = $form['section01'];
     $section01Schema = $section01->getDefaultChildComponents();
 
-    $emailField = collect($section01Schema)->first(fn ($c) => 'email' === $c->getName());
+    $emailField = collect($section01Schema)->first(fn ($c) => $c->getName() === 'email');
 
-    if (null === $emailField) {
+    if ($emailField === null) {
         $this->markTestSkipped('email field not found in section01 schema');
     }
 
@@ -158,9 +158,9 @@ test('user resource created_at field shows diff for humans', function (): void {
     $section02 = $form['section02'];
     $section02Schema = $section02->getDefaultChildComponents();
 
-    $createdAtField = collect($section02Schema)->first(fn ($c) => 'created_at' === $c->getName());
+    $createdAtField = collect($section02Schema)->first(fn ($c) => $c->getName() === 'created_at');
 
-    if (null === $createdAtField) {
+    if ($createdAtField === null) {
         $this->markTestSkipped('created_at field not found in section02 schema');
     }
 
@@ -168,14 +168,14 @@ test('user resource created_at field shows diff for humans', function (): void {
 });
 
 test('user resource can be instantiated', function (): void {
-    $resource = new UserResource();
+    $resource = new UserResource;
 
     expect($resource)->toBeInstanceOf(UserResource::class);
 });
 
 test('user resource has correct model', function (): void {
     // Since the model is commented out, we'll test the default behavior
-    $resource = new UserResource();
+    $resource = new UserResource;
 
     // The resource should work with the default model resolution
     expect($resource)->toBeInstanceOf(UserResource::class);

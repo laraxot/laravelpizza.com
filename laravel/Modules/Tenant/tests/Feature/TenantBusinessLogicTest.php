@@ -12,32 +12,32 @@ describe('Tenant Business Logic', function (): void {
         expect(true)->toBeTrue();
     });
 });
-    it('can handle tenant domains', function (): void {
-        /** @var Tenant $tenant */
-        $tenant = Tenant::factory()->create();
+it('can handle tenant domains', function (): void {
+    /** @var Tenant $tenant */
+    $tenant = Tenant::factory()->create();
 
-        /** @var TenantDomain $domain */
-        $domain = TenantDomain::factory()->create([
-            'tenant_id' => $tenant->id,
-            'domain' => 'test.example.com',
-            'is_primary' => true,
-            'status' => 'active',
-        ]);
+    /** @var TenantDomain $domain */
+    $domain = TenantDomain::factory()->create([
+        'tenant_id' => $tenant->id,
+        'domain' => 'test.example.com',
+        'is_primary' => true,
+        'status' => 'active',
+    ]);
 
-        // Assert
-        $this->assertDatabaseHas('tenant_domains', [
-            'id' => $domain->id,
-            'tenant_id' => $tenant->id,
-            'domain' => 'test.example.com',
-            'is_primary' => true,
-            'status' => 'active',
-        ]);
+    // Assert
+    $this->assertDatabaseHas('tenant_domains', [
+        'id' => $domain->id,
+        'tenant_id' => $tenant->id,
+        'domain' => 'test.example.com',
+        'is_primary' => true,
+        'status' => 'active',
+    ]);
 
-        expect($domain->tenant_id)->toBe($tenant->id);
-        expect($domain->domain)->toBe('test.example.com');
-        expect($domain->is_primary)->toBeTrue();
-        expect($domain->status)->toBe('active');
-    });
+    expect($domain->tenant_id)->toBe($tenant->id);
+    expect($domain->domain)->toBe('test.example.com');
+    expect($domain->is_primary)->toBeTrue();
+    expect($domain->status)->toBe('active');
+});
 it('can manage tenant settings', function (): void {
     // Arrange
     /** @var Tenant $tenant */

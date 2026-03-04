@@ -18,24 +18,20 @@ declare(strict_types=1);
 namespace Modules\Tenant\Models\Traits;
 
 use Exception;
-use Modules\Tenant\Contracts\SushiToJsonsContract;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use InvalidArgumentException;
+use Modules\Tenant\Contracts\SushiToJsonsContract;
 use Modules\Tenant\Services\TenantService;
 use Sushi\Sushi;
 
 use function Safe\json_encode;
-use function Safe\mkdir;
 use function Safe\unlink;
 
 trait SushiToJsons
 {
     use Sushi;
 
-    /**
-     * @return string
-     */
     public function getJsonFile(): string
     {
         $tbl = $this->getTable();
@@ -163,7 +159,6 @@ trait SushiToJsons
                 throw new InvalidArgumentException('Model must implement '.SushiToJsonsContract::class);
             }
             /** @var Model&SushiToJsonsContract $model */
-
             $file = $model->getJsonFile();
             $model->setAttribute('updated_at', now());
             $model->setAttribute('updated_by', authId());
@@ -186,7 +181,6 @@ trait SushiToJsons
                 throw new InvalidArgumentException('Model must implement '.SushiToJsonsContract::class);
             }
             /** @var Model&SushiToJsonsContract $model */
-
             $file = $model->getJsonFile();
             unlink($file);
         });

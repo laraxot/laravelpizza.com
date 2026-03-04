@@ -17,7 +17,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|Membership newQuery()
  * @method static Builder|Membership query()
  *
- * @property int         $id
+ * @property int $id
  * @property string|null $team_id
  * @property string|null $user_id
  * @property Carbon|null $created_at
@@ -51,13 +51,13 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Membership whereId($value)
  *
  * @property array<array-key, mixed>|null $permissions
- * @property string|null                  $joined_at
+ * @property string|null $joined_at
  *
  * @method static Builder<static>|Membership whereJoinedAt($value)
  * @method static Builder<static>|Membership wherePermissions($value)
  *
  * @property array<array-key, mixed>|null $permissions
- * @property string|null                  $joined_at
+ * @property string|null $joined_at
  *
  * @method static Builder<static>|Membership whereJoinedAt($value)
  * @method static Builder<static>|Membership wherePermissions($value)

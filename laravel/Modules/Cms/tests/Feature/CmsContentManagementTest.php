@@ -339,7 +339,7 @@ test('cms module handles bulk operations efficiently', function () {
     $pageContentsData = [];
     $sectionsData = [];
 
-    for ($i = 0; $i < 50; ++$i) {
+    for ($i = 0; $i < 50; $i++) {
         $pagesData[] = [
             'slug' => "page-{$i}",
             'title' => ['en' => "Page {$i}", 'it' => "Pagina {$i}"],

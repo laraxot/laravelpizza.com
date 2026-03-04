@@ -14,6 +14,6 @@ it('measures performance', function (): void {
     $result = $action->execute(function () {
         return 'done';
     }, 'Test Measurement');
-    
+
     expect($result)->toBe('done');
 });

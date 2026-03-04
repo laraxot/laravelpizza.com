@@ -39,8 +39,8 @@ class AnalyzeComponentsCommand extends Command
 
         // Type-safe module handling
         $moduleStr = is_string($module) ? $module : '';
-        $path = '' !== $moduleStr ? base_path("laravel/Modules/{$moduleStr}") : base_path('laravel/Modules');
-        $namespace = '' !== $moduleStr ? "Modules\\{$moduleStr}" : 'Modules';
+        $path = $moduleStr !== '' ? base_path("laravel/Modules/{$moduleStr}") : base_path('laravel/Modules');
+        $namespace = $moduleStr !== '' ? "Modules\\{$moduleStr}" : 'Modules';
 
         $components = $getComponentsAction->execute($path, $namespace, $prefix, $force);
 

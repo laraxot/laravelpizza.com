@@ -16,7 +16,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
  * Modello di test per il trait SushiToJson.
- * 
+ *
  * Utilizzato esclusivamente per i test del trait.
  *
  * @property int $id
@@ -26,6 +26,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property array<array-key, mixed>|null $metadata
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ *
  * @method static TestSushiModelFactory factory($count = null, $state = [])
  * @method static Builder<static>|TestSushiModel newModelQuery()
  * @method static Builder<static>|TestSushiModel newQuery()
@@ -37,9 +38,11 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder<static>|TestSushiModel whereName($value)
  * @method static Builder<static>|TestSushiModel whereStatus($value)
  * @method static Builder<static>|TestSushiModel whereUpdatedAt($value)
+ *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $deleter
  * @property-read ProfileContract|null $updater
+ *
  * @mixin \Eloquent
  */
 class TestSushiModel extends BaseModel implements SushiToJsonContract

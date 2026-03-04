@@ -19,8 +19,7 @@ abstract class XotBaseTransition extends Transition
     public function __construct(
         public Model $record,
         public ?string $message = '',
-    ) {
-    }
+    ) {}
 
     public function handle(): Model
     {
@@ -89,7 +88,7 @@ abstract class XotBaseTransition extends Transition
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function sendRecipientNotification(RecordNotificationData $recipient, array $data): void
     {

@@ -32,7 +32,7 @@ it('casts various values to boolean correctly', function (): void {
     expect($action->execute('yes'))->toBeTrue();
     expect($action->execute('false'))->toBeFalse();
     expect($action->execute('no'))->toBeFalse();
-    
+
     expect($action->execute(''))->toBeFalse();
 
     // Arrays

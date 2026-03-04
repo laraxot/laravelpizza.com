@@ -19,6 +19,7 @@ class TestModelHasExtra extends Model
     use HasExtraTrait;
 
     protected $table = 'test_models';
+
     protected $fillable = ['id', 'name'];
 
     public function getExtraClass(): string
@@ -30,6 +31,7 @@ class TestModelHasExtra extends Model
 class ExtraModelTest extends Model implements ExtraContract
 {
     protected $table = 'test_extras';
+
     protected $fillable = ['model_id', 'model_type', 'extra_attributes'];
 
     protected function casts(): array
@@ -47,9 +49,10 @@ class ExtraModelTest extends Model implements ExtraContract
 
 describe('HasExtraTrait', function () {
     beforeEach(function () {
-        $this->testModel = new TestModelHasExtra();
+        $this->testModel = new TestModelHasExtra;
 
-        $this->mockExtra = new class extends Model implements ExtraContract {
+        $this->mockExtra = new class extends Model implements ExtraContract
+        {
             public $extra_attributes;
 
             public function __construct()
@@ -80,7 +83,7 @@ describe('HasExtraTrait', function () {
     });
 
     it('can get extra attributes', function () {
-        $extra = new ExtraModelTest();
+        $extra = new ExtraModelTest;
         // Since we can't easily mock SchemalessAttributes without a DB,
         // we'll just test the null path if we don't have a full setup.
         // But let's try to set the relation

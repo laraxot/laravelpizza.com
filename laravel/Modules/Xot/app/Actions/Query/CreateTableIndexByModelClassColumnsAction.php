@@ -21,8 +21,8 @@ class CreateTableIndexByModelClassColumnsAction
     /**
      * Execute the action.
      *
-     * @param class-string<Model> $modelClass fully qualified model class name
-     * @param array<string>       $columns    array of column names to include in the index
+     * @param  class-string<Model>  $modelClass  fully qualified model class name
+     * @param  array<string>  $columns  array of column names to include in the index
      *
      * @throws \InvalidArgumentException|\RuntimeException
      */
@@ -34,7 +34,7 @@ class CreateTableIndexByModelClassColumnsAction
         }
 
         /** @var Model $modelInstance */
-        $modelInstance = new $modelClass();
+        $modelInstance = new $modelClass;
 
         $tableName = $modelInstance->getTable();
         $connectionName = $modelInstance->getConnectionName() ?? config('database.default');
@@ -66,9 +66,9 @@ class CreateTableIndexByModelClassColumnsAction
     /**
      * Validate that all specified columns exist in the table.
      *
-     * @param string        $connectionName database connection name
-     * @param string        $tableName      name of the table
-     * @param array<string> $columns        columns to validate
+     * @param  string  $connectionName  database connection name
+     * @param  string  $tableName  name of the table
+     * @param  array<string>  $columns  columns to validate
      *
      * @throws \RuntimeException
      */
@@ -84,10 +84,9 @@ class CreateTableIndexByModelClassColumnsAction
     /**
      * Check if an index exists in the table.
      *
-     * @param string $connectionName database connection name
-     * @param string $tableName      name of the table
-     * @param string $indexName      name of the index
-     *
+     * @param  string  $connectionName  database connection name
+     * @param  string  $tableName  name of the table
+     * @param  string  $indexName  name of the index
      * @return bool true if the index exists, false otherwise
      */
     private function indexExists(string $connectionName, string $tableName, string $indexName): bool
@@ -123,8 +122,8 @@ class CreateTableIndexByModelClassColumnsAction
     /**
      * Generate a unique index name based on the table and columns.
      *
-     * @param string        $tableName name of the table
-     * @param array<string> $columns   columns to include in the index
+     * @param  string  $tableName  name of the table
+     * @param  array<string>  $columns  columns to include in the index
      */
     private function generateIndexName(string $tableName, array $columns): string
     {

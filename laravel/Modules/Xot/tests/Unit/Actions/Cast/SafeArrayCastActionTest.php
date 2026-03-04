@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\Cast;
 
+use Illuminate\Support\Collection;
 use Modules\Xot\Actions\Cast\SafeArrayCastAction;
 use Modules\Xot\Tests\TestCase;
-use Illuminate\Support\Collection;
 
 uses(TestCase::class);
 
@@ -23,20 +23,35 @@ it('casts various values to array correctly', function (): void {
     expect($action->execute(collect(['b' => 2])))->toBe(['b' => 2]);
 
     // stdClass
-    $obj = new \stdClass();
+    $obj = new \stdClass;
     $obj->c = 3;
     expect($action->execute($obj))->toBe(['c' => 3]);
 
     // Object with toArray
-    $objToArray = new class { public function toArray() { return ['d' => 4]; } };
+    $objToArray = new class
+    {
+        public function toArray()
+        {
+            return ['d' => 4];
+        }
+    };
     expect($action->execute($objToArray))->toBe(['d' => 4]);
 
     // Object with __toArray
-    $objUnderscoreToArray = new class { public function __toArray() { return ['e' => 5]; } };
+    $objUnderscoreToArray = new class
+    {
+        public function __toArray()
+        {
+            return ['e' => 5];
+        }
+    };
     expect($action->execute($objUnderscoreToArray))->toBe(['e' => 5]);
 
     // Regular object (public properties)
-    $regObj = new class { public $f = 6; };
+    $regObj = new class
+    {
+        public $f = 6;
+    };
     expect($action->execute($regObj))->toBe(['f' => 6]);
 
     // Scalar
@@ -78,7 +93,7 @@ it('checks if value can be cast', function (): void {
     expect($action->canCast([]))->toBeTrue();
     expect($action->canCast(null))->toBeTrue();
     expect($action->canCast('str'))->toBeTrue();
-    expect($action->canCast(new \stdClass()))->toBeTrue();
+    expect($action->canCast(new \stdClass))->toBeTrue();
 });
 
 it('uses static cast method correctly', function (): void {

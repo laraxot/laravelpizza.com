@@ -31,6 +31,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read string $url
  * @property-read Collection<int, User> $users
  * @property-read int|null $users_count
+ *
  * @method static TenantFactory factory($count = null, $state = [])
  * @method static Builder<static>|Tenant newModelQuery()
  * @method static Builder<static>|Tenant newQuery()
@@ -42,6 +43,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Tenant where((string|Closure) $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
  * @method static Builder<static>|Tenant whereNotNull((string|Expression) $columns)
  * @method static int count(string $columns = '*')
+ *
  * @property string $id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
@@ -49,6 +51,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  * @property ProfileContract|null $deleter
+ *
  * @method static Builder<static>|Tenant whereCreatedAt($value)
  * @method static Builder<static>|Tenant whereDatabase($value)
  * @method static Builder<static>|Tenant whereDeletedAt($value)
@@ -58,6 +61,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Tenant whereName($value)
  * @method static Builder<static>|Tenant whereSlug($value)
  * @method static Builder<static>|Tenant whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Tenant extends BaseModel

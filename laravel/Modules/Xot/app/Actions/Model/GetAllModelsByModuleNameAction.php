@@ -31,7 +31,7 @@ class GetAllModelsByModuleNameAction
 
         $mod_path = $mod->getPath().'/Models';
         $mod_path = (string) realpath($mod_path);
-        if ('' === $mod_path || ! is_dir($mod_path)) {
+        if ($mod_path === '' || ! is_dir($mod_path)) {
             return [];
         }
 
@@ -45,7 +45,7 @@ class GetAllModelsByModuleNameAction
             $ext = '.php';
             // dddx(['ext' => $file->getExtension(), get_class_methods($file)]);
             if (Str::endsWith($filename, $ext)) {
-                $tmp = new \stdClass();
+                $tmp = new \stdClass;
                 $name = mb_substr($filename, 0, -mb_strlen($ext));
                 // dddx(['name' => $name, 'name1' => $file->getFilenameWithoutExtension()]);
                 /**

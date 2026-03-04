@@ -15,6 +15,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $key
  * @property string|null $value
  * @property string|null $type
+ *
  * @method static Builder|TenantSetting newModelQuery()
  * @method static Builder|TenantSetting newQuery()
  * @method static Builder|TenantSetting query()
@@ -23,11 +24,15 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|TenantSetting whereKey($value)
  * @method static Builder|TenantSetting whereValue($value)
  * @method static Builder|TenantSetting whereType($value)
+ *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  * @property ProfileContract|null $deleter
+ *
  * @method static TenantSettingFactory factory($count = null, $state = [])
+ *
  * @property-read \Modules\Tenant\Models\Tenant|null $tenant
+ *
  * @mixin \Eloquent
  */
 class TenantSetting extends BaseModel

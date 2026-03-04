@@ -15,7 +15,7 @@ it('generates social share links for all platforms', function () {
         'text' => 'Check this out',
     ]);
 
-    $action = new GenerateSocialShareLinksAction();
+    $action = new GenerateSocialShareLinksAction;
     $links = $action->execute($data);
 
     expect($links)->toBeArray()
@@ -31,7 +31,7 @@ it('includes via and hashtags in twitter link when provided', function () {
         'hashtags' => 'laravel,php',
     ]);
 
-    $action = new GenerateSocialShareLinksAction();
+    $action = new GenerateSocialShareLinksAction;
     $links = $action->execute($data);
 
     expect($links['twitter'])->toContain('via='.urlencode('myhandle'))

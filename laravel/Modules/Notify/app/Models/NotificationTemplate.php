@@ -6,6 +6,7 @@ namespace Modules\Notify\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Support\Facades\Blade;
 use Modules\Media\Models\Media;
 use Modules\Notify\Database\Factories\NotificationTemplateFactory;
@@ -15,8 +16,6 @@ use Override;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
-use Spatie\Translatable\HasTranslations;
-
 /**
  * Class NotificationTemplate.
  *
@@ -49,6 +48,7 @@ use Spatie\Translatable\HasTranslations;
  * @property-read mixed $translations
  * @property-read ProfileContract|null $updater
  * @property-read int|null $versions_count
+ *
  * @method static Builder<static>|NotificationTemplate active()
  * @method static NotificationTemplateFactory factory($count = null, $state = [])
  * @method static Builder<static>|NotificationTemplate forCategory(string $category)
@@ -60,11 +60,14 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder<static>|NotificationTemplate whereJsonContainsLocales(string $column, array $locales, ?mixed $value, string $operand = '=')
  * @method static Builder<static>|NotificationTemplate whereLocale(string $column, string $locale)
  * @method static Builder<static>|NotificationTemplate whereLocales(string $column, array $locales)
+ *
  * @mixin IdeHelperNotificationTemplate
+ *
  * @property-read ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
-use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Spatie\Translatable\HasTranslations;
 
 class NotificationTemplate extends BaseModel implements HasMedia
 {

@@ -5,6 +5,7 @@ declare(strict_types=1);
 uses(\Modules\Notify\Tests\TestCase::class);
 
 use Modules\Notify\Models\Contact;
+
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 

@@ -18,9 +18,9 @@ class GetViewByClassAction
     /**
      * Ottiene una vista basata su una classe.
      *
-     * @param string               $class    Nome della classe
-     * @param array<string, mixed> $params   Parametri da passare alla vista
-     * @param string|null          $viewName Nome personalizzato della vista
+     * @param  string  $class  Nome della classe
+     * @param  array<string, mixed>  $params  Parametri da passare alla vista
+     * @param  string|null  $viewName  Nome personalizzato della vista
      */
     public function execute(string $class, array $params = [], ?string $viewName = null): View
     {
@@ -33,8 +33,7 @@ class GetViewByClassAction
     /**
      * Risolve il percorso della view basato sul namespace della classe.
      *
-     * @param string $class Il nome completo della classe
-     *
+     * @param  string  $class  Il nome completo della classe
      * @return string Il percorso della view
      */
     public function executeOld(string $class): string
@@ -43,7 +42,7 @@ class GetViewByClassAction
         $arr = explode('\\', $class);
 
         // Verifica che la classe sia nel namespace Modules
-        if ('Modules' !== $arr[0]) {
+        if ($arr[0] !== 'Modules') {
             throw new \InvalidArgumentException('Class must be in Modules namespace');
         }
 
@@ -60,7 +59,7 @@ class GetViewByClassAction
     /**
      * Ottiene il nome della vista dal nome della classe.
      *
-     * @param string $class Nome della classe
+     * @param  string  $class  Nome della classe
      */
     protected function getViewNameFromClass(string $class): string
     {

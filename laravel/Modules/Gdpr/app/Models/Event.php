@@ -20,20 +20,20 @@ use function Safe\json_encode;
 /**
  * Modules\Gdpr\Models\Event.
  *
- * @property string               $id
- * @property string|null          $treatment_id
- * @property string|null          $consent_id
- * @property string               $subject_id
- * @property string               $ip
- * @property string               $action
- * @property string               $payload
- * @property Carbon|null          $created_at
- * @property Carbon|null          $updated_at
- * @property string|null          $updated_by
- * @property string|null          $created_by
- * @property Carbon|null          $deleted_at
- * @property string|null          $deleted_by
- * @property Consent|null         $consent
+ * @property string $id
+ * @property string|null $treatment_id
+ * @property string|null $consent_id
+ * @property string $subject_id
+ * @property string $ip
+ * @property string $action
+ * @property string $payload
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property Carbon|null $deleted_at
+ * @property string|null $deleted_by
+ * @property Consent|null $consent
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *

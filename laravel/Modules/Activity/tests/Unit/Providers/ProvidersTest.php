@@ -22,7 +22,7 @@ test('ActivityServiceProvider has correct name', function (): void {
 test('ActivityServiceProvider registers migrations', function (): void {
     $provider = new ActivityServiceProvider(app());
     $provider->boot();
-    
+
     expect(true)->toBeTrue();
 });
 

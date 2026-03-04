@@ -13,13 +13,13 @@ use Spatie\LaravelData\Data;
 class SubscriptionData extends Data
 {
     /**
-     * @param bool                     $enable         Se il sistema di abbonamenti è abilitato
-     * @param string                   $driver         Driver per gli abbonamenti (stripe, paddle, ecc.)
-     * @param array<string, mixed>     $plans          Piani di abbonamento disponibili
-     * @param string                   $currency       Valuta predefinita
-     * @param array<int, class-string> $allowed_models Modelli abilitati per gli abbonamenti
-     * @param bool                     $trial_enabled  Se abilitare i periodi di prova
-     * @param int                      $trial_days     Durata periodo di prova in giorni
+     * @param  bool  $enable  Se il sistema di abbonamenti è abilitato
+     * @param  string  $driver  Driver per gli abbonamenti (stripe, paddle, ecc.)
+     * @param  array<string, mixed>  $plans  Piani di abbonamento disponibili
+     * @param  string  $currency  Valuta predefinita
+     * @param  array<int, class-string>  $allowed_models  Modelli abilitati per gli abbonamenti
+     * @param  bool  $trial_enabled  Se abilitare i periodi di prova
+     * @param  int  $trial_days  Durata periodo di prova in giorni
      */
     public function __construct(
         public readonly bool $enable = false,
@@ -29,14 +29,13 @@ class SubscriptionData extends Data
         public readonly array $allowed_models = [],
         public readonly bool $trial_enabled = true,
         public readonly int $trial_days = 14,
-    ) {
-    }
+    ) {}
 
     /**
      * Create a new instance of SubscriptionData with default values.
      */
     public static function make(): static
     {
-        return new static();
+        return new static;
     }
 }

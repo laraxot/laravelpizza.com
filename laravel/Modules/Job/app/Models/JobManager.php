@@ -65,6 +65,7 @@ use Override;
  * @property-read ProfileContract|null $creator
  * @property-read string $status
  * @property-read ProfileContract|null $updater
+ *
  * @method static JobManagerFactory factory($count = null, $state = [])
  * @method static Builder<static>|JobManager newModelQuery()
  * @method static Builder<static>|JobManager newQuery()
@@ -79,7 +80,9 @@ use Override;
  * @method static Builder<static>|JobManager whereProgress($value)
  * @method static Builder<static>|JobManager whereQueue($value)
  * @method static Builder<static>|JobManager whereStartedAt($value)
+ *
  * @property-read ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
 class JobManager extends BaseModel

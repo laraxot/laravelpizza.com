@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\Cast;
 
+use Mockery;
+use Modules\Activity\Models\Activity;
 use Modules\Xot\Actions\Cast\SafeArrayByModelCastAction;
 use Modules\Xot\Tests\TestCase;
-use Modules\Activity\Models\Activity;
-use Mockery;
 
 uses(TestCase::class);
 
 it('converts model attributes to array correctly', function (): void {
-    $model = new Activity();
+    $model = new Activity;
     $model->setRawAttributes(['name' => 'Test']);
-    
+
     $action = app(SafeArrayByModelCastAction::class);
     $result = $action->execute($model);
-    
+
     expect($result)->toBeArray();
     expect($result)->toHaveKey('name');
 });
@@ -32,9 +32,9 @@ it('falls back to safeExecute on error', function (): void {
 
     $action = app(SafeArrayByModelCastAction::class);
     $result = $action->execute($model);
-    
+
     expect($result)->toBeArray();
     expect($result)->toHaveKey('name', 'Fallback');
-    
+
     Mockery::close();
 });

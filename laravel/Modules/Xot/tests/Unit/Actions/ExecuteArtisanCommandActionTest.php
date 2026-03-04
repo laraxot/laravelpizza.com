@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions;
 
+use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Process;
 use Modules\Xot\Actions\ExecuteArtisanCommandAction;
 use Modules\Xot\Tests\TestCase;
-use Illuminate\Support\Facades\Process;
-use Illuminate\Support\Facades\Event;
 
 uses(TestCase::class);
 
@@ -30,8 +30,8 @@ it('executes allowed artisan command correctly', function (): void {
 
 it('throws exception for forbidden artisan command', function (): void {
     $action = app(ExecuteArtisanCommandAction::class);
-    
-    expect(fn() => $action->execute('tinker'))->toThrow(\RuntimeException::class, 'Comando non consentito');
+
+    expect(fn () => $action->execute('tinker'))->toThrow(\RuntimeException::class, 'Comando non consentito');
 });
 
 it('handles failed artisan command correctly', function (): void {

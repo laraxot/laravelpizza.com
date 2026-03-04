@@ -4,6 +4,4 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Services\Translators;
 
-class DeepL extends BaseTranslator
-{
-}
+class DeepL extends BaseTranslator {}

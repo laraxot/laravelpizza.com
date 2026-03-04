@@ -15,8 +15,7 @@ class SelectAction
     /**
      * Execute a select query.
      *
-     * @param class-string<Model> $modelClass
-     *
+     * @param  class-string<Model>  $modelClass
      * @return array<mixed>
      */
     public function execute(string $modelClass, string $sql): array

@@ -20,7 +20,7 @@ test('Login event can be instantiated', function () {
     try {
         // Login event expects SocialiteUser, try to create one or skip
         $socialiteUser = SocialiteUser::first();
-        if (null === $socialiteUser) {
+        if ($socialiteUser === null) {
             // Cannot test without a SocialiteUser - just verify class exists
             expect(class_exists(Login::class))->toBeTrue();
 
@@ -38,7 +38,7 @@ test('Registered event can be instantiated', function () {
 
     try {
         $socialiteUser = SocialiteUser::first();
-        if (null === $socialiteUser) {
+        if ($socialiteUser === null) {
             expect(class_exists(Registered::class))->toBeTrue();
 
             return;

@@ -214,42 +214,26 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-    public function deselectAllTableRecords(): void
-    {
-    }
+    public function deselectAllTableRecords(): void {}
 
-    public function mountTableAction(): void
-    {
-    }
+    public function mountTableAction(): void {}
 
-    public function mountTableBulkAction(): void
-    {
-    }
+    public function mountTableBulkAction(): void {}
 
     public function mountedTableActionRecord(): mixed
     {
         return null;
     }
 
-    public function replaceMountedTableAction(): void
-    {
-    }
+    public function replaceMountedTableAction(): void {}
 
-    public function replaceMountedTableBulkAction(): void
-    {
-    }
+    public function replaceMountedTableBulkAction(): void {}
 
-    public function resetTableSearch(): void
-    {
-    }
+    public function resetTableSearch(): void {}
 
-    public function resetTableColumnSearch(): void
-    {
-    }
+    public function resetTableColumnSearch(): void {}
 
-    public function toggleTableReordering(): void
-    {
-    }
+    public function toggleTableReordering(): void {}
 
     public function parseTableFilterName(): string
     {

@@ -35,7 +35,7 @@ abstract class XotBaseFormComponent extends Field
     {
         $label = parent::getLabel();
 
-        if (null === $label) {
+        if ($label === null) {
             return Str::title($this->getName());
         }
 

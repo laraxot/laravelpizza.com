@@ -10,7 +10,7 @@ use Modules\Xot\Tests\TestCase;
 uses(TestCase::class);
 
 it('manages object properties safely', function (): void {
-    $obj = new \stdClass();
+    $obj = new \stdClass;
     $obj->name = 'Test Object';
     $obj->id = 123;
     $obj->active = true;
@@ -58,13 +58,21 @@ it('manages object properties safely', function (): void {
     expect($action->hasPropertyValue($obj, 'id', '123'))->toBeFalse();
 
     // getValidatedProperty
-    expect($action->getValidatedProperty($obj, 'id', 'int', fn($v) => $v > 100))->toBe(123);
-    expect($action->getValidatedProperty($obj, 'id', 'int', fn($v) => $v > 200, 0))->toBe(0);
+    expect($action->getValidatedProperty($obj, 'id', 'int', fn ($v) => $v > 100))->toBe(123);
+    expect($action->getValidatedProperty($obj, 'id', 'int', fn ($v) => $v > 200, 0))->toBe(0);
 
     // Methods
-    $complexObj = new class {
-        public function test($p) { return $p; }
-        public function fail() { throw new \Exception('fail'); }
+    $complexObj = new class
+    {
+        public function test($p)
+        {
+            return $p;
+        }
+
+        public function fail()
+        {
+            throw new \Exception('fail');
+        }
     };
 
     expect($action->hasMethod($complexObj, 'test'))->toBeTrue();

@@ -41,7 +41,7 @@ class AuthenticationLogResource extends XotBaseResource
                     ->sortable(),
 
                 TextColumn::make('authenticatable_type')
-                    ->formatStateUsing(fn (?string $state): string => null !== $state ? Str::afterLast($state, '\\') : '')
+                    ->formatStateUsing(fn (?string $state): string => $state !== null ? Str::afterLast($state, '\\') : '')
                     ->searchable()
                     ->sortable(),
 

@@ -7,13 +7,13 @@ uses(Modules\Cms\Tests\TestCase::class);
 use Modules\Cms\Models\PageContent;
 
 test('PageContent model can be instantiated', function () {
-    $pageContent = new PageContent();
+    $pageContent = new PageContent;
 
     expect($pageContent)->toBeInstanceOf(PageContent::class);
 });
 
 test('PageContent model has expected fillable fields', function () {
-    $pageContent = new PageContent();
+    $pageContent = new PageContent;
 
     $fillable = $pageContent->getFillable();
 
@@ -23,13 +23,13 @@ test('PageContent model has expected fillable fields', function () {
 });
 
 test('PageContent model extends BaseModel', function () {
-    $pageContent = new PageContent();
+    $pageContent = new PageContent;
 
     expect($pageContent)->toBeInstanceOf(Modules\Cms\Models\BaseModel::class);
 });
 
 test('PageContent model has translatable fields', function () {
-    $pageContent = new PageContent();
+    $pageContent = new PageContent;
 
     expect(isset($pageContent->translatable))->toBeTrue();
     expect($pageContent->translatable)->toContain('name')

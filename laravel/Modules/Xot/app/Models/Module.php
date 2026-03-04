@@ -10,19 +10,18 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\ModuleFactory;
 use Nwidart\Modules\Facades\Module as ModuleFacade;
 use Nwidart\Modules\Module as NModule;
+use Sushi\Sushi;
 
 use function Safe\json_encode;
 
-use Sushi\Sushi;
-
 /**
- * @property int                          $id
- * @property string|null                  $name
- * @property string|null                  $description
- * @property bool|null                    $status
- * @property int|null                     $priority
- * @property string|null                  $path
- * @property string|null                  $icon
+ * @property int $id
+ * @property string|null $name
+ * @property string|null $description
+ * @property bool|null $status
+ * @property int|null $priority
+ * @property string|null $path
+ * @property string|null $icon
  * @property array<array-key, mixed>|null $colors
  *
  * @method static Builder<static>|Module newModelQuery()

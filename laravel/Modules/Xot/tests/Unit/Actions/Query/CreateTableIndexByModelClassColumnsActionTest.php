@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\Query;
 
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Modules\User\Models\User;
 use Modules\Xot\Actions\Query\CreateTableIndexByModelClassColumnsAction;
 use Modules\Xot\Tests\TestCase;
-use Modules\User\Models\User;
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 
 uses(TestCase::class);
 
@@ -21,13 +21,14 @@ it('creates table index correctly', function (): void {
         $table->string('test_col');
     });
 
-    $modelClass = new class extends \Modules\Xot\Models\XotBaseModel {
+    $modelClass = new class extends \Modules\Xot\Models\XotBaseModel
+    {
         protected $table = 'test_index_table';
     };
     $modelClassName = get_class($modelClass);
 
     $action = app(CreateTableIndexByModelClassColumnsAction::class);
-    
+
     // First creation
     $result = $action->execute($modelClassName, ['test_col']);
     expect($result)->toBeTrue();
@@ -41,15 +42,16 @@ it('creates table index correctly', function (): void {
 
 it('throws exception for invalid model class', function (): void {
     $action = app(CreateTableIndexByModelClassColumnsAction::class);
-    expect(fn() => $action->execute(\stdClass::class, ['col']))->toThrow(\InvalidArgumentException::class);
+    expect(fn () => $action->execute(\stdClass::class, ['col']))->toThrow(\InvalidArgumentException::class);
 });
 
 it('throws exception for missing table', function (): void {
-    $modelClass = new class extends \Modules\Xot\Models\XotBaseModel {
+    $modelClass = new class extends \Modules\Xot\Models\XotBaseModel
+    {
         protected $table = 'missing_table';
     };
     $modelClassName = get_class($modelClass);
 
     $action = app(CreateTableIndexByModelClassColumnsAction::class);
-    expect(fn() => $action->execute($modelClassName, ['col']))->toThrow(\RuntimeException::class);
+    expect(fn () => $action->execute($modelClassName, ['col']))->toThrow(\RuntimeException::class);
 });

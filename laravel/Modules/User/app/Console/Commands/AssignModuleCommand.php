@@ -5,14 +5,13 @@ declare(strict_types=1);
 namespace Modules\User\Console\Commands;
 
 use Illuminate\Console\Command;
-
-use function Laravel\Prompts\multiselect;
-use function Laravel\Prompts\text;
-
 use Modules\User\Models\Role;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Nwidart\Modules\Contracts\RepositoryInterface;
+
+use function Laravel\Prompts\multiselect;
+use function Laravel\Prompts\text;
 
 class AssignModuleCommand extends Command
 {

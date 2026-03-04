@@ -12,7 +12,8 @@ use Tests\TestCase;
 uses(TestCase::class, DatabaseTransactions::class);
 
 beforeEach(function () {
-    $this->baseModel = new class extends BaseModel {
+    $this->baseModel = new class extends BaseModel
+    {
         protected $table = 'test_lang_table';
     };
 });

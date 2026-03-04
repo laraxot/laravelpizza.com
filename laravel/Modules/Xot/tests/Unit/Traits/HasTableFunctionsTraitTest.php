@@ -13,7 +13,8 @@ use Modules\Xot\Traits\HasTableFunctionsTrait;
 uses(TestCase::class);
 
 it('gets table columns', function (): void {
-    $class = new class {
+    $class = new class
+    {
         use HasTableFunctionsTrait;
     };
 
@@ -24,7 +25,8 @@ it('gets table columns', function (): void {
 });
 
 it('gets table actions', function (): void {
-    $class = new class {
+    $class = new class
+    {
         use HasTableFunctionsTrait;
 
         protected function getResourceSlug(): string
@@ -40,7 +42,8 @@ it('gets table actions', function (): void {
 });
 
 it('gets table bulk actions', function (): void {
-    $class = new class {
+    $class = new class
+    {
         use HasTableFunctionsTrait;
     };
 
@@ -50,7 +53,8 @@ it('gets table bulk actions', function (): void {
 });
 
 it('has default resource slug', function (): void {
-    $class = new class {
+    $class = new class
+    {
         use HasTableFunctionsTrait;
 
         // Accessing protected method via reflection or public wrapper

@@ -21,7 +21,7 @@ test('components json is valid and contains expected components', function (): v
     $json = json_decode($content, true);
 
     // Verifico che il JSON è valido
-    expect($json)->not->toBeNull('Il file _components.json non contiene JSON valido: ' . json_last_error_msg());
+    expect($json)->not->toBeNull('Il file _components.json non contiene JSON valido: '.json_last_error_msg());
 
     // Verifico che ci sono 2 componenti
     expect($json)->toHaveCount(2, 'Il file _components.json non contiene i 2 componenti attesi');

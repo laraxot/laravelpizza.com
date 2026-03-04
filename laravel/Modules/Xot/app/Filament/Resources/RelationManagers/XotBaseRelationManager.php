@@ -42,7 +42,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
      */
     public function getResource(): string
     {
-        if (isset(static::$resource) && \is_string(static::$resource) && '' !== static::$resource) {
+        if (isset(static::$resource) && \is_string(static::$resource) && static::$resource !== '') {
             return static::$resource;
         }
 
@@ -171,7 +171,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         $actions['edit'] = EditAction::make()
             ->iconButton()
             ->visible(static function (?Model $record) use ($me): bool {
-                if (null === $record) {
+                if ($record === null) {
                     return false;
                 }
 
@@ -181,7 +181,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         $actions['detach'] = DetachAction::make()
             ->iconButton()
             ->visible(static function (?Model $record) use ($me): bool {
-                if (null === $record) {
+                if ($record === null) {
                     return false;
                 }
 

@@ -9,16 +9,16 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\PulseEntryFactory;
 
 /**
- * @property string               $id
- * @property int                  $timestamp
- * @property string               $type
- * @property string               $key
- * @property string|null          $key_hash
- * @property int|null             $value
+ * @property string $id
+ * @property int $timestamp
+ * @property string $type
+ * @property string $key
+ * @property string|null $key_hash
+ * @property int|null $value
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
- * @method static PulseEntryFactory          factory($count = null, $state = [])
+ * @method static PulseEntryFactory factory($count = null, $state = [])
  * @method static Builder<static>|PulseEntry newModelQuery()
  * @method static Builder<static>|PulseEntry newQuery()
  * @method static Builder<static>|PulseEntry query()

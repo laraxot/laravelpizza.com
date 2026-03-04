@@ -11,9 +11,9 @@ uses(TestCase::class);
 
 it('sanitizes strings correctly', function (): void {
     $action = app(SanitizeAction::class);
-    
+
     $input = " <script>alert('xss')</script> <b>Hello</b> &amp; Welcome! ";
     $expected = "alert('xss') Hello & Welcome!";
-    
+
     expect($action->execute($input))->toBe($expected);
 });

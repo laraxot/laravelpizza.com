@@ -11,7 +11,6 @@ use Modules\Xot\Tests\XotBaseTestCase;
  */
 abstract class TestCase extends XotBaseTestCase
 {
-
     protected $connectionsToTransact = [
         'mysql',
         'seo',

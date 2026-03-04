@@ -31,7 +31,7 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
     public ?array $fields = null;
 
     /**
-     * @param array<int, string> $fields
+     * @param  array<int, string>  $fields
      */
     public function __construct(Collection $collection, ?string $transKey = null, array $fields = [])
     {
@@ -67,7 +67,7 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
 
     public function map(mixed $row): array
     {
-        if (null === $this->fields || empty($this->fields)) {
+        if ($this->fields === null || empty($this->fields)) {
             Assert::isInstanceOf($row, Model::class);
             $res = app(SafeArrayByModelCastAction::class)->execute($row);
 

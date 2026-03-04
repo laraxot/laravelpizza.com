@@ -27,21 +27,21 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 /**
  * Modules\Xot\Contracts\UserContract.
  *
- * @property string|null                     $id
- * @property string|null                     $email
+ * @property string|null $id
+ * @property string|null $email
  * @property \Illuminate\Support\Carbon|null $email_verified_at
- * @property string|null                     $first_name
- * @property string|null                     $last_name
- * @property string|null                     $full_name
- * @property string|null                     $name
- * @property string|null                     $phone
- * @property string|null                     $type
- * @property string|null                     $current_team_id
- * @property TeamContract                    $currentTeam
- * @property ProfileContract|null            $profile
- * @property Collection<int, UserRole>       $roles
- * @property Collection<int, Team>           $teams
- * @property Collection<int, Tenant>         $tenants
+ * @property string|null $first_name
+ * @property string|null $last_name
+ * @property string|null $full_name
+ * @property string|null $name
+ * @property string|null $phone
+ * @property string|null $type
+ * @property string|null $current_team_id
+ * @property TeamContract $currentTeam
+ * @property ProfileContract|null $profile
+ * @property Collection<int, UserRole> $roles
+ * @property Collection<int, Team> $teams
+ * @property Collection<int, Tenant> $tenants
  *
  * @phpstan-require-extends Model
  *
@@ -67,7 +67,7 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
     /**
      * Create a new personal access token for the user.
      *
-     * @param array<int, string> $scopes
+     * @param  array<int, string>  $scopes
      */
     public function createToken(string $name, array $scopes = []): PersonalAccessTokenResult;
 
@@ -128,8 +128,7 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
     /**
      * Revoke the given role from the model.
      *
-     * @param string|int|array|UserRole|Collection|\BackedEnum ...$role
-     *
+     * @param  string|int|array|UserRole|Collection|\BackedEnum  ...$role
      * @return $this
      */
     public function removeRole(...$role);

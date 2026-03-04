@@ -18,11 +18,10 @@ class CountAction
     /**
      * Execute the count action for the given model class.
      *
-     * @param class-string<Model> $modelClass The fully qualified model class name
+     * @param  class-string<Model>  $modelClass  The fully qualified model class name
+     * @return int The total count of records
      *
      * @throws \InvalidArgumentException If model class is invalid or not found
-     *
-     * @return int The total count of records
      */
     public function execute(string $modelClass): int
     {

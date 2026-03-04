@@ -46,7 +46,7 @@ abstract class XotBaseTestCase extends BaseTestCase
         if (! $this->app->bound('translator')) {
             $this->app->singleton('translator', function ($app) {
                 return new \Illuminate\Translation\Translator(
-                    new \Illuminate\Translation\ArrayLoader(),
+                    new \Illuminate\Translation\ArrayLoader,
                     'en'
                 );
             });
@@ -74,7 +74,7 @@ abstract class XotBaseTestCase extends BaseTestCase
     /**
      * Create a test user with optional attributes.
      *
-     * @param array<string, mixed> $attributes
+     * @param  array<string, mixed>  $attributes
      */
     protected static function createTestUser(array $attributes = []): UserContract
     {

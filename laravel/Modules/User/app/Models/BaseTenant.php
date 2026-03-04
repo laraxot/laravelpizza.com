@@ -26,9 +26,9 @@ use Spatie\Sluggable\SlugOptions;
  * @method static Builder|Tenant query()
  *
  * @property EloquentCollection<int, Model&UserContract> $members
- * @property int|null                                    $members_count
- * @property ProfileContract|null                        $creator
- * @property ProfileContract|null                        $updater
+ * @property int|null $members_count
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
  *
  * @mixin \Eloquent
  */

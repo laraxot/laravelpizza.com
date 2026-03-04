@@ -233,7 +233,7 @@ describe('User Team Management', function () {
 
 describe('User Permission System', function () {
     it('can have roles assigned', function () {
-        $role = Role::factory()->create(['name' => 'assigned role ' . uniqid()]);
+        $role = Role::factory()->create(['name' => 'assigned role '.uniqid()]);
 
         $this->user->assignRole($role);
 
@@ -241,7 +241,7 @@ describe('User Permission System', function () {
     });
 
     it('can have direct permissions', function () {
-        $permission = Permission::factory()->create(['name' => 'direct permission ' . uniqid()]);
+        $permission = Permission::factory()->create(['name' => 'direct permission '.uniqid()]);
 
         $this->user->givePermissionTo($permission);
 
@@ -298,8 +298,8 @@ describe('User Scopes and Queries', function () {
         $verifiedUsers = User::whereNotNull('email_verified_at')->get();
         $unverifiedUsers = User::whereNull('email_verified_at')->get();
 
-        expect($verifiedUsers->every(fn ($user) => null !== $user->email_verified_at))->toBe(true);
-        expect($unverifiedUsers->every(fn ($user) => null === $user->email_verified_at))->toBe(true);
+        expect($verifiedUsers->every(fn ($user) => $user->email_verified_at !== null))->toBe(true);
+        expect($unverifiedUsers->every(fn ($user) => $user->email_verified_at === null))->toBe(true);
     });
 
     it('can filter by language', function () {
@@ -309,8 +309,8 @@ describe('User Scopes and Queries', function () {
         $italianUsers = User::where('lang', 'it')->get();
         $englishUsers = User::where('lang', 'en')->get();
 
-        expect($italianUsers->every(fn ($user) => 'it' === $user->lang))->toBe(true);
-        expect($englishUsers->every(fn ($user) => 'en' === $user->lang))->toBe(true);
+        expect($italianUsers->every(fn ($user) => $user->lang === 'it'))->toBe(true);
+        expect($englishUsers->every(fn ($user) => $user->lang === 'en'))->toBe(true);
     });
 });
 

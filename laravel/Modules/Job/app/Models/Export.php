@@ -32,6 +32,7 @@ use Illuminate\Support\Carbon;
  * @property string|null $deleted_by
  * @property string|null $user_type
  * @property-read Model|Eloquent|null $user
+ *
  * @method static Builder<static>|Export newModelQuery()
  * @method static Builder<static>|Export newQuery()
  * @method static Builder<static>|Export query()
@@ -51,6 +52,7 @@ use Illuminate\Support\Carbon;
  * @method static Builder<static>|Export whereUpdatedBy($value)
  * @method static Builder<static>|Export whereUserId($value)
  * @method static Builder<static>|Export whereUserType($value)
+ *
  * @mixin IdeHelperExport
  * @mixin IdeHelperExport
  * @mixin IdeHelperExport

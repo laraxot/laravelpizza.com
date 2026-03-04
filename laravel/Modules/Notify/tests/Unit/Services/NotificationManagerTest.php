@@ -5,21 +5,20 @@ declare(strict_types=1);
 namespace Modules\Notify\Tests\Unit\Services;
 
 use Exception;
+use Illuminate\Database\Eloquent\Model;
 use Mockery;
 use Modules\Notify\Actions\SendNotificationAction;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Services\NotificationManager;
 use Modules\Notify\Tests\TestCase;
-use App\Models\User;
-use Illuminate\Database\Eloquent\Model;
 
 uses(TestCase::class);
 
 beforeEach(function () {
     $this->notificationManager = new NotificationManager;
-    
+
     NotificationTemplate::truncate();
-    
+
     // Create a real template in the database for the test
     $this->template = NotificationTemplate::create([
         'name' => 'Test Template',
@@ -39,11 +38,12 @@ afterEach(function () {
 });
 
 it('can send notification to single recipient', function (): void {
-    $recipient = new class extends Model {
+    $recipient = new class extends Model
+    {
         protected $fillable = ['id'];
     };
     $recipient->id = 1;
-    
+
     $templateCode = 'test_template';
     $data = ['key' => 'value'];
     $channels = ['email'];
@@ -61,8 +61,14 @@ it('can send notification to single recipient', function (): void {
 
 it('can send notification to multiple recipients', function (): void {
     $recipients = [
-        new class extends Model { protected $fillable = ['id']; },
-        new class extends Model { protected $fillable = ['id']; },
+        new class extends Model
+        {
+            protected $fillable = ['id'];
+        },
+        new class extends Model
+        {
+            protected $fillable = ['id'];
+        },
     ];
     $templateCode = 'test_template';
     $data = ['key' => 'value'];

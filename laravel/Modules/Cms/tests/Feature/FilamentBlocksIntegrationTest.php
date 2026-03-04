@@ -11,7 +11,7 @@ use function Pest\Laravel\get;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    if (! \is_string(config('app.key')) || '' === config('app.key')) {
+    if (! \is_string(config('app.key')) || config('app.key') === '') {
         $key = 'base64:'.base64_encode(str_repeat('x', 32));
         config()->set('app.key', $key);
         $_ENV['APP_KEY'] = $key;
@@ -139,7 +139,7 @@ describe('Filament Blocks Integration', function () {
         $loadTime = ($endTime - $startTime) * 1000;
 
         $status = $response->getStatusCode();
-        if (200 !== $status) {
+        if ($status !== 200) {
             $this->markTestSkipped('Homepage is not directly renderable (redirect/non-200) in this install; performance check is not applicable.');
         }
 

@@ -38,13 +38,19 @@ it('casts various values to float correctly', function (): void {
     expect($action->execute(['a', 'b'], 2.2))->toBe(2.2);
 
     // Objects with toString
-    $obj = new class { public function __toString() { return '10.5'; } };
+    $obj = new class
+    {
+        public function __toString()
+        {
+            return '10.5';
+        }
+    };
     expect($action->execute($obj))->toBe(10.5);
 });
 
 it('clams float within range correctly', function (): void {
     $action = app(SafeFloatCastAction::class);
-    
+
     expect($action->executeWithRange(50.0, 0.0, 100.0))->toBe(50.0);
     expect($action->executeWithRange(-10.0, 0.0, 100.0))->toBe(0.0);
     expect($action->executeWithRange(150.0, 0.0, 100.0))->toBe(100.0);
@@ -52,7 +58,7 @@ it('clams float within range correctly', function (): void {
 
 it('rounds float with precision correctly', function (): void {
     $action = app(SafeFloatCastAction::class);
-    
+
     expect($action->executeWithPrecision(1.23456, 2))->toBe(1.23);
     expect($action->executeWithPrecision(1.235, 2))->toBe(1.24);
     expect($action->executeWithPrecision(1.2, 0))->toBe(1.0);
@@ -60,7 +66,7 @@ it('rounds float with precision correctly', function (): void {
 
 it('casts as percentage correctly', function (): void {
     $action = app(SafeFloatCastAction::class);
-    
+
     expect($action->executeAsPercentage(50.0))->toBe(50.0);
     expect($action->executeAsPercentage(120.0))->toBe(100.0);
     expect($action->executeAsPercentage(-5.0))->toBe(0.0);
@@ -68,7 +74,7 @@ it('casts as percentage correctly', function (): void {
 
 it('casts as currency correctly', function (): void {
     $action = app(SafeFloatCastAction::class);
-    
+
     expect($action->executeAsCurrency(12.345))->toBe(12.35);
     expect($action->executeAsCurrency(-12.345))->toBe(12.35);
 });

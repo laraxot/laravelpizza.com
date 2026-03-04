@@ -11,9 +11,9 @@ uses(TestCase::class);
 
 it('generates pronounceable password correctly', function (): void {
     $action = app(GetPronounceablePasswordAction::class);
-    
+
     $password = $action->execute(12);
-    
+
     expect(strlen($password))->toBeGreaterThanOrEqual(8); // min length logic inside
     expect($password)->toMatch('/[0-9]/'); // contains digit
     expect($password)->toMatch('/[!#*-_=+:?]/'); // contains special

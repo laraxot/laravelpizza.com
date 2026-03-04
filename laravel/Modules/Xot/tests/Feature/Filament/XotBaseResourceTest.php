@@ -16,7 +16,8 @@ uses(TestCase::class);
 covers(XotBaseResource::class);
 
 beforeEach(function () {
-    $this->resource = new class extends XotBaseResource {
+    $this->resource = new class extends XotBaseResource
+    {
         protected static ?string $model = null;
 
         public static function getFormSchema(): array
@@ -106,7 +107,7 @@ test('xot base resource extend form callback returns empty array', function () {
 });
 
 test('xot base resource has combined relation manager tabs with content', function () {
-    $resource = new CacheResource();
+    $resource = new CacheResource;
     expect($resource->hasCombinedRelationManagerTabsWithContent())->toBeTrue();
 });
 
@@ -142,7 +143,8 @@ test('xot base resource get navigation badge returns double dash on exception', 
 });
 
 test('xot base resource trans returns string for known key', function () {
-    app()->instance(\Modules\Xot\Actions\GetTransKeyAction::class, new class {
+    app()->instance(\Modules\Xot\Actions\GetTransKeyAction::class, new class
+    {
         public function execute(string $class = ''): string
         {
             return 'xot::cache';
@@ -153,7 +155,8 @@ test('xot base resource trans returns string for known key', function () {
 });
 
 test('xot base resource trans with array translation returns first element', function () {
-    app()->instance(\Modules\Xot\Actions\GetTransKeyAction::class, new class {
+    app()->instance(\Modules\Xot\Actions\GetTransKeyAction::class, new class
+    {
         public function execute(string $class = ''): string
         {
             return 'xot::cache';
@@ -176,7 +179,8 @@ test('xot base resource get model with explicit model set', function () {
 
 test('xot base resource get relations via base uses glob', function () {
     // XotBaseResource::getRelations() uses glob for RelationManager files
-    $resource = new class extends XotBaseResource {
+    $resource = new class extends XotBaseResource
+    {
         protected static ?string $model = \Modules\Xot\Models\Cache::class;
 
         public static function getFormSchema(): array
@@ -250,7 +254,8 @@ test('xot base resource get attachments schema with model having method', functi
         eval("namespace Modules\Xot\Models; use Illuminate\Database\Eloquent\Model; class StaticMockModel extends Model { public static function getAttachments(): array { return ['file1.jpg']; } }");
     }
 
-    $resource = new class extends XotBaseResource {
+    $resource = new class extends XotBaseResource
+    {
         public static string $mockModelClass;
 
         public static function getModel(): string
@@ -265,14 +270,15 @@ test('xot base resource get attachments schema with model having method', functi
     };
 
     $resource::$mockModelClass = $modelClass;
-    app()->instance($modelClass, new $modelClass());
+    app()->instance($modelClass, new $modelClass);
 
     $schema = $resource::getAttachmentsSchema();
     expect($schema)->toBeArray();
 });
 
 test('xot base resource get step by name returns correct step', function () {
-    $resource = new class extends XotBaseResource {
+    $resource = new class extends XotBaseResource
+    {
         public static function getGeneralSchema(): array
         {
             return [\Filament\Forms\Components\TextInput::make('test')];
@@ -286,7 +292,7 @@ test('xot base resource get step by name returns correct step', function () {
         // We need it to be public for testing or use reflection
         public static function callGetStepByName(string $name): Step
         {
-            return static::getStepByName($name);
+            return self::getStepByName($name);
         }
     };
 

@@ -33,7 +33,7 @@ return new class extends XotBaseMigration
                 $table->string('tenant_id')->nullable();
                 $table->json('grapesjs_data')->nullable();
                 $table->string('type');
-                
+
                 $table->timestamps();
                 $table->softDeletes();
                 $table->string('updated_by')->nullable();

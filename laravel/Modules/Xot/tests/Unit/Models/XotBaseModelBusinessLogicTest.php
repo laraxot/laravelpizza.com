@@ -21,7 +21,7 @@ describe('XotBaseModel Business Logic', function () {
     });
 
     test('xot base model can be instantiated via subclass', function () {
-        $model = new TestConcreteXotBaseModel();
+        $model = new TestConcreteXotBaseModel;
 
         expect($model)->toBeInstanceOf(XotBaseModel::class);
         expect($model)->toBeInstanceOf(Model::class);

@@ -18,10 +18,10 @@ it('casts various values to string correctly', function (): void {
     expect($action->execute(false))->toBe('0');
     expect($action->execute(123))->toBe('123');
     expect($action->execute(1.23))->toBe('1.23');
-    
+
     // Non-scalar
     expect($action->execute(['a']))->toBe('');
-    expect($action->execute(new \stdClass()))->toBe('');
+    expect($action->execute(new \stdClass))->toBe('');
 });
 
 it('uses static string cast method correctly', function (): void {

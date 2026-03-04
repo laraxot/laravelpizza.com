@@ -21,6 +21,7 @@ use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
+ *
  * @method static Builder<static>|Snapshot newModelQuery()
  * @method static Builder<static>|Snapshot newQuery()
  * @method static Builder<static>|Snapshot query()
@@ -34,6 +35,7 @@ use Spatie\EventSourcing\Snapshots\EloquentSnapshot as SpatieSnapshot;
  * @method static Builder<static>|Snapshot whereUpdatedAt($value)
  * @method static Builder<static>|Snapshot whereUpdatedBy($value)
  * @method static SnapshotFactory factory($count = null, $state = [])
+ *
  * @mixin \Eloquent
  */
 class Snapshot extends SpatieSnapshot

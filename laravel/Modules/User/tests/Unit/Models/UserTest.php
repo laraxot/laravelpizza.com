@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Hash;
 use Modules\User\Enums\UserType;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 // Import per le funzioni Safe
 

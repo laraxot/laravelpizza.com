@@ -23,7 +23,7 @@ class FieldRefreshAction extends Action
             ->tooltip('Ricalcola valore')
             ->action(function ($record, Set $set): void {
                 $name = $this->getName();
-                if (null === $name) {
+                if ($name === null) {
                     return;
                 }
 

@@ -11,9 +11,9 @@ uses(TestCase::class);
 
 it('normalizes path slashes correctly', function (): void {
     $action = app(FixPathAction::class);
-    
+
     $path = 'some/path\with/mixed\\slashes';
     $expected = str_replace(['/', '\\'], [DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR], $path);
-    
+
     expect($action->execute($path))->toBe($expected);
 });

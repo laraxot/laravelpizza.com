@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\Array;
 
+use Filament\Support\RawJs;
 use Modules\Xot\Actions\Array\ArrayToRawJsAction;
 use Modules\Xot\Tests\TestCase;
-use Filament\Support\RawJs;
 
 uses(TestCase::class);
 
 it('converts array to raw js string correctly', function (): void {
     $action = app(ArrayToRawJsAction::class);
-    
+
     $data = [
         'simpleKey' => 'value',
         'complex-key' => "it's simple",
@@ -20,14 +20,14 @@ it('converts array to raw js string correctly', function (): void {
         'boolean' => true,
         'nullValue' => null,
         'nested' => [
-            'inner' => 'val'
+            'inner' => 'val',
         ],
-        'raw' => RawJs::make('function() { return 1; }')
+        'raw' => RawJs::make('function() { return 1; }'),
     ];
-    
+
     $result = $action->execute($data);
     $html = $result->toHtml();
-    
+
     expect($html)->toContain('simpleKey: \'value\'');
     expect($html)->toContain('\'complex-key\': \'it\\\'s simple\'');
     expect($html)->toContain('number: 123');

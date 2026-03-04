@@ -19,11 +19,11 @@ class GetPdfContentByRecordActionTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->action = new GetPdfContentByRecordAction();
+        $this->action = new GetPdfContentByRecordAction;
     }
 
     /** @test */
-    public function itGeneratesPdfContentFromRecord(): void
+    public function it_generates_pdf_content_from_record(): void
     {
         // Arrange
         $user = User::factory()->create([
@@ -42,7 +42,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function itGeneratesCorrectViewName(): void
+    public function it_generates_correct_view_name(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -60,7 +60,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function itGeneratesCorrectFilenameForBasicModel(): void
+    public function it_generates_correct_filename_for_basic_model(): void
     {
         // Arrange
         $user = User::factory()->create(['id' => 123, 'name' => 'Test User']);
@@ -78,11 +78,13 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function itGeneratesEnhancedFilenameForPerformanceModels(): void
+    public function it_generates_enhanced_filename_for_performance_models(): void
     {
         // Arrange - Create a mock model with performance fields
-        $record = new class extends Model {
+        $record = new class extends Model
+        {
             protected $table = 'test_performance';
+
             protected $fillable = ['id', 'matr', 'cognome', 'nome'];
 
             public function getKey()
@@ -108,7 +110,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function itPreparesCorrectViewParameters(): void
+    public function it_prepares_correct_view_parameters(): void
     {
         // Arrange
         $user = User::factory()->create(['name' => 'Test User']);
@@ -132,7 +134,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function itThrowsExceptionForMissingView(): void
+    public function it_throws_exception_for_missing_view(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -145,7 +147,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function itThrowsExceptionForEmptyHtmlContent(): void
+    public function it_throws_exception_for_empty_html_content(): void
     {
         // This test would require mocking view rendering to return empty content
         // Implementation depends on testing infrastructure setup
@@ -153,7 +155,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function itUsesCustomFilenameWhenProvided(): void
+    public function it_uses_custom_filename_when_provided(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -166,7 +168,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function itHandlesFromRecordConvenienceMethod(): void
+    public function it_handles_from_record_convenience_method(): void
     {
         // Arrange
         $user = User::factory()->create();
@@ -180,7 +182,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function itLogsErrorsWhenPdfGenerationFails(): void
+    public function it_logs_errors_when_pdf_generation_fails(): void
     {
         // This test would require mocking HTML2PDF to throw exceptions
         // Implementation depends on testing infrastructure setup
@@ -188,7 +190,7 @@ class GetPdfContentByRecordActionTest extends TestCase
     }
 
     /** @test */
-    public function itReturnsValidPdfContentWhenViewExists(): void
+    public function it_returns_valid_pdf_content_when_view_exists(): void
     {
         // This test would require creating actual test views
         // Implementation depends on test view infrastructure

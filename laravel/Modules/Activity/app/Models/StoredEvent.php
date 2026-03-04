@@ -14,7 +14,7 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
 
 /**
  * Class StoredEvent.
- * 
+ *
  * Represents a stored event in the activity module.
  *
  * @property int $id
@@ -28,6 +28,7 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property-read ShouldBeStored|null $event
+ *
  * @method static EloquentStoredEventQueryBuilder<static>|StoredEvent afterVersion(int $version)
  * @method static EloquentStoredEventCollection<static> all($columns = ['*'])
  * @method static EloquentStoredEventCollection<static> get($columns = ['*'])
@@ -52,8 +53,11 @@ use Spatie\SchemalessAttributes\Casts\SchemalessAttributes;
  * @method static EloquentStoredEventQueryBuilder<static>|StoredEvent whereUpdatedBy($value)
  * @method static EloquentStoredEventQueryBuilder<static>|StoredEvent withMetaDataAttributes()
  * @method static StoredEventFactory factory($count = null, $state = [])
+ *
  * @property string|null $updated_at
+ *
  * @method static EloquentStoredEventQueryBuilder<static>|StoredEvent whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 // @see Modules/Xot/docs/spatie-schemaless-attributes.md
