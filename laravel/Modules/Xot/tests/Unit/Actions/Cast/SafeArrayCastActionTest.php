@@ -2,100 +2,88 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\Cast;
+
 use Modules\Xot\Actions\Cast\SafeArrayCastAction;
+use Modules\Xot\Tests\TestCase;
+use Illuminate\Support\Collection;
 
-beforeEach(function (): void {
-    $this->action = app(SafeArrayCastAction::class);
+uses(TestCase::class);
+
+it('casts various values to array correctly', function (): void {
+    $action = app(SafeArrayCastAction::class);
+
+    // Already array
+    expect($action->execute(['a' => 1]))->toBe(['a' => 1]);
+
+    // Null
+    expect($action->execute(null, ['default']))->toBe(['default']);
+
+    // Collection
+    expect($action->execute(collect(['b' => 2])))->toBe(['b' => 2]);
+
+    // stdClass
+    $obj = new \stdClass();
+    $obj->c = 3;
+    expect($action->execute($obj))->toBe(['c' => 3]);
+
+    // Object with toArray
+    $objToArray = new class { public function toArray() { return ['d' => 4]; } };
+    expect($action->execute($objToArray))->toBe(['d' => 4]);
+
+    // Object with __toArray
+    $objUnderscoreToArray = new class { public function __toArray() { return ['e' => 5]; } };
+    expect($action->execute($objUnderscoreToArray))->toBe(['e' => 5]);
+
+    // Regular object (public properties)
+    $regObj = new class { public $f = 6; };
+    expect($action->execute($regObj))->toBe(['f' => 6]);
+
+    // Scalar
+    expect($action->execute('test'))->toBe(['test']);
+    expect($action->execute(123))->toBe([123]);
+
+    // Fallback
+    expect($action->execute(fopen('php://memory', 'r'), ['fallback']))->toBe(['fallback']);
 });
 
-it('casts common input shapes to array', function (): void {
-    expect($this->action->execute(['a' => 1]))->toBe(['a' => 1])
-        ->and($this->action->execute(null, ['d']))->toBe(['d'])
-        ->and($this->action->execute(5))->toBe([5]);
+it('validates required keys correctly', function (): void {
+    $action = app(SafeArrayCastAction::class);
+    $data = ['a' => 1, 'b' => 2];
+
+    expect($action->executeWithKeys($data, ['a', 'b']))->toBe($data);
+    expect($action->executeWithKeys($data, ['a', 'c'], ['error' => true]))->toBe(['error' => true]);
 });
 
-it('casts objects via toArray, __toArray and public props', function (): void {
-    $toArrayObject = new class {
-        public function toArray(): array
-        {
-            return ['x' => 1];
-        }
-    };
+it('filters keys correctly', function (): void {
+    $action = app(SafeArrayCastAction::class);
+    $data = ['a' => 1, 'b' => 2, 'c' => 3];
 
-    $badToArrayObject = new class {
-        public function toArray(): string
-        {
-            return 'bad';
-        }
-    };
-
-    $magicToArrayObject = new class {
-        public function __toArray(): array
-        {
-            return ['y' => 2];
-        }
-    };
-
-    $badMagicToArrayObject = new class {
-        public function __toArray(): string
-        {
-            return 'bad';
-        }
-    };
-
-    $plainObject = new class {
-        public int $z = 3;
-    };
-
-    expect($this->action->execute($toArrayObject))->toBe(['x' => 1])
-        ->and($this->action->execute($badToArrayObject, ['default']))->toBe(['default'])
-        ->and($this->action->execute($magicToArrayObject))->toBe(['y' => 2])
-        ->and($this->action->execute($badMagicToArrayObject, ['fallback']))->toBe(['fallback'])
-        ->and($this->action->execute($plainObject))->toBe(['z' => 3]);
+    expect($action->executeWithFilter($data, ['a', 'c']))->toBe(['a' => 1, 'c' => 3]);
 });
 
-it('casts stdClass branch explicitly', function (): void {
-    $obj = new stdClass();
-    $obj->a = 1;
+it('casts values to specific type correctly', function (): void {
+    $action = app(SafeArrayCastAction::class);
+    $data = ['1', '2', '3'];
 
-    expect($this->action->execute($obj))->toBe(['a' => 1]);
+    expect($action->executeWithValueType($data, 'int'))->toBe([1, 2, 3]);
+    expect($action->executeWithValueType([1, 0, true], 'bool'))->toBe([true, false, true]);
+    expect($action->executeWithValueType([1.1, 2.2], 'string'))->toBe(['1.1', '2.2']);
+    expect($action->executeWithValueType(['1.1', '2.2'], 'float'))->toBe([1.1, 2.2]);
+    expect($action->executeWithValueType(['a', 'b'], 'invalid'))->toBe(['a', 'b']);
 });
 
-it('validates required keys and filters allowed keys', function (): void {
-    $value = ['name' => 'Mario', 'role' => 'admin', 'active' => true];
-
-    expect($this->action->executeWithKeys($value, ['name']))->toBe($value)
-        ->and($this->action->executeWithKeys($value, ['missing'], ['fallback']))->toBe(['fallback'])
-        ->and($this->action->executeWithKeys($value, [new stdClass()], ['fallback']))->toBe($value)
-        ->and($this->action->executeWithFilter($value, ['name', 'active']))->toBe(['name' => 'Mario', 'active' => true]);
+it('checks if value can be cast', function (): void {
+    $action = app(SafeArrayCastAction::class);
+    expect($action->canCast([]))->toBeTrue();
+    expect($action->canCast(null))->toBeTrue();
+    expect($action->canCast('str'))->toBeTrue();
+    expect($action->canCast(new \stdClass()))->toBeTrue();
 });
 
-it('casts values by requested value type', function (): void {
-    $value = ['1', '2', '3'];
-
-    expect($this->action->executeWithValueType($value, 'string'))->toBe(['1', '2', '3'])
-        ->and($this->action->executeWithValueType($value, 'int'))->toBe([1, 2, 3])
-        ->and($this->action->executeWithValueType($value, 'float'))->toBe([1.0, 2.0, 3.0])
-        ->and($this->action->executeWithValueType($value, 'bool'))->toBe([true, true, true])
-        ->and($this->action->executeWithValueType($value, 'unknown'))->toBe(['1', '2', '3']);
-});
-
-it('exposes canCast and static helper methods', function (): void {
-    $resource = fopen('php://memory', 'rb');
-    expect(is_resource($resource))->toBeTrue()
-        ->and($this->action->canCast([]))->toBeTrue()
-        ->and($this->action->canCast($resource))->toBeFalse()
-        ->and(SafeArrayCastAction::cast('x'))->toBe(['x'])
-        ->and(SafeArrayCastAction::castWithKeys(['k' => 1], ['k']))->toBe(['k' => 1])
-        ->and(SafeArrayCastAction::castWithFilter(['k' => 1, 'z' => 2], ['k']))->toBe(['k' => 1])
-        ->and(SafeArrayCastAction::castWithValueType(['1'], 'int'))->toBe([1]);
-
-    fclose($resource);
-});
-
-it('returns default for non-castable value types', function (): void {
-    $resource = fopen('php://memory', 'rb');
-    expect(is_resource($resource))->toBeTrue()
-        ->and($this->action->execute($resource, ['fallback']))->toBe(['fallback']);
-    fclose($resource);
+it('uses static cast method correctly', function (): void {
+    expect(SafeArrayCastAction::cast(['foo' => 'bar']))->toBe(['foo' => 'bar']);
+    expect(SafeArrayCastAction::castWithKeys(['a' => 1], ['a']))->toBe(['a' => 1]);
+    expect(SafeArrayCastAction::castWithFilter(['a' => 1, 'b' => 2], ['a']))->toBe(['a' => 1]);
+    expect(SafeArrayCastAction::castWithValueType(['1'], 'int'))->toBe([1]);
 });

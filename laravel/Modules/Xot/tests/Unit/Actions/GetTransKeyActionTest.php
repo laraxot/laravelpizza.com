@@ -5,26 +5,39 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions;
 
 use Modules\Xot\Actions\GetTransKeyAction;
-use Tests\TestCase;
+use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
 
-test('get trans key action returns correct keys', function () {
+it('generates translation keys correctly from various class patterns', function (): void {
     $action = app(GetTransKeyAction::class);
+    
+    // Direct resource
+    expect($action->execute('Modules\User\Filament\Resources\UserResource'))->toBe('user::user');
+    
+    // Pages
+    expect($action->execute('Modules\User\Filament\Resources\UserResource\Pages\ListUsers'))->toBe('user::user');
+    expect($action->execute('Modules\User\Filament\Resources\UserResource\Pages\CreateUser'))->toBe('user::user');
+    
+    // Relation Managers
+    expect($action->execute('Modules\User\Filament\Resources\UserResource\RelationManagers\ProfilesRelationManager'))->toBe('user::profile');
+    
+    // Actions
+    expect($action->execute('Modules\Activity\Actions\LogActivityAction'))->toBe('activity::log_activity');
+    
+    // Dashboard
+    expect($action->execute('Modules\Xot\Filament\Pages\Dashboard'))->toBe('xot::dashboard');
+});
 
-    // Test direct module class
-    $key = $action->execute('Modules\User\Filament\Resources\UserResource');
-    expect($key)->toBe('user::user');
-
-    // Test with "List" prefix
-    $key = $action->execute('Modules\User\Filament\Resources\UserResource\Pages\ListUsers');
-    expect($key)->toBe('user::user');
-
-    // Test with RelationManager
-    $key = $action->execute('Modules\User\Filament\Resources\UserResource\RelationManagers\ProfilesRelationManager');
-    expect($key)->toBe('user::profile');
-
-    // Test with Action suffix
-    $key = $action->execute('Modules\Activity\Actions\LogActivityAction');
-    expect($key)->toBe('activity::log_activity');
+it('can auto-detect class from backtrace', function (): void {
+    $action = new class extends GetTransKeyAction {
+        public function test(): string {
+            return $this->execute('');
+        }
+    };
+    
+    // Calling from anonymous class in Unit namespace
+    // It will try to find a Modules namespace in backtrace or fallback to main module
+    $result = $action->test();
+    expect($result)->toBeString()->toContain('::');
 });

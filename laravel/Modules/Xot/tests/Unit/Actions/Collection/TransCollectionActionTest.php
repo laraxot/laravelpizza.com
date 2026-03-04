@@ -4,36 +4,46 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\Collection;
 
-use Illuminate\Support\Facades\Lang;
 use Modules\Xot\Actions\Collection\TransCollectionAction;
-use Tests\TestCase;
+use Modules\Xot\Tests\TestCase;
+use Illuminate\Support\Facades\Lang;
 
 uses(TestCase::class);
 
-test('trans collection action translates collection', function () {
-    $collection = collect(['item1', 'item.2', 'no_trans']);
-    $transKey = 'test';
-
+it('translates collection items correctly', function (): void {
+    $collection = collect(['apple', 'banana', 'orange.juice']);
+    $transKey = 'fruits';
+    
     Lang::addLines([
-        'test.item1' => 'Translated 1',
-        'test.item_2' => 'Translated 2',
+        'fruits.apple' => 'Mela',
+        'fruits.banana' => 'Banana',
+        'fruits.orange_juice' => 'Spremuta d\'arancia',
     ], 'it');
-
+    
     app()->setLocale('it');
-
+    
     $action = app(TransCollectionAction::class);
     $result = $action->execute($collection, $transKey);
-
-    expect($result->get(0))->toBe('Translated 1')
-        ->and($result->get(1))->toBe('Translated 2')
-        ->and($result->get(2))->toBe('no_trans');
+    
+    expect($result->all())->toBe([
+        'Mela',
+        'Banana',
+        'Spremuta d\'arancia'
+    ]);
 });
 
-test('trans collection action handles null transKey', function () {
-    $collection = collect(['item1', 123]);
+it('returns original items if transKey is null', function (): void {
+    $collection = collect(['a', 1, null]);
     $action = app(TransCollectionAction::class);
     $result = $action->execute($collection, null);
+    
+    expect($result->all())->toBe(['a', '1', '']);
+});
 
-    expect($result->get(0))->toBe('item1')
-        ->and($result->get(1))->toBe('123');
+it('returns original item if translation not found', function (): void {
+    $collection = collect(['unknown']);
+    $action = app(TransCollectionAction::class);
+    $result = $action->execute($collection, 'missing');
+    
+    expect($result->all())->toBe(['unknown']);
 });

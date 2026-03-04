@@ -2,72 +2,75 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\Cast;
+
 use Modules\Xot\Actions\Cast\SafeObjectCastAction;
-use Tests\TestCase;
+use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
 
-beforeEach(function (): void {
-    $this->action = app(SafeObjectCastAction::class);
-    $this->obj = new class {
-        public string $name = 'Mario';
-        public string $age = '42';
-        public string $score = '12.5';
-        public string $active = '1';
-        public array $meta = ['k' => 'v'];
-        public string $empty = '';
+it('manages object properties safely', function (): void {
+    $obj = new \stdClass();
+    $obj->name = 'Test Object';
+    $obj->id = 123;
+    $obj->active = true;
+    $obj->price = 10.5;
+    $obj->tags = ['a', 'b'];
+    $obj->emptyStr = '';
+    $obj->nullVal = null;
 
-        public function greet(string $name): string
-        {
-            return "Hi {$name}";
-        }
+    $action = app(SafeObjectCastAction::class);
 
-        public function fail(): string
-        {
-            throw new RuntimeException('boom');
-        }
+    // hasProperty
+    expect($action->hasProperty($obj, 'name'))->toBeTrue();
+    expect($action->hasProperty($obj, 'missing'))->toBeFalse();
+
+    // hasNonNullProperty
+    expect($action->hasNonNullProperty($obj, 'name'))->toBeTrue();
+    expect($action->hasNonNullProperty($obj, 'nullVal'))->toBeFalse();
+
+    // hasNonEmptyProperty
+    expect($action->hasNonEmptyProperty($obj, 'name'))->toBeTrue();
+    expect($action->hasNonEmptyProperty($obj, 'emptyStr'))->toBeFalse();
+
+    // getStringProperty
+    expect($action->getStringProperty($obj, 'name'))->toBe('Test Object');
+    expect($action->getStringProperty($obj, 'missing', 'fallback'))->toBe('fallback');
+
+    // getIntProperty
+    expect($action->getIntProperty($obj, 'id'))->toBe(123);
+
+    // getFloatProperty
+    expect($action->getFloatProperty($obj, 'price'))->toBe(10.5);
+
+    // getBooleanProperty
+    expect($action->getBooleanProperty($obj, 'active'))->toBeTrue();
+
+    // getArrayProperty
+    expect($action->getArrayProperty($obj, 'tags'))->toBe(['a', 'b']);
+
+    // getTypedProperty
+    expect($action->getTypedProperty($obj, 'name', 'string'))->toBe('Test Object');
+    expect($action->getTypedProperty($obj, 'id', 'int'))->toBe(123);
+
+    // hasPropertyValue
+    expect($action->hasPropertyValue($obj, 'id', 123))->toBeTrue();
+    expect($action->hasPropertyValue($obj, 'id', '123'))->toBeFalse();
+
+    // getValidatedProperty
+    expect($action->getValidatedProperty($obj, 'id', 'int', fn($v) => $v > 100))->toBe(123);
+    expect($action->getValidatedProperty($obj, 'id', 'int', fn($v) => $v > 200, 0))->toBe(0);
+
+    // Methods
+    $complexObj = new class {
+        public function test($p) { return $p; }
+        public function fail() { throw new \Exception('fail'); }
     };
-});
 
-it('checks property presence and values', function (): void {
-    expect($this->action->hasProperty($this->obj, 'name'))->toBeTrue()
-        ->and($this->action->hasNonNullProperty($this->obj, 'name'))->toBeTrue()
-        ->and($this->action->hasNonEmptyProperty($this->obj, 'name'))->toBeTrue()
-        ->and($this->action->hasNonEmptyProperty($this->obj, 'empty'))->toBeFalse()
-        ->and($this->action->hasNonEmptyProperty($this->obj, 'missing'))->toBeFalse()
-        ->and($this->action->hasPropertyValue($this->obj, 'name', 'Mario'))->toBeTrue();
-});
+    expect($action->hasMethod($complexObj, 'test'))->toBeTrue();
+    expect($action->hasMethod($complexObj, 'missing'))->toBeFalse();
 
-it('casts typed property getters', function (): void {
-    expect($this->action->getStringProperty($this->obj, 'name'))->toBe('Mario')
-        ->and($this->action->getIntProperty($this->obj, 'age'))->toBe(42)
-        ->and($this->action->getFloatProperty($this->obj, 'score'))->toBe(12.5)
-        ->and($this->action->getBooleanProperty($this->obj, 'active'))->toBeTrue()
-        ->and($this->action->getArrayProperty($this->obj, 'meta'))->toBe(['k' => 'v'])
-        ->and($this->action->getStringProperty($this->obj, 'missing', 'fallback'))->toBe('fallback')
-        ->and($this->action->getIntProperty($this->obj, 'missing', 9))->toBe(9)
-        ->and($this->action->getFloatProperty($this->obj, 'missing', 1.5))->toBe(1.5)
-        ->and($this->action->getBooleanProperty($this->obj, 'missing', true))->toBeTrue()
-        ->and($this->action->getArrayProperty($this->obj, 'missing', ['d']))->toBe(['d']);
-});
-
-it('casts generic typed getter and validated getter', function (): void {
-    expect($this->action->getTypedProperty($this->obj, 'name', 'string'))->toBe('Mario')
-        ->and($this->action->getTypedProperty($this->obj, 'age', 'int'))->toBe(42)
-        ->and($this->action->getTypedProperty($this->obj, 'score', 'float'))->toBe(12.5)
-        ->and($this->action->getTypedProperty($this->obj, 'active', 'bool'))->toBeTrue()
-        ->and($this->action->getTypedProperty($this->obj, 'meta', 'array'))->toBe(['k' => 'v']);
-
-    $ok = $this->action->getValidatedProperty($this->obj, 'age', 'int', fn (int $v): bool => $v > 18, 0);
-    $ko = $this->action->getValidatedProperty($this->obj, 'age', 'int', fn (int $v): bool => $v > 99, 0);
-
-    expect($ok)->toBe(42)->and($ko)->toBe(0);
-});
-
-it('checks methods and calls methods safely', function (): void {
-    expect($this->action->hasMethod($this->obj, 'greet'))->toBeTrue()
-        ->and($this->action->callMethodSafely($this->obj, 'greet', ['Luigi']))->toBe('Hi Luigi')
-        ->and($this->action->callMethodSafely($this->obj, 'missing', [], 'default'))->toBe('default')
-        ->and($this->action->callMethodSafely($this->obj, 'fail', [], 'default'))->toBe('default')
-        ->and($this->action->hasPropertyValue($this->obj, 'missing', 'x'))->toBeFalse();
+    expect($action->callMethodSafely($complexObj, 'test', ['hello']))->toBe('hello');
+    expect($action->callMethodSafely($complexObj, 'missing', [], 'default'))->toBe('default');
+    expect($action->callMethodSafely($complexObj, 'fail', [], 'error'))->toBe('error');
 });

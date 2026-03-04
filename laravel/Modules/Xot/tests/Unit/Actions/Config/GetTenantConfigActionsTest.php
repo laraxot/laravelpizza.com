@@ -4,38 +4,46 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\Config;
 
-use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Config\GetTenantConfigArrayAction;
 use Modules\Xot\Actions\Config\GetTenantConfigPathAction;
-use Tests\TestCase;
+use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
+use Modules\Xot\Tests\TestCase;
+use Illuminate\Support\Facades\File;
+use Mockery;
 
 uses(TestCase::class);
 
-test('get tenant config actions work', function () {
-    $name = 'test_config';
-    $path = tempnam(sys_get_temp_dir(), 'test_tenant_config').'.php';
-    $data = ['foo' => 'bar'];
+it('gets tenant config array correctly', function (): void {
+    $configName = 'test_config';
+    $tempPath = tempnam(sys_get_temp_dir(), 'test_config_') . '.php';
+    $configData = ['key' => 'value'];
+    
+    File::put($tempPath, '<?php return ' . var_export($configData, true) . ';');
 
-    File::put($path, "<?php return ['foo' => 'bar'];");
-
-    $this->mock(GetTenantConfigPathAction::class)
+    $this->mock(GetTenantFilePathAction::class)
         ->shouldReceive('execute')
-        ->with($name)
-        ->andReturn($path);
+        ->once()
+        ->with($configName . '.php')
+        ->andReturn($tempPath);
 
     $action = app(GetTenantConfigArrayAction::class);
-    $result = $action->execute($name);
+    $result = $action->execute($configName);
 
-    expect($result)->toBe($data);
+    expect($result)->toBe($configData);
 
-    File::delete($path);
+    File::delete($tempPath);
 });
 
-test('get tenant config array action returns empty if file does not exist', function () {
-    $this->mock(GetTenantConfigPathAction::class)
+it('returns empty array if tenant config file does not exist', function (): void {
+    $configName = 'non_existent';
+    
+    $this->mock(GetTenantFilePathAction::class)
         ->shouldReceive('execute')
-        ->andReturn('/non/existent/path.php');
+        ->once()
+        ->andReturn('/path/to/nothing.php');
 
     $action = app(GetTenantConfigArrayAction::class);
-    expect($action->execute('invalid'))->toBe([]);
+    $result = $action->execute($configName);
+
+    expect($result)->toBe([]);
 });

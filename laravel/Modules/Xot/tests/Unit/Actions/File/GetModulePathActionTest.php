@@ -2,33 +2,49 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\File;
+
 use Modules\Xot\Actions\File\GetModulePathAction;
 use Modules\Xot\Tests\TestCase;
+use Nwidart\Modules\Facades\Module;
+use Illuminate\Support\Facades\File;
 
 uses(TestCase::class);
 
-beforeEach(function (): void {
-    $this->action = app(GetModulePathAction::class);
+it('gets module path from facade correctly', function (): void {
+    Module::shouldReceive('getModulePath')
+        ->once()
+        ->with('Xot')
+        ->andReturn('/path/to/Xot/');
+
+    $action = app(GetModulePathAction::class);
+    $result = $action->execute('Xot');
+
+    expect($result)->toBe('/path/to/Xot/');
 });
 
-it('returns module path for existing module', function (): void {
-    // Test with Xot module which we know exists
-    $path = $this->action->execute('Xot');
+it('gets module path from fallback correctly', function (): void {
+    Module::shouldReceive('getModulePath')
+        ->once()
+        ->andThrow(new \Exception('Module not found'));
 
-    expect($path)->toBeString()
-        ->and(str_contains($path, 'Modules'))->toBeTrue();
-});
+    // We assume Modules directory exists in base_path
+    $modulesPath = base_path('Modules');
+    if (!File::exists($modulesPath)) {
+        File::makeDirectory($modulesPath);
+    }
+    
+    // Create a dummy module dir
+    $dummyModule = $modulesPath . '/TestModule';
+    if (!File::exists($dummyModule)) {
+        File::makeDirectory($dummyModule);
+    }
 
-it('handles lowercase module name', function (): void {
-    $path = $this->action->execute('xot');
+    $action = app(GetModulePathAction::class);
+    // Case-insensitive search
+    $result = $action->execute('testmodule');
 
-    expect($path)->toBeString()
-        ->and(str_contains($path, 'Modules'))->toBeTrue();
-});
-
-it('returns fallback path for non-existent module', function (): void {
-    $path = $this->action->execute('NonExistentModuleXYZ');
-
-    expect($path)->toBeString()
-        ->and(str_contains($path, 'Modules/NonExistentModuleXYZ'))->toBeTrue();
+    expect($result)->toBe($dummyModule);
+    
+    File::deleteDirectory($dummyModule);
 });

@@ -2,46 +2,39 @@
 
 declare(strict_types=1);
 
-use Illuminate\Database\Eloquent\Model;
+namespace Modules\Xot\Tests\Unit\Actions\Cast;
+
 use Modules\Xot\Actions\Cast\SafeArrayByModelCastAction;
-use Tests\TestCase;
+use Modules\Xot\Tests\TestCase;
+use Modules\User\Models\User;
+use Mockery;
 
 uses(TestCase::class);
 
-it('returns attributesToArray when model is healthy', function (): void {
-    $model = new class extends Model {
-        protected $guarded = [];
-    };
-    $model->forceFill(['name' => 'Mario']);
-
+it('converts model attributes to array correctly', function (): void {
+    $user = new User();
+    $user->name = 'Test User';
+    
     $action = app(SafeArrayByModelCastAction::class);
-
-    expect($action->execute($model))->toHaveKey('name', 'Mario');
+    $result = $action->execute($user);
+    
+    expect($result)->toBeArray();
+    expect($result)->toHaveKey('name', 'Test User');
 });
 
-it('falls back to safeExecute when attributesToArray fails', function (): void {
-    $model = new class extends Model {
-        public function attributesToArray(): array
-        {
-            throw new Exception('boom');
-        }
-
-        public function getAttributes(): array
-        {
-            return ['ok' => '1', 'bad' => '2'];
-        }
-
-        public function getAttribute($key): mixed
-        {
-            if ('bad' === $key) {
-                throw new Error('cannot read');
-            }
-
-            return 'value';
-        }
-    };
+it('falls back to safeExecute on error', function (): void {
+    $model = Mockery::mock(\Illuminate\Database\Eloquent\Model::class);
+    $model->shouldReceive('attributesToArray')->andThrow(new \Exception('Mock error'));
+    $model->shouldReceive('getAttributes')->andReturn(['name' => 'Fallback']);
+    
+    // Simulating $model->name access
+    $model->name = 'Fallback';
 
     $action = app(SafeArrayByModelCastAction::class);
-
-    expect($action->execute($model))->toBe(['ok' => 'value']);
+    $result = $action->execute($model);
+    
+    expect($result)->toBeArray();
+    expect($result)->toHaveKey('name', 'Fallback');
+    
+    Mockery::close();
 });

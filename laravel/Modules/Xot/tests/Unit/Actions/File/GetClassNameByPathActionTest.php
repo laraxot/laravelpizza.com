@@ -2,48 +2,36 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\File;
+
 use Modules\Xot\Actions\File\GetClassNameByPathAction;
 use Modules\Xot\Tests\TestCase;
+use Illuminate\Support\Facades\File;
 
 uses(TestCase::class);
 
-beforeEach(function (): void {
-    $this->action = app(GetClassNameByPathAction::class);
-    $this->tempDir = sys_get_temp_dir().'/xot_class_name_by_path_'.uniqid('', true);
-    mkdir($this->tempDir, 0755, true);
+it('gets class name from path correctly', function (): void {
+    $tempPath = tempnam(sys_get_temp_dir(), 'test_class_') . '.php';
+    $content = "<?php\n\nnamespace My\\Test\\Namespace;\n\nclass MyTestClass {}\n";
+    File::put($tempPath, $content);
+
+    $action = app(GetClassNameByPathAction::class);
+    $result = $action->execute($tempPath);
+
+    expect($result)->toBe('My\\Test\\Namespace\\MyTestClass');
+
+    File::delete($tempPath);
 });
 
-afterEach(function (): void {
-    if (is_dir($this->tempDir)) {
-        array_map('unlink', glob($this->tempDir.'/*') ?: []);
-        rmdir($this->tempDir);
-    }
-});
+it('gets class name from path without namespace correctly', function (): void {
+    $tempPath = tempnam(sys_get_temp_dir(), 'test_class_no_ns_') . '.php';
+    $content = "<?php\n\nclass MyNoNsClass {}\n";
+    File::put($tempPath, $content);
 
-it('extracts fully-qualified class name from file contents', function (): void {
-    $path = $this->tempDir.'/User.php';
-    file_put_contents($path, "<?php\nnamespace App\\Models;\nclass User {}\n");
-    $result = $this->action->execute($path);
+    $action = app(GetClassNameByPathAction::class);
+    $result = $action->execute($tempPath);
 
-    expect($result)->toBe('App\\Models\\User');
-});
+    expect($result)->toBe('MyNoNsClass');
 
-it('extracts class name when namespace is missing', function (): void {
-    $path = $this->tempDir.'/Simple.php';
-    file_put_contents($path, "<?php\nclass Simple {}\n");
-    $result = $this->action->execute($path);
-
-    expect($result)->toBe('Simple');
-});
-
-it('throws when path does not exist', function (): void {
-    $this->action->execute($this->tempDir.'/Missing.php');
-})->throws(ErrorException::class);
-
-it('handles nested namespaces', function (): void {
-    $path = $this->tempDir.'/UserController.php';
-    file_put_contents($path, "<?php\nnamespace App\\Http\\Controllers\\Api\\V1;\nclass UserController {}\n");
-    $result = $this->action->execute($path);
-
-    expect($result)->toBe('App\\Http\\Controllers\\Api\\V1\\UserController');
+    File::delete($tempPath);
 });

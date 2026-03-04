@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions;
 
-use Illuminate\Support\Facades\Event;
-use Illuminate\Support\Facades\Process;
 use Modules\Xot\Actions\ExecuteArtisanCommandAction;
-use Tests\TestCase;
+use Modules\Xot\Tests\TestCase;
+use Illuminate\Support\Facades\Process;
+use Illuminate\Support\Facades\Event;
 
 uses(TestCase::class);
 
-test('execute artisan command action executes allowed command', function () {
+it('executes allowed artisan command correctly', function (): void {
     Event::fake();
     Process::fake([
         'php artisan migrate' => Process::result('Migration successful', '', 0),
@@ -20,20 +20,21 @@ test('execute artisan command action executes allowed command', function () {
     $action = app(ExecuteArtisanCommandAction::class);
     $result = $action->execute('migrate');
 
-    expect($result['status'])->toBe('completed')
-        ->and($result['exitCode'])->toBe(0)
-        ->and($result['output'])->toContain('Migration successful');
+    expect($result['status'])->toBe('completed');
+    expect($result['exitCode'])->toBe(0);
+    expect($result['output'])->toContain('Migration successful');
 
     Event::assertDispatched('artisan-command.started');
     Event::assertDispatched('artisan-command.completed');
 });
 
-test('execute artisan command action throws exception for forbidden command', function () {
+it('throws exception for forbidden artisan command', function (): void {
     $action = app(ExecuteArtisanCommandAction::class);
-    expect(fn () => $action->execute('tinker'))->toThrow(\RuntimeException::class);
+    
+    expect(fn() => $action->execute('tinker'))->toThrow(\RuntimeException::class, 'Comando non consentito');
 });
 
-test('execute artisan command action handles failed command', function () {
+it('handles failed artisan command correctly', function (): void {
     Event::fake();
     Process::fake([
         'php artisan migrate' => Process::result('', 'Migration failed', 1),
@@ -42,9 +43,9 @@ test('execute artisan command action handles failed command', function () {
     $action = app(ExecuteArtisanCommandAction::class);
     $result = $action->execute('migrate');
 
-    expect($result['status'])->toBe('failed')
-        ->and($result['exitCode'])->toBe(1)
-        ->and($result['output'])->toContain('[ERROR] Migration failed');
+    expect($result['status'])->toBe('failed');
+    expect($result['exitCode'])->toBe(1);
+    expect($result['output'])->toContain('[ERROR] Migration failed');
 
     Event::assertDispatched('artisan-command.failed');
 });
