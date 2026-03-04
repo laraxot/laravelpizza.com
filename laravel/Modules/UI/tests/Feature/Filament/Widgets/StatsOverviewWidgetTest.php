@@ -48,9 +48,8 @@ test('stats overview widget stats are instances of Stat class', function (): voi
     $method->setAccessible(true);
     $stats = $method->invoke($this->widget);
 
-    foreach ($stats as $stat) {
-        expect($stat)->toBeInstanceOf(Stat::class);
-    }
+    expect($stats)->toBeArray();
+    expect(collect($stats)->every(fn (mixed $stat): bool => $stat instanceof Stat))->toBeTrue();
 });
 
 test('stats overview widget can be instantiated', function (): void {

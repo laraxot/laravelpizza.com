@@ -1,10 +1,10 @@
 # Code Coverage: User
 
-**Lines Coverage:** N/A (Syntax Error)
-**Methods Coverage:** N/A (Syntax Error)
-**Classes Coverage:** N/A (Syntax Error)
-**Functions Coverage:** N/A (Syntax Error)
-**Test Status:** ❌ SYNTAX ERROR
+**Lines Coverage:** N/A
+**Methods Coverage:** N/A
+**Classes Coverage:** N/A
+**Functions Coverage:** N/A
+**Test Status:** ⚠️  OTHER ERROR
 
 ## Summary
 

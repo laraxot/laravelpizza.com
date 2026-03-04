@@ -1,73 +1,57 @@
-# Piano Coverage 100%
+# Piano Coverage 100% (Pest)
 
-Obiettivo: portare il progetto LaravelPizza al **100% di coverage** dei test Pest.
+## Obiettivo
 
-## Stato attuale
+Raggiungere 100% su:
 
-- **Test falliti**: da verificare con `./vendor/bin/pest --coverage`
-- **Moduli**: Activity, Cms, User, Xot (principali)
-- **Fix applicati (2026-03)**:
-  - **XotBaseTestCase** (DRY + KISS): tutti i TestCase moduli estendono `Modules\Xot\Tests\XotBaseTestCase` invece di `Illuminate\Foundation\Testing\TestCase` — regola: `.cursor/rules/testcase-xotbase-extends.mdc`
-  - Root `tests/TestCase.php`: estende `XotBaseTestCase`
-  - User TestCase: aggiunto `DatabaseTransactions` e `$connectionsToTransact`
-  - Script `bashscripts/testing/ensure-test-db.sh` per verifica DB pre-test
-  - XotBaseTransitionTest: firma già corretta (report coverage obsoleto)
-  - **Gdpr RegisterPageTest**: riscritto da POST a Livewire::test(RegisterWidget::class); skip condizionale se tabella `treatments` non migrata — vedi [Modules/Gdpr/docs/registration-testing.md](../laravel/Modules/Gdpr/docs/registration-testing.md)
-  - **Gdpr RegisterFormValidationTest**: skip per validazioni non presenti in ValidateUserDataAction (required, email format, password); email univoche per evitare conflitti; vedi [Modules/Gdpr/docs/registration-testing.md](../laravel/Modules/Gdpr/docs/registration-testing.md)
-  - **Gdpr RegisterWidgetTest**: rimosso assert su `state` (ValidateUserDataAction non lo restituisce); skip condizionale per SaveGdprConsentsAction se tabella `treatments` non migrata
-  - **Activity model**: l’hack in `__construct()` (uso di `config('database.default')` in testing) è stato rimosso. Il modello ora usa solo `config('activitylog.database_connection')` (`ACTIVITY_LOGGER_DB_CONNECTION` in phpunit.xml) e la connessione `activity` configurata da TenantServiceProvider. L’anti-pattern resta documentato in [testing-connection-hack](../laravel/Modules/Activity/docs/testing/testing-connection-hack.md) come caso storico.
+1. `pest --coverage`
+2. `pest --type-coverage` (plugin)
 
-## Fasi
+## Baseline corrente (2026-03-04)
 
-### Fase 1: Test falliti – correzione
+- Suite globale eseguita: `1610 passed`.
+- Coverage globale non valida: `Total 0.0%` per perimetro `source` troppo ampio e non filtrato (molti file non target coverage).
+- Type coverage non disponibile: plugin non installato (`pest-plugin-type-coverage` assente).
+- GitHub issue/discussion non aggiornabili da CLI per token `gh` invalido.
 
-1. **Activity** (priorità alta)
-   - Verificare `ActivityBusinessLogicTest`, `ActivityEventSourcingTest`, `ActivityIntegrationTest`, `ActivityManagementTest`: DB connection `activity`, schema
-   - `SnapshotBusinessLogicTest`: `it can query snapshots by date range` – scope o metodo
-   - `StoredEventBusinessLogicTest`: `it can query events by event class`, `date range`
-   - `ActivityLoggerTest`: `get activities by type`, `get recent activities`
+## Strategia in 5 fasi
 
-2. **Cms Auth** (priorità alta)
-   - `AuthenticationTest`, `LoginTest`, `LoginVoltTest`, `LoginWidgetTest`
-   - `PasswordConfirmationTest`, `PasswordResetTest`, `ProfileUpdateTest`
-   - `RegisterTest`, `RegisterTypeTest`, `RegisterTypeWidgetTest`
-   - Cause: routing, widget, locale, `XotData::getUserClass()`
+1. **Perimetro coverage corretto**
+- In `phpunit.xml` includere solo codice runtime PHP.
+- Escludere file non target coverage (view blade, stubs/template, config di modulo, docs, test fixture non runtime).
+- Verificare con `./vendor/bin/pest --coverage --exactly=0` che il perimetro sia sensato solo per debug iniziale.
 
-3. **Cms Homepage** (priorità media)
-   - `HomepageContentManagementTest`, `HomepageFilamentBlocksArchitectureTest`
-   - Cause: JSON content, blocks, theme integration, fixture
+2. **Warning zero**
+- Comando: `./vendor/bin/pest --stop-on-warning`
+- Fix one-by-one fino a `0 warning`.
 
-### Fase 2: Test eliminabili
+3. **Perimetro test coerente**
+- Mantenere testsuite root + moduli con struttura `Modules/*/tests/*` (Unit/Feature/Integration/Performance).
+- Test legacy non recuperabili nel ciclo corrente: rename `.old`.
 
-- Test obsoleti o duplicati (con motivazione in docs)
-- Test che richiedono setup troppo complesso (es. CmsContentManagementTest – già skippati)
+4. **Copertura rami mancanti**
+- Eseguire `./vendor/bin/pest --coverage --compact`.
+- Scrivere test mirati su branch non coperti (if/else, eccezioni, fallback, policy/provider/traits).
 
-### Fase 3: Coverage 100%
+5. **Type coverage**
+- Installare plugin dedicato e poi eseguire:
+- `./vendor/bin/pest --type-coverage --compact`
+- `./vendor/bin/pest --type-coverage --min=100`
 
-1. Eseguire `./vendor/bin/pest --coverage --min=0`
-2. Identificare file con coverage < 100%
-3. Aggiungere test per ogni branch/codice non coperto
-4. Usare pattern: Actions, DTO, Models, Services
+6. **Gate finale**
+- `./vendor/bin/pest --coverage --min=100`
+- `./vendor/bin/pest --coverage --exactly=100`
+- `./vendor/bin/pest --type-coverage --min=100`
 
-## Comandi
+## Regole operative
 
-```bash
-# Esegui tutti i test
-cd laravel && ./vendor/bin/pest
+- Nessun nuovo skip nei test attivi.
+- Ogni rename `.old` va motivato nel commit/changelog.
+- Ogni iterazione aggiorna docs/rules/memory/skill coverage.
+- Eseguire coverage con driver attivo (Xdebug/PCOV/phpdbg); con Xdebug usare `XDEBUG_MODE=coverage`.
 
-# Coverage
-./vendor/bin/pest --coverage --min=0
+## Fonti ufficiali
 
-# Coverage per modulo
-./vendor/bin/pest Modules/Activity/tests --coverage-text
-./vendor/bin/pest Modules/Cms/tests --coverage-text
-
-# Genera report
-bash bashscripts/testing/generate-coverage.sh
-```
-
-## Collegamenti
-
-- [Testing guidelines](../.agents/docs/agents-guide/08-testing/testing-guidelines.md)
-- [Coverage 100 Agent](../.agents/agents/coverage-100-agent.md)
-- [AGENTS.md](../AGENTS.md)
+- Pest test coverage: https://pestphp.com/docs/test-coverage
+- Pest type coverage: https://pestphp.com/docs/type-coverage
+- Laravel Modules tests: https://laravelmodules.com/docs/12/advanced/tests

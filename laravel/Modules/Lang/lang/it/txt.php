@@ -539,6 +539,12 @@ return [
         'updated_at' => [
             'label' => 'updated_at',
         ],
+        'appointment_date' => [
+            'label' => 'appointment_date',
+            'placeholder' => 'appointment_date',
+            'helper_text' => 'appointment_date',
+            'description' => 'appointment_date',
+        ],
     ],
     'actions' => [
         'authenticate' => [

@@ -108,3 +108,9 @@
 
 18. **[Composer Packages Study Rules](../../../../docs/rules/composer-packages-study-rules.md)**
    - Regole di governance pacchetti e prevenzione regressioni da dipendenze
+
+## Pre-Edit Rule Link
+
+- [Pre-Edit Docs-First Rule](../../../../docs/rules/pre-edit-docs-first-rule.md)
+- [Pre-Edit Docs-First Memory](../../../../docs/memory/pre-edit-docs-first-memory.md)
+- [Pre-Edit Docs-First Skill](../../../../docs/skills/pre-edit-docs-first-skill.md)

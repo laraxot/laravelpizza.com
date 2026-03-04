@@ -12,7 +12,9 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->widget = new RowWidget;
+    $this->widget = new class extends RowWidget
+    {
+    };
 });
 
 test('row widget extends filament widget', function () {
@@ -24,12 +26,15 @@ test('row widget can be instantiated', function () {
 });
 
 test('row widget has correct view', function () {
-    expect($this->widget->getViewName())->toBe('ui::filament.widgets.row-widget');
+    $view = $this->widget->render();
+
+    expect($view)->toBeInstanceOf(View::class)
+        ->and($view->name())->toBe('ui::filament.widgets.row');
 });
 
 test('row widget has proper properties', function () {
-    expect($this->widget)->toHaveProperty('heading');
-    expect($this->widget)->toHaveProperty('description');
+    expect($this->widget)->toHaveProperty('grid');
+    expect($this->widget)->toHaveProperty('widgets');
 });
 
 test('row widget can render', function () {

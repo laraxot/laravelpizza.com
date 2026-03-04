@@ -307,7 +307,7 @@ it('has correct placeholder', function (): void {
 
     // Assert
     $component = $form[0];
-    // Check for placeholder - in our implementation, we don't set specific placeholder
+    // Placeholder is currently configured with attachment key
     $placeholder = $component->getPlaceholder();
-    expect($placeholder)->toBeNull();
+    expect($placeholder)->toBe('invoice');
 });

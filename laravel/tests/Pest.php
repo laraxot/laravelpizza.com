@@ -11,8 +11,11 @@ pest()->extend(\Tests\TestCase::class)
     ->in('Unit')
     ->in('tests/Feature')
     ->in('tests/Unit')
-    ->in('Modules/*/tests/Feature')
-    ->in('Modules/*/tests/Unit');
+    ->in('../Modules/*/tests/Feature')
+    ->in('../Modules/*/tests/Unit')
+    ->in('../Modules/*/tests/Traits')
+    ->in('../Modules/*/tests/Integration')
+    ->in('../Modules/*/tests/Performance');
 
 /*
 |--------------------------------------------------------------------------

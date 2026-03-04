@@ -28,3 +28,17 @@ Questo file ora funge da indice rapido. La guida completa e modulare e' stata su
 
 - Le regole originali sono state preservate nei file di sezione.
 - Per modifiche future, aggiorna prima il file di sezione pertinente e poi l'indice `00-index.md`.
+
+## Priorita operativa obbligatoria (sempre)
+
+Prima di modificare qualunque file di codice:
+
+1. Ragionare sul problema e sul perimetro della modifica.
+2. Studiare la documentazione del modulo/tema coinvolto (`laravel/Modules/*/docs`, `laravel/Themes/*/docs`).
+3. Aggiornare o creare la documentazione necessaria (regole, memory, skill operative) dentro:
+   - `docs/rules`
+   - `docs/memory`
+   - `docs/skills`
+4. Solo dopo procedere con le modifiche al codice.
+
+Riferimento: `docs/rules/pre-edit-docs-first-rule.md`

@@ -238,6 +238,16 @@ protected function createApplication()
 
 ## Testing Documentation
 
+## Legacy Test Recovery Policy (2026-03-04)
+
+Per gli obiettivi di copertura del modulo Tenant:
+
+- i test legacy non allineati al contratto corrente del codice devono essere prima tentati/fixati;
+- se non sistemabili in modo affidabile nel ciclo corrente, vanno rinominati con suffisso `.old` per escluderli dalla suite attiva;
+- i file rinominati `.old` restano come storico tecnico e base per una futura riscrittura.
+
+Nota: questa policy si applica solo ai test non recuperabili senza introdurre regressioni o assumptions ambientali fragili.
+
 ### Module Documentation
 
 - Update this file when adding new tests

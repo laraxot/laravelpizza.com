@@ -23,9 +23,12 @@ test('ui button component has correct attributes', function () {
         'type' => 'primary',
         'size' => 'md',
         'disabled' => false,
+        'slot' => 'Click me',
     ]);
 
-    expect($view->render())->toContain('btn')->toContain('btn-primary');
+    expect($view->render())->toContain('Click me')
+        ->toContain('inline-flex')
+        ->toContain('bg-gray-800');
 });
 
 test('ui card component renders content', function () {

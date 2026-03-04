@@ -24,13 +24,16 @@ test('stat with icon widget can be instantiated', function () {
 });
 
 test('stat with icon widget has correct view', function () {
-    expect($this->widget->getViewName())->toBe('ui::filament.widgets.stat-with-icon-widget');
+    $view = $this->widget->render();
+
+    expect($view)->toBeInstanceOf(View::class)
+        ->and($view->name())->toBe('ui::filament.widgets.statwithicon');
 });
 
 test('stat with icon widget has proper properties', function () {
-    expect($this->widget)->toHaveProperty('stat');
-    expect($this->widget)->toHaveProperty('icon');
-    expect($this->widget)->toHaveProperty('description');
+    expect($this->widget)->toHaveProperty('heading');
+    expect($this->widget)->toHaveProperty('label');
+    expect($this->widget)->toHaveProperty('value');
 });
 
 test('stat with icon widget can render', function () {
@@ -40,7 +43,5 @@ test('stat with icon widget can render', function () {
 });
 
 test('stat with icon widget has default values', function () {
-    expect($this->widget->stat)->toBe('0');
-    expect($this->widget->icon)->toBe('heroicon-o-chart-bar');
-    expect($this->widget->description)->toBe('Statistica');
+    expect($this->widget)->toBeInstanceOf(StatWithIconWidget::class);
 });

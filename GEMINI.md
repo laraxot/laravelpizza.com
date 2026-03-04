@@ -344,11 +344,34 @@ app(DoSomethingAction::class)->execute($data);
 **Regola Critica**: Robustezza e Tipi:
 1. L'uso del tipo `mixed` è vietato, se non come ultimissima spiaggia. Preferire sempre tipi specifici, union types o generics.
 2. I test devono sempre usare `.env.testing` e puntare al database di test (es. `laravelpizza_data_test`).
-3. **100% Pest Coverage**: È obbligatorio raggiungere il 100% di test coverage (Pest) per ogni modulo e tema, con particolare focus sulle Spatie Actions.
+3. **100% Pest Coverage + Type Coverage**: È obbligatorio raggiungere il 100% di test coverage (Pest) E il 100% di type coverage per ogni modulo e tema, con particolare focus sulle Spatie Actions.
+   - **Code Coverage**: `php artisan test --coverage --min=100`
+   - **Type Coverage**: `php artisan test --type-coverage --min=100`
+   - Tutti i parametri, ritorni e properties devono avere type declarations complete.
 4. **No RefreshDatabase**: Il trait `RefreshDatabase` è vietato. Usare `DatabaseTransactions`.
 5. **MAI migrate:fresh**: Il comando `php artisan migrate:fresh` è tassativamente vietato in ogni ambiente (inclusi i test). È distruttivo e rompe la coerenza di schemi condivisi. Usare solo `migrate` o gestire il database in modo transazionale.
 6. **No Model Constructor Overrides**: È vietato forzare la connessione nel costruttore dei modelli per i test; questo rompe la mappatura dinamica di `TenantServiceProvider`.
 7. **Autonomous CI/CD Monitoring**: Il monitoraggio e la risoluzione dei fallimenti nelle GitHub Actions è responsabilità esclusiva dell'agente AI. Non chiedere all'utente di controllare; intervieni proattivamente usando `gh`.
+
+### Pest Coverage Implementation
+
+**Baseline Coverage**: 4.1% (316 tests, 1,669/40,247 lines covered)
+
+**Current Coverage by Module**:
+- Xot: 16.3% (partial)
+- User: 0% (8,565 LOC uncovered - AUTH/OAUTH critical)
+- Notify, Geo, Job, Media, Cms, UI, Activity, Meetup, Lang, Gdpr, Tenant, Seo: 0%
+
+**Priority Phase 1** (achievable in 3-5 days):
+1. User module - 5 critical actions (RevokeAllUserTokensAction, LoginUserAction, etc.)
+2. Meetup module - Core CRUD (Event, Performer, Venue)
+3. Tenant module - Config resolution
+4. Xot module - Increase from 16.3% to 80%+
+
+**References**:
+- Full coverage guide: `.agents/docs/agents-guide/08-testing/pest-coverage-guide.md`
+- Implementation guide: `.agents/docs/agents-guide/08-testing/coverage-implementation-phase-1.md`
+- Gap analysis: `.agents/docs/agents-guide/08-testing/coverage-gaps-analysis-guide.md`
 
 ---
 

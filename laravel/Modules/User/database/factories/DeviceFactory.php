@@ -27,10 +27,19 @@ class DeviceFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->word(),
-            'type' => 'mobile',
-            'token' => fake()->uuid(),
-            'is_active' => true,
+            'uuid' => fake()->uuid(),
+            'mobile_id' => fake()->uuid(),
+            'languages' => [fake()->languageCode(), fake()->languageCode()],
+            'device' => fake()->randomElement(['iPhone', 'Android', 'Desktop']),
+            'platform' => fake()->randomElement(['iOS', 'Android', 'Windows', 'macOS', 'Linux']),
+            'browser' => fake()->randomElement(['Safari', 'Chrome', 'Firefox', 'Edge']),
+            'version' => fake()->numerify('#.#.#'),
+            'is_robot' => false,
+            'robot' => null,
+            'is_desktop' => false,
+            'is_mobile' => true,
+            'is_tablet' => false,
+            'is_phone' => true,
         ];
     }
 }

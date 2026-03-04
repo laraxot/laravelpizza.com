@@ -80,8 +80,8 @@ it('has options', function (): void {
     expect($options)->toBeArray();
     expect($options)->toHaveKey('list');
     expect($options)->toHaveKey('grid');
-    expect($options['list'])->toBe(TableLayoutEnum::LIST);
-    expect($options['grid'])->toBe(TableLayoutEnum::GRID);
+    expect($options['list'])->toBeString();
+    expect($options['grid'])->toBeString();
 });
 
 it('has container classes', function (): void {

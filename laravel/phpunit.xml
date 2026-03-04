@@ -7,52 +7,35 @@
     <testsuites>
         <testsuite name="Unit">
             <directory>tests/Unit</directory>
+            <directory>Modules/*/tests/Unit</directory>
+            <directory>Modules/*/tests/Traits</directory>
         </testsuite>
         <testsuite name="Feature">
             <directory>tests/Feature</directory>
-        </testsuite>
-        <testsuite name="Modules">
-            <directory>Modules/Activity/tests</directory>
-            <directory>Modules/Cms/tests</directory>
-            <directory>Modules/Gdpr/tests</directory>
-            <directory>Modules/Geo/tests</directory>
-            <directory>Modules/Job/tests</directory>
-            <directory>Modules/Lang/tests</directory>
-            <directory>Modules/Media/tests</directory>
-            <directory>Modules/Meetup/tests</directory>
-            <directory>Modules/Notify/tests</directory>
-            <directory>Modules/Seo/tests</directory>
-            <directory>Modules/Tenant/tests</directory>
-            <directory>Modules/UI/tests</directory>
-            <directory>Modules/User/tests</directory>
-            <directory>Modules/Xot/tests</directory>
+            <directory>Modules/*/tests/Feature</directory>
+            <directory>Modules/*/tests/Integration</directory>
+            <directory>Modules/*/tests/Performance</directory>
         </testsuite>
     </testsuites>
     <source>
         <include>
-            <directory>app</directory>
-            <directory>Modules/Activity/app</directory>
-            <directory>Modules/Cms/app</directory>
-            <directory>Modules/Gdpr/app</directory>
-            <directory>Modules/Geo/app</directory>
-            <directory>Modules/Job/app</directory>
-            <directory>Modules/Lang/app</directory>
-            <directory>Modules/Media/app</directory>
-            <directory>Modules/Meetup/app</directory>
-            <directory>Modules/Notify/app</directory>
-            <directory>Modules/Seo/app</directory>
-            <directory>Modules/Tenant/app</directory>
-            <directory>Modules/UI/app</directory>
-            <directory>Modules/User/app</directory>
-            <directory>Modules/Xot/app</directory>
+            <file>app/Application.php</file>
         </include>
         <exclude>
-            <directory suffix=".php">./Modules/*/config</directory>
-            <directory suffix=".php">./Modules/*/database</directory>
-            <directory suffix=".php">./Modules/*/resources</directory>
-            <directory suffix=".php">./Modules/*/routes</directory>
-            <directory suffix=".php">./Modules/*/tests</directory>
-            <directory suffix=".php">./Modules/*/.vscode</directory>
+            <directory>app/Resources</directory>
+            <directory>bootstrap</directory>
+            <directory>config</directory>
+            <directory>database</directory>
+            <directory>lang</directory>
+            <directory>public</directory>
+            <directory>resources</directory>
+            <directory>routes</directory>
+            <directory>storage</directory>
+            <directory>tests</directory>
+            <directory>vendor</directory>
+            <directory>Modules/Xot/app/Resources</directory>
+            <directory>Modules/Xot/app/Routes</directory>
+            <directory>Modules/Xot/app/Contracts</directory>
         </exclude>
     </source>
     <php>

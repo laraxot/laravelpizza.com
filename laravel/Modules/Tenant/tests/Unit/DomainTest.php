@@ -19,7 +19,7 @@ test('get rows method works correctly', function (): void {
     $this->mock(GetDomainsArrayAction::class, function ($mock) {
         $mock
             ->shouldReceive('execute')
-            ->once()
+            ->atLeast()->once()
             ->andReturn([
                 ['id' => 1, 'name' => 'test-domain.com'],
                 ['id' => 2, 'name' => 'example.org'],

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Throwable;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Providers\XotServiceProvider;
@@ -51,6 +52,30 @@ abstract class XotBaseTestCase extends BaseTestCase
                 );
             });
         }
+    }
+
+    protected function tearDown(): void
+    {
+        // Prevent connection accumulation across a long multi-connection suite.
+        try {
+            if (isset($this->app)) {
+                /** @var \Illuminate\Database\DatabaseManager $db */
+                $db = $this->app->make('db');
+
+                /** @var array<string, mixed> $connections */
+                $connections = (array) config('database.connections', []);
+                foreach (array_keys($connections) as $name) {
+                    $db->disconnect((string) $name);
+                }
+
+                $db->disconnect();
+                $db->purge();
+            }
+        } catch (Throwable) {
+            // Ignore teardown disconnection issues to avoid masking test failures.
+        }
+
+        parent::tearDown();
     }
 
     /**
