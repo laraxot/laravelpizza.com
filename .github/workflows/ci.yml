@@ -36,7 +36,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: laravel
-        run: composer update --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Run PHPStan
         working-directory: laravel
@@ -70,7 +70,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: laravel
-        run: composer update --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Run Pint (check mode)
         working-directory: laravel
@@ -124,7 +124,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: laravel
-        run: composer update --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Setup Environment
         working-directory: laravel
@@ -158,7 +158,7 @@ jobs:
           DB_DATABASE_USER: laravelpizza_user_test
           DB_USERNAME_USER: root
           DB_PASSWORD_USER: password
-        run: ./vendor/bin/pest --compact --no-interaction
+        run: ./vendor/bin/pest --compact
 
   theme-build:
     name: Theme Build

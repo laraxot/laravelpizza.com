@@ -7,27 +7,29 @@ namespace Modules\Xot\Tests\Unit\Actions\File;
 use Modules\Xot\Actions\File\GetViewNameSpacePathAction;
 use Modules\Xot\Tests\TestCase;
 use Illuminate\Support\Facades\View;
-use Mockery;
+use Modules\Xot\Datas\XotData;
+use ReflectionClass;
 
 uses(TestCase::class);
 
-it('gets view namespace path from registered hints correctly', function (): void {
-    $ns = 'test_ns';
-    $path = '/some/view/path';
+it('gets view namespace path from theme fallback correctly', function (): void {
+    $ns = 'pub_theme';
+    $themeName = 'TestTheme';
     
-    // We mock the View finder directly
-    $finder = Mockery::mock(\Illuminate\View\ViewFinderInterface::class);
-    $finder->shouldReceive('getHints')->andReturn([$ns => [$path]]);
-
-    // We mock the View factory
-    $viewFactory = Mockery::mock(\Illuminate\View\Factory::class);
-    $viewFactory->shouldReceive('getViewFinder')->andReturn($finder);
-
-    // Swap the facade
-    View::swap($viewFactory);
+    // Create a concrete instance of XotData
+    $xotData = XotData::from(['pub_theme' => $themeName]);
+    
+    // Inject it into the singleton instance using reflection
+    $reflection = new ReflectionClass(XotData::class);
+    $instanceProperty = $reflection->getProperty('instance');
+    $instanceProperty->setAccessible(true);
+    $instanceProperty->setValue(null, $xotData);
 
     $action = app(GetViewNameSpacePathAction::class);
     $result = $action->execute($ns);
 
-    expect($result)->toBe($path);
+    expect($result)->toBe(base_path('Themes/'.$themeName));
+    
+    // Reset instance for other tests
+    $instanceProperty->setValue(null, null);
 });

@@ -69,7 +69,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: laravel
-        run: composer update --no-interaction --no-progress --prefer-dist --optimize-autoloader
+        run: composer install --no-interaction --no-progress --prefer-dist --optimize-autoloader
 
       - name: Setup Environment
         working-directory: laravel

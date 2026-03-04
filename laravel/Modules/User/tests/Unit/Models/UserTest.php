@@ -6,10 +6,11 @@ use Illuminate\Support\Facades\Hash;
 use Modules\User\Enums\UserType;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 // Import per le funzioni Safe
 
-uses(TestCase::class);
+uses(TestCase::class, DatabaseTransactions::class);
 
 beforeEach(function (): void {
     /** @var User $user */
