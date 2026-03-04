@@ -109,22 +109,6 @@ class Activity extends SpatieActivity
 
     protected $connection = 'activity';
 
-    protected $table = 'activity_log';
-
-    /**
-     * @return string|null
-     */
-    public function getConnectionName()
-    {
-        if (app()->environment('testing')) {
-            $default = config('database.default');
-
-            return is_string($default) ? $default : 'mysql';
-        }
-
-        return $this->connection;
-    }
-
     /** @var list<string> */
     protected $fillable = [
         'id',
@@ -136,6 +120,10 @@ class Activity extends SpatieActivity
         'causer_type',
         'causer_id',
         'properties',
+        'created_at',
+        'updated_at',
+        'updated_by',
+        'created_by',
     ];
 
     // NOTE

@@ -10,15 +10,11 @@ use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
 
-if (! class_exists(TestConcreteBaseModel::class)) {
-    class TestConcreteBaseModel extends BaseModel
+beforeEach(function () {
+    $this->baseModel = new class extends BaseModel
     {
         protected $table = 'test_table';
-    }
-}
-
-beforeEach(function () {
-    $this->baseModel = new TestConcreteBaseModel;
+    };
 });
 
 test('base model extends eloquent model', function () {

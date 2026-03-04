@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Xot\Contracts\ExtraContract;
 use Modules\Xot\Models\Traits\HasExtraTrait;
 use Tests\TestCase;

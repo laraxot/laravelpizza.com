@@ -8,6 +8,10 @@ use Modules\Activity\Actions\ActivityLogger;
 use Modules\Activity\Models\Activity;
 use Modules\User\Models\User;
 
+beforeEach(function () {
+    Activity::truncate();
+});
+
 test('ActivityLogger can log basic activity', function () {
     $logger = new ActivityLogger;
 

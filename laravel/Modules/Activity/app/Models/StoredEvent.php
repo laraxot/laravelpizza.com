@@ -69,20 +69,6 @@ class StoredEvent extends SpatieStoredEvent
 
     protected $table = 'stored_events';
 
-    /**
-     * @return string|null
-     */
-    public function getConnectionName()
-    {
-        if (app()->environment('testing')) {
-            $default = config('database.default');
-
-            return is_string($default) ? $default : 'mysql';
-        }
-
-        return $this->connection;
-    }
-
     protected $fillable = [
         'id',
         'aggregate_uuid',

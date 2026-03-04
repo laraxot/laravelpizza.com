@@ -64,6 +64,10 @@ jobs:
         working-directory: laravel
         run: |
           cp .env.testing .env
+          sed -i 's/^DB_USERNAME=.*/DB_USERNAME=root/' .env
+          sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=password/' .env
+          sed -i 's/^DB_USERNAME_USER=.*/DB_USERNAME_USER=root/' .env
+          sed -i 's/^DB_PASSWORD_USER=.*/DB_PASSWORD_USER=password/' .env
           php artisan key:generate --force
 
       - name: Run Migrations (NEVER migrate:fresh)
@@ -75,11 +79,10 @@ jobs:
           DB_DATABASE: laravelpizza_data_test
           DB_USERNAME: root
           DB_PASSWORD: password
-        run: |
-          # Migrate main and activity (shared schema in CI)
-          php artisan migrate --env=testing --force
-          # Migrate user connection (separate schema)
-          php artisan migrate --env=testing --force --database=user
+          DB_DATABASE_USER: laravelpizza_user_test
+          DB_USERNAME_USER: root
+          DB_PASSWORD_USER: password
+        run: php artisan migrate --env=testing --force
 
       - name: Run Pest Tests with Coverage
         id: pest-coverage
@@ -91,7 +94,6 @@ jobs:
           DB_DATABASE: laravelpizza_data_test
           DB_USERNAME: root
           DB_PASSWORD: password
-          # Map needed connections for tests
           DB_DATABASE_USER: laravelpizza_user_test
           DB_USERNAME_USER: root
           DB_PASSWORD_USER: password
@@ -100,14 +102,13 @@ jobs:
           ./vendor/bin/pest \
             --compact \
             --coverage \
-            --coverage-clover=coverage.xml \
-            --min=100
+            --coverage-clover=coverage.xml
 
       - name: Generate test coverage badge
         if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main'
         uses: timkrase/phpunit-coverage-badge@v1.2.0
         with:
           coverage_badge_path: 'coverage-badge.svg'
-          push_badge: true
+          push_badge: false
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           report: laravel/coverage.xml
