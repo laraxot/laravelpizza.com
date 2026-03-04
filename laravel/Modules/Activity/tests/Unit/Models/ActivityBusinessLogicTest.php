@@ -31,6 +31,10 @@ describe('Activity Business Logic', function () {
             'causer_type',
             'causer_id',
             'properties',
+            'created_at',
+            'updated_at',
+            'updated_by',
+            'created_by',
         ];
 
         expect($property->getValue($reflection->newInstanceWithoutConstructor()))->toEqual($expectedFillable);

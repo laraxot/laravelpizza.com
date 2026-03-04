@@ -1,237 +1,241 @@
-# MCP Configuration for LaravelPizza
+# MCP Server Configuration - Meetup Theme
 
-## Overview
-
-This document describes the MCP (Model Context Protocol) configuration setup for the LaravelPizza project, enabling autonomous AI agent capabilities across multiple development environments.
-
-## Project Structure
-
-```
-bashscripts/
-├── ai/
-│   ├── .claude/mcp.json       # Claude Desktop configuration
-│   ├── .cursor/mcp.json       # Cursor IDE configuration
-│   ├── .windsurf/mcp.json     # Windsurf IDE configuration
-│   ├── .antigravity/mcp.json  # Antigravity custom agent configuration
-│   └── logs/                  # MCP server logs
-└── mcp/
-    ├── start-all-mcp.sh       # Startup script
-    └── stop-all-mcp.sh        # Stop script
-```
-
-## MCP Servers
-
-### 1. Filesystem Server
-- **Port**: 8080
-- **Purpose**: Read and write files in the LaravelPizza project
-- **Allowed Directories**: `/var/www/_bases/base_laravelpizza`
-- **Command**: `npx -y @modelcontextprotocol/server-filesystem`
-
-### 2. Git Server
-- **Port**: 8081
-- **Purpose**: Version control operations (commit, branch, merge, etc.)
-- **Repository**: `/var/www/_bases/base_laravelpizza`
-- **Command**: `npx -y mcp-server-git`
-
-### 3. Memory Server
-- **Port**: 8082
-- **Purpose**: Persistent memory for context preservation
-- **Memory Path**: `/var/www/_bases/base_laravelpizza/docs`
-- **Command**: `npx -y @modelcontextprotocol/server-memory`
-
-### 4. Puppeteer Server
-- **Port**: 8083
-- **Purpose**: Web browser automation and testing
-- **Command**: `npx -y @modelcontextprotocol/server-puppeteer`
-
-### 5. Sequential Thinking Server
-- **Port**: 8084
-- **Purpose**: Complex reasoning and step-by-step problem solving
-- **Command**: `npx -y @modelcontextprotocol/server-sequential-thinking`
-
-### 6. Time Server
-- **Port**: 8085
-- **Purpose**: Current time and date operations
-- **Command**: `python -m mcp_server_time`
-
-### 7. Fetch Server
-- **Port**: 8086
-- **Purpose**: HTTP requests and web scraping
-- **Command**: `npx -y @modelcontextprotocol/server-fetch`
-
-### 8. MySQL Server
-- **Port**: 3306
-- **Purpose**: Database queries and operations
-- **Database**: `laravelpizza_data`
-- **Credentials**: marco/marco
-- **Command**: `npx -y @modelcontextprotocol/server-mysql`
-
-### 9. Redis Server
-- **Port**: 6379
-- **Purpose**: Cache and queue operations
-- **Command**: `npx -y @iflow-mcp/redis-mcp-server`
-
-### 10. GitHub Server
-- **Type**: HTTP API
-- **Purpose**: GitHub integration (issues, PRs, releases)
-- **Endpoint**: `https://api.github.com/mcp`
-- **Auth**: Bearer token from `GITHUB_TOKEN` environment variable
-
-## AI Agent Configurations
-
-### Claude Desktop
-- **Config File**: `bashscripts/ai/.claude/mcp.json`
-- **Integration**: Native MCP support
-- **Features**: Full MCP server access, memory persistence, autonomous mode
-
-### Cursor IDE
-- **Config File**: `bashscripts/ai/.cursor/mcp.json`
-- **Integration**: Native MCP support
-- **Features**: Code intelligence, git integration, testing support
-
-### Windsurf
-- **Config File**: `bashscripts/ai/.windsurf/mcp.json`
-- **Integration**: Native MCP support
-- **Features**: UI component servers (flowbite, shadcn, daisyui, mui), deepwiki integration
-
-### Antigravity (Custom Agent)
-- **Config File**: `bashscripts/ai/.antigravity/mcp.json`
-- **Integration**: Custom MCP implementation
-- **Features**: Autonomous mode, custom workflows, specialized tools
-
-## Usage
-
-### Starting All MCP Servers
-
-```bash
-bashscripts/mcp/start-all-mcp.sh
-```
-
-This will:
-1. Check which servers are already running
-2. Start any servers that aren't running
-3. Display status of all servers
-4. Show configuration file locations
-5. Show log file locations
-
-### Stopping All MCP Servers
-
-```bash
-bashscripts/mcp/stop-all-mcp.sh
-```
-
-This will:
-1. Gracefully stop all MCP servers
-2. Force kill if graceful shutdown fails
-3. Display status of each server
-
-### Viewing MCP Logs
-
-```bash
-# View specific server log
-tail -f bashscripts/ai/logs/mysql-mcp.log
-
-# View all logs
-ls -la bashscripts/ai/logs/
-```
-
-## Database Configuration
-
-The MySQL MCP server is configured with:
-
-```json
-{
-  "MYSQL_HOST": "127.0.0.1",
-  "MYSQL_PORT": "3306",
-  "MYSQL_USER": "marco",
-  "MYSQL_PASSWORD": "marco",
-  "MYSQL_DATABASE": "laravelpizza_data"
-}
-```
-
-For testing, use `laravelpizza_data_test` database.
-
-## Critical Rules for MCP Usage
-
-1. **Always check if servers are running** before attempting operations
-2. **Use the startup script** to ensure proper initialization
-3. **Monitor logs** for errors and warnings
-4. **Stop servers gracefully** using the stop script
-5. **Never hardcode credentials** in MCP configs (use environment variables)
-6. **Test database operations** on test database first
-7. **Use memory server** for context preservation across sessions
-
-## Troubleshooting
-
-### Server Won't Start
-1. Check if port is already in use: `lsof -i :8080`
-2. Check logs: `bashscripts/ai/logs/*-mcp.log`
-3. Verify Node.js is installed: `node --version`
-4. Clear NPM cache: `npm cache clean --force`
-
-### Connection Refused
-1. Verify server is running: `lsof -i :<port>`
-2. Check firewall settings
-3. Verify configuration file syntax
-4. Restart all MCP servers
-
-### Database Connection Issues
-1. Verify MySQL is running: `systemctl status mysql`
-2. Check credentials in `.env` file
-3. Test connection: `mysql -u marco -p -h 127.0.0.1`
-4. Use test database for MCP operations
-
-## Autonomous Agent Features
-
-The MCP configuration enables:
-
-1. **File Operations**: Read, write, search files autonomously
-2. **Git Operations**: Commit, branch, merge, push automatically
-3. **Database Queries**: Execute SQL, retrieve data, update records
-4. **Web Testing**: Puppeteer for automated browser testing
-5. **Complex Reasoning**: Sequential thinking for multi-step problems
-6. **Context Preservation**: Memory server for long-term knowledge
-7. **API Integration**: Fetch server for external data sources
-8. **Version Control**: Git server for code management
-9. **Testing Automation**: Run Pest tests, verify functionality
-10. **Documentation**: Auto-generate and update docs
-
-## Security Considerations
-
-1. **Never commit MCP configs with credentials**
-2. **Use environment variables** for sensitive data
-3. **Restrict filesystem access** to project directory
-4. **Monitor MCP logs** for unauthorized access
-5. **Use read-only operations** where possible
-6. **Test operations** on non-production environments first
-
-## Future Enhancements
-
-1. **Add more MCP servers**: Elasticsearch, MongoDB, PostgreSQL
-2. **Implement MCP-based testing**: Automated test generation
-3. **Add MCP monitoring**: Real-time server health checks
-4. **Create MCP workflows**: Pre-defined agent task sequences
-5. **Implement MCP caching**: Reduce redundant operations
-6. **Add MCP logging**: Detailed operation audit trail
-
-## Related Documentation
-
-- `laravel/Modules/Xot/docs/mcp-integration.md` - Module-specific MCP usage
-- `laravel/Themes/Meetup/docs/mcp-frontend.md` - Frontend MCP automation
-- `docs/mcp-architecture.md` - MCP system architecture
-- `docs/ai-agent-guidelines.md` - AI agent development guidelines
-
-## Support
-
-For issues or questions about MCP configuration:
-1. Check this documentation
-2. Review MCP logs in `bashscripts/ai/logs/`
-3. Verify configuration files are valid JSON
-4. Test with manual MCP server startup
-5. Contact the MCP server maintainers
+**Status**: ✅ Configured
+**MCP Servers**: Asana, ClickUp, Filesystem, Database, **cursor-browser-extension**, Redmine (Planned)
 
 ---
 
-**
-**Maintained By**: iFlow CLI  
-**Project**: LaravelPizza - Modular Laravel Framework
+## 📋 Overview
+
+The Meetup theme's MCP configuration enables AI assistants to interact with:
+- **Asana Work Graph** - Frontend development task tracking
+- **ClickUp Workspace** - Advanced task workflows and time tracking
+- **Redmine** - Project management (planned, requires self-hosted instance)
+- **Filesystem** - Theme assets, components, and page access
+- **Database** - Theme configuration and settings inspection
+- **cursor-browser-extension** - Navigazione e screenshot per confronto grafico con laravelpizza.com
+
+---
+
+## 🔧 Configuration
+
+### Active MCP Servers
+
+```json
+{
+  "mcpServers": {
+    "asana": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://mcp.asana.com/sse"],
+      "description": "Asana Work Graph integration"
+    },
+    "clickup": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.clickup.com/mcp"],
+      "description": "ClickUp workspace integration"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_laravelpizza/laravel"],
+      "description": "Access to Meetup theme files"
+    },
+    "database": {
+      "command": "npx",
+      "args": ["-y", "@bytebase/dbhub"],
+      "env": {
+        "DATABASE_URL": "sqlite:///var/www/_bases/base_laravelpizza/laravel/database/database.sqlite"
+      },
+      "description": "SQLite database queries"
+    }
+  }
+}
+```
+
+---
+
+## 🚀 Usage Examples
+
+### Asana Integration
+```bash
+# Create task
+"Create task in 'LaravelPizza - Meetup Theme' project: 'Implement about page with Tailwind'"
+
+# Track component development
+"Create task: 'Create reusable card component for events'"
+
+# Monitor styling improvements
+"Create task: 'Align homepage hero section with laravelpizza.com design'"
+```
+
+### ClickUp Integration
+```bash
+# Create task
+"Create task in 'Meetup Theme Development' space: 'Implement about page with Tailwind'"
+
+# Update status
+"Update task 'Create reusable card component' status to 'In Progress'"
+
+# Log time
+"Log 3 hours on task 'Align homepage hero section'"
+```
+
+### Redmine Integration (Planned)
+```bash
+# Create issue
+"Create issue in project 'Meetup Theme': task 'Implement about page with Tailwind' (Priority: High)"
+```
+
+### Filesystem Access
+
+```bash
+# Read layout components
+"Read file: Themes/Meetup/resources/views/layouts/app.blade.php"
+
+# Analyze Volt components
+"List files in Themes/Meetup/resources/views/livewire/"
+
+# Check Tailwind configuration
+"Read file: Themes/Meetup/tailwind.config.js"
+```
+
+### Database Queries
+
+```bash
+# Check theme settings
+"Query: SELECT * FROM theme_settings WHERE theme = 'meetup'"
+
+# Analyze metatag configuration
+"Query: SELECT * FROM metatags WHERE page IN ('home', 'events', 'about')"
+
+# Check navigation items
+"Query: SELECT * FROM navigation WHERE theme = 'meetup' ORDER BY sort_order"
+```
+
+### Confronto grafica con laravelpizza.com (cursor-browser-extension)
+
+Per verificare se la nostra grafica è uguale a https://laravelpizza.com/:
+
+1. **Avviare l'app locale** (da `laravel/`): `composer dev` oppure `php artisan serve` su `http://127.0.0.1:8002`.
+2. **Aprire il sito originale**: usare MCP `browser_navigate` con `url: "https://laravelpizza.com/"`.
+3. **Catturare screenshot**: usare `browser_take_screenshot` con `fullPage: true` e `filename: "laravelpizza-com-home.png"`.
+4. **Aprire la nostra home**: `browser_navigate` con `url: "http://127.0.0.1:8002/it"`.
+5. **Screenshot della nostra home**: `browser_take_screenshot` con `fullPage: true` e `filename: "nostra-home.png"`.
+6. **Confronto**: confrontare visivamente i due screenshot (o usare diff immagini). Per struttura DOM/accessibilità usare `browser_snapshot` su entrambe le pagine.
+
+**Tool MCP utilizzati** (server `cursor-browser-extension`):
+- `browser_navigate` – navigazione a un URL
+- `browser_tabs` (action: list) – elenco tab aperti
+- `browser_snapshot` – snapshot accessibilità della pagina (per ref e interazioni)
+- `browser_take_screenshot` – screenshot viewport o fullPage (per confronto grafico)
+
+Riferimento analisi statica: [homepage-visual-alignment-analysis](homepage-visual-alignment-analysis.md), [visual-comparison-analysis](visual-comparison-analysis.md). Doc dedicata: [grafica-confronto-laravelpizza](grafica-confronto-laravelpizza.md).
+
+---
+
+## 📊 MCP Servers Comparison
+
+| Server | Status | Auth | Best For |
+|--------|--------|------|----------|
+| **Asana** | ✅ Active | OAuth | Established workflows |
+| **ClickUp** | ✅ Active | OAuth | Time tracking, reports |
+| **Redmine** | 🔄 Planned | API Key | Self-hosted, custom workflows |
+| **Filesystem** | ✅ Active | N/A | Direct file access |
+| **Database** | ✅ Active | N/A | Schema inspection |
+| **cursor-browser-extension** | ✅ Active | N/A | Confronto grafica, screenshot, snapshot DOM |
+
+---
+
+## 📊 Integration with Roadmap
+
+### Roadmap Tasks → Asana
+
+Map Meetup theme roadmap tasks to Asana:
+
+| Roadmap Task | Asana Project | Priority |
+|--------------|---------------|----------|
+| Component library | LaravelPizza - Meetup Theme | High |
+| About page completion | LaravelPizza - Meetup Theme | High |
+| Interactive forms | LaravelPizza - Meetup Theme | Medium |
+| Visual parity with laravelpizza.com | LaravelPizza - Meetup Theme | High |
+
+---
+
+## 🔌 Editor-Specific Configurations
+
+### Claude Desktop
+- **Config File**: `~/.config/claude/claude_desktop_config.json`
+- **Server URL**: `https://mcp.asana.com/sse`
+
+### Cursor
+- **Config File**: `/var/www/_bases/base_laravelpizza/laravel/.cursor-mcp.json`
+- **Command**: `npx mcp-remote https://mcp.asana.com/sse`
+
+### Windsurf
+- **Config File**: `/var/www/_bases/base_laravelpizza/laravel/.windsurf-mcp.json`
+- **Command**: `npx mcp-remote https://mcp.asana.com/sse`
+
+---
+
+## 📝 Best Practices for Meetup Theme
+
+1. **Task Naming Convention**:
+   ```
+   "[Theme] Implement {component} with Tailwind"
+   "[Theme] Create Folio page for {page}"
+   "[Theme] Fix styling issue in {component}"
+   ```
+
+2. **Project Organization**:
+   - Create dedicated Asana project: "LaravelPizza - Meetup Theme"
+   - Use sections: "Components", "Pages", "Styling", "Testing", "Documentation"
+
+3. **Tagging System**:
+   - `theme-components` - Component related tasks
+   - `theme-folio` - Folio page tasks
+   - `theme-tailwind` - Styling tasks
+   - `theme-phpstan` - PHPStan compliance tasks
+
+4. **Use Asana for**: Established workflows, team collaboration
+5. **Use ClickUp for**: Time tracking, executive reports
+6. **Use Redmine for**: Self-hosted requirements (when implemented)
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**MCP Server Not Connecting**:
+```bash
+# Check MCP server status
+# Verify authentication tokens
+# Restart MCP client
+```
+
+**Filesystem Access Denied**:
+```bash
+# Verify file permissions
+# Check path configuration
+# Ensure .mcp.json has correct paths
+```
+
+**Database Query Fails**:
+```bash
+# Verify DATABASE_URL
+# Check SQLite file exists
+# Validate database schema
+```
+
+---
+
+## 📚 Related Documentation
+
+- [Asana MCP Configuration](../../../../docs/mcp-asana-configuration.md)
+- [ClickUp MCP Configuration](../../../../docs/mcp-clickup-configuration.md)
+- [Redmine MCP Configuration](../../../../docs/mcp-redmine-configuration.md)
+- [Meetup Theme Roadmap](./roadmap-[date].md)
+
+---
+
+**Theme**: Meetup (Frontend)
+**MCP Version**: 2.0.0

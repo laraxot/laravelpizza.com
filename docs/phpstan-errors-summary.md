@@ -1,54 +1,109 @@
-# PHPStan Errors Summary - Level 10
+# PHPStan Level 10 Errors Summary - 2026-01-09
 
-This document summarizes the current state of PHPStan errors across all modules as of 2026-02-16.
-
-## 📊 Summary Table
-
-| Module | Files with Errors | Total Errors | Priority | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| **Xot** | 0 | 0 | 1 - Core Engine | ✅ Complete |
-| **User** | 0 | 0 | 2 - Auth & Core | ✅ Complete |
-| **Meetup** | 0 | 0 | 3 - Theme Content | ✅ Complete |
-| **Gdpr** | 0 | 0 | 4 - Compliance | ✅ Complete |
-
-**Total Errors**: 0
+**Data**: 2026-01-09  
+**Livello PHPStan**: 10  
+**Status**: 🧘 **IN CORREZIONE**
 
 ---
 
-## 🎯 Implementation Complete
+## 📊 Riepilogo Completo Errori
 
-All modules are now PHPStan Level 10 compliant!
+### Totale Errori: 48
 
-### Fixed Issues
-
-1. **Xot Module**
-   - EnumTrait.php return type fix: `array<string, TextInput>` → `array<int|string, TextInput>`
-
-2. **User Module**
-   - Removed HasXotFactory trait where factory doesn't exist
-   - Fixed nullsafe with ?? operator in UserDropdown widget
-   - Fixed BaseUser constructor fallback using setAttribute()
-
-3. **Meetup Module**
-   - ImportEventsFromJsonAction: Added proper type casting for array parameters
-   - SeedEventsFromJsonAction: Fixed array_pad type issue
-   - EventResource: Fixed DatePicker filter with explicit checks
-   - EventsTimelineChart: Fixed getAttribute() type issue
-   - Fixed Tablecolumn typo → TextColumn
-
-4. **Gdpr Module**
-   - Removed factory references from docblocks where factories don't exist
+**Moduli con Errori**:
+- Cms: 3 errori (varTag.variableNotFound)
+- Geo: 7 errori (return.type + varTag.variableNotFound)
+- Job: 3 errori (return.type + varTag.variableNotFound)
+- Meetup: 2 errori (varTag.variableNotFound)
+- Notify: 4 errori (return.type + varTag.variableNotFound)
+- Tenant: 2 errori (return.type + varTag.variableNotFound)
+- UI: 4 errori (return.type + varTag.variableNotFound)
+- User: 5 errori (return.type + varTag.variableNotFound)
 
 ---
 
-## 🔧 Common Fix Patterns Documented
+## ✅ Correzioni Applicate
 
-See `.claude/skills/phpstan-level10/SKILL.md` for complete patterns:
+### Modulo Cms
+- ✅ `Conf.php` - Corretto varTag.variableNotFound
+- ✅ `HasBlocks.php` - Corretto varTag.variableNotFound
+- ✅ `ThemeComposer.php` - Corretto varTag.variableNotFound (2 errori)
 
-- Factory @method removal
-- HasXotFactory trait removal
-- Array type casting for JSON data
-- Filter DatePicker fixes
-- TablColumn typo fixes
-- Nullsafe with ?? fixes
-- Model constructor fallback with setAttribute()
+### Modulo Meetup
+- ✅ `CreateEventAction.php` - Corretto varTag.variableNotFound
+- ✅ `DeleteEventAction.php` - Corretto varTag.variableNotFound
+
+### Modulo Job
+- ✅ `ScheduleOptions.php` - Corretto return.type + varTag.variableNotFound
+- ✅ `CreateSchedule.php` - Corretto varTag.variableNotFound
+- ✅ `ScheduleService.php` - Corretto varTag.variableNotFound
+
+---
+
+## 📋 Roadmap Create
+
+### Moduli con Roadmap
+1. ✅ **Cms**: `phpstan-errors-roadmap-2026-01-09.md`
+2. ✅ **Job**: `phpstan-errors-roadmap-2026-01-09.md`
+3. ✅ **Meetup**: `phpstan-errors-roadmap-2026-01-09.md`
+4. ✅ **Notify**: `phpstan-errors-roadmap-2026-01-09.md`
+5. ✅ **Tenant**: `phpstan-errors-roadmap-2026-01-09.md`
+6. ✅ **UI**: `phpstan-errors-roadmap-2026-01-09.md`
+7. ✅ **User**: `phpstan-errors-roadmap-2026-01-09.md`
+8. ✅ **Geo**: Già esistente `phpstan-error-resolution-roadmap-2026-01-09.md`
+
+---
+
+## 🎯 Pattern di Correzione Applicati
+
+### Pattern 1: varTag.variableNotFound
+**Soluzione**:
+```php
+// ❌ PRIMA
+/** @var Type $variable */
+return expression();
+
+// ✅ DOPO
+$variable = expression();
+/** @var Type $variable */
+return $variable;
+```
+
+### Pattern 2: return.type in Closure
+**Soluzione**:
+```php
+// ❌ PRIMA
+/** @var Type $result */
+return DB::transaction(function () { ... });
+
+// ✅ DOPO
+return DB::transaction(function (): Type { ... });
+```
+
+### Pattern 3: return.type con Assert
+**Soluzione**:
+```php
+// ❌ PRIMA
+return $mixedValue;
+
+// ✅ DOPO
+$value = $mixedValue;
+Assert::isArray($value);
+/** @var array<string, mixed> $value */
+return $value;
+```
+
+---
+
+## 📝 Prossimi Passi
+
+1. Continuare correzioni per moduli rimanenti
+2. Verificare ogni file con PHPStan, PHPMD, PHPInsights
+3. Documentare pattern applicati
+4. Commit modifiche
+
+---
+
+**Status**: 🧘 **IN CORREZIONE**
+
+**
