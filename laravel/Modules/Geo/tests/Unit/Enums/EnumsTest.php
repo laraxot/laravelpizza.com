@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Modules\Geo\Enums\AddressItemEnum;
 use Modules\Geo\Enums\AddressTypeEnum;
 

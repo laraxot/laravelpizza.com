@@ -45,7 +45,7 @@ test('diff assoc recursive action throws exception for non-array item', function
     $arr1 = [
         'a' => 'not an array',
     ];
-    
+
     $action = app(DiffAssocRecursiveAction::class);
-    expect(fn() => $action->execute($arr1, []))->toThrow(\Exception::class);
+    expect(fn () => $action->execute($arr1, []))->toThrow(\Exception::class);
 });

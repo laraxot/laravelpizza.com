@@ -25,6 +25,7 @@ use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
+ *
  * @method static InformationSchemaTableFactory          factory($count = null, $state = [])
  * @method static Builder<static>|InformationSchemaTable newModelQuery()
  * @method static Builder<static>|InformationSchemaTable newQuery()
@@ -40,6 +41,7 @@ use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
  * @method static Builder<static>|InformationSchemaTable whereUpdatedBy($value)
  * @method static int                                    getModelCount(class-string<Model> $modelClass)
  * @method static void                                   updateModelCount(class-string<Model> $modelClass, int $total)
+ *
  * @mixin \Eloquent
  */
 class InformationSchemaTable extends BaseModel implements SushiToJsonContract

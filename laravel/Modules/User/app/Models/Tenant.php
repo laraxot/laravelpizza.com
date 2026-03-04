@@ -19,6 +19,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder|Tenant newModelQuery()
  * @method static Builder|Tenant newQuery()
  * @method static Builder|Tenant query()
+ *
  * @property EloquentCollection<int, Model&UserContract> $members
  * @property int|null                                    $members_count
  * @property ProfileContract|null                        $creator
@@ -28,7 +29,9 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property TenantUser                                  $pivot
  * @property EloquentCollection<int, User>               $users
  * @property int|null                                    $users_count
+ *
  * @mixin IdeHelperTenant
+ *
  * @property string               $id
  * @property string               $name
  * @property string|null          $slug
@@ -39,6 +42,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property Carbon|null          $updated_at
  * @property Carbon|null          $deleted_at
  * @property ProfileContract|null $deleter
+ *
  * @method static Builder<static>|Tenant whereCreatedAt($value)
  * @method static Builder<static>|Tenant whereDatabase($value)
  * @method static Builder<static>|Tenant whereDeletedAt($value)
@@ -48,6 +52,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|Tenant whereName($value)
  * @method static Builder<static>|Tenant whereSlug($value)
  * @method static Builder<static>|Tenant whereUpdatedAt($value)
+ *
  * @property string|null $email_address
  * @property string|null $phone
  * @property string|null $mobile
@@ -58,6 +63,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property string|null $created_by
  * @property string|null $deleted_by
  * @property string|null $settings
+ *
  * @method static \Modules\User\Database\Factories\TenantFactory factory($count = null, $state = [])
  * @method static Builder<static>|Tenant                         whereAddress($value)
  * @method static Builder<static>|Tenant                         whereCreatedBy($value)
@@ -69,6 +75,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|Tenant                         whereSecondaryColor($value)
  * @method static Builder<static>|Tenant                         whereSettings($value)
  * @method static Builder<static>|Tenant                         whereUpdatedBy($value)
+ *
  * @property string|null $email_address
  * @property string|null $phone
  * @property string|null $mobile
@@ -79,6 +86,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property string|null $created_by
  * @property string|null $deleted_by
  * @property string|null $settings
+ *
  * @method static \Modules\User\Database\Factories\TenantFactory factory($count = null, $state = [])
  * @method static Builder<static>|Tenant                         whereAddress($value)
  * @method static Builder<static>|Tenant                         whereCreatedBy($value)
@@ -91,8 +99,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|Tenant                         whereSettings($value)
  * @method static Builder<static>|Tenant                         whereUpdatedBy($value)
  *                                                                                                   >>>>>>> da38c10 (.)
+ *
  * @property string|null $trial_ends_at
+ *
  * @method static Builder<static>|Tenant whereTrialEndsAt($value)
+ *
  * @mixin \Eloquent
  */
 class Tenant extends BaseTenant

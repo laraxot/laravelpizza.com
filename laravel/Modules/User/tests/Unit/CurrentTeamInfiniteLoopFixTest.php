@@ -20,7 +20,7 @@ test('currentTeam getter does not crash when user has no teams', function (): vo
     // Arrange: Crea un utente senza team
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'ctifix-no-teams-' . uniqid() . '@example.com',
+        'email' => 'ctifix-no-teams-'.uniqid().'@example.com',
         'current_team_id' => null,
     ]);
 
@@ -36,7 +36,7 @@ test('currentTeam getter is side-effect-free', function (): void {
     // Arrange: Crea un utente senza current_team_id
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'ctifix-side-effect-' . uniqid() . '@example.com',
+        'email' => 'ctifix-side-effect-'.uniqid().'@example.com',
         'current_team_id' => null,
     ]);
 
@@ -57,7 +57,7 @@ test('currentTeam getter does not trigger save operations', function (): void {
     // Arrange: Crea un utente
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'ctifix-no-save-' . uniqid() . '@example.com',
+        'email' => 'ctifix-no-save-'.uniqid().'@example.com',
     ]);
 
     $updatedAtBefore = $user->updated_at;
@@ -74,7 +74,7 @@ test('initializeCurrentTeam sets personal team correctly', function (): void {
     // Arrange: Crea un utente con un personal team
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'ctifix-init-' . uniqid() . '@example.com',
+        'email' => 'ctifix-init-'.uniqid().'@example.com',
         'current_team_id' => null,
     ]);
 
@@ -96,7 +96,7 @@ test('initializeCurrentTeam does not override existing current_team_id', functio
     // Arrange: Crea un utente con un team già impostato
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'ctifix-no-override-' . uniqid() . '@example.com',
+        'email' => 'ctifix-no-override-'.uniqid().'@example.com',
     ]);
 
     $team1 = Team::factory()->create([
@@ -126,7 +126,7 @@ test('initializeCurrentTeam sets first available team if no personal team', func
     // Arrange: Crea un utente con un team non-personal
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'ctifix-first-team-' . uniqid() . '@example.com',
+        'email' => 'ctifix-first-team-'.uniqid().'@example.com',
         'current_team_id' => null,
     ]);
 
@@ -148,7 +148,7 @@ test('initializeCurrentTeam handles user without teams gracefully', function ():
     // Arrange: Crea un utente senza team
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'ctifix-no-teams-init-' . uniqid() . '@example.com',
+        'email' => 'ctifix-no-teams-init-'.uniqid().'@example.com',
         'current_team_id' => null,
     ]);
 
@@ -164,7 +164,7 @@ test('currentTeam getter does not cause N+1 queries', function (): void {
     // Arrange: Crea un utente con un team
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'ctifix-n1-' . uniqid() . '@example.com',
+        'email' => 'ctifix-n1-'.uniqid().'@example.com',
     ]);
 
     $team = Team::factory()->create([
@@ -192,7 +192,7 @@ test('currentTeam getter works correctly with existing team', function (): void 
     // Arrange: Crea un utente con un team
     $user = User::factory()->create([
         'name' => 'Test User',
-        'email' => 'ctifix-with-team-' . uniqid() . '@example.com',
+        'email' => 'ctifix-with-team-'.uniqid().'@example.com',
     ]);
 
     $team = Team::factory()->create([
@@ -217,7 +217,7 @@ test('user creation does not trigger infinite loop', function (): void {
     // Arrange & Act: Crea un nuovo utente (simula make:filament-user)
     $user = User::create([
         'name' => 'New User',
-        'email' => 'ctifix-new-user-' . uniqid() . '@example.com',
+        'email' => 'ctifix-new-user-'.uniqid().'@example.com',
         'password' => bcrypt('password'),
     ]);
 
@@ -237,7 +237,7 @@ test('multiple users can be created without issues', function (): void {
     for ($i = 1; $i <= 5; ++$i) {
         $users[] = User::create([
             'name' => "User {$i}",
-            'email' => 'ctifix-multi-' . $i . '-' . uniqid() . '@example.com',
+            'email' => 'ctifix-multi-'.$i.'-'.uniqid().'@example.com',
             'password' => bcrypt('password'),
         ]);
     }

@@ -10,4 +10,3 @@ class Probe extends Model
 {
     protected $guarded = [];
 }
-

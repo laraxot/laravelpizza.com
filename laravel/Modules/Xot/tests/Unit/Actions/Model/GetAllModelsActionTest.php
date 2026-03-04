@@ -16,8 +16,8 @@ it('returns array of model class strings', function (): void {
     try {
         $result = $this->action->execute();
         expect($result)->toBeArray();
-    } catch (\Throwable $e) {
-        $this->markTestSkipped('Module directories not available in test environment: ' . $e->getMessage());
+    } catch (Throwable $e) {
+        $this->markTestSkipped('Module directories not available in test environment: '.$e->getMessage());
     }
 });
 
@@ -25,8 +25,8 @@ it('includes models from multiple modules', function (): void {
     try {
         $result = $this->action->execute();
         expect(count($result))->toBeGreaterThanOrEqual(0);
-    } catch (\Throwable $e) {
-        $this->markTestSkipped('Module directories not available in test environment: ' . $e->getMessage());
+    } catch (Throwable $e) {
+        $this->markTestSkipped('Module directories not available in test environment: '.$e->getMessage());
     }
 });
 
@@ -34,7 +34,7 @@ it('filters out non-string module names', function (): void {
     try {
         $result = $this->action->execute();
         expect($result)->toBeArray();
-    } catch (\Throwable $e) {
-        $this->markTestSkipped('Module directories not available in test environment: ' . $e->getMessage());
+    } catch (Throwable $e) {
+        $this->markTestSkipped('Module directories not available in test environment: '.$e->getMessage());
     }
 });

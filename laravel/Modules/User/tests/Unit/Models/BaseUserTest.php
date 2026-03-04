@@ -43,7 +43,7 @@ test('base user has authentication traits', function () {
     // Verify Notifiable trait is present recursively
     $allTraits = [];
     $class = get_class($this->baseUser);
-    while ($class !== false) {
+    while (false !== $class) {
         $allTraits = array_merge($allTraits, class_uses($class) ?: []);
         $class = get_parent_class($class);
     }

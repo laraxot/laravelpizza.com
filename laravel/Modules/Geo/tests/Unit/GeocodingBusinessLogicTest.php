@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Geo\Tests\Unit;
 
-use Tests\TestCase;
-
-
 describe('Geocoding Business Logic', function () {
     beforeEach(function () {
         // In-memory test data following CLAUDE.md guidelines - no database

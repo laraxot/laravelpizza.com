@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Modules\Geo\Datas\AddressData;
 use Modules\Geo\Datas\BingMapData;
 use Modules\Geo\Datas\CoordinatesData;

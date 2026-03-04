@@ -9,8 +9,7 @@ uses(TestCase::class);
 
 beforeEach(function (): void {
     $this->action = app(SafeObjectCastAction::class);
-    $this->obj = new class
-    {
+    $this->obj = new class {
         public string $name = 'Mario';
         public string $age = '42';
         public string $score = '12.5';

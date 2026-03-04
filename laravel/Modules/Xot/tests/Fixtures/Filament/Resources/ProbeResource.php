@@ -4,13 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources;
 
-use Filament\Resources\Pages\Page;
 use Filament\Schemas\Components\Wizard\Step;
-use Modules\Xot\Filament\Resources\ProbeResource\Pages\CreateProbe;
-use Modules\Xot\Filament\Resources\ProbeResource\Pages\EditProbe;
-use Modules\Xot\Filament\Resources\ProbeResource\Pages\ListProbes;
-use Modules\Xot\Filament\Resources\ProbeResource\Pages\ViewProbe;
-use Modules\Xot\Models\Probe;
 
 class ProbeResource extends XotBaseResource
 {
@@ -66,4 +60,3 @@ class ViewProbe extends Page
 {
     protected static string $resource = ProbeResource::class;
 }
-

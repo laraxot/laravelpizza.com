@@ -9,8 +9,7 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 it('returns attributesToArray when model is healthy', function (): void {
-    $model = new class extends Model
-    {
+    $model = new class extends Model {
         protected $guarded = [];
     };
     $model->forceFill(['name' => 'Mario']);
@@ -21,8 +20,7 @@ it('returns attributesToArray when model is healthy', function (): void {
 });
 
 it('falls back to safeExecute when attributesToArray fails', function (): void {
-    $model = new class extends Model
-    {
+    $model = new class extends Model {
         public function attributesToArray(): array
         {
             throw new Exception('boom');

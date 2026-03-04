@@ -33,7 +33,7 @@ it('throws when fixType receives a non-array item for Arr namespace', function (
 })->throws(Exception::class);
 
 it('returns recursive diff in Arr namespace', function (): void {
-    $action = new ArrDiffAssocRecursiveAction;
+    $action = new ArrDiffAssocRecursiveAction();
     $left = [
         ['id' => '1', 'name' => 'a'],
         ['id' => '2', 'name' => 'b'],
@@ -64,7 +64,7 @@ it('throws when fixType receives a non-array item for Array namespace', function
 })->throws(Exception::class);
 
 it('returns recursive diff in Array namespace', function (): void {
-    $action = new ArrayDiffAssocRecursiveAction;
+    $action = new ArrayDiffAssocRecursiveAction();
     $left = [
         ['id' => '1', 'name' => 'alpha'],
         ['id' => '2', 'name' => 'beta'],
@@ -79,7 +79,7 @@ it('returns recursive diff in Array namespace', function (): void {
 });
 
 it('covers all branches of range intersect in Arr namespace', function (): void {
-    $action = new ArrRangeIntersectAction;
+    $action = new ArrRangeIntersectAction();
 
     expect($action->execute(1, 5, 2, 7))->toBe([2, 5])
         ->and($action->execute(2, 5, 1, 7))->toBe([2, 5])
@@ -91,7 +91,7 @@ it('covers all branches of range intersect in Arr namespace', function (): void 
 });
 
 it('covers all branches of range intersect in Array namespace', function (): void {
-    $action = new ArrayRangeIntersectAction;
+    $action = new ArrayRangeIntersectAction();
 
     expect($action->execute(1, 5, 2, 7))->toBe([2, 5])
         ->and($action->execute(2, 5, 1, 7))->toBe([2, 5])
@@ -109,8 +109,8 @@ it('writes JSON and PHP arrays via Arr actions', function (): void {
     $jsonFile = $tmpDir.'/data.json';
     $phpFile = $tmpDir.'/data.php';
 
-    $jsonAction = new ArrSaveJsonArrayAction;
-    $phpAction = new ArrSavePhpArrayAction;
+    $jsonAction = new ArrSaveJsonArrayAction();
+    $phpAction = new ArrSavePhpArrayAction();
 
     expect($jsonAction->execute(['a' => 1], $jsonFile))->toBeTrue()
         ->and(file_exists($jsonFile))->toBeTrue()
@@ -127,8 +127,8 @@ it('writes JSON and PHP arrays via Array actions', function (): void {
     $jsonFile = $tmpDir.'/data.json';
     $phpFile = $tmpDir.'/data.php';
 
-    $jsonAction = new ArraySaveJsonArrayAction;
-    $phpAction = new ArraySavePhpArrayAction;
+    $jsonAction = new ArraySaveJsonArrayAction();
+    $phpAction = new ArraySavePhpArrayAction();
 
     expect($jsonAction->execute(['a' => 1], $jsonFile))->toBeTrue()
         ->and(file_exists($jsonFile))->toBeTrue()
@@ -142,7 +142,7 @@ it('dispatches save strategy by format in SaveArrayAction', function (): void {
     $tmpDir = sys_get_temp_dir().'/xot-save-array-action-'.uniqid('', true);
     mkdir($tmpDir, 0777, true);
 
-    $action = new ArrSaveArrayAction;
+    $action = new ArrSaveArrayAction();
     $jsonFile = $tmpDir.'/one.json';
     $phpFile = $tmpDir.'/one.php';
 
@@ -151,12 +151,12 @@ it('dispatches save strategy by format in SaveArrayAction', function (): void {
 });
 
 it('throws on unsupported save format in SaveArrayAction', function (): void {
-    $action = new ArrSaveArrayAction;
+    $action = new ArrSaveArrayAction();
     $action->execute(['x' => 1], '/tmp/unused', 'xml');
 })->throws(InvalidArgumentException::class);
 
 it('converts mixed PHP arrays to RawJs correctly', function (): void {
-    $action = new ArrayToRawJsAction;
+    $action = new ArrayToRawJsAction();
 
     $raw = $action->execute([
         'validKey' => true,
@@ -172,7 +172,7 @@ it('converts mixed PHP arrays to RawJs correctly', function (): void {
     expect($raw)->toBeInstanceOf(RawJs::class);
 
     $js = $raw->toHtml();
-    expect($js)->toContain("validKey: true")
+    expect($js)->toContain('validKey: true')
         ->and($js)->toContain("'string key': 'O\\'Reilly'")
         ->and($js)->toContain('number: 12.5')
         ->and($js)->toContain('none: null')

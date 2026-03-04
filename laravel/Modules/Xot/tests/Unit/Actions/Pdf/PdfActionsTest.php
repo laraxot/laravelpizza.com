@@ -8,19 +8,17 @@ use Modules\Xot\Actions\Pdf\PdfByHtmlAction;
 use Modules\Xot\Actions\Pdf\PdfEngineEnum;
 use Modules\Xot\Datas\PdfData;
 use Tests\TestCase;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
-use Mockery;
 
 uses(TestCase::class);
 
 test('pdf by html action works', function () {
     // PDF generation often depends on system binaries (browsershot, etc.)
-    // We should test the action logic by mocking PdfData if possible, 
+    // We should test the action logic by mocking PdfData if possible,
     // but PdfData is created via PdfData::from() which returns a real object.
-    
+
     // Let's test the return logic at least
     $action = app(PdfByHtmlAction::class);
-    
+
     // Mocking the whole PdfData::from might be needed or just let it run if it doesn't crash
     try {
         $html = '<h1>Test</h1>';

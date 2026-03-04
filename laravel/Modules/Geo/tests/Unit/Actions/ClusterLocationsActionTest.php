@@ -6,8 +6,6 @@ use Modules\Geo\Actions\ClusterLocationsAction;
 use Modules\Geo\Contracts\CalculateDistanceActionContract;
 use Modules\Geo\Datas\LocationData;
 use Modules\Geo\Exceptions\InvalidLocationException;
-use Modules\Geo\Tests\TestCase;
-
 
 it('clusters locations that are close together', function (): void {
     $location1 = new LocationData(latitude: 45.4642, longitude: 9.1900);

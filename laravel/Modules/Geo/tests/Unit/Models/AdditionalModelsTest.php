@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Modules\Geo\Models\County;
 use Modules\Geo\Models\GeoNamesCap;
 use Modules\Geo\Models\Locality;

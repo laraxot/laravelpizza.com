@@ -115,7 +115,7 @@ test('user can be deleted', function (): void {
         $user->delete();
         $this->assertNull(User::find($userId));
     } catch (Throwable $e) {
-        if (str_contains($e->getMessage(), "Table") && str_contains($e->getMessage(), "media")) {
+        if (str_contains($e->getMessage(), 'Table') && str_contains($e->getMessage(), 'media')) {
             $this->markTestSkipped('Spatie MediaLibrary media table is not available in this test environment.');
         }
         throw $e;

@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Modules\Geo\Filament\Actions\UpdateCoordinatesBulkAction;
 use Modules\Geo\Filament\Forms\Components\AddressField;
 use Modules\Geo\Filament\Widgets\LatLngWidget;

@@ -10,7 +10,8 @@ use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
 
-class TestConcreteXotBaseModel extends XotBaseModel {
+class TestConcreteXotBaseModel extends XotBaseModel
+{
     protected $table = 'test_xot_table';
 }
 

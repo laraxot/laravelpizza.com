@@ -15,7 +15,7 @@ describe('HasTeams Trait CurrentTeam', function () {
         // Arrange: Crea un utente senza team
         $user = User::factory()->create([
             'name' => 'Test User',
-            'email' => 'currentteam-no-teams-' . uniqid() . '@example.com',
+            'email' => 'currentteam-no-teams-'.uniqid().'@example.com',
         ]);
 
         // Act: Accedi a currentTeam (non dovrebbe crashare)
@@ -29,7 +29,7 @@ describe('HasTeams Trait CurrentTeam', function () {
         // Arrange: Crea un utente senza current_team_id
         $user = User::factory()->create([
             'name' => 'Test User',
-            'email' => 'currentteam-side-effect-' . uniqid() . '@example.com',
+            'email' => 'currentteam-side-effect-'.uniqid().'@example.com',
             'current_team_id' => null,
         ]);
 
@@ -48,7 +48,7 @@ describe('HasTeams Trait CurrentTeam', function () {
         // Arrange: Crea un utente con un personal team
         $user = User::factory()->create([
             'name' => 'Test User',
-            'email' => 'currentteam-personal-' . uniqid() . '@example.com',
+            'email' => 'currentteam-personal-'.uniqid().'@example.com',
         ]);
 
         $personalTeam = Team::factory()->create([
@@ -73,7 +73,7 @@ describe('HasTeams Trait CurrentTeam', function () {
         // Arrange: Crea un utente con un team già impostato
         $user = User::factory()->create([
             'name' => 'Test User',
-            'email' => 'currentteam-no-override-' . uniqid() . '@example.com',
+            'email' => 'currentteam-no-override-'.uniqid().'@example.com',
         ]);
 
         $team1 = Team::factory()->create([
@@ -104,7 +104,7 @@ describe('HasTeams Trait CurrentTeam', function () {
         // Arrange: Crea un utente con due team
         $user = User::factory()->create([
             'name' => 'Test User',
-            'email' => 'currentteam-switch-' . uniqid() . '@example.com',
+            'email' => 'currentteam-switch-'.uniqid().'@example.com',
         ]);
 
         $team1 = Team::factory()->create([
@@ -136,7 +136,7 @@ describe('HasTeams Trait CurrentTeam', function () {
         // Arrange: Crea un utente con un team
         $user = User::factory()->create([
             'name' => 'Test User',
-            'email' => 'currentteam-n1-' . uniqid() . '@example.com',
+            'email' => 'currentteam-n1-'.uniqid().'@example.com',
         ]);
 
         $team = Team::factory()->create([

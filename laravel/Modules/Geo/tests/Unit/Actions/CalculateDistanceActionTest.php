@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Illuminate\Support\Collection;
 use Modules\Geo\Actions\CalculateDistanceAction;
 use Modules\Geo\Actions\GoogleMaps\CalculateDistanceMatrixAction;

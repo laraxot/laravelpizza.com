@@ -33,6 +33,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null            $updater
  * @property Collection<int, User>           $users
  * @property int|null                        $users_count
+ *
  * @method static Builder|Team newModelQuery()
  * @method static Builder|Team newQuery()
  * @method static Builder|Team query()
@@ -46,18 +47,28 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|Team whereUpdatedAt($value)
  * @method static Builder|Team whereUpdatedBy($value)
  * @method static Builder|Team whereUserId($value)
+ *
  * @property string|null $code
+ *
  * @method static Builder|Team whereCode($value)
+ *
  * @property string|null $uuid
+ *
  * @method static Builder<static>|Team whereUuid($value)
+ *
  * @property string|null $owner_id
+ *
  * @method static Builder<static>|Team whereOwnerId($value)
  * @method static static               create(array $attributes = [])
  * @method static static               firstOrCreate(array $attributes, array $values = [])
  * @method static static               updateOrCreate(array $attributes, array $values = [])
+ *
  * @mixin IdeHelperTeam
+ *
  * @property ProfileContract|null $deleter
+ *
  * @method static \Modules\User\Database\Factories\TeamFactory factory($count = null, $state = [])
+ *
  * @property string|null                     $slug
  * @property string|null                     $description
  * @property string|null                     $avatar_path
@@ -66,10 +77,12 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property int|null                        $permissions_count
  * @property Collection<int, TeamUser>       $teamUsers
  * @property int|null                        $team_users_count
+ *
  * @method static Builder<static>|Team whereAvatarPath($value)
  * @method static Builder<static>|Team whereDescription($value)
  * @method static Builder<static>|Team whereSettings($value)
  * @method static Builder<static>|Team whereSlug($value)
+ *
  * @mixin \Eloquent
  */
 class Team extends BaseTeam

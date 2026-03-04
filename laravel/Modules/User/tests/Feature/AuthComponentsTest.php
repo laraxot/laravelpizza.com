@@ -85,7 +85,7 @@ describe('Authentication Flow with Reorganized Components', function (): void {
             actingAs($user)
                 ->get('/it/auth/password/confirm')
                 ->assertStatus(200);
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             $this->markTestSkipped('Password confirm route not configured in test environment: '.$e->getMessage());
         }
     });
@@ -97,7 +97,7 @@ describe('User Profile Components Tests', function (): void {
 
         if (class_exists(Modules\User\Models\Profile::class)) {
             // Skip if profiles table doesn't have uuid column
-            $hasUuid = \Illuminate\Support\Facades\Schema::connection('user')->hasColumn('profiles', 'uuid');
+            $hasUuid = Illuminate\Support\Facades\Schema::connection('user')->hasColumn('profiles', 'uuid');
             $profileData = [
                 'id' => $user->id,
                 'user_id' => $user->id,
@@ -106,20 +106,20 @@ describe('User Profile Components Tests', function (): void {
                 'last_name' => $user->last_name ?? '',
             ];
             if ($hasUuid) {
-                $profileData['uuid'] = (string) \Illuminate\Support\Str::uuid();
+                $profileData['uuid'] = (string) Illuminate\Support\Str::uuid();
             }
             try {
                 Modules\User\Models\Profile::create($profileData);
-            } catch (\Throwable) {
+            } catch (Throwable) {
                 // Profile creation may fail in test env; continue with user only
             }
         }
 
-        /** @var Illuminate\Contracts\Auth\Authenticatable $user */
+        /* @var Illuminate\Contracts\Auth\Authenticatable $user */
         try {
             $response = actingAs($user, 'web')->get('/it/profile/edit');
             $response->assertStatus(200);
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             $this->markTestSkipped('Profile edit route not available in test environment: '.$e->getMessage());
         }
     });

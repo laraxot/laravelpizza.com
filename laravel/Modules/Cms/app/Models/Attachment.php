@@ -34,6 +34,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @property int|null                     $media_count
  * @property mixed                        $translations
  * @property ProfileContract|null         $updater
+ *
  * @method static Builder<static>|Attachment newModelQuery()
  * @method static Builder<static>|Attachment newQuery()
  * @method static Builder<static>|Attachment query()
@@ -52,9 +53,12 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @method static Builder<static>|Attachment whereUpdatedAt($value)
  * @method static Builder<static>|Attachment whereUpdatedBy($value)
  * @method static static|null                firstWhere(string $column, mixed $operator = null, mixed $value = null)
+ *
  * @property ProfileContract|null $deleter
+ *
  * @method static AttachmentFactory                factory($count = null, $state = [])
- * @method array<int, array<string, mixed>> getSushiRows()
+ * @method        array<int, array<string, mixed>> getSushiRows()
+ *
  * @mixin \Eloquent
  */
 class Attachment extends BaseModelLang implements HasMedia, SushiToJsonsContract

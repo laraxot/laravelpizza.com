@@ -1,4 +1,11 @@
 <?php
+
+declare(strict_types=1);
+
 namespace Modules\Xot\Tests\Feature\Filament\MockResourceWithRelations\RelationManagers;
+
 use Filament\Resources\RelationManagers\RelationManager;
-class TestRelationManager extends RelationManager {}
+
+class TestRelationManager extends RelationManager
+{
+}

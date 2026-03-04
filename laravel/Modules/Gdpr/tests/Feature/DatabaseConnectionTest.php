@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(Modules\Gdpr\Tests\TestCase::class);
 
 beforeEach(function () {
     // Clean database before each test

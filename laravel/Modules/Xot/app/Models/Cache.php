@@ -14,6 +14,7 @@ use Modules\Xot\Database\Factories\CacheFactory;
  * @property string $key
  * @property string $value
  * @property int    $expiration
+ *
  * @method static CacheFactory          factory($count = null, $state = [])
  * @method static Builder<static>|Cache newModelQuery()
  * @method static Builder<static>|Cache newQuery()
@@ -21,9 +22,11 @@ use Modules\Xot\Database\Factories\CacheFactory;
  * @method static Builder<static>|Cache whereExpiration($value)
  * @method static Builder<static>|Cache whereKey($value)
  * @method static Builder<static>|Cache whereValue($value)
+ *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
+ *
  * @mixin \Eloquent
  */
 class Cache extends BaseModel

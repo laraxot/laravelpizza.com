@@ -16,8 +16,8 @@ describe('TenantScope Console Context Behavior', function (): void {
     beforeEach(function (): void {
         // Crea tenant per i test con nomi unici
         $suffix = uniqid();
-        $this->tenant1 = Tenant::factory()->create(['name' => 'Tenant Alpha ' . $suffix]);
-        $this->tenant2 = Tenant::factory()->create(['name' => 'Tenant Beta ' . $suffix]);
+        $this->tenant1 = Tenant::factory()->create(['name' => 'Tenant Alpha '.$suffix]);
+        $this->tenant2 = Tenant::factory()->create(['name' => 'Tenant Beta '.$suffix]);
     });
 
     describe('User Creation in Console Context', function (): void {
@@ -28,7 +28,7 @@ describe('TenantScope Console Context Behavior', function (): void {
             });
 
             // Crea utente senza tenant_id (dovrebbe funzionare in console)
-            $email = 'console-test-' . uniqid() . '@example.com';
+            $email = 'console-test-'.uniqid().'@example.com';
             $user = User::create([
                 'name' => 'Console Test User',
                 'email' => $email,
@@ -41,7 +41,7 @@ describe('TenantScope Console Context Behavior', function (): void {
         });
 
         it('executes make:filament-user command successfully', function (): void {
-            $email = 'artisan-test-' . uniqid() . '@example.com';
+            $email = 'artisan-test-'.uniqid().'@example.com';
 
             // Esegui comando make:filament-user
             try {
@@ -59,9 +59,9 @@ describe('TenantScope Console Context Behavior', function (): void {
                 expect($user)->not->toBeNull()
                     ->and($user->name)->toBe('Artisan Test User')
                     ->and($user->email)->toBe($email);
-            } catch (\Throwable $e) {
+            } catch (Throwable $e) {
                 // Command may not be available in all environments
-                $this->markTestSkipped('make:filament-user command not available: ' . $e->getMessage());
+                $this->markTestSkipped('make:filament-user command not available: '.$e->getMessage());
             }
         });
 
@@ -90,7 +90,7 @@ describe('TenantScope Console Context Behavior', function (): void {
             $this->actingAs(User::factory()->create());
 
             // Crea utente (dovrebbe funzionare in test context)
-            $email = 'http-test-' . uniqid() . '@example.com';
+            $email = 'http-test-'.uniqid().'@example.com';
             $user = User::create([
                 'name' => 'HTTP Context User',
                 'email' => $email,
@@ -133,7 +133,7 @@ describe('TenantScope Console Context Behavior', function (): void {
         });
 
         it('allows user creation when Filament context is not available', function (): void {
-            $email = 'no-tenant-' . uniqid() . '@example.com';
+            $email = 'no-tenant-'.uniqid().'@example.com';
             $user = User::create([
                 'name' => 'No Tenant Context User',
                 'email' => $email,
@@ -148,7 +148,7 @@ describe('TenantScope Console Context Behavior', function (): void {
     describe('Manual Tenant Assignment in Console', function (): void {
         it('allows manual tenant_id assignment in console context', function (): void {
             // In console, possiamo impostare manualmente tenant_id
-            $email = 'manual-tenant-' . uniqid() . '@example.com';
+            $email = 'manual-tenant-'.uniqid().'@example.com';
             $user = User::create([
                 'name' => 'Manual Tenant User',
                 'email' => $email,
@@ -186,7 +186,7 @@ describe('TenantScope Console Context Behavior', function (): void {
 describe('InteractsWithTenant Trait Behavior', function (): void {
     it('does not crash when booting in console context', function (): void {
         // Verifica che il trait non causi eccezioni durante boot
-        $email = 'boot-test-' . uniqid() . '@example.com';
+        $email = 'boot-test-'.uniqid().'@example.com';
         $user = new User([
             'name' => 'Boot Test User',
             'email' => $email,
@@ -203,7 +203,7 @@ describe('InteractsWithTenant Trait Behavior', function (): void {
 
     it('skips tenant assignment in console context during creating event', function (): void {
         // In console, il creating event non dovrebbe tentare di chiamare Filament::getTenant()
-        $email = 'creating-event-' . uniqid() . '@example.com';
+        $email = 'creating-event-'.uniqid().'@example.com';
         $user = User::create([
             'name' => 'Creating Event Test',
             'email' => $email,

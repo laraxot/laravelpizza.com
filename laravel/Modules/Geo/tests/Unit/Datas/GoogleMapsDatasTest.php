@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Modules\Geo\Datas\GoogleMaps\GoogleMapAddressComponentData;
 use Modules\Geo\Datas\GoogleMaps\GoogleMapBoundsData;
 use Modules\Geo\Datas\GoogleMaps\GoogleMapComponentData;

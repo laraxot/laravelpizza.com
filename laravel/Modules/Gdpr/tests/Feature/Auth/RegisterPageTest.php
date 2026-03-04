@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(Modules\Gdpr\Tests\TestCase::class);
 
 use Livewire\Livewire;
 use Modules\Gdpr\Filament\Widgets\Auth\RegisterWidget;
@@ -38,7 +38,7 @@ it('displays the registration form elements in English', function (): void {
 });
 
 it('can register a new user', function (): void {
-    if (! \Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
+    if (! Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
         test()->markTestSkipped('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
     }
 

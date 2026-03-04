@@ -21,7 +21,7 @@ beforeEach(function (): void {
             $this->app->register(\Filament\Schemas\SchemasServiceProvider::class);
         }
         Filament::setCurrentPanel(Filament::getPanel('user::admin'));
-    } catch (\Throwable $e) {
+    } catch (Throwable $e) {
         $this->markTestSkipped('Filament admin panel user::admin not configured for testing: '.$e->getMessage());
     }
 });
@@ -49,7 +49,7 @@ test('can change profile password', function (): void {
             ->assertHasNoFormErrors();
 
         expect(Hash::check('new_password', $user->fresh()?->password))->toBeTrue();
-    } catch (\Throwable $e) {
+    } catch (Throwable $e) {
         $this->markTestSkipped('MyProfilePage requires Filament panel: '.$e->getMessage());
     }
 });
@@ -80,7 +80,7 @@ test('cannot change password with wrong current password', function (): void {
         expect(collect($testable->errors()->keys())->contains(fn ($key) => str_contains($key, 'current_password')))->toBeTrue();
 
         expect(Hash::check('old_password', $user->fresh()?->password))->toBeTrue();
-    } catch (\Throwable $e) {
+    } catch (Throwable $e) {
         $this->markTestSkipped('MyProfilePage requires Filament panel: '.$e->getMessage());
     }
 });

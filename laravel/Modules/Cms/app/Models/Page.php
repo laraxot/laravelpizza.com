@@ -17,6 +17,7 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @method static array<int, array<string, mixed>>            getMiddlewareBySlug(string $slug)
  * @method static array<string, \Modules\Cms\Datas\BlockData> getBlocksBySlug(string $slug, ?string $side = null)
+ *
  * @property string                       $id
  * @property array<array-key, mixed>|null $title
  * @property string|null                  $slug
@@ -33,6 +34,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null         $creator
  * @property mixed                        $translations
  * @property ProfileContract|null         $updater
+ *
  * @method static Builder<static>|Page                                  newModelQuery()
  * @method static Builder<static>|Page                                  newQuery()
  * @method static Builder<static>|Page                                  query()
@@ -180,13 +182,18 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static \Illuminate\Database\Eloquent\Collection<int, static> get($columns = ['*'])
  * @method static static|null                                           first($columns = ['*'])
  * @method static static|null                                           find($id, $columns = ['*'])
+ *
  * @property ProfileContract|null $deleter
+ *
  * @method static PageFactory factory($count = null, $state = [])
+ *
  * @property array<array-key, mixed>|null $blocks
+ *
  * @method static Builder<static>|Page                        whereBlocks($value)
- * @method array<int, array<string, mixed>>            getSushiRows()
+ * @method        array<int, array<string, mixed>>            getSushiRows()
  * @method static array<string, \Modules\Cms\Datas\BlockData> getBlocksBySlug(string $slug, ?string $side = null)
  * @method static array<int, string>                          getMiddlewareBySlug(string $slug)
+ *
  * @mixin \Eloquent
  */
 class Page extends BaseModelLang implements SushiToJsonContract

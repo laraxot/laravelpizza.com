@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Modules\Geo\Datas\Map\IconData;
 use Modules\Geo\Datas\Map\MarkerData;
 use Modules\Geo\Datas\Map\PositionData;

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Modules\Xot\Actions\Arr\SavePhpArrayAction;
 use Tests\TestCase;
- 
+
 uses(TestCase::class);
 
 beforeEach(function (): void {

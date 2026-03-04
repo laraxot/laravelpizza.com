@@ -25,6 +25,6 @@ it('throws if record has no email', function (): void {
         }
     };
 
-    expect(fn (): mixed => app(SendMailByRecordAction::class)->execute($record, \Illuminate\Mail\Events\MessageSending::class))
-        ->toThrow(\InvalidArgumentException::class, 'Model must have email property');
+    expect(fn (): mixed => app(SendMailByRecordAction::class)->execute($record, Illuminate\Mail\Events\MessageSending::class))
+        ->toThrow(InvalidArgumentException::class, 'Model must have email property');
 });

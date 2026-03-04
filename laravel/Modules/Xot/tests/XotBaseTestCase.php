@@ -64,7 +64,7 @@ abstract class XotBaseTestCase extends BaseTestCase
     /**
      * Get the user class from XotData.
      *
-     * @return class-string<\Illuminate\Database\Eloquent\Model&\Modules\Xot\Contracts\UserContract>
+     * @return class-string<\Illuminate\Database\Eloquent\Model&UserContract>
      */
     protected static function getUserClass(): string
     {
@@ -74,7 +74,7 @@ abstract class XotBaseTestCase extends BaseTestCase
     /**
      * Create a test user with optional attributes.
      *
-     * @param  array<string, mixed>  $attributes
+     * @param array<string, mixed> $attributes
      */
     protected static function createTestUser(array $attributes = []): UserContract
     {

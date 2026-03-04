@@ -10,7 +10,7 @@ use Filament\Schemas\Schema;
 use Modules\Xot\Filament\Resources\CacheResource;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Tests\TestCase;
- 
+
 uses(TestCase::class);
 
 covers(XotBaseResource::class);
@@ -106,7 +106,7 @@ test('xot base resource extend form callback returns empty array', function () {
 });
 
 test('xot base resource has combined relation manager tabs with content', function () {
-    $resource = new CacheResource;
+    $resource = new CacheResource();
     expect($resource->hasCombinedRelationManagerTabsWithContent())->toBeTrue();
 });
 
@@ -178,7 +178,11 @@ test('xot base resource get relations via base uses glob', function () {
     // XotBaseResource::getRelations() uses glob for RelationManager files
     $resource = new class extends XotBaseResource {
         protected static ?string $model = \Modules\Xot\Models\Cache::class;
-        public static function getFormSchema(): array { return []; }
+
+        public static function getFormSchema(): array
+        {
+            return [];
+        }
     };
 
     $relations = $resource::getRelations();
@@ -187,8 +191,8 @@ test('xot base resource get relations via base uses glob', function () {
 
 test('xot base resource get relations via base with actual files', function () {
     // We use the real file created in the background
-    $relations = \Modules\Xot\Tests\Feature\Filament\MockResourceWithRelations::getRelations();
-    
+    $relations = MockResourceWithRelations::getRelations();
+
     expect($relations)->toBeArray();
     $hasRelation = false;
     foreach ($relations as $rel) {
@@ -202,10 +206,10 @@ test('xot base resource get relations via base with actual files', function () {
 
 test('xot base resource get wizard submit action', function () {
     // Use temp dir and view() helper (not View facade) - same pattern as XotBaseResourceCoverageTest
-    $tmpViewDir = sys_get_temp_dir() . '/xot-resource-test-' . uniqid('', true);
-    $viewPath = $tmpViewDir . '/filament/wizard';
+    $tmpViewDir = sys_get_temp_dir().'/xot-resource-test-'.uniqid('', true);
+    $viewPath = $tmpViewDir.'/filament/wizard';
     mkdir($viewPath, 0777, true);
-    file_put_contents($viewPath . '/submit-button.blade.php', '<button>Submit-Test</button>');
+    file_put_contents($viewPath.'/submit-button.blade.php', '<button>Submit-Test</button>');
 
     view()->addNamespace('pub_theme', $tmpViewDir);
 
@@ -215,9 +219,9 @@ test('xot base resource get wizard submit action', function () {
         expect((string) $html)->toContain('Submit-Test');
     } finally {
         if (is_dir($tmpViewDir)) {
-            array_map('unlink', glob($tmpViewDir . '/filament/wizard/*'));
-            rmdir($tmpViewDir . '/filament/wizard');
-            rmdir($tmpViewDir . '/filament');
+            array_map('unlink', glob($tmpViewDir.'/filament/wizard/*'));
+            rmdir($tmpViewDir.'/filament/wizard');
+            rmdir($tmpViewDir.'/filament');
             rmdir($tmpViewDir);
         }
     }
@@ -225,13 +229,13 @@ test('xot base resource get wizard submit action', function () {
 
 test('xot base resource get model via auto-discovery', function () {
     $className = 'Modules\Xot\Filament\Resources\TempDiscoveryResource';
-    if (!class_exists($className)) {
+    if (! class_exists($className)) {
         eval("namespace Modules\Xot\Filament\Resources; use Modules\Xot\Filament\Resources\XotBaseResource; class TempDiscoveryResource extends XotBaseResource { public static function getFormSchema(): array { return []; } }");
     }
-    
+
     // We need the model class to exist to pass Assert::classExists
     $modelClass = 'Modules\Xot\Models\TempDiscovery';
-    if (!class_exists($modelClass)) {
+    if (! class_exists($modelClass)) {
         eval("namespace Modules\Xot\Models; use Illuminate\Database\Eloquent\Model; class TempDiscovery extends Model {}");
     }
 
@@ -242,38 +246,50 @@ test('xot base resource get model via auto-discovery', function () {
 test('xot base resource get attachments schema with model having method', function () {
     // Model must be a real class to handle static calls
     $modelClass = 'Modules\Xot\Models\StaticMockModel';
-    if (!class_exists($modelClass)) {
+    if (! class_exists($modelClass)) {
         eval("namespace Modules\Xot\Models; use Illuminate\Database\Eloquent\Model; class StaticMockModel extends Model { public static function getAttachments(): array { return ['file1.jpg']; } }");
     }
-    
+
     $resource = new class extends XotBaseResource {
         public static string $mockModelClass;
-        public static function getModel(): string {
+
+        public static function getModel(): string
+        {
             return self::$mockModelClass;
         }
-        public static function getFormSchema(): array { return []; }
+
+        public static function getFormSchema(): array
+        {
+            return [];
+        }
     };
-    
+
     $resource::$mockModelClass = $modelClass;
-    app()->instance($modelClass, new $modelClass);
-    
+    app()->instance($modelClass, new $modelClass());
+
     $schema = $resource::getAttachmentsSchema();
     expect($schema)->toBeArray();
 });
 
 test('xot base resource get step by name returns correct step', function () {
     $resource = new class extends XotBaseResource {
-        public static function getGeneralSchema(): array {
+        public static function getGeneralSchema(): array
+        {
             return [\Filament\Forms\Components\TextInput::make('test')];
         }
-        public static function getFormSchema(): array { return []; }
-        
+
+        public static function getFormSchema(): array
+        {
+            return [];
+        }
+
         // We need it to be public for testing or use reflection
-        public static function callGetStepByName(string $name): Step {
+        public static function callGetStepByName(string $name): Step
+        {
             return static::getStepByName($name);
         }
     };
-    
+
     $step = $resource::callGetStepByName('General');
     expect($step)->toBeInstanceOf(Step::class);
     expect($step->getLabel())->toBe('General');

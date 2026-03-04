@@ -15,6 +15,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder|TeamUser newModelQuery()
  * @method static Builder|TeamUser newQuery()
  * @method static Builder|TeamUser query()
+ *
  * @property int         $id
  * @property string|null $tenant_id
  * @property string|null $user_id
@@ -22,6 +23,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property Carbon|null $updated_at
  * @property string|null $created_by
  * @property string|null $updated_by
+ *
  * @method static Builder|TeamUser whereCreatedAt($value)
  * @method static Builder|TeamUser whereCreatedBy($value)
  * @method static Builder|TeamUser whereCustomerId($value)
@@ -32,17 +34,22 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @method static Builder|TeamUser whereUpdatedBy($value)
  * @method static Builder|TeamUser whereUserId($value)
  * @method static Builder|TeamUser whereUuid($value)
+ *
  * @property string|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @method static Builder|TenantUser whereDeletedAt($value)
  * @method static Builder|TenantUser whereDeletedBy($value)
  * @method static Builder|TenantUser whereTenantId($value)
+ *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
+ *
  * @method static \Modules\User\Database\Factories\TenantUserFactory factory($count = null, $state = [])
  * @method static \Modules\User\Database\Factories\TenantUserFactory factory($count = null, $state = [])
  *                                                                                                       >>>>>>> da38c10 (.)
+ *
  * @mixin \Eloquent
  */
 class TenantUser extends BasePivot

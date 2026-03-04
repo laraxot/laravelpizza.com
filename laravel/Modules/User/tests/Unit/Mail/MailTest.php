@@ -19,7 +19,7 @@ test('TeamInvitation has expected methods', function () {
     // instead of build(). Verify it extends Mailable properly.
     $reflection = new ReflectionClass(TeamInvitation::class);
 
-    expect($reflection->getParentClass()->getName())->toBe(\Illuminate\Mail\Mailable::class);
+    expect($reflection->getParentClass()->getName())->toBe(Illuminate\Mail\Mailable::class);
 
     // Mailable has 'send', 'queue', 'later' methods
     expect(method_exists(TeamInvitation::class, 'send'))->toBeTrue();

@@ -32,8 +32,9 @@ it('throws when model type key is missing in morph map', function (): void {
 
     try {
         app(GetModelClassByModelTypeAction::class)->execute('missing');
-    } catch (\Throwable $e) {
-        expect($e)->toBeInstanceOf(\InvalidArgumentException::class);
+    } catch (Throwable $e) {
+        expect($e)->toBeInstanceOf(InvalidArgumentException::class);
+
         return;
     }
     $this->fail('Exception not thrown');

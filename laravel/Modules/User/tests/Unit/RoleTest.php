@@ -23,7 +23,7 @@ beforeEach(function (): void {
 afterEach(function (): void {
     // Flush Spatie Permission cache so stale cached data does not
     // bleed between tests.
-    app(\Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
+    app(Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
 });
 
 test('role can be created', function (): void {

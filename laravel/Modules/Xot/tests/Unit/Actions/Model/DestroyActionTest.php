@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Modules\Xot\Actions\Model\DestroyAction;
-use Modules\Xot\Tests\TestCase;
-use Modules\Xot\Models\BaseModel;
 use Illuminate\Support\Facades\Session;
+use Modules\Xot\Actions\Model\DestroyAction;
+use Modules\Xot\Models\BaseModel;
+use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -17,10 +17,11 @@ it('deletes model and returns it', function (): void {
     // Create a mock model that tracks delete calls
     $mockModel = new class extends BaseModel {
         public bool $deleted = false;
-        
+
         public function delete(): bool
         {
             $this->deleted = true;
+
             return true;
         }
     };

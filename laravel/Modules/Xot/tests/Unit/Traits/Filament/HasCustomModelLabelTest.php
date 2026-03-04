@@ -14,7 +14,11 @@ it('gets model label from property', function (): void {
     $class = new class {
         use HasCustomModelLabel;
         public static string $modelLabel = 'Custom Label';
-        public static function getModel(): string { return 'App\Models\User'; }
+
+        public static function getModel(): string
+        {
+            return 'App\Models\User';
+        }
     };
 
     expect($class::getModelLabel())->toBe('Custom Label');
@@ -23,7 +27,11 @@ it('gets model label from property', function (): void {
 it('gets model label from model name', function (): void {
     $class = new class {
         use HasCustomModelLabel;
-        public static function getModel(): string { return 'App\Models\UserInvitation'; }
+
+        public static function getModel(): string
+        {
+            return 'App\Models\UserInvitation';
+        }
     };
 
     // Str::title(Str::snake('UserInvitation', ' ')) -> 'User Invitation'
@@ -34,7 +42,11 @@ it('gets plural model label from property', function (): void {
     $class = new class {
         use HasCustomModelLabel;
         public static string $pluralModelLabel = 'Plural Labels';
-        public static function getModelLabel(): string { return 'Label'; }
+
+        public static function getModelLabel(): string
+        {
+            return 'Label';
+        }
     };
 
     expect($class::getPluralModelLabel())->toBe('Plural Labels');
@@ -43,7 +55,11 @@ it('gets plural model label from property', function (): void {
 it('gets plural model label from singular label', function (): void {
     $class = new class {
         use HasCustomModelLabel;
-        public static function getModelLabel(): string { return 'Category'; }
+
+        public static function getModelLabel(): string
+        {
+            return 'Category';
+        }
     };
 
     expect($class::getPluralModelLabel())->toBe('Categories');
@@ -53,14 +69,22 @@ it('gets navigation label', function (): void {
     $class = new class {
         use HasCustomModelLabel;
         public static string $navigationLabel = 'Nav Label';
-        public static function getPluralModelLabel(): string { return 'Plurals'; }
+
+        public static function getPluralModelLabel(): string
+        {
+            return 'Plurals';
+        }
     };
 
     expect($class::getNavigationLabel())->toBe('Nav Label');
 
     $classNoNav = new class {
         use HasCustomModelLabel;
-        public static function getPluralModelLabel(): string { return 'Plurals'; }
+
+        public static function getPluralModelLabel(): string
+        {
+            return 'Plurals';
+        }
     };
     expect($classNoNav::getNavigationLabel())->toBe('Plurals');
 });
@@ -68,7 +92,11 @@ it('gets navigation label', function (): void {
 it('gets breadcrumb', function (): void {
     $class = new class {
         use HasCustomModelLabel;
-        public static function getModelLabel(): string { return 'Bread'; }
+
+        public static function getModelLabel(): string
+        {
+            return 'Bread';
+        }
     };
 
     expect($class::getBreadcrumb())->toBe('Bread');

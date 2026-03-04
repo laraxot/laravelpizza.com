@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Modules\Geo\Datas\Photon\PhotonAddressData;
 use Modules\Geo\Datas\Photon\PhotonFeatureData;
 use Modules\Geo\Datas\Photon\PhotonPropertiesData;

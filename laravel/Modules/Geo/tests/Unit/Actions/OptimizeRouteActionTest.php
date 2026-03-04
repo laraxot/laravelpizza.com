@@ -6,8 +6,6 @@ use Illuminate\Support\Collection;
 use Modules\Geo\Actions\OptimizeRouteAction;
 use Modules\Geo\Contracts\CalculateDistanceActionContract;
 use Modules\Geo\Datas\LocationData;
-use Modules\Geo\Tests\TestCase;
-
 
 it('returns same locations when count is 2 or less', function (): void {
     $location1 = new LocationData(latitude: 45.4642, longitude: 9.1900);

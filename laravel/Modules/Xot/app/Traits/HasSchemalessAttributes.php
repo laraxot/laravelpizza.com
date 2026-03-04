@@ -106,10 +106,14 @@ trait HasSchemalessAttributes
     {
         if ($this->extra_attributes instanceof SchemalessAttributes) {
             $this->extra_attributes->forget($key);
+
+            return;
         }
 
         if (is_array($this->extra_attributes)) {
-            unset($this->extra_attributes[$key]);
+            $attributes = $this->extra_attributes;
+            unset($attributes[$key]);
+            $this->extra_attributes = $attributes;
         }
     }
 

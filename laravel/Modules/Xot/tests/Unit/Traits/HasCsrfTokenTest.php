@@ -8,15 +8,14 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Traits\HasCsrfToken;
-use Mockery;
 
 uses(TestCase::class);
 
 it('sets csrf token on mount', function (): void {
     $token = 'test-token-123';
-    
+
     // Mock session token
-    $session = Mockery::mock();
+    $session = \Mockery::mock();
     $session->shouldReceive('token')->andReturn($token);
     App::instance('session', $session);
 
@@ -25,15 +24,15 @@ it('sets csrf token on mount', function (): void {
     };
 
     $class->mount();
-    
+
     expect($class->getCsrfToken())->toBe($token);
-    
-    Mockery::close();
+
+    \Mockery::close();
 });
 
 it('verifies csrf token', function (): void {
     $token = 'secret-token';
-    
+
     $class = new class {
         use HasCsrfToken;
     };
@@ -45,6 +44,6 @@ it('verifies csrf token', function (): void {
 
     expect($class->verifyCsrfToken())->toBeTrue();
     expect($class->verifyCsrfToken())->toBeFalse();
-    
-    Mockery::close();
+
+    \Mockery::close();
 });

@@ -30,9 +30,9 @@ it('generates different passwords on multiple calls', function (): void {
 
 it('contains uppercase digit and special char', function (): void {
     $result = $this->action->execute(20);
-    $hasUpper = preg_match('/[A-Z]/', $result) === 1;
-    $hasDigit = preg_match('/[0-9]/', $result) === 1;
-    $hasSpecial = preg_match('/[!#*\-_=+:?]/', $result) === 1;
+    $hasUpper = 1 === preg_match('/[A-Z]/', $result);
+    $hasDigit = 1 === preg_match('/[0-9]/', $result);
+    $hasSpecial = 1 === preg_match('/[!#*\-_=+:?]/', $result);
 
     expect($hasUpper)->toBeTrue()
         ->and($hasDigit)->toBeTrue()

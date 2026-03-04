@@ -44,7 +44,7 @@ test('user model can create basic record', function () {
     // Clean up - use forceDelete to bypass media observer or skip if media table missing
     try {
         $user->forceDelete();
-    } catch (\Throwable) {
+    } catch (Throwable) {
         // Media table may not exist; ignore cleanup error
     }
 });

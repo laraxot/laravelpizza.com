@@ -13,5 +13,4 @@ use Modules\Xot\Tests\XotBaseTestCase;
  */
 abstract class LightTestCase extends XotBaseTestCase
 {
-    //
 }

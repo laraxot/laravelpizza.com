@@ -2,15 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Modules\Geo\Tests\Unit;
-
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Geo\Contracts\HasGeolocation;
 use Modules\Geo\Enums\AddressTypeEnum;
 use Modules\Geo\Models\Address;
-use Modules\Geo\Tests\TestCase;
-
-uses(TestCase::class);
 
 describe('Address Model', function () {
     it('can be created with factory', function () {
@@ -26,14 +21,30 @@ describe('Address Model', function () {
 
     it('has correct fillable attributes', function () {
         $address = new Address();
-        $fillable = $address->getFillable();
 
-        expect($fillable)->toContain('model_type')
-            ->and($fillable)->toContain('model_id')
-            ->and($fillable)->toContain('route');
+        expect($address->getFillable())->toContain([
+            'model_type',
+            'model_id',
+            'name',
+            'description',
+            'route',
+            'street_number',
+            'locality',
+            'administrative_area_level_3',
+            'administrative_area_level_2',
+            'administrative_area_level_1',
+            'country',
+            'postal_code',
+            'formatted_address',
+            'place_id',
+            'latitude',
+            'longitude',
+            'type',
+            'is_primary',
+            'extra_data',
+        ]);
     });
 
-    /*
     it('implements HasGeolocation contract', function () {
         $address = new Address();
 
@@ -48,7 +59,6 @@ describe('Address Model', function () {
             ->not->toBeNull()->and(Address::withTrashed()->find($address->id))
             ->not->toBeNull()->and(Address::find($address->id))->toBeNull();
     });
-    */
 
     it('casts attributes correctly', function () {
         $address = Address::factory()->create([
@@ -152,30 +162,30 @@ describe('Address Model', function () {
 
     describe('Scopes and Queries', function () {
         it('can filter by primary addresses', function () {
-            $address = Address::factory()->create(['is_primary' => true]);
+            Address::factory()->create(['is_primary' => true]);
             Address::factory()->create(['is_primary' => false]);
 
             $primaryAddresses = Address::where('is_primary', true)->get();
 
-            expect($primaryAddresses->pluck('id'))->toContain($address->id);
+            expect($primaryAddresses)->toHaveCount(1);
         });
 
         it('can filter by locality', function () {
-            $address = Address::factory()->create(['locality' => 'MilanoUnique']);
-            Address::factory()->create(['locality' => 'RomaUnique']);
+            Address::factory()->create(['locality' => 'Milano']);
+            Address::factory()->create(['locality' => 'Roma']);
 
-            $milanAddresses = Address::where('locality', 'MilanoUnique')->get();
+            $milanAddresses = Address::where('locality', 'Milano')->get();
 
-            expect($milanAddresses->pluck('id'))->toContain($address->id);
+            expect($milanAddresses)->toHaveCount(1);
         });
 
         it('can filter by postal code', function () {
-            $address = Address::factory()->create(['postal_code' => '20100Unique']);
-            Address::factory()->create(['postal_code' => '00100Unique']);
+            Address::factory()->create(['postal_code' => '20100']);
+            Address::factory()->create(['postal_code' => '00100']);
 
-            $milanPostalCodes = Address::where('postal_code', '20100Unique')->get();
+            $milanPostalCodes = Address::where('postal_code', '20100')->get();
 
-            expect($milanPostalCodes->pluck('id'))->toContain($address->id);
+            expect($milanPostalCodes)->toHaveCount(1);
         });
     });
 

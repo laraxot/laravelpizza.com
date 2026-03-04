@@ -3,8 +3,6 @@
 declare(strict_types=1);
 
 use Modules\Geo\Actions\FormatCoordinatesAction;
-use Modules\Geo\Tests\TestCase;
-
 
 beforeEach(function () {
     $this->action = new FormatCoordinatesAction();

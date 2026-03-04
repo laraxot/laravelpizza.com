@@ -12,9 +12,11 @@ use Modules\Xot\Contracts\ProfileContract;
  * Modules\User\Models\Membership.
  *
  * @property string $role
+ *
  * @method static Builder|Membership newModelQuery()
  * @method static Builder|Membership newQuery()
  * @method static Builder|Membership query()
+ *
  * @property int         $id
  * @property string|null $team_id
  * @property string|null $user_id
@@ -23,6 +25,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $created_by
  * @property string|null $updated_by
  * @property string|null $customer_id
+ *
  * @method static Builder|Membership whereCreatedAt($value)
  * @method static Builder|Membership whereCreatedBy($value)
  * @method static Builder|Membership whereCustomerId($value)
@@ -31,26 +34,39 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|Membership whereUpdatedAt($value)
  * @method static Builder|Membership whereUpdatedBy($value)
  * @method static Builder|Membership whereUserId($value)
+ *
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @method static Builder|Membership whereDeletedAt($value)
  * @method static Builder|Membership whereDeletedBy($value)
+ *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
+ *
  * @mixin IdeHelperMembership
+ *
  * @property ProfileContract|null $deleter
+ *
  * @method static Builder<static>|Membership whereId($value)
+ *
  * @property array<array-key, mixed>|null $permissions
  * @property string|null                  $joined_at
+ *
  * @method static Builder<static>|Membership whereJoinedAt($value)
  * @method static Builder<static>|Membership wherePermissions($value)
+ *
  * @property array<array-key, mixed>|null $permissions
  * @property string|null                  $joined_at
+ *
  * @method static Builder<static>|Membership whereJoinedAt($value)
  * @method static Builder<static>|Membership wherePermissions($value)
  *                                                                    >>>>>>> da38c10 (.)
+ *
  * @property string $uuid
+ *
  * @method static Builder<static>|Membership whereUuid($value)
+ *
  * @mixin \Eloquent
  */
 class Membership extends BasePivot

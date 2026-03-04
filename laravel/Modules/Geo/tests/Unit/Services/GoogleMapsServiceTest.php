@@ -3,8 +3,6 @@
 declare(strict_types=1);
 
 use Modules\Geo\Services\GoogleMapsService;
-use Modules\Geo\Tests\TestCase;
-
 
 beforeEach(function () {
     $this->service = new GoogleMapsService();

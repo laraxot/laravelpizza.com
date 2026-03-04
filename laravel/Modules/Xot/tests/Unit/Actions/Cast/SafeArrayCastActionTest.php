@@ -15,40 +15,35 @@ it('casts common input shapes to array', function (): void {
 });
 
 it('casts objects via toArray, __toArray and public props', function (): void {
-    $toArrayObject = new class
-    {
+    $toArrayObject = new class {
         public function toArray(): array
         {
             return ['x' => 1];
         }
     };
 
-    $badToArrayObject = new class
-    {
+    $badToArrayObject = new class {
         public function toArray(): string
         {
             return 'bad';
         }
     };
 
-    $magicToArrayObject = new class
-    {
+    $magicToArrayObject = new class {
         public function __toArray(): array
         {
             return ['y' => 2];
         }
     };
 
-    $badMagicToArrayObject = new class
-    {
+    $badMagicToArrayObject = new class {
         public function __toArray(): string
         {
             return 'bad';
         }
     };
 
-    $plainObject = new class
-    {
+    $plainObject = new class {
         public int $z = 3;
     };
 

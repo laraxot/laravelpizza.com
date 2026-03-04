@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Modules\Geo\Actions\ClusterLocationsAction;
 use Modules\Geo\Actions\FormatCoordinatesAction;
 use Modules\Geo\Actions\GetAddressDataFromFullAddressAction;

@@ -4,15 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Actions\File;
 
-use Modules\Xot\Actions\File\FixPathAction;
-use Modules\Xot\Actions\File\ViewPathAction;
-use Modules\Xot\Actions\File\AssetPathAction;
-use Modules\Xot\Actions\File\GetViewNameSpacePathAction;
-use Modules\Xot\Actions\File\GetModulePathAction;
 use Modules\Xot\Actions\File\AssetAction;
-use Tests\TestCase;
+use Modules\Xot\Actions\File\AssetPathAction;
+use Modules\Xot\Actions\File\FixPathAction;
+use Modules\Xot\Actions\File\GetViewNameSpacePathAction;
+use Modules\Xot\Actions\File\ViewPathAction;
 use Nwidart\Modules\Facades\Module;
-use Illuminate\Support\Facades\File;
+use Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -29,13 +27,13 @@ test('view path action works', function () {
         ->shouldReceive('execute')
         ->with('test_ns')
         ->andReturn('/view/path');
-        
+
     $action = app(ViewPathAction::class);
     $result = $action->execute('test_ns::folder.view');
-    
+
     $expected = '/view/path/folder/view.blade.php';
     $expected = str_replace(['/', '\\'], [DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR], $expected);
-    
+
     expect($result)->toBe($expected);
 });
 
@@ -43,7 +41,7 @@ test('asset path action works', function () {
     Module::shouldReceive('getModulePath')
         ->with('test_module')
         ->andReturn('/module/path/');
-        
+
     $action = app(AssetPathAction::class);
     expect($action->execute('test_module::css/style.css'))->toBe('/module/path/resources/css/style.css');
 });

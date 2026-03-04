@@ -38,8 +38,7 @@ it('casts bool to int', function (): void {
 it('casts single-value array and stringable object', function (): void {
     expect($this->action->execute([8]))->toBe(8);
 
-    $stringable = new class
-    {
+    $stringable = new class {
         public function __toString(): string
         {
             return '73';

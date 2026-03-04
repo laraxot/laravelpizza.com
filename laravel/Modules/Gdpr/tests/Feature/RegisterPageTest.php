@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-uses(\Modules\Gdpr\Tests\TestCase::class);
+uses(Modules\Gdpr\Tests\TestCase::class);
 
 use Illuminate\Support\Facades\Auth;
 use Livewire\Livewire;
@@ -197,7 +197,7 @@ it('requires terms consent to be accepted', function (): void {
 });
 
 it('allows registration with all required fields and consents', function (): void {
-    if (! \Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
+    if (! Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
         test()->markTestSkipped('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
     }
 
@@ -218,7 +218,7 @@ it('allows registration with all required fields and consents', function (): voi
 });
 
 it('allows registration with optional marketing consent', function (): void {
-    if (! \Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
+    if (! Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
         test()->markTestSkipped('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
     }
 
@@ -239,7 +239,7 @@ it('allows registration with optional marketing consent', function (): void {
 });
 
 it('stores user data correctly after successful registration', function (): void {
-    if (! \Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
+    if (! Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
         test()->markTestSkipped('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
     }
 
@@ -265,7 +265,7 @@ it('stores user data correctly after successful registration', function (): void
 });
 
 it('hashes the password after registration', function (): void {
-    if (! \Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
+    if (! Illuminate\Support\Facades\Schema::connection('gdpr')->hasTable('treatments')) {
         test()->markTestSkipped('GDPR treatments table not migrated. Run: php artisan migrate --env=testing');
     }
 
