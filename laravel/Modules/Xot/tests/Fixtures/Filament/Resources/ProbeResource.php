@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Filament\Resources;
+namespace Modules\Xot\Tests\Fixtures\Filament\Resources;
 
 use Filament\Schemas\Components\Wizard\Step;
+use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class ProbeResource extends XotBaseResource
 {
@@ -36,10 +37,10 @@ class ProbeResource extends XotBaseResource
     }
 }
 
-namespace Modules\Xot\Filament\Resources\ProbeResource\Pages;
+namespace Modules\Xot\Tests\Fixtures\Filament\Resources\ProbeResource\Pages;
 
 use Filament\Resources\Pages\Page;
-use Modules\Xot\Filament\Resources\ProbeResource;
+use Modules\Xot\Tests\Fixtures\Filament\Resources\ProbeResource;
 
 class ListProbes extends Page
 {

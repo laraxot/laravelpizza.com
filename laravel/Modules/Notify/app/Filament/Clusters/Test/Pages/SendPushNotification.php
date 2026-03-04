@@ -202,11 +202,8 @@ class SendPushNotification extends XotBasePage
             throw new Exception('CloudMessage API non compatibile');
         }
 
-        // @phpstan-ignore-next-line method.nonObject (CloudMessage from string class name)
-        $message = $message
-            ->withToken($deviceToken)
-            ->withHighestPossiblePriority()
-            ->withData($messageData);
+        // @phpstan-ignore-next-line method.nonObject
+        $message = $message->withToken($deviceToken)->withHighestPossiblePriority()->withData($messageData);
 
         try {
             $messaging = app('firebase.messaging');

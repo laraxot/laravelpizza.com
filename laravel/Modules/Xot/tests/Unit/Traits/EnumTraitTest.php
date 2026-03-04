@@ -9,19 +9,21 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Traits\EnumTrait;
 
-enum TestEnum: string
-{
-    use EnumTrait;
-
-    case ALPHA = 'alpha';
-    case BETA = 'beta';
-
-    public static function getColumnDefinitions(): array
+if (! enum_exists(TestEnum::class)) {
+    enum TestEnum: string
     {
-        return [
-            'alpha' => fn (Blueprint $table) => $table->string('alpha')->nullable(),
-            'beta' => fn (Blueprint $table) => $table->string('beta')->nullable(),
-        ];
+        use EnumTrait;
+
+        case ALPHA = 'alpha';
+        case BETA = 'beta';
+
+        public static function getColumnDefinitions(): array
+        {
+            return [
+                'alpha' => fn (Blueprint $table) => $table->string('alpha')->nullable(),
+                'beta' => fn (Blueprint $table) => $table->string('beta')->nullable(),
+            ];
+        }
     }
 }
 

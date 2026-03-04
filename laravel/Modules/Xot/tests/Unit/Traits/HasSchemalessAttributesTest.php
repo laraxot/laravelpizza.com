@@ -11,19 +11,21 @@ use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Traits\HasSchemalessAttributes;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 
-class TestModel extends XotBaseModel
-{
-    use HasSchemalessAttributes;
-
-    public $extra_attributes;
-
-    public bool $saved = false;
-
-    public function save(array $options = [])
+if (! class_exists(TestModel::class)) {
+    class TestModel extends XotBaseModel
     {
-        $this->saved = true;
+        use HasSchemalessAttributes;
 
-        return true;
+        public $extra_attributes;
+
+        public bool $saved = false;
+
+        public function save(array $options = [])
+        {
+            $this->saved = true;
+
+            return true;
+        }
     }
 }
 

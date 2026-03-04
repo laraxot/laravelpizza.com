@@ -151,9 +151,9 @@ class NotificationTemplate extends BaseModel implements HasMedia
      */
     public function compile(array $data = []): array
     {
-        $subject = $this->compileString($this->subject, $data);
-        $bodyHtml = $this->compileString($this->body_html, $data);
-        $bodyText = $this->compileString($this->body_text, $data);
+        $subject = $this->compileString($this->getPreviewSubject() ?: null, $data);
+        $bodyHtml = $this->compileString($this->getPreviewBodyHtml() ?: null, $data);
+        $bodyText = $this->compileString($this->getPreviewBodyText() ?: null, $data);
 
         return [
             'subject' => $subject ?? '',
@@ -169,12 +169,14 @@ class NotificationTemplate extends BaseModel implements HasMedia
      */
     public function shouldSend(array $data = []): bool
     {
-        if (! $this->conditions) {
+        /** @var array<string, mixed>|null $conditions */
+        $conditions = $this->conditions;
+        if (! $conditions) {
             return true;
         }
 
-        foreach ($this->conditions as $path => $value) {
-            $actual = data_get($data, $path);
+        foreach ($conditions as $path => $value) {
+            $actual = data_get($data, (string) $path);
             if ($actual !== $value) {
                 return false;
             }
@@ -252,10 +254,9 @@ class NotificationTemplate extends BaseModel implements HasMedia
      */
     public function getGrapesJSData(): array
     {
-        $data = $this->grapesjs_data ?? [];
-        if (! \is_array($data)) {
-            $data = [];
-        }
+        /** @var array<string, mixed>|null $grapesData */
+        $grapesData = $this->grapesjs_data;
+        $data = is_array($grapesData) ? $grapesData : [];
 
         $result = [];
         foreach ($data as $key => $value) {
@@ -280,7 +281,10 @@ class NotificationTemplate extends BaseModel implements HasMedia
 
     public function getPreviewData(): array
     {
-        return $this->preview_data ?? [];
+        /** @var array<string, mixed>|null $previewData */
+        $previewData = $this->preview_data;
+
+        return $previewData ?? [];
     }
 
     public function getPreviewSubject(): string

@@ -44,7 +44,7 @@ class EventFactory extends Factory
             'location' => $this->faker->address(),
             'status' => 'published',
             'event_status' => EventStatus::SCHEDULED,
-            'event_attendance_mode' => EventAttendanceMode::OfflineEventAttendanceMode,
+            'event_attendance_mode' => EventAttendanceMode::OFFLINE,
             'attendees_count' => 0,
             'max_attendees' => $this->faker->numberBetween(50, 200),
             'user_id' => User::factory(),
@@ -71,7 +71,7 @@ class EventFactory extends Factory
     public function online(): static
     {
         return $this->state(fn (array $attributes) => [
-            'event_attendance_mode' => EventAttendanceMode::OnlineEventAttendanceMode,
+            'event_attendance_mode' => EventAttendanceMode::ONLINE,
             'url' => $this->faker->url(),
         ]);
     }

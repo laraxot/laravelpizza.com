@@ -10,9 +10,11 @@ use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
 
-class TestConcreteXotBaseModel extends XotBaseModel
-{
-    protected $table = 'test_xot_table';
+if (! class_exists(TestConcreteXotBaseModel::class)) {
+    class TestConcreteXotBaseModel extends XotBaseModel
+    {
+        protected $table = 'test_xot_table';
+    }
 }
 
 describe('XotBaseModel Business Logic', function () {
