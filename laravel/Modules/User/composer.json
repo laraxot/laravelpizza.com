@@ -50,8 +50,7 @@
     "jenssegers/agent": "*",
     "laravel/passport": "*",
     "socialiteproviders/auth0": "*",
-    "spatie/laravel-personal-data-export": "*",
-    "socialiteproviders/microsoft": "^4.8"
+    "spatie/laravel-personal-data-export": "*"
   },
   "require-dev": {},
   "repositories": [
