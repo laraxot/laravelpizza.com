@@ -122,6 +122,7 @@ class ListEvents extends XotBaseListRecords
      * Get the header actions.
      *
      * @return array<string, Action|\Filament\Actions\ActionGroup>
+     *
      * @phpstan-ignore method.childReturnType
      */
     protected function getHeaderActions(): array

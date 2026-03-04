@@ -1,8 +1,5 @@
-# __tips
-
-<!-- Contenuto migrato da _docs/__tips.txt -->
-
 https://github.com/phpstan/phpstan/issues/1242
+
 
 protected function callAction(array $match)
 {
@@ -30,4 +27,3 @@ protected function callAction(array $match)
 
     throw new \Exception("Method not found: {$controllerClass}@{$method}");
 }
-

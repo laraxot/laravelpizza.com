@@ -29,8 +29,8 @@ final class Blocks extends Component
     public ?Model $model = null;
 
     /**
-     * @param array<int|string, mixed> $blocks
-     * @param string|null              $tpl    Deprecated alias for $view (use view for new code)
+     * @param  array<int|string, mixed>  $blocks
+     * @param  string|null  $tpl  Deprecated alias for $view (use view for new code)
      */
     public function __construct(
         string $view = '',
@@ -39,7 +39,7 @@ final class Blocks extends Component
         ?string $tpl = null,
     ) {
         $resolvedView = $tpl ?? $view;
-        if ('' === $resolvedView) {
+        if ($resolvedView === '') {
             throw new \InvalidArgumentException('Blocks component requires view or tpl parameter');
         }
         $this->view = $resolvedView;

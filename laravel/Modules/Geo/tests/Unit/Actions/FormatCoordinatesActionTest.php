@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Modules\Geo\Actions\FormatCoordinatesAction;
 
 beforeEach(function () {
-    $this->action = new FormatCoordinatesAction();
+    $this->action = new FormatCoordinatesAction;
 });
 
 it('formats coordinates in decimal format', function (): void {

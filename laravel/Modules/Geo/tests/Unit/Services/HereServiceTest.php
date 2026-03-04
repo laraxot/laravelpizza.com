@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Modules\Geo\Services\HereService;
 
 beforeEach(function () {
-    $this->service = new HereService();
+    $this->service = new HereService;
 });
 
 it('has correct base URL', function (): void {

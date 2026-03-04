@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Modules\Geo\Services\GoogleMapsService;
 
 beforeEach(function () {
-    $this->service = new GoogleMapsService();
+    $this->service = new GoogleMapsService;
 });
 
 it('can be instantiated', function (): void {

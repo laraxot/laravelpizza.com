@@ -1,7 +1,3 @@
-# _inodes
-
-<!-- Contenuto migrato da _docs/_inodes.txt -->
-
 --------------------------------------------------------------
 $ df -i /
 Filesystem      Inodes  IUsed   IFree    IUse% Mounted on

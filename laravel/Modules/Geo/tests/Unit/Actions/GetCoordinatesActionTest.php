@@ -11,7 +11,7 @@ use Modules\Geo\Tests\LightTestCase;
 uses(LightTestCase::class);
 
 beforeEach(function () {
-    $this->action = new GetCoordinatesAction();
+    $this->action = new GetCoordinatesAction;
 });
 
 it('returns coordinates for valid address', function (): void {

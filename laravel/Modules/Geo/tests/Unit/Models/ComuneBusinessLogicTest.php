@@ -30,7 +30,7 @@ describe('Comune Business Logic', function () {
     });
 
     test('comune has expected fillable fields for italian municipalities', function () {
-        $comune = new Comune();
+        $comune = new Comune;
         $expectedFillable = [
             'id',
             'codice',
@@ -52,7 +52,7 @@ describe('Comune Business Logic', function () {
     });
 
     test('comune has schema definition for structured geographic data', function () {
-        $comune = new Comune();
+        $comune = new Comune;
 
         expect($comune)->toHaveProperty('schema');
         expect($comune->schema['zona'])->toBe('json');
@@ -62,20 +62,20 @@ describe('Comune Business Logic', function () {
     });
 
     test('comune has json directory property for data source', function () {
-        $comune = new Comune();
+        $comune = new Comune;
 
         expect($comune)->toHaveProperty('jsonDirectory');
         expect($comune->jsonDirectory)->toBeString();
     });
 
     test('comune has translatable array configured', function () {
-        $comune = new Comune();
+        $comune = new Comune;
 
         expect($comune->translatable)->toBeArray();
     });
 
     test('comune model can be instantiated without errors', function () {
-        $comune = new Comune();
+        $comune = new Comune;
 
         expect($comune)->toBeInstanceOf(Comune::class);
         expect($comune)->toBeInstanceOf(BaseModel::class);

@@ -51,8 +51,7 @@ class AddressField extends Section
     /**
      * Rimuove tutti i pattern reattivi dai campi per prevenire loop infiniti.
      *
-     * @param array<string, mixed> $schema
-     *
+     * @param  array<string, mixed>  $schema
      * @return array<string, mixed>
      */
     protected function removeReactivityFromSchema(array $schema): array
