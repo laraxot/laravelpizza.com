@@ -118,7 +118,7 @@ class Profile extends BaseProfile
         static::creating(static function (self $model): void {
             $model->offsetUnset('uuid');
             if (empty($model->id)) {
-                $model->id = (string) \Illuminate\Support\Str::uuid();
+                $model->setAttribute('id', (string) \Illuminate\Support\Str::uuid());
             }
         });
     }

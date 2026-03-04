@@ -155,7 +155,7 @@ class Comune extends BaseModel implements SushiToJsonContract
                 return [];
             }
 
-            /** @var array<int, mixed> $data */
+            /** @var array<int, array<string, mixed>> $rows */
             $rows = [];
 
             foreach ($data as $row) {
@@ -165,7 +165,6 @@ class Comune extends BaseModel implements SushiToJsonContract
                 }
             }
 
-            /* @var array<int, array<string, mixed>> $rows */
             return $rows;
         } catch (\Throwable) {
             return [];

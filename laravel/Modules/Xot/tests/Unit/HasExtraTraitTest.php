@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Modules\Xot\Contracts\ExtraContract;
 use Modules\Xot\Models\Traits\HasExtraTrait;
-use Spatie\SchemalessAttributes\SchemalessAttributes;
 use Tests\TestCase;
 
 uses(TestCase::class);

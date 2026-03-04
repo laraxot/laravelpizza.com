@@ -12,8 +12,6 @@ use Modules\Xot\Actions\ModelClass\CountAction;
 use Modules\Xot\Tests\Fixtures\Filament\Resources\ProbeResource;
 use Tests\TestCase;
 
-require_once __DIR__.'/../../Fixtures/Models/Probe.php';
-require_once __DIR__.'/../../Fixtures/Filament/Resources/ProbeResource.php';
 
 uses(TestCase::class);
 

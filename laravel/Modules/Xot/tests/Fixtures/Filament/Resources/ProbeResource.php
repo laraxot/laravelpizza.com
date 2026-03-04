@@ -55,9 +55,22 @@ class CreateProbe extends Page
 class EditProbe extends Page
 {
     protected static string $resource = ProbeResource::class;
+class ListProbes extends ListRecords
+{
+    protected static string $resource = ProbeResource::class;
 }
 
-class ViewProbe extends Page
+class CreateProbe extends CreateRecord
+{
+    protected static string $resource = ProbeResource::class;
+}
+
+class EditProbe extends EditRecord
+{
+    protected static string $resource = ProbeResource::class;
+}
+
+class ViewProbe extends ViewRecord
 {
     protected static string $resource = ProbeResource::class;
 }
