@@ -57,12 +57,11 @@ class Activity extends SpatieActivity
         'causer_type',
         'causer_id',
         'properties',
-        'batch_uuid',
-        'created_at',
-        'updated_at',
     ];
 }
 ```
+
+**Importante**: non ridefinire `$table` nel modello Activity. Il nome della tabella è gestito da Spatie tramite `config('activitylog.table_name')` (vedi `config/activitylog.php` e `config/local/<tenant>/activitylog.php`). Se serve cambiare tabella, farlo via configurazione, non nel modello.
 
 ### StoredEvent Model
 

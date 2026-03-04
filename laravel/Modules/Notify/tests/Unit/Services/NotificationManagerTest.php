@@ -10,11 +10,28 @@ use Modules\Notify\Actions\SendNotificationAction;
 use Modules\Notify\Models\NotificationTemplate;
 use Modules\Notify\Services\NotificationManager;
 use Modules\Notify\Tests\TestCase;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
 
 uses(TestCase::class);
 
 beforeEach(function () {
     $this->notificationManager = new NotificationManager;
+    
+    NotificationTemplate::truncate();
+    
+    // Create a real template in the database for the test
+    $this->template = NotificationTemplate::create([
+        'name' => 'Test Template',
+        'code' => 'test_template',
+        'subject' => ['en' => 'Test Subject'],
+        'body_html' => ['en' => 'Test Body'],
+        'channels' => ['email'],
+        'variables' => ['user' => 'name'],
+        'is_active' => true,
+        'category' => 'test_category',
+        'type' => \Modules\Notify\Enums\NotificationTypeEnum::EMAIL,
+    ]);
 });
 
 afterEach(function () {
@@ -22,14 +39,15 @@ afterEach(function () {
 });
 
 it('can send notification to single recipient', function (): void {
-    $recipient = Mockery::mock('Illuminate\Database\Eloquent\Model');
+    $recipient = new class extends Model {
+        protected $fillable = ['id'];
+    };
+    $recipient->id = 1;
+    
     $templateCode = 'test_template';
     $data = ['key' => 'value'];
     $channels = ['email'];
     $options = ['priority' => 'high'];
-
-    $template = Mockery::mock(NotificationTemplate::class);
-    $template->shouldReceive('getAttribute')->with('code')->andReturn($templateCode);
 
     $action = Mockery::mock(SendNotificationAction::class);
     $action->shouldReceive('execute')->with($recipient, $templateCode, $data, $channels, $options)->once();
@@ -43,16 +61,13 @@ it('can send notification to single recipient', function (): void {
 
 it('can send notification to multiple recipients', function (): void {
     $recipients = [
-        Mockery::mock('Illuminate\Database\Eloquent\Model'),
-        Mockery::mock('Illuminate\Database\Eloquent\Model'),
+        new class extends Model { protected $fillable = ['id']; },
+        new class extends Model { protected $fillable = ['id']; },
     ];
     $templateCode = 'test_template';
     $data = ['key' => 'value'];
     $channels = ['email'];
     $options = ['priority' => 'high'];
-
-    $template = Mockery::mock(NotificationTemplate::class);
-    $template->shouldReceive('getAttribute')->with('code')->andReturn($templateCode);
 
     $action = Mockery::mock(SendNotificationAction::class);
     $action->shouldReceive('execute')->times(2);
@@ -67,13 +82,10 @@ it('can send notification to multiple recipients', function (): void {
 it('can get template by code', function (): void {
     $code = 'test_template';
 
-    $template = Mockery::mock(NotificationTemplate::class);
-    $template->shouldReceive('getAttribute')->with('code')->andReturn($code);
-    $template->shouldReceive('getAttribute')->with('is_active')->andReturn(true);
-
     $result = $this->notificationManager->getTemplate($code);
 
-    expect($result)->toBeNull(); // Mock non restituisce risultati reali
+    expect($result)->not->toBeNull()
+        ->and($result->code)->toBe($code);
 });
 
 it('can get templates by category', function (): void {
@@ -81,11 +93,11 @@ it('can get templates by category', function (): void {
 
     $result = $this->notificationManager->getTemplatesByCategory($category);
 
-    expect($result)->toBeObject(); // Collection
+    expect($result)->toBeObject()->toHaveCount(1);
 });
 
 it('throws exception when template not found', function (): void {
-    $recipient = Mockery::mock('Illuminate\Database\Eloquent\Model');
+    $recipient = new class extends Model {};
     $templateCode = 'invalid_template';
 
     expect(fn () => $this->notificationManager->send($recipient, $templateCode))
@@ -100,7 +112,7 @@ it('has required methods', function (): void {
 });
 
 it('returns array from send method', function (): void {
-    $recipient = Mockery::mock('Illuminate\Database\Eloquent\Model');
+    $recipient = new class extends Model {};
     $templateCode = 'test_template';
 
     $action = Mockery::mock(SendNotificationAction::class);
@@ -114,7 +126,7 @@ it('returns array from send method', function (): void {
 });
 
 it('returns array from send multiple method', function (): void {
-    $recipients = [Mockery::mock('Illuminate\Database\Eloquent\Model')];
+    $recipients = [new class extends Model {}];
     $templateCode = 'test_template';
 
     $action = Mockery::mock(SendNotificationAction::class);

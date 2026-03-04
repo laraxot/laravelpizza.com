@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Gdpr\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Modules\Gdpr\Providers\GdprServiceProvider;
-use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
@@ -20,16 +18,19 @@ abstract class TestCase extends XotBaseTestCase
     use DatabaseTransactions;
 
     /** @var array<int, string> */
-    protected array $connectionsToTransact = ['mysql', 'user', 'gdpr'];
+    protected array $connectionsToTransact = [
+        'mysql',
+        'user',
+        'gdpr',
+    ];
 
     /**
-     * @return array<int, class-string<\Illuminate\Support\ServiceProvider>>
+     * @return array<int, class-string<"Illuminate\Support\ServiceProvider>>
      */
     protected function getPackageProviders($app): array
     {
         return [
             ...parent::getPackageProviders($app),
-            UserServiceProvider::class,
             GdprServiceProvider::class,
         ];
     }

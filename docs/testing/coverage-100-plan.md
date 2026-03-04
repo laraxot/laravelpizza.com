@@ -15,7 +15,7 @@ Obiettivo: portare il progetto LaravelPizza al **100% di coverage** dei test Pes
   - **Gdpr RegisterPageTest**: riscritto da POST a Livewire::test(RegisterWidget::class); skip condizionale se tabella `treatments` non migrata — vedi [Modules/Gdpr/docs/registration-testing.md](../laravel/Modules/Gdpr/docs/registration-testing.md)
   - **Gdpr RegisterFormValidationTest**: skip per validazioni non presenti in ValidateUserDataAction (required, email format, password); email univoche per evitare conflitti; vedi [Modules/Gdpr/docs/registration-testing.md](../laravel/Modules/Gdpr/docs/registration-testing.md)
   - **Gdpr RegisterWidgetTest**: rimosso assert su `state` (ValidateUserDataAction non lo restituisce); skip condizionale per SaveGdprConsentsAction se tabella `treatments` non migrata
-  - **Activity model**: hack in `__construct()` — in testing usa `config('database.default')` invece di `activity`. Anti-pattern documentato in [testing-connection-hack](../laravel/Modules/Activity/docs/testing/testing-connection-hack.md)
+  - **Activity model**: l’hack in `__construct()` (uso di `config('database.default')` in testing) è stato rimosso. Il modello ora usa solo `config('activitylog.database_connection')` (`ACTIVITY_LOGGER_DB_CONNECTION` in phpunit.xml) e la connessione `activity` configurata da TenantServiceProvider. L’anti-pattern resta documentato in [testing-connection-hack](../laravel/Modules/Activity/docs/testing/testing-connection-hack.md) come caso storico.
 
 ## Fasi
 

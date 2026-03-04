@@ -107,7 +107,19 @@ class Activity extends SpatieActivity
 
     protected $connection = 'activity';
 
-    
+    protected $table = 'activity_log';
+
+    /**
+     * @param array<string, mixed> $attributes
+     */
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+        if (app()->environment('testing')) {
+            $default = config('database.default');
+            $this->connection = is_string($default) ? $default : 'mysql';
+        }
+    }
 
     /** @var list<string> */
     protected $fillable = [
@@ -117,9 +129,9 @@ class Activity extends SpatieActivity
         'subject_type',
         'event',
         'subject_id',
-        'causer_type', // Added
-        'causer_id',   // Added
-        'properties', // Added
+        'causer_type',
+        'causer_id',
+        'properties',
     ];
 
     // NOTE

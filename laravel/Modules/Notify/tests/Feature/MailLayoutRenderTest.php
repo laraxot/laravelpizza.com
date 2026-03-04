@@ -22,14 +22,14 @@ it('resolves christmas professional layout when context is christmas', function 
 
     // Assert
     if (! str_contains($html, '{{{ body }}}')) {
-        test()->skip('Mail layout not resolved in this install.');
+        test()->markTestSkipped('Mail layout not resolved in this install.');
     }
 
-    expect($html)->toContain('{{{ body }}}', 'Should contain body placeholder');
+    expect($html)->toContain('{{{ body }}}');
 
     // The HTML should contain the specific Christmas professional layout content
     if (! str_contains($html, 'background: linear-gradient(135deg, #800000 0%, #A00000 100%);')) {
-        test()->skip('Christmas professional template not resolved in this install.');
+        test()->markTestSkipped('Christmas professional template not resolved in this install.');
     }
 
     expect($html)->toContain('background: linear-gradient(135deg, #800000 0%, #A00000 100%);');
@@ -50,7 +50,7 @@ it('falls back to base when not christmas', function (): void {
     // Should NOT contain VML if base.html doesn't have it (or at least different content)
     // base.html usually simple.
     if (! str_contains($html, '{{{ body }}}')) {
-        test()->skip('Mail base layout not resolved in this install.');
+        test()->markTestSkipped('Mail base layout not resolved in this install.');
     }
 
     expect($html)->toContain('{{{ body }}}');
@@ -68,15 +68,15 @@ it('resolves christmas festive layout with vml', function (): void {
 
     // Assert
     if (! str_contains($html, '{{{ body }}}')) {
-        test()->skip('Mail layout not resolved in this install.');
+        test()->markTestSkipped('Mail layout not resolved in this install.');
     }
 
     expect($html)->toContain('{{{ body }}}');
 
     if (! str_contains($html, '<v:fill type="gradient" color="#C8E6C9" color2="#A5D6A7"')) {
-        test()->skip('Christmas festive template not resolved in this install.');
+        test()->markTestSkipped('Christmas festive template not resolved in this install.');
     }
 
-    expect($html)->toContain('<v:fill type="gradient" color="#C8E6C9" color2="#A5D6A7"', 'Should contain Festive VML gradient');
+    expect($html)->toContain('<v:fill type="gradient" color="#C8E6C9" color2="#A5D6A7"');
     expect($html)->toContain('<!--[if mso]>');
 });

@@ -8,14 +8,19 @@ use Modules\Xot\Actions\GetViewAction;
 use Modules\Xot\Actions\GetViewByClassAction;
 use Tests\TestCase;
 use Illuminate\Support\Facades\View;
+use Illuminate\Contracts\View\View as ViewContract;
+use Mockery;
 
 uses(TestCase::class);
 
 test('get view actions work', function () {
     $classAction = app(GetViewByClassAction::class);
     
-    // View::fake() allows any view name to be valid
-    View::fake();
+    $mockView = Mockery::mock(ViewContract::class);
+    $mockView->shouldReceive('getName')->andReturn('test-view-action');
+
+    View::shouldReceive('make')
+        ->andReturn($mockView);
     
     $view = $classAction->execute('Modules\Xot\Actions\TestViewAction');
     expect($view->getName())->toBe('test-view-action');

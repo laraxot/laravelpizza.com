@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Geo\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Modules\Geo\Providers\GeoServiceProvider;
-use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
@@ -25,13 +23,12 @@ abstract class TestCase extends XotBaseTestCase
     ];
 
     /**
-     * @return array<int, class-string<\Illuminate\Support\ServiceProvider>>
+     * @return array<int, class-string<"Illuminate\Support\ServiceProvider>>
      */
     protected function getPackageProviders($app): array
     {
         return [
             ...parent::getPackageProviders($app),
-            UserServiceProvider::class,
             GeoServiceProvider::class,
         ];
     }

@@ -64,9 +64,12 @@ use Spatie\Translatable\HasTranslations;
  * @property-read ProfileContract|null $deleter
  * @mixin \Eloquent
  */
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
+
 class NotificationTemplate extends BaseModel implements HasMedia
 {
     use HasTranslations;
+    use HasUuids;
     use InteractsWithMedia;
 
     public array $translatable = [

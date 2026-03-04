@@ -344,6 +344,10 @@ app(DoSomethingAction::class)->execute($data);
 **Regola Critica**: Robustezza e Tipi:
 1. L'uso del tipo `mixed` è vietato, se non come ultimissima spiaggia. Preferire sempre tipi specifici, union types o generics.
 2. I test devono sempre usare `.env.testing` e puntare al database di test (es. `laravelpizza_data_test`).
+3. **100% Pest Coverage**: È obbligatorio raggiungere il 100% di test coverage (Pest) per ogni modulo e tema, con particolare focus sulle Spatie Actions.
+4. **No RefreshDatabase**: Il trait `RefreshDatabase` è vietato. Usare `DatabaseTransactions`.
+5. **Multi-Connection Isolation**: Per moduli con connessioni multiple, dichiararle in `TestCase.php`: `protected array $connectionsToTransact = ['mysql', 'module_name', 'user'];`.
+6. **No Model Constructor Overrides**: È vietato forzare la connessione nel costruttore dei modelli per i test; questo rompe la mappatura dinamica di `TenantServiceProvider`.
 
 ---
 

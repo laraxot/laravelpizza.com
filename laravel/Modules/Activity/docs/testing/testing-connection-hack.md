@@ -1,8 +1,8 @@
 # Activity Model: Testing Connection Hack
 
-## Cosa
+## Cosa (STORICO – HACK RIMOSSO)
 
-Nel modello `Activity` (che estende `SpatieActivity`) è presente un override in `__construct()`:
+In una versione precedente, nel modello `Activity` (che estende `SpatieActivity`) era presente un override in `__construct()`:
 
 ```php
 if (app()->environment('testing')) {
@@ -26,13 +26,15 @@ if (app()->environment('testing')) {
 - `TenantServiceProvider::registerDB()` aggiunge le connessioni modulari a runtime, ma in alcuni setup di test (es. SQLite, single-DB) la connessione `activity` può non esistere o puntare altrove.
 - Soluzione rapida: in test usare sempre `database.default`.
 
-## Quando rimuoverlo
+## Stato attuale
 
-Rimuovere questo hack quando:
+Questo hack è **stato rimosso**. Oggi:
 
-1. `.env.testing` e `TenantServiceProvider` garantiscono che `activity` esista e punti al DB di test.
-2. Tutti i test Activity passano senza questo override.
-3. `$connectionsToTransact` nel TestCase include `activity` e il rollback funziona correttamente.
+1. `.env.testing` e `TenantServiceProvider` garantiscono che la connessione `activity` esista e punti al DB di test (`*_test`).
+2. `phpunit.xml` imposta `ACTIVITY_LOGGER_DB_CONNECTION=mysql` così che `SpatieActivity` legga tutto da `config('activitylog')`.
+3. `$connectionsToTransact` nel TestCase di Activity include `activity` e il rollback funziona correttamente con `DatabaseTransactions`.
+
+Il file rimane come **documentazione di un anti‑pattern** da NON reintrodurre.
 
 ## Collegamenti
 

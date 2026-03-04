@@ -17,12 +17,9 @@ describe('XotBaseTransition', function () {
         $this->record->email = 'test@example.com';
 
         // Create a concrete test transition class.
-        // Override sendRecipientNotification con firma identica alla base per evitare Fatal error
-        // (la base usa RecordNotificationData, non UserContract).
         $this->transition = new class($this->record) extends XotBaseTransition {
             public static string $name = 'test_transition';
 
-            #[Override]
             public function getNotificationRecipients(): array
             {
                 return [
@@ -30,10 +27,9 @@ describe('XotBaseTransition', function () {
                 ];
             }
 
-            /** @param array<string, mixed> $data */
-            public function sendRecipientNotification(\Modules\Notify\Datas\RecordNotificationData $recipient, array $data): void
+            public function sendRecipientNotification(RecordNotificationData $recipient, array $data): void
             {
-                // Mock: evita invio reale e dipendenze (RecordNotification, getNotificationSlug su record)
+                // Mock: evita invio reale e dipendenze
             }
         };
     });

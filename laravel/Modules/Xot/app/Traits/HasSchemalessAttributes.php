@@ -42,7 +42,15 @@ trait HasSchemalessAttributes
      */
     public function getExtraAttribute(string $key, mixed $default = null): mixed
     {
-        return $this->extra_attributes?->get($key, $default) ?? $default;
+        if ($this->extra_attributes instanceof SchemalessAttributes) {
+            return $this->extra_attributes->get($key, $default);
+        }
+
+        if (is_array($this->extra_attributes)) {
+            return $this->extra_attributes[$key] ?? $default;
+        }
+
+        return $default;
     }
 
     /**
@@ -50,8 +58,8 @@ trait HasSchemalessAttributes
      */
     public function setExtraAttribute(string $key, mixed $value): void
     {
-        if (! $this->extra_attributes) {
-            $this->extra_attributes = new SchemalessAttributes();
+        if (! $this->extra_attributes instanceof SchemalessAttributes) {
+            $this->extra_attributes = SchemalessAttributes::createForModel($this, 'extra_attributes');
         }
 
         $this->extra_attributes->set($key, $value);
@@ -64,7 +72,15 @@ trait HasSchemalessAttributes
      */
     public function getExtraAttributes(): array
     {
-        return $this->extra_attributes?->all() ?? [];
+        if ($this->extra_attributes instanceof SchemalessAttributes) {
+            return $this->extra_attributes->all();
+        }
+
+        if (is_array($this->extra_attributes)) {
+            return $this->extra_attributes;
+        }
+
+        return [];
     }
 
     /**
@@ -72,7 +88,15 @@ trait HasSchemalessAttributes
      */
     public function hasExtraAttribute(string $key): bool
     {
-        return $this->extra_attributes?->has($key) ?? false;
+        if ($this->extra_attributes instanceof SchemalessAttributes) {
+            return $this->extra_attributes->has($key);
+        }
+
+        if (is_array($this->extra_attributes)) {
+            return array_key_exists($key, $this->extra_attributes);
+        }
+
+        return false;
     }
 
     /**
@@ -80,7 +104,13 @@ trait HasSchemalessAttributes
      */
     public function removeExtraAttribute(string $key): void
     {
-        $this->extra_attributes->forget($key);
+        if ($this->extra_attributes instanceof SchemalessAttributes) {
+            $this->extra_attributes->forget($key);
+        }
+
+        if (is_array($this->extra_attributes)) {
+            unset($this->extra_attributes[$key]);
+        }
     }
 
     /**

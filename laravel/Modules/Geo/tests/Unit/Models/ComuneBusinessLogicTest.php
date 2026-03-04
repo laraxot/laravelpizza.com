@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
+namespace Modules\Geo\Tests\Unit\Models;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Geo\Models\BaseModel;
 use Modules\Geo\Models\Comune;
+use Modules\Geo\Tests\TestCase;
 use Modules\Tenant\Models\Traits\SushiToJson;
+
+uses(TestCase::class);
 
 describe('Comune Business Logic', function () {
     test('comune extends base model', function () {
-        expect(Comune::class)->toBeSubclassOf(BaseModel::class);
+        expect(is_subclass_of(Comune::class, BaseModel::class))->toBeTrue();
     });
 
     test('comune has factory trait for testing', function () {

@@ -39,11 +39,11 @@ it('verifies csrf token', function (): void {
     };
     $class->_token = $token;
 
-    Session::shouldReceive('token')->andReturn($token);
+    Session::shouldReceive('token')
+        ->twice()
+        ->andReturn($token, 'wrong-token');
 
     expect($class->verifyCsrfToken())->toBeTrue();
-
-    Session::shouldReceive('token')->andReturn('wrong-token');
     expect($class->verifyCsrfToken())->toBeFalse();
     
     Mockery::close();

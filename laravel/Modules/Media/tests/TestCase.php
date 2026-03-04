@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests;
 
-use Modules\Media\Providers\MediaServiceProvider;
-use Modules\User\Providers\UserServiceProvider;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
