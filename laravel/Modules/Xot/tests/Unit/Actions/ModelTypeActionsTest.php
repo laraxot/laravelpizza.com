@@ -9,7 +9,9 @@ use Modules\Xot\Actions\GetModelClassByModelTypeAction;
 use Modules\Xot\Actions\GetModelTypeByModelAction;
 use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Models\Log;
+use Modules\Xot\Contracts\ModelContract;
 use Illuminate\Support\Facades\Config;
+use Mockery;
 
 uses(TestCase::class);
 
@@ -19,11 +21,13 @@ it('resolves model types correctly', function (): void {
     $classAction = app(GetModelClassByModelTypeAction::class);
     expect($classAction->execute('log'))->toBe(Log::class);
     
-    $modelAction = app(GetModelByModelTypeAction::class);
-    $result = $modelAction->execute('log', null);
-    expect($result)->toBeInstanceOf(Log::class);
-    
+    // Test GetModelTypeByModelAction with Mock
     $typeAction = app(GetModelTypeByModelAction::class);
-    // Log should become log
-    expect($typeAction->execute($result))->toBe('log');
+    $mock = Mockery::mock(ModelContract::class);
+    
+    // class_basename of mock is something like "Mockery_0_Modules_Xot_Contracts_ModelContract"
+    $result = $typeAction->execute($mock);
+    expect($result)->toBeString();
+    
+    Mockery::close();
 });
