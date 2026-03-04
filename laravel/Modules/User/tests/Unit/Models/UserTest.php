@@ -46,14 +46,15 @@ test('user can change password', function (): void {
 });
 
 test('user can be updated', function (): void {
+    $newEmail = 'updated_'.rand().'@example.com';
     $this->user->update([
-        'email' => 'updated@example.com',
+        'email' => $newEmail,
         'type' => UserType::BoUser,
     ]);
 
     $this->user->refresh();
 
-    expect($this->user->email)->toBe('updated@example.com');
+    expect($this->user->email)->toBe($newEmail);
     $type = $this->user->type;
     $typeValue = $type instanceof UserType ? $type->value : $type;
     expect($typeValue)->toBe(UserType::BoUser->value);
@@ -97,7 +98,7 @@ test('user can be found by type', function (): void {
     $admins = User::where('type', UserType::MasterAdmin)->get();
 
     expect($admins->count())->toBeGreaterThanOrEqual(1);
-    expect($admins->first()->id)->toBe($this->user->id);
+    expect($admins->pluck('id'))->toContain($this->user->id);
 });
 
 test('user can be created with different types', function (): void {
