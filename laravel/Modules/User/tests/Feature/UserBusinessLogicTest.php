@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use \Illuminate\Database\UniqueConstraintViolationException;
+use Illuminate\Database\UniqueConstraintViolationException;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
@@ -44,8 +44,8 @@ describe('User Business Logic Integration', function () {
             User::factory()->create(['email' => $email]);
 
             // Tentativo di creare secondo utente con stessa email
-            expect(fn() => User::factory()->create(['email' => $email]))
-                ->toThrow(\Illuminate\Database\UniqueConstraintViolationException::class);
+            expect(fn () => User::factory()->create(['email' => $email]))
+                ->toThrow(UniqueConstraintViolationException::class);
         });
     });
 

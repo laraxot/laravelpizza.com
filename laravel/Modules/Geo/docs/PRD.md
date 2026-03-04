@@ -76,3 +76,12 @@ Il modulo Geo segue la **Metodologia "Super Mucca" (Laraxot Zen)**:
 
 - [PRD Progetto](../../../../docs/prd.md)
 - [Free Maps Only](../../../../.cursor/memories/free-maps-only.md)
+
+## Testing & Coverage
+
+Il modulo $(basename $(dirname $(dirname "$prd"))) segue la **Metodologia "Super Mucca" (Laraxot Zen)**:
+- **XotBaseTestCase**: Tutti i test estendono `Modules\Xot\Tests\XotBaseTestCase`.
+- **MySQL Only**: Test eseguiti contro MySQL (.env.testing).
+- **No RefreshDatabase**: Utilizzo di `DatabaseTransactions`.
+- **Obiettivo**: 100% di coverage. Se un test fallisce, va sistemato o eliminato se il sito è funzionale.
+

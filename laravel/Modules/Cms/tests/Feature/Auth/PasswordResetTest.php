@@ -16,7 +16,7 @@ test('reset password link screen can be rendered', function (): void {
         $response = get('/'.$lang.'/forgot-password');
         $this->assertSame(404, $response->status());
     } catch (\Exception $e) {
-        $this->markTestSkipped('Password reset components not available: ' . $e->getMessage());
+        $this->markTestSkipped('Password reset components not available: '.$e->getMessage());
     }
 });
 
@@ -30,7 +30,7 @@ test('reset password screen can be rendered', function (): void {
         $response = get('/'.$lang.'/reset-password/fake-token');
         $this->assertSame(404, $response->status());
     } catch (\Exception $e) {
-        $this->markTestSkipped('Password reset components not available: ' . $e->getMessage());
+        $this->markTestSkipped('Password reset components not available: '.$e->getMessage());
     }
 });
 
