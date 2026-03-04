@@ -27,7 +27,8 @@ jobs:
 
       # Install dependencies
       - name: Install Composer Dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        working-directory: laravel
+        run: composer install --prefer-dist --no-progress
 
       # Install Ollama CLI
       - name: Install Ollama CLI
@@ -41,6 +42,7 @@ jobs:
 
       # Run Ollama for code improvement
       - name: Run Ollama for Code Improvement
+        working-directory: laravel
         run: |
           ollama run codellama \
             --input "Analyze and improve the PHP code in the ./ directory.

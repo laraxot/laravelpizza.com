@@ -28,6 +28,7 @@ jobs:
           php-version: '8.4'
 
       - name: Add Flux Credentials Loaded From ENV
+        working-directory: laravel
         run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
 
       - name: Install Dependencies

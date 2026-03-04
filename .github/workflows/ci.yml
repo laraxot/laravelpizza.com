@@ -29,6 +29,7 @@ jobs:
 
       - name: Add Flux Credentials
         if: env.FLUX_USERNAME != ''
+        working-directory: laravel
         run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
         env:
           FLUX_USERNAME: ${{ secrets.FLUX_USERNAME }}
@@ -62,6 +63,7 @@ jobs:
 
       - name: Add Flux Credentials
         if: env.FLUX_USERNAME != ''
+        working-directory: laravel
         run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
         env:
           FLUX_USERNAME: ${{ secrets.FLUX_USERNAME }}
@@ -115,6 +117,7 @@ jobs:
 
       - name: Add Flux Credentials
         if: env.FLUX_USERNAME != ''
+        working-directory: laravel
         run: composer config http-basic.composer.fluxui.dev "${{ secrets.FLUX_USERNAME }}" "${{ secrets.FLUX_LICENSE_KEY }}"
         env:
           FLUX_USERNAME: ${{ secrets.FLUX_USERNAME }}
