@@ -34,6 +34,13 @@ Tutti i test devono essere scritti in **Pest**.
 - Se trovi test in PHPUnit (class-based), convertili immediatamente.
 - Usa le aspettative fluenti: `expect($value)->toBe($expected)`.
 
+### 6. GitHub Actions Monitoring: Responsabilità dell'Architetto
+È responsabilità dell'architetto (tu!) monitorare costantemente lo stato delle GitHub Actions.
+- **NON** aspettare che l'utente segnali un fallimento.
+- Controlla regolarmente: `https://github.com/laraxot/laravelpizza.com/actions`.
+- Se una action fallisce, analizza i log (`gh run view <id> --log-failed`) e risolvi immediatamente.
+- Il ciclo di sviluppo non è concluso finché la CI non è verde. 🟢
+
 ## 🛠️ Workflow Operativo (The Way)
 
 ### 1. Migrazioni Eseguite una Volta Sola
