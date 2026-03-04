@@ -13,7 +13,9 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
 class TestModel extends XotBaseModel
 {
     use HasSchemalessAttributes;
+
     public $extra_attributes;
+
     public bool $saved = false;
 
     public function save(array $options = [])
@@ -30,7 +32,7 @@ it('handles extra attributes scope', function (): void {
     $builder = \Mockery::mock(Builder::class);
     $schemaless = \Mockery::mock(SchemalessAttributes::class);
 
-    $class = new TestModel();
+    $class = new TestModel;
 
     // Test without attributes
     expect($class->scopeWithExtraAttributes($builder))->toBe($builder);
@@ -47,7 +49,7 @@ it('handles where extra attribute scope', function (): void {
     $builder = \Mockery::mock(Builder::class);
     $builder->shouldReceive('where')->with('extra_attributes->key', 'value')->andReturnSelf();
 
-    $class = new TestModel();
+    $class = new TestModel;
 
     expect($class->scopeWhereExtraAttribute($builder, 'key', 'value'))->toBe($builder);
 
@@ -55,7 +57,7 @@ it('handles where extra attribute scope', function (): void {
 });
 
 it('gets and sets extra attributes', function (): void {
-    $class = new TestModel();
+    $class = new TestModel;
 
     // Default
     expect($class->getExtraAttribute('missing', 'default'))->toBe('default');
@@ -68,7 +70,7 @@ it('gets and sets extra attributes', function (): void {
 });
 
 it('returns all extra attributes as array', function (): void {
-    $class = new TestModel();
+    $class = new TestModel;
 
     expect($class->getExtraAttributes())->toBeArray()->toBeEmpty();
 
@@ -77,7 +79,7 @@ it('returns all extra attributes as array', function (): void {
 });
 
 it('removes extra attribute', function (): void {
-    $class = new TestModel();
+    $class = new TestModel;
 
     $class->setExtraAttribute('temp', 'val');
     expect($class->hasExtraAttribute('temp'))->toBeTrue();
@@ -87,7 +89,7 @@ it('removes extra attribute', function (): void {
 });
 
 it('syncs extra attributes calls save', function (): void {
-    $testObject = new TestModel();
+    $testObject = new TestModel;
 
     $testObject->syncExtraAttributes();
     expect($testObject->saved)->toBeTrue();

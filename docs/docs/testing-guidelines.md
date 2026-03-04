@@ -19,13 +19,17 @@ Questo garantisce:
 - Usiamo MySQL con il database `_test` (es. `laravelpizza_data_test`).
 - Configurazione in `.env.testing`.
 
-### 3. No RefreshDatabase: La Velocità è Virtù
-Il trait `RefreshDatabase` è **VIETATO**.
-- Rallenta i test inutilmente.
-- Infrange l'integrità dei dati persistenti necessari per alcuni test cross-modulo.
-- **La Via**: Usa `DatabaseTransactions` per i test che necessitano di isolamento, oppure gestisci lo stato nel `setUp()`.
+### 3. No RefreshDatabase & No migrate:fresh: La Velocità è Virtù
+- Il trait `RefreshDatabase` è **VIETATO**. Rallenta i test e può causare problemi di integrità.
+- Il comando `php artisan migrate:fresh` è **STRETTAMENTE VIETATO**. È distruttivo, ignora i dati persistenti necessari e non scala in contesti multi-tenant o modulari.
+- **La Via**: Usa `DatabaseTransactions` per l'isolamento, o gestisci lo stato manualmente nel `setUp()`. Esegui le migrazioni una sola volta all'inizio della suite.
 
-### 4. Pest Mandatory: Il Futuro è Fluente
+### 4. No Connection Hacks in Models
+**MAI** inserire logica di switch della connessione basata sull'environment (`app()->environment('testing')`) nel costruttore o nei metodi dei Model.
+- È una pratica pessima ("cagata") che rompe la separazione dei compiti.
+- La connessione deve essere gestita a livello di configurazione o dinamicamente dai Service Provider (es. `TenantServiceProvider`).
+
+### 5. Pest Mandatory: Il Futuro è Fluente
 Tutti i test devono essere scritti in **Pest**.
 - Se trovi test in PHPUnit (class-based), convertili immediatamente.
 - Usa le aspettative fluenti: `expect($value)->toBe($expected)`.

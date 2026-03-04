@@ -112,15 +112,17 @@ class Activity extends SpatieActivity
     protected $table = 'activity_log';
 
     /**
-     * @param  array<string, mixed>  $attributes
+     * @return string|null
      */
-    public function __construct(array $attributes = [])
+    public function getConnectionName()
     {
-        parent::__construct($attributes);
         if (app()->environment('testing')) {
             $default = config('database.default');
-            $this->connection = is_string($default) ? $default : 'mysql';
+
+            return is_string($default) ? $default : 'mysql';
         }
+
+        return $this->connection;
     }
 
     /** @var list<string> */

@@ -67,13 +67,20 @@ class StoredEvent extends SpatieStoredEvent
 
     protected $connection = 'activity';
 
-    public function __construct(array $attributes = [])
+    protected $table = 'stored_events';
+
+    /**
+     * @return string|null
+     */
+    public function getConnectionName()
     {
-        parent::__construct($attributes);
         if (app()->environment('testing')) {
             $default = config('database.default');
-            $this->connection = is_string($default) ? $default : 'mysql';
+
+            return is_string($default) ? $default : 'mysql';
         }
+
+        return $this->connection;
     }
 
     protected $fillable = [

@@ -8,8 +8,6 @@ uses(\Modules\User\Tests\TestCase::class);
 
 use Modules\User\Traits\PasswordValidationRules;
 
-
-
 test('PasswordValidationRules trait can be used', function () {
     expect(trait_exists(PasswordValidationRules::class))->toBeTrue();
 

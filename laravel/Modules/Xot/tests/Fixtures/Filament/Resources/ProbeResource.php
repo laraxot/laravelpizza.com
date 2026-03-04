@@ -39,7 +39,6 @@ class ProbeResource extends XotBaseResource
 
 namespace Modules\Xot\Tests\Fixtures\Filament\Resources\ProbeResource\Pages;
 
-use Filament\Resources\Pages\Page;
 use Modules\Xot\Tests\Fixtures\Filament\Resources\ProbeResource;
 
 class ListProbes extends Page
@@ -55,22 +54,9 @@ class CreateProbe extends Page
 class EditProbe extends Page
 {
     protected static string $resource = ProbeResource::class;
-class ListProbes extends ListRecords
-{
-    protected static string $resource = ProbeResource::class;
 }
 
-class CreateProbe extends CreateRecord
-{
-    protected static string $resource = ProbeResource::class;
-}
-
-class EditProbe extends EditRecord
-{
-    protected static string $resource = ProbeResource::class;
-}
-
-class ViewProbe extends ViewRecord
+class ViewProbe extends Page
 {
     protected static string $resource = ProbeResource::class;
 }

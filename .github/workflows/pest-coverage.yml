@@ -75,6 +75,10 @@ jobs:
         working-directory: laravel
         run: |
           cp .env.testing .env
+          sed -i 's/^DB_USERNAME=.*/DB_USERNAME=root/' .env
+          sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=password/' .env
+          sed -i 's/^DB_USERNAME_USER=.*/DB_USERNAME_USER=root/' .env
+          sed -i 's/^DB_PASSWORD_USER=.*/DB_PASSWORD_USER=password/' .env
           php artisan key:generate --force
 
       - name: Run Migrations (NEVER migrate:fresh)

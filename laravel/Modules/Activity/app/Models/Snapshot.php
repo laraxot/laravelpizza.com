@@ -45,6 +45,22 @@ class Snapshot extends SpatieSnapshot
     /** @var string */
     protected $connection = 'activity';
 
+    protected $table = 'snapshots';
+
+    /**
+     * @return string|null
+     */
+    public function getConnectionName()
+    {
+        if (app()->environment('testing')) {
+            $default = config('database.default');
+
+            return is_string($default) ? $default : 'mysql';
+        }
+
+        return $this->connection;
+    }
+
     /** @var list<string> */
     protected $fillable = ['id', 'aggregate_uuid', 'aggregate_version', 'state', 'created_at', 'updated_at'];
 }
