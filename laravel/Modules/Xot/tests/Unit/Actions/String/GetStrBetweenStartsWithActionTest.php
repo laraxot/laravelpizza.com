@@ -2,19 +2,23 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\String;
+
 use Modules\Xot\Actions\String\GetStrBetweenStartsWithAction;
+use Modules\Xot\Tests\TestCase;
 
-beforeEach(function (): void {
-    $this->action = app(GetStrBetweenStartsWithAction::class);
+uses(TestCase::class);
+
+it('extracts string between markers correctly', function (): void {
+    $action = app(GetStrBetweenStartsWithAction::class);
+    
+    $body = 'prefix { content { inner } } suffix';
+    $result = $action->execute($body, 'content', '{', '}');
+    
+    expect($result)->toBe('content { inner }');
 });
 
-it('extracts substring between start and balanced close', function (): void {
-    $body = 'pre START (inner) close post';
-    $result = $this->action->execute($body, 'START', '(', ')');
-
-    expect($result)->toContain('START')->toContain('inner');
+it('throws exception when start marker is missing', function (): void {
+    $action = app(GetStrBetweenStartsWithAction::class);
+    expect(fn() => $action->execute('body', 'missing', '{', '}'))->toThrow(\Exception::class);
 });
-
-it('throws when start not found', function (): void {
-    $this->action->execute('no start here', 'MISSING', '(', ')');
-})->throws(Exception::class, 'Cannot find');

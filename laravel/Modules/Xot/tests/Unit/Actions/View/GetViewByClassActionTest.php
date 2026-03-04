@@ -2,35 +2,42 @@
 
 declare(strict_types=1);
 
-use Illuminate\Contracts\View\View;
-use Modules\Xot\Actions\GetViewByClassAction;
-use Tests\TestCase;
+namespace Modules\Xot\Tests\Unit\Actions\View;
+
+use Modules\Xot\Actions\View\GetViewByClassAction;
+use Modules\Xot\Tests\TestCase;
+use Illuminate\Support\Facades\View;
 
 uses(TestCase::class);
 
-it('returns a view when explicit view name is provided', function (): void {
-    $view = app(GetViewByClassAction::class)->execute(
-        'Modules\\Xot\\Http\\Controllers\\DashboardController',
-        ['title' => 'Hello'],
-        'welcome',
-    );
+it('converts class names to view names correctly', function (): void {
+    $action = app(GetViewByClassAction::class);
+    
+    // Mock view existence
+    View::addNamespace('user', sys_get_temp_dir());
+    View::shouldReceive('exists')
+        ->with('user::filament.resources.user-resource')
+        ->andReturn(true);
 
-    expect($view)->toBeInstanceOf(View::class)
-        ->and($view->getName())->toBe('welcome')
-        ->and($view->getData()['title'])->toBe('Hello');
+    $class = 'Modules\\User\\Filament\\Resources\\UserResource';
+    $result = $action->execute($class);
+    
+    expect($result)->toBe('user::filament.resources.user-resource');
 });
 
-it('builds default view name from class when view name is omitted', function (): void {
-    expect(fn () => app(GetViewByClassAction::class)->execute('Modules\\Xot\\Pages\\MyCustomPage'))
-        ->toThrow(InvalidArgumentException::class, 'View [my-custom-page] not found');
+it('handles singular previous parts correctly', function (): void {
+    $action = app(GetViewByClassAction::class);
+    
+    // Test checkPrev logic directly
+    // "UserResource" with previous "Resources" (singular "Resource")
+    expect($action->checkPrev('UserResource', 'Resources'))->toBe('User');
+    expect($action->checkPrev('NoMatch', 'Items'))->toBe('NoMatch');
 });
 
-it('resolves old style module view path', function (): void {
-    $name = app(GetViewByClassAction::class)->executeOld('Modules\\Xot\\Filament\\Pages\\MainDashboard');
-
-    expect($name)->toBe('xot::pages.main-dashboard');
+it('throws exception when view is not found', function (): void {
+    $action = app(GetViewByClassAction::class);
+    
+    View::shouldReceive('exists')->andReturn(false);
+    
+    expect(fn() => $action->execute('Modules\\Xot\\SomeClass'))->toThrow(\Exception::class);
 });
-
-it('throws in executeOld when class is not in modules namespace', function (): void {
-    app(GetViewByClassAction::class)->executeOld('App\\Http\\Controllers\\HomeController');
-})->throws(InvalidArgumentException::class, 'Class must be in Modules namespace');

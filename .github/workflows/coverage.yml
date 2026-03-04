@@ -1,4 +1,5 @@
-name: Test Coverage PHP Package
+name: Pest Test Coverage
+
 on:
   push:
     branches:
@@ -14,31 +15,32 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        php-versions: [ '8.0' ]
+        php-versions: ['8.3'] # Updated to match Laraxot PHP 8.3 requirement
 
-    name: P${{ matrix.php-versions }} - L${{ matrix.laravel }} - ${{ matrix.operating-system}}
+    name: P${{ matrix.php-versions }} - ${{ matrix.operating-system}}
 
     steps:
       - uses: actions/checkout@v2
-      - name: Install PHP versions
+
+      - name: Install PHP versions with PCOV
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
+          coverage: pcov # PCOV is highly recommended for fast coverage generation with Pest
+
+      - name: Check Directories
+        run: pwd && ls -la
+
       - name: Install Dependencies
+        working-directory: ./laravel
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
-      - name: Show dir
-        run: pwd
-      - name: PHP Version
-        run: php --version
-
-      # Code quality
-
-      - name: Execute tests (Unit and Feature tests) via PestPHP
-        # Set environment
+      - name: Execute tests and generate coverage via PestPHP
+        working-directory: ./laravel
         env:
           SESSION_DRIVER: array
-        run: laravel/vendor/bin/pest --coverage-clover clover.xml
+          DB_CONNECTION: testing # ensure testing connection is used
+        run: ./vendor/bin/pest --coverage --coverage-clover ../clover.xml
 
       - name: Generate test coverage badge
         uses: timkrase/phpunit-coverage-badge@v1.2.0
@@ -46,3 +48,4 @@ jobs:
           coverage_badge_path: 'badge-coverage.svg'
           push_badge: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
+          report: clover.xml # The badge action will read the clover.xml generated in the root directory

@@ -2,23 +2,18 @@
 
 declare(strict_types=1);
 
+namespace Modules\Xot\Tests\Unit\Actions\String;
+
 use Modules\Xot\Actions\String\NormalizeDriverNameAction;
+use Modules\Xot\Tests\TestCase;
 
-beforeEach(function (): void {
-    $this->action = app(NormalizeDriverNameAction::class);
-});
+uses(TestCase::class);
 
-it('normalizes driver name to lowercase', function (): void {
-    $result = $this->action->execute('MySQL');
-    expect($result)->toBe('mysql');
-});
-
-it('removes non-alphanumeric characters', function (): void {
-    $result = $this->action->execute('360dialog');
-    expect($result)->toBe('360dialog');
-});
-
-it('handles driver with special chars', function (): void {
-    $result = $this->action->execute('my-driver_v2');
-    expect($result)->toBe('mydriverv2');
+it('normalizes driver names correctly', function (): void {
+    $action = app(NormalizeDriverNameAction::class);
+    
+    expect($action->execute('360-Dialog'))->toBe('360dialog');
+    expect($action->execute('My_Driver'))->toBe('mydriver');
+    expect($action->execute('Spaces In Name'))->toBe('spacesinname');
+    expect($action->execute('UPPERcase'))->toBe('uppercase');
 });
