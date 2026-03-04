@@ -4,7 +4,7 @@
 ![Filament 5.x](https://img.shields.io/badge/Filament-5.x-blue.svg)
 ![Livewire 4.x](https://img.shields.io/badge/Livewire-4.x-orange.svg)
 ![PHPStan Level 10](https://img.shields.io/badge/PHPStan-Level%2010-brightgreen.svg)
-[![Pest Coverage](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Flaraxot%2Flaravelpizza.com%2Fmain%2Fcoverage-badge.svg&query=%24.message&label=coverage&color=brightgreen)](https://github.com/laraxot/laravelpizza.com/actions/workflows/pest-coverage.yml)
+[![Pest Coverage](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Flaraxot%2Flaravelpizza.com%2Fdev%2Fcoverage-badge.svg&query=%24.message&label=coverage&color=brightgreen)](https://github.com/laraxot/laravelpizza.com/actions/workflows/pest-coverage.yml)
 
 ## 🎯 Missione del Progetto
 
