@@ -80,6 +80,12 @@ class Profile extends BaseProfile
     /** @var string */
     protected $connection = 'meetup';
 
+    /** @var bool */
+    public $incrementing = false;
+
+    /** @var string */
+    protected $keyType = 'string';
+
     /**
      * Fillable limitato allo schema Meetup (tabella profiles connessione meetup).
      * BaseProfile ha fillable più ampio per lo schema User; qui solo colonne esistenti.
@@ -99,6 +105,7 @@ class Profile extends BaseProfile
     /**
      * Boot: la tabella Meetup non ha colonna uuid (solo id come UUID).
      * Rimuove uuid dagli attributi prima del save per evitare SQL error.
+     * Imposta id come UUID se vuoto.
      */
     protected static function booted(): void
     {
@@ -110,6 +117,9 @@ class Profile extends BaseProfile
 
         static::creating(static function (self $model): void {
             $model->offsetUnset('uuid');
+            if (empty($model->id)) {
+                $model->id = (string) \Illuminate\Support\Str::uuid();
+            }
         });
     }
 }

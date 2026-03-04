@@ -18,8 +18,8 @@ use Spatie\MediaLibrary\HasMedia;
 uses(TestCase::class);
 
 beforeEach(function () {
-    $this->user = User::factory()->create();
-    $this->admin = User::factory()->create();
+    $this->user = User::factory()->create(['email' => 'user-'.uniqid().'@example.com']);
+    $this->admin = User::factory()->create(['email' => 'admin-'.uniqid().'@example.com']);
 });
 
 describe('User Model Creation', function () {
@@ -233,7 +233,7 @@ describe('User Team Management', function () {
 
 describe('User Permission System', function () {
     it('can have roles assigned', function () {
-        $role = Role::factory()->create();
+        $role = Role::factory()->create(['name' => 'assigned role ' . uniqid()]);
 
         $this->user->assignRole($role);
 
@@ -241,7 +241,7 @@ describe('User Permission System', function () {
     });
 
     it('can have direct permissions', function () {
-        $permission = Permission::factory()->create();
+        $permission = Permission::factory()->create(['name' => 'direct permission ' . uniqid()]);
 
         $this->user->givePermissionTo($permission);
 

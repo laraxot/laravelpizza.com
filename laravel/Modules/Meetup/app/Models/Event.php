@@ -175,6 +175,15 @@ class Event extends BaseModel
         'event_attendance_mode' => 'OfflineEventAttendanceMode',
     ];
 
+    protected static function booted(): void
+    {
+        static::creating(static function (self $model): void {
+            if (empty($model->slug)) {
+                $model->slug = \Illuminate\Support\Str::slug($model->title);
+            }
+        });
+    }
+
     public function owner(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id', 'id');

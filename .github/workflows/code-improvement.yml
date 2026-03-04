@@ -1,12 +1,7 @@
 name: Code Improvement with Optimized Code Model
 
 on:
-  push:
-    branches:
-      - dev
-  pull_request:
-    branches:
-      - dev
+  workflow_dispatch:
 
 jobs:
   improve-code:
