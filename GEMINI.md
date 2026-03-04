@@ -346,8 +346,9 @@ app(DoSomethingAction::class)->execute($data);
 2. I test devono sempre usare `.env.testing` e puntare al database di test (es. `laravelpizza_data_test`).
 3. **100% Pest Coverage**: È obbligatorio raggiungere il 100% di test coverage (Pest) per ogni modulo e tema, con particolare focus sulle Spatie Actions.
 4. **No RefreshDatabase**: Il trait `RefreshDatabase` è vietato. Usare `DatabaseTransactions`.
-5. **Multi-Connection Isolation**: Per moduli con connessioni multiple, dichiararle in `TestCase.php`: `protected array $connectionsToTransact = ['mysql', 'module_name', 'user'];`.
+5. **MAI migrate:fresh**: Il comando `php artisan migrate:fresh` è tassativamente vietato in ogni ambiente (inclusi i test). È distruttivo e rompe la coerenza di schemi condivisi. Usare solo `migrate` o gestire il database in modo transazionale.
 6. **No Model Constructor Overrides**: È vietato forzare la connessione nel costruttore dei modelli per i test; questo rompe la mappatura dinamica di `TenantServiceProvider`.
+7. **Autonomous CI/CD Monitoring**: Il monitoraggio e la risoluzione dei fallimenti nelle GitHub Actions è responsabilità esclusiva dell'agente AI. Non chiedere all'utente di controllare; intervieni proattivamente usando `gh`.
 
 ---
 

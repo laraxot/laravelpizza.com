@@ -42,5 +42,5 @@ uses(
 *   **Filament:** Use `livewire(Resource\Pages\ListRecords::class)` to test table actions, forms, and filters.
 
 ---
-*Last Updated: 2026-03-02*
+*
 *Status: Active*

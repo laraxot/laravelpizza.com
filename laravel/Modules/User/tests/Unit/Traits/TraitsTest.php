@@ -8,13 +8,15 @@ uses(\Modules\User\Tests\TestCase::class);
 
 use Modules\User\Traits\PasswordValidationRules;
 
-/**
- * Helper class per test del trait PasswordValidationRules.
- * Namespace richiesto per PSR-4: Modules\User\Tests\ => tests/.
- */
-class TestClassWithPasswordValidationRules
-{
-    use PasswordValidationRules;
+if (! class_exists(TestClassWithPasswordValidationRules::class)) {
+    /**
+     * Helper class per test del trait PasswordValidationRules.
+     * Namespace richiesto per PSR-4: Modules\User\Tests\ => tests/.
+     */
+    class TestClassWithPasswordValidationRules
+    {
+        use PasswordValidationRules;
+    }
 }
 
 test('PasswordValidationRules trait can be used', function () {
