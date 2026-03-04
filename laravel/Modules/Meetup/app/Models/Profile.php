@@ -7,7 +7,7 @@ namespace Modules\Meetup\Models;
 use Modules\User\Models\BaseProfile;
 
 /**
- * @property int $id
+ * @property string $id
  * @property string|null $user_id
  * @property string|null $first_name
  * @property string|null $last_name

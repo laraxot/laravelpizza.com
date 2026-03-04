@@ -43,7 +43,7 @@ class EventFactory extends Factory
             'end_date' => $endDate,
             'location' => $this->faker->address(),
             'status' => 'published',
-            'event_status' => EventStatus::EventScheduled,
+            'event_status' => EventStatus::SCHEDULED,
             'event_attendance_mode' => EventAttendanceMode::OfflineEventAttendanceMode,
             'attendees_count' => 0,
             'max_attendees' => $this->faker->numberBetween(50, 200),
